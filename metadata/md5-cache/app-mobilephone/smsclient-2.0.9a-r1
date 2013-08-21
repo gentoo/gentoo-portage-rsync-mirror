@@ -1,9 +1,10 @@
-DEFINED_PHASES=compile install postinst unpack
+DEFINED_PHASES=compile config configure install postinst prepare setup
 DESCRIPTION=Utility to send SMS messages to mobile phones and pagers.
+EAPI=5
 HOMEPAGE=http://www.smsclient.org
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.smsclient.org/download/smsclient-2.0.9/smsclient-2.0.9a.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=d8b484e8e26417d57e6676f6a07caa2c
+_md5_=ac584559225766ab5e578a4799499c85

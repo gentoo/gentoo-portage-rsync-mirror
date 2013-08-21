@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/smsclient-2.0.9a-r1.ebuild,v 1.3 2008/11/02 18:57:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smsclient/smsclient-2.0.9a-r1.ebuild,v 1.4 2013/08/21 18:58:44 creffett Exp $
 
-inherit eutils toolchain-funcs
+EAPI="5"
+
+inherit eutils user
 
 DESCRIPTION="Utility to send SMS messages to mobile phones and pagers."
 HOMEPAGE="http://www.smsclient.org"
@@ -13,20 +15,32 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
+pkg_setup() {
+	enewgroup dialout
+}
 
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-sender.patch"
+	sed -i -e \
+		"s:\$(CFLAGS) -o:\$(CFLAGS) \$(LDFLAGS) -o:g" \
+		src/client/Makefile
+}
+
+src_configure() {
+	rm .configured && ./configure
 }
 
 src_compile() {
-	rm .configured && ./configure || die "Configure failed"
-	emake CC="$(tc-getCC)" || die "Make failed"
+	emake \
+		CC="$(tc-getCC)" \
+		AR="$(tc-getAR) rc" \
+		RANLIB="$(tc-getRANLIB)" \
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install
 	dosym sms_client /usr/bin/smsclient
 	dosym sms_address /usr/bin/smsaddress
 
@@ -35,14 +49,16 @@ src_install() {
 	diropts
 
 	doman docs/sms_client.1
-	dodoc Authors Changelog* FAQ README* TODO docs/sms_protocol
+	dodoc AUTHORS Changelog* FAQ README* TODO docs/sms_protocol
+}
+
+pkg_config() {
+	local MY_LOGFILE="${ROOT}/var/log/smsclient.log"
+	[ -f "${MY_LOGFILE}" ] || touch "${MY_LOGFILE}"
+	fowners :dialout "${MY_LOGFILE}"
+	fperms g+rwx,o-rwx "${MY_LOGFILE}"
 }
 
 pkg_postinst() {
-	local MY_LOGFILE="${ROOT}/var/log/smsclient.log"
-	[ -f "${MY_LOGFILE}" ] || touch "${MY_LOGFILE}"
-	chgrp dialout "${MY_LOGFILE}"
-	chmod g+rwx,o-rwx "${MY_LOGFILE}"
-
 	einfo "If you run sms_client as normal user, make sure you are member of dialout group."
 }

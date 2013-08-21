@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.0-r1.ebuild,v 1.1 2013/08/18 10:21:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.0-r1.ebuild,v 1.2 2013/08/21 18:43:58 kensington Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ REQUIRED_USE="consolekit? ( !systemd ) systemd? ( !consolekit )"
 
 DEPEND="
 	$(add_kdebase_dep libkworkspace)
+	media-libs/qimageblitz
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
