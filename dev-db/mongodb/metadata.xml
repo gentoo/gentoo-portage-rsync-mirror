@@ -20,6 +20,7 @@
 	and powerful queries).
 	</longdescription>
 	<use>
+		<flag name="embedded-v8">Use embedded version of v8 instead of system v8</flag>
 		<flag name="v8">Use V8 JavaScript engine
 			(<pkg>dev-lang/v8</pkg>) instead of SpiderMonkey
 			(<pkg>dev-lang/spidermonkey</pkg>)</flag>

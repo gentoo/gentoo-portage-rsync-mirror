@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.8-r1.ebuild,v 1.2 2013/03/05 14:08:39 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.2.6.ebuild,v 1.1 2013/08/21 12:41:54 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -12,18 +12,19 @@ MY_P=${PN}-src-r${PV/_rc/-rc}
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="http://www.mongodb.org"
 SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz
-	mms-agent? ( http://dev.gentoo.org/~ultrabug/20120514-10gen-mms-agent.zip )"
+	mms-agent? ( http://dev.gentoo.org/~ultrabug/20130821-10gen-mms-agent.zip )"
 
 LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mms-agent static-libs v8"
 
-PDEPEND="mms-agent? ( dev-python/pymongo )"
+PDEPEND="mms-agent? ( dev-python/pymongo app-arch/unzip )"
 RDEPEND="
 	v8? ( dev-lang/v8 )
-	<dev-libs/boost-1.50
+	>=dev-libs/boost-1.50[threads(+)]
 	dev-libs/libpcre[cxx]
+	dev-util/google-perftools
 	net-libs/libpcap
 	app-arch/snappy"
 DEPEND="${RDEPEND}
@@ -37,8 +38,10 @@ pkg_setup() {
 	enewuser mongodb -1 -1 /var/lib/${PN} mongodb
 
 	scons_opts="  --cc=$(tc-getCC) --cxx=$(tc-getCXX) --sharedclient"
+	scons_opts+=" --use-system-tcmalloc"
 	scons_opts+=" --use-system-pcre"
 	scons_opts+=" --use-system-snappy"
+	scons_opts+=" --use-system-boost"
 
 	if use v8; then
 		scons_opts+=" --usev8"
@@ -48,11 +51,18 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.0-fix-scons.patch"
+	epatch "${FILESDIR}/${PN}-2.2-r1-fix-scons.patch"
 	epatch "${FILESDIR}/${PN}-2.2-r1-fix-boost.patch"
+	epatch "${FILESDIR}/${PN}-2.2-r2-boost-1.50.patch"
+	epatch "${FILESDIR}/${PN}-2.2-fix-sharedclient.patch"
 
-	# drop -Werror
-	sed -i -e '/Werror/d' SConstruct || die
+	# FIXME: apply only this fix [1] on x86 boxes as it breaks /usr/lib symlink
+	# on amd64 machines [2].
+	# [1] https://jira.mongodb.org/browse/SERVER-5575
+	# [2] https://bugs.gentoo.org/show_bug.cgi?id=434664
+	if use !prefix && [[ "$(get_libdir)" == "lib" ]]; then
+		epatch "${FILESDIR}/${PN}-2.2-fix-x86client.patch"
+	fi
 }
 
 src_compile() {
@@ -60,13 +70,13 @@ src_compile() {
 }
 
 src_install() {
-	escons ${scons_opts} --full --nostrip install --prefix="${D}"/usr
+	escons ${scons_opts} --full --nostrip install --prefix="${ED}"/usr
 
-	use static-libs || rm "${D}/usr/$(get_libdir)/libmongoclient.a"
+	use static-libs || rm "${ED}/usr/$(get_libdir)/libmongoclient.a"
 
-	use v8 && pax-mark m "${D}"/usr/bin/{mongo,mongod}
+	use v8 && pax-mark m "${ED}"/usr/bin/{mongo,mongod}
 
-	for x in /var/{lib,log,run}/${PN}; do
+	for x in /var/{lib,log}/${PN}; do
 		keepdir "${x}"
 		fowners mongodb:mongodb "${x}"
 	done
@@ -74,9 +84,9 @@ src_install() {
 	doman debian/mongo*.1
 	dodoc README docs/building.md
 
-	newinitd "${FILESDIR}/${PN}.initd" ${PN}
+	newinitd "${FILESDIR}/${PN}.initd-r1" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
-	newinitd "${FILESDIR}/${PN/db/s}.initd" ${PN/db/s}
+	newinitd "${FILESDIR}/${PN/db/s}.initd-r1" ${PN/db/s}
 	newconfd "${FILESDIR}/${PN/db/s}.confd" ${PN/db/s}
 
 	insinto /etc/logrotate.d/

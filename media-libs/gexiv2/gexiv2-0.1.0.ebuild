@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.1.0.ebuild,v 1.2 2010/12/21 15:20:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.1.0.ebuild,v 1.3 2013/08/21 12:59:33 jlec Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit versionator eutils gnome2
 
 MY_PV=$(get_version_component_range 1-2)
 
-DESCRIPTION="gexiv2 is a GObject-based wrapper around the Exiv2 library."
+DESCRIPTION="gexiv2 is a GObject-based wrapper around the Exiv2 library"
 HOMEPAGE="http://trac.yorba.org/wiki/gexiv2"
 SRC_URI="http://www.yorba.org/download/${PN}/${MY_PV}/lib${P}.tar.bz2"
 
