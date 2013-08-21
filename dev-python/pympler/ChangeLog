@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pympler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/ChangeLog,v 1.11 2013/07/12 13:11:51 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/ChangeLog,v 1.12 2013/08/21 13:45:35 jlec Exp $
+
+  21 Aug 2013; Justin Lecher <jlec@gentoo.org> pympler-0.3.1.ebuild:
+  Fix [${PYTHON_USEDEP}]
 
   12 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> pympler-0.3.1.ebuild:
   ppc, ppc64 keywords added, bug #468426
