@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.73 2013/08/15 15:36:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.74 2013/08/21 19:08:18 kensington Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -490,6 +490,9 @@ kde4-meta_change_cmakelists() {
 				sed -e '/KActivities/s/REQUIRED//' \
 					-i CMakeLists.txt || die "${LINENO}: sed died in kde-workspace dep reduction section"
 			fi
+			sed -e '/QImageBlitz/s/REQUIRED//' \
+				-i CMakeLists.txt || die "${LINENO}: sed died in kde-workspace dep reduction section 2"
+
 			# >=KDE/4.11
 			sed -e 's/TYPE REQUIRED/TYPE OPTIONAL/' -e 's/XCB REQUIRED/XCB/' -e 's/X11 REQUIRED/X11/' \
 				-e 's/message(FATAL_ERROR/message(/' -i CMakeLists.txt \

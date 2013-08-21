@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.931 2013/08/16 07:51:36 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.932 2013/08/21 19:08:18 kensington Exp $
+
+  21 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
+  Improve automagic dependency reduction, fixing bug #481996.
 
   16 Aug 2013; Benda Xu <heroxbd@gentoo.org> wxwidgets.eclass:
   Prefix support for wxwidgets, bug #481093

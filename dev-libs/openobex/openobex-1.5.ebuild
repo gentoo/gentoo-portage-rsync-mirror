@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.14 2013/04/26 04:20:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.15 2013/08/21 19:14:06 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils autotools
 

@@ -1,6 +1,17 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.162 2013/08/18 13:44:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.164 2013/08/21 19:29:03 ssuominen Exp $
+
+  21 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> consolekit-0.4.6.ebuild,
+  metadata.xml:
+  Rename USE="systemd" by USE="systemd-units" to avoid conflict with systemd vs.
+  -systemd, package.use.mask and profiles.
+
+  21 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> consolekit-0.4.6.ebuild,
+  metadata.xml:
+  Introduce USE="systemd" to force installation of systemd unit files despite of
+  systemd-logind making it more or less obsolete (and remove SystemdService=
+  line from the .service file when required) wrt #478258
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> consolekit-0.4.6.ebuild:
   Stable for x86, wrt bug #480028

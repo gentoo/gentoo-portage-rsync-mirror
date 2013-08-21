@@ -1,6 +1,7 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/vmoconv-1.0-r1.ebuild,v 1.4 2011/12/21 08:37:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/vmoconv-1.0-r1.ebuild,v 1.5 2013/08/21 19:20:23 creffett Exp $
+EAPI=5
 
 inherit eutils autotools
 
@@ -16,14 +17,11 @@ IUSE=""
 DEPEND="media-sound/gsm"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-glibc28.patch"
 	epatch "${FILESDIR}/${P}-flags.patch"
 	epatch "${FILESDIR}/${P}-external-libgsm.patch"
-
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 	eautoreconf
 }
 

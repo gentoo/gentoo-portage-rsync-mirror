@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/vmoconv
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.10 2011/12/21 08:37:52 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/vmoconv/ChangeLog,v 1.11 2013/08/21 19:20:24 creffett Exp $
+
+  21 Aug 2013; Chris Reffett <creffett@gentoo.org> -vmoconv-1.0.ebuild,
+  vmoconv-1.0-r1.ebuild:
+  Fix bug 467588. EAPI bump. Remove old.
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vmoconv-1.0-r1.ebuild:
   x86 stable wrt bug #393971
@@ -47,4 +51,3 @@
   08 Jan 2005; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +vmoconv-1.0.ebuild:
   Initial import.
-
