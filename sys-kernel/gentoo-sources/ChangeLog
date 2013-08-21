@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1178 2013/08/21 09:34:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1179 2013/08/21 12:11:35 pinkbyte Exp $
+
+  21 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> gentoo-sources-3.10.7.ebuild:
+  Stable on amd64, wrt bug #481522
 
   21 Aug 2013; Raúl Porcel <armin76@gentoo.org> gentoo-sources-3.10.7.ebuild:
   alpha/arm/ia64/s390/sh stable wrt #481522
