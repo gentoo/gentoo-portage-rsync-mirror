@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.123 2013/08/03 07:48:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.124 2013/08/21 19:37:51 ssuominen Exp $
+
+  21 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
+  pambase-20120417-r2.ebuild:
+  Warn people from enabling weird setup with USE="consolekit systemd" and
+  having 2 session trackers running at the same time wrt #478258
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> pambase-20120417-r2.ebuild:
   Stable for sparc, wrt bug #454388

@@ -1,21 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.13 2012/05/02 20:10:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.14 2013/08/21 19:34:38 creffett Exp $
 
-EAPI="3"
+EAPI="5"
 
-WANT_AUTOMAKE=1.9
+PYTHON_COMPAT=( python{2_6,2_7} )
+GENTOO_DEPEND_ON_PERL=no
 
-PYTHON_DEPEND="python? 2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
-
-inherit distutils eutils perl-module flag-o-matic autotools
+inherit distutils-r1 eutils perl-module flag-o-matic autotools
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
 HOMEPAGE="http://dev.zuckschwerdt.org/openobex/wiki/ObexFtp"
 SRC_URI="mirror://sourceforge/openobex/${P}.tar.bz2"
 SLOT="0"
+
 LICENSE="GPL-2"
 KEYWORDS="amd64 hppa ppc ~sparc x86"
 IUSE="bluetooth debug perl python ruby tcl"
@@ -24,15 +22,11 @@ RDEPEND="dev-libs/openobex
 	bluetooth? ( net-wireless/bluez )
 	perl? ( dev-lang/perl )
 	ruby? ( dev-lang/ruby:1.8 )
-	tcl? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )
+"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
-
-DISTUTILS_SETUP_FILES=("swig/python|setup.py")
-
-pkg_setup() {
-	use python && python_pkg_setup
-}
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fixruby.patch
@@ -41,7 +35,7 @@ src_prepare() {
 	# Python bindings are built/installed manually.
 	sed -e "/MAYBE_PYTHON_ = python/d" -i swig/Makefile.am || die "sed failed"
 
-	eautomake
+	eautoreconf
 }
 
 src_configure() {
@@ -65,7 +59,11 @@ src_configure() {
 src_compile() {
 	default
 
-	use python && distutils_src_compile
+	if use python; then
+		pushd swig/python/
+		distutils-r1_src_compile
+		popd
+	fi
 }
 
 src_install() {
@@ -74,7 +72,11 @@ src_install() {
 	# from here in the next version bump
 	emake -j1 DESTDIR="${D}" INSTALLDIRS=vendor install || die "emake install failed"
 
-	use python && distutils_src_install
+	if use python; then
+		pushd swig/python/
+		distutils-r1_src_install
+		popd
+	fi
 
 	dodoc AUTHORS ChangeLog NEWS README* THANKS TODO
 	dohtml doc/*.html
@@ -95,10 +97,10 @@ src_install() {
 
 pkg_postinst() {
 	use perl && perl-module_pkg_postinst
-	use python && distutils_pkg_postinst
+	use python && distutils-r1_pkg_postinst
 }
 
 pkg_postrm() {
 	use perl && perl-module_pkg_postrm
-	use python && distutils_pkg_postrm
+	use python && distutils-r1_pkg_postrm
 }

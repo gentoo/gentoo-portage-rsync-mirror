@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.63 2012/05/02 20:10:09 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.64 2013/08/21 19:34:38 creffett Exp $
+
+  21 Aug 2013; Chris Reffett <creffett@gentoo.org> obexftp-0.23-r1.ebuild:
+  Update to distutils-r1. Fix bugs 312725 and 398113.
 
   02 May 2012; Jeff Horelick <jdhore@gentoo.org> obexftp-0.23-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

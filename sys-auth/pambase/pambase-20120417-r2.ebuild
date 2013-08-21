@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20120417-r2.ebuild,v 1.11 2013/08/03 07:48:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/pambase-20120417-r2.ebuild,v 1.12 2013/08/21 19:37:51 ssuominen Exp $
 
 EAPI=5
 inherit eutils
@@ -102,5 +102,11 @@ pkg_postinst() {
 		elog "Please note that the change only affects the newly-changed passwords"
 		elog "and that SHA512-hashed passwords will not work on earlier versions"
 		elog "of glibc or Linux-PAM."
+	fi
+
+	if use systemd && use consolekit; then
+		ewarn "You are enabling 2 session trackers, ConsoleKit and systemd-logind"
+		ewarn "at the same time. This is not recommended setup to have, please"
+		ewarn "consider disabling either USE=\"consolekit\" or USE=\"systemd\."
 	fi
 }
