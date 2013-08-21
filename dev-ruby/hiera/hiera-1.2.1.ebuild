@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/hiera-1.2.1.ebuild,v 1.1 2013/06/28 18:22:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/hiera-1.2.1.ebuild,v 1.2 2013/08/21 03:53:16 jmorgan Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://projects.puppetlabs.com/"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 ruby_add_bdepend "test? ( dev-ruby/mocha )"
 
