@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.346 2013/08/21 06:50:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.347 2013/08/21 15:41:17 chithanh Exp $
+
+  21 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  cairo-1.12.14-r4.ebuild, cairo-9999.ebuild:
+  Add postinstall warning for nxserver users about the xlib-xcb backend, bug
+  #441878.
 
   21 Aug 2013; Ben de Groot <yngwin@gentoo.org> -cairo-1.12.10-r2.ebuild,
   -cairo-1.12.12-r1.ebuild, -cairo-1.12.12.ebuild, -cairo-1.12.14-r2.ebuild,

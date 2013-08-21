@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.14-r4.ebuild,v 1.2 2013/07/22 06:06:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.12.14-r4.ebuild,v 1.3 2013/08/21 15:41:17 chithanh Exp $
 
 EAPI=5
 
@@ -137,4 +137,16 @@ src_install() {
 	emake -j1 DESTDIR="${D}" install
 	find "${ED}" -name '*.la' -exec rm -f {} +
 	dodoc AUTHORS ChangeLog NEWS README
+}
+
+pkg_postinst() {
+	if use !xlib-xcb; then
+		if has_version net-misc/nxserver-freenx \
+				|| has_version net-misc/x2goserver; then
+			ewarn "cairo-1.12 is known to cause GTK+ errors with NX servers."
+			ewarn "Enable USE=\"xlib-xcb\" if you notice incorrect behavior in GTK+"
+			ewarn "applications that are running inside NX sessions. For details, see"
+			ewarn "https://bugs.gentoo.org/441878 or https://bugs.freedesktop.org/59173"
+		fi
+	fi
 }

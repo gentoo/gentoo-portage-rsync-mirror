@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gpm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.92 2012/12/30 23:53:45 floppym Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.93 2013/08/21 15:56:41 aballier Exp $
+
+*gpm-1.20.7-r2 (21 Aug 2013)
+
+  21 Aug 2013; Alexis Ballier <aballier@gentoo.org> +gpm-1.20.7-r2.ebuild:
+  Convert to multilib and stack it for baselibs -r13. Bug #480144.
 
 *gpm-1.20.7-r1 (30 Dec 2012)
 

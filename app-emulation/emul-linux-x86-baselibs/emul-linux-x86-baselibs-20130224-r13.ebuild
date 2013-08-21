@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20130224-r12.ebuild,v 1.1 2013/08/16 12:36:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20130224-r13.ebuild,v 1.1 2013/08/21 15:57:12 aballier Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -40,6 +40,9 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 			>=dev-libs/elfutils-0.155-r1[abi_x86_32(-)]
 			>=dev-libs/libelf-0.8.13-r2[abi_x86_32(-)]
 		)
+		>=sys-libs/e2fsprogs-libs-1.42.7-r1[abi_x86_32(-)]
+		>=sys-libs/ncurses-5.9-r3[abi_x86_32(-)]
+		>=sys-libs/gpm-1.20.7-r2[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.15" # bug 340613
 

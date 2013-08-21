@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.106 2013/05/20 17:42:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.107 2013/08/21 15:50:48 aballier Exp $
+
+*e2fsprogs-libs-1.42.7-r1 (21 Aug 2013)
+
+  21 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  +e2fsprogs-libs-1.42.7-r1.ebuild:
+  Convert to multilib and stack it for baselibs -r13. Bug #481362.
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> e2fsprogs-libs-1.42.7.ebuild:
   Stable for s390, wrt bug #467008
