@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.494 2013/08/21 16:19:10 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.495 2013/08/22 15:34:45 chithanh Exp $
+
+  22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-9.2.0_rc1.ebuild:
+  Relax REQUIRED_USE for opencl.
 
 *mesa-9.2.0_rc1 (21 Aug 2013)
 

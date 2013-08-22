@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.201 2013/08/12 15:03:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.202 2013/08/22 15:44:42 aballier Exp $
+
+*freebsd-lib-9.2_rc2 (22 Aug 2013)
+
+  22 Aug 2013; Alexis Ballier <aballier@gentoo.org> +freebsd-lib-9.2_rc2.ebuild:
+  bump to rc2
 
   12 Aug 2013; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.2_rc1.ebuild,
   files/freebsd-lib-9.2-liblink.patch:

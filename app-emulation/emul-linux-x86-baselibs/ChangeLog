@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.158 2013/08/21 21:39:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.159 2013/08/22 15:59:02 mgorny Exp $
+
+  22 Aug 2013; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Change maintainer to the multilib project.
 
   21 Aug 2013; Michał Górny <mgorny@gentoo.org> files/remove-native:
   Add /usr/lib32/terminfo to the removal list.

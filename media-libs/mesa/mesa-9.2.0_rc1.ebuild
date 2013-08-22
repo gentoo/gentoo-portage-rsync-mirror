@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0_rc1.ebuild,v 1.1 2013/08/21 16:19:10 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0_rc1.ebuild,v 1.2 2013/08/22 15:34:45 chithanh Exp $
 
 EAPI=5
 
@@ -56,7 +56,12 @@ IUSE="${IUSE_VIDEO_CARDS}
 REQUIRED_USE="
 	llvm?   ( gallium )
 	openvg? ( egl gallium )
-	opencl? ( gallium r600-llvm-compiler )
+	opencl? (
+		gallium
+		video_cards_r600? ( r600-llvm-compiler )
+		video_cards_radeon? ( r600-llvm-compiler )
+		video_cards_radeonsi? ( r600-llvm-compiler )
+	)
 	gles1?  ( egl )
 	gles2?  ( egl )
 	r600-llvm-compiler? ( gallium llvm || ( video_cards_r600 video_cards_radeon ) )

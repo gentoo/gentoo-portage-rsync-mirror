@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>net-mail</herd>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
 	<use>
 		<flag name="trashquota">include deleted messages, and the Trash folder, in the estimated quota usage for maildirs</flag>
 	</use>

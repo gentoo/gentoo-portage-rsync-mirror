@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.193 2013/08/12 17:41:12 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.194 2013/08/22 15:38:36 jer Exp $
+
+  22 Aug 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove unneeded maintainer-needed.
 
   12 Aug 2013; Patrick McLean <chutzpah@gentoo.org> metadata.xml:
   Set package to maintainer-needed as I no longer use or care about this
