@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/acts_as_list
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/ChangeLog,v 1.2 2013/04/27 06:09:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/ChangeLog,v 1.3 2013/08/22 05:53:11 graaff Exp $
+
+*acts_as_list-0.3.0 (22 Aug 2013)
+
+  22 Aug 2013; Hans de Graaff <graaff@gentoo.org> +acts_as_list-0.3.0.ebuild:
+  Version bump.
 
 *acts_as_list-0.2.0 (27 Apr 2013)
 
