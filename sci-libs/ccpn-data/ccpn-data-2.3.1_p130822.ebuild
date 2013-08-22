@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.3.1_p130819.ebuild,v 1.1 2013/08/19 14:25:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.3.1_p130822.ebuild,v 1.1 2013/08/22 07:37:30 jlec Exp $
 
 EAPI=5
 
