@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.194 2013/08/11 12:41:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.195 2013/08/22 14:13:40 jer Exp $
+
+  22 Aug 2013; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=opencl (bug #482096).
 
   11 Aug 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Remove USE=zeromq mask for app-admin/rsyslog.
