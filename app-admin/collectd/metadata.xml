@@ -15,6 +15,7 @@
 		<flag name='collectd_plugins_ascent'>Build the ascent input plugin (statistics about a free server for World of Warcraft)</flag>
 		<flag name='collectd_plugins_battery'>Build the battery input plugin (charge, current and voltage of ACPI and PMU based laptop batteries)</flag>
 		<flag name='collectd_plugins_bind'>Build the bind input plugin (name server and resolver statistics)</flag>
+		<flag name='collectd_plugins_cgroups'>Build the cgroups CPU accounting collection plugin</flag>
 		<flag name='collectd_plugins_conntrack'>Build the conntrack input plugin (number of nf_conntrack entries)</flag>
 		<flag name='collectd_plugins_contextswitch'>Build the contextswitch input plugin (number of context switches done by the operating system)</flag>
 		<flag name='collectd_plugins_cpu'>Build the cpu input plugin (time spent in the system, user, nice, idle, and related states)</flag>
@@ -43,6 +44,7 @@
 		<flag name='collectd_plugins_libvirt'>Build the libvirt input plugin (statistics about virtualized guests on a system)</flag> 
 		<flag name='collectd_plugins_load'>Build the load input plugin (system load)</flag> 
 		<flag name='collectd_plugins_logfile'>Build the logfile output plugin (writes log messages to a text file)</flag>
+		<flag name='collectd_plugins_lvm'>Build the LVM input plugin</flag>
 		<flag name='collectd_plugins_madwifi'>Build the madwifi input plugin (information about Atheros wireless LAN chipsets)</flag> 
 		<flag name='collectd_plugins_match_empty_counter'>Build the match_empty_counter filter plugin</flag>
 		<flag name='collectd_plugins_match_hashed'>Build the match_hashed filter plugin</flag>
@@ -82,6 +84,7 @@
 		<flag name='collectd_plugins_sensors'>Build the sensors input plugin (uses lm-sensors to read hardware sensors)</flag> 
 		<flag name='collectd_plugins_serial'>Build the serial input plugin (collects the traffic on serial interfaces)</flag> 
 		<flag name='collectd_plugins_snmp'>Build the snmp input plugin (read values from network devices using SNMP)</flag> 
+		<flag name='collectd_plugins_statsd'>Build the statsd input plugin (accepts statsd-type metrics from a UDP socket)</flag>
 		<flag name='collectd_plugins_swap'>Build the swap input plugin (amount of memory currently written to swap)</flag> 
 		<flag name='collectd_plugins_syslog'>Build the syslog output plugin (receives messages from collectd and dispatches them to syslog)</flag>
 		<flag name='collectd_plugins_table'>Build the table input plugin (parses table-like structured plain text)</flag> 

@@ -32,6 +32,7 @@ app-admin/collectd:collectd_plugins_apcups - Build the apcups input plugin (UPS 
 app-admin/collectd:collectd_plugins_ascent - Build the ascent input plugin (statistics about a free server for World of Warcraft)
 app-admin/collectd:collectd_plugins_battery - Build the battery input plugin (charge, current and voltage of ACPI and PMU based laptop batteries)
 app-admin/collectd:collectd_plugins_bind - Build the bind input plugin (name server and resolver statistics)
+app-admin/collectd:collectd_plugins_cgroups - Build the cgroups CPU accounting collection plugin
 app-admin/collectd:collectd_plugins_conntrack - Build the conntrack input plugin (number of nf_conntrack entries)
 app-admin/collectd:collectd_plugins_contextswitch - Build the contextswitch input plugin (number of context switches done by the operating system)
 app-admin/collectd:collectd_plugins_cpu - Build the cpu input plugin (time spent in the system, user, nice, idle, and related states)
@@ -60,6 +61,7 @@ app-admin/collectd:collectd_plugins_java - Build the java input plugin (embeds a
 app-admin/collectd:collectd_plugins_libvirt - Build the libvirt input plugin (statistics about virtualized guests on a system)
 app-admin/collectd:collectd_plugins_load - Build the load input plugin (system load)
 app-admin/collectd:collectd_plugins_logfile - Build the logfile output plugin (writes log messages to a text file)
+app-admin/collectd:collectd_plugins_lvm - Build the LVM input plugin
 app-admin/collectd:collectd_plugins_madwifi - Build the madwifi input plugin (information about Atheros wireless LAN chipsets)
 app-admin/collectd:collectd_plugins_match_empty_counter - Build the match_empty_counter filter plugin
 app-admin/collectd:collectd_plugins_match_hashed - Build the match_hashed filter plugin
@@ -99,6 +101,7 @@ app-admin/collectd:collectd_plugins_rrdtool - Build the rrdtool output plugin (w
 app-admin/collectd:collectd_plugins_sensors - Build the sensors input plugin (uses lm-sensors to read hardware sensors)
 app-admin/collectd:collectd_plugins_serial - Build the serial input plugin (collects the traffic on serial interfaces)
 app-admin/collectd:collectd_plugins_snmp - Build the snmp input plugin (read values from network devices using SNMP)
+app-admin/collectd:collectd_plugins_statsd - Build the statsd input plugin (accepts statsd-type metrics from a UDP socket)
 app-admin/collectd:collectd_plugins_swap - Build the swap input plugin (amount of memory currently written to swap)
 app-admin/collectd:collectd_plugins_syslog - Build the syslog output plugin (receives messages from collectd and dispatches them to syslog)
 app-admin/collectd:collectd_plugins_table - Build the table input plugin (parses table-like structured plain text)

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r4.ebuild,v 1.1 2013/08/22 06:52:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r4.ebuild,v 1.2 2013/08/22 09:36:22 pinkbyte Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils linux-info multilib
+inherit autotools-utils linux-info multilib systemd
 
 PATCH_VER=3
 [[ -n ${PATCH_VER} ]] && \
