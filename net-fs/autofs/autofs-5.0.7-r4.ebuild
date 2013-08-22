@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r3.ebuild,v 1.1 2013/07/30 07:31:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r4.ebuild,v 1.1 2013/08/22 06:52:17 pinkbyte Exp $
 
 EAPI=5
 
@@ -75,15 +75,13 @@ src_prepare() {
 		EPATCH_SUFFIX="patch" \
 			epatch "${WORKDIR}"/patches
 	fi
+	sed -i -e "s:/usr/bin/kill:/bin/kill:" samples/autofs.service.in || die #bug #479492
 	autotools-utils_src_prepare
 }
 
 src_configure() {
 	# --with-confdir is for bug #361481
 	# --with-mapdir is for bug #385113
-	# for systemd support (not enabled yet):
-	#   --with-systemd
-	#   --disable-move-mount: requires kernel >=2.6.39
 	local myeconfargs=(
 		--with-confdir=/etc/conf.d
 		--with-mapdir=/etc/autofs
@@ -97,6 +95,8 @@ src_configure() {
 		--enable-sloppy-mount # bug #453778
 		--enable-forced-shutdown
 		--enable-ignore-busy
+		--with-systemd
+		systemddir="$(systemd_get_unitdir)" #bug #479492
 	)
 	autotools-utils_src_configure
 }

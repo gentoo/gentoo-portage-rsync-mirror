@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.156 2013/08/08 06:15:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.157 2013/08/22 06:52:17 pinkbyte Exp $
+
+*autofs-5.0.7-r4 (22 Aug 2013)
+
+  22 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> -autofs-5.0.7-r3.ebuild,
+  +autofs-5.0.7-r4.ebuild:
+  Revision bump: add systemd support, wrt bug #479492. Thanks to Charles Nérot
+  <charles AT nerot.com> for discovering this issue and Dennis Lan <dennis.yxun
+  AT gmail.com> for all necessary fixes. Drop old revision
 
   08 Aug 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Fix USE description for libtirpc
