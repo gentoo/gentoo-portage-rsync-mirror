@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/qrencode-3.2.0.ebuild,v 1.5 2012/05/05 07:00:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/qrencode-3.4.3.ebuild,v 1.1 2013/08/22 13:08:09 joker Exp $
 
 EAPI=4
 
@@ -14,11 +14,11 @@ SRC_URI="http://fukuchi.org/works/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/libpng"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-PATCHES=( "${FILESDIR}/${P}-pngregenfix.patch" )
+PATCHES=( "${FILESDIR}/${PN}-3.2.0-pngregenfix.patch" )
