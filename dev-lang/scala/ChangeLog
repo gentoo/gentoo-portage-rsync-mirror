@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/scala
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.31 2012/08/20 03:00:19 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.32 2013/08/22 10:05:56 gienah Exp $
+
+*scala-2.10.2 (22 Aug 2013)
+
+  22 Aug 2013; Mark Wright <gienah@gentoo.org>
+  +files/scala-2.10.2-jdk-1.7-swing-SI-7455.patch,
+  +files/scala-2.10.2-jdk-1.7-swing.patch, +files/scala-2.10.2-no-git.patch,
+  +scala-2.10.2.ebuild:
+  Fix Bug 450298 - dev-lang/scala-2.10.2 version bump. Thanks to Coy Barnes for
+  reporting the sandbox and fix. Thanks to Nathan, Joel, TomWij, Kevin Bowling,
+  Caster and Chewi for help and suggestions.
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> scala-2.9.2.ebuild:
   added prefix keywords
