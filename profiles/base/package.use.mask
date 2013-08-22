@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.504 2013/08/21 19:27:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.505 2013/08/21 23:09:05 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (21 Aug 2013)
+# Appears broken, need to investigate further
+=media-libs/mesa-9.2.0_rc1 opencl
 
 # Tim Harder <radhermit@gentoo.org> (13 Aug 2013)
 # Requires dev-lang/luajit which is not keyworded by most arches.
