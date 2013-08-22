@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/dfu-util-0.1.ebuild,v 1.1 2010/06/05 19:25:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/dfu-util-0.7.ebuild,v 1.1 2013/08/22 02:23:03 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.openezx.org/dfu-util.git"
-	inherit autotools git
+	inherit autotools git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else
@@ -21,12 +21,13 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/libusb:0"
-RDEPEND="${DEPEND}"
+RDEPEND="virtual/libusb:1"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_prepare
+		git-2_src_prepare
 		eautoreconf
 	fi
 	sed -i '/^bin_PROGRAMS/s:dfu-util_static[^ ]*::' src/Makefile.in

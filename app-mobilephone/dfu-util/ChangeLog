@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/dfu-util
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/ChangeLog,v 1.8 2012/10/07 03:13:24 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/ChangeLog,v 1.9 2013/08/22 02:23:03 creffett Exp $
+
+*dfu-util-0.7 (22 Aug 2013)
+
+  22 Aug 2013; Chris Reffett <creffett@gentoo.org> +dfu-util-0.7.ebuild,
+  -dfu-util-0.1.ebuild, -dfu-util-0.4.ebuild, -dfu-util-0.5.ebuild,
+  dfu-util-9999.ebuild:
+  Version bump wrt 417525. EAPI bump. Sync live version.
 
   07 Oct 2012; Diego E. Pettenò <flameeyes@gentoo.org> dfu-util-0.4.ebuild,
   dfu-util-0.5.ebuild, dfu-util-9999.ebuild:
