@@ -1,0 +1,19 @@
+commit d995aa130fcdadc3a99f948c89447d9960b8753e
+Author: Roy Marples <roy@marples.name>
+Date:   Mon Aug 19 10:09:32 2013 +0100
+
+    Add the cloned static route, not the original
+
+diff --git a/ipv4.c b/ipv4.c
+index c2be11d..845f386 100644
+--- a/ipv4.c
++++ b/ipv4.c
+@@ -390,7 +390,7 @@ get_routes(struct interface *ifp)
+ 				return NULL;
+ 			}
+ 			memcpy(r, rt, sizeof(*r));
+-			TAILQ_INSERT_TAIL(nrt, rt, next);
++			TAILQ_INSERT_TAIL(nrt, r, next);
+ 		}
+ 		return nrt;
+ 	}

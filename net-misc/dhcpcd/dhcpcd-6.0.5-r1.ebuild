@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.99.7-r1.ebuild,v 1.1 2013/06/07 15:25:04 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.0.5-r1.ebuild,v 1.1 2013/08/22 21:47:14 williamh Exp $
 
 EAPI=5
 
@@ -22,14 +22,15 @@ DESCRIPTION="A fully featured, yet light weight RFC2131 compliant DHCP client"
 HOMEPAGE="http://roy.marples.name/projects/dhcpcd/"
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="elibc_glibc"
+IUSE="elibc_glibc ipv6"
 
 DEPEND=""
 RDEPEND=""
 
 src_prepare()
 {
-	epatch "${FILESDIR}"/${P}-fix-prefix.patch
+	epatch "${FILESDIR}"/${P}-fix-build-without-ipv6.patch
+	epatch "${FILESDIR}"/${P}-fix-segfault.patch
 	epatch_user
 }
 
@@ -42,6 +43,7 @@ src_configure()
 			--libexecdir="${EPREFIX}/lib/dhcpcd" \
 			--dbdir="${EPREFIX}/var/lib/dhcpcd" \
 		--localstatedir="${EPREFIX}/var" \
+		$(use_enable ipv6) \
 		${hooks}
 }
 
@@ -74,6 +76,11 @@ pkg_postinst()
 	elog "This behaviour can be controlled with the noipv4ll configuration"
 	elog "file option or the -L command line switch."
 	elog "See the dhcpcd and dhcpcd.conf man pages for more details."
+
+	elog
+	elog "Dhcpcd has duid enabled by default, and this may cause issues"
+	elog "with some dhcp servers. For more information, see"
+	elog "https://bugs.gentoo.org/show_bug.cgi?id=477356"
 
 	if ! has_version net-dns/bind-tools; then
 		elog

@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.69 2013/08/18 13:43:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.70 2013/08/22 21:48:55 hwoarang Exp $
+
+*lightdm-1.6.0 (22 Aug 2013)
+
+  22 Aug 2013; Markos Chandras <hwoarang@gentoo.org> +lightdm-1.6.0.ebuild:
+  Bring 1.6.0 to the tree as a temporary solution for the 1.7.X problems in bug
+  #479660. This version should restore the consolekit problems for non-systemd
+  users
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> lightdm-1.4.0-r2.ebuild:
   Stable for x86, wrt bug #480132

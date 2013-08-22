@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8177 2013/08/21 16:22:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8178 2013/08/22 21:59:32 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Aug 2013; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove freeipmi mask.
 
   21 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:

@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.368 2013/08/17 19:55:14 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.370 2013/08/22 22:00:06 williamh Exp $
+
+  22 Aug 2013; William Hubbs <williamh@gentoo.org> -dhcpcd-5.99.7-r1.ebuild,
+  -files/dhcpcd-5.99.7-fix-prefix.patch:
+  remove an old version
+
+*dhcpcd-6.0.5-r1 (22 Aug 2013)
+
+  22 Aug 2013; William Hubbs <williamh@gentoo.org> +dhcpcd-6.0.5-r1.ebuild,
+  +files/dhcpcd-6.0.5-fix-segfault.patch:
+  apply upstream patch to fix seg fault reported in bug #479922
 
   17 Aug 2013; William Hubbs <williamh@gentoo.org>
   +files/dhcpcd-6.0.5-fix-build-without-ipv6.patch, dhcpcd-6.0.5.ebuild:
