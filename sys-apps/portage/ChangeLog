@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1344 2013/08/17 17:48:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1345 2013/08/22 04:45:46 zmedico Exp $
+
+*portage-2.2.1 (22 Aug 2013)
+
+  22 Aug 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.1.ebuild:
+  2.2.1 version bump. This fixes bug #480586 (suppress warnings for desktop
+  files with OnlyShowIn Pantheon) bug #480736 (improve handling of
+  libpostproc/ffmpeg:0 deps), bug #480972 (fix repoman --echangelog to
+  regenerate manifest for git when necessary), bug #481326 (add repoman
+  --include-exp-profiles option), bug #481450 (add network-sandbox FEATURES
+  support), and bug #481518 (python3 compat for archive-conf), Bug #472632
+  tracks all bugs fixed since portage-2.1.12.2.
 
   17 Aug 2013; Zac Medico <zmedico@gentoo.org> -portage-2.1.13.7.ebuild,
   -portage-2.2.0_alpha177.ebuild:
