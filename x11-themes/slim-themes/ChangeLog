@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/slim-themes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.33 2013/02/11 11:27:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/slim-themes/ChangeLog,v 1.34 2013/08/22 18:34:49 axs Exp $
+
+  22 Aug 2013; Ian Stakenvicius <axs@gentoo.org> slim-themes-1.2.3a-r6.ebuild:
+  added ~mips keyword to match x11-misc/slim
 
   11 Feb 2013; Agostino Sarubbo <ago@gentoo.org> slim-themes-1.2.3a-r6.ebuild:
   Stable for arm, wrt bug #455856

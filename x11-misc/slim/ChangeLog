@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.111 2013/08/03 06:54:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.112 2013/08/22 18:31:59 axs Exp $
+
+*slim-1.3.5-r3 (22 Aug 2013)
+
+  22 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
+  +files/slim-1.3.5-disable-ck-for-systemd.patch, +slim-1.3.5-r3.ebuild:
+  if slim is started from its systemd service file then don't let it try to set
+  up a consolekit session
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> slim-1.3.5-r2.ebuild:
   Stable for sparc, wrt bug #475192
