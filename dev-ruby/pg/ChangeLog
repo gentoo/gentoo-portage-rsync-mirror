@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/pg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.63 2013/04/13 06:57:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.64 2013/08/22 08:38:20 mrueg Exp $
+
+*pg-0.16.0 (22 Aug 2013)
+
+  22 Aug 2013; Manuel Rüger <mrueg@gentoo.org> +pg-0.16.0.ebuild,
+  -pg-0.13.2.ebuild:
+  Version bump. Cleanup old.
 
   13 Apr 2013; Hans de Graaff <graaff@gentoo.org> -pg-0.11.0.ebuild,
   -pg-0.12.2.ebuild, -pg-0.14.0.ebuild:
