@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.75 2013/06/18 12:02:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.76 2013/08/22 12:58:42 aballier Exp $
+
+*libedit-20130611.3.1-r1 (22 Aug 2013)
+
+  22 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  +libedit-20130611.3.1-r1.ebuild:
+  convert to multilib and remove useless || die and econf args
 
 *libedit-20130611.3.1 (18 Jun 2013)
 
