@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.8.1.ebuild,v 1.3 2013/08/22 16:14:52 jbartosik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.8.1.ebuild,v 1.4 2013/08/22 16:36:24 jbartosik Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -66,5 +66,6 @@ src_install() {
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
 	readme.gentoo_print_elog
 }
