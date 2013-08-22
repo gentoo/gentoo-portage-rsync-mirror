@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/python-sqlparse-0.1.5-r1.ebuild,v 1.1 2013/08/21 13:53:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/python-sqlparse-0.1.5-r1.ebuild,v 1.2 2013/08/22 06:06:44 patrick Exp $
 
 EAPI=5
 
@@ -23,5 +23,5 @@ RESTRICT="test"
 
 python_test() {
 	${PYTHON} tests/run_tests.py || die
-    nosetests --with-coverage --cover-inclusive --cover-package=sqlparse
+	nosetests --with-coverage --cover-inclusive --cover-package=sqlparse
 }
