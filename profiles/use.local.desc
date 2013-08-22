@@ -6421,6 +6421,7 @@ www-plugins/gnash:dump - Enable dump output module for creating video from SWF
 www-plugins/gnash:egl - Enable EGL support for the OpenVG, OpenGL and X11 renderers
 www-plugins/gnash:gconf - Enable GConf configuration backend
 www-plugins/gnash:harden - Enable upstream recommended hardening build flags (may conflict with system ones)
+www-plugins/gnash:jemalloc - Use dev-libs/jemalloc for allocations
 www-plugins/gnash:openvg - Rendering based on the OpenVG graphics acceleration API
 www-plugins/gnash:sdl-sound - Enable SDL audio output for the standalone player
 www-plugins/gnash:ssh - Enable using SSH for network authentication in libnet

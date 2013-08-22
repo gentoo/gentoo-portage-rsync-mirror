@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.143 2013/07/25 17:17:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.144 2013/08/22 21:09:18 chithanh Exp $
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
+# dev-libs/jemalloc is not keyworded
+www-plugins/gnash jemalloc
 
 # Pacho Ramos <pacho@gentoo.org> (25 Jul 2013)
 # Missing keywords, bug #444688
