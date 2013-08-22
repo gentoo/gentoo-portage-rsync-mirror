@@ -1,6 +1,9 @@
 # ChangeLog for net-im/mu-conference
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.29 2013/08/13 08:01:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.30 2013/08/21 23:45:54 mrueg Exp $
+
+  21 Aug 2013; Manuel Rüger <mrueg@gentoo.org> mu-conference-0.8-r1.ebuild:
+  Fix bug #481818
 
 *mu-conference-0.8-r1 (13 Aug 2013)
 

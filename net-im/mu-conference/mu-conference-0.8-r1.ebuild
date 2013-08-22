@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.8-r1.ebuild,v 1.1 2013/08/13 08:01:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/mu-conference-0.8-r1.ebuild,v 1.2 2013/08/21 23:45:54 mrueg Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ src_install() {
 	fowners jabber:jabber /usr/bin/mu-conference
 	fperms 750 /usr/bin/mu-conference
 
-	newinitd "${FILESDIR}/${P}".init mu-conference
+	newinitd "${FILESDIR}/${PN}"-0.7.init mu-conference
 
 	dodoc ChangeLog FAQ mu-conference.sql README README.sql
 	docinto scripts
