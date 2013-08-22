@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/magneto-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/magneto-gtk/ChangeLog,v 1.33 2013/04/02 09:39:16 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/magneto-gtk/ChangeLog,v 1.35 2013/08/22 11:20:17 lxnay Exp $
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -magneto-gtk-136.ebuild:
+  drop older version 136
+
+*magneto-gtk-216 (22 Aug 2013)
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> +magneto-gtk-216.ebuild:
+  version bump
 
 *magneto-gtk-189 (02 Apr 2013)
 

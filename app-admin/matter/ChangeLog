@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/matter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/matter/ChangeLog,v 1.2 2013/04/02 09:34:33 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/matter/ChangeLog,v 1.3 2013/08/22 11:12:48 lxnay Exp $
+
+*matter-216 (22 Aug 2013)
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> +matter-216.ebuild:
+  version bump
 
 *matter-189 (02 Apr 2013)
 

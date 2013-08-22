@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-136.ebuild,v 1.1 2012/08/24 14:23:02 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-216.ebuild,v 1.1 2013/08/22 11:12:11 lxnay Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -21,11 +21,13 @@ DEPEND="~sys-apps/entropy-${PV}"
 RDEPEND="${DEPEND} sys-apps/file[python]"
 
 src_compile() {
+	cd "${S}"/client || die
 	emake || die "make failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="usr/lib" equo-install || die "make install failed"
+	cd "${S}"/client || die
+	emake DESTDIR="${D}" LIBDIR="usr/lib" install || die "make install failed"
 	newbashcomp "${S}/misc/equo-completion.bash" equo
 }
 

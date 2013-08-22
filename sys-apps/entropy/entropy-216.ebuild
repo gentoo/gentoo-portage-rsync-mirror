@@ -1,28 +1,31 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-136.ebuild,v 1.3 2013/03/20 16:25:50 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-216.ebuild,v 1.1 2013/08/22 11:11:36 lxnay Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2"
-PYTHON_USE_WITH="sqlite"
-inherit eutils python user
+EAPI=5
+
+PYTHON_COMPAT=( python2_7 )
+PYTHON_REQ_USE="sqlite"
+
+inherit eutils python-single-r1 user
 
 DESCRIPTION="Entropy Package Manager foundation library"
 HOMEPAGE="http://www.sabayon.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
 
 IUSE=""
 SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.bz2"
 
-RDEPEND="dev-db/sqlite[soundex(+)]
+RDEPEND="dev-db/sqlite:3[soundex(+)]
 	net-misc/rsync
 	sys-apps/diffutils
 	sys-apps/sandbox
 	>=sys-apps/portage-2.1.9
-	sys-devel/gettext"
+	sys-devel/gettext
+	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
 
@@ -31,6 +34,7 @@ REPO_D_CONFPATH="${ROOT}/etc/entropy/repositories.conf.d"
 ENTROPY_CACHEDIR="${ROOT}/var/lib/entropy/caches"
 
 pkg_setup() {
+	python-single-r1_pkg_setup
 	# Can:
 	# - update repos
 	# - update security advisories
@@ -39,19 +43,23 @@ pkg_setup() {
 	# Create unprivileged entropy user
 	enewgroup entropy-nopriv || die "failed to create entropy-nopriv group"
 	enewuser entropy-nopriv -1 -1 -1 entropy-nopriv || die "failed to create entropy-nopriv user"
-
-	python_pkg_setup
 }
 
 src_compile() {
-	cd "${S}"/client/po || die
+	cd "${S}"/lib || die
 	emake || die "make failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="usr/lib" entropy-install || die "make install failed"
-	cd "${S}"/client/po || die
-	emake DESTDIR="${D}" LIBDIR="usr/lib" install || die "make install failed"
+	# create directories required by equo
+	dodir /var/run/entropy
+	keepdir /var/run/entropy
+
+	cd "${S}"/lib || die
+	# TODO: drop VARDIR after 146
+	emake DESTDIR="${D}" VARDIR="/var" LIBDIR="usr/lib" install || die "make install failed"
+
+	python_optimize "${D}/usr/lib/entropy/lib/entropy"
 }
 
 pkg_postinst() {
@@ -104,14 +112,8 @@ pkg_postinst() {
 	chown root:entropy "${ROOT}/var/lib/entropy/client/packages" # no recursion
 	chown root:entropy "${ROOT}/var/log/entropy" # no recursion
 
-	python_mod_optimize "/usr/lib/entropy/lib/entropy"
-
 	echo
 	elog "If you want to enable Entropy packages delta download support, please"
 	elog "install dev-util/bsdiff."
 	echo
-}
-
-pkg_postrm() {
-	python_mod_cleanup "/usr/lib/entropy/lib/entropy"
 }
