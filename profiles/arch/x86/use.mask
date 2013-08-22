@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.53 2013/05/13 15:56:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.54 2013/08/22 16:10:39 chithanh Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -39,10 +39,6 @@
 # 2011/12/22 - Alexis Ballier <aballier@gentoo.org>
 # Unmask vdpau as its supported here
 -vdpau
-
-# 2011/07/11 - Samuli Suominen <ssuominen@gentoo.org>
-# Unmask amd64/x86 only opencl support for nvidia-cuda-toolkit
--opencl
 
 # 2011/07/01 - Alexey Shvetsov <alexxy@gentoo.org>
 # Infiniband stuff works on x86

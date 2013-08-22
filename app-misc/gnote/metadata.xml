@@ -10,4 +10,3 @@
 		<flag name="applet">Enable gnote applet for <pkg>gnome-base/gnome-panel</pkg></flag>
 	</use>
 </pkgmetadata>
-

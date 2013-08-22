@@ -150,3 +150,7 @@ video_cards_trident
 video_cards_tseng
 video_cards_v4l
 video_cards_vesa
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
+# virtual/opencl is not keyworded
+opencl

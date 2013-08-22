@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.4.ebuild,v 1.1 2013/06/05 06:24:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.4.ebuild,v 1.2 2013/08/22 16:01:56 jlec Exp $
 
 EAPI=5
 
@@ -43,7 +43,6 @@ RDEPEND="${DEPEND}
 		dev-lang/perl
 		dev-python/dbus-python[${PYTHON_USEDEP}]
 	)"
-PDEPEND="sys-apps/openrc"
 
 RESTRICT="test"
 

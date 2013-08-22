@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.177 2013/08/07 22:11:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.178 2013/08/22 16:09:15 chithanh Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -16,9 +16,6 @@ zeitgeist
 
 # vdpau is currently only available with binary nvidia-drivers, thus amd64/x86*
 vdpau
-
-# nvidia-cuda-toolkit is amd64/x86 only
-opencl
 
 # Infiniband stuff should generaly work on all arches but keyworded only on amd64/x86
 infiniband

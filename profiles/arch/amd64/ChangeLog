@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.228 2013/08/13 22:07:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.229 2013/08/22 16:10:39 chithanh Exp $
+
+  22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
+  Drop obsolete opencl unmask.
 
   13 Aug 2013; Tim Harder <radhermit@gentoo.org> package.use.mask:
   Unmask luajit USE flag for app-editors/(g)vim.

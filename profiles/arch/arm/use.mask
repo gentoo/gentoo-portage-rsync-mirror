@@ -232,3 +232,7 @@ clvm
 # Michał Górny <mgorny@gentoo.org> (4 May 2013)
 # Unmask systemd since it is keyworded here.
 -systemd
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
+# virtual/opencl is not keyworded
+opencl

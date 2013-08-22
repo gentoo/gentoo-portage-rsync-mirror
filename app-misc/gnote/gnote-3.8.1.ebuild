@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.8.1.ebuild,v 1.1 2013/05/13 17:43:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.8.1.ebuild,v 1.3 2013/08/22 16:14:52 jbartosik Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 readme.gentoo
 
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="http://live.gnome.org/Gnote"
@@ -42,6 +42,15 @@ src_prepare() {
 	# Do not alter CFLAGS
 	sed 's/-DDEBUG -g/-DDEBUG/' -i configure.ac configure || die
 	gnome2_src_prepare
+
+	if has_version net-fs/wdfs; then
+		DOC_CONTENTS="You have net-fs/wdfs installed. app-misc/gnote will use it to
+		synchronize notes."
+	else
+		DOC_CONTENTS="Gnote can use net-fs/wdfs to synchronize notes.
+		If you want to use that functionality just emerge net-fs/wdfs.
+		Gnote will automatically detect that you did and let you use it."
+	fi
 }
 
 src_configure() {
@@ -49,4 +58,13 @@ src_configure() {
 		--disable-static \
 		$(use_enable debug) \
 		ITSTOOL=$(type -P true)
+}
+
+src_install() {
+	gnome2_src_install
+	readme.gentoo_create_doc
+}
+
+pkg_postinst() {
+	readme.gentoo_print_elog
 }

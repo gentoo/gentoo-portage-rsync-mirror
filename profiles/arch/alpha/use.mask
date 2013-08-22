@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.85 2013/05/28 13:36:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.86 2013/08/22 16:07:39 chithanh Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -221,3 +221,7 @@ template_haskell
 
 # nvidia cg toolkit for binary drivers
 cg
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
+# virtual/opencl is not keyworded
+opencl

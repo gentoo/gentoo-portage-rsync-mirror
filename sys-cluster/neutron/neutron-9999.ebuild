@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-9999.ebuild,v 1.1 2013/08/20 16:29:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-9999.ebuild,v 1.2 2013/08/22 16:10:35 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,8 +19,9 @@ SLOT="0"
 KEYWORDS=""
 IUSE="test"
 
+#the cliff dep is as below because it depends on pyparsing, which only has 2.7 OR 3.2, not both
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( dev-python/cliff[${PYTHON_USEDEP}]
+		test? ( dev-python/cliff[python_targets_python2_7]
 				dev-python/configobj[${PYTHON_USEDEP}] )
 				dev-python/coverage[${PYTHON_USEDEP}]
 				>=dev-python/mock-1.0[${PYTHON_USEDEP}]

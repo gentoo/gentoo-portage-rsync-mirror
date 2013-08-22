@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.1-r3.ebuild,v 1.10 2012/10/07 13:18:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.2.1-r3.ebuild,v 1.11 2013/08/22 16:01:56 jlec Exp $
 
 EAPI="4"
 
@@ -36,7 +36,6 @@ RDEPEND="
 	tcpd? ( sys-apps/tcp-wrappers )
 	"
 DEPEND="${RDEPEND}"
-PDEPEND="sys-apps/openrc"
 
 REQUIRED_USE="ldap? ( acl )"
 

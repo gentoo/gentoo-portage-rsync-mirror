@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-motif
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/ChangeLog,v 1.21 2013/08/01 20:20:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/ChangeLog,v 1.22 2013/08/22 16:01:10 mgorny Exp $
+
+  22 Aug 2013; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Change maintainer to the Gentoo multilib project.
 
   01 Aug 2013; Ulrich Müller <ulm@gentoo.org>
   emul-linux-x86-motif-20130224.ebuild,

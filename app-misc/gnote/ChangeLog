@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.32 2013/05/13 17:43:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.34 2013/08/22 16:14:52 jbartosik Exp $
+
+  22 Aug 2013;  <joszi@gentoo.org> gnote-3.8.1.ebuild:
+  Fix too hasty commit: use proper src_install.
+
+  22 Aug 2013;  <joszi@gentoo.org> gnote-3.8.1.ebuild, metadata.xml:
+  Notify users about about optional net-fs/wdfs support, close bug #458864 by
+  Olof Kindgren
 
 *gnote-3.8.1 (13 May 2013)
 
