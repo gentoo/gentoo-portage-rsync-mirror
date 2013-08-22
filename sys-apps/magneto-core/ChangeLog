@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/magneto-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/magneto-core/ChangeLog,v 1.34 2013/08/22 11:21:51 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/magneto-core/ChangeLog,v 1.37 2013/08/22 14:52:49 lxnay Exp $
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -magneto-core-189.ebuild:
+  drop older version 189
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -magneto-core-183.ebuild:
+  drop older version 183
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -magneto-core-144.ebuild:
+  drop older version 144
 
   22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -magneto-core-136.ebuild:
   drop older version 136

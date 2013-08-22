@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/entropy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.38 2013/08/22 11:26:10 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.41 2013/08/22 14:55:43 lxnay Exp $
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -entropy-189.ebuild:
+  drop older version 189
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -entropy-183.ebuild:
+  drop older version 183
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -entropy-144.ebuild:
+  drop older version 144
 
   22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -entropy-136.ebuild:
   drop older version 136

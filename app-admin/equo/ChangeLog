@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/equo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/ChangeLog,v 1.27 2013/08/22 11:24:39 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/ChangeLog,v 1.30 2013/08/22 14:54:55 lxnay Exp $
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -equo-189.ebuild:
+  drop older version 189
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -equo-183.ebuild:
+  drop older version 183
+
+  22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -equo-144.ebuild:
+  drop older version 144
 
   22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -equo-136.ebuild:
   drop older version 136
