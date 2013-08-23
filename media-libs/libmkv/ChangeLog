@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmkv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmkv/ChangeLog,v 1.1 2013/05/05 17:20:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmkv/ChangeLog,v 1.2 2013/08/23 13:09:50 ago Exp $
+
+  23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libmkv-0.6.5.1.ebuild:
+  Stable for amd64, wrt bug #481944
 
 *libmkv-0.6.5.1 (05 May 2013)
 

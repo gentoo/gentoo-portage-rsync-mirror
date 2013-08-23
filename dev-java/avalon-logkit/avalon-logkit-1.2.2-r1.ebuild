@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.2-r1.ebuild,v 1.1 2012/09/29 11:04:43 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/avalon-logkit-1.2.2-r1.ebuild,v 1.2 2013/08/23 13:08:59 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://apache/avalon/logkit/source/logkit-${PV}-src.tar.gz"
 LICENSE="Apache-1.1"
 SLOT="1.2"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 COMMON_DEP="
 	dev-java/avalon-framework:4.1

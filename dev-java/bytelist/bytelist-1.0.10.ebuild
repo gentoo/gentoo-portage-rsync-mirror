@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/bytelist-1.0.10.ebuild,v 1.1 2013/07/08 12:59:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/bytelist-1.0.10.ebuild,v 1.2 2013/08/23 13:09:10 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jruby/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 
 COMMON_DEP="dev-java/jcodings:0"
 

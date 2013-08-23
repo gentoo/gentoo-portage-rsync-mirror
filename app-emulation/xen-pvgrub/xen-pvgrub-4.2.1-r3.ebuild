@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.1-r3.ebuild,v 1.3 2013/07/31 08:26:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.2.1-r3.ebuild,v 1.4 2013/08/23 13:14:52 idella4 Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.6"
@@ -149,7 +149,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Official Xen Guide and the unoffical wiki page:"
-	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
-	elog " http://en.gentoo-wiki.com/wiki/Xen/"
+	elog "Official Xen Guide and the offical wiki page:"
+	elog "http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog "http://wiki.xen.org/wiki/Main_Page"
 }

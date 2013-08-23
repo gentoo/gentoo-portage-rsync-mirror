@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/hardinfo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/ChangeLog,v 1.7 2012/12/31 14:18:36 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/ChangeLog,v 1.8 2013/08/23 13:13:04 hasufell Exp $
+
+*hardinfo-0.5.2_pre20130823 (23 Aug 2013)
+
+  23 Aug 2013; Julian Ospald <hasufell@gentoo.org>
+  +hardinfo-0.5.2_pre20130823.ebuild:
+  version bump
 
   31 Dec 2012; Julian Ospald <hasufell@gentoo.org>
   hardinfo-0.5.2_pre20120527.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r5.ebuild,v 1.2 2013/07/01 07:44:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.1-r5.ebuild,v 1.3 2013/08/23 13:03:29 idella4 Exp $
 
 EAPI=5
 
@@ -332,9 +332,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Official Xen Guide and the unoffical wiki page:"
-	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
-	elog " http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
+	elog "Official Xen Guide and the offical wiki page:"
+	elog "http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog "http://wiki.xen.org/wiki/Main_Page"
 
 	if [[ "$(scanelf -s __guard -q "${PYTHON}")" ]] ; then
 		echo

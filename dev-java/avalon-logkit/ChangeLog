@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/avalon-logkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.93 2012/09/29 11:04:43 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.94 2013/08/23 13:08:59 ago Exp $
+
+  23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> avalon-logkit-1.2.2-r1.ebuild:
+  Stable for amd64, wrt bug #481956
 
 *avalon-logkit-2.1-r6 (29 Sep 2012)
 *avalon-logkit-1.2.2-r1 (29 Sep 2012)
@@ -365,4 +368,3 @@
   +files/2.0-build.xml, +avalon-logkit-1.2.ebuild, +avalon-logkit-2.0.ebuild:
   Initial import, ebuilds contributed by Mark Wolfe <mwolfe@netspace.net.au> and
   Saleem A. <compnerd@gentoo.org>. fixes #63284
-

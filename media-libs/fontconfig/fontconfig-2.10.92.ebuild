@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.92.ebuild,v 1.5 2013/08/21 08:19:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.92.ebuild,v 1.6 2013/08/23 13:04:46 jer Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -13,7 +13,7 @@ SRC_URI="http://fontconfig.org/release/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="doc static-libs"
 
 # Purposefully dropped the xml USE flag and libxml2 support.  Expat is the

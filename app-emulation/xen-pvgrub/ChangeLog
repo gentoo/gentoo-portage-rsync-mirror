@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.38 2013/08/15 05:27:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.39 2013/08/23 13:14:52 idella4 Exp $
+
+  23 Aug 2013; Ian Delaney <idella4@gentoo.org> xen-pvgrub-4.2.1-r3.ebuild,
+  xen-pvgrub-4.2.2-r1.ebuild, xen-pvgrub-4.3.0.ebuild:
+  substitute wiki page with xen's offical wiki page, fixes Bug #482114 by a3li
 
   15 Aug 2013; Patrick Lauer <patrick@gentoo.org> xen-pvgrub-4.2.2-r1.ebuild:
   Whitespace
