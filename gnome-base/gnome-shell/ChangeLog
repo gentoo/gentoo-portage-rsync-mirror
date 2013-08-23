@@ -1,6 +1,21 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.44 2013/07/31 03:35:45 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.45 2013/08/23 09:27:51 pacho Exp $
+
+*gnome-shell-3.8.4-r1 (23 Aug 2013)
+
+  23 Aug 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-shell-3.8.4-allocate-scrollbars.patch,
+  +files/gnome-shell-3.8.4-events-lock.patch,
+  +files/gnome-shell-3.8.4-nodisplay.patch,
+  +files/gnome-shell-3.8.4-reset-opacity.patch,
+  +files/gnome-shell-3.8.4-revert-async.patch,
+  +files/gnome-shell-defaults.patch, +gnome-shell-3.8.4-r1.ebuild,
+  -gnome-shell-3.8.3-r2.ebuild:
+  Multiple fixes from upstream: reversion of a commit causing multiple hangs
+  (#481918), reset opacity when not animating, unconditionally allocate
+  scrollbars, don't allow events through the lock dialog, filter out hidden
+  applications. This also changes default apps in favorites (#479918). Drop old.
 
 *gnome-shell-3.8.4 (31 Jul 2013)
 

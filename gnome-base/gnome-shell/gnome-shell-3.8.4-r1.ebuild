@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.3-r2.ebuild,v 1.5 2013/07/29 20:24:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.1 2013/08/23 09:27:51 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,8 +11,6 @@ inherit autotools eutils gnome2 multilib pax-utils python-r1 systemd
 
 DESCRIPTION="Provides core UI functions for the GNOME 3 desktop"
 HOMEPAGE="http://live.gnome.org/GnomeShell"
-
-SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
@@ -123,6 +121,9 @@ DEPEND="${COMMON_DEPEND}
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
+	# Change favorites defaults, bug #479918
+	epatch "${FILESDIR}/${PN}-defaults.patch"
+
 	# Fix automagic gnome-bluetooth dep, bug #398145
 	epatch "${FILESDIR}/${PN}-3.7.90-bluetooth-flag.patch"
 
@@ -132,8 +133,20 @@ src_prepare() {
 	# Re-lock the screen if we're restarted from a previously crashed shell (from 'master')
 	epatch "${FILESDIR}/${PN}-3.8.3-relock-screen.patch"
 
-	# Apply patches from gnome-3.8 branch
-	epatch "${WORKDIR}/${P}-patches/"*.patch
+	# Reset opacity when not animating (from 3.8 branch)
+	epatch "${FILESDIR}/${P}-reset-opacity.patch"
+
+	# Unconditionally allocate scrollbars (from 3.8 branch)
+	epatch "${FILESDIR}/${P}-allocate-scrollbars.patch"
+
+	# ScreenShield: don't allow events through the lock dialog (from 3.8 branch)
+	epatch "${FILESDIR}/${P}-events-lock.patch"
+
+	# Revert "background: fix asynchronous management of background loading operations" (#481918)
+	epatch "${FILESDIR}/${P}-revert-async.patch"
+
+	# AppDisplay/FrequentView: filter out hidden applications (from 'master')
+	epatch "${FILESDIR}/${PN}-3.8.4-nodisplay.patch"
 
 	epatch_user
 
@@ -217,7 +230,7 @@ pkg_postinst() {
 
 	if ! systemd_is_booted; then
 		ewarn "${PN} needs Systemd to be *running* for working"
-		ewarn "properly. Please follow the this guide to migrate:"
+		ewarn "properly. Please follow this guide to migrate:"
 		ewarn "http://wiki.gentoo.org/wiki/Systemd"
 	fi
 }

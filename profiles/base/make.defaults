@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.104 2013/08/10 09:15:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.105 2013/08/23 09:27:15 dilfridge Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -134,3 +134,7 @@ PYTHON_SINGLE_TARGET="python2_7"
 # 3) allow replacing unowned dropin.cache files (twisted-r1 migration).
 COLLISION_IGNORE="/lib/modules/* *.py[co] *\$py.class */dropin.cache"
 UNINSTALL_IGNORE="/lib/modules/*"
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (23 Aug 2013)
+# Make emerge messages default to English as per Council decision
+LC_MESSAGES=C

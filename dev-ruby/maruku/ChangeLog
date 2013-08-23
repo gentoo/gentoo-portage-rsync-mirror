@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/maruku
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.23 2013/01/15 06:44:44 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.25 2013/08/23 09:11:54 ago Exp $
+
+  23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> maruku-0.6.1.ebuild:
+  Stable for x86, wrt bug #481622
+
+  23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> maruku-0.6.1.ebuild:
+  Stable for amd64, wrt bug #481622
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> maruku-0.6.0-r2.ebuild,
   maruku-0.6.1.ebuild:
