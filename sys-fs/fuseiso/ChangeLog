@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/fuseiso
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.5 2013/08/22 08:11:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.6 2013/08/23 10:30:29 pinkbyte Exp $
+
+*fuseiso-20070708-r1 (23 Aug 2013)
+
+  23 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> +fuseiso-20070708-r1.ebuild,
+  +files/fuseiso-20070708-fix-typo.patch:
+  Revision bump: EAPI 5, epatch_user, fix typo in help message, wrt bug
+  #482078. Thanks to <zhaoxiaoqiang007 AT gmail.com> for discovering this issue
+  and for provided patch
 
   22 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Package will be maintained through proxy maintainers

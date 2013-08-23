@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.3 2013/07/28 17:30:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.4 2013/08/23 10:06:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -18,7 +18,7 @@ HOMEPAGE="http://projects.gnome.org/anjuta/"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc sparc x86 ~x86-fbsd"
 IUSE="debug devhelp glade +introspection packagekit subversion test vala"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
@@ -68,12 +68,11 @@ DEPEND="${COMMON_DEPEND}
 	test? (
 		app-text/docbook-xml-dtd:4.1.2
 		app-text/docbook-xml-dtd:4.5 )
+	app-text/yelp-tools
+	dev-libs/gobject-introspection-common
+	gnome-base/gnome-common
 "
-#	app-text/yelp-tools
-#	dev-libs/gobject-introspection-common
-#	gnome-base/gnome-common
-#"
-# Above are required by eautoreconf 
+# yelp-tools, gi-common and gnome-common are required by eautoreconf 
 
 pkg_setup() {
 	python-single-r1_pkg_setup
