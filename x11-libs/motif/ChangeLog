@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.39 2013/08/06 11:09:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.40 2013/08/23 05:25:59 ulm Exp $
+
+  23 Aug 2013; Ulrich Müller <ulm@gentoo.org> -motif-2.2.3-r11.ebuild,
+  -motif-2.3.4.ebuild, -files/motif-2.3.2-sanitise-paths.patch,
+  -files/motif-2.3.2-solaris-2.11.patch, -files/motif-2.3.4-solaris.patch:
+  Remove old.
 
   06 Aug 2013; Ulrich Müller <ulm@gentoo.org> motif-2.2.3-r12.ebuild,
   motif-2.3.4-r1.ebuild:
