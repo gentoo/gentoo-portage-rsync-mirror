@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15054 2013/08/23 02:54:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15055 2013/08/23 03:05:41 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,8 +34,8 @@
 # Mike Gilbert <floppym@gentoo.org> (23 Aug 2013)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
->=www-client/chromium-30
->=dev-lang/v8-3.20
+>=www-client/chromium-31
+>=dev-lang/v8-3.21
 
 # Ian Stakenvicius <axs@gentoo.org> (22 Aug 2013)
 # Masked for development (unable to test yet)

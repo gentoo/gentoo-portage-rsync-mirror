@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.508 2013/08/22 21:17:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.509 2013/08/23 03:03:51 floppym Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Mike Gilbert <floppym@gentoo.org> (23 Aug 2013)
+# Requires hard-masked ffmpeg.
+>=www-client/chromium-30 system-ffmpeg
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
 # Causes build to fail, issue is being discussed with upstream
