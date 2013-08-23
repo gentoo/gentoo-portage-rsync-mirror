@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.9.43.ebuild,v 1.1 2013/08/10 18:10:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.0.ebuild,v 1.1 2013/08/23 20:34:42 zmedico Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ inherit eutils fdo-mime bash-completion-r1 multilib toolchain-funcs
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
-SRC_URI="http://sourceforge.net/projects/calibre/files/${PV}/${P}.tar.xz"
+[[ ${PV} == 1.0 ]] && MY_PV=${PV}.0 || MY_PV=${PV}
+SRC_URI="http://sourceforge.net/projects/calibre/files/${MY_PV}/${PN}-${MY_PV}.tar.xz"
 
 # Restrict mirror due non-free prs500 fonts (bug #470212).
 RESTRICT="mirror"
@@ -184,9 +185,6 @@ src_install() {
 	mv "${HOME}"/.local/share/icons/* "${ED}"usr/share/icons/ ||
 		die "failed to install icon files"
 
-	sed -e 's:^Name=calibre %F$:Name=calibre:' \
-		-e 's:^Exec=calibre$:Exec=calibre %F:' \
-		-i "${HOME}"/.local/share/applications/calibre-gui.desktop || die
 	domenu "${HOME}"/.local/share/applications/*.desktop ||
 		die "failed to install .desktop menu files"
 
