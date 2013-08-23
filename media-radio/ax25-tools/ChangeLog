@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/ax25-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ChangeLog,v 1.15 2013/06/19 04:19:47 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ChangeLog,v 1.16 2013/08/23 16:37:20 ago Exp $
+
+  23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ax25-tools-0.0.10_rc4.ebuild:
+  Stable for amd64, wrt bug #482110
 
 *ax25-tools-0.0.10_rc4 (19 Jun 2013)
 
@@ -43,4 +46,3 @@
   +files/netromd.rc, +files/rip98d.rc, +files/rxecho.rc, +files/ttylinkd.rc,
   +metadata.xml:
   Moved from sunrise overlay to main tree (Bug #232927)
-

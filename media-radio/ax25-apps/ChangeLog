@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/ax25-apps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.22 2013/06/19 04:22:24 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.23 2013/08/23 16:37:24 ago Exp $
+
+  23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ax25-apps-0.0.8_rc4.ebuild:
+  Stable for amd64, wrt bug #482110
 
 *ax25-apps-0.0.8_rc4 (19 Jun 2013)
 
