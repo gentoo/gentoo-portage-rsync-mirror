@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-30.0.1588.0.ebuild,v 1.1 2013/08/13 16:17:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-30.0.1599.15.ebuild,v 1.1 2013/08/23 02:48:35 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -63,10 +63,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
-	system-ffmpeg? ( || (
-		>=media-video/ffmpeg-1.0:0=[opus]
-		>=media-video/libav-9.5:=[opus]
-	) )
+	system-ffmpeg? ( >=media-video/ffmpeg-2.0.1:0=[opus] )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -80,7 +77,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	!arm? (
-		>=dev-lang/nacl-toolchain-newlib-0_p11846
 		dev-lang/yasm
 	)
 	dev-lang/perl
@@ -126,13 +122,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if ! use arm; then
-		mkdir -p out/Release/gen/sdk/toolchain || die
-		# Do not preserve SELinux context, bug #460892 .
-		cp -a --no-preserve=context /usr/$(get_libdir)/nacl-toolchain-newlib \
-			out/Release/gen/sdk/toolchain/linux_x86_newlib || die
-		touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
-	fi
+	# if ! use arm; then
+	#	mkdir -p out/Release/gen/sdk/toolchain || die
+	#	# Do not preserve SELinux context, bug #460892 .
+	#	cp -a --no-preserve=context /usr/$(get_libdir)/nacl-toolchain-newlib \
+	#		out/Release/gen/sdk/toolchain/linux_x86_newlib || die
+	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
+	# fi
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-ffmpeg-r7.patch"
@@ -203,15 +199,18 @@ src_configure() {
 	# drivers, bug #413637.
 	myconf+=" $(gyp_use tcmalloc linux_use_tcmalloc)"
 
+	# Disable nacl, we can't build without pnacl (http://crbug.com/269560).
+	myconf+=" -Ddisable_nacl=1"
+
 	# Disable glibc Native Client toolchain, we don't need it (bug #417019).
-	myconf+=" -Ddisable_glibc=1"
+	# myconf+=" -Ddisable_glibc=1"
 
 	# TODO: also build with pnacl
-	myconf+=" -Ddisable_pnacl=1"
+	# myconf+=" -Ddisable_pnacl=1"
 
 	# It would be awkward for us to tar the toolchain and get it untarred again
 	# during the build.
-	myconf+=" -Ddisable_newlib_untar=1"
+	# myconf+=" -Ddisable_newlib_untar=1"
 
 	# Make it possible to remove third_party/adobe.
 	echo > "${T}/flapper_version.h" || die
@@ -294,11 +293,6 @@ src_configure() {
 	# Save space by removing DLOG and DCHECK messages (about 6% reduction).
 	myconf+="
 		-Dlogging_like_official_build=1"
-
-	# Enable SUID sandbox.
-	myconf+="
-		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
-		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
 	# Never use bundled gold binary. Disable gold linker flags for now.
 	myconf+="
@@ -493,17 +487,17 @@ src_install() {
 	exeinto "${CHROMIUM_HOME}"
 	doexe out/Release/chrome || die
 
-	doexe out/Release/chrome_sandbox || die
-	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
+	newexe out/Release/chrome_sandbox chrome-sandbox || die
+	fperms 4755 "${CHROMIUM_HOME}/chrome-sandbox"
 
 	doexe out/Release/chromedriver || die
 
-	if ! use arm; then
-		doexe out/Release/nacl_helper{,_bootstrap} || die
-		insinto "${CHROMIUM_HOME}"
-		doins out/Release/nacl_irt_*.nexe || die
-		doins out/Release/libppGoogleNaClPluginChrome.so || die
-	fi
+	# if ! use arm; then
+	#	doexe out/Release/nacl_helper{,_bootstrap} || die
+	#	insinto "${CHROMIUM_HOME}"
+	#	doins out/Release/nacl_irt_*.nexe || die
+	#	doins out/Release/libppGoogleNaClPluginChrome.so || die
+	# fi
 
 	local sedargs=( -e "s:/usr/lib/:/usr/$(get_libdir)/:g" )
 	if [[ -n ${CHROMIUM_SUFFIX} ]]; then

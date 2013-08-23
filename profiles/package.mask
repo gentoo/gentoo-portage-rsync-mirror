@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15052 2013/08/22 21:59:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15054 2013/08/23 02:54:06 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (23 Aug 2013)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-30
+>=dev-lang/v8-3.20
 
 # Ian Stakenvicius <axs@gentoo.org> (22 Aug 2013)
 # Masked for development (unable to test yet)
@@ -297,12 +303,6 @@ dev-ruby/xmpp4r
 # Uses vulnerable versions of bzip2, but these versions are 
 # necessary to reconstruct older archives. Use at your own risk.
 =app-portage/deltup-0.4.5
-
-# Mike Gilbert <floppym@gentoo.org> (18 Jul 2013)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-30
->=dev-lang/v8-3.20
 
 # Michael Weber <xmw@gentoo.org> (17 Jul 2013)
 # Upstream next versions
