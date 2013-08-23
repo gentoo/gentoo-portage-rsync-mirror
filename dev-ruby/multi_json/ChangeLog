@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/multi_json
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.30 2013/07/27 22:13:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.31 2013/08/23 22:44:24 zerochaos Exp $
+
+*multi_json-1.0.4 (23 Aug 2013)
+
+  23 Aug 2013; Rick Farina <zerochaos@gentoo.org> +multi_json-1.0.4.ebuild:
+  reintroducing 1.0.4, needed as a dep for metasploit
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> multi_json-1.5.0.ebuild:
   Stable for x86, wrt bug #477364
