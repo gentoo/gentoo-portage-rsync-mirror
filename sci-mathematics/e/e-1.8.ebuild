@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/e-1.6.ebuild,v 1.3 2013/08/23 12:11:05 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/e-1.8.ebuild,v 1.1 2013/08/23 12:17:53 gienah Exp $
 
 EAPI="5"
 

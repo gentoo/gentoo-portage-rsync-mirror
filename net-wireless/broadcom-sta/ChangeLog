@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.52 2013/05/12 10:52:13 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.53 2013/08/23 12:31:04 pinkbyte Exp $
+
+*broadcom-sta-6.30.223.30-r2 (23 Aug 2013)
+
+  23 Aug 2013; Sergey Popov <pinkbyte@gentoo.org>
+  -broadcom-sta-6.30.223.30.ebuild, -broadcom-sta-6.30.223.30-r1.ebuild,
+  +broadcom-sta-6.30.223.30-r2.ebuild,
+  +files/broadcom-sta-6.30.223.30-linux-3.10.0.patch:
+  Revision bump: add support for 3.10 kernels, wrt bug #477372. Patch submitted
+  by Constantine Kozlov <tempor.demonius AT gmail.com>. Drop old revisions
 
   12 May 2013; Sergey Popov <pinkbyte@gentoo.org>
   broadcom-sta-5.100.82.112-r2.ebuild:

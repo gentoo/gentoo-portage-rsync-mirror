@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-6.30.223.30.ebuild,v 1.1 2013/05/01 07:22:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-6.30.223.30-r2.ebuild,v 1.1 2013/08/23 12:31:04 pinkbyte Exp $
 
 EAPI="5"
-inherit eutils linux-mod unpacker
+inherit eutils linux-info linux-mod unpacker
 
 DESCRIPTION="Broadcom's IEEE 802.11a/b/g/n hybrid Linux device driver."
 HOMEPAGE="https://launchpad.net/ubuntu/+source/bcmwl http://www.broadcom.com/support/802.11/linux_sta.php"
@@ -32,18 +32,25 @@ pkg_setup() {
 	# make checks non-fatal. The correct fix is blackisting ssb and, perhaps
 	# b43 via udev rules. Moreover, previous fix broke binpkgs support.
 	CONFIG_CHECK="~!B43 ~!SSB"
-	if kernel_is ge 2 6 32; then
-		CONFIG_CHECK="${CONFIG_CHECK} CFG80211 LIB80211 ~!MAC80211"
+	CONFIG_CHECK2="LIB80211 ~!MAC80211 ~LIB80211_CRYPT_TKIP"
+	ERROR_B43="B43: If you insist on building this, you must blacklist it!"
+	ERROR_SSB="SSB: If you insist on building this, you must blacklist it!"
+	ERROR_LIB80211="LIB80211: Please enable it. If you can't find it: enabling the driver for \"Intel PRO/Wireless 2100\" or \"Intel PRO/Wireless 2200BG\" (IPW2100 or IPW2200) should suffice."
+	ERROR_MAC80211="MAC80211: If you insist on building this, you must blacklist it!"
+	ERROR_PREEMPT_RCU="PREEMPT_RCU: Please do not set the Preemption Model to \"Preemptible Kernel\"; choose something else."
+	ERROR_LIB80211_CRYPT_TKIP="LIB80211_CRYPT_TKIP: You will need this for WPA."
+	if kernel_is ge 3 8 8; then
+		CONFIG_CHECK="${CONFIG_CHECK} ${CONFIG_CHECK2} CFG80211 ~!PREEMPT_RCU"
+	elif kernel_is ge 2 6 32; then
+		CONFIG_CHECK="${CONFIG_CHECK} ${CONFIG_CHECK2} CFG80211"
 	elif kernel_is ge 2 6 31; then
-		CONFIG_CHECK="${CONFIG_CHECK} LIB80211 WIRELESS_EXT ~!MAC80211"
+		CONFIG_CHECK="${CONFIG_CHECK} ${CONFIG_CHECK2} WIRELESS_EXT ~!MAC80211"
 	elif kernel_is ge 2 6 29; then
-		CONFIG_CHECK="${CONFIG_CHECK} LIB80211 WIRELESS_EXT ~!MAC80211 COMPAT_NET_DEV_OPS"
-	elif kernel_is ge 3 8 0; then
-		ewarn "Due to licensing issues this driver is unusable with kernel 3.8."
-		ewarn "Meaning: This build will likely not succeed."
+		CONFIG_CHECK="${CONFIG_CHECK} ${CONFIG_CHECK2} WIRELESS_EXT COMPAT_NET_DEV_OPS"
 	else
 		CONFIG_CHECK="${CONFIG_CHECK} IEEE80211 IEEE80211_CRYPT_TKIP"
 	fi
+
 	linux-mod_pkg_setup
 
 	BUILD_PARAMS="-C ${KV_DIR} M=${S}"
@@ -61,20 +68,14 @@ src_unpack() {
 }
 
 src_prepare() {
-	einfo
-	einfo "These patches come from some mighty proficient Debian programmer"
-	einfo "whose work I shamelessly exploit for Gentoo's benefit."
-	einfo "This ebuild was tested with 3.7.10-gentoo-r1."
-	einfo "If one of them patches fails against other versions, please"
-	einfo "file a bug about it at https://bugs.gentoo.org"
-	einfo
 #	Filter the outdated patches here
-#	This needs more testing against multiple versions.
-#	So far the filtered patches seem to be cruft from older versions.
 	EPATCH_FORCE="yes" EPATCH_EXCLUDE="0002* 0004* 0005*" EPATCH_SOURCE="${S}/patches" EPATCH_SUFFIX=patch epatch
-#	keep `emake install` working
-	epatch "${FILESDIR}/${P}-makefile.patch"
-
+#	Makefile.patch: keep `emake install` working
+#	linux-3.9.0.patch: add support for kernel 3.9.0
+#	linux-3.10.0.patch: add support for kernel 3.10, bug #477372
+	epatch "${FILESDIR}/${P}-makefile.patch" \
+		"${FILESDIR}/${P}-linux-3.9.0.patch" \
+		"${FILESDIR}/${P}-linux-3.10.0.patch"
 	mv "${S}/lib/wlc_hybrid.o_shipped_"* "${S}/lib/wlc_hybrid.o_shipped" \
 		|| die "Where is the blob?"
 
