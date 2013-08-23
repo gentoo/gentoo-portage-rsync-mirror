@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.593 2013/08/23 09:27:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.594 2013/08/23 17:52:23 olemarkus Exp $
+
+  23 Aug 2013; Ole Markus With <olemarkus@gentoo.org> make.defaults:
+  Changing PHP_TARGETS to php5.5, as it has now been stabilised
 
   23 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org> make.defaults:
   Make emerge messages default to English as per Council decision
