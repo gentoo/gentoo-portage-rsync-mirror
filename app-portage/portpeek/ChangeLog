@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.170 2013/08/23 09:37:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.172 2013/08/23 11:25:43 jlec Exp $
+
+  23 Aug 2013; Justin Lecher <jlec@gentoo.org> portpeek-2.1.9.ebuild,
+  metadata.xml:
+  Correctly use python eclasses, allow parallel installation for different py
+  ABIs
+
+  23 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> portpeek-2.1.9.ebuild:
+  Stable on amd64 and x86, wrt bug #482090
 
   23 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> portpeek-2.1.9.ebuild:
   Stable on arm, wrt bug #482090
