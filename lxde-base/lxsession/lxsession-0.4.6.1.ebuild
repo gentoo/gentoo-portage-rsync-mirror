@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.6.1.ebuild,v 1.7 2013/02/23 02:35:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.6.1.ebuild,v 1.8 2013/08/23 19:12:06 ssuominen Exp $
 
-EAPI="4"
+EAPI=5
 
 DESCRIPTION="LXDE session manager (lite version)"
 HOMEPAGE="http://lxde.sf.net/"
@@ -11,30 +11,28 @@ SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~alpha amd64 arm ppc x86 ~arm-linux ~x86-linux"
 SLOT="0"
-IUSE="nls udev"
+# upower USE flag is enabled by default in the desktop profile
+IUSE="+dbus nls upower"
 
 COMMON_DEPEND="dev-libs/glib:2
+	lxde-base/lxde-common
 	x11-libs/gtk+:2
-	>=lxde-base/lxde-common-0.5.0
 	x11-libs/libX11
-	udev? ( >=sys-apps/dbus-1.4.1 )"
+	dbus? ( sys-apps/dbus )"
 RDEPEND="${COMMON_DEPEND}
-	udev? ( >=sys-power/upower-0.9.5 )"
+	upower? ( sys-power/upower )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
-	virtual/pkgconfig
 	sys-devel/gettext
+	virtual/pkgconfig
 	x11-proto/xproto"
+REQUIRED_USE="upower? ( dbus )"
+
+DOCS="AUTHORS ChangeLog README"
 
 src_configure() {
+	# dbus is used for restart/shutdown (CK, logind?), and suspend/hibernate (UPower)
 	econf \
-		--disable-dependency-tracking \
-		$(use_enable udev dbus) \
-		$(use_enable nls) \
-		${myconf}
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog README
+		$(use_enable dbus) \
+		$(use_enable nls)
 }
