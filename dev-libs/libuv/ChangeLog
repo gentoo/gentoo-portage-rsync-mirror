@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libuv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.4 2013/08/23 06:47:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libuv/ChangeLog,v 1.5 2013/08/23 10:33:47 hasufell Exp $
+
+  23 Aug 2013; Julian Ospald <hasufell@gentoo.org> libuv-0.11.8.ebuild,
+  -files/libuv-0.11.8-Werror.patch:
+  remove obsolete patch
 
   23 Aug 2013; Julian Ospald <hasufell@gentoo.org> libuv-0.11.8.ebuild:
   add upstream bug reference
