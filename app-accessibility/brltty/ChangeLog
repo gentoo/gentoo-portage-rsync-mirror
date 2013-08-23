@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.134 2013/08/21 15:23:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.135 2013/08/23 18:19:22 teiresias Exp $
+
+*brltty-4.5-r2 (23 Aug 2013)
+
+  23 Aug 2013; Christopher Brannon <teiresias@gentoo.org>
+  -brltty-4.5-r1.ebuild, +brltty-4.5-r2.ebuild,
+  +files/brltty-4.5-range-checking-and-array-bounds.patch:
+  Add a patch to fix range-checking and array out-of-bounds access issues.
+  The patch comes from upstream's svn repository, so it can go away on the
+  next release. Fixes bug #481802.
 
   21 Aug 2013; William Hubbs <williamh@gentoo.org> metadata.xml:
   Assign maintainership to Chris.
