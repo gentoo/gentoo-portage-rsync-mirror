@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/e
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/ChangeLog,v 1.6 2013/08/23 12:17:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/ChangeLog,v 1.7 2013/08/23 12:38:30 gienah Exp $
+
+  23 Aug 2013; Mark Wright <gienah@gentoo.org> e-1.8.ebuild:
+  Thanks to jlec for suggestions on simplifying the e-1.8.ebuild (dodir
+  unecessary, dobin and doman take multiple arguments, dohtml estyle.sty).
 
 *e-1.8 (23 Aug 2013)
 

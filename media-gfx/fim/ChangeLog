@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/fim
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/ChangeLog,v 1.1 2013/08/23 12:40:04 xmw Exp $
+
+*fim-0.4_pre (23 Aug 2013)
+
+  23 Aug 2013; Michael Weber <xmw@gentoo.org>
+  +files/fim-0.4_pre-automake-1.12.patch,
+  +files/fim-0.4_pre-graphicsmagick.patch, +fim-0.4_pre.ebuild, +metadata.xml:
+  Initial import (bug 188217)

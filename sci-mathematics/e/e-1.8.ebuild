@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/e-1.8.ebuild,v 1.1 2013/08/23 12:17:53 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/e/e-1.8.ebuild,v 1.2 2013/08/23 12:38:30 gienah Exp $
 
 EAPI="5"
 
@@ -35,7 +35,7 @@ src_configure() {
 }
 
 src_install() {
-	for i in "${S}/PROVER/eprover" \
+	dobin "${S}/PROVER/eprover" \
 		"${S}/PROVER/epclextract" \
 		"${S}/PROVER/eproof" \
 		"${S}/PROVER/eproof_ram" \
@@ -47,11 +47,8 @@ src_install() {
 		"${S}/PROVER/ekb_delete" \
 		"${S}/PROVER/ekb_ginsert" \
 		"${S}/PROVER/ekb_insert"
-	do
-		dobin "${i}"
-	done
 
-	for i in "${S}/DOC/man/eprover.1" \
+	doman "${S}/DOC/man/eprover.1" \
 		"${S}/DOC/man/epclextract.1" \
 		"${S}/DOC/man/eproof.1" \
 		"${S}/DOC/man/eproof_ram.1" \
@@ -63,9 +60,6 @@ src_install() {
 		"${S}/DOC/man/ekb_delete.1" \
 		"${S}/DOC/man/ekb_ginsert.1" \
 		"${S}/DOC/man/ekb_insert.1"
-	do
-		doman "${i}"
-	done
 
 	if use doc; then
 		pushd "${S}"/DOC || die "Could not cd to DOC"
@@ -73,13 +67,11 @@ src_install() {
 			HISTORY NEWS PORTING ReadMe THINKME TODO TPTP_SUBMISSION \
 			WISHLIST eprover.pdf
 		dohtml *.html
-		insinto /usr/share/doc/${PF}/html
-		doins estyle.sty
+		dohtml estyle.sty
 		popd
 	fi
 
 	if use examples; then
-		dodir /usr/share/${MY_PN}/examples
 		insinto /usr/share/${MY_PN}/examples
 		doins -r EXAMPLE_PROBLEMS
 		doins -r SIMPLE_APPS
@@ -89,7 +81,6 @@ src_install() {
 		ISABELLE_HOME="$(isabelle getenv ISABELLE_HOME | cut -d'=' -f 2)" \
 			|| die "isabelle getenv ISABELLE_HOME failed"
 		[[ -n "${ISABELLE_HOME}" ]] || die "ISABELLE_HOME empty"
-		dodir "${ISABELLE_HOME}/contrib/${PN}-${PV}/etc"
 		cat <<- EOF >> "${S}/settings"
 			E_HOME="${ROOT}usr/bin"
 			E_VERSION="${PV}"
