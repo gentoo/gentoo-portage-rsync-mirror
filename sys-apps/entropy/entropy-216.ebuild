@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-216.ebuild,v 1.1 2013/08/22 11:11:36 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-216.ebuild,v 1.2 2013/08/23 05:54:57 lxnay Exp $
 
 EAPI=5
 
@@ -23,11 +23,15 @@ RDEPEND="dev-db/sqlite:3[soundex(+)]
 	net-misc/rsync
 	sys-apps/diffutils
 	sys-apps/sandbox
-	>=sys-apps/portage-2.1.9
+	>=sys-apps/portage-2.1.9[${PYTHON_USEDEP}]
 	sys-devel/gettext
 	${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
 	dev-util/intltool"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+S="${S}/lib"
 
 REPO_CONFPATH="${ROOT}/etc/entropy/repositories.conf"
 REPO_D_CONFPATH="${ROOT}/etc/entropy/repositories.conf.d"
@@ -45,19 +49,8 @@ pkg_setup() {
 	enewuser entropy-nopriv -1 -1 -1 entropy-nopriv || die "failed to create entropy-nopriv user"
 }
 
-src_compile() {
-	cd "${S}"/lib || die
-	emake || die "make failed"
-}
-
 src_install() {
-	# create directories required by equo
-	dodir /var/run/entropy
-	keepdir /var/run/entropy
-
-	cd "${S}"/lib || die
-	# TODO: drop VARDIR after 146
-	emake DESTDIR="${D}" VARDIR="/var" LIBDIR="usr/lib" install || die "make install failed"
+	emake DESTDIR="${D}" LIBDIR="usr/lib" install || die "make install failed"
 
 	python_optimize "${D}/usr/lib/entropy/lib/entropy"
 }
@@ -107,7 +100,6 @@ pkg_postinst() {
 	done
 
 	# Setup Entropy Library directories ownership
-	chown -R root:entropy "${ROOT}/var/tmp/entropy"
 	chown root:entropy "${ROOT}/var/lib/entropy" # no recursion
 	chown root:entropy "${ROOT}/var/lib/entropy/client/packages" # no recursion
 	chown root:entropy "${ROOT}/var/log/entropy" # no recursion

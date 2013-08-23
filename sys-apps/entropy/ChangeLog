@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/entropy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.41 2013/08/22 14:55:43 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.42 2013/08/23 05:54:57 lxnay Exp $
+
+  23 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> entropy-216.ebuild:
+  Fix python-single-r1 usage as reported by hasufell in bug #482032
 
   22 Aug 2013; Fabio Erculiani <lxnay@gentoo.org> -entropy-189.ebuild:
   drop older version 189
