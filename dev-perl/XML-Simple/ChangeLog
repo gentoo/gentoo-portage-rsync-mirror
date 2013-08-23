@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.79 2013/08/20 14:49:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.80 2013/08/23 21:39:23 zlogene Exp $
+
+  23 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> XML-Simple-2.200.0.ebuild:
+  alpha stable wrt bug #449628
 
   20 Aug 2013; Jeroen Roovers <jer@gentoo.org> XML-Simple-2.200.0.ebuild:
   Stable for HPPA (bug #449628).
