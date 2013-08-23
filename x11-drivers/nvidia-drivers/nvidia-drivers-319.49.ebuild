@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-319.49.ebuild,v 1.1 2013/08/20 15:23:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-319.49.ebuild,v 1.2 2013/08/23 15:34:42 jer Exp $
 
 EAPI=5
 
@@ -82,11 +82,11 @@ pkg_pretend() {
 		die "Unexpected \${DEFAULT_ABI} = ${DEFAULT_ABI}"
 	fi
 
-	if use kernel_linux && kernel_is ge 3 10 ; then
+	if use kernel_linux && kernel_is ge 3 11 ; then
 		ewarn "Gentoo supports kernels which are supported by NVIDIA"
 		ewarn "which are limited to the following kernels:"
-		ewarn "<sys-kernel/gentoo-sources-3.10"
-		ewarn "<sys-kernel/vanilla-sources-3.10"
+		ewarn "<sys-kernel/gentoo-sources-3.11"
+		ewarn "<sys-kernel/vanilla-sources-3.11"
 		ewarn ""
 		ewarn "You are free to utilize epatch_user to provide whatever"
 		ewarn "support you feel is appropriate, but will not receive"
