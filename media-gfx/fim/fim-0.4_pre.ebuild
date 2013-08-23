@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/fim-0.4_pre.ebuild,v 1.1 2013/08/23 12:40:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/fim-0.4_pre.ebuild,v 1.2 2013/08/23 14:55:10 xmw Exp $
 
 EAPI=5
 
@@ -39,7 +39,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_pre/-trunk}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-automake-1.12.patch
+	epatch "${FILESDIR}"/${P}-automake-1.12.patch \
+		"${FILESDIR}"/${P}-nosvn.patch
 	if use graphicsmagick ; then
 		epatch "${FILESDIR}"/${P}-graphicsmagick.patch
 	fi
