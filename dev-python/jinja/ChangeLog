@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.82 2013/08/18 13:46:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.83 2013/08/23 09:00:46 ago Exp $
+
+  23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> jinja-2.6-r100.ebuild:
+  Stable for amd64, wrt bug #481800
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> jinja-2.7.ebuild:
   Stable for x86, wrt bug #480092

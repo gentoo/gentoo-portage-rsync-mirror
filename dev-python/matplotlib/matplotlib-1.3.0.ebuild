@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.1 2013/08/17 23:27:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.2 2013/08/23 08:43:47 heroxbd Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ COMMON_DEPEND="
 	media-libs/freetype:2
 	media-libs/libpng:0
 	gtk? ( dev-python/pygtk[${PY2_USEDEP}] )
-	wxwidgets? ( dev-python/wxpython:2.8[${PY2_USEDEP}] )"
+	wxwidgets? ( dev-python/wxpython[${PY2_USEDEP}] )"
 
 # internal copy of pycxx highly patched
 #	dev-python/pycxx
