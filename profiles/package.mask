@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15055 2013/08/23 03:05:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15056 2013/08/24 06:56:22 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -314,12 +314,6 @@ dev-ruby/xmpp4r
 # superseeded by sci-biology/allpathslg
 # Upstream wants anybody to move over
 sci-biology/allpaths
-
-# Hans de Graaff <graaff@gentoo.org> (16 Jul 2013)
-# Mask for removal. Upstream dead, recommends no longer using
-# this. Nothing in the tree depends on it. dev-ruby/listen
-# can be used as an alternative.
-dev-ruby/fssm
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Jul 2013)
 # The separate media-sound/alsa-headers package has been obsoleted
