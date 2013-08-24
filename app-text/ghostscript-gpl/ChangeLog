@@ -1,10 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.156 2013/08/23 23:15:51 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.157 2013/08/24 03:13:04 tgurr Exp $
 
 *ghostscript-gpl-9.09 (23 Aug 2013)
 
-  23 Aug 2013; <psy@gentoo.org> +ghostscript-gpl-9.09.ebuild:
+  23 Aug 2013; Timo Gurr <tgurr@gentoo.org> +ghostscript-gpl-9.09.ebuild:
   Version bump, fixing bug #459216 and bug #481658.
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> ghostscript-gpl-9.06.ebuild,
