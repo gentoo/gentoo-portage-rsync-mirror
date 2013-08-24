@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/oclhashcat-lite-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/ChangeLog,v 1.8 2013/04/29 17:40:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/ChangeLog,v 1.9 2013/08/24 18:29:58 zerochaos Exp $
+
+  24 Aug 2013; Rick Farina <zerochaos@gentoo.org>
+  oclhashcat-lite-bin-0.15.ebuild:
+  newer ati-drivers can be used with --force so we allow it
 
   29 Apr 2013; Rick Farina <zerochaos@gentoo.org>
   oclhashcat-lite-bin-0.15.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpunit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.17 2013/08/10 13:21:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.18 2013/08/24 18:21:17 olemarkus Exp $
+
+  24 Aug 2013; Ole Markus With <olemarkus@gentoo.org> -phpunit-3.5.13.ebuild,
+  -phpunit-3.6.0.ebuild, -phpunit-3.6.10.ebuild, -phpunit-3.6.11.ebuild,
+  -phpunit-3.7.19.ebuild:
+  remove older versions
 
   10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> phpunit-3.7.20.ebuild:
   Stable for x86, wrt bug #464424

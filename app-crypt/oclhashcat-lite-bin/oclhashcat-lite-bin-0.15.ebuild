@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/oclhashcat-lite-bin-0.15.ebuild,v 1.2 2013/04/29 17:40:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/oclhashcat-lite-bin/oclhashcat-lite-bin-0.15.ebuild,v 1.3 2013/08/24 18:29:58 zerochaos Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ IUSE="virtualcl ${IUSE_VIDEO_CARDS}"
 
 RDEPEND="sys-libs/zlib
 	video_cards_nvidia? ( >=x11-drivers/nvidia-drivers-310.32 )
-	video_cards_fglrx?  ( =x11-drivers/ati-drivers-13.1 )"
+	video_cards_fglrx?  ( >=x11-drivers/ati-drivers-13.1 )"
 DEPEND="${RDEPEND}
 	app-arch/p7zip"
 
