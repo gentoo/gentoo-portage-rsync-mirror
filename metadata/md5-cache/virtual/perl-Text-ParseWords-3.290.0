@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Text-ParseWords
+KEYWORDS=~amd64 ~x86
+RDEPEND=|| ( =dev-lang/perl-5.18* ~perl-core/Text-ParseWords-3.290.0 )
+SLOT=0
+_md5_=9013f83004c41e8760b2903beec0c80a
