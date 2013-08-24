@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/alien
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.39 2013/01/18 09:17:49 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.40 2013/08/24 15:25:07 idella4 Exp $
+
+  24 Aug 2013; Ian Delaney <idella4@gentoo.org> alien-8.88.ebuild:
+  bump EAPI -> 5, fixes Bug #478722 by mattst88
 
 *alien-8.88 (18 Jan 2013)
 

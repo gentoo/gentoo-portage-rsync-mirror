@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.88.ebuild,v 1.1 2013/01/18 09:17:49 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.88.ebuild,v 1.2 2013/08/24 15:25:07 idella4 Exp $
 
-EAPI=1
+EAPI=5
 
-inherit perl-app
+inherit perl-module
 
 DESCRIPTION="Converts between the rpm, dpkg, stampede slp, and slackware tgz file formats"
 HOMEPAGE="http://kitenet.net/programs/alien"
@@ -24,10 +24,7 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
-mydoc="TODO"
-
-src_unpack() {
-	perl-module_src_unpack
+src_prepare() {
 	sed -e s%'$(VARPREFIX)'%${D}% -e s%'$(PREFIX)'%${D}/usr%g \
 		-i "${S}"/Makefile.PL || die "sed failed."
 }

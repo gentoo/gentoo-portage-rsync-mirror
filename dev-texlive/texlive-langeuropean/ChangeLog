@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langeuropean
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langeuropean/ChangeLog,v 1.5 2013/08/18 14:07:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langeuropean/ChangeLog,v 1.6 2013/08/24 15:26:47 maekke Exp $
+
+  24 Aug 2013; Markus Meier <maekke@gentoo.org>
+  texlive-langeuropean-2013.ebuild:
+  add ~x86, bug #475124
 
   18 Aug 2013; Markos Chandras <hwoarang@gentoo.org>
   texlive-langeuropean-2013.ebuild:
