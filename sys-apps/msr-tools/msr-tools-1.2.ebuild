@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/msr-tools/msr-tools-1.2.ebuild,v 1.1 2012/12/11 17:25:35 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/msr-tools/msr-tools-1.2.ebuild,v 1.2 2013/08/24 16:00:56 maekke Exp $
 
 EAPI=5
 CONFIG_CHECK="~X86_MSR"
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~kensington/distfiles/${P}.tar.gz mirror://debian
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 src_prepare() {
 	epatch "${WORKDIR}"/${DEB_P}.diff

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.18.ebuild,v 1.1 2013/03/11 03:27:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.18.ebuild,v 1.2 2013/08/24 15:40:06 jer Exp $
 
 EAPI=4
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://samba.org/ftp/tevent/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=sys-libs/talloc-2.0.6[python]"

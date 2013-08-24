@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lcdtest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.21 2013/08/18 12:53:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lcdtest/ChangeLog,v 1.22 2013/08/24 15:40:39 maekke Exp $
+
+  24 Aug 2013; Markus Meier <maekke@gentoo.org> lcdtest-1.18.ebuild:
+  add ~x86, bug #481474
 
   18 Aug 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Added proxy-maintainers herd.
