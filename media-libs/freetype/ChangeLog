@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.376 2013/07/30 18:59:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.377 2013/08/24 11:51:14 heroxbd Exp $
+
+  24 Aug 2013; Benda Xu <heroxbd@gentoo.org>
+  +files/freetype-2.4.12-clean-include.patch, freetype-2.4.12.ebuild:
+  fix include path output for freetype-config, bug 482172. Credits to Ben de
+  Groot for reviewing.
 
   30 Jul 2013; Michał Górny <mgorny@gentoo.org> freetype-2.4.11-r2.ebuild,
   freetype-2.4.12.ebuild:

@@ -1,0 +1,20 @@
+do not output extra include dir in any chance, for Prefix.
+
+Index: freetype-2.4.12/builds/unix/freetype-config.in
+===================================================================
+--- freetype-2.4.12.orig/builds/unix/freetype-config.in
++++ freetype-2.4.12/builds/unix/freetype-config.in
+@@ -132,12 +132,7 @@ if test "$echo_ft_version" = "yes" ; the
+ fi
+ 
+ if test "$echo_cflags" = "yes" ; then
+-  cflags="-I${SYSROOT}$includedir/freetype2"
+-  if test "${SYSROOT}$includedir" != "/usr/include" ; then
+-    echo $cflags -I${SYSROOT}$includedir
+-  else
+-    echo $cflags
+-  fi
++  echo "-I${SYSROOT}$includedir/freetype2"
+ fi
+ 
+ if test "$echo_libs" = "yes" ; then

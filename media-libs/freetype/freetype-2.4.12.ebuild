@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.12.ebuild,v 1.3 2013/07/30 18:59:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.12.ebuild,v 1.4 2013/08/24 11:51:14 heroxbd Exp $
 
 EAPI=5
 
@@ -76,6 +76,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.3.2-enable-valid.patch
 
 	epatch "${FILESDIR}"/${PN}-2.4.11-sizeof-types.patch # 459966
+
+	epatch "${FILESDIR}"/${PN}-2.4.12-clean-include.patch # 482172
 
 	if use utils; then
 		cd "${WORKDIR}/ft2demos-${PV}" || die
