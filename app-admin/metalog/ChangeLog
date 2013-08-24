@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.110 2013/08/20 14:57:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.111 2013/08/24 13:23:17 maekke Exp $
+
+  24 Aug 2013; Markus Meier <maekke@gentoo.org> metalog-3.ebuild:
+  arm stable, bug #477668
 
   20 Aug 2013; Jeroen Roovers <jer@gentoo.org> metalog-3.ebuild:
   Stable for HPPA (bug #477668).

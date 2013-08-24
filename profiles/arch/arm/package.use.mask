@@ -1,15 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.165 2013/08/24 09:17:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.167 2013/08/24 13:14:36 maekke Exp $
 
 # Michael Weber <xmw@gentoo.org> (23 Aug 2013)
 # Unkeyworded deps
 media-gfx/fim graphicsmagick svg
-
-# Andreas K. Huettell <dilfridge@gentoo.org> (14 Aug 2013)
-# Unkeyworded deps
-kde-base/kdepim-runtime facebook
-kde-base/nepomuk-core epub
 
 # Markus Meier <maekke@gentoo.org> (04 Aug 2013)
 # Unkeyworded deps, bug #474026

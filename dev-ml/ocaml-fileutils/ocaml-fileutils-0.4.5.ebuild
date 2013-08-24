@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ocaml-fileutils-0.4.5.ebuild,v 1.1 2013/06/14 20:36:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-fileutils/ocaml-fileutils-0.4.5.ebuild,v 1.2 2013/08/24 13:18:41 maekke Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://forge.ocamlcore.org/frs/download.php/1194/${P}.tar.gz"
 
 LICENSE="LGPL-2.1-with-linking-exception"
 SLOT="0/${PV}"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=""
