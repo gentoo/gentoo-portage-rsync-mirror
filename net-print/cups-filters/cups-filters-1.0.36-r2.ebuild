@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.35.ebuild,v 1.3 2013/08/11 17:51:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.36-r2.ebuild,v 1.1 2013/08/23 23:21:54 tgurr Exp $
 
 EAPI=5
 
@@ -24,8 +24,8 @@ SLOT="0"
 IUSE="jpeg perl png static-libs tiff zeroconf"
 
 RDEPEND="
-	app-text/ghostscript-gpl
-	<app-text/poppler-0.24:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
+	>=app-text/ghostscript-gpl-9.09
+	app-text/poppler:=[cxx,jpeg?,lcms,tiff?,xpdf-headers(+)]
 	>=app-text/qpdf-3.0.2:=
 	media-libs/fontconfig
 	media-libs/freetype:2
@@ -84,6 +84,10 @@ src_install() {
 		fixlocalpod
 		popd > /dev/null
 	fi
+
+	# workaround: some printer drivers still require pstoraster and pstopxl, bug #383831
+	dosym /usr/libexec/cups/filter/gstoraster /usr/libexec/cups/filter/pstoraster
+	dosym /usr/libexec/cups/filter/gstopxl /usr/libexec/cups/filter/pstopxl
 
 	prune_libtool_files --all
 
