@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.3-r1.ebuild,v 1.1 2013/08/24 06:46:32 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.3-r1.ebuild,v 1.2 2013/08/24 14:06:31 olemarkus Exp $
 
 EAPI=5
 
@@ -287,7 +287,7 @@ src_prepare() {
 		-i configure.in || die "Unable to change PHP branding"
 
 
-	epatch "${FILESDIR}"/iodbc-pkgconfig.patch
+	epatch "${FILESDIR}"/iodbc-pkgconfig-r1.patch
 	epatch "${FILESDIR}"/stricter-libc-client-symlink-check.patch
 	epatch "${FILESDIR}"/all_strict_aliasing.patch
 
