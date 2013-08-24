@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pragha
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/ChangeLog,v 1.26 2013/02/25 09:49:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/ChangeLog,v 1.27 2013/08/24 12:16:21 ssuominen Exp $
+
+*pragha-1.1.2.1 (24 Aug 2013)
+
+  24 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> +pragha-1.1.2.1.ebuild:
+  Version bump.
 
 *pragha-1.1.2 (25 Feb 2013)
 
@@ -96,4 +101,3 @@
 
   18 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +pragha-1.0_rc2.ebuild:
   Initial commit wrt #295323 by Marco Simeone and Fabian Köster
-

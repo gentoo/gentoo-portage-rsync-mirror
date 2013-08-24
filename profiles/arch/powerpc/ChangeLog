@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.248 2013/08/22 16:07:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.250 2013/08/24 12:13:41 ago Exp $
+
+  24 Aug 2013; Agostino Sarubbo <ago@gentoo.org> use.mask:
+  Mask klibc because does not work anymore on ppc
+
+  24 Aug 2013; Agostino Sarubbo <ago@gentoo.org> package.use.mask:
+  Mask mksh[static] because klibc does not work anymore on ppc
 
   22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Mask opencl flag due to lack of virtual/opencl keywording.

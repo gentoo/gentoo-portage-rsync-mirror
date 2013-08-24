@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.91 2013/07/23 17:33:20 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.92 2013/08/24 12:23:49 ago Exp $
+
+  24 Aug 2013; Agostino Sarubbo <ago@gentoo.org> -klibc-1.1.ebuild,
+  -klibc-1.5.11.ebuild, -klibc-1.5.12-r1.ebuild, -klibc-1.5.12.ebuild,
+  -klibc-1.5.15-r1.ebuild, -klibc-1.5.15.ebuild, -klibc-1.5.20.ebuild,
+  -klibc-1.5.23.ebuild, -klibc-1.5.24.ebuild, klibc-1.5.25.ebuild:
+  Stable for amd64, wrt to bug #369075, remove old and ppc has losed the stable
+  keyword because of bug #476732
 
   23 Jul 2013; Andreas Schuerch <nativemad@gentoo.org> klibc-1.5.25.ebuild:
   x86 stable, see bug 369075

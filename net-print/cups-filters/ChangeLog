@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups-filters
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.76 2013/08/24 03:09:37 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/ChangeLog,v 1.77 2013/08/24 12:12:12 dilfridge Exp $
+
+  24 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-filters-1.0.34-r1.ebuild, +cups-filters-1.0.36-r1.ebuild:
+  Restore 1.0.36-r1 for stabilization, improve dependencies
 
 *cups-filters-1.0.36-r2 (23 Aug 2013)
 

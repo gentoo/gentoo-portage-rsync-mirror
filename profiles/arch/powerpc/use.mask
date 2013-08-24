@@ -1,5 +1,8 @@
 # PPC Specific use flags
 #
+#Klibc does not work
+klibc
+
 # Masking out llvm
 llvm
 clang
