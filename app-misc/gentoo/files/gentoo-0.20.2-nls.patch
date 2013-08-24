@@ -1,0 +1,24 @@
+--- a/src/gentoo.c	2013-08-22 19:33:15.000000000 +0200
++++ b/src/gentoo.c	2013-08-24 14:16:17.978060205 +0200
+@@ -466,6 +466,10 @@
+ 	gboolean	no_rc = FALSE, no_gtk_rc = FALSE, no_dir_history = FALSE, list_commands = FALSE;
+ 	gchar		*dir_left = NULL;
+ 	gchar		*dir_right = NULL;
++#if defined ENABLE_NLS
++	gboolean	show_locale_info = FALSE;
++	gint		i;
++#endif
+ 	GOptionEntry	option_entries[] = {
+ 	{ "version", 0, 0, G_OPTION_ARG_NONE, &show_version,  N_("Report the version to standard output, and exit"), NULL },
+ #if defined ENABLE_NLS
+@@ -482,10 +486,6 @@
+ 	{ "list-commands", 0, 0, G_OPTION_ARG_NONE, &list_commands, N_("Print a list of all built-in commands, and exit"), NULL },
+ 	{ NULL }
+ 	};
+-#if defined ENABLE_NLS
+-	gboolean	show_locale_info = FALSE;
+-	gint		i;
+-#endif
+ 	GtkWidget	*box;
+ 	GOptionContext	*context;
+ 	GError		*err = NULL;
