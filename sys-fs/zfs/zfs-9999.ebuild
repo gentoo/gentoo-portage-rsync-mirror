@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.46 2013/07/14 12:16:09 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.47 2013/08/24 00:01:50 ryao Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -22,7 +22,7 @@ else
 	KEYWORDS="~amd64"
 fi
 
-inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev
+inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev systemd
 
 DESCRIPTION="Userland utilities for ZFS Linux kernel module"
 HOMEPAGE="http://zfsonlinux.org/"
@@ -68,21 +68,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	if [ ${PV} != "9999" ]
-	then
-		# Fix OpenRC dependencies
-		epatch "${FILESDIR}/${P}-gentoo-openrc-dependencies.patch"
-
-		# Make zvol initialization asynchronous
-		epatch "${FILESDIR}/${P}-fix-zvol-initialization-r1.patch"
-
-		# Use MAXPATHLEN to silence GCC 4.8 warning
-		epatch "${FILESDIR}/${P}-fix-gcc-4.8-warning.patch"
-
-		# Avoid zdb abort
-		epatch "${FILESDIR}/${P}-avoid-zdb-abort.patch"
-	fi
-
 	# Update paths
 	sed -e "s|/sbin/lsmod|/bin/lsmod|" \
 		-e "s|/usr/bin/scsi-rescan|/usr/sbin/rescan-scsi-bus|" \

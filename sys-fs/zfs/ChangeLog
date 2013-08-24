@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.69 2013/08/23 23:19:58 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.70 2013/08/24 00:01:50 ryao Exp $
+
+  24 Aug 2013; Richard Yao <ryao@gentoo.org> zfs-0.6.2.ebuild, zfs-9999.ebuild:
+  Sync zfs-0.6.2 and zfs-9999 ebuilds
 
 *zfs-0.6.2 (23 Aug 2013)
 
