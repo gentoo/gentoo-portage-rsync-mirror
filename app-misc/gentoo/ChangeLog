@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.123 2013/08/24 12:34:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.124 2013/08/24 16:48:13 jer Exp $
+
+*gentoo-0.20.3 (24 Aug 2013)
+
+  24 Aug 2013; Jeroen Roovers <jer@gentoo.org> -gentoo-0.20.2.ebuild,
+  +gentoo-0.20.3.ebuild, -files/gentoo-0.20.2-nls.patch:
+  Version bump that merely incorporates the uncredited NLS patch already added
+  in 0.20.2.
 
 *gentoo-0.20.2 (24 Aug 2013)
 
