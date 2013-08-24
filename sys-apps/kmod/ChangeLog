@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.109 2013/08/16 14:25:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.110 2013/08/24 10:59:48 ssuominen Exp $
+
+  24 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-13-r1.ebuild,
+  kmod-14-r1.ebuild, kmod-14-r2.ebuild, kmod-9999.ebuild:
+  Remove checks for CONFIG_MODULES and CONFIG_MODULE_UNLOAD and upgrade path
+  from sys-apps/module-init-tools wrt #462926 by Mike Frysinger. Bail out early
+  if the used compiler is too old wrt #481020.
 
 *kmod-14-r1 (16 Aug 2013)
 

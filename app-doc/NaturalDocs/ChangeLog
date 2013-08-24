@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/NaturalDocs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.42 2013/07/31 11:34:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.43 2013/08/24 10:52:07 zlogene Exp $
+
+  24 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> NaturalDocs-1.52-r1.ebuild:
+  alpha/amd64/x86 stable wrt bug #478758
 
 *NaturalDocs-1.52-r1 (31 Jul 2013)
 

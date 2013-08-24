@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.52-r1.ebuild,v 1.1 2013/07/31 11:34:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/NaturalDocs-1.52-r1.ebuild,v 1.2 2013/08/24 10:52:07 zlogene Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/naturaldocs/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ~hppa ~ia64 ~ppc ~sparc x86"
 
 IUSE=""
 
