@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.87 2013/04/27 08:55:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.88 2013/08/24 09:41:56 pinkbyte Exp $
+
+  24 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> sysklogd-1.5-r3.ebuild:
+  Add ~mips keyword
 
 *sysklogd-1.5-r3 (27 Apr 2013)
 

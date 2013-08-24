@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libax25
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.18 2013/08/23 16:37:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.19 2013/08/24 09:38:47 tomjbe Exp $
+
+  24 Aug 2013; Thomas Beierlein <tomjbe@gentoo.org> libax25-0.0.12_rc4.ebuild:
+  Drop la-files. Support USE=static-libs (bug #482226). Thanks agostino
 
   23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libax25-0.0.12_rc4.ebuild:
   Stable for amd64, wrt bug #482110
