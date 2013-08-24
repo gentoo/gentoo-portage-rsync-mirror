@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/open-vm-tools-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.34 2013/08/24 15:37:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.35 2013/08/24 19:18:21 floppym Exp $
+
+  24 Aug 2013; Mike Gilbert <floppym@gentoo.org>
+  open-vm-tools-kmod-2013.04.16.1098359.ebuild:
+  Fix patch name.
 
   24 Aug 2013; Mike Gilbert <floppym@gentoo.org>
   +files/1098359-vmblock-3.10.0.patch,
