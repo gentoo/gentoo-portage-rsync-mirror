@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Time-Piece
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.26 2012/03/06 18:59:00 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.27 2013/08/24 03:51:31 patrick Exp $
+
+*perl-Time-Piece-1.22 (24 Aug 2013)
+
+  24 Aug 2013; Patrick Lauer <patrick@gentoo.org> +perl-Time-Piece-1.22.ebuild:
+  Bump
 
   06 Mar 2012; Brent Baude <ranger@gentoo.org> perl-Time-Piece-1.20.ebuild:
   Marking perl-Time-Piece-1.20 ppc for bug 400097
@@ -107,4 +112,3 @@
   +perl-Time-Piece-1.11.ebuild, +perl-Time-Piece-1.12.ebuild,
   +perl-Time-Piece-1.13.ebuild:
   Adding virtuals for dual-lifed modules that come with perl-5.10
-

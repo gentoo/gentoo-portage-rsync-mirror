@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.73 2013/03/13 07:39:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.74 2013/08/24 03:47:40 patrick Exp $
+
+*perl-version-0.990.300 (24 Aug 2013)
+
+  24 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +perl-version-0.990.300.ebuild:
+  Bump
 
 *perl-version-0.990.200 (13 Mar 2013)
 

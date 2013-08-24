@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for Time-HiRes
+KEYWORDS=~amd64 ~x86
+RDEPEND=|| ( =dev-lang/perl-5.18* =dev-lang/perl-5.16* ~perl-core/Time-HiRes-1.972.600 )
+SLOT=0
+_md5_=db8f2e43ce18c034c216896f83453177
