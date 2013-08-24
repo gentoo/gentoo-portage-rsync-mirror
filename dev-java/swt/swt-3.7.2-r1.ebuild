@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.7.2-r1.ebuild,v 1.1 2013/08/21 06:02:06 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.7.2-r1.ebuild,v 1.2 2013/08/24 21:53:16 dirtyepic Exp $
 
 EAPI=4
 
@@ -83,7 +83,11 @@ java_prepare() {
 
 	# Fix Makefiles to respect flags and work with --as-needed
 	epatch "${FILESDIR}"/as-needed-and-flag-fixes-3.6.patch
-	epatch "${FILESDIR}"/${P}-gio_launch-URI.patch
+
+	case ${ARCH} in
+		ppc|x86) epatch "${FILESDIR}"/${P}-gio_launch-URI-x86.patch ;;
+		*)       epatch "${FILESDIR}"/${P}-gio_launch-URI.patch ;;
+	esac
 }
 
 src_compile() {
