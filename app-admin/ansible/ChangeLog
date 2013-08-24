@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ansible
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.22 2013/07/20 10:17:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ChangeLog,v 1.23 2013/08/24 05:22:39 pinkbyte Exp $
+
+  24 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> -ansible-1.0.ebuild,
+  -ansible-1.1.ebuild:
+  Drop vulnerable versions, wrt bug #475602
 
   20 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ansible-1.2.1.ebuild:
   Stable for x86, wrt bug #475602
