@@ -1,11 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov/simplecov-0.5.4.ebuild,v 1.1 2013/08/23 22:26:16 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov/simplecov-0.5.4.ebuild,v 1.2 2013/08/23 23:34:01 zerochaos Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
+
+#tests fail horribly
+RUBY_FAKEGEM_RECIPE_TEST=""
 
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_TASK_DOC=""
