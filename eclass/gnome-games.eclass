@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-games.eclass,v 1.1 2013/06/30 10:52:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-games.eclass,v 1.2 2013/08/25 18:12:24 eva Exp $
 
 # @ECLASS: gnome-games
 # @MAINTAINER:
@@ -48,9 +48,9 @@ gnome-games_src_prepare() {
 
 	# Fix intltoolize broken file:
 	# https://bugs.launchpad.net/intltool/+bug/398571
-        intltoolize --force --copy --automake || die "intltoolize failed"
-        eautoreconf
-        
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
+
 	gnome2_src_prepare
 }
 
@@ -61,10 +61,10 @@ gnome-games_src_prepare() {
 gnome-games_src_configure() {
 	debug-print-function ${FUNCNAME} "${@}"
 	gnome2_src_configure \
-	        --prefix="${GAMES_PREFIX}" \
+		--prefix="${GAMES_PREFIX}" \
 		--libdir="$(games_get_libdir)" \
 		--sysconfdir="${GAMES_SYSCONFDIR}" \
-                --localstatedir=/var \
+		--localstatedir=/var \
 		--localedir=/usr/share/locale \
 		"$@"
 }
@@ -100,7 +100,7 @@ gnome-games_pkg_preinst() {
 # Set proper phase defaults
 gnome-games_pkg_postinst() {
 	debug-print-function ${FUNCNAME} "${@}"
-        gnome2_pkg_postinst
+	gnome2_pkg_postinst
 	games_pkg_postinst
 }
 
@@ -109,7 +109,7 @@ gnome-games_pkg_postinst() {
 # Set proper phase defaults
 gnome-games_pkg_postrm() {
 	debug-print-function ${FUNCNAME} "${@}"
-        gnome2_pkg_postrm
+	gnome2_pkg_postrm
 }
 
 _GNOME_GAMES=1

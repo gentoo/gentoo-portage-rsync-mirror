@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r2.ebuild,v 1.1 2013/08/11 14:41:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r2.ebuild,v 1.2 2013/08/25 18:18:48 hasufell Exp $
 
 EAPI=5
 
@@ -54,4 +54,11 @@ src_prepare() {
 src_install() {
 	distutils-r1_src_install
 	use doc && dodoc -r docs/*
+}
+
+pkg_postinst() {
+	elog
+	elog "optional dependencies:"
+	elog "  dev-python/twisted-conch (for sftp access)"
+	elog
 }

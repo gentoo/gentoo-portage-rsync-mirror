@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.932 2013/08/21 19:08:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.933 2013/08/25 18:12:24 eva Exp $
+
+  25 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> gnome-games.eclass:
+  Fix indentation and trailing whitespaces.
 
   21 Aug 2013; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
   Improve automagic dependency reduction, fixing bug #481996.
