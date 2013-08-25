@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.4.ebuild,v 1.4 2010/12/26 15:15:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.4.ebuild,v 1.5 2013/08/25 02:23:39 floppym Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ HOMEPAGE="http://pydns.sourceforge.net/ http://pypi.python.org/pypi/pydns"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="CNRI"
-SLOT="0"
+SLOT="2"
 KEYWORDS="amd64 x86"
 IUSE="examples"
 

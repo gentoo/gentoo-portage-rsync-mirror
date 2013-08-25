@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.6-r1.ebuild,v 1.2 2013/07/09 00:09:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-2.3.6-r1.ebuild,v 1.3 2013/08/25 02:23:39 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy2_0 )
@@ -20,24 +20,18 @@ DEPEND="!dev-python/pydns:0
 	virtual/libiconv"
 RDEPEND=""
 
-DOCS=( CREDITS )
 # Funny a dns package attempts to use the network on tests
 # Await the day that gentoo chills out on such a blanket law.
 RESTRICT=test
 
 python_prepare_all() {
 	# Fix encodings (should be utf-8 but is latin1).
+	local i
 	for i in DNS/{Lib,Type}.py; do
-		iconv -f ISO-8859-1 -t UTF-8 < "${i}" > "${i}~" && mv -f "${i}~" "${i}" || rm -f "${i}~"
+		iconv -f ISO-8859-1 -t UTF-8 "${i}" > "${i}.utf8" || die
+		mv -f "${i}.utf8" "${i}" || die
 	done
-
-	# Don't compile bytecode.
-	sed -i -e 's:^\(compile\|optimize\).*:\1 = 0:g' setup.cfg
-
-	# cleanup docs
-	rm -f -- "README-guido.txt"
-	mv -f -- "README.txt" "README"
-	mv -f -- "CREDITS.txt" "CREDITS"
+	distutils-r1_python_prepare_all
 }
 
 python_test() {
@@ -48,7 +42,7 @@ python_test() {
 	done
 }
 
-python_install_all(){
+python_install_all() {
 	use examples && local EXAMPLES=( ./{tests,tools}/. )
 	distutils-r1_python_install_all
 }

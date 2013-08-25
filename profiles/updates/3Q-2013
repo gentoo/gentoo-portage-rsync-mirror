@@ -6,3 +6,4 @@ move dev-python/twisted dev-python/twisted-core
 slotmove =dev-ruby/minitest-5.0.6 0 5
 move sys-cluster/quantum sys-cluster/neutron
 move sci-libs/scikits_statsmodels dev-python/statsmodels
+slotmove <dev-python/pydns2.3.6 0 2
