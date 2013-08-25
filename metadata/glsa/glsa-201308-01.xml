@@ -45,7 +45,7 @@
     </code>
   </resolution>
   <references>
-    <uri link="http://nvd.nist.gov/nvd.cvm?cvename=CVE-2011-4607">CVE-2011-4607</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2011-4607">CVE-2011-4607</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-4852">CVE-2013-4852</uri>
   </references>
   <metadata tag="requester" timestamp="Tue, 06 Mar 2012 21:22:42 +0000">ackle</metadata>

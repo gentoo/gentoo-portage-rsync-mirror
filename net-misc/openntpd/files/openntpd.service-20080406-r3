@@ -1,0 +1,10 @@
+[Unit]
+Description=OpenNTP Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/ntpd -s -d
+
+[Install]
+WantedBy=multi-user.target
