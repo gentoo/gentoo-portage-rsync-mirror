@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/libgtop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.258 2012/05/05 05:38:09 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.259 2013/08/25 18:55:32 eva Exp $
+
+*libgtop-2.28.5 (25 Aug 2013)
+
+  25 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> +libgtop-2.28.5.ebuild:
+  Version bump. Port to EAPI=5, stop using G2CONF.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libgtop-2.28.4.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
