@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MARC-Charset
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-Charset/ChangeLog,v 1.16 2013/08/17 14:07:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-Charset/ChangeLog,v 1.17 2013/08/25 10:13:47 patrick Exp $
+
+*MARC-Charset-1.350.0 (25 Aug 2013)
+
+  25 Aug 2013; Patrick Lauer <patrick@gentoo.org> +MARC-Charset-1.350.0.ebuild:
+  Bump
 
 *MARC-Charset-1.340.0 (17 Aug 2013)
 

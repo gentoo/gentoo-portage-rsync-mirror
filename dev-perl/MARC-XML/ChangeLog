@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MARC-XML
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-XML/ChangeLog,v 1.9 2012/11/18 11:25:47 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-XML/ChangeLog,v 1.10 2013/08/25 10:20:03 patrick Exp $
+
+*MARC-XML-1.000.100 (25 Aug 2013)
+
+  25 Aug 2013; Patrick Lauer <patrick@gentoo.org> +MARC-XML-1.000.100.ebuild:
+  Bump
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.
