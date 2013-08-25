@@ -1,5 +1,5 @@
---- xdock-0.2.0/src/lib/Makefile.am
-+++ xdock-0.2.0/src/lib/Makefile.am
+--- a/src/lib/Makefile.am
++++ b/src/lib/Makefile.am
 @@ -8,5 +8,3 @@
  
  include_HEADERS = xdock.h
