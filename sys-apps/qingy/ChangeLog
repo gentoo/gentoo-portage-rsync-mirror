@@ -1,9 +1,9 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.70 2013/05/27 12:30:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.71 2013/08/25 22:38:15 ulm Exp $
 
   27 May 2013; Ulrich Müller <ulm@gentoo.org> files/50qingy-gentoo.el:
-  Whitespace.
+  Autoload correct function in Emacs site-init file, bug 392029.
 
   05 Mar 2013; Samuli Suominen <ssuominen@gentoo.org> qingy-1.0.0.ebuild,
   +files/qingy-1.0.0-tinfo.patch:
