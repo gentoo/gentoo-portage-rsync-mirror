@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-MMagic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.58 2012/07/15 19:00:47 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.59 2013/08/25 08:00:55 patrick Exp $
+
+*File-MMagic-1.300.0 (25 Aug 2013)
+
+  25 Aug 2013; Patrick Lauer <patrick@gentoo.org> +File-MMagic-1.300.0.ebuild:
+  Bump
 
 *File-MMagic-1.290.0 (15 Jul 2012)
 

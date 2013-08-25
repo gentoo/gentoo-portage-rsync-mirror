@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Email-FolderType
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-FolderType/ChangeLog,v 1.9 2012/06/24 12:59:53 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-FolderType/ChangeLog,v 1.10 2013/08/25 07:53:12 patrick Exp $
+
+*Email-FolderType-0.814.0 (25 Aug 2013)
+
+  25 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +Email-FolderType-0.814.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
