@@ -14,6 +14,7 @@
 	</upstream>
 	<use>
 		<flag name='icons'>Turn on to let icons appear in menus</flag>
+		<flag name='svg'>Support svg icons (needs icons enabled)</flag>
 	</use>
 </pkgmetadata>
 

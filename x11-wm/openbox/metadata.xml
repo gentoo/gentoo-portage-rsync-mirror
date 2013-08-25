@@ -9,7 +9,8 @@
   </maintainer>
   <use>
  	 <flag name="session">Enables support for session managers</flag>
-	 <flag name="python">Install the python xdg files for xdg autostart</flag>
+	 <flag name="python">Install the python xdg files for xdg autostart(for compatibility with old ebuilds)</flag>
+	 <flag name="xdg">Install the python xdg files for xdg autostart</flag>
   </use>
   <upstream>
     <maintainer status='active'>

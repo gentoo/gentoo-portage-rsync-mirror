@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.277 2013/08/17 11:56:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.278 2013/08/24 23:35:40 hwoarang Exp $
+
+*openbox-3.5.2-r1 (24 Aug 2013)
+
+  24 Aug 2013; Markos Chandras <hwoarang@gentoo.org> +openbox-3.5.2-r1.ebuild,
+  openbox-9999.ebuild, metadata.xml:
+  Add missing useflag and dependency to librsvg. Rework ebuild and migrate
+  to python-r1. Rename xdg->python. Sync 9999 ebuild and use a common
+  ebuild for releases and git versions. Thanks to Julian Ospald
+  <hasufell@gentoo.org> for the fixes on bug #481962
 
   17 Aug 2013; Markos Chandras <hwoarang@gentoo.org>
   -openbox-3.5.0_p20111019.ebuild, -openbox-3.5.0_p20121006.ebuild:

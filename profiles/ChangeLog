@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8183 2013/08/24 07:36:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8185 2013/08/24 23:42:20 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Aug 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask openbox live ebuild
 
   24 Aug 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   First batch of ruby18-only packages is now removed, remove mask.

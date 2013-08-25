@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r6.ebuild,v 1.6 2013/08/19 13:58:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r6.ebuild,v 1.7 2013/08/24 23:33:31 ago Exp $
 
 inherit eutils autotools systemd
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.savannah.gnu.org/releases/hddtemp/${MY_P}.tar.bz2 mirro
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ~sparc x86"
 IUSE="nls"
 
 DEPEND=""
