@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/monadcatchio-transformers
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadcatchio-transformers/ChangeLog,v 1.1 2013/08/25 04:48:16 qnikst Exp $
+
+*monadcatchio-transformers-0.3.0.0 (25 Aug 2013)
+
+  25 Aug 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +files/monadcatchio-transformers-0.3.0.0-ghc-7.5.patch, +metadata.xml,
+  +monadcatchio-transformers-0.3.0.0.ebuild:
+  [dev-haskell/monadcatchio-transformers: initial layout
