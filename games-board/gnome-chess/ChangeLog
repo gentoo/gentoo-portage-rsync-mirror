@@ -1,6 +1,12 @@
 # ChangeLog for games-board/gnome-chess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/ChangeLog,v 1.1 2013/06/30 11:18:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/ChangeLog,v 1.2 2013/08/25 19:16:27 eva Exp $
+
+*gnome-chess-3.8.4 (25 Aug 2013)
+
+  25 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-chess-3.8.4.ebuild:
+  Version bump.
 
 *gnome-chess-3.8.3 (30 Jun 2013)
 
