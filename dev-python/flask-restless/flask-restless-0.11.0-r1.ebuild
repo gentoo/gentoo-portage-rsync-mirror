@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/flask-restless-0.11.0-r1.ebuild,v 1.3 2013/06/17 02:33:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-restless/flask-restless-0.11.0-r1.ebuild,v 1.4 2013/08/25 03:13:48 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,7 +20,7 @@ IUSE="doc examples test"
 RDEPEND=">=dev-python/flask-0.7[${PYTHON_USEDEP}]
 	dev-python/flask-sqlalchemy[${PYTHON_USEDEP}]
 	dev-python/sqlalchemy[${PYTHON_USEDEP}]
-	<dev-python/python-dateutil-2.0"
+	dev-python/python-dateutil:0[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( virtual/python-unittest2[${PYTHON_USEDEP}]

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.18 2013/05/14 19:22:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ChangeLog,v 1.19 2013/08/25 03:10:46 floppym Exp $
+
+  25 Aug 2013; Mike Gilbert <floppym@gentoo.org> ets-4.3.0-r1.ebuild:
+  Add PYTHON_USEDEP for dev-python/etsproxy.
 
 *ets-4.3.0-r1 (14 May 2013)
 

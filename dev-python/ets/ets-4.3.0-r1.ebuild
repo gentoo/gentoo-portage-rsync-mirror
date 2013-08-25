@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-4.3.0-r1.ebuild,v 1.1 2013/05/14 19:22:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-4.3.0-r1.ebuild,v 1.2 2013/08/25 03:10:46 floppym Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="
 	>=dev-python/encore-0.3[doc?,examples?,${PYTHON_USEDEP}]
 	>=dev-python/envisage-4.3.0[doc?,examples?,${PYTHON_USEDEP}]
 	>=dev-python/etsdevtools-4.0.2[doc?,examples?,${PYTHON_USEDEP}]
-	>=dev-python/etsproxy-0.1.2
+	>=dev-python/etsproxy-0.1.2[${PYTHON_USEDEP}]
 	>=dev-python/graphcanvas-4.0.2[examples?,${PYTHON_USEDEP}]
 	>=sci-visualization/mayavi-4.3.0[doc?,examples?,${PYTHON_USEDEP}]
 	>=dev-python/pyface-4.3.0[doc?,examples?,${PYTHON_USEDEP}]

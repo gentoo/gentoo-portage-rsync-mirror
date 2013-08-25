@@ -1,14 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsproxy/etsproxy-0.1.2.ebuild,v 1.2 2013/04/24 08:27:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsproxy/etsproxy-0.1.2-r1.ebuild,v 1.1 2013/08/25 03:10:02 floppym Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython"
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils
+inherit distutils-r1
 
 DESCRIPTION="Enthought Tool Suite: Proxy modules for backwards compatibility"
 HOMEPAGE="http://pypi.python.org/pypi/etsproxy"
@@ -38,6 +36,4 @@ RDEPEND="!<dev-python/apptools-4
 	!<dev-python/traitsgui-4"
 
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
-
-PYTHON_MODNAME="enthought"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
