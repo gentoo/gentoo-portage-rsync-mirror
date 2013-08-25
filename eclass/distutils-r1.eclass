@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.74 2013/08/01 13:02:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.77 2013/08/25 21:15:28 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -308,10 +308,31 @@ distutils_install_for_testing() {
 	esetup.py "${add_args[@]}"
 }
 
-_disable_ez_setup() {
+# @FUNCTION: _distutils-r1_disable_ez_setup
+# @INTERNAL
+# @DESCRIPTION:
+# Stub out ez_setup.py and distribute_setup.py to prevent packages
+# from trying to download a local copy of setuptools.
+_distutils-r1_disable_ez_setup() {
 	local stub="def use_setuptools(*args, **kwargs): pass"
-	[[ -f ez_setup.py ]] && echo "${stub}" > ez_setup.py
-	[[ -f distribute_setup.py ]] && echo "${stub}" > distribute_setup.py
+	if [[ -f ez_setup.py ]]; then
+		echo "${stub}" > ez_setup.py || die
+	fi
+	if [[ -f distribute_setup.py ]]; then
+		echo "${stub}" > distribute_setup.py || die
+	fi
+}
+
+# @FUNCTION: _distutils-r1_copy_egg_info
+# @INTERNAL
+# @DESCRIPTION:
+# Copy egg-info files to the ${BUILD_DIR} (that's going to become
+# egg-base in esetup.py). This way, we respect whatever's in upstream
+# egg-info.
+_distutils-r1_copy_egg_info() {
+	mkdir -p "${BUILD_DIR}" || die
+	# stupid freebsd can't do 'cp -t ${BUILD_DIR} {} +'
+	find -name '*.egg-info' -type d -exec cp -pr {} "${BUILD_DIR}"/ ';' || die
 }
 
 # @FUNCTION: distutils-r1_python_prepare_all
@@ -336,8 +357,7 @@ distutils-r1_python_prepare_all() {
 		fi
 	fi
 
-	# Prevent packages from downloading their own copy of setuptools
-	_disable_ez_setup
+	_distutils-r1_disable_ez_setup
 
 	if [[ ${DISTUTILS_IN_SOURCE_BUILD} && ! ${DISTUTILS_SINGLE_IMPL} ]]
 	then
@@ -374,6 +394,8 @@ distutils-r1_python_configure() {
 # i.e. passed as options to the 'build' command.
 distutils-r1_python_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	_distutils-r1_copy_egg_info
 
 	esetup.py "${@}"
 }

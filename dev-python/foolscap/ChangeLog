@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.45 2013/08/03 09:45:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.46 2013/08/25 21:07:06 mgorny Exp $
+
+*foolscap-0.6.4-r1 (25 Aug 2013)
+
+  25 Aug 2013; Michał Górny <mgorny@gentoo.org> +foolscap-0.6.4-r1.ebuild:
+  Convert to distutils-r1 wrt bug #482442.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> foolscap-0.6.0.ebuild,
   foolscap-0.6.1.ebuild, foolscap-0.6.3.ebuild, foolscap-0.6.4.ebuild:
