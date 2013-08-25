@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/simplecov-html
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov-html/ChangeLog,v 1.2 2013/08/23 22:17:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov-html/ChangeLog,v 1.3 2013/08/25 07:20:23 graaff Exp $
+
+  25 Aug 2013; Hans de Graaff <graaff@gentoo.org> -simplecov-html-0.5.3.ebuild:
+  Cleanup. There is no need to keep old versions around.
 
 *simplecov-html-0.5.3 (23 Aug 2013)
 

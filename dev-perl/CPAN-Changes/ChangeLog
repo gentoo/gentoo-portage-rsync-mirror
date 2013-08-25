@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/CPAN-Changes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Changes/ChangeLog,v 1.2 2013/08/16 08:30:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Changes/ChangeLog,v 1.3 2013/08/25 07:01:39 patrick Exp $
+
+*CPAN-Changes-0.230.0 (25 Aug 2013)
+
+  25 Aug 2013; Patrick Lauer <patrick@gentoo.org> +CPAN-Changes-0.230.0.ebuild:
+  Bump
 
 *CPAN-Changes-0.220.0 (16 Aug 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/simplecov
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov/ChangeLog,v 1.5 2013/08/23 23:34:01 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simplecov/ChangeLog,v 1.6 2013/08/25 07:20:54 graaff Exp $
+
+  25 Aug 2013; Hans de Graaff <graaff@gentoo.org> -simplecov-0.5.4.ebuild:
+  Cleanup. There is no need to keep old versions around.
 
   23 Aug 2013; Rick Farina <zerochaos@gentoo.org> simplecov-0.5.4.ebuild:
   no tests for now, they don't work
