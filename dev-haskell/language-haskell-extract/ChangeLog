@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/language-haskell-extract
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-haskell-extract/ChangeLog,v 1.1 2013/08/25 06:31:47 qnikst Exp $
+
+*language-haskell-extract-0.2.4 (25 Aug 2013)
+
+  25 Aug 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +language-haskell-extract-0.2.4.ebuild, +metadata.xml:
+  dev-haskell/language-haskell-extract: 0.2.4
