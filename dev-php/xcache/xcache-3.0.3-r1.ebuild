@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/xcache-3.0.3-r1.ebuild,v 1.1 2013/08/24 18:45:56 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xcache/xcache-3.0.3-r1.ebuild,v 1.2 2013/08/25 02:46:00 patrick Exp $
 
 EAPI="5"
 PHP_EXT_NAME="xcache"
@@ -23,7 +23,7 @@ IUSE=""
 RESTRICT="test"
 
 DEPEND="virtual/httpd-php
-!dev-php/eaccelerator !dev-php/pecl-apc 
+!dev-php/eaccelerator !dev-php/pecl-apc
 php_targets_php5-5? ( !dev-lang/php:5.5[opcache] )
 "
 RDEPEND="${DEPEND}"

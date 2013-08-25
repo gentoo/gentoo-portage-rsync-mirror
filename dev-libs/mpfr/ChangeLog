@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.167 2013/07/21 21:52:36 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.168 2013/08/25 02:37:43 vapier Exp $
+
+  25 Aug 2013; Mike Frysinger <vapier@gentoo.org> mpfr-2.4.2_p3-r1.ebuild,
+  mpfr-3.1.2.ebuild:
+  Simplify src_prepare code.
 
   21 Jul 2013; Christoph Junghans <ottxor@gentoo.org> mpfr-2.4.2_p3-r1.ebuild,
   mpfr-3.1.2.ebuild:
