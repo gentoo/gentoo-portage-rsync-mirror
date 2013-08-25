@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/threads
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/threads/ChangeLog,v 1.11 2013/08/14 07:40:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/threads/ChangeLog,v 1.12 2013/08/25 12:32:07 zlogene Exp $
+
+  25 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -threads-1.75.ebuild,
+  -threads-1.76.ebuild, -threads-1.77.ebuild, -threads-1.79.ebuild,
+  -threads-1.81.ebuild, -threads-1.820.ebuild, -threads-1.830.0.ebuild,
+  -threads-1.850.0.ebuild:
+  drop old
 
 *threads-1.870.0 (14 Aug 2013)
 
