@@ -1,0 +1,51 @@
+From 59e88c777b92935cc95f28e52f84fe97563dec9d Mon Sep 17 00:00:00 2001
+From: Aaron Seigo <aseigo@kde.org>
+Date: Wed, 14 Aug 2013 12:52:52 +0200
+Subject: [PATCH] when the request theme does not exist, delete all old caches
+ for it and don't crash
+
+BUG:320855
+---
+ plasma/theme.cpp | 21 ++++++++++++++-------
+ 1 file changed, 14 insertions(+), 7 deletions(-)
+
+diff --git a/plasma/theme.cpp b/plasma/theme.cpp
+index 4554de7..cb44878 100644
+--- a/plasma/theme.cpp
++++ b/plasma/theme.cpp
+@@ -222,18 +222,25 @@ bool ThemePrivate::useCache()
+ {
+     if (cacheTheme && !pixmapCache) {
+         const bool isRegularTheme = themeName != systemColorsTheme;
+-        QString cacheFile = "plasma_theme_" + themeName;
++        const QString cacheFile = "plasma_theme_" + themeName;
+ 
+         if (isRegularTheme) {
++            const QString cacheFileBase = cacheFile + "*.kcache";
++
+             const QString path = KStandardDirs::locate("data", "desktoptheme/" + themeName + "/metadata.desktop");
+-            const KPluginInfo pluginInfo(path);
++            // if the path is empty, then we haven't found the theme and so
++            // we will leave currentCacheFileName empty, resulting in the deletion of
++            // *all* matching cache files
++            QString currentCacheFileName;
++            if (!path.isEmpty()) {
++                const KPluginInfo pluginInfo(path);
++                currentCacheFileName = cacheFile + "_v" + pluginInfo.version() + ".kcache";
++            }
+ 
+-            // now we check for, and remove if necessary, old caches
+-            const QString cacheFileBase = cacheFile + "*.kcache";
+-            cacheFile += "_v" + pluginInfo.version();
+-            const QString currentCacheFileName = cacheFile + ".kcache";
++            // now we check for (and remove) old caches
+             foreach (const QString &file, KGlobal::dirs()->findAllResources("cache", cacheFileBase)) {
+-                if (!file.endsWith(currentCacheFileName)) {
++                if (currentCacheFileName.isEmpty() ||
++                    !file.endsWith(currentCacheFileName)) {
+                     QFile::remove(file);
+                 }
+             }
+-- 
+1.8.3.2
+

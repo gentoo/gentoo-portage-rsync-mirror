@@ -1,6 +1,5 @@
-diff -ur wmcalendar-0.5.2.orig/Src/calendarfunc.c wmcalendar-0.5.2/Src/calendarfunc.c
---- wmcalendar-0.5.2.orig/Src/calendarfunc.c	2003-07-13 17:41:02.000000000 +0300
-+++ wmcalendar-0.5.2/Src/calendarfunc.c	2008-05-03 10:03:06.000000000 +0300
+--- a/Src/calendarfunc.c	2003-07-13 17:41:02.000000000 +0300
++++ b/Src/calendarfunc.c	2008-05-03 10:03:06.000000000 +0300
 @@ -22,7 +22,7 @@
  
  #include "calendarfunc.h"
@@ -10,9 +9,8 @@ diff -ur wmcalendar-0.5.2.orig/Src/calendarfunc.c wmcalendar-0.5.2/Src/calendarf
  
  
  long persian_jdn(struct icaltimetype dt)
-diff -ur wmcalendar-0.5.2.orig/Src/dockapp.c wmcalendar-0.5.2/Src/dockapp.c
---- wmcalendar-0.5.2.orig/Src/dockapp.c	2003-07-15 18:15:12.000000000 +0300
-+++ wmcalendar-0.5.2/Src/dockapp.c	2008-05-03 10:03:34.000000000 +0300
+--- a/Src/dockapp.c	2003-07-15 18:15:12.000000000 +0300
++++ b/Src/dockapp.c	2008-05-03 10:03:34.000000000 +0300
 @@ -23,6 +23,7 @@
   * modified by Seiichi SATO <ssato@sh.rim.or.jp>
   */
@@ -21,9 +19,8 @@ diff -ur wmcalendar-0.5.2.orig/Src/dockapp.c wmcalendar-0.5.2/Src/dockapp.c
  #include "dockapp.h"
  
  #define WINDOWED_SIZE_W 64
-diff -ur wmcalendar-0.5.2.orig/Src/Makefile wmcalendar-0.5.2/Src/Makefile
---- wmcalendar-0.5.2.orig/Src/Makefile	2003-07-15 18:19:26.000000000 +0300
-+++ wmcalendar-0.5.2/Src/Makefile	2008-05-03 10:11:48.000000000 +0300
+--- a/Src/Makefile	2003-07-15 18:19:26.000000000 +0300
++++ b/Src/Makefile	2008-05-03 10:11:48.000000000 +0300
 @@ -1,19 +1,15 @@
 -CC     = gcc
 +CC     ?= gcc
@@ -44,7 +41,7 @@ diff -ur wmcalendar-0.5.2.orig/Src/Makefile wmcalendar-0.5.2/Src/Makefile
  
  # for Linux
 -LIBS   = $(LIBDIR) -lXpm -lical -lpthread
-+LIBS   = -lXpm -lical -lpthread `pkg-config --libs gtk+-2.0`
++LIBS   = -lpthread -lm $(shell $(PKG_CONFIG) --libs gtk+-2.0 x11 xpm xext libical)
  # for Solaris (untested!!!)
  # LIBS   = -lXpm -lX11 -lXext -lsocket -lnsl -lical
  

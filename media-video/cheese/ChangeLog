@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.73 2013/08/01 02:43:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.74 2013/08/25 15:28:40 eva Exp $
+
+  25 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> -cheese-3.6.2.ebuild,
+  -cheese-3.8.2.ebuild, cheese-3.8.3.ebuild:
+  Add vala to DEPEND, bug #482416. Remove old revisions.
 
   01 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org> cheese-3.8.2.ebuild,
   cheese-3.8.3.ebuild:
