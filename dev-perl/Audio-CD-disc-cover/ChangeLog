@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Audio-CD-disc-cover
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.25 2009/08/14 19:40:51 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/ChangeLog,v 1.26 2013/08/25 06:00:41 idella4 Exp $
+
+  25 Aug 2013; Ian Delaney <idella4@gentoo.org> Audio-CD-disc-cover-0.05.ebuild:
+  bump -> EAPI 5
 
   14 Aug 2009; Torsten Veller <tove@gentoo.org>
   Audio-CD-disc-cover-0.05.ebuild:
