@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.56 2013/08/07 12:29:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.57 2013/08/25 20:04:40 maekke Exp $
+
+  25 Aug 2013; Markus Meier <maekke@gentoo.org> tdb-1.2.11.ebuild:
+  arm stable, bug #478260
 
   07 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> -tdb-1.2.1.ebuild,
   -tdb-1.2.1-r1.ebuild, tdb-1.2.7-r1.ebuild, -tdb-1.2.9.ebuild,

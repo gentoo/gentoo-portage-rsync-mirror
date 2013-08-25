@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.52 2013/08/25 19:57:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.53 2013/08/25 20:01:47 maekke Exp $
+
+  25 Aug 2013; Markus Meier <maekke@gentoo.org> talloc-2.0.8.ebuild,
+  talloc-2.0.8-r1.ebuild:
+  stabilize correct version for bug #478260
 
   25 Aug 2013; Markus Meier <maekke@gentoo.org> talloc-2.0.8-r1.ebuild:
   arm stable, bug #478260
