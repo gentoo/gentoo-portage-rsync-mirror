@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.39 2013/05/14 12:43:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.41 2013/08/25 08:47:38 jlec Exp $
+
+  25 Aug 2013; Justin Lecher <jlec@gentoo.org> traits-4.3.0-r1.ebuild:
+  add missing distutils-r1_python_install_all
+
+  25 Aug 2013; Justin Lecher <jlec@gentoo.org> traits-4.3.0-r1.ebuild:
+  add missing distutils-r1_python_prepare_all and use HTML_DOCS
 
   14 May 2013; Ian Delaney <idella4@gentoo.org> -traits-3.6.0.ebuild,
   -traits-4.0.0.ebuild, -traits-4.1.0.ebuild, -traits-4.2.0.ebuild:
