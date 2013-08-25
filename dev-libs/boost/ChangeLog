@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.293 2013/07/10 11:54:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.294 2013/08/25 12:19:09 jer Exp $
+
+  25 Aug 2013; Jeroen Roovers <jer@gentoo.org> boost-1.52.0-r6.ebuild:
+  Stable for HPPA (bug #455464).
 
   10 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> boost-1.49.0-r2.ebuild,
   boost-1.52.0-r6.ebuild, boost-1.53.0.ebuild:
