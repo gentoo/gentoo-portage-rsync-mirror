@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.103 2013/06/03 19:47:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.104 2013/08/25 16:25:04 eva Exp $
+
+*gtkspell-3.0.3 (25 Aug 2013)
+
+  25 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> +gtkspell-3.0.3.ebuild:
+  Version bump, bug #481212.
 
 *gtkspell-3.0.2 (03 Jun 2013)
 
