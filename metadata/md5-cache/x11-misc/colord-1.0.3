@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare pretend setup unpack
+DEPEND=dev-db/sqlite:3= >=dev-libs/glib-2.32.0:2 >=media-libs/lcms-2.5:2= >=sys-auth/polkit-0.103 gusb? ( >=dev-libs/libgusb-0.1.1 ) introspection? ( >=dev-libs/gobject-introspection-0.9.8 ) scanner? ( media-gfx/sane-backends ) systemd? ( >=sys-apps/systemd-44 ) udev? ( virtual/udev:=[gudev] ) dev-libs/libxslt >=dev-util/gtk-doc-am-1.9 >=dev-util/intltool-0.35 >=sys-devel/gettext-0.17 virtual/pkgconfig extra-print-profiles? ( media-gfx/argyllcms ) vala? ( || ( dev-lang/vala:0.20[vapigen] dev-lang/vala:0.18[vapigen] ) ) virtual/pkgconfig virtual/pkgconfig
+DESCRIPTION=System service to accurately color manage input and output devices
+EAPI=5
+HOMEPAGE=http://www.freedesktop.org/software/colord/
+IUSE=examples extra-print-profiles +gusb +introspection scanner systemd +udev vala
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+LICENSE=GPL-2+
+RDEPEND=dev-db/sqlite:3= >=dev-libs/glib-2.32.0:2 >=media-libs/lcms-2.5:2= >=sys-auth/polkit-0.103 gusb? ( >=dev-libs/libgusb-0.1.1 ) introspection? ( >=dev-libs/gobject-introspection-0.9.8 ) scanner? ( media-gfx/sane-backends ) systemd? ( >=sys-apps/systemd-44 ) udev? ( virtual/udev:=[gudev] ) !media-gfx/shared-color-profiles
+REQUIRED_USE=scanner? ( udev ) vala? ( introspection )
+RESTRICT=test
+SLOT=0/1
+SRC_URI=http://www.freedesktop.org/software/colord/releases/colord-1.0.3.tar.xz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	bash-completion-r1	cccf36bdb93b54baafea3b9d97abb0bf	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	systemd	49c26d08111dd2c62b52cee32151b93b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	vala	aa890daf29e67d32e9bff8e12ef653ca
+_md5_=fb499a185960c4419bc01c3ee5fc472d

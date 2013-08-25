@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/wayland
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.21 2013/07/17 16:40:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/ChangeLog,v 1.22 2013/08/25 16:39:35 chithanh Exp $
+
+*wayland-1.2.1 (25 Aug 2013)
+
+  25 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +wayland-1.2.1.ebuild:
+  Version bump, bug #480868.
 
   17 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   wayland-1.2.0.ebuild:
