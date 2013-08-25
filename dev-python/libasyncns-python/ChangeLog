@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/libasyncns-python
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.3 2011/03/18 08:44:22 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/libasyncns-python/ChangeLog,v 1.4 2013/08/25 17:21:09 floppym Exp $
+
+*libasyncns-python-0.7.1-r1 (25 Aug 2013)
+
+  25 Aug 2013; Mike Gilbert <floppym@gentoo.org>
+  +libasyncns-python-0.7.1-r1.ebuild, -libasyncns-python-0.7.1.ebuild:
+  Convert to distutils-r1.
 
   18 Mar 2011; Thomas Kahle <tomka@gentoo.org> libasyncns-python-0.7.1.ebuild:
   ~x86 per bug 352874
@@ -14,4 +20,3 @@
   27 Mar 2009; Hanno Boeck <hanno@gentoo.org>
   +libasyncns-python-0.7.1.ebuild:
   Add python bindings for libasyncns.
-

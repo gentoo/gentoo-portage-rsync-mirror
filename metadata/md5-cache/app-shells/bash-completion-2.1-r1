@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst
+DEFINED_PHASES=install postinst test
 DESCRIPTION=Programmable Completion for bash
 EAPI=5
 HOMEPAGE=http://bash-completion.alioth.debian.org/
@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=|| ( >=app-shells/bash-4.1 app-shells/zsh ) sys-apps/miscfiles
 SLOT=0
 SRC_URI=http://bash-completion.alioth.debian.org/files/bash-completion-2.1.tar.bz2
-_md5_=92ebb7ae6bc77ca474a674d9768a4ac7
+_md5_=2c4f0f349a0f31f51b6716db5d156353

@@ -1,0 +1,12 @@
+DEFINED_PHASES=prepare
+DEPEND=app-arch/xz-utils sys-devel/gettext
+DESCRIPTION=ISO language, territory, currency, script codes and their translations
+EAPI=5
+HOMEPAGE=http://pkg-isocodes.alioth.debian.org/
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
+LICENSE=LGPL-2.1
+RESTRICT=binchecks strip
+SLOT=0
+SRC_URI=http://pkg-isocodes.alioth.debian.org/downloads/iso-codes-3.45.tar.xz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=b15521f6256b185764ff91c82fd85d4e

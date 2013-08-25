@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.5 2013/07/16 14:44:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-2.1-r1.ebuild,v 1.6 2013/08/25 17:05:36 ssuominen Exp $
 
 EAPI=5
 
@@ -15,6 +15,8 @@ IUSE=""
 
 RDEPEND="|| ( >=app-shells/bash-4.1 app-shells/zsh )
 	sys-apps/miscfiles"
+
+src_test() { :; } # Skip testsuite because of interactive shell wrt #477066
 
 src_install() {
 	default
