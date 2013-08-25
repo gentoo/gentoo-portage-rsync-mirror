@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.98 2013/08/21 14:05:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.99 2013/08/25 14:58:56 ercpe Exp $
+
+  25 Aug 2013; Johann Schmitz <ercpe@gentoo.org> virtualenv-1.10-r1.ebuild,
+  virtualenv-1.10.1.ebuild:
+  Fixed DOCS variable wrt #482360
 
   21 Aug 2013; Justin Lecher <jlec@gentoo.org> virtualenv-1.10-r1.ebuild,
   virtualenv-1.10.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r2.ebuild,v 1.2 2013/04/21 10:21:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r2.ebuild,v 1.3 2013/08/25 14:42:09 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI=" http://www.speech.cs.cmu.edu/${PN}/packed/${P}/${P}-release.tar.bz2"
 
 LICENSE="BSD freetts public-domain regexp-UofT BSD-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm -hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS=" ~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
 IUSE="alsa oss static-libs"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-1.0.24.1 )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/compizconfig-python-0.8.4-r5.ebuild,v 1.1 2013/05/07 13:17:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/compizconfig-python/compizconfig-python-0.8.4-r5.ebuild,v 1.2 2013/08/25 14:58:39 pinkbyte Exp $
 
 EAPI="5"
 
@@ -22,6 +22,8 @@ RDEPEND="${PYTHON_DEPS}
 DEPEND="${RDEPEND}
 	dev-python/pyrex[${PYTHON_USEDEP}]
 	virtual/pkgconfig"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_configure() {
 	local myeconfargs=(

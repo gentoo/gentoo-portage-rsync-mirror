@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Eidetic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.15 2012/06/23 20:21:02 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eidetic/ChangeLog,v 1.16 2013/08/25 14:54:05 idella4 Exp $
+
+*Eidetic-2.003003-r1 (25 Aug 2013)
+
+  25 Aug 2013; Ian Delaney <idella4@gentoo.org> +Eidetic-2.003003-r1.ebuild:
+  revbump, EAPI -> 5, add IUSE doc & upgrade install
 
   23 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove wrong upstream info: Not on CPAN
@@ -56,4 +61,3 @@
   +files/Eidetic-2.003003-destdir.patch, +files/Eidetic-2.003003-sql.patch,
   +metadata.xml, +Eidetic-2.003003.ebuild:
   Initial import into the tree to meet rackview depend.
-
