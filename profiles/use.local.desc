@@ -1243,6 +1243,8 @@ dev-haskell/citeproc-hs:embed_data_files - Embed locale files into the library (
 dev-haskell/citeproc-hs:hexpat - use dev-haskell/hexpat instead of dev-haskell/xml for XML parsing
 dev-haskell/citeproc-hs:network - use dev-haskell/network and dev-haskell/http to retrieve CSL file from URIs
 dev-haskell/citeproc-hs:small_base - Choose the new smaller, split-up base package.
+dev-haskell/cmdargs:quotation - Build quote module
+dev-haskell/cmdargs:testprog - Build the test program
 dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances
 dev-haskell/filestore:maxcount - Make use of a recent (>= 2.3.0) Darcs feature which vastly improves the performance of 'latest'. You should disable this flag if you plan to use gitit with an older version of Darcs, or 'latest' will raise an error.

@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/cmdargs
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdargs/ChangeLog,v 1.1 2013/08/26 04:31:59 qnikst Exp $
+
+*cmdargs-0.10.5 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +cmdargs-0.10.5.ebuild,
+  +metadata.xml:
+  dev-haskell/cmdargs: new version

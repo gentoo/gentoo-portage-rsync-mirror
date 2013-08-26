@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/ranges
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ranges/ChangeLog,v 1.1 2013/08/26 04:59:25 qnikst Exp $
+
+*ranges-0.2.4 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +ranges-0.2.4.ebuild:
+  dev-haskell/ranges: initial layout
