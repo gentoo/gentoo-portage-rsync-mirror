@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.91 2013/02/10 03:21:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.92 2013/08/26 15:56:13 jer Exp $
+
+  26 Aug 2013; Jeroen Roovers <jer@gentoo.org> terminus-font-4.38.ebuild:
+  Stable for HPPA (bug #448010).
 
   10 Feb 2013; Christoph Junghans <ottxor@gentoo.org> terminus-font-4.36.ebuild,
   terminus-font-4.38.ebuild:
