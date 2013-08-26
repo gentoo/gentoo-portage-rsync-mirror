@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/skein
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/skein/ChangeLog,v 1.1 2013/08/26 04:12:13 qnikst Exp $
+
+*skein-1.0.3 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +skein-1.0.3.ebuild:
+  dev-haskell/skein: 1.0.3

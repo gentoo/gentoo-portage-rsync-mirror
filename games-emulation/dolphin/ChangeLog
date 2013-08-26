@@ -1,0 +1,11 @@
+# ChangeLog for games-emulation/dolphin
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.1 2013/08/26 04:25:00 twitch153 Exp $
+
+*dolphin-9999 (26 Aug 2013)
+*dolphin-3.5 (26 Aug 2013)
+
+  26 Aug 2013; twitch153 +dolphin-3.5.ebuild, +dolphin-9999.ebuild,
+  +files/dolphin-emu-3.5-gcc-4.8.patch, +metadata.xml:
+  New ebuild and live ebuild for dolphin emulator. Written by myself. Fixes bug
+  #281543
