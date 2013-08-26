@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/http-date
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-date/ChangeLog,v 1.1 2013/08/26 12:25:21 qnikst Exp $
+
+*http-date-0.0.4 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +http-date-0.0.4.ebuild,
+  +metadata.xml:
+  dev-haskell/http-date: initial layout

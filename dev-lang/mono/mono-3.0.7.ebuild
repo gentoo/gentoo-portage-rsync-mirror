@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-3.0.7.ebuild,v 1.2 2013/05/24 19:58:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-3.0.7.ebuild,v 1.3 2013/08/26 12:04:30 patrick Exp $
 
 EAPI="5"
 AUTOTOOLS_PRUNE_LIBTOOL_FILES="all"
@@ -33,7 +33,7 @@ DEPEND="${COMMONDEPEND}
 pkg_pretend() {
 	# If CONFIG_SYSVIPC is not set in your kernel .config, mono will hang while compiling.
 	# See http://bugs.gentoo.org/261869 for more info."
-	CONFIG_CHECK="SYSVIPC"
+	CONFIG_CHECK="~SYSVIPC"
 	use kernel_linux && check_extra_config
 }
 

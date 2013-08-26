@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.2.ebuild,v 1.1 2013/06/10 12:29:33 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.3.2.ebuild,v 1.2 2013/08/26 12:19:07 djc Exp $
 
 EAPI=4
 
@@ -78,8 +78,8 @@ src_install() {
 		doins -r sample contrib
 	fi
 
-	systemd_newtmpfilesd "${FILESDIR}"/${PN}.tmpfile ${PN}.conf || die
-	systemd_newunit "${FILESDIR}"/${PN}.service 'openvpn@.service' || die
+	systemd_newtmpfilesd "${FILESDIR}"/${PN}.tmpfile ${PN}.conf
+	systemd_newunit "${FILESDIR}"/${PN}.service 'openvpn@.service'
 }
 
 pkg_postinst() {

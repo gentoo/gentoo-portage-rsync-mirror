@@ -1,0 +1,13 @@
+# ChangeLog for dev-haskell/persistent-sqlite
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent-sqlite/ChangeLog,v 1.1 2013/08/26 12:06:09 qnikst Exp $
+
+*persistent-sqlite-1.1.5 (26 Aug 2013)
+*persistent-sqlite-1.2.1-r1 (26 Aug 2013)
+*persistent-sqlite-1.2.0 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +files/persistent-sqlite-1.2.1-pthread.patch, +metadata.xml,
+  +persistent-sqlite-1.1.5.ebuild, +persistent-sqlite-1.2.0.ebuild,
+  +persistent-sqlite-1.2.1-r1.ebuild:
+  persistent-sqlite: layout
