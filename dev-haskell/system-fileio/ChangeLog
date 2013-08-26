@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/system-fileio
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/system-fileio/ChangeLog,v 1.1 2013/08/26 11:00:45 qnikst Exp $
+
+*system-fileio-0.3.11 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +system-fileio-0.3.11.ebuild:
+  dev-haskell/system-fileio: initial layout

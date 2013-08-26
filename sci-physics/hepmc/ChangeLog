@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/hepmc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.33 2012/08/07 16:56:28 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/ChangeLog,v 1.34 2013/08/26 10:56:43 patrick Exp $
+
+*hepmc-2.06.09 (26 Aug 2013)
+
+  26 Aug 2013; Patrick Lauer <patrick@gentoo.org> +hepmc-2.06.09.ebuild:
+  Bump
 
   07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> hepmc-2.06.08.ebuild:
   keyword amd64-linux, x86-linux

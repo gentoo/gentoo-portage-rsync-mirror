@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/lens
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lens/ChangeLog,v 1.1 2013/08/26 10:52:15 qnikst Exp $
+
+*lens-3.9.0.2-r1 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +lens-3.9.0.2-r1.ebuild,
+  +metadata.xml:
+  dev-haskell/lens: initial layout
