@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/boot0
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.46 2013/08/22 15:42:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.47 2013/08/26 20:41:11 aballier Exp $
+
+*boot0-9.2_rc3 (26 Aug 2013)
+
+  26 Aug 2013; Alexis Ballier <aballier@gentoo.org> +boot0-9.2_rc3.ebuild:
+  bump to rc3
 
 *boot0-9.2_rc2 (22 Aug 2013)
 
