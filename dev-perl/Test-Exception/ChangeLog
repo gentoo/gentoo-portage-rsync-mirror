@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Exception
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.73 2012/06/24 12:59:19 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.74 2013/08/26 03:47:45 patrick Exp $
+
+*Test-Exception-0.320.0 (26 Aug 2013)
+
+  26 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +Test-Exception-0.320.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

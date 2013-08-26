@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-SAX-Expat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/ChangeLog,v 1.5 2012/06/24 12:58:32 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX-Expat/ChangeLog,v 1.6 2013/08/26 03:50:43 patrick Exp $
+
+*XML-SAX-Expat-0.500.0 (26 Aug 2013)
+
+  26 Aug 2013; Patrick Lauer <patrick@gentoo.org> +XML-SAX-Expat-0.500.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

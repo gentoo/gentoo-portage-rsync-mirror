@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/dns
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dns/ChangeLog,v 1.1 2013/08/26 03:46:25 qnikst Exp $
+
+*dns-0.3.8 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +dns-0.3.8.ebuild,
+  +metadata.xml:
+  dev-haskell/dns: 0.3.8

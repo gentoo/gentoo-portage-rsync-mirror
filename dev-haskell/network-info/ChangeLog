@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/network-info
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/network-info/ChangeLog,v 1.1 2013/08/26 03:50:54 qnikst Exp $
+
+*network-info-0.2.0.3 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +network-info-0.2.0.3.ebuild:
+  dev-haskell/network-info: 0.2.0.3

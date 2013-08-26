@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MogileFS-Client-Async
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Client-Async/ChangeLog,v 1.4 2012/06/24 12:59:58 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Client-Async/ChangeLog,v 1.5 2013/08/26 03:42:20 patrick Exp $
+
+*MogileFS-Client-Async-0.030.0 (26 Aug 2013)
+
+  26 Aug 2013; Patrick Lauer <patrick@gentoo.org>
+  +MogileFS-Client-Async-0.030.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

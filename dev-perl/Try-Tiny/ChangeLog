@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.53 2013/08/06 02:48:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.54 2013/08/26 03:32:33 patrick Exp $
+
+*Try-Tiny-0.180.0 (26 Aug 2013)
+
+  26 Aug 2013; Patrick Lauer <patrick@gentoo.org> +Try-Tiny-0.180.0.ebuild:
+  Bump
 
   06 Aug 2013; Patrick Lauer <patrick@gentoo.org> Try-Tiny-0.160.0.ebuild:
   QA: Drop ~s390 keyword until dev-perl/Sub-Name catches up

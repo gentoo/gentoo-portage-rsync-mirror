@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/iproute
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/iproute/ChangeLog,v 1.1 2013/08/26 03:45:15 qnikst Exp $
+
+*iproute-1.2.11 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +iproute-1.2.11.ebuild,
+  +metadata.xml:
+  dev-haskell/iproute: 1.2.11
