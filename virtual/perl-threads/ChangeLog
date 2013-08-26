@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-threads
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads/ChangeLog,v 1.18 2013/08/14 05:39:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads/ChangeLog,v 1.19 2013/08/25 23:34:57 patrick Exp $
+
+  25 Aug 2013; Patrick Lauer <patrick@gentoo.org> -perl-threads-1.75.ebuild,
+  -perl-threads-1.76.ebuild, -perl-threads-1.77.ebuild,
+  -perl-threads-1.79.ebuild, -perl-threads-1.81.ebuild,
+  -perl-threads-1.820.ebuild, -perl-threads-1.830.0-r2.ebuild,
+  -perl-threads-1.850.0.ebuild:
+  Remove old
 
 *perl-threads-1.860.0-r2 (14 Aug 2013)
 

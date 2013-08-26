@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for threads
-KEYWORDS=~amd64 ~x86
-RDEPEND=~perl-core/threads-1.76
-SLOT=0
-_md5_=cd6ac981ada7c14417e2ad4a53923adb
