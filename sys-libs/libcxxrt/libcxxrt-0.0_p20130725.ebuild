@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-0.0_p20130725.ebuild,v 1.1 2013/07/26 00:48:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-0.0_p20130725.ebuild,v 1.2 2013/08/26 21:19:18 aballier Exp $
 
 EAPI=5
 
@@ -52,8 +52,7 @@ multilib_src_compile() {
 
 multilib_src_test() {
 	cd "${BUILD_DIR}/test"
-	LD_32_LIBRARY_PATH="${BUILD_DIR}/src:${LD_32_LIBRARY_PATH}" \
-		LD_LIBRARY_PATH="${BUILD_DIR}/src:${LD_LIBRARY_PATH}" \
+	LD_LIBRARY_PATH="${BUILD_DIR}/src:${LD_LIBRARY_PATH}" \
 		LIBS="-L${BUILD_DIR}/src -lcxxrt -lc" \
 		emake check
 }
