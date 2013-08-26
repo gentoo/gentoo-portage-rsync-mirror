@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/pwstore-fast
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pwstore-fast/ChangeLog,v 1.1 2013/08/26 12:31:41 qnikst Exp $
+
+*pwstore-fast-2.3 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +pwstore-fast-2.3.ebuild:
+  dev-haskell/pwstore-fast: initial layout
