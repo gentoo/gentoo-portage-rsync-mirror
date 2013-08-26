@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.1 2013/08/23 09:27:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.2 2013/08/26 08:54:49 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -202,8 +202,8 @@ pkg_postinst() {
 
 	if has_version "<x11-drivers/ati-drivers-12"; then
 		ewarn "GNOME Shell has been reported to show graphical corruption under"
-		ewarn "x11-drivers/ati-drivers-11.*; you may want to use GNOME in"
-		ewarn "fallback mode, or switch to open-source drivers."
+		ewarn "x11-drivers/ati-drivers-11.*; you may want to switch to open-source"
+		ewarn "drivers."
 	fi
 
 	if has_version "media-libs/mesa[video_cards_radeon]" ||

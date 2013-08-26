@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/vault
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vault/ChangeLog,v 1.1 2013/08/26 08:35:47 qnikst Exp $
+
+*vault-0.3.0.0 (26 Aug 2013)
+*vault-0.2.0.4 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +vault-0.2.0.4.ebuild, +vault-0.3.0.0.ebuild:
+  dev-haskell/vault: initial layout

@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/wai
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai/ChangeLog,v 1.1 2013/08/26 08:38:21 qnikst Exp $
+
+*wai-1.4.0.1-r1 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +files/wai-1.4.0.1-support-vault-3.0.patch, +metadata.xml,
+  +wai-1.4.0.1-r1.ebuild:
+  dev-haskell/wai: layout

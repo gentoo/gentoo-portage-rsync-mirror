@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r6.ebuild,v 1.1 2013/06/30 16:08:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r6.ebuild,v 1.2 2013/08/26 08:58:37 mgorny Exp $
 
 EAPI="1"
 
@@ -251,9 +251,8 @@ src_install() {
 
 	# Fix collisions between different slots of Python.
 	mv "${ED}usr/bin/pydoc" "${ED}usr/bin/pydoc${SLOT}"
-	_python_rewrite_shebang python${SLOT} "${ED}usr/bin/pydoc${SLOT}"
 	mv "${ED}usr/bin/idle" "${ED}usr/bin/idle${SLOT}"
-	_python_rewrite_shebang python${SLOT} "${ED}usr/bin/idle${SLOT}"
+	sed -i -e "1s:python:&${SLOT}:" "${ED}"usr/bin/{pydoc,idle}${SLOT} || die
 	mv "${ED}usr/share/man/man1/python.1" "${ED}usr/share/man/man1/python${SLOT}.1"
 	rm -f "${ED}usr/bin/smtpd.py"
 
