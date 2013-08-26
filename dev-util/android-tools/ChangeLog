@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/android-tools
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/ChangeLog,v 1.1 2013/08/26 09:46:32 zmedico Exp $
+
+*android-tools-0_p20130123 (26 Aug 2013)
+
+  26 Aug 2013; Zac Medico <zmedico@gentoo.org>
+  +android-tools-0_p20130123.ebuild, +metadata.xml:
+  Add dev-util/android-tools.
