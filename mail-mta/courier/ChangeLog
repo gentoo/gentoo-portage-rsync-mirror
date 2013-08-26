@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.164 2013/06/15 22:29:38 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.165 2013/08/26 11:17:46 patrick Exp $
+
+*courier-0.71 (26 Aug 2013)
+
+  26 Aug 2013; Patrick Lauer <patrick@gentoo.org> +courier-0.71.ebuild:
+  Bump
 
   15 Jun 2013; Vicente Olivert Riera <vincent@gentoo.org> courier-0.69.0.ebuild:
   fixing collitions with two qmail related packages: bug #441774

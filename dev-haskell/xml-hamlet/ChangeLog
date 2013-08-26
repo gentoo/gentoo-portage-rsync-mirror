@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/xml-hamlet
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml-hamlet/ChangeLog,v 1.1 2013/08/26 11:08:45 qnikst Exp $
+
+*xml-hamlet-0.4.0.4 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +xml-hamlet-0.4.0.4.ebuild:
+  dev-haskell/xml-hamlet: initial layout
