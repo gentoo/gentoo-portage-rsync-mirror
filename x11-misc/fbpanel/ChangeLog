@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/fbpanel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.54 2012/05/05 04:53:39 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.56 2013/08/26 19:17:03 jer Exp $
+
+  26 Aug 2013; Jeroen Roovers <jer@gentoo.org> fbpanel-6.1-r1.ebuild:
+  Use configure features instead of sed.
+
+*fbpanel-6.1-r1 (26 Aug 2013)
+
+  26 Aug 2013; Jeroen Roovers <jer@gentoo.org> +fbpanel-6.1-r1.ebuild,
+  -files/fbpanel-6.0-configure-LANG.patch,
+  +files/fbpanel-6.1-underlinking.patch:
+  Respect CC. Fix underlinking. Install plugins into proper multilib-strict
+  dir. Warn about missing /dev/mixer.
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> fbpanel-6.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
