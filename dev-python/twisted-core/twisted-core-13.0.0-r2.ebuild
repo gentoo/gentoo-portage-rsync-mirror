@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-13.0.0-r1.ebuild,v 1.2 2013/08/09 12:16:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/twisted-core-13.0.0-r2.ebuild,v 1.1 2013/08/26 00:43:27 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -89,8 +89,14 @@ python_test() {
 python_install() {
 	distutils-r1_python_install
 
+	local PYTHON_SITEDIR
+	python_export PYTHON_SITEDIR
+
+	# Bug 299736 
+	touch "${D%/}${PYTHON_SITEDIR}/Twisted-${PV}-py${EPYTHON#python}.egg-info"
+
 	# own the dropin.cache so we don't leave orphans
-	touch "${D}$(python_get_sitedir)/twisted/plugins/dropin.cache" || die
+	touch "${D%/}${PYTHON_SITEDIR}/twisted/plugins/dropin.cache" || die
 }
 
 python_install_all() {

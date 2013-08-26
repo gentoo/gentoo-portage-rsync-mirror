@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/tahoe-lafs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.5 2013/08/25 18:18:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/ChangeLog,v 1.6 2013/08/26 00:49:51 hasufell Exp $
+
+  26 Aug 2013; Julian Ospald <hasufell@gentoo.org> tahoe-lafs-1.10.0-r2.ebuild:
+  update deps for eclass conversion
 
   25 Aug 2013; Julian Ospald <hasufell@gentoo.org> tahoe-lafs-1.10.0-r2.ebuild:
   add optional dependencies to elog

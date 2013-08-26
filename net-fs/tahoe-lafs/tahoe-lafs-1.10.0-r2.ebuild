@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r2.ebuild,v 1.2 2013/08/25 18:18:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/tahoe-lafs/tahoe-lafs-1.10.0-r2.ebuild,v 1.3 2013/08/26 00:49:51 hasufell Exp $
 
 EAPI=5
 
@@ -21,13 +21,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-# distutils-r1 conversion pending for:
-#  dev-python/foolscap
-#  dev-python/nevow
-#  twisted.eclass
 RDEPEND="
-	>=dev-python/foolscap-0.6.1
-	dev-python/nevow
+	>=dev-python/foolscap-0.6.1[${PYTHON_USEDEP}]
+	dev-python/nevow[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/pyasn1[${PYTHON_USEDEP}]
 	dev-python/pycrypto[${PYTHON_USEDEP}]
@@ -35,7 +31,7 @@ RDEPEND="
 	dev-python/pyopenssl[${PYTHON_USEDEP}]
 	dev-python/pyutil[${PYTHON_USEDEP}]
 	dev-python/simplejson[${PYTHON_USEDEP}]
-	>=dev-python/twisted-core-9.0.0-r1
+	>=dev-python/twisted-core-9.0.0-r1[${PYTHON_USEDEP}]
 	dev-python/zbase32[${PYTHON_USEDEP}]
 	dev-python/zfec[${PYTHON_USEDEP}]
 	net-zope/zope-interface[${PYTHON_USEDEP}]
