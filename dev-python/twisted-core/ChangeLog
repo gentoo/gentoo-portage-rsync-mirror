@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.6 2013/08/26 00:43:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-core/ChangeLog,v 1.7 2013/08/26 01:32:52 floppym Exp $
+
+  26 Aug 2013; Mike Gilbert <floppym@gentoo.org> twisted-core-13.0.0-r2.ebuild:
+  Make previous change PyPy-compatible.
 
 *twisted-core-13.0.0-r2 (26 Aug 2013)
 
