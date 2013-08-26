@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/idna
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/idna/ChangeLog,v 1.1 2013/08/26 06:07:11 qnikst Exp $
+
+*idna-0.2 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +idna-0.2.ebuild,
+  +metadata.xml:
+  dev-haskell/idna: new version
