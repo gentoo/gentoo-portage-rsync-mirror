@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.9.1-r1.ebuild,v 1.11 2013/08/21 14:02:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.9.1-r1.ebuild,v 1.12 2013/08/26 00:27:03 floppym Exp $
 
 EAPI="5"
 
@@ -25,8 +25,7 @@ DEPEND="${RDEPEND}
 		dev-python/nose[${PYTHON_USEDEP}]
 	)"
 
-DOCS="docs/index.txt docs/news.txt"
-PYTHON_MODNAME="virtualenv.py virtualenv_support"
+DOCS=( docs/index.txt docs/news.txt )
 
 # let the python eclass handle script versioning
 PATCHES=(
