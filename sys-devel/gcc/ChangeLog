@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.957 2013/08/14 14:35:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.958 2013/08/26 06:00:26 dirtyepic Exp $
+
+  26 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.7.3.ebuild:
+  4.7.3 p1.2: Fixes bug #475482 (linking errors with -O3 -march=core-avx2).
 
   14 Aug 2013; Raúl Porcel <armin76@gentoo.org> gcc-4.6.3.ebuild:
   alpha stable, again now that i've tested it correctly
