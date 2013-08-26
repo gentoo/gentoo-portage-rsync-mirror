@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r6.ebuild,v 1.2 2013/08/09 13:43:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1-r6.ebuild,v 1.3 2013/08/26 15:31:14 axs Exp $
 
 EAPI=5
 inherit autotools eutils linux-info user
@@ -57,7 +57,7 @@ src_prepare() {
 	done
 	epatch "${FILESDIR}"/${P}-libmp4v2.patch
 	epatch "${FILESDIR}"/${P}-system-uuid.patch #270830
-	if has_version ">=dev-lang/spidermonkey-1.8.7" ; then
+	if has_version "~dev-lang/spidermonkey-1.8.7" ; then
 		epatch "${FILESDIR}"/${P}-mozjs187.patch #435394
 	fi
 	epatch "${FILESDIR}"/${P}-libextractor.patch #435394

@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hashable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/ChangeLog,v 1.17 2013/08/03 07:30:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/ChangeLog,v 1.18 2013/08/26 15:08:32 qnikst Exp $
+
+*hashable-1.2.0.10 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +hashable-1.2.0.10.ebuild:
+  dev-haskell/hashable: initial layout
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> hashable-1.1.2.5.ebuild:
   Stable for sparc, wrt bug #472802

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SGMLSpm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.47 2012/06/24 13:00:04 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.48 2013/08/26 15:09:31 idella4 Exp $
+
+*SGMLSpm-1.03-r7 (26 Aug 2013)
+
+  26 Aug 2013; Ian Delaney <idella4@gentoo.org> +SGMLSpm-1.03-r7.ebuild:
+  revbump -> EAPI 5
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

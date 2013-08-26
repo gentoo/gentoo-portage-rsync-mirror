@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.79 2013/06/25 12:48:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.80 2013/08/26 15:30:57 jer Exp $
+
+*hydra-7.5 (26 Aug 2013)
+
+  26 Aug 2013; Jeroen Roovers <jer@gentoo.org> -hydra-7.3.ebuild,
+  +hydra-7.5.ebuild:
+  Version bump (bug #482480 by Andrew Savchenko).
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> hydra-7.4.2.ebuild:
   Stable for amd64, wrt bug #470532

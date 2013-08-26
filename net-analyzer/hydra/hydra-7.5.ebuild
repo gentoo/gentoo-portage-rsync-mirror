@@ -1,17 +1,17 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-7.3.ebuild,v 1.4 2012/12/04 10:22:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-7.5.ebuild,v 1.1 2013/08/26 15:30:57 jer Exp $
 
-EAPI=4
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Advanced parallized login hacker"
 HOMEPAGE="http://www.thc.org/thc-hydra/"
-SRC_URI="http://freeworld.thc.org/releases/${P}-src.tar.gz"
+SRC_URI="http://freeworld.thc.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="firebird gtk idn mysql ncp oracle pcre postgres ssl subversion"
 
 RDEPEND="
@@ -42,7 +42,6 @@ src_prepare() {
 	: > Makefile.unix
 
 	sed -i \
-		-e 's:-O2:$(CPPFLAGS) $(CFLAGS):g' \
 		-e 's:|| echo.*$::' \
 		-e '/\t-$(CC)/s:-::' \
 		-e '/^OPTS/{s|=|+=|;s| -O3||}' \

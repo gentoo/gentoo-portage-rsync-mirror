@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/SNMP_Session
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.28 2012/03/01 16:17:42 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.29 2013/08/26 15:29:57 idella4 Exp $
+
+*SNMP_Session-1.13-r1 (26 Aug 2013)
+
+  26 Aug 2013; Ian Delaney <idella4@gentoo.org> +SNMP_Session-1.13-r1.ebuild,
+  SNMP_Session-1.13.ebuild:
+  revbump -> EAPI 5
 
   01 Mar 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Add missing cpan remote-id tags in metadata.xml (#406287)

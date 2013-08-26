@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.51 2013/02/07 14:36:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.52 2013/08/26 15:07:27 aballier Exp $
+
+  26 Aug 2013; Alexis Ballier <aballier@gentoo.org> pcre-ocaml-7.0.2.ebuild:
+  depend on ocaml 4, bug #482182
 
   07 Feb 2013; Alexis Ballier <aballier@gentoo.org> pcre-ocaml-7.0.2.ebuild:
   set subslot to PV since its a lib
