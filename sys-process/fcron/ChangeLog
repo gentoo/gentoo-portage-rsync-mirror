@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/fcron
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.112 2013/07/20 09:56:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/ChangeLog,v 1.113 2013/08/26 10:23:35 pacho Exp $
+
+*fcron-3.1.2-r2 (26 Aug 2013)
+
+  26 Aug 2013; Pacho Ramos <pacho@gentoo.org> +fcron-3.1.2-r2.ebuild,
+  -fcron-3.1.2-r1.ebuild:
+  Look for files in right dir (#477928 by emil karlson, Navid Zamani and Dustin
+  C. Hatch).
 
 *fcron-3.1.2-r1 (20 Jul 2013)
 

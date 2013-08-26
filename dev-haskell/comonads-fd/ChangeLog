@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/comonads-fd
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/comonads-fd/ChangeLog,v 1.1 2013/08/26 10:28:21 qnikst Exp $
+
+*comonads-fd-3.0.3 (26 Aug 2013)
+*comonads-fd-3.0.2 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +comonads-fd-3.0.2.ebuild, +comonads-fd-3.0.3.ebuild, +metadata.xml:
+  dev-haskell/comonads-fd: initial layout

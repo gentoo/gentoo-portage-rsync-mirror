@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/comonad-transformers
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/comonad-transformers/ChangeLog,v 1.1 2013/08/26 10:12:19 qnikst Exp $
+
+*comonad-transformers-3.1 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +comonad-transformers-3.1.ebuild, +metadata.xml:
+  dev-haskell/comonad-transformers: initial layout
