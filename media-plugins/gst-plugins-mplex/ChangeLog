@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-mplex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mplex/ChangeLog,v 1.31 2013/06/30 15:56:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mplex/ChangeLog,v 1.32 2013/08/26 22:24:37 eva Exp $
+
+*gst-plugins-mplex-1.0.8 (26 Aug 2013)
+
+  26 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-mplex-1.0.8.ebuild:
+  Version bump.
 
 *gst-plugins-mplex-1.0.7 (30 Jun 2013)
 

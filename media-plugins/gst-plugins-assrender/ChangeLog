@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-assrender
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-assrender/ChangeLog,v 1.38 2013/06/30 15:49:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-assrender/ChangeLog,v 1.39 2013/08/26 22:19:38 eva Exp $
+
+*gst-plugins-assrender-1.0.8 (26 Aug 2013)
+
+  26 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gst-plugins-assrender-1.0.8.ebuild:
+  Version bump.
 
 *gst-plugins-assrender-1.0.7 (30 Jun 2013)
 
