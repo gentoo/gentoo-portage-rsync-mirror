@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.84.5.2.ebuild,v 1.1 2012/10/11 07:00:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.84.5.2.ebuild,v 1.2 2013/08/26 01:27:26 patrick Exp $
 
 inherit eutils versionator multilib
 
@@ -306,7 +306,6 @@ pkg_postinst() {
 		elog "Inbound path is now ${ROOT}var/spool/postfix/hold"
 		elog
 		elog "See http://mailscanner.info/postfix.html for details"
-		elog "or check (english) gentoo-wiki.com page which has been updated"
 	fi
 
 	if [ -f "/etc/MailScanner/MailScanner.conf" ]; then
