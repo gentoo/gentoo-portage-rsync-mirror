@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.7.ebuild,v 1.3 2013/08/26 07:52:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.7.1.ebuild,v 1.1 2013/08/26 07:52:29 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 AUTOTOOLS_AUTORECONF="true"
 
-inherit autotools-utils python toolchain-funcs versionator
+inherit autotools-utils python-single-r1 toolchain-funcs versionator
 
 MY_S2_PV=$(replace_version_separator 2 - ${PV})
 MY_S2_P=${PN}-${MY_S2_PV/pre1/pre-1}
@@ -19,13 +19,15 @@ MY_P=${PN}-${MY_PV}
 DESCRIPTION="Crystallographic Object-Oriented Toolkit for model building, completion and validation"
 HOMEPAGE="http://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/"
 SRC_URI="
-	http://www.biop.ox.ac.uk/coot/software/source/releases/${MY_P}.tar.gz
-	test? ( http://dev.gentoo.org/~jlec/distfiles/greg-data-${PV}.tar.gz  )"
+	http://www2.mrc-lmb.cam.ac.uk/Personal/pemsley/coot/source/releases/${MY_P}.tar.gz"
+#	test? ( http://dev.gentoo.org/~jlec/distfiles/greg-data-${PV}.tar.gz  )"
 
 SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+openmp static-libs test"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
@@ -36,9 +38,9 @@ SCIDEPS="
 	>=sci-libs/gsl-1.3
 	>=sci-libs/mmdb-1.23
 	sci-libs/ssm
-	<sci-libs/monomer-db-1
+	sci-libs/monomer-db
 	sci-chemistry/reduce
-	<sci-chemistry/refmac-5.6
+	sci-chemistry/refmac
 	sci-chemistry/probe"
 
 XDEPS="
@@ -61,7 +63,8 @@ RDEPEND="
 	${SCIDEPS}
 	${XDEPS}
 	${SCHEMEDEPS}
-	dev-python/pygtk:2
+	${PYTHON_DEPS}
+	dev-python/pygtk:2[${PYTHON_USEDEP}]
 	>=dev-libs/gmp-4.2.2-r2
 	>=net-misc/curl-7.19.6
 	net-dns/libidn"
@@ -73,24 +76,25 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+RESTRICT="test"
+
 pkg_setup() {
 	if use openmp; then
 		tc-has-openmp || die "Please use an OPENMP capable compiler"
 	fi
-	python_set_active_version 2
-	python_pkg_setup
+	python-single-r1_pkg_setup
 }
 
 PATCHES=(
-	"${FILESDIR}"/${P}-clipper-config.patch
-	"${FILESDIR}"/${P}-goocanvas.patch
-	"${FILESDIR}"/${P}-mmdb-config.patch
-	"${FILESDIR}"/${P}-ssm.patch
+	"${FILESDIR}"/${PN}-0.7-clipper-config.patch
+	"${FILESDIR}"/${PN}-0.7-goocanvas.patch
+	"${FILESDIR}"/${PN}-0.7-mmdb-config.patch
+	"${FILESDIR}"/${PN}-0.7-ssm.patch
 	)
 
 src_prepare() {
 	sed \
-		-e "s:AM_COOT_SYS_BUILD_TYPE:COOT_SYS_BUILD_TYPE=Gentoo-Linux-$(PYTHON)-gtk2 ; AC_MSG_RESULT([\$COOT_SYS_BUILD_TYPE]); AC_SUBST(COOT_SYS_BUILD_TYPE):g" \
+		-e "s:AM_COOT_SYS_BUILD_TYPE:COOT_SYS_BUILD_TYPE=Gentoo-Linux-${EPYTHON}-gtk2 ; AC_MSG_RESULT([\$COOT_SYS_BUILD_TYPE]); AC_SUBST(COOT_SYS_BUILD_TYPE):g" \
 		-i configure.in || die
 
 	autotools-utils_src_prepare
@@ -114,7 +118,7 @@ src_configure() {
 
 src_compile() {
 	autotools-utils_src_compile
-	python_convert_shebangs $(python_get_version) "${S}"/src/coot_gtk2.py
+	python_fix_shebang "${S}"/src/coot_gtk2.py
 	cp "${S}"/src/coot_gtk2.py python/coot.py || die
 }
 

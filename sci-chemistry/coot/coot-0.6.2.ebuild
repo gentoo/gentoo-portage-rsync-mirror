@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.12 2013/05/29 06:17:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.13 2013/08/26 07:52:29 jlec Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ MY_PV=${PV}
 MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Crystallographic Object-Oriented Toolkit for model building, completion and validation"
-HOMEPAGE="http://www.biop.ox.ac.uk/coot/"
+HOMEPAGE="http://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/"
 SRC_URI="
 	http://www.biop.ox.ac.uk/coot/software/source/releases/${MY_P}.tar.gz
 	test? ( http://dev.gentoo.org/~jlec/distfiles/greg-data-${PV}.tar.gz  )"
