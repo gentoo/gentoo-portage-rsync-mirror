@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.1 2013/08/26 04:24:59 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.2 2013/08/26 07:19:36 twitch153 Exp $
 
 EAPI=5
 
@@ -45,9 +45,18 @@ DEPEND="${RDEPEND}
 	x11-libs/wxGTK:2.9
 	"
 
-src_prepare() {
+pkg_pretend() {
 
-	version_is_at_least 4.6.0 $(gcc-fullversion) || die "${PN} needs >=gcc-4.6.0 set to compile."
+	local ver=4.6.0
+	local msg="${PN} needs at least GCC ${ver} set to compile."
+
+	if ! version_is_at_least ${ver} $(gcc-fullversion); then
+		eerror ${msg}
+		die ${msg}
+	fi
+}
+
+src_prepare() {
 
 	if has_version "=sys-devel/gcc-4.8.0"; then
 		epatch "${FILESDIR}"/${PN}-emu-${PV}-gcc-4.8.patch
