@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-Kismet
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.9 2007/01/19 14:53:38 mcummings Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.10 2013/08/26 14:12:08 idella4 Exp $
+
+*Net-Kismet-0.04-r1 (26 Aug 2013)
+
+  26 Aug 2013; Ian Delaney <idella4@gentoo.org> +Net-Kismet-0.04-r1.ebuild:
+  revbump -> EAPI 5, add test invocation
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Net-Kismet-0.04.ebuild:
@@ -30,4 +35,3 @@
 
   10 Apr 2003; Peter Johanson <latexer@gentoo.org> Net-Kismet-0.04.ebuild:
   Initial import
-
