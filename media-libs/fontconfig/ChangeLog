@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.177 2013/08/23 13:04:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.178 2013/08/26 16:56:13 ago Exp $
+
+  26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> fontconfig-2.10.92.ebuild:
+  Stable for ppc, wrt bug #481824
 
   23 Aug 2013; Jeroen Roovers <jer@gentoo.org> fontconfig-2.10.92.ebuild:
   Stable for HPPA (bug #481824).

@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/pam_skey
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.22 2012/03/24 17:34:17 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.23 2013/08/26 16:32:46 ulm Exp $
+
+*pam_skey-1.1.5-r4 (26 Aug 2013)
+
+  26 Aug 2013; Ulrich Müller <ulm@gentoo.org> +pam_skey-1.1.5-r4.ebuild:
+  Fix handling of status returned from skey_haskey. File access errors for
+  the skeykeys file will now cause the module to return with status
+  "authinfo_unavail" instead of "ignore".
 
   24 Mar 2012; Ulrich Müller <ulm@gentoo.org> -pam_skey-1.1.5-r2.ebuild:
   Remove old.

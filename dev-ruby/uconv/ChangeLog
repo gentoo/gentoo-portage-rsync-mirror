@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/uconv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.22 2013/07/02 06:14:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.23 2013/08/26 16:57:45 ago Exp $
+
+  26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> uconv-0.6.1.ebuild:
+  Stable for ppc, wrt bug #480982
 
 *uconv-0.6.1 (02 Jul 2013)
 

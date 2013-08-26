@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.234 2013/08/24 15:54:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.235 2013/08/26 16:59:23 ago Exp $
+
+  26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-17.0.8.ebuild:
+  Stable for ppc, wrt bug #479968
 
   24 Aug 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-17.0.8.ebuild:
   Stable for arm, wrt bug #479968

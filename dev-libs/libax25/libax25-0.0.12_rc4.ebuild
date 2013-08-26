@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/libax25-0.0.12_rc4.ebuild,v 1.3 2013/08/24 09:38:47 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/libax25-0.0.12_rc4.ebuild,v 1.4 2013/08/26 16:55:38 ago Exp $
 
 EAPI=5
 inherit autotools-utils versionator
@@ -13,7 +13,7 @@ SRC_URI="http://www.linux-ax25.org/pub/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="static-libs"
 
 S=${WORKDIR}/${MY_P}

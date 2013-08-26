@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.4.ebuild,v 1.5 2013/08/23 09:12:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/findlib-1.4.ebuild,v 1.6 2013/08/26 16:54:50 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ IUSE="doc +ocamlopt tk"
 LICENSE="MIT"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 
 DEPEND=">=dev-lang/ocaml-3.10:=[ocamlopt?,tk?]"
 RDEPEND="${DEPEND}"

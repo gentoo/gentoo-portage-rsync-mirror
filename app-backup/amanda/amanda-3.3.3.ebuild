@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.3 2013/04/09 16:27:35 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.4 2013/08/26 16:54:07 ago Exp $
 
 EAPI=3
 inherit autotools eutils perl-module user systemd
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
 LICENSE="HPND BSD BSD-2 GPL-2+ GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~sparc ~x86"
 RDEPEND="sys-libs/readline
 	virtual/awk
 	app-arch/tar

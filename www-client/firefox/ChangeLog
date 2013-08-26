@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.262 2013/08/24 15:54:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.263 2013/08/26 16:59:07 ago Exp $
+
+  26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.8.ebuild:
+  Stable for ppc, wrt bug #479968
 
   24 Aug 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.8.ebuild:
   Stable for arm, wrt bug #479968

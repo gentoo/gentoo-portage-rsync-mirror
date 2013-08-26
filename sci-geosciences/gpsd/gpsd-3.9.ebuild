@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.9.ebuild,v 1.5 2013/08/24 12:34:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.9.ebuild,v 1.6 2013/08/26 16:53:49 ago Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 else
 	SRC_URI="mirror://nongnu/${PN}/${P}.tar.gz"
-	KEYWORDS="amd64 arm ~ppc ppc64 x86"
+	KEYWORDS="amd64 arm ppc ppc64 x86"
 fi
 
 DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients"

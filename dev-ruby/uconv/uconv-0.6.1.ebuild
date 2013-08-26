@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/uconv-0.6.1.ebuild,v 1.1 2013/07/02 06:14:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/uconv-0.6.1.ebuild,v 1.2 2013/08/26 16:57:45 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.yoshidam.net/Ruby.html#uconv"
 SRC_URI="http://www.yoshidam.net/${P}.tar.gz"
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~x86"
 IUSE=""
 
 RUBY_S=${PN}
