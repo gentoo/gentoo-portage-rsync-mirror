@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/zlib-bindings
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib-bindings/ChangeLog,v 1.1 2013/08/26 08:15:31 qnikst Exp $
+
+*zlib-bindings-0.1.1.3 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +zlib-bindings-0.1.1.3.ebuild:
+  dev-haskell/zlib-bindings: initial layout

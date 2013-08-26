@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/tls-extra
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/ChangeLog,v 1.1 2013/08/26 08:24:51 qnikst Exp $
+
+*tls-extra-0.6.1 (26 Aug 2013)
+*tls-extra-0.6.3 (26 Aug 2013)
+*tls-extra-0.6.4 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +tls-extra-0.6.1.ebuild, +tls-extra-0.6.3.ebuild, +tls-extra-0.6.4.ebuild:
+  dev-haskell/tls-extra: initial layout

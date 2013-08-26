@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/darkstat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.54 2012/06/13 15:59:35 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.55 2013/08/26 08:05:12 pinkbyte Exp $
+
+*darkstat-3.0.717 (26 Aug 2013)
+
+  26 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> +darkstat-3.0.717.ebuild:
+  Version bump
 
   13 Jun 2012; Jeroen Roovers <jer@gentoo.org>
   -files/darkstat-3.0.712-dlt_raw.patch, -darkstat-3.0.714.ebuild:
