@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.71 2013/06/26 01:36:50 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.72 2013/08/26 11:36:28 djc Exp $
+
+  26 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> -astng-0.20.3.ebuild,
+  -astng-0.21.0.ebuild, -astng-0.22.0.ebuild, -astng-0.23.1-r1.ebuild,
+  -astng-0.23.1.ebuild, -astng-0.24.0.ebuild, -astng-0.24.1-r1.ebuild,
+  -astng-0.24.1.ebuild, -astng-0.24.2.ebuild:
+  Remove old versions.
 
   26 Jun 2013; Patrick McLean <chutz@gentoo.org> astng-0.24.3.ebuild:
   Restore ~arm keyword dropped in last version bump, clean out test

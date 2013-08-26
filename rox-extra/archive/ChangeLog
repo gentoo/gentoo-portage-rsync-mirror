@@ -1,6 +1,11 @@
 # ChangeLog for rox-extra/archive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.24 2013/03/02 07:57:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/archive/ChangeLog,v 1.25 2013/08/26 11:46:29 patrick Exp $
+
+*archive-2.3 (26 Aug 2013)
+
+  26 Aug 2013; Patrick Lauer <patrick@gentoo.org> +archive-2.3.ebuild:
+  Bump
 
   02 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/rox-herd-looks-inactive-for-a

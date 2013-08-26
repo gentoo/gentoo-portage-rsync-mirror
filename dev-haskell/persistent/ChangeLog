@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/persistent
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/persistent/ChangeLog,v 1.1 2013/08/26 11:55:10 qnikst Exp $
+
+*persistent-1.1.5.1 (26 Aug 2013)
+*persistent-1.2.3.0 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +persistent-1.1.5.1.ebuild, +persistent-1.2.3.0.ebuild:
+  dev-haskell/persistent: initial layout

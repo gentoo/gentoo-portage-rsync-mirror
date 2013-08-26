@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/resource-pool
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/resource-pool/ChangeLog,v 1.1 2013/08/26 11:54:03 qnikst Exp $
+
+*resource-pool-0.2.1.1 (26 Aug 2013)
+
+  26 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> +metadata.xml,
+  +resource-pool-0.2.1.1.ebuild:
+  dev-haskell/resource-pool: initial layout

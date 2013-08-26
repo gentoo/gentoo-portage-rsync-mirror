@@ -1279,6 +1279,7 @@ dev-haskell/tls:compat - Accept SSLv2 compatible handshake
 dev-haskell/unix-compat:old-time - build against old-time package
 dev-haskell/void:safe - dissable effective but unsafe coersions
 dev-haskell/x11:screensaver - whether to build XScreenSaver.
+dev-haskell/yaml:system-libyaml - Use system libyaml instead on generic one
 dev-haskell/zip-archive:executable - Build the Zip executable.
 dev-java/ant:antlr - Enable ANTLR Ant tasks
 dev-java/ant:bcel - Enable bcel (bytecode manipulation) Ant tasks

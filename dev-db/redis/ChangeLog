@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.66 2013/07/04 12:23:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.68 2013/08/26 11:48:14 djc Exp $
+
+  26 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> -redis-2.4.10.ebuild,
+  -redis-2.4.18.ebuild:
+  Clean out redis-2.4.*.
+
+*redis-2.6.15 (26 Aug 2013)
+
+  26 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> +files/redis.initd-3,
+  +redis-2.6.15.ebuild:
+  Version bump redis to 2.6.15 (fixes 472968, 478536).
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> redis-2.6.13.ebuild:
   Stable for x86, wrt bug #472854

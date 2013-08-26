@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/syweb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/syweb/ChangeLog,v 1.6 2012/07/02 08:30:05 mabi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/syweb/ChangeLog,v 1.7 2013/08/26 11:41:40 pinkbyte Exp $
+
+*syweb-0.65 (26 Aug 2013)
+
+  26 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> +syweb-0.65.ebuild:
+  Version bump
 
   02 Jul 2012; Matti Bickel <mabi@gentoo.org> -syweb-0.59.ebuild,
   syweb-0.64.ebuild:
