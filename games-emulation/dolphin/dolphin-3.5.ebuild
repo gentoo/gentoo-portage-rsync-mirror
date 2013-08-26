@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.2 2013/08/26 07:19:36 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.3 2013/08/26 17:58:32 twitch153 Exp $
 
 EAPI=5
 
@@ -132,7 +132,7 @@ src_install() {
 
 	dodoc Readme.txt
 	if use doc; then
-		doins -r doc
+		dodoc -r docs/ActionReplay docs/DSP docs/WiiMote
 	fi
 
 	doicon Source/Core/DolphinWX/resources/Dolphin.xpm

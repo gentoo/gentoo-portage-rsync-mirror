@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/glances-1.7.ebuild,v 1.1 2013/08/12 17:06:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/glances-1.7.ebuild,v 1.2 2013/08/26 17:54:58 xarthisius Exp $
 
 EAPI=5
 
@@ -15,7 +15,6 @@ MYP=${MYPN}-${PV}
 DESCRIPTION="CLI curses based monitoring tool"
 HOMEPAGE="https://github.com/nicolargo/glances"
 SRC_URI="mirror://pypi/${MYPN:0:1}/${MYPN}/${MYP}.tar.gz"
-
 
 LICENSE="LGPL-3"
 SLOT="0"
