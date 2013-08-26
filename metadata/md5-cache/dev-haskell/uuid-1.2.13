@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prerm setup test
+DEPEND=>=dev-haskell/binary-0.4:=[profile?] <dev-haskell/binary-0.8:=[profile?] >=dev-haskell/cryptohash-0.7:=[profile?] <dev-haskell/cryptohash-0.10:=[profile?] >=dev-haskell/maccatcher-1.0:=[profile?] <dev-haskell/maccatcher-2.2:=[profile?] >=dev-haskell/random-1.0.1:=[profile?] <dev-haskell/random-1.1:=[profile?] >=dev-lang/ghc-6.12.1:= >=dev-haskell/cabal-1.8 test? ( >=dev-haskell/criterion-0.4 <dev-haskell/criterion-0.9 >=dev-haskell/deepseq-1.1 <dev-haskell/deepseq-1.4 =dev-haskell/hunit-1.2* dev-haskell/mersenne-random-pure64 >=dev-haskell/quickcheck-2.4 <dev-haskell/quickcheck-2.7 ) doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=For creating, comparing, parsing and printing Universally Unique Identifiers
+EAPI=5
+HOMEPAGE=http://projects.haskell.org/uuid/
+IUSE=doc hscolour profile test
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-haskell/binary-0.4:=[profile?] <dev-haskell/binary-0.8:=[profile?] >=dev-haskell/cryptohash-0.7:=[profile?] <dev-haskell/cryptohash-0.10:=[profile?] >=dev-haskell/maccatcher-1.0:=[profile?] <dev-haskell/maccatcher-2.2:=[profile?] >=dev-haskell/random-1.0.1:=[profile?] <dev-haskell/random-1.1:=[profile?] >=dev-lang/ghc-6.12.1:=
+SLOT=0/1.2.13
+SRC_URI=mirror://hackage/packages/archive/uuid/1.2.13/uuid-1.2.13.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	48f0813cd6c66200944782b078f0a188	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=961d18a110cab2c0ae3a323f92c0bf22

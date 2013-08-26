@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/MogileFS-Utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Utils/ChangeLog,v 1.24 2013/08/15 07:03:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MogileFS-Utils/ChangeLog,v 1.25 2013/08/26 13:44:38 idella4 Exp $
+
+  26 Aug 2013; Ian Delaney <idella4@gentoo.org> -MogileFS-Utils-2.13.ebuild,
+  -MogileFS-Utils-2.14.ebuild, -MogileFS-Utils-2.15.ebuild,
+  -MogileFS-Utils-2.16.ebuild, -MogileFS-Utils-2.17.ebuild,
+  -MogileFS-Utils-2.18.ebuild, -MogileFS-Utils-2.19.ebuild,
+  -MogileFS-Utils-2.20.ebuild:
+  drop old ebuilds, EAPI=0
 
 *MogileFS-Utils-2.280.0 (15 Aug 2013)
 
