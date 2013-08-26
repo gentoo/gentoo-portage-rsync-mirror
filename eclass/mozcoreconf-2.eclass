@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.29 2013/03/25 13:08:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.30 2013/08/26 14:39:36 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -93,6 +93,8 @@ moz_pkgsetup() {
 	export NO_STATIC_LIB=1
 	export USE_PTHREADS=1
 	export ALDFLAGS=${LDFLAGS}
+	# ensure MOZCONFIG is not defined
+	eval unset MOZCONFIG
 
 	# nested configure scripts in mozilla products generate unrecognized options
 	# false positives when toplevel configure passes downwards.

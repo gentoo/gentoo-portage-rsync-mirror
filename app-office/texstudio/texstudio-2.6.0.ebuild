@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.6.0.ebuild,v 1.6 2013/08/18 13:25:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.6.0.ebuild,v 1.7 2013/08/26 14:31:34 jlec Exp $
 
 EAPI=5
 
@@ -50,6 +50,11 @@ src_prepare() {
 	find hunspell quazip utilities/poppler-data -delete || die
 	if use video; then
 		sed "/^PHONON/s:$:true:g" -i ${PN}.pro || die
+	fi
+	if use ppc || use ppc64; then
+		cat > texmakerx_my.pri <<- EOF
+		NO_CRASH_HANDLER=true
+		EOF
 	fi
 	qt4-r2_src_prepare
 }
