@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.13 2013/08/19 15:47:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.14 2013/08/26 02:38:37 patrick Exp $
+
+*irc-8.5.1 (26 Aug 2013)
+
+  26 Aug 2013; Patrick Lauer <patrick@gentoo.org> +irc-8.5.1.ebuild:
+  Bump
 
 *irc-8.5 (19 Aug 2013)
 
