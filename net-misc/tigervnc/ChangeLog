@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.158 2013/07/07 17:47:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.159 2013/08/27 15:30:20 kensington Exp $
+
+  27 Aug 2013; Michael Palimaka <kensington@gentoo.org>
+  tigervnc-1.1.0-r7.ebuild, tigervnc-1.2.0.ebuild, tigervnc-1.2.80_p5065.ebuild:
+  Pin virtual/jpeg SLOT to 0.
 
 *tigervnc-1.2.80_p5065 (07 Jul 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.3-r1.ebuild,v 1.2 2013/08/24 14:06:31 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.3-r1.ebuild,v 1.3 2013/08/27 15:01:26 kensington Exp $
 
 EAPI=5
 
@@ -83,7 +83,7 @@ DEPEND="
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( || ( dev-db/cdb dev-db/tinycdb ) )
 	cjk? ( !gd? (
-		virtual/jpeg
+		virtual/jpeg:0
 		media-libs/libpng:0=
 		sys-libs/zlib
 	) )
@@ -91,12 +91,12 @@ DEPEND="
 	curl? ( >=net-misc/curl-7.10.5 )
 	enchant? ( app-text/enchant )
 	exif? ( !gd? (
-		virtual/jpeg
+		virtual/jpeg:0
 		media-libs/libpng:0=
 		sys-libs/zlib
 	) )
 	firebird? ( dev-db/firebird )
-	gd? ( virtual/jpeg media-libs/libpng:0= sys-libs/zlib )
+	gd? ( virtual/jpeg:0 media-libs/libpng:0= sys-libs/zlib )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( >=dev-libs/gmp-4.1.2 )
 	iconv? ( virtual/libiconv )
@@ -133,7 +133,7 @@ DEPEND="
 		=media-libs/freetype-2*
 		>=media-libs/t1lib-5.0.0
 		!gd? (
-			virtual/jpeg media-libs/libpng:0= sys-libs/zlib )
+			virtual/jpeg:0 media-libs/libpng:0= sys-libs/zlib )
 	)
 	unicode? ( dev-libs/oniguruma )
 	wddx? ( >=dev-libs/libxml2-2.6.8 )
@@ -143,7 +143,7 @@ DEPEND="
 	xmlwriter? ( >=dev-libs/libxml2-2.6.8 )
 	xpm? (
 		x11-libs/libXpm
-		virtual/jpeg
+		virtual/jpeg:0
 		media-libs/libpng:0= sys-libs/zlib
 	)
 	xslt? ( dev-libs/libxslt >=dev-libs/libxml2-2.6.8 )

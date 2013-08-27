@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.17 2013/01/04 19:29:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.0.ebuild,v 1.18 2013/08/27 15:30:20 kensington Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="gnutls +internal-fltk java nptl +opengl pam server +xorgmodule"
 
-RDEPEND="virtual/jpeg
+RDEPEND="virtual/jpeg:0
 	sys-libs/zlib
 	>=x11-libs/libXtst-1.0.99.2
 	gnutls? ( net-libs/gnutls )

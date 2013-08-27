@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r7.ebuild,v 1.12 2013/01/15 15:45:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.1.0-r7.ebuild,v 1.13 2013/08/27 15:30:20 kensington Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE="nptl +opengl server +xorgmodule"
 
-RDEPEND="virtual/jpeg
+RDEPEND="virtual/jpeg:0
 	sys-libs/zlib
 	media-libs/freetype
 	x11-libs/libSM

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.0.ebuild,v 1.2 2013/04/10 07:09:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.0.ebuild,v 1.3 2013/08/27 15:03:04 kensington Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ CDEPEND="
 	virtual/blas
 	cairo? ( x11-libs/cairo[X] x11-libs/pango )
 	icu? ( dev-libs/icu )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	lapack? ( virtual/lapack )
 	perl? ( dev-lang/perl )
 	png? ( media-libs/libpng )

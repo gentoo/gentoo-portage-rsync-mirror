@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.1.ebuild,v 1.2 2012/11/13 02:01:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.1.ebuild,v 1.3 2013/08/27 15:07:24 kensington Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ IUSE="cairo debug doc examples games opengl pdf static-libs threads xft xinerama
 
 RDEPEND="
 	>=media-libs/libpng-1.2:0
-	virtual/jpeg
+	virtual/jpeg:0
 	sys-libs/zlib
 	x11-libs/libICE
 	x11-libs/libSM
