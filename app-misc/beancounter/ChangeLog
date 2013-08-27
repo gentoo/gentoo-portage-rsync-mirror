@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/beancounter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.15 2012/05/10 15:06:33 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.16 2013/08/27 16:33:08 idella4 Exp $
+
+*beancounter-0.8.10-r1 (27 Aug 2013)
+
+  27 Aug 2013; Ian Delaney <idella4@gentoo.org> +beancounter-0.8.10-r1.ebuild:
+  revbump -> EAPI 5
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -beancounter-0.8.8.ebuild,
   -beancounter-0.8.9.ebuild:
@@ -67,4 +72,3 @@
   04 May 2005; Christian Andreetta <satya@gentoo.org> +metadata.xml,
   +beancounter-0.8.1.ebuild:
   initial submission
-
