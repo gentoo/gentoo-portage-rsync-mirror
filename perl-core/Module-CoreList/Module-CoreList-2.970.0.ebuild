@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/Module-CoreList-2.760.0.ebuild,v 1.2 2013/02/18 23:17:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/Module-CoreList-2.970.0.ebuild,v 1.1 2013/08/27 03:30:16 patrick Exp $
 
-EAPI=4
+EAPI=5
 
-MODULE_AUTHOR=RJBS
-MODULE_VERSION=2.76
+MODULE_AUTHOR=BINGOS
+MODULE_VERSION=2.97
 inherit perl-module
 
 DESCRIPTION="what modules shipped with versions of perl"
