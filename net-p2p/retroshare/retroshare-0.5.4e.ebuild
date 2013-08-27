@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/retroshare-0.5.4e.ebuild,v 1.1 2013/08/03 23:20:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/retroshare-0.5.4e.ebuild,v 1.2 2013/08/27 16:13:19 kensington Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ RDEPEND="
 		dev-qt/qtmultimedia:4
 	)"
 DEPEND="${RDEPEND}
-	dev-qt/qtcore
+	dev-qt/qtcore:4
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${P%[a-zA-Z]}/src

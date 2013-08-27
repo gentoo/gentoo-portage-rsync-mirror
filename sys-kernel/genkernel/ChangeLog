@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.372 2013/06/17 14:37:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.373 2013/08/27 16:18:45 jer Exp $
+
+  27 Aug 2013; Jeroen Roovers <jer@gentoo.org> genkernel-3.4.45.1.ebuild:
+  Stable for HPPA (bug #473202).
 
   17 Jun 2013; Jeroen Roovers <jer@gentoo.org> genkernel-3.4.45.1.ebuild:
   Revert HPPA stable (bug #473202).

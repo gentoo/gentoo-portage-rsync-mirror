@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.6 2013/08/27 15:57:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013-r1.ebuild,v 1.1 2013/08/27 16:29:26 aballier Exp $
 
 EAPI=5
 
@@ -237,24 +237,16 @@ src_compile() {
 	cd "${B}"
 	# Mimic updmap --syncwithtrees to enable only fonts installed
 	# Code copied from updmap script
-	for i in `egrep '^(Mixed)?Map' "texmf-dist/web2c/updmap.cfg" | sed 's@.* @@'`; do
+	for i in `egrep '^(Mixed|Kanji)?Map' "texmf-dist/web2c/updmap.cfg" | sed 's@.* @@'`; do
 		texlive-common_is_file_present_in_texmf "$i" || echo "$i"
 	done > "${T}/updmap_update"
 	{
 		sed 's@/@\\/@g; s@^@/^MixedMap[     ]*@; s@$@$/s/^/#! /@' <"${T}/updmap_update"
 		sed 's@/@\\/@g; s@^@/^Map[  ]*@; s@$@$/s/^/#! /@' <"${T}/updmap_update"
+		sed 's@/@\\/@g; s@^@/^KanjiMap[     ]*@; s@$@$/s/^/#! /@' <"${T}/updmap_update"
 	} > "${T}/updmap_update2"
 	sed -f "${T}/updmap_update2" "texmf-dist/web2c/updmap.cfg" >	"${T}/updmap_update3"\
 		&& cat "${T}/updmap_update3" > "texmf-dist/web2c/updmap.cfg"
-}
-
-src_test() {
-	ewarn "Due to modular layout of texlive ebuilds,"
-	ewarn "It would not make much sense to use tests into the ebuild"
-	ewarn "And tests would fail anyway"
-	ewarn "Alternatively you can try to compile any tex file"
-	ewarn "Tex warnings should be considered as errors and reported"
-	ewarn "You can also run fmtutil-sys --all and check for errors/warnings there"
 }
 
 src_install() {

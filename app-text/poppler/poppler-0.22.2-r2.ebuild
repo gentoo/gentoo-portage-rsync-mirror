@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.2-r2.ebuild,v 1.14 2013/07/12 20:34:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.22.2-r2.ebuild,v 1.15 2013/08/27 16:01:38 kensington Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ COMMON_DEPEND="
 		introspection? ( >=dev-libs/gobject-introspection-1.32.1 )
 	)
 	curl? ( net-misc/curl )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/openjpeg:0 )
 	lcms? ( media-libs/lcms:2 )
 	png? ( >=media-libs/libpng-1.4:0 )

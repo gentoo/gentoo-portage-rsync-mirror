@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.24-r1.ebuild,v 1.4 2012/09/13 04:07:30 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.24-r1.ebuild,v 1.5 2013/08/27 16:03:07 kensington Exp $
 
 EAPI=4
 inherit eutils fdo-mime autotools flag-o-matic
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
 IUSE="debug doc jpeg nls tiff xml"
 
-RDEPEND="jpeg? ( virtual/jpeg )
+RDEPEND="jpeg? ( virtual/jpeg:0 )
 	tiff? ( media-libs/tiff:0 )"
 DEPEND="${RDEPEND}"
 
