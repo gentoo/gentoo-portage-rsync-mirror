@@ -1,6 +1,14 @@
 # ChangeLog for games-puzzle/monsterz
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.29 2012/09/19 02:01:24 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.31 2013/08/26 23:49:19 hasufell Exp $
+
+  26 Aug 2013; Julian Ospald <hasufell@gentoo.org> monsterz-0.7.1-r3.ebuild:
+  games last on inherit line
+
+*monsterz-0.7.1-r3 (26 Aug 2013)
+
+  26 Aug 2013; Julian Ospald <hasufell@gentoo.org> +monsterz-0.7.1-r3.ebuild:
+  fix python handling wrt #482578
 
   19 Sep 2012; Michael Sterrett <mr_bones_@gentoo.org> monsterz-0.7.1-r2.ebuild:
   any mod support will do
