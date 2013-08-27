@@ -10,5 +10,5 @@ RDEPEND=dev-java/eclipse-ecj:4.2 ~dev-java/tomcat-servlet-api-7.0.42 extra-webap
 RESTRICT=test
 SLOT=7
 SRC_URI=mirror://apache/tomcat/tomcat-7/v7.0.42/src/apache-tomcat-7.0.42-src.tar.gz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-ant-2	65ba8d80c13cf56bad5ccec21a6b3c37	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	52b7cfbf4f7225fcea7e7f18b6d83328	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-ant-2	65ba8d80c13cf56bad5ccec21a6b3c37	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=26723c65025557fc1897a7e12f563c1e

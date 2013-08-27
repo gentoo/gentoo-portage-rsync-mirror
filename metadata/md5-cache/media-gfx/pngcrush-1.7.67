@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install setup
+DEPEND=system-libs? ( >=media-libs/libpng-1.5:0= sys-libs/zlib:= ) app-arch/xz-utils
+DESCRIPTION=Portable Network Graphics (PNG) optimizing utility
+EAPI=5
+HOMEPAGE=http://pmt.sourceforge.net/pngcrush/
+IUSE=+system-libs
+KEYWORDS=~alpha ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+LICENSE=pngcrush
+RDEPEND=system-libs? ( >=media-libs/libpng-1.5:0= sys-libs/zlib:= )
+SLOT=0
+SRC_URI=system-libs? ( mirror://sourceforge/pmt/pngcrush-1.7.67-nolib.tar.xz ) !system-libs? ( mirror://sourceforge/pmt/pngcrush-1.7.67.tar.xz )
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=d00cf74813bb2a9913ef072fa9049978

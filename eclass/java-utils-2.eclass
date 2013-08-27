@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.153 2013/04/17 18:01:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.154 2013/08/27 05:32:28 radhermit Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -2331,10 +2331,10 @@ java-pkg_init_paths_() {
 	debug-print-function ${FUNCNAME} $*
 
 	local pkg_name
-	if [[ "$SLOT" == "0" ]] ; then
+	if [[ "${SLOT%/*}" == "0" ]] ; then
 		JAVA_PKG_NAME="${PN}"
 	else
-		JAVA_PKG_NAME="${PN}-${SLOT}"
+		JAVA_PKG_NAME="${PN}-${SLOT%/*}"
 	fi
 
 	JAVA_PKG_SHAREPATH="${DESTTREE}/share/${JAVA_PKG_NAME}"
