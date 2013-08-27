@@ -7,7 +7,7 @@
 		<name>Julian Ospald</name>
 	</maintainer>
 	<upstream>
-        <changelog>http://crawl.develz.org/main/0.10.3.txt</changelog>
+        <changelog>http://crawl.develz.org/main/0.12.2.txt</changelog>
         <doc lang="en">http://crawl.develz.org/wordpress/documentation</doc>
         <bugs-to>https://crawl.develz.org/mantis/main_page.php</bugs-to>
 	</upstream>
