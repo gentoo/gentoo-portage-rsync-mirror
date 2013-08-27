@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.7.1.ebuild,v 1.1 2013/04/16 08:58:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.7.1.ebuild,v 1.2 2013/08/27 18:29:10 bicatali Exp $
 
 EAPI=5
 
@@ -48,22 +48,24 @@ src_unpack() {
 
 pc_incdir() {
 	$(tc-getPKG_CONFIG) --cflags-only-I $@ | \
-		sed -e 's/^-I//' -e 's/[ ]*-I/:/g'
+		sed -e 's/^-I//' -e 's/[ ]*-I/:/g' -e 's/[ ]*$//'
 }
 
 pc_libdir() {
 	$(tc-getPKG_CONFIG) --libs-only-L $@ | \
-		sed -e 's/^-L//' -e 's/[ ]*-L/:/g'
+		sed -e 's/^-L//' -e 's/[ ]*-L/:/g' -e 's/[ ]*$//'
 }
 
 pc_libs() {
 	$(tc-getPKG_CONFIG) --libs-only-l $@ | \
 		sed -e 's/[ ]-l*\(pthread\|m\)[ ]*//g' \
-		-e 's/^-l//' -e 's/[ ]*-l/,/g'
+		-e 's/^-l//' -e 's/[ ]*-l/,/g' -e 's/[ ]*$//'
 }
 
 python_prepare_all() {
 	epatch "${FILESDIR}"/${PN}-1.7.0-atlas.patch
+	# applied upstream
+	epatch "${FILESDIR}"/${PN}-1.7.1-distutils-python33.patch
 
 	if use lapack; then
 		append-ldflags "$($(tc-getPKG_CONFIG) --libs-only-other cblas lapack)"
@@ -118,16 +120,14 @@ python_test() {
 	distutils_install_for_testing ${NUMPY_FCONFIG}
 
 	cd "${TMPDIR}" || die
-	"${PYTHON}" -c "
+	${EPYTHON} -c "
 import numpy, sys
-r = numpy.test()
+r = numpy.test(verbose=3)
 sys.exit(0 if r.wasSuccessful() else 1)" || die "Tests fail with ${EPYTHON}"
 }
 
 python_install() {
 	distutils-r1_python_install ${NUMPY_FCONFIG}
-
-	rm -f "${D}"$(python_get_sitedir)/numpy/*.txt
 }
 
 python_install_all() {
@@ -140,8 +140,8 @@ python_install_all() {
 	doman numpy/f2py/f2py.1
 
 	if use doc; then
+		dohtml -r "${WORKDIR}"/html/*
 		insinto /usr/share/doc/${PF}
-		doins -r "${WORKDIR}"/html
 		doins "${DISTDIR}"/${PN}-{user,ref}-${DOC_PV}.pdf
 	fi
 }

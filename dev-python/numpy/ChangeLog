@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.202 2013/04/16 08:58:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.203 2013/08/27 18:29:10 bicatali Exp $
+
+  27 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/numpy-1.7.1-distutils-python33.patch, -numpy-1.7.0.ebuild,
+  numpy-1.7.1.ebuild:
+  Remove trailing spaces from pkg-config calls (bug #444104), fix shared lib
+  extension (upstream patch) for python-3 (bug #470946), remove old
 
 *numpy-1.7.1 (16 Apr 2013)
 

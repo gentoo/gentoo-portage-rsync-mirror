@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r2.ebuild,v 1.13 2013/08/27 18:24:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.9.0-r3.ebuild,v 1.1 2013/08/27 18:24:40 axs Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc hardware-carrier transmitter static-libs X"
 
 S="${WORKDIR}/${MY_P}"
@@ -65,7 +65,7 @@ IUSE_LIRC_DEVICES_DIRECT="
 	remotemaster sa1100 samsung sasem sb0540 serial
 	silitek sir slinke streamzap tekram
 	tekram_bt829 tira ttusbir tuxbox tvbox udp uirt2
-	uirt2_raw usb_uirt_raw usbx wpc8769l"
+	uirt2_raw usb_uirt_raw usbx wpc8769l zotac"
 
 # drivers that need special handling and
 # must have another name specified for
@@ -94,7 +94,7 @@ LIRCDEV_BUILT_FOR_DEV="all
 	imon_knob imon_lcd imon_pad imon_rsc irdeo irdeo_remote knc_one
 	leadtek_pvr2000 nslu2 packard_bell parallel pixelview_bt878
 	provideo sa1100 sasem serial sir tekram tekram_bt829 ttusbir
-	tvbox wpc8769l"
+	tvbox wpc8769l zotac"
 
 #lirc_gpio drivers, which cannot be supported on kernel >= 2.6.22
 LIRC_GPIO_DEV="
@@ -299,6 +299,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-kernel-3.5-err-fix.patch
 	# Apply fix for missing __devinit __devexit defines in kernel 3.8+ (bug 461532)
 	epatch "${FILESDIR}"/${P}-kernel-3.8-fixes.patch
+	# Add support for zotac remote, bug 342848
+	epatch "${FILESDIR}"/${P}-add-zotac-support.patch
 
 	# Do not build drivers from the top-level Makefile
 	sed -i -e 's:\(SUBDIRS =\) drivers\(.*\):\1\2:' Makefile.am
