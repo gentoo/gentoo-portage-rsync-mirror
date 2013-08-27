@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freetds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.64 2013/04/13 20:58:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.65 2013/08/27 22:32:15 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> freetds-0.91.ebuild:
+  keyword ~amd64-fbsd
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> freetds-0.91.ebuild:
   Stable for s390, wrt bug #461558

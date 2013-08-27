@@ -4,11 +4,11 @@ DESCRIPTION=An IMAP daemon designed specifically for maildirs.
 EAPI=5
 HOMEPAGE=http://www.courier-mta.org/
 IUSE=berkdb debug fam +gdbm ipv6 selinux gnutls trashquota
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=GPL-3
 RDEPEND=gnutls? ( net-libs/gnutls ) !gnutls? ( >=dev-libs/openssl-0.9.6 ) >=net-libs/courier-authlib-0.61 >=net-mail/mailbase-0.00-r8 berkdb? ( sys-libs/db ) fam? ( virtual/fam ) gdbm? ( >=sys-libs/gdbm-1.8.0 ) selinux? ( sec-policy/selinux-courier ) !mail-mta/courier !net-mail/bincimap !net-mail/cyrus-imapd !net-mail/uw-imap
 REQUIRED_USE=|| ( berkdb gdbm )
 SLOT=0
 SRC_URI=mirror://sourceforge/courier/courier-imap-4.8.0.tar.bz2
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	systemd	49c26d08111dd2c62b52cee32151b93b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=9cf0ab326bc6238a0b95b9ceef581368
+_md5_=426165569acd35fdc307b64dc2500044
