@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.61.00.ebuild,v 1.6 2013/07/28 19:32:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.61.00.ebuild,v 1.7 2013/08/27 15:32:09 kensington Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc jbig jpeg jpeg2k png rle svga tiff X xml zlib"
 
 RDEPEND="jbig? ( media-libs/jbigkit )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/jasper )
 	png? ( >=media-libs/libpng-1.4:0 )
 	rle? ( media-libs/urt )

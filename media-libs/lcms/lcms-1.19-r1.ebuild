@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19-r1.ebuild,v 1.1 2013/05/05 21:00:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.19-r1.ebuild,v 1.2 2013/08/27 15:46:54 kensington Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ IUSE="jpeg python static-libs tiff zlib"
 
 RDEPEND="
 	tiff? ( media-libs/tiff:0 )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	zlib? ( sys-libs/zlib )
 	python? ( ${PYTHON_DEPS} )
 "

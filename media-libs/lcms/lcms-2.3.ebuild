@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.3.ebuild,v 1.6 2012/08/22 02:33:56 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-2.3.ebuild,v 1.7 2013/08/27 15:46:54 kensington Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc jpeg static-libs test tiff zlib"
 
-RDEPEND="jpeg? ( virtual/jpeg )
+RDEPEND="jpeg? ( virtual/jpeg:0 )
 	tiff? ( media-libs/tiff:0 )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}"

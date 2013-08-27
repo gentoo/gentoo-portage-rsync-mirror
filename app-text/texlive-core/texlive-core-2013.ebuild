@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.5 2013/08/14 17:28:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013.ebuild,v 1.6 2013/08/27 15:57:21 aballier Exp $
 
 EAPI=5
 
@@ -87,7 +87,7 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	!app-text/tetex
 	!<app-text/texlive-2007
 	!app-text/xetex
-	!<dev-texlive/texlive-basic-2009
+	!<dev-texlive/texlive-basic-2013
 	!<dev-texlive/texlive-metapost-2011
 	!app-text/dvibook
 	sys-libs/zlib

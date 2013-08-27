@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.59 2013/08/20 16:56:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.60 2013/08/27 15:43:04 kensington Exp $
+
+  27 Aug 2013; Michael Palimaka <kensington@gentoo.org> libraw-0.15.2.ebuild,
+  libraw-0.15.3.ebuild:
+  Pin virtual/jpeg SLOT to 0.
 
   20 Aug 2013; Tim Harder <radhermit@gentoo.org> -libraw-0.14.7.ebuild,
   -libraw-0.14.8.ebuild, -files/libraw-0.14.7-pkgconfig.patch:

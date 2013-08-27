@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.4-r1.ebuild,v 1.2 2013/03/11 17:50:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.4-r1.ebuild,v 1.3 2013/08/27 15:52:30 kensington Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ RDEPEND="
 	media-libs/freetype:2
 	media-libs/libpng:0
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0
 	~dev-qt/qtcore-${PV}[aqua=,debug=,glib=,qt3support=]
 	~dev-qt/qtscript-${PV}[aqua=,debug=]
 	!aqua? (
