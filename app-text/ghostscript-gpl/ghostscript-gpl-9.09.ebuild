@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.09.ebuild,v 1.1 2013/08/23 23:15:51 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.09.ebuild,v 1.2 2013/08/27 14:58:36 kensington Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ COMMON_DEPEND="
 	>=media-libs/libpng-1.6.2:0=
 	>=media-libs/tiff-4.0.1:0=
 	>=sys-libs/zlib-1.2.7:=
-	virtual/jpeg
+	virtual/jpeg:0
 	!bindist? ( djvu? ( app-text/djvu ) )
 	cups? ( >=net-print/cups-1.3.8 )
 	dbus? ( sys-apps/dbus )
