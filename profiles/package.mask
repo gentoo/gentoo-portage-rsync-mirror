@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15064 2013/08/27 10:41:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15065 2013/08/27 13:30:23 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -55,10 +55,6 @@ net-p2p/pybitmessage
 >=www-client/chromium-31
 >=dev-lang/v8-3.21
 
-# Doug Goldstein <cardoe@gentoo.org> (19 Aug 2013)
-# Masked for development (not complete, do not use)
-=sys-firmware/seabios-1.7.3
-
 # Manuel Rüger <mrueg@gentoo.org> (19 Aug 2013)
 # Last release in 2005, Homepage dead, unclear license situation
 # Various other issues see bug #481560
@@ -73,10 +69,6 @@ net-im/kf
 # Outdated documentation as ruby18 will be removed soon.
 # Masked for removal in 30 days.
 dev-ruby/programming-ruby
-
-# Doug Goldstein <cardoe@gentoo.org> (16 Aug 2013)
-# Masked for development (not complete, do not use)
-=app-emulation/qemu-1.6.0
 
 # Michał Górny <mgorny@gentoo.org> (16 Aug 2013)
 # Getting more broken every day. No commit for 5 years. Nothing

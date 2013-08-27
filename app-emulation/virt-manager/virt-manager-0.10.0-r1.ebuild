@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0.ebuild,v 1.10 2013/08/27 13:16:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.10.0-r1.ebuild,v 1.1 2013/08/27 13:16:36 cardoe Exp $
 
 EAPI=5
 
-#BACKPORTS=
+BACKPORTS=1cd29748
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 DISTUTILS_SINGLE_IMPL=1
@@ -21,7 +21,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="http://virt-manager.org/download/sources/${PN}/${P}.tar.gz
 	${BACKPORTS+http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-2"

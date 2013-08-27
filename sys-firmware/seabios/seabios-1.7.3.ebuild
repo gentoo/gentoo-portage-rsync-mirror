@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.3.ebuild,v 1.1 2013/08/20 02:47:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.3.ebuild,v 1.2 2013/08/27 13:25:41 cardoe Exp $
 
 EAPI=5
 
@@ -79,7 +79,15 @@ src_configure() {
 
 src_compile() {
 	if ! use binary ; then
-		LANG=C emake out/bios.bin
+		LANG=C emake \
+			CC=$(tc-getCC) \
+			LD="$(tc-getLD).bfd" \
+			AR=$(tc-getAR) \
+			OBJCOPY=$(tc-getOBJCOPY) \
+			RANLIB=$(tc-getRANLIB) \
+			OBJDUMP=$(tc-getPROG OBJDUMP objdump) \
+			HOST_CC=$(tc-getBUILD_CC) \
+			out/bios.bin
 	fi
 }
 

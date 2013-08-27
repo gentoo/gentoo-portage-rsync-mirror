@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.91 2013/08/02 13:13:31 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.92 2013/08/27 13:16:36 cardoe Exp $
+
+*virt-manager-0.10.0-r1 (27 Aug 2013)
+
+  27 Aug 2013; Doug Goldstein <cardoe@gentoo.org>
+  +virt-manager-0.10.0-r1.ebuild, virt-manager-0.10.0.ebuild:
+  Backported a number of fixes I considered stability or worthy of a 0.10.1
+  release.
 
   02 Aug 2013; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.10.0.ebuild:
   Add dconf as a runtime depend to save configuration. bug #477528

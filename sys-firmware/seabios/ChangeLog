@@ -1,6 +1,9 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.21 2013/08/20 02:47:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.22 2013/08/27 13:25:41 cardoe Exp $
+
+  27 Aug 2013; Doug Goldstein <cardoe@gentoo.org> seabios-1.7.3.ebuild:
+  Attempt to utilize toolchain functions rather than having it use the defaults.
 
 *seabios-1.7.3 (20 Aug 2013)
 
