@@ -1,0 +1,12 @@
+diff -ur cacti-spine-0.8.8b-orig/configure.ac cacti-spine-0.8.8b/configure.ac
+--- cacti-spine-0.8.8b-orig/configure.ac	2013-08-27 01:45:32.400120526 +0000
++++ cacti-spine-0.8.8b/configure.ac	2013-08-27 01:45:42.350084943 +0000
+@@ -10,7 +10,7 @@
+ AC_LANG(C)
+ 
+ AM_INIT_AUTOMAKE(spine, 0.8.8b)
+-AM_CONFIG_HEADER(config/config.h)
++AC_CONFIG_HEADERS(config/config.h)
+ 
+ # static libraries
+ AC_ARG_WITH(static,
