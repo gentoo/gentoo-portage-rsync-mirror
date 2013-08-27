@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xvile
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.32 2012/08/28 08:35:45 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/ChangeLog,v 1.33 2013/08/27 07:32:49 radhermit Exp $
+
+*xvile-9.8k (27 Aug 2013)
+
+  27 Aug 2013; Tim Harder <radhermit@gentoo.org> +xvile-9.8k.ebuild:
+  Version bump.
 
 *xvile-9.8h (28 Aug 2012)
 
