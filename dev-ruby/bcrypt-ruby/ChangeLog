@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bcrypt-ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/ChangeLog,v 1.14 2013/07/18 01:20:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/ChangeLog,v 1.15 2013/08/27 06:28:23 graaff Exp $
+
+*bcrypt-ruby-3.1.2 (27 Aug 2013)
+
+  27 Aug 2013; Hans de Graaff <graaff@gentoo.org> +bcrypt-ruby-3.1.2.ebuild:
+  Version bump.
 
 *bcrypt-ruby-3.1.1 (18 Jul 2013)
 

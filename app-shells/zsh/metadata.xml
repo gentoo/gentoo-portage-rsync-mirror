@@ -2,14 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
+  <email>radhermit@gentoo.org</email>
+  <name>Tim Harder</name>
+</maintainer>
+<maintainer>
   <email>tove@gentoo.org</email>
   <name>Torsten Veller</name>
   <description>Interim maintainer</description>
-</maintainer>
-<maintainer>
-  <email>radhermit@gentoo.org</email>
-  <name>Tim Harder</name>
-  <description>Co-maintainer</description>
 </maintainer>
 <longdescription>
   Zsh is a shell designed for interactive use, although it is also a
