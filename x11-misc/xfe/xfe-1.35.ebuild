@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.33-r1.ebuild,v 1.6 2013/02/14 12:22:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.35.ebuild,v 1.1 2013/08/27 14:08:54 jer Exp $
 
 EAPI=5
 
 PLOCALES="
-	bs ca cs da de el es_AR es fr hu it ja nl no pl pt_BR pt_PT ru sv tr zh_CN
-	zh_TW
+	bs ca cs da de el es_AR es_CO es fr hu it ja nl no pl pt_BR pt_PT ru sv tr
+	zh_CN zh_TW
 "
 inherit autotools base l10n
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug nls startup-notification"
 
 RDEPEND="
@@ -36,10 +36,9 @@ DEPEND="
 "
 
 DOCS=( AUTHORS BUGS ChangeLog README TODO )
+
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.32.2-missing_Xlib_h.patch
-	"${FILESDIR}"/${P}-flags.patch
-	"${FILESDIR}"/${P}-desktopfile.patch
 )
 
 src_prepare() {
@@ -56,13 +55,14 @@ src_prepare() {
 	# malformed LINGUAS file
 	# recent intltool expects newline for every linguas
 	sed -i \
-		-e '/^#/!s/\s\s*/\n/g' \
+		-e '/^#/!s:\s\s*:\n:g' \
 		po/LINGUAS || die
 
 	# remove not selected locales
 	rm_locale() { sed -i -e "/${1}/d" po/LINGUAS || die ;}
 	l10n_for_each_disabled_locale_do rm_locale
 
+	sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.ac || die
 	eautoreconf
 }
 

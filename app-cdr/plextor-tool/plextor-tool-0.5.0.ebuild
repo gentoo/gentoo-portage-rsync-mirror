@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/plextor-tool/plextor-tool-0.5.0.ebuild,v 1.4 2009/05/07 20:30:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/plextor-tool/plextor-tool-0.5.0.ebuild,v 1.5 2013/08/27 14:06:50 ssuominen Exp $
 
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool to change the parameters of a Plextor CD-ROM drive"
@@ -11,34 +12,25 @@ SRC_URI="mirror://sourceforge/plextor-tool/${P}.src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="static gnome"
+IUSE="static"
 
-RDEPEND="gnome? ( gnome-base/gnome-panel )"
-DEPEND="${RDEPEND}"
+S=${WORKDIR}/${PN}/src
 
-S=${WORKDIR}/${PN}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
-	gunzip src/plextor-tool.8.gz || die
+	gunzip plextor-tool.8.gz || die
 }
 
 src_compile() {
-	cd "${S}"/src
 	local targets="plextor-tool"
 	use static && targets="${targets} pt-static"
-	use gnome && targets="${targets} plextor-tool-applet"
-#	use static && use gnome && targets="${targets} pta-static"
 	echo ${targets} > my-make-targets
-	emake CC="$(tc-getCC)" ${targets} || die "make ${targets} failed"
+	emake CC="$(tc-getCC)" ${targets}
 }
 
 src_install() {
-	local targets=$(<src/my-make-targets)
-	dodoc src/TODO doc/README doc/NEWS
-	cd src
-	dobin ${targets} || die "dobin failed"
+	local targets=$(<my-make-targets)
+	dodoc ../doc/{NEWS,README} TODO
+	dobin ${targets}
 	doman plextor-tool.8
 }
