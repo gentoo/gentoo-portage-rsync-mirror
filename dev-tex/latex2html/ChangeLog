@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2html
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.54 2012/07/25 14:14:24 ottxor Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/ChangeLog,v 1.55 2013/08/27 20:42:14 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> latex2html-2008-r1.ebuild:
+  keyword ~amd64-fbsd
 
   25 Jul 2012; Christoph Junghans <ottxor@gentoo.org> latex2html-2008-r1.ebuild:
   added prefix support (bug #427976)
