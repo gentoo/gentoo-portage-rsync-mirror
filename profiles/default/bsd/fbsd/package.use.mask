@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.34 2013/05/24 20:20:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.36 2013/08/27 22:07:31 aballier Exp $
 
 # As per UberLord's requests
 sys-apps/openrc pam
@@ -40,11 +40,6 @@ sys-devel/patch xattr
 # https://bugs.gentoo.org/show_bug.cgi?id=432410
 app-arch/tar xattr
 
-# Joe Peterson <lavajoe@gentoo.org> (21 Nov 2007)
-# The following new swig USE flags are not supported (yet):
-dev-lang/swig clisp
-dev-lang/swig chicken
-
 # Diego Pettenò <flameeyes@gentoo.org> (21 Feb 2008)
 # pam_cracklib is only provided by Linux-PAM which is not usable on
 # Gentoo/FreeBSD.
@@ -53,11 +48,6 @@ dev-lang/swig chicken
 # Diego Pettenò <flameeyes@gentoo.org> (1 Aug 2008)
 # sha512 is only supported by Linux-PAM's pam_unix for now
 sys-auth/pambase cracklib pam_ssh sha512
-
-# Alexis Ballier <aballier@gentoo.org> (7 Apr 2008)
-# bug #216855
-# octave needs fftw which does not work of fbsd
-dev-lang/swig octave
 
 # Alexis Ballier <aballier@gentoo.org> (31 Jan 2009)
 # app-misc/tracker should work but needs some code fixups and it uses the fdatasync system call
@@ -86,7 +76,7 @@ dev-java/proguard j2me
 
 # Naohiro Aota <naota@gentoo.org> (20 Feb 2012)
 # Upstream does not support FreeBSD wifi nor crashreporter
-www-client/firefox wifi crashreporter
+www-client/firefox wifi
 
 # Naohiro Aota <naota@gentoo.org> (03 Oct 2012)
 # Mask gbm, udev is not supported on FreeBSD.

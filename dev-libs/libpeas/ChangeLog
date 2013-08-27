@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.20 2013/07/25 22:18:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.21 2013/08/27 22:20:01 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> libpeas-1.8.1.ebuild:
+  keyword ~amd64-fbsd
 
   25 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> libpeas-1.8.1.ebuild:
   Add missing dependencies and required use.

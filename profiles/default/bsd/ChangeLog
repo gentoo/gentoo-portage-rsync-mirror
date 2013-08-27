@@ -1,6 +1,25 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.152 2013/08/27 19:45:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.158 2013/08/27 22:17:04 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask app-misc/geoclue skyhook here since networkmanager is masked here
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> fbsd/package.mask,
+  package.mask:
+  remove obsolete mailbase < 1 mask
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
+  remove obsolete crashreporter usemask for firefox
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
+  remove obsolete swig entries
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  remove obsolete entry
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  move udev-related usemasks from amd64-fbsd/todo here
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   mask linux only useflags for opencv

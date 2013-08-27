@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.6.1-r1.ebuild,v 1.8 2013/04/14 16:20:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.6.1-r1.ebuild,v 1.9 2013/08/27 22:25:37 aballier Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://live.gnome.org/devhelp"
 
 LICENSE="GPL-2+"
 SLOT="0/3-1" # subslot = 3-(libdevhelp-3 soname version)
-KEYWORDS="alpha amd64 ~arm ia64 ppc ~ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="gedit"
 
 # FIXME: automagic python dependency

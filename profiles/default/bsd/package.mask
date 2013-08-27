@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.mask,v 1.6 2012/12/23 12:26:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.mask,v 1.7 2013/08/27 22:10:19 aballier Exp $
 
 # Mask out the GNU versions of various packages.
 # We want BSD versions wherever possible
@@ -33,10 +33,6 @@ net-misc/pump
 # work on FreeBSD, and neither on Debian or on FreeBSD the package
 # has a maintainer to coordinate with. Isn't an hard-dep for anything.
 net-mail/metamail
-
-# Diego Pettenò <flameeyes@gentoo.org> (28 April 2005)
-# Those versions uses the pam_stack module instead of include format.
-<net-mail/mailbase-1
 
 # Diego Pettenò <flameeyes@gentoo.org> (20 Aug 2005)
 # We obviously can't have linux-sources (mask this to allow the

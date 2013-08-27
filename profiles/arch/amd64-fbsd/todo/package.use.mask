@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.327 2013/08/27 21:50:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.331 2013/08/27 22:25:33 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -14,14 +14,8 @@
 # Keep it simple, we do not really care about the date or who masked it, we want
 # to be easily able to determine what we need to keyword.
 
-# app-editors/gedit
-dev-util/devhelp gedit
-
 # net-libs/gnome-online-accounts
 gnome-base/gvfs gnome-online-accounts
-
-# net-analyzer/netcat
-gnome-base/gvfs test
 
 # media-libs/gavl (missing clock_nanosleep on fbsd)
 media-plugins/frei0r-plugins scale0tilt
@@ -151,12 +145,6 @@ dev-libs/cyrus-sasl authdaemond
 dev-libs/apr-util freetds
 dev-qt/qtsql freetds
 
-# sys-fs/udev
-media-libs/mesa gbm
-x11-base/xorg-drivers video_cards_radeonsi
-x11-drivers/xf86-video-ati glamor
-x11-drivers/xf86-video-intel glamor
-
 # does not build
 x11-libs/libdrm libkms
 media-libs/mesa video_cards_vmware
@@ -186,9 +174,6 @@ kde-base/kdelibs policykit
 
 # <=sci-geosciences/gpsd-2.95-r1
 app-misc/geoclue gps
-
-# app-misc/geoclue[networkmanager]
-app-misc/geoclue skyhook
 
 # >=sys-devel/binutils-2.22
 sys-devel/llvm gold

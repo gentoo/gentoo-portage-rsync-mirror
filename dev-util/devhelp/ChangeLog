@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.155 2013/07/25 18:39:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.156 2013/08/27 22:25:37 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> devhelp-3.6.1-r1.ebuild,
+  devhelp-3.8.1.ebuild:
+  drop amd64-fbsd keywords on old releases since those require older gedit
 
   25 Jul 2013; Pacho Ramos <pacho@gentoo.org> devhelp-3.8.2.ebuild:
   Fix python dependencies, this needs python3 (thanks to jlec for reporting on

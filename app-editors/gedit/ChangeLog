@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.356 2013/07/25 22:39:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.357 2013/08/27 22:21:43 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> gedit-3.8.3.ebuild:
+  keyword ~amd64-fbsd
 
   25 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> gedit-3.8.3.ebuild:
   Drop unneeded dependencies (per configure).
