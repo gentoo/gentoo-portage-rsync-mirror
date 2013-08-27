@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15063 2013/08/27 10:23:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15064 2013/08/27 10:41:21 kensington Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -951,7 +951,6 @@ dev-lisp/gcl
 
 # Tiziano Müller <dev-zero@gentoo.org> (08 Apr 2009)
 # pre-releases
-net-libs/libinfinity
 >=app-editors/gobby-0.4.91
 
 # Paul Varner <fuzzyray@gentoo.org> (06 Apr 2009)
