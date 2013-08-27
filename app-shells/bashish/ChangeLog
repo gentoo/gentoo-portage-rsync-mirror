@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bashish
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.26 2010/08/04 03:46:00 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashish/ChangeLog,v 1.27 2013/08/27 20:09:02 jer Exp $
+
+  27 Aug 2013; Jeroen Roovers <jer@gentoo.org> bashish-2.2.4.ebuild:
+  DEPEND -> RDEPEND.
 
   04 Aug 2010; Jeroen Roovers <jer@gentoo.org> -bashish-2.0.7.ebuild,
   -bashish-2.0.7-r1.ebuild, bashish-2.2.4.ebuild, -files/bashish.conf:

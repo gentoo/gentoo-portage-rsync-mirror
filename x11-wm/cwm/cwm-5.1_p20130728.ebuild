@@ -1,19 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-9999.ebuild,v 1.5 2013/08/27 20:12:55 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-5.1_p20130728.ebuild,v 1.1 2013/08/27 20:23:58 xmw Exp $
 
 EAPI=5
 
-inherit toolchain-funcs git-2
+inherit eutils toolchain-funcs
 
 DESCRIPTION="OpenBSD fork of calmwm, a clean and lightweight window manager"
 HOMEPAGE="http://www.openbsd.org/cgi-bin/cvsweb/xenocara/app/cwm/
 	http://github.com/chneukirchen/cwm"
-EGIT_BRANCH=linux
+SRC_URI="vanilla? ( https://github.com/chneukirchen/cwm/tarball/0dec9e8 -> ${P}-chneukirchen.tar.gz )
+	!vanilla? ( https://github.com/xmw/cwm/tarball/b8be675 -> ${P}-xmw.tar.gz )"
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="vanilla"
 
 RDEPEND="x11-libs/libXft
@@ -23,12 +24,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/bison"
 
-pkg_setup() {
-	if use vanilla ; then
-		EGIT_REPO_URI="https://github.com/chneukirchen/cwm.git"
-	else
-		EGIT_REPO_URI="https://github.com/xmw/cwm.git"
-	fi
+src_unpack() {
+	default
+	# vcs-snapshot doesn't work with tarball names
+	mv *-${PN}-* ${P} || die
 }
 
 src_compile() {

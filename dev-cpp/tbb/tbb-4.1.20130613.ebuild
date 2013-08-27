@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20130613.ebuild,v 1.2 2013/08/27 19:41:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20130613.ebuild,v 1.3 2013/08/27 20:20:16 aballier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib versionator toolchain-funcs
@@ -37,6 +37,11 @@ src_prepare() {
 		-e 's/-O2/$(CXXFLAGS)/g' \
 		-e "/^ASM/s/as/$(tc-getAS)/g" \
 		build/*.gcc.inc || die
+
+	# Give it a soname on FreeBSD
+	echo 'LIB_LINK_FLAGS += -Wl,-soname=$(BUILDING_LIBRARY)' >>	build/FreeBSD.gcc.inc
+	# Set proper versionning on FreeBSD
+	sed -i -e '/.DLL =/s/$/.1/' build/FreeBSD.inc || die
 
 	# force 64bit where applicable, 32bit where applicable...
 	# built-in detection is based on running kernel, which messes up

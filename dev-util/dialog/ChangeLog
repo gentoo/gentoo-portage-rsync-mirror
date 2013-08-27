@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.183 2013/03/01 12:36:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.184 2013/08/27 20:13:20 jer Exp $
+
+*dialog-1.2.20130523 (27 Aug 2013)
+
+  27 Aug 2013; Jeroen Roovers <jer@gentoo.org> -dialog-1.1.20120215.ebuild,
+  +dialog-1.2.20130523.ebuild:
+  Version bump.
 
   01 Mar 2013; Agostino Sarubbo <ago@gentoo.org> dialog-1.2.20121230.ebuild:
   Stable for sh, wrt bug #457344
