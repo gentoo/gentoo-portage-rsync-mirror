@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fb2edit/fb2edit-0.0.8.ebuild,v 1.2 2013/08/23 13:09:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fb2edit/fb2edit-0.0.8.ebuild,v 1.3 2013/08/27 10:21:00 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://fb2edit.lintest.ru/pub/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="dev-libs/libxml2
 	dev-qt/qtcore:4
