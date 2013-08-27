@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.96 2013/08/14 13:03:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.97 2013/08/27 19:28:06 chithanh Exp $
+
+  27 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  clang-3.3-r100.ebuild:
+  Keyword ~ppc
 
   14 Aug 2013; Michał Górny <mgorny@gentoo.org> clang-3.2.ebuild,
   clang-3.3-r100.ebuild, clang-3.3.ebuild, clang-9999-r100.ebuild,

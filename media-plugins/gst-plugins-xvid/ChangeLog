@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-xvid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/ChangeLog,v 1.31 2013/03/31 17:31:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/ChangeLog,v 1.32 2013/08/27 19:29:44 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-xvid-0.10.23.ebuild:
+  keyword ~amd64-fbsd
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-xvid-0.10.23.ebuild:

@@ -81,6 +81,7 @@ hb2
 audit
 
 # see bug #446900 and bug #425494
+llvm
 clang
 
 # unregisterised ghc arch for now.

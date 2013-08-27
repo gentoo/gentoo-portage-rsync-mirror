@@ -3,9 +3,9 @@ DESCRIPTION=C language family frontend for LLVM (meta-ebuild)
 EAPI=5
 HOMEPAGE=http://clang.llvm.org/
 IUSE=debug multitarget python +static-analyzer abi_x86_32 abi_x86_64 abi_x86_x32 abi_x86_32 abi_x86_64 abi_mips_n32 abi_mips_n64 abi_mips_o32
-KEYWORDS=~amd64 ~arm ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos
 LICENSE=UoI-NCSA
 RDEPEND=~sys-devel/llvm-3.3[clang(-),debug=,multitarget?,python?,static-analyzer,abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_x86_32(-)?,abi_x86_64(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?]
 SLOT=0/3.3
 _eclasses_=multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	812deed50460b095dc41672b2da354eb	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=43f5f3d4337c854b6b98b5b8f67b5a14
+_md5_=38b67e9e4ec153d8c7b2be21a8991b68
