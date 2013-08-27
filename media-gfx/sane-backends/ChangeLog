@@ -1,6 +1,18 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.227 2013/08/26 19:13:32 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.228 2013/08/27 12:03:20 teiresias Exp $
+
+*sane-backends-1.0.23-r2 (27 Aug 2013)
+
+  27 Aug 2013; Christopher Brannon <teiresias@gentoo.org>
+  +sane-backends-1.0.23-r2.ebuild,
+  +files/sane-backends-1.0.23-automagic-cups.patch,
+  +files/sane-backends-1.0.23-automagic-v4l.patch:
+  Switch to virtual/libusb:1. Also remove automagic dependencies.
+
+  Some of us were experiencing crashes with libusb 0.x, and they disappear
+  with this change. See bug #480184. I also eliminated automagic
+  dependencies on cups and v4l. See bug #479772.
 
   26 Aug 2013; Christopher Brannon <teiresias@gentoo.org> metadata.xml:
   Adopt package.

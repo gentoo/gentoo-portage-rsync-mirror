@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.352 2013/08/26 16:58:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.353 2013/08/27 12:16:55 chithanh Exp $
+
+*cairo-1.12.16 (27 Aug 2013)
+
+  27 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +cairo-1.12.16.ebuild:
+  Version bump.
 
   26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> cairo-1.12.14-r4.ebuild:
   Stable for ppc, wrt bug #447354

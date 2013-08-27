@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
-DEPEND=|| ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool x86-interix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) ppc-aix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) x86-winnt? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) virtual/pkgconfig x11-proto/fontsproto x11-proto/randrproto x11-proto/renderproto x11-proto/videoproto x11-proto/xextproto x11-proto/xineramaproto x11-proto/xproto x11-base/xorg-server[xorg] x11-libs/libpciaccess
+DEPEND=<x11-base/xorg-server-1.12.49 || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool x86-interix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) ppc-aix? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) x86-winnt? ( >=sys-devel/libtool-2.2.6a sys-devel/m4 >=x11-misc/util-macros-1.17 >=media-fonts/font-util-1.2.0 ) virtual/pkgconfig x11-proto/fontsproto x11-proto/randrproto x11-proto/renderproto x11-proto/videoproto x11-proto/xextproto x11-proto/xineramaproto x11-proto/xproto x11-base/xorg-server[xorg] x11-libs/libpciaccess
 DESCRIPTION=X.Org driver for TV-out on ivtvdev cards
 EAPI=4
 HOMEPAGE=http://ivtvdriver.org/
 KEYWORDS=amd64 x86
 LICENSE=MIT
-RDEPEND=x11-base/xorg-server[xorg] x11-libs/libpciaccess
+RDEPEND=<x11-base/xorg-server-1.12.49 x11-base/xorg-server[xorg] x11-libs/libpciaccess
 SLOT=0
 SRC_URI=http://dl.ivtvdriver.org/xf86-video-ivtv/xf86-video-ivtv-1.1.2.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	0954dce983a8c7cfe4e2b55263cb7a05	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	xorg-2	17812f511eef87a499b62ab14e6aeaad
-_md5_=bcb7a83ac70721e2b27b6bac85f32b60
+_md5_=2169fc83148819809bb0006881aaf4cc
