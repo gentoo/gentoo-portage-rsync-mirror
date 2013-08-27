@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/syntastic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/syntastic/ChangeLog,v 1.1 2013/07/24 08:12:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/syntastic/ChangeLog,v 1.2 2013/08/27 07:19:15 radhermit Exp $
+
+*syntastic-3.1.0 (27 Aug 2013)
+
+  27 Aug 2013; Tim Harder <radhermit@gentoo.org> +syntastic-3.1.0.ebuild:
+  Version bump.
 
 *syntastic-9999 (24 Jul 2013)
 *syntastic-3.0.0 (24 Jul 2013)
