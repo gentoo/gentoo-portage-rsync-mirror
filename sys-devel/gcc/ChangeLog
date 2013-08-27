@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.958 2013/08/26 06:00:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.959 2013/08/27 04:48:17 dirtyepic Exp $
+
+  27 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.8.1.ebuild:
+  4.8.1 p1.1: Fixes bug #475350 (add --disable-werror to libatomic and libitm)
+  and bug #475482 (linking errors with -O3 -march=core-avx2).
 
   26 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.7.3.ebuild:
   4.7.3 p1.2: Fixes bug #475482 (linking errors with -O3 -march=core-avx2).

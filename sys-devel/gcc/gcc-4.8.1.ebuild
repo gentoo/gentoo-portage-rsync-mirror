@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.8.1.ebuild,v 1.1 2013/06/04 05:25:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.8.1.ebuild,v 1.2 2013/08/27 04:48:17 dirtyepic Exp $
 
-PATCH_VER="1.0"
+PATCH_VER="1.1"
 UCLIBC_VER="1.0"
 
 # Hardened gcc 4 stuff
