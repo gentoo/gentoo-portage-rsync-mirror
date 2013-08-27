@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.1 2013/08/26 12:31:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.2 2013/08/27 09:22:44 hasufell Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 python2_7 )
-inherit autotools eutils gnome2-utils mono-env multilib python-single-r1 git-2
+PYTHON_COMPAT=( python2_7 python3_3 )
+inherit autotools eutils fdo-mime gnome2-utils mono-env multilib python-single-r1 git-2
 
 DESCRIPTION="Graphical IRC client based on XChat"
 HOMEPAGE="http://hexchat.github.io/"
@@ -15,12 +15,15 @@ EGIT_REPO_URI="git://github.com/hexchat/hexchat.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="dbus fastscroll +gtk ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
-REQUIRED_USE="plugin-checksum? ( plugins )
+IUSE="dbus fastscroll +gtk gtkspell ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python sexy spell ssl theme-manager"
+REQUIRED_USE="gtkspell? ( spell )
+	plugin-checksum? ( plugins )
 	plugin-doat? ( plugins )
 	plugin-fishlim? ( plugins )
 	plugin-sysinfo? ( plugins )
-	python? ( ${PYTHON_REQUIRED_USE} )"
+	python? ( ${PYTHON_REQUIRED_USE} )
+	sexy? ( spell )
+	?? ( gtkspell sexy )"
 
 RDEPEND="dev-libs/glib:2
 	dbus? ( >=dev-libs/dbus-glib-0.98 )
@@ -36,7 +39,9 @@ RDEPEND="dev-libs/glib:2
 	python? ( ${PYTHON_DEPS} )
 	spell? (
 		app-text/enchant
-		dev-libs/libxml2
+		gtkspell? ( app-text/gtkspell:2 )
+		sexy? ( x11-libs/libsexy )
+		!gtkspell? ( !sexy? ( dev-libs/libxml2 ) )
 	)
 	ssl? ( >=dev-libs/openssl-0.9.8u )
 	theme-manager? ( dev-lang/mono )"
@@ -59,6 +64,7 @@ src_prepare() {
 		-e "/po\/Makefile.in/d" \
 		configure.ac || die
 	sed -i -e "/SUBDIRS/s/intl//" Makefile.am || die
+	sed -i -e 's/Exec=.*$/Exec=thememan %f/' share/misc/htm.desktop || die
 	epatch -p1 \
 		"${FILESDIR}"/${PN}-2.9.5-autoconf-missing-macros.patch
 	epatch_user
@@ -70,6 +76,19 @@ src_prepare() {
 }
 
 src_configure() {
+	local myspellconf
+	if use spell ; then
+		if use gtkspell ; then
+			myspellconf="--enable-spell=gtkspell"
+		elif use sexy ; then
+			myspellconf="--enable-spell=libsexy"
+		else
+			myspellconf="--enable-spell=static"
+		fi
+	else
+		myspellconf="--disable-spell"
+	fi
+
 	econf \
 		$(use_enable nls) \
 		$(use_enable libproxy socks) \
@@ -89,7 +108,7 @@ src_configure() {
 		$(use_enable libnotify) \
 		$(use_enable libcanberra) \
 		--enable-shm \
-		$(use_enable spell spell static) \
+		${myspellconf} \
 		$(use_enable ntlm) \
 		$(use_enable libproxy)
 }
@@ -110,6 +129,9 @@ src_install() {
 	if use theme-manager ; then
 		dobin src/htm/thememan.exe
 		make_wrapper thememan "mono /usr/bin/thememan.exe"
+		domenu share/misc/htm.desktop
+		insinto /usr/share/mime/packages
+		newins share/misc/htm-mime.xml htm.xml
 	fi
 	prune_libtool_files --all
 }
@@ -117,6 +139,11 @@ src_install() {
 pkg_preinst() {
 	if use gtk ; then
 		gnome2_icon_savelist
+	fi
+
+	if use theme-manager ; then
+		fdo-mime_desktop_database_update
+		fdo-mime_mime_database_update
 	fi
 }
 
@@ -132,6 +159,8 @@ pkg_postinst() {
 	fi
 
 	if use theme-manager ; then
+		fdo-mime_desktop_database_update
+		fdo-mime_mime_database_update
 		elog "Themes are available at:"
 		elog "  http://hexchat.org/themes.html"
 		elog
