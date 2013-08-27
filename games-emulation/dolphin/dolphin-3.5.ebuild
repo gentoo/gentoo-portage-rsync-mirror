@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.4 2013/08/26 18:09:23 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.5 2013/08/27 01:29:10 twitch153 Exp $
 
 EAPI=5
 
@@ -50,9 +50,11 @@ pkg_pretend() {
 	local ver=4.6.0
 	local msg="${PN} needs at least GCC ${ver} set to compile."
 
-	if ! version_is_at_least ${ver} $(gcc-fullversion); then
-		eerror ${msg}
-		die ${msg}
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		if ! version_is_at_least ${ver} $(gcc-fullversion); then
+			eerror ${msg}
+			die ${msg}
+		fi
 	fi
 }
 

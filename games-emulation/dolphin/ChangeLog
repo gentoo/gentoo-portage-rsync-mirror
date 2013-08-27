@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.4 2013/08/26 18:09:23 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.5 2013/08/27 01:29:10 twitch153 Exp $
+
+  27 Aug 2013; Devan Franchini <twitch153@gentoo.org> dolphin-3.5.ebuild:
+  dolphin-3.5.ebuild: Adds check for binary package to prevent unnecessary
+  checking of gcc-version
 
   26 Aug 2013; Devan Franchini <twitch153@gentoo.org> dolphin-3.5.ebuild,
   dolphin-9999.ebuild:
