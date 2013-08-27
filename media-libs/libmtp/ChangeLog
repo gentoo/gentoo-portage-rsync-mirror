@@ -1,6 +1,22 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.131 2013/08/10 12:49:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.135 2013/08/27 21:45:43 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org>
+  files/libmtp-1.1.6-fbsdlibusb.patch:
+  Fix a typo in patch description and add link to upstream bug report.
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> libmtp-1.1.6.ebuild,
+  libmtp-9999.ebuild:
+  keyword ~amd64-fbsd
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> libmtp-1.1.6.ebuild,
+  +files/libmtp-1.1.6-fbsdlibusb.patch:
+  Add a patch to make it build with FreeBSD libusb 1.0 implementation.
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> -libmtp-1.1.4.ebuild,
+  -libmtp-1.1.5.ebuild:
+  remove old
 
   10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libmtp-1.1.6.ebuild:
   Stable for ppc, wrt bug #470512

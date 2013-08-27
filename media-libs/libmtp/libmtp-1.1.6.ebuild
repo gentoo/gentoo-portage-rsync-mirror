@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.6.ebuild,v 1.6 2013/08/10 12:49:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-1.1.6.ebuild,v 1.8 2013/08/27 21:40:02 aballier Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
 	inherit git-2
 else
-	KEYWORDS="amd64 hppa ~ia64 ppc ppc64 x86"
+	KEYWORDS="amd64 hppa ~ia64 ppc ppc64 x86 ~amd64-fbsd"
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 fi
 
@@ -34,6 +34,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-fbsdlibusb.patch"
 	if [[ ${PV} == *9999* ]]; then
 		touch config.rpath # This is from upstream autogen.sh
 		eautoreconf
