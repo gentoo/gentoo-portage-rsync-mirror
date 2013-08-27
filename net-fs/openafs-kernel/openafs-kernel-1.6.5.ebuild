@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.2.ebuild,v 1.5 2013/08/27 08:08:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.5.ebuild,v 1.2 2013/08/27 08:08:43 tomwij Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ SRC_URI="http://openafs.org/dl/openafs/${MY_PV}/${MY_P}-src.tar.bz2
 
 LICENSE="IBM BSD openafs-krb5-a APSL-2"
 SLOT="0"
-KEYWORDS="amd64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
@@ -42,7 +42,6 @@ src_prepare() {
 	EPATCH_EXCLUDE="012_all_kbuild.patch" \
 	EPATCH_SUFFIX="patch" \
 	epatch "${WORKDIR}"/gentoo/patches
-	epatch "${FILESDIR}"/openafs-1.6.2-kernel-3.8-{1..5}.patch
 
 	# packaging is f-ed up, so we can't run automake (i.e. eautoreconf)
 	sed -i 's/^\(\s*\)a/\1ea/' regen.sh

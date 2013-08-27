@@ -1,6 +1,17 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.151 2013/04/13 14:21:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.153 2013/08/27 08:08:43 tomwij Exp $
+
+  27 Aug 2013; Tom Wijsman <TomWij@gentoo.org> openafs-kernel-1.6.2.ebuild,
+  openafs-kernel-1.6.5.ebuild:
+  Drop autotools eclass because none of its functions are used.
+
+*openafs-kernel-1.6.5 (27 Aug 2013)
+
+  27 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +openafs-kernel-1.6.5.ebuild:
+  Version bump to 1.6.5. Fixes bug #478498 which fixes security bug #478296,
+  security bug #478282, bug #472184, bug #469992, bug #463477 and bug #460494.
+  Proxied commit for Andrej Filipcic.
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org>
   -openafs-kernel-1.4.14.1.ebuild, -openafs-kernel-1.6.1-r2.ebuild,

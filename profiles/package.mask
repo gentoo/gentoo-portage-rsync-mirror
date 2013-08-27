@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15061 2013/08/26 14:41:08 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15062 2013/08/27 08:29:56 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (27 Aug 2013)
+# Masked for testing
+~dev-util/boost-build-1.54.0
+~dev-libs/boost-1.54.0
 
 # Ian Stakenvicius <axs@gentoo.org> (26 Aug 2013)
 # on behalf of mozilla@gentoo.org

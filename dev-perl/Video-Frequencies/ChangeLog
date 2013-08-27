@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Video-Frequencies
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.12 2012/06/23 20:27:24 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Frequencies/ChangeLog,v 1.13 2013/08/27 08:14:17 idella4 Exp $
+
+*Video-Frequencies-0.03-r1 (27 Aug 2013)
+
+  27 Aug 2013; Ian Delaney <idella4@gentoo.org>
+  +Video-Frequencies-0.03-r1.ebuild, Video-Frequencies-0.03.ebuild:
+  rebump -> EAPI 5
 
   23 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove wrong upstream info: Distribution not on CPAN. Another
@@ -48,4 +54,3 @@
   15 Oct 2004; <iggy@gentoo.org> +metadata.xml,
   +Video-Frequencies-0.03.ebuild:
   initial revision, ebuilds created by me
-
