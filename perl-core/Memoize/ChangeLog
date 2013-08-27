@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Memoize
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/ChangeLog,v 1.20 2013/02/23 08:38:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Memoize/ChangeLog,v 1.21 2013/08/27 12:44:44 zlogene Exp $
+
+  27 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -Memoize-1.01.ebuild,
+  -Memoize-1.20.0.ebuild:
+  drop old
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> Memoize-1.30.0.ebuild:
   Stable for sparc, wrt bug #458122
