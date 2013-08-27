@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp/warp-1.3.9.1.ebuild,v 1.1 2013/08/26 08:40:36 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/warp/warp-1.3.9.1.ebuild,v 1.2 2013/08/27 04:24:02 qnikst Exp $
 
 EAPI=5
 
@@ -48,9 +48,3 @@ DEPEND="${RDEPEND}
 			dev-haskell/hunit
 			dev-haskell/quickcheck
 		)"
-
-src_configure() {
-	haskell-cabal_src_configure \
-		$(cabal_flag allow-sendfilefd allow-sendfilefd) \
-		$(cabal_flag network-bytestring network-bytestring)
-}
