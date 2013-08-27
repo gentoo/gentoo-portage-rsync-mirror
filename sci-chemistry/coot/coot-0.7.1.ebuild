@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.7.1.ebuild,v 1.1 2013/08/26 07:52:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.7.1.ebuild,v 1.2 2013/08/27 11:46:17 jlec Exp $
 
 EAPI=5
 
@@ -19,8 +19,8 @@ MY_P=${PN}-${MY_PV}
 DESCRIPTION="Crystallographic Object-Oriented Toolkit for model building, completion and validation"
 HOMEPAGE="http://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/"
 SRC_URI="
-	http://www2.mrc-lmb.cam.ac.uk/Personal/pemsley/coot/source/releases/${MY_P}.tar.gz"
-#	test? ( http://dev.gentoo.org/~jlec/distfiles/greg-data-${PV}.tar.gz  )"
+	http://www2.mrc-lmb.cam.ac.uk/Personal/pemsley/coot/source/releases/${MY_P}.tar.gz
+	test? ( http://dev.gentoo.org/~jlec/distfiles/greg-data-${PV}.tar.gz  )"
 
 SLOT="0"
 LICENSE="GPL-3"
@@ -75,8 +75,6 @@ DEPEND="${RDEPEND}
 	test? ( dev-scheme/greg )"
 
 S="${WORKDIR}/${MY_P}"
-
-RESTRICT="test"
 
 pkg_setup() {
 	if use openmp; then
@@ -138,7 +136,7 @@ src_test() {
 	export CLIBD_MON="${EPREFIX}/usr/share/ccp4/data/monomers/"
 	export SYMINFO="${S}/syminfo.lib"
 
-	export COOT_TEST_DATA_DIR="${WORKDIR}"/data/greg-data
+	export COOT_TEST_DATA_DIR="${WORKDIR}"/greg-data
 
 	cat > command-line-greg.scm <<- EOF
 	(use-modules (ice-9 greg))
