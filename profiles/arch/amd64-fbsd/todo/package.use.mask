@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.320 2013/08/27 20:43:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.323 2013/08/27 21:28:10 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -13,6 +13,15 @@
 #            mask
 # Keep it simple, we do not really care about the date or who masked it, we want
 # to be easily able to determine what we need to keyword.
+
+# app-editors/gedit
+dev-util/devhelp gedit
+
+# net-libs/gnome-online-accounts
+gnome-base/gvfs gnome-online-accounts
+
+# net-analyzer/netcat
+gnome-base/gvfs test
 
 # media-libs/gavl (missing clock_nanosleep on fbsd)
 media-plugins/frei0r-plugins scale0tilt
@@ -232,12 +241,10 @@ app-editors/xemacs freewnn
 
 # media-libs/libmtp
 media-video/vlc mtp
+gnome-base/gvfs mtp
 
 # media-libs/devil[png,jpeg]
 media-gfx/graphviz devil
-
-# sci-libs/gts
-media-gfx/graphviz gts
 
 # sys-apps/util-linux (libuuid)
 net-misc/wget uuid

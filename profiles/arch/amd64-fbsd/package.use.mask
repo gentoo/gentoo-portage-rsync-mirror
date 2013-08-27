@@ -1,14 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.14 2013/08/16 15:23:05 aballier Exp $
-
-# Pacho Ramos <pacho@gentoo.org> (25 Jul 2013)
-# Missing keywords
-gnome-base/gvfs gnome-online-accounts mtp test
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Dec 2012)
-# remove mask when >=app-editors/gedit-3.6 is keyworded here
-dev-util/devhelp gedit
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.16 2013/08/27 21:26:47 aballier Exp $
 
 # nvidia-driver uses acpid
 x11-drivers/nvidia-drivers acpi
