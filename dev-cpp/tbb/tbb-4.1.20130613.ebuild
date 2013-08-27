@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20130613.ebuild,v 1.1 2013/06/25 00:30:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20130613.ebuild,v 1.2 2013/08/27 19:41:16 aballier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib versionator toolchain-funcs
@@ -16,7 +16,7 @@ SRC_URI="http://threadingbuildingblocks.org/sites/default/files/software_release
 LICENSE="GPL-2-with-exceptions"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug doc examples"
 
 DEPEND=""

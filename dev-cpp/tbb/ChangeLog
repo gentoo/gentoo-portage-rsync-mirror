@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.41 2013/06/25 00:30:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.42 2013/08/27 19:41:16 aballier Exp $
+
+  27 Aug 2013; Alexis Ballier <aballier@gentoo.org> tbb-4.1.20130613.ebuild:
+  keyword ~amd64-fbsd
 
 *tbb-4.1.20130613 (25 Jun 2013)
 

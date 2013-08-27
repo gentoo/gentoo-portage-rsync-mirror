@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.115 2013/08/20 19:31:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.116 2013/08/27 20:00:41 xarthisius Exp $
+
+  27 Aug 2013; Kacper Kowalik <xarthisius@gentoo.org> -ipython-0.10.1.ebuild,
+  -ipython-0.10.ebuild, -ipython-0.12.1.ebuild, -ipython-0.13.1-r1.ebuild,
+  -ipython-0.13.1.ebuild, -ipython-0.13.ebuild, ipython-0.12-r1.ebuild,
+  ipython-0.13.2.ebuild, ipython-1.0.0.ebuild, metadata.xml:
+  Add missing dependencies. Fixes bug #481342 and #481726 by
+  <jcpetkovich@gmail.com> and Arfrever Frehtes Taifersar Arahesis
+  <arfrever.fta@gmail.com> respectively. Drop obsolete versions
 
   20 Aug 2013; Fabian Groffen <grobian@gentoo.org> ipython-1.0.0.ebuild:
   Marked *-macos, bug #481462

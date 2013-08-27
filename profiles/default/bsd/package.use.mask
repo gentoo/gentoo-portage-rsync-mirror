@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.36 2013/08/07 21:10:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.37 2013/08/27 19:45:29 aballier Exp $
 
 
 # Richard Yao <ryao@gentoo.org> (09 Nov 2012)
@@ -93,3 +93,6 @@ gnome-base/gvfs udisks
 
 # joystick and video_cards_tdfx useflag are linux only #477750
 media-video/mplayer joystick video_cards_tdfx
+
+# linux only
+media-libs/opencv ieee1394 cuda

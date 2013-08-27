@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.6 2013/08/05 17:34:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.7 2013/08/27 20:00:41 xarthisius Exp $
 
 EAPI=5
 
@@ -161,8 +161,6 @@ python_test() {
 	sed -i -e "s:Connection(:&host='${DB_IP}', port=${DB_PORT}:" \
 		"${BUILD_DIR}"/lib/IPython/parallel/tests/test_mongodb.py \
 		|| die "Unable to sed mongod port into tests"
-
-
 
 	local fail
 	run_tests() {

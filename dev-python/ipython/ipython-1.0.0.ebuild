@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.3 2013/08/20 19:31:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.4 2013/08/27 20:00:41 xarthisius Exp $
 
 EAPI=5
 
@@ -16,8 +16,8 @@ HOMEPAGE="http://ipython.org/"
 SRC_URI="https://github.com/${PN}/${PN}/releases/download/rel-${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="doc emacs examples matplotlib mongodb notebook octave
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+IUSE="doc emacs examples matplotlib mongodb notebook nbconvert octave
 	qt4 +smp test wxwidgets"
 
 PY2_USEDEP=$(python_gen_usedep 'python2*')
@@ -36,9 +36,14 @@ CDEPEND="
 	smp? ( dev-python/pyzmq[${PYTHON_USEDEP}] )
 	wxwidgets? ( dev-python/wxpython[${PY2_USEDEP}] )"
 RDEPEND="${CDEPEND}
-	notebook? ( >=www-servers/tornado-2.1[${PY2_USEDEP}]
-			dev-python/pygments[${PYTHON_USEDEP}]
-			dev-python/pyzmq[${PYTHON_USEDEP}] )
+	notebook? (
+		>=www-servers/tornado-2.1[${PY2_USEDEP}]
+		dev-python/pygments[${PYTHON_USEDEP}]
+		dev-python/pyzmq[${PYTHON_USEDEP}]
+		dev-libs/mathjax
+		dev-python/jinja[${PYTHON_USEDEP}]
+	)
+	nbconvert? ( app-text/pandoc )
 	qt4? ( || ( dev-python/PyQt4[${PYTHON_USEDEP}] dev-python/pyside[${PYTHON_USEDEP}] )
 			dev-python/pygments[${PYTHON_USEDEP}]
 			dev-python/pyzmq[${PYTHON_USEDEP}] )"
@@ -152,8 +157,6 @@ python_test() {
 	sed -i -e "s:Connection(:&host='${DB_IP}', port=${DB_PORT}:" \
 		"${BUILD_DIR}"/lib/IPython/parallel/tests/test_mongodb.py \
 		|| die "Unable to sed mongod port into tests"
-
-
 
 	local fail
 	run_tests() {
