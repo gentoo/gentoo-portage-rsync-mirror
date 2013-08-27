@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.13 2013/08/25 17:00:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-9999.ebuild,v 1.14 2013/08/27 17:59:55 floppym Exp $
 
 EAPI="5"
 
@@ -82,24 +82,27 @@ src_prepare() {
 		-e 's:\<STAGING_PREFIX\>:SYSROOT:g' \
 		SConstruct || die
 
+	use python && distutils-r1_src_prepare
+}
+
+python_prepare_all() {
+	python_export_best
 	# Extract python info out of SConstruct so we can use saner distribute
-	if use python ; then
-		pyvar() { sed -n "/^ *$1 *=/s:.*= *::p" SConstruct ; }
-		local pybins=$(pyvar python_progs)
-		local pysrcs=$(sed -n '/^ *python_extensions = {/,/}/{s:^ *::;s:os[.]sep:"/":g;p}' SConstruct)
-		local packet=$(python -c "${pysrcs}; print(python_extensions['gps/packet'])")
-		local client=$(python -c "${pysrcs}; print(python_extensions['gps/clienthelpers'])")
-		sed \
-			-e "s|@VERSION@|$(pyvar gpsd_version)|" \
-			-e "s|@URL@|$(pyvar website)|" \
-			-e "s|@EMAIL@|$(pyvar devmail)|" \
-			-e "s|@SCRIPTS@|${pybins}|" \
-			-e "s|@GPS_PACKET_SOURCES@|${packet}|" \
-			-e "s|@GPS_CLIENT_SOURCES@|${client}|" \
-			-e "s|@SCRIPTS@|$(pyvar python_progs)|" \
-			"${FILESDIR}"/${PN}-3.3-setup.py > setup.py || die
-		distutils-r1_src_prepare
-	fi
+	pyvar() { sed -n "/^ *$1 *=/s:.*= *::p" SConstruct ; }
+	local pybins=$(pyvar python_progs)
+	local pysrcs=$(sed -n '/^ *python_extensions = {/,/}/{s:^ *::;s:os[.]sep:"/":g;p}' SConstruct)
+	local packet=$("${PYTHON}" -c "${pysrcs}; print(python_extensions['gps/packet'])")
+	local client=$("${PYTHON}" -c "${pysrcs}; print(python_extensions['gps/clienthelpers'])")
+	sed \
+		-e "s|@VERSION@|$(pyvar gpsd_version)|" \
+		-e "s|@URL@|$(pyvar website)|" \
+		-e "s|@EMAIL@|$(pyvar devmail)|" \
+		-e "s|@SCRIPTS@|${pybins}|" \
+		-e "s|@GPS_PACKET_SOURCES@|${packet}|" \
+		-e "s|@GPS_CLIENT_SOURCES@|${client}|" \
+		-e "s|@SCRIPTS@|$(pyvar python_progs)|" \
+		"${FILESDIR}"/${PN}-3.3-setup.py > setup.py || die
+	distutils-r1_python_prepare_all
 }
 
 src_configure() {
