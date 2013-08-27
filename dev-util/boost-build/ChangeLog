@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.114 2013/08/25 12:19:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.115 2013/08/27 08:46:00 pinkbyte Exp $
+
+*boost-build-1.54.0 (27 Aug 2013)
+
+  27 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> +boost-build-1.54.0.ebuild,
+  +files/boost-build-1.54.0-fix-test.patch,
+  +files/boost-build-1.54.0-support_dots_in_python-buildid.patch:
+  Version bump, wrt bug #475712
 
   25 Aug 2013; Jeroen Roovers <jer@gentoo.org> boost-build-1.52.0-r1.ebuild:
   Stable for HPPA (bug #455464).
