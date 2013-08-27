@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.4 2013/08/21 16:37:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.5 2013/08/27 17:01:53 axs Exp $
+
+  27 Aug 2013; Ian Stakenvicius <axs@gentoo.org> netifrc-9999.ebuild:
+  added a dodoc to install README as it is not part of 'make install' anymore
 
   21 Aug 2013; William Hubbs <williamh@gentoo.org> metadata.xml:
   assign maintainership to netifrc alias
