@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.13.ebuild,v 1.3 2013/07/07 12:04:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/inspircd-2.0.13.ebuild,v 1.4 2013/08/28 08:54:51 nimiux Exp $
 
 EAPI=5
 
@@ -42,15 +42,24 @@ src_prepare() {
 
 src_configure() {
 	local extras=""
+	local essl="--enable-openssl"
+	local egnutls="--enable-gnutls"
+	local dipv6="--disable-ipv6"
 
 	use geoip && extras="${extras}m_geoip.cpp,"
+	use gnutls && extras="${extras}m_ssl_gnutls.cpp,"
+	use ipv6 && dipv6=""
 	use ldap && extras="${extras}m_ldapauth.cpp,m_ldapoper.cpp,"
 	use mysql && extras="${extras}m_mysql.cpp,"
 	use pcre && extras="${extras}m_regex_pcre.cpp,"
 	use posix && extras="${extras}m_regex_posix.cpp,"
 	use postgres && extras="${extras}m_pgsql.cpp,"
 	use sqlite && extras="${extras}m_sqlite3.cpp,"
+	use ssl && extras="${extras}m_ssl_openssl.cpp,"
 	use tre && extras="${extras}m_regex_tre.cpp,"
+
+	use !ssl && essl=""
+	use !gnutls && egnutls=""
 
 	if [ -n "${extras}" ]; then
 		./configure --disable-interactive --enable-extras=${extras}
@@ -65,8 +74,7 @@ src_configure() {
 		--log-dir="/var/log/${PN}" \
 		--binary-dir="/usr/bin" \
 		--module-dir="/usr/$(get_libdir)/${PN}/modules" \
-		$(use_enable ssl openssl) $(use_enable gnutls) \
-		$(use_enable ipv6)
+		${essl} ${egnutls} ${dipv6} || die
 }
 
 src_compile() {
