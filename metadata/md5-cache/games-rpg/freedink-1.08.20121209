@@ -4,10 +4,10 @@ DESCRIPTION=Dink Smallwood is an adventure/role-playing game, similar to Zelda (
 EAPI=5
 HOMEPAGE=http://www.freedink.org/
 IUSE=nls
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-3
 RDEPEND=>=media-libs/fontconfig-2.4 >=media-libs/libsdl-1.2:0[X,audio,joystick,video] >=media-libs/sdl-gfx-2.0 >=media-libs/sdl-image-1.2 >=media-libs/sdl-mixer-1.2[midi,vorbis,wav] >=media-libs/sdl-ttf-2.0.9 ~games-rpg/freedink-data-1.08.20121209 nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://gnu/freedink/freedink-1.08.20121209.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=21a9e098ba388263e44f3171649d0843
+_md5_=be447477e68a3ed30864c0b5c2d963f2

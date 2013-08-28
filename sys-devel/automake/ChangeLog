@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.198 2013/06/23 04:51:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.199 2013/08/28 11:22:33 jer Exp $
+
+  28 Aug 2013; Jeroen Roovers <jer@gentoo.org> automake-1.13.4.ebuild:
+  Stable for HPPA (bug #481904).
 
 *automake-1.14 (23 Jun 2013)
 

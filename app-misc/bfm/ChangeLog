@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.12 2013/08/23 13:10:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfm/ChangeLog,v 1.13 2013/08/28 11:14:24 ago Exp $
+
+  28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> bfm-1.2-r2.ebuild:
+  Stable for x86, wrt bug #481948
 
   23 Aug 2013; Agostino Sarubbo <ago@gentoo.org> bfm-1.2-r2.ebuild:
   Stable for amd64, wrt bug #481948

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ninja-ide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.22 2013/08/22 20:17:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ChangeLog,v 1.23 2013/08/28 11:14:06 ago Exp $
+
+  28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ninja-ide-2.3.ebuild:
+  Stable for x86, wrt bug #480790
 
   22 Aug 2013; Julian Ospald <hasufell@gentoo.org> ninja-ide-2.2.ebuild:
   drop python3 from here as well since autocompletion is broken with it

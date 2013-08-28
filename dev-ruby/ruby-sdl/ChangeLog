@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-sdl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.36 2013/08/18 12:23:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.37 2013/08/28 11:16:24 ago Exp $
+
+  28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ruby-sdl-2.1.2.ebuild:
+  Stable for x86, wrt bug #480984
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ruby-sdl-2.1.2.ebuild:
   Stable for amd64, wrt bug #480984

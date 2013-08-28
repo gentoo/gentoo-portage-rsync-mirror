@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/coot-data-2-r1.ebuild,v 1.3 2013/08/10 12:46:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coot-data/coot-data-2-r1.ebuild,v 1.4 2013/08/28 11:13:00 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/reference-structures-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 RESTRICT="binchecks strip"
