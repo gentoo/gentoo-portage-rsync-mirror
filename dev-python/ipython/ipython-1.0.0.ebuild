@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.4 2013/08/27 20:00:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.5 2013/08/28 07:28:48 xarthisius Exp $
 
 EAPI=5
 
@@ -170,6 +170,12 @@ python_test() {
 
 	[[ ${DB_PORT} != -1 ]] && mongod --dbpath "${dbpath}" --shutdown
 	[[ ${fail} ]] && die "Tests fail with ${EPYTHON}"
+}
+
+python_install() {
+	distutils-r1_python_install
+	dosym "${EROOT}"usr/share/mathjax \
+		$(python_get_sitedir)/IPython/html/static/mathjax
 }
 
 python_install_all() {
