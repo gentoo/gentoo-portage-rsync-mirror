@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.4.0.ebuild,v 1.2 2013/06/30 18:27:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/libqmi-1.4.0.ebuild,v 1.3 2013/08/28 09:59:38 nimiux Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2 autotools
 	EGIT_REPO_URI="git://anongit.freedesktop.org/libqmi"
 else
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="amd64 ~arm ~x86"
 	SRC_URI="http://www.freedesktop.org/software/libqmi/${P}.tar.xz"
 fi
 
