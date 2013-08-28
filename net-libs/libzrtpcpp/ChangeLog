@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libzrtpcpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.18 2013/08/16 00:05:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/ChangeLog,v 1.20 2013/08/28 10:27:46 ago Exp $
+
+  28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libzrtpcpp-2.3.4.ebuild:
+  Stable for x86, wrt bug #481228
+
+  28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libzrtpcpp-2.3.4.ebuild:
+  Stable for amd64, wrt bug #481228
 
 *libzrtpcpp-2.3.4 (16 Aug 2013)
 

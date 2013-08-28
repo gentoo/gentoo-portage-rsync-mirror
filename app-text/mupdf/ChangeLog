@@ -1,6 +1,18 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.86 2013/07/22 19:44:33 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.87 2013/08/28 10:28:18 xmw Exp $
+
+*mupdf-1.3 (28 Aug 2013)
+
+  28 Aug 2013; Michael Weber <xmw@gentoo.org> +files/mupdf-1.3-CFLAGS.patch,
+  +files/mupdf-1.3-forward_back.patch, +files/mupdf-1.3-openjpeg2.patch,
+  +files/mupdf-1.3-pkg-config.patch, +files/mupdf-1.3-sys_curl.patch,
+  +files/mupdf-1.3-zoom-2.patch, +mupdf-1.3.ebuild,
+  -files/mupdf-9999-CFLAGS.patch, -files/mupdf-9999-forward_back.patch,
+  -files/mupdf-9999-openjpeg2.patch, -files/mupdf-9999-pkg-config.patch,
+  -files/mupdf-9999-sys_curl.patch, -files/mupdf-9999-zoom-2.patch,
+  mupdf-9999.ebuild:
+  Version bump, rename patch files, fix desktop file.
 
   22 Jul 2013; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
   Update live ebuild for new binary name.

@@ -1,7 +1,7 @@
 http://bugs.ghostscript.com/show_bug.cgi?id=693518
 
---- mupdf-9999/Makerules
-+++ mupdf-9999/Makerules
+--- mupdf-1.3/Makerules
++++ mupdf-1.3/Makerules
 @@ -52,8 +52,8 @@
  
  SYS_FREETYPE_CFLAGS = $(shell pkg-config --cflags freetype2)

@@ -1,5 +1,5 @@
---- mupdf-9999/platform/x11/pdfapp.c
-+++ mupdf-9999/platform/x11/pdfapp.c
+--- mupdf-1.3/platform/x11/pdfapp.c
++++ mupdf-1.3/platform/x11/pdfapp.c
 @@ -866,6 +867,7 @@
  		break;
  

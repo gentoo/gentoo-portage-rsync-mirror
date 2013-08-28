@@ -1,5 +1,5 @@
---- mupdf-1.0-source/Makerules
-+++ mupdf-1.0-source/Makerules
+--- mupdf-1.3/Makerules
++++ mupdf-1.3/Makerules
 @@ -6,7 +6,7 @@
  CFLAGS += -Wall
  
