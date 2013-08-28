@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/sdl2-image
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-image/ChangeLog,v 1.1 2013/08/28 21:48:06 hasufell Exp $
+
+*sdl2-image-2.0.0 (28 Aug 2013)
+
+  28 Aug 2013; Julian Ospald <hasufell@gentoo.org> +sdl2-image-2.0.0.ebuild,
+  +metadata.xml:
+  initial import wrt #481798
+

@@ -3119,6 +3119,13 @@ media-libs/libsdl:joystick - Control joystick support (disable at your own risk)
 media-libs/libsdl:ps3 - Build the PS3 video driver
 media-libs/libsdl:tslib - Build with tslib support for touchscreen devices
 media-libs/libsdl:video - Control video support (disable at your own risk)
+media-libs/libsdl2:audio - Control audio support (disable at your own risk)
+media-libs/libsdl2:fusionsound - use FusionSound audio driver
+media-libs/libsdl2:gles - include OpenGL ES support
+media-libs/libsdl2:haptic - Enable the haptic (force feedback) subsystem
+media-libs/libsdl2:joystick - Control joystick support (disable at your own risk)
+media-libs/libsdl2:tslib - Build with tslib support for touchscreen devices
+media-libs/libsdl2:video - Control video support (disable at your own risk)
 media-libs/libvpx:postproc - Enable additional post processing filters
 media-libs/libvpx:sse3 - Enable optimization for SSE3 capable chips
 media-libs/libvpx:sse4_1 - Enable optimization for SSE4_1 capable processors (Intel Core 2 Penryn and later chips)
@@ -3198,6 +3205,14 @@ media-libs/sdl-mixer:playtools - Install playwave and playmus tools (useful for 
 media-libs/sdl-mixer:smpeg - Use media-libs/smpeg for MP3 support
 media-libs/sdl-mixer:wav - support WAVE files
 media-libs/sdl-sound:physfs - Enable physfs support
+media-libs/sdl2-image:webp - support loading WEBP images
+media-libs/sdl2-mixer:fluidsynth - Use media-sound/fluidsynth for MIDI support
+media-libs/sdl2-mixer:midi - basic support for MIDI files
+media-libs/sdl2-mixer:mod - basic support for MOD files
+media-libs/sdl2-mixer:playtools - Install playwave and playmus tools (useful for testing)
+media-libs/sdl2-mixer:smpeg - Use media-libs/smpeg for MP3 support
+media-libs/sdl2-mixer:tremor - enable OGG Vorbis music via libtremor
+media-libs/sdl2-mixer:wav - support WAVE files
 media-libs/sge:image - enable sdl-image support
 media-libs/silgraphite:pango - Enables the pango-graphite pango module.
 media-libs/spandsp:fixed-point - Enable fixed point support

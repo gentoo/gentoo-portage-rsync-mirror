@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst
+DEPEND=media-libs/libsdl2 flac? ( media-libs/flac ) midi? ( fluidsynth? ( media-sound/fluidsynth ) timidity? ( media-sound/timidity++ ) ) mp3? ( mad? ( media-libs/libmad ) smpeg? ( >=media-libs/smpeg2-2.0.0 ) ) mod? ( modplug? ( media-libs/libmodplug ) mikmod? ( >=media-libs/libmikmod-3.1.10 ) ) vorbis? ( tremor? ( media-libs/tremor ) !tremor? ( >=media-libs/libvorbis-1.0_beta4 media-libs/libogg ) )
+DESCRIPTION=Simple Direct Media Layer Mixer Library
+EAPI=5
+HOMEPAGE=http://www.libsdl.org/projects/SDL_mixer/
+IUSE=flac fluidsynth mad midi mikmod mod modplug mp3 playtools smpeg static-libs timidity tremor vorbis +wav
+KEYWORDS=~amd64 ~x86
+LICENSE=ZLIB
+RDEPEND=media-libs/libsdl2 flac? ( media-libs/flac ) midi? ( fluidsynth? ( media-sound/fluidsynth ) timidity? ( media-sound/timidity++ ) ) mp3? ( mad? ( media-libs/libmad ) smpeg? ( >=media-libs/smpeg2-2.0.0 ) ) mod? ( modplug? ( media-libs/libmodplug ) mikmod? ( >=media-libs/libmikmod-3.1.10 ) ) vorbis? ( tremor? ( media-libs/tremor ) !tremor? ( >=media-libs/libvorbis-1.0_beta4 media-libs/libogg ) )
+REQUIRED_USE=midi? ( || ( timidity fluidsynth ) ) timidity? ( midi ) fluidsynth? ( midi ) mp3? ( || ( smpeg mad ) ) smpeg? ( mp3 ) mad? ( mp3 ) mod? ( || ( mikmod modplug ) ) mikmod? ( mod ) modplug? ( mod ) tremor? ( vorbis )
+SLOT=0
+SRC_URI=http://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-2.0.0.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=2590161f8e8a52577fd455c7b628bbf8
