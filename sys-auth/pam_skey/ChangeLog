@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/pam_skey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.23 2013/08/26 16:32:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_skey/ChangeLog,v 1.24 2013/08/28 06:00:25 ulm Exp $
+
+*pam_skey-1.1.5-r5 (28 Aug 2013)
+
+  28 Aug 2013; Ulrich Müller <ulm@gentoo.org> -pam_skey-1.1.5-r3.ebuild,
+  -pam_skey-1.1.5-r4.ebuild, +pam_skey-1.1.5-r5.ebuild:
+  Erase cleartext passwords from memory, fixes security bug 482588,
+  CVE-2013-4285. Committing with stable keywords, thanks to Agostino Sarubbo
+  for testing on amd64 and x86. Remove vulnerable versions.
 
 *pam_skey-1.1.5-r4 (26 Aug 2013)
 
@@ -90,6 +98,6 @@
   16 Jan 2008; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
   +pam_skey-1.1.4.ebuild:
   Import from Sunrise overlay. Original ebuild and patch contributed by
-  Dani Church <dani.church@gmail.com>, Jakub Moc <jakub@gentoo.org> and	me,
+  Dani Church <dani.church@gmail.com>, Jakub Moc <jakub@gentoo.org> and me,
   bug 55279.
 
