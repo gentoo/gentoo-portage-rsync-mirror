@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.2 2013/08/27 09:22:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.3 2013/08/28 17:46:13 hasufell Exp $
 
 EAPI=5
 
@@ -50,11 +50,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	theme-manager? ( dev-util/monodevelop )"
 
-DOCS=""
-
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
-	use theme-manager && mono-env_pkg_setup
+	if use theme-manager ; then
+		mono-env_pkg_setup
+		export XDG_CACHE_HOME="${T}/.cache"
+	fi
 }
 
 src_prepare() {
@@ -110,29 +111,18 @@ src_configure() {
 		--enable-shm \
 		${myspellconf} \
 		$(use_enable ntlm) \
-		$(use_enable libproxy)
-}
-
-src_compile() {
-	default
-	if use theme-manager ; then
-		export XDG_CACHE_HOME="${T}/.cache"
-		cd src/htm || die
-		mdtool --verbose build htm-mono.csproj || die
-	fi
+		$(use_enable libproxy) \
+		$(use_with theme-manager)
 }
 
 src_install() {
-	emake DESTDIR="${D}" UPDATE_ICON_CACHE=true install
+	emake DESTDIR="${D}" \
+		UPDATE_ICON_CACHE=true \
+		UPDATE_MIME_DATABASE=true \
+		UPDATE_DESKTOP_DATABASE=true \
+		install
 	dodoc share/doc/{readme,hacking}.md
 	use plugin-fishlim && dodoc share/doc/fishlim.md
-	if use theme-manager ; then
-		dobin src/htm/thememan.exe
-		make_wrapper thememan "mono /usr/bin/thememan.exe"
-		domenu share/misc/htm.desktop
-		insinto /usr/share/mime/packages
-		newins share/misc/htm-mime.xml htm.xml
-	fi
 	prune_libtool_files --all
 }
 
