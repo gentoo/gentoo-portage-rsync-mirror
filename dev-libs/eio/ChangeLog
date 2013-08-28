@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/eio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eio/ChangeLog,v 1.7 2013/05/11 12:06:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eio/ChangeLog,v 1.8 2013/08/28 03:10:27 vapier Exp $
+
+*eio-1.7.8 (28 Aug 2013)
+
+  28 Aug 2013; Mike Frysinger <vapier@gentoo.org> +eio-1.7.8.ebuild:
+  Version bump.
 
   11 May 2013; Markus Meier <maekke@gentoo.org> eio-1.7.6.ebuild:
   add ~arm, bug #456736
