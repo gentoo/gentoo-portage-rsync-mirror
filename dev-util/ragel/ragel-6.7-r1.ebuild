@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.7-r1.ebuild,v 1.12 2013/01/28 15:01:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.7-r1.ebuild,v 1.13 2013/08/28 06:26:15 vapier Exp $
 
 EAPI=4
 
@@ -25,6 +25,7 @@ DOCS=( ChangeLog CREDITS README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}+gcc-4.7.patch
+	epatch "${FILESDIR}"/${P}-cross-compile.patch #473970
 	sed -i -e '/CXXFLAGS/d' configure.in || die
 
 	eautoreconf
@@ -44,6 +45,6 @@ src_install() {
 
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
-		doins ragel.vim || die "doins ragel.vim failed"
+		doins ragel.vim
 	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.116 2013/08/27 20:00:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.117 2013/08/28 06:26:57 xarthisius Exp $
+
+  28 Aug 2013; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
+  Fix typo in metadata. Thanks to Arfrever for noticing
 
   27 Aug 2013; Kacper Kowalik <xarthisius@gentoo.org> -ipython-0.10.1.ebuild,
   -ipython-0.10.ebuild, -ipython-0.12.1.ebuild, -ipython-0.13.1-r1.ebuild,
