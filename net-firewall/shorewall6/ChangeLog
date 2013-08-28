@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/shorewall6
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.83 2013/08/28 15:18:49 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.84 2013/08/28 16:59:04 constanze Exp $
+
+*shorewall6-4.5.19 (28 Aug 2013)
+
+  28 Aug 2013; Constanze Hausner <constanze@gentoo.org>
+  +files/4.5.19/shorewall6.conf-SUBSYSLOCK.patch,
+  +files/4.5.19/shorewall6.confd, +files/4.5.19/shorewall6.initd,
+  +files/4.5.19/shorewall6.systemd, +files/4.5.19/shorewallrc,
+  +shorewall6-4.5.19.ebuild:
+  Version bump; Add new files/ structure
 
   28 Aug 2013; Constanze Hausner <constanze@gentoo.org>
   -shorewall6-4.5.15.ebuild, -shorewall6-4.5.17.ebuild:

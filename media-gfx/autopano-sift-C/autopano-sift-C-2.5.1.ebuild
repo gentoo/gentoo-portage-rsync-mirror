@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/autopano-sift-C-2.5.1.ebuild,v 1.6 2013/06/01 14:05:57 creffett Exp $
-EAPI=5
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/autopano-sift-C-2.5.1.ebuild,v 1.7 2013/08/28 16:51:57 ssuominen Exp $
 
-inherit cmake-utils versionator
+EAPI=5
+inherit cmake-utils eutils versionator
 
 DESCRIPTION="SIFT algorithm for automatic panorama creation in C"
 HOMEPAGE="http://hugin.sourceforge.net/ http://user.cs.tu-berlin.de/~nowozin/autopano-sift/"
@@ -14,13 +14,18 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-S="${WORKDIR}/${PN}-$(get_version_component_range 1-3)"
+S=${WORKDIR}/${PN}-"$(get_version_component_range 1-3)"
 
-DEPEND="!media-gfx/autopano-sift
+RDEPEND="!media-gfx/autopano-sift
 	dev-libs/libxml2
 	media-libs/libpano13
-	media-libs/libpng
-	media-libs/tiff
+	media-libs/libpng:0=
+	media-libs/tiff:0=
 	sys-libs/zlib
-	virtual/jpeg"
-RDEPEND="${DEPEND}"
+	virtual/jpeg:0"
+DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-lm.patch
+	epatch_user
+}
