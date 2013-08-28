@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.98 2012/11/26 06:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.99 2013/08/28 02:51:18 vapier Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -18,6 +18,11 @@ inherit eutils libtool
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # if defined, the package is Cython bindings (implies E_PYTHON)
+
+# @ECLASS-VARIABLE: E_ECONF
+# @DESCRIPTION:
+# Array of flags to pass to econf (obsoletes MY_ECONF)
+E_ECONF=()
 
 # E_STATE's:
 #	release      [default]
@@ -142,9 +147,9 @@ enlightenment_src_prepare() {
 enlightenment_src_configure() {
 	# gstreamer sucks, work around it doing stupid stuff
 	export GST_REGISTRY="${S}/registry.xml"
-	has static-libs ${IUSE} && MY_ECONF+=" $(use_enable static-libs static)"
+	has static-libs ${IUSE} && E_ECONF+=( $(use_enable static-libs static) )
 
-	econf ${MY_ECONF}
+	econf ${MY_ECONF} "${E_ECONF[@]}"
 }
 
 enlightenment_src_compile() {
