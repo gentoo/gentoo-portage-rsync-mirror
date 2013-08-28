@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs-util
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.19 2013/08/26 10:25:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.20 2013/08/28 07:58:13 jlec Exp $
+
+  28 Aug 2013; Justin Lecher <jlec@gentoo.org> aufs-util-3.9_p20130821.ebuild,
+  aufs-util-3.9_p20130826.ebuild:
+  Fix Version for aufs-header dependency, #482710
 
 *aufs-util-3.9_p20130826 (26 Aug 2013)
 *aufs-util-3.2_p20130826 (26 Aug 2013)

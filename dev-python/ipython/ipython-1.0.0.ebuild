@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.5 2013/08/28 07:28:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.7 2013/08/28 07:56:01 xarthisius Exp $
 
 EAPI=5
 
@@ -43,7 +43,12 @@ RDEPEND="${CDEPEND}
 		dev-libs/mathjax
 		dev-python/jinja[${PYTHON_USEDEP}]
 	)
-	nbconvert? ( app-text/pandoc )
+	nbconvert? (
+		app-text/pandoc
+		dev-python/pygments[${PYTHON_USEDEP}]
+		dev-python/sphinx[${PYTHON_USEDEP}]
+		dev-python/jinja[${PYTHON_USEDEP}]
+	)
 	qt4? ( || ( dev-python/PyQt4[${PYTHON_USEDEP}] dev-python/pyside[${PYTHON_USEDEP}] )
 			dev-python/pygments[${PYTHON_USEDEP}]
 			dev-python/pyzmq[${PYTHON_USEDEP}] )"
@@ -174,7 +179,7 @@ python_test() {
 
 python_install() {
 	distutils-r1_python_install
-	dosym "${EROOT}"usr/share/mathjax \
+	dosym "${EPREFIX}"/usr/share/mathjax \
 		$(python_get_sitedir)/IPython/html/static/mathjax
 }
 
