@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.14 2013/08/26 12:54:18 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.15 2013/08/28 18:31:44 qnikst Exp $
+
+  28 Aug 2013; Alexander Vershilov <qnikst@gentoo.org> metadata.xml:
+  metadata fix, thanks to specing
 
 *git-annex-4.20130815 (26 Aug 2013)
 
