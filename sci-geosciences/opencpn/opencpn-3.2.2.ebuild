@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/opencpn-3.2.2.ebuild,v 1.1 2013/07/14 23:11:42 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/opencpn-3.2.2.ebuild,v 1.2 2013/08/28 13:06:49 mschiff Exp $
 
 EAPI=5
 
@@ -23,10 +23,10 @@ RDEPEND="
 	sys-libs/zlib
 	virtual/opengl
 	x11-libs/gtk+:2
-	x11-libs/wxGTK[X]
+	x11-libs/wxGTK:2.8[X]
 	gps? ( >=sci-geosciences/gpsd-2.96-r1 )
 "
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 S="${WORKDIR}/OpenCPN-${P}"

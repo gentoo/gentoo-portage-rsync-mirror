@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/opencpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.10 2013/07/14 23:11:41 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.11 2013/08/28 13:06:49 mschiff Exp $
+
+  28 Aug 2013; Marc Schiffbauer <mschiff@gentoo.org> opencpn-3.0.2.ebuild,
+  opencpn-3.2.2.ebuild:
+  Fix wxwidgets dependency and DEPEND
 
 *opencpn-3.2.2 (14 Jul 2013)
 
@@ -52,4 +56,3 @@
   +metadata.xml:
   New ebuild for opencpn. Thanks to Tim Mohlmann for ebuild update. Fixes bug
   #334283
-
