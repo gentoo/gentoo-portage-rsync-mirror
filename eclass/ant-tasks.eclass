@@ -1,9 +1,9 @@
 # Eclass for building dev-java/ant-* packages
 #
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Vlastimil Babka <caster@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.14 2013/07/05 10:44:47 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ant-tasks.eclass,v 1.15 2013/08/28 21:28:33 tomwij Exp $
 
 # we set ant-core dep ourselves, restricted
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
@@ -90,7 +90,7 @@ else
 	MY_PV=${PV}
 	UPSTREAM_PREFIX="mirror://apache/ant/source"
 	case ${PV} in
-	1.9.1)
+	1.9.*)
 		GENTOO_PREFIX="http://dev.gentoo.org/~tomwij/files/dist"
 		;;
 	1.8.4)
