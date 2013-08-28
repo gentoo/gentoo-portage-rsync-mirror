@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.237 2013/08/19 14:08:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.238 2013/08/27 23:41:32 cardoe Exp $
+
+*qemu-1.5.3 (27 Aug 2013)
+
+  27 Aug 2013; Doug Goldstein <cardoe@gentoo.org> +qemu-1.5.3.ebuild:
+  Version bump
 
   19 Aug 2013; Doug Goldstein <cardoe@gentoo.org> qemu-9999.ebuild:
   SeaBIOS/VGABios/sgabios are not meant to be a versioned depend for the live

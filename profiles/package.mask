@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15067 2013/08/27 23:25:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15068 2013/08/27 23:40:32 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -528,11 +528,6 @@ media-gfx/yafaray
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
 =sys-block/open-iscsi-2.0.873
-
-# Mike Gilbert <floppym@gentoo.org (18 Jan 2013)
-# Release made by unofficial maintainer. Drops support for Python 3 with
-# very few improvements. Should be replaced by dev-python/charade eventually.
-=dev-python/chardet-2.1.1
 
 # Jeroen Roovers <jer@gentoo.org> (09 Jan 2013)
 # Testing branch, unstable upstream

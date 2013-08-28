@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0_rc2.ebuild,v 1.1 2013/08/24 12:32:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0.ebuild,v 1.1 2013/08/27 23:49:10 mattst88 Exp $
 
 EAPI=5
 
@@ -21,8 +21,7 @@ MY_PN="${PN/m/M}"
 MY_P="${MY_PN}-${PV/_/-}"
 MY_SRC_P="${MY_PN}Lib-${PV/_/-}"
 
-# Why put 9.2.0-rc1 tarball in a directory named 9.2?
-FOLDER="${PV/.0_rc*/}"
+FOLDER="${PV/.0/}"
 
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"

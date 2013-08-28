@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8193 2013/08/27 23:25:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8194 2013/08/27 23:40:32 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Aug 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Remove mask on dev-python/chardet-2.1.1.
 
   27 Aug 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Clarified what eselect was exactly masked for, expanded 'it'.
