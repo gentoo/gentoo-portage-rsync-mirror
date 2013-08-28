@@ -7,6 +7,10 @@
     <name>Jonny</name>
 	<description>Future Maintainer</description>
   </maintainer>
+  <maintainer>
+  <email>pva@gentoo.org</email>
+  <name>Peter Volkov</name>
+  </maintainer>
   <longdescription>
     A free distributed version control system. It provides a simple,
     single-file transactional version store, with fully disconnected

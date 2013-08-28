@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/smtm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.20 2012/03/18 15:36:02 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.22 2013/08/28 13:44:26 idella4 Exp $
+
+  28 Aug 2013; Ian Delaney <idella4@gentoo.org> -smtm-1.6.10.ebuild,
+  -smtm-1.6.8.ebuild:
+  remove old of EAPI=0
+
+*smtm-1.6.10-r1 (28 Aug 2013)
+
+  28 Aug 2013; Ian Delaney <idella4@gentoo.org> +smtm-1.6.10-r1.ebuild:
+  revbump -> EAPI 5, invoke tests, tidy install
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> smtm-1.6.6.ebuild,
   smtm-1.6.8.ebuild, smtm-1.6.10.ebuild:
