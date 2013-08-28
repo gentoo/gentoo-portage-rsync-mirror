@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/xmlunit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.20 2010/04/05 23:52:25 caster Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/ChangeLog,v 1.21 2013/08/28 22:41:55 tomwij Exp $
+
+*xmlunit-1.4 (28 Aug 2013)
+
+  28 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +xmlunit-1.4.ebuild:
+  Version bump to 1.4, cleaned ebuild up a bit and removed restriction on tests
+  as they work again properly; upstream also appears to have fixed download
+  during compilation bug #403851.
 
   05 Apr 2010; Vlastimil Babka <caster@gentoo.org> -xmlunit-1.0-r2.ebuild,
   -files/xmlunit-1.0-gentoo.patch, -files/xmlunit-1.0-r2-build.xml.patch:
@@ -80,4 +87,3 @@
   22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +files/xmlunit-1.0-gentoo.patch, +xmlunit-1.0.ebuild:
   Initial import. Dependency of various new dev-java packages. fixes #75486.
-
