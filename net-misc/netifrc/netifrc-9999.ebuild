@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.4 2013/08/27 17:01:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-9999.ebuild,v 1.5 2013/08/28 16:15:28 robbat2 Exp $
 
 EAPI=5
 
@@ -32,6 +32,8 @@ src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
 		local ver="git-${EGIT_VERSION:0:6}"
 		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk || die
+		einfo "Producing ChangeLog from Git history"
+		GIT_DIR="${S}/.git" git log >"${S}"/ChangeLog
 	fi
 
 	# Allow user patches to be applied without modifying the ebuild
@@ -49,7 +51,7 @@ src_compile() {
 
 src_install() {
 	emake ${MAKE_ARGS} DESTDIR="${D}" install
-	dodoc README
+	dodoc README CREDITS FEATURE-REMOVAL-SCHEDULE STYLE TODO ChangeLog
 }
 
 pkg_postinst() {

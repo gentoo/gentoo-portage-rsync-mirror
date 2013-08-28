@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/DBD-SQLite-1.400.0.ebuild,v 1.1 2013/08/17 13:24:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/DBD-SQLite-1.400.0.ebuild,v 1.2 2013/08/28 16:07:10 floppym Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="test"
 
 RDEPEND="
-	>=dev-db/sqlite-3.6.22[extensions]
+	>=dev-db/sqlite-3.6.22[extensions(+)]
 	>=dev-perl/DBI-1.57
 	!<dev-perl/DBD-SQLite-1
 "

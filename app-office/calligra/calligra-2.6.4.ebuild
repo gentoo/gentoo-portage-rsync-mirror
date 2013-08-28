@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.6.4.ebuild,v 1.5 2013/08/06 07:47:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.6.4.ebuild,v 1.6 2013/08/28 16:03:05 floppym Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -130,7 +130,7 @@ RDEPEND="
 	xbase? ( dev-db/xbase )
 	xslt? ( dev-libs/libxslt )
 	calligra_features_kexi? (
-		>=dev-db/sqlite-3.7.9:3[extensions]
+		>=dev-db/sqlite-3.7.9:3[extensions(+)]
 		dev-libs/icu:=
 	)
 "

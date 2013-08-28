@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install
-DEPEND=>=dev-db/sqlite-3.7.5:3[extensions] geos? ( sci-libs/geos ) proj? ( sci-libs/proj )
+DEPEND=>=dev-db/sqlite-3.7.5:3[extensions(+)] geos? ( sci-libs/geos ) proj? ( sci-libs/proj )
 DESCRIPTION=A complete Spatial DBMS in a nutshell built upon sqlite
 EAPI=4
 HOMEPAGE=http://www.gaia-gis.it/gaia-sins/
 IUSE=+geos iconv +proj
 KEYWORDS=amd64 x86
 LICENSE=MPL-1.1
-RDEPEND=>=dev-db/sqlite-3.7.5:3[extensions] geos? ( sci-libs/geos ) proj? ( sci-libs/proj )
+RDEPEND=>=dev-db/sqlite-3.7.5:3[extensions(+)] geos? ( sci-libs/geos ) proj? ( sci-libs/proj )
 SLOT=0
 SRC_URI=http://www.gaia-gis.it/spatialite-2.4.0-4/libspatialite-2.4.0.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=3108db828b07d995211d18813f0ec022
+_md5_=96a0b4b8f1f0807245d35dbafed552ca
