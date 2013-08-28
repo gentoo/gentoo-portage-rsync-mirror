@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.7 2013/08/28 07:56:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.8 2013/08/28 08:07:42 xarthisius Exp $
 
 EAPI=5
 
@@ -179,8 +179,8 @@ python_test() {
 
 python_install() {
 	distutils-r1_python_install
-	dosym "${EPREFIX}"/usr/share/mathjax \
-		$(python_get_sitedir)/IPython/html/static/mathjax
+	ln -snf "${EPREFIX}"/usr/share/mathjax \
+		"${D}$(python_get_sitedir)"/IPython/html/static/mathjax || die
 }
 
 python_install_all() {

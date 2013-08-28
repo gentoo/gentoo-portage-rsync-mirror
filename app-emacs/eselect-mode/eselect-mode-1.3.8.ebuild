@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/eselect-mode-1.3.7.ebuild,v 1.4 2013/08/25 13:04:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/eselect-mode-1.3.8.ebuild,v 1.1 2013/08/28 08:15:12 ulm Exp $
 
 EAPI=5
 
