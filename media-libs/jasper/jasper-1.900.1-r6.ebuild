@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r6.ebuild,v 1.1 2013/03/17 16:41:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jasper/jasper-1.900.1-r6.ebuild,v 1.2 2013/08/28 14:51:42 kensington Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="jpeg opengl static-libs"
 
 RDEPEND="
 	jpeg? (
-		virtual/jpeg
+		virtual/jpeg:0
 		amd64? (
 			abi_x86_32? ( app-emulation/emul-linux-x86-baselibs )
 			)
