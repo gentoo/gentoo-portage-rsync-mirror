@@ -1,10 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.34 2013/08/09 20:10:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.35 2013/08/28 15:56:11 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
 inherit versionator eutils flag-o-matic bsdmk
+
+# Drop patch level from ${PV}
+MY_PV=${PV/_p*}
+PLEVEL=${PV##*_p}
 
 LICENSE="BSD"
 HOMEPAGE="http://www.freebsd.org/"
@@ -28,7 +32,39 @@ CDDL="freebsd-cddl-${PV}"
 SECURE="freebsd-secure-${PV}"
 
 # Release version (5.3, 5.4, 6.0, etc)
-RV="$(get_version_component_range 1-2)"
+RV="$(get_version_component_range 1-2 ${MY_PV})"
+
+# SVN ebuild support.
+#   9.1.0.9999 -->	release/9.1.0
+#	9.1.9999   -->	releng/9.1
+#   9.9999     -->	stable/9
+#	9999 -->	head
+# 
+# svn revision can be specified by patch level:
+#	freebsd-lib-9.9999_p247000 --> set svn -r 247000
+
+if [[ ${MY_PV} == *9999* ]]; then
+	inherit subversion
+
+	# Set SVN revision using patch level.
+	[[ ${PV} == *_p* ]] && ESVN_REVISION="${PLEVEL}"
+
+	case ${MY_PV%.9999} in
+		*.*.*)	BRANCH="release";;
+		*.*)	BRANCH="releng"	;;
+		9999)	BRANCH="head"	;;
+		*)	    BRANCH="stable"	;;
+	esac
+
+	if [[ ${BRANCH} == head ]]  ; then
+		SVN_SUB_URI="${BRANCH}"
+	else
+		SVN_SUB_URI="${BRANCH}/${MY_PV%.9999}"
+	fi
+
+	ESVN_REPO_URI="svn://svn.freebsd.org/base/${SVN_SUB_URI}"
+	ESVN_PROJECT="freebsd-${BRANCH}"
+fi
 
 if [[ ${PN} != "freebsd-share" ]] && [[ ${PN} != freebsd-sources ]]; then
 	IUSE="profile"
@@ -91,7 +127,11 @@ freebsd_rename_libraries() {
 }
 
 freebsd_src_unpack() {
-	unpack ${A}
+	if [[ ${MY_PV} == *9999* ]]; then
+		S="${WORKDIR}" subversion_src_unpack
+	else
+		unpack ${A}
+	fi
 	cd "${S}"
 
 	dummy_mk ${REMOVE_SUBDIRS}

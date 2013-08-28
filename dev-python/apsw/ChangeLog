@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.58 2013/05/30 01:07:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.59 2013/08/28 16:01:09 floppym Exp $
+
+  28 Aug 2013; Mike Gilbert <floppym@gentoo.org> apsw-3.7.13.1.ebuild,
+  apsw-3.7.14.1_p1.ebuild, apsw-3.7.14_p1.ebuild, apsw-3.7.15.1_p1.ebuild,
+  apsw-3.7.15.2_p1.ebuild, apsw-3.7.16.2_p1.ebuild, apsw-3.7.17_p1.ebuild:
+  Drop extensions usedep from sqlite dep; sqlite is dropping the use flag.
 
 *apsw-3.7.17_p1 (30 May 2013)
 

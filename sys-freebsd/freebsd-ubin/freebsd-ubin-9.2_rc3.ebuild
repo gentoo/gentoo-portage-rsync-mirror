@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.2_rc3.ebuild,v 1.1 2013/08/26 20:45:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.2_rc3.ebuild,v 1.2 2013/08/28 15:33:17 aballier Exp $
 
 EAPI=5
 
@@ -139,7 +139,7 @@ src_install() {
 
 	# baselayout requires these in /bin
 	dodir /bin
-	for bin in sed printf fuser; do
+	for bin in sed printf ; do
 		mv "${D}/usr/bin/${bin}" "${D}/bin/" || die "mv ${bin} failed"
 		dosym /bin/${bin} /usr/bin/${bin} || die "dosym ${bin} failed"
 	done

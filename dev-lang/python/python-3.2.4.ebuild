@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.4.ebuild,v 1.5 2013/05/18 13:13:35 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.4.ebuild,v 1.6 2013/08/28 15:59:25 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -36,7 +36,7 @@ RDEPEND="app-arch/bzip2
 			>=sys-libs/ncurses-5.2
 			readline? ( >=sys-libs/readline-4.1 )
 		)
-		sqlite? ( >=dev-db/sqlite-3.3.8:3[extensions] )
+		sqlite? ( >=dev-db/sqlite-3.3.8:3 )
 		ssl? ( dev-libs/openssl )
 		tk? (
 			>=dev-lang/tk-8.0
