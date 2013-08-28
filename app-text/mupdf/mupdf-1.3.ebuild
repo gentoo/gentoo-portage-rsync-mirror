@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3.ebuild,v 1.1 2013/08/28 10:28:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3.ebuild,v 1.2 2013/08/28 22:26:18 xmw Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mupdf.com/"
 SRC_URI="http://${PN}.googlecode.com/files/${P}-source.tar.gz"
 
 LICENSE="AGPL-3"
-SLOT="0/1.2"
+SLOT="0/1.3"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="X vanilla static static-libs"
 

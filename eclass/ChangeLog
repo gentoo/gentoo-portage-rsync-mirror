@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.940 2013/08/28 21:28:33 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.941 2013/08/28 22:04:16 mgorny Exp $
+
+  28 Aug 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Introduce python_is_python3() to replace the common checks.
 
   28 Aug 2013; Tom Wijsman <TomWij@gentoo.org> ant-tasks.eclass:
   Made ant-tasks.eclass support newer versions of the 1.9 branch.

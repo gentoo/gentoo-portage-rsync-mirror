@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare unpack
+DEPEND=dev-libs/openssl[static-libs?] media-libs/freetype:2[static-libs?] media-libs/jbig2dec[static-libs?] media-libs/openjpeg:2[static-libs?] net-misc/curl[static-libs?] virtual/jpeg[static-libs?] X? ( x11-libs/libX11[static-libs?] x11-libs/libXext[static-libs?] ) virtual/pkgconfig static-libs? ( dev-libs/openssl[static-libs?] media-libs/freetype:2[static-libs?] media-libs/jbig2dec[static-libs?] media-libs/openjpeg:2[static-libs?] net-misc/curl[static-libs?] virtual/jpeg[static-libs?] X? ( x11-libs/libX11[static-libs?] x11-libs/libXext[static-libs?] ) ) static? ( app-arch/bzip2[static-libs] x11-libs/libXau[static-libs] x11-libs/libXdmcp[static-libs] x11-libs/libxcb[static-libs] )
+DESCRIPTION=a lightweight PDF viewer and toolkit written in portable C
+EAPI=5
+HOMEPAGE=http://mupdf.com/
+IUSE=X vanilla static static-libs
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos
+LICENSE=AGPL-3
+RDEPEND=dev-libs/openssl[static-libs?] media-libs/freetype:2[static-libs?] media-libs/jbig2dec[static-libs?] media-libs/openjpeg:2[static-libs?] net-misc/curl[static-libs?] virtual/jpeg[static-libs?] X? ( x11-libs/libX11[static-libs?] x11-libs/libXext[static-libs?] )
+SLOT=0/1.3
+SRC_URI=http://git.ghostscript.com/?p=mupdf.git;a=snapshot;h=ac84904af638b243284e24d5f401c3f1a21cb0ef;sf=tgz -> mupdf-1.3_pre20130704.tar.gz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_md5_=59123501e133efc2012ee0bb702c4d80

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-apache-xalan2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-xalan2/ChangeLog,v 1.19 2013/07/05 11:19:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-apache-xalan2/ChangeLog,v 1.20 2013/08/28 22:17:31 tomwij Exp $
+
+*ant-apache-xalan2-1.9.2 (28 Aug 2013)
+
+  28 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +ant-apache-xalan2-1.9.2.ebuild:
+  Version bump to 1.9.2. Fixes security bug #476958.
 
 *ant-apache-xalan2-1.9.1 (05 Jul 2013)
 

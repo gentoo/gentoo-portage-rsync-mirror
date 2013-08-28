@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-commons-logging
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-commons-logging/ChangeLog,v 1.34 2013/07/05 12:10:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-commons-logging/ChangeLog,v 1.35 2013/08/28 22:18:48 tomwij Exp $
+
+*ant-commons-logging-1.9.2 (28 Aug 2013)
+
+  28 Aug 2013; Tom Wijsman <TomWij@gentoo.org>
+  +ant-commons-logging-1.9.2.ebuild:
+  Version bump to 1.9.2. Fixes security bug #476958.
 
 *ant-commons-logging-1.9.1 (05 Jul 2013)
 

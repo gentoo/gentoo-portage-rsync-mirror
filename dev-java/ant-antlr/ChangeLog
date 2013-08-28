@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-antlr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.45 2013/07/05 11:05:19 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-antlr/ChangeLog,v 1.46 2013/08/28 22:13:32 tomwij Exp $
+
+*ant-antlr-1.9.2 (28 Aug 2013)
+
+  28 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +ant-antlr-1.9.2.ebuild:
+  Version bump to 1.9.2. Fixes security bug #476958.
 
 *ant-antlr-1.9.1 (05 Jul 2013)
 

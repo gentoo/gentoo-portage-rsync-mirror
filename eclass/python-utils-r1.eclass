@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.30 2013/07/27 11:17:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.31 2013/08/28 22:04:16 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -532,8 +532,8 @@ _python_rewrite_shebang() {
 			die "${FUNCNAME}: ${f} does not seem to have a valid shebang"
 		fi
 
-		if [[ ${from} == python2 && ${impl} == python3*
-				|| ${from} == python3 && ${impl} != python3* ]]; then
+		if { [[ ${from} == python2 ]] && python_is_python3 "${impl}"; } \
+				|| { [[ ${from} == python3 ]] && ! python_is_python3 "${impl}"; } then
 			eerror "A file does have shebang not supporting requested impl:"
 			eerror "  file: ${f}"
 			eerror "  shebang: ${shebang}"
@@ -883,9 +883,9 @@ python_wrapper_setup() {
 		python_export "${impl}" EPYTHON PYTHON
 
 		local pyver
-		if [[ ${EPYTHON} == python3* ]]; then
+		if python_is_python3; then
 			pyver=3
-		else # includes pypy & jython
+		else
 			pyver=2
 		fi
 
@@ -940,6 +940,20 @@ __EOF__
 		fi
 		export PATH PKG_CONFIG_PATH
 	fi
+}
+
+# @FUNCTION: python_is_python3
+# @USAGE: [<impl>]
+# @DESCRIPTION:
+# Check whether <impl> (or ${EPYTHON}) is a Python3k variant
+# (i.e. uses syntax and stdlib of Python 3.*).
+#
+# Returns 0 (true) if it is, 1 (false) otherwise.
+python_is_python3() {
+	local impl=${1:-${EPYTHON}}
+	[[ ${impl} ]] || die "python_is_python3: no impl nor EPYTHON"
+
+	[[ ${impl} == python3* ]]
 }
 
 _PYTHON_UTILS_R1=1

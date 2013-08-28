@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant-jsch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jsch/ChangeLog,v 1.38 2013/07/05 14:18:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jsch/ChangeLog,v 1.39 2013/08/28 22:21:16 tomwij Exp $
+
+*ant-jsch-1.9.2 (28 Aug 2013)
+
+  28 Aug 2013; Tom Wijsman <TomWij@gentoo.org> +ant-jsch-1.9.2.ebuild:
+  Version bump to 1.9.2. Fixes security bug #476958.
 
 *ant-jsch-1.9.1 (05 Jul 2013)
 

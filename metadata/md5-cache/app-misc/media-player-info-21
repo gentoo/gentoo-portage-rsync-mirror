@@ -9,5 +9,5 @@ RDEPEND=>=virtual/udev-196[hwdb(+)]
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/media-player-info/media-player-info-21.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	815e8fef66b552e35e4a8cc95febd22e	python-utils-r1	e3288ba49a9a4406c283001e4d284aad	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	815e8fef66b552e35e4a8cc95febd22e	python-utils-r1	3668f5e62c6e2526acef650e8e1e8fc4	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=7d6b22c3079cad7684651a1b1ea1a22b
