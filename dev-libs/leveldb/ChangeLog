@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/leveldb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.14 2013/06/20 03:30:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.15 2013/08/29 01:25:20 patrick Exp $
+
+*leveldb-1.13.0 (29 Aug 2013)
+
+  29 Aug 2013; Patrick Lauer <patrick@gentoo.org> +leveldb-1.13.0.ebuild:
+  Bump
 
 *leveldb-1.12.0 (20 Jun 2013)
 
