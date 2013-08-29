@@ -155,15 +155,15 @@ diff -rupN base/daemons/hw_zotac.c mod/daemons/hw_zotac.c
 +static int zotac_getcode();
 +
 +/** Max number of repetitions */
-+const unsigned max_repeat_count = 500;
++static unsigned max_repeat_count = 500;
 +/** Code that triggers key release */
-+const unsigned release_code = 0x00000000;
++static unsigned release_code = 0x00000000;
 +/** Code that triggers device remove  */
-+const unsigned remove_code =0x00FFFFFF;
++static unsigned remove_code =0x00FFFFFF;
 +/** Time to wait before first repetition */
-+const unsigned repeat_time1_us = 500000;
++static unsigned repeat_time1_us = 500000;
 +/** Time to wait between two repetitions */
-+const unsigned repeat_time2_us = 100000;
++static unsigned repeat_time2_us = 100000;
 +/** Pipe between main thread and repetition thread */
 +static int fd_pipe[2] = { -1, -1 };
 +
@@ -172,7 +172,7 @@ diff -rupN base/daemons/hw_zotac.c mod/daemons/hw_zotac.c
 +/** File descriptor for the real device */
 +static int fd_hidraw;
 +
-+const int main_code_length = 32;
++static int main_code_length = 32;
 +static signed int main_code = 0;
 +static struct timeval start, end, last;
 +static int repeat_state = RPT_NO;

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.89 2013/08/18 13:24:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.90 2013/08/29 13:56:37 jer Exp $
+
+  29 Aug 2013; Jeroen Roovers <jer@gentoo.org> diffutils-3.3.ebuild:
+  Stable for HPPA (bug #477570).
+
+  29 Aug 2013; Jeroen Roovers <jer@gentoo.org> diffutils-3.3.ebuild:
+  Stable for HPPA (bug #477570).
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> diffutils-3.3.ebuild:
   Stable for x86, wrt bug #477570
