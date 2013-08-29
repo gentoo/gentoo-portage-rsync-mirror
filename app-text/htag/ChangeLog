@@ -1,6 +1,11 @@
 # ChangeLog for app-text/htag
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.21 2012/02/02 07:23:30 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.22 2013/08/29 14:45:35 idella4 Exp $
+
+*htag-0.0.24-r1 (29 Aug 2013)
+
+  29 Aug 2013; Ian Delaney <idella4@gentoo.org> +htag-0.0.24-r1.ebuild:
+  revbump -> EAPI 5
 
   02 Feb 2012; Justin Lecher <jlec@gentoo.org> -htag-0.0.23.ebuild,
   htag-0.0.24.ebuild:
