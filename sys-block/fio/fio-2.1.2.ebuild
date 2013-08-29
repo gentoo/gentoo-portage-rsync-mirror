@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.2.ebuild,v 1.1 2013/08/29 08:43:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/fio-2.1.2.ebuild,v 1.2 2013/08/29 09:05:18 pinkbyte Exp $
 
 EAPI="5"
 
@@ -17,20 +17,27 @@ SRC_URI="http://brick.kernel.dk/snaps/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
+IUSE="gtk"
 
-DEPEND="dev-libs/libaio"
+DEPEND="dev-libs/libaio
+	gtk? ( x11-libs/gtk+:2 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	sed -i -e '/^DEBUGFLAGS/s, -D_FORTIFY_SOURCE=2,,g' Makefile || die
+	sed -i \
+		-e '/^DEBUGFLAGS/s, -D_FORTIFY_SOURCE=2,,g' \
+		-e '/-o gfio/s/$(LIBS)/$(LDFLAGS) $(LIBS)/' \
+		Makefile || die
 	epatch_user
 }
 
 src_configure() {
-	: # not a real configure script
-	./configure --extra-cflags="${CFLAGS}" --cc="$(tc-getCC)"
+	# not a real configure script
+	./configure \
+		--extra-cflags="${CFLAGS}" --cc="$(tc-getCC)" \
+		$(use gtk && echo "--enable-gfio") || die 'configure failed'
 }
 
 src_compile() {

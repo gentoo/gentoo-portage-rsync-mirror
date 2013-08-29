@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/fio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.35 2013/08/29 08:43:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/fio/ChangeLog,v 1.36 2013/08/29 09:05:18 pinkbyte Exp $
+
+  29 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> fio-2.1.2.ebuild:
+  Add option to build GTK+ frontend
 
 *fio-2.1.2 (29 Aug 2013)
 
