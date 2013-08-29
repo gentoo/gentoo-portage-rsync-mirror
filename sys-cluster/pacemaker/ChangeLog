@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/pacemaker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/ChangeLog,v 1.33 2013/04/23 08:04:02 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/ChangeLog,v 1.34 2013/08/29 10:32:25 ultrabug Exp $
+
+*pacemaker-1.1.10 (29 Aug 2013)
+
+  29 Aug 2013; Ultrabug <ultrabug@gentoo.org> -pacemaker-1.1.10_rc1.ebuild,
+  +pacemaker-1.1.10.ebuild:
+  version bump, drop old
 
 *pacemaker-1.1.8-r2 (23 Apr 2013)
 
