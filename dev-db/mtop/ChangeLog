@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mtop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/ChangeLog,v 1.11 2013/05/10 08:15:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mtop/ChangeLog,v 1.12 2013/08/29 15:44:33 idella4 Exp $
+
+*mtop-0.6.6-r2 (29 Aug 2013)
+
+  29 Aug 2013; Ian Delaney <idella4@gentoo.org> +mtop-0.6.6-r2.ebuild,
+  -mtop-0.6.6-r1.ebuild, -mtop-0.6.6.ebuild:
+  revbump -> EAPI 5, remove old
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> mtop-0.6.6-r1.ebuild:
   Cleanups

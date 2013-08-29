@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15071 2013/08/29 13:58:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15072 2013/08/29 15:42:40 ago Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Agostino Sarubbo <ago@gentoo.org> (29 Aug 2013)
+# Mask 5.1 series because the backport of the CVE-2012-5627
+# has not be done. bug #446240 comment 2
+=dev-db/mariadb-5.1.67
 
 # Tom Wijsman <TomWij@gentoo.org> (28 Aug 2013)
 # on behalf of Luca Barbato <lu_zero@gentoo.org>
