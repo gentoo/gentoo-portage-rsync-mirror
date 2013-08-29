@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.2.ebuild,v 1.6 2013/08/29 17:30:28 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.2.ebuild,v 1.7 2013/08/29 17:33:58 axs Exp $
 
 EAPI="4"
 
@@ -85,5 +85,5 @@ pkg_postinst() {
 pkg_postrm() {
 	# Update linker.hints file
 	use kernel_FreeBSD && /usr/sbin/kldxref "${EPREFIX}/boot/modules"
-	use linux_kernel && linux-mod_pkg_postrm
+	use kernel_linux && linux-mod_pkg_postrm
 }

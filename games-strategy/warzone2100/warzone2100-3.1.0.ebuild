@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-3.1.0.ebuild,v 1.4 2013/07/27 22:23:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-3.1.0.ebuild,v 1.5 2013/08/29 17:38:16 mr_bones_ Exp $
 
 EAPI=5
-inherit autotools eutils versionator gnome2-utils games
+inherit autotools toolchain-funcs eutils versionator gnome2-utils games
 
 MY_PV=$(get_version_component_range -2)
 VIDEOS_PV=2.2
@@ -72,6 +72,10 @@ src_configure() {
 		$(use_enable debug debug relaxed) \
 		$(use_enable nls) \
 		--with-backend=$(usex qt4 "qt" "sdl")
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)"
 }
 
 src_install() {
