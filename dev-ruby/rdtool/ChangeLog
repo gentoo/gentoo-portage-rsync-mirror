@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.57 2013/08/03 07:34:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.58 2013/08/29 19:51:03 ago Exp $
+
+  29 Aug 2013; Agostino Sarubbo <ago@gentoo.org> rdtool-0.6.38.ebuild:
+  Stable for ia64, wrt bug #475978
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> rdtool-0.6.38.ebuild:
   Stable for sparc, wrt bug #475978

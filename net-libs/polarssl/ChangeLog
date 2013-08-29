@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/polarssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.54 2013/08/28 12:10:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.55 2013/08/29 19:43:44 tommy Exp $
+
+  29 Aug 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -polarssl-1.2.5.ebuild, -files/polarssl-0.14.0-ldflags.patch,
+  -files/polarssl-0.14.0-makefile.patch, -files/polarssl-1.0.0-makefile.patch:
+  Drop old version, cleanup filesdir
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> polarssl-1.2.8.ebuild:
   Stable for sparc, wrt bug #480882
