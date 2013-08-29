@@ -19,17 +19,17 @@ diff -r c1563f514b5b Makefile.in
  
  $(objects)/$(TARGET): $(OBJECTS) $(VERSION_OBJECTS)
 -	$(LIBTOOL) --mode=link $(CC) -o $@ $(OBJECTS) $(VERSION_OBJECTS) $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
  
  $(objects)/$(SDLMAIN_TARGET): $(SDLMAIN_OBJECTS)
 -	$(AR) cru $@ $(SDLMAIN_OBJECTS)
 -	$(RANLIB) $@
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
  
  $(objects)/$(SDLTEST_TARGET): $(SDLTEST_OBJECTS)
 -	$(AR) cru $@ $(SDLTEST_OBJECTS)
 -	$(RANLIB) $@
-+	$(LIBTOOL) --mode=link $(CC) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
  
  install: all install-bin install-hdrs install-lib install-data
  install-bin:
