@@ -1,24 +1,33 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.6.ebuild,v 1.3 2008/11/18 16:01:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mytop/mytop-1.6-r4.ebuild,v 1.1 2013/08/29 16:04:28 idella4 Exp $
 
-inherit perl-app
+EAPI=5
+
+inherit perl-module
 
 DESCRIPTION="mytop - a top clone for mysql"
 HOMEPAGE="http://jeremy.zawodny.com/mysql/mytop/"
 SRC_URI="http://jeremy.zawodny.com/mysql/mytop/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-perl/DBD-mysql
+RDEPEND="dev-perl/DBD-mysql
 	virtual/perl-Getopt-Long
 	dev-perl/TermReadKey
 	virtual/perl-Term-ANSIColor
-	virtual/perl-Time-HiRes
+	virtual/perl-Time-HiRes"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+PATCHES=( "${FILESDIR}/${PN}-1.6-global-status.patch"
+		  "${FILESDIR}/${PN}-1.6-queries-vs-questions-mysql-5.0.76.patch"
+		  "${FILESDIR}/${PN}-1.6-getopt-long-2.38-fixup.patch"
+		)
+SRC_TEST="do"
 
 src_install() {
 	perl-module_src_install

@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/html2latex
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/ChangeLog,v 1.16 2009/09/06 20:47:06 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/html2latex/ChangeLog,v 1.17 2013/08/29 16:17:37 idella4 Exp $
+
+*html2latex-1.1-r1 (29 Aug 2013)
+
+  29 Aug 2013; Ian Delaney <idella4@gentoo.org> +html2latex-1.1-r1.ebuild:
+  revbump -> EAPI 5
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> html2latex-1.1.ebuild:
   Marking html2latex-1.1 ppc64 stable for bug 276990
@@ -53,4 +58,3 @@
   16 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> +html2latex-1.1.ebuild:
   Initial import. Ebuild submitted by Samuel Robyr <samuel.robyr@gmail.com>;
   bug #73407.
-
