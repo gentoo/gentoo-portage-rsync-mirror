@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/terminus-font
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.96 2013/08/29 19:46:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/ChangeLog,v 1.97 2013/08/29 20:22:06 maekke Exp $
+
+  29 Aug 2013; Markus Meier <maekke@gentoo.org> terminus-font-4.38.ebuild:
+  arm stable, bug #448010
 
   29 Aug 2013; Agostino Sarubbo <ago@gentoo.org> terminus-font-4.38.ebuild:
   Stable for ia64, wrt bug #448010

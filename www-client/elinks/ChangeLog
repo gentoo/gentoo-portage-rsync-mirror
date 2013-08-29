@@ -1,6 +1,12 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.157 2013/08/24 11:04:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.158 2013/08/29 20:16:07 axs Exp $
+
+*elinks-0.12_pre6 (29 Aug 2013)
+
+  29 Aug 2013; Ian Stakenvicius <axs@gentoo.org> +elinks-0.12_pre6.ebuild:
+  bumped ebuild to _pre6 ; kept all patches for _pre5 in place since they all
+  still apply clean
 
   24 Aug 2013; Markus Meier <maekke@gentoo.org> elinks-0.12_pre5-r2.ebuild:
   add ~arm, bug #477806
