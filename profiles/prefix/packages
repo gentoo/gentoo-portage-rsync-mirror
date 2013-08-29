@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation.
+# Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/packages,v 1.7 2012/03/12 09:13:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/packages,v 1.8 2013/08/29 02:58:55 jcallen Exp $
 
 # Gentoo Base Prefix Profile
 
@@ -33,3 +33,7 @@
 # we don't ever will install these, so no need to depend on them
 -*virtual/libc
 -*virtual/os-headers
+
+# we don't want this either (as baselayout-prefix provides the functions.sh
+# file that this was added to ../base/packages for)
+-*sys-apps/openrc

@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.394 2013/07/16 08:13:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.395 2013/08/29 02:58:55 jcallen Exp $
+
+  29 Aug 2013; Jonathan Callen <jcallen@gentoo.org> packages:
+  Remove openrc from packages, not used in prefix (bug 482854)
 
   16 Jul 2013; Fabian Groffen <grobian@gentoo.org> -linux/amd64/deprecated:
   remove deprecated file for linux/amd64, it breaks the profile

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.21-r1.ebuild,v 1.1 2013/06/17 22:16:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/duplicity-0.6.22.ebuild,v 1.1 2013/08/29 02:40:39 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -26,7 +26,6 @@ RDEPEND="${DEPEND}
 "
 
 python_prepare_all() {
-	local PATCHES=( "${FILESDIR}"/${PN}-0.6.21-paramiko-delete.patch )
 	distutils-r1_python_prepare_all
 
 	sed -i "s/'COPYING',//" setup.py || die "Couldn't remove unnecessary COPYING file."
