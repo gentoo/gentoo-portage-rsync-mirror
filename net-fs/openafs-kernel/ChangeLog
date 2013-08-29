@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.156 2013/08/29 18:03:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.157 2013/08/29 18:44:48 axs Exp $
+
+*openafs-kernel-1.6.2-r1 (29 Aug 2013)
+
+  29 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
+  +openafs-kernel-1.6.2-r1.ebuild, -openafs-kernel-1.6.2.ebuild,
+  -openafs-kernel-1.6.5.ebuild:
+  put back autotools commands and eclass for stable ebuild also; revbumped to be
+  sure nobody keeps a potentially broken version installed; removed old
 
 *openafs-kernel-1.6.5-r1 (29 Aug 2013)
 

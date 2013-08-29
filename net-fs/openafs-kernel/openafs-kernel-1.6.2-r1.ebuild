@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.2.ebuild,v 1.7 2013/08/29 17:33:58 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.2-r1.ebuild,v 1.1 2013/08/29 18:44:48 axs Exp $
 
 EAPI="4"
 
-inherit eutils multilib linux-mod versionator toolchain-funcs
+inherit eutils autotools multilib linux-mod versionator toolchain-funcs
 
 MY_PV=$(delete_version_separator '_')
 MY_PN=${PN/-kernel}
@@ -44,11 +44,14 @@ src_prepare() {
 	epatch "${WORKDIR}"/gentoo/patches
 	epatch "${FILESDIR}"/openafs-1.6.2-kernel-3.8-{1..5}.patch
 
-	# packaging is f-ed up, so we can't run automake (i.e. eautoreconf)
-	sed -i 's/^\(\s*\)a/\1ea/' regen.sh
-	: # this line makes repoman ok with not calling eautoconf etc. directly
-	skipman=1
-	. regen.sh
+	# packaging is f-ed up, so we can't run eautoreconf
+	# run autotools commands based on what is listed in regen.sh
+	eaclocal -I src/cf
+	eautoconf
+	eautoconf -o configure-libafs configure-libafs.ac
+	eautoheader
+	einfo "Deleting autom4te.cache directory"
+	rm -rf autom4te.cache
 }
 
 src_configure() {

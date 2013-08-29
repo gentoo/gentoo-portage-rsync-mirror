@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.244 2013/08/28 16:45:58 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.245 2013/08/29 18:58:57 constanze Exp $
+
+  29 Aug 2013; Constanze Hausner <constanze@gentoo.org> metadata.xml:
+  Added Thomas D. as new maintainer
 
 *shorewall-4.5.19 (28 Aug 2013)
 

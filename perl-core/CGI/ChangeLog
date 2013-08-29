@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/CGI
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.116 2013/03/02 16:10:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CGI/ChangeLog,v 1.117 2013/08/29 18:36:14 zlogene Exp $
+
+  29 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -CGI-3.510.ebuild,
+  -CGI-3.520.ebuild, -CGI-3.530.0.ebuild, -CGI-3.540.0.ebuild,
+  -CGI-3.550.0.ebuild, -CGI-3.590.0.ebuild, -CGI-3.600.0.ebuild:
+  drop old vulnerable versions wrt bug #443446
 
   02 Mar 2013; Agostino Sarubbo <ago@gentoo.org> CGI-3.630.0.ebuild:
   Stable for sh, wrt bug #458122

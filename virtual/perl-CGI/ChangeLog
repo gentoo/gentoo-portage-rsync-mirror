@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.112 2013/03/02 16:25:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.113 2013/08/29 18:37:16 zlogene Exp $
+
+  29 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -perl-CGI-3.510.ebuild,
+  -perl-CGI-3.520.ebuild, -perl-CGI-3.530.0.ebuild, -perl-CGI-3.540.0.ebuild,
+  -perl-CGI-3.550.0.ebuild, -perl-CGI-3.590.0-r1.ebuild,
+  -perl-CGI-3.600.0.ebuild:
+  drop old vulnerable versions wrt bug #443446
 
   02 Mar 2013; Agostino Sarubbo <ago@gentoo.org> perl-CGI-3.630.0.ebuild:
   Stable for sh, wrt bug #458122
