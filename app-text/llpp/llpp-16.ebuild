@@ -1,21 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.27 2013/08/29 05:54:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-16.ebuild,v 1.1 2013/08/29 05:54:07 xmw Exp $
 
 EAPI=5
 
-inherit eutils git-2 multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs vcs-snapshot
 
 DESCRIPTION="a graphical PDF viewer which aims to superficially resemble less(1)"
 HOMEPAGE="http://repo.or.cz/w/llpp.git"
-EGIT_REPO_URI="git://repo.or.cz/llpp.git"
+SRC_URI="http://repo.or.cz/w/llpp.git/snapshot/8855b8a50acf02257773469578c5ddaaf12eff9f.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+ocamlopt static"
 
-LIB_DEPEND=">=app-text/mupdf-1.3:=[static-libs]
+LIB_DEPEND="~app-text/mupdf-1.3_pre20130704:=[static-libs]
 	media-libs/openjpeg:2[static-libs]
 	media-libs/freetype:2[static-libs]
 	media-libs/jbig2dec[static-libs]
