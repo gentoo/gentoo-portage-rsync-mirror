@@ -6,4 +6,8 @@
   <email>chainsaw@gentoo.org</email>
   <name>Tony Vroon</name>
 </maintainer>
+<maintainer>
+  <email>whissi@whissi.de</email>
+  <name>Thomas D.</name>
+</maintainer>
 </pkgmetadata>

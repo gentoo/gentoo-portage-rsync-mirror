@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall6-lite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.63 2013/08/28 17:02:21 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.64 2013/08/29 19:04:47 constanze Exp $
+
+  29 Aug 2013; Constanze Hausner <constanze@gentoo.org> metadata.xml:
+  Added Thomas D. as new maintainer
 
 *shorewall6-lite-4.5.19 (28 Aug 2013)
 
