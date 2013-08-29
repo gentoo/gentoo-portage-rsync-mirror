@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.221 2013/08/03 09:45:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.224 2013/08/29 12:53:35 ssuominen Exp $
+
+  29 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> gvfs-1.16.2.ebuild,
+  gvfs-1.16.3.ebuild:
+  Correct double REQUIRED_USE in the ebuild (that was there even before last
+  commit)
+
+  29 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> gvfs-1.16.2.ebuild,
+  gvfs-1.16.3.ebuild:
+  Make USE="udisks" require USE="udev" wrt #482764 by Michael Weber
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> gvfs-1.16.2.ebuild,
   gvfs-1.16.3.ebuild:
