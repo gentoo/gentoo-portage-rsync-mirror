@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.9999.ebuild,v 1.11 2013/08/30 08:34:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.0.5.2.ebuild,v 1.1 2013/08/30 08:34:47 scarabeus Exp $
 
 EAPI=5
 
@@ -35,15 +35,16 @@ HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentoo.org/~dilfridge/distfiles/${BRANDING} )"
 [[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"
 
-# Split modules following git/tarballs
-# Core MUST be first!
 # Help is used for the image generator
+# We can also build translations and others if needed.
+# Core must be first
 MODULES="core help"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
 		for mod in ${MODULES}; do
 			if [[ ${mod} == core ]]; then
+				# core is now packed without it in the name, git reponame stay
 				SRC_URI+=" ${i}/${P}.tar.xz"
 			else
 				SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.xz"
@@ -72,7 +73,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus debug eds gnome gstreamer +gtk
-gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba +webdav"
+jemalloc kde mysql odk opengl postgres telepathy test +vba +webdav"
 
 LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -81,6 +82,7 @@ LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript 
 # numbertext, typo, validator, watch-window: ^^
 # oooblogger: no homepage or anything
 # Extensions that need extra work:
+# report-builder: missing java packages
 for lo_xt in ${LO_EXTS}; do
 	IUSE+=" libreoffice_extensions_${lo_xt}"
 done
@@ -100,8 +102,6 @@ COMMON_DEPEND="
 	>=app-text/libexttextcat-3.2
 	app-text/liblangtag
 	app-text/libmspub
-	>=app-text/libmwaw-0.1.7
-	app-text/libodfgen
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
@@ -113,16 +113,15 @@ COMMON_DEPEND="
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
-	>=dev-libs/liborcus-0.5.1:=
+	=dev-libs/liborcus-0.3*
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
-	>=dev-libs/redland-1.0.16[ssl]
+	>=dev-libs/redland-1.0.14[ssl]
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
-	>=media-libs/harfbuzz-0.9.10:=[icu(+)]
 	media-libs/lcms:2
 	>=media-libs/libpng-1.4
 	>=media-libs/libcdr-0.0.5
@@ -144,7 +143,6 @@ COMMON_DEPEND="
 		x11-libs/gdk-pixbuf[X]
 		>=x11-libs/gtk+-2.24:2
 	)
-	gtk3? ( >=x11-libs/gtk+-3.2:3 )
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
@@ -202,7 +200,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	=dev-util/mdds-0.8*:=
+	<dev-util/mdds-0.8.0
 	virtual/pkgconfig
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
@@ -230,6 +228,8 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
+	"${FILESDIR}/${PN}-3.7-separate-checks.patch"
+	"${FILESDIR}/${PN}-4.1.0.4-neon-build.patch"
 )
 
 REQUIRED_USE="
@@ -316,9 +316,15 @@ src_unpack() {
 }
 
 src_prepare() {
+	# fixed in master, flags order in bridges compilation
+	filter-flags -fomit-frame-pointer
+
 	# optimization flags
+	export ARCH_FLAGS="${CXXFLAGS}"
+	export LINKFLAGSOPTIMIZE="${LDFLAGS}"
 	export GMAKE_OPTIONS="${MAKEOPTS}"
 	# System python 2.7 enablement:
+	export PYTHON="${PYTHON}"
 	export PYTHON_CFLAGS=$(python_get_CFLAGS)
 	export PYTHON_LIBS=$(python_get_LIBS)
 
@@ -332,7 +338,8 @@ src_prepare() {
 
 	base_src_prepare
 
-	AT_M4DIR="m4" eautoreconf
+	AT_M4DIR="m4"
+	eautoreconf
 	# hack in the autogen.sh
 	touch autogen.lastrun
 
@@ -342,14 +349,6 @@ src_prepare() {
 		-e "s:%libdir%:$(get_libdir):g" \
 		-i pyuno/source/module/uno.py \
 		-i scripting/source/pyprov/officehelper.py || die
-	# sed in the tests
-	sed -i \
-		-e 's#all : build unitcheck#all : build#g' \
-		solenv/gbuild/Module.mk || die
-	sed -i \
-		-e 's#check: dev-install subsequentcheck#check: unitcheck slowcheck dev-install subsequentcheck#g' \
-		-e 's#Makefile.gbuild all slowcheck#Makefile.gbuild all#g' \
-		Makefile.in || die
 
 	if use branding; then
 		# hack...
@@ -393,6 +392,7 @@ src_configure() {
 			--without-system-hsqldb
 			--with-ant-home="${ANT_HOME}"
 			--with-jdk-home=$(java-config --jdk-home 2>/dev/null)
+			--with-java-target-version=$(java-pkg_get-target)
 			--with-jvm-path="${EPREFIX}/usr/$(get_libdir)/"
 		"
 
@@ -414,6 +414,7 @@ src_configure() {
 	fi
 
 	# system headers/libs/...: enforce using system packages
+	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --enable-cairo: ensure that cairo is always required
 	# --enable-graphite: disabling causes build breakages
 	# --enable-*-link: link to the library rather than just dlopen on runtime
@@ -422,12 +423,14 @@ src_configure() {
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
+	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-systray: quickstarter does not actually work at all so do not
 	#   promote it
+	# --disable-zenity: disable build icon
 	# --enable-extension-integration: enable any extension integration support
 	# --without-{afms,fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
-	# --disable-report-builder: too much java packages pulled in without pkgs
+	# --disable-ext-report-builder: too much java packages pulled in
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}/" \
 		--with-system-headers \
@@ -442,6 +445,7 @@ src_configure() {
 		--enable-randr \
 		--enable-randr-link \
 		--enable-release-build \
+		--enable-unix-qstart-libpng \
 		--enable-hardlink-deliver \
 		--disable-ccache \
 		--disable-crashdump \
@@ -450,12 +454,14 @@ src_configure() {
 		--disable-fetch-external \
 		--disable-gnome-vfs \
 		--disable-gstreamer-0-10 \
-		--disable-report-builder \
+		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
 		--disable-online-update \
+		--disable-pch \
 		--disable-rpath \
 		--disable-systray \
+		--disable-zenity \
 		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
 		--with-build-version="Gentoo official package" \
 		--enable-extension-integration \
@@ -466,11 +472,13 @@ src_configure() {
 		--with-lang="" \
 		--with-parallelism=${jbs} \
 		--with-system-ucpp \
+		--with-unix-wrapper=libreoffice \
 		--with-vendor="Gentoo Foundation" \
 		--with-x \
 		--without-afms \
 		--without-fonts \
 		--without-myspell-dicts \
+		--without-system-mozilla \
 		--without-help \
 		--with-helppack-integration \
 		--without-sun-templates \
@@ -483,9 +491,8 @@ src_configure() {
 		$(use_enable gnome gio) \
 		$(use_enable gnome lockdown) \
 		$(use_enable gtk) \
-		$(use_enable gtk3) \
 		$(use_enable kde kde4) \
-		$(use_enable mysql ext-mariadb-connector) \
+		$(use_enable mysql ext-mysql-connector) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
@@ -519,11 +526,8 @@ src_compile() {
 		[[ -s "${path}/helpimg.ilst" ]] || ewarn "The help images list is empty, something is fishy, report a bug."
 	)
 
-	local target
-	use test && target="build" || target="build-nocheck"
-
 	# this is not a proper make script
-	make ${target} || die
+	make build || die
 }
 
 src_test() {

@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.79 2013/08/22 06:46:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.80 2013/08/30 08:36:50 heroxbd Exp $
+
+  30 Aug 2013; Benda Xu <heroxbd@gentoo.org> +files/xpra-0.10.1-prefix.patch,
+  xpra-0.10.1.ebuild:
+  patch runtime /etc directory for Prefix. bug 482988. Thanks to Michael for
+  reviewing.
 
 *xpra-0.10.1 (22 Aug 2013)
 

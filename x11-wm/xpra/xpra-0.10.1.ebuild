@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.10.1.ebuild,v 1.1 2013/08/22 06:46:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.10.1.ebuild,v 1.2 2013/08/30 08:36:50 heroxbd Exp $
 
 EAPI=5
 
@@ -63,7 +63,7 @@ DEPEND="${COMMON_DEPEND}
 python_prepare_all() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.7.1-ignore-gentoo-no-compile.patch \
-		"${FILESDIR}"/${PN}-0.8.0-prefix.patch
+		"${FILESDIR}"/${PN}-0.10.1-prefix.patch
 
 	#assuming ffmpeg and libav mutual exclusive installs
 	if has_version "media-video/libav" ; then

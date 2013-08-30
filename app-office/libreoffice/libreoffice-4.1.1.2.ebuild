@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.0.4.ebuild,v 1.4 2013/08/27 16:06:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.1.2.ebuild,v 1.1 2013/08/30 08:34:47 scarabeus Exp $
 
 EAPI=5
 
@@ -230,6 +230,7 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	# not upstreamable stuff
 	"${FILESDIR}/${PN}-3.7-system-pyuno.patch"
+	"${FILESDIR}/${PN}-4.1.0.4-neon-build.patch"
 )
 
 REQUIRED_USE="
@@ -355,7 +356,6 @@ src_prepare() {
 		# hack...
 		mv -v "${WORKDIR}/branding-intro.png" "${S}/icon-themes/galaxy/brand/intro.png" || die
 	fi
-	epatch "${FILESDIR}/libreoffice-4.1.0.4-neon-build.patch" || die "Failed patching for neon"
 }
 
 src_configure() {
@@ -520,8 +520,11 @@ src_compile() {
 		[[ -s "${path}/helpimg.ilst" ]] || ewarn "The help images list is empty, something is fishy, report a bug."
 	)
 
+	local target
+	use test && target="build" || target="build-nocheck"
+
 	# this is not a proper make script
-	make build || die
+	make ${target} || die
 }
 
 src_test() {
