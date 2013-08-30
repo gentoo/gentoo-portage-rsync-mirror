@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.27 2013/07/26 02:44:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.28 2013/08/30 00:59:18 floppym Exp $
 
 EAPI="5"
 
@@ -36,6 +36,7 @@ python_prepare_all() {
 	python_export_best
 	echo VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version
 	VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version
+	distutils-r1_python_prepare_all
 }
 
 python_install_all() {

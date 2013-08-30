@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.294 2013/07/26 02:44:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.295 2013/08/30 00:59:18 floppym Exp $
+
+  30 Aug 2013; Mike Gilbert <floppym@gentoo.org> gentoolkit-9999.ebuild:
+  Call distutils-r1_python_prepare_all.
 
   26 Jul 2013; Mike Gilbert <floppym@gentoo.org> gentoolkit-9999.ebuild:
   Add pypy2.0 and fix PYTHON_REQ_USE after recent remove of xml use flag.
