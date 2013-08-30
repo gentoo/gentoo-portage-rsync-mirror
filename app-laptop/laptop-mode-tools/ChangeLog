@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/laptop-mode-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.79 2013/08/07 13:35:00 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/ChangeLog,v 1.80 2013/08/30 18:16:23 alonbl Exp $
+
+*laptop-mode-tools-1.63-r3 (30 Aug 2013)
+
+  30 Aug 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/laptop-mode-tools-1.63-conf.patch, +laptop-mode-tools-1.63-r3.ebuild:
+  Honor .conf files only, bug#482974, thanks to Steev Klimaszewski
 
   07 Aug 2013; Alon Bar-Lev <alonbl@gentoo.org>
   -files/1.62/0001-Do-not-ship-the-board-specific-folder-in-default-ins.patch,
