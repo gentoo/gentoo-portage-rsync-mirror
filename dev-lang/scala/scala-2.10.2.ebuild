@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.2.ebuild,v 1.1 2013/08/22 10:05:56 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.2.ebuild,v 1.2 2013/08/30 13:55:11 gienah Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="doc examples source"
@@ -53,6 +53,7 @@ HOMEPAGE="http://www.scala-lang.org/"
 SRC_URI="!binary?
 (	https://github.com/scala/scala/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	${JURI[@]}
+	http://dev.gentoo.org/~gienah/snapshots/${P}-maven-deps.tar.gz
 )"
 #	binary? ( http://dev.gentoo.org/~ali_bush/distfiles/${P}-gentoo-binary.tar.bz2 )"
 LICENSE="BSD"
@@ -61,7 +62,9 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="binary emacs"
 
 COMMON_DEP="dev-java/ant-core
-	dev-java/hawtjni-runtime"
+	dev-java/bndlib
+	dev-java/hawtjni-runtime
+	dev-java/junit:4"
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.6.0
 	<virtual/jdk-1.8.0
@@ -78,7 +81,7 @@ PDEPEND="emacs? ( app-emacs/scala-mode )"
 
 S="${WORKDIR}/${P}"
 
-LIBRARY_PKGS="ant-core,hawtjni-runtime"
+LIBRARY_PKGS="ant-core,bndlib,hawtjni-runtime,junit-4"
 
 CHECKREQS_MEMORY="1532M"
 
@@ -100,12 +103,18 @@ src_unpack() {
 		unpack ${A}
 	else
 		unpack "${P}.tar.gz"
+		unpack "${P}-maven-deps.tar.gz"
 	fi
 }
 
 java_prepare() {
 	java-pkg_getjars ${LIBRARY_PKGS}
 	if ! use binary; then
+		local j
+		for j in "${JURI[@]}"
+		do
+			cp -p "${DISTDIR}/${j##*/}" "${S}/${j#${BURI}/*/}" || die
+		done
 		# gentoo patch (by gienah) to stop it calling git log in the build
 		epatch "${FILESDIR}/${PN}-2.10.2-no-git.patch"
 		if has_version ">=virtual/jdk-1.7.0"; then
@@ -114,11 +123,61 @@ java_prepare() {
 		fi
 		# https://issues.scala-lang.org/browse/SI-7455
 		epatch "${FILESDIR}/${PN}-2.10.2-jdk-1.7-swing-SI-7455.patch"
-		local j
-		for j in "${JURI[@]}"
+		# Note: to bump scala, some things to try are:
+		# 1. update all the sha1s in JURI
+		# 2. comment out applying the maven-deps patch and all the stuff here up to and including the sed of build.xml
+		# 3. try emerge scala, it will likely download more stuff in src_compile to ${WORDIR}/.m2
+		# 4. tar up the stuff in ${WORDIR}/.m2 and change the ${P}-maven-deps.tar.gz in SRC_URI to point to it.
+		# 5. uncomment the maven-deps patch apply and all the stuff up to and including the sed of build.xml
+		# 6. the hash in ${P}-no-git.patch should be updated by searching for hash matching the scala release
+		# tag, so that the source code hyper-links in the scala documentation will point to the correct version of
+		# the source code.
+		# Bug 482192
+		epatch "${FILESDIR}/${PN}-2.10.2-maven-deps.patch"
+		# we have $(java-config -p bndlib) in portage, but not bnd.
+		local bnd_classpath=""
+		for i in $(find "${WORKDIR}/.m2/repository/biz/aQute/bnd" -type f -name *.jar -print)
 		do
-			cp -p "${DISTDIR}/${j##*/}" "${S}/${j#${BURI}/*/}" || die
+			if [ -z "${bnd_classpath}" ]
+			then
+				bnd_classpath="${i}"
+			else
+				bnd_classpath="${bnd_classpath}:${i}"
+			fi
 		done
+		bnd_classpath="${bnd_classpath}:$(java-config -p bndlib)"
+
+		# pax runner appears to only be used in the tests
+		local paxrunner_classpath=""
+		for i in $(find "${WORKDIR}/.m2/repository/org/ops4j/" -type f -name *.jar -print)
+		do
+			if [ -z "${paxrunner_classpath}" ]
+			then
+				paxrunner_classpath="${i}"
+			else
+				paxrunner_classpath="${paxrunner_classpath}:${i}"
+			fi
+		done
+		paxrunner_classpath="${paxrunner_classpath}:$(java-config -p junit-4)"
+
+		# DiffUtils does not appear to be in portage.  It is placed in ${partest.extras.classpath} and
+		# copied to ${build-pack.dir}/lib in ${PN}-2.10.2-maven-deps.patch.
+		local diffutils_classpath=""
+		for i in $(find "${WORKDIR}/.m2/repository/com/googlecode/java-diff-utils" -type f -name *.jar -print)
+		do
+			if [ -z "${diffutils_classpath}" ]
+			then
+				diffutils_classpath="${i}"
+			else
+				diffutils_classpath="${diffutils_classpath}:${i}"
+			fi
+		done
+
+		sed -e "s@BNDLIB_CLASSPATH@${bnd_classpath}@" \
+			-e "s@PAX_RUNNER_CLASSPATH@${paxrunner_classpath}@" \
+			-e "s@DIFFUTILS_CLASSPATH@${diffutils_classpath}@" \
+			-i "${S}/build.xml" \
+			|| die "could not sed classpaths in build.xml"
 	fi
 }
 
@@ -128,14 +187,11 @@ src_compile() {
 		#sets -X type variables which might come back to bite me
 		unset ANT_OPTS
 
-		# Thanks to Coy Barnes: https://bugs.gentoo.org/show_bug.cgi?id=450298#c13
-		export JAVA_OPTS="$JAVA_OPTS -Duser.home=${T}"
-
 		# reported in bugzilla that multiple launches use less resources
 		# https://bugs.gentoo.org/show_bug.cgi?id=282023
 		eant all.clean
 		eant -Djavac.args="-encoding UTF-8" -Djava6.home=${JAVA_HOME} \
-			build-opt
+			-Duser.home="${WORKDIR}" build-opt
 		eant dist.done
 	else
 		einfo "Skipping compilation, USE=binary is set."
@@ -182,6 +238,4 @@ src_install() {
 		local _name=$(basename "${b}")
 		dosym "/usr/share/${PN}/bin/${_name}" "/usr/bin/${_name}"
 	done
-	dosym "/usr/share/${JAVA_PKG_NAME}/lib" "/usr/share/${PN}/lib"
-	dosym "/usr/share/${JAVA_PKG_NAME}/package.env" "/usr/share/${PN}/package.env"
 }

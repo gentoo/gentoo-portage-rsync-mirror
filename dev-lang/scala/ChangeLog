@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.32 2013/08/22 10:05:56 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.33 2013/08/30 13:55:11 gienah Exp $
+
+  30 Aug 2013; Mark Wright <gienah@gentoo.org>
+  +files/scala-2.10.2-maven-deps.patch, scala-2.10.2.ebuild:
+  Fix: bug 482192 - thanks to Christian Strahl, Mike Limansky and Sumit Khanna
+  for reporting; bug 482260 - thanks to Christoph Lange for reporting; bug
+  482286
 
 *scala-2.10.2 (22 Aug 2013)
 
