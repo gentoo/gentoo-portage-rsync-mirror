@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-fixers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.14 2013/03/11 06:32:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.15 2013/08/30 20:24:42 hwoarang Exp $
+
+  30 Aug 2013; Markos Chandras <hwoarang@gentoo.org> zope-fixers-1.1.2.ebuild:
+  Add missing app-arch/unzip dependency
 
 *zope-fixers-1.1.2 (11 Mar 2013)
 
