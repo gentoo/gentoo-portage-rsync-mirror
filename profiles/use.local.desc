@@ -4916,6 +4916,7 @@ net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devi
 net-misc/bfgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/bfgminer:opencl - Enable support for mining with OpenCL-capable devices (GPUs)
 net-misc/bfgminer:padlock - Enable support for mining with VIA Padlock CPUs
+net-misc/bfgminer:proxy - Enable support for getwork proxy device (often used with Block Erupter Blades)
 net-misc/bfgminer:scrypt - Enable support for scrypt mining algorithm
 net-misc/bfgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm
 net-misc/bfgminer:sse4 - Enable support for CPU SSE4 mining algorithm
