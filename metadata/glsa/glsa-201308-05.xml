@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">wireshark</product>
   <announced>August 28, 2013</announced>
-  <revised>August 28, 2013: 1</revised>
+  <revised>August 30, 2013: 2</revised>
   <bug>398549</bug>
   <bug>427964</bug>
   <bug>431572</bug>
@@ -80,14 +80,14 @@
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4296">CVE-2012-4296</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4297">CVE-2012-4297</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4298">CVE-2012-4298</uri>
-    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3540">CVE-2013-3540</uri>
-    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3541">CVE-2013-3541</uri>
-    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3542">CVE-2013-3542</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3555">CVE-2013-3555</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3556">CVE-2013-3556</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3557">CVE-2013-3557</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3558">CVE-2013-3558</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3559">CVE-2013-3559</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3560">CVE-2013-3560</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3561">CVE-2013-3561</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3562">CVE-2013-3562</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-4074">CVE-2013-4074</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-4075">CVE-2013-4075</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-4076">CVE-2013-4076</uri>
@@ -119,5 +119,5 @@
   <metadata tag="requester" timestamp="Thu, 10 May 2012 22:02:05 +0000">
     underling
   </metadata>
-  <metadata tag="submitter" timestamp="Wed, 28 Aug 2013 10:57:29 +0000">ackle</metadata>
+  <metadata tag="submitter" timestamp="Fri, 30 Aug 2013 07:20:47 +0000">ackle</metadata>
 </glsa>

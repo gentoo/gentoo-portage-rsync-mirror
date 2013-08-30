@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.6.ebuild,v 1.1 2013/08/21 12:41:54 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.6.ebuild,v 1.2 2013/08/30 07:02:29 heroxbd Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -46,6 +46,11 @@ pkg_setup() {
 	scons_opts+=" --use-system-pcre"
 	scons_opts+=" --use-system-snappy"
 	scons_opts+=" --use-system-boost"
+
+	if use prefix; then
+		scons_opts+=" --cpppath=${EPREFIX}/usr/include"
+		scons_opts+=" --libpath=${EPREFIX}/usr/$(get_libdir)"
+	fi
 
 	if use kerberos; then
 		scons_opts+=" --use-sasl-client"

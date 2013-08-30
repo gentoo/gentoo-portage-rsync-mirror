@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.75 2013/08/21 12:41:54 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.76 2013/08/30 07:02:29 heroxbd Exp $
+
+  30 Aug 2013; Benda Xu <heroxbd@gentoo.org> mongodb-2.4.6.ebuild:
+  add Prefix support for headers and libraries, bug 482178
 
 *mongodb-2.4.6 (21 Aug 2013)
 *mongodb-2.2.6 (21 Aug 2013)
