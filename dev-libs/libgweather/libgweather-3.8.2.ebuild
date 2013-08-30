@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.8.2.ebuild,v 1.2 2013/07/25 21:39:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.8.2.ebuild,v 1.3 2013/08/30 21:14:23 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,8 +15,6 @@ SLOT="2/3-3" # subslot = 3-(libgweather-3 soname suffix)
 IUSE="+introspection"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 
-# libsoup-gnome is to be used because libsoup[gnome] might not
-# get libsoup-gnome installed by the time ${P} is built
 COMMON_DEPEND="
 	>=x11-libs/gtk+-2.90.0:3[introspection?]
 	>=dev-libs/glib-2.35.1:2

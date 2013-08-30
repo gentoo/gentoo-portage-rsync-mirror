@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.8.3.ebuild,v 1.4 2013/08/27 22:21:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.8.3.ebuild,v 1.5 2013/08/30 21:19:17 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ COMMON_DEPEND="
 		>=dev-libs/gobject-introspection-0.9.3
 		>=x11-libs/gtk+-3:3[introspection]
 		>=x11-libs/gtksourceview-3.6:3.0[introspection]
-		dev-python/pycairo
+		dev-python/pycairo[${PYTHON_USEDEP}]
 		>=dev-python/pygobject-3:3[cairo,${PYTHON_USEDEP}] )
 	spell? (
 		>=app-text/enchant-1.2:=

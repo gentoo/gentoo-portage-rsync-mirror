@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.95 2013/07/25 21:39:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.96 2013/08/30 21:14:23 eva Exp $
+
+  30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -libgweather-3.6.2.ebuild, -libgweather-3.8.1.ebuild,
+  libgweather-3.8.2.ebuild:
+  Clean up old revisions and deprecated comments.
 
   25 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> libgweather-3.8.2.ebuild:
   Raise gtk-doc-am dependency per configure. changelog & configure states that
