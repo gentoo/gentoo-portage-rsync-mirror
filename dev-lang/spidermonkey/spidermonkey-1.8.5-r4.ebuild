@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r4.ebuild,v 1.19 2013/08/08 20:49:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.5-r4.ebuild,v 1.20 2013/08/30 17:28:21 axs Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -18,13 +18,14 @@ SRC_URI="https://ftp.mozilla.org/pub/mozilla.org/js/${TARBALL_P}.tar.gz"
 
 LICENSE="NPL-1.1"
 SLOT="0/mozjs185"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x64-macos"
 IUSE="debug minimal static-libs test"
 
 S="${WORKDIR}/${MY_P}"
 BUILDDIR="${S}/js/src"
 
-RDEPEND=">=dev-libs/nspr-4.7.0"
+RDEPEND=">=dev-libs/nspr-4.7.0
+	x64-macos? ( dev-libs/jemalloc )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	app-arch/zip
@@ -109,6 +110,8 @@ src_compile() {
 
 src_test() {
 	cd "${BUILDDIR}/jsapi-tests" || die
+	# for bug 415791
+	pax-mark mr jsapi-tests
 	emake check
 }
 

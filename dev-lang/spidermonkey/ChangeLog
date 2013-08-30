@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.120 2013/08/10 02:43:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.122 2013/08/30 17:29:35 axs Exp $
+
+  30 Aug 2013; Ian Stakenvicius <axs@gentoo.org> metadata.xml,
+  spidermonkey-1.8.5-r4.ebuild:
+  added x64-macos keyword and extra dep (bug 464654); pax-marked tests so they
+  finish on hardened (bug 415791)
 
 *spidermonkey-17.0.0-r1 (10 Aug 2013)
 
