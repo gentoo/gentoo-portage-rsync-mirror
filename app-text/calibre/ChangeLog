@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.299 2013/08/25 17:08:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.300 2013/08/30 18:34:37 zmedico Exp $
+
+*calibre-1.1 (30 Aug 2013)
+
+  30 Aug 2013; Zac Medico <zmedico@gentoo.org> +calibre-1.1.ebuild:
+  1.1 version bump.
 
   25 Aug 2013; Zac Medico <zmedico@gentoo.org> calibre-1.0.ebuild:
   Add dev-python/apsw dep for bug #482294.

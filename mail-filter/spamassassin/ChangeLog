@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.218 2013/06/11 18:50:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.219 2013/08/30 18:47:49 pacho Exp $
+
+*spamassassin-3.3.2-r2 (30 Aug 2013)
+
+  30 Aug 2013; Pacho Ramos <pacho@gentoo.org> +files/spamassassin.service,
+  +spamassassin-3.3.2-r2.ebuild:
+  Add unit file (#465542 by August Hörandl)
 
   11 Jun 2013; Markus Meier <maekke@gentoo.org> spamassassin-3.3.2-r1.ebuild:
   arm stable, bug #269129

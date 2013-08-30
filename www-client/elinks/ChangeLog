@@ -1,6 +1,9 @@
 # ChangeLog for www-client/elinks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.159 2013/08/30 14:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.160 2013/08/30 18:42:24 ago Exp $
+
+  30 Aug 2013; Agostino Sarubbo <ago@gentoo.org> elinks-0.12_pre6.ebuild:
+  Stable for amd64, wrt bug #450534
 
   30 Aug 2013; Jeroen Roovers <jer@gentoo.org> elinks-0.12_pre6.ebuild:
   Stable for HPPA (bug #450534).

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.63-r3.ebuild,v 1.1 2013/08/30 18:16:23 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.63-r3.ebuild,v 1.2 2013/08/30 18:47:39 alonbl Exp $
 
 EAPI=5
 inherit eutils multilib systemd udev
@@ -31,6 +31,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-pcie-aspm-silencing-stderr.patch"
 	epatch "${FILESDIR}/${P}-killall.patch"
 	epatch "${FILESDIR}/${P}-conf.patch"
+	epatch "${FILESDIR}/${P}-udevadm.patch"
 
 	# This should avoid conflict with pm-powersave wrt #327443 and #396703
 	cat <<-EOF > "${T}"/${PN}
