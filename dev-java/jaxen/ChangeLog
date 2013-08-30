@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jaxen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.60 2013/08/15 08:53:59 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxen/ChangeLog,v 1.61 2013/08/30 07:54:12 tomwij Exp $
+
+  30 Aug 2013; Tom Wijsman <TomWij@gentoo.org> -jaxen-1.1.4-r1.ebuild:
+  Remove revision bump which causes a circular dependency as seen in bug
+  #482750, bug reported by Camaron and Ted Tanberry; this revision bump was
+  introduced for bug #481112 where the dependency should be indirectly installed
+  because it is a dependency of the jdom dependency.
 
 *jaxen-1.1.4-r1 (15 Aug 2013)
 
