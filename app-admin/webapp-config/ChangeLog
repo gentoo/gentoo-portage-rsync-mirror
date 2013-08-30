@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.96 2013/08/25 04:06:14 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.97 2013/08/30 20:46:01 blueness Exp $
+
+  30 Aug 2013; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Remove proxy-maintainers herd because twitch153 became a developer
 
   25 Aug 2013; twitch153 metadata.xml:
   metadata.xml: Corrects email address for twitch153, bug#482210
