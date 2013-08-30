@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.2.ebuild,v 1.5 2013/08/27 08:15:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.6.5-r1.ebuild,v 1.1 2013/08/30 14:52:17 axs Exp $
 
 EAPI="4"
 
-inherit flag-o-matic eutils multilib toolchain-funcs versionator pam
+inherit flag-o-matic eutils autotools multilib toolchain-funcs versionator pam
 
 MY_PV=$(delete_version_separator '_')
 MY_P="${PN}-${MY_PV}"
@@ -18,7 +18,7 @@ SRC_URI="http://openafs.org/dl/openafs/${MY_PV}/${MY_P}-src.tar.bz2
 
 LICENSE="IBM BSD openafs-krb5-a APSL-2"
 SLOT="0"
-KEYWORDS="amd64 sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc kerberos pam"
 
 RDEPEND="~net-fs/openafs-kernel-${PV}
@@ -32,11 +32,14 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	epatch "${WORKDIR}"/gentoo/patches
 
-	# packaging is f-ed up, so we can't run automake (i.e. eautoreconf)
-	sed -i 's/^\(\s*\)a/\1ea/' regen.sh
-	: # this line makes repoman ok with not calling eautoconf etc. directly
-	skipman=1
-	. regen.sh
+	# packaging is f-ed up, so we can't run eautoreconf
+	# run autotools commands based on what is listed in regen.sh
+	eaclocal -I src/cf
+	eautoconf
+	eautoconf -o configure-libafs configure-libafs.ac
+	eautoheader
+	einfo "Deleting autom4te.cache directory"
+	rm -rf autom4te.cache
 }
 
 src_configure() {

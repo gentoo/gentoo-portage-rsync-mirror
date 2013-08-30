@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/openafs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.194 2013/08/27 08:15:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.195 2013/08/30 14:52:17 axs Exp $
+
+*openafs-1.6.2-r1 (30 Aug 2013)
+*openafs-1.6.5-r1 (30 Aug 2013)
+
+  30 Aug 2013; Ian Stakenvicius <axs@gentoo.org> +openafs-1.6.2-r1.ebuild,
+  +openafs-1.6.5-r1.ebuild, -openafs-1.6.2.ebuild, -openafs-1.6.5.ebuild:
+  restored autotools (in direct calling form, the same as openafs-kernel) to
+  ensure patches to build system are applied (reverting regression from
+  Aug.27th) ; bumping to be sure all users get the proper updates on-disk
 
 *openafs-1.6.5 (27 Aug 2013)
 
