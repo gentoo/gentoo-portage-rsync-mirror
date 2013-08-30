@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
- <email>vapier@gentoo.org</email>
+ <email>gregkh@gentoo.org</email>
  <description>do whatever</description>
 </maintainer>
 </pkgmetadata>
