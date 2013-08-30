@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.115 2013/08/11 08:17:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.116 2013/08/30 22:49:16 eva Exp $
+
+  30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> midori-0.5.4.ebuild:
+  Depend on libsoup-gnome again, clean up old revisions.
 
   11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> midori-0.5.4.ebuild:
   Restore pax marking of /usr/bin/midori because net-libs/webkit-gtk[jit] is

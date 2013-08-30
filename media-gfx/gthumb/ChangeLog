@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.163 2013/07/11 20:36:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.164 2013/08/30 22:45:15 eva Exp $
+
+  30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> gthumb-3.2.2.ebuild,
+  gthumb-3.2.3.ebuild:
+  Depend on libsoup-gnome again, clean up old revisions.
 
 *gthumb-3.2.3 (11 Jul 2013)
 

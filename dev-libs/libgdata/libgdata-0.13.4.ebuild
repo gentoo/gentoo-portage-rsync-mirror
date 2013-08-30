@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.4.ebuild,v 1.2 2013/08/06 09:34:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/libgdata-0.13.4.ebuild,v 1.3 2013/08/30 22:42:28 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -29,9 +29,7 @@ RDEPEND="
 	gnome? (
 		app-crypt/gcr:=
 		>=net-libs/gnome-online-accounts-3.2
-		|| (
-			>=net-libs/libsoup-2.42
-			>=net-libs/libsoup-gnome-2.37.91:2.4[introspection?] ) )
+		>=net-libs/libsoup-gnome-2.37.91:2.4[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.7 )
 "
 DEPEND="${RDEPEND}

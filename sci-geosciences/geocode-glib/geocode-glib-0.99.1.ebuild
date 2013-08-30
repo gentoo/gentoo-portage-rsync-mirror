@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-0.99.1.ebuild,v 1.2 2013/08/02 21:00:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-0.99.1.ebuild,v 1.3 2013/08/30 22:48:19 eva Exp $
 
 EAPI=5
 GCONF_DEBUG="no" # --enable-debug does not do anything useful
@@ -23,7 +23,7 @@ RDEPEND="
 	net-libs/libsoup:2.4[introspection?]
 	introspection? (
 		>=dev-libs/gobject-introspection-0.6.3
-		|| ( >=net-libs/libsoup-2.42:2.4 net-libs/libsoup-gnome:2.4[introspection] ) )
+		net-libs/libsoup-gnome:2.4[introspection] )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.13

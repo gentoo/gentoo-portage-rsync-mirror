@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.4.ebuild,v 1.2 2013/08/11 08:17:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.4.ebuild,v 1.3 2013/08/30 22:49:16 eva Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION=0.16
@@ -45,7 +45,7 @@ RDEPEND=">=dev-db/sqlite-3.6.19:3
 		unique? ( dev-libs/libunique:3 )
 		webkit2? ( >=net-libs/webkit-gtk-2 )
 		)
-	gnome? ( || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.34:2.4 ) )
+	gnome? ( >=net-libs/libsoup-gnome-2.34:2.4 )
 	zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14 )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}

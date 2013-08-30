@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.2.ebuild,v 1.1 2013/05/13 19:52:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.2.ebuild,v 1.2 2013/08/30 22:45:15 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -30,7 +30,7 @@ COMMON_DEPEND="
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0 )
-	http? ( || ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.36:2.4 ) )
+	http? ( >=net-libs/libsoup-gnome-2.36:2.4 )
 	jpeg? ( virtual/jpeg:0= )
 	json? ( >=dev-libs/json-glib-0.15.0 )
 	libsecret? ( >=app-crypt/libsecret-0.11 )

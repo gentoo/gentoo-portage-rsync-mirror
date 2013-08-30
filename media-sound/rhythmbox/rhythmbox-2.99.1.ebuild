@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.99.1.ebuild,v 1.1 2013/04/22 19:01:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.99.1.ebuild,v 1.2 2013/08/30 22:46:48 eva Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -33,7 +33,7 @@ COMMON_DEPEND="
 	>=dev-libs/gobject-introspection-0.10.0
 	>=dev-libs/libpeas-0.7.3[gtk,python?]
 	>=dev-libs/totem-pl-parser-3.2
-	|| ( >=net-libs/libsoup-2.42:2.4 >=net-libs/libsoup-gnome-2.26:2.4 )
+	>=net-libs/libsoup-gnome-2.26:2.4
 	media-libs/gst-plugins-base:1.0[introspection]
 	media-libs/gstreamer:1.0[introspection]
 	>=sys-libs/tdb-1.2.6

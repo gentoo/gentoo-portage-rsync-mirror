@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.134 2013/05/14 19:49:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.135 2013/08/30 22:43:01 eva Exp $
+
+  30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -totem-pl-parser-3.4.3-r1.ebuild, -totem-pl-parser-3.4.4.ebuild,
+  totem-pl-parser-3.4.5.ebuild, -files/totem-pl-parser-2.32.3-fix-quvi.patch,
+  -files/totem-pl-parser-3.4.3-no-g_clear_pointer.patch:
+  Depend on libsoup-gnome again, clean up old revisions.
 
 *totem-pl-parser-3.4.5 (14 May 2013)
 

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15074 2013/08/30 20:40:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15075 2013/08/30 22:54:05 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -37,9 +37,10 @@
 =dev-util/buildbot-slave-0.8.8
 
 # Gilles Dartiguelongue <eva@gentoo.org> (30 Aug 2013)
-# Prepare libsoup re-split
-=net-libs/libsoup-2.42.2-r1
-=net-libs/libsoup-gnome-2.42.2
+# libsoup-gnome was split again. Mask the inappropriate
+# unsplit revisions to avoid accidental downgrades by users
+=net-libs/libsoup-2.42.2
+=net-libs/libsoup-2.42.1
 
 # Agostino Sarubbo <ago@gentoo.org> (29 Aug 2013)
 # Mask 5.1 series because the backport of the CVE-2012-5627

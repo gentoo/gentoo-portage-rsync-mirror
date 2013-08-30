@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.7.ebuild,v 1.1 2013/06/27 18:39:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/libosinfo-0.2.7.ebuild,v 1.2 2013/08/30 22:48:50 eva Exp $
 
 EAPI=5
 VALA_MIN_API_VERSION="0.16"
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/glib-2:2
 	>=dev-libs/libxslt-1.0.0:=
 	dev-libs/libxml2:=
-	|| ( >=net-libs/libsoup-2.42:2.4 net-libs/libsoup-gnome:2.4 )
+	net-libs/libsoup-gnome:2.4
 	sys-apps/hwids
 	introspection? ( >=dev-libs/gobject-introspection-0.9.0:= )
 "

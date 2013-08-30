@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-0.99.0.ebuild,v 1.10 2013/03/31 19:07:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-0.99.0.ebuild,v 1.11 2013/08/30 22:48:19 eva Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/glib:2
 	net-libs/libsoup:2.4[introspection?]
 	introspection? (
 		>=dev-libs/gobject-introspection-0.6.3
-		|| ( >=net-libs/libsoup-2.42:2.4 net-libs/libsoup-gnome:2.4[introspection] ) )
+		net-libs/libsoup-gnome:2.4[introspection] )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35

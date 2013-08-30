@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1.ebuild,v 1.10 2013/05/14 18:21:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.9.1.ebuild,v 1.11 2013/08/30 22:44:14 eva Exp $
 
 EAPI="5"
 
@@ -78,9 +78,8 @@ COMMONDEPEND=">=sys-devel/gettext-0.12.1
 	pdf? ( app-text/poppler:=[cairo] )
 	spam-report? ( >=net-misc/curl-7.9.7 )
 	webkit? ( >=net-libs/webkit-gtk-1.0:2
-		|| ( >=net-libs/libsoup-2.42:2.4
 		>=net-libs/libsoup-gnome-2.26:2.4 )
-	 )"
+"
 
 DEPEND="${PLUGINBLOCK}
 	${COMMONDEPEND}
