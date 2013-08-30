@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.3.201308201232_p1.ebuild,v 1.2 2013/08/30 19:06:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.3_p1-r1.ebuild,v 1.1 2013/08/30 19:06:18 pacho Exp $
 
 EAPI=5
 
@@ -8,11 +8,13 @@ inherit multilib user flag-o-matic eutils pam toolchain-funcs autotools systemd 
 
 DESCRIPTION="Lightweight but featured SMTP daemon from OpenBSD"
 HOMEPAGE="http://www.opensmtpd.org/"
+MY_DP="${P}"
 MY_P="${P}"
 if [ $(get_last_version_component_index) -eq 4 ]; then
-	MY_P="${PN}-$(get_version_component_range 4-)"
+	MY_DP="${PN}-$(get_version_component_range 4-)"
+	MY_P="${PN}-${PV/.$(get_version_component_range 4)}"
 fi
-SRC_URI="http://www.opensmtpd.org/archives/${MY_P/_}.tar.gz"
+SRC_URI="http://www.opensmtpd.org/archives/${MY_DP/_}.tar.gz"
 
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
@@ -42,6 +44,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P/_}
 
 src_prepare() {
+	epatch "${FILESDIR}"/build-warnings.patch
 	epatch_user
 	eautoreconf
 }
@@ -50,12 +53,14 @@ src_configure() {
 	tc-export AR
 	AR="$(which "$AR")" econf \
 		--with-privsep-user=smtpd \
+		--with-filter-user=smtpf \
 		--with-queue-user=smtpq \
 		--with-privsep-path=/var/empty \
 		--with-sock-dir=/var/run \
 		--sysconfdir=/etc/opensmtpd \
 		$(use_with sqlite experimental-sqlite) \
 		$(use_with pam)
+		#--with-lookup-user=smtpl  will be available in the release after some point
 }
 
 src_install() {
@@ -74,6 +79,12 @@ src_install() {
 pkg_preinst() {
 	enewgroup smtpd 25
 	enewuser smtpd 25 -1 /var/empty smtpd
+	enewgroup smtpf 251
+	enewuser smtpf 251 -1 /var/empty smtpf
 	enewgroup smtpq 252
 	enewuser smtpq 252 -1 /var/empty smtpq
+
+	# For release after some point:
+	#enewgroup smtpl 253
+	#enewuser smtpl 253 -1 /var/empty smtpl
 }
