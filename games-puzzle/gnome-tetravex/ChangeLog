@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnome-tetravex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-tetravex/ChangeLog,v 1.1 2013/06/30 12:11:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-tetravex/ChangeLog,v 1.2 2013/08/31 08:10:19 pinkbyte Exp $
+
+  31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> gnome-tetravex-3.8.1.ebuild:
+  Add ~arm keyword, wrt bug #476710
 
 *gnome-tetravex-3.8.1 (30 Jun 2013)
 

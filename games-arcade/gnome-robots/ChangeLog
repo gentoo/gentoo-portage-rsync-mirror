@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnome-robots
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/ChangeLog,v 1.1 2013/06/30 11:39:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/ChangeLog,v 1.2 2013/08/31 08:05:52 pinkbyte Exp $
+
+  31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> gnome-robots-3.8.1.ebuild:
+  Add ~arm keyword, wrt bug #476710
 
 *gnome-robots-3.8.1 (30 Jun 2013)
 
