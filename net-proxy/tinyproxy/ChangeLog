@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.43 2013/05/30 16:47:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.44 2013/08/31 06:05:52 pacho Exp $
+
+*tinyproxy-1.8.3-r3 (31 Aug 2013)
+
+  31 Aug 2013; Pacho Ramos <pacho@gentoo.org> +files/tinyproxy.service,
+  +files/tinyproxy.tmpfiles.conf, +tinyproxy-1.8.3-r3.ebuild:
+  Add unit file (#480242 by Charles Nérot)
 
   30 May 2013; Tom Wijsman <TomWij@gentoo.org> ChangeLog,
   +tinyproxy-1.8.3-r2.ebuild, +files/tinyproxy-1.8.3-r2.initd,

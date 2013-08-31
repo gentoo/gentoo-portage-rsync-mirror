@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.5.ebuild,v 1.1 2013/07/09 00:49:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.5.ebuild,v 1.2 2013/08/31 06:12:35 naota Exp $
 
 EAPI="4"
 
@@ -56,7 +56,7 @@ src_install() {
 	newexe "${FILESDIR}"/man-db.cron man-db #289884
 
 	keepdir /var/cache/man
-	fowners man:root /var/cache/man
+	fowners man:0 /var/cache/man
 	fperms 2755 /var/cache/man
 }
 
@@ -68,7 +68,7 @@ pkg_preinst() {
 	if [[ ! -g ${EROOT}var/cache/man ]] ; then
 		einfo "Resetting permissions on ${EROOT}var/cache/man" #447944
 		mkdir -p "${EROOT}var/cache/man"
-		chown -R man:root "${EROOT}"var/cache/man
+		chown -R man:0 "${EROOT}"var/cache/man
 		find "${EROOT}"var/cache/man -type d '!' -perm /g=s -exec chmod 2755 {} +
 	fi
 }

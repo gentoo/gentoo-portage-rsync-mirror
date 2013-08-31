@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/freewnn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.46 2013/02/27 13:02:05 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/ChangeLog,v 1.47 2013/08/31 06:10:35 naota Exp $
+
+*freewnn-1.1.1_alpha22 (31 Aug 2013)
+
+  31 Aug 2013; Naohiro Aota <naota@gentoo.org> +freewnn-1.1.1_alpha22.ebuild,
+  freewnn-1.1.1_alpha21-r1.ebuild:
+  version bump
 
   27 Feb 2013; Akinori Hattori <hattya@gentoo.org>
   -files/a017/FreeWnn-1.1.1-a017.dif, -files/a017/FreeWnn-lib64.patch,
