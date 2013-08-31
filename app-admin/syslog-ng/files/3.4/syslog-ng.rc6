@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/3.4/syslog-ng.rc6,v 1.5 2013/05/08 20:12:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/3.4/syslog-ng.rc6,v 1.6 2013/08/31 17:44:03 mr_bones_ Exp $
 
 SYSLOG_NG_CONFIGFILE=${SYSLOG_NG_CONFIGFILE:-/etc/syslog-ng/${RC_SVCNAME}.conf}
 SYSLOG_NG_STATEFILE_DIR=${SYSLOG_NG_STATEFILE_DIR:-/var/lib/syslog-ng}
@@ -12,7 +12,7 @@ SYSLOG_NG_PIDFILE=${SYSLOG_NG_PIDFILE:-${SYSLOG_NG_PIDFILE_DIR}/${RC_SVCNAME}.pi
 SYSLOG_NG_GROUP=${SYSLOG_NG_GROUP:-root}
 SYSLOG_NG_USER=${SYSLOG_NG_USER:-root}
 
-command="syslog-ng"
+command="/usr/sbin/syslog-ng"
 command_args="--persist-file \"${SYSLOG_NG_STATEFILE}\" --cfgfile \"${SYSLOG_NG_CONFIGFILE}\" --pidfile \"${SYSLOG_NG_PIDFILE}\" ${SYSLOG_NG_OPTS}"
 extra_commands="checkconfig"
 extra_started_commands="reload"
