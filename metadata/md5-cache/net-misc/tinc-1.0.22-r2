@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/openssl-0.9.7 lzo? ( dev-libs/lzo:2 ) zlib? ( >=sys-libs/zlib
 SLOT=0
 SRC_URI=http://www.tinc-vpn.org/packages/tinc-1.0.22.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	systemd	49c26d08111dd2c62b52cee32151b93b	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=0ccc1420d546afede4a36268c0c7935e
+_md5_=1cc6adf046707432866f4be7d0d60c3d

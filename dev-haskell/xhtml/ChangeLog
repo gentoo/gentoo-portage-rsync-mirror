@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.31 2013/08/29 19:50:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.32 2013/08/31 10:28:58 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> xhtml-3000.2.1.ebuild:
+  Stable for amd64, wrt bug #480570
 
   29 Aug 2013; Agostino Sarubbo <ago@gentoo.org> xhtml-3000.2.1.ebuild:
   Stable for ia64, wrt bug #480570

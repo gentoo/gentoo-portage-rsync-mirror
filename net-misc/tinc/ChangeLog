@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.43 2013/08/30 23:58:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.44 2013/08/31 10:17:17 blueness Exp $
+
+*tinc-1.0.22-r2 (31 Aug 2013)
+
+  31 Aug 2013; Anthony G. Basile <blueness@gentoo.org> +tinc-1.0.22-r2.ebuild,
+  -tinc-1.0.22-r1.ebuild, files/tincd_at.service:
+  Fix systemd unit file, bug #479596
 
 *tinc-1.0.22-r1 (30 Aug 2013)
 

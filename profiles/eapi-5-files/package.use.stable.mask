@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.19 2013/08/15 13:08:06 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.20 2013/08/31 10:03:49 ago Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Agostino Sarubbo <ago@gentoo.org> (31 Aud 2013)
+# Clang is not stable
+app-portage/eix clang
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (15 Aug 2013)
 # Remove when app-crypt/libsecret is stable
