@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powernowd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.19 2013/02/26 04:07:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powernowd/ChangeLog,v 1.20 2013/08/31 13:54:38 jer Exp $
+
+  31 Aug 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add maintainer.
 
   26 Feb 2013; Michael Palimaka <kensington@gentoo.org> -powernowd-1.00.ebuild:
   Remove old.
