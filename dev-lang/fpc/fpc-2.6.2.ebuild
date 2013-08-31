@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.2.ebuild,v 1.3 2013/07/30 21:16:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.2.ebuild,v 1.4 2013/08/31 12:49:02 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="mirror://sourceforge/freepascal/fpcbuild-${PV}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1-with-linking-exception"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="doc ide source"
 
 RDEPEND="ide? ( !dev-lang/fpc-ide )"
