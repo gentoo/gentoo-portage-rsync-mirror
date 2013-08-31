@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/tlf-1.1.6.ebuild,v 1.1 2013/07/05 10:46:58 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/tlf-1.1.6.ebuild,v 1.2 2013/08/31 09:44:21 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.hs-mittweida.de/tb/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses

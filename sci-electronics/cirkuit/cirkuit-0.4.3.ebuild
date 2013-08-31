@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/cirkuit/cirkuit-0.4.3.ebuild,v 1.1 2013/05/29 09:35:00 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/cirkuit/cirkuit-0.4.3.ebuild,v 1.2 2013/08/31 09:45:01 ago Exp $
 
 EAPI=5
 inherit kde4-base
@@ -11,7 +11,7 @@ SRC_URI="http://wwwu.uni-klu.ac.at/magostin/src/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 DEPEND="

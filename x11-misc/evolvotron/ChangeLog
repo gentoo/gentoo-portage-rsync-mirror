@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/evolvotron
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/ChangeLog,v 1.28 2013/08/27 21:06:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/evolvotron/ChangeLog,v 1.29 2013/08/31 09:44:34 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> evolvotron-0.6.2.ebuild:
+  Stable for amd64, wrt bug #482722
 
   27 Aug 2013; Jeroen Roovers <jer@gentoo.org> evolvotron-0.6.2.ebuild:
   Fix RDEPEND.

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hteditor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.64 2013/07/02 17:47:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/ChangeLog,v 1.65 2013/08/31 09:44:55 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> hteditor-2.0.22.ebuild:
+  Stable for amd64, wrt bug #482632
 
 *hteditor-2.0.22 (02 Jul 2013)
 

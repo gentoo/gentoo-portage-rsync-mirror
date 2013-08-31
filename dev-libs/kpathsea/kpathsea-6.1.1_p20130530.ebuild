@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.1.1_p20130530.ebuild,v 1.1 2013/06/27 15:08:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/kpathsea-6.1.1_p20130530.ebuild,v 1.2 2013/08/31 09:41:16 grobian Exp $
 
 EAPI=5
 
-inherit texlive-common eutils libtool
+inherit texlive-common eutils libtool prefix
 
 TEXMFD_VERSION="5"
 
@@ -43,6 +43,8 @@ TEXMF_PATH=/usr/share/texmf-dist
 src_prepare() {
 	cd "${WORKDIR}/texlive-${PV#*_p}-source"
 	S="${WORKDIR}/texlive-${PV#*_p}-source" elibtoolize #sane .so versionning on gfbsd
+	cp "${FILESDIR}/texmf-update-r1" "${S}"/texmf-update
+	eprefixify "${S}"/texmf-update
 }
 
 src_configure() {
@@ -91,7 +93,7 @@ src_install() {
 	dosym /etc/texmf/web2c/fmtutil.cnf ${TEXMF_PATH}/web2c/fmtutil.cnf
 	dosym /etc/texmf/web2c/texmf.cnf ${TEXMF_PATH}/web2c/texmf.cnf
 
-	newsbin "${FILESDIR}/texmf-update" texmf-update
+	newsbin "${S}/texmf-update" texmf-update
 
 	# Keep it as that's where the formats will go
 	keepdir /var/lib/texmf

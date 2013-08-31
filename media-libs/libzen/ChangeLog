@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.56 2013/06/01 01:30:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.57 2013/08/31 09:43:55 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libzen-0.4.29.ebuild:
+  Stable for amd64, wrt bug #482624
 
   01 Jun 2013; Tim Harder <radhermit@gentoo.org> libzen-0.4.29.ebuild:
   Die on sed failure.

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/uemacs-pk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.24 2013/06/20 07:48:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.25 2013/08/31 09:43:38 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
+  uemacs-pk-4.0.15_p20130222.ebuild:
+  Stable for amd64, wrt bug #482432
 
   20 Jun 2013; Ulrich Müller <ulm@gentoo.org> metadata.xml:
   Remove proxy-maintainers from metadata. No idea why they were added.
