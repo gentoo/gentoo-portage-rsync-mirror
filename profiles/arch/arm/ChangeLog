@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.267 2013/08/24 13:14:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.268 2013/08/31 15:38:00 pinkbyte Exp $
+
+  31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Remove games USE-flag mask for gnome-base/gnome-extra-apps, bug #476710
 
   24 Aug 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
   remove kde-base/kdepim-runtime[facebook] package.use.mask, bug #481088

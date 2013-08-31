@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.15.4.ebuild,v 1.3 2013/08/31 14:49:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.15.4.ebuild,v 1.4 2013/08/31 15:57:50 zlogene Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="http://www.libraw.org/data/${MY_P}.tar.gz
 # http://www.libraw.org/data/LICENSE.LibRaw.pdf
 LICENSE="LGPL-2.1 CDDL GPL-2 GPL-3"
 SLOT="0/9" # subslot = libraw soname version
-KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="demosaic examples jpeg jpeg2k +lcms openmp static-libs"
 
 RDEPEND="jpeg? ( virtual/jpeg:0 )

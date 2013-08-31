@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.167 2013/08/24 13:14:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.168 2013/08/31 15:38:00 pinkbyte Exp $
 
 # Michael Weber <xmw@gentoo.org> (23 Aug 2013)
 # Unkeyworded deps
@@ -17,10 +17,6 @@ media-libs/devil allegro nvtt
 # Agostino Sarubbo <ago@gentoo.org> (23 Jul 2013)
 # java is not stable on arm
 dev-libs/protobuf java
-
-# Pacho Ramos <pacho@gentoo.org> (20 Jul 2013)
-# Keywords pending, bug #476710
->=gnome-base/gnome-extra-apps-3.8 games
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Jul 2013)
 # requires net-misc/freerdp which is not keyworded on arm

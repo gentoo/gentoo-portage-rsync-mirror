@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/avidemux-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.13 2013/08/09 13:42:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.14 2013/08/31 15:50:30 tomwij Exp $
+
+  31 Aug 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-plugins-9999.ebuild:
+  Preparation for 2.6.5, fixed up src_install phase to properly call the
+  preinstall and install targets (without calling the all target) for each
+  process; as a result, all plugins get properly installed.
 
   09 Aug 2013; Ian Stakenvicius <axs@gentoo.org> avidemux-plugins-2.6.3.ebuild,
   avidemux-plugins-2.6.4-r1.ebuild, avidemux-plugins-2.6.4.ebuild:

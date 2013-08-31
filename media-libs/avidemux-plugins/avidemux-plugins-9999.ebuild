@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-9999.ebuild,v 1.1 2013/07/17 00:31:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-9999.ebuild,v 1.2 2013/08/31 15:50:30 tomwij Exp $
 
 EAPI="5"
 
@@ -128,6 +128,11 @@ src_compile() {
 
 src_install() {
 	for process in ${processes} ; do
-		BUILD_DIR="${S}/${process%%:*}" cmake-utils_src_install
+		# cmake-utils_src_install doesn't respect BUILD_DIR
+		# and there sometimes is a preinstall phase present.
+		pushd "${S}/${process%%:*}" > /dev/null || die
+			grep '^preinstall/fast' Makefile && emake DESTDIR="${D}" preinstall/fast
+			grep '^install/fast' Makefile && emake DESTDIR="${D}" install/fast
+		popd > /dev/null || die
 	done
 }
