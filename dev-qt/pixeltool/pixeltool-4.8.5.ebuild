@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/pixeltool/pixeltool-4.8.5.ebuild,v 1.2 2013/07/30 06:01:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/pixeltool/pixeltool-4.8.5.ebuild,v 1.3 2013/08/31 08:34:11 pesa Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ IUSE=""
 DEPEND="
 	~dev-qt/qtcore-${PV}[aqua=,debug=]
 	~dev-qt/qtgui-${PV}[aqua=,debug=]
+	!<dev-qt/qthelp-4.8.5:4
 "
 RDEPEND="${DEPEND}"
 

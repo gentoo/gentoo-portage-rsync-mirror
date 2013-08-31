@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/pixeltool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/pixeltool/ChangeLog,v 1.2 2013/07/30 06:01:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/pixeltool/ChangeLog,v 1.3 2013/08/31 08:34:11 pesa Exp $
+
+  31 Aug 2013; Davide Pesavento <pesa@gentoo.org> pixeltool-4.8.5.ebuild:
+  Add blocker wrt bug 482620.
 
   30 Jul 2013; Davide Pesavento <pesa@gentoo.org> pixeltool-4.8.5.ebuild:
   Fix build (bug 478506).

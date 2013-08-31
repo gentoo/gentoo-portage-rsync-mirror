@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-rime/fcitx-rime-0.2.0.ebuild,v 1.1 2013/01/31 09:54:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-rime/fcitx-rime-0.2.0.ebuild,v 1.2 2013/08/31 08:36:20 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://fcitx.googlecode.com/files/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=app-i18n/fcitx-4.2.7

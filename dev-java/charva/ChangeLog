@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/charva
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.18 2013/08/26 16:52:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.19 2013/08/31 08:36:49 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> charva-1.1.4-r1.ebuild:
+  Stable for amd64, wrt bug #316301
 
   26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> charva-1.1.4-r1.ebuild:
   Stable for ppc, wrt bug #316301

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/rime-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/ChangeLog,v 1.8 2013/07/25 21:50:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/ChangeLog,v 1.9 2013/08/31 08:36:28 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> rime-data-0.22.ebuild:
+  Stable for amd64, wrt bug #479286
 
   25 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> -rime-data-0.18.ebuild,
   -files/Makefile:
