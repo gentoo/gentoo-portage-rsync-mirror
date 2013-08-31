@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.4-r1.ebuild,v 1.5 2013/08/11 06:51:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.3.4-r1.ebuild,v 1.6 2013/08/31 19:07:37 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
-inherit autotools eutils
+inherit autotools bash-completion-r1 eutils
 
 DESCRIPTION="A fast, lightweight quick launch bar"
 HOMEPAGE="http://code.google.com/p/wbar/"
@@ -32,8 +32,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-automake-1.13.patch
 
 	sed -i \
-		-e '/bashcompletiondir/s#=.*$#= /usr/share/bash-completion#' \
-		etc/Makefile.am || die "sed etc/Makefile.am failed!"
+		-e "/^bashcompletiondir/s:=.*$:=$(get_bashcompdir):" \
+		etc/Makefile.am || die #482358
 
 	eautoreconf
 }

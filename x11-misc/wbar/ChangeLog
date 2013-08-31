@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/wbar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.31 2013/08/11 06:51:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/ChangeLog,v 1.32 2013/08/31 19:07:37 ssuominen Exp $
+
+  31 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> wbar-2.3.4-r1.ebuild:
+  Fix bash-completion completions directory wrt #482358 by "SN (Enlik)"
 
   11 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> wbar-2.3.0.ebuild,
   wbar-2.3.1.ebuild, wbar-2.3.3.ebuild, wbar-2.3.4-r1.ebuild:
