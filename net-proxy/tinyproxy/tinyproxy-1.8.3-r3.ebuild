@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.3-r3.ebuild,v 1.1 2013/08/31 06:05:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.3-r3.ebuild,v 1.2 2013/08/31 16:44:15 jer Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.1-ldflags.patch
-	epatch "${FILESDIR}"/${PF}-DoS-Prevention.patch
+	epatch "${FILESDIR}"/${P}-DoS-Prevention.patch
 
 	use minimal && epatch "${FILESDIR}/${PN}-1.8.1-minimal.patch"
 

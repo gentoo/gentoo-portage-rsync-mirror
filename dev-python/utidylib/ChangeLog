@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/utidylib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.14 2012/03/01 23:40:55 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.15 2013/08/31 16:41:51 mgorny Exp $
+
+*utidylib-0.2-r2 (31 Aug 2013)
+
+  31 Aug 2013; Michał Górny <mgorny@gentoo.org> +utidylib-0.2-r2.ebuild:
+  Convert to distutils-r1.
 
   01 Mar 2012; Brent Baude <ranger@gentoo.org> utidylib-0.2-r1.ebuild:
   Marking utidylib-0.2-r1 ppc for bug 386673
@@ -55,4 +60,3 @@
   +utidylib-0.2.ebuild:
   New ebuild, based on a contribution from Andy Dustman <farcepest@gmail.com>
   (bug #79856).
-
