@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15079 2013/08/31 14:54:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15080 2013/08/31 15:21:46 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -236,10 +236,6 @@ dev-vcs/bzr-svn
 # Mask while awaiting bump to dep Djblets-0.7.16
 =dev-util/reviewboard-1.7.12
 
-# Matt Turner <mattst88@gentoo.org> (31 Jul 2013)
-# Masked for removal. Bug 478720.
-dev-perl/gnome2-gconf
-
 # Jeroen Roovers <jer@gentoo.org> (31 Jul 2013)
 # Needs >=dev-lang/lua-5.2
 ~net-analyzer/nmap-6.40
@@ -268,36 +264,6 @@ dev-perl/gnome2-gconf
 # there is a working release.
 sci-geosciences/googleearth
 
-# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
-# Doesn't compile with gcc-4.7 (#414143), lib is no longer
-# opensource or free. Removal in a month.
-media-libs/openinventor
-
-# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
-# Doesn't compile with boost-1.50 and with automake-1.13
-# (#425448). Removal in a month.
-dev-cpp/libebt
-
-# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
-# Doesn't compile and not useful with kernel >= 2.6 (#428728).
-# Removal in a month.
-sys-kernel/ksymoops
-
-# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
-# Fails to build with glibc-2.16 (#428738), upstream dead.
-# Removal in a month.
-net-p2p/bitstormlite
-
-# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
-# Fails to build with gcc-4.7, upstream dead (#429362).
-# Removal in a month.
-net-p2p/mutella
-
-# Pacho Ramos <pacho@gentoo.org> (21 Jul 2013)
-# Doesn't build with gcc-4.7, nothing requires it.
-# (#465896). Removal in a month.
-dev-cpp/IceE
-
 # Alexis Ballier <aballier@gentoo.org> (20 Jul 2013)
 # New major release and lots of packages fail to build.
 # Tracker bug is: https://bugs.gentoo.org/show_bug.cgi?id=476490
@@ -319,18 +285,6 @@ dev-cpp/IceE
 # Upstream wants anybody to move over
 sci-biology/allpaths
 
-# Samuli Suominen <ssuominen@gentoo.org> (15 Jul 2013)
-# The separate media-sound/alsa-headers package has been obsoleted
-# by letting sys-kernel/linux-headers install the required sound/
-# headers.
-#
-# The instructions to migrate follows:
-# emerge -C alsa-headers
-# emerge -1 linux-headers
-#
-# The separate package will be removed in 30 days
-media-sound/alsa-headers
-
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 Jul 2013)
 # pwlib/openh323 masked for removal, bugs #290062 and #290063
 dev-libs/pwlib
@@ -345,14 +299,6 @@ net-libs/openh323
 # Probably new versions will work with hexchat too.
 # Do not lastrite this, just leave mask by Lars Wendler's request.
 net-irc/xchat-otr
-
-# Hanno Boeck <hanno@gentoo.org> (9 Jul 2013)
-# Part of old and deprecated openvas versions,
-# removal in about 30 days
-net-analyzer/openvas-client
-net-analyzer/openvas-libnasl
-net-analyzer/openvas-plugins
-net-analyzer/openvas-server
 
 # Michael Weber <xmw@gentoo.org> (9 Jul 2013)
 # Masked for security bug 450746, CVE-2012-6095

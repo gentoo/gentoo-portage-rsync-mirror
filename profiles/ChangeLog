@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8203 2013/08/31 14:54:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8204 2013/08/31 15:21:46 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Aug 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Clean mask entries
 
   31 Aug 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask old xdm version that has been replaced already.

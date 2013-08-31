@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.11.ebuild,v 1.5 2012/08/25 19:09:47 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.0.11.ebuild,v 1.6 2013/08/31 15:01:48 pacho Exp $
 
 EAPI="4"
 
@@ -37,11 +37,12 @@ src_unpack() {
 java_prepare() {
 	cp "${FILESDIR}"/${PN}_maven-build.xml build.xml || die
 	epatch "${FILESDIR}"/${P}_no-werror.patch
+	sed -i -e 's/-Werror //' libtest/GNUmakefile || die
 
 	find "${WORKDIR}" -iname '*.jar' -delete
 
 	# Fix build with GCC 4.7 #421501
-	sed -i -e "s|-mimpure-text||g" jni/GNUmakefile || die
+	sed -i -e "s|-mimpure-text||g" jni/GNUmakefile libtest/GNUmakefile || die
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"

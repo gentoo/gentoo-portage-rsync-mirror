@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnome-nibbles
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-nibbles/ChangeLog,v 1.1 2013/08/12 21:58:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-nibbles/ChangeLog,v 1.2 2013/08/31 15:30:09 pinkbyte Exp $
+
+  31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> gnome-nibbles-3.8.0.ebuild:
+  Add ~arm keyword, wrt bug #476710
 
 *gnome-nibbles-3.8.0 (12 Aug 2013)
 
