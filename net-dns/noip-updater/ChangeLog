@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.41 2013/08/24 10:54:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.42 2013/08/31 06:34:32 pacho Exp $
+
+*noip-updater-2.1.9-r1 (31 Aug 2013)
+
+  31 Aug 2013; Pacho Ramos <pacho@gentoo.org> +files/noip.service,
+  +noip-updater-2.1.9-r1.ebuild:
+  Add unit file (#481490 by Galym Kerimbekov)
 
   24 Aug 2013; Markus Meier <maekke@gentoo.org> noip-updater-2.1.9.ebuild:
   add ~arm, bug #479860
@@ -173,4 +179,3 @@
 
   New package -- client to upgrade your noip.com DNS entry.  Provided by: 
   Low Zhen Lin <lowzl@hotmail.com> in bug #9745
-
