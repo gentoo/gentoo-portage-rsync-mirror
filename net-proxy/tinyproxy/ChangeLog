@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.45 2013/08/31 16:44:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.46 2013/08/31 17:02:03 jer Exp $
+
+  31 Aug 2013; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.3-r3.ebuild:
+  Fix PF usage for init script.
 
   31 Aug 2013; Jeroen Roovers <jer@gentoo.org> tinyproxy-1.8.3-r2.ebuild,
   tinyproxy-1.8.3-r3.ebuild, +files/tinyproxy-1.8.3-DoS-Prevention.patch,

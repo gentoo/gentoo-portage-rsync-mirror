@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.3-r3.ebuild,v 1.2 2013/08/31 16:44:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.3-r3.ebuild,v 1.3 2013/08/31 17:02:03 jer Exp $
 
 EAPI="5"
 
@@ -74,7 +74,7 @@ src_install() {
 	diropts -m0775 -o ${PN} -g ${PN}
 	keepdir /var/log/${PN}
 
-	newinitd "${FILESDIR}"/${PF}.initd tinyproxy
+	newinitd "${FILESDIR}"/${PN}-1.8.3-r2.initd tinyproxy
 	systemd_dounit "${FILESDIR}"/${PN}.service
 	systemd_dotmpfilesd "${FILESDIR}"/${PN}.tmpfiles.conf
 }
