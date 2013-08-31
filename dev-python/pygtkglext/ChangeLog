@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtkglext
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.44 2012/05/04 15:12:12 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtkglext/ChangeLog,v 1.45 2013/08/31 16:03:55 mgorny Exp $
+
+*pygtkglext-1.1.0-r1 (31 Aug 2013)
+
+  31 Aug 2013; Michał Górny <mgorny@gentoo.org> +pygtkglext-1.1.0-r1.ebuild:
+  Convert to python-r1.
 
   04 May 2012; Patrick Lauer <patrick@gentoo.org> pygtkglext-1.1.0.ebuild:
   Migrating dev-util/pkgconfig -> virtual/pkgconfig
@@ -164,4 +169,3 @@
 
   26 Apr 2003; Alastair Tse <liquidx@gentoo.org> pygtkglext-0.0.2.ebuild:
   initial commit
-

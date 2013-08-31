@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyalsa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.36 2013/05/01 13:20:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsa/ChangeLog,v 1.37 2013/08/31 16:18:46 mgorny Exp $
+
+*pyalsa-1.0.26-r1 (31 Aug 2013)
+
+  31 Aug 2013; Michał Górny <mgorny@gentoo.org> +pyalsa-1.0.26-r1.ebuild:
+  Convert to distutils-r1.
 
   01 May 2013; Samuli Suominen <ssuominen@gentoo.org> -pyalsa-1.0.22.ebuild,
   -pyalsa-1.0.24.ebuild, -pyalsa-1.0.25.ebuild:
