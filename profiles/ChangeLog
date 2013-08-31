@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8200 2013/08/30 23:51:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8201 2013/08/31 00:07:05 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Aug 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Collect all live ebuild in the same place
 
   30 Aug 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask screefetch live ebuild
