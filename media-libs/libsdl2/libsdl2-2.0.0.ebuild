@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.0.ebuild,v 1.1 2013/08/28 21:36:52 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.0.ebuild,v 1.2 2013/08/31 14:34:50 hasufell Exp $
 
 EAPI=5
 inherit autotools flag-o-matic toolchain-funcs eutils
@@ -14,7 +14,7 @@ LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="3dnow alsa altivec +audio dbus directfb fusionsound gles haptic +joystick mmx nas opengl oss pulseaudio sse sse2 static-libs tslib udev +video X xinerama xscreensaver"
+IUSE="3dnow alsa altivec +audio custom-cflags dbus directfb fusionsound gles haptic +joystick mmx nas opengl oss pulseaudio sse sse2 static-libs tslib udev +video X xinerama xscreensaver"
 REQUIRED_USE="
 	alsa? ( audio )
 	fusionsound? ( audio )
@@ -63,6 +63,8 @@ src_prepare() {
 }
 
 src_configure() {
+	use custom-cflags || strip-flags
+
 	local directfbconf="--disable-video-directfb"
 	if use directfb ; then
 		# since DirectFB can link against SDL and trigger a

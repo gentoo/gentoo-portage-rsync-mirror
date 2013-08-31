@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.390 2013/08/31 08:37:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.391 2013/08/31 14:50:40 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.9.ebuild:
+  Stable for arm, wrt bug #470648
 
   31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.9.ebuild:
   Stable for amd64, wrt bug #470648

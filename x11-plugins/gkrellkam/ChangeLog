@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellkam
 # Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/ChangeLog,v 1.16 2013/06/01 11:30:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellkam/ChangeLog,v 1.17 2013/08/31 14:41:51 pacho Exp $
+
+  31 Aug 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gkrellkam-2.0.0-makefile.patch, gkrellkam-2.0.0.ebuild:
+  Fix LDFLAGS/gcc usage (#338903), deps (#421703) and gcc-4.7 building
+  (#426454). By Michael Mair-Keimberger (iamnr3).
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #144305

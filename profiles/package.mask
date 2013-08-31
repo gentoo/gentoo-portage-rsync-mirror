@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15078 2013/08/31 07:02:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15079 2013/08/31 14:54:30 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -568,12 +568,6 @@ dev-haskell/wxhaskell:2.9
 # stable wpa_supplicant sometimes wants madwifi-ng-tools
 #net-wireless/madwifi-ng-tools
 net-wireless/madwifi-ng
-
-# Michał Górny <mgorny@gentoo.org> (07 Dec 2012)
-# Experimental version disabling XDM-AUTHENTICATION-1 (in favor
-# of MIT-MAGIC-COOKIE-1). It should fix bug #306223 but it can also
-# raise unknown issues. Bug #445662 for more details.
-=x11-apps/xdm-1.1.11-r2
 
 # Tim Harder <radhermit@gentoo.org> (27 Nov 2012)
 # Masked for testing
