@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.85 2013/06/13 11:38:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.86 2013/08/31 05:16:55 graaff Exp $
+
+  31 Aug 2013; Hans de Graaff <graaff@gentoo.org> -haml-3.1.6.ebuild,
+  -haml-3.1.8.ebuild:
+  Cleanup.
 
 *haml-3.1.8-r1 (13 Jun 2013)
 
