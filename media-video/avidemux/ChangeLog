@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.222 2013/07/18 20:58:17 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.223 2013/08/31 11:01:26 tomwij Exp $
+
+  31 Aug 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-9999.ebuild,
+  metadata.xml:
+  Preparation for 2.6.5, added libva and xvba support.
 
   18 Jul 2013; Chris Reffett <creffett@gentoo.org> avidemux-2.5.6-r2.ebuild,
   avidemux-2.6.2-r1.ebuild, avidemux-2.6.3.ebuild:

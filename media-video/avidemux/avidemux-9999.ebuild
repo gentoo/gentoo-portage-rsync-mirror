@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-9999.ebuild,v 1.1 2013/07/17 00:31:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-9999.ebuild,v 1.2 2013/08/31 11:01:26 tomwij Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://fixounet.free.fr/${PN}"
 
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
-IUSE="debug opengl nls qt4 sdl vdpau xv"
+IUSE="debug opengl nls qt4 sdl vaapi vdpau video_cards_fglrx xv"
 KEYWORDS="~amd64 ~x86"
 
 if [[ ${PV} == *9999* ]] ; then
@@ -28,9 +28,13 @@ else
 	SRC_URI="mirror://sourceforge/${PN}/${PV}/${MY_P}.tar.gz"
 fi
 
-DEPEND="~media-libs/avidemux-core-${PV}:${SLOT}[nls?,sdl?,vdpau?,xv?]
+DEPEND="
+	~media-libs/avidemux-core-${PV}:${SLOT}[nls?,sdl?,vaapi?,vdpau?,video_cards_fglrx?,xv?]
 	opengl? ( virtual/opengl:0 )
-	qt4? ( >=dev-qt/qtgui-4.8.3:4 )"
+	qt4? ( >=dev-qt/qtgui-4.8.3:4 )
+	vaapi? ( x11-libs/libva:0 )
+	video_cards_fglrx? ( x11-libs/xvba-video:0 )
+"
 RDEPEND="$DEPEND"
 PDEPEND="~media-libs/avidemux-plugins-${PV}"
 
@@ -65,7 +69,9 @@ src_configure() {
 		-DAVIDEMUX_SOURCE_DIR='${S}'
 		$(cmake-utils_use nls GETTEXT)
 		$(cmake-utils_use sdl SDL)
+		$(cmake-utils_use vaapi LIBVA)
 		$(cmake-utils_use vdpau VDPAU)
+		$(cmake-utils_use video_cards_fglrx XVBA)
 		$(cmake-utils_use xv XVIDEO)
 	"
 
