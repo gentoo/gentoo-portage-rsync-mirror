@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15080 2013/08/31 15:21:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15081 2013/08/31 19:46:19 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,35 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tom Wijsman <TomWij@gentoo.org> (28 Aug 2013)
+# Gentoo sources 3.8.13 masked due to security bug #475618: CVE-2013-1059:
+# Linux Kernel Ceph NULL Pointer Dereference Denial of Service Vulnerability
+#
+# This kernel also contains other security bugs due to its old age (May 11).
+#
+# We advice users to upgrade to the new stable kernel 3.10.7; alternatively, if
+# necessary, users can also choose to accept keywords and accept a kernel from
+# the earlier long term stable branches (3.0.X or 3.4.Y), this might be the case
+# if you have older hardware or an unfortunate stability bug on 3.10.7.
+#
+# You can accept keywords by adding sys-kernel/gentoo-sources to the file 
+# /etc/portage/package.accept_keywords after which you can run
+# `emerge sys-kernel/gentoo-sources:X.Y.Z` to select a specific LTS kernel.
+# When you choose to turn back to stable later, don't forget to remove that.
+#
+# For proprietary NVIDIA drivers users, we temporarily keep 3.9.11-r1 around
+# as some of them experience problems with the new stable kernel 3.10.7; we aim
+# to mask it in one of the next weeks when the new branch 3.11 is out.
+#
+# References:
+#
+# - http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-1059
+# - https://secunia.com/advisories/54042/
+# - https://bugs.gentoo.org/show_bug.cgi?id=475618
+# - https://bugs.gentoo.org/buglist.cgi?quicksearch=assignee%3Asecurity%20kernel
+#
+=sys-kernel/gentoo-sources-3.8.13
 
 # Markos Chandras <hwoarang@gentoo.org> (30 Aug 2013)
 # Masked for proper testing in production
