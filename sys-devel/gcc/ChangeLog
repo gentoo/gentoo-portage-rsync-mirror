@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.959 2013/08/27 04:48:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.960 2013/08/31 11:45:41 zorry Exp $
+
+  31 Aug 2013; Magnus Granberg <zorry@gentoo.org> gcc-4.8.1.ebuild,
+  +files/gcc-spec-env-r1.patch:
+  Bump piepatch and add new version of gcc-spec-env for gcc 4.8.1
 
   27 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.8.1.ebuild:
   4.8.1 p1.1: Fixes bug #475350 (add --disable-werror to libatomic and libitm)
