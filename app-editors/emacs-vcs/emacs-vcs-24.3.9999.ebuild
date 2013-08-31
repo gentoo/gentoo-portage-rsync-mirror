@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.19 2013/08/14 06:26:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.20 2013/08/31 22:13:48 ulm Exp $
 
 EAPI=5
 
@@ -117,12 +117,6 @@ src_prepare() {
 
 	epatch_user
 
-	if ! use alsa; then
-		# ALSA is detected even if not requested by its USE flag.
-		# Suppress it by supplying pkg-config with a wrong library name.
-		sed -i -e "/ALSA_MODULES=/s/alsa/DiSaBlEaLsA/" configure.ac \
-			|| die "unable to sed configure.ac"
-	fi
 	if ! use gzip-el; then
 		# Emacs' build system automatically detects the gzip binary and
 		# compresses el files. We don't want that so confuse it with a
@@ -147,12 +141,12 @@ src_configure() {
 
 	local myconf
 
-	if use alsa && ! use sound; then
-		einfo "Although sound USE flag is disabled you chose to have alsa,"
-		einfo "so sound is switched on anyway."
-		myconf+=" --with-sound"
+	if use alsa; then
+		use sound || ewarn \
+			"USE flag \"alsa\" overrides \"-sound\"; enabling sound support."
+		myconf+=" --with-sound=alsa"
 	else
-		myconf+=" $(use_with sound)"
+		myconf+=" --with-sound=$(usex sound oss)"
 	fi
 
 	if use X; then
