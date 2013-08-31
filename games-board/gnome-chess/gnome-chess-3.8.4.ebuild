@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/gnome-chess-3.8.4.ebuild,v 1.1 2013/08/25 19:16:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/gnome-chess-3.8.4.ebuild,v 1.2 2013/08/31 07:37:07 pinkbyte Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Chess"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE=""
 
 RDEPEND="

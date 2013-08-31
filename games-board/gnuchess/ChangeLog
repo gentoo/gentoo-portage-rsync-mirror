@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnuchess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.32 2013/03/11 16:47:05 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/ChangeLog,v 1.33 2013/08/31 07:53:11 pinkbyte Exp $
+
+  31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> gnuchess-6.0.3.ebuild:
+  Add ~arm keyword
 
 *gnuchess-6.0.3 (11 Mar 2013)
 

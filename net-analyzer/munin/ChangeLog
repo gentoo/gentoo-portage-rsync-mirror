@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.143 2013/06/11 19:08:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.144 2013/08/31 07:35:12 pacho Exp $
+
+*munin-2.0.14-r1 (31 Aug 2013)
+
+  31 Aug 2013; Pacho Ramos <pacho@gentoo.org> +files/munin-async.service,
+  +files/munin-graph.service, +files/munin-graph.socket,
+  +files/munin-html.service, +files/munin-html.socket,
+  +files/munin-node.service, +munin-2.0.14-r1.ebuild:
+  Add unit files (#478164 by Justin Lecher)
 
   11 Jun 2013; Markus Meier <maekke@gentoo.org> munin-2.0.14.ebuild:
   add ~arm, bug #446958
