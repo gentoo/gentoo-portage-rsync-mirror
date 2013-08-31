@@ -1,11 +1,12 @@
-DEFINED_PHASES=install setup
-DEPEND==app-admin/gkrellm-2* virtual/pkgconfig
-DESCRIPTION=a Program-Launcher Plugin for GKrellM2
+DEFINED_PHASES=compile install prepare setup
+DEPEND=app-admin/gkrellm[X] =app-admin/gkrellm-2* virtual/pkgconfig
+DESCRIPTION=A Program-Launcher Plugin for GKrellM2
+EAPI=5
 HOMEPAGE=http://gkrellmlaunch.sourceforge.net/
 KEYWORDS=x86 ppc sparc alpha amd64
 LICENSE=GPL-2
-RDEPEND==app-admin/gkrellm-2*
+RDEPEND=app-admin/gkrellm[X] =app-admin/gkrellm-2*
 SLOT=2
 SRC_URI=mirror://sourceforge/gkrellmlaunch/gkrellmlaunch-0.5.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	gkrellm-plugin	4599c73f33aed9a9988a7031f60d2ed8	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=4942056e8639825ff8c5c4362a6b5258
+_md5_=8b0efda819e2ed7bd5f25a620455585f

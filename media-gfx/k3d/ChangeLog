@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.57 2013/08/18 03:08:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.58 2013/08/31 14:07:29 pacho Exp $
+
+  31 Aug 2013; Pacho Ramos <pacho@gentoo.org> +files/k3d-0.7.11.0-gcc47.patch,
+  k3d-0.7.11.0-r1.ebuild:
+  Build with gcc47 (#421951 by Peter Asplund)
 
   18 Aug 2013; Patrick Lauer <patrick@gentoo.org> k3d-0.7.11.0-r1.ebuild:
   Whitespace

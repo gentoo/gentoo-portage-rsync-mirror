@@ -1,14 +1,26 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/gkrellmlaunch-0.5.ebuild,v 1.16 2007/07/11 20:39:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmlaunch/gkrellmlaunch-0.5.ebuild,v 1.17 2013/08/31 14:25:01 pacho Exp $
 
-inherit gkrellm-plugin
+EAPI=5
+inherit eutils gkrellm-plugin toolchain-funcs
 
-IUSE=""
-DESCRIPTION="a Program-Launcher Plugin for GKrellM2"
+DESCRIPTION="A Program-Launcher Plugin for GKrellM2"
 SRC_URI="mirror://sourceforge/gkrellmlaunch/${P}.tar.gz"
 HOMEPAGE="http://gkrellmlaunch.sourceforge.net/"
+IUSE=""
 
 SLOT="2"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha amd64"
+
+RDEPEND="app-admin/gkrellm[X]"
+DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-makefile.patch"
+}
+
+src_compile() {
+	emake LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)"
+}
