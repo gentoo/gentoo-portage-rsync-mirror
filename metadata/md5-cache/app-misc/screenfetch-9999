@@ -1,0 +1,10 @@
+DEFINED_PHASES=install unpack
+DEPEND=dev-vcs/git
+DESCRIPTION=A Bash Screenshot Information Tool
+EAPI=4
+HOMEPAGE=https://github.com/KittyKatt/screenFetch
+LICENSE=GPL-3
+RDEPEND=media-gfx/scrot x11-apps/xdpyinfo
+SLOT=0
+_eclasses_=git-2	e92e09651292b1bef5656592364550f7
+_md5_=c833b7ff5abd754dff8205054b47279b

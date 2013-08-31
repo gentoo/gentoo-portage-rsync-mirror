@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15075 2013/08/30 22:54:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15076 2013/08/30 23:51:41 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -967,6 +967,7 @@ sci-biology/picard
 ~dev-libs/libg15-9999
 ~app-doc/devmanual-9999
 ~x11-wm/openbox-9999
+~app-misc/screenfetch-9999
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open

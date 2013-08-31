@@ -1,0 +1,9 @@
+[Unit]
+Description=Tinc daemon for network %i
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/tincd -D -n %i
+
+[Install]
+WantedBy=multi-user.target

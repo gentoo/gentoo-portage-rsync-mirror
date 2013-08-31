@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.5-r1.ebuild,v 1.1 2013/08/29 18:03:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/openafs-kernel-1.6.5-r1.ebuild,v 1.2 2013/08/30 23:48:08 vincent Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools eutils multilib linux-mod versionator toolchain-funcs
 
@@ -61,7 +61,7 @@ src_configure() {
 }
 
 src_compile() {
-	ARCH="$(tc-arch-kernel)" emake -j1 only_libafs || die
+	ARCH="$(tc-arch-kernel)" AR="$(tc-getAR)" emake V=1 -j1 only_libafs || die
 }
 
 src_install() {
