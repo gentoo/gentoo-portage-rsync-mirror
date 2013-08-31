@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/py3status/py3status-1.0.ebuild,v 1.1 2013/08/30 17:52:19 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/py3status/py3status-1.0.ebuild,v 1.2 2013/08/31 12:12:36 xarthisius Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -22,6 +22,6 @@ IUSE=""
 
 RDEPEND="x11-misc/i3status"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools[${PYTHON_USEDEP}]"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}

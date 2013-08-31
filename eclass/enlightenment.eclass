@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.99 2013/08/28 02:51:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.100 2013/08/31 12:29:26 tommy Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -46,19 +46,33 @@ E_ECONF=()
 #	S           EURI_STATE
 
 E_LIVE_SERVER_DEFAULT_SVN="http://svn.enlightenment.org/svn/e/trunk"
+E_LIVE_SERVER_DEFAULT_GIT="git://git.enlightenment.org"
 
 E_STATE="release"
 if [[ ${PV} == *9999* ]] ; then
-	E_LIVE_SERVER=${E_LIVE_SERVER:-${E_LIVE_SERVER_DEFAULT_SVN}}
+	if [[ ${ESVN_URI_APPEND} ]] ; then
+		E_LIVE_SERVER=${E_LIVE_SERVER:-${E_LIVE_SERVER_DEFAULT_SVN}}
+
+		ESVN_URI_APPEND=${ESVN_URI_APPEND:-${PN}}
+		ESVN_PROJECT="enlightenment/${ESVN_SUB_PROJECT}"
+		ESVN_REPO_URI=${ESVN_SERVER:-${E_LIVE_SERVER_DEFAULT_SVN}}/${ESVN_SUB_PROJECT}/${ESVN_URI_APPEND}
+		E_S_APPEND=${ESVN_URI_APPEND}
+		E_LIVE_SOURCE="svn"
+		inherit subversion
+	elif [[ ${EGIT_URI_APPEND} ]] ; then
+		E_LIVE_SERVER=${E_LIVE_SERVER:-${E_LIVE_SERVER_DEFAULT_GIT}}
+		EGIT_URI_APPEND=${EGIT_URI_APPEND:-${PN}}
+		EGIT_PROJECT="enlightenment/${EGIT_SUB_PROJECT}/${EGIT_URI_APPEND}"
+		EGIT_REPO_URI=${EGIT_SERVER:-${E_LIVE_SERVER_DEFAULT_GIT}}/${EGIT_SUB_PROJECT}/${EGIT_URI_APPEND}.git
+		E_S_APPEND=${EGIT_URI_APPEND}
+		E_LIVE_SOURCE="git"
+		inherit git-2
+	else
+		die "Either ESVN_URI_APPEND or EGIT_URI_APPEND need to be defined"
+	fi
 	E_STATE="live"
 	WANT_AUTOTOOLS="yes"
 
-	ESVN_URI_APPEND=${ESVN_URI_APPEND:-${PN}}
-	ESVN_PROJECT="enlightenment/${ESVN_SUB_PROJECT}"
-	ESVN_REPO_URI=${ESVN_SERVER:-${E_LIVE_SERVER_DEFAULT_SVN}}/${ESVN_SUB_PROJECT}/${ESVN_URI_APPEND}
-	E_S_APPEND=${ESVN_URI_APPEND}
-	E_LIVE_SOURCE="svn"
-	inherit subversion
 elif [[ -n ${E_SNAP_DATE} ]] ; then
 	E_STATE="snap"
 else
@@ -118,6 +132,7 @@ enlightenment_src_unpack() {
 	if [[ ${E_STATE} == "live" ]] ; then
 		case ${E_LIVE_SOURCE} in
 			svn) subversion_src_unpack;;
+			git) git-2_src_unpack;;
 			*)   die "eek!";;
 		esac
 	else

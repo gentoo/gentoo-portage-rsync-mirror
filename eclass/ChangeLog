@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.941 2013/08/28 22:04:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.942 2013/08/31 12:29:26 tommy Exp $
+
+  31 Aug 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  enlightenment.eclass:
+  Add git support for live packages using enlightenment.eclass
 
   28 Aug 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Introduce python_is_python3() to replace the common checks.
