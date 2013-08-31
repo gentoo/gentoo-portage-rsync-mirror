@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-9999.ebuild,v 1.2 2013/07/16 23:58:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-9999.ebuild,v 1.3 2013/08/31 09:29:52 tomwij Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://fixounet.free.fr/avidemux"
 
 # Multiple licenses because of all the bundled stuff.
 LICENSE="GPL-1 GPL-2 MIT PSF-2 public-domain"
-IUSE="debug nls sdl system-ffmpeg vdpau xv"
+IUSE="debug nls sdl system-ffmpeg vaapi vdpau video_cards_fglrx xv"
 KEYWORDS="~amd64 ~x86"
 
 MY_PN="${PN/-core/}"
@@ -33,9 +33,11 @@ DEPEND="
 	dev-db/sqlite:3
 	nls? ( sys-devel/gettext:0 )
 	sdl? ( media-libs/libsdl:0 )
-	system-ffmpeg? ( >=virtual/ffmpeg-9[mp3,theora] )
+	system-ffmpeg? ( >=virtual/ffmpeg-9:0[mp3,theora] )
 	xv? ( x11-libs/libXv:0 )
+	vaapi? ( x11-libs/libva:0 )
 	vdpau? ( x11-libs/libvdpau:0 )
+	video_cards_fglrx? ( x11-libs/xvba-video:0 )
 "
 RDEPEND="
 	$DEPEND
@@ -84,7 +86,9 @@ src_configure() {
 		-DAVIDEMUX_SOURCE_DIR='${S}'
 		$(cmake-utils_use nls GETTEXT)
 		$(cmake-utils_use sdl SDL)
+		$(cmake-utils_use vaapi LIBVA)
 		$(cmake-utils_use vdpau VDPAU)
+		$(cmake-utils_use video_cards_fglrx XVBA)
 		$(cmake-utils_use xv XVIDEO)
 	"
 

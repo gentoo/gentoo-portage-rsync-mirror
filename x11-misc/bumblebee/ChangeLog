@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bumblebee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.14 2013/05/26 18:55:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bumblebee/ChangeLog,v 1.15 2013/08/31 09:14:04 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> bumblebee-3.2.1.ebuild:
+  Stable for amd64, wrt bug #480128
 
 *bumblebee-3.2.1 (26 May 2013)
 

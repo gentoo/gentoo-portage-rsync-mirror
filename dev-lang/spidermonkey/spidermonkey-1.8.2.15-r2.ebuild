@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.2.15-r2.ebuild,v 1.2 2013/08/08 20:49:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.2.15-r2.ebuild,v 1.3 2013/08/31 09:14:36 ago Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -16,7 +16,7 @@ SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}.source.tar.bz2"
 
 LICENSE="NPL-1.1"
 SLOT="0/mozjs"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
 IUSE="threadsafe"
 
 S="${WORKDIR}/mozilla-1.9.2"

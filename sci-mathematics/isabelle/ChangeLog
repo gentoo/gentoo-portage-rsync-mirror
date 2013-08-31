@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/isabelle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.8 2013/05/03 14:53:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/ChangeLog,v 1.9 2013/08/31 09:24:13 gienah Exp $
+
+*isabelle-2013 (31 Aug 2013)
+
+  31 Aug 2013; Mark Wright <gienah@gentoo.org>
+  +files/isabelle-2013-HOL-Predicate_Compile_Examples.patch,
+  +files/isabelle-2013-classpath.patch,
+  +files/isabelle-2013-gentoo-settings.patch, +isabelle-2013.ebuild:
+  Bump isabelle to 2013, fixes bug 468344
 
   03 May 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix XML.

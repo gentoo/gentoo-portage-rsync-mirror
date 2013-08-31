@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/bbswitch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.12 2013/07/04 13:42:34 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/bbswitch/ChangeLog,v 1.13 2013/08/31 09:14:14 ago Exp $
+
+  31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> bbswitch-0.7.ebuild:
+  Stable for amd64, wrt bug #480128
 
   04 Jul 2013; Fabio Erculiani <lxnay@gentoo.org>
   -files/bbswitch-0.5-kernel-3.8.patch:

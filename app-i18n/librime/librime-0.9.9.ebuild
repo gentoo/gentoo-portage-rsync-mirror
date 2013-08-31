@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.9.ebuild,v 1.2 2013/07/25 22:01:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/librime-0.9.9.ebuild,v 1.3 2013/08/31 09:08:39 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://rimeime.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="static-libs test"
 
 RDEPEND="app-i18n/opencc

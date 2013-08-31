@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hoteqn/hoteqn-4.0.0.ebuild,v 1.4 2010/01/03 20:41:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hoteqn/hoteqn-4.0.0.ebuild,v 1.5 2013/08/31 09:20:54 ago Exp $
 
 inherit java-pkg-2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.atp.ruhr-uni-bochum.de/VCLab/software/HotEqn/HotEqn.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT=0
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4"
