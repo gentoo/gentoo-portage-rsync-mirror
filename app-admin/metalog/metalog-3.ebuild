@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-3.ebuild,v 1.9 2013/08/29 19:52:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-3.ebuild,v 1.10 2013/09/01 18:36:39 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="unicode"
 
 RDEPEND=">=dev-libs/libpcre-3.4"

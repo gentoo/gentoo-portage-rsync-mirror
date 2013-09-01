@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.81 2013/04/22 21:42:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.82 2013/09/01 18:40:08 radhermit Exp $
+
+*nbd-3.4 (01 Sep 2013)
+
+  01 Sep 2013; Tim Harder <radhermit@gentoo.org> +nbd-3.4.ebuild:
+  Version bump.
 
 *nbd-3.3 (22 Apr 2013)
 

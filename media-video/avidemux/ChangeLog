@@ -1,6 +1,16 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.225 2013/09/01 11:53:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.226 2013/09/01 18:54:38 tomwij Exp $
+
+*avidemux-2.6.5-r1 (01 Sep 2013)
+
+  01 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-2.6.5-r1.ebuild:
+  Revision bump. Import the install fix I did for avidemux-plugins to bring back
+  avidemux3_cli, as that executable went lost after making more use of the
+  eclass; the cmake-utils.eclass currently doesn't support calling cmake-
+  utils_src_install multiple times with different BUILD_DIR locations, see bug
+  #483294 for more details. Thanks to Nikoli on IRC for reporting the missing
+  executable.
 
 *avidemux-2.6.5 (01 Sep 2013)
 

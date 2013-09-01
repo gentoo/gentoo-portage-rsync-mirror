@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1.ebuild,v 1.1 2013/09/01 08:49:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1.ebuild,v 1.2 2013/09/01 18:48:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -241,15 +241,6 @@ pkg_postinst() {
 		elog "selected using 'eselect mesa'."
 		if ! has_version "media-libs/mesa[gallium]"; then
 			ewarn "You will need to emerge media-libs/mesa with USE=gallium."
-		fi
-	fi
-
-	if has_version "media-libs/mesa[video_cards_intel]"; then
-		elog "Cinnamon is unstable under gallium-mode i915/i965 mesa drivers."
-		elog "Make sure that classic architecture for i915 and i965 drivers is"
-		elog "selected using 'eselect mesa'."
-		if ! has_version "media-libs/mesa[classic]"; then
-			ewarn "You will need to emerge media-libs/mesa with USE=classic."
 		fi
 	fi
 }

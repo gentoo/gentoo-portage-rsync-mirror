@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.2 2013/08/26 08:54:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.3 2013/09/01 18:47:50 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -214,17 +214,6 @@ pkg_postinst() {
 		elog "selected using 'eselect mesa'."
 		if ! has_version "media-libs/mesa[gallium]"; then
 			ewarn "You will need to emerge media-libs/mesa with USE=gallium."
-		fi
-	fi
-
-	if has_version "media-libs/mesa[video_cards_intel]" ||
-	   has_version "media-libs/mesa[video_cards_i915]" ||
-	   has_version "media-libs/mesa[video_cards_i965]"; then
-		elog "GNOME Shell is unstable under gallium-mode i915/i965 mesa drivers."
-		elog "Make sure that classic architecture for i915 and i965 drivers is"
-		elog "selected using 'eselect mesa'."
-		if ! has_version "media-libs/mesa[classic]"; then
-			ewarn "You will need to emerge media-libs/mesa with USE=classic."
 		fi
 	fi
 
