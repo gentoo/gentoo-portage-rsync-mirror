@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.15.1-r1.ebuild,v 1.6 2013/08/26 16:58:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.15.1-r1.ebuild,v 1.7 2013/09/01 14:26:55 axs Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -25,6 +25,8 @@ DEPEND="virtual/pkgconfig
 RDEPEND=">=dev-libs/nspr-${NSPR_VER}
 	>=dev-db/sqlite-3.5
 	sys-libs/zlib"
+
+RESTRICT="test"
 
 S="${WORKDIR}/${P}/${PN}"
 

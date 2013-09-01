@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.309 2013/08/26 16:58:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.310 2013/09/01 14:26:55 axs Exp $
+
+  01 Sep 2013; Ian Stakenvicius <axs@gentoo.org> nss-3.15.1-r1.ebuild:
+  Restrict tests to avoid running tests with do not exist, bug 474056
 
   26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> nss-3.15.1-r1.ebuild:
   Stable for ppc, wrt bug #479968

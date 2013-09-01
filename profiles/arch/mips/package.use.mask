@@ -1,6 +1,11 @@
 # Copyright 2008-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.55 2013/07/28 02:41:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.56 2013/09/01 14:31:28 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (01 Sep 2013)
+# CONFIG_AUDITSYSCALL=y is not implemented, bug #438368
+sys-apps/systemd pam
+sys-auth/consolekit pam
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
 # depends on sys-devel/llvm[video_cards_radeon]
