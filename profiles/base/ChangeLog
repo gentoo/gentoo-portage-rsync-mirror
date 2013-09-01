@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.597 2013/08/31 14:37:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.598 2013/09/01 22:41:13 jdhore Exp $
+
+  01 Sep 2013; Jeff Horelick <jdhore@gentoo.org> package.use.mask:
+  mask sid for >=media-plugins/audacious-plugins-3.4
 
   31 Aug 2013; Julian Ospald <hasufell@gentoo.org> package.use.mask:
   mask custom-cflags for media-libs/libsdl2 since it's unsupported

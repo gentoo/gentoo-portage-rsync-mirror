@@ -1,10 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.510 2013/08/31 14:37:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.511 2013/09/01 22:41:13 jdhore Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Jeff Horelick <jdhore@gentoo.org> (1 Sep 2013)
+# Dependency (media-libs/libsidplayfp) only keyworded
+# on x86 and amd64. Will unmask there.
+>=media-plugins/audacious-plugins-3.4 sid
 
 # Julian Ospald <hasufell@gentoo.org> (31 Aug 2013)
 # Randomly breaks consumers at runtime. Do not report

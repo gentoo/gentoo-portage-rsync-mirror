@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.148 2013/08/24 15:29:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.149 2013/09/01 22:46:24 jdhore Exp $
+
+  01 Sep 2013; Jeff Horelick <jdhore@gentoo.org> package.use.mask:
+  unmask sid for >=media-plugins/audacious-plugins-3.4
 
   24 Aug 2013; Markus Meier <maekke@gentoo.org> package.mask:
   remove texlive-2013 mask, bug #475124
