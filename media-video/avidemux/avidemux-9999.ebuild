@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-9999.ebuild,v 1.2 2013/08/31 11:01:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-9999.ebuild,v 1.3 2013/09/01 11:24:28 tomwij Exp $
 
 EAPI="5"
 
@@ -36,7 +36,7 @@ DEPEND="
 	video_cards_fglrx? ( x11-libs/xvba-video:0 )
 "
 RDEPEND="$DEPEND"
-PDEPEND="~media-libs/avidemux-plugins-${PV}"
+PDEPEND="~media-libs/avidemux-plugins-${PV}:${SLOT}[opengl?,qt4?]"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -52,25 +52,25 @@ src_prepare() {
 	# The desktop file is broken. It uses avidemux2 instead of avidemux3
 	# so it will actually launch avidemux-2.5 if it is installed.
 	sed -i -e "/^Exec/ s:${PN}2:${PN}3:" ${PN}2.desktop || die "Desktop file fix failed."
+	sed -i -re '/^Exec/ s:(avidemux3_)gtk:\1qt4:' ${PN}2.desktop || die "Desktop file fix failed."
+
+	# Fix QA warnings that complain a trailing ; is missing and Application is deprecated.
+	sed -i -e 's/Application;AudioVideo/AudioVideo;/g' ${PN}2.desktop || die "Desktop file fix failed."
 
 	# Now rename the desktop file to not collide with 2.5.
 	mv ${PN}2.desktop ${PN}-2.6.desktop || die "Collision rename failed."
 
-	# The desktop file is broken. It uses avidemux2 instead of avidemux3
-	# so it will actually launch avidemux-2.5 if it is installed.
-	sed -i -re '/^Exec/ s:(avidemux3_)gtk:\1qt4:' ${PN}-2.6.desktop || die "Desktop file fix failed."
-
-	# Fix QA warnings that complain a trailing ; is missing and Application is deprecated.
-	sed -i -e 's/Application;AudioVideo/AudioVideo;/g' ${PN}-2.6.desktop
+	# Remove "Build Option" dialog because it doesn't reflect what the GUI can or has been built with. (Bug #463628)
+	sed -i -e '/Build Option/d' avidemux/common/ADM_commonUI/myOwnMenu.h || die "Couldn't remove \"Build Option\" dialog."
 }
 
 src_configure() {
 	local mycmakeargs="
 		-DAVIDEMUX_SOURCE_DIR='${S}'
 		$(cmake-utils_use nls GETTEXT)
-		$(cmake-utils_use sdl SDL)
+		$(cmake-utils_use sdl)
 		$(cmake-utils_use vaapi LIBVA)
-		$(cmake-utils_use vdpau VDPAU)
+		$(cmake-utils_use vdpau)
 		$(cmake-utils_use video_cards_fglrx XVBA)
 		$(cmake-utils_use xv XVIDEO)
 	"

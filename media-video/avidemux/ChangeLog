@@ -1,6 +1,11 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.223 2013/08/31 11:01:26 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.224 2013/09/01 11:24:28 tomwij Exp $
+
+  01 Sep 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-9999.ebuild:
+  Preparation for 2.6.5, removed "Build Option" dialog because it doesn't
+  reflect what the GUI can or has been built with, for bug #463628. Did some
+  small cleanup.
 
   31 Aug 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-9999.ebuild,
   metadata.xml:

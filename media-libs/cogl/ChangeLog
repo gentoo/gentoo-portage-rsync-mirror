@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.35 2013/07/27 23:57:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.36 2013/09/01 11:10:33 pacho Exp $
+
+*cogl-1.14.1_pre20130901 (01 Sep 2013)
+
+  01 Sep 2013; Pacho Ramos <pacho@gentoo.org> +cogl-1.14.1_pre20130901.ebuild:
+  Bump including all commits from 1.14 branch (fixing #481348 by Kamil Kamiński
+  also)
 
   27 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> cogl-1.14.0.ebuild:
   Add missing dependency, per configure.
