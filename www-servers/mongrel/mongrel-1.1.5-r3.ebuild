@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/mongrel-1.1.5-r3.ebuild,v 1.7 2013/01/15 05:15:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/mongrel-1.1.5-r3.ebuild,v 1.8 2013/09/01 12:41:54 graaff Exp $
 
 EAPI="2"
 
@@ -33,8 +33,6 @@ ruby_add_rdepend ">=dev-ruby/daemons-1.0.3
 
 # Only useful with Ruby 1.8 as it's not used/useful with Ruby 1.9 or JRuby
 USE_RUBY=ruby18 ruby_add_rdepend ">=dev-ruby/fastthread-1.0.1"
-
-ruby_add_bdepend test virtual/ruby-test-unit
 
 all_ruby_prepare() {
 	# This package is no longer in our tree and it is not needed for any

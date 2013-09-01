@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/antlr-c/antlr-c-3.5.ebuild,v 1.1 2013/03/28 05:04:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/antlr-c/antlr-c-3.5.ebuild,v 1.2 2013/09/01 12:49:31 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/antlr/antlr3/archive/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug debugger doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"

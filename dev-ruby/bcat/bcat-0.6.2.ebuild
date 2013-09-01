@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/bcat-0.6.2.ebuild,v 1.9 2013/01/15 05:19:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/bcat-0.6.2.ebuild,v 1.10 2013/09/01 12:46:09 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18"
@@ -22,7 +22,6 @@ IUSE=""
 RDEPEND="${RDEPEND} !!app-accessibility/speech-tools"
 
 ruby_add_bdepend "doc? ( app-text/ronn )"
-ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
 
 ruby_add_rdepend "dev-ruby/rack"
 
