@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pybluez
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.30 2010/07/18 12:37:21 nixnut Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.31 2013/09/01 09:24:38 mgorny Exp $
+
+*pybluez-0.18-r1 (01 Sep 2013)
+
+  01 Sep 2013; Michał Górny <mgorny@gentoo.org> +pybluez-0.18-r1.ebuild:
+  Convert to distutils-r1.
 
   18 Jul 2010; <nixnut@gentoo.org> pybluez-0.18.ebuild:
   ppc stable #317947
@@ -121,4 +126,3 @@
   03 Nov 2005; Alastair Tse <liquidx@gentoo.org> +metadata.xml,
   +pybluez-0.3.ebuild:
   initial commit. ebuil submitted by Philip Kovacs (#95980)
-

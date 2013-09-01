@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/concurrent-util-1.3.4-r1.ebuild,v 1.12 2013/06/27 21:23:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/concurrent-util-1.3.4-r1.ebuild,v 1.13 2013/09/01 09:27:44 grobian Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/gentoo-concurrent-util-1.3.4.tar.bz2"
 
 LICENSE="public-domain sun-concurrent-util MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 RDEPEND=">=virtual/jre-1.2"
 DEPEND=">=virtual/jdk-1.2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/byaccj-1.15-r1.ebuild,v 1.5 2013/06/18 19:43:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/byaccj-1.15-r1.ebuild,v 1.6 2013/09/01 09:29:22 grobian Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 S="${WORKDIR}/${PN}${PV}"

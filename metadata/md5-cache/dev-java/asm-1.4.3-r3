@@ -3,11 +3,11 @@ DEPEND=>=virtual/jdk-1.3 dev-java/ant-core dev-java/ant-owanttask >=dev-java/jav
 DESCRIPTION=Bytecode manipulation framework for Java
 HOMEPAGE=http://asm.objectweb.org
 IUSE=elibc_FreeBSD doc source elibc_FreeBSD
-KEYWORDS=amd64 ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~x86-macos
+KEYWORDS=amd64 ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=BSD
 RDEPEND=>=virtual/jre-1.3 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 RESTRICT=test
 SLOT=1.4
 SRC_URI=http://download.forge.objectweb.org/asm/asm-1.4.3.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-ant-2	65ba8d80c13cf56bad5ccec21a6b3c37	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=0f39c12bc068daa35d6484c258d093c9
+_md5_=2055e9daf2f311d4d1f41a5718291f29

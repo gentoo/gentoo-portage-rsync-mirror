@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.19 2013/06/27 22:01:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.20 2013/09/01 09:30:29 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> jmock-1.1.0-r2.ebuild:
+  Marked *-macos
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> jmock-1.1.0-r2.ebuild:
   keyword ~amd64-fbsd
@@ -77,4 +80,3 @@
   +files/jmock-1.0.1-buildxml.patch, +jmock-1.0.1.ebuild:
   Initial import. Ebuild submitted by me. Needed as a indirect dependency of
   #63290.
-

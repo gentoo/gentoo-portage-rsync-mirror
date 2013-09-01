@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/trove
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.20 2013/06/27 21:21:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/trove/ChangeLog,v 1.21 2013/09/01 09:28:34 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> trove-2.1.0.ebuild:
+  Marked *-macos
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> trove-2.1.0.ebuild:
   keyword ~amd64-fbsd
@@ -75,4 +78,3 @@
   30 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +trove-1.0.2.ebuild:
   inital import, ebuild contributed by Dan <dan@intuitivelyobvious.net>
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.7 2013/09/01 00:39:04 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.8 2013/09/01 09:09:05 patrick Exp $
 
 EAPI=5
 
@@ -62,7 +62,7 @@ src_prepare() {
 
 	if [[ $(gcc-version) = "4.8" ]]; then
 		epatch "${FILESDIR}"/${PN}-emu-${PV}-gcc-4.8.patch
-	fi 
+	fi
 
 	if use !alsa; then
 		sed -i -e '/^include(FindALSA/d' CMakeLists.txt || die
