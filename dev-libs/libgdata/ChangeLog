@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.67 2013/08/30 22:42:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.68 2013/09/01 21:07:13 eva Exp $
+
+*libgdata-0.14.0 (01 Sep 2013)
+
+  01 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> +libgdata-0.14.0.ebuild:
+  Version bump.
 
   30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -libgdata-0.13.2-r2.ebuild, -libgdata-0.13.3.ebuild, libgdata-0.13.4.ebuild,
