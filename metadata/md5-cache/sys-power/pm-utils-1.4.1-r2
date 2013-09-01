@@ -10,4 +10,4 @@ RDEPEND=!<app-laptop/laptop-mode-tools-1.55-r1 !sys-power/powermgmt-base[-pm-uti
 SLOT=0
 SRC_URI=http://pm-utils.freedesktop.org/releases/pm-utils-1.4.1.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=ee601228ad695845eec2fd31e6fc7bda
+_md5_=2db18f9e845a170cf133c9af5f6e5df2

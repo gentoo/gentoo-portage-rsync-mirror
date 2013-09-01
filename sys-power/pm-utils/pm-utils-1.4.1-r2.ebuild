@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1-r2.ebuild,v 1.7 2012/05/19 12:04:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.4.1-r2.ebuild,v 1.8 2013/09/01 10:43:25 eva Exp $
 
 EAPI=4
 
@@ -51,6 +51,9 @@ src_install() {
 	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS pm/HOWTO* README* TODO
 	doman man/*.{1,8}
+
+	# Remove duplicate documentation install
+	rm -r "${D}/usr/share/doc/${PN}"
 
 	insinto /etc/pm/config.d
 	doins "${T}"/gentoo
