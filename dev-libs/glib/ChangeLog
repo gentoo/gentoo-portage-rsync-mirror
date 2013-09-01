@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.573 2013/08/16 08:30:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.574 2013/09/01 19:47:58 pacho Exp $
+
+  01 Sep 2013; Pacho Ramos <pacho@gentoo.org> glib-2.36.4.ebuild:
+  Pass --disable-compile-warnings configure option to drop -Werror usage
 
   16 Aug 2013; Lars Wendler <polynomial-c@gentoo.org> glib-2.34.3-r1.ebuild:
   Non-maintainer commit: really use python-r1 eclass.
