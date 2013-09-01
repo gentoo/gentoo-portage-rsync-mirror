@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/zinnia
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.5 2012/06/01 00:21:10 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.7 2013/09/01 10:08:37 ago Exp $
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> zinnia-0.06-r1.ebuild:
+  Stable for x86, wrt bug #480822
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> zinnia-0.06-r1.ebuild:
+  Stable for amd64, wrt bug #480822
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> zinnia-0.06-r1.ebuild:
   inherit eutils for epatch
@@ -27,4 +33,3 @@
   04 May 2010; MATSUU Takuto <matsuu@gentoo.org> +zinnia-0.05.ebuild,
   +metadata.xml:
   Initial import.
-

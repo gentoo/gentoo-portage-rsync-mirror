@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/zinnia-0.06-r1.ebuild,v 1.3 2012/06/01 00:21:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/zinnia-0.06-r1.ebuild,v 1.5 2013/09/01 10:08:37 ago Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/zinnia/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 #IUSE="perl python ruby"
 IUSE="perl"
 

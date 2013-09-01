@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia-tomoe/zinnia-tomoe-0.6.0_p20080911.ebuild,v 1.2 2013/05/04 09:35:09 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia-tomoe/zinnia-tomoe-0.6.0_p20080911.ebuild,v 1.4 2013/09/01 10:08:41 ago Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/zinnia/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
