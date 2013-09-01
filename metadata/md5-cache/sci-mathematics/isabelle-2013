@@ -2,12 +2,12 @@ DEFINED_PHASES=compile install postinst preinst prepare setup unpack
 DEPEND=>=app-shells/bash-3.0 dev-java/ant-core >=dev-java/jcommon-1.0.18 >=dev-java/jfreechart-1.0.14 >=dev-java/itext-2.1.5 dev-java/xml-xmlbeans:1 >=dev-lang/ghc-7.6.3 >=dev-lang/polyml-5.5.0:=[-portable] >=dev-lang/perl-5.8.8-r2 dev-lang/swi-prolog virtual/jdk:1.7 doc? ( virtual/latex-base dev-tex/rail ) >=dev-lang/scala-2.10.2 ledit? ( app-misc/ledit ) readline? ( app-misc/rlwrap ) >=dev-java/java-config-2.1.9-r1
 DESCRIPTION=Isabelle is a generic proof assistant
 EAPI=5
-HOMEPAGE=http://www.cl.cam.ac.uk/research/hvg/isabelle/index.html
+HOMEPAGE=http://www.cl.cam.ac.uk/research/hvg/Isabelle/index.html
 IUSE=doc graphbrowsing ledit readline proofgeneral elibc_FreeBSD
 KEYWORDS=~amd64 ~x86
 LICENSE=BSD
 RDEPEND=dev-perl/libwww-perl sci-mathematics/sha1-polyml >=virtual/jre-1.7 proofgeneral? ( >=app-emacs/proofgeneral-4.1 ) >=app-shells/bash-3.0 dev-java/ant-core >=dev-java/jcommon-1.0.18 >=dev-java/jfreechart-1.0.14 >=dev-java/itext-2.1.5 dev-java/xml-xmlbeans:1 >=dev-lang/ghc-7.6.3 >=dev-lang/polyml-5.5.0:=[-portable] >=dev-lang/perl-5.8.8-r2 dev-lang/swi-prolog virtual/jdk:1.7 doc? ( virtual/latex-base dev-tex/rail ) >=dev-lang/scala-2.10.2 ledit? ( app-misc/ledit ) readline? ( app-misc/rlwrap ) >=dev-java/java-config-2.1.9-r1
 SLOT=0/2013
-SRC_URI=http://www.cl.cam.ac.uk/research/hvg/isabelle/dist/Isabelle2013.tar.gz http://isabelle.in.tum.de/components/jedit_build-20130104.tar.gz -> jedit_build-isabelle-component-20130104.tar.gz http://isabelle.in.tum.de/components/jfreechart-1.0.14.tar.gz -> jfreechart-isabelle-component-1.0.14.tar.gz
+SRC_URI=http://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/Isabelle2013.tar.gz http://isabelle.in.tum.de/components/jedit_build-20130104.tar.gz -> jedit_build-isabelle-component-20130104.tar.gz http://isabelle.in.tum.de/components/jfreechart-1.0.14.tar.gz -> jfreechart-isabelle-component-1.0.14.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=7cc7cc1f019f8a653ef2462c4d027fb0
+_md5_=be6e6bc8e037c0f8f5de894d5a5096c0

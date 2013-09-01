@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013.ebuild,v 1.1 2013/08/31 09:24:13 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013.ebuild,v 1.2 2013/09/01 08:30:31 zmedico Exp $
 
 EAPI="5"
 
@@ -23,8 +23,8 @@ JFREECHART_IC_PN="${JFREECHART_PN}-isabelle-component"
 JFREECHART_IC_P="${JFREECHART_IC_PN}-${JFREECHART_PV}"
 
 DESCRIPTION="Isabelle is a generic proof assistant"
-HOMEPAGE="http://www.cl.cam.ac.uk/research/hvg/isabelle/index.html"
-SRC_URI="http://www.cl.cam.ac.uk/research/hvg/isabelle/dist/${MY_P}.tar.gz
+HOMEPAGE="http://www.cl.cam.ac.uk/research/hvg/Isabelle/index.html"
+SRC_URI="http://www.cl.cam.ac.uk/research/hvg/Isabelle/dist/${MY_P}.tar.gz
 		http://isabelle.in.tum.de/components/${JEDIT_P}.tar.gz -> ${JEDIT_IC_P}.tar.gz
 		http://isabelle.in.tum.de/components/${JFREECHART_P}.tar.gz -> ${JFREECHART_IC_P}.tar.gz"
 
