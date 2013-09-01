@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/aspectwerkz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.32 2013/06/27 21:55:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectwerkz/ChangeLog,v 1.33 2013/09/01 09:33:06 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> aspectwerkz-2.0.ebuild:
+  Marked *-macos
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> aspectwerkz-2.0.ebuild:
   keyword ~amd64-fbsd
@@ -140,4 +143,3 @@
   05 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +files/aspectwerkz-2.0_rc2-gentoo.patch, +aspectwerkz-2.0_rc2.ebuild:
   Initial import. Needed as a dependency of #76738.
-

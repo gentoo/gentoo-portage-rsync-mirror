@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/twisted-pair-12.3.0.ebuild,v 1.2 2013/08/03 09:45:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-pair/twisted-pair-12.3.0.ebuild,v 1.4 2013/09/01 09:51:20 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -12,7 +12,7 @@ inherit twisted versionator
 
 DESCRIPTION="Twisted low-level networking"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="=dev-python/twisted-core-$(get_version_component_range 1-2)*

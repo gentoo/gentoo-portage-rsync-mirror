@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/eunuchs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eunuchs/ChangeLog,v 1.7 2013/07/09 16:46:58 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eunuchs/ChangeLog,v 1.9 2013/09/01 09:51:36 ago Exp $
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> eunuchs-20050320.1-r1.ebuild:
+  Stable for x86, wrt bug #468150
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> eunuchs-20050320.1-r1.ebuild:
+  Stable for amd64, wrt bug #468150
 
 *eunuchs-20050320.1-r1 (09 Jul 2013)
 
