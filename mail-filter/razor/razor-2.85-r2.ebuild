@@ -1,18 +1,24 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.85.ebuild,v 1.2 2012/03/25 15:01:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.85-r2.ebuild,v 1.1 2013/09/01 16:52:01 idella4 Exp $
 
-inherit perl-app
+EAPI=5
 
+inherit perl-module
+
+MY_PN="razor-agents"
+MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Vipul's Razor is a distributed, collaborative spam detection and filtering network"
 HOMEPAGE="http://razor.sourceforge.net/"
-SRC_URI="mirror://sourceforge/razor/razor-agents-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/razor/${MY_P}.tar.bz2"
+
 LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+# This package warrants IUSE doc
 IUSE=""
 
-DEPEND="dev-lang/perl"
+DEPEND=""
 
 RDEPEND="dev-perl/Net-DNS
 	virtual/perl-net-ping
@@ -21,9 +27,15 @@ RDEPEND="dev-perl/Net-DNS
 	dev-perl/URI
 	dev-perl/Digest-Nilsimsa"
 
-PATCHES=( "${FILESDIR}/${PN}-2.85-use-sha-not-sha1.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-2.85-use-sha-not-sha1.patch"
+	"${FILESDIR}/${PN}-2.85-cosmetic-pv-fix.patch"
+	)
 
-S=${WORKDIR}/razor-agents-${PV}
+S=${WORKDIR}/${MY_P}
+# Install docs/ content
+mydoc="docs/*"
+SRC_TEST="do parallel"
 
 pkg_postinst() {
 	elog

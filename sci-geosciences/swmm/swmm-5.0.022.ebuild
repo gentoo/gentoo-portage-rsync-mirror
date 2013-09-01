@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/swmm/swmm-5.0.022.ebuild,v 1.4 2013/09/01 13:35:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/swmm/swmm-5.0.022.ebuild,v 1.5 2013/09/01 16:58:43 ulm Exp $
 
 EAPI=5
 
@@ -31,8 +31,7 @@ src_unpack() {
 	rm Readme.txt || die
 	unpack ./makefiles.zip
 	unpack ./GNU_CON.zip
-	mv source*.ZIP source.zip || die
-	unpack ./source.zip
+	unpack ./source*.ZIP
 }
 
 src_prepare() {
