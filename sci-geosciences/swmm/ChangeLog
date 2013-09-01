@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/swmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/swmm/ChangeLog,v 1.5 2013/06/25 12:57:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/swmm/ChangeLog,v 1.6 2013/09/01 13:35:32 ulm Exp $
+
+  01 Sep 2013; Ulrich Müller <ulm@gentoo.org> swmm-5.0.022.ebuild:
+  Fix src_unpack, *.ZIP is not a valid extension for unpack().
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> swmm-5.0.022.ebuild:
   Stable for amd64, wrt bug #474418
