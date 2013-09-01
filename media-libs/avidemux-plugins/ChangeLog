@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/avidemux-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.16 2013/09/01 11:53:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.17 2013/09/01 20:33:56 tomwij Exp $
+
+*avidemux-plugins-2.6.5-r1 (01 Sep 2013)
+
+  01 Sep 2013; Tom Wijsman <TomWij@gentoo.org>
+  +avidemux-plugins-2.6.5-r1.ebuild:
+  Revision bump to install command line plugins; because avidemux3_cli has been
+  brought back in media-video/avidemux, this package needs a rebuild. Requested
+  by Nikoli, also see https://gist.github.com/TomWij/92c50218c51b33a16978 which
+  shows which files get added by the rebuild.
 
 *avidemux-plugins-2.6.5 (01 Sep 2013)
 
