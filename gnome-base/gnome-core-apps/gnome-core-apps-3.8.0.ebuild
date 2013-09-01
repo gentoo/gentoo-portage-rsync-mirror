@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.8.0.ebuild,v 1.2 2013/05/13 17:48:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/gnome-core-apps-3.8.0.ebuild,v 1.3 2013/09/01 17:35:34 tetromino Exp $
 
 EAPI="5"
 
@@ -50,6 +50,8 @@ RDEPEND="
 	bluetooth? ( >=net-wireless/gnome-bluetooth-${PV} )
 	cdr? ( >=app-cdr/brasero-${PV} )
 	networkmanager? ( >=gnome-extra/nm-applet-0.9.8.0[bluetooth?] )
+
+	!gnome-base/gnome-applets
 "
 DEPEND=""
 

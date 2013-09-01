@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install prepare
 DEPEND=dev-libs/libnl virtual/pkgconfig
 DESCRIPTION=nl80211-based configuration utility for wireless devices using the mac80211 kernel stack
-EAPI=4
+EAPI=5
 HOMEPAGE=http://wireless.kernel.org/en/users/Documentation/iw
 KEYWORDS=~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux
 LICENSE=ISC
 RDEPEND=dev-libs/libnl
 SLOT=0
-SRC_URI=http://linuxwireless.org/download/iw/iw-3.7.tar.bz2
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=f8c179ef0bfac8e1f4d32e5197b81f94
+SRC_URI=https://www.kernel.org/pub/software/network/iw/iw-3.10.tar.xz
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=e86490a68789be123132489f3186f442
