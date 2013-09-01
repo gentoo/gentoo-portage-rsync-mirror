@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.53 2013/06/27 21:58:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.54 2013/09/01 11:36:42 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> cglib-2.0.2-r2.ebuild:
+  Marked *-macos
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> cglib-2.0.2-r2.ebuild,
   cglib-2.2.3.ebuild:
@@ -207,4 +210,3 @@
   27 Dec 2004; Lim Swee Tat <st_lim@gentoo.org> +metadata.xml,
   +cglib-2.0.2.ebuild:
   Initial add to support hibernate
-

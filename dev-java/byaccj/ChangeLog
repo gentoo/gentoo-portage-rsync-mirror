@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/byaccj
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/ChangeLog,v 1.12 2013/09/01 09:29:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/ChangeLog,v 1.13 2013/09/01 11:37:56 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> byaccj-1.15-r1.ebuild:
+  Marked *-macos
 
   01 Sep 2013; Fabian Groffen <grobian@gentoo.org> byaccj-1.15-r1.ebuild:
   Marked *-macos

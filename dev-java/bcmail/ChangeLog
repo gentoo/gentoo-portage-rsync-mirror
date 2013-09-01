@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.39 2013/08/15 15:55:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.40 2013/09/01 11:38:21 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> bcmail-1.38-r2.ebuild:
+  Marked *-macos
 
 *bcmail-1.45-r2 (15 Aug 2013)
 

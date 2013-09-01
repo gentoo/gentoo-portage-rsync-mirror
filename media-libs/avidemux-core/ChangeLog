@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/avidemux-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.14 2013/08/31 09:29:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/ChangeLog,v 1.15 2013/09/01 11:53:12 tomwij Exp $
+
+*avidemux-core-2.6.5 (01 Sep 2013)
+
+  01 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-core-2.6.5.ebuild:
+  Version bump to 2.6.5.
 
   31 Aug 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-core-9999.ebuild,
   metadata.xml:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/bcmail-1.38-r2.ebuild,v 1.1 2013/08/15 10:11:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/bcmail-1.38-r2.ebuild,v 1.2 2013/09/01 11:38:21 grobian Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.bouncycastle.org/download/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="1.38"
-KEYWORDS="amd64 ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 COMMON_DEPEND="~dev-java/bcprov-${PV}:0
 		=dev-java/junit-3.8*

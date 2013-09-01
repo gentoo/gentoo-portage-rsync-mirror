@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/avidemux-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.14 2013/08/31 15:50:30 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.16 2013/09/01 11:53:28 tomwij Exp $
+
+*avidemux-plugins-2.6.5 (01 Sep 2013)
+
+  01 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-plugins-2.6.5.ebuild:
+  Version bump to 2.6.5.
+
+  01 Sep 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-plugins-9999.ebuild:
+  Preparation for 2.6.5, make use of python-single-r1 and fix up shebangs, fixes
+  bug #467254.
 
   31 Aug 2013; Tom Wijsman <TomWij@gentoo.org> avidemux-plugins-9999.ebuild:
   Preparation for 2.6.5, fixed up src_install phase to properly call the
