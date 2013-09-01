@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.81 2013/03/08 06:39:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.82 2013/09/01 07:24:30 graaff Exp $
+
+  01 Sep 2013; Hans de Graaff <graaff@gentoo.org>
+  +mysql-workbench-5.2.47-r1.ebuild:
+  Depend on dev-libs/antlr-c instead of using the bundled version, now that a
+  new enough version is available. Drop ppc keyword because of this, bug
+  483246.
+
+*mysql-workbench-5.2.47-r1 (01 Sep 2013)
+
+  01 Sep 2013; Hans de Graaff <graaff@gentoo.org>
+  +mysql-workbench-5.2.47-r1.ebuild:
+  Depend on dev-libs/antlr-c instead of using the bundled version, now that a
+  new enough version is available.
 
 *mysql-workbench-5.2.47 (08 Mar 2013)
 
