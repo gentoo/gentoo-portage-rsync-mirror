@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmediawiki
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/ChangeLog,v 1.17 2013/08/07 10:41:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmediawiki/ChangeLog,v 1.18 2013/09/01 02:06:52 dilfridge Exp $
+
+  01 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  libmediawiki-3.3.0.ebuild:
+  Tests seem to work fine now.
 
 *libmediawiki-3.3.0 (07 Aug 2013)
 
