@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.013-r1.ebuild,v 1.1 2013/07/09 23:32:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/urbanterror/urbanterror-4.2.013-r1.ebuild,v 1.2 2013/09/01 20:27:35 hasufell Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://cdn.urbanterror.info/urt/42/zips/UrbanTerror42_full${PREV_PV:4:3
 	https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-${PV}.tar.gz -> ${P}.tar.gz
 	http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> ${PN}.svg"
 
-LICENSE="GPL-2 Q3AEULA"
+LICENSE="GPL-2 Q3AEULA-20000111 urbanterror-4.2-maps"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+curl debug dedicated openal +sdl server smp vorbis"

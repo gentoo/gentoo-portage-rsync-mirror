@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8206 2013/09/01 14:31:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8207 2013/09/01 20:25:23 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Sep 2013; Julian Ospald <hasufell@gentoo.org> license_groups:
+  add Q3AEULA-20000111 to EULA license group
 
   01 Sep 2013; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
   arch/mips/package.use.mask:
