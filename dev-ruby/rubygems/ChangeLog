@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.209 2013/08/19 08:15:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.211 2013/09/01 14:45:49 ago Exp $
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rubygems-2.0.3.ebuild:
+  Stable for x86, wrt bug #483254
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rubygems-2.0.3.ebuild:
+  Stable for amd64, wrt bug #483254
 
   19 Aug 2013; Manuel Rüger <mrueg@gentoo.org>
   -files/rubygems-1.3.3-gentoo.patch, -files/rubygems-1.3.5-setup.patch,

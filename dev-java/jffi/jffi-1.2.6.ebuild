@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.6.ebuild,v 1.1 2013/02/07 13:15:36 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/jffi-1.2.6.ebuild,v 1.2 2013/09/01 14:39:19 grobian Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jnr/jffi/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-3 )"
 SLOT="1.2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 COMMON_DEP="
@@ -32,6 +32,26 @@ DEPEND="${COMMON_DEP}
 java_prepare() {
 	cp "${FILESDIR}"/${PN}_maven-build.xml build.xml || die
 	epatch "${FILESDIR}"/${P}_no-werror.patch
+
+	# misc fixes for Darwin
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		local uarch
+		# don't do multiarch
+		# avoid using Xcode stuff
+		# use Prefix' headers
+		# don't mess with deployment target
+		# set install_name
+		use x64-macos && uarch=x86_64
+		use x86-macos && uarch=i386
+		use ppc-macos && uarch=ppc
+		sed -i \
+			-e "/ARCHES +=/s/=.*$/= ${uarch}/" \
+			-e "/XCODE=/s:=.*$:=${EPREFIX}:" \
+			-e "/MACSDK/s/^/#/" \
+			-e "/MACOSX_DEPLOYMENT_TARGET=/s/MAC/NOMAC/" \
+			-e "/SOFLAGS =/s:=.*:= -install_name ${EPREFIX}/usr/lib/jffi-${SLOT}/libjffi-${SLOT}.jnilib:" \
+			jni/GNUmakefile || die
+	fi
 
 	find "${WORKDIR}" -iname '*.jar' -delete
 }
@@ -83,13 +103,17 @@ src_test() {
 }
 
 src_install() {
+	local libname=".so"
+
 	cat > boot.properties <<-EOF
 		jffi.boot.library.path = ${JAVA_PKG_LIBDEST}
 	EOF
 	jar -uf target/${PN}.jar boot.properties || die
 
+	[[ ${CHOST} == *-darwin* ]] && libname=.jnilib
+
 	java-pkg_dojar target/${PN}.jar
-	java-pkg_doso build/jni/lib${PN}-$(get_version_component_range 1-2).so
+	java-pkg_doso build/jni/lib${PN}-$(get_version_component_range 1-2)${libname}
 
 	use doc && java-pkg_dojavadoc target/site/apidocs
 	use source && java-pkg_dosrc src/main/java/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.2.4.ebuild,v 1.5 2013/06/06 03:33:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyquery/pyquery-1.2.4.ebuild,v 1.8 2013/09/01 15:00:17 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="beautifulsoup3 test"
 
 RDEPEND=">=dev-python/lxml-2.1[beautifulsoup3?,${PYTHON_USEDEP}]
@@ -35,6 +35,8 @@ python_prepare_all() {
 	done
 	sed -e 's:>>> d = pq(url:>>> # d = pq(url:' -i README.rst || die
 	sed -e 's:class TestWebScrapping:class _TestWebScrapping:' -i ${PN}/test.py || die
+
+	distutils-r1_python_prepare_all
 }
 
 python_test() {

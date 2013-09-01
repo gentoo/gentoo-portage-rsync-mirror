@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.27 2013/08/31 15:01:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.28 2013/09/01 14:39:19 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> jffi-1.2.6.ebuild:
+  Fixed for and marked *-macos
 
   31 Aug 2013; Pacho Ramos <pacho@gentoo.org> jffi-1.0.11.ebuild:
   Drop -Werror usage in tests and fix tests building with gcc-4.7 (#438130)

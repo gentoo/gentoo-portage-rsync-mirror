@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.162 2013/07/04 15:18:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.164 2013/09/01 15:00:21 ago Exp $
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lxml-3.2.1.ebuild:
+  Stable for x86, wrt bug #450174
+
+  01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lxml-3.2.1.ebuild:
+  Stable for amd64, wrt bug #450174
 
   04 Jul 2013; Mike Gilbert <floppym@gentoo.org> lxml-3.2.1.ebuild:
   Do an in-source build to avoid a race condition on creating src/lxml/includes

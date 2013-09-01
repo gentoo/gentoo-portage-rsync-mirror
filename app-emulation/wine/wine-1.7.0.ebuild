@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.7.0.ebuild,v 1.2 2013/08/05 09:31:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.7.0.ebuild,v 1.3 2013/09/01 14:38:32 tetromino Exp $
 
 EAPI="5"
 
@@ -61,11 +61,12 @@ NATIVE_DEPEND="
 	openal? ( media-libs/openal:= )
 	gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 )
 	X? (
+		x11-libs/libICE
+		x11-libs/libSM
 		x11-libs/libXcursor
 		x11-libs/libXext
 		x11-libs/libXrandr
 		x11-libs/libXi
-		x11-libs/libXmu
 		x11-libs/libXxf86vm
 	)
 	xinerama? ( x11-libs/libXinerama )
@@ -123,7 +124,6 @@ RDEPEND="${COMMON_DEPEND}
 	perl? ( dev-lang/perl dev-perl/XML-Simple )
 	samba? ( >=net-fs/samba-3.0.25 )
 	selinux? ( sec-policy/selinux-wine )
-	truetype? ( media-fonts/corefonts )
 	udisks? ( sys-fs/udisks:2 )"
 [[ ${PV} == "9999" ]] || RDEPEND="${RDEPEND}
 	pulseaudio? ( sys-auth/rtkit )"

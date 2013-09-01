@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.29.ebuild,v 1.4 2013/08/05 09:31:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.5.29.ebuild,v 1.5 2013/09/01 14:38:32 tetromino Exp $
 
 EAPI="5"
 
@@ -48,7 +48,7 @@ REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 # or fail due to Xvfb's opengl limitations.
 RESTRICT="test"
 
-RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
+RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 )
 	perl? ( dev-lang/perl dev-perl/XML-Simple )
 	capi? ( net-dialup/capi4k-utils )
 	ncurses? ( >=sys-libs/ncurses-5.2:= )
@@ -61,11 +61,12 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	)
 	gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 )
 	X? (
+		x11-libs/libICE
+		x11-libs/libSM
 		x11-libs/libXcursor
 		x11-libs/libXext
 		x11-libs/libXrandr
 		x11-libs/libXi
-		x11-libs/libXmu
 		x11-libs/libXxf86vm
 	)
 	xinerama? ( x11-libs/libXinerama )
