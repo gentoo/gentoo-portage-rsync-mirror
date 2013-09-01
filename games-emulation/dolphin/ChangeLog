@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.6 2013/08/27 01:33:09 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.7 2013/08/31 23:24:19 twitch153 Exp $
+
+  31 Aug 2013; Devan Franchini <twitch153@gentoo.org> dolphin-3.5.ebuild:
+  dolphin-3.5.ebuild: Added check to apply gcc-4.8.patch to all variants of gcc
+  4.8.*
 
   27 Aug 2013; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
   dolphin-9999.ebuild: Adds check for merge type to prevent unnecessary checking

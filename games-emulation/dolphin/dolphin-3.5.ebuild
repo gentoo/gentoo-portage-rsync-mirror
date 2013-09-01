@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.5 2013/08/27 01:29:10 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.6 2013/08/31 23:24:19 twitch153 Exp $
 
 EAPI=5
 
@@ -60,7 +60,7 @@ pkg_pretend() {
 
 src_prepare() {
 
-	if has_version "=sys-devel/gcc-4.8.0"; then
+	if has_version ">=sys-devel/gcc-4.8.0" || has_version"<=sys-devel/gcc-4.9.0"; then
 		epatch "${FILESDIR}"/${PN}-emu-${PV}-gcc-4.8.patch
 	fi
 
