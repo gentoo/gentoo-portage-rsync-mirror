@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.38 2013/08/20 19:04:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.39 2013/09/01 15:56:18 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> zeromq-3.2.2.ebuild,
+  zeromq-3.2.3.ebuild:
+  Fix for platforms without strndup, such as Darwin pre-Lion
 
   20 Aug 2013; Fabian Groffen <grobian@gentoo.org> zeromq-3.2.3.ebuild:
   Fixed for and marked *-macos

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.0.4.ebuild,v 1.7 2013/06/30 18:04:07 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.1.0-r1.ebuild,v 1.1 2013/09/01 15:39:26 gurligebis Exp $
 
-EAPI=2
-inherit eutils linux-info user
+EAPI=5
+inherit eutils linux-info systemd user
 
 DESCRIPTION="IPsec-based VPN solution focused on security and ease of use, supporting IKEv1/IKEv2 and MOBIKE"
 HOMEPAGE="http://www.strongswan.org/"
@@ -11,8 +11,8 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 
 LICENSE="GPL-2 RSA DES"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~ppc64 x86"
-IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql +non-root +openssl sqlite pam"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql networkmanager +non-root +openssl sqlite pam"
 
 COMMON_DEPEND="!net-misc/openswan
 	>=dev-libs/gmp-4.1.5
@@ -23,6 +23,7 @@ COMMON_DEPEND="!net-misc/openswan
 	openssl? ( >=dev-libs/openssl-0.9.8[-bindist] )
 	mysql? ( virtual/mysql )
 	sqlite? ( >=dev-db/sqlite-3.3.1 )
+	networkmanager? ( net-misc/networkmanager )
 	pam? ( sys-libs/pam )"
 DEPEND="${COMMON_DEPEND}
 	virtual/linux-sources
@@ -127,17 +128,20 @@ src_configure() {
 		$(use_enable eap eap-aka-3gpp2) \
 		$(use_enable eap eap-mschapv2) \
 		$(use_enable eap eap-radius) \
+		$(use_enable eap eap-tls) \
 		$(use_enable openssl) \
 		$(use_enable gcrypt) \
 		$(use_enable mysql) \
 		$(use_enable sqlite) \
 		$(use_enable dhcp) \
 		$(use_enable farp) \
+		$(use_enable networkmanager nm) \
+		"$(systemd_with_unitdir)" \
 		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install
 
 	doinitd "${FILESDIR}"/ipsec
 

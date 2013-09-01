@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/libzrtpcpp-2.3.4.ebuild,v 1.3 2013/08/28 10:27:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzrtpcpp/libzrtpcpp-2.3.4.ebuild,v 1.4 2013/09/01 15:52:18 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit cmake-utils
 DESCRIPTION="GNU RTP stack for the zrtp protocol developed by Phil Zimmermann"
 HOMEPAGE="http://www.gnutelephony.org/index.php/GNU_ZRTP"
 SRC_URI="mirror://gnu/ccrtp/${P}.tar.gz"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 LICENSE="GPL-3"
 IUSE=""
 SLOT="0"
