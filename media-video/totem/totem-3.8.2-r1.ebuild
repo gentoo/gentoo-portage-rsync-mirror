@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.8.2-r1.ebuild,v 1.1 2013/07/14 19:09:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.8.2-r1.ebuild,v 1.2 2013/09/01 19:18:50 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -88,15 +88,17 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto
 	virtual/pkgconfig
-	test? ( python? ( dev-python/pylint ) )
 "
 # docbook-xml-dtd is needed for user doc
-
+# Prevent dev-python/pylint dep, bug #482538
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
+	# Prevent pylint usage by tests, bug #482538
+	sed -i -e 's/ check-pylint//' src/plugins/Makefile.plugins || die
+
 	# Add hack to allow streaming of Vimeo videos (from 3.8 branch)
 	epatch "${FILESDIR}/${P}-vimeo-compat.patch"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.3.6.ebuild,v 1.1 2013/07/20 08:58:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.3.6.ebuild,v 1.2 2013/09/01 19:22:53 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -26,6 +26,7 @@ RDEPEND="
 "
 DEPEND="
 	${PYTHON_DEPS}
+	app-text/yelp-tools
 	>=dev-util/intltool-0.40.0
 	>=sys-devel/gettext-0.17
 	test? ( dev-python/pep8 )
