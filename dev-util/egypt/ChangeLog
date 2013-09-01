@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/egypt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.7 2012/12/02 16:14:41 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/egypt/ChangeLog,v 1.8 2013/09/01 15:12:50 idella4 Exp $
+
+*egypt-1.9-r1 (01 Sep 2013)
+
+  01 Sep 2013; Ian Delaney <idella4@gentoo.org> +egypt-1.9-r1.ebuild:
+  revbump -> EAPI 5
 
   02 Dec 2012; Ulrich Müller <ulm@gentoo.org> egypt-1.9.ebuild:
   Fix LICENSE, this is licensed "under the same terms as Perl itself", see
