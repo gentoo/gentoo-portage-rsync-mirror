@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ttyrec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.25 2013/02/25 19:50:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ttyrec/ChangeLog,v 1.26 2013/09/01 13:15:38 grobian Exp $
+
+  01 Sep 2013; Fabian Groffen <grobian@gentoo.org> ttyrec-1.0.8-r1.ebuild:
+  Unbreak build on Darwin, it isn't SVR4 compatible
 
   25 Feb 2013; Sergey Popov <pinkbyte@gentoo.org> -ttyrec-1.0.6.ebuild,
   -ttyrec-1.0.8.ebuild:
