@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r2.ebuild,v 1.2 2012/10/04 15:28:42 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.352-r2.ebuild,v 1.3 2013/09/01 22:11:35 jdhore Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-libs/nettle-2.1
 	fftw? ( sci-libs/fftw )
 	gdbm? ( sys-libs/gdbm )
 	gtk? ( >=x11-libs/gtk+-1.2:1 >=x11-libs/gtk+-2.16:2 )
-	gtk? ( gnome? ( gnome-base/libgnome gnome-base/libgnomeui gnome-base/gnome-applets gnome-base/libglade ) )
+	gtk? ( gnome? ( gnome-base/libgnome gnome-base/libgnomeui gnome-base/libglade ) )
 	gtk? ( opengl? ( x11-libs/gtkglarea:1 ) )
 	java? ( virtual/jdk virtual/libffi )
 	jpeg? ( virtual/jpeg )

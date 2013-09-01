@@ -1,6 +1,11 @@
 # ChangeLog for games-board/iagno
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.2 2013/08/31 08:13:53 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.3 2013/09/01 22:14:29 eva Exp $
+
+*iagno-3.8.2 (01 Sep 2013)
+
+  01 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> +iagno-3.8.2.ebuild:
+  Version bump.
 
   31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> iagno-3.8.1.ebuild:
   Add ~arm keyword, wrt bug #476710

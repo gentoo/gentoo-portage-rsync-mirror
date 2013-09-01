@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/pike
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.45 2012/12/21 03:50:58 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/ChangeLog,v 1.46 2013/09/01 22:11:35 jdhore Exp $
+
+  01 Sep 2013; Jeff Horelick <jdhore@gentoo.org> pike-7.8.352-r2.ebuild:
+  Remove unneeded optional dependency (bug #482700)
 
   21 Dec 2012; Jeff Horelick <jdhore@gentoo.org> metadata.xml:
   Adopt

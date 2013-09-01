@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare
-DEPEND=>=dev-libs/nettle-2.1 dev-libs/gmp media-libs/giflib bzip2? ( app-arch/bzip2 ) fftw? ( sci-libs/fftw ) gdbm? ( sys-libs/gdbm ) gtk? ( >=x11-libs/gtk+-1.2:1 >=x11-libs/gtk+-2.16:2 ) gtk? ( gnome? ( gnome-base/libgnome gnome-base/libgnomeui gnome-base/gnome-applets gnome-base/libglade ) ) gtk? ( opengl? ( x11-libs/gtkglarea:1 ) ) java? ( virtual/jdk virtual/libffi ) jpeg? ( virtual/jpeg ) kerberos? ( virtual/krb5 net-libs/libgssglue ) mysql? ( virtual/mysql ) odbc? ( dev-db/libiodbc ) opengl? ( virtual/opengl glut? ( media-libs/freeglut ) ) pcre? ( dev-libs/libpcre ) !x86-fbsd? ( scanner? ( media-gfx/sane-backends ) ) sdl? ( media-libs/libsdl media-libs/sdl-mixer ) sqlite? ( dev-db/sqlite ) svg? ( gnome-base/librsvg ) test? ( sys-devel/m4 ) tiff? ( media-libs/tiff ) truetype? ( >media-libs/freetype-2 ) zlib? ( sys-libs/zlib )
+DEPEND=>=dev-libs/nettle-2.1 dev-libs/gmp media-libs/giflib bzip2? ( app-arch/bzip2 ) fftw? ( sci-libs/fftw ) gdbm? ( sys-libs/gdbm ) gtk? ( >=x11-libs/gtk+-1.2:1 >=x11-libs/gtk+-2.16:2 ) gtk? ( gnome? ( gnome-base/libgnome gnome-base/libgnomeui gnome-base/libglade ) ) gtk? ( opengl? ( x11-libs/gtkglarea:1 ) ) java? ( virtual/jdk virtual/libffi ) jpeg? ( virtual/jpeg ) kerberos? ( virtual/krb5 net-libs/libgssglue ) mysql? ( virtual/mysql ) odbc? ( dev-db/libiodbc ) opengl? ( virtual/opengl glut? ( media-libs/freeglut ) ) pcre? ( dev-libs/libpcre ) !x86-fbsd? ( scanner? ( media-gfx/sane-backends ) ) sdl? ( media-libs/libsdl media-libs/sdl-mixer ) sqlite? ( dev-db/sqlite ) svg? ( gnome-base/librsvg ) test? ( sys-devel/m4 ) tiff? ( media-libs/tiff ) truetype? ( >media-libs/freetype-2 ) zlib? ( sys-libs/zlib )
 DESCRIPTION=Pike programming language and runtime
 EAPI=4
 HOMEPAGE=http://pike.ida.liu.se/
@@ -9,4 +9,4 @@ LICENSE=GPL-2 LGPL-2.1 MPL-1.1
 SLOT=0
 SRC_URI=http://pike.ida.liu.se/pub/pike/all/7.8.352/Pike-v7.8.352.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=dbc9019a33b52a90b08f109dce8a9777
+_md5_=8dac829dd016241ed9662142ec3e5788
