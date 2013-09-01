@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-botnet/spamassassin-botnet-0.8.ebuild,v 1.1 2007/08/29 20:36:30 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin-botnet/spamassassin-botnet-0.8-r1.ebuild,v 1.1 2013/09/01 17:02:25 idella4 Exp $
+
+EAPI=5
 
 inherit perl-module
 
@@ -16,8 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-lang/perl
-	>=mail-filter/spamassassin-3.0.0"
+DEPEND=">=mail-filter/spamassassin-3.0.0"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"

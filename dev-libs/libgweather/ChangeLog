@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.96 2013/08/30 21:14:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.97 2013/09/01 17:26:05 tetromino Exp $
+
+  01 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgweather-3.6.2.ebuild:
+  Re-add libgweather-3.6.2; it's needed for gnome-applets-3.6,
+  evolution-data-server-3.6, etc. (bug #483084, thanks to lluixhi).
 
   30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -libgweather-3.6.2.ebuild, -libgweather-3.8.1.ebuild,
