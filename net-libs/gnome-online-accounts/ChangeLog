@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gnome-online-accounts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.21 2013/07/01 21:06:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.22 2013/09/01 21:49:27 eva Exp $
+
+*gnome-online-accounts-3.8.3 (01 Sep 2013)
+
+  01 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-online-accounts-3.8.3.ebuild:
+  Version bump.
 
   01 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-online-accounts-3.8.2.ebuild:

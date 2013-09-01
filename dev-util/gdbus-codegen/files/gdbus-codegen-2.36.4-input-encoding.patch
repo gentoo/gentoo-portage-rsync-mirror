@@ -1,0 +1,30 @@
+From a7f2765dbabf889df065e601fc072644dda625e4 Mon Sep 17 00:00:00 2001
+From: Daiki Ueno <ueno@unixuser.org>
+Date: Fri, 16 Aug 2013 17:44:14 +0200
+Subject: [PATCH] codegen: Treat input file as binary
+
+Under C locale, open() in Python 3 sets the file encoding to ASCII.
+As expat looks at encoding="..." in XML declaration, gdbus-codegen can
+simply open the input file as binary and let expat decode the content.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=696633
+---
+ gio/gdbus-2.0/codegen/codegen_main.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gio/gdbus-2.0/codegen/codegen_main.py b/gio/gdbus-2.0/codegen/codegen_main.py
+index aa7984e..69cf3e7 100755
+--- a/gio/gdbus-2.0/codegen/codegen_main.py
++++ b/gio/gdbus-2.0/codegen/codegen_main.py
+@@ -166,7 +166,7 @@ def codegen_main():
+ 
+     all_ifaces = []
+     for fname in args:
+-        f = open(fname)
++        f = open(fname, 'rb')
+         xml_data = f.read()
+         f.close()
+         parsed_ifaces = parser.parse_dbus_xml(xml_data)
+-- 
+1.8.3.2
+

@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.59 2013/08/29 19:47:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.60 2013/09/01 21:56:10 tetromino Exp $
+
+*gdbus-codegen-2.36.4-r1 (01 Sep 2013)
+*gdbus-codegen-2.34.3-r1 (01 Sep 2013)
+*gdbus-codegen-2.32.4-r2 (01 Sep 2013)
+
+  01 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gdbus-codegen-2.32.4-r2.ebuild, +gdbus-codegen-2.34.3-r1.ebuild,
+  -gdbus-codegen-2.36.3.ebuild, +gdbus-codegen-2.36.4-r1.ebuild,
+  +files/gdbus-codegen-2.36.4-input-encoding.patch:
+  Do not open input files as build-environment encoding text when using python3
+  as the python interpreter (bug #483060, thanks to Fernando V. (likewhoa)).
 
   29 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gdbus-codegen-2.32.4-r1.ebuild:
   Stable for ia64, wrt bug #479506
