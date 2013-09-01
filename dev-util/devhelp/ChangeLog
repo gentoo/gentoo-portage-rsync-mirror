@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.157 2013/08/31 18:48:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.158 2013/09/01 05:29:08 tetromino Exp $
+
+  01 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  devhelp-3.6.1-r1.ebuild:
+  Remove gedit plugin support from devhelp-3.6; it requires python2-compatible
+  gedit-3.6.x, which was removed from the tree (bug #483084, thanks to Patrick
+  Lauer).
 
   31 Aug 2013; Pacho Ramos <pacho@gentoo.org> -devhelp-3.8.1.ebuild,
   devhelp-3.8.2.ebuild:
