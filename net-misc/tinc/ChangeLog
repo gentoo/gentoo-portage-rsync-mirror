@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.44 2013/08/31 10:17:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.45 2013/09/01 12:22:46 blueness Exp $
+
+  01 Sep 2013; Anthony G. Basile <blueness@gentoo.org> files/tincd,
+  files/tincd.lo:
+  Fix quotes in openrc script, bug #481640
 
 *tinc-1.0.22-r2 (31 Aug 2013)
 
