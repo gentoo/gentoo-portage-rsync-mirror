@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/cri
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.7 2012/08/05 08:13:51 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.8 2013/09/02 06:08:14 mrueg Exp $
+
+*cri-2.4.0 (02 Sep 2013)
+
+  02 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +cri-2.4.0.ebuild:
+  Version bump.
 
 *cri-2.3.0 (05 Aug 2012)
 
@@ -28,4 +33,3 @@
 
   28 Feb 2012; Alex Legler <a3li@gentoo.org> +cri-2.2.0.ebuild, +metadata.xml:
   Initial import, dependency of nanoc. Ebuild from graaff's overlay
-
