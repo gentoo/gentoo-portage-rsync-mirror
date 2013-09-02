@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.316 2013/08/31 10:14:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.317 2013/09/02 03:43:42 cardoe Exp $
+
+*libvirt-1.1.2 (02 Sep 2013)
+
+  02 Sep 2013; Doug Goldstein <cardoe@gentoo.org> +libvirt-1.1.2.ebuild:
+  Version bump
 
   31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libvirt-1.1.1-r5.ebuild:
   Stable for amd64, wrt bug #483048
