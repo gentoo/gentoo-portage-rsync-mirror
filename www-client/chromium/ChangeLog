@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.939 2013/08/31 03:27:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.940 2013/09/02 01:41:53 floppym Exp $
+
+*chromium-30.0.1599.22 (02 Sep 2013)
+
+  02 Sep 2013; Mike Gilbert <floppym@gentoo.org> +chromium-30.0.1599.22.ebuild,
+  -chromium-30.0.1599.0-r1.ebuild:
+  Beta channel bump.
 
 *chromium-31.0.1612.0 (31 Aug 2013)
 
