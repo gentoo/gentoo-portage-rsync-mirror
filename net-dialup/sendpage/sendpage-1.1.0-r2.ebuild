@@ -1,6 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r1.ebuild,v 1.6 2012/06/14 01:50:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/sendpage/sendpage-1.1.0-r2.ebuild,v 1.1 2013/09/02 15:29:57 idella4 Exp $
+
+EAPI=5
 
 inherit perl-module eutils user
 
@@ -13,6 +15,7 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
+# This package warrants IUSE doc
 IUSE=""
 
 DEPEND="!net-misc/hylafax
@@ -22,18 +25,14 @@ DEPEND="!net-misc/hylafax
 	>=dev-perl/Net-SNPP-1.13
 	dev-perl/DBI"
 
-mydoc="FEATURES THANKS TODO email2page.conf sendpage.cf snpp.conf docs/*"
+mydoc="FEATURES email2page.conf sendpage.cf snpp.conf"
 
 pkg_setup() {
 	enewgroup sms
 	enewuser sendpage -1 -1 /var/spool/sendpage sms
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-makefile.patch
-}
+PATCHES=( "${FILESDIR}"/${PV}-makefile.patch )
 
 src_install() {
 	perl-module_src_install
@@ -42,4 +41,8 @@ src_install() {
 	newinitd "${FILESDIR}"/sendpage.initd sendpage
 	diropts -o sendpage -g sms -m0770
 	keepdir /var/spool/sendpage
+	# Separate docs/ content from ${mydoc[@]}
+	docompress -x /usr/share/doc/${PF}/text/
+	docinto text/
+	dodoc docs/*
 }
