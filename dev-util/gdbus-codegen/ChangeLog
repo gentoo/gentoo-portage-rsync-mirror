@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.60 2013/09/01 21:56:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.61 2013/09/02 11:13:17 ago Exp $
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gdbus-codegen-2.32.4-r1.ebuild:
+  Stable for alpha, wrt bug #479506
 
 *gdbus-codegen-2.36.4-r1 (01 Sep 2013)
 *gdbus-codegen-2.34.3-r1 (01 Sep 2013)
