@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chameleon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.19 2013/08/26 07:50:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.20 2013/09/02 06:54:21 patrick Exp $
+
+*chameleon-2.12 (02 Sep 2013)
+
+  02 Sep 2013; Patrick Lauer <patrick@gentoo.org> +chameleon-2.12.ebuild:
+  Bump
 
   26 Aug 2013; Michał Górny <mgorny@gentoo.org> chameleon-2.11-r1.ebuild:
   Clean up. Remove MANIFEST update since the issue needed to be hacked around in
