@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.2.6.ebuild,v 1.1 2013/06/04 07:06:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-3.2.6.ebuild,v 1.2 2013/09/02 16:36:57 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7} )
@@ -25,6 +25,13 @@ python_prepare_all() {
 	sed -e "/\.pdf/d" -i egenix_mx_base.py || die
 
 	distutils-r1_python_prepare_all
+}
+
+python_compile() {
+	if ! python_is_python3; then
+		local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	fi
+	distutils-r1_python_compile
 }
 
 python_test() {

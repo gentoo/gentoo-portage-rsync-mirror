@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2-r1.ebuild,v 1.1 2013/05/20 11:52:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.6.2-r1.ebuild,v 1.2 2013/09/02 16:40:26 tetromino Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -56,7 +56,7 @@ COMMON_DEPEND="
 
 	accessibility? ( x11-libs/libXevie )
 	audit? ( sys-process/audit )
-	consolekit? ( >=sys-auth/consolekit-0.4.5_p20120320-r2[pam] )
+	consolekit? ( >=sys-auth/consolekit-0.4.5_p20120320-r2 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.12 )
 	plymouth? ( sys-boot/plymouth )
 	selinux? ( sys-libs/libselinux )
