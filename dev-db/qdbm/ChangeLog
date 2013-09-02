@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/qdbm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.142 2012/10/28 07:53:43 hattya Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/ChangeLog,v 1.143 2013/09/02 12:51:12 hattya Exp $
+
+  02 Sep 2013; Akinori Hattori <hattya@gentoo.org> qdbm-1.8.78-r1.ebuild:
+  fixes bug #483098
 
   28 Oct 2012; Akinori Hattori <hattya@gentoo.org> +files/qdbm-ruby19.diff,
   qdbm-1.8.78-r1.ebuild:

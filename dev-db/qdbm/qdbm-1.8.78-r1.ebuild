@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.78-r1.ebuild,v 1.10 2012/10/28 07:53:43 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.78-r1.ebuild,v 1.11 2013/09/02 12:51:12 hattya Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils java-pkg-opt-2 multilib
 
@@ -17,7 +17,7 @@ IUSE="cxx debug java perl ruby zlib"
 
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	perl? ( dev-lang/perl )
-	ruby? ( dev-lang/ruby:1.8 )
+	ruby? ( dev-lang/ruby )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	java? ( >=virtual/jdk-1.4 )"
