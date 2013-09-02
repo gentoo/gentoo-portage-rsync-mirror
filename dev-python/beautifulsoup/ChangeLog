@@ -1,6 +1,26 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.97 2013/09/01 15:00:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.102 2013/09/02 12:11:44 ago Exp $
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  beautifulsoup-3.1.0.1-r2.ebuild, beautifulsoup-3.2.1-r1.ebuild:
+  Stable for sparc, wrt bug #450174
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  beautifulsoup-3.1.0.1-r2.ebuild, beautifulsoup-3.2.1-r1.ebuild:
+  Stable for sh, wrt bug #450174
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  beautifulsoup-3.1.0.1-r2.ebuild, beautifulsoup-3.2.1-r1.ebuild:
+  Stable for s390, wrt bug #450174
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  beautifulsoup-3.1.0.1-r2.ebuild, beautifulsoup-3.2.1-r1.ebuild:
+  Stable for ppc, wrt bug #450174
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  beautifulsoup-3.1.0.1-r2.ebuild, beautifulsoup-3.2.1-r1.ebuild:
+  Stable for ia64, wrt bug #450174
 
   01 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
   beautifulsoup-3.1.0.1-r2.ebuild, beautifulsoup-3.2.1-r1.ebuild:
