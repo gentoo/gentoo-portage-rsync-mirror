@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.574 2013/09/01 19:47:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.575 2013/09/02 18:29:07 tetromino Exp $
+
+*glib-2.36.4-r1 (02 Sep 2013)
+
+  02 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org> -glib-2.34.3.ebuild,
+  -glib-2.36.3-r1.ebuild, -glib-2.36.3-r2.ebuild, +glib-2.36.4-r1.ebuild,
+  -files/glib-2.36.3-revert-ext34.patch, +files/glib-2.36.4-znodelete.patch:
+  Fix segfaults in vlc and other applications that try to unload libgobject at
+  runtime (bug #405173, thanks to Cédric D. for finding a good solution). Drop
+  old ebuilds.
 
   01 Sep 2013; Pacho Ramos <pacho@gentoo.org> glib-2.36.4.ebuild:
   Pass --disable-compile-warnings configure option to drop -Werror usage

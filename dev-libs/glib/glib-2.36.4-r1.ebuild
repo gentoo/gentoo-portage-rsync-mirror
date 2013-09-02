@@ -1,36 +1,43 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.3-r1.ebuild,v 1.3 2013/08/14 04:19:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.4-r1.ebuild,v 1.1 2013/09/02 18:29:07 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{5,6,7} )
 # Avoid runtime dependency on python when USE=test
 
-inherit autotools bash-completion-r1 gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python-r1 toolchain-funcs versionator virtualx linux-info
+inherit autotools bash-completion-r1 gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python-r1 toolchain-funcs versionator virtualx linux-info multilib-minimal
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
+SRC_URI="${SRC_URI}
+	http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2+"
 SLOT="2"
 IUSE="debug fam kernel_linux selinux static-libs systemtap test utils xattr"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
+# FIXME: want libselinux[${MULTILIB_USEDEP}] - bug #480960
 RDEPEND="
-	virtual/libiconv
-	virtual/libffi
-	sys-libs/zlib
+	virtual/libiconv[${MULTILIB_USEDEP}]
+	virtual/libffi[${MULTILIB_USEDEP}]
+	sys-libs/zlib[${MULTILIB_USEDEP}]
 	|| (
 		>=dev-libs/elfutils-0.142
 		>=dev-libs/libelf-0.8.12
 		>=sys-freebsd/freebsd-lib-9.2_rc1
 		)
 	selinux? ( sys-libs/libselinux )
-	xattr? ( sys-apps/attr )
-	fam? ( virtual/fam )
+	xattr? ( sys-apps/attr[${MULTILIB_USEDEP}] )
+	fam? ( virtual/fam[${MULTILIB_USEDEP}] )
 	utils? (
 		${PYTHON_DEPS}
 		>=dev-util/gdbus-codegen-${PV}[${PYTHON_USEDEP}] )
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20130224-r9
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
@@ -69,6 +76,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Prevent build failure in stage3 where pkgconfig is not available, bug #481056
+	mv -f "${WORKDIR}"/pkg-config-*/pkg.m4 "${S}"/m4macros/ || die
+
 	# Fix gmodule issues on fbsd; bug #184301, upstream bug #107626
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
 
@@ -126,6 +136,9 @@ src_prepare() {
 	# gdbus-codegen is a separate package
 	epatch "${FILESDIR}/${PN}-2.35.x-external-gdbus-codegen.patch"
 
+	# do not allow libgobject to unload; bug #405173, https://bugzilla.gnome.org/show_bug.cgi?id=707298
+	epatch "${FILESDIR}/${PN}-2.36.4-znodelete.patch"
+
 	# leave python shebang alone
 	sed -e '/${PYTHON}/d' \
 		-i glib/Makefile.{am,in} || die
@@ -133,9 +146,6 @@ src_prepare() {
 	# Gentoo handles completions in a different directory
 	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
 		gio/Makefile.am || die
-
-	# Revert "g_file_set_contents(): don't fsync on ext3/4" (from 2.36 branch)
-	epatch "${FILESDIR}/${P}-revert-ext34.patch"
 
 	epatch_user
 
@@ -150,7 +160,7 @@ src_prepare() {
 	epunt_cxx
 }
 
-src_configure() {
+multilib_src_configure() {
 	# Avoid circular depend with dev-util/pkgconfig and
 	# native builds (cross-compiles won't need pkg-config
 	# in the target ROOT to work here)
@@ -170,8 +180,18 @@ src_configure() {
 	# convert this to the use_enable form, as it results in a broken build.
 	use debug && myconf="--enable-debug"
 
+	# Only used by the gresource bin
+	multilib_is_native_abi || myconf="${myconf} --disable-libelf"
+
+	# FIXME: change to "$(use_enable selinux)" when libselinux is multilibbed, bug #480960
+	if multilib_is_native_abi; then
+		myconf="${myconf} $(use_enable selinux)"
+	else
+		myconf="${myconf} --disable-selinux"
+	fi
+
 	# Always use internal libpcre, bug #254659
-	econf ${myconf} \
+	ECONF_SOURCE="${S}" econf ${myconf} \
 		$(use_enable xattr) \
 		$(use_enable fam) \
 		$(use_enable selinux) \
@@ -179,15 +199,14 @@ src_configure() {
 		$(use_enable systemtap dtrace) \
 		$(use_enable systemtap systemtap) \
 		$(use_enable test modular-tests) \
+		--disable-compile-warnings \
 		--enable-man \
 		--with-pcre=internal \
 		--with-threads=posix \
 		--with-xml-catalog="${EPREFIX}/etc/xml/catalog"
 }
 
-src_install() {
-	default
-
+multilib_src_install_all() {
 	if use utils ; then
 		python_replicate_script "${ED}"/usr/bin/gtester-report
 	else
@@ -206,7 +225,7 @@ src_install() {
 	prune_libtool_files --modules
 }
 
-src_test() {
+multilib_src_test() {
 	gnome2_environment_reset
 
 	unset DBUS_SESSION_BUS_ADDRESS
@@ -223,7 +242,7 @@ src_test() {
 
 	# Hardened: gdb needs this, bug #338891
 	if host-is-pax ; then
-		pax-mark -mr "${S}"/tests/.libs/assert-msg-test \
+		pax-mark -mr "${BUILD_DIR}"/tests/.libs/assert-msg-test \
 			|| die "Hardened adjustment failed"
 	fi
 

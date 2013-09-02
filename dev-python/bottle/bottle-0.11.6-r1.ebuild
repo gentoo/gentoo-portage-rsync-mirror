@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/bottle-0.11.6-r1.ebuild,v 1.3 2013/09/02 08:03:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/bottle-0.11.6-r1.ebuild,v 1.4 2013/09/02 18:26:20 dev-zero Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy{1_9,2_0})
-inherit distutils-r1 python-r1
+inherit distutils-r1
 
 DESCRIPTION="A fast and simple micro-framework for small web-applications"
 HOMEPAGE="http://pypi.python.org/pypi/bottle http://bottlepy.org/"
@@ -21,6 +21,7 @@ RDEPEND=""
 
 python_prepare_all() {
 	sed -i -e '/scripts/d' setup.py || die
+	distutils-r1_python_prepare_all
 }
 
 pkg_postinst() {
