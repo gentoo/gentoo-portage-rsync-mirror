@@ -1,9 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.60.0.ebuild,v 1.1 2013/08/10 10:00:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.60.0.ebuild,v 1.2 2013/09/02 17:31:51 floppym Exp $
 
 EAPI=5
-# broken with python3.3, bug #449276
+
+# 0.60.0 fails unittest_umessage with python3.3
+# http://www.logilab.org/ticket/149345
 PYTHON_COMPAT=( python{2_6,2_7,3_2} pypy{1_9,2_0} )
 
 inherit distutils-r1 eutils
@@ -26,7 +28,7 @@ RDEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 # Python2 only.
 DEPEND="${RDEPEND}
 	test? (
-		dev-python/egenix-mx-base[$(python_gen_usedep 'python2*')]
+		$(python_gen_cond_dep dev-python/egenix-mx-base[$(python_gen_usedep 'python2*')] 'python2*')
 		!dev-python/psycopg[-mxdatetime]
 	)
 	doc? ( dev-python/epydoc )"
@@ -35,6 +37,9 @@ PATCHES=(
 	# Make sure setuptools does not create a zip file in python_test;
 	# this is buggy and causes tests to fail.
 	"${FILESDIR}/${PN}-0.59.1-zipsafe.patch"
+
+	# Depends on order of dictionary keys
+	"${FILESDIR}/logilab-common-0.60.0-skip-doctest.patch"
 )
 
 python_prepare_all() {

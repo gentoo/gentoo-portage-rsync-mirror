@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.132 2013/09/01 14:46:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.133 2013/09/02 17:54:41 graaff Exp $
+
+*json-1.8.0-r1 (02 Sep 2013)
+
+  02 Sep 2013; Hans de Graaff <graaff@gentoo.org> +json-1.8.0-r1.ebuild:
+  Update sed rules to avoid hardcoded optimation and debug CFLAGS, bug 483266.
 
   01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> json-1.8.0.ebuild:
   Stable for x86, wrt bug #483254
