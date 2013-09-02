@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.186 2013/09/02 08:06:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.187 2013/09/02 21:50:38 ago Exp $
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.19.ebuild:
+  Stable for alpha, wrt bug #482886
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.19.ebuild:
   Stable for x86, wrt bug #482886
