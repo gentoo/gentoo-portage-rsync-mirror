@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.43.ebuild,v 1.8 2013/07/21 17:55:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.43.ebuild,v 1.9 2013/09/02 08:33:12 pinkbyte Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic pam
@@ -16,6 +16,8 @@ IUSE="crypt debug gtk imagemagick motif nas opengl pam truetype xinerama xlockrc
 
 REQUIRED_USE="
 	|| ( crypt pam )
+	pam? ( !xlockrc )
+	xlockrc? ( !pam )
 "
 RDEPEND="
 	gtk? ( x11-libs/gtk+:2 )

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.137 2013/08/20 14:42:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.138 2013/09/02 08:33:12 pinkbyte Exp $
+
+  02 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> xlockmore-5.43.ebuild:
+  Make PAM and xlockrc support mutually exclusive as defined in configure file,
+  wrt bug #255229
 
   20 Aug 2013; Jeroen Roovers <jer@gentoo.org> -xlockmore-5.41.ebuild:
   Old.
