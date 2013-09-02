@@ -4,10 +4,10 @@ DESCRIPTION=Library for reading and writing Tide Constituent Database (TCD) file
 EAPI=5
 HOMEPAGE=http://www.flaterco.com/xtide/libtcd.html
 IUSE=doc static-libs
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=public-domain
 RDEPEND=>=sci-geosciences/harmonics-dwf-free-20120302
 SLOT=0
 SRC_URI=ftp://ftp.flaterco.com/xtide/libtcd-2.2.5-r2.tar.bz2
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=331cd1682645d54cedd655022dcf647a
+_md5_=6f4d2c7a3ccb292aa94acd3f335e8b2d

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.476 2013/09/01 15:31:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.477 2013/09/02 08:03:00 ago Exp $
+
+  02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> wine-1.6.ebuild:
+  Stable for amd64, wrt bug #483280
 
   01 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.6.ebuild,
   wine-1.7.0.ebuild, wine-9999.ebuild, +files/wine-1.6-memset-O3.patch:
@@ -253,4 +256,3 @@
   Split ChangeLog.
 
   For previous entries, please see ChangeLog-2012.
-

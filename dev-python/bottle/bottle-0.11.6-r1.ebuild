@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/bottle-0.11.6-r1.ebuild,v 1.2 2013/09/01 15:50:04 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/bottle-0.11.6-r1.ebuild,v 1.3 2013/09/02 08:03:44 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND=""

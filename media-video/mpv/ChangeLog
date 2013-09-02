@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.20 2013/08/25 12:57:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.22 2013/09/02 08:11:58 pinkbyte Exp $
+
+*mpv-0.1.4 (02 Sep 2013)
+
+  02 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> +mpv-0.1.4.ebuild:
+  Version bump, wrt bug #481118
+
+  02 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> mpv-9999.ebuild,
+  metadata.xml:
+  Add VAAPI support via USE-flag, wrt bug #481118
 
 *mpv-0.1.3 (25 Aug 2013)
 

@@ -19,6 +19,7 @@
 	<flag name="quvi">Enable support for streaming sites using <pkg>media-libs/libquvi</pkg></flag>
 	<flag name="radio">Enable V4L2 radio interface and support</flag>
 	<flag name="shm">Enable support for shm</flag>
+	<flag name="vaapi">Enable VAAPI (Video Acceleration API) for hardware decoding</flag>
 	<flag name="vf-dlopen">Install additional video filters for using with -vf dlopen</flag>
 </use>
 </pkgmetadata>

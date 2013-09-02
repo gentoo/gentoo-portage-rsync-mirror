@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/congen/congen-1.6.2.ebuild,v 1.2 2013/06/26 16:57:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/congen/congen-1.6.2.ebuild,v 1.3 2013/09/02 08:14:27 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.flaterco.com/xtide/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="static-libs"
 
 DEPEND=">=sci-geosciences/libtcd-2.2.3"
