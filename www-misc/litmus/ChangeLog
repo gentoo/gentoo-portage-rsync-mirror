@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/litmus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/litmus/ChangeLog,v 1.2 2013/09/01 18:26:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/litmus/ChangeLog,v 1.3 2013/09/02 00:43:49 patrick Exp $
+
+  02 Sep 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   01 Sep 2013; Tom Wijsman <TomWij@gentoo.org> litmus-0.13.ebuild, metadata.xml:
   Use global USE flags, better REQUIRED_USE syntax and more cleanup; proxied
