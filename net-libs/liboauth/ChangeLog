@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liboauth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.28 2013/08/31 14:48:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.29 2013/09/01 23:36:58 jdhore Exp $
+
+  01 Sep 2013; Jeff Horelick <jdhore@gentoo.org> liboauth-1.0.1.ebuild:
+  marked x86 per bug 481894
 
   31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> liboauth-1.0.1.ebuild:
   Stable for arm, wrt bug #481894
