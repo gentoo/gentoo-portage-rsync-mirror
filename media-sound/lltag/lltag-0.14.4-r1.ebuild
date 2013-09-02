@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.14.4.ebuild,v 1.2 2011/08/06 19:13:59 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.14.4-r1.ebuild,v 1.1 2013/09/02 14:52:08 idella4 Exp $
 
-EAPI=2
+EAPI=5
 inherit perl-module
 
 DESCRIPTION="Automatic command-line mp3/ogg/flac file tagger and renamer"
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="flac mp3 ogg readline"
 
-RDEPEND="dev-lang/perl
-	dev-perl/libwww-perl
+RDEPEND="dev-perl/libwww-perl
 	mp3? ( media-sound/mp3info dev-perl/MP3-Tag )
 	ogg? ( media-sound/vorbis-tools )
 	flac? ( media-libs/flac )
@@ -34,11 +33,13 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake "${mylltagopts[@]}" || die
+	emake "${mylltagopts[@]}"
 }
 
 src_install() {
-	emake "${mylltagopts[@]}" install{,-doc,-man} || die
+	emake "${mylltagopts[@]}" install{,-doc,-man}
 	dodoc Changes
 	fixlocalpod
+	# Move config to recommended location
+	mv "${D}usr/share/doc/${PF}"/config "${D}"etc/lltag/ || die
 }

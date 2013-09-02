@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/lltag
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.22 2011/08/06 19:13:59 sping Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.23 2013/09/02 14:52:08 idella4 Exp $
+
+*lltag-0.14.4-r1 (02 Sep 2013)
+
+  02 Sep 2013; Ian Delaney <idella4@gentoo.org> +lltag-0.14.4-r1.ebuild,
+  -lltag-0.14.3.ebuild, -lltag-0.14.4.ebuild:
+  revbump -> EAPI 5, remove old
 
   06 Aug 2011; Sebastian Pipping <sping@gentoo.org> lltag-0.14.4.ebuild:
   With dev-perl/MP3-Tag installed alone mp3 files cannot be handled. Making
@@ -99,4 +105,3 @@
   +files/digest-lltag-0.10, +Manifest:
   Initial import. Ebuild provided by upstream (bgoglin.free.fr/lltag) with
   feedback from myself. No known issues.
-
