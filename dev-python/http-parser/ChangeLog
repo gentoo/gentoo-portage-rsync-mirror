@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/http-parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.16 2013/07/11 21:30:47 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.17 2013/09/02 20:01:45 floppym Exp $
+
+*http-parser-0.8.3 (02 Sep 2013)
+
+  02 Sep 2013; Mike Gilbert <floppym@gentoo.org> +http-parser-0.8.3.ebuild:
+  Version bump. add python3.3.
 
   11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
   http-parser-0.8.1-r1.ebuild:
