@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.9.1-r1.ebuild,v 1.13 2013/09/02 11:23:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.9.1-r1.ebuild,v 1.17 2013/09/02 11:57:18 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.virtualenv.org/ http://pypi.python.org/pypi/virtualenv"
 SRC_URI="https://github.com/pypa/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="alpha amd64 arm ppc ppc64 x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
 SLOT="0"
 IUSE="doc test"
 
