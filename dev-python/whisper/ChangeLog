@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/whisper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whisper/ChangeLog,v 1.5 2013/03/16 11:54:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whisper/ChangeLog,v 1.6 2013/09/02 04:55:18 patrick Exp $
+
+*whisper-0.9.12 (02 Sep 2013)
+
+  02 Sep 2013; Patrick Lauer <patrick@gentoo.org> +whisper-0.9.12.ebuild:
+  Bump
 
 *whisper-0.9.10-r1 (16 Mar 2013)
 
