@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.14 2013/03/21 02:29:53 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.15 2013/09/02 04:19:23 rafaelmartins Exp $
 
 EAPI="3"
 
-PYTHON_DEPEND="2:2.6"
+PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 2.6 3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
 HG_ECLASS=""
@@ -17,7 +17,7 @@ fi
 
 inherit distutils ${HG_ECLASS}
 
-DESCRIPTION="A Mercurial-based blogging engine."
+DESCRIPTION="A Mercurial (or Git) based blogging engine."
 HOMEPAGE="http://blohg.org/ http://pypi.python.org/pypi/blohg"
 
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
@@ -29,23 +29,25 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc test"
+IUSE="doc git test"
 
-CDEPEND="=dev-python/docutils-0.10*
-	>=dev-python/flask-0.8
+RDEPEND="=dev-python/docutils-0.10*
+	>=dev-python/flask-0.10.1
 	>=dev-python/flask-babel-0.7
-	>=dev-python/flask-script-0.3
+	>=dev-python/flask-script-0.5.3
 	>=dev-python/frozen-flask-0.7
 	>=dev-python/jinja-2.5.2
 	>=dev-vcs/mercurial-1.6
 	dev-python/pyyaml
 	dev-python/setuptools
-	dev-python/pygments"
+	dev-python/pygments
+	git? ( =dev-python/pygit2-0.19* )"
 
-DEPEND="${CDEPEND}
-	doc? ( dev-python/sphinx )"
-
-RDEPEND="${CDEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( dev-python/sphinx )
+	test? (
+		dev-python/mock
+		=dev-python/pygit2-0.19* )"
 
 src_compile() {
 	distutils_src_compile

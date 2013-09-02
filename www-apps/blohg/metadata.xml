@@ -18,4 +18,7 @@
 		<bugs-to>mailto:blohg@librelist.com</bugs-to>
 		<remote-id type="pypi">blohg</remote-id>
 	</upstream>
+	<use>
+		<flag name="git">Enable Git support</flag>
+	</use>
 </pkgmetadata>

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare test
+DEPEND==dev-python/docutils-0.10* >=dev-python/flask-0.10.1 >=dev-python/flask-babel-0.7 >=dev-python/flask-script-0.5.3 >=dev-python/frozen-flask-0.7 >=dev-python/jinja-2.5.2 >=dev-vcs/mercurial-1.6 dev-python/pyyaml dev-python/setuptools dev-python/pygments git? ( =dev-python/pygit2-0.19* ) doc? ( dev-python/sphinx ) test? ( dev-python/mock =dev-python/pygit2-0.19* ) =dev-lang/python-2.7*
+DESCRIPTION=A Mercurial (or Git) based blogging engine.
+EAPI=3
+HOMEPAGE=http://blohg.org/ http://pypi.python.org/pypi/blohg
+IUSE=doc git test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND==dev-python/docutils-0.10* >=dev-python/flask-0.10.1 >=dev-python/flask-babel-0.7 >=dev-python/flask-script-0.5.3 >=dev-python/frozen-flask-0.7 >=dev-python/jinja-2.5.2 >=dev-vcs/mercurial-1.6 dev-python/pyyaml dev-python/setuptools dev-python/pygments git? ( =dev-python/pygit2-0.19* ) =dev-lang/python-2.7*
+SLOT=0
+SRC_URI=mirror://pypi/b/blohg/blohg-0.12.tar.gz
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=3e992bfa3b9e400ab06986ef988a10b5
