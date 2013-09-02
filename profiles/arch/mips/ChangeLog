@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.120 2013/08/22 16:07:40 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.121 2013/09/02 07:02:22 pinkbyte Exp $
+
+  02 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask webp USE-flag on media-libs/leptonica and app-text/tesseract, not tested
 
   22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Mask opencl flag due to lack of virtual/opencl keywording.

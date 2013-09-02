@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.12 2013/07/21 08:56:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.13 2013/09/02 07:04:14 pinkbyte Exp $
+
+  02 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> leptonica-1.69.ebuild:
+  Add ~mips keyword, wrt bug #437670
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #92799

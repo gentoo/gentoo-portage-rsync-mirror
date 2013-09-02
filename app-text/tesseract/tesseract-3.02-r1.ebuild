@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-3.02-r1.ebuild,v 1.6 2013/02/19 16:35:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-3.02-r1.ebuild,v 1.7 2013/09/02 07:06:05 pinkbyte Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ SRC_URI="${URI_PREFIX}/${P}.${MY_MINOR}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ppc ppc64 x86"
+KEYWORDS="alpha amd64 ~arm ~mips ppc ppc64 x86"
 
 IUSE="doc examples jpeg png tiff -webp +scrollview static-libs linguas_ar linguas_bg linguas_ca linguas_chr linguas_cs linguas_de linguas_da linguas_el linguas_es linguas_fi linguas_fr linguas_he linguas_hi linguas_hu linguas_id linguas_it linguas_jp linguas_ko linguas_lt linguas_lv linguas_nl linguas_no linguas_pl linguas_pt linguas_ro linguas_ru linguas_sk linguas_sl linguas_sr linguas_sv linguas_th linguas_tl linguas_tr linguas_uk linguas_vi linguas_zh_CN linguas_zh_TW osd"
 
