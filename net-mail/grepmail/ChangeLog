@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/grepmail
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.37 2012/02/07 10:46:46 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.38 2013/09/03 12:09:52 idella4 Exp $
+
+*grepmail-5.30.33-r2 (03 Sep 2013)
+
+  03 Sep 2013; Ian Delaney <idella4@gentoo.org> +grepmail-5.30.33-r2.ebuild,
+  grepmail-5.30.33-r1.ebuild:
+  revbump -> EAPI 5, test set to skip due to failure
 
   07 Feb 2012; Eray Aslan <eras@gentoo.org> -grepmail-5.30.33.ebuild:
   remove old

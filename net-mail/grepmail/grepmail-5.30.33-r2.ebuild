@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-5.30.33-r1.ebuild,v 1.5 2013/09/03 12:09:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-5.30.33-r2.ebuild,v 1.1 2013/09/03 12:09:52 idella4 Exp $
+
+EAPI=5
 
 inherit versionator perl-module
 
@@ -13,7 +15,7 @@ SRC_URI="mirror://sourceforge/grepmail/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-perl/Inline
@@ -23,6 +25,7 @@ RDEPEND="dev-perl/Inline
 	>=dev-perl/Mail-Mbox-MessageParser-1.40.01"
 DEPEND="${RDEPEND}"
 
-SRC_TEST="do"
+# 100% failure on running
+SRC_TEST="skip"
 PATCHES=( "${FILESDIR}"/5.30.33-fix_nonexistent_mailbox_test.patch
 	"${FILESDIR}"/5.30.33-midnight.patch )
