@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Variable-Magic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.60 2013/08/19 13:58:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.61 2013/09/03 02:53:36 patrick Exp $
+
+*Variable-Magic-0.530.0 (03 Sep 2013)
+
+  03 Sep 2013; Patrick Lauer <patrick@gentoo.org>
+  +Variable-Magic-0.530.0.ebuild:
+  Bump
 
   19 Aug 2013; Agostino Sarubbo <ago@gentoo.org> Variable-Magic-0.520.0.ebuild:
   Stable for ppc, wrt bug #449624
