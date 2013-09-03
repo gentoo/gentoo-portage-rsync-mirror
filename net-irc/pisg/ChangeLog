@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/pisg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.63 2012/08/03 21:46:13 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/ChangeLog,v 1.64 2013/09/03 10:18:59 idella4 Exp $
+
+*pisg-0.73-r1 (03 Sep 2013)
+
+  03 Sep 2013; Ian Delaney <idella4@gentoo.org> +pisg-0.73-r1.ebuild,
+  -pisg-0.72.ebuild:
+  revbump -> EAPI 5, remove old
 
   03 Aug 2012; Anthony G. Basile <blueness@gentoo.org> pisg-0.73.ebuild:
   Stable ppc, bug #419249
