@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/monadcatchio-mtl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadcatchio-mtl/ChangeLog,v 1.6 2013/08/31 10:35:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/monadcatchio-mtl/ChangeLog,v 1.7 2013/09/03 08:38:25 ago Exp $
+
+  03 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  monadcatchio-mtl-0.3.0.5.ebuild:
+  Stable for alpha, wrt bug #480558
 
   31 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
   monadcatchio-mtl-0.3.0.5.ebuild:

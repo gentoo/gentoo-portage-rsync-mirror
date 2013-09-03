@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-5.6.0.ebuild,v 1.1 2013/07/18 07:49:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-5.6.0.ebuild,v 1.2 2013/09/03 08:56:34 patrick Exp $
 
 EAPI=3
 
@@ -30,6 +30,8 @@ DEPEND="dev-lang/perl[doc?]
 src_prepare() {
 	# Fix for #404195 - pcre detection is wonky
 	sed -i 's:libpcre.so.0:libpcre.so.1:' runtime/parrot/library/pcre.pir || die "Couldn't fix pcre location"
+	# Fix perldoc sandbox madness
+	epatch "${FILESDIR}/perldoc.patch" || die
 }
 
 src_configure() {

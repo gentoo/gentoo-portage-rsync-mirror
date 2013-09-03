@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cgi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.26 2013/08/31 10:35:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.27 2013/09/03 08:38:18 ago Exp $
+
+  03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> cgi-3001.1.8.3.ebuild:
+  Stable for alpha, wrt bug #480558
 
   31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> cgi-3001.1.8.3.ebuild:
   Stable for amd64, wrt bug #480558
