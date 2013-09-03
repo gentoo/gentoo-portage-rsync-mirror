@@ -1,18 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/gdmodule-0.56-r2.ebuild,v 1.5 2012/08/02 18:04:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/gdmodule-0.56-r2.ebuild,v 1.6 2013/09/03 21:14:16 bicatali Exp $
 
-EAPI="3"
+EAPI=5
+PYTHON_COMPAT=( python2_7 )
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* 2.7-pypy-* *-jython"
-DISTUTILS_SETUP_FILES=("Setup.py")
-
-inherit distutils eutils flag-o-matic
+inherit distutils-r1 flag-o-matic
 
 DESCRIPTION="Python extensions for gd"
-HOMEPAGE="http://newcenturycomputers.net/projects/gdmodule.html"
+HOMEPAGE="https://github.com/Solomoriah/gdmodule"
 SRC_URI="http://newcenturycomputers.net/projects/download.cgi/${P}.tar.gz"
 
 LICENSE="BSD"
@@ -29,8 +25,11 @@ RDEPEND="
 	xpm? ( x11-libs/libXpm )"
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix-libs.patch
+PATCHES=( "${FILESDIR}"/${P}-fix-libs.patch )
+
+python_prepare_all() {
+	distutils-r1_python_prepare_all
+	mv Setup.py setup.py  || die
 
 	# append unconditionally because it is enabled id media-libs/gd by default
 	append-cppflags -DHAVE_LIBGIF
@@ -39,6 +38,4 @@ src_prepare() {
 	use png && append-cppflags -DHAVE_LIBPNG
 	use truetype && append-cppflags -DHAVE_LIBFREETYPE
 	use xpm && append-cppflags -DHAVE_LIBXPM
-
-	distutils_src_prepare
 }
