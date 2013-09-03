@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.83 2013/03/17 19:22:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.84 2013/09/03 20:17:02 pacho Exp $
+
+*privoxy-3.0.21-r1 (03 Sep 2013)
+
+  03 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/privoxy.service,
+  +privoxy-3.0.21-r1.ebuild:
+  Add unit file (#483370 by Andrius Štikonas)
 
   17 Mar 2013; Agostino Sarubbo <ago@gentoo.org> -privoxy-3.0.12.ebuild,
   -privoxy-3.0.13_beta.ebuild, -privoxy-3.0.14_beta.ebuild,

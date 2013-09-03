@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.176 2013/08/29 19:51:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.177 2013/09/03 20:11:27 pacho Exp $
+
+*vsftpd-3.0.2-r2 (03 Sep 2013)
+
+  03 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/vsftpd.socket,
+  +files/vsftpd_at.service, +vsftpd-3.0.2-r2.ebuild:
+  Add support for socket activation (#483270 by Henry Gebhardt and Alexander
+  Tsoy)
 
   29 Aug 2013; Agostino Sarubbo <ago@gentoo.org> vsftpd-3.0.2-r1.ebuild:
   Stable for ia64, wrt bug #480078

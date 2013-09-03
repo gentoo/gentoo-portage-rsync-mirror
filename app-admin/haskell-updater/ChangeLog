@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/haskell-updater
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.60 2013/09/03 10:04:50 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/haskell-updater/ChangeLog,v 1.61 2013/09/03 20:09:18 slyfox Exp $
+
+*haskell-updater-1.2.0.10-r1 (03 Sep 2013)
+
+  03 Sep 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +haskell-updater-1.2.0.10-r1.ebuild, -haskell-updater-1.2.0.10.ebuild:
+  Restore RDEPENDs and prefix support.
 
 *haskell-updater-1.2.0.10 (03 Sep 2013)
 
