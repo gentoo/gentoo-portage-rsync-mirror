@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.246 2013/08/02 11:29:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.247 2013/09/03 09:39:48 ago Exp $
+
+  03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> ghc-7.6.3-r1.ebuild:
+  Stable for amd64, wrt bug #483462
 
   02 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild:
   unbreak ghci on 7.6.3-r1 on x86 arch.  libc_nonshared.a contains PIC objects

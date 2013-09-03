@@ -1,8 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2.ebuild,v 1.10 2006/02/13 14:54:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2-r1.ebuild,v 1.1 2013/09/03 09:51:03 idella4 Exp $
 
-inherit perl-app
+EAPI=5
+
+inherit perl-module
 
 DESCRIPTION="FXP (server-to-server FTP) commandline client written in Perl"
 HOMEPAGE="http://duncanthrax.net/profxp/"
@@ -11,11 +13,10 @@ SRC_URI="http://duncanthrax.net/profxp/profxp-v${PV/_/-}-src.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="dev-lang/perl
-	virtual/perl-Time-HiRes
+DEPEND="virtual/perl-Time-HiRes
 	dev-perl/TermReadKey
 	dev-perl/Term-ReadLine-Perl"
 
@@ -24,10 +25,15 @@ S=${WORKDIR}/${PN}
 src_unpack() {
 	unpack profxp-v${PV/_/-}-src.tar.gz
 	cp ${DISTDIR}/SOCKS.pm ${S}/
+}
+
+src_prepare() {
 	sed -i 's:/home/tom/ActivePerl-5\.6:/usr:' ${S}/profxpv3.pl
 }
 
-src_compile() { :; }
+src_compile() {
+	:;
+}
 
 src_install() {
 	perlinfo

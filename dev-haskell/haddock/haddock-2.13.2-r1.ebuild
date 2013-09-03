@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.13.2-r1.ebuild,v 1.1 2013/05/29 08:21:16 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.13.2-r1.ebuild,v 1.2 2013/09/03 09:39:53 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SLOT="0/${PV}"
 # ia64 lost as we don't have ghc-7 there yet
 # ppc64 needs to be rekeyworded due to xhtml not being keyworded
 # x86-fbsd is lost due xhtml
-KEYWORDS="~amd64 -ia64 ~x86"
+KEYWORDS="amd64 -ia64 ~x86"
 IUSE=""
 
 RDEPEND="dev-haskell/ghc-paths:=[profile?]

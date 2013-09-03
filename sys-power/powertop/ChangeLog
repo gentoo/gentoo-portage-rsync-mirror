@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.85 2013/08/08 03:04:35 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.86 2013/09/03 09:39:38 ago Exp $
+
+  03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> powertop-2.4.ebuild:
+  Stable for amd64, wrt bug #445214
 
   08 Aug 2013; Rick Farina <zerochaos@gentoo.org> powertop-2.4.ebuild:
   fix deprecated kernel config check
