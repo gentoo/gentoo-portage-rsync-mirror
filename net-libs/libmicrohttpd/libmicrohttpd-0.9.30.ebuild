@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.21.ebuild,v 1.3 2012/10/17 03:28:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.30.ebuild,v 1.1 2013/09/02 23:09:27 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
 MY_P="${P/_/}"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/libmicrohttpd/"
 SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz"
 
 IUSE="messages ssl static-libs test"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
@@ -31,8 +31,11 @@ DOCS="AUTHORS NEWS README ChangeLog"
 
 src_configure() {
 	econf \
+		--enable-bauth \
+		--enable-dauth \
 		$(use_enable test curl) \
 		$(use_enable messages) \
+		$(use_enable messages postprocessor) \
 		$(use_enable ssl https) \
 		$(use_with ssl gnutls) \
 		$(use_enable static-libs static)
