@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15082 2013/09/02 19:49:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15083 2013/09/03 04:05:22 creffett Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chris Reffett <creffett@gentoo.org> (03 Sep 2013)
+# Dead upstream, outstanding security bug #260956.
+# Masked for removal in 30 days.
+dev-games/neoengine
+dev-games/neotools
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (02 Sep 2013)
 # Silent API/ABI change; mask until seahorse is patched; bug #483414

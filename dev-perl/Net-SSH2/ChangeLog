@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-SSH2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH2/ChangeLog,v 1.5 2013/08/25 10:31:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSH2/ChangeLog,v 1.6 2013/09/03 04:10:12 patrick Exp $
+
+*Net-SSH2-0.530.0 (03 Sep 2013)
+
+  03 Sep 2013; Patrick Lauer <patrick@gentoo.org> +Net-SSH2-0.530.0.ebuild:
+  Bump
 
 *Net-SSH2-0.520.0 (25 Aug 2013)
 
