@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/UNIVERSAL-require
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-require/ChangeLog,v 1.22 2013/02/18 23:47:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UNIVERSAL-require/ChangeLog,v 1.23 2013/09/03 05:29:54 patrick Exp $
+
+*UNIVERSAL-require-0.140.0 (03 Sep 2013)
+
+  03 Sep 2013; Patrick Lauer <patrick@gentoo.org>
+  +UNIVERSAL-require-0.140.0.ebuild:
+  Bump
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> UNIVERSAL-require-0.130.0.ebuild:
   Add ~arm-linux keyword.
