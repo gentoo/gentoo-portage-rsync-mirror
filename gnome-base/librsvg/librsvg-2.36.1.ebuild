@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.1.ebuild,v 1.14 2013/03/29 19:45:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.36.1.ebuild,v 1.16 2013/09/03 22:12:02 eva Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -14,7 +14,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="s390 sh sparc"
+KEYWORDS="s390"
 IUSE="doc +gtk +introspection tools"
 
 RDEPEND=">=dev-libs/glib-2.24:2
@@ -70,29 +70,11 @@ src_compile() {
 pkg_postinst() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER
-
-	tmp_file=$(mktemp -t tmp.XXXXXXXXXXlibrsvg_ebuild)
-	# be atomic!
-	gdk-pixbuf-query-loaders > "${tmp_file}"
-	if [ "${?}" = "0" ]; then
-		cat "${tmp_file}" > "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache"
-	else
-		ewarn "Cannot update loaders.cache, gdk-pixbuf-query-loaders failed to run"
-	fi
-	rm "${tmp_file}"
+	gnome2_pkg_postinst
 }
 
 pkg_postrm() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER
-
-	tmp_file=$(mktemp -t tmp.XXXXXXXXXXlibrsvg_ebuild)
-	# be atomic!
-	gdk-pixbuf-query-loaders > "${tmp_file}"
-	if [ "${?}" = "0" ]; then
-		cat "${tmp_file}" > "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache"
-	else
-		ewarn "Cannot update loaders.cache, gdk-pixbuf-query-loaders failed to run"
-	fi
-	rm "${tmp_file}"
+	gnome2_pkg_postrm
 }

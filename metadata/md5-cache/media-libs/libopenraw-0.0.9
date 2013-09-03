@@ -1,5 +1,5 @@
-DEFINED_PHASES=configure install
-DEPEND=virtual/jpeg dev-libs/libxml2 gtk? ( >=dev-libs/glib-2 >=x11-libs/gdk-pixbuf-2.24.0:2 ) >=dev-libs/boost-1.35 virtual/pkgconfig test? ( net-misc/curl )
+DEFINED_PHASES=configure install postinst preinst
+DEPEND=virtual/jpeg dev-libs/libxml2 gtk? ( >=dev-libs/glib-2 >=x11-libs/gdk-pixbuf-2.24.0:2 ) >=dev-libs/boost-1.35 virtual/pkgconfig test? ( net-misc/curl ) >=sys-apps/sed-4
 DESCRIPTION=A decoding library for RAW image formats
 EAPI=4
 HOMEPAGE=http://libopenraw.freedesktop.org/wiki/
@@ -9,4 +9,5 @@ LICENSE=GPL-3 LGPL-3
 RDEPEND=virtual/jpeg dev-libs/libxml2 gtk? ( >=dev-libs/glib-2 >=x11-libs/gdk-pixbuf-2.24.0:2 )
 SLOT=0
 SRC_URI=http://libopenraw.freedesktop.org/download/libopenraw-0.0.9.tar.bz2
-_md5_=f5145774a8df0447b92293d0742ac4d6
+_eclasses_=gnome2-utils	cf14abfc65f26151fd2e33d722422ee3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_md5_=caf00964ad6b250828090ac1a20a82e0
