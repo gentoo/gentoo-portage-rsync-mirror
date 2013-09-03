@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.29 2013/07/10 05:18:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.31 2013/09/03 14:53:34 jer Exp $
+
+  03 Sep 2013; Jeroen Roovers <jer@gentoo.org> -echoping-6.0.2-r1.ebuild,
+  echoping-6.0.2_p434.ebuild:
+  Old. Fix SRC_URI.
+
+*echoping-6.0.2_p434 (03 Sep 2013)
+
+  03 Sep 2013; Jeroen Roovers <jer@gentoo.org> +echoping-6.0.2_p434.ebuild,
+  +files/echoping-6.0.2_p434-fix_implicit_declarations.patch:
+  Version bump (bug #349569).
 
   10 Jul 2013; Agostino Sarubbo <ago@gentoo.org> echoping-6.0.2-r2.ebuild:
   Stable for x86, wrt bug #399553
