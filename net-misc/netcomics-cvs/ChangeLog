@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/netcomics-cvs
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/ChangeLog,v 1.9 2008/08/17 07:01:11 tove Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcomics-cvs/ChangeLog,v 1.10 2013/09/03 16:28:22 idella4 Exp $
 
   17 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove pyrania from metadata.xml (#26352)
@@ -30,4 +30,3 @@
 
   06 Oct 2003; Markus Nigbur <pyrania@gentoo.org> netcomics-cvs-0.14.1.ebuild:
   Initial import, thanks to Vaclav Slavik (bug 30437).
-
