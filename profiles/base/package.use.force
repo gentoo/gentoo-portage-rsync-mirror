@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.38 2013/07/19 17:15:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.39 2013/09/03 06:00:31 graaff Exp $
 
 # Michał Gorny <mgorny@gentoo.org> (26 Feb 2013)
 # Meta-packages which use multilib ebuilds always install development
@@ -74,3 +74,13 @@ dev-ruby/jruby-openssl ruby_targets_jruby
 ~virtual/rubygems-4 ruby_targets_ruby19
 ~virtual/rubygems-5 ruby_targets_rbx
 ~virtual/rubygems-6 ruby_targets_ruby20
+
+# Hans de Graaff <graaff@gentoo.org> (3 Sep 2013)
+# Force ruby20 on the core ruby packages so we don't
+# need to include ruby20 in RUBY_TARGETS right now.
+# bug 483254
+>=dev-ruby/rubygems-2.0.3 ruby_targets_ruby20
+>=dev-ruby/rake-0.9.6 ruby_targets_ruby20
+>=dev-ruby/json-1.8.0 ruby_targets_ruby20
+>=dev-ruby/racc-1.4.9 ruby_targets_ruby20
+>=dev-ruby/rdoc-4.0.1-r1 ruby_targets_ruby20

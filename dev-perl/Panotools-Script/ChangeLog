@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Panotools-Script
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Panotools-Script/ChangeLog,v 1.12 2012/09/05 07:25:53 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Panotools-Script/ChangeLog,v 1.13 2013/09/03 05:35:59 patrick Exp $
+
+*Panotools-Script-0.280.0 (03 Sep 2013)
+
+  03 Sep 2013; Patrick Lauer <patrick@gentoo.org>
+  +Panotools-Script-0.280.0.ebuild:
+  Bump
 
   05 Sep 2012; Torsten Veller <tove@gentoo.org>
   Panotools-Script-0.270.0.ebuild:
