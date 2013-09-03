@@ -4,11 +4,11 @@ DESCRIPTION=Linux dynamic and persistent device naming support (aka userspace de
 EAPI=5
 HOMEPAGE=https://github.com/gentoo/eudev
 IUSE=doc gudev hwdb kmod introspection keymap +modutils +openrc +rule-generator selinux static-libs test
-KEYWORDS=alpha amd64 arm hppa ~mips ppc ppc64 x86
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 x86
 LICENSE=LGPL-2.1 MIT GPL-2
 PDEPEND=>=virtual/udev-180 <virtual/udev-206 openrc? ( >=sys-fs/udev-init-scripts-18 )
 RDEPEND=gudev? ( dev-libs/glib:2 ) kmod? ( sys-apps/kmod ) introspection? ( >=dev-libs/gobject-introspection-1.31.1 ) selinux? ( sys-libs/libselinux ) >=sys-apps/util-linux-2.20 !<sys-libs/glibc-2.11 hwdb? ( >=sys-apps/hwids-20121202.2[udev] ) !sys-fs/udev !sys-apps/coldplug !sys-apps/systemd !<sys-fs/lvm2-2.02.97 !sys-fs/device-mapper !<sys-fs/udev-init-scripts-18
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~blueness/eudev/eudev-1.1.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=2adfba869a21e303ce0b333d069f175d
+_md5_=14dbd4bebaaf234ab4a0eb1211750697

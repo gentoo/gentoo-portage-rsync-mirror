@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.158 2013/08/30 23:48:08 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.159 2013/09/03 13:43:45 vincent Exp $
+
+  03 Sep 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  openafs-kernel-1.6.5-r1.ebuild:
+  amd64, x86 stable. bug #478296
 
   30 Aug 2013; Vicente Olivert Riera <vincent@gentoo.org>
   openafs-kernel-1.6.5-r1.ebuild:
