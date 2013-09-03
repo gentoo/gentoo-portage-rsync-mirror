@@ -1,6 +1,17 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.949 2013/08/25 15:05:56 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.950 2013/09/03 19:04:49 creffett Exp $
+
+*kdelibs-4.11.1 (03 Sep 2013)
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> +kdelibs-4.11.1.ebuild,
+  files/kdelibs-4.10.0-udisks.patch,
+  files/kdelibs-4.3.80-kdeui_util_kkeyserver_mac.patch,
+  files/kdelibs-4.4.90-xslt.patch, files/kdelibs-4.6.2-armlinking.patch,
+  files/kdelibs-4.6.3-no_suid_kdeinit.patch,
+  files/kdelibs-4.7.96-mimetypes.patch, files/kdelibs-4.8.1-norpath.patch,
+  files/kdelibs-4.9.3-werror.patch:
+  Bump KDE to 4.1.1
 
 *kdelibs-4.11.0-r1 (25 Aug 2013)
 

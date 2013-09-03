@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.22 2013/09/01 11:14:43 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.23 2013/09/03 19:26:58 tommy Exp $
+
+  03 Sep 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/1.4.6_p1-gentoo.patch:
+  Add missing patch
 
 *poco-1.4.6_p1 (01 Sep 2013)
 

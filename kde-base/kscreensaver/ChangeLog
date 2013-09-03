@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kscreensaver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.280 2013/08/14 20:23:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscreensaver/ChangeLog,v 1.281 2013/09/03 19:04:19 creffett Exp $
+
+*kscreensaver-4.11.1 (03 Sep 2013)
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> +kscreensaver-4.11.1.ebuild,
+  files/kscreensaver-4.5.95-nsfw.patch:
+  Bump KDE to 4.1.1
 
 *kscreensaver-4.11.0 (14 Aug 2013)
 

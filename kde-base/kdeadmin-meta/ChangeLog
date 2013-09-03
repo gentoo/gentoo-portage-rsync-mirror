@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.276 2013/08/14 20:23:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.277 2013/09/03 19:04:59 creffett Exp $
+
+*kdeadmin-meta-4.11.1 (03 Sep 2013)
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> +kdeadmin-meta-4.11.1.ebuild:
+  Bump KDE to 4.1.1
 
 *kdeadmin-meta-4.11.0 (14 Aug 2013)
 

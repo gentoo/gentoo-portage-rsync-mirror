@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.280 2013/08/14 20:24:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.281 2013/09/03 19:04:27 creffett Exp $
+
+*kdnssd-4.11.1 (03 Sep 2013)
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> +kdnssd-4.11.1.ebuild:
+  Bump KDE to 4.1.1
 
 *kdnssd-4.11.0 (14 Aug 2013)
 

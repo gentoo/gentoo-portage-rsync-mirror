@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.203 2013/08/14 20:24:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.204 2013/09/03 19:04:28 creffett Exp $
+
+*dolphin-4.11.1 (03 Sep 2013)
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> +dolphin-4.11.1.ebuild:
+  Bump KDE to 4.1.1
 
 *dolphin-4.11.0 (14 Aug 2013)
 

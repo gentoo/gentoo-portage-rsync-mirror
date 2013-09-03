@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.284 2013/08/14 20:23:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.285 2013/09/03 19:04:53 creffett Exp $
+
+*kcheckpass-4.11.1 (03 Sep 2013)
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> +kcheckpass-4.11.1.ebuild,
+  files/kcheckpass-4.4.2-no-SUID-no-GUID.patch:
+  Bump KDE to 4.1.1
 
 *kcheckpass-4.11.0 (14 Aug 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/logmein-hamachi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.12 2013/07/06 16:38:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.13 2013/09/03 19:07:19 pacho Exp $
+
+*logmein-hamachi-2.1.0.101-r1 (03 Sep 2013)
+
+  03 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/logmein-hamachi.service,
+  +logmein-hamachi-2.1.0.101-r1.ebuild:
+  Add unit file (#478524)
 
 *logmein-hamachi-2.1.0.101 (06 Jul 2013)
 

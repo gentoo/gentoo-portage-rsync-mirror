@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.395 2013/09/03 11:55:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.396 2013/09/03 19:29:42 zmedico Exp $
+
+  03 Sep 2013; Zac Medico <zmedico@gentoo.org> linux-headers-3.10.ebuild,
+  linux-headers-3.11.ebuild, linux-headers-3.9.ebuild:
+  Move blockers from DEPEND to RDEPEND
 
   03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> linux-headers-3.9.ebuild:
   Stable for ia64, wrt bug #470648

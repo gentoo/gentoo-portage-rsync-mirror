@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.275 2013/08/14 20:24:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.276 2013/09/03 19:04:41 creffett Exp $
+
+*kdeedu-meta-4.11.1 (03 Sep 2013)
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> +kdeedu-meta-4.11.1.ebuild:
+  Bump KDE to 4.1.1
 
 *kdeedu-meta-4.11.0 (14 Aug 2013)
 

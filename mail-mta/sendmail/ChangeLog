@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.114 2013/08/29 19:49:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.115 2013/09/03 19:30:26 pacho Exp $
+
+*sendmail-8.14.7-r1 (03 Sep 2013)
+
+  03 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/sendmail.service,
+  +files/sm-client.service, +sendmail-8.14.7-r1.ebuild:
+  Add unit file (#479524 by CFuga and Graham Murray)
 
   29 Aug 2013; Agostino Sarubbo <ago@gentoo.org> sendmail-8.14.7.ebuild:
   Stable for ia64, wrt bug #477622
