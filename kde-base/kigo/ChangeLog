@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kigo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.131 2013/09/03 19:04:24 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kigo/ChangeLog,v 1.132 2013/09/03 19:50:07 creffett Exp $
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kigo-4.11.0.ebuild:
+  Drop KDE 4.11.0
 
 *kigo-4.11.1 (03 Sep 2013)
 

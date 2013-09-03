@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.392 2013/09/03 19:04:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.393 2013/09/03 19:50:15 creffett Exp $
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kopete-4.11.0.ebuild:
+  Drop KDE 4.11.0
 
 *kopete-4.11.1 (03 Sep 2013)
 

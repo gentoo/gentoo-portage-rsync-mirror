@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.286 2013/09/03 19:04:35 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.287 2013/09/03 19:49:57 creffett Exp $
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kdebase-data-4.11.0.ebuild:
+  Drop KDE 4.11.0
 
 *kdebase-data-4.11.1 (03 Sep 2013)
 

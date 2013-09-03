@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.116 2013/09/03 19:04:10 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.117 2013/09/03 19:49:50 creffett Exp $
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kajongg-4.11.0.ebuild:
+  Drop KDE 4.11.0
 
 *kajongg-4.11.1 (03 Sep 2013)
 

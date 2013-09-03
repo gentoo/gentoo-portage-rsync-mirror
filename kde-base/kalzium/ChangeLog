@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.288 2013/09/03 19:04:30 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.289 2013/09/03 19:49:50 creffett Exp $
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kalzium-4.11.0.ebuild:
+  Drop KDE 4.11.0
 
 *kalzium-4.11.1 (03 Sep 2013)
 

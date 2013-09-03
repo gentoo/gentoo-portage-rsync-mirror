@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.282 2013/09/03 19:04:27 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.283 2013/09/03 19:50:00 creffett Exp $
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kdepasswd-4.11.0.ebuild:
+  Drop KDE 4.11.0
 
 *kdepasswd-4.11.1 (03 Sep 2013)
 

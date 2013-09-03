@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/audiocd-kio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/audiocd-kio/ChangeLog,v 1.51 2013/09/03 19:04:25 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/audiocd-kio/ChangeLog,v 1.52 2013/09/03 19:49:46 creffett Exp $
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> -audiocd-kio-4.11.0.ebuild:
+  Drop KDE 4.11.0
 
 *audiocd-kio-4.11.1 (03 Sep 2013)
 

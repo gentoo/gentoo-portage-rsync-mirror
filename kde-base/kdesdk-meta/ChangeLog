@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.263 2013/09/03 19:04:43 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.264 2013/09/03 19:50:02 creffett Exp $
+
+  03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kdesdk-meta-4.11.0.ebuild:
+  Drop KDE 4.11.0
 
 *kdesdk-meta-4.11.1 (03 Sep 2013)
 
