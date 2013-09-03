@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Error
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.78 2013/08/16 08:06:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/ChangeLog,v 1.79 2013/09/03 03:51:51 patrick Exp $
+
+*Error-0.170.210 (03 Sep 2013)
+
+  03 Sep 2013; Patrick Lauer <patrick@gentoo.org> +Error-0.170.210.ebuild:
+  Bump
 
 *Error-0.170.200 (16 Aug 2013)
 

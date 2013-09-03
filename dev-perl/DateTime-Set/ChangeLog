@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DateTime-Set
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Set/ChangeLog,v 1.8 2012/06/24 12:59:31 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Set/ChangeLog,v 1.9 2013/09/03 03:44:20 patrick Exp $
+
+*DateTime-Set-0.320.0 (03 Sep 2013)
+
+  03 Sep 2013; Patrick Lauer <patrick@gentoo.org> +DateTime-Set-0.320.0.ebuild:
+  Bump
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
