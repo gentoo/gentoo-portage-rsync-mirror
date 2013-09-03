@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.501 2013/08/30 08:34:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.502 2013/09/03 07:05:58 scarabeus Exp $
+
+  03 Sep 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
+  Bump harfbuzz requirement.
 
 *libreoffice-4.0.5.2 (30 Aug 2013)
 *libreoffice-4.1.1.2 (30 Aug 2013)
