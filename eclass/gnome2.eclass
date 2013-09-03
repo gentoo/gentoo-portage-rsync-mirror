@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.122 2013/05/26 14:08:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.123 2013/09/03 21:54:38 eva Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -258,6 +258,7 @@ gnome2_pkg_preinst() {
 	gnome2_icon_savelist
 	gnome2_schemas_savelist
 	gnome2_scrollkeeper_savelist
+	gnome2_gdk_pixbuf_savelist
 }
 
 # @FUNCTION: gnome2_pkg_postinst
@@ -271,6 +272,7 @@ gnome2_pkg_postinst() {
 	gnome2_icon_cache_update
 	gnome2_schemas_update
 	gnome2_scrollkeeper_update
+	gnome2_gdk_pixbuf_update
 }
 
 # # FIXME Handle GConf schemas removal

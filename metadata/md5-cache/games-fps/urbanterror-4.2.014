@@ -10,5 +10,5 @@ RDEPEND=!dedicated? ( virtual/opengl curl? ( net-misc/curl ) openal? ( media-lib
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://cdn.urbanterror.info/urt/42/zips/UrbanTerror42_full012.zip http://cdn.urbanterror.info/urt/42/zips/UrbanTerror-4.2.012-to-4.2.013.zip http://cdn.urbanterror.info/urt/42/zips/UrbanTerror-4.2.013-to-4.2.014.zip https://github.com/Barbatos/ioq3-for-UrbanTerror-4/archive/release-4.2.014.tar.gz -> urbanterror-4.2.014.tar.gz http://upload.wikimedia.org/wikipedia/en/5/56/Urbanterror.svg -> urbanterror.svg
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	63afaaed8aa819fdcb814c7cd39495a2	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	794d2847b4af390a1e020924876c8297	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	63afaaed8aa819fdcb814c7cd39495a2	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	cf14abfc65f26151fd2e33d722422ee3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=515b29f7c001c19d9926aaa57866adde

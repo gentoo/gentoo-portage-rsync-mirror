@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.31 2012/10/27 22:24:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.32 2013/09/03 21:54:38 eva Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -14,6 +14,8 @@
 #  * GSettings schemas management
 #  * GConf schemas management
 #  * scrollkeeper (old Gnome help system) management
+
+inherit multilib
 
 case "${EAPI:-0}" in
 	0|1|2|3|4|5) ;;
@@ -50,6 +52,12 @@ esac
 # Path to glib-compile-schemas
 : ${GLIB_COMPILE_SCHEMAS:="/usr/bin/glib-compile-schemas"}
 
+# @ECLASS-VARIABLE: GDK_PIXBUF_UPDATE_BIN
+# @INTERNAL
+# @DESCRIPTION:
+# Path to gdk-pixbuf-query-loaders
+: ${GDK_PIXBUF_UPDATE_BIN:="/usr/bin/gdk-pixbuf-query-loaders"}
+
 # @ECLASS-VARIABLE: GNOME2_ECLASS_SCHEMAS
 # @INTERNAL
 # @DEFAULT_UNSET
@@ -73,6 +81,12 @@ esac
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # List of GSettings schemas provided by the package
+
+# @ECLASS-VARIABLE: GNOME2_ECLASS_GDK_PIXBUF_LOADERS
+# @INTERNAL
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# List of gdk-pixbuf loaders provided by the package
 
 DEPEND=">=sys-apps/sed-4"
 
@@ -386,6 +400,46 @@ gnome2_schemas_update() {
 	${updater} --allow-any-name "$@" "${EROOT%/}/usr/share/glib-2.0/schemas" &>/dev/null
 	eend $?
 }
+
+# @FUNCTION: gnome2_gdk_pixbuf_savelist
+# @DESCRIPTION:
+# Find if there is any gdk-pixbuf loader to install and save the list in
+# GNOME2_ECLASS_GDK_PIXBUF_LOADERS variable.
+# This function should be called from pkg_preinst.
+gnome2_gdk_pixbuf_savelist() {
+	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
+	pushd "${ED}" 1>/dev/null
+	export GNOME2_ECLASS_GDK_PIXBUF_LOADERS=$(find "usr/$(get_libdir)/gdk-pixbuf-2.0" -type f 2>/dev/null)
+	popd 1>/dev/null
+}
+
+# @FUNCTION: gnome2_gdk_pixbuf_update
+# @USAGE: gnome2_gdk_pixbuf_update
+# @DESCRIPTION:
+# Updates gdk-pixbuf loader cache if GNOME2_ECLASS_GDK_PIXBUF_LOADERS has some.
+# This function should be called from pkg_postinst and pkg_postrm.
+gnome2_gdk_pixbuf_update() {
+	has ${EAPI:-0} 0 1 2 && ! use prefix && EROOT="${ROOT}"
+	local updater="${EROOT}${GDK_PIXBUF_UPDATE_BIN}"
+
+	if [[ ! -x ${updater} ]]; then
+		debug-print "${updater} is not executable"
+		return
+	fi
+
+	if [[ -z ${GNOME2_ECLASS_GDK_PIXBUF_LOADERS} ]]; then
+		debug-print "gdk-pixbuf loader cache does not need an update"
+		return
+	fi
+
+	ebegin "Updating gdk-pixbuf loader cache"
+	local tmp_file=$(mktemp -t tmp.XXXXXXXXXX_gdkpixbuf)
+	${updater} 1> "${tmp_file}" &&
+	chmod 0644 "${tmp_file}" &&
+	mv -f "${tmp_file}" "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+	eend $?
+}
+
 
 # @FUNCTION: gnome2_query_immodules_gtk2
 # @USAGE: gnome2_query_immodules_gtk2

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.5.ebuild,v 1.6 2013/08/05 09:48:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.5.ebuild,v 1.7 2013/09/03 21:59:11 eva Exp $
 
 EAPI="5"
 
-inherit eutils gnome.org multilib libtool
+inherit eutils gnome.org gnome2-utils multilib libtool
 
 DESCRIPTION="Image loading library for GTK+"
 HOMEPAGE="http://www.gtk.org/"
@@ -63,23 +63,25 @@ src_install() {
 	prune_libtool_files --modules
 }
 
+pkg_preinst() {
+	gnome2_gdk_pixbuf_savelist
+}
+
 pkg_postinst() {
 	# causes segfault if set, see bug 375615
 	unset __GL_NO_DSO_FINALIZER
 
-	tmp_file=$(mktemp -t tmp_gdk_pixbuf_ebuild.XXXXXXXXXX)
-	# be atomic!
-	gdk-pixbuf-query-loaders > "${tmp_file}"
-	if [ "${?}" = "0" ]; then
-		cat "${tmp_file}" > "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache"
-	else
-		ewarn "Cannot update loaders.cache, gdk-pixbuf-query-loaders failed to run"
-	fi
-	rm "${tmp_file}"
+	gnome2_gdk_pixbuf_update
 
 	if [ -e "${EROOT}"usr/lib/gtk-2.0/2.*/loaders ]; then
 		elog "You need to rebuild ebuilds that installed into" "${EROOT}"usr/lib/gtk-2.0/2.*/loaders
 		elog "to do that you can use qfile from portage-utils:"
 		elog "emerge -va1 \$(qfile -qC ${EPREFIX}/usr/lib/gtk-2.0/2.*/loaders)"
+	fi
+}
+
+pkg_postrm() {
+	if [[ -z ${REPLACED_BY_VERSIONS} ]]; then
+		rm -f "${EROOT}"usr/$(get_libdir)/${PN}-2.0/2.10.0/loaders.cache
 	fi
 }
