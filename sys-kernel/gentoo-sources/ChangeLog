@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1184 2013/08/31 22:03:44 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1185 2013/09/03 14:15:07 mpagano Exp $
+
+*gentoo-sources-3.11.0 (03 Sep 2013)
+
+  03 Sep 2013; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.11.0.ebuild:
+  Linux 3.11.0. Support for namespace user.pax.* on tmpfs. Enable mic mute led
+  in thinkpads. Zero copy for infiniband psm userspace driver. Disable Windows
+  8 compatibility for some Lenovo ThinkPads. Ensure that /dev/root doesn't
+  appear in /proc/mounts when bootint without an initramfs. fbcondecor patch.
+  Add Gentoo Linux support config settings and defaults.
 
 *gentoo-sources-3.4.60 (31 Aug 2013)
 

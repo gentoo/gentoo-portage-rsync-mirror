@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.471 2013/08/12 05:10:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.472 2013/09/03 14:13:35 ago Exp $
+
+  03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> -bind-9.9.2_p2.ebuild,
+  -files/bind-9.9.2_p1-libxml.patch:
+  Remove old
 
   12 Aug 2013; Rick Farina <zerochaos@gentoo.org> bind-9.9.3_p2.ebuild:
   clarify deps as requested by bug 479746
