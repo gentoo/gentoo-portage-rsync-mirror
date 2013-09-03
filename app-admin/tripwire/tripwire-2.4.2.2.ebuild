@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2.2.ebuild,v 1.6 2013/05/01 12:51:17 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2.2.ebuild,v 1.7 2013/09/03 15:01:36 nimiux Exp $
 
 EAPI=5
 
@@ -18,7 +18,6 @@ IUSE="ssl static"
 
 DEPEND="sys-devel/automake
 	sys-devel/autoconf
-	dev-util/patchutils
 	ssl? ( dev-libs/openssl )"
 RDEPEND="virtual/cron
 	virtual/mta

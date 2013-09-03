@@ -12,7 +12,7 @@
 		administrators of corrupted or tampered files, so damage control
 		measures can be taken in a timely manner.
 	</longdescription>
-	<longdescription lang="en">
+	<longdescription lang="es">
 		Tripwire es una herramienta que ayuda a los administradores y
 		usuarios en la monitorización de los cambios en un conjunto de
 		ficheros. Se utiliza particularmente en los ficheros de sistema

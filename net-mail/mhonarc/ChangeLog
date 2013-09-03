@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mhonarc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.31 2012/12/27 11:48:33 kensington Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.32 2013/09/03 15:08:59 idella4 Exp $
+
+*mhonarc-2.6.18-r2 (03 Sep 2013)
+
+  03 Sep 2013; Ian Delaney <idella4@gentoo.org> +mhonarc-2.6.18-r2.ebuild:
+  revbump -> EAPI 5, add IUSE examples, fix src_install
 
   27 Dec 2012; Michael Palimaka <kensington@gentoo.org> -mhonarc-2.6.18.ebuild:
   Remove old.
