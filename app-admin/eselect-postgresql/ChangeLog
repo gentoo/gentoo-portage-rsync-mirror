@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-postgresql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.32 2013/08/18 20:56:24 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.33 2013/09/03 09:10:16 ago Exp $
+
+  03 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  eselect-postgresql-1.2.0.ebuild:
+  Stable for alpha, wrt bug #483416
 
   18 Aug 2013; Aaron W. Swenson <titanofold@gentoo.org>
   -eselect-postgresql-1.1.2.ebuild:
@@ -179,4 +183,3 @@
   19 Mar 2008; Tiziano Müller <dev-zero@gentoo.org>
   eselect-postgresql-0.2.ebuild:
   Added quotes
-
