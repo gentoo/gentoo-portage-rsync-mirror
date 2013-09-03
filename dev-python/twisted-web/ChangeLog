@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.90 2013/09/01 18:38:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.91 2013/09/03 13:01:21 ago Exp $
+
+  03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-web-12.3.0.ebuild:
+  Stable for ia64, wrt bug #468150
 
   01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-web-12.3.0.ebuild:
   Stable for alpha, wrt bug #468150
