@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r5.ebuild,v 1.13 2013/07/02 07:42:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r5.ebuild,v 1.14 2013/09/03 23:01:49 eva Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils
+inherit autotools-utils gnome2-utils
 
 #The configure script finds the 5.50 ghostscript Fontmap file while run.
 #This will probably work, especially since the real one (6.50) in this case
@@ -99,4 +99,16 @@ src_configure() {
 src_install() {
 	MAKEOPTS+=" -j1"
 	autotools-utils_src_install
+}
+
+pkg_preinst() {
+	gnome2_gdk_pixbuf_savelist
+}
+
+pkg_postinst() {
+	gnome2_gdk_pixbuf_update
+}
+
+pkg_postrm() {
+	gnome2_gdk_pixbuf_update
 }
