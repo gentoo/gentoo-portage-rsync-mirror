@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.88 2013/09/03 18:22:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.89 2013/09/04 07:26:50 ago Exp $
+
+  04 Sep 2013; Agostino Sarubbo <ago@gentoo.org> powertop-2.4.ebuild:
+  Stable for ppc, wrt bug #445214
 
   03 Sep 2013; Rick Farina <zerochaos@gentoo.org> powertop-9999.ebuild:
   updating 9999 to match already fixed 2.4 wrt bug 477280
