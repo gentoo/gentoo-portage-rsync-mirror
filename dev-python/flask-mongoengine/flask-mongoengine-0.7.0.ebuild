@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-mongoengine/flask-mongoengine-0.7.0.ebuild,v 1.1 2013/08/17 08:59:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-mongoengine/flask-mongoengine-0.7.0.ebuild,v 1.2 2013/09/04 19:40:32 maksbotan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -9,7 +9,7 @@ inherit distutils-r1
 
 RESTRICT="test" # broken
 
-DESCRIPTION="Simple and extensible admin interface framework for Flask"
+DESCRIPTION="Flask support for MongoDB and with WTF model forms"
 HOMEPAGE="https://pypi.python.org/pypi/flask-mongoengine/"
 SRC_URI="mirror://pypi/${P:0:1}/${PN}/${P}.tar.gz"
 
