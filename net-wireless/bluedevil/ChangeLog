@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.45 2013/06/09 10:51:49 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.46 2013/09/04 12:30:44 mrueg Exp $
+
+*bluedevil-1.3.2 (04 Sep 2013)
+
+  04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +bluedevil-1.3.2.ebuild:
+  Version bump.
 
   09 Jun 2013; Johannes Huber <johu@gentoo.org> -bluedevil-1.3.ebuild,
   -files/bluedevil-1.2.4-desktop.patch:

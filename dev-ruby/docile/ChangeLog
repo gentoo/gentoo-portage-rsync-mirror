@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/docile
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/docile/ChangeLog,v 1.1 2013/09/04 12:06:05 mrueg Exp $
+
+*docile-1.1.0 (04 Sep 2013)
+
+  04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +docile-1.1.0.ebuild,
+  +metadata.xml:
+  Initial version.
