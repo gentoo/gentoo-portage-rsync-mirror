@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-lang/python-2.4.0 virtual/emacs
 SLOT=0
 SRC_URI=mirror://sourceforge/bashdb/pydb-1.26.tar.bz2
-_eclasses_=elisp-common	e458159843970583a1bef608e88aa55a
+_eclasses_=elisp-common	57a17c02cd0f6f0c423e3d6de5c83f13
 _md5_=8d800f7fe90660d9cb9d3c21687e672c

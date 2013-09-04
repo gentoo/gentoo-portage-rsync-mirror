@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.85 2013/08/02 16:48:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.86 2013/09/04 19:16:40 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -23,7 +23,9 @@
 #
 # When relying on the emacs USE flag, you need to add
 #
-#   	emacs? ( virtual/emacs )
+# @CODE
+# 	emacs? ( virtual/emacs )
+# @CODE
 #
 # to your DEPEND/RDEPEND line and use the functions provided here to
 # bring the files to the correct locations.
@@ -35,7 +37,9 @@
 # tested with function elisp-need-emacs(), which would typically be
 # called from pkg_setup(), as in the following example:
 #
-#   	elisp-need-emacs 23 || die "Emacs version too low"
+# @CODE
+# 	elisp-need-emacs 23 || die "Emacs version too low"
+# @CODE
 #
 # Please note that such tests should be limited to packages that are
 # known to fail with lower Emacs versions; the standard case is to
@@ -50,7 +54,9 @@
 # directory is added to the load-path which makes sure that all files
 # are loadable.
 #
-#   	elisp-compile *.el
+# @CODE
+# 	elisp-compile *.el
+# @CODE
 #
 # Function elisp-make-autoload-file() can be used to generate a file
 # with autoload definitions for the lisp functions.  It takes the output
@@ -70,16 +76,20 @@
 # choose something else, but remember to tell elisp-site-file-install()
 # (see below) the change, as it defaults to ${PN}.
 #
-#   	elisp-install ${PN} *.el *.elc
+# @CODE
+# 	elisp-install ${PN} *.el *.elc
+# @CODE
 #
 # To let the Emacs support be activated by Emacs on startup, you need
 # to provide a site file (shipped in ${FILESDIR}) which contains the
 # startup code (have a look in the documentation of your software).
 # Normally this would look like this:
 #
-#   	(add-to-list 'load-path "@SITELISP@")
-#   	(add-to-list 'auto-mode-alist '("\\.csv\\'" . csv-mode))
-#   	(autoload 'csv-mode "csv-mode" "Major mode for csv files." t)
+# @CODE
+# 	(add-to-list 'load-path "@SITELISP@")
+# 	(add-to-list 'auto-mode-alist '("\\.csv\\'" . csv-mode))
+# 	(autoload 'csv-mode "csv-mode" "Major mode for csv files." t)
+# @CODE
 #
 # If your Emacs support files are installed in a subdirectory of
 # /usr/share/emacs/site-lisp/ (which is strongly recommended), you need
@@ -108,11 +118,15 @@
 # Best practice is to define a SITEFILE variable in the global scope of
 # your ebuild (e.g., right after S or RDEPEND):
 #
-#   	SITEFILE="50${PN}-gentoo.el"
+# @CODE
+# 	SITEFILE="50${PN}-gentoo.el"
+# @CODE
 #
 # Which is then installed by
 #
-#   	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+# @CODE
+# 	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
+# @CODE
 #
 # in src_install().  Any characters after the "-gentoo" part and before
 # the extension will be stripped from the destination file's name.
@@ -126,13 +140,15 @@
 # After that you need to recreate the start-up file of Emacs after
 # emerging and unmerging by using
 #
-#   	pkg_postinst() {
-#   		elisp-site-regen
-#   	}
+# @CODE
+# 	pkg_postinst() {
+# 		elisp-site-regen
+# 	}
 #
-#   	pkg_postrm() {
-#   		elisp-site-regen
-#   	}
+# 	pkg_postrm() {
+# 		elisp-site-regen
+# 	}
+# @CODE
 #
 # When having optional Emacs support, you should prepend "use emacs &&"
 # to above calls of elisp-site-regen().
