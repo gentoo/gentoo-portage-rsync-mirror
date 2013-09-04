@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.162 2013/09/03 19:50:29 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.163 2013/09/04 00:12:01 mrueg Exp $
+
+*plasma-runtime-4.11.1-r1 (04 Sep 2013)
+
+  04 Sep 2013; Manuel Rüger <mrueg@gentoo.org>
+  +files/plasma-runtime-4.11.1-clicking-behaviour.patch,
+  +plasma-runtime-4.11.1-r1.ebuild:
+  Fix clicking behaviour. See bug #483538.
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org>
   -plasma-runtime-4.11.0.ebuild:
