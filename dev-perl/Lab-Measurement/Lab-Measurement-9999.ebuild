@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.8 2013/06/10 17:59:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.9 2013/09/04 17:57:15 dilfridge Exp $
 
 EAPI=5
 
 if [[ "${PV}" != "9999" ]]; then
+	MODULE_VERSION=9999 # change this!!!
 	MODULE_AUTHOR="AKHUETTEL"
 	KEYWORDS="~amd64 ~x86"
 	inherit perl-module
