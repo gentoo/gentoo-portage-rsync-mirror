@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.28 2013/08/30 00:59:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.29 2013/09/04 22:24:11 fuzzyray Exp $
 
 EAPI="5"
 
@@ -56,9 +56,6 @@ python_install_all() {
 		rm -rf "${ED}"/etc/revdep-rebuild
 		rm -rf "${ED}"/var
 	fi
-	# Can distutils handle this?
-	dosym eclean /usr/bin/eclean-dist
-	dosym eclean /usr/bin/eclean-pkg
 }
 
 pkg_postinst() {
