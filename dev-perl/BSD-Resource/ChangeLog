@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/BSD-Resource
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.41 2013/08/25 06:46:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.42 2013/09/04 13:07:34 idella4 Exp $
+
+*BSD-Resource-1.290.700-r1 (04 Sep 2013)
+
+  04 Sep 2013; Ian Delaney <idella4@gentoo.org>
+  +BSD-Resource-1.290.700-r1.ebuild, -BSD-Resource-1.290.700.ebuild:
+  rebump -> EAPI 5, remove old
 
 *BSD-Resource-1.290.700 (25 Aug 2013)
 

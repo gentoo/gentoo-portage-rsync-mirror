@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r2.ebuild,v 1.1 2013/09/04 12:45:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lockdev/lockdev-1.0.3.1.2-r2.ebuild,v 1.2 2013/09/04 13:13:16 idella4 Exp $
 
 EAPI=5
 
@@ -61,7 +61,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 
 	if use perl; then
 		cd "${PERL_S}"
@@ -79,10 +79,10 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 
-	dodoc AUTHORS ChangeLog* debian/NEWS README.debug || die "dodoc failed"
-	newdoc debian/changelog changelog.debian || die "newdoc changelog.debian failed"
+	dodoc AUTHORS ChangeLog* debian/NEWS README.debug
+	newdoc debian/changelog changelog.debian
 
 	if use perl; then
 		cd "${PERL_S}"
