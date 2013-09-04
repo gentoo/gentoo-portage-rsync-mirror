@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.7.ebuild,v 1.10 2013/09/04 18:53:49 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.9.ebuild,v 1.1 2013/09/04 18:50:10 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
-LANGS="be bg cs de el en es fr hu it pl ru sk uk" # drop sr@latin for bug #429786
+LANGS="be bg cs de el en es fr hu it pl pt_BR ru sk sr@latin uk"
 
 [[ ${PV} = *9999* ]] && VCS_ECLASS="git-2" || VCS_ECLASS=""
 inherit cmake-utils ${VCS_ECLASS}
@@ -14,7 +14,7 @@ HOMEPAGE="http://eiskaltdc.googlecode.com/"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-IUSE="cli daemon dbus +dht +emoticons examples -gnome -gtk -gtk3 idn -javascript json libcanberra libnotify lua +minimal pcre +qt4 sound spell sqlite upnp xmlrpc"
+IUSE="cli daemon dbus +dht +emoticons examples -gtk idn -javascript json libcanberra libnotify lua +minimal pcre +qt4 sound spell sqlite upnp -xmlrpc"
 for x in ${LANGS}; do
 	IUSE="${IUSE} linguas_${x}"
 done
@@ -23,11 +23,9 @@ REQUIRED_USE="
 	cli? ( ^^ ( json xmlrpc ) )
 	emoticons? ( || ( gtk qt4 ) )
 	dbus? ( qt4 )
-	gnome? ( gtk )
-	gtk3? ( gtk )
 	javascript? ( qt4 )
 	json? ( !xmlrpc )
-	libcanberra? ( !gnome gtk )
+	libcanberra? ( gtk )
 	libnotify? ( gtk )
 	spell? ( qt4 )
 	sound? ( || ( gtk qt4 ) )
@@ -36,9 +34,9 @@ REQUIRED_USE="
 
 if [[ ${PV} != *9999* ]]; then
 	SRC_URI="http://${PN/pp/}.googlecode.com/files/${P}.tar.xz"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="~amd64 ~x86"
 else
-	EGIT_REPO_URI="git://github.com/negativ/${PN}.git"
+	EGIT_REPO_URI="git://github.com/${PN}/${PN}.git"
 	KEYWORDS=""
 fi
 
@@ -65,11 +63,9 @@ RDEPEND="
 	daemon? ( xmlrpc? ( >=dev-libs/xmlrpc-c-1.19.0[abyss,cxx] ) )
 	gtk? (
 		x11-libs/pango
-		gtk3? ( x11-libs/gtk+:3 )
-		!gtk3? ( >=x11-libs/gtk+-2.24:2 )
+		x11-libs/gtk+:3
 		>=dev-libs/glib-2.24:2
 		x11-themes/hicolor-icon-theme
-		gnome? ( gnome-base/libgnome )
 		libcanberra? ( media-libs/libcanberra )
 		libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	)
@@ -88,8 +84,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 DOCS="AUTHORS ChangeLog.txt"
-
-PATCHES=( "${FILESDIR}"/${P}-boost-1.50.patch )
 
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
@@ -110,6 +104,8 @@ src_configure() {
 		-DLIB_INSTALL_DIR="$(get_libdir)"
 		-Dlinguas="${langs}"
 		-DLOCAL_MINIUPNP=OFF
+		-DUSE_GTK=OFF
+		-DUSE_LIBGNOME2=OFF
 		"$(use cli && cmake-utils_use json USE_CLI_JSONRPC)"
 		"$(use cli && cmake-utils_use xmlrpc USE_CLI_XMLRPC)"
 		"$(cmake-utils_use daemon NO_UI_DAEMON)"
@@ -119,9 +115,7 @@ src_configure() {
 		"$(cmake-utils_use dht WITH_DHT)"
 		"$(cmake-utils_use emoticons WITH_EMOTICONS)"
 		"$(cmake-utils_use examples WITH_EXAMPLES)"
-		"$(cmake-utils_use gnome USE_LIBGNOME2)"
-		"$(cmake-utils_use gtk USE_GTK)"
-		"$(cmake-utils_use gtk3 USE_GTK3)"
+		"$(cmake-utils_use gtk USE_GTK3)"
 		"$(cmake-utils_use idn USE_IDNA)"
 		"$(cmake-utils_use javascript USE_JS)"
 		"$(cmake-utils_use libcanberra LIBCANBERRA)"

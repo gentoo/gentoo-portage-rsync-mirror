@@ -1,6 +1,17 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.54 2013/07/13 07:48:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.56 2013/09/04 18:53:49 pinkbyte Exp $
+
+  04 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> eiskaltdcpp-2.2.7.ebuild,
+  eiskaltdcpp-2.2.8.ebuild, eiskaltdcpp-2.2.8-r1.ebuild:
+  Add proper dependency on dev-qt/qtdbus
+
+*eiskaltdcpp-2.2.9 (04 Sep 2013)
+
+  04 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> +eiskaltdcpp-2.2.9.ebuild,
+  eiskaltdcpp-9999.ebuild, metadata.xml:
+  Version bump, wrt bug #482982. Sync live ebuild, updated maintainer's email
+  address
 
   13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> eiskaltdcpp-2.2.8-r1.ebuild:
   Stable for x86, wrt bug #476232
