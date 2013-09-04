@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>ruby</herd>
-  <use>
-    <flag name='mongrel'>Also install <pkg>www-servers/mongrel</pkg></flag>
-  </use>
 </pkgmetadata>

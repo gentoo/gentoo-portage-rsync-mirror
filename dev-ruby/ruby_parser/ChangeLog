@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.44 2013/09/04 13:01:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.45 2013/09/04 13:48:00 mrueg Exp $
+
+  04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -ruby_parser-2.3.0.ebuild,
+  -ruby_parser-2.3.1.ebuild:
+  Cleanup old.
 
 *ruby_parser-3.2.2 (04 Sep 2013)
 
