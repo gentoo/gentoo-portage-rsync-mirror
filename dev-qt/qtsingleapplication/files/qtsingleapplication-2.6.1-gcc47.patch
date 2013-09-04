@@ -1,0 +1,15 @@
+Fix build with GCC 4.7.
+
+Source: http://pkgs.fedoraproject.org/cgit/qtsingleapplication.git/tree/qtsingleapplication-gcc47.patch
+
+diff -rupN qtsingleapplication-2.6_1-opensource.old/src/qtlocalpeer.cpp qtsingleapplication-2.6_1-opensource/src/qtlocalpeer.cpp
+--- qtsingleapplication-2.6_1-opensource.old/src/qtlocalpeer.cpp	2012-01-11 08:15:08.000000000 -0500
++++ qtsingleapplication-2.6_1-opensource/src/qtlocalpeer.cpp	2012-01-11 08:17:36.874461946 -0500
+@@ -58,6 +58,7 @@ static PProcessIdToSessionId pProcessIdT
+ #endif
+ #if defined(Q_OS_UNIX)
+ #include <time.h>
++#include <unistd.h>
+ #endif
+ 
+ const char* QtLocalPeer::ack = "ack";

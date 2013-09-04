@@ -1,0 +1,3 @@
+INCLUDEPATH *= $$QMAKE_INCDIR_QT/QtSolutions
+DEPENDPATH  *= $$QMAKE_INCDIR_QT/QtSolutions
+LIBS *= -lQtSolutions_LockedFile-2.4
