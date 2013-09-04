@@ -1,6 +1,13 @@
 # ChangeLog for games-util/pyfa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.22 2013/07/30 08:16:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.23 2013/09/04 04:59:30 tetromino Exp $
+
+*pyfa-1.1.16 (04 Sep 2013)
+
+  04 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.14.ebuild,
+  +pyfa-1.1.16.ebuild, +files/pyfa-1.1.16-wxversion.patch:
+  Version bump, adds Odyssey 1.1 updates and new import/export features. Drop
+  old.
 
   30 Jul 2013; Sergey Popov <pinkbyte@gentoo.org> pyfa-1.1.15.ebuild:
   Add ~arm keyword, wrt bug #478340

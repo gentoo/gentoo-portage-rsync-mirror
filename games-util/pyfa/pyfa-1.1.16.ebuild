@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.14.ebuild,v 1.2 2013/07/20 03:09:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.16.ebuild,v 1.1 2013/09/04 04:59:30 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -10,11 +10,11 @@ inherit eutils gnome2-utils python-r1
 
 DESCRIPTION="Python Fitting Assistant - a ship fitting application for EVE Online"
 HOMEPAGE="https://github.com/DarkFenX/Pyfa"
-SRC_URI="http://go-dl.eve-files.com/media/corp/Kadesh/${P}-odyssey-1.0-src.zip"
+SRC_URI="http://go-dl.eve-files.com/media/corp/Kadesh/${P}-odyssey-1.1-src.zip"
 
 LICENSE="GPL-3+ LGPL-2.1+ CC-BY-2.5 free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+graph"
 
 RDEPEND="dev-python/sqlalchemy[${PYTHON_USEDEP}]
@@ -34,8 +34,8 @@ src_prepare() {
 	# make staticPath settable from configforced again
 	epatch "${FILESDIR}/${PN}-1.1-staticPath.patch"
 
-	# use correct slot of wxpython, http://trac.evefit.org/ticket/475
-	epatch "${FILESDIR}/${PN}-1.1.4-wxversion.patch"
+	# https://github.com/DarkFenX/Pyfa/pull/14
+	epatch "${FILESDIR}/${PN}-1.1.16-wxversion.patch"
 
 	# do not try to save exported html to python sitedir
 	epatch "${FILESDIR}/${PN}-1.1.8-html-export-path.patch"

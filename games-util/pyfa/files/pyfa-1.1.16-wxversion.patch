@@ -1,0 +1,38 @@
+From d21c0df4c21f808f31146e017839622af029751a Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Wed, 4 Sep 2013 00:13:35 -0400
+Subject: [PATCH] use wxversion.select(), not wxversion.ensureMinimal()
+
+If wxversion.ensureMininal('2.8') runs before wxversion.select('2.8') on
+a system that has wxPython 2.8 and 2.9 installed, 2.9 will be selected -
+and Pyfa is incompatible with 2.9.
+---
+ pyfa.py | 11 +++--------
+ 1 file changed, 3 insertions(+), 8 deletions(-)
+
+diff --git a/pyfa.py b/pyfa.py
+index 098b87b..2fc0500 100755
+--- a/pyfa.py
++++ b/pyfa.py
+@@ -29,15 +29,10 @@ if not hasattr(sys, 'frozen'):
+ 
+     try:
+         import wxversion
+-        wxversion.ensureMinimal('2.8')
+-    except ImportError:
+-        print "Cannot find wxPython or the installed wxPython version doesn't meet the min. requirements.\nYou can download wxPython (2.8) from http://www.wxpython.org/"
+-        sys.exit(1)
+-
+-    try:
+         wxversion.select('2.8')
+-    except wxversion.VersionError:
+-        print("Unable to select wxpython 2.8, attempting to continue anyway")
++    except:
++        print "Cannot find wxPython or the installed wxPython version doesn't meet the requirements.\nYou can download wxPython (2.8) from http://www.wxpython.org/"
++        sys.exit(1)
+ 
+     try:
+         import sqlalchemy
+-- 
+1.8.3.2
+
