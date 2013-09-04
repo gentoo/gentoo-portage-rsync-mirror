@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/liberation-fonts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.43 2013/06/12 15:03:49 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.44 2013/09/04 16:02:57 je_fro Exp $
+
+  04 Sep 2013; Jeff Gardner <je_fro@gentoo.org> liberation-fonts-2.00.1.ebuild:
+  Re-adding 60-liberation.conf, fixing bug #482840 thanks to Derek Dolney
 
   12 Jun 2013; Jeff Gardner <je_fro@gentoo.org> liberation-fonts-2.00.1.ebuild:
   Change +fontforge dependency thanks to Jouni Rinne in bug #472756

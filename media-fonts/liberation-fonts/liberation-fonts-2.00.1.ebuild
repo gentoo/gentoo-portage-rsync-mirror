@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-2.00.1.ebuild,v 1.3 2013/06/12 15:03:49 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/liberation-fonts-2.00.1.ebuild,v 1.4 2013/09/04 16:02:57 je_fro Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="fontforge X"
 
 FONT_SUFFIX="ttf"
 
-FONT_CONF=( "${FILESDIR}/${PV}/60-liberation.conf" )
+FONT_CONF=( "${FILESDIR}/60-liberation.conf" )
 
 DEPEND="fontforge? (
 		media-gfx/fontforge

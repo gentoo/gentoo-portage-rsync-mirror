@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.13.1.ebuild,v 1.1 2013/07/03 17:23:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.13.3.ebuild,v 1.1 2013/09/04 16:28:11 pinkbyte Exp $
 
 EAPI=5
 
-PLOCALES="ar cs de el_GR es fa fr hu it ja ko lt nl pl pt_BR pt_PT ru sk sr sv tg_TJ th tr uk vi zh_CN zh_TW"
+PLOCALES="ar cs de el_GR es fa fr hu it ja ko lt nl pl pt_BR pt_PT ro_RO ru sk sr sv tg_TJ th tr uk vi zh_CN zh_TW"
 inherit l10n qt4-r2
 
 MY_P="QuiteRSS-${PV}-src"
