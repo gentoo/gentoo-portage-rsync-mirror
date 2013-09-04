@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.32 2013/09/04 12:30:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.33 2013/09/04 12:47:11 ago Exp $
+
+  04 Sep 2013; Agostino Sarubbo <ago@gentoo.org> echoping-6.0.2_p434.ebuild:
+  Stable for amd64, wrt bug #349569
 
 *echoping-6.0.2_p434-r1 (04 Sep 2013)
 

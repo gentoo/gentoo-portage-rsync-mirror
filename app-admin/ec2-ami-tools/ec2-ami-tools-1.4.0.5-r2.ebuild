@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.4.0.5-r1.ebuild,v 1.2 2013/04/02 22:50:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.4.0.5-r2.ebuild,v 1.1 2013/09/04 12:56:00 tomwij Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/unzip"
-RDEPEND="dev-lang/ruby:1.8[ssl]
+RDEPEND="dev-lang/ruby:1.9[ssl]
 	net-misc/rsync
 	net-misc/curl"
 
