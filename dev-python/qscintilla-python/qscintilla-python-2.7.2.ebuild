@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.7.2.ebuild,v 1.4 2013/09/03 14:05:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.7.2.ebuild,v 1.5 2013/09/04 09:21:00 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/pyqt/${MY_P}.tar.gz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
 DEPEND="

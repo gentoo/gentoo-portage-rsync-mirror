@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipt_netflow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.10 2013/08/25 15:24:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipt_netflow/ChangeLog,v 1.11 2013/09/04 09:11:47 pinkbyte Exp $
+
+  04 Sep 2013; Sergey Popov <pinkbyte@gentoo.org>
+  files/ipt_netflow-1.8-procfs-fix.patch:
+  Modified version of procfs-fix patch, previous one can cause compile failures
+  on kernels < 3.10
 
   25 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> ipt_netflow-1.8-r3.ebuild:
   Stable on amd64 and x86, wrt bug #481278

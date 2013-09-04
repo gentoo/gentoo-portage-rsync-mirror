@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium-bsu/chromium-bsu-0.9.15.1.ebuild,v 1.2 2013/08/31 10:13:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium-bsu/chromium-bsu-0.9.15.1.ebuild,v 1.3 2013/09/04 09:03:34 ago Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/chromium-bsu/${P}.tar.gz"
 
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="mixer nls +sdl"
 
 RDEPEND="media-fonts/dejavu
