@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/rackview
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.15 2010/06/02 06:42:43 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rackview/ChangeLog,v 1.16 2013/09/04 12:00:20 idella4 Exp $
+
+*rackview-0.09-r3 (04 Sep 2013)
+
+  04 Sep 2013; Ian Delaney <idella4@gentoo.org> +rackview-0.09-r3.ebuild,
+  -rackview-0.09-r2.ebuild:
+  revbump -> EAPI5, fix src_install, remove old
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove tantive from metadata.xml (#200343)
@@ -53,5 +59,3 @@
 
   16 May 2003; <tantive@gentoo.org> rackview-0.04.ebuild:
   New ebuild. Submitted by Rigo Ketelings <rigo@home.nl>.
-
-
