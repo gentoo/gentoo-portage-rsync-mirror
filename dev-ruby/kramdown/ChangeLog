@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/kramdown
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.26 2013/08/24 16:34:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kramdown/ChangeLog,v 1.27 2013/09/03 23:53:26 mrueg Exp $
+
+*kramdown-1.2.0 (03 Sep 2013)
+
+  03 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +kramdown-1.2.0.ebuild:
+  Version bump.
 
   24 Aug 2013; Markus Meier <maekke@gentoo.org> kramdown-1.0.2.ebuild:
   add ~x86, bug #478294
