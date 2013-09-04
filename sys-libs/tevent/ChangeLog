@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.49 2013/09/03 11:55:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.50 2013/09/04 07:58:29 ago Exp $
+
+  04 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.19.ebuild:
+  Stable for ppc, wrt bug #478260
 
   03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.19.ebuild:
   Stable for ia64, wrt bug #478260
