@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/pidgin-opensteamworks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.19 2013/08/18 23:01:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-opensteamworks/ChangeLog,v 1.20 2013/09/05 10:10:00 hasufell Exp $
+
+*pidgin-opensteamworks-1.3 (05 Sep 2013)
+
+  05 Sep 2013; Julian Ospald <hasufell@gentoo.org>
+  +files/pidgin-opensteamworks-1.3-Makefile, +pidgin-opensteamworks-1.3.ebuild:
+  version bump wrt #483664
 
 *pidgin-opensteamworks-1.0_p68 (18 Aug 2013)
 

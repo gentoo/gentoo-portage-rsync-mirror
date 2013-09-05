@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15085 2013/09/05 07:11:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15086 2013/09/05 10:09:28 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -209,23 +209,6 @@ dev-php/symfony
 # Andreas K. Huettel <dilfridge@gentoo.org> (9 Aug 2013)
 # Mask upcoming poppler-0.24 until stuff builds with it
 =app-text/poppler-0.24*
-
-# Michał Górny <mgorny@gentoo.org> (07 Aug 2013)
-# These outdated versions of Python are no longer updated or maintained
-# properly. Python 2.5 started to become a blocker for Python 3.3.
-# Python 3.1 has proved to become unfriendly to writing portable code.
-# PyPy is still experimental and we're in process of bringing 2.1.
-# The remaining packages are backports of functions that targeted only
-# the very specific version. The masked packages will be removed
-# in 30 days. Afterwards, ebuild and eclass support for those
-# implementations will be removed. Bug #480070.
-dev-lang/python:2.5
-dev-lang/python:3.1
-dev-python/pypy:1.9
-dev-python/pypy-bin:1.9
-virtual/pypy:1.9
-dev-python/multiprocessing
-dev-python/turbogears
 
 # Christian Faulhammer <fauli@gentoo.org> (06 Aug 2013)
 # Masked for removal, dead upstream, bug #474518
