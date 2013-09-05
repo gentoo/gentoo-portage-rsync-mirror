@@ -1,25 +1,27 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.2.1.ebuild,v 1.6 2013/01/04 15:15:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.2.1-r2.ebuild,v 1.1 2013/09/05 12:22:55 pinkbyte Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils versionator toolchain-funcs multilib
 
-PATCH_V="1"
+PATCH_V="2"
 
 DESCRIPTION="C++ STL library"
 HOMEPAGE="http://stlport.sourceforge.net/"
 SRC_URI="mirror://sourceforge/stlport/${P}.tar.bz2
-	mirror://gentoo/distfiles/${PN}-patches-${PV}-${PATCH_V}.tbz2"
+	http://dev.gentoo.org/~xarthisius/distfiles/${PN}-patches-${PV}-${PATCH_V}.tbz2"
 
 LICENSE="boehm-gc HPND"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="boost debug static static-libs threads"
 
 DEPEND="boost? ( >=dev-libs/boost-1.35.0-r5 )"
 RDEPEND="${DEPEND}"
+
+DOCS=( README etc/ChangeLog doc/FAQ doc/README.utf8 )
 
 pkg_setup() {
 	# make sure OSNAME is not in the environment (bug #305399)
@@ -42,6 +44,8 @@ src_prepare() {
 	#define _LARGEFILE_SOURCE
 	#define _LARGEFILE64_SOURCE
 	EOF
+
+	epatch_user
 }
 
 src_configure() {
@@ -51,25 +55,24 @@ src_configure() {
 		BOOST_PKG="$(best_version ">=dev-libs/boost-1.35.0-r5")"
 		BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
 		BOOST_VER="$(replace_all_version_separators _ "${BOOST_VER}")"
-		BOOST_INC="/usr/include/boost-${BOOST_VER}"
+		BOOST_INC="${EPREFIX}/usr/include/boost-${BOOST_VER}"
 
 		myconf+="--with-boost=${BOOST_INC} --with-system-boost "
 		# make sure user apps (e.g. other packges using STLport) use boost as well
 		sed -i \
 			-e 'N;N;N;s:/\**\n\(#define _STLP_USE_BOOST_SUPPORT 1\)*\n\*/:\1:' \
-			stlport/stl/config/user_config.h
+			stlport/stl/config/user_config.h || die
 	fi
-
-	use debug || myconf+="--without-debug "
-	use static-libs && myconf+="--enable-static "
-	use threads || myconf+="--without-thread "
-	use static && myconf+="--use-static-gcc "
 
 	# It's not an autoconf script
 	./configure \
-		--prefix=/usr \
-		--libdir=/usr/$(get_libdir) \
+		--prefix="${EPREFIX}/usr" \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		--use-compiler-family=gcc \
+		$(use debug || echo "--without-debug") \
+		$(use static && echo "--use-static-gcc") \
+		$(use static-libs && echo "--enable-static") \
+		$(use threads && echo "--without-thread") \
 		${myconf} \
 		--with-cc="$(tc-getCC)" \
 		--with-cxx="$(tc-getCXX)" \
@@ -82,15 +85,14 @@ src_install() {
 	# precreate some directories
 	dodir /usr/$(get_libdir)
 
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc README etc/ChangeLog etc/*.txt doc/*.txt doc/{FAQ,README.utf8}
+	default
+	dodoc etc/*.txt doc/*.txt
 }
 
 src_test() {
 	if use static ; then
 		ewarn "Tests don't work when building with USE=static. Skipping..."
-		return
+	else
+		default
 	fi
-	default
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.10.ebuild,v 1.5 2013/08/28 11:16:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.16.10.ebuild,v 1.6 2013/09/05 12:18:56 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2:2.6"
@@ -19,7 +19,7 @@ SRC_URI="http://libtorrent.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug doc examples python ssl static-libs"
 RESTRICT="test"
 

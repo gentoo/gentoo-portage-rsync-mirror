@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.86 2013/08/10 12:53:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.87 2013/09/05 12:22:55 pinkbyte Exp $
+
+*STLport-5.2.1-r2 (05 Sep 2013)
+
+  05 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> -STLport-5.2.1.ebuild,
+  +STLport-5.2.1-r2.ebuild:
+  Revision bump: EAPI 5, epatch_user, Prefix support and keywords. Drop old
+  revision
 
   10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> STLport-5.2.1-r1.ebuild:
   Stable for ppc, wrt bug #477142

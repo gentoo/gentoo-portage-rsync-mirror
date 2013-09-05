@@ -1,6 +1,9 @@
 # ChangeLog for app-office/rabbit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.24 2013/08/24 13:16:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/ChangeLog,v 1.25 2013/09/05 12:16:35 mrueg Exp $
+
+  05 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -rabbit-0.9.2.ebuild:
+  Cleanup old.
 
   24 Aug 2013; Markus Meier <maekke@gentoo.org> rabbit-1.0.9.ebuild:
   add ~x86, bug #415151
@@ -99,4 +102,3 @@
   18 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   +files/50rabbit-mode-gentoo.el, +metadata.xml, +rabbit-0.5.0.ebuild:
   New ebuild from Atzm Watanabe <sitosito@p.chan.ne.jp>, bug #104787
-
