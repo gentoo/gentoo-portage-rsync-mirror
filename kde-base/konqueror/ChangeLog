@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.308 2013/09/03 19:50:14 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.309 2013/09/05 11:55:21 kensington Exp $
+
+*konqueror-4.11.1-r1 (05 Sep 2013)
+
+  05 Sep 2013; Michael Palimaka <kensington@gentoo.org>
+  +files/konqueror-4.11.1-bookmarks.patch, +konqueror-4.11.1-r1.ebuild:
+  Backport patch from upstream fixing an issue where top level bookmarks do not
+  appear in the toolbar, wrt bug #483666.
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org> -konqueror-4.11.0.ebuild:
   Drop KDE 4.11.0
