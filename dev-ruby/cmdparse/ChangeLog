@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cmdparse
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.27 2012/10/05 18:11:28 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/ChangeLog,v 1.28 2013/09/05 00:13:17 mrueg Exp $
+
+  05 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -cmdparse-2.0.2-r1.ebuild:
+  Cleanup old.
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org> cmdparse-2.0.5.ebuild:
   Marking cmdparse-2.0.5 ppc64 for bug 429962
