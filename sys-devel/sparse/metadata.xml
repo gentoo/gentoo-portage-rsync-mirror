@@ -4,13 +4,13 @@
   <herd>kernel-misc</herd>
   <herd>toolchain</herd>
   <use>
-    <flag name='xml'>
-      Build the c2xml utility (requires <pkg>dev-libs/libxml2</pkg>).
-    </flag>
-
     <flag name='gtk'>
       Build the test-inspect utility (requires
       <pkg>x11-libs/gtk+</pkg> version 2)
+    </flag>
+	<flag name='llvm'>support llvm</flag>
+    <flag name='xml'>
+      Build the c2xml utility (requires <pkg>dev-libs/libxml2</pkg>).
     </flag>
   </use>
 </pkgmetadata>
