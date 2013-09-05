@@ -1,0 +1,100 @@
+Description: iperf format string FTBFS with -Werror=format-security
+ Reported by Didier Raboud <odyx@debian.org>
+Author: Simon Paillard <spaillard@debian.org>
+Bug-Debian: http://bugs.debian.org/643408
+
+diff -Nur iperf-2.0.5/compat/Thread.c iperf-2.0.5-nmu/compat/Thread.c
+--- iperf-2.0.5/compat/Thread.c	2010-03-31 01:08:24.000000000 +0200
++++ iperf-2.0.5-nmu/compat/Thread.c	2011-11-15 09:13:32.000000000 +0100
+@@ -381,7 +381,7 @@
+     Condition_Lock( thread_sNum_cond );
+     thread_sNum -= nonterminating_num;
+     if ( thread_sNum > 1 && nonterminating_num > 0 && interrupt != 0 ) {
+-        fprintf( stderr, wait_server_threads );
++        fprintf( stderr, "%s", wait_server_threads );
+     }
+     nonterminating_num = 0;
+     Condition_Signal( &thread_sNum_cond );
+diff -Nur iperf-2.0.5/src/ReportDefault.c iperf-2.0.5-nmu/src/ReportDefault.c
+--- iperf-2.0.5/src/ReportDefault.c	2010-03-31 00:57:17.000000000 +0200
++++ iperf-2.0.5-nmu/src/ReportDefault.c	2011-11-15 09:16:52.000000000 +0100
+@@ -78,7 +78,7 @@
+     if ( stats->mUDP != (char)kMode_Server ) {
+         // TCP Reporting
+         if( !header_printed ) {
+-            printf( report_bw_header);
++            printf( "%s", report_bw_header);
+             header_printed = 1;
+         }
+         printf( report_bw_format, stats->transferID, 
+@@ -87,7 +87,7 @@
+     } else {
+         // UDP Reporting
+         if( !header_printed ) {
+-            printf( report_bw_jitter_loss_header);
++            printf( "%s", report_bw_jitter_loss_header);
+             header_printed = 1;
+         }
+         printf( report_bw_jitter_loss_format, stats->transferID, 
+@@ -159,7 +159,7 @@
+                   (data->mThreadMode == kMode_Listener ? 0 : 1) );
+     win_requested = data->mTCPWin;
+ 
+-    printf( separator_line );
++    printf( "%s", separator_line );
+     if ( data->mThreadMode == kMode_Listener ) {
+         printf( server_port,
+                 (isUDP( data ) ? "UDP" : "TCP"), 
+@@ -198,7 +198,7 @@
+         printf( warn_window_requested, buffer );
+     }
+     printf( "\n" );
+-    printf( separator_line );
++    printf( "%s", separator_line );
+ }
+ 
+ /*
+@@ -286,7 +286,7 @@
+         } else if ( checkMSS_MTU( inMSS, 576 ) ) {
+             net = "minimum";
+             mtu = 576;
+-            printf( warn_no_pathmtu );
++            printf( "%s", warn_no_pathmtu );
+         } else {
+             mtu = inMSS + 40;
+             net = "unknown interface";
+diff -Nur iperf-2.0.5/src/Reporter.c iperf-2.0.5-nmu/src/Reporter.c
+--- iperf-2.0.5/src/Reporter.c	2011-11-15 19:44:41.000000000 +0100
++++ iperf-2.0.5-nmu/src/Reporter.c	2011-11-15 09:17:14.000000000 +0100
+@@ -896,7 +896,7 @@
+         } else if ( checkMSS_MTU( inMSS, 576 ) ) {
+             net = "minimum";
+             mtu = 576;
+-            printf( warn_no_pathmtu );
++            printf( "%s", warn_no_pathmtu );
+         } else {
+             mtu = inMSS + 40;
+             net = "unknown interface";
+diff -Nur iperf-2.0.5/src/Settings.cpp iperf-2.0.5-nmu/src/Settings.cpp
+--- iperf-2.0.5/src/Settings.cpp	2011-11-15 19:44:41.000000000 +0100
++++ iperf-2.0.5-nmu/src/Settings.cpp	2011-11-15 09:18:46.000000000 +0100
+@@ -375,8 +375,8 @@
+             break;
+ 
+         case 'h': // print help and exit
+-            fprintf(stderr, usage_long1);
+-            fprintf(stderr, usage_long2);
++            fprintf(stderr, "%s", usage_long1);
++            fprintf(stderr, "%s", usage_long2);
+             exit(1);
+             break;
+ 
+@@ -482,7 +482,7 @@
+             break;
+ 
+         case 'v': // print version and exit
+-            fprintf( stderr, version );
++            fprintf( stderr, "%s", version );
+             exit(1);
+             break;
+ 

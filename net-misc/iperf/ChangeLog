@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/iperf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.43 2012/10/06 13:43:23 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/ChangeLog,v 1.44 2013/09/05 16:04:40 dev-zero Exp $
+
+*iperf-2.0.5-r2 (05 Sep 2013)
+
+  05 Sep 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/iperf-bidirectional-tcp-server.patch,
+  +files/iperf-cast-to-max_size_t-instead-of-int.patch,
+  +files/iperf-die-on-bind-fail.patch,
+  +files/iperf-fix-format-security-ftbfs.patch,
+  +files/iperf-ipv6_mcast_check.patch, +files/iperf.initd-r1,
+  +iperf-2.0.5-r2.ebuild:
+  Rewrite init.d-script to avoid -D as a workaround for bug #344875, import some
+  important patches from Debian/Ubuntu.
 
   06 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> iperf-2.0.5.ebuild,
   iperf-2.0.5-r1.ebuild:

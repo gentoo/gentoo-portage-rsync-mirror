@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.704 2013/09/05 09:42:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.705 2013/09/05 16:27:38 floppym Exp $
+
+  05 Sep 2013; Mike Gilbert <floppym@gentoo.org>
+  -files/CVE-2013-4238_py32.patch:
+  Drop another patch.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> -files/linux2.patch,
   -files/python-2.4.4-test-cross.patch, -files/python-2.5-cross-printf.patch,
