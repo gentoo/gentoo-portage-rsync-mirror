@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ferrisloki-3.0.13.ebuild,v 1.2 2013/09/05 10:41:21 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ferrisloki-3.0.13.ebuild,v 1.4 2013/09/05 11:28:19 pinkbyte Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Loki C++ library from Modern C++ Design"
 HOMEPAGE="http://www.libferris.com/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/witme/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="static-libs stlport"
 
 RDEPEND="stlport? ( >=dev-libs/STLport-5 )
@@ -32,7 +32,8 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-stlport=/usr/include/stlport \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
+		--with-stlport="${EPREFIX}/usr/include/stlport" \
 		$(use_enable stlport) \
 		$(use_enable static-libs static)
 }

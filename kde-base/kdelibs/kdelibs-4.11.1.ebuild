@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.11.1.ebuild,v 1.1 2013/09/03 19:04:49 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.11.1.ebuild,v 1.2 2013/09/05 11:28:42 kensington Exp $
 
 EAPI=5
 
@@ -129,6 +129,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.8.1-norpath.patch"
 	"${FILESDIR}/${PN}-4.9.3-werror.patch"
 	"${FILESDIR}/${PN}-4.10.0-udisks.patch"
+	"${FILESDIR}/${PN}-4.11.1-jpeg-9.patch"
 )
 
 pkg_pretend() {

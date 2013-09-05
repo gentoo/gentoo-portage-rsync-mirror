@@ -1,0 +1,67 @@
+From 206d4137cfd63c47e52ce6630cf6834ab2e759ee Mon Sep 17 00:00:00 2001
+From: Michael Palimaka <kensington@gentoo.org>
+Date: Thu, 5 Sep 2013 21:03:00 +1000
+Subject: [PATCH] Fix build with libjpeg-9.
+
+The breakage occurs because in libjpeg-9, the boolean typedef changes
+from int to typedef enum { FALSE = 0, TRUE = 1 }.
+
+REVIEW: 112458
+---
+ khtml/imload/decoders/jpegloader.cpp | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/khtml/imload/decoders/jpegloader.cpp b/khtml/imload/decoders/jpegloader.cpp
+index ea25572..2258469 100644
+--- a/khtml/imload/decoders/jpegloader.cpp
++++ b/khtml/imload/decoders/jpegloader.cpp
+@@ -142,10 +142,10 @@ extern "C" {
+ #ifdef BUFFER_DEBUG
+             qDebug("...returning true!");
+ #endif
+-            return true;
++            return TRUE;
+         }
+         else
+-            return false;  /* I/O suspension mode */
++            return FALSE;  /* I/O suspension mode */
+     }
+ 
+     static
+@@ -313,7 +313,7 @@ int JPEGLoader::Private::processData(uchar* buffer, int length)
+ 
+     if(state == Init)
+     {
+-        if(jpeg_read_header(&cinfo, true) != JPEG_SUSPENDED) {
++        if(jpeg_read_header(&cinfo, TRUE) != JPEG_SUSPENDED) {
+             state = startDecompress;
+             
+             // libJPEG can scale down 2x, 4x, and 8x, 
+@@ -337,9 +337,9 @@ int JPEGLoader::Private::processData(uchar* buffer, int length)
+     {
+         jsrc.do_progressive = jpeg_has_multiple_scans( &cinfo );
+         if ( jsrc.do_progressive )
+-            cinfo.buffered_image = true;
++            cinfo.buffered_image = TRUE;
+         else
+-            cinfo.buffered_image = false;
++            cinfo.buffered_image = FALSE;
+         // setup image sizes
+         jpeg_calc_output_dimensions( &cinfo );
+         
+@@ -349,9 +349,9 @@ int JPEGLoader::Private::processData(uchar* buffer, int length)
+         if ( cinfo.jpeg_color_space == JCS_YCCK )
+             cinfo.out_color_space = JCS_CMYK;
+ 
+-        cinfo.do_fancy_upsampling = true;
+-        cinfo.do_block_smoothing = false;
+-        cinfo.quantize_colors = false;
++        cinfo.do_fancy_upsampling = TRUE;
++        cinfo.do_block_smoothing = FALSE;
++        cinfo.quantize_colors = FALSE;
+ 
+         // false: IO suspension
+         if(jpeg_start_decompress(&cinfo)) {
+-- 
+1.8.3.2
+

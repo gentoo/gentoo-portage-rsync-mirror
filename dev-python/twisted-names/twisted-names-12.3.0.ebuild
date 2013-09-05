@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/twisted-names-12.3.0.ebuild,v 1.8 2013/09/04 08:13:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/twisted-names-12.3.0.ebuild,v 1.9 2013/09/05 11:22:52 ago Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -12,7 +12,7 @@ inherit twisted versionator
 
 DESCRIPTION="A Twisted DNS implementation"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="=dev-python/twisted-core-$(get_version_component_range 1-2)*"
