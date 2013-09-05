@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/minfx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/minfx/ChangeLog,v 1.5 2013/05/13 06:59:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/minfx/ChangeLog,v 1.6 2013/09/05 19:04:43 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> minfx-1.0.3-r1.ebuild,
+  minfx-1.0.4.ebuild, minfx-1.0.4_pre98.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *minfx-1.0.4 (13 May 2013)
 
@@ -26,4 +30,3 @@
   19 Jul 2012; Justin Lecher <jlec@gentoo.org> +minfx-1.0.3.ebuild,
   +metadata.xml:
   New addition
-

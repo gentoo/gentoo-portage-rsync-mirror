@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.8.1.ebuild,v 1.12 2013/05/10 22:08:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.8.1.ebuild,v 1.13 2013/09/05 19:02:50 mgorny Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit eutils python-any-r1
 

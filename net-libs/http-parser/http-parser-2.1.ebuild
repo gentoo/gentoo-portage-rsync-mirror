@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/http-parser-2.1.ebuild,v 1.2 2013/08/31 09:44:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/http-parser-2.1.ebuild,v 1.3 2013/09/05 19:23:27 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/joyent/http-parser/archive/v${PV}.tar.gz -> ${P}.tar
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 src_prepare() {

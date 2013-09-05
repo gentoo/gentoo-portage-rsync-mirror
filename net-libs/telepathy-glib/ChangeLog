@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.138 2013/07/24 19:02:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.139 2013/09/05 19:01:34 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> telepathy-glib-0.20.1-r1.ebuild,
+  telepathy-glib-0.20.3.ebuild, telepathy-glib-0.20.4.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *telepathy-glib-0.20.4 (24 Jul 2013)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p130530.ebuild,v 1.1 2013/05/30 12:14:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.2_p130530.ebuild,v 1.2 2013/09/05 19:03:41 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="ssl,tk"
 
 inherit eutils multilib portability python-single-r1 toolchain-funcs versionator

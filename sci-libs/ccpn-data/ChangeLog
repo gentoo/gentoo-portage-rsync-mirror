@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/ccpn-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ChangeLog,v 1.20 2013/08/22 07:37:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ChangeLog,v 1.21 2013/09/05 19:04:43 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  ccpn-data-2.2.2_p121112-r1.ebuild, ccpn-data-2.3.1.ebuild,
+  ccpn-data-2.3.1_p130822.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *ccpn-data-2.3.1_p130822 (22 Aug 2013)
 
@@ -106,4 +111,3 @@
   21 Sep 2010; Justin Lecher <jlec@gentoo.org> +ccpn-data-2.1.5.ebuild,
   +metadata.xml:
   Split out from sci-chemistry/ccpn
-

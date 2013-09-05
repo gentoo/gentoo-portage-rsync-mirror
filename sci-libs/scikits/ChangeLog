@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scikits
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.5 2013/06/04 12:35:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits/ChangeLog,v 1.6 2013/09/05 19:04:44 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> scikits-0.1-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   04 Jun 2013; Justin Lecher <jlec@gentoo.org> scikits-0.1-r1.ebuild:
   Fix for correct usage of new python eclasses
@@ -24,4 +27,3 @@
 
   04 Dec 2010; Sébastien Fabbro <bicatali@gentoo.org> +scikits-0.1.ebuild:
   Initial import
-

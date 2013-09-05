@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r7.ebuild,v 1.5 2013/02/12 09:09:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r7.ebuild,v 1.6 2013/09/05 19:08:49 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils fdo-mime flag-o-matic multilib python-single-r1 toolchain-funcs user
 

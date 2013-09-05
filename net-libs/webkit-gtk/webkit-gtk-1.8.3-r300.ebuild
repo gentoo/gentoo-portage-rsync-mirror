@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r300.ebuild,v 1.12 2013/06/18 06:10:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r300.ebuild,v 1.13 2013/09/05 19:01:33 mgorny Exp $
 
 EAPI="4"
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit autotools check-reqs eutils flag-o-matic gnome2-utils pax-utils python-any-r1 virtualx
 

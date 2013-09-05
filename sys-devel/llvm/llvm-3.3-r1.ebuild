@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.11 2013/08/14 19:50:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r1.ebuild,v 1.12 2013/09/05 19:08:49 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
+PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
 
 inherit eutils flag-o-matic multilib multilib-minimal \
 	python-r1 toolchain-funcs pax-utils check-reqs

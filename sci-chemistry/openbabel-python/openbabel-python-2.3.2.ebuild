@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.6 2013/07/02 14:08:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.7 2013/09/05 19:03:42 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=(python2_6 python2_7 python3_1 python3_2)
+PYTHON_COMPAT=(python2_6 python2_7 python3_2)
 
 inherit cmake-utils eutils multilib python-r1
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/dslib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/dslib/ChangeLog,v 1.17 2013/05/20 12:55:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/dslib/ChangeLog,v 1.18 2013/09/05 19:01:34 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> dslib-3.0-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   20 May 2013; Tomáš Chvátal <scarabeus@gentoo.org> -dslib-3.0.ebuild,
   dslib-3.0-r1.ebuild:

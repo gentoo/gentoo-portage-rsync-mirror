@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.104 2013/09/05 18:46:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.105 2013/09/05 19:25:04 ago Exp $
+
+  05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> qscintilla-python-2.7.2.ebuild:
+  Stable for x86, wrt bug #483112
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> qscintilla-python-2.7.1.ebuild,
   qscintilla-python-2.7.2.ebuild:
