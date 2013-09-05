@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.157 2013/08/10 17:20:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.158 2013/09/05 09:49:15 vapier Exp $
+
+  05 Sep 2013; Mike Frysinger <vapier@gentoo.org> attr-2.4.46-r2.ebuild:
+  Mark m68k/sh stable #470570.
 
   10 Aug 2013; Alexis Ballier <aballier@gentoo.org> attr-2.4.47-r1.ebuild:
   Add blockers on emul-libs so that it is stacked for baselibs r10

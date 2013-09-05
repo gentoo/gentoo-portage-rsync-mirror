@@ -9,5 +9,5 @@ RDEPEND=python_single_target_python2_6? ( dev-lang/python:2.6 ) python_single_ta
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=http://launchpad.net/byobu/trunk/5.49/+download/byobu_5.49.orig.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	b13f5baea5da0da5a5dcc6b8b79706a2	python-utils-r1	3668f5e62c6e2526acef650e8e1e8fc4	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	b13f5baea5da0da5a5dcc6b8b79706a2	python-utils-r1	5d822763b5668548984ff7132eec9ad0	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=f1e37b669b7aca5996d65957af0dee55

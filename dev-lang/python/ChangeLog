@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.703 2013/09/05 03:46:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.704 2013/09/05 09:42:40 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> -files/linux2.patch,
+  -files/python-2.4.4-test-cross.patch, -files/python-2.5-cross-printf.patch,
+  -files/python-2.6-chflags-cross.patch, -files/python-2.6-test-cross.patch,
+  -files/python-3-distutils-egg-utf8.patch, -files/python-3.2-soname_typo.patch,
+  -python-2.5.4-r5.ebuild, -python-2.5.4-r6.ebuild, -python-3.1.5-r1.ebuild,
+  -python-3.1.5.ebuild:
+  Remove Python 2.5 and 3.1. Purge old patches.
 
   05 Sep 2013; Mike Gilbert <floppym@gentoo.org> python-3.3.2-r2.ebuild:
   Disable network tests, bug 483656.
