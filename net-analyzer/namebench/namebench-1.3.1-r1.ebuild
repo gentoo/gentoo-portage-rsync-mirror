@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.3.1-r1.ebuild,v 1.1 2013/08/03 08:25:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/namebench/namebench-1.3.1-r1.ebuild,v 1.2 2013/09/05 13:54:04 mgorny Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit distutils-r1
 
@@ -19,7 +19,6 @@ IUSE="X"
 
 # PYTHON_REQ_USE does not support X? ( tk ) syntax yet
 DEPEND="X? (
-		python_targets_python2_5? ( dev-lang/python:2.5[tk] )
 		python_targets_python2_6? ( dev-lang/python:2.6[tk] )
 		python_targets_python2_7? ( dev-lang/python:2.7[tk] )
 	)"

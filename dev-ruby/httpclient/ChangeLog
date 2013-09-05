@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/httpclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.47 2013/07/28 20:39:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httpclient/ChangeLog,v 1.48 2013/09/05 13:56:56 ago Exp $
+
+  05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> httpclient-2.2.5.ebuild:
+  Stable for ppc64, wrt bug #483702
 
 *httpclient-2.3.4.1 (28 Jul 2013)
 

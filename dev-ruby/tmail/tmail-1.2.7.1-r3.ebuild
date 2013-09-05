@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/tmail-1.2.7.1-r3.ebuild,v 1.2 2012/05/01 18:24:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/tmail-1.2.7.1-r3.ebuild,v 1.4 2013/09/05 13:56:28 ago Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -16,7 +16,7 @@ HOMEPAGE="http://rubyforge.org/projects/tmail/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ppc ppc64 ~x86 ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="debug"
 
 # Tests seem to be broken with the new encoding handling from Ruby,

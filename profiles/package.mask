@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15086 2013/09/05 10:09:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15087 2013/09/05 13:36:41 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -568,10 +568,6 @@ dev-ml/ocamlduce
 # Tim Harder <radhermit@gentoo.org> (01 Sep 2012)
 # Mask development releases
 =media-sound/lilypond-2.17*
-
-# Benedikt Böhm <hollow@gentoo.org> (11 Aug 2012)
-# Regression in iproute code, does not detect IP addresses correctly anymore.
-~dev-ruby/ohai-6.14.0
 
 # Jeroen Roovers <jer@gentoo.org> (2 Aug 2012)
 # Development version

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/flickr-1.0.2-r5.ebuild,v 1.2 2013/02/10 08:47:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/flickr-1.0.2-r5.ebuild,v 1.3 2013/09/05 13:55:25 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 jruby"
@@ -20,7 +20,7 @@ RUBY_S="${P}-gentoo"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/xml-simple"
