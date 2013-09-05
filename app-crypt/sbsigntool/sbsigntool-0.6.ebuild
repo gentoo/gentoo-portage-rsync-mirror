@@ -1,11 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/sbsigntool/sbsigntool-0.6.ebuild,v 1.3 2013/08/28 11:17:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/sbsigntool/sbsigntool-0.6.ebuild,v 1.4 2013/09/05 07:31:21 vapier Exp $
 
 EAPI="4"
 
+inherit toolchain-funcs
+
 DESCRIPTION="Utilities for signing and verifying files for UEFI Secure Boot"
-HOMEPAGE="http://packages.ubuntu.com/quantal/sbsigntool"
+HOMEPAGE="https://launchpad.net/ubuntu/+source/sbsigntool"
 SRC_URI="https://launchpad.net/ubuntu/+archive/primary/+files/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-3"
@@ -30,4 +32,5 @@ src_prepare() {
 	esac
 	sed -i "/^EFI_ARCH=/s:=.*:=${iarch}:" configure || die
 	sed -i 's/-m64$/& -march=x86-64/' tests/Makefile.in || die
+	sed -i "/^AR /s:=.*:= $(tc-getAR):" lib/ccan/Makefile.in || die #481480
 }
