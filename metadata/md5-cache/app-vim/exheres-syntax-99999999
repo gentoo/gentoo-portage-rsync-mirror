@@ -5,5 +5,5 @@ HOMEPAGE=http://www.exherbo.org/
 LICENSE=vim
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
+_eclasses_=git-2	fabc717260816d50ef1964caf14a3d5c	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
 _md5_=edc0590bd9234395d388b0404ab3f2fc

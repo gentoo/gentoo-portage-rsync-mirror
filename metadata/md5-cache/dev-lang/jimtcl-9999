@@ -6,5 +6,5 @@ HOMEPAGE=http://jim.tcl.tk
 IUSE=doc static-libs
 LICENSE=LGPL-2
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7
+_eclasses_=git-2	fabc717260816d50ef1964caf14a3d5c
 _md5_=2f8ba7fdbe839b7dfe8d19a667df279d

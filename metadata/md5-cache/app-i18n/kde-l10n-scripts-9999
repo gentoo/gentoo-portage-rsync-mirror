@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/vpelcak/kde-scripts
 LICENSE=LGPL-3
 RDEPEND=app-crypt/md5deep app-i18n/pology app-shells/bash dev-vcs/subversion kde-base/kdesdk-misc[extras]
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7
+_eclasses_=git-2	fabc717260816d50ef1964caf14a3d5c
 _md5_=76313b818c244c6c0b9500d4efebe68d

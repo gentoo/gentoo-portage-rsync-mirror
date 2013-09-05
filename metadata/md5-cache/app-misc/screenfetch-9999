@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/KittyKatt/screenFetch
 LICENSE=GPL-3
 RDEPEND=media-gfx/scrot x11-apps/xdpyinfo
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7
+_eclasses_=git-2	fabc717260816d50ef1964caf14a3d5c
 _md5_=c833b7ff5abd754dff8205054b47279b

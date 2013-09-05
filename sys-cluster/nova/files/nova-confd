@@ -1,0 +1,4 @@
+#Don't touch this unless you know what you are doing
+PID_PATH=/run/nova
+LOCKDIR_PATH=/var/lock/nova
+

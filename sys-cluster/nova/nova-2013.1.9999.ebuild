@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.9999.ebuild,v 1.4 2013/08/22 04:55:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.9999.ebuild,v 1.5 2013/09/05 20:57:34 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2
+inherit distutils-r1 eutils git-2 multilib
 
 DESCRIPTION="Nova is a cloud computing fabric controller (main part of an
 IaaS system). It is written in Python."
@@ -16,25 +16,26 @@ EGIT_BRANCH="stable/grizzly"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="+api +cert +compute +conductor +consoleauth +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy"
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+		app-admin/sudo"
 
 RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.2.4[${PYTHON_USEDEP}]
-		>=dev-python/cheetah-2.4.4
+		>=dev-python/cheetah-2.4.4[${PYTHON_USEDEP}]
 		>=dev-python/sqlalchemy-0.7.8
 		<=dev-python/sqlalchemy-0.7.99
 		dev-python/boto[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.9.17[${PYTHON_USEDEP}]
 		>=dev-python/kombu-1.0.4-r1[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3-r1[${PYTHON_USEDEP}]
-		=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
+		~dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-migrate-0.7.2
-		dev-python/netaddr
+		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
+		dev-python/netaddr[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4
 		dev-python/paramiko[${PYTHON_USEDEP}]
 		dev-python/pyasn1[${PYTHON_USEDEP}]
@@ -45,10 +46,10 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/python-cinderclient-1.0.1[${PYTHON_USEDEP}]
 		>=dev-python/python-glanceclient-0.5.0[${PYTHON_USEDEP}]
 		<dev-python/python-glanceclient-2[${PYTHON_USEDEP}]
-		>=dev-python/python-quantumclient-2.2.0[${PYTHON_USEDEP}]
-		<=dev-python/python-quantumclient-3.0.0[${PYTHON_USEDEP}]
+		>=dev-python/python-neutronclient-2.2.0[${PYTHON_USEDEP}]
+		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.2.0[${PYTHON_USEDEP}]
-		>=dev-python/stevedore-0.7
+		>=dev-python/stevedore-0.7[${PYTHON_USEDEP}]
 		<dev-python/websockify-0.4[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]"
@@ -56,11 +57,31 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 PATCHES=(
 )
 
+pkg_setup() {
+	enewgroup nova
+	enewuser nova -1 -1 /var/lib/nova nova
+}
+
 python_install() {
 	distutils-r1_python_install
+	newconfd "${FILESDIR}/nova-confd" "nova"
+	newinitd "${FILESDIR}/nova-initd" "nova"
+	use api && dosym /etc/init.d/nova /etc/init.d/nova-api
+	use cert && dosym /etc/init.d/nova /etc/init.d/nova-cert
+	use compute && dosym /etc/init.d/nova /etc/init.d/nova-compute
+	use conductor && dosym /etc/init.d/nova /etc/init.d/nova-conductor
+	use consoleauth && dosym /etc/init.d/nova /etc/init.d/nova-consoleauth
+	use network &&  dosym /etc/init.d/nova /etc/init.d/nova-network
+	use novncproxy &&dosym /etc/init.d/nova /etc/init.d/nova-nonvncproxy
+	use scheduler && dosym /etc/init.d/nova /etc/init.d/nova-scheduler
+	use spicehtml5proxy && dosym /etc/init.d/nova /etc/init.d/nova-spicehtml5proxy
+	use xvpvncproxy && dosym /etc/init.d/nova /etc/init.d/nova-xvpncproxy
+
+	dodir /var/log/nova
+	fowners nova:nova /var/log/nova
+
 	keepdir /etc/nova
 	insinto /etc/nova
-
 	newins "etc/nova/nova.conf.sample" "nova.conf"
 	doins "etc/nova/api-paste.ini"
 	doins "etc/nova/logging_sample.conf"
@@ -70,11 +91,15 @@ python_install() {
 	doins "etc/nova/rootwrap.d/api-metadata.filters"
 	doins "etc/nova/rootwrap.d/compute.filters"
 	doins "etc/nova/rootwrap.d/network.filters"
-	doins "etc/nova/rootwrap.d/baremetal-compute-ipmi.filters"
-	doins "etc/nova/rootwrap.d/baremetal-deploy-helper.filters"
+
 	#copy migration conf file (not coppied on install via setup.py script)
 	insinto /usr/$(get_libdir)/python2.7/site-packages/nova/db/sqlalchemy/migrate_repo/
 	doins "nova/db/sqlalchemy/migrate_repo/migrate.cfg"
+
 	#copy the CA cert dir (not coppied on install via setup.py script)
 	cp -R "${S}/nova/CA" "${D}/usr/$(get_libdir)/python2.7/site-packages/nova/" || die "isntalling CA files failed"
+
+	#add sudoers definitions for user nova
+	insinto /etc/sudoers.d/
+	doins "${FILESDIR}/nova-sudoers"
 }

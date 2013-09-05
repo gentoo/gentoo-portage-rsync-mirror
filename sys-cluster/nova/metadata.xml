@@ -9,5 +9,17 @@
     Nova is a cloud computing fabric controller
 	(the main part of an IaaS system). It is written in Python.
   </longdescription>
+  <use>
+    <flag name="api">Installs the initscripts for the nova api service</flag>
+    <flag name="cert">Installs the initscripts for the nova scheduler service</flag>
+    <flag name="compute">Installs the initscripts for the nova volume service</flag>
+    <flag name="conductor">Installs the initscripts for the nova conductor service</flag>
+    <flag name="consoleauth">Installs the initscripts for the nova consoleauth service</flag>
+    <flag name="network">Installs the initscripts for the nova network service</flag>
+    <flag name="novncproxy">Installs the initscripts for the nova novncproxy service</flag>
+    <flag name="scheduler">Installs the initscripts for the nova scheduler service</flag>
+    <flag name="spicehtml5proxy">Installs the initscripts for the nova spicehtml5proxy service</flag>
+    <flag name="xvpvncproxy">Installs the initscripts for the nova xvpvncproxy service</flag>
+  </use>
 </pkgmetadata>
 

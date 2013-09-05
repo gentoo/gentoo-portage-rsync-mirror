@@ -6,5 +6,5 @@ HOMEPAGE=http://www.gentoo.org/proj/en/Python/
 LICENSE=GPL-2
 RDEPEND=dev-lang/python || ( >=sys-apps/portage-2.1.6 >=sys-apps/paludis-0.56.0 )
 SLOT=0
-_eclasses_=git-2	e92e09651292b1bef5656592364550f7
+_eclasses_=git-2	fabc717260816d50ef1964caf14a3d5c
 _md5_=896823caac8adab193f35adfd3540f09

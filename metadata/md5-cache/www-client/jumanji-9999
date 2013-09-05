@@ -7,5 +7,5 @@ IUSE=+deprecated savedconfig
 LICENSE=ZLIB
 RDEPEND=dev-db/sqlite:3 dev-libs/glib:2 !deprecated? ( dev-libs/girara:3 net-libs/webkit-gtk:3 x11-libs/gtk+:3 ) deprecated? ( dev-libs/girara:2 net-libs/webkit-gtk:2 x11-libs/gtk+:2 ) !www-client/jumanji:0
 SLOT=develop
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	git-2	e92e09651292b1bef5656592364550f7	multilib	892e597faee02a5b94eb02ab512e7622	portability	536c5e70c5fb252ed3b769e04aa3f05b	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	git-2	fabc717260816d50ef1964caf14a3d5c	multilib	892e597faee02a5b94eb02ab512e7622	portability	536c5e70c5fb252ed3b769e04aa3f05b	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=49d6d83c5367a6642af94f12a333955d
