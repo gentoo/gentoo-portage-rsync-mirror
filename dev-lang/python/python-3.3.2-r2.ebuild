@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.2-r2.ebuild,v 1.3 2013/08/28 15:59:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.2-r2.ebuild,v 1.4 2013/09/05 03:46:19 floppym Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -241,8 +241,7 @@ src_test() {
 		mv "${S}"/Lib/test/test_${test}.py "${T}"
 	done
 
-	# Rerun failed tests in verbose mode (regrtest -w).
-	PYTHONDONTWRITEBYTECODE="" emake test EXTRATESTOPTS="-w" CPPFLAGS="" CFLAGS="" LDFLAGS="" < /dev/tty
+	PYTHONDONTWRITEBYTECODE="" emake test EXTRATESTOPTS="-u -network" FLAGS="" CFLAGS="" LDFLAGS="" < /dev/tty
 	local result="$?"
 
 	for test in ${skipped_tests}; do

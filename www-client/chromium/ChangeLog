@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.941 2013/09/04 02:04:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.942 2013/09/05 03:44:01 phajdan.jr Exp $
+
+  05 Sep 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-29.0.1547.57.ebuild, chromium-29.0.1547.65.ebuild,
+  chromium-30.0.1599.22.ebuild, chromium-31.0.1612.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Remove support for system ffmpeg. Directly fixes bug #483518 by fuzzyray. See
+  also bug #480936 by floppym and bug #466010 by cmuelle8.
 
 *chromium-29.0.1547.65 (04 Sep 2013)
 

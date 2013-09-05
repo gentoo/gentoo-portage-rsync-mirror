@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/Encode-2.450.0.ebuild,v 1.1 2012/08/06 15:16:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/Encode-2.450.0.ebuild,v 1.2 2013/09/05 03:52:21 patrick Exp $
 
 EAPI=4
 
