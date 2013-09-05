@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.2.0.ebuild,v 1.5 2013/07/12 15:25:50 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-2.2.0.ebuild,v 1.6 2013/09/05 18:27:44 mgorny Exp $
 
 EAPI="5"
 
 # jython depends on java-config, so don't add it or things will break
-PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit distutils-r1
 

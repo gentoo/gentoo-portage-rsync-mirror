@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20130107-r3.ebuild,v 1.1 2013/08/05 10:24:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dosemu/dosemu-1.4.1_pre20130107-r3.ebuild,v 1.2 2013/09/05 18:04:54 slyfox Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic pax-utils
+inherit eutils flag-o-matic pax-utils toolchain-funcs
 
 P_FD="dosemu-freedos-1.0-bin"
 COMMIT="15cfb41ff20a052769d753c3262c57ecb050ad71"
@@ -65,6 +65,10 @@ src_configure() {
 		--with-fdtarball="${DISTDIR}"/${P_FD}.tgz \
 		--sysconfdir="${EPREFIX}"/etc/dosemu/ \
 		--with-docdir="${EPREFIX}"/usr/share/doc/${PF}
+}
+
+src_compile() {
+	emake AR=$(tc-getAR)
 }
 
 src_install() {

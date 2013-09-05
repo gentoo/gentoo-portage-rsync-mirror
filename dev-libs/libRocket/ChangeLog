@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libRocket
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/ChangeLog,v 1.7 2013/06/30 17:14:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/ChangeLog,v 1.8 2013/09/05 18:29:52 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> libRocket-1.2.1.ebuild,
+  libRocket-1.2.1_p20130110-r1.ebuild, libRocket-1.2.1_p20130110.ebuild,
+  libRocket-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org>
   libRocket-1.2.1_p20130110.ebuild:

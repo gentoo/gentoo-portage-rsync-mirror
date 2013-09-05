@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.4.ebuild,v 1.2 2013/09/01 19:47:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.4.ebuild,v 1.3 2013/09/05 18:29:53 mgorny Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 # Avoid runtime dependency on python when USE=test
 
 inherit autotools bash-completion-r1 gnome.org libtool eutils flag-o-matic gnome2-utils multilib pax-utils python-r1 toolchain-funcs versionator virtualx linux-info multilib-minimal

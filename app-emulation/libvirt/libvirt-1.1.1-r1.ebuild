@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.1-r1.ebuild,v 1.4 2013/08/28 11:13:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.1-r1.ebuild,v 1.5 2013/09/05 18:20:53 mgorny Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils python-single-r1 user autotools linux-info systemd
 

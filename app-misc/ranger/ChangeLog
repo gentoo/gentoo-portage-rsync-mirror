@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ranger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.26 2013/05/30 08:24:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ChangeLog,v 1.27 2013/09/05 18:23:05 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> ranger-1.5.5-r1.ebuild,
+  ranger-1.6.0.ebuild, ranger-1.6.1.ebuild, ranger-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *ranger-1.6.1 (30 May 2013)
 
@@ -118,4 +122,3 @@
   09 Feb 2011; Tim Harder <radhermit@gentoo.org> +ranger-1.4.1.ebuild,
   +metadata.xml:
   Initial import.
-

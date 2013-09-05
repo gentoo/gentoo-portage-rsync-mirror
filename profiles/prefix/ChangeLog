@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.395 2013/08/29 02:58:55 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.396 2013/09/05 18:09:57 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Remove obsolete Python 3 mask.
 
   29 Aug 2013; Jonathan Callen <jcallen@gentoo.org> packages:
   Remove openrc from packages, not used in prefix (bug 482854)

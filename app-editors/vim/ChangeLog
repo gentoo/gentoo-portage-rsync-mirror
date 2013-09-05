@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.440 2013/08/18 18:43:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.441 2013/09/05 18:18:04 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> vim-7.3.1214.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   18 Aug 2013; Tim Harder <radhermit@gentoo.org> -vim-7.3.266.ebuild,
   -vim-7.3.409.ebuild, -vim-7.3.444.ebuild, -vim-7.3.456.ebuild,

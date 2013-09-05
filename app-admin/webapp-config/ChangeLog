@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.97 2013/08/30 20:46:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.98 2013/09/05 18:15:49 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> webapp-config-1.50.19-r1.ebuild,
+  webapp-config-1.51-r1.ebuild, webapp-config-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   30 Aug 2013; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Remove proxy-maintainers herd because twitch153 became a developer

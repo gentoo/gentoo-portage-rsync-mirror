@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.9.1-r1.ebuild,v 1.12 2013/08/06 12:32:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.9.1-r1.ebuild,v 1.13 2013/09/05 18:29:53 mgorny Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 PYTHON_REQ_USE="xml"
 
 inherit libtool flag-o-matic eutils python-r1 autotools prefix
