@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Spec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.98 2013/07/13 16:10:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.99 2013/09/04 23:21:44 zlogene Exp $
+
+  04 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> -File-Spec-3.330.0.ebuild:
+  drop old
 
   13 Jul 2013; Mikle Kolyada <zlogene@gentoo.org> -File-Spec-3.31.ebuild:
   drop old wrt bug #381851
