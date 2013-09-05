@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.256 2013/09/05 16:04:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.257 2013/09/05 17:47:21 ago Exp $
+
+  05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> mldonkey-3.1.3.ebuild:
+  Stable for amd64, wrt bug #477152
 
   05 Sep 2013; Jeroen Roovers <jer@gentoo.org> mldonkey-3.1.3.ebuild:
   Stable for HPPA (bug #477152).
