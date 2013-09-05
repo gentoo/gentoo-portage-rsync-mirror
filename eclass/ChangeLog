@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.945 2013/09/05 09:59:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.946 2013/09/05 17:04:26 tomwij Exp $
+
+  05 Sep 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
+  Added support for experimental genpatches.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Disable Python 2.5, 3.1 and PyPy 1.9 in the eclass.
