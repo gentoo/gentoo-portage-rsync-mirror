@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1185 2013/09/03 14:15:07 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1186 2013/09/05 22:28:58 tomwij Exp $
+
+  05 Sep 2013; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.11.0.ebuild,
+  metadata.xml:
+  Experimental BFQ disk scheduler v6r2 patches added to 3.11. Introduced
+  experimental tarball with experimental USE flag; for more details, see
+  "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".
 
 *gentoo-sources-3.11.0 (03 Sep 2013)
 
