@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Math-BigInt-FastCalc
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sh ~sparc ~x86 ~ppc-aix ~ppc-macos ~x86-solaris
 RDEPEND=|| ( =dev-lang/perl-5.18* =dev-lang/perl-5.16* ~perl-core/Math-BigInt-FastCalc-0.300.0 )
 SLOT=0
-_md5_=bee0f8b042abc17eb7c1e7b0ef4f96be
+_md5_=6034463dcb3a77b4831ecf15a24bedb0
