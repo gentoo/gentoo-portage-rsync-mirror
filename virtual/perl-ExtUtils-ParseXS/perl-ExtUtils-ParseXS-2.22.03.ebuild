@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-ParseXS/perl-ExtUtils-ParseXS-2.22.03.ebuild,v 1.6 2011/07/30 11:49:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-ParseXS/perl-ExtUtils-ParseXS-2.22.03.ebuild,v 1.7 2013/09/05 05:57:01 vapier Exp $
 
 DESCRIPTION="Converts Perl XS code into C code"
 HOMEPAGE=""

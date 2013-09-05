@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/tldp-howto-20100701.ebuild,v 1.3 2012/04/13 17:40:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/tldp-howto-20100701.ebuild,v 1.4 2013/09/05 05:53:42 vapier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ SRC_URI="
 
 LICENSE="FDL-1.2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="+html htmlsingle pdf text"
 RESTRICT="binchecks strip"
 

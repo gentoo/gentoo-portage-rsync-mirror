@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.66 2013/08/29 19:50:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.67 2013/09/05 05:39:50 vapier Exp $
+
+  05 Sep 2013; Mike Frysinger <vapier@gentoo.org>
+  foomatic-db-engine-4.0.8.ebuild:
+  Mark s390/sh/sparc stable #442442.
 
   29 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
   foomatic-db-engine-4.0.8.ebuild:

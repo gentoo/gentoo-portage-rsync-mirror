@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.79 2013/07/29 21:59:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.80 2013/09/05 05:46:37 vapier Exp $
+
+  05 Sep 2013; Mike Frysinger <vapier@gentoo.org>
+  linux-firmware-20130728.ebuild, linux-firmware-99999999.ebuild:
+  Add s390/sh/sparc love #457082.
 
 *linux-firmware-20130728 (29 Jul 2013)
 

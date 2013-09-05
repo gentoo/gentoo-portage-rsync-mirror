@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for HTTP-Tiny
+KEYWORDS=~amd64 ~x86
+RDEPEND=~perl-core/HTTP-Tiny-0.29.0
+SLOT=0
+_md5_=875fc9e4fddf2c8d21c85865eb1211f4

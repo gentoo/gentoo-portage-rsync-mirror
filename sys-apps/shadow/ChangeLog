@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.288 2013/08/03 07:48:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.289 2013/09/05 05:36:36 vapier Exp $
+
+  05 Sep 2013; Mike Frysinger <vapier@gentoo.org> shadow-4.1.5.1-r1.ebuild:
+  Mark m68k/s390/sh stable #454388.
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> shadow-4.1.5.1-r1.ebuild:
   Stable for sparc, wrt bug #454388

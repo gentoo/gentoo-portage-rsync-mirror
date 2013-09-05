@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ExtUtils-ParseXS-2.22.03.ebuild,v 1.6 2011/07/30 12:14:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ExtUtils-ParseXS-2.22.03.ebuild,v 1.7 2013/09/05 05:56:31 vapier Exp $
 
 EAPI=2
 

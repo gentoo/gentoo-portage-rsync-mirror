@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/tldp-howto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.7 2012/07/01 22:34:47 dirtyepic Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.8 2013/09/05 05:53:42 vapier Exp $
+
+  05 Sep 2013; Mike Frysinger <vapier@gentoo.org> tldp-howto-20100101.ebuild,
+  tldp-howto-20100701.ebuild:
+  Mark m68k/s390/sh stable.
 
   01 Jul 2012; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Maintainer -> app-doc.
@@ -38,4 +42,3 @@
   01 Jan 2010; Ryan Hill <dirtyepic@gentoo.org> +tldp-howto-20100101.ebuild,
   +metadata.xml:
   New ebuild consolidating all the app-doc/howto-* ebuilds.
-

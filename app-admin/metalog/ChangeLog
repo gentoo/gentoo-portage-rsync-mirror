@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.113 2013/09/01 18:36:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.114 2013/09/05 05:59:57 vapier Exp $
+
+  05 Sep 2013; Mike Frysinger <vapier@gentoo.org> metalog-3.ebuild:
+  Mark ppc64/s390/sh/sparc stable #477668.
 
   01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> metalog-3.ebuild:
   Stable for alpha, wrt bug #477668

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406.ebuild,v 1.12 2013/08/25 22:43:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406.ebuild,v 1.13 2013/09/05 05:57:49 vapier Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${MY_P}.orig.tar.gz
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="ssl selinux"
 
 RDEPEND="ssl? ( dev-libs/openssl )
