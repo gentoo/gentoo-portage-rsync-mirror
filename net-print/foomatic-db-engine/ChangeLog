@@ -1,6 +1,11 @@
 # ChangeLog for net-print/foomatic-db-engine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.67 2013/09/05 05:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.68 2013/09/05 12:48:11 mrueg Exp $
+
+  05 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -files/4.0.3-perl-module.patch,
+  -files/4.0.3-respect-ldflag.patch, -files/perl-module-3.0.1.diff,
+  -files/perl-module-3.0.20070508.diff, -foomatic-db-engine-4.0.7.ebuild:
+  Cleanup old.
 
   05 Sep 2013; Mike Frysinger <vapier@gentoo.org>
   foomatic-db-engine-4.0.8.ebuild:
