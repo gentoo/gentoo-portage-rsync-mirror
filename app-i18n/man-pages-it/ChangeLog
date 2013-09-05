@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-it
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.21 2013/09/05 05:31:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/ChangeLog,v 1.22 2013/09/05 10:55:27 kensington Exp $
+
+  05 Sep 2013; Michael Palimaka <kensington@gentoo.org>
+  -man-pages-it-2.65.ebuild:
+  Remove old.
 
   05 Sep 2013; Mike Frysinger <vapier@gentoo.org> man-pages-it-2.80-r1.ebuild:
   Mark m68k/s390/sh/sparce stable #481048.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ferrisloki
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.23 2013/02/05 07:57:55 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.24 2013/09/05 10:41:21 pinkbyte Exp $
+
+  05 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> ferrisloki-3.0.13.ebuild:
+  Add missing die to sed call, add epatch_user
 
   05 Feb 2013; Tiziano Müller <dev-zero@gentoo.org> metadata.xml:
   Add upstream sourceforge id.

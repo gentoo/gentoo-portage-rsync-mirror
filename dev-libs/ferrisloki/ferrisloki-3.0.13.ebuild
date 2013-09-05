@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ferrisloki-3.0.13.ebuild,v 1.1 2013/02/05 07:25:18 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ferrisloki-3.0.13.ebuild,v 1.2 2013/09/05 10:41:21 pinkbyte Exp $
 
 EAPI="5"
 
@@ -25,7 +25,9 @@ src_prepare() {
 	sed -i \
 		-e '/^CFLAGS/{s: -O3 : :g;s:-Wl,-O1 -Wl,--hash-style=both::;}' \
 		-e 's:-lstlport_gcc:-lstlport:' \
-		configure
+		configure || die
+
+	epatch_user
 }
 
 src_configure() {
