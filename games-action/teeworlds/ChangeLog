@@ -1,6 +1,14 @@
 # ChangeLog for games-action/teeworlds
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.10 2012/12/16 14:56:14 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.11 2013/09/05 18:37:31 hasufell Exp $
+
+*teeworlds-0.6.2 (05 Sep 2013)
+
+  05 Sep 2013; Julian Ospald <hasufell@gentoo.org>
+  +files/0.6.2/01-use-system-wavpack.patch,
+  +files/0.6.2/02-fixed-wavpack-sound-loading.patch,
+  +files/0.6.2/03-use-system-pnglite.patch, +teeworlds-0.6.2.ebuild:
+  version bump wrt #477670
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #260683

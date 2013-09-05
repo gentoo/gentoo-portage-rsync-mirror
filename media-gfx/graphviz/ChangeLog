@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.274 2013/08/15 09:50:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.275 2013/09/05 18:54:13 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> graphviz-2.28.0.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   15 Aug 2013; Fabian Groffen <grobian@gentoo.org> graphviz-2.28.0.ebuild:
   Marked ~x64-solaris

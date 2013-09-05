@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fudge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/ChangeLog,v 1.9 2013/09/01 10:11:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fudge/ChangeLog,v 1.10 2013/09/05 18:47:01 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> fudge-0.9.6-r1.ebuild,
+  fudge-1.0.3-r2.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *fudge-0.9.6-r1 (01 Sep 2013)
 

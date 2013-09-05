@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.41 2013/06/13 13:14:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.42 2013/09/05 18:40:37 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> cppcheck-1.59-r1.ebuild,
+  cppcheck-1.60.1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *cppcheck-1.60.1 (13 Jun 2013)
 

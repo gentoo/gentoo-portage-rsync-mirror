@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.31 2013/08/19 14:05:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.32 2013/09/05 18:40:37 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> coccinelle-1.0.0_rc17.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org>
   coccinelle-1.0.0_rc17.ebuild:
@@ -151,4 +154,3 @@
   24 Jan 2010; Alexis Ballier <aballier@gentoo.org>
   +coccinelle-0.2.0.ebuild, +metadata.xml:
   initial import, ebuild by me, requested by solar
-

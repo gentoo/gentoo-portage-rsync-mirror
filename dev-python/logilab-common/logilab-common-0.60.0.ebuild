@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.60.0.ebuild,v 1.2 2013/09/02 17:31:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.60.0.ebuild,v 1.3 2013/09/05 18:46:04 mgorny Exp $
 
 EAPI=5
 
 # 0.60.0 fails unittest_umessage with python3.3
 # http://www.logilab.org/ticket/149345
-PYTHON_COMPAT=( python{2_6,2_7,3_2} pypy{1_9,2_0} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2} pypy2_0 )
 
 inherit distutils-r1 eutils
 

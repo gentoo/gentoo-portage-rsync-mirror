@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/synopsis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.16 2012/12/17 19:53:25 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/synopsis/ChangeLog,v 1.17 2013/09/05 18:40:36 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> synopsis-0.13.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   17 Dec 2012; Michał Górny <mgorny@gentoo.org> synopsis-0.13.ebuild:
   Bump to EAPI=5 to make Paludis happy, bug #447524.

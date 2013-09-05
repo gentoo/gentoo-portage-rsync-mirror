@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tlslite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.24 2013/08/07 13:28:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.25 2013/09/05 18:47:17 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> tlslite-0.4.3-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> tlslite-0.4.3-r1.ebuild:
   Stable for x86, wrt bug #470466

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.137 2013/08/07 21:05:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.138 2013/09/05 18:55:07 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> libsndfile-1.0.25-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   07 Aug 2013; Alexis Ballier <aballier@gentoo.org>
   libsndfile-1.0.25-r1.ebuild, +files/libsndfile-1.0.25-make.patch:

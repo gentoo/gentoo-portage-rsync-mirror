@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.8.3.ebuild,v 1.2 2013/07/24 19:34:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.8.3.ebuild,v 1.3 2013/09/05 18:59:51 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{5,6,7} python3_{2,3} )
+PYTHON_COMPAT=( python2_{6,7} python3_{2,3} )
 
 inherit gnome2 python-any-r1 virtualx
 

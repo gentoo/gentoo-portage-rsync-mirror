@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/wicd-client-kde
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/ChangeLog,v 1.27 2013/07/31 19:59:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/ChangeLog,v 1.28 2013/09/05 18:45:04 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> wicd-client-kde-0.3.1-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   31 Jul 2013; Michael Palimaka <kensington@gentoo.org>
   -wicd-client-kde-0.3.1.ebuild:

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.8.0.ebuild,v 1.2 2013/06/30 21:08:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.8.0.ebuild,v 1.3 2013/09/05 18:59:50 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit gnome2 python-any-r1 virtualx
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jsonpickle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.15 2013/09/02 04:34:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.16 2013/09/05 18:46:43 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> jsonpickle-0.4.0-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   02 Sep 2013; Patrick Lauer <patrick@gentoo.org> jsonpickle-0.6.1.ebuild:
   Whitespace

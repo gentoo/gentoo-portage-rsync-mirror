@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simples3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simples3/ChangeLog,v 1.3 2013/03/17 17:57:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simples3/ChangeLog,v 1.4 2013/09/05 18:46:55 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> simples3-1.0.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

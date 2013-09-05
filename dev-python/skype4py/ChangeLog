@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/skype4py
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.15 2013/06/02 22:30:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/ChangeLog,v 1.16 2013/09/05 18:46:29 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> skype4py-1.0.32.1-r1.ebuild,
+  skype4py-1.0.34.ebuild, skype4py-1.0.35.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *skype4py-1.0.35 (02 Jun 2013)
 
@@ -69,4 +73,3 @@
   21 Mar 2009; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
   +skype4py-1.0.31.0.ebuild:
   New package. Initial ebuild by Michal Slonina, modified by me. bug 257481
-

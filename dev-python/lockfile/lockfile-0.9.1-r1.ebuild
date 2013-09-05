@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.9.1-r1.ebuild,v 1.6 2013/08/10 13:29:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lockfile/lockfile-0.9.1-r1.ebuild,v 1.7 2013/09/05 18:46:31 mgorny Exp $
 
 EAPI=5
 # py2.5 dropped; Test file reveals py2.5 can't support a core file
-PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} pypy{1_9,2_0} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 
 inherit distutils-r1
 

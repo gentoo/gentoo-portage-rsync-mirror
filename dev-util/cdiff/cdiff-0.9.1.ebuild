@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.9.1.ebuild,v 1.3 2013/06/25 12:51:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.9.1.ebuild,v 1.4 2013/09/05 18:40:34 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2} )
 DOCS=( CHANGES README.rst )
 
 inherit distutils-r1

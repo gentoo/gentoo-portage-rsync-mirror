@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/manuel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.9 2013/07/08 15:58:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manuel/ChangeLog,v 1.10 2013/09/05 18:47:11 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> manuel-1.7.1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   08 Jul 2013; Ian Delaney <idella4@gentoo.org> manuel-1.7.1.ebuild:
   upgrade ebuild, make in source build, fix test phase, add py3.3 support

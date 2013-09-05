@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/transmissionrpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.8 2013/04/17 17:07:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/ChangeLog,v 1.9 2013/09/05 18:46:30 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> transmissionrpc-0.10.ebuild,
+  transmissionrpc-0.9.ebuild, transmissionrpc-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *transmissionrpc-0.10 (17 Apr 2013)
 

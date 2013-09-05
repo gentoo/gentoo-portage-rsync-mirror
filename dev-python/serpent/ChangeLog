@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/serpent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.3 2013/09/02 05:16:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.4 2013/09/05 18:46:33 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> serpent-1.2.ebuild,
+  serpent-1.3.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *serpent-1.3 (02 Sep 2013)
 

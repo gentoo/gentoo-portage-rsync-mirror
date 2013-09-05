@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rackspace-auth-openstack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-auth-openstack/ChangeLog,v 1.1 2013/03/04 19:38:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rackspace-auth-openstack/ChangeLog,v 1.2 2013/09/05 18:46:46 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  rackspace-auth-openstack-1.0.ebuild, rackspace-auth-openstack-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *rackspace-auth-openstack-9999 (04 Mar 2013)
 *rackspace-auth-openstack-1.0 (04 Mar 2013)
@@ -9,4 +13,3 @@
   +rackspace-auth-openstack-1.0.ebuild, +rackspace-auth-openstack-9999.ebuild,
   +metadata.xml:
   initial add of rackspace-auth-openstack
-

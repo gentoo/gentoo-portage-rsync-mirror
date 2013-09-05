@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/empy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.17 2013/06/08 16:35:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/empy/ChangeLog,v 1.18 2013/09/05 18:47:08 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> empy-3.3-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   08 Jun 2013; Mike Gilbert <floppym@gentoo.org> empy-3.3-r1.ebuild:
   Don't install em.py symlink in /usr/bin; this causes pythonpath conflicts.

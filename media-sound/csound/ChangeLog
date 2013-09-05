@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/csound
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.29 2013/01/08 06:12:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.30 2013/09/05 18:57:17 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> csound-5.19.01.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   08 Jan 2013; Tim Harder <radhermit@gentoo.org> csound-5.19.01.ebuild:
   Run python-single-r1_pkg_setup if tests are enabled.
@@ -130,4 +133,3 @@
   +files/csound-5.16.6-install.patch, +files/csound-5.16.6-scons.patch,
   +files/csound-5.16.6-tests.patch, +metadata.xml:
   Initial import. Ebuild by me.
-

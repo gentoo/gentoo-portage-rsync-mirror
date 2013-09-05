@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-distutils-extra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.26 2013/05/20 08:31:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.27 2013/09/05 18:46:18 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  python-distutils-extra-2.33-r1.ebuild, python-distutils-extra-2.37-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org>
   python-distutils-extra-2.37-r1.ebuild:

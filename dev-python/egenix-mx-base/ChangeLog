@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.82 2013/09/02 16:36:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.83 2013/09/05 18:46:17 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> egenix-mx-base-3.2.5.ebuild,
+  egenix-mx-base-3.2.6.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   02 Sep 2013; Mike Gilbert <floppym@gentoo.org> egenix-mx-base-3.2.6.ebuild:
   Add -fno-strict-aliasing to CFLAGS.

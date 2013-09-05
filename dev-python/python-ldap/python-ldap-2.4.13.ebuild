@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.13.ebuild,v 1.3 2013/07/02 14:51:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.4.13.ebuild,v 1.4 2013/09/05 18:46:36 mgorny Exp $
 
 EAPI=5
 
 # pypy: bug #458558 (wrong linker options due to not respecting CC)
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit distutils-r1 multilib
 

@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.6.ebuild,v 1.4 2013/06/08 14:34:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.6.ebuild,v 1.5 2013/09/05 18:47:05 mgorny Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 # Tests crash with pypy
 
 inherit distutils-r1 eutils flag-o-matic prefix

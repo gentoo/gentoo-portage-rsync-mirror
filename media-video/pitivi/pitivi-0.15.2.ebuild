@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.15.2.ebuild,v 1.1 2013/02/05 19:50:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.15.2.ebuild,v 1.2 2013/09/05 18:58:06 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit gnome2 python-single-r1 eutils virtualx multilib
 

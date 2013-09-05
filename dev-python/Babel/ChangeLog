@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.51 2013/08/23 08:06:57 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.52 2013/09/05 18:46:16 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> Babel-0.9.6-r1.ebuild,
+  Babel-1.2.ebuild, Babel-1.3.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *Babel-1.3 (23 Aug 2013)
 

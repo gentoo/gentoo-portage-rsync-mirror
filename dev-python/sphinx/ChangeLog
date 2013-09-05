@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.156 2013/09/02 12:00:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.157 2013/09/05 18:46:11 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> sphinx-1.1.3-r5.ebuild,
+  sphinx-1.1.3-r6.ebuild, sphinx-1.1.3-r7.ebuild, sphinx-1.2_pre20130530.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> sphinx-1.1.3-r7.ebuild:
   Stable for ppc64, wrt bug #481804

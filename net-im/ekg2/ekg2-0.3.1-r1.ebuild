@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.5 2013/03/21 16:30:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.6 2013/09/05 18:59:51 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 inherit autotools-utils eutils python-single-r1 versionator
 
 DESCRIPTION="Text-based, multi-protocol instant messenger"

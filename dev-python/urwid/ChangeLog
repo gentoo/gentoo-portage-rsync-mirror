@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.61 2013/08/03 09:45:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.62 2013/09/05 18:46:50 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> urwid-1.1.1-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> urwid-0.9.9.1.ebuild,
   urwid-1.0.2.ebuild, urwid-1.1.0.ebuild, urwid-1.1.1.ebuild,
@@ -249,4 +252,3 @@
   16 Jan 2005; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
   +urwid-0.8.6.ebuild:
   Initial commit.
-

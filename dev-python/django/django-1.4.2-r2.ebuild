@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.2-r2.ebuild,v 1.2 2013/06/09 17:14:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.4.2-r2.ebuild,v 1.3 2013/09/05 18:46:06 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE='sqlite?'
 
 inherit bash-completion-r1 distutils-r1 versionator webapp

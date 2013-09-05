@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kanyremote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.35 2013/07/25 01:42:15 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.36 2013/09/05 18:45:03 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> kanyremote-6.2.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *kanyremote-6.2 (25 Jul 2013)
 

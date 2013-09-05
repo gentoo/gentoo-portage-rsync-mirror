@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/mpi4py-1.3-r1.ebuild,v 1.1 2013/07/26 10:00:09 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/mpi4py-1.3-r1.ebuild,v 1.2 2013/09/05 18:47:18 mgorny Exp $
 
 EAPI=5
 # README.txt excludes 3.3, absent tox.ini includes 3.3, tests fail py3.3
-PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2} )
 
 inherit distutils-r1
 

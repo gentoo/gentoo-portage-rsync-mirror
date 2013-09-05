@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.57 2013/04/14 21:23:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.58 2013/09/05 18:46:10 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> pyxattr-0.5.0-r1.ebuild,
+  pyxattr-0.5.1.ebuild, pyxattr-0.5.2.ebuild, pyxattr-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pyxattr-0.5.2.ebuild:
   Stable for ppc64, wrt bug #458436

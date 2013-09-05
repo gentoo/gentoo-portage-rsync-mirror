@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.17 2013/09/02 08:04:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.18 2013/09/05 18:46:36 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> billiard-2.7.3.20-r1.ebuild,
+  billiard-2.7.3.21.ebuild, billiard-2.7.3.22.ebuild, billiard-2.7.3.23.ebuild,
+  billiard-2.7.3.27.ebuild, billiard-2.7.3.28.ebuild, billiard-2.7.3.31.ebuild,
+  billiard-2.7.3.32.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *billiard-2.7.3.32 (02 Sep 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imdbpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.20 2013/06/23 17:43:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imdbpy/ChangeLog,v 1.21 2013/09/05 18:46:45 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> imdbpy-4.9-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *imdbpy-4.9-r1 (23 Jun 2013)
 

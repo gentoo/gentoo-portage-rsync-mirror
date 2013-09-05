@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.43 2013/07/19 11:58:10 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.44 2013/09/05 18:46:19 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> mechanize-0.2.5-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *mechanize-0.2.5-r1 (19 Jul 2013)
 

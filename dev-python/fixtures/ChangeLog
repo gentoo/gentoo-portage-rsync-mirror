@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fixtures
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/ChangeLog,v 1.4 2013/07/09 15:52:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/ChangeLog,v 1.5 2013/09/05 18:46:47 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> fixtures-0.3.12-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   09 Jul 2013; Matthew Thode <prometheanfire@gentoo.org>
   fixtures-0.3.12-r1.ebuild:

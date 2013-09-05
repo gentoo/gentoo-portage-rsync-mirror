@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/wicd-client-kde-0.3.1-r1.ebuild,v 1.3 2013/07/29 07:50:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/wicd-client-kde/wicd-client-kde-0.3.1-r1.ebuild,v 1.4 2013/09/05 18:45:04 mgorny Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EAPI=5
 # uk zh_CN zh_TW"
 EGIT_REPONAME="wicd-kde"
 MY_P=${P/-client/}
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 inherit python-single-r1 kde4-base
 
 DESCRIPTION="Wicd client built on the KDE Development Platform"

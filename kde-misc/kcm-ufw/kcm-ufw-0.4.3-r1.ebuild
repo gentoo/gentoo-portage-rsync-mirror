@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.3-r1.ebuild,v 1.2 2013/07/22 12:25:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.3-r1.ebuild,v 1.3 2013/09/05 18:45:04 mgorny Exp $
 
 EAPI=5
 
 KDE_DOC_DIRS="docs/%lingua"
 KDE_HANDBOOK="optional"
 KDE_LINGUAS="es fr lt"
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 inherit python-r1 kde4-base multilib
 
 MY_P="${P/-/_}"

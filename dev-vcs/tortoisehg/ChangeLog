@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.43 2013/08/11 21:35:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.44 2013/09/05 18:42:25 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> tortoisehg-2.7.2.ebuild,
+  tortoisehg-2.8.2.ebuild, tortoisehg-2.9.ebuild, tortoisehg-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *tortoisehg-2.9 (11 Aug 2013)
 

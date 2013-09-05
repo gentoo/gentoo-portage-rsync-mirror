@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/mpmath
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.26 2013/07/18 15:18:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/ChangeLog,v 1.27 2013/09/05 18:46:01 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> mpmath-0.17-r1.ebuild,
+  mpmath-0.17.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *mpmath-0.17-r1 (18 Jul 2013)
 

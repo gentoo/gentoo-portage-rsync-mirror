@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyprotocols
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.28 2013/05/10 05:31:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.29 2013/09/05 18:47:10 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  pyprotocols-1.0_pre2306-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org>
   pyprotocols-1.0_pre2306-r1.ebuild:

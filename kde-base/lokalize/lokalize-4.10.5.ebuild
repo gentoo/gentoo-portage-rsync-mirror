@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.10.5.ebuild,v 1.6 2013/08/02 14:29:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.10.5.ebuild,v 1.7 2013/09/05 18:44:05 mgorny Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ else
 	eclass="kde4-meta"
 	KMNAME="kdesdk"
 fi
-PYTHON_COMPAT=( python{2_5,2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7} )
 inherit python-single-r1 ${eclass}
 
 DESCRIPTION="KDE4 translation tool"

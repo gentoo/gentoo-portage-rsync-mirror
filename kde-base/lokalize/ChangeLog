@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/lokalize
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.176 2013/09/03 19:50:26 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.177 2013/09/05 18:44:05 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> lokalize-4.10.5.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org> -lokalize-4.11.0.ebuild:
   Drop KDE 4.11.0

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.90 2013/05/31 02:32:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.91 2013/09/05 18:46:38 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> imaging-1.1.7-r2.ebuild,
+  imaging-1.1.7-r4.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   31 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Drop unused useflag description

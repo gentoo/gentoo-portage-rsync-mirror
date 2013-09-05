@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/logbook-0.4.2.ebuild,v 1.1 2013/06/30 14:50:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/logbook-0.4.2.ebuild,v 1.2 2013/09/05 18:46:07 mgorny Exp $
 
 EAPI=5
 # py3.2 fails tests & is marked to be dropped next release which will be very soon
 # along with py2.5. See issue/86
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_3} )
 
 inherit distutils-r1
 

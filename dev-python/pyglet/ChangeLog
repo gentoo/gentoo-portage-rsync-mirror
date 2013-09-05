@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyglet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/ChangeLog,v 1.8 2013/03/18 12:35:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/ChangeLog,v 1.9 2013/09/05 18:47:02 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> pyglet-1.1.4-r2.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *pyglet-1.1.4-r2 (18 Mar 2013)
 
@@ -34,4 +37,3 @@
   23 Sep 2010; Justin Lecher <jlec@gentoo.org> +pyglet-1.1.4.ebuild,
   +metadata.xml:
   Imported from sci overlay
-

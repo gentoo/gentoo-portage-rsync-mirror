@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.95 2013/05/24 20:25:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.96 2013/09/05 18:46:03 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> cython-0.18-r1.ebuild,
+  cython-0.19.1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *cython-0.19.1 (24 May 2013)
 

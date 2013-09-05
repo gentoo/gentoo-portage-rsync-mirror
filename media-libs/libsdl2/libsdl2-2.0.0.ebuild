@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.0.ebuild,v 1.2 2013/08/31 14:34:50 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.0.ebuild,v 1.3 2013/09/05 18:46:48 hasufell Exp $
 
 EAPI=5
 inherit autotools flag-o-matic toolchain-funcs eutils
@@ -14,7 +14,7 @@ LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="3dnow alsa altivec +audio custom-cflags dbus directfb fusionsound gles haptic +joystick mmx nas opengl oss pulseaudio sse sse2 static-libs tslib udev +video X xinerama xscreensaver"
+IUSE="3dnow alsa altivec +audio custom-cflags dbus directfb fusionsound gles haptic +joystick mmx nas opengl oss pulseaudio sse sse2 static-libs +threads tslib udev +video X xinerama xscreensaver"
 REQUIRED_USE="
 	alsa? ( audio )
 	fusionsound? ( audio )
@@ -58,7 +58,8 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	# https://bugzilla.libsdl.org/show_bug.cgi?id=1431
-	epatch "${FILESDIR}"/${P}-static-libs.patch
+	epatch "${FILESDIR}"/${P}-static-libs.patch \
+		"${FILESDIR}"/${P}-threads.patch
 	AT_M4DIR="/usr/share/aclocal acinclude" eautoreconf
 }
 
@@ -77,9 +78,6 @@ src_configure() {
 	fi
 
 	# sorted by `./configure --help`
-	#
-	# --disable-threads broken
-	# https://bugzilla.libsdl.org/show_bug.cgi?id=2070
 	econf \
 		$(use_enable static-libs static) \
 		$(use_enable audio) \
@@ -89,7 +87,7 @@ src_configure() {
 		$(use_enable joystick) \
 		$(use_enable haptic) \
 		--enable-power \
-		--enable-threads \
+		$(use_enable threads) \
 		--enable-timers \
 		--enable-file \
 		--disable-loadso \

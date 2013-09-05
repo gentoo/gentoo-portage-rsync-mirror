@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wstools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.13 2013/05/02 05:42:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.14 2013/09/05 18:45:59 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> wstools-0.4-r1.ebuild,
+  wstools-0.4.3.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *wstools-0.4.3 (02 May 2013)
 

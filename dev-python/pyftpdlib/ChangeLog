@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyftpdlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.26 2013/07/22 11:54:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/ChangeLog,v 1.27 2013/09/05 18:47:08 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> pyftpdlib-1.0.1-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   22 Jul 2013; Michał Górny <mgorny@gentoo.org> -pyftpdlib-0.6.0.ebuild,
   pyftpdlib-0.7.0.ebuild, pyftpdlib-1.0.1-r1.ebuild, pyftpdlib-1.0.1.ebuild:

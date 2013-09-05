@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.7 2013/08/27 20:00:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.8 2013/09/05 18:47:03 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 PYTHON_REQ_USE='readline,sqlite'
 
 inherit distutils-r1 elisp-common eutils virtualx

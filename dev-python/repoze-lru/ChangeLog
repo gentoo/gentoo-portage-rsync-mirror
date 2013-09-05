@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/repoze-lru
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/repoze-lru/ChangeLog,v 1.4 2013/02/16 19:20:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/repoze-lru/ChangeLog,v 1.5 2013/09/05 18:46:41 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> repoze-lru-0.6-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *repoze-lru-0.6-r1 (16 Feb 2013)
 

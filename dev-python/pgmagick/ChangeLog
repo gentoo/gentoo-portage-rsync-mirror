@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pgmagick
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pgmagick/ChangeLog,v 1.1 2013/05/17 08:41:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pgmagick/ChangeLog,v 1.2 2013/09/05 18:46:52 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> pgmagick-0.5.6.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *pgmagick-0.5.6 (17 May 2013)
 

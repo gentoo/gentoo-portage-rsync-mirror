@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.110 2013/07/26 07:06:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.111 2013/09/05 18:58:47 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> fail2ban-0.8.10-r2.ebuild,
+  fail2ban-0.8.10.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *fail2ban-0.8.10-r2 (26 Jul 2013)
 

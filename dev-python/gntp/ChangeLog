@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gntp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gntp/ChangeLog,v 1.4 2013/06/06 16:31:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gntp/ChangeLog,v 1.5 2013/09/05 18:46:19 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> gntp-1.0.1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *gntp-1.0.1 (06 Jun 2013)
 

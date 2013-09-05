@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cdiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.19 2013/08/28 11:13:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.20 2013/09/05 18:40:34 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> cdiff-0.6.ebuild,
+  cdiff-0.7.1.ebuild, cdiff-0.7.ebuild, cdiff-0.8.ebuild, cdiff-0.9.1.ebuild,
+  cdiff-0.9.2.ebuild, cdiff-0.9.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> cdiff-0.9.2.ebuild:
   Stable for x86, wrt bug #481942

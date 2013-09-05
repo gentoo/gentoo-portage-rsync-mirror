@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.212 2013/09/04 03:27:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.213 2013/09/05 18:46:35 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> setuptools-0.6.30-r1.ebuild,
+  setuptools-0.6.33.ebuild, setuptools-0.6.45-r1.ebuild,
+  setuptools-0.8-r1.ebuild, setuptools-0.9.8-r1.ebuild, setuptools-1.0.ebuild,
+  setuptools-1.1.ebuild, setuptools-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *setuptools-1.1.1 (04 Sep 2013)
 
