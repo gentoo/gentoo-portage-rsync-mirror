@@ -1,0 +1,9 @@
+# ChangeLog for virtual/perl-Carp
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Carp/ChangeLog,v 1.1 2013/09/05 05:22:11 patrick Exp $
+
+*perl-Carp-1.290.0 (05 Sep 2013)
+
+  05 Sep 2013; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +perl-Carp-1.290.0.ebuild:
+  Import from perl-experimental overlay

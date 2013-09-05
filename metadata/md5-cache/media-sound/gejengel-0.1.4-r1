@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-cpp/gtkmm:2.4 dev-cpp/pangomm:1.4 media-libs/taglib dev-db/sqlite:3 || ( media-gfx/imagemagick[cxx] media-gfx/graphicsmagick[imagemagick] ) mad? ( media-libs/libmad ) flac? ( media-libs/flac[cxx] ) ffmpeg? ( virtual/ffmpeg ) audioscrobbler? ( >=media-libs/lastfmlib-0.4 ) dbus? ( dev-libs/dbus-glib ) libnotify? ( x11-libs/libnotify ) openal? ( media-libs/openal ) alsa? ( media-libs/alsa-lib ) pulseaudio? ( media-sound/pulseaudio )
 SLOT=0
 SRC_URI=http://gejengel.googlecode.com/files/gejengel-0.1.4.tar.gz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=6a72dc973d73400dec07144d2692e348

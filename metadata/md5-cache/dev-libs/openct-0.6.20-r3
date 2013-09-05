@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=pcsc-lite? ( >=sys-apps/pcsc-lite-1.7.2-r1 ) usb? ( virtual/libusb:0 ) sys-devel/libtool udev? ( virtual/udev ) sys-apps/openrc
 SLOT=0
 SRC_URI=http://www.opensc-project.org/files/openct/openct-0.6.20.tar.gz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	d900015de4e092f26d8c0a18b6bd60de	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c498185247be9964cb0bda1d0fcbeca8

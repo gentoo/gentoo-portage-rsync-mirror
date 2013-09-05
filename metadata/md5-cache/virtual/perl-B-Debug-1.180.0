@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for B::Debug
+KEYWORDS=~amd64 ~x86
+RDEPEND=|| ( >=dev-lang/perl-5.17.3 ~perl-core/B-Debug-1.180.0 )
+SLOT=0
+_md5_=8b3f926f9a60a16a66a928b2824c06e9

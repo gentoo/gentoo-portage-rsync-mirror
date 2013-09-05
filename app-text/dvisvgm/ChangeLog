@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.54 2013/08/27 16:35:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.55 2013/09/05 05:25:39 vapier Exp $
+
+  05 Sep 2013; Mike Frysinger <vapier@gentoo.org> dvisvgm-1.2.1.ebuild,
+  dvisvgm-1.3.ebuild, dvisvgm-1.4.ebuild:
+  Restore s390/sh keywords #390671.
 
 *dvisvgm-1.4 (27 Aug 2013)
 

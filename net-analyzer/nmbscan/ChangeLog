@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmbscan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.20 2013/08/04 12:08:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.21 2013/09/05 05:29:44 vapier Exp $
+
+  05 Sep 2013; Mike Frysinger <vapier@gentoo.org> nmbscan-1.2.5.ebuild:
+  Mark s390 stable #392831.
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> nmbscan-1.2.5.ebuild:
   Stable for ia64, wrt bug #392831
