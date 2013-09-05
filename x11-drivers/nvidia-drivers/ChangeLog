@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.479 2013/09/05 13:16:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.480 2013/09/05 14:11:43 jer Exp $
+
+  05 Sep 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-173.14.38.ebuild:
+  Remove unneeded die()s.
 
   05 Sep 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-304.108.ebuild:
   Stable for AMD64 x86 too.

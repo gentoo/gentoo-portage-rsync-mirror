@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.38.ebuild,v 1.1 2013/09/05 13:15:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.38.ebuild,v 1.2 2013/09/05 14:11:43 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability \
@@ -324,13 +324,13 @@ src_install() {
 			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-169.07 > \
 			"${WORKDIR}"/nvidia
 		insinto /etc/modprobe.d
-		newins "${WORKDIR}"/nvidia nvidia.conf || die
+		newins "${WORKDIR}"/nvidia nvidia.conf
 	elif use kernel_FreeBSD; then
 		insinto /boot/modules
-		doins "${WORKDIR}/${NV_PACKAGE}/src/nvidia.kld" || die
+		doins "${WORKDIR}/${NV_PACKAGE}/src/nvidia.kld"
 
 		exeinto /boot/modules
-		doexe "${WORKDIR}/${NV_PACKAGE}/src/nvidia.ko" || die
+		doexe "${WORKDIR}/${NV_PACKAGE}/src/nvidia.ko"
 	fi
 
 	# NVIDIA kernel <-> userspace driver config lib
@@ -345,7 +345,7 @@ src_install() {
 
 	# Xorg DDX driver
 	insinto /usr/$(get_libdir)/xorg/modules/drivers
-	doins ${NV_X11_DRV}/nvidia_drv.so || die "failed to install nvidia_drv.so"
+	doins ${NV_X11_DRV}/nvidia_drv.so
 
 	# Xorg GLX driver
 	insinto /usr/$(get_libdir)/opengl/nvidia/extensions
@@ -374,14 +374,14 @@ src_install() {
 	if use kernel_linux && [[ -d ${S}/usr/include/cuda ]]; then
 		dodir /usr/include/cuda
 		insinto /usr/include/cuda
-		doins usr/include/cuda/*.h || die "failed to install cuda headers"
+		doins usr/include/cuda/*.h
 	fi
 
 	# OpenCL headers (driver to come)
 	if [[ -d ${S}/usr/include/CL ]]; then
 		dodir /usr/include/CL
 		insinto /usr/include/CL
-		doins usr/include/CL/*.h || die "failed to install OpenCL headers"
+		doins usr/include/CL/*.h
 	fi
 
 	# Documentation
@@ -401,13 +401,13 @@ src_install() {
 
 	# Helper Apps
 	exeinto /opt/bin/
-	doexe ${NV_EXEC}/nvidia-xconfig || die
-	doexe ${NV_EXEC}/nvidia-bug-report.sh || die
+	doexe ${NV_EXEC}/nvidia-xconfig
+	doexe ${NV_EXEC}/nvidia-bug-report.sh
 	if use tools; then
-		doexe usr/bin/nvidia-settings || die
+		doexe usr/bin/nvidia-settings
 	fi
 	if use kernel_linux; then
-		doexe ${NV_EXEC}/nvidia-smi || die
+		doexe ${NV_EXEC}/nvidia-smi
 	fi
 
 	# Desktop entry for nvidia-settings
@@ -444,8 +444,8 @@ donvidia() {
 
 	libname=$(basename $2)
 
-	doexe $2.$3 || die "failed to install $2"
-	dosym ${libname}.$3 $1/${libname} || die "failed to symlink $2"
+	doexe $2.$3
+	dosym ${libname}.$3 $1/${libname}
 	[[ $3 != "1" ]] && dosym ${libname}.$3 $1/${libname}.1
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/python-unittest2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.17 2013/08/07 13:26:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-unittest2/ChangeLog,v 1.18 2013/09/05 14:13:00 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> python-unittest2-1-r2.ebuild:
+  Drop stale conditionals after py2.5 & py3.1 removal.
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> python-unittest2-1-r1.ebuild:
   Stable for x86, wrt bug #477360

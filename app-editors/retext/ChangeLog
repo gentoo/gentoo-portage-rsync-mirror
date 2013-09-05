@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/retext
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.4 2013/09/04 12:42:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/ChangeLog,v 1.5 2013/09/05 14:20:33 ago Exp $
+
+  05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> retext-4.0.1-r2.ebuild:
+  Stable for amd64, wrt bug #481940
 
 *retext-4.0.1-r2 (04 Sep 2013)
 
