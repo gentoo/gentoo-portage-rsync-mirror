@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Carp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Carp/ChangeLog,v 1.1 2013/09/05 05:22:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Carp/ChangeLog,v 1.2 2013/09/05 07:08:02 patrick Exp $
+
+  05 Sep 2013; Patrick Lauer <patrick@gentoo.org> perl-Carp-1.290.0.ebuild:
+  Restore keywords
 
 *perl-Carp-1.290.0 (05 Sep 2013)
 

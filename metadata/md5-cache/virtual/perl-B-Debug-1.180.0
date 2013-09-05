@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for B::Debug
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 RDEPEND=|| ( >=dev-lang/perl-5.17.3 ~perl-core/B-Debug-1.180.0 )
 SLOT=0
-_md5_=8b3f926f9a60a16a66a928b2824c06e9
+_md5_=6b64e0ec45dad146a179e4b16862022c
