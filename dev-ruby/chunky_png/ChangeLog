@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/chunky_png
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chunky_png/ChangeLog,v 1.7 2013/04/30 06:08:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chunky_png/ChangeLog,v 1.8 2013/09/04 23:59:34 mrueg Exp $
+
+  04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -chunky_png-1.2.6.ebuild,
+  -chunky_png-1.2.7.ebuild:
+  Cleanup old.
 
 *chunky_png-1.2.8 (30 Apr 2013)
 
