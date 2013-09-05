@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Lingua-Preferred
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.19 2012/06/24 13:00:07 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.21 2013/09/05 15:05:01 idella4 Exp $
+
+*Lingua-Preferred-0.2.4-r1 (05 Sep 2013)
+
+  05 Sep 2013; Ian Delaney <idella4@gentoo.org>
+  +Lingua-Preferred-0.2.4-r1.ebuild:
+  revbump -> EAPI 5, add test invocation
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
