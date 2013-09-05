@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.1 2013/09/05 20:24:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.2 2013/09/05 22:40:12 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -314,26 +314,34 @@ git-r3_fetch() {
 			$(git ls-remote "${r}" "${lookup_ref}")
 		)
 
-		# now, another important thing. we may only fetch a remote
-		# branch directly to a local branch. Otherwise, we need to fetch
-		# the commit and re-create the branch on top of it.
-
 		local ref_param=()
 		if [[ ! ${ref[0]} ]]; then
 			local EGIT_NONSHALLOW=1
 		fi
 
-		if [[ ! -f ${GIT_DIR}/shallow ]]; then
-			# if it's a complete repo, fetch it as-is
-			:
-		elif [[ ${EGIT_NONSHALLOW} ]]; then
-			# if it's a shallow clone but we need complete,
-			# unshallow it
-			ref_param+=( --unshallow )
+		# 1. if we need a non-shallow clone and we have a shallow one,
+		#    we need to unshallow it explicitly.
+		# 2. if we want a shallow clone, we just pass '--depth 1'
+		#    to the first fetch in the repo. passing '--depth'
+		#    to further requests usually results in more data being
+		#    downloaded than without it.
+		# 3. in any other case, we just do plain 'git fetch' and let
+		#    git to do its best (on top of shallow or non-shallow repo).
+
+		if [[ ${EGIT_NONSHALLOW} ]]; then
+			if [[ -f ${GIT_DIR}/shallow ]]; then
+				ref_param+=( --unshallow )
+			fi
 		else
-			# otherwise, just fetch as shallow
-			ref_param+=( --depth 1 )
+			# 'git show-ref --heads' returns 1 when there are no branches
+			if ! git show-ref --heads -q; then
+				ref_param+=( --depth 1 )
+			fi
 		fi
+
+		# now, another important thing. we may only fetch a remote
+		# branch directly to a local branch. Otherwise, we need to fetch
+		# the commit and re-create the branch on top of it.
 
 		if [[ ${ref[0]} ]]; then
 			if [[ ${is_branch} ]]; then

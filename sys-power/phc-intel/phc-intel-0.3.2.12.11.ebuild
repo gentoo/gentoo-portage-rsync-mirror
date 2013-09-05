@@ -1,16 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.11.ebuild,v 1.1 2013/09/05 13:08:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.11.ebuild,v 1.2 2013/09/05 22:38:45 xmw Exp $
 
 EAPI=5
 
-inherit linux-info linux-mod eutils vcs-snapshot
+inherit linux-info linux-mod eutils
 
 DESCRIPTION="Processor Hardware Control for Intel CPUs"
 HOMEPAGE="http://www.linux-phc.org/
 	http://www.linux-phc.org/forum/viewtopic.php?f=7&t=267"
 #no automatic filenames here, sorry
-SRC_URI="http://www.linux-phc.org/forum/download/file.php?id=147 ->  phc-intel-pack-rev11.tar.bz2"
+SRC_URI="http://www.linux-phc.org/forum/download/file.php?id=147 -> phc-intel-pack-rev11.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -41,6 +41,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/phc-intel-pack-rev11-trailing-space.patch
+
 	sed -e '/^all:/s:prepare::' \
 		-i Makefile || die
 
@@ -55,8 +57,6 @@ src_prepare() {
 	else
 		epatch inc/${KV_MAJOR}.${KV_MINOR}/linux-phc-0.3.2.patch
 	fi
-
-	epatch "${FILESDIR}"/${P}-trailing-space.patch
 
 	mv acpi-cpufreq.c phc-intel.c || die
 }

@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.127 2013/07/19 04:27:56 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.128 2013/09/05 22:33:15 mattm Exp $
+
+*zabbix-2.0.8 (05 Sep 2013)
+
+  05 Sep 2013; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.8.ebuild:
+  Bump for Zabbix-2.0.8, Thanks to Alice Ferrazzi alice.ferrazzi@gmail.com and
+  Rodrigo Severo rodrigo@fabricadeideias.com - Closes bug 482810.
 
   19 Jul 2013; Matthew Marlowe <mattm@gentoo.org> files/2.0/init.d/zabbix-proxy:
   Minor tweak for bug 460562 - zabbix_proxy init file.

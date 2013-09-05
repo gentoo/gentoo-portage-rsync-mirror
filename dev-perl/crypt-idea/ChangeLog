@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/crypt-idea
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.37 2012/06/24 12:59:36 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.38 2013/09/05 22:57:51 zlogene Exp $
+
+*crypt-idea-1.100.0 (05 Sep 2013)
+
+  05 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> +crypt-idea-1.100.0.ebuild:
+  version bump, close bug #483682
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

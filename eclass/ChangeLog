@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.948 2013/09/05 20:39:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.949 2013/09/05 22:40:12 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Do not pass --depth when updating a branch, it trrigers issues in git.
+  Instead, use it for the first fetch only.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> git-2.eclass:
   Support using git-r3 backend in git-2.
