@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/rubygems-6.ebuild,v 1.3 2013/09/01 14:45:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/rubygems-6.ebuild,v 1.4 2013/09/05 15:49:42 jer Exp $
 
 EAPI=5
 USE_RUBY="ruby20"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${USE_RUBY}"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd"
 IUSE=""
 
 RDEPEND="dev-ruby/rubygems[ruby_targets_ruby20]"

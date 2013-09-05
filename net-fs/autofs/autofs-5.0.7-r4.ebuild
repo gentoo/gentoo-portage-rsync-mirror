@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r4.ebuild,v 1.3 2013/09/05 13:54:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r4.ebuild,v 1.4 2013/09/05 16:01:13 jer Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="-dmalloc hesiod ldap libtirpc mount-locking sasl"
 
 # USE="sasl" adds SASL support to the LDAP module which will not be build. If

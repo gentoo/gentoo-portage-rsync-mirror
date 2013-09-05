@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.211 2013/09/01 14:45:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.212 2013/09/05 15:49:15 jer Exp $
+
+  05 Sep 2013; Jeroen Roovers <jer@gentoo.org> rubygems-2.0.3.ebuild:
+  Stable for HPPA (bug #483254).
 
   01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rubygems-2.0.3.ebuild:
   Stable for x86, wrt bug #483254
