@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/wxmud
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/ChangeLog,v 1.6 2013/04/01 14:34:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/wxmud/ChangeLog,v 1.7 2013/09/05 19:44:54 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> wxmud-9999.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   01 Apr 2013; Julian Ospald <hasufell@gentoo.org> wxmud-9999.ebuild:
   use python-single-r1, bump EAPI
@@ -23,4 +26,3 @@
   +wxmud-9999.ebuild:
   Initial import of wxMUD as a live SVN version till first release is out - a
   graphical MUD client with MXP support amongst other more usual features
-

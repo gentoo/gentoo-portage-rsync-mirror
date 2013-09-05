@@ -1,6 +1,10 @@
 # ChangeLog for virtual/pyparsing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pyparsing/ChangeLog,v 1.6 2013/08/11 03:14:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pyparsing/ChangeLog,v 1.7 2013/09/05 19:44:44 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> pyparsing-0.ebuild,
+  pyparsing-1.ebuild, pyparsing-2.ebuild, pyparsing-3.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *pyparsing-3 (11 Aug 2013)
 

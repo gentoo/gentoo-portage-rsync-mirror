@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gundo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/ChangeLog,v 1.9 2013/07/11 17:52:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/ChangeLog,v 1.10 2013/09/05 19:44:44 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> gundo-2.5.0.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *gundo-2.5.0 (11 Jul 2013)
 
@@ -48,4 +51,3 @@
 
   22 Nov 2010; Tim Harder <radhermit@gentoo.org> +gundo-2.0.0.ebuild:
   Initial import.
-

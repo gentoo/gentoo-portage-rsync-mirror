@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.282 2013/06/02 00:09:34 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.283 2013/09/05 19:44:55 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> gconf-3.2.6-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   02 Jun 2013; Jonathan Callen <abcd@gentoo.org> gconf-3.2.6-r1.ebuild:
   Force non-empty PYTHON_TARGETS to ensure that build always succeeds; ensure

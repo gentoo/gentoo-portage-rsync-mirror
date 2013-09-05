@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.54 2013/06/03 11:11:56 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.55 2013/09/05 19:44:43 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> inn-2.5.3-r1.ebuild,
+  inn-2.5.3-r2.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *inn-2.5.3-r2 (03 Jun 2013)
 

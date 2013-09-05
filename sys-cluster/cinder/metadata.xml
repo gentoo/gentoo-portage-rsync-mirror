@@ -9,5 +9,10 @@
     Cinder is the OpenStack Block storage service.
 	This is a spin out of nova-volumes.
   </longdescription>
+  <use>
+    <flag name="api">Installs the initscripts for the cinder api service</flag>
+    <flag name="scheduler">Installs the initscripts for the cinder scheduler service</flag>
+    <flag name="volume">Installs the initscripts for the cinder volume service</flag>
+  </use>
 </pkgmetadata>
 

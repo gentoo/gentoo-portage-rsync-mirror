@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.09.ebuild,v 1.1 2013/06/29 10:45:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.09.ebuild,v 1.2 2013/09/05 19:44:52 mgorny Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ else
 	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 fi
 
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 inherit elisp-common eutils fdo-mime fortran-2 multilib python-single-r1 toolchain-funcs user ${_GIT} versionator
 
 ROOFIT_DOC_PV=2.91-33

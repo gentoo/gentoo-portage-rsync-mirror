@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.6.2.ebuild,v 1.1 2013/03/30 21:52:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.6.2.ebuild,v 1.2 2013/09/05 19:44:49 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python2_{5,6,7} python3_{1,2} )
+PYTHON_COMPAT=( python2_{6,7} python3_2 )
 
 inherit eutils gnome2 python-r1 virtualx
 

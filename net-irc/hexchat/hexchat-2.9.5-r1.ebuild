@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5-r1.ebuild,v 1.11 2013/07/11 20:19:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5-r1.ebuild,v 1.12 2013/09/05 19:44:53 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+PYTHON_COMPAT=( python2_6 python2_7 )
 inherit autotools eutils gnome2-utils mono multilib python-single-r1
 
 DESCRIPTION="Graphical IRC client based on XChat"

@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/eventlet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.6 2013/06/07 13:36:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.7 2013/09/05 19:35:48 prometheanfire Exp $
+
+*eventlet-0.13.0 (05 Sep 2013)
+
+  05 Sep 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +eventlet-0.13.0.ebuild:
+  adding eventlet-0.13 for the new cinder stuff, most of openstack will probably
+  use it
 
   07 Jun 2013; Ian Delaney <idella4@gentoo.org> -eventlet-0.12.1.ebuild,
   eventlet-0.12.1-r1.ebuild:

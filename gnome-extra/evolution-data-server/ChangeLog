@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.378 2013/08/25 18:38:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.379 2013/09/05 19:44:41 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  evolution-data-server-3.6.4.ebuild, evolution-data-server-3.8.4-r1.ebuild,
+  evolution-data-server-3.8.4.ebuild, evolution-data-server-3.8.5.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *evolution-data-server-3.8.5 (25 Aug 2013)
 

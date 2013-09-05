@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8-r1.ebuild,v 1.2 2013/03/02 21:15:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.8-r1.ebuild,v 1.3 2013/09/05 19:44:51 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+PYTHON_COMPAT=( python2_6 python2_7 )
 inherit python-r1 confutils eutils qt4-r2 games
 
 DESCRIPTION="A modern gaming engine for Doom, Heretic, and Hexen"

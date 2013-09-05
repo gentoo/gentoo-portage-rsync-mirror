@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/funnyboat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.15 2013/06/09 09:15:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/funnyboat/ChangeLog,v 1.16 2013/09/05 19:44:55 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> funnyboat-1.5-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   09 Jun 2013; Julian Ospald <hasufell@gentoo.org> funnyboat-1.5-r1.ebuild:
   add PYTHON_REQUIRE_USE

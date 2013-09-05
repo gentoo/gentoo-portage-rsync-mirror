@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.36 2013/09/05 14:14:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.37 2013/09/05 19:44:44 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> tornado-2.4-r1.ebuild,
+  tornado-2.4.1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> tornado-2.4-r1.ebuild,
   tornado-2.4.1.ebuild:

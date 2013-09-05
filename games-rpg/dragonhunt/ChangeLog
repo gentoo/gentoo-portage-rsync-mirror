@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/dragonhunt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/ChangeLog,v 1.8 2013/06/14 23:08:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/dragonhunt/ChangeLog,v 1.9 2013/09/05 19:44:42 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> dragonhunt-3.56-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *dragonhunt-3.56-r1 (14 Jun 2013)
 
@@ -33,4 +36,3 @@
 
   06 Nov 2006; <tupone@gentoo.org> +dragonhunt-3.55.ebuild:
   New ebuild. Bug #56743 by Alastair Murray
-

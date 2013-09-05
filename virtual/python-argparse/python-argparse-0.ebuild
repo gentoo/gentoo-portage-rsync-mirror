@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/python-argparse-0.ebuild,v 1.4 2013/08/07 11:55:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/python-argparse-0.ebuild,v 1.5 2013/09/05 19:33:16 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_5,2_6,2_7,3_1,3_2,3_3} pypy1_9 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 inherit python-r1
 
 DESCRIPTION="A virtual for the Python argparse module"

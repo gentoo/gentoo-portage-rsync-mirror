@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.4.ebuild,v 1.4 2013/07/29 22:03:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.4.ebuild,v 1.5 2013/09/05 19:44:41 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 # python3 not really supported, bug #478678
-PYTHON_COMPAT=( python2_7 pypy{1_9,2_0} )
+PYTHON_COMPAT=( python2_7 pypy2_0 )
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 inherit db-use flag-o-matic gnome2 python-any-r1 vala virtualx

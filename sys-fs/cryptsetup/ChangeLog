@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.155 2013/08/14 04:50:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.156 2013/09/05 19:44:47 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> cryptsetup-1.6.1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *cryptsetup-1.6.2 (14 Aug 2013)
 

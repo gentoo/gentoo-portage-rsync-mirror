@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bootchart2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.18 2013/05/29 15:22:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.19 2013/09/05 19:44:51 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> bootchart2-0.14.5-r1.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   29 May 2013; Justin Lecher <jlec@gentoo.org> bootchart2-0.14.5-r1.ebuild:
   Fix usage of new python r1 eclasses (missing PYTHON_REQUIRED_USE)

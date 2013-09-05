@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/py3status
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/py3status/ChangeLog,v 1.2 2013/08/31 12:12:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/py3status/ChangeLog,v 1.3 2013/09/05 19:44:56 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> py3status-1.0.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   31 Aug 2013; Kacper Kowalik <xarthisius@gentoo.org> py3status-1.0.ebuild:
   Fix dependency on setuptools

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.72 2013/09/01 00:07:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.73 2013/09/05 19:44:53 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> hexchat-2.9.5-r1.ebuild,
+  hexchat-2.9.5.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   01 Sep 2013; Julian Ospald <hasufell@gentoo.org> hexchat-9999.ebuild:
   update live ebuild

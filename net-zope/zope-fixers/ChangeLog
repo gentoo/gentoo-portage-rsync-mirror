@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zope-fixers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.15 2013/08/30 20:24:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.16 2013/09/05 19:44:42 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> zope-fixers-1.0-r1.ebuild,
+  zope-fixers-1.1.2.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
   30 Aug 2013; Markos Chandras <hwoarang@gentoo.org> zope-fixers-1.1.2.ebuild:
   Add missing app-arch/unzip dependency

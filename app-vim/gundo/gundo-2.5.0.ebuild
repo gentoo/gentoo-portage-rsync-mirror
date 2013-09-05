@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/gundo-2.5.0.ebuild,v 1.1 2013/07/11 17:52:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/gundo-2.5.0.ebuild,v 1.2 2013/09/05 19:44:44 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit vim-plugin python-single-r1
 

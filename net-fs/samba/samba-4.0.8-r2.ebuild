@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.8-r2.ebuild,v 1.1 2013/08/16 07:13:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.8-r2.ebuild,v 1.2 2013/09/05 19:44:47 mgorny Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_{5,6,7} )
+PYTHON_COMPAT=( python2_{6,7} )
 
 inherit python-r1 waf-utils multilib linux-info systemd
 

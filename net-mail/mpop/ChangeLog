@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mpop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/ChangeLog,v 1.6 2013/04/23 00:19:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mpop/ChangeLog,v 1.7 2013/09/05 19:44:54 mgorny Exp $
+
+  05 Sep 2013; Michał Górny <mgorny@gentoo.org> mpop-1.0.28.ebuild:
+  Clean up PYTHON_COMPAT from old implementations.
 
 *mpop-1.0.28 (23 Apr 2013)
 
@@ -29,4 +32,3 @@
   17 Oct 2011; Tim Harder <radhermit@gentoo.org> +mpop-1.0.25.ebuild,
   +metadata.xml:
   Initial import.
-

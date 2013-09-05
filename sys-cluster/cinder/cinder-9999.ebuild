@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-9999.ebuild,v 1.1 2013/04/11 07:29:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-9999.ebuild,v 1.2 2013/09/05 19:41:28 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,43 +15,61 @@ EGIT_REPO_URI="https://github.com/openstack/cinder.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="+api +scheduler +volume"
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+#sudo is a build dep because I want the sudoers.d directory to exist, lazy.
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+		app-admin/sudo"
 
-RDEPEND="=dev-python/amqplib-0.6.1
-		>=dev-python/anyjson-0.2.4[${PYTHON_USEDEP}]
-		>=dev-python/eventlet-0.9.17[${PYTHON_USEDEP}]
-		>=dev-python/kombu-1.0.4[${PYTHON_USEDEP}]
-		>=dev-python/lockfile-0.8
+RDEPEND=">=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
+		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
+		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
+		>=dev-python/kombu-2.4.8[${PYTHON_USEDEP}]
+		>=dev-python/lockfile-0.8[${PYTHON_USEDEP}]
 		>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
+		dev-python/netaddr[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
-		=dev-python/webob-1.2.3
-		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
+		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
+		dev-python/six[${PYTHON_USEDEP}]
+		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
+		<dev-python/webob-1.3[${PYTHON_USEDEP}]
+		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-0.7.3
-		<=dev-python/sqlalchemy-0.7.9
+		>=dev-python/sqlalchemy-0.7.8
+		<=dev-python/sqlalchemy-0.7.99
 		>=dev-python/sqlalchemy-migrate-0.7.2
-		>=dev-python/stevedore-0.8
+		>=dev-python/stevedore-0.10
 		>=dev-python/suds-0.4
-		dev-python/paramiko[${PYTHON_USEDEP}]
+		>=dev-python/paramiko-1.8.0[${PYTHON_USEDEP}]
 		>=dev-python/Babel-0.9.6[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
-		>=dev-python/setuptools-git-0.4[${PYTHON_USEDEP}]
-		>=dev-python/python-glanceclient-0.5.0
-		<dev-python/python-glanceclient-2
-		>=dev-python/python-keystoneclient-0.2.0
-		dev-python/python-swiftclient[${PYTHON_USEDEP}]
+		>=dev-python/python-glanceclient-0.9.0[${PYTHON_USEDEP}]
+		>=dev-python/python-keystoneclient-0.3.0[${PYTHON_USEDEP}]
+		>=dev-python/python-swiftclient-1.5[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]"
+		virtual/python-argparse[${PYTHON_USEDEP}]
+		>=sys-block/iscsitarget-1.4.20.2_p20130821
+		sys-block/open-iscsi"
 
 PATCHES=( )
 
+pkg_setup() {
+	enewgroup cinder
+	enewuser cinder -1 -1 /var/lib/cinder cinder
+}
+
 python_install() {
 	distutils-r1_python_install
+	newinitd "${FILESDIR}/cinder-init" "cinder"
+	newconfd "${FILESDIR}/cinder-confd" "cinder"
+	use api && dosym /etc/init.d/cinder /etc/init.d/cinder-api
+	use scheduler && dosym /etc/init.d/cinder /etc/init.d/cinder-scheduler
+	use volume && dosym /etc/init.d/cinder /etc/init.d/cinder-volume
+
 	keepdir /etc/cinder
-	keepdir /etc/cinder/rootwrap.d
+	dodir /etc/cinder/rootwrap.d
 	insinto /etc/cinder
 
 	newins "${S}/etc/cinder/cinder.conf.sample" "cinder.conf"
@@ -61,4 +79,9 @@ python_install() {
 	newins "${S}/etc/cinder/rootwrap.conf" "rootwrap.conf"
 	insinto /etc/cinder/rootwrap.d
 	newins "${S}/etc/cinder/rootwrap.d/volume.filters" "volume.filters"
+	#add sudoers definitions for user nova
+	insinto /etc/sudoers.d/
+	doins "${FILESDIR}/cinder-sudoers"
+	dodir /var/log/cinder
+	fowners cinder:cinder /var/log/cinder
 }
