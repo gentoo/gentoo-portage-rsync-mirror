@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ferrisloki
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.27 2013/09/05 11:28:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ChangeLog,v 1.28 2013/09/05 13:07:26 pinkbyte Exp $
+
+  05 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> ferrisloki-3.0.13.ebuild:
+  Add some Prefix keywords
 
   05 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> -ferrisloki-3.0.3.ebuild:
   Drop old version

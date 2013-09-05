@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.6.1.ebuild,v 1.6 2013/09/03 11:53:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gexiv2/gexiv2-0.6.1.ebuild,v 1.7 2013/09/05 13:25:49 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.yorba.org/download/${PN}/${MY_PV}/lib${PN}_${PV}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 ~sparc ~x86"
 IUSE="introspection static-libs"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

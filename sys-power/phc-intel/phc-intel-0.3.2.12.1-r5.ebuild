@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.1-r5.ebuild,v 1.1 2012/12/17 07:20:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phc-intel/phc-intel-0.3.2.12.1-r5.ebuild,v 1.2 2013/09/05 13:08:45 xmw Exp $
 
 EAPI=2
 
@@ -28,6 +28,11 @@ pkg_setup() {
 	if kernel_is lt 2 6 33 ; then
 		eerror "Your kernel version is no longer supported by this version of ${PN}."
 		eerror "Please use a previous version of ${PN} or a newer kernel."
+		die
+	fi
+	if kernel_is gt 3 10 ; then
+		eerror "Your kernel version is not supported by this version of ${PN}."
+		eerror "Please use a newer version for kernels 3.11 and above."
 		die
 	fi
 	linux-mod_pkg_setup

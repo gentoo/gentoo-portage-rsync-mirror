@@ -10,4 +10,4 @@ RDEPEND=kernel_linux? ( virtual/modutils )
 SLOT=0
 SRC_URI=http://www.linux-phc.org/forum/download/file.php?id=94 -> phc-intel-0.3.2.12.1.tar.bz2
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	linux-mod	708d6a92c561743e612fca9d8fde5309	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=2a4642df39c06b5fc4bf14bec75db3a2
+_md5_=32b85ffd43fdb46c44becc53f4f8839f
