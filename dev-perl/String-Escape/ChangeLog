@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/String-Escape
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Escape/ChangeLog,v 1.1 2013/09/06 03:51:01 patrick Exp $
+
+*String-Escape-2010.002 (06 Sep 2013)
+
+  06 Sep 2013; Patrick Lauer <patrick@gentoo.org>
+  +String-Escape-2010.002.ebuild, +metadata.xml:
+  Import from perl-experimental overlay, dependency of app-admin/rex
