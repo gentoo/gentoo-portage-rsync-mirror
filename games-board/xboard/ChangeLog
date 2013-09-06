@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.54 2013/09/06 16:40:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.55 2013/09/06 19:02:19 hasufell Exp $
+
+  06 Sep 2013; Julian Ospald <hasufell@gentoo.org> xboard-4.7.2.ebuild:
+  fix nls deps
 
 *xboard-4.7.2 (06 Sep 2013)
 
