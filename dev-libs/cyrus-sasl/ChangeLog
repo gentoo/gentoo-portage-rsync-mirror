@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.294 2013/08/06 12:36:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.295 2013/09/05 23:10:12 radhermit Exp $
+
+  05 Sep 2013; Tim Harder <radhermit@gentoo.org> -cyrus-sasl-2.1.23-r6.ebuild,
+  -cyrus-sasl-2.1.25-r4.ebuild, -cyrus-sasl-2.1.26-r1.ebuild,
+  -cyrus-sasl-2.1.26-r2.ebuild:
+  Remove old.
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> cyrus-sasl-2.1.23-r7.ebuild,
   cyrus-sasl-2.1.26-r3.ebuild:
