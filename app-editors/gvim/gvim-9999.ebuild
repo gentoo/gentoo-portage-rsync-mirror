@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.6 2013/08/18 18:34:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.7 2013/09/06 07:32:35 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -25,37 +25,42 @@ HOMEPAGE="http://www.vim.org/"
 
 SLOT="0"
 LICENSE="vim"
-IUSE="X acl aqua cscope debug gnome gpm gtk lua luajit minimal motif neXt netbeans nls perl python ruby"
+IUSE="acl aqua cscope debug gnome gtk lua luajit motif neXt netbeans nls perl python ruby"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-RDEPEND=">=app-admin/eselect-vi-1.1
+RDEPEND="~app-editors/vim-core-${PV}
+	>=app-admin/eselect-vi-1.1
 	>=sys-libs/ncurses-5.2-r2
-	nls? ( virtual/libintl )
+	x11-libs/libXext
 	acl? ( kernel_linux? ( sys-apps/acl ) )
+	!aqua? (
+		gtk? (
+			>=x11-libs/gtk+-2.6:2
+			x11-libs/libXft
+			gnome? ( >=gnome-base/libgnomeui-2.6 )
+		)
+		!gtk? (
+			motif? ( >=x11-libs/motif-2.3:0 )
+			!motif? (
+				neXt? ( x11-libs/neXtaw )
+				!neXt? ( x11-libs/libXaw )
+			)
+		)
+	)
 	cscope? ( dev-util/cscope )
-	gpm? ( >=sys-libs/gpm-1.19.3 )
 	lua? (
 		luajit? ( dev-lang/luajit )
 		!luajit? ( dev-lang/lua )
 	)
-	!minimal? (
-		~app-editors/vim-core-${PV}
-		dev-util/ctags
-	)
+	nls? ( virtual/libintl )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
-	ruby? ( || ( dev-lang/ruby:2.0 dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) )
-	X? ( x11-libs/libXt )"
+	ruby? ( || ( dev-lang/ruby:2.0 dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) )"
 DEPEND="${RDEPEND}
 	>=app-admin/eselect-vi-1.1
 	dev-util/ctags
 	sys-devel/autoconf
-	>=sys-libs/ncurses-5.2-r2
-	!aqua? (
-		gtk? (
-			virtual/pkgconfig
-		)
-	)
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/vim${VIM_VERSION/.}
@@ -165,10 +170,9 @@ src_configure() {
 
 	use debug && append-flags "-DDEBUG"
 
-	myconf="--with-features=huge --enable-multibyte"
+	myconf="--with-features=huge --disable-gpm --enable-multibyte"
 	myconf+=" $(use_enable acl)"
 	myconf+=" $(use_enable cscope)"
-	myconf+=" $(use_enable gpm)"
 	myconf+=" $(use_enable nls)"
 	myconf+=" $(use_enable perl perlinterp)"
 
@@ -362,7 +366,7 @@ src_install() {
 	rm -f "${ED}"/usr/share/man/man1/{ex,view}.1
 }
 
-vim_pkg_postinst() {
+pkg_postinst() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
 
@@ -389,7 +393,7 @@ vim_pkg_postinst() {
 	update_vim_symlinks
 }
 
-vim_pkg_postrm() {
+pkg_postrm() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
 

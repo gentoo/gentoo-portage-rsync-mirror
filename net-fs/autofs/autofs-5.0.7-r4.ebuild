@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r4.ebuild,v 1.4 2013/09/05 16:01:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.7-r4.ebuild,v 1.5 2013/09/06 07:31:38 pinkbyte Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils linux-info multilib systemd
+inherit autotools-utils linux-info multilib systemd toolchain-funcs
 
 PATCH_VER=3
 [[ -n ${PATCH_VER} ]] && \
@@ -80,6 +80,8 @@ src_prepare() {
 }
 
 src_configure() {
+	# bug #483716
+	tc-export AR
 	# --with-confdir is for bug #361481
 	# --with-mapdir is for bug #385113
 	local myeconfargs=(
@@ -97,6 +99,7 @@ src_configure() {
 		--enable-ignore-busy
 		--with-systemd
 		systemddir="$(systemd_get_unitdir)" #bug #479492
+		RANLIB="$(type -P $(tc-getRANLIB))" # bug #483716
 	)
 	autotools-utils_src_configure
 }
