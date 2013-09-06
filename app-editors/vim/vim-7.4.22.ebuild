@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.22.ebuild,v 1.1 2013/09/06 06:23:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-7.4.22.ebuild,v 1.2 2013/09/06 06:45:52 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -329,7 +329,7 @@ src_install() {
 	rm -f "${ED}"/usr/share/man/man1/{ex,view}.1
 }
 
-vim_pkg_postinst() {
+pkg_postinst() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
 
@@ -359,7 +359,7 @@ vim_pkg_postinst() {
 	update_vim_symlinks
 }
 
-vim_pkg_postrm() {
+pkg_postrm() {
 	# Update documentation tags (from vim-doc.eclass)
 	update_vim_helptags
 
