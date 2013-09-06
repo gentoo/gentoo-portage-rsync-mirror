@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.46 2013/07/13 12:09:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.47 2013/09/06 14:03:50 jer Exp $
+
+  06 Sep 2013; Jeroen Roovers <jer@gentoo.org> at-3.1.13-r2.ebuild:
+  Stable for HPPA (bug #480116).
 
   13 Jul 2013; Pacho Ramos <pacho@gentoo.org> +files/atd.service,
   at-3.1.13-r2.ebuild:
