@@ -1,6 +1,24 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.75 2013/08/03 20:41:16 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.78 2013/09/06 13:10:15 aidecoe Exp $
+
+  06 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.16.ebuild:
+  Removing old revision of 0.16 version.
+
+*notmuch-0.16-r1 (06 Sep 2013)
+
+  06 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +notmuch-0.16-r1.ebuild:
+  Bumping 0.16 to r1 to enforce rebuild for ~arch users. It rels bug #483988.
+
+  Stable users should not be affected by the bug.
+
+  06 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  notmuch-0.10.2-r3.ebuild, notmuch-0.11.1-r3.ebuild, notmuch-0.12.ebuild,
+  notmuch-0.13.1.ebuild, notmuch-0.14-r1.ebuild, notmuch-0.15.2.ebuild,
+  notmuch-0.16.ebuild:
+  Block >=xapian-1.3 for notmuch, because half of tests fail with new xapian.
+  It rels bug #483988.
 
 *notmuch-0.16 (03 Aug 2013)
 
