@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.136 2013/09/02 11:11:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.137 2013/09/06 18:33:17 ago Exp $
+
+  06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> hddtemp-0.3_beta15-r6.ebuild:
+  Stable for sparc, wrt bug #480036
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> hddtemp-0.3_beta15-r6.ebuild:
   Stable for alpha, wrt bug #480036

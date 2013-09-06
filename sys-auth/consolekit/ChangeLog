@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.165 2013/08/29 19:47:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.166 2013/09/06 18:33:32 ago Exp $
+
+  06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> consolekit-0.4.6.ebuild:
+  Stable for sparc, wrt bug #480028
 
   29 Aug 2013; Agostino Sarubbo <ago@gentoo.org> consolekit-0.4.6.ebuild:
   Stable for ia64, wrt bug #480028

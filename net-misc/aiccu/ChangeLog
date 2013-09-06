@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.49 2013/08/18 13:46:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.50 2013/09/06 18:35:35 ago Exp $
+
+  06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> aiccu-2007.01.15-r4.ebuild:
+  Stable for sparc, wrt bug #480088
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> aiccu-2007.01.15-r4.ebuild:
   Stable for x86, wrt bug #480088
