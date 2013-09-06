@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.101 2013/09/04 18:43:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.102 2013/09/06 16:39:48 dilfridge Exp $
+
+  06 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.5.ebuild:
+  OpenCV-2.4.5 only works with CUDA 5.0 or lower, bug 483634
 
 *opencv-2.4.6.1 (04 Sep 2013)
 

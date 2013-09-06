@@ -1,0 +1,37 @@
+commit adcbc6072fa0d1a9bf84e018f04b1c18dfedab5c
+Author: hasufell <hasufell@gentoo.org>
+Date:   Fri Sep 6 16:56:15 2013 +0200
+
+    BUILD: fix configure switches
+
+	https://savannah.gnu.org/bugs/?39971
+
+diff --git a/configure.ac b/configure.ac
+index 0a24161..1664491 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -138,18 +138,18 @@ FRONTEND_LIBS=""
+ 
+ AC_ARG_WITH([gtk],
+             [AS_HELP_STRING([--with-gtk],[use GTK front-end (experimental)])],
+-            [with_GTK=yes],
+-            [with_GTK=no])
++            [with_GTK=$withval],
++            [with_GTK="no"])
+ 
+ AC_ARG_WITH([Xaw3d],
+             [AS_HELP_STRING([--with-Xaw3d],[use Xaw3d front-end (not fully supported anymore)])],
+-            [with_Xaw3d=yes],
+-            [with_Xaw3d=no])
++            [with_Xaw3d="$withval"],
++            [with_Xaw3d="no"])
+ 
+ AC_ARG_WITH([Xaw],
+             [AS_HELP_STRING([--with-Xaw],[use Xaw front-end (default)])],
+-            [with_Xaw=yes],
+-            [with_Xaw=no])
++            [with_Xaw="$withval"],
++            [with_Xaw="no"])
+ 
+ AC_ARG_WITH([iconsdir],
+ 			[AS_HELP_STRING([--with-iconsdir=DIR],

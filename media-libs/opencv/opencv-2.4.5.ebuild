@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.5.ebuild,v 1.6 2013/08/27 20:33:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.5.ebuild,v 1.7 2013/09/06 16:39:49 dilfridge Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.6"
@@ -20,7 +20,7 @@ RDEPEND="
 	app-arch/bzip2
 	dev-python/numpy
 	sys-libs/zlib
-	cuda? ( >=dev-util/nvidia-cuda-toolkit-4.2 )
+	cuda? ( <dev-util/nvidia-cuda-toolkit-5.5 )
 	eigen? ( dev-cpp/eigen:2 )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (

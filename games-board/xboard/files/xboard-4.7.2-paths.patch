@@ -1,0 +1,149 @@
+commit 3c112927b309889c14f8164a58020d1ddefd58d6
+Author: hasufell <hasufell@gentoo.org>
+Date:   Fri Sep 6 16:35:03 2013 +0200
+
+    BUILD: make paths modifiable
+    
+    This can help with setups where games are installed in their
+    own location, but system data files like desktopfiles
+    should still go to /usr/share.
+
+	https://savannah.gnu.org/bugs/index.php?39969
+
+diff --git a/Makefile.am b/Makefile.am
+index 61aa1d7..25f1138 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -84,24 +84,26 @@ sysconf_DATA = xboard.conf
+ 
+ ### icon files
+ 
+-icondir = $(datadir)/icons/hicolor/48x48/apps
++icondir = @ICONSDIR@
+ dist_icon_DATA = xboard.png
+-svgicondir = $(datadir)/icons/hicolor/scalable/apps
++svgicondir = @SVGICONSDIR@
+ dist_svgicon_DATA = xboard.svg
+ 
+ 
+ ### desktop files for KDE and gnome
+ 
+-Applicationsdir = $(datadir)/applications
++Applicationsdir = @DESKTOPDIR@
+ Applications_DATA = xboard.desktop xboard-fen-viewer.desktop  xboard-pgn-viewer.desktop  xboard-tourney.desktop  xboard-config.desktop
+ 
+ ### mime file
+-mimedir = $(datadir)/mime/packages
++mimedir = @MIMEDIR@
+ mime_DATA = xboard.xml
+ 
++gamedatadir = @GAMEDATADIR@
++
+ ### directory and files for svgs
+ 
+-svgdir = $(datadir)/games/xboard/themes/default
++svgdir = $(gamedatadir)/themes/default
+ dist_svg_DATA = svg/icon_white.svg         svg/icon_black.svg      \
+            svg/BlackAdvisor.svg       svg/WhiteAdvisor.svg    \
+            svg/BlackArchbishop.svg    svg/WhiteArchbishop.svg  \
+@@ -134,7 +136,7 @@ dist_svg_DATA = svg/icon_white.svg         svg/icon_black.svg      \
+            svg/eo_Thinking.svg      svg/eo_Unknown.svg        \
+            svg/eo_White.svg
+ 
+-shogidir = $(datadir)/games/xboard/themes/shogi
++shogidir = $(gamedatadir)/themes/shogi
+ dist_shogi_DATA = \
+            themes/shogi/WhiteGold.svg        themes/shogi/WhiteCrownedBishop.svg\
+            themes/shogi/WhiteBishop.svg      themes/shogi/WhiteKing.svg\
+@@ -151,7 +153,7 @@ dist_shogi_DATA = \
+            themes/shogi/BlackRook.svg        themes/shogi/BlackCrownedRook.svg\
+            themes/shogi/BlackAdvisor.svg     themes/shogi/BlackGoldSilver.svg
+ 
+-xiangqidir = $(datadir)/games/xboard/themes/xiangqi
++xiangqidir = $(gamedatadir)/themes/xiangqi
+ dist_xiangqi_DATA = themes/xiangqi/BlackAdvisor.svg  themes/xiangqi/WhiteAdvisor.svg \
+            themes/xiangqi/BlackCanon.svg    themes/xiangqi/WhiteCanon.svg    \
+            themes/xiangqi/BlackElephant.svg themes/xiangqi/WhiteElephant.svg \
+@@ -162,17 +164,17 @@ dist_xiangqi_DATA = themes/xiangqi/BlackAdvisor.svg  themes/xiangqi/WhiteAdvisor
+ 
+ ### directory and files for pixmaps
+ 
+-pixmapsdir = $(datadir)/games/xboard/pixmaps/textures
++pixmapsdir = $(gamedatadir)/pixmaps/textures
+ dist_pixmaps_DATA = pixmaps/cross32.xpm pixmaps/cross48.xpm pixmaps/board32.xpm pixmaps/board48.xpm pixmaps/ini32.xpm pixmaps/ini48.xpm
+ 
+ ### directory and files for pngs
+ 
+-pngdir = $(datadir)/games/xboard/themes/textures
++pngdir = $(gamedatadir)/themes/textures
+ dist_png_DATA = png/hatch.png png/wood_d.png png/wood_l.png png/xqboard.png
+ 
+ ### directory and files for sound files
+ 
+-soundsdir = $(datadir)/games/xboard/sounds
++soundsdir = $(gamedatadir)/sounds
+ dist_sounds_DATA = \
+   sounds/cymbal.wav     sounds/pop2.wav   sounds/slap.wav     sounds/ding1.wav      sounds/laser.wav \
+   sounds/woodthunk.wav  sounds/gong.wav   sounds/penalty.wav  sounds/honkhonk.wav   sounds/phone.wav
+diff --git a/configure.ac b/configure.ac
+index d7a6381..2a69733 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -151,6 +151,42 @@
+             [with_Xaw="$withval"],
+             [with_Xaw="no"])
+ 
++AC_ARG_WITH([iconsdir],
++			[AS_HELP_STRING([--with-iconsdir=DIR],
++							[path where icons get installed (default: $datadir/icons/hicolor/48x48/apps)])],
++			[ICONSDIR="$withval"],
++			[ICONSDIR="$datadir/icons/hicolor/48x48/apps"])
++
++AC_ARG_WITH([svgiconsdir],
++			[AS_HELP_STRING([--with-svgiconsdir=DIR],
++							[path where svg icons get installed (default: $datadir/icons/hicolor/scalable/apps)])],
++			[SVGICONSDIR="$withval"],
++			[SVGICONSDIR="$datadir/icons/hicolor/scalable/apps"])
++
++AC_ARG_WITH([desktopdir],
++			[AS_HELP_STRING([--with-desktopdir=DIR],
++							[path where desktop files get installed (default: $datadir/applications)])],
++			[DESKTOPDIR="$withval"],
++			[DESKTOPDIR="$datadir/applications"])
++
++AC_ARG_WITH([mimedir],
++			[AS_HELP_STRING([--with-mimedir=DIR],
++							[path where mime files get installed (default: $datadir/mime/packages)])],
++			[MIMEDIR="$withval"],
++			[MIMEDIR="$datadir/mime/packages"])
++
++AC_ARG_WITH([gamedatadir],
++			[AS_HELP_STRING([--with-gamedatadir=DIR],
++							[path where game data files get installed (default: $datadir/games/xboard)])],
++			[GAMEDATADIR="$withval"],
++			[GAMEDATADIR="$datadir/games/xboard"])
++
++AC_SUBST(ICONSDIR)
++AC_SUBST(SVGICONSDIR)
++AC_SUBST(DESKTOPDIR)
++AC_SUBST(MIMEDIR)
++AC_SUBST(GAMEDATADIR)
++
+ dnl | check for libraries
+ if test x"$with_GTK" = x"yes" ; then
+   PKG_CHECK_MODULES([GTK], [ gtk+-2.0 >= 2.16.0 gmodule-2.0 ])
+@@ -515,8 +551,12 @@
+ echo ""
+ echo "        prefix:          $prefix       "
+ echo "        datarootdir:     $datarootdir  "
+-echo "        datadir:         $datadir   (icons will go in \$datadir/icons/hicolor/...)"
+-echo "                                    (bitmaps will go in \$datadir/games/xboard/...)"
++echo "        datadir:         $datadir      "
++echo "        gamedatadir:     $GAMEDATADIR  "
++echo "        desktopdir:      $DESKTOPDIR   "
++echo "        mimedir:         $MIMEDIR      "
++echo "        iconsdir:        $ICONSDIR     "
++echo "        svgiconsdir:     $SVGICONSDIR  "
+ echo "        infodir:         $infodir   (info files will go here)"
+ echo "        sysconfdir:      $sysconfdir   (xboard.conf will go here)"
+ echo ""

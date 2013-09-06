@@ -1,6 +1,14 @@
 # ChangeLog for games-board/xboard
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.53 2012/07/16 19:05:51 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.54 2013/09/06 16:40:27 hasufell Exp $
+
+*xboard-4.7.2 (06 Sep 2013)
+
+  06 Sep 2013; Julian Ospald <hasufell@gentoo.org> +xboard-4.7.2.ebuild,
+  +files/xboard-4.7.2-configure-switches.patch,
+  +files/xboard-4.7.2-gettext.patch,
+  +files/xboard-4.7.2-gnuchess-default.patch, +files/xboard-4.7.2-paths.patch:
+  version bump
 
   16 Jul 2012; Michael Sterrett <mr_bones_@gentoo.org>
   -files/xboard-4.5.3a-gentoo.patch, -files/xboard-4.6.0-gentoo.patch,
