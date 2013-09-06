@@ -1,6 +1,18 @@
 # ChangeLog for x11-wm/icewm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.150 2012/10/07 10:25:13 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.151 2013/09/06 21:17:59 pacho Exp $
+
+*icewm-1.3.7-r1 (06 Sep 2013)
+
+  06 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/icewm,
+  +files/icewm-1.3.7-configurenotify.patch, +files/icewm-1.3.7-deprecated.patch,
+  +files/icewm-1.3.7-dso.patch, +files/icewm-1.3.7-menuiconsize.patch,
+  +files/icewm-1.3.7-thermal.patch, +files/icewm-defaults.patch,
+  +files/icewm-fribidi.patch, +files/icewm-keys.patch, +files/icewm-menu.patch,
+  +files/icewm-startup, +files/icewm-toolbar.patch, +files/icewm-wmclient.patch,
+  +files/icewm-xdg-menu, +icewm-1.3.7-r1.ebuild:
+  Use Fedora patches to fix a lot if bugs, also menu handling. Fix thermal
+  information handling (#452730 by Dag Bakke).
 
   07 Oct 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +files/icewm-1.3.7-gcc47.patch, icewm-1.3.7.ebuild:

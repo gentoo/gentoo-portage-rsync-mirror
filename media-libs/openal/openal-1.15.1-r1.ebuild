@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.1 2013/09/06 20:02:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.2 2013/09/06 21:14:10 axs Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -21,8 +21,6 @@ RDEPEND="alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
 	portaudio? ( >=media-libs/portaudio-19_pre[${MULTILIB_USEDEP}] )
 	pulseaudio? ( media-sound/pulseaudio )
 	abi_x86_32? (
-		alsa? ( !<app-emulation/emul-linux-x86-soundlibs-20130224-r4 )
-		portaudio? ( !<app-emulation/emul-linux-x86-soundlibs-20130224-r9 )
 		amd64? (
 			alstream? ( app-emulation/emul-linux-x86-medialibs )
 			pulseaudio? ( app-emulation/emul-linux-x86-soundlibs )
