@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.6.0.ebuild,v 1.3 2013/09/05 18:20:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.6.0.ebuild,v 1.4 2013/09/06 15:27:14 cardoe Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.qemu.org http://www.linux-kvm.org"
 
 LICENSE="GPL-2 LGPL-2 BSD-2"
 SLOT="0"
-IUSE="accessibility +aio alsa bluetooth +caps +curl debug fdt glusterfs \
+IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
 gtk iscsi +jpeg \
 kernel_linux kernel_FreeBSD mixemu ncurses opengl +png pulseaudio python \
 rbd sasl +seccomp sdl selinux smartcard spice static static-softmmu \
@@ -59,6 +59,10 @@ REQUIRED_USE="${REQUIRED_USE} )"
 # Block USE flag configurations known to not work
 REQUIRED_USE="${REQUIRED_USE}
 	python? ( ${PYTHON_REQUIRED_USE} )
+	qemu_softmmu_targets_arm? ( fdt )
+	qemu_softmmu_targets_microblaze? ( fdt )
+	qemu_softmmu_targets_ppc? ( fdt )
+	qemu_softmmu_targets_ppc64? ( fdt )
 	static? ( static-softmmu static-user )
 	static-softmmu? ( !alsa !pulseaudio !bluetooth !opengl !gtk )
 	virtfs? ( xattr )"

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.239 2013/09/05 18:20:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.240 2013/09/06 15:27:14 cardoe Exp $
+
+  06 Sep 2013; Doug Goldstein <cardoe@gentoo.org> qemu-1.6.0.ebuild:
+  arm, microblaze, ppc, and ppc64 softmmu targets require USE=fdt, patch from
+  Mike Gilbert <floppym@gentoo.org> fixes bug #482878
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> qemu-1.4.2.ebuild,
   qemu-1.5.2-r1.ebuild, qemu-1.5.2-r2.ebuild, qemu-1.5.3.ebuild,
