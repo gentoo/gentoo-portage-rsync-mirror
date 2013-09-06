@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.4.ebuild,v 1.10 2010/09/19 19:34:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bridge-utils/bridge-utils-1.4.ebuild,v 1.11 2013/09/06 06:00:31 robbat2 Exp $
 
 inherit toolchain-funcs eutils autotools linux-info
 
@@ -47,6 +47,7 @@ src_install () {
 	emake install DESTDIR="${D}" || die "make install failed"
 	dodoc AUTHORS ChangeLog README THANKS TODO
 	dodoc doc/{FAQ,FIREWALL,HOWTO,PROJECTS,RPM-GPG-KEY,SMPNOTES,WISHLIST}
+	[ -f "${D}"/sbin/brctl ] || die "upstream makefile failed to install binary"
 }
 
 pkg_postinst () {
