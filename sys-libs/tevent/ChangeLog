@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tevent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.52 2013/09/06 16:04:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.53 2013/09/06 20:08:35 maekke Exp $
+
+  06 Sep 2013; Markus Meier <maekke@gentoo.org> tevent-0.9.19.ebuild:
+  arm stable, bug #478260
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tevent-0.9.19.ebuild:
   Stable for sparc, wrt bug #478260
