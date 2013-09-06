@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.26.0.ebuild,v 1.11 2012/09/06 10:28:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.26.0.ebuild,v 1.12 2013/09/06 17:26:15 blueness Exp $
 
 EAPI="4"
 
+WANT_AUTOMAKE="1.12"
 inherit autotools eutils prefix
 
 DESCRIPTION="A Client that groks URLs"

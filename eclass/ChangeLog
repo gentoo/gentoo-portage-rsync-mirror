@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.949 2013/09/05 22:40:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.950 2013/09/06 17:11:52 axs Exp $
+
+  06 Sep 2013; Ian Stakenvicius <axs@gentoo.org> cmake-multilib.eclass:
+  added multilib_*_wrappers calls to cmake-multilib.eclass
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Do not pass --depth when updating a branch, it trrigers issues in git.
@@ -34,6 +37,9 @@
 
   28 Aug 2013; Tom Wijsman <TomWij@gentoo.org> ant-tasks.eclass:
   Made ant-tasks.eclass support newer versions of the 1.9 branch.
+
+  28 Aug 2013; Ian Stakenvicius <axs@gentoo.org> mozconfig-3.eclass:
+  pegged virtual/jpeg at slot 0 in mozconfig-3.eclass
 
   27 Aug 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
   Enable EAPI=4 on python-r1.
