@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/cwdiff-0.2.4.ebuild,v 1.1 2013/08/31 19:39:41 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cwdiff/cwdiff-0.2.5.ebuild,v 1.1 2013/09/06 22:45:00 ottxor Exp $
 
 EAPI=5
 
-DESCRIPTION="Colorizes output of (w)diff"
+DESCRIPTION="A script that wraps wdiff to support directories and colorize the output"
 HOMEPAGE="http://code.google.com/p/cj-overlay/source/browse/cwdiff?repo=evergreens"
 SRC_URI="http://cj-overlay.googlecode.com/files/${P}.tar.gz"
 RESTRICT="primaryuri"
