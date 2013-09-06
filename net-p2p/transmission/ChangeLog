@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.238 2013/08/05 15:23:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.239 2013/09/06 11:49:29 ssuominen Exp $
+
+*transmission-2.82 (06 Sep 2013)
+
+  06 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> +transmission-2.82.ebuild:
+  Version bump. Remove USE="qt4" because upstream removed support for Qt 4.x in
+  favour of Qt 5.x, which isn't in Portage yet.
 
   05 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
   transmission-2.77-r1.ebuild, transmission-2.81.ebuild:
