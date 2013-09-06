@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.09.ebuild,v 1.2 2013/08/27 14:58:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.10.ebuild,v 1.1 2013/09/06 00:53:53 tgurr Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ GSDJVU_PV=1.6
 PVM=$(get_version_component_range 1-2)
 SRC_URI="
 	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-patchset-1.tar.bz2
+	mirror://gentoo/${PN}-9.09-patchset-1.tar.bz2
 	!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )"
 
 LICENSE="AGPL-3 CPL-1.0"
