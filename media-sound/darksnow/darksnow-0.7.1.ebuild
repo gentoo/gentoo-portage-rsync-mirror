@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.7.1.ebuild,v 1.4 2013/08/19 13:57:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.7.1.ebuild,v 1.5 2013/09/06 14:59:02 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://darksnow.radiolivre.org/pacotes/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 PDEPEND=">=media-sound/darkice-1.2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.4.ebuild,v 1.5 2013/09/05 19:23:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-2.4.ebuild,v 1.6 2013/09/06 14:59:58 ago Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
 	SRC_URI="https://01.org/powertop/sites/default/files/downloads/${P}.tar.gz"
-	KEYWORDS="amd64 ~arm ppc ~sparc x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~arm ppc sparc x86 ~amd64-linux ~x86-linux"
 fi
 
 DESCRIPTION="tool that helps you find what software is using the most power"

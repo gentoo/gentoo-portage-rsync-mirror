@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6-r1.ebuild,v 1.7 2013/08/31 08:36:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6-r1.ebuild,v 1.8 2013/09/06 14:57:11 ago Exp $
 
 inherit eutils flag-o-matic libtool multilib
 
@@ -116,7 +116,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-${PV}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="5"
-KEYWORDS="amd64 ~arm hppa ~mips ppc -ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa ~mips ppc -ppc64 sparc ~x86 ~x86-fbsd"
 IUSE="multilib nls"
 
 S=${WORKDIR}/gcc-${PV}

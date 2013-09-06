@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-1.2.ebuild,v 1.7 2013/08/19 13:57:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-1.2.ebuild,v 1.8 2013/09/06 14:58:54 ago Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://darkice.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ~sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="aac aacplus alsa debug jack libsamplerate mp3 opus pulseaudio twolame vorbis"
 
 RDEPEND="aac? ( media-libs/faac )

@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.115 2013/09/03 19:30:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.116 2013/09/06 14:57:25 ago Exp $
+
+  06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> sendmail-8.14.7.ebuild:
+  Stable for sparc, wrt bug #477622
 
 *sendmail-8.14.7-r1 (03 Sep 2013)
 
