@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.213 2013/09/05 19:44:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.214 2013/09/06 20:40:10 hwoarang Exp $
+
+  06 Sep 2013; Markos Chandras <hwoarang@gentoo.org> qbittorrent-3.0.11.ebuild:
+  amd64/x86 stable
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> qbittorrent-3.0.11.ebuild,
   qbittorrent-9999.ebuild:

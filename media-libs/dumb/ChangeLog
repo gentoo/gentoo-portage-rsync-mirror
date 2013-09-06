@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/dumb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.39 2011/08/09 12:28:53 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dumb/ChangeLog,v 1.40 2013/09/06 20:33:19 axs Exp $
+
+*dumb-0.9.3-r2 (06 Sep 2013)
+
+  06 Sep 2013; Ian Stakenvicius <axs@gentoo.org> +dumb-0.9.3-r2.ebuild:
+  converted to support multilib-build; commit OKd by Joker
 
   09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> dumb-0.9.3-r1.ebuild:
   ppc64 stable wrt #375491

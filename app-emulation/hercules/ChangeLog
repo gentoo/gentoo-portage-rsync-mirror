@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/hercules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.36 2013/08/27 16:29:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.37 2013/09/06 20:35:59 vapier Exp $
+
+  06 Sep 2013; Mike Frysinger <vapier@gentoo.org>
+  files/hercules-3.09-aliasing.patch:
+  Fix typo pointed out by Roger Bowler.
 
 *hercules-3.09 (27 Aug 2013)
 
