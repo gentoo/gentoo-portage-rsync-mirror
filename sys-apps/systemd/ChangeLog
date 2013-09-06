@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.168 2013/08/28 11:01:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.169 2013/09/06 19:58:12 pacho Exp $
+
+  06 Sep 2013; Pacho Ramos <pacho@gentoo.org> systemd-204.ebuild,
+  systemd-206-r3.ebuild:
+  Check for TMPFS_POSIX_ACL when needed (#482336#c24 by Alexander Tsoy)
 
   28 Aug 2013; Pacho Ramos <pacho@gentoo.org> systemd-204.ebuild,
   systemd-206-r3.ebuild:

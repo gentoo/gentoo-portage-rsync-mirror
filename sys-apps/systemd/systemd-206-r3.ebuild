@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206-r3.ebuild,v 1.6 2013/08/28 11:01:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-206-r3.ebuild,v 1.7 2013/09/06 19:58:12 pacho Exp $
 
 EAPI=5
 
@@ -79,6 +79,7 @@ pkg_pretend() {
 		~SYSFS ~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 #		~!FW_LOADER_USER_HELPER"
 
+	use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
 	use pam && CONFIG_CHECK+=" ~AUDITSYSCALL"
 
 	# read null-terminated argv[0] from PID 1

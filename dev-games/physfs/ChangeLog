@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.55 2013/01/22 18:02:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.56 2013/09/06 19:45:00 axs Exp $
+
+*physfs-2.0.3-r1 (06 Sep 2013)
+
+  06 Sep 2013; Ian Stakenvicius <axs@gentoo.org> +physfs-2.0.3-r1.ebuild:
+  converted to support multilib-build; commit OKd by radhermit
 
   22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -physfs-2.0.1.ebuild,
   -physfs-2.0.2-r1.ebuild:

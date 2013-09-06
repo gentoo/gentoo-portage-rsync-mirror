@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/arno-iptables-firewall
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/arno-iptables-firewall/ChangeLog,v 1.7 2013/05/18 09:09:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/arno-iptables-firewall/ChangeLog,v 1.8 2013/09/06 19:54:18 pacho Exp $
+
+*arno-iptables-firewall-2.0.1d-r2 (06 Sep 2013)
+
+  06 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  +arno-iptables-firewall-2.0.1d-r2.ebuild,
+  +files/arno-iptables-firewall.service:
+  Add unit file (#483602 by Ferenc Erki)
 
 *arno-iptables-firewall-2.0.1d-r1 (18 May 2013)
 

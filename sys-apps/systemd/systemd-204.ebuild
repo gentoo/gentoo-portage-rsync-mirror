@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-204.ebuild,v 1.11 2013/08/28 11:01:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-204.ebuild,v 1.12 2013/09/06 19:58:12 pacho Exp $
 
 EAPI=5
 
@@ -72,6 +72,8 @@ pkg_pretend() {
 		~FANOTIFY ~HOTPLUG ~INOTIFY_USER ~IPV6 ~NET ~PROC_FS ~SIGNALFD
 		~SYSFS ~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 #		~!FW_LOADER_USER_HELPER"
+
+	use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
 
 	# read null-terminated argv[0] from PID 1
 	# and see which path to systemd was used (if any)
