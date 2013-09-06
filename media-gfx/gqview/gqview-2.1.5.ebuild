@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.16 2012/07/26 18:41:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-2.1.5.ebuild,v 1.17 2013/09/06 17:40:43 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A GTK-based image browser"
 HOMEPAGE="http://gqview.sourceforge.net/"
@@ -22,13 +22,16 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-windows.patch"
+	epatch \
+		"${FILESDIR}/${P}-windows.patch" \
+		"${FILESDIR}/${P}-glibc.patch"
 	sed -i \
 		-e '/^Encoding/d' \
 		-e '/^Icon/s/\.png//' \
 		-e '/^Categories/s/Application;//' \
 		gqview.desktop \
 		|| die
+	eautoreconf
 }
 
 src_configure() {

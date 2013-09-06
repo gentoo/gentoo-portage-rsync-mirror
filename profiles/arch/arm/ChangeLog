@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.268 2013/08/31 15:38:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.269 2013/09/06 17:48:47 pinkbyte Exp $
+
+  06 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask USE-flag hdf on dev-perl/PDL
 
   31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
   Remove games USE-flag mask for gnome-base/gnome-extra-apps, bug #476710
