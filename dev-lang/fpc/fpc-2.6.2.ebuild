@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.2.ebuild,v 1.5 2013/09/04 07:57:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.6.2.ebuild,v 1.6 2013/09/06 18:11:24 radhermit Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/freepascal/fpcbuild-${PV}.tar.gz
 	arm? ( mirror://sourceforge/freepascal/${P}.arm-linux.tar )
 	ppc? ( mirror://sourceforge/freepascal/${P}.powerpc-linux.tar )
 	ppc64? ( mirror://sourceforge/freepascal/${P}.powerpc64-linux.tar )
-	sparc? ( mirror://sourceforge/freepascal/${PN}-2.2.4.sparc-linux.tar )
+	sparc? ( mirror://sourceforge/freepascal/${P}.sparc-linux.tar )
 	x86? ( mirror://sourceforge/freepascal/${P}.i386-linux.tar )
 	doc? ( mirror://sourceforge/freepascal/Documentation/${PV}/doc-html.tar.gz -> ${P}-doc-html.tar.gz
 		http://dev.gentoo.org/~radhermit/distfiles/${P}-fpctoc.htx.bz2 )"
@@ -46,7 +46,7 @@ src_unpack() {
 	arm)	FPC_ARCH="arm"       PV_BIN=${PV} ;;
 	ppc)	FPC_ARCH="powerpc"   PV_BIN=${PV} ;;
 	ppc64)	FPC_ARCH="powerpc64" PV_BIN=${PV} ;;
-	sparc)	FPC_ARCH="sparc"     PV_BIN=2.2.4 ;;
+	sparc)	FPC_ARCH="sparc"     PV_BIN=${PV} ;;
 	x86)	FPC_ARCH="i386"      PV_BIN=${PV} ;;
 	*)	die "This ebuild doesn't support ${ARCH}." ;;
 	esac

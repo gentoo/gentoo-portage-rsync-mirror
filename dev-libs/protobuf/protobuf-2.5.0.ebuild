@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.5.0.ebuild,v 1.4 2013/09/05 18:29:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.5.0.ebuild,v 1.5 2013/09/06 18:03:17 radhermit Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="source"
@@ -21,7 +21,8 @@ IUSE="emacs examples java python static-libs vim-syntax"
 CDEPEND="emacs? ( virtual/emacs )
 	python? ( ${PYTHON_DEPS} )"
 DEPEND="${CDEPEND}
-	java? ( >=virtual/jdk-1.5 )"
+	java? ( >=virtual/jdk-1.5 )
+	python? ( dev-python/setuptools[${PYTHON_USEDEP}] )"
 RDEPEND="${CDEPEND}
 	java? ( >=virtual/jre-1.5 )"
 
