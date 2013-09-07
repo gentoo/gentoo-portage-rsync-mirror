@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.599 2013/09/05 10:09:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.600 2013/09/07 14:50:08 tomwij Exp $
+
+  07 Sep 2013; Tom Wijsman <TomWij@gentoo.org> package.use.mask:
+  net-proxy/swiftiply: Dependency (www-servers/mongrel) currently only works
+  with Ruby 1.8; so, masking Ruby 1.9 USE flag until Ruby 1.9 support is added
+  to mongrel.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> package.use.force, use.mask:
   Python 2.5, 3.1, and PyPy 1.9 were removed from the tree.

@@ -1,10 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.511 2013/09/01 22:41:13 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.512 2013/09/07 14:50:08 tomwij Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Tom Wijsman <TomWij@gentoo.org> (7 Sep 2013)
+# Dependency (www-servers/mongrel) currently only
+# works with Ruby 1.8; so, masking Ruby 1.9 USE flag
+# until Ruby 1.9 support is added to mongrel.
+net-proxy/swiftiply ruby_targets_ruby19
 
 # Jeff Horelick <jdhore@gentoo.org> (1 Sep 2013)
 # Dependency (media-libs/libsidplayfp) only keyworded
