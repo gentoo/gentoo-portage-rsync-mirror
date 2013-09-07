@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.240 2013/09/06 18:21:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.242 2013/09/07 12:18:02 ssuominen Exp $
+
+*transmission-2.82-r2 (07 Sep 2013)
+
+  07 Sep 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +files/transmission-daemon.confd.4, +files/transmission-daemon.initd.9,
+  +transmission-2.82-r2.ebuild:
+  Use /var/lib/transmission instead of /var/transmission wrt #476802 by Michał
+  Górny
 
 *transmission-2.81-r1 (06 Sep 2013)
 *transmission-2.82-r1 (06 Sep 2013)
