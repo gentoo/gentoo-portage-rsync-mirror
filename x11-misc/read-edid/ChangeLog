@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/read-edid
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.26 2011/11/18 03:52:41 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.27 2013/09/07 15:27:55 jer Exp $
+
+*read-edid-3.0.0 (07 Sep 2013)
+
+  07 Sep 2013; Jeroen Roovers <jer@gentoo.org> +read-edid-3.0.0.ebuild,
+  +files/read-edid-3.0.0-include.patch, +files/read-edid-3.0.0-sharedir.patch:
+  Version bump.
 
   18 Nov 2011; Michael Weber <xmw@gentoo.org> -read-edid-2.0.0.ebuild:
   Remove old version
