@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Crypt-DES
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.32 2012/09/01 11:25:24 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.33 2013/09/07 18:26:33 zlogene Exp $
+
+*Crypt-DES-2.70.0 (07 Sep 2013)
+
+  07 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> +Crypt-DES-2.70.0.ebuild:
+  version bump, close bug #483670
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Crypt-DES-2.50.0.ebuild:
   Marked ~ppc-aix, bug #432288
