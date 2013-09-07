@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.273 2013/08/16 00:54:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.274 2013/09/07 23:01:12 floppym Exp $
+
+*grub-2.00_p5107-r1 (07 Sep 2013)
+
+  07 Sep 2013; Mike Gilbert <floppym@gentoo.org> +grub-2.00_p5107-r1.ebuild,
+  grub-9999.ebuild:
+  Drop the --with-grubdir=grub2 option and emit a warning on upgrades.
 
 *grub-2.00_p5107 (16 Aug 2013)
 
