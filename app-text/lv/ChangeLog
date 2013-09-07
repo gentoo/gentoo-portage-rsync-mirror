@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.46 2013/05/24 20:27:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.47 2013/09/07 19:53:25 slyfox Exp $
+
+  07 Sep 2013; Sergei Trofimovich <slyfox@gentoo.org> lv-4.51-r3.ebuild:
+  Add missing 'autotools' inherit for 'eautoreconf'.
 
   24 May 2013; Alexis Ballier <aballier@gentoo.org> lv-4.51-r3.ebuild:
   keyword ~amd64-fbsd thanks to Yuta SATOH , bug #432410
