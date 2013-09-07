@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.182 2013/09/05 12:19:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.183 2013/09/07 20:13:35 ago Exp $
+
+  07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fontconfig-2.10.92.ebuild:
+  Stable for sparc, wrt bug #481824
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fontconfig-2.10.92.ebuild:
   Stable for ppc64, wrt bug #481824

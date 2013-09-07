@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3backer/s3backer-1.3.3.ebuild,v 1.1 2012/08/23 15:48:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3backer/s3backer-1.3.7.ebuild,v 1.1 2013/09/07 20:02:15 radhermit Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit autotools
 
@@ -13,7 +13,6 @@ SRC_URI="http://s3backer.googlecode.com/files/s3backer-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 DEPEND="net-misc/curl
 	sys-fs/fuse
@@ -23,9 +22,9 @@ DEPEND="net-misc/curl
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i -e "/docdir=/s:packages/\$(PACKAGE):${PF}:" \
+	sed -e "/docdir=/s:packages/\$(PACKAGE):${PF}:" \
 		-e "/doc_DATA=/d" \
-		Makefile.am || die
+		-i Makefile.am || die
 
 	eautoreconf
 }

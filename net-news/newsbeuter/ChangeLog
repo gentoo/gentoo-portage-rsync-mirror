@@ -1,6 +1,11 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.47 2013/07/01 07:30:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.48 2013/09/07 20:08:33 radhermit Exp $
+
+*newsbeuter-2.7 (07 Sep 2013)
+
+  07 Sep 2013; Tim Harder <radhermit@gentoo.org> +newsbeuter-2.7.ebuild:
+  Version bump (fixes bug #475410).
 
   01 Jul 2013; Tim Harder <radhermit@gentoo.org> newsbeuter-2.6.ebuild:
   Simplify sed line.

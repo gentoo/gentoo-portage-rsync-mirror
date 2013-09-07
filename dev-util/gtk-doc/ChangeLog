@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.190 2013/09/05 13:25:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.191 2013/09/07 20:14:17 ago Exp $
+
+  07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.19.ebuild:
+  Stable for sparc, wrt bug #482886
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gtk-doc-1.19.ebuild:
   Stable for ppc64, wrt bug #482886

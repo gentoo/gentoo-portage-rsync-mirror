@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/trinity/trinity-9999.ebuild,v 1.1 2013/05/16 09:23:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/trinity/trinity-9999.ebuild,v 1.2 2013/09/07 20:24:10 radhermit Exp $
 
 EAPI=5
 
-inherit toolchain-funcs git-2
+inherit toolchain-funcs git-r3
 
 EGIT_REPO_URI="git://git.codemonkey.org.uk/trinity"
 
