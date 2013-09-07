@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/numpydoc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpydoc/ChangeLog,v 1.1 2013/08/17 23:19:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpydoc/ChangeLog,v 1.2 2013/09/07 18:53:59 floppym Exp $
+
+*numpydoc-0.4-r1 (07 Sep 2013)
+
+  07 Sep 2013; Mike Gilbert <floppym@gentoo.org> +numpydoc-0.4-r1.ebuild,
+  -numpydoc-0.4.ebuild:
+  Fix permissions on egg-info files.
 
 *numpydoc-0.4 (17 Aug 2013)
 

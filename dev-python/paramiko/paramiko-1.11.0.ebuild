@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.9.0-r1.ebuild,v 1.3 2013/09/05 18:46:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.11.0.ebuild,v 1.1 2013/09/07 18:35:35 radhermit Exp $
 
 EAPI=5
 
@@ -27,11 +27,7 @@ python_test() {
 
 python_install_all() {
 	use doc && local HTML_DOCS=( docs/. )
+	use examples && local EXAMPLES=( demos/. )
 
 	distutils-r1_python_install_all
-
-	if use examples; then
-		dodoc -r demos
-		docompress -x /usr/share/doc/${PF}/demos
-	fi
 }
