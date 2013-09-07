@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/qrcode
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qrcode/ChangeLog,v 1.1 2013/09/07 11:36:36 mgorny Exp $
+
+*qrcode-3.1 (07 Sep 2013)
+
+  07 Sep 2013; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +qrcode-3.1.ebuild:
+  Introduce qrcode package as dep of identity.gentoo.org webapp. Use 3.* branch
+  since 4.* uses pymaging that is not packaged and lacks releases.
