@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.9 2013/04/17 17:59:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12-r1.ebuild,v 1.10 2013/09/07 08:35:52 pacho Exp $
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="C++ Socket Library"
 HOMEPAGE="http://www.linuxhacker.at/socketxx/"
@@ -21,6 +21,7 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}/${P}-gcc47.patch"
 	eautoreconf
 }
 

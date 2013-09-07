@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/socket++
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/ChangeLog,v 1.16 2013/04/17 17:59:50 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/ChangeLog,v 1.17 2013/09/07 08:35:52 pacho Exp $
+
+  07 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/socket++-1.12.12-gcc47.patch, socket++-1.12.12-r1.ebuild:
+  Fix failing test due gcc-4.7 (#424305 by Sean Santos)
 
   17 Apr 2013; Ulrich Müller <ulm@gentoo.org> socket++-1.12.12-r1.ebuild:
   Fix LICENSE and add bindist restriction, bug 465274.
@@ -66,4 +70,3 @@
   +socket++-1.12.10.ebuild:
   Initial import, ebuild written by me. Requested in bug #52980 by Vidvandre
   <vidvandre@linuxmail.org>
-
