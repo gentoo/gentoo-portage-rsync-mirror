@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.3.ebuild,v 1.11 2013/03/02 19:29:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.3.ebuild,v 1.12 2013/09/07 08:10:08 pacho Exp $
 
 EAPI="4"
-inherit autotools eutils multilib elisp-common flag-o-matic
+inherit autotools eutils multilib elisp-common flag-o-matic gnome2-utils
 
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://code.google.com/p/uim/"
@@ -91,44 +91,6 @@ RDEPEND="${RDEPEND}
 #	test? ( dev-scheme/gauche )
 
 SITEFILE=50${PN}-gentoo.el
-
-gnome2_query_immodules_gtk2() {
-	local GTK2_CONFDIR="/etc/gtk-2.0/$(get_abi_CHOST)"
-
-	local query_exec="${EPREFIX}/usr/bin/gtk-query-immodules-2.0"
-	local gtk_conf="${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
-	local gtk_conf_dir=$(dirname "${gtk_conf}")
-
-	einfo "Generating Gtk2 immodules/gdk-pixbuf loaders listing:"
-	einfo "-> ${gtk_conf}"
-
-	mkdir -p "${gtk_conf_dir}"
-	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgtk_query_immodules)
-	if [ -z "${tmp_file}" ]; then
-		ewarn "gtk_query_immodules: cannot create temporary file"
-		return 1
-	fi
-
-	if ${query_exec} > "${tmp_file}"; then
-		cat "${tmp_file}" > "${gtk_conf}" || \
-			ewarn "Failed to write to ${gtk_conf}"
-	else
-		ewarn "Cannot update gtk.immodules, file generation failed"
-	fi
-	rm "${tmp_file}"
-}
-
-update_gtk_immodules() {
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
-		gnome2_query_immodules_gtk2
-	fi
-}
-
-update_gtk3_immodules() {
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
-	fi
-}
 
 src_prepare() {
 	epatch \
@@ -263,8 +225,8 @@ pkg_postinst() {
 	elog "If you upgrade from a version of uim older than 1.4.0,"
 	elog "you should run revdep-rebuild."
 
-	use gtk && update_gtk_immodules
-	use gtk3 && update_gtk3_immodules
+	use gtk && gnome2_query_immodules_gtk2
+	use gtk3 && gnome2_query_immodules_gtk2
 	if use emacs; then
 		elisp-site-regen
 		echo
@@ -277,7 +239,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use gtk && update_gtk_immodules
-	use gtk3 && update_gtk3_immodules
+	use gtk && gnome2_query_immodules_gtk2
+	use gtk3 && gnome2_query_immodules_gtk3
 	use emacs && elisp-site-regen
 }

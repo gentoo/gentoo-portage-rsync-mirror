@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.3.ebuild,v 1.2 2013/03/02 19:29:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.3.ebuild,v 1.3 2013/09/07 08:10:08 pacho Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -91,25 +91,6 @@ RDEPEND="${RDEPEND}
 #	test? ( dev-scheme/gauche )
 
 SITEFILE=50${PN}-gentoo.el
-
-update_gtk_immodules() {
-	local GTK2_CONFDIR="/etc/gtk-2.0"
-	# bug #366889
-	if has_version '>=x11-libs/gtk+-2.22.1-r1:2' || has_multilib_profile ; then
-		GTK2_CONFDIR="${GTK2_CONFDIR}/$(get_abi_CHOST)"
-	fi
-	mkdir -p "${EPREFIX}${GTK2_CONFDIR}"
-
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-2.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" > "${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
-	fi
-}
-
-update_gtk3_immodules() {
-	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
-		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
-	fi
-}
 
 src_prepare() {
 	epatch \
@@ -240,8 +221,8 @@ pkg_postinst() {
 	elog "If you upgrade from a version of uim older than 1.4.0,"
 	elog "you should run revdep-rebuild."
 
-	use gtk && update_gtk_immodules
-	use gtk3 && update_gtk3_immodules
+	use gtk && gnome2_query_immodules_gtk2
+	use gtk3 && gnome2_query_immodules_gtk3
 	if use emacs; then
 		elisp-site-regen
 		echo
@@ -254,7 +235,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use gtk && update_gtk_immodules
-	use gtk3 && update_gtk3_immodules
+	use gtk && gnome2_query_immodules_gtk2
+	use gtk3 && gnome2_query_immodules_gtk3
 	use emacs && elisp-site-regen
 }
