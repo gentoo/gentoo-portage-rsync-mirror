@@ -66,16 +66,16 @@ Subject: build system
 +# let user specify desktopdir
 +AC_ARG_WITH([desktopdir],
 +    [AS_HELP_STRING([--with-desktopdir=DIR],
-+        [path where desktop files get installed (default: share/applications)])],
++        [path where desktop files get installed (default: $datadir/applications)])],
 +    [DESKTOPFILESDIR="$withval"],
-+    [DESKTOPFILESDIR="$datadir/applications"])
++    [DESKTOPFILESDIR='$(datadir)/applications'])
 +
 +# let user specify iconsdir
 +AC_ARG_WITH([iconsdir],
 +    [AS_HELP_STRING([--with-iconsdir=DIR],
-+        [path where icons get installed (default: datadir/pixmaps)])],
++        [path where icons get installed (default: $datadir/pixmaps)])],
 +    [ICONSDIR="$withval"],
-+    [ICONSDIR="$datadir/pixmaps"])
++    [ICONSDIR='$(datadir)/pixmaps'])
 +
 +# configure-switch for tkgui
 +AC_ARG_ENABLE([tk],
