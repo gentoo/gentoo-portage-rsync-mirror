@@ -1,6 +1,17 @@
 # ChangeLog for net-proxy/swiftiply
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/ChangeLog,v 1.5 2013/05/02 19:24:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/ChangeLog,v 1.7 2013/09/07 13:56:56 tomwij Exp $
+
+  07 Sep 2013; Tom Wijsman <TomWij@gentoo.org> swiftiply-0.6.4-r1.ebuild:
+  Add back ruby18 to keep support for it until it is actually dropped.
+
+*swiftiply-0.6.4-r1 (07 Sep 2013)
+
+  07 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +swiftiply-0.6.4-r1.ebuild,
+  -swiftiply-0.6.4.ebuild:
+  Revision bump. Use Ruby 19. Also added missing mongrel dependency (as became
+  apparent by the tests) and fixed up documentation generation. Fixes bug
+  #475312.
 
   02 May 2013; Tom Wijsman <TomWij@gentoo.org>
   +files/swiftiply-0.6.4-test-http-headers-order-fix.patch,

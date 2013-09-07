@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/swiftiply-0.6.4.ebuild,v 1.3 2013/05/02 19:24:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/swiftiply/swiftiply-0.6.4-r1.ebuild,v 1.2 2013/09/07 13:56:56 tomwij Exp $
 
 EAPI="5"
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19"
+
 inherit ruby-ng ruby-fakegem
 
 DESCRIPTION="A clustering proxy server for web applications."
@@ -15,14 +16,20 @@ LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND=">=dev-ruby/eventmachine-0.9.0"
+DEPEND="www-servers/mongrel:0"
+RDEPEND="${DEPEND}
+	>=dev-ruby/eventmachine-0.9.0"
 
 RUBY_FAKEGEM_EXTRAINSTALL="src"
+
 RUBY_PATCHES=(
 	"${FILESDIR}/${P}-test-deque-fix.patch"
 	"${FILESDIR}/${P}-cache-base-mixin-fix.patch"
 	"${FILESDIR}/${P}-test-http-headers-order-fix.patch"
 )
+
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
+RUBY_FAKEGEM_DOC_SOURCES="."
 
 QA_PRESTRIPPED="usr/lib/fastfilereaderext.so
 	usr/lib32/fastfilereaderext.so

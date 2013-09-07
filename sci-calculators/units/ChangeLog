@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/units
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.65 2013/09/06 18:34:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/units/ChangeLog,v 1.66 2013/09/07 13:40:04 jer Exp $
+
+  07 Sep 2013; Jeroen Roovers <jer@gentoo.org> -units-2.01.ebuild:
+  Old.
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> units-2.02.ebuild:
   Stable for sparc, wrt bug #479732
