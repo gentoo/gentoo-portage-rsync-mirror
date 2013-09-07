@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.131 2013/09/05 18:40:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.132 2013/09/07 19:28:59 floppym Exp $
+
+  07 Sep 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/scons-install-scripts.patch, scons-2.3.0.ebuild:
+  Fix script installation in setup.py.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> scons-2.2.0-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

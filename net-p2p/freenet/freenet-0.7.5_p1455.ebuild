@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1455.ebuild,v 1.2 2013/09/07 13:06:49 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1455.ebuild,v 1.3 2013/09/07 19:15:44 tommy Exp $
 
 EAPI="2"
 DATE=20130218
@@ -69,7 +69,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P}.zip seednodes-${DATE}.fref.bz2
-	mv "${WORKDIR}"/freenet-fred-* "${S}"
 }
 
 java_prepare() {
