@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/moc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.112 2013/04/13 07:36:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.114 2013/09/07 10:17:35 radhermit Exp $
+
+  07 Sep 2013; Tim Harder <radhermit@gentoo.org>
+  -moc-2.5.0_alpha4_p20111211.ebuild:
+  Remove old.
+
+*moc-2.5.0_beta1_p20130907 (07 Sep 2013)
+
+  07 Sep 2013; Tim Harder <radhermit@gentoo.org>
+  +moc-2.5.0_beta1_p20130907.ebuild:
+  Bump to new snapshot (fixes bug #484048).
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> moc-2.5.0_beta1-r1.ebuild:
   Stable for sparc, wrt bug #464548

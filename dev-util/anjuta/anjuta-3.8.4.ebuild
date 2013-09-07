@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.5 2013/08/24 01:51:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.6 2013/09/07 10:27:49 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -115,6 +115,7 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable devhelp plugin-devhelp) \
 		$(use_enable glade plugin-glade) \
+		$(use_enable glade glade-catalog) \
 		$(use_enable introspection) \
 		$(use_enable packagekit) \
 		$(use_enable subversion plugin-subversion) \

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.167 2013/08/24 01:51:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.168 2013/09/07 10:27:49 eva Exp $
+
+  07 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> anjuta-3.8.4.ebuild:
+  Add missing configure switch.
 
   24 Aug 2013; Patrick Lauer <patrick@gentoo.org> anjuta-3.8.4.ebuild:
   QA: Remove stable keywords until dependencies catch up
