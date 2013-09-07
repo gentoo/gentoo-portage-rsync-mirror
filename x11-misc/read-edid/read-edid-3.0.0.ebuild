@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/read-edid-3.0.0.ebuild,v 1.1 2013/09/07 15:27:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/read-edid-3.0.0.ebuild,v 1.2 2013/09/07 15:38:48 jer Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -22,8 +22,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-sharedir.patch
 )
 
-#src_install() {
-#	default
-#	# as per bug #283322
-#	dobin parse-edid/parse-edid
-#}
+src_prepare() {
+	mv get-edid.man get-edid.1 || die
+	cmake-utils_src_prepare
+}
