@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.134 2013/09/05 19:08:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.135 2013/09/07 13:08:03 mgorny Exp $
+
+  07 Sep 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Use official git mirror for the live ebuild since git-r3 is more space- and
+  bandwidth-efficient than subversion.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> llvm-3.2.ebuild,
   llvm-3.3-r1.ebuild, llvm-3.3.ebuild, llvm-9999.ebuild:

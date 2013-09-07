@@ -1,18 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.51 2013/09/05 19:08:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.52 2013/09/07 13:08:03 mgorny Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
+PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
 
-inherit subversion eutils flag-o-matic multilib multilib-minimal \
+inherit eutils flag-o-matic git-r3 multilib multilib-minimal \
 	python-r1 toolchain-funcs pax-utils check-reqs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
 SRC_URI=""
-ESVN_REPO_URI="http://llvm.org/svn/llvm-project/llvm/trunk"
 
 LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
@@ -130,18 +129,18 @@ pkg_setup() {
 
 src_unpack() {
 	if use clang; then
-		ESVN_PROJECT=compiler-rt S="${S}"/projects/compiler-rt subversion_fetch "http://llvm.org/svn/llvm-project/compiler-rt/trunk"
-
-		# Force version match between LLVM, compiler-rt & clang
-		# but first work-around subversion.eclass smartness, bug #282486.
-		ESVN_PROJECT=compiler-rt subversion_wc_info "http://llvm.org/svn/llvm-project/compiler-rt/trunk"
-		local ESVN_REVISION=${ESVN_WC_REVISION}
-
-		ESVN_PROJECT=clang S="${S}"/tools/clang subversion_fetch "http://llvm.org/svn/llvm-project/cfe/trunk"
+		git-r3_fetch http://llvm.org/git/compiler-rt.git
+		git-r3_fetch http://llvm.org/git/clang.git
 	fi
+	git-r3_fetch http://llvm.org/git/llvm.git
 
-	# Do llvm last so that ESVN_WC_* is top-level.
-	subversion_src_unpack
+	if use clang; then
+		git-r3_checkout http://llvm.org/git/compiler-rt.git \
+			"${S}"/projects/compiler-rt
+		git-r3_checkout http://llvm.org/git/clang.git \
+			"${S}"/tools/clang
+	fi
+	git-r3_checkout http://llvm.org/git/llvm.git
 }
 
 src_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1455.ebuild,v 1.1 2013/09/01 11:32:07 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1455.ebuild,v 1.2 2013/09/07 13:06:49 tommy Exp $
 
 EAPI="2"
 DATE=20130218
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-CDEPEND=">=dev-java/bcprov-1.45:0
+CDEPEND=">=dev-java/bcprov-1.49:0
 	dev-java/commons-compress:0
 	dev-db/db-je:3.3
 	dev-java/fec:0
