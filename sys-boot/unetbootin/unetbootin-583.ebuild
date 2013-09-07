@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-583.ebuild,v 1.4 2013/03/02 23:34:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-583.ebuild,v 1.5 2013/09/07 14:28:28 jer Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ S="${WORKDIR}"
 DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}
 		 sys-fs/mtools
-		 sys-boot/syslinux
+		 <sys-boot/syslinux-5
 		 app-arch/p7zip"
 
 src_prepare() {

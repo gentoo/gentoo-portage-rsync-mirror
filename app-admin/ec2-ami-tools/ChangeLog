@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/ec2-ami-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.15 2013/09/04 12:56:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.16 2013/09/07 14:22:59 tomwij Exp $
+
+*ec2-ami-tools-1.4.0.5-r3 (07 Sep 2013)
+
+  07 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +ec2-ami-tools-1.4.0.5-r3.ebuild,
+  -ec2-ami-tools-1.4.0.5-r2.ebuild:
+  Revision bump. Fixed up ruby version sed by using a variable instead and
+  removed redundant S definition. Fixes bug #483832 reported by Paul Tobias.
 
 *ec2-ami-tools-1.4.0.5-r2 (04 Sep 2013)
 

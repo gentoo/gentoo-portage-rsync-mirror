@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.4.0.5-r2.ebuild,v 1.1 2013/09/04 12:56:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ec2-ami-tools-1.4.0.5-r3.ebuild,v 1.1 2013/09/07 14:22:59 tomwij Exp $
 
 EAPI="5"
 
@@ -15,19 +15,17 @@ LICENSE="Amazon
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
+ruby_slot="1.9"
+
 DEPEND="app-arch/unzip"
-RDEPEND="dev-lang/ruby:1.9[ssl]
+RDEPEND="dev-lang/ruby:${ruby_slot}[ssl]
 	net-misc/rsync
 	net-misc/curl"
 
-S="${WORKDIR}/${P}"
-
 src_prepare() {
-	# Simplify the scripts to always run Ruby 18, since that seems to
-	# be what upstream has been using; since Gentoo supports alternative
-	# implementations as well it is not guaranteed that ruby is ruby18.
-	# There are forks which patch this, but Amazon hasn't patched this yet.
-	sed -i -e '$s:^ruby:exec ruby18:' bin/* || die 'Sed failed.'
+	# Simplify the scripts to always run Ruby 19, since Gentoo supports
+	# alternative implementations as well it is not guaranteed that ruby is ruby19.
+	sed -i -e "\$s:^ruby:exec ruby${ruby_slot/./}:" bin/* || die 'Sed failed.'
 
 	# Remove a left behind license file.
 	rm lib/ec2/oem/LICENSE.txt || die 'Removal of LICENSE failed.'
