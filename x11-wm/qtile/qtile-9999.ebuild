@@ -1,14 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/qtile-9999.ebuild,v 1.6 2013/05/22 09:19:52 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qtile/qtile-9999.ebuild,v 1.7 2013/09/07 20:55:15 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit git-2 distutils-r1 virtualx
+inherit git-r3 distutils-r1 virtualx
 
 EGIT_REPO_URI="git://github.com/qtile/qtile.git"
-EGIT_BRANCH="develop"
 
 DESCRIPTION="A full-featured, hackable tiling window manager written in Python"
 HOMEPAGE="http://qtile.org/"
@@ -43,9 +42,8 @@ python_test() {
 
 python_install_all() {
 	local DOCS=( CHANGELOG README.rst )
+	use doc && local HTML_DOCS=( docs/_build/html/. )
 	distutils-r1_python_install_all
-
-	use doc && dohtml -r docs/_build/html/*
 
 	insinto /usr/share/xsessions
 	doins resources/qtile.desktop
