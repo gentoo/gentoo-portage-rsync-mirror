@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.7.2.ebuild,v 1.3 2013/09/06 19:03:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.7.2.ebuild,v 1.4 2013/09/07 11:19:26 hasufell Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils games
@@ -12,8 +12,8 @@ SRC_URI="mirror://gnu/xboard/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="Xaw3d +default-font gtk nls xpm zippy"
-REQUIRED_USE="?? ( Xaw3d gtk ) xpm? ( !gtk )"
+IUSE="Xaw3d +default-font gtk nls zippy"
+REQUIRED_USE="?? ( Xaw3d gtk )"
 RESTRICT="test" #124112
 
 RDEPEND="
@@ -21,6 +21,7 @@ RDEPEND="
 	gnome-base/librsvg:2
 	virtual/libintl
 	x11-libs/cairo[X]
+	x11-libs/libXpm
 	Xaw3d? ( x11-libs/libXaw3d )
 	!Xaw3d? ( !gtk? ( x11-libs/libXaw ) )
 	default-font? (
@@ -32,8 +33,7 @@ RDEPEND="
 		x11-libs/libXt
 		x11-libs/libXmu
 	)
-	gtk? ( x11-libs/gtk+:2 )
-	xpm? ( x11-libs/libXpm )"
+	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	virtual/pkgconfig
@@ -44,7 +44,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-paths.patch \
 		"${FILESDIR}"/${P}-gettext.patch \
 		"${FILESDIR}"/${P}-configure-switches.patch \
-		"${FILESDIR}"/${P}-gnuchess-default.patch
+		"${FILESDIR}"/${P}-gnuchess-default.patch \
+		"${FILESDIR}"/${P}-Xaw3d.patch
 	eautoreconf
 }
 
@@ -52,7 +53,6 @@ src_configure() {
 	egamesconf \
 		--datadir=/usr/share \
 		$(use_enable nls) \
-		$(use_enable xpm) \
 		$(use_enable zippy) \
 		--disable-update-mimedb \
 		$(use_with gtk) \
