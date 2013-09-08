@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.4.ebuild,v 1.1 2013/07/31 03:37:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.4.ebuild,v 1.2 2013/09/08 10:17:13 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="https://live.gnome.org/GDM"
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="accessibility audit +fallback fprint +gnome-shell +introspection ipv6 plymouth selinux smartcard tcpd test xinerama"
+IUSE="accessibility audit fallback fprint +gnome-shell +introspection ipv6 plymouth selinux smartcard tcpd test xinerama"
 KEYWORDS="~amd64 ~arm ~ppc64 ~sh ~x86"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686

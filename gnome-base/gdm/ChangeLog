@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.380 2013/09/02 16:40:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.381 2013/09/08 10:17:13 pacho Exp $
+
+  08 Sep 2013; Pacho Ramos <pacho@gentoo.org> -gdm-3.8.3.1.ebuild,
+  gdm-3.8.4.ebuild:
+  Don't enable 'fallback' by default as it depends on obsolete stuff, upstream
+  wasn't caring much about it and will die in next cycle completely
 
   02 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org> gdm-3.6.2-r1.ebuild:
   gdm should not need pam_ck_connector.so (bug #483312, thanks to Samuli
