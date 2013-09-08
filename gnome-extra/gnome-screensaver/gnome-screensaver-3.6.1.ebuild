@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.6.1.ebuild,v 1.3 2013/02/02 22:38:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-3.6.1.ebuild,v 1.4 2013/09/08 16:19:31 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -20,7 +20,7 @@ RDEPEND="
 	>=x11-libs/gtk+-2.99.3:3
 	>=gnome-base/gnome-desktop-3.1.91:3=
 	>=gnome-base/gsettings-desktop-schemas-0.1.7
-	>=gnome-base/libgnomekbd-0.1
+	>=gnome-base/libgnomekbd-3.6
 	>=dev-libs/dbus-glib-0.71
 
 	sys-apps/dbus

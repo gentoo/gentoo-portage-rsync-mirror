@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r3.ebuild,v 1.7 2012/10/17 10:34:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r3.ebuild,v 1.8 2013/09/08 16:30:56 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -38,23 +38,29 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.35.0"
 
-pkg_setup() {
-	DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
-
-	G2CONF="${G2CONF}
-		--disable-static
-		$(use_enable policykit polkit-gtk)"
-
-	if ! use nfs && ! use samba; then
-		G2CONF="${G2CONF} --disable-shares"
-	fi
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libtool-intermediate-libs.patch \
 		"${FILESDIR}"/${P}-missing-atk.patch \
 		"${FILESDIR}"/${P}-missing-m.patch \
 		"${FILESDIR}"/${P}-glib-2.32.patch
+
+	# automake-1.13 fix, bug #467540
+    sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.in || die
+
 	eautoreconf
 	gnome2_src_prepare
+}
+
+src_configure() {
+	local myconf=""
+
+	if ! use nfs && ! use samba; then
+		myconf="--disable-shares"
+	fi
+
+	DOCS="AUTHORS BUGS ChangeLog HACKING NEWS README TODO"
+	gnome2_src_configure \
+		--disable-static \
+		$(use_enable policykit polkit-gtk) \
+		${myconf}
 }

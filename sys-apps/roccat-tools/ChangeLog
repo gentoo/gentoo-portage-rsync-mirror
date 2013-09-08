@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/roccat-tools
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/ChangeLog,v 1.1 2013/09/08 16:25:30 hwoarang Exp $
+
+*roccat-tools-0.20.0 (08 Sep 2013)
+
+  08 Sep 2013; Markos Chandras <hwoarang@gentoo.org> +files/README.gentoo,
+  +metadata.xml, +roccat-tools-0.20.0.ebuild:
+  Initial commit. Ebuild by Dmitry Pisklov <dpisklov@gmail.com>. He will also be
+  the maintainer of the package. Bug #395171
