@@ -1,6 +1,14 @@
 # ChangeLog for games-action/teeworlds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.11 2013/09/05 18:37:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/ChangeLog,v 1.13 2013/09/08 12:38:42 hasufell Exp $
+
+*teeworlds-0.6.2-r1 (08 Sep 2013)
+
+  08 Sep 2013; Julian Ospald <hasufell@gentoo.org>
+  +files/0.6.2/04-dedicated.patch, +files/0.6.2/05-cc-cflags.patch,
+  -teeworlds-0.6.2.ebuild, +teeworlds-0.6.2-r1.ebuild:
+  respect CC/CXX, respect GAMES paths, make build log verbose,
+  fix dedicated useflag wrt #477658
 
 *teeworlds-0.6.2 (05 Sep 2013)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.87 2013/07/28 09:21:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.88 2013/09/08 12:45:39 mgorny Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
-	pypy1_9 pypy2_0
-	python3_1 python3_2 python3_3 python3_4
+	pypy2_0
+	python3_2 python3_3 python3_4
 	python2_6 python2_7
 )
 inherit git-2 eutils multilib
@@ -35,11 +35,9 @@ python_dep="${python_dep//,ssl}"
 python_dep="${python_dep//ssl,}"
 
 python_dep="${python_dep}
-	python_targets_pypy1_9? ( virtual/pypy:1.9 )
 	python_targets_pypy2_0? ( virtual/pypy:2.0 )
 	python_targets_python2_6? ( dev-lang/python:2.6 )
 	python_targets_python2_7? ( dev-lang/python:2.7 )
-	python_targets_python3_1? ( dev-lang/python:3.1 )
 	python_targets_python3_2? ( dev-lang/python:3.2 )
 	python_targets_python3_3? ( dev-lang/python:3.3 )
 	python_targets_python3_4? ( dev-lang/python:3.4 )

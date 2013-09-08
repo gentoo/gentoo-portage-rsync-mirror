@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.1.ebuild,v 1.6 2013/09/08 09:56:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.1.ebuild,v 1.8 2013/09/08 12:47:55 ago Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
 EAPI=2
 PYTHON_COMPAT=(
-	pypy1_9 pypy2_0
-	python3_1 python3_2 python3_3 python3_4
+	pypy2_0
+	python3_2 python3_3 python3_4
 	python2_6 python2_7
 )
 inherit eutils multilib
@@ -15,7 +15,7 @@ inherit eutils multilib
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
 IUSE="build doc epydoc +ipc linguas_ru pypy2_0 python2 python3 selinux xattr"
 
@@ -37,11 +37,9 @@ python_dep="${python_dep//,ssl}"
 python_dep="${python_dep//ssl,}"
 
 python_dep="${python_dep}
-	python_targets_pypy1_9? ( virtual/pypy:1.9 )
 	python_targets_pypy2_0? ( virtual/pypy:2.0 )
 	python_targets_python2_6? ( dev-lang/python:2.6 )
 	python_targets_python2_7? ( dev-lang/python:2.7 )
-	python_targets_python3_1? ( dev-lang/python:3.1 )
 	python_targets_python3_2? ( dev-lang/python:3.2 )
 	python_targets_python3_3? ( dev-lang/python:3.3 )
 	python_targets_python3_4? ( dev-lang/python:3.4 )

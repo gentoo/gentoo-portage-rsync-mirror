@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.119 2013/07/10 01:46:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.120 2013/09/08 13:00:18 pacho Exp $
+
+*ejabberd-2.1.13-r1 (08 Sep 2013)
+
+  08 Sep 2013; Pacho Ramos <pacho@gentoo.org> +ejabberd-2.1.13-r1.ebuild,
+  +files/ejabberd.service, +files/ejabberd.tmpfiles.conf:
+  Add unit file (#482444 by Andrius Štikonas)
 
 *ejabberd-2.1.13 (10 Jul 2013)
 

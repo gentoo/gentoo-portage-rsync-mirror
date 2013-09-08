@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.14.ebuild,v 1.1 2013/06/24 10:53:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.18.ebuild,v 1.1 2013/09/08 12:36:35 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils unpacker fdo-mime gnome2 pax-utils udev
 
 MY_PV=${PV/beta/BETA}
 MY_PV=${MY_PV/rc/RC}
-VBOX_PV=${MY_PV}-86644
+VBOX_PV=${MY_PV}-88780
 SDK_PV=${VBOX_PV}
 EXTP_PV=${SDK_PV}
 MY_P=VirtualBox-${VBOX_PV}-Linux
@@ -238,10 +238,10 @@ src_install() {
 	fi
 
 	if use python; then
-		local pyver
-		for pyver in 2.5 2.6 2.7; do
-			if has_version "=dev-lang/python-${pyver}*" && [ -f "${S}/VBoxPython${pyver/./_}.so" ] ; then
-				doins VBoxPython${pyver/./_}.so
+		local pyslot
+		for pyslot in 2.6 2.7; do
+			if has_version "dev-lang/python:${pyslot}" && [ -f "${S}/VBoxPython${pyslot/./_}.so" ] ; then
+				doins VBoxPython${pyslot/./_}.so
 			fi
 		done
 	fi

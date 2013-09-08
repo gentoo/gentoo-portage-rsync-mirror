@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.2.ebuild,v 1.1 2013/09/05 18:37:31 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/teeworlds/teeworlds-0.6.2-r1.ebuild,v 1.1 2013/09/08 12:32:29 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -59,12 +59,12 @@ src_prepare() {
 	__EOF__
 
 	sed -i \
-		-e '/^function build(settings)/a dofile("gentoo.lua") addSettings(settings)' \
-		bam.lua || die
+		-e "s#/usr/share/games/teeworlds/data#${GAMES_DATADIR}/${PN}/data#" \
+		src/engine/shared/storage.cpp || die
 }
 
 src_configure() {
-	bam config || die
+	bam -v config || die
 }
 
 src_compile() {
@@ -83,7 +83,7 @@ src_compile() {
 		fi
 	fi
 
-	bam -a -j $(makeopts_jobs) ${myopt} || die
+	bam -v -a -j $(makeopts_jobs) ${myopt} || die
 }
 
 src_install() {
