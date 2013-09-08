@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.103 2013/05/01 11:14:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.104 2013/09/08 15:24:31 eva Exp $
+
+*libnotify-0.7.6 (08 Sep 2013)
+
+  08 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> +libnotify-0.7.6.ebuild:
+  Version bump. Drop USE=doc conditionals, it wasn't used and always installed
+  as per gnome team policy already.
 
   01 May 2013; Agostino Sarubbo <ago@gentoo.org> libnotify-0.7.5-r1.ebuild:
   Stable for sh, wrt bug #466004
