@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/skype-call-recorder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/skype-call-recorder/ChangeLog,v 1.4 2013/07/10 04:52:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/skype-call-recorder/ChangeLog,v 1.5 2013/09/08 21:14:25 reavertm Exp $
+
+  08 Sep 2013; Maciej Mrozowski <reavertm@gentoo.org>
+  skype-call-recorder-0.8.ebuild:
+  Remove USE dep on qt-gui[dbus], bug 484178.
 
   10 Jul 2013; Patrick Lauer <patrick@gentoo.org>
   skype-call-recorder-0.8.ebuild:
