@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15088 2013/09/07 09:33:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15089 2013/09/08 16:32:28 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -378,10 +378,6 @@ media-plugins/vdr-channelscan
 # Mike Gilbert <floppym@gentoo.org (27 May 2013)
 # Masked until reverse dependencies are tested bug 401009.
 =dev-python/imaging-2.0.0
-
-# Markos Chandras <hwoarang@gentoo.org> (25 May 2013)
-# Mask 0.7.0 release for testing
-~dev-embedded/openocd-0.7.0
 
 # Tim Harder <radhermit@gentoo.org> (22 May 2013)
 # masked for testing

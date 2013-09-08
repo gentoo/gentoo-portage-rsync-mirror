@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/moodle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.46 2013/07/28 23:56:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.47 2013/09/08 16:43:03 blueness Exp $
+
+*moodle-2.3.9 (08 Sep 2013)
+*moodle-2.5.2 (08 Sep 2013)
+*moodle-2.4.6 (08 Sep 2013)
+
+  08 Sep 2013; Anthony G. Basile <blueness@gentoo.org> +moodle-2.3.9.ebuild,
+  +moodle-2.4.6.ebuild, +moodle-2.5.2.ebuild, -moodle-2.2.11.ebuild:
+  Version bumps, remove deprecated 2.2 branch
 
   28 Jul 2013; Anthony G. Basile <blueness@gentoo.org> moodle-2.5.1.ebuild:
   Fix dependence on php, bug #478186

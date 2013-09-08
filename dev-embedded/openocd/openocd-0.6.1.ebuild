@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.6.1.ebuild,v 1.2 2013/04/23 03:16:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.6.1.ebuild,v 1.3 2013/09/08 16:35:49 hwoarang Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://openocd.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="blaster dummy ftd2xx ftdi minidriver parport presto segger usb versaloon"
+IUSE="blaster dummy ftd2xx ftdi minidriver parport presto segger stlink usb versaloon"
 RESTRICT="strip" # includes non-native binaries
 
 # libftd2xx is the default because it is reported to work better.
@@ -92,6 +92,7 @@ src_configure() {
 		$(use_enable minidriver minidriver-dummy) \
 		$(use_enable parport) \
 		$(use_enable presto presto_ftd2xx) \
+		$(use_enable stlink) \
 		$(use_enable segger jlink) \
 		$(use_enable versaloon vsllink) \
 		"${myconf[@]}"
