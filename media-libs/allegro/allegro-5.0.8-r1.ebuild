@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.8-r1.ebuild,v 1.1 2013/09/06 21:15:45 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.8-r1.ebuild,v 1.2 2013/09/08 20:28:40 axs Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -18,7 +18,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
 	dumb? ( media-libs/dumb[${MULTILIB_USEDEP}] )
 	flac? ( media-libs/flac[${MULTILIB_USEDEP}] )
 	jpeg? ( virtual/jpeg[${MULTILIB_USEDEP}] )
-	openal? ( media-libs/openal[${MULTILIB_USEDEP}] )
+	openal? ( media-libs/openal )
 	physfs? ( dev-games/physfs[${MULTILIB_USEDEP}] )
 	png? ( >=media-libs/libpng-1.4[${MULTILIB_USEDEP}] )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )

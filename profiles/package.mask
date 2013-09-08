@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15090 2013/09/08 18:30:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15091 2013/09/08 20:25:25 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Stakenvicius <axs@gentoo.org> (08 Sep 2013)
+# Collides with emul-linux-x86-sdl, will unmask after
+# fixed.
+# bug #484060
+=media-libs/openal-1.15.1-r1
 
 # Mikle Kolyada <zlogene@gentoo.org> (08 Sep 2013)
 # Untested / unconfirmed major bump of perl #479064

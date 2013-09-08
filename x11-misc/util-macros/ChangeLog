@@ -1,5 +1,11 @@
 # ChangeLog for x11-misc/util-macros
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.120 2012/11/28 00:45:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.121 2013/09/08 18:51:43 chithanh Exp $
+
+*util-macros-1.17.1 (08 Sep 2013)
+
+  08 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +util-macros-1.17.1.ebuild:
+  Version bump.
 
   28 Nov 2012; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -util-macros-1.14.0.ebuild, -util-macros-1.15.0.ebuild,

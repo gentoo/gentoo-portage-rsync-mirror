@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8221 2013/09/08 18:30:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8222 2013/09/08 20:25:25 axs Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Sep 2013; Ian Stakenvicius <axs@gentoo.org> package.mask:
+  masked media-libs/openal-1.15.1-r1 until emul-linux-* can be adjusted to
+  remove the colliding files
 
   08 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Mask perl-5.18 and friends, again

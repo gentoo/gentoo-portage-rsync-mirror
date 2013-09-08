@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.28.ebuild,v 1.8 2013/04/01 17:56:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.28.ebuild,v 1.9 2013/09/08 19:50:07 tetromino Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION="0.18"
@@ -16,7 +16,9 @@ LICENSE="GPL-2+"
 SLOT="0/1" # subslot = libcolord soname version
 KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="doc examples extra-print-profiles +gusb +introspection systemd +udev vala"
-REQUIRED_USE="vala? ( introspection )"
+REQUIRED_USE="
+	gusb? ( udev )
+	vala? ( introspection )"
 
 COMMON_DEPEND="
 	dev-db/sqlite:3=
