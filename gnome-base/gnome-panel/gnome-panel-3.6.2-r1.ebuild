@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-3.6.2-r1.ebuild,v 1.2 2013/07/28 10:06:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-3.6.2-r1.ebuild,v 1.3 2013/09/08 17:53:29 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -77,6 +77,9 @@ src_prepare() {
 
 	# Use the generic marshaller
 	epatch "${FILESDIR}/${P}-generic-marshaller.patch"
+
+	# automake-1.13 fix, bug #479890
+	sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.ac || die
 
 	eautoreconf
 	gnome2_src_prepare

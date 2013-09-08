@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.17.ebuild,v 1.12 2013/05/01 11:13:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.17.ebuild,v 1.13 2013/09/08 17:42:12 eva Exp $
 
 EAPI="5"
 
@@ -20,7 +20,6 @@ COMMON_DEPEND="!aqua? (
 		x11-libs/libXrender
 		x11-libs/libX11
 		x11-libs/libXi
-		x11-libs/libXt
 		x11-libs/libXext
 		>=x11-libs/libXrandr-1.3
 		x11-libs/libXcursor

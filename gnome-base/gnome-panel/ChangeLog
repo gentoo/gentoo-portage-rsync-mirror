@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.360 2013/07/28 10:06:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.361 2013/09/08 17:53:29 eva Exp $
+
+  08 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-panel-2.32.1-r3.ebuild, -gnome-panel-3.6.2.ebuild,
+  gnome-panel-3.6.2-r1.ebuild:
+  Automake-1.13 fix, bug #479890.
 
   28 Jul 2013; Pacho Ramos <pacho@gentoo.org> gnome-panel-3.6.2-r1.ebuild:
   app-text/yelp-tools is needed (#478398 by Sean Santos)
