@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.8.2.ebuild,v 1.1 2013/05/05 08:09:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.8.2.ebuild,v 1.2 2013/09/08 15:40:19 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes" # Not gnome macro but similar
@@ -68,8 +68,11 @@ src_configure() {
 }
 
 src_test() {
-	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check
+	 # FIXME: this should be handled at eclass level
+	 "${EROOT}${GLIB_COMPILE_SCHEMAS}" --allow-any-name "${S}/schema" || die
+	 
+	 unset DBUS_SESSION_BUS_ADDRESS
+	 GSETTINGS_SCHEMA_DIR="${S}/schema" Xemake check
 }
 
 pkg_postinst() {
