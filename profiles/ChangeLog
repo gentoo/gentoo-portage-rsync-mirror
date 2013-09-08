@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8217 2013/09/07 20:00:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8218 2013/09/08 14:24:17 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Sep 2013; Pacho Ramos <pacho@gentoo.org> arch/powerpc/package.use.mask:
+  monodevelop is not keyworded, bug #468030
 
   07 Sep 2013; Mike Gilbert <floppym@gentoo.org> thirdpartymirrors:
   Update pypi based on PEP 449, bug 482154 by Arfrever.

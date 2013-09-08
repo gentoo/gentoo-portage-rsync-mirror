@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Parallel-ForkManager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.21 2012/12/28 15:09:16 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parallel-ForkManager/ChangeLog,v 1.22 2013/09/08 14:28:56 idella4 Exp $
+
+  08 Sep 2013; Ian Delaney <idella4@gentoo.org>
+  -Parallel-ForkManager-0.7.9.ebuild:
+  remove old, -0.7.5 req'd for stable alpha
 
   28 Dec 2012; Agostino Sarubbo <ago@gentoo.org>
   Parallel-ForkManager-1.20.0.ebuild:

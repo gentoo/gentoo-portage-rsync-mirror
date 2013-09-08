@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/POE-Component-IKC
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Component-IKC/ChangeLog,v 1.9 2013/08/25 10:59:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Component-IKC/ChangeLog,v 1.10 2013/09/08 14:16:06 idella4 Exp $
+
+  08 Sep 2013; Ian Delaney <idella4@gentoo.org>
+  -POE-Component-IKC-0.230.2.ebuild:
+  remove old
 
 *POE-Component-IKC-0.230.500 (25 Aug 2013)
 
