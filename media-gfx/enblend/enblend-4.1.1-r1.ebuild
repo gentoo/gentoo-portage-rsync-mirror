@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.1.1-r1.ebuild,v 1.1 2013/09/06 20:48:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.1.1-r1.ebuild,v 1.2 2013/09/08 14:56:53 maekke Exp $
 
 EAPI=5
 
@@ -56,7 +56,7 @@ src_configure() {
 		$(cmake-utils_use doc DOC)
 		$(cmake-utils_use_enable image-cache IMAGECACHE)
 		$(cmake-utils_use_enable openmp)
-		$(cmake-utils_use_enable gpu OPENCL)
+		$(cmake-utils_use_enable gpu)
 	)
 	CMAKE_BUILD_TYPE="Release"
 	cmake-utils_src_configure

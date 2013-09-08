@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.32 2013/09/05 09:59:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.34 2013/09/08 14:56:29 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -252,7 +252,7 @@ python_export() {
 						dir=/usr/$(get_libdir)/${impl}
 						;;
 					jython*)
-						dir=/usr/share/${impl}/Lib
+						dir=/usr/share/${impl/n/n-}/Lib
 						;;
 					pypy*)
 						dir=/usr/$(get_libdir)/${impl/-c/}
@@ -268,11 +268,11 @@ python_export() {
 					python*)
 						dir=/usr/include/${impl}
 						;;
-					jython*)
-						dir=/usr/share/${impl}/Include
-						;;
 					pypy*)
 						dir=/usr/$(get_libdir)/${impl/-c/}/include
+						;;
+					*)
+						die "${impl} lacks header files"
 						;;
 				esac
 

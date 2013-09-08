@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SpeedyCGI
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.17 2013/02/16 12:34:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SpeedyCGI/ChangeLog,v 1.18 2013/09/08 14:51:37 idella4 Exp $
+
+*SpeedyCGI-2.22-r3 (08 Sep 2013)
+
+  08 Sep 2013; Ian Delaney <idella4@gentoo.org> +SpeedyCGI-2.22-r3.ebuild:
+  revbump -EAPI 5, add invocation of tests
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

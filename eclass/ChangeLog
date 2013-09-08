@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.950 2013/09/06 17:11:52 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.952 2013/09/08 14:56:29 mgorny Exp $
+
+  08 Sep 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Fix PYTHON_SITEDIR for Jython.
+
+  08 Sep 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Do not export PYTHON_INCLUDEDIR on Jython, since it does not install headers.
 
   06 Sep 2013; Ian Stakenvicius <axs@gentoo.org> cmake-multilib.eclass:
   added multilib_*_wrappers calls to cmake-multilib.eclass

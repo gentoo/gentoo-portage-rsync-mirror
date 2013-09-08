@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/files/collectd.initd,v 1.6 2012/02/07 20:12:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/files/collectd.initd,v 1.7 2013/09/08 14:33:06 hwoarang Exp $
 
 : ${COLLECTD_PIDFILE:='/var/run/collectd/collectd.pid'}
 : ${COLLECTD_CFGFILE:='/etc/collectd.conf'}
@@ -21,9 +21,9 @@ configtest() {
 }
 
 checkconfig() {
-	if [[ $(sed '/^$\|^#/d' ${COLLECTD_CFGFILE} | grep -c 'LoadPlugin\w\+oracle') != 0 ]] ; then
-		if [[ -e /etc/env.d/50oracle-instantclient-basic ]] ; then
-			source /etc/env.d/50oracle-instantclient-basic
+	if [ $(sed '/^$\|^#/d' ${COLLECTD_CFGFILE} | grep -c 'LoadPlugin\w\+oracle') != 0 ] ; then
+		if [ -e /etc/env.d/50oracle-instantclient-basic ] ; then
+			. /etc/env.d/50oracle-instantclient-basic
 		        export ORACLE_HOME
 		        export TNS_ADMIN
 		else
