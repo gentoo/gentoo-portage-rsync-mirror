@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.17.ebuild,v 1.1 2013/07/09 23:34:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.17.ebuild,v 1.2 2013/09/08 09:09:27 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.csie.ntu.edu.tw/~cjlin/libsvm/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="java openmp python tools"
 
 DEPEND="java? ( >=virtual/jdk-1.4 )"
