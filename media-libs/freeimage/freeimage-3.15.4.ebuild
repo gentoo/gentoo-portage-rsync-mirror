@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.4.ebuild,v 1.6 2013/09/08 05:09:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.15.4.ebuild,v 1.7 2013/09/08 06:34:14 gienah Exp $
 
 EAPI="4"
 
@@ -13,7 +13,8 @@ MY_P=${MY_PN}${MY_PV}
 DESCRIPTION="Image library supporting many formats"
 HOMEPAGE="http://freeimage.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip
-	mirror://sourceforge/${PN}/${MY_P}.pdf"
+	mirror://sourceforge/${PN}/${MY_P}.pdf
+	http://dev.gentoo.org/~gienah/2big4tree/media-libs/freeimage/${PN}-3.15.4-libjpeg-turbo.patch.gz"
 
 LICENSE="|| ( GPL-2 FIPL-1.0 )"
 SLOT="0"
@@ -43,7 +44,7 @@ src_prepare() {
 	cd Source
 	if has_version ">=media-libs/libjpeg-turbo-1.2.1"; then
 		# Patch from Christian Heimes's fork (thanks) https://bitbucket.org/tiran/freeimageturbo
-		epatch "${FILESDIR}"/${PN}-3.15.4-libjpeg-turbo.patch.gz
+		epatch "${DISTDIR}"/${PN}-3.15.4-libjpeg-turbo.patch.gz
 		cp LibJPEG/{jpegcomp.h,jpegint.h} . || die
 	fi
 	cp LibJPEG/{transupp.c,transupp.h,jinclude.h} . || die
