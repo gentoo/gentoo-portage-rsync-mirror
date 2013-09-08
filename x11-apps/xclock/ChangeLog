@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xclock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclock/ChangeLog,v 1.69 2012/08/26 16:36:18 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclock/ChangeLog,v 1.70 2013/09/08 20:56:58 chithanh Exp $
+
+*xclock-1.0.7 (08 Sep 2013)
+
+  08 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xclock-1.0.7.ebuild, -xclock-1.0.5.ebuild:
+  Version bump, drop old.
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xclock-1.0.6.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419473
@@ -244,4 +250,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +xclock-0.99.0.ebuild:
   Initial commit for modular X.
-

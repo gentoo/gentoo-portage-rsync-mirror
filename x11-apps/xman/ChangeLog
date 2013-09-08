@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xman
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.57 2012/02/19 14:34:23 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.58 2013/09/08 20:56:35 chithanh Exp $
+
+*xman-1.1.3 (08 Sep 2013)
+
+  08 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xman-1.1.3.ebuild, -xman-1.1.1.ebuild:
+  Version bump, drop old.
 
   19 Feb 2012; Raúl Porcel <armin76@gentoo.org> xman-1.1.2.ebuild:
   s390/sh/sparc stable wrt #394393
@@ -204,4 +210,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +xman-0.99.0.ebuild:
   Initial commit for modular X.
-
