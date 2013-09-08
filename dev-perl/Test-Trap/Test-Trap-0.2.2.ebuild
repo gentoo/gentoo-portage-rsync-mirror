@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/Test-Trap-0.2.2.ebuild,v 1.5 2013/04/16 17:19:51 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/Test-Trap-0.2.2.ebuild,v 1.6 2013/09/08 10:41:58 pinkbyte Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Trap exit codes, exceptions, output, etc"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Dump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/ChangeLog,v 1.28 2013/08/25 07:18:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump/ChangeLog,v 1.29 2013/09/08 10:41:26 pinkbyte Exp $
+
+  08 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> Data-Dump-1.220.0.ebuild:
+  Add ~arm keyword, wrt bug #449762
 
 *Data-Dump-1.220.0 (25 Aug 2013)
 
