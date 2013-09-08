@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.5 2013/08/27 01:33:09 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.6 2013/09/08 22:54:49 twitch153 Exp $
 
 EAPI=5
 
@@ -94,10 +94,12 @@ src_prepare() {
 	mv Externals/SOIL . || die
 	mv Externals/Bochs_disasm . || die
 	mv Externals/CLRun . || die
+	mv Externals/polarssl . || die
 	rm -r Externals/* || die
 	mv CLRun Externals || die
 	mv Bochs_disasm Externals || die
 	mv SOIL Externals || die
+	mv polarssl Externals || die
 }
 
 src_configure() {

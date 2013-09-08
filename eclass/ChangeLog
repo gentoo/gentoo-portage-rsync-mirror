@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.952 2013/09/08 14:56:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.953 2013/09/08 22:54:23 mgorny Exp $
+
+  08 Sep 2013; Michał Górny <mgorny@gentoo.org> git-2.eclass:
+  Inherit git-r3 unconditionally to avoid metadata variancy. The eclass is
+  properly namespaced, does not touch variables in global scope and exports
+  only src_unpack() that git-2 overrides anyway.
 
   08 Sep 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
   Fix PYTHON_SITEDIR for Jython.

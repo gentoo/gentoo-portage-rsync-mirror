@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.31 2013/09/05 20:39:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.32 2013/09/08 22:54:24 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -17,9 +17,8 @@
 # Use git-r3 backend instead of classic git-2 behavior. This is intended
 # for early testing of git-r3 and is to be set in make.conf.
 
-if [[ ${EGIT_USE_GIT_R3} ]]; then
-	inherit git-r3
-fi
+# (since we override src_unpack this doesn't hurt)
+inherit git-r3
 
 # This eclass support all EAPIs
 EXPORT_FUNCTIONS src_unpack
