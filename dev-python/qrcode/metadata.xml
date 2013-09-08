@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<herd>python</herd>
 	<upstream>
-		<remote-id type="pypi">funcparserlib</remote-id>
+		<remote-id type="pypi">qrcode</remote-id>
 	</upstream>
 </pkgmetadata>
