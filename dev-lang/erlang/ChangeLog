@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.242 2013/08/26 12:44:16 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.243 2013/09/08 11:55:41 pacho Exp $
+
+*erlang-16.1-r1 (08 Sep 2013)
+
+  08 Sep 2013; Pacho Ramos <pacho@gentoo.org> +erlang-16.1-r1.ebuild:
+  Change unit file installation (#482446#c5)
 
   26 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> -erlang-15.2.2.ebuild,
   -erlang-15.2.ebuild:
