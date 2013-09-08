@@ -1,12 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jansi/jansi-1.11-r1.ebuild,v 1.1 2013/08/17 09:26:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jansi/jansi-1.11-r1.ebuild,v 1.2 2013/09/08 13:25:35 tomwij Exp $
 
 EAPI="5"
 
-# TODO: Get tests (misses junit jar) and doc (missing classpath entries) working.
+# TODO: Get doc (missing classpath entries) working.
 JAVA_PKG_IUSE="source test"
-RESTRICT="test"
 
 inherit vcs-snapshot java-pkg-2 java-ant-2
 
@@ -21,7 +20,10 @@ KEYWORDS="~amd64 ~x86"
 CDEPEND="dev-java/jansi-native:0"
 
 DEPEND="${CDEPEND}
-	test? ( dev-java/junit:4 )
+	test? (
+		dev-java/ant-junit4:0
+		dev-java/junit:4
+	)
 	>=virtual/jdk-1.5"
 
 RDEPEND="${CDEPEND}
@@ -37,9 +39,11 @@ java_prepare() {
 	cp "${FILESDIR}"/${P}-build.xml build.xml || die
 }
 
-EANT_TEST_GENTOO_CLASSPATH="junit-4"
+EANT_TEST_GENTOO_CLASSPATH="ant-junit4,junit-4"
 
 src_test() {
+	EANT_EXTRA_ARGS="-Djunit.present=true"
+
 	java-pkg-2_src_test
 }
 
