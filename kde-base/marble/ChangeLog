@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.214 2013/09/03 19:50:26 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.215 2013/09/08 07:54:08 ago Exp $
+
+  08 Sep 2013; Agostino Sarubbo <ago@gentoo.org> marble-4.10.5.ebuild,
+  marble-4.11.1.ebuild:
+  Fix missing DEPEND of qtdbus, thanks to Nikoli, wrt to bug #484172
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org> -marble-4.11.0.ebuild:
   Drop KDE 4.11.0
