@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/freeimage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.28 2013/06/13 12:29:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/ChangeLog,v 1.29 2013/09/08 04:19:39 gienah Exp $
+
+  08 Sep 2013; Mark Wright <gienah@gentoo.org>
+  +files/freeimage-3.15.4-libjpeg-turbo.patch.gz, freeimage-3.15.4.ebuild:
+  Thanks to Christian Heimes for porting freeimage to use libjpeg-turbo,
+  freeimage-3.15.4-libjpeg-turbo.patch.gz is from Christian's fork at
+  https://bitbucket.org/tiran/freeimageturbo. Fixes bug 479476. Thanks to
+  Aleksander for reporting, Samuli Suominen, SpanKY for comments on how it
+  should be fixed.
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> freeimage-3.15.3-r2.ebuild,
   freeimage-3.15.3.ebuild, freeimage-3.15.4.ebuild:
