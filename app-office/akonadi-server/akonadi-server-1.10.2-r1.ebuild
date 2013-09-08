@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.2-r1.ebuild,v 1.1 2013/08/13 21:35:45 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.2-r1.ebuild,v 1.2 2013/09/08 13:54:37 kensington Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ CDEPEND="
 	qt4? (
 		>=dev-qt/qtcore-4.5.0:4
 		>=dev-qt/qtdbus-4.5.0:4
-		>=dev-qt/qtgui-4.5.0:4[dbus(+)]
+		>=dev-qt/qtgui-4.5.0:4
 		>=dev-qt/qtsql-4.5.0:4[mysql?,postgres?]
 		>=dev-qt/qttest-4.5.0:4
 	)

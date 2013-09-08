@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-IRC
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.39 2012/11/23 13:11:23 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.40 2013/09/08 13:36:34 idella4 Exp $
+
+*Net-IRC-0.790.0-r1 (08 Sep 2013)
+
+  08 Sep 2013; Ian Delaney <idella4@gentoo.org> +Net-IRC-0.790.0-r1.ebuild:
+  revbump -> EAPI 5
 
   23 Nov 2012; Anthony G. Basile <blueness@gentoo.org> Net-IRC-0.790.0.ebuild:
   keyword ~arm, bug #442816

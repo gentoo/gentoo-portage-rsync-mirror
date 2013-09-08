@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/nightmode/nightmode-0.3.ebuild,v 1.3 2012/04/19 04:46:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/nightmode/nightmode-0.3.ebuild,v 1.4 2013/09/08 13:45:42 kensington Exp $
 
 EAPI=4
 
@@ -20,3 +20,5 @@ DEPEND="$(add_kdebase_dep kwin)"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
+
+PATCHES=( "${FILESDIR}/${P}-kde-4.10.patch" )
