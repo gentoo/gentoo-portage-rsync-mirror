@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.124 2013/09/01 22:46:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.125 2013/09/08 17:08:31 ottxor Exp $
 
 # This file requires >=portage-2.1.1
+
+# Christoph Junghans <ottxor@gentoo.org> (08 Sep 2013)
+# restrict USE=quad for x86 as there are too less registers
+sci-libs/fftw quad
 
 # Jeff Horelick <jdhore@gentoo.org> (1 Sep 2013)
 # Dependency (media-libs/libsidplayfp) only keyworded

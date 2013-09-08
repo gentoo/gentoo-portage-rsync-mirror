@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.21 2013/09/07 09:04:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.22 2013/09/08 17:15:43 floppym Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -20,10 +20,6 @@ app-portage/eix clang
 # Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2013)
 # The dependencies for these flags are still in ~arch.
 sys-fs/lvm2 clvm cman
-
-# Mike Gilbert <floppym@gentoo.org> (09 Jun 2013)
-# Requires dev-python/pillow to be stable.
-virtual/python-imaging python_targets_python3_2 python_targets_python3_3
 
 # Agostino Sarubbo <ago@gentoo.org> (24 May 2013)
 # Justin Lecher <jlec@gentoo.org> (30 May 2313)

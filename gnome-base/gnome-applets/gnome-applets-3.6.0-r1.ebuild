@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.6.0-r1.ebuild,v 1.3 2013/09/01 17:34:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-3.6.0-r1.ebuild,v 1.4 2013/09/08 17:04:29 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-IUSE="gnome ipv6 networkmanager policykit"
+IUSE="+cpufreq gnome ipv6 networkmanager policykit"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 # 3.6 is tagged in upstream git, but the tarballs have not been uploaded :/
 SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}-unofficial.tar.xz"
@@ -41,6 +41,7 @@ RDEPEND="
 	=dev-libs/libgweather-3.6*:=
 	x11-libs/libX11
 
+	cpufreq? ( sys-power/cpufrequtils )
 	gnome?	(
 		gnome-base/gnome-settings-daemon
 
@@ -78,14 +79,14 @@ src_configure() {
 	# We don't want HAL or battstat.
 	# mixer applet uses gstreamer, conflicts with the mixer provided by g-s-d
 	# GNOME 3 has a hard-dependency on pulseaudio, so gstmixer applet is useless
-	G2CONF="${G2CONF}
-		--without-hal
-		--disable-battstat
-		--disable-mixer-applet
-		$(use_enable ipv6)
-		$(use_enable networkmanager)
-		$(use_enable policykit polkit)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--without-hal \
+		--disable-battstat \
+		--disable-mixer-applet \
+		$(use_enable ipv6) \
+		$(use_enable networkmanager) \
+		$(use_enable policykit polkit) \
+		$(usex cpufreq "" --disable-cpufreq)
 }
 
 src_test() {

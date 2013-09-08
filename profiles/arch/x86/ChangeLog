@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.149 2013/09/01 22:46:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.150 2013/09/08 17:08:31 ottxor Exp $
+
+  08 Sep 2013; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
+  masked sci-libs/fftw[quad]
 
   01 Sep 2013; Jeff Horelick <jdhore@gentoo.org> package.use.mask:
   unmask sid for >=media-plugins/audacious-plugins-3.4
