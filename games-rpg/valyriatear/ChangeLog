@@ -1,6 +1,15 @@
 # ChangeLog for games-rpg/valyriatear
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/ChangeLog,v 1.5 2013/06/30 12:43:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/ChangeLog,v 1.7 2013/09/09 00:30:11 hasufell Exp $
+
+*valyriatear-0.6.0_rc1 (09 Sep 2013)
+
+  09 Sep 2013; Julian Ospald <hasufell@gentoo.org>
+  +valyriatear-0.6.0_rc1.ebuild:
+  version bump
+
+  09 Sep 2013; Julian Ospald <hasufell@gentoo.org> valyriatear-0.5.1.ebuild:
+  zlib is not a direct dep
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> valyriatear-0.5.1.ebuild:
   Stable for x86, wrt bug #474386
