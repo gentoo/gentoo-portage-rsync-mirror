@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.23 2013/09/02 11:21:28 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.24 2013/09/09 09:05:33 pinkbyte Exp $
+
+*mpv-0.1.5 (09 Sep 2013)
+
+  09 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> +mpv-0.1.5.ebuild:
+  Version bump, thanks to Nikoli
 
   02 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> metadata.xml:
   Change maintainer's email address
