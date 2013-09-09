@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r3.ebuild,v 1.8 2013/09/08 16:30:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r3.ebuild,v 1.9 2013/09/09 02:39:40 patrick Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -45,7 +45,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-glib-2.32.patch
 
 	# automake-1.13 fix, bug #467540
-    sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.in || die
+	sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.in || die
 
 	eautoreconf
 	gnome2_src_prepare

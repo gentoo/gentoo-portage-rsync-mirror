@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/RubyInline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.16 2013/09/07 20:15:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/RubyInline/ChangeLog,v 1.17 2013/09/09 02:46:58 mrueg Exp $
+
+  09 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -RubyInline-3.8.6.ebuild,
+  -files/ruby-inline-3.11.0-gentoo.patch, -files/ruby-inline-3.8.4-gentoo.patch,
+  -files/ruby-inline-3.8.4-ldflags.patch:
+  Cleanup old.
 
   07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> RubyInline-3.12.2.ebuild:
   Stable for sparc, wrt bug #480998

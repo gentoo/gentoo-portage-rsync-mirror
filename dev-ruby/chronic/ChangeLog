@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/chronic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.12 2013/02/28 07:34:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.13 2013/09/09 02:53:05 mrueg Exp $
+
+  09 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -chronic-0.6.7.ebuild,
+  -chronic-0.7.0.ebuild, -chronic-0.9.0.ebuild:
+  Cleanup old.
 
 *chronic-0.9.1 (28 Feb 2013)
 
@@ -56,4 +60,3 @@
   +metadata.xml:
   Initial import from graaff overlay. New dependency for dev-ruby/main. Closes
   bug 280143.
-

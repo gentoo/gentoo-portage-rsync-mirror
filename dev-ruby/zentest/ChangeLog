@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/zentest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.122 2013/08/13 06:15:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/zentest/ChangeLog,v 1.123 2013/09/09 02:50:35 mrueg Exp $
+
+  09 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -zentest-4.9.1.ebuild,
+  -zentest-4.9.2.ebuild:
+  Cleanup old.
 
 *zentest-4.9.3 (13 Aug 2013)
 
