@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.953 2013/09/08 22:54:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.954 2013/09/09 16:01:16 mgorny Exp $
+
+  09 Sep 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Introduce smart switching between "git fetch" and "git fetch --depth 1" to
+  save bandwidth.
 
   08 Sep 2013; Michał Górny <mgorny@gentoo.org> git-2.eclass:
   Inherit git-r3 unconditionally to avoid metadata variancy. The eclass is

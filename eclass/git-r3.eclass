@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.2 2013/09/05 22:40:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.3 2013/09/09 16:01:17 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -247,6 +247,93 @@ _git-r3_set_submodules() {
 	done < <(echo "${data}" | git config -f /dev/fd/0 -l)
 }
 
+# @FUNCTION: _git-r3_smart_fetch
+# @USAGE: <git-fetch-args>...
+# @DESCRIPTION:
+# Try fetching without '--depth' and switch to '--depth 1' if that
+# will involve less objects fetched.
+_git-r3_smart_fetch() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local sed_regexp='.*Counting objects: \([0-9]*\), done\..*'
+
+	# start the main fetch
+	local cmd=( git fetch --progress "${@}" )
+	echo "${cmd[@]}" >&2
+
+	# we copy the output to the 'sed' pipe for parsing. whenever sed finds
+	# the process count, it quits quickly to avoid delays in writing it.
+	# then, we start a dummy 'cat' to keep the pipe alive
+
+	"${cmd[@]}" 2>&1 \
+		| tee >(
+			sed -n -e "/${sed_regexp}/{s/${sed_regexp}/\1/p;q}" \
+				> "${T}"/git-r3_main.count
+			exec cat >/dev/null
+		) &
+	local main_pid=${!}
+
+	# start the helper process
+	_git-r3_sub_fetch() {
+		# wait for main fetch to get object count; if the server doesn't
+		# output it, we won't even launch the parallel process
+		while [[ ! -s ${T}/git-r3_main.count ]]; do
+			sleep 0.25
+		done
+
+		# ok, let's see if parallel fetch gives us smaller count
+		# --dry-run will prevent it from writing to the local clone
+		# and sed should terminate git with SIGPIPE
+		local sub_count=$(git fetch --progress --dry-run --depth 1 "${@}" 2>&1 \
+			| sed -n -e "/${sed_regexp}/{s/${sed_regexp}/\1/p;q}")
+		local main_count=$(<"${T}"/git-r3_main.count)
+
+		# let's be real sure that '--depth 1' will be good for us.
+		# note that we have purely objects counts, and '--depth 1'
+		# may involve much bigger objects
+		if [[ ${main_count} && ${main_count} -ge $(( sub_count * 3/2 )) ]]
+		then
+			# signal that we want shallow fetch instead,
+			# and terminate the non-shallow fetch process
+			touch "${T}"/git-r3_want_shallow || die
+			kill ${main_pid} &>/dev/null
+			exit 0
+		fi
+
+		exit 1
+	}
+	_git-r3_sub_fetch "${@}" &
+	local sub_pid=${!}
+
+	# wait for main process to terminate, either of its own
+	# or by signal from subprocess
+	wait ${main_pid}
+	local main_ret=${?}
+
+	# wait for subprocess to terminate, killing it if necessary.
+	# if main fetch finished before it, there's no point in keeping
+	# it alive. if main fetch was killed by it, it's done anyway
+	kill ${sub_pid} &>/dev/null
+	wait ${sub_pid}
+
+	# now see if subprocess wanted to tell us something...
+	if [[ -f ${T}/git-r3_want_shallow ]]; then
+		rm "${T}"/git-r3_want_shallow || die
+
+		# if fetch finished already (wasn't killed), ignore it
+		[[ ${main_ret} -eq 0 ]] && return 0
+
+		# otherwise, restart as shallow fetch
+		einfo "Restarting fetch using --depth 1 to save bandwidth ..."
+		local cmd=( git fetch --progress --depth 1 "${@}" )
+		echo "${cmd[@]}" >&2
+		"${cmd[@]}"
+		main_ret=${?}
+	fi
+
+	return ${main_ret}
+}
+
 # @FUNCTION: git-r3_fetch
 # @USAGE: [<repo-uri> [<remote-ref> [<local-id>]]]
 # @DESCRIPTION:
@@ -325,9 +412,12 @@ git-r3_fetch() {
 		#    to the first fetch in the repo. passing '--depth'
 		#    to further requests usually results in more data being
 		#    downloaded than without it.
-		# 3. in any other case, we just do plain 'git fetch' and let
-		#    git to do its best (on top of shallow or non-shallow repo).
+		# 3. if we update a shallow clone, we try without '--depth'
+		#    first since that usually transfers less data. however,
+		#    we use git-r3_smart_fetch that can switch into '--depth 1'
+		#    if that looks beneficial.
 
+		local fetch_command=( git fetch )
 		if [[ ${EGIT_NONSHALLOW} ]]; then
 			if [[ -f ${GIT_DIR}/shallow ]]; then
 				ref_param+=( --unshallow )
@@ -336,6 +426,8 @@ git-r3_fetch() {
 			# 'git show-ref --heads' returns 1 when there are no branches
 			if ! git show-ref --heads -q; then
 				ref_param+=( --depth 1 )
+			else
+				fetch_command=( _git-r3_smart_fetch )
 			fi
 		fi
 
@@ -354,7 +446,7 @@ git-r3_fetch() {
 		# if ${remote_ref} is branch or tag, ${ref[@]} will contain
 		# the respective commit id. otherwise, it will be an empty
 		# array, so the following won't evaluate to a parameter.
-		set -- git fetch --no-tags "${r}" "${ref_param[@]}"
+		set -- "${fetch_command[@]}" --no-tags "${r}" "${ref_param[@]}"
 		echo "${@}" >&2
 		if "${@}"; then
 			if [[ ! ${is_branch} ]]; then

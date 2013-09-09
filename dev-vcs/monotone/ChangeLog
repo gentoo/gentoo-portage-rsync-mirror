@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.27 2013/08/28 13:35:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.28 2013/09/09 15:53:37 pva Exp $
+
+  09 Sep 2013; Peter Volkov <pva@gentoo.org> monotone-1.0-r4.ebuild,
+  +files/monotone-1.0-texinfo-5.1.patch:
+  Fix build issue with texinfo-5.1, bug #483122 wrt Martin von Gagern
 
 *monotone-1.0-r4 (28 Aug 2013)
 
