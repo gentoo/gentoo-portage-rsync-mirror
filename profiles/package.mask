@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15091 2013/09/08 20:25:25 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15092 2013/09/09 02:21:28 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -71,6 +71,8 @@
 =virtual/perl-IO-1.280.0
 =virtual/perl-Module-CoreList-2.900.0
 virtual/perl-Carp
+virtual/perl-B-Debug
+virtual/perl-File-Temp
 
 # Pacho Ramos <pacho@gentoo.org> (07 Sep 2013)
 # Fails to build with gcc-4.7, no release since 2009,
