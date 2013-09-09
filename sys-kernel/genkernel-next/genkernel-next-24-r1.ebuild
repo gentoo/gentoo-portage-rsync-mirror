@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-24.ebuild,v 1.1 2013/08/26 10:38:18 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-24-r1.ebuild,v 1.1 2013/09/09 09:56:27 lxnay Exp $
 
 EAPI=5
 
@@ -36,13 +36,13 @@ DEPEND="app-text/asciidoc
 RDEPEND="${DEPEND}
 	!sys-kernel/genkernel
 	cryptsetup? ( sys-fs/cryptsetup )
-	dmraid? ( sys-fs/dmraid )
+	dmraid? ( >=sys-fs/dmraid-1.0.0_rc16 )
 	gpg? ( app-crypt/gnupg )
 	iscsi? ( sys-block/open-iscsi )
 	plymouth? ( sys-boot/plymouth )
 	app-portage/portage-utils
 	app-arch/cpio
-	>=app-misc/pax-utils-0.2.1
+	>=app-misc/pax-utils-0.6
 	!<sys-apps/openrc-0.9.9
 	sys-block/thin-provisioning-tools
 	sys-fs/dmraid

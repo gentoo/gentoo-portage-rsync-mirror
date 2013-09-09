@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Path-Tiny
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Tiny/ChangeLog,v 1.5 2013/04/16 17:58:21 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Tiny/ChangeLog,v 1.6 2013/09/09 09:48:25 pinkbyte Exp $
+
+  09 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> Path-Tiny-0.12.0.ebuild:
+  Add ~arm keyword, wrt bug #449762
 
   16 Apr 2013; Vicente Olivert Riera <vincent@gentoo.org>
   Path-Tiny-0.5.0.ebuild:
