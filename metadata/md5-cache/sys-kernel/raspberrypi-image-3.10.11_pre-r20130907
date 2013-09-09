@@ -1,0 +1,10 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Raspberry PI precompiled kernel and modules
+EAPI=5
+HOMEPAGE=https://github.com/raspberrypi/firmware
+KEYWORDS=~arm -*
+LICENSE=GPL-2
+RESTRICT=binchecks mirror strip
+SLOT=3.10.11_pre-r20130907
+SRC_URI=https://dev.gentoo.org/~xmw/raspberrypi-image/raspberrypi-image-3.10.11_pre-r20130907.tar.xz
+_md5_=fa236ae42e18be72e4593b06efa88d98
