@@ -1,22 +1,22 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r1.ebuild,v 1.11 2011/08/17 20:11:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.21-r13.ebuild,v 1.1 2013/09/09 19:14:05 grobian Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
-PATCHSET_REV="-r1"
+PATCHSET_REV="-r16"
 
 DESCRIPTION="A small but very powerful text-based mail client"
-HOMEPAGE="http://www.mutt.org"
+HOMEPAGE="http://www.mutt.org/"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2
 	http://dev.gentoo.org/~grobian/distfiles/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2"
-IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap mbox nls nntp pop qdbm sasl sidebar smime smtp ssl tokyocabinet"
+IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap kerberos mbox nls nntp pop qdbm sasl selinux sidebar smime smtp ssl tokyocabinet"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 RDEPEND=">=sys-libs/ncurses-5.2
 	tokyocabinet?  ( dev-db/tokyocabinet )
 	!tokyocabinet? (
@@ -31,6 +31,7 @@ RDEPEND=">=sys-libs/ncurses-5.2
 		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
+	kerberos? ( virtual/krb5 )
 	pop?     (
 		gnutls?  ( >=net-libs/gnutls-1.0.17 )
 		!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
@@ -42,8 +43,9 @@ RDEPEND=">=sys-libs/ncurses-5.2
 		sasl?    ( >=dev-libs/cyrus-sasl-2 )
 	)
 	idn?     ( net-dns/libidn )
-	gpg?   ( >=app-crypt/gpgme-0.9.0 )
+	gpg?     ( >=app-crypt/gpgme-0.9.0 )
 	smime?   ( >=dev-libs/openssl-0.9.6 )
+	selinux? ( sec-policy/selinux-mutt )
 	app-misc/mime-types"
 DEPEND="${RDEPEND}
 	net-mail/mailbase
@@ -77,9 +79,6 @@ src_prepare() {
 	# must have fixes to compile or behave correctly, upstream
 	# ignores, disagrees or simply doesn't respond/apply
 	epatch "${PATCHDIR}"/bdb-prefix.patch # fix bdb detection
-	epatch "${PATCHDIR}"/interix-btowc.patch
-	epatch "${PATCHDIR}"/solaris-ncurses-chars.patch
-	epatch "${PATCHDIR}"/gpgme-1.2.0.patch
 	# same category, but functional bits
 	epatch "${PATCHDIR}"/dont-reveal-bbc.patch
 
@@ -91,10 +90,18 @@ src_prepare() {
 
 	# we conditionalise this one, simply because it has considerable
 	# impact on the code
-	use sidebar && epatch "${PATCHDIR}"/sidebar.patch
+	if use sidebar ; then
+		epatch "${PATCHDIR}"/sidebar.patch
+		epatch "${PATCHDIR}"/sidebar-utf8.patch
+		epatch "${PATCHDIR}"/sidebar-dotpathsep.patch
+	fi
+
+	local upatches=
+	# allow user patches
+	epatch_user && upatches=" with user patches"
 
 	# patch version string for bug reports
-	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
+	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}${upatches}"')"/' \
 		muttlib.c || die "failed patching in Gentoo version"
 
 	# many patches touch the buildsystem, we always need this
@@ -123,6 +130,7 @@ src_configure() {
 		$(use_enable smime) \
 		$(use_enable smtp) \
 		$(use_with idn) \
+		$(use_with kerberos gss) \
 		$(use_with !nntp mixmaster) \
 		--enable-compressed \
 		--enable-external-dotlock \
@@ -185,7 +193,7 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	if use mbox; then
 		insinto /etc/mutt
 		newins "${FILESDIR}"/Muttrc.mbox Muttrc
@@ -198,11 +206,18 @@ src_install() {
 	rm "${ED}"/etc/${PN}/mime.types
 	dosym /etc/mime.types /etc/${PN}/mime.types
 
-	# A man-page is always handy
+	# A man-page is always handy, so fake one
 	if use !doc; then
-		cp doc/mutt.man mutt.1
+		emake -C doc DESTDIR="${D}" muttrc.man || die
+		# make the fake slightly better, bug #413405
+		sed -e 's#@docdir@/manual.txt#http://www.mutt.org/doc/devel/manual.html#' \
+			-e 's#in @docdir@,#at http://www.mutt.org/,#' \
+			-e "s#@sysconfdir@#${EPREFIX}/etc/${PN}#" \
+			-e "s#@bindir@#${EPREFIX}/usr/bin#" \
+			doc/mutt.man > mutt.1
 		cp doc/muttbug.man flea.1
-		doman mutt.1 flea.1
+		cp doc/muttrc.man muttrc.5
+		doman mutt.1 flea.1 muttrc.5
 	else
 		# nuke manpages that should be provided by an MTA, bug #177605
 		rm "${ED}"/usr/share/man/man5/{mbox,mmdf}.5 \
