@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/stm-2.4.2.ebuild,v 1.6 2013/03/31 10:25:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stm/stm-2.4.2.ebuild,v 1.7 2013/09/09 20:13:37 slyfox Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="alpha amd64 ia64 ~ppc sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.10.4:="
