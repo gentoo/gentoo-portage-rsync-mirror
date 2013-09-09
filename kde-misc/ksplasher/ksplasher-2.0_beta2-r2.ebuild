@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplasher/ksplasher-2.0_beta2-r1.ebuild,v 1.1 2010/08/21 15:12:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplasher/ksplasher-2.0_beta2-r2.ebuild,v 1.1 2013/09/09 04:20:15 floppym Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -25,6 +25,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-pillow.patch"
 	python_convert_shebangs -r 2 .
 	# ksplasherx is a bash script which calls 'python foo'. We fix it here.
 	sed -i -e 's:python:/usr/bin/env python2:g' ksplasherx || die
