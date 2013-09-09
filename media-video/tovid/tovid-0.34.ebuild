@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.34.ebuild,v 1.4 2011/12/22 12:55:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.34.ebuild,v 1.5 2013/09/09 04:43:08 floppym Exp $
 
 EAPI=3
 
@@ -23,7 +23,6 @@ IUSE=""
 RDEPEND="app-cdr/cdrdao
 	app-cdr/dvd+rw-tools
 	dev-python/pycairo
-	dev-python/imaging
 	dev-tcltk/tix
 	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] )
 	media-sound/normalize

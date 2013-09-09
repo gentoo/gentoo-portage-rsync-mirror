@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.34_p20120123.ebuild,v 1.1 2012/01/23 20:47:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.34_p20120123.ebuild,v 1.2 2013/09/09 04:43:08 floppym Exp $
 
 # svn checkout http://tovid.googlecode.com/svn/trunk/tovid tovid-${PV}
 # note: see quickrelease file in the top source directory
@@ -27,7 +27,6 @@ IUSE=""
 RDEPEND="app-cdr/cdrdao
 	app-cdr/dvd+rw-tools
 	dev-python/pycairo
-	dev-python/imaging
 	dev-tcltk/tix
 	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] )
 	media-sound/normalize
