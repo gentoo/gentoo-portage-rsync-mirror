@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.135 2013/09/06 10:23:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.136 2013/09/09 22:12:09 maekke Exp $
+
+  09 Sep 2013; Markus Meier <maekke@gentoo.org> subversion-1.7.13.ebuild:
+  arm stable, bug #482166
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> subversion-1.7.13.ebuild:
   Stable for sparc, wrt bug #482166

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.9.ebuild,v 1.4 2013/08/27 15:57:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.3.12.ebuild,v 1.1 2013/09/09 22:10:17 zerochaos Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -9,21 +9,20 @@
 
 EAPI="4"
 
-inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx flag-o-matic
+inherit java-pkg-2 java-vm-2 pax-utils prefix versionator virtualx
 
 ICEDTEA_VER=$(get_version_component_range 2-)
 ICEDTEA_BRANCH=$(get_version_component_range 2-3)
 ICEDTEA_PKG=icedtea-${ICEDTEA_VER}
-CORBA_TARBALL="47a6bf94ce11.tar.gz"
-JAXP_TARBALL="d2142901bcb7.tar.gz"
-JAXWS_TARBALL="b1877762d45c.tar.gz"
-JDK_TARBALL="8e91101e36f0.tar.gz"
-LANGTOOLS_TARBALL="fd956199cb82.tar.gz"
-OPENJDK_TARBALL="12b96a57263c.tar.gz"
-HOTSPOT_TARBALL="ad5a321edea2.tar.gz"
+CORBA_TARBALL="ea108ff3be9a.tar.gz"
+JAXP_TARBALL="332f0234a53e.tar.gz"
+JAXWS_TARBALL="fdc4ad9f30c6.tar.gz"
+JDK_TARBALL="4a0cf2c05cc6.tar.gz"
+LANGTOOLS_TARBALL="6c9b532f4281.tar.gz"
+OPENJDK_TARBALL="e62743867f54.tar.gz"
+HOTSPOT_TARBALL="37b254871acb".tar.gz
 CACAO_TARBALL="a567bcb7f589.tar.gz"
 JAMVM_TARBALL="jamvm-0972452d441544f7dd29c55d64f1ce3a5db90d82.tar.gz"
-ZERO_HOTSPOT_TARBALL="2c4981784101.tar.gz"
 
 CORBA_GENTOO_TARBALL="icedtea-${ICEDTEA_BRANCH}-corba-${CORBA_TARBALL}"
 JAXP_GENTOO_TARBALL="icedtea-${ICEDTEA_BRANCH}-jaxp-${JAXP_TARBALL}"
@@ -34,7 +33,6 @@ OPENJDK_GENTOO_TARBALL="icedtea-${ICEDTEA_BRANCH}-openjdk-${OPENJDK_TARBALL}"
 HOTSPOT_GENTOO_TARBALL="icedtea-${ICEDTEA_BRANCH}-hotspot-${HOTSPOT_TARBALL}"
 CACAO_GENTOO_TARBALL="icedtea-${ICEDTEA_BRANCH}-cacao-${CACAO_TARBALL}"
 JAMVM_GENTOO_TARBALL="icedtea-${ICEDTEA_BRANCH}-${JAMVM_TARBALL}"
-ZERO_GENTOO_TARBALL="icedtea-2.1-hotspot-${ZERO_HOTSPOT_TARBALL}"
 
 DESCRIPTION="A harness to build OpenJDK using Free Software build tools and dependencies"
 HOMEPAGE="http://icedtea.classpath.org"
@@ -55,18 +53,14 @@ SRC_URI="
 	http://icedtea.classpath.org/hg/release/icedtea7-forest-${ICEDTEA_BRANCH}/langtools/archive/${LANGTOOLS_TARBALL}
 	 -> ${LANGTOOLS_GENTOO_TARBALL}
 	http://icedtea.classpath.org/download/drops/cacao/${CACAO_TARBALL} -> ${CACAO_GENTOO_TARBALL}
-	http://icedtea.classpath.org/download/drops/jamvm/${JAMVM_TARBALL} -> ${JAMVM_GENTOO_TARBALL}
-	!amd64? ( !arm? ( !ppc? ( !ppc64? ( !sparc? ( !x86? (
-		http://icedtea.classpath.org/hg/release/icedtea7-forest-2.1/hotspot/archive/${ZERO_HOTSPOT_TARBALL}
-		 -> ${ZERO_GENTOO_TARBALL}
-	) ) ) ) ) )"
+	http://icedtea.classpath.org/download/drops/jamvm/${JAMVM_TARBALL} -> ${JAMVM_GENTOO_TARBALL}"
 
 LICENSE="Apache-1.1 Apache-2.0 GPL-1 GPL-2 GPL-2-with-linking-exception LGPL-2 MPL-1.0 MPL-1.1 public-domain W3C"
 SLOT="7"
 KEYWORDS="~amd64 ~ia64 ~x86"
 
 IUSE="+X +alsa cjk +cups debug doc examples javascript +jbootstrap +nsplugin
-	+nss pax_kernel pulseaudio +source systemtap test +webstart"
+	+nss pax_kernel pulseaudio +source systemtap test zero +webstart"
 
 # Ideally the following were optional at build time.
 ALSA_COMMON_DEP="
@@ -98,10 +92,10 @@ X_DEPEND="
 
 COMMON_DEP="
 	>=media-libs/giflib-4.1.6
-	media-libs/lcms:2
+	>=media-libs/lcms-2.5
 	>=media-libs/libpng-1.2
 	>=sys-libs/zlib-1.2.3
-	virtual/jpeg:0
+	virtual/jpeg
 	javascript? ( dev-java/rhino:1.6 )
 	nss? ( >=dev-libs/nss-3.12.5-r1 )
 	pulseaudio?  ( >=media-sound/pulseaudio-0.9.11 )
@@ -125,23 +119,24 @@ RDEPEND="${COMMON_DEP}
 	alsa? ( ${ALSA_COMMON_DEP} )
 	cups? ( ${CUPS_COMMON_DEP} )"
 
-# Require >=ant-core-1.8.2 so no additional ant tasks are needed. #466558
+# Only ant-core-1.8.1 has fixed ant -diagnostics when xerces+xalan are not present.
 # ca-certificates, perl and openssl are used for the cacerts keystore generation
 # xext headers have two variants depending on version - bug #288855
 # autoconf - as long as we use eautoreconf, version restrictions for bug #294918
-
-# FIXME: this version can't be built with icedtea-6 
 DEPEND="${COMMON_DEP} ${ALSA_COMMON_DEP} ${CUPS_COMMON_DEP} ${X_COMMON_DEP}
 	|| (
 		>=dev-java/gcj-jdk-4.3
 		dev-java/icedtea-bin:7
+		dev-java/icedtea-bin:6
 		dev-java/icedtea:7
+		dev-java/icedtea:6
 	)
 	app-arch/cpio
 	app-arch/unzip
 	app-arch/zip
 	app-misc/ca-certificates
-	>=dev-java/ant-core-1.8.2
+	>=dev-java/ant-core-1.8.1
+	dev-java/ant-nodeps
 	dev-lang/perl
 	>=dev-libs/libxslt-1.1.26
 	dev-libs/openssl
@@ -159,8 +154,8 @@ S="${WORKDIR}"/${ICEDTEA_PKG}
 pkg_setup() {
 	JAVA_PKG_WANT_BUILD_VM="
 		icedtea-7 icedtea-bin-7 icedtea7
+		icedtea-6 icedtea-bin-6 icedtea6 icedtea6-bin
 		gcj-jdk"
-		#icedtea-6 icedtea-bin-6 icedtea6 icedtea6-bin
 	JAVA_PKG_WANT_SOURCE="1.5"
 	JAVA_PKG_WANT_TARGET="1.5"
 
@@ -186,7 +181,7 @@ bootstrap_impossible() {
 }
 
 src_configure() {
-	local config bootstrap
+	local config bootstrap use_zero zero_config
 	local vm=$(java-pkg_get-current-vm)
 
 	# Whether to bootstrap
@@ -209,23 +204,25 @@ src_configure() {
 
 	config="${config} --${bootstrap}-bootstrap"
 
-	# HotSpot > CACAO > JamVM > Zero, though CACAO is somewhat memory hungry
-	# CACAO is not yet available for icedtea-7
-	case "${ARCH}" in
-		amd64|sparc|x86)
-			;;
-		arm)
-			config+=" --enable-jamvm" #IT1266
-			replace-flags -Os -O2 #BGO453612 #IT1267
-			;;
-		ppc|ppc64)
-			config+=" --enable-jamvm"
-			;;
-		*)
-			config+=" --enable-zero"
-			HOTSPOT_GENTOO_TARBALL=${ZERO_GENTOO_TARBALL}
-			;;
-	esac
+	# Use Zero if requested
+	if use zero; then
+		use_zero="yes";
+	fi
+
+	# Always use HotSpot as the primary VM if available. #389521 #368669 #357633 ...
+	# Otherwise use JamVM as it's the only possibility right now
+	if ! has "${ARCH}" amd64 sparc x86 ; then
+		if has "${ARCH}" ppc ppc64 arm ; then
+			config="${config} --enable-jamvm"
+		else
+			use_zero="yes";
+		fi
+	fi
+
+	# Turn on Zero if needed (non-HS/JamVM archs) or requested
+	if test "x${use_zero}" = "xyes"; then
+		zero_config="--enable-zero";
+	fi
 
 	# OpenJDK-specific parallelism support. Bug #389791, #337827
 	# Implementation modified from waf-utils.eclass
@@ -260,14 +257,16 @@ src_configure() {
 		$(use_enable nss) \
 		$(use_enable pulseaudio pulse-java) \
 		$(use_enable systemtap) \
-		$(use_with pax_kernel pax paxctl)
+		$(use_with pax_kernel pax paxctl) \
+		${zero_config}
 }
 
 src_compile() {
 	# Would use GENTOO_VM otherwise.
 	export ANT_RESPECT_JAVA_HOME=TRUE
-	# disable all optional ant tasks
-	export ANT_TASKS="none"
+
+	# Load the least that's needed to avoid possible classpath collisions.
+	export ANT_TASKS="ant-nodeps"
 
 	emake
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sys-CPU
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.23 2013/03/24 10:40:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-CPU/ChangeLog,v 1.24 2013/09/09 22:14:59 zlogene Exp $
+
+  09 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> Sys-CPU-0.540.0.ebuild:
+  alpha stable wrt bug #449614
 
   24 Mar 2013; Fabian Groffen <grobian@gentoo.org> Sys-CPU-0.540.0.ebuild:
   Marked ~ppc-macos, bug #449786

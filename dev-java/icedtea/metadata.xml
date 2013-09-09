@@ -25,5 +25,8 @@
   <flag name="pax_kernel">For building when running a PaX enabled kernel.</flag>
   <flag name="systemtap">Enable SystemTap probes in HotSpot.</flag>
   <flag name="webstart">Enable Web Start support (via NetX).</flag>
+  <flag name="zero">
+   Enable Zero assembler port (usually for non-HotSpot architectures)
+  </flag>
 </use>
 </pkgmetadata>
