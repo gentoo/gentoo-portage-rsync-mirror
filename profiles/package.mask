@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15094 2013/09/09 10:17:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15095 2013/09/09 19:56:13 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -106,8 +106,16 @@ dev-games/neotools
 >=app-crypt/libsecret-0.16
 
 # Tom Wijsman <TomWij@gentoo.org> (28 Aug 2013)
-# Gentoo sources 3.8.13 masked due to security bug #475618: CVE-2013-1059:
-# Linux Kernel Ceph NULL Pointer Dereference Denial of Service Vulnerability
+# =sys-kernel/gentoo-sources-3.8.13 is masked due to multiple security bugs:
+# 
+# 1. Security Bug #475618: CVE-2013-1059:
+# Linux Kernel: Ceph: NULL Pointer Dereference Denial of Service Vulnerability
+#
+# 2. Security Bug #480200: CVE-2013-4205:
+# Linux Kernel: CLONE_NEWUSER local DoS
+#
+# 3. Security Bug #482896: From CVE-2013-2888 to CVE-2013-2899:
+# Linux Kernel: HID security flaws (Memory writes and leaks, NULL DoS, etc...)
 #
 # This kernel also contains other security bugs due to its old age (May 11).
 #
@@ -123,13 +131,15 @@ dev-games/neotools
 #
 # For proprietary NVIDIA drivers users, we temporarily keep 3.9.11-r1 around
 # as some of them experience problems with the new stable kernel 3.10.7; we aim
-# to mask it in one of the next weeks when the new branch 3.11 is out.
+# to mask it in one of the next weeks when the time is right.
 #
 # References:
 #
 # - http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-1059
 # - https://secunia.com/advisories/54042/
 # - https://bugs.gentoo.org/show_bug.cgi?id=475618
+# - https://bugs.gentoo.org/show_bug.cgi?id=480200
+# - https://bugs.gentoo.org/show_bug.cgi?id=482896
 # - https://bugs.gentoo.org/buglist.cgi?quicksearch=assignee%3Asecurity%20kernel
 #
 =sys-kernel/gentoo-sources-3.8.13

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.247 2013/09/03 09:39:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.248 2013/09/09 19:46:12 slyfox Exp $
+
+  09 Sep 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild:
+  Add prebuilt binary for alpha/ia64/ppc/ppc64/sparc.
 
   03 Sep 2013; Agostino Sarubbo <ago@gentoo.org> ghc-7.6.3-r1.ebuild:
   Stable for amd64, wrt bug #483462
