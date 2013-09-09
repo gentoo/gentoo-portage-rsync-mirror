@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.7.1.ebuild,v 1.2 2013/09/09 13:39:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.0.ebuild,v 1.2 2013/09/09 13:47:20 polynomial-c Exp $
 
 EAPI=5
 
@@ -13,16 +13,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc linguas_he nls socks5 ssl xosd aosd jabber qt4 msn ncurses"
+IUSE="debug doc linguas_he nls socks5 ssl xosd aosd jabber qt4 msn"
 
 RDEPEND=">=app-crypt/gpgme-1
 	jabber? ( net-libs/gloox )
 	qt4? ( dev-qt/qtgui:4 )
 	ssl? ( >=dev-libs/openssl-0.9.5a )
-	ncurses? (
-		sys-libs/ncurses
-		dev-libs/cdk
-	)
 	xosd? ( x11-libs/xosd )
 	aosd? ( x11-libs/libaosd )"
 DEPEND="${RDEPEND}
@@ -34,7 +30,6 @@ src_prepare() {
 	#epatch "${FILESDIR}"/${PN}-1.5.1-find-libcdk.patch
 
 	local licq_plugins="auto-reply rms"
-	use ncurses && licq_plugins+=" console"
 	use msn && licq_plugins+=" msn"
 	use xosd && licq_plugins+=" osd"
 	use aosd && licq_plugins+=" aosd"
