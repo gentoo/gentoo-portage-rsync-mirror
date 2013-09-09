@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dlib/dlib-17.49.ebuild,v 1.1 2013/01/15 17:34:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dlib/dlib-18.4.ebuild,v 1.1 2013/09/09 16:56:44 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 inherit flag-o-matic toolchain-funcs
 
@@ -36,9 +36,8 @@ src_test() {
 src_install() {
 	dodoc dlib/README.txt
 	rm -r dlib/{README,LICENSE}.txt dlib/test || die
-	insinto /usr/include
-	doins -r dlib
-	use doc && dohtml docs/*
+	doheader -r dlib
+	use doc && dohtml -r docs/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
