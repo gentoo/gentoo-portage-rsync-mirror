@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.133 2013/09/07 19:34:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.134 2013/09/09 10:29:41 mgorny Exp $
+
+  09 Sep 2013; Michał Górny <mgorny@gentoo.org> scons-2.2.0-r1.ebuild,
+  scons-2.3.0.ebuild:
+  Call python_replicate_script in outer src_install() to avoid implementation-
+  specific environment.
 
   07 Sep 2013; Mike Gilbert <floppym@gentoo.org> scons-2.3.0.ebuild:
   Revert previous change; wrong shebangs get installed.

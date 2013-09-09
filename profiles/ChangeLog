@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8224 2013/09/09 05:12:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8225 2013/09/09 10:17:17 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Sep 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  revert mask wrt #483588
 
   09 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
   Fix perl mask once more
