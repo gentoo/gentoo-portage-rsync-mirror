@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.128 2013/09/07 11:27:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.129 2013/09/09 01:06:36 mrueg Exp $
+
+  09 Sep 2013; Manuel Rüger <mrueg@gentoo.org> minitest-5.0.7.ebuild:
+  Fix sed-calls for jruby.
 
 *minitest-5.0.7 (07 Sep 2013)
 
