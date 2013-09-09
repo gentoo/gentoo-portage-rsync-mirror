@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1.ebuild,v 1.1 2013/09/04 14:52:13 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1.ebuild,v 1.2 2013/09/09 17:14:42 kensington Exp $
 
 EAPI=5
 
@@ -18,7 +18,8 @@ KEYWORDS="~amd64"
 IUSE="doc"
 
 DEPEND="dev-qt/qtcore:4
-	dev-qt/qtgui:4"
+	dev-qt/qtgui:4
+	dev-qt/qtlockedfile"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
