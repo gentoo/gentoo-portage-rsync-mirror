@@ -1,0 +1,13 @@
+# ChangeLog for dev-libs/libsodium
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.2 2013/09/10 22:41:17 hasufell Exp $
+
+  10 Sep 2013; Julian Ospald <hasufell@gentoo.org> libsodium-0.4.3.ebuild,
+  metadata.xml:
+  use http for better compatibility, improve style and indenting
+
+*libsodium-0.4.3 (10 Sep 2013)
+
+  10 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +libsodium-0.4.3.ebuild,
+  +metadata.xml:
+  Initial version. Added also modifications from hasufell.
