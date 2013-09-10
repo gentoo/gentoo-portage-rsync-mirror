@@ -1,0 +1,16 @@
+# ChangeLog for app-vim/youcompleteme
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/youcompleteme/ChangeLog,v 1.2 2013/09/10 10:41:22 radhermit Exp $
+
+  10 Sep 2013; Tim Harder <radhermit@gentoo.org> youcompleteme-20130910.ebuild,
+  youcompleteme-99999999.ebuild:
+  Remove unneeded symlinks.
+
+*youcompleteme-99999999 (10 Sep 2013)
+*youcompleteme-20130910 (10 Sep 2013)
+
+  10 Sep 2013; Tim Harder <radhermit@gentoo.org>
+  +youcompleteme-20130910.ebuild, +youcompleteme-99999999.ebuild,
+  +metadata.xml:
+  Initial import (bug #482040 by hasufell).
+
