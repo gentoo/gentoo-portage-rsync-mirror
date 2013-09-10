@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.145 2013/08/09 18:44:12 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.146 2013/09/10 16:16:24 ssuominen Exp $
+
+  10 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> polkit-0.110.ebuild,
+  polkit-0.111-r1.ebuild:
+  Stop forcing USE="consolekit systemd" for sys-auth/pambase in PDEPEND because
+  CONFIG_AUDITSYSCALL=y is not possible on every arch and the dependency was
+  always more about convinience than being strict requirement.
 
   09 Aug 2013; Ian Stakenvicius <axs@gentoo.org> -polkit-0.111.ebuild:
   dropped polkit-111 in favour of -r1 now that spidermonkey-17 is unmasked, as

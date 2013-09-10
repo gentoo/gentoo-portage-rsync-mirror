@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.192 2013/09/03 07:05:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.193 2013/09/10 16:14:24 scarabeus Exp $
 
 EAPI=5
 
@@ -72,7 +72,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="bluetooth +branding +cups dbus debug eds firebird gnome gstreamer +gtk
-gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba +webdav"
+gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba vlc +webdav"
 
 LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
@@ -184,6 +184,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-fonts/liberation-fonts
 	media-fonts/urw-fonts
 	java? ( >=virtual/jre-1.6 )
+	vlc? ( media-video/vlc )
 "
 
 if [[ ${PV} != *9999* ]]; then
@@ -494,6 +495,7 @@ src_configure() {
 		$(use_enable telepathy) \
 		$(use_enable test linkoo) \
 		$(use_enable vba) \
+		$(use_enable vlc) \
 		$(use_enable webdav neon) \
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \

@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.134 2013/09/02 17:13:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.135 2013/09/10 16:19:39 ssuominen Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (01 Sep 2013)
 # CONFIG_AUDITSYSCALL=y is not implemented, bug #438368
 sys-apps/systemd pam
 sys-auth/consolekit pam
 sys-auth/pambase consolekit
-sys-auth/polkit pam
 
 # Pacho Ramos <pacho@gentoo.org> (25 Jul 2013)
 # Missing keywords, bug #444688

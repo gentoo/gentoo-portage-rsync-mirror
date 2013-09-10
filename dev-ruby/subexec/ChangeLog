@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/subexec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/ChangeLog,v 1.10 2013/04/20 06:57:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/subexec/ChangeLog,v 1.11 2013/09/10 16:23:16 mrueg Exp $
+
+  10 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -files/subexec-0.2.2-lang.patch,
+  -subexec-0.2.2.ebuild:
+  Cleanup old.
 
 *subexec-0.2.3 (20 Apr 2013)
 

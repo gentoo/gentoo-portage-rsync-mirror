@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.177 2013/08/22 16:07:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.178 2013/09/10 16:19:39 ssuominen Exp $
+
+  10 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove mask for USE="pam" in sys-auth/polkit since it doesn't have the
+  difficult pambase dependency anymore.
 
   22 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Mask opencl flag due to lack of virtual/opencl keywording.
