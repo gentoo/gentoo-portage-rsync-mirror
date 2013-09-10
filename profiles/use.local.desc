@@ -248,7 +248,6 @@ app-arch/rpm5:xar - Build support for xar archives using app-arch/xar
 app-arch/tar:minimal - just install `tar`
 app-arch/unzip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
 app-arch/zip:natspec - Use dev-libs/libnatspec to correctly decode non-ascii file names archived in Windows.
-app-backup/amanda:devpay - Support for using Amazon DevPay with S3
 app-backup/amanda:s3 - Support for backing up to the Amazon S3 system
 app-backup/amanda:xfs - Support for backing up raw XFS filesystems using xfsdump
 app-backup/backup-manager:s3 - Support for backing up to the Amazon S3 system

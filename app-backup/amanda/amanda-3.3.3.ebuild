@@ -1,11 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.7 2013/09/05 19:23:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3.ebuild,v 1.8 2013/09/10 06:14:32 idella4 Exp $
 
-EAPI=3
+EAPI=5
 inherit autotools eutils perl-module user systemd
 
-MY_P="${P/_}"
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
 HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P}.tar.gz"
@@ -45,8 +44,6 @@ DEPEND="${RDEPEND}
 	"
 
 IUSE="curl gnuplot ipv6 kerberos minimal nls readline s3 samba systemd xfs"
-
-S="${WORKDIR}/${MY_P}"
 
 MYFILESDIR="${T}/files"
 ENVDIR="/etc/env.d"
@@ -302,8 +299,7 @@ src_install() {
 	source ${TMPENVFILE}
 
 	einfo "Doing stock install"
-	# parallel make install b0rked
-	emake -j1 DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	# Build the envdir file
 	# Don't forget this..
@@ -407,7 +403,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	[ ! -f "${TMPENVFILE}" -a "$EMERGE_FROM" == "binary" ] && \
+	[ ! -f "${TMPENVFILE}" -a "$MERGE_TYPE" == "binary" ] && \
 		TMPENVFILE="${ROOT}${ENVDIR}/${ENVDFILE}"
 	[ ! -f "${TMPENVFILE}" ] && die "Variable setting file (${TMPENVFILE}) should exist!"
 	source "${TMPENVFILE}"

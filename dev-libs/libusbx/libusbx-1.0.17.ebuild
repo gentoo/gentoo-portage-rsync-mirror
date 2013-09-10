@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/libusbx-1.0.16-r3.ebuild,v 1.3 2013/08/08 12:41:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/libusbx-1.0.17.ebuild,v 1.1 2013/09/10 06:19:11 ssuominen Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib-minimal
@@ -23,12 +23,6 @@ RDEPEND="udev? ( >=virtual/udev-200[${MULTILIB_USEDEP}] )
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	!udev? ( virtual/os-headers )"
-
-src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-linux-Use-a-separate-lock-to-serialize-start-stop-vs.patch \
-		"${FILESDIR}"/${P}-hotplug-Remove-use-of-pthread_cancel-from-linux_udev.patch
-}
 
 multilib_src_configure() {
 	ECONF_SOURCE=${S} \
@@ -67,10 +61,12 @@ multilib_src_install() {
 multilib_src_install_all() {
 	prune_libtool_files
 
-	dodoc AUTHORS ChangeLog NEWS PORTING README THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS PORTING README TODO
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		doins examples/*.{c,h}
+		insinto /usr/share/doc/${PF}/examples/getopt
+		doins examples/getopt/*.{c,h}
 	fi
 }

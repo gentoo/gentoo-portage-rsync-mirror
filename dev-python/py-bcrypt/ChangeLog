@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/py-bcrypt
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.1 2013/09/10 06:29:40 patrick Exp $
+
+*py-bcrypt-0.2 (10 Sep 2013)
+
+  10 Sep 2013; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +py-bcrypt-0.2.ebuild:
+  Initial import, based on an ebuild from the laurentb overlay
