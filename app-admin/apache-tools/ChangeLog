@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.166 2013/08/08 12:37:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.167 2013/09/10 08:39:50 grobian Exp $
+
+  10 Sep 2013; Fabian Groffen <grobian@gentoo.org> apache-tools-2.4.4-r1.ebuild,
+  apache-tools-2.4.6.ebuild:
+  Fix out of Prefix install, bug #483424
 
   08 Aug 2013; Agostino Sarubbo <ago@gentoo.org> apache-tools-2.2.25.ebuild:
   Stable for sh, wrt bug #476568

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.6.ebuild,v 1.2 2013/07/28 01:36:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.6.ebuild,v 1.3 2013/09/10 08:39:50 grobian Exp $
 
 EAPI="3"
 inherit flag-o-matic eutils multilib
@@ -36,7 +36,7 @@ src_configure() {
 	# econf overwrites the stuff from config.layout, so we have to put them into
 	# our myconf line too
 	econf \
-		--libexecdir=/usr/$(get_libdir)/apache2/modules \
+		--libexecdir="${EPREFIX}"/usr/$(get_libdir)/apache2/modules \
 		--sbindir="${EPREFIX}"/usr/sbin \
 		--with-perl="${EPREFIX}"/usr/bin/perl \
 		--with-expat="${EPREFIX}"/usr \

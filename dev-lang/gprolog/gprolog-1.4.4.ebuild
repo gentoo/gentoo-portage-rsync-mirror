@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.4.ebuild,v 1.4 2013/06/25 12:53:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.4.ebuild,v 1.5 2013/09/10 08:42:26 grobian Exp $
 
 EAPI=4
 
@@ -41,11 +41,11 @@ src_configure() {
 	econf \
 		CFLAGS_MACHINE="${CFLAGS_MACHINE}" \
 		--with-c-flags="${CFLAGS}" \
-		--with-install-dir=/usr/$(get_libdir)/${P} \
-		--with-links-dir=/usr/bin \
-		$(use_with doc doc-dir /usr/share/doc/${PF}) \
-		$(use_with doc html-dir /usr/share/doc/${PF}/html) \
-		$(use_with examples examples-dir /usr/share/doc/${PF}/examples)
+		--with-install-dir="${EPREFIX}"/usr/$(get_libdir)/${P} \
+		--with-links-dir="${EPREFIX}"/usr/bin \
+		$(use_with doc doc-dir ${EPREFIX}/usr/share/doc/${PF}) \
+		$(use_with doc html-dir ${EPREFIX}/usr/share/doc/${PF}/html) \
+		$(use_with examples examples-dir ${EPREFIX}/usr/share/doc/${PF}/examples)
 }
 
 src_compile() {

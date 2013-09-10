@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.218 2013/09/09 18:17:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.219 2013/09/10 08:48:25 ago Exp $
+
+  10 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gnuplot-4.6.3.ebuild:
+  Stable for amd64, wrt bug #484288
 
   09 Sep 2013; Jeroen Roovers <jer@gentoo.org> gnuplot-4.6.3.ebuild:
   Stable for HPPA (bug #484288).

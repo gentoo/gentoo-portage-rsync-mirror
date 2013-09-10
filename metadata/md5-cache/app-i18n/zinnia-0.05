@@ -1,8 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=Online hand recognition system with machine learning
-HOMEPAGE=http://zinnia.sourceforge.net/
-KEYWORDS=~amd64 ~x86
-LICENSE=BSD
-SLOT=0
-SRC_URI=mirror://sourceforge/zinnia/zinnia-0.05.tar.gz
-_md5_=3b0b7e38e40facd461cd8d8a2390efc0

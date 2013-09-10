@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/spideroak-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/ChangeLog,v 1.38 2013/08/21 22:10:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/ChangeLog,v 1.39 2013/09/10 08:48:10 ago Exp $
+
+  10 Sep 2013; Agostino Sarubbo <ago@gentoo.org> spideroak-bin-5.0.3.ebuild:
+  Stable for amd64, wrt bug #484160
 
 *spideroak-bin-5.0.3 (21 Aug 2013)
 

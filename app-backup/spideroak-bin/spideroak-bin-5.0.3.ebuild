@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.0.3.ebuild,v 1.1 2013/08/21 22:10:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.0.3.ebuild,v 1.2 2013/09/10 08:48:10 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ RESTRICT="mirror strip"
 
 LICENSE="spideroak"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="dbus headless"
 
 DEPEND="dev-util/patchelf"

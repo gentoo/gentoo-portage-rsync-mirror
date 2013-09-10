@@ -4,11 +4,11 @@ DESCRIPTION=An easy, secure and consolidated free online backup, storage, access
 EAPI=5
 HOMEPAGE=https://spideroak.com
 IUSE=dbus headless
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=spideroak
 RDEPEND=app-crypt/mit-krb5[keyutils] dbus? ( sys-apps/dbus ) !headless? ( media-libs/fontconfig media-libs/freetype:2 dev-libs/glib:2 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXmu x11-libs/libXrender x11-libs/libXt )
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=x86? ( https://spideroak.com/getbuild?platform=ubuntu&arch=i386&version=5.0.3 -> spideroak-bin-5.0.3_x86.deb ) amd64? ( https://spideroak.com/getbuild?platform=ubuntu&arch=x86_64&version=5.0.3 -> spideroak-bin-5.0.3_amd64.deb )
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=8f9ff4105aa896510f9ba82cb91de388
+_md5_=42c4514090c92de124c57d362386a712

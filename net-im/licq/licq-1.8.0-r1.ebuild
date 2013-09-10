@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.0.ebuild,v 1.2 2013/09/09 13:47:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.0-r1.ebuild,v 1.1 2013/09/10 08:44:35 polynomial-c Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	#epatch "${FILESDIR}"/${PN}-1.5.1-find-libcdk.patch
 
-	local licq_plugins="auto-reply rms"
+	local licq_plugins="auto-reply icq rms"
 	use msn && licq_plugins+=" msn"
 	use xosd && licq_plugins+=" osd"
 	use aosd && licq_plugins+=" aosd"
