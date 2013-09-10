@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.52 2013/09/07 13:08:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.53 2013/09/10 08:22:20 mgorny Exp $
 
 EAPI=5
 
@@ -12,6 +12,7 @@ inherit eutils flag-o-matic git-r3 multilib multilib-minimal \
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
 SRC_URI=""
+EGIT_REPO_URI="http://llvm.org/git/llvm.git"
 
 LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
@@ -132,7 +133,7 @@ src_unpack() {
 		git-r3_fetch http://llvm.org/git/compiler-rt.git
 		git-r3_fetch http://llvm.org/git/clang.git
 	fi
-	git-r3_fetch http://llvm.org/git/llvm.git
+	git-r3_fetch
 
 	if use clang; then
 		git-r3_checkout http://llvm.org/git/compiler-rt.git \
@@ -140,7 +141,7 @@ src_unpack() {
 		git-r3_checkout http://llvm.org/git/clang.git \
 			"${S}"/tools/clang
 	fi
-	git-r3_checkout http://llvm.org/git/llvm.git
+	git-r3_checkout
 }
 
 src_prepare() {
