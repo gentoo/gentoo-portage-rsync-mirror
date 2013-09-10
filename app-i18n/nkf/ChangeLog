@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.55 2013/08/03 06:56:30 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.56 2013/09/10 06:53:47 idella4 Exp $
+
+*nkf-2.1.2-r2 (10 Sep 2013)
+
+  10 Sep 2013; Ian Delaney <idella4@gentoo.org> +nkf-2.1.2-r2.ebuild:
+  revbump -> EAPI 5, distutils-r1
 
   03 Aug 2013; Akinori Hattori <hattya@gentoo.org> -nkf-2.1.0-r1.ebuild,
   -nkf-2.1.2.ebuild:
