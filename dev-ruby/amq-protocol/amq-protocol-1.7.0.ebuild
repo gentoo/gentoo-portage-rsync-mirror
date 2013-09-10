@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-protocol/amq-protocol-1.2.0.ebuild,v 1.1 2013/02/23 08:48:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-protocol/amq-protocol-1.7.0.ebuild,v 1.1 2013/09/10 18:53:28 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md"
@@ -22,5 +22,5 @@ IUSE="test"
 
 all_ruby_prepare() {
 	rm Gemfile || die
-	sed -i -e '/bundler/d' spec/spec_helper.rb || die
+	sed -i -e '/bundler/ s:^:#:' -e '/effin_utf8/ s:^:#:' spec/spec_helper.rb || die
 }
