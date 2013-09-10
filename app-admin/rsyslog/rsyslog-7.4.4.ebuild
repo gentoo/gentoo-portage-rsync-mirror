@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-6.6.0.ebuild,v 1.2 2012/11/23 10:53:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.4.ebuild,v 1.1 2013/09/10 07:50:33 ultrabug Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -14,28 +14,30 @@ SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz"
 LICENSE="GPL-3 LGPL-3 Apache-2.0"
 KEYWORDS="~amd64 ~arm ~hppa ~x86"
 SLOT="0"
-IUSE="dbi debug doc extras kerberos mysql oracle postgres relp snmp ssl static-libs zeromq zlib"
+IUSE="dbi debug doc extras kerberos mysql oracle postgres relp snmp ssl static-libs systemd zeromq zlib"
 
 RDEPEND="
 	dev-libs/json-c
 	dev-libs/libee
-	dev-libs/libestr
+	>=dev-libs/libestr-0.1.5
 	dev-libs/liblognorm
+	net-misc/curl
 	dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
 	kerberos? ( virtual/krb5 )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	oracle? ( dev-db/oracle-instantclient-basic )
-	relp? ( >=dev-libs/librelp-1.0.1 )
+	relp? ( >=dev-libs/librelp-1.0.3 )
 	snmp? ( net-analyzer/net-snmp )
 	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
+	systemd? ( sys-apps/systemd )
 	zeromq? ( net-libs/czmq )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-BRANCH="6-stable"
+BRANCH="7-stable"
 
 # need access to certain device nodes
 RESTRICT="test"
@@ -46,16 +48,6 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
 
-src_prepare() {
-	# Don't force '-g' CFLAG
-	sed -e 's/CFLAGS="\(.*\) -g"/CFLAGS="\1"/g' -i configure.ac || die
-
-	# Fix runtime UUID/JSON libs linking
-	epatch "${FILESDIR}/${BRANCH}/${P}-fix-runtime.patch"
-
-	autotools-utils_src_prepare
-}
-
 src_configure() {
 	# Maintainer notes:
 	# * rfc3195 needs a library and development of that library
@@ -65,6 +57,7 @@ src_configure() {
 	#   for the java GUI, so we disable it for now.
 	# * mongodb : doesnt work with mongo-c-driver ?
 	local myeconfargs=(
+		--enable-cached-man-pages
 		--disable-gui
 		--disable-rfc3195
 		--enable-imdiag
@@ -76,6 +69,7 @@ src_configure() {
 		--enable-mmnormalize
 		--enable-mmjsonparse
 		--enable-mmaudit
+		--enable-mmanon
 		--enable-omprog
 		--enable-omstdout
 		--enable-omuxsock
@@ -86,6 +80,7 @@ src_configure() {
 		--enable-pmsnare
 		--enable-sm_cust_bindcdr
 		--enable-unlimited-select
+		--enable-uuid
 		$(use_enable dbi libdbi)
 		$(use_enable debug)
 		$(use_enable debug rtinst)
@@ -101,6 +96,7 @@ src_configure() {
 		$(use_enable snmp)
 		$(use_enable snmp mmsnmptrapd)
 		$(use_enable ssl gnutls)
+		$(use_enable systemd omjournal)
 		$(use_enable zlib)
 		$(use_enable zeromq imzmq3)
 		$(use_enable zeromq omzmq3)

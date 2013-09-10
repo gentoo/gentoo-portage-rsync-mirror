@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.97 2013/08/16 08:46:07 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.98 2013/09/10 07:50:33 ultrabug Exp $
+
+*rsyslog-7.4.4 (10 Sep 2013)
+
+  10 Sep 2013; Ultrabug <ultrabug@gentoo.org> -rsyslog-5.8.11.ebuild,
+  -rsyslog-5.8.12.ebuild, -rsyslog-5.10.1.ebuild, -rsyslog-6.6.0.ebuild,
+  +rsyslog-7.4.4.ebuild, -files/5-stable/rsyslog.confd,
+  -files/5-stable/rsyslog.initd, -files/5-stable/rsyslog.logrotate,
+  -files/5-stable/rsyslog-gentoo.conf, -files/6-stable/rsyslog.confd,
+  -files/6-stable/rsyslog.initd, -files/6-stable/rsyslog.logrotate,
+  -files/6-stable/rsyslog-gentoo.conf, -files/6-stable/rsyslog6-zeromq.patch:
+  Version bump, fix #467338, work on #442706 for systemd support, drop old and
+  unsupported versions, cleanup
 
   16 Aug 2013; Ultrabug <ultrabug@gentoo.org> rsyslog-7.4.3.ebuild:
   fix #480894 thx to Conway S. Smith
