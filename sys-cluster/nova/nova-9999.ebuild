@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.6 2013/09/05 20:57:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.7 2013/09/10 05:04:23 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -42,7 +42,7 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
+		>=dev-python/sqlalchemy-migrate-0.7.2
 		>=dev-python/netaddr-0.7.6[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4
 		dev-python/paramiko[${PYTHON_USEDEP}]

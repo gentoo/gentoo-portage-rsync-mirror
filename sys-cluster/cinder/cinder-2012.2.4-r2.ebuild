@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2012.2.4-r2.ebuild,v 1.1 2013/09/05 19:41:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2012.2.4-r2.ebuild,v 1.2 2013/09/10 05:07:29 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -33,7 +33,7 @@ RDEPEND="~dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/sqlalchemy-0.7.3
 		<=dev-python/sqlalchemy-0.7.9
-		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
+		>=dev-python/sqlalchemy-migrate-0.7.2
 		>=dev-python/stevedore-0.8
 		~dev-python/suds-0.4
 		dev-python/paramiko[${PYTHON_USEDEP}]
