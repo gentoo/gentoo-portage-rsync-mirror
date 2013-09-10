@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.1.0_pre20130826.ebuild,v 1.1 2013/09/03 22:16:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.1.0_pre20130826.ebuild,v 1.2 2013/09/10 14:28:37 ssuominen Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit eutils gnome2-utils
 
@@ -18,7 +18,7 @@ IUSE="gtk static-libs test"
 
 RDEPEND="
 	dev-libs/libxml2
-	virtual/jpeg
+	virtual/jpeg:0
 	gtk? (
 		>=dev-libs/glib-2
 		>=x11-libs/gdk-pixbuf-2.24.0:2 )

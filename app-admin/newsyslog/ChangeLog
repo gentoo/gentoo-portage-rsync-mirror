@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/newsyslog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.22 2010/09/18 08:59:14 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.23 2013/09/10 14:24:41 jer Exp $
+
+  10 Sep 2013; Jeroen Roovers <jer@gentoo.org> newsyslog-1.1.ebuild:
+  Set DESCRIPTION to something descriptive by Martin Mokrejš (bug #484388).
 
   18 Sep 2010; Markos Chandras <hwoarang@gentoo.org> newsyslog-1.1.ebuild:
   Keyworded for amd64. Bug #337286

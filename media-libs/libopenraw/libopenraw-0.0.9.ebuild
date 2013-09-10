@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.9.ebuild,v 1.14 2013/09/03 22:16:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/libopenraw-0.0.9.ebuild,v 1.15 2013/09/10 14:28:37 ssuominen Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-solaris"
 IUSE="gtk static-libs test"
 
-RDEPEND="virtual/jpeg
+RDEPEND="virtual/jpeg:0
 	dev-libs/libxml2
 	gtk? (
 		>=dev-libs/glib-2

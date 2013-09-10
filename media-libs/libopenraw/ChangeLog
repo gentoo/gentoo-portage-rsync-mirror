@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.64 2013/09/03 22:16:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.65 2013/09/10 14:28:37 ssuominen Exp $
+
+  10 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> libopenraw-0.0.9.ebuild,
+  libopenraw-0.1.0_pre20130826.ebuild:
+  Use :0 SLOT for virtual/jpeg dependency to ensure headers are installed.
 
 *libopenraw-0.1.0_pre20130826 (03 Sep 2013)
 

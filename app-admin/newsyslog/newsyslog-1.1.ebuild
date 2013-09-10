@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.1.ebuild,v 1.19 2010/09/18 08:59:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.1.ebuild,v 1.20 2013/09/10 14:24:41 jer Exp $
 
 inherit eutils
 
-DESCRIPTION="An enhanced version of newsyslog originally written by Theodore Ts'o"
+DESCRIPTION="a highly configurable program for managing and archiving log files"
 HOMEPAGE="http://www.weird.com/~woods/projects/newsyslog.html"
 SRC_URI="ftp://ftp.weird.com/pub/local/${P}.tar.gz"
 
