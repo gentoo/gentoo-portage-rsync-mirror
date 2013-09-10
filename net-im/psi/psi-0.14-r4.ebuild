@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.14 2013/07/10 04:56:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.15 2013/09/10 07:14:19 pinkbyte Exp $
 
 EAPI=4
 
@@ -30,9 +30,10 @@ for LNG in ${LANGS}; do
 	#SRC_URI="${SRC_URI} http://psi-im.org/download/lang/psi_${LNG/ur_PK/ur_pk}.qm"
 done
 
-RDEPEND=">=dev-qt/qtgui-4.4:4[qt3support,dbus(+)?]
+RDEPEND=">=dev-qt/qtgui-4.4:4[qt3support]
 	>=dev-qt/qt3support-4.4:4
 	>=app-crypt/qca-2.0.2:2
+	dbus? ( >=dev-qt/qtdbus-4.4:4 )
 	spell? ( >=app-text/enchant-1.3.0 )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 	extras? ( webkit? ( dev-qt/qtwebkit:4 ) )

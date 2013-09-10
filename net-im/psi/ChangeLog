@@ -1,6 +1,11 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.236 2013/08/04 17:32:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.237 2013/09/10 07:14:19 pinkbyte Exp $
+
+  10 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> psi-0.14-r4.ebuild,
+  psi-0.15.ebuild, psi-9999.ebuild, metadata.xml:
+  Add proper dependency on dev-qt/qtdbus, wrt bug #484182. Thanks to Nikoli for
+  discovering this issue. Fix maintainer's email address
 
   04 Aug 2013; Julian Ospald <hasufell@gentoo.org> psi-9999.ebuild:
   fix live ebuild wrt #418361

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.15.ebuild,v 1.2 2013/07/10 04:56:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.15.ebuild,v 1.3 2013/09/10 07:14:19 pinkbyte Exp $
 
 EAPI=5
 
@@ -23,9 +23,10 @@ IUSE="crypt dbus debug doc jingle spell ssl xscreensaver whiteboarding"
 RESTRICT="test"
 
 RDEPEND="app-arch/unzip
-	>=dev-qt/qtgui-4.7:4[qt3support,dbus(+)?]
+	>=dev-qt/qtgui-4.7:4[qt3support]
 	>=dev-qt/qt3support-4.7:4
 	>=app-crypt/qca-2.0.2:2
+	dbus? ( >=dev-qt/qtdbus-4.7:4 )
 	spell? ( >=app-text/enchant-1.3.0 )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 	whiteboarding? ( dev-qt/qtsvg:4 )

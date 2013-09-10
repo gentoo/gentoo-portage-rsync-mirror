@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=>=dev-qt/qtgui-4.4:4[qt3support,dbus(+)?] >=dev-qt/qt3support-4.4:4 >=app-crypt/qca-2.0.2:2 spell? ( >=app-text/enchant-1.3.0 ) xscreensaver? ( x11-libs/libXScrnSaver ) extras? ( webkit? ( dev-qt/qtwebkit:4 ) ) app-arch/unzip || ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 ) sys-devel/qconf doc? ( app-doc/doxygen )
+DEPEND=>=dev-qt/qtgui-4.4:4[qt3support] >=dev-qt/qt3support-4.4:4 >=app-crypt/qca-2.0.2:2 dbus? ( >=dev-qt/qtdbus-4.4:4 ) spell? ( >=app-text/enchant-1.3.0 ) xscreensaver? ( x11-libs/libXScrnSaver ) extras? ( webkit? ( dev-qt/qtwebkit:4 ) ) app-arch/unzip || ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 ) sys-devel/qconf doc? ( app-doc/doxygen )
 DESCRIPTION=Qt4 Jabber client, with Licq-like interface
 EAPI=4
 HOMEPAGE=http://psi-im.org/
@@ -7,9 +7,9 @@ IUSE=crypt dbus debug doc extras jingle spell ssl xscreensaver webkit linguas_be
 KEYWORDS=amd64 ~arm hppa ppc ppc64 x86 ~x86-fbsd
 LICENSE=GPL-2
 PDEPEND=crypt? ( app-crypt/qca-gnupg:2 ) jingle? ( net-im/psimedia app-crypt/qca-ossl:2 ) ssl? ( app-crypt/qca-ossl:2 )
-RDEPEND=>=dev-qt/qtgui-4.4:4[qt3support,dbus(+)?] >=dev-qt/qt3support-4.4:4 >=app-crypt/qca-2.0.2:2 spell? ( >=app-text/enchant-1.3.0 ) xscreensaver? ( x11-libs/libXScrnSaver ) extras? ( webkit? ( dev-qt/qtwebkit:4 ) ) app-arch/unzip || ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )
+RDEPEND=>=dev-qt/qtgui-4.4:4[qt3support] >=dev-qt/qt3support-4.4:4 >=app-crypt/qca-2.0.2:2 dbus? ( >=dev-qt/qtdbus-4.4:4 ) spell? ( >=app-text/enchant-1.3.0 ) xscreensaver? ( x11-libs/libXScrnSaver ) extras? ( webkit? ( dev-qt/qtwebkit:4 ) ) app-arch/unzip || ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/psi/psi-0.14.tar.bz2 http://fs.scs-tsa.de/psi_l10n/psi-0.14_langpack_for_packagers_2009-12-02.zip extras? ( mirror://gentoo/psi-extra-patches-r1428.tar.bz2 mirror://gentoo/psi-extra-iconsets-r1428.tar.bz2 )
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=af4ead2f61f7128bb06445b4effe7f7d
+_md5_=f03b8d2be742cc0657c6a656dd00e6f7

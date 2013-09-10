@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.19 2013/08/04 17:32:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.20 2013/09/10 07:14:19 pinkbyte Exp $
 
 EAPI="4"
 
@@ -31,8 +31,9 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=dev-qt/qtgui-4.4:4[dbus(+)?]
+	>=dev-qt/qtgui-4.7:4
 	>=app-crypt/qca-2.0.2:2
+	dbus? ( >=dev-qt/qtdbus-4.7:4 )
 	whiteboarding? ( dev-qt/qtsvg:4 )
 	spell? (
 		enchant? ( >=app-text/enchant-1.3.0 )
