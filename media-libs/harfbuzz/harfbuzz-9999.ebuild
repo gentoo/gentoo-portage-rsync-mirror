@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.16 2013/09/02 19:28:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.17 2013/09/10 13:52:46 tetromino Exp $
 
 EAPI=5
 
@@ -30,11 +30,13 @@ RDEPEND="
 	truetype? ( media-libs/freetype:2= )
 "
 DEPEND="${RDEPEND}
-	>=dev-libs/gobject-introspection-common-1.32
 	dev-util/gtk-doc-am
 	dev-util/ragel
 	virtual/pkgconfig
 "
+# eautoreconf requires gobject-introspection-common
+[[ ${PV} = 9999 ]] && DEPEND="${DEPEND}
+	>=dev-libs/gobject-introspection-common-1.32"
 
 src_prepare() {
 	if [[ ${CHOST} == *-darwin* || ${CHOST} == *-solaris* ]] ; then
