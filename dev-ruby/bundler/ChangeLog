@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.53 2013/05/28 13:12:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.55 2013/09/10 05:52:13 graaff Exp $
+
+  10 Sep 2013; Hans de Graaff <graaff@gentoo.org> bundler-1.2.5.ebuild:
+  Bundler 1.2.x does not work with rubygems 2.x, bug 483638.
+
+  10 Sep 2013; Hans de Graaff <graaff@gentoo.org> -bundler-1.0.22.ebuild,
+  -bundler-1.1.5.ebuild:
+  Cleanup.
 
   28 May 2013; Jeroen Roovers <jer@gentoo.org> bundler-1.3.5.ebuild:
   Marked ~hppa (bug #471306).

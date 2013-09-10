@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15095 2013/09/09 19:56:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15096 2013/09/10 05:54:07 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -414,14 +414,6 @@ media-plugins/vdr-channelscan
 # Upstream stalled, improper rendering (#470818),
 # use app-editors/efte instead.
 =app-editors/fte-20110708
-
-# Aaron W. Swenson <titanofold@gentoo.org> (12 Jun 2013)
-# Beta and rc packages are pre-release and not considered production
-# ready. Use at your own risk. Please report any bugs you encounter at
-# bugs.gentoo.org.
->dev-db/postgresql-docs-9.3_beta1
->dev-db/postgresql-base-9.3_beta1
->dev-db/postgresql-server-9.3_beta1
 
 # Mike Gilbert <floppym@gentoo.org (27 May 2013)
 # Masked until reverse dependencies are tested bug 401009.

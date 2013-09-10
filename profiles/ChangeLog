@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8226 2013/09/09 19:56:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8227 2013/09/10 05:54:07 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Unmask postgresql-9.3 final
 
   09 Sep 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Listed two more important security bugs in the gentoo-sources-3.8.13 mask
