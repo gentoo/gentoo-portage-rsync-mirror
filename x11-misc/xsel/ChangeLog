@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.24 2012/12/23 20:24:54 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsel/ChangeLog,v 1.25 2013/09/10 13:07:58 xmw Exp $
+
+  10 Sep 2013; Michael Weber <xmw@gentoo.org> xsel-1.2.0.ebuild:
+  Adding ~arm keyword.
 
   23 Dec 2012; Ulrich Müller <ulm@gentoo.org> xsel-1.2.0.ebuild:
   Fix LICENSE, see README and COPYING, bug 446768.
@@ -83,4 +86,3 @@
   16 Mar 2006; Krzysiek Pawlik <nelchael@gentoo.org> +xsel-0.9.6.ebuild,
   +metadata.xml:
   New package, requested in bug #55422.
-

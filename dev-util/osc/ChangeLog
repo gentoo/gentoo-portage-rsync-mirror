@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/osc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.19 2013/07/24 17:40:50 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.20 2013/09/10 13:03:34 scarabeus Exp $
+
+  10 Sep 2013; Tomáš Chvátal <scarabeus@gentoo.org> -osc-0.139.1.ebuild,
+  osc-0.140.1.ebuild:
+  Stabilise 0.140 on all archs remove older.
 
 *osc-0.140.1 (24 Jul 2013)
 
