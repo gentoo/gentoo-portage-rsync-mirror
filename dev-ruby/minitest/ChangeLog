@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.129 2013/09/09 01:06:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.130 2013/09/10 17:56:09 graaff Exp $
+
+*minitest-4.7.4-r1 (10 Sep 2013)
+
+  10 Sep 2013; Hans de Graaff <graaff@gentoo.org> +minitest-4.7.4-r1.ebuild,
+  minitest-5.0.7.ebuild:
+  Add ruby20 support for both slots.
 
   09 Sep 2013; Manuel Rüger <mrueg@gentoo.org> minitest-5.0.7.ebuild:
   Fix sed-calls for jruby.

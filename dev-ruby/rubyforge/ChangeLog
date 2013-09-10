@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.97 2013/09/04 12:36:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.98 2013/09/10 17:49:36 graaff Exp $
+
+*rubyforge-2.0.4-r3 (10 Sep 2013)
+
+  10 Sep 2013; Hans de Graaff <graaff@gentoo.org> +rubyforge-2.0.4-r3.ebuild:
+  Revision bump to add ruby20.
 
   04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -rubyforge-2.0.4-r1.ebuild:
   Cleanup old.

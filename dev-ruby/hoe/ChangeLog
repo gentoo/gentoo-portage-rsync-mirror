@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.141 2013/01/28 15:15:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.142 2013/09/10 17:49:01 graaff Exp $
+
+*hoe-2.13.0-r1 (10 Sep 2013)
+
+  10 Sep 2013; Hans de Graaff <graaff@gentoo.org> +hoe-2.13.0-r1.ebuild:
+  Revision bump to add ruby20.
 
   28 Jan 2013; Alexis Ballier <aballier@gentoo.org> hoe-2.13.0.ebuild:
   keyword ~amd64-fbsd
