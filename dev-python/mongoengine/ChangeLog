@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mongoengine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mongoengine/ChangeLog,v 1.1 2013/08/17 08:57:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mongoengine/ChangeLog,v 1.2 2013/09/10 02:56:14 patrick Exp $
+
+  10 Sep 2013; Patrick Lauer <patrick@gentoo.org> mongoengine-0.8.3.ebuild:
+  Whitespace
 
 *mongoengine-0.8.3 (17 Aug 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.8.0.ebuild,v 1.1 2013/08/06 18:36:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.8.0.ebuild,v 1.2 2013/09/10 02:40:07 patrick Exp $
 
 EAPI=5
 
@@ -35,7 +35,6 @@ DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
 
 SITEFILE=50${PN}-gentoo.el
-
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.8.0-as-needed.patch

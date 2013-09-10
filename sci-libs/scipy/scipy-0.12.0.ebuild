@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.12.0.ebuild,v 1.5 2013/09/05 19:04:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.12.0.ebuild,v 1.6 2013/09/10 02:43:58 patrick Exp $
 
 EAPI=5
 
@@ -115,7 +115,6 @@ import scipy, sys
 r = scipy.test('fast',verbose=2)
 sys.exit(0 if r.wasSuccessful() else 1)" || die "Tests fail with ${EPYTHON}"
 }
-
 
 python_install_all() {
 	if use doc; then

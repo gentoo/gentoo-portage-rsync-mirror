@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/PodParser-1.610.0.ebuild,v 1.1 2013/08/14 07:38:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/PodParser/PodParser-1.610.0.ebuild,v 1.2 2013/09/10 02:49:38 patrick Exp $
 
 EAPI=4
 
@@ -16,4 +16,3 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 SRC_TEST="do"
-

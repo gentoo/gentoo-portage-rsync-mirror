@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mongoengine/mongoengine-0.8.3.ebuild,v 1.1 2013/08/17 08:57:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mongoengine/mongoengine-0.8.3.ebuild,v 1.2 2013/09/10 02:56:14 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	sed -i -e 's/tests/tests*/g' setup.py || die "Failed to fix test removal thingy"
 }
-
 
 python_test() {
 	nosetests || die "Testing failed with ${EPYTHON}"

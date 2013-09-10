@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pspp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.23 2013/08/06 18:36:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.24 2013/09/10 02:40:07 patrick Exp $
+
+  10 Sep 2013; Patrick Lauer <patrick@gentoo.org> pspp-0.8.0.ebuild:
+  Whitespace
 
 *pspp-0.8.0 (06 Aug 2013)
 

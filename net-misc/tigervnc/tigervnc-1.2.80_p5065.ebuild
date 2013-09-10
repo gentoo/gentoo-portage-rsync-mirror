@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.80_p5065.ebuild,v 1.2 2013/08/27 15:30:20 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.80_p5065.ebuild,v 1.3 2013/09/10 02:51:51 patrick Exp $
 
 EAPI="4"
 
@@ -19,7 +19,6 @@ SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/tigervnc/tigervnc-1.2.80-201303
 	mirror://gentoo/${P}-patches-${PATCHVER}.tar.bz2
 	http://dev.gentoo.org/~armin76/dist/${P}-patches-${PATCHVER}.tar.bz2
 	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	)"
-
 
 LICENSE="GPL-2"
 SLOT="0"

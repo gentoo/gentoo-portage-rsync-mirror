@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/seetxt/seetxt-0.72-r1.ebuild,v 1.1 2013/04/09 05:41:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/seetxt/seetxt-0.72-r1.ebuild,v 1.2 2013/09/10 02:36:36 patrick Exp $
 
 EAPI=5
 
@@ -31,4 +31,3 @@ src_install() {
 	default
 	sed -i -e 's|local/||' "${D}/usr/share/seetxt-runtime/filelist" || die "sed failed"
 }
-
