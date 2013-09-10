@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-7207.ebuild,v 1.4 2011/05/10 13:22:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-7540-r1.ebuild,v 1.1 2013/09/10 09:34:52 idella4 Exp $
 
-EAPI=3
+EAPI=5
 
 inherit perl-app perl-module toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://maatkit.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="udf"
 
 COMMON_DEPEND="dev-perl/DBI
@@ -26,6 +26,7 @@ RDEPEND="${COMMON_DEPEND}
 	virtual/perl-File-Temp
 	virtual/perl-File-Spec
 	virtual/perl-Time-HiRes
+	virtual/perl-Scalar-List-Utils
 	dev-perl/TermReadKey"
 DEPEND="${COMMON_DEPEND}
 	udf? ( dev-db/mysql )
@@ -65,7 +66,7 @@ mysql-udf_src_install() {
 	udffile="${udfname}${udfext}"
 	udfoutpath="${udfdir}/${udffile}"
 	insinto /usr/$(get_libdir)/mysql/plugins
-	doins "${udfoutpath}" || die
+	doins "${udfoutpath}"
 }
 
 udf_done_intro=0
