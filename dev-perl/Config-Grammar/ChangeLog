@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Config-Grammar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Grammar/ChangeLog,v 1.7 2012/09/28 12:05:32 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Grammar/ChangeLog,v 1.8 2013/09/10 14:44:28 idella4 Exp $
+
+*Config-Grammar-1.100.0-r1 (10 Sep 2013)
+
+  10 Sep 2013; Ian Delaney <idella4@gentoo.org>
+  +Config-Grammar-1.100.0-r1.ebuild:
+  revbump -> EAPI 5
 
   28 Sep 2012; Johannes Huber <johu@gentoo.org> Config-Grammar-1.100.0.ebuild:
   Stable for x86, wrt bug #436072

@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/greybird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.31 2013/05/04 07:33:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/greybird/ChangeLog,v 1.32 2013/09/10 14:34:21 ssuominen Exp $
+
+*greybird-1.2.1 (10 Sep 2013)
+
+  10 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> +greybird-1.2.1.ebuild:
+  Version bump; and remove now unrequired gtk-engines-unico dependency.
 
   04 May 2013; Samuli Suominen <ssuominen@gentoo.org> -greybird-0.8.2.ebuild:
   old
