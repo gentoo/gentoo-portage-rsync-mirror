@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.25 2013/09/09 18:12:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.26 2013/09/10 19:07:53 maekke Exp $
+
+  10 Sep 2013; Markus Meier <maekke@gentoo.org> rpcbind-0.2.0-r1.ebuild:
+  arm stable, bug #480094
 
   09 Sep 2013; Jeroen Roovers <jer@gentoo.org> rpcbind-0.2.0-r1.ebuild:
   Stable for HPPA (bug #480094).

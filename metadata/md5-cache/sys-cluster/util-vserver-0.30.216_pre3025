@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/beecrypt net-firewall/iptables net-misc/vconfig sys-apps/iproute2 || ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp )
 SLOT=0
 SRC_URI=http://people.linux-vserver.org/~dhozac/t/uv-testing/util-vserver-0.30.216-pre3025.tar.bz2
-_eclasses_=bash-completion-r1	cccf36bdb93b54baafea3b9d97abb0bf	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b797152e89954f3adfc30733185143d5
