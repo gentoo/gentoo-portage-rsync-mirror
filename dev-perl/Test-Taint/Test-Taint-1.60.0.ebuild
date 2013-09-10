@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/Test-Taint-1.60.0.ebuild,v 1.2 2013/01/13 13:32:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/Test-Taint-1.60.0.ebuild,v 1.3 2013/09/10 15:12:05 jer Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Tools to test taintedness"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
 RDEPEND=""

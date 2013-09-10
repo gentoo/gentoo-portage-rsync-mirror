@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Taint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.25 2013/01/13 13:32:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Taint/ChangeLog,v 1.26 2013/09/10 15:12:05 jer Exp $
+
+  10 Sep 2013; Jeroen Roovers <jer@gentoo.org> Test-Taint-1.60.0.ebuild:
+  Stable for HPPA (bug #449620).
 
   13 Jan 2013; Markus Meier <maekke@gentoo.org> Test-Taint-1.60.0.ebuild:
   add ~arm, bug #449762
