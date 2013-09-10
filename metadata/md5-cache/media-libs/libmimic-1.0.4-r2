@@ -6,8 +6,8 @@ HOMEPAGE=http://farsight.sourceforge.net/
 IUSE=doc static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_x86_32 abi_x86_64 abi_mips_n32 abi_mips_n64 abi_mips_o32
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
 LICENSE=LGPL-2.1
-RDEPEND=dev-libs/glib:2[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_x86_32(-)?,abi_x86_64(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r8 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
+RDEPEND=dev-libs/glib:2[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_x86_32(-)?,abi_x86_64(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r8 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
 SLOT=0
 SRC_URI=mirror://sourceforge/farsight/libmimic-1.0.4.tar.gz
-_eclasses_=multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	812deed50460b095dc41672b2da354eb	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multibuild	66ecd0bd5a9e66ba44af9d01ac66360f	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	812deed50460b095dc41672b2da354eb	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=006969dc506d117de4ba8ffa2d0940e7

@@ -6,8 +6,8 @@ HOMEPAGE=http://telepathy.freedesktop.org/
 IUSE=python_targets_python2_6 python_targets_python2_7
 KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=LGPL-2.1
-RDEPEND=>=dev-python/dbus-python-0.80[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+RDEPEND=>=dev-python/dbus-python-0.80[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] userland_GNU? ( >=sys-apps/coreutils-8.5 )
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-python/telepathy-python-0.15.19.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	0954dce983a8c7cfe4e2b55263cb7a05	eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	c2f33b0eedd7bcfd5bc226baa8da7837	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	c6b8362c67424d5095da2c9634cd25c9	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	0954dce983a8c7cfe4e2b55263cb7a05	eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	66ecd0bd5a9e66ba44af9d01ac66360f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	c6b8362c67424d5095da2c9634cd25c9	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=6985d9d7e9ba40985f875d0b12f14a4f

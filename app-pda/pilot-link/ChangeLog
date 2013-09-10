@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/pilot-link
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.74 2012/08/29 03:20:32 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.75 2013/09/10 09:23:57 idella4 Exp $
+
+*pilot-link-0.12.5-r1 (10 Sep 2013)
+
+  10 Sep 2013; Ian Delaney <idella4@gentoo.org> +pilot-link-0.12.5-r1.ebuild:
+  revbump -> EAPI5, distutils-r1
 
   29 Aug 2012; Anthony G. Basile <blueness@gentoo.org>
   pilot-link-0.12.5.ebuild:
