@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-radius/pecl-radius-1.2.7.ebuild,v 1.1 2013/07/05 11:46:30 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-radius/pecl-radius-1.2.7.ebuild,v 1.2 2013/09/10 03:13:26 patrick Exp $
 
 EAPI=5
 
@@ -18,4 +18,3 @@ DESCRIPTION="Provides full support for RADIUS authentication (RFC 2865) and RADI
 LICENSE="BSD BSD-2"
 SLOT="0"
 IUSE="examples"
-

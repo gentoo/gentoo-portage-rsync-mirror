@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-zendopcache/pecl-zendopcache-7.0.1.ebuild,v 1.2 2013/03/26 18:54:00 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-zendopcache/pecl-zendopcache-7.0.1.ebuild,v 1.3 2013/09/10 03:10:22 patrick Exp $
 
 EAPI="5"
 PHP_EXT_NAME="opcache"
@@ -20,4 +20,3 @@ DESCRIPTION="The Zend Optimizer+ provides faster PHP execution through opcode ca
 LICENSE="PHP-3"
 SLOT="0"
 IUSE=""
-

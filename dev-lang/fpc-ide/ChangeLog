@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc-ide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.19 2013/07/29 20:31:33 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/ChangeLog,v 1.20 2013/09/10 03:19:46 patrick Exp $
+
+  10 Sep 2013; Patrick Lauer <patrick@gentoo.org> fpc-ide-2.6.2.ebuild:
+  Whitespace
 
 *fpc-ide-2.6.2 (29 Jul 2013)
 

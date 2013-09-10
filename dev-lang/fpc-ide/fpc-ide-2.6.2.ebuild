@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/fpc-ide-2.6.2.ebuild,v 1.1 2013/07/29 20:31:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/fpc-ide-2.6.2.ebuild,v 1.2 2013/09/10 03:19:46 patrick Exp $
 
 EAPI=5
-
 
 HOMEPAGE="http://www.freepascal.org/"
 DESCRIPTION="Free Pascal Compiler Integrated Development Environment"

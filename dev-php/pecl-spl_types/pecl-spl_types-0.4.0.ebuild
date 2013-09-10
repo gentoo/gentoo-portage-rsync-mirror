@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-spl_types/pecl-spl_types-0.4.0.ebuild,v 1.1 2013/03/18 13:55:30 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-spl_types/pecl-spl_types-0.4.0.ebuild,v 1.2 2013/09/10 03:11:35 patrick Exp $
 
 EAPI=5
 
@@ -21,4 +21,3 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}"
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/jgrapht-0.8.3.ebuild,v 1.1 2013/07/11 22:08:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgrapht/jgrapht-0.8.3.ebuild,v 1.2 2013/09/10 03:24:59 patrick Exp $
 
 EAPI="5"
 
@@ -47,4 +47,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc javadoc
 	use source && java-pkg_dosrc src/org
 }
-

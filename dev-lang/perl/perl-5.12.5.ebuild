@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.5.ebuild,v 1.1 2013/03/04 19:51:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.5.ebuild,v 1.2 2013/09/10 03:18:31 patrick Exp $
 
 EAPI=5
 
@@ -155,7 +155,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-5.12.3-mint.patch \
 		"${FILESDIR}"/${PN}-5.12.3-interix.patch \
 		"${FILESDIR}"/${PN}-5.12.5-rehash-5.12.5.patch
-
 
 	# Fix build on OSX Lion (10.7)
 	sed -i -e '/^usenm=/s/true/false/' hints/darwin.sh

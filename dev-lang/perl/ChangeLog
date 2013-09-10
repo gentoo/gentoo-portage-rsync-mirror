@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.397 2013/08/14 03:49:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.398 2013/09/10 03:18:31 patrick Exp $
+
+  10 Sep 2013; Patrick Lauer <patrick@gentoo.org> perl-5.12.5.ebuild:
+  Whitespace
 
 *perl-5.18.1 (14 Aug 2013)
 
