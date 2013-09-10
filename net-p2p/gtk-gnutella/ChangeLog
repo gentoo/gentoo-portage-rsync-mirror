@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.147 2013/05/09 07:44:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.148 2013/09/10 16:01:11 graaff Exp $
+
+*gtk-gnutella-1.0.0 (10 Sep 2013)
+
+  10 Sep 2013; Hans de Graaff <graaff@gentoo.org> +gtk-gnutella-1.0.0.ebuild,
+  +files/gtk-gnutella-1.0.0-bdf.patch:
+  Version bump. Closes bug 484460.
 
   09 May 2013; Hans de Graaff <graaff@gentoo.org> -gtk-gnutella-0.98.3.ebuild:
   Cleanup.
