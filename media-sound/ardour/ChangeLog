@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.119 2013/07/27 11:31:55 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.120 2013/09/10 20:14:00 nativemad Exp $
+
+*ardour-9999 (10 Sep 2013)
+*ardour-3.4 (10 Sep 2013)
+
+  10 Sep 2013; Andreas Schuerch <nativemad@gentoo.org> +ardour-3.4.ebuild,
+  +ardour-9999.ebuild:
+  Moved to git and added ebuilds for 3.4 and 9999
 
   27 Jul 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.3-r1.ebuild:
   removed the unused patch. See bug 478046. Thanks knasan. I had a bad day...
