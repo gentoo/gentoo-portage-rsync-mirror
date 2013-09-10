@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.4.1.ebuild,v 1.1 2013/08/18 21:35:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.4.1.ebuild,v 1.2 2013/09/10 03:31:48 patrick Exp $
 
 EAPI="5"
 
@@ -83,7 +83,6 @@ RDEPEND="${COMMON_DEP}
 	)
 	alsa? ( ${ALSA_COMMON_DEP} )
 	cups? ( ${CUPS_COMMON_DEP} )"
-
 
 src_unpack() {
 	unpack ${A}

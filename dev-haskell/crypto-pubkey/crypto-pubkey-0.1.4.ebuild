@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-pubkey/crypto-pubkey-0.1.4.ebuild,v 1.1 2013/08/26 04:36:43 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-pubkey/crypto-pubkey-0.1.4.ebuild,v 1.2 2013/09/10 03:32:44 patrick Exp $
 
 EAPI=5
 
@@ -31,4 +31,3 @@ DEPEND="${RDEPEND}
 			dev-haskell/test-framework-hunit
 			>=dev-haskell/test-framework-quickcheck2-0.2.9
 		)"
-

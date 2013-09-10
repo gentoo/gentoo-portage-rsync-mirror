@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.9.0.ebuild,v 1.1 2013/08/29 16:02:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/libdbi-drivers-0.9.0.ebuild,v 1.2 2013/09/10 03:35:51 patrick Exp $
 
 EAPI=4
 
@@ -25,7 +25,6 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	doc? ( app-text/openjade )
 "
-
 
 REQUIRED_USE="
 	firebird? ( !bindist )
