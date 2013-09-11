@@ -7,7 +7,8 @@ IUSE=debug
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=MIT
 RDEPEND=>=dev-lang/lua-5.1[deprecated]
+RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/diegonehab/luasocket/archive/v3.0-rc1.tar.gz -> luasocket-3.0_rc1.tar.gz
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=fbec56f022f97cf8b7bc1daf3a03b7a3
+_md5_=cac5d442727a3a607f9b27feeed8d742

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1.ebuild,v 1.1 2013/09/11 15:09:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1.ebuild,v 1.2 2013/09/11 18:49:05 mrueg Exp $
 
 EAPI=5
 
@@ -20,11 +20,13 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}-${PV/_/-}
 
+RESTRICT="test"
+
 src_compile() {
 	emake \
 		CC="$(tc-getCC) ${CFLAGS}" \
 		LD="$(tc-getCC) ${LDFLAGS}"\
-		$(usex debug DEBUG="DEBUG")
+		$(usex debug DEBUG="DEBUG" "")
 }
 
 src_install() {
