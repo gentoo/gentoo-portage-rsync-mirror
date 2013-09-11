@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/groupoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.32 2013/01/02 19:26:25 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/groupoffice/ChangeLog,v 1.33 2013/09/11 14:00:34 ago Exp $
+
+  11 Sep 2013; Agostino Sarubbo <ago@gentoo.org> groupoffice-4.0.97.ebuild:
+  Stable for amd64, wrt bug #433988
 
 *groupoffice-4.1.7 (02 Jan 2013)
 
