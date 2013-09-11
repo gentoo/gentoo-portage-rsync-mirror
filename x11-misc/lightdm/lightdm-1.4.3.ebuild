@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.7.9.ebuild,v 1.1 2013/08/16 18:03:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.4.3.ebuild,v 1.1 2013/09/11 19:48:10 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils pam readme.gentoo systemd
 
-TRUNK_VERSION="1.8"
+TRUNK_VERSION="1.4"
 DESCRIPTION="A lightweight display manager"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/LightDM"
-SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.xz
+SRC_URI="http://launchpad.net/${PN}/${TRUNK_VERSION}/${PV}/+download/${P}.tar.gz
 	mirror://gentoo/introspection-20110205.m4.tar.bz2"
 
 LICENSE="GPL-3 LGPL-3"
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.32.3:2
 	virtual/pam
 	x11-libs/libX11
 	>=x11-libs/libxklavier-5
-	introspection? ( >=dev-libs/gobject-introspection-1 )
+	introspection? ( <dev-libs/gobject-introspection-1.36.0 )
 	qt4? (
 		dev-qt/qtcore:4
 		dev-qt/qtdbus:4
@@ -47,7 +47,8 @@ src_prepare() {
 	sed -i -e 's:getgroups:lightdm_&:' tests/src/libsystem.c || die #412369
 	sed -i -e '/minimum-uid/s:500:1000:' data/users.conf || die
 
-	epatch "${FILESDIR}"/${PN}-1.7.7-session-wrapper.patch
+	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
+	epatch "${FILESDIR}"/${PN}-1.2.0-fix-configure.patch
 	epatch_user
 
 	# Remove bogus Makefile statement. This needs to go upstream
