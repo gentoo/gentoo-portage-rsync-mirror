@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.211 2013/08/27 16:29:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.212 2013/09/11 15:37:50 ottxor Exp $
+
+  11 Sep 2013; Christoph Junghans <ottxor@gentoo.org>
+  texlive-core-2013-r1.ebuild:
+  added prefix support (bug #484140)
 
 *texlive-core-2013-r1 (27 Aug 2013)
 

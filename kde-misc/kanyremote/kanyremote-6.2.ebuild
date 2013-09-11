@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/kanyremote-6.2.ebuild,v 1.3 2013/09/11 15:21:14 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/kanyremote-6.2.ebuild,v 1.4 2013/09/11 15:46:19 kensington Exp $
 
 EAPI=5
 
@@ -32,14 +32,20 @@ src_prepare() {
 	# using gettextize no-interactive example from dev-util/bless package
 	cp $(type -p gettextize) "${T}"/
 	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize"
+	"${T}"/gettextize -f --no-changelog > /dev/null
+
+	# remove deprecated entry
 	sed -e "/Encoding=UTF-8/d" \
 		-i kanyremote.desktop || die "fixing .desktop file failed"
-	"${T}"/gettextize -f --no-changelog > /dev/null
-	#fix documentation directory wrt bug #316087
+
+	# fix documentation directory wrt bug #316087
 	sed -i "s/doc\/${PN}/doc\/${PF}/g" Makefile.am
 	eautoreconf
-	# workaround to bluetooth check when bluetooth use flag is disabled
-	! use bluetooth && epatch "${FILESDIR}/disable_bluetooth.patch"
+
+	# disable bluetooth check to avoid errors
+	if ! use bluetooth ; then
+		sed -e "s/usepybluez    = True/usepybluez    = False/" -i kanyremote || die
+	fi
 }
 
 src_install() {

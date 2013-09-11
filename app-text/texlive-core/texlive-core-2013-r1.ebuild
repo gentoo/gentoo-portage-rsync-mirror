@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013-r1.ebuild,v 1.1 2013/08/27 16:29:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013-r1.ebuild,v 1.2 2013/09/11 15:37:50 ottxor Exp $
 
 EAPI=5
 
@@ -67,7 +67,7 @@ for i in ${TL_CORE_EXTRA_SRC_MODULES}; do
 done
 SRC_URI="${SRC_URI} )"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="cjk X doc source tk xetex"
 
 TEXMF_PATH=/usr/share/texmf-dist
@@ -165,17 +165,17 @@ src_configure() {
 	tc-export CC CXX AR RANLIB
 	ECONF_SOURCE="${B}" \
 		econf -C \
-		--bindir=/usr/bin \
+		--bindir="${EPREFIX}"/usr/bin \
 		--datadir="${S}" \
 		--with-system-freetype2 \
-		--with-freetype2-include=/usr/include \
 		--with-system-zlib \
 		--with-system-libpng \
 		--with-system-xpdf \
 		--with-system-poppler \
 		--with-system-teckit \
-		--with-teckit-includes=/usr/include/teckit \
+		--with-teckit-includes="${EPREFIX}"/usr/include/teckit \
 		--with-system-kpathsea \
+		--with-kpathsea-includes="${EPREFIX}"/usr/include \
 		--with-system-icu \
 		--with-system-ptexenc \
 		--with-system-harfbuzz \
@@ -232,7 +232,7 @@ src_configure() {
 
 src_compile() {
 	tc-export CC CXX AR RANLIB
-	emake SHELL=/bin/sh texmf=${TEXMF_PATH:-/usr/share/texmf-dist} || die "emake failed"
+	emake SHELL="${EPREFIX}"/bin/sh texmf="${EPREFIX}"${TEXMF_PATH:-/usr/share/texmf-dist} || die "emake failed"
 
 	cd "${B}"
 	# Mimic updmap --syncwithtrees to enable only fonts installed
@@ -251,12 +251,12 @@ src_compile() {
 
 src_install() {
 	dodir ${TEXMF_PATH:-/usr/share/texmf-dist}/web2c
-	emake DESTDIR="${D}" texmf="${D}${TEXMF_PATH:-/usr/share/texmf-dist}" run_texlinks="true" run_mktexlsr="true" install || die "install failed"
+	emake DESTDIR="${D}" texmf="${ED}${TEXMF_PATH:-/usr/share/texmf-dist}" run_texlinks="true" run_mktexlsr="true" install || die "install failed"
 
 	cd "${B}"
 	dodir /usr/share # just in case
-	cp -pR texmf-dist "${D}/usr/share/" || die "failed to install texmf trees"
-	cp -pR "${WORKDIR}"/tlpkg "${D}/usr/share/" || die "failed to install tlpkg files"
+	cp -pR texmf-dist "${ED}/usr/share/" || die "failed to install texmf trees"
+	cp -pR "${WORKDIR}"/tlpkg "${ED}/usr/share/" || die "failed to install tlpkg files"
 
 	# When X is disabled mf-nowin doesn't exist but some scripts expect it to
 	# exist. Instead, it is called mf, so we symlink it to please everything.
@@ -278,23 +278,23 @@ src_install() {
 	cd "${B}/texk/web2c"
 	dodoc ChangeLog NEWS PROJECTS README || die "failed to install web2c docs"
 
-	use doc || rm -rf "${D}/usr/share/texmf-dist/doc"
+	use doc || rm -rf "${ED}/usr/share/texmf-dist/doc"
 
 	dodir /etc/env.d
-	echo 'CONFIG_PROTECT_MASK="/etc/texmf/web2c /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d"' > "${D}/etc/env.d/98texlive"
+	echo 'CONFIG_PROTECT_MASK="/etc/texmf/web2c /etc/texmf/language.dat.d /etc/texmf/language.def.d /etc/texmf/updmap.d"' > "${ED}/etc/env.d/98texlive"
 	# populate /etc/texmf
 	keepdir /etc/texmf/web2c
 
 	# take care of updmap.cfg and language.d files
 	keepdir /etc/texmf/{updmap.d,language.dat.d,language.def.d,language.dat.lua.d}
 
-	mv "${D}${TEXMF_PATH}/web2c/updmap.cfg"	"${D}/etc/texmf/updmap.d/00updmap.cfg" || die "moving updmap.cfg failed"
+	mv "${ED}${TEXMF_PATH}/web2c/updmap.cfg" "${ED}/etc/texmf/updmap.d/00updmap.cfg" || die "moving updmap.cfg failed"
 
 	# Remove fmtutil.cnf, it will be regenerated from /etc/texmf/fmtutil.d files
 	# by texmf-update
-	rm -f "${D}${TEXMF_PATH}/web2c/fmtutil.cnf"
+	rm -f "${ED}${TEXMF_PATH}/web2c/fmtutil.cnf"
 	# Remove bundled and invalid updmap.cfg
-	rm -f "${D}/usr/share/texmf-dist/web2c/updmap.cfg"
+	rm -f "${ED}/usr/share/texmf-dist/web2c/updmap.cfg"
 
 	texlive-common_handle_config_files
 
@@ -308,11 +308,11 @@ src_install() {
 	dosym pdftex /usr/bin/pdfvirtex
 
 	# Rename mpost to leave room for mplib
-	mv "${D}/usr/bin/mpost" "${D}/usr/bin/mpost-${P}"
+	mv "${ED}/usr/bin/mpost" "${ED}/usr/bin/mpost-${P}"
 	dosym "mpost-${P}" /usr/bin/mpost
 
 	# Ditto for pdftex
-	mv "${D}/usr/bin/pdftex" "${D}/usr/bin/pdftex-${P}"
+	mv "${ED}/usr/bin/pdftex" "${ED}/usr/bin/pdftex-${P}"
 	dosym "pdftex-${P}" /usr/bin/pdftex
 }
 
@@ -321,7 +321,7 @@ pkg_preinst() {
 	if has_version =app-text/texlive-core-2007* ; then
 		for i in pdftex/pdflatex aleph/aleph aleph/lamed omega/lambda omega/omega xetex/xetex xetex/xelatex tex/tex pdftex/etex pdftex/pdftex pdftex/pdfetex ; do
 			for j in log fmt ; do
-				local file="${ROOT}/var/lib/texmf/web2c/${i}.${j}"
+				local file="${EROOT}/var/lib/texmf/web2c/${i}.${j}"
 				if [ -f "${file}" ] ; then
 					elog "Removing stray ${file} from TeXLive 2007 install."
 					rm -f "${file}"
@@ -329,7 +329,7 @@ pkg_preinst() {
 			done
 		done
 		for j in base log ; do
-			local file="${ROOT}/var/lib/texmf/web2c/metafont/mf.${j}"
+			local file="${EROOT}/var/lib/texmf/web2c/metafont/mf.${j}"
 			if [ -f "${file}" ] ; then
 				elog "Removing stray ${file} from TeXLive 2007 install."
 				rm -f "${file}"
@@ -342,8 +342,8 @@ pkg_postinst() {
 	etexmf-update
 
 	elog
-	elog "If you have configuration files in /etc/texmf to merge,"
-	elog "please update them and run /usr/sbin/texmf-update."
+	elog "If you have configuration files in ${EPREFIX}/etc/texmf to merge,"
+	elog "please update them and run ${EPREFIX}/usr/sbin/texmf-update."
 	elog
 	ewarn "If you are migrating from an older TeX distribution"
 	ewarn "Please make sure you have read:"
