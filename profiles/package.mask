@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15097 2013/09/11 18:10:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15099 2013/09/11 20:17:15 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -148,11 +148,6 @@ dev-games/neotools
 # - https://bugs.gentoo.org/buglist.cgi?quicksearch=assignee%3Asecurity%20kernel
 #
 =sys-kernel/gentoo-sources-3.8.13
-
-# Markos Chandras <hwoarang@gentoo.org> (30 Aug 2013)
-# Masked for proper testing in production
-=dev-util/buildbot-0.8.8
-=dev-util/buildbot-slave-0.8.8
 
 # Gilles Dartiguelongue <eva@gentoo.org> (30 Aug 2013)
 # libsoup-gnome was split again. Mask the inappropriate
@@ -921,6 +916,8 @@ app-portage/layman-dbtools
 =net-print/cups-9999
 # rdep of dev-vcs/fromcvs
 dev-ruby/rcsparse
+~dev-util/buildbot-9999
+~dev-util/buildbot-slave-9999
 dev-vcs/fromcvs
 =net-im/kmess-9999
 net-misc/netcomics-cvs

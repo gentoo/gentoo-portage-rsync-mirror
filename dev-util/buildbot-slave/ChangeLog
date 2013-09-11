@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/buildbot-slave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.50 2013/08/30 20:40:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.51 2013/09/11 20:22:04 hwoarang Exp $
+
+*buildbot-slave-9999 (11 Sep 2013)
+
+  11 Sep 2013; Markos Chandras <hwoarang@gentoo.org>
+  +buildbot-slave-9999.ebuild:
+  Add buildbot-slave live ebuild thanks to Alice Ferrazzi
+  <alice.ferrazzi@gmail.com>. Bug #484336
 
 *buildbot-slave-0.8.8 (30 Aug 2013)
 

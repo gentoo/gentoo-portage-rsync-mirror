@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.138 2013/08/30 20:39:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.139 2013/09/11 20:19:47 hwoarang Exp $
+
+*buildbot-9999 (11 Sep 2013)
+
+  11 Sep 2013; Markos Chandras <hwoarang@gentoo.org> +buildbot-9999.ebuild:
+  Add buildbot live ebuild thanks to Alice Ferrazzi <alice.ferrazzi@gmail.com>.
+  Bug #484334
 
 *buildbot-0.8.8 (30 Aug 2013)
 

@@ -1,6 +1,15 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.239 2013/06/09 23:05:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.240 2013/09/11 20:18:36 chithanh Exp $
+
+*xinit-1.3.3 (11 Sep 2013)
+*xinit-1.3.3 (11 Sep 2013)
+
+  11 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xinit-1.3.3.ebuild, +xinit-1.3.3.ebuild,
+  -files/xinit-1.3.1-prio-process.patch, -xinit-1.3.0-r2.ebuild,
+  -xinit-1.3.1-r1.ebuild, -xinit-1.3.1.ebuild:
+  Version bump.
 
   09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

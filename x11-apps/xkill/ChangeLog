@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xkill
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkill/ChangeLog,v 1.37 2012/05/15 14:20:25 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkill/ChangeLog,v 1.38 2013/09/11 20:18:54 chithanh Exp $
+
+*xkill-1.0.4 (11 Sep 2013)
+
+  11 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xkill-1.0.4.ebuild:
+  Version bump.
 
   15 May 2012; Alexis Ballier <aballier@gentoo.org> xkill-1.0.3.ebuild:
   keyword ~amd64-fbsd
@@ -130,4 +136,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +xkill-0.99.0.ebuild:
   Initial commit for modular X.
-
