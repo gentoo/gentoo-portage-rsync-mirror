@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.1-r1.ebuild,v 1.5 2013/08/14 15:42:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.10.ebuild,v 1.1 2013/09/11 16:23:10 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps user
+PYTHON_COMPAT=( python2_6 python2_7 )
+inherit autotools eutils fcaps flag-o-matic python-single-r1 user
 
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -14,44 +15,30 @@ LICENSE="GPL-2"
 SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
-	adns +caps crypt doc doc-pdf geoip +gtk2 gtk3 ipv6 kerberos libadns lua
-	+netlink +pcap portaudio qt4 selinux smi ssl zlib
+	adns +caps crypt doc doc-pdf geoip gtk ipv6 kerberos libadns lua +pcap
+	portaudio profile python selinux smi ssl zlib
 "
 REQUIRED_USE="
-	?? ( gtk2 gtk3 qt4 )
 	ssl? ( crypt )
-"
-
-GTK_COMMON_DEPEND="
-	x11-libs/gdk-pixbuf
-	x11-libs/pango
-	x11-misc/xdg-utils
 "
 RDEPEND="
 	>=dev-libs/glib-2.14:2
-	netlink? ( dev-libs/libnl )
 	adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) )
-	crypt? ( dev-libs/libgcrypt )
 	caps? ( sys-libs/libcap )
+	crypt? ( dev-libs/libgcrypt )
 	geoip? ( dev-libs/geoip )
-	gtk2? (
-		${GTK_COMMON_DEPEND}
+	gtk? (
 		>=x11-libs/gtk+-2.4.0:2
-	)
-	gtk3? (
-		${GTK_COMMON_DEPEND}
-		x11-libs/gtk+:3
+		dev-libs/atk
+		x11-libs/pango
+		x11-misc/xdg-utils
 	)
 	kerberos? ( virtual/krb5 )
 	libadns? ( net-libs/adns )
-	lua? ( >=dev-lang/lua-5.1 )
-	pcap? ( net-libs/libpcap[-netlink] )
+	lua? ( <dev-lang/lua-5.2 )
+	pcap? ( net-libs/libpcap )
 	portaudio? ( media-libs/portaudio )
-	qt4? (
-		dev-qt/qtcore:4
-		dev-qt/qtgui:4
-		x11-misc/xdg-utils
-		)
+	python? ( ${PYTHON_DEPS} )
 	selinux? ( sec-policy/selinux-wireshark )
 	smi? ( net-libs/libsmi )
 	ssl? ( net-libs/gnutls )
@@ -62,11 +49,9 @@ DEPEND="
 	${RDEPEND}
 	doc? (
 		app-doc/doxygen
-		app-text/asciidoc
 		dev-libs/libxml2
 		dev-libs/libxslt
 		doc-pdf? ( dev-java/fop )
-		www-client/lynx
 	)
 	>=virtual/perl-Pod-Simple-3.170.0
 	sys-devel/bison
@@ -79,21 +64,36 @@ DEPEND="
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
+	if ! use gtk; then
+		ewarn "USE=-gtk disables gtk-based gui called wireshark."
+		ewarn "Only command line utils will be built available"
+	fi
+
+	if use python; then
+		python-single-r1_pkg_setup
+	fi
+
 	# Add group for users allowed to sniff.
 	enewgroup wireshark
 }
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
-		"${FILESDIR}"/${PN}-1.10.1-pod.patch \
-		"${FILESDIR}"/${PN}-1.10.1-oldlibs.patch
+	epatch "${FILESDIR}"/${PN}-1.6.13-ldflags.patch
+
+	sed -i -e '/^Icon/s|.png||g' ${PN}.desktop || die
 
 	eautoreconf
 }
 
 src_configure() {
 	local myconf
+
+	# profile and pie are incompatible #215806, #292991
+	if use profile; then
+		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
+		ewarn "Also ignore \"unrecognized option '-nopie'\" gcc warning #358101."
+		append-flags $(test-flags-CC -nopie)
+	fi
 
 	if use adns; then
 		if use libadns; then
@@ -112,7 +112,7 @@ src_configure() {
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
 	if use kerberos; then
-		case $(krb5-config --libs) in
+		case `krb5-config --libs` in
 			*-lcrypto*)
 				ewarn "Kerberos was built with ssl support: linkage with openssl is enabled."
 				ewarn "Note there are annoying license incompatibilities between the OpenSSL"
@@ -122,39 +122,30 @@ src_configure() {
 		esac
 	fi
 
-	# Enable wireshark binary with any supported GUI toolkit (bug #473188)
-	if use gtk2 || use gtk3 || use qt4 ; then
-		myconf+=( "--enable-wireshark" )
-	else
-		myconf+=( "--disable-wireshark" )
-	fi
-
 	# Hack around inability to disable doxygen/fop doc generation
 	use doc || export ac_cv_prog_HAVE_DOXYGEN=false
 	use doc-pdf || export ac_cv_prog_HAVE_FOP=false
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
-	# --disable-profile-build bugs #215806, #292991, #479602
 	econf \
 		$(use pcap && use_enable !caps setuid-install) \
 		$(use pcap && use_enable caps setcap-install) \
+		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
-		$(use_with caps libcap) \
+		$(use_enable profile profile-build) \
 		$(use_with crypt gcrypt) \
+		$(use_with caps libcap) \
 		$(use_with geoip) \
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
-		$(use_with netlink libnl) \
 		$(use_with pcap dumpcap-group wireshark) \
 		$(use_with pcap) \
 		$(use_with portaudio) \
-		$(use_with qt4 qt) \
+		$(use_with python) \
 		$(use_with smi libsmi) \
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \
-		$(usex gtk3 --with-gtk3=yes --with-gtk3=no) \
 		--disable-extra-gcc-checks \
-		--disable-profile-build \
 		--disable-usr-local \
 		--sysconfdir="${EPREFIX}"/etc/wireshark \
 		${myconf[@]}
@@ -162,7 +153,7 @@ src_configure() {
 
 src_compile() {
 	default
-	use doc && emake -j1 -C docbook
+	use doc && emake -C docbook
 }
 
 src_install() {
@@ -190,8 +181,7 @@ src_install() {
 	insinto /usr/include/wiretap
 	doins wiretap/wtap.h
 
-	if use gtk2 || use gtk3 || use qt4; then
-		local c d
+	if use gtk; then
 		for c in hi lo; do
 			for d in 16 32 48; do
 				insinto /usr/share/icons/${c}color/${d}x${d}/apps
@@ -202,6 +192,12 @@ src_install() {
 	fi
 
 	use pcap && chmod o-x "${ED}"/usr/bin/dumpcap #357237
+
+	if use python; then
+		python_optimize "${ED}"/usr/lib*/wireshark/python
+	fi
+
+	prune_libtool_files
 }
 
 pkg_postinst() {
