@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=cairo? ( x11-libs/cairo:= ) glib? ( dev-libs/glib:2 ) graphite? ( media-gfx/graphite2:= ) icu? ( dev-libs/icu:= ) introspection? ( >=dev-libs/gobject-introspection-1.32 ) truetype? ( media-libs/freetype:2= ) dev-util/gtk-doc-am dev-util/ragel virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=cairo? ( x11-libs/cairo:= ) glib? ( dev-libs/glib:2 ) graphite? ( media-gfx/graphite2:= ) icu? ( dev-libs/icu:= ) introspection? ( >=dev-libs/gobject-introspection-1.32 ) truetype? ( media-libs/freetype:2= ) dev-util/gtk-doc-am virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=An OpenType text shaping engine
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/HarfBuzz
@@ -11,4 +11,4 @@ REQUIRED_USE=introspection? ( glib )
 SLOT=0/0.9.18
 SRC_URI=http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.20.tar.bz2
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	63afaaed8aa819fdcb814c7cd39495a2	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=f6bcb4d2d6e803dc599684c377c6c62c
+_md5_=dee97c22c2c2b22283db62a4191e7dae
