@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.943 2013/09/10 16:02:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.944 2013/09/11 05:30:16 maekke Exp $
+
+  11 Sep 2013; Markus Meier <maekke@gentoo.org> chromium-29.0.1547.57.ebuild,
+  chromium-29.0.1547.65.ebuild:
+  mark chromium-29 -arm as it's broken on arm, chromium-30 is okay (see bug
+  #473260)
 
 *chromium-31.0.1622.0 (10 Sep 2013)
 
