@@ -1,0 +1,84 @@
+Many clients seem to use blockquote tags to flag quotes these days, so
+write them out as quotes, so they remain readable.
+
+diff -ru src.orig/html_tag.c src/html_tag.c
+--- src.orig/html_tag.c	2013-09-11 11:51:53.000000000 +0200
++++ src/html_tag.c	2013-09-11 12:43:25.000000000 +0200
+@@ -87,8 +87,8 @@
+ 
+ 		else if CMP("P", str)  { start_p(); }
+ 		else if CMP("/P", str) { paragraphen_ende(); }
+-		else if CMP("BLOCKQUOTE", str)  { start_p(); }
+-		else if CMP("/BLOCKQUOTE", str) { paragraphen_ende(); }
++		else if CMP("BLOCKQUOTE", str)  { start_p(); quote++; }
++		else if CMP("/BLOCKQUOTE", str) { paragraphen_ende(); if (quote>0) quote--;}
+ 		else if CMP("Q", str)  { wort_plus_ch('"'); }
+ 		else if CMP("/Q", str) { wort_plus_ch('"'); }
+ 
+diff -ru src.orig/multibyte.h src/multibyte.h
+--- src.orig/multibyte.h	2005-09-20 12:57:54.000000000 +0200
++++ src/multibyte.h	2013-09-11 11:56:13.000000000 +0200
+@@ -16,6 +16,7 @@
+  #define ATOI(n) wcstoi(n)
+ 
+  #define ONESPACE L" "
++ #define QUOTE L">"
+  #define WORT_PLUS_STRING(str) wort_plus_string(L##str)
+ 
+  #define STRSTR(haystack, needle) wcsstr(haystack, L##needle)
+@@ -40,6 +41,7 @@
+  #define ATOI(n) atoi(n)
+ 
+  #define ONESPACE " "
++ #define QUOTE ">"
+  #define WORT_PLUS_STRING(str) wort_plus_string(str)
+ 
+  #define STRSTR(haystack, needle) strstr(haystack, needle)
+diff -ru src.orig/text.h src/text.h
+--- src.orig/text.h	2013-09-11 12:48:23.000000000 +0200
++++ src/text.h	2013-09-11 12:48:27.000000000 +0200
+@@ -26,6 +26,7 @@
+ 
+ int tab;
+ int spaces;  
++int quote;
+ 
+ void print_zeile();
+ int is_zeile_empty();
+diff -ru src.orig/text.c src/text.c
+--- src.orig/text.c	2006-01-22 20:31:45.000000000 +0100
++++ src/text.c	2013-09-11 12:45:09.000000000 +0200
+@@ -28,6 +28,7 @@
+ int breite=76,
+ 	hr_breite=76,
+ 	paragraph=0,
++	quote=0,
+ 
+ 	tab=4,         /* tabulator */
+ 	spaces=0,      /* spaces at beginning of line */
+@@ -325,6 +326,12 @@
+       printf(" z0: zeilen_pos: %d\n",zeilen_pos);
+ #endif
+       print_zeile();
++      if (quote > 0)
++      {
++        i=0;
++        while (i<quote) { zeile_plus_wort(QUOTE,1,1); i++; }
++        zeile_plus_wort(ONESPACE,1,1);
++      }
+       i=0;
+       while (i<spaces) { zeile_plus_wort(ONESPACE,1,1); i++; }
+ 			if (orderedlist>0) { zeile_plus_wort(ONESPACE,1,1); }
+@@ -345,6 +352,12 @@
+       printf(" z2: zeilen_len: %d\n",zeilen_len);
+       printf(" z2: zeilen_pos: %d\n",zeilen_pos);
+ #endif
++      if (quote > 0)
++      {
++        i=0;
++        while (i<quote) { zeile_plus_wort(QUOTE,1,1); i++; }
++        zeile_plus_wort(ONESPACE,1,1);
++      }
+       i=0;
+       while (i<spaces) { zeile_plus_wort(ONESPACE,1,1); i++; }
+ 			if (orderedlist>0) { zeile_plus_wort(ONESPACE,1,1); }

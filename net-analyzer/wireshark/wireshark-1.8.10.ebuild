@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.10.ebuild,v 1.1 2013/09/11 16:23:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.10.ebuild,v 1.2 2013/09/11 17:31:17 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -16,7 +16,7 @@ SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
 	adns +caps crypt doc doc-pdf geoip gtk ipv6 kerberos libadns lua +pcap
-	portaudio profile python selinux smi ssl zlib
+	portaudio python selinux smi ssl zlib
 "
 REQUIRED_USE="
 	ssl? ( crypt )
@@ -88,13 +88,6 @@ src_prepare() {
 src_configure() {
 	local myconf
 
-	# profile and pie are incompatible #215806, #292991
-	if use profile; then
-		ewarn "You've enabled the 'profile' USE flag, building PIE binaries is disabled."
-		ewarn "Also ignore \"unrecognized option '-nopie'\" gcc warning #358101."
-		append-flags $(test-flags-CC -nopie)
-	fi
-
 	if use adns; then
 		if use libadns; then
 			myconf+=( "--with-adns --without-c-ares" )
@@ -127,6 +120,7 @@ src_configure() {
 	use doc-pdf || export ac_cv_prog_HAVE_FOP=false
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
+	# --disable-profile-build bugs #215806, #292991, #479602
 	econf \
 		$(use pcap && use_enable !caps setuid-install) \
 		$(use pcap && use_enable caps setcap-install) \
@@ -146,6 +140,7 @@ src_configure() {
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \
 		--disable-extra-gcc-checks \
+		--disable-profile-build \
 		--disable-usr-local \
 		--sysconfdir="${EPREFIX}"/etc/wireshark \
 		${myconf[@]}

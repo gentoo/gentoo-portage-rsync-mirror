@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.8-r1.ebuild,v 1.1 2013/09/10 19:25:33 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.8-r1.ebuild,v 1.2 2013/09/11 17:22:19 fuzzyray Exp $
 
 EAPI="5"
 
@@ -51,7 +51,7 @@ python_install_all() {
 
 	# Create cache directory for revdep-rebuild
 	keepdir /var/cache/revdep-rebuild
-	use prefix || fowners root:root /var/cache/revdep-rebuild
+	use prefix || fowners root:0 /var/cache/revdep-rebuild
 	fperms 0700 /var/cache/revdep-rebuild
 
 	# remove on Gentoo Prefix platforms where it's broken anyway
