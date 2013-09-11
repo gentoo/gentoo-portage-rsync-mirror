@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15096 2013/09/10 05:54:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15097 2013/09/11 18:10:20 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (11 Sep 2013)
+# Not needed anymore, same version is provided by stable
+# dev-texlive/texlive-latex already and that should be used
+dev-tex/natbib
 
 # Ian Stakenvicius <axs@gentoo.org> (08 Sep 2013)
 # Collides with emul-linux-x86-sdl, will unmask after

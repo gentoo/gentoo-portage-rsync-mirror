@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.18.ebuild,v 1.2 2013/08/17 17:37:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.18.ebuild,v 1.3 2013/09/11 18:05:42 zorry Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib unpacker multiprocessing
 
@@ -161,12 +161,12 @@ eblit-src_unpack-post() {
 		einfo "Patching to get working PIE binaries on PIE (hardened) platforms"
 		gcc-specs-pie && epatch "${FILESDIR}"/2.17/glibc-2.17-hardened-pie.patch
 		epatch "${FILESDIR}"/2.10/glibc-2.10-hardened-configure-picdefault.patch
-		epatch "${FILESDIR}"/2.10/glibc-2.10-hardened-inittls-nosysenter.patch
+		epatch "${FILESDIR}"/2.18/glibc-2.18-hardened-inittls-nosysenter.patch
 
 		einfo "Installing Hardened Gentoo SSP and FORTIFY_SOURCE handler"
-		cp -f "${FILESDIR}"/2.6/glibc-2.6-gentoo-stack_chk_fail.c \
+		cp -f "${FILESDIR}"/2.18/glibc-2.18-gentoo-stack_chk_fail.c \
 			debug/stack_chk_fail.c || die
-		cp -f "${FILESDIR}"/2.10/glibc-2.10-gentoo-chk_fail.c \
+		cp -f "${FILESDIR}"/2.18/glibc-2.18-gentoo-chk_fail.c \
 			debug/chk_fail.c || die
 
 		if use debug ; then
