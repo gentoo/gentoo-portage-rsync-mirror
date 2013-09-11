@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/ufed
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.99 2013/04/12 14:29:14 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.100 2013/09/11 17:51:19 fuzzyray Exp $
+
+*ufed-0.90_rc2-r1 (11 Sep 2013)
+
+  11 Sep 2013; Paul Varner <fuzzyray@gentoo.org> +ufed-0.90_rc2-r1.ebuild,
+  +files/ufed-0.90_rc2-get_portdir_from_portageq.patch:
+  Revision bump to add patch to get PORTDIR from portageq (Bug 478318).
 
 *ufed-0.90_rc2 (12 Apr 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.10.ebuild,v 1.2 2013/09/11 17:31:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.8.10.ebuild,v 1.3 2013/09/11 17:33:28 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -126,7 +126,6 @@ src_configure() {
 		$(use pcap && use_enable caps setcap-install) \
 		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
-		$(use_enable profile profile-build) \
 		$(use_with crypt gcrypt) \
 		$(use_with caps libcap) \
 		$(use_with geoip) \

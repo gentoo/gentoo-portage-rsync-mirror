@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/reflectasm
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/reflectasm/ChangeLog,v 1.1 2013/09/11 17:37:01 ercpe Exp $
+
+*reflectasm-1.05 (11 Sep 2013)
+
+  11 Sep 2013; Johann Schmitz <ercpe@gentoo.org> +metadata.xml,
+  +reflectasm-1.05.ebuild:
+  Added ebuild for reflectasm-1.05 - High performance Java reflection

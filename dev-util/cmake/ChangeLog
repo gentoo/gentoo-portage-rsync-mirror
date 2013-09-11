@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.253 2013/07/10 20:30:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.254 2013/09/11 18:00:59 kensington Exp $
+
+*cmake-2.8.11.2 (11 Sep 2013)
+
+  11 Sep 2013; Michael Palimaka <kensington@gentoo.org> +cmake-2.8.11.2.ebuild:
+  Version bump wrt bug #483150.
 
   10 Jul 2013; Johannes Huber <johu@gentoo.org>
   files/cmake-2.8.10.2-FindPythonLibs.patch:

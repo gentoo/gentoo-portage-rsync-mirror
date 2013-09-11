@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.212 2013/09/11 15:37:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.213 2013/09/11 17:40:11 aballier Exp $
+
+  11 Sep 2013; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2013-r1.ebuild:
+  bump dvipsk/ps2pkm deps, bug #482728
 
   11 Sep 2013; Christoph Junghans <ottxor@gentoo.org>
   texlive-core-2013-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.539 2013/09/11 17:31:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.540 2013/09/11 17:33:28 jer Exp $
+
+  11 Sep 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.10.ebuild:
+  Remove USE=profile usage.
 
   11 Sep 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.8.10.ebuild:
   Remove USE=profile here too.

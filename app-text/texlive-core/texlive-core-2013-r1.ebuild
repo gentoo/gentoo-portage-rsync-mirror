@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013-r1.ebuild,v 1.2 2013/09/11 15:37:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013-r1.ebuild,v 1.3 2013/09/11 17:40:11 aballier Exp $
 
 EAPI=5
 
@@ -113,8 +113,8 @@ DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils"
 
 RDEPEND="${COMMON_DEPEND}
-	>=app-text/ps2pkm-1.5_p20120701
-	>=app-text/dvipsk-5.992_p20120701
+	>=app-text/ps2pkm-1.5_p20130530
+	>=app-text/dvipsk-5.993_p20130530
 	>=dev-tex/bibtexu-3.71_p20130530
 	virtual/perl-Getopt-Long
 	xetex? ( >=app-text/xdvipdfmx-0.7.9_p20130530 )
