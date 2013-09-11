@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.5 2013/09/01 00:07:45 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.6 2013/09/11 22:53:49 hasufell Exp $
 
 EAPI=5
 
@@ -111,6 +111,7 @@ src_configure() {
 		${myspellconf} \
 		$(use_enable ntlm) \
 		$(use_enable libproxy) \
+		--enable-minimal-flags \
 		$(use_with theme-manager)
 }
 

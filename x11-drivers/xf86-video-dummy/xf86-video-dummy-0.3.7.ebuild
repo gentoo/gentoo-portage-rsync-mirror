@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/xf86-video-dummy-0.3.6-r1.ebuild,v 1.1 2013/03/08 20:56:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/xf86-video-dummy-0.3.7.ebuild,v 1.1 2013/09/11 22:59:45 chithanh Exp $
 
 EAPI=5
 inherit xorg-2
@@ -15,10 +15,6 @@ DEPEND="${RDEPEND}
 	dga? (
 		x11-proto/xf86dgaproto
 	)"
-
-PATCHES=(
-	"${FILESDIR}"/${P}-remove-mibstore_h.patch
-)
 
 pkg_setup() {
 	XORG_CONFIGURE_OPTIONS=(

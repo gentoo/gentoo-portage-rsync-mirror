@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.73 2013/09/05 19:44:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.74 2013/09/11 22:53:49 hasufell Exp $
+
+  11 Sep 2013; Julian Ospald <hasufell@gentoo.org> hexchat-9999.ebuild:
+  use minimal flags
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> hexchat-2.9.5-r1.ebuild,
   hexchat-2.9.5.ebuild:
