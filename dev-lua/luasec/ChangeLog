@@ -1,6 +1,11 @@
 # ChangeLog for dev-lua/luasec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.8 2013/08/08 19:26:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.9 2013/09/11 19:18:44 mrueg Exp $
+
+*luasec-0.4.1_p20130620 (11 Sep 2013)
+
+  11 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +luasec-0.4.1_p20130620.ebuild:
+  NMU: New snapshot for net-im/prosody-0.9.
 
   08 Aug 2013; Markus Meier <maekke@gentoo.org> luasec-0.4.1.ebuild:
   add ~arm, bug #476264
@@ -43,4 +48,3 @@
   27 May 2010; Dirkjan Ochtman <djc@gentoo.org> +luasec-0.4.ebuild,
   +files/luasec-0.4_Makefile.patch, +metadata.xml:
   Initial ebuild by jochen@schalanda.de, bug 290592.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1.ebuild,v 1.2 2013/09/11 18:49:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/luasocket-3.0_rc1.ebuild,v 1.3 2013/09/11 19:22:32 mrueg Exp $
 
 EAPI=5
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug"
 
 RDEPEND=">=dev-lang/lua-5.1[deprecated]"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}-${PV/_/-}
 
@@ -33,7 +34,7 @@ src_install() {
 	emake \
 		DESTDIR="${D}" \
 		LUAPREFIX_linux=/usr \
-		LUAV=5.1 \
+		LUAV=$(pkg-config --variable V lua) \
 		CDIR_linux=$(get_libdir)/lua/${LUAV} \
 		install
 	dodoc NEW README
