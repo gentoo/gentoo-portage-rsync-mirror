@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.39 2013/06/29 16:39:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.40 2013/09/11 15:27:36 tomwij Exp $
+
+*oracle-jdk-bin-1.7.0.40 (11 Sep 2013)
+
+  11 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +oracle-jdk-bin-1.7.0.40.ebuild:
+  Version bump to 1.7.0.40, fixes bug #484568; ARM now has soft and hard float
+  support.
 
   29 Jun 2013; Tom Wijsman <TomWij@gentoo.org> -oracle-jdk-bin-1.7.0.17.ebuild,
   -oracle-jdk-bin-1.7.0.21.ebuild, oracle-jdk-bin-1.7.0.25.ebuild:

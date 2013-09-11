@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.192 2013/08/27 02:21:33 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.193 2013/09/11 15:10:24 jmbsvicetto Exp $
+
+*cacti-0.8.8b-r2 (11 Sep 2013)
+
+  11 Sep 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +cacti-0.8.8b-r2.ebuild, +files/cacti-0.8.8b_empty_comment.patch:
+  Patch to address a regression on preview mode on 0.8.8b -
+  http://forums.cacti.net/viewtopic.php?f=21&t=50645 Thanks to Reuben Farrelly
+  for the pointer on bug 482424.
 
 *cacti-0.8.8b-r1 (27 Aug 2013)
 
