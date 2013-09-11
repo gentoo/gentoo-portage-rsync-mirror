@@ -7,3 +7,4 @@ slotmove =dev-ruby/minitest-5.0.6 0 5
 move sys-cluster/quantum sys-cluster/neutron
 move sci-libs/scikits_statsmodels dev-python/statsmodels
 slotmove =dev-python/pydns-2.3.4 0 2
+move sys-devel/systemd-sdk sys-devel/systemd-m4

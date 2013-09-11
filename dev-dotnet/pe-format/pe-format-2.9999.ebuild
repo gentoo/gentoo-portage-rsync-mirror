@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-2.9999.ebuild,v 1.2 2013/09/11 08:02:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-2.9999.ebuild,v 1.3 2013/09/11 10:52:16 mgorny Exp $
 
 EAPI=4
 
@@ -28,7 +28,7 @@ RDEPEND="!<sys-apps/openrc-0.9.4"
 KEYWORDS=
 SRC_URI=
 
-DEPEND="sys-devel/systemd-sdk"
+DEPEND="sys-devel/systemd-m4"
 #endif
 
 src_configure() {

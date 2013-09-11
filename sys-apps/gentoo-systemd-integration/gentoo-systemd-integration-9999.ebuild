@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/gentoo-systemd-integration-9999.ebuild,v 1.2 2013/07/29 22:11:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/gentoo-systemd-integration-9999.ebuild,v 1.3 2013/09/11 10:53:06 mgorny Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ SRC_URI=
 KEYWORDS=
 
 DEPEND="${DEPEND}
-	sys-devel/systemd-sdk"
+	sys-devel/systemd-m4"
 #endif
 
 src_configure() {
