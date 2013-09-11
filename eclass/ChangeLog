@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.956 2013/09/11 07:58:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.958 2013/09/11 08:53:18 mgorny Exp $
+
+  11 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd.eclass:
+  Change @USAGE style.
+
+  11 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd.eclass:
+  Deprecate systemd_to_myeconfargs(). It's redundant and unnecessarily
+  confusing.
 
   11 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd.eclass:
   Use subshells instead of "local INSDESTTREE" for doins/newins since that

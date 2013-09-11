@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.8.ebuild,v 1.8 2012/07/25 12:41:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/abrt-2.0.8.ebuild,v 1.9 2013/09/11 08:59:06 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -88,10 +88,12 @@ src_configure() {
 	export PYTHON_CFLAGS=$(python-config --includes)
 	export PYTHON_LIBS=$(python-config --libs)
 
-	myeconfargs=( "--localstatedir=${EPREFIX}/var" )
+	myeconfargs=(
+		"--localstatedir=${EPREFIX}/var"
+		"$(systemd_with_unitdir)"
+	)
 	# --disable-debug enables debug!
 	use debug && myeconfargs=( "${myeconfargs[@]}" --enable-debug )
-	systemd_to_myeconfargs
 	econf "${myeconfargs[@]}"
 }
 

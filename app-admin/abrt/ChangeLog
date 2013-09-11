@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/abrt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.18 2013/03/25 16:12:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/abrt/ChangeLog,v 1.19 2013/09/11 08:59:06 mgorny Exp $
+
+  11 Sep 2013; Michał Górny <mgorny@gentoo.org> abrt-2.0.12-r1.ebuild,
+  abrt-2.0.8.ebuild:
+  systemd_to_myeconfargs is deprecated, use systemd_with_unitdir instead.
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> abrt-2.0.12-r1.ebuild:
   Stable for x86, wrt bug #458984
