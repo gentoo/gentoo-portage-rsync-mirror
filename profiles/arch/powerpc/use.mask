@@ -190,10 +190,6 @@ d3d
 # mask wayland since dev-libs/wayland isn't keyworded
 wayland
 
-# Kacper Kowalik <xarthisius@gentoo.org> (25 Apr 2012)
-# sys-apps/systemd is not tested on ppc*
-systemd
-
 # Julian Ospald <hasufell@gentoo.org> (25 Apr 2012)
 # Masked because nvidia-texture-tools is not (tested) for PowerPC
 nvtt

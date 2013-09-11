@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.455 2013/08/01 02:50:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.456 2013/09/11 14:23:00 pacho Exp $
+
+  11 Sep 2013; Pacho Ramos <pacho@gentoo.org> gnome-3.8.0.ebuild:
+  Rekeyword as bug #478076 is solved for ppc
 
   01 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org> gnome-3.8.0.ebuild:
   Restore unnecessarily dropped ppc64 keyword.
