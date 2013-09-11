@@ -1,14 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/gentoo-systemd-integration-9999.ebuild,v 1.4 2013/09/11 11:49:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/gentoo-systemd-integration-1.ebuild,v 1.1 2013/09/11 11:49:53 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=1
-EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
-inherit git-2
-#endif
 
 inherit autotools-utils systemd
 
@@ -22,14 +16,6 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=sys-apps/systemd-206-r4"
-
-#if LIVE
-SRC_URI=
-KEYWORDS=
-
-DEPEND="${DEPEND}
-	sys-devel/systemd-m4"
-#endif
 
 src_configure() {
 	local myeconfargs=(
