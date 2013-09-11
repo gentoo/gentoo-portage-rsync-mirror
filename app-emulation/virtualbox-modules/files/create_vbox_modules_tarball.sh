@@ -9,8 +9,15 @@
 [ -f "$1" ] || exit 1
 
 VBOX_PACKAGE="$1"
+VERSION_SUFFIX=""
 
-VBOX_VER="$(echo ${VBOX_PACKAGE} | sed 's@.*VirtualBox-\([[:digit:]\.]\+\).*@\1@')"
+if [[ ${VBOX_PACKAGE} = *_BETA* ]] || [[ ${VBOX_PACKAGE} = *_RC* ]] ; then
+	VERSION_SUFFIX="$(echo ${VBOX_PACKAGE} | sed 's@.*VirtualBox-[[:digit:]\.]\+\(_[[:alpha:]]\+[[:digit:]]\).*@\L\1@')"
+	
+fi
+
+VBOX_VER="$(echo ${VBOX_PACKAGE} | sed 's@.*VirtualBox-\([[:digit:]\.]\+\).*@\1@')${VERSION_SUFFIX}"
+
 
 sh ${VBOX_PACKAGE} --noexec --keep --nox11 || exit 2
 cd install || exit 3

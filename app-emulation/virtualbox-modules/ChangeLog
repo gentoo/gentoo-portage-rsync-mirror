@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.131 2013/09/08 12:35:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.132 2013/09/11 07:07:16 polynomial-c Exp $
+
+  11 Sep 2013; Lars Wendler <polynomial-c@gentoo.org>
+  files/create_vbox_modules_tarball.sh:
+  Updated tarball creation script to handle _beta and _rc versions properly.
 
 *virtualbox-modules-4.2.18 (08 Sep 2013)
 
