@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-2.9999.ebuild,v 1.1 2012/12/15 12:55:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-2.9999.ebuild,v 1.2 2013/09/11 08:02:51 mgorny Exp $
 
 EAPI=4
 
@@ -32,7 +32,9 @@ DEPEND="sys-devel/systemd-sdk"
 #endif
 
 src_configure() {
-	systemd_to_myeconfargs
+	local myeconfargs=(
+		"$(systemd_with_unitdir)"
+	)
 	autotools-utils_src_configure
 }
 

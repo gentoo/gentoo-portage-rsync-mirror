@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.98 2013/09/10 07:50:33 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.99 2013/09/11 08:12:45 mgorny Exp $
+
+  11 Sep 2013; Michał Górny <mgorny@gentoo.org> rsyslog-7.2.7.ebuild,
+  rsyslog-7.4.3.ebuild, rsyslog-7.4.4.ebuild:
+  systemd_to_myeconfargs is deprecated, use systemd_with_unitdir instead.
 
 *rsyslog-7.4.4 (10 Sep 2013)
 
