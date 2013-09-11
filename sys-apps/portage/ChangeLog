@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1353 2013/09/10 00:14:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1354 2013/09/11 21:07:49 zmedico Exp $
+
+*portage-2.2.3 (11 Sep 2013)
+
+  11 Sep 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.3.ebuild,
+  -portage-2.2.2.ebuild:
+  2.2.3 version bump. This fixes a regression in 2.2.2 which caused dohtml to
+  trigger a sandbox violation when called after docinto. Bug #484436 tracks all
+  bugs fixed since portage-2.2.1.
 
 *portage-2.2.2 (10 Sep 2013)
 

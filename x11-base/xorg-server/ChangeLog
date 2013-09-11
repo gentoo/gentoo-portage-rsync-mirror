@@ -1,6 +1,16 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.748 2013/08/23 17:56:11 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.749 2013/09/11 21:14:04 chithanh Exp $
+
+*xorg-server-1.14.2.902-r1 (11 Sep 2013)
+
+  11 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xorg-server-1.12-ia64-fix_inx_outx.patch,
+  +files/xorg-server-1.12-unloadsubmodule.patch,
+  +files/xorg-server-1.14-kdrive-out-of-bounds-array-access.patch,
+  +xorg-server-1.14.2.902-r1.ebuild:
+  Fix building with gcc-4.8 and -O3, bug #472058. Apply patches for ia64, bug
+  #447152.
 
 *xorg-server-1.14.2.902 (23 Aug 2013)
 
