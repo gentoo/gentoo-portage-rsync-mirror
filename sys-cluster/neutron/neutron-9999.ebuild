@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-9999.ebuild,v 1.4 2013/09/12 06:09:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-9999.ebuild,v 1.5 2013/09/12 18:50:13 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -63,7 +63,7 @@ RDEPEND=">=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]
 		net-misc/openvswitch
-		dhcp? ( net-dns/dnsmasq )"
+		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
 pkg_setup() {
 	enewgroup neutron

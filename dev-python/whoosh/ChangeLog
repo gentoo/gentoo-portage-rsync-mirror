@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/whoosh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.15 2013/09/11 02:29:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.16 2013/09/12 18:36:17 blueness Exp $
+
+*whoosh-2.5.3 (12 Sep 2013)
+
+  12 Sep 2013; Anthony G. Basile <blueness@gentoo.org> +whoosh-2.5.3.ebuild,
+  -whoosh-2.4.0.ebuild, -whoosh-2.4.1-r1.ebuild, -whoosh-2.5.0.ebuild:
+  Version bump, remove older unstables, fixes bug #484548
 
   11 Sep 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Python herd added as maintainer

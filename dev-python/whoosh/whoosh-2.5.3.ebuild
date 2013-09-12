@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/whoosh-2.5.0.ebuild,v 1.1 2013/09/11 02:26:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/whoosh-2.5.3.ebuild,v 1.1 2013/09/12 18:36:17 blueness Exp $
 
 EAPI="5"
 
@@ -15,26 +15,27 @@ HOMEPAGE="http://bitbucket.org/mchaput/whoosh/wiki/Home/ http://pypi.python.org/
 SRC_URI="mirror://pypi/W/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	test? (	dev-python/nose[${PYTHON_USEDEP}] )"
+	test? ( dev-python/pytest[${PYTHON_USEDEP}] )"
 
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
-DISTUTILS_IN_SOURCE_BUILD=1
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+python_prepare_all() {
+	# (backport from upstream)
+	sed -i -e '/cmdclass/s:pytest:PyTest:' setup.py || die
+	distutils-r1_python_prepare_all
+}
+
 python_install_all() {
 	local DOCS=( README.txt )
+	use doc && local HTML_DOCS=( docs/build/html/_sources/. )
 	distutils-r1_python_install_all
-
-	if use doc; then
-		insinto "/usr/share/doc/${PF}/"
-		doins -r docs/build/html/_sources/* || die
-	fi
 }
 
 python_test() {
-	${EPYTHON} setup.py test || die "Tests fail with ${EPYTHON}"
+	esetup.py test
 }

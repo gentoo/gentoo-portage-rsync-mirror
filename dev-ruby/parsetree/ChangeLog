@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/parsetree
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.58 2013/09/12 17:16:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.59 2013/09/12 18:57:39 ago Exp $
+
+  12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> parsetree-3.0.9-r1.ebuild:
+  Stable for ppc64, wrt bug #484232
 
   12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> parsetree-3.0.9-r1.ebuild:
   Stable for ppc, wrt bug #484232
