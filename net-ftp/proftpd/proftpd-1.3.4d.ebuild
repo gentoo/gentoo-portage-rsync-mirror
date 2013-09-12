@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4d.ebuild,v 1.1 2013/09/12 19:55:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4d.ebuild,v 1.2 2013/09/12 20:13:21 slyfox Exp $
 
 EAPI=5
 inherit eutils multilib systemd
@@ -72,6 +72,7 @@ __prepare_module() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-sftp-kbdint-max-responses-bug3973.patch
+	epatch "${FILESDIR}"/${P}-memset-fix.patch
 
 	# Skip 'install-conf' / Support LINGUAS
 	sed -i -e "/install-all/s/ install-conf//" Makefile.in
