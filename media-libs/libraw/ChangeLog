@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.65 2013/08/31 16:48:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.66 2013/09/12 09:03:03 pinkbyte Exp $
+
+  12 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> -libraw-0.15.2.ebuild,
+  -libraw-0.15.3.ebuild:
+  Vulnerable version cleanup, wrt bug #482926
 
   31 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> libraw-0.15.4.ebuild:
   alpha stable wrt bug #482926
