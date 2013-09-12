@@ -4,6 +4,9 @@
 <maintainer>
 <email>dev-zero@gentoo.org</email>
 </maintainer>
+<maintainer>
+<email>prometheanfire@gentoo.org</email>
+</maintainer>
 <herd>virtualization</herd>
 <use>
 	<flag name='monitor'>Build the Python and GUI dependent monitor applications</flag>

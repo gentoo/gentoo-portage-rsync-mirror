@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/icinga-web
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/ChangeLog,v 1.13 2013/09/10 15:30:47 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/ChangeLog,v 1.14 2013/09/12 07:49:57 prometheanfire Exp $
+
+*icinga-web-1.9.1-r1 (12 Sep 2013)
+
+  12 Sep 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +icinga-web-1.9.1-r1.ebuild, -icinga-web-1.9.0.ebuild,
+  -icinga-web-1.9.1.ebuild:
+  fix for a parallel make issue
 
 *icinga-web-1.9.1 (10 Sep 2013)
 

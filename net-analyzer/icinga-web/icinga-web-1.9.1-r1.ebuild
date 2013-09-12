@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.9.1.ebuild,v 1.1 2013/09/10 15:30:47 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.9.1-r1.ebuild,v 1.1 2013/09/12 07:49:57 prometheanfire Exp $
 
 EAPI="5"
 
@@ -32,6 +32,7 @@ pkg_setup() {
 src_prepare() {
 	#removed checks for some php stuff since we have these things called use flags
 	sed -i 's/ACICINGA_CHECK_PHP_MODULE/\#ACICINGA_CHECK_PHP_MODULE/g' configure.ac
+	sed -i 's/make\ /make\ \-j1\ /g' lib/Makefile.in
 	autoreconf
 }
 
