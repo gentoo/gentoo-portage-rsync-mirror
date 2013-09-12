@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.958 2013/09/11 08:53:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.959 2013/09/12 11:46:41 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd.eclass:
+  Introduce systemd_install_serviced() to install foo.service.d/00gentoo.conf
+  files.
 
   11 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd.eclass:
   Change @USAGE style.

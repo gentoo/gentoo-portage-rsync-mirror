@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.29 2013/09/11 08:53:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.30 2013/09/12 11:46:41 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -130,6 +130,35 @@ systemd_newunit() {
 	(
 		insinto "$(_systemd_get_unitdir)"
 		newins "${@}"
+	)
+}
+
+# @FUNCTION: systemd_install_serviced
+# @USAGE: <conf-file> [<service.d>]
+# @DESCRIPTION:
+# Install the file <conf-file> as service.d/00gentoo.conf template.
+# The <service.d> argument specifies the configured service name.
+# If not specified, the configuration file name will be used with .conf
+# suffix stripped (e.g. foo.service.conf -> foo.service).
+systemd_install_serviced() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	local src=${1}
+	local service=${2}
+
+	[[ ${src} ]] || die "No file specified"
+
+	if [[ ! ${service} ]]; then
+		[[ ${src} == *.conf ]] || die "Source file needs .conf suffix"
+		service=${src##*/}
+		service=${service%.conf}
+	fi
+	# avoid potentially common mistake
+	[[ ${service} == *.d ]] && die "Service must not have .d suffix"
+
+	(
+		insinto /etc/systemd/system/"${service}".d
+		newins "${src}" 00gentoo.conf
 	)
 }
 

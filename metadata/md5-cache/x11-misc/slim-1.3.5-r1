@@ -11,5 +11,5 @@ RDEPEND=x11-libs/libXmu x11-libs/libX11 x11-libs/libXpm x11-libs/libXft media-li
 REQUIRED_USE=consolekit? ( pam )
 SLOT=0
 SRC_URI=mirror://berlios/slim/slim-1.3.5.tar.gz
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	systemd	ed156cf7b2626085dea455bc623ad2dc	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	63afaaed8aa819fdcb814c7cd39495a2	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=e4b5f0f068d31e498f476750434fdb09
