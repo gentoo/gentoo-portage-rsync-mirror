@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.6.ebuild,v 1.1 2013/08/05 14:46:26 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.6.ebuild,v 1.2 2013/09/12 12:55:03 voyageur Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs user
@@ -22,7 +22,7 @@ RDEPEND="dev-perl/Config-Simple
 	media-fonts/font-cursor-misc
 	media-fonts/font-misc-misc
 	net-misc/nx
-	virtual/ssh
+	net-misc/openssh[-hpn]
 	x11-apps/xauth
 	fuse? ( sys-fs/sshfs-fuse )
 	postgres? ( dev-perl/DBD-Pg )
