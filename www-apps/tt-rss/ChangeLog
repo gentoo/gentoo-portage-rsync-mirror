@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.26 2013/08/08 13:41:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.27 2013/09/12 06:44:24 tomka Exp $
+
+*tt-rss-1.9 (12 Sep 2013)
+
+  12 Sep 2013; Thomas Kahle <tomka@gentoo.org> +files/ttrssd.initd-r2,
+  +tt-rss-1.9.ebuild:
+  bump to 1.9, license update, fix init script (477708)
 
   08 Aug 2013; Markos Chandras <hwoarang@gentoo.org>
   files/postinstall-en-with-daemon.txt, files/postinstall-en.txt:
