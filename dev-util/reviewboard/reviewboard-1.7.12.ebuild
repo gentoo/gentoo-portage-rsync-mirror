@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.12.ebuild,v 1.2 2013/08/01 15:25:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.12.ebuild,v 1.3 2013/09/12 11:14:35 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -22,14 +22,13 @@ RDEPEND=">=dev-python/django-1.4.5[${PYTHON_USEDEP}]
 	<dev-python/django-1.5[${PYTHON_USEDEP}]
 	>=dev-python/django-evolution-0.6.9[${PYTHON_USEDEP}]
 	>=dev-python/django-pipeline-1.2.24[${PYTHON_USEDEP}]
-	<dev-python/django-pipeline-1.3[${PYTHON_USEDEP}]
 	<dev-python/Djblets-0.7.17[${PYTHON_USEDEP}]
 	>=dev-python/pygments-1.5[${PYTHON_USEDEP}]
 	dev-python/docutils[${PYTHON_USEDEP}]
 	>=dev-python/markdown-2.2.1[${PYTHON_USEDEP}]
 	>=dev-python/paramiko-1.9.0[${PYTHON_USEDEP}]
 	>=dev-python/mimeparse-0.1.3[${PYTHON_USEDEP}]
-	=dev-python/python-dateutil-1.5
+	>=dev-python/python-dateutil-1.5[${PYTHON_USEDEP}]
 	dev-python/python-memcached[${PYTHON_USEDEP}]
 	>=dev-python/pytz-2012h[${PYTHON_USEDEP}]
 	dev-python/recaptcha-client[${PYTHON_USEDEP}]"
