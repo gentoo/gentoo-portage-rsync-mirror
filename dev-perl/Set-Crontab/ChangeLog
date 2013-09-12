@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Set-Crontab
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-Crontab/ChangeLog,v 1.1 2013/09/12 14:18:45 dev-zero Exp $
+
+*Set-Crontab-1.30.0 (12 Sep 2013)
+
+  12 Sep 2013; Tiziano Müller <dev-zero@gentoo.org> +Set-Crontab-1.30.0.ebuild,
+  +metadata.xml:
+  Initial commit, required for dev-perl/Schedule-Cron-Events
