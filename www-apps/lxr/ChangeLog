@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/lxr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.20 2012/09/18 04:17:13 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/ChangeLog,v 1.21 2013/09/12 21:44:22 creffett Exp $
+
+*lxr-0.9.8 (12 Sep 2013)
+
+  12 Sep 2013; Chris Reffett <creffett@gentoo.org>
+  +files/lxr-0.9.8-initdb-mysql.patch, +lxr-0.9.8.ebuild,
+  -files/initdb-mysql.patch, -lxr-0.9.5.ebuild:
+  Security bump wrt bug 325575.
 
   18 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -102,4 +109,3 @@
   23 Apr 2004; Stuart Herbert <stuart@gentoo.org> lxr-0.3.1.ebuild,
   metadata.xml:
   Initial import; thanks to Josh Glover <gentoo@jmglov.net>; see bug #48459
-

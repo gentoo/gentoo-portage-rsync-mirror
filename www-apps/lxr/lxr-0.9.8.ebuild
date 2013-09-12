@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.5.ebuild,v 1.7 2010/03/05 07:37:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/lxr/lxr-0.9.8.ebuild,v 1.1 2013/09/12 21:44:22 creffett Exp $
 
 inherit perl-module webapp multilib eutils depend.apache
 
@@ -32,7 +32,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/initdb-mysql.patch
+	epatch "${FILESDIR}/${PN}-0.9.8-initdb-mysql.patch"
 
 	sed -i \
 		-e 's|/usr/local/bin/swish-e|/usr/bin/swish-e|' \
@@ -42,7 +42,7 @@ src_unpack() {
 		templates/lxr.conf
 	sed -i \
 		-e 's|Apache::Registry|ModPerl::PerlRun|' \
-		.htaccess
+		.htaccess-apache1
 	sed -i \
 		-e 's|require Local;|require LXR::Local;|' \
 		-e 's|use Local;|use LXR::Local;|' \
@@ -69,7 +69,7 @@ src_install() {
 	insinto "${MY_HTDOCSDIR}"
 	doins .htaccess* templates/* || die
 
-	webapp_configfile "${MY_HTDOCSDIR}"/lxr.conf "${MY_HTDOCSDIR}"/.htaccess
+	webapp_configfile "${MY_HTDOCSDIR}"/lxr.conf "${MY_HTDOCSDIR}"/.htaccess-apache1
 	webapp_sqlscript mysql initdb-mysql
 	webapp_sqlscript postgresql initdb-postgres
 	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
