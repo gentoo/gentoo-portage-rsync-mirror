@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.7 2013/09/11 23:21:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.8 2013/09/12 10:03:03 hasufell Exp $
 
 EAPI=5
 
@@ -160,6 +160,9 @@ pkg_postinst() {
 	elog "Also, some internal hotkeys such as \"Ctrl+l\" (clear screen)"
 	elog "have been removed, but you can add them yourself via:"
 	elog "  Settings -> Keyboard Shortcuts"
+	einfo
+	elog "optional dependencies:"
+	elog "  x11-plugins/hexchat-javascript (javascript support)"
 	einfo
 }
 
