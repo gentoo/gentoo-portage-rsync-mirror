@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.3.ebuild,v 1.4 2013/08/28 11:14:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja-ide/ninja-ide-2.3.ebuild,v 1.5 2013/09/12 20:59:26 mgorny Exp $
 
 # XXX: tests
 
@@ -22,8 +22,7 @@ IUSE=""
 RDEPEND="
 	dev-python/PyQt4[X,declarative,webkit,${PYTHON_USEDEP}]
 	dev-python/pyinotify[${PYTHON_USEDEP}]
-	virtual/python-argparse[${PYTHON_USEDEP}]
-	virtual/python-json[${PYTHON_USEDEP}]"
+	virtual/python-argparse[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 PATCHES=(

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/logbook
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.11 2013/09/05 18:46:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.12 2013/09/12 20:59:31 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> logbook-0.4.1.ebuild,
+  logbook-0.4.2.ebuild, logbook-0.5.0.ebuild:
+  Remove dep on virtual/python-json. JSON is now built-in in all supported
+  implementations.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> logbook-0.4.1.ebuild,
   logbook-0.4.2.ebuild:

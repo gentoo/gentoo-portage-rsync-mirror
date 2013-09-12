@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=dev-libs/openssl virtual/python-json
+DEPEND=dev-libs/openssl
 DESCRIPTION=Evented IO for V8 Javascript
 EAPI=5
 HOMEPAGE=http://nodejs.org/
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://nodejs.org/dist/v0.10.18/node-v0.10.18.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	python-any-r1	815e8fef66b552e35e4a8cc95febd22e	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=5693e9662a3a0c5feb30c9d7da488ba3
+_md5_=47f0e98c1d27939c6d1f53977db8a80a

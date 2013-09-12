@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/couchdb-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.26 2013/09/05 18:47:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.27 2013/09/12 20:59:38 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> couchdb-python-0.8-r1.ebuild,
+  couchdb-python-0.9.ebuild:
+  Remove dep on virtual/python-json. JSON is now built-in in all supported
+  implementations.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> couchdb-python-0.8-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
