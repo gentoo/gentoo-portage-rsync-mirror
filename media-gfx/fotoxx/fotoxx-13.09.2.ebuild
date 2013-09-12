@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-13.05.ebuild,v 1.1 2013/05/03 03:06:02 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-13.09.2.ebuild,v 1.1 2013/09/12 15:52:59 grozin Exp $
 EAPI=4
 inherit eutils toolchain-funcs fdo-mime
 

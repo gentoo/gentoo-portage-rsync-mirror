@@ -1,6 +1,13 @@
 # ChangeLog for www-client/surf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.28 2013/09/12 15:01:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/ChangeLog,v 1.29 2013/09/12 15:33:09 jer Exp $
+
+*surf-9999 (12 Sep 2013)
+
+  12 Sep 2013; Jeroen Roovers <jer@gentoo.org> surf-0.6-r1.ebuild,
+  +surf-9999.ebuild:
+  Add live ebuild. Fix elog messages about runtime dependencies (bug #481700 by
+  Ari Malinen).
 
 *surf-0.6-r1 (12 Sep 2013)
 

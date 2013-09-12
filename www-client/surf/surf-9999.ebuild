@@ -1,18 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.6-r1.ebuild,v 1.2 2013/09/12 15:33:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-9999.ebuild,v 1.1 2013/09/12 15:33:09 jer Exp $
 
 EAPI=5
-inherit eutils savedconfig toolchain-funcs
+inherit eutils git-2 savedconfig toolchain-funcs
 
 DESCRIPTION="a simple web browser based on WebKit/GTK+"
 HOMEPAGE="http://surf.suckless.org/"
-SRC_URI="http://dl.suckless.org/${PN}/${P}.tar.gz"
+EGIT_REPO_URI="git://git.suckless.org/surf"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE=""
+KEYWORDS=""
 
 DEPEND="
 	dev-libs/glib
@@ -36,8 +35,8 @@ pkg_setup() {
 		elog "installed to support the download function."
 		elog "Without those, downloads will fail (gracefully)."
 		elog "You can fix this by:"
-		elog " 1) Installing these packages, or"
-		elog " 2) Setting USE=savedconfig and changing config.h accordingly."
+		elog "1) Installing these packages, or"
+		elog "2) Setting USE=savedconfig and changing config.h accordingly."
 	fi
 }
 
@@ -58,9 +57,4 @@ src_prepare() {
 src_install() {
 	emake DESTDIR="${D}" PREFIX="/usr" install
 	save_config config.h
-}
-
-pkg_postinst() {
-	ewarn "Please correct the permissions of your \$HOME/.surf/ directory"
-	ewarn "and its contents to no longer be world readable (see bug #404983)"
 }
