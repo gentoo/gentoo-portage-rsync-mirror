@@ -1,25 +1,28 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5_p20130525.ebuild,v 1.5 2013/07/11 20:19:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.6.ebuild,v 1.1 2013/09/11 23:23:49 hasufell Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_6 python2_7 )
-inherit autotools eutils gnome2-utils mono-env multilib python-single-r1
+PYTHON_COMPAT=( python2_7 python3_3 )
+inherit eutils fdo-mime gnome2-utils mono-env multilib python-single-r1
 
 DESCRIPTION="Graphical IRC client based on XChat"
-SRC_URI="https://dev.gentoo.org/~hasufell/distfiles/${P}.tar.xz"
 HOMEPAGE="http://hexchat.github.io/"
+SRC_URI="http://dl.hexchat.org/hexchat/hexchat-2.9.6.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="dbus fastscroll +gtk ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
-REQUIRED_USE="plugin-checksum? ( plugins )
+IUSE="dbus fastscroll +gtk gtkspell ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python sexy spell ssl theme-manager"
+REQUIRED_USE="gtkspell? ( spell )
+	plugin-checksum? ( plugins )
 	plugin-doat? ( plugins )
 	plugin-fishlim? ( plugins )
 	plugin-sysinfo? ( plugins )
-	python? ( ${PYTHON_REQUIRED_USE} )"
+	python? ( ${PYTHON_REQUIRED_USE} )
+	sexy? ( spell )
+	?? ( gtkspell sexy )"
 
 RDEPEND="dev-libs/glib:2
 	dbus? ( >=dev-libs/dbus-glib-0.98 )
@@ -35,42 +38,44 @@ RDEPEND="dev-libs/glib:2
 	python? ( ${PYTHON_DEPS} )
 	spell? (
 		app-text/enchant
-		dev-libs/libxml2
+		gtkspell? ( app-text/gtkspell:2 )
+		sexy? ( x11-libs/libsexy )
+		!gtkspell? ( !sexy? ( dev-libs/libxml2 ) )
 	)
-	ssl? ( >=dev-libs/openssl-0.9.8u )
+	ssl? ( dev-libs/openssl:0 )
 	theme-manager? ( dev-lang/mono )"
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	theme-manager? ( dev-util/monodevelop )"
 
-DOCS=""
-
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
-	use theme-manager && mono-env_pkg_setup
+	if use theme-manager ; then
+		mono-env_pkg_setup
+		export XDG_CACHE_HOME="${T}/.cache"
+	fi
 }
 
 src_prepare() {
-	mkdir m4 || die
-
-	epatch \
-		"${FILESDIR}"/${PN}-2.9.1-input-box.patch \
-		"${FILESDIR}"/${PN}-2.9.5-cflags.patch \
-		"${FILESDIR}"/${PN}-2.9.5-gettextize.patch
-	epatch -p1 \
-		"${FILESDIR}"/${PN}-2.9.5-autoconf-missing-macros.patch
-
 	epatch_user
-
-	cp $(type -p gettextize) "${T}"/ || die
-	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize" || die
-	einfo "Running gettextize -f --no-changelog..."
-	"${T}"/gettextize -f --no-changelog > /dev/null || die "gettexize failed"
-	AT_M4DIR="m4" eautoreconf
 }
 
 src_configure() {
+	local myspellconf
+	if use spell ; then
+		if use gtkspell ; then
+			myspellconf="--enable-spell=gtkspell"
+		elif use sexy ; then
+			myspellconf="--enable-spell=libsexy"
+		else
+			myspellconf="--enable-spell=static"
+		fi
+	else
+		myspellconf="--disable-spell"
+	fi
+
 	econf \
 		$(use_enable nls) \
 		$(use_enable libproxy socks) \
@@ -90,28 +95,21 @@ src_configure() {
 		$(use_enable libnotify) \
 		$(use_enable libcanberra) \
 		--enable-shm \
-		$(use_enable spell spell static) \
+		${myspellconf} \
 		$(use_enable ntlm) \
-		$(use_enable libproxy)
-}
-
-src_compile() {
-	default
-	if use theme-manager ; then
-		export XDG_CACHE_HOME="${T}/.cache"
-		cd src/htm || die
-		mdtool --verbose build htm-mono.csproj || die
-	fi
+		$(use_enable libproxy) \
+		--enable-minimal-flags \
+		$(use_with theme-manager)
 }
 
 src_install() {
-	emake DESTDIR="${D}" UPDATE_ICON_CACHE=true install
+	emake DESTDIR="${D}" \
+		UPDATE_ICON_CACHE=true \
+		UPDATE_MIME_DATABASE=true \
+		UPDATE_DESKTOP_DATABASE=true \
+		install
 	dodoc share/doc/{readme,hacking}.md
 	use plugin-fishlim && dodoc share/doc/fishlim.md
-	if use theme-manager ; then
-		dobin src/htm/thememan.exe
-		make_wrapper thememan "mono /usr/bin/thememan.exe"
-	fi
 	prune_libtool_files --all
 }
 
@@ -133,6 +131,8 @@ pkg_postinst() {
 	fi
 
 	if use theme-manager ; then
+		fdo-mime_desktop_database_update
+		fdo-mime_mime_database_update
 		elog "Themes are available at:"
 		elog "  http://hexchat.org/themes.html"
 		elog
@@ -153,5 +153,10 @@ pkg_postinst() {
 pkg_postrm() {
 	if use gtk ; then
 		gnome2_icon_cache_update
+	fi
+
+	if use theme-manager ; then
+		fdo-mime_desktop_database_update
+		fdo-mime_mime_database_update
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5-r1.ebuild,v 1.12 2013/09/05 19:44:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5-r1.ebuild,v 1.13 2013/09/11 23:21:02 hasufell Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ RDEPEND="dev-libs/glib:2
 		app-text/enchant
 		dev-libs/libxml2
 	)
-	ssl? ( >=dev-libs/openssl-0.9.8u )
+	ssl? ( dev-libs/openssl:0 )
 	theme-manager? ( dev-lang/mono )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

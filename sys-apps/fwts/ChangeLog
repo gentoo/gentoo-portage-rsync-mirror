@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/fwts
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwts/ChangeLog,v 1.1 2013/09/11 23:06:52 mrueg Exp $
+
+*fwts-13.09.00 (11 Sep 2013)
+
+  11 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +fwts-13.09.00.ebuild,
+  +metadata.xml:
+  Initial version. Fixes bug #410595.
