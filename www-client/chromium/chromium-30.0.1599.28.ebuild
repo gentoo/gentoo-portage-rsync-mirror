@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-30.0.1599.15.ebuild,v 1.1 2013/08/23 02:48:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-30.0.1599.28.ebuild,v 1.1 2013/09/12 16:41:13 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,7 +20,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bindist cups gnome gnome-keyring gps kerberos neon pulseaudio selinux +system-ffmpeg system-sqlite tcmalloc"
+IUSE="bindist cups gnome gnome-keyring gps kerberos neon pulseaudio selinux system-sqlite tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -63,7 +63,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
-	system-ffmpeg? ( >=media-video/ffmpeg-2.0.1:0=[opus] )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
 	sys-libs/zlib:=[minizip]
@@ -113,10 +112,9 @@ pkg_setup() {
 
 	chromium_suid_sandbox_check_kernel_config
 
-	if use bindist && ! use system-ffmpeg; then
+	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."
-	fi
-	if ! use bindist; then
+	else
 		elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
 	fi
 }
@@ -131,7 +129,6 @@ src_prepare() {
 	# fi
 
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-ffmpeg-r7.patch"
 	epatch "${FILESDIR}/${PN}-system-ply-r0.patch"
 
 	epatch_user
@@ -244,8 +241,7 @@ src_configure() {
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
-		-Duse_system_zlib=1
-		$(gyp_use system-ffmpeg use_system_ffmpeg)"
+		-Duse_system_zlib=1"
 
 	# TODO: patch gyp so that this arm conditional is not needed.
 	if ! use arm; then
@@ -302,7 +298,7 @@ src_configure() {
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
 
-	if ! use bindist && ! use system-ffmpeg; then
+	if ! use bindist; then
 		# Enable H.264 support in bundled ffmpeg.
 		myconf+=" -Dffmpeg_branding=Chrome"
 	fi
@@ -534,9 +530,7 @@ src_install() {
 	newman out/Release/chrome.1 chromium${CHROMIUM_SUFFIX}.1 || die
 	newman out/Release/chrome.1 chromium-browser${CHROMIUM_SUFFIX}.1 || die
 
-	if ! use system-ffmpeg; then
-		doexe out/Release/libffmpegsumo.so || die
-	fi
+	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icons and desktop entry.
 	local branding size
