@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.193 2013/08/09 12:28:09 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.194 2013/09/12 15:25:44 grozin Exp $
+
+*sbcl-1.1.11 (12 Sep 2013)
+
+  12 Sep 2013; Andrey Grozin <grozin@gentoo.org> -sbcl-1.1.6-r4.ebuild,
+  -sbcl-1.1.7.ebuild, -sbcl-1.1.8.ebuild, -sbcl-1.1.9.ebuild,
+  +sbcl-1.1.11.ebuild, -files/1.1.6-fix-svref.patch:
+  Version bump, now texinfo-5 compatible (closing #467148). Cleaning old.
 
 *sbcl-1.1.10 (09 Aug 2013)
 

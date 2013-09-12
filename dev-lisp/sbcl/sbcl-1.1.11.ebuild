@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.9.ebuild,v 1.1 2013/07/24 13:47:55 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.11.ebuild,v 1.1 2013/09/12 15:25:44 grozin Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
 
 #same order as http://www.sbcl.org/platform-table.html
 BV_X86=1.0.58
-BV_AMD64=1.1.9
+BV_AMD64=1.1.11
 BV_PPC=1.0.28
 BV_SPARC=1.0.28
 BV_ALPHA=1.0.28
@@ -29,7 +29,7 @@ IUSE="debug doc source +threads +unicode zlib"
 
 CDEPEND=">=dev-lisp/asdf-2.33-r3:="
 DEPEND="${CDEPEND}
-		doc? ( <sys-apps/texinfo-5.0 >=media-gfx/graphviz-2.26.0 )"
+		doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.26.0 )"
 RDEPEND="${CDEPEND}
 		 elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-libs/glibc-2.6[nptl] >=sys-libs/glibc-2.6 ) )"
 
