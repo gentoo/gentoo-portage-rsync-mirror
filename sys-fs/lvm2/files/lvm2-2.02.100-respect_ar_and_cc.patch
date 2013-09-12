@@ -1,0 +1,20 @@
+GNU make always defaults CC to "cc", so using "?=" with the CC variable
+will never override the internal make value.  since @CC@ comes from the
+configure script, and that respects the $CC env var, don't bother trying
+to handle it in make too.  it's not like we do this with any other build
+variable after all.
+
+Ditto for AR as per http://bugs.gentoo.org/444082
+
+--- a/make.tmpl.in
++++ b/make.tmpl.in
+@@ -17,7 +17,8 @@
+ 
+ @SET_MAKE@
+ 
+-CC ?= @CC@
++AR = @GENTOO_AR@
++CC = @CC@
+ RANLIB = @RANLIB@
+ INSTALL = @INSTALL@
+ MKDIR_P = @MKDIR_P@

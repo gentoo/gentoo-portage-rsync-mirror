@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.7.ebuild,v 1.1 2013/08/19 18:54:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.7.ebuild,v 1.2 2013/09/12 21:06:39 mr_bones_ Exp $
 
 EAPI=5
 inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
@@ -64,6 +64,16 @@ src_prepare() {
 	# bug #472994
 	mv icons/wesnoth-icon-Mac.png icons/wesnoth-icon.png || die
 	mv icons/map-editor-icon-Mac.png icons/wesnoth_editor-icon.png || die
+
+	# respect LINGUAS (bug #483316)
+	if [[ ${LINGUAS+set} ]] ; then
+		local langs
+		for lang in $(cat po/LINGUAS)
+		do
+			has $lang $LINGUAS && langs+="$lang "
+		done 
+		echo "$langs" > po/LINGUAS || die
+	fi
 }
 
 src_configure() {
@@ -99,6 +109,7 @@ src_configure() {
 		"-DBINDIR=${GAMES_BINDIR}"
 		"-DICONDIR=/usr/share/pixmaps"
 		"-DDESKTOPDIR=/usr/share/applications"
+		"-DLOCALEDIR=/usr/share/locale"
 		"-DMANDIR=/usr/share/man"
 		"-DDOCDIR=/usr/share/doc/${PF}"
 		)

@@ -1,6 +1,21 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.315 2013/08/14 16:17:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.316 2013/09/12 21:08:43 ssuominen Exp $
+
+*lvm2-2.02.100 (12 Sep 2013)
+
+  12 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> +lvm2-2.02.100.ebuild,
+  +files/lvm2-2.02.100-ignored_loop.patch, +files/lvm2-2.02.100-lvm_path.patch,
+  +files/lvm2-2.02.100-pvmove_segfault.patch,
+  +files/lvm2-2.02.100-respect_ar_and_cc.patch,
+  +files/lvm2-2.02.100-selinux_and_udev_static.patch,
+  +files/lvm2-2.02.100-vg_free_segfault.patch:
+  Version bump wrt #481154 by Alexander Tsoy. Respect CFLAGS wrt #480212 by
+  removing forced -O2 optimization flag. Backport two fixes from upstream
+  preventing segmentation fault. Backport fix from upstream for ignored loop
+  devices. Replace hardcoding sed for systemd activation generator with
+  upstream patch. Refresh -respect-cc.patch, -selinux-static.patch,
+  -udev-static.patch since they didn't apply anymore.
 
   14 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
   -files/lvm2-2.02.95-udev185.patch, -lvm2-2.02.98.ebuild,

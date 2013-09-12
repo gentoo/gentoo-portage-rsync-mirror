@@ -1,0 +1,31 @@
+http://bugs.gentoo.org/479626
+
+From 8cbbe851a80e8d99dc886ce9b44834137731d8ce Mon Sep 17 00:00:00 2001
+From: Michael Stapelberg <stapelberg@debian.org>
+Date: Thu, 15 Aug 2013 07:57:30 +0000
+Subject: systemd: use LVM_PATH instead of hardcoded value in activation generator
+
+---
+diff --git a/scripts/lvm2_activation_generator_systemd_red_hat.c b/scripts/lvm2_activation_generator_systemd_red_hat.c
+index 17bc71a..9d4b581 100644
+--- a/scripts/lvm2_activation_generator_systemd_red_hat.c
++++ b/scripts/lvm2_activation_generator_systemd_red_hat.c
+@@ -22,6 +22,7 @@
+ #include <fcntl.h>
+ #include <limits.h>		/* For PATH_MAX for musl libc */
+ #include "lvm2app.h"
++#include "configure.h"		/* for LVM_PATH */
+ 
+ #define KMSG_DEV_PATH        "/dev/kmsg"
+ #define LVM_CONF_USE_LVMETAD "global/use_lvmetad"
+@@ -150,7 +151,7 @@ static int generate_unit(const char *dir, int unit)
+ 		      "[Service]\n", f);
+ 	}
+ 
+-	fputs("ExecStart=/usr/sbin/lvm vgchange -aay --sysinit\n"
++	fputs("ExecStart=" LVM_PATH " vgchange -aay --sysinit\n"
+ 	      "Type=oneshot\n", f);
+ 
+ 	if (fclose(f) < 0) {
+--
+cgit v0.9.2

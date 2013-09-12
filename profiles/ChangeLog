@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8232 2013/09/11 20:17:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8233 2013/09/12 21:06:01 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Lastrite virtual/python-json -- JSON is now built-in in all supported
+  Pythons.
 
   11 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Unmask buildbot-0.8.8 and buildbot-slave-0.8.8
