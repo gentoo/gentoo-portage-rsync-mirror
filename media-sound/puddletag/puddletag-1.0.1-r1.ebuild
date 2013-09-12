@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-1.0.1-r1.ebuild,v 1.6 2013/06/09 18:39:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-1.0.1-r1.ebuild,v 1.7 2013/09/12 22:37:42 mgorny Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="acoustid cover musicbrainz quodlibet"
 
 DEPEND=""
 RDEPEND=">=dev-python/PyQt4-4.9.6-r2[${PYTHON_USEDEP},svg]
-	virtual/pyparsing[${PYTHON_USEDEP}]
+	dev-python/pyparsing[${PYTHON_USEDEP}]
 	>=media-libs/mutagen-1.21[${PYTHON_USEDEP}]
 	>=dev-python/configobj-4.7.2-r1[${PYTHON_USEDEP}]
 	acoustid? ( >=media-libs/chromaprint-0.6 )

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/puddletag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.31 2013/06/09 18:39:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.32 2013/09/12 22:37:42 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> puddletag-1.0.1-r1.ebuild:
+  Replace virtual/pyparsing dep with dev-python/pyparsing. The split versions
+  were removed and all in-tree versions support all impls now.
 
   09 Jun 2013; Mike Gilbert <floppym@gentoo.org> puddletag-1.0.1-r1.ebuild:
   Depend on virtual/python-imaging.

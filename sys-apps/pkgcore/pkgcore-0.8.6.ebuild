@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.6.ebuild,v 1.2 2013/01/01 14:05:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.8.6.ebuild,v 1.3 2013/09/12 22:37:09 mgorny Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/python-2.5
 	>=dev-python/snakeoil-0.5.2
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
-	doc? ( dev-python/sphinx virtual/pyparsing )"
+	doc? ( dev-python/sphinx dev-python/pyparsing )"
 
 DOCS="AUTHORS NEWS"
 

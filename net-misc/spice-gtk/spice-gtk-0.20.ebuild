@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.20.ebuild,v 1.4 2013/08/08 09:41:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.20.ebuild,v 1.5 2013/09/12 22:33:54 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -61,7 +61,7 @@ RDEPEND="${PYTHON_DEPS}
 		)"
 DEPEND="${RDEPEND}
 	dev-lang/python
-	virtual/pyparsing
+	dev-python/pyparsing
 	dev-perl/Text-CSV
 	>=dev-util/intltool-0.40.0
 	>=sys-devel/gettext-0.17

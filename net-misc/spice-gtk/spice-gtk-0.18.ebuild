@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.18.ebuild,v 1.4 2013/05/12 12:14:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.18.ebuild,v 1.5 2013/09/12 22:33:54 mgorny Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -57,7 +57,7 @@ RDEPEND="pulseaudio? ( media-sound/pulseaudio[glib] )
 DEPEND="${RDEPEND}
 	>=app-emulation/spice-protocol-0.10.1
 	dev-lang/python
-	virtual/pyparsing
+	dev-python/pyparsing
 	dev-perl/Text-CSV
 	>=dev-util/intltool-0.40.0
 	>=sys-devel/gettext-0.17

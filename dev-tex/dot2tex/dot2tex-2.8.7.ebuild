@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.8.7.ebuild,v 1.20 2012/12/31 13:05:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/dot2tex-2.8.7.ebuild,v 1.21 2013/09/12 22:33:06 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -19,7 +19,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd 
 IUSE="doc examples"
 
 DEPEND=""
-RDEPEND="virtual/pyparsing
+RDEPEND="dev-python/pyparsing
 	media-gfx/pydot
 	media-gfx/graphviz"
 

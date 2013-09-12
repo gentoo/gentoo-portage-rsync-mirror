@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.169 2013/06/17 18:48:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.170 2013/09/12 22:37:09 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> pkgcore-0.8.6.ebuild,
+  pkgcore-9999.ebuild:
+  Replace virtual/pyparsing dep with dev-python/pyparsing. The split versions
+  were removed and all in-tree versions support all impls now.
 
   17 Jun 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Add myself as a maintainer.
