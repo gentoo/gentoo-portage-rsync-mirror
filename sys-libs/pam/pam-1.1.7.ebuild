@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.6-r4.ebuild,v 1.1 2013/02/28 05:59:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.7.ebuild,v 1.1 2013/09/12 08:34:08 flameeyes Exp $
 
 EAPI=5
 
-inherit libtool multilib eutils pam toolchain-funcs flag-o-matic db-use autotools autotools-utils
+inherit libtool multilib eutils pam toolchain-funcs flag-o-matic db-use autotools-utils
 
 MY_PN="Linux-PAM"
 MY_P="${MY_PN}-${PV}"
@@ -86,10 +86,6 @@ pkg_pretend() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${MY_P}-destdir.patch
-	epatch "${FILESDIR}"/${MY_P}+glibc-2.16.patch
-
-	eautoreconf
 	elibtoolize
 }
 
