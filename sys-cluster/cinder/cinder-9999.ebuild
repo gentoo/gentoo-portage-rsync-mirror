@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-9999.ebuild,v 1.2 2013/09/05 19:41:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-9999.ebuild,v 1.3 2013/09/12 05:25:33 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,8 @@ EGIT_REPO_URI="https://github.com/openstack/cinder.git"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+api +scheduler +volume"
+IUSE="+api +scheduler +volume ldap mysql postgres sqlite"
+REQUIRED_USE="|| ( ldap mysql postgres sqlite )"
 
 #sudo is a build dep because I want the sudoers.d directory to exist, lazy.
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
@@ -37,11 +38,15 @@ RDEPEND=">=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-0.7.8
-		<=dev-python/sqlalchemy-0.7.99
-		>=dev-python/sqlalchemy-migrate-0.7.2
-		>=dev-python/stevedore-0.10
-		>=dev-python/suds-0.4
+		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
+	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
+		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
+	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
+		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
+	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
+		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
+		>=dev-python/stevedore-0.10[${PYTHON_USEDEP}]
+		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
 		>=dev-python/paramiko-1.8.0[${PYTHON_USEDEP}]
 		>=dev-python/Babel-0.9.6[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
