@@ -3466,6 +3466,7 @@ media-sound/mp3splt-gtk:gtk3 - Link against x11-libs/gtk+:3 instead of x11-libs/
 media-sound/mpd:cdio - Use libcdio for ISO9660 parsing support
 media-sound/mpd:cue - Support CUE Sheet Parser Library
 media-sound/mpd:curl - Support for web stream listening
+media-sound/mpd:faad - Use external faad library for AAC decoding
 media-sound/mpd:fifo - Support writing audio to a FIFO
 media-sound/mpd:fluidsynth - Enables Fluidsynth MIDI software synthesis
 media-sound/mpd:gme - Enables support for media-libs/game-music-emu for playing various video game music formats.

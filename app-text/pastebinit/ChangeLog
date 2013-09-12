@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pastebinit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pastebinit/ChangeLog,v 1.3 2013/05/23 11:35:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pastebinit/ChangeLog,v 1.4 2013/09/12 12:15:13 angelos Exp $
+
+*pastebinit-1.3.1-r2 (12 Sep 2013)
+
+  12 Sep 2013;  <christoph@gentoo.org> +pastebinit-1.3.1-r2.ebuild:
+  Respect LINGUAS (bug #471072)
 
   23 May 2013; Sergey Popov <pinkbyte@gentoo.org> pastebinit-1.3.1-r1.ebuild:
   Stable on amd64 and x86, wrt bug #469466. Fix minor QA issue with quoting
