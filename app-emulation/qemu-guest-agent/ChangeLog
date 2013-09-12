@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/qemu-guest-agent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.14 2013/09/05 18:20:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/ChangeLog,v 1.15 2013/09/12 16:18:31 dev-zero Exp $
+
+*qemu-guest-agent-1.5.2-r2 (12 Sep 2013)
+*qemu-guest-agent-1.6.0-r1 (12 Sep 2013)
+
+  12 Sep 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +qemu-guest-agent-1.5.2-r2.ebuild, +qemu-guest-agent-1.6.0-r1.ebuild,
+  -qemu-guest-agent-1.5.2-r1.ebuild, -qemu-guest-agent-1.6.0.ebuild:
+  Add implicit dependency on sysvinit >=2.88-r5 since qemu-ga calls shutdown
+  with '-P'/'-H' but without '-h' and this got added in 2.88-r5
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org>
   qemu-guest-agent-1.5.2-r1.ebuild, qemu-guest-agent-1.6.0.ebuild:

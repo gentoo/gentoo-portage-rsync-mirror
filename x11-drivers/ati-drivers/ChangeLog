@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.338 2013/08/24 08:06:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.339 2013/09/12 16:15:36 chithanh Exp $
+
+  12 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/fgl_glxgears-do-not-include-glATI.patch, ati-drivers-13.8_beta2.ebuild:
+  Fix bug #483400, import of Emil Karlson's ebuild from the x11 overlay.
 
   24 Aug 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/ati-drivers-13.8-beta-include-seq_file.patch,

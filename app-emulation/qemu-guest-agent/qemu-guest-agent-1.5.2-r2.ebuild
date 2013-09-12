@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.6.0.ebuild,v 1.2 2013/09/05 18:20:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-guest-agent/qemu-guest-agent-1.5.2-r2.ebuild,v 1.1 2013/09/12 16:18:31 dev-zero Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils systemd udev python-r1
 
-BACKPORTS=49bdd50f
+BACKPORTS=e26b4ba6
 MY_PN="qemu"
 MY_P="${MY_PN}-${PV}"
 
@@ -32,7 +32,8 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.22
-	!<app-emulation/qemu-1.1.1-r1"
+	!<app-emulation/qemu-1.1.1-r1
+	!<sys-apps/sysvinit-2.88-r5"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}"
 
@@ -89,8 +90,4 @@ src_install() {
 pkg_postinst() {
 	elog "You should add 'qemu-guest-agent' to the default runlevel."
 	elog "e.g. rc-update add qemu-guest-agent default"
-
-	if has_version '<sys-apps/sysvinit-2.88-r5'; then
-		ewarn "The guest shutdown command will not work with <=sysvinit-2.88-r4"
-	fi
 }

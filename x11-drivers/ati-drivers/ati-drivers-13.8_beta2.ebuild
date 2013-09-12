@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.8_beta2.ebuild,v 1.1 2013/08/23 18:15:21 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.8_beta2.ebuild,v 1.2 2013/09/12 16:15:36 chithanh Exp $
 
 EAPI=5
 
@@ -252,6 +252,10 @@ src_unpack() {
 	mkdir xvba_sdk
 	cd xvba_sdk
 	unpack ${XVBA_SDK_DISTFILE}
+
+	mkdir -p "${WORKDIR}/extra" || die "mkdir extra failed"
+	cd "${WORKDIR}/extra"
+	tar -xf "../${FOLDER_PREFIX}usr/src/ati/fglrx_sample_source.tgz"
 }
 
 src_prepare() {
@@ -303,6 +307,9 @@ src_prepare() {
 	epatch "${FILESDIR}/check-for-iommu-only-if-iommu-is-supported.patch"
 	epatch "${FILESDIR}/ati-drivers-13.8-proc-permissions.diff"
 
+	# Fix #483400
+	epatch "${FILESDIR}/fgl_glxgears-do-not-include-glATI.patch"
+
 	# Compile fix, https://bugs.gentoo.org/show_bug.cgi?id=454870
 	use pax_kernel && epatch "${FILESDIR}/const-notifier-block.patch"
 
@@ -321,11 +328,6 @@ src_prepare() {
 	sed -i -e 's/__SMP__/CONFIG_SMP/' *.c *h || die "SMP sed failed"
 	sed -i -e 's/ifdef MODVERSIONS/ifdef CONFIG_MODVERSIONS/' *.c *.h \
 		|| die "MODVERSIONS sed failed"
-	cd "${S}"
-
-	mkdir extra || die "mkdir extra failed"
-	cd extra
-	unpack ./../${FOLDER_PREFIX}usr/src/ati/fglrx_sample_source.tgz
 }
 
 src_compile() {
