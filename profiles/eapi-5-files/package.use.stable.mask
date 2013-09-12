@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.22 2013/09/08 17:15:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.23 2013/09/12 18:07:19 cardoe Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Doug Goldstein <cardoe@gentoo.org> (12 Sep 2013)
+# Waiting on glusterfs maintainers in bug #484016
+app-emulation/qemu glusterfs
 
 # Pacho Ramos <pacho@gentoo.org> (07 Sep 2013)
 # It requires newer emul sets to be stabilized (#477182#c5)
