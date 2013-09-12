@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/feedgenerator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/feedgenerator/ChangeLog,v 1.5 2013/09/05 18:46:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/feedgenerator/ChangeLog,v 1.6 2013/09/12 07:03:17 patrick Exp $
+
+*feedgenerator-1.7 (12 Sep 2013)
+
+  12 Sep 2013; Patrick Lauer <patrick@gentoo.org> +feedgenerator-1.7.ebuild:
+  Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> feedgenerator-1.5.ebuild,
   feedgenerator-1.6.ebuild:
