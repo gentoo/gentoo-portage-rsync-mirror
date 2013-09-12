@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/hexchat-javascript-0.3.ebuild,v 1.1 2013/09/12 10:00:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/hexchat-javascript/hexchat-javascript-0.3.ebuild,v 1.2 2013/09/12 10:34:25 hasufell Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if [[ ${MERGE_TYPE} != binary ]]; then
-		tc-export CXX
+		tc-export CXX PKG_CONFIG
 	fi
 }
 
