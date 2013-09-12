@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.24 2013/09/05 13:56:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.25 2013/09/12 17:21:03 ago Exp $
+
+  12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tmail-1.2.7.1-r3.ebuild:
+  Stable for ppc, wrt bug #483704
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tmail-1.2.7.1-r3.ebuild:
   Stable for ppc64, wrt bug #483704

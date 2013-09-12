@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.19 2013/08/07 16:37:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.20 2013/09/12 17:31:11 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -110,7 +110,7 @@ fi
 #
 # Example value:
 # @CODE
-# dev-python/python-exec
+# dev-python/python-exec:0
 # python_single_target_python2_6? ( dev-lang/python:2.6[gdbm] )
 # python_single_target_python2_7? ( dev-lang/python:2.7[gdbm] )
 # @CODE
@@ -193,7 +193,7 @@ _python_single_set_globals() {
 	# but no point in making this overcomplex, BDEP doesn't hurt anyone
 	# 2) python-exec should be built with all targets forced anyway
 	# but if new targets were added, we may need to force a rebuild
-	PYTHON_DEPS+="dev-python/python-exec[${PYTHON_USEDEP}]"
+	PYTHON_DEPS+="dev-python/python-exec:0[${PYTHON_USEDEP}]"
 }
 _python_single_set_globals
 

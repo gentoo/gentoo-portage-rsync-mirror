@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.99 2013/09/07 17:54:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.100 2013/09/12 17:16:12 ago Exp $
+
+  12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gpm-1.20.7-r1.ebuild:
+  Stable for ppc, wrt bug #476032
 
   07 Sep 2013; Jeff Horelick <jdhore@gentoo.org> gpm-1.20.7-r1.ebuild:
   marked x86 per bug 476032

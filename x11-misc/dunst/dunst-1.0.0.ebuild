@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/dunst-1.0.0.ebuild,v 1.3 2013/06/16 16:11:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/dunst-1.0.0.ebuild,v 1.4 2013/09/12 17:16:38 wired Exp $
 
 EAPI=5
+
+inherit eutils
 
 DESCRIPTION="customizable and lightweight notification-daemon"
 HOMEPAGE="http://www.knopwob.org/dunst/"
@@ -42,6 +44,8 @@ src_prepare() {
 		# don't build dunstify: it pulls in deps but is not being installed
 		sed -ie "/^all:/ s:dunstify::" Makefile || die "sed failed"
 	fi
+
+	epatch_user
 }
 
 src_install() {

@@ -10,5 +10,5 @@ RDEPEND=sci-chemistry/ccp4-apps >=sci-libs/ccp4-libs-6.1.3-r10 sci-libs/clipper 
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=ftp://ftp.mrc-lmb.cam.ac.uk/pub/pre/pointless-1.6.14.tar.gz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	b13f5baea5da0da5a5dcc6b8b79706a2	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	007be4716d2d4dad097178465e474957	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=461101278cecc86188598dc2346d5c4a

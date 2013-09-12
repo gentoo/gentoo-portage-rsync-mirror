@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.241 2013/09/10 18:08:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.242 2013/09/12 17:19:51 ago Exp $
+
+  12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rsync-3.0.9-r3.ebuild:
+  Stable for ppc, wrt bug #480090
 
   10 Sep 2013; Markus Meier <maekke@gentoo.org> rsync-3.0.9-r3.ebuild:
   arm stable, bug #480090

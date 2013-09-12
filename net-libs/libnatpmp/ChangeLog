@@ -1,4 +1,9 @@
 
+*libnatpmp-20130911 (12 Sep 2013)
+
+  12 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/respect-FLAGS-20130911.patch, +libnatpmp-20130911.ebuild:
+  Version bump
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org> libnatpmp-20110808-r1.ebuild,
   libnatpmp-20120821.ebuild:

@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install setup
-DEPEND=python_single_target_python2_6? ( dev-lang/python:2.6[xml] ) python_single_target_python2_7? ( dev-lang/python:2.7[xml] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] app-arch/xz-utils
+DEPEND=python_single_target_python2_6? ( dev-lang/python:2.6[xml] ) python_single_target_python2_7? ( dev-lang/python:2.7[xml] ) dev-python/python-exec:0[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] app-arch/xz-utils
 DESCRIPTION=Converts Glade files to GtkBuilder XML format
 EAPI=5
 HOMEPAGE=http://www.gtk.org/
 IUSE=python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=LGPL-2+
-RDEPEND=!<=x11-libs/gtk+-2.24.10:2 python_single_target_python2_6? ( dev-lang/python:2.6[xml] ) python_single_target_python2_7? ( dev-lang/python:2.7[xml] ) dev-python/python-exec[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
+RDEPEND=!<=x11-libs/gtk+-2.24.10:2 python_single_target_python2_6? ( dev-lang/python:2.6[xml] ) python_single_target_python2_7? ( dev-lang/python:2.7[xml] ) dev-python/python-exec:0[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gtk+/2.24/gtk+-2.24.19.tar.xz
-_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	b13f5baea5da0da5a5dcc6b8b79706a2	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	007be4716d2d4dad097178465e474957	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=1933f1894087ae148b777fc5b7b2d9ce
