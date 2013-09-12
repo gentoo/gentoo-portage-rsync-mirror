@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2012.2.4-r3.ebuild,v 1.1 2013/07/02 15:33:35 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2012.2.4-r4.ebuild,v 1.1 2013/09/12 04:47:49 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -20,7 +20,7 @@ REQUIRED_USE="|| ( ldap mysql postgres sqlite )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
-	>=dev-python/boto-2.1.1
+	>=dev-python/boto-2.1.1[${PYTHON_USEDEP}]
 	dev-python/anyjson[${PYTHON_USEDEP}]
 	>=dev-python/eventlet-0.9.12[${PYTHON_USEDEP}]
 	>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
@@ -32,20 +32,23 @@ RDEPEND="${DEPEND}
 	dev-python/passlib[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
 	dev-python/pastedeploy[${PYTHON_USEDEP}]
-	dev-python/pycrypto
+	dev-python/pycrypto[${PYTHON_USEDEP}]
 	dev-python/python-glanceclient[${PYTHON_USEDEP}]
 	dev-python/routes[${PYTHON_USEDEP}]
-	>=dev-python/sqlalchemy-migrate-0.7
+	>=dev-python/sqlalchemy-migrate-0.7[${PYTHON_USEDEP}]
 	=dev-python/webob-1.0.8-r1[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
 	swift? (
 		>=dev-python/python-swiftclient-1.2[${PYTHON_USEDEP}]
 		<dev-python/python-swiftclient-2[${PYTHON_USEDEP}]
 	)
-	sqlite? ( dev-python/sqlalchemy[sqlite] )
-	mysql? ( dev-python/sqlalchemy[mysql] )
-	postgres? ( dev-python/sqlalchemy[postgres] )
-	ldap? ( dev-python/python-ldap )"
+	sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
+	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
+	mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
+	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
+	postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
+	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
+	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 
 PATCHES=(
 		"${FILESDIR}/glance-gbug-474064-folsom.patch"
