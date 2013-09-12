@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance.initd,v 1.2 2013/07/02 15:33:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance.initd,v 1.3 2013/09/12 06:27:27 prometheanfire Exp $
 
 depend() {
 	need net
@@ -28,9 +28,11 @@ start() {
 	. /etc/conf.d/$BASENAME
 	
 	ebegin "Starting ${SVCNAME}"
+    if [ ! -d ${PID_PATH} ]; then
+        mkdir ${PID_PATH}
+    fi
 	
-	start-stop-daemon --start --quiet --pidfile "${PID_PATH}/${SVCENAME}.pid" \
-					  --exec /usr/bin/glance-control ${SERVERNAME} start /etc/glance/glance-${SERVERNAME}.conf
+    start-stop-daemon --start --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" --exec /usr/bin/glance-control ${SERVERNAME} start 
 	
 	eend $? "Failed to start ${SVCNAME}"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2013.1.3.ebuild,v 1.3 2013/08/22 04:51:32 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horizon/horizon-2013.1.3-r1.ebuild,v 1.1 2013/09/12 06:23:06 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,9 +19,9 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=">=dev-python/django-1.4[${PYTHON_USEDEP}]
 		<dev-python/django-1.5[${PYTHON_USEDEP}]
-		dev-python/django-compressor
+		dev-python/django-compressor[${PYTHON_USEDEP}]
 		>=dev-python/django-openstack-auth-1.0.7[${PYTHON_USEDEP}]
-		dev-python/netaddr
+		dev-python/netaddr[${PYTHON_USEDEP}]
 		>=dev-python/python-cinderclient-1.0.2[${PYTHON_USEDEP}]
 		<dev-python/python-cinderclient-2.0.0[${PYTHON_USEDEP}]
 		<dev-python/python-glanceclient-2[${PYTHON_USEDEP}]
@@ -33,4 +33,4 @@ RDEPEND=">=dev-python/django-1.4[${PYTHON_USEDEP}]
 		>=dev-python/python-swiftclient-1.1[${PYTHON_USEDEP}]
 		<dev-python/python-swiftclient-2[${PYTHON_USEDEP}]
 		dev-python/pytz[${PYTHON_USEDEP}]
-		dev-python/lockfile"
+		dev-python/lockfile[${PYTHON_USEDEP}]"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.3-r3.ebuild,v 1.1 2013/09/11 16:14:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.3-r4.ebuild,v 1.1 2013/09/12 06:18:01 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,8 @@ SRC_URI="http://launchpad.net/${PN}/grizzly/${PV}/+download/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+api +cert +compute +conductor +consoleauth +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy"
+IUSE="+api +cert +compute +conductor +consoleauth +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres"
+REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		app-admin/sudo"
@@ -23,8 +24,12 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.2.4[${PYTHON_USEDEP}]
 		>=dev-python/cheetah-2.4.4[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-0.7.8
-		<=dev-python/sqlalchemy-0.7.99
+		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
+	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
+		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
+	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
+		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
+	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
 		dev-python/boto[${PYTHON_USEDEP}]
 		>=dev-python/eventlet-0.9.17[${PYTHON_USEDEP}]
 		>=dev-python/kombu-1.0.4-r1[${PYTHON_USEDEP}]
@@ -33,9 +38,9 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
-		>=dev-python/sqlalchemy-migrate-0.7.2
+		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
 		dev-python/netaddr[${PYTHON_USEDEP}]
-		>=dev-python/suds-0.4
+		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
 		dev-python/paramiko[${PYTHON_USEDEP}]
 		dev-python/pyasn1[${PYTHON_USEDEP}]
 		>=dev-python/Babel-0.9.6[${PYTHON_USEDEP}]
