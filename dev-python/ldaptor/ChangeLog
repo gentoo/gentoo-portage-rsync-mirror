@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.39 2013/08/03 09:45:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.40 2013/09/12 22:29:23 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> ldaptor-0.0.43.ebuild:
+  Replace virtual/pyparsing dep with dev-python/pyparsing. The split versions
+  were removed and all in-tree versions support all impls now.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> ldaptor-0.0.43.ebuild:
   Move dev-python/twisted to dev-python/twisted-core.

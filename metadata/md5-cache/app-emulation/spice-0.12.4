@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=virtual/pkgconfig virtual/pyparsing || ( dev-lang/python:2.7 dev-lang/python:2.6 virtual/pypy:2.0 ) >=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 media-libs/alsa-lib >=media-libs/celt-0.5.1.1:0.5.1 dev-libs/openssl virtual/jpeg sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) smartcard? ( >=app-emulation/libcacard-0.1.2 ) client? ( >=x11-libs/libXrandr-1.2 x11-libs/libX11 x11-libs/libXext >=x11-libs/libXinerama-1.0 x11-libs/libXfixes x11-libs/libXrender )
+DEPEND=virtual/pkgconfig dev-python/pyparsing || ( dev-lang/python:2.7 dev-lang/python:2.6 virtual/pypy:2.0 ) >=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 media-libs/alsa-lib >=media-libs/celt-0.5.1.1:0.5.1 dev-libs/openssl virtual/jpeg sys-libs/zlib sasl? ( dev-libs/cyrus-sasl ) smartcard? ( >=app-emulation/libcacard-0.1.2 ) client? ( >=x11-libs/libXrandr-1.2 x11-libs/libX11 x11-libs/libXext >=x11-libs/libXinerama-1.0 x11-libs/libXfixes x11-libs/libXrender )
 DESCRIPTION=SPICE server and client.
 EAPI=5
 HOMEPAGE=http://spice-space.org/
@@ -10,4 +10,4 @@ RDEPEND=>=x11-libs/pixman-0.17.7 >=dev-libs/glib-2.22:2 media-libs/alsa-lib >=me
 SLOT=0
 SRC_URI=http://spice-space.org/download/releases/spice-0.12.4.tar.bz2
 _eclasses_=eutils	63afaaed8aa819fdcb814c7cd39495a2	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	815e8fef66b552e35e4a8cc95febd22e	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=9def92570353d19d8d28c2d08c9dfec3
+_md5_=2bcc9d52f1b56c318f52028dc77a4803

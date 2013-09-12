@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.17.ebuild,v 1.1 2013/04/04 07:21:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.17.ebuild,v 1.2 2013/09/12 22:29:28 mgorny Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ RDEPEND=">=dev-python/kombu-2.4.7
 	sql? ( dev-python/sqlalchemy )
 	dev-python/python-dateutil
 	>=dev-python/anyjson-0.3.3
-	virtual/pyparsing
+	dev-python/pyparsing
 	>=dev-python/billiard-2.7.3.17
 	dev-python/pytz
 	"

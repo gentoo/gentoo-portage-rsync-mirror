@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.19.ebuild,v 1.5 2013/05/10 03:50:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/celery-3.0.19.ebuild,v 1.6 2013/09/12 22:29:28 mgorny Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="<dev-python/kombu-3
 		>=dev-python/kombu-2.5.10[${PYTHON_USEDEP}]
 		>=dev-python/python-dateutil-1.5[${PYTHON_USEDEP}]
 		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		virtual/pyparsing[${PYTHON_USEDEP}]
+		dev-python/pyparsing[${PYTHON_USEDEP}]
 		>=dev-python/billiard-2.7.3.28[${PYTHON_USEDEP}]
 		dev-python/pytz[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}

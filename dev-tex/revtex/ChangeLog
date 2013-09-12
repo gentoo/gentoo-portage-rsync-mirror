@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/revtex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/ChangeLog,v 1.5 2013/07/12 07:24:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/ChangeLog,v 1.6 2013/09/12 22:19:22 dilfridge Exp $
+
+  12 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org> revtex-4.ebuild,
+  revtex-4.1_p2-r1.ebuild:
+  RDEPEND on natbib from texlive now
 
   12 Jul 2013; Zac Medico <zmedico@gentoo.org> revtex-4.ebuild:
   Fix SRC_URI.

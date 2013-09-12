@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.28 2013/07/26 14:25:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.29 2013/09/12 22:29:21 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> mwlib-0.14.0.ebuild,
+  mwlib-0.14.1.ebuild, mwlib-0.14.3.ebuild, mwlib-0.15.3.ebuild,
+  mwlib-0.15.6.ebuild, mwlib-0.15.7.ebuild, mwlib-0.15.8-r1.ebuild,
+  mwlib-0.15.8-r3.ebuild, mwlib-0.15.8.ebuild:
+  Replace virtual/pyparsing dep with dev-python/pyparsing. The split versions
+  were removed and all in-tree versions support all impls now.
 
 *mwlib-0.15.10 (26 Jul 2013)
 

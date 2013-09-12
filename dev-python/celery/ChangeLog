@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/celery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.27 2013/07/08 08:25:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/celery/ChangeLog,v 1.28 2013/09/12 22:29:28 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> celery-3.0.12.ebuild,
+  celery-3.0.13.ebuild, celery-3.0.14-r1.ebuild, celery-3.0.15.ebuild,
+  celery-3.0.16.ebuild, celery-3.0.17.ebuild, celery-3.0.19.ebuild,
+  celery-3.0.21.ebuild:
+  Replace virtual/pyparsing dep with dev-python/pyparsing. The split versions
+  were removed and all in-tree versions support all impls now.
 
 *celery-3.0.21 (08 Jul 2013)
 

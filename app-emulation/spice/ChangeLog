@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.53 2013/09/05 18:20:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.54 2013/09/12 22:29:38 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> spice-0.12.2.ebuild,
+  spice-0.12.3-r1.ebuild, spice-0.12.4.ebuild:
+  Replace virtual/pyparsing dep with dev-python/pyparsing. The split versions
+  were removed and all in-tree versions support all impls now.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> spice-0.12.3-r1.ebuild,
   spice-0.12.4.ebuild:

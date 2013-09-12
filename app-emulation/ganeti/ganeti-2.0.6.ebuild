@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.0.6.ebuild,v 1.5 2012/12/31 12:57:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.0.6.ebuild,v 1.6 2013/09/12 22:29:37 mgorny Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	drbd? ( >=sys-cluster/drbd-8.0 )
 	dev-libs/openssl
 	dev-python/pyopenssl
-	virtual/pyparsing
+	dev-python/pyparsing
 	dev-python/simplejson
 	net-analyzer/arping
 	net-misc/bridge-utils

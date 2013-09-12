@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.2 2013/08/23 08:43:47 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.3 2013/09/12 22:29:33 mgorny Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ DEPEND="${COMMON_DEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 RDEPEND="${COMMON_DEPEND}
-	virtual/pyparsing[${PYTHON_USEDEP}]
+	dev-python/pyparsing[${PYTHON_USEDEP}]
 	cairo? ( dev-python/pycairo[${PYTHON_USEDEP}] )
 	excel? ( dev-python/xlwt[${PY2_USEDEP}] )
 	fltk? ( dev-python/pyfltk[${PY2_USEDEP}] )

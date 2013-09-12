@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8233 2013/09/12 21:06:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8234 2013/09/12 22:29:56 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask virtual/pyparsing for removal since we no longer support split pyparsing
+  and therefore need it.
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Lastrite virtual/python-json -- JSON is now built-in in all supported

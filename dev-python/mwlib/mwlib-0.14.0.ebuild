@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.14.0.ebuild,v 1.2 2012/12/31 13:02:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.14.0.ebuild,v 1.3 2013/09/12 22:29:21 mgorny Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ IUSE="doc"
 RDEPEND="dev-python/lxml
 	=dev-python/odfpy-0.9*
 	dev-python/pyPdf
-	virtual/pyparsing
+	dev-python/pyparsing
 	dev-python/timelib
 	virtual/latex-base
 	>=dev-python/simplejson-2.5

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.72 2013/08/03 09:45:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.73 2013/09/12 22:29:37 mgorny Exp $
+
+  12 Sep 2013; Michał Górny <mgorny@gentoo.org> ganeti-1.2.9.ebuild,
+  ganeti-2.0.6.ebuild, ganeti-2.1.8.ebuild, ganeti-2.2.2.ebuild,
+  ganeti-2.3.1.ebuild, ganeti-2.4.5-r1.ebuild, ganeti-2.5.2-r2.ebuild,
+  ganeti-2.6.0.ebuild, ganeti-2.6.1.ebuild, ganeti-2.6.2.ebuild:
+  Replace virtual/pyparsing dep with dev-python/pyparsing. The split versions
+  were removed and all in-tree versions support all impls now.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> ganeti-1.2.9.ebuild:
   Move dev-python/twisted to dev-python/twisted-core.

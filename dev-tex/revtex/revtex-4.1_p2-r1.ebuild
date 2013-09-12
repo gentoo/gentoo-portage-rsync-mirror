@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/revtex-4.1_p2-r1.ebuild,v 1.3 2011/08/12 17:36:04 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/revtex-4.1_p2-r1.ebuild,v 1.4 2013/09/12 22:19:22 dilfridge Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ LICENSE="LPPL-1.3c"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-RDEPEND=">=dev-tex/natbib-8.31a"
+RDEPEND=">=dev-texlive/texlive-latex-2012"
 DEPEND="app-arch/unzip"
 
 IUSE=""
