@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.64.ebuild,v 1.1 2013/09/11 19:57:19 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/laptop-mode-tools/laptop-mode-tools-1.64.ebuild,v 1.2 2013/09/12 05:43:52 alonbl Exp $
 
 EAPI=5
 inherit eutils multilib systemd udev
@@ -50,7 +50,7 @@ src_install() {
 		SYSTEMD=yes \
 		sh ./install.sh || die
 
-	dodoc Documentation/*.txt README
+	dodoc Documentation/*.txt README.md
 	newinitd "${FILESDIR}"/laptop_mode.init-1.4 laptop_mode
 
 	# See src_prepare()
