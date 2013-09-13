@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.97 2013/04/06 10:03:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.98 2013/09/13 12:13:30 jmbsvicetto Exp $
+
+*drupal-7.23 (13 Sep 2013)
+
+  13 Sep 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-7.23.ebuild, metadata.xml:
+  Bump drupal to release 7.23. Make dependency on accelerator and uploadprogress
+  optional. Fixes bugs: 416897, 443736 and 475584.
 
   06 Apr 2013; Tim Harder <radhermit@gentoo.org> -drupal-7.20.ebuild,
   -drupal-7.21.ebuild:

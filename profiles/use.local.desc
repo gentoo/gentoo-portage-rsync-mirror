@@ -6404,6 +6404,8 @@ www-apps/blohg:git - Enable Git support
 www-apps/bugzilla:extras - Optional Perl modules
 www-apps/bugzilla:modperl - Enable www-apache/mod_perl support
 www-apps/cgit:highlight - Enable source code highlighting
+www-apps/drupal:accelerator - Add dependency on a php accelerator
+www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/egroupware:gallery - Install gallery2 port for eGW
 www-apps/egroupware:jpgraph - Add dev-php/jpgraph support
 www-apps/gallery:netpbm - Add media-libs/netpbm support
