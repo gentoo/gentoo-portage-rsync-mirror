@@ -1,6 +1,18 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.945 2013/09/12 16:41:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.946 2013/09/13 00:27:24 floppym Exp $
+
+  13 Sep 2013; Mike Gilbert <floppym@gentoo.org>
+  -files/chromium-bug471198.patch, -files/chromium-nss-3.15.patch,
+  -files/chromium-pnacl-r0.patch, -files/chromium-smhasher-r0.patch,
+  -files/chromium-system-ffmpeg-r4.patch,
+  -files/chromium-system-ffmpeg-r5.patch,
+  -files/chromium-system-ffmpeg-r7.patch,
+  -files/chromium-system-harfbuzz-r0.patch, -files/chromium-system-icu-r0.patch,
+  -files/chromium-system-libusb-r0.patch,
+  -files/chromium-system-libvpx-r0.patch, -files/chromium-system-v8-r0.patch,
+  -files/chromium-system-v8-r1.patch, -files/chromium-system-zlib-r0.patch:
+  Drop obsolete patches.
 
 *chromium-30.0.1599.28 (12 Sep 2013)
 
