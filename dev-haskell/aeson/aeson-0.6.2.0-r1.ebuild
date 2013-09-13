@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson/aeson-0.6.2.0.ebuild,v 1.1 2013/09/13 05:26:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson/aeson-0.6.2.0-r1.ebuild,v 1.1 2013/09/13 09:00:30 gienah Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="developer"
 RDEPEND=">=dev-haskell/attoparsec-0.8.6.1:=[profile?]
 	>=dev-haskell/blaze-builder-0.2.1.4:=[profile?]
 	dev-haskell/deepseq:=[profile?]
+	>=dev-haskell/dlist-0.2:=[profile?]
 	>=dev-haskell/hashable-1.1.2.0:=[profile?]
 	dev-haskell/mtl:=[profile?]
 	dev-haskell/syb:=[profile?]
