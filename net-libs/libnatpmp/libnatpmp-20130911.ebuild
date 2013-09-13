@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20130911.ebuild,v 1.1 2013/09/12 17:23:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20130911.ebuild,v 1.2 2013/09/13 11:06:31 blueness Exp $
 
 EAPI="5"
 inherit eutils toolchain-funcs multilib
@@ -17,7 +17,7 @@ IUSE="static-libs"
 src_prepare() {
 	epatch "${FILESDIR}"/respect-FLAGS-${PV}.patch
 	epatch "${FILESDIR}"/respect-libdir-20120821.patch
-	use static-libs || epatch "${FILESDIR}"/remove-static-lib-20120821.patch
+	use static-libs || epatch "${FILESDIR}"/remove-static-lib-${PV}.patch
 	tc-export CC
 }
 
