@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/cipher-blowfish
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cipher-blowfish/ChangeLog,v 1.1 2013/09/13 05:44:20 gienah Exp $
+
+*cipher-blowfish-0.0.2 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +cipher-blowfish-0.0.2.ebuild,
+  +metadata.xml:
+  Add cipher-blowfish

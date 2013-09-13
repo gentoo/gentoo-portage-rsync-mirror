@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cpphs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.54 2013/08/07 13:29:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.55 2013/09/13 05:50:41 gienah Exp $
+
+*cpphs-1.17.1 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +cpphs-1.17.1.ebuild:
+  Bump cpphs to 1.17.1
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> cpphs-1.16.ebuild:
   Stable for x86, wrt bug #470354

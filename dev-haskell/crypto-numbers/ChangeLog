@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/crypto-numbers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-numbers/ChangeLog,v 1.1 2013/08/26 04:34:45 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-numbers/ChangeLog,v 1.2 2013/09/13 05:59:10 gienah Exp $
+
+*crypto-numbers-0.2.1 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +crypto-numbers-0.2.1.ebuild:
+  Bump crypto-numbers to 0.2.1
 
 *crypto-numbers-0.1.3 (26 Aug 2013)
 
