@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.237 2013/09/10 05:19:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.238 2013/09/13 19:33:30 jcallen Exp $
+
+  13 Sep 2013; Jonathan Callen <jcallen@gentoo.org> PyQt4-4.10.1.ebuild,
+  PyQt4-4.10.2.ebuild, PyQt4-4.9.6-r2.ebuild:
+  Add missing [${PYTHON_USEDEP}] on dbus-python DEPEND
 
   10 Sep 2013; Markus Meier <maekke@gentoo.org> PyQt4-4.10.2.ebuild:
   arm stable, bug #483112

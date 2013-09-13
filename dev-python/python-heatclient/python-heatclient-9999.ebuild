@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-9999.ebuild,v 1.1 2013/06/09 02:02:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-9999.ebuild,v 1.2 2013/09/13 19:36:04 prometheanfire Exp $
 
 EAPI=5
 #restricted due to not caring about 9999
@@ -23,11 +23,11 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		test? ( dev-python/mox[${PYTHON_USEDEP}]
 			dev-python/nose[${PYTHON_USEDEP}]
 			dev-python/nose-exclude[${PYTHON_USEDEP}]
-			dev-python/nosexcover
+			dev-python/nosexcover[${PYTHON_USEDEP}]
 			dev-python/nosehtmloutput[${PYTHON_USEDEP}]
 			dev-python/openstack-nose-plugin[${PYTHON_USEDEP}]
-			=dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
-			=dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
+			~dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
+			~dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
 			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 			>=dev-python/setuptools-git-0.4[${PYTHON_USEDEP}] )"
 RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
