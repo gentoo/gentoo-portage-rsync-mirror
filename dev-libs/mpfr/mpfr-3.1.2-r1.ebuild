@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.2.ebuild,v 1.4 2013/08/25 02:37:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.2-r1.ebuild,v 1.1 2013/09/13 18:32:04 grobian Exp $
 
 EAPI="3"
 
@@ -25,18 +25,19 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	[[ ${PLEVEL} == ${PV} ]] && return 0
-	for ((i=1; i<=PLEVEL; ++i)) ; do
-		patch=patch$(printf '%02d' ${i})
-		if [[ -f ${FILESDIR}/${MY_PV}/${patch} ]] ; then
-			epatch "${FILESDIR}"/${MY_PV}/${patch}
-		elif [[ -f ${DISTDIR}/${PN}-${MY_PV}_p${i} ]] ; then
-			epatch "${DISTDIR}"/${PN}-${MY_PV}_p${i}
-		else
-			ewarn "${DISTDIR}/${PN}-${MY_PV}_p${i}"
-			die "patch ${i} missing - please report to bugs.gentoo.org"
-		fi
-	done
+	if [[ ${PLEVEL} != ${PV} ]] ; then
+		for ((i=1; i<=PLEVEL; ++i)) ; do
+			patch=patch$(printf '%02d' ${i})
+			if [[ -f ${FILESDIR}/${MY_PV}/${patch} ]] ; then
+				epatch "${FILESDIR}"/${MY_PV}/${patch}
+			elif [[ -f ${DISTDIR}/${PN}-${MY_PV}_p${i} ]] ; then
+				epatch "${DISTDIR}"/${PN}-${MY_PV}_p${i}
+			else
+				ewarn "${DISTDIR}/${PN}-${MY_PV}_p${i}"
+				die "patch ${i} missing - please report to bugs.gentoo.org"
+			fi
+		done
+	fi
 	sed -i '/if test/s:==:=:' configure #261016
 	find . -type f -exec touch -r configure {} +
 	elibtoolize
