@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1355 2013/09/12 18:59:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1356 2013/09/13 04:26:16 zmedico Exp $
+
+*portage-2.2.4 (13 Sep 2013)
+
+  13 Sep 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.4.ebuild,
+  -portage-2.2.3.ebuild:
+  2.2.4 version bump. This fixes a regression in 2.2.2 which caused dohtml -r
+  html/. to create an extra html subdirectory. Bug #484436 tracks all bugs fixed
+  since portage-2.2.1.
 
   12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.2.1.ebuild:
   Stable for ppc64, wrt bug #478904
