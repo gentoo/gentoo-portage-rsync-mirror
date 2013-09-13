@@ -1,8 +1,16 @@
-diff --git a/configure b/configure
-index 07796b1..afdda94 100755
---- a/configure
-+++ b/configure
-@@ -556,11 +556,6 @@ case $host_cpu in
+https://bugs.gentoo.org/420241 for x32 stuff
+initial x32 support -- no asm code, just pure C
+
+avoid messing too much with CFLAGS.
+https://bugs.gentoo.org/show_bug.cgi?id=351219
+https://bugs.gentoo.org/show_bug.cgi?id=413661
+
+
+Index: x264-9999/configure
+===================================================================
+--- x264-9999.orig/configure
++++ x264-9999/configure
+@@ -553,11 +553,6 @@ case $host_cpu in
              if [[ "$asm" == auto && "$CFLAGS" != *-march* ]]; then
                  CFLAGS="$CFLAGS -march=i686"
              fi
@@ -14,7 +22,7 @@ index 07796b1..afdda94 100755
          else
              # icc on linux has various degrees of mod16 stack support
              if [ $SYS = LINUX ]; then
-@@ -591,13 +586,8 @@ case $host_cpu in
+@@ -588,13 +583,8 @@ case $host_cpu in
      x86_64)
          ARCH="X86_64"
          AS="yasm"
@@ -25,10 +33,10 @@ index 07796b1..afdda94 100755
 -                CFLAGS="$CFLAGS -arch x86_64"
 -                LDFLAGS="$LDFLAGS -arch x86_64"
 -            fi
-         elif [ "$SYS" = WINDOWS -o "$SYS" = CYGWIN ]; then
+         elif [ "$SYS" = WINDOWS ]; then
              ASFLAGS="$ASFLAGS -f win32 -m amd64"
              # only the GNU toolchain is inconsistent in prefixing function names with _
-@@ -605,7 +595,11 @@ case $host_cpu in
+@@ -602,7 +592,11 @@ case $host_cpu in
              [ $compiler = GNU ] && LDFLAGS="$LDFLAGS -Wl,--nxcompat -Wl,--dynamicbase"
              [ $compiler = GNU ] && RCFLAGS="--target=pe-x86-64 $RCFLAGS"
          else
@@ -41,7 +49,7 @@ index 07796b1..afdda94 100755
          fi
          ;;
      powerpc|powerpc64)
-@@ -971,10 +965,6 @@ if [ "$pic" = "yes" ] ; then
+@@ -964,10 +958,6 @@ if [ "$pic" = "yes" ] ; then
      [ $SYS = SunOS -a "$ARCH" = "X86" ] && SOFLAGS="$SOFLAGS -mimpure-text"
  fi
  

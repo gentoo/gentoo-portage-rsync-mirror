@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20130731.ebuild,v 1.4 2013/09/13 13:05:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20130912.ebuild,v 1.1 2013/09/13 13:05:04 lu_zero Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ DOCS="AUTHORS doc/*.txt"
 src_prepare() {
 	# Initial support for x32 ABI, bug #420241
 	# Avoid messing too much with CFLAGS.
-	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch "${FILESDIR}"/x264-cflags.patch
 }
 
 multilib_src_configure() {

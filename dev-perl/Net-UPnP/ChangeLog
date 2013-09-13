@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-UPnP
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-UPnP/ChangeLog,v 1.11 2013/09/08 13:55:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-UPnP/ChangeLog,v 1.12 2013/09/13 13:17:29 idella4 Exp $
+
+  13 Sep 2013; Ian Delaney <idella4@gentoo.org> Net-UPnP-1.4.2-r1.ebuild:
+  rm call to die
 
 *Net-UPnP-1.4.2-r1 (08 Sep 2013)
 

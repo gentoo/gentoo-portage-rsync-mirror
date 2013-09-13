@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.4.0_pre1.ebuild,v 1.1 2013/08/27 00:53:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.4.0_pre1.ebuild,v 1.2 2013/09/13 13:26:11 hasufell Exp $
 
 # REMINDER: next release probably swaps gnome-keyring for libsecret-1
 
@@ -29,7 +29,7 @@ DEPEND="
 	dev-libs/libxml2:2
 	dev-libs/gmime:2.6
 	media-libs/libcanberra
-	net-libs/webkit-gtk:3[introspection]
+	>=net-libs/webkit-gtk-1.10.0:3[introspection]
 	>=x11-libs/gtk+-3.6.0:3[introspection]
 	x11-libs/libnotify"
 RDEPEND="${DEPEND}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-SNMP
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.57 2012/09/01 11:44:24 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/ChangeLog,v 1.58 2013/09/13 13:27:46 idella4 Exp $
+
+*Net-SNMP-6.0.1-r1 (13 Sep 2013)
+
+  13 Sep 2013; Ian Delaney <idella4@gentoo.org> +Net-SNMP-6.0.1-r1.ebuild:
+  revbump -> EAPI 5, upgraded src_install
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Net-SNMP-6.0.1.ebuild:
   Marked ~ppc-aix, bug #432288
