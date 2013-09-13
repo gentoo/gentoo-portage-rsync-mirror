@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.7.ebuild,v 1.2 2013/09/12 21:06:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.7.ebuild,v 1.3 2013/09/13 02:33:48 patrick Exp $
 
 EAPI=5
 inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
@@ -71,7 +71,7 @@ src_prepare() {
 		for lang in $(cat po/LINGUAS)
 		do
 			has $lang $LINGUAS && langs+="$lang "
-		done 
+		done
 		echo "$langs" > po/LINGUAS || die
 	fi
 }
