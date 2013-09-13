@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.88.ebuild,v 1.8 2013/07/25 15:49:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.88.ebuild,v 1.9 2013/09/13 14:29:12 jer Exp $
 
 EAPI=4
 
@@ -172,8 +172,8 @@ src_prepare() {
 		ewarn "Using PAX patches is not supported. You will be asked to"
 		ewarn "use a standard kernel should you have issues. Should you"
 		ewarn "need support with these patches, contact the PaX team."
-	    epatch "${FILESDIR}"/nvidia-drivers-pax-const.patch
-	    epatch "${FILESDIR}"/nvidia-drivers-pax-usercopy.patch
+	    epatch "${FILESDIR}"/${PN}-pax-const.patch
+	    epatch "${FILESDIR}"/${PN}-pax-usercopy.patch
 	fi
 
 	cat <<- EOF > "${S}"/nvidia.icd
@@ -347,8 +347,8 @@ src_install() {
 	# Desktop entries for nvidia-settings
 	if use tools ; then
 		# There is no icon in the FreeBSD tarball.
-		use kernel_FreeBSD || newicon ${NV_OBJ}/nvidia-settings.png nvidia-drivers-settings.png
-		domenu "${FILESDIR}"/nvidia-drivers-settings.desktop
+		use kernel_FreeBSD || newicon ${NV_OBJ}/nvidia-settings.png ${PN}-settings.png
+		domenu "${FILESDIR}"/${PN}-settings.desktop
 		exeinto /etc/X11/xinit/xinitrc.d
 		doexe "${FILESDIR}"/95-nvidia-settings
 	fi

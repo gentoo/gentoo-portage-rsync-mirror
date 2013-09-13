@@ -1,11 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.7.ebuild,v 1.14 2013/03/06 10:27:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.1.0.ebuild,v 1.1 2013/09/13 14:04:51 polynomial-c Exp $
 
-EAPI=3
-PYTHON_DEPEND="python? 2:2.6"
-RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
-inherit waf-utils python multilib
+EAPI=5
+
+PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_REQ_USE="threads"
+
+inherit waf-utils python-single-r1 multilib
 
 DESCRIPTION="Samba talloc library"
 HOMEPAGE="http://talloc.samba.org/"
@@ -13,21 +15,18 @@ SRC_URI="http://samba.org/ftp/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~sparc-solaris"
 IUSE="compat python"
 
-RDEPEND="!!<sys-libs/talloc-2.0.5"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
+	!!<sys-libs/talloc-2.0.5"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	|| ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] )"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
-
-pkg_setup() {
-	# Make sure the build system will use the right python
-	python_set_active_version 2
-	python_pkg_setup
-}
 
 src_configure() {
 	local extra_opts=""

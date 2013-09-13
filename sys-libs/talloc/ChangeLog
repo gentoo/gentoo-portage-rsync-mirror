@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.59 2013/09/06 14:59:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.60 2013/09/13 14:04:51 polynomial-c Exp $
+
+*talloc-2.1.0 (13 Sep 2013)
+
+  13 Sep 2013; Lars Wendler <polynomial-c@gentoo.org> -talloc-2.0.7.ebuild,
+  +talloc-2.1.0.ebuild:
+  Version bump. Removed old.
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> talloc-2.0.8.ebuild:
   Stable for sparc, wrt bug #466710

@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.123 2013/04/24 05:44:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.124 2013/09/13 14:25:31 ottxor Exp $
+
+*ccache-3.1.9-r1 (13 Sep 2013)
+
+  13 Sep 2013; Christoph Junghans <ottxor@gentoo.org> +ccache-3.1.9-r1.ebuild,
+  +files/ccache-config-2:
+  added prefix support (bug #484012)
 
   24 Apr 2013; Ryan Hill <dirtyepic@gentoo.org> ccache-3.1.9.ebuild,
   -files/ccache-3.1.9-test-gcc-3.8.patch,
