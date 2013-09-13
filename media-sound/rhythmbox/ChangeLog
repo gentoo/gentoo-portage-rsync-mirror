@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.244 2013/09/13 09:16:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.245 2013/09/13 20:42:56 nirbheek Exp $
+
+*rhythmbox-3.0-r1 (13 Sep 2013)
+
+  13 Sep 2013; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/rhythmbox-3.0-gdbus-return-value.patch,
+  +files/rhythmbox-3.0-rbzeitgeist-python3.patch, +rhythmbox-3.0-r1.ebuild,
+  -rhythmbox-3.0.ebuild:
+  Fix a hang (reported by pva), fix deps, and port a plugin to Python 3
 
 *rhythmbox-3.0 (13 Sep 2013)
 

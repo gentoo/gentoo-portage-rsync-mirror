@@ -1,0 +1,50 @@
+From 76540fdaa7baf56b01d8d269cbe482b1dbc58f09 Mon Sep 17 00:00:00 2001
+From: Jonathan Matthew <jonathan@d14n.org>
+Date: Fri, 13 Sep 2013 12:19:13 +0000
+Subject: metadata: GDBusServer new-connection signal needs a return value
+
+Turns out this is kind of important and has been working mostly by
+luck until now.  When compiled with gcc's -fstack-protector-strong,
+we ended up returning 0, which in this case means that the connection
+isn't interesting, so it stops processing messages on it.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=706470
+---
+diff --git a/metadata/rb-metadata-dbus-service.c b/metadata/rb-metadata-dbus-service.c
+index cb29d33..8280b2c 100644
+--- a/metadata/rb-metadata-dbus-service.c
++++ b/metadata/rb-metadata-dbus-service.c
+@@ -220,7 +220,7 @@ connection_closed_cb (GDBusConnection *connection,
+ 	svc->connection = NULL;
+ }
+ 
+-static void
++static gboolean
+ new_connection_cb (GDBusServer *server,
+ 		   GDBusConnection *connection,
+ 		   ServiceData *svc)
+@@ -231,7 +231,7 @@ new_connection_cb (GDBusServer *server,
+ 	/* don't allow more than one connection at a time */
+ 	if (svc->connection) {
+ 		rb_debug ("metadata service already has a client.  go away.");
+-		return;
++		return FALSE;
+ 	}
+ 	g_dbus_connection_register_object (connection,
+ 					   RB_METADATA_DBUS_OBJECT_PATH,
+@@ -243,11 +243,13 @@ new_connection_cb (GDBusServer *server,
+ 	if (error != NULL) {
+ 		rb_debug ("unable to register metadata object: %s", error->message);
+ 		g_clear_error (&error);
++		return FALSE;
+ 	} else {
+ 		svc->connection = g_object_ref (connection);
+ 		g_signal_connect (connection, "closed", G_CALLBACK (connection_closed_cb), svc);
+ 
+ 		g_dbus_connection_set_exit_on_close (connection, (svc->external == FALSE));
++		return TRUE;
+ 	}
+ }
+ 
+--
+cgit v0.9.2
