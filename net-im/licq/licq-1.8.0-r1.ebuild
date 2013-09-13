@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.0-r1.ebuild,v 1.1 2013/09/10 08:44:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.0-r1.ebuild,v 1.2 2013/09/13 13:36:47 polynomial-c Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ IUSE="debug doc linguas_he nls socks5 ssl xosd aosd jabber qt4 msn"
 RDEPEND=">=app-crypt/gpgme-1
 	jabber? ( net-libs/gloox )
 	qt4? ( dev-qt/qtgui:4 )
+	socks5? ( net-proxy/dante )
 	ssl? ( >=dev-libs/openssl-0.9.5a )
 	xosd? ( x11-libs/xosd )
 	aosd? ( x11-libs/libaosd )"
