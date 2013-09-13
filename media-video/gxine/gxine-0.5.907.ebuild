@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907.ebuild,v 1.9 2013/08/09 13:43:14 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.907.ebuild,v 1.10 2013/09/13 16:57:04 axs Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -40,7 +40,7 @@ src_prepare() {
 	# ld: cannot find -ljs
 	sed -i -e '/JS_LIBS="`spidermonkey_locate_lib/s:js:mozjs:' m4/_js.m4 || die
 
-	if has_version '>=dev-lang/spidermonkey-1.8.7'; then
+	if has_version '~dev-lang/spidermonkey-1.8.7'; then
 		sed -i -e 's:mozjs185:mozjs187:' m4/_js.m4 || die #422983
 	fi
 

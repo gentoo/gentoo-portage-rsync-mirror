@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gxine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.127 2013/08/09 13:43:14 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.128 2013/09/13 16:57:04 axs Exp $
+
+  13 Sep 2013; Ian Stakenvicius <axs@gentoo.org> gxine-0.5.907.ebuild:
+  adjusted has-version on spidermonkey to be sure the correct slot-0 lib will be
+  used, bug 484790
 
   09 Aug 2013; Ian Stakenvicius <axs@gentoo.org> gxine-0.5.907.ebuild:
   Adjusted deps for dev-lang/spidermonkey to ensure SLOT=0
