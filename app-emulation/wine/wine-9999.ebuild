@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.152 2013/09/12 02:38:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.153 2013/09/13 03:03:44 tetromino Exp $
 
 EAPI="5"
 
@@ -61,8 +61,6 @@ NATIVE_DEPEND="
 	openal? ( media-libs/openal:= )
 	gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 )
 	X? (
-		x11-libs/libICE
-		x11-libs/libSM
 		x11-libs/libXcursor
 		x11-libs/libXext
 		x11-libs/libXrandr
