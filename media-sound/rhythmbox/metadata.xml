@@ -9,5 +9,6 @@
 	<flag name="html">Use <pkg>net-libs/webkit-gtk</pkg> for detecting and displaying HTML podcast episode descriptions.</flag>
 	<flag name="libsecret">Enable libsecret support to store login credentials</flag>
 	<flag name="zeitgeist">Build the plugin to inject events to <pkg>gnome-extra/zeitgeist</pkg></flag>
+	<flag name="visualizer">Enable support for visualizations using <pkg>media-plugins/gst-plugins-libvisual</pkg></flag>
   </use>
 </pkgmetadata>
