@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.3.1.ebuild,v 1.3 2013/08/06 06:13:56 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.3.1.ebuild,v 1.4 2013/09/13 15:20:25 jer Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="http://webp.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="experimental gif +jpeg opengl +png static-libs swap-16bit-csp tiff"
 
 # TODO: dev-lang/swig bindings in swig/ subdirectory

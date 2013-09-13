@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pydot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.63 2013/09/13 07:51:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.64 2013/09/13 15:25:26 jer Exp $
+
+  13 Sep 2013; Jeroen Roovers <jer@gentoo.org> pydot-1.0.28-r1.ebuild:
+  Stable for HPPA (bug #484724).
 
   13 Sep 2013; Michał Górny <mgorny@gentoo.org> pydot-1.0.28-r1.ebuild:
   Re-add PyPy -- it was not a culprit here.

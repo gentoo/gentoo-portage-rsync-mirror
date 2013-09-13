@@ -1,6 +1,15 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.961 2013/09/13 11:22:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.963 2013/09/13 15:08:37 mgorny Exp $
+
+  13 Sep 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Fail early on unreachable URLs. If ls-remote fails due to server being
+  unreachable, there is no point in attempting to fetch.
+
+  13 Sep 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Do not leak EGIT_NONSHALLOW over loop iterations. Failing URL may cause
+  non-shallow attempt to be made. When attempting next URL in the list, we
+  should try shallow again.
 
   13 Sep 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
   Commit the version of einstalldocs() Council agreed upon.

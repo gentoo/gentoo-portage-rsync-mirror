@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.3 2013/09/09 16:01:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.5 2013/09/13 15:08:37 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -398,12 +398,16 @@ git-r3_fetch() {
 
 		# split on whitespace
 		local ref=(
-			$(git ls-remote "${r}" "${lookup_ref}")
+			$(git ls-remote "${r}" "${lookup_ref}" || echo __FAIL__)
 		)
 
+		# normally, ref[0] is a hash, so we can do magic strings here
+		[[ ${ref[0]} == __FAIL__ ]] && continue
+
+		local nonshallow=${EGIT_NONSHALLOW}
 		local ref_param=()
 		if [[ ! ${ref[0]} ]]; then
-			local EGIT_NONSHALLOW=1
+			nonshallow=1
 		fi
 
 		# 1. if we need a non-shallow clone and we have a shallow one,
@@ -418,7 +422,7 @@ git-r3_fetch() {
 		#    if that looks beneficial.
 
 		local fetch_command=( git fetch )
-		if [[ ${EGIT_NONSHALLOW} ]]; then
+		if [[ ${nonshallow} ]]; then
 			if [[ -f ${GIT_DIR}/shallow ]]; then
 				ref_param+=( --unshallow )
 			fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.38.ebuild,v 1.3 2013/09/05 14:49:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.38.ebuild,v 1.4 2013/09/13 15:16:18 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability \
@@ -18,7 +18,7 @@ SRC_URI="x86? ( ftp://download.nvidia.com/XFree86/Linux-x86/${PV}/${X86_NV_PACKA
 
 LICENSE="GPL-2 NVIDIA-r1"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="-* amd64 x86 ~x86-fbsd"
 IUSE="acpi multilib kernel_linux tools"
 RESTRICT="bindist mirror strip"
 EMULTILIB_PKG="true"
