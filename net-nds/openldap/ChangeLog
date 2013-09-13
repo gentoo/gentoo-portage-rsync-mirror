@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.441 2013/09/06 18:34:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.442 2013/09/13 02:30:45 patrick Exp $
+
+*openldap-2.3.43-r4 (13 Sep 2013)
+
+  13 Sep 2013; Patrick Lauer <patrick@gentoo.org>
+  +files/openldap-2.3.43-fix-hang.patch, +openldap-2.3.43-r4.ebuild:
+  Backport connection-hang-fix from 2.4
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openldap-2.4.35.ebuild:
   Stable for sparc, wrt bug #480304

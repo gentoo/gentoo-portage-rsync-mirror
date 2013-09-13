@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.946 2013/09/13 00:27:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.947 2013/09/13 02:30:21 patrick Exp $
+
+  13 Sep 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   13 Sep 2013; Mike Gilbert <floppym@gentoo.org>
   -files/chromium-bug471198.patch, -files/chromium-nss-3.15.patch,

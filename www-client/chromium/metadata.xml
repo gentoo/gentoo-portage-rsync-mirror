@@ -5,7 +5,6 @@
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
 	<use>
 		<flag name="bindist">Disable patent-encumbered HTML5 video codecs</flag>
-		<flag name="system-ffmpeg">Use system ffmpeg instead of bundled ffmpeg.</flag>
 		<flag name="system-sqlite">
 			Use system sqlite instead of bundled sqlite. This breaks WebSQL on websites,
 			please report compatibility issues to https://bugs.gentoo.org .
