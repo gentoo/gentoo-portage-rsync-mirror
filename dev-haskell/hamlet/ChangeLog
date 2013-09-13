@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hamlet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hamlet/ChangeLog,v 1.1 2013/08/26 11:24:59 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hamlet/ChangeLog,v 1.2 2013/09/13 06:15:00 gienah Exp $
+
+*hamlet-1.1.7.2 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +hamlet-1.1.7.2.ebuild:
+  Bump hamlet to 1.1.7.2
 
 *hamlet-1.1.7.1 (26 Aug 2013)
 

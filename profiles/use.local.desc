@@ -1275,8 +1275,13 @@ dev-haskell/monad-control:instancest - If enabled this package will export Monad
 dev-haskell/persistent-sqlite:systemlib - Use the system-wide sqlite library
 dev-haskell/quickcheck:template_haskell - Enable additional test modules requiring Template Haskell support.
 dev-haskell/sendfile:portable - Explicitly enable portable sendfile support (implemented in Haskell)
+dev-haskell/shakespeare:test_export - Test export.
+dev-haskell/shakespeare-js:test_coffee - Test coffee.
+dev-haskell/shakespeare-js:test_export - Test export.
+dev-haskell/shakespeare-js:test_roy - Test roy.
 dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian).
-dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian')
+dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian').
+dev-haskell/skein:reference - Use the reference implementation instead of the optimized one.
 dev-haskell/texmath:cgi - Build texmath-cgi executable.
 dev-haskell/text:developer - operate in developer mode
 dev-haskell/tls:compat - Accept SSLv2 compatible handshake

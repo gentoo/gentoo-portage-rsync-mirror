@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/hjsmin
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hjsmin/ChangeLog,v 1.1 2013/09/13 06:15:45 gienah Exp $
+
+*hjsmin-0.1.4.1 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +hjsmin-0.1.4.1.ebuild,
+  +metadata.xml:
+  Add hjsmin

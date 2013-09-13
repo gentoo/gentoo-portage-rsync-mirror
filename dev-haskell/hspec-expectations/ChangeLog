@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hspec-expectations
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec-expectations/ChangeLog,v 1.1 2013/06/20 23:05:10 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec-expectations/ChangeLog,v 1.2 2013/09/13 06:17:32 gienah Exp $
+
+*hspec-expectations-0.3.3 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +hspec-expectations-0.3.3.ebuild:
+  Bump hspec-expectations to 0.3.3
 
 *hspec-expectations-0.3.2 (20 Jun 2013)
 

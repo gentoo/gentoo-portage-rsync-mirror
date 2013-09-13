@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/cipher-camellia
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cipher-camellia/ChangeLog,v 1.1 2013/09/13 06:06:12 gienah Exp $
+
+*cipher-camellia-0.0.1 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +cipher-camellia-0.0.1.ebuild,
+  +metadata.xml:
+  Add cipher-camellia

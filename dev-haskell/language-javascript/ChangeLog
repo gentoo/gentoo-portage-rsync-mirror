@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/language-javascript
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-javascript/ChangeLog,v 1.1 2013/09/13 06:22:25 gienah Exp $
+
+*language-javascript-0.5.7 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org>
+  +language-javascript-0.5.7.ebuild, +metadata.xml:
+  Add language-javascript
