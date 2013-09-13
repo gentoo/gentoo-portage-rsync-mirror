@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/void
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/void/ChangeLog,v 1.1 2013/06/20 06:07:54 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/void/ChangeLog,v 1.2 2013/09/13 06:39:31 gienah Exp $
+
+*void-0.6.1 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +void-0.6.1.ebuild:
+  Bump void to 0.6.1
 
 *void-0.6 (20 Jun 2013)
 

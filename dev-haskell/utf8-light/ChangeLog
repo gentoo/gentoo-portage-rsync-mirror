@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/utf8-light
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/utf8-light/ChangeLog,v 1.1 2013/09/13 06:38:52 gienah Exp $
+
+*utf8-light-0.4.0.1 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +utf8-light-0.4.0.1.ebuild:
+  Add utf8-light

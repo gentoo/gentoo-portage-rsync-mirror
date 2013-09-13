@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/agda-stdlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/ChangeLog,v 1.3 2013/01/10 12:31:25 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/ChangeLog,v 1.4 2013/09/13 06:56:46 gienah Exp $
+
+*agda-stdlib-0.7 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +agda-stdlib-0.7.ebuild:
+  Bump agda-stdlib to 0.7
 
 *agda-stdlib-0.7_pre20130109 (10 Jan 2013)
 

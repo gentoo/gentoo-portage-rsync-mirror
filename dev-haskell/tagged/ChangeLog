@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/tagged
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagged/ChangeLog,v 1.1 2013/08/25 06:15:15 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagged/ChangeLog,v 1.2 2013/09/13 06:32:41 gienah Exp $
+
+*tagged-0.7 (13 Sep 2013)
+
+  13 Sep 2013; Mark Wright <gienah@gentoo.org> +tagged-0.7.ebuild:
+  Bump tagged to 0.7
 
 *tagged-0.6.1 (25 Aug 2013)
 

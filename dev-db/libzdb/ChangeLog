@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/libzdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.15 2013/07/01 18:57:33 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libzdb/ChangeLog,v 1.16 2013/09/13 06:33:58 patrick Exp $
+
+*libzdb-2.12 (13 Sep 2013)
+
+  13 Sep 2013; Patrick Lauer <patrick@gentoo.org> +libzdb-2.12.ebuild:
+  Bump for #484640
 
 *libzdb-2.11.3 (01 Jul 2013)
 
