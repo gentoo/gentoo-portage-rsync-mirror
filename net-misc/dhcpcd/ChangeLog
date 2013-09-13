@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.371 2013/09/09 22:20:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.372 2013/09/13 20:10:16 williamh Exp $
+
+  13 Sep 2013; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
+  --with-udev and --with-dev are not valid switches to configure, so only use
+  --without-dev and --without-udev if the udev use flag is disabled.
 
   09 Sep 2013; William Hubbs <williamh@gentoo.org> ChangeLog,
   dhcpcd-9999.ebuild:

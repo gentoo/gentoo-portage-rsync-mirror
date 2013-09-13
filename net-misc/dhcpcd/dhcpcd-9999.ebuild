@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.6 2013/09/09 22:13:01 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.7 2013/09/13 20:10:16 williamh Exp $
 
 EAPI=5
 
@@ -35,7 +35,9 @@ src_prepare()
 
 src_configure()
 {
-	local hooks="--with-hook=ntp.conf"
+	local dev hooks
+	use udev || dev="--without-dev --without-udev"
+	hooks="--with-hook=ntp.conf"
 	use elibc_glibc && hooks="${hooks} --with-hook=yp.conf"
 	econf \
 			--prefix="${EPREFIX}" \
@@ -43,7 +45,7 @@ src_configure()
 			--dbdir="${EPREFIX}/var/lib/dhcpcd" \
 		--localstatedir="${EPREFIX}/var" \
 		$(use_enable ipv6) \
-		$(use_with udev) \
+		${dev} \
 		${hooks}
 }
 
