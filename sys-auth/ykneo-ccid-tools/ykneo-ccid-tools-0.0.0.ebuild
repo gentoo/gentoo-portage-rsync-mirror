@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykneo-ccid-tools/ykneo-ccid-tools-0.0.0.ebuild,v 1.1 2013/08/12 15:39:06 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/ykneo-ccid-tools/ykneo-ccid-tools-0.0.0.ebuild,v 1.2 2013/09/13 15:42:23 wschlich Exp $
 
 EAPI=5
 
 inherit eutils udev
 
-DESCRIPTION="Library and tool for personalization of Yubico's YubiKey"
+DESCRIPTION="Tools for Yubico's YubiKey NEO in CCID mode"
 SRC_URI="http://yubico.github.io/ykneo-ccid-tools/releases/${P}.tar.gz"
 HOMEPAGE="https://github.com/Yubico/ykneo-ccid-tools"
 
