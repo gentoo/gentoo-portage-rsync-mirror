@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Convert-BinHex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.20 2013/09/03 06:12:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.21 2013/09/13 05:23:25 patrick Exp $
+
+*Convert-BinHex-1.123.0 (13 Sep 2013)
+
+  13 Sep 2013; Patrick Lauer <patrick@gentoo.org>
+  +Convert-BinHex-1.123.0.ebuild:
+  Bump
 
 *Convert-BinHex-1.122.0 (03 Sep 2013)
 
