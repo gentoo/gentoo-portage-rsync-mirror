@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.190 2013/04/19 18:04:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.191 2013/09/13 22:41:08 eva Exp $
+
+*vino-3.8.1-r1 (14 Sep 2013)
+
+  14 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> -vino-3.6.2-r1.ebuild,
+  -vino-3.8.0.ebuild, +vino-3.8.1-r1.ebuild,
+  +files/vino-3.8.1-new-client.patch:
+  Apply a security fix. Clean up old revisions.
 
 *vino-3.8.1 (19 Apr 2013)
 

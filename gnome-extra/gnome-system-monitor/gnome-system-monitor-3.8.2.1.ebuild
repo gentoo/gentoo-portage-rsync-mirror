@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.8.2.1.ebuild,v 1.1 2013/05/14 21:37:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.8.2.1.ebuild,v 1.2 2013/09/13 22:59:16 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="
 	>=x11-libs/gtk+-3.5.12:3[X(+)]
 	>=x11-themes/gnome-icon-theme-2.31
 	>=dev-cpp/gtkmm-3.3.18:3.0
-	>=dev-cpp/glibmm-2.27:2
+	>=dev-cpp/glibmm-2.34:2
 	>=dev-libs/libxml2-2.0:2
 	>=gnome-base/librsvg-2.35:2
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dibbler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.17 2013/04/05 13:59:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.18 2013/09/13 22:58:03 hwoarang Exp $
+
+  13 Sep 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  drop to maintainer-needed
 
 *dibbler-0.8.3 (05 Apr 2013)
 

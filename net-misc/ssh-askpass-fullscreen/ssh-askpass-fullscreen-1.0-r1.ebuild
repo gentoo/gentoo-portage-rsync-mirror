@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-1.0-r1.ebuild,v 1.9 2013/04/01 18:25:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh-askpass-fullscreen/ssh-askpass-fullscreen-1.0-r1.ebuild,v 1.10 2013/09/13 22:44:44 eva Exp $
 
 EAPI=4
 
@@ -23,6 +23,10 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# https://github.com/atj/ssh-askpass-fullscreen/pull/1
 	epatch "${FILESDIR}/${P}-libX11.patch"
+
+	# automake-1.13 fix, bug #468764 	
+	sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.ac || die
+
 	eautoreconf
 }
 
