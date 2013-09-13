@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/userspace-rcu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/userspace-rcu/ChangeLog,v 1.7 2013/07/15 08:42:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/userspace-rcu/ChangeLog,v 1.8 2013/09/12 23:33:47 radhermit Exp $
+
+*userspace-rcu-0.8.0 (12 Sep 2013)
+*userspace-rcu-0.7.8 (12 Sep 2013)
+
+  12 Sep 2013; Tim Harder <radhermit@gentoo.org> +userspace-rcu-0.7.8.ebuild,
+  +userspace-rcu-0.8.0.ebuild:
+  Version bumps, add subslot for latest version.
 
   15 Jul 2013; Tim Harder <radhermit@gentoo.org> userspace-rcu-0.7.7.ebuild:
   Make myeconfargs a locally scoped variable.
