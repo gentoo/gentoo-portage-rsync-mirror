@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.69 2013/03/05 23:06:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.70 2013/09/13 21:45:53 eva Exp $
+
+  13 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> wv-1.2.9-r1.ebuild:
+  Automake-1.13 fix, bug #467620
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -wv-1.2.3-r1.ebuild,
   -wv-1.2.7.ebuild, -wv-1.2.9.ebuild:

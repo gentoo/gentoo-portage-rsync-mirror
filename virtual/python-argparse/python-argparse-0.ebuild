@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/python-argparse-0.ebuild,v 1.5 2013/09/05 19:33:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/python-argparse/python-argparse-0.ebuild,v 1.6 2013/09/13 21:41:27 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -15,20 +15,5 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE=""
 
-setup_globals() {
-	local i
-
-	RDEPEND=
-	for i in "${PYTHON_COMPAT[@]}"; do
-		case "${i}" in
-			python2_5|python2_6|python3_1|jython2_5)
-				# Note: add USE-deps when dev-python/argparse starts
-				# supporting PYTHON_TARGETS
-				RDEPEND+=" python_targets_${i}? ( dev-python/argparse )"
-				;;
-			*)
-				;;
-		esac
-	done
-}
-setup_globals
+RDEPEND="${PYTHON_DEPS}
+	$(python_gen_cond_dep "dev-python/argparse" python2_6)"

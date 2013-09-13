@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/encore-0.3.ebuild,v 1.2 2013/04/05 18:17:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/encore/encore-0.3.ebuild,v 1.3 2013/09/13 21:33:08 mgorny Exp $
 
 EAPI=5
 
@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
-		dev-python/futures[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
+		virtual/python-futures[${PYTHON_USEDEP}]
 	)"
 
 DOCS=( dataflow.txt )

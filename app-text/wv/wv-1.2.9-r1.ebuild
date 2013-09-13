@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9-r1.ebuild,v 1.13 2012/06/04 04:08:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-1.2.9-r1.ebuild,v 1.14 2013/09/13 21:45:53 eva Exp $
 
 EAPI="3"
 
@@ -32,6 +32,10 @@ src_prepare() {
 		sed -i -e '/SUBDIRS/d' GNUmakefile.am || die
 		sed -i -e '/\/GNUmakefile/d' configure.ac || die
 		sed -i -e '/wv[[:upper:]]/d' configure.ac || die
+
+		# automake-1.13 fix, bug #467620
+		sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.ac || die
+
 		eautoreconf
 	fi
 }

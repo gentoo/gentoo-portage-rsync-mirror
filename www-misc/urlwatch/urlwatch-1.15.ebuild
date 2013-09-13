@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/urlwatch-1.15.ebuild,v 1.1 2012/09/03 19:10:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/urlwatch-1.15.ebuild,v 1.2 2013/09/13 21:34:32 mgorny Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5 3:3.2"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="xmpp"
 
-DEPEND="dev-python/futures"
+DEPEND="virtual/python-futures"
 RDEPEND="${DEPEND}
 	xmpp? ( dev-python/xmpppy )
 	|| ( www-client/lynx app-text/html2text )"
