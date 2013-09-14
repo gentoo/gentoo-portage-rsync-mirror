@@ -1,21 +1,22 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-9999.ebuild,v 1.7 2013/09/13 23:51:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-0.74.ebuild,v 1.1 2013/09/13 23:45:44 hwoarang Exp $
 
-EAPI="4"
-
-inherit git-2
+EAPI="5"
 
 DESCRIPTION="Small footprint implementation of Tcl programming language"
 HOMEPAGE="http://jim.tcl.tk"
-EGIT_REPO_URI="http://repo.or.cz/r/jimtcl.git"
+SRC_URI="https://github.com/msteveb/jimtcl/zipball/${PV} -> ${P}.zip"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="doc static-libs"
 DEPEND="doc? ( app-text/asciidoc )
 	app-arch/unzip"
+
+GIT_HASH="9a3562c"
+S="${WORKDIR}"/msteveb-${PN}-${GIT_HASH}
 
 src_configure() {
 	! use static-libs && myconf=--with-jim-shared
@@ -32,7 +33,7 @@ src_install() {
 	use static-libs && {
 		dolib.a libjim.a
 	} || {
-		dolib.so libjim.so*
+		dolib.so libjim.so.${PV}
 	}
 	insinto /usr/include
 	doins jim.h jimautoconf.h jim-subcmd.h jim-signal.h

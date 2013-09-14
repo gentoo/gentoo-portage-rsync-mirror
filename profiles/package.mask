@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15102 2013/09/13 09:18:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15103 2013/09/13 23:40:51 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -937,6 +937,7 @@ sys-auth/pam_keystore
 =app-pda/libopensync-plugin-vformat-9999
 app-portage/layman-dbtools
 =dev-embedded/openocd-9999
+~dev-lang/jimtcl-9999
 ~dev-libs/libg15-9999
 =net-print/cups-9999
 # rdep of dev-vcs/fromcvs

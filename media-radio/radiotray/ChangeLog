@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/radiotray
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.30 2013/07/22 11:07:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.31 2013/09/13 23:58:59 hwoarang Exp $
+
+  13 Sep 2013; Markos Chandras <hwoarang@gentoo.org> radiotray-0.7.2.ebuild,
+  radiotray-0.7.3-r2.ebuild, radiotray-9999.ebuild:
+  Add missing sys-apps/dbus[X] dependency per bug #475642
 
 *radiotray-0.7.3-r2 (22 Jul 2013)
 

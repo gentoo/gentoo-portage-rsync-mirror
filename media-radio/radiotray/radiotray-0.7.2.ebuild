@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.2.ebuild,v 1.6 2012/12/02 16:57:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/radiotray-0.7.2.ebuild,v 1.7 2013/09/13 23:58:59 hwoarang Exp $
 
 EAPI=3
 
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="dev-python/dbus-python
+RDEPEND="sys-apps/dbus[X]
+	dev-python/dbus-python
 	dev-python/gst-python:0.10
 	dev-python/pygtk
 	dev-python/lxml
