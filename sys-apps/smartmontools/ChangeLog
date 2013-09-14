@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.132 2013/08/11 16:37:40 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.133 2013/09/14 10:32:46 hwoarang Exp $
+
+  14 Sep 2013; Markos Chandras <hwoarang@gentoo.org> files/smartd.rc:
+  Use /run instead of /var/run. Bug #476242
 
   11 Aug 2013; Sven Vermeulen <swift@gentoo.org> smartmontools-6.1.ebuild,
   smartmontools-6.2.ebuild, smartmontools-9999.ebuild:

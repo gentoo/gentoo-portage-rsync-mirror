@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06.95-r1.ebuild,v 1.4 2012/04/26 13:55:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06.95-r1.ebuild,v 1.5 2013/09/14 10:49:40 hwoarang Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Handy console-based calculator utility"
 HOMEPAGE="http://www.gnu.org/software/bc/bc.html"
@@ -36,6 +36,10 @@ src_configure() {
 	fi
 	use static && append-ldflags -static
 	econf ${myconf}
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)" || die
 }
 
 src_install() {

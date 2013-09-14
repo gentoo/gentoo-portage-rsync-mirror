@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.20-r1.ebuild,v 1.2 2013/09/14 10:14:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.20-r1.ebuild,v 1.3 2013/09/14 10:44:44 hwoarang Exp $
 
 EAPI="4"
 
@@ -17,6 +17,10 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 src_prepare() {
-	export AR="$(tc-getAR)"
 	append-lfs-flags
+}
+
+src_configure() {
+	tc-export AR
+	default
 }

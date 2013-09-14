@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.41 2012/04/26 13:55:58 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.42 2013/09/14 10:49:40 hwoarang Exp $
+
+  14 Sep 2013; Markos Chandras <hwoarang@gentoo.org> bc-1.06.95-r1.ebuild:
+  Respect AR. Bug #484860
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org> bc-1.06.95-r1.ebuild:
   keyword ~amd64-fbsd

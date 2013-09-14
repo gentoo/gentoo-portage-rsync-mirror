@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.7-r1.ebuild,v 1.9 2013/09/14 07:39:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.7-r1.ebuild,v 1.10 2013/09/14 10:54:24 ago Exp $
 
 # emacs support disabled due to #99533 #335900
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.nico.schottelius.org/software/${PN}/archives/${P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="selinux static-libs"
 
 RDEPEND="sys-libs/ncurses
