@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.80 2013/09/14 17:28:42 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.81 2013/09/14 17:32:35 aidecoe Exp $
+
+  14 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -notmuch-0.10.2-r3.ebuild, -notmuch-0.11.1-r3.ebuild,
+  -files/0.10.2-build-with-gmime-2.4-only.patch,
+  -files/0.10.2-emacsui-mml-tags-quoting-fix.patch,
+  -files/0.10.2-emacsui-mml-tags-quoting-test.patch,
+  -files/0.10.2-fix-test-build.patch,
+  -files/0.10.2-lib-call-g_mime_init-db-open.patch,
+  -files/0.11.1-build-with-gmime-2.4-only.patch:
+  Removed the oldest versions: 0.10 and 0.11.
 
   14 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -files/0.15-0001-lib-Makefile.local-depend-on-libs-we-a.patch,
