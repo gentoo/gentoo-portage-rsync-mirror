@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15104 2013/09/14 07:05:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15105 2013/09/14 13:59:29 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -377,8 +377,20 @@ net-irc/xchat-otr
 # Sun JDK and JRE contain critical vulnerabilities and receive no further
 # updates; masking to make users aware of this, users that still need this
 # package and have no alternative can unmask at their own risk. See bug #473830.
+#
+# This is continued by Oracle Corproation, which has acquired Sun Microsystems
+# in early 2010; as per http://en.wikipedia.org/wiki/Sun_acquisition_by_Oracle
+#
+# Users are suggested to upgrade to one of the newer Oracle packages like
+# dev-java/oracle-jdk-bin or dev-java/oracle/jre-bin or choose another
+# alternative we provide; eg. the IBM JDK/JRE or the open source IcedTea.
+#
+# Most of these packages provide a jce USE flag for those whom need the
+# Java Cryptographic Extension Unlimited Strength Policy USE flag; whether that
+# works depends from VM to VM, it seems to work for most except for the IBM VMs.
 dev-java/sun-jdk
 dev-java/sun-jre-bin
+dev-java/sun-jce-bin
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (30 Jun 2013)
 # temp masked for testing, wrt bug 474888
