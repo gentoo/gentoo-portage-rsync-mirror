@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.14.1_pre20130901.ebuild,v 1.1 2013/09/01 11:10:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.14.1_pre20130901.ebuild,v 1.2 2013/09/14 09:08:34 pacho Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -15,10 +15,10 @@ SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}.tar.xz"
 
 LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0/12" # subslot = .so version
-IUSE="doc examples +introspection +opengl gles2 +pango profile"
+# doc and profile disable for now due bugs #484750 and #483332
+IUSE="examples +introspection +opengl gles2 +pango" # doc profile
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-# XXX: need uprof for optional profiling support
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
 	x11-libs/cairo:=
@@ -43,17 +43,19 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/gtk-doc-am-1.13
 	sys-devel/gettext
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.13 )
 	test? (	app-admin/eselect-opengl
 		media-libs/mesa[classic] )
 "
+#	doc? ( >=dev-util/gtk-doc-1.13 )
 # Need classic mesa swrast for tests, llvmpipe causes a test failure
 
 S="${WORKDIR}/${PN}-1.14.1"
 
 src_configure() {
-	# XXX: think about kms-egl, quartz, sdl, wayland
+	# TODO: think about kms-egl, quartz, sdl, wayland
 	# Prefer gl over gles2 if both are selected
+	# Profiling needs uprof, which is not available in portage yet, bug #484750
+	# FIXME: Doesn't provide prebuilt docs, but they can neither be rebuilt, bug #483332
 	gnome2_src_configure \
 		--disable-examples-install \
 		--disable-maintainer-flags \
@@ -61,7 +63,7 @@ src_configure() {
 		--enable-deprecated        \
 		--enable-gdk-pixbuf        \
 		--enable-glib              \
-		$(use_enable doc gtk-doc)  \
+		--disable-gtk-doc	   \
 		$(use_enable opengl glx)   \
 		$(use_enable opengl gl)    \
 		$(use_enable gles2)        \
@@ -70,7 +72,9 @@ src_configure() {
 		$(usex gles2 --with-default-driver=$(usex opengl gl gles2)) \
 		$(use_enable introspection) \
 		$(use_enable pango cogl-pango) \
-		$(use_enable profile)
+		--disable-profile
+#		$(use_enable doc gtk-doc)  \
+#		$(use_enable profile)
 }
 
 src_test() {

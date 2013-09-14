@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.11.0.ebuild,v 1.1 2013/09/12 06:41:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-1.11.0.ebuild,v 1.2 2013/09/14 09:30:50 prometheanfire Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 CONFIG_CHECK="~NET_CLS_ACT ~NET_CLS_U32 ~NET_SCH_INGRESS ~NET_ACT_POLICE ~IPV6 ~TUN"
-MODULE_NAMES="brcompat(net:${S}/datapath/linux) openvswitch(net:${S}/datapath/linux)"
+MODULE_NAMES="openvswitch(net:${S}/datapath/linux)"
 BUILD_TARGETS="all"
 
 pkg_setup() {
@@ -90,9 +90,6 @@ src_install() {
 		rm -r "${ED}/usr/share/openvswitch/python"
 		python_optimize "${ED}/usr/share/ovsdbmonitor"
 	fi
-	# not working without the brcompat_mod kernel module which did not get
-	# included in the kernel and we can't build it anymore
-	rm "${D}/usr/sbin/ovs-brcompatd" "${D}/usr/share/man/man8/ovs-brcompatd.8"
 
 	keepdir /var/{lib,log}/openvswitch
 	keepdir /etc/ssl/openvswitch

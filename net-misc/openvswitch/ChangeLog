@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvswitch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.12 2013/09/12 08:00:38 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.13 2013/09/14 09:30:50 prometheanfire Exp $
+
+  14 Sep 2013; Matthew Thode <prometheanfire@gentoo.org>
+  openvswitch-1.11.0.ebuild:
+  fixes ovs-1.11.0 build failure
 
   12 Sep 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
   formally adding myself as a maintainer
