@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.3-r1.ebuild,v 1.1 2013/09/14 14:20:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.3-r1.ebuild,v 1.2 2013/09/14 22:05:37 pacho Exp $
 
 EAPI="5"
 inherit eutils readme.gentoo systemd
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~mips ~x86"
 IUSE="doc"
 
-DEPEND="doc? (
-		dev-texlive/texlive-latex
-		dev-tex/floatflt
+DEPEND="doc? ( || (
+		dev-texlive/texlive-latexextra
+		dev-tex/floatflt )
 	)"
 RDEPEND=""
 
