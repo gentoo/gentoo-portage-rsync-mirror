@@ -11,5 +11,5 @@ RDEPEND=>=media-video/vdr-1.6.0_p2-r1[graphtft] media-libs/imlib2[png,jpeg] gnom
 RESTRICT=test
 SLOT=0
 SRC_URI=http://vdr.websitec.de/download/vdr-graphtft/vdr-graphtft-0.3.2.24.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a09e9d3f51cc9119897f6970ba2f9d52	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin	b34d39bcf21b36fb278c28e40c967f15
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin	b34d39bcf21b36fb278c28e40c967f15
 _md5_=4678f3e8b90e892495c419df6ac32df5

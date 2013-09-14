@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND==dev-python/twisted-core-10* =dev-python/twisted-web-10* =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://twistedmatrix.com/Releases/Words/10.2/TwistedWords-10.2.0.tar.bz2
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	a09e9d3f51cc9119897f6970ba2f9d52	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	twisted	fcb518bd0ad842f8f6ed16168341f5d4	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	twisted	fcb518bd0ad842f8f6ed16168341f5d4	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=ab737521a68bd2dd0b8a91df9e7b5e1c

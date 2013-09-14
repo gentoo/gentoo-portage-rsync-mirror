@@ -10,5 +10,5 @@ RDEPEND=>=dev-vcs/mercurial-2.4.2 userland_GNU? ( >=sys-apps/coreutils-8.5 ) pyt
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_pypy2_0 )
 SLOT=0
 SRC_URI=mirror://pypi/p/python-hglib/python-hglib-1.0.tar.gz
-_eclasses_=distutils-r1	d260e4e05b2ca2981f6b6ab937e7ab9d	eutils	a09e9d3f51cc9119897f6970ba2f9d52	multibuild	66ecd0bd5a9e66ba44af9d01ac66360f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	d533aff6767097bf232a1dcc578d6a3c	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils-r1	d260e4e05b2ca2981f6b6ab937e7ab9d	eutils	4878e7f88afc0ba0866ac112190b0fd4	multibuild	66ecd0bd5a9e66ba44af9d01ac66360f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	d533aff6767097bf232a1dcc578d6a3c	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=0b734ef022935fb21b278652ba1506bf

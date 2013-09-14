@@ -9,5 +9,5 @@ PDEPEND=bash-completion? ( app-shells/bash-completion )
 RDEPEND=>=dev-lang/perl-5.8.0-r12 >=dev-perl/DateManip-5.40 dev-perl/libwww-perl bash-completion? ( app-admin/eselect )
 SLOT=0
 SRC_URI=mirror://gentoo//genlop-0.30.8.tar.gz
-_eclasses_=bash-completion	f913ed18b57a2d3372c4291680454db4	eutils	a09e9d3f51cc9119897f6970ba2f9d52	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion	f913ed18b57a2d3372c4291680454db4	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b30ddf541ef065c718dee5b734b27068

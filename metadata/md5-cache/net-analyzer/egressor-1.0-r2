@@ -8,5 +8,5 @@ LICENSE=egressor
 RDEPEND=net-libs/libpcap dev-perl/Net-RawIP dev-lang/perl
 SLOT=0
 SRC_URI=http://packetfactory.openwall.net/projects/egressor/egressor_release1.0.tar.gz
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=0673d5284a2853ee39168adf2c17c407

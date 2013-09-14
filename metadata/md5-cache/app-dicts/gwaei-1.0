@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=net-misc/curl-7.18 >=dev-libs/glib-2.8:2 gtk? ( >=gnome-base/gconf-2:2 >=x11-libs/gtk+-2.14:2 >=x11-libs/libsexy-0.1.11 ) nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://sourceforge/gwaei/gwaei-1.0.tar.gz
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	gnome2-utils	cf14abfc65f26151fd2e33d722422ee3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	gnome2-utils	cf14abfc65f26151fd2e33d722422ee3	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8c8f4b084b77840d4e7f812858614980

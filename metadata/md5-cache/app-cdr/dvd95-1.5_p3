@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=gnome-base/libgnomeui-2 dev-libs/libxml2 media-libs/libdvdread mpeg? ( media-libs/libmpeg2 ) media-video/mplayer
 SLOT=0
 SRC_URI=mirror://sourceforge/dvd95/dvd95-1.5p3.tar.gz
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=3b67a4d6f87a8c55eed4271a510d9e7f

@@ -9,5 +9,5 @@ LICENSE=AGPL-3 GPL-1 GPL-2 GPL-3 BitstreamVera public-domain
 RDEPEND=dev-db/sqlite:3 dev-libs/boost[threads(+)] dev-libs/protobuf dev-libs/libgcrypt dev-libs/tinyxml[stl] amd64? ( net-libs/libircclient ) ppc? ( >=net-libs/libircclient-1.6-r2 ) x86? ( net-libs/libircclient ) >=net-misc/curl-7.16 dev-qt/qtcore:4 virtual/gsasl !dedicated? ( media-libs/libsdl:0 media-libs/sdl-mixer[mod,vorbis] dev-qt/qtgui:4 )
 SLOT=0
 SRC_URI=mirror://sourceforge/pokerth/PokerTH-1.0-src.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a09e9d3f51cc9119897f6970ba2f9d52	flag-o-matic	2ff578fb151da221e1797f12e2990e72	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8652645209d34f2d825021f702af0a5d

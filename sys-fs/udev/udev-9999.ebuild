@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.255 2013/09/13 10:51:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.256 2013/09/14 19:13:59 ssuominen Exp $
 
 EAPI=5
 
@@ -211,6 +211,7 @@ multilib_src_configure() {
 		--with-html-dir=/usr/share/doc/${PF}/html
 		--with-rootprefix=
 		--without-python
+		--disable-python-devel
 		--disable-audit
 		--disable-coredump
 		--disable-hostnamed

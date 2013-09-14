@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=tcpd? ( sys-apps/tcp-wrappers ) selinux? ( sec-policy/selinux-tftp ) readline? ( sys-libs/readline ) pcre? ( dev-libs/libpcre ) !net-ftp/netkit-tftp !net-ftp/tftp-hpa
 SLOT=0
 SRC_URI=ftp://ftp.mamalinux.com/pub/atftp/atftp-0.7.tar.gz mirror://debian/pool/main/a/atftp/atftp_0.7-11.diff.gz
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c5bbc53b278c2ba486a3d85e6b78579f

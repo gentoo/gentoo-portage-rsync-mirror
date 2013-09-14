@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.426 2013/09/13 11:22:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.427 2013/09/14 19:00:10 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1648,22 +1648,35 @@ prune_libtool_files() {
 einstalldocs() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	local dodoc_opts=-r
+	has ${EAPI} 0 1 2 3 && dodoc_opts=
+
 	if ! declare -p DOCS &>/dev/null ; then
 		local d
 		for d in README* ChangeLog AUTHORS NEWS TODO CHANGES \
 				THANKS BUGS FAQ CREDITS CHANGELOG ; do
-			[[ -s ${d} ]] && dodoc "${d}"
+			if [[ -s ${d} ]] ; then
+				dodoc "${d}" || die
+			fi
 		done
 	elif [[ $(declare -p DOCS) == "declare -a"* ]] ; then
-		[[ ${DOCS[@]} ]] && dodoc -r "${DOCS[@]}"
+		if [[ ${DOCS[@]} ]] ; then
+			dodoc ${dodoc_opts} "${DOCS[@]}" || die
+		fi
 	else
-		[[ ${DOCS} ]] && dodoc -r ${DOCS}
+		if [[ ${DOCS} ]] ; then
+			dodoc ${dodoc_opts} ${DOCS} || die
+		fi
 	fi
 
 	if [[ $(declare -p HTML_DOCS 2>/dev/null) == "declare -a"* ]] ; then
-		[[ ${HTML_DOCS[@]} ]] && dohtml -r "${HTML_DOCS[@]}"
+		if [[ ${HTML_DOCS[@]} ]] ; then
+			dohtml -r "${HTML_DOCS[@]}" || die
+		fi
 	else
-		[[ ${HTML_DOCS} ]] && dohtml -r ${HTML_DOCS}
+		if [[ ${HTML_DOCS} ]] ; then
+			dohtml -r ${HTML_DOCS} || die
+		fi
 	fi
 
 	return 0

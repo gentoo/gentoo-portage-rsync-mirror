@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/latex-base emacs? ( virtual/emacs ) app-arch/unzip virtual/latex-base
 SLOT=0
 SRC_URI=ftp://ftp.ffii.org/pub/cjk/cjk-4.8.3.tar.gz mirror://gentoo/cjk-4.8.3-fonts.zip doc? ( ftp://ftp.ffii.org/pub/cjk/cjk-4.8.3-doc.tar.gz )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	elisp-common	57a17c02cd0f6f0c423e3d6de5c83f13	eutils	a09e9d3f51cc9119897f6970ba2f9d52	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	elisp-common	57a17c02cd0f6f0c423e3d6de5c83f13	eutils	4878e7f88afc0ba0866ac112190b0fd4	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b49b7cf283f561993dd943afb279bb77

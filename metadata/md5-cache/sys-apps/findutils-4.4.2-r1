@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=selinux? ( sys-libs/libselinux ) nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=mirror://gnu-alpha/findutils/findutils-4.4.2.tar.gz mirror://gnu/findutils/findutils-4.4.2.tar.gz
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=4512e0c1929b2f55a210597633f8e8e8

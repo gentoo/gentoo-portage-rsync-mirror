@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libxml2 sys-apps/dbus virtual/pam python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec:0[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/dbus-python dev-python/pygobject:2 sys-apps/pmount sys-fs/udisks:0
 SLOT=0
 SRC_URI=mirror://sourceforge/pamusb/pam_usb-0.5.0.tar.gz
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	python-single-r1	007be4716d2d4dad097178465e474957	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	python-single-r1	007be4716d2d4dad097178465e474957	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f64809eaf8421e0c6782863cf5c3aaaf

@@ -10,5 +10,5 @@ PDEPEND=emacs? ( app-emacs/po-mode )
 RDEPEND=virtual/libiconv dev-libs/libxml2 sys-libs/ncurses dev-libs/expat acl? ( virtual/acl ) java? ( >=virtual/jdk-1.4 ) !git? ( cvs? ( dev-vcs/cvs ) ) git? ( dev-vcs/git ) java? ( >=virtual/jre-1.4 ) java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=mirror://gnu/gettext/gettext-0.18.1.1.tar.gz
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	flag-o-matic	2ff578fb151da221e1797f12e2990e72	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	libtool	b1c8688e60f9580bcb9bb46e08737eb1	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	libtool	b1c8688e60f9580bcb9bb46e08737eb1	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=4df096213e9c48c92e5fbe354fcd7449

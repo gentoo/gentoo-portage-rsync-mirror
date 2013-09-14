@@ -10,5 +10,5 @@ RDEPEND=dbus? ( sys-apps/dbus ) idn? ( net-dns/libidn ) lua? ( dev-lang/lua ) co
 REQUIRED_USE=lua? ( script ) dhcp-tools? ( dhcp ) s390? ( !conntrack )
 SLOT=0
 SRC_URI=http://www.thekelleys.org.uk/dnsmasq/dnsmasq-2.65.tar.xz
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=dbf34660a0f7213e5c9bcdd15cd9b0f9

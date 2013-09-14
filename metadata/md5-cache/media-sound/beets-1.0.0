@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-python/munkres dev-python/python-musicbrainz-ngs dev-python/unidecode media-libs/mutagen bpd? ( dev-python/bluelet ) chroma? ( dev-python/pyacoustid ) convert? ( media-video/ffmpeg:0[encode] ) doc? ( dev-python/sphinx ) echonest_tempo? ( dev-python/pyechonest ) lastgenre? ( dev-python/pylast ) replaygain? ( || ( media-sound/mp3gain media-sound/aacgain ) ) web? ( dev-python/flask ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[sqlite] =dev-lang/python-2.6*[sqlite] )
 SLOT=0
 SRC_URI=http://beets.googlecode.com/files/beets-1.0.0.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	a09e9d3f51cc9119897f6970ba2f9d52	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=63c57c9b6fb78779ebaf772d691c2727

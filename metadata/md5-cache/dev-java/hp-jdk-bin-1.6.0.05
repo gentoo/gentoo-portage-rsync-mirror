@@ -10,5 +10,5 @@ RDEPEND==dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-conf
 RESTRICT=fetch
 SLOT=1.6
 SRC_URI=hppa-hpux? ( jdk6_16005_pa.depot ) ia64-hpux? ( jdk6_16005_ia.depot )
-_eclasses_=eutils	a09e9d3f51cc9119897f6970ba2f9d52	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=2a1195329438d933833b478059dd7ce6

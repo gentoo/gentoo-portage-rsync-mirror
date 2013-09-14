@@ -10,5 +10,5 @@ RDEPEND=>=net-libs/ptlib-2.10.10:=[stun,debug=,audio?,dtmf,http,ipv6?,ldap?,ssl?
 REQUIRED_USE=x264-static? ( x264 ) h281? ( h224 ) sip? ( sipim )
 SLOT=0
 SRC_URI=mirror://sourceforge/opalvoip/opal-3.10.10.tar.bz2 doc? ( mirror://sourceforge/opalvoip/opal-3.10.10-htmldoc.tar.bz2 )
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	a09e9d3f51cc9119897f6970ba2f9d52	flag-o-matic	2ff578fb151da221e1797f12e2990e72	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=0659039f357d4c3ba914e113da0dbecd
