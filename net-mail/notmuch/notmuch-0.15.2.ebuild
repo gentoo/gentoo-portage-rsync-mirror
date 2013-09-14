@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.15.2.ebuild,v 1.4 2013/09/06 13:06:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.15.2.ebuild,v 1.5 2013/09/14 17:26:31 aidecoe Exp $
 
 EAPI=4
 
@@ -51,7 +51,6 @@ RDEPEND="${CDEPEND}
 	zsh-completion? ( app-shells/zsh )
 	"
 
-PATCHES=( )
 DOCS=( AUTHORS NEWS README )
 SITEFILE="50${PN}-gentoo.el"
 SITEFILE_PICK="60${PN}-pick-gentoo.el"
@@ -74,10 +73,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	local p
-	for p in "${PATCHES[@]}"; do
-		epatch "${p}"
-	done
+	epatch "${FILESDIR}/${PV}-0001-test-exit-with-nonzero-value-when-not-.patch"
 
 	default
 	bindings python distutils_src_prepare

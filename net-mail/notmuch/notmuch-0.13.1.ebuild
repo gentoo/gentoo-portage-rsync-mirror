@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.13.1.ebuild,v 1.4 2013/09/06 13:06:27 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.13.1.ebuild,v 1.5 2013/09/14 17:26:31 aidecoe Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2:2.6 3:3.2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.[45] 3.1"
 
-inherit elisp-common pax-utils distutils
+inherit elisp-common eutils pax-utils distutils
 
 DESCRIPTION="Thread-based e-mail indexer, supporting quick search and tagging"
 HOMEPAGE="http://notmuchmail.org/"
@@ -67,6 +67,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${PV}-0001-test-exit-with-nonzero-value-when-not-.patch"
 	default
 	bindings python distutils_src_prepare
 }

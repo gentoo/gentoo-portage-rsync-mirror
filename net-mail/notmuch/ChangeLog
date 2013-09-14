@@ -1,6 +1,21 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.78 2013/09/06 13:10:15 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.80 2013/09/14 17:28:42 aidecoe Exp $
+
+  14 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -files/0.15-0001-lib-Makefile.local-depend-on-libs-we-a.patch,
+  -files/0.15.1-0001-lib-Makefile.local-depend-on-libs-we-a.patch:
+  Removed old, unused patches.
+
+  14 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.12.ebuild,
+  notmuch-0.13.1.ebuild, notmuch-0.14-r1.ebuild, notmuch-0.15.2.ebuild,
+  notmuch-0.16-r1.ebuild,
+  +files/0.12-0001-test-exit-with-nonzero-value-when-not-.patch,
+  +files/0.13.1-0001-test-exit-with-nonzero-value-when-not-.patch,
+  +files/0.14-0001-test-exit-with-nonzero-value-when-not-.patch,
+  +files/0.15.2-0001-test-exit-with-nonzero-value-when-not-.patch,
+  +files/0.16-0001-test-exit-with-nonzero-value-when-not-.patch:
+  Ensure test phase fails if any test in suite fails. Rels bug #483988.
 
   06 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.16.ebuild:
   Removing old revision of 0.16 version.
