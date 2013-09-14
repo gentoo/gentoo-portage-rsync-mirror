@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.100.ebuild,v 1.2 2013/09/14 14:39:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.100-r1.ebuild,v 1.1 2013/09/14 20:49:13 floppym Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev
@@ -153,14 +153,13 @@ src_configure() {
 		$(use_enable selinux) \
 		--enable-pkgconfig \
 		--with-confdir="${EPREFIX}"/etc \
-		--sbindir="${EPREFIX}"/sbin \
+		--exec-prefix="${EPREFIX}" \
 		--with-staticdir="${EPREFIX}"/sbin \
 		--libdir="${EPREFIX}/$(get_libdir)" \
 		--with-usrlibdir="${EPREFIX}/usr/$(get_libdir)" \
 		--with-default-dm-run-dir=/run \
 		--with-default-run-dir=/run/lvm \
 		--with-default-locking-dir=/run/lock/lvm \
-		--with-dmeventd-path=/sbin/dmeventd \
 		--with-default-pid-dir=/run \
 		$(use_enable udev udev_rules) \
 		$(use_enable udev udev_sync) \
