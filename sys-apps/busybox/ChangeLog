@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.353 2013/09/12 17:38:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.354 2013/09/14 07:43:18 ago Exp $
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> busybox-1.21.0.ebuild:
+  Stable for ia64, wrt bug #461372
 
   12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> busybox-1.21.0.ebuild:
   Stable for ppc, wrt bug #461372

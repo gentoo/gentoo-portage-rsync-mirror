@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/patsy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/patsy/ChangeLog,v 1.1 2013/08/11 18:05:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/patsy/ChangeLog,v 1.2 2013/09/14 07:44:16 mgorny Exp $
+
+  14 Sep 2013; Michał Górny <mgorny@gentoo.org> patsy-0.2.0.ebuild:
+  Call nosetests via the wrapper wrt bug #484410. Approved by gienah.
 
 *patsy-0.2.0 (11 Aug 2013)
 
