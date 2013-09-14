@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.171 2013/09/13 11:27:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.172 2013/09/14 08:47:56 pacho Exp $
+
+*systemd-206-r5 (14 Sep 2013)
+
+  14 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/206-0006-allow-tabs-in-configuration-files.patch,
+  +files/206-0007-allow-tabs-in-configuration-files2.patch,
+  +systemd-206-r5.ebuild:
+  Allow tabs in environment files (#481554 by dolphinling)
 
   13 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd-9999-r1.ebuild:
   Sync the live ebuild with latest changes.
