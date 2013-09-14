@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.63.ebuild,v 1.3 2013/09/05 18:47:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.63.ebuild,v 1.4 2013/09/14 22:55:56 floppym Exp $
 
 EAPI=5
 
@@ -35,6 +35,11 @@ python_compile_all() {
 		# we can't use Makefile since it relies on hardcoded paths
 		epydoc -o html --html cups || die "doc build failed"
 	fi
+}
+
+python_compile() {
+	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	distutils-r1_python_compile
 }
 
 python_install_all() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.69 2013/09/05 18:47:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.70 2013/09/14 22:55:56 floppym Exp $
+
+  14 Sep 2013; Mike Gilbert <floppym@gentoo.org> pycups-1.9.63.ebuild:
+  Add -fno-strict-aliasing for python2.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pycups-1.9.63.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0-r3.ebuild,v 1.11 2013/09/07 20:10:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.0-r3.ebuild,v 1.12 2013/09/14 22:50:10 floppym Exp $
 
 EAPI=5
 
@@ -40,6 +40,11 @@ python_prepare_all() {
 	sed -e "/data_files=/d" -i setup.py || die
 
 	distutils-r1_python_prepare_all
+}
+
+python_compile() {
+	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	distutils-r1_python_compile
 }
 
 python_test() {

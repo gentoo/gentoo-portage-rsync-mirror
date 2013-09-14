@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15105 2013/09/14 13:59:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15106 2013/09/14 22:54:44 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -258,10 +258,6 @@ dev-ruby/programming-ruby
 # in the tree uses it. Please consider dev-python/pygpgme instead.
 # Bug #339409. Masked for removal in 30 days.
 dev-python/pyme
-
-# Alexis Ballier <aballier@gentoo.org> (15 Aug 2013)
-# Beta release, breaks some packages
->=dev-lang/ocaml-4.01.0_beta1
 
 # Tom Wijsman <TomWij@gentoo.org> (15 Aug 2013)
 # Dependencies are unable to satisfy current version,

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.90 2013/09/07 20:10:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.91 2013/09/14 22:50:10 floppym Exp $
+
+  14 Sep 2013; Mike Gilbert <floppym@gentoo.org> pycurl-7.19.0-r3.ebuild:
+  Add -fno-strict-aliasing for python2.
 
   07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> pycurl-7.19.0-r3.ebuild:
   Stable for sparc, wrt bug #480650

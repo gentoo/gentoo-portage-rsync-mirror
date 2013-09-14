@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/pymountboot-0.2.2.ebuild,v 1.5 2013/09/05 18:46:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/pymountboot-0.2.2.ebuild,v 1.6 2013/09/14 23:00:16 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -18,3 +18,8 @@ IUSE=""
 
 RDEPEND=">=sys-apps/util-linux-2.20"
 DEPEND="${RDEPEND}"
+
+python_compile() {
+	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	distutils-r1_python_compile
+}

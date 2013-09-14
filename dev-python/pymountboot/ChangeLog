@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pymountboot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/ChangeLog,v 1.11 2013/09/05 18:46:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymountboot/ChangeLog,v 1.12 2013/09/14 23:00:16 floppym Exp $
+
+  14 Sep 2013; Mike Gilbert <floppym@gentoo.org> pymountboot-0.2.2.ebuild,
+  pymountboot-9999.ebuild:
+  Add -fno-strict-aliasing for python2.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pymountboot-0.2.1.ebuild,
   pymountboot-0.2.2.ebuild, pymountboot-9999.ebuild:
