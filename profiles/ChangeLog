@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8236 2013/09/13 23:40:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8237 2013/09/14 07:05:26 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Sep 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove masked ruby18-only packages.
 
   13 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask dev-lang/jimtcl-9999 live ebuild

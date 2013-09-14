@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15103 2013/09/13 23:40:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15104 2013/09/14 07:05:26 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -268,19 +268,6 @@ dev-python/pyme
 # broken; needs a version bump from bug #475552.
 dev-java/itext:5
 
-# Hans de Graaff <graaff@gentoo.org> (14 Aug 2013)
-# Last release in 2009. ruby18-only. Uses deprecated
-# ruby-gnome2 components that have been removed upstream
-# quite some time ago. No maintainer.
-# Also remove the deprecated ruby-gnome2 components.
-# Masked for removal in 30 days.
-app-dicts/fantasdic
-rox-extra/rox-rename
-dev-ruby/ruby-gconf2
-dev-ruby/ruby-gnomecanvas2
-dev-ruby/ruby-libart2
-dev-ruby/ruby-libglade2
-
 # Justin Lecher <jlec@gentoo.org> (11 Aug 2013)
 # Not needed anymore
 # All consumer upstreams moved away from it
@@ -291,14 +278,7 @@ sci-libs/mccp4
 # ree18 is already removed from the tree, and ruby18 will
 # follow soon. These packages don't have dependencies in the
 # tree. Removal in 30 days.
-dev-ruby/cerberus
 dev-ruby/delocalize
-dev-ruby/linecache
-dev-ruby/rubigen
-dev-ruby/ruby-bz2
-dev-ruby/ruby-debug-base
-dev-ruby/ruby-debug
-dev-ruby/zoom
 
 # Ole Markus With <olemarkus@gentoo.org> (10 Aug 2013)
 # About a year since upstream stopped maintaining symfony 1.x.
