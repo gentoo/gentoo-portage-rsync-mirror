@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.26 2013/09/14 10:06:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tmail/ChangeLog,v 1.27 2013/09/14 12:12:06 mrueg Exp $
+
+  14 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -tmail-1.2.7.1-r2.ebuild:
+  Cleanup old.
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tmail-1.2.7.1-r3.ebuild:
   Stable for x86, wrt bug #483704
