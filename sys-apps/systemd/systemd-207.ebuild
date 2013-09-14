@@ -1,16 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.15 2013/09/14 14:28:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-207.ebuild,v 1.1 2013/09/14 14:28:23 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-2
-#endif
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python2_7 )
@@ -80,22 +72,6 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-kernel/linux-headers-${MINKV}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )"
-
-#if LIVE
-DEPEND="${DEPEND}
-	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5
-	>=dev-util/gtk-doc-1.18"
-
-SRC_URI=
-KEYWORDS=
-
-src_prepare() {
-	gtkdocize --docdir docs/ || die
-
-	autotools-utils_src_prepare
-}
-#endif
 
 pkg_pretend() {
 	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS

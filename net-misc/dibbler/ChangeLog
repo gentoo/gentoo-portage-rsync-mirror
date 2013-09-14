@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dibbler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.18 2013/09/13 22:58:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.19 2013/09/14 14:20:18 pacho Exp $
+
+*dibbler-0.8.3-r1 (14 Sep 2013)
+
+  14 Sep 2013; Pacho Ramos <pacho@gentoo.org> +dibbler-0.8.3-r1.ebuild,
+  +files/dibbler-client.service, -dibbler-0.8.0.ebuild, -dibbler-0.8.2.ebuild,
+  -dibbler-0.8.3.ebuild, -files/dibbler-0.8.2-gcc47.patch,
+  -files/dibbler-gcc-4.1.patch:
+  Install unit file, drop old
 
   13 Sep 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   drop to maintainer-needed

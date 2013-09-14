@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8238 2013/09/14 13:59:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8239 2013/09/14 14:30:28 aidecoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  desc/dracut_modules.desc:
+  Added dash use expand to dracut_modules.
 
   14 Sep 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   Expand sun-* package.mask reason to explain continuation, alternatives and

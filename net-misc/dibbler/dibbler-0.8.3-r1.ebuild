@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.3.ebuild,v 1.1 2013/04/05 13:59:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.3-r1.ebuild,v 1.1 2013/09/14 14:20:18 pacho Exp $
 
 EAPI="5"
-
-inherit eutils readme.gentoo
+inherit eutils readme.gentoo systemd
 
 DESCRIPTION="Portable DHCPv6 implementation (server, client and relay)"
 HOMEPAGE="http://klub.com.pl/dhcpv6/"
@@ -49,4 +48,5 @@ src_install() {
 	use doc && dodoc doc/dibbler-user.pdf
 
 	doinitd "${FILESDIR}"/dibbler-{client,relay,server}
+	systemd_dounit "${FILESDIR}"/dibbler-client.service
 }

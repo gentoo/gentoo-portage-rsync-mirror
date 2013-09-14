@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Markdown/Text-Markdown-1.0.31.ebuild,v 1.1 2011/02/26 10:15:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Markdown/Text-Markdown-1.0.31-r1.ebuild,v 1.1 2013/09/14 14:18:22 idella4 Exp $
 
-EAPI=3
+EAPI=5
 
 MODULE_AUTHOR=BOBTFISH
 MODULE_VERSION=1.000031
@@ -25,8 +25,5 @@ DEPEND="${RDEPEND}
 		dev-perl/List-MoreUtils
 		dev-perl/Test-Differences
 		dev-perl/Test-Exception )"
-#		dev-perl/Test-Pod
-#		dev-perl/Test-Pod-Coverage
-
 SRC_TEST=do
-mydoc="Readme.text Todo"
+mydoc="Readme.text"
