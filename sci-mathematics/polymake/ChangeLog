@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/polymake
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.10 2012/06/03 14:54:00 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/polymake/ChangeLog,v 1.11 2013/09/14 12:44:47 tomka Exp $
+
+  14 Sep 2013; Thomas Kahle <tomka@gentoo.org> -files/2.10-drop-jreality.patch,
+  -files/2.10-soname.patch, -polymake-2.10.ebuild, -polymake-2.11.ebuild:
+  remove old
 
   03 Jun 2012; Thomas Kahle <tomka@gentoo.org> polymake-2.12.ebuild:
   Fix libpolymake.so.0 symlink
@@ -55,4 +59,3 @@
   03 Nov 2010; Thomas Kahle <tomka@gentoo.org> +polymake-2.9.8.ebuild,
   +metadata.xml:
   initial import, fixes bug 207033
-
