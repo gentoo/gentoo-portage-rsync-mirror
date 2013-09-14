@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.3-r1.ebuild,v 1.1 2013/09/12 04:47:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.3-r2.ebuild,v 1.1 2013/09/14 09:35:34 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -54,6 +54,7 @@ RDEPEND="${DEPEND}
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 
 PATCHES=(
+		"${FILESDIR}/glance-gbug-474064-grizzly.patch"
 )
 #		"${FILESDIR}/glance-gbug-474064-grizzly.patch"
 
