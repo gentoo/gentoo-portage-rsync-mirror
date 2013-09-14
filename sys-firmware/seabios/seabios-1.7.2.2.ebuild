@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.2.ebuild,v 1.2 2013/07/28 09:27:54 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.2.2.ebuild,v 1.3 2013/09/14 08:14:32 ago Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ if [[ ${PV} = *9999* || ! -z "${EGIT_COMMIT}" ]]; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 	SRC_URI="http://code.coreboot.org/p/seabios/downloads/get/${P}.tar.gz
 	http://code.coreboot.org/p/seabios/downloads/get/bios.bin-${PV}.gz
 	http://dev.gentoo.org/~cardoe/distfiles/${P}.tar.gz

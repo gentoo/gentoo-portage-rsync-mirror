@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/objectname/objectname-1.0.0.0.ebuild,v 1.2 2012/09/12 15:40:07 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/objectname/objectname-1.0.0.0.ebuild,v 1.3 2013/09/14 08:14:46 ago Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="amd64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.8.2"

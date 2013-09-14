@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.157 2013/09/10 19:19:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.158 2013/09/14 08:13:01 ago Exp $
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> pcsc-lite-1.8.8-r1.ebuild:
+  Stable for amd64, wrt bug #480102
 
   10 Sep 2013; Markus Meier <maekke@gentoo.org> pcsc-lite-1.8.8-r1.ebuild:
   arm stable, bug #480102
