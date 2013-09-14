@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/vc
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/ChangeLog,v 1.1 2013/09/14 13:13:40 johu Exp $
+
+*vc-0.7.2 (14 Sep 2013)
+
+  14 Sep 2013; Johannes Huber <johu@gentoo.org> +metadata.xml, +vc-0.7.2.ebuild:
+  New package. Needed for Calligra 2.7 see bug #475280. Initial ebuild by Manuel
+  Rüger <mrueg@gentoo.org>, changed by me. Import from kde overlay.

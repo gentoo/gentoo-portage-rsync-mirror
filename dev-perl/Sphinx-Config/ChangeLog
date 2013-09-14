@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Sphinx-Config
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sphinx-Config/ChangeLog,v 1.8 2012/11/18 11:35:31 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sphinx-Config/ChangeLog,v 1.9 2013/09/14 13:20:44 idella4 Exp $
+
+*Sphinx-Config-0.90.0-r1 (14 Sep 2013)
+
+  14 Sep 2013; Ian Delaney <idella4@gentoo.org> +Sphinx-Config-0.90.0-r1.ebuild,
+  -Sphinx-Config-0.90.0.ebuild:
+  revbump -> EAPI 5, remove old
 
   18 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Drop duplication of myself as a maintainer where there is a herd.

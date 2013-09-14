@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sphinx-Config/Sphinx-Config-0.90.0.ebuild,v 1.1 2011/03/24 07:07:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sphinx-Config/Sphinx-Config-0.90.0-r1.ebuild,v 1.1 2013/09/14 13:20:44 idella4 Exp $
 
-EAPI=3
+EAPI=5
 
 MODULE_AUTHOR=JJSCHUTZ
 MODULE_VERSION=0.09

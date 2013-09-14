@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/tftp-hpa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.65 2012/09/15 18:50:46 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.66 2013/09/14 13:13:23 pacho Exp $
+
+*tftp-hpa-5.2-r1 (14 Sep 2013)
+
+  14 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/tftp.service,
+  +files/tftp.socket, +tftp-hpa-5.2-r1.ebuild:
+  Install unit file (#482712)
 
   15 Sep 2012; Raúl Porcel <armin76@gentoo.org> tftp-hpa-5.2.ebuild:
   alpha/ia64/s390/sh/sparc/x86 stable wrt #429164
