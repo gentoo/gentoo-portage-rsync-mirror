@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.59 2013/03/25 16:14:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.60 2013/09/14 06:51:12 graaff Exp $
+
+  14 Sep 2013; Hans de Graaff <graaff@gentoo.org> alexandria-0.6.8.ebuild,
+  alexandria-0.6.9.ebuild:
+  Remove reference to dev-ruby/zoom since that package is no longer in the
+  tree.
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> alexandria-0.6.9.ebuild:
   Stable for x86, wrt bug #458984
