@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5-r1.ebuild,v 1.13 2013/09/11 23:21:02 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.5-r1.ebuild,v 1.14 2013/09/14 16:36:18 hasufell Exp $
 
 EAPI=5
 
@@ -139,6 +139,8 @@ pkg_postinst() {
 	ewarn "If you're upgrading from hexchat <=2.9.3 remember to rename"
 	ewarn "the xchat.conf file found in ~/.config/hexchat/ to hexchat.conf"
 	ewarn
+	elog "optional dependencies:"
+	elog "  media-sound/sox (sound playback)"
 }
 
 pkg_postrm() {

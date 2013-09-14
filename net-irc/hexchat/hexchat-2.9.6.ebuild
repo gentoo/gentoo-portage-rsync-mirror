@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.6.ebuild,v 1.2 2013/09/12 10:03:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.6.ebuild,v 1.3 2013/09/14 16:36:18 hasufell Exp $
 
 EAPI=5
 
@@ -149,7 +149,11 @@ pkg_postinst() {
 	elog "  Settings -> Keyboard Shortcuts"
 	einfo
 	elog "optional dependencies:"
+	elog "  media-sound/sox (sound playback if you don't have libcanberra"
+	elog "    enabled)"
 	elog "  x11-plugins/hexchat-javascript (javascript support)"
+	elog "  x11-themes/sound-theme-freedesktop (default BEEP sound,"
+	elog "    needs libcanberra enabled)"
 	einfo
 }
 
