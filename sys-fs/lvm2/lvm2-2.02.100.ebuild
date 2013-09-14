@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.100.ebuild,v 1.1 2013/09/12 21:08:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.100.ebuild,v 1.2 2013/09/14 14:39:36 pacho Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND_COMMON}
 	!!sys-fs/lvm-user
 	>=sys-apps/util-linux-2.16
 	lvm2create_initrd? ( sys-apps/makedev )
-	thin? ( sys-block/thin-provisioning-tools )"
+	thin? ( >=sys-block/thin-provisioning-tools-0.2.1 )"
 DEPEND="${DEPEND_COMMON}
 	virtual/pkgconfig
 	>=sys-devel/binutils-2.20.1-r1

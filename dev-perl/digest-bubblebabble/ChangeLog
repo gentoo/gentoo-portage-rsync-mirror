@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/digest-bubblebabble
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.23 2012/06/24 12:59:30 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.24 2013/09/14 14:55:54 idella4 Exp $
+
+*digest-bubblebabble-0.20.0-r1 (14 Sep 2013)
+
+  14 Sep 2013; Ian Delaney <idella4@gentoo.org>
+  +digest-bubblebabble-0.20.0-r1.ebuild, digest-bubblebabble-0.20.0.ebuild:
+  revbump -> EAPI 5
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info
