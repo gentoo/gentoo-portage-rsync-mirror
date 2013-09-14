@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/podget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/podget/ChangeLog,v 1.5 2013/01/05 23:35:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/podget/ChangeLog,v 1.6 2013/09/13 23:04:15 hwoarang Exp $
+
+*podget-0.6.15 (13 Sep 2013)
+
+  13 Sep 2013; Markos Chandras <hwoarang@gentoo.org> +podget-0.6.15.ebuild,
+  metadata.xml:
+  Version bump thanks to Michael Niehoff <kitcat490@gmail.com>. Assign
+  maintainership to him as well. Bug #480516
 
 *podget-0.6.9 (05 Jan 2013)
 
@@ -19,4 +26,3 @@
   15 Feb 2011; Jeremy Olexa <darkside@gentoo.org> +podget-0.6.ebuild,
   +metadata.xml:
   Initial ebuild written by Jeremy Olexa
-
