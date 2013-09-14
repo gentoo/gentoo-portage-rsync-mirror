@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shorturl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.20 2013/09/05 13:55:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.21 2013/09/14 10:06:01 ago Exp $
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> shorturl-1.0.0.ebuild:
+  Stable for x86, wrt bug #483698
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> shorturl-1.0.0.ebuild:
   Stable for amd64, wrt bug #483698

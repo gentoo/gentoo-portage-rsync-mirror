@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.195 2013/09/13 14:41:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.196 2013/09/14 10:14:26 ago Exp $
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> cacti-0.8.8b-r2.ebuild:
+  Stable for x86, wrt bug #482424
 
   13 Sep 2013; Jeroen Roovers <jer@gentoo.org> cacti-0.8.8b-r2.ebuild:
   Stable for HPPA (bug #482424).

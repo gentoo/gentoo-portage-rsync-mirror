@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.29 2013/09/14 07:43:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.30 2013/09/14 10:05:22 ago Exp $
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rpcbind-0.2.0-r1.ebuild:
+  Stable for x86, wrt bug #480094
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rpcbind-0.2.0-r1.ebuild:
   Stable for ia64, wrt bug #480094

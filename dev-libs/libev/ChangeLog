@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.60 2013/09/12 17:18:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.61 2013/09/14 10:03:28 ago Exp $
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libev-4.15.ebuild:
+  Stable for x86, wrt bug #483658
 
   12 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libev-4.15.ebuild:
   Stable for ppc, wrt bug #483658

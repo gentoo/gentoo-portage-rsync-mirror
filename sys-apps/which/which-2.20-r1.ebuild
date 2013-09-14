@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.20-r1.ebuild,v 1.1 2013/05/23 03:14:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/which/which-2.20-r1.ebuild,v 1.2 2013/09/14 10:14:18 hwoarang Exp $
 
 EAPI="4"
 
-inherit flag-o-matic
+inherit flag-o-matic toolchain-funcs
+
 
 DESCRIPTION="Prints out location of specified executables that are in your path"
 HOMEPAGE="http://www.xs4all.nl/~carlo17/which/"
@@ -16,5 +17,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 src_prepare() {
+	export AR="$(tc-getAR)"
 	append-lfs-flags
 }

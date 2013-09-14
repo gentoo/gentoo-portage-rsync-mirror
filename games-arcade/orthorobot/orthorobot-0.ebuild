@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/orthorobot/orthorobot-0.ebuild,v 1.2 2013/08/31 09:45:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/orthorobot/orthorobot-0.ebuild,v 1.3 2013/09/14 10:04:32 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://stabyourself.net/dl.php?file=${PN}/${PN}-source.zip -> ${P}.zip"
 
 LICENSE="CC-BY-NC-ND-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND=">=games-engines/love-0.8.0"
 DEPEND="${RDEPEND}

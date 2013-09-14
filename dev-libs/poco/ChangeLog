@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/poco
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.24 2013/09/08 09:09:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/ChangeLog,v 1.25 2013/09/14 10:01:22 ago Exp $
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> poco-1.4.5-r1.ebuild:
+  Stable for x86, wrt bug #484096
 
   08 Sep 2013; Agostino Sarubbo <ago@gentoo.org> poco-1.4.5-r1.ebuild:
   Stable for amd64, wrt bug #484096

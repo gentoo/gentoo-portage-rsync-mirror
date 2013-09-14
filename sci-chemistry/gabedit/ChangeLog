@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gabedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.23 2013/08/31 09:08:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gabedit/ChangeLog,v 1.24 2013/09/14 10:03:51 ago Exp $
+
+  14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gabedit-2.4.6.ebuild:
+  Stable for x86, wrt bug #481632
 
   31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gabedit-2.4.6.ebuild:
   Stable for amd64, wrt bug #481632
