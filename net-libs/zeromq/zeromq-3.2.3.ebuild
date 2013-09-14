@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.3.ebuild,v 1.4 2013/09/01 15:56:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.3.ebuild,v 1.6 2013/09/14 04:58:29 qnikst Exp $
 
 EAPI=5
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="ZeroMQ is a brokerless kernel"
 HOMEPAGE="http://www.zeromq.org/"
@@ -24,6 +24,7 @@ DEPEND="|| ( sys-devel/gcc sys-devel/gcc-apple )
 RDEPEND=""
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-unused-variable.patch || die
 	einfo "Removing bundled OpenPGM library"
 	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 	rm -r "${S}"/foreign/openpgm/libpgm* || die

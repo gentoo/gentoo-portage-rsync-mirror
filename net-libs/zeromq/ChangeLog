@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.39 2013/09/01 15:56:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.41 2013/09/14 04:58:29 qnikst Exp $
+
+  14 Sep 2013; Alexander Vershilov <qnikst@gentoo.org>
+  files/zeromq-3.2.3-unused-variable.patch, zeromq-3.2.3.ebuild:
+  final fix for bug #483318, patch taken from upstream
+
+  14 Sep 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +files/zeromq-3.2.3-unused-variable.patch, zeromq-3.2.3.ebuild:
+  fix bug #483318, thanks to Joerg Neikes
 
   01 Sep 2013; Fabian Groffen <grobian@gentoo.org> zeromq-3.2.2.ebuild,
   zeromq-3.2.3.ebuild:
