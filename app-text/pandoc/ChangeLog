@@ -1,6 +1,14 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.17 2013/06/22 22:28:37 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.18 2013/09/14 01:12:04 gienah Exp $
+
+*pandoc-1.11.1-r1 (14 Sep 2013)
+
+  14 Sep 2013; Mark Wright <gienah@gentoo.org>
+  +files/pandoc-1.11.1-highlighting-kate-0.5.5-tests.patch,
+  +files/pandoc-1.11.1-tagsoup-0.13.patch, +pandoc-1.11.1-r1.ebuild:
+  Thanks to eroen for reporting, patch pandoc tests for >=dev-haskell
+  /highlighting-kate-0.5.5, following similar changes from upstream.
 
   22 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org> pandoc-1.11.1.ebuild:
   Raise lower bounds of some deps (bug #474102 by bdouxx).
