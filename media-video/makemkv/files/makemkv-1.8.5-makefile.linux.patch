@@ -1,0 +1,20 @@
+--- makemkv-oss-1.8.5/makefile.linux.orig
++++ makemkv-oss-1.8.5/makefile.linux
+@@ -8,7 +8,7 @@
+ MOC=moc
+ endif
+ 
+-CXXOPTS=-Os -D_GNU_SOURCE -D_linux_
++CXXOPTS=-D_GNU_SOURCE -D_linux_
+ 
+ BUILDINFO_ARCH_NAME=$(shell $(GCC) -dumpmachine)
+ BUILDINFO_BUILD_DATE=$(shell date)
+@@ -38,7 +38,7 @@
+ 	install -D -m 644 makemkvgui/src/img/128/mkv_icon.png $(DESTDIR)$(PREFIX)/share/icons/hicolor/128x128/apps/makemkv.png
+ 
+ out/%: out/%.full
+-	objcopy --strip-all --strip-debug --strip-unneeded --discard-all $< $@ 
++	objcopy --discard-all $< $@ 
+ 
+ out/libdriveio.so.0.full:
+ 	mkdir -p out

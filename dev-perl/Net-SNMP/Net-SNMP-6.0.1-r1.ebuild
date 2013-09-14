@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-6.0.1-r1.ebuild,v 1.1 2013/09/13 13:27:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-6.0.1-r1.ebuild,v 1.2 2013/09/14 02:19:50 patrick Exp $
 
 EAPI=5
 
@@ -33,4 +33,3 @@ src_install() {
 	insinto usr/share/doc/${PF}/
 	doins -r examples/
 }
-
