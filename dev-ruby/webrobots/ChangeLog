@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/webrobots
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.11 2013/09/10 16:21:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.13 2013/09/15 09:30:41 ago Exp $
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> webrobots-0.1.1.ebuild:
+  Stable for x86, wrt bug #483694
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> webrobots-0.1.1.ebuild:
+  Stable for amd64, wrt bug #483694
 
   10 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -webrobots-0.0.13.ebuild:
   Cleanup old.
