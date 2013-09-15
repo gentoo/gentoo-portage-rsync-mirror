@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15111 2013/09/15 15:11:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15115 2013/09/15 15:52:37 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,34 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
+# removal on ~15 Oct 2013
+# dead on upstream since ~2006
+# fails on compile >=vdr-2.0
+# Bug #414275 #414177   
+media-plugins/vdr-sysinfo
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
+# removal on ~15 Oct 2013
+# dead on upstream since ~2006
+# fails on compile >=vdr-2.0
+# Bug #414269 #414177   
+media-plugins/vdr-taste
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
+# removal on ~15 Oct 2013
+# dead on upstream since ~2008
+# fails on compile >=vdr-2.0
+# Bug #414261 #414177   
+media-plugins/vdr-timeline
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
+# removal on ~15 Oct 2013
+# dead on upstream since ~2006
+# fails on compile >=vdr-2.0
+# Bug #414257 #414177   
+media-plugins/vdr-tvonscreen
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
 # removal on ~15 Oct 2013

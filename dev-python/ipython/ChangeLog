@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.123 2013/09/12 22:29:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.124 2013/09/15 16:00:19 maekke Exp $
+
+  15 Sep 2013; Markus Meier <maekke@gentoo.org> ipython-1.0.0.ebuild:
+  add ~arm, bug #481462
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> ipython-0.12-r1.ebuild,
   ipython-0.13.2.ebuild, ipython-1.0.0.ebuild:

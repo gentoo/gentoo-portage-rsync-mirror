@@ -1,10 +1,26 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8245 2013/09/15 15:11:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8249 2013/09/15 15:52:37 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-sysinfo masked for removal on ~15/Oct/2013, Bug #414275
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-taste masked for removal on ~15/Oct/2013, Bug #414269
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-timeline masked for removal on ~15/Oct/2013, Bug #414261
+  #414177
+
+  15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-tvonscreen masked for removal on ~15/Oct/2013, Bug #414257
+  #414177
 
   15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-plugins/vdr-tvtv masked for removal on ~15/Oct/2013, Bug #414255

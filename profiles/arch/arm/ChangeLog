@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.270 2013/09/15 13:57:27 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.271 2013/09/15 15:59:58 maekke Exp $
+
+  15 Sep 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask dev-python/ipython[nbconvert], bug #481462
 
   15 Sep 2013; Johannes Huber <johu@gentoo.org> package.use.mask:
   Mask use kde-base/solid-runtime[networkmanager], unkeyworded dep
