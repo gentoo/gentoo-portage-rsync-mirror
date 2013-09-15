@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/openvas-libraries
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/ChangeLog,v 1.13 2013/07/01 10:19:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/ChangeLog,v 1.14 2013/09/15 09:36:26 maekke Exp $
+
+  15 Sep 2013; Markus Meier <maekke@gentoo.org> openvas-libraries-6.0.0.ebuild:
+  add ~arm, bug #389453
 
 *openvas-libraries-6.0.0 (01 Jul 2013)
 

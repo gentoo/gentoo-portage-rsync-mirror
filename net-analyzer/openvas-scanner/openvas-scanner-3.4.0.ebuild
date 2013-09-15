@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-3.4.0.ebuild,v 1.1 2013/07/01 10:20:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-scanner/openvas-scanner-3.4.0.ebuild,v 1.2 2013/09/15 09:36:49 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://wald.intevation.org/frs/download.php/1307/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=net-analyzer/openvas-libraries-6.0.0
