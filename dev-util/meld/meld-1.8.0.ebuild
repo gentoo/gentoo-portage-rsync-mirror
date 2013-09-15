@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.7.3.ebuild,v 1.1 2013/06/03 20:24:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.8.0.ebuild,v 1.1 2013/09/15 21:38:16 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.169 2013/09/01 22:09:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.170 2013/09/15 21:38:16 eva Exp $
+
+*meld-1.8.0 (15 Sep 2013)
+
+  15 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> -meld-1.7.3.ebuild,
+  +meld-1.8.0.ebuild:
+  Version bump. Cleanup old revision.
 
 *meld-1.7.5 (01 Sep 2013)
 

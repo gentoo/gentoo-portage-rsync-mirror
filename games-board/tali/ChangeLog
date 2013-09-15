@@ -1,6 +1,11 @@
 # ChangeLog for games-board/tali
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/tali/ChangeLog,v 1.2 2013/08/31 10:46:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/tali/ChangeLog,v 1.3 2013/09/15 21:40:47 eva Exp $
+
+*tali-3.8.1 (15 Sep 2013)
+
+  15 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> +tali-3.8.1.ebuild:
+  Version bump.
 
   31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> tali-3.8.0.ebuild:
   Add ~arm keyword, wrt bug #476710
