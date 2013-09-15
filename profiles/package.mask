@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15107 2013/09/15 05:52:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15108 2013/09/15 13:54:32 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -404,12 +404,6 @@ dev-java/sun-jce-bin
 # Mask new ptlib/opal for breakage, tracked in bug #474742
 =net-libs/ptlib-2.12.4
 =net-libs/opal-3.12.4
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (23 Jun 2013)
-# Mask for removal ~2013/07/23
-# depends on wrt bug 474480 155253 414177
-# use as alternative the console tool media-tv/w_scan
-media-plugins/vdr-channelscan
 
 # Sebastien Fabbro <bicatali@gentoo.org> (18 Jun 2013)
 # Masked for some API incompatibility with previous versions
