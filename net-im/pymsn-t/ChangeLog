@@ -1,6 +1,14 @@
 # ChangeLog for net-im/pymsn-t
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.27 2013/08/03 09:45:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.28 2013/09/14 23:05:48 hanno Exp $
+
+*pymsn-t-0.11.3-r4 (14 Sep 2013)
+
+  14 Sep 2013; <hanno@gentoo.org> +pymsn-t-0.11.3-r4.ebuild,
+  +files/pymsn-t-0.11.3-imaging-pillow.patch,
+  +files/pymsn-t-0.11.3-twisted13.patch, +files/pymsn-t-initd-r1:
+  Cleanup, new URL, port to new python eclass, fix for twisted 13.x, fix
+  deprecated PIL imports.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> pymsn-t-0.11.3-r3.ebuild:
   Move dev-python/twisted to dev-python/twisted-core.
