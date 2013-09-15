@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1358 2013/09/14 10:56:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1359 2013/09/15 11:18:49 zmedico Exp $
+
+*portage-2.2.5 (15 Sep 2013)
+
+  15 Sep 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.5.ebuild,
+  -portage-2.2.4.ebuild:
+  2.2.5 version bump. This fixes bug #484540 (ignore EOPNOTSUPP when listing
+  xattrs), bug #484730 (fix emerge --sync with empty repo) and bug #484840 (QA
+  notice for -Waggressive-loop-optimizations), and bug #484950 (fix emerge-
+  webrsync with empty repo). Bug #484436 tracks all bugs fixed since
+  portage-2.2.1.
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.2.1.ebuild:
   Stable for alpha, wrt bug #478904

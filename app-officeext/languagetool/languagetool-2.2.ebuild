@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/languagetool-2.0-r1.ebuild,v 1.2 2013/05/17 11:24:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/languagetool-2.2.ebuild,v 1.1 2013/09/15 11:09:34 scarabeus Exp $
 
 EAPI=5
 
@@ -20,5 +20,5 @@ SRC_URI="http://www.languagetool.org/download/${MY_P}.oxt"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
