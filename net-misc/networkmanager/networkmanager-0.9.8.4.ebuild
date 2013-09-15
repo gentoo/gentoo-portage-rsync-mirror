@@ -1,29 +1,27 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2.ebuild,v 1.1 2013/06/10 09:25:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.4.ebuild,v 1.1 2013/09/15 04:31:07 tetromino Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev
+inherit bash-completion-r1 gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev eutils
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
 
 LICENSE="GPL-2+"
 SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname version
-IUSE="avahi bluetooth connection-sharing +consolekit dhclient +dhcpcd gnutls
-+introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala
-+wext" # wimax
+IUSE="avahi bluetooth connection-sharing consolekit dhclient +dhcpcd gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala +wext" # wimax
+
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )
 	^^ ( nss gnutls )
 	^^ ( dhclient dhcpcd )
-	?? ( consolekit systemd )
 "
 
 # gobject-introspection-0.10.3 is needed due to gnome bug 642300
@@ -53,8 +51,8 @@ COMMON_DEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
 	ppp? ( >=net-dialup/ppp-2.4.5[ipv6] )
 	resolvconf? ( net-dns/openresolv )
-	systemd? ( >=sys-apps/systemd-200 )
-	!systemd? ( sys-power/upower )
+	systemd? ( >=sys-apps/systemd-183 )
+	|| ( sys-power/upower >=sys-apps/systemd-183 )
 "
 RDEPEND="${COMMON_DEPEND}
 	consolekit? ( sys-auth/consolekit )
@@ -106,25 +104,30 @@ src_prepare() {
 	DOC_CONTENTS="To modify system network connections without needing to enter the
 		root password, add your user account to the 'plugdev' group."
 
+	if use systemd; then
+		DOC_CONTENTS="${DOC_CONTENTS}\n\n
+		Starting with version 0.9.8.4, running\n
+		# systemctl enable NetworkManager\n
+		will both enable NetworkManager and allow nm-dispatcher to be activated via dbus."
+	fi
+
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
-	epatch "${FILESDIR}/${PN}-0.9.7.995-pre-sleep.patch"
+	epatch "${FILESDIR}/${PN}-0.9.8.4-pre-sleep.patch"
 
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \
 		-i */tests/*.py || die
 
 	# Fix completiondir, avoid eautoreconf, bug #465100
-	sed -i 's|^completiondir =.*|completiondir = $(datadir)/bash-completion|' \
+	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
 		cli/completion/Makefile.in || die "sed completiondir failed"
 
-	epatch_user
+	## Force use of /run, avoid eautoreconf
+	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
 
 	use vala && vala_src_prepare
 
-	# Force use of /run, avoid eautoreconf
-	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
-
-	default
+	epatch_user # don't remove, users often want custom patches for NM
 }
 
 src_configure() {
@@ -140,7 +143,7 @@ src_configure() {
 		--with-iptables=/sbin/iptables \
 		--enable-concheck \
 		--with-crypto=$(usex nss nss gnutls) \
-		--with-session-tracking=$(usex consolekit consolekit $(usex systemd systemd no)) \
+		--with-session-tracking=$(usex systemd systemd $(usex consolekit consolekit no)) \
 		--with-suspend-resume=$(usex systemd systemd upower) \
 		$(use_enable introspection) \
 		$(use_enable ppp) \
@@ -156,6 +159,7 @@ src_configure() {
 }
 
 src_test() {
+	# bug #????
 	cp libnm-util/tests/certs/test_ca_cert.pem src/settings/plugins/ifnet/tests/ || die
 	Xemake check
 }
@@ -174,20 +178,14 @@ src_install() {
 	# Need to keep the /etc/NetworkManager/dispatched.d for dispatcher scripts
 	keepdir /etc/NetworkManager/dispatcher.d
 
-	if use systemd; then
-		# Our init.d script requires running a dispatcher script that annoys
-		# systemd users; bug #434692
-		rm -rv "${ED}/etc/init.d" || die "rm failed"
-	else
-		# Provide openrc net dependency only when nm is connected
-		exeinto /etc/NetworkManager/dispatcher.d
-		newexe "${FILESDIR}/10-openrc-status-r3" 10-openrc-status
-		sed -e "s:@EPREFIX@:${EPREFIX}:g" \
-			-i "${ED}/etc/NetworkManager/dispatcher.d/10-openrc-status" || die
+	# Provide openrc net dependency only when nm is connected
+	exeinto /etc/NetworkManager/dispatcher.d
+	newexe "${FILESDIR}/10-openrc-status-r4" 10-openrc-status
+	sed -e "s:@EPREFIX@:${EPREFIX}:g" \
+		-i "${ED}/etc/NetworkManager/dispatcher.d/10-openrc-status" || die
 
-		# Default conf.d file
-		newconfd "${FILESDIR}/conf.d.NetworkManager" NetworkManager
-	fi
+	# Default conf.d file
+	newconfd "${FILESDIR}/conf.d.NetworkManager" NetworkManager
 
 	# Add keyfile plugin support
 	keepdir /etc/NetworkManager/system-connections
@@ -198,6 +196,9 @@ src_install() {
 	# Allow users in plugdev group to modify system connections
 	insinto /usr/share/polkit-1/rules.d/
 	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.rules"
+
+	# https://bugzilla.redhat.com/show_bug.cgi?id=974811 + bug #477086
+	# systemd can't find "
 
 	# Remove useless .la files
 	prune_libtool_files --modules
