@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/desktop-file-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.132 2013/01/07 19:26:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/desktop-file-utils/ChangeLog,v 1.133 2013/09/15 03:06:14 tetromino Exp $
+
+*desktop-file-utils-0.22 (15 Sep 2013)
+
+  15 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +desktop-file-utils-0.22.ebuild:
+  Version bump, requested by Agostino Sarubbo (bug #484898). Adds support for
+  DBusActivatable.
 
   07 Jan 2013; Samuli Suominen <ssuominen@gentoo.org>
   -desktop-file-utils-0.20-r1.ebuild,
