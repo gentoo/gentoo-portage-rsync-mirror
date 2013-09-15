@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.193 2013/09/10 16:14:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.194 2013/09/15 10:22:14 scarabeus Exp $
 
 EAPI=5
 
@@ -549,7 +549,7 @@ src_install() {
 	fi
 
 	# symlink the nsplugin to proper location
-	use gtk && inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
+	# use gtk && inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
 
 	# Hack for offlinehelp, this needs fixing upstream at some point.
 	# It is broken because we send --without-help

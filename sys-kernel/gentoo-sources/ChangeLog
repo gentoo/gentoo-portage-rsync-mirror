@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1188 2013/09/11 10:07:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1189 2013/09/15 10:18:36 tomwij Exp $
+
+*gentoo-sources-3.4.62 (15 Sep 2013)
+*gentoo-sources-3.11.1 (15 Sep 2013)
+*gentoo-sources-3.10.12 (15 Sep 2013)
+*gentoo-sources-3.0.96 (15 Sep 2013)
+
+  15 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.0.96.ebuild,
+  +gentoo-sources-3.10.12.ebuild, +gentoo-sources-3.11.1.ebuild,
+  +gentoo-sources-3.4.62.ebuild:
+  Linux patches 3.0.96, 3.4.62, 3.10.12 and 3.11.1. Applied (and backported for
+  3.0) a726915cef1daab57aad4c5b5e4773822f0a4bf8 to branches 3.0, 3.2 and 3.4; a
+  commit that fixes i915 panel lid handling bugs that were introduced in 2.6,
+  which was fixed in 3.7 and later.
 
 *gentoo-sources-3.4.61 (11 Sep 2013)
 *gentoo-sources-3.2.51 (11 Sep 2013)

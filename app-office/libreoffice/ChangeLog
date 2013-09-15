@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.503 2013/09/10 16:14:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.504 2013/09/15 10:22:14 scarabeus Exp $
+
+  15 Sep 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-4.0.9999.ebuild, libreoffice-4.1.1.2.ebuild,
+  libreoffice-4.1.9999.ebuild, libreoffice-9999-r2.ebuild:
+  Disable nsplugin as it mostly kills the browser or crashes. bug#415259 and
+  bug#482314.
 
   10 Sep 2013; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild,
   metadata.xml:
