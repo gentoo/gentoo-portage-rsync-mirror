@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pupynere
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/ChangeLog,v 1.7 2012/08/02 18:14:13 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pupynere/ChangeLog,v 1.8 2013/09/15 18:05:09 mgorny Exp $
+
+*pupynere-1.0.15-r1 (15 Sep 2013)
+
+  15 Sep 2013; Michał Górny <mgorny@gentoo.org> +pupynere-1.0.15-r1.ebuild:
+  Convert to distutils-r1. Enable doctests.
 
   02 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org> pupynere-1.0.15.ebuild:
   Keyword amd64-linux and x86-linux
