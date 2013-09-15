@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.750 2013/09/12 16:17:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.751 2013/09/15 14:28:19 chithanh Exp $
+
+*xorg-server-1.14.3 (15 Sep 2013)
+
+  15 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xorg-server-1.14.3.ebuild,
+  -files/xorg-server-1.14-kdrive-out-of-bounds-array-access.patch,
+  -xorg-server-1.14.2.902-r1.ebuild, -xorg-server-1.14.2.902.ebuild:
+  Version bump
 
   12 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-server-1.14.2.902-r1.ebuild:
