@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.411 2013/09/14 10:55:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.412 2013/09/15 19:02:17 sping Exp $
+
+  15 Sep 2013; Sebastian Pipping <sping@gentoo.org> gimp-2.8.6.ebuild,
+  +files/gimp-2.8.6-uclibc.patch:
+  Add uclibc compile fix (bug #477794) straight to stable, seems adequate to me
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gimp-2.8.6.ebuild:
   Stable for alpha, wrt bug #481736

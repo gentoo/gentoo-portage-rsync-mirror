@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.6.ebuild,v 1.7 2013/09/14 10:55:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.6.ebuild,v 1.8 2013/09/15 19:02:17 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -112,6 +112,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.7.4-no-deprecation.patch  # bug 395695, comment 9 and 16
+	epatch "${FILESDIR}"/${P}-uclibc.patch  # bug 477794
 	eautoreconf  # If you remove this: remove dev-util/gtk-doc-am from DEPEND, too
 
 	echo '#!/bin/sh' > py-compile

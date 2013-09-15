@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.26:2 >=x11-libs/gdk-pixbuf-2.12.0:2 >=x11-libs/gtk+-3.3.18:3 >=virtual/udev-171[gudev] >=dev-libs/dbus-glib-0.60 >=dev-libs/gobject-introspection-0.9.3 >=media-libs/libgphoto2-2.4.11 >=media-libs/lcms-1.18:0 >=dev-libs/libpeas-0.5.5[gtk] >=media-libs/gexiv2-0.2.2 >=x11-libs/libXext-1.3.0 >=media-libs/libraw-0.9.0
 SLOT=0
 SRC_URI=http://entangle-photo.org/download/sources/entangle-0.5.0.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	60f01dcce699345bbe95db0476914874	gnome2-utils	cf14abfc65f26151fd2e33d722422ee3	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	60f01dcce699345bbe95db0476914874	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=585c4bd8dab5a179c4c731ba9535a61d

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.32 2013/09/03 21:54:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.33 2013/09/15 19:29:11 pacho Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -446,29 +446,33 @@ gnome2_gdk_pixbuf_update() {
 # @DESCRIPTION:
 # Updates gtk2 immodules/gdk-pixbuf loaders listing.
 gnome2_query_immodules_gtk2() {
-	local GTK2_CONFDIR="/etc/gtk-2.0/$(get_abi_CHOST)"
-
-	local query_exec="${EPREFIX}/usr/bin/gtk-query-immodules-2.0"
-	local gtk_conf="${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
-	local gtk_conf_dir=$(dirname "${gtk_conf}")
-
-	einfo "Generating Gtk2 immodules/gdk-pixbuf loaders listing:"
-	einfo "-> ${gtk_conf}"
-
-	mkdir -p "${gtk_conf_dir}"
-	local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgtk_query_immodules)
-	if [ -z "${tmp_file}" ]; then
-		ewarn "gtk_query_immodules: cannot create temporary file"
-		return 1
-	fi
-
-	if ${query_exec} > "${tmp_file}"; then
-		cat "${tmp_file}" > "${gtk_conf}" || \
-			ewarn "Failed to write to ${gtk_conf}"
+	if has_version ">=x11-libs/gtk+-2.24.20:2"; then
+		"${EPREFIX}/usr/bin/gtk-query-immodules-2.0" --update-cache
 	else
-		ewarn "Cannot update gtk.immodules, file generation failed"
+		local GTK2_CONFDIR="/etc/gtk-2.0/$(get_abi_CHOST)"
+
+		local query_exec="${EPREFIX}/usr/bin/gtk-query-immodules-2.0"
+		local gtk_conf="${EPREFIX}${GTK2_CONFDIR}/gtk.immodules"
+		local gtk_conf_dir=$(dirname "${gtk_conf}")
+
+		einfo "Generating Gtk2 immodules/gdk-pixbuf loaders listing:"
+		einfo "-> ${gtk_conf}"
+
+		mkdir -p "${gtk_conf_dir}"
+		local tmp_file=$(mktemp -t tmp.XXXXXXXXXXgtk_query_immodules)
+		if [ -z "${tmp_file}" ]; then
+			ewarn "gtk_query_immodules: cannot create temporary file"
+			return 1
+		fi
+
+		if ${query_exec} > "${tmp_file}"; then
+			cat "${tmp_file}" > "${gtk_conf}" || \
+				ewarn "Failed to write to ${gtk_conf}"
+		else
+			ewarn "Cannot update gtk.immodules, file generation failed"
+		fi
+		rm "${tmp_file}"
 	fi
-	rm "${tmp_file}"
 }
 
 # @FUNCTION: gnome2_query_immodules_gtk3
