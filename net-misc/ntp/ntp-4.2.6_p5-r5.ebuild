@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r4.ebuild,v 1.1 2013/09/11 01:53:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r5.ebuild,v 1.1 2013/09/15 18:51:48 pacho Exp $
 
 EAPI="4"
 
@@ -106,10 +106,13 @@ src_install() {
 		rm etc/{conf,init}.d/ntpd
 		rm usr/share/man/*/ntpd.8 || die
 	else
-		systemd_dounit "${FILESDIR}"/ntpd.service
+		systemd_newunit "${FILESDIR}"/ntpd.service-r1 ntpd.service
 	fi
 
-	systemd_dounit "${FILESDIR}"/{ntp-client,sntp}.service
+	systemd_dounit "${FILESDIR}"/ntpdate.service
+	systemd_install_serviced "${FILESDIR}"/ntpdate.service.conf
+	systemd_dounit "${FILESDIR}"/sntp.service
+	systemd_install_serviced "${FILESDIR}"/sntp.service.conf
 }
 
 pkg_postinst() {

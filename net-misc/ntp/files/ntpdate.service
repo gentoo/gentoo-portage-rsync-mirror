@@ -1,13 +1,12 @@
 [Unit]
-Description=Set time via NTP
+Description=Set time via NTP using ntpdate
 After=network.target nss-lookup.target
 Before=time-sync.target
 Wants=time-sync.target
 
 [Service]
 Type=oneshot
-EnvironmentFile=/etc/conf.d/ntp-client
-ExecStart=/usr/sbin/ntpdate $NTPCLIENT_OPTS
+ExecStart=/usr/sbin/ntpdate -b -u $SERVER
 RemainAfterExit=yes
 
 [Install]

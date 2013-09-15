@@ -1,10 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.512 2013/09/07 14:50:08 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.513 2013/09/15 18:45:00 tomwij Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Tom Wijsman <TomWij@gentoo.org> (15 Sep 2013)
+# Mask JCE functionality of diablo-jdk because it depends on masked sun-jce-bin,
+# this needs to be revisited to either be dropped from the Portage tree or to
+# use the new way of doing JCE as part of a revision or version bump.
+dev-java/diablo-jdk jce
 
 # Tom Wijsman <TomWij@gentoo.org> (7 Sep 2013)
 # Dependency (www-servers/mongrel) currently only

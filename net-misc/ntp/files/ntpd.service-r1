@@ -3,9 +3,7 @@ Description=Network Time Service
 After=ntp-client.service sntp.service
 
 [Service]
-Type=forking
-EnvironmentFile=/etc/conf.d/ntpd
-ExecStart=/usr/sbin/ntpd $NTPD_OPTS
+ExecStart=/usr/sbin/ntpd -n
 PrivateTmp=true
 
 [Install]
