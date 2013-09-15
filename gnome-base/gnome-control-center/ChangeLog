@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.133 2013/07/28 18:44:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.134 2013/09/15 02:42:26 tetromino Exp $
+
+*gnome-control-center-3.8.5 (15 Sep 2013)
+
+  15 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-control-center-3.8.3.ebuild, -gnome-control-center-3.8.4.1.ebuild,
+  +gnome-control-center-3.8.5.ebuild:
+  Version bump, fixes lots of bugs. Drop old.
 
 *gnome-control-center-3.8.4.1-r1 (28 Jul 2013)
 

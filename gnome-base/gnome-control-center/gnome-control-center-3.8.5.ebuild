@@ -1,18 +1,19 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.3.ebuild,v 1.2 2013/07/26 07:01:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.5.ebuild,v 1.1 2013/09/15 02:42:26 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes" # gmodule is used, which uses dlopen
 
-inherit autotools eutils gnome2
+inherit autotools bash-completion-r1 eutils gnome2
 
 DESCRIPTION="GNOME's main interface to configure various aspects of the desktop"
 HOMEPAGE="https://git.gnome.org/browse/gnome-control-center/"
 
 LICENSE="GPL-2+"
 SLOT="2"
+
 IUSE="+bluetooth +colord +cups +gnome-online-accounts +i18n input_devices_wacom kerberos modemmanager +socialweb v4l"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
@@ -24,6 +25,8 @@ QA_CONFIGURE_OPTIONS=".*"
 #
 # gnome-shell/gnome-control-center/mutter/gnome-settings-daemon better to be in sync for 3.8.3
 # https://mail.gnome.org/archives/gnome-announce-list/2013-June/msg00005.html
+#
+# kerberos unfortunately means mit-krb5; build fails with heimdal
 COMMON_DEPEND="
 	>=dev-libs/glib-2.35.1:2
 	>=x11-libs/gdk-pixbuf-2.23.0:2
@@ -61,7 +64,7 @@ COMMON_DEPEND="
 		>=net-fs/samba-3.6.14-r1[smbclient] )
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.8.1 )
 	i18n? ( >=app-i18n/ibus-1.4.99 )
-	kerberos? ( virtual/krb5 )
+	kerberos? ( app-crypt/mit-krb5 )
 	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
 	socialweb? ( net-libs/libsocialweb )
 	v4l? (
@@ -114,8 +117,8 @@ DEPEND="${COMMON_DEPEND}
 #	gnome-base/gnome-common
 
 src_prepare() {
-	# Gentoo handles completions in a different directory, bug #465094
-	sed -i 's|^completiondir =.*|completiondir = $(datadir)/bash-completion|' \
+	# Gentoo handles completions in a different directory, bugs #465094 and #477390
+	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
 		shell/Makefile.am || die "sed completiondir failed"
 
 	# Make some panels optional; requires eautoreconf
@@ -123,7 +126,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.8.0-optional-r1.patch"
 
 	# https://bugzilla.gnome.org/686840
-	epatch "${FILESDIR}/${PN}-3.7.4-optional-kerberos.patch"
+	epatch "${FILESDIR}/${PN}-3.8.4-optional-kerberos.patch"
 
 	# Fix some absolute paths to be appropriate for Gentoo
 	epatch "${FILESDIR}/${PN}-3.8.0-paths-makefiles.patch"
@@ -132,20 +135,20 @@ src_prepare() {
 	# Make modemmanager optional, bug 463852, upstream bug #700145
 	epatch "${FILESDIR}/${PN}-3.8.1.5-optional-modemmanager.patch"
 
+	epatch_user
 	eautoreconf
-	gnome2_src_prepare
+	cd egg-list-box/ && eautoreconf && cd ..
 
 	# panels/datetime/Makefile.am gets touched as a result of something in our
 	# src_prepare(). We need to touch timedated{c,h} to prevent them from being
 	# regenerated (bug #415901)
-	[[ -f panels/datetime/timedated.h ]] && touch panels/datetime/timedated.h
-	[[ -f panels/datetime/timedated.c ]] && touch panels/datetime/timedated.c
+	# Upstream think they should be removed, preventing compilation errors too
+	# (https://bugzilla.gnome.org/704822)
+	[[ -f panels/datetime/timedated.h ]] && rm -f panels/datetime/timedated.h
+	[[ -f panels/datetime/timedated.c ]] && rm -f panels/datetime/timedated.c
 }
 
 src_configure() {
-	# FIXME: add $(use_with kerberos) support?
-	! use kerberos && G2CONF+=" KRB5_CONFIG=$(type -P true)"
-
 	gnome2_src_configure \
 		--disable-update-mimedb \
 		--disable-static \
@@ -155,6 +158,7 @@ src_configure() {
 		$(use_enable cups) \
 		$(use_enable gnome-online-accounts goa) \
 		$(use_enable i18n ibus) \
+		$(use_enable kerberos) \
 		$(use_enable modemmanager) \
 		$(use_with socialweb libsocialweb) \
 		$(use_with v4l cheese) \

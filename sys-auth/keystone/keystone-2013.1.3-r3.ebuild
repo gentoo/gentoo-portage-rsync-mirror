@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.3-r2.ebuild,v 1.2 2013/09/12 06:19:47 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.3-r3.ebuild,v 1.1 2013/09/15 02:58:58 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -70,6 +70,7 @@ RDEPEND="${DEPEND}
 #			dev-python/webtest
 #			)
 PATCHES=(
+	"${FILESDIR}/2013.1.3-CVE-2013-4222.patch"
 	"${FILESDIR}/keystone-cve-2013-4294-grizzly.patch"
 )
 #	"${FILESDIR}/keystone-grizzly-2-CVE-2013-2157.patch"

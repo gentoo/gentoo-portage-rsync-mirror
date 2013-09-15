@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.8.1.ebuild,v 1.1 2013/04/20 09:11:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/gnome-color-manager-3.8.3.ebuild,v 1.1 2013/09/15 02:49:04 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ COMMON_DEPEND="
 	>=x11-libs/colord-gtk-0.1.20
 
 	clutter? (
-		>=media-libs/clutter-1.9.11:1.0
+		>=media-libs/clutter-1.12:1.0
 		media-libs/clutter-gtk:1.0
 		media-libs/mash:0.2 )
 	packagekit? ( app-admin/packagekit-base )
