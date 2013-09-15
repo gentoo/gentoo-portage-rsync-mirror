@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.58 2013/08/28 08:13:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.60 2013/09/15 08:31:02 ago Exp $
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> coot-0.7.ebuild:
+  Stable for x86, wrt bug #477166
+
+  15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> coot-0.7.ebuild:
+  Stable for amd64, wrt bug #477166
 
 *coot-0.7.1-r1 (28 Aug 2013)
 
@@ -257,4 +263,3 @@
   +coot-0.1.2_pre1.ebuild:
   Add the Crystallographic Object-Oriented Toolkit for model building,
   completion and validation.
-
