@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15106 2013/09/14 22:54:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15107 2013/09/15 05:52:28 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -268,13 +268,6 @@ dev-java/itext:5
 # Not needed anymore
 # All consumer upstreams moved away from it
 sci-libs/mccp4
-
-# Hans de Graaff <graaff@gentoo.org> (11 Aug 2013)
-# These are all leaf packages marked for ruby18 and ree18.
-# ree18 is already removed from the tree, and ruby18 will
-# follow soon. These packages don't have dependencies in the
-# tree. Removal in 30 days.
-dev-ruby/delocalize
 
 # Ole Markus With <olemarkus@gentoo.org> (10 Aug 2013)
 # About a year since upstream stopped maintaining symfony 1.x.
@@ -928,11 +921,8 @@ app-portage/layman-dbtools
 ~dev-lang/jimtcl-9999
 ~dev-libs/libg15-9999
 =net-print/cups-9999
-# rdep of dev-vcs/fromcvs
-dev-ruby/rcsparse
 ~dev-util/buildbot-9999
 ~dev-util/buildbot-slave-9999
-dev-vcs/fromcvs
 =net-im/kmess-9999
 net-misc/netcomics-cvs
 =media-plugins/vdr-xineliboutput-9999
