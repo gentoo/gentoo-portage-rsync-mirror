@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.319 2013/09/14 23:19:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.320 2013/09/15 14:36:58 anarchy Exp $
+
+  15 Sep 2013;  <anarchy@gentoo.org>
+  files/lvm2-2.02.100-selinux_and_udev_static.patch:
+  Fix busted selinux patch, need to subst SELINUX_STATIC_LIBS
 
 *lvm2-2.02.100-r2 (14 Sep 2013)
 
