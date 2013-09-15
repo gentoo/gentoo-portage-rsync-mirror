@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.1.ebuild,v 1.1 2013/09/03 02:35:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.1.ebuild,v 1.2 2013/09/15 12:04:52 grobian Exp $
 
 EAPI="3"
 
@@ -72,6 +72,17 @@ src_prepare() {
 	[[ -n ${RPM} ]] && rpm_spec_epatch "${WORKDIR}"/gdb.spec
 	use vanilla || [[ -n ${PATCH_VER} ]] && EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
 	strip-linguas -u bfd/po opcodes/po
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# make sure we have a python-config that matches our install,
+		# such that the python check doesn't fail just because the
+		# gdb-provided copy isn't quite what our python installed
+		# version is
+		rm -f "${S}"/gdb/python/python-config.py || die
+		pushd "${S}"/gdb/python > /dev/null || die
+		ln -s "${EROOT}"/usr/bin/$(eselect python show --python2)-config \
+			python-config.py || die
+		popd > /dev/null || die
+	fi
 }
 
 gdb_branding() {

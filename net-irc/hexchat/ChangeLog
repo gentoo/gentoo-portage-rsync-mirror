@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.78 2013/09/14 16:36:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.79 2013/09/15 12:22:24 hasufell Exp $
+
+  15 Sep 2013; Julian Ospald <hasufell@gentoo.org> hexchat-2.9.6.ebuild:
+  use ${P} in SRC_URI
 
   14 Sep 2013; Julian Ospald <hasufell@gentoo.org> hexchat-2.9.5-r1.ebuild,
   hexchat-2.9.6.ebuild, hexchat-9999.ebuild:
