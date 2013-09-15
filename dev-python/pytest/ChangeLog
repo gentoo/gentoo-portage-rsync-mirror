@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.76 2013/09/05 18:46:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.77 2013/09/14 23:44:43 floppym Exp $
+
+  14 Sep 2013; Mike Gilbert <floppym@gentoo.org> pytest-2.3.5.ebuild:
+  Call distutils-r1_python_install_all.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pytest-2.3.4.ebuild,
   pytest-2.3.5.ebuild:
