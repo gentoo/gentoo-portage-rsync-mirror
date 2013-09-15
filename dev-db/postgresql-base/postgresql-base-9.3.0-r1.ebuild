@@ -1,21 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9999.ebuild,v 1.9 2013/09/15 21:15:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-9.3.0-r1.ebuild,v 1.1 2013/09/15 21:15:12 titanofold Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3}} )
 WANT_AUTOMAKE="none"
 
-inherit autotools eutils flag-o-matic multilib prefix python-single-r1 versionator base git-2
+inherit autotools eutils flag-o-matic multilib prefix python-single-r1 versionator
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
-# Fix if needed
-SLOT="9.4"
-
-EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
-SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-patches-9.3-r1.tbz2"
+SLOT="$(get_version_component_range 1-2)"
+S="${WORKDIR}/postgresql-${PV}"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}-r1.tbz2"
 
 LICENSE="POSTGRESQL"
 DESCRIPTION="PostgreSQL libraries and clients"
@@ -61,22 +60,17 @@ sys-devel/flex
 nls? ( sys-devel/gettext )
 "
 
+PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
+
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
-src_unpack() {
-	base_src_unpack
-	git-2_src_unpack
-}
-
 src_prepare() {
-	# silly version changes
-	sed -i -e 's/2012/2013/' -e 's/9.3beta2/9.4devel/' "${WORKDIR}/autoconf.patch" || die
-
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/base.patch" \
-		"${WORKDIR}/bool.patch"
+		"${WORKDIR}/bool.patch" \
+		"${WORKDIR}/run-dir.patch"
 
 	eprefixify src/include/pg_config_manual.h
 
@@ -86,13 +80,10 @@ src_prepare() {
 	# because psql/help.c includes the file
 	ln -s "${S}/src/include/libpq/pqsignal.h" "${S}/src/bin/psql/" || die
 
-	sed -e "s|@RUNDIR@||g" \
-		-i src/include/pg_config_manual.h || die "RUNDIR sed failed"
-
 	if use pam ; then
 		sed -e "s/\(#define PGSQL_PAM_SERVICE \"postgresql\)/\1-${SLOT}/" \
 			-i src/backend/libpq/auth.c \
-			|| die 'PAM service name change failed.'
+			|| die 'PGSQL_PAM_SERVICE rename failed.'
 	fi
 
 	eautoconf
@@ -140,21 +131,19 @@ src_compile() {
 }
 
 src_install() {
-	mkdir -p "${D}/usr/share/postgresql-${SLOT}"
 	emake DESTDIR="${D}" install
 	insinto /usr/include/postgresql-${SLOT}/postmaster
 	doins "${S}"/src/include/postmaster/*.h
 
 	dodir /usr/share/postgresql-${SLOT}/man/
-	# manpages aren't generated, need to add sgml transformation stuff
-	#cp -r "${S}"/doc/src/sgml/man{1,7} "${ED}"/usr/share/postgresql-${SLOT}/man/ || die
-	#rm "${ED}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}.1
-	#docompress /usr/share/postgresql-${SLOT}/man/man{1,7}
+	cp -r "${S}"/doc/src/sgml/man{1,7} "${ED}"/usr/share/postgresql-${SLOT}/man/ || die
+	rm "${ED}/usr/share/postgresql-${SLOT}/man/man1"/{initdb,pg_{controldata,ctl,resetxlog},post{gres,master}}.1
+	docompress /usr/share/postgresql-${SLOT}/man/man{1,7}
 
 	# Don't use ${PF} here as three packages
 	# (dev-db/postgresql-{docs,base,server}) have the same set of docs.
 	insinto /usr/share/doc/postgresql-${SLOT}
-	doins README doc/{TODO,bug.template}
+	doins README HISTORY doc/{TODO,bug.template}
 
 	cd "${S}/contrib"
 	emake DESTDIR="${D}" install

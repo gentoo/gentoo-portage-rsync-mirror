@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.251 2013/09/10 05:50:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.252 2013/09/15 21:15:12 titanofold Exp $
+
+*postgresql-base-9.3.0-r1 (15 Sep 2013)
+*postgresql-base-9.2.4-r1 (15 Sep 2013)
+*postgresql-base-9.1.9-r1 (15 Sep 2013)
+*postgresql-base-9.0.13-r1 (15 Sep 2013)
+*postgresql-base-8.4.17-r1 (15 Sep 2013)
+
+  15 Sep 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-base-8.4.17-r1.ebuild, +postgresql-base-9.0.13-r1.ebuild,
+  +postgresql-base-9.1.9-r1.ebuild, +postgresql-base-9.2.4-r1.ebuild,
+  +postgresql-base-9.3.0-r1.ebuild, postgresql-base-9999.ebuild:
+  Add Python support for clients and libraries. Fixes bug 392673.
 
 *postgresql-base-9.3.0 (10 Sep 2013)
 

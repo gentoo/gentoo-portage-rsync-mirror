@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup
+DEPEND=>=app-admin/eselect-postgresql-1.2.0 sys-apps/less virtual/libintl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( virtual/pam ) python? ( python_single_target_python2_6? ( dev-lang/python:2.6 ) python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec:0[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) readline? ( >=sys-libs/readline-4.1 ) ssl? ( >=dev-libs/openssl-0.9.6-r1 ) zlib? ( >=sys-libs/zlib-1.1.3 ) !!<sys-apps/sandbox-2.0 >=sys-devel/bison-1.875 sys-devel/flex nls? ( sys-devel/gettext ) sys-devel/automake >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=PostgreSQL libraries and clients
+EAPI=5
+HOMEPAGE=http://www.postgresql.org/
+IUSE=doc kerberos ldap nls pam pg_legacytimestamp python readline ssl threads zlib linguas_af linguas_cs linguas_de linguas_en linguas_es linguas_fa linguas_fr linguas_hr linguas_hu linguas_it linguas_ko linguas_nb linguas_pl linguas_pt_BR linguas_ro linguas_ru linguas_sk linguas_sl linguas_sv linguas_tr linguas_zh_CN linguas_zh_TW python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd
+LICENSE=POSTGRESQL
+PDEPEND=doc? ( ~dev-db/postgresql-docs-8.4.17 )
+RDEPEND=>=app-admin/eselect-postgresql-1.2.0 sys-apps/less virtual/libintl kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( virtual/pam ) python? ( python_single_target_python2_6? ( dev-lang/python:2.6 ) python_single_target_python2_7? ( dev-lang/python:2.7 ) dev-python/python-exec:0[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) readline? ( >=sys-libs/readline-4.1 ) ssl? ( >=dev-libs/openssl-0.9.6-r1 ) zlib? ( >=sys-libs/zlib-1.1.3 )
+RESTRICT=test
+SLOT=8.4
+SRC_URI=mirror://postgresql/source/v8.4.17/postgresql-8.4.17.tar.bz2 http://dev.gentoo.org/~titanofold/postgresql-patches-8.4-r3.tbz2
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	prefix	21058c21ca48453d771df15500873ede	python-single-r1	007be4716d2d4dad097178465e474957	python-utils-r1	d55ee5d992fc65859c29c73a24a24299	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=8cc12ef9293a213377a94ff7e0477bdc

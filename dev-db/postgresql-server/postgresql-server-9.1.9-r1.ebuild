@@ -1,26 +1,25 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9999.ebuild,v 1.12 2013/09/15 21:20:56 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1.9-r1.ebuild,v 1.1 2013/09/15 21:20:56 titanofold Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_{6,7},3_{2,3}} )
+PYTHON_COMPAT=( python{2_{5,6,7},3_{1,2,3}} )
 WANT_AUTOMAKE="none"
 
-inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 user versionator base git-2
+inherit autotools eutils flag-o-matic multilib pam prefix python-single-r1 systemd user versionator
 
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
-SLOT="9.4"
+SLOT="$(get_version_component_range 1-2)"
+S="${WORKDIR}/postgresql-${PV}"
 
-EGIT_REPO_URI="git://git.postgresql.org/git/postgresql.git"
-
-SRC_URI="http://dev.gentoo.org/~titanofold/postgresql-initscript-2.4.tbz2
-	http://dev.gentoo.org/~titanofold/postgresql-patches-9.3-r1.tbz2"
-
-LICENSE="POSTGRESQL GPL-2"
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-9.1-r2.tbz2
+		 http://dev.gentoo.org/~titanofold/postgresql-initscript-pre92-2.6.tbz2"
+LICENSE="POSTGRESQL GPL-2"
 
 LINGUAS="af cs de en es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr zh_CN zh_TW"
 IUSE="doc kerberos kernel_linux nls pam perl -pg_legacytimestamp python selinux tcl test uuid xml"
@@ -40,7 +39,8 @@ wanted_languages() {
 }
 
 RDEPEND="
-~dev-db/postgresql-base-${PV}:${SLOT}[kerberos?,pam?,pg_legacytimestamp=,python=,nls=]
+~dev-db/postgresql-base-${PV}[kerberos?,pam?,pg_legacytimestamp=,python=,nls=]
+!=dev-db/postgresql-base-${PV}-r0
 perl? ( >=dev-lang/perl-5.8 )
 python? ( ${PYTHON_DEPS} )
 selinux? ( sec-policy/selinux-postgresql )
@@ -53,10 +53,8 @@ DEPEND="${RDEPEND}
 sys-devel/flex
 xml? ( virtual/pkgconfig )
 "
-src_unpack() {
-	base_src_unpack
-	git-2_src_unpack
-}
+
+PDEPEND="doc? ( ~dev-db/postgresql-docs-${PV} )"
 
 pkg_setup() {
 	enewgroup postgres 70
@@ -66,11 +64,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# silly version changes
-	sed -i -e 's/2012/2013/' -e 's/9.3beta2/9.4devel/' "${WORKDIR}/autoconf.patch" || die
-
 	epatch "${WORKDIR}/autoconf.patch" \
 		"${WORKDIR}/bool.patch" \
+		"${WORKDIR}/pg_ctl-exit-status.patch" \
 		"${WORKDIR}/server.patch"
 
 	eprefixify src/include/pg_config_manual.h
@@ -88,11 +84,11 @@ src_prepare() {
 		echo "all install:" > "${S}/src/test/regress/GNUmakefile"
 	fi
 
-	sed -e "s|@RUNDIR@||g" \
-		-i src/include/pg_config_manual.h || die "RUNDIR sed failed"
-	sed -e "s|@SLOT@|${SLOT}|g" \
-		-i "${WORKDIR}/postgresql.init" "${WORKDIR}/postgresql.confd" || \
-		die "SLOT sed failed"
+	for x in .init .confd .service -check-db-dir
+	do
+		sed -e "s|@SLOT@|${SLOT}|g" -i "${WORKDIR}"/postgresql${x}
+		[[ $? -ne 0 ]] && eerror "Failed sed on $x" && die 'Failed slot sed'
+	done
 
 	eautoconf
 }
@@ -144,10 +140,14 @@ src_install() {
 	echo "postgres_ebuilds=\"\${postgres_ebuilds} ${PF}\"" > \
 		"${ED}/etc/eselect/postgresql/slots/${SLOT}/server"
 
-	newconfd "${WORKDIR}/postgresql.confd" postgresql-${SLOT} || \
-		die "Inserting conf failed"
-	newinitd "${WORKDIR}/postgresql.init" postgresql-${SLOT} || \
-		die "Inserting conf failed"
+	newconfd "${WORKDIR}/postgresql.confd" postgresql-${SLOT}
+	newinitd "${WORKDIR}/postgresql.init" postgresql-${SLOT}
+
+	systemd_newunit "${WORKDIR}"/postgresql.service postgresql-${SLOT}.service
+	systemd_newtmpfilesd "${WORKDIR}"/postgresql.tmpfilesd postgresql-${SLOT}.conf
+
+	insinto /usr/bin/
+	newbin "${WORKDIR}"/postgresql-check-db-dir postgresql-${SLOT}-check-db-dir
 
 	use pam && pamd_mimic system-auth postgresql-${SLOT} auth account session
 
@@ -155,8 +155,6 @@ src_install() {
 		keepdir /run/postgresql
 		fperms 0770 /run/postgresql
 	fi
-	# collides with -base
-	rm "${ED}/usr/$(get_libdir)/postgresql-${SLOT}/$(get_libdir)/libpgcommon.a"
 }
 
 pkg_postinst() {
@@ -189,7 +187,7 @@ pkg_prerm() {
 		ewarn "Have you dumped and/or migrated the ${SLOT} database cluster?"
 		ewarn "\thttp://www.gentoo.org/doc/en/postgres-howto.xml#doc_chap5"
 
-		ebegin "Resuming removal 10 seconds. Control-C to cancel"
+		ebegin "Resuming removal in 10 seconds. Control-C to cancel"
 		sleep 10
 		eend 0
 	fi
@@ -348,7 +346,7 @@ src_test() {
 	einfo ">>> Test phase [check]: ${CATEGORY}/${PF}"
 
 	if [ ${UID} -ne 0 ] ; then
-		emake check
+		emake -j1 check
 
 		einfo "If you think other tests besides the regression tests are necessary, please"
 		einfo "submit a bug including a patch for this ebuild to enable them."
