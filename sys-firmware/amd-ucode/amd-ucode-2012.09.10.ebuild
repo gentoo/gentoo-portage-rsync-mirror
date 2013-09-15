@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/amd-ucode/amd-ucode-2012.09.10.ebuild,v 1.1 2012/10/24 18:28:15 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/amd-ucode/amd-ucode-2012.09.10.ebuild,v 1.2 2013/09/15 15:19:25 hwoarang Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="0"
 IUSE=""
 
 # only meaningful for x86 and x86-64
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 
 # The license does not allow us to mirror the content.
 RESTRICT="mirror"
