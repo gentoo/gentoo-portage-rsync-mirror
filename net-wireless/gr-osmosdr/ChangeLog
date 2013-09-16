@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/gr-osmosdr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/ChangeLog,v 1.18 2013/07/08 23:39:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-osmosdr/ChangeLog,v 1.19 2013/09/16 16:03:12 zerochaos Exp $
+
+*gr-osmosdr-0.1.0-r2 (16 Sep 2013)
+*gr-osmosdr-0.0.2-r1 (16 Sep 2013)
+
+  16 Sep 2013; Rick Farina <zerochaos@gentoo.org> +gr-osmosdr-0.0.2-r1.ebuild,
+  +gr-osmosdr-0.1.0-r2.ebuild, -gr-osmosdr-0.0.1.ebuild,
+  -gr-osmosdr-0.0.2.ebuild, -gr-osmosdr-0.1.0-r1.ebuild, gr-osmosdr-9999.ebuild:
+  adding RTL_TCP support based on report from Dariusz Pelowski, removing old
 
 *gr-osmosdr-0.1.0-r1 (08 Jul 2013)
 

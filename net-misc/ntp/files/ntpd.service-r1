@@ -1,6 +1,6 @@
 [Unit]
 Description=Network Time Service
-After=ntp-client.service sntp.service
+After=ntpdate.service sntp.service
 
 [Service]
 ExecStart=/usr/sbin/ntpd -n
