@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyphen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyphen/ChangeLog,v 1.1 2013/09/12 02:12:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyphen/ChangeLog,v 1.2 2013/09/16 08:13:27 patrick Exp $
+
+  16 Sep 2013; Patrick Lauer <patrick@gentoo.org> pyphen-0.8.ebuild:
+  Add more python targets
 
 *pyphen-0.8 (12 Sep 2013)
 
