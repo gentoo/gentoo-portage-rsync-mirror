@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.416 2013/07/31 15:56:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.417 2013/09/16 15:55:47 ssuominen Exp $
+
+*libpng-1.6.6 (16 Sep 2013)
+
+  16 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> +libpng-1.6.6.ebuild:
+  Version bump.
 
   31 Jul 2013; Alexis Ballier <aballier@gentoo.org> libpng-1.2.50-r1.ebuild:
   add the blocker on emul-linux so that it is stacked for baselibs -r4
