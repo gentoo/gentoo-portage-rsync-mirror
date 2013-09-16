@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.2.7.ebuild,v 1.5 2012/09/26 03:23:09 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-anthy/scim-anthy-1.2.7.ebuild,v 1.6 2013/09/16 10:42:49 heroxbd Exp $
 
 EAPI="2"
 

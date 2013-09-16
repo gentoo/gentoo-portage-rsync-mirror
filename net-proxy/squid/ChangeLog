@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.432 2013/07/23 05:53:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.433 2013/09/16 10:36:43 tomwij Exp $
+
+  16 Sep 2013; Tom Wijsman <TomWij@gentoo.org> squid-3.3.8.ebuild:
+  Run eautoreconf using a single job, should fix bug #419685 and bug #482622;
+  reported by Ricardo, Patrick Lauer and more people.
 
   23 Jul 2013; Eray Aslan <eras@gentoo.org> -squid-3.2.12.ebuild,
   -squid-3.2.9.ebuild:
