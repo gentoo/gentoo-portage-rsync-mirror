@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.9.0.ebuild,v 1.2 2013/06/04 13:38:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.9.0.ebuild,v 1.3 2013/09/16 09:42:55 scarabeus Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE="doc +fftw +hdf5 +jpeg openexr +png +python test +tiff"
 
 # Pull in dev-lang/python:2.7 for vigra-config which is always installed
 RDEPEND="dev-lang/python:2.7
-	>=dev-libs/boost-1.52.0-r6[python?,${PYTHON_USEDEP}]
+	>=dev-libs/boost-1.52.0-r6:=[python?,${PYTHON_USEDEP}]
 	fftw? ( sci-libs/fftw:3.0 )
 	hdf5? ( sci-libs/hdf5 )
 	jpeg? ( virtual/jpeg )
