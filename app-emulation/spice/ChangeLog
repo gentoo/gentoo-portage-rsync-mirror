@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.54 2013/09/12 22:29:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.55 2013/09/16 02:37:18 floppym Exp $
+
+  16 Sep 2013; Mike Gilbert <floppym@gentoo.org> spice-0.12.3-r1.ebuild,
+  spice-0.12.4.ebuild:
+  Require a python-r1 compatible version of dev-python/pyparsing, bug 484906.
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> spice-0.12.2.ebuild,
   spice-0.12.3-r1.ebuild, spice-0.12.4.ebuild:
