@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8249 2013/09/15 15:52:37 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8250 2013/09/16 15:07:34 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Sep 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  Mask gajim beta
 
   15 Sep 2013; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-plugins/vdr-sysinfo masked for removal on ~15/Oct/2013, Bug #414275
