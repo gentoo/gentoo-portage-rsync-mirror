@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.215 2013/09/06 18:33:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.216 2013/09/16 05:55:08 radhermit Exp $
+
+*setuptools-1.1.5 (16 Sep 2013)
+
+  16 Sep 2013; Tim Harder <radhermit@gentoo.org> +setuptools-1.1.5.ebuild:
+  Version bump.
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> setuptools-0.8-r1.ebuild:
   Stable for sparc, wrt bug #479980

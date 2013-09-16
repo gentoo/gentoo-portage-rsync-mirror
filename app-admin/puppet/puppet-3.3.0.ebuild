@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.1.1-r3.ebuild,v 1.2 2013/08/15 15:43:32 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.3.0.ebuild,v 1.1 2013/09/16 05:46:47 prometheanfire Exp $
 
-EAPI="4"
+EAPI="5"
 
 USE_RUBY="ruby18 ruby19"
 
@@ -10,12 +10,11 @@ inherit elisp-common xemacs-elisp-common eutils user ruby-ng versionator
 
 DESCRIPTION="A system automation and configuration management software"
 HOMEPAGE="http://puppetlabs.com/"
-SRC_URI="http://www.puppetlabs.com/downloads/puppet/${P}.tar.gz
-		https://dev.gentoo.org/~prometheanfire/dist/patches/CVEs/puppet-3.1.1-CVE-2013-3567.patch"
+SRC_URI="http://www.puppetlabs.com/downloads/puppet/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="augeas diff doc emacs ldap minimal rrdtool selinux shadow sqlite3 vim-syntax xemacs"
 
 ruby_add_rdepend "
@@ -45,8 +44,7 @@ RDEPEND="${RDEPEND}
 
 SITEFILE="50${PN}-mode-gentoo.el"
 
-RUBY_PATCHES=( "${DISTDIR}/puppet-3.1.1-CVE-2013-3567.patch"
-				"${FILESDIR}/puppet-openrc-status-fix.patch" )
+#RUBY_PATCHES=( "${FILESDIR}/puppet-openrc-status-fix.patch" )
 
 pkg_setup() {
 	enewgroup puppet

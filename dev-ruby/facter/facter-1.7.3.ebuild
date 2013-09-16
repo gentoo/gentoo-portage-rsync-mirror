@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.7.1-r1.ebuild,v 1.6 2013/08/03 07:41:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.7.3.ebuild,v 1.1 2013/09/16 05:54:27 prometheanfire Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.puppetlabs.com/puppet/related-projects/facter/"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="+dmi +pciutils"
-KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 CDEPEND="
 	sys-apps/net-tools
@@ -29,9 +29,9 @@ CDEPEND="
 RDEPEND+=" ${CDEPEND}"
 DEPEND+=" test? ( ${CDEPEND} )"
 
-RUBY_PATCHES=( ${P}-fix-proc-self-status.patch )
+#RUBY_PATCHES=( ${P}-fix-proc-self-status.patch )
 
-ruby_add_bdepend "test? ( >=dev-ruby/mocha-0.10.5:0.10 )"
+ruby_add_bdepend "test? ( >=dev-ruby/mocha-0.10.5:0.10 <dev-ruby/rspec-2.14:2 )"
 
 all_ruby_prepare() {
 	# Provide explicit path since /sbin is not in the default PATH on
@@ -40,4 +40,11 @@ all_ruby_prepare() {
 
 	# Ensure the correct version of mocha is used without using bundler.
 	sed -i -e '9igem "mocha", "~>0.10.5"' spec/spec_helper.rb || die
+}
+
+all_ruby_install() {
+	all_fakegem_install
+
+	# Create the directory for custom facts.
+	keepdir /etc/facter/facts.d
 }
