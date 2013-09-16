@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.34 2013/09/08 14:56:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.35 2013/09/16 17:58:15 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -34,7 +34,7 @@ fi
 
 if [[ ! ${_PYTHON_UTILS_R1} ]]; then
 
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 # @ECLASS-VARIABLE: _PYTHON_ALL_IMPLS
 # @INTERNAL
@@ -377,6 +377,10 @@ python_export() {
 python_get_PYTHON() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	eqawarn '$(python_get_PYTHON) is discouraged since all standard environments' >&2
+	eqawarn 'have PYTHON exported anyway. Please use ${PYTHON} instead.' >&2
+	eqawarn 'python_get_PYTHON will be removed on 2013-10-16.' >&2
+
 	python_export "${@}" PYTHON
 	echo "${PYTHON}"
 }
@@ -390,6 +394,10 @@ python_get_PYTHON() {
 # to use python_export() directly instead.
 python_get_EPYTHON() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	eqawarn '$(python_get_EPYTHON) is discouraged since all standard environments' >&2
+	eqawarn 'have EPYTHON exported anyway. Please use ${EPYTHON} instead.' >&2
+	eqawarn 'python_get_EPYTHON will be removed on 2013-10-16.' >&2
 
 	python_export "${@}" EPYTHON
 	echo "${EPYTHON}"

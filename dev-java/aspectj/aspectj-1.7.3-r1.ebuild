@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.7.3.ebuild,v 1.1 2013/09/14 05:07:04 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.7.3-r1.ebuild,v 1.1 2013/09/16 17:56:23 ercpe Exp $
 
 EAPI="5"
 
@@ -35,10 +35,12 @@ src_unpack() {
 	unzip "${S}/aspectjweaver1.7.3-src.jar" -d "${S}/src/" || die
 }
 
-src_prepare() {
+java_prepare() {
 	default
 	# needs part of BEA JRockit to compile
 	rm "${S}"/src/org/aspectj/weaver/loadtime/JRockitAgent.java || die
 	# aspectj uses a renamed version of asm:4
 	find -name "*.java" -exec sed -i -e 's/import aj.org.objectweb.asm./import org.objectweb.asm./g' {} \; || die
+	mkdir -p "${S}"/target/classes/org/aspectj/weaver/ || die
+	cp -vr "${S}"/src/org/aspectj/weaver/*.properties "${S}"/target/classes/org/aspectj/weaver/ || die
 }

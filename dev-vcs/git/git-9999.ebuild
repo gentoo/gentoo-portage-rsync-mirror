@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.44 2013/07/31 05:04:51 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.45 2013/09/16 17:53:28 mgorny Exp $
 
 EAPI=5
 
@@ -250,7 +250,7 @@ git_emake() {
 	# bug #326625: PERL_PATH, PERL_MM_OPT
 	# bug #320647: PYTHON_PATH
 	PYTHON_PATH=""
-	use python && PYTHON_PATH="$(python_get_PYTHON)"
+	use python && PYTHON_PATH="${PYTHON}"
 	emake ${MY_MAKEOPTS} \
 		DESTDIR="${D}" \
 		OPTCFLAGS="${CFLAGS}" \
