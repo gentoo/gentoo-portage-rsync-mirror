@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1.ebuild,v 1.2 2013/09/01 18:48:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1.ebuild,v 1.3 2013/09/15 23:54:48 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -197,7 +197,7 @@ src_install() {
 	gnome2_src_install
 	python_optimize "${ED}usr/$(get_libdir)/cinnamon-"{settings,menu-editor}
 	# Fix broken shebangs
-	sed -e "s%#!.*python%#!$(python_get_PYTHON)%" \
+	sed -e "s%#!.*python%#!${PYTHON}%" \
 		-i "${ED}usr/bin/cinnamon-"{launcher,menu-editor,settings} \
 		-i "${ED}usr/$(get_libdir)/cinnamon-settings/cinnamon-settings.py" || die
 
