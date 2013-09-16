@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.7 2013/09/13 20:10:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.8 2013/09/16 22:28:24 williamh Exp $
 
 EAPI=5
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://roy.marples.name/${PN}.git"
-	inherit git-2
+	inherit git-r3
 else
 	MY_P="${P/_alpha/-alpha}"
 	MY_P="${MY_P/_beta/-beta}"

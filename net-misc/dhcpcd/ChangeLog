@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.372 2013/09/13 20:10:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.373 2013/09/16 22:28:24 williamh Exp $
+
+  16 Sep 2013; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
+  migrate to git-r3 eclass
 
   13 Sep 2013; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
   --with-udev and --with-dev are not valid switches to configure, so only use
