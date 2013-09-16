@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.9.8.2.ebuild,v 1.2 2013/09/16 01:25:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/networkmanager-openconnect-0.9.8.4.ebuild,v 1.1 2013/09/16 01:16:11 tetromino Exp $
 
-EAPI=5
+EAPI="5"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
 
-inherit eutils gnome2-utils gnome.org
+inherit eutils gnome.org gnome2-utils user
 
-DESCRIPTION="NetworkManager PPTP plugin"
+DESCRIPTION="NetworkManager OpenConnect plugin"
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 
 LICENSE="GPL-2+"
@@ -16,10 +16,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
 RDEPEND="
-	>=net-misc/networkmanager-0.9.8
+	>=net-misc/networkmanager-0.9.8:=
 	>=dev-libs/dbus-glib-0.74
-	net-dialup/ppp
-	net-dialup/pptpclient
+	dev-libs/libxml2:2
+	gnome-base/libgnome-keyring
+	>=net-misc/openconnect-3.02:=
 	gtk? (
 		>=x11-libs/gtk+-2.91.4:3
 		gnome-base/gnome-keyring
@@ -33,18 +34,24 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	gnome2_disable_deprecation_warning
+	default
 }
 
 src_configure() {
 	econf \
 		--disable-more-warnings \
 		--disable-static \
-		--with-dist-version=Gentoo \
 		--with-gtkver=3 \
-		$(use_with gtk gnome)
+		$(use_with gtk gnome) \
+		$(use_with gtk authdlg)
 }
 
 src_install() {
 	default
-	prune_libtool_files
+	prune_libtool_files --modules
+}
+
+pkg_postinst() {
+	enewgroup nm-openconnect
+	enewuser nm-openconnect -1 -1 -1 nm-openconnect
 }

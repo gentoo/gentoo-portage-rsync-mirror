@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9.8.2.ebuild,v 1.1 2013/06/10 09:36:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9.8.2.ebuild,v 1.2 2013/09/16 01:17:42 tetromino Exp $
 
 EAPI=5
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
@@ -10,7 +10,7 @@ inherit eutils gnome2-utils gnome.org
 DESCRIPTION="NetworkManager OpenVPN plugin"
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk test"
