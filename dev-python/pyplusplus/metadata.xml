@@ -6,4 +6,8 @@
 		<name>Benda Xu</name>
 	</maintainer>
 	<longdescription>pyplusplus is an object-oriented framework for creating a code generator for boost.python library.</longdescription>
+	<use>
+		<flag name="indexing"> Install indexing_suite_v2 to enhance boost python
+		</flag>
+	</use>
 </pkgmetadata>
