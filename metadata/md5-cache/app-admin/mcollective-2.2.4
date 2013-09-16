@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+DESCRIPTION=Framework to build server orchestration or parallel job execution systems
+EAPI=4
+HOMEPAGE=http://marionette-collective.org/
+IUSE=doc +client elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ree18 ruby_targets_ruby19
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=dev-ruby/stomp ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ree18? ( dev-lang/ruby-enterprise:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ree18 ruby_targets_ruby19 )
+SLOT=0
+SRC_URI=http://puppetlabs.com/downloads/mcollective/mcollective-2.2.4.tgz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	multilib	892e597faee02a5b94eb02ab512e7622	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=13301b4aeaf30aa4f08f2fe5fe664d2a
