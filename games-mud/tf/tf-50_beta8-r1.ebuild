@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8-r1.ebuild,v 1.5 2013/08/11 11:50:05 ago Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/tf-50_beta8-r1.ebuild,v 1.6 2013/09/16 21:34:09 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 MY_P="${P/_beta/b}"
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${DISTDIR}"/tf-all*patch.txt "${FILESDIR}"/${P}-pcre.patch )
+PATCHES=( "${DISTDIR}"/tf-all*patch.txt "${FILESDIR}"/${P}-pcre.patch "${FILESDIR}"/${P}-stdarg.patch )
 
 src_configure() {
 	STRIP=: egamesconf \
@@ -40,16 +40,16 @@ src_configure() {
 }
 
 src_install() {
-	dogamesbin src/tf || die "dogamesbin failed"
+	dogamesbin src/tf || die
 	newman src/tf.1.nroffman tf.1
 	dodoc CHANGES CREDITS README
 
 	insinto "${GAMES_DATADIR}"/${PN}-lib
 	# the application looks for this file here if /changes is called.
 	# see comments on bug #23274
-	doins CHANGES || die "doins failed"
+	doins CHANGES || die
 	insopts -m0755
-	doins tf-lib/* || die "doins failed"
+	doins tf-lib/* || die
 	if use doc ; then
 		cd ../${MY_P}-help
 		dohtml -r *.html commands topics
