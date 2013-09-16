@@ -4,7 +4,7 @@ HOMEPAGE=http://embedded.gentoo.org/gnap.xml
 IUSE=minimal
 KEYWORDS=~x86 ~amd64
 LICENSE=GPL-2
-RDEPEND=app-cdr/cdrtools sys-fs/dosfstools =sys-boot/syslinux-2.13
+RDEPEND=app-cdr/cdrtools sys-fs/dosfstools <sys-boot/syslinux-5
 SLOT=0
 SRC_URI=mirror://gentoo/gnap-tools-2.0.tar.bz2 !minimal? ( mirror://gentoo/gnap-core-2.0.tar )
-_md5_=77b13286a0d2dabdc5969e584a73b2f9
+_md5_=e5060d2e8e91d6943742722789d78600

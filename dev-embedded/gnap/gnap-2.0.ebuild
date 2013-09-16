@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnap/gnap-2.0.ebuild,v 1.1 2006/04/21 18:36:17 koon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnap/gnap-2.0.ebuild,v 1.2 2013/09/15 23:14:29 chithanh Exp $
 
 MY_P="${P/gnap/gnap-tools}"
 S="${WORKDIR}/${MY_P}"
@@ -17,7 +17,7 @@ IUSE="minimal"
 
 RDEPEND="app-cdr/cdrtools
 	sys-fs/dosfstools
-	=sys-boot/syslinux-2.13"
+	<sys-boot/syslinux-5"
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
@@ -32,7 +32,7 @@ src_install() {
 	dodir /usr/lib/gnap
 	insinto /usr/lib/gnap
 	if ! use minimal; then
-		newins ${DISTDIR}/${PN}-core-${PV}.tar ${PN}-core.tar
+		newins "${DISTDIR}"/${PN}-core-${PV}.tar ${PN}-core.tar
 		doins -r mbr
 		doins -r examples
 	fi
