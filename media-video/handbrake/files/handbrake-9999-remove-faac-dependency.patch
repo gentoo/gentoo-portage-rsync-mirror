@@ -147,8 +147,8 @@
 -LIBHB.dll.libs += $(CONTRIB.build/)lib/libfaac.a
 -endif
 -
- ifeq (1,$(FEATURE.mp4v2))
- LIBHB.dll.libs += $(CONTRIB.build/)lib/libmp4v2.a
+ ifeq (1,$(FEATURE.qsv))
+ LIBHB.dll.libs += $(CONTRIB.build/)lib/libmfx.a
  endif
 --- a/libhb/muxmkv.c	
 +++ b/libhb/muxmkv.c	

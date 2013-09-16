@@ -1,6 +1,15 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.15 2013/09/05 18:58:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.16 2013/09/16 12:42:28 tomwij Exp $
+
+  16 Sep 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/handbrake-0.9.9-add-gmodule-to-gtk-configure.patch,
+  files/handbrake-9999-remove-faac-dependency.patch, handbrake-0.9.9.ebuild,
+  handbrake-9999.ebuild:
+  Added gmodule to linker command line, fixes bug #482674 reported by Neil.
+  Repaired handbrake-9999-remove-faac-dependency.patch, fixes bug #484234
+  reported by Piotr Mitas. The live version still fails due to missing
+  ff_cpu_cpuid, likely needs newer (masked) ffmpeg to proceed.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> handbrake-0.9.9.ebuild,
   handbrake-9999.ebuild:

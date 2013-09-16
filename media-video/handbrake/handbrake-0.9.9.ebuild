@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.10 2013/09/05 18:58:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.11 2013/09/16 12:42:28 tomwij Exp $
 
 EAPI="5"
 
@@ -80,24 +80,27 @@ src_prepare() {
 		|| die "Contrib removal failed."
 
 	# Instead of adding a #define to libmkv, we expand it in place. 
-	epatch "${FILESDIR}"/handbrake-9999-expand-MK_SUBTITLE_PGS.patch
+	epatch "${FILESDIR}"/${PN}-9999-expand-MK_SUBTITLE_PGS.patch
 
 	# Fix compilation against the released 1.9.1 version of mp4v2.
-	epatch "${FILESDIR}"/handbrake-9999-fix-compilation-with-mp4v2-v1.9.1.patch
+	epatch "${FILESDIR}"/${PN}-9999-fix-compilation-with-mp4v2-v1.9.1.patch
 
 	# Remove libdvdnav duplication and call it on the original instead.
 	# It may work this way; if not, we should try to mimic the duplication.
-	epatch "${FILESDIR}"/handbrake-9999-remove-dvdnav-dup.patch
+	epatch "${FILESDIR}"/${PN}-9999-remove-dvdnav-dup.patch
 
 	# Remove faac dependency until its compilation errors can be resolved.
 	epatch "${FILESDIR}"/${P}-remove-faac-dependency.patch
 	sed -i 's/-lfaac//' gtk/configure.ac || die
 
 	# Make use of an older version of libmkv.
-	epatch "${FILESDIR}"/handbrake-9999-use-older-libmkv.patch
+	epatch "${FILESDIR}"/${PN}-9999-use-older-libmkv.patch
 
 	# Make use of an unpatched version of a52 that does not make a private field public.
-	epatch "${FILESDIR}"/handbrake-9999-use-unpatched-a52.patch
+	epatch "${FILESDIR}"/${PN}-9999-use-unpatched-a52.patch
+
+	# Add gmodule to the linker command line for bug #482674.
+	epatch "${FILESDIR}"/${P}-add-gmodule-to-gtk-configure.patch
 
 	# Fixup configure.ac with newer automake
 	cd "${S}/gtk"
