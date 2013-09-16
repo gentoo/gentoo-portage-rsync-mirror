@@ -1,6 +1,9 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.27 2013/09/16 08:41:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.28 2013/09/16 16:41:37 klausman Exp $
+
+  16 Sep 2013; Tobias Klausmann <klausman@gentoo.org> prosody-0.9.1.ebuild:
+  Rekeyword prosody-0.9.1 and make luasocket dep USE-conditional
 
   16 Sep 2013; Tobias Klausmann <klausman@gentoo.org> prosody-0.9.1.ebuild:
   Dekeyword prosody-0.9.1 due to luasocket mishap (bug 470702)

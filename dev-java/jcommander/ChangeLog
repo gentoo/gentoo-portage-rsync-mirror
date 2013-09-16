@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/jcommander
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommander/ChangeLog,v 1.2 2012/12/31 02:37:45 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommander/ChangeLog,v 1.3 2013/09/16 16:59:37 tomwij Exp $
+
+*jcommander-1.32 (16 Sep 2013)
+
+  16 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +files/jcommander-1.32-build.xml,
+  +jcommander-1.32.ebuild:
+  Version bump to 1.32. EAPI 5. Simplified using vcs-snapshot and archive URL.
+  Made use of java-ant-2 to introduce javadoc functionality, will also allow for
+  an easier src_test phase and solving of future build related problems.
+  RESTRICT="test" still in place due to a circular dependency on itself, seems
+  like some kind of bootstrapping or stripping is needed in order to get rid of
+  the circular dependency.
 
 *jcommander-1.30 (31 Dec 2012)
 
