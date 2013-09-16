@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-2.0.0.ebuild,v 1.1 2013/09/16 15:10:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-2.0.0.ebuild,v 1.2 2013/09/16 19:51:10 radhermit Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Keyboard and console utilities"
 HOMEPAGE="http://freshmeat.net/projects/kbd/"
@@ -13,10 +13,14 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/kbd/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="nls pam"
+IUSE="nls pam test"
 
 RDEPEND="pam? ( virtual/pam )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? (
+		dev-libs/check
+		virtual/pkgconfig
+	)"
 
 src_unpack() {
 	default
@@ -34,10 +38,16 @@ src_unpack() {
 	mv qwerty/cz.map qwerty/cz-qwerty.map
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-tests.patch
+	eautoreconf
+}
+
 src_configure() {
 	econf \
 		$(use_enable nls) \
-		$(use_enable pam vlock)
+		$(use_enable pam vlock) \
+		$(use_enable test tests)
 }
 
 src_install() {

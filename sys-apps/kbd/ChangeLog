@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.109 2013/09/16 15:10:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.110 2013/09/16 19:51:10 radhermit Exp $
+
+  16 Sep 2013; Tim Harder <radhermit@gentoo.org> kbd-2.0.0.ebuild,
+  +files/kbd-2.0.0-tests.patch:
+  Conditionally build tests (bug #485116, patches by Arfrever).
 
 *kbd-2.0.0 (16 Sep 2013)
 
