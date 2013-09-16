@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.0.ebuild,v 1.5 2013/05/18 15:43:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.4.ebuild,v 1.1 2013/09/16 00:59:20 tetromino Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -11,8 +11,6 @@ inherit eutils gnome2
 
 DESCRIPTION="GNOME applet for NetworkManager"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
-SRC_URI="${SRC_URI}
-	http://dev.gentoo.org/~ssuominen/pngcrush-fixed-nm-signal-icons.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -20,9 +18,9 @@ IUSE="bluetooth gconf +introspection modemmanager"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
+	app-crypt/libsecret
 	>=dev-libs/glib-2.26:2
 	>=dev-libs/dbus-glib-0.88
-	>=gnome-base/gnome-keyring-2.20
 	>=sys-apps/dbus-1.4.1
 	>=sys-auth/polkit-0.96-r1
 	>=x11-libs/gtk+-3:3
@@ -33,7 +31,9 @@ RDEPEND="
 	net-misc/mobile-broadband-provider-info
 
 	bluetooth? ( >=net-wireless/gnome-bluetooth-2.27.6 )
-	gconf? ( >=gnome-base/gconf-2.20:2 )
+	gconf? (
+		>=gnome-base/gconf-2.20:2
+		gnome-base/libgnome-keyring )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 	modemmanager? ( >=net-misc/modemmanager-0.7.990 )
 	virtual/freedesktop-icon-theme
@@ -45,7 +45,9 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	mv -f "${WORKDIR}"/nm-signal-*.png icons/22/
+	# Allow nm-applet to autostart in gnome-2 and gnome-3.6 fallback sessions
+	epatch "${FILESDIR}/${PN}-0.9.8.4-autostart.patch"
+
 	gnome2_src_prepare
 }
 
