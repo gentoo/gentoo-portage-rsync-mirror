@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.3.ebuild,v 1.1 2013/09/01 21:49:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.3.ebuild,v 1.2 2013/09/16 13:03:21 tetromino Exp $
 
 EAPI="5"
 
@@ -18,10 +18,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # libsoup used in goaoauthprovider
 # goa kerberos provider is incompatible with app-crypt/heimdal, see
 # https://bugzilla.gnome.org/show_bug.cgi?id=692250
+# json-glib-0.16 needed for bug #485092
 RDEPEND="
 	>=dev-libs/glib-2.35:2
 	app-crypt/libsecret
-	dev-libs/json-glib
+	>=dev-libs/json-glib-0.16
 	dev-libs/libxml2:2
 	>=net-libs/libsoup-2.42:2.4
 	net-libs/rest:0.7
