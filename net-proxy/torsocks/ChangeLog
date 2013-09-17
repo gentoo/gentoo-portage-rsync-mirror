@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/torsocks
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.11 2012/03/24 17:29:36 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/torsocks/ChangeLog,v 1.12 2013/09/17 18:22:23 blueness Exp $
+
+*torsocks-2.0.0_rc2 (17 Sep 2013)
+
+  17 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-docdir-r2.patch, +torsocks-2.0.0_rc2.ebuild:
+  Version bump, bug #485174
 
   24 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> torsocks-1.2-r2.ebuild:
   x86 stable wrt bug #395215
@@ -46,4 +52,3 @@
   13 Sep 2011; Anthony G. Basile <blueness@gentoo.org> +torsocks-1.1a.ebuild,
   +metadata.xml:
   Initial commit
-
