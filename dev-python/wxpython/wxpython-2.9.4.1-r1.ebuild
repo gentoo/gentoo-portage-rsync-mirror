@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.4.1-r1.ebuild,v 1.5 2013/04/22 16:19:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.4.1-r1.ebuild,v 1.6 2013/09/17 20:46:21 mgorny Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ RDEPEND="
 	opengl?	( dev-python/pyopengl[${PYTHON_USEDEP}] )"
 
 DEPEND="${RDEPEND}
+	dev-python/python-exec:0[${PYTHON_USEDEP}]
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_PN}-2.9.4.0/wxPython"
@@ -43,6 +44,9 @@ DOC_S="${WORKDIR}/wxPython-2.9.4.0"
 # The hacky build system seems to be broken with out-of-source builds,
 # and installs 'wx' package globally.
 DISTUTILS_IN_SOURCE_BUILD=1
+
+# Force python-exec:0 due to the hackery in the ebuild, bug #484420.
+_PYTHON_WANT_PYTHON_EXEC2=0
 
 python_prepare_all() {
 	sed -i "s:cflags.append('-O3'):pass:" config.py || die "sed failed"

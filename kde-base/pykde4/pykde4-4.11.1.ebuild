@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.11.1.ebuild,v 1.1 2013/09/03 19:04:39 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.11.1.ebuild,v 1.2 2013/09/17 20:48:26 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -25,6 +25,7 @@ RDEPEND="
 	$(add_kdebase_dep kdepimlibs)
 "
 DEPEND="${RDEPEND}
+	dev-python/python-exec:0[${PYTHON_USEDEP}]
 	sys-devel/libtool
 "
 

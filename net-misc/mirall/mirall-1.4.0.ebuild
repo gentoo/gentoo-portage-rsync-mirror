@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.3.0.ebuild,v 1.2 2013/07/02 18:22:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mirall/mirall-1.4.0.ebuild,v 1.1 2013/09/17 20:41:14 creffett Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="
-	>=net-misc/csync-0.80.0
+	>=net-misc/csync-0.90.0
 	sys-fs/inotify-tools
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
@@ -48,13 +48,6 @@ src_configure() {
 src_compile() {
 	use doc && cmake-utils_src_compile -j1 doc
 	cmake-utils_src_compile
-}
-
-src_install() {
-	cmake-utils_src_install
-	mkdir "${D}/etc/"
-	mv "${D}/usr/etc/sync-exclude.lst" "${D}/etc/"
-	rm -r "${D}/usr/etc/"
 }
 
 pkg_postinst() {

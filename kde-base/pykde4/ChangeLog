@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.236 2013/09/05 18:44:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.237 2013/09/17 20:48:26 mgorny Exp $
+
+  17 Sep 2013; Michał Górny <mgorny@gentoo.org> pykde4-4.10.5.ebuild,
+  pykde4-4.11.1.ebuild:
+  Add explicit dep on python-exec:0 since the package wraps the script manually.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pykde4-4.10.5.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
