@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.241 2013/09/15 09:29:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.242 2013/09/17 17:00:30 cardoe Exp $
+
+*qemu-1.6.0-r1 (17 Sep 2013)
+
+  17 Sep 2013; Doug Goldstein <cardoe@gentoo.org> +qemu-1.6.0-r1.ebuild:
+  Initial work on the 1.6.x stable patch queue.
 
   15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> qemu-1.5.3.ebuild:
   Stable for amd64, wrt bug #483760

@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/hslua
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslua/ChangeLog,v 1.1 2013/09/17 16:58:08 qnikst Exp $
+
+*hslua-0.3.6.1 (17 Sep 2013)
+
+  17 Sep 2013; Alexander Vershilov <qnikst@gentoo.org> +hslua-0.3.6.1.ebuild,
+  +metadata.xml:
+  dev-haskell/hslua: 0.3.6.1
