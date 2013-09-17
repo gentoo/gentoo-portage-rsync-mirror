@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.37 2013/09/17 13:25:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.38 2013/09/17 13:33:55 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -615,7 +615,7 @@ _python_ln_rel() {
 			rel_path=../${rel_path}${frseg:+${frseg}/}
 		fi
 	done
-	rel_path+=${frpath}${1##*/}
+	rel_path+=${frpath}${from##*/}
 
 	debug-print "${FUNCNAME}: ${from} -> ${to}"
 	debug-print "${FUNCNAME}: rel_path = ${rel_path}"
@@ -764,21 +764,31 @@ python_newscript() {
 	[[ ${#} -eq 2 ]] || die "Usage: ${FUNCNAME} <path> <new-name>"
 
 	local d=${python_scriptroot:-${DESTTREE}/bin}
+	local wrapd=${d}
 
 	local f=${1}
 	local barefn=${2}
+	local newfn
 
-	local newfn=${barefn}-${EPYTHON}
+	if _python_want_python_exec2; then
+		local PYTHON_SCRIPTDIR
+		python_export PYTHON_SCRIPTDIR
+		d=${PYTHON_SCRIPTDIR#${EPREFIX}}
+		newfn=${barefn}
+	else
+		newfn=${barefn}-${EPYTHON}
+	fi
 
 	(
+		dodir "${wrapd}"
 		exeinto "${d}"
 		newexe "${f}" "${newfn}" || die
 	)
 	_python_rewrite_shebang "${ED%/}/${d}/${newfn}"
 
 	# install the wrapper
-	_python_ln_rel "${ED%/}"/usr/bin/python-exec \
-		"${ED%/}/${d}/${barefn}" || die
+	_python_ln_rel "${ED%/}"$(_python_get_wrapper_path) \
+		"${ED%/}/${wrapd}/${barefn}" || die
 }
 
 # @ECLASS-VARIABLE: python_moduleroot
@@ -991,6 +1001,40 @@ python_is_python3() {
 	[[ ${impl} ]] || die "python_is_python3: no impl nor EPYTHON"
 
 	[[ ${impl} == python3* ]]
+}
+
+# @FUNCTION: _python_want_python_exec2
+# @INTERNAL
+# @DESCRIPTION:
+# Check whether we should be using python-exec:2.
+_python_want_python_exec2() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	# EAPI 4 lacks slot operators, so just fix it on python-exec:0.
+	[[ ${EAPI} == 4 ]] && return 1
+
+	# Check if we cached the result, or someone put an override.
+	if [[ ! ${_PYTHON_WANT_PYTHON_EXEC2+1} ]]; then
+		has_version 'dev-python/python-exec:2'
+		_PYTHON_WANT_PYTHON_EXEC2=$(( ! ${?} ))
+	fi
+
+	# Non-zero means 'yes', zero means 'no'.
+	[[ ${_PYTHON_WANT_PYTHON_EXEC2} != 0 ]]
+}
+
+# @FUNCTION: _python_get_wrapper_path
+# @INTERNAL
+# @DESCRIPTION:
+# Output path to proper python-exec slot.
+_python_get_wrapper_path() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	if _python_want_python_exec2; then
+		echo /usr/lib/python-exec/python-exec2
+	else
+		echo /usr/bin/python-exec
+	fi
 }
 
 _PYTHON_UTILS_R1=1

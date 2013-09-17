@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.60 2013/09/17 13:24:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.61 2013/09/17 13:33:55 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -122,7 +122,7 @@ fi
 #
 # Example value:
 # @CODE
-# dev-python/python-exec:0
+# dev-python/python-exec:=
 # python_targets_python2_6? ( dev-lang/python:2.6[gdbm] )
 # python_targets_python2_7? ( dev-lang/python:2.7[gdbm] )
 # @CODE
@@ -203,7 +203,13 @@ _python_set_globals() {
 	# but no point in making this overcomplex, BDEP doesn't hurt anyone
 	# 2) python-exec should be built with all targets forced anyway
 	# but if new targets were added, we may need to force a rebuild
-	PYTHON_DEPS+="dev-python/python-exec:0[${PYTHON_USEDEP}]"
+	# 3) use whichever python-exec slot installed in EAPI 5. For EAPI 4,
+	# just fix :0 for now since := deps are not supported.
+	if [[ ${EAPI} != 4 ]]; then
+		PYTHON_DEPS+="dev-python/python-exec:=[${PYTHON_USEDEP}]"
+	else
+		PYTHON_DEPS+="dev-python/python-exec:0[${PYTHON_USEDEP}]"
+	fi
 }
 _python_set_globals
 
@@ -742,12 +748,26 @@ python_replicate_script() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	_python_replicate_script() {
-		local f
-		for f in "${files[@]}"; do
-			cp -p "${f}" "${f}-${EPYTHON}" || die
-		done
-		_python_rewrite_shebang "${EPYTHON}" \
-			"${files[@]/%/-${EPYTHON}}"
+		if _python_want_python_exec2; then
+			local PYTHON_SCRIPTDIR
+			python_export PYTHON_SCRIPTDIR
+
+			(
+				exeinto "${PYTHON_SCRIPTDIR#${EPREFIX}}"
+				doexe "${files[@]}"
+			)
+
+			_python_rewrite_shebang "${EPYTHON}" \
+				"${files[@]/*\//${D%/}/${PYTHON_SCRIPTDIR}/}"
+		else
+			local f
+			for f in "${files[@]}"; do
+				cp -p "${f}" "${f}-${EPYTHON}" || die
+			done
+
+			_python_rewrite_shebang "${EPYTHON}" \
+				"${files[@]/%/-${EPYTHON}}"
+		fi
 	}
 
 	local files=( "${@}" )
@@ -756,7 +776,7 @@ python_replicate_script() {
 	# install the wrappers
 	local f
 	for f; do
-		_python_ln_rel "${ED%/}"/usr/bin/python-exec "${f}" || die
+		_python_ln_rel "${ED%/}$(_python_get_wrapper_path)" "${f}" || die
 	done
 }
 

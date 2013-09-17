@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.78 2013/09/17 13:24:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.79 2013/09/17 13:33:55 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -420,6 +420,10 @@ _distutils-r1_wrap_scripts() {
 	local path=${1}
 	[[ ${path} ]] || die "${FUNCNAME}: no path given"
 
+	if ! _python_want_python_exec2; then
+		local PYTHON_SCRIPTDIR=${EPREFIX}/usr/bin
+	fi
+
 	mkdir -p "${path}/usr/bin" || die
 	local f
 	while IFS= read -r -d '' f; do
@@ -431,15 +435,22 @@ _distutils-r1_wrap_scripts() {
 		if [[ ${shebang} == '#!'*${EPYTHON}* ]]; then
 			debug-print "${FUNCNAME}: matching shebang: ${shebang}"
 
-			local newf=${f%/*}/${basename}-${EPYTHON}
-			debug-print "${FUNCNAME}: renaming to ${newf#${path}}"
-			mv "${f}" "${newf}" || die
+			if ! _python_want_python_exec2; then
+				local newf=${f%/*}/${basename}-${EPYTHON}
+				debug-print "${FUNCNAME}: renaming to ${newf#${path}}"
+				mv "${f}" "${newf}" || die
+			fi
 
 			debug-print "${FUNCNAME}: installing wrapper at /usr/bin/${basename}"
-			_python_ln_rel "${path}${EPREFIX}"/usr/bin/python-exec \
+			_python_ln_rel "${path}${EPREFIX}"$(_python_get_wrapper_path) \
 				"${path}${EPREFIX}/usr/bin/${basename}" || die
+		elif _python_want_python_exec2; then
+			debug-print "${FUNCNAME}: non-matching shebang: ${shebang}"
+
+			debug-print "${FUNCNAME}: moving to /usr/bin/${basename}"
+			mv "${f}" "${path}${EPREFIX}/usr/bin/${basename}" || die
 		fi
-	done < <(find "${path}/usr/bin" -type f -print0)
+	done < <(find "${path}${PYTHON_SCRIPTDIR}" -type f -print0)
 }
 
 # @FUNCTION: distutils-r1_python_install
@@ -473,6 +484,13 @@ distutils-r1_python_install() {
 	local root=${D}/_${EPYTHON}
 	[[ ${DISTUTILS_SINGLE_IMPL} ]] && root=${D}
 	flags+=( --root="${root}" )
+
+	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]] && _python_want_python_exec2
+	then
+		local PYTHON_SCRIPTDIR
+		python_export PYTHON_SCRIPTDIR
+		flags+=( --install-scripts="${PYTHON_SCRIPTDIR}" )
+	fi
 
 	esetup.py install "${flags[@]}" "${@}"
 
