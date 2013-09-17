@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.35 2013/06/16 09:32:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.36 2013/09/17 03:23:26 patrick Exp $
+
+*gourmet-0.16.1 (17 Sep 2013)
+
+  17 Sep 2013; Patrick Lauer <patrick@gentoo.org> +gourmet-0.16.1.ebuild:
+  Bump for #484528 #471492
 
   16 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #79409
