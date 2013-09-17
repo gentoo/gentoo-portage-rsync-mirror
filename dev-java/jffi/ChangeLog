@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.28 2013/09/01 14:39:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jffi/ChangeLog,v 1.29 2013/09/17 14:22:37 tomwij Exp $
+
+*jffi-1.2.7 (17 Sep 2013)
+
+  17 Sep 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/jffi-1.2.7-junit-4.11.patch, +jffi-1.2.7.ebuild:
+  Version bump to 1.2.7, fixes part of bug #485144 reported by Arfrever. Patched
+  tests to work with both junit 4.8 and 4.11.
 
   01 Sep 2013; Fabian Groffen <grobian@gentoo.org> jffi-1.2.6.ebuild:
   Fixed for and marked *-macos
