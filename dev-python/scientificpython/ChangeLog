@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/scientificpython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.42 2013/05/22 10:59:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.43 2013/09/17 20:11:53 mgorny Exp $
+
+  17 Sep 2013; Michał Górny <mgorny@gentoo.org> scientificpython-2.9.2.ebuild:
+  Force python-exec:0 since the ebuild does hackery on top of script wrapping.
 
 *scientificpython-2.9.2 (22 May 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.2.ebuild,v 1.1 2013/05/22 10:59:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.2.ebuild,v 1.2 2013/09/17 20:11:53 mgorny Exp $
 
 EAPI=5
 
@@ -27,9 +27,13 @@ RDEPEND="
 	sci-libs/netcdf
 	mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}
+	dev-python/python-exec:0[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
+
+# enforce python-exec:0 due to hackery in the ebuild, bug #484416
+_PYTHON_WANT_PYTHON_EXEC2=0
 
 PATCHES=( "${FILESDIR}"/${PN}-2.9-mpi.patch )
 DOCS=( README README.MPI Doc/CHANGELOG Examples/demomodule.c Examples/netcdf_demo.py )
