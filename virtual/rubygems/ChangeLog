@@ -1,6 +1,9 @@
 # ChangeLog for virtual/rubygems
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.48 2013/09/05 15:49:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.49 2013/09/17 07:32:38 grobian Exp $
+
+  17 Sep 2013; Fabian Groffen <grobian@gentoo.org> rubygems-6.ebuild:
+  Keyword for Prefix, now we have ruby-2 too
 
   05 Sep 2013; Jeroen Roovers <jer@gentoo.org> rubygems-6.ebuild:
   Stable for HPPA (bug #483254).
