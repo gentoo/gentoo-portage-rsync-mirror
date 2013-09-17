@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ebuild-mode-1.23.ebuild,v 1.1 2013/09/08 12:12:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ebuild-mode-1.24.ebuild,v 1.1 2013/09/17 21:50:08 ulm Exp $
 
 EAPI=5
 

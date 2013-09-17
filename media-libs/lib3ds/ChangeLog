@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lib3ds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.20 2013/09/17 21:20:18 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.21 2013/09/17 21:48:12 mr_bones_ Exp $
+
+  17 Sep 2013; Michael Sterrett <mr_bones_@gentoo.org> lib3ds-2.0.0_rc1.ebuild:
+  tidy
 
 *lib3ds-2.0.0_rc1 (17 Sep 2013)
 

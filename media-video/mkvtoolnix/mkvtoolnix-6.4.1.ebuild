@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.4.1.ebuild,v 1.1 2013/09/17 16:35:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-6.4.1.ebuild,v 1.2 2013/09/17 21:40:56 radhermit Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs versionator wxwidgets multiprocessing autotools
@@ -16,7 +16,7 @@ IUSE="debug pch qt4 wxwidgets"
 
 RDEPEND="
 	>=dev-libs/libebml-1.3.0:=
-	>=media-libs/libmatroska-1.4.0:=
+	>=media-libs/libmatroska-1.4.1:=
 	>=dev-libs/boost-1.46.0:=
 	dev-libs/pugixml
 	media-libs/flac

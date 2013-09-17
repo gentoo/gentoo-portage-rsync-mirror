@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ebuild-mode/ebuild-mode-1.22.ebuild,v 1.1 2013/07/06 22:07:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ebuild-mode/ebuild-mode-1.24.ebuild,v 1.1 2013/09/17 21:56:37 ulm Exp $
 
 EAPI=5
 

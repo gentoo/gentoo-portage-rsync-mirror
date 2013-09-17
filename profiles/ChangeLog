@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8254 2013/09/17 16:10:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8255 2013/09/17 21:42:37 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Sep 2013; Tim Harder <radhermit@gentoo.org> package.mask:
+  Unmask =media-video/mkvtoolnix-6.4.1.
 
   17 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Link the gentoo-dev thread in python-exec:2 p.mask.
