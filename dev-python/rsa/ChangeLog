@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rsa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.6 2012/08/19 18:48:44 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.7 2013/09/17 03:32:47 patrick Exp $
+
+*rsa-3.1.2 (17 Sep 2013)
+
+  17 Sep 2013; Patrick Lauer <patrick@gentoo.org> +rsa-3.1.2.ebuild:
+  Bump
 
   19 Aug 2012; Johannes Huber <johu@gentoo.org> rsa-3.1.1.ebuild:
   Stable for x86, wrt bug #431758

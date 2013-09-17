@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wtforms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.33 2013/09/05 18:46:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wtforms/ChangeLog,v 1.34 2013/09/17 03:49:18 patrick Exp $
+
+*wtforms-1.0.5 (17 Sep 2013)
+
+  17 Sep 2013; Patrick Lauer <patrick@gentoo.org> +wtforms-1.0.5.ebuild:
+  Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> wtforms-1.0.3-r1.ebuild,
   wtforms-1.0.4.ebuild:
