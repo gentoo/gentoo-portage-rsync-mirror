@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-027-r3.ebuild,v 1.3 2013/07/23 11:47:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-027-r3.ebuild,v 1.4 2013/09/17 09:42:09 aidecoe Exp $
 
 EAPI=4
 
@@ -94,7 +94,7 @@ RDEPEND="${CDEPEND}
 	dracut_modules_gensplash? ( media-gfx/splashutils )
 	dracut_modules_iscsi? ( >=sys-block/open-iscsi-2.0.871.3 )
 	dracut_modules_lvm? ( >=sys-fs/lvm2-2.02.33 )
-	dracut_modules_mdraid? ( sys-fs/mdadm )
+	dracut_modules_mdraid? ( >=sys-fs/mdadm-3.2.6-r1 )
 	dracut_modules_multipath? ( sys-fs/multipath-tools )
 	dracut_modules_nbd? ( sys-block/nbd )
 	dracut_modules_nfs? ( net-fs/nfs-utils net-nds/rpcbind )

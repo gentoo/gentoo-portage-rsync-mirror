@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-029.ebuild,v 1.4 2013/09/17 09:42:09 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-033.ebuild,v 1.1 2013/09/17 09:42:09 aidecoe Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ COMMON_MODULES="
 	dracut_modules_caps
 	dracut_modules_crypt-gpg
 	dracut_modules_crypt-loop
+	dracut_modules_dash
 	dracut_modules_gensplash
 	dracut_modules_mdraid
 	dracut_modules_multipath
@@ -71,7 +72,6 @@ CDEPEND="virtual/udev
 RDEPEND="${CDEPEND}
 	app-arch/cpio
 	>=app-shells/bash-4.0
-	>=app-shells/dash-0.5.4.11
 	>=sys-apps/baselayout-1.12.14-r1
 	>sys-apps/kmod-5[tools]
 	>=sys-apps/sysvinit-2.87-r3
@@ -90,6 +90,7 @@ RDEPEND="${CDEPEND}
 	dracut_modules_cifs? ( net-fs/cifs-utils )
 	dracut_modules_crypt? ( sys-fs/cryptsetup )
 	dracut_modules_crypt-gpg? ( app-crypt/gnupg )
+	dracut_modules_dash? ( >=app-shells/dash-0.5.4.11 )
 	dracut_modules_dmraid? ( sys-fs/dmraid sys-fs/multipath-tools )
 	dracut_modules_gensplash? ( media-gfx/splashutils )
 	dracut_modules_iscsi? ( >=sys-block/open-iscsi-2.0.871.3 )
@@ -157,7 +158,6 @@ rm_module() {
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-0001-dracut-functions.sh-support-for-altern.patch"
 	epatch "${FILESDIR}/${PV}-0002-gentoo.conf-let-udevdir-be-handled-by-.patch"
-	epatch "${FILESDIR}/${PV}-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch"
 
 	if use dracut_modules_systemd; then
 		local systemdutildir="$(systemd_get_utildir)"
@@ -183,8 +183,6 @@ src_configure() {
 }
 
 src_compile() {
-	emake doc
-
 	if use optimization; then
 		ewarn "Enabling experimental optimization!"
 		tc-export CC
