@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/haproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.84 2013/06/30 21:14:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.85 2013/09/17 12:30:09 tomwij Exp $
+
+*haproxy-1.5_beta19-r1 (17 Sep 2013)
+
+  17 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +haproxy-1.5_beta19-r1.ebuild,
+  haproxy-9999.ebuild, metadata.xml:
+  Revision bump. Add systemd service unit. Add tools USE flag that install halog
+  and iprange. EAPI 5. Part of the changes are contributed by Bertrand Jacquin
+  (beber), fixes bug #466404.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> haproxy-1.4.24.ebuild:
   Stable for ppc, wrt bug #473674

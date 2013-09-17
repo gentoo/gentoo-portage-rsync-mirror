@@ -1,20 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-9999.ebuild,v 1.2 2013/09/17 12:30:09 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5_beta19-r1.ebuild,v 1.1 2013/09/17 12:30:09 tomwij Exp $
 
 EAPI="5"
 
-inherit user versionator toolchain-funcs flag-o-matic git-2 systemd
+inherit user versionator toolchain-funcs flag-o-matic systemd
 
 MY_P="${PN}-${PV/_beta/-dev}"
 
 DESCRIPTION="A TCP/HTTP reverse proxy for high availability environments"
 HOMEPAGE="http://haproxy.1wt.eu"
-EGIT_REPO_URI="http://master.formilux.org/git/people/willy/haproxy.git"
+SRC_URI="http://haproxy.1wt.eu/download/$(get_version_component_range 1-2)/src/devel/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+crypt examples +pcre ssl tools vim-syntax +zlib"
 
 DEPEND="pcre? ( dev-libs/libpcre )
