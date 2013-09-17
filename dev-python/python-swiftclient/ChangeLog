@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-swiftclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/ChangeLog,v 1.5 2013/08/20 20:17:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/ChangeLog,v 1.6 2013/09/17 19:08:59 prometheanfire Exp $
+
+*python-swiftclient-1.6.0 (17 Sep 2013)
+
+  17 Sep 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +python-swiftclient-1.6.0.ebuild:
+  updating python-swiftclient to 1.6.0
 
   20 Aug 2013; Matthew Thode <prometheanfire@gentoo.org>
   python-swiftclient-1.5.0.ebuild:

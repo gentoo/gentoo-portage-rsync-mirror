@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-0.74.ebuild,v 1.1 2013/09/13 23:45:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-0.74-r1.ebuild,v 1.1 2013/09/17 19:16:49 hwoarang Exp $
 
 EAPI="5"
+
+inherit multilib
 
 DESCRIPTION="Small footprint implementation of Tcl programming language"
 HOMEPAGE="http://jim.tcl.tk"
@@ -34,6 +36,8 @@ src_install() {
 		dolib.a libjim.a
 	} || {
 		dolib.so libjim.so.${PV}
+		dosym /usr/$(get_libdir)/libjim.so.${PV} \
+			/usr/$(get_libdir)/libjim.so
 	}
 	insinto /usr/include
 	doins jim.h jimautoconf.h jim-subcmd.h jim-signal.h

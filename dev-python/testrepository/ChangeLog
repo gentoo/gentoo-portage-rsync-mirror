@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/testrepository
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/ChangeLog,v 1.1 2013/09/17 19:06:54 prometheanfire Exp $
+
+*testrepository-0.0.17 (17 Sep 2013)
+
+  17 Sep 2013; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +testrepository-0.0.17.ebuild:
+  testrepository adding

@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/jimtcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.10 2013/08/28 11:16:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/ChangeLog,v 1.11 2013/09/17 19:16:49 hwoarang Exp $
+
+*jimtcl-0.74-r1 (17 Sep 2013)
+
+  17 Sep 2013; Markos Chandras <hwoarang@gentoo.org> +jimtcl-0.74-r1.ebuild,
+  -jimtcl-0.74.ebuild, jimtcl-9999.ebuild:
+  Fix shared library symlink. Bug #485064
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> jimtcl-0.73.ebuild:
   Stable for x86, wrt bug #479834
