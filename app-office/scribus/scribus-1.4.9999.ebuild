@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.7 2013/07/02 13:55:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.8 2013/09/17 15:58:17 jlec Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ ESVN_PROJECT=Scribus-1.4
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="aspell cairo debug examples hunspell +minimal +pdf templates"
+IUSE="cairo debug examples hunspell +minimal +pdf templates"
 
 # a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
 IUSE_LINGUAS=" af ar bg br ca cs_CZ cy da_DK de de_1901 de_CH el en_AU en_GB en_US es_ES et eu fi fr gl hu id it ja ko lt_LT nb_NO nl pl_PL pt pt_BR ru sa sk_SK sl sq sr sv th_TH tr uk zh_CN zh_TW"
@@ -32,6 +32,8 @@ COMMON_DEPEND="
 	dev-libs/boost
 	dev-libs/hyphen
 	dev-libs/libxml2
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
@@ -39,12 +41,9 @@ COMMON_DEPEND="
 	media-libs/tiff:0
 	net-print/cups
 	sys-libs/zlib[minizip]
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4
 	virtual/jpeg
 	cairo? ( x11-libs/cairo[X,svg] )
 	pdf? ( app-text/podofo )
-	aspell? ( app-text/aspell )
 	hunspell? ( app-text/hunspell )"
 RDEPEND="${COMMON_DEPEND}
 	app-text/ghostscript-gpl"
@@ -94,7 +93,6 @@ src_configure() {
 		-DWANT_QT3SUPPORT=OFF
 		-DGENTOOVERSION=${PVR}
 		-DWANT_GUI_LANG=${langs#,}
-		$(cmake-utils_use_with aspell ASPELL)
 		$(cmake-utils_use_with pdf PODOFO)
 		$(cmake-utils_use_want cairo)
 		$(cmake-utils_use_want debug DEBUG)

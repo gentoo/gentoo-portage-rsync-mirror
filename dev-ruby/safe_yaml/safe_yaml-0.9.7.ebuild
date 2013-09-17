@@ -1,16 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/safe_yaml-0.9.4-r1.ebuild,v 1.1 2013/07/31 04:52:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/safe_yaml-0.9.7.ebuild,v 1.1 2013/09/17 15:53:46 mrueg Exp $
 
 EAPI=5
 
 USE_RUBY="ruby18 ruby19"
 
-inherit ruby-fakegem
-
 RUBY_FAKEGEM_RECIPE_DOC="none"
 RUBY_FAKEGEM_EXTRADOC="README.md"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
+
+inherit ruby-fakegem
 
 DESCRIPTION="Parse YAML safely, without that pesky arbitrary object deserialization vulnerability"
 HOMEPAGE="https://dtao.github.com/safe_yaml"

@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/bamtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/ChangeLog,v 1.9 2013/08/27 14:59:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bamtools/ChangeLog,v 1.10 2013/09/17 15:37:30 jlec Exp $
+
+*bamtools-2.3.0 (17 Sep 2013)
+
+  17 Sep 2013; Justin Lecher <jlec@gentoo.org> -bamtools-2.2.3.ebuild,
+  +bamtools-2.3.0.ebuild, +files/bamtools-2.3.0-unbundle.patch:
+  Version Bump, drop old, #482636; thanks Martin Mokrejš for the patch
 
   27 Aug 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Update e-mail address.

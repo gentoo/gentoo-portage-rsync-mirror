@@ -1,6 +1,10 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.182 2013/08/28 11:37:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.183 2013/09/17 15:58:17 jlec Exp $
+
+  17 Sep 2013; Justin Lecher <jlec@gentoo.org> scribus-1.4.3.ebuild,
+  scribus-1.4.9999.ebuild, scribus-9999.ebuild:
+  Drop last bits of obsolete aspell support, #483182
 
 *scribus-1.4.3 (07 Aug 2013)
 
