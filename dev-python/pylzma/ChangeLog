@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pylzma
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylzma/ChangeLog,v 1.6 2012/02/22 08:45:49 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylzma/ChangeLog,v 1.7 2013/09/17 17:29:04 mrueg Exp $
+
+*pylzma-0.4.4-r1 (17 Sep 2013)
+
+  17 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +pylzma-0.4.4-r1.ebuild,
+  -pylzma-0.4.4.ebuild:
+  NMU: Migrate to distutils-r1. Thanks to floppym for review. Drop old version.
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> pylzma-0.4.4.ebuild:
   Restricting pypy
@@ -46,4 +52,3 @@
   15 Feb 2007; Ali Polatel (hawking) <polatel@nerdshack.com>
   +pylzma-0.3.0.ebuild, +metadata.xml:
   New ebuild for bug 166953 thanks to pigfoot
-

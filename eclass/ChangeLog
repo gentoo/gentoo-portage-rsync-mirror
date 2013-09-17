@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.971 2013/09/17 13:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.972 2013/09/17 17:28:04 mgorny Exp $
+
+  17 Sep 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Rename variables in _python_ln_rel to make it less confusing.
 
   17 Sep 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass,
   python-r1.eclass, python-single-r1.eclass, python-utils-r1.eclass:

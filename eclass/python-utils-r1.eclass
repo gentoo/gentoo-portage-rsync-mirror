@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.38 2013/09/17 13:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.39 2013/09/17 17:28:04 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -591,36 +591,36 @@ _python_rewrite_shebang() {
 _python_ln_rel() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local from=${1}
-	local to=${2}
+	local target=${1}
+	local symname=${2}
 
-	local frpath=${from%/*}/
-	local topath=${to%/*}/
+	local tgpath=${target%/*}/
+	local sympath=${symname%/*}/
 	local rel_path=
 
-	while [[ ${topath} ]]; do
-		local frseg= toseg=
+	while [[ ${sympath} ]]; do
+		local tgseg= symseg=
 
-		while [[ ! ${frseg} && ${frpath} ]]; do
-			frseg=${frpath%%/*}
-			frpath=${frpath#${frseg}/}
+		while [[ ! ${tgseg} && ${tgpath} ]]; do
+			tgseg=${tgpath%%/*}
+			tgpath=${tgpath#${tgseg}/}
 		done
 
-		while [[ ! ${toseg} && ${topath} ]]; do
-			toseg=${topath%%/*}
-			topath=${topath#${toseg}/}
+		while [[ ! ${symseg} && ${sympath} ]]; do
+			symseg=${sympath%%/*}
+			sympath=${sympath#${symseg}/}
 		done
 
-		if [[ ${frseg} != ${toseg} ]]; then
-			rel_path=../${rel_path}${frseg:+${frseg}/}
+		if [[ ${tgseg} != ${symseg} ]]; then
+			rel_target=../${rel_target}${tgseg:+${tgseg}/}
 		fi
 	done
-	rel_path+=${frpath}${from##*/}
+	rel_target+=${tgpath}${target##*/}
 
-	debug-print "${FUNCNAME}: ${from} -> ${to}"
-	debug-print "${FUNCNAME}: rel_path = ${rel_path}"
+	debug-print "${FUNCNAME}: ${symname} -> ${target}"
+	debug-print "${FUNCNAME}: rel_target = ${rel_target}"
 
-	ln -fs "${rel_path}" "${to}"
+	ln -fs "${rel_target}" "${symname}"
 }
 
 # @FUNCTION: python_optimize
