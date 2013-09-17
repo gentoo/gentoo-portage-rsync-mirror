@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.35 2013/09/16 17:58:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.37 2013/09/17 13:25:58 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -195,6 +195,18 @@ _python_impl_supported() {
 # dev-lang/python:2.7[xml]
 # @CODE
 
+# @ECLASS-VARIABLE: PYTHON_SCRIPTDIR
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# The location where Python scripts must be installed for current impl.
+#
+# Set and exported on request using python_export().
+#
+# Example value:
+# @CODE
+# /usr/lib/python-exec/python2.7
+# @CODE
+
 # @FUNCTION: python_export
 # @USAGE: [<impl>] <variables>...
 # @DESCRIPTION:
@@ -359,6 +371,11 @@ python_export() {
 				export PYTHON_PKG_DEP
 				debug-print "${FUNCNAME}: PYTHON_PKG_DEP = ${PYTHON_PKG_DEP}"
 				;;
+			PYTHON_SCRIPTDIR)
+				local dir
+				export PYTHON_SCRIPTDIR=${EPREFIX}/usr/lib/python-exec/${impl}
+				debug-print "${FUNCNAME}: PYTHON_SCRIPTDIR = ${PYTHON_SCRIPTDIR}"
+				;;
 			*)
 				die "python_export: unknown variable ${var}"
 		esac
@@ -481,6 +498,19 @@ python_get_LIBS() {
 
 	python_export "${@}" PYTHON_LIBS
 	echo "${PYTHON_LIBS}"
+}
+
+# @FUNCTION: python_get_scriptdir
+# @USAGE: [<impl>]
+# @DESCRIPTION:
+# Obtain and print the script install path for the given
+# implementation. If no implementation is provided, ${EPYTHON} will
+# be used.
+python_get_scriptdir() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_export "${@}" PYTHON_SCRIPTDIR
+	echo "${PYTHON_SCRIPTDIR}"
 }
 
 # @FUNCTION: _python_rewrite_shebang
@@ -734,22 +764,21 @@ python_newscript() {
 	[[ ${#} -eq 2 ]] || die "Usage: ${FUNCNAME} <path> <new-name>"
 
 	local d=${python_scriptroot:-${DESTTREE}/bin}
-	local INSDESTTREE INSOPTIONS
-
-	insinto "${d}"
-	insopts -m755
 
 	local f=${1}
 	local barefn=${2}
 
 	local newfn=${barefn}-${EPYTHON}
 
-	debug-print "${FUNCNAME}: ${f} -> ${d}/${newfn}"
-	newins "${f}" "${newfn}" || die
-	_python_rewrite_shebang "${ED}/${d}/${newfn}"
+	(
+		exeinto "${d}"
+		newexe "${f}" "${newfn}" || die
+	)
+	_python_rewrite_shebang "${ED%/}/${d}/${newfn}"
 
 	# install the wrapper
-	_python_ln_rel "${ED}"/usr/bin/python-exec "${ED}/${d}/${barefn}" || die
+	_python_ln_rel "${ED%/}"/usr/bin/python-exec \
+		"${ED%/}/${d}/${barefn}" || die
 }
 
 # @ECLASS-VARIABLE: python_moduleroot
