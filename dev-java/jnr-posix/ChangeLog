@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jnr-posix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.11 2013/08/17 08:21:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/ChangeLog,v 1.12 2013/09/17 14:40:43 tomwij Exp $
+
+*jnr-posix-2.5.2 (17 Sep 2013)
+*jnr-posix-3.0.0 (17 Sep 2013)
+
+  17 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +jnr-posix-2.5.2.ebuild,
+  +jnr-posix-3.0.0.ebuild:
+  Version bumps to 2.5.2 (SLOT 2.5) and 3.0.0 (SLOT 3.0), fixes part of bug
+  #485144 reported by Arfrever.
 
 *jnr-posix-1.1.8-r1 (17 Aug 2013)
 

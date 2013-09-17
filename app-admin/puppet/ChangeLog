@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.172 2013/09/17 11:06:48 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.173 2013/09/17 15:00:49 prometheanfire Exp $
+
+  17 Sep 2013; Matthew Thode <prometheanfire@gentoo.org> puppet-3.3.0.ebuild:
+  adding sparc keyword to 3.3.0 cause jmorgan said I could :D
 
   17 Sep 2013; Jack Morgan <jmorgan@gentoo.org> puppet-3.2.4.ebuild:
   ~sparc wrt bz 449184

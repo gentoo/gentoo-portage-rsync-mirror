@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ecore
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.20 2013/08/06 19:31:02 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ChangeLog,v 1.21 2013/09/17 14:43:54 tommy Exp $
+
+*ecore-1.7.9_pre1 (17 Sep 2013)
+
+  17 Sep 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +ecore-1.7.9_pre1.ebuild:
+  Add testing version for bug 462732 to test
 
 *ecore-1.7.8 (06 Aug 2013)
 
