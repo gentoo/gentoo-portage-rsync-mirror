@@ -1,0 +1,540 @@
+--- numpy/distutils/misc_util.py.orig	2013-04-06 22:04:05.000000000 -0700
++++ numpy/distutils/misc_util.py	2013-08-27 11:11:50.970945380 -0700
+@@ -1,3 +1,5 @@
++from __future__ import division, absolute_import, print_function
++
+ import os
+ import re
+ import sys
+@@ -165,7 +167,7 @@
+     fid = open(config_file)
+     mathlibs = []
+     s = '#define MATHLIB'
+-    for line in fid.readlines():
++    for line in fid:
+         if line.startswith(s):
+             value = line[len(s):].strip()
+             if value:
+@@ -218,8 +220,8 @@
+                 else:
+                     if include_non_existing:
+                         new_paths.append(n)
+-                    print('could not resolve pattern in %r: %r' \
+-                              % (local_path,n))
++                    print('could not resolve pattern in %r: %r' %
++                            (local_path,n))
+             else:
+                 n2 = njoin(local_path,n)
+                 if os.path.exists(n2):
+@@ -230,8 +232,8 @@
+                     elif include_non_existing:
+                         new_paths.append(n)
+                     if not os.path.exists(n):
+-                        print('non-existing path in %r: %r' \
+-                              % (local_path,n))
++                        print('non-existing path in %r: %r' %
++                                (local_path,n))
+ 
+         elif is_sequence(n):
+             new_paths.extend(_fix_paths(n,local_path,include_non_existing))
+@@ -249,11 +251,9 @@
+ 
+ _temporary_directory = None
+ def clean_up_temporary_directory():
+-    from numpy.distutils import log
+     global _temporary_directory
+     if not _temporary_directory:
+         return
+-    log.debug('removing %s', _temporary_directory)
+     try:
+         shutil.rmtree(_temporary_directory)
+     except OSError:
+@@ -394,8 +394,7 @@
+         return []
+     modules = []
+     f = open(source,'r')
+-    f_readlines = getattr(f,'xreadlines',f.readlines)
+-    for line in f_readlines():
++    for line in f:
+         m = f90_module_name_match(line)
+         if m:
+             name = m.group('name')
+@@ -557,7 +556,7 @@
+ def get_ext_source_files(ext):
+     # Get sources and any include files in the same directory.
+     filenames = []
+-    sources = filter(is_string, ext.sources)
++    sources = [_m for _m in ext.sources if is_string(_m)]
+     filenames.extend(sources)
+     filenames.extend(get_dependencies(sources))
+     for d in ext.depends:
+@@ -568,13 +567,13 @@
+     return filenames
+ 
+ def get_script_files(scripts):
+-    scripts = filter(is_string, scripts)
++    scripts = [_m for _m in scripts if is_string(_m)]
+     return scripts
+ 
+ def get_lib_source_files(lib):
+     filenames = []
+     sources = lib[1].get('sources',[])
+-    sources = filter(is_string, sources)
++    sources = [_m for _m in sources if is_string(_m)]
+     filenames.extend(sources)
+     filenames.extend(get_dependencies(sources))
+     depends = lib[1].get('depends',[])
+@@ -606,11 +605,29 @@
+     Linux, but not on OS X.
+ 
+     """
+-    so_ext = distutils.sysconfig.get_config_var('SO') or ''
+-    # fix long extension for Python >=3.2, see PEP 3149.
+-    if (not is_python_ext) and 'SOABI' in distutils.sysconfig.get_config_vars():
+-        # Does nothing unless SOABI config var exists
+-        so_ext = so_ext.replace('.' + distutils.sysconfig.get_config_var('SOABI'), '', 1)
++    confvars = distutils.sysconfig.get_config_vars()
++    # SO is deprecated in 3.3.1, use EXT_SUFFIX instead
++    so_ext = confvars.get('EXT_SUFFIX', None)
++    if so_ext is None:
++        so_ext = confvars.get('SO', '')
++
++    if not is_python_ext:
++        # hardcode known values, config vars (including SHLIB_SUFFIX) are
++        # unreliable (see #3182)
++        # darwin, windows and debug linux are wrong in 3.3.1 and older
++        if (sys.platform.startswith('linux') or
++            sys.platform.startswith('gnukfreebsd')):
++            so_ext = '.so'
++        elif sys.platform.startswith('darwin'):
++            so_ext = '.dylib'
++        elif sys.platform.startswith('win'):
++            so_ext = '.dll'
++        else:
++            # fall back to config vars for unknown platforms
++            # fix long extension for Python >=3.2, see PEP 3149.
++            if 'SOABI' in confvars:
++                # Does nothing unless SOABI config var exists
++                so_ext = so_ext.replace('.' + confvars.get('SOABI'), '', 1)
+ 
+     return so_ext
+ 
+@@ -628,7 +645,7 @@
+             if os.path.isfile(s):
+                 filenames.append(s)
+             else:
+-                print('Not existing data file:',s)
++                print('Not existing data file:', s)
+         else:
+             raise TypeError(repr(s))
+     return filenames
+@@ -647,56 +664,13 @@
+             frame = frame.f_back
+         return frame
+ 
+-class SconsInfo(object):
+-    """
+-    Container object holding build info for building a package with scons.
+-
+-    Parameters
+-    ----------
+-    scons_path : str or None
+-        Path to scons script, relative to the directory of setup.py.
+-        If None, no scons script is specified. This can be useful to add only
+-        pre- and post-hooks to a configuration.
+-    parent_name : str or None
+-        Name of the parent package (for example "numpy").
+-    pre_hook : sequence of callables or None
+-        Callables that are executed before scons is invoked.
+-        Each callable should be defined as ``callable(*args, **kw)``.
+-    post_hook : sequence of callables or None
+-        Callables that are executed after scons is invoked.
+-        Each callable should be defined as ``callable(*args, **kw)``.
+-    source_files : list of str or None
+-        List of paths to source files, relative to the directory of setup.py.
+-    pkg_path : str or None
+-        Path to the package for which the `SconsInfo` instance holds the
+-        build info, relative to the directory of setup.py.
+-
+-    Notes
+-    -----
+-    All parameters are available as attributes of a `SconsInfo` instance.
+-
+-    """
+-    def __init__(self, scons_path, parent_name, pre_hook,
+-            post_hook, source_files, pkg_path):
+-        self.scons_path = scons_path
+-        self.parent_name = parent_name
+-        self.pre_hook = pre_hook
+-        self.post_hook = post_hook
+-        self.source_files = source_files
+-        if pkg_path:
+-            self.pkg_path = pkg_path
+-        else:
+-            if scons_path:
+-                self.pkg_path = os.path.dirname(scons_path)
+-            else:
+-                self.pkg_path = ''
+ 
+ ######################
+ 
+ class Configuration(object):
+ 
+     _list_keys = ['packages', 'ext_modules', 'data_files', 'include_dirs',
+-                  'libraries', 'headers', 'scripts', 'py_modules', 'scons_data',
++                  'libraries', 'headers', 'scripts', 'py_modules',
+                   'installed_libraries']
+     _dict_keys = ['package_dir', 'installed_pkg_config']
+     _extra_keys = ['name', 'version']
+@@ -853,7 +827,7 @@
+                                  caller_level = 1):
+         l = subpackage_name.split('.')
+         subpackage_path = njoin([self.local_path]+l)
+-        dirs = filter(os.path.isdir,glob.glob(subpackage_path))
++        dirs = [_m for _m in glob.glob(subpackage_path) if os.path.isdir(_m)]
+         config_list = []
+         for d in dirs:
+             if not os.path.isfile(njoin(d,'__init__.py')):
+@@ -895,7 +869,7 @@
+                 pn = dot_join(*([parent_name] + subpackage_name.split('.')[:-1]))
+                 args = (pn,)
+                 def fix_args_py2(args):
+-                    if setup_module.configuration.func_code.co_argcount > 1:
++                    if setup_module.configuration.__code__.co_argcount > 1:
+                         args = args + (self.top_path,)
+                     return args
+                 def fix_args_py3(args):
+@@ -922,14 +896,14 @@
+ 
+         Parameters
+         ----------
+-        subpackage_name: str,None
++        subpackage_name : str or None
+             Name of the subpackage to get the configuration. '*' in
+             subpackage_name is handled as a wildcard.
+-        subpackage_path: str
++        subpackage_path : str
+             If None, then the path is assumed to be the local path plus the
+             subpackage_name. If a setup.py file is not found in the
+             subpackage_path, then a default configuration is used.
+-        parent_name: str
++        parent_name : str
+             Parent name.
+         """
+         if subpackage_name is None:
+@@ -985,13 +959,13 @@
+ 
+         Parameters
+         ----------
+-        subpackage_name: str
++        subpackage_name : str
+             name of the subpackage
+-        subpackage_path: str
++        subpackage_path : str
+             if given, the subpackage path such as the subpackage is in
+             subpackage_path / subpackage_name. If None,the subpackage is
+             assumed to be located in the local path / subpackage_name.
+-        standalone: bool
++        standalone : bool
+         """
+ 
+         if standalone:
+@@ -1029,10 +1003,10 @@
+ 
+         Parameters
+         ----------
+-        data_path: seq,str
++        data_path : seq or str
+             Argument can be either
+ 
+-                * 2-sequence (<datadir suffix>,<path to data directory>)
++                * 2-sequence (<datadir suffix>, <path to data directory>)
+                 * path to data directory where python datadir suffix defaults
+                   to package dir.
+ 
+@@ -1091,14 +1065,14 @@
+                 pattern_list = allpath(d).split(os.sep)
+                 pattern_list.reverse()
+                 # /a/*//b/ -> /a/*/b
+-                rl = range(len(pattern_list)-1); rl.reverse()
++                rl = list(range(len(pattern_list)-1)); rl.reverse()
+                 for i in rl:
+                     if not pattern_list[i]:
+                         del pattern_list[i]
+                 #
+                 for path in paths:
+                     if not os.path.isdir(path):
+-                        print('Not a directory, skipping',path)
++                        print('Not a directory, skipping', path)
+                         continue
+                     rpath = rel_path(path, self.local_path)
+                     path_list = rpath.split(os.sep)
+@@ -1151,7 +1125,7 @@
+ 
+         Parameters
+         ----------
+-        files: sequence
++        files : sequence
+             Argument(s) can be either
+ 
+                 * 2-sequence (<datadir prefix>,<path to data file(s)>)
+@@ -1330,7 +1304,7 @@
+ 
+         Parameters
+         ----------
+-        files: str, seq
++        files : str or seq
+             Argument(s) can be either:
+ 
+                 * 2-sequence (<includedir suffix>,<path to header file(s)>)
+@@ -1385,9 +1359,9 @@
+ 
+         Parameters
+         ----------
+-        name: str
++        name : str
+             name of the extension
+-        sources: seq
++        sources : seq
+             list of the sources. The list of sources may contain functions
+             (called source generators) which must take an extension instance
+             and a build directory as inputs and return a source file or list of
+@@ -1395,28 +1369,28 @@
+             generated. If the Extension instance has no sources after
+             processing all source generators, then no extension module is
+             built.
+-        include_dirs:
+-        define_macros:
+-        undef_macros:
+-        library_dirs:
+-        libraries:
+-        runtime_library_dirs:
+-        extra_objects:
+-        extra_compile_args:
+-        extra_link_args:
+-        extra_f77_compile_args:
+-        extra_f90_compile_args:
+-        export_symbols:
+-        swig_opts:
+-        depends:
++        include_dirs :
++        define_macros :
++        undef_macros :
++        library_dirs :
++        libraries :
++        runtime_library_dirs :
++        extra_objects :
++        extra_compile_args :
++        extra_link_args :
++        extra_f77_compile_args :
++        extra_f90_compile_args :
++        export_symbols :
++        swig_opts :
++        depends :
+             The depends list contains paths to files or directories that the
+             sources of the extension module depend on. If any path in the
+             depends list is newer than the extension module, then the module
+             will be rebuilt.
+-        language:
+-        f2py_options:
+-        module_dirs:
+-        extra_info: dict,list
++        language :
++        f2py_options :
++        module_dirs :
++        extra_info : dict or list
+             dict or list of dict of keywords to be appended to keywords.
+ 
+         Notes
+@@ -1653,65 +1627,6 @@
+             self.installed_pkg_config[self.name] = [(template, install_dir,
+                 subst_dict)]
+ 
+-    def add_scons_installed_library(self, name, install_dir):
+-        """
+-        Add a scons-built installable library to distutils.
+-
+-        Parameters
+-        ----------
+-        name : str
+-            The name of the library.
+-        install_dir : str
+-            Path to install the library, relative to the current sub-package.
+-
+-        """
+-        install_dir = os.path.join(self.package_path, install_dir)
+-        self.installed_libraries.append(InstallableLib(name, {}, install_dir))
+-
+-    def add_sconscript(self, sconscript, subpackage_path=None,
+-                       standalone = False, pre_hook = None,
+-                       post_hook = None, source_files = None, package_path=None):
+-        """Add a sconscript to configuration.
+-
+-        pre_hook and post hook should be sequences of callable, which will be
+-        use before and after executing scons. The callable should be defined as
+-        callable(*args, **kw). It is ugly, but well, hooks are ugly anyway...
+-
+-        sconscript can be None, which can be useful to add only post/pre
+-        hooks."""
+-        if standalone:
+-            parent_name = None
+-        else:
+-            parent_name = self.name
+-
+-        dist = self.get_distribution()
+-        # Convert the sconscript name to a relative filename (relative from top
+-        # setup.py's directory)
+-        fullsconsname = self.paths(sconscript)[0]
+-
+-        # XXX: Think about a way to automatically register source files from
+-        # scons...
+-        full_source_files = []
+-        if source_files:
+-            full_source_files.extend([self.paths(i)[0] for i in source_files])
+-
+-        scons_info = SconsInfo(fullsconsname, parent_name,
+-                               pre_hook, post_hook,
+-                               full_source_files, package_path)
+-        if dist is not None:
+-            if dist.scons_data is None:
+-                dist.scons_data = []
+-            dist.scons_data.append(scons_info)
+-            self.warn('distutils distribution has been initialized,'\
+-                      ' it may be too late to add a subpackage '+ subpackage_name)
+-            # XXX: we add a fake extension, to correctly initialize some
+-            # options in distutils command.
+-            dist.add_extension('', sources = [])
+-        else:
+-            self.scons_data.append(scons_info)
+-            # XXX: we add a fake extension, to correctly initialize some
+-            # options in distutils command.
+-            self.add_extension('', sources = [])
+ 
+     def add_scripts(self,*files):
+         """Add scripts to configuration.
+@@ -2086,11 +2001,6 @@
+         """
+         self.py_modules.append((self.name,name,generate_config_py))
+ 
+-    def scons_make_config_py(self, name = '__config__'):
+-        """Generate package __config__.py file containing system_info
+-        information used during building the package.
+-        """
+-        self.py_modules.append((self.name, name, scons_generate_config_py))
+ 
+     def get_info(self,*names):
+         """Get resources information.
+@@ -2098,7 +2008,7 @@
+         Return information (from system_info.get_info) for all of the names in
+         the argument list in a single dictionary.
+         """
+-        from system_info import get_info, dict_append
++        from .system_info import get_info, dict_append
+         info_dict = {}
+         for a in names:
+             dict_append(info_dict,**get_info(a))
+@@ -2233,57 +2143,18 @@
+     return info
+ 
+ def is_bootstrapping():
+-    import __builtin__
++    if sys.version_info[0] >= 3:
++        import builtins
++    else:
++        import __builtin__ as builtins
++
+     try:
+-        __builtin__.__NUMPY_SETUP__
++        builtins.__NUMPY_SETUP__
+         return True
+     except AttributeError:
+         return False
+         __NUMPY_SETUP__ = False
+ 
+-def scons_generate_config_py(target):
+-    """generate config.py file containing system_info information
+-    used during building the package.
+-
+-    usage:
+-        config['py_modules'].append((packagename, '__config__',generate_config_py))
+-    """
+-    from distutils.dir_util import mkpath
+-    from numscons import get_scons_configres_dir, get_scons_configres_filename
+-    d = {}
+-    mkpath(os.path.dirname(target))
+-    f = open(target, 'w')
+-    f.write('# this file is generated by %s\n' % (os.path.abspath(sys.argv[0])))
+-    f.write('# it contains system_info results at the time of building this package.\n')
+-    f.write('__all__ = ["show"]\n\n')
+-    confdir = get_scons_configres_dir()
+-    confilename = get_scons_configres_filename()
+-    for root, dirs, files in os.walk(confdir):
+-        if files:
+-            file = os.path.join(root, confilename)
+-            assert root.startswith(confdir)
+-            pkg_name = '.'.join(root[len(confdir)+1:].split(os.sep))
+-            fid = open(file, 'r')
+-            try:
+-                cnt = fid.read()
+-                d[pkg_name] = eval(cnt)
+-            finally:
+-                fid.close()
+-    # d is a dictionary whose keys are package names, and values the
+-    # corresponding configuration. Each configuration is itself a dictionary
+-    # (lib : libinfo)
+-    f.write('_config = %s\n' % d)
+-    f.write(r'''
+-def show():
+-    for pkg, config in _config.items():
+-        print("package %s configuration:" % pkg)
+-        for lib, libc in config.items():
+-            print('    %s' % lib)
+-            for line in libc.split('\n'):
+-                print('\t%s' % line)
+-    ''')
+-    f.close()
+-    return target
+ 
+ #########################
+ 
+--- numpy/distutils/tests/test_misc_util.py.orig	2013-04-06 22:04:05.000000000 -0700
++++ numpy/distutils/tests/test_misc_util.py	2013-08-27 11:14:23.438843136 -0700
+@@ -1,7 +1,9 @@
+ #!/usr/bin/env python
++from __future__ import division, absolute_import, print_function
+ 
+ from numpy.testing import *
+-from numpy.distutils.misc_util import appendpath, minrelpath, gpaths, rel_path
++from numpy.distutils.misc_util import appendpath, minrelpath, \
++    gpaths, get_shared_lib_extension
+ from os.path import join, sep, dirname
+ 
+ ajoin = lambda *paths: join(*((sep,)+paths))
+@@ -49,10 +51,25 @@
+     def test_gpaths(self):
+         local_path = minrelpath(join(dirname(__file__),'..'))
+         ls = gpaths('command/*.py', local_path)
+-        assert join(local_path,'command','build_src.py') in ls,`ls`
++        assert join(local_path,'command','build_src.py') in ls,repr(ls)
+         f = gpaths('system_info.py', local_path)
+-        assert join(local_path,'system_info.py')==f[0],`f`
++        assert join(local_path,'system_info.py')==f[0],repr(f)
+ 
++class TestSharedExtension(TestCase):
++
++    def test_get_shared_lib_extension(self):
++        import sys
++        ext = get_shared_lib_extension(is_python_ext=False)
++        if sys.platform.startswith('linux'):
++            assert_equal(ext, '.so')
++        elif sys.platform.startswith('gnukfreebsd'):
++            assert_equal(ext, '.so')
++        elif sys.platform.startswith('darwin'):
++            assert_equal(ext, '.dylib')
++        elif sys.platform.startswith('win'):
++            assert_equal(ext, '.dll')
++        # just check for no crash
++        assert_(get_shared_lib_extension(is_python_ext=True))
+ 
+ if __name__ == "__main__":
+     run_module_suite()

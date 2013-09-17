@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scikits_image
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.13 2013/06/18 04:33:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.14 2013/09/17 05:51:58 bicatali Exp $
+
+  17 Sep 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  scikits_image-0.8.2.ebuild:
+  Cleanup tests for distutils-r1 wrappers
 
   18 Jun 2013; Patrick Lauer <patrick@gentoo.org> scikits_image-0.8.2.ebuild:
   Fix python targets as pyamg does not have py3 support yet
