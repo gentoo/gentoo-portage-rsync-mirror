@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.29.0.ebuild,v 1.3 2012/05/22 16:06:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.32.0-r1.ebuild,v 1.1 2013/09/17 21:06:35 creffett Exp $
 
-EAPI="3"
+EAPI=5
 
 PYTHON_DEPEND="python? 2"
 
@@ -10,12 +10,12 @@ inherit eutils cmake-utils python
 
 DESCRIPTION="A tool to handle your cellular phone"
 HOMEPAGE="http://www.wammu.eu/"
-SRC_URI="http://dl.cihar.com/gammu/releases/${P}.tar.bz2"
+SRC_URI="http://dl.cihar.com/${PN}/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="curl debug bluetooth irda mysql postgres dbi nls python usb"
+IUSE="bash-completion bluetooth curl dbi debug irda mysql nls postgres python usb"
 
 RDEPEND="bluetooth? ( net-wireless/bluez )
 	curl? ( net-misc/curl )
@@ -23,17 +23,15 @@ RDEPEND="bluetooth? ( net-wireless/bluez )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-server )
 	dbi? ( >=dev-db/libdbi-0.8.3 )
-	dev-util/dialog
-	!dev-python/python-gammu" # needs to be removed from the tree
+	dev-util/dialog"
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )
-	nls? ( sys-devel/gettext )
-	dev-util/cmake"
+	nls? ( sys-devel/gettext )"
 
 # sys-devel/gettext is needed for creating .mo files
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
-MY_AVAILABLE_LINGUAS=" af bg ca cs da de el es et fi fr gl he hu id it ko nl pl pt_BR ru sk sv sw zh_CN zh_TW"
+MY_AVAILABLE_LINGUAS=" af ar bg ca cs da de el en_GB es et fi fr gl he hu id it ko nl pl pt_BR ru sk sv sw tr zh_CN zh_TW"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 pkg_setup() {
@@ -44,7 +42,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-skip-locktest.patch
+	epatch "${FILESDIR}/${PN}-skip-locktest.patch"
+	epatch "${FILESDIR}/${PN}-1.32.0-bashcompdir.patch"
 
 	local lang support_linguas=no
 	for lang in ${MY_AVAILABLE_LINGUAS} ; do
@@ -65,7 +64,8 @@ src_prepare() {
 
 src_configure() {
 	# debug flag is used inside cmake-utils.eclass
-	local mycmakeargs="$(cmake-utils_use_with bluetooth Bluez) \
+	local mycmakeargs=(
+		$(cmake-utils_use_with bluetooth Bluez) \
 		$(cmake-utils_use_with irda IRDA) \
 		$(cmake-utils_use_with curl CURL) \
 		$(cmake-utils_use_with usb USB) \
@@ -75,9 +75,14 @@ src_configure() {
 		$(cmake-utils_use_with dbi LibDBI) \
 		$(cmake-utils_use_with nls GettextLibs) \
 		$(cmake-utils_use_with nls Iconv) \
-		-DBUILD_SHARED_LIBS=ON -DINSTALL_DOC_DIR=share/doc/${PF}"
+		-DBUILD_SHARED_LIBS=ON \
+		-DINSTALL_DOC_DIR="share/doc/${PF}"
+	)
+	if ! use bash-completion; then
+		mycmakeargs+=( -DINSTALL_BASH_COMPLETION=OFF )
+	fi
 	if use python; then
-		mycmakeargs="${mycmakeargs} -DBUILD_PYTHON=$(PYTHON -a)"
+		mycmakeargs+=( -DBUILD_PYTHON="$(PYTHON -a)" )
 	fi
 	cmake-utils_src_configure
 }
@@ -87,7 +92,7 @@ src_compile() {
 }
 
 src_test() {
-	LD_LIBRARY_PATH="${WORKDIR}"/${PN}_build/common cmake-utils_src_test
+	LD_LIBRARY_PATH="${WORKDIR}/${PN}_build/common" cmake-utils_src_test
 }
 
 src_install() {

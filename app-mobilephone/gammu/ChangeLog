@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/gammu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.93 2012/11/08 09:38:52 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.94 2013/09/17 21:06:35 creffett Exp $
+
+*gammu-1.32.0-r1 (17 Sep 2013)
+
+  17 Sep 2013; Chris Reffett <creffett@gentoo.org>
+  +files/gammu-1.32.0-bashcompdir.patch, +gammu-1.32.0-r1.ebuild,
+  -gammu-1.29.0.ebuild, -gammu-1.30.0.ebuild, -gammu-1.32.0.ebuild:
+  Add patch to fix bash-completion file install location wrt bug 483234
 
 *gammu-1.32.0 (08 Nov 2012)
 
@@ -519,4 +526,3 @@
 
   13 Mar 2004; Lim Swee Tat <st_lim@gentoo.org> :
   First release
-

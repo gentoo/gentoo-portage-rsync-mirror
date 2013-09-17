@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.5 2013/07/20 09:38:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.10.2.ebuild,v 1.6 2013/09/17 21:08:16 mgorny Exp $
 
 # TODO: fmod support broken (deng_fmod)
 
@@ -44,7 +44,11 @@ DEPEND="
 	tools? ( sys-libs/ncurses )"
 RDEPEND="${DEPEND}
 	!dedicated? (
-		snowberry? ( ${PYTHON_DEPS} dev-python/wxpython[${PYTHON_USEDEP}] )
+		snowberry? (
+			${PYTHON_DEPS}
+			dev-python/python-exec:0[${PYTHON_USEDEP}]
+			dev-python/wxpython[${PYTHON_USEDEP}]
+		)
 	)"
 DEPEND="${DEPEND}
 	${PYTHON_DEPS}"
@@ -56,6 +60,9 @@ PDEPEND="
 	)"
 
 S=${S}/${PN}
+
+# disable python-exec:2 support, bug #484424
+_PYTHON_WANT_PYTHON_EXEC2=0
 
 pkg_setup() {
 	games_pkg_setup

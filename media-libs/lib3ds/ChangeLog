@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/lib3ds
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.19 2012/12/01 18:30:57 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.20 2013/09/17 21:20:18 creffett Exp $
+
+*lib3ds-2.0.0_rc1 (17 Sep 2013)
+
+  17 Sep 2013; Chris Reffett <creffett@gentoo.org> +lib3ds-2.0.0_rc1.ebuild:
+  Security bump wrt bug 308033.
 
   01 Dec 2012; Anthony G. Basile <blueness@gentoo.org> lib3ds-1.3.0.ebuild:
   stable ppc64, bug #436574
