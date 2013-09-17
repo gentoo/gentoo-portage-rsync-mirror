@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.35 2013/09/05 18:46:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.36 2013/09/17 00:14:56 floppym Exp $
+
+  17 Sep 2013; Mike Gilbert <floppym@gentoo.org> pyzmq-13.1.0.ebuild:
+  Add -fno-strict-aliasing for python2. Export CC.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pyzmq-13.1.0.ebuild,
   pyzmq-2.2.0.1-r1.ebuild:
