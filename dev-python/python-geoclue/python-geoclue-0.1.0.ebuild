@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/python-geoclue-0.1.0.ebuild,v 1.11 2013/02/02 22:30:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/python-geoclue-0.1.0.ebuild,v 1.12 2013/09/17 16:22:28 jlec Exp $
 
 EAPI=4
 
@@ -22,7 +22,8 @@ IUSE="test"
 
 RDEPEND="
 	app-misc/geoclue
-	dev-python/dbus-python"
+	dev-python/dbus-python
+	dev-python/pygobject:2"
 DEPEND="test? ( app-misc/geoclue )"
 
 S="${WORKDIR}"/${PN}

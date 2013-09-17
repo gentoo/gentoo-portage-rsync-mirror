@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.5.22.ebuild,v 1.3 2013/08/11 12:29:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.5.22.ebuild,v 1.4 2013/09/17 16:30:56 jlec Exp $
 
 EAPI=5
 
-inherit cuda unpacker versionator
+inherit check-reqs cuda unpacker versionator
 
 MYD=$(get_version_component_range 1)_$(get_version_component_range 2)
 
@@ -35,9 +35,11 @@ S="${WORKDIR}"
 
 QA_PREBUILT="opt/cuda/*"
 
+CHECKREQS_DISK_BUILD="1500MB"
+
 pkg_setup() {
 	# We don't like to run cuda_pkg_setup as it depends on us
-	:
+	check-reqs_pkg_setup
 }
 
 src_unpack() {

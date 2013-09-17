@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/annogen
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/annogen/ChangeLog,v 1.1 2013/09/17 16:13:20 tomwij Exp $
+
+*annogen-0.1.0 (17 Sep 2013)
+
+  17 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +annogen-0.1.0.ebuild,
+  +metadata.xml:
+  New ebuild for dev-java/annogen; a tool which helps you work with JSR175
+  annotations. Imported from dmol overlay, for bug #173129.
