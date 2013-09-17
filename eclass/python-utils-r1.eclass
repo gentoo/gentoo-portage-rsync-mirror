@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.39 2013/09/17 17:28:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.40 2013/09/17 19:40:56 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -596,7 +596,7 @@ _python_ln_rel() {
 
 	local tgpath=${target%/*}/
 	local sympath=${symname%/*}/
-	local rel_path=
+	local rel_target=
 
 	while [[ ${sympath} ]]; do
 		local tgseg= symseg=

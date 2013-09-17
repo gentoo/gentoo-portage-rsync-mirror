@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r53.ebuild,v 1.15 2013/07/07 12:03:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r53.ebuild,v 1.16 2013/09/17 19:42:55 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,6 +23,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
 	${PYTHON_DEPS}
 "
 DEPEND="${COMMON_DEPEND}
+	dev-python/python-exec:0
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
 	test? (
@@ -31,6 +32,9 @@ DEPEND="${COMMON_DEPEND}
 "
 RDEPEND="${COMMON_DEPEND}
 	!<dev-python/pygtk-2.23"
+
+# disable python-exec:2 support, bug #484406
+_PYTHON_WANT_PYTHON_EXEC2=0
 
 src_prepare() {
 	# Fix FHS compliance, see upstream bug #535524
