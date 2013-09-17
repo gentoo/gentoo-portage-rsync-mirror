@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squidguard
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.44 2012/09/03 21:26:47 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.45 2013/09/17 12:51:48 tomwij Exp $
+
+*squidguard-1.5_beta (17 Sep 2013)
+
+  17 Sep 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/squidguard-1.5_beta-gentoo.patch, +squidguard-1.5_beta.ebuild:
+  Version bump to 1.5_beta. EAPI 5. Dropped the patches that were applied
+  upstream. Fixes bug #485148, reported by Manuel Rüger (mrueg).
 
   03 Sep 2012; Anthony G. Basile <blueness@gentoo.org>
   squidguard-1.4-r4.ebuild:
