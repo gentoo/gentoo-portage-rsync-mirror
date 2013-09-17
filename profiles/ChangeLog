@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8251 2013/09/16 20:23:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8252 2013/09/17 09:13:30 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Remove poppler mask as everything works now
 
   16 Sep 2013; Tim Harder <radhermit@gentoo.org> package.mask:
   Mask >=media-video/mkvtoolnix-6.4.0 until libmatroska-1.4.1 is released.
