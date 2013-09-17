@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.7.2.ebuild,v 1.1 2013/09/14 13:52:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.7.3.ebuild,v 1.1 2013/09/17 17:46:08 johu Exp $
 
 EAPI=5
 
@@ -16,8 +16,8 @@ RDEPEND="!app-office/koffice-l10n"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="doc"
 
-MY_LANGS="bs ca cs da de el es et fi fr gl hu it kk nb nds nl pl pt pt_BR ru sk
-sl sv tr uk zh_CN zh_TW"
+MY_LANGS="bs ca cs da de el es et fi fr gl hu ia it kk nb nds nl pl pt pt_BR ru
+sk sl sv tr uk zh_CN zh_TW"
 
 case ${PV} in
 	2.[456789].[789]?)

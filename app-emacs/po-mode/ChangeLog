@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/po-mode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.26 2012/05/09 01:46:29 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.27 2013/09/17 17:37:34 ulm Exp $
+
+*po-mode-0.18.3.1 (17 Sep 2013)
+
+  17 Sep 2013; Ulrich Müller <ulm@gentoo.org> -po-mode-0.17.ebuild,
+  po-mode-0.18.1.1.ebuild, +po-mode-0.18.3.1.ebuild,
+  -files/51po-mode-gentoo.el:
+  Version bump. Drop ~sparc-fbsd keyword. Remove old.
 
   09 May 2012; Alexis Ballier <aballier@gentoo.org> po-mode-0.18.1.1.ebuild:
   keyword ~amd64-fbsd
