@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.54 2013/06/30 18:07:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.55 2013/09/18 19:11:47 ulm Exp $
+
+*ruby-mode-2.0.0_p247 (18 Sep 2013)
+
+  18 Sep 2013; Ulrich Müller <ulm@gentoo.org> -ruby-mode-1.8.6.ebuild,
+  ruby-mode-1.9.3_p429.ebuild, +ruby-mode-2.0.0_p247.ebuild:
+  Version bump. Remove old. Drop ~sparc-fbsd keyword.
 
   30 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ruby-mode-1.9.3_p429.ebuild:
   Stable for s390, wrt bug #470628
