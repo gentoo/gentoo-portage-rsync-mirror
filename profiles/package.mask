@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15121 2013/09/17 21:42:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15122 2013/09/18 12:57:08 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (18 Sep 2013)
+# Mask development releases of botan:
+# - causes many API breakages
+# - do not compile in some USE-flag combinations
+# - requires at least gcc 4.7(and possibly even 4.8 for some features)
+>=dev-libs/botan-1.11.0
 
 # Michał Górny <mgorny@gentoo.org> (17 Sep 2013)
 # Mask for testing. It enables some new eclass code, some new distutils

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8255 2013/09/17 21:42:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8256 2013/09/18 12:57:08 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Mask developer releases of dev-libs/botan
 
   17 Sep 2013; Tim Harder <radhermit@gentoo.org> package.mask:
   Unmask =media-video/mkvtoolnix-6.4.1.
