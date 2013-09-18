@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.10.3-r1.ebuild,v 1.4 2013/09/18 11:11:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.10.5.ebuild,v 1.2 2013/09/18 11:11:26 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -16,7 +16,7 @@ SRC_URI="http://files.randombit.net/botan/${MY_P}.tbz"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~sparc ~x86 ~ppc-macos"
 SLOT="0"
 LICENSE="BSD"
-IUSE="bindist doc python bzip2 gmp ssl threads zlib"
+IUSE="bindist doc python bzip2 gmp ssl static-libs threads zlib"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -42,7 +42,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local disable_modules="proc_walk,unix_procs,cpu_counter"
+	local disable_modules="proc_walk,unix_procs"
 	use threads || disable_modules+=",pthreads"
 	use bindist && disable_modules+=",ecdsa"
 	elog "Disabling modules: ${disable_modules}"
@@ -117,6 +117,10 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${ED}usr" install
+
+	if ! use static-libs; then
+		rm "${ED}usr/$(get_libdir)/libbotan"*.a || die 'remove of static libs failed'
+	fi
 
 	# Add compatibility symlinks.
 	[[ -e "${ED}usr/bin/botan-config" ]] && die "Compatibility code no longer needed"

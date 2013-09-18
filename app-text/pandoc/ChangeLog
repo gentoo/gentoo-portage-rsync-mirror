@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.19 2013/09/17 17:15:50 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.20 2013/09/18 11:04:06 qnikst Exp $
+
+  18 Sep 2013; Alexander Vershilov <qnikst@gentoo.org> pandoc-1.12.ebuild:
+  fix buildtime bug (#485284), thanks to klausman
 
 *pandoc-1.12 (17 Sep 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.12.ebuild,v 1.1 2013/09/17 17:15:50 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.12.ebuild,v 1.2 2013/09/18 11:04:06 qnikst Exp $
 
 EAPI=5
 
@@ -51,6 +51,8 @@ RDEPEND=">=dev-haskell/aeson-0.6:=[profile?] <dev-haskell/aeson-0.7:=[profile?]
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.10.0.0
+	dev-haskell/alex
+	dev-haskell/happy
 	test? ( >=dev-haskell/ansi-terminal-0.5 <dev-haskell/ansi-terminal-0.7
 		>=dev-haskell/diff-0.2 <dev-haskell/diff-0.4
 		>=dev-haskell/hunit-1.2 <dev-haskell/hunit-1.3
