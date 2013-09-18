@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/python dev-python/egenix-mx-base net-print/pkpgcounter dev-python/chardet dev-python/pkipplib ldap? ( dev-python/python-ldap ) mysql? ( dev-python/mysql-python ) postgres? ( dev-db/postgresql-server dev-db/pygresql ) snmp? ( net-analyzer/net-snmp =dev-python/pysnmp-3.4* ) xml? ( dev-python/jaxml ) =dev-lang/python-2* =dev-lang/python-2*[sqlite?]
 SLOT=0
 SRC_URI=http://scriptkitty.com/files/pykota-1.25_p2437.tar.bz2
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=101763a519867b414b0bf109107c277d

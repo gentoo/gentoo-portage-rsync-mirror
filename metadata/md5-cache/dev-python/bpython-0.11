@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=dev-python/pygments dev-python/setuptools gtk? ( dev-python/pygobject:2 dev-python/pygtk ) urwid? ( dev-python/urwid ) || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* ) || ( =dev-lang/python-3.3*[ncurses] =dev-lang/python-3.2*[ncurses] =dev-lang/python-3.1*[ncurses] =dev-lang/python-2.7*[ncurses] =dev-lang/python-2.6*[ncurses] =dev-lang/python-2.5*[ncurses] )
 SLOT=0
 SRC_URI=http://www.bpython-interpreter.org/releases/bpython-0.11.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=914442f21984416d0333e87562a486a3

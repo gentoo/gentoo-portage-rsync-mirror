@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpx-viewer/gpx-viewer-0.3.0.ebuild,v 1.4 2013/04/24 07:08:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpx-viewer/gpx-viewer-0.3.0.ebuild,v 1.5 2013/09/18 18:48:18 jlec Exp $
 
 EAPI=4
 
@@ -29,7 +29,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.21
 	virtual/pkgconfig"
 
+PATCHES=( "${FILESDIR}"/${P}-autopoint.patch )
+
 src_prepare() {
+	mkdir m4 || die
 	sed \
 		-e '/desktopdir/s:$(DESTDIR)::g' \
 		-i Makefile.am || die

@@ -1,0 +1,15 @@
+ configure.ac | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configure.ac b/configure.ac
+index 6240cab..be1e761 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -6,6 +6,7 @@ m4_define([package_version], [package_major_version.package_minor_version.packag
+ 
+ AC_INIT([GPX Viewer],[package_version],[qball@sarine.nl],[gpx-viewer],[http://blog.sarine.nl/gpx-viewer/])
+ 
++AC_CONFIG_MACRO_DIR([m4])
+ 
+ AC_CONFIG_HEADER([config.h])
+ AM_INIT_AUTOMAKE

@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=app-text/recode virtual/awk sys-apps/grep sys-apps/sed || ( net-misc/wget www-client/lynx ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/ktoblzcheck/ktoblzcheck-1.33.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	7aff825f110c83fa8c77f14ba3c71c47	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=a36dc0c9c30ff910222adff708ee04e3

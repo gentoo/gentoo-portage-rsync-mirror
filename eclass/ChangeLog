@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.976 2013/09/18 13:39:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.977 2013/09/18 18:47:59 mgorny Exp $
+
+  18 Sep 2013; Michał Górny <mgorny@gentoo.org> python.eclass:
+  Add a note not to add new Python versions to python.eclass.
 
   18 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> leechcraft.eclass:
   Add official mirror to LeechCraft SRC_URI, thanks to 0xd34df00d
