@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.8.2.ebuild,v 1.4 2013/09/17 05:51:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/scikits_image-0.8.2.ebuild,v 1.5 2013/09/18 14:58:28 jlec Exp $
 
 EAPI=5
 
@@ -44,8 +44,8 @@ DOCS=( CONTRIBUTORS.txt DEPENDS.txt DEVELOPMENT.txt RELEASE.txt TASKS.txt )
 python_test() {
 	esetup.py \
 		install --root="${T}/test-${EPYTHON}" \
-		--no-compile || die "install test failed"
+		--no-compile
 	cd "${T}/test-${EPYTHON}/$(python_get_sitedir)" || die
-	echo "backend: Agg" > matplotlibrc
-	MPLCONFIGDIR=. nosetests -v || die
+	echo "backend: Agg" > matplotlibrc || die
+	MPLCONFIGDIR=. nosetests -v skimage || die
 }
