@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15122 2013/09/18 12:57:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15123 2013/09/18 17:05:24 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tom Wijsman <TomWij@gentoo.org> (18 Sep 2013)
+# Temporarily masked due to QA issue during attempts to unbundle dependencies;
+# we need to check the jar contents to check for differences, especially the
+# stax dependency seems to be problematic in this regard but we'll check all of
+# them to ensure that unbundling doesn't hurt some missed functionality.
+# Bug #471942 tracks the progress of these unbundling efforts.
+>=app-admin/ec2-api-tools-1.6.7.2-r4
 
 # Sergey Popov <pinkbyte@gentoo.org> (18 Sep 2013)
 # Mask development releases of botan:
