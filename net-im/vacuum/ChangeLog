@@ -1,6 +1,11 @@
 # ChangeLog for net-im/vacuum
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.12 2013/06/11 18:08:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.13 2013/09/18 11:51:38 pinkbyte Exp $
+
+  18 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> vacuum-1.2.0.ebuild,
+  vacuum-1.2.1.ebuild, vacuum-1.2.2.ebuild, vacuum-9999.ebuild, metadata.xml:
+  Add dependency on dev-qt/qtlockedfile, wrt bug #484158. Change maintainer's
+  email address
 
   11 Jun 2013; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml,
   vacuum-9999.ebuild:

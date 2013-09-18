@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.2.2.ebuild,v 1.1 2013/03/10 13:37:10 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-1.2.2.ebuild,v 1.2 2013/09/18 11:51:38 pinkbyte Exp $
 
 EAPI="4"
 LANGS="de pl ru uk"
@@ -41,6 +41,7 @@ REQUIRED_USE="
 RDEPEND="
 	>=dev-qt/qtcore-4.5:4[ssl]
 	>=dev-qt/qtgui-4.5:4
+	dev-qt/qtlockedfile
 	>=dev-libs/openssl-0.9.8k
 	adiummessagestyle? ( >=dev-qt/qtwebkit-4.5:4 )
 	net-dns/libidn
