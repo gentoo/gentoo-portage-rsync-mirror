@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.40.ebuild,v 1.1 2013/07/16 11:06:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/gource-0.40.ebuild,v 1.2 2013/09/18 08:28:37 flameeyes Exp $
 
 EAPI=5
 
@@ -23,8 +23,8 @@ RDEPEND="
 	>=dev-libs/boost-1.46:=[threads(+)]
 	>=media-libs/glew-1.5
 	>=media-libs/libpng-1.2
-	>=media-libs/libsdl-1.2.10[video,opengl,X]
-	>=media-libs/sdl-image-1.2[jpeg,png]
+	<media-libs/libsdl-2[video,opengl,X]
+	<media-libs/sdl-image-2[jpeg,png]
 	dev-libs/libpcre:3
 	dev-libs/tinyxml
 	media-fonts/freefont

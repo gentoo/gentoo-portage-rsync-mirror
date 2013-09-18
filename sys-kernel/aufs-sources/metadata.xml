@@ -6,6 +6,7 @@
   </maintainer>
   <use>
     <flag name="deblob">Remove binary blobs from kernel sources to provide libre license compliance.</flag>
+    <flag name="experimental">Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".</flag>
     <flag name="module">Patch kernel to allow aufs being build as a module.</flag>
     <flag name="proc">Support for /proc/maps and lsof(1)</flag>
   </use>

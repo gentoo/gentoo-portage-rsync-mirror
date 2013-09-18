@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gource
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.28 2013/07/16 11:06:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.29 2013/09/18 08:28:37 flameeyes Exp $
+
+  18 Sep 2013; Diego E. Pettenò <flameeyes@gentoo.org> gource-0.40.ebuild:
+  Fix bug #479896. Patch by Enrico Tagliavini.
 
 *gource-0.40 (16 Jul 2013)
 
