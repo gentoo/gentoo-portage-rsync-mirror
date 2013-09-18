@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.2.0.11-r1.ebuild,v 1.2 2013/09/08 21:17:44 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.2.0.11-r1.ebuild,v 1.3 2013/09/18 22:01:30 mgorny Exp $
 
 EAPI=5
 inherit eutils gnome2-utils pax-utils
@@ -21,20 +21,30 @@ EMUL_X86_VER=20120520
 
 RDEPEND="virtual/ttf-fonts
 	amd64? (
-		>=app-emulation/emul-linux-x86-baselibs-${EMUL_X86_VER}
-		>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}
-		>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}
 		|| (
 			(
-				x11-libs/libX11[abi_x86_32]
-				x11-libs/libXext[abi_x86_32]
-				x11-libs/libXScrnSaver[abi_x86_32]
-				x11-libs/libXv[abi_x86_32]
+				dev-qt/qtcore:4[abi_x86_32(-)]
+				dev-qt/qtdbus:4[abi_x86_32(-)]
+				dev-qt/qtgui:4[accessibility,abi_x86_32(-)]
+				dev-qt/qtwebkit:4[abi_x86_32(-)]
 			)
-			>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}
+			>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
+		)
+		|| (
+			media-libs/alsa-lib[abi_x86_32(-)]
+			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
+		)
+		|| (
+			(
+				x11-libs/libX11[abi_x86_32(-)]
+				x11-libs/libXext[abi_x86_32(-)]
+				x11-libs/libXScrnSaver[abi_x86_32(-)]
+				x11-libs/libXv[abi_x86_32(-)]
+			)
+			>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
 		)
 	)
-	!amd64? (
+	x86? (
 		media-libs/alsa-lib
 		x11-libs/libX11
 		x11-libs/libXext
