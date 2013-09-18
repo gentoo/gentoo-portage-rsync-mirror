@@ -1,0 +1,12 @@
+# ChangeLog for app-arch/zopfli
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.1 2013/09/18 20:43:23 tomwij Exp $
+
+*zopfli-1.0.0_p20130508 (18 Sep 2013)
+*zopfli-1.0.0 (18 Sep 2013)
+
+  18 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +metadata.xml,
+  +zopfli-1.0.0.ebuild, +zopfli-1.0.0_p20130508.ebuild:
+  New ebuild for app-arch/zopfli, a compression library programmed in C to
+  perform very good, but slow, deflate or zlib compression. Proxied commit for
+  Alex Xu, which will proxy maintain this package; fixes bug #481492.
