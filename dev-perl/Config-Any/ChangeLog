@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Config-Any
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Any/ChangeLog,v 1.17 2013/09/08 10:28:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Any/ChangeLog,v 1.18 2013/09/18 03:06:04 patrick Exp $
+
+*Config-Any-0.240.0 (18 Sep 2013)
+
+  18 Sep 2013; Patrick Lauer <patrick@gentoo.org> +Config-Any-0.240.0.ebuild:
+  Bump
 
   08 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> Config-Any-0.230.0.ebuild:
   Add ~arm keyword, wrt bug #449762

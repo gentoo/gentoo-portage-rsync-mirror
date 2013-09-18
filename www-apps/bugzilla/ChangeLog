@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/bugzilla
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.212 2012/10/18 09:29:42 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.213 2013/09/18 03:18:36 creffett Exp $
+
+*bugzilla-4.2.5 (18 Sep 2013)
+*bugzilla-3.6.13 (18 Sep 2013)
+*bugzilla-4.0.10 (18 Sep 2013)
+
+  18 Sep 2013; Chris Reffett <creffett@gentoo.org> +bugzilla-3.6.13.ebuild,
+  +bugzilla-4.0.10.ebuild, +bugzilla-4.2.5.ebuild, -bugzilla-3.6.9.ebuild,
+  -bugzilla-4.0.6.ebuild, -bugzilla-4.2.1.ebuild, -bugzilla-4.2.3.ebuild,
+  metadata.xml:
+  Security bump wrt bug 458562 and others. Add Andrew Hamilton as proxy, ack by
+  twitch153, I will handle his commits. Cleanup affected versions.
 
 *bugzilla-4.2.3 (18 Oct 2012)
 

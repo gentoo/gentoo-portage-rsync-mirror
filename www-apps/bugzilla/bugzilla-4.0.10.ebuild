@@ -1,13 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.2.3.ebuild,v 1.1 2012/10/18 09:29:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.10.ebuild,v 1.1 2013/09/18 03:18:36 creffett Exp $
 
-EAPI="4"
+EAPI="3"
 
 inherit webapp depend.apache versionator eutils
 
-#MY_PB=$(get_version_component_range 1-2)
-MY_PB="4.0"
+MY_PB=$(get_version_component_range 1-2)
 
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
@@ -38,8 +37,6 @@ COMMON_DEPS="
 
 	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-MIME-Base64-3.07
-
-	dev-perl/Math-Random-ISAAC
 "
 
 DEPEND="test? ( ${COMMON_DEPS} )"
@@ -60,21 +57,20 @@ RDEPEND="
 		dev-perl/XML-Twig
 		>=dev-perl/MIME-tools-5.427
 		dev-perl/libwww-perl
-		>=dev-perl/PatchReader-0.9.6
+		>=dev-perl/PatchReader-0.9.5
 		dev-perl/perl-ldap
 		dev-perl/Authen-SASL
 		>=dev-perl/SOAP-Lite-0.712
 		dev-perl/JSON-RPC
 		>=dev-perl/JSON-XS-2.0
 		dev-perl/Test-Taint
-		>=dev-perl/HTML-Parser-3.67
+		>=dev-perl/HTML-Parser-3.60
 		dev-perl/HTML-Scrubber
-		>=virtual/perl-Encode-2.21
-		dev-perl/Encode-Detect
 		dev-perl/Email-MIME-Attachment-Stripper
 		dev-perl/Email-Reply
 		dev-perl/TheSchwartz
 		dev-perl/Daemon-Generic
+		>=dev-perl/Math-Random-Secure-0.50
 
 		|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
 		dev-perl/MIME-tools
@@ -82,7 +78,7 @@ RDEPEND="
 
 	modperl? (
 		www-apache/mod_perl:1
-		>=dev-perl/Apache-SizeLimit-0.96
+		>=dev-perl/Apache-SizeLimit-0.93
 	)
 
 	graphviz? ( media-gfx/graphviz )
