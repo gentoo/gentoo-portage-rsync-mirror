@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/oauthlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.29 2013/09/05 18:46:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauthlib/ChangeLog,v 1.30 2013/09/18 06:24:42 patrick Exp $
+
+*oauthlib-0.6.0 (18 Sep 2013)
+
+  18 Sep 2013; Patrick Lauer <patrick@gentoo.org> +oauthlib-0.6.0.ebuild:
+  Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> oauthlib-0.3.6.ebuild,
   oauthlib-0.3.7.ebuild, oauthlib-0.3.8.ebuild, oauthlib-0.4.0.ebuild,

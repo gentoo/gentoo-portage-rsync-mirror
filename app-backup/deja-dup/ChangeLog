@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/deja-dup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.33 2013/06/20 06:05:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.34 2013/09/18 06:22:07 jlec Exp $
+
+  18 Sep 2013; Justin Lecher <jlec@gentoo.org> deja-dup-27.3.1.ebuild:
+  Add missing runtime dep on dconf, #483520
 
 *deja-dup-27.3.1 (20 Jun 2013)
 
