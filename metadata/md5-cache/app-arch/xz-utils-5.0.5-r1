@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare test
-DEPEND=!<app-arch/lzma-4.63 !app-arch/lzma-utils !<app-arch/p7zip-4.57
+DEPEND=!<app-arch/lzma-4.63 !app-arch/lzma-utils !<app-arch/p7zip-4.57 userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=utils for managing LZMA compressed files
 EAPI=4
 HOMEPAGE=http://tukaani.org/xz/
 IUSE=nls static-libs +threads abi_x86_32 abi_x86_64 abi_x86_x32 abi_x86_32 abi_x86_64 abi_mips_n32 abi_mips_n64 abi_mips_o32
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=LGPL-2.1
-RDEPEND=!<app-arch/lzma-4.63 !app-arch/lzma-utils !<app-arch/p7zip-4.57 userland_GNU? ( >=sys-apps/coreutils-8.5 )
+RDEPEND=!<app-arch/lzma-4.63 !app-arch/lzma-utils !<app-arch/p7zip-4.57
 SLOT=0
 SRC_URI=http://tukaani.org/xz/xz-5.0.5.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	66ecd0bd5a9e66ba44af9d01ac66360f	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	6edec89368c3aae614d551d0d5020f82	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	6edec89368c3aae614d551d0d5020f82	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=55f0d1c45f96c83a21146ffc17fce4a1

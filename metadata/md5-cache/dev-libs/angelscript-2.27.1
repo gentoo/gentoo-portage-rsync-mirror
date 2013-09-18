@@ -1,13 +1,12 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=app-arch/unzip
+DEPEND=app-arch/unzip userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=A flexible, cross-platform scripting library
 EAPI=5
 HOMEPAGE=http://www.angelcode.com/angelscript/
 IUSE=doc static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_x86_32 abi_x86_64 abi_mips_n32 abi_mips_n64 abi_mips_o32
 KEYWORDS=~amd64 ~x86
 LICENSE=ZLIB
-RDEPEND=userland_GNU? ( >=sys-apps/coreutils-8.5 )
 SLOT=0
 SRC_URI=http://www.angelcode.com/angelscript/sdk/files/angelscript_2.27.1.zip
-_eclasses_=multibuild	66ecd0bd5a9e66ba44af9d01ac66360f	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	6edec89368c3aae614d551d0d5020f82	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	6edec89368c3aae614d551d0d5020f82	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
 _md5_=ce76a8934a4c2324677a6c29b845bed4
