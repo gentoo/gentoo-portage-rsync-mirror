@@ -1,0 +1,10 @@
+[Unit]
+Description=Mumble Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/murmurd -ini /etc/murmur/murmur.ini -fg
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
