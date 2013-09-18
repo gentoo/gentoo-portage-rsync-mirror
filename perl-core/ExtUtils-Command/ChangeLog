@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/ExtUtils-Command
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Command/ChangeLog,v 1.28 2013/04/20 16:56:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Command/ChangeLog,v 1.29 2013/09/18 02:44:33 patrick Exp $
+
+*ExtUtils-Command-1.180.0 (18 Sep 2013)
+
+  18 Sep 2013; Patrick Lauer <patrick@gentoo.org>
+  +ExtUtils-Command-1.180.0.ebuild:
+  Bump
 
   20 Apr 2013; Matt Turner <mattst88@gentoo.org>
   ExtUtils-Command-1.170.0.ebuild:
