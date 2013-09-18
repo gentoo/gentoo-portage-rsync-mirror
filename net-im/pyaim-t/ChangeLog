@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pyaim-t
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/ChangeLog,v 1.15 2013/08/03 09:45:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/ChangeLog,v 1.16 2013/09/18 16:15:29 hanno Exp $
+
+*pyaim-t-0.8.0.1-r1 (18 Sep 2013)
+
+  18 Sep 2013; Hanno Boeck <hanno@gentoo.org> +pyaim-t-0.8.0.1-r1.ebuild,
+  +files/pyaim-t-0.8.0.1-pillow-imaging.patch, +files/pyaim-t-0.8-initd-r1:
+  Fix old PIL imports, move to new eclass, cleanup, fix init script pidfile dir
+  creation, sync with pyicq-t.
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> pyaim-t-0.8.0.1.ebuild,
   pyaim-t-0.8a.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.2 2013/08/10 11:06:46 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.3 2013/09/18 16:28:36 mgorny Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ src_prepare() {
 src_install() {
 	cmake-utils_src_install
 
-	if [ -f "${S}/usr/bin/lz4c64" ]
+	if [ -f "${ED%/}/usr/bin/lz4c64" ]
 	then
 		dosym /usr/bin/{lz4c64,lz4c}
 	else
