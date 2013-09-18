@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.82 2013/09/14 10:37:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.83 2013/09/18 05:55:56 johu Exp $
+
+  18 Sep 2013; Johannes Huber <johu@gentoo.org> -libssh-0.5.4.ebuild:
+  Remove vulnerable version wrt bug #476622.
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libssh-0.5.5.ebuild:
   Stable for ppc64, wrt bug #476622
