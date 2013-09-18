@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Email-Valid
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.64 2012/12/05 11:27:02 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.65 2013/09/18 04:01:27 patrick Exp $
+
+*Email-Valid-1.192.0 (18 Sep 2013)
+
+  18 Sep 2013; Patrick Lauer <patrick@gentoo.org> +Email-Valid-1.192.0.ebuild:
+  Bump
 
   05 Dec 2012; Fabian Groffen <grobian@gentoo.org> Email-Valid-0.190.0.ebuild:
   Marked ~x86-linux, bug #444950
