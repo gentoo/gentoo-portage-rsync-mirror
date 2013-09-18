@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.13.1.ebuild,v 1.1 2013/02/05 02:07:46 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/lincity-1.13.1.ebuild,v 1.2 2013/09/18 10:41:30 nimiux Exp $
 
 EAPI=5
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/lincity/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
 # dep fix (bug #82318)

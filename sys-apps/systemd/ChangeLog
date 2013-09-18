@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.175 2013/09/18 10:23:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.176 2013/09/18 10:51:33 mgorny Exp $
+
+*systemd-207-r1 (18 Sep 2013)
+
+  18 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  +files/207-0001-swap-fix-reverse-dependencies.patch,
+  +files/207-0002-swap-create-.wants-symlink-to-auto-swap-devices.patch,
+  +systemd-207-r1.ebuild:
+  Backport swap activation patches, bug #484998. Ensure that locale.conf is
+  respected and used consistently by systemd & OpenRC, bug #465468.
 
   18 Sep 2013; Michał Górny <mgorny@gentoo.org> systemd-9999-r1.ebuild:
   Handle locale.conf/env.d wrt bug #465468.
