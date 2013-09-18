@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.80 2013/09/17 17:33:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.81 2013/09/18 22:48:10 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -305,7 +305,7 @@ distutils_install_for_testing() {
 	fi
 
 	mkdir -p "${libdir}" || die
-	esetup.py "${add_args[@]}"
+	esetup.py "${add_args[@]}" "${@}"
 }
 
 # @FUNCTION: _distutils-r1_disable_ez_setup
