@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/xinput-1.5.4.ebuild,v 1.2 2012/05/15 14:14:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/xinput-1.6.1.ebuild,v 1.1 2013/09/18 21:25:13 chithanh Exp $
 
-EAPI=4
+EAPI=5
 inherit xorg-2
 
 DESCRIPTION="Utility to set XInput device parameters"
@@ -12,6 +12,7 @@ IUSE=""
 
 RDEPEND=">=x11-libs/libX11-1.3
 	x11-libs/libXext
-	>=x11-libs/libXi-1.4.5"
+	>=x11-libs/libXi-1.5.99.1
+	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
-	>=x11-proto/inputproto-2.0"
+	>=x11-proto/inputproto-2.1.99.1"

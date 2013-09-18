@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/twm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.73 2012/05/11 03:04:10 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.74 2013/09/18 21:12:11 chithanh Exp $
+
+*twm-1.0.8 (18 Sep 2013)
+
+  18 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +twm-1.0.8.ebuild, -twm-1.0.6.ebuild:
+  Version bump.
 
   11 May 2012; Alexis Ballier <aballier@gentoo.org> twm-1.0.7.ebuild:
   keyword ~amd64-fbsd
@@ -248,4 +254,3 @@
 
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>; +twm-0.99.0.ebuild:
   Initial commit for modular X.
-

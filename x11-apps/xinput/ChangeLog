@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinput
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.52 2013/06/05 00:42:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.53 2013/09/18 21:25:13 chithanh Exp $
+
+*xinput-1.6.1 (18 Sep 2013)
+
+  18 Sep 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xinput-1.6.1.ebuild, -files/xinput-1.5.3-inputproto-2.1.patch,
+  -xinput-1.5.3-r1.ebuild, -xinput-1.5.4.ebuild:
+  Version bump.
 
   05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.
