@@ -1,6 +1,15 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.165 2013/08/12 22:20:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.166 2013/09/18 13:37:07 polynomial-c Exp $
+
+*firefox-bin-24.0 (18 Sep 2013)
+*firefox-bin-17.0.9 (18 Sep 2013)
+
+  18 Sep 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -firefox-bin-17.0.5-r1.ebuild, -firefox-bin-17.0.6.ebuild,
+  -firefox-bin-17.0.7.ebuild, +firefox-bin-17.0.9.ebuild,
+  +firefox-bin-24.0.ebuild:
+  Security bump (bug #485258). Removed old.
 
   12 Aug 2013; Agostino Sarubbo <ago@gentoo.org> firefox-bin-17.0.8.ebuild:
   Stable for x86, wrt bug #479968

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.975 2013/09/18 08:49:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.976 2013/09/18 13:39:36 pinkbyte Exp $
+
+  18 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> leechcraft.eclass:
+  Add official mirror to LeechCraft SRC_URI, thanks to 0xd34df00d
 
   18 Sep 2013; Michał Górny <mgorny@gentoo.org> multibuild.eclass:
   Fix coreutils dep to be build-time.

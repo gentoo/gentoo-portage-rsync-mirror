@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.5.ebuild,v 1.2 2013/09/05 18:23:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.5.ebuild,v 1.3 2013/09/18 13:46:59 jlec Exp $
 
 EAPI=5
 
@@ -35,6 +35,6 @@ src_install() {
 	insinto /etc
 	doins grc.conf
 
-	dodoc README INSTALL TODO CHANGES CREDITS
+	dodoc README INSTALL TODO debian/changelog CREDITS
 	doman grc.1 grcat.1
 }

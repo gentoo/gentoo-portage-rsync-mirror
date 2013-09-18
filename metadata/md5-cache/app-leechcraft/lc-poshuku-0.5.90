@@ -9,6 +9,6 @@ LICENSE=GPL-3
 RDEPEND=~app-leechcraft/lc-core-0.5.90[postgres?,sqlite?] dev-qt/qtwebkit:4 idn? ( net-dns/libidn ) onlinebookmarks? ( >=dev-libs/qjson-0.7.1-r1 ) pcre? ( >=dev-libs/libpcre-8.12 ) virtual/leechcraft-downloader-http
 REQUIRED_USE=pcre? ( cleanweb )
 SLOT=0
-SRC_URI=mirror://sourceforge/leechcraft/leechcraft-0.5.90.tar.xz
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	leechcraft	b9c58708fa589445cca962a066953778	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+SRC_URI=mirror://sourceforge/leechcraft/leechcraft-0.5.90.tar.xz http://dist.leechcraft.org/LeechCraft/0.5.90/lc-poshuku-0.5.90.tar.xz
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	leechcraft	cfe4bfc0a187fcf4ede2994f160b571d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=c354ceba36ca383b6848b331d6f927c3

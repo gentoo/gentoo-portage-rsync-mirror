@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-17.0.7.ebuild,v 1.3 2013/06/27 20:49:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-24.0.ebuild,v 1.1 2013/09/18 13:37:07 polynomial-c Exp $
 
-EAPI="4"
-MOZ_ESR="1"
+EAPI="5"
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 MOZ_LANGS=(af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
@@ -16,12 +15,6 @@ te th tr uk vi zh-CN zh-TW zu)
 MOZ_PV="${PV/_beta/b}" # Handle beta for SRC_URI
 MOZ_PV="${MOZ_PV/_rc/rc}" # Handle rc for SRC_URI
 MOZ_PN="${PN/-bin}"
-
-if [[ ${MOZ_ESR} == 1 ]]; then
-	# ESR releases have slightly version numbers
-	MOZ_PV="${MOZ_PV}esr"
-fi
-
 MOZ_P="${MOZ_PN}-${MOZ_PV}"
 
 # Upstream ftp release URI that's used by mozlinguas.eclass
@@ -36,17 +29,15 @@ SRC_URI="${SRC_URI}
 	amd64? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-x86_64/en-US/${MOZ_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
 	x86? ( ${MOZ_FTP_URI}/${MOZ_PV}/linux-i686/en-US/${MOZ_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/firefox"
-RESTRICT="strip mirror binchecks"
+RESTRICT="strip mirror"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="startup-notification"
 
 DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/dbus-glib
-	gnome-base/gconf
-	gnome-base/orbit
 	virtual/freedesktop-icon-theme
 	x11-libs/libXrender
 	x11-libs/libXt
@@ -54,7 +45,19 @@ RDEPEND="dev-libs/dbus-glib
 
 	>=x11-libs/gtk+-2.2:2
 	>=media-libs/alsa-lib-1.0.16
+
 	!net-libs/libproxy[spidermonkey]
+"
+
+QA_PREBUILT="
+	opt/${MOZ_PN}/*.so
+	opt/${MOZ_PN}/${MOZ_PN}
+	opt/${MOZ_PN}/${PN}
+	opt/${MOZ_PN}/crashreporter
+	opt/${MOZ_PN}/webapprt-stub
+	opt/${MOZ_PN}/plugin-container
+	opt/${MOZ_PN}/mozilla-xremote-client
+	opt/${MOZ_PN}/updater
 "
 
 S="${WORKDIR}/${MOZ_PN}"
@@ -69,9 +72,25 @@ src_unpack() {
 src_install() {
 	declare MOZILLA_FIVE_HOME=/opt/${MOZ_PN}
 
-	# Install icon and .desktop for menu entry
-	newicon "${S}"/chrome/icons/default/default48.png ${PN}-icon.png
+	local size sizes icon_path icon name
+	sizes="16 32 48"
+	icon_path="${S}/browser/chrome/icons/default"
+	icon="${PN}"
+	name="Mozilla Firefox"
+
+	# Install icons and .desktop for menu entry
+	for size in ${sizes}; do
+		insinto "/usr/share/icons/hicolor/${size}x${size}/apps"
+		newins "${icon_path}/default${size}.png" "${icon}.png" || die
+	done
+	# The 128x128 icon has a different name
+	insinto "/usr/share/icons/hicolor/128x128/apps"
+	newins "${icon_path}/../../../icons/mozicon128.png" "${icon}.png" || die
+	# Install a 48x48 icon into /usr/share/pixmaps for legacy DEs
+	newicon "${S}"/browser/chrome/icons/default/default48.png ${PN}-icon.png
 	domenu "${FILESDIR}"/${PN}.desktop
+	sed -i -e "s:@NAME@:${name}:" -e "s:@ICON@:${icon}:" \
+		"${ED}/usr/share/applications/${PN}.desktop" || die
 
 	# Add StartupNotify=true bug 237317
 	if use startup-notification; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.10 2013/05/08 10:25:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.11 2013/09/18 13:39:36 pinkbyte Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
@@ -36,7 +36,8 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-2
 else
 	DEPEND="app-arch/xz-utils"
-	SRC_URI="mirror://sourceforge/leechcraft/leechcraft-${PV}.tar.xz"
+	SRC_URI="mirror://sourceforge/leechcraft/leechcraft-${PV}.tar.xz
+		http://dist.leechcraft.org/LeechCraft/${PV}/${P}.tar.xz"
 	S="${WORKDIR}/leechcraft-${PV}"
 fi
 
