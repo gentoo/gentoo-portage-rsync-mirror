@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.16 2013/09/14 18:44:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.17 2013/09/18 10:23:49 mgorny Exp $
 
 EAPI=5
 
@@ -286,6 +286,50 @@ multilib_src_install_all() {
 	dosym ../sysctl.conf /etc/sysctl.d/99-sysctl.conf
 }
 
+migrate_locale() {
+	local envd_locale_def="${EROOT%/}/etc/env.d/02locale"
+	local envd_locale=( "${EROOT%/}"/etc/env.d/??locale )
+	local locale_conf="${EROOT%/}/etc/locale.conf"
+
+	if [[ ! -L ${locale_conf} && ! -e ${locale_conf} ]]; then
+		# if locale.conf does not exist...
+		if [[ -e ${envd_locale} ]]; then
+			# ...either copy env.d/??locale if there's one
+			ebegin "Moving ${envd_locale} to ${locale_conf}"
+			mv "${envd_locale}" "${locale_conf}"
+			eend ${?} || FAIL=1
+		else
+			# ...or create a dummy default
+			ebegin "Creating ${locale_conf}"
+			cat > "${locale_conf}" <<-EOF
+				# This file has been created by the sys-apps/systemd ebuild.
+				# See locale.conf(5) and localectl(1).
+
+				# LANG=${LANG}
+			EOF
+			eend ${?} || FAIL=1
+		fi
+	fi
+
+	if [[ ! -L ${envd_locale} ]]; then
+		# now, if env.d/??locale is not a symlink (to locale.conf)...
+		if [[ -e ${envd_locale} ]]; then
+			# ...warn the user that he has duplicate locale settings
+			ewarn
+			ewarn "To ensure consistent behavior, you should replace ${envd_locale}"
+			ewarn "with a symlink to ${locale_conf}. Please migrate your settings"
+			ewarn "and create the symlink with the following command:"
+			ewarn "ln -s -n -f ../locale.conf ${envd_locale}"
+			ewarn
+		else
+			# ...or just create the symlink if there's nothing here
+			ebegin "Creating ${envd_locale_def} -> ../locale.conf symlink"
+			ln -n -s ../locale.conf "${envd_locale_def}"
+			eend ${?} || FAIL=1
+		fi
+	fi
+}
+
 pkg_postinst() {
 	# for udev rules
 	enewgroup dialout
@@ -303,12 +347,21 @@ pkg_postinst() {
 		udevadm hwdb --update --root="${ROOT%/}"
 	fi
 
-	if [[ ${ROOT} == "" || ${ROOT} == "/" ]]; then
-		udevadm control --reload
-	fi
+	udev_reload || FAIL=1
 
 	# Bug 468876
 	fcaps cap_dac_override,cap_sys_ptrace=ep usr/bin/systemd-detect-virt
+
+	# Bug 465468, make sure locales are respect, and ensure consistency
+	# between OpenRC & systemd
+	migrate_locale
+
+	if [[ ${FAIL} ]]; then
+		eerror "One of the postinst commands failed. Please check the postinst output"
+		eerror "for errors. You may need to clean up your system and/or try installing"
+		eerror "systemd again."
+		eerror
+	fi
 
 	if [[ ! -L "${ROOT}"/etc/mtab ]]; then
 		ewarn "Upstream mandates the /etc/mtab file should be a symlink to /proc/mounts."

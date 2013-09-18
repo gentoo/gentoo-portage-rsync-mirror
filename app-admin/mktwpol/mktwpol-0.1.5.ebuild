@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/mktwpol-0.1.5.ebuild,v 1.1 2013/09/16 22:23:41 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/mktwpol-0.1.5.ebuild,v 1.2 2013/09/18 10:26:05 nimiux Exp $
 
 EAPI=5
 
-DESCRIPTION="Bash scripts to create and maintain tripwire database"
+DESCRIPTION="Bash scripts to install tripwire and generate tripwire policy files"
 HOMEPAGE="https://sourceforge.net/projects/mktwpol"
 SRC_URI="mirror://sourceforge/mktwpol/${P}.tar.gz"
 
