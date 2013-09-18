@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.235 2013/08/26 16:59:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.236 2013/09/18 14:11:09 polynomial-c Exp $
+
+*thunderbird-17.0.9 (18 Sep 2013)
+
+  18 Sep 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -thunderbird-17.0.5.ebuild, -thunderbird-17.0.6.ebuild,
+  -thunderbird-17.0.7.ebuild, -thunderbird-17.0.7-r1.ebuild,
+  +thunderbird-17.0.9.ebuild:
+  Security bump (bug #485258). Removed old.
 
   26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-17.0.8.ebuild:
   Stable for ppc, wrt bug #479968
