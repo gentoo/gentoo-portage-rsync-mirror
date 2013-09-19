@@ -2,17 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>java</herd>
-  <herd>proxy-maintainers</herd>
-  <maintainer>
-    <email>gnu_andrew@member.fsf.org</email>
-    <name>Andrew John Hughes</name>
-    <description>Proxy Maintainer</description>
-  </maintainer>
-  <maintainer>
-    <email>caster@gentoo.org</email>
-    <name>Vlastimil Babka</name>
-    <description>Committer (CC me)</description>
-  </maintainer>
   <longdescription>
     FOSS Java Web Start and optional browser plugin implementation based on NetX, to be used with icedtea.
   </longdescription>
