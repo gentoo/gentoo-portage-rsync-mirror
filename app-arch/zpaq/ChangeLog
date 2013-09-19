@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/zpaq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.12 2013/07/20 14:22:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.13 2013/09/19 09:04:02 mgorny Exp $
+
+*zpaq-6.41 (19 Sep 2013)
+
+  19 Sep 2013; Michał Górny <mgorny@gentoo.org> +zpaq-6.41.ebuild,
+  -files/zpaq-2-autotools.patch, -files/zpaq-3-autotools.patch,
+  -zpaq-4.04.ebuild, -zpaq-6.10.ebuild:
+  Version bump. Remove old.
 
 *zpaq-6.38 (20 Jul 2013)
 

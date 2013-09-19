@@ -27,7 +27,7 @@ index 0000000..b6dd881
 +	$(POD2MAN) $< > $@
 +endif
 +
-+libzpaq_la_SOURCES = libzpaq.cpp libzpaqo.cpp libzpaq.h
++libzpaq_la_SOURCES = libzpaq.cpp libzpaq.h
 +libzpaq_la_LDFLAGS = -version-info @ABI_VERSION@
 +
 +MOSTLYCLEANFILES = libzpaq.3
