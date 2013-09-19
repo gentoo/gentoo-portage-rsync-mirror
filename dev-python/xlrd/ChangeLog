@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/xlrd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.17 2013/09/05 18:46:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlrd/ChangeLog,v 1.18 2013/09/19 14:47:33 jlec Exp $
+
+  19 Sep 2013; Justin Lecher <jlec@gentoo.org> xlrd-0.9.0.ebuild,
+  xlrd-0.9.2.ebuild, metadata.xml:
+  Add missing call to distutils-r1_python_install_all
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> xlrd-0.9.0.ebuild,
   xlrd-0.9.2.ebuild:
