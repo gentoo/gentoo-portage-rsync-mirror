@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.71 2013/07/16 06:23:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.72 2013/09/19 13:32:18 swift Exp $
+
+  19 Sep 2013; Sven Vermeulen <swift@gentoo.org> opendkim-2.8.3.ebuild,
+  opendkim-2.8.4.ebuild:
+  Fix bug #485412 - Optionally depend on selinux-dkim (policy)
 
   16 Jul 2013; Eray Aslan <eras@gentoo.org>
   -files/opendkim-2.7.4-DisableCryptoInit.patch,

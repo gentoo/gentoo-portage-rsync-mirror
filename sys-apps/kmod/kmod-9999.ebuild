@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.64 2013/08/24 10:59:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-9999.ebuild,v 1.65 2013/09/19 13:57:58 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils libtool multilib toolchain-funcs versionator
@@ -38,8 +38,8 @@ DEPEND="${RDEPEND}
 	zlib? ( virtual/pkgconfig )"
 
 pkg_setup() {
-	version_is_at_least 4.6 $(gcc-version) || \
-		die "At least sys-devel/gcc >= 4.6 is required to build ${CATEGORY}/${PN}." #481020
+	[[ $(tc-getCPP) == *cpp ]] && ! version_is_at_least 4.6 $(gcc-version) && \
+		die "You need at least GNU GCC 4.6.x to build this package." #481020
 }
 
 src_prepare() {

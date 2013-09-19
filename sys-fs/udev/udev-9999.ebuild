@@ -1,15 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.256 2013/09/14 19:13:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.257 2013/09/19 13:40:45 ssuominen Exp $
 
 EAPI=5
-
-# accept4() patch is only in non-live version
-if [[ ${PV} = 9999* ]]; then
-	KV_min=2.6.39
-else
-	KV_min=2.6.32
-fi
 
 inherit autotools eutils linux-info multilib toolchain-funcs versionator multilib-minimal
 
@@ -40,7 +33,7 @@ COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	acl? ( sys-apps/acl )
 	gudev? ( >=dev-libs/glib-2 )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	kmod? ( >=sys-apps/kmod-14-r1 )
+	kmod? ( >=sys-apps/kmod-14 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
 	!sys-apps/systemd
@@ -53,7 +46,7 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-devel/make-3.82-r4
 	virtual/os-headers
 	virtual/pkgconfig
-	!<sys-kernel/linux-headers-${KV_min}
+	!<sys-kernel/linux-headers-2.6.32
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 if [[ ${PV} = 9999* ]]; then
 	DEPEND="${DEPEND}
@@ -82,13 +75,6 @@ S=${WORKDIR}/systemd-${PV}
 # ABI but not for non-native ABI.
 multilib_check_headers() { :; }
 
-udev_check_KV() {
-	if kernel_is lt ${KV_min//./ }; then
-		return 1
-	fi
-	return 0
-}
-
 check_default_rules() {
 	# Make sure there are no sudden changes to upstream rules file
 	# (more for my own needs than anything else ...)
@@ -104,21 +90,19 @@ check_default_rules() {
 
 pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_BSG ~DEVTMPFS ~!IDE ~INOTIFY_USER ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2 ~SIGNALFD ~EPOLL"
-
 	linux-info_pkg_setup
 
-	if ! udev_check_KV; then
-		eerror "Your kernel version (${KV_FULL}) is too old to run ${P}"
-		eerror "It must be at least ${KV_min}!"
+	# Based on README from tarball:
+	local MINKV=3.0
+	# These arch's have the mandatory accept4() function support in Linux 2.6.32.61, see:
+	# $ grep -r define.*accept4 linux-2.6.32.61/*
+	if use amd64 || use ia64 || use mips || use sparc || use x86; then
+		MINKV=2.6.32
 	fi
 
-	KV_FULL_SRC=${KV_FULL}
-	get_running_version
-	if ! udev_check_KV; then
-		eerror
-		eerror "Your running kernel version (${KV_FULL}) is too old"
-		eerror "for this version of udev."
-		eerror "You must upgrade your kernel or downgrade udev."
+	if kernel_is -lt ${MINKV//./ }; then
+		eerror "Your running kernel is too old to run this version of ${P}"
+		eerror "You need to upgrade kernel at least to ${MINKV}"
 	fi
 }
 
@@ -170,9 +154,7 @@ src_prepare() {
 		sed -i 's:static_assert:alsdjflkasjdfa:' src/shared/macro.h
 
 	# change rules back to group uucp instead of dialout for now wrt #454556
-	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
-		-i rules/*.rules \
-	|| die "failed to change group dialout to uucp"
+	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
 	if [[ ! -e configure ]]; then
 		if use doc; then
@@ -433,9 +415,6 @@ pkg_postinst() {
 		ewarn "Please make sure your remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
 	fi
-
-	# people want reminders, I'll give them reminders.  Odds are they will
-	# just ignore them anyway...
 
 	# 64-device-mapper.rules is related to sys-fs/device-mapper which we block
 	# in favor of sys-fs/lvm2

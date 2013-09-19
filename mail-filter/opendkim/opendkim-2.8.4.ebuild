@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.4.ebuild,v 1.2 2013/07/16 05:51:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.8.4.ebuild,v 1.3 2013/09/19 13:32:17 swift Exp $
 
 EAPI=5
 inherit autotools db-use eutils user
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/opendkim/${P}.tar.gz"
 LICENSE="Sendmail-Open-Source BSD"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="+berkdb gnutls ldap lua memcached opendbx poll sasl +ssl static-libs unbound"
+IUSE="+berkdb gnutls ldap lua memcached opendbx poll sasl selinux +ssl static-libs unbound"
 
 DEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )
 	dev-libs/libbsd
@@ -28,6 +28,7 @@ DEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )
 	ldap? ( net-nds/openldap )
 	memcached? ( dev-libs/libmemcached )
 	sasl? ( dev-libs/cyrus-sasl )
+	selinux? ( sec-policy/selinux-dkim )
 	unbound? ( >=net-dns/unbound-1.4.1 net-dns/dnssec-root )
 	!unbound? ( net-libs/ldns )
 	gnutls? ( >=net-libs/gnutls-2.11.7 )"

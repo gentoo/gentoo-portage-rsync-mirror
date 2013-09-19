@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.112 2013/08/25 14:57:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.113 2013/09/19 13:57:58 ssuominen Exp $
+
+  19 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-15.ebuild,
+  kmod-9999.ebuild:
+  Check compiler (preprocessor) version only if it's GNU GCC wrt #485310 by
+  "eroen"
 
   25 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> -kmod-14-r1.ebuild,
   -kmod-14-r2.ebuild:
