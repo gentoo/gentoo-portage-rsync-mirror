@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.93 2013/09/18 21:00:53 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.94 2013/09/19 12:03:03 tomwij Exp $
+
+*java-sdk-docs-1.7.0.40-r1 (19 Sep 2013)
+
+  19 Sep 2013; Tom Wijsman <TomWij@gentoo.org>
+  +java-sdk-docs-1.7.0.40-r1.ebuild, -java-sdk-docs-1.7.0.40.ebuild:
+  Revision bump to 1.7.0.40-r1 for bug #67266, checksum change reported by
+  Ortwin Glueck.
 
 *java-sdk-docs-1.7.0.40 (18 Sep 2013)
 
