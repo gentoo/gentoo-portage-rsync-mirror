@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.156.ebuild,v 1.1 2013/08/25 22:48:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.156.ebuild,v 1.2 2013/09/19 19:22:36 vapier Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.118-PaX-support.patch
 	epatch "${DISTDIR}"/${P}-{portability,robustify}.patch
+	epatch "${FILESDIR}"/${P}-nested-funcs.patch #451986
 	sed -i -e 's:-Werror::g' $(find -name Makefile.in) || die
 	use test || sed -i -e 's: tests::' Makefile.in #226349
 	use static-libs || sed -i -e '/^lib_LIBRARIES/s:=.*:=:' -e '/^%.os/s:%.o$::' lib{asm,dw,elf}/Makefile.in
