@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.2.0-r1.ebuild,v 1.13 2013/05/21 19:16:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sary/sary-1.2.0-r1.ebuild,v 1.14 2013/09/19 15:25:23 jer Exp $
 
 EAPI=4
 inherit autotools
@@ -29,9 +29,9 @@ src_configure() {
 }
 
 src_install() {
-
 	emake DESTDIR="${D}" \
-		docsdir="${EPREFIX}"/usr/share/doc/${PF}/html
+		docsdir="${EPREFIX}"/usr/share/doc/${PF}/html \
+		install
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
