@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.73 2013/09/17 16:30:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.74 2013/09/19 14:16:41 jlec Exp $
+
+  19 Sep 2013; Justin Lecher <jlec@gentoo.org>
+  nvidia-cuda-toolkit-5.5.22.ebuild:
+  Megabytes are M not MB, #485400
 
   17 Sep 2013; Justin Lecher <jlec@gentoo.org>
   nvidia-cuda-toolkit-5.5.22.ebuild:

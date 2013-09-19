@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.5.22.ebuild,v 1.4 2013/09/17 16:30:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.5.22.ebuild,v 1.5 2013/09/19 14:16:41 jlec Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ S="${WORKDIR}"
 
 QA_PREBUILT="opt/cuda/*"
 
-CHECKREQS_DISK_BUILD="1500MB"
+CHECKREQS_DISK_BUILD="1500M"
 
 pkg_setup() {
 	# We don't like to run cuda_pkg_setup as it depends on us
