@@ -1,6 +1,6 @@
 # Copyright 2010-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.1.ebuild,v 1.6 2013/06/01 15:03:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.1.ebuild,v 1.7 2013/09/19 17:42:28 blueness Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ RDEPEND="
 		net-libs/miniupnpc
 	)
 	sys-libs/db:$(db_ver_to_slot "${DB_VER}")[cxx]
-	=dev-libs/leveldb-1.9.0*[-snappy]
+	<=dev-libs/leveldb-1.12.0[-snappy]
 "
 DEPEND="${RDEPEND}
 	>=app-shells/bash-4.1

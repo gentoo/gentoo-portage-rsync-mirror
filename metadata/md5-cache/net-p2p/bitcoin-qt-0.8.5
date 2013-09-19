@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare test unpack
-DEPEND=>=dev-libs/boost-1.41.0[threads(+)] dev-libs/openssl:0[-bindist] qrcode? ( media-gfx/qrencode ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] =dev-libs/leveldb-1.9.0*[-snappy] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 ) >=app-shells/bash-4.1 >=sys-apps/sed-4
+DEPEND=>=dev-libs/boost-1.41.0[threads(+)] dev-libs/openssl:0[-bindist] qrcode? ( media-gfx/qrencode ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] <=dev-libs/leveldb-1.12.0[-snappy] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 ) >=app-shells/bash-4.1 >=sys-apps/sed-4
 DESCRIPTION=An end-user Qt4 GUI for the Bitcoin crypto-currency
 EAPI=4
 HOMEPAGE=http://bitcoin.org/
 IUSE=1stclassmsg dbus ipv6 kde +qrcode upnp linguas_af_ZA linguas_ar linguas_bg linguas_bs linguas_ca linguas_ca_ES linguas_cs linguas_cy linguas_da linguas_de linguas_el_GR linguas_en linguas_eo linguas_es linguas_es_CL linguas_et linguas_eu_ES linguas_fa linguas_fa_IR linguas_fi linguas_fr linguas_fr_CA linguas_gu_IN linguas_he linguas_hi_IN linguas_hr linguas_hu linguas_it linguas_ja linguas_la linguas_lt linguas_lv_LV linguas_nb linguas_nl linguas_pl linguas_pt_BR linguas_pt_PT linguas_ro_RO linguas_ru linguas_sk linguas_sr linguas_sv linguas_th_TH linguas_tr linguas_uk linguas_zh_CN linguas_zh_TW
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=MIT ISC GPL-3 LGPL-2.1 public-domain || ( CC-BY-SA-3.0 LGPL-2.1 )
-RDEPEND=>=dev-libs/boost-1.41.0[threads(+)] dev-libs/openssl:0[-bindist] qrcode? ( media-gfx/qrencode ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] =dev-libs/leveldb-1.9.0*[-snappy] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 )
+RDEPEND=>=dev-libs/boost-1.41.0[threads(+)] dev-libs/openssl:0[-bindist] qrcode? ( media-gfx/qrencode ) upnp? ( net-libs/miniupnpc ) sys-libs/db:4.8[cxx] <=dev-libs/leveldb-1.12.0[-snappy] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 )
 SLOT=0
 SRC_URI=https://github.com/bitcoin/bitcoin/archive/v0.8.5.tar.gz -> bitcoin-v0.8.5.tgz 1stclassmsg? ( http://luke.dashjr.org/programs/bitcoin/files/bitcoind/luke-jr/1stclassmsg/0.8.2-1stclassmsg.patch.xz )
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	db-use	1c719875d6599536f956fafea9e1f404	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=e09bdf71d17fcdb771e371ee16fc6ed9
+_md5_=86349b210a17b94d07bbfc9560ee14bb

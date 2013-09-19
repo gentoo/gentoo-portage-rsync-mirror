@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.81 2013/09/18 22:48:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.82 2013/09/19 17:36:50 ottxor Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -424,7 +424,7 @@ _distutils-r1_wrap_scripts() {
 		local PYTHON_SCRIPTDIR=${EPREFIX}/usr/bin
 	fi
 
-	mkdir -p "${path}/usr/bin" || die
+	mkdir -p "${path}${EPREFIX}/usr/bin" || die
 	local f
 	while IFS= read -r -d '' f; do
 		local basename=${f##*/}
