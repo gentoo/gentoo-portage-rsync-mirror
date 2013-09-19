@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.70 2013/09/12 22:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.71 2013/09/19 16:21:23 cardoe Exp $
+
+*spice-gtk-0.21 (19 Sep 2013)
+
+  19 Sep 2013; Doug Goldstein <cardoe@gentoo.org> +spice-gtk-0.21.ebuild,
+  -spice-gtk-0.18.ebuild, -spice-gtk-0.20.ebuild:
+  Bump for CVE-2013-4324
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> spice-gtk-0.18.ebuild,
   spice-gtk-0.20-r1.ebuild, spice-gtk-0.20.ebuild:

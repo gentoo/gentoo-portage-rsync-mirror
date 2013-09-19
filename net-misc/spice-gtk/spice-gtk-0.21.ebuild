@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.18.ebuild,v 1.5 2013/09/12 22:33:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.21.ebuild,v 1.1 2013/09/19 16:21:23 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -8,7 +8,9 @@ WANT_AUTOMAKE="1.12"
 VALA_MIN_API_VERSION="0.14"
 VALA_USE_DEPEND="vapigen"
 
-inherit autotools eutils python vala
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit eutils python-single-r1 vala
 
 PYTHON_DEPEND="2"
 
@@ -18,16 +20,19 @@ HOMEPAGE="http://spice-space.org http://gitorious.org/spice-gtk"
 LICENSE="LGPL-2.1"
 SLOT="0"
 SRC_URI="http://spice-space.org/download/gtk/${P}.tar.bz2"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dbus doc gstreamer gtk3 +introspection policykit pulseaudio
 python sasl smartcard static-libs usbredir vala"
 
-REQUIRED_USE="?? ( pulseaudio gstreamer )"
+REQUIRED_USE="
+	${PYTHON_REQUIRED_USE}
+	?? ( pulseaudio gstreamer )"
 
 # TODO:
 # * check if sys-freebsd/freebsd-lib (from virtual/acl) provides acl/libacl.h
 # * use external pnp.ids as soon as that means not pulling in gnome-desktop
-RDEPEND="pulseaudio? ( media-sound/pulseaudio[glib] )
+RDEPEND="${PYTHON_DEPS}
+	pulseaudio? ( media-sound/pulseaudio[glib] )
 	gstreamer? (
 		media-libs/gstreamer:0.10
 		media-libs/gst-plugins-base:0.10 )
@@ -52,10 +57,10 @@ RDEPEND="pulseaudio? ( media-sound/pulseaudio[glib] )
 		virtual/udev[gudev]
 		policykit? (
 			sys-apps/acl
-			>=sys-auth/polkit-0.101 )
+			>=sys-auth/polkit-0.110-r1
+			!~sys-auth/polkit-0.111 )
 		)"
 DEPEND="${RDEPEND}
-	>=app-emulation/spice-protocol-0.10.1
 	dev-lang/python
 	dev-python/pyparsing
 	dev-perl/Text-CSV
@@ -71,19 +76,9 @@ DEPEND="${RDEPEND}
 GTK2_BUILDDIR="${WORKDIR}/${P}_gtk2"
 GTK3_BUILDDIR="${WORKDIR}/${P}_gtk3"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
 src_prepare() {
 	use vala && vala_src_prepare
-	mkdir ${GTK2_BUILDDIR} || die
-	mkdir ${GTK3_BUILDDIR} || die
-
-	epatch \
-		"${FILESDIR}/0.12-parallel-install.patch"
-	eautoreconf
+	mkdir ${GTK2_BUILDDIR} ${GTK3_BUILDDIR} || die
 }
 
 src_configure() {
@@ -111,6 +106,7 @@ src_configure() {
 		$(use_enable policykit polkit) \
 		$(use_enable vala) \
 		$(use_enable dbus) \
+		$(use_enable doc gtk-doc) \
 		--disable-werror \
 		--enable-pie"
 
@@ -154,6 +150,8 @@ src_test() {
 }
 
 src_install() {
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+
 	cd ${GTK2_BUILDDIR}
 	einfo "Running make check in ${GTK2_BUILDDIR}"
 	default
@@ -165,12 +163,9 @@ src_install() {
 	fi
 
 	# Remove .la files if they're not needed
-	if ! use static-libs; then
-		find "${ED}" -name '*.la' -exec rm -f '{}' + || die
-	fi
+	use static-libs || prune_libtool_files
 
 	use python && rm -rf "${ED}"/usr/lib*/python*/site-packages/*.la
-	use doc || rm -rf "${ED}/usr/share/gtk-doc"
 
 	make_desktop_entry spicy Spicy "utilities-terminal" "Network;RemoteAccess;"
 }

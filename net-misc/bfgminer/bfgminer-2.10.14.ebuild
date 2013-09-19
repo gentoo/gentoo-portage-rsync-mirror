@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.0.0.ebuild,v 1.2 2013/06/26 17:09:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-2.10.14.ebuild,v 1.1 2013/09/19 16:25:45 blueness Exp $
 
 EAPI="4"
 
 inherit eutils
 
-DESCRIPTION="Modular Bitcoin ASIC/FPGA/GPU/CPU miner in C"
+DESCRIPTION="Modular Bitcoin CPU/GPU/FPGA miner in C"
 HOMEPAGE="https://bitcointalk.org/?topic=168174"
 SRC_URI="http://luke.dashjr.org/programs/bitcoin/files/${PN}/${PV}/${P}.tbz2"
 
@@ -14,9 +14,9 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
-IUSE="+adl altivec avalon bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock scrypt sse2 sse2_4way sse4 +udev x6500 ztex"
+IUSE="+adl altivec bitforce +cpumining examples hardened icarus modminer ncurses +opencl padlock scrypt sse2 sse2_4way sse4 +udev x6500 ztex"
 REQUIRED_USE="
-	|| ( avalon bitforce cpumining icarus modminer opencl x6500 ztex )
+	|| ( bitforce cpumining icarus modminer opencl x6500 ztex )
 	adl? ( opencl )
 	altivec? ( cpumining ppc ppc64 )
 	padlock? ( cpumining || ( amd64 x86 ) )
@@ -83,7 +83,6 @@ src_configure() {
 	CFLAGS="${CFLAGS}" \
 	econf \
 		$(use_enable adl) \
-		$(use_enable avalon) \
 		$(use_enable bitforce) \
 		$(use_enable cpumining) \
 		$(use_enable icarus) \
@@ -101,12 +100,12 @@ src_configure() {
 src_install() {
 	dobin bfgminer
 	dobin bfgminer-rpc
-	dodoc AUTHORS HACKING NEWS README README.RPC
+	dodoc AUTHORS NEWS README API-README
 	if use scrypt; then
-		dodoc README.scrypt
+		dodoc SCRYPT-README
 	fi
 	if use icarus || use bitforce; then
-		dodoc README.FPGA
+		dodoc FPGA-README
 	fi
 	if use bitforce; then
 		dobin bitforce-firmware-flash
@@ -127,7 +126,7 @@ src_install() {
 	fi
 	if use examples; then
 		docinto examples
-		dodoc api-example.php miner.php API.java api-example.c api-example.py
+		dodoc api-example.php miner.php api-example.c
 	fi
 	cd libblkmaker
 	emake DESTDIR="$D" install

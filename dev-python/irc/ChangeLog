@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/irc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.15 2013/09/05 18:46:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/ChangeLog,v 1.16 2013/09/19 16:11:17 floppym Exp $
+
+  19 Sep 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/irc-8.5.1-setup_requires.patch, -files/irc-8-setup.py.patch,
+  -files/irc-setup.py.3.4.2.patch, -files/irc-setup.py.8.0.1.patch,
+  -files/irc-setup.py.patch, -irc-8.2.ebuild, -irc-8.3-r1.ebuild,
+  -irc-8.3.1.ebuild, -irc-8.3.ebuild, -irc-8.4.ebuild, -irc-8.5.ebuild,
+  irc-8.5.1.ebuild:
+  Restore patch to drop hgtools dep, thanks to Bertrand Jacquin on bug 485398.
+  Remove old ebuilds and patches.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> irc-8.3-r1.ebuild,
   irc-8.3.1.ebuild, irc-8.4.ebuild:

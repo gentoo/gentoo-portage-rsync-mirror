@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.1.2.ebuild,v 1.2 2013/07/09 13:30:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.2.1.ebuild,v 1.1 2013/09/19 16:25:45 blueness Exp $
 
 EAPI="4"
 
@@ -14,18 +14,19 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
-IUSE="+adl avalon bitforce cpumining examples hardened icarus lm_sensors modminer ncurses +opencl scrypt +udev x6500 ztex"
+IUSE="+adl avalon bitforce cpumining examples hardened icarus lm_sensors modminer ncurses +opencl proxy scrypt +udev unicode x6500 ztex"
 REQUIRED_USE="
-	|| ( avalon bitforce cpumining icarus modminer opencl x6500 ztex )
+	|| ( avalon bitforce cpumining icarus modminer opencl proxy x6500 ztex )
 	adl? ( opencl )
 	lm_sensors? ( opencl )
 	scrypt? ( || ( cpumining opencl ) )
+	unicode? ( ncurses )
 "
 
 DEPEND="
 	net-misc/curl
 	ncurses? (
-		sys-libs/ncurses
+		sys-libs/ncurses[unicode?]
 	)
 	>=dev-libs/jansson-2
 	net-libs/libblkmaker
@@ -34,6 +35,9 @@ DEPEND="
 	)
 	lm_sensors? (
 		sys-apps/lm_sensors
+	)
+	proxy? (
+		net-libs/libmicrohttpd
 	)
 	x6500? (
 		virtual/libusb:1
@@ -63,7 +67,16 @@ DEPEND="${DEPEND}
 
 src_configure() {
 	local CFLAGS="${CFLAGS}"
+	local with_curses
 	use hardened && CFLAGS="${CFLAGS} -nopie"
+
+	if use ncurses; then
+		if use unicode; then
+			with_curses='--with-curses=ncursesw'
+		else
+			with_curses='--with-curses=ncurses'
+		fi
+	fi
 
 	CFLAGS="${CFLAGS}" \
 	econf \
@@ -78,8 +91,10 @@ src_configure() {
 		$(use_enable opencl) \
 		$(use_enable scrypt) \
 		--with-system-libblkmaker \
+		$with_curses
 		$(use_with udev libudev) \
 		$(use_with lm_sensors sensors) \
+		$(use_with proxy libmicrohttpd) \
 		$(use_enable x6500) \
 		$(use_enable ztex)
 }

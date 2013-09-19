@@ -1,0 +1,13 @@
+--- a/setup.py
++++ b/setup.py
+@@ -34,10 +33,6 @@
+     install_requires=[
+         'six',
+     ] + importlib_req + argparse_req,
+-    setup_requires=[
+-        'hgtools',
+-        'pytest-runner',
+-    ],
+     tests_require=[
+         'pytest',
+         'mock',

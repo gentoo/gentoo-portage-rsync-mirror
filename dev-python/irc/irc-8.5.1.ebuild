@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/irc-8.5.1.ebuild,v 1.1 2013/08/26 02:38:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/irc/irc-8.5.1.ebuild,v 1.2 2013/09/19 16:11:17 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -17,19 +17,17 @@ KEYWORDS="~amd64 ~x86"
 IUSE="examples test"
 
 DEPEND="app-arch/unzip
-	app-text/dos2unix
-	dev-python/pytest-runner[${PYTHON_USEDEP}]
-	dev-python/hgtools[${PYTHON_USEDEP}]
 	test? ( dev-python/pytest[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}] )"
 
 RDEPEND="!>=dev-python/python-irclib-3.2.2[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 
-python_prepare_all() {
-	# Prevent setup from downloading hgtools package
-	dos2unix setup.py || die "Failed attempt of conversion by dos2unix"
+PATCHES=(
+	"${FILESDIR}/irc-8.5.1-setup_requires.patch"
+)
 
+python_prepare_all() {
 	# Don't rely on hgtools for version
 	sed -e "s/use_hg_version=True/version=\"${PV}\"/" -i setup.py || die
 	sed -e "/^tag_/d" -i setup.cfg || die
