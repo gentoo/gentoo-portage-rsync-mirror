@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.165 2013/08/26 11:17:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.166 2013/09/19 10:59:55 hanno Exp $
+
+  18 Sep 2013; Hanno Boeck <hanno@gentoo.org> courier-0.70.ebuild,
+  courier-0.71.ebuild:
+  Block ucspi-tcp and dot-forward also in current versions.
 
 *courier-0.71 (26 Aug 2013)
 
