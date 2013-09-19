@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.17.ebuild,v 1.1 2013/09/19 08:42:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ddrescue-1.17.ebuild,v 1.2 2013/09/19 12:37:47 jlec Exp $
 
 EAPI=5
 
 inherit toolchain-funcs
 
-DESCRIPTION="Copies data from one file or block device to another with read-error recovery"
+DESCRIPTION="Copy data from one file or block device to another with read-error recovery"
 HOMEPAGE="http://www.gnu.org/software/ddrescue/ddrescue.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.lz"
 
