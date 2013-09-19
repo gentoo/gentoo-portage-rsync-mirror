@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/weasyprint/weasyprint-0.19.2.ebuild,v 1.2 2013/09/16 08:22:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/weasyprint/weasyprint-0.19.2.ebuild,v 1.3 2013/09/19 11:07:43 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -11,7 +11,7 @@ DESCRIPTION="Visual rendering engine for HTML and CSS that can export to PDF."
 MY_PN="WeasyPrint"
 MY_P="${MY_PN}-${PV}"
 SRC_URI="mirror://pypi/${MY_P:0:1}/${MY_PN}/${MY_P}.tar.gz"
-HOMEPAGE="https://http://weasyprint.org"
+HOMEPAGE="http://weasyprint.org"
 
 LICENSE="BSD"
 SLOT="0"
