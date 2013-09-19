@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/tango-icon-theme
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.57 2012/05/05 04:10:07 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/ChangeLog,v 1.58 2013/09/19 20:27:09 ssuominen Exp $
+
+  19 Sep 2013; Samuli Suominen <ssuominen@gentoo.org>
+  tango-icon-theme-0.8.90.ebuild:
+  Prevent sandbox violation with media-gfx/imagemagick and USE="opencl" wrt
+  #485422 by "darkbasic"
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   tango-icon-theme-0.8.90.ebuild:
@@ -242,4 +247,3 @@
   +tango-icon-theme-0.6.3.ebuild:
   New Package provided by Norman Jonas <bugs.gentoo.org@devport.codepilot.net>
   closing bug #109137.
-

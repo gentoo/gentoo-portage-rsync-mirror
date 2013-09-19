@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-9.1_p902.ebuild,v 1.1 2012/05/08 13:10:04 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-9.1_p902.ebuild,v 1.2 2013/09/19 20:20:44 titanofold Exp $
 
 EAPI="4"
 
@@ -62,7 +62,7 @@ src_test() {
 	einfo "3) plpgsql support in the 'test' database"
 	einfo
 	einfo "You can find a general info on how to perform these steps at"
-	einfo "http://gentoo-wiki.com/HOWTO_Configure_Postgresql"
+	einfo "https://wiki.gentoo.org/wiki/PostgreSQL"
 
 	ANT_TASKS="ant-junit" eant test -Dgentoo.classpath=$(java-pkg_getjars --build-only junit)
 }

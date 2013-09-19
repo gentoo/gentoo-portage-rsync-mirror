@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.15 2012/05/05 04:10:07 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.16 2013/09/19 20:27:09 ssuominen Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -29,6 +29,14 @@ DOCS="AUTHORS ChangeLog README"
 
 src_prepare() {
 	sed -i -e '/svgconvert_prog/s:rsvg:&-convert:' configure || die #413183
+
+	# http://bugs.gentoo.org/472766
+	shopt -s nullglob
+	cards=$(echo -n /dev/dri/card* | sed 's/ /:/g')
+	if test -n "${cards}"; then
+		addpredict "${cards}"
+	fi
+	shopt -u nullglob
 }
 
 src_configure() {

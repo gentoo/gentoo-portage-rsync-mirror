@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.47 2013/02/23 11:01:05 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.48 2013/09/19 20:20:44 titanofold Exp $
+
+  19 Sep 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  jdbc-postgresql-8.3_p603.ebuild, jdbc-postgresql-8.3_p605.ebuild,
+  jdbc-postgresql-8.4_p701-r1.ebuild, jdbc-postgresql-9.0_p801.ebuild,
+  jdbc-postgresql-9.1_p901.ebuild, jdbc-postgresql-9.1_p902.ebuild,
+  jdbc-postgresql-9.2_p1002.ebuild:
+  Direct readers to wiki.gentoo.org instead of the defunct gentoo-wiki.com.
 
 *jdbc-postgresql-9.2_p1002 (23 Feb 2013)
 
