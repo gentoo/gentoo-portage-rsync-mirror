@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-1.5.0.ebuild,v 1.2 2013/09/19 09:02:57 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-1.5.0.ebuild,v 1.3 2013/09/19 17:25:45 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs games
@@ -62,9 +62,8 @@ src_install() {
 	dodoc AUTHORS HACKING README
 	doicon sar/icons/SearchAndRescue.xpm
 	newicon sar/icons/SearchAndRescue.xpm ${PN}.xpm
-	cd "${WORKDIR}/data"
 	dodir "${GAMES_DATADIR}/${PN}"
-	cp -r * "${D}/${GAMES_DATADIR}/${PN}/" || die
+	cp -r "${WORKDIR}"/data/* "${D}/${GAMES_DATADIR}/${PN}/" || die
 	make_desktop_entry SearchAndRescue "SearchAndRescue" /usr/share/pixmaps/${PN}.xpm
 	prepgamesdirs
 }

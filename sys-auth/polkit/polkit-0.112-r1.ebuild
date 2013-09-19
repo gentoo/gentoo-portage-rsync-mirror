@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.110-r1.ebuild,v 1.1 2013/09/19 16:07:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.112-r1.ebuild,v 1.1 2013/09/19 17:08:30 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib pam pax-utils systemd user
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="examples gtk +introspection kde nls pam selinux systemd"
 
-RDEPEND="=dev-lang/spidermonkey-1.8.5*[-debug]
+RDEPEND="ia64? ( =dev-lang/spidermonkey-1.8.5*[-debug] )
+	!ia64? ( dev-lang/spidermonkey:17[-debug] )
 	>=dev-libs/glib-2.32
 	>=dev-libs/expat-2:=
 	introspection? ( >=dev-libs/gobject-introspection-1 )
@@ -54,8 +55,6 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e 's|unix-group:wheel|unix-user:0|' src/polkitbackend/*-default.rules || die #401513
-
-	epatch "${FILESDIR}"/polkit-0.110-CVE-2013-4288.patch
 }
 
 src_configure() {
@@ -68,7 +67,7 @@ src_configure() {
 		$(use_enable introspection) \
 		--disable-examples \
 		$(use_enable nls) \
-		--with-mozjs=mozjs185 \
+		$(usex ia64 --with-mozjs=mozjs185 --with-mozjs=mozjs-17.0) \
 		"$(systemd_with_unitdir)" \
 		--with-authfw=$(usex pam pam shadow) \
 		$(use pam && echo --with-pam-module-dir="$(getpam_mod_dir)") \
@@ -80,7 +79,9 @@ src_compile() {
 
 	# Required for polkitd on hardened/PaX due to spidermonkey's JIT
 	local f='src/polkitbackend/.libs/polkitd test/polkitbackend/.libs/polkitbackendjsauthoritytest'
-	local m='mr'
+	local m='m'
+	# ia64 uses spidermonkey-1.8.5 which requires different pax-mark flags
+	use ia64 && m='mr'
 	pax-mark ${m} ${f}
 }
 
