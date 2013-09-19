@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.158 2013/09/18 13:27:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.159 2013/09/19 13:27:35 jlec Exp $
+
+  19 Sep 2013; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1-r4.ebuild,
+  p7zip-9.20.1-r5.ebuild:
+  Drop icon extention from icon file, #478706
 
 *p7zip-9.20.1-r5 (18 Sep 2013)
 
