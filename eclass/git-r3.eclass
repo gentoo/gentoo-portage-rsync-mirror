@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.5 2013/09/13 15:08:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.7 2013/09/19 09:42:32 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -171,6 +171,9 @@ _git-r3_set_gitdir() {
 
 	local repo_name=${1#*://*/}
 
+	# strip the trailing slash
+	repo_name=${repo_name%/}
+
 	# strip common prefixes to make paths more likely to match
 	# e.g. git://X/Y.git vs https://X/git/Y.git
 	# (but just one of the prefixes)
@@ -208,8 +211,10 @@ _git-r3_set_gitdir() {
 		mkdir "${GIT_DIR}" || die
 		git init --bare || die
 
-		# avoid auto-unshallow :)
-		touch "${GIT_DIR}"/shallow || die
+		if [[ ! ${EGIT_NONSHALLOW} ]]; then
+			# avoid auto-unshallow :)
+			touch "${GIT_DIR}"/shallow || die
+		fi
 	fi
 }
 

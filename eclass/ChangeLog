@@ -1,6 +1,14 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.978 2013/09/18 22:48:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.980 2013/09/19 09:42:32 mgorny Exp $
+
+  19 Sep 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Strip trailing slashes from repo URI when determining local copy directory.
+
+  19 Sep 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Do not even create shallow repository when EGIT_NONSHALLOW is set. Otherwise,
+  the eclass tries to unshallow it and that breaks broken git servers like
+  Google Code.
 
   18 Sep 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Fix accepting arguments in distutils_install_for_testing.

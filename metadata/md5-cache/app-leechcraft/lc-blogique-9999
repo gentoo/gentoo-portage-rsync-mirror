@@ -7,5 +7,5 @@ IUSE=debug +metida +hestia
 LICENSE=Boost-1.0
 RDEPEND=~app-leechcraft/lc-core-9999 dev-qt/qtsql:4[sqlite] metida? ( dev-qt/qtxmlpatterns:4 ) virtual/leechcraft-wysiwyg-editor
 SLOT=0
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	15008bd9efc886328f21807b0a6ca839	leechcraft	cfe4bfc0a187fcf4ede2994f160b571d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	f195dddc2d0c672b186b107c80e3cd9a	leechcraft	cfe4bfc0a187fcf4ede2994f160b571d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=4b42c4d6a1921eac76f9048682d87256
