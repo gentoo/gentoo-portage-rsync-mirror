@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-30.0.1599.37_beta1.ebuild,v 1.1 2013/09/12 02:15:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-29.0.1547.76_p223446.ebuild,v 1.1 2013/09/18 23:07:39 floppym Exp $
 
 EAPI="4"
 
@@ -16,15 +16,15 @@ HOMEPAGE="http://www.google.com/chrome"
 case ${PV} in
 	*_alpha*)
 		SLOT="unstable"
-		MY_PV=${PV/_alpha/-}
+		MY_PV=${PV/_alpha/-r}
 		;;
 	*_beta*)
 		SLOT="beta"
-		MY_PV=${PV/_beta/-}
+		MY_PV=${PV/_beta/-r}
 		;;
 	*_p*)
 		SLOT="stable"
-		MY_PV=${PV/_p/-}
+		MY_PV=${PV/_p/-r}
 		;;
 	*)
 		die "Invalid value for \${PV}: ${PV}"
@@ -67,7 +67,7 @@ RDEPEND="
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
 	x11-libs/gtk+:2
-	>=x11-libs/libX11-1.5.0
+	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXext
 	x11-libs/libXfixes
