@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8259 2013/09/20 15:44:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8260 2013/09/20 17:30:59 axs Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Sep 2013; Ian Stakenvicius <axs@gentoo.org>
+  +default/linux/amd64/13.0/package.use.stable.mask:
+  stable masked abi_x86_32 on all relevant atoms
 
   20 Sep 2013; Ian Stakenvicius <axs@gentoo.org> package.mask:
   adjusted mask of mozplugger
