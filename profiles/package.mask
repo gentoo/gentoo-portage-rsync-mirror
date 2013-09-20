@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15126 2013/09/20 00:47:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15127 2013/09/20 15:44:10 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Stakenvicius <axs@gentoo.org> (20 Sep 2013)
+# on behalf of mozilla@gentoo.org
+# Severely outdated, no interest in maintaining,
+# only a matter of time before it breaks,
+# major QA issues with newer versions.
+# See bug #442122 for discussion
+# Masked for removal in 30 days
+www-plugins/mozplugger
+
 
 # Michael Sterrett <mr_bones_@gentoo.org> (19 Sep 2013)
 # Old nasty gtk+-1-using things.
@@ -311,13 +321,6 @@ dev-games/neotools
 # Masked for testing
 ~dev-util/boost-build-1.54.0
 ~dev-libs/boost-1.54.0
-
-# Ian Stakenvicius <axs@gentoo.org> (26 Aug 2013)
-# on behalf of mozilla@gentoo.org
-# Severely outdated, no interest in maintaining,
-# only a matter of time before it breaks
-# Masked for removal in 30 days.
-www-plugins/mozplugger
 
 # Julian Ospald <hasufell@gentoo.org> (25 Aug 2013)
 # experimental alpha software, may be insecure
