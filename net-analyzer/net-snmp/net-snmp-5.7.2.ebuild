@@ -1,15 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2.ebuild,v 1.4 2013/09/20 15:23:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.7.2.ebuild,v 1.5 2013/09/20 16:59:48 jer Exp $
 
-EAPI=4
-PYTHON_DEPEND="python? 2"
-
+EAPI=5
+PYTHON_COMPAT=( python2_{6,7} )
+DISTUTILS_SINGLE_IMPL=yesplz
+DISTUTILS_OPTIONAL=yesplz
 WANT_AUTOMAKE=none
-
 PATCHSET=1
 
-inherit eutils perl-module python autotools
+inherit autotools distutils-r1 eutils perl-module
 
 MY_P="${P/_rc/.rc}"
 
@@ -33,7 +33,7 @@ COMMON="ssl? ( >=dev-libs/openssl-0.9.6d )
 	bzip2? ( app-arch/bzip2 )
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	elf? ( dev-libs/elfutils )
-	python? ( dev-python/setuptools )
+	python? ( dev-python/setuptools ${PYTHON_DEPS} )
 	pci? ( sys-apps/pciutils )
 	lm_sensors? ( sys-apps/lm_sensors )
 	netlink? ( dev-libs/libnl:1.1 )
@@ -58,13 +58,6 @@ RESTRICT=test
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
-	if use python; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
-
 src_prepare() {
 	# snmpconf generates config files with proper selinux context
 	use selinux && epatch "${FILESDIR}"/${PN}-5.1.2-snmpconf-selinux.patch
@@ -77,8 +70,6 @@ src_configure() {
 	# keep this in the same line, configure.ac arguments are passed down to config.h
 	local mibs="host ucd-snmp/dlmod ucd-snmp/diskio ucd-snmp/extensible mibII/mta_sendmail smux"
 	use lm_sensors && mibs="${mibs} ucd-snmp/lmsensorsMib"
-
-	use python && export PYTHON_DIR="$(python_get_sitedir)"
 
 	econf \
 		$(use_enable !ssl internal-md5) \
@@ -152,20 +143,5 @@ src_install () {
 			"${D}"/usr/share/snmp/snmpconf-data \
 			"${D}"/usr/share/snmp/*.conf \
 			"${D}"/**/*.pl
-	fi
-}
-
-pkg_postinst() {
-	if use python; then
-		python_mod_optimize netsnmp
-	fi
-
-	elog "An example configuration file has been installed in"
-	elog "/etc/snmp/snmpd.conf.example."
-}
-
-pkg_postrm() {
-	if use python; then
-		python_mod_cleanup netsnmp
 	fi
 }
