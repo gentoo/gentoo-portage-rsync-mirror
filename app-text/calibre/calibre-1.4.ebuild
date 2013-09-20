@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.3.ebuild,v 1.1 2013/09/13 21:18:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.4.ebuild,v 1.1 2013/09/20 13:10:53 zmedico Exp $
 
 EAPI=5
 
@@ -149,7 +149,7 @@ src_install() {
 	mkdir -p "${XDG_CONFIG_HOME}" "${CALIBRE_CONFIG_DIRECTORY}"
 
 	tc-export CC CXX
-	# Bug #334243 - respect LDFLAGS when building calibre-mount-helper
+	# Bug #334243 - respect LDFLAGS when building extensions
 	export OVERRIDE_CFLAGS="$CFLAGS" OVERRIDE_LDFLAGS="$LDFLAGS"
 	local libdir=$(get_libdir)
 	[[ -n $libdir ]] || die "get_libdir returned an empty string"
@@ -171,10 +171,6 @@ src_install() {
 
 	grep -rlZ "${ED}" "${ED}" | xargs -0 sed -e "s:${D}:/:g" -i ||
 		die "failed to fix harcoded \$D in paths"
-
-	# Remove dummy calibre-mount-helper which is unused since calibre-0.8.25
-	# due to bug #389515 (instead, calibre now calls udisks via dbus).
-	rm "${ED}usr/bin/calibre-mount-helper" || die
 
 	# The menu entries end up here due to '--mode user' being added to
 	# xdg-* options in src_prepare.
