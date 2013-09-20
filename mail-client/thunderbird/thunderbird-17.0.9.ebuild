@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.9.ebuild,v 1.1 2013/09/18 14:11:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.9.ebuild,v 1.2 2013/09/20 04:31:56 zerochaos Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -241,7 +241,12 @@ src_configure() {
 src_compile() {
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
-	emake -f client.mk || die
+	emake -f client.mk
+	if [ $? -ne 0 ]; then
+		ewarn "Build has failed, please see https://bugs.gentoo.org/show_bug.cgi?id=465728 for"
+		ewarn "possible solutions such as MAKEOPTS=-j1"
+		die
+	fi
 
 	# Only build enigmail extension if crypt enabled.
 	if use crypt ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0.9.ebuild,v 1.1 2013/09/18 13:27:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0.9.ebuild,v 1.2 2013/09/20 04:34:27 zerochaos Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -277,7 +277,13 @@ src_compile() {
 	else
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
-		emake -f client.mk || die "emake failed"
+		emake -f client.mk
+		if [ $? -ne 0 ]; then
+			ewarn "Build has failed, please see https://bugs.gentoo.org/show_bug.cgi?id=465728 for"
+			ewarn "possible solutions such as MAKEOPTS=-j1"
+			die
+		fi
+
 	fi
 
 }
