@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.98 2013/07/04 00:18:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.99 2013/09/20 05:42:51 radhermit Exp $
+
+*ethtool-3.11 (20 Sep 2013)
+
+  20 Sep 2013; Tim Harder <radhermit@gentoo.org> +ethtool-3.11.ebuild:
+  Version bump.
 
 *ethtool-3.10 (04 Jul 2013)
 
