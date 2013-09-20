@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.4.0.ebuild,v 1.1 2013/09/06 20:28:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.4.0.ebuild,v 1.2 2013/09/20 19:46:11 dilfridge Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ CDEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop(+)')
 	$(add_kdebase_dep kdebase-kioslaves)
 	$(add_kdebase_dep libkdcraw)
-	$(add_kdebase_dep libkexiv2)
+	$(add_kdebase_dep libkexiv2 xmp)
 	$(add_kdebase_dep libkipi)
 	$(add_kdebase_dep marble plasma)
 	dev-cpp/eigen:3

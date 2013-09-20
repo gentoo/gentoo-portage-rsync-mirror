@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.254 2013/09/06 20:28:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.255 2013/09/20 19:46:11 dilfridge Exp $
+
+  20 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org> digikam-3.2.0.ebuild,
+  digikam-3.3.0.ebuild, digikam-3.4.0.ebuild:
+  Require xmp support, the dependency footprint is rather small but it provides
+  valuable functionality. Bug 485332
 
 *digikam-3.4.0 (06 Sep 2013)
 
