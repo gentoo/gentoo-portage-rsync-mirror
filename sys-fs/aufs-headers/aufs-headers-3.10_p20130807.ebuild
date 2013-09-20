@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-headers/aufs-headers-3.10_p20130807.ebuild,v 1.1 2013/08/07 06:59:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-headers/aufs-headers-3.10_p20130807.ebuild,v 1.2 2013/09/20 17:48:56 jlec Exp $
 
 EAPI=5
 
@@ -24,6 +24,5 @@ IUSE=""
 S="${WORKDIR}"
 
 src_install() {
-	insinto /usr
-	doins -r include
+	doheader -r include/*
 }
