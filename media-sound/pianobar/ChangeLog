@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pianobar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.31 2013/05/25 20:53:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.32 2013/09/20 20:31:59 radhermit Exp $
+
+*pianobar-2013.09.15 (20 Sep 2013)
+
+  20 Sep 2013; Tim Harder <radhermit@gentoo.org> +pianobar-2013.09.15.ebuild,
+  pianobar-9999.ebuild:
+  Version bump, use verbose build, and update live ebuild to git-r3 and run
+  tests for it.
 
 *pianobar-2013.05.19 (25 May 2013)
 

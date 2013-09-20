@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-9999.ebuild,v 1.6 2013/09/20 20:31:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/pianobar-2013.09.15.ebuild,v 1.1 2013/09/20 20:31:59 radhermit Exp $
 
 EAPI="5"
 
-inherit toolchain-funcs flag-o-matic multilib git-r3
-
-EGIT_REPO_URI="git://github.com/PromyLOPh/pianobar.git"
+inherit toolchain-funcs flag-o-matic multilib
 
 DESCRIPTION="A console-based replacement for Pandora's flash player"
 HOMEPAGE="http://6xq.net/projects/pianobar/"
+SRC_URI="http://6xq.net/projects/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="+aac mp3 static-libs"
 
 RDEPEND="media-libs/libao
