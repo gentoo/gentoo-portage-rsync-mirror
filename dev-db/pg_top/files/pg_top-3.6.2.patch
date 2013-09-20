@@ -1,6 +1,5 @@
-diff -ru pg_top-3.6.2~/configure.ac pg_top-3.6.2/configure.ac
---- pg_top-3.6.2~/configure.ac	2008-12-21 14:43:47.000000000 +0100
-+++ pg_top-3.6.2/configure.ac	2008-12-21 14:44:21.000000000 +0100
+--- configure.ac.orig	2013-09-20 10:11:20.256444684 +0400
++++ configure.ac	2013-09-20 10:16:30.262459612 +0400
 @@ -90,7 +90,7 @@
  
  DBCFLAGS="-I$INCLUDEDIR"
@@ -19,6 +18,12 @@ diff -ru pg_top-3.6.2~/configure.ac pg_top-3.6.2/configure.ac
  # check for libraries required by extension
  extlibs=""
  if test -n "$with_ext" -a -f "${srcdir}/ext/$with_ext.libs"; then
-Only in pg_top-3.6.2~: .configure.ac.swp
-Only in pg_top-3.6.2~: .configure.swp
-Only in pg_top-3.6.2~: .Makefile.am.swp
+@@ -216,8 +218,6 @@
+ AC_SUBST(SRC)
+ AC_SUBST(OBJ)
+ 
+-CFLAGS="-Wall -g"
+-
+ AC_MSG_CHECKING(for installation settings)
+ # calculate appropriate settings
+ OWNER=""

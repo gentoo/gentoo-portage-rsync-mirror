@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/pg_top
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/ChangeLog,v 1.7 2013/06/01 12:10:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pg_top/ChangeLog,v 1.8 2013/09/20 06:46:56 pinkbyte Exp $
+
+*pg_top-3.6.2-r1 (20 Sep 2013)
+
+  20 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> -pg_top-3.6.2.ebuild,
+  +pg_top-3.6.2-r1.ebuild, files/pg_top-3.6.2.patch:
+  Revision bump: EAPI 5, migrate to autotools-utils eclass. Respect CFLAGS, wrt
+  bug #427882, thanks to Diego Elio Pettenò for discovering this issue and
+  Gabriel Homeier for providing patch. Drop old revision
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #151880
