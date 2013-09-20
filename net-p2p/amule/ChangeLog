@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/amule
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.168 2012/12/14 15:41:43 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.169 2013/09/20 01:15:34 hanno Exp $
+
+  20 Sep 2013; Hanno Boeck <hanno@gentoo.org> amule-2.3.1.ebuild:
+  Add slot to dependency to let amule compile against wxGTK-2.8, fix #462208
+  (amule and wxGTK-2.9 is buggy, see #465084).
 
   14 Dec 2012; Michał Górny <mgorny@gentoo.org> metadata.xml:
   Remove redundant USE=upnp description; it matches the global flag meaning.
