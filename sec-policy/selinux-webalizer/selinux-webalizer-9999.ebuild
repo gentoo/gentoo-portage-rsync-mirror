@@ -1,11 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-webalizer/selinux-webalizer-9999.ebuild,v 1.1 2012/10/13 16:30:54 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-webalizer/selinux-webalizer-9999.ebuild,v 1.2 2013/09/20 09:26:57 swift Exp $
 EAPI="4"
 
 IUSE=""
 MODS="webalizer"
 BASEPOL="9999"
+
+DEPEND="sec-policy/selinux-apache"
+RDEPEND="${DEPEND}"
 
 inherit selinux-policy-2
 
