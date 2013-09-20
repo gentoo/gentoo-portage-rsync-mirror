@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/radius
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radius/ChangeLog,v 1.12 2013/08/08 19:30:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radius/ChangeLog,v 1.13 2013/09/20 02:43:31 mrueg Exp $
+
+*radius-0.7.4 (20 Sep 2013)
+
+  20 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +radius-0.7.4.ebuild:
+  Version bump.
 
   08 Aug 2013; Markus Meier <maekke@gentoo.org> radius-0.7.3.ebuild:
   add ~arm, bug #477648
