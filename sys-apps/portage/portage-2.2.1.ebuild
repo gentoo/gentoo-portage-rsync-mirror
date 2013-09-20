@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.1.ebuild,v 1.11 2013/09/14 10:56:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.1.ebuild,v 1.12 2013/09/20 00:45:10 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -294,7 +294,7 @@ src_prepare() {
 		sed -e "s|^\(main-repo = \).*|\\1gentoo_prefix|" \
 			-e "s|^\\[gentoo\\]|[gentoo_prefix]|" \
 			-e "s|^\(location = \)\(/usr/portage\)|\\1${EPREFIX}\\2|" \
-			-e "s|^\(sync-uri = \).*|\\1rsync://rsync.prefix.freens.org/gentoo-portage-prefix|" \
+			-e "s|^\(sync-uri = \).*|\\1rsync://prefix.gentooexperimental.org/gentoo-portage-prefix|" \
 			-i cnf/repos.conf || die "sed failed"
 
 		einfo "Adding FEATURES=force-prefix to make.globals ..."

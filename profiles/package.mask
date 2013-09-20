@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15125 2013/09/19 06:01:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15126 2013/09/20 00:47:29 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -331,20 +331,9 @@ net-p2p/pybitmessage
 >=www-client/chromium-31
 >=dev-lang/v8-3.21
 
-# Manuel Rüger <mrueg@gentoo.org> (19 Aug 2013)
-# Last release in 2005, Homepage dead, unclear license situation
-# Various other issues see bug #481560
-# Masked for removal in 30 days.
-net-im/kf
-
 # Patrick Lauer <patrick@gentoo.org> (19 Aug 2013)
 # Masking live ebuilds
 =www-apps/trac-mercurial-1.0.0.3_pre20130206
-
-# Manuel Rüger <mrueg@gentoo.org> (16 Aug 2013)
-# Outdated documentation as ruby18 will be removed soon.
-# Masked for removal in 30 days.
-dev-ruby/programming-ruby
 
 # Michał Górny <mgorny@gentoo.org> (16 Aug 2013)
 # Getting more broken every day. No commit for 5 years. Nothing
