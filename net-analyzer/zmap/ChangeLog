@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/zmap
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zmap/ChangeLog,v 1.1 2013/09/20 16:02:31 jlec Exp $
+
+*zmap-9999 (20 Sep 2013)
+
+  20 Sep 2013; Justin Lecher <jlec@gentoo.org> +zmap-9999.ebuild,
+  +files/zmap-9999-cmake.patch, +metadata.xml:
+  Add live version of zmap. Versioned ebuild comes when upstream has merged my
+  cmake patch
+
