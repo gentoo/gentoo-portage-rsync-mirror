@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.71 2013/09/11 19:48:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.72 2013/09/20 21:30:39 chutzpah Exp $
+
+*lightdm-1.7.16 (20 Sep 2013)
+
+  20 Sep 2013; Patrick McLean <chutzpah@gentoo.org> +lightdm-1.7.16.ebuild:
+  Version bump, fixes bug #479660.
 
 *lightdm-1.7.15 (11 Sep 2013)
 *lightdm-1.4.3 (11 Sep 2013)
