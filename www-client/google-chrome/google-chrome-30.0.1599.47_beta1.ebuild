@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-30.0.1599.47_beta1.ebuild,v 1.1 2013/09/18 23:07:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-30.0.1599.47_beta1.ebuild,v 1.2 2013/09/21 21:52:15 floppym Exp $
 
 EAPI="4"
 
@@ -79,7 +79,7 @@ RDEPEND="
 "
 
 # Add blockers for the other slots.
-for x in 0 beta stable unstable; do
+for x in 0 beta stable; do
 	if [[ ${SLOT} != ${x} ]]; then
 		RDEPEND+=" !${CATEGORY}/${PN}:${x}"
 	fi

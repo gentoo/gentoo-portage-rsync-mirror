@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.6 2013/09/21 21:28:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.7 2013/09/21 21:44:55 floppym Exp $
 
 EAPI=5
 
@@ -249,6 +249,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	mount-boot_mount_boot_partition
+
 	if [[ -e "${ROOT%/}/boot/grub2/grub.cfg" && ! -e "${ROOT%/}/boot/grub/grub.cfg" ]]; then
 		mkdir -p "${ROOT%/}/boot/grub"
 		ln -s ../grub2/grub.cfg "${ROOT%/}/boot/grub/grub.cfg"

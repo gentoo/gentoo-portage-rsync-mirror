@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1636.0_alpha1.ebuild,v 1.2 2013/09/21 20:58:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1636.0_alpha1.ebuild,v 1.3 2013/09/21 21:52:15 floppym Exp $
 
 EAPI="4"
 
@@ -77,13 +77,6 @@ RDEPEND="
 	x11-libs/pango
 	x11-misc/xdg-utils
 "
-
-# Add blockers for the other slots.
-for x in 0 beta stable unstable; do
-	if [[ ${SLOT} != ${x} ]]; then
-		RDEPEND+=" !${CATEGORY}/${PN}:${x}"
-	fi
-done
 
 QA_PREBUILT="*"
 S=${WORKDIR}
