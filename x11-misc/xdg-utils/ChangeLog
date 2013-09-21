@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xdg-utils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.107 2012/09/29 17:06:18 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.108 2013/09/21 15:02:54 ssuominen Exp $
+
+*xdg-utils-1.1.0_rc1_p20130921 (21 Sep 2013)
+
+  21 Sep 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +xdg-utils-1.1.0_rc1_p20130921.ebuild:
+  New snapshot.
 
   29 Sep 2012; Samuli Suominen <ssuominen@gentoo.org>
   -xdg-utils-1.1.0_rc1_p20120823.ebuild:
@@ -437,4 +443,3 @@
   18 Aug 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +xdg-utils-1.0_beta3.ebuild:
   New ebuild, thanks to bmg for parts of the description
-

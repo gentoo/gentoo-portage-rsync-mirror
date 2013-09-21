@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.113 2013/08/28 12:25:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.114 2013/09/21 15:20:56 pacho Exp $
+
+*chrony-1.29-r1 (21 Sep 2013)
+
+  21 Sep 2013; Pacho Ramos <pacho@gentoo.org> +chrony-1.29-r1.ebuild,
+  +files/chronyd.service-r1:
+  Improve unit file (#483456 by Stefan G. Weichinger)
 
   28 Aug 2013; Jeroen Roovers <jer@gentoo.org> -chrony-1.27-r1.ebuild,
   -files/chronyd.rc:

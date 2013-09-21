@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.160 2013/09/10 02:51:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.161 2013/09/21 15:03:55 jer Exp $
+
+  21 Sep 2013; Jeroen Roovers <jer@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
+  Set minimal FLTK version (bug #483668).
 
   10 Sep 2013; Patrick Lauer <patrick@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
   Whitespace
