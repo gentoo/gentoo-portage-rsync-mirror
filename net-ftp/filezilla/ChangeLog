@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.111 2013/09/11 08:33:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.112 2013/09/21 16:18:46 grobian Exp $
+
+  21 Sep 2013; Fabian Groffen <grobian@gentoo.org> filezilla-3.7.3.ebuild:
+  Fix doins call, .app is bundle (directory)
 
   11 Sep 2013; Bernard Cafarelli <voyageur@gentoo.org> -filezilla-3.5.3.ebuild,
   -filezilla-3.6.0.2-r1.ebuild, -filezilla-3.7.0.1.ebuild,
