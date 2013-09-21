@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.25 2013/09/15 12:56:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.26 2013/09/21 13:19:47 tomwij Exp $
+
+  21 Sep 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml, mpv-9999.ebuild:
+  Added doc-pdf USE flag and removed aqua USE flag, proxied commit for Nikoli.
 
 *mpv-0.1.6 (15 Sep 2013)
 

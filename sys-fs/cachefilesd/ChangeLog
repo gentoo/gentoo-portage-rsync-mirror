@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cachefilesd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.7 2013/09/18 10:06:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cachefilesd/ChangeLog,v 1.8 2013/09/21 13:29:29 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> cachefilesd-0.10.5-r2.ebuild:
+  Stable for amd64, wrt bug #484904
 
 *cachefilesd-0.10.5-r2 (18 Sep 2013)
 
@@ -40,4 +43,3 @@
   +files/cachefilesd.init, +metadata.xml:
   New addition, 275014; thanks Bruno Redondi and everyone else for the
   contribution
-

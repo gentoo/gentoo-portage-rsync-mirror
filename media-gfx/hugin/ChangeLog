@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.130 2013/09/19 19:07:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.131 2013/09/21 13:30:27 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> hugin-2012.0.0.ebuild:
+  Stable for amd64, wrt bug #485440
 
 *hugin-2013.0.0_rc2 (19 Sep 2013)
 
@@ -594,4 +597,3 @@
   10 Aug 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml,
   +hugin-0.5_rc1.ebuild:
   Initial commit of hugin.  Thanks to everyone on bug #48269
-

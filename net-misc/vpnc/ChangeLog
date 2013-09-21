@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.118 2013/08/09 06:55:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.119 2013/09/21 13:30:19 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> vpnc-0.5.3_p527-r1.ebuild:
+  Stable for amd64, wrt bug #480266
 
   09 Aug 2013; Justin Lecher <jlec@gentoo.org> files/vpnc.service:
   Fix calls of up/down scripts in systemD unit

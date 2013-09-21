@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.391 2013/09/18 14:34:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.392 2013/09/21 13:30:01 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> poppler-0.22.5.ebuild:
+  Stable for amd64, wrt bug #483274
 
   18 Sep 2013; Jeroen Roovers <jer@gentoo.org> poppler-0.22.5.ebuild:
   Stable for HPPA (bug #483274).

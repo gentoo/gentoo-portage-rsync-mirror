@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.102 2013/08/13 06:50:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.103 2013/09/21 13:29:52 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> syslinux-4.07.ebuild:
+  Stable for amd64, wrt bug #485048
 
 *syslinux-6.02_pre16 (13 Aug 2013)
 
