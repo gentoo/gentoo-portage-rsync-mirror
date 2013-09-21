@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/glu/glu-9.0-r1.ebuild,v 1.1 2013/09/21 17:10:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/glu/glu-9.0-r1.ebuild,v 1.2 2013/09/21 20:57:23 mgorny Exp $
 
 EAPI=5
 
@@ -18,7 +18,6 @@ IUSE=""
 RDEPEND="
 	|| (
 		media-libs/glu[${MULTILIB_USEDEP}]
-		<media-libs/mesa-9[${MULTILIB_USEDEP}]
-		media-libs/opengl-apple[${MULTILIB_USEDEP}]
+		media-libs/opengl-apple
 	)"
 DEPEND=""
