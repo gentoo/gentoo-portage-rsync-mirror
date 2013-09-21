@@ -4,11 +4,11 @@ DESCRIPTION=Oracle's Java SE Development Kit
 EAPI=5
 HOMEPAGE=http://www.oracle.com/technetwork/java/javase/
 IUSE=+X alsa derby doc examples +fontconfig jce nsplugin pax_kernel source
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=amd64 x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=Oracle-BCLA-JavaSE examples? ( BSD )
 RDEPEND=X? ( x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXrender x11-libs/libXtst ) alsa? ( media-libs/alsa-lib ) doc? ( dev-java/java-sdk-docs:1.7 ) fontconfig? ( media-libs/fontconfig ) !prefix? ( sys-libs/glibc ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 RESTRICT=fetch strip
 SLOT=1.7
 SRC_URI=amd64? ( jdk-7u40-linux-x64.tar.gz examples? ( javafx_samples-2_2_40-linux.zip jdk-7u40-linux-x64-demos.tar.gz ) ) arm? ( jdk-7u40-linux-arm-vfp-sflt.tar.gz jdk-7u40-linux-arm-vfp-hflt.tar.gz examples? ( javafx_samples-2_2_40-linux.zip jdk-7u40-linux-arm-vfp-sflt-demos.tar.gz jdk-7u40-linux-arm-vfp-hflt-demos.tar.gz ) ) x86? ( jdk-7u40-linux-i586.tar.gz examples? ( javafx_samples-2_2_40-linux.zip jdk-7u40-linux-i586-demos.tar.gz ) ) x64-solaris? ( jdk-7u40-solaris-i586.tar.gz jdk-7u40-solaris-x64.tar.gz examples? ( jdk-7u40-solaris-i586-demos.tar.gz jdk-7u40-solaris-x64-demos.tar.gz ) ) x86-solaris? ( jdk-7u40-solaris-i586.tar.gz examples? ( jdk-7u40-solaris-i586-demos.tar.gz ) ) sparc-solaris? ( jdk-7u40-solaris-sparc.tar.gz examples? ( jdk-7u40-solaris-sparc-demos.tar.gz ) ) sparc64-solaris? ( jdk-7u40-solaris-sparc.tar.gz jdk-7u40-solaris-sparcv9.tar.gz examples? ( jdk-7u40-solaris-sparc-demos.tar.gz jdk-7u40-solaris-sparcv9-demos.tar.gz ) ) jce? ( UnlimitedJCEPolicyJDK7.zip )
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=9205ca70cc1514cf31f2d9cc52ba0aa3
+_md5_=e850b1289865e153d004d98b764e614a
