@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.213 2013/09/18 03:18:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.215 2013/09/21 10:55:52 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bugzilla-3.6.13.ebuild:
+  Stable for x86, wrt bug #458562
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bugzilla-3.6.13.ebuild:
+  Stable for amd64, wrt bug #458562
 
 *bugzilla-4.2.5 (18 Sep 2013)
 *bugzilla-3.6.13 (18 Sep 2013)

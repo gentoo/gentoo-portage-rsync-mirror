@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0.9.ebuild,v 1.2 2013/09/20 04:34:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-17.0.9.ebuild,v 1.4 2013/09/21 10:56:09 ago Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -36,7 +36,7 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="~alpha ~amd64 ~arm -hppa ~ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm -hppa ~ia64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist gstreamer +jit +minimal pgo selinux system-sqlite"

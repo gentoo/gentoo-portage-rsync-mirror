@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.9.ebuild,v 1.2 2013/09/20 04:31:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-17.0.9.ebuild,v 1.4 2013/09/21 10:56:16 ago Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -32,7 +32,7 @@ inherit flag-o-matic toolchain-funcs mozconfig-3 makeedit multilib autotools pax
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist gconf +crypt +jit +ipc ldap +lightning +minimal mozdom selinux"

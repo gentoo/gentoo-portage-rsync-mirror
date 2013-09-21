@@ -1,6 +1,12 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.265 2013/09/20 04:34:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.267 2013/09/21 10:56:09 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.9.ebuild:
+  Stable for x86, wrt bug #485258
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> firefox-17.0.9.ebuild:
+  Stable for amd64, wrt bug #485258
 
   20 Sep 2013; Rick Farina <zerochaos@gentoo.org> firefox-17.0.9.ebuild:
   note bug 465728 when emake fails
