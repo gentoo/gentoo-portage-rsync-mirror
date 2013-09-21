@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/zvbi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.50 2013/08/08 17:54:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.51 2013/09/21 16:33:02 aballier Exp $
+
+*zvbi-0.2.35 (21 Sep 2013)
+
+  21 Sep 2013; Alexis Ballier <aballier@gentoo.org> +zvbi-0.2.35.ebuild:
+  version bump
 
 *zvbi-0.2.34 (08 Aug 2013)
 
