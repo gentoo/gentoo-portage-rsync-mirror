@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.148 2013/08/24 21:53:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.149 2013/09/21 12:54:36 tomwij Exp $
+
+  21 Sep 2013; Tom Wijsman <TomWij@gentoo.org> swt-4.2-r1.ebuild,
+  swt-4.2-r2.ebuild, swt-4.2.ebuild:
+  Updated download URL to use archive URL, fixes bug #482562 reported by Frank
+  Steinmetzger.
 
   24 Aug 2013; Ryan Hill <dirtyepic@gentoo.org> swt-3.7.2-r1.ebuild,
   +files/swt-3.7.2-gio_launch-URI-x86.patch:

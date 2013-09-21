@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-3.0.3.ebuild,v 1.5 2013/01/25 15:07:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-3.0.3.ebuild,v 1.6 2013/09/21 12:36:17 hasufell Exp $
 
 EAPI=4
 
@@ -28,7 +28,6 @@ RDEPEND="
 	virtual/perl-Term-ANSIColor
 	gtk? (
 		>=dev-perl/gtk2-perl-1.244.0
-		!net-misc/gtk-youtube-viewer
 		virtual/freedesktop-icon-theme
 		x11-libs/gdk-pixbuf:2[X,jpeg]
 	)"

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-3.0.7.ebuild,v 1.1 2013/02/21 16:13:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-3.0.8.ebuild,v 1.2 2013/09/21 12:36:17 hasufell Exp $
 
-EAPI=4
+EAPI=5
 
-inherit perl-module vcs-snapshot
+inherit eutils perl-module vcs-snapshot
 
 DESCRIPTION="A command line utility for viewing youtube-videos in Mplayer"
 HOMEPAGE="http://trizen.googlecode.com"
@@ -24,9 +24,10 @@ RDEPEND="
 	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long
 	virtual/perl-Term-ANSIColor
+	virtual/perl-Text-ParseWords
+	virtual/perl-Text-Tabs+Wrap
 	gtk? (
 		>=dev-perl/gtk2-perl-1.244.0
-		!net-misc/gtk-youtube-viewer
 		virtual/freedesktop-icon-theme
 		x11-libs/gdk-pixbuf:2[X,jpeg]
 	)"
@@ -35,6 +36,12 @@ DEPEND="virtual/perl-Module-Build"
 SRC_TEST="do"
 
 S=${WORKDIR}/${P}/WWW-YoutubeViewer
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-button.patch
+	rm share/gtk-youtube-viewer-icons/donate.png || die
+	perl-module_src_prepare
+}
 
 # build system installs files on "perl Build.PL" too
 # do all the work in src_install
@@ -55,9 +62,13 @@ pkg_postinst() {
 	elog "    (for HTTPS protocol and login support)"
 	elog "  dev-perl/TermReadKey (to get the terminal width size)"
 	elog "  dev-perl/Term-ReadLine-Gnu (for a better STDIN support)"
+	elog "  dev-perl/Text-CharWidth (print the results in a fixed-width"
+	elog "    format (--fixed-width, -W))"
 	elog "  dev-perl/XML-Fast (faster XML to HASH conversion)"
 	elog "  net-misc/gcap (for retrieving Youtube closed captions)"
 	elog "  virtual/perl-File-Temp (for posting comments)"
-	elog "  virtual/perl-Scalar-List-Utils (to shuffle the playlists (--shuffle)"
+	elog "  virtual/perl-Scalar-List-Utils (to shuffle the playlists"
+	elog "    (--shuffle, -s))"
+	elog "  virtual/perl-threads (threads support)"
 	einfo
 }

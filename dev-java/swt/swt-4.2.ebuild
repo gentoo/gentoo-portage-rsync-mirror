@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-4.2.ebuild,v 1.1 2012/07/09 18:33:43 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-4.2.ebuild,v 1.2 2013/09/21 12:54:36 tomwij Exp $
 
 EAPI=4
 
 inherit eutils java-pkg-2 java-ant-2 toolchain-funcs java-osgi
 
 MY_PV="${PV/_rc/RC}"
-MY_DMF="http://download.eclipse.org/eclipse/downloads/drops4/R-${MY_PV}-201206081400"
+MY_DMF="http://archive.eclipse.org/eclipse/downloads/drops4/R-${MY_PV}-201206081400"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="GTK based SWT Library"
