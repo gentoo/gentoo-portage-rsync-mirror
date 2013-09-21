@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r8.ebuild,v 1.2 2013/09/05 19:08:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-3.1-r9.ebuild,v 1.1 2013/09/21 12:20:46 pacho Exp $
 
 EAPI=5
 
@@ -80,6 +80,7 @@ src_install() {
 
 	newinitd "${FILESDIR}/${PV}/init" distccd
 	systemd_dounit "${FILESDIR}/distccd.service"
+	systemd_install_serviced "${FILESDIR}/distccd.service.conf"
 
 	cp "${FILESDIR}/3.1/conf" "${T}/distccd"
 	if use avahi; then
@@ -88,6 +89,8 @@ src_install() {
 		# Enable zeroconf support in distccd
 		DISTCCD_OPTS="\${DISTCCD_OPTS} --zeroconf"
 		EOF
+
+		sed -i '/ExecStart/ s|$| --zeroconf|' "${ED}"/usr/lib/systemd/system/distccd.service || die
 	fi
 	doconfd "${T}/distccd"
 

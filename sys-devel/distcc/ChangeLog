@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.225 2013/09/05 19:08:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.226 2013/09/21 12:20:46 pacho Exp $
+
+*distcc-3.1-r9 (21 Sep 2013)
+
+  21 Sep 2013; Pacho Ramos <pacho@gentoo.org> +distcc-3.1-r9.ebuild,
+  +files/distccd.service.conf, -distcc-3.1-r8.ebuild, distcc-3.2_rc1.ebuild,
+  files/distccd.service:
+  Stop relying in conf.d file, fix zeroconf handling (#480386 by Malte
+  Starostik)
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> distcc-3.1-r7.ebuild,
   distcc-3.1-r8.ebuild:
