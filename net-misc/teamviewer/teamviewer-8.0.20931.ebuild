@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-8.0.17147-r2.ebuild,v 1.2 2013/04/21 20:37:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-8.0.20931.ebuild,v 1.1 2013/09/21 19:52:20 hasufell Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="system-wine"
 RESTRICT="mirror"
 
 RDEPEND="
+	app-shells/bash
 	x11-misc/xdg-utils
 	!system-wine? (
 		amd64? (
@@ -68,12 +69,15 @@ EOF
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-POSIX.patch \
-		"${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 	sed \
 		-e "s/@TVV@/${MV}/g" \
 		"${FILESDIR}"/${PN}d.init > "${T}"/${PN}d${MV} || die
+
+	sed -i \
+		-e "s#/opt/teamviewer8/tv_bin/teamviewerd#/opt/${MY_PN}/teamviewerd#" \
+		script/${PN}d.service || die
 }
 
 src_install () {
@@ -116,10 +120,10 @@ src_install () {
 	dosym /etc/${MY_PN} /opt/${MY_PN}/config
 
 	doinitd "${T}"/${PN}d${MV}
-	systemd_dounit "${FILESDIR}"/${PN}.service
+	systemd_dounit script/${PN}d.service
 
 	newicon -s 48 desktop/${PN}.png ${MY_PN}.png
-	dodoc ../linux_FAQ_{EN,DE}.txt
+	dodoc ../doc/linux_FAQ_{EN,DE}.txt
 	make_desktop_entry ${MY_PN} TeamViewer ${MY_PN}
 }
 
