@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.14-r1.ebuild,v 1.1 2013/08/31 07:35:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.14-r1.ebuild,v 1.2 2013/09/21 11:28:47 pacho Exp $
 
 EAPI=5
 
@@ -51,6 +51,7 @@ DEPEND_COM="dev-lang/perl[berkdb]
 			dev-perl/List-MoreUtils
 			dev-perl/Log-Log4perl
 			dev-perl/Net-CIDR
+			dev-perl/Net-DNS
 			dev-perl/Net-Netmask
 			dev-perl/Net-SNMP
 			dev-perl/net-server[ipv6(-)?]
