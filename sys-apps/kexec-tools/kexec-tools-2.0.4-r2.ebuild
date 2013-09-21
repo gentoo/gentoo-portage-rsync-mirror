@@ -1,21 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-9999.ebuild,v 1.8 2013/09/21 11:35:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-2.0.4-r2.ebuild,v 1.1 2013/09/21 11:35:53 jlec Exp $
 
 EAPI=5
 
-AUTOTOOLS_AUTORECONF=true
-
-inherit autotools-utils flag-o-matic git-2 linux-info systemd
+inherit autotools-utils flag-o-matic linux-info systemd
 
 DESCRIPTION="Load another kernel from the currently executing Linux kernel"
 HOMEPAGE="http://kernel.org/pub/linux/utils/kernel/kexec/"
-SRC_URI=""
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/kexec/kexec-tools.git"
+SRC_URI="mirror://kernel/linux/utils/kernel/kexec/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="booke lzma xen zlib"
 
 DEPEND="
@@ -25,7 +22,10 @@ RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~KEXEC"
 
-PATCHES=( "${FILESDIR}"/${PN}-2.0.4-disable-kexec-test.patch )
+PATCHES=(
+		"${FILESDIR}"/${PN}-2.0.0-respect-LDFLAGS.patch
+		"${FILESDIR}"/${P}-disable-kexec-test.patch
+	)
 
 pkg_setup() {
 	# GNU Make's $(COMPILE.S) passes ASFLAGS to $(CCAS), CCAS=$(CC)
@@ -52,7 +52,7 @@ src_install() {
 
 	dodoc "${FILESDIR}"/README.Gentoo
 
-	newinitd "${FILESDIR}"/kexec.init-${PV} kexec
+	newinitd "${FILESDIR}"/kexec.init-${PVR} kexec
 	newconfd "${FILESDIR}"/kexec.conf-${PV} kexec
 
 	insinto /etc
