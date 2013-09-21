@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0-r1.ebuild,v 1.1 2013/09/21 17:09:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0-r1.ebuild,v 1.2 2013/09/21 21:30:49 mgorny Exp $
 
 EAPI=5
 
@@ -337,13 +337,13 @@ multilib_src_install() {
 			keepdir /usr/$(get_libdir)/dri
 			dodir /usr/$(get_libdir)/mesa
 			for x in ${gallium_drivers[@]}; do
-				if [ -f "${S}/$(get_libdir)/gallium/${x}" ]; then
+				if [ -f "$(get_libdir)/gallium/${x}" ]; then
 					mv -f "${ED}/usr/$(get_libdir)/dri/${x}" "${ED}/usr/$(get_libdir)/dri/${x/_dri.so/g_dri.so}" \
 						|| die "Failed to move ${x}"
 					insinto "/usr/$(get_libdir)/dri/"
-					if [ -f "${S}/$(get_libdir)/${x}" ]; then
+					if [ -f "$(get_libdir)/${x}" ]; then
 						insopts -m0755
-						doins "${S}/$(get_libdir)/${x}"
+						doins "$(get_libdir)/${x}"
 					fi
 				fi
 			done

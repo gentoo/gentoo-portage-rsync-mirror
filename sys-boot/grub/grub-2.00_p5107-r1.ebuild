@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.5 2013/09/21 18:44:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.6 2013/09/21 21:28:37 floppym Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ if [[ ${PV} == 9999 ]]; then
 	AUTOTOOLS_AUTORECONF=1
 fi
 
-inherit autotools-utils bash-completion-r1 eutils flag-o-matic multibuild pax-utils toolchain-funcs versionator
+inherit autotools-utils bash-completion-r1 eutils flag-o-matic mount-boot multibuild pax-utils toolchain-funcs versionator
 
 if [[ ${PV} != 9999 ]]; then
 	if [[ ${PV} == *_alpha* || ${PV} == *_beta* || ${PV} == *_rc* ]]; then
@@ -249,6 +249,13 @@ src_install() {
 }
 
 pkg_postinst() {
+	if [[ -e "${ROOT%/}/boot/grub2/grub.cfg" && ! -e "${ROOT%/}/boot/grub/grub.cfg" ]]; then
+		mkdir -p "${ROOT%/}/boot/grub"
+		ln -s ../grub2/grub.cfg "${ROOT%/}/boot/grub/grub.cfg"
+	fi
+
+	mount-boot_pkg_postinst
+
 	elog "For information on how to configure GRUB2 please refer to the guide:"
 	elog "    http://wiki.gentoo.org/wiki/GRUB2_Quick_Start"
 
