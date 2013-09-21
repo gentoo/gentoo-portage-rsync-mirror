@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/tpacpi-bat-1.0.ebuild,v 1.2 2013/01/11 22:39:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/tpacpi-bat-1.0-r1.ebuild,v 1.1 2013/09/21 00:49:05 ottxor Exp $
 
 EAPI=5
 
