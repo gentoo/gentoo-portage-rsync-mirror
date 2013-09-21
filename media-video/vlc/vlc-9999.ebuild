@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.190 2013/08/11 22:57:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.191 2013/09/20 23:30:16 scarabeus Exp $
 
 EAPI="5"
 
@@ -146,6 +146,7 @@ DEPEND="${RDEPEND}
 	kde? ( >=kde-base/kdelibs-4 )
 	xcb? ( x11-proto/xproto )
 	app-arch/xz-utils
+	>=sys-devel/gettext-0.18.3
 	virtual/pkgconfig"
 
 REQUIRED_USE="
