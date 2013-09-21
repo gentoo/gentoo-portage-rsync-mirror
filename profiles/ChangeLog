@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8263 2013/09/21 17:11:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8265 2013/09/21 20:23:45 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask zen-sources live ebuilds
+
+  21 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask multilib OpenGL packages for testing.
 
   21 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Remove the mask on glu since the emul set is ready now.

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15128 2013/09/21 17:11:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15130 2013/09/21 20:23:45 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,22 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (21 Sep 2013)
+# Mask multilib versions of OpenGL packages for testing.
+=app-emulation/emul-linux-x86-opengl-20130224-r1
+=dev-libs/wayland-1.2.1-r1
+=media-libs/freeglut-2.8.1-r1
+=media-libs/glew-1.10.0-r2
+=media-libs/glu-9.0.0-r1
+=media-libs/mesa-9.2.0-r1
+=virtual/glu-9.0-r1
+=virtual/opencl-0-r4
+=virtual/opengl-7.0-r1
+=x11-libs/libdrm-2.4.46-r1
+=x11-proto/dri2proto-2.8-r1
+=x11-proto/glproto-1.4.16-r1
+=x11-proto/xf86driproto-2.1.1-r1
 
 # Ian Stakenvicius <axs@gentoo.org> (20 Sep 2013)
 # on behalf of mozilla@gentoo.org
@@ -1004,6 +1020,7 @@ sci-astronomy/casacore
 sci-biology/picard
 =sci-electronics/qelectrotech-9999
 =sys-fs/redirfs-9999
+sys-kernel/zen-sources
 =www-plugins/google-talkplugin-9999
 ~x11-wm/openbox-9999
 

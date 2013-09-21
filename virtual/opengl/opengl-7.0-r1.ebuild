@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opengl/opengl-7.0-r1.ebuild,v 1.1 2013/09/21 17:09:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opengl/opengl-7.0-r1.ebuild,v 1.2 2013/09/21 20:12:48 mgorny Exp $
 
 EAPI=5
 
@@ -18,6 +18,6 @@ IUSE=""
 RDEPEND="
 	|| (
 		media-libs/mesa[${MULTILIB_USEDEP}]
-		media-libs/opengl-apple[${MULTILIB_USEDEP}]
+		media-libs/opengl-apple
 	)"
 DEPEND=""
