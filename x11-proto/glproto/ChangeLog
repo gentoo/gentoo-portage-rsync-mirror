@@ -1,6 +1,11 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.112 2013/02/27 05:52:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.113 2013/09/21 17:09:16 mgorny Exp $
+
+*glproto-1.4.16-r1 (21 Sep 2013)
+
+  21 Sep 2013; Michał Górny <mgorny@gentoo.org> +glproto-1.4.16-r1.ebuild:
+  Convert to multilib.
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> glproto-1.4.16.ebuild:
   Add ~arm-linux keyword.

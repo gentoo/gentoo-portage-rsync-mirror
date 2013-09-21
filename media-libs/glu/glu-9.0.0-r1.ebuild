@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/glu-9.0.0-r1.ebuild,v 1.1 2013/07/23 08:36:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/glu-9.0.0-r1.ebuild,v 1.2 2013/09/21 17:09:41 mgorny Exp $
 
 EAPI=5
 
@@ -28,10 +28,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="static-libs"
 
-DEPEND="virtual/opengl"
+DEPEND="virtual/opengl[${MULTILIB_USEDEP}]"
 RDEPEND="${DEPEND}
 	!<media-libs/mesa-9
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-opengl-20130224 )"
+	abi_x86_32? ( !app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )"
 
 src_unpack() {
 	default

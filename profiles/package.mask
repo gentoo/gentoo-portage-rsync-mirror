@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15127 2013/09/20 15:44:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15128 2013/09/21 17:11:04 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -384,11 +384,6 @@ dev-vcs/bzr-svn
 # Tim Harder <radhermit@gentoo.org> (26 Jul 2013)
 # Masked for testing
 =sys-devel/bison-3*
-
-# Michał Górny <mgorny@gentoo.org> (23 Jul 2013)
-# Mask for packages currently included in emul-linux-x86-opengl
-# that are incorporating native multilib support.
->=media-libs/glu-9.0.0-r1
 
 # Michael Weber <xmw@gentoo.org> (22 Jul 2013)
 # Missing _emergency image

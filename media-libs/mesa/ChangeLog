@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.497 2013/08/27 23:49:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.498 2013/09/21 17:09:26 mgorny Exp $
+
+*mesa-9.2.0-r1 (21 Sep 2013)
+
+  21 Sep 2013; Michał Górny <mgorny@gentoo.org> +mesa-9.2.0-r1.ebuild:
+  Convert to multilib.
 
 *mesa-9.2.0 (27 Aug 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.16 2013/07/23 08:36:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glu/ChangeLog,v 1.17 2013/09/21 17:09:42 mgorny Exp $
+
+  21 Sep 2013; Michał Górny <mgorny@gentoo.org> glu-9.0.0-r1.ebuild:
+  Add MULTILIB_USEDEP, update emul-linux blocker.
 
 *glu-9.0.0-r1 (23 Jul 2013)
 
