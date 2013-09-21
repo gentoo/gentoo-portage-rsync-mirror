@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.4 2013/09/21 17:56:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.5 2013/09/21 18:44:48 floppym Exp $
 
 EAPI=5
 
@@ -249,8 +249,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "For information on how to configure grub-2 please refer to the guide:"
+	elog "For information on how to configure GRUB2 please refer to the guide:"
 	elog "    http://wiki.gentoo.org/wiki/GRUB2_Quick_Start"
+
+	if has_version 'sys-boot/grub:0'; then
+		elog "A migration guide for GRUB Legacy users is available:"
+		elog "    http://www.gentoo.org/doc/en/grub2-migration.xml"
+	fi
+
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
 		if ! has_version sys-boot/os-prober; then
 			elog "Install sys-boot/os-prober to enable detection of other operating systems using grub2-mkconfig."

@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.279 2013/09/21 18:10:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.280 2013/09/21 18:44:48 floppym Exp $
+
+  21 Sep 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r1.ebuild,
+  grub-9999.ebuild:
+  Link to the migration guide if grub:0 is installed.
 
   21 Sep 2013; Mike Gilbert <floppym@gentoo.org> files/grub.default-2:
   Change references from /boot/grub2 to /boot/grub.
