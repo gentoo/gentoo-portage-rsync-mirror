@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.3_p1-r1.ebuild,v 1.1 2013/08/30 19:06:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.3_p1-r1.ebuild,v 1.2 2013/09/21 14:04:35 zx2c4 Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.opensmtpd.org/archives/${MY_DP/_}.tar.gz"
 
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="pam sqlite +mta"
 
 DEPEND="dev-libs/openssl

@@ -1,5 +1,6 @@
 [Unit]
 Description=VirtualBox Guest Additions
+ConditionVirtualization=oracle
 Before=display-manager.service
 
 [Service]
