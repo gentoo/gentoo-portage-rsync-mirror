@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.13.ebuild,v 1.1 2013/07/08 14:21:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.13-r1.ebuild,v 1.1 2013/09/21 13:31:56 tomwij Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-COMMON_DEP=">=dev-java/java-gnome-4.0.16:4.0"
+COMMON_DEP="dev-java/java-gnome:4.1"
 
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}"
@@ -37,7 +37,7 @@ src_install() {
 	# This is needed to generate the slashtime jar.
 	emake -j1 DESTDIR="${D}" install
 
-	java-pkg_register-dependency java-gnome-4.0 gtk.jar
+	java-pkg_register-dependency java-gnome-4.1 gtk.jar
 	java-pkg_regjar /usr/share/${PN}/lib/${PN}.jar
 
 	# Replace slashtime launcher with our own.

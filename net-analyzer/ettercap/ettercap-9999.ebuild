@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.5 2013/04/23 15:07:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-9999.ebuild,v 1.6 2013/09/21 13:58:05 ago Exp $
 
 EAPI=5
 
@@ -42,9 +42,6 @@ DEPEND="${RDEPEND}
 	virtual/yacc"
 
 src_prepare() {
-	#ettercap defaults to using mozilla so let's try to use xdg-open and pray it works
-	sed -i 's#mozilla -remote openurl(http://%host%url)#xdg-open 'http://%host%url'#' \
-	share/etter.conf || die
 	sed -i "s:Release:Release Gentoo:" CMakeLists.txt || die
 }
 

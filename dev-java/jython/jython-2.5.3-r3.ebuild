@@ -1,14 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.3-r1.ebuild,v 1.1 2012/08/26 13:43:40 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.3-r3.ebuild,v 1.1 2013/09/21 13:58:29 tomwij Exp $
 
 EAPI="4"
 
 JAVA_PKG_IUSE="doc examples source"
 
-inherit eutils java-pkg-2 java-ant-2 python
-
-PYTHON_ABI="${SLOT}-jython"
+inherit eutils java-pkg-2 java-ant-2 python-utils-r1
 
 DESCRIPTION="An implementation of Python written in Java"
 HOMEPAGE="http://www.jython.org"
@@ -16,7 +14,7 @@ SRC_URI="http://central.maven.org/maven2/org/python/${PN}-installer/${PV}/${PN}-
 
 LICENSE="PSF-2"
 SLOT="2.5"
-KEYWORDS="~amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="readline"
 
 # Missing in installer jar.
@@ -30,7 +28,7 @@ COMMON_DEP="
 	>=dev-java/java-config-2.1.11-r3
 	dev-java/jffi:1.0
 	dev-java/jline:0
-	dev-java/jnr-constants:0
+	dev-java/jnr-constants:0.8.2
 	dev-java/jnr-posix:1.1
 	java-virtuals/script-api:0
 	java-virtuals/servlet-api:2.5
@@ -43,18 +41,14 @@ DEPEND="${COMMON_DEP}
 
 S="${WORKDIR}"
 
-pkg_setup() {
-	java-pkg-2_pkg_setup
-	python_pkg_setup
-}
-
 java_prepare() {
 	# src/META-INF/services missing - taking from prebuilt jar
 	pushd src > /dev/null || die
 		jar -xf ../${PN}.jar META-INF/services || die
 	popd > /dev/null
 
-	find \( -name '*.jar' -o -name '*.class' -o -name '*.pyc' -o -name '*.exe' \) -exec rm -v {} + || die
+	find \( -name '*.jar' -o -name '*.class' \
+		-o -name '*.pyc' -o -name '*.exe' \) -delete
 
 	epatch "${FILESDIR}/${PN}-2.5.2-build.xml.patch"
 
@@ -62,14 +56,16 @@ java_prepare() {
 	epatch "${FILESDIR}/${PN}-2.5.2-distutils_scripts_location.patch"
 	epatch "${FILESDIR}/${PN}-2.5.2-respect_PYTHONPATH.patch"
 
-	use readline || rm -v src/org/python/util/ReadlineConsole.java || die
+	if ! use readline; then
+		rm -v src/org/python/util/ReadlineConsole.java || die
+	fi
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
 JAVA_ANT_CLASSPATH_TAGS+=" java"
 
 EANT_BUILD_TARGET="developer-build"
-EANT_GENTOO_CLASSPATH="asm-3,guava,jffi-1.0,jline,jnr-constants,script-api,servlet-api-2.5"
+EANT_GENTOO_CLASSPATH="asm-3,guava,jffi-1.0,jline,jnr-constants-0.8.2,script-api,servlet-api-2.5"
 
 # jdbc-informix and jdbc-oracle-bin (requires registration) aren't exposed.
 # Uncomment and add to COMMON_DEP if you want either of them
@@ -103,7 +99,6 @@ src_install() {
 
 	insinto /usr/share/${PN}-${SLOT}
 	doins -r dist/{Lib,registry}
-	python_clean_installation_image -q
 
 	dodoc ACKNOWLEDGMENTS NEWS README.txt
 
@@ -130,9 +125,24 @@ src_install() {
 	dodir /etc/sandbox.d
 	echo "SANDBOX_PREDICT=/usr/share/${PN}-${SLOT}" > "${ED}/etc/sandbox.d/20${P}-${SLOT}"
 
-	# compile aot
-	java -cp "$(java-pkg_getjars "${EANT_GENTOO_CLASSPATH}"):${EANT_GENTOO_CLASSPATH_EXTRA}:dist/${PN}-dev.jar" \
-		-Dpython.home="${ED}"/usr/share/${PN}-${SLOT} \
-		-Dpython.cachedir="${T}/.jythoncachedir" \
-		org.python.util.jython -m compileall -f -q -x "/test/" "${ED}" || die
+	# we need a wrapper to help python_optimize
+	cat > "${T}"/jython <<_EOF_ || die
+exec java -cp "$(java-pkg_getjars "${EANT_GENTOO_CLASSPATH}"):${EANT_GENTOO_CLASSPATH_EXTRA}:dist/${PN}-dev.jar" \
+	-Dpython.home="${ED}"/usr/share/${PN}-${SLOT} \
+	-Dpython.cachedir="${T}/.jythoncachedir" \
+	org.python.util.jython "\${@}"
+_EOF_
+	chmod +x "${T}"/jython || die
+
+	python_export jython${SLOT} EPYTHON PYTHON_SITEDIR
+	local PYTHON="${T}"/jython
+
+	# compile tests (everything else is compiled already)
+	# we're keeping it quiet since jython reports errors verbosely
+	# and some of the tests are supposed to trigger compile errors
+	python_optimize "${ED}"/usr/share/jython-${SLOT}/Lib/test &>/dev/null
+
+	# for python-exec
+	echo "EPYTHON='${EPYTHON}'" > epython.py
+	python_domodule epython.py
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.13-r1.ebuild,v 1.2 2013/09/19 20:07:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/watchdog-5.13-r1.ebuild,v 1.3 2013/09/21 13:31:39 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 arm ~m68k ~mips ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="amd64 arm ~m68k ~mips ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE="nfs"
 
 DEPEND="nfs? ( net-libs/libtirpc )"

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.145 2013/09/17 19:12:18 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.146 2013/09/21 13:32:24 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> fftw-3.3.3-r2.ebuild:
+  Stable for amd64, wrt bug #477182
 
 *fftw-3.3.3-r3 (17 Sep 2013)
 

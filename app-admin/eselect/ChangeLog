@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.243 2013/09/05 19:57:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.244 2013/09/21 13:32:17 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> eselect-1.3.8.ebuild:
+  Stable for amd64, wrt bug #485500
 
   05 Sep 2013; Ulrich Müller <ulm@gentoo.org> eselect-1.3.6.ebuild:
   Add eselect-mode and eselect-syntax to PDEPEND.

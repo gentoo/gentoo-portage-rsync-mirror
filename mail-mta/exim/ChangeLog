@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.250 2013/08/18 12:52:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.251 2013/09/21 13:49:11 ago Exp $
+
+  21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> exim-4.80.1-r2.ebuild:
+  Stable for amd64, wrt bug #480058
 
   18 Aug 2013; Fabian Groffen <grobian@gentoo.org> -exim-4.80.1-r1.ebuild,
   exim-4.80.1-r2.ebuild, exim-4.80.1.ebuild:

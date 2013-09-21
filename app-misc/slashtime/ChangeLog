@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/slashtime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.20 2013/07/08 14:21:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/ChangeLog,v 1.21 2013/09/21 13:31:56 tomwij Exp $
+
+*slashtime-0.5.13-r1 (21 Sep 2013)
+
+  21 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +slashtime-0.5.13-r1.ebuild,
+  -slashtime-0.5.13.ebuild:
+  Revision bump. Fix up java-gnome dependency to use the right SLOT, fixes bug
+  #482198 reported Agostino Sarubbo (ago).
 
 *slashtime-0.5.13 (08 Jul 2013)
 
