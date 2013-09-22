@@ -9,4 +9,4 @@ RDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info x11-apps/xprop x11
 RESTRICT=test
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ssuominen/xdg-utils-1.1.0_rc1_p20130921.tar.xz
-_md5_=04fd8b1b9c33d5e22d0f6fa664133552
+_md5_=cea67423b552d2444884e9b43f19cd0e

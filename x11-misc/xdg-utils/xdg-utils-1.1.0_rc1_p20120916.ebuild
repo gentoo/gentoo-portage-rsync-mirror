@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc1_p20120916.ebuild,v 1.1 2012/09/29 17:05:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc1_p20120916.ebuild,v 1.2 2013/09/22 01:59:37 heroxbd Exp $
 
 # See .spec in http://pkgs.fedoraproject.org/gitweb/?p=xdg-utils.git;a=summary
 # The source tree MUST be cleaned before rolling a snapshot tarball:
@@ -48,12 +48,12 @@ src_install() {
 	use doc && dohtml -r scripts/html
 
 	# Install default XDG_DATA_DIRS, bug #264647
-	echo 'XDG_DATA_DIRS="/usr/local/share"' > 30xdg-data-local
+	echo XDG_DATA_DIRS=\"${EPREFIX}/usr/local/share\" > 30xdg-data-local
 	echo 'COLON_SEPARATED="XDG_DATA_DIRS XDG_CONFIG_DIRS"' >> 30xdg-data-local
 	doenvd 30xdg-data-local
 
-	echo 'XDG_DATA_DIRS="/usr/share"' > 90xdg-data-base
-	echo 'XDG_CONFIG_DIRS="/etc/xdg"' >> 90xdg-data-base
+	echo XDG_DATA_DIRS=\"${EPREFIX}/usr/share\" > 90xdg-data-base
+	echo XDG_CONFIG_DIRS=\"${EPREFIX}/etc/xdg\" >> 90xdg-data-base
 	doenvd 90xdg-data-base
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.3 2013/09/12 22:29:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.4 2013/09/22 01:50:30 heroxbd Exp $
 
 EAPI=5
 
@@ -115,6 +115,8 @@ python_configure() {
 
 	# common switches.
 	cat > "${BUILD_DIR}"/setup.cfg <<-EOF
+		[directories]
+		basedirlist = ${EPREFIX}/usr
 		[provide_packages]
 		pytz = False
 		dateutil = False

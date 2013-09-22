@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.108 2013/09/21 15:02:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.109 2013/09/22 01:59:37 heroxbd Exp $
+
+  22 Sep 2013; Benda Xu <heroxbd@gentoo.org>
+  xdg-utils-1.1.0_rc1_p20120916.ebuild, xdg-utils-1.1.0_rc1_p20130921.ebuild:
+  Prefix support for env.d files, bug 485580.
 
 *xdg-utils-1.1.0_rc1_p20130921 (21 Sep 2013)
 
