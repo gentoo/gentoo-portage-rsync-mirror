@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.83 2013/09/18 05:55:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.84 2013/09/22 15:04:15 jer Exp $
+
+  22 Sep 2013; Jeroen Roovers <jer@gentoo.org> libssh-0.5.5.ebuild:
+  Remove static libraries when USE=test (bug #485600 by Nikoli).
 
   18 Sep 2013; Johannes Huber <johu@gentoo.org> -libssh-0.5.4.ebuild:
   Remove vulnerable version wrt bug #476622.

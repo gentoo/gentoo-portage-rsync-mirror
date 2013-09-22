@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.5.5.ebuild,v 1.5 2013/09/14 10:37:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.5.5.ebuild,v 1.6 2013/09/22 15:04:15 jer Exp $
 
 EAPI=5
 
@@ -65,6 +65,8 @@ src_install() {
 	cmake-utils_src_install
 
 	use doc && dohtml -r "${CMAKE_BUILD_DIR}"/doc/html/*
+
+	use static-libs || rm -f "${D}"/usr/lib64/libssh{,_threads}.a
 
 	if use examples; then
 		docinto examples
