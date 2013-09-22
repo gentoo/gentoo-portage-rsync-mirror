@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/geary
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.4 2013/09/13 13:26:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/ChangeLog,v 1.5 2013/09/22 13:06:15 hasufell Exp $
+
+*geary-0.4.0_pre2 (22 Sep 2013)
+
+  22 Sep 2013; Julian Ospald <hasufell@gentoo.org> -geary-0.4.0_pre1.ebuild,
+  +geary-0.4.0_pre2.ebuild, -files/geary-0.4.0_pre1-cflags.patch,
+  -files/geary-0.4.0_pre1-unity.patch, +files/geary-0.4.0_pre2-cflags.patch,
+  +files/geary-0.4.0_pre2-unity.patch:
+  version bump, remove old
 
   13 Sep 2013; Julian Ospald <hasufell@gentoo.org> geary-0.4.0_pre1.ebuild:
   fix webkit-gtk dependency wrt #484632

@@ -1,0 +1,22 @@
+--- configfiles/shorewall.conf	2013-06-24 22:07:38.000000000 +0200
++++ configfiles/shorewall.conf.new	2013-07-01 15:50:54.747711444 +0200
+@@ -85,7 +85,7 @@
+ 
+ SHOREWALL_SHELL=/bin/sh
+ 
+-SUBSYSLOCK=/var/lock/subsys/shorewall
++SUBSYSLOCK=/run/lock/shorewall
+ 
+ TC=
+ 
+--- configfiles/shorewall.conf.annotated	2013-06-27 20:32:22.000000000 +0200
++++ configfiles/shorewall.conf.annotated.new	2013-07-01 15:51:38.448332964 +0200
+@@ -444,7 +444,7 @@
+ #     or specified as a null value, /bin/sh is assumed. Using a light-weight
+ #     shell such as ash or dash can significantly improve performance.
+ # 
+-SUBSYSLOCK=/var/lock/subsys/shorewall
++SUBSYSLOCK=/run/lock/shorewall
+ #
+ # SUBSYSLOCK=[pathname]
+ # 

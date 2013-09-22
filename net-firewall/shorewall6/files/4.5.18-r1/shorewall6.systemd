@@ -1,0 +1,20 @@
+#
+#     The Shoreline Firewall (Shorewall) Packet Filtering Firewall - V4.4
+#
+#     Copyright 2011 Jonathan Underwood (jonathan.underwood@gmail.com)
+#
+[Unit]
+Description=Shorewall IPv6 firewall
+After=syslog.target
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+EnvironmentFile=/etc/shorewall6
+StandardOutput=syslog
+ExecStart=/sbin/shorewall6 $OPTIONS start
+ExecStop=/sbin/shorewall6 $OPTIONS stop
+
+[Install]
+WantedBy=multi-user.target
