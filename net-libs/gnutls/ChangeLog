@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.448 2013/09/01 18:59:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.449 2013/09/22 14:06:38 creffett Exp $
+
+  22 Sep 2013; Chris Reffett <creffett@gentoo.org> -gnutls-2.12.20.ebuild:
+  Drop affected version wrt bug 455560
 
   01 Sep 2013; Tim Harder <radhermit@gentoo.org> -gnutls-2.12.23.ebuild,
   -gnutls-3.1.10.ebuild, -gnutls-3.1.11.ebuild, -gnutls-3.2.1-r1.ebuild,
