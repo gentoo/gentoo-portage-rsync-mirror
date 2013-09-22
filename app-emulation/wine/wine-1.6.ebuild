@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.ebuild,v 1.6 2013/09/02 08:03:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.ebuild,v 1.7 2013/09/22 06:49:17 ago Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	MY_P="${PN}-${PV/_/-}"
 	SRC_URI="mirror://sourceforge/${PN}/Source/${MY_P}.tar.bz2"
-	KEYWORDS="-* amd64 ~x86 ~x86-fbsd"
+	KEYWORDS="-* amd64 x86 ~x86-fbsd"
 	S=${WORKDIR}/${MY_P}
 fi
 

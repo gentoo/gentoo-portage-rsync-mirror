@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-3.1.7-r2.ebuild,v 1.4 2013/09/14 17:39:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-3.1.7-r2.ebuild,v 1.5 2013/09/22 06:55:43 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Generate highlighted source code as an (x)html document"
 HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
 SRC_URI="mirror://gnu/src-highlite/${P}.tar.gz"
 LICENSE="GPL-3"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 SLOT="0"
 IUSE="doc static-libs"
 

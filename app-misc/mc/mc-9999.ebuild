@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.13 2013/07/12 15:56:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-9999.ebuild,v 1.14 2013/09/22 06:37:15 slyfox Exp $
 
 EAPI=5
 
@@ -51,8 +51,6 @@ DEPEND="${RDEPEND}
 [[ -n ${LIVE_EBUILD} ]] && DEPEND="${DEPEND} dev-vcs/cvs" # needed only for SCM source tree (autopoint uses cvs)
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-4.8.9-unknown-opts.patch"
-
 	[[ -n ${LIVE_EBUILD} ]] && ./autogen.sh
 }
 

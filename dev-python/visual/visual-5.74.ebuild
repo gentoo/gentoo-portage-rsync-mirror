@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.74.ebuild,v 1.7 2013/09/14 17:39:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/visual-5.74.ebuild,v 1.8 2013/09/22 06:50:05 ago Exp $
 
 EAPI="4"
 SUPPORT_PYTHON_ABIS="1"
@@ -17,7 +17,7 @@ SRC_URI="http://www.vpython.org/contents/download/${MY_P}.tar.bz2"
 
 LICENSE="HPND Boost-1.0"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc examples"
 
 RDEPEND=">=dev-cpp/gtkglextmm-1.2

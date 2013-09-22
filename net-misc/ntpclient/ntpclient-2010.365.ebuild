@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2010.365.ebuild,v 1.2 2013/09/21 13:31:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2010.365.ebuild,v 1.3 2013/09/22 06:49:41 ago Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://doolittle.icarus.com/${PN}/${PN}_${PV/./_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 #S="${WORKDIR}/${PN}-2010"

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-mailbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mailbox/ChangeLog,v 1.7 2013/09/21 13:31:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mailbox/ChangeLog,v 1.8 2013/09/22 06:50:21 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> vdr-mailbox-0.7.0.ebuild:
+  Stable for x86, wrt bug #484580
 
   21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> vdr-mailbox-0.7.0.ebuild:
   Stable for amd64, wrt bug #484580

@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/lincity
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.20 2013/09/18 10:41:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity/ChangeLog,v 1.21 2013/09/22 06:44:36 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lincity-1.13.1.ebuild:
+  Stable for x86, wrt bug #485128
 
   18 Sep 2013; Chema Alonso <nimiux@gentoo.org> lincity-1.13.1.ebuild:
   Stable for amd64 wrt bug #485128

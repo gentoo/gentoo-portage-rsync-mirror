@@ -4,10 +4,10 @@ DESCRIPTION=A useful collection of mail servers, clients, and filters.
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/mailutils/mailutils.html
 IUSE=berkdb bidi +clients gdbm sasl guile ipv6 kerberos ldap mysql nls pam postgres python servers ssl static-libs +threads tcpd tokyocabinet
-KEYWORDS=amd64 ~hppa ~ppc ~x86 ~ppc-macos ~x64-macos ~x86-macos
+KEYWORDS=amd64 ~hppa ~ppc x86 ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2 LGPL-2.1
 RDEPEND=!mail-client/nmh !mail-filter/libsieve !mail-client/mailx !mail-client/nail sys-libs/ncurses sys-libs/readline sys-devel/libtool virtual/mta berkdb? ( sys-libs/db ) bidi? ( dev-libs/fribidi ) gdbm? ( sys-libs/gdbm ) guile? ( dev-scheme/guile ) kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) nls? ( sys-devel/gettext ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) sasl? ( virtual/gsasl ) ssl? ( net-libs/gnutls ) tcpd? ( sys-apps/tcp-wrappers ) tokyocabinet? ( dev-db/tokyocabinet ) python? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=mirror://gnu-alpha/mailutils/mailutils-2.99.98.tar.xz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=2bf678f2d3ca839be35a844b0e4862ac
+_md5_=20c9e94a15e73f6a90622f84f7fdb2e7

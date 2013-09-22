@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.479 2013/09/13 03:03:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.480 2013/09/22 06:49:17 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> wine-1.6.ebuild:
+  Stable for x86, wrt bug #483280
 
   13 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-9999.ebuild:
   libSM and libICE not needed for >=1.7.2 (bug #483984, thanks to Rafał

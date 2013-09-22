@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.16-r1.ebuild,v 1.3 2013/09/15 10:09:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.16-r1.ebuild,v 1.4 2013/09/22 06:51:11 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="${HOMEPAGE%/}/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 REQUIRED_USE="
 	pick? ( emacs )
 	python? ( ${PYTHON_REQUIRED_USE} )

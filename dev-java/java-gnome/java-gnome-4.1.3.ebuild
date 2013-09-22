@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.1.3.ebuild,v 1.1 2013/07/08 14:09:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.1.3.ebuild,v 1.2 2013/09/22 06:40:44 ago Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gnome/sources/${PN}/$(get_version_component_range 1-2)/${MY_P}
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="4.1"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 COMMON_DEP="
 	app-text/enchant:0
