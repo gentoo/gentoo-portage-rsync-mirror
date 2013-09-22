@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.99 2013/09/13 13:05:04 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.100 2013/09/22 09:19:28 ssuominen Exp $
+
+  22 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> x264-0.0.20130912.ebuild,
+  x264-9999.ebuild:
+  20130912 snapshot and current git uses .so.138 instead of .so.135 wrt #484892
+  by Arfrever Frehtes Taifersar Arahesis
 
 *x264-0.0.20130912 (13 Sep 2013)
 
