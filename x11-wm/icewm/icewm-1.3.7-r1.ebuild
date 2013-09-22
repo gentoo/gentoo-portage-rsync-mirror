@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7-r1.ebuild,v 1.3 2013/09/22 09:17:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7-r1.ebuild,v 1.4 2013/09/22 10:44:10 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="bidi debug gnome minimal nls truetype uclibc xinerama"
 REQUIRED_USE="gnome? ( ${PYTHON_REQUIRED_USE} )"
 

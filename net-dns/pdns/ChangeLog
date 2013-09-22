@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.88 2013/05/23 12:14:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.89 2013/09/22 10:31:55 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> pdns-3.2.ebuild:
+  Add ~amd64/~x86, wrt bug #456412
 
   23 May 2013; Tiziano Müller <dev-zero@gentoo.org> pdns-3.2.ebuild:
   Fix dependencies for USE=static and add pkg_postinst functionality to fix
