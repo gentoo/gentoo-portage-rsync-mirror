@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1636.0_alpha1.ebuild,v 1.3 2013/09/21 21:52:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1636.0_alpha1.ebuild,v 1.4 2013/09/22 00:27:09 floppym Exp $
 
 EAPI="4"
 
@@ -69,11 +69,14 @@ RDEPEND="
 	x11-libs/gtk+:2
 	>=x11-libs/libX11-1.5.0
 	x11-libs/libXcomposite
+	x11-libs/libXdamage
 	x11-libs/libXext
 	x11-libs/libXfixes
+	x11-libs/libXi
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	x11-libs/libXScrnSaver
+	x11-libs/libXtst
 	x11-libs/pango
 	x11-misc/xdg-utils
 "
