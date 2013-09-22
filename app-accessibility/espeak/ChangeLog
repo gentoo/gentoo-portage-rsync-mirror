@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.110 2013/07/12 06:52:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.111 2013/09/22 20:14:41 williamh Exp $
+
+  22 Sep 2013; William Hubbs <williamh@gentoo.org> espeak-1.47.11.ebuild:
+  Add overrides for AR and CFLAGS, convert a call to make to emake, use the S
+  variable instead of "cd src" in the src_* functions and make some cosmetic
+  changes. Thanks to ago for pointing these out. This fixes bug #484852.
 
   12 Jul 2013; William Hubbs <williamh@gentoo.org> espeak-1.47.11.ebuild:
   remove error message since "rm -rf" does not fail

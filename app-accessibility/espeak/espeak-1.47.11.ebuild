@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.47.11.ebuild,v 1.4 2013/07/12 06:52:31 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/espeak-1.47.11.ebuild,v 1.5 2013/09/22 20:14:41 williamh Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${MY_P}/src
 
 get_audio() {
 	if use portaudio && use pulseaudio; then
@@ -38,26 +38,35 @@ get_audio() {
 }
 
 src_prepare() {
-	cd src
 	# gentoo uses portaudio 19.
 	mv -f portaudio19.h portaudio.h
 }
 
 src_compile() {
-	cd src
-	emake PREFIX="${EPREFIX}/usr" AUDIO="$(get_audio)" \
-	CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" all
+	emake \
+		PREFIX="${EPREFIX}/usr" \
+		CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" \
+		CXX="$(tc-getCXX)" \
+		CXXFLAGS="${CXXFLAGS}" \
+		AR="$(tc-getAR)" \
+		AUDIO="$(get_audio)" \
+		all
 
 	einfo "Fixing byte order of phoneme data files"
 	cd "${S}/platforms/big_endian"
-	make
+	emake
 	./espeak-phoneme-data "${S}/espeak-data"
 	cp -f phondata phonindex phontab "${S}/espeak-data"
 }
 
 src_install() {
-	cd src
-	make DESTDIR="${D}" PREFIX="${EPREFIX}/usr" LIBDIR="\$(PREFIX)/$(get_libdir)" AUDIO="$(get_audio)" install
+	emake \
+		PREFIX="${EPREFIX}/usr" \
+		LIBDIR="\$(PREFIX)/$(get_libdir)" \
+		DESTDIR="${D}" \
+		AUDIO="$(get_audio)" \
+		install
 
 	cd ..
 	insinto /usr/share/espeak-data
