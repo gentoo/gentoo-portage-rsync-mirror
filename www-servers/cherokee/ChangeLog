@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.98 2013/07/17 07:34:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.99 2013/09/22 14:58:30 blueness Exp $
+
+*cherokee-1.2.103-r1 (22 Sep 2013)
+
+  22 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
+  +cherokee-1.2.103-r1.ebuild, -cherokee-1.2.103.ebuild,
+  -files/cherokee-1.2.103-fix-Makefile-CTK.patch,
+  -files/cherokee-1.2.103-fix-configure.ac.patch:
+  Fix cherokee-admin, bug #482430
 
 *cherokee-1.2.103 (17 Jul 2013)
 
