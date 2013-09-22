@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4.ebuild,v 1.7 2012/12/27 17:24:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4.ebuild,v 1.8 2013/09/22 10:30:03 dilfridge Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="dia gnome postscript inkjar lcms nls spell wmf"
 RESTRICT="test"
 
 COMMON_DEPEND="
-	>=app-text/poppler-0.12.3-r3[cairo,xpdf-headers(+)]
+	>=app-text/poppler-0.12.3-r3:=[cairo,xpdf-headers(+)]
 	dev-cpp/glibmm
 	>=dev-cpp/gtkmm-2.18.0:2.4
 	>=dev-libs/boehm-gc-6.4

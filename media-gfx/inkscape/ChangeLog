@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.199 2013/05/30 07:26:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.200 2013/09/22 10:30:03 dilfridge Exp $
+
+  22 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  inkscape-0.48.4.ebuild, inkscape-0.48.4-r1.ebuild:
+  Add poppler subslot dependency since inkscape links to libpoppler.so, acked
+  by lu_zero
 
   30 May 2013; Tim Harder <radhermit@gentoo.org> inkscape-0.48.4-r1.ebuild:
   Add PYTHON_REQUIRED_USE for python-single-r1.

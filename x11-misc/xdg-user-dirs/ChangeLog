@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.30 2013/06/27 10:39:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.31 2013/09/22 10:11:37 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xdg-user-dirs-0.15.ebuild:
+  Stable for amd64, wrt bug #485578
 
 *xdg-user-dirs-0.15 (27 Jun 2013)
 
@@ -123,4 +126,3 @@
   27 Jul 2008; Gilles Dartiguelongue <eva@gentoo.org> +metadata.xml,
   +xdg-user-dirs-0.10.ebuild:
   initial ebuild, thanks goes to suka, fix bug #220112.
-

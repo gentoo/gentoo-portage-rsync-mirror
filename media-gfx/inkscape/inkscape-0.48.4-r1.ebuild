@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.4 2013/05/30 07:26:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.5 2013/09/22 10:30:03 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -23,7 +23,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
-	>=app-text/poppler-0.12.3-r3[cairo,xpdf-headers(+)]
+	>=app-text/poppler-0.12.3-r3:=[cairo,xpdf-headers(+)]
 	dev-cpp/glibmm
 	>=dev-cpp/gtkmm-2.18.0:2.4
 	>=dev-libs/boehm-gc-6.4
