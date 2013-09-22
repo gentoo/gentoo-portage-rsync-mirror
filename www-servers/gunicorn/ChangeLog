@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.31 2013/05/02 04:05:08 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.32 2013/09/22 02:50:27 rafaelmartins Exp $
+
+*gunicorn-18.0 (22 Sep 2013)
+
+  22 Sep 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +gunicorn-18.0.ebuild:
+  Version bump. Bug #484638.
 
 *gunicorn-0.17.4 (02 May 2013)
 
