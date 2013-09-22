@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.308 2013/09/14 10:56:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.310 2013/09/22 09:36:05 pacho Exp $
+
+*lighttpd-1.4.32-r3 (22 Sep 2013)
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/lighttpd.tmpfiles.conf,
+  +lighttpd-1.4.32-r3.ebuild, lighttpd-1.4.32-r2.ebuild:
+  Just noticed I forgot the revbump when it was committed...
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> lighttpd-1.4.32-r2.ebuild:
+  Install tmpfiles.d conf (#476882 by Francisco Vazquez)
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lighttpd-1.4.32-r2.ebuild:
   Stable for alpha, wrt bug #480126

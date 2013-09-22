@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse-exfat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.16 2013/07/04 15:32:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-exfat/ChangeLog,v 1.17 2013/09/22 09:52:55 ssuominen Exp $
+
+  22 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> fuse-exfat-1.0.1.ebuild:
+  Fix typing error in pkg_postinst() message wrt #485542
 
   04 Jul 2013; Samuli Suominen <ssuominen@gentoo.org> fuse-exfat-1.0.1.ebuild:
   amd64/x86 stable
