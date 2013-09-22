@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.139 2013/09/11 20:19:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.140 2013/09/21 23:57:06 hwoarang Exp $
+
+  21 Sep 2013; Markos Chandras <hwoarang@gentoo.org> -buildbot-0.8.3_p1.ebuild,
+  -buildbot-0.8.6_p1.ebuild, -buildbot-0.8.7.ebuild:
+  remove old
 
 *buildbot-9999 (11 Sep 2013)
 
