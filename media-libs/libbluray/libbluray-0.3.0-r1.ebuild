@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.3.0-r1.ebuild,v 1.6 2013/08/08 09:45:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.3.0-r1.ebuild,v 1.7 2013/09/22 13:59:37 lu_zero Exp $
 
 EAPI=5
 
@@ -36,7 +36,6 @@ DEPEND="
 	)
 	virtual/pkgconfig
 "
-REQUIRED_USE="utils? ( static-libs )"
 
 DOCS=( ChangeLog README.txt )
 

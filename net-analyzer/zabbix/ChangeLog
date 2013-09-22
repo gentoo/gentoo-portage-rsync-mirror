@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.130 2013/09/22 06:49:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.131 2013/09/22 13:36:41 mattm Exp $
+
+  22 Sep 2013; Matthew Marlowe <mattm@gentoo.org> -zabbix-2.0.4-r1.ebuild,
+  -zabbix-2.0.5.ebuild, -zabbix-2.0.6-r5.ebuild:
+  No longer supporting zabbix releases prior to 2.0.8 due to php and curl
+  compatibility bugs plus other important fixes, 2.0.4 (the old stable) in
+  particular is far out of date with recent ebuild changes, zabbix 2.0.8 is new
+  stable and recommended zabbix version for deployment.
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> zabbix-2.0.8.ebuild:
   Stable for x86, wrt bug #484822
