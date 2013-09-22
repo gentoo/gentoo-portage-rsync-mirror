@@ -1,6 +1,15 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.155 2013/03/05 22:59:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.156 2013/09/22 11:21:59 pacho Exp $
+
+*dia-0.97.2-r2 (22 Sep 2013)
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> +dia-0.97.2-r2.ebuild,
+  +files/dia-0.97.2-glib2.36.patch,
+  +files/dia-0.97.2-implicit-declaration.patch:
+  Migrate to new python eclasses, improve desktop file translations, drop
+  unneeded libgnome* deps, let it compile with latest automake, don't mess with
+  localedir, fix glib-2.36 compat, apply upstream patch to fix some warnings.
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -dia-0.97.1.ebuild,
   -files/dia-0.97.1-libpng15.patch, -dia-0.97.2.ebuild,

@@ -1,6 +1,13 @@
 # ChangeLog for app-office/dia2code
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.31 2013/04/01 18:23:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.33 2013/09/22 11:30:33 pacho Exp $
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> dia2code-0.8.5.ebuild:
+  And fix build with latest automake (#467592)
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/dia2code-0.8.5-ar.patch,
+  -dia2code-0.8.4.ebuild, dia2code-0.8.5.ebuild:
+  Respect AR, bug #462968 by ago and iamnr3, drop old
 
   01 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dia2code-0.8.5.ebuild:
   Stable for sparc, wrt bug #458984
