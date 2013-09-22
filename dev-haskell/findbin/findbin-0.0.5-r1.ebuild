@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/findbin/findbin-0.0.5-r1.ebuild,v 1.1 2013/02/09 18:54:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/findbin/findbin-0.0.5-r1.ebuild,v 1.2 2013/09/22 19:44:19 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-6.10.4:="
