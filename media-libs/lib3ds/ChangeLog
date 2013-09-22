@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lib3ds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.23 2013/09/21 08:52:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lib3ds/ChangeLog,v 1.24 2013/09/22 12:13:17 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lib3ds-2.0.0_rc1.ebuild:
+  Stable for ppc64, wrt bug #308033
 
   21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lib3ds-2.0.0_rc1.ebuild:
   Stable for x86, wrt bug #308033

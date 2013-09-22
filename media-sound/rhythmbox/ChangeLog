@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.246 2013/09/15 20:43:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.247 2013/09/22 12:04:14 pacho Exp $
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/rhythmbox-3.0-daap-schema.patch, rhythmbox-3.0-r1.ebuild:
+  Fix daap schema (#485514 by David King), gtk-doc handling, missing
+  REQUIRED_USE
 
   15 Sep 2013; Nirbheek Chauhan <nirbheek@gentoo.org> rhythmbox-3.0-r1.ebuild:
   Use python-single-r1 like 2.99.1, and remove support for python3_3 (beaker

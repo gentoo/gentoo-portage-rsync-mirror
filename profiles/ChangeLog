@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8265 2013/09/21 20:23:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8266 2013/09/22 12:02:58 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Sep 2013; Pacho Ramos <pacho@gentoo.org> arch/arm/package.use.mask:
+  Mask USE on arm due missing keywords
 
   21 Sep 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask zen-sources live ebuilds
