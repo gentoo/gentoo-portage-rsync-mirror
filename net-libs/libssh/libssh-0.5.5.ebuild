@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.5.5.ebuild,v 1.6 2013/09/22 15:04:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.5.5.ebuild,v 1.7 2013/09/22 16:43:32 jer Exp $
 
 EAPI=5
 
-inherit eutils cmake-utils
+inherit eutils cmake-utils multilib
 
 DESCRIPTION="Access a working SSH implementation by means of a library"
 HOMEPAGE="http://www.libssh.org/"
@@ -66,7 +66,7 @@ src_install() {
 
 	use doc && dohtml -r "${CMAKE_BUILD_DIR}"/doc/html/*
 
-	use static-libs || rm -f "${D}"/usr/lib64/libssh{,_threads}.a
+	use static-libs || rm -f "${D}"/usr/$(get_libdir)/libssh{,_threads}.a
 
 	if use examples; then
 		docinto examples
