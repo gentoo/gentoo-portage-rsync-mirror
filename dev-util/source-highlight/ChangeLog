@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.55 2013/09/22 12:13:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.56 2013/09/22 12:45:41 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  source-highlight-3.1.7-r2.ebuild:
+  Stable for ppc, wrt bug #459448
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
   source-highlight-3.1.7-r2.ebuild:
