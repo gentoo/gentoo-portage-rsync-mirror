@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.5.ebuild,v 1.1 2013/09/15 02:42:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.5.ebuild,v 1.2 2013/09/22 22:57:29 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -135,9 +135,16 @@ src_prepare() {
 	# Make modemmanager optional, bug 463852, upstream bug #700145
 	epatch "${FILESDIR}/${PN}-3.8.1.5-optional-modemmanager.patch"
 
+	# top-level configure.ac does not use AC_CONFIG_SUBDIRS, so we need this to
+	# avoid libtoolize "We've already been run in this tree" warning, bug #484988
+	local d
+	for d in . egg-list-box; do
+		pushd "${d}" > /dev/null
+		AT_NOELIBTOOLIZE=yes eautoreconf
+		popd > /dev/null
+	done
+	elibtoolize --force
 	epatch_user
-	eautoreconf
-	cd egg-list-box/ && eautoreconf && cd ..
 
 	# panels/datetime/Makefile.am gets touched as a result of something in our
 	# src_prepare(). We need to touch timedated{c,h} to prevent them from being
