@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.761 2013/09/10 03:17:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.762 2013/09/22 19:07:10 olemarkus Exp $
+
+  22 Sep 2013; Ole Markus With <olemarkus@gentoo.org>
+  -files/eblits/common-v2.eblit, -files/eblits/pkg_setup-v2.eblit,
+  -files/eblits/pkg_setup-v3.eblit, -files/eblits/src_compile-v1.eblit,
+  -files/eblits/src_compile-v2.eblit, -files/eblits/src_configure-v53.eblit,
+  -files/eblits/src_configure-v54.eblit, -files/eblits/src_install-v2.eblit,
+  -files/eblits/src_install-v3.eblit, -files/eblits/src_prepare-v2.eblit,
+  -files/eblits/src_prepare-v3.eblit, -files/eblits/src_prepare-v4.eblit,
+  -files/eblits/src_test-v1.eblit:
+  Removing the eblits that are not in use
 
   10 Sep 2013; Patrick Lauer <patrick@gentoo.org> php-5.5.2.ebuild,
   php-5.5.3-r1.ebuild, php-5.5.3.ebuild:

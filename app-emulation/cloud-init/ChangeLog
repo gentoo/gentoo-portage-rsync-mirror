@@ -1,0 +1,9 @@
+# ChangeLog for app-emulation/cloud-init
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/ChangeLog,v 1.1 2013/09/22 19:11:45 prometheanfire Exp $
+
+*cloud-init-0.7.2 (22 Sep 2013)
+
+  22 Sep 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +cloud-init-0.7.2.ebuild, +metadata.xml:
+  initial add of cloud-init
