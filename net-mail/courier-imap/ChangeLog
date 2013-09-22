@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.197 2013/09/22 06:49:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.198 2013/09/22 08:56:41 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> courier-imap-4.8.0-r1.ebuild:
+  Stable for ia64, wrt bug #480082
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> courier-imap-4.8.0-r1.ebuild:
   Stable for x86, wrt bug #480082

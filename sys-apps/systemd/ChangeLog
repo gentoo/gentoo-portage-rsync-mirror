@@ -1,6 +1,28 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.176 2013/09/18 10:51:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.177 2013/09/22 08:36:15 mgorny Exp $
+
+*systemd-207-r2 (22 Sep 2013)
+*systemd-204-r1 (22 Sep 2013)
+
+  22 Sep 2013; Michał Górny <mgorny@gentoo.org>
+  +files/204-0001-polkit-Avoid-race-condition-in-scraping-proc.patch,
+  +files/204-0002-Add-usr-share-keymaps-to-localectl-supported-locatio.patch,
+  +files/204-0003-Allow-tabs-in-environment-files.patch,
+  +files/204-0004-Actually-allow-tabs-in-environment-files.patch,
+  +systemd-204-r1.ebuild, +systemd-207-r2.ebuild,
+  -files/206-0001-logind-update-state-file-after-generating-the-sessio.patch,
+  -files/206-0002-Add-usr-share-keymaps-to-localectl-supported-locatio.patch,
+  -files/206-0003-tmpfiles-support-passing-prefix-multiple-times.patch,
+  -files/206-0004-tmpfiles-introduce-exclude-prefix.patch,
+  -files/206-0005-tmpfiles-setup-exclude-dev-prefixes-files.patch,
+  -files/206-0006-allow-tabs-in-configuration-files.patch,
+  -files/206-0007-allow-tabs-in-configuration-files2.patch, -systemd-201.ebuild,
+  -systemd-206-r3.ebuild, -systemd-206-r4.ebuild, -systemd-206-r5.ebuild,
+  -systemd-207-r1.ebuild, -systemd-207.ebuild:
+  Backport the patch for security bug #485546. Backport patches from -207 to to-
+  go-stable -204-r1. Use gentoo-systemd-integration and locale migration in
+  -204-r1. Remove old.
 
 *systemd-207-r1 (18 Sep 2013)
 

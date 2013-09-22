@@ -1,64 +1,60 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-207.ebuild,v 1.2 2013/09/14 18:44:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-204-r1.ebuild,v 1.1 2013/09/22 08:36:15 mgorny Exp $
 
 EAPI=5
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python2_7 )
-inherit autotools-utils bash-completion-r1 fcaps linux-info multilib \
-	multilib-minimal pam python-single-r1 systemd toolchain-funcs udev \
-	user
+inherit autotools-utils bash-completion-r1 linux-info multilib pam python-single-r1 systemd toolchain-funcs udev user
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 
-LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
+LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
-	+kmod lzma openrc pam policykit python qrcode selinux tcpd test
-	vanilla xattr"
+	keymap +kmod lzma openrc pam policykit python qrcode selinux static-libs
+	tcpd test vanilla xattr"
 
-MINKV="3.0"
+MINKV="2.6.39"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
 	>=sys-apps/util-linux-2.20
 	sys-libs/libcap
 	acl? ( sys-apps/acl )
 	audit? ( >=sys-process/audit-2 )
-	cryptsetup? ( >=sys-fs/cryptsetup-1.6 )
+	cryptsetup? ( >=sys-fs/cryptsetup-1.4.2 )
 	gcrypt? ( >=dev-libs/libgcrypt-1.4.5 )
-	gudev? ( >=dev-libs/glib-2[${MULTILIB_USEDEP}] )
+	gudev? ( >=dev-libs/glib-2 )
 	http? ( net-libs/libmicrohttpd )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	kmod? ( >=sys-apps/kmod-14-r1 )
-	lzma? ( app-arch/xz-utils[${MULTILIB_USEDEP}] )
+	kmod? ( >=sys-apps/kmod-12 )
+	lzma? ( app-arch/xz-utils )
 	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )
 	qrcode? ( media-gfx/qrencode )
 	selinux? ( sys-libs/libselinux )
 	tcpd? ( sys-apps/tcp-wrappers )
-	xattr? ( sys-apps/attr )
-	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
-		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
+	xattr? ( sys-apps/attr )"
 
 # baselayout-2.2 has /run
 RDEPEND="${COMMON_DEPEND}
 	>=sys-apps/baselayout-2.2
 	openrc? ( >=sys-fs/udev-init-scripts-25 )
+	policykit? ( sys-auth/polkit )
 	|| (
 		>=sys-apps/util-linux-2.22
 		<sys-apps/sysvinit-2.88-r4
 	)
-	!vanilla? ( sys-apps/gentoo-systemd-integration )
+	!vanilla? ( ~sys-apps/gentoo-systemd-integration-1 )
 	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.10
 	!sys-fs/udev"
 
-PDEPEND=">=sys-apps/hwids-20130717-r1[udev]
-	policykit? ( sys-auth/polkit )"
+PDEPEND=">=sys-apps/hwids-20130326.1[udev]"
 
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
@@ -67,7 +63,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	dev-util/gperf
 	>=dev-util/intltool-0.50
-	>=sys-devel/binutils-2.23.1
 	>=sys-devel/gcc-4.6
 	>=sys-kernel/linux-headers-${MINKV}
 	virtual/pkgconfig
@@ -75,14 +70,27 @@ DEPEND="${COMMON_DEPEND}
 
 pkg_pretend() {
 	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS
-		~EPOLL ~FANOTIFY ~FHANDLE ~INOTIFY_USER ~IPV6 ~NET ~PROC_FS
-		~SECCOMP ~SIGNALFD ~SYSFS ~TIMERFD
-		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
+		~FANOTIFY ~HOTPLUG ~INOTIFY_USER ~IPV6 ~NET ~PROC_FS ~SIGNALFD
+		~SYSFS ~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
+#		~!FW_LOADER_USER_HELPER"
 
 	use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
-	use pam && CONFIG_CHECK+=" ~AUDITSYSCALL"
-	kernel_is -lt 3 7 && CONFIG_CHECK+=" ~HOTPLUG"
-	use firmware-loader || CONFIG_CHECK+=" ~!FW_LOADER_USER_HELPER"
+
+	# read null-terminated argv[0] from PID 1
+	# and see which path to systemd was used (if any)
+	local init_path
+	IFS= read -r -d '' init_path < /proc/1/cmdline
+	if [[ ${init_path} == */bin/systemd ]]; then
+		eerror "You are using a compatibility symlink to run systemd. The symlink"
+		eerror "has been removed. Please update your bootloader to use:"
+		eerror
+		eerror "	init=/usr/lib/systemd/systemd"
+		eerror
+		eerror "and reboot your system. We are sorry for the inconvenience."
+		if [[ ${MERGE_TYPE} != buildonly ]]; then
+			die "Compatibility symlink used to boot systemd."
+		fi
+	fi
 
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		if [[ $(gcc-major-version) -lt 4
@@ -113,7 +121,21 @@ pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
-multilib_src_configure() {
+src_prepare() {
+	local PATCHES=(
+		# race condition in polkit use, bug #485546
+		"${FILESDIR}"/204-0001-polkit-Avoid-race-condition-in-scraping-proc.patch
+		# localectl does not find keymaps, bug #474946
+		"${FILESDIR}"/204-0002-Add-usr-share-keymaps-to-localectl-supported-locatio.patch
+		# tabs do not work in EnvironmentFile=, bug #481554
+		"${FILESDIR}"/204-0003-Allow-tabs-in-environment-files.patch
+		"${FILESDIR}"/204-0004-Actually-allow-tabs-in-environment-files.patch
+	)
+
+	autotools-utils_src_prepare
+}
+
+src_configure() {
 	local myeconfargs=(
 		--localstatedir=/var
 		--with-pamlibdir=$(getpam_mod_dir)
@@ -136,11 +158,12 @@ multilib_src_configure() {
 		$(use_enable gudev)
 		$(use_enable http microhttpd)
 		$(use_enable introspection)
+		$(use_enable keymap)
 		$(use_enable kmod)
 		$(use_enable lzma xz)
 		$(use_enable pam)
 		$(use_enable policykit polkit)
-		$(use_enable python python-devel)
+		$(use_with python)
 		$(use python && echo PYTHON_CONFIG=/usr/bin/python-config-${EPYTHON#python})
 		$(use_enable qrcode qrencode)
 		$(use_enable selinux)
@@ -165,86 +188,38 @@ multilib_src_configure() {
 		)
 	fi
 
-	if ! multilib_is_native_abi; then
-		myeconfargs+=(
-			ac_cv_search_cap_init=
-			ac_cv_header_sys_capability_h=yes
-			DBUS_CFLAGS=' '
-			DBUS_LIBS=' '
-
-			--disable-acl
-			--disable-audit
-			--disable-gcrypt
-			--disable-gtk-doc
-			--disable-introspection
-			--disable-kmod
-			--disable-libcryptsetup
-			--disable-microhttpd
-			--disable-pam
-			--disable-polkit
-			--disable-qrencode
-			--disable-selinux
-			--disable-tcpwrap
-			--disable-tests
-			--disable-xattr
-			--disable-xz
-			--disable-python-devel
-		)
-	fi
-
 	# Work around bug 463846.
 	tc-export CC
 
 	autotools-utils_src_configure
 }
 
-multilib_src_compile() {
-	local mymakeopts=(
+src_compile() {
+	autotools-utils_src_compile \
 		udevlibexecdir="${MY_UDEVDIR}"
-	)
-
-	if multilib_is_native_abi; then
-		emake "${mymakeopts[@]}"
-	else
-		# prerequisites for gudev
-		use gudev && emake src/gudev/gudev{enumtypes,marshal}.{c,h}
-
-		echo 'gentoo: $(lib_LTLIBRARIES) $(pkgconfiglib_DATA)' | \
-		emake "${mymakeopts[@]}" -f Makefile -f - gentoo
-	fi
 }
 
-multilib_src_test() {
-	multilib_is_native_abi || continue
-
-	default
-}
-
-multilib_src_install() {
-	local mymakeopts=(
-		udevlibexecdir="${MY_UDEVDIR}"
+src_install() {
+	autotools-utils_src_install -j1 \
+		udevlibexecdir="${MY_UDEVDIR}" \
 		dist_udevhwdb_DATA=
-		DESTDIR="${D}"
-	)
 
-	if multilib_is_native_abi; then
-		emake "${mymakeopts[@]}" install
-	else
-		mymakeopts+=(
-			install-libLTLIBRARIES
-			install-pkgconfiglibDATA
-			install-includeHEADERS
-			# safe to call unconditionally, 'installs' empty list
-			install-libgudev_includeHEADERS
-			install-pkgincludeHEADERS
-		)
+	# keep udev working without initramfs, for openrc compat
+	dodir /bin /sbin
+	mv "${D}"/usr/lib/systemd/systemd-udevd "${D}"/sbin/udevd || die
+	mv "${D}"/usr/bin/udevadm "${D}"/bin/udevadm || die
+	dosym ../../../sbin/udevd /usr/lib/systemd/systemd-udevd
+	dosym ../../bin/udevadm /usr/bin/udevadm
 
-		emake "${mymakeopts[@]}"
-	fi
-}
+	# zsh completion
+	insinto /usr/share/zsh/site-functions
+	newins shell-completion/systemd-zsh-completion.zsh "_${PN}"
 
-multilib_src_install_all() {
-	prune_libtool_files --modules
+	# compat for init= use
+	dosym ../usr/lib/systemd/systemd /bin/systemd
+	dosym ../lib/systemd/systemd /usr/bin/systemd
+	# rsyslog.service depends on it...
+	dosym ../usr/bin/systemctl /bin/systemctl
 
 	# we just keep sysvinit tools, so no need for the mans
 	rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \
@@ -258,8 +233,57 @@ multilib_src_install_all() {
 	keepdir /etc/binfmt.d /etc/modules-load.d /etc/tmpfiles.d \
 		/etc/systemd/ntp-units.d /etc/systemd/user /var/lib/systemd
 
-	# Symlink /etc/sysctl.conf for easy migration.
-	dosym ../sysctl.conf /etc/sysctl.d/99-sysctl.conf
+	# Check whether we won't break user's system.
+	local x
+	for x in /bin/systemd /usr/bin/systemd \
+		/usr/bin/udevadm /usr/lib/systemd/systemd-udevd
+	do
+		[[ -x ${D}${x} ]] || die "${x} symlink broken, aborting."
+	done
+}
+
+migrate_locale() {
+	local envd_locale_def="${EROOT%/}/etc/env.d/02locale"
+	local envd_locale=( "${EROOT%/}"/etc/env.d/??locale )
+	local locale_conf="${EROOT%/}/etc/locale.conf"
+
+	if [[ ! -L ${locale_conf} && ! -e ${locale_conf} ]]; then
+		# if locale.conf does not exist...
+		if [[ -e ${envd_locale} ]]; then
+			# ...either copy env.d/??locale if there's one
+			ebegin "Moving ${envd_locale} to ${locale_conf}"
+			mv "${envd_locale}" "${locale_conf}"
+			eend ${?} || FAIL=1
+		else
+			# ...or create a dummy default
+			ebegin "Creating ${locale_conf}"
+			cat > "${locale_conf}" <<-EOF
+				# This file has been created by the sys-apps/systemd ebuild.
+				# See locale.conf(5) and localectl(1).
+
+				# LANG=${LANG}
+			EOF
+			eend ${?} || FAIL=1
+		fi
+	fi
+
+	if [[ ! -L ${envd_locale} ]]; then
+		# now, if env.d/??locale is not a symlink (to locale.conf)...
+		if [[ -e ${envd_locale} ]]; then
+			# ...warn the user that he has duplicate locale settings
+			ewarn
+			ewarn "To ensure consistent behavior, you should replace ${envd_locale}"
+			ewarn "with a symlink to ${locale_conf}. Please migrate your settings"
+			ewarn "and create the symlink with the following command:"
+			ewarn "ln -s -n -f ../locale.conf ${envd_locale}"
+			ewarn
+		else
+			# ...or just create the symlink if there's nothing here
+			ebegin "Creating ${envd_locale_def} -> ../locale.conf symlink"
+			ln -n -s ../locale.conf "${envd_locale_def}"
+			eend ${?} || FAIL=1
+		fi
+	fi
 }
 
 pkg_postinst() {
@@ -279,12 +303,21 @@ pkg_postinst() {
 		udevadm hwdb --update --root="${ROOT%/}"
 	fi
 
-	if [[ ${ROOT} == "" || ${ROOT} == "/" ]]; then
-		udevadm control --reload
-	fi
+	udev_reload || FAIL=1
 
 	# Bug 468876
 	fcaps cap_dac_override,cap_sys_ptrace=ep usr/bin/systemd-detect-virt
+
+	# Bug 465468, make sure locales are respect, and ensure consistency
+	# between OpenRC & systemd
+	migrate_locale
+
+	if [[ ${FAIL} ]]; then
+		eerror "One of the postinst commands failed. Please check the postinst output"
+		eerror "for errors. You may need to clean up your system and/or try installing"
+		eerror "systemd again."
+		eerror
+	fi
 
 	if [[ ! -L "${ROOT}"/etc/mtab ]]; then
 		ewarn "Upstream mandates the /etc/mtab file should be a symlink to /proc/mounts."

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.80 2013/09/21 13:29:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.81 2013/09/22 08:57:07 ago Exp $
+
+  22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
+  Stable for ia64, wrt bug #478742
 
   21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> Crypt-SSLeay-0.640.0.ebuild:
   Stable for amd64, wrt bug #478742
