@@ -3,6 +3,7 @@
 # Mask abi_x86_32 on stable until emul-* packages are made
 # fully redundant and end-user experience in resolving
 # flag changes and blockages is generally smooth.
+# Please keep in sync with hardened/linux/amd64.
 app-admin/fam abi_x86_32
 app-admin/gamin abi_x86_32
 app-arch/bzip2 abi_x86_32

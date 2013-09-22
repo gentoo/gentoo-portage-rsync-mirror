@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.8 2013/08/03 21:18:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.9 2013/09/22 18:05:41 mgorny Exp $
+
+  22 Sep 2013; Michał Górny <mgorny@gentoo.org> linux/amd64/package.use.mask:
+  Mask abi_x86_32 on hardened as well, to make the way for stablereq.
 
   03 Aug 2013; Anthony G. Basile <blueness@gentoo.org>
   linux/uclibc/mips/make.defaults:
