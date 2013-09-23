@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.197 2013/09/22 10:09:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.198 2013/09/23 19:17:39 ago Exp $
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libidn-1.28.ebuild:
+  Stable for sparc, wrt bug #484246
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libidn-1.28.ebuild:
   Stable for amd64, wrt bug #484246

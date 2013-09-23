@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.73 2013/09/23 01:24:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.74 2013/09/23 19:12:10 ago Exp $
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> spice-gtk-0.21.ebuild:
+  Stable for amd64, wrt bug #485420
 
   23 Sep 2013; Doug Goldstein <cardoe@gentoo.org>
   +files/spice-gtk-0.21-fix-g-clear-pointer-on-old-glib.patch,

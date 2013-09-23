@@ -4,10 +4,10 @@ DESCRIPTION=Locate directory of original program
 EAPI=5
 HOMEPAGE=https://github.com/audreyt/findbin
 IUSE=doc hscolour profile
-KEYWORDS=~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~ia64 ~ppc ~ppc64 sparc ~x86
 LICENSE=BSD
 RDEPEND=>=dev-lang/ghc-6.10.4:=
 SLOT=0/0.0.5
 SRC_URI=mirror://hackage/packages/archive/FindBin/0.0.5/FindBin-0.0.5.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	48f0813cd6c66200944782b078f0a188	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=f896df9b2486147b10da21f0f95f0c32
+_md5_=b93693a8ef7631951f67c3c9b8748944

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.9.0-r1.ebuild,v 1.2 2013/06/08 23:43:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.9.0-r1.ebuild,v 1.3 2013/09/23 19:11:55 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
@@ -13,7 +13,7 @@ SRC_URI="http://samba.org/~jelmer/dulwich/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]

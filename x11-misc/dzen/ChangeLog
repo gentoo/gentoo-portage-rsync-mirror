@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dzen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/ChangeLog,v 1.13 2013/08/09 12:46:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/ChangeLog,v 1.14 2013/09/23 19:12:03 ago Exp $
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> dzen-0.9.5-r1.ebuild:
+  Stable for amd64, wrt bug #485738
 
 *dzen-0.9.5-r1 (09 Aug 2013)
 
@@ -55,4 +58,3 @@
   30 Jun 2007; Santiago M. Mola <coldwind@gentoo.org> +metadata.xml,
   +dzen-0.5.0.ebuild:
   Import from sunrise, thanks to Jakub for misc fixing. Bug #167915
-
