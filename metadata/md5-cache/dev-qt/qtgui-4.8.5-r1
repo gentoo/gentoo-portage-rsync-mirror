@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=app-admin/eselect-qtgraphicssystem ~dev-qt/qtcore-4.8.5[aqua=,debug=,glib=,qt3support=] ~dev-qt/qtscript-4.8.5[aqua=,debug=] media-libs/fontconfig media-libs/freetype:2 media-libs/libpng:0= sys-libs/zlib virtual/jpeg:0 !aqua? ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXcursor x11-libs/libXext x11-libs/libXi x11-libs/libXrandr x11-libs/libXrender xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) ) cups? ( net-print/cups ) egl? ( media-libs/mesa[egl] ) gtkstyle? ( x11-libs/cairo[-qt4] x11-libs/gtk+:2[aqua=] ) mng? ( >=media-libs/libmng-1.0.9 ) nas? ( >=media-libs/nas-1.5 ) tiff? ( media-libs/tiff:0 ) !aqua? ( x11-proto/inputproto x11-proto/xextproto xinerama? ( x11-proto/xineramaproto ) xv? ( x11-proto/videoproto ) ) virtual/pkgconfig
+DESCRIPTION=The GUI module for the Qt toolkit
+EAPI=5
+HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
+IUSE=+accessibility cups egl +glib gtkstyle mng nas nis qt3support tiff trace xinerama +xv aqua debug pch c++0x +exceptions
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris
+LICENSE=|| ( LGPL-2.1 GPL-3 )
+PDEPEND=qt3support? ( ~dev-qt/qt3support-4.8.5[aqua=,debug=] )
+RDEPEND=app-admin/eselect-qtgraphicssystem ~dev-qt/qtcore-4.8.5[aqua=,debug=,glib=,qt3support=] ~dev-qt/qtscript-4.8.5[aqua=,debug=] media-libs/fontconfig media-libs/freetype:2 media-libs/libpng:0= sys-libs/zlib virtual/jpeg:0 !aqua? ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXcursor x11-libs/libXext x11-libs/libXi x11-libs/libXrandr x11-libs/libXrender xinerama? ( x11-libs/libXinerama ) xv? ( x11-libs/libXv ) ) cups? ( net-print/cups ) egl? ( media-libs/mesa[egl] ) gtkstyle? ( x11-libs/cairo[-qt4] x11-libs/gtk+:2[aqua=] ) mng? ( >=media-libs/libmng-1.0.9 ) nas? ( >=media-libs/nas-1.5 ) tiff? ( media-libs/tiff:0 )
+REQUIRED_USE=gtkstyle? ( glib )
+SLOT=4
+SRC_URI=http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	qt4-build	7adf9e4dc8d9d1b3b2d4acc7365437c0	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=4a8dcf96a8a8cc5b81c63575ad1cf53d

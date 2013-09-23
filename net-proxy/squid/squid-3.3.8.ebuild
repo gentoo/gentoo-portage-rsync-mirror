@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.8.ebuild,v 1.2 2013/09/16 10:36:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.3.8.ebuild,v 1.3 2013/09/23 14:40:36 tomwij Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	qos? ( net-libs/libnetfilter_conntrack )
 	ssl? ( dev-libs/openssl )
 	sasl? ( dev-libs/cyrus-sasl )
-	ecap? ( net-libs/libecap:2 )
+	ecap? ( net-libs/libecap:0.2 )
 	selinux? ( sec-policy/selinux-squid )
 	!x86-fbsd? ( logrotate? ( app-admin/logrotate ) )
 	>=sys-libs/db-4

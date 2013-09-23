@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.433 2013/09/16 10:36:43 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.434 2013/09/23 14:40:36 tomwij Exp $
+
+  23 Sep 2013; Tom Wijsman <TomWij@gentoo.org> squid-3.2.13.ebuild,
+  squid-3.3.8.ebuild:
+  Moved SLOT=2 to SLOT=0.2 for version 0.0.2 of the net-libs/libecap dependency.
 
   16 Sep 2013; Tom Wijsman <TomWij@gentoo.org> squid-3.3.8.ebuild:
   Run eautoreconf using a single job, should fix bug #419685 and bug #482622;
