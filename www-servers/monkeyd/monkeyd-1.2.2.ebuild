@@ -1,6 +1,6 @@
-# Copyright 1999- Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.2.ebuild,v 1.6 2013/07/07 12:06:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.2.2.ebuild,v 1.7 2013/09/23 07:06:18 blueness Exp $
 
 EAPI="5"
 
