@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.340.ebuild,v 1.1 2013/03/20 21:07:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.340.ebuild,v 1.2 2013/09/23 13:04:36 jlec Exp $
 
 EAPI=5
-inherit autotools-utils
+
+inherit autotools-utils fortran-2
 
 DESCRIPTION="C and Fortran library for manipulating FITS files"
 HOMEPAGE="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html"
@@ -17,6 +18,10 @@ IUSE="doc examples fortran static-libs +tools threads"
 RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	fortran? ( dev-lang/cfortran )"
+
+pkg_setup() {
+	use fortran && fortran-2_pkg_setup
+}
 
 src_prepare() {
 	# avoid internal cfortran
