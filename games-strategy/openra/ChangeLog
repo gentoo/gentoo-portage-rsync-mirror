@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/openra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.22 2013/07/05 17:19:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.23 2013/09/23 18:56:43 hasufell Exp $
+
+*openra-20130915 (23 Sep 2013)
+
+  23 Sep 2013; Julian Ospald <hasufell@gentoo.org> +openra-20130915.ebuild,
+  +files/openra-20130915-make.patch:
+  version bump
 
   05 Jul 2013; Julian Ospald <hasufell@gentoo.org>
   files/openra-20130514-makefile.patch:
