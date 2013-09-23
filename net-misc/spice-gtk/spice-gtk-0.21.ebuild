@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.21.ebuild,v 1.1 2013/09/19 16:21:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.21.ebuild,v 1.3 2013/09/23 01:24:08 cardoe Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -77,6 +77,11 @@ GTK2_BUILDDIR="${WORKDIR}/${P}_gtk2"
 GTK3_BUILDDIR="${WORKDIR}/${P}_gtk3"
 
 src_prepare() {
+
+	epatch "${FILESDIR}"/spice-gtk-0.21-fix-g-clear-pointer-on-old-glib.patch
+
+	epatch_user
+
 	use vala && vala_src_prepare
 	mkdir ${GTK2_BUILDDIR} ${GTK3_BUILDDIR} || die
 }
