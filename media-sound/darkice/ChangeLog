@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/darkice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.66 2013/09/06 14:58:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.68 2013/09/23 07:00:34 polynomial-c Exp $
+
+  23 Sep 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -files/darkice-0.18.1-gcc43.patch, -files/darkice-0.19-gcc44.patch:
+  Removed old patches as well.
+
+  23 Sep 2013; Lars Wendler <polynomial-c@gentoo.org> -darkice-0.19.ebuild,
+  -darkice-1.1.ebuild:
+  Removed old.
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> darkice-1.2.ebuild:
   Stable for sparc, wrt bug #477172
