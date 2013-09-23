@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-6.02_pre16.ebuild,v 1.1 2013/08/13 06:50:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-6.02_pre16.ebuild,v 1.2 2013/09/23 11:56:54 jlec Exp $
 
 EAPI=4
 
@@ -48,6 +48,14 @@ src_prepare() {
 			-e 's|-Os||g' \
 			-e 's|CFLAGS[[:space:]]\+=|CFLAGS +=|g' \
 			|| die "sed custom-cflags failed"
+	else
+		QA_FLAGS_IGNORED="
+			/sbin/extlinux
+			/usr/bin/memdiskfind
+			/usr/bin/gethostip
+			/usr/bin/isohybrid
+			/usr/bin/syslinux
+			"
 	fi
 	case ${ARCH} in
 		amd64)	loaderarch="efi64" ;;

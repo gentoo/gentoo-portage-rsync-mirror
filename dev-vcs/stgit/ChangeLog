@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/stgit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.18 2013/07/22 02:44:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.19 2013/09/23 11:38:21 pinkbyte Exp $
+
+*stgit-0.16-r2 (23 Sep 2013)
+
+  23 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> +stgit-0.16-r2.ebuild:
+  Revision bump: EAPI 5, distutils-r1 eclass, add Prefix support wrt bug
+  #485730. Thanks to Dennis Lan <dennis.yxun AT gmail.com> for providing
+  initial ebuild diff
 
   22 Jul 2013; Patrick Lauer <patrick@gentoo.org> -stgit-0.15-r1.ebuild,
   -stgit-0.16.ebuild:

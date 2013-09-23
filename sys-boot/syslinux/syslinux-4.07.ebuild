@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.07.ebuild,v 1.3 2013/09/22 06:47:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-4.07.ebuild,v 1.4 2013/09/23 11:56:54 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -47,6 +47,14 @@ src_unpack() {
 			-e 's|-Os||g' \
 			-e 's|CFLAGS[[:space:]]\+=|CFLAGS +=|g' \
 			|| die "sed custom-cflags failed"
+	else
+		QA_FLAGS_IGNORED="
+			/sbin/extlinux
+			/usr/bin/memdiskfind
+			/usr/bin/gethostip
+			/usr/bin/isohybrid
+			/usr/bin/syslinux
+			"
 	fi
 
 }
