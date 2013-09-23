@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND=dev-db/sqlite:3 >=dev-lang/lua-5.1.0[deprecated] sys-libs/zlib ncurses? ( sys-libs/ncurses ) tiles? ( media-fonts/dejavu media-libs/freetype:2 media-libs/libpng:0 media-libs/libsdl[X,opengl,video] media-libs/sdl-image[png] virtual/glu virtual/opengl ) dev-lang/perl sys-devel/flex virtual/pkgconfig virtual/yacc tiles? ( sys-libs/ncurses test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost ) ) >=sys-apps/sed-4
+DESCRIPTION=Role-playing roguelike game of exploration and treasure-hunting in dungeons
+EAPI=5
+HOMEPAGE=http://crawl.develz.org/wordpress/
+IUSE=debug ncurses test +tiles
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 BSD BSD-2 public-domain CC0-1.0 MIT
+RDEPEND=dev-db/sqlite:3 >=dev-lang/lua-5.1.0[deprecated] sys-libs/zlib ncurses? ( sys-libs/ncurses ) tiles? ( media-fonts/dejavu media-libs/freetype:2 media-libs/libpng:0 media-libs/libsdl[X,opengl,video] media-libs/sdl-image[png] virtual/glu virtual/opengl )
+REQUIRED_USE=|| ( ncurses tiles )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/crawl-ref/Stone%20Soup/0.12.3/stone_soup-0.12.3-nodeps.tar.xz http://dev.gentoo.org/~hasufell/distfiles/stone-soup.png http://dev.gentoo.org/~hasufell/distfiles/stone-soup.svg
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=120d4c4d403208e8c69d9a2ba2eeae8d
