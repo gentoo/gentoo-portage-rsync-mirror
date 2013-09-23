@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/whoosh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.16 2013/09/12 18:36:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/whoosh/ChangeLog,v 1.17 2013/09/23 02:53:04 patrick Exp $
+
+*whoosh-2.5.4 (23 Sep 2013)
+
+  23 Sep 2013; Patrick Lauer <patrick@gentoo.org> +whoosh-2.5.4.ebuild:
+  Bump
 
 *whoosh-2.5.3 (12 Sep 2013)
 
