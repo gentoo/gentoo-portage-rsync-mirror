@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20130712.ebuild,v 1.1 2013/07/24 16:22:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/re2/re2-0_p20130712.ebuild,v 1.2 2013/09/22 23:39:45 phajdan.jr Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ IUSE=""
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-compile-r0.patch"
 	multilib_copy_sources
 }
 
