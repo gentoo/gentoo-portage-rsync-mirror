@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8267 2013/09/23 06:31:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8268 2013/09/23 13:00:02 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> profiles.desc:
+  Change default/bsd/fbsd/amd64/9.1 from stable to dev because the arch is
+  supporting only ~ keywords. The arch developers should make use of repoman
+  and the --include-dev switch if they want to scan for it.
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> package.mask:
   mask older and vulnerable version of openldap
