@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mic-paren/mic-paren-3.8.ebuild,v 1.3 2008/06/14 23:27:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mic-paren/mic-paren-3.8.ebuild,v 1.4 2013/09/23 17:55:06 ulm Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/MicParen
 # taken from http://www.gnuvola.org/software/j/mic-paren/mic-paren.el
 SRC_URI="mirror://gentoo/${P}.el.bz2"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""

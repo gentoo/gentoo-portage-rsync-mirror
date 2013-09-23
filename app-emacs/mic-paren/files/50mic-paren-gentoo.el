@@ -1,6 +1,3 @@
-
-;;; mic-paren site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'paren-activate "mic-paren"
   "Activates mic-paren parenthesis highlighting." t)

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.375 2013/09/22 18:01:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.376 2013/09/23 17:58:22 williamh Exp $
+
+  23 Sep 2013; William Hubbs <williamh@gentoo.org> -dhcpcd-6.0.2.ebuild,
+  -dhcpcd-6.0.3.ebuild, -dhcpcd-6.0.5.ebuild:
+  remove old unstable versions
 
   22 Sep 2013; William Hubbs <williamh@gentoo.org> dhcpcd-9999.ebuild:
   add support for --rundir on Linux.
