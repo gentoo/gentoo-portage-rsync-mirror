@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1362 2013/09/23 19:17:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1363 2013/09/23 21:14:38 zmedico Exp $
+
+*portage-2.2.7 (23 Sep 2013)
+
+  23 Sep 2013; Zac Medico <zmedico@gentoo.org> +portage-2.2.7.ebuild:
+  2.2.7 version bump. This fixes bug #481366 (add emerge --verbose-conflicts
+  option), bug #484950 (fix emerge-webrsync to work with missing directory), bug
+  #485056 (fix portageq with Python <2.6.5), bug #485226 (handle newline in
+  symlink target), and bug #485456 (fix PKG_CONFIG_PATH for prefix). Bug #484436
+  tracks all bugs fixed since portage-2.2.1.
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> portage-2.2.1.ebuild:
   Stable for sparc, wrt bug #478904
