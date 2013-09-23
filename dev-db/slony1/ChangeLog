@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.45 2013/08/26 05:27:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.46 2013/09/23 05:07:11 patrick Exp $
+
+*slony1-2.2.0 (23 Sep 2013)
+
+  23 Sep 2013; Patrick Lauer <patrick@gentoo.org> +slony1-2.2.0.ebuild,
+  slony1-2.1.4.ebuild:
+  Bump
 
 *slony1-2.1.4 (26 Aug 2013)
 

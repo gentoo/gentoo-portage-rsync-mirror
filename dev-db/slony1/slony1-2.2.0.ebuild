@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-2.1.4.ebuild,v 1.2 2013/09/23 05:07:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/slony1-2.2.0.ebuild,v 1.1 2013/09/23 05:07:11 patrick Exp $
 
 EAPI="4"
 
@@ -47,10 +47,6 @@ pkg_setup() {
 #	fi
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.1.2-ldflags.patch"
-}
-
 src_configure() {
 	local myconf
 	use perl && myconf='--with-perltools'
@@ -60,10 +56,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install
 
-	dodoc HISTORY-1.1 INSTALL README SAMPLE TODO UPGRADING doc/howto/*.txt
-
-	# gone:
-	#doman "${S}"/doc/adminguide/man{1,7}/*
+	dodoc INSTALL README SAMPLE TODO UPGRADING share/slon.conf-sample
 
 	if use doc ; then
 		cd "${S}"/doc
