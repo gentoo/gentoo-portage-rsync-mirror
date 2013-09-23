@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.338 2013/09/22 08:56:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.339 2013/09/23 17:23:43 ago Exp $
+
+  23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> db-4.8.30.ebuild:
+  Stable for alpha, wrt bug #483184
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> db-4.8.30.ebuild:
   Stable for ia64, wrt bug #483184

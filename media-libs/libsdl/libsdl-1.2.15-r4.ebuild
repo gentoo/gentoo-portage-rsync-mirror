@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r4.ebuild,v 1.5 2013/09/23 12:53:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.15-r4.ebuild,v 1.6 2013/09/23 17:20:43 ago Exp $
 
 EAPI=5
 inherit autotools flag-o-matic multilib toolchain-funcs eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.libsdl.org/release/SDL-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 # WARNING:
 # If you turn on the custom-cflags use flag in USE and something breaks,
 # you pick up the pieces.  Be prepared for bug reports to be marked INVALID.
