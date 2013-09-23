@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/zopfli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.1 2013/09/18 20:43:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.2 2013/09/23 00:50:44 tomwij Exp $
+
+*zopfli-1.0.0_p20130508-r1 (23 Sep 2013)
+
+  23 Sep 2013; Tom Wijsman <TomWij@gentoo.org>
+  +zopfli-1.0.0_p20130508-r1.ebuild, -zopfli-1.0.0_p20130508.ebuild:
+  Revision bump. Redistributed tarball for 1.0.0_p20130508 version as upstream
+  generates a different unique commit tarball on every download. Discovered by
+  Alex Xu.
 
 *zopfli-1.0.0_p20130508 (18 Sep 2013)
 *zopfli-1.0.0 (18 Sep 2013)
