@@ -1,6 +1,21 @@
 # ChangeLog for dev-python/pmw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.40 2013/09/05 18:46:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/ChangeLog,v 1.42 2013/09/23 12:21:14 jlec Exp $
+
+*pmw-2.0.0-r2 (23 Sep 2013)
+*pmw-1.3.3-r2 (23 Sep 2013)
+
+  23 Sep 2013; Justin Lecher <jlec@gentoo.org> -pmw-1.3.3-r1.ebuild,
+  +pmw-1.3.3-r2.ebuild, -pmw-2.0.0-r1.ebuild, +pmw-2.0.0-r2.ebuild,
+  +files/pmw-1.3.3-install-no-docs.patch:
+  Fix patch and more pyton eclass funtion uses
+
+*pmw-2.0.0-r1 (23 Sep 2013)
+*pmw-1.3.3-r1 (23 Sep 2013)
+
+  23 Sep 2013; Justin Lecher <jlec@gentoo.org> -pmw-1.3.3.ebuild,
+  +pmw-1.3.3-r1.ebuild, -pmw-2.0.0.ebuild, +pmw-2.0.0-r1.ebuild:
+  Fix Typos
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pmw-1.3.3.ebuild,
   pmw-2.0.0.ebuild:

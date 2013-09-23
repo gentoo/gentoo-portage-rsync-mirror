@@ -1,6 +1,17 @@
 # ChangeLog for sys-boot/lilo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.75 2013/04/09 10:05:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/ChangeLog,v 1.77 2013/09/23 12:22:49 chainsaw Exp $
+
+  23 Sep 2013; Tony Vroon <chainsaw@gentoo.org> metadata.xml:
+  Taking LILO back under my wing as it seems to have been abandoned.
+
+*lilo-24.0 (23 Sep 2013)
+
+  23 Sep 2013; Tony Vroon <chainsaw@gentoo.org> +lilo-24.0.ebuild,
+  +files/lilo-24.0-novga.patch:
+  Version bump, as requested by Tomasz Golinski in bug #473366. Rediffed
+  "novga" patch by Ben Kohler closes bug #452862. Upstream changelog confirms
+  that this fixes the GCC 4.8 build failure reported by nzqr in bug #471274.
 
   09 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> lilo-22.8-r2.ebuild,
   lilo-23.2-r1.ebuild, lilo-23.2-r2.ebuild, metadata.xml:

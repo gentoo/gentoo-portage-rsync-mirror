@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-2.0.0.ebuild,v 1.5 2013/09/05 18:46:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-2.0.0-r2.ebuild,v 1.1 2013/09/23 12:21:14 jlec Exp $
 
 EAPI=5
 
@@ -22,15 +22,15 @@ IUSE="doc examples test"
 
 DEPEND="!dev-python/pmw:0"
 RDEPEND="${DEPEND}"
-# https://sourceforge.net/tracker/?func=detail&aid=3603487&group_id=10743&atid=110743
+# http://sourceforge.net/p/pmw/bugs/39/
 RESTRICT="test"
 
 S="${WORKDIR}/src"
 
 DOCS="Pmw/README"
 
-src_prepare() {
-	distutils-r1_src_prepare
+python_prepare() {
+	distutils-r1_python_prepare
 	2to3 Pmw
 }
 
@@ -40,7 +40,7 @@ python_test() {
 	cp tests/{flagup.bmp,earthris.gif} . || die
 	for test in tests/*_test.py; do
 		echo "running test "$test
-		PYTHONPATH=tests:../../ "${PYTHON}" $test
+		PYTHONPATH=tests:../../ "${PYTHON}" $test || die
 	done
 }
 
@@ -56,5 +56,5 @@ python_install_all() {
 		doins "${DIR}"/demos/*
 	fi
 
-	distutils-r1_python_install
+	distutils-r1_python_install_all
 }

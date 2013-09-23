@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.3.ebuild,v 1.5 2013/09/05 18:46:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.3-r2.ebuild,v 1.1 2013/09/23 12:21:14 jlec Exp $
 
 EAPI=5
 
@@ -26,31 +26,10 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/src"
 
 DOCS="Pmw/README"
-# https://sourceforge.net/tracker/?func=detail&aid=3603487&group_id=10743&atid=110743
+# http://sourceforge.net/p/pmw/bugs/39/
 RESTRICT="test"
 
-pythone_prepare_all() {
-	local PATCHES=(
-		"${FILESDIR}"/${PN}-1.3.2-install-no-docs.patch
-		"${FILESDIR}"/1.3.2-python2.5.patch
-		)
-	distutils-r1_python_prepare_all
-}
-
-python_install_all() {
-	local DIR="Pmw/Pmw_1_3_3"
-
-	if use doc; then
-		dohtml -a html,gif,py "${DIR}"/doc/*
-	fi
-
-	if use examples; then
-		insinto "/usr/share/doc/${PF}/examples"
-		doins "${DIR}"/demos/*
-	fi
-
-	distutils-r1_python_install
-}
+PATCHES=( "${FILESDIR}"/${P}-install-no-docs.patch )
 
 python_test() {
 	cd "${BUILD_DIR}/lib/Pmw/Pmw_1_3_3/" || die
@@ -58,6 +37,21 @@ python_test() {
 	cp tests/{flagup.bmp,earthris.gif} . || die
 	for test in tests/*_test.py; do
 		echo "running test "$test
-		PYTHONPATH=tests:../../ "${PYTHON}" $test
+		PYTHONPATH=tests:../../ "${PYTHON}" $test || die
 	done
+}
+
+python_install_all() {
+	local DIR="Pmw/Pmw_1_3_3"
+
+	if use doc; then
+		dohtml -a html,gif,py ${DIR}/doc/*
+	fi
+
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins ${DIR}/demos/*
+	fi
+
+	distutils-r1_python_install_all
 }

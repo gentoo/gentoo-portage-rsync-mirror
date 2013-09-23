@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
+<maintainer>
+ <email>chainsaw@gentoo.org</email>
+ <name>Tony Vroon</name>
+</maintainer>
 <use>
  <flag name='device-mapper'>Enable support for device-mapper from <pkg>sys-fs/lvm2</pkg></flag>
  <flag name='minimal'>Do not install the dolilo helper script</flag>

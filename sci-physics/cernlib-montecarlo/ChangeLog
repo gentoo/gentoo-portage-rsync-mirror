@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/cernlib-montecarlo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.20 2013/06/04 19:10:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.21 2013/09/23 12:26:59 jlec Exp $
+
+  23 Sep 2013; Justin Lecher <jlec@gentoo.org>
+  cernlib-montecarlo-2006-r3.ebuild, metadata.xml:
+  Add missing usage of fortran-2.eclass
 
   04 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org>
   cernlib-montecarlo-2006-r3.ebuild:
