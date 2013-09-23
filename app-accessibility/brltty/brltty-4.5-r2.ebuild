@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5-r2.ebuild,v 1.1 2013/08/23 18:19:22 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5-r2.ebuild,v 1.2 2013/09/23 02:06:36 teiresias Exp $
 
 EAPI=5
 
@@ -45,7 +45,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-ldflags.patch \
 		"${FILESDIR}"/${P}-udev.patch \
 		"${FILESDIR}"/${P}-fix-mk4build-cross.patch \
-		"${FILESDIR}"/${P}-range-checking-and-array-bounds.patch
+		"${FILESDIR}"/${P}-range-checking-and-array-bounds.patch \
+		"${FILESDIR}"/${P}-respect-AR.patch
 
 	java-pkg-opt-2_src_prepare
 
@@ -56,6 +57,7 @@ src_prepare() {
 }
 
 src_configure() {
+	tc-export AR LD
 	# override prefix in order to install into /
 	# braille terminal needs to be available as soon in the boot process as
 	# possible
@@ -98,7 +100,6 @@ src_compile() {
 		JAVAC_CONF="${JAVAC} -encoding UTF-8 $(java-pkg_javac-args)"
 	fi
 
-	# workaround for parallel build failure, bug #340903.
 	emake JAVA_JNI_FLAGS="${OUR_JNI_FLAGS}" JAVAC="${JAVAC_CONF}"
 }
 

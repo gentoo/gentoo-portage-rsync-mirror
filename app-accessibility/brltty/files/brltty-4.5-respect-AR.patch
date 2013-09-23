@@ -1,0 +1,12 @@
+diff -Naur brltty-4.5/Programs/Makefile.in brltty-4.5-new/Programs/Makefile.in
+--- brltty-4.5/Programs/Makefile.in	2013-03-27 15:51:35.000000000 -0700
++++ brltty-4.5-new/Programs/Makefile.in	2013-09-19 14:57:56.268106076 -0700
+@@ -387,7 +387,7 @@
+ 	[ ! -f lib.def ] || mv lib.def $(API_DEF)
+ 
+ $(API_ARC): $(API_OBJS)
+-	ar rc $@ $(API_OBJS)
++	$(AR) rc $@ $(API_OBJS)
+ 	$(RANLIB) $@
+ 
+ brlapi_client.$O:
