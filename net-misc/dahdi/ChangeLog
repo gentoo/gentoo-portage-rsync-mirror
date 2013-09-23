@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.51 2013/05/08 16:45:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.52 2013/09/23 16:18:15 chainsaw Exp $
+
+*dahdi-2.7.0.1 (23 Sep 2013)
+
+  23 Sep 2013; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.7.0.1.ebuild:
+  Version bump.
 
   08 May 2013; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.5.0.2-r4.ebuild,
   -dahdi-2.6.1.ebuild, -dahdi-2.6.1-r1.ebuild, -dahdi-2.6.1-r2.ebuild,
