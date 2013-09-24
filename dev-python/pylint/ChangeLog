@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.103 2013/08/21 10:45:07 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.104 2013/09/24 12:41:51 jlec Exp $
+
+  24 Sep 2013; Justin Lecher <jlec@gentoo.org> pylint-0.28.0.ebuild,
+  metadata.xml:
+  Add missing call of distutils-r1_python_install_all()
 
   21 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> -pylint-0.25.0.ebuild,
   -pylint-0.25.1.ebuild, -pylint-0.25.2.ebuild, -pylint-0.26.0.ebuild,
