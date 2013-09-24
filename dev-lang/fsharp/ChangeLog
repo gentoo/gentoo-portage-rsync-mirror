@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/fsharp
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fsharp/ChangeLog,v 1.1 2013/09/24 12:22:10 cynede Exp $
+
+*fsharp-3.0.27 (24 Sep 2013)
+
+  24 Sep 2013; Heather Cynede <cynede@gentoo.org> +fsharp-3.0.27.ebuild,
+  +metadata.xml:
+  new package: dev-lang/fsharp

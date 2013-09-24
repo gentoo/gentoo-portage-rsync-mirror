@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-0.9.12.ebuild,v 1.2 2013/08/09 00:50:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-0.9.14.ebuild,v 1.1 2013/09/24 12:06:52 blueness Exp $
 
-EAPI=4
+EAPI="5"
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then

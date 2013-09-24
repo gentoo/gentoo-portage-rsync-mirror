@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.7.3.ebuild,v 1.1 2013/07/17 14:58:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/kgcc64-4.7.3.ebuild,v 1.2 2013/09/24 12:23:18 jer Exp $
 
 case ${CHOST} in
 	hppa*)    CTARGET=hppa64-${CHOST#*-};;
@@ -14,7 +14,7 @@ export CTARGET
 TOOLCHAIN_ALLOWED_LANGS="c"
 GCC_TARGET_NO_MULTILIB=true
 
-PATCH_VER="1.0"
+PATCH_VER="1.3"
 GCC_FILESDIR=${FILESDIR/${PN}/gcc}
 
 inherit toolchain eutils
