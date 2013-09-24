@@ -9,5 +9,5 @@ LICENSE=vim
 RDEPEND=app-admin/eselect-vi >=app-editors/vim-core-7.3.762[acl?] sys-libs/ncurses >=dev-qt/qtcore-4.7.0:4 >=dev-qt/qtgui-4.7.0:4 acl? ( kernel_linux? ( sys-apps/acl ) ) cscope? ( dev-util/cscope ) gpm? ( sys-libs/gpm ) nls? ( virtual/libintl ) perl? ( dev-lang/perl ) python? ( || ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] ) ) ruby? ( || ( dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) )
 SLOT=0
 SRC_URI=https://github.com/equalsraf/vim-qt/archive/package-20130220.tar.gz -> vim-qt-20130220.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	815e8fef66b552e35e4a8cc95febd22e	python-utils-r1	a4940acdd0a5ebdc58aaedd38de4983a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	06dec86544a782db0a4fd8a90092565d	python-utils-r1	a4940acdd0a5ebdc58aaedd38de4983a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=cd111c32fad3233de7faade4f5fe935b

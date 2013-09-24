@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.983 2013/09/24 15:39:43 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.984 2013/09/24 19:53:06 mgorny Exp $
+
+  24 Sep 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass:
+  Introduce python_gen_any_dep to generate any-of dependencies matching
+  python_check_deps() code.
 
   24 Sep 2013; Maxim Koltsov <maksbotan@gentoo.org> leechcraft.eclass:
   Correct official mirror url in SRC_URI.
