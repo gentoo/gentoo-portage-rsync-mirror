@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.4.0.ebuild,v 1.2 2013/09/23 21:53:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ninja-1.4.0.ebuild,v 1.3 2013/09/24 00:43:47 floppym Exp $
 
 EAPI=5
 
@@ -51,6 +51,7 @@ run_for_build() {
 		local -x AR=$(tc-getBUILD_AR)
 		local -x CXX=$(tc-getBUILD_CXX)
 		local -x CFLAGS=${BUILD_CXXFLAGS}
+		local -x LDFLAGS=${BUILD_LDFLAGS}
 	fi
 	"$@"
 }
