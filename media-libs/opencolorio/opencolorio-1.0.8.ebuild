@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.8.ebuild,v 1.7 2013/07/05 11:04:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/opencolorio-1.0.8.ebuild,v 1.8 2013/09/24 11:01:50 pinkbyte Exp $
 
 EAPI=5
 
@@ -31,8 +31,8 @@ RDEPEND="opengl? (
 	"
 DEPEND="${RDEPEND}
 	doc? (
-		pdf? ( dev-python/sphinx[latex] )
-		!pdf? ( dev-python/sphinx )
+		pdf? ( dev-python/sphinx[latex,${PYTHON_USEDEP}] )
+		!pdf? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	)
 	"
 
