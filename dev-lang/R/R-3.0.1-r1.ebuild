@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.0.ebuild,v 1.3 2013/08/27 15:03:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.1-r1.ebuild,v 1.1 2013/09/24 16:13:24 bicatali Exp $
 
 EAPI=5
 
@@ -9,7 +9,8 @@ inherit bash-completion-r1 autotools eutils flag-o-matic fortran-2 multilib vers
 BCP=${PN}-20130129.bash_completion
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
-SRC_URI="mirror://cran/src/base/R-3/${P}.tar.gz
+SRC_URI="
+	mirror://cran/src/base/R-3/${P}.tar.gz
 	bash-completion? ( http://dev.gentoo.org/~bicatali/distfiles/${BCP}.bz2 )"
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
