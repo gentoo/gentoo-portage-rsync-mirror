@@ -1,9 +1,9 @@
-# Ian Stakenvicius <axs@gentoo.org> (20 Sep 2013)
+# Michał Górny <mgorny@gentoo.org> (24 Sep 2013)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
 # Mask abi_x86_32 on stable until emul-* packages are made
 # fully redundant and end-user experience in resolving
 # flag changes and blockages is generally smooth.
-# Please keep in sync with hardened/linux/amd64.
+# Please keep in sync with default/linux/amd64/13.0.
 app-admin/fam abi_x86_32
 app-admin/gamin abi_x86_32
 app-arch/bzip2 abi_x86_32
