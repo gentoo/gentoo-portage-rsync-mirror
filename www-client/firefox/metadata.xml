@@ -14,6 +14,8 @@
 		for faster binaries. This option will double the compile time.</flag>
 	<flag name="system-cairo">Use the system-wide <pkg>x11-libs/cairo</pkg>
 		Use system cairo instead of bundled.</flag>
+	<flag name="system-icu">Use the system-wide <pkg>dev-libs/icu</pkg>
+		Use system icu instead of bundled.</flag>
 	<flag name="system-jpeg">Use the system-wide <pkg>media-libs/libjpeg-turbo</pkg>
 		Use system jpeg instead of bundled.</flag>
 	<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>

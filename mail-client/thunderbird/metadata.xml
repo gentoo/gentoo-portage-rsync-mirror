@@ -9,8 +9,14 @@
 	<flag name='mozdom'>Enable Mozilla's DOM inspector</flag>
 	<flag name='lightning'>Enable calendar support</flag>
 	<flag name='custom-optimization'>Enable user CFLAGS</flag>
-	 <flag name='system-sqlite'>Use the system-wide <pkg>dev-db/sqlite</pkg>
-		 installation with secure-delete enabled</flag>
+	<flag name="system-cairo">Use the system-wide <pkg>x11-libs/cairo</pkg>
+		Use system cairo instead of bundled.</flag>
+	<flag name="system-icu">Use the system-wide <pkg>dev-libs/icu</pkg>
+		Use system icu instead of bundled.</flag>
+	<flag name="system-jpeg">Use the system-wide <pkg>media-libs/libjpeg-turbo</pkg>
+		Use system jpeg instead of bundled.</flag>
+	<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
+		installation with secure-delete enabled</flag>
 	<flag name="ipc">Use inter-process communication between tabs and plugins.
 		Allows for greater stability in case of plugin crashes</flag>
 	<flag name="gconf">Enable gnome2 gconf support</flag>

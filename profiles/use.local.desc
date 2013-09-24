@@ -2797,6 +2797,9 @@ mail-client/thunderbird:ipc - Use inter-process communication between tabs and p
 mail-client/thunderbird:lightning - Enable calendar support
 mail-client/thunderbird:minimal - Remove the software development kit and headers
 mail-client/thunderbird:mozdom - Enable Mozilla's DOM inspector
+mail-client/thunderbird:system-cairo - Use the system-wide x11-libs/cairo Use system cairo instead of bundled.
+mail-client/thunderbird:system-icu - Use the system-wide dev-libs/icu Use system icu instead of bundled.
+mail-client/thunderbird:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Use system jpeg instead of bundled.
 mail-client/thunderbird:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 mail-client/thunderbird-bin:crashreporter - Enable crash reporter for bugs
 mail-filter/MailScanner:exim - Set mail-mta to used MTA
@@ -6460,6 +6463,7 @@ www-client/firefox:ipc - Use inter-process communication between tabs and plugin
 www-client/firefox:minimal - Prevent sdk and headers from being installed
 www-client/firefox:pgo - Add support for profile-guided optimization using gcc-4.5, for faster binaries. This option will double the compile time.
 www-client/firefox:system-cairo - Use the system-wide x11-libs/cairo Use system cairo instead of bundled.
+www-client/firefox:system-icu - Use the system-wide dev-libs/icu Use system icu instead of bundled.
 www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Use system jpeg instead of bundled.
 www-client/firefox:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/firefox:webm - Use system media-libs/libvpx for HTML5 WebM video support.
