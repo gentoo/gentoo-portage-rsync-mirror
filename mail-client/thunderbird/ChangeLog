@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.243 2013/09/24 00:18:46 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.244 2013/09/24 22:45:02 anarchy Exp $
+
+  24 Sep 2013; Jory A. Pratt <anarchy@gentoo.org> thunderbird-24.0.ebuild:
+  Remove methodjit/tracejit configure option, obsolete
 
 *thunderbird-24.0 (24 Sep 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.0.ebuild,v 1.1 2013/09/24 00:18:46 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.0.ebuild,v 1.2 2013/09/24 22:45:02 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -206,6 +206,7 @@ src_configure() {
 	# Use enable features
 	mozconfig_use_enable gstreamer
 	mozconfig_use_enable pulseaudio
+	mozconfig_use_enable system-cairo
 	mozconfig_use_enable system-sqlite
 	mozconfig_use_with system-jpeg
 	mozconfig_use_with system-icu
@@ -213,10 +214,7 @@ src_configure() {
 	mozconfig_use_enable lightning calendar
 	mozconfig_use_enable ldap
 	# Feature is know to cause problems on hardened
-	mozconfig_use_enable jit methodjit
-	mozconfig_use_enable jit tracejit
 	mozconfig_use_enable jit ion
-	mozconfig_use_enable system-cairo
 
 	# Bug #72667
 	if use mozdom; then
