@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-glance
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-glance/ChangeLog,v 1.6 2013/07/19 02:30:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-glance/ChangeLog,v 1.7 2013/09/24 15:43:57 maksbotan Exp $
+
+*lc-glance-0.6.0 (24 Sep 2013)
+
+  24 Sep 2013; Maxim Koltsov <maksbotan@gentoo.org> +lc-glance-0.6.0.ebuild:
+  Bump LeechCraft to 0.6.0
 
 *lc-glance-0.5.99 (19 Jul 2013)
 

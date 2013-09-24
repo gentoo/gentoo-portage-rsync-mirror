@@ -1,6 +1,12 @@
 # ChangeLog for virtual/leechcraft-notifier
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-notifier/ChangeLog,v 1.6 2013/07/18 12:55:23 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/leechcraft-notifier/ChangeLog,v 1.7 2013/09/24 15:55:12 maksbotan Exp $
+
+*leechcraft-notifier-0.6.0 (24 Sep 2013)
+
+  24 Sep 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-notifier-0.6.0.ebuild:
+  Bump LeechCraft to 0.6.0
 
 *leechcraft-notifier-0.5.99 (18 Jul 2013)
 

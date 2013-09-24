@@ -1,6 +1,12 @@
 # ChangeLog for app-leechcraft/lc-tabsessmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-tabsessmanager/ChangeLog,v 1.6 2013/07/18 12:52:33 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-tabsessmanager/ChangeLog,v 1.7 2013/09/24 15:52:34 maksbotan Exp $
+
+*lc-tabsessmanager-0.6.0 (24 Sep 2013)
+
+  24 Sep 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +lc-tabsessmanager-0.6.0.ebuild:
+  Bump LeechCraft to 0.6.0
 
 *lc-tabsessmanager-0.5.99 (18 Jul 2013)
 
