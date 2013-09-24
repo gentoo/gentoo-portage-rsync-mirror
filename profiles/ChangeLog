@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8269 2013/09/23 13:28:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8270 2013/09/24 04:49:49 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Sep 2013; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Temporarily disable openldap mask until s390 catches up
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> package.mask:
   mask older and vulnerable version of openldap
