@@ -1,6 +1,18 @@
 # ChangeLog for net-firewall/pglinux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.14 2013/05/03 16:43:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/ChangeLog,v 1.15 2013/09/23 23:55:18 hasufell Exp $
+
+*pglinux-2.2.2-r1 (23 Sep 2013)
+
+  23 Sep 2013; Julian Ospald <hasufell@gentoo.org> +pglinux-2.2.2-r1.ebuild,
+  +files/0-pglinux-2.2.2-gentoo-init.patch,
+  +files/1-pglinux-2.2.2-gentoo-init.patch,
+  +files/pglinux-2.2.2-path-variables.patch,
+  +files/0-pglinux-2.2.2-systemd.patch, +files/1-pglinux-2.2.2-systemd.patch,
+  +files/2-pglinux-2.2.2-systemd.patch, +files/3-pglinux-2.2.2-systemd.patch,
+  +files/4-pglinux-2.2.2-systemd.patch, +files/5-pglinux-2.2.2-systemd.patch,
+  +files/6-pglinux-2.2.2-systemd.patch:
+  add systemd support wrt #485674
 
   03 May 2013; Julian Ospald <hasufell@gentoo.org> pglinux-2.2.2.ebuild:
   ensure that empty pgl specific dirs are not removed by PM
