@@ -1,6 +1,10 @@
 # ChangeLog for app-leechcraft/lc-lmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.8 2013/09/24 15:47:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.9 2013/09/24 16:54:44 maksbotan Exp $
+
+  24 Sep 2013; Maxim Koltsov <maksbotan@gentoo.org> lc-lmp-9999.ebuild,
+  metadata.xml:
+  Add libguess dependency and useflag to lc-lmp-9999, thanks to 0xd34df00d
 
 *lc-lmp-0.6.0 (24 Sep 2013)
 
