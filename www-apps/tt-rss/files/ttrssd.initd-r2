@@ -40,10 +40,10 @@ checkconfig() {
 			return 1
 		fi
 
-		# FIXME: This should be done by webapp-config during install
+		# NOTE: This can't be done by webapp-config if we want runtime configurable TTRSSD_GROUP
 		for dir in ${INSTANCE_FOLDERS}; do
 			if [ -d "${instance}/${dir}" ]; then
-				chown -R "apache:${TTRSSD_GROUP}" "${instance}/${dir}" || return 1
+				chown -R ":${TTRSSD_GROUP}" "${instance}/${dir}" || return 1
 				chmod -R g+w "${instance}/${dir}" || return 1
 			fi
 		done
