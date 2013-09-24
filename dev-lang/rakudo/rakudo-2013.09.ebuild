@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2013.05.ebuild,v 1.1 2013/05/31 04:53:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rakudo/rakudo-2013.09.ebuild,v 1.1 2013/09/24 07:36:12 patrick Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl"
 
 src_prepare() {
-	sed -i "s,\$(DOCDIR)/rakudo$,&-${PVR}," tools/build/Makefile.in || die
+	sed -i "s,\$(DOCDIR)/rakudo$,&-${PVR}," tools/build/Makefile-Parrot.in || die
 }
 
 src_configure() {
