@@ -11,4 +11,4 @@ REQUIRED_USE=bindist? ( !faac ) dga? ( X ) dvdnav? ( dvd ) dxr3? ( X ) enca? ( i
 SLOT=0
 SRC_URI=mirror://gentoo/mplayer-1.2_pre20130729.tar.xz !truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=163770caab7820a5479667abb9cdc13c
+_md5_=71bd102be76019fdb25c0da2b6e7ce19

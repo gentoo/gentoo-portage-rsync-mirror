@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.910 2013/08/11 22:52:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.911 2013/09/25 07:18:13 jlec Exp $
+
+  25 Sep 2013; Justin Lecher <jlec@gentoo.org> mplayer-1.2_pre20130729.ebuild,
+  mplayer-9999.ebuild, metadata.xml:
+  Fix typo
 
   11 Aug 2013; Alexis Ballier <aballier@gentoo.org>
   mplayer-1.2_pre20130729.ebuild, mplayer-9999.ebuild:

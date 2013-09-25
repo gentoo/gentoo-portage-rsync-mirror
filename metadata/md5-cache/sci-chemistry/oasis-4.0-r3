@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile install prepare setup
 DEPEND=sci-chemistry/ccp4-apps sci-chemistry/pymol sci-libs/mmdb sci-visualization/gnuplot !minimal? ( sci-chemistry/solve-resolve-bin sci-chemistry/arp-warp-bin ) sci-libs/ccp4-libs virtual/fortran
 DESCRIPTION=A direct-method program for SAD/SIR phasing
-EAPI=3
+EAPI=5
 HOMEPAGE=http://cryst.iphy.ac.cn/Project/protein/protein-I.html
 IUSE=examples +minimal
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
@@ -10,4 +10,4 @@ RDEPEND=sci-chemistry/ccp4-apps sci-chemistry/pymol sci-libs/mmdb sci-visualizat
 SLOT=0
 SRC_URI=http://dev.gentooexperimental.org/~jlec/distfiles/oasis4.0_Linux.zip
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=87571234967c66d1e55c69467ff712fb
+_md5_=9a343c9c1a0629f1455965b7363daed5
