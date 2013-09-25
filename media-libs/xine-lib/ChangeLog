@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.696 2013/09/25 07:57:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.697 2013/09/25 08:05:54 ssuominen Exp $
+
+  25 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> xine-lib-1.2.1-r1.ebuild,
+  xine-lib-1.2.2.ebuild, xine-lib-1.2.3.ebuild:
+  Force <sys-fs/samba-4 for <media-libs/xine-lib-1.2.4 wrt #453532 by Rafał
+  Mużyło
 
 *xine-lib-1.2.4 (25 Sep 2013)
 

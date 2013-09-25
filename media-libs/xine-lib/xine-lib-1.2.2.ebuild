@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.2.ebuild,v 1.9 2013/08/11 21:46:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.2.ebuild,v 1.10 2013/09/25 08:05:54 ssuominen Exp $
 
 EAPI=4
 
@@ -58,7 +58,7 @@ RDEPEND="${NLS_RDEPEND}
 		virtual/opengl
 		)
 	pulseaudio? ( media-sound/pulseaudio )
-	samba? ( net-fs/samba )
+	samba? ( <net-fs/samba-4 )
 	sdl? ( media-libs/libsdl )
 	speex? (
 		media-libs/libogg
