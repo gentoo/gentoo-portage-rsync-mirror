@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.986 2013/09/25 11:19:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.987 2013/09/25 15:18:28 ottxor Exp $
+
+  25 Sep 2013; Christoph Junghans <ottxor@gentoo.org> texlive-module.eclass:
+  Require EAPI>=2, add prefix support
 
   25 Sep 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Support EGIT_REPO_URI being an array. This is needed for tests.

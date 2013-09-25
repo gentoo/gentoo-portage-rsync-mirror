@@ -9,5 +9,5 @@ LICENSE=GPL-2 GPL-1 TeX-other-free
 RDEPEND=>=dev-texlive/texlive-documentation-base-2012 >=app-text/texlive-core-2012
 SLOT=0
 SRC_URI=mirror://gentoo/texlive-module-lshort-russian-2012.tar.xz mirror://gentoo/texlive-module-mpman-ru-2012.tar.xz mirror://gentoo/texlive-module-texlive-ru-2012.tar.xz mirror://gentoo/texlive-module-collection-documentation-russian-2012.tar.xz mirror://gentoo/texlive-module-lshort-russian.doc-2012.tar.xz mirror://gentoo/texlive-module-mpman-ru.doc-2012.tar.xz mirror://gentoo/texlive-module-texlive-ru.doc-2012.tar.xz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	texlive-common	04b9b0d6ae9d9855e9221a0dbf4acd9e	texlive-module	a5b6981f304b0cb5b376d121ec29e656	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	texlive-common	04b9b0d6ae9d9855e9221a0dbf4acd9e	texlive-module	2157230a1ea9d2dd9fc48080c075c922	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=62409c6f231a073899b51c693b5f1155
