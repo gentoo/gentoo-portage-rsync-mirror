@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jadetex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.64 2013/07/07 15:40:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.65 2013/09/25 19:32:13 ottxor Exp $
+
+*jadetex-3.13-r6 (25 Sep 2013)
+
+  25 Sep 2013; Christoph Junghans <ottxor@gentoo.org> +jadetex-3.13-r6.ebuild:
+  EAPI bump (bug #485990)
 
 *jadetex-3.13-r5 (07 Jul 2013)
 
@@ -220,4 +225,3 @@
 
   Version bump for bugfixes to newest stable.  Also, SRC_URI and HOMEPAGE
   information updated.  Thanks to Geert Bevin in bug #1931 for the update.
-
