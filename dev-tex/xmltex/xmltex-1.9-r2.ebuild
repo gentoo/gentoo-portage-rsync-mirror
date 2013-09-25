@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/xmltex-1.9-r2.ebuild,v 1.20 2013/09/25 19:23:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/xmltex-1.9-r2.ebuild,v 1.21 2013/09/25 20:44:03 ottxor Exp $
+
+EAPI=5
 
 inherit latex-package texlive-common
 
@@ -31,7 +33,7 @@ src_compile() {
 
 src_install() {
 	insinto /var/lib/texmf
-	doins -r texmf-var/* || die "failed to install ${PN} formats"
+	doins -r texmf-var/*
 
 	insinto ${TEXMF}/tex/xmltex/base
 	doins *.{xmt,cfg,xml,tex}

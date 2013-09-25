@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">chromium v8</product>
   <announced>September 24, 2013</announced>
-  <revised>September 24, 2013: 1</revised>
+  <revised>September 25, 2013: 2</revised>
   <bug>442096</bug>
   <bug>444826</bug>
   <bug>445246</bug>
@@ -79,7 +79,6 @@
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-5116">CVE-2012-5116</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-5117">CVE-2012-5117</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-5118">CVE-2012-5118</uri>
-    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-5119">CVE-2012-5119</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-5120">CVE-2012-5120</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-5121">CVE-2012-5121</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-5122">CVE-2012-5122</uri>
@@ -231,7 +230,7 @@
     </uri>
   </references>
   <metadata tag="requester" timestamp="Wed, 07 Nov 2012 23:45:36 +0000">ackle</metadata>
-  <metadata tag="submitter" timestamp="Tue, 24 Sep 2013 23:55:10 +0000">
+  <metadata tag="submitter" timestamp="Wed, 25 Sep 2013 20:40:39 +0000">
     phajdan.jr
   </metadata>
 </glsa>

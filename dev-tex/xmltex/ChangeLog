@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/xmltex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.38 2013/09/25 19:23:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.39 2013/09/25 20:44:03 ottxor Exp $
+
+  25 Sep 2013; Christoph Junghans <ottxor@gentoo.org> -xmltex-1.9-r3.ebuild,
+  xmltex-1.9-r2.ebuild:
+  EAPI bump without version bump (bug #486020)
 
 *xmltex-1.9-r3 (25 Sep 2013)
 
