@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.45 2013/09/25 09:18:23 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.46 2013/09/25 22:59:40 floppym Exp $
+
+*requests-1.2.2 (25 Sep 2013)
+
+  25 Sep 2013; Mike Gilbert <floppym@gentoo.org> +requests-1.2.2.ebuild:
+  Restore requests-1.2.2 to satisfy the silly dependency set in python-
+  cinderclient.
 
 *requests-2.0.0 (25 Sep 2013)
 
