@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.7 2013/09/19 09:42:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.8 2013/09/25 10:49:11 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -178,6 +178,8 @@ _git-r3_set_gitdir() {
 	# e.g. git://X/Y.git vs https://X/git/Y.git
 	# (but just one of the prefixes)
 	case "${repo_name}" in
+		# gnome.org... who else?
+		browse/*) repo_name=${repo_name#browse/};;
 		# cgit can proxy requests to git
 		cgit/*) repo_name=${repo_name#cgit/};;
 		# pretty common
