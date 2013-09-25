@@ -1,6 +1,9 @@
 # ChangeLog for www-client/phantomjs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.9 2013/04/29 16:46:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.10 2013/09/25 18:26:55 radhermit Exp $
+
+  25 Sep 2013; Tim Harder <radhermit@gentoo.org> phantomjs-1.9.0.ebuild:
+  Add unzip build dep (bug #485970).
 
   29 Apr 2013; Mike Frysinger <vapier@gentoo.org> phantomjs-1.9.0.ebuild:
   Clean up random problems (but does not fix them all -- see #409991).
