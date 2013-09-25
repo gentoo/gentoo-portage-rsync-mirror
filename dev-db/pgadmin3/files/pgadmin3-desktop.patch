@@ -1,0 +1,13 @@
+diff -Naruw a/pkg/pgadmin3.desktop b/pkg/pgadmin3.desktop
+--- a/pkg/pgadmin3.desktop	2013-02-22 17:21:19.000000000 +0000
++++ b/pkg/pgadmin3.desktop	2013-09-25 14:34:27.717913730 +0000
+@@ -4,7 +4,7 @@
+ Exec=/usr/bin/pgadmin3
+ Icon=/usr/share/pgadmin3/pgAdmin3.png
+ Type=Application
+-Categories=Application;Development;
+-MimeType=text/html
++Categories=Development;
++MimeType=text/html;
+ DocPath=/usr/share/pgadmin3/docs/en_US/index.html
+ Comment=PostgreSQL Tools

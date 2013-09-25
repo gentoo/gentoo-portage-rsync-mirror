@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1189 2013/09/15 10:18:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1190 2013/09/25 17:40:46 tomwij Exp $
+
+*gentoo-sources-3.10.7-r1 (25 Sep 2013)
+
+  25 Sep 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.10.7-r1.ebuild:
+  Revision bump for 3.10.7. Fixed an important buffer overflow in add_page_map()
+  causing kernel panics, backported from 3.10.8; reported by stintel on IRC.
+  Fixed PID Spoofing Privilege Escalation, backported from 3.11, see bug
+  #483614; CVE-2013-4300. Fixed multiple HID security flaws, backported from
+  GregKH's stable queue and Linus' master, see bug #482896; from CVE-2013-2888
+  till CVE-2013-2899. Users that had kernel panics due to buffer overflows or
+  need additional security are suggested to update.
 
 *gentoo-sources-3.4.62 (15 Sep 2013)
 *gentoo-sources-3.11.1 (15 Sep 2013)
