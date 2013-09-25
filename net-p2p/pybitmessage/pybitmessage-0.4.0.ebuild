@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/pybitmessage-0.4.0.ebuild,v 1.1 2013/09/25 12:56:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/pybitmessage-0.4.0.ebuild,v 1.2 2013/09/25 13:50:51 hasufell Exp $
 
 EAPI=5
 
@@ -53,12 +53,12 @@ src_install () {
 
 	python_foreach_impl install_python
 
-	nonfatal dodoc README.md debian/changelog
-	nonfatal doman man/*
+	dodoc README.md debian/changelog
+	doman man/*
 
-	nonfatal newicon -s 24 desktop/icon24.png ${PN}.png
-	nonfatal newicon -s scalable desktop/can-icon.svg ${PN}.svg
-	nonfatal domenu desktop/${PN}.desktop
+	newicon -s 24 desktop/icon24.png ${PN}.png
+	newicon -s scalable desktop/can-icon.svg ${PN}.svg
+	domenu desktop/${PN}.desktop
 }
 
 pkg_preinst() {
