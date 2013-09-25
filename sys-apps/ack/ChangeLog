@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.33 2013/08/25 05:42:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.34 2013/09/25 10:01:40 radhermit Exp $
+
+*ack-2.10 (25 Sep 2013)
+
+  25 Sep 2013; Tim Harder <radhermit@gentoo.org> +ack-2.10.ebuild:
+  Version bump.
 
 *ack-2.08 (25 Aug 2013)
 

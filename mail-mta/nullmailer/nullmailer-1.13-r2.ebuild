@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13.ebuild,v 1.1 2013/07/25 19:10:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.13-r2.ebuild,v 1.2 2013/09/25 10:21:20 jlec Exp $
 
 EAPI=5
 
@@ -45,6 +45,11 @@ RDEPEND="
 
 S=${WORKDIR}/${MY_P}
 
+pkg_setup() {
+	enewgroup nullmail 88
+	enewuser nullmail 88 -1 /var/nullmailer nullmail
+}
+
 src_prepare() {
 #	sed -i -e 's/nullmailer-1.10/nullmailer-1.11/g' \
 #		"${WORKDIR}"/debian/patches/*.diff || die
@@ -57,12 +62,14 @@ src_prepare() {
 	sed -i.orig \
 		-e '/^nullmailer_send_LDADD/s, =, = ../lib/cli++/libcli++.a,' \
 		"${S}"/src/Makefile.am || die "Sed failed"
+	sed -i.orig \
+		-e '/\$(localstatedir)\/trigger/d' \
+		"${S}"/Makefile.am || die "Sed failed"
+	sed \
+		-e "s:^AC_PROG_RANLIB:AC_CHECK_TOOL(AR, ar, false)\nAC_PROG_RANLIB:g" \
+		-i configure.in || die
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in || die
 	eautoreconf
-}
-
-pkg_setup() {
-	enewgroup nullmail 88
-	enewuser nullmail 88 -1 /var/nullmailer nullmail
 }
 
 src_configure() {
@@ -74,37 +81,53 @@ src_configure() {
 
 src_install () {
 	einstall localstatedir="${D}"/var/nullmailer
+
 	dodoc AUTHORS BUGS HOWTO INSTALL ChangeLog NEWS README TODO
+
 	# A small bit of sample config
 	insinto /etc/nullmailer
 	newins "${FILESDIR}"/remotes.sample-${PV} remotes
+
+	# This contains passwords, so should be secure
+	fperms 0640 /etc/nullmailer/remotes
+	fowners root:nullmail /etc/nullmailer/remotes
+
 	# daemontools stuff
 	dodir /var/nullmailer/service{,/log}
+
 	insinto /var/nullmailer/service
 	newins scripts/nullmailer.run run
 	fperms 700 /var/nullmailer/service/run
+
 	insinto /var/nullmailer/service/log
 	newins scripts/nullmailer-log.run run
 	fperms 700 /var/nullmailer/service/log/run
+
 	# usability
-	dodir /usr/$(get_libdir)
 	dosym /usr/sbin/sendmail usr/$(get_libdir)/sendmail
+
 	# permissions stuff
 	keepdir /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	fperms 770 /var/log/nullmailer /var/nullmailer/{tmp,queue}
 	fowners nullmail:nullmail /usr/sbin/nullmailer-queue /usr/bin/mailq
 	fperms 4711 /usr/sbin/nullmailer-queue /usr/bin/mailq
-	fowners nullmail:nullmail /var/log/nullmailer /var/nullmailer/{tmp,queue,trigger}
-	fperms 660 /var/nullmailer/trigger
-	newinitd "${FILESDIR}"/init.d-nullmailer-r2 nullmailer
+
+	newinitd "${FILESDIR}"/init.d-nullmailer-r3 nullmailer
 	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
 pkg_postinst() {
-	[ ! -e "${ROOT}"/var/nullmailer/trigger ] && mkfifo "${ROOT}"/var/nullmailer/trigger
-	chown nullmail:nullmail "${ROOT}"/var/log/nullmailer "${ROOT}"/var/nullmailer/{tmp,queue,trigger}
-	chmod 770 "${ROOT}"/var/log/nullmailer "${ROOT}"/var/nullmailer/{tmp,queue}
-	chmod 660 "${ROOT}"/var/nullmailer/trigger
+	if [ ! -e "${ROOT}"/var/nullmailer/trigger ]; then
+		mkfifo "${ROOT}"/var/nullmailer/trigger
+	fi
+	chown nullmail:nullmail \
+		"${ROOT}"/var/log/nullmailer "${ROOT}"/var/nullmailer/{tmp,queue,trigger} || die
+	chmod 770 "${ROOT}"/var/log/nullmailer "${ROOT}"/var/nullmailer/{tmp,queue} || die
+	chmod 660 "${ROOT}"/var/nullmailer/trigger || die
+
+	# This contains passwords, so should be secure
+	chmod 0640 /etc/nullmailer/remotes || die
+	chown root:nullmail /etc/nullmailer/remotes || die
 
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
 		elog "To create an initial setup, please do:"
@@ -116,6 +139,12 @@ pkg_postinst() {
 	#elog "svscan init.d script and create the following link:"
 	#elog "ln -fs /var/nullmailer/service /service/nullmailer"
 	#echo
+}
+
+pkg_postrm() {
+	if [[ -e "${ROOT}"/var/nullmailer/trigger ]]; then
+		rm "${ROOT}"/var/nullmailer/trigger || die
+	fi
 }
 
 pkg_config() {

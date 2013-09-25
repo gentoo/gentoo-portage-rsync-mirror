@@ -1,9 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.11-r3.ebuild,v 1.1 2013/09/08 11:05:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.11-r3.ebuild,v 1.3 2013/09/25 10:21:20 jlec Exp $
 
 EAPI=4
+
 WANT_AUTOMAKE="1.10.3"
+
 inherit eutils flag-o-matic autotools user multilib systemd
 
 MY_P="${P/_rc/RC}"
@@ -41,6 +43,11 @@ RDEPEND="virtual/shadow
 	!mail-mta/opensmtpd
 	!mail-mta/ssmtp"
 
+pkg_setup() {
+	enewgroup nullmail 88
+	enewuser nullmail 88 -1 /var/nullmailer nullmail
+}
+
 src_prepare() {
 	sed -i -e 's/nullmailer-1.10/nullmailer-1.11/g' \
 		"${WORKDIR}"/debian/patches/*.diff || die
@@ -53,12 +60,12 @@ src_prepare() {
 	sed -i.orig \
 		-e '/^nullmailer_send_LDADD/s, =, = ../lib/cli++/libcli++.a,' \
 		"${S}"/src/Makefile.am || die "Sed failed"
-	eautoreconf
-}
 
-pkg_setup() {
-	enewgroup nullmail 88
-	enewuser nullmail 88 -1 /var/nullmailer nullmail
+	sed \
+		-e "s:^AC_PROG_RANLIB:AC_CHECK_TOOL(AR, ar, false)\nAC_PROG_RANLIB:g" \
+		-i configure.in || die
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.in || die
+	eautoreconf
 }
 
 src_configure() {
