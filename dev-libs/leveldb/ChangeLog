@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/leveldb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.16 2013/09/24 06:42:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/leveldb/ChangeLog,v 1.17 2013/09/25 04:27:51 patrick Exp $
+
+  25 Sep 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Add jbergstroem as co-/proxy-maintainer
 
 *leveldb-1.14.0 (24 Sep 2013)
 
