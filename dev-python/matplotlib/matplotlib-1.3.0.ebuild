@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.4 2013/09/22 01:50:30 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.0.ebuild,v 1.5 2013/09/25 12:34:22 xarthisius Exp $
 
 EAPI=5
 
@@ -100,6 +100,11 @@ python_prepare_all() {
 	sed -i -e 's/matplotlib.pyparsing_py[23]/pyparsing/g' \
 		lib/matplotlib/{mathtext,fontconfig_pattern}.py \
 		|| die "sed pyparsing failed"
+
+	local PATCHES=(
+		# avoid checks needing a X display
+		"${FILESDIR}"/${P}-setup_without_X11.patch
+	)
 
 	distutils-r1_python_prepare_all
 }

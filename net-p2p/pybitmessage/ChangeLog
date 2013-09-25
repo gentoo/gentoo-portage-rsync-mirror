@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/pybitmessage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/ChangeLog,v 1.3 2013/08/05 16:12:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/ChangeLog,v 1.4 2013/09/25 12:56:41 hasufell Exp $
+
+*pybitmessage-0.4.0 (25 Sep 2013)
+
+  25 Sep 2013; Julian Ospald <hasufell@gentoo.org> +pybitmessage-0.4.0.ebuild:
+  add beta version
 
   05 Aug 2013; Julian Ospald <hasufell@gentoo.org> pybitmessage-9999.ebuild:
   fix openssl dep (bindist does not work)
@@ -13,4 +18,3 @@
   22 Jul 2013; Julian Ospald <hasufell@gentoo.org> +pybitmessage-9999.ebuild,
   +metadata.xml:
   initial import wrt #477080
-
