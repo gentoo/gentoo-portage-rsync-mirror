@@ -10,4 +10,4 @@ RDEPEND=emacs? ( virtual/emacs ) mono? ( >=dev-lang/mono-0.95 ) nls? ( virtual/l
 SLOT=0
 SRC_URI=mirror://gnu/libidn/libidn-1.28.tar.gz
 _eclasses_=elisp-common	57a17c02cd0f6f0c423e3d6de5c83f13	eutils	4878e7f88afc0ba0866ac112190b0fd4	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=b787ad60438ab7b77a0b5f5018418831
+_md5_=04095474bff6c14d71cf60115c2caae1

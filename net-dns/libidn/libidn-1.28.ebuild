@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.28.ebuild,v 1.8 2013/09/23 19:17:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-1.28.ebuild,v 1.9 2013/09/25 14:35:20 jer Exp $
 
 EAPI=5
 
@@ -31,6 +31,11 @@ RDEPEND="${COMMON_DEPEND}
 	nls? ( virtual/libintl )
 	java? ( >=virtual/jre-1.5 )
 "
+
+pkg_setup() {
+	mono-env_pkg_setup
+	java-pkg-opt-2_pkg_setup
+}
 
 src_prepare() {
 	# bundled, with wrong bytecode
