@@ -206,6 +206,7 @@ app-admin/sysstat:cron - Install /etc/cron.d script to periodically run sar
 app-admin/sysstat:isag - Install isag, the Interactive System Activity Graph tool
 app-admin/testdisk:ntfs - Include the ability to read NTFS filesystems
 app-admin/testdisk:reiserfs - include reiserfs reading ability
+app-admin/tripwire:setup - Installs mktwpol package including scripts for tripwire installation/setup and tripwire database maintenance
 app-admin/tripwire:ssl - Adds support for Secure Socket Layer connections
 app-admin/tripwire:static - Builds the package statically
 app-admin/ulogd:mysql - Build MySQL output plugin to save packets in a mysql database.

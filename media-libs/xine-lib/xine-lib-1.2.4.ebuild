@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.4.ebuild,v 1.1 2013/09/25 07:57:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.4.ebuild,v 1.2 2013/09/25 08:47:58 ssuominen Exp $
 
 EAPI=5
 
@@ -121,6 +121,11 @@ src_prepare() {
 	else
 		elibtoolize
 	fi
+
+	local x
+	for x in 0 1 2 3; do
+		sed -i -e "/^O${x}_CFLAGS=\"-O${x}\"/d" configure || die
+	done
 }
 
 src_configure() {

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.51 2013/09/03 15:30:16 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.52 2013/09/25 08:45:54 nimiux Exp $
+
+*tripwire-2.4.2.2-r2 (25 Sep 2013)
+
+  25 Sep 2013; Chema Alonso <nimiux@gentoo.org> +tripwire-2.4.2.2-r2.ebuild,
+  +files/tripwire-2.4.2.2-twpol-GENERIC.patch, +files/tripwire,
+  files/tripwire.txt, metadata.xml:
+  Revision bump. Clean up, update of files and inclusion of new "setup" USE
+  flag. Thanks to Chuck Seyboldt
 
   03 Sep 2013; Chema Alonso <nimiux@gentoo.org> metadata.xml:
   Fix tag for spanish description in metadata.xml. Thanks to Chuck Seyboldt
