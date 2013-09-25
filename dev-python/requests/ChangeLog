@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.44 2013/09/25 08:04:14 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.45 2013/09/25 09:18:23 djc Exp $
+
+*requests-2.0.0 (25 Sep 2013)
+
+  25 Sep 2013; Dirkjan Ochtman <djc@gentoo.org> +requests-2.0.0.ebuild:
+  Version bump requests to 2.0.0.
 
   25 Sep 2013; Dirkjan Ochtman <djc@gentoo.org> -requests-0.14.2.ebuild,
   -requests-1.0.4.ebuild, -requests-1.1.0.ebuild, -requests-1.2.0.ebuild,
