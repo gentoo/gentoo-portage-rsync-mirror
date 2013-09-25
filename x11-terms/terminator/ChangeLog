@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.29 2013/04/30 12:59:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.30 2013/09/25 15:51:09 jlec Exp $
+
+*terminator-0.97-r1 (25 Sep 2013)
+
+  25 Sep 2013; Justin Lecher <jlec@gentoo.org> +terminator-0.97-r1.ebuild,
+  +files/terminator-0.97-brightness.patch:
+  Backport patch for brightness setting problems, #485750
 
 *terminator-0.97 (30 Apr 2013)
 
