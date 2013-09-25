@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.21.ebuild,v 1.3 2013/09/21 10:56:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.21.ebuild,v 1.4 2013/09/25 14:15:10 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -156,12 +156,6 @@ src_prepare() {
 			"${ms}"/build/unix/run-mozilla.sh || die "sed failed!"
 	fi
 
-	# Disable gnomevfs extension
-	sed -i -e "s:gnomevfs::" "${S}"/suite/confvars.sh \
-		-e "s:gnomevfs::" "${ms}"/browser/confvars.sh \
-		-e "s:gnomevfs::" "${ms}"/xulrunner/confvars.sh \
-		|| die "Failed to remove gnomevfs extension"
-
 	# Ensure that are plugins dir is enabled as default
 	sed -i -e "s:/usr/lib/mozilla/plugins:/usr/lib/nsbrowser/plugins:" \
 		"${ms}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path for 32bit!"
@@ -231,15 +225,13 @@ src_configure() {
 
 	mozconfig_use_enable gstreamer
 	mozconfig_use_enable pulseaudio
+	mozconfig_use_enable system-cairo
 	mozconfig_use_enable system-sqlite
 	mozconfig_use_with system-jpeg
 	mozconfig_use_with system-icu
 	mozconfig_use_enable system-icu intl-api
 	# Feature is know to cause problems on hardened
-	mozconfig_use_enable jit methodjit
-	mozconfig_use_enable jit tracejit
 	mozconfig_use_enable jit ion
-	mozconfig_use_enable system-cairo
 
 	# Use an objdir to keep things organized.
 	echo "mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/seamonk" \
