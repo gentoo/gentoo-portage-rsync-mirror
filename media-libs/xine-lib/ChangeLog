@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.695 2013/08/27 20:33:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.696 2013/09/25 07:57:15 ssuominen Exp $
+
+*xine-lib-1.2.4 (25 Sep 2013)
+
+  25 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> +xine-lib-1.2.4.ebuild:
+  Version bump.
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org> xine-lib-1.2.3.ebuild,
   xine-lib-1.2.9999.ebuild:
