@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.8 2013/09/25 10:49:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.9 2013/09/25 11:19:09 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -43,6 +43,8 @@ if [[ ! ${_GIT_R3} ]]; then
 # if the first URI does not work.
 #
 # It can be overriden via env using ${PN}_LIVE_REPO variable.
+#
+# Can be a whitespace-separated list or an array.
 #
 # Example:
 # @CODE
@@ -372,7 +374,11 @@ _git-r3_smart_fetch() {
 git-r3_fetch() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local repos=( ${1:-${EGIT_REPO_URI}} )
+	if [[ $(declare -p EGIT_REPO_URI) != "declare -a"* ]]; then
+		local EGIT_REPO_URI=( ${EGIT_REPO_URI} )
+	fi
+
+	local repos=( "${1:-${EGIT_REPO_URI[@]}}" )
 	local branch=${EGIT_BRANCH:+refs/heads/${EGIT_BRANCH}}
 	local remote_ref=${2:-${EGIT_COMMIT:-${branch:-HEAD}}}
 	local local_id=${3:-${CATEGORY}/${PN}/${SLOT}}
@@ -381,11 +387,11 @@ git-r3_fetch() {
 	[[ ${repos[@]} ]] || die "No URI provided and EGIT_REPO_URI unset"
 
 	local -x GIT_DIR
-	_git-r3_set_gitdir ${repos[0]}
+	_git-r3_set_gitdir "${repos[0]}"
 
 	# try to fetch from the remote
 	local r success
-	for r in ${repos[@]}; do
+	for r in "${repos[@]}"; do
 		einfo "Fetching ${remote_ref} from ${r} ..."
 
 		local is_branch lookup_ref
@@ -521,12 +527,16 @@ git-r3_fetch() {
 git-r3_checkout() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local repos=( ${1:-${EGIT_REPO_URI}} )
+	if [[ $(declare -p EGIT_REPO_URI) != "declare -a"* ]]; then
+		local EGIT_REPO_URI=( ${EGIT_REPO_URI} )
+	fi
+
+	local repos=( "${1:-${EGIT_REPO_URI[@]}}" )
 	local out_dir=${2:-${EGIT_CHECKOUT_DIR:-${WORKDIR}/${P}}}
 	local local_id=${3:-${CATEGORY}/${PN}/${SLOT}}
 
 	local -x GIT_DIR GIT_WORK_TREE
-	_git-r3_set_gitdir ${repos[0]}
+	_git-r3_set_gitdir "${repos[0]}"
 	GIT_WORK_TREE=${out_dir}
 	mkdir -p "${GIT_WORK_TREE}"
 
@@ -618,14 +628,18 @@ git-r3_checkout() {
 git-r3_peek_remote_ref() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local repos=( ${1:-${EGIT_REPO_URI}} )
+	if [[ $(declare -p EGIT_REPO_URI) != "declare -a"* ]]; then
+		local EGIT_REPO_URI=( ${EGIT_REPO_URI} )
+	fi
+
+	local repos=( "${1:-${EGIT_REPO_URI[@]}}" )
 	local branch=${EGIT_BRANCH:+refs/heads/${EGIT_BRANCH}}
 	local remote_ref=${2:-${EGIT_COMMIT:-${branch:-HEAD}}}
 
 	[[ ${repos[@]} ]] || die "No URI provided and EGIT_REPO_URI unset"
 
 	local r success
-	for r in ${repos[@]}; do
+	for r in "${repos[@]}"; do
 		einfo "Peeking ${remote_ref} on ${r} ..." >&2
 
 		local is_branch lookup_ref

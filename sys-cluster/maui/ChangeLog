@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/maui
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.25 2011/10/31 10:30:09 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.26 2013/09/25 11:24:32 jlec Exp $
+
+*maui-3.3.1-r3 (25 Sep 2013)
+
+  25 Sep 2013; Justin Lecher <jlec@gentoo.org> +maui-3.3.1-r3.ebuild,
+  +files/maui-3.3.1-torque_4.patch, metadata.xml:
+  Add compatibility patch for torque-4, #479288 thanks Palmer Dabbelt for the
+  patch
 
   31 Oct 2011; Justin Lecher <jlec@gentoo.org> maui-3.3.1-r2.ebuild:
   Fixed quoting

@@ -55,4 +55,65 @@ test_repouri https://github.com/gentoo/identity.gentoo.org.git gentoo_identity.g
 #test_repouri git@bitbucket.org:mgorny/python-exec.git mgorny_python-exec.git
 test_repouri https://mgorny@bitbucket.org/mgorny/python-exec.git mgorny_python-exec.git
 
+
+# 2) real repo tests
+test_file() {
+	local message=${1}
+	local fn=${2}
+	local expect=${3}
+
+	tbegin "${message}"
+	if [[ ! -f ${fn} ]]; then
+		tend 1
+		eerror "${fn} does not exist (not checked out?)"
+	else
+		local got=$(<"${fn}")
+
+		if [[ ${got} != ${expect} ]]; then
+			tend 1
+			eerror "${fn}, expected: ${expect}, got: ${got}"
+		else
+			tend 0
+			return 0
+		fi
+	fi
+	return 1
+}
+
+test_repo_clean() {
+	(
+		mkdir repo
+		cd repo
+		git init -q
+		echo test > file
+		git add file
+		git commit -m 1 -q
+		echo other-text > file
+		git add file
+		git commit -m 2 -q
+	) || die "unable to prepare repo"
+
+	# we need to use an array to preserve whitespace
+	EGIT_REPO_URI=(
+		'ext::git daemon --export-all --base-path=. --inetd %G/repo'
+	)
+
+	tbegin "fetching from a simple repo"
+	( git-r3_fetch ) &> fetch.log
+	if tend ${?}; then
+		tbegin "checkout of a simple repo"
+		( git-r3_checkout ) &>> fetch.log
+		if tend ${?}; then
+			test_file "results of checking out a simple repo" \
+				"${WORKDIR}/${P}/file" other-text \
+				&& return 0
+		fi
+	fi
+
+	cat fetch.log
+	return 1
+}
+
+test_repo_clean
+
 texit

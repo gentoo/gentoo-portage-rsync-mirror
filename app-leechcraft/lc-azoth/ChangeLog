@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-azoth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.13 2013/09/24 18:10:49 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/ChangeLog,v 1.14 2013/09/25 11:10:59 pinkbyte Exp $
+
+  25 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> lc-azoth-9999.ebuild,
+  metadata.xml:
+  Add USE-flag and dependency for Twitter plugin, minor dependency corrections,
+  thanks to 0xd34df00d
 
   24 Sep 2013; Maxim Koltsov <maksbotan@gentoo.org> lc-azoth-0.5.90.ebuild,
   lc-azoth-0.5.99.ebuild, lc-azoth-0.6.0.ebuild, lc-azoth-9999.ebuild:
