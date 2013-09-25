@@ -4,11 +4,11 @@ DESCRIPTION=A useful tool for running RAID systems - it can be used as a replace
 EAPI=4
 HOMEPAGE=http://neil.brown.name/blog/mdadm
 IUSE=static
-KEYWORDS=alpha amd64 hppa ia64 ~mips ~ppc ppc64 sparc x86
+KEYWORDS=alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86
 LICENSE=GPL-2
 RDEPEND=!<sys-apps/baselayout-2.1-r1 !<sys-apps/openrc-0.10 >=sys-apps/util-linux-2.16
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/raid/mdadm/mdadm-3.2.6.tar.bz2
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=13255c1ede631cede2b37e7681c6214d
+_md5_=762e12ef24e6bf0a7f4237a37c3a5c00

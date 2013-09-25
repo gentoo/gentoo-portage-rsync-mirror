@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.28 2013/08/14 11:29:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.29 2013/09/25 17:03:13 zerochaos Exp $
+
+  25 Sep 2013; Rick Farina <zerochaos@gentoo.org>
+  baselayout-prefix-2.2-r2.ebuild:
+  adding arm keywords
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org>
   baselayout-prefix-1.12.14-r1.ebuild:

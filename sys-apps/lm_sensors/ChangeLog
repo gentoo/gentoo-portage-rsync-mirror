@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.141 2013/09/23 19:21:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.142 2013/09/25 17:29:07 ago Exp $
+
+  25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lm_sensors-3.3.3-r3.ebuild:
+  Stable for ppc, wrt bug #480104
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lm_sensors-3.3.3-r3.ebuild:
   Stable for sparc, wrt bug #480104

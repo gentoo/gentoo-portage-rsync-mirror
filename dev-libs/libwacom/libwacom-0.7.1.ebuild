@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.7.1.ebuild,v 1.7 2013/09/23 19:21:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwacom/libwacom-0.7.1.ebuild,v 1.8 2013/09/25 17:21:51 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/linuxwacom/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ia64 ~ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 sparc x86"
 IUSE="doc static-libs"
 
 RDEPEND="dev-libs/glib:2

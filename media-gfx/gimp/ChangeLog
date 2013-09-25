@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.415 2013/09/23 19:18:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.416 2013/09/25 17:25:37 ago Exp $
+
+  25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gimp-2.8.6.ebuild:
+  Stable for ppc, wrt bug #481736
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gimp-2.8.6.ebuild:
   Stable for sparc, wrt bug #481736

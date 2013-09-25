@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.34 2013/09/23 19:19:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.35 2013/09/25 17:22:50 ago Exp $
+
+  25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xdg-user-dirs-0.15.ebuild:
+  Stable for ppc, wrt bug #485578
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xdg-user-dirs-0.15.ebuild:
   Stable for sparc, wrt bug #485578

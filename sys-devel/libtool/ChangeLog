@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.208 2013/09/23 19:22:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.209 2013/09/25 17:31:14 ago Exp $
+
+  25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libtool-2.4.2.ebuild:
+  Stable for ppc, wrt bug #477178
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libtool-2.4.2.ebuild:
   Stable for sparc, wrt bug #477178
