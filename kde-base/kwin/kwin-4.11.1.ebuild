@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.11.1.ebuild,v 1.1 2013/09/03 19:04:35 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.11.1.ebuild,v 1.2 2013/09/25 18:55:57 johu Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ COMMONDEPEND="
 	wayland? ( >=media-libs/mesa-9.0[egl(+),wayland] )
 "
 DEPEND="${COMMONDEPEND}
+	x11-libs/xcb-util-renderutil
 	x11-proto/compositeproto
 	x11-proto/damageproto
 	x11-proto/fixesproto

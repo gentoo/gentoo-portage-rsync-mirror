@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.1.9-r2.ebuild,v 1.2 2013/06/16 18:06:29 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.1.9-r2.ebuild,v 1.3 2013/09/25 18:36:00 swift Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -20,7 +20,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=sys-libs/libselinux-2.0[python]
-		app-admin/setools[python]"
+		app-admin/setools[python]
+		sec-policy/selinux-base"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

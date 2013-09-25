@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.354 2013/09/03 19:50:23 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.355 2013/09/25 18:55:57 johu Exp $
+
+  25 Sep 2013; Johannes Huber <johu@gentoo.org> kwin-4.10.5.ebuild,
+  kwin-4.11.1.ebuild:
+  Add missing DEPEND on x11-libs/xcb-util-renderutil wrt bug #485372.
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kwin-4.11.0.ebuild:
   Drop KDE 4.11.0

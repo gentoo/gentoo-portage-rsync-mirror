@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.10.5.ebuild,v 1.10 2013/08/02 14:29:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.10.5.ebuild,v 1.11 2013/09/25 18:55:57 johu Exp $
 
 EAPI=5
 
@@ -38,6 +38,7 @@ COMMONDEPEND="
 	)
 "
 DEPEND="${COMMONDEPEND}
+	x11-libs/xcb-util-renderutil
 	x11-proto/compositeproto
 	x11-proto/damageproto
 	x11-proto/fixesproto

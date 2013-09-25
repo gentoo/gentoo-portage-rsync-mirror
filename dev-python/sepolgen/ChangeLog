@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.35 2013/09/17 08:51:27 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.36 2013/09/25 18:36:00 swift Exp $
+
+  25 Sep 2013; Sven Vermeulen <swift@gentoo.org> sepolgen-1.1.9-r2.ebuild,
+  sepolgen-1.1.9-r3.ebuild, sepolgen-1.1.9-r4.ebuild:
+  Adding dep on selinux-base as we need /etc/selinux/config during installation
 
 *sepolgen-1.1.9-r4 (17 Sep 2013)
 

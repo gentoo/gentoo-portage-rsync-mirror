@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-laure
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-laure/ChangeLog,v 1.7 2013/09/24 15:46:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-laure/ChangeLog,v 1.8 2013/09/25 18:38:05 maksbotan Exp $
+
+  25 Sep 2013; Maxim Koltsov <maksbotan@gentoo.org> -lc-laure-9999.ebuild:
+  Drop lc-laure-9999, thanks to 0xd34df00d
 
 *lc-laure-0.6.0 (24 Sep 2013)
 

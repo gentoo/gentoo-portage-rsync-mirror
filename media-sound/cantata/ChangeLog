@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cantata
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.20 2013/09/04 17:36:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/ChangeLog,v 1.21 2013/09/25 18:36:20 johu Exp $
+
+  25 Sep 2013; Johannes Huber <johu@gentoo.org>
+  +files/cantata-1.1.2-no-taglib.patch, cantata-1.1.2.ebuild:
+  Add upstream patch to fix build without use taglib wrt bug #484126.
 
 *cantata-1.1.2 (04 Sep 2013)
 
