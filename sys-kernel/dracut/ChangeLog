@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.129 2013/09/17 09:42:09 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.130 2013/09/25 21:31:38 aidecoe Exp $
+
+*dracut-033-r1 (25 Sep 2013)
+
+  25 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-033-r1.ebuild:
+  Dropped optimization flag, because it is no longer an option. dracut-install
+  binary is installed into libdir, therefore it was required to set target lib
+  directory according to multilib rules.
+
+  It fixes bug #485218 and bug #485202.
 
 *dracut-033 (14 Sep 2013)
 
