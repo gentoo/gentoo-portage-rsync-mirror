@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/lanmap-81-r1.ebuild,v 1.4 2013/02/22 20:59:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/lanmap-81-r1.ebuild,v 1.5 2013/09/26 01:29:27 zerochaos Exp $
 
-EAPI=3
+EAPI=5
 
 inherit toolchain-funcs eutils
 
@@ -17,7 +17,8 @@ IUSE=""
 
 RDEPEND="net-libs/libpcap
 	 media-gfx/graphviz"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}"/${PN}
 
@@ -28,10 +29,10 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -j1 CC="$(tc-getCC)" || die
+	emake -j1 CC="$(tc-getCC)"
 }
 
 src_install() {
-	emake prefix="${ED}"/usr install || die
-	dodoc {README,TODO}.txt || die
+	emake prefix="${ED}"/usr install
+	dodoc {README,TODO}.txt
 }

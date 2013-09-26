@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/lanmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.6 2013/02/22 20:59:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/ChangeLog,v 1.7 2013/09/26 01:29:27 zerochaos Exp $
+
+  26 Sep 2013; Rick Farina <zerochaos@gentoo.org> lanmap-81-r1.ebuild:
+  fix bug 485878 and bump eapi
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> lanmap-81-r1.ebuild:
   Add ~arm-linux keyword.
