@@ -1,0 +1,26 @@
+https://bugzilla.mozilla.org/show_bug.cgi?id=920899
+
+diff -r 279078670022 security/nss/cmd/fipstest/fipstest.c
+--- a/security/nss/cmd/fipstest/fipstest.c	Wed Mar 27 17:03:34 2013 -0400
++++ b/security/nss/cmd/fipstest/fipstest.c	Thu Sep 26 00:58:04 2013 -0400
+@@ -3616,10 +3616,10 @@ void hmac_test(char *reqfn)
+         goto loser;
+     }      
+     msg = PORT_ZAlloc(msgLen);
+-    memset(msg, 0, msgLen);
+     if (msg == NULL) {
+         goto loser;
+     } 
++    memset(msg, 0, msgLen);
+ 
+     req = fopen(reqfn, "r");
+     resp = stdout;
+@@ -3677,7 +3677,7 @@ void hmac_test(char *reqfn)
+             keyLen = 0; 
+             TLen = 0;
+             memset(key, 0, sizeof key);     
+-            memset(msg, 0, sizeof msg);  
++            memset(msg, 0, msgLen);
+             memset(HMAC, 0, sizeof HMAC);
+             continue;
+         }

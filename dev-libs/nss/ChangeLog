@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.310 2013/09/01 14:26:55 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.311 2013/09/26 06:02:24 vapier Exp $
+
+*nss-3.15.1-r2 (26 Sep 2013)
+
+  26 Sep 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/nss-3.15.1-fipstest-warnings.patch, +nss-3.15.1-r2.ebuild:
+  Drop library renaming & symlinking as the SONAME is the plain .so file.
+  Simplify the PRELINK setup.  Fix a build warning with the fipstest code.
 
   01 Sep 2013; Ian Stakenvicius <axs@gentoo.org> nss-3.15.1-r1.ebuild:
   Restrict tests to avoid running tests with do not exist, bug 474056

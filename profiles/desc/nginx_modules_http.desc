@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.16 2013/05/23 20:29:05 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/nginx_modules_http.desc,v 1.17 2013/09/26 06:19:14 dev-zero Exp $
 
 # This file contains descriptions of NGINX_MODULES_HTTP USE_EXPAND flags.
 
@@ -16,6 +16,7 @@ charset - This module can reencode data of one encoding into another.
 dav - This module adds the HTTP and WebDAV methods PUT, DELETE, MKCOL, COPY and MOVE.
 dav_ext - Add missing WebDAV methods PROPFIND & OPTIONS to the existing WebDAV module.
 degradation - Allows to return 204 or 444 code for some locations on low memory condition (reliable on FreeBSD only)
+echo - Brings shell-style goodies to Nginx config file.
 empty_gif - This module keeps a 1x1 transparent GIF in memory that can be served very quickly.
 fancyindex - This module makes possible the generation of file listings, like the built-in autoindex module does, but adding a touch of style.
 fastcgi - This module allows Nginx to interact with FastCGI processes and control what parameters are passed to the process.
