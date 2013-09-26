@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5-r2.ebuild,v 1.13 2013/08/28 15:59:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5-r2.ebuild,v 1.14 2013/09/26 19:17:17 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -90,17 +90,18 @@ src_prepare() {
 	rm -r Modules/_ctypes/libffi* || die
 	rm -r Modules/zlib || die
 
-	local excluded_patches
-	if ! tc-is-cross-compiler; then
-		excluded_patches="*_all_crosscompile.patch"
+	if tc-is-cross-compiler; then
+		local EPATCH_EXCLUDE="*_regenerate_platform-specific_modules.patch"
 	fi
 
-	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_SUFFIX="patch" \
-		epatch "${WORKDIR}/${PV}-${PATCHSET_REVISION}"
+	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PV}-${PATCHSET_REVISION}"
 
 	epatch "${FILESDIR}/${P}-library-path.patch" #474882
 	epatch "${FILESDIR}/${P}-re_unsigned_ptrdiff.patch" #476426
 	epatch "${FILESDIR}/CVE-2013-4238_py27.patch"
+
+	# Fix for cross-compiling.
+	epatch "${FILESDIR}/python-2.7.5-nonfatal-compileall.patch"
 
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \
@@ -164,27 +165,6 @@ src_configure() {
 		use hardened && replace-flags -O3 -O2
 	fi
 
-	# Run the configure scripts in parallel.
-	multijob_init
-
-	mkdir -p "${WORKDIR}"/{${CBUILD},${CHOST}}
-
-	if tc-is-cross-compiler; then
-		(
-		multijob_child_init
-		cd "${WORKDIR}"/${CBUILD} >/dev/null
-		OPT="-O1" CFLAGS="" CPPFLAGS="" LDFLAGS="" CC="" \
-		"${S}"/configure \
-			--{build,host}=${CBUILD} \
-			|| die "cross-configure failed"
-		) &
-		multijob_post_fork
-
-		# The configure script assumes it's buggy when cross-compiling.
-		export ac_cv_buggy_getaddrinfo=no
-		export ac_cv_have_long_long_format=yes
-	fi
-
 	# Export CXX so it ends up in /usr/lib/python2.X/config/Makefile.
 	tc-export CXX
 	# The configure script fails to use pkg-config correctly.
@@ -204,7 +184,10 @@ src_configure() {
 		dbmliborder+="${dbmliborder:+:}bdb"
 	fi
 
-	cd "${WORKDIR}"/${CHOST}
+	BUILD_DIR="${WORKDIR}/${CHOST}"
+	mkdir -p "${BUILD_DIR}" || die
+	cd "${BUILD_DIR}" || die
+
 	ECONF_SOURCE="${S}" OPT="" \
 	econf \
 		--with-fpectl \
@@ -219,42 +202,14 @@ src_configure() {
 		--enable-loadable-sqlite-extensions \
 		--with-system-expat \
 		--with-system-ffi
-
-	if tc-is-cross-compiler; then
-		# Modify the Makefile.pre so we don't regen for the host/ one.
-		# We need to link the host python programs into $PWD and run
-		# them from here because the distutils sysconfig module will
-		# parse Makefile/etc... from argv[0], and we need it to pick
-		# up the target settings, not the host ones.
-		sed -i \
-			-e '1iHOSTPYTHONPATH = ./hostpythonpath:' \
-			-e '/^HOSTPYTHON/s:=.*:= ./hostpython:' \
-			-e '/^HOSTPGEN/s:=.*:= ./Parser/hostpgen:' \
-			Makefile{.pre,} || die "sed failed"
-	fi
-
-	multijob_finish
 }
 
 src_compile() {
-	if tc-is-cross-compiler; then
-		cd "${WORKDIR}"/${CBUILD}
-		# Disable as many modules as possible -- but we need a few to install.
-		PYTHON_DISABLE_MODULES=$(
-			sed -n "/Extension('/{s:^.*Extension('::;s:'.*::;p}" "${S}"/setup.py | \
-				egrep -v '(unicodedata|time|cStringIO|_struct|binascii)'
-		) \
-		PTHON_DISABLE_SSL="1" \
-		SYSROOT= \
-		emake
-		# See comment in src_configure about these.
-		ln python ../${CHOST}/hostpython || die
-		ln Parser/pgen ../${CHOST}/Parser/hostpgen || die
-		ln -s ../${CBUILD}/build/lib.*/ ../${CHOST}/hostpythonpath || die
-	fi
+	# Avoid invoking pgen for cross-compiles.
+	touch Include/graminit.h Python/graminit.c
 
-	cd "${WORKDIR}"/${CHOST}
-	default
+	cd "${BUILD_DIR}" || die
+	emake
 
 	# Work around bug 329499. See also bug 413751 and 457194.
 	if has_version dev-libs/libffi[pax_kernel]; then
@@ -271,7 +226,7 @@ src_test() {
 		return
 	fi
 
-	cd "${WORKDIR}"/${CHOST}
+	cd "${BUILD_DIR}" || die
 
 	# Skip failing tests.
 	local skipped_tests="distutils gdb"
@@ -305,7 +260,7 @@ src_test() {
 src_install() {
 	local libdir=${ED}/usr/$(get_libdir)/python${SLOT}
 
-	cd "${WORKDIR}"/${CHOST}
+	cd "${BUILD_DIR}" || die
 	emake DESTDIR="${D}" altinstall
 
 	sed -e "s/\(LDFLAGS=\).*/\1/" -i "${libdir}/config/Makefile" || die "sed failed"
@@ -354,9 +309,8 @@ src_install() {
 
 	# if not using a cross-compiler, use the fresh binary
 	if ! tc-is-cross-compiler; then
-		local PYTHON=./python \
-			LD_LIBRARY_PATH=${LD_LIBRARY_PATH+${LD_LIBRARY_PATH}:}.
-		export LD_LIBRARY_PATH
+		local PYTHON=./python
+		local -x LD_LIBRARY_PATH=${LD_LIBRARY_PATH+${LD_LIBRARY_PATH}:}.
 	fi
 
 	echo "EPYTHON='${EPYTHON}'" > epython.py
