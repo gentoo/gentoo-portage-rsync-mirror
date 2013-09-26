@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.9 2013/09/25 11:19:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.10 2013/09/26 12:38:38 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -86,8 +86,10 @@ if [[ ! ${_GIT_R3} ]]; then
 # a fair number of limitations. Therefore, if you'd like the eclass to
 # perform complete clones instead, set this to a non-null value.
 #
-# This variable is to be set in make.conf. Ebuilds are not allowed
-# to set it.
+# This variable can be set in make.conf and ebuilds. The make.conf
+# value specifies user-specific default, while ebuilds may use it
+# to force deep clones when the server does not support shallow clones
+# (e.g. Google Code).
 
 # @FUNCTION: _git-r3_env_setup
 # @INTERNAL

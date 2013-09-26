@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15133 2013/09/26 09:45:23 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15134 2013/09/26 12:55:16 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -100,12 +100,6 @@ dev-db/edb
 # - do not compile in some USE-flag combinations
 # - requires at least gcc 4.7(and possibly even 4.8 for some features)
 >=dev-libs/botan-1.11.0
-
-# Michał Górny <mgorny@gentoo.org> (17 Sep 2013)
-# Mask for testing. It enables some new eclass code, some new distutils
-# magic and certainly will trigger some random failures.
-# http://thread.gmane.org/gmane.linux.gentoo.devel/88175
->=dev-python/python-exec-2
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
 # removal on ~15 Oct 2013
