@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.9999.ebuild,v 1.4 2013/09/14 09:35:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.9999.ebuild,v 1.5 2013/09/26 00:58:07 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -61,7 +61,7 @@ PATCHES=(
 python_install() {
 	distutils-r1_python_install
 	newconfd "${FILESDIR}/glance.confd" glance
-	newinitd "${FILESDIR}/glance.initd" glance
+	newinitd "${FILESDIR}/glance-2.initd" glance
 
 	for function in api registry scrubber; do
 		dosym /etc/init.d/glance /etc/init.d/glance-${function}
