@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/colorize
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/colorize/ChangeLog,v 1.1 2013/08/14 07:39:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/colorize/ChangeLog,v 1.2 2013/09/26 05:26:23 graaff Exp $
+
+*colorize-0.6.0 (26 Sep 2013)
+
+  26 Sep 2013; Hans de Graaff <graaff@gentoo.org> +colorize-0.6.0.ebuild:
+  Version bump.
 
 *colorize-0.5.8 (14 Aug 2013)
 
