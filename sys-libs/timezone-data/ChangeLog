@@ -1,6 +1,23 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.285 2013/09/26 11:17:52 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.288 2013/09/26 12:26:58 djc Exp $
+
+  26 Sep 2013; Dirkjan Ochtman <djc@gentoo.org> timezone-data-2013d.ebuild:
+  Stabilize 2013d for everyone.
+
+  26 Sep 2013; Dirkjan Ochtman <djc@gentoo.org> -timezone-data-2012a.ebuild,
+  -timezone-data-2012b.ebuild, -timezone-data-2012c.ebuild,
+  -timezone-data-2012d.ebuild, -timezone-data-2012e.ebuild,
+  -timezone-data-2012f.ebuild, -timezone-data-2012g.ebuild,
+  -timezone-data-2012h.ebuild, -timezone-data-2012i.ebuild:
+  Remove old versions.
+
+*timezone-data-2013f (26 Sep 2013)
+
+  26 Sep 2013; Dirkjan Ochtman <djc@gentoo.org> +files/2013f-makefile.patch,
+  +timezone-data-2013f.ebuild:
+  Version bump timezone-data to 2013f (bug 485720), with prefix changes (bug
+  433738).
 
   26 Sep 2013; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
   Add myself to maintainers (okayed by lu_zero in IRC).

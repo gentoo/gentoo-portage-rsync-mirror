@@ -1,6 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2013d.ebuild,v 1.2 2013/09/26 12:26:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2013f.ebuild,v 1.1 2013/09/26 12:22:01 djc Exp $
+
+EAPI=3
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -15,28 +17,30 @@ SRC_URI="http://www.iana.org/time-zones/repository/releases/tzdata${data_ver}.ta
 
 LICENSE="BSD public-domain"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="nls elibc_FreeBSD elibc_glibc"
 
 RDEPEND="!<sys-libs/glibc-2.3.5"
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${PN}-2013d-makefile.patch
+src_prepare() {
+	epatch "${FILESDIR}"/2013f-makefile.patch
 	tc-is-cross-compiler && cp -pR "${S}" "${S}"-native
 }
 
 src_compile() {
 	local LDLIBS
 	tc-export CC
-	use elibc_FreeBSD && append-flags -DSTD_INSPIRED #138251
+	if use elibc_FreeBSD || use elibc_Darwin ; then
+		append-flags -DSTD_INSPIRED #138251
+	fi
 	export NLS=$(usex nls 1 0)
 	if use nls && ! use elibc_glibc ; then
 		LDLIBS+=" -lintl" #154181
 	fi
 	emake \
+		TOPDIR="${EPREFIX}/usr" \
 		CFLAGS="${CPPFLAGS} ${CFLAGS} -std=gnu99" \
 		LDFLAGS="${LDFLAGS}" \
 		LDLIBS="${LDLIBS}" \
@@ -54,21 +58,21 @@ src_compile() {
 src_install() {
 	local zic=""
 	tc-is-cross-compiler && zic="zic=${S}-native/zic"
-	emake install ${zic} DESTDIR="${D}" || die
-	rm -rf "${D}"/usr/share/zoneinfo-leaps
+	emake install ${zic} DESTDIR="${ED}"
+	rm -rf "${ED}"/usr/share/zoneinfo-leaps
 	dodoc README Theory
 	dohtml *.htm
 }
 
 pkg_config() {
 	# make sure the /etc/localtime file does not get stale #127899
-	local tz src etc_lt="${ROOT}etc/localtime"
+	local tz src etc_lt="${EROOT}etc/localtime"
 
 	if has_version '<sys-apps/baselayout-2' ; then
-		src="${ROOT}etc/conf.d/clock"
+		src="${EROOT}etc/conf.d/clock"
 		tz=$(unset TIMEZONE ; source "${src}" ; echo ${TIMEZONE-FOOKABLOIE})
 	else
-		src="${ROOT}etc/timezone"
+		src="${EROOT}etc/timezone"
 		if [[ -e ${src} ]] ; then
 			tz=$(sed -e 's:#.*::' -e 's:[[:space:]]*::g' -e '/^$/d' "${src}")
 		else
@@ -84,7 +88,7 @@ pkg_config() {
 			# if /etc/localtime is a symlink somewhere, assume they
 			# know what they're doing and they're managing it themselves
 			if [[ ! -L ${etc_lt} ]] ; then
-				cp -f "${ROOT}"/usr/share/zoneinfo/Factory "${etc_lt}"
+				cp -f "${EROOT}"/usr/share/zoneinfo/Factory "${etc_lt}"
 				elog "Setting ${etc_lt} to Factory."
 			else
 				elog "Assuming your ${etc_lt} symlink is what you want; skipping update."
@@ -95,14 +99,14 @@ pkg_config() {
 		return 0
 	fi
 
-	if [[ ! -e ${ROOT}/usr/share/zoneinfo/${tz} ]] ; then
+	if [[ ! -e ${EROOT}/usr/share/zoneinfo/${tz} ]] ; then
 		elog "You have an invalid TIMEZONE setting in ${src}"
 		elog "Your ${etc_lt} has been reset to Factory; enjoy!"
 		tz="Factory"
 	fi
-	einfo "Updating ${etc_lt} with ${ROOT}usr/share/zoneinfo/${tz}"
+	einfo "Updating ${etc_lt} with ${EROOT}usr/share/zoneinfo/${tz}"
 	[[ -L ${etc_lt} ]] && rm -f "${etc_lt}"
-	cp -f "${ROOT}"/usr/share/zoneinfo/"${tz}" "${etc_lt}"
+	cp -f "${EROOT}"/usr/share/zoneinfo/"${tz}" "${etc_lt}"
 }
 
 pkg_postinst() {
