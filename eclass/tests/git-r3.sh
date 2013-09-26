@@ -41,178 +41,152 @@ test_no_file() {
 }
 
 test_repo_clean() {
-	local repo=${FUNCNAME#test_}
-	local P=${P}_${repo}
+	local P=${P}_${FUNCNAME#test_}
 
 	(
-		mkdir ${repo}
-		cd ${repo}
+		mkdir repo
+		cd repo
 		git init -q
 		echo test > file
 		git add file
 		git commit -m 1 -q
-		echo other-text > file
-		git add file
+		echo other-text > file2
+		git add file2
 		git commit -m 2 -q
 	) || die "unable to prepare repo"
 
 	# we need to use an array to preserve whitespace
 	local EGIT_REPO_URI=(
-		"ext::git daemon --export-all --base-path=. --inetd %G/${repo}"
+		"ext::git daemon --export-all --base-path=. --inetd %G/repo"
 	)
 
 	tbegin "fetching from a simple repo"
 	(
 		git-r3_src_unpack
-		test_file "${WORKDIR}/${P}/file" other-text
+		test_file "${WORKDIR}/${P}/file" test && \
+		test_file "${WORKDIR}/${P}/file2" other-text
 	) &>fetch.log
 
 	eend ${?} || cat fetch.log
 }
 
 test_repo_revert() {
-	local repo=${FUNCNAME#test_}
-	local P=${P}_${repo}
+	local P=${P}_${FUNCNAME#test_}
 
 	(
-		mkdir ${repo}
-		cd ${repo}
-		git init -q
-		echo test > file
-		git add file
-		git commit -m 1 -q
-		echo other-text > file2
-		git add file2
-		git commit -m 2 -q
+		cd repo
 		git revert -n HEAD^
-		git commit -m 3 -q
+		git commit -m r1 -q
 	) || die "unable to prepare repo"
 
 	# we need to use an array to preserve whitespace
 	local EGIT_REPO_URI=(
-		"ext::git daemon --export-all --base-path=. --inetd %G/${repo}"
+		"ext::git daemon --export-all --base-path=. --inetd %G/repo"
 	)
 
-	tbegin "fetching from a repo with reverted commit"
+	tbegin "fetching revert"
 	(
 		git-r3_src_unpack
-		test_file "${WORKDIR}/${P}/file2" other-text \
-			&& test_no_file "${WORKDIR}/${P}/file"
+		test_no_file "${WORKDIR}/${P}/file" && \
+		test_file "${WORKDIR}/${P}/file2" other-text
+	) &>fetch.log
+
+	eend ${?} || cat fetch.log
+}
+
+test_repo_branch() {
+	local P=${P}_${FUNCNAME#test_}
+
+	(
+		cd repo
+		git branch -q other-branch HEAD^
+		git checkout -q other-branch
+		echo one-more > file3
+		git add file3
+		git commit -m 3 -q
+		git checkout -q master
+	) || die "unable to prepare repo"
+
+	# we need to use an array to preserve whitespace
+	local EGIT_REPO_URI=(
+		"ext::git daemon --export-all --base-path=. --inetd %G/repo"
+	)
+	local EGIT_BRANCH=other-branch
+
+	tbegin "switching branches"
+	(
+		git-r3_src_unpack
+		test_file "${WORKDIR}/${P}/file" test && \
+		test_file "${WORKDIR}/${P}/file2" other-text && \
+		test_file "${WORKDIR}/${P}/file3" one-more
 	) &>fetch.log
 
 	eend ${?} || cat fetch.log
 }
 
 test_repo_merge() {
-	local repo=${FUNCNAME#test_}
-	local P=${P}_${repo}
+	local P=${P}_${FUNCNAME#test_}
 
 	(
-		mkdir ${repo}
-		cd ${repo}
-		git init -q
-		echo test > file
-		git add file
-		git commit -m 1 -q
-		git checkout -q -b other
-		echo other-text > file2
-		git add file2
-		git commit -m 2 -q
+		cd repo
+		git branch -q one-more-branch HEAD^
+		git checkout -q one-more-branch
+		echo foobarbaz > file3
+		git add file3
+		git commit -m 3b -q
 		git checkout -q master
-		echo some-more-text > file
-		git add file
-		git commit -m 3 -q
-		git merge -m 4 -q other
+		git merge -m 4 -q one-more-branch
 	) || die "unable to prepare repo"
 
 	# we need to use an array to preserve whitespace
 	local EGIT_REPO_URI=(
-		"ext::git daemon --export-all --base-path=. --inetd %G/${repo}"
+		"ext::git daemon --export-all --base-path=. --inetd %G/repo"
 	)
 
-	tbegin "fetching from a repository with a merge commit"
+	tbegin "fetching a merge commit"
 	(
 		git-r3_src_unpack
-		test_file "${WORKDIR}/${P}/file" some-more-text \
-			&& test_file "${WORKDIR}/${P}/file2" other-text
+		test_no_file "${WORKDIR}/${P}/file" && \
+		test_file "${WORKDIR}/${P}/file2" other-text && \
+		test_file "${WORKDIR}/${P}/file3" foobarbaz
 	) &>fetch.log
 
 	eend ${?} || cat fetch.log
 }
 
-test_repo_merge_revert() {
-	local repo=${FUNCNAME#test_}
-	local P=${P}_${repo}
+test_repo_revert_merge() {
+	local P=${P}_${FUNCNAME#test_}
 
 	(
-		mkdir ${repo}
-		cd ${repo}
-		git init -q
-		echo test > file
-		git add file
-		git commit -m 1 -q
-		git checkout -q -b other
-		echo other-text > file2
-		git add file2
-		git commit -m 2 -q
+		cd repo
+		git branch -q to-be-reverted
+		git checkout -q to-be-reverted
+		echo trrm > file3
+		git add file3
+		git commit -m 5b -q
 		git checkout -q master
-		echo some-more-text > file
-		git add file
-		git commit -m 3 -q
-		git merge -m 4 -q other
-		git revert -n -m 1 HEAD
+		echo trrm > file2
+		git add file2
 		git commit -m 5 -q
+		git merge -m 6 -q to-be-reverted
+		echo trrm > file
+		git add file
+		git commit -m 7 -q
+		git revert -m 1 -n HEAD^
+		git commit -m 7r -q
 	) || die "unable to prepare repo"
 
 	# we need to use an array to preserve whitespace
 	local EGIT_REPO_URI=(
-		"ext::git daemon --export-all --base-path=. --inetd %G/${repo}"
+		"ext::git daemon --export-all --base-path=. --inetd %G/repo"
 	)
 
-	tbegin "fetching from a repository with a reverted merge commit"
+	tbegin "fetching a revert of a merge commit"
 	(
 		git-r3_src_unpack
-		test_file "${WORKDIR}/${P}/file" some-more-text \
-			&& test_no_file "${WORKDIR}/${P}/file2"
-	) &>fetch.log
-
-	eend ${?} || cat fetch.log
-}
-
-test_repo_merge_revert2() {
-	local repo=${FUNCNAME#test_}
-	local P=${P}_${repo}
-
-	(
-		mkdir ${repo}
-		cd ${repo}
-		git init -q
-		echo test > file
-		git add file
-		git commit -m 1 -q
-		git checkout -q -b other
-		echo other-text > file2
-		git add file2
-		git commit -m 2 -q
-		git checkout -q master
-		echo some-more-text > file
-		git add file
-		git commit -m 3 -q
-		git merge -m 4 -q other
-		git revert -n -m 2 HEAD
-		git commit -m 5 -q
-	) || die "unable to prepare repo"
-
-	# we need to use an array to preserve whitespace
-	local EGIT_REPO_URI=(
-		"ext::git daemon --export-all --base-path=. --inetd %G/${repo}"
-	)
-
-	tbegin "fetching from a repository with a reverted merge commit (other way)"
-	(
-		git-r3_src_unpack
-		test_file "${WORKDIR}/${P}/file" test \
-			&& test_file "${WORKDIR}/${P}/file2" other-text
+		test_file "${WORKDIR}/${P}/file" trrm && \
+		test_file "${WORKDIR}/${P}/file2" trrm && \
+		test_file "${WORKDIR}/${P}/file3" foobarbaz
 	) &>fetch.log
 
 	eend ${?} || cat fetch.log
@@ -220,8 +194,8 @@ test_repo_merge_revert2() {
 
 test_repo_clean
 test_repo_revert
+test_repo_branch
 test_repo_merge
-test_repo_merge_revert
-test_repo_merge_revert2
+test_repo_revert_merge
 
 texit
