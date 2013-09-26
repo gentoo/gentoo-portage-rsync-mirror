@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udiskie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.23 2013/08/04 19:44:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.24 2013/09/26 05:38:38 ssuominen Exp $
+
+*udiskie-0.5.0 (26 Sep 2013)
+
+  26 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> +udiskie-0.5.0.ebuild:
+  Version bump.
 
   04 Aug 2013; Markus Meier <maekke@gentoo.org> udiskie-0.4.1.ebuild:
   add ~arm, bug #474024
@@ -93,4 +98,3 @@
 
   21 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> +udiskie-0.3.0.ebuild:
   Initial commit.
-
