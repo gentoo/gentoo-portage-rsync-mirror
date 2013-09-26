@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.28.0.ebuild,v 1.4 2013/09/24 12:41:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.28.0.ebuild,v 1.5 2013/09/26 15:51:22 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,6 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
 DISTUTILS_IN_SOURCE_BUILD=1
-DOCS=( doc/FAQ.txt doc/features.txt doc/manual.txt doc/quickstart.txt )
 
 PATCHES=( "${FILESDIR}"/${PN}-0.26.0-gtktest.patch )
 
