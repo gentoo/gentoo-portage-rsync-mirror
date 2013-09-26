@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.11 2013/09/15 16:00:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.12 2013/09/26 17:59:01 floppym Exp $
 
 EAPI=5
 
@@ -61,6 +61,10 @@ REQUIRED_USE="
 	notebook? ( ${PY2_REQUSE} )
 	octave? ( ${PY2_REQUSE} )
 	wxwidgets? ( ${PY2_REQUSE} )"
+
+PATCHES=(
+	"${FILESDIR}/ipython-1.0.0-setuptools.patch"
+)
 
 python_prepare_all() {
 	# fix for gentoo python scripts

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.9 2013/09/12 22:29:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.13.2.ebuild,v 1.10 2013/09/26 17:59:01 floppym Exp $
 
 EAPI=5
 
@@ -50,9 +50,12 @@ REQUIRED_USE="mongodb? ( ${PY2_REQUSE} )
 	wxwidgets? ( ${PY2_REQUSE} )"
 DISTUTILS_IN_SOURCE_BUILD=1
 
-python_prepare_all() {
-	epatch "${FILESDIR}"/${PN}-0.12-globalpath.patch
+PATCHES=(
+	"${FILESDIR}/${PN}-0.12-globalpath.patch"
+	"${FILESDIR}/ipython-1.0.0-setuptools.patch"
+)
 
+python_prepare_all() {
 	# fix for gentoo python scripts
 	sed -i \
 		-e "/ipython_cmd/s/ipython3/ipython/g" \
@@ -182,6 +185,7 @@ python_install_all() {
 		elisp-install ${PN} ${PN}.el*
 		elisp-site-file-install "${FILESDIR}"/62ipython-gentoo.el
 	fi
+	distutils-r1_python_install_all
 }
 
 pkg_postinst() {

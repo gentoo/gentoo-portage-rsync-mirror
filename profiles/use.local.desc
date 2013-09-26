@@ -5626,7 +5626,6 @@ sci-libs/cholmod:supernodal - Enable the Supernodal module (needs virtual/lapack
 sci-libs/fftw:avx - Adds support for Advanced Vector Extensions
 sci-libs/fftw:float - Link default library to single precision instead of double (symlinks only and fftw-2.1)
 sci-libs/fftw:fma - Use the Fused Multiply Add instruction set (fma3/fma4 either one)
-sci-libs/fftw:paired-single - Adds support for pair-single optimizations of mips
 sci-libs/fftw:quad - Build quadruple precision lib
 sci-libs/fftw:zbus - Adds support for ZBus cycle-counter of mips
 sci-libs/flann:cuda - Enable support for nVidia CUDA

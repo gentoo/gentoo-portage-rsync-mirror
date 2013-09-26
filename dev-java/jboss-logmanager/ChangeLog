@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jboss-logmanager
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jboss-logmanager/ChangeLog,v 1.1 2013/09/26 17:34:48 ercpe Exp $
+
+*jboss-logmanager-1.5.1 (26 Sep 2013)
+
+  26 Sep 2013; Johann Schmitz <ercpe@gentoo.org> +jboss-logmanager-1.5.1.ebuild,
+  +metadata.xml:
+  Ebuild for jboss-logmanager; dependency of the jboss logging framework
