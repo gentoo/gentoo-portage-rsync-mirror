@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.77 2013/09/22 06:48:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.78 2013/09/26 17:30:52 ago Exp $
+
+  26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.8.5.ebuild:
+  Stable for arm, wrt bug #480096
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bitcoind-0.8.5.ebuild:
   Stable for x86, wrt bug #480096

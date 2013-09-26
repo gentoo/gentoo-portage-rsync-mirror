@@ -1,4 +1,11 @@
 
+*selinux-pan-2.20130424-r3 (26 Sep 2013)
+
+  26 Sep 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20130424-r3.ebuild:
+  Release 2.20130424-r3, fixing bugs #480628, #482196, #475432, #485304, #480870
+  and #428322
+
   15 Aug 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-pan-2.20130424-r2.ebuild:
   Stabilize r2 of policies

@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.199 2013/09/25 14:35:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.200 2013/09/26 17:27:49 ago Exp $
+
+  26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libidn-1.28.ebuild:
+  Stable for arm, wrt bug #484246
 
   25 Sep 2013; Jeroen Roovers <jer@gentoo.org> libidn-1.28.ebuild:
   Run pkg_setup() explicitly for java and mono (bug #485764 by M. B.).
