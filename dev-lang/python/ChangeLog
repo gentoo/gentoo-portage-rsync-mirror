@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.706 2013/09/26 03:04:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.707 2013/09/26 04:20:27 floppym Exp $
+
+  26 Sep 2013; Mike Gilbert <floppym@gentoo.org> python-3.3.2-r2.ebuild:
+  Fix/simplify cross-compiles.
 
   26 Sep 2013; Mike Gilbert <floppym@gentoo.org> python-3.3.2-r2.ebuild:
   Depend on xz-utils (_lzma module).
