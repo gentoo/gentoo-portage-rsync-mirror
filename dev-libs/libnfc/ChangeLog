@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libnfc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/ChangeLog,v 1.12 2013/09/24 13:37:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/ChangeLog,v 1.13 2013/09/26 02:58:50 mrueg Exp $
+
+*libnfc-1.7.0-r1 (26 Sep 2013)
+
+  26 Sep 2013; Manuel Rüger <mrueg@gentoo.org> +libnfc-1.7.0-r1.ebuild,
+  -libnfc-1.7.0.ebuild:
+  NMU: Fix installation of acr122 drivers. Thanks to Mike Auty.
 
 *libnfc-1.7.0 (24 Sep 2013)
 

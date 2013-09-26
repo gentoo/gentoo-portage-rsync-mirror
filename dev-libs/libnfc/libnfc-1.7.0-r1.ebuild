@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/libnfc-1.7.0.ebuild,v 1.1 2013/09/24 13:37:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/libnfc-1.7.0-r1.ebuild,v 1.1 2013/09/26 02:58:50 mrueg Exp $
 
-EAPI="4"
+EAPI=5
 
-inherit eutils toolchain-funcs
+inherit toolchain-funcs
 
 DESCRIPTION="Near Field Communications (NFC) library"
 HOMEPAGE="http://www.libnfc.org/"
@@ -22,13 +22,9 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_configure() {
-	# Upstream doesn't use the right macro, so we need to force this.
-	# https://code.google.com/p/libnfc/issues/detail?id=249
-	export ac_cv_path_PKG_CONFIG=$(tc-getPKG_CONFIG)
-
-	local drivers="arygon,pn532_uart"
-	use pcsc-lite && drivers+=",acr122"
-	use usb && drivers+=",pn53x_usb"
+	local drivers="arygon,pn532_uart,pn532_spi,pn532_i2c,acr122s"
+	use pcsc-lite && drivers+=",acr122_pcsc"
+	use usb && drivers+=",pn53x_usb,acr122_usb"
 	econf \
 		--with-drivers="${drivers}" \
 		$(use_enable doc) \
