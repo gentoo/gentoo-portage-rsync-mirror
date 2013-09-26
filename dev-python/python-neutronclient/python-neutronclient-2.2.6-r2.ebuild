@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/python-neutronclient-2.2.6-r2.ebuild,v 1.1 2013/09/25 23:53:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-neutronclient/python-neutronclient-2.2.6-r2.ebuild,v 1.2 2013/09/26 00:14:50 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -29,10 +29,10 @@ python_install() {
 	distutils-r1_python_install
 	#stupid stupid
 	local SITEDIR="${D%/}$(python_get_sitedir)" || die
-	cd "${SITEDIR}"
+	cd "${SITEDIR}" || die
 	local egg=( python_neutronclient*.egg-info )
 	#[[ -f ${egg[0]} ]] || die "python_quantumclient*.egg-info not found"
 	ln -s "${egg[0]}" "${egg[0]/neutron/quantum}" || die
-	ln -s "$(python_get_sitedir)/neutronclient" "${SITEDIR}/quantumclient" || die
-	ln -s "$(python_get_sitedir)/neutronclient/neutron" "${SITEDIR}/neutronclient/quantum" || die
+	ln -s neutronclient quantumclient || die
+	ln -s neutron quantumclient/quantum || die
 }

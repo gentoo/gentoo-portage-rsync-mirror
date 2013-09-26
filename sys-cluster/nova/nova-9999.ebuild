@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.8 2013/09/12 06:18:01 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-9999.ebuild,v 1.9 2013/09/26 00:15:33 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -89,8 +89,13 @@ python_install() {
 	use spicehtml5proxy && dosym /etc/init.d/nova /etc/init.d/nova-spicehtml5proxy
 	use xvpvncproxy && dosym /etc/init.d/nova /etc/init.d/nova-xvpncproxy
 
-	dodir /var/log/nova
-	fowners nova:nova /var/log/nova
+	diropts -m 0750
+	dodir /var/run/nova /var/log/nova /var/lock/nova
+	fowners nova:nova /var/log/nova /var/lock/nova /var/run/nova
+
+	diropts -m 0755
+	dodir /var/lib/nova/instances
+	fowners nova:nova /var/lib/nova/instances
 
 	keepdir /etc/nova
 	insinto /etc/nova
