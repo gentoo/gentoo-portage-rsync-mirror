@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mathjax/mathjax-2.2.ebuild,v 1.4 2013/09/15 15:55:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mathjax/mathjax-2.2.ebuild,v 1.5 2013/09/26 18:03:08 vincent Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="https://github.com/mathjax/MathJax/archive/v${PV}.tar.gz -> ${P}.tar.gz
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"
 
 RESTRICT="binchecks"
