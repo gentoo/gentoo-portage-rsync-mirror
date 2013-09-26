@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kombu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.28 2013/09/02 08:01:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/ChangeLog,v 1.29 2013/09/26 18:46:45 prometheanfire Exp $
+
+  26 Sep 2013; Matthew Thode <prometheanfire@gentoo.org> kombu-2.5.14.ebuild:
+  fixing a py-amqp dep in kombu-2.5.14 so that kombu actually works
 
 *kombu-2.5.14 (02 Sep 2013)
 

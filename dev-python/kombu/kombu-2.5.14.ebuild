@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.5.14.ebuild,v 1.1 2013/09/02 08:01:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kombu/kombu-2.5.14.ebuild,v 1.2 2013/09/26 18:46:45 prometheanfire Exp $
 
 EAPI=5
 
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="amqplib doc examples test"
 
 RDEPEND=">=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
-		=dev-python/py-amqp-1.0.12[${PYTHON_USEDEP}]
+		>=dev-python/py-amqp-1.0.13[${PYTHON_USEDEP}]
+		<dev-python/py-amqp-1.1.0[${PYTHON_USEDEP}]
 		amqplib? ( >=dev-python/amqplib-1.0.2[${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
