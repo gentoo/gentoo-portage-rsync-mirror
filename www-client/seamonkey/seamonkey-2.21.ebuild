@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.21.ebuild,v 1.4 2013/09/25 14:15:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.21.ebuild,v 1.5 2013/09/26 16:31:45 axs Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -47,7 +47,7 @@ fi
 
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
-IUSE="+chatzilla +crypt gstreamer +ipc +jit minimal pulseaudio +roaming system-cairo system-icu system-jpeg system-sqlite"
+IUSE="+chatzilla +crypt gstreamer +ipc +jit minimal pulseaudio +roaming selinux system-cairo system-icu system-jpeg system-sqlite"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
@@ -130,6 +130,8 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
 	popd &>/dev/null || die
+	# drop -Wl,--build-id from LDFLAGS, bug #465466
+	epatch "${FILESDIR}"/moz${PATCHFF:8:2}-drop-Wl-build-id.patch
 
 	# Shell scripts sometimes contain DOS line endings; bug 391889
 	grep -rlZ --include="*.sh" $'\r$' . |
