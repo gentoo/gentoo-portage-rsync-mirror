@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.17 2013/09/18 10:23:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.18 2013/09/26 19:46:56 floppym Exp $
 
 EAPI=5
 
@@ -60,13 +60,13 @@ RDEPEND="${COMMON_DEPEND}
 		>=sys-apps/util-linux-2.22
 		<sys-apps/sysvinit-2.88-r4
 	)
-	!vanilla? ( sys-apps/gentoo-systemd-integration )
 	!sys-auth/nss-myhostname
 	!<sys-libs/glibc-2.10
 	!sys-fs/udev"
 
 PDEPEND=">=sys-apps/hwids-20130717-r1[udev]
-	policykit? ( sys-auth/polkit )"
+	policykit? ( sys-auth/polkit )
+	!vanilla? ( sys-apps/gentoo-systemd-integration )"
 
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils
