@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.52 2013/09/25 08:45:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.53 2013/09/26 10:46:50 nimiux Exp $
+
+  26 Sep 2013; Chema Alonso <nimiux@gentoo.org> tripwire-2.4.2.2-r2.ebuild,
+  -files/tripwire-2.4.2.2-twpol-GENERIC.patch,
+  +files/tripwire-twpol-GENERIC.patch, files/tripwire, metadata.xml:
+  Use the "tools" USE flag rather than "setup". Remove version from
+  twpol-GENERIC patch. Thanks to Chuck Seyboldt
 
 *tripwire-2.4.2.2-r2 (25 Sep 2013)
 

@@ -22,8 +22,9 @@
 		que se pueden adoptar medidas de control de forma periódica.
 	</longdescription>
 	<use>
-		<flag name="setup">Installs mktwpol package including scripts for
-		tripwire installation/setup and tripwire database maintenance</flag>
+		<flag name="tools">Installs app-admin/mktwpol, providing scripts
+		for the installation/setup of tripwire, including generating the
+		tripwire policy file and maintenance of the tripwire database</flag>
 		<flag name="ssl">Adds support for Secure Socket Layer connections</flag>
 		<flag name="static">Builds the package statically</flag>
 	</use>

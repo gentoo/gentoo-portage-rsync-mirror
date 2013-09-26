@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2.2-r2.ebuild,v 1.1 2013/09/25 08:45:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.2.2-r2.ebuild,v 1.2 2013/09/26 10:46:50 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/tripwire/tripwire-${PV}-src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="ssl static setup"
+IUSE="ssl static +tools"
 
 DEPEND="sys-devel/automake
 	sys-devel/autoconf
@@ -21,7 +21,7 @@ DEPEND="sys-devel/automake
 RDEPEND="virtual/cron
 	virtual/mta
 	ssl? ( dev-libs/openssl )"
-PDEPEND="setup? ( app-admin/mktwpol )"
+PDEPEND="tools? ( app-admin/mktwpol )"
 
 S="${WORKDIR}"/tripwire-"${PV}"-src
 
@@ -29,7 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/"${P}"-fix-configure.patch
 	epatch "${FILESDIR}"/"${P}"-buildnum.patch
 	epatch "${FILESDIR}"/"${P}"-gcc-4.7.patch
-	epatch "${FILESDIR}"/"${P}"-twpol-GENERIC.patch
+	epatch "${FILESDIR}"/"${PN}"-twpol-GENERIC.patch
 
 	eautoreconf
 }
@@ -69,11 +69,12 @@ pkg_postinst() {
 		elog "in tripwire.txt file to help you with this."
 		elog "To configure tripwire automatically, you can use the twsetup.sh"
 		elog "script provided by the app-admin/mktwpol package. This package is"
-		elog "installed for you if you append \"setup\" to your USE flags."
+		elog "installed for you by the \"tools\" USE flag (which is enabled by"
+		elog "default."
 else
 		elog "Maintenance of tripwire policy files as packages are added"
 		elog "and deleted from your system can be automated by the mktwpol.sh"
 		elog "script provided by the app-admin/mktwpol package. This package"
-		elog "is installed for you if you append \"setup\" to your USE flags"
+		elog "is installed for you if you append \"tools\" to your USE flags"
 	fi
 }
