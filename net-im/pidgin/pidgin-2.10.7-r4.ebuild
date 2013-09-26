@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.7-r4.ebuild,v 1.1 2013/08/14 05:45:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.7-r4.ebuild,v 1.2 2013/09/26 11:28:23 polynomial-c Exp $
 
 EAPI=5
 
@@ -10,8 +10,7 @@ inherit autotools flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 p
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://pidgin.im/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
-	http://dev.gentoo.org/~polynomial-c/${PN}-eds-3.6.patch.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

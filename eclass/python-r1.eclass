@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.61 2013/09/17 13:33:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.62 2013/09/26 11:24:30 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -204,11 +204,11 @@ _python_set_globals() {
 	# 2) python-exec should be built with all targets forced anyway
 	# but if new targets were added, we may need to force a rebuild
 	# 3) use whichever python-exec slot installed in EAPI 5. For EAPI 4,
-	# just fix :0 for now since := deps are not supported.
+	# just fix :2 since := deps are not supported.
 	if [[ ${EAPI} != 4 ]]; then
 		PYTHON_DEPS+="dev-python/python-exec:=[${PYTHON_USEDEP}]"
 	else
-		PYTHON_DEPS+="dev-python/python-exec:0[${PYTHON_USEDEP}]"
+		PYTHON_DEPS+="dev-python/python-exec:2[${PYTHON_USEDEP}]"
 	fi
 }
 _python_set_globals
