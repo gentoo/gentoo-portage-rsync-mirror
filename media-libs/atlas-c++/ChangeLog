@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/atlas-c++
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.38 2011/08/12 21:35:44 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.39 2013/09/26 08:32:32 tupone Exp $
+
+*atlas-c++-0.6.3 (26 Sep 2013)
+
+  26 Sep 2013; Alfredo Tupone <tupone@gentoo.org> +atlas-c++-0.6.3.ebuild,
+  +files/atlas-c++-0.6.3-Werror.patch:
+  Version bump to 0.6.3
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> atlas-c++-0.6.0.ebuild,
   atlas-c++-0.6.1.ebuild, atlas-c++-0.6.1-r1.ebuild, atlas-c++-0.6.2.ebuild:
