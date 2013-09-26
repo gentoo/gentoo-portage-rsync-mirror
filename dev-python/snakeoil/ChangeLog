@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.60 2013/08/27 22:19:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.61 2013/09/26 09:16:33 mgorny Exp $
+
+  26 Sep 2013; Michał Górny <mgorny@gentoo.org> snakeoil-0.5.2.ebuild,
+  snakeoil-9999.ebuild:
+  Block python-exec:2 since snakeoil requires dev-python/sphinx wrapped the old
+  way.
 
   27 Aug 2013; Tim Harder <radhermit@gentoo.org> snakeoil-9999.ebuild:
   Convert to distutils-r1 (patch by mgorny).
