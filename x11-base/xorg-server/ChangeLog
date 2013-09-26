@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.751 2013/09/15 14:28:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.752 2013/09/26 15:23:33 axs Exp $
+
+*xorg-server-1.14.3-r1 (26 Sep 2013)
+
+  26 Sep 2013; Ian Stakenvicius <axs@gentoo.org> +files/xdm.initd-10,
+  +xorg-server-1.14.3-r1.ebuild:
+  init.d/xdm: fixed PIDFILE paths, added optional per-DM cgroup-cleanup support,
+  and added support for gdm:3
 
 *xorg-server-1.14.3 (15 Sep 2013)
 

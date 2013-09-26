@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.0-r1.ebuild,v 1.2 2013/09/25 05:08:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.0-r1.ebuild,v 1.3 2013/09/26 15:02:50 axs Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -122,6 +122,8 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/thunderbird"
+	# drop -Wl,--build-id from LDFLAGS, bug #465466
+	epatch "${FILESDIR}"/moz${PV%%\.*}-drop-Wl-build-id.patch
 
 	# Apply our patchset from firefox to thunderbird as well
 	pushd "${S}"/mozilla &>/dev/null || die
