@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15132 2013/09/24 04:49:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15133 2013/09/26 09:45:23 swift Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -993,6 +993,7 @@ sys-auth/pam_keystore
 # available in the tree.
 ~app-doc/devmanual-9999
 ~app-editors/emacs-vcs-24.3.9999
+=app-forensics/openscap-9999
 ~app-i18n/skk-jisyo-9999
 =app-misc/mc-9999
 ~app-misc/screenfetch-9999

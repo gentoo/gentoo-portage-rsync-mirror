@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.24 2013/09/21 17:25:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.25 2013/09/26 09:52:25 idella4 Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -29,11 +29,9 @@ app-portage/eix clang
 # The dependencies for these flags are still in ~arch.
 sys-fs/lvm2 clvm cman
 
-# Agostino Sarubbo <ago@gentoo.org> (24 May 2013)
-# Justin Lecher <jlec@gentoo.org> (30 May 2313)
-# Temporary mask because it needs texinfo-5
-# hvm needs qemu #471122
->=app-emulation/xen-tools-4.2.1-r3 qemu hvm ocaml
+# Mike Gilbert <floppym@gentoo.org> (09 Jun 2013)
+# Requires dev-python/pillow to be stable.
+virtual/python-imaging python_targets_python3_2 python_targets_python3_3
 
 # Chris Reffett <creffett@gentoo.org> (23 Nov 2012)
 # CMake's PHP module can't find our install location, so
