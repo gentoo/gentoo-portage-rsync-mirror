@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.20.ebuild,v 1.3 2013/09/08 17:42:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.20.ebuild,v 1.4 2013/09/26 02:00:29 tetromino Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic gnome2-utils gnome.org multilib virtualx autotools readme.gentoo
@@ -33,7 +33,7 @@ COMMON_DEPEND="
 		x11-libs/gdk-pixbuf:2[introspection?]
 	)
 	xinerama? ( x11-libs/libXinerama )
-	>=dev-libs/glib-2.30:2
+	>=dev-libs/glib-2.34:2
 	>=x11-libs/pango-1.20[introspection?]
 	>=dev-libs/atk-1.29.2[introspection?]
 	media-libs/fontconfig
