@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/minlog/minlog-1.2.ebuild,v 1.1 2013/09/11 17:33:34 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/minlog/minlog-1.2.ebuild,v 1.2 2013/09/26 02:29:33 radhermit Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Minimal overhead Java logging"
 HOMEPAGE="https://code.google.com/p/minlog/"
 SRC_URI="https://${PN}.googlecode.com/files/${P}.zip"
 
-LICENSE="BSD-2"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
