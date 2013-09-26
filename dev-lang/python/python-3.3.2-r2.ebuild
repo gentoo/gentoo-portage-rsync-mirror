@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.2-r2.ebuild,v 1.4 2013/09/05 03:46:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.2-r2.ebuild,v 1.5 2013/09/26 03:04:28 floppym Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -27,6 +27,7 @@ IUSE="build doc elibc_uclibc examples gdbm hardened ipv6 +ncurses +readline sqli
 # patchset. See bug 447752.
 
 RDEPEND="app-arch/bzip2
+	app-arch/xz-utils
 	>=sys-libs/zlib-1.1.3
 	virtual/libffi
 	virtual/libintl
