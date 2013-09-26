@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.82 2013/09/19 17:36:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.83 2013/09/26 11:58:41 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -430,6 +430,8 @@ _distutils-r1_wrap_scripts() {
 		local basename=${f##*/}
 		debug-print "${FUNCNAME}: found executable at ${f#${path}/}"
 
+		[[ -d ${f} ]] && die "Unexpected directory: ${f}"
+
 		local shebang
 		read -r shebang < "${f}"
 		if [[ ${shebang} == '#!'*${EPYTHON}* ]]; then
@@ -450,7 +452,7 @@ _distutils-r1_wrap_scripts() {
 			debug-print "${FUNCNAME}: moving to /usr/bin/${basename}"
 			mv "${f}" "${path}${EPREFIX}/usr/bin/${basename}" || die
 		fi
-	done < <(find "${path}${PYTHON_SCRIPTDIR}" -type f -print0)
+	done < <(find "${path}${PYTHON_SCRIPTDIR}" -mindepth 1 -print0)
 }
 
 # @FUNCTION: distutils-r1_python_install

@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/ovaldi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.4 2013/01/30 18:53:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.5 2013/09/26 11:50:45 swift Exp $
+
+  26 Sep 2013; Sven Vermeulen <swift@gentoo.org> +files/disable-acl.patch:
+  Fix bug #485834 - Fix build failure if USE=-acl is set
 
 *ovaldi-5.10.1.4 (30 Jan 2013)
 
