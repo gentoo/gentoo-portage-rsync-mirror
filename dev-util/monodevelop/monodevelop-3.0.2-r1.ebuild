@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-3.0.2-r1.ebuild,v 1.3 2012/12/07 04:57:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-3.0.2-r1.ebuild,v 1.4 2013/09/26 14:55:04 tomwij Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils mono versionator eutils
@@ -46,7 +46,8 @@ DEPEND="${RDEPEND}
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-pc-fix.patch"
+	epatch "${FILESDIR}"/${P}-pc-fix.patch
+	epatch "${FILESDIR}"/${P}-nowarningerrors.patch
 }
 
 src_configure() {
