@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15134 2013/09/26 12:55:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15135 2013/09/27 03:26:52 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Manuel Rüger <mrueg@gentoo.org> (27 Sep 2013)
+# Mask further ruby-1.8 only packages
+# Masked for removal in 30 days 
+dev-ruby/heckle
+dev-ruby/main
+dev-ruby/rcov
+dev-ruby/rqr
+dev-ruby/ruby-svg
 
 # Agostino Sarubbo <ago@gentoo.org> (23 Sep 2013)
 # Masked because of vulnerable versions
