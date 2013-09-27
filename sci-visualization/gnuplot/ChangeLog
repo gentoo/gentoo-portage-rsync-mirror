@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.226 2013/09/26 17:29:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.227 2013/09/27 07:55:53 jlec Exp $
+
+  27 Sep 2013; Justin Lecher <jlec@gentoo.org> -gnuplot-4.4.4-r1.ebuild,
+  -gnuplot-4.6.1.ebuild, metadata.xml:
+  Drop old
 
   26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gnuplot-4.6.3.ebuild:
   Stable for arm, wrt bug #484288
