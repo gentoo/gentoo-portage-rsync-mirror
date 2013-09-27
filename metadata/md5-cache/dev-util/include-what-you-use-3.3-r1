@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND==sys-devel/llvm-3.3* sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=find unused include directives in C/C++ programs
+EAPI=5
+HOMEPAGE=https://code.google.com/p/include-what-you-use/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND==sys-devel/llvm-3.3*
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~slyfox/distfiles/include-what-you-use-3.3.tar.gz
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=898ad2927b1667c4ba50a360b8da272e

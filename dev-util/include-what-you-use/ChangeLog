@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/include-what-you-use
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/include-what-you-use/ChangeLog,v 1.1 2013/09/27 09:54:25 slyfox Exp $
+
+*include-what-you-use-3.3-r1 (27 Sep 2013)
+
+  27 Sep 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/include-what-you-use-3.3-issue-110-elaboration.patch,
+  +include-what-you-use-3.3-r1.ebuild, +metadata.xml:
+  A tool to find for exact includes used by C/C++ sources. Warns about not only
+  missing but also redundant ones!
