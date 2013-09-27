@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/hylafaxplus-5.5.1.ebuild,v 1.2 2013/03/10 01:42:10 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/hylafaxplus-5.5.4.ebuild,v 1.1 2013/09/27 12:56:05 pinkbyte Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils multilib pam toolchain-funcs
 
-MY_PN=${PN/plus/}
+MY_PN="${PN/plus/}"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Enterprise client-server fax package for class 1 and 2 fax modems."
@@ -15,12 +15,11 @@ SRC_URI="mirror://sourceforge/hylafax/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafaxplus"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 
-IUSE="jbig pam mgetty html ldap"
+IUSE="jbig html ldap mgetty pam"
 
 DEPEND=">=sys-libs/zlib-1.1.4
-	!net-misc/hylafax
 	app-text/ghostscript-gpl
 	virtual/mta
 	media-libs/tiff[jbig?]
@@ -35,7 +34,7 @@ RDEPEND="${DEPEND}
 	net-mail/metamail
 	!net-dialup/sendpage"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc /usr/lib/fax"
 
@@ -48,11 +47,23 @@ src_prepare() {
 				"${dir}"/Makefile.in || die "sed failed"
 	done
 
+	sed -i -e "s:hostname:hostname -f:g" util/{faxrcvd,pollrcvd}.sh.in || die "sed on hostname failed"
+
+	# Respect LDFLAGS(at least partially)
+	sed -i -e "/^LDFLAGS/s/LDOPTS}/LDOPTS} ${LDFLAGS}/" defs.in || die "sed on defs.in failed"
+
 	sed -i -e "s|-fpic|-fPIC|g" \
 		configure || die
+
+	epatch_user
 }
 
 src_configure() {
+	do_configure() {
+		echo ./configure --nointeractive ${1}
+		# eval required for quoting in ${my_conf} to work properly, better way?
+		eval ./configure --nointeractive ${1} || die "./configure failed"
+	}
 	local my_conf="
 		--with-DIR_BIN=/usr/bin
 		--with-DIR_SBIN=/usr/sbin
@@ -71,13 +82,8 @@ src_configure() {
 		--with-REGEX=yes
 		--with-LIBTIFF=\"-ltiff -ljpeg -lz\"
 		--with-OPTIMIZER=\"${CFLAGS}\"
-		--with-DSO=auto"
-
-	if use html; then
-		my_conf="${my_conf} --with-HTML=yes"
-	else
-		my_conf="${my_conf} --with-HTML=no"
-	fi
+		--with-DSO=auto
+		--with-HTML=$(usex html)"
 
 	if use mgetty; then
 		my_conf="${my_conf} \
@@ -91,58 +97,51 @@ src_configure() {
 			--with-PATH_VGETTY=/bin/false"
 	fi
 
-	if [ -h /etc/localtime ]; then
-		local continent=$(readlink /etc/localtime | cut -d / -f 5)
-		if [ "${continent}" == "Europe" ]; then
-			my_conf="${my_conf} --with-PAGESIZE=A4"
-		fi
-	fi
-
 	#--enable-pam isn't valid
 	use pam || my_conf="${my_conf} $(use_enable pam)"
 	use ldap || my_conf="${my_conf} $(use_enable ldap)"
 	use jbig || my_conf="${my_conf} $(use_enable jbig)"
 
-	myconf="CC=$(tc-getCC) CXX=$(tc-getCXX) ${my_conf}"
+	tc-export CC CXX AR RANLIB
 
-	# eval required for quoting in ${my_conf} to work properly, better way?
-	eval ./configure --nointeractive ${my_conf} || die "./configure failed"
+	do_configure "${my_conf}"
+}
+
+src_compile() {
+	# Parallel building is borked
+	emake -j1
 }
 
 src_install() {
 	dodir /usr/{bin,sbin} /usr/$(get_libdir)/fax /usr/share/man
-	dodir /var/spool /var/spool/recvq
+	dodir /var/spool /var/spool/recvq /var/spool/fax
 	fowners uucp:uucp /var/spool/fax
 	fperms 0600 /var/spool/fax
 	dodir /usr/share/doc/${P}/samples
 
-	emake \
-		BIN=${D}/usr/bin \
-		SBIN=${D}/usr/sbin \
-		LIBDIR=${D}/usr/$(get_libdir) \
-		LIB=${D}/usr/$(get_libdir) \
-		LIBEXEC=${D}/usr/sbin \
-		LIBDATA=${D}/usr/$(get_libdir)/fax \
-		DIR_LOCALE=${D}/usr/share/locale \
-		MAN=${D}/usr/share/man \
-		SPOOL=${D}/var/spool/fax \
-		HTMLDIR=${D}/usr/share/doc/${P}/html \
-		install DESTDIR="${D}" || die "make install failed"
+	emake DESTDIR="${D}" \
+		BIN="${D}/usr/bin" \
+		SBIN="${D}/usr/sbin" \
+		LIBDIR="${D}/usr/$(get_libdir)" \
+		LIB="${D}/usr/$(get_libdir)" \
+		LIBEXEC="${D}/usr/sbin" \
+		LIBDATA="${D}/usr/$(get_libdir)/fax" \
+		DIR_LOCALE="${D}/usr/share/locale" \
+		MAN="${D}/usr/share/man" \
+		SPOOL="${D}/var/spool/fax" \
+		HTMLDIR="${D}/usr/share/doc/${PF}/html" \
+		install
 
 	keepdir /var/spool/fax/{archive,client,etc,pollq,recvq,tmp}
 	keepdir /var/spool/fax/{status,sendq,log,info,doneq,docq,dev}
 
-	dosed "s:hostname:hostname -f:g" /var/spool/fax/bin/{faxrcvd,pollrcvd} \
-		|| die "dosed hostname failed"
-
 	generate_files # in this case, it only generates the env.d entry
 
 	einfo "Adding env.d entry for ${PN}"
-	doenvd 99${P}
+	doenvd "${T}/99${PN}"
 
-	einfo "Adding init.d and conf.d entries for ${PN}"
-	newconfd "${FILESDIR}"/${PN}-conf ${PN}
-	newinitd "${FILESDIR}"/${PN}-init ${PN}
+	newconfd "${FILESDIR}/${PN}-conf" ${PN}
+	newinitd "${FILESDIR}/${PN}-init" ${PN}
 
 	use pam && pamd_mimic_system ${MY_PN} auth account session
 
@@ -161,16 +160,6 @@ pkg_postinst() {
 	elog "	net-dialup/mgetty -fax"
 	elog "	net-misc/hylafax [-mgetty|mgetty]"
 	elog
-	elog "There are additional files included in the documentation dir."
-	elog
-	elog "Note 1: hylafax.cron is provided for vixie-cron users and"
-	elog "should be placed in /etc/cron.d.  Use as-is or adapt it to"
-	elog "your system config."
-	elog
-	elog "Note 2: if you need to use hylafax with iptables, then you"
-	elog "need to specify the port and use ip_conntrack_ftp as shown"
-	elog "in the included example modules file."
-	elog
 	elog "See the docs and man pages for detailed configuration info."
 	elog
 	elog "Now run faxsetup and (if necessary) faxaddmodem."
@@ -178,7 +167,7 @@ pkg_postinst() {
 }
 
 generate_files() {
-	cat <<-EOF > 99${P}
+	cat <<-EOF > "${T}/99${PN}"
 	PATH="/var/spool/fax/bin"
 	CONFIG_PROTECT="/var/spool/fax/etc /usr/$(get_libdir)/fax"
 	EOF
