@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/roundup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.67 2013/09/14 10:40:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.68 2013/09/27 06:02:55 radhermit Exp $
+
+*roundup-1.5.0 (27 Sep 2013)
+
+  27 Sep 2013; Tim Harder <radhermit@gentoo.org> +roundup-1.5.0.ebuild:
+  Version bump.
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> roundup-1.4.20.ebuild:
   Stable for sparc, wrt bug #443146
