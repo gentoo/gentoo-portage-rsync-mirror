@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.217 2013/06/16 17:35:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.218 2013/09/27 11:06:41 pinkbyte Exp $
+
+  27 Sep 2013; Sergey Popov <pinkbyte@gentoo.org>
+  splashutils-1.5.4.4-r1.ebuild:
+  Drop to ~ppc, bugs #369075 and #486152
 
 *splashutils-1.5.4.4-r3 (16 Jun 2013)
 
