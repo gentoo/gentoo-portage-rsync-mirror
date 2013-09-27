@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/luminance-hdr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.26 2013/03/02 21:37:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.27 2013/09/27 07:19:58 radhermit Exp $
+
+*luminance-hdr-2.3.1 (27 Sep 2013)
+
+  27 Sep 2013; Tim Harder <radhermit@gentoo.org> +luminance-hdr-2.3.1.ebuild,
+  +files/luminance-hdr-2.3.1-docs.patch,
+  +files/luminance-hdr-2.3.1-no-git.patch,
+  +files/luminance-hdr-2.3.1-openmp-automagic.patch:
+  Version bump and update to EAPI 5 (bug #466018).
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> luminance-hdr-2.3.0.ebuild:
   Move Qt dependencies to the new category

@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.50 2013/09/01 18:54:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.51 2013/09/27 07:29:21 radhermit Exp $
+
+*p11-kit-0.20.1 (27 Sep 2013)
+
+  27 Sep 2013; Tim Harder <radhermit@gentoo.org> +p11-kit-0.20.1.ebuild:
+  Version bump.
 
   01 Sep 2013; Tim Harder <radhermit@gentoo.org> p11-kit-0.19.4.ebuild:
   Remove unused autotools eclass.
