@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/luminance-hdr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.27 2013/09/27 07:19:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.28 2013/09/27 20:13:39 radhermit Exp $
+
+  27 Sep 2013; Tim Harder <radhermit@gentoo.org> Manifest:
+  Fix manifest (bug #486216).
 
 *luminance-hdr-2.3.1 (27 Sep 2013)
 

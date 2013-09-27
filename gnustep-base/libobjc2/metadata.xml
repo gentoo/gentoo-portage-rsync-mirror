@@ -27,6 +27,6 @@ Both ABIs support the following feature above and beyond the GCC runtime:
 </longdescription>
 <use>
 	<flag name='boehm-gc'>Enable Hans Boehm's garbage collector
-		(<pkg>dev-libs/boehm-gc</pkg>)</flag>
+		(<pkg>dev-libs/boehm-gc</pkg>). Not recommended by upstream</flag>
 </use>
 </pkgmetadata>

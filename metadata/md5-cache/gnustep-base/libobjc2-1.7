@@ -1,13 +1,13 @@
-DEFINED_PHASES=compile configure install prepare
-DEPEND=>=sys-devel/clang-2.9
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=sys-devel/clang-2.9 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=GNUstep Objective-C runtime
 EAPI=5
 HOMEPAGE=http://www.gnustep.org
-IUSE=+boehm-gc
+IUSE=boehm-gc cxx test
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
-RDEPEND=boehm-gc? ( dev-libs/boehm-gc )
+RDEPEND=boehm-gc? ( dev-libs/boehm-gc ) cxx? ( sys-libs/libcxx )
 SLOT=0
-SRC_URI=http://download.gna.org/gnustep/libobjc2-1.7.tar.bz2 ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-make-2.6.5.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
-_md5_=99667fffe0ad4a5e2d5f25d36bb9ab9e
+SRC_URI=http://download.gna.org/gnustep/libobjc2-1.7.tar.bz2
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=40c8aff51cfe539504632b1c6bb06575
