@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.2.ebuild,v 1.1 2013/09/26 13:55:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.0.2.ebuild,v 1.2 2013/09/27 02:47:09 patrick Exp $
 
 EAPI=5
 
@@ -23,8 +23,8 @@ CDEPEND="
 	app-arch/bzip2
 	app-text/ghostscript-gpl
 	dev-libs/libpcre
-	app-misc/realpath
 	virtual/blas
+	|| ( >=sys-apps/coreutils-8.15 sys-freebsd/freebsd-bin app-misc/realpath )
 	cairo? ( x11-libs/cairo[X] x11-libs/pango )
 	icu? ( dev-libs/icu )
 	jpeg? ( virtual/jpeg:0 )
