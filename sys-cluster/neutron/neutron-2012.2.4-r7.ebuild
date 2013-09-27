@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2012.2.4-r6.ebuild,v 1.1 2013/09/13 20:44:32 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2012.2.4-r7.ebuild,v 1.1 2013/09/27 00:41:28 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -57,6 +57,7 @@ RDEPEND="=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
 		~dev-python/webob-1.0.8[${PYTHON_USEDEP}]
 		net-misc/openvswitch
+		net-misc/bridge-utils
 		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
 pkg_setup() {
@@ -75,10 +76,14 @@ python_install() {
 	use metadata && dosym /etc/init.d/quantum /etc/init.d/quantum-metadata-agent
 	use openvswitch && dosym /etc/init.d/quantum /etc/init.d/quantum-openvswitch-agent
 
-	dodir /var/log/neutron
+	diropts -m 750
+	dodir /var/log/neutron /var/log/quantum
 	fowners neutron:neutron /var/log/neutron
 	keepdir /etc/quantum
 	insinto /etc/quantum
+
+	#it's /bin/ip not /sbin/ip
+	sed -i 's/sbin\/ip\,/bin\/ip\,/g' "etc/quantum/rootwrap.d/*"
 
 	doins "etc/api-paste.ini"
 	doins "etc/dhcp_agent.ini"

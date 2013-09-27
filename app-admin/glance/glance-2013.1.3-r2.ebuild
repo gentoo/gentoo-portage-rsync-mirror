@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.3-r2.ebuild,v 1.1 2013/09/14 09:35:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.1.3-r2.ebuild,v 1.2 2013/09/27 00:47:12 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -31,6 +31,7 @@ RDEPEND="${DEPEND}
 	dev-python/kombu[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
 	dev-python/pastedeploy[${PYTHON_USEDEP}]

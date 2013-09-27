@@ -28,7 +28,7 @@ start() {
     fi
 
     start-stop-daemon --start \
-        --user quantum:quantum \
+        --user neutron:neutron \
         --quiet \
         --pidfile "${PID_PATH}/${SVCNAME}.pid" \
         --make-pidfile \
@@ -47,7 +47,7 @@ stop() {
     
     ebegin "Stopping ${SVCNAME}"
     
-    start-stop-daemon --stop --user quantum --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" \
+    start-stop-daemon --stop --user neutron --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" \
                       --exec /usr/bin/${SVCNAME} -- \
                       --config-file /etc/quantum/quantum.conf \
                       --config-file /etc/quantum/plugins/openvswitch/ovs_quantum_plugin.ini \
