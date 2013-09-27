@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/streamtuner
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.41 2012/05/05 03:20:45 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/ChangeLog,v 1.42 2013/09/27 22:18:18 pacho Exp $
+
+  27 Sep 2013; Pacho Ramos <pacho@gentoo.org> streamtuner-0.99.99-r5.ebuild:
+  Pass proper option to compile-warnings to enable warnings but not errors
+  (#481124), fix desktop entry
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> streamtuner-0.99.99-r5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -184,4 +188,3 @@
   Initial revision.
   
   Submitted by: Ulli Ivens
-
