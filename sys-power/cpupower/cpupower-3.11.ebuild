@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.8-r1.ebuild,v 1.1 2013/04/24 09:44:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/cpupower-3.11.ebuild,v 1.1 2013/09/27 11:31:48 ssuominen Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs
@@ -26,6 +26,7 @@ RDEPEND="sys-apps/pciutils
 	!sys-power/cpufrequtils"
 DEPEND="${RDEPEND}
 	virtual/os-headers
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/linux-${PV}/tools/power/${PN}
@@ -50,7 +51,7 @@ pkg_setup() {
 
 src_prepare() {
 	# -Wl,--as-needed compat
-	local libs="-lcpupower -lrt -lpci"
+	local libs="-lcpupower -lrt $($(tc-getPKG_CONFIG) --libs-only-l libpci)"
 	sed -i \
 		-e "/$libs/{ s,${libs},,g; s,\$, ${libs},g;}" \
 		-e "s:-O1 -g::" \
@@ -65,6 +66,6 @@ src_install() {
 	emake DESTDIR="${D}" "${myemakeargs[@]}" install
 	dodoc README ToDo
 
-	newconfd "${FILESDIR}"/conf.d-r1 ${PN}
-	newinitd "${FILESDIR}"/init.d-r1 ${PN}
+	newconfd "${FILESDIR}"/conf.d-r2 ${PN}
+	newinitd "${FILESDIR}"/init.d-r2 ${PN}
 }

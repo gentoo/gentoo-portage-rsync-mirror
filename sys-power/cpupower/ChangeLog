@@ -1,6 +1,18 @@
 # ChangeLog for sys-power/cpupower
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/ChangeLog,v 1.7 2013/04/24 09:44:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/ChangeLog,v 1.9 2013/09/27 11:33:57 ssuominen Exp $
+
+  27 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> -cpupower-3.8.ebuild,
+  -cpupower-3.8-r1.ebuild, -files/conf.d, -files/conf.d-r1, -files/init.d,
+  -files/init.d-r1:
+  old
+
+*cpupower-3.11 (27 Sep 2013)
+
+  27 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> +cpupower-3.11.ebuild,
+  +files/conf.d-r2, +files/init.d-r2:
+  Version bump to cpupower from Linux 3.11 source tree as well as update
+  conf.d/init.d wrt #453794 by "Khayyam"
 
 *cpupower-3.8-r1 (24 Apr 2013)
 
