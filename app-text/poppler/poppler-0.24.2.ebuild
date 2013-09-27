@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.24.0.ebuild,v 1.2 2013/08/27 16:01:38 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.24.2.ebuild,v 1.1 2013/09/27 16:06:01 dilfridge Exp $
 
 EAPI=5
 

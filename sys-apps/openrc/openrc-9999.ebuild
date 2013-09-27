@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.129 2013/09/16 20:47:10 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.130 2013/09/27 16:11:46 williamh Exp $
 
 EAPI=5
 
@@ -106,8 +106,7 @@ src_install() {
 	# more of a minimal set of files
 	# disabled for now due to #270646
 	#mv "${ED}"/$(get_libdir)/lib{einfo,rc}* "${ED}"/usr/$(get_libdir)/ || die
-	#gen_usr_ldscript -a einfo rc
-	gen_usr_ldscript libeinfo.so
+	#gen_usr_ldscript -a rc
 	gen_usr_ldscript librc.so
 
 	if ! use kernel_linux; then

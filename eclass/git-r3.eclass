@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.11 2013/09/26 21:04:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.12 2013/09/27 16:22:28 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -445,6 +445,8 @@ git-r3_fetch() {
 			if [[ -f ${GIT_DIR}/shallow ]]; then
 				ref_param+=( --unshallow )
 			fi
+			# fetch all branches
+			ref_param+=( "refs/heads/*:refs/remotes/origin/*" )
 		else
 			# 'git show-ref --heads' returns 1 when there are no branches
 			if ! git show-ref --heads -q; then

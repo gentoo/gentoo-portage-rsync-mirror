@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.460 2013/09/08 10:50:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.461 2013/09/27 16:04:14 eras Exp $
+
+*clamav-0.98 (27 Sep 2013)
+
+  27 Sep 2013; Eray Aslan <eras@gentoo.org> +clamav-0.98.ebuild,
+  +files/clamd.conf-r1, +files/clamd.initd-r6:
+  Version bump - bug #485728. Use ionice in init script - bug #469484. Add
+  database update notice for first time clamav usage - bug #483284.
 
 *clamav-0.97.8-r2 (08 Sep 2013)
 

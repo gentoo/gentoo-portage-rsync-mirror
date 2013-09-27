@@ -1,6 +1,17 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.450 2013/09/07 20:16:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.452 2013/09/27 16:20:46 eras Exp $
+
+*dovecot-2.2.6 (27 Sep 2013)
+
+  27 Sep 2013; Eray Aslan <eras@gentoo.org> +dovecot-2.2.6.ebuild,
+  -files/cyrus-sasl.patch:
+  Version bump
+
+  27 Sep 2013; Eray Aslan <eras@gentoo.org> -dovecot-2.1.16-r1.ebuild,
+  -dovecot-2.2.1.ebuild, -dovecot-2.2.3.ebuild, -dovecot-2.2.4-r1.ebuild,
+  -dovecot-2.2.4-r2.ebuild, -dovecot-2.2.4.ebuild:
+  remove old
 
   07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> dovecot-2.2.5.ebuild:
   Stable for sparc, wrt bug #480880
