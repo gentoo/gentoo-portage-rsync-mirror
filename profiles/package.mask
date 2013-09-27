@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15136 2013/09/27 03:39:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15137 2013/09/27 13:31:20 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,9 @@
 
 #--- END OF EXAMPLES ---
 
+# Tiziano Müller <dev-zero@gentoo.org> (29 Sep 2013)
+# Mask for further testing
+>=www-servers/nginx-1.4.2
 
 # Manuel Rüger <mrueg@gentoo.org> (27 Sep 2013)
 # Mask further ruby-1.8 only packages

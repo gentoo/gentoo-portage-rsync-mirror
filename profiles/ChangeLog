@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8273 2013/09/26 12:55:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8275 2013/09/27 13:31:20 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Sep 2013; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Mask nginx >=1.4.2 for testing.
+
+  27 Sep 2013; Tiziano Müller <dev-zero@gentoo.org>
+  desc/nginx_modules_http.desc:
+  Add security to nginx_modules_http USE_EXPAND
 
   26 Sep 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask python-exec:2 for wider testing.

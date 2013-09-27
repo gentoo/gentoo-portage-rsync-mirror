@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r3.ebuild,v 1.3 2013/09/25 07:26:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r3.ebuild,v 1.4 2013/09/27 13:09:41 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://cryst.iphy.ac.cn/Project/protein/protein-I.html"
 SRC_URI="http://dev.gentooexperimental.org/~jlec/distfiles/${MY_P}.zip"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4 oasis"
 IUSE="examples +minimal"
 
