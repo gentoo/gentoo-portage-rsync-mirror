@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.9.1.ebuild,v 1.1 2013/09/06 14:54:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/tortoisehg-2.9.1-r1.ebuild,v 1.1 2013/09/27 14:27:11 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -35,6 +35,8 @@ RDEPEND="${HG_DEPEND}
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-1.0.3 )"
 
+PATCHES=( "${FILESDIR}/${P}-desktop_file.patch" )
+
 # Workaround race condition in build_qt
 DISTUTILS_IN_SOURCE_BUILD=1
 
@@ -68,7 +70,7 @@ python_install_all() {
 		dohtml -r doc/build/html/
 	fi
 	newicon -s scalable icons/scalable/apps/thg-logo.svg thg_logo.svg
-	domenu contrib/${PN}.desktop
+	domenu contrib/thg.desktop
 }
 
 pkg_postinst() {

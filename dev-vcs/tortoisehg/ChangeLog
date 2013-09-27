@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.45 2013/09/06 14:54:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.46 2013/09/27 14:27:11 polynomial-c Exp $
+
+*tortoisehg-2.9.1-r1 (27 Sep 2013)
+
+  27 Sep 2013; Lars Wendler <polynomial-c@gentoo.org> -tortoisehg-2.9.1.ebuild,
+  +tortoisehg-2.9.1-r1.ebuild, +files/tortoisehg-2.9.1-desktop_file.patch:
+  Install desktop file again.
 
 *tortoisehg-2.9.1 (06 Sep 2013)
 
