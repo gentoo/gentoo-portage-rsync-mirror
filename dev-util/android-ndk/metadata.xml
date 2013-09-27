@@ -13,5 +13,8 @@
 		<name>Jauhien Piatlicki</name>
 		<description>Proxy maintainer</description>
 	</maintainer>
-</pkgmetadata>
 
+	<use>
+		<flag name="legacy-toolchains">Install legacy toolchains</flag>
+	</use>
+</pkgmetadata>
