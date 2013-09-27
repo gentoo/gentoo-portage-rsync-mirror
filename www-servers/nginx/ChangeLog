@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.365 2013/09/14 10:02:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.366 2013/09/27 13:38:50 dev-zero Exp $
+
+*nginx-1.4.2 (27 Sep 2013)
+
+  27 Sep 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/modsecurity-2.7.5-include-paths.patch, +nginx-1.4.2.ebuild:
+  Version bump for stable nginx branch (bug #472524), also update the following
+  modules to latest: headers_more, fancyindex (fixes bug #478402), auth_pam,
+  upstream_check, naxsi, rtmp. Add new modules: echo (bug #471314), modsecurity
+  (bug #484370). Building metrics requires stub_status (bug #480952). Warn the
+  user to check the ownership on the log directory (bug #473036, may be improved
+  by checking the permissions explicitly).
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> nginx-1.4.1-r5.ebuild:
   Stable for x86, wrt bug #476688

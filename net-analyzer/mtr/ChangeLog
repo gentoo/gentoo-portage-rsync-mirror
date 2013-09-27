@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.147 2013/09/07 20:16:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.148 2013/09/27 13:46:45 jer Exp $
+
+*mtr-9999 (27 Sep 2013)
+
+  27 Sep 2013; Jeroen Roovers <jer@gentoo.org> +mtr-9999.ebuild:
+  Live ebuild.
 
   07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> mtr-0.85.ebuild:
   Stable for sparc, wrt bug #482936
