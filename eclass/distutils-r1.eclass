@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.83 2013/09/26 11:58:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.85 2013/09/27 19:21:43 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -215,45 +215,13 @@ fi
 #
 # setup.py will be passed the following, in order:
 # 1. ${mydistutilsargs[@]}
-# 2. The 'build' command and standard build options including ${BUILD_DIR}
-# 3. Any additional arguments passed to the esetup.py function.
+# 2. additional arguments passed to the esetup.py function.
 #
 # This command dies on failure.
 esetup.py() {
 	debug-print-function ${FUNCNAME} "${@}"
 
-	local add_args=()
-	if [[ ${BUILD_DIR} ]]; then
-		add_args+=(
-			build
-			--build-base "${BUILD_DIR}"
-
-			# using a single directory for them helps us export
-			# ${PYTHONPATH} and ebuilds find the sources independently
-			# of whether the package installs extensions or not
-			#
-			# note: due to some packages (wxpython) relying on separate
-			# platlib & purelib dirs, we do not set --build-lib (which
-			# can not be overriden with --build-*lib)
-			--build-platlib "${BUILD_DIR}/lib"
-			--build-purelib "${BUILD_DIR}/lib"
-
-			# make the ebuild writer lives easier
-			--build-scripts "${BUILD_DIR}/scripts"
-		)
-
-		# if setuptools is used, adjust egg_info path as well
-		if "${PYTHON:-python}" setup.py --help egg_info &>/dev/null; then
-			add_args+=(
-				egg_info --egg-base "${BUILD_DIR}"
-			)
-		fi
-	elif [[ ! ${DISTUTILS_IN_SOURCE_BUILD} ]]; then
-		die 'Out-of-source build requested, yet BUILD_DIR unset.'
-	fi
-
-	set -- "${PYTHON:-python}" setup.py \
-		"${mydistutilsargs[@]}" "${add_args[@]}" "${@}"
+	set -- "${PYTHON:-python}" setup.py "${mydistutilsargs[@]}" "${@}"
 
 	echo "${@}" >&2
 	"${@}" || die
@@ -323,18 +291,6 @@ _distutils-r1_disable_ez_setup() {
 	fi
 }
 
-# @FUNCTION: _distutils-r1_copy_egg_info
-# @INTERNAL
-# @DESCRIPTION:
-# Copy egg-info files to the ${BUILD_DIR} (that's going to become
-# egg-base in esetup.py). This way, we respect whatever's in upstream
-# egg-info.
-_distutils-r1_copy_egg_info() {
-	mkdir -p "${BUILD_DIR}" || die
-	# stupid freebsd can't do 'cp -t ${BUILD_DIR} {} +'
-	find -name '*.egg-info' -type d -exec cp -pr {} "${BUILD_DIR}"/ ';' || die
-}
-
 # @FUNCTION: distutils-r1_python_prepare_all
 # @DESCRIPTION:
 # The default python_prepare_all(). It applies the patches from PATCHES
@@ -386,6 +342,46 @@ distutils-r1_python_configure() {
 	:
 }
 
+# @FUNCTION: _distutils-r1_create_setup_cfg
+# @INTERNAL
+# @DESCRIPTION:
+# Create implementation-specific configuration file for distutils,
+# setting proper build-dir paths.
+_distutils-r1_create_setup_cfg() {
+	cat >> "${HOME}"/.pydistutils.cfg <<-_EOF_ || die
+		[build]
+		build-base = ${BUILD_DIR}
+
+		# using a single directory for them helps us export
+		# ${PYTHONPATH} and ebuilds find the sources independently
+		# of whether the package installs extensions or not
+		#
+		# note: due to some packages (wxpython) relying on separate
+		# platlib & purelib dirs, we do not set --build-lib (which
+		# can not be overriden with --build-*lib)
+		build-platlib = %(build-base)s/lib
+		build-purelib = %(build-base)s/lib
+
+		# make the ebuild writer lives easier
+		build-scripts = %(build-base)s/scripts
+
+		[egg_info]
+		egg-base = ${BUILD_DIR}
+	_EOF_
+}
+
+# @FUNCTION: _distutils-r1_copy_egg_info
+# @INTERNAL
+# @DESCRIPTION:
+# Copy egg-info files to the ${BUILD_DIR} (that's going to become
+# egg-base in esetup.py). This way, we respect whatever's in upstream
+# egg-info.
+_distutils-r1_copy_egg_info() {
+	mkdir -p "${BUILD_DIR}" || die
+	# stupid freebsd can't do 'cp -t ${BUILD_DIR} {} +'
+	find -name '*.egg-info' -type d -exec cp -pr {} "${BUILD_DIR}"/ ';' || die
+}
+
 # @FUNCTION: distutils-r1_python_compile
 # @USAGE: [additional-args...]
 # @DESCRIPTION:
@@ -395,9 +391,10 @@ distutils-r1_python_configure() {
 distutils-r1_python_compile() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	_distutils-r1_create_setup_cfg
 	_distutils-r1_copy_egg_info
 
-	esetup.py "${@}"
+	esetup.py build "${@}"
 }
 
 # @FUNCTION: distutils-r1_python_test
@@ -547,9 +544,10 @@ distutils-r1_run_phase() {
 	fi
 	local -x PYTHONPATH="${BUILD_DIR}/lib:${PYTHONPATH}"
 
-	local TMPDIR=${T}/${EPYTHON}
+	local -x TMPDIR=${T}/${EPYTHON}
+	local -x HOME=${TMPDIR}/home
 
-	mkdir -p "${TMPDIR}" || die
+	mkdir -p "${TMPDIR}" "${HOME}" || die
 
 	"${@}"
 
