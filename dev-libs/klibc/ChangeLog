@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.92 2013/08/24 12:23:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.93 2013/09/26 23:51:45 creffett Exp $
+
+  26 Sep 2013; Chris Reffett <creffett@gentoo.org> -klibc-1.5.8.ebuild:
+  Security removal of 1.5.8 wrt bug 369075
 
   24 Aug 2013; Agostino Sarubbo <ago@gentoo.org> -klibc-1.1.ebuild,
   -klibc-1.5.11.ebuild, -klibc-1.5.12-r1.ebuild, -klibc-1.5.12.ebuild,
