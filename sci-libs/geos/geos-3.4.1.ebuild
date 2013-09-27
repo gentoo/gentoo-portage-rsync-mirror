@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.4.1.ebuild,v 1.1 2013/08/19 14:24:56 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.4.1.ebuild,v 1.2 2013/09/27 17:19:17 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.osgeo.org/geos/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
+KEYWORDS="~amd64 arm ~ppc ~ppc64 ~x86 ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="doc php python ruby static-libs"
 
 RDEPEND="
