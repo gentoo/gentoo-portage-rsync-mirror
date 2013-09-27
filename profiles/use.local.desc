@@ -6077,10 +6077,12 @@ sys-cluster/nova:cert - Installs the initscripts for the nova scheduler service
 sys-cluster/nova:compute - Installs the initscripts for the nova volume service
 sys-cluster/nova:conductor - Installs the initscripts for the nova conductor service
 sys-cluster/nova:consoleauth - Installs the initscripts for the nova consoleauth service
+sys-cluster/nova:kvm - qemu-kvm hypervisor support
 sys-cluster/nova:network - Installs the initscripts for the nova network service
 sys-cluster/nova:novncproxy - Installs the initscripts for the nova novncproxy service
 sys-cluster/nova:scheduler - Installs the initscripts for the nova scheduler service
 sys-cluster/nova:spicehtml5proxy - Installs the initscripts for the nova spicehtml5proxy service
+sys-cluster/nova:xen - xen hypervisor support
 sys-cluster/nova:xvpvncproxy - Installs the initscripts for the nova xvpvncproxy service
 sys-cluster/ocfs:aio - Add aio support
 sys-cluster/openmpi:heterogeneous - Enable features required for heterogeneous platform support

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.5 2013/09/13 19:40:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-9999.ebuild,v 1.6 2013/09/27 01:46:12 prometheanfire Exp $
 
 EAPI=5
 #restricted due to packages missing and bad depends in the test ==webob-1.0.8
@@ -16,7 +16,7 @@ EGIT_REPO_URI="https://github.com/openstack/python-keystoneclient.git"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
@@ -38,7 +38,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND=">=dev-python/d2to1-0.2.10[${PYTHON_USEDEP}]
 		<dev-python/d2to1-0.3[${PYTHON_USEDEP}]
 		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
+		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.5[${PYTHON_USEDEP}]
 		<dev-python/pbr-0.6[${PYTHON_USEDEP}]
 		>=dev-python/prettytable-0.6[${PYTHON_USEDEP}]

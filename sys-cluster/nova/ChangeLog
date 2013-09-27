@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.29 2013/09/26 00:15:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.30 2013/09/27 01:41:21 prometheanfire Exp $
+
+  27 Sep 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml,
+  nova-2012.2.4-r10.ebuild, nova-2013.1.3-r6.ebuild, nova-2013.1.9999.ebuild,
+  nova-9999.ebuild:
+  oslo-config, novnc deps, libvirt deps, kvm/xen deps, initscript name change
 
 *nova-2012.2.4-r10 (26 Sep 2013)
 *nova-2013.1.3-r6 (26 Sep 2013)

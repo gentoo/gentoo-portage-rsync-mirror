@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.9999.ebuild,v 1.7 2013/09/19 19:30:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.9999.ebuild,v 1.8 2013/09/27 01:43:20 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -32,6 +32,7 @@ RDEPEND="${DEPEND}
 	<=dev-python/python-keystoneclient-0.3[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
 	dev-python/paste[${PYTHON_USEDEP}]
 	dev-python/pastedeploy[${PYTHON_USEDEP}]

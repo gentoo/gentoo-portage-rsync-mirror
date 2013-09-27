@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.9999.ebuild,v 1.8 2013/09/26 00:15:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.9999.ebuild,v 1.9 2013/09/27 01:41:21 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,8 +16,9 @@ EGIT_BRANCH="stable/grizzly"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+api +cert +compute +conductor +consoleauth +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres"
-REQUIRED_USE="|| ( mysql postgres sqlite )"
+IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
+REQUIRED_USE="|| ( mysql postgres sqlite )
+			  || ( kvm xen )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		app-admin/sudo"
@@ -58,7 +59,13 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		>=dev-python/stevedore-0.7[${PYTHON_USEDEP}]
 		<dev-python/websockify-0.4[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]"
+		<dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
+		virtual/python-argparse[${PYTHON_USEDEP}]
+		app-emulation/libvirt[${PYTHON_USEDEP}]
+		novncproxy? ( www-apps/novnc )
+		kvm? ( app-emulation/qemu )
+		xen? ( app-emulation/xen
+			   app-emulation/xen-tools )"
 
 PATCHES=(
 )
@@ -78,7 +85,7 @@ python_install() {
 	use conductor && dosym /etc/init.d/nova /etc/init.d/nova-conductor
 	use consoleauth && dosym /etc/init.d/nova /etc/init.d/nova-consoleauth
 	use network &&  dosym /etc/init.d/nova /etc/init.d/nova-network
-	use novncproxy &&dosym /etc/init.d/nova /etc/init.d/nova-nonvncproxy
+	use novncproxy &&dosym /etc/init.d/nova /etc/init.d/nova-novncproxy
 	use scheduler && dosym /etc/init.d/nova /etc/init.d/nova-scheduler
 	use spicehtml5proxy && dosym /etc/init.d/nova /etc/init.d/nova-spicehtml5proxy
 	use xvpvncproxy && dosym /etc/init.d/nova /etc/init.d/nova-xvpncproxy

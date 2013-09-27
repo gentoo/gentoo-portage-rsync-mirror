@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.238 2013/08/26 16:58:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.239 2013/09/27 01:54:39 anarchy Exp $
+
+*nspr-4.10.1 (27 Sep 2013)
+
+  27 Sep 2013; Jory A. Pratt <anarchy@gentoo.org> +nspr-4.10.1.ebuild:
+  NVB to 4.10.1
 
   26 Aug 2013; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.ebuild:
   Stable for ppc, wrt bug #479968
