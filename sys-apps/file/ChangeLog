@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.243 2013/09/05 09:51:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.245 2013/09/27 04:54:49 radhermit Exp $
+
+  27 Sep 2013; Tim Harder <radhermit@gentoo.org> -file-5.05.ebuild,
+  -file-5.06.ebuild, -file-5.07.ebuild, -file-5.07-r1.ebuild,
+  -file-5.07-r2.ebuild, -file-5.07-r3.ebuild, -file-5.08.ebuild,
+  -file-5.09.ebuild, -file-5.10.ebuild, -file-5.11.ebuild, -file-5.12.ebuild,
+  -file-5.14.ebuild, -files/file-5.07-postscript-detect.patch,
+  -files/file-5.07-zip-detect.patch:
+  Remove old.
+
+*file-5.15 (27 Sep 2013)
+
+  27 Sep 2013; Tim Harder <radhermit@gentoo.org> +file-5.15.ebuild,
+  file-9999.ebuild:
+  Version bump and update live ebuild. Move to EAPI 4 and convert to
+  distutils-r1 (bug #460010, patch by mgorny).
 
   05 Sep 2013; Mike Frysinger <vapier@gentoo.org> file-5.12-r1.ebuild:
   Mark m68k stable #467188.
