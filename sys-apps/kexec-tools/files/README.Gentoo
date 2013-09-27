@@ -1,7 +1,7 @@
 Usage
 =====
 
-Do 
+Do
  $ man 8 kexec
 for full understanding of the underlying kexec command.
 Gentoo offers a wrapper to the bare kexec command through
@@ -16,7 +16,7 @@ Usage
 -----
 
 In Gentoo, kexec is invoked, i.e., the new kernel will be booted when
-rebooting, by reboot (8) command or by pressing Ctrl+Alt+Del. 
+rebooting, by reboot (8) command or by pressing Ctrl+Alt+Del.
 
 If you want to use kexec once, just run
  $ /etc/init.d/kexec start

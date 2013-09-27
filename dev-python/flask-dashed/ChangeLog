@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/flask-dashed
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-dashed/ChangeLog,v 1.1 2013/09/27 04:13:06 patrick Exp $
+
+*flask-dashed-0.1b_p2 (27 Sep 2013)
+
+  27 Sep 2013; Patrick Lauer <patrick@gentoo.org> +flask-dashed-0.1b_p2.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me

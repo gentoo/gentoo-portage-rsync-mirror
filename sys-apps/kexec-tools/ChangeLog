@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.53 2013/09/21 11:35:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.54 2013/09/27 04:29:43 vapier Exp $
+
+  27 Sep 2013; Mike Frysinger <vapier@gentoo.org> files/README.Gentoo,
+  files/kexec-tools-2.0.0-respect-LDFLAGS.patch:
+  Tweak patch so we use CFLAGS when linking.
 
 *kexec-tools-2.0.4-r2 (21 Sep 2013)
 
