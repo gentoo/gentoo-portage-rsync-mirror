@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.163 2013/09/05 18:57:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.164 2013/09/27 08:10:27 radhermit Exp $
+
+*lilypond-2.17.26 (27 Sep 2013)
+
+  27 Sep 2013; Tim Harder <radhermit@gentoo.org> +lilypond-2.17.26.ebuild:
+  Version bump.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> lilypond-2.16.2.ebuild,
   lilypond-2.17.23.ebuild, lilypond-2.17.24.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.40.1.ebuild,v 1.2 2013/09/05 19:44:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.43.0.ebuild,v 1.1 2013/09/27 08:21:22 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
