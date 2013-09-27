@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/wt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.23 2013/09/22 06:44:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/ChangeLog,v 1.24 2013/09/27 05:12:50 mattm Exp $
+
+*wt-3.3.0 (27 Sep 2013)
+
+  27 Sep 2013; Matthew Marlowe <mattm@gentoo.org> +wt-3.3.0.ebuild:
+  First test ebuild for wt-3.3.0
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> wt-3.2.2_p1-r1.ebuild:
   Stable for x86, wrt bug #460292
