@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20130926.ebuild,v 1.1 2013/09/27 11:55:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20130927.ebuild,v 1.1 2013/09/28 21:35:15 blueness Exp $
 
 EAPI="4"
 
@@ -45,7 +45,7 @@ src_compile() {
 	# The INSTALL script builds mk then [re]builds everything using that
 	einfo "Compiling Plan 9 from User Space can take a very long time"
 	einfo "depending on the speed of your computer. Please be patient!"
-	./INSTALL -b
+	./INSTALL -b || die "Please report bugs to bugs.gentoo.org, NOT Plan9Port."
 }
 
 src_install() {
