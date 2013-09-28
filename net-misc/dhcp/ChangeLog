@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.243 2013/04/14 11:44:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.244 2013/09/28 11:50:41 vapier Exp $
+
+*dhcp-4.2.5_p1-r1 (28 Sep 2013)
+
+  28 Sep 2013; Mike Frysinger <vapier@gentoo.org> +dhcp-4.2.5_p1-r1.ebuild,
+  +files/dhcp-4.2.5-bindtodevice-inet6.patch,
+  +files/dhcp-4.2.5-iproute2-path.patch:
+  Import patch from Fedora for IPv6 interface binding #471142 by Jaak Ristioja.
+  Fix path to iproute2 ip program #480636 by cyberbat.
 
   14 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dhcp-4.2.5_p1.ebuild:
   Stable for sh, wrt bug #463848

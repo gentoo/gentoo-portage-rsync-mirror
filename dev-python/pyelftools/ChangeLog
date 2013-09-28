@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyelftools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.8 2013/04/24 01:35:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.9 2013/09/28 11:32:05 vapier Exp $
+
+*pyelftools-0.21-r3 (28 Sep 2013)
+
+  28 Sep 2013; Mike Frysinger <vapier@gentoo.org> +pyelftools-0.21-r3.ebuild:
+  Re-add Michał Górny's distutils-r1 now that the eclass supports EAPI=4 #472500
+  by Blu3.
 
 *pyelftools-0.21-r2 (24 Apr 2013)
 
