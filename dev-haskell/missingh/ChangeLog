@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/missingh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.28 2013/07/27 21:16:54 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.29 2013/09/28 02:45:40 gienah Exp $
+
+*missingh-1.2.0.2 (28 Sep 2013)
+
+  28 Sep 2013; Mark Wright <gienah@gentoo.org>
+  +files/missingh-1.2.0.2-ghc-7.7.patch, +missingh-1.2.0.2.ebuild:
+  Bump missingh to 1.2.0.2, patched for ghc 6.12, ghc 7.7.20130927 development
+  snapshot, and hopefully ghc 7.8.1 when it is released
 
   27 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> missingh-1.2.0.0.ebuild:
   Allow dev-haskell/quickcheck:2 in tests as well.
