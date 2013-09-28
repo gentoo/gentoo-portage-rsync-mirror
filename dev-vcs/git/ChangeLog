@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.207 2013/09/16 17:53:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.208 2013/09/28 10:08:18 pacho Exp $
+
+*git-1.8.1.5-r1 (28 Sep 2013)
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> +git-1.8.1.5-r1.ebuild:
+  Backport unit files to allow faster stabilization
 
   16 Sep 2013; Michał Górny <mgorny@gentoo.org> git-1.8.3.2.ebuild,
   git-9999.ebuild:
