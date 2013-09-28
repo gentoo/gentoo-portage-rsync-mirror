@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.7.1.ebuild,v 1.3 2013/09/13 13:36:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.0-r2.ebuild,v 1.1 2013/09/28 15:03:35 polynomial-c Exp $
 
 EAPI=5
 
@@ -13,29 +13,25 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug doc linguas_he nls socks5 ssl xosd aosd jabber qt4 msn ncurses"
+IUSE="debug doc linguas_he nls socks5 ssl xosd aosd jabber qt4 msn"
 
 RDEPEND=">=app-crypt/gpgme-1
 	jabber? ( net-libs/gloox )
 	qt4? ( dev-qt/qtgui:4 )
 	socks5? ( net-proxy/dante )
 	ssl? ( >=dev-libs/openssl-0.9.5a )
-	ncurses? (
-		sys-libs/ncurses
-		dev-libs/cdk
-	)
 	xosd? ( x11-libs/xosd )
 	aosd? ( x11-libs/libaosd )"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )
+	doc? ( app-doc/doxygen[dot] )
 	nls? ( sys-devel/gettext )
 	dev-libs/boost"
 
 src_prepare() {
-	#epatch "${FILESDIR}"/${PN}-1.5.1-find-libcdk.patch
+	epatch "${FILESDIR}"/${P}-socks5.patch \
+		"${FILESDIR}"/${P}-doxygen.patch
 
-	local licq_plugins="auto-reply rms"
-	use ncurses && licq_plugins+=" console"
+	local licq_plugins="auto-reply icq rms"
 	use msn && licq_plugins+=" msn"
 	use xosd && licq_plugins+=" osd"
 	use aosd && licq_plugins+=" aosd"
@@ -58,10 +54,11 @@ pkg_setup() {
 src_configure() {
 	local myopts="-DCMAKE_BUILD_TYPE=$(use debug && echo 'Debug' || echo 'Release')"
 	mycmakeargs="$myopts
+		$(cmake-utils_use doc USE_DOXYGEN)
 		$(cmake-utils_use linguas_he USE_HEBREW)
+		$(cmake-utils_use nls ENABLE_NLS)
 		$(cmake-utils_use socks5 USE_SOCKS5)
 		$(cmake-utils_use ssl USE_OPENSSL)
-		$(cmake-utils_use nls ENABLE_NLS)
 		-DUSE_FIFO=ON
 		-DBUILD_PLUGINS=ON"
 

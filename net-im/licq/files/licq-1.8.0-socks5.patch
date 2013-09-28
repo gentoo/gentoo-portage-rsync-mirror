@@ -1,0 +1,40 @@
+From 6b5f463697739be42948a052a03cc706f06c2150 Mon Sep 17 00:00:00 2001
+From: Anders Olofsson <flynd@licq.org>
+Date: Thu, 19 Sep 2013 20:33:16 +0200
+Subject: [PATCH] core: Workaround defines in socks.h
+
+socks.h defines send to Rsend which also affected the name of
+TCPSocket::send().
+
+Fixes Gentoo bug 484706
+---
+ licq/src/socket.cpp | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/licq/src/socket.cpp b/licq/src/socket.cpp
+index 9d4cb3f..c06c266 100644
+--- a/licq/src/socket.cpp
++++ b/licq/src/socket.cpp
+@@ -49,6 +49,10 @@
+ extern "C" {
+ #include <socks.h>
+ }
++#define socket_send Rsend
++#undef send
++#else
++#define socket_send send
+ #endif // SOCKS5
+ 
+ #ifdef SOCKS5_OPTLEN
+@@ -477,7 +481,7 @@ bool INetSocket::send(Buffer& buf)
+   char* dataPos = buf.getDataStart();
+   while (bytesLeft > 0)
+   {
+-    ssize_t bytesSent = ::send(myDescriptor, dataPos, bytesLeft, 0);
++    ssize_t bytesSent = ::socket_send(myDescriptor, dataPos, bytesLeft, 0);
+     if (bytesSent < 0)
+     {
+       if (errno == EINTR)
+-- 
+1.8.4
+

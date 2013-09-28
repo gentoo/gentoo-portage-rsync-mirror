@@ -1,6 +1,15 @@
 # ChangeLog for net-im/licq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.126 2013/09/13 13:36:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.127 2013/09/28 15:03:35 polynomial-c Exp $
+
+*licq-1.8.0-r2 (28 Sep 2013)
+
+  28 Sep 2013; Lars Wendler <polynomial-c@gentoo.org> -licq-1.7.1.ebuild,
+  +licq-1.8.0-r2.ebuild, +files/licq-1.8.0-doxygen.patch,
+  +files/licq-1.8.0-socks5.patch, metadata.xml:
+  Fixed compilation with socks5 support (bug #484706) and automagic dependency
+  on doxygen (bug #486126). Thanks to Ben Kohler for providing the doxygen
+  patches. Officially took over maintenance.
 
   13 Sep 2013; Lars Wendler <polynomial-c@gentoo.org> licq-1.7.1.ebuild,
   licq-1.8.0-r1.ebuild:
