@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xmlformat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlformat/ChangeLog,v 1.12 2013/07/21 10:12:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlformat/ChangeLog,v 1.13 2013/09/28 09:57:44 graaff Exp $
+
+  28 Sep 2013; Hans de Graaff <graaff@gentoo.org> xmlformat-1.04.ebuild:
+  Convert to EAPI=5. Drop useless LICENSE install. Update ruby dependencies
+  (1.9 and 2.0 are both verified to work). Add missing RDEPEND.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -xmlformat-1.03.ebuild,
   metadata.xml:

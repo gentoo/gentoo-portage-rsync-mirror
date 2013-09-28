@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5.ebuild,v 1.11 2013/09/28 09:37:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.18 2013/09/28 09:37:31 vapier Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ EGIT_SUB_PROJECT="legacy"
 EGIT_URI_APPEND=${PN}
 
 if [[ ${PV} != "9999" ]] ; then
-	EKEY_STATE="release"
+	EKEY_STATE="stable"
 fi
 
 inherit enlightenment toolchain-funcs

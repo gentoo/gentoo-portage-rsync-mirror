@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.210 2013/08/04 19:51:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.211 2013/09/28 09:35:46 billie Exp $
+
+  28 Sep 2013; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0-r2.ebuild:
+  Add epatch_user. This fixes bug #478482.
 
   04 Aug 2013; Markus Meier <maekke@gentoo.org> conky-1.9.0-r2.ebuild:
   add ~arm, bug #474026

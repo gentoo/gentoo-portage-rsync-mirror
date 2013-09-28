@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.8.2.ebuild,v 1.5 2013/08/10 10:28:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.8.2.ebuild,v 1.6 2013/09/28 09:46:17 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://git.gnome.org/browse/gnome-disk-utility"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="fat +gnome systemd"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.31:2

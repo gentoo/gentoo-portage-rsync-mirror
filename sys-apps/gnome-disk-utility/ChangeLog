@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.85 2013/08/10 10:28:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.86 2013/09/28 09:46:17 pacho Exp $
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> gnome-disk-utility-3.8.2.ebuild:
+  Rekeyword to stop the strange mix of keywords for every available version, I
+  cannot see any reference to reasons for dropping them, probably were dropped
+  due missing keywords on deps that were later keyworded and this was forgotten
 
   10 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-disk-utility-3.8.2.ebuild,

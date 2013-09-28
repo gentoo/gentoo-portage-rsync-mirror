@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8276 2013/09/28 09:23:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8277 2013/09/28 09:40:38 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
+  arch/sparc/package.use.mask:
+  Drop masks as needed keywords were added (#478078)
 
   28 Sep 2013; Pacho Ramos <pacho@gentoo.org> base/use.mask:
   Mask openrc-force USE flag (#480336)
