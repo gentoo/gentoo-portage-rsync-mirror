@@ -1,16 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.1_rc1-r1.ebuild,v 1.1 2013/04/06 09:58:44 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0.ebuild,v 1.1 2013/09/28 10:39:42 billie Exp $
 
 EAPI=5
 
 inherit flag-o-matic toolchain-funcs
 
-MY_P=${P/_rc/RC}
-
 DESCRIPTION="Tools for MJPEG video"
 HOMEPAGE="http://mjpeg.sourceforge.net/"
-SRC_URI="mirror://sourceforge/mjpeg/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/mjpeg/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -35,8 +33,6 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	virtual/awk
 	virtual/pkgconfig"
-
-S="${WORKDIR}/${MY_P}"
 
 pkg_pretend() {
 	if has_version ">=sys-kernel/linux-headers-2.6.38" && use v4l; then

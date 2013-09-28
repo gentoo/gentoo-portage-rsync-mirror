@@ -9,6 +9,6 @@ LICENSE=GPL-2
 RDEPEND=virtual/jpeg quicktime? ( media-libs/libquicktime ) dv? ( >=media-libs/libdv-0.99 ) png? ( media-libs/libpng:0= ) dga? ( x11-libs/libXxf86dga ) gtk? ( x11-libs/gtk+:2 ) sdl? ( >=media-libs/libsdl-1.2.7-r3 x11-libs/libX11 x11-libs/libXt sdlgfx? ( media-libs/sdl-gfx ) )
 REQUIRED_USE=sdlgfx? ( sdl )
 SLOT=1
-SRC_URI=mirror://sourceforge/mjpeg/mjpegtools-2.0.1RC1.tar.gz
+SRC_URI=mirror://sourceforge/mjpeg/mjpegtools-2.1.0.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=17342bb5c17734f33a7981b307989f70
+_md5_=3635c438463fb0f9a32e5417751ad38f

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2013f.ebuild,v 1.1 2013/09/26 12:22:01 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2013f-r1.ebuild,v 1.1 2013/09/28 10:55:44 vapier Exp $
 
-EAPI=3
+EAPI="3"
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -24,8 +24,20 @@ RDEPEND="!<sys-libs/glibc-2.3.5"
 
 S=${WORKDIR}
 
+pkg_setup() {
+	# Deal with the case where older timezone-data installed a
+	# dir here, but newer one installs symlinks.  Portage will
+	# barf when you try to transition file types.
+	if cd "${EROOT}"/usr/share/zoneinfo 2>/dev/null ; then
+		if [[ -d posix ]] ; then
+			mv posix .gentoo-upgrade || die
+			ln -s .gentoo-upgrade posix || die
+		fi
+	fi
+}
+
 src_prepare() {
-	epatch "${FILESDIR}"/2013f-makefile.patch
+	epatch "${FILESDIR}"/${PN}-2013f-makefile.patch
 	tc-is-cross-compiler && cp -pR "${S}" "${S}"-native
 }
 
@@ -33,18 +45,19 @@ src_compile() {
 	local LDLIBS
 	tc-export CC
 	if use elibc_FreeBSD || use elibc_Darwin ; then
-		append-flags -DSTD_INSPIRED #138251
+		append-cppflags -DSTD_INSPIRED #138251
 	fi
 	export NLS=$(usex nls 1 0)
 	if use nls && ! use elibc_glibc ; then
 		LDLIBS+=" -lintl" #154181
 	fi
+	# TOPDIR is used in some utils when compiling.
 	emake \
 		TOPDIR="${EPREFIX}/usr" \
 		CFLAGS="${CPPFLAGS} ${CFLAGS} -std=gnu99" \
 		LDFLAGS="${LDFLAGS}" \
 		LDLIBS="${LDLIBS}" \
-		|| die "emake failed"
+		|| die
 	if tc-is-cross-compiler ; then
 		emake -C "${S}"-native \
 			CC=$(tc-getBUILD_CC) \
@@ -55,11 +68,14 @@ src_compile() {
 	fi
 }
 
+pkg_postinst() {
+	rm -rf "${EROOT}"/usr/share/zoneinfo/.gentoo-upgrade
+}
+
 src_install() {
 	local zic=""
 	tc-is-cross-compiler && zic="zic=${S}-native/zic"
-	emake install ${zic} DESTDIR="${ED}"
-	rm -rf "${ED}"/usr/share/zoneinfo-leaps
+	emake install ${zic} DESTDIR="${ED}" || die
 	dodoc README Theory
 	dohtml *.htm
 }

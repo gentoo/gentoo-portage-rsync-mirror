@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/pommed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.64 2012/09/09 16:23:29 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.65 2013/09/28 10:42:53 pacho Exp $
+
+*pommed-1.39-r1 (28 Sep 2013)
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> +files/pommed.service,
+  +pommed-1.39-r1.ebuild:
+  Add unit file (#485926 by Tilo Prütz)
 
   09 Sep 2012; Joseph Jezak <josejx@gentoo.org> pommed-1.39.ebuild:
   Marked ppc stable for bug #425828.

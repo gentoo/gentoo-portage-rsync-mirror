@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.103-r1.ebuild,v 1.1 2013/09/22 14:58:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.103-r1.ebuild,v 1.2 2013/09/28 10:56:42 patrick Exp $
 
 EAPI="5"
 PYTHON_DEPEND="admin? 2"
@@ -12,7 +12,7 @@ inherit autotools eutils multilib pam python systemd
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="https://github.com/cherokee/webserver/archive/v${PV}.zip -> ${P}.zip
-         https://github.com/cherokee/CTK/archive/master.zip       -> ${PN}-ctk-master.zip"
+	https://github.com/cherokee/CTK/archive/master.zip       -> ${PN}-ctk-master.zip"
 HOMEPAGE="http://www.cherokee-project.com/"
 
 LICENSE="GPL-2"
@@ -63,7 +63,7 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.2.99-gentoo.patch" \
 		"${FILESDIR}/${PN}-1.2.103-linux3.patch"
 
-	${S}/po/admin/generate_POTFILESin.py > po/admin/POTFILES.in
+	"${S}/po/admin/generate_POTFILESin.py" > po/admin/POTFILES.in
 	eautoreconf
 
 	python_convert_shebangs -r 2 .
