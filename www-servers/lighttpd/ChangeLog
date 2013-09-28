@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.310 2013/09/22 09:36:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.311 2013/09/28 13:07:29 hwoarang Exp $
+
+*lighttpd-1.4.33 (28 Sep 2013)
+
+  28 Sep 2013; Markos Chandras <hwoarang@gentoo.org> +lighttpd-1.4.33.ebuild:
+  Version bump
 
 *lighttpd-1.4.32-r3 (22 Sep 2013)
 
