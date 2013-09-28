@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.215 2013/09/20 04:13:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.216 2013/09/28 03:54:54 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -36,8 +36,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 		dev-libs/libgcrypt:=
 		>=net-print/cups-1.3.11:=
 	)
-	>=dev-lang/v8-3.19.17:=
-	=dev-lang/v8-3.21*
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
 	>=dev-libs/icu-49.1.1-r1:=
@@ -238,7 +236,6 @@ src_prepare() {
 		'third_party/lzma_sdk' \
 		'third_party/mesa' \
 		'third_party/modp_b64' \
-		'third_party/mongoose' \
 		'third_party/mt19937ar' \
 		'third_party/npapi' \
 		'third_party/ots' \
@@ -260,14 +257,8 @@ src_prepare() {
 		'third_party/x86inc' \
 		'third_party/zlib/google' \
 		'url/third_party/mozilla' \
+		'v8/src/third_party/valgrind' \
 		--do-remove || die
-
-	local v8_bundled="$(chromium_bundled_v8_version)"
-	local v8_installed="$(chromium_installed_v8_version)"
-	einfo "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
-
-	# Remove bundled v8.
-	find v8 -type f \! -iname '*.gyp*' -delete || die
 }
 
 src_configure() {
@@ -325,7 +316,6 @@ src_configure() {
 		-Duse_system_re2=1
 		-Duse_system_snappy=1
 		-Duse_system_speex=1
-		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
 
@@ -540,6 +530,12 @@ chromium_test() {
 		"NetUtilTest.IDNToUnicode*" # bug 361885
 		"NetUtilTest.FormatUrl*" # see above
 		"SpdyFramerTests/SpdyFramerTest.CreatePushPromiseCompressed/2" # bug #478168
+		"HostResolverImplTest.FlushCacheOnIPAddressChange" # bug #481812
+		"HostResolverImplTest.ResolveFromCache" # see above
+		"ProxyResolverV8TracingTest.*" # see above
+		"SSLClientSocketTest.ConnectMismatched" # see above
+		"UDPSocketTest.*" # see above
+		"*EndToEndTest*" # see above
 	)
 	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 

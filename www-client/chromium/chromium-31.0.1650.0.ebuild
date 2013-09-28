@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-31.0.1622.0.ebuild,v 1.1 2013/09/10 16:02:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-31.0.1650.0.ebuild,v 1.1 2013/09/28 03:54:54 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -37,8 +37,6 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 		dev-libs/libgcrypt:=
 		>=net-print/cups-1.3.11:=
 	)
-	>=dev-lang/v8-3.19.17:=
-	=dev-lang/v8-3.21*
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
 	>=dev-libs/icu-49.1.1-r1:=
@@ -130,8 +128,10 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
+	epatch "${FILESDIR}/${PN}-chromedriver-r0.patch"
 	epatch "${FILESDIR}/${PN}-gpsd-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-ply-r1.patch"
+	epatch "${FILESDIR}/${PN}-system-icu-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-jinja-r0.patch"
 
 	epatch_user
 
@@ -174,7 +174,6 @@ src_prepare() {
 		'third_party/lzma_sdk' \
 		'third_party/mesa' \
 		'third_party/modp_b64' \
-		'third_party/mongoose' \
 		'third_party/mt19937ar' \
 		'third_party/npapi' \
 		'third_party/ots' \
@@ -195,10 +194,8 @@ src_prepare() {
 		'third_party/x86inc' \
 		'third_party/zlib/google' \
 		'url/third_party/mozilla' \
+		'v8/src/third_party/valgrind' \
 		--do-remove || die
-
-	# Remove bundled v8.
-	find v8 -type f \! -iname '*.gyp*' -delete || die
 }
 
 src_configure() {
@@ -256,7 +253,6 @@ src_configure() {
 		-Duse_system_re2=1
 		-Duse_system_snappy=1
 		-Duse_system_speex=1
-		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
 
@@ -450,14 +446,7 @@ chromium_test() {
 		(( exitstatus |= st ))
 	}
 
-	local excluded_base_unittests=(
-		"ICUStringConversionsTest.*" # bug #350347
-		"MessagePumpLibeventTest.*" # bug #398591
-		"TimeTest.JsTime" # bug #459614
-		"SecurityTest.NewOverflow" # bug #465724
-	)
-	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
-
+	runtest out/Release/base_unittests
 	runtest out/Release/cacheinvalidation_unittests
 
 	local excluded_content_unittests=(
@@ -474,24 +463,18 @@ chromium_test() {
 	local excluded_net_unittests=(
 		"NetUtilTest.IDNToUnicode*" # bug 361885
 		"NetUtilTest.FormatUrl*" # see above
-		"DnsConfigServiceTest.GetSystemConfig" # bug #394883
-		"CertDatabaseNSSTest.ImportServerCert_SelfSigned" # bug #399269
-		"CertDatabaseNSSTest.TrustIntermediateCa*" # http://crbug.com/224612
-		"URLFetcher*" # bug #425764
-		"HTTPSOCSPTest.*" # bug #426630
-		"HTTPSEVCRLSetTest.*" # see above
-		"HTTPSCRLSetTest.*" # see above
 		"SpdyFramerTests/SpdyFramerTest.CreatePushPromiseCompressed/2" # bug #478168
-		"*SpdyFramerTest.BasicCompression*" # bug #465444
+		"HostResolverImplTest.FlushCacheOnIPAddressChange" # bug #481812
+		"HostResolverImplTest.ResolveFromCache" # see above
+		"ProxyResolverV8TracingTest.*" # see above
+		"SSLClientSocketTest.ConnectMismatched" # see above
+		"UDPSocketTest.*" # see above
+		"*EndToEndTest*" # see above
 	)
 	runtest out/Release/net_unittests "${excluded_net_unittests[@]}"
 
 	runtest out/Release/printing_unittests
-
-	local excluded_sql_unittests=(
-		"SQLiteFeaturesTest.FTS2" # bug #461286
-	)
-	runtest out/Release/sql_unittests "${excluded_sql_unittests[@]}"
+	runtest out/Release/sql_unittests
 
 	return ${exitstatus}
 }
