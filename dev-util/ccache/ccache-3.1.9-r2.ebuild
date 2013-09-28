@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.9-r1.ebuild,v 1.1 2013/09/13 14:25:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-3.1.9-r2.ebuild,v 1.1 2013/09/28 22:44:47 ottxor Exp $
 
 EAPI="4"
 
@@ -37,6 +37,13 @@ src_install() {
 	dobin ccache-config
 }
 
+pkg_prerm() {
+	if [[ -z ${REPLACED_BY_VERSION} ]] ; then
+		"${EROOT}"/usr/bin/ccache-config --remove-links
+		"${EROOT}"/usr/bin/ccache-config --remove-links ${CHOST}
+	fi
+}
+
 pkg_postinst() {
 	"${EROOT}"/usr/bin/ccache-config --install-links
 	"${EROOT}"/usr/bin/ccache-config --install-links ${CHOST}
@@ -59,5 +66,8 @@ pkg_postinst() {
 		elog "If you are upgrading from an older version than 3.x you should clear"
 		elog "all of your caches like so:"
 		elog "# CCACHE_DIR='${CCACHE_DIR:-${PORTAGE_TMPDIR}/ccache}' ccache -C"
+	fi
+	if has_version "<${CATEGORY}/${PN}-3.1.9-r2" ; then
+		elog "ccache now supports sys-devel/clang and dev-lang/icc, too!"
 	fi
 }

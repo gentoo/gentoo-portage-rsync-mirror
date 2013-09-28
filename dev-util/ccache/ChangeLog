@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.124 2013/09/13 14:25:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.125 2013/09/28 22:44:47 ottxor Exp $
+
+*ccache-3.1.9-r2 (28 Sep 2013)
+
+  28 Sep 2013; Christoph Junghans <ottxor@gentoo.org> +ccache-3.1.9-r2.ebuild,
+  -ccache-3.1.9-r1.ebuild, files/ccache-config-2:
+  add icc/clang support (bug #484772)
 
 *ccache-3.1.9-r1 (13 Sep 2013)
 
