@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/ansi2html
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.9 2013/09/05 18:46:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ansi2html/ChangeLog,v 1.10 2013/09/28 13:49:15 sping Exp $
+
+  28 Sep 2013; Sebastian Pipping <sping@gentoo.org> ansi2html-0.9.1-r1.ebuild,
+  ansi2html-0.9.3-r1.ebuild, ansi2html-0.9.4.ebuild, +ansi2html-0.10.0.ebuild,
+  metadata.xml:
+  Fix license to GPL-3+
+
+*ansi2html-0.10.0 (28 Sep 2013)
+
+  28 Sep 2013; Sebastian Pipping <sping@gentoo.org> +ansi2html-0.10.0.ebuild,
+  metadata.xml:
+  Bump to 0.10.0, add myself as maintainer, update license to GPL-3+
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> ansi2html-0.9.3-r1.ebuild,
   ansi2html-0.9.4.ebuild:
