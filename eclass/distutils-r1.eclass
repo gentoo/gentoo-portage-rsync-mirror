@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.85 2013/09/27 19:21:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.86 2013/09/28 19:11:05 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -348,7 +348,7 @@ distutils-r1_python_configure() {
 # Create implementation-specific configuration file for distutils,
 # setting proper build-dir paths.
 _distutils-r1_create_setup_cfg() {
-	cat >> "${HOME}"/.pydistutils.cfg <<-_EOF_ || die
+	cat > "${HOME}"/.pydistutils.cfg <<-_EOF_ || die
 		[build]
 		build-base = ${BUILD_DIR}
 

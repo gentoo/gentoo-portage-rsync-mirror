@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/cantarell-0.0.13.ebuild,v 1.1 2013/06/18 17:54:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/cantarell/cantarell-0.0.15.ebuild,v 1.1 2013/09/28 19:14:37 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="${PN}-fonts"
@@ -17,8 +17,6 @@ IUSE=""
 
 RDEPEND="media-libs/fontconfig"
 DEPEND="virtual/pkgconfig"
-
-DOCS="NEWS README"
 
 # This ebuild does not install any binaries
 RESTRICT="binchecks strip"
