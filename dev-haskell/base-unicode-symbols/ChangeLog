@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/base-unicode-symbols
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.7 2013/07/21 17:33:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/ChangeLog,v 1.8 2013/09/28 00:46:12 gienah Exp $
+
+  28 Sep 2013; Mark Wright <gienah@gentoo.org>
+  base-unicode-symbols-0.2.2.3.ebuild:
+  Thanks to nao for reporting, loosen the base dep in base-unicode-
+  symbols-0.2.2.3 to allow ghc 7.6.3
 
   21 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
   base-unicode-symbols-0.2.2.4.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/base-unicode-symbols-0.2.2.3.ebuild,v 1.3 2012/09/12 15:42:10 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/base-unicode-symbols/base-unicode-symbols-0.2.2.3.ebuild,v 1.4 2013/09/28 00:46:12 gienah Exp $
 
 EAPI=4
 
@@ -25,4 +25,6 @@ src_prepare() {
 		# change the unicode -> to ascii ->
 		epatch "${FILESDIR}/${PN}-0.2.2.3-ghc-7.5.patch"
 	fi
+	cabal_chdeps \
+		'base >= 3.0.3.1 && < 4.6' 'base >= 3.0.3.1 && < 5'
 }
