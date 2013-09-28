@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/latexila
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.19 2013/05/13 18:21:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/ChangeLog,v 1.20 2013/09/28 20:27:32 pacho Exp $
+
+*latexila-2.8.3 (28 Sep 2013)
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> +latexila-2.8.3.ebuild,
+  -latexila-2.8.0.ebuild:
+  Version bump, drop old
 
 *latexila-2.8.1 (13 May 2013)
 

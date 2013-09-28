@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.1.ebuild,v 1.1 2013/09/27 07:19:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.1.ebuild,v 1.2 2013/09/28 20:06:19 radhermit Exp $
 
 EAPI=5
 
@@ -34,8 +34,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 DOCS=( AUTHORS BUGS Changelog README TODO )
-
-S=${WORKDIR}
 
 pkg_pretend() {
 	if use sse2 ; then

@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.179 2013/09/26 19:46:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.183 2013/09/28 20:29:58 ago Exp $
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for ppc64, wrt bug #485546
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for ppc, wrt bug #485546
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for x86, wrt bug #485546
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> systemd-204-r1.ebuild:
+  Stable for amd64, wrt bug #485546
 
   26 Sep 2013; Mike Gilbert <floppym@gentoo.org> systemd-204-r1.ebuild,
   systemd-207-r2.ebuild, systemd-9999-r1.ebuild:

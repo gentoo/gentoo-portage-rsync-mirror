@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.8.0.ebuild,v 1.1 2013/03/29 12:02:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.8.3.ebuild,v 1.1 2013/09/28 20:27:32 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ IUSE="+latexmk rubber"
 
 COMMON_DEPEND="
 	app-text/enchant
-	>=dev-libs/glib-2.32:2
+	>=dev-libs/glib-2.36:2
 	dev-libs/libgee:0
 	gnome-base/gsettings-desktop-schemas
 	>=x11-libs/gtk+-3.6.0:3
@@ -40,4 +40,8 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 "
 
-DOCS="AUTHORS HACKING NEWS README"
+src_prepare() {
+	DOCS="AUTHORS HACKING NEWS README"
+	gnome2_src_prepare
+	vala_src_prepare
+}
