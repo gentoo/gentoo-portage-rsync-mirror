@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/arx-libertatis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.19 2013/07/19 19:47:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/arx-libertatis/ChangeLog,v 1.20 2013/09/28 19:51:44 ago Exp $
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> arx-libertatis-1.1.1.ebuild:
+  Stable for amd64, wrt bug #486234
 
   19 Jul 2013; Julian Ospald <hasufell@gentoo.org>
   -arx-libertatis-1.1-r1.ebuild, -files/arx-libertatis-1.1-map-marker.patch:

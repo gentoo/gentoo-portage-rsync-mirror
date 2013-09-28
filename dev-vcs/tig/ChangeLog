@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.24 2013/08/26 05:14:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.25 2013/09/28 19:52:28 ago Exp $
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tig-1.2.1.ebuild:
+  Stable for amd64, wrt bug #486128
 
   26 Aug 2013; Tim Harder <radhermit@gentoo.org> tig-1.2.1.ebuild:
   Fix version set wrong in tarball.

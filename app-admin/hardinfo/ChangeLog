@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/hardinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/ChangeLog,v 1.8 2013/08/23 13:13:04 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hardinfo/ChangeLog,v 1.9 2013/09/28 19:51:59 ago Exp $
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  hardinfo-0.5.2_pre20130823.ebuild:
+  Stable for amd64, wrt bug #486240
 
 *hardinfo-0.5.2_pre20130823 (23 Aug 2013)
 
@@ -42,4 +46,3 @@
   26 May 2012; Julian Ospald <hasufell@gentoo.org> +hardinfo-0.5.1.ebuild,
   +files/hardinfo-0.5.1-makefile.patch, +metadata.xml:
   initial import wrt #147547
-

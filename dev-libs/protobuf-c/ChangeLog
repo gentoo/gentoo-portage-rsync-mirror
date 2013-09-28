@@ -1,10 +1,12 @@
 # ChangeLog for dev-libs/protobuf-c
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.1 2012/07/27 06:32:05 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.2 2013/09/28 19:52:06 ago Exp $
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> protobuf-c-0.15.ebuild:
+  Stable for amd64, wrt bug #486244
 
 *protobuf-c-0.15 (27 Jul 2012)
 
   27 Jul 2012; Tim Harder <radhermit@gentoo.org> +protobuf-c-0.15.ebuild,
   +metadata.xml:
   Initial import (bug #427666 by Christoph Brill).
-

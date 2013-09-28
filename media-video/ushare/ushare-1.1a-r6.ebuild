@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ushare-1.1a-r6.ebuild,v 1.1 2013/08/18 16:41:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ushare/ushare-1.1a-r6.ebuild,v 1.2 2013/09/28 19:49:41 ago Exp $
 
 EAPI=4
 inherit eutils multilib readme.gentoo toolchain-funcs user systemd
@@ -11,7 +11,7 @@ SRC_URI="http://ushare.geexbox.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="dlna nls"
 
 RDEPEND=">=net-libs/libupnp-1.6.14

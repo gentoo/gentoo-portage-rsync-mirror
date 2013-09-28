@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.6.19.ebuild,v 1.2 2013/09/26 16:15:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/highline-1.6.19.ebuild,v 1.3 2013/09/28 19:50:08 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://highline.rubyforge.org/"
 IUSE=""
 LICENSE="|| ( GPL-2 Ruby )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
 all_ruby_prepare() {
 	# fix up gemspec file not to call git

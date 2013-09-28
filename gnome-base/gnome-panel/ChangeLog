@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.361 2013/09/08 17:53:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.362 2013/09/28 20:01:06 pacho Exp $
+
+*gnome-panel-3.8.0 (28 Sep 2013)
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> +gnome-panel-3.8.0.ebuild:
+  Version bump
 
   08 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-panel-2.32.1-r3.ebuild, -gnome-panel-3.6.2.ebuild,

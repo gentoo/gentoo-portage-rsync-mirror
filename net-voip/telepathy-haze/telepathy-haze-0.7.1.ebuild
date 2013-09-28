@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.7.1.ebuild,v 1.1 2013/09/28 18:55:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.7.1.ebuild,v 1.2 2013/09/28 19:44:45 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -20,7 +20,7 @@ IUSE=""
 # Tests failing, see upstream: https://bugs.freedesktop.org/34577
 RESTRICT="test"
 
-RDEPEND="
+RDEPEND="${PYTHON_DEPS}
 	>=net-im/pidgin-2.7
 	>=net-libs/telepathy-glib-0.15.1[${PYTHON_USEDEP}]
 	>=dev-libs/glib-2.30:2

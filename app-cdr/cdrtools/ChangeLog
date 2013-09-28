@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.309 2013/09/28 10:43:37 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.310 2013/09/28 19:50:34 ago Exp $
+
+  28 Sep 2013; Agostino Sarubbo <ago@gentoo.org> cdrtools-3.01_alpha17.ebuild:
+  Stable for amd64, wrt bug #486318
 
   28 Sep 2013; Daniel Pielmeier <billie@gentoo.org>
   -cdrtools-3.01_alpha15.ebuild, -cdrtools-3.01_alpha16.ebuild:
