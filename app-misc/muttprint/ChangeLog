@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.59 2013/05/15 12:40:16 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.60 2013/09/28 15:32:25 nimiux Exp $
+
+  28 Sep 2013; Chema Alonso <nimiux@gentoo.org> -muttprint-0.72d-r3.ebuild,
+  -files/muttprint-0.72d-warning.patch, -files/muttprint-CVE-2008-5368.patch,
+  -files/muttprint-ldflags.patch, -files/muttprint-no_html_docs.patch:
+  Drop old
 
   15 May 2013; Chema Alonso <nimiux@gentoo.org> -muttprint-0.72d-r1.ebuild,
   -muttprint-0.72d-r2.ebuild, -files/muttprint-rem_sig.patch:
