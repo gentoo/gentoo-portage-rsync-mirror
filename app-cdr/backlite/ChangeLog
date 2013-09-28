@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/backlite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.39 2013/07/10 04:43:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/backlite/ChangeLog,v 1.40 2013/09/28 08:40:37 billie Exp $
+
+  28 Sep 2013; Daniel Pielmeier <billie@gentoo.org> backlite-1.0.3-r1.ebuild:
+  Depend on dev-qt/qtdbus. This fixes bug #484162. Thanks to Nikoli for the
+  report.
 
   10 Jul 2013; Patrick Lauer <patrick@gentoo.org> backlite-1.0.3-r1.ebuild:
   Fixing qtgui deps for qt-4.8.5

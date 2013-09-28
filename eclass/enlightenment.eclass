@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.101 2013/08/31 13:04:51 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.102 2013/09/28 08:54:27 vapier Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -100,11 +100,13 @@ EXPORT_FUNCTIONS ${ENLIGHTENMENT_EXPF}
 
 DESCRIPTION="A DR17 production"
 HOMEPAGE="http://www.enlightenment.org/"
-case ${EURI_STATE:-${E_STATE}} in
+if [[ -z ${SRC_URI} ]] ; then
+	case ${EURI_STATE:-${E_STATE}} in
 	release) SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz";;
 	snap)    SRC_URI="http://download.enlightenment.org/snapshots/${E_SNAP_DATE}/${P}.tar.bz2";;
 	live)    SRC_URI="";;
-esac
+	esac
+fi
 
 LICENSE="BSD"
 SLOT="0"

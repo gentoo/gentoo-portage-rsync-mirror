@@ -1,6 +1,18 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.382 2013/09/11 14:20:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.383 2013/09/28 08:36:50 pacho Exp $
+
+*gdm-3.8.4-r1 (28 Sep 2013)
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> +gdm-3.8.4-r1.ebuild:
+  >=openrc-0.12 and xdm init.d script from >-x11-base/xorg-server-1.14.3-r1
+  supports gdm-3.8 restarting (#463784 by Ian Stakenvicius, Chí-Thanh
+  Christopher Nguyễn, Alexander Vershilov, William Hubbs...). Handle
+  accessibility in a different way (#479516): xevie support disabled as it's
+  obsolete and broken, drop deps not needed for a long time due upstream
+  progressively dropping their support, remaining deps are only for fallback
+  greeter. Regarding orca.desktop autostart, it will only be started (confirmed
+  by me just now) when screen-reader-enabled gsetting is true.
 
   11 Sep 2013; Pacho Ramos <pacho@gentoo.org> gdm-3.8.4.ebuild:
   Rekeyword as bug #478076 is solved for ppc

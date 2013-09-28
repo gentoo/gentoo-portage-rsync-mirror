@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r3.ebuild,v 1.4 2013/09/27 13:09:41 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r3.ebuild,v 1.5 2013/09/28 08:39:18 jlec Exp $
 
 EAPI=5
 
@@ -42,24 +42,24 @@ src_compile() {
 		F77="$(tc-getFC)" \
 		CFLAGS="${FFLAGS}" \
 		CCP4_LIB="${EPREFIX}/usr/$(get_libdir)" \
-		Linux || die
+		Linux
 }
 
 src_install() {
 	exeinto /usr/libexec/ccp4/bin/
-	doexe src/{${PN},fnp2fp} || die
+	doexe src/{${PN},fnp2fp}
 
 	exeinto /usr/$(get_libdir)/${PN}
-	doexe bin/*.*sh || die
+	doexe bin/*.*sh
 
 	insinto /usr/share/doc/${PF}/html
-	doins bin/html/* || die
+	doins bin/html/*
 	dosym ../../share/doc/${PF}/html /usr/$(get_libdir)/${PN}/html
 	chmod 755 "${ED}"/usr/share/doc/${PF}/html/*.{*sh,awk} || die
 
 	if use examples; then
 		insinto /usr/share/${PN}
-		doins -r examples || die
+		doins -r examples
 	fi
 
 	cat >> "${T}"/25oasis <<- EOF

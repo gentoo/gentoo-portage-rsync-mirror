@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=>=media-libs/libmpeg2-0.5.1 virtual/ffmpeg dev-qt/qtgui:4[dbus(+)] || ( dev-qt/qtphonon:4 media-libs/phonon )
+DEPEND=>=media-libs/libmpeg2-0.5.1 virtual/ffmpeg dev-qt/qtgui:4 dev-qt/qtdbus:4 || ( dev-qt/qtphonon:4 media-libs/phonon )
 DESCRIPTION=backlite is a pure QT4 version of k9copy
 EAPI=5
 HOMEPAGE=http://k9copy.sourceforge.net/
 IUSE=mplayer
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=>=media-libs/libmpeg2-0.5.1 virtual/ffmpeg dev-qt/qtgui:4[dbus(+)] || ( dev-qt/qtphonon:4 media-libs/phonon ) media-video/dvdauthor mplayer? ( media-video/mplayer )
+RDEPEND=>=media-libs/libmpeg2-0.5.1 virtual/ffmpeg dev-qt/qtgui:4 dev-qt/qtdbus:4 || ( dev-qt/qtphonon:4 media-libs/phonon ) media-video/dvdauthor mplayer? ( media-video/mplayer )
 SLOT=0
 SRC_URI=mirror://sourceforge/k9copy/backlite-1.0.3.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=d097324a90d841540d782b67cb5b233f
+_md5_=8cd85be78c965b7975c169d777f9e55d
