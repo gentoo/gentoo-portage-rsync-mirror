@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.675 2013/09/26 02:00:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.676 2013/09/28 21:02:10 pacho Exp $
+
+*gtk+-2.24.21 (28 Sep 2013)
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> +gtk+-2.24.21.ebuild:
+  Version bump
 
   26 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-2.24.20.ebuild:
   Require glib-2.34 due to g_clear_pointer (bug #486006, thanks to Thomas
