@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r3.ebuild,v 1.2 2013/09/27 17:20:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r3.ebuild,v 1.3 2013/09/28 20:59:27 ottxor Exp $
 
 EAPI=5
 
@@ -70,6 +70,7 @@ src_install() {
 pkg_postinst() {
 	# remove localtime file from previous installations
 	rm -f "${EROOT}${NTP_HOME}"/etc/localtime
+	mkdir -p "${NTP_HOME}"/etc
 	ln -s /etc/localtime "${NTP_HOME}"/etc/localtime || die
 	chown -R root:root "${EROOT}${NTP_HOME}" || die
 }
