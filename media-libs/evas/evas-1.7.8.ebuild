@@ -1,20 +1,27 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.8.ebuild,v 1.1 2013/08/04 10:08:10 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.8.ebuild,v 1.2 2013/09/28 09:26:37 vapier Exp $
 
-EAPI=5
+EAPI="5"
+
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_SUB_PROJECT="legacy"
+	EGIT_URI_APPEND=${PN}
+	EGIT_BRANCH=${PN}-1.7
+else
+	SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
+	EKEY_STATE="snap"
+fi
 
 inherit enlightenment
 
 DESCRIPTION="hardware-accelerated retained canvas API"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Evas"
-SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="BSD-2"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sse sse3 static-libs tga tiff wayland X xcb xpm"
 
-RDEPEND=">=dev-libs/eina-1.7.8
+RDEPEND=">=dev-libs/eina-${PV}
 	>=media-libs/freetype-2.3.9
 	fontconfig? ( media-libs/fontconfig )
 	gles? ( media-libs/mesa[gallium,gles2] )
@@ -36,7 +43,7 @@ RDEPEND=">=dev-libs/eina-1.7.8
 		xcb? (
 			x11-libs/xcb-util
 		) )
-	eet? ( >=dev-libs/eet-1.7.8 )"
+	eet? ( >=dev-libs/eet-${PV} )"
 DEPEND="${RDEPEND}"
 
 src_configure() {
@@ -45,44 +52,44 @@ src_configure() {
 			ewarn "You have enabled both 'X' and 'xcb', so we will use"
 			ewarn "X as it's considered the most stable for evas"
 		fi
-		MY_ECONF="
+		E_ECONF+=(
 			--disable-software-xcb
 			$(use_enable opengl gl-xlib)
-		"
+		)
 	elif use xcb ; then
-		MY_ECONF="
+		E_ECONF+=(
 			--disable-gl-xlib
 			--enable-software-xcb
 			$(use_enable opengl gl-xcb)
-		"
+		)
 	else
-		MY_ECONF="
+		E_ECONF+=(
 			--disable-gl-xlib
 			--disable-software-xcb
 			--disable-gl-xcb
-		"
+		)
 	fi
 	if use wayland ; then
-		MY_ECONF+="
+		E_ECONF+=(
 			--enable-wayland-shm
-		"
+		)
 		if use gles ; then
-			MY_ECONF+="
+			E_ECONF+=(
 				--enable-wayland-egl
-			"
+			)
 		else
-			MY_ECONF+="
+			E_ECONF+=(
 				--disable-wayland-egl
-			"
+			)
 		fi
 	else
-		MY_ECONF+="
+		E_ECONF+=(
 			--disable-wayland-egl
 			--disable-wayland-shm
-		"
+		)
 	fi
 
-	MY_ECONF+="
+	E_ECONF+=(
 		$(use_enable altivec cpu-altivec)
 		$(use_enable bidi fribidi)
 		$(use_enable bmp image-loader-bmp)
@@ -112,39 +119,40 @@ src_configure() {
 		--enable-async-preload
 		$(use_enable X software-xlib)
 		$(use_enable xpm image-loader-xpm)
-		--enable-evas-magic-debug \
-		--enable-static-software-generic \
-		--enable-buffer \
-		--enable-cpu-c \
-		--enable-scale-sample \
-		--enable-scale-smooth \
-		--enable-convert-8-rgb-332 \
-		--enable-convert-8-rgb-666 \
-		--enable-convert-8-rgb-232 \
-		--enable-convert-8-rgb-222 \
-		--enable-convert-8-rgb-221 \
-		--enable-convert-8-rgb-121 \
-		--enable-convert-8-rgb-111 \
-		--enable-convert-16-rgb-565 \
-		--enable-convert-16-rgb-555 \
-		--enable-convert-16-rgb-444 \
-		--enable-convert-16-rgb-rot-0 \
-		--enable-convert-16-rgb-rot-270 \
-		--enable-convert-16-rgb-rot-90 \
-		--enable-convert-24-rgb-888 \
-		--enable-convert-24-bgr-888 \
-		--enable-convert-32-rgb-8888 \
-		--enable-convert-32-rgbx-8888 \
-		--enable-convert-32-bgr-8888 \
-		--enable-convert-32-bgrx-8888 \
-		--enable-convert-32-rgb-rot-0 \
-		--enable-convert-32-rgb-rot-270 \
-		--enable-convert-32-rgb-rot-90 \
-		--enable-image-loader-generic \
-		--disable-harfbuzz \
-		--disable-image-loader-edb \
-		--disable-static-software-16 \
-		--disable-software-16-x11"
+		--enable-evas-magic-debug
+		--enable-static-software-generic
+		--enable-buffer
+		--enable-cpu-c
+		--enable-scale-sample
+		--enable-scale-smooth
+		--enable-convert-8-rgb-332
+		--enable-convert-8-rgb-666
+		--enable-convert-8-rgb-232
+		--enable-convert-8-rgb-222
+		--enable-convert-8-rgb-221
+		--enable-convert-8-rgb-121
+		--enable-convert-8-rgb-111
+		--enable-convert-16-rgb-565
+		--enable-convert-16-rgb-555
+		--enable-convert-16-rgb-444
+		--enable-convert-16-rgb-rot-0
+		--enable-convert-16-rgb-rot-270
+		--enable-convert-16-rgb-rot-90
+		--enable-convert-24-rgb-888
+		--enable-convert-24-bgr-888
+		--enable-convert-32-rgb-8888
+		--enable-convert-32-rgbx-8888
+		--enable-convert-32-bgr-8888
+		--enable-convert-32-bgrx-8888
+		--enable-convert-32-rgb-rot-0
+		--enable-convert-32-rgb-rot-270
+		--enable-convert-32-rgb-rot-90
+		--enable-image-loader-generic
+		--disable-harfbuzz
+		--disable-image-loader-edb
+		--disable-static-software-16
+		--disable-software-16-x11
+	)
 
 	enlightenment_src_configure
 }

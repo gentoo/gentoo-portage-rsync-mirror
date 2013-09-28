@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8275 2013/09/27 13:31:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8276 2013/09/28 09:23:23 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> base/use.mask:
+  Mask openrc-force USE flag (#480336)
 
   27 Sep 2013; Tiziano Müller <dev-zero@gentoo.org> package.mask:
   Mask nginx >=1.4.2 for testing.

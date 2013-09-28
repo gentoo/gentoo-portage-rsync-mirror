@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.124 2013/09/08 15:06:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.125 2013/09/28 09:25:35 pacho Exp $
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  -gnome-settings-daemon-3.8.3-r1.ebuild, -gnome-settings-daemon-3.8.4.ebuild,
+  gnome-settings-daemon-3.8.5.ebuild, metadata.xml:
+  Provide masked openrc-force USE (#480336)
 
 *gnome-settings-daemon-3.8.5 (08 Sep 2013)
 

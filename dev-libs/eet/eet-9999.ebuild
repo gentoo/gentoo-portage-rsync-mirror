@@ -1,64 +1,75 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-1.7.6.ebuild,v 1.2 2013/04/24 08:26:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-9999.ebuild,v 1.6 2013/09/28 09:13:18 vapier Exp $
 
-EAPI=2
+EAPI="4"
+
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_SUB_PROJECT="legacy"
+	EGIT_URI_APPEND=${PN}
+	EGIT_BRANCH=${PN}-1.7
+else
+	SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
+	EKEY_STATE="snap"
+fi
 
 inherit enlightenment
 
 DESCRIPTION="E file chunk reading/writing library"
 HOMEPAGE="http://trac.enlightenment.org/e/wiki/Eet"
-SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="BSD-2"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="debug examples gnutls ssl static-libs test"
 
-RDEPEND=">=dev-libs/eina-1.7.6
+RDEPEND=">=dev-libs/eina-${PV}
 	virtual/jpeg
 	sys-libs/zlib
-	gnutls? ( net-libs/gnutls
-		dev-libs/libgcrypt )
+	gnutls? (
+		net-libs/gnutls
+		dev-libs/libgcrypt
+	)
 	!gnutls? ( ssl? ( dev-libs/openssl ) )"
 DEPEND="${RDEPEND}
-	test? ( dev-libs/check
-		dev-util/lcov )"
+	test? (
+		dev-libs/check
+		dev-util/lcov
+	)"
 
 src_configure() {
-	local SSL_FLAGS=""
+	E_ECONF=(
+		$(use_enable debug assert)
+		$(use_enable doc)
+		$(use_enable examples build-examples)
+		$(use_enable examples install-examples)
+		$(use_enable test tests)
+	)
 
 	if use gnutls; then
 		if use ssl; then
 			ewarn "You have enabled both 'ssl' and 'gnutls', so we will use"
 			ewarn "gnutls and not openssl for cipher and signature support"
 		fi
-		SSL_FLAGS="
+		E_ECONF+=(
 			--enable-cipher
 			--enable-signature
 			--disable-openssl
-			--enable-gnutls"
+			--enable-gnutls
+		)
 	elif use ssl; then
-		SSL_FLAGS="
+		E_ECONF+=(
 			--enable-cipher
 			--enable-signature
 			--enable-openssl
-			--disable-gnutls"
+			--disable-gnutls
+		)
 	else
-		SSL_FLAGS="
+		E_ECONF+=(
 			--disable-cipher
 			--disable-signature
 			--disable-openssl
-			--disable-gnutls"
+			--disable-gnutls
+		)
 	fi
-
-	export MY_ECONF="
-		$(use_enable debug assert)
-		$(use_enable doc)
-		$(use_enable examples build-examples)
-		$(use_enable examples install-examples)
-		$(use_enable test tests)
-		${SSL_FLAGS}
-		${MY_ECONF}"
 
 	enlightenment_src_configure
 }

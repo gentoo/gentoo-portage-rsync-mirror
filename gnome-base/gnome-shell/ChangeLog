@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.47 2013/09/01 18:47:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.48 2013/09/28 09:27:38 pacho Exp $
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> gnome-shell-3.8.4-r1.ebuild,
+  metadata.xml:
+  Provide masked openrc-force USE (#480336)
 
   01 Sep 2013; Pacho Ramos <pacho@gentoo.org> gnome-shell-3.8.4-r1.ebuild:
   Drop notes about intel[gallium] as it works fine for me and haven't seen any

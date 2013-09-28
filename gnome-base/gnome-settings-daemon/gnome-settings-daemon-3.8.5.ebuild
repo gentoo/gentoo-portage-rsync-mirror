@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.5.ebuild,v 1.1 2013/09/08 15:06:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.5.ebuild,v 1.2 2013/09/28 09:25:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
-IUSE="+colord +cups debug +i18n input_devices_wacom packagekit policykit +short-touchpad-timeout smartcard +udev"
+IUSE="+colord +cups debug +i18n input_devices_wacom -openrc-force packagekit policykit +short-touchpad-timeout smartcard +udev"
 REQUIRED_USE="
 	packagekit? ( udev )
 	smartcard? ( udev )
@@ -61,7 +61,7 @@ COMMON_DEPEND="
 # systemd needed for power and session management, bug #464944
 RDEPEND="${COMMON_DEPEND}
 	gnome-base/dconf
-	sys-apps/systemd
+	!openrc-force? ( sys-apps/systemd )
 	>=x11-themes/gnome-themes-standard-2.91
 	>=x11-themes/gnome-icon-theme-2.91
 	>=x11-themes/gnome-icon-theme-symbolic-2.91
@@ -120,9 +120,18 @@ src_test() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
+
 	if ! systemd_is_booted; then
 		ewarn "${PN} needs Systemd to be *running* for working"
 		ewarn "properly. Please follow the this guide to migrate:"
 		ewarn "http://wiki.gentoo.org/wiki/Systemd"
+	fi
+
+	if use openrc-force; then
+		ewarn "You are enabling 'openrc-force' USE flag to skip systemd requirement,"
+		ewarn "this can lead to unexpected problems and is not supported neither by"
+		ewarn "upstream neither by Gnome Gentoo maintainers. If you suffer any problem,"
+		ewarn "you will need to disable this USE flag system wide and retest before"
+		ewarn "opening any bug report."
 	fi
 }
