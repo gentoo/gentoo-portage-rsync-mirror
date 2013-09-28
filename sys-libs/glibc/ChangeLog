@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.949 2013/09/11 18:05:42 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.950 2013/09/28 22:07:58 vapier Exp $
+
+  28 Sep 2013; Mike Frysinger <vapier@gentoo.org> files/eblits/src_unpack.eblit:
+  Tweak how we check the kernel header version to work w/clang #485146 by eroen.
 
   11 Sep 2013; Magnus Granberg <zorry@gentoo.org> glibc-2.18.ebuild,
   +files/2.18/glibc-2.18-gentoo-chk_fail.c,
