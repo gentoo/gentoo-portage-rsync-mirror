@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.40 2013/09/05 19:02:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.41 2013/09/28 18:55:37 pacho Exp $
+
+*telepathy-haze-0.7.1 (28 Sep 2013)
+
+  28 Sep 2013; Pacho Ramos <pacho@gentoo.org> +telepathy-haze-0.7.1.ebuild:
+  Version bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> telepathy-haze-0.7.0.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
