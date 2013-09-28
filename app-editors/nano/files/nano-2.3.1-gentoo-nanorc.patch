@@ -1,4 +1,4 @@
-From b7e6bbe4ee980a5bb166bae8cd5603301cb6e22f Mon Sep 17 00:00:00 2001
+From 7051588fee7a20a69c67c8899b3e6c35ebf51fbf Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
 Date: Sat, 25 Aug 2012 23:03:22 -0400
 Subject: [PATCH] gentoo syntax: update
@@ -9,11 +9,11 @@ Much of this is based on work by Davide.
 Reported-by: Davide Pesavento <pesa@gentoo.org>
 Signed-off-by: Mike Frysinger <vapier@gentoo.org>
 ---
- doc/syntax/gentoo.nanorc |   44 ++++++++++++++++++++++++++------------------
- 1 file changed, 26 insertions(+), 18 deletions(-)
+ doc/syntax/gentoo.nanorc | 46 +++++++++++++++++++++++++++-------------------
+ 1 file changed, 27 insertions(+), 19 deletions(-)
 
 diff --git a/doc/syntax/gentoo.nanorc b/doc/syntax/gentoo.nanorc
-index 2ad1597..55dd101 100644
+index 2ad1597..ad89fce 100644
 --- a/doc/syntax/gentoo.nanorc
 +++ b/doc/syntax/gentoo.nanorc
 @@ -2,30 +2,38 @@
@@ -73,6 +73,15 @@ index 2ad1597..55dd101 100644
  ## Highlight comments (doesnt work that well)
  color yellow "(^|[[:space:]])#.*$"
  ## Highlight strings (doesnt work that well)
+@@ -35,7 +43,7 @@ color ,green "[[:space:]]+$"
+ 
+ ## Here is an example for Portage control files
+ ##
+-syntax "/etc/portage" "\.(keywords|mask|unmask|use)(/.+)?$"
++syntax "/etc/portage" "\.(accept_keywords|env|keywords|mask|unmask|use)(/.+)?$"
+ ## Base text:
+ color green "^.+$"
+ ## Use flags:
 -- 
-1.7.9.7
+1.8.3.2
 
