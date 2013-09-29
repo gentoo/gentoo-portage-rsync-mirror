@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.7.ebuild,v 1.1 2013/09/01 22:44:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.7.ebuild,v 1.2 2013/09/29 08:54:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-#GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils gnome2 flag-o-matic python-single-r1
@@ -49,6 +48,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.0
 	virtual/pkgconfig
 "
+
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
 
 src_configure() {
 	gnome2_src_configure \
