@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.45 2013/08/14 16:10:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.46 2013/09/29 20:45:03 radhermit Exp $
+
+  29 Sep 2013; Tim Harder <radhermit@gentoo.org> task-2.2.0.ebuild:
+  Add arm keyword (bug #486258).
 
   14 Aug 2013; Fabian Groffen <grobian@gentoo.org> task-2.2.0.ebuild:
   Fixed and marked for ~x64-macos, thanks for initial patch by Changyuan Yu in
