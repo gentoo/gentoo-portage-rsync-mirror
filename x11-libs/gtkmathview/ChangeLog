@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.58 2013/03/30 17:18:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.59 2013/09/29 09:04:22 pacho Exp $
+
+  29 Sep 2013; Pacho Ramos <pacho@gentoo.org> gtkmathview-0.8.0-r2.ebuild:
+  Fix compile with latest automake (#469406)
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -gtkmathview-0.8.0.ebuild, -gtkmathview-0.8.0-r1.ebuild:

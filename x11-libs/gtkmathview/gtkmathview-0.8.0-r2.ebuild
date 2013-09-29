@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0-r2.ebuild,v 1.12 2012/12/19 16:46:43 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/gtkmathview-0.8.0-r2.ebuild,v 1.13 2013/09/29 09:04:22 pacho Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="Rendering engine for MathML documents"
@@ -29,9 +28,7 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	virtual/pkgconfig"
 
-pkg_setup() {
-	DOCS="ANNOUNCEMENT AUTHORS BUGS ChangeLog CONTRIBUTORS HISTORY NEWS README TODO"
-}
+DOCS="ANNOUNCEMENT AUTHORS BUGS ChangeLog CONTRIBUTORS HISTORY NEWS README TODO"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
@@ -51,6 +48,8 @@ src_prepare() {
 		mkdir ac-helpers || die "mkdir failed"
 		cp "${FILESDIR}/binreloc.m4" ac-helpers || die "cp failed"
 	fi
+
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 
 	AT_M4DIR=ac-helpers eautoreconf
 }
@@ -75,5 +74,5 @@ src_configure() {
 
 src_install() {
 	default
-	find "${D}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files
 }

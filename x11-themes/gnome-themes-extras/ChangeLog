@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes-extras
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.65 2012/05/05 04:10:07 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.66 2013/09/29 09:18:35 pacho Exp $
+
+  29 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  gnome-themes-extras-2.22.0-r1.ebuild:
+  Fix compile with latest automake (#469826)
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   gnome-themes-extras-2.22.0-r1.ebuild:

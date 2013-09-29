@@ -1,10 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r2.ebuild,v 1.11 2012/05/05 04:10:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtpixmap/gtk-engines-qtpixmap-0.28-r2.ebuild,v 1.12 2013/09/29 09:30:01 pacho Exp $
 
-EAPI="1"
+EAPI=5
+GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils
+inherit autotools eutils gnome2
 
 MY_P="QtPixmap-${PV}"
 
@@ -19,34 +21,29 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
+
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Add switches to enable/disable gtk1 and gtk2 engines in the configure
 	# script.
 	epatch "${FILESDIR}/${P}-gtk_switches.patch"
-	sed -i \
-		-e 's/AC_CHECK_COMPILERS/AC_PROG_CC/' \
-		configure.in
+
+	sed -i -e 's/AC_CHECK_COMPILERS/AC_PROG_CC/' configure.in || die
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
+
 	rm acinclude.m4
+
 	eautoreconf
+	gnome2_src_prepare
 }
 
-src_compile() {
-	local myconf="--enable-gtk2 --disable-gtk1"
-
-	econf $myconf || die "Configuration failed"
-	emake || die "Compilation failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
-
-	dodoc AUTHORS ChangeLog README
+src_configure() {
+	gnome2_src_configure \
+		--enable-gtk2 \
+		--disable-gtk1
 }
