@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/tls-extra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/ChangeLog,v 1.2 2013/09/13 06:37:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/ChangeLog,v 1.3 2013/09/29 01:02:25 gienah Exp $
+
+*tls-extra-0.6.5-r1 (29 Sep 2013)
+
+  29 Sep 2013; Mark Wright <gienah@gentoo.org> +tls-extra-0.6.5-r1.ebuild:
+  Loosen pem dependency in tls-extra-0.6.5-r1
 
 *tls-extra-0.6.5 (13 Sep 2013)
 

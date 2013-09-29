@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r5.ebuild,v 1.3 2013/05/05 01:15:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r5.ebuild,v 1.4 2013/09/29 01:24:03 vapier Exp $
 
 EAPI="4"
 
@@ -96,4 +96,6 @@ pkg_postinst() {
 		# Do not return an error if this fails
 		/sbin/telinit U &>/dev/null
 	fi
+
+	elog "The mesg/mountpoint/sulogin/utmpdump/wall tools have been moved to sys-apps/util-linux."
 }
