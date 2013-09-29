@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.39 2013/08/06 13:10:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.40 2013/09/29 06:58:07 zlogene Exp $
+
+  29 Sep 2013; Mikle Kolyada <zlogene@gentoo.org>
+  man-pages-ru-3.41.2145.1724.20130102.ebuild,
+  man-pages-ru-3.49.2170.1764.20130606.ebuild,
+  man-pages-ru-3.51.2170.1766.20130613.ebuild:
+  downgrade s390, sh, m68k to ~arch
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
   man-pages-ru-3.49.2170.1764.20130606.ebuild:
