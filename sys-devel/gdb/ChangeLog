@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.245 2013/09/15 12:04:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.246 2013/09/29 04:00:43 vapier Exp $
+
+  29 Sep 2013; Mike Frysinger <vapier@gentoo.org> gdb-7.6.1.ebuild:
+  Add fix from upstream for building btrace on older systems #473522 by William
+  Throwe.
 
   15 Sep 2013; Fabian Groffen <grobian@gentoo.org> gdb-7.6.1.ebuild,
   gdb-9999.ebuild:
