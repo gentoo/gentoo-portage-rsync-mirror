@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xmag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmag/ChangeLog,v 1.48 2013/01/20 18:40:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmag/ChangeLog,v 1.49 2013/09/29 11:10:10 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xmag-1.0.5.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *xmag-1.0.5 (20 Jan 2013)
 

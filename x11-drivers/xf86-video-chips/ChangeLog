@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-chips
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.60 2013/03/11 15:43:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.61 2013/09/29 11:12:22 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  xf86-video-chips-1.2.5-r1.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *xf86-video-chips-1.2.5-r1 (11 Mar 2013)
 

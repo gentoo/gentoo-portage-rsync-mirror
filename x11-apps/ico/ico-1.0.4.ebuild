@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ico/ico-1.0.4.ebuild,v 1.1 2013/01/20 18:41:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ico/ico-1.0.4.ebuild,v 1.2 2013/09/29 11:08:09 ago Exp $
 
 EAPI=5
 
 inherit xorg-2
 
 DESCRIPTION="animate an icosahedron or other polyhedron"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
+KEYWORDS="amd64 ~arm ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
 IUSE=""
 
 RDEPEND="x11-libs/libX11"

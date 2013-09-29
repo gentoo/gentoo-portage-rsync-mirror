@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.2.3.ebuild,v 1.1 2013/09/27 05:26:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.2.3.ebuild,v 1.2 2013/09/29 11:29:57 pacho Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ CDEPEND="
 	geo? ( net-libs/libsoup:2.4 )
 	gnome-keyring? ( gnome-base/gnome-keyring )
 	gnome-base/librsvg:2
-	gphoto2? ( media-libs/libgphoto2 )
+	gphoto2? ( media-libs/libgphoto2:= )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	jpeg2k? ( media-libs/openjpeg:0 )
 	media-gfx/exiv2[xmp]

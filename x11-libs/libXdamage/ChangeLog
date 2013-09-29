@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXdamage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.65 2013/02/26 16:32:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXdamage/ChangeLog,v 1.66 2013/09/29 11:15:18 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libXdamage-1.1.4-r1.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *libXdamage-1.1.4-r1 (26 Feb 2013)
 

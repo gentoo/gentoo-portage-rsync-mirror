@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xf86bigfontproto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.44 2013/02/25 21:57:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86bigfontproto/ChangeLog,v 1.45 2013/09/29 11:17:56 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
+  xf86bigfontproto-1.2.0-r1.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *xf86bigfontproto-1.2.0-r1 (25 Feb 2013)
 

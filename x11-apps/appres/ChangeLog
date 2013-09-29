@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/appres
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.57 2013/05/20 23:41:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/appres/ChangeLog,v 1.58 2013/09/29 11:07:50 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> appres-1.0.4.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *appres-1.0.4 (20 May 2013)
 

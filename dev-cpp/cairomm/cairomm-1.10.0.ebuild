@@ -1,10 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/cairomm-1.10.0.ebuild,v 1.8 2012/05/04 03:44:56 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/cairomm-1.10.0.ebuild,v 1.9 2013/09/29 11:05:31 pacho Exp $
 
-EAPI="4"
+EAPI=5
+GCONF_DEBUG="no"
 
-inherit eutils
+inherit eutils gnome2
 
 DESCRIPTION="C++ bindings for the Cairo vector graphics library"
 HOMEPAGE="http://cairographics.org/cairomm"
@@ -16,31 +17,35 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~amd64-linu
 IUSE="doc +svg"
 
 # FIXME: svg support is automagic
-RDEPEND=">=x11-libs/cairo-1.10[svg?]
-	dev-libs/libsigc++:2"
+RDEPEND="
+	>=x11-libs/cairo-1.10[svg?]
+	dev-libs/libsigc++:2
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? (
 		app-doc/doxygen
 		dev-libs/libxslt
-		media-gfx/graphviz )"
+		media-gfx/graphviz )
+"
 
 src_prepare() {
 	# don't waste time building examples because they are marked as "noinst"
-	sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || die "sed failed"
+	sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || die
 
 	# don't waste time building tests
 	# they require the boost Unit Testing framework, that's not in base boost
-	sed -i 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' Makefile.in || die "sed failed"
+	sed -i 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' Makefile.in || die
+
+	# Fix docs installation, bug #443950
+	sed -i 's:libdocdir = \$(datarootdir)/doc/\$(book_name):libdocdir = \$(docdir):' docs/Makefile.in || die
+
+	gnome2_src_prepare
 }
 
 src_configure() {
-	econf \
+	gnome2_src_configure \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-tests \
 		$(use_enable doc documentation)
-}
-
-src_install() {
-	default
-	find "${ED}" -name '*.la' -exec rm -f {} +
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.9.ebuild,v 1.1 2013/09/19 17:51:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-13.9.ebuild,v 1.2 2013/09/29 11:26:32 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ FOLDER_PREFIX="common/"
 IUSE="debug +modules multilib qt4 static-libs pax_kernel"
 
 LICENSE="AMD GPL-2 QPL-1.0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 
 RESTRICT="bindist test"
 

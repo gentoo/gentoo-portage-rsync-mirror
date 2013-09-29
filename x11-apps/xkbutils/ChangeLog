@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkbutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbutils/ChangeLog,v 1.49 2013/02/18 20:01:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbutils/ChangeLog,v 1.50 2013/09/29 11:09:53 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xkbutils-1.0.4.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *xkbutils-1.0.4 (18 Feb 2013)
 

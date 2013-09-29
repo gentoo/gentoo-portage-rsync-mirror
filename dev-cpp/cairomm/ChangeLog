@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.62 2013/03/05 23:07:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.63 2013/09/29 11:05:31 pacho Exp $
+
+  29 Sep 2013; Pacho Ramos <pacho@gentoo.org> cairomm-1.10.0.ebuild:
+  Fix docs installation patch, #443950 by Chris Mayo
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -cairomm-1.8.6.ebuild,
   -cairomm-1.9.8.ebuild:
@@ -216,4 +219,3 @@
   11 Sep 2006; John N. Laliberte <allanonjl@gentoo.org> +metadata.xml,
   +cairomm-1.2.2.ebuild:
   new package, thanks to dberkholz for the base ebuild.
-

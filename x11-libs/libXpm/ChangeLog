@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXpm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/ChangeLog,v 1.89 2013/09/11 20:46:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXpm/ChangeLog,v 1.90 2013/09/29 11:15:49 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libXpm-3.5.11.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *libXpm-3.5.11 (11 Sep 2013)
 

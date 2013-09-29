@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.38 2013/01/20 18:39:31 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.39 2013/09/29 11:09:04 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xedit-1.2.1.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *xedit-1.2.1 (20 Jan 2013)
 

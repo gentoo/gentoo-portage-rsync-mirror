@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.499 2013/09/21 21:30:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.500 2013/09/29 11:07:40 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> mesa-9.1.6.ebuild:
+  Stable for amd64, wrt bug #475480
 
   21 Sep 2013; Michał Górny <mgorny@gentoo.org> mesa-9.2.0-r1.ebuild:
   Fix renaming gallium drivers, bug #485614.

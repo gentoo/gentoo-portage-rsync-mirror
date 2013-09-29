@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/xf86-video-ast-0.97.0-r1.ebuild,v 1.1 2013/03/12 16:35:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/xf86-video-ast-0.97.0-r1.ebuild,v 1.2 2013/09/29 11:12:15 ago Exp $
 
 EAPI=5
 
 inherit xorg-2
 
 DESCRIPTION="X.Org driver for ASpeedTech cards"
-KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
 LICENSE="MIT"
 IUSE=""
 

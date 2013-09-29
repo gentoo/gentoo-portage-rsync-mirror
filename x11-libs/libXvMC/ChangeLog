@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXvMC
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.69 2013/06/18 14:07:42 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXvMC/ChangeLog,v 1.70 2013/09/29 11:16:11 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libXvMC-1.0.8.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *libXvMC-1.0.8 (18 Jun 2013)
 

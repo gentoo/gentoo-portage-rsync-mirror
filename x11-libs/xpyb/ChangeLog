@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xpyb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.41 2013/09/14 23:05:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.42 2013/09/29 11:16:54 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xpyb-1.3.1-r2.ebuild:
+  Stable for amd64, wrt bug #475480
 
   14 Sep 2013; Mike Gilbert <floppym@gentoo.org> xpyb-1.3.1-r2.ebuild:
   Add -fno-strict-aliasing for python2.

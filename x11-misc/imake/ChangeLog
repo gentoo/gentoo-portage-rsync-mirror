@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.59 2013/07/24 00:17:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.60 2013/09/29 11:16:57 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> imake-1.0.6.ebuild:
+  Stable for amd64, wrt bug #475480
 
 *imake-1.0.6 (24 Jul 2013)
 

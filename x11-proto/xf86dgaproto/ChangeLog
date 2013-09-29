@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xf86dgaproto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.61 2013/02/27 05:54:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xf86dgaproto/ChangeLog,v 1.62 2013/09/29 11:17:59 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xf86dgaproto-2.1-r2.ebuild:
+  Stable for amd64, wrt bug #475480
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> xf86dgaproto-2.1-r2.ebuild:
   Add ~arm-linux keyword.
