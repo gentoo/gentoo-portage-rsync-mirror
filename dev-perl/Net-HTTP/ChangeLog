@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-HTTP
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.44 2013/08/10 12:47:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.45 2013/09/29 07:37:14 zlogene Exp $
+
+  29 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> Net-HTTP-6.30.0.ebuild,
+  Net-HTTP-6.50.0.ebuild, Net-HTTP-6.60.0.ebuild:
+  downgrade s390, sh, m68k to ~arch
 
   10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> Net-HTTP-6.60.0.ebuild:
   Stable for ppc, wrt bug #470412
