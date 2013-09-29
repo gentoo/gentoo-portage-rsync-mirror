@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.184 2013/08/27 20:13:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.185 2013/09/29 15:25:58 jer Exp $
+
+  29 Sep 2013; Jeroen Roovers <jer@gentoo.org> -dialog-1.1.20120706.ebuild:
+  Old.
 
 *dialog-1.2.20130523 (27 Aug 2013)
 
