@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/generic-deriving
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/generic-deriving/ChangeLog,v 1.1 2013/08/26 10:30:39 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/generic-deriving/ChangeLog,v 1.2 2013/09/29 02:23:20 gienah Exp $
+
+*generic-deriving-1.6.2 (29 Sep 2013)
+
+  29 Sep 2013; Mark Wright <gienah@gentoo.org> +generic-deriving-1.6.2.ebuild:
+  Bump generic-deriving to 1.6.2
 
 *generic-deriving-1.6.1 (26 Aug 2013)
 
