@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.250 2013/09/22 06:44:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.251 2013/09/29 18:22:25 slyfox Exp $
+
+  29 Sep 2013; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.6.3-r1.ebuild:
+  Disable ghci linker hack on x86-hardened (bug #486140 by Anton Kochkov).
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> ghc-7.6.3-r1.ebuild:
   Stable for x86, wrt bug #483462
