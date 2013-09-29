@@ -1,0 +1,77 @@
+--- IMAPClient-0.10.2/imapclient/imapclient.py
++++ IMAPClient-0.10.2/imapclient/imapclient.py
+@@ -22,7 +22,7 @@
+ 
+ from .imap_utf7 import encode as encode_utf7, decode as decode_utf7
+ from .fixed_offset import FixedOffset
+-from .six import moves, iteritems, text_type, integer_types, PY3, binary_type
++from six import moves, iteritems, text_type, integer_types, PY3, binary_type
+ xrange = moves.xrange
+ 
+ if PY3:
+--- IMAPClient-0.10.2/imapclient/imap_utf7.py
++++ IMAPClient-0.10.2/imapclient/imap_utf7.py
+@@ -24,7 +24,7 @@
+ 
+ from __future__ import unicode_literals
+ 
+-from .six import text_type, binary_type, iteritems
++from six import text_type, binary_type, iteritems
+ 
+ PRINTABLE = set(range(0x20, 0x26)) | set(range(0x27, 0x7f))
+ 
+--- IMAPClient-0.10.2/imapclient/livetest.py
++++ IMAPClient-0.10.2/imapclient/livetest.py
+@@ -14,7 +14,7 @@
+ from email.utils import make_msgid
+ 
+ from .imapclient import IMAPClient, DELETED, to_unicode
+-from .six import binary_type, text_type, PY3
++from six import binary_type, text_type, PY3
+ from .test.util import unittest
+ from .config import parse_config_file, create_client_from_config
+ 
+--- IMAPClient-0.10.2/imapclient/response_lexer.py
++++ IMAPClient-0.10.2/imapclient/response_lexer.py
+@@ -16,7 +16,7 @@
+ 
+ from __future__ import unicode_literals
+ 
+-from . import six
++import six
+ 
+ __all__ = ["Lexer"]
+ 
+--- IMAPClient-0.10.2/imapclient/response_parser.py
++++ IMAPClient-0.10.2/imapclient/response_parser.py
+@@ -17,7 +17,7 @@
+ from collections import defaultdict
+ from datetime import datetime
+ 
+-from . import six
++import six
+ xrange = six.moves.xrange
+ 
+ from .fixed_offset import FixedOffset
+--- IMAPClient-0.10.2/imapclient/test/test_imapclient.py
++++ IMAPClient-0.10.2/imapclient/test/test_imapclient.py
+@@ -10,7 +10,7 @@
+ from datetime import datetime
+ from mock import patch, sentinel, Mock
+ 
+-from imapclient import six
++import six
+ from imapclient.fixed_offset import FixedOffset
+ from imapclient.imapclient import datetime_to_imap
+ from imapclient.test.testable_imapclient import TestableIMAPClient as IMAPClient
+--- IMAPClient-0.10.2/imapclient/test/test_imap_utf7.py
++++ IMAPClient-0.10.2/imapclient/test/test_imap_utf7.py
+@@ -4,7 +4,7 @@
+ 
+ from __future__ import unicode_literals
+ 
+-from imapclient.six import text_type, PY3
++from six import text_type, PY3
+ from imapclient.imap_utf7 import decode, encode
+ from imapclient.test.util import unittest
+ 
