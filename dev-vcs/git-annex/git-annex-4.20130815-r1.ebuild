@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-4.20130815.ebuild,v 1.1 2013/08/26 12:54:18 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-4.20130815-r1.ebuild,v 1.1 2013/09/29 05:55:25 qnikst Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ RESTRICT="test"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="android +assistant +dbus +dns doc +feed +inotify +pairing +production +s3 +tdfa +testsuite +webapp +webdav +xmpp"
+IUSE="+assistant +dbus +dns doc +feed +inotify +pairing +production +s3 +tdfa +testsuite +webapp +webdav +xmpp"
 
 RDEPEND=">=dev-vcs/git-1.7.7
 		assistant? ( sys-process/lsof )
@@ -47,8 +47,6 @@ DEPEND="${RDEPEND}
 		dev-haskell/utf8-string
 		dev-haskell/uuid
 		>=dev-lang/ghc-7.4.1
-		android? ( dev-haskell/data-endian
-		)
 		assistant? ( dev-haskell/async
 			>=dev-haskell/stm-2.3
 			inotify? ( dev-haskell/hinotify )
@@ -98,7 +96,6 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	haskell-cabal_src_configure \
-		$(cabal_flag android android) \
 		$(cabal_flag assistant assistant) \
 		$(cabal_flag dbus dbus) \
 		$(cabal_flag dns dns) \
