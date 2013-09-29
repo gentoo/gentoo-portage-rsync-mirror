@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!sys-fs/aufs2 !<sys-fs/aufs3-3_p20130318
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/aufs-util-3.9_p20130821.tar.xz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	linux-info	dd8fdcccc30f117673b4cba4ed4f74a7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	2ff578fb151da221e1797f12e2990e72	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=50fd2d1bee691191a5a1a3a26d805e27
