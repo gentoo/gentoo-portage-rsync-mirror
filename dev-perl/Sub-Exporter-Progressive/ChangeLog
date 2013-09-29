@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sub-Exporter-Progressive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/ChangeLog,v 1.10 2013/03/17 17:37:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter-Progressive/ChangeLog,v 1.11 2013/09/29 13:28:15 grobian Exp $
+
+  29 Sep 2013; Fabian Groffen <grobian@gentoo.org>
+  Sub-Exporter-Progressive-0.1.9.ebuild:
+  Marke ~ppc-aix, ~x64-macos, bug #446444
 
 *Sub-Exporter-Progressive-0.1.9 (17 Mar 2013)
 
