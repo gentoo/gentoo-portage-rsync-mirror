@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.16.1.ebuild,v 1.3 2013/08/02 11:35:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.16.1.ebuild,v 1.4 2013/09/29 10:01:31 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="btrfs dmraid f2fs fat gtk hfs jfs kde mdadm ntfs policykit reiserfs reiser4 xfs"
+IUSE="btrfs dmraid f2fs fat hfs jfs kde mdadm ntfs policykit reiserfs reiser4 xfs"
 
 # FIXME: add gpart support
 COMMON_DEPEND="
@@ -25,7 +25,6 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	!policykit? (
-		gtk? ( x11-libs/gksu )
 		kde? ( kde-base/kdesu ) )
 	policykit? ( sys-auth/polkit )
 
@@ -86,13 +85,6 @@ src_install() {
 			cp "${_ddir}"/gparted{,-kde}.desktop
 			sed -i -e 's:Exec=:Exec=kdesu :' "${_ddir}"/gparted-kde.desktop
 			echo 'OnlyShowIn=KDE;' >> "${_ddir}"/gparted-kde.desktop
-		fi
-
-		if use gtk; then
-			sed -i -e 's:Exec=:Exec=gksu :' "${_ddir}"/gparted.desktop
-			echo 'NotShowIn=KDE;' >> "${_ddir}"/gparted.desktop
-		else
-			echo 'OnlyShowIn=X-NeverShowThis;' >> "${_ddir}"/gparted.desktop
 		fi
 	fi
 }
