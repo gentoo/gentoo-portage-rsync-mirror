@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.5-r1.ebuild,v 1.1 2013/09/23 14:39:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.5-r1.ebuild,v 1.2 2013/09/29 10:45:42 pesa Exp $
 
 EAPI=5
 
@@ -51,6 +51,7 @@ RDEPEND="
 	mng? ( >=media-libs/libmng-1.0.9 )
 	nas? ( >=media-libs/nas-1.5 )
 	tiff? ( media-libs/tiff:0 )
+	!<dev-qt/qthelp-4.8.5:4
 "
 DEPEND="${RDEPEND}
 	!aqua? (
