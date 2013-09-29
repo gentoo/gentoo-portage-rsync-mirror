@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-2.0-r1.ebuild,v 1.4 2013/08/18 13:27:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-2.0-r1.ebuild,v 1.5 2013/09/29 11:31:55 pacho Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -21,7 +21,7 @@ RDEPEND="dev-db/sqlite:3
 	media-libs/flickcurl
 	media-libs/lcms:0
 	media-libs/lensfun
-	media-libs/libgphoto2
+	media-libs/libgphoto2:=
 	media-libs/libpng:0=
 	media-libs/tiff:0=
 	media-gfx/exiv2

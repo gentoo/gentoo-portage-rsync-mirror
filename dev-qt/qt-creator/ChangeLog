@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.21 2013/09/29 10:26:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.22 2013/09/29 12:00:13 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> qt-creator-2.8.1.ebuild:
+  Stable for amd64, wrt bug #486468
 
   29 Sep 2013; Davide Pesavento <pesa@gentoo.org> -qt-creator-2.5.2.ebuild,
   -qt-creator-2.7.2.ebuild, -qt-creator-2.8.0.ebuild, metadata.xml:

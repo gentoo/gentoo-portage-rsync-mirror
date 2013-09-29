@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.48 2013/08/27 07:29:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/ChangeLog,v 1.49 2013/09/29 11:59:53 ago Exp $
+
+  29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> vile-9.8k.ebuild:
+  Stable for amd64, wrt bug #486368
 
 *vile-9.8k (27 Aug 2013)
 
@@ -182,4 +185,3 @@
 
   29 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Added missing changelog entry.
-
