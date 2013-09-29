@@ -1,0 +1,10 @@
+DEFINED_PHASES=-
+DESCRIPTION=Sub-meta package for GNOME 3 fallback mode
+EAPI=5
+HOMEPAGE=https://wiki.gnome.org/GnomeFlashback
+IUSE=cups
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=metapackage
+RDEPEND=>=gnome-base/gnome-core-libs-3.8.0[cups?] >=x11-wm/metacity-2.34.13 >=x11-misc/notification-daemon-0.7.6 >=gnome-extra/polkit-gnome-0.105 >=gnome-base/gnome-panel-3.8.0
+SLOT=3.0
+_md5_=9ae4211ea73e057076a9354e137819d5
