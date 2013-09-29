@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.21.1.ebuild,v 1.1 2013/08/17 17:55:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.21.1.ebuild,v 1.2 2013/09/29 00:55:52 vapier Exp $
 
 # See `man savedconfig.eclass` for info on how to use USE=savedconfig.
 
@@ -66,7 +66,7 @@ src_prepare() {
 
 	# patches go here!
 	epatch "${FILESDIR}"/${PN}-1.19.0-bb.patch
-	#epatch "${FILESDIR}"/${P}-*.patch
+	epatch "${FILESDIR}"/${P}-*.patch
 	cp "${FILESDIR}"/ginit.c init/ || die
 
 	# flag cleanup
