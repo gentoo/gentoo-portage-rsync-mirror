@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.9 2013/09/14 16:36:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.10 2013/09/29 00:10:29 hasufell Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ EGIT_REPO_URI="git://github.com/hexchat/hexchat.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="dbus fastscroll +gtk gtkspell ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python sexy spell ssl theme-manager"
+IUSE="dbus +gtk gtkspell ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python sexy spell ssl theme-manager"
 REQUIRED_USE="gtkspell? ( spell )
 	plugin-checksum? ( plugins )
 	plugin-doat? ( plugins )
@@ -27,7 +27,6 @@ REQUIRED_USE="gtkspell? ( spell )
 
 RDEPEND="dev-libs/glib:2
 	dbus? ( >=dev-libs/dbus-glib-0.98 )
-	fastscroll? ( x11-libs/libXft )
 	gtk? ( x11-libs/gtk+:2 )
 	libcanberra? ( media-libs/libcanberra )
 	libproxy? ( net-libs/libproxy )
@@ -93,7 +92,6 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable libproxy socks) \
 		$(use_enable ipv6) \
-		$(use_enable fastscroll xft) \
 		$(use_enable ssl openssl) \
 		$(use_enable gtk gtkfe) \
 		$(use_enable !gtk textfe) \
@@ -107,7 +105,6 @@ src_configure() {
 		$(use_enable dbus) \
 		$(use_enable libnotify) \
 		$(use_enable libcanberra) \
-		--enable-shm \
 		${myspellconf} \
 		$(use_enable ntlm) \
 		$(use_enable libproxy) \
