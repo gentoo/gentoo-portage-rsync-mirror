@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.5_pre1.ebuild,v 1.1 2013/09/15 10:58:19 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.5_pre1.ebuild,v 1.2 2013/09/28 23:11:59 vapier Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="
 	>=dev-libs/eet-1.7.8
 	>=dev-libs/efreet-1.7.8
 	>=dev-libs/eio-1.7.8
-	>=dev-libs/eina-1.7.8[mempool-chained]
+	>=dev-libs/eina-1.7.8[mempool-chained-pool]
 	|| ( >=dev-libs/ecore-1.7.8[X,evas,inotify] >=dev-libs/ecore-1.7.8[xcb,evas,inotify] )
 	>=media-libs/edje-1.7.8
 	>=dev-libs/e_dbus-1.7.8[libnotify,udev?]

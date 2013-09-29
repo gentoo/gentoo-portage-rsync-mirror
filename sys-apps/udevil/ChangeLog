@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/udevil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.31 2013/09/28 10:29:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.32 2013/09/28 23:06:04 patrick Exp $
+
+  28 Sep 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   28 Sep 2013; Julian Ospald <hasufell@gentoo.org>
   -files/udevil-0.3.6-flags.patch, -files/udevil-0.4.0-flags.patch,
