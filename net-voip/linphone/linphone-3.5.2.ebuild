@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.5.2.ebuild,v 1.2 2013/03/06 13:20:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.5.2.ebuild,v 1.3 2013/09/29 16:06:34 hasufell Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit autotools eutils multilib pax-utils versionator
 
@@ -51,9 +51,14 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-nls.patch
+	epatch "${FILESDIR}"/${P}-nls.patch \
+		"${FILESDIR}"/${P}-automake-1.13.patch
 	# remove speex check, avoid bug when mediastreamer[-speex]
 	sed -i -e '/SPEEX/d' configure.ac || die "patching configure.ac failed"
+
+	# variable causes "command not found" warning and is not
+	# needed anyway
+	sed -i -e 's/$(ACLOCAL_MACOS_FLAGS)//' Makefile.am || die
 
 	# fix path to use lib64
 	sed -i -e "s:lib\(/liblinphone\):$(get_libdir)\1:" configure.ac \
