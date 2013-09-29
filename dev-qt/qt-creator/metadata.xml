@@ -10,7 +10,6 @@
 	<flag name="android">Build Android plugin</flag>
 	<flag name="autotools">Enable autotools project manager plugin</flag>
 	<flag name="bazaar">Add support for <pkg>dev-vcs/bzr</pkg> version control system</flag>
-	<flag name="botan-bundled">Use the bundled copy of <pkg>dev-libs/botan</pkg></flag>
 	<flag name="clearcase">Add support for IBM ClearCase version control system (requires manual installation of ClearCase client)</flag>
 	<flag name="cmake">Enable cmake project manager plugin</flag>
 	<flag name="fakevim">Enable support for vim-like key bindings</flag>

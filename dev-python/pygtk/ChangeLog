@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.290 2013/05/03 14:26:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.291 2013/09/29 10:21:40 pacho Exp $
+
+*pygtk-2.24.0-r4 (29 Sep 2013)
+
+  29 Sep 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/pygtk-2.24.0-fix-leaks.patch, +files/pygtk-2.24.0-test-fail.patch,
+  +pygtk-2.24.0-r4.ebuild:
+  Upstream patch for fixing leaks, make tests exit with right result
 
   03 May 2013; Samuli Suominen <ssuominen@gentoo.org> -pygtk-2.24.0-r2.ebuild:
   old
