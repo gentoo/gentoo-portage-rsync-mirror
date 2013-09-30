@@ -9,5 +9,5 @@ RDEPEND=www-client/chromium !www-plugins/chrome-binary-plugins:0 !www-plugins/ch
 RESTRICT=bindist mirror strip
 SLOT=unstable
 SRC_URI=amd64? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_31.0.1650.4-1_amd64.deb ) x86? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_31.0.1650.4-1_i386.deb )
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	unpacker	658a981a81fd7cb0767315a541bab01d
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	unpacker	658a981a81fd7cb0767315a541bab01d
 _md5_=a513bc7a8a65c05a93a0622e7c36fea3

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-util/diffstat dev-util/patchutils sys-apps/diffutils sys-apps/findutils virtual/awk sys-apps/grep sys-apps/less sys-apps/sed sys-apps/coreutils sys-devel/patch
 SLOT=0
 SRC_URI=http://neil.brown.name/wiggle/wiggle-0.8.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=022eec739ceb1693a45ff567b14e1a72

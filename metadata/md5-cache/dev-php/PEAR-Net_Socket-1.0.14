@@ -8,5 +8,5 @@ LICENSE=PHP-2.02
 RDEPEND=dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Net_Socket-1.0.14.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=e472a6bdb9c411e59b532392e7ffd1ee

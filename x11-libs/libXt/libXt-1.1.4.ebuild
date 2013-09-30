@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/libXt-1.1.4.ebuild,v 1.2 2013/09/29 11:16:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/libXt-1.1.4.ebuild,v 1.3 2013/09/30 01:37:37 vapier Exp $
 
 EAPI=5
 
@@ -20,7 +20,6 @@ RDEPEND="x11-libs/libX11[${MULTILIB_USEDEP}]
 DEPEND="${RDEPEND}"
 
 src_configure() {
-	tc-is-cross-compiler && export CFLAGS_FOR_BUILD="${BUILD_CFLAGS}"
-
+	tc-export_build_env
 	xorg-2_src_configure
 }

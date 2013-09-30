@@ -10,5 +10,5 @@ RDEPEND=clock_debug? ( net-wireless/bluez ) specan? ( virtual/libusb:1 >=dev-qt/
 REQUIRED_USE=dfu? ( python ) specan? ( python ) ubertooth0-firmware? ( dfu ) ubertooth1-firmware? ( dfu ) python? ( || ( dfu specan ) )
 SLOT=0/1
 SRC_URI=mirror://sourceforge/ubertooth/ubertooth-2012-10-R1.tar.xz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=6b145b1fac7b5b632749b4c3e6be13cc

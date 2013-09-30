@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1-with-linking-exception examples? ( lablgtk-examples )
 RDEPEND=>=x11-libs/gtk+-2.10:2 >=dev-lang/ocaml-3.10:=[ocamlopt?] svg? ( >=gnome-base/librsvg-2.2:2 ) glade? ( >=gnome-base/libglade-2.0.1 ) gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 ) gnome? ( || ( >=gnome-base/gnome-panel-2.32[bonobo] <gnome-base/gnome-panel-2.32 ) >=gnome-base/gnome-panel-2.4.0 >=gnome-base/libgnomeui-2.4.0 ) opengl? ( >=dev-ml/lablgl-0.98:= >=x11-libs/gtkglarea-1.9:2 ) spell? ( app-text/gtkspell:2 ) sourceview? ( x11-libs/gtksourceview:2.0 )
 SLOT=2/2.16.0
 SRC_URI=http://forge.ocamlcore.org/frs/download.php/979/lablgtk-2.16.0.tar.gz
-_eclasses_=findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=0c3ce52e369ab1c4a209f6a13e8a0fc7

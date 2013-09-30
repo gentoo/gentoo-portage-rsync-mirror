@@ -8,5 +8,5 @@ LICENSE=PHP-3
 RDEPEND=dev-lang/php[ftp] dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Net_FTP-1.3.7.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=cca182f103fceb669e920762d25819e7

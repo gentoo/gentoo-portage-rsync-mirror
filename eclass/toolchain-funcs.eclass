@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.121 2013/05/14 20:40:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.122 2013/09/30 01:34:25 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -224,6 +224,12 @@ tc-export_build_env() {
 	: ${BUILD_CPPFLAGS:=}
 	: ${BUILD_LDFLAGS:=}
 	export BUILD_{C,CXX,CPP,LD}FLAGS
+
+	# Some packages use XXX_FOR_BUILD.
+	local v
+	for v in BUILD_{C,CXX,CPP,LD}FLAGS ; do
+		export ${v#BUILD_}_FOR_BUILD="${!v}"
+	done
 }
 
 # @FUNCTION: tc-env_build

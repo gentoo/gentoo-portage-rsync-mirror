@@ -9,5 +9,5 @@ LICENSE=LGPL-2
 RDEPEND=>=dev-libs/glib-2.32
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/libqmi/libqmi-1.4.0.tar.xz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=65eaf14621ef3b1945859a7f730b0837

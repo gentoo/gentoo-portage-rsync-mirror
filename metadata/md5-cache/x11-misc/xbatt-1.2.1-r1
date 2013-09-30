@@ -8,5 +8,5 @@ LICENSE=xbatt
 RDEPEND=x11-libs/libX11 x11-libs/libXmu x11-libs/libXt x11-libs/libXaw x11-libs/libXext x11-libs/libxkbfile x11-libs/libXpm
 SLOT=0
 SRC_URI=http://www.clave.gr.jp/~eto/xbatt/xbatt-1.2.1.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=16dac5fa0af1f92804adb8b09c99bf1f

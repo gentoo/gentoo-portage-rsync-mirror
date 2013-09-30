@@ -8,5 +8,5 @@ LICENSE=ZLIB
 RDEPEND=dev-games/physfs dev-lang/lua[deprecated] media-libs/devil[mng,png,tiff] media-libs/freetype media-libs/libmodplug media-libs/libsdl[joystick,opengl] media-libs/libvorbis media-libs/openal media-sound/mpg123 virtual/opengl
 SLOT=0.7
 SRC_URI=mirror://bitbucket/rude/love/downloads/love-0.7.2-linux-src.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c2938d1063d7c0d5f2c94e39d25e292e

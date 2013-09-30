@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=app-cdr/cdrdao app-cdr/dvd+rw-tools dev-python/pycairo dev-tcltk/tix || ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[imagemagick,png] ) media-sound/normalize >=media-sound/sox-14.3.2 media-video/dvdauthor >=media-video/mjpegtools-2.0.0 >=media-video/mplayer-1.0_rc4_p20110101 >=media-video/transcode-1.1.5 media-video/vcdimager sys-devel/bc virtual/ffmpeg || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-2.7*[tk] =dev-lang/python-2.6*[tk] )
 SLOT=0
 SRC_URI=http://tovid.googlecode.com/files/tovid-0.34.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=ee7c185539a24fa25c75a2b1c1538baa

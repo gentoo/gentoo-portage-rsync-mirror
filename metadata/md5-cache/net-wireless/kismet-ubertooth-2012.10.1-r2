@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-wireless/kismet-2011.03.2-r1:= >=net-wireless/ubertooth-2012.10.1:= >=net-libs/libbtbb-2012.10.1:= virtual/libusb:1
 SLOT=0/2012.10.1
 SRC_URI=mirror://sourceforge/ubertooth/ubertooth-2012-10-R1.tar.xz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=e304ca97a57824f8338f675aa72e2507

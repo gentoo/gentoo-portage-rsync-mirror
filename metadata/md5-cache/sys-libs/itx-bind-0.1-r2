@@ -5,5 +5,5 @@ HOMEPAGE=http://dev.gentoo.org/~mduft
 KEYWORDS=-* ~x86-interix
 LICENSE=ISC BSD-4
 SLOT=0
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=22f7f95aababef45342580d390f50f70

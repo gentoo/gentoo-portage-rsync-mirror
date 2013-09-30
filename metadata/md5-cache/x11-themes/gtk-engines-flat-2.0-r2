@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2
 SLOT=2
 SRC_URI=http://download.freshmeat.net/themes/gtk2flat/gtk2flat-default.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=977fe4059ead95dc43d795dfcc2f81d3

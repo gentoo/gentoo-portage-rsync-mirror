@@ -6,5 +6,5 @@ KEYWORDS=amd64 ~hppa ~mips ppc ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=public-domain
 SLOT=0
 SRC_URI=mirror://gentoo/ttcp-1.12.tar.bz2 http://www.netcore.fi/pekkas/linux/ipv6/ttcp.c
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=97fad025a82df0fdec97a16a063f5296

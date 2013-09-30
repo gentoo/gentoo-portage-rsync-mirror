@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-lang/python dev-python/dbus-python media-gfx/imagemagick x11-misc/wmctrl x11-misc/xautomation x11-misc/xdotool x11-apps/xwininfo
 SLOT=0
 SRC_URI=http://github.com/mrpdaemon/gnome-integration-spotify/tarball/20130304 -> gnome-integration-spotify-git-20130304.tgz
-_eclasses_=gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=97104cdcb9014781b019638c32ae3b51

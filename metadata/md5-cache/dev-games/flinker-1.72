@@ -7,5 +7,5 @@ KEYWORDS=x86
 LICENSE=public-domain
 SLOT=0
 SRC_URI=http://www.devrs.com/gba/files/flgba.zip
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=24567262db3acbb63afd6b3dd2bf5b16

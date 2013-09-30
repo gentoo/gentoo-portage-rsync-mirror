@@ -8,5 +8,5 @@ LICENSE=ISC
 RDEPEND=dev-libs/libnl
 SLOT=0
 SRC_URI=https://www.kernel.org/pub/software/network/iw/iw-3.10.tar.xz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=85cf87e5e9dfbd42ac6a4dd133af88d2

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=net-print/cups app-text/ghostscript-gpl
 SLOT=0
 SRC_URI=http://www.cups-pdf.de/src/cups-pdf_3.0beta1.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=d8613d2b9bad4fb768a01b03b29ff533

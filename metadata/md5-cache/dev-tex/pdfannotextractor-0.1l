@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/latex-base dev-java/pdfbox dev-java/fontbox virtual/perl-Getopt-Long dev-perl/File-Which >=virtual/jre-1.5 !<=dev-texlive/texlive-latexextra-2010 virtual/latex-base >=dev-java/java-config-2.1.9-r1
 SLOT=0
 SRC_URI=mirror://gentoo/pdfannotextractor-0.1l.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	java-ant-2	65ba8d80c13cf56bad5ccec21a6b3c37	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	java-ant-2	65ba8d80c13cf56bad5ccec21a6b3c37	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=785ced69919c6ec01b790d795593be62

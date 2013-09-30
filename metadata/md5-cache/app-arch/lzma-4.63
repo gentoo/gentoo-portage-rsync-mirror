@@ -6,5 +6,5 @@ KEYWORDS=~arm ~amd64 ~ia64 ~mips ~sparc ~x86
 LICENSE=public-domain
 SLOT=0
 SRC_URI=mirror://sourceforge/sevenzip/lzma463.tar.bz2
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=b4fee8f617b03ab1efda089c63c1af8f

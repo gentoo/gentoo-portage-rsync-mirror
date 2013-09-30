@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/latex-base
 SLOT=0
 SRC_URI=mirror://sourceforge/texpower/texpower-0-1b.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e6e4c468f7daf642ce2636f58dcc247f

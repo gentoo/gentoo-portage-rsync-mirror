@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/python-imaging dev-util/glade:3 dev-python/pyxml >=dev-python/pygtk-2.6.1:2 dev-python/pygobject:2 >=dev-python/sqlalchemy-0.5.2 >=dev-python/reportlab-1.19 >=dev-python/sqlalchemy-0.4.6 dev-lang/python[sqlite]
 SLOT=0
 SRC_URI=mirror://berlios/griffith/griffith-extra-artwork-0.9.4.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	subversion	e80e84db0fc102c2959858102060bec9	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	subversion	e80e84db0fc102c2959858102060bec9	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=fbeb2ed1d33d79d53e70ecac30393e30

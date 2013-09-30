@@ -7,5 +7,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/json-glib-0.7.6 >=net-im/pidgin-2.7.8
 SLOT=0
 SRC_URI=http://pidgin-facebookchat.googlecode.com/files/pidgin-facebookchat-source-1.69.tar.bz2
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=8f3b51f9496c0c11afcce97095e1761f

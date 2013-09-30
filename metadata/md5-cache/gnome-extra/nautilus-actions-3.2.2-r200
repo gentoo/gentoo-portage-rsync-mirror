@@ -9,5 +9,5 @@ LICENSE=GPL-2 FDL-1.3
 RDEPEND=>=dev-libs/glib-2.30:2 >=dev-libs/libxml2-2.6:2 dev-libs/libunique:1 >=gnome-base/libgtop-2.23.1:2 >=gnome-base/nautilus-2.16 <gnome-base/nautilus-2.90 sys-apps/util-linux x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.20:2 x11-libs/libICE >=x11-libs/libSM-1 !gnome-extra/nautilus-actions:3
 SLOT=2
 SRC_URI=mirror://gnome/sources/nautilus-actions/3.2/nautilus-actions-3.2.2.tar.xz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=a2a29f0ff65db392af1c05dc785a34a8

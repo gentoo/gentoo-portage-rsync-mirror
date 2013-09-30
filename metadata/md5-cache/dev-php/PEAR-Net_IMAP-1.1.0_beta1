@@ -7,5 +7,5 @@ LICENSE=PHP-2.02
 RDEPEND=>=dev-php/PEAR-Net_Socket-1.0.6-r1 dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Net_IMAP-1.1.0beta1.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=2dff3ee2a15e43fa2abe1a7454d9c077

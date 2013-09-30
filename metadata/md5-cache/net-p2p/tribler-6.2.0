@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=dev-python/apsw dev-python/feedparser dev-python/m2crypto dev-python/netifaces dev-libs/openssl dev-python/wxpython net-libs/rb_libtorrent vlc? ( media-video/vlc media-video/ffmpeg:0 ) =dev-lang/python-2* =dev-lang/python-2*[sqlite]
 SLOT=0
 SRC_URI=http://dl.tribler.org/tribler_6.2.0ubuntu1_all.deb x86? ( http://dl.tribler.org/tribler-swift_6.2.0ubuntu1_i386.deb ) amd64? ( http://dl.tribler.org/tribler-swift_6.2.0ubuntu1_amd64.deb )
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f790e7b0000026823ee4863eb5a143dc

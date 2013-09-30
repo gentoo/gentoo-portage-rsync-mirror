@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-python/gdata || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=http://googlecl.googlecode.com/files/googlecl-0.9.11.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	7ffd28a8c7eea27218865352bfd3ab2f
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
 _md5_=750a540295330c00a801b20a4e8e8af3
