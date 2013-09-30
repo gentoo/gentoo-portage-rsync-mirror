@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2-r2.ebuild,v 1.2 2013/09/28 19:51:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2-r2.ebuild,v 1.3 2013/09/30 16:33:53 zerochaos Exp $
 
 EAPI=5
 
@@ -15,9 +15,10 @@ SRC_URI="http://fcron.free.fr/archives/${MY_P}.src.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="debug pam selinux linguas_fr +system-crontab readline"
+IUSE="debug pam selinux linguas_fr +mta +system-crontab readline"
 
 DEPEND="selinux? ( sys-libs/libselinux )
+	mta? ( virtual/mta )
 	pam? ( virtual/pam )
 	readline? ( sys-libs/readline )"
 
@@ -62,6 +63,7 @@ src_configure() {
 		--bindir=/usr/libexec \
 		--sbindir=/usr/libexec \
 		$(use_with pam) \
+		$(use_with mta sendmail) \
 		$(use_with selinux) \
 		$(use_with readline) \
 		--without-audit \
@@ -74,7 +76,6 @@ src_configure() {
 		--with-fcrondyn=yes \
 		--disable-checks \
 		--with-editor=/usr/libexec/editor \
-		--with-sendmail=/usr/sbin/sendmail \
 		--with-shell=/bin/sh \
 		--without-db2man --without-dsssl-dir \
 		--with-rootname=${rootuser} \
