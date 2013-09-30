@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20130825.ebuild,v 1.2 2013/09/07 08:43:12 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20130929.ebuild,v 1.1 2013/09/30 10:24:22 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
@@ -129,15 +129,14 @@ src_configure() {
 	fi
 
 	if ! use nis; then
-		sed -i -e "s|#define HAS_NIS|//#define HAS_NIS|g" \
-			src/util/sys_defs.h || die "sed failed"
+		mycc="${mycc} -DNO_NIS"
 	fi
 
 	if ! use berkdb; then
 		mycc="${mycc} -DNO_DB"
 		if use cdb; then
 			# change default hash format from Berkeley DB to cdb
-			sed -i -e "s/hash/cdb/" src/util/sys_defs.h || die
+			mycc="${mycc} -DEF_DB_TYPE=\\\"cdb\\\""
 		fi
 	fi
 
