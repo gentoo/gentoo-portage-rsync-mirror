@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.10.ebuild,v 1.3 2013/04/30 13:00:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.7.10.ebuild,v 1.4 2013/09/30 15:31:43 floppym Exp $
 
 EAPI=5
 # py3 appears underdone, 
@@ -55,6 +55,8 @@ python_test() {
 }
 
 python_install_all() {
+	distutils-r1_python_install_all
+
 	if use doc; then
 		pushd doc > /dev/null
 		rm -fr build

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.107 2013/09/11 17:39:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.108 2013/09/30 15:31:43 floppym Exp $
+
+  30 Sep 2013; Mike Gilbert <floppym@gentoo.org> sqlalchemy-0.7.10.ebuild:
+  Call distutils-r1_python_install_all
 
 *sqlalchemy-0.7.9-r1 (11 Sep 2013)
 
