@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.1.9-r4.ebuild,v 1.2 2013/09/25 18:36:00 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.1.9-r4.ebuild,v 1.3 2013/09/30 18:38:10 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,6 @@ IUSE=""
 
 DEPEND=">=sys-libs/libselinux-2.0[python]
 		app-admin/setools[python]
-		sec-policy/selinux-base
 		${PYTHON_DEPS}"
 RDEPEND="${DEPEND}"
 
@@ -57,7 +56,18 @@ src_install() {
 	python_foreach_impl installation
 
 	# Create sepolgen.conf with different devel location definition
-	local selinuxtype=$(awk -F'=' '/^SELINUXTYPE/ {print $2}' /etc/selinux/config);
-	mkdir -p "${D}"/etc/selinux || die "Failed to create selinux directory";
-	echo "SELINUX_DEVEL_PATH=/usr/share/selinux/${selinuxtype}/include:/usr/share/selinux/${selinuxtype}" > "${D}"/etc/selinux/sepolgen.conf;
+	if [[ -f /etc/selinux/config ]];
+	then
+		local selinuxtype=$(awk -F'=' '/^SELINUXTYPE/ {print $2}' /etc/selinux/config);
+		mkdir -p "${D}"/etc/selinux || die "Failed to create selinux directory";
+		echo "SELINUX_DEVEL_PATH=/usr/share/selinux/${selinuxtype}/include" > "${D}"/etc/selinux/sepolgen.conf;
+	else
+		local selinuxtype="${POLICY_TYPES%% *}";
+		if [[ -n "${selinuxtype}" ]];
+		then
+			echo "SELINUX_DEVEL_PATH=/usr/share/selinux/${selinuxtype}/include" > "${D}"/etc/selinux/sepolgen.conf;
+		else
+			echo "SELINUX_DEVEL_PATH=/usr/share/selinux/strict/include" > "${D}"/etc/selinux/sepolgen.conf;
+		fi
+	fi
 }
