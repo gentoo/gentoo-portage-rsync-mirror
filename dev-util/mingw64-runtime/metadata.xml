@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>toolchain</herd>
+<use>
+  <flag name='idl'>
+    Install idl files.
+  </flag>
+  <flag name='tools'>
+    Build and install extra tools.
+  </flag>
+</use>
 </pkgmetadata>

@@ -2159,6 +2159,8 @@ dev-util/meld:highlight - Enable source code highlighting via dev-python/pygtkso
 dev-util/metro:ccache - Enable support for ccache
 dev-util/metro:git - Enable support for git snapshots
 dev-util/metro:threads - Enable support for pbzip2 tarball packing/unpacking
+dev-util/mingw64-runtime:idl - Install idl files.
+dev-util/mingw64-runtime:tools - Build and install extra tools.
 dev-util/molecule:plugins - Add plugins provided by dev-util/molecule-plugins
 dev-util/monkeystudio:plugins - Build and install additional plugins
 dev-util/nemiver:memoryview - Enable the optional hexadecimal memory inspection with app-editors/ghex.
