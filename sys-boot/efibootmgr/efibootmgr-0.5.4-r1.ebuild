@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4-r1.ebuild,v 1.2 2013/09/28 19:50:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4-r1.ebuild,v 1.3 2013/09/30 17:16:51 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://linux.dell.com/efibootmgr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 x86"
 IUSE=""
 
 RDEPEND="sys-apps/pciutils"

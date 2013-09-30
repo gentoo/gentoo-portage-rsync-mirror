@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.9.5-r1.ebuild,v 1.2 2013/09/23 19:12:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.9.5-r1.ebuild,v 1.3 2013/09/30 17:18:04 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs vcs-snapshot
@@ -12,7 +12,7 @@ HOMEPAGE="https://github.com/robm/dzen"
 SRC_URI="https://github.com/robm/${PN}/tarball/${COMMITID} -> ${P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="minimal xft xinerama xpm"
 SLOT="2"
 

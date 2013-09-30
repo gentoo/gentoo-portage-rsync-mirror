@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chasingbottoms/chasingbottoms-1.3.0.6.ebuild,v 1.2 2013/09/22 10:09:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/chasingbottoms/chasingbottoms-1.3.0.6.ebuild,v 1.3 2013/09/30 17:15:19 ago Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="test"
 
 RDEPEND=">=dev-haskell/mtl-1.1:=[profile?]
