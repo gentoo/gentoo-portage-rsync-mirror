@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.188 2013/09/05 05:28:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.189 2013/09/30 06:39:56 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -144,38 +144,53 @@ filter-ldflags() {
 # Add extra <flags> to the current CPPFLAGS.
 append-cppflags() {
 	[[ $# -eq 0 ]] && return 0
-	export CPPFLAGS="${CPPFLAGS} $*"
+	export CPPFLAGS+=" $*"
 	return 0
 }
 
 # @FUNCTION: append-cflags
 # @USAGE: <flags>
 # @DESCRIPTION:
-# Add extra <flags> to the current CFLAGS.
+# Add extra <flags> to the current CFLAGS.  If a flag might not be supported
+# with different compilers (or versions), then use test-flags-CC like so:
+# @CODE
+# append-cflags $(test-flags-CC -funky-flag)
+# @CODE
 append-cflags() {
 	[[ $# -eq 0 ]] && return 0
-	export CFLAGS=$(test-flags-CC ${CFLAGS} "$@")
+	# Do not do automatic flag testing ourselves. #417047
+	export CFLAGS+=" $*"
 	return 0
 }
 
 # @FUNCTION: append-cxxflags
 # @USAGE: <flags>
 # @DESCRIPTION:
-# Add extra <flags> to the current CXXFLAGS.
+# Add extra <flags> to the current CXXFLAGS.  If a flag might not be supported
+# with different compilers (or versions), then use test-flags-CXX like so:
+# @CODE
+# append-cxxflags $(test-flags-CXX -funky-flag)
+# @CODE
 append-cxxflags() {
 	[[ $# -eq 0 ]] && return 0
-	export CXXFLAGS=$(test-flags-CXX ${CXXFLAGS} "$@")
+	# Do not do automatic flag testing ourselves. #417047
+	export CXXFLAGS+=" $*"
 	return 0
 }
 
 # @FUNCTION: append-fflags
 # @USAGE: <flags>
 # @DESCRIPTION:
-# Add extra <flags> to the current {F,FC}FLAGS.
+# Add extra <flags> to the current {F,FC}FLAGS.  If a flag might not be supported
+# with different compilers (or versions), then use test-flags-F77 like so:
+# @CODE
+# append-fflags $(test-flags-F77 -funky-flag)
+# @CODE
 append-fflags() {
 	[[ $# -eq 0 ]] && return 0
-	export FFLAGS=$(test-flags-F77 ${FFLAGS} "$@")
-	export FCFLAGS=$(test-flags-FC ${FCFLAGS} "$@")
+	# Do not do automatic flag testing ourselves. #417047
+	export FFLAGS+=" $*"
+	export FCFLAGS+=" $*"
 	return 0
 }
 

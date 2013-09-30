@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ski/ski-1.3.2.ebuild,v 1.4 2012/10/24 18:59:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ski/ski-1.3.2.ebuild,v 1.5 2013/09/30 06:57:41 vapier Exp $
 
 EAPI="4"
 
@@ -19,7 +19,11 @@ IUSE="+gtk motif"
 RDEPEND="sys-devel/libtool
 	|| ( dev-libs/elfutils dev-libs/libelf )
 	sys-libs/ncurses
-	gtk? ( x11-libs/gtk+:2 )
+	gtk? (
+		gnome-base/libglade:2.0
+		gnome-base/libgnomeui
+		x11-libs/gtk+:2
+	)
 	motif? ( x11-libs/motif )"
 DEPEND="${RDEPEND}
 	sys-devel/bison
