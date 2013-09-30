@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.7.1-r1.ebuild,v 1.1 2013/06/28 02:52:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reviewboard/reviewboard-1.7.7.1-r1.ebuild,v 1.2 2013/09/30 02:44:06 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -41,7 +41,7 @@ REQUIRED_USE="doc? ( || ( codebase manual rnotes ) )"
 # Tests mostly access the inet and when run mostly fail
 RESTRICT=test
 
-PATCHES=( "${FILESDIR}"/docs.patch 
+PATCHES=( "${FILESDIR}"/docs.patch
 	"${FILESDIR}"/CVE-2013-2209-sec.patch )
 
 python_prepare_all() {

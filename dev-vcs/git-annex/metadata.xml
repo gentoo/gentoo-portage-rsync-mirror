@@ -24,7 +24,6 @@
 		<flag name="webdav">Enable webdav remote</flag>
 		<flag name="dns">Enable the haskell DNS library for DNS lookup</flag>
 		<flag name="assistant">Enable git-annex assistant and watch command</flag>
-		<flag name="android">Building for Android</flag>
 		<flag name="production">Enable production build (slower build; faster binary)</flag>
 		<flag name="testsuite">Embed the test suite into git-annex</flag>
 		<flag name="pairing"> Enable pairing of git annex repositories</flag>

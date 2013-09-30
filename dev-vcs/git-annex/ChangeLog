@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git-annex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.16 2013/09/29 05:55:25 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.17 2013/09/30 02:42:30 patrick Exp $
+
+  30 Sep 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Drop unneeded useflag description from metadata.xml
 
 *git-annex-4.20130815-r1 (29 Sep 2013)
 
