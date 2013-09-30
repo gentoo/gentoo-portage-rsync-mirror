@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ifstat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.26 2012/07/24 00:10:47 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.27 2013/09/30 17:37:18 rich0 Exp $
+
+  30 Sep 2013; Richard Freeman <rich0@gentoo.org> ifstat-1.1-r2.ebuild:
+  marked amd64 per bug 486524
 
   24 Jul 2012; Anthony G. Basile <blueness@gentoo.org> ifstat-1.1-r2.ebuild:
   Keyword ~mips
