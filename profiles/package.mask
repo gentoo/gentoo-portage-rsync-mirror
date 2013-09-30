@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15137 2013/09/27 13:31:20 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15138 2013/09/30 19:29:26 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Fabian Groffen <grobian@gentoo.org> (30 Sep 2013)
+# Mask release candidates
+=mail-mta/exim-4.82_rc*
 
 # Tiziano Müller <dev-zero@gentoo.org> (29 Sep 2013)
 # Mask for further testing

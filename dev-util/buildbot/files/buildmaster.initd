@@ -2,6 +2,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
+extra_started_commands="reload"
+
 depend() {
 	need net
 }
@@ -41,5 +43,12 @@ start() {
 stop() {
 	ebegin "Stopping buildmaster in ${BASEDIR}"
 	start-stop-daemon --stop --pidfile "${BASEDIR}/buildmaster.pid"
+	eend $?
+}
+
+reload() {
+	ebegin "Reconfiguring buildmaster in ${BASEDIR}"
+	start-stop-daemon --signal HUP --pidfile \
+		"${BASEDIR}"/buildmaster.pid
 	eend $?
 }

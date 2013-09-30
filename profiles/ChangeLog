@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8278 2013/09/29 14:07:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8279 2013/09/30 19:29:25 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Sep 2013; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask Exim 4.82 release candidates
 
   29 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org> profiles.desc:
   Downgrade s390 profiles to dev

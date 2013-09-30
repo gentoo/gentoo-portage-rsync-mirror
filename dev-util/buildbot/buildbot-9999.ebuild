@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.1 2013/09/11 20:19:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.2 2013/09/30 19:25:02 hwoarang Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 EGIT_REPO_URI="https://github.com/buildbot/${PN}.git"
 
 [[ ${PV} = 9999 ]] && inherit git-2
-inherit distutils readme.gentoo user
+inherit distutils readme.gentoo user systemd
 
 MY_PV="${PV/_p/p}"
 MY_P="${PN}-${MY_PV}"
@@ -95,6 +95,7 @@ src_install() {
 
 	newconfd "${FILESDIR}/buildmaster.confd" buildmaster
 	newinitd "${FILESDIR}/buildmaster.initd" buildmaster
+	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	# In case of multiple masters, it's possible to edit web files
 	# so all master can share the changes. So protect them!
