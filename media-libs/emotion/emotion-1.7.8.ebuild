@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-1.7.8.ebuild,v 1.1 2013/08/28 03:19:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-1.7.8.ebuild,v 1.2 2013/09/30 04:10:25 zerochaos Exp $
 
 EAPI="4"
 
@@ -13,9 +13,9 @@ LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="gstreamer static-libs vlc xine"
 
-DEPEND=">=media-libs/evas-1.7.6
-	>=media-libs/edje-1.7.6
-	>=dev-libs/ecore-1.7.6
+DEPEND=">=media-libs/evas-1.7.8
+	>=media-libs/edje-1.7.8
+	>=dev-libs/ecore-1.7.8
 	>=dev-libs/eeze-1.7.4
 	vlc? ( media-video/vlc )
 	xine? ( >=media-libs/xine-lib-1.1.1 )
