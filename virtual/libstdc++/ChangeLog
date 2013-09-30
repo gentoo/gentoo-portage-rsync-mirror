@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libstdc++
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.18 2012/07/14 19:42:26 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.19 2013/09/30 20:05:41 vapier Exp $
+
+  30 Sep 2013; Mike Frysinger <vapier@gentoo.org> libstdc++-3.3.ebuild:
+  Drop arm since there are no binary packages we really care about anymore
+  #483148 by Agostino Sarubbo.
 
   14 Jul 2012; Ulrich Müller <ulm@gentoo.org> libstdc++-3.3.ebuild:
   QA: Define mandatory ebuild variables, bug 425848.
@@ -56,4 +60,3 @@
   20 Dec 2005; Mark Loeser <halcy0n@gentoo.org> +metadata.xml,
   +libstdc++-3.3.ebuild:
   Initial commit of the libstdc++ virtual
-
