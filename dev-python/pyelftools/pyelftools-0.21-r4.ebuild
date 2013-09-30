@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/pyelftools-0.21-r3.ebuild,v 1.1 2013/09/28 11:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/pyelftools-0.21-r4.ebuild,v 1.1 2013/09/30 05:47:01 vapier Exp $
 
 EAPI="4"
 
@@ -15,6 +15,10 @@ LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE=""
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-dyntable.patch
+}
 
 python_test() {
 	# readelf_tests often fails due to host `readelf` changing output format
