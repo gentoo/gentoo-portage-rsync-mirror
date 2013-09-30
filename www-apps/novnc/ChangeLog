@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/novnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/ChangeLog,v 1.1 2013/09/27 01:39:57 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/ChangeLog,v 1.2 2013/09/30 14:41:39 prometheanfire Exp $
+
+  30 Sep 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml,
+  novnc-0.4.ebuild:
+  better ebuilds for us all bug 486568
 
 *novnc-0.4 (27 Sep 2013)
 *novnc-9999 (27 Sep 2013)
