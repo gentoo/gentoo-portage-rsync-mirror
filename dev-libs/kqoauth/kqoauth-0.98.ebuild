@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kqoauth/kqoauth-0.97.ebuild,v 1.2 2013/08/21 14:27:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kqoauth/kqoauth-0.98.ebuild,v 1.1 2013/09/30 13:33:06 zlogene Exp $
 
 EAPI=5
 
