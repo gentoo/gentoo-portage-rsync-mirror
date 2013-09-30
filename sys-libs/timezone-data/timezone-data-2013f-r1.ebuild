@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2013f-r1.ebuild,v 1.1 2013/09/28 10:55:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2013f-r1.ebuild,v 1.2 2013/09/30 04:42:20 vapier Exp $
 
 EAPI="3"
 
@@ -68,10 +68,6 @@ src_compile() {
 	fi
 }
 
-pkg_postinst() {
-	rm -rf "${EROOT}"/usr/share/zoneinfo/.gentoo-upgrade
-}
-
 src_install() {
 	local zic=""
 	tc-is-cross-compiler && zic="zic=${S}-native/zic"
@@ -126,5 +122,7 @@ pkg_config() {
 }
 
 pkg_postinst() {
+	rm -rf "${EROOT}"/usr/share/zoneinfo/.gentoo-upgrade &
 	pkg_config
+	wait
 }
