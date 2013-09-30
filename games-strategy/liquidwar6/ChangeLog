@@ -1,0 +1,15 @@
+# ChangeLog for games-strategy/liquidwar6
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar6/ChangeLog,v 1.2 2013/09/30 12:17:37 hasufell Exp $
+
+  30 Sep 2013; Julian Ospald <hasufell@gentoo.org>
+  liquidwar6-0.0.13_beta.ebuild:
+  prune libtool files
+
+*liquidwar6-0.0.13_beta (30 Sep 2013)
+
+  30 Sep 2013; Julian Ospald <hasufell@gentoo.org>
+  +liquidwar6-0.0.13_beta.ebuild, +files/liquidwar6-0.0.13_beta-ldconfig.patch,
+  +files/liquidwar6-0.0.13_beta-libpng-1.6.patch,
+  +files/liquidwar6-0.0.13_beta-paths.patch, +metadata.xml:
+  initial import wrt #388441 based on Samuel Bauers ebuilds
