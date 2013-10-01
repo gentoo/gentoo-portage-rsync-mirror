@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/osptoolkit
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.17 2011/08/24 19:12:28 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.18 2013/10/01 15:29:43 chithanh Exp $
+
+  01 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> metadata.xml:
+  Add chainsaw to maintainers.
 
   24 Aug 2011; Markus Meier <maekke@gentoo.org> osptoolkit-3.5.0.ebuild:
   x86 stable, bug #378757
@@ -72,4 +75,3 @@
   19 Aug 2005; Stefan Knoblich <stkn@gentoo.org> +metadata.xml,
   +osptoolkit-3.3.1.ebuild:
   Initial import, work-in-progress.
-

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.265 2013/09/02 21:12:53 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.266 2013/10/01 15:17:00 ssuominen Exp $
+
+  01 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
+  audacious-plugins-3.4.1.ebuild:
+  Raise libsidplayfp dependency from 0.3.8 to 1.0.0 wrt #483966 by Torsten
+  Kaiser
 
 *audacious-plugins-3.4.1 (02 Sep 2013)
 

@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<herd>voip</herd>
 	<herd>chromium</herd>
+	<maintainer>
+		<email>chainsaw@gentoo.org</email>
+		<name>Tony Vroon</name>
+	</maintainer>  
 	<use>
 		<flag name='aesicm'>Use AES ICM cryptographic algorithm</flag>
 		<flag name='console'>

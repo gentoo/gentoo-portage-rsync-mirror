@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ilbc-rfc3951
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ChangeLog,v 1.17 2012/06/17 16:23:45 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ilbc-rfc3951/ChangeLog,v 1.18 2013/10/01 15:30:53 chithanh Exp $
+
+  01 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> metadata.xml:
+  Add chainsaw to maintainers.
 
   17 Jun 2012; Raúl Porcel <armin76@gentoo.org> ilbc-rfc3951-0-r1.ebuild:
   alpha/ia64/sparc stable wrt #397617
@@ -66,4 +69,3 @@
   26 Nov 2005; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +ilbc-rfc3951-0.ebuild:
   initial import for bug #113199 recommended by kaouete
-

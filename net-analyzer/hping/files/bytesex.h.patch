@@ -1,6 +1,5 @@
-diff -uNr hping2-rc3.orig/bytesex.h hping2-rc3/bytesex.h
---- hping2-rc3.orig/bytesex.h	2004-07-29 15:46:47.572596272 +0000
-+++ hping2-rc3/bytesex.h	2004-07-29 15:48:14.557372576 +0000
+--- a/bytesex.h
++++ b/bytesex.h
 @@ -9,11 +9,15 @@
  
  #if 	defined(__i386__) \

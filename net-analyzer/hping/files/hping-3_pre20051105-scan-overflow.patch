@@ -1,5 +1,5 @@
---- a/scan.c	2003-10-22 12:41:00.000000000 +0200
-+++ b/scan.c	2010-11-30 22:19:23.000000000 +0100
+--- a/scan.c
++++ b/scan.c
 @@ -456,7 +456,7 @@
  				continue;
  			/* time to copy headers in a safe place */

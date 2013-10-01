@@ -2,8 +2,8 @@ When anything libtcl (bug #247282) this will fail, and we're only finding out
 the version of the library anyway, so why not use TCL_VER, which is found using
 a slightly less fishy method. -JeR
 
---- configure.org	2009-12-23 14:53:34.000000000 +0100
-+++ configure	2009-12-23 14:56:34.000000000 +0100
+--- a/configure
++++ b/configure
 @@ -98,8 +98,7 @@
  fi
  if [ -n $USE_TCL ]
