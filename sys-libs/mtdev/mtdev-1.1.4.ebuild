@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/mtdev-1.1.4.ebuild,v 1.2 2013/09/29 11:07:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/mtdev-1.1.4.ebuild,v 1.3 2013/10/01 00:15:45 naota Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Multitouch Protocol Translation Library"
 HOMEPAGE="http://bitmath.org/code/mtdev/"
