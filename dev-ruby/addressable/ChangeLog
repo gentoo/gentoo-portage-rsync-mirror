@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.35 2013/09/30 17:14:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.36 2013/10/01 00:35:30 mrueg Exp $
+
+  01 Oct 2013; Manuel Rüger <mrueg@gentoo.org> -addressable-2.3.3.ebuild,
+  -addressable-2.3.4.ebuild:
+  Cleanup old.
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> addressable-2.3.5.ebuild:
   Stable for x86, wrt bug #485790
