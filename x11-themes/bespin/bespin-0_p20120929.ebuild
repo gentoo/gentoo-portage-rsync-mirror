@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/bespin-0_p20120929.ebuild,v 1.3 2013/07/10 05:04:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/bespin-0_p20120929.ebuild,v 1.4 2013/10/01 21:45:36 pesa Exp $
 
 EAPI=4
 KDE_REQUIRED="optional"
@@ -24,7 +24,7 @@ DEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	windeco? ( $(add_kdebase_dep kwin) )
-	plasma? ( $(add_kdebase_dep kdelibs) dev-qt/qtgui:4[dbus(+)] )
+	plasma? ( $(add_kdebase_dep kdelibs) dev-qt/qtdbus:4 )
 "
 
 src_configure() {

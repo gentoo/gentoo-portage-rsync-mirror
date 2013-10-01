@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.6.0.ebuild,v 1.3 2013/07/10 05:02:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.6.0.ebuild,v 1.4 2013/10/01 21:41:23 pesa Exp $
 
 EAPI=4
 
@@ -19,10 +19,11 @@ RDEPEND="
 	>=sci-libs/gdal-1.8
 	>=sci-libs/proj-4.7
 	sys-libs/zlib
-	dev-qt/qtgui:4[dbus(+)?]
+	dev-qt/qtgui:4
 	dev-qt/qtscript:4
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtwebkit:4
+	dbus? ( dev-qt/qtdbus:4 )
 	dmtx? ( media-libs/libdmtx )
 	exif? ( media-libs/libexif )
 	gps? ( >=sci-geosciences/gpsd-2.90 )

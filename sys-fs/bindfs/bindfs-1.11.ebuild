@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/bindfs-1.11.ebuild,v 1.1 2012/10/01 09:32:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/bindfs-1.11.ebuild,v 1.2 2013/10/01 22:01:09 sping Exp $
 
 EAPI="4"
 
@@ -23,6 +23,7 @@ RESTRICT="test"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.10.7-cflags.patch
+	epatch "${FILESDIR}"/${PN}-1.12.2-ac-config-headers.patch
 	eautoreconf
 }
 

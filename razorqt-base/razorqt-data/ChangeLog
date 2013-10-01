@@ -1,6 +1,10 @@
 # ChangeLog for razorqt-base/razorqt-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-data/ChangeLog,v 1.15 2013/07/10 05:02:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/razorqt-base/razorqt-data/ChangeLog,v 1.16 2013/10/01 21:36:42 pesa Exp $
+
+  01 Oct 2013; Davide Pesavento <pesa@gentoo.org> razorqt-data-0.5.1.ebuild,
+  razorqt-data-0.5.2.ebuild:
+  Properly fix qtgui/qtdbus deps wrt bug 484188.
 
   10 Jul 2013; Patrick Lauer <patrick@gentoo.org> razorqt-data-0.5.1.ebuild,
   razorqt-data-0.5.2.ebuild:

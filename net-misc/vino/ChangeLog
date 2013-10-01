@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.191 2013/09/13 22:41:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.192 2013/10/01 21:42:06 tetromino Exp $
+
+*vino-2.32.2-r2 (01 Oct 2013)
+
+  01 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +vino-2.32.2-r2.ebuild, -vino-3.8.1.ebuild:
+  Fix DoS vulnerability and remove vulnerable version (CVE-2013-5745, bug
+  #486694, thanks to Agostino Sarubbo).
 
 *vino-3.8.1-r1 (14 Sep 2013)
 

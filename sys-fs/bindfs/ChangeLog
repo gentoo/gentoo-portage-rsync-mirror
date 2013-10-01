@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/bindfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/ChangeLog,v 1.12 2013/08/27 07:47:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bindfs/ChangeLog,v 1.13 2013/10/01 22:01:09 sping Exp $
+
+*bindfs-1.12.3 (01 Oct 2013)
+
+  01 Oct 2013; Sebastian Pipping <sping@gentoo.org> bindfs-1.11.ebuild,
+  bindfs-1.12.ebuild, bindfs-1.12.1.ebuild, bindfs-1.12.2.ebuild,
+  +files/bindfs-1.12.2-ac-config-headers.patch, +bindfs-1.12.3.ebuild,
+  metadata.xml:
+  Fix compilation error from use of AM_CONFIG_HEADER (bug #486722), bump to
+  1.12.3, add myself as backup maintainer
 
 *bindfs-1.12.2 (27 Aug 2013)
 

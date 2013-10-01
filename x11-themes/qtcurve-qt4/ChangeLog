@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.156 2013/07/10 05:05:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.157 2013/10/01 21:47:30 pesa Exp $
+
+  01 Oct 2013; Davide Pesavento <pesa@gentoo.org> qtcurve-qt4-1.8.14.ebuild:
+  Properly fix qtgui/qtdbus deps wrt bug 484194.
 
   10 Jul 2013; Patrick Lauer <patrick@gentoo.org> qtcurve-qt4-1.8.14.ebuild:
   Fixing qtgui deps for qt-4.8.5
