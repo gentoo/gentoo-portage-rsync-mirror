@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.4.ebuild,v 1.1 2013/09/15 04:31:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.4.ebuild,v 1.2 2013/10/01 22:19:42 tetromino Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -39,7 +39,7 @@ COMMON_DEPEND="
 	bluetooth? ( >=net-wireless/bluez-4.82 )
 	avahi? ( net-dns/avahi:=[autoipd] )
 	connection-sharing? (
-		net-dns/dnsmasq
+		net-dns/dnsmasq[dhcp]
 		net-firewall/iptables )
 	gnutls? (
 		dev-libs/libgcrypt:=

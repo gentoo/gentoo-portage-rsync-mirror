@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.17 2013/02/03 19:38:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.6.4.ebuild,v 1.18 2013/10/01 22:19:42 tetromino Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -48,7 +48,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	ppp? ( >=net-dialup/ppp-2.4.5[ipv6] )
 	resolvconf? ( net-dns/openresolv )
 	connection-sharing? (
-		net-dns/dnsmasq
+		net-dns/dnsmasq[dhcp]
 		net-firewall/iptables )
 	wimax? (
 		dev-libs/libnl:1.1=

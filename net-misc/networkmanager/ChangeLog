@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.180 2013/09/15 04:31:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.181 2013/10/01 22:19:42 tetromino Exp $
+
+  01 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  networkmanager-0.9.6.4.ebuild, networkmanager-0.9.6.4-r1.ebuild,
+  networkmanager-0.9.8.2-r3.ebuild, networkmanager-0.9.8.4.ebuild:
+  Depend on dnsmasq[dhcp] for connection sharing (bug #475760, thanks to
+  Ronald).
 
 *networkmanager-0.9.8.4 (15 Sep 2013)
 

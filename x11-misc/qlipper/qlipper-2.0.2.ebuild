@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qlipper/qlipper-2.0.0-r1.ebuild,v 1.2 2013/03/02 23:51:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qlipper/qlipper-2.0.2.ebuild,v 1.1 2013/10/01 22:05:22 pesa Exp $
 
 EAPI=4
 PLOCALES="cs sr"
-inherit l10n qt4-r2
+inherit l10n cmake-utils
 
 DESCRIPTION="Lightweight and cross-platform clipboard history applet"
 HOMEPAGE="http://code.google.com/p/qlipper/"
@@ -23,7 +23,7 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake4 ${PN}2.pro INSTALL_PREFIX="${EPREFIX}"/usr
+	cmake-utils_src_configure INSTALL_PREFIX="${EPREFIX}"/usr
 }
 
 rm_loc() {
