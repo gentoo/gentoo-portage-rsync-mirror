@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.28 2013/04/24 18:03:00 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.29 2013/10/01 17:51:40 maksbotan Exp $
+
+*libguestfs-1.22.6 (01 Oct 2013)
+
+  01 Oct 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/1.22/0001_add_gentoo_names_to_configure.patch,
+  +files/1.22/0002_add_gentooway_to_remove_la_files.patch,
+  +files/1.22/0003_add_doc_more_option.patch,
+  +files/1.22/0004_add_icoutils_configure_drop_automagic.patch,
+  +files/1.22/0005_enable_gtk_docs_in_broken_autotools-utils-eclass.patch,
+  +files/1.22/0103_disable_php_bindings_makefile.patch,
+  +libguestfs-1.22.6.ebuild:
+  Bump to 1.22.26, thanks to slepnoga
 
 *libguestfs-1.20.6 (24 Apr 2013)
 

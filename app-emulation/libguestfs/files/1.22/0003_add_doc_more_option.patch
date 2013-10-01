@@ -1,0 +1,33 @@
+diff --git a/configure.ac b/configure.ac
+--- a/configure.ac
++++ b/configure.ac
+@@ -521,7 +521,7 @@
+     dnl Check for functions not available in earlier versions of Augeas.
+     AC_CHECK_FUNCS([aug_load aug_defvar aug_defnode])
+     LIBS="$old_LIBS"
+-],[AC_MSG_WARN([augeas not found, some core features will be disabled])])
++],[AC_MSG_ERROR([augeas not found, some core features will be disabled])])
+ 
+ dnl Check for libselinux (optional).
+ AC_CHECK_HEADERS([selinux/selinux.h])
+@@ -594,11 +594,19 @@
+ 
+ dnl Check for optional xmllint.
+ AC_CHECK_PROG([XMLLINT],[xmllint],[xmllint],[no])
++AS_IF([test "xXMLLINT" = "xno"], [AC_MSG_ERROR([xmllint not installed])],[])
++
+ AM_CONDITIONAL([HAVE_XMLLINT],[test "x$XMLLINT" != "xno"])
+ 
+ dnl po4a for translating man pages and POD files (optional).
+ AC_CHECK_PROG([PO4A],[po4a],[po4a],[no])
+-AM_CONDITIONAL([HAVE_PO4A], [test "x$PO4A" != "xno"])
++
++AC_ARG_ENABLE([doc],
++       AS_HELP_STRING([--enable-doc], [Enable generation translating man pages and doc]),
++       [enable_doc=no],
++       [enable_doc=yes])
++AS_IF([test "xPO4A" = "xno"], [AC_MSG_WARN([po4a not installed])],[])  
++AM_CONDITIONAL([HAVE_PO4A],[test "x$PO4A" != "xno" && test "x$enable_doc" != "xno"])
+ 
+ dnl Check for db_dump, db_load (optional).
+ AC_CHECK_PROGS([DB_DUMP],
