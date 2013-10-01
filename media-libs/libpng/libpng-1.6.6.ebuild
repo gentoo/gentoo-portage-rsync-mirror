@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.6.6.ebuild,v 1.1 2013/09/16 15:55:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.6.6.ebuild,v 1.2 2013/10/01 14:52:49 ssuominen Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit eutils libtool multilib-minimal
 DESCRIPTION="Portable Network Graphics library"
 HOMEPAGE="http://www.libpng.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
-	apng? ( mirror://sourceforge/apng/${PN}-1.6.5-apng.patch.gz )"
+	apng? ( mirror://sourceforge/apng/${P}-apng.patch.gz )"
 
 LICENSE="libpng"
 SLOT="0/16"
