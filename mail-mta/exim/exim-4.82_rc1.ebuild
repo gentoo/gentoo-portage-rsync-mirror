@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc1.ebuild,v 1.1 2013/09/30 19:33:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc1.ebuild,v 1.2 2013/10/01 18:27:19 grobian Exp $
 
 EAPI="4"
 
@@ -31,7 +31,7 @@ COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	pam? ( virtual/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
-	gnutls? ( net-libs/gnutls
+	gnutls? ( net-libs/gnutls[pkcs11]
 			  dev-libs/libtasn1 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	mysql? ( virtual/mysql )
