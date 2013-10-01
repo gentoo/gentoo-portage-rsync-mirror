@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/musique
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/ChangeLog,v 1.11 2013/07/10 04:51:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musique/ChangeLog,v 1.12 2013/10/01 21:24:22 pesa Exp $
+
+  01 Oct 2013; Davide Pesavento <pesa@gentoo.org> -musique-1.2.ebuild,
+  -musique-9999.ebuild, musique-1.2.1.ebuild:
+  Properly fix qtgui/qtdbus deps wrt bug 484174. Prune 1.2 (old) and 9999
+  (broken).
 
   10 Jul 2013; Patrick Lauer <patrick@gentoo.org> musique-1.2.1.ebuild,
   musique-1.2.ebuild, musique-9999.ebuild:

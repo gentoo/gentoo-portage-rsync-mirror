@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare test
-DEPEND=dev-qt/qtgui:4[dbus(+)] dev-qt/qtwebkit:4 dev-qt/qtxmlpatterns:4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4 dev-qt/qtxmlpatterns:4 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=QMPDClient with NBL additions, such as lyrics' display
 EAPI=4
 HOMEPAGE=http://bitcheese.net/wiki/QMPDClient
 IUSE=debug
 KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
-RDEPEND=dev-qt/qtgui:4[dbus(+)] dev-qt/qtwebkit:4 dev-qt/qtxmlpatterns:4
+RDEPEND=dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtwebkit:4 dev-qt/qtxmlpatterns:4
 SLOT=0
 SRC_URI=http://dump.bitcheese.net/files/qmpdclient-1.2.2.tar.bz2
 _eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6b56f9f73f8b6d6062494b05a1c1b7c4
+_md5_=95d005ea8effc76388f6fa2a59416fce

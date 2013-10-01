@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.20 2013/07/10 04:49:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/ChangeLog,v 1.21 2013/10/01 21:16:50 pesa Exp $
+
+  01 Oct 2013; Davide Pesavento <pesa@gentoo.org> djview-4.8.ebuild,
+  djview-4.9.ebuild:
+  Properly fix qtgui/qtdbus deps wrt bug 484170.
 
   10 Jul 2013; Patrick Lauer <patrick@gentoo.org> djview-4.8.ebuild,
   djview-4.9.ebuild:

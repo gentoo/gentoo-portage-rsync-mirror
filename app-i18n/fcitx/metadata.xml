@@ -4,7 +4,7 @@
   <herd>cjk</herd>
   <use>
     <flag name='autostart'>Enable xdg-compatible autostart of fcitx</flag>
-	<flag name='enchant'>Use <pkg>app-text/enchant</pkg> for text prediction</flag>
+    <flag name='enchant'>Use <pkg>app-text/enchant</pkg> for text prediction</flag>
     <flag name='introspection'>Enable GObject Introspection</flag>
     <flag name='gtk'>Install GTK2 IM module</flag>
     <flag name='gtk3'>Install GTK3 IM module</flag>

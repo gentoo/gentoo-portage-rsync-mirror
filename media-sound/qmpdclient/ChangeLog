@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.99 2013/07/18 22:09:07 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.100 2013/10/01 21:26:03 pesa Exp $
+
+  01 Oct 2013; Davide Pesavento <pesa@gentoo.org> qmpdclient-1.2.2-r1.ebuild:
+  Properly fix qtgui/qtdbus deps wrt bug 484176.
 
   18 Jul 2013; Chris Reffett <creffett@gentoo.org> qmpdclient-1.2.2-r1.ebuild:
   Convert base_src_prepare to cmake-utils_src_prepare, bug 477232.
