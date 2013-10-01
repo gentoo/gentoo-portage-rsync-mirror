@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.44 2013/06/26 17:14:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.45 2013/10/01 04:49:26 vapier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs multilib-minimal
@@ -9,7 +9,7 @@ LIBVPX_TESTDATA_VER=1.2.0
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
-	EGIT_REPO_URI="http://git.chromium.org/webm/${PN}.git"
+	EGIT_REPO_URI="https://chromium.googlesource.com/webm/${PN}.git"
 	KEYWORDS=""
 elif [[ ${PV} == *pre* ]]; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"

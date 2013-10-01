@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.28 2013/07/24 16:07:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.1.0.ebuild,v 1.29 2013/10/01 04:49:26 vapier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs base flag-o-matic
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
-	EGIT_REPO_URI="http://git.chromium.org/webm/${PN}.git"
+	EGIT_REPO_URI="https://chromium.googlesource.com/webm/${PN}.git"
 	KEYWORDS=""
 elif [[ ${PV} == *pre* ]]; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"

@@ -15,7 +15,7 @@ shared memory for some other processes, creating many potential problems.
 Fix is to initialize shmid to -1 to indicate that it is in fact
 uninitialized.
 
-https://gerrit.chromium.org/gerrit/37971
+https://chromium-review.googlesource.com/37971
 
 --- a/x11vnc/x11vnc_defs.c
 +++ b/x11vnc/x11vnc_defs.c
