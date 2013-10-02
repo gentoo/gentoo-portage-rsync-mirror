@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/liblouis
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblouis/ChangeLog,v 1.1 2013/10/02 04:26:57 teiresias Exp $
+
+*liblouis-2.5.3 (01 Oct 2013)
+
+  01 Oct 2013; Christopher Brannon <teiresias@gentoo.org>
+  +liblouis-2.5.3.ebuild, +metadata.xml:
+  Add liblouis from the sunrise overlay. Closes bug #305899.
+  Thanks to Angelo D'Autilia <sydro@salug.it> for the initial ebuild.
+
