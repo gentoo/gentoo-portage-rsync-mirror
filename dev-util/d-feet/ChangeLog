@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/d-feet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.22 2013/09/01 19:22:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.23 2013/10/02 22:09:26 tetromino Exp $
+
+  02 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> d-feet-0.3.6.ebuild:
+  Work around gettext-0.18.3.1 causing sandbox failures in eautoreconf (bug
+  #484554).
 
   01 Sep 2013; Pacho Ramos <pacho@gentoo.org> -d-feet-0.1.15.ebuild,
   -d-feet-0.3.3.ebuild, d-feet-0.3.6.ebuild:

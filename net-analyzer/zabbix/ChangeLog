@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.132 2013/10/02 20:13:21 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.133 2013/10/02 22:29:35 mattm Exp $
+
+*zabbix-2.0.9_rc1-r1 (02 Oct 2013)
+
+  02 Oct 2013; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.9_rc1-r1.ebuild,
+  -zabbix-2.0.9_rc1.ebuild:
+  Added MY_PV bash variable to deal with _rc1 version numbers impacting naming
+  of java jar files.
 
 *zabbix-2.0.9_rc1 (02 Oct 2013)
 

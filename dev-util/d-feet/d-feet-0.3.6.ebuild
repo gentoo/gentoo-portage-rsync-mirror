@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.3.6.ebuild,v 1.2 2013/09/01 19:22:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/d-feet-0.3.6.ebuild,v 1.3 2013/10/02 22:09:26 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -35,7 +35,10 @@ DEPEND="
 src_prepare() {
 	# Do not run update-desktop-database (sandbox violation)
 	sed -i '/^UPDATE_DESKTOP/s:=.*:=true:' data/Makefile.am || die
-	eautoreconf
+
+	# Set m4dir as workaround for gettext-0.18.3.1 silliness, bug #484554
+	mkdir m4 || die
+	m4dir=m4 eautoreconf
 	gnome2_src_prepare
 }
 

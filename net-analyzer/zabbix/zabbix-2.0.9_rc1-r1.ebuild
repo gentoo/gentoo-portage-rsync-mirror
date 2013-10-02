@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.9_rc1.ebuild,v 1.1 2013/10/02 20:13:21 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.9_rc1-r1.ebuild,v 1.1 2013/10/02 22:29:35 mattm Exp $
 
 EAPI="5"
 
@@ -11,6 +11,7 @@ inherit flag-o-matic webapp depend.php autotools java-pkg-opt-2 user toolchain-f
 DESCRIPTION="ZABBIX is software for monitoring of your applications, network and servers."
 HOMEPAGE="http://www.zabbix.com/"
 MY_P=${P/_/}
+MY_PV=${PV/_/}
 SRC_URI="http://prdownloads.sourceforge.net/zabbix/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
@@ -370,7 +371,7 @@ src_install() {
 		/${ZABBIXJAVA_BASE}/lib
 	   keepdir /${ZABBIXJAVA_BASE}
 	   exeinto /${ZABBIXJAVA_BASE}/bin
-	   doexe src/zabbix_java/bin/zabbix-java-gateway-${PV}.jar
+	   doexe src/zabbix_java/bin/zabbix-java-gateway-${MY_PV}.jar
 	   exeinto /${ZABBIXJAVA_BASE}/lib
 	   doexe \
 	   	src/zabbix_java/lib/logback-classic-0.9.27.jar \
