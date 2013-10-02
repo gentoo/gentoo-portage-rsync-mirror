@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.131 2013/09/28 17:17:51 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.132 2013/10/02 21:13:08 aidecoe Exp $
+
+*dracut-033-r2 (02 Oct 2013)
+
+  02 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-033-r2.ebuild,
+  +files/033-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/033-0004-Install-dracut-install-into-libexec-di.patch:
+  Fixes bug #485204 and bug #485218.
+
+  Thanks to Alexander Tsoy <alexander@tsoy.me> for suggestions on bug #485204.
+
+  Thanks to  Steven Newbury <s_j_newbury@yahoo.co.uk> for good suggestions on
+  bug #485218.  Patch installing dracut-install to /usr/libexec has been
+  submitted upstream.
 
   28 Sep 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-033-r1.ebuild:
   Removed dead 'optimization' flag from IUSE.
