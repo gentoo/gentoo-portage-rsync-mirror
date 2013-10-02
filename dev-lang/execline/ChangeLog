@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/execline
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/execline/ChangeLog,v 1.1 2013/10/02 22:59:32 williamh Exp $
+
+*execline-1.2.3 (02 Oct 2013)
+
+  02 Oct 2013; William Hubbs <williamh@gentoo.org> +execline-1.2.3.ebuild,
+  +metadata.xml:
+  initial commit
