@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.131 2013/09/22 13:36:41 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.132 2013/10/02 20:13:21 mattm Exp $
+
+*zabbix-2.0.9_rc1 (02 Oct 2013)
+
+  02 Oct 2013; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.9_rc1.ebuild:
+  Bump for security vulnerability, Bug 486696 and ZBX-7091,
+  https://bugs.gentoo.org/show_bug.cgi?id=486696 Temporarily no keywords on
+  package while testing.
 
   22 Sep 2013; Matthew Marlowe <mattm@gentoo.org> -zabbix-2.0.4-r1.ebuild,
   -zabbix-2.0.5.ebuild, -zabbix-2.0.6-r5.ebuild:
