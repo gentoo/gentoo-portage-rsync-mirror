@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.161 2013/09/21 15:03:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.162 2013/10/02 03:41:11 jer Exp $
+
+  02 Oct 2013; Jeroen Roovers <jer@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
+  Stable for HPPA (bug #485436).
 
   21 Sep 2013; Jeroen Roovers <jer@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
   Set minimal FLTK version (bug #483668).

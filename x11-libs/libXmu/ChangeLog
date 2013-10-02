@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXmu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.83 2013/09/29 11:15:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXmu/ChangeLog,v 1.84 2013/10/02 03:54:59 jer Exp $
+
+  02 Oct 2013; Jeroen Roovers <jer@gentoo.org> libXmu-1.1.2.ebuild:
+  Stable for HPPA (bug #475480).
 
   29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libXmu-1.1.2.ebuild:
   Stable for amd64, wrt bug #475480
