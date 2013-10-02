@@ -8,6 +8,14 @@
 		<description>Proxied Maintainer</description>
 	</maintainer>
 	<longdescription lang="en">
+		This is a GnuPG-like unix program for encryption and signing
+		that uses only quantum-computer-resistant algorithms
 	</longdescription>
+	<use>
+		<flag name='cryptopp'>
+			Build algorithms that need Crypto++ support
+			<pkg>dev-libs/crypto++</pkg>
+		</flag>
+	</use>
 </pkgmetadata>
 
