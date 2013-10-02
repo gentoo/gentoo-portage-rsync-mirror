@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.185 2013/10/02 09:11:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.186 2013/10/02 12:07:56 mgorny Exp $
+
+*systemd-208-r1 (02 Oct 2013)
+
+  02 Oct 2013; Michał Górny <mgorny@gentoo.org> +systemd-208-r1.ebuild,
+  -systemd-208.ebuild:
+  Revbump the ebuild and update the checksums for the new -208 tarball. We love
+  people who re-release the same version.
 
 *systemd-208 (02 Oct 2013)
 
