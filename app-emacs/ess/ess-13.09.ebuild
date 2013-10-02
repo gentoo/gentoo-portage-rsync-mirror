@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-5.14.ebuild,v 1.6 2012/09/29 09:39:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ess/ess-13.09.ebuild,v 1.1 2013/10/02 18:13:31 ulm Exp $
 
-EAPI=4
+EAPI=5
 
 inherit elisp
 
@@ -12,12 +12,10 @@ SRC_URI="http://ess.r-project.org/downloads/ess/${P}.tgz"
 
 LICENSE="GPL-2+ GPL-3+ Texinfo-manual"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 
 DEPEND="app-text/texi2html
 	virtual/latex-base"
-RDEPEND=""
 
 SITEFILE="50${PN}-gentoo.el"
 
@@ -32,7 +30,7 @@ src_install() {
 		DOCDIR="${ED}/usr/share/doc/${PF}" \
 		install
 
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 
 	# Most documentation is installed by the package's build system.
 	rm -f "${ED}${SITELISP}/${PN}/ChangeLog"
