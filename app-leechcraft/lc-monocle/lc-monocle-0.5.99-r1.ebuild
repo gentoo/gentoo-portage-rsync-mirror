@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-monocle/lc-monocle-9999.ebuild,v 1.3 2013/10/02 09:49:30 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-monocle/lc-monocle-0.5.99-r1.ebuild,v 1.1 2013/10/02 09:49:30 maksbotan Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit leechcraft
 DESCRIPTION="Monocle, the modular document viewer for LeechCraft"
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug +djvu doc +fb2 +pdf +spectre"
 
 RDEPEND="~app-leechcraft/lc-core-${PV}
