@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.148_p1-r1.ebuild,v 1.1 2013/03/15 19:31:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.148_p1-r1.ebuild,v 1.2 2013/10/02 10:11:47 nimiux Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -25,7 +25,7 @@ fi
 
 LICENSE="XMAME"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="X alsa debug opengl"
 REQUIRED_USE="debug? ( X )"
 
