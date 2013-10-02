@@ -1,6 +1,12 @@
 # ChangeLog for games-server/cyphesis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.32 2013/01/08 10:03:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.33 2013/10/02 07:56:41 tupone Exp $
+
+*cyphesis-0.6.1 (02 Oct 2013)
+
+  02 Oct 2013; Alfredo Tupone <tupone@gentoo.org> +cyphesis-0.6.1.ebuild,
+  +files/cyphesis-0.6.1-gentoo.patch, +files/cyphesis-0.6.1-makefile.patch:
+  Version bump to 0.6.1
 
   08 Jan 2013; Tupone Alfredo <tupone@gentoo.org> -cyphesis-0.5.26.ebuild,
   -files/cyphesis-0.5.26-gentoo.patch:
