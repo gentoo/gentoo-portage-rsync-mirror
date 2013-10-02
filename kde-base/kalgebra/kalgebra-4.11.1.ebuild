@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.11.1.ebuild,v 1.1 2013/09/03 19:04:48 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/kalgebra-4.11.1.ebuild,v 1.2 2013/10/02 05:27:45 creffett Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	$(add_kdebase_dep analitza)
+	$(add_kdebase_dep analitza opengl?)
 	$(add_kdebase_dep libkdeedu)
 	opengl? ( virtual/glu )
 "
