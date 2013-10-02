@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.310-r1.ebuild,v 1.4 2013/09/28 15:09:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.310-r1.ebuild,v 1.5 2013/10/02 18:46:02 axs Exp $
 
 EAPI=5
-inherit nsplugins toolchain-funcs versionator multilib-minimal
+inherit nsplugins toolchain-funcs versionator multilib multilib-minimal
 
 DESCRIPTION="Adobe Flash Player"
 HOMEPAGE="http://www.adobe.com/products/flashplayer.html"
@@ -23,7 +23,10 @@ SRC_URI="
 	abi_x86_64? ( ${AF_64_URI} )
 "
 IUSE="debug kde selinux sse2"
-REQUIRED_USE="sse2 debug? ( abi_x86_32 )"
+REQUIRED_USE="
+	sse2 debug? ( abi_x86_32 )
+	|| ( abi_x86_64 abi_x86_32 )
+"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
@@ -66,7 +69,7 @@ NATIVE_DEPS="
 "
 
 DEPEND="
-	amd64? ( abi_x86_32? ( www-plugins/nspluginwrapper ) )
+	amd64? ( abi_x86_32? ( !abi_x86_64? ( www-plugins/nspluginwrapper ) ) )
 	selinux? ( sec-policy/selinux-flash )
 "
 RDEPEND="
