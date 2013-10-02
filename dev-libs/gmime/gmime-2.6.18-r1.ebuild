@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.17.ebuild,v 1.1 2013/08/11 21:30:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.18-r1.ebuild,v 1.1 2013/10/02 19:23:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 VALA_USE_DEPEND="vapigen"
 
-inherit mono-env gnome2 vala
+inherit eutils mono-env gnome2 vala
 
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/ http://developer.gnome.org/gmime/stable/"
@@ -39,6 +39,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Minor code/comment cleanup
+	epatch "${FILESDIR}/${P}-code-cleanup.patch"
+
+	# Initialize mutexes earlier in g_mime_init
+	epatch "${FILESDIR}/${P}-mutexes-earlier.patch"
+
+	# Implemented custom header writer for References
+	epatch "${FILESDIR}/${P}-custom-headers.patch"
+	epatch "${FILESDIR}/${P}-close-reference.patch"
+
 	gnome2_src_prepare
 	use vala && vala_src_prepare
 }

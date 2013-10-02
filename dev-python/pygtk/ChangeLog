@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.291 2013/09/29 10:21:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.292 2013/10/02 19:09:24 tetromino Exp $
+
+  02 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pygtk-2.24.0-r4.ebuild, +files/pygtk-2.24.0-test_dialog.patch:
+  Fix test failure (bug #486602, thanks to eroen).
 
 *pygtk-2.24.0-r4 (29 Sep 2013)
 

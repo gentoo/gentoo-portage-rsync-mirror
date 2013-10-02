@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r4.ebuild,v 1.1 2013/09/29 10:21:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r4.ebuild,v 1.2 2013/10/02 19:09:24 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -44,6 +44,9 @@ src_prepare() {
 
 	# Fail when tests are failing, bug #391307
 	epatch "${FILESDIR}/${PN}-2.24.0-test-fail.patch"
+
+	# Fix broken tests, https://bugzilla.gnome.org/show_bug.cgi?id=709304
+	epatch "${FILESDIR}/${P}-test_dialog.patch"
 
 	# Examples is handled "manually"
 	sed -e 's/\(SUBDIRS = .* \)examples/\1/' \

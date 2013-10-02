@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.230 2013/09/28 19:52:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.231 2013/10/02 19:23:58 pacho Exp $
+
+*gmime-2.6.18-r1 (02 Oct 2013)
+
+  02 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gmime-2.6.18-close-reference.patch,
+  +files/gmime-2.6.18-code-cleanup.patch,
+  +files/gmime-2.6.18-custom-headers.patch,
+  +files/gmime-2.6.18-mutexes-earlier.patch, +gmime-2.6.18-r1.ebuild,
+  -gmime-2.6.17.ebuild, -gmime-2.6.18.ebuild:
+  Apply upstream fixes, also solving problems with pan (#486776 by Duncan), drop
+  old.
 
 *gmime-2.6.18 (28 Sep 2013)
 

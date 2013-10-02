@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/udpxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpxy/ChangeLog,v 1.5 2013/04/05 13:08:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpxy/ChangeLog,v 1.6 2013/10/02 19:03:35 pacho Exp $
+
+*udpxy-1.0.23.7-r1 (02 Oct 2013)
+
+  02 Oct 2013; Pacho Ramos <pacho@gentoo.org> +files/udpxy.service,
+  +udpxy-1.0.23.7-r1.ebuild, -udpxy-1.0.21.2-r1.ebuild, -udpxy-1.0.23.7.ebuild:
+  Add unit file (#486594 by nE0sIghT), drop old.
 
 *udpxy-1.0.23.7 (05 Apr 2013)
 
