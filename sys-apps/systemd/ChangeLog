@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.186 2013/10/02 12:07:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.187 2013/10/02 12:52:39 mgorny Exp $
+
+  02 Oct 2013; Michał Górny <mgorny@gentoo.org> systemd-208-r1.ebuild:
+  Sync SRC_URI with udev.
 
 *systemd-208-r1 (02 Oct 2013)
 

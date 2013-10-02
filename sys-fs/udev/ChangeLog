@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.965 2013/10/02 06:56:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.966 2013/10/02 12:49:31 ssuominen Exp $
+
+  02 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> udev-208.ebuild:
+  Upstream retagged 208. Use -r1 in the tarball name to avoid Manifest
+  (distfiles) collision.
 
 *udev-208 (02 Oct 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-208.ebuild,v 1.1 2013/10/02 06:56:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-208.ebuild,v 1.2 2013/10/02 12:49:31 ssuominen Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ if [[ ${PV} = 9999* ]]; then
 	inherit git-2
 else
 	patchset=
-	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
+	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz -> systemd-${PV}-r1.tar.xz"
 	if [[ -n "${patchset}" ]]; then
 				SRC_URI="${SRC_URI}
 					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.xz
