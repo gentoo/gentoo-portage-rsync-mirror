@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-StackTrace
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.84 2012/11/24 07:41:44 tove Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-StackTrace/ChangeLog,v 1.85 2013/10/02 13:32:31 jer Exp $
+
+  02 Oct 2013; Jeroen Roovers <jer@gentoo.org> Devel-StackTrace-1.300.0.ebuild:
+  Stable for HPPA (bug #449580).
 
 *Devel-StackTrace-1.300.0 (24 Nov 2012)
 
