@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/conntrack-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.67 2013/09/30 17:17:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.68 2013/10/02 02:51:01 jer Exp $
+
+  02 Oct 2013; Jeroen Roovers <jer@gentoo.org> conntrack-tools-1.4.2.ebuild:
+  Stable for HPPA (bug #474858).
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> conntrack-tools-1.4.2.ebuild:
   Stable for x86, wrt bug #474858

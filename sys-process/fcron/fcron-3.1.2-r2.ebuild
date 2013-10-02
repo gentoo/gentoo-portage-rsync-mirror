@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2-r2.ebuild,v 1.3 2013/09/30 16:33:53 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.1.2-r2.ebuild,v 1.4 2013/10/02 02:41:03 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://fcron.free.fr/"
 SRC_URI="http://fcron.free.fr/archives/${MY_P}.src.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="debug pam selinux linguas_fr +mta +system-crontab readline"
 
 DEPEND="selinux? ( sys-libs/libselinux )
