@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/sessreg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.89 2013/09/29 11:08:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.90 2013/10/02 03:07:14 jer Exp $
+
+  02 Oct 2013; Jeroen Roovers <jer@gentoo.org> sessreg-1.0.8.ebuild:
+  Stable for HPPA (bug #475480).
 
   29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> sessreg-1.0.8.ebuild:
   Stable for amd64, wrt bug #475480
