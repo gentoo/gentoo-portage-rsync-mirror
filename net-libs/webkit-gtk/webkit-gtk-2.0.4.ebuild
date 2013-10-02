@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.4.ebuild,v 1.4 2013/09/05 19:01:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.4.ebuild,v 1.5 2013/10/01 23:39:17 tetromino Exp $
 
 EAPI="5"
 
@@ -62,8 +62,10 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	dev-lang/perl
-	|| ( virtual/rubygems[ruby_targets_ruby19]
-	     virtual/rubygems[ruby_targets_ruby18] )
+	|| (
+		virtual/rubygems[ruby_targets_ruby20]
+		virtual/rubygems[ruby_targets_ruby19]
+		virtual/rubygems[ruby_targets_ruby18] )
 	>=app-accessibility/at-spi2-core-2.5.3
 	>=dev-util/gtk-doc-am-1.10
 	dev-util/gperf
@@ -209,7 +211,9 @@ src_configure() {
 		"$(usex aqua "--with-font-backend=pango --with-target=quartz" "")
 		# Aqua support in gtk3 is untested
 
-	if has_version "virtual/rubygems[ruby_targets_ruby19]"; then
+	if has_version "virtual/rubygems[ruby_targets_ruby20]"; then
+		myconf="${myconf} RUBY=$(type -P ruby20)"
+	elif has_version "virtual/rubygems[ruby_targets_ruby19]"; then
 		myconf="${myconf} RUBY=$(type -P ruby19)"
 	else
 		myconf="${myconf} RUBY=$(type -P ruby18)"

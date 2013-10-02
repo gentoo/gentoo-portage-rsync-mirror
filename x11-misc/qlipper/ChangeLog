@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qlipper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qlipper/ChangeLog,v 1.5 2013/10/01 22:05:22 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qlipper/ChangeLog,v 1.6 2013/10/01 23:37:16 pesa Exp $
+
+  01 Oct 2013; Davide Pesavento <pesa@gentoo.org>
+  +files/qlipper-2.0.2-system-includes.patch, qlipper-2.0.2.ebuild:
+  EAPI=5; add missing deps and fix build.
 
 *qlipper-2.0.2 (01 Oct 2013)
 
