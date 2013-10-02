@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.62 2013/01/01 19:01:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.63 2013/10/02 11:53:43 scarabeus Exp $
+
+*autoconf-archive-2013.06.09 (02 Oct 2013)
+
+  02 Oct 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +autoconf-archive-2013.06.09.ebuild, -autoconf-archive-2011.12.21.ebuild,
+  -autoconf-archive-2012.04.07.ebuild:
+  Version bump to latest. Drop overshadowed versions.
 
   01 Jan 2013; Raúl Porcel <armin76@gentoo.org>
   autoconf-archive-2012.09.08.ebuild:

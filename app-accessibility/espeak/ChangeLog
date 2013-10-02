@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.114 2013/10/01 16:36:55 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.115 2013/10/02 11:50:49 williamh Exp $
+
+  02 Oct 2013; William Hubbs <williamh@gentoo.org> -espeak-1.42.04.ebuild,
+  -espeak-1.45.03.ebuild, -espeak-1.46.01.ebuild, -espeak-1.47.11.ebuild:
+  remove old unstable versions
 
   01 Oct 2013; William Hubbs <williamh@gentoo.org> espeak-1.47.11-r1.ebuild:
   drop the required_use line; portaudio and pulseaudio are independent from each

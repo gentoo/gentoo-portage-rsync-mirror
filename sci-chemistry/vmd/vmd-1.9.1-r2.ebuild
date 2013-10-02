@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r2.ebuild,v 1.4 2013/10/02 11:12:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.9.1-r2.ebuild,v 1.5 2013/10/02 11:39:48 jlec Exp $
 
 EAPI=5
 
@@ -65,6 +65,8 @@ pkg_setup() {
 
 src_prepare() {
 	use cuda && cuda_sanitize
+
+	epatch "${FILESDIR}"/${P}-cuda-device_ptr.patch
 
 	cd "${WORKDIR}"/plugins
 
