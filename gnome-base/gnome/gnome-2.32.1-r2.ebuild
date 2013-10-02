@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1-r2.ebuild,v 1.9 2012/11/05 21:30:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1-r2.ebuild,v 1.10 2013/10/02 20:36:03 tetromino Exp $
 
 EAPI="4"
 
@@ -141,7 +141,6 @@ RDEPEND="!<x11-libs/gtk+-3.2.4-r1:3
 	>=gnome-extra/gnome-power-manager-2.32.0
 
 	>=net-misc/vinagre-2.30.3
-	>=gnome-extra/swfdec-gnome-2.30.1
 
 	accessibility? (
 		>=gnome-extra/libgail-gnome-1.20.3

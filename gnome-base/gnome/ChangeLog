@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.459 2013/10/02 06:44:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.460 2013/10/02 20:36:03 tetromino Exp $
+
+  02 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-2.32.1-r2.ebuild:
+  Do not pull in swfdec-gnome; swfdec is unmaintained and obsolete (bug
+  #486808).
 
   02 Oct 2013; Pacho Ramos <pacho@gentoo.org> gnome-3.8.0.ebuild:
   Waiting for a newer release ready to be used with gnome-panel-3.8 and 3.8

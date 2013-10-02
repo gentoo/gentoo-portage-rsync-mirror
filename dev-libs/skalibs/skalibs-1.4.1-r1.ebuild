@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-1.4.1.ebuild,v 1.1 2013/09/30 20:18:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skalibs/skalibs-1.4.1-r1.ebuild,v 1.1 2013/10/02 20:38:09 williamh Exp $
 
 EAPI=4
 
@@ -22,8 +22,14 @@ S=${WORKDIR}/prog/${P}
 
 src_configure() {
 	echo $(tc-getCC) ${CFLAGS} > conf-compile/conf-cc
+	echo /usr/bin:/bin > conf-compile/conf-defaultpath
 	echo $(tc-getCC) ${LDFLAGS} > conf-compile/conf-dynld
+	echo /usr/$(get_libdir)/${PN} > conf-compile/conf-install-library
+	echo /$(get_libdir)/${PN} > conf-compile/conf-install-library.so
 	echo $(tc-getCC) ${LDFLAGS} > conf-compile/conf-ld
+	rm conf-compile/flag-slashpackage
+	echo > conf-compile/stripbins
+	echo > conf-compile/striplibs
 }
 
 src_compile() {
@@ -38,20 +44,20 @@ src_install() {
 	doins include/*
 
 	insopts -m0755
-	insinto /usr/$(get_libdir)/${PN}
+	insinto /$(get_libdir)/${PN}
 	doins library.so/*
+	insopts -m0644
 	if use static-libs ; then
+	insinto /usr/$(get_libdir)/${PN}
 		doins library/*
 	fi
 
 	dodir /etc/ld.so.conf.d/
-	echo "/usr/$(get_libdir)/${PN}" > ${ED}/etc/ld.so.conf.d/10${PN}.conf || die
+	echo "/$(get_libdir)/${PN}" > ${ED}/etc/ld.so.conf.d/10${PN}.conf || die
 
-	cd doc || die
-	for f in $(find . -type f ! -name "*.html" ! -name "COPYING") ; do
-		docinto $(dirname f)
-		dodoc $f
-	done
-	docinto html
-	use doc && dohtml -r .
+	insinto /usr/lib/${PN}
+doins -r sysdeps
+
+	dodoc $(find doc -type f ! -name "*.html" ! -name "COPYING")
+	use doc && dohtml -r doc/*
 }
