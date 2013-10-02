@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.222 2013/09/17 19:42:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.223 2013/10/02 17:15:46 tetromino Exp $
+
+*pygobject-2.28.6-r54 (02 Oct 2013)
+
+  02 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +pygobject-2.28.6-r54.ebuild,
+  +files/pygobject-2.28.6-glib-2.36-class_init.patch:
+  Fix class interface setup to be compatible with glib-2.36. Remove old
+  alternatives symlink removal hack since it fails badly with binpkgs (bug
+  #459180, thanks to Fabio Erculiani).
 
   17 Sep 2013; Michał Górny <mgorny@gentoo.org> pygobject-2.28.6-r53.ebuild:
   Force python-exec:0 since the ebuild does hackery on top of script wrapping.
