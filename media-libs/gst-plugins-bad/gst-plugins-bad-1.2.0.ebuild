@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-1.2.0.ebuild,v 1.1 2013/09/29 17:53:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/gst-plugins-bad-1.2.0.ebuild,v 1.2 2013/10/02 15:01:32 tetromino Exp $
 
 EAPI="5"
 
@@ -16,8 +16,8 @@ IUSE="+introspection +orc"
 # FIXME: we need to depend on mesa to avoid automagic on egl
 RDEPEND="
 	>=dev-libs/glib-2.32:2
-	>=media-libs/gst-plugins-base-1:${SLOT}
-	>=media-libs/gstreamer-1:${SLOT}
+	>=media-libs/gst-plugins-base-1.2:${SLOT}
+	>=media-libs/gstreamer-1.2:${SLOT}
 	media-libs/mesa
 	x11-libs/libX11
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )

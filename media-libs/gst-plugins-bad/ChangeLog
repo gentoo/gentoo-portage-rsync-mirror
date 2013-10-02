@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.124 2013/09/29 17:53:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.125 2013/10/02 15:01:32 tetromino Exp $
+
+  02 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-plugins-bad-1.2.0.ebuild:
+  Depend on gstreamer-1.2 (bug #486582, thanks to Andrew John Hughes).
 
 *gst-plugins-bad-1.2.0 (29 Sep 2013)
 
