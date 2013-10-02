@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.184 2013/09/29 14:52:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.185 2013/10/02 09:11:49 mgorny Exp $
+
+*systemd-208 (02 Oct 2013)
+
+  02 Oct 2013; Michał Górny <mgorny@gentoo.org>
+  +files/208-0001-Work-around-link-libsystemd-label-to-libsystemd-logi.patch,
+  +files/208-0002-Update-Makefile.in.patch, +systemd-208.ebuild,
+  systemd-9999-r1.ebuild:
+  Version bump. Fix linking issues, bug #479038.
 
   29 Sep 2013; Michał Górny <mgorny@gentoo.org> -systemd-204.ebuild:
   Remove old, vulnerable version.

@@ -1,16 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.19 2013/10/02 09:11:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-208.ebuild,v 1.1 2013/10/02 09:11:49 mgorny Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-2
-#endif
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python2_7 )
@@ -81,22 +73,6 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.18 )"
 
-#if LIVE
-DEPEND="${DEPEND}
-	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5
-	>=dev-util/gtk-doc-1.18"
-
-SRC_URI=
-KEYWORDS=
-
-src_prepare() {
-	gtkdocize --docdir docs/ || die
-
-	autotools-utils_src_prepare
-}
-#endif
-
 pkg_pretend() {
 	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS
 		~EPOLL ~FANOTIFY ~FHANDLE ~INOTIFY_USER ~IPV6 ~NET ~PROC_FS
@@ -135,6 +111,16 @@ pkg_pretend() {
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
+}
+
+src_prepare() {
+	local PATCHES=(
+		# missing linking, bug #479038
+		"${FILESDIR}"/${PV}-0001-Work-around-link-libsystemd-label-to-libsystemd-logi.patch
+		"${FILESDIR}"/${PV}-0002-Update-Makefile.in.patch
+	)
+
+	autotools-utils_src_prepare
 }
 
 multilib_src_configure() {
