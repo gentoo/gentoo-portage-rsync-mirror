@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.291 2013/09/30 04:42:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.292 2013/10/02 06:36:24 djc Exp $
+
+*timezone-data-2013g (02 Oct 2013)
+
+  02 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> +timezone-data-2013g.ebuild:
+  Version bump timezone-data to 2013g.
 
   30 Sep 2013; Mike Frysinger <vapier@gentoo.org> timezone-data-2013f-r1.ebuild:
   Merge duplicate pkg_postinst funcs #485720#6 by Arfrever Frehtes Taifersar

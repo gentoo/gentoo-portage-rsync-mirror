@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.8.0.ebuild,v 1.6 2013/09/29 07:32:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.8.0.ebuild,v 1.7 2013/10/02 06:44:57 pacho Exp $
 
 EAPI="5"
 
@@ -41,7 +41,6 @@ RDEPEND="
 		>=gnome-extra/mousetweaks-${PV} )
 	extras? ( >=gnome-base/gnome-extra-apps-${PV} )
 	fallback? (
-		>=gnome-base/gnome-applets-3.6.0
 		>=gnome-base/gnome-fallback-${PV} )
 "
 
