@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.463 2013/09/28 15:13:27 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.464 2013/10/03 15:59:21 eras Exp $
+
+  03 Oct 2013; Eray Aslan <eras@gentoo.org> clamav-0.98.ebuild:
+  Fix config file move - bug #486624
 
   28 Sep 2013; Chema Alonso <nimiux@gentoo.org> clamav-0.97.8-r2.ebuild:
   Stable for amd64 wrt bug #480038

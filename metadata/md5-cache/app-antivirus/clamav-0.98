@@ -10,4 +10,4 @@ RDEPEND=bzip2? ( app-arch/bzip2 ) clamdtop? ( sys-libs/ncurses ) iconv? ( virtua
 SLOT=0
 SRC_URI=mirror://sourceforge/clamav/clamav-0.98.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	multilib	892e597faee02a5b94eb02ab512e7622	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=46ac9b099177e637604b18940ab323b7
+_md5_=a472784ef5cc3263d2086ca77cdc21dc

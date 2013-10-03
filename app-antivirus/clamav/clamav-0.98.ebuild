@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.98.ebuild,v 1.1 2013/09/27 16:04:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.98.ebuild,v 1.2 2013/10/03 15:59:21 eras Exp $
 
 EAPI=5
 
@@ -115,7 +115,7 @@ src_install() {
 
 	for i in clamd freshclam clamav-milter
 	do
-		[[ -f "${D}"/etc/clamd.conf.sample ]] && mv "${D}"/etc/clamd.conf{.sample,}
+		[[ -f "${D}"/etc/"${i}".conf.sample ]] && mv "${D}"/etc/"${i}".conf{.sample,}
 	done
 
 	prune_libtool_files --all

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.3.1.ebuild,v 1.12 2013/09/26 17:31:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/libwebp-0.3.1.ebuild,v 1.13 2013/10/03 15:58:18 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -34,7 +34,11 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	ac_cv_header_gif_lib_h=$(usex gif) \
+	# Only used for gif2webp binary wrt #486646
+	local build_gif2webp=$(usex gif)
+	multilib_build_binaries || build_gif2webp=no
+
+	ac_cv_header_gif_lib_h=${build_gif2webp} \
 	ac_cv_header_jpeglib_h=$(usex jpeg) \
 	ac_cv_header_png_h=$(usex png) \
 	ac_cv_header_GL_glut_h=$(usex opengl) \
