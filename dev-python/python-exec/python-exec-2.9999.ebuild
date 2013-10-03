@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-2.9999.ebuild,v 1.1 2013/09/17 16:05:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-2.9999.ebuild,v 1.2 2013/10/03 21:07:20 mgorny Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ inherit git-2
 inherit python-utils-r1
 PYTHON_COMPAT=( "${_PYTHON_ALL_IMPLS[@]}" )
 
-inherit autotools-utils python-r1
+inherit autotools-utils python-r1 versionator
 
 DESCRIPTION="Python script wrapper"
 HOMEPAGE="https://bitbucket.org/mgorny/python-exec/"
@@ -45,4 +45,32 @@ src_configure() {
 	)
 
 	autotools-utils_src_configure
+}
+
+cleanup_vardb_deps() {
+	local v
+	for v in ${REPLACING_VERSIONS}; do
+		# if 2.0-r1+ was installed already, no need for cleaning up again.
+		if version_is_at_least 2.0-r1 ${v}; then
+			return 0
+		fi
+	done
+
+	local f files=()
+	for f in "${EROOT%/}"/var/db/pkg/*/*/*DEPEND; do
+		if grep -q 'dev-python/python-exec\[' "${f}"; then
+			files+=( "${f}" )
+		fi
+	done
+
+	if [[ ${files[@]} ]]; then
+		ebegin "Fixing unslotted python-exec dependencies in installed packages"
+		sed -i -e 's,dev-python/python-exec\[,dev-python/python-exec:0[,' \
+			"${files[@]}"
+		eend ${?}
+	fi
+}
+
+pkg_postinst() {
+	cleanup_vardb_deps
 }
