@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/elscreen
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.24 2009/07/02 17:07:35 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.25 2013/10/03 11:36:26 gienah Exp $
+
+*elscreen-1.4.6-r1 (03 Oct 2013)
+
+  03 Oct 2013; Mark Wright <gienah@gentoo.org> +elscreen-1.4.6-r1.ebuild,
+  +files/elscreen-1.4.6-emacs-24.patch,
+  +files/elscreen-1.4.6-void-variable-argi.patch:
+  Patch elscreen to build with emacs 24, fixes bug 425258
 
   02 Jul 2009; Jeroen Roovers <jer@gentoo.org> elscreen-1.4.6.ebuild:
   Stable for HPPA too.
@@ -91,4 +98,3 @@
   05 May 2003; Matthew Kennedy <mkennedy@gentoo.org> elscreen-1.2.4.ebuild,
   files/60elscreen-gentoo.el:
   Initial import.
-
