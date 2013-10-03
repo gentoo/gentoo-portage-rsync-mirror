@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.26 2013/09/26 15:07:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.27 2013/10/03 01:17:03 tetromino Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (02 Oct 2013)
+# We want to stabilize zukitwo before gnome-shell
+x11-themes/zukitwo gnome-shell
 
 # Mike Gilbert <floppym@gentoo.org> (21 Sep 2013)
 # sys-fs/zfs isn't going stable anytime soon.
