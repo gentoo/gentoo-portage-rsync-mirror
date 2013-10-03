@@ -1,6 +1,12 @@
 # ChangeLog for games-util/antimicro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/antimicro/ChangeLog,v 1.4 2013/08/28 11:14:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/antimicro/ChangeLog,v 1.5 2013/10/03 12:12:29 hasufell Exp $
+
+*antimicro-1.1 (03 Oct 2013)
+
+  03 Oct 2013; Julian Ospald <hasufell@gentoo.org> +antimicro-1.1.ebuild,
+  -antimicro-0.8.ebuild:
+  version bump
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> antimicro-1.0.ebuild:
   Stable for x86, wrt bug #480802

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.15.3.ebuild,v 1.3 2012/11/14 23:02:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ct-ng/ct-ng-1.19.0.ebuild,v 1.1 2013/10/03 12:17:15 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools bash-completion-r1 eutils
 
