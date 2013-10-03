@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-204.ebuild,v 1.16 2013/07/30 17:37:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-204.ebuild,v 1.17 2013/10/03 07:14:52 ssuominen Exp $
 
 EAPI=5
 
@@ -21,8 +21,7 @@ else
 	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
 	if [[ -n "${patchset}" ]]; then
 				SRC_URI="${SRC_URI}
-					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.xz
-					http://dev.gentoo.org/~williamh/dist/${P}-patches-${patchset}.tar.xz"
+					mirror://gentoo/${P}-patches-${patchset}.tar.xz"
 			fi
 	KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 fi
@@ -359,7 +358,6 @@ pkg_preinst() {
 				/usr/share/gtk-doc/html/${htmldir}
 		fi
 	done
-	preserve_old_lib /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 }
 
 pkg_postinst() {
@@ -447,8 +445,6 @@ pkg_postinst() {
 	ewarn "You need to restart udev as soon as possible to make the upgrade go"
 	ewarn "into effect."
 	ewarn "The method you use to do this depends on your init system."
-
-	preserve_old_lib_notify /{,usr/}$(get_libdir)/libudev$(get_libname 0)
 
 	elog
 	elog "For more information on udev on Gentoo, upgrading, writing udev rules, and"

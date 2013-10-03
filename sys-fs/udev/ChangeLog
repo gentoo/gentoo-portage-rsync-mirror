@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.966 2013/10/02 12:49:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.968 2013/10/03 07:14:52 ssuominen Exp $
+
+  03 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> udev-204.ebuild:
+  Change patchset SRC_URI to Gentoo mirrors by request of Poly-C. Remove
+  deprecated use of preserve_old_lib in favour of PM contained preserved-libs
+  support.
+
+  03 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> -udev-207.ebuild:
+  old
 
   02 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> udev-208.ebuild:
   Upstream retagged 208. Use -r1 in the tarball name to avoid Manifest
