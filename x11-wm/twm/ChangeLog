@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/twm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.76 2013/10/02 04:18:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.77 2013/10/03 20:14:20 ago Exp $
+
+  03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> twm-1.0.8.ebuild:
+  Stable for ppc, wrt bug #475480
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> twm-1.0.8.ebuild:
   Stable for HPPA (bug #475480).

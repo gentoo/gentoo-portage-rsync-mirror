@@ -165,7 +165,6 @@ media-libs/libsidplay abi_x86_32
 media-libs/libsndfile abi_x86_32
 media-libs/libsvgtiny abi_x86_32
 media-libs/libtheora abi_x86_32
-media-libs/libtxc_dxtn abi_x86_32
 media-libs/libv4l abi_x86_32
 media-libs/libvisual abi_x86_32
 media-libs/libvorbis abi_x86_32

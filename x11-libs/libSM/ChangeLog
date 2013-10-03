@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.105 2013/10/02 03:47:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.106 2013/10/03 20:10:32 ago Exp $
+
+  03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libSM-1.2.2.ebuild:
+  Stable for ppc, wrt bug #475480
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> libSM-1.2.2.ebuild:
   Stable for HPPA (bug #475480).

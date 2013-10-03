@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.149 2013/10/02 03:13:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.150 2013/10/03 20:06:29 ago Exp $
+
+  03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xdm-1.1.11-r3.ebuild:
+  Stable for ppc, wrt bug #475480
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> xdm-1.1.11-r3.ebuild:
   Stable for HPPA (bug #475480).

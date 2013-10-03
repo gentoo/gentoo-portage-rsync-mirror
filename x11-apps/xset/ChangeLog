@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xset
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.91 2013/10/02 03:31:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.92 2013/10/03 20:08:03 ago Exp $
+
+  03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xset-1.2.3.ebuild:
+  Stable for ppc, wrt bug #475480
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> xset-1.2.3.ebuild:
   Stable for HPPA (bug #475480).

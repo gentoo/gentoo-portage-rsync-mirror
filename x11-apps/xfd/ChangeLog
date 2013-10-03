@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfd/ChangeLog,v 1.44 2013/10/02 03:15:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfd/ChangeLog,v 1.45 2013/10/03 20:06:45 ago Exp $
+
+  03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xfd-1.1.2.ebuild:
+  Stable for ppc, wrt bug #475480
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> xfd-1.1.2.ebuild:
   Stable for HPPA (bug #475480).

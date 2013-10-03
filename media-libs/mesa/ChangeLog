@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.501 2013/10/02 02:59:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.502 2013/10/03 20:05:09 ago Exp $
+
+  03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> mesa-9.1.6.ebuild:
+  Stable for ppc, wrt bug #475480
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> mesa-9.1.6.ebuild:
   Stable for HPPA (bug #475480).
