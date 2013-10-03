@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.599 2013/09/19 06:48:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.600 2013/10/03 09:21:49 ulm Exp $
+
+*emacs-18.59-r9 (03 Oct 2013)
+
+  03 Oct 2013; Ulrich Müller <ulm@gentoo.org> +emacs-18.59-r9.ebuild:
+  Bump ebuild to EAPI 5. Depend on multilib-enabled ncurses on amd64.
 
   19 Sep 2013; Ulrich Müller <ulm@gentoo.org> -emacs-24.3-r1.ebuild:
   Remove old.
