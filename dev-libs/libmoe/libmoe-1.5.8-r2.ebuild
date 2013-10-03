@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.8-r2.ebuild,v 1.6 2012/07/01 18:24:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.8-r2.ebuild,v 1.7 2013/10/03 07:55:17 naota Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -29,6 +29,7 @@ src_unpack() {
 		-e "/^CF=/s:=:=${CFLAGS} :" \
 		-e "/^LF=/s:=:=${LDFLAGS} :" \
 		-e "s:=gcc:=$(tc-getCC):" \
+		-e "/^AR=/s:=ar:=$(tc-getAR):" \
 		Makefile || die
 }
 

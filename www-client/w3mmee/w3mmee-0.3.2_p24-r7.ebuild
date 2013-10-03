@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r7.ebuild,v 1.10 2013/03/01 13:56:03 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r7.ebuild,v 1.11 2013/10/03 07:47:44 naota Exp $
 
 inherit alternatives eutils toolchain-funcs multilib
 
@@ -38,6 +38,7 @@ src_unpack() {
 		"${FILESDIR}"/${PN}-gcc4{4,5}.patch \
 		"${FILESDIR}"/${P}-glibc214.patch \
 		"${FILESDIR}"/${P}-tinfo.patch
+	sed -ie "/^AR=/s:ar:$(tc-getAR):" XMakefile || die
 }
 
 src_compile() {

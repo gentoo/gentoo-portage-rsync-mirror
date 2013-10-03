@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmoe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.25 2012/07/02 10:23:55 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.27 2013/10/03 07:57:49 naota Exp $
+
+  03 Oct 2013; Naohiro Aota <naota@gentoo.org> -libmoe-1.5.8.ebuild:
+  Drop old version.
+
+  03 Oct 2013; Naohiro Aota <naota@gentoo.org> libmoe-1.5.8-r2.ebuild:
+  Patch Makefile to respect AR. #483746
 
   02 Jul 2012; Naohiro Aota <naota@gentoo.org> -libmoe-1.5.8-r1.ebuild:
   Drop old revision. #424121
@@ -99,4 +105,3 @@
 
   08 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> libmoe-1.5.4.ebuild:
   Initial import
-
