@@ -1,6 +1,18 @@
 # ChangeLog for dev-java/struts
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.49 2011/12/19 11:01:26 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.50 2013/10/02 23:02:51 tomwij Exp $
+
+*struts-2.3.15.2 (02 Oct 2013)
+
+  02 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/struts-2.3.15.2-build.xml-apps-package.patch,
+  +files/struts-2.3.15.2-build.xml-classpath.patch,
+  +files/struts-2.3.15.2-build.xml-manifest.patch,
+  +files/struts-2.3.15.2-build.xml-remove-apps-portlet.patch,
+  +files/struts-2.3.15.2-build.xml-remove-core-and-plugins.patch,
+  +struts-2.3.15.2.ebuild:
+  Version bump to 2.3.15.2; for bug #152352, bug #237146, bug #405931 and bug
+  #486752.
 
   19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> struts-1.2.9-r2.ebuild,
   struts-1.2.9-r3.ebuild:
@@ -209,4 +221,3 @@
   struts-1.1.ebuild:
   Initial Import. Thanks to Pavel <hlobil@sympatico.ca> for input. Closes
   #43253, #14382, #21930
-
