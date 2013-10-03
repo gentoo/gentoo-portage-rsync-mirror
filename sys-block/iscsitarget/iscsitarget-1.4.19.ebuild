@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-1.4.19.ebuild,v 1.6 2010/08/11 17:57:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/iscsitarget-1.4.19.ebuild,v 1.7 2013/10/03 17:50:56 ryao Exp $
 
 inherit linux-mod eutils flag-o-matic
 
@@ -36,6 +36,7 @@ src_compile() {
 	emake KSRC="${KERNEL_DIR}" usr || die "failed to build userspace"
 
 	unset ARCH
+	filter-ldflags -Wl,*
 	emake KSRC="${KERNEL_DIR}" kernel || die "failed to build module"
 }
 
