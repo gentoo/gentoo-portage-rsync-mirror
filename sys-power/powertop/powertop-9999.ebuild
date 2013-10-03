@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.24 2013/09/03 18:22:31 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-9999.ebuild,v 1.25 2013/10/03 04:44:26 zerochaos Exp $
 
 EAPI="5"
 
@@ -88,6 +88,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/powertop-2.4-tinfo.patch
 	if [[ ${PV} == "9999" ]] ; then
 		eautoreconf
 	fi
