@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.84 2013/06/30 13:48:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.85 2013/10/03 08:25:46 naota Exp $
+
+  03 Oct 2013; Naohiro Aota <naota@gentoo.org> newt-0.52.14-r2.ebuild,
+  newt-0.52.15.ebuild:
+  Respect AR. #483748
 
   30 Jun 2013; Justin Lecher <jlec@gentoo.org> newt-0.52.15.ebuild:
   Fix python deps
