@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/valyriatear
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/ChangeLog,v 1.7 2013/09/09 00:30:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/ChangeLog,v 1.8 2013/10/03 12:39:57 hasufell Exp $
+
+*valyriatear-0.6.0 (03 Oct 2013)
+
+  03 Oct 2013; Julian Ospald <hasufell@gentoo.org> +valyriatear-0.6.0.ebuild,
+  -valyriatear-0.6.0_rc1.ebuild:
+  version bump
 
 *valyriatear-0.6.0_rc1 (09 Sep 2013)
 

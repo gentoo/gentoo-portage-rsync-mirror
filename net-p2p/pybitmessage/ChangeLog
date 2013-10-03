@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/pybitmessage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/ChangeLog,v 1.5 2013/09/25 13:50:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pybitmessage/ChangeLog,v 1.6 2013/10/03 12:55:40 hasufell Exp $
+
+*pybitmessage-0.4.1 (03 Oct 2013)
+
+  03 Oct 2013; Julian Ospald <hasufell@gentoo.org> +pybitmessage-0.4.1.ebuild:
+  version bump
 
   25 Sep 2013; Julian Ospald <hasufell@gentoo.org> pybitmessage-0.4.0.ebuild:
   no need for nonfatal in non-live-ebuild
