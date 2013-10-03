@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/libsecret
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.19 2013/09/01 21:30:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.20 2013/10/03 02:25:29 tetromino Exp $
+
+*libsecret-0.15-r1 (03 Oct 2013)
+
+  03 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libsecret-0.12.ebuild, -libsecret-0.14.ebuild, libsecret-0.15.ebuild,
+  +libsecret-0.15-r1.ebuild:
+  Do not pull in gnome-keyring-3 in libsecret-0.15 to allow partial
+  stabilization of some gnome-3.6 era libraries. And add libsecret-0.15-r1
+  which is identical, but properly pulls in gnome-keyring-3. Drop old.
 
 *libsecret-0.16 (01 Sep 2013)
 
