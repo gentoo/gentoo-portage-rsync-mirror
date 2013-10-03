@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/yaml-mode
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yaml-mode/ChangeLog,v 1.2 2012/04/23 20:49:28 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yaml-mode/ChangeLog,v 1.3 2013/10/03 14:02:08 ulm Exp $
+
+*yaml-mode-0.0.9 (03 Oct 2013)
+
+  03 Oct 2013; Ulrich Müller <ulm@gentoo.org> yaml-mode-0.0.8.ebuild,
+  +yaml-mode-0.0.9.ebuild:
+  Version bump, bug 486806. Thanks to Pariksheet Nanda
+  <pariksheet.nanda@gmail.com>.
 
   23 Apr 2012; Ulrich Müller <ulm@gentoo.org> yaml-mode-0.0.8.ebuild:
   Fix typo.
