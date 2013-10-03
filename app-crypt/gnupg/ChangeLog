@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.486 2013/08/19 16:59:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.487 2013/10/03 19:20:06 alonbl Exp $
+
+*gnupg-2.0.21-r1 (03 Oct 2013)
+
+  03 Oct 2013; Alon Bar-Lev <alonbl@gentoo.org> +gnupg-2.0.21-r1.ebuild:
+  Cleanup ebuild, add epatch_user, resolves bug#486882
 
   19 Aug 2013; Tim Harder <radhermit@gentoo.org> -gnupg-1.4.13.ebuild,
   -gnupg-1.4.13-r1.ebuild, -gnupg-2.0.19.ebuild, -gnupg-2.0.19-r1.ebuild,
