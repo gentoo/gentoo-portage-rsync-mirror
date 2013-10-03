@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.7.ebuild,v 1.1 2013/04/24 18:50:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/atkmm-2.22.7.ebuild,v 1.2 2013/10/03 03:43:15 tetromino Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~
 IUSE="doc"
 
 RDEPEND="
-	>=dev-cpp/glibmm-2.26.0:2[doc?]
+	>=dev-cpp/glibmm-2.36.0:2[doc?]
 	>=dev-libs/atk-1.12
 	dev-libs/libsigc++:2
 	!<dev-cpp/gtkmm-2.22.0
