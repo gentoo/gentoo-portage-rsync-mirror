@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20101103.ebuild,v 1.2 2012/04/07 14:58:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20101103.ebuild,v 1.3 2013/10/03 06:24:56 gienah Exp $
 
 EAPI=3
 
@@ -35,6 +35,8 @@ src_prepare() {
 	sed -i '/^section :=/d' doc/Makefile || die
 	sed -i "/(defvar \*swank-wire-protocol-version\*/s:nil:\"${SLIME_CHANGELOG_DATE}\":" swank.lisp || die
 	sed -i "s:@SLIME-CHANGELOG-DATE@:${SLIME_CHANGELOG_DATE}:" slime.el || die
+	sed -i "s/@itemx INIT-FUNCTION/@item INIT-FUNCTION/" doc/slime.texi \
+		|| die "sed doc/slime.texi failed"
 
 	# Remove xref.lisp (which is non-free) unless USE flag is set
 	use xref || rm -f xref.lisp
