@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc1.ebuild,v 1.2 2013/10/01 18:27:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc2.ebuild,v 1.1 2013/10/03 17:06:16 grobian Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="${COMM_URI}/${P//rc/RC}.tar.bz2
 	mirror://gentoo/system_filter.exim.gz
 	dsn? ( mirror://sourceforge/eximdsn/eximdsn-patch-1.3/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch )
-	doc? ( ${COMM_URI}/${PN}-pdf-${PV//rc/RC}.tar.bz2 )"
+	doc? ( ${COMM_URI}/${PN}-html-${PV//rc/RC}.tar.bz2 )"
 HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
@@ -111,9 +111,6 @@ src_prepare() {
 		MAILUSER=$(id -un)
 		MAILGROUP=$(id -gn)
 	fi
-
-	# input isn't sorted, so don't verify it is (at least with GNU sort)
-	sed -i -e 's/sort -c/sort/' scripts/source_checks || die
 }
 
 src_configure() {
@@ -332,7 +329,7 @@ src_install () {
 	dodoc "${S}"/doc/*
 	doman "${S}"/doc/exim.8
 	use dsn && dodoc "${S}"/README.DSN
-	use doc && dodoc "${WORKDIR}"/${PN}-pdf-${PV//rc/RC}/doc/*.pdf
+	use doc && dohtml -r "${WORKDIR}"/${PN}-html-${PV//rc/RC}/doc/html/spec_html/*
 
 	# conf files
 	insinto /etc/exim
@@ -381,8 +378,9 @@ pkg_postinst() {
 		einfo "http://article.gmane.org/gmane.mail.exim.devel/3579"
 	fi
 	if use dmarc ; then
-		einfo "DMARC support is experimental. About global settings to configure DMARC"
-		einfo "and usage see documentation at experimental-spec.txt"
+		einfo "DMARC support is experimental.  See global settings to"
+		einfo "configure DMARC, for usage see the documentation at "
+		einfo "experimental-spec.txt."
 	fi
 	einfo "Exim maintains some db files under its spool directory that need"
 	einfo "cleaning from time to time.  (${EROOT}var/spool/exim/db)"

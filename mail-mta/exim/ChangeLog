@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.260 2013/10/01 18:27:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.261 2013/10/03 17:06:16 grobian Exp $
+
+*exim-4.82_rc2 (03 Oct 2013)
+
+  03 Oct 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.82_rc2.ebuild,
+  -exim-4.82_rc1.ebuild:
+  Bump to 4.82_RC2
 
   01 Oct 2013; Fabian Groffen <grobian@gentoo.org> exim-4.82_rc1.ebuild:
   Refine gnutls dependency to gnutls[pkcs11] thanks bes
