@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8280 2013/10/03 04:41:06 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8281 2013/10/04 13:35:06 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Oct 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  remove mask on net-p2p/pybitmessage, people can do their own research
 
   3 Oct 2013; Chris Reffett <creffett@gentoo.org> package.mask:
   Remove dev-games/neo* mask, packages removed

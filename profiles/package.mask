@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15139 2013/10/03 04:41:07 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15140 2013/10/04 13:35:06 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -355,12 +355,6 @@ sys-fs/cdfs
 # Masked for testing
 ~dev-util/boost-build-1.54.0
 ~dev-libs/boost-1.54.0
-
-# Julian Ospald <hasufell@gentoo.org> (25 Aug 2013)
-# experimental alpha software, may be insecure
-# https://github.com/Bitmessage/PyBitmessage/issues/376
-# https://bitmessage.org/forum/index.php/topic,1666.0.html
-net-p2p/pybitmessage
 
 # Mike Gilbert <floppym@gentoo.org> (23 Aug 2013)
 # Dev channel releases are only for people who are developers or want more
