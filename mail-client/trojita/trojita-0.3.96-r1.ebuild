@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.3.96.ebuild,v 1.1 2013/09/30 17:04:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-0.3.96-r1.ebuild,v 1.1 2013/10/04 11:38:32 ago Exp $
 
 EAPI=5
 
-QT_REQUIRED="4.6.0"
+QT_REQUIRED="4.8.0"
 EGIT_REPO_URI="git://anongit.kde.org/${PN}.git"
 [[ ${PV} == "9999" ]] && GIT_ECLASS="git-2"
 
-inherit qt4-r2 virtualx cmake-utils ${GIT_ECLASS}
+inherit cmake-utils virtualx ${GIT_ECLASS}
 
 DESCRIPTION="A Qt IMAP e-mail client"
 HOMEPAGE="http://trojita.flaska.net/"
@@ -44,9 +44,10 @@ DEPEND="${RDEPEND}
 DOCS="README LICENSE"
 
 src_configure() {
-	local mycmakeargs=""
-	use test || mycmakeargs="$mycmakeargs -DWITHOUT_TESTS=1"
-	use zlib || mycmakeargs="$mycmakeargs -DWITHOUT_ZLIB=1"
+	local mycmakeargs=(
+		$(cmake-utils_use_with test TESTS)
+		$(cmake-utils_use_with zlib ZLIB)
+	)
 	if [[ ${MY_LANGS} ]]; then
 		rm po/trojita_common_x-test.po
 		for x in po/*.po; do

@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/trojita
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.27 2013/09/30 17:04:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.28 2013/10/04 11:38:32 ago Exp $
+
+*trojita-0.3.96-r1 (04 Oct 2013)
+
+  04 Oct 2013; Agostino Sarubbo <ago@gentoo.org> +trojita-0.3.96-r1.ebuild,
+  -trojita-0.3.96.ebuild, trojita-9999.ebuild:
+  Properly using an array instead of bash string and setting up correct flag
+  names, wrt bug #486632 by Matthew Thode and Jan Kundrat
 
 *trojita-0.3.96 (30 Sep 2013)
 

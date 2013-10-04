@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xsetroot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/ChangeLog,v 1.53 2013/10/03 20:08:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/ChangeLog,v 1.54 2013/10/04 11:59:48 ago Exp $
+
+  04 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xsetroot-1.1.1.ebuild:
+  Stable for ppc64, wrt bug #475480
 
   03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xsetroot-1.1.1.ebuild:
   Stable for ppc, wrt bug #475480
