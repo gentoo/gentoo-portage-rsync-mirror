@@ -1,20 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.5_pre1.ebuild,v 1.2 2013/09/28 23:11:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.5_pre2.ebuild,v 1.1 2013/10/04 10:40:51 tommy Exp $
 
 EAPI=5
 
-MY_P=${P/_pre1}
+MY_P=${P/_pre2}
 
 inherit autotools enlightenment
 
 DESCRIPTION="Enlightenment DR17 window manager"
 #SRC_URI="http://download.enlightenment.org/releases/${MY_P}.tar.bz2"
-SRC_URI="http://download.enlightenment.org/pre-releases/${MY_P}/${MY_P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/pre-releases/${MY_P}/${MY_P}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="BSD-2"
 KEYWORDS="~amd64 ~arm ~x86"
-SLOT="0.17/${PV/_pre1}"
+SLOT="0.17/${PV/_pre2}"
 
 # The @ is just an anchor to expand from
 __EVRY_MODS=""
