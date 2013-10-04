@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1650.4_alpha1.ebuild,v 1.1 2013/09/26 20:43:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1650.11_beta1.ebuild,v 1.1 2013/10/04 03:14:54 floppym Exp $
 
 EAPI="4"
 
@@ -81,6 +81,13 @@ RDEPEND="
 	x11-misc/xdg-utils
 "
 
+# Add blockers for the other slots.
+for x in 0 beta stable; do
+	if [[ ${SLOT} != ${x} ]]; then
+		RDEPEND+=" !${CATEGORY}/${PN}:${x}"
+	fi
+done
+
 QA_PREBUILT="*"
 S=${WORKDIR}
 
@@ -93,7 +100,7 @@ pkg_setup() {
 }
 
 src_install() {
-	CHROME_HOME="opt/google/chrome-${SLOT}"
+	CHROME_HOME="opt/google/chrome"
 
 	mv opt usr "${D}" || die
 	cd "${D}" || die
@@ -111,13 +118,13 @@ src_install() {
 	if use plugins ; then
 		local plugins="--extra-plugin-dir=/usr/$(get_libdir)/nsbrowser/plugins"
 		sed -e "/^exec/ i set -- \"${plugins}\" \"\$@\"" \
-			-i "${CHROME_HOME}/${MY_PN}" || die
+			-i "${CHROME_HOME}/${PN}" || die
 	fi
 
-	domenu "${CHROME_HOME}/${MY_PN}.desktop" || die
+	domenu "${CHROME_HOME}/${PN}.desktop" || die
 	local size
 	for size in 16 22 24 32 48 64 128 256 ; do
-		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" ${MY_PN}.png
+		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" ${PN}.png
 	done
 }
 

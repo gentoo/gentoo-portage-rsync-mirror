@@ -1,0 +1,14 @@
+# ChangeLog for dev-python/xmltodict
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmltodict/ChangeLog,v 1.2 2013/10/04 03:19:27 radhermit Exp $
+
+  04 Oct 2013; Tim Harder <radhermit@gentoo.org> xmltodict-0.7.0.ebuild,
+  metadata.xml:
+  Add pypi site to HOMEPAGE and upstream metadata.
+
+*xmltodict-0.7.0 (04 Oct 2013)
+
+  04 Oct 2013; Tim Harder <radhermit@gentoo.org> +xmltodict-0.7.0.ebuild,
+  +metadata.xml:
+  Initial import.
+
