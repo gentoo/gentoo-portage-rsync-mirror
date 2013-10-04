@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyudev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.23 2013/08/13 17:54:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.24 2013/10/04 16:17:10 vapier Exp $
+
+  04 Oct 2013; Mike Frysinger <vapier@gentoo.org> pyudev-0.16.1-r1.ebuild,
+  pyudev-0.16.1.ebuild:
+  Add arm love.
 
   13 Aug 2013; Patrick McLean <chutzpah@gentoo.org> pyudev-0.16.1-r1.ebuild:
   Add python3_3 to PYTHON_TARGETS, disabling the pyside dep for 3.3.

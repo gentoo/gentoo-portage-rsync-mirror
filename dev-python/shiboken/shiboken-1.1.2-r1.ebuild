@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2-r1.ebuild,v 1.5 2013/03/21 10:48:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/shiboken-1.1.2-r1.ebuild,v 1.6 2013/10/04 16:16:48 vapier Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.pyside.org/files/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="

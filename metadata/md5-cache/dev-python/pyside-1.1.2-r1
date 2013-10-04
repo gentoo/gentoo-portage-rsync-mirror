@@ -4,11 +4,11 @@ DESCRIPTION=Python bindings for the Qt framework
 EAPI=5
 HOMEPAGE=http://www.pyside.org/
 IUSE=X declarative help kde multimedia opengl phonon script scripttools sql svg test webkit xmlpatterns python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 test
-KEYWORDS=amd64 ~arm x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 arm x86 ~amd64-linux ~x86-linux
 LICENSE=LGPL-2.1
 RDEPEND=>=dev-python/shiboken-1.1.2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-)] >=dev-qt/qtcore-4.7.0:4 X? ( >=dev-qt/qtgui-4.7.0:4[accessibility] >=dev-qt/qttest-4.7.0:4 ) declarative? ( >=dev-qt/qtdeclarative-4.7.0:4 ) help? ( >=dev-qt/qthelp-4.7.0:4 ) multimedia? ( >=dev-qt/qtmultimedia-4.7.0:4 ) opengl? ( >=dev-qt/qtopengl-4.7.0:4 ) phonon? ( kde? ( media-libs/phonon ) !kde? ( || ( >=dev-qt/qtphonon-4.7.0:4 media-libs/phonon ) ) ) script? ( >=dev-qt/qtscript-4.7.0:4 ) sql? ( >=dev-qt/qtsql-4.7.0:4 ) svg? ( >=dev-qt/qtsvg-4.7.0:4[accessibility] ) webkit? ( >=dev-qt/qtwebkit-4.7.0:4 ) xmlpatterns? ( >=dev-qt/qtxmlpatterns-4.7.0:4 )
 REQUIRED_USE=declarative? ( X ) help? ( X ) multimedia? ( X ) opengl? ( X ) phonon? ( X ) scripttools? ( X script ) sql? ( X ) svg? ( X ) test? ( X ) webkit? ( X )
 SLOT=0
 SRC_URI=http://www.pyside.org/files/pyside-qt4.8+1.1.2.tar.bz2
 _eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-r1	3baffd4f94003161708508813a475647	python-utils-r1	3b392f7373bcc74b7c97ae0acd9ec0e6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=42f219c88e26eb534849d59b0f6923b8
+_md5_=55430dbde7aea71b260b7e7e452f2572

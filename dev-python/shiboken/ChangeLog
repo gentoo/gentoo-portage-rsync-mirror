@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.45 2013/08/15 09:45:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.46 2013/10/04 16:16:49 vapier Exp $
+
+  04 Oct 2013; Mike Frysinger <vapier@gentoo.org> shiboken-1.1.2-r1.ebuild:
+  Mark arm stable #460234.
 
 *shiboken-1.2.0 (15 Aug 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/suds-0.4-r1.ebuild,v 1.1 2013/09/12 05:14:18 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/suds-0.4-r1.ebuild,v 1.2 2013/10/04 16:20:09 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -20,19 +20,13 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/epydoc[${PYTHON_USEDEP}] )"
 RDEPEND=""
 
-python_compile() {
-	distutils-r1_python_compile
-
+python_compile_all() {
 	if use doc; then
-		einfo "Generation of documentation"
-		epydoc -n "Suds - ${DESCRIPTION}" -o doc suds || die "Generation of documentation failed"
+		epydoc -n "Suds - ${DESCRIPTION}" -o doc suds || die
 	fi
 }
 
-python_install() {
+python_install_all() {
+	use doc && local HTML_DOCS=( doc/. )
 	distutils-r1_python_install_all
-
-	if use doc; then
-		dohtml -r doc/* || die "Installation of documentation failed"
-	fi
 }
