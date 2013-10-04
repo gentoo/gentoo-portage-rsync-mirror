@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-r128
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.39 2013/03/07 12:31:22 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.40 2013/10/04 09:10:22 chithanh Exp $
+
+*xf86-video-r128-6.9.2 (04 Oct 2013)
+
+  04 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-r128-6.9.2.ebuild, -xf86-video-r128-6.8.1.ebuild,
+  -xf86-video-r128-6.8.2-r1.ebuild, -xf86-video-r128-6.8.3.ebuild,
+  -xf86-video-r128-6.8.4.ebuild:
+  Version bump. Remove old.
 
   07 Mar 2013; Benda Xu <heroxbd@gentoo.org> xf86-video-r128-6.9.1.ebuild:
   keyword ~amd64-linux and ~x86-linux
