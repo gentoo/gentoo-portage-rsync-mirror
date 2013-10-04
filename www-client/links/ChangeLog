@@ -1,6 +1,12 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.191 2013/09/23 09:45:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.192 2013/10/04 05:40:02 ssuominen Exp $
+
+*links-2.8-r1 (04 Oct 2013)
+
+  04 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> +links-2.8-r1.ebuild:
+  Use updated security patch verify-ssl-certs-510417.diff from Debian patchset
+  2.8-1
 
 *links-2.8 (23 Sep 2013)
 

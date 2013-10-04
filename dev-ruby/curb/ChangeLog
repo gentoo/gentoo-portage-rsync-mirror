@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/curb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/curb/ChangeLog,v 1.5 2013/09/04 13:37:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/curb/ChangeLog,v 1.6 2013/10/04 05:47:21 graaff Exp $
+
+*curb-0.8.5 (04 Oct 2013)
+
+  04 Oct 2013; Hans de Graaff <graaff@gentoo.org> +curb-0.8.5.ebuild:
+  Version bump.
 
   04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -curb-0.8.3.ebuild:
   Cleanup old.
