@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15140 2013/10/04 13:35:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15141 2013/10/04 19:30:37 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -54,6 +54,12 @@ dev-ruby/main
 dev-ruby/rcov
 dev-ruby/rqr
 dev-ruby/ruby-svg
+
+# Markos Chandras <hwoarang@gentoo.org> (23 Sep 2013)
+# dead upstream. The microcode is now in the latest
+# sys-kernel/linux-firmware. Bug #455208
+# Removal in 30 days.
+sys-firmware/amd-ucode
 
 # Agostino Sarubbo <ago@gentoo.org> (23 Sep 2013)
 # Masked because of vulnerable versions

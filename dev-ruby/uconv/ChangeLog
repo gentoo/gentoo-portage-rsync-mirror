@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/uconv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.24 2013/09/05 12:35:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.25 2013/10/04 19:09:01 mrueg Exp $
+
+*uconv-0.6.1-r1 (04 Oct 2013)
+
+  04 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +uconv-0.6.1-r1.ebuild:
+  Add ruby20 target.
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> uconv-0.6.1.ebuild:
   Stable for ppc64, wrt bug #480982

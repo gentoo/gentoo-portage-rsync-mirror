@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.134 2013/10/03 08:15:06 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.135 2013/10/04 19:14:10 mattm Exp $
+
+*zabbix-2.0.9_rc1-r3 (04 Oct 2013)
+
+  04 Oct 2013; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.9_rc1-r3.ebuild:
+  Fix for bug 486950
 
 *zabbix-2.0.9_rc1-r2 (03 Oct 2013)
 
