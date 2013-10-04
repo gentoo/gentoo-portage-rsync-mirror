@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.153 2013/04/23 16:55:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.154 2013/10/04 22:25:31 tetromino Exp $
+
+*vala-0.22.0 (04 Oct 2013)
+
+  04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> +vala-0.22.0.ebuild:
+  Version bump for gnome-3.10, but should be compatible with almost everything
+  in earlier versions too.
 
   23 Apr 2013; Pacho Ramos <pacho@gentoo.org> -vala-0.20.0.ebuild:
   Drop old

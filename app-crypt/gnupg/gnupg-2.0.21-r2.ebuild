@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.21-r1.ebuild,v 1.1 2013/10/03 19:20:06 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.21-r2.ebuild,v 1.1 2013/10/04 22:24:40 alonbl Exp $
 
 EAPI="5"
 
@@ -58,6 +58,7 @@ REQUIRED_USE="smartcard? ( !static )"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.17-gpgsm-gencert.patch"
+	epatch "${FILESDIR}/${P}-CVE-2013-4351.patch"
 	epatch_user
 }
 

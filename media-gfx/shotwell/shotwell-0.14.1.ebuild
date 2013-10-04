@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.14.1.ebuild,v 1.5 2013/09/01 11:34:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.14.1.ebuild,v 1.6 2013/10/04 22:12:48 tetromino Exp $
 
 EAPI=5
 
 GCONF_DEBUG="no"
 VALA_MIN_API_VERSION="0.18"
+VALA_MAX_API_VERSION="0.20"
 
 inherit eutils gnome2 multilib toolchain-funcs vala versionator
 

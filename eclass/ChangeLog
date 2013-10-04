@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1005 2013/10/04 15:27:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1006 2013/10/04 22:11:54 tetromino Exp $
+
+  04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> vala.eclass:
+  Prepare for vala-0.22
 
   04 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   enlightenment.eclass:

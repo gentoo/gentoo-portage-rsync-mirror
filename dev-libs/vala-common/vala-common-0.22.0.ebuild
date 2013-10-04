@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/vala-common-0.20.0.ebuild,v 1.1 2013/03/28 16:53:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vala-common/vala-common-0.22.0.ebuild,v 1.1 2013/10/04 22:25:09 tetromino Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="vala"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/Vala"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux ~x64-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux ~x64-macos ~x64-solaris"
 IUSE=""
 
 # Previously ${PN} was part of dev-lang/vala
@@ -39,7 +39,7 @@ pkg_postinst() {
 	# dev-lang/vala's pkg_postrm from overwriting vala-common's files
 	if has_version '<dev-lang/vala-0.10.4-r2:0.10' && [[ -f "${EROOT}usr/share/aclocal/vala-0-10.m4" ]]; then
 		ebegin "Removing old vala-0.10 macros"
-		rm "${EROOT}usr/share/aclocal/vala-0-18.m4" &> /dev/null
+		rm "${EROOT}usr/share/aclocal/vala-0-10.m4" &> /dev/null
 		eend $?
 	fi
 	if has_version '<dev-lang/vala-0.12.1-r1:0.12' && [[ -f "${EROOT}usr/share/aclocal/vala-0-12.m4" ]]; then

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare pretend setup unpack
-DEPEND=dev-db/sqlite:3= >=dev-libs/glib-2.32.0:2 >=media-libs/lcms-2.2:2= >=sys-auth/polkit-0.103 gusb? ( >=dev-libs/libgusb-0.1.1 ) introspection? ( >=dev-libs/gobject-introspection-0.9.8 ) scanner? ( media-gfx/sane-backends ) systemd? ( >=sys-apps/systemd-44 ) udev? ( virtual/udev:=[gudev] ) dev-libs/libxslt >=dev-util/gtk-doc-am-1.9 >=dev-util/intltool-0.35 >=sys-devel/gettext-0.17 virtual/pkgconfig extra-print-profiles? ( media-gfx/argyllcms ) vala? ( || ( dev-lang/vala:0.20[vapigen] dev-lang/vala:0.18[vapigen] ) ) virtual/pkgconfig virtual/pkgconfig
+DEPEND=dev-db/sqlite:3= >=dev-libs/glib-2.32.0:2 >=media-libs/lcms-2.2:2= >=sys-auth/polkit-0.103 gusb? ( >=dev-libs/libgusb-0.1.1 ) introspection? ( >=dev-libs/gobject-introspection-0.9.8 ) scanner? ( media-gfx/sane-backends ) systemd? ( >=sys-apps/systemd-44 ) udev? ( virtual/udev:=[gudev] ) dev-libs/libxslt >=dev-util/gtk-doc-am-1.9 >=dev-util/intltool-0.35 >=sys-devel/gettext-0.17 virtual/pkgconfig extra-print-profiles? ( media-gfx/argyllcms ) vala? ( || ( dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] dev-lang/vala:0.18[vapigen] ) ) virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=System service to accurately color manage input and output devices
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/software/colord/
@@ -11,5 +11,5 @@ REQUIRED_USE=gusb? ( udev ) scanner? ( udev ) vala? ( introspection )
 RESTRICT=test
 SLOT=0/1
 SRC_URI=http://www.freedesktop.org/software/colord/releases/colord-0.1.31.tar.xz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	bash-completion-r1	d339dd40b2014cf1edba8592580eef42	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	vala	aa890daf29e67d32e9bff8e12ef653ca
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	bash-completion-r1	d339dd40b2014cf1edba8592580eef42	check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	vala	b365480bc54c4e356dc1e953da9fe356
 _md5_=03633263f5bda6204abc09532d47b483
