@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15141 2013/10/04 19:30:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15142 2013/10/04 19:31:59 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -41,14 +41,14 @@
 
 # Manuel Rüger <mrueg@gentoo.org> (27 Sep 2013)
 # Mask further ruby-1.8 only packages
-# Masked for removal in 30 days 
+# Masked for removal in 30 days
 app-office/tpp
 dev-ruby/ncurses-ruby
 net-news/raggle
 
 # Manuel Rüger <mrueg@gentoo.org> (27 Sep 2013)
 # Mask further ruby-1.8 only packages
-# Masked for removal in 30 days 
+# Masked for removal in 30 days
 dev-ruby/heckle
 dev-ruby/main
 dev-ruby/rcov
@@ -135,28 +135,28 @@ dev-db/edb
 # removal on ~15 Oct 2013
 # dead on upstream since ~2006
 # fails on compile >=vdr-2.0
-# Bug #414275 #414177   
+# Bug #414275 #414177
 media-plugins/vdr-sysinfo
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
 # removal on ~15 Oct 2013
 # dead on upstream since ~2006
 # fails on compile >=vdr-2.0
-# Bug #414269 #414177   
+# Bug #414269 #414177
 media-plugins/vdr-taste
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
 # removal on ~15 Oct 2013
 # dead on upstream since ~2008
 # fails on compile >=vdr-2.0
-# Bug #414261 #414177   
+# Bug #414261 #414177
 media-plugins/vdr-timeline
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
 # removal on ~15 Oct 2013
 # dead on upstream since ~2006
 # fails on compile >=vdr-2.0
-# Bug #414257 #414177   
+# Bug #414257 #414177
 media-plugins/vdr-tvonscreen
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
@@ -280,7 +280,7 @@ sys-fs/cdfs
 
 # Tom Wijsman <TomWij@gentoo.org> (28 Aug 2013)
 # =sys-kernel/gentoo-sources-3.8.13 is masked due to multiple security bugs:
-# 
+#
 # 1. Security Bug #475618: CVE-2013-1059:
 # Linux Kernel: Ceph: NULL Pointer Dereference Denial of Service Vulnerability
 #
@@ -297,7 +297,7 @@ sys-fs/cdfs
 # the earlier long term stable branches (3.0.X or 3.4.Y), this might be the case
 # if you have older hardware or an unfortunate stability bug on 3.10.7.
 #
-# You can accept keywords by adding sys-kernel/gentoo-sources to the file 
+# You can accept keywords by adding sys-kernel/gentoo-sources to the file
 # /etc/portage/package.accept_keywords after which you can run
 # `emerge sys-kernel/gentoo-sources:X.Y.Z` to select a specific LTS kernel.
 # When you choose to turn back to stable later, don't forget to remove that.
@@ -435,7 +435,7 @@ sci-geosciences/googleearth
 >=media-video/ffmpeg-2.0
 
 # Chris Reffett <creffett@gentoo.org> (20 Jul 2013)
-# Uses vulnerable versions of bzip2, but these versions are 
+# Uses vulnerable versions of bzip2, but these versions are
 # necessary to reconstruct older archives. Use at your own risk.
 =app-portage/deltup-0.4.5
 
