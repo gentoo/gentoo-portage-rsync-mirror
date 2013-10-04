@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.10.2-r300.ebuild,v 1.12 2013/10/01 23:39:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.10.2-r300.ebuild,v 1.13 2013/10/04 00:19:14 tetromino Exp $
 
 EAPI="5"
 
@@ -139,12 +139,20 @@ src_prepare() {
 	# mimehandling test sometimes fails under Xvfb (works fine manually)
 	# datasource test needs a network connection and intermittently fails with icedtea-web
 	# webplugindatabase intermittently fails with icedtea-web
+	# testWebContextGetPlugins calls Programs/WebKitPluginProcess which fails unless webkit-gtk-${PV} is already installed
+	# TestWebKitAPI/TestWebKit2 seems to fail if webkit-gtk-${PV} is not already installed and/or if opengl cannot be initialized
 	sed -e '/Programs\/unittests\/testwebinspector/ d' \
 		-e '/Programs\/unittests\/testkeyevents/ d' \
 		-e '/Programs\/unittests\/testmimehandling/ d' \
 		-e '/Programs\/unittests\/testwebdatasource/ d' \
 		-e '/Programs\/unittests\/testwebplugindatabase/ d' \
 		-i Source/WebKit/gtk/GNUmakefile.am || die
+
+	sed -e '/PluginsTest::add.*testWebContextGetPlugins/ d' \
+		-i Source/WebKit2/UIProcess/API/gtk/tests/TestWebKitWebContext.cpp || die
+
+	sed -e 's#\(SkippedTest("TestWebKitAPI/TestWebKit2"\).*#\1, None, "skipped by ebuild"),#' \
+		-i Tools/Scripts/run-gtk-tests || die
 
 	if ! use gstreamer; then
 		# webkit2's TestWebKitWebView requires <video> support
