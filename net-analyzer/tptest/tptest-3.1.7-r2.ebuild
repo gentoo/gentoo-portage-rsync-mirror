@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/tptest-3.1.7-r1.ebuild,v 1.1 2010/09/20 18:32:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/tptest-3.1.7-r2.ebuild,v 1.1 2013/10/04 20:51:42 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 MY_PV="${PV/./_}"
 
@@ -17,11 +17,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
+RDEPEND=""
+DEPEND=""
+
 src_prepare() {
 	sed -i apps/unix/{client,server}/Makefile \
 		-e "s:^CFLAGS[[:space:]]*=:CFLAGS+=:" \
 		|| die "sed Makefiles"
-
+	epatch "${FILESDIR}/${PN}-3.1.7-getstatsfromlinevuln.patch"
 	cp -f os-dep/unix/* .
 	cp -f engine/* .
 }
