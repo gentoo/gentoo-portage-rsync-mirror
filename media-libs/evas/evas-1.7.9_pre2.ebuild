@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.9_pre1.ebuild,v 1.2 2013/09/28 09:26:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.9_pre2.ebuild,v 1.1 2013/10/04 10:15:06 tommy Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_BRANCH=${PN}-1.7
 else
 	#SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
-	SRC_URI="http://download.enlightenment.org/pre-releases/efl-${PV/_pre1}/${P/_pre1}.tar.bz2 -> ${P}.tar.bz2"
+	SRC_URI="http://download.enlightenment.org/pre-releases/efl-${PV/_pre2}/${P/_pre2}.tar.bz2 -> ${P}.tar.bz2"
 	EKEY_STATE="snap"
 fi
 
@@ -47,7 +47,7 @@ RDEPEND=">=dev-libs/eina-1.7.8
 	eet? ( >=dev-libs/eet-1.7.8 )"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${P/_pre1}
+S=${WORKDIR}/${P/_pre2}
 
 src_prepare() {
 	sed -i "s:1.7.9:1.7.8:g" configure.ac
