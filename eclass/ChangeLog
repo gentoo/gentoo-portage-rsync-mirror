@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1004 2013/10/01 18:06:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1005 2013/10/04 15:27:28 chithanh Exp $
+
+  04 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  enlightenment.eclass:
+  No stable keywords for mips
 
   01 Oct 2013; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Clean up the splitting code wrt suggestions from Ulrich Mueller.

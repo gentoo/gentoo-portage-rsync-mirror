@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1-r2.ebuild,v 1.11 2013/10/04 01:15:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1-r2.ebuild,v 1.12 2013/10/04 15:03:09 tetromino Exp $
 
 EAPI="4"
 
@@ -143,7 +143,6 @@ RDEPEND="!<x11-libs/gtk+-3.2.4-r1:3
 	>=net-misc/vinagre-2.30.3
 
 	accessibility? (
-		!app-accessibility/at-spi2-atk[gtk2(+)]
 		>=gnome-extra/libgail-gnome-1.20.3
 		>=gnome-extra/at-spi-1.32.0:1
 		>=app-accessibility/dasher-4.11

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.461 2013/10/04 01:15:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.462 2013/10/04 15:03:09 tetromino Exp $
+
+  04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-2.32.1-r2.ebuild:
+  Undo previous commit; not needed with >=at-spi-1.32.0-r1:1
 
   04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-2.32.1-r2.ebuild:
