@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/clens
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clens/ChangeLog,v 1.1 2013/10/04 18:01:05 ulm Exp $
+
+*clens-0.7.0 (04 Oct 2013)
+
+  04 Oct 2013; Ulrich Müller <ulm@gentoo.org> +clens-0.7.0.ebuild,
+  +files/clens-0.7.0-no-arc4random.patch, +metadata.xml:
+  Initial import. This is a convenience library used by app-editors/mg.
+  Ebuild contributed by me.
+
