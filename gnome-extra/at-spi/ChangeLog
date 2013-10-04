@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.236 2013/07/28 18:05:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.237 2013/10/04 15:45:13 tetromino Exp $
+
+*at-spi-1.32.0-r2 (04 Oct 2013)
+
+  04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  at-spi-1.32.0.ebuild, +at-spi-1.32.0-r2.ebuild:
+  Clean up the at-spi2-atk compatible revision and update it to
+  python-r1.eclass.
 
 *at-spi-2.8.0 (28 Jul 2013)
 

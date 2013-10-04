@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999-r1.ebuild,v 1.19 2013/10/02 09:11:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.67 2013/10/04 15:46:43 mgorny Exp $
 
 EAPI=5
 

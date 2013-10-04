@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.137 2013/09/13 15:10:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.138 2013/10/04 15:43:44 mgorny Exp $
+
+  04 Oct 2013; Michał Górny <mgorny@gentoo.org> llvm-3.3-r1.ebuild,
+  llvm-9999.ebuild:
+  Localize CPPFLAGS before appending to it -- prevent it from leaking out of the
+  correct ABI.
 
   13 Sep 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Add github LLVM mirror as git backup URL. Requested in bug #484748.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.54 2013/09/13 15:10:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.55 2013/10/04 15:43:44 mgorny Exp $
 
 EAPI=5
 
@@ -217,6 +217,7 @@ multilib_src_configure() {
 	fi
 
 	if use libffi; then
+		local CPPFLAGS=${CPPFLAGS}
 		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
 	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
