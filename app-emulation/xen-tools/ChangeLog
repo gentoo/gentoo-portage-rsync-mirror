@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.193 2013/08/23 13:03:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.194 2013/10/04 18:06:23 idella4 Exp $
+
+  04 Oct 2013; Ian Delaney <idella4@gentoo.org> -xen-tools-4.2.1-r5.ebuild,
+  xen-tools-4.2.2-r3.ebuild, xen-tools-4.2.2-r4.ebuild, xen-tools-4.3.0.ebuild:
+  remove old, remove ocaml from stable due to ocaml-4 being ~, add libgcrypt to
+  DEPEND and remove antiquated CDEPEND thanks to dev steev
 
   23 Aug 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.1-r5.ebuild,
   xen-tools-4.2.2-r3.ebuild, xen-tools-4.2.2-r4.ebuild, xen-tools-4.3.0.ebuild:

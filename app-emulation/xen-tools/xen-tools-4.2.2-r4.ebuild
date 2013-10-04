@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r4.ebuild,v 1.6 2013/08/23 13:03:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r4.ebuild,v 1.7 2013/10/04 18:06:23 idella4 Exp $
 
 EAPI=5
 
@@ -37,8 +37,9 @@ IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs
 
 REQUIRED_USE="hvm? ( qemu )"
 
-CDEPEND="dev-libs/lzo:2
+DEPEND="dev-libs/lzo:2
 	dev-libs/yajl
+	dev-libs/libgcrypt
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/pypam[${PYTHON_USEDEP}]
 	sys-libs/zlib
@@ -49,8 +50,7 @@ CDEPEND="dev-libs/lzo:2
 	api? ( dev-libs/libxml2
 		net-misc/curl )
 	${PYTHON_DEPS}
-	pygrub? ( ${PYTHON_DEPS//${PYTHON_REQ_USE}/ncurses} )"
-DEPEND="${CDEPEND}
+	pygrub? ( ${PYTHON_DEPS//${PYTHON_REQ_USE}/ncurses} )
 	sys-devel/bin86
 	sys-devel/dev86
 	dev-lang/perl
@@ -70,8 +70,7 @@ DEPEND="${CDEPEND}
 	)
 	hvm? (  x11-proto/xproto
 		!net-libs/libiscsi )"
-RDEPEND="${CDEPEND}
-	sys-apps/iproute2
+RDEPEND="sys-apps/iproute2
 	net-misc/bridge-utils
 	ocaml? ( >=dev-lang/ocaml-4 )
 	screen? (

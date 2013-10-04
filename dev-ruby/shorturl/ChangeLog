@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/shorturl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.22 2013/09/14 12:13:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shorturl/ChangeLog,v 1.23 2013/10/04 18:30:28 mrueg Exp $
+
+*shorturl-1.0.0-r1 (04 Oct 2013)
+
+  04 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +shorturl-1.0.0-r1.ebuild,
+  -files/shorturl-0.8.7+ruby-1.9.patch:
+  Drop old patches. Add ruby20 support.
 
   14 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -shorturl-0.8.8-r1.ebuild,
   -shorturl-0.8.8.ebuild:

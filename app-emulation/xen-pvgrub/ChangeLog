@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.40 2013/09/26 10:13:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.41 2013/10/04 18:16:33 idella4 Exp $
+
+  04 Oct 2013; Ian Delaney <idella4@gentoo.org> -xen-pvgrub-4.2.1-r3.ebuild:
+  remove old
 
   26 Sep 2013; Ian Delaney <idella4@gentoo.org> xen-pvgrub-4.2.2-r1.ebuild:
   Correct jserver.patch name in xen-pvgrub-4.2.2-r1, fixes Bug #485248
