@@ -2,6 +2,7 @@
 # your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using egencache *
 
+app-accessibility/at-spi2-atk:gtk2 - Install bridge module for x11-libs/gtk+:2. Disable this flag if you want to use gnome-extra/at-spi instead.
 app-accessibility/brltty:api - build brltty's application program interface
 app-accessibility/brltty:beeper - support the console tone generator
 app-accessibility/brltty:contracted-braille - support in-line contracted braille

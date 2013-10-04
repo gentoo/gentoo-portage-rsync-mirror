@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.6.2.ebuild,v 1.9 2013/02/25 08:47:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.6.2.ebuild,v 1.10 2013/10/04 01:03:00 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -22,9 +22,9 @@ COMMON_DEPEND="
 	dev-libs/glib:2
 	>=sys-apps/dbus-1
 "
-RDEPEND="${COMMON_DEPEND}
-	!<gnome-extra/at-spi-1.32.0-r1
-"
+RDEPEND="${COMMON_DEPEND}"
+#	!<gnome-extra/at-spi-1.32.0-r1
+#"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 "

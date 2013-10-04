@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>gnome-accessibility</herd>
+  <use>
+    <flag name="gtk2">Install bridge module for <pkg>x11-libs/gtk+:2</pkg>. Disable
+        this flag if you want to use <pkg>gnome-extra/at-spi</pkg> instead.</flag>
+  </use>
 </pkgmetadata>
