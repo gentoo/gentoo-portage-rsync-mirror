@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.9_pre1.ebuild,v 1.1 2013/09/17 14:43:54 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.9_pre2.ebuild,v 1.1 2013/10/04 09:57:29 tommy Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit autotools enlightenment eutils
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
 #SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
-SRC_URI="http://download.enlightenment.org/pre-releases/efl-${PV/_pre1}/${P/_pre1}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/pre-releases/efl-${PV/_pre2}/${P/_pre2}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="BSD-2"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
@@ -53,7 +53,7 @@ DEPEND="${RDEPEND}"
 #tests depend on temp data from eina WORKDIR
 RESTRICT=test
 
-S=${WORKDIR}/${P/_pre1}
+S=${WORKDIR}/${P/_pre2}
 
 src_prepare() {
 	sed -i "s:1.7.9:1.7.8:g" configure.ac
