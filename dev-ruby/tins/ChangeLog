@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.24 2013/10/01 00:43:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.25 2013/10/04 18:53:01 mrueg Exp $
+
+*tins-0.11.0-r1 (04 Oct 2013)
+
+  04 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +tins-0.11.0-r1.ebuild:
+  Add ruby20 target.
 
 *tins-0.11.0 (01 Oct 2013)
 

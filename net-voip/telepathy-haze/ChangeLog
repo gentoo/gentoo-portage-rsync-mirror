@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.43 2013/09/28 19:45:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.44 2013/10/04 18:47:22 pacho Exp $
+
+*telepathy-haze-0.8.0 (04 Oct 2013)
+
+  04 Oct 2013; Pacho Ramos <pacho@gentoo.org> +telepathy-haze-0.8.0.ebuild,
+  -files/001-handle_purple_account_request_password.patch,
+  -files/002-fix_resource_leakage.patch,
+  -files/003-fix_more_resource_leaks.patch, -telepathy-haze-0.7.0.ebuild:
+  Version bump, drop old
 
   28 Sep 2013; Pacho Ramos <pacho@gentoo.org> telepathy-haze-0.7.1.ebuild:
   Add missing PYTHON_DEPS

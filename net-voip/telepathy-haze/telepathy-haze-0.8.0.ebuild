@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.7.0.ebuild,v 1.2 2013/09/05 19:02:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.8.0.ebuild,v 1.1 2013/10/04 18:47:22 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
 
-inherit eutils python-single-r1
+inherit python-single-r1
 
 DESCRIPTION="Telepathy connection manager providing libpurple supported protocols."
 HOMEPAGE="http://developer.pidgin.im/wiki/TelepathyHaze"
@@ -20,19 +20,12 @@ IUSE=""
 # Tests failing, see upstream: https://bugs.freedesktop.org/34577
 RESTRICT="test"
 
-RDEPEND="
+RDEPEND="${PYTHON_DEPS}
 	>=net-im/pidgin-2.7
 	>=net-libs/telepathy-glib-0.15.1[${PYTHON_USEDEP}]
-	>=dev-libs/glib-2.22:2
+	>=dev-libs/glib-2.30:2
 	>=dev-libs/dbus-glib-0.73
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 #	test? ( dev-python/twisted-words )"
-
-src_prepare() {
-	# Apply some upstream fixes
-	epatch "${FILESDIR}"/001-handle_purple_account_request_password.patch
-	epatch "${FILESDIR}"/002-fix_resource_leakage.patch
-	epatch "${FILESDIR}"/003-fix_more_resource_leaks.patch
-}
