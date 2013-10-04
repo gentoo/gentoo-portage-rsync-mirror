@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xcursor-themes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.47 2013/10/03 20:14:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xcursor-themes/ChangeLog,v 1.48 2013/10/04 12:07:52 ago Exp $
+
+  04 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xcursor-themes-1.0.4.ebuild:
+  Stable for ppc64, wrt bug #475480
 
   03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xcursor-themes-1.0.4.ebuild:
   Stable for ppc, wrt bug #475480

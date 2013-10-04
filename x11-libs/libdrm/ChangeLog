@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.238 2013/10/03 20:10:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.239 2013/10/04 12:02:29 ago Exp $
+
+  04 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.46.ebuild:
+  Stable for ppc64, wrt bug #475480
 
   03 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.46.ebuild:
   Stable for ppc, wrt bug #475480
