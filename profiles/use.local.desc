@@ -4994,7 +4994,6 @@ net-misc/connman:ofono - Use net-misc/ofono for telephony support.
 net-misc/connman:openvpn - Use net-misc/openvpn for openvpn support.
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:vpnc - Use net-misc/vpnc for cisco VPN support.
-net-misc/connman:wimax - Use net-wireless/wimax for WiMAX support.
 net-misc/csync:sftp - Enable sftp transfer support via net-libs/libssh
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/curl:gnutls - Prefer gnutls over nss and openssl as the crypto engine
