@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/tango-icon-theme-extras
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.27 2013/02/07 23:08:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/ChangeLog,v 1.28 2013/10/04 22:52:58 tetromino Exp $
+
+  04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  tango-icon-theme-extras-0.1.0-r1.ebuild,
+  +files/tango-icon-theme-extras-0.1.0-MKDIR_P.patch:
+  Fix build failure with automake-1.13 (bug #486906, thanks to Agostino Sarubbo
+  and Samuli Suominen).
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org>
   tango-icon-theme-extras-0.1.0-r1.ebuild:

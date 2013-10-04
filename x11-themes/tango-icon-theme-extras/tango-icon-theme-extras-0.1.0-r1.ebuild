@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.17 2013/02/07 23:08:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme-extras/tango-icon-theme-extras-0.1.0-r1.ebuild,v 1.18 2013/10/04 22:52:58 tetromino Exp $
 
 EAPI=4
 inherit autotools eutils gnome2-utils
@@ -27,6 +27,7 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-graphicsmagick.patch
+	epatch "${FILESDIR}"/${P}-MKDIR_P.patch
 	sed -i -e '/svgconvert_prog/s:rsvg:&-convert:' configure{,.ac} || die #413183
 	eautoreconf
 }
