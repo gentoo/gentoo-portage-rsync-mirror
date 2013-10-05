@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-xwork/struts-xwork-2.3.15.2.ebuild,v 1.1 2013/10/02 22:35:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-xwork/struts-xwork-2.3.15.2.ebuild,v 1.2 2013/10/05 11:17:52 tomwij Exp $
 
 EAPI="5"
 
@@ -50,8 +50,6 @@ src_unpack() {
 
 java_prepare() {
 	find . -name '*.jar' -print -delete || die
-
-	java-pkg_getjars asm-4,commons-io-1,commons-lang-2.1,commons-logging,ognl-3.0,slf4j-api
 }
 
 src_test() {

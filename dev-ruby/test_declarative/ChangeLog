@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/test_declarative
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.8 2013/01/16 01:07:51 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.9 2013/10/05 11:24:27 mrueg Exp $
+
+*test_declarative-0.0.5-r2 (05 Oct 2013)
+
+  05 Oct 2013; Manuel Rüger <mrueg@gentoo.org>
+  +test_declarative-0.0.5-r2.ebuild:
+  Add ruby20 target.
 
   16 Jan 2013; Rick Farina <zerochaos@gentoo.org>
   test_declarative-0.0.5-r1.ebuild, test_declarative-0.0.5.ebuild:

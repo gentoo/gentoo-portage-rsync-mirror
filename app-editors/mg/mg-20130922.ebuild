@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20130922.ebuild,v 1.1 2013/10/04 18:07:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20130922.ebuild,v 1.2 2013/10/05 11:08:33 ulm Exp $
 
 EAPI=5
 
@@ -28,6 +28,9 @@ src_prepare() {
 	# remove OpenBSD specific easter egg
 	sed -i -e 's/theo\.c//' Makefile || die
 	sed -i -e '/theo_init/d' main.c || die
+
+	# fix path to tutorial in man page
+	sed -i -e "s:doc/mg/:doc/${PF}/:" mg.1 || die
 }
 
 src_compile() {
@@ -39,7 +42,9 @@ src_compile() {
 src_install()  {
 	dobin mg
 	doman mg.1
-	dodoc README tutorial
+	dodoc README README_PORTING tutorial
+	# don't compress the tutorial, otherwise mg cannot open it
+	docompress -x /usr/share/doc/${PF}/tutorial
 }
 
 pkg_postinst() {
