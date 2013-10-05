@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/compositeproto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.60 2013/10/04 12:06:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/compositeproto/ChangeLog,v 1.61 2013/10/05 04:58:40 ago Exp $
+
+  05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> compositeproto-0.4.2-r1.ebuild:
+  Stable for alpha, wrt bug #475480
 
   04 Oct 2013; Agostino Sarubbo <ago@gentoo.org> compositeproto-0.4.2-r1.ebuild:
   Stable for ppc64, wrt bug #475480

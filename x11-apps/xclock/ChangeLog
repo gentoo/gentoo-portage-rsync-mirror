@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xclock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclock/ChangeLog,v 1.74 2013/10/04 11:57:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xclock/ChangeLog,v 1.75 2013/10/05 04:54:04 ago Exp $
+
+  05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xclock-1.0.7.ebuild:
+  Stable for alpha, wrt bug #475480
 
   04 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xclock-1.0.7.ebuild:
   Stable for ppc64, wrt bug #475480
