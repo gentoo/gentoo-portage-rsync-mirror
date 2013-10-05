@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.28 2013/09/30 17:48:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.29 2013/10/05 07:51:39 qnikst Exp $
+
+  05 Oct 2013; Alexander Vershilov <qnikst@gentoo.org> metadata.xml,
+  mpv-9999.ebuild:
+  add lua flag (request and patches by Nikoli)
 
   30 Sep 2013; Tomáš Chvátal <scarabeus@gentoo.org> mpv-9999.ebuild:
   Drop AUTHORS file, no longer distributed.

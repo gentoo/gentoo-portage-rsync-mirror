@@ -3906,6 +3906,7 @@ media-video/mpv:cdio - Use libcdio for CD support (instead of cdparanoia)
 media-video/mpv:doc-pdf - Build documentation in pdf format
 media-video/mpv:enca - Enables support for charset discovery and conversion using app-i18n/enca
 media-video/mpv:libguess - Enables support for charset discovery and conversion using app-i18n/libguess
+media-video/mpv:luajit - Use dev-lang/luajit instead of dev-lang/lua
 media-video/mpv:mng - MNG input support
 media-video/mpv:mp3 - Enable support for mp3 decoding over media-sound/mpg123 instead of relying on ffmpeg support.
 media-video/mpv:postproc - Enable image post-processing via libpostproc
