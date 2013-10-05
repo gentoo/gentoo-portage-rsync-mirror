@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libhx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.42 2013/03/25 14:52:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.43 2013/10/05 01:14:27 mattst88 Exp $
+
+*libhx-3.16 (05 Oct 2013)
+
+  05 Oct 2013; Matt Turner <mattst88@gentoo.org> +libhx-3.16.ebuild:
+  Version bump to 3.16.
 
 *libhx-3.15 (25 Mar 2013)
 
