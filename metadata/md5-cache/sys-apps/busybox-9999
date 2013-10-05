@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare unpack
-DEPEND=!static? ( selinux? ( sys-libs/libselinux ) ) pam? ( sys-libs/pam ) static? ( selinux? ( sys-libs/libselinux[static-libs(+)] ) ) >=sys-kernel/linux-headers-2.6.39 dev-vcs/git
+DEPEND=!static? ( selinux? ( sys-libs/libselinux ) ) pam? ( sys-libs/pam ) static? ( selinux? ( sys-libs/libselinux[static-libs(+)] ) ) >=sys-kernel/linux-headers-2.6.39 >=dev-vcs/git-1.8.2.1 dev-vcs/git
 DESCRIPTION=Utilities for rescue and embedded systems
 EAPI=4
 HOMEPAGE=http://www.busybox.net/
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!static? ( selinux? ( sys-libs/libselinux ) ) pam? ( sys-libs/pam )
 RESTRICT=test
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	13649b380799fe7e817b2db8811c54cd	multilib	892e597faee02a5b94eb02ab512e7622	portability	536c5e70c5fb252ed3b769e04aa3f05b	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	multilib	892e597faee02a5b94eb02ab512e7622	portability	536c5e70c5fb252ed3b769e04aa3f05b	savedconfig	5313100f525c41f6c72c6e04edeb4f65	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=06f3baa32c4c3198ebd7c738801439fc

@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=ruby? ( ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ) dev-libs/libnl net-libs/libpcap python? ( =dev-lang/python-2* ) dev-vcs/git
+DEPEND=ruby? ( ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ) dev-libs/libnl net-libs/libpcap python? ( =dev-lang/python-2* ) >=dev-vcs/git-1.8.2.1 dev-vcs/git
 DESCRIPTION=A generic library for injecting 802.11 frames
 EAPI=5
 HOMEPAGE=http://802.11ninja.net/lorcon
@@ -7,5 +7,5 @@ IUSE=python ruby elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19
 LICENSE=GPL-2
 RDEPEND=ruby? ( ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ) dev-libs/libnl net-libs/libpcap python? ( =dev-lang/python-2* )
 SLOT=0
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	13649b380799fe7e817b2db8811c54cd	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=2d596ae0296547d69da1c738bb4b207c

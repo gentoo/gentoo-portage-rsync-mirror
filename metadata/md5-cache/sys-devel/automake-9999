@@ -1,10 +1,10 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=dev-lang/perl >=sys-devel/automake-wrapper-2 >=sys-devel/autoconf-2.60 >=sys-apps/texinfo-4.7 sys-devel/gnuconfig sys-apps/help2man dev-vcs/git
+DEPEND=dev-lang/perl >=sys-devel/automake-wrapper-2 >=sys-devel/autoconf-2.60 >=sys-apps/texinfo-4.7 sys-devel/gnuconfig sys-apps/help2man >=dev-vcs/git-1.8.2.1 dev-vcs/git
 DESCRIPTION=Used to generate Makefile.in from Makefile.am
 EAPI=2
 HOMEPAGE=http://www.gnu.org/software/automake/
 LICENSE=GPL-3
 RDEPEND=dev-lang/perl >=sys-devel/automake-wrapper-2 >=sys-devel/autoconf-2.60 >=sys-apps/texinfo-4.7 sys-devel/gnuconfig
 SLOT=9999
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	13649b380799fe7e817b2db8811c54cd	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=06920e332a932041e921f72d420afc36

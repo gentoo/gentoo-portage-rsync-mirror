@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=>=dev-libs/eina-9999 virtual/jpeg sys-libs/zlib gnutls? ( net-libs/gnutls dev-libs/libgcrypt ) !gnutls? ( ssl? ( dev-libs/openssl ) ) test? ( dev-libs/check dev-util/lcov ) dev-vcs/git || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool doc? ( app-doc/doxygen )
+DEPEND=>=dev-libs/eina-9999 virtual/jpeg sys-libs/zlib gnutls? ( net-libs/gnutls dev-libs/libgcrypt ) !gnutls? ( ssl? ( dev-libs/openssl ) ) test? ( dev-libs/check dev-util/lcov ) >=dev-vcs/git-1.8.2.1 dev-vcs/git || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool doc? ( app-doc/doxygen )
 DESCRIPTION=E file chunk reading/writing library
 EAPI=4
 HOMEPAGE=http://trac.enlightenment.org/e/wiki/Eet
@@ -7,5 +7,5 @@ IUSE=debug examples gnutls ssl static-libs test nls doc
 LICENSE=BSD-2
 RDEPEND=>=dev-libs/eina-9999 virtual/jpeg sys-libs/zlib gnutls? ( net-libs/gnutls dev-libs/libgcrypt ) !gnutls? ( ssl? ( dev-libs/openssl ) ) nls? ( sys-devel/gettext )
 SLOT=0
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	enlightenment	6612645bd44367af3341a4fcb2f70ecc	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	13649b380799fe7e817b2db8811c54cd	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	enlightenment	6612645bd44367af3341a4fcb2f70ecc	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=4ea7aee95d35bcce916b7a1810c5773c

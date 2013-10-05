@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst preinst prepare test unpack
-DEPEND=!<app-arch/lzma-4.63 !app-arch/lzma-utils !<app-arch/p7zip-4.57 sys-devel/gettext dev-vcs/cvs >=sys-devel/libtool-2 userland_GNU? ( >=sys-apps/coreutils-8.5 ) dev-vcs/git || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=!<app-arch/lzma-4.63 !app-arch/lzma-utils !<app-arch/p7zip-4.57 sys-devel/gettext dev-vcs/cvs >=sys-devel/libtool-2 userland_GNU? ( >=sys-apps/coreutils-8.5 ) >=dev-vcs/git-1.8.2.1 dev-vcs/git || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=utils for managing LZMA compressed files
 EAPI=4
 HOMEPAGE=http://tukaani.org/xz/
@@ -7,5 +7,5 @@ IUSE=nls static-libs +threads abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi
 LICENSE=LGPL-2.1
 RDEPEND=!<app-arch/lzma-4.63 !app-arch/lzma-utils !<app-arch/p7zip-4.57
 SLOT=0
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	13649b380799fe7e817b2db8811c54cd	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	0bf1bbb0a7a26fc4daf3e660ef004ee5	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	0bf1bbb0a7a26fc4daf3e660ef004ee5	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=145c63213ac155a9448743cbba76612e

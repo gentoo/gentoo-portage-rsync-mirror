@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xsetroot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/ChangeLog,v 1.55 2013/10/05 04:55:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xsetroot/ChangeLog,v 1.56 2013/10/05 16:46:36 maekke Exp $
+
+  05 Oct 2013; Markus Meier <maekke@gentoo.org> xsetroot-1.1.1.ebuild:
+  arm stable, bug #475480
 
   05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xsetroot-1.1.1.ebuild:
   Stable for alpha, wrt bug #475480

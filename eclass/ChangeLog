@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1008 2013/10/05 13:40:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1009 2013/10/05 16:48:25 mgorny Exp $
+
+  05 Oct 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Add missing git DEPEND wrt bug #487026.
 
   05 Oct 2013; Vlastimil Babka <caster@gentoo.org> java-ant-2.eclass:
   Convert comments for eclass manpages. Heavily based on work from ercpe, bug

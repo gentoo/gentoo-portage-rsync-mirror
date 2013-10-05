@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test unpack
-DEPEND=dev-python/setuptools doc? ( sys-apps/texinfo ) test? ( dev-python/mock dev-python/twisted-mail dev-python/twisted-web dev-python/twisted-words ) dev-vcs/git =dev-lang/python-2* virtual/pkgconfig
+DEPEND=dev-python/setuptools doc? ( sys-apps/texinfo ) test? ( dev-python/mock dev-python/twisted-mail dev-python/twisted-web dev-python/twisted-words ) >=dev-vcs/git-1.8.2.1 dev-vcs/git =dev-lang/python-2* virtual/pkgconfig
 DESCRIPTION=BuildBot build automation system
 EAPI=5
 HOMEPAGE=http://trac.buildbot.net/ http://code.google.com/p/buildbot/ http://pypi.python.org/pypi/buildbot
@@ -7,5 +7,5 @@ IUSE=doc examples irc mail manhole test
 LICENSE=GPL-2
 RDEPEND=>=dev-python/jinja-2.1 || ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson ) || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-python/pysqlite:2 ) >=dev-python/twisted-core-8.0.0 dev-python/twisted-web dev-python/sqlalchemy dev-python/sqlalchemy-migrate irc? ( dev-python/twisted-words ) mail? ( dev-python/twisted-mail ) manhole? ( dev-python/twisted-conch ) =dev-lang/python-2*
 SLOT=0
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	13649b380799fe7e817b2db8811c54cd	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8e4add37d81a97196fd54a22299f2d93
