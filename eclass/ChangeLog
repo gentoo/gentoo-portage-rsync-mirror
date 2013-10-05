@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1009 2013/10/05 16:48:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1010 2013/10/05 18:39:30 mgorny Exp $
+
+  05 Oct 2013; Michał Górny <mgorny@gentoo.org> -git.eclass:
+  Remove lastrited git.eclass.
 
   05 Oct 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Add missing git DEPEND wrt bug #487026.
