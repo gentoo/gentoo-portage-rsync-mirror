@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.130 2013/03/09 05:44:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.131 2013/10/05 19:29:11 maekke Exp $
+
+  05 Oct 2013; Markus Meier <maekke@gentoo.org> groff-1.22.2.ebuild:
+  arm stable, bug #386335
 
 *groff-1.22.2 (09 Mar 2013)
 
