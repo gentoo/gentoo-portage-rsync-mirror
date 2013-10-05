@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.33 2013/01/08 15:27:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.34 2013/10/05 04:08:32 dirtyepic Exp $
 
 PATCH_VER="1.7"
 UCLIBC_VER="1.1"
@@ -13,7 +13,7 @@ inherit toolchain eutils
 
 DESCRIPTION="The GNU Compiler Collection"
 
-KEYWORDS="-* alpha amd64 arm ~ia64 ~mips ppc ppc64 ~s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="-* alpha amd64 arm ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="ip28 ip32r10k n32 n64"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
