@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.161 2013/10/05 04:57:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXi/ChangeLog,v 1.162 2013/10/05 17:54:02 maekke Exp $
+
+  05 Oct 2013; Markus Meier <maekke@gentoo.org> libXi-1.7.2.ebuild:
+  arm stable, bug #475480
 
   05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libXi-1.7.2.ebuild:
   Stable for alpha, wrt bug #475480
