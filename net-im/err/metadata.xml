@@ -6,6 +6,7 @@
 		<name>Sergey Popov</name>
 	</maintainer>
 	<use>
+		<flag name="irc">Pull optional dependencies, needed for IRC backend</flag>
 		<flag name="plugins">Enable support for installing plugins with <pkg>dev-vcs/git</pkg></flag>
 	</use>
 	<upstream>

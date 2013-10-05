@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.102 2013/10/05 04:53:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.103 2013/10/05 16:29:36 maekke Exp $
+
+  05 Oct 2013; Markus Meier <maekke@gentoo.org> mesa-progs-8.1.0.ebuild:
+  arm stable, bug #475480
 
   05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> mesa-progs-8.1.0.ebuild:
   Stable for alpha, wrt bug #475480
