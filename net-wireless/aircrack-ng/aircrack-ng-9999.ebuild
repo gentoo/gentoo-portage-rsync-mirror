@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.5 2013/05/26 05:11:10 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-9999.ebuild,v 1.6 2013/10/05 02:05:28 zerochaos Exp $
 
 EAPI="5"
 
@@ -13,10 +13,13 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 	ESVN_REPO_URI="http://svn.aircrack-ng.org/trunk"
 	KEYWORDS=""
+	S="${WORKDIR}/${PN}"
 else
+	MY_P=${P/\_/-}
 	MY_PV="$(replace_version_separator 2 '-')"
 	SRC_URI="http://download.aircrack-ng.org/${PN}-${MY_PV}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	S="${WORKDIR}/${MY_P}"
 fi
 
 LICENSE="GPL-2"
@@ -37,8 +40,6 @@ RDEPEND="${DEPEND}
 	sys-apps/hwids
 	airdrop-ng? ( net-wireless/lorcon[python] )"
 
-S="${WORKDIR}/${PN}"
-
 src_compile() {
 	emake \
 	CC="$(tc-getCC)" \
@@ -49,6 +50,13 @@ src_compile() {
 	sqlite=$(usex sqlite true false) \
 	unstable=$(usex unstable true false) \
 	REVFLAGS=-D_REVISION="${ESVN_WC_REVISION}"
+}
+
+src_test() {
+	emake check \
+		libnl=$(usex netlink true false) \
+		sqlite=$(usex sqlite true false) \
+		unstable=$(usex unstable true false)
 }
 
 src_install() {

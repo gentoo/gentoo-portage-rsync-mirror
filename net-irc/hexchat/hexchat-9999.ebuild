@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.10 2013/09/29 00:10:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.11 2013/10/05 02:22:40 hasufell Exp $
 
 EAPI=5
 
@@ -15,17 +15,14 @@ EGIT_REPO_URI="git://github.com/hexchat/hexchat.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="dbus +gtk gtkspell ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python sexy spell ssl theme-manager"
-REQUIRED_USE="gtkspell? ( spell )
-	plugin-checksum? ( plugins )
+IUSE="dbus +gtk ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python spell ssl theme-manager"
+REQUIRED_USE="plugin-checksum? ( plugins )
 	plugin-doat? ( plugins )
 	plugin-fishlim? ( plugins )
 	plugin-sysinfo? ( plugins )
-	python? ( ${PYTHON_REQUIRED_USE} )
-	sexy? ( spell )
-	?? ( gtkspell sexy )"
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
-RDEPEND="dev-libs/glib:2
+DEPEND="dev-libs/glib:2
 	dbus? ( >=dev-libs/dbus-glib-0.98 )
 	gtk? ( x11-libs/gtk+:2 )
 	libcanberra? ( media-libs/libcanberra )
@@ -36,15 +33,12 @@ RDEPEND="dev-libs/glib:2
 	perl? ( >=dev-lang/perl-5.8.0 )
 	plugin-sysinfo? ( sys-apps/pciutils )
 	python? ( ${PYTHON_DEPS} )
-	spell? (
-		app-text/enchant
-		gtkspell? ( app-text/gtkspell:2 )
-		sexy? ( x11-libs/libsexy )
-		!gtkspell? ( !sexy? ( dev-libs/libxml2 ) )
-	)
+	spell? ( app-text/iso-codes )
 	ssl? ( dev-libs/openssl:0 )
 	theme-manager? ( dev-lang/mono )"
-DEPEND="${RDEPEND}
+RDEPEND="${DEPEND}
+	spell? ( app-text/enchant )"
+DEPEND="${DEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	theme-manager? ( dev-util/monodevelop )"
@@ -75,19 +69,6 @@ src_prepare() {
 }
 
 src_configure() {
-	local myspellconf
-	if use spell ; then
-		if use gtkspell ; then
-			myspellconf="--enable-spell=gtkspell"
-		elif use sexy ; then
-			myspellconf="--enable-spell=libsexy"
-		else
-			myspellconf="--enable-spell=static"
-		fi
-	else
-		myspellconf="--disable-spell"
-	fi
-
 	econf \
 		$(use_enable nls) \
 		$(use_enable libproxy socks) \
@@ -108,6 +89,7 @@ src_configure() {
 		${myspellconf} \
 		$(use_enable ntlm) \
 		$(use_enable libproxy) \
+		$(use_enable spell isocodes) \
 		--enable-minimal-flags \
 		$(use_with theme-manager)
 }
@@ -118,8 +100,7 @@ src_install() {
 		UPDATE_MIME_DATABASE=true \
 		UPDATE_DESKTOP_DATABASE=true \
 		install
-	dodoc share/doc/{readme,hacking}.md
-	use plugin-fishlim && dodoc share/doc/fishlim.md
+	dodoc readme.md
 	prune_libtool_files --all
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/hexchat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.81 2013/09/29 00:10:29 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/ChangeLog,v 1.82 2013/10/05 02:22:40 hasufell Exp $
+
+  05 Oct 2013; Julian Ospald <hasufell@gentoo.org> hexchat-9999.ebuild:
+  update live ebuild
 
   29 Sep 2013; Julian Ospald <hasufell@gentoo.org> hexchat-9999.ebuild:
   update live ebuild
