@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.102.ebuild,v 1.1 2013/09/27 12:12:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.103.ebuild,v 1.1 2013/10/05 11:43:38 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev
@@ -83,9 +83,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.02.70-asneeded.patch # -Wl,--as-needed
 	epatch "${FILESDIR}"/${PN}-2.02.92-dynamic-static-ldflags.patch #332905
 	epatch "${FILESDIR}"/${PN}-2.02.100-selinux_and_udev_static.patch #370217, #439414
-
-	# From upstream:
-	epatch "${FILESDIR}"/${P}-do-not-install-separate-command-symlink-for-lvm-devtypes.patch
 
 	eautoreconf
 }

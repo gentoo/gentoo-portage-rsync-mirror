@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.377 2013/08/24 11:51:14 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.378 2013/10/05 11:44:30 yngwin Exp $
+
+  05 Oct 2013; Ben de Groot <yngwin@gentoo.org> -freetype-2.4.9-r1.ebuild:
+  Remove vulnerable version, bug 448550
 
   24 Aug 2013; Benda Xu <heroxbd@gentoo.org>
   +files/freetype-2.4.12-clean-include.patch, freetype-2.4.12.ebuild:

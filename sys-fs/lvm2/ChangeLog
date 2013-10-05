@@ -1,6 +1,22 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.322 2013/09/27 12:12:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.324 2013/10/05 11:49:01 ssuominen Exp $
+
+  05 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/lvm2-2.02.100-ignored_loop.patch, -files/lvm2-2.02.100-lvm_path.patch,
+  -files/lvm2-2.02.100-pvmove_segfault.patch,
+  -files/lvm2-2.02.100-respect_ar_and_cc.patch,
+  -files/lvm2-2.02.100-vg_free_segfault.patch, -files/lvm2-2.02.102-do-not-insta
+  ll-separate-command-symlink-for-lvm-devtypes.patch,
+  -files/lvm2-2.02.99-fix-mda-offset-size-overflow-4g-with-lvmetad.patch,
+  -files/lvm2-2.02.99-selinux-static.patch, -lvm2-2.02.100-r1.ebuild,
+  -lvm2-2.02.100-r2.ebuild, -lvm2-2.02.102.ebuild, -lvm2-2.02.99-r2.ebuild:
+  old
+
+*lvm2-2.02.103 (05 Oct 2013)
+
+  05 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> +lvm2-2.02.103.ebuild:
+  Version bump.
 
 *lvm2-2.02.102 (27 Sep 2013)
 

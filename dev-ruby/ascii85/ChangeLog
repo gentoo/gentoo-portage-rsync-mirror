@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ascii85
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.18 2013/09/04 12:40:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ChangeLog,v 1.19 2013/10/05 11:33:25 mrueg Exp $
+
+*ascii85-1.0.2-r1 (05 Oct 2013)
+
+  05 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +ascii85-1.0.2-r1.ebuild:
+  Add ruby20 target.
 
   04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -ascii85-1.0.1.ebuild:
   Cleanup old.
