@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.188 2013/10/04 15:46:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.189 2013/10/05 13:17:33 pacho Exp $
+
+*systemd-204-r2 (05 Oct 2013)
+
+  05 Oct 2013; Pacho Ramos <pacho@gentoo.org> +systemd-204-r2.ebuild:
+  Include multiple backports with tons of fixes from newer versions, thanks to
+  Fedora systemd maintainers for their work
 
 *systemd-9999 (04 Oct 2013)
 
