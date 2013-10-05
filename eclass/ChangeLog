@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1006 2013/10/04 22:11:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1007 2013/10/05 12:07:01 caster Exp $
+
+  05 Oct 2013; Vlastimil Babka <caster@gentoo.org> ant-tasks.eclass:
+  Convert comments for eclass manpages. Almost completely based on work from
+  'mren <bugs@rennings.net>' in bug #210723 and ercpe from bug #476946.
 
   04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> vala.eclass:
   Prepare for vala-0.22

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8283 2013/10/04 19:31:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8284 2013/10/05 12:12:43 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Oct 2013; Tiziano Müller <dev-zero@gentoo.org>
+  desc/nginx_modules_http.desc, package.mask:
+  Lift mask of www-servers/nginx-1.4.2*
 
   04 Oct 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   whitespace
