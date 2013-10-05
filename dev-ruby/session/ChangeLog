@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/session
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.30 2013/08/03 07:39:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/ChangeLog,v 1.31 2013/10/05 12:32:58 mrueg Exp $
+
+*session-3.1.0-r2 (05 Oct 2013)
+
+  05 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +session-3.1.0-r2.ebuild:
+  Add ruby20 target. Remove virtual/ruby-test-unit dep.
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> session-3.1.0-r1.ebuild:
   Stable for sparc, wrt bug #472910
