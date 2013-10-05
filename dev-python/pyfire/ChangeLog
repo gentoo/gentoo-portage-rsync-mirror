@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyfire
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfire/ChangeLog,v 1.3 2013/08/03 09:45:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfire/ChangeLog,v 1.4 2013/10/05 14:36:38 pinkbyte Exp $
+
+*pyfire-0.3.4-r1 (05 Oct 2013)
+
+  05 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> -pyfire-0.3.4.ebuild,
+  +pyfire-0.3.4-r1.ebuild:
+  Revision bump: EAPI 5, migrate to distutils-r1, add missing dependency on
+  dev-python/twisted-web. Drop old revision
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> pyfire-0.3.4.ebuild:
   Move dev-python/twisted to dev-python/twisted-core.

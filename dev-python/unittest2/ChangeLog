@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.36 2013/09/05 18:45:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.37 2013/10/05 14:51:33 mgorny Exp $
+
+*unittest2-0.5.1-r2 (05 Oct 2013)
+
+  05 Oct 2013; Michał Górny <mgorny@gentoo.org> +unittest2-0.5.1-r2.ebuild,
+  -unittest2-0.5.1.ebuild:
+  Fix not applying anti-versioning patch for py3 & py3.3 test failure (bug
+  #450762). Drop old.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> unittest2-0.5.1-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
