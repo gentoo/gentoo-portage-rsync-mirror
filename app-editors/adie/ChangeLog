@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.42 2013/09/13 20:47:41 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.43 2013/10/05 17:23:21 mabi Exp $
+
+*adie-1.7.42 (05 Oct 2013)
+
+  05 Oct 2013; Matti Bickel <mabi@gentoo.org> +adie-1.7.42.ebuild:
+  version bump
 
 *adie-1.7.41 (13 Sep 2013)
 
