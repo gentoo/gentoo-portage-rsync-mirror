@@ -1,9 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.4.ebuild,v 1.3 2013/08/30 22:49:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.5.5.ebuild,v 1.1 2013/10/05 08:33:01 ssuominen Exp $
 
 EAPI=5
-VALA_MIN_API_VERSION=0.16
+
+MY_VALA_VERSION=0.20
+VALA_MIN_API_VERSION=${MY_VALA_VERSION}
+VALA_MAX_API_VERSION=${MY_VALA_VERSION}
 
 PYTHON_COMPAT=( python2_7 )
 
@@ -15,7 +18,6 @@ if [[ ${PV} == *9999* ]]; then
 else
 	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd"
 	SRC_URI="http://www.${PN}-browser.org/downloads/${PN}_${PV}_all_.tar.bz2"
-	S=${WORKDIR}/${PN}_${PV}_all_
 fi
 
 inherit eutils fdo-mime gnome2-utils pax-utils python-any-r1 waf-utils vala ${_live_inherits}
@@ -25,12 +27,13 @@ HOMEPAGE="http://www.midori-browser.org/"
 
 LICENSE="LGPL-2.1 MIT"
 SLOT="0"
-IUSE="+deprecated doc gnome nls +unique webkit2 zeitgeist"
+IUSE="+deprecated doc +unique webkit2 zeitgeist"
 
 RDEPEND=">=dev-db/sqlite-3.6.19:3
 	>=dev-libs/glib-2.32.3
 	dev-libs/libxml2
 	>=net-libs/libsoup-2.34:2.4
+	>=net-libs/libsoup-gnome-2.34:2.4
 	>=x11-libs/libnotify-0.7
 	x11-libs/libXScrnSaver
 	deprecated? (
@@ -45,15 +48,14 @@ RDEPEND=">=dev-db/sqlite-3.6.19:3
 		unique? ( dev-libs/libunique:3 )
 		webkit2? ( >=net-libs/webkit-gtk-2 )
 		)
-	gnome? ( >=net-libs/libsoup-gnome-2.34:2.4 )
 	zeitgeist? ( >=dev-libs/libzeitgeist-0.3.14 )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	$(vala_depend)
 	dev-util/intltool
 	gnome-base/librsvg
-	doc? ( dev-util/gtk-doc )
-	nls? ( sys-devel/gettext )"
+	sys-devel/gettext
+	doc? ( dev-util/gtk-doc )"
 
 pkg_setup() {
 	python-any-r1_pkg_setup
@@ -78,6 +80,8 @@ src_prepare() {
 }
 
 src_configure() {
+	export VALAC_VERSION=${MY_VALA_VERSION}
+
 	strip-linguas -i po
 
 	local myconf
@@ -88,8 +92,6 @@ src_configure() {
 		$(use_enable doc apidocs) \
 		$(use_enable unique) \
 		--disable-granite \
-		--enable-addons \
-		$(use_enable nls) \
 		$(use_enable !deprecated gtk3) \
 		$(use_enable zeitgeist) \
 		${myconf}

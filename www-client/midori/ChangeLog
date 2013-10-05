@@ -1,6 +1,17 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.116 2013/08/30 22:49:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.118 2013/10/05 08:33:53 ssuominen Exp $
+
+  05 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> -midori-0.5.4.ebuild:
+  old
+
+*midori-0.5.5 (05 Oct 2013)
+
+  05 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> +midori-0.5.5.ebuild:
+  Version bump wrt #486474 by "A. Person". Remove USE="nls" which only avoided
+  sys-devel/gettext dependency despite dev-util/intltool being always required
+  which has sys-devel/gettext as a dependency. Remove USE="gnome" since net-libs
+  /libsoup-gnome is now required always.
 
   30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org> midori-0.5.4.ebuild:
   Depend on libsoup-gnome again, clean up old revisions.
