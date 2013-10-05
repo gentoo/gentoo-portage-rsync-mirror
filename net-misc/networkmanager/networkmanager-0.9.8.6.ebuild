@@ -1,22 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.2-r3.ebuild,v 1.4 2013/10/01 22:19:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.6.ebuild,v 1.1 2013/10/05 13:39:26 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit bash-completion-r1 gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev eutils autotools
+inherit bash-completion-r1 gnome.org linux-info systemd user readme.gentoo toolchain-funcs vala virtualx udev eutils
 
 DESCRIPTION="Universal network configuration daemon for laptops, desktops, servers and virtualization hosts"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
 
 LICENSE="GPL-2+"
 SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname version
-IUSE="avahi bluetooth connection-sharing consolekit dhclient +dhcpcd gnutls
-+introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala
-+wext" # wimax
+IUSE="avahi bluetooth connection-sharing consolekit dhclient +dhcpcd gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala +wext" # wimax
 
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
@@ -107,11 +105,7 @@ src_prepare() {
 		root password, add your user account to the 'plugdev' group."
 
 	# Bug #402085, https://bugzilla.gnome.org/show_bug.cgi?id=387832
-	epatch "${FILESDIR}/${PN}-0.9.7.995-pre-sleep.patch"
-
-	# Allow dhcpcd newer than 5.x to be used, patch from upstream (will be
-	# included in next version)
-	epatch "${FILESDIR}/${P}-allow-new-dhcpcd.patch"
+	epatch "${FILESDIR}/${PN}-0.9.8.4-pre-sleep.patch"
 
 	# Use python2.7 shebangs for test scripts
 	sed -e 's@\(^#!.*python\)@\12.7@' \
@@ -119,26 +113,25 @@ src_prepare() {
 
 	# Fix completiondir, avoid eautoreconf, bug #465100
 	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
-		cli/completion/Makefile.am || die "sed completiondir failed"
+		cli/completion/Makefile.in || die "sed completiondir failed"
 
 	## Force use of /run, avoid eautoreconf
-	#sed -e 's:$localstatedir/run/:/run/:' -i configure || die
-
-	# We have to eautoreconf anyway for the dhcpcd patch
-	sed -e 's:$localstatedir/run/:/run/:' -i configure.ac || die
+	sed -e 's:$localstatedir/run/:/run/:' -i configure || die
 
 	use vala && vala_src_prepare
 
-	eautoreconf
+	epatch_user # don't remove, users often want custom patches for NM
 }
 
 src_configure() {
 	# TODO: enable wimax when we have a libnl:3 compatible revision of it
+	# We are not ready for bluez5 yet
 	econf \
+		--enable-bluez4 \
 		--disable-more-warnings \
 		--disable-static \
 		--localstatedir=/var \
-		--enable-ifnet \
+		$(usex systemd '--disable-ifnet' '--enable-ifnet') \
 		--without-netconfig \
 		--with-dbus-sys-dir=/etc/dbus-1/system.d \
 		--with-udev-dir="$(udev_get_udevdir)" \
@@ -192,14 +185,16 @@ src_install() {
 	# Add keyfile plugin support
 	keepdir /etc/NetworkManager/system-connections
 	chmod 0600 "${ED}"/etc/NetworkManager/system-connections/.keep* # bug #383765
-	insinto /etc/NetworkManager
-	newins "${FILESDIR}/nm-system-settings.conf-ifnet" NetworkManager.conf
+
+	if ! use systemd; then
+		insinto /etc/NetworkManager
+		newins "${FILESDIR}/nm-system-settings.conf-ifnet" NetworkManager.conf
+	fi
 
 	# Allow users in plugdev group to modify system connections
 	insinto /usr/share/polkit-1/rules.d/
 	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.rules"
 
-	# Remove useless .la files
 	prune_libtool_files --modules
 }
 
@@ -231,5 +226,15 @@ pkg_postinst() {
 			elog "without changing its behavior, you may want to remove it."
 			;;
 		esac
+	fi
+
+	if use systemd; then
+		if [[ ${REPLACING_VERSIONS} < 0.9.8.6 ]]; then
+			ewarn "Ifnet plugin won't be used with systemd support enabled"
+			ewarn "as it is meant to be used with openRC and can cause collisions"
+			ewarn "(like bug #485658)."
+			ewarn "Because of this, you will likely need to reintroduce passwords"
+			ewarn "for your used routers."
+		fi
 	fi
 }

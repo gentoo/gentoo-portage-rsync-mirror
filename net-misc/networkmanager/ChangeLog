@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.181 2013/10/01 22:19:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.182 2013/10/05 13:39:26 pacho Exp $
+
+*networkmanager-0.9.8.6 (05 Oct 2013)
+
+  05 Oct 2013; Pacho Ramos <pacho@gentoo.org> +networkmanager-0.9.8.6.ebuild,
+  -networkmanager-0.9.6.4-r1.ebuild, -networkmanager-0.9.8.2-r3.ebuild:
+  Version bump, use keyfile plugin instead of ifnet for systemd to prevent
+  collisions and problems like bug #485658
 
   01 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   networkmanager-0.9.6.4.ebuild, networkmanager-0.9.6.4-r1.ebuild,
