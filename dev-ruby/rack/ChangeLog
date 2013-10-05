@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.113 2013/04/13 12:29:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.114 2013/10/05 10:53:16 mrueg Exp $
+
+*rack-1.5.2-r1 (05 Oct 2013)
+
+  05 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +rack-1.5.2-r1.ebuild:
+  Add ruby20 target.
 
 *rack-1.5.2 (13 Apr 2013)
 *rack-1.4.5-r1 (13 Apr 2013)

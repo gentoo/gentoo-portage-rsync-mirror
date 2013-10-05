@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/eclipse-ecj
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.84 2012/11/21 06:48:41 serkan Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/ChangeLog,v 1.85 2013/10/05 10:38:24 ago Exp $
+
+  05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> eclipse-ecj-4.2.1.ebuild:
+  Stable for amd64, wrt bug #469434
 
 *eclipse-ecj-4.2.1 (21 Nov 2012)
 
@@ -373,6 +376,3 @@
   directory layout has changed a bit; I don't maintain separate
   batch and compiler directories. Our layout looks exactly like the
   one used for the bootstrap compiler in jdtcoresrc/.
-
-
-

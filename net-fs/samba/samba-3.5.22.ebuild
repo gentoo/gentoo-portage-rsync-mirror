@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.22.ebuild,v 1.1 2013/08/14 08:20:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.22.ebuild,v 1.2 2013/10/05 10:38:42 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://samba/stable/${P}.tar.gz
 	http://dev.gentoo.org/~dagger/files/smb_traffic_analyzer_v2.diff.bz2"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="acl addns ads +aio avahi caps +client cluster debug doc examples fam
 	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes smbtav2
 	swat syslog winbind"

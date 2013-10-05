@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.319 2013/07/08 16:57:56 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.320 2013/10/05 10:38:08 ago Exp $
+
+  05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> tomcat-6.0.37.ebuild,
+  tomcat-7.0.42.ebuild:
+  Stable for amd64, wrt bug #469434
 
 *tomcat-7.0.42 (08 Jul 2013)
 

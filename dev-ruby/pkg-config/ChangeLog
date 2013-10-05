@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/pkg-config
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.19 2012/09/30 22:06:16 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.20 2013/10/05 10:43:08 mrueg Exp $
+
+*pkg-config-1.1.4-r1 (05 Oct 2013)
+
+  05 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +pkg-config-1.1.4-r1.ebuild:
+  Tests run now, but will fail.
 
   30 Sep 2012; Diego E. Pettenò <flameeyes@gentoo.org> pkg-config-1.1.4.ebuild:
   Add missing dependency on virtual/pkgconfig.
