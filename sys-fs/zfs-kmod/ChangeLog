@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.35 2013/08/23 23:20:07 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.36 2013/10/05 22:03:30 ryao Exp $
+
+*zfs-kmod-0.6.2-r1 (05 Oct 2013)
+
+  05 Oct 2013; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.2-r1.ebuild:
+  Fixed readdir regressions, fixed mknod return values, fixed compatibility
+  issues with hardened-sources, implement file attribute support (should fix
+  regression with portage's FEATURES=xattr), improved Linux 3.11 compatibility
+  (resolve LZ4 symbol conflicts)
 
 *zfs-kmod-0.6.2 (23 Aug 2013)
 

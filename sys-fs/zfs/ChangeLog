@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.71 2013/09/05 19:44:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.72 2013/10/05 22:08:09 ryao Exp $
+
+*zfs-0.6.2-r1 (05 Oct 2013)
+
+  05 Oct 2013; Richard Yao <ryao@gentoo.org> +zfs-0.6.2-r1.ebuild:
+  Use libblkid to improve drive detection; Update drive database with additional
+  entries
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> zfs-0.6.2.ebuild,
   zfs-9999.ebuild:
