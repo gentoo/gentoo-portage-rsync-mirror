@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.172 2013/09/22 12:02:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.173 2013/10/05 18:22:49 maekke Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (22 Sep 2013)
 # Missing keywords, bug #484734
@@ -117,8 +117,7 @@ dev-vcs/subversion java
 =media-libs/libcaca-0.99_beta17 java
 media-libs/libjpeg-turbo java
 net-dns/libidn java
-=net-misc/tigervnc-1.1.0-r7 java
-=net-misc/tigervnc-1.2.0 java
+net-misc/tigervnc java
 net-print/cups java
 =sys-devel/gettext-0.18.1.1-r1 java
 =sys-devel/gettext-0.18.1.1-r3 java

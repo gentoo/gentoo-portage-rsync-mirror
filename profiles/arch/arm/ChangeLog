@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.271 2013/09/15 15:59:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.272 2013/10/05 18:22:49 maekke Exp $
+
+  05 Oct 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask net-misc/tigervnc[java] for all versions, bug #485436
 
   15 Sep 2013; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask dev-python/ipython[nbconvert], bug #481462

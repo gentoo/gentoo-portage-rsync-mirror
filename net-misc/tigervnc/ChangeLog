@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.162 2013/10/02 03:41:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.163 2013/10/05 18:23:03 maekke Exp $
+
+  05 Oct 2013; Markus Meier <maekke@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
+  arm stable, bug #485436
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
   Stable for HPPA (bug #485436).

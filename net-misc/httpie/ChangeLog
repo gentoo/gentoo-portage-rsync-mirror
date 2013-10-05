@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/httpie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/ChangeLog,v 1.9 2013/09/05 19:02:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/ChangeLog,v 1.10 2013/10/05 18:26:16 vikraman Exp $
+
+*httpie-0.7.2 (05 Oct 2013)
+
+  05 Oct 2013; Vikraman <vikraman@gentoo.org> +httpie-0.7.2.ebuild:
+  Bump to version 0.7.2
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> httpie-0.3.0-r1.ebuild,
   httpie-0.3.0.ebuild, httpie-0.3.1.ebuild, httpie-0.4.1.ebuild,

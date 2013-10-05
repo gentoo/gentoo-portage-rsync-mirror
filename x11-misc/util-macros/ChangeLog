@@ -1,5 +1,8 @@
 # ChangeLog for x11-misc/util-macros
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.126 2013/10/05 04:58:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/util-macros/ChangeLog,v 1.127 2013/10/05 18:02:11 maekke Exp $
+
+  05 Oct 2013; Markus Meier <maekke@gentoo.org> util-macros-1.17.1.ebuild:
+  arm stable, bug #475480
 
   05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> util-macros-1.17.1.ebuild:
   Stable for alpha, wrt bug #475480
