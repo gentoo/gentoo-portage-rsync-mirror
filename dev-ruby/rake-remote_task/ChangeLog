@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rake-remote_task
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-remote_task/ChangeLog,v 1.15 2013/04/13 13:37:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-remote_task/ChangeLog,v 1.16 2013/10/05 10:26:31 mrueg Exp $
+
+*rake-remote_task-2.2.1-r1 (05 Oct 2013)
+
+  05 Oct 2013; Manuel Rüger <mrueg@gentoo.org>
+  +rake-remote_task-2.2.1-r1.ebuild:
+  Add ruby20 target.
 
 *rake-remote_task-2.2.1 (13 Apr 2013)
 
@@ -83,4 +89,3 @@
   20 Jul 2010; Hans de Graaff <graaff@gentoo.org>
   +rake-remote_task-2.0.0.ebuild, +metadata.xml:
   Initial import. New dependency extracted out of dev-ruby/vlad.
-

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/notify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/notify/ChangeLog,v 1.7 2013/07/19 06:32:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/notify/ChangeLog,v 1.8 2013/10/05 10:21:02 mrueg Exp $
+
+*notify-0.5.2-r1 (05 Oct 2013)
+
+  05 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +notify-0.5.2-r1.ebuild:
+  Add ruby20 target.
 
 *notify-0.5.2 (19 Jul 2013)
 
@@ -35,4 +40,3 @@
   +metadata.xml:
   New ebuild dev-ruby/notify. ebuild written by Matsuu Takuto
   <matsuu@gentoo.org>
-

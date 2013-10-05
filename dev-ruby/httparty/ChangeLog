@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/httparty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.26 2013/05/04 15:55:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.27 2013/10/05 10:06:55 mrueg Exp $
+
+  05 Oct 2013; Manuel Rüger <mrueg@gentoo.org> -httparty-0.10.2.ebuild,
+  -httparty-0.9.0.ebuild:
+  Cleanup old.
 
 *httparty-0.11.0 (04 May 2013)
 
@@ -116,4 +120,3 @@
   28 Dec 2008; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +httparty-0.2.4.ebuild:
   Initial import. New dependency for dev-ruby/twitter.
-
