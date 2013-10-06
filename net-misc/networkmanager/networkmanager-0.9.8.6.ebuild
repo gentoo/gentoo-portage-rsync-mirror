@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.6.ebuild,v 1.1 2013/10/05 13:39:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.6.ebuild,v 1.2 2013/10/06 14:14:57 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -235,6 +235,14 @@ pkg_postinst() {
 			ewarn "(like bug #485658)."
 			ewarn "Because of this, you will likely need to reintroduce passwords"
 			ewarn "for your used routers."
+		fi
+
+		if [[ -e "${EROOT}etc/NetworkManager/NetworkManager.conf" ]]; then
+			if grep -q plugins | grep -q ifnet ${EROOT}etc/NetworkManager/NetworkManager.conf; then
+				ewarn "You seem to use 'ifnet' plugin in ${EROOT}etc/NetworkManager/NetworkManager.conf"
+				ewarn "Since it won't be used when running under Systemd, you will need to stop setting"
+				ewarn "ifnet plugin there to allow NetworkManager to work."
+			fi
 		fi
 	fi
 }
