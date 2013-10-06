@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.126 2013/10/04 01:24:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.127 2013/10/06 22:20:25 eva Exp $
+
+*gst-plugins-bad-1.2.0-r1 (07 Oct 2013)
+
+  07 Oct 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  gst-plugins-bad-1.2.0.ebuild, +gst-plugins-bad-1.2.0-r1.ebuild,
+  +files/gst-plugins-bad-1.2.0-optional-egl.patch, metadata.xml:
+  Fix dependencies, x11 automagic for now, see upstream bug. Make mesa optional
+  behing egl USE flag, it is used by eglglessink only.
 
   04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   gst-plugins-bad-1.2.0.ebuild:

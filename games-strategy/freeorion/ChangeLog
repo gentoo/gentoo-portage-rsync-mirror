@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/freeorion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.8 2013/10/01 20:25:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.9 2013/10/06 22:05:04 tomka Exp $
+
+  06 Oct 2013; Thomas Kahle <tomka@gentoo.org>
+  -freeorion-0.4.3_pre20130312.ebuild, freeorion-0.4.3.ebuild:
+  Fix LICENSE and respect CFLAGS (bugs 485508,485512, thanks hasufell), remove
+  old.
 
   01 Oct 2013; Thomas Kahle <tomka@gentoo.org> freeorion-0.4.3.ebuild:
   Fix missing dependency on dev-games/ois (bug 486700
