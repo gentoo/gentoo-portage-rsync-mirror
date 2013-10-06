@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec-expectations
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.56 2013/08/16 05:09:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.57 2013/10/06 09:49:39 graaff Exp $
+
+  06 Oct 2013; Hans de Graaff <graaff@gentoo.org>
+  rspec-expectations-2.14.2.ebuild:
+  Add ruby20.
 
 *rspec-expectations-2.14.2 (16 Aug 2013)
 

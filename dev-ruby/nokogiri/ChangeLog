@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.86 2013/01/16 01:10:42 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.87 2013/10/06 09:50:56 graaff Exp $
+
+*nokogiri-1.5.10 (06 Oct 2013)
+
+  06 Oct 2013; Hans de Graaff <graaff@gentoo.org> +nokogiri-1.5.10.ebuild:
+  Version bump. Add ruby20. Skip tests failing due to newer libxml2.
 
   16 Jan 2013; Rick Farina <zerochaos@gentoo.org> metadata.xml,
   nokogiri-1.5.5.ebuild:

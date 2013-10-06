@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.14.3.ebuild,v 1.1 2013/07/20 06:45:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/rspec-core-2.14.3.ebuild,v 1.2 2013/10/06 09:51:43 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="none"
 RUBY_FAKEGEM_TASK_DOC="none"
@@ -33,7 +33,10 @@ ruby_add_bdepend "test? (
 		>=dev-ruby/rspec-expectations-2.14.0:2
 		>=dev-ruby/rspec-mocks-2.12.0:2
 	)"
-ruby_add_bdepend "doc? ( dev-ruby/yard )"
+
+# Skip yard for ruby20 for now since we don't support ruby20 eselected
+# yet and we can't bootstrap otherwise.
+USE_RUBY=${USE_RUBY/ruby20/} ruby_add_bdepend "doc? ( dev-ruby/yard )"
 
 all_ruby_prepare() {
 	# Don't set up bundler: it doesn't understand our setup.
