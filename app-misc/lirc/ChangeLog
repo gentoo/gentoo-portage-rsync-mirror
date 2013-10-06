@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.244 2013/08/29 13:58:34 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.245 2013/10/06 14:43:06 zzam Exp $
+
+*lirc-0.9.0-r4 (06 Oct 2013)
+
+  06 Oct 2013; Matthias Schwarzott <zzam@gentoo.org> +lirc-0.9.0-r4.ebuild,
+  +files/lirc-0.9.0-fixed-font.patch:
+  Use font 'fixed' in xmode2, to not fail because of missing font. Patch is
+  from https://bugs.archlinux.org/task/30912
 
   29 Aug 2013; Ian Stakenvicius <axs@gentoo.org>
   files/lirc-0.9.0-add-zotac-support.patch:

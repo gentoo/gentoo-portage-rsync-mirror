@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=virtual/jre-1.5 dev-java/commons-cli:1 dev-java/itext:0 sci-libs/jmol-acme:0 sci-libs/vecmath-objectclub:0 sci-libs/naga >=dev-java/java-config-2.1.9-r1 >=sys-apps/portage-2.1.2.7
 SLOT=0
 SRC_URI=mirror://sourceforge/jmol/Jmol-12.2.27-full.tar.gz http://dev.gentoo.org/~jlec/distfiles/jmol-selfSignedCertificate.store.tar
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=81491dc229d66f31b8a7349d3ce07356

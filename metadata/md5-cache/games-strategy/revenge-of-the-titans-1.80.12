@@ -10,5 +10,5 @@ RDEPEND=>=virtual/jre-1.6 virtual/opengl >=dev-java/java-config-2.1.9-r1
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://downloads.puppygames.net/RevengeOfTheTitans-amd64.tar.gz -> revenge-of-the-titans-1.80.12-amd64.tar.gz ) x86? ( http://downloads.puppygames.net/RevengeOfTheTitans-i386.tar.gz -> revenge-of-the-titans-1.80.12-i386.tar.gz )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	6032f7ec6471c6459da900e11f0f7bf7	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=59430a11af1190969fb3e33bcd8499bd
