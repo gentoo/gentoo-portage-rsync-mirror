@@ -1,0 +1,11 @@
+DEFINED_PHASES=install prepare
+DESCRIPTION=Graphical configuration for iDesk plus icons
+EAPI=5
+HOMEPAGE=http://www.jmurray.id.au/idesk-extras.html
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=app-shells/bash x11-misc/idesk x11-misc/xdialog
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/idesk-extras-1.37.tar.xz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=9e97a64771ef63bc4d494b34b89f69cb
