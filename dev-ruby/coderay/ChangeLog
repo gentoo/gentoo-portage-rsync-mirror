@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.76 2013/09/04 13:36:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.77 2013/10/06 17:08:12 mrueg Exp $
+
+*coderay-1.1.0-r1 (06 Oct 2013)
+
+  06 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +coderay-1.1.0-r1.ebuild:
+  Add ruby20 target.
 
   04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -coderay-0.9.8.ebuild:
   Cleanup old.
