@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.1.8-r1.ebuild,v 1.1 2013/06/13 11:38:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.1.8-r1.ebuild,v 1.2 2013/10/06 15:41:52 graaff Exp $
 
 EAPI=5
 
@@ -26,19 +26,21 @@ KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-ma
 # TODO: haml has some emacs modes that it could be installing, in case
 IUSE=""
 
+RESTRICT="test"
+
 ruby_add_rdepend "dev-ruby/sass"
 
 # It could use merb during testing as well, but it's not mandatory
-ruby_add_bdepend "
-	test? (
-		dev-ruby/minitest
-		dev-ruby/hpricot
-		dev-ruby/erubis
-		dev-ruby/rails
-		dev-ruby/ruby_parser
-		>=dev-ruby/sass-3.2.0
-	)
-	doc? (
+# ruby_add_bdepend "
+# 	test? (
+# 		dev-ruby/minitest
+# 		dev-ruby/hpricot
+# 		dev-ruby/erubis
+# 		dev-ruby/rails
+# 		dev-ruby/ruby_parser
+# 		>=dev-ruby/sass-3.2.0
+# 	)"
+ruby_add_bdepend "doc? (
 		dev-ruby/yard
 		dev-ruby/maruku
 		dev-ruby/sass
