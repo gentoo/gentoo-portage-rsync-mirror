@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xtermcontrol
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.37 2013/10/05 04:58:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtermcontrol/ChangeLog,v 1.38 2013/10/06 11:47:34 ago Exp $
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xtermcontrol-3.0.ebuild:
+  Stable for ia64, wrt bug #475480
 
   05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xtermcontrol-3.0.ebuild:
   Stable for alpha, wrt bug #475480

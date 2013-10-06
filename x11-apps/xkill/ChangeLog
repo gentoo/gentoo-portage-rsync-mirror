@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkill
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkill/ChangeLog,v 1.44 2013/10/05 16:41:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkill/ChangeLog,v 1.45 2013/10/06 11:41:52 ago Exp $
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xkill-1.0.4.ebuild:
+  Stable for ia64, wrt bug #475480
 
   05 Oct 2013; Markus Meier <maekke@gentoo.org> xkill-1.0.4.ebuild:
   arm stable, bug #475480

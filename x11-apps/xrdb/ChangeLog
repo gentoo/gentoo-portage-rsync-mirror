@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xrdb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.100 2013/10/05 16:45:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrdb/ChangeLog,v 1.101 2013/10/06 11:42:19 ago Exp $
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xrdb-1.1.0.ebuild:
+  Stable for ia64, wrt bug #475480
 
   05 Oct 2013; Markus Meier <maekke@gentoo.org> xrdb-1.1.0.ebuild:
   arm stable, bug #475480

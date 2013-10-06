@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/rgb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.64 2013/10/05 16:30:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rgb/ChangeLog,v 1.65 2013/10/06 11:40:59 ago Exp $
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> rgb-1.0.5.ebuild:
+  Stable for ia64, wrt bug #475480
 
   05 Oct 2013; Markus Meier <maekke@gentoo.org> rgb-1.0.5.ebuild:
   arm stable, bug #475480

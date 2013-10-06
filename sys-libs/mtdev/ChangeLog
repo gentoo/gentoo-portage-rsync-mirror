@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/mtdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.35 2013/10/05 16:25:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/mtdev/ChangeLog,v 1.36 2013/10/06 11:40:31 ago Exp $
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> mtdev-1.1.4.ebuild:
+  Stable for ia64, wrt bug #475480
 
   05 Oct 2013; Markus Meier <maekke@gentoo.org> mtdev-1.1.4.ebuild:
   arm stable, bug #475480

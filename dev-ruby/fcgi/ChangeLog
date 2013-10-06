@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fcgi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fcgi/ChangeLog,v 1.6 2013/09/23 07:16:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fcgi/ChangeLog,v 1.7 2013/10/06 11:36:29 mrueg Exp $
+
+*fcgi-0.9.2.1 (06 Oct 2013)
+
+  06 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +fcgi-0.9.2.1.ebuild:
+  Version bump.
 
 *fcgi-0.9.2 (23 Sep 2013)
 

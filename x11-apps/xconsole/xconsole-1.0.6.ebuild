@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xconsole/xconsole-1.0.6.ebuild,v 1.7 2013/10/05 16:34:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xconsole/xconsole-1.0.6.ebuild,v 1.8 2013/10/06 11:41:11 ago Exp $
 
 EAPI=5
 
 inherit xorg-2
 
 DESCRIPTION="monitor system console messages with X"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 RDEPEND="x11-libs/libXaw
 	x11-libs/libXmu
