@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.4.0.ebuild,v 1.1 2013/10/06 16:41:41 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.4.0.ebuild,v 1.2 2013/10/06 21:53:34 hasufell Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="
 	dev-libs/gmime:2.6
 	media-libs/libcanberra
 	>=net-libs/webkit-gtk-1.10.0:3[introspection]
-	<net-libs/webkit-gtk-2.0.4:3[introspection]
+	<=net-libs/webkit-gtk-2.0.4:3[introspection]
 	>=x11-libs/gtk+-3.6.0:3[introspection]
 	x11-libs/libnotify"
 RDEPEND="${DEPEND}
