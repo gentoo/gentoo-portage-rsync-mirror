@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.608 2013/10/06 14:06:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.609 2013/10/06 16:07:23 polynomial-c Exp $
+
+  06 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> samba-3.6.19.ebuild:
+  Added workaround for alpha/s390/sh to make samba build successfully on these
+  arches. Change requested by ago.
 
   06 Oct 2013; Jeroen Roovers <jer@gentoo.org> samba-3.5.22.ebuild,
   samba-3.6.19.ebuild:
