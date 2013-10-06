@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.54 2013/08/20 22:08:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.55 2013/10/06 16:51:01 billie Exp $
+
+*pfl-2.4 (06 Oct 2013)
+
+  06 Oct 2013; Daniel Pielmeier <billie@gentoo.org> +pfl-2.4.ebuild,
+  +files/e-file-20110906-portageq.patch:
+  Version bump. Fixes bug #420111, thanks to Jeroen Roovers for the patch.
+  Fixed bug #481296, thanks to Alice Ferrazzi for the report and Daniel for the
+  fix.
 
   20 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> pfl-2.3-r3.ebuild:
   Keyword amd64-linux and x86-linux

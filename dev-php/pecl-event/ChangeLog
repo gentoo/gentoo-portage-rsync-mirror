@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pecl-event
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-event/ChangeLog,v 1.1 2013/09/22 09:40:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-event/ChangeLog,v 1.2 2013/10/06 16:53:04 tomwij Exp $
+
+*pecl-event-1.8.0 (06 Oct 2013)
+
+  06 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +pecl-event-1.8.0.ebuild:
+  Version bump to 1.8.0, proxied commit for ruslan_osmanov; reported on IRC.
 
 *pecl-event-1.7.8 (22 Sep 2013)
 

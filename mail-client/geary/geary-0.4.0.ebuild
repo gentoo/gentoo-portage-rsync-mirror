@@ -1,8 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.4.0_pre2.ebuild,v 1.1 2013/09/22 13:06:15 hasufell Exp $
-
-# REMINDER: next release probably swaps gnome-keyring for libsecret-1
+# $Header: /var/cvsroot/gentoo-x86/mail-client/geary/geary-0.4.0.ebuild,v 1.1 2013/10/06 16:41:41 hasufell Exp $
 
 EAPI=5
 
@@ -21,15 +19,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
 DEPEND="
-	>=app-crypt/libsecret-0.11
+	app-crypt/libsecret
 	dev-db/sqlite:3
 	dev-libs/glib:2
-	dev-libs/libgee:0.8
+	>=dev-libs/libgee-0.8.5:0.8
 	dev-libs/libunique:3
 	dev-libs/libxml2:2
 	dev-libs/gmime:2.6
 	media-libs/libcanberra
 	>=net-libs/webkit-gtk-1.10.0:3[introspection]
+	<net-libs/webkit-gtk-2.0.4:3[introspection]
 	>=x11-libs/gtk+-3.6.0:3[introspection]
 	x11-libs/libnotify"
 RDEPEND="${DEPEND}
