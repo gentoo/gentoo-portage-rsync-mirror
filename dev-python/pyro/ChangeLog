@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.89 2013/09/05 18:46:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.90 2013/10/06 19:17:10 aidecoe Exp $
+
+  06 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> pyro-4.20.ebuild:
+  Use virtual/python-unittest2. Fixes bug #483726.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pyro-3.16-r1.ebuild,
   pyro-4.17-r1.ebuild:

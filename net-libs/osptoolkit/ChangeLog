@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/osptoolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.18 2013/10/01 15:29:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.19 2013/10/06 19:31:06 chainsaw Exp $
+
+*osptoolkit-4.1.5 (06 Oct 2013)
+
+  06 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +osptoolkit-4.1.5.ebuild:
+  Version bump, as requested by Julian "hasufell" Ospald in bug #483644.
 
   01 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> metadata.xml:
   Add chainsaw to maintainers.
