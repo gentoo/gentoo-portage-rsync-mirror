@@ -1,0 +1,33 @@
+From 5821cc78250075a855175572c420808cddcf40f5 Mon Sep 17 00:00:00 2001
+From: Alexander Tsoy <alexander@tsoy.me>
+Date: Thu, 3 Oct 2013 14:54:42 +0400
+Subject: [PATCH 8/9] mdraid/module-setup.sh: install configs from
+ /etc/mdadm.conf.d
+
+/etc/mdadm.conf.d directory is supported since mdadm-3.3
+---
+ modules.d/90mdraid/module-setup.sh | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/modules.d/90mdraid/module-setup.sh b/modules.d/90mdraid/module-setup.sh
+index 5df2274..45767c6 100755
+--- a/modules.d/90mdraid/module-setup.sh
++++ b/modules.d/90mdraid/module-setup.sh
+@@ -93,6 +93,14 @@ install() {
+         else
+             [ -f /etc/mdadm/mdadm.conf ] && inst /etc/mdadm/mdadm.conf /etc/mdadm.conf
+         fi
++        if [ -d /etc/mdadm.conf.d ]; then
++            local f
++            inst_dir /etc/mdadm.conf.d
++            for f in /etc/mdadm.conf.d/*.conf; do
++                [ -f "$f" ] || continue
++                inst "$f"
++            done
++        fi
+     fi
+ 
+     inst_hook pre-udev 30 "$moddir/mdmon-pre-udev.sh"
+-- 
+1.8.3.2
+

@@ -1,0 +1,38 @@
+From dc03b57ca7fe5f83dc91b2d6b44aa67d83ccd399 Mon Sep 17 00:00:00 2001
+From: WANG Chao <chaowang@redhat.com>
+Date: Fri, 13 Sep 2013 22:28:44 +0800
+Subject: [PATCH 6/9] ifup: do not dhcp on network interface of secondary stack
+
+Configure cmdline to:
+ ip=br0:dhcp bridge=br0:bond0 bond=bond0:eth0
+
+By default ifup bond0 will run dhcp on bond0, which is wrong. bond0
+isn't the top interface. we should really run dhcp on br0.
+
+So if we ifup an network interface on secondary stack, we should not
+dhcp. Fix this issue with this patch.
+---
+ modules.d/40network/ifup.sh | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/modules.d/40network/ifup.sh b/modules.d/40network/ifup.sh
+index 3261647..9f6f449 100755
+--- a/modules.d/40network/ifup.sh
++++ b/modules.d/40network/ifup.sh
+@@ -336,6 +336,13 @@ for p in $(getargs ip=); do
+     exit 0
+ done
+ 
++# netif isn't the top stack? Then we should exit here.
++# eg. netif is bond0. br0 is on top of it. dhcp br0 is correct but dhcp
++#     bond0 doesn't make sense.
++if [ -n "$DO_BOND_SETUP" -o -n "$DO_TEAM_SETUP" -o -n "$DO_VLAN_SETUP" ]; then
++    exit 0
++fi
++
+ # no ip option directed at our interface?
+ if [ ! -e /tmp/setup_net_${netif}.ok ]; then
+     do_dhcp -4
+-- 
+1.8.3.2
+

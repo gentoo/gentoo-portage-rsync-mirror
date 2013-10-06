@@ -1,0 +1,46 @@
+From cb669ae9816be6d213b68c380b5720f05d43e4c7 Mon Sep 17 00:00:00 2001
+From: Peter Rajnoha <prajnoha@redhat.com>
+Date: Fri, 4 Oct 2013 10:41:24 +0200
+Subject: [PATCH 7/9] lvm/mdraid: Fix LVM on MD activation
+
+The 69-dm-lvm-metad.rules set some udev env. variables that makes it
+possible to detect the right time to activate LVM on MD. The MD is very
+similar to DM during activation - it's usable only after proper device
+activation - the CHANGE event. We need to make a difference between a
+CHANGE event that comes from this activation and CHANGE event that is
+the outcome of the WATCH udev rule (otherwise we'd end up with LVM
+activation done on each CHANGE event - which is wrong).
+
+So we need the udev databse to be persistent during pivot to root fs
+even for MD devices.
+---
+ modules.d/90lvm/module-setup.sh                   | 2 +-
+ modules.d/90mdraid/59-persistent-storage-md.rules | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/modules.d/90lvm/module-setup.sh b/modules.d/90lvm/module-setup.sh
+index 2ef9a51..f98ffff 100755
+--- a/modules.d/90lvm/module-setup.sh
++++ b/modules.d/90lvm/module-setup.sh
+@@ -82,7 +82,7 @@ install() {
+         } > "${initdir}/etc/lvm/lvm.conf"
+     fi
+ 
+-    inst_rules 11-dm-lvm.rules
++    inst_rules 11-dm-lvm.rules 69-dm-lvm-metad.rules
+     # Gentoo ebuild for LVM2 prior to 2.02.63-r1 doesn't install above rules
+     # files, but provides the one below:
+     inst_rules 64-device-mapper.rules
+diff --git a/modules.d/90mdraid/59-persistent-storage-md.rules b/modules.d/90mdraid/59-persistent-storage-md.rules
+index bea9325..6ef858a 100644
+--- a/modules.d/90mdraid/59-persistent-storage-md.rules
++++ b/modules.d/90mdraid/59-persistent-storage-md.rules
+@@ -20,4 +20,5 @@ IMPORT{program}="/sbin/mdadm --detail --export $tempnode"
+ IMPORT BLKID
+ OPTIONS+="link_priority=100"
+ OPTIONS+="watch"
++OPTIONS+="db_persist"
+ LABEL="md_end"
+-- 
+1.8.3.2
+

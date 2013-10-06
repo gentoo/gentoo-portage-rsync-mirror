@@ -1,0 +1,29 @@
+From 5e588b0713bf149660817979e25fd443e319aeb9 Mon Sep 17 00:00:00 2001
+From: Harald Hoyer <harald@redhat.com>
+Date: Fri, 13 Sep 2013 16:33:01 +0200
+Subject: [PATCH 5/9] dracut.sh: harden host_modalias reading
+
+Some weird PPC driver make their modulias unreadable
+
+$ cat /sys/devices/vio/4000/modalias
+cat: /sys/devices/vio/4000/modalias: No such device
+---
+ dracut.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/dracut.sh b/dracut.sh
+index 066d9d6..bc46b1c 100755
+--- a/dracut.sh
++++ b/dracut.sh
+@@ -921,7 +921,7 @@ if [[ $hostonly ]]; then
+     declare -A host_modalias
+     find  /sys/devices/ -name modalias -print > "$initdir/.modalias"
+     while read m; do
+-        host_modalias["$(<"$m")"]=1
++        modalias="$(<"$m")" && [[ $modalias ]] && host_modalias["$modalias"]=1
+     done < "$initdir/.modalias"
+     rm -f -- "$initdir/.modalias"
+ 
+-- 
+1.8.3.2
+
