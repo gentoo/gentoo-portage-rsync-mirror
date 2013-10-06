@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.30 2013/09/27 01:41:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.31 2013/10/06 13:38:35 idella4 Exp $
+
+  06 Oct 2013; Ian Delaney <idella4@gentoo.org> metadata.xml,
+  nova-2013.1.3-r6.ebuild:
+  add openstack herd to metadata.xml & disabled stub for test phase in
+  2013.1.3-r6
 
   27 Sep 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml,
   nova-2012.2.4-r10.ebuild, nova-2013.1.3-r6.ebuild, nova-2013.1.9999.ebuild,

@@ -1,14 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.3-r6.ebuild,v 1.2 2013/09/27 01:41:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.3-r6.ebuild,v 1.3 2013/10/06 13:38:35 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils multilib
 
-DESCRIPTION="Nova is a cloud computing fabric controller (main part of an
-IaaS system). It is written in Python."
+DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python."
 HOMEPAGE="https://launchpad.net/nova"
 SRC_URI="http://launchpad.net/${PN}/grizzly/${PV}/+download/${P}.tar.gz"
 
@@ -75,6 +74,10 @@ pkg_setup() {
 	enewgroup nova
 	enewuser nova -1 -1 /var/lib/nova nova
 }
+
+#python_test() {
+#	nosetests || die
+#}
 
 python_install() {
 	distutils-r1_python_install
