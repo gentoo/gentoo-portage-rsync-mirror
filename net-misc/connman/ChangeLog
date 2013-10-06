@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.71 2013/10/06 20:28:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.72 2013/10/06 20:33:40 chainsaw Exp $
+
+  06 Oct 2013; Tony Vroon <chainsaw@gentoo.org>
+  -files/connman-0.79-glib-include.patch,
+  -files/connman-1.11-ip6-incomplete-type.patch, -files/connman.initd:
+  These patches are no longer used.
 
 *connman-1.18 (06 Oct 2013)
 *connman-1.17 (06 Oct 2013)
