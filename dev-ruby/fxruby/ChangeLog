@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.114 2013/09/05 00:04:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.115 2013/10/06 10:21:21 mabi Exp $
+
+  06 Oct 2013; Matti Bickel <mabi@gentoo.org> fxruby-1.6.25.ebuild,
+  fxruby-1.6.28.ebuild:
+  fix compile error by referencing fxscintilla.so instead of non-existent
+  fxscintilla-1.6 (bug #430526)
 
   05 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -fxruby-1.6.26.ebuild,
   -fxruby-1.6.27.ebuild:
