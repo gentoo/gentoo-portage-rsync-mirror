@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup
+DEPEND=hesiod? ( net-dns/hesiod ) ssl? ( >=dev-libs/openssl-0.9.6 ) kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 ) nls? ( virtual/libintl ) !elibc_glibc? ( sys-libs/e2fsprogs-libs ) socks? ( net-proxy/dante ) tk? ( python_single_target_python2_6? ( dev-lang/python:2.6[tk] ) python_single_target_python2_7? ( dev-lang/python:2.7[tk] ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) sys-devel/flex nls? ( sys-devel/gettext ) virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=the legendary remote-mail retrieval and forwarding utility
+EAPI=5
+HOMEPAGE=http://fetchmail.berlios.de
+IUSE=ssl nls kerberos hesiod tk socks python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+LICENSE=GPL-2 public-domain
+RDEPEND=hesiod? ( net-dns/hesiod ) ssl? ( >=dev-libs/openssl-0.9.6 ) kerberos? ( virtual/krb5 >=dev-libs/openssl-0.9.6 ) nls? ( virtual/libintl ) !elibc_glibc? ( sys-libs/e2fsprogs-libs ) socks? ( net-proxy/dante ) tk? ( python_single_target_python2_6? ( dev-lang/python:2.6[tk] ) python_single_target_python2_7? ( dev-lang/python:2.7[tk] ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] )
+REQUIRED_USE=tk? ( python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 ) )
+SLOT=0
+SRC_URI=mirror://berlios/fetchmail/fetchmail-6.3.26.tar.bz2
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	python-single-r1	fa36040985cb5e3cdd31d44be94d15bc	python-utils-r1	3b392f7373bcc74b7c97ae0acd9ec0e6	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=34ade9f08ef59874879e31a56fbcb19c
