@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.70 2013/10/04 04:11:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.71 2013/10/06 20:28:00 chainsaw Exp $
+
+*connman-1.18 (06 Oct 2013)
+*connman-1.17 (06 Oct 2013)
+*connman-1.16 (06 Oct 2013)
+
+  06 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +connman-1.16.ebuild,
+  +connman-1.17.ebuild, +connman-1.18.ebuild,
+  +files/connman-1.16-execinfo-assumptions.patch:
+  Now compatible with uclibc thanks to Amadeusz Sławiński, closes bug
+  #475422. Version bumps as requested by José Romildo Malaquias in bug
+  #486784. DHCPv6 support almost RFC-compliant now. Machine-generated config
+  files no longer have trailing whitespace. 1.18 will be the stable candidate.
 
   04 Oct 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> -connman-1.0-r1.ebuild,
   -connman-1.9.ebuild, -connman-1.11.ebuild, -connman-1.13.ebuild,
