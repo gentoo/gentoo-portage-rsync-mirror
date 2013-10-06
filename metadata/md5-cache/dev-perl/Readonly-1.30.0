@@ -3,10 +3,10 @@ DEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Facility for creating read-only scalars, arrays, hashes
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Readonly/
-KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc sparc x86 ~ppc-aix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris
+KEYWORDS=~alpha amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86 ~ppc-aix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RO/ROODE/Readonly-1.03.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6129a30fda0c7672646ebddb07b14d24
+_md5_=415b9d60c931335edc3367cf1ec3dabc

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Readonly
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.16 2013/09/16 13:16:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.17 2013/10/06 18:18:19 zlogene Exp $
+
+  06 Oct 2013; Mikle Kolyada <zlogene@gentoo.org> Readonly-1.30.0.ebuild:
+  added ~ppc64 keyword wrt bug #484458
 
   16 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> Readonly-1.30.0.ebuild:
   added ~ia64 keyword wrt bug #484458
