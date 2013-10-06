@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r7.ebuild,v 1.1 2013/10/03 06:11:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r7.ebuild,v 1.2 2013/10/06 08:29:26 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -68,6 +68,8 @@ src_prepare() {
 
 	# Use static group "plugdev" if there is no ConsoleKit (or systemd logind)
 	epatch "${FILESDIR}"/bluez-plugdev.patch
+
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
 
 	eautoreconf
 
