@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tptest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.14 2013/10/05 06:19:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.15 2013/10/06 07:51:14 ago Exp $
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> tptest-3.1.7-r2.ebuild:
+  Stable for x86, wrt bug #261191
 
   05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> tptest-3.1.7-r2.ebuild:
   Stable for amd64, wrt bug #261191

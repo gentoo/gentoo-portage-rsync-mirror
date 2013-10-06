@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.36 2013/10/05 10:38:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.37 2013/10/06 07:57:54 ago Exp $
+
+  06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ant-eclipse-ecj-4.2.1.ebuild:
+  Stable for x86, wrt bug #469434
 
   05 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ant-eclipse-ecj-4.2.1.ebuild:
   Stable for amd64, wrt bug #469434
