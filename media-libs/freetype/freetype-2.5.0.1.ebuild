@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.0.1.ebuild,v 1.1 2013/10/05 12:31:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.0.1.ebuild,v 1.2 2013/10/06 05:07:31 dirtyepic Exp $
 
 EAPI=5
 
@@ -83,7 +83,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.12-clean-include.patch # 482172
 
 	if use utils; then
-		cd "${WORKDIR}/ft2demos-${PV}" || die
+		cd "${WORKDIR}/ft2demos-${MY_PV}" || die
 		# Disable tests needing X11 when USE="-X". (bug #177597)
 		if ! use X; then
 			sed -i -e "/EXES\ +=\ ftdiff/ s:^:#:" Makefile || die
