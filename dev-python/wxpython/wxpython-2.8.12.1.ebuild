@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1.ebuild,v 1.17 2012/09/05 09:36:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1.ebuild,v 1.18 2013/10/06 09:01:39 dirtyepic Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -21,7 +21,7 @@ SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2
 
 LICENSE="wxWinLL-3"
 SLOT="2.8"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="cairo doc examples opengl"
 
 RDEPEND="
