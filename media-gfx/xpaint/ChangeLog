@@ -1,0 +1,15 @@
+# ChangeLog for media-gfx/xpaint
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.18 2013/10/06 19:51:16 hasufell Exp $
+
+  06 Oct 2013; Julian Ospald <hasufell@gentoo.org> xpaint-2.9.9.4.ebuild:
+  fix typo in elog
+
+*xpaint-2.9.9.4 (06 Oct 2013)
+
+  06 Oct 2013; Julian Ospald <hasufell@gentoo.org> +xpaint-2.9.9.4.ebuild,
+  +files/xpaint-2.9.9.4-QA1.patch, +files/xpaint-2.9.9.4-QA2.patch,
+  +files/xpaint-2.9.9.4-autoreconf.patch,
+  +files/xpaint-2.9.9.4-parallel-make.patch,
+  +files/xpaint-2.9.9.4-submake.patch, +metadata.xml:
+  initial import wrt #144283
