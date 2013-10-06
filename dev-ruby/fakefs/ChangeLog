@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.40 2013/09/07 11:23:34 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.41 2013/10/06 12:07:31 mrueg Exp $
+
+*fakefs-0.4.3-r1 (06 Oct 2013)
+
+  06 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +fakefs-0.4.3-r1.ebuild:
+  Add ruby20 target.
 
 *fakefs-0.4.3 (07 Sep 2013)
 
