@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXft
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.94 2013/10/06 11:45:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/ChangeLog,v 1.95 2013/10/07 04:58:35 ago Exp $
+
+  07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libXft-2.3.1-r1.ebuild:
+  Stable for sparc, wrt bug #475480
 
   06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libXft-2.3.1-r1.ebuild:
   Stable for ia64, wrt bug #475480

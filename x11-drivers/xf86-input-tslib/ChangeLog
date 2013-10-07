@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-tslib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/ChangeLog,v 1.51 2013/10/06 11:43:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-tslib/ChangeLog,v 1.52 2013/10/07 04:57:06 ago Exp $
+
+  07 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
+  xf86-input-tslib-0.0.6-r3.ebuild:
+  Stable for sparc, wrt bug #475480
 
   06 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   xf86-input-tslib-0.0.6-r3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-modesetting
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-modesetting/ChangeLog,v 1.39 2013/10/06 11:43:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-modesetting/ChangeLog,v 1.40 2013/10/07 04:57:23 ago Exp $
+
+  07 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
+  xf86-video-modesetting-0.8.0.ebuild:
+  Stable for sparc, wrt bug #475480
 
   06 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-modesetting-0.8.0.ebuild:

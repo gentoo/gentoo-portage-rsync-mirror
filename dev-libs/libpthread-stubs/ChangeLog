@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpthread-stubs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.34 2013/10/06 11:40:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.35 2013/10/07 04:54:03 ago Exp $
+
+  07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libpthread-stubs-0.3-r1.ebuild:
+  Stable for sparc, wrt bug #475480
 
   06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libpthread-stubs-0.3-r1.ebuild:
   Stable for ia64, wrt bug #475480
