@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/shared-mime-info
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.195 2013/02/21 18:00:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.196 2013/10/07 14:55:27 ssuominen Exp $
+
+*shared-mime-info-1.2 (07 Oct 2013)
+
+  07 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +shared-mime-info-1.2.ebuild:
+  Version bump.
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> shared-mime-info-1.1.ebuild:
   Add ~arm-linux keyword.

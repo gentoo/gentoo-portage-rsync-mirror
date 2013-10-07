@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.9 2013/09/04 17:57:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lab-Measurement/Lab-Measurement-9999.ebuild,v 1.10 2013/10/07 14:44:48 dilfridge Exp $
 
 EAPI=5
 
@@ -30,14 +30,15 @@ IUSE="debug +xpression"
 RDEPEND="
 	dev-perl/Clone
 	dev-perl/Exception-Class
+	dev-perl/Hook-LexWrap
 	dev-perl/TermReadKey
 	dev-perl/TeX-Encode
 	dev-perl/XML-Generator
 	dev-perl/XML-DOM
 	dev-perl/XML-Twig
 	dev-perl/encoding-warnings
-	perl-core/Switch
 	sci-visualization/gnuplot
+	virtual/perl-Class-ISA
 	virtual/perl-Data-Dumper
 	virtual/perl-Encode
 	virtual/perl-Switch
