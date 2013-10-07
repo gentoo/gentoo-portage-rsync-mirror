@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.9-r1.ebuild,v 1.1 2013/10/07 12:43:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.9-r1.ebuild,v 1.2 2013/10/07 13:19:09 jer Exp $
 
 EAPI=5
 inherit autotools eutils libtool
@@ -35,7 +35,10 @@ RDEPEND="
 		gnutls? ( >=net-libs/gnutls-1.2.3 )
 		openssl? ( >=dev-libs/openssl-0.9.6 )
 	)
-	verify-file? ( virtual/perl-Digest-MD5 )
+	verify-file? (
+		dev-perl/string-crc32
+		virtual/perl-Digest-MD5
+	)
 "
 
 DEPEND="
