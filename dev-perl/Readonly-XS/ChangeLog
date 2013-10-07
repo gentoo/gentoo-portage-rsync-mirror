@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Readonly-XS
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly-XS/ChangeLog,v 1.10 2013/10/06 18:19:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly-XS/ChangeLog,v 1.11 2013/10/07 09:06:37 pinkbyte Exp $
+
+  07 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> Readonly-XS-1.50.0.ebuild:
+  Add ~arm keyword, wrt bug #484458
 
   06 Oct 2013; Mikle Kolyada <zlogene@gentoo.org> Readonly-XS-1.50.0.ebuild:
   added ~ppc64 keyword wrt bug #484458
