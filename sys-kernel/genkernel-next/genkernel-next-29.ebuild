@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-29.ebuild,v 1.1 2013/10/06 12:20:31 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-29.ebuild,v 1.2 2013/10/07 08:40:47 lxnay Exp $
 
 EAPI=5
 
@@ -42,7 +42,6 @@ RDEPEND="${DEPEND}
 	!<sys-apps/openrc-0.9.9
 	sys-apps/util-linux
 	sys-block/thin-provisioning-tools
-	sys-fs/dmraid
 	sys-fs/lvm2"
 
 src_prepare() {

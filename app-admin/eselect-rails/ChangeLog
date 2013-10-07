@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.54 2013/07/19 08:51:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.55 2013/10/07 08:41:29 graaff Exp $
+
+*eselect-rails-0.19 (07 Oct 2013)
+
+  07 Oct 2013; Hans de Graaff <graaff@gentoo.org> +eselect-rails-0.19.ebuild:
+  Version bump for Rails 4. Update EAPI to 5.
 
   19 Jul 2013; Hans de Graaff <graaff@gentoo.org> -eselect-rails-0.16.ebuild:
   Cleanup.

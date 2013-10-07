@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/genkernel-next
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.14 2013/10/06 12:20:31 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.15 2013/10/07 08:40:47 lxnay Exp $
+
+  07 Oct 2013; Fabio Erculiani <lxnay@gentoo.org> genkernel-next-24-r1.ebuild,
+  genkernel-next-29.ebuild:
+  Fix sys-fs/dmraid dependency, bug #487114
 
 *genkernel-next-29 (06 Oct 2013)
 
