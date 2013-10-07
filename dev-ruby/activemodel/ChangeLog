@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.59 2013/08/17 10:31:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.60 2013/10/07 12:34:44 graaff Exp $
+
+*activemodel-4.0.0 (07 Oct 2013)
+
+  07 Oct 2013; Hans de Graaff <graaff@gentoo.org> +activemodel-4.0.0.ebuild:
+  Version bump for Rails 4. Dropped keywords in bug 487206.
 
 *activemodel-3.2.14 (17 Aug 2013)
 

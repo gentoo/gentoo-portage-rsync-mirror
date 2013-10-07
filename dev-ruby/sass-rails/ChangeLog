@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sass-rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.8 2013/01/17 07:36:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.9 2013/10/07 12:37:48 graaff Exp $
+
+*sass-rails-4.0.0 (07 Oct 2013)
+
+  07 Oct 2013; Hans de Graaff <graaff@gentoo.org> +sass-rails-4.0.0.ebuild:
+  Version bump for Rails 4. Dropped keywords in bug 487206.
 
 *sass-rails-3.2.6 (17 Jan 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.430 2013/09/30 17:16:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.431 2013/10/07 12:43:36 jer Exp $
+
+*lftp-4.4.9-r1 (07 Oct 2013)
+
+  07 Oct 2013; Jeroen Roovers <jer@gentoo.org> +lftp-4.4.9-r1.ebuild,
+  metadata.xml:
+  Optionally install perl scripts (bug #486762).
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lftp-4.4.9.ebuild:
   Stable for x86, wrt bug #485590

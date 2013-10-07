@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/atomic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/atomic/ChangeLog,v 1.7 2013/09/12 15:30:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/atomic/ChangeLog,v 1.8 2013/10/07 12:50:49 jer Exp $
+
+  07 Oct 2013; Jeroen Roovers <jer@gentoo.org> atomic-1.1.14.ebuild:
+  Marked ~hppa (bug #487178).
 
 *atomic-1.1.14 (12 Sep 2013)
 

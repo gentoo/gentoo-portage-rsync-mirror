@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.271 2013/08/17 10:32:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.272 2013/10/07 12:37:30 graaff Exp $
+
+*rails-4.0.0 (07 Oct 2013)
+
+  07 Oct 2013; Hans de Graaff <graaff@gentoo.org> +rails-4.0.0.ebuild:
+  Version bump for Rails 4. Dropped keywords in bug 487206.
 
 *rails-3.2.14 (17 Aug 2013)
 
