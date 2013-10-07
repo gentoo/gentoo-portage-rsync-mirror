@@ -1,0 +1,15 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Thu Sep  5 19:41:30 UTC 2013
+Subject: respect CFLAGS in linking command
+
+--- polarssl-1.2.8/library/Makefile
++++ polarssl-1.2.8/library/Makefile
+@@ -71,7 +71,7 @@
+ 
+ libpolarssl.so: libpolarssl.a
+ 	echo "  LD    $@"
+-	$(CC) ${LDFLAGS} -shared -Wl,-soname,$(SONAME) -o $@ $(OBJS)
++	$(CC) $(CFLAGS) ${LDFLAGS} -shared -Wl,-soname,$(SONAME) -o $@ $(OBJS)
+ 
+ libpolarssl.dylib: libpolarssl.a
+ 	echo "  LD    $@"

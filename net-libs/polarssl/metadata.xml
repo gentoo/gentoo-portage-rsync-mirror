@@ -8,4 +8,10 @@
 		The aim of the PolarSSL project is to provide a quality, open-source
 		cryptographic library written in C and targeted at embedded systems.
 	</longdescription>
+	<use>
+		<flag name="havege">Enable the HAVEGE random generator. 
+			Warning: the HAVEGE random generator is not suitable for virtualized
+			environments
+		</flag>
+	</use>
 </pkgmetadata>

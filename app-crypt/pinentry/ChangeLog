@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.146 2013/06/15 22:27:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.147 2013/10/07 18:24:02 radhermit Exp $
+
+*pinentry-0.8.3 (07 Oct 2013)
+
+  07 Oct 2013; Tim Harder <radhermit@gentoo.org> +pinentry-0.8.3.ebuild:
+  Version bump (bug #487188).
 
   15 Jun 2013; Alon Bar-Lev <alonbl@gentoo.org>
   +files/pinentry-0.8.2-texi.patch, pinentry-0.8.2.ebuild:
