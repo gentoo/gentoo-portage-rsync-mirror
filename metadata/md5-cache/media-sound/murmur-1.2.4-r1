@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare setup unpack
-DEPEND=>=dev-libs/openssl-1.0.0b >=dev-libs/protobuf-2.2.0 sys-apps/lsb-release >=sys-libs/libcap-2.15 dev-qt/qtcore:4[ssl] || ( dev-qt/qtsql:4[sqlite] dev-qt/qtsql:4[mysql] ) dev-qt/qtxmlpatterns:4 dbus? ( dev-qt/qtdbus:4 ) ice? ( dev-libs/Ice ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] ) >=dev-libs/boost-1.41.0 virtual/pkgconfig virtual/pkgconfig
+DEPEND=>=dev-libs/openssl-1.0.0b >=dev-libs/protobuf-2.2.0 sys-apps/lsb-release >=sys-libs/libcap-2.15 dev-qt/qtcore:4[ssl] || ( dev-qt/qtsql:4[sqlite] dev-qt/qtsql:4[mysql] ) dev-qt/qtxmlpatterns:4 dbus? ( dev-qt/qtdbus:4 ) ice? ( >=dev-libs/Ice-3.5.0 ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] ) >=dev-libs/boost-1.41.0 virtual/pkgconfig virtual/pkgconfig
 DESCRIPTION=Mumble is an open source, low-latency, high quality voice chat software
 EAPI=5
 HOMEPAGE=http://mumble.sourceforge.net/
 IUSE=+dbus debug +ice pch zeroconf
 KEYWORDS=~amd64 ~ia64 ~x86
 LICENSE=BSD
-RDEPEND=>=dev-libs/openssl-1.0.0b >=dev-libs/protobuf-2.2.0 sys-apps/lsb-release >=sys-libs/libcap-2.15 dev-qt/qtcore:4[ssl] || ( dev-qt/qtsql:4[sqlite] dev-qt/qtsql:4[mysql] ) dev-qt/qtxmlpatterns:4 dbus? ( dev-qt/qtdbus:4 ) ice? ( dev-libs/Ice ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
+RDEPEND=>=dev-libs/openssl-1.0.0b >=dev-libs/protobuf-2.2.0 sys-apps/lsb-release >=sys-libs/libcap-2.15 dev-qt/qtcore:4[ssl] || ( dev-qt/qtsql:4[sqlite] dev-qt/qtsql:4[mysql] ) dev-qt/qtxmlpatterns:4 dbus? ( dev-qt/qtdbus:4 ) ice? ( >=dev-libs/Ice-3.5.0 ) zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 SLOT=0
 SRC_URI=http://mumble.info/snapshot/mumble-1.2.4.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=17c68561ed2621bd9d1e5b6c28424e8f
+_md5_=347f15b90b5f7f0d28aeba0e9560e8cf
