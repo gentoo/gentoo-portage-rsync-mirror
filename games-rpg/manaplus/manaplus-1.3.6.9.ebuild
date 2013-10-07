@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/manaplus/manaplus-1.3.6.9.ebuild,v 1.3 2013/06/25 12:56:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/manaplus/manaplus-1.3.6.9.ebuild,v 1.4 2013/10/07 14:04:27 hasufell Exp $
 
 EAPI=5
 
@@ -63,7 +63,6 @@ src_install() {
 	dosym /usr/share/fonts/dejavu/DejaVuSans-Bold.ttf "${GAMES_DATADIR}"/${PN}/data/fonts/dejavusans-bold.ttf
 	dosym /usr/share/fonts/dejavu/DejaVuSans.ttf "${GAMES_DATADIR}"/${PN}/data/fonts/dejavusans.ttf
 	dosym /usr/share/fonts/dejavu/DejaVuSansMono.ttf "${GAMES_DATADIR}"/${PN}/data/fonts/dejavusans-mono.ttf
-	insinto "${GAMES_DATADIR}"/${PN}/data
 
 	prepgamesdirs
 }
