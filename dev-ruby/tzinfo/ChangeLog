@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.117 2013/08/26 06:11:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.118 2013/10/07 07:12:48 graaff Exp $
+
+*tzinfo-1.1.0 (07 Oct 2013)
+
+  07 Oct 2013; Hans de Graaff <graaff@gentoo.org> -tzinfo-1.0.1.ebuild,
+  +tzinfo-1.1.0.ebuild:
+  Version bump. Drop all arches except amd64 for new thread_safe dependency,
+  bug 487178. Move into a separate slot because most dependencies expect this.
 
 *tzinfo-1.0.1 (26 Aug 2013)
 
