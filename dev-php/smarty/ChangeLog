@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.117 2013/10/06 15:18:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.118 2013/10/07 19:29:18 ago Exp $
+
+  07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> smarty-3.1.12.ebuild:
+  Stable for ppc, wrt bug #435618
 
   06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> smarty-3.1.12.ebuild:
   Stable for alpha, wrt bug #435618

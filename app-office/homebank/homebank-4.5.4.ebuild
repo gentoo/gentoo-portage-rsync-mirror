@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.4.ebuild,v 1.3 2012/12/15 15:53:48 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.5.4.ebuild,v 1.1 2013/10/07 19:04:55 calchan Exp $
 
 EAPI="4"
 
@@ -20,10 +20,6 @@ RDEPEND=">=x11-libs/gtk+-2.20
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40.5"
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-fix_tests.patch"
-}
 
 src_configure() {
 	econf $(use_with ofx)

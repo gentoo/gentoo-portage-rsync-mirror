@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.21.ebuild,v 1.1 2013/08/19 16:55:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.22.ebuild,v 1.1 2013/10/07 19:19:58 alonbl Exp $
 
 EAPI="5"
 
@@ -57,11 +57,12 @@ RDEPEND="!static? ( ${COMMON_DEPEND_LIBS} )
 REQUIRED_USE="smartcard? ( !static )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.0.17-gpgsm-gencert.patch
+	epatch "${FILESDIR}/${PN}-2.0.17-gpgsm-gencert.patch"
+	epatch_user
 }
 
 src_configure() {
-	local myconf
+	local myconf=()
 
 	# 'USE=static' support was requested:
 	# gnupg1: bug #29299
@@ -69,9 +70,12 @@ src_configure() {
 	use static && append-ldflags -static
 
 	if use smartcard; then
-		myconf+=" --enable-scdaemon $(use_enable usb ccid-driver)"
+		myconf+=(
+			--enable-scdaemon
+			$(use_enable usb ccid-driver)
+		)
 	else
-		myconf+=" --disable-scdaemon"
+		myconf+=( --disable-scdaemon )
 	fi
 
 	econf \
@@ -79,7 +83,7 @@ src_configure() {
 		--enable-gpg \
 		--enable-gpgsm \
 		--enable-agent \
-		${myconf} \
+		"${myconf[@]}" \
 		$(use_with adns) \
 		$(use_enable bzip2) \
 		$(use_enable !elibc_SunOS symcryptrun) \
@@ -91,7 +95,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	default
 
 	if use doc; then
 		cd doc
@@ -100,7 +104,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
+
 	emake DESTDIR="${D}" -f doc/Makefile uninstall-nobase_dist_docDATA
 	rm "${ED}"/usr/share/gnupg/help* || die
 

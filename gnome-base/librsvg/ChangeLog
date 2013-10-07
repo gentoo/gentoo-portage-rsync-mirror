@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.316 2013/10/06 15:19:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.317 2013/10/07 19:30:05 ago Exp $
+
+  07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> librsvg-2.36.4-r1.ebuild:
+  Stable for ppc, wrt bug #486600
 
   06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> librsvg-2.36.4-r1.ebuild:
   Stable for alpha, wrt bug #486600
