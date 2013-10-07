@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15143 2013/10/05 12:12:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15144 2013/10/07 05:42:49 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -566,10 +566,6 @@ x11-misc/pcmanfm-qt
 # experimental features and accept a more unstable release.
 www-client/google-chrome:unstable
 www-plugins/chrome-binary-plugins:unstable
-
-# Ryan Hill <dirtyepic@gentoo.org> (03 Apr 2013)
-# masked for porting (bug #461954)
->=sys-devel/gcc-4.8.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (02 Apr 2013)
 # Masking =media-libs/ffmpegsource-2.17.4_pre753

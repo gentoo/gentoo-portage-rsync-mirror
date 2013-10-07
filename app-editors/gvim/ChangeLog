@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.413 2013/09/27 19:27:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.414 2013/10/07 05:38:10 radhermit Exp $
+
+  07 Oct 2013; Tim Harder <radhermit@gentoo.org> gvim-7.4.22.ebuild,
+  gvim-7.4.41.ebuild, gvim-9999.ebuild:
+  Fix DESCRIPTION overwritten when migrated away from vim eclass.
 
 *gvim-7.4.41 (27 Sep 2013)
 
