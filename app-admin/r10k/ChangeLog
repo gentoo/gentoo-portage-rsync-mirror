@@ -1,0 +1,8 @@
+# ChangeLog for app-admin/r10k
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/ChangeLog,v 1.1 2013/10/07 19:40:59 vikraman Exp $
+
+*r10k-1.1.0 (07 Oct 2013)
+
+  07 Oct 2013; Vikraman <vikraman@gentoo.org> +metadata.xml, +r10k-1.1.0.ebuild:
+  New ebuild for app-admin/r10k, a puppet deployment tool
