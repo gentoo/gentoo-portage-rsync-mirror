@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1011 2013/10/06 14:37:31 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1012 2013/10/07 12:21:14 hd_brummy Exp $
+
+  07 Oct 2013; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  small modification on output from function dev_check
 
   06 Oct 2013; Vlastimil Babka <caster@gentoo.org> java-utils-2.eclass:
   Convert comments for eclass manpages. Heavily based on work from ercpe, bug
