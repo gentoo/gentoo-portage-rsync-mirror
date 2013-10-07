@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.21.ebuild,v 1.1 2013/09/28 21:02:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.21.ebuild,v 1.2 2013/10/07 16:41:48 tetromino Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic gnome2-utils gnome.org multilib virtualx autotools readme.gentoo
@@ -51,13 +51,13 @@ DEPEND="${COMMON_DEPEND}
 		x11-proto/damageproto
 	)
 	xinerama? ( x11-proto/xineramaproto )
+	dev-libs/gobject-introspection-common
 	>=dev-util/gtk-doc-am-1.11
 	test? (
 		x11-themes/hicolor-icon-theme
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc )
 "
-# introspection.m4 is in the tarball, so gobject-introspection-common is not needed
 
 # gtk+-2.24.8 breaks Alt key handling in <=x11-libs/vte-0.28.2:0
 # Add blocker against old gtk-builder-convert to be sure we maintain both

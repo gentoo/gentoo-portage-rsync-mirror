@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.676 2013/09/28 21:02:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.677 2013/10/07 16:41:48 tetromino Exp $
+
+  07 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-2.24.21.ebuild:
+  2.24.21 tarball doesn't have introspection.m4 (bug #487220, thanks to
+  wojtek).
 
 *gtk+-2.24.21 (28 Sep 2013)
 
