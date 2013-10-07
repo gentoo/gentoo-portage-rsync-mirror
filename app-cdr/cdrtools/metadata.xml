@@ -6,5 +6,11 @@
 <email>billie@gentoo.org</email>
 <name>Daniel Pielmeier</name>
 </maintainer>
+<upstream>
+<maintainer>
+<email>joerg.schilling@fokus.fraunhofer.de</email>
+<description>Upstream author, please CC on bugs</description>
+</maintainer>
+</upstream>
 <longdescription>CD and DVD command line recording and ripping tools.</longdescription>
 </pkgmetadata>
