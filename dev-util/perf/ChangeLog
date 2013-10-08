@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.22 2013/03/21 05:38:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.23 2013/10/08 22:46:22 vapier Exp $
+
+*perf-3.8-r1 (08 Oct 2013)
+
+  08 Oct 2013; Mike Frysinger <vapier@gentoo.org> +perf-3.8-r1.ebuild,
+  metadata.xml:
+  Fix call to linux-info pkg_setup.  Update SRC_URI paths to handle v3.x
+  upstream.  Fix bash-completion install path.  Simplify/fix doc building.  Add
+  arm lovin.  Handle USE="audit libunwind" #485110 by Richard Yao.
 
   21 Mar 2013; Patrick Lauer <patrick@gentoo.org> perf-3.8.ebuild:
   Avoiding parallel make failure #461710

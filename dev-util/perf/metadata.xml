@@ -5,6 +5,9 @@
     <email>naota@gentoo.org</email>
   </maintainer>
   <use>
+    <flag name="audit">
+      Enable support for sys-process/audit.
+    </flag>
     <flag name="demangle">
       Enable C++ symbol name demangling, using libbfd from
       <pkg>sys-devel/binutils</pkg>. When this flag is enabled, the
@@ -20,6 +23,9 @@
     </flag>
     <flag name="perl">
       Add support for Perl as a scripting language for perf tools.
+    </flag>
+    <flag name="unwind">
+      Use sys-libs/libunwind for frame unwinding support.
     </flag>
   </use>
 </pkgmetadata>
