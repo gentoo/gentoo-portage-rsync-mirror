@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.9.2.ebuild,v 1.1 2013/10/07 18:06:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.9.2.ebuild,v 1.2 2013/10/08 18:32:41 hwoarang Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ SLOT="0"
 IUSE="nls upower"
 
 COMMON_DEPEND="dev-libs/glib:2
+	dev-libs/libgee:0
 	lxde-base/lxde-common
 	x11-libs/gtk+:2
 	x11-libs/libX11

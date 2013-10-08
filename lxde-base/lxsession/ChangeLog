@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.42 2013/10/07 18:06:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.43 2013/10/08 18:32:41 hwoarang Exp $
+
+  08 Oct 2013; Markos Chandras <hwoarang@gentoo.org> lxsession-0.4.9.2.ebuild:
+  Add missing dev-libs/libgee:0 dependency thanks to Viktor Yu. Kovalskiy. Bug
+  #487312
 
 *lxsession-0.4.9.2 (07 Oct 2013)
 

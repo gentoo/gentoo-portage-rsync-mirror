@@ -1,6 +1,57 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.90 2013/10/06 19:17:10 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.91 2013/10/08 18:57:40 aidecoe Exp $
+
+*pyro-4.22 (08 Oct 2013)
+
+  08 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +pyro-4.22.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+
+  Pyro 4.22
+
+  - support added in daemon to accept multiple serializers in incoming messages
+  - new config item added for that: SERIALIZERS_ACCEPTED (defaults to ‘safe’
+    serializers)
+  - wire protocol header changed. Not backwards compatible! New protocol
+    version: 46.
+  - wire protocol: header now contains serializer used for the data payload
+  - wire protocol: header is extensible with optional ‘annotations’. One is
+    used for the HMAC digest that used to be in all messages even when the hmac
+    option wasn’t enabled.
+  - refactored core.MessageFactory: new submodule Pyro4.message. If you used
+    MessageFactory in your own code you’ll need to refactor it to use the new
+    Pyro4.message.Message API instead.
+  - disconnects example client code updated to reflect this API change
+  - you can now write the protocol in URIs in lowercase if you want
+    (“pyro:...”) (will still be converted to uppercase)
+  - fixed poll server loop() not handling self.clients which caused crashes
+    with a custom loopCondition
+  - fixed some unit test hang/timeout/crash issues
+  - improved unit tests for jython, disabled ipv6 tests for jython because of
+    too many issues.
+  - improved unit tests for ironpython.
+
+  Pyro 4.21
+
+  - fixed denial of service vulnerabilities in socket servers
+  - MSG_PING message type added (internal server ping mechanism)
+  - disconnects example added that uses MSG_PING
+  - more exception types recognised in the serializers (such as GeneratorExit)
+  - fixed async regression when dealing with errors (properly serialize
+    exceptionwrapper)
+  - fixed warehouse and stockmarket tutorials to work with new serializer logic
+  - fixed examples that didn’t yet work with new serializer logic
+  - fixed unit tests to use unittest2 on Python 2.6
+  - no longer supports jython 2.5. You’ll have to upgrade to jython 2.7.
+  - got rid of some byte/str handling cruft (because we no longer need to deal
+    with jython 2.5)
+  - implemented autoproxy support for serpent and json serializers. It is not
+    possible to do this for marshal.
+  - fixed serpent serialization problem with backslash escapes in unicode
+    strings (requires serpent >= 1.3)
 
   06 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> pyro-4.20.ebuild:
   Use virtual/python-unittest2. Fixes bug #483726.
