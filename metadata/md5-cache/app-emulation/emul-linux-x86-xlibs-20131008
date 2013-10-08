@@ -1,0 +1,14 @@
+DEFINED_PHASES=install prepare
+DEPEND=>=sys-apps/findutils-4.2.26
+DESCRIPTION=Provides precompiled 32bit libraries
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~pacho/emul.html
+IUSE=abi_x86_32 opengl +development
+KEYWORDS=-* ~amd64
+LICENSE=!abi_x86_32? ( FTL GPL-2 MIT ) abi_x86_32? ( metapackage )
+RDEPEND=~app-emulation/emul-linux-x86-baselibs-20131008 x11-libs/libX11 opengl? ( app-emulation/emul-linux-x86-opengl ) !abi_x86_32? ( !media-libs/fontconfig[abi_x86_32(-)] !media-libs/freetype[abi_x86_32(-)] !x11-libs/libICE[abi_x86_32(-)] !x11-libs/libpciaccess[abi_x86_32(-)] !x11-libs/libSM[abi_x86_32(-)] !x11-libs/libvdpau[abi_x86_32(-)] !x11-libs/libX11[abi_x86_32(-)] !x11-libs/libXau[abi_x86_32(-)] !x11-libs/libXaw[abi_x86_32(-)] !x11-libs/libxcb[abi_x86_32(-)] !x11-libs/libXcomposite[abi_x86_32(-)] !x11-libs/libXcursor[abi_x86_32(-)] !x11-libs/libXdamage[abi_x86_32(-)] !x11-libs/libXdmcp[abi_x86_32(-)] !x11-libs/libXext[abi_x86_32(-)] !x11-libs/libXfixes[abi_x86_32(-)] !x11-libs/libXft[abi_x86_32(-)] !x11-libs/libXi[abi_x86_32(-)] !x11-libs/libXinerama[abi_x86_32(-)] !x11-libs/libXmu[abi_x86_32(-)] !x11-libs/libXp[abi_x86_32(-)] !x11-libs/libXpm[abi_x86_32(-)] !x11-libs/libXrandr[abi_x86_32(-)] !x11-libs/libXrender[abi_x86_32(-)] !x11-libs/libXScrnSaver[abi_x86_32(-)] !x11-libs/libXt[abi_x86_32(-)] !x11-libs/libXtst[abi_x86_32(-)] !x11-libs/libXv[abi_x86_32(-)] !x11-libs/libXvMC[abi_x86_32(-)] !x11-libs/libXxf86dga[abi_x86_32(-)] !x11-libs/libXxf86vm[abi_x86_32(-)] ) abi_x86_32? ( media-libs/fontconfig[abi_x86_32(-)] media-libs/freetype[abi_x86_32(-)] x11-libs/libICE[abi_x86_32(-)] x11-libs/libpciaccess[abi_x86_32(-)] x11-libs/libSM[abi_x86_32(-)] x11-libs/libvdpau[abi_x86_32(-)] x11-libs/libX11[abi_x86_32(-)] x11-libs/libXau[abi_x86_32(-)] x11-libs/libXaw[abi_x86_32(-)] x11-libs/libxcb[abi_x86_32(-)] x11-libs/libXcomposite[abi_x86_32(-)] x11-libs/libXcursor[abi_x86_32(-)] x11-libs/libXdamage[abi_x86_32(-)] x11-libs/libXdmcp[abi_x86_32(-)] x11-libs/libXext[abi_x86_32(-)] x11-libs/libXfixes[abi_x86_32(-)] x11-libs/libXft[abi_x86_32(-)] x11-libs/libXi[abi_x86_32(-)] x11-libs/libXinerama[abi_x86_32(-)] x11-libs/libXmu[abi_x86_32(-)] x11-libs/libXp[abi_x86_32(-)] x11-libs/libXpm[abi_x86_32(-)] x11-libs/libXrandr[abi_x86_32(-)] x11-libs/libXrender[abi_x86_32(-)] x11-libs/libXScrnSaver[abi_x86_32(-)] x11-libs/libXt[abi_x86_32(-)] x11-libs/libXtst[abi_x86_32(-)] x11-libs/libXv[abi_x86_32(-)] x11-libs/libXvMC[abi_x86_32(-)] x11-libs/libXxf86dga[abi_x86_32(-)] x11-libs/libXxf86vm[abi_x86_32(-)] )
+RESTRICT=strip
+SLOT=0
+SRC_URI=!abi_x86_32? ( http://dev.gentoo.org/~pacho/emul/emul-linux-x86-xlibs-20131008.tar.xz )
+_eclasses_=emul-linux-x86	849070907fe4e8553daad52137b99265	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_md5_=b41848fb344260132287a0998485ec42

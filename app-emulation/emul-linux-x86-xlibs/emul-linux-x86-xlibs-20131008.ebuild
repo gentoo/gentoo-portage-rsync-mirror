@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-20130224-r2.ebuild,v 1.3 2013/07/31 14:07:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/emul-linux-x86-xlibs-20131008.ebuild,v 1.1 2013/10/08 21:17:43 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
