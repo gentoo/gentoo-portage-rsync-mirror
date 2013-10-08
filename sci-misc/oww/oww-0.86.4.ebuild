@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/oww/oww-0.86.2.ebuild,v 1.1 2013/03/12 12:18:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/oww/oww-0.86.4.ebuild,v 1.1 2013/10/08 14:29:10 jlec Exp $
 
 EAPI=5
+
+AUTOTOOLS_AUTORECONF=true
+
+inherit autotools-utils
 
 DESCRIPTION="A one-wire weather station for Dallas Semiconductor"
 HOMEPAGE="http://oww.sourceforge.net/"
@@ -15,22 +19,20 @@ IUSE="gtk nls usb"
 
 RDEPEND="
 	net-misc/curl
-	x11-libs/gtk+:2"
+	gtk? ( x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-src_prepare() {
-	sed -i \
-		-e "s:doc/oww:share/doc/${PF}/:" \
-		-e '/COPYING\\/d' \
-		-e '/INSTALL\\/d' \
-		Makefile.in || die "Failed to fix doc install path"
-}
+PATCHES=(
+	"${FILESDIR}"/${P}-build.patch
+	)
 
 src_configure() {
-	econf \
-		--enable-interactive \
-		$(use_enable nls) \
-		$(use_enable gtk gui) \
+	local myeconfargs=(
+		--enable-interactive
+		$(use_enable nls)
+		$(use_enable gtk gui)
 		$(use_with usb)
+	)
+	autotools-utils_src_configure
 }

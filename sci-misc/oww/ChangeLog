@@ -1,6 +1,13 @@
 # ChangeLog for sci-misc/oww
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/oww/ChangeLog,v 1.9 2013/03/12 12:18:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/oww/ChangeLog,v 1.10 2013/10/08 14:29:10 jlec Exp $
+
+*oww-0.86.4 (08 Oct 2013)
+
+  08 Oct 2013; Justin Lecher <jlec@gentoo.org> -oww-0.82.1.ebuild,
+  -oww-0.83.2.ebuild, -oww-0.86.2.ebuild, +oww-0.86.4.ebuild,
+  +files/oww-0.86.4-build.patch:
+  Drop old and version bump, #487278
 
 *oww-0.86.2 (12 Mar 2013)
 

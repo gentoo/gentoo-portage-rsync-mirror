@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.360.0.ebuild,v 1.1 2012/11/18 19:36:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.360.0.ebuild,v 1.2 2013/10/08 14:09:32 jer Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="A module that allows you to declare real exception classes in Perl"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND="

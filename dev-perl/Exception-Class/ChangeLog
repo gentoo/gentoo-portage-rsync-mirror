@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Exception-Class
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.69 2013/08/17 13:48:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.70 2013/10/08 14:09:32 jer Exp $
+
+  08 Oct 2013; Jeroen Roovers <jer@gentoo.org> Exception-Class-1.360.0.ebuild:
+  Stable for HPPA (bug #449582).
 
 *Exception-Class-1.370.0 (17 Aug 2013)
 

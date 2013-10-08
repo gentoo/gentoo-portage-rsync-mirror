@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.119 2013/10/08 13:11:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.120 2013/10/08 14:07:45 ssuominen Exp $
+
+  08 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> hwids-20130915.1.ebuild:
+  Revert stabilization for HPPA because this version of hwids needs >=sys-
+  fs/udev-206 as well as >=sys-apps/systemd-206 stable first.
 
   08 Oct 2013; Jeroen Roovers <jer@gentoo.org> hwids-20130915.1.ebuild:
   Stable for HPPA (bug #487238).
