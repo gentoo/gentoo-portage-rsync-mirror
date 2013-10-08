@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.21-r1.ebuild,v 1.2 2013/10/08 19:55:38 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/privoxy-3.0.21-r2.ebuild,v 1.1 2013/10/08 19:55:38 dastergon Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils toolchain-funcs autotools systemd user
 
@@ -43,6 +43,7 @@ src_configure() {
 	econf \
 		$(use_enable zlib) \
 		$(use_enable threads pthread) \
+		$(usex zlib --enable-compression "") \
 		--enable-dynamic-pcre \
 		--with-user=privoxy \
 		--with-group=privoxy \

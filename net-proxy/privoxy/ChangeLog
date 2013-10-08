@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.84 2013/09/03 20:17:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.85 2013/10/08 19:55:38 dastergon Exp $
+
+*privoxy-3.0.21-r2 (08 Oct 2013)
+
+  08 Oct 2013; Pavlos Ratis <dastergon@gentoo.org> +privoxy-3.0.21-r2.ebuild,
+  privoxy-3.0.21-r1.ebuild:
+  Revision bump: EAPI 5 and added new configure option
 
 *privoxy-3.0.21-r1 (03 Sep 2013)
 
