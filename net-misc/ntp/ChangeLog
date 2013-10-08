@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.192 2013/09/16 16:16:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.193 2013/10/08 17:28:53 maekke Exp $
+
+  08 Oct 2013; Markus Meier <maekke@gentoo.org> ntp-4.2.6_p5-r6.ebuild:
+  arm stable, bug #480084
 
 *ntp-4.2.6_p5-r6 (16 Sep 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.98 2013/09/30 07:34:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.99 2013/10/08 17:28:13 maekke Exp $
+
+  08 Oct 2013; Markus Meier <maekke@gentoo.org> netatalk-3.0.5.ebuild:
+  arm stable, bug #480076
 
 *netatalk-2.2.5 (30 Sep 2013)
 
