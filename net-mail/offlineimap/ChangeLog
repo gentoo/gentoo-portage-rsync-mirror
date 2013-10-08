@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.92 2013/02/14 22:11:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.93 2013/10/08 07:44:43 tomka Exp $
+
+*offlineimap-6.5.5 (08 Oct 2013)
+
+  08 Oct 2013; Thomas Kahle <tomka@gentoo.org> +offlineimap-6.5.5.ebuild:
+  bump to 6.5.5
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> offlineimap-6.5.4-r1.ebuild:
   Stable for ppc, wrt bug #457434
