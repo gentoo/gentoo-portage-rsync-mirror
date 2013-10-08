@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.4.1-r1.ebuild,v 1.1 2013/07/28 18:44:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.5-r1.ebuild,v 1.1 2013/10/08 15:24:51 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -121,23 +121,24 @@ src_prepare() {
 	sed -i "s|^completiondir =.*|completiondir = $(get_bashcompdir)|" \
 		shell/Makefile.am || die "sed completiondir failed"
 
-	# Make some panels optional; requires eautoreconf
-	# https://bugzilla.gnome.org/697478
-	epatch "${FILESDIR}/${PN}-3.8.0-optional-r1.patch"
-
-	# https://bugzilla.gnome.org/686840
-	epatch "${FILESDIR}/${PN}-3.8.4-optional-kerberos.patch"
+	# Make some panels and dependencies optional; requires eautoreconf
+	# https://bugzilla.gnome.org/686840, 697478, 700145
+	epatch "${FILESDIR}/${PN}-3.8.5-optional.patch"
 
 	# Fix some absolute paths to be appropriate for Gentoo
 	epatch "${FILESDIR}/${PN}-3.8.0-paths-makefiles.patch"
 	epatch "${FILESDIR}/${PN}-3.8.0-paths.patch"
 
-	# Make modemmanager optional, bug 463852, upstream bug #700145
-	epatch "${FILESDIR}/${PN}-3.8.1.5-optional-modemmanager.patch"
-
+	# top-level configure.ac does not use AC_CONFIG_SUBDIRS, so we need this to
+	# avoid libtoolize "We've already been run in this tree" warning, bug #484988
+	local d
+	for d in . egg-list-box; do
+		pushd "${d}" > /dev/null
+		AT_NOELIBTOOLIZE=yes eautoreconf
+		popd > /dev/null
+	done
+	elibtoolize --force
 	epatch_user
-	eautoreconf
-	cd egg-list-box/ && eautoreconf && cd ..
 
 	# panels/datetime/Makefile.am gets touched as a result of something in our
 	# src_prepare(). We need to touch timedated{c,h} to prevent them from being
@@ -149,9 +150,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# FIXME: add $(use_with kerberos) support?
-#	! use kerberos && G2CONF+=" KRB5_CONFIG=$(type -P true)"
-
 	gnome2_src_configure \
 		--disable-update-mimedb \
 		--disable-static \
