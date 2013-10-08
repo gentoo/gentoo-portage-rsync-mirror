@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install preinst prepare setup unpack
-DEPEND=system-mupdf? ( >=app-text/mupdf-1.2 ) virtual/jdk:1.7 app-arch/p7zip media-libs/libbmp >=dev-vcs/git-1.8.2.1 dev-vcs/git >=dev-java/java-config-2.1.9-r1 >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
+DEPEND=system-mupdf? ( >=app-text/mupdf-1.2 ) virtual/jdk:1.7 app-arch/p7zip media-libs/libbmp dev-vcs/git >=dev-java/java-config-2.1.9-r1 >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
 DESCRIPTION=Java library for rendering PDF, XPS and CBZ (Comic Book) documents
 EAPI=5
 HOMEPAGE=https://code.google.com/p/jmupdf/
@@ -8,5 +8,5 @@ LICENSE=GPL-1
 RDEPEND=system-mupdf? ( >=app-text/mupdf-1.2 ) virtual/jdk:1.7 >=dev-java/java-config-2.1.9-r1
 REQUIRED_USE=!system-mupdf
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	git-2	2027b81a576527fa16bece425941e094	git-r3	379c42ba13c9a336200c5293156dfd50	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=b881e693c464199893f76dca2e09d9e6

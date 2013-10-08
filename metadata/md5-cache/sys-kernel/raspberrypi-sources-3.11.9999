@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup test unpack
-DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) >=dev-vcs/git-1.8.2.1 dev-vcs/git
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) dev-vcs/git
 DESCRIPTION=Raspberry PI kernel sources
 EAPI=5
 HOMEPAGE=https://github.com/raspberrypi/linux
@@ -9,5 +9,5 @@ PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 RESTRICT=binchecks strip
 SLOT=3.11.9999
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	kernel-2	72c82b0482225ffcdcdbaf48b37cea58	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	379c42ba13c9a336200c5293156dfd50	kernel-2	72c82b0482225ffcdcdbaf48b37cea58	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=1385885ce90007ae3a28422cbaae8544

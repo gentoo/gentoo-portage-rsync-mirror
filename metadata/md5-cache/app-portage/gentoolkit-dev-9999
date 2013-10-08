@@ -1,10 +1,10 @@
 DEFINED_PHASES=install setup test unpack
-DEPEND=>=dev-vcs/git-1.8.2.1 dev-vcs/git || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-3.3*[xml] =dev-lang/python-3.2*[xml] =dev-lang/python-3.1*[xml] =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] )
+DEPEND=dev-vcs/git || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-3.3*[xml] =dev-lang/python-3.2*[xml] =dev-lang/python-3.1*[xml] =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] )
 DESCRIPTION=Collection of developer scripts for Gentoo
 EAPI=5
 HOMEPAGE=http://www.gentoo.org/proj/en/portage/tools/index.xml
 LICENSE=GPL-2
 RDEPEND=sys-apps/portage dev-lang/perl sys-apps/diffutils || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* ) || ( =dev-lang/python-3.3*[xml] =dev-lang/python-3.2*[xml] =dev-lang/python-3.1*[xml] =dev-lang/python-2.7*[xml] =dev-lang/python-2.6*[xml] )
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	379c42ba13c9a336200c5293156dfd50	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=65a0f9e80e5cc02a2fecae438cba86b6

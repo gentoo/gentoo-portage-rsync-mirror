@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile install postinst postrm prepare unpack
-DEPEND=>=dev-vcs/git-1.8.2.1 dev-vcs/git >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-9999 sys-devel/m4 >=sys-apps/checkpolicy-2.0.21
+DEPEND=dev-vcs/git >=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-9999 sys-devel/m4 >=sys-apps/checkpolicy-2.0.21
 DESCRIPTION=SELinux policy for spamassassin
 EAPI=4
 HOMEPAGE=http://www.gentoo.org/proj/en/hardened/selinux/
 LICENSE=GPL-2
 RDEPEND=>=sys-apps/policycoreutils-2.0.82 >=sec-policy/selinux-base-policy-9999
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	multilib	892e597faee02a5b94eb02ab512e7622	selinux-policy-2	8e5b959b72fbb85e6205bbde0c5414fa	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	379c42ba13c9a336200c5293156dfd50	multilib	892e597faee02a5b94eb02ab512e7622	selinux-policy-2	8e5b959b72fbb85e6205bbde0c5414fa	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=6e380c4f34d5d40321eb4e76a818afbc

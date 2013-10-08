@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=doc? ( dev-python/epydoc ) test? ( >=sys-apps/portage-2.1.10.3 sys-apps/pkgcore >=sys-apps/paludis-0.64.2[python-bindings] ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) >=dev-vcs/git-1.8.2.1 dev-vcs/git
+DEPEND=doc? ( dev-python/epydoc ) test? ( >=sys-apps/portage-2.1.10.3 sys-apps/pkgcore >=sys-apps/paludis-0.64.2[python-bindings] ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) dev-vcs/git
 DESCRIPTION=A test suite for Package Manager PMS compliance
 EAPI=4
 HOMEPAGE=http://www.gentoo.org/proj/en/qa/pms/pms-test-suite.xml
@@ -7,5 +7,5 @@ IUSE=doc test
 LICENSE=BSD-2
 RDEPEND=>=app-portage/gentoopm-0.1.5 dev-python/dbus-python dev-python/pygobject:2 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	379c42ba13c9a336200c5293156dfd50	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=a99ef98ff3791d06d7fa5518db8c9b6a

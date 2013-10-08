@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare unpack
-DEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-1.3:= media-libs/openjpeg:2 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 ) static? ( >=app-text/mupdf-1.3:=[static-libs] media-libs/openjpeg:2[static-libs] media-libs/freetype:2[static-libs] media-libs/jbig2dec[static-libs] sys-libs/zlib[static-libs] virtual/jpeg:0[static-libs] x11-libs/libX11[static-libs] app-arch/bzip2[static-libs] media-libs/libXcm[static-libs] x11-libs/libXau[static-libs] x11-libs/libXdmcp[static-libs] x11-libs/libXmu[static-libs] ) dev-lang/ocaml[ocamlopt?] dev-ml/lablgl[glut,ocamlopt?] >=dev-vcs/git-1.8.2.1 dev-vcs/git
+DEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-1.3:= media-libs/openjpeg:2 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 ) static? ( >=app-text/mupdf-1.3:=[static-libs] media-libs/openjpeg:2[static-libs] media-libs/freetype:2[static-libs] media-libs/jbig2dec[static-libs] sys-libs/zlib[static-libs] virtual/jpeg:0[static-libs] x11-libs/libX11[static-libs] app-arch/bzip2[static-libs] media-libs/libXcm[static-libs] x11-libs/libXau[static-libs] x11-libs/libXdmcp[static-libs] x11-libs/libXmu[static-libs] ) dev-lang/ocaml[ocamlopt?] dev-ml/lablgl[glut,ocamlopt?] dev-vcs/git
 DESCRIPTION=a graphical PDF viewer which aims to superficially resemble less(1)
 EAPI=5
 HOMEPAGE=http://repo.or.cz/w/llpp.git
@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=x11-misc/xsel !static? ( >=app-text/mupdf-1.3:= media-libs/openjpeg:2 media-libs/freetype:2 media-libs/jbig2dec sys-libs/zlib virtual/jpeg:0 x11-libs/libX11 )
 RESTRICT=!ocamlopt? ( strip )
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	9d623256bd82ddbcc6783ae996e178fd	git-r3	7beb1bf32c85c4a39293ea3093d35cfa	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	379c42ba13c9a336200c5293156dfd50	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=47cf83db419fc01f87c6c3ada847f42b

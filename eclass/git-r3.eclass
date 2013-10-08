@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.13 2013/10/05 16:48:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.14 2013/10/08 11:19:48 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -29,7 +29,9 @@ EXPORT_FUNCTIONS src_unpack
 
 if [[ ! ${_GIT_R3} ]]; then
 
-DEPEND=">=dev-vcs/git-1.8.2.1"
+if [[ ! ${_INHERITED_BY_GIT_2} ]]; then
+	DEPEND=">=dev-vcs/git-1.8.2.1"
+fi
 
 # @ECLASS-VARIABLE: EGIT3_STORE_DIR
 # @DESCRIPTION:
