@@ -1,14 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.05.06.ebuild,v 1.1 2012/12/25 02:40:44 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.07.10.ebuild,v 1.1 2013/10/08 13:13:49 xarthisius Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit rpm
+MY_P=${PV}_MegaCLI_Linux
 
 DESCRIPTION="LSI Logic MegaRAID Command Line Interface management tool"
 HOMEPAGE="http://www.lsi.com/"
-SRC_URI="http://www.lsi.com/downloads/Public/MegaRAID%20Common%20Files/${PV}_MegaCLI.zip"
+SRC_URI="http://www.lsi.com/downloads/Public/MegaRAID%20Common%20Files/${MY_P}.zip"
 
 LICENSE="LSI"
 SLOT="0"
@@ -19,12 +20,13 @@ IUSE=""
 
 DEPEND="app-arch/unzip
 	app-admin/chrpath"
+RDEPEND=""
 
-S="${WORKDIR}"
+S=${WORKDIR}/${MY_P}
 
 RESTRICT="mirror fetch"
-
-QA_PRESTRIPPED="/opt/megacli/megacli"
+QA_PREBUILT="/opt/${PN}/${PN}
+	/opt/${PN}/lib/*"
 
 pkg_nofetch() {
 	einfo "Upstream has implement a mandatory clickthrough EULA for distfile download"
@@ -35,36 +37,35 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	rpm_unpack ./MegaCli_Linux/MegaCli-${PV}-1.noarch.rpm
-	rpm_unpack ./MegaCliKL_Linux/Lib_Utils-1.00-09.noarch.rpm
+	rpm_unpack ./"Linux MegaCLI ${PV}"/MegaCli-${PV}-1.noarch.rpm
 }
 
 src_install() {
+	newdoc "Linux MegaCLI ${PV}.txt" RELEASE.txt
+
 	exeinto /opt/megacli
-	libsysfs=libsysfs.so.2.0.2
+	libsysfs=libstorelibir-2.so.14.07-0
 	case ${ARCH} in
-		amd64) MegaCli=MegaCli64 libsysfs=x86_64/${libsysfs};;
+		amd64) MegaCli=MegaCli64;;
 		x86) MegaCli=MegaCli;;
 		*) die "invalid ARCH";;
 	esac
-	newexe opt/MegaRAID/MegaCli/${MegaCli} megacli
+	newexe opt/MegaRAID/MegaCli/${MegaCli} ${PN}
 
-	exeinto /opt/megacli/lib
-	doexe opt/lsi/3rdpartylibs/${libsysfs}
+	exeinto /opt/${PN}/lib
+	doexe opt/MegaRAID/MegaCli/${libsysfs}
 
 	into /opt
 	newbin "${FILESDIR}"/${PN}-wrapper ${PN}
 	dosym ${PN} /opt/bin/MegaCli
 
-	dodoc ${PV}_MegaCLI.txt
-
 	# Remove DT_RPATH
-	chrpath -d "${D}"/opt/megacli/megacli
+	chrpath -d "${D}"/opt/${PN}/${PN}
 }
 
 pkg_postinst() {
 	einfo
-	einfo "See /usr/share/doc/${PF}/${PV}_MegaCli.txt for a list of supported controllers"
+	einfo "See /usr/share/doc/${PF}/RELEASE.txt for a list of supported controllers"
 	einfo "(contains LSI model names only, not those sold by 3rd parties"
 	einfo "under custom names like Dell PERC etc)."
 	einfo

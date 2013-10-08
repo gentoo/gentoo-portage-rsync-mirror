@@ -10,4 +10,4 @@ RDEPEND=sys-fs/aufs-util !sys-fs/aufs !sys-fs/aufs2 kernel_linux? ( virtual/modu
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/aufs3-standalone-3_p20130708.tar.xz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	linux-info	a9cbd6bbe2b28166e403321882f3c73c	linux-mod	708d6a92c561743e612fca9d8fde5309	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=6897f4157fc427ac1cd8672194b062c5
+_md5_=fa1f4b7a668e7bfda6bbc7b375be6d19

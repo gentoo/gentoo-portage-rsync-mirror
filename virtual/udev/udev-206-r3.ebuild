@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-206-r3.ebuild,v 1.1 2013/10/02 09:13:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/udev-206-r3.ebuild,v 1.2 2013/10/08 13:10:51 jer Exp $
 
 EAPI=5
 inherit multilib-build
@@ -11,7 +11,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 # These default enabled IUSE flags should follow defaults of sys-fs/udev.
 IUSE="gudev introspection +kmod selinux static-libs"
 
