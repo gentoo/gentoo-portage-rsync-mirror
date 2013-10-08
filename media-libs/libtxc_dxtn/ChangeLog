@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtxc_dxtn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/ChangeLog,v 1.13 2013/09/29 11:07:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/ChangeLog,v 1.14 2013/10/08 05:02:06 ago Exp $
+
+  08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libtxc_dxtn-1.0.1-r1.ebuild:
+  Stable for x86, wrt bug #475480
 
   29 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libtxc_dxtn-1.0.1-r1.ebuild:
   Stable for amd64, wrt bug #475480

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/rstart
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/ChangeLog,v 1.39 2013/10/05 16:31:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/ChangeLog,v 1.40 2013/10/08 05:02:53 ago Exp $
+
+  08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> rstart-1.0.5.ebuild:
+  Stable for x86, wrt bug #475480
 
   05 Oct 2013; Markus Meier <maekke@gentoo.org> rstart-1.0.5.ebuild:
   arm stable, bug #475480

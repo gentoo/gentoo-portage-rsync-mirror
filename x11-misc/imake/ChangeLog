@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/imake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.67 2013/10/07 04:59:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/imake/ChangeLog,v 1.68 2013/10/08 05:09:00 ago Exp $
+
+  08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> imake-1.0.6.ebuild:
+  Stable for x86, wrt bug #475480
 
   07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> imake-1.0.6.ebuild:
   Stable for sparc, wrt bug #475480

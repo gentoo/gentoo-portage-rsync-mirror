@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvidtune
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.50 2013/10/07 04:56:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvidtune/ChangeLog,v 1.51 2013/10/08 05:04:47 ago Exp $
+
+  08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xvidtune-1.0.3.ebuild:
+  Stable for x86, wrt bug #475480
 
   07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xvidtune-1.0.3.ebuild:
   Stable for sparc, wrt bug #475480

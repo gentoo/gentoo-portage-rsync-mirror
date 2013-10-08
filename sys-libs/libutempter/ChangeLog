@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libutempter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.48 2013/10/07 04:54:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libutempter/ChangeLog,v 1.49 2013/10/08 05:02:14 ago Exp $
+
+  08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libutempter-1.1.6-r1.ebuild:
+  Stable for x86, wrt bug #475480
 
   07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libutempter-1.1.6-r1.ebuild:
   Stable for sparc, wrt bug #475480

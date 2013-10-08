@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.62 2013/10/07 04:56:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.63 2013/10/08 05:04:50 ago Exp $
+
+  08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xvinfo-1.1.2.ebuild:
+  Stable for x86, wrt bug #475480
 
   07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xvinfo-1.1.2.ebuild:
   Stable for sparc, wrt bug #475480
