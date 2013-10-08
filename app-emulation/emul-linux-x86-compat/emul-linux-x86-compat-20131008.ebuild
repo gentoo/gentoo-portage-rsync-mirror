@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/emul-linux-x86-compat-20121202.ebuild,v 1.2 2012/12/25 19:00:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/emul-linux-x86-compat-20131008.ebuild,v 1.1 2013/10/08 20:55:10 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86 eutils multilib
@@ -9,7 +9,7 @@ DESCRIPTION="32 bit lib-compat, and also libgcc_s and libstdc++ from gcc 3.3 and
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64"
+KEYWORDS="-* ~amd64"
 IUSE="multilib"
 
 DEPEND=""
