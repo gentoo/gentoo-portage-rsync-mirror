@@ -1,7 +1,7 @@
 DEFINED_PHASES=configure install postinst setup test
 DEPEND=test? ( net-dns/bind-tools )
 DESCRIPTION=Proxy DNS server with permanent caching
-EAPI=2
+EAPI=5
 HOMEPAGE=http://members.home.nl/p.a.rombouts/pdnsd/
 IUSE=debug ipv6 isdn +urandom test
 KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sparc ~x86
@@ -10,4 +10,4 @@ RDEPEND=sys-apps/openrc
 SLOT=0
 SRC_URI=http://members.home.nl/p.a.rombouts/pdnsd/releases/pdnsd-1.2.9a-par.tar.gz
 _eclasses_=user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=a3ca3e11d9e4b5d7393997149fe20802
+_md5_=1317606c474d27647b1216e9e9a0eb95

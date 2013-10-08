@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/motif
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.40 2013/08/23 05:25:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/ChangeLog,v 1.42 2013/10/08 06:27:35 ulm Exp $
+
+  08 Oct 2013; Ulrich Müller <ulm@gentoo.org> motif-2.2.3-r12.ebuild,
+  motif-2.3.4-r1.ebuild:
+  Update dependency on X libraries. Remove pkgconfig workaround.
 
   23 Aug 2013; Ulrich Müller <ulm@gentoo.org> -motif-2.2.3-r11.ebuild,
   -motif-2.3.4.ebuild, -files/motif-2.3.2-sanitise-paths.patch,

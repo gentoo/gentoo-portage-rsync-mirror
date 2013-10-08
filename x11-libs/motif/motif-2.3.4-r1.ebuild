@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.27 2013/08/06 11:09:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.3.4-r1.ebuild,v 1.29 2013/10/08 06:27:35 ulm Exp $
 
 EAPI=5
 
@@ -18,28 +18,15 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~ppc-aix ~amd64
 IUSE="examples jpeg +motif22-compatibility png static-libs unicode xft"
 
 RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-motif[-abi_x86_32(-)] )
-	|| ( (
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libXmu[${MULTILIB_USEDEP}]
-		x11-libs/libXp[${MULTILIB_USEDEP}]
-		x11-libs/libXt[${MULTILIB_USEDEP}]
-		xft? (
-			media-libs/fontconfig[${MULTILIB_USEDEP}]
-			x11-libs/libXft[${MULTILIB_USEDEP}]
-		)
+	x11-libs/libX11[${MULTILIB_USEDEP}]
+	x11-libs/libXext[${MULTILIB_USEDEP}]
+	x11-libs/libXmu[${MULTILIB_USEDEP}]
+	x11-libs/libXp[${MULTILIB_USEDEP}]
+	x11-libs/libXt[${MULTILIB_USEDEP}]
+	xft? (
+		media-libs/fontconfig[${MULTILIB_USEDEP}]
+		x11-libs/libXft[${MULTILIB_USEDEP}]
 	)
-	(
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXmu
-		x11-libs/libXp
-		x11-libs/libXt
-		xft? ( media-libs/fontconfig x11-libs/libXft )
-		abi_x86_32? ( amd64? (
-			app-emulation/emul-linux-x86-xlibs[development]
-		) )
-	) )
 	|| ( (
 		unicode? ( virtual/libiconv[${MULTILIB_USEDEP}] )
 		jpeg? ( virtual/jpeg:0=[${MULTILIB_USEDEP}] )
@@ -84,14 +71,6 @@ src_prepare() {
 	# for Solaris Xos_r.h :(
 	[[ ${CHOST} == *-solaris2.11 ]] \
 		&& append-cppflags -DNEED_XOS_R_H -DHAVE_READDIR_R_3
-
-	# workaround for missing pkgconfig files in emul-linux-x86-xlibs #479876
-	if use xft && use amd64 && use abi_x86_32 \
-		&& has_version "app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]"
-	then
-		append-cppflags -I/usr/include/freetype2
-		append-libs -lXft
-	fi
 
 	if use !elibc_glibc && use !elibc_uclibc && use unicode; then
 		# libiconv detection in configure script doesn't always work

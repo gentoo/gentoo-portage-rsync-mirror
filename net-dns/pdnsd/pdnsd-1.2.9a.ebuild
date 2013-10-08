@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.9a.ebuild,v 1.1 2012/12/19 01:14:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.9a.ebuild,v 1.2 2013/10/08 06:06:58 polynomial-c Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit user
 
@@ -35,23 +35,22 @@ src_configure() {
 		--with-default-id=pdnsd \
 		$(use_enable ipv6) $(use_enable ipv6 ipv6-startup) \
 		$(use_enable isdn) \
-		${myconf} \
-		|| die "bad configure"
+		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 
-	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO README.par || die
-	docinto contrib ; dodoc contrib/{README,dhcp2pdnsd,pdnsd_dhcp.pl} || die
-	docinto html ; dohtml doc/html/* || die
-	docinto txt ; dodoc doc/txt/* || die
-	newdoc doc/pdnsd.conf pdnsd.conf.sample || die
+	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO README.par
+	docinto contrib ; dodoc contrib/{README,dhcp2pdnsd,pdnsd_dhcp.pl}
+	docinto html ; dohtml doc/html/*
+	docinto txt ; dodoc doc/txt/*
+	newdoc doc/pdnsd.conf pdnsd.conf.sample
 
-	newinitd "${FILESDIR}/pdnsd.rc7" pdnsd || die
-	newinitd "${FILESDIR}/pdnsd.online.2" pdnsd-online || die
+	newinitd "${FILESDIR}/pdnsd.rc7" pdnsd
+	newinitd "${FILESDIR}/pdnsd.online.2" pdnsd-online
 
-	mkdir "${T}"/confd
+	mkdir "${T}"/confd || die
 
 	cat - > "${T}"/confd/pdnsd-online <<EOF
 # Make sure to change the rc_need variable to the service for the
@@ -74,7 +73,7 @@ EOF
 PDNSDCONFIG=""
 EOF
 
-	doconfd "${T}"/confd/* || die
+	doconfd "${T}"/confd/*
 
 	# gentoo resolvconf support
 	exeinto /etc/resolvconf/update.d
@@ -87,7 +86,7 @@ src_test() {
 		die "$1"
 	}
 
-	mkdir "${T}/pdnsd"
+	mkdir "${T}/pdnsd" || die
 	echo -n -e "pd12\0\0\0\0" > "${T}/pdnsd/pdnsd.cache"
 	IPS=$(grep ^nameserver /etc/resolv.conf | sed -e 's/nameserver \(.*\)/\tip=\1;/g' | xargs)
 	sed -e "s/\tip=/${IPS}/" -e "s:cache_dir=:cache_dir=${T}/pdnsd:" "${FILESDIR}/pdnsd.conf.test" \

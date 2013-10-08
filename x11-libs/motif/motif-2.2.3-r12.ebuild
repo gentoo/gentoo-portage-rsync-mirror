@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.2.3-r12.ebuild,v 1.10 2013/08/06 11:09:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif/motif-2.2.3-r12.ebuild,v 1.11 2013/10/08 06:22:34 ulm Exp $
 
 EAPI=5
 
@@ -17,21 +17,11 @@ SLOT="2.2"
 KEYWORDS="amd64 x86"
 
 RDEPEND="abi_x86_32? ( !app-emulation/emul-linux-x86-motif[-abi_x86_32(-)] )
-	|| ( (
-		x11-libs/libX11[${MULTILIB_USEDEP}]
-		x11-libs/libXext[${MULTILIB_USEDEP}]
-		x11-libs/libXmu[${MULTILIB_USEDEP}]
-		x11-libs/libXp[${MULTILIB_USEDEP}]
-		x11-libs/libXt[${MULTILIB_USEDEP}]
-	)
-	(
-		x11-libs/libX11
-		x11-libs/libXext
-		x11-libs/libXmu
-		x11-libs/libXp
-		x11-libs/libXt
-		abi_x86_32? ( amd64? ( app-emulation/emul-linux-x86-xlibs ) )
-	) )"
+	x11-libs/libX11[${MULTILIB_USEDEP}]
+	x11-libs/libXext[${MULTILIB_USEDEP}]
+	x11-libs/libXmu[${MULTILIB_USEDEP}]
+	x11-libs/libXp[${MULTILIB_USEDEP}]
+	x11-libs/libXt[${MULTILIB_USEDEP}]"
 
 DEPEND="${RDEPEND}
 	x11-libs/libXaw
