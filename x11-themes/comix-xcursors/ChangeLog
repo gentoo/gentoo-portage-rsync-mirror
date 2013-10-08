@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/comix-xcursors
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix-xcursors/ChangeLog,v 1.7 2013/03/03 14:56:45 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix-xcursors/ChangeLog,v 1.8 2013/10/08 08:16:09 vincent Exp $
+
+*comix-xcursors-0.7.4 (08 Oct 2013)
+*comix-xcursors-0.8.0 (08 Oct 2013)
+
+  08 Oct 2013; Vicente Olivert Riera <vincent@gentoo.org>
+  +comix-xcursors-0.7.4.ebuild, +comix-xcursors-0.8.0.ebuild:
+  version bump, bug #486942
 
   03 Mar 2013; Vicente Olivert Riera <vincent@gentoo.org>
   comix-xcursors-0.7.3.ebuild:
