@@ -1,6 +1,16 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.126 2013/09/07 20:14:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.129 2013/10/08 16:57:45 ssuominen Exp $
+
+  08 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
+  -files/upower-0.9.20-hidraw_with_udev-196.patch, -upower-0.9.20-r2.ebuild,
+  metadata.xml:
+  old
+
+*upower-0.9.22 (08 Oct 2013)
+
+  08 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> +upower-0.9.22.ebuild:
+  Version bump.
 
   07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> upower-0.9.21.ebuild:
   Stable for sparc, wrt bug #482248

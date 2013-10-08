@@ -6406,7 +6406,6 @@ sys-power/powerman:snmppower - Add support for SNMP based power controllers
 sys-power/powermgmt-base:pm-utils - Adds support for on_ac_power through sys-power/pm-utils
 sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
 sys-power/suspend:fbsplash - Add support for framebuffer splash
-sys-power/upower:deprecated - Use sys-power/pm-utils (deprecated) instead of sys-apps/systemd
 sys-process/cronie:anacron - Install the periodic anacron command scheduler.
 sys-process/cronie:inotify - Enable inotify filesystem monitoring support.
 sys-process/fcron:debug - Enable debug code and output. Since version 3.0.5 this will no longer force foreground execution, and fcron will be able to run as a service properly.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-2.1.0.ebuild,v 1.1 2013/06/17 04:19:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-2.1.1.ebuild,v 1.1 2013/10/08 16:52:20 tetromino Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ CMAKE_MIN_VERSION="2.8.5"
 PYTHON_COMPAT=( python2_6 python2_7 )
 PLOCALES="de fr no pl sl sv"
 
-inherit cmake-utils eutils fdo-mime l10n python-single-r1
+inherit bash-completion-r1 cmake-utils eutils fdo-mime l10n python-single-r1
 
 DESCRIPTION="Command-line tool for controlling cdemu-daemon"
 HOMEPAGE="http://cdemu.org"
@@ -21,7 +21,7 @@ IUSE="+cdemu-daemon"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
-	cdemu-daemon? ( app-cdr/cdemu-daemon:0/5 )"
+	cdemu-daemon? ( app-cdr/cdemu-daemon:0/6 )"
 DEPEND="${RDEPEND}
 	dev-util/desktop-file-utils
 	>=dev-util/intltool-0.21
@@ -35,7 +35,7 @@ pkg_setup() {
 
 src_prepare() {
 	python_fix_shebang src/cdemu
-	epatch "${FILESDIR}/${PN}-2.0.0-bash-completion-dir.patch"
+	epatch "${FILESDIR}/${PN}-2.1.0-bash-completion-dir.patch"
 	# build system doesn't respect LINGUAS :/
 	l10n_find_plocales_changes po "" ".po"
 	rm_po() {
@@ -46,7 +46,10 @@ src_prepare() {
 
 src_configure() {
 	DOCS="AUTHORS README"
-	local mycmakeargs=( -DPOST_INSTALL_HOOKS=OFF )
+	local mycmakeargs=(
+		-DPOST_INSTALL_HOOKS=OFF
+		-DGENTOO_BASHCOMPDIR="$(get_bashcompdir)"
+	)
 	cmake-utils_src_configure
 }
 

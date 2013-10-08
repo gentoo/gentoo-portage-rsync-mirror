@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ProgressBar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.43 2013/10/08 14:10:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ProgressBar/ChangeLog,v 1.44 2013/10/08 16:56:46 zlogene Exp $
+
+  08 Oct 2013; Mikle Kolyada <zlogene@gentoo.org>
+  Term-ProgressBar-2.140.0.ebuild:
+  x86 stable wrt bug #449616
 
   08 Oct 2013; Jeroen Roovers <jer@gentoo.org> Term-ProgressBar-2.140.0.ebuild:
   Stable for HPPA (bug #449616).

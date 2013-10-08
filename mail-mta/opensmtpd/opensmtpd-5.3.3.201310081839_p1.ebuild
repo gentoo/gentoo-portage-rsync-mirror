@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.3.201309261726_p1.ebuild,v 1.2 2013/09/28 01:22:46 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.3.3.201310081839_p1.ebuild,v 1.1 2013/10/08 16:50:38 zx2c4 Exp $
 
 EAPI=5
 

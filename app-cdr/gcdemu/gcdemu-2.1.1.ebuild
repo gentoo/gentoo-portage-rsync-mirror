@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-2.0.0.ebuild,v 1.3 2013/06/25 16:56:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-2.1.1.ebuild,v 1.1 2013/10/08 16:52:28 tetromino Exp $
 
 EAPI="5"
 
@@ -17,14 +17,15 @@ SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="${PYTHON_DEPS}
-	app-cdr/cdemu-daemon:0/4
+	app-cdr/cdemu-daemon:0/6
 	>=dev-libs/glib-2.28:2
 	dev-libs/gobject-introspection
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
+	gnome-base/librsvg:2
 	sys-apps/dbus
 	x11-libs/gdk-pixbuf[introspection]
 	x11-libs/gtk+:3[introspection]
@@ -42,6 +43,7 @@ pkg_setup() {
 src_prepare() {
 	python_fix_shebang src/gcdemu
 	# build system doesn't respect LINGUAS :/
+	l10n_find_plocales_changes po "" ".po"
 	rm_po() {
 		rm po/$1.po || die
 	}
