@@ -1,6 +1,9 @@
 # ChangeLog for app-text/goldendict
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.12 2013/03/17 15:48:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/goldendict/ChangeLog,v 1.13 2013/10/08 13:56:00 jer Exp $
+
+  08 Oct 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix e-mail address to match bugzilla's.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

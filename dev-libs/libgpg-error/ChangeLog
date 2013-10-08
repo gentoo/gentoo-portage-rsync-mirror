@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.89 2013/06/30 04:56:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.90 2013/10/08 13:47:46 jer Exp $
+
+  08 Oct 2013; Jeroen Roovers <jer@gentoo.org> libgpg-error-1.12.ebuild:
+  Stable for HPPA (bug #487230).
 
 *libgpg-error-1.12 (30 Jun 2013)
 
