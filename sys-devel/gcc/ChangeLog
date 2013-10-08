@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.970 2013/10/07 11:32:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.971 2013/10/08 04:00:25 dirtyepic Exp $
+
+  08 Oct 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.8.0.ebuild,
+  gcc-4.8.1-r1.ebuild:
+  Drop keywords for bug #487266.
 
   07 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gcc-4.7.3-r1.ebuild:
   Stable for x86, wrt bug #467274

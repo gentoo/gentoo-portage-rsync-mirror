@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xbacklight
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.50 2013/02/06 00:33:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xbacklight/ChangeLog,v 1.51 2013/10/08 03:50:47 mattst88 Exp $
+
+*xbacklight-1.2.1 (08 Oct 2013)
+
+  08 Oct 2013; Matt Turner <mattst88@gentoo.org> +xbacklight-1.2.1.ebuild:
+  Version bump to 1.2.1.
 
   06 Feb 2013; Matt Turner <mattst88@gentoo.org> -xbacklight-1.1.2.ebuild:
   Drop old 1.1.2.
