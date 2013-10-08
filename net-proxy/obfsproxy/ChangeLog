@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/obfsproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/ChangeLog,v 1.20 2013/10/06 16:47:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/ChangeLog,v 1.21 2013/10/08 10:53:07 blueness Exp $
+
+  08 Oct 2013; Anthony G. Basile <blueness@gentoo.org>
+  +files/obfsproxy-remove-argparse.patch:
+  Add missing patch, bug #487274
 
 *obfsproxy-0.2.4 (06 Oct 2013)
 
