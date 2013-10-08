@@ -1,6 +1,39 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.133 2013/10/06 18:34:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.136 2013/10/08 18:17:40 aidecoe Exp $
+
+  08 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-031.ebuild:
+  Removed old revision of 031.
+
+  08 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-033.ebuild,
+  -dracut-033-r1.ebuild, -dracut-033-r2.ebuild:
+  Removed old revisions of 033.
+
+*dracut-034 (08 Oct 2013)
+
+  08 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-034.ebuild,
+  +files/034-0001-dracut.sh-do-not-bail-out-if-kernel-mo.patch,
+  +files/034-0002-dracut-functions.sh-support-for-altern.patch,
+  +files/034-0003-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/034-0004-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/034-0005-Install-dracut-install-into-libexec-di.patch:
+  Version bump.
+
+  NEWS
+  ~~~~
+  - do not run dhcp on parts of assembled network interfaces (bond, bridge)
+  - add option to turn on/off prelinking
+     --prelink, --noprelink
+     do_prelink=[yes|no]
+  - add ACPI table overriding
+  - do not log to syslog/kmsg/journal for UID != 0
+  - lvm/mdraid: Fix LVM on MD activation
+  - bcache module removed (now in bcache-tools upstream)
+  - mdadm: also install configs from /etc/mdadm.conf.d
+  - fixes for mdadm-3.2.6+
+  - mkinitrd: better compat support for SUSE
+  - fcoe: add FCoE UEFI boot device support
+  - rootfs-block: add support for the rootfallback= kernel cmdline option
 
 *dracut-033-r3 (06 Oct 2013)
 

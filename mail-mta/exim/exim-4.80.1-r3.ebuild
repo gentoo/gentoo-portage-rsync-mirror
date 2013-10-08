@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc2.ebuild,v 1.2 2013/10/08 18:16:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.80.1-r3.ebuild,v 1.1 2013/10/08 18:16:18 grobian Exp $
 
 EAPI="4"
 
 inherit eutils toolchain-funcs multilib pam systemd
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis selinux syslog spf srs gnutls sqlite doc dovecot-sasl radius maildir +dkim dcc dsn dlfunc dmarc"
-REQUIRED_USE="spf? ( exiscan-acl ) srs? ( exiscan-acl ) dmarc? ( spf dkim )"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis selinux syslog spf srs gnutls sqlite doc dovecot-sasl radius maildir +dkim dcc dsn dlfunc"
+REQUIRED_USE="spf? ( exiscan-acl ) srs? ( exiscan-acl )"
 
 DSN_EXIM_V=469
 DSN_V=1_3
@@ -31,7 +31,7 @@ COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	pam? ( virtual/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
-	gnutls? ( net-libs/gnutls[pkcs11]
+	gnutls? ( net-libs/gnutls
 			  dev-libs/libtasn1 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	mysql? ( virtual/mysql )
@@ -39,7 +39,6 @@ COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.26-r2 )
 	selinux? ( sec-policy/selinux-exim )
 	spf? ( >=mail-filter/libspf2-1.2.5-r1 )
-	dmarc? ( mail-filter/opendmarc )
 	srs? ( mail-filter/libsrs_alt )
 	X? ( x11-proto/xproto
 		x11-libs/libX11
@@ -81,7 +80,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.74-localscan_dlopen.patch
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
 	epatch "${FILESDIR}"/exim-4.74-radius-db-ENV-clash.patch # 287426
-	epatch "${FILESDIR}"/exim-4.82-makefile-freebsd.patch # 235785
+	epatch "${FILESDIR}"/exim-4.77-makefile-freebsd.patch # 235785
 	epatch "${FILESDIR}"/exim-4.77-as-needed-ldflags.patch # 352265, 391279
 	epatch "${FILESDIR}"/exim-4.76-crosscompile.patch # 266591
 
@@ -152,11 +151,6 @@ src_configure() {
 		myconf="${myconf} -lspf2"
 		sed -i "s:# EXPERIMENTAL_SPF=yes:EXPERIMENTAL_SPF=yes:" Makefile
 		mycflags="${mycflags} -DEXPERIMENTAL_SPF"
-	fi
-	if use dmarc; then
-		myconf="${myconf} -lopendmarc"
-		sed -i "s:# EXPERIMENTAL_DMARC=yes:EXPERIMENTAL_DMARC=yes:" Makefile
-		mycflags="${mycflags} -DEXPERIMENTAL_DMARC"
 	fi
 	if use srs; then
 		myconf="${myconf} -lsrs_alt"
@@ -376,11 +370,6 @@ pkg_postinst() {
 		einfo "DCC support is experimental, you can find some limited"
 		einfo "documentation at the bottom of this prerelease message:"
 		einfo "http://article.gmane.org/gmane.mail.exim.devel/3579"
-	fi
-	if use dmarc ; then
-		einfo "DMARC support is experimental.  See global settings to"
-		einfo "configure DMARC, for usage see the documentation at "
-		einfo "experimental-spec.txt."
 	fi
 	einfo "Exim maintains some db files under its spool directory that need"
 	einfo "cleaning from time to time.  (${EROOT}var/spool/exim/db)"

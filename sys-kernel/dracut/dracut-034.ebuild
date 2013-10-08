@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-033.ebuild,v 1.1 2013/09/17 09:42:09 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034.ebuild,v 1.1 2013/10/08 18:14:31 aidecoe Exp $
 
 EAPI=4
 
-inherit bash-completion-r1 eutils linux-info systemd
+inherit bash-completion-r1 eutils linux-info multilib systemd
 
 add_req_use_for() {
 	local dep="$1"; shift
@@ -62,7 +62,7 @@ NETWORK_MODULES="
 add_req_use_for device-mapper ${DM_MODULES}
 add_req_use_for net ${NETWORK_MODULES}
 IUSE_DRACUT_MODULES="${COMMON_MODULES} ${DM_MODULES} ${NETWORK_MODULES}"
-IUSE="debug device-mapper optimization net selinux ${IUSE_DRACUT_MODULES}"
+IUSE="debug device-mapper net selinux ${IUSE_DRACUT_MODULES}"
 
 RESTRICT="test"
 
@@ -112,7 +112,7 @@ DEPEND="${CDEPEND}
 
 DOCS=( AUTHORS HACKING NEWS README README.generic README.kernel README.modules
 	README.testsuite TODO )
-MY_LIBDIR="/usr/lib"
+MY_LIBDIR=/usr/lib
 
 #
 # Helper functions
@@ -156,23 +156,37 @@ rm_module() {
 #
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-0001-dracut-functions.sh-support-for-altern.patch"
-	epatch "${FILESDIR}/${PV}-0002-gentoo.conf-let-udevdir-be-handled-by-.patch"
+	epatch "${FILESDIR}/${PV}-0001-dracut.sh-do-not-bail-out-if-kernel-mo.patch"
+	epatch "${FILESDIR}/${PV}-0002-dracut-functions.sh-support-for-altern.patch"
+	epatch "${FILESDIR}/${PV}-0003-gentoo.conf-let-udevdir-be-handled-by-.patch"
+	epatch "${FILESDIR}/${PV}-0004-Use-the-same-paths-in-dracut.sh-as-tho.patch"
+	epatch "${FILESDIR}/${PV}-0005-Install-dracut-install-into-libexec-di.patch"
+
+	local libdirs ldir
+
+	for ldir in $(get_all_libdirs); do
+		libdirs+=" /$ldir /usr/$ldir"
+	done
+
+	libdirs="${libdirs# }"
+	einfo "Setting libdirs to \"${libdirs}\" ..."
+	sed -e "3alibdirs=\"${libdirs}\"" \
+		-i "${S}/dracut.conf.d/gentoo.conf.example" || die
 
 	if use dracut_modules_systemd; then
 		local systemdutildir="$(systemd_get_utildir)"
 		local systemdsystemunitdir="$(systemd_get_unitdir)"
 		einfo "Setting systemdutildir to ${systemdutildir} and ..."
-		sed -e "4asystemdutildir=\"${systemdutildir}\"" \
+		sed -e "5asystemdutildir=\"${systemdutildir}\"" \
 			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
 		einfo "Setting systemdsystemunitdir to ${systemdsystemunitdir}..."
-		sed -e "5asystemdsystemunitdir=\"${systemdsystemunitdir}\"" \
+		sed -e "6asystemdsystemunitdir=\"${systemdsystemunitdir}\"" \
 			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
 	fi
 }
 
 src_configure() {
-	local myconf="--libdir='${MY_LIBDIR}'"
+	local myconf="--libdir=${MY_LIBDIR}"
 	myconf+=" --bashcompletiondir=$(get_bashcompdir)"
 
 	if use dracut_modules_systemd; then
@@ -183,17 +197,15 @@ src_configure() {
 }
 
 src_compile() {
-	if use optimization; then
-		ewarn "Enabling experimental optimization!"
-		tc-export CC
-		emake install/dracut-install
-	fi
+	tc-export CC
+	emake doc install/dracut-install
 }
 
 src_install() {
 	default
 
-	local dracutlibdir="${MY_LIBDIR#/}/dracut"
+	local my_libdir="${MY_LIBDIR}"
+	local dracutlibdir="${my_libdir#/}/dracut"
 
 	echo "DRACUT_VERSION=$PVR" > "${D%/}/${dracutlibdir}/dracut-version.sh"
 

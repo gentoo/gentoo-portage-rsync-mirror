@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.261 2013/10/03 17:06:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.262 2013/10/08 18:16:18 grobian Exp $
+
+*exim-4.80.1-r3 (08 Oct 2013)
+
+  08 Oct 2013; Fabian Groffen <grobian@gentoo.org> +exim-4.80.1-r3.ebuild,
+  +files/exim.rc8, exim-4.82_rc2.ebuild:
+  Change init-file for /var/run to /run, bug #455346
 
 *exim-4.82_rc2 (03 Oct 2013)
 

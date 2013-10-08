@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.4.7.ebuild,v 1.1 2012/09/25 10:38:32 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.4.7.ebuild,v 1.2 2013/10/08 18:26:48 george Exp $
 
 inherit gnatbuild
 
@@ -30,6 +30,7 @@ RDEPEND=">=dev-libs/mpfr-3.0.1
 	>=sys-libs/ncurses-5.7"
 
 DEPEND="${RDEPEND}
+	<sys-apps/texinfo-5.1
 	>=sys-devel/bison-1.875
 	>=sys-libs/glibc-2.8
 	>=sys-devel/binutils-2.20"
