@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.304 2013/09/20 13:10:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.305 2013/10/07 23:55:42 zmedico Exp $
+
+*calibre-1.5 (07 Oct 2013)
+
+  07 Oct 2013; Zac Medico <zmedico@gentoo.org> +calibre-1.5.ebuild:
+  1.5 version bump. This fixes bug #470212 (unbundle non-free prs500 fonts).
 
 *calibre-1.4 (20 Sep 2013)
 
