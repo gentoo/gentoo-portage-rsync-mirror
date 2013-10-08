@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/c-icap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.24 2013/01/04 13:53:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.25 2013/10/08 20:04:08 tomwij Exp $
+
+*c-icap-0.2.6 (08 Oct 2013)
+
+  08 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +c-icap-0.2.6.ebuild,
+  +files/c-icap-0.2.6-fix-icap-parsing.patch:
+  Version bump to 0.2.6, patch DoS due to patching bug for security bug #455324;
+  removal of forced openrc dependency.
 
 *c-icap-0.2.5 (04 Jan 2013)
 
