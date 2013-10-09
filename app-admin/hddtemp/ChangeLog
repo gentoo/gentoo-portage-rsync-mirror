@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.138 2013/09/28 08:09:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.139 2013/10/09 13:44:18 jer Exp $
+
+  09 Oct 2013; Jeroen Roovers <jer@gentoo.org> hddtemp-0.3_beta15-r7.ebuild:
+  Stable for HPPA (bug #487148).
 
 *hddtemp-0.3_beta15-r24 (28 Sep 2013)
 *hddtemp-0.3_beta15-r7 (28 Sep 2013)

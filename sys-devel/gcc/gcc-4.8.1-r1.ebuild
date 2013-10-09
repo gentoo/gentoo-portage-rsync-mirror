@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.8.1-r1.ebuild,v 1.2 2013/10/08 04:00:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.8.1-r1.ebuild,v 1.3 2013/10/09 14:00:46 jer Exp $
 
 PATCH_VER="1.2"
 UCLIBC_VER="1.0"
@@ -24,7 +24,7 @@ DESCRIPTION="The GNU Compiler Collection"
 
 LICENSE="GPL-3+ LGPL-3+ || ( GPL-3+ libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.3+"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 
 RDEPEND=""
 DEPEND="${RDEPEND}

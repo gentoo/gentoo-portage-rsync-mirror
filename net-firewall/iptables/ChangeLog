@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.294 2013/08/10 04:58:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.295 2013/10/09 13:46:44 jer Exp $
+
+  09 Oct 2013; Jeroen Roovers <jer@gentoo.org> iptables-1.4.20.ebuild:
+  Stable for HPPA (bug #485190).
 
 *iptables-1.4.20 (10 Aug 2013)
 
