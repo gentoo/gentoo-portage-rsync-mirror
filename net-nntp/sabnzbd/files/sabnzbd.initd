@@ -1,12 +1,45 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/files/sabnzbd.initd,v 1.5 2013/06/25 03:48:26 jsbronder Exp $
 
 RUNDIR=/var/run/sabnzbd
 
 depend() {
     need net
+}
+
+get_var() {
+    echo $(sed -n \
+        '/\[misc]/,/^'$1'/ s/^'$1' = \([[:alnum:].]\+\)[\r|\n|\r\n]*$/\1/p' \
+        ${SABNZBD_CONFIGFILE})
+}
+
+get_port() {
+    if [ "$(get_var 'enable_https')" == "1" ]; then
+        echo $(get_var 'https_port')
+    else
+        echo $(get_var 'port')
+    fi
+}
+
+get_addr() {
+    local host=$(get_var 'host')
+    local port=$(get_port)
+    local protocol
+
+    [ "${host}" == "0.0.0.0" ] && host=localhost
+    if [ "$(get_var 'enable_https')" == "1" ]; then
+        protocol="https"
+    else
+        protocol="http"
+    fi
+
+    echo ${protocol}://${host}:${port}
+}
+
+get_pidfile() {
+    local port=$(get_port)
+    echo "${RUNDIR}/sabnzbd-${port}.pid"
 }
 
 start() {
@@ -20,76 +53,49 @@ start() {
         --user ${SABNZBD_USER} \
         --group ${SABNZBD_GROUP} \
         --name sabnzbd \
+        --background \
         --pidfile $(get_pidfile) \
         --exec /usr/bin/sabnzbd \
         -- \
         --config-file ${SABNZBD_CONFIGFILE} \
         --logging ${SABNZBD_LOGGING} \
         --daemon \
-        --pid "${RUNDIR}"
+        --pid ${RUNDIR}
 
     eend $?
 }
 
-get_var() {
-    echo $(echo $(grep "^$1" ${SABNZBD_CONFIGFILE} | head -n 1 | sed 's/\r//' | awk '{print $3}'))
-}
-
-get_pidfile () {
-    # pid file name is hard-coded in sabnzbd, this must match
-    local ssl=$(get_var 'enable_https')
-
-    if [ -z "${ssl}" ]; then
-        echo "${RUNDIR}/sabnzbd-8080.pid"
-    elif [ ${ssl} -eq 0 ]; then
-        echo "${RUNDIR}/sabnzbd-$(get_var 'port').pid"
-    else
-        echo "${RUNDIR}/sabnzbd-$(get_var 'https_port').pid"
-    fi
-}
-
-get_addr() {
-    local host=$(get_var 'host')
-    #local ssl=$(get_var 'enable_https')
-    #local ssl_port=$(get_var 'https_port')
-    local port=$(get_var 'port')
-
-    if [ "${host}" == "0.0.0.0" ]; then
-        host=localhost
+start_pre() {
+    if [ "$RC_CMD" == "restart" ]; then
+        local pidfile=$(get_pidfile)
+        while [ -e ${pidfile} ]; do
+            sleep 1
+        done
     fi
 
-    # sabnzbd seems to only respond correctly to non ssl requests
-    echo ${host}:${port}
+    return 0
 }
 
 stop() {
     local api_key=$(get_var 'api_key')
-    local rc t
+    local addr=$(get_addr)
+    local pidfile=$(get_pidfile)
+    local rc=1
 
-    ebegin "Stopping SABnzbd @ $(get_addr)"
+    ebegin "Stopping SABnzbd @ ${addr}"
 
-    /usr/bin/wget -q --delete-after --no-check-certificate \
-        "http://$(get_addr)/sabnzbd/api?mode=shutdown&apikey=${api_key}"
-    rc=$?
-
-    if [ ${rc} -eq 0 ]; then
-        # Wait for sabnzbd to fully shutdown.
-        for ((t=0; t < 30; t++)); do
-            sleep 0.5
-            [ ! -s $(get_pidfile) ] && break
-        done
-    fi
-
-    if [ -s $(get_pidfile) ]; then
-        # Using wget didn't work, resort to start-stop-daemon
+    # SABnzbd will return "ok" if shutdown is successful
+    rc=$(/usr/bin/curl -k -s "${addr}/sabnzbd/api?mode=shutdown&apikey=${api_key}")
+    if [ "${rc}" == "ok" ]; then
+		rc=0
+	else
         einfo "Falling back to SIGTERM, this may not work if you restarted via the web interface"
         start-stop-daemon \
             --stop \
-            --pidfile $(get_pidfile) \
+            --pidfile ${pidfile} \
             --retry SIGTERM/1/SIGKILL/5
         rc=$?
     fi
 
     eend ${rc}
 }
-
