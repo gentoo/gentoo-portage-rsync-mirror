@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.42 2013/10/09 17:23:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.43 2013/10/09 19:08:18 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -358,7 +358,7 @@ python_export() {
 					python3.3)
 						PYTHON_PKG_DEP='>=dev-lang/python-3.3.2-r2:3.3';;
 					pypy-c2.0)
-						PYTHON_PKG_DEP='>=dev-python/pypy-2.0.2:2.0';;
+						PYTHON_PKG_DEP='>=virtual/pypy-2.0.2:2.0';;
 					jython2.5)
 						PYTHON_PKG_DEP='>=dev-java/jython-2.5.3-r2:2.5';;
 					jython2.7)
