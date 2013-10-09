@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=>=media-libs/mediastreamer-2.8.2[video?,ipv6?] >=net-libs/libeXosip-3.0.2 >=net-libs/libosip-3.0.0 <net-libs/libosip-4 <net-libs/libeXosip-4 >=net-libs/libsoup-2.26 >=net-libs/ortp-0.20.0 gtk? ( dev-libs/glib:2 >=gnome-base/libglade-2.4.0:2.0 >=x11-libs/gtk+-2.4.0:2 x11-libs/libnotify ) gsm-nonstandard? ( >=media-libs/mediastreamer-2.8.2[gsm] ) ncurses? ( sys-libs/readline sys-libs/ncurses ) ssl? ( dev-libs/openssl ) virtual/pkgconfig doc? ( app-text/sgmltools-lite ) nls? ( dev-util/intltool sys-devel/gettext ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=media-libs/mediastreamer-2.8.2[video?,ipv6?] >=net-libs/libeXosip-3.0.2 >=net-libs/libosip-3.0.0 <net-libs/libosip-4 <net-libs/libeXosip-4 >=net-libs/libsoup-2.26 >=net-libs/ortp-0.20.0 <net-libs/ortp-0.22.0 gtk? ( dev-libs/glib:2 >=gnome-base/libglade-2.4.0:2.0 >=x11-libs/gtk+-2.4.0:2 x11-libs/libnotify ) gsm-nonstandard? ( >=media-libs/mediastreamer-2.8.2[gsm] ) ncurses? ( sys-libs/readline sys-libs/ncurses ) ssl? ( dev-libs/openssl ) virtual/pkgconfig doc? ( app-text/sgmltools-lite ) nls? ( dev-util/intltool sys-devel/gettext ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Video softphone based on the SIP protocol
 EAPI=5
 HOMEPAGE=http://www.linphone.org/
 IUSE=doc gsm-nonstandard gtk ipv6 ncurses nls ssl video linguas_fr linguas_it linguas_de linguas_ja linguas_es linguas_pl linguas_cs linguas_nl linguas_sv linguas_pt_BR linguas_hu linguas_ru linguas_zh_CN
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=>=media-libs/mediastreamer-2.8.2[video?,ipv6?] >=net-libs/libeXosip-3.0.2 >=net-libs/libosip-3.0.0 <net-libs/libosip-4 <net-libs/libeXosip-4 >=net-libs/libsoup-2.26 >=net-libs/ortp-0.20.0 gtk? ( dev-libs/glib:2 >=gnome-base/libglade-2.4.0:2.0 >=x11-libs/gtk+-2.4.0:2 x11-libs/libnotify ) gsm-nonstandard? ( >=media-libs/mediastreamer-2.8.2[gsm] ) ncurses? ( sys-libs/readline sys-libs/ncurses ) ssl? ( dev-libs/openssl )
+RDEPEND=>=media-libs/mediastreamer-2.8.2[video?,ipv6?] >=net-libs/libeXosip-3.0.2 >=net-libs/libosip-3.0.0 <net-libs/libosip-4 <net-libs/libeXosip-4 >=net-libs/libsoup-2.26 >=net-libs/ortp-0.20.0 <net-libs/ortp-0.22.0 gtk? ( dev-libs/glib:2 >=gnome-base/libglade-2.4.0:2.0 >=x11-libs/gtk+-2.4.0:2 x11-libs/libnotify ) gsm-nonstandard? ( >=media-libs/mediastreamer-2.8.2[gsm] ) ncurses? ( sys-libs/readline sys-libs/ncurses ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=mirror://nongnu/linphone/3.5.x/sources/linphone-3.5.2.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=8f28172d42efc22fe9f93b3a700585d2
+_md5_=5151af7afa475ccdfcb50648eceb8d00
