@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fsharp/fsharp-3.0.30.ebuild,v 1.1 2013/10/09 11:51:22 cynede Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fsharp/fsharp-3.0.30.ebuild,v 1.2 2013/10/09 15:45:08 cynede Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_install() {
-	default
+	autotools-utils_src_install
 
 	#for older software compatibility:
 	dosym fsharpc /usr/bin/fsc

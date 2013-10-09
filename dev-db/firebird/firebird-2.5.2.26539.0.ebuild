@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.2.26539.0.ebuild,v 1.1 2013/01/31 05:57:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.5.2.26539.0.ebuild,v 1.2 2013/10/09 15:38:02 hasufell Exp $
 
 EAPI=4
 
@@ -133,8 +133,8 @@ src_install() {
 	cd "${S}/gen/${PN}"
 
 	if use doc; then
-		dodoc docs/*.pdf
-		dodoc "${WORKDIR}"/manuals/*
+		dodoc "${S}"/doc/*.pdf
+		find "${WORKDIR}"/manuals -type f -iname "*.pdf" -exec dodoc '{}' + || die
 	fi
 
 	insinto /usr/include
