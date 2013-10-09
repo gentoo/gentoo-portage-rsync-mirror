@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r2.ebuild,v 1.9 2013/04/21 10:24:27 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5-r2.ebuild,v 1.10 2013/10/09 02:04:16 naota Exp $
 
 EAPI="3"
 inherit autotools gnome2 gnome2-utils eutils multilib
@@ -45,6 +45,7 @@ DOCS="AUTHORS README ChangeLog TODO"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch" \
 		"${FILESDIR}"/${P}-pofiles.patch
+	sed -ie 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/' configure.in || die
 	eautoreconf
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/sphinx3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.9 2012/11/28 18:15:13 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.10 2013/10/09 02:03:56 teiresias Exp $
+
+  09 Oct 2013; Christopher Brannon <teiresias@gentoo.org> sphinx3-0.8.ebuild,
+  +files/sphinx3-0.8-libutil.patch:
+Remove include of nonexistent header. Closes bug #487098.
 
   28 Nov 2012; Tim Harder <radhermit@gentoo.org> sphinx3-0.6.3.ebuild,
   sphinx3-0.8.ebuild:

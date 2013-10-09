@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/sphinx3-0.8.ebuild,v 1.5 2012/11/28 18:15:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/sphinx3-0.8.ebuild,v 1.6 2013/10/09 02:03:56 teiresias Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -25,7 +25,8 @@ RDEPEND="${DEPEND}"
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}_heap_fix.patch"
+	epatch "${FILESDIR}/${P}_heap_fix.patch" \
+		"${FILESDIR}/${P}-libutil.patch"
 	eprefixify 'python/setup.py'
 }
 
