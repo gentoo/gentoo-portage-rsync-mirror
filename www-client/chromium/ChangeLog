@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.958 2013/10/08 21:43:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.959 2013/10/09 03:49:33 phajdan.jr Exp $
+
+  09 Oct 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-29.0.1547.57.ebuild, -chromium-29.0.1547.65.ebuild,
+  -chromium-30.0.1599.65.ebuild, -chromium-31.0.1626.0.ebuild,
+  chromium-31.0.1650.12.ebuild, chromium-9999-r1.ebuild:
+  Fix bug #487144 by wbrana. Remove old.
 
 *chromium-31.0.1650.12 (08 Oct 2013)
 

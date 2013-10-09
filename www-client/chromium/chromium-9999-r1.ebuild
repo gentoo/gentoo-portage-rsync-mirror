@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.216 2013/09/28 03:54:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.217 2013/10/09 03:49:33 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -413,6 +413,12 @@ src_configure() {
 			-Ddisable_nacl=1"
 	else
 		die "Failed to determine target arch, got '$myarch'."
+	fi
+
+	if host-is-pax; then
+		# Prevent the build from failing (bug #301880, bug #487144). The performance
+		# difference is very small.
+		myconf+=" -Dv8_use_snapshot=0"
 	fi
 
 	# Make sure that -Werror doesn't get added to CFLAGS by the build system.

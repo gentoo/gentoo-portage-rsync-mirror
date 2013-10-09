@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15144 2013/10/07 05:42:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15145 2013/10/09 04:00:22 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (08 Oct 2013)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-32
+>=dev-lang/v8-3.22
 
 # Fabian Groffen <grobian@gentoo.org> (30 Sep 2013)
 # Mask release candidates
@@ -357,12 +363,6 @@ sys-fs/cdfs
 # Masked for testing
 ~dev-util/boost-build-1.54.0
 ~dev-libs/boost-1.54.0
-
-# Mike Gilbert <floppym@gentoo.org> (23 Aug 2013)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-31
->=dev-lang/v8-3.21
 
 # Patrick Lauer <patrick@gentoo.org> (19 Aug 2013)
 # Masking live ebuilds
