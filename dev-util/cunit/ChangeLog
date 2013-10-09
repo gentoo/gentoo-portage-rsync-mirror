@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/cunit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.37 2013/05/21 20:15:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cunit/ChangeLog,v 1.39 2013/10/09 19:44:40 hasufell Exp $
+
+  09 Oct 2013; Julian Ospald <hasufell@gentoo.org> cunit-2.1_p2.ebuild:
+  link to ncurses explicitly to avoid breaking reverse deps
+
+  09 Oct 2013; Julian Ospald <hasufell@gentoo.org> cunit-2.1_p2.ebuild:
+  add ncurses useflag
 
   21 May 2013; Jeroen Roovers <jer@gentoo.org> cunit-2.1_p2.ebuild:
   Remove ncurses support (bug #336901).

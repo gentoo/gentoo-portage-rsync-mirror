@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.9.0.ebuild,v 1.1 2013/10/09 18:52:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.9.0.ebuild,v 1.2 2013/10/09 19:36:13 hasufell Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 # TODO: run-time test for ipv6: does it really need ortp[ipv6] ?
 IUSE="+alsa amr bindist coreaudio debug doc examples +filters g726 g729 gsm ilbc
 	ipv6 ntp-timestamp opus +ortp oss pcap portaudio pulseaudio sdl silk +speex
-	static-libs theora upnp v4l video x264 X"
+	static-libs test theora upnp v4l video x264 X"
 
 REQUIRED_USE="|| ( oss alsa portaudio coreaudio pulseaudio )
 	video? ( || ( sdl X ) )
@@ -48,6 +48,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
+	test? ( >=dev-util/cunit-2.1_p2[ncurses] )
 	X? ( x11-proto/videoproto )"
 
 PDEPEND="amr? ( !bindist? ( media-plugins/mediastreamer-amr ) )
@@ -90,7 +91,8 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-v4l-automagic.patch" \
 		"${FILESDIR}/${P}-libav9.patch" \
-		"${FILESDIR}/${P}-underlinking.patch"
+		"${FILESDIR}/${P}-underlinking.patch" \
+		"${FILESDIR}/${P}-tests.patch"
 
 	eautoreconf
 }
@@ -111,7 +113,7 @@ src_configure() {
 		$(use_enable coreaudio macsnd)
 		$(use_enable debug)
 		$(use_enable filters)
-		$(use_enable g726 spandsp )
+		$(use_enable g726 spandsp)
 		$(use_enable gsm)
 		$(use_enable ipv6)
 		$(use_enable ntp-timestamp)
@@ -144,6 +146,12 @@ src_configure() {
 	fi
 
 	econf "${myeconfargs[@]}"
+}
+
+src_test() {
+	default
+	cd tester || die
+	./mediastreamer2_tester || die
 }
 
 src_install() {
