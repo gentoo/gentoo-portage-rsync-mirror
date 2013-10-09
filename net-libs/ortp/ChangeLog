@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.82 2013/04/02 20:56:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.83 2013/10/09 15:09:05 hasufell Exp $
+
+*ortp-0.22.0 (09 Oct 2013)
+
+  09 Oct 2013; Julian Ospald <hasufell@gentoo.org> +ortp-0.22.0.ebuild,
+  metadata.xml:
+  version bump wrt #486498
 
   02 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ortp-0.20.0.ebuild:
   Stable for ppc64, wrt bug #462890

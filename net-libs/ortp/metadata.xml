@@ -3,6 +3,7 @@
 <pkgmetadata>
 	<herd>voip</herd>
 	<use>
+		<flag name='ntp-timestamp'>Turn on NTP timestamping on received packet</flag>
 		<flag name='srtp'>Add support for Secure RTP</flag>
 		<!-- <flag name='zrtp'>Add support for ZRTP key negotiation</flag> -->
 	</use>
