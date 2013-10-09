@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.2-r1.ebuild,v 1.2 2013/09/08 13:54:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.3.ebuild,v 1.1 2013/10/09 20:37:48 johu Exp $
 
 EAPI=5
 
@@ -10,12 +10,12 @@ if [[ $PV = *9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="mirror://kde/stable/${PN/-server/}/src/${P/-server/}.tar.bz2"
+	SRC_URI="mirror://kde/stable/${PN/-server/}/src/${PN/-server/}-${PV}-1.tar.bz2 -> ${P}.tar.bz2"
 	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 	S="${WORKDIR}/${P/-server/}"
 fi
 
-inherit cmake-utils ${scm_eclass} eutils
+inherit cmake-utils ${scm_eclass}
 
 DESCRIPTION="The server part of Akonadi"
 HOMEPAGE="http://pim.kde.org/akonadi"
@@ -58,10 +58,6 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	postgres? ( dev-db/postgresql-server )
 "
-
-PATCHES=(
-	"${FILESDIR}"/${P}-datastore_query_fix.patch
-)
 
 pkg_setup() {
 	# Set default storage backend in order: MySQL, SQLite PostgreSQL

@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.57 2013/05/11 18:53:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.58 2013/10/09 20:51:47 hwoarang Exp $
+
+  09 Oct 2013; Markos Chandras <hwoarang@gentoo.org> lxde-meta-0.5.5-r3.ebuild:
+  Depend either on old (lxsession+lxsession-edit) or the new lxsession. Bug
+  487359
 
   11 May 2013; Markos Chandras <hwoarang@gentoo.org> -lxde-meta-0.5.5-r2.ebuild:
   remove old
