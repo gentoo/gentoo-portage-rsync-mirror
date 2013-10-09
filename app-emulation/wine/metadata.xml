@@ -9,7 +9,7 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 </longdescription> 
 <use>
 	<flag name='capi'>Enable ISDN support via CAPI</flag>
-	<flag name='custom-cflags'>Bypass strip-flags; use are your own peril</flag>
+	<flag name='custom-cflags'>Bypass strip-flags; use at your own peril</flag>
 	<flag name='dos'>Pull in <pkg>games-emulation/dosbox</pkg> to run DOS applications</flag>
 	<flag name='gecko'>Add support for the Gecko engine when using iexplore</flag>
 	<flag name='mono'>Add support for .NET using Wine's Mono add-on</flag>
@@ -17,6 +17,7 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 	<flag name='osmesa'>Add support for OpenGL in bitmaps using libOSMesa</flag>
 	<flag name='perl'>Install helpers written in perl (winedump/winemaker)</flag>
 	<flag name='prelink'>Run prelink on DLLs during build -- do not disable if you do not know what this means as it can break things at runtime</flag>
+	<flag name='realtime'>Pull in <pkg>sys-auth/rtkit</pkg> for low-latency pulseaudio support</flag>
 	<flag name='run-exes'>Use Wine to open and run .EXE and .MSI files</flag>
 	<flag name='samba'>Add support for NTLM auth. see
 		http://wiki.winehq.org/NtlmAuthSetupGuide and

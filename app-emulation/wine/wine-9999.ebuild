@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.153 2013/09/13 03:03:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.154 2013/10/09 04:31:21 tetromino Exp $
 
 EAPI="5"
 
@@ -22,9 +22,9 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-GV="2.21"
+GV="2.24"
 MV="0.0.8"
-PULSE_PATCHES="winepulse-patches-1.7.0"
+PULSE_PATCHES="winepulse-patches-1.7.3"
 WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
@@ -39,7 +39,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa oss +perl +png +prelink +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
+IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa oss +perl +png +prelink +realtime +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
 [[ ${PV} == "9999" ]] || IUSE="${IUSE} pulseaudio"
 REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 	test? ( abi_x86_32 )
@@ -113,7 +113,7 @@ COMMON_DEPEND="
 			osmesa? ( >=app-emulation/emul-linux-x86-opengl-20121028[development] )
 			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
 			v4l? ( app-emulation/emul-linux-x86-medialibs[development] )
-			>=app-emulation/emul-linux-x86-baselibs-20130224[development]
+			>=app-emulation/emul-linux-x86-baselibs-20131008[development]
 		)
 	)"
 
@@ -124,7 +124,7 @@ RDEPEND="${COMMON_DEPEND}
 	selinux? ( sec-policy/selinux-wine )
 	udisks? ( sys-fs/udisks:2 )"
 [[ ${PV} == "9999" ]] || RDEPEND="${RDEPEND}
-	pulseaudio? ( sys-auth/rtkit )"
+	pulseaudio? ( realtime? ( sys-auth/rtkit ) )"
 
 DEPEND="${COMMON_DEPEND}
 	X? (
@@ -257,8 +257,11 @@ src_configure() {
 
 	[[ ${PV} == "9999" ]] || myeconfargs+=( $(use_with pulseaudio pulse) )
 
-	# Avoid crossdev's i686-pc-linux-gnu-pkg-config if building wine32 on amd64; #472038
-	use amd64 && use abi_x86_32 && tc-export PKG_CONFIG
+	if use amd64 && use abi_x86_32; then
+		# Avoid crossdev's i686-pc-linux-gnu-pkg-config if building wine32 on amd64; #472038
+		# set AR and RANLIB to make QA scripts happy; #483342
+		tc-export PKG_CONFIG AR RANLIB
+	fi
 
 	multilib_parallel_foreach_abi do_configure
 }

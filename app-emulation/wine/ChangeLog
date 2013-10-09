@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.480 2013/09/22 06:49:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.481 2013/10/09 04:31:21 tetromino Exp $
+
+*wine-1.7.3 (09 Oct 2013)
+
+  09 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.6.ebuild,
+  +wine-1.7.3.ebuild, wine-9999.ebuild, metadata.xml:
+  Belated version bump (bug #483276); see http://www.winehq.org/announce/1.7.3
+  (and .../1.7.2 and .../1.7.1) for release notes. Respect AR and RANLIB (bug
+  #483342 and #483344, thanks to Agostino Sarubbo). Make rtkit dependency
+  optional since apparently winepulse can work without it (bug #487152, thanks
+  to Stefan Reimer).
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> wine-1.6.ebuild:
   Stable for x86, wrt bug #483280
