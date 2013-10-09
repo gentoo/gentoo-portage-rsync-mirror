@@ -30,6 +30,7 @@ usr/lib32/libpng12.so.0
 usr/lib32/pkgconfig/libpng15.pc
 usr/lib32/libjpeg.so
 usr/lib32/libturbojpeg.so
+usr/lib32/libturbojpeg.so.0*
 usr/lib32/libraw1394.so
 usr/lib32/libraw1394.so.11
 usr/lib32/libraw1394.so.11.0.1
@@ -54,8 +55,7 @@ usr/lib32/libexpatw.so.1.6.0
 usr/lib32/pkgconfig/expat.pc
 usr/lib32/pkgconfig/expatu.pc
 usr/lib32/pkgconfig/expatw.pc
-lib32/libusb-0.1.so.4
-lib32/libusb-0.1.so.4.4.4
+usr/lib32/libusb-0.1.so.4*
 usr/lib32/libusb-1.0.so
 usr/lib32/libusb-1.0.so.0
 usr/lib32/libusb-1.0.so.0.1.0
@@ -71,11 +71,9 @@ lib32/libsystemd-daemon.so.0
 usr/lib32/libsystemd-daemon.so
 usr/lib32/pkgconfig/libsystemd-daemon.pc
 usr/lib32/libtiff.so
-usr/lib32/libtiff.so.5
-usr/lib32/libtiff.so.5.1.0
+usr/lib32/libtiff.so.5*
 usr/lib32/libtiffxx.so
-usr/lib32/libtiffxx.so.5
-usr/lib32/libtiffxx.so.5.1.0
+usr/lib32/libtiffxx.so.5*
 usr/lib32/pkgconfig/libtiff-4.pc
 lib32/libattr.so.1
 lib32/libattr.so.1.1.0

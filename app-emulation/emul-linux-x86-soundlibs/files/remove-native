@@ -45,14 +45,11 @@ usr/lib32/libaudiofile.so.1
 usr/lib32/libaudiofile.so.1.0.0
 usr/lib32/pkgconfig/audiofile.pc
 usr/lib32/libfftw3.so
-usr/lib32/libfftw3.so.3
-usr/lib32/libfftw3.so.3.2.4
+usr/lib32/libfftw3.so.3*
 usr/lib32/libfftw3f.so
-usr/lib32/libfftw3f.so.3
-usr/lib32/libfftw3f.so.3.2.4
+usr/lib32/libfftw3f.so.3*
 usr/lib32/libfftw3l.so
-usr/lib32/libfftw3l.so.3
-usr/lib32/libfftw3l.so.3.2.4
+usr/lib32/libfftw3l.so.3*
 usr/lib32/pkgconfig/fftw3.pc
 usr/lib32/pkgconfig/fftw3f.pc
 usr/lib32/pkgconfig/fftw3l.pc
@@ -213,8 +210,7 @@ usr/lib32/libportaudiocpp.so.0.0.12
 usr/lib32/pkgconfig/portaudio-2.0.pc
 usr/lib32/pkgconfig/portaudiocpp.pc
 usr/lib32/libmpg123.so
-usr/lib32/libmpg123.so.0
-usr/lib32/libmpg123.so.0.36.6
+usr/lib32/libmpg123.so.0*
 usr/lib32/mpg123/output_alsa.so
 usr/lib32/mpg123/output_dummy.so
 usr/lib32/mpg123/output_jack.so

@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-medialibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.84 2013/10/09 06:55:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/ChangeLog,v 1.85 2013/10/09 07:14:33 tetromino Exp $
+
+*emul-linux-x86-medialibs-20131008-r1 (09 Oct 2013)
+
+  09 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -emul-linux-x86-medialibs-20131008.ebuild,
+  +emul-linux-x86-medialibs-20131008-r1.ebuild:
+  Revbump since installed file set changed.
 
   09 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> files/remove-native:
   Update remove-native to prevent file collision with libiec61883-1.2.0-r1 (bug

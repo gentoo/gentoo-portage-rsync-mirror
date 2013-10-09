@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.161 2013/10/08 20:53:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.162 2013/10/09 07:25:49 tetromino Exp $
+
+*emul-linux-x86-baselibs-20131008-r1 (09 Oct 2013)
+
+  09 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -emul-linux-x86-baselibs-20131008.ebuild,
+  +emul-linux-x86-baselibs-20131008-r1.ebuild, files/remove-native:
+  Update remove-native to prevent file collisions (bug #487364, acked by Pacho
+  Ramos).
 
 *emul-linux-x86-baselibs-20131008 (08 Oct 2013)
 
