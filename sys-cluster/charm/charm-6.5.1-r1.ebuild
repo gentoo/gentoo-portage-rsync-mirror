@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.5.0.ebuild,v 1.1 2013/06/26 23:58:38 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.5.1-r1.ebuild,v 1.1 2013/10/09 14:35:27 ottxor Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic fortran-2 multilib toolchain-funcs
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit eutils flag-o-matic fortran-2 multilib toolchain-funcs python-single-r1
 
 DESCRIPTION="Message-passing parallel language and runtime system"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
@@ -13,7 +15,7 @@ SRC_URI="http://charm.cs.uiuc.edu/distrib/${P}.tar.gz"
 LICENSE="charm"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="charmdebug charmtracing charmproduction cmkopt doc examples mpi smp static-libs tcp"
+IUSE="charmdebug charmtracing charmproduction cmkopt doc examples mlogft mpi numa smp static-libs syncft tcp"
 
 RDEPEND="mpi? ( virtual/mpi )"
 DEPEND="
@@ -22,28 +24,21 @@ DEPEND="
 		>=app-text/poppler-0.12.3-r3[utils]
 		dev-tex/latex2html
 		virtual/tex-base
+		>=dev-python/beautifulsoup-4[${PYTHON_USEDEP}]
+		dev-python/lxml[${PYTHON_USEDEP}]
+		media-libs/netpbm
+		${PYTHON_DEPS}
 	)"
 
 REQUIRED_USE="
+	doc? ( ${PYTHON_REQUIRED_USE} )
 	cmkopt? ( !charmdebug !charmtracing )
 	charmproduction? ( !charmdebug !charmtracing )"
 
 FORTRAN_STANDARD="90"
 
-src_prepare() {
-	# Build shared libraries by default.
-	CHARM_OPTS="--build-shared"
-	if use charmproduction; then
-		CHARM_OPTS+=" --with-production"
-	else
-		if use charmdebug; then
-			CHARM_OPTS+=" --with-charmdebug"
-		fi
-
-		if use charmtracing; then
-			CHARM_OPTS+=" --with-tracing --with-tracing-commthread"
-		fi
-	fi
+get_opts() {
+	local CHARM_OPTS
 
 	# TCP instead of default UDP for socket comunication
 	# protocol
@@ -52,9 +47,29 @@ src_prepare() {
 	# enable direct SMP support using shared memory
 	CHARM_OPTS+="$(usex smp ' smp' '')"
 
-	# CMK optimization
-	use cmkopt && append-cppflags -DCMK_OPTIMIZE=1
+	CHARM_OPTS+="$(usex mlogft ' mlogft' '')"
+	CHARM_OPTS+="$(usex syncft ' syncft' '')"
 
+	# Build shared libraries by default.
+	CHARM_OPTS+=" --build-shared"
+
+	if use charmproduction; then
+		CHARM_OPTS+=" --with-production"
+	else
+		if use charmdebug; then
+			CHARM_OPTS+=" --enable-charmdebug"
+		fi
+
+		if use charmtracing; then
+			CHARM_OPTS+=" --enable-tracing --enable-tracing-commthread"
+		fi
+	fi
+
+	CHARM_OPTS+="$(usex numa ' --with-numa' '')"
+	echo $CHARM_OPTS
+}
+
+src_prepare() {
 	sed \
 		-e "/CMK_CF90/s:f90:$(usex mpi "mpif90" "$(tc-getFC)"):g" \
 		-e "/CMK_CXX/s:g++:$(usex mpi "mpic++" "$(tc-getCXX)"):g" \
@@ -75,18 +90,31 @@ src_prepare() {
 		src/scripts/Makefile \
 		src/arch/net/charmrun/Makefile || die
 
-	einfo "charm opts: ${CHARM_OPTS}"
+	# CMK optimization
+	use cmkopt && append-cppflags -DCMK_OPTIMIZE=1
+
+	# Fix QA notice. Filed report with upstream.
+	append-cflags -DALLOCA_H
+
+	epatch "${FILESDIR}/charm-6.5.1-cleanup-config.patch"
+	epatch "${FILESDIR}/charm-6.5.1-CkReductionMgr.patch"
+	epatch "${FILESDIR}/charm-6.5.1-fix-string-parsing.patch"
+	epatch "${FILESDIR}/charm-6.5.1-fix-navmenuGenerator.patch"
 }
 
 src_compile() {
+	local mybuildoptions="$(usex mpi "mpi" "net")-linux$(usex amd64 "-amd64" '') $(get_opts) ${MAKEOPTS} ${CFLAGS}"
+
 	# Build charmm++ first.
-	./build charm++ $(usex mpi "mpi" "net")-linux$(usex amd64 "-amd64" '') \
-		${CHARM_OPTS} ${MAKEOPTS} ${CFLAGS} || die "Failed to build charm++"
+	einfo "running ./build charm++ ${mybuildoptions}"
+	./build charm++ ${mybuildoptions} || die "Failed to build charm++"
 
 	# make pdf/html docs
 	if use doc; then
-		cd "${S}"/doc
-		make doc || die "failed to create pdf/html docs"
+		python-single-r1_pkg_setup
+		python_fix_shebang "${S}/doc"
+		einfo "forcing ${EPYTHON}"
+		emake -j1 -C doc/charm++
 	fi
 }
 
@@ -95,8 +123,10 @@ src_test() {
 }
 
 src_install() {
-	# Make charmc play well with gentoo before we move it into /usr/bin.
-	epatch "${FILESDIR}/charm-6.5.0-charmc-gentoo.patch"
+	# Make charmc play well with gentoo before we move it into /usr/bin. This
+	# patch cannot be applied during src_prepare() because the charmc wrapper
+	# is used during building.
+	epatch "${FILESDIR}/charm-6.5.1-charmc-gentoo.patch"
 
 	sed -e "s|gentoo-include|${P}|" \
 		-e "s|gentoo-libdir|$(get_libdir)|g" \
@@ -161,13 +191,13 @@ src_install() {
 
 	# Install pdf/html docs
 	if use doc; then
-		cd "${S}"/doc
+		cd "${S}/doc/charm++"
 		# Install pdfs.
 		insinto /usr/share/doc/${PF}/pdf
-		doins  doc/pdf/*
+		doins  *.pdf
 		# Install html.
 		docinto html
-		dohtml -r doc/html/*
+		dohtml -r manual/*
 	fi
 }
 

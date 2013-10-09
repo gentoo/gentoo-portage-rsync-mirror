@@ -1,6 +1,17 @@
---- src/scripts/charmc.old	2013-05-30 10:18:02.261819771 -0600
-+++ src/scripts/charmc	2013-05-30 10:19:50.839661634 -0600
-@@ -361,19 +361,9 @@
+From 664eb097d1c5d1a158b1f41badc79d369a06aab6 Mon Sep 17 00:00:00 2001
+From: Nicolas Bock <nicolasbock@gmail.com>
+Date: Fri, 27 Sep 2013 10:53:31 -0600
+Subject: [PATCH 4/4] Fix paths for gentoo.
+
+---
+ src/scripts/charmc | 16 +++-------------
+ 1 file changed, 3 insertions(+), 13 deletions(-)
+
+diff --git a/src/scripts/charmc b/src/scripts/charmc
+index 4d37a6b..8ec2f70 100755
+--- a/src/scripts/charmc
++++ b/src/scripts/charmc
+@@ -361,19 +361,9 @@ then
  	PROG_EXT=".exe"
  fi
  
@@ -23,3 +34,6 @@
  
  ##############################################################################
  #
+-- 
+1.8.1.5
+

@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.20 2013/06/19 03:54:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.21 2013/10/09 14:36:29 jlec Exp $
+
+*aria-2.3.2_p20130826 (09 Oct 2013)
+
+  09 Oct 2013; Justin Lecher <jlec@gentoo.org> +aria-2.3.2_p20130826.ebuild:
+  Version BUmp
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry
