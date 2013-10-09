@@ -2,8 +2,19 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>voip</herd>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>bircoph@gmail.com</email>
+		<name>Andrew Savchenko</name>
+		<description>Proxy maintainer. Assign bugs to him.</description>
+	</maintainer>
 	<use>
-		<flag name='gsm-nonstandard'>Support non-standard GSM frequencies</flag>
+		<flag name='assistant'>Turn on assistant compiling
+			(needs gtk enabled)</flag>
+		<flag name='gsm-nonstandard'>Support non-standard GSM frequencies
+		</flag>
+		<flag name='sqlite'>Turn on compilation of message storage</flag>
+		<flag name='tools'>Compile tools</flag>
 		<flag name='video'>Enable video support (display/capture)</flag>
 	</use>
 </pkgmetadata>

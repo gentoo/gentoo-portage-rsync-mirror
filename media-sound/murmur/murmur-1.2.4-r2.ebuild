@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.4-r1.ebuild,v 1.2 2013/10/07 17:19:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.4-r2.ebuild,v 1.1 2013/10/09 18:58:44 pacho Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/openssl-1.0.0b
 	|| ( dev-qt/qtsql:4[sqlite] dev-qt/qtsql:4[mysql] )
 	dev-qt/qtxmlpatterns:4
 	dbus? ( dev-qt/qtdbus:4 )
-	ice? ( >=dev-libs/Ice-3.5.0 )
+	ice? ( dev-libs/Ice )
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )"
 
 DEPEND="${RDEPEND}
@@ -101,7 +101,13 @@ src_install() {
 
 	newinitd "${FILESDIR}"/murmur.initd-r1 murmur
 	newconfd "${FILESDIR}"/murmur.confd murmur
-	systemd_dounit "${FILESDIR}"/${PN}.service
+
+	if use dbus; then
+		systemd_newunit "${FILESDIR}"/murmurd-dbus.service "${PN}".service
+		systemd_newtmpfilesd "${FILESDIR}"/murmurd-dbus.tmpfiles "${PN}".conf
+	else
+		systemd_newunit "${FILESDIR}"/murmurd-no-dbus.service "${PN}".service
+	fi
 
 	keepdir /var/lib/murmur /var/log/murmur
 	fowners -R murmur /var/lib/murmur /var/log/murmur
