@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20130922.ebuild,v 1.4 2013/10/07 21:12:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20130922.ebuild,v 1.5 2013/10/09 10:06:19 ulm Exp $
 
 EAPI=5
 
@@ -35,7 +35,8 @@ src_prepare() {
 
 src_compile() {
 	emake CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS} -DFKEYS -DREGEX -DXKEYS -I/usr/include/clens" \
+		CPPFLAGS="${CPPFLAGS} -DFKEYS -DREGEX -DXKEYS \
+			-I${EPREFIX}/usr/include/clens" \
 		LDLIBS="-lclens $("$(tc-getPKG_CONFIG)" --libs ncurses)"
 }
 
