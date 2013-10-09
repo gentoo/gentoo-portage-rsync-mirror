@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/timers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timers/ChangeLog,v 1.4 2013/04/21 05:23:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/timers/ChangeLog,v 1.5 2013/10/09 01:34:56 mrueg Exp $
+
+*timers-1.1.0-r1 (09 Oct 2013)
+
+  09 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +timers-1.1.0-r1.ebuild:
+  Add ruby20 target.
 
 *timers-1.1.0 (21 Apr 2013)
 
@@ -20,4 +25,3 @@
   30 Sep 2012; Hans de Graaff <graaff@gentoo.org> +timers-1.0.1.ebuild,
   +metadata.xml:
   Initial import. Dependency for celluloid.
-

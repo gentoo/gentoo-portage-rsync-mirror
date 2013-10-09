@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/net-http-persistent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/ChangeLog,v 1.14 2013/09/15 09:30:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-persistent/ChangeLog,v 1.15 2013/10/09 01:50:45 mrueg Exp $
+
+*net-http-persistent-2.9-r1 (09 Oct 2013)
+
+  09 Oct 2013; Manuel Rüger <mrueg@gentoo.org>
+  +net-http-persistent-2.9-r1.ebuild, -net-http-persistent-2.7.ebuild,
+  -net-http-persistent-2.8.ebuild:
+  Add ruby20 target. Cleanup old.
 
   15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> net-http-persistent-2.9.ebuild:
   Stable for x86, wrt bug #483694
