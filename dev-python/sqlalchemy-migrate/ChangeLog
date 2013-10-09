@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/sqlalchemy-migrate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/ChangeLog,v 1.26 2013/06/21 15:43:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/ChangeLog,v 1.28 2013/10/09 16:19:40 prometheanfire Exp $
+
+  09 Oct 2013; Matthew Thode <prometheanfire@gentoo.org>
+  sqlalchemy-migrate-0.7.2-r1.ebuild:
+  readded <0.8 to the sqlalchemy dep
+
+  09 Oct 2013; Matthew Thode <prometheanfire@gentoo.org>
+  sqlalchemy-migrate-0.7.2-r1.ebuild:
+  I didn't need to restrict to sqlalchemy <0.8 and removed unused variable
 
 *sqlalchemy-migrate-0.7.2-r1 (21 Jun 2013)
 
