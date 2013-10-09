@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/method_source
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.18 2013/09/04 13:43:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.19 2013/10/09 00:39:58 mrueg Exp $
+
+*method_source-0.8.2-r1 (09 Oct 2013)
+
+  09 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +method_source-0.8.2-r1.ebuild:
+  Add ruby20 target. Original commit by Peter Wilmott in ruby-overlay.
 
   04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -method_source-0.8.1.ebuild,
   -method_source-0.8.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/chronic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.13 2013/09/09 02:53:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chronic/ChangeLog,v 1.14 2013/10/09 00:37:08 mrueg Exp $
+
+*chronic-0.10.2 (09 Oct 2013)
+
+  09 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +chronic-0.10.2.ebuild:
+  Version bump. Add ruby20 target. Original commit by Peter Wilmott in ruby-
+  overlay.
 
   09 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -chronic-0.6.7.ebuild,
   -chronic-0.7.0.ebuild, -chronic-0.9.0.ebuild:
