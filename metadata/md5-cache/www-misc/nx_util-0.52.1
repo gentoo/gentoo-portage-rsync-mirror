@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test
-DEPEND=python_single_target_python2_7? ( dev-lang/python:2.7[sqlite] ) dev-python/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
+DEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite] ) dev-python/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
 DESCRIPTION=Whitelist & Reports generation for Naxsi (Web Application Firewall module for Nginx).
 EAPI=5
 HOMEPAGE=https://github.com/nbs-system/naxsi
 IUSE=python_targets_python2_7 python_single_target_python2_7
 KEYWORDS=~amd64
 LICENSE=GPL-2+ Apache-2.0 CC-BY-NC-SA-3.0
-RDEPEND=www-servers/nginx[nginx_modules_http_naxsi] python_single_target_python2_7? ( dev-lang/python:2.7[sqlite] ) dev-python/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
+RDEPEND=www-servers/nginx[nginx_modules_http_naxsi] python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[sqlite] ) dev-python/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
 REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=https://github.com/nbs-system/naxsi/archive/0.52-1.tar.gz -> ngx_http_naxsi-0.52-1.tar.gz
-_eclasses_=distutils-r1	5d8c43054b20ae2e4b694029edc94e23	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	fa36040985cb5e3cdd31d44be94d15bc	python-utils-r1	3b392f7373bcc74b7c97ae0acd9ec0e6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=distutils-r1	5d8c43054b20ae2e4b694029edc94e23	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	fa36040985cb5e3cdd31d44be94d15bc	python-utils-r1	afe3c3178f48c2b897f2f0d9fa268e24	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=0d19f0cf4ab00bb660fbcac85d5842e5

@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1014 2013/10/08 11:19:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1016 2013/10/09 17:23:33 mgorny Exp $
+
+  09 Oct 2013; Michał Górny <mgorny@gentoo.org> python-utils-r1.eclass:
+  Bump dependencies on Python interpreters to require newest stable versions.
+  Bug #463532.
+
+  09 Oct 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Skip submodules that have update=none specified in config. Fixes bug #487262.
 
   08 Oct 2013; Michał Górny <mgorny@gentoo.org> git-2.eclass, git-r3.eclass:
   Fix git-r3 -> git-2 dependency leak, as noted in bug #487026.

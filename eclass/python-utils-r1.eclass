@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.41 2013/09/26 11:24:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.42 2013/10/09 17:23:33 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -349,18 +349,23 @@ python_export() {
 			PYTHON_PKG_DEP)
 				local d
 				case ${impl} in
-					python*)
-						PYTHON_PKG_DEP='dev-lang/python';;
-					jython*)
-						PYTHON_PKG_DEP='dev-java/jython';;
-					pypy*)
-						PYTHON_PKG_DEP='virtual/pypy';;
+					python2.6)
+						PYTHON_PKG_DEP='>=dev-lang/python-2.6.8-r3:2.6';;
+					python2.7)
+						PYTHON_PKG_DEP='>=dev-lang/python-2.7.5-r2:2.7';;
+					python3.2)
+						PYTHON_PKG_DEP='>=dev-lang/python-3.2.5-r2:3.2';;
+					python3.3)
+						PYTHON_PKG_DEP='>=dev-lang/python-3.3.2-r2:3.3';;
+					pypy-c2.0)
+						PYTHON_PKG_DEP='>=dev-python/pypy-2.0.2:2.0';;
+					jython2.5)
+						PYTHON_PKG_DEP='>=dev-java/jython-2.5.3-r2:2.5';;
+					jython2.7)
+						PYTHON_PKG_DEP='dev-java/jython:2.7';;
 					*)
 						die "Invalid implementation: ${impl}"
 				esac
-
-				# slot
-				PYTHON_PKG_DEP+=:${impl##*[a-z-]}
 
 				# use-dep
 				if [[ ${PYTHON_REQ_USE} ]]; then

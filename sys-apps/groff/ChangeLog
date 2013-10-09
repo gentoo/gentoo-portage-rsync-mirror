@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.138 2013/10/09 11:19:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.139 2013/10/09 17:11:09 ago Exp $
+
+  09 Oct 2013; Agostino Sarubbo <ago@gentoo.org> groff-1.22.2.ebuild:
+  Stable for sparc, wrt bug #386335
 
   09 Oct 2013; Agostino Sarubbo <ago@gentoo.org> groff-1.22.2.ebuild:
   Stable for ppc64, wrt bug #386335

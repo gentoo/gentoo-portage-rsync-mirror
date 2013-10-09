@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.3-r3.ebuild,v 1.9 2013/10/07 19:30:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/tinyproxy-1.8.3-r3.ebuild,v 1.10 2013/10/09 17:10:27 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.banu.com/pub/${PN}/1.8/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 
 IUSE="test debug +filter-proxy minimal reverse-proxy
 	transparent-proxy +upstream-proxy +xtinyproxy-header"
