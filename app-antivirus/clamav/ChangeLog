@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.466 2013/10/05 16:13:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.467 2013/10/09 11:28:32 xarthisius Exp $
+
+  09 Oct 2013; Kacper Kowalik <xarthisius@gentoo.org> clamav-0.97.7.ebuild,
+  clamav-0.97.8-r2.ebuild, clamav-0.97.8.ebuild, clamav-0.98.ebuild:
+  Fix typo in -mminimal-toc wrt #487414 by Agostino Sarubbo <ago@gentoo.org>
 
   05 Oct 2013; Jeroen Roovers <jer@gentoo.org> clamav-0.98.ebuild:
   Stable for HPPA (bug #470090).
