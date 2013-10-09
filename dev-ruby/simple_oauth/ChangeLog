@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/simple_oauth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.6 2012/12/04 07:22:27 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.7 2013/10/09 00:13:46 mrueg Exp $
+
+*simple_oauth-0.2.0-r1 (09 Oct 2013)
+
+  09 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +simple_oauth-0.2.0-r1.ebuild:
+  Add ruby20 target.
 
 *simple_oauth-0.2.0 (04 Dec 2012)
 
