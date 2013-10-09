@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/systemu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/ChangeLog,v 1.16 2012/12/18 16:05:05 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/ChangeLog,v 1.17 2013/10/09 01:24:05 mrueg Exp $
+
+*systemu-2.5.2-r1 (09 Oct 2013)
+
+  09 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +systemu-2.5.2-r1.ebuild:
+  Add ruby20 target.
 
   18 Dec 2012; Agostino Sarubbo <ago@gentoo.org> systemu-2.5.2.ebuild:
   Stable for x86, wrt bug #2

@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gnuplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.19 2013/02/02 14:00:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.20 2013/10/09 01:28:06 mrueg Exp $
+
+*gnuplot-2.6.2-r1 (09 Oct 2013)
+
+  09 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +gnuplot-2.6.2-r1.ebuild:
+  Add ruby20 target.
 
 *gnuplot-2.6.2 (02 Feb 2013)
 
