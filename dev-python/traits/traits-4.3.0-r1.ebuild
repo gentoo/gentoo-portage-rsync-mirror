@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-4.3.0-r1.ebuild,v 1.3 2013/08/25 08:47:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-4.3.0-r1.ebuild,v 1.4 2013/10/09 22:12:15 floppym Exp $
 
 EAPI=5
 
@@ -22,11 +22,14 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( dev-python/numpy[${PYTHON_USEDEP}] )"
 
-DOCS=( docs/*.txt )
-
 python_prepare_all() {
 	sed -i -e "s/'-O3'//g" setup.py || die
 	distutils-r1_python_prepare_all
+}
+
+python_compile() {
+	python_is_python3 || local -x CFLAGS="${CFLAGS} -fno-strict-aliasing"
+	distutils-r1_python_compile
 }
 
 python_compile_all() {
@@ -39,6 +42,7 @@ python_test() {
 }
 
 python_install_all() {
+	local DOCS=( docs/*.txt )
 	use doc && HTML_DOCS=( docs/build/html/. )
 	distutils-r1_python_install_all
 
