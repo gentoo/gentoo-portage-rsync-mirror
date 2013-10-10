@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mythtv</herd>
-<maintainer>
-	<email>cardoe@gentoo.org</email>
-	<description>Do not CC me on bugs</description>
-</maintainer>
 <use>
 	<flag name="alsa">Allows MythTV to directly output sound to ALSA devices,
 		this is needed if you are using ALSA dmix or SPDIF. Note, you will have

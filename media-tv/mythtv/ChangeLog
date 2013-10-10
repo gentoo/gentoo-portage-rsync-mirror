@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.404 2013/09/28 22:10:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.405 2013/10/10 14:36:51 cardoe Exp $
+
+  10 Oct 2013; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
+  Remove my maintainer line since I'm on the herd alias and even though it says
+  to not CC the maintainer it still happens so just removing myself to prevent
+  the double e-mails.
 
 *mythtv-0.27_p20130924 (28 Sep 2013)
 
