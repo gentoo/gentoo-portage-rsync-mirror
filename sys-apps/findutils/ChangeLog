@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.218 2013/06/27 05:50:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.219 2013/10/10 18:10:29 chainsaw Exp $
+
+*findutils-4.5.12 (10 Oct 2013)
+
+  10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +findutils-4.5.12.ebuild:
+  Version bump, as requested by Lars "Polynomial-C" Wendler in bug #487514.
+  -perm /MODE is no longer disabled when POSIXLY_CORRECT. The deprecated +MODE
+  notation has been fully removed.
 
   27 Jun 2013; Mike Frysinger <vapier@gentoo.org> findutils-4.5.11.ebuild:
   Control selinux dep via configure flag.

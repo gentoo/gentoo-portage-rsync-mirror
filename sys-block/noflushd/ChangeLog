@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/noflushd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/noflushd/ChangeLog,v 1.6 2009/04/11 15:18:15 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/noflushd/ChangeLog,v 1.7 2013/10/10 18:24:49 chainsaw Exp $
+
+*noflushd-2.8 (10 Oct 2013)
+
+  10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +noflushd-2.8.ebuild:
+  Version bump, as requested by Holger Hoffstätte in bug #410567.
 
   11 Apr 2009; Mike Frysinger <vapier@gentoo.org> noflushd-2.7.5.ebuild:
   Force data/init dir sanity #265636 by Jeremy Stent.
