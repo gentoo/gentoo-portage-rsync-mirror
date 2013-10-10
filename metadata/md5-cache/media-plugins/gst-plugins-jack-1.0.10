@@ -3,11 +3,11 @@ DEPEND=>=media-sound/jack-audio-connection-kit-0.99.10 >=sys-apps/sed-4 virtual/
 DESCRIPTION=plugin for gstreamer
 EAPI=5
 HOMEPAGE=http://gstreamer.freedesktop.org/
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd
+KEYWORDS=~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd
 LICENSE=GPL-2
 RDEPEND=>=media-sound/jack-audio-connection-kit-0.99.10 >=dev-libs/glib-2.6:2 media-libs/gstreamer:1.0 >=media-libs/gst-plugins-good-1.0.10:1.0
 RESTRICT=test
 SLOT=1.0
 SRC_URI=http://gstreamer.freedesktop.org/src/gst-plugins-good/gst-plugins-good-1.0.10.tar.xz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	gst-plugins-good	935f60a941a881f5f51d19b3453d84c3	gst-plugins10	947efdfd64977cceacabacfad1e28eba	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=6522b477d9a0e36693c99ec53b8e1156
+_md5_=081dce5d03f451327d04837bb1c8eb45

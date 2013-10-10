@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13-r1.ebuild,v 1.11 2013/09/05 18:47:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13.1-r1.ebuild,v 1.2 2013/10/10 11:41:40 djc Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/openssl-0.9.6g"
@@ -60,6 +60,8 @@ python_test() {
 	for t in test_*.py; do
 		"${PYTHON}" "${t}" || die "Test ${t} fails with ${EPYTHON}"
 	done
+	# https://bugs.launchpad.net/pyopenssl/+bug/1237953
+	rm -rf tmp* *.key *.pem
 }
 
 python_install_all() {

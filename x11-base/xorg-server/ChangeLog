@@ -1,6 +1,21 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.761 2013/10/08 05:05:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.762 2013/10/10 11:54:58 chithanh Exp $
+
+*xorg-server-1.13.4-r1 (10 Oct 2013)
+*xorg-server-1.10.6-r3 (10 Oct 2013)
+*xorg-server-1.12.4-r2 (10 Oct 2013)
+*xorg-server-1.9.5-r3 (10 Oct 2013)
+*xorg-server-1.14.3-r2 (10 Oct 2013)
+*xorg-server-1.11.4-r3 (10 Oct 2013)
+
+  10 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xorg-server-1.12-cve-2013-4396.patch,
+  +files/xorg-server-1.9-cve-2013-4396.patch, +xorg-server-1.10.6-r3.ebuild,
+  +xorg-server-1.11.4-r3.ebuild, +xorg-server-1.12.4-r2.ebuild,
+  +xorg-server-1.13.4-r1.ebuild, +xorg-server-1.14.3-r2.ebuild,
+  +xorg-server-1.9.5-r3.ebuild:
+  Apply patch for security bug #487360.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xorg-server-1.14.3.ebuild:
   Stable for x86, wrt bug #475480

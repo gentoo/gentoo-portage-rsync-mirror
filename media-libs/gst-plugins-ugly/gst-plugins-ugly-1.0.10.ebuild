@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-1.0.10.ebuild,v 1.1 2013/09/01 18:40:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/gst-plugins-ugly-1.0.10.ebuild,v 1.2 2013/10/10 11:54:20 ago Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.sourceforge.net"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="+orc"
 
 RDEPEND="
