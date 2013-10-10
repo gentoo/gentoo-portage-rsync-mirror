@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.68 2013/10/08 21:18:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.69 2013/10/10 20:42:48 chainsaw Exp $
+
+  10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> vixie-cron-4.1-r13.ebuild:
+  Marked stable on AMD64 based on arch tester report by MJJoker in bug #480122.
 
   08 Oct 2013; Markus Meier <maekke@gentoo.org> vixie-cron-4.1-r13.ebuild:
   arm stable, bug #480122

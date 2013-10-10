@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.247 2013/09/23 19:20:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.248 2013/10/10 20:40:40 chainsaw Exp $
+
+*rsync-3.1.0 (10 Oct 2013)
+
+  10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +rsync-3.1.0.ebuild:
+  Version bump, as requested by Lars Polynomial-C Wendler in bug #486634.
+  Introduces protocol 31 and option passing to the remote daemon.
+  Human-readable sizes can now be expressed in terabytes.
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rsync-3.0.9-r3.ebuild:
   Stable for sparc, wrt bug #480090
