@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.258 2013/10/10 01:27:02 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.259 2013/10/10 05:26:50 creffett Exp $
+
+*konsolekalendar-4.4.11.1 (10 Oct 2013)
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  +konsolekalendar-4.4.11.1.ebuild:
+  Actually add 4.4.11.1 this time.
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org>
   -konsolekalendar-4.11.1.ebuild, -konsolekalendar-4.4.11.1.ebuild:

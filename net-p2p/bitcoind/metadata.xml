@@ -11,8 +11,6 @@
 		<name>Luke Dashjr</name>
 	</maintainer>
 	<use>
-		<flag name='bip16'>Enable backported support for relaying and mining new BIP16 pay-to-script-hash transactions</flag>
-		<flag name='eligius'>Enable using lower fees accepted by Eligius</flag>
 		<flag name='logrotate'>Use app-admin/logrotate for rotating logs</flag>
 	</use>
 </pkgmetadata>
