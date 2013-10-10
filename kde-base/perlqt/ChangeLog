@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.101 2013/10/10 01:27:16 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.102 2013/10/10 03:56:23 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/perlqt-4.10.80-vendor.patch:
+  Restore kdepim 4.4.11.1, accidentally removed when removing kde 4.11.1
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -perlqt-4.11.1.ebuild,
   files/perlqt-4.10.80-vendor.patch:

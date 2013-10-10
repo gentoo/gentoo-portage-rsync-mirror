@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.240 2013/10/10 01:27:18 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.241 2013/10/10 03:56:23 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/kpythonpluginfactorywrapper.c-r1, files/pykde4-4.10.1-arm-sip.patch:
+  Restore kdepim 4.4.11.1, accidentally removed when removing kde 4.11.1
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -pykde4-4.11.1.ebuild,
   files/kpythonpluginfactorywrapper.c-r1, files/pykde4-4.10.1-arm-sip.patch:

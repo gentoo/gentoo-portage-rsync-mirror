@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.955 2013/10/10 01:26:48 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.956 2013/10/10 03:56:21 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/kdelibs-4.10.0-udisks.patch,
+  files/kdelibs-4.3.80-kdeui_util_kkeyserver_mac.patch,
+  files/kdelibs-4.4.90-xslt.patch, files/kdelibs-4.6.2-armlinking.patch,
+  files/kdelibs-4.6.3-no_suid_kdeinit.patch,
+  files/kdelibs-4.7.96-mimetypes.patch, files/kdelibs-4.8.1-norpath.patch,
+  files/kdelibs-4.9.3-werror.patch:
+  Restore kdepim 4.4.11.1, accidentally removed when removing kde 4.11.1
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -kdelibs-4.11.1.ebuild,
   files/kdelibs-4.10.0-udisks.patch,
