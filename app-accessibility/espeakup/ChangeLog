@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/espeakup
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.22 2011/06/25 13:54:08 williamh Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.23 2013/10/10 22:39:12 williamh Exp $
+
+  10 Oct 2013; William Hubbs <williamh@gentoo.org> espeakup-0.71.ebuild,
+  espeakup-9999.ebuild:
+  Bump to eapi 5 to allow use dependencies can be added for espeak. This is
+  important enough that I am making this change directly to a stable ebuild as
+  well. Otherwise, it is possible to have espeakup be unable to speak which
+  breaks accessibility.
 
   25 Jun 2011; William Hubbs <williamh@gentoo.org> espeakup-9999.ebuild:
   migrate to git-2 eclass.
@@ -83,4 +90,3 @@
   02 Sep 2008; William Hubbs <williamh@gentoo.org> +files/espeakup.rc,
   +metadata.xml, +espeakup-0.2.ebuild:
   Initial commit.
-

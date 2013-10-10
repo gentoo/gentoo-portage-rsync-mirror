@@ -1,11 +1,12 @@
 DEFINED_PHASES=compile install postinst setup
-DEPEND=app-accessibility/espeak
+DEPEND=|| ( app-accessibility/espeak[portaudio] app-accessibility/espeak[pulseaudio] )
 DESCRIPTION=espeakup is a small lightweight connector for espeak and speakup
+EAPI=5
 HOMEPAGE=http://www.linux-speakup.org
 KEYWORDS=amd64 x86
 LICENSE=GPL-3
-RDEPEND=app-accessibility/espeak
+RDEPEND=|| ( app-accessibility/espeak[portaudio] app-accessibility/espeak[pulseaudio] )
 SLOT=0
 SRC_URI=mirror://gentoo/espeakup-0.71.tar.bz2
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=70e873d2085fdcb97f4c66e5698e7bbb
+_md5_=2b6efcabd850147f5678ee1bf29b4ac5

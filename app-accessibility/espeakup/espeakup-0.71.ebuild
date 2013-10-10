@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-0.71.ebuild,v 1.9 2011/05/16 23:25:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-0.71.ebuild,v 1.10 2013/10/10 22:39:11 williamh Exp $
+
+EAPI=5
 
 inherit linux-info
 
@@ -13,8 +15,11 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="app-accessibility/espeak"
-RDEPEND="${DEPEND}"
+COMMON_DEPEND="|| (
+	app-accessibility/espeak[portaudio]
+	app-accessibility/espeak[pulseaudio] )"
+DEPEND="${COMMON_DEPEND}"
+RDEPEND="${COMMON_DEPEND}"
 
 CONFIG_CHECK="~SPEAKUP ~SPEAKUP_SYNTH_SOFT"
 ERROR_SPEAKUP="CONFIG_SPEAKUP is not enabled in this kernel!"
