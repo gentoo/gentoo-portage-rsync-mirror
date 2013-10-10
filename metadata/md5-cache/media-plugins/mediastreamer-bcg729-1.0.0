@@ -1,11 +1,11 @@
 DEFINED_PHASES=configure
-DEPEND=>=media-libs/mediastreamer-2.8.2 >=net-libs/ortp-0.16.0 virtual/pkgconfig
+DEPEND=>=media-libs/mediastreamer-2.8.2:= >=net-libs/ortp-0.16.0:= virtual/pkgconfig
 DESCRIPTION=Backported G729 implementation for Linphone
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.linphone.org
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2
-RDEPEND=>=media-libs/mediastreamer-2.8.2 >=net-libs/ortp-0.16.0
+RDEPEND=>=media-libs/mediastreamer-2.8.2:= >=net-libs/ortp-0.16.0:=
 SLOT=0
 SRC_URI=mirror://nongnu/linphone/plugins/sources/bcg729-1.0.0.tar.gz
-_md5_=2bcbd700ee3d81299d145d6cdf0444c0
+_md5_=85330f86ce33adf426b52dde9d5bb5c2

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mediastreamer-x264
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.21 2012/12/16 14:57:37 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-x264/ChangeLog,v 1.22 2013/10/10 10:42:56 hasufell Exp $
+
+  10 Oct 2013; Julian Ospald <hasufell@gentoo.org>
+  mediastreamer-x264-1.4.2.ebuild:
+  add subslot deps
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #260683
