@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konq-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.207 2013/09/03 19:50:14 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/ChangeLog,v 1.208 2013/10/09 23:04:23 creffett Exp $
+
+*konq-plugins-4.11.2 (08 Oct 2013)
+
+  08 Oct 2013; Chris Reffett <creffett@gentoo.org> +konq-plugins-4.11.2.ebuild:
+  Version bump KDE SC 4.11.2
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org> -konq-plugins-4.11.0.ebuild:
   Drop KDE 4.11.0

@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.237 2013/09/17 20:48:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.239 2013/10/09 23:16:48 creffett Exp $
+
+  09 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/kpythonpluginfactorywrapper.c-r1, files/pykde4-4.10.1-arm-sip.patch:
+  Version bump KDE SC 4.11.2
+
+*pykde4-4.11.2-r1 (08 Oct 2013)
+
+  08 Oct 2013; Chris Reffett <creffett@gentoo.org> +pykde4-4.11.2-r1.ebuild:
+  Version bump KDE SC 4.11.2
 
   17 Sep 2013; Michał Górny <mgorny@gentoo.org> pykde4-4.10.5.ebuild,
   pykde4-4.11.1.ebuild:

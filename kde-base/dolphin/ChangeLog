@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.205 2013/09/03 19:49:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.206 2013/10/09 23:04:41 creffett Exp $
+
+*dolphin-4.11.2-r1 (08 Oct 2013)
+
+  08 Oct 2013; Chris Reffett <creffett@gentoo.org> +dolphin-4.11.2-r1.ebuild:
+  Version bump KDE SC 4.11.2
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org> -dolphin-4.11.0.ebuild:
   Drop KDE 4.11.0

@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.283 2013/09/03 19:50:07 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.285 2013/10/09 23:16:47 creffett Exp $
+
+  09 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/kig-4.11.0-boostpython.patch:
+  Version bump KDE SC 4.11.2
+
+*kig-4.11.2 (08 Oct 2013)
+
+  08 Oct 2013; Chris Reffett <creffett@gentoo.org> +kig-4.11.2.ebuild:
+  Version bump KDE SC 4.11.2
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org> -kig-4.11.0.ebuild,
   files/kig-4.11.0-boostpython.patch:

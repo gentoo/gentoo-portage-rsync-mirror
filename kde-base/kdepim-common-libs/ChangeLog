@@ -1,6 +1,16 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.107 2013/09/03 19:50:00 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.109 2013/10/09 23:16:47 creffett Exp $
+
+  09 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  files/install-composereditorng.patch:
+  Version bump KDE SC 4.11.2
+
+*kdepim-common-libs-4.11.2 (08 Oct 2013)
+
+  08 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  +kdepim-common-libs-4.11.2.ebuild:
+  Version bump KDE SC 4.11.2
 
   03 Sep 2013; Chris Reffett <creffett@gentoo.org>
   -kdepim-common-libs-4.11.0.ebuild, files/install-composereditorng.patch:

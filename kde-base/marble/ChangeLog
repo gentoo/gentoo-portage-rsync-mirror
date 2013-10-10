@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.215 2013/09/08 07:54:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.216 2013/10/09 23:04:32 creffett Exp $
+
+*marble-4.11.2 (08 Oct 2013)
+
+  08 Oct 2013; Chris Reffett <creffett@gentoo.org> +marble-4.11.2.ebuild:
+  Version bump KDE SC 4.11.2
 
   08 Sep 2013; Agostino Sarubbo <ago@gentoo.org> marble-4.10.5.ebuild,
   marble-4.11.1.ebuild:

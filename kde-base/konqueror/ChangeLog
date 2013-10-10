@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.309 2013/09/05 11:55:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.310 2013/10/09 23:03:59 creffett Exp $
+
+*konqueror-4.11.2 (08 Oct 2013)
+
+  08 Oct 2013; Chris Reffett <creffett@gentoo.org> +konqueror-4.11.2.ebuild:
+  Version bump KDE SC 4.11.2
 
 *konqueror-4.11.1-r1 (05 Sep 2013)
 
