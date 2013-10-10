@@ -1,9 +1,9 @@
 DEFINED_PHASES=compile configure install preinst prepare test unpack
 DEPEND=sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=Extremely Fast Compression algorithm
-EAPI=4
+EAPI=5
 HOMEPAGE=https://code.google.com/p/lz4/
 LICENSE=BSD-2
 SLOT=0
 _eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	46e34faf3660a9fa3d374b042130fb20	multilib	892e597faee02a5b94eb02ab512e7622	subversion	e80e84db0fc102c2959858102060bec9	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=4b6d9bdc26ff8bf301e0eb6db64554dd
+_md5_=25c0e96aa78dfe017c7c3e6f6ba0adc5

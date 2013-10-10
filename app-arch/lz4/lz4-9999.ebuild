@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.3 2013/09/18 16:28:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.4 2013/10/10 21:34:03 zerochaos Exp $
 
-EAPI=4
+EAPI=5
 
 inherit cmake-utils subversion
 
@@ -29,6 +29,11 @@ src_prepare() {
 	mv "${S}/cmake/"* "${S}"
 }
 
+src_configure() {
+	local mycmakeargs=(-DBUILD_SHARED_LIBS=ON)
+	cmake-utils_src_configure
+}
+
 src_install() {
 	cmake-utils_src_install
 
@@ -38,4 +43,6 @@ src_install() {
 	else
 		dosym /usr/bin/{lz4c32,lz4c}
 	fi
+
+	doheader lz4.h lz4hc.h xxhash.h
 }
