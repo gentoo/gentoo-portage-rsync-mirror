@@ -1,31 +1,31 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.8.0.ebuild,v 1.1 2013/03/28 22:16:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-3.8.2.1.ebuild,v 1.1 2013/10/10 18:38:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 
-inherit eutils gnome2 multilib udev user
+inherit eutils gnome2 udev user
 
-DESCRIPTION="Fork of bluez-gnome focused on integration with GNOME"
-HOMEPAGE="http://live.gnome.org/GnomeBluetooth"
+DESCRIPTION="Bluetooth graphical utilities integrated with GNOME"
+HOMEPAGE="https://wiki.gnome.org/GnomeBluetooth"
 
 LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1+"
 SLOT="2/11" # subslot = libgnome-bluetooth soname version
 IUSE="+introspection"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
-COMMON_DEPEND=">=dev-libs/glib-2.29.90:2
+COMMON_DEPEND="
+	>=dev-libs/glib-2.29.90:2
 	>=x11-libs/gtk+-2.91.3:3[introspection?]
-	>=x11-libs/libnotify-0.7:=
 	virtual/udev
-
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 "
 RDEPEND="${COMMON_DEPEND}
 	>=net-wireless/bluez-4.34
 	app-mobilephone/obexd
-	x11-themes/gnome-icon-theme-symbolic"
+	x11-themes/gnome-icon-theme-symbolic
+"
 DEPEND="${COMMON_DEPEND}
 	!net-wireless/bluez-gnome
 	app-text/docbook-xml-dtd:4.1.2
@@ -41,7 +41,6 @@ DEPEND="${COMMON_DEPEND}
 "
 # eautoreconf needs:
 #	gnome-base/gnome-common
-#	dev-util/gtk-doc-am
 
 pkg_setup() {
 	enewgroup plugdev
@@ -54,16 +53,13 @@ src_prepare() {
 }
 
 src_configure() {
-	# FIXME: Add geoclue support
-	G2CONF="${G2CONF}
-		$(use_enable introspection)
-		--enable-documentation
-		--disable-maintainer-mode
-		--disable-desktop-update
-		--disable-icon-update
-		--disable-static
-		ITSTOOL=$(type -P true)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		$(use_enable introspection) \
+		--enable-documentation \
+		--disable-desktop-update \
+		--disable-icon-update \
+		--disable-static \
+		ITSTOOL=$(type -P true)
 }
 
 src_install() {
@@ -73,7 +69,7 @@ src_install() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	if ! has_version sys-auth/consolekit[acl] ; then
+	if ! has_version sys-auth/consolekit[acl] && ! has_version sys-apps/systemd[acl] ; then
 		elog "Don't forget to add yourself to the plugdev group "
 		elog "if you want to be able to control bluetooth transmitter."
 	fi

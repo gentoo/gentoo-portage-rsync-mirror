@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.356 2013/06/05 00:06:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.357 2013/10/10 18:49:58 chainsaw Exp $
+
+*sudo-1.8.8 (10 Oct 2013)
+
+  10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +sudo-1.8.8.ebuild:
+  Version bump, as requested by "teidakankan" & "Ulenrich" in bug #481392. Now
+  produces useful error messages if there is an error in the configuration
+  file. Line continuation with backslashes is now supported. Improved HP-UX &
+  Solaris support. No longer assumes BSD group semantics.
 
   05 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

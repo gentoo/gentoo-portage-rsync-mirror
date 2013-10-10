@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.142 2013/08/03 04:48:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.143 2013/10/10 18:44:13 pacho Exp $
+
+  10 Oct 2013; Pacho Ramos <pacho@gentoo.org> wicd-1.7.2.4-r3.ebuild:
+  Adapt elog messages to systemd
 
   03 Aug 2013; Thomas Kahle <tomka@gentoo.org> wicd-1.7.2.4-r3.ebuild:
   add warning about missing wireless extensions (bug 479590), remove nonworking

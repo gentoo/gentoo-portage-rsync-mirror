@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.3 2013/08/03 04:48:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.4 2013/10/10 18:44:13 pacho Exp $
 
 EAPI=5
 
@@ -127,7 +127,7 @@ src_install() {
 pkg_postinst() {
 	elog "You may need to restart the dbus service after upgrading wicd."
 	echo
-	elog "To start wicd at boot, add /etc/init.d/wicd to a runlevel and:"
+	elog "To start wicd at boot with openRC, add /etc/init.d/wicd to a runlevel and:"
 	elog "- Remove all net.* initscripts (except for net.lo) from all runlevels"
 	elog "- Add these scripts to the RC_PLUG_SERVICES line in /etc/rc.conf"
 	elog "(For example, rc_hotplug=\"!net.eth* !net.wlan*\")"
