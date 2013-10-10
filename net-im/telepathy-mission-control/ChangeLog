@@ -1,6 +1,10 @@
 # ChangeLog for net-im/telepathy-mission-control
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.90 2013/09/05 18:59:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/ChangeLog,v 1.91 2013/10/10 19:28:58 pacho Exp $
+
+  10 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  telepathy-mission-control-5.14.1.ebuild:
+  Python is only needed to run tests (#487568 by mgorny)
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org>
   telepathy-mission-control-5.14.0-r1.ebuild,

@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.74 2013/04/27 09:38:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.75 2013/10/10 19:28:07 chainsaw Exp $
+
+*reiserfsprogs-3.6.23 (10 Oct 2013)
+
+  10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +reiserfsprogs-3.6.23.ebuild:
+  Version bump, as requested by Ivan S. Titov in bug #476452. The fsck -f -n
+  fix is now upstream, and even the version number is correct.
 
   27 Apr 2013; Mike Frysinger <vapier@gentoo.org> reiserfsprogs-3.6.22.ebuild:
   Force selection of -std=gnu89 for clang #427300 by Fabio Scaccabarozzi.

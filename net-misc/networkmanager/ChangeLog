@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.183 2013/10/06 14:14:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.185 2013/10/10 19:16:48 pacho Exp $
+
+  10 Oct 2013; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.8.ebuild:
+  Add a wifi USE flag to pull in wpa_supplicant only for that case (#473180 by
+  Marien Zwart)
+
+*networkmanager-0.9.8.8 (10 Oct 2013)
+
+  10 Oct 2013; Pacho Ramos <pacho@gentoo.org> +networkmanager-0.9.8.8.ebuild:
+  Version bump
 
   06 Oct 2013; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.6.ebuild:
   Add a warning for people having a NetworkManager.conf that loads ifnet plugin

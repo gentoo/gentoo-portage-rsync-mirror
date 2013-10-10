@@ -1,6 +1,15 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.68 2013/10/09 13:39:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.69 2013/10/10 19:18:37 chainsaw Exp $
+
+*acct-6.6.1 (10 Oct 2013)
+
+  10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +acct-6.6.1.ebuild,
+  +files/acct-6.6.1-cross-compile.patch, +files/acct-6.6.1-no-gets.patch,
+  +files/acct-6.6.1-texi-failure.patch:
+  Version bump as requested by "teidakankan" in bug #483076. Rediffed existing
+  cross-compile & nogets patches. Texi fix is by Dmitrijs Ledkovs and from
+  Debian bug #696204.
 
   09 Oct 2013; Jeroen Roovers <jer@gentoo.org> acct-6.5.5-r3.ebuild:
   Stable for HPPA (bug #485338).

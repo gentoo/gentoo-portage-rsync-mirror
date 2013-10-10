@@ -1,13 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.14.1.ebuild,v 1.2 2013/09/05 18:59:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-mission-control/telepathy-mission-control-5.14.1.ebuild,v 1.3 2013/10/10 19:28:58 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+# Needed for tests, but we don't run them for now
+#PYTHON_COMPAT=( python2_{6,7} )
 
-inherit gnome2 python-any-r1
+inherit gnome2 #python-any-r1
 
 DESCRIPTION="An account manager and channel dispatcher for the Telepathy framework"
 HOMEPAGE="http://cgit.freedesktop.org/telepathy/telepathy-mission-control/"
@@ -34,7 +35,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.17
 	virtual/pkgconfig
 "
-#	test? ( dev-python/twisted-words )"
+#	test? ( ${PYTHON_DEPS}
+#		dev-python/twisted-words )"
 
 # Tests are broken, see upstream bug #29334 and #64212
 # upstream doesn't want it enabled everywhere (#29334#c12)
