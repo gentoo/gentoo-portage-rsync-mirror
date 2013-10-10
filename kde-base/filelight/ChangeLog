@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.112 2013/10/09 23:04:01 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.113 2013/10/10 01:26:36 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org> -filelight-4.11.1.ebuild:
+  Drop KDE SC 4.11.1
 
 *filelight-4.11.2 (08 Oct 2013)
 

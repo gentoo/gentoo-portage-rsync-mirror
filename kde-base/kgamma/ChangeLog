@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.272 2013/10/09 23:04:37 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.273 2013/10/10 01:26:54 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org> -kgamma-4.11.1.ebuild:
+  Drop KDE SC 4.11.1
 
 *kgamma-4.11.2 (08 Oct 2013)
 

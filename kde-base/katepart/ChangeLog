@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katepart
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.98 2013/10/09 23:04:13 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.99 2013/10/10 01:26:39 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org> -katepart-4.11.1.ebuild:
+  Drop KDE SC 4.11.1
 
 *katepart-4.11.2 (08 Oct 2013)
 

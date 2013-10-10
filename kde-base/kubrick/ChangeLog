@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.169 2013/10/09 23:04:41 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.170 2013/10/10 01:27:09 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org> -kubrick-4.11.1.ebuild:
+  Drop KDE SC 4.11.1
 
 *kubrick-4.11.2 (08 Oct 2013)
 

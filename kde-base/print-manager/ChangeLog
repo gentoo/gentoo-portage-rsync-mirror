@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/print-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/ChangeLog,v 1.40 2013/10/09 23:04:10 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/ChangeLog,v 1.41 2013/10/10 01:27:18 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org> -print-manager-4.11.1.ebuild:
+  Drop KDE SC 4.11.1
 
 *print-manager-4.11.2 (08 Oct 2013)
 

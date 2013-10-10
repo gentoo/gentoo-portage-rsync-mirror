@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-filesharing
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-filesharing/ChangeLog,v 1.269 2013/10/09 23:04:08 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-filesharing/ChangeLog,v 1.270 2013/10/10 01:26:48 creffett Exp $
+
+  10 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  -kdenetwork-filesharing-4.11.1.ebuild:
+  Drop KDE SC 4.11.1
 
 *kdenetwork-filesharing-4.11.2 (08 Oct 2013)
 
