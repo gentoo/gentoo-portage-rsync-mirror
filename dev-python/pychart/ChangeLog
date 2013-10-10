@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pychart
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.16 2010/04/07 17:53:15 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychart/ChangeLog,v 1.17 2013/10/10 16:46:51 mgorny Exp $
+
+*pychart-1.39-r1 (10 Oct 2013)
+
+  10 Oct 2013; Michał Górny <mgorny@gentoo.org> +pychart-1.39-r1.ebuild:
+  Convert to distutils-r1. Thanks for Dennis Lan for the initial patch, bug
+  #487510.
 
   07 Apr 2010; Markos Chandras <hwoarang@gentoo.org> pychart-1.39.ebuild:
   Stable on amd64 wrt bug #310161
@@ -57,4 +63,3 @@
   pychart-1.33.ebuild:
   initial commit thanks to Jorg Hoh <joerg@devone.org> and Rob Cakebread
   <robc@myrealbox.com>
-
