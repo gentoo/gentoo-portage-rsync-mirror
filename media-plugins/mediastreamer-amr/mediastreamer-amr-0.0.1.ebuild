@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/mediastreamer-amr-0.0.1.ebuild,v 1.8 2013/04/02 20:56:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mediastreamer-amr/mediastreamer-amr-0.0.1.ebuild,v 1.9 2013/10/10 10:27:24 hasufell Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils multilib
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
 
-RDEPEND=">=media-libs/mediastreamer-2.0.0
+RDEPEND=">=media-libs/mediastreamer-2.0.0:=
 	>=media-libs/opencore-amr-0.1.2"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

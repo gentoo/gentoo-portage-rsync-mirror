@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.9.0.ebuild,v 1.2 2013/10/09 19:36:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.9.0.ebuild,v 1.3 2013/10/10 10:20:17 hasufell Exp $
 
 EAPI=5
 
@@ -11,20 +11,21 @@ HOMEPAGE="http://www.linphone.org/"
 SRC_URI="mirror://nongnu/linphone/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="0/3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 # Many cameras will not work or will crash an application if mediastreamer2 is
 # not built with v4l2 support (taken from configure.ac)
 # TODO: run-time test for ipv6: does it really need ortp[ipv6] ?
 IUSE="+alsa amr bindist coreaudio debug doc examples +filters g726 g729 gsm ilbc
-	ipv6 ntp-timestamp opus +ortp oss pcap portaudio pulseaudio sdl silk +speex
+	ipv6 ntp-timestamp opengl opus +ortp oss pcap portaudio pulseaudio sdl silk +speex
 	static-libs test theora upnp v4l video x264 X"
 
 REQUIRED_USE="|| ( oss alsa portaudio coreaudio pulseaudio )
-	video? ( || ( sdl X ) )
+	video? ( || ( opengl sdl X ) )
 	theora? ( video )
 	X? ( video )
-	v4l? ( video )"
+	v4l? ( video )
+	opengl? ( video )"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	g726? ( >=media-libs/spandsp-0.0.6_pre1 )
@@ -38,6 +39,9 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	upnp? ( net-libs/libupnp )
 	video? (
 		virtual/ffmpeg
+		opengl? ( media-libs/glew
+			virtual/opengl
+			x11-libs/libX11 )
 		v4l? ( media-libs/libv4l
 			sys-kernel/linux-headers )
 		theora? ( media-libs/libtheora )
@@ -117,6 +121,7 @@ src_configure() {
 		$(use_enable gsm)
 		$(use_enable ipv6)
 		$(use_enable ntp-timestamp)
+		$(use_enable opengl glx)
 		$(use_enable opus)
 		$(use_enable ortp)
 		$(use_enable oss)

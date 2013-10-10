@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtsingleapplication
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.2 2013/09/09 17:14:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.3 2013/10/10 10:26:11 pinkbyte Exp $
+
+  10 Oct 2013; Sergey Popov <pinkbyte@gentoo.org>
+  qtsingleapplication-2.6.1.ebuild:
+  Add ~x86 keyword, wrt bug #483618 . Add ~amd64-linux and ~x86-linux keywords
 
   09 Sep 2013; Michael Palimaka <kensington@gentoo.org>
   qtsingleapplication-2.6.1.ebuild:

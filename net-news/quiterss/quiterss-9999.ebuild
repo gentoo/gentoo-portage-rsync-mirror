@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-9999.ebuild,v 1.9 2013/08/04 11:15:54 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-9999.ebuild,v 1.10 2013/10/10 10:29:31 pinkbyte Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ IUSE="debug"
 DEPEND="dev-db/sqlite:3
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
+	dev-qt/qtsingleapplication
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtwebkit:4"
 RDEPEND="${DEPEND}"
@@ -39,5 +40,5 @@ src_prepare() {
 }
 
 src_configure() {
-	eqmake4 PREFIX="${EPREFIX}/usr"
+	eqmake4 PREFIX="${EPREFIX}/usr" SYSTEMQTSA=1
 }
