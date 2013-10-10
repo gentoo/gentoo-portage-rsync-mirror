@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.27_p20130924.ebuild,v 1.1 2013/09/28 22:10:31 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.27_p20130924.ebuild,v 1.2 2013/10/10 16:18:21 rich0 Exp $
 
 EAPI=5
 
@@ -219,7 +219,7 @@ src_configure() {
 
 	# Video
 	use vdpau && myconf="${myconf} --enable-vdpau"
-	use vaapi && myconf="${myconf} --enable-vaapi"
+	myconf="${myconf} $(use_enable vaapi)"
 	use crystalhd && myconf="${myconf} --enable-crystalhd"
 
 	# Input

@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.405 2013/10/10 14:36:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.406 2013/10/10 16:18:21 rich0 Exp $
+
+  10 Oct 2013; Richard Freeman <rich0@gentoo.org> mythtv-0.27_p20130924.ebuild:
+  Fix vaapi configuration - 487442.
 
   10 Oct 2013; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   Remove my maintainer line since I'm on the herd alias and even though it says
