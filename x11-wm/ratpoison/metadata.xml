@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>desktop-wm</herd>
+	<maintainer><email>jer@gentoo.org</email></maintainer>
 	<longdescription>
 		Ratpoison is a simple Window Manager with no fat library dependencies,
 		no fancy graphics, no window decorations, and no rodent dependence. It
