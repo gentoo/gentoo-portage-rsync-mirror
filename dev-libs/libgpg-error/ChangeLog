@@ -1,6 +1,18 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.92 2013/10/09 05:42:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.96 2013/10/11 14:08:01 ago Exp $
+
+  11 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libgpg-error-1.12.ebuild:
+  Stable for sparc, wrt bug #487230
+
+  11 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libgpg-error-1.12.ebuild:
+  Stable for ppc64, wrt bug #487230
+
+  11 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libgpg-error-1.12.ebuild:
+  Stable for ia64, wrt bug #487230
+
+  11 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libgpg-error-1.12.ebuild:
+  Stable for alpha, wrt bug #487230
 
   09 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libgpg-error-1.12.ebuild:
   Stable for x86, wrt bug #487230
