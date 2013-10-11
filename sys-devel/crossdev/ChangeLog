@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.103 2013/07/01 04:33:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.105 2013/10/11 19:15:56 vapier Exp $
+
+*crossdev-20131011 (11 Oct 2013)
+
+  11 Oct 2013; Mike Frysinger <vapier@gentoo.org> +crossdev-20131011.ebuild:
+  Version bump.
+
+  11 Oct 2013; Mike Frysinger <vapier@gentoo.org> crossdev-20130628.ebuild:
+  Stabilize for all.
 
 *crossdev-20130628 (01 Jul 2013)
 
