@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.7 2013/04/10 18:14:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.4.ebuild,v 1.8 2013/10/11 18:55:15 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -41,7 +41,8 @@ src_prepare() {
 		|| die "sed failed"
 	epatch \
 		"${FILESDIR}"/${P}-underlink.patch \
-		"${FILESDIR}"/${P}-libpng.patch
+		"${FILESDIR}"/${P}-libpng.patch \
+		"${FILESDIR}"/${P}-lm.patch
 }
 
 src_compile() {

@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.37 2013/07/31 14:03:51 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.38 2013/10/11 19:00:50 pacho Exp $
+
+*plymouth-0.8.8-r2 (11 Oct 2013)
+
+  11 Oct 2013; Pacho Ramos <pacho@gentoo.org> +plymouth-0.8.8-r2.ebuild:
+  Move things to /usr (#485034 by Kirill Elagin and fix by Enrico Tagliavini),
+  this also causes to rhgb-compat-link to be dropped due it pointing to old
+  location, use readme.gentoo.eclass, move to eapi5, move the openrc vs systemd
+  blocker behind 'systemd' USE flag to prevent people enabling it globally from
+  getting systemd blocked.
 
   31 Jul 2013; Maxim Koltsov <maksbotan@gentoo.org> plymouth-0.8.8-r1.ebuild:
   Fix "!has_version: command not found", bug #478668.

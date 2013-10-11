@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.124 2013/09/30 02:28:42 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.125 2013/10/11 18:35:59 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -414,15 +414,14 @@ toolchain-binutils_src_install() {
 	[[ -n ${src}${dst} ]] && FAKE_TARGETS="${FAKE_TARGETS} ${CTARGET/${src}/${dst}}"
 
 	# Generate an env.d entry for this binutils
-	cd "${S}"
 	insinto /etc/env.d/binutils
-	cat <<-EOF > env.d
+	cat <<-EOF > "${T}"/env.d
 		TARGET="${CTARGET}"
 		VER="${BVER}"
 		LIBPATH="${EPREFIX}${LIBPATH}"
 		FAKE_TARGETS="${FAKE_TARGETS}"
 	EOF
-	newins env.d ${CTARGET}-${BVER}
+	newins "${T}"/env.d ${CTARGET}-${BVER}
 
 	# Handle documentation
 	if ! is_cross ; then

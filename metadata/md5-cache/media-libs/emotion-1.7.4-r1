@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=>=media-libs/evas-1.7.4 >=media-libs/edje-1.7.4 >=dev-libs/ecore-1.7.4 >=dev-libs/eeze-1.7.4 vlc? ( media-video/vlc ) xine? ( >=media-libs/xine-lib-1.1.1 ) !gstreamer? ( !vlc? ( !xine? ( >=media-libs/xine-lib-1.1.1 ) ) ) gstreamer? ( =media-libs/gstreamer-0.10* =media-libs/gst-plugins-good-0.10* =media-plugins/gst-plugins-ffmpeg-0.10* ) nls? ( sys-devel/gettext )
 SLOT=0
 SRC_URI=http://download.enlightenment.org/releases/emotion-1.7.4.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	enlightenment	6612645bd44367af3341a4fcb2f70ecc	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	enlightenment	c8be1f5b0299a3d10bd59a85d2925153	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	a2130e6fc4aa4c6a24b265ca0cbcc2b6	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b2c0c9989ed6c88bb88c68af9ca74783

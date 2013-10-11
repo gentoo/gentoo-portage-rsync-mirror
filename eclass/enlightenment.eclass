@@ -1,11 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.103 2013/10/04 15:27:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.104 2013/10/11 18:34:43 vapier Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
 # enlightenment@gentoo.org
 # @BLURB: simplify enlightenment package management
+
+if [[ ${___ECLASS_ONCE_ENLIGHTENMENT} != "recur -_+^+_- spank" ]] ; then
+___ECLASS_ONCE_ENLIGHTENMENT="recur -_+^+_- spank"
 
 inherit eutils libtool
 
@@ -93,8 +96,8 @@ fi
 
 ENLIGHTENMENT_EXPF="src_unpack src_compile src_install"
 case "${EAPI:-0}" in
-		2|3|4|5) ENLIGHTENMENT_EXPF+=" src_prepare src_configure" ;;
-		*) ;;
+2|3|4|5) ENLIGHTENMENT_EXPF+=" src_prepare src_configure" ;;
+*) ;;
 esac
 EXPORT_FUNCTIONS ${ENLIGHTENMENT_EXPF}
 
@@ -192,3 +195,5 @@ enlightenment_src_install() {
 		use static-libs || find "${D}" -name '*.la' -exec rm -f {} +
 	fi
 }
+
+fi

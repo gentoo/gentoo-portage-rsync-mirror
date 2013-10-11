@@ -1,0 +1,92 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r2.ebuild,v 1.1 2013/10/11 19:00:50 pacho Exp $
+
+EAPI=5
+
+inherit autotools-utils readme.gentoo systemd toolchain-funcs
+
+DESCRIPTION="Graphical boot animation (splash) and logger"
+HOMEPAGE="http://cgit.freedesktop.org/plymouth/"
+SRC_URI="
+	http://www.freedesktop.org/software/plymouth/releases/${P}.tar.bz2
+	http://dev.gentoo.org/~aidecoe/distfiles/${CATEGORY}/${PN}/gentoo-logo.png"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE_VIDEO_CARDS="video_cards_intel video_cards_radeon"
+IUSE="${IUSE_VIDEO_CARDS} debug gdm +gtk +libkms +pango static-libs systemd"
+
+CDEPEND="
+	>=media-libs/libpng-1.2.16
+	gtk? (
+		dev-libs/glib:2
+		>=x11-libs/gtk+-2.12:2 )
+	libkms? ( x11-libs/libdrm[libkms] )
+	pango? ( >=x11-libs/pango-1.21 )
+	video_cards_intel? ( x11-libs/libdrm[video_cards_intel] )
+	video_cards_radeon? ( x11-libs/libdrm[video_cards_radeon] )
+"
+DEPEND="${CDEPEND}
+	virtual/pkgconfig
+"
+# Block due bug #383067
+RDEPEND="${CDEPEND}
+	systemd? ( !sys-boot/plymouth-openrc-plugin sys-apps/systemd )
+	virtual/udev
+"
+
+DOC_CONTENTS="
+	Follow the following instructions to set up Plymouth:\n
+	http://dev.gentoo.org/~aidecoe/doc/en/plymouth.xml
+"
+
+src_prepare() {
+	sed -i 's:/bin/systemd-tty-ask-password-agent:/usr/bin/systemd-tty-ask-password-agent:g' \
+		systemd-units/systemd-ask-password-plymouth.service.in || die \
+		'ask-password sed failed'
+	sed -i 's:/bin/udevadm:/usr/bin/udevadm:g' \
+		systemd-units/plymouth-start.service.in || die 'udevadm sed failed'
+	autotools-utils_src_prepare
+}
+
+src_configure() {
+	local myeconfargs=(
+		--with-system-root-install=no
+		--localstatedir=/var
+		--without-rhgb-compat-link
+		$(use_enable debug tracing)
+		$(use_enable gtk gtk)
+		$(use_enable libkms)
+		$(use_enable pango)
+		$(use_enable gdm gdm-transition)
+		$(use_enable video_cards_intel libdrm_intel)
+		$(use_enable video_cards_radeon libdrm_radeon)
+		$(use_enable systemd systemd-integration)
+		)
+	autotools-utils_src_configure
+}
+
+src_install() {
+	autotools-utils_src_install
+
+	if use static-libs; then
+		mv "${D}/$(get_libdir)"/libply{,-splash-core}.a \
+			"${D}/usr/$(get_libdir)"/ || die 'mv *.a files failed'
+		gen_usr_ldscript libply.so libply-splash-core.so
+	fi
+
+	insinto /usr/share/plymouth
+	newins "${DISTDIR}"/gentoo-logo.png bizcom.png
+
+	readme.gentoo_create_doc
+}
+
+pkg_postinst() {
+	readme.gentoo_print_elog
+	if ! has_version "sys-kernel/dracut[dracut_modules_plymouth]" && ! has_version "sys-kernel/genkernel-next[plymouth]"; then
+		ewarn "If you want initramfs builder with plymouth support, please emerge"
+		ewarn "sys-kernel/dracut[dracut_modules_plymouth] or sys-kernel/genkernel-next[plymouth]."
+	fi
+}
