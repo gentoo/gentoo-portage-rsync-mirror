@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8289 2013/10/09 18:07:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8290 2013/10/11 19:55:30 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Oct 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask nx11-misc/lightdm-1.8 for futher testing
 
   09 Oct 2013; Pacho Ramos <pacho@gentoo.org>
   +default/linux/amd64/13.0/desktop/gnome/systemd/parent,
