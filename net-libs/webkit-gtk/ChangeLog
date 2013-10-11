@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.223 2013/10/04 00:19:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.224 2013/10/10 23:43:20 tetromino Exp $
+
+  10 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
+  webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-1.8.3-r201.ebuild,
+  webkit-gtk-1.8.3-r300.ebuild, webkit-gtk-1.10.2-r300.ebuild,
+  webkit-gtk-2.0.4.ebuild:
+  Refuse to build if nvidia-drivers-325.* is the being used as the system
+  opengl library to avoid freeze while compiling (bug #463960, thanks to Harris
+  Landgarten, nE0sIghT and others for help in diagnosing the issue).
 
   04 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   webkit-gtk-1.10.2-r300.ebuild:
