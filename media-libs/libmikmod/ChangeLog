@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.110 2013/06/27 18:39:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.111 2013/10/11 06:14:11 ssuominen Exp $
+
+*libmikmod-3.3.2 (11 Oct 2013)
+
+  11 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> +libmikmod-3.3.2.ebuild:
+  Version bump; with temporarily disabled openal, sdl and sdl2 support because
+  they haven't been converted to the new multilib format yet.
 
   27 Jun 2013; Alexis Ballier <aballier@gentoo.org> libmikmod-3.2.0-r1.ebuild:
   Hardcode Libs in the .pc file since libmikmod-config is really broken: it
