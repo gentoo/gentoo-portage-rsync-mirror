@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.1.0_pre20130128-r1.ebuild,v 1.2 2013/10/10 11:55:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.1.0_pre20130128-r1.ebuild,v 1.3 2013/10/11 05:18:46 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${MY_PN}-${PV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="1.0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="+orc"
 
 RDEPEND="

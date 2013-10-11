@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/repsnapper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/repsnapper/ChangeLog,v 1.4 2013/08/28 05:37:56 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/repsnapper/ChangeLog,v 1.5 2013/10/11 05:10:31 slis Exp $
+
+*repsnapper-2.3.0 (11 Oct 2013)
+
+  11 Oct 2013; Sławek Lis <slis@gentoo.org> +files/typo.patch,
+  +repsnapper-2.3.0.ebuild:
+  version bump
 
 *repsnapper-2.2.0b_p3 (28 Aug 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.136 2013/08/12 00:09:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.138 2013/10/11 05:31:14 aballier Exp $
 
 EAPI="5"
 
@@ -75,7 +75,6 @@ RDEPEND="
 		aacplus? ( media-libs/libaacplus )
 		amrenc? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
-		fdk? ( media-libs/fdk-aac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		twolame? ( media-sound/twolame )
@@ -83,6 +82,7 @@ RDEPEND="
 		x264? ( >=media-libs/x264-0.0.20111017:= )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
+	fdk? ( media-libs/fdk-aac )
 	flite? ( app-accessibility/flite )
 	fontconfig? ( media-libs/fontconfig )
 	frei0r? ( media-plugins/frei0r-plugins )
@@ -126,7 +126,7 @@ DEPEND="${RDEPEND}
 	gnutls? ( virtual/pkgconfig )
 	ieee1394? ( virtual/pkgconfig )
 	libv4l? ( virtual/pkgconfig )
-	mmx? ( dev-lang/yasm )
+	mmx? ( >=dev-lang/yasm-1.2 )
 	rtmp? ( virtual/pkgconfig )
 	schroedinger? ( virtual/pkgconfig )
 	test? ( net-misc/wget )
@@ -165,7 +165,7 @@ src_configure() {
 	# Encoders
 	if use encode
 	then
-		ffuse="${ffuse} aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
+		ffuse="${ffuse} aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame"
 		for i in aacplus faac theora twolame wavpack x264 xvid; do
 			ffuse="${ffuse} ${i}:lib${i}"
 		done
@@ -174,7 +174,7 @@ src_configure() {
 		if use aac || use amrenc ; then
 			myconf="${myconf} --enable-version3"
 		fi
-		if use aacplus || use faac || use fdk ; then
+		if use aacplus || use faac ; then
 			myconf="${myconf} --enable-nonfree"
 		fi
 	else
@@ -206,11 +206,12 @@ src_configure() {
 	ffuse="${ffuse} threads:pthreads"
 
 	# Decoders
-	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb	jpeg2k:libopenjpeg"
+	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb fdk:libfdk-aac jpeg2k:libopenjpeg"
 	use amr && myconf="${myconf} --enable-version3"
 	for i in bluray celt gme gsm modplug opus quvi rtmp schroedinger speex vorbis vpx; do
 		ffuse="${ffuse} ${i}:lib${i}"
 	done
+	use fdk && myconf="${myconf} --enable-nonfree"
 
 	for i in ${ffuse} ; do
 		myconf="${myconf} $(use_enable ${i%:*} ${i#*:})"
