@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.72 2013/10/10 10:20:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.73 2013/10/11 17:39:12 hasufell Exp $
+
+  11 Oct 2013; Julian Ospald <hasufell@gentoo.org> mediastreamer-2.9.0.ebuild,
+  +files/mediastreamer-2.9.0-xxd.patch:
+  fix opengl useflag wrt #487486
 
   10 Oct 2013; Julian Ospald <hasufell@gentoo.org> mediastreamer-2.9.0.ebuild:
   add opengl useflag, add subslot

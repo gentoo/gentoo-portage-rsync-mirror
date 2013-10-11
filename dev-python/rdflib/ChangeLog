@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.33 2013/09/15 09:30:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.34 2013/10/11 17:48:39 maekke Exp $
+
+  11 Oct 2013; Markus Meier <maekke@gentoo.org> rdflib-3.2.3-r1.ebuild:
+  arm stable, bug #482056
 
   15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3-r1.ebuild:
   Stable for x86, wrt bug #482056

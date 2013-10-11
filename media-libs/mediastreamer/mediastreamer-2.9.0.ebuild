@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.9.0.ebuild,v 1.3 2013/10/10 10:20:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.9.0.ebuild,v 1.4 2013/10/11 17:39:12 hasufell Exp $
 
 EAPI=5
 
@@ -52,6 +52,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
+	opengl? ( dev-util/xxdi )
 	test? ( >=dev-util/cunit-2.1_p2[ncurses] )
 	X? ( x11-proto/videoproto )"
 
@@ -96,7 +97,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-v4l-automagic.patch" \
 		"${FILESDIR}/${P}-libav9.patch" \
 		"${FILESDIR}/${P}-underlinking.patch" \
-		"${FILESDIR}/${P}-tests.patch"
+		"${FILESDIR}/${P}-tests.patch" \
+		"${FILESDIR}/${P}-xxd.patch"
 
 	eautoreconf
 }
