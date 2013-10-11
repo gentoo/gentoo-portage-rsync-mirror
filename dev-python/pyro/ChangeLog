@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.91 2013/10/08 18:57:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.92 2013/10/11 10:20:50 pinkbyte Exp $
+
+  11 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> pyro-3.16-r1.ebuild:
+  Stable on amd64 and x86, wrt bug #487334
 
 *pyro-4.22 (08 Oct 2013)
 
