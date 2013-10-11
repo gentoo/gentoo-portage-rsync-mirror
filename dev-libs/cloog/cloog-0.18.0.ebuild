@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.0.ebuild,v 1.3 2013/10/09 13:59:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/cloog-0.18.0.ebuild,v 1.4 2013/10/11 22:23:53 hwoarang Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.bastoul.net/cloog/pages/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ~x86"
 IUSE="static-libs"
 
 DEPEND="dev-libs/gmp

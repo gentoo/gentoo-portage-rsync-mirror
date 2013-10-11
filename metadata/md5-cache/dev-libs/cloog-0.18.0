@@ -4,10 +4,10 @@ DESCRIPTION=A loop generator for scanning polyhedra
 EAPI=4
 HOMEPAGE=http://www.bastoul.net/cloog/index.php
 IUSE=static-libs
-KEYWORDS=~amd64 ~hppa ~x86
+KEYWORDS=~amd64 ~hppa ~mips ~x86
 LICENSE=LGPL-2.1
 RDEPEND=dev-libs/gmp >=dev-libs/isl-0.11.1 !<dev-libs/cloog-ppl-0.15.10
 SLOT=0
 SRC_URI=http://www.bastoul.net/cloog/pages/download/cloog-0.18.0.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=68d2bb6c08b6dfa3a100efe1f3a5a82e
+_md5_=12f3ef64ae032515bfb0bfaed0e5ed57
