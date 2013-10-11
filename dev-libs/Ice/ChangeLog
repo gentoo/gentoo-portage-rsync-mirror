@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.25 2013/09/05 18:29:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.26 2013/10/11 08:01:53 polynomial-c Exp $
+
+*Ice-3.5.1 (11 Oct 2013)
+
+  11 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> +Ice-3.5.1.ebuild:
+  Version bump.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> Ice-3.5.0-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
