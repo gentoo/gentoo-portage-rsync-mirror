@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.195 2013/10/10 20:00:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.196 2013/10/11 11:54:06 polynomial-c Exp $
+
+*ntp-4.2.6_p5-r7 (11 Oct 2013)
+
+  11 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> -ntp-4.2.6_p5-r6.ebuild,
+  +ntp-4.2.6_p5-r7.ebuild:
+  Revbump to fix installation of sntp init script (problem reported by idl0r in
+  #gentoo-dev). Committed straight to stable.
 
   10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> ntp-4.2.6_p5-r6.ebuild:
   Marked stable on AMD64 based on arch tester report by MJJoker in bug #480084.

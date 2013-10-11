@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r6.ebuild,v 1.4 2013/10/10 20:00:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5-r7.ebuild,v 1.1 2013/10/11 11:54:06 polynomial-c Exp $
 
 EAPI="4"
 
@@ -89,7 +89,7 @@ src_install() {
 	newconfd "${FILESDIR}"/ntpd.confd ntpd
 	newinitd "${FILESDIR}"/ntp-client.rc ntp-client
 	newconfd "${FILESDIR}"/ntp-client.confd ntp-client
-	newconfd "${FILESDIR}"/sntp.rc sntp
+	newinitd "${FILESDIR}"/sntp.rc sntp
 	newconfd "${FILESDIR}"/sntp.confd sntp
 	if ! use caps ; then
 		sed -i "s|-u ntp:ntp||" "${ED}"/etc/conf.d/ntpd || die
