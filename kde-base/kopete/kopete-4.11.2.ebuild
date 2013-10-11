@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.11.2.ebuild,v 1.1 2013/10/09 23:04:11 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-4.11.2.ebuild,v 1.2 2013/10/11 16:46:02 johu Exp $
 
 EAPI=5
 
@@ -74,7 +74,7 @@ COMMONDEPEND="
 	jingle? (
 		>=media-libs/mediastreamer-2.3.0
 		media-libs/speex
-		net-libs/ortp
+		net-libs/ortp:=
 	)
 	meanwhile? ( net-libs/meanwhile )
 	msn? ( >=net-libs/libmsn-4.1 )

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.395 2013/10/10 01:27:02 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.396 2013/10/11 16:46:02 johu Exp $
+
+  11 Oct 2013; Johannes Huber <johu@gentoo.org> kopete-4.11.2.ebuild:
+  Use subslot for net-libs/ortp bug #487518.
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -kopete-4.11.1.ebuild:
   Drop KDE SC 4.11.1
