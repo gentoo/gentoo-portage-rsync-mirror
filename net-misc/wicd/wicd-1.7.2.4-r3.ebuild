@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.4 2013/10/10 18:44:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.5 2013/10/11 12:31:45 tomka Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_6 python2_7 )
 PYTHON_REQ_USE="ncurses?,xml"
 
-inherit eutils distutils-r1 linux-info systemd
+inherit eutils distutils-r1 linux-info readme.gentoo systemd
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="https://launchpad.net/wicd"
@@ -51,7 +51,6 @@ RDEPEND="${PYTHON_DEPS}
 	)
 	pm-utils? ( sys-power/pm-utils )
 	"
-#DOCS="CHANGES NEWS AUTHORS README"
 
 src_prepare() {
 	CONFIG_CHECK="~CFG80211_WEXT"
@@ -90,6 +89,12 @@ src_prepare() {
 	  # nuke translations
 	  rm po/*.po
 	fi
+
+	DOC_CONTENTS="To start wicd at boot with openRC, add
+		/etc/init.d/wicd to a runlevel and: (1) Remove all net.*
+		initscripts (except for net.lo) from all runlevels (2) Add these
+		scripts to the RC_PLUG_SERVICES line in /etc/rc.conf (For
+		example, rc_hotplug=\"!net.eth* !net.wlan*\")"
 }
 
 src_configure() {
@@ -122,19 +127,16 @@ src_install() {
 		rm "${WORKDIR}/Icone Wicd Lucid"/signal*
 		cp "${WORKDIR}/Icone Wicd Lucid"/*.png "${D}"/usr/share/pixmaps/wicd/
 	fi
+	readme.gentoo_src_install
 }
 
 pkg_postinst() {
-	elog "You may need to restart the dbus service after upgrading wicd."
-	echo
-	elog "To start wicd at boot with openRC, add /etc/init.d/wicd to a runlevel and:"
-	elog "- Remove all net.* initscripts (except for net.lo) from all runlevels"
-	elog "- Add these scripts to the RC_PLUG_SERVICES line in /etc/rc.conf"
-	elog "(For example, rc_hotplug=\"!net.eth* !net.wlan*\")"
 	# Maintainer's note: the consolekit use flag short circuits a dbus rule and
 	# allows the connection. Else, you need to be in the group.
 	if ! has_version sys-auth/consolekit; then
 		ewarn "Wicd-1.6 and newer requires your user to be in the 'users' group. If"
 		ewarn "you are not in that group, then modify /etc/dbus-1/system.d/wicd.conf"
 	fi
+
+	readme.gentoo_print_elog
 }
