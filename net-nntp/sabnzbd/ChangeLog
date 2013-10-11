@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/sabnzbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.18 2013/10/08 23:19:35 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sabnzbd/ChangeLog,v 1.19 2013/10/11 15:27:14 jsbronder Exp $
+
+  11 Oct 2013; Justin Bronder <jsbronder@gentoo.org> files/sabnzbd.initd:
+  Update initd script to match the correct [misc] section. Thanks to eponymous
+  (#483786).
 
 *sabnzbd-0.7.16 (08 Oct 2013)
 

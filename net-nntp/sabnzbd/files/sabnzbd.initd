@@ -10,7 +10,7 @@ depend() {
 
 get_var() {
     echo $(sed -n \
-        '/\[misc]/,/^'$1'/ s/^'$1' = \([[:alnum:].]\+\)[\r|\n|\r\n]*$/\1/p' \
+        '/^\[misc]/,/^'$1'/ s/^'$1' = \([[:alnum:].]\+\)[\r|\n|\r\n]*$/\1/p' \
         ${SABNZBD_CONFIGFILE})
 }
 
