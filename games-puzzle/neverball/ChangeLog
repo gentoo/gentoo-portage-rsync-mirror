@@ -1,6 +1,12 @@
 # ChangeLog for games-puzzle/neverball
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.44 2013/04/10 18:14:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.45 2013/10/11 18:10:29 slyfox Exp $
+
+*neverball-1.5.4-r1 (11 Oct 2013)
+
+  11 Oct 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/neverball-1.5.4-lm.patch, +neverball-1.5.4-r1.ebuild:
+  Fix underlinking against libm: bug #464014 and fix by Ted Tanberry.
 
   10 Apr 2013; Michael Sterrett <mr_bones_@gentoo.org>
   +files/neverball-1.5.4-libpng.patch, neverball-1.5.4.ebuild:
