@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/mypaint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/ChangeLog,v 1.22 2013/04/26 17:54:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mypaint/ChangeLog,v 1.23 2013/10/11 21:07:13 hwoarang Exp $
+
+*mypaint-1.1.0-r1 (11 Oct 2013)
+
+  11 Oct 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/mypaint-1.1.0-build-env-vars.patch, +files/mypaint-1.1.0-desktop.patch,
+  +mypaint-1.1.0-r1.ebuild:
+  Respect all compiler flags. Drop static lib and pkgconfig file. Multiple other
+  fixes by Nikoli. Bug #452456
 
   26 Apr 2013; Markos Chandras <hwoarang@gentoo.org>
   +files/mypaint-1.1.0-json-c-0.11.patch, mypaint-1.1.0.ebuild:
