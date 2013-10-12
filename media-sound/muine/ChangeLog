@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.70 2012/05/05 08:43:18 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.71 2013/10/12 12:13:32 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org> muine-0.8.11-r2.ebuild:
+  Drop unneeded dep
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> muine-0.8.11-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -292,4 +295,3 @@
   20 Jun 2004; Peter Johanson, <latexer@gentoo.org> metadata.xml,
   muine-0.6.3.ebuild:
   Initial import. All rejoice!
-

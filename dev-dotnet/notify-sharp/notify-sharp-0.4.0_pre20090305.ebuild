@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20090305.ebuild,v 1.7 2012/11/28 20:53:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/notify-sharp-0.4.0_pre20090305.ebuild,v 1.8 2013/10/12 12:07:49 pacho Exp $
 
 EAPI=4
 inherit autotools eutils mono
@@ -21,8 +21,7 @@ RDEPEND=">=dev-lang/mono-1.1.13
 	>=dev-dotnet/dbus-sharp-0.6
 	>=dev-dotnet/dbus-sharp-glib-0.4
 	>=x11-libs/libnotify-0.4.5"
-DEPEND="${RDEPEND}
-	doc? ( virtual/monodoc )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 

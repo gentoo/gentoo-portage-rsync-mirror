@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/notify-sharp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.19 2012/11/28 20:53:07 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.20 2013/10/12 12:07:49 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  notify-sharp-0.4.0_pre20090305.ebuild:
+  Drop unneeded dep
 
   28 Nov 2012; Ulrich Müller <ulm@gentoo.org>
   notify-sharp-0.4.0_pre20090305.ebuild:
@@ -90,4 +94,3 @@
   +notify-sharp-0.4.0_pre20080912.ebuild:
   Initial import. Ebuild adapted from the one in ikelos' overlay. Bug
   235111.
-

@@ -761,11 +761,6 @@ app-misc/geoclue:yahoo-geo - Install Yahoo geolocation provider
 app-misc/gnote:applet - Enable gnote applet for gnome-base/gnome-panel
 app-misc/gourmet:gnome-print - Enable pretty Python printing with gnome-print
 app-misc/gourmet:rtf - Enable export to RTF
-app-misc/gpsdrive:gdal - Include gdal and ogr support for format conversions.
-app-misc/gpsdrive:kismet - Include support for kismet wifi mapping.
-app-misc/gpsdrive:mapnik - Include mapnik support for custom map creation.
-app-misc/gpsdrive:scripts - Include some of the additional helper scripts.
-app-misc/gpsdrive:speech - Include speech support.
 app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
 app-misc/gramps:webkit - Use Webkit-based rendering for geographical data view.
 app-misc/graphlcd-base:g15 - Add support for app-misc/g15daemon driver (e.g. Logitech G15 Keybord)
@@ -4594,7 +4589,6 @@ net-irc/bip:oidentd - Enable oidentd support
 net-irc/charybdis:largenet - Enable support/tweaks for large networks
 net-irc/epic5:archive - Use app-arch/libarchive to use zip and tar archives from scripts.
 net-irc/epic5:valgrind - Compile against dev-util/valgrind headers to improve memory-leak checking when running epic5 under valgrind.
-net-irc/ezbounce:boost - Compile against dev-libs/boost libraries
 net-irc/hexchat:fastscroll - Make scrolling of large text buffers faster by circumventing some of pango's overhead
 net-irc/hexchat:gtkspell - Use app-text/gtkspell for spell checking instead of static method (needs spell)
 net-irc/hexchat:libcanberra - Enable sound event support using media-libs/libcanberra

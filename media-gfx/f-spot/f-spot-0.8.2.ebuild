@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.8.2.ebuild,v 1.9 2012/05/05 07:00:25 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.8.2.ebuild,v 1.10 2013/10/12 12:11:28 pacho Exp $
 
 EAPI="2"
 
@@ -31,8 +31,7 @@ RDEPEND=">=dev-lang/mono-2.2
 	>=dev-dotnet/ndesk-dbus-glib-0.3.0
 	>=media-libs/lcms-1.12:0
 	>=x11-libs/cairo-1.4
-	doc? (	virtual/monodoc
-		>=app-text/gnome-doc-utils-0.17.3 )
+	doc? ( >=app-text/gnome-doc-utils-0.17.3 )
 	flickr? ( >=dev-dotnet/flickrnet-bin-2.2-r1 )
 	raw?	( media-gfx/dcraw )"
 

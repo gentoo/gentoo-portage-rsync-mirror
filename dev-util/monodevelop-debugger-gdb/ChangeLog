@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop-debugger-gdb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-gdb/ChangeLog,v 1.22 2012/12/07 04:56:24 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-gdb/ChangeLog,v 1.23 2013/10/12 12:10:36 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  -monodevelop-debugger-gdb-2.8.5.1.ebuild:
+  Drop old
 
   07 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   monodevelop-debugger-gdb-3.0.2.ebuild:
@@ -122,4 +126,3 @@
   +monodevelop-debugger-gdb-1.9.2.ebuild:
   Beta1 of monodevelop-debugger-gdb-2. Bug 259798. Initial commit. Thanks to
   uzytkownik <uzytkownik2@gmail.com>.
-

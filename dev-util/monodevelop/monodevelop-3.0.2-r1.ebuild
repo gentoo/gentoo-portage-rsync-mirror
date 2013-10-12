@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-3.0.2-r1.ebuild,v 1.4 2013/09/26 14:55:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-3.0.2-r1.ebuild,v 1.5 2013/10/12 12:09:05 pacho Exp $
 
 EAPI=4
 inherit fdo-mime gnome2-utils mono versionator eutils
@@ -24,7 +24,6 @@ RDEPEND=">=dev-lang/mono-2.10.9
 	>=dev-dotnet/xsp-2
 	dev-util/ctags
 	sys-apps/dbus[X]
-	>=virtual/monodoc-2.0
 	|| (
 		www-client/firefox
 		www-client/firefox-bin
