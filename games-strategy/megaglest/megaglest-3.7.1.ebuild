@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.7.1.ebuild,v 1.5 2013/05/18 16:29:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.7.1.ebuild,v 1.6 2013/10/12 03:27:22 slyfox Exp $
 
 EAPI=4
 VIRTUALX_REQUIRED="manual"
@@ -66,7 +66,7 @@ src_prepare() {
 		need-wxwidgets unicode
 	fi
 
-	epatch "${FILESDIR}"/${P}-{static-build,as-needed,miniupnpc-1.8}.patch
+	epatch "${FILESDIR}"/${P}-{static-build,as-needed,miniupnpc-1.8,gcc47}.patch
 }
 
 src_configure() {
