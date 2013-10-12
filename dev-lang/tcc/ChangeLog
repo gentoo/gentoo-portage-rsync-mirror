@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.35 2013/07/18 03:44:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.36 2013/10/12 05:34:29 patrick Exp $
+
+*tcc-9999 (12 Oct 2013)
+
+  12 Oct 2013; Patrick Lauer <patrick@gentoo.org> +tcc-9999.ebuild:
+  First attempt at a -9999 ebuild
 
   18 Jul 2013; Patrick Lauer <patrick@gentoo.org> tcc-0.9.26.ebuild:
   Re-enabling test suite that now actually works
