@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.189 2013/09/30 06:39:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.190 2013/10/12 19:50:02 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -392,6 +392,9 @@ strip-flags() {
 			new+=( -O2 )
 		fi
 
+		if [[ ${!var} != "${new[*]}" ]] ; then
+			einfo "strip-flags: ${var}: changed '${!var}' to '${new[*]}'"
+		fi
 		eval export ${var}=\""${new[*]}"\"
 	done
 
