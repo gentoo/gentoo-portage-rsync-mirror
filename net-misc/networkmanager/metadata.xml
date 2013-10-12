@@ -18,6 +18,8 @@
 		<flag name="resolvconf">Use <pkg>net-dns/openresolv</pkg> for managing
 			DNS information</flag>
 		<flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
+		<flag name="wifi">Enable support for wifi and 802.1x security using
+		    <pkg>net-wireless/wpa_supplicant</pkg></flag>
 		<flag name="wext">Enable support for the deprecated Wext (Wireless
 			Extensions) API; needed for some older drivers (e.g. ipw2200,
 			ndiswrapper)</flag>

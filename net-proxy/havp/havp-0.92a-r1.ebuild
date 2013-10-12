@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.92a-r1.ebuild,v 1.3 2013/04/04 19:46:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.92a-r1.ebuild,v 1.4 2013/10/12 14:10:05 tomwij Exp $
 
 EAPI=4
+
 inherit autotools eutils toolchain-funcs user
 
 DESCRIPTION="HTTP AntiVirus Proxy"
@@ -24,6 +25,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.92a-run.patch
+	epatch "${FILESDIR}"/${PF}-pkg-config-libclamav.patch
 	sed -i configure.in -e '/^CFLAGS=/d' || die
 	eautoreconf
 }
