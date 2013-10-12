@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r2.ebuild,v 1.1 2013/10/11 19:00:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r2.ebuild,v 1.2 2013/10/12 11:21:21 pacho Exp $
 
 EAPI=5
 
@@ -70,12 +70,6 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install
-
-	if use static-libs; then
-		mv "${D}/$(get_libdir)"/libply{,-splash-core}.a \
-			"${D}/usr/$(get_libdir)"/ || die 'mv *.a files failed'
-		gen_usr_ldscript libply.so libply-splash-core.so
-	fi
 
 	insinto /usr/share/plymouth
 	newins "${DISTDIR}"/gentoo-logo.png bizcom.png

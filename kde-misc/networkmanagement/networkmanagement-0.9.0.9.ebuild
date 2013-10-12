@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.9.ebuild,v 1.1 2013/06/16 11:55:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.9.ebuild,v 1.2 2013/10/12 11:09:58 johu Exp $
 
 EAPI=5
 
@@ -8,6 +8,7 @@ KDE_LINGUAS="ar bs ca cs da de el es et fa fi fr ga gl hu ia it ja kk km lt mr
 nb nds nl nn pl pt pt_BR ro ru se sk sl sr sr@ijekavian sr@ijekavianlatin
 sr@Latn sv tr uk zh_CN zh_TW"
 KDE_SCM="git"
+KDE_MINIMAL="4.11"
 inherit kde4-base
 
 DESCRIPTION="KDE frontend for NetworkManager"
@@ -24,7 +25,9 @@ DEPEND="
 	>=net-misc/networkmanager-0.9.8.2
 	openconnect? ( net-misc/openconnect )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!kde-base/solid
+"
 
 src_configure() {
 	local mycmakeargs=(

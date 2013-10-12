@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15148 2013/10/11 19:55:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15149 2013/10/12 11:30:35 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (12 Oct 2013)
+# mg cannot save files with some libcs, bug 487758.
+=app-editors/mg-20130922
 
 # Markos Chandras <hwoarang@gentoo.org> (10 Oct 2013)
 # Masked for futher testing with various pam setups

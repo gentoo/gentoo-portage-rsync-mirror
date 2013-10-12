@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.14 2013/09/24 19:53:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-any-r1.eclass,v 1.15 2013/10/12 11:08:12 mgorny Exp $
 
 # @ECLASS: python-any-r1
 # @MAINTAINER:
@@ -265,6 +265,10 @@ _python_EPYTHON_supported() {
 # implementation is and set EPYTHON and PYTHON accordingly.
 python-any-r1_pkg_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
+
+	# avoid looking up Python for binary package install.
+	# if you need Python during pkg_preinst/_postinst, please let us know.
+	[[ ${MERGE_TYPE} == binary ]] && return 0
 
 	# first, try ${EPYTHON}... maybe it's good enough for us.
 	if [[ ${EPYTHON} ]]; then
