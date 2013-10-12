@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.20.ebuild,v 1.4 2013/09/26 02:00:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.22.ebuild,v 1.1 2013/10/12 09:55:41 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic gnome2-utils gnome.org multilib virtualx autotools readme.gentoo
@@ -51,13 +51,13 @@ DEPEND="${COMMON_DEPEND}
 		x11-proto/damageproto
 	)
 	xinerama? ( x11-proto/xineramaproto )
+	dev-libs/gobject-introspection-common
 	>=dev-util/gtk-doc-am-1.11
 	test? (
 		x11-themes/hicolor-icon-theme
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc )
 "
-# introspection.m4 is in the tarball, so gobject-introspection-common is not needed
 
 # gtk+-2.24.8 breaks Alt key handling in <=x11-libs/vte-0.28.2:0
 # Add blocker against old gtk-builder-convert to be sure we maintain both
@@ -90,13 +90,6 @@ set_gtk2_confdir() {
 
 src_prepare() {
 	gnome2_environment_reset
-
-	# use an arch-specific config directory so that 32bit and 64bit versions
-	# dont clash on multilib systems
-#	epatch "${FILESDIR}/${PN}-2.21.3-multilib.patch"
-
-	# Don't break inclusion of gtkclist.h, upstream bug #536767
-	epatch "${FILESDIR}/${PN}-2.14.3-limit-gtksignal-includes.patch"
 
 	# Fix building due to moved definition, upstream bug #704766
 	epatch "${FILESDIR}"/${PN}-2.24.20-darwin-quartz-pasteboard.patch
@@ -185,13 +178,9 @@ src_test() {
 src_install() {
 	default
 
-#	set_gtk2_confdir
-#	dodir ${GTK2_CONFDIR}
-#	keepdir ${GTK2_CONFDIR}
-
 	# see bug #133241
 	echo 'gtk-fallback-icon-theme = "gnome"' > "${T}/gtkrc"
-	insinto /etc/gtk-2.0
+	insinto /usr/share/gtk-2.0
 	doins "${T}"/gtkrc
 
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
@@ -212,9 +201,6 @@ src_install() {
 pkg_postinst() {
 	set_gtk2_confdir
 
-	# gtk.immodules should be in their CHOST directories respectively.
-#	gtk-query-immodules-2.0  > "${EROOT%/}${GTK2_CONFDIR}/gtk.immodules" \
-#		|| ewarn "Failed to run gtk-query-immodules-2.0"
 	gtk-query-immodules-2.0 --update-cache || die "Update immodules cache failed"
 
 	if [ -e "${EROOT%/}/etc/gtk-2.0/gtk.immodules" ]; then

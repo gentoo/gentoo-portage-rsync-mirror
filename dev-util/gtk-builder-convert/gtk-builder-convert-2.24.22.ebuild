@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/gtk-builder-convert-2.24.20.ebuild,v 1.2 2013/09/05 18:40:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-builder-convert/gtk-builder-convert-2.24.22.ebuild,v 1.1 2013/10/12 09:56:46 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="gtk+"
@@ -22,8 +22,9 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 # gtk-builder-convert was part of gtk+ until 2.24.10-r1
 COMMON_DEPEND="${PYTHON_DEPS}"
 
-RDEPEND="!<=x11-libs/gtk+-2.24.10:2
-	${COMMON_DEPEND}"
+RDEPEND="${COMMON_DEPEND}
+	!<=x11-libs/gtk+-2.24.10:2
+"
 
 DEPEND="${COMMON_DEPEND}"
 
