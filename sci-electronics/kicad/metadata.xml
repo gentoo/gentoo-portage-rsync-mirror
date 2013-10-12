@@ -8,8 +8,4 @@
 		Kicad is an open source (GPL) software for the creation of electronic
 		schematic diagrams and printed circuit board artwork.
 	</longdescription>
-	<use>
-		<flag name="dev-doc">Install developer documentation (requires
-		<pkg>app-doc/doxygen</pkg>)</flag>
-	</use>
 </pkgmetadata>

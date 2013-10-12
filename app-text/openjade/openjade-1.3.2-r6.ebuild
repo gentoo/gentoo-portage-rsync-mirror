@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r6.ebuild,v 1.1 2013/09/11 19:29:04 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2-r6.ebuild,v 1.2 2013/10/12 20:50:00 pacho Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ src_prepare() {
 	# Please note!  Opts are disabled.  If you know what you're doing
 	# feel free to remove this line.  It may cause problems with
 	# docbook-sgml-utils among other things.
-	ALLOWED_FLAGS="-O -O1 -O2 -pipe -g -march"
+	#ALLOWED_FLAGS="-O -O1 -O2 -pipe -g -march"
 	strip-flags
 
 	# Default CFLAGS and CXXFLAGS is -O2 but this make openjade segfault

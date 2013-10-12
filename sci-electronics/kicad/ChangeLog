@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.65 2013/06/06 19:40:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.66 2013/10/12 20:54:21 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org> -kicad-20120119_p3256.ebuild,
+  -kicad-99999999.ebuild, metadata.xml:
+  Drop old and live version (as last one cannot be maintained properly
+  downstream now that the package is orphan)
 
 *kicad-20130518 (06 Jun 2013)
 
@@ -281,4 +286,3 @@
   13 Apr 2006; Denis Dupeyron <calchan@gentoo.org> +kicad-20060328.ebuild,
   +metadata.xml:
   Initial commit, bug #120533.
-

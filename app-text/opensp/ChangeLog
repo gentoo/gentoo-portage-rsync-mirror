@@ -1,6 +1,9 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.69 2013/07/21 10:08:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.70 2013/10/12 20:51:04 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org> opensp-1.5.2-r3.ebuild:
+  Allow more flags (#209829)
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -opensp-1.5.2-r2.ebuild,
   metadata.xml:
