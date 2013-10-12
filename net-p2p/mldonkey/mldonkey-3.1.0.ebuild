@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.1.0.ebuild,v 1.5 2012/02/24 20:52:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.1.0.ebuild,v 1.6 2013/10/12 02:43:10 heroxbd Exp $
 
 EAPI="2"
 WANT_AUTOCONF=2.5
@@ -9,7 +9,7 @@ inherit flag-o-matic eutils autotools toolchain-funcs
 
 IUSE="bittorrent doc fasttrack gd gnutella gtk guionly magic +ocamlopt"
 
-DESCRIPTION="MLDonkey is a multi-network P2P application written in Ocaml, coming with its own Gtk GUI, web and telnet interface."
+DESCRIPTION="A multi-network P2P application written in Ocaml, with its own Gtk GUI, web and telnet interface."
 HOMEPAGE="http://mldonkey.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
