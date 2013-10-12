@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.0.ebuild,v 1.1 2013/09/29 21:15:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/gst-plugins-libav-1.2.0.ebuild,v 1.2 2013/10/12 08:12:45 aballier Exp $
 
 EAPI="5"
 
@@ -31,6 +31,16 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	sed -e 's/sleep 15//' -i configure.ac configure || die
+
+	# compatibility with recent releases 
+	# TODO: likely apply them with libav-10 when it's out but there will
+	# probably be an upstream gst-libav release compatible at that time.
+	if has_version '>=media-video/ffmpeg-2.0' ; then
+		sed -i -e 's/ CODEC_ID/ AV_CODEC_ID/g' \
+			   -e 's/ CodecID/ AVCodecID/g' \
+			   ext/libav/*.{c,h} || die
+		epatch "${FILESDIR}/${P}-ffmpeg2.patch"
+	fi
 }
 
 src_configure() {
