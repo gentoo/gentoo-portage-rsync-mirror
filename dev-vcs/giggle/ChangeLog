@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/giggle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.20 2013/04/13 12:42:01 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/giggle/ChangeLog,v 1.21 2013/10/12 14:35:34 ikelos Exp $
+
+*giggle-0.7 (12 Oct 2013)
+
+  12 Oct 2013; Mike Auty <ikelos@gentoo.org> +giggle-0.7.ebuild:
+  Version bump giggle to 0.7 (bug 476902).
 
   13 Apr 2013; Mike Auty <ikelos@gentoo.org> -giggle-0.5.ebuild,
   giggle-0.6.2.ebuild, +files/giggle-0.6.2-gtksourceview-3.8.0.patch:

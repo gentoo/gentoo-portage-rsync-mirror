@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/tsocks
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.39 2011/12/14 15:48:19 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.40 2013/10/12 14:49:24 dastergon Exp $
+
+  12 Oct 2013; Pavlos Ratis <dastergon@gentoo.org>
+  -files/tsocks-1.8_beta5-gentoo-r1.patch,
+  -files/tsocks-1.8_beta5-gentoo-r2.patch, -tsocks-1.8_beta5-r3.ebuild,
+  -tsocks-1.8_beta5-r4.ebuild:
+  remove obsolete versions and files
 
   14 Dec 2011; Naohiro Aota <naota@gentoo.org> Manifest:
   Manifest update wrt #394197
