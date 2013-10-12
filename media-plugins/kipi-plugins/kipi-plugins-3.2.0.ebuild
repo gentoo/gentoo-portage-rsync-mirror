@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.2.0.ebuild,v 1.4 2013/06/30 10:14:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.2.0.ebuild,v 1.5 2013/10/12 12:56:52 dilfridge Exp $
 
 EAPI=5
 
@@ -83,6 +83,7 @@ RESTRICT=test
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.0.0-options.patch"
+	"${FILESDIR}/${PN}-3.4.0-staticar.patch"
 )
 
 src_prepare() {

@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/teamspeak-client-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.34 2013/09/21 11:53:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.35 2013/10/12 12:35:30 tomwij Exp $
+
+*teamspeak-client-bin-3.0.13 (12 Oct 2013)
+
+  12 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +teamspeak-client-bin-3.0.13.ebuild:
+  Version bump to 3.0.13, reported by Jarry and Karsten in bug #487662 and bug
+  #487760. Removed not used sound backend, reported and patch by Karol Herbs in
+  bug #484080.
 
 *teamspeak-client-bin-3.0.12 (21 Sep 2013)
 

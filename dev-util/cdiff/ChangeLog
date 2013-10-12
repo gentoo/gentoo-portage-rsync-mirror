@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cdiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.20 2013/09/05 18:40:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.21 2013/10/12 12:49:18 tomwij Exp $
+
+*cdiff-0.9.3 (12 Oct 2013)
+*cdiff-9999 (12 Oct 2013)
+
+  12 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +cdiff-0.9.3.ebuild,
+  +cdiff-9999.ebuild, -cdiff-0.6.ebuild, -cdiff-0.7.1.ebuild, -cdiff-0.7.ebuild,
+  -cdiff-0.8.ebuild:
+  Version bump to 0.9.3. Remove old ebuilds before 0.9. Added 9999 version for
+  easier testing.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> cdiff-0.6.ebuild,
   cdiff-0.7.1.ebuild, cdiff-0.7.ebuild, cdiff-0.8.ebuild, cdiff-0.9.1.ebuild,

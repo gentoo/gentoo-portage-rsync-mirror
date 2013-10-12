@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15150 2013/10/12 12:25:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15151 2013/10/12 12:33:10 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (12 Oct 2013)
+# No package is needing it but it still needs obsolete
+# and unmaintained libda:4 slot (#482910). Removal in a month.
+=dev-cpp/libgdamm-4.1.3
+
+# Pacho Ramos <pacho@gentoo.org> (12 Oct 2013)
+# This meta is no longer needed, bug #480612
+# Removal in a month.
+>=gnome-extra/gnome-utils-3.4
 
 # Ulrich Mueller <ulm@gentoo.org> (12 Oct 2013)
 # mg cannot save files with some libcs, bug 487758.
