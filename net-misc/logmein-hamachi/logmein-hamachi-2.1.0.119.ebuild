@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/logmein-hamachi-2.1.0.101.ebuild,v 1.1 2013/07/06 16:38:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/logmein-hamachi-2.1.0.119.ebuild,v 1.1 2013/10/12 11:44:39 tomwij Exp $
 
 EAPI=5
-
-inherit eutils linux-info
+inherit eutils linux-info systemd
 
 DESCRIPTION="LogMeIn Hamachi VPN tunneling engine"
 HOMEPAGE="https://secure.logmein.com/products/hamachi2"
@@ -45,6 +44,7 @@ src_install() {
 
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
+	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	dodoc CHANGES README
 }
@@ -58,6 +58,8 @@ pkg_postinst() {
 	elog "to the file '/var/lib/${PN}/h2-engine-override.cfg'"
 	elog "and restart the daemon with"
 	elog "/etc/init.d/${PN} restart"
+	elog "or:"
+	elog "systemctl restart ${PN}"
 	elog "To enable auto-login when the service starts set a nickname in"
-	elog "/etc/conf.d/${PN}"
+	elog "/etc/conf.d/${PN} (only supported using openRC)"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.9 2013/10/11 22:23:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog/ChangeLog,v 1.10 2013/10/12 11:57:28 aballier Exp $
+
+  12 Oct 2013; Alexis Ballier <aballier@gentoo.org> cloog-0.18.0.ebuild:
+  keyword ~amd64-fbsd, bug #487266
 
   11 Oct 2013; Markos Chandras <hwoarang@gentoo.org> cloog-0.18.0.ebuild:
   Add ~mips per #487266

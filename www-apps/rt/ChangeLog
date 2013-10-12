@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.78 2013/03/17 15:36:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.79 2013/10/12 11:55:01 pva Exp $
+
+*rt-4.0.8-r1 (12 Oct 2013)
+
+  12 Oct 2013; Peter Volkov <pva@gentoo.org> +rt-4.0.8-r1.ebuild,
+  files/reconfig, metadata.xml:
+  Generated.pm should point on webapp-config installed directory, bug #414829,
+  thank Christoph Erdle for report and Eric Martin for this fix.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

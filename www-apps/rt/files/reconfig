@@ -12,7 +12,12 @@ if [ $1 = "install" ]; then
 	# fix location
 	cd ${VHOST_ROOT}/${PF}
 	sed -e "s|${MY_HOSTROOTDIR}/${PF}|${VHOST_ROOT}/${PF}|g
-		s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i bin/* lib/RT.pm sbin/* etc/RT_Config.pm || die
+               s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i bin/* etc/RT_Config.pm lib/RT.pm sbin/* || die
+       
+       if [[ -e ${VHOST_ROOT}/${PF}/lib/RT/Generated.pm ]]; then
+               sed -e "s|${MY_HOSTROOTDIR}/${PF}|${VHOST_ROOT}/${PF}|g
+                       s|${MY_HTDOCSDIR}|${MY_INSTALLDIR}|g" -i lib/RT/Generated.pm || die
+       fi
 
 	if [[ -e ${VHOST_ROOT}/${PF}/etc/rt_apache2.conf ]]; then
 		sed -i \

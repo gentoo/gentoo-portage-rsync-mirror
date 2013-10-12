@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<herd>web-apps</herd>
 	<herd>proxy-maintainers</herd>
+	<maintainer>
+	<email>pva@gentoo.org</email>
+	<name>Peter Volkov</name>
+	</maintainer>
  	<maintainer>
 		<email>eric.joshua.martin@gmail.com</email>
 		<name>Eric Martin</name>
