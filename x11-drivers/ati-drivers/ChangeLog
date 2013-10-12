@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.345 2013/10/10 15:57:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.346 2013/10/12 16:50:42 tomwij Exp $
+
+  12 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Simplify automatic assignment.
 
 *ati-drivers-13.11_beta (10 Oct 2013)
 

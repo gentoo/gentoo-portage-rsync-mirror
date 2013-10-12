@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.4.0.ebuild,v 1.2 2013/09/20 19:46:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.4.0.ebuild,v 1.3 2013/10/12 16:34:18 dilfridge Exp $
 
 EAPI=5
 
@@ -27,11 +27,11 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="addressbook debug doc gphoto2 mysql themedesigner +thumbnails video"
+IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
 
 #Keep libf2c blocker until bug 433782 is resolved
 CDEPEND="
-	$(add_kdebase_dep kdelibs 'semantic-desktop(+)')
+	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep kdebase-kioslaves)
 	$(add_kdebase_dep libkdcraw)
 	$(add_kdebase_dep libkexiv2 xmp)
@@ -106,18 +106,19 @@ src_prepare() {
 src_configure() {
 	local backend
 
+	use semantic-desktop && backend="Nepomuk" || backend="None"
 	# LQR = only allows to choose between bundled/external
 	local mycmakeargs=(
 		-DENABLE_LCMS2=ON
 		-DFORCED_UNBUNDLE=ON
 		-DWITH_LQR=ON
 		-DWITH_LENSFUN=ON
-		-DGWENVIEW_SEMANTICINFO_BACKEND=Nepomuk
+		-DGWENVIEW_SEMANTICINFO_BACKEND=${backend}
 		$(cmake-utils_use_with addressbook KdepimLibs)
 		-DWITH_MarbleWidget=ON
 		$(cmake-utils_use_enable gphoto2 GPHOTO2)
 		$(cmake-utils_use_with gphoto2)
-		-DWITH_Soprano=ON
+		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_enable themedesigner)
 		$(cmake-utils_use_enable thumbnails THUMBS_DB)
 		$(cmake-utils_use_enable mysql INTERNALMYSQL)

@@ -4,8 +4,12 @@
 	<herd>x11</herd>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
+		<email>x11@gentoo.org</email>
+		<description>Assign to herd.</description>
+	</maintainer>
+	<maintainer>
 		<email>jkarlson@cc.hut.fi</email>
-		<description>Proxy maintainer. Assign to herd and CC him on bugs</description>
+		<description>Proxy maintainer, CC him on bugs.</description>
 	</maintainer>
 	<use>
 		<flag name='qt4'>
