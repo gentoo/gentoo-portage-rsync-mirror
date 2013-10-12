@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.37 2013/10/12 06:05:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.38 2013/10/12 09:11:17 patrick Exp $
+
+  12 Oct 2013; Patrick Lauer <patrick@gentoo.org> tcc-9999.ebuild:
+  Fix libdir so that tcc just magically works
 
   12 Oct 2013; Patrick Lauer <patrick@gentoo.org> tcc-9999.ebuild:
   Some cleanups to tcc-9999 configure/make
