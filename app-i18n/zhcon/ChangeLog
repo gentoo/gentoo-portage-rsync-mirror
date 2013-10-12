@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/zhcon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.20 2013/03/03 15:28:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/ChangeLog,v 1.21 2013/10/12 06:52:57 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due #178041
 
   03 Mar 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   This is handled by r0bertz and cjk
