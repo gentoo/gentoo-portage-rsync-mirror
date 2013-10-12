@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnstop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.38 2013/01/12 14:35:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.39 2013/10/12 07:01:32 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org> -dnstop-20090128.ebuild,
+  -files/dnstop-20090128-make-382.patch, metadata.xml:
+  Cleanup due #472084
 
   12 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> dnstop-20110502.ebuild:
   Keyword ~arm, wrt bug #451134
@@ -150,4 +154,3 @@
 
   28 Feb 2003; Rajiv Manglani <rajiv@gentoo.org> dnstop-20030124.ebuild :
   Created initial ebuild.
-

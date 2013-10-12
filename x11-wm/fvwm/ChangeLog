@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.194 2013/06/25 12:59:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.195 2013/10/12 07:23:28 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org> +files/fvwm-2.6.5-ar.patch,
+  -fvwm-2.6.2.ebuild, -fvwm-2.6.3.ebuild, fvwm-2.6.5.ebuild:
+  Respect AR (#474528 by Michael Mair-Keimberger (iamnr3)), drop old
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> fvwm-2.6.5.ebuild:
   Stable for amd64, wrt bug #471900

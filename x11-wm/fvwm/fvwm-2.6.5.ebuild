@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.6.5.ebuild,v 1.4 2013/06/25 12:59:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.6.5.ebuild,v 1.5 2013/10/12 07:23:28 pacho Exp $
 
-EAPI=4
-inherit eutils flag-o-matic
+EAPI=5
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 HOMEPAGE="http://www.fvwm.org/"
@@ -43,8 +43,8 @@ COMMON_DEPEND="
 	xinerama? (
 		x11-proto/xineramaproto
 		x11-libs/libXinerama
-	)"
-
+	)
+"
 RDEPEND="${COMMON_DEPEND}
 	dev-lang/perl
 	gtk2-perl? ( dev-perl/gtk2-perl )
@@ -57,13 +57,14 @@ RDEPEND="${COMMON_DEPEND}
 	rplay? ( media-sound/rplay )
 	lock? ( x11-misc/xlockmore )
 	userland_GNU? ( sys-apps/debianutils )
-	!x86-fbsd? ( netpbm? ( media-libs/netpbm ) )"
-
+	!x86-fbsd? ( netpbm? ( media-libs/netpbm ) )
+"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? ( dev-libs/libxslt )
 	x11-proto/xextproto
-	x11-proto/xproto"
+	x11-proto/xproto
+"
 
 src_prepare() {
 	if ! use vanilla; then
@@ -76,6 +77,9 @@ src_prepare() {
 		# Apply user-provided patches to the source tree, bug #411811
 		epatch_user
 	fi
+
+	epatch "${FILESDIR}/${PN}-2.6.5-ar.patch" #474528
+	eautoreconf
 }
 
 src_configure() {
