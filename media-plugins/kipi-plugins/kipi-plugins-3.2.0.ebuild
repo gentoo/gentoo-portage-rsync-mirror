@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.2.0.ebuild,v 1.5 2013/10/12 12:56:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-3.2.0.ebuild,v 1.6 2013/10/12 16:20:41 dilfridge Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod mediawiki mjpeg panorama redeyes scanner upnp videoslideshow vkontakte"
 
-DEPEND="
+COMMONDEPEND="
 	$(add_kdebase_dep libkipi)
 	$(add_kdebase_dep libkdcraw)
 	$(add_kdebase_dep libkexiv2)
@@ -49,10 +49,6 @@ DEPEND="
 			  x11-libs/gtk+:2
 			)
 	mediawiki?	( >=net-libs/libmediawiki-3.0.0 )
-	panorama?	(
-			  sys-devel/bison
-			  sys-devel/flex
-			)
 	redeyes?	( media-libs/opencv )
 	scanner? 	(
 			  $(add_kdebase_dep libksane)
@@ -65,7 +61,13 @@ DEPEND="
 			)
 	vkontakte?	( net-libs/libkvkontakte )
 "
-RDEPEND="${DEPEND}
+DEPEND="${COMMONDEPEND}
+	panorama?	(
+			  sys-devel/bison
+			  sys-devel/flex
+			)
+"
+RDEPEND="${COMMONDEPEND}
 	cdr? 		( app-cdr/k3b )
 	expoblending? 	( media-gfx/hugin )
 	imagemagick? 	( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) )

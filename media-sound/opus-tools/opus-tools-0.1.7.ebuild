@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/opus-tools-0.1.7.ebuild,v 1.1 2013/10/12 10:46:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/opus-tools-0.1.7.ebuild,v 1.2 2013/10/12 16:22:10 aballier Exp $
 
 EAPI=4
 
@@ -25,15 +25,22 @@ fi
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="flac"
 
 RDEPEND=">=media-libs/libogg-1.3.0
-		 >=media-libs/opus-0.9.10"
+		 >=media-libs/opus-0.9.10
+		 flac? ( >=media-libs/flac-1.1.3 )
+		 "
 DEPEND="virtual/pkgconfig
 		${DEPEND}"
 
 src_prepare() {
 	[[ ${PV} == *9999 ]] && eautoreconf
+}
+
+src_configure() {
+	econf \
+		$(use_with flac)
 }
 
 src_compile() {
