@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.487 2013/10/10 12:47:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.488 2013/10/12 15:14:41 jer Exp $
+
+  12 Oct 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild,
+  nvidia-drivers-173.14.38.ebuild, nvidia-drivers-304.108.ebuild,
+  nvidia-drivers-310.51.ebuild, nvidia-drivers-313.30.ebuild,
+  nvidia-drivers-319.49.ebuild, nvidia-drivers-319.60.ebuild,
+  nvidia-drivers-325.08.ebuild, nvidia-drivers-325.15.ebuild,
+  nvidia-drivers-331.13.ebuild:
+  Use readme.gentoo.eclass (bug #457594).
 
   10 Oct 2013; Jeroen Roovers <jer@gentoo.org>
   +files/nvidia-drivers-331.13-pax-usercopy.patch, nvidia-drivers-331.13.ebuild:

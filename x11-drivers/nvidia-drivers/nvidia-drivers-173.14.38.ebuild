@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.38.ebuild,v 1.4 2013/09/13 15:16:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.38.ebuild,v 1.5 2013/10/12 15:14:41 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability \
@@ -432,6 +432,8 @@ src_install() {
 	fi
 
 	is_final_abi || die "failed to iterate through all ABIs"
+
+	readme.gentoo_create_doc
 }
 
 # Install nvidia library:
@@ -523,19 +525,8 @@ pkg_postinst() {
 	# Switch to the nvidia implementation
 	"${ROOT}"/usr/bin/eselect opengl set --use-old nvidia
 
-	elog "You must be in the video group to use the NVIDIA device"
-	elog "For more info, read the docs at"
-	elog "http://www.gentoo.org/doc/en/nvidia-guide.xml#doc_chap3_sect6"
-	elog
-	elog "This ebuild installs a kernel module and X driver. Both must"
-	elog "match explicitly in their version. This means, if you restart"
-	elog "X, you must modprobe -r nvidia before starting it back up"
-	elog
-	elog "To use the NVIDIA GLX, run \"eselect opengl set nvidia\""
-	elog
-	elog "NVIDIA has requested that any bug reports submitted have the"
-	elog "output of nvidia-bug-report.sh included."
-	elog
+	readme.gentoo_print_elog
+
 	if ! use tools; then
 		elog "USE=tools controls whether the nvidia-settings application"
 		elog "is installed. If you would like to use it, enable that"
