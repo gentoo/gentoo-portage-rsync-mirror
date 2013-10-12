@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9-r1.ebuild,v 1.4 2012/12/26 13:52:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/plan-1.9-r1.ebuild,v 1.5 2013/10/12 21:03:58 pacho Exp $
 
 EAPI=1
 
@@ -16,7 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/motif-2.3:0"
+DEPEND="
+	x11-libs/libXpm
+	>=x11-libs/motif-2.3:0
+"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}/src

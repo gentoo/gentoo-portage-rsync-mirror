@@ -10,5 +10,5 @@ RDEPEND=dedicated? ( || ( games-fps/quake3[dedicated] games-fps/quake3-bin[dedic
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=mirror://quakeunity/modifications/alternatefire/alternatefire-2.0.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c53598d508f670b01c1bfd6f89a56835

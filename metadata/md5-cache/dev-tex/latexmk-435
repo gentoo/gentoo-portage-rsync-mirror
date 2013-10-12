@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/latex-base dev-lang/perl
 SLOT=0
 SRC_URI=http://www.phys.psu.edu/~collins/software/latexmk/latexmk-435.zip
-_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=a82b05d305c98d0c2e1bcf9b7d436ec9

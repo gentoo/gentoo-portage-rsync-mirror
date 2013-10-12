@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/boost-1.52.0-r1[threads] dev-util/ctags
 SLOT=0
 SRC_URI=mirror://gnu/src-highlite/source-highlight-3.1.7.tar.gz
-_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=8befdb39fb86b3fcccde146e2b93dc34

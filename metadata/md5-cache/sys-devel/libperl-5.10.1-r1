@@ -5,5 +5,5 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 PDEPEND=>=dev-lang/perl-5.10.1
 SLOT=1
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=a3844173ae87433bd081c69f79fda724

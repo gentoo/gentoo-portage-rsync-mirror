@@ -9,5 +9,5 @@ RDEPEND=>=dev-lang/mono-2.0.1
 RESTRICT=test
 SLOT=0
 SRC_URI=http://projects.qnetp.net/attachments/download/28/monotorrent-0.80.tar.gz mirror://gentoo/mono.snk.bz2
-_eclasses_=mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=5cc5372a5174bf584f4e836072582ab7

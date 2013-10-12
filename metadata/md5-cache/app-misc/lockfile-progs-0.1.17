@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=net-libs/liblockfile
 SLOT=0
 SRC_URI=mirror://debian/pool/main/l/lockfile-progs/lockfile-progs_0.1.17.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=4941f8f3019dd08ed1d6cf5890c98b9c

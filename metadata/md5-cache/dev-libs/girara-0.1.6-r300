@@ -9,5 +9,5 @@ LICENSE=ZLIB
 RDEPEND=>=x11-libs/gtk+-3.0.11:3 !<dev-libs/girara-0.1.5-r200
 SLOT=3
 SRC_URI=http://pwmt.org/projects/girara/download/girara-0.1.6.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=3dde10100f4687deb9dd8a750a35c29c

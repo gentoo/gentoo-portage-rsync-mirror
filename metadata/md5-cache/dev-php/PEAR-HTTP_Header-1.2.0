@@ -7,5 +7,5 @@ LICENSE=BSD-2
 RDEPEND=dev-php/PEAR-HTTP dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/HTTP_Header-1.2.0.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=7dfe0bdd804fc601e53e161766fdb71f

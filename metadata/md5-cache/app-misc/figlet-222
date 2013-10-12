@@ -9,5 +9,5 @@ PDEPEND=bash-completion? ( app-shells/bash-completion )
 RDEPEND=bash-completion? ( app-admin/eselect )
 SLOT=0
 SRC_URI=ftp://ftp.figlet.org/pub/figlet/program/unix/figlet222.tar.gz mirror://gentoo/contributed-figlet-221.tar.gz mirror://gentoo/ms-dos-figlet-221.tar.gz
-_eclasses_=bash-completion	f913ed18b57a2d3372c4291680454db4	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion	f913ed18b57a2d3372c4291680454db4	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=47bca2f21acb9a44e1597da31cb48c7d

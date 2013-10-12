@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND==dev-python/docutils-0.10* >=dev-python/flask-0.10.1 >=dev-python/flask-babel-0.7 >=dev-python/flask-script-0.5.3 >=dev-python/frozen-flask-0.7 >=dev-python/jinja-2.5.2 >=dev-vcs/mercurial-1.6 dev-python/pyyaml dev-python/setuptools dev-python/pygments git? ( =dev-python/pygit2-0.19* ) =dev-lang/python-2.7*
 SLOT=0
 SRC_URI=mirror://pypi/b/blohg/blohg-0.12.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=3e992bfa3b9e400ab06986ef988a10b5

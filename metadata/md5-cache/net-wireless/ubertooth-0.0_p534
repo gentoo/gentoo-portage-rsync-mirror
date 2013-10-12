@@ -10,5 +10,5 @@ RDEPEND=specan? ( virtual/libusb:1 ) dfu? ( virtual/libusb:1 ) specan? ( >=dev-q
 REQUIRED_USE=ubertooth0-firmware? ( dfu ) ubertooth1-firmware? ( dfu )
 SLOT=0
 SRC_URI=mirror://sourceforge/ubertooth/ubertooth-r534.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=48fab04bd200f6a182e5e4205f07da2b

@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=app-arch/xz-utils:= dev-libs/libyaml:= dev-libs/openssl:0= sys-apps/util-linux:=
 SLOT=0
 SRC_URI=http://kojipkgs.fedoraproject.org/packages/vboot-utils/20130222gite6cf2c2/3.fc19/src/vboot-utils-20130222gite6cf2c2-3.fc19.src.rpm
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=353851966bc1adb89a324d724dc442c0

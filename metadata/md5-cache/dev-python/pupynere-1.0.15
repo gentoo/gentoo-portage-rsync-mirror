@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=dev-python/numpy =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/p/pupynere/pupynere-1.0.15.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=798ef7bc527dc1be72b845b8bd3b17cc

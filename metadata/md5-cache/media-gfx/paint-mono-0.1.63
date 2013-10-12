@@ -8,5 +8,5 @@ LICENSE=MIT CC-BY-NC-ND-2.5
 RDEPEND=>=dev-lang/mono-2.4[-minimal]
 SLOT=0
 SRC_URI=http://paint-mono.googlecode.com/files/paintdotnet-0.1.63.tar.gz
-_eclasses_=mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=190d3441a5213a22d87731b2afacd6d0

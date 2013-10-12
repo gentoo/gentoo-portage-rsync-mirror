@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=2.6.38-r3
 SRC_URI=mirror://kernel/linux/kernel/v2.6/linux-2.6.38.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.38.N/deblob-2.6.38 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.38.N/deblob-check -> deblob-check-2.6.38 ) mirror://gentoo/genpatches-2.6.38-8.base.tar.xz mirror://gentoo/genpatches-2.6.38-8.extras.tar.xz mirror://kernel/linux/kernel/people/ck/patches/2.6/2.6.38/2.6.38-ck3/patch-2.6.38-ck3.bz2
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	kernel-2	72c82b0482225ffcdcdbaf48b37cea58	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	kernel-2	72c82b0482225ffcdcdbaf48b37cea58	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=a83552f4db3b422848a9c7b17b8065b4

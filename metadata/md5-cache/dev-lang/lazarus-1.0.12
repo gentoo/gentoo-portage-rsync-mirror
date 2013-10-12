@@ -9,5 +9,5 @@ RDEPEND=>=dev-lang/fpc-2.6.0[source] net-misc/rsync x11-libs/gtk+:2 !=gnome-base
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://downloads.sourceforge.net/project/lazarus/Lazarus%20Zip%20_%20GZip/Lazarus%201.0.12/lazarus-1.0.12-0.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=781d64553b88e421a5b0a3de37b4100c

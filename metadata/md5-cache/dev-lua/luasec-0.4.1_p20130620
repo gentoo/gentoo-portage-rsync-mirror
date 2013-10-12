@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=>=dev-lang/lua-5.1[deprecated] dev-lua/luasocket dev-libs/openssl
 SLOT=0
 SRC_URI=https://github.com/brunoos/luasec/tarball/063e8a8a5c57858cdc845f8d51b994426edd37ab -> luasec-0.4.1_p20130620.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=2f6f417f0c63d77dff2506aada7d41fc

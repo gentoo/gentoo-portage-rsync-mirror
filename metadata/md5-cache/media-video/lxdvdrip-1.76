@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libdvdread >=media-video/dvdauthor-0.6.9 media-video/streamdvd media-video/mpgtx
 SLOT=0
 SRC_URI=mirror://berlios/lxdvdrip/lxdvdrip-1.76.tgz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=6cb480ca8638975b97246a15b016e9b4

@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=x11-libs/libX11 x11-libs/libXt x11-libs/libXext
 SLOT=0
 SRC_URI=http://www.ibiblio.org/pub/Linux/X11/demos/xfishtank-2.1tp.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=5672a4650cad09b03e1fbe423d857c21

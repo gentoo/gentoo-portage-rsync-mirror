@@ -1,6 +1,9 @@
 # ChangeLog for app-office/plan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.24 2013/07/24 02:56:36 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/plan/ChangeLog,v 1.25 2013/10/12 21:03:58 pacho Exp $
+
+  12 Oct 2013; Pacho Ramos <pacho@gentoo.org> plan-1.9-r1.ebuild:
+  Add missing DEPEND (#457750)
 
   26 Dec 2012; Ulrich Müller <ulm@gentoo.org> plan-1.9-r1.ebuild:
   Fix LICENSE, bug 448646.
@@ -84,4 +87,3 @@
   18 Oct 2003; Brandy Westcott brandy@gentoo.org plan-1.8.6.ebuild:
   Initial import. Thanks to Priit Laes <amd@tt.ee> and Mr Bones
   <mr_bones_@gentoo.org> for providing the ebuilds in Bug #11217.
-

@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/glib:2 dev-libs/json-glib net-im/pidgin
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/pidgin-opensteamworks-1.0_p41.tar.xz http://pidgin-opensteamworks.googlecode.com/files/icons.zip -> pidgin-opensteamworks-icons.zip
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=b30e254f78ec5cdd515b653162390d96

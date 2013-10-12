@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND==dev-dotnet/xsp-2.10* =www-servers/apache-2.2* >=dev-lang/mono-2.10
 SLOT=0
 SRC_URI=http://download.mono-project.com/sources/mod_mono/mod_mono-2.10.tar.bz2
-_eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	base	ec46b36a6f6fd1d0b505a33e0b74e413	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	4878e7f88afc0ba0866ac112190b0fd4	go-mono	95f4d6f11343dd05b134d8d1d2efd9e0	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	base	ec46b36a6f6fd1d0b505a33e0b74e413	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	4878e7f88afc0ba0866ac112190b0fd4	go-mono	95f4d6f11343dd05b134d8d1d2efd9e0	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=831f28a87e610c620cc5a493d1b2f183

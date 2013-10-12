@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=net-nds/openldap sasl? ( dev-libs/cyrus-sasl ) kerberos? ( virtual/krb5 ) pam? ( virtual/pam ) !sys-auth/nss_ldap !sys-auth/pam_ldap
 SLOT=0
 SRC_URI=http://arthurdejong.org/nss-pam-ldapd/nss-pam-ldapd-0.8.12.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ba3c8adc88bc547d41954763f690af4e

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sci-libs/scipy =dev-lang/python-2* =dev-lang/python-2*[tk]
 SLOT=0
 SRC_URI=mirror://gentoo/prodecomp-3.0.tar.bz2
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=7149330d0fe81279dd41fda0e6c90b32

@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=virtual/jdk-1.5 || ( app-admin/eselect-java app-admin/eselect-maven ) || ( dev-java/commons-logging:0 dev-java/log4j:0 dev-java/avalon-logkit:2.0 ) dev-java/avalon-framework:4.1 dev-java/commons-io:1 dev-java/juel:0 dev-java/osgi-core-api:0 java-virtuals/servlet-api:2.4 >=dev-java/java-config-2.1.9-r1
 SLOT=3.1
 SRC_URI=mirror://apache/maven/maven-3/3.1.0/binaries/apache-maven-3.1.0-bin.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	3e30ef439a720915f8f4fd4fe75f704c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=22978dcb52745b5960c7988dbff731bc

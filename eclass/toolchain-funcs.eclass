@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.122 2013/09/30 01:34:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.123 2013/10/12 21:31:01 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -650,7 +650,15 @@ gen_usr_ldscript() {
 
 	# OUTPUT_FORMAT gives hints to the linker as to what binary format
 	# is referenced ... makes multilib saner
-	output_format=$($(tc-getCC) ${CFLAGS} ${LDFLAGS} -Wl,--verbose 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
+	local flags=( ${CFLAGS} ${LDFLAGS} -Wl,--verbose )
+	if $(tc-getLD) --version | grep -q 'GNU gold' ; then
+		# If they're using gold, manually invoke the old bfd. #487696
+		local d="${T}/bfd-linker"
+		mkdir -p "${d}"
+		ln -sf $(which ${CHOST}-ld.bfd) "${d}"/ld
+		flags+=( -B"${d}" )
+	fi
+	output_format=$($(tc-getCC) "${flags[@]}" 2>&1 | sed -n 's/^OUTPUT_FORMAT("\([^"]*\)",.*/\1/p')
 	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
 
 	for lib in "$@" ; do
