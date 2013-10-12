@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel-next
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.15 2013/10/07 08:40:47 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.16 2013/10/12 20:05:41 lxnay Exp $
+
+*genkernel-next-30 (12 Oct 2013)
+
+  12 Oct 2013; Fabio Erculiani <lxnay@gentoo.org> -genkernel-next-29.ebuild,
+  +genkernel-next-30.ebuild:
+  version bump to v30, fix bug #487800
 
   07 Oct 2013; Fabio Erculiani <lxnay@gentoo.org> genkernel-next-24-r1.ebuild,
   genkernel-next-29.ebuild:

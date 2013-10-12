@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15151 2013/10/12 12:33:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15152 2013/10/12 20:18:12 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -207,11 +207,6 @@ media-plugins/vdr-prefermenu
 dev-python/pyparsing:py2
 dev-python/pyparsing:py3
 virtual/pyparsing
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (11 Sep 2013)
-# Not needed anymore, same version is provided by stable
-# dev-texlive/texlive-latex already and that should be used
-dev-tex/natbib
 
 # Ian Stakenvicius <axs@gentoo.org> (08 Sep 2013)
 # Collides with emul-linux-x86-sdl, will unmask after

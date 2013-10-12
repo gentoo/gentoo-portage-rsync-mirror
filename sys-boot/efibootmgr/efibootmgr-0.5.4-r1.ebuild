@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4-r1.ebuild,v 1.3 2013/09/30 17:16:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4-r1.ebuild,v 1.4 2013/10/12 20:04:54 vapier Exp $
 
 EAPI=5
 
@@ -27,9 +27,12 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-error-reporting.patch"
 }
 
-src_compile() {
+src_configure() {
 	strip-flags
 	tc-export CC
+}
+
+src_compile() {
 	emake EXTRA_CFLAGS="${CFLAGS}"
 }
 

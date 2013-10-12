@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8293 2013/10/12 12:33:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8294 2013/10/12 20:18:12 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove obsolete mask of dev-tex/natbib, bug 483974
 
   12 Oct 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask for removal
