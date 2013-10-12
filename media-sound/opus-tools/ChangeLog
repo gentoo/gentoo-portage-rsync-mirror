@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/opus-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/ChangeLog,v 1.5 2013/04/08 01:20:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/ChangeLog,v 1.6 2013/10/12 10:46:40 aballier Exp $
+
+*opus-tools-0.1.7 (12 Oct 2013)
+
+  12 Oct 2013; Alexis Ballier <aballier@gentoo.org> +opus-tools-0.1.7.ebuild:
+  version bump
 
   08 Apr 2013; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Use correct herd.

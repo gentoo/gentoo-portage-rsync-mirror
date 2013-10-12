@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.174 2013/10/02 02:47:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.175 2013/10/12 10:37:36 tampakrap Exp $
+
+*puppet-3.3.1 (12 Oct 2013)
+
+  12 Oct 2013; Theo Chatzimichos <tampakrap@gentoo.org> +puppet-3.3.1.ebuild:
+  Version bump, add note about the Portage module, remove comment
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> puppet-3.2.4.ebuild:
   Stable for HPPA (bug #486002).
