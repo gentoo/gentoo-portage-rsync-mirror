@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.70 2013/07/22 12:26:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.71 2013/10/12 08:42:38 aballier Exp $
+
+*lablgl-1.05 (12 Oct 2013)
+
+  12 Oct 2013; Alexis Ballier <aballier@gentoo.org> +lablgl-1.05.ebuild:
+  version bump
 
   22 Jul 2013; Alexis Ballier <aballier@gentoo.org> -lablgl-1.04.ebuild:
   remove old

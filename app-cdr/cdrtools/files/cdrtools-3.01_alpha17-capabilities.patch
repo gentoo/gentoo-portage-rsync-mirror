@@ -1,0 +1,88 @@
+--- cdrecord/priv.c	2013-10-12 09:51:46.385760482 +0200
++++ cdrecord/priv.c	2013-10-12 09:53:16.545766912 +0200
+@@ -111,14 +111,13 @@
+ 	/*
+ 	 * Give up privs we do not need anymore.
+ 	 * We no longer need:
+-	 *	cap_dac_override,cap_net_bind_service,cap_sys_nice,cap_sys_resource
++	 *	cap_dac_override,cap_net_bind_service,cap_sys_nice
+ 	 */
+ 	cap_t		cset;
+ 	cap_value_t	caplist[] = {
+ 					CAP_DAC_OVERRIDE,
+ 					CAP_NET_BIND_SERVICE,
+ 					CAP_SYS_NICE,
+-					CAP_SYS_RESOURCE,
+ 					CAP_SYS_RAWIO,		/* Keep as CAP_EFFECTIVE */
+ 					CAP_SYS_ADMIN		/* Keep as CAP_EFFECTIVE */
+ 				};
+@@ -128,7 +127,7 @@
+ 	cap_set_flag(cset, CAP_EFFECTIVE, NCAPS-2, caplist, CAP_CLEAR);
+ 	cap_set_flag(cset, CAP_INHERITABLE, NCAPS, caplist, CAP_CLEAR);
+ 	if (cap_set_proc(cset) < 0)
+-		errmsg("Cannot set process capabilities.\n");
++		errmsg("Cannot set initial process capabilities.\n");
+ #endif	/* HAVE_LINUX_CAPS */
+ #endif	/* HAVE_PRIV_SET */
+ }
+@@ -153,14 +152,13 @@
+ 	/*
+ 	 * Get back privs we may need now.
+ 	 * We need:
+-	 *	cap_dac_override,cap_net_bind_service,cap_sys_nice,cap_sys_resource
++	 *	cap_dac_override,cap_net_bind_service,cap_sys_nice
+ 	 */
+ 	cap_t		cset;
+ 	cap_value_t	caplist[] = {
+ 					CAP_DAC_OVERRIDE,
+ 					CAP_NET_BIND_SERVICE,
+-					CAP_SYS_NICE,
+-					CAP_SYS_RESOURCE
++					CAP_SYS_NICE
+ 				};
+ 
+ 	cset = cap_get_proc();
+@@ -168,7 +166,7 @@
+ 	cap_set_flag(cset, CAP_EFFECTIVE, NCAPS, caplist, CAP_SET);
+ 	cap_set_flag(cset, CAP_INHERITABLE, NCAPS, caplist, CAP_SET);
+ 	if (cap_set_proc(cset) < 0)
+-		errmsg("Cannot set process capabilities.\n");
++		errmsg("Cannot regain process capabilities.\n");
+ #endif	/* HAVE_LINUX_CAPS */
+ #endif	/* HAVE_PRIV_SET */
+ }
+@@ -193,14 +191,13 @@
+ 	/*
+ 	 * Give up privs we do not need anymore.
+ 	 * We no longer need:
+-	 *	cap_dac_override,cap_net_bind_service,cap_sys_nice,cap_sys_resource
++	 *	cap_dac_override,cap_net_bind_service,cap_sys_nice
+ 	 */
+ 	cap_t		cset;
+ 	cap_value_t	caplist[] = {
+ 					CAP_DAC_OVERRIDE,
+ 					CAP_NET_BIND_SERVICE,
+-					CAP_SYS_NICE,
+-					CAP_SYS_RESOURCE
++					CAP_SYS_NICE
+ 				};
+ 
+ 	cset = cap_get_proc();
+@@ -208,7 +205,7 @@
+ 	cap_set_flag(cset, CAP_EFFECTIVE, NCAPS, caplist, CAP_CLEAR);
+ 	cap_set_flag(cset, CAP_INHERITABLE, NCAPS, caplist, CAP_CLEAR);
+ 	if (cap_set_proc(cset) < 0)
+-		errmsg("Cannot set process capabilities.\n");
++		errmsg("Cannot deactivate process capabilities.\n");
+ #endif	/* HAVE_LINUX_CAPS */
+ #endif	/* HAVE_PRIV_SET */
+ }
+@@ -265,7 +262,7 @@
+ 	cap_set_flag(cset, CAP_INHERITABLE, NCAPS, caplist, CAP_CLEAR);
+ 	cap_set_flag(cset, CAP_PERMITTED, NCAPS, caplist, CAP_CLEAR);
+ 	if (cap_set_proc(cset) < 0)
+-		errmsg("Cannot set process capabilities.\n");
++		errmsg("Cannot drop process capabilities.\n");
+ #endif	/* HAVE_LINUX_CAPS */
+ #endif	/* HAVE_PRIV_SET */
+ }
