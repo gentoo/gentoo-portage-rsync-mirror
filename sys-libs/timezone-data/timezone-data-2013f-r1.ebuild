@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2013f-r1.ebuild,v 1.2 2013/09/30 04:42:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/timezone-data-2013f-r1.ebuild,v 1.3 2013/10/12 19:21:54 vapier Exp $
 
 EAPI="3"
 
@@ -30,6 +30,7 @@ pkg_setup() {
 	# barf when you try to transition file types.
 	if cd "${EROOT}"/usr/share/zoneinfo 2>/dev/null ; then
 		if [[ -d posix ]] ; then
+			rm -rf .gentoo-upgrade #487192
 			mv posix .gentoo-upgrade || die
 			ln -s .gentoo-upgrade posix || die
 		fi
