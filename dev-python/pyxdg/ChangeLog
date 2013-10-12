@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.117 2013/09/05 18:47:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.118 2013/10/12 18:47:08 hwoarang Exp $
+
+  12 Oct 2013; Markos Chandras <hwoarang@gentoo.org> pyxdg-0.25.ebuild:
+  Add ~mips
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pyxdg-0.25.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
