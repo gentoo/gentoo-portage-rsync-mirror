@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-3.8.2.ebuild,v 1.1 2013/05/15 06:53:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-3.8.2.ebuild,v 1.2 2013/10/13 06:50:16 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python3_2 )
+PYTHON_COMPAT=( python{3_2,3_3} )
 PYTHON_REQ_USE="xml"
 
 inherit gnome2 python-r1

@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.144 2013/10/11 04:38:03 cynede Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.145 2013/10/13 06:55:17 cynede Exp $
+
+  13 Oct 2013; Heather Cynede <cynede@gentoo.org> libgdiplus-2.10.9-r1.ebuild:
+  correct giflib depend for libgdiplus 2.10.9 -r1
 
 *libgdiplus-2.10.9-r1 (11 Oct 2013)
 

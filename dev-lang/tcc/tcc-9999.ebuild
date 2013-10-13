@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-9999.ebuild,v 1.4 2013/10/13 01:33:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-9999.ebuild,v 1.5 2013/10/13 06:56:00 patrick Exp $
 
 EAPI="5"
 
@@ -36,7 +36,7 @@ src_prepare() {
 }
 
 src_configure() {
-	use test && unset CFLAGS LDFLAGS # Tests run with CC=gcc etc, they will fail hard otherwise
+	use test && unset CFLAGS LDFLAGS # Tests run with CC=tcc etc, they will fail hard otherwise
 					# better fixes welcome, it feels wrong to hack the env like this
 	# not autotools, so call configure directly
 	./configure --cc="$(tc-getCC)" \

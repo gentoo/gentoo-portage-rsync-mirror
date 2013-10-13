@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.26.ebuild,v 1.2 2013/07/18 03:44:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-0.9.26-r1.ebuild,v 1.1 2013/10/13 06:56:00 patrick Exp $
 
 EAPI="5"
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="dev-lang/perl" # doc generation
 # Both tendra and tinycc install /usr/bin/tcc
 RDEPEND="!dev-lang/tendra"
+IUSE="test"
 
 src_prepare() {
 	# Don't strip
@@ -31,13 +32,20 @@ src_prepare() {
 
 	# fix texi2html invocation
 	sed -i -e 's/-number//' Makefile || die
+	sed -i -e 's/--sections//' Makefile || die
 }
 
 src_configure() {
-	local myopts
-	use x86 && myopts="--cpu=x86"
-	use amd64 && myopts="--cpu=x86-64"
-	econf ${myopts} --cc="$(tc-getCC)"
+	use test && unset CFLAGS LDFLAGS # Tests run with CC=tcc etc, they will fail hard otherwise
+					# better fixes welcome, it feels wrong to hack the env like this
+	# not autotools, so call configure directly
+	./configure --cc="$(tc-getCC)" \
+                --bindir=/usr/bin \
+                --libdir=/usr/$(get_libdir) \
+                --tccdir=tcc \
+                --includedir=/usr/include \
+                --docdir=/usr/share/doc/${PF} \
+                --mandir=/usr/share/man
 }
 
 src_compile() {
@@ -45,17 +53,15 @@ src_compile() {
 }
 
 src_install() {
-	emake \
-		DESTDIR="${D}" \
-		bindir="${D}"/usr/bin \
-		libdir="${D}"/usr/lib \
-		tccdir="${D}"/usr/lib/tcc \
-		includedir="${D}"/usr/include \
-		docdir="${D}"/usr/share/doc/${PF} \
-		mandir="${D}"/usr/share/man install
+	emake DESTDIR="${D}" install
 
 	dodoc Changelog README TODO VERSION
-	dohtml tcc-doc.html
+	#dohtml tcc-doc.html
 	exeinto /usr/share/doc/${PF}/examples
 	doexe examples/ex*.c
+}
+
+src_test() {
+	# this is using tcc bits that don't know as-needed etc.
+	TCCFLAGS="" emake test
 }
