@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.7-r3.ebuild,v 1.1 2013/06/27 16:22:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/faad2-2.7-r3.ebuild,v 1.2 2013/10/13 20:51:01 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -45,5 +45,6 @@ multilib_src_configure() {
 }
 
 multilib_src_install_all() {
-	find "${ED}" -name '*.la' -exec rm -f '{}' +
+	prune_libtool_files --all
+	einstalldocs
 }

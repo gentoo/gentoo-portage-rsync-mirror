@@ -10,4 +10,4 @@ RDEPEND=djbfft? ( sci-libs/djbfft[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,
 SLOT=0
 SRC_URI=http://liba52.sourceforge.net/files/a52dec-0.7.4.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	0bf1bbb0a7a26fc4daf3e660ef004ee5	multilib-minimal	09c985fcba99d0f16fc7161fffa80730	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=efcd5d2d703ac88bc2d0e55b657e8d96
+_md5_=79f780a7a5753bede2568d09e5fa70d8

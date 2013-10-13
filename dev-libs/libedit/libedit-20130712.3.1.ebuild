@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20130712.3.1.ebuild,v 1.1 2013/08/27 23:25:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20130712.3.1.ebuild,v 1.2 2013/10/13 20:38:24 mgorny Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs versionator base multilib-minimal
 MY_PV=$(get_major_version)-$(get_after_major_version)
 MY_P=${PN}-${MY_PV}
 
-DESCRIPTION="BSD replacement for libreadline."
+DESCRIPTION="BSD replacement for libreadline"
 HOMEPAGE="http://www.thrysoee.dk/editline/"
 SRC_URI="http://www.thrysoee.dk/editline/${MY_P}.tar.gz"
 
@@ -45,5 +45,6 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	find "${ED}" -name '*.la' -delete
+	einstalldocs
+	prune_libtool_files --all
 }

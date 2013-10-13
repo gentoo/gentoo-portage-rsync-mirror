@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r7.ebuild,v 1.1 2013/08/10 19:09:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r7.ebuild,v 1.2 2013/10/13 20:46:25 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib-minimal
@@ -59,4 +59,5 @@ multilib_src_compile() {
 
 multilib_src_install_all() {
 	prune_libtool_files --all
+	einstalldocs
 }

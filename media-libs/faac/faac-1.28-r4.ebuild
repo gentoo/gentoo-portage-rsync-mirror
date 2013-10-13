@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.28-r4.ebuild,v 1.1 2013/06/27 16:21:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.28-r4.ebuild,v 1.2 2013/10/13 20:49:32 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -54,6 +54,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
 	dohtml docs/*.html
 	insinto /usr/share/doc/${PF}/pdf
 	doins docs/libfaac.pdf

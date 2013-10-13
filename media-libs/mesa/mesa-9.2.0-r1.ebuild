@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0-r1.ebuild,v 1.3 2013/10/13 07:23:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.0-r1.ebuild,v 1.4 2013/10/13 20:44:10 mgorny Exp $
 
 EAPI=5
 
@@ -381,7 +381,8 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	find "${ED}" -name '*.la' -exec rm -f {} + || die
+	prune_libtool_files --all
+	einstalldocs
 
 	if use !bindist; then
 		dodoc docs/patents.txt

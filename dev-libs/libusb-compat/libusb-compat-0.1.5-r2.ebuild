@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.5-r2.ebuild,v 1.3 2013/08/08 12:41:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb-compat/libusb-compat-0.1.5-r2.ebuild,v 1.4 2013/10/13 20:41:18 mgorny Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib-minimal
@@ -44,6 +44,7 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	prune_libtool_files
+	einstalldocs
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples

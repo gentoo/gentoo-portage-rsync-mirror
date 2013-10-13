@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.11.1-r1.ebuild,v 1.1 2013/08/11 18:34:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.11.1-r1.ebuild,v 1.2 2013/10/13 20:47:59 mgorny Exp $
 
 EAPI=5
 
@@ -31,4 +31,5 @@ multilib_src_configure() {
 
 multilib_src_install_all() {
 	prune_libtool_files
+	einstalldocs
 }
