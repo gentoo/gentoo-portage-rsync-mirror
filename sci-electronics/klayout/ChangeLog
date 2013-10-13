@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/klayout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.17 2013/06/30 11:48:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.18 2013/10/13 18:35:55 dilfridge Exp $
+
+  13 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -klayout-0.20.2.ebuild, -files/klayout-0.20.2-Makefile.conf.linux-gentoo,
+  -files/klayout-0.20.2-configureonly.patch, klayout-0.22.8.ebuild,
+  +files/klayout-0.22.8-noautoruby.patch:
+  Fix build against ruby-1.9 and re-add keywords; remove old
 
 *klayout-0.22.8 (30 Jun 2013)
 
