@@ -9,6 +9,7 @@
     <flag name="experimental">Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".</flag>
     <flag name="module">Patch kernel to allow aufs being build as a module.</flag>
     <flag name="proc">Support for /proc/maps and lsof(1)</flag>
+    <flag name="vanilla">Use vanilla kernel sources without applying genpatches. WARNING: This flag will drop all support from the Gentoo Kernel Security team</flag>
   </use>
   <upstream>
     <remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>

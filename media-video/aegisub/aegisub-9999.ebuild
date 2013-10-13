@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-9999.ebuild,v 1.1 2013/04/01 13:54:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-9999.ebuild,v 1.2 2013/10/13 16:41:10 tomwij Exp $
 
 EAPI="5"
 
@@ -39,7 +39,7 @@ RDEPEND="
 	lua? ( >=dev-lang/lua-5.1.1 )
 
 	spell? ( >=app-text/hunspell-1.2.2 )
-	ffmpeg? ( >=media-libs/ffmpegsource-2.17 )
+	ffmpeg? ( >=media-libs/ffmpegsource-2.17:= )
 	fftw? ( >=sci-libs/fftw-3.3 )
 "
 DEPEND="${RDEPEND}
@@ -49,8 +49,8 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-EGIT_SOURCEDIR="${S}"
-S=${S}/${PN}
+EGIT_SOURCEDIR="${WORKDIR}/${P}"
+S="${WORKDIR}/${P}/${PN}"
 
 src_configure() {
 	local myeconfargs=(

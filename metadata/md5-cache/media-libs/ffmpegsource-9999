@@ -1,11 +1,11 @@
-DEFINED_PHASES=compile configure install preinst prepare test unpack
-DEPEND=sys-libs/zlib >=virtual/ffmpeg-9 virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
-DESCRIPTION=An FFmpeg based source library for easy frame accurate access
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=sys-libs/zlib >=virtual/ffmpeg-9 virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool dev-vcs/git
+DESCRIPTION=A libav/ffmpeg based source library for easy frame accurate access
 EAPI=5
 HOMEPAGE=https://code.google.com/p/ffmpegsource/
 IUSE=static-libs
 LICENSE=MIT
 RDEPEND=sys-libs/zlib >=virtual/ffmpeg-9
-SLOT=0
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	5f912199ed4fdfb0bfbde29c7ac7dbdb	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	subversion	e80e84db0fc102c2959858102060bec9	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=2523a8bfce9cbdb9c836925c75f33d8f
+SLOT=0/3
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	5f912199ed4fdfb0bfbde29c7ac7dbdb	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	4e377a24ad06cc28e05bb2ddae2475ea	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=1e9425a8d42c4f782da46d8c0c0261ef

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.11.4.ebuild,v 1.1 2013/10/08 11:46:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.11.4.ebuild,v 1.2 2013/10/13 16:48:54 jlec Exp $
 
 EAPI=5
 
@@ -19,21 +19,32 @@ AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"
 
 KEYWORDS="~amd64 ~x86"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net/"
-IUSE="deblob experimental module proc"
+IUSE="deblob experimental module proc vanilla"
 
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree and aufs3 support"
-SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${AUFS_URI}"
-
-UNIPATCH_LIST="
-	"${WORKDIR}"/aufs3-kbuild.patch
-	"${WORKDIR}"/aufs3-base.patch"
+SRC_URI="
+	${KERNEL_URI}
+	${ARCH_URI}
+	${AUFS_URI}
+	!vanilla? ( ${GENPATCHES_URI} )
+	"
 
 PDEPEND=">=sys-fs/aufs-util-3.9"
 
 src_unpack() {
+	if use vanilla; then
+		unset UNIPATCH_LIST_GENPATCHES UNIPATCH_LIST_DEFAULT
+		ewarn "You are using USE=vanilla"
+		ewarn "This will drop all support from the gentoo kernel security team"
+	fi
+
+	UNIPATCH_LIST=""${WORKDIR}"/aufs3-kbuild.patch "${WORKDIR}"/aufs3-base.patch"
+
 	use module && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-standalone.patch"
 	use proc && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-proc_map.patch"
+
 	unpack ${AUFS_TARBALL}
+
 	kernel-2_src_unpack
 }
 

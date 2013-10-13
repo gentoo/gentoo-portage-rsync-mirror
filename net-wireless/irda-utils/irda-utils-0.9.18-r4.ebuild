@@ -1,7 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r4.ebuild,v 1.5 2013/02/10 15:23:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/irda-utils-0.9.18-r4.ebuild,v 1.6 2013/10/13 16:36:13 pacho Exp $
 
+EAPI=5
 inherit eutils toolchain-funcs flag-o-matic udev
 
 DESCRIPTION="IrDA management and handling utilities"
@@ -13,50 +14,50 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~sh ~x86"
 IUSE=""
 
-RDEPEND="=dev-libs/glib-2*
+RDEPEND="
+	dev-libs/glib:2
 	>=sys-apps/pciutils-2.2.7-r1
 	sys-process/procps
 	sys-apps/setserial
 	sys-apps/grep
-	virtual/udev"
+	virtual/udev
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	!app-laptop/smcinit"
+	!app-laptop/smcinit
+"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/irda-utils-rh1.patch \
 		"${FILESDIR}"/${P}-makefile.diff \
 		"${FILESDIR}"/${P}-smcinit.diff \
 		"${FILESDIR}"/${P}-io.h.diff \
 		"${FILESDIR}"/${P}-dofail.patch \
 		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-ldflags.patch
+		"${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-headers.patch
 
 	# fix crosscompile, respect CFLAGS (Bug 200295)
 	sed -i -e "/^CC/s:gcc:$(tc-getCC):" \
 		-e "/^LD/s:ld:$(tc-getLD):" \
 		-e "/^AR/s:ar:$(tc-getAR):" \
 		-e "/^RANLIB/s:ranlib:$(tc-getRANLIB):" \
-		-e "/^CFLAGS/s:-O2:${CFLAGS}:" Makefile */Makefile
+		-e "/^CFLAGS/s:-O2:${CFLAGS}:" Makefile */Makefile || die
 
 	# fix compile when pciutils is compiled with USE=zlib (Bug 200295)
-	sed -i -e "s:-lpci:$(pkg-config --libs libpci):g" smcinit/Makefile
+	sed -i -e "s:-lpci:$(pkg-config --libs libpci):g" smcinit/Makefile || die
 
 	# disable etc subdir in Makefile
-	sed -i -e "s:^\(DIRS.*=.* \)etc \(.*\):\1\2:g" Makefile
+	sed -i -e "s:^\(DIRS.*=.* \)etc \(.*\):\1\2:g" Makefile || die
 
 	# disable write_pid(), because we don't need it
-	sed -i -e "s:\(write_pid();\):/* \1 */:g" irattach/util.c
+	sed -i -e "s:\(write_pid();\):/* \1 */:g" irattach/util.c || die
 
-	append-flags "-fno-strict-aliasing"
+	append-flags "-fno-strict-aliasing" # bug????
 }
 
 src_compile() {
-	emake RPM_OPT_FLAGS="${CFLAGS}" RPM_BUILD_ROOT="${D}" ROOT="${D}" \
-		|| die "emake failed"
+	emake RPM_OPT_FLAGS="${CFLAGS}" RPM_BUILD_ROOT="${D}" ROOT="${D}"
 }
 
 src_install () {
@@ -64,7 +65,7 @@ src_install () {
 	dodir /usr/sbin
 
 	emake install RPM_OPT_FLAGS="${CFLAGS}" ROOT="${D}" \
-		MANDIR="${D}usr/share/man"	|| die "emake install failed"
+		MANDIR="${D}usr/share/man"
 
 	newdoc ethereal/README     README.wireshark
 	newdoc irattach/README     README.irattach

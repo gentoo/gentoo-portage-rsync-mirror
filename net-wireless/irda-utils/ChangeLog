@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.43 2013/02/10 15:23:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.44 2013/10/13 16:36:13 pacho Exp $
+
+  13 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/irda-utils-0.9.18-headers.patch, irda-utils-0.9.18-r4.ebuild:
+  Fix headers used for compile (#317539 by Christophe LEFEBVRE)
 
   10 Feb 2013; Mike Gilbert <floppym@gentoo.org> irda-utils-0.9.18-r3.ebuild,
   irda-utils-0.9.18-r4.ebuild:

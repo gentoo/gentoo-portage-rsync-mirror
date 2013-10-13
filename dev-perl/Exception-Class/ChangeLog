@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Exception-Class
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.72 2013/10/13 16:25:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/ChangeLog,v 1.73 2013/10/13 16:45:12 zlogene Exp $
+
+  13 Oct 2013; Mikle Kolyada <zlogene@gentoo.org>
+  Exception-Class-1.360.0.ebuild:
+  ia64 stable wrt bug #449582
 
   13 Oct 2013; Mikle Kolyada <zlogene@gentoo.org>
   Exception-Class-1.360.0.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/scponly
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.54 2013/02/03 12:36:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.55 2013/10/13 16:47:28 pacho Exp $
+
+*scponly-4.8-r5 (13 Oct 2013)
+
+  13 Oct 2013; Pacho Ramos <pacho@gentoo.org> +scponly-4.8-r5.ebuild:
+  Replace pkg_setup hacks (#371667), drop default chdir (#322901)
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #22900

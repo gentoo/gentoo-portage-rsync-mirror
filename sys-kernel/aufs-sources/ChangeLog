@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/aufs-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.62 2013/10/08 11:46:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.63 2013/10/13 16:48:54 jlec Exp $
+
+  13 Oct 2013; Justin Lecher <jlec@gentoo.org> aufs-sources-3.10.15.ebuild,
+  aufs-sources-3.11.4.ebuild, metadata.xml:
+  Add support for vanilla-sources
 
 *aufs-sources-3.11.4 (08 Oct 2013)
 *aufs-sources-3.10.15 (08 Oct 2013)
