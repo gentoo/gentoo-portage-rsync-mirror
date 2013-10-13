@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.39 2013/10/12 11:21:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.40 2013/10/13 12:27:11 pacho Exp $
+
+*plymouth-0.8.8-r3 (13 Oct 2013)
+
+  13 Oct 2013; Pacho Ramos <pacho@gentoo.org> +plymouth-0.8.8-r3.ebuild,
+  -plymouth-0.8.3-r5.ebuild, -plymouth-0.8.4.ebuild, -plymouth-0.8.8-r2.ebuild,
+  -plymouth-0.8.8.ebuild:
+  Install compat symlinks as some rdeps need them, drop old
 
   12 Oct 2013; Pacho Ramos <pacho@gentoo.org> plymouth-0.8.8-r2.ebuild:
   Fix install with static-libs (#487756 by Andrius Štikonas)

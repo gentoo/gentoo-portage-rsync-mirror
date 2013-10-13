@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r2.ebuild,v 1.2 2013/10/12 11:21:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.8-r3.ebuild,v 1.1 2013/10/13 12:27:11 pacho Exp $
 
 EAPI=5
 
@@ -73,6 +73,11 @@ src_install() {
 
 	insinto /usr/share/plymouth
 	newins "${DISTDIR}"/gentoo-logo.png bizcom.png
+
+	# Install compatibility symlinks as some rdeps hardcode the paths
+	dosym /usr/bin/plymouth /bin/plymouth
+	dosym /usr/sbin/plymouth-set-default-theme /sbin/plymouth-set-default-theme
+	dosym /usr/sbin/plymouthd /sbin/plymouthd
 
 	readme.gentoo_create_doc
 }
