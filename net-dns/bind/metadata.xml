@@ -9,6 +9,7 @@
 	<use>
 		<flag name="dlz">Enables dynamic loaded zones, 3rd party extension</flag>
 		<flag name="filter-aaaa">Enable filtering of AAAA records over IPv4</flag>
+		<flag name="fixed-rrset">Enables fixed rrset-order option</flag>
 		<flag name="gost">Enables gost OpenSSL engine support</flag>
 		<flag name="gssapi">Enable gssapi support</flag>
 		<flag name="rpz">Enable response policy rewriting (rpz)</flag>

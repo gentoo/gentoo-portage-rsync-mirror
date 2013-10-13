@@ -4267,6 +4267,7 @@ net-dns/avahi:mdnsresponder-compat - Enable compat libraries for mDNSResponder
 net-dns/avahi:utils - Install the avahi gtk+ utils avahi-discover, bssh, and bvnc
 net-dns/bind:dlz - Enables dynamic loaded zones, 3rd party extension
 net-dns/bind:filter-aaaa - Enable filtering of AAAA records over IPv4
+net-dns/bind:fixed-rrset - Enables fixed rrset-order option
 net-dns/bind:gost - Enables gost OpenSSL engine support
 net-dns/bind:gssapi - Enable gssapi support
 net-dns/bind:rpz - Enable response policy rewriting (rpz)

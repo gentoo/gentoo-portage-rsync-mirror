@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131007.ebuild,v 1.2 2013/10/08 13:24:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131007.ebuild,v 1.3 2013/10/13 15:18:51 jlec Exp $
 
 EAPI=5
 
@@ -56,6 +56,19 @@ pkg_setup() {
 	else
 		PATCH_BRANCH="${KV_MINOR}"
 	fi
+
+	case ${KV_EXTRA} in
+			"")
+				elog "It seems you are using vanilla-sources with aufs3"
+				elog "Please use sys-kernel/aufs-sources with USE=vanilla"
+				elog "This will save you the nasty reemerge of sys-fs/aufs3 on every kernel upgrade"
+			;;
+			"-gentoo")
+				elog "It seems you are using gentoo-sources with aufs3"
+				elog "Please use sys-kernel/aufs-sources"
+				elog "This will save you the nasty reemerge of sys-fs/aufs3 on every kernel upgrade"
+			;;
+	esac
 
 	pushd "${T}" &> /dev/null
 	unpack ${A}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.5_p2.ebuild,v 1.1 2013/07/29 19:31:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.6.ebuild,v 1.1 2013/10/13 15:07:21 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -11,7 +11,7 @@
 # Because of this BIND MUST only run with a single thread when
 # using the MySQL driver.
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils autotools toolchain-funcs flag-o-matic multilib db-use user
 
@@ -126,12 +126,13 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-#		sed -i -e 's:^ RELEASETYPE=: RELEASETYPE=-P:' \
-#			-e 's:RELEASEVER=:RELEASEVER=1:' \
-#			${GEOIP_PATCH_A} || die
-		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' \
+		sed -i -e 's:^ PATCHVER=3: PATCHVER=6:' \
+			-e 's:^ RELEASETYPE=-P: RELEASETYPE=:' \
+			-e 's:RELEASEVER=1:RELEASEVER=:' \
 			${GEOIP_PATCH_A} || die
-		epatch ${GEOIP_PATCH_A}
+#		sed -i -e 's:RELEASEVER=1:RELEASEVER=2:' \
+#			${GEOIP_PATCH_A} || die
+		epatch -F0 ${GEOIP_PATCH_A}
 	fi
 
 	if use rrl; then
@@ -175,6 +176,7 @@ src_configure() {
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--with-libtool \
+		--enable-full-report \
 		$(use_enable threads) \
 		$(use_with dlz dlopen) \
 		$(use_with dlz dlz-filesystem) \
