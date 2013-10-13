@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.243 2013/10/07 12:36:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.244 2013/10/13 16:04:35 graaff Exp $
+
+  13 Oct 2013; Hans de Graaff <graaff@gentoo.org> activerecord-3.1.12.ebuild,
+  activerecord-3.2.13.ebuild, activerecord-3.2.14.ebuild:
+  Slot tzinfo dependency to match the gemspec.
 
 *activerecord-4.0.0 (07 Oct 2013)
 

@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.5a.ebuild,v 1.7 2012/02/13 16:32:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/levee/levee-3.5a.ebuild,v 1.8 2013/10/13 16:24:08 pacho Exp $
 
-EAPI=4
-
+EAPI=5
 inherit toolchain-funcs eutils
 
 DESCRIPTION="Really tiny vi clone, for things like rescue disks"
@@ -28,6 +27,7 @@ src_prepare() {
 src_configure() {
 	export AC_CPP_PROG=$(tc-getCPP)
 	export AC_PATH=${PATH}
+	export AC_LIBDIR="$($(tc-getPKG_CONFIG) --libs ncurses)"
 	./configure.sh --prefix="${PREFIX}"/usr || die "configure failed"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.1.12.ebuild,v 1.1 2013/03/30 13:17:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.1.12.ebuild,v 1.2 2013/10/13 16:02:43 graaff Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ ruby_add_bdepend "
 		dev-ruby/bundler
 		~dev-ruby/activerecord-${PV}
 		~dev-ruby/actionmailer-${PV}
-		>=dev-ruby/tzinfo-0.3.29
+		>=dev-ruby/tzinfo-0.3.29:0
 	)"
 
 all_ruby_prepare() {

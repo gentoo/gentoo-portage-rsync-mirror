@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-4.0.0.ebuild,v 1.3 2013/10/12 17:10:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/activesupport-4.0.0.ebuild,v 1.4 2013/10/13 16:05:34 graaff Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ RUBY_S="rails-${PV}/${PN}"
 ruby_add_rdepend "
 	>=dev-ruby/multi_json-1.3:0
 	>=dev-ruby/i18n-0.6.4:0.6
-	>=dev-ruby/tzinfo-0.3.37
+	>=dev-ruby/tzinfo-0.3.37:0
 	>=dev-ruby/minitest-4.2:0
 	>=dev-ruby/thread_safe-0.1:0
 	!!<dev-ruby/activesupport-3.0.11-r1:3.0"
