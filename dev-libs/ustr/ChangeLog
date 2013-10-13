@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/ustr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.8 2013/10/12 06:45:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.9 2013/10/13 13:40:41 jer Exp $
+
+*ustr-1.0.4-r2 (13 Oct 2013)
+
+  13 Oct 2013; Jeroen Roovers <jer@gentoo.org> +ustr-1.0.4-r2.ebuild:
+  Respect AR/CC/CFLAGS, build verbosely (in src_test() as well). Remove
+  unneeded die().
 
   12 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #237340
