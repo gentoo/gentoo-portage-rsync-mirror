@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libclc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/ChangeLog,v 1.6 2013/09/05 18:29:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/ChangeLog,v 1.7 2013/10/13 07:18:48 mgorny Exp $
+
+*libclc-0.0.1_pre20130819-r1 (13 Oct 2013)
+
+  13 Oct 2013; Michał Górny <mgorny@gentoo.org>
+  +libclc-0.0.1_pre20130819-r1.ebuild, -libclc-0.0.1_pre20130819.ebuild:
+  Fix pkg-config file install to use /usr/share (current git does that already).
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> libclc-0.0.1_pre20130524.ebuild,
   libclc-0.0.1_pre20130819.ebuild:

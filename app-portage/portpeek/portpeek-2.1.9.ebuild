@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-2.1.9.ebuild,v 1.6 2013/08/26 20:44:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-2.1.9.ebuild,v 1.7 2013/10/13 07:22:14 pacho Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_7,3_2} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit python-r1
 

@@ -1,0 +1,20 @@
+Fix dirname(3) call in writeout function.
+https://bugs.gentoo.org/487758
+
+--- mg-20130922-orig/file.c
++++ mg-20130922/file.c
+@@ -669,11 +669,11 @@
+ {
+ 	struct stat	statbuf;
+ 	int	 s;
+-	char    *dp;
+-
+-	dp = dirname(fn);
++	char	 ts[NFILEN], *dp;
+ 
+ 	if (stat(fn, &statbuf) == -1 && errno == ENOENT) {
++		(void)strlcpy(ts, fn, NFILEN);
++		dp = dirname(ts);
+ 		errno = 0;
+ 		if (access(dp, W_OK) && errno == EACCES) {
+ 			ewprintf("Directory %s%s write-protected", dp,

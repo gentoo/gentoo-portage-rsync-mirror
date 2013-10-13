@@ -9,5 +9,5 @@ RDEPEND=sys-libs/ncurses app-arch/bzip2 sys-libs/zlib || ( >=media-video/ffmpeg-
 REQUIRED_USE=bindist? ( !faac ) dga? ( X ) dvdnav? ( dvd ) dxr3? ( X ) enca? ( iconv ) ggi? ( X ) libass? ( truetype ) opengl? ( X ) osdmenu? ( X ) truetype? ( iconv ) vdpau? ( X ) vidix? ( X ) xinerama? ( X ) xscreensaver? ( X ) xv? ( X ) xvmc? ( xv )
 SLOT=0
 SRC_URI=!truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	git-2	2027b81a576527fa16bece425941e094	git-r3	0036be0562e4e4a1956a054554414af0	multilib	892e597faee02a5b94eb02ab512e7622	subversion	e80e84db0fc102c2959858102060bec9	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	git-2	2027b81a576527fa16bece425941e094	git-r3	4e377a24ad06cc28e05bb2ddae2475ea	multilib	892e597faee02a5b94eb02ab512e7622	subversion	e80e84db0fc102c2959858102060bec9	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e4c62f05679ffb02a4e5c263597ea7c8

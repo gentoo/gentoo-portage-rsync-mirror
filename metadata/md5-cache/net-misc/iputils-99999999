@@ -7,5 +7,5 @@ IUSE=caps doc gnutls idn ipv6 SECURITY_HAZARD ssl static +filecaps
 LICENSE=BSD
 RDEPEND=!net-misc/rarpd !static? ( caps? ( sys-libs/libcap ) idn? ( net-dns/libidn ) ipv6? ( gnutls? ( net-libs/gnutls ) ssl? ( dev-libs/openssl:0 ) ) )
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	git-2	2027b81a576527fa16bece425941e094	git-r3	0036be0562e4e4a1956a054554414af0	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	git-2	2027b81a576527fa16bece425941e094	git-r3	4e377a24ad06cc28e05bb2ddae2475ea	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=9a47d5b0d8dfcde37f2390b3ef13ffd9

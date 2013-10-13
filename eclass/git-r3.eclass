@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.15 2013/10/09 17:14:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.16 2013/10/13 07:14:58 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -385,6 +385,8 @@ _git-r3_smart_fetch() {
 git-r3_fetch() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	[[ ${EVCS_OFFLINE} ]] && return
+
 	local repos
 	if [[ ${1} ]]; then
 		repos=( ${1} )
@@ -694,8 +696,6 @@ git-r3_peek_remote_ref() {
 
 git-r3_src_fetch() {
 	debug-print-function ${FUNCNAME} "$@"
-
-	[[ ${EVCS_OFFLINE} ]] && return
 
 	if [[ ! ${EGIT3_STORE_DIR} && ${EGIT_STORE_DIR} ]]; then
 		ewarn "You have set EGIT_STORE_DIR but not EGIT3_STORE_DIR. Please consider"

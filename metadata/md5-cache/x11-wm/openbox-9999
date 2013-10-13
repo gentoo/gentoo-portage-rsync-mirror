@@ -9,5 +9,5 @@ RDEPEND=dev-libs/glib:2 >=dev-libs/libxml2-2.0 >=media-libs/fontconfig-2 x11-lib
 REQUIRED_USE=xdg? ( || ( python_targets_python2_6 python_targets_python2_7 ) )
 SLOT=3
 SRC_URI=branding? ( http://dev.gentoo.org/~hwoarang/distfiles/surreal-gentoo.tar.gz )
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	0036be0562e4e4a1956a054554414af0	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	python-r1	3baffd4f94003161708508813a475647	python-utils-r1	4f3595fa07cbecf9f3cfabd0f9a6f34b	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	4e377a24ad06cc28e05bb2ddae2475ea	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	python-r1	3baffd4f94003161708508813a475647	python-utils-r1	4f3595fa07cbecf9f3cfabd0f9a6f34b	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=0d49e8c654db897326ce5e00ffd7e9e2

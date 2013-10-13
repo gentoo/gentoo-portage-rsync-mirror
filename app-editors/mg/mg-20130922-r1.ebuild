@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20130922.ebuild,v 1.5 2013/10/09 10:06:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20130922-r1.ebuild,v 1.1 2013/10/13 07:12:46 ulm Exp $
 
 EAPI=5
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="MicroGnuEmacs, a port from the BSDs"
 HOMEPAGE="http://homepage.boetes.org/software/mg/"
@@ -21,6 +21,9 @@ DEPEND="${RDEPEND}
 	dev-libs/clens"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-dirname.patch
+	epatch_user
+
 	# create our own Makefile to avoid BSD make
 	echo -e 'SRCS =' *.c '\n\nmg: $(SRCS:.c=.o)' \
 		'\n\t$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)' >Makefile || die

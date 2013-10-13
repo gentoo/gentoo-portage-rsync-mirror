@@ -7,5 +7,5 @@ IUSE=nls xinerama bidi +truetype +imlib +slit +toolbar vim-syntax
 LICENSE=MIT
 RDEPEND=x11-libs/libXpm x11-libs/libXrandr x11-libs/libXext x11-libs/libXft x11-libs/libXrender || ( x11-misc/gxmessage x11-apps/xmessage ) xinerama? ( x11-libs/libXinerama ) truetype? ( media-libs/freetype ) bidi? ( >=dev-libs/fribidi-0.19.2 ) imlib? ( >=media-libs/imlib2-1.2.0[X] ) vim-syntax? ( app-vim/fluxbox-syntax ) !!<x11-themes/fluxbox-styles-fluxmod-20040809-r1 !!<=x11-misc/fluxconf-0.9.9 !!<=x11-misc/fbdesk-1.2.1
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	git-2	2027b81a576527fa16bece425941e094	git-r3	0036be0562e4e4a1956a054554414af0	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	git-2	2027b81a576527fa16bece425941e094	git-r3	4e377a24ad06cc28e05bb2ddae2475ea	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7960ab49b37720afb9e673661cf2ae73
