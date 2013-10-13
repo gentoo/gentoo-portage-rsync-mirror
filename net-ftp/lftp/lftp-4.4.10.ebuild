@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.10.ebuild,v 1.1 2013/10/11 13:13:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.10.ebuild,v 1.2 2013/10/13 08:51:41 grobian Exp $
 
 EAPI=5
 inherit autotools eutils libtool
@@ -80,6 +80,6 @@ src_install() {
 	default
 	local script
 	for script in {convert-mozilla-cookies,verify-file}; do
-		use ${script} || { rm "${D}"/usr/share/${PN}/${script} || die ;}
+		use ${script} || { rm "${ED}"/usr/share/${PN}/${script} || die ;}
 	done
 }

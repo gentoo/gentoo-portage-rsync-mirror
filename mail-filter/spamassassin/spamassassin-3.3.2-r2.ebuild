@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r2.ebuild,v 1.4 2013/10/11 16:43:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.3.2-r2.ebuild,v 1.5 2013/10/13 08:41:28 zlogene Exp $
 
 EAPI=4
 
@@ -123,7 +123,7 @@ src_install () {
 	perl-module_src_install
 
 	# Create the stub dir used by sa-update and friends
-	dodir /var/lib/spamassassin
+	keepdir /var/lib/spamassassin
 
 	# Move spamd to sbin where it belongs.
 	dodir /usr/sbin

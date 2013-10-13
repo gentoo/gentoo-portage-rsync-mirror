@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/perl-5.8.8-r8 virtual/perl-MIME-Base64 >=virtual/perl-PodPars
 SLOT=0
 SRC_URI=mirror://apache/spamassassin/source/Mail-SpamAssassin-3.3.2.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	perl-module	d93571ca1c77e98760e5aa406388b02d	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=35644554dd5d24dd811ac7549db5a48b
+_md5_=1f7e33e28bb3fd3e00e98c80abde5060
