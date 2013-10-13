@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.6 2013/10/13 11:16:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-0_p106.ebuild,v 1.1 2013/10/13 11:16:59 ryao Exp $
 
 EAPI=5
 
