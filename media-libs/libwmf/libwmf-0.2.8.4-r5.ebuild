@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r5.ebuild,v 1.14 2013/09/03 23:01:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r5.ebuild,v 1.15 2013/10/13 14:55:58 pacho Exp $
 
 EAPI=5
 
@@ -33,11 +33,7 @@ RDEPEND="
 		expat? ( dev-libs/expat )
 		!expat? (  dev-libs/libxml2 )
 	)
-	X? (
-		x11-libs/libICE
-		x11-libs/libSM
-		x11-libs/libX11
-	)
+	X? ( x11-libs/libX11 )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

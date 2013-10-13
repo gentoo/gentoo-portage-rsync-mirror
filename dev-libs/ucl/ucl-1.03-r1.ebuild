@@ -1,9 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.03-r1.ebuild,v 1.9 2012/09/11 07:30:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ucl-1.03-r1.ebuild,v 1.10 2013/10/13 14:47:43 pacho Exp $
 
-EAPI=4
-
+EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="the UCL Compression Library"
@@ -24,6 +23,9 @@ src_prepare() {
 	# place them into acinclude.m4 because there doesn't seem to be an
 	# m4/...
 	sed -n -e '/^AC_DEFUN.*mfx_/,/^])#$/p' aclocal.m4 > acinclude.m4 || die "Unable to rescue mfx_* autoconf macros."
+
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
+
 	eautoreconf
 }
 
