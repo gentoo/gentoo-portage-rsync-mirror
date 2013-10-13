@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.57 2013/02/16 12:57:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.58 2013/10/13 14:11:16 pacho Exp $
+
+  13 Oct 2013; Pacho Ramos <pacho@gentoo.org> netkit-telnetd-0.17-r10.ebuild:
+  Fix cross compile issue (#446968)
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> -netkit-telnetd-0.17-r6.ebuild,
   -netkit-telnetd-0.17-r8.ebuild, -netkit-telnetd-0.17-r9.ebuild, metadata.xml:

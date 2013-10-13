@@ -1,0 +1,20 @@
+Index: tests/tc_pos_print_fs_info_fat32/stdout_expected.txt
+===================================================================
+--- tests/tc_pos_print_fs_info_fat32/stdout_expected.txt	(revision 337)
++++ tests/tc_pos_print_fs_info_fat32/stdout_expected.txt	(working copy)
+@@ -2,12 +2,12 @@
+ Device:					fs.img
+ Type:					FAT32
+ Sector size:				512 bytes
+-FAT size:				758 sectors (388096 bytes)
++FAT size:				757 sectors (387584 bytes)
+ Number of FATs:				2 
+ Cluster size:				1024 bytes
+ Max. cluster chain length:		4194303 clusters
+-Data clusters (total / used / bad):	96882 / 13 / 4
++Data clusters (total / used / bad):	96883 / 13 / 4
+ FS size:				94.61 MiBytes
+ FAT32 root first cluster:		0x2
+-First cluster data offset:		0xc1800
++First cluster data offset:		0xc1400
+ First cluster FAT entry:		0x7

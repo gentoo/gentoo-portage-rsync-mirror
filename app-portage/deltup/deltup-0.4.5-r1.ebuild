@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.5-r1.ebuild,v 1.1 2013/07/07 13:13:59 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.5-r1.ebuild,v 1.2 2013/10/13 14:17:37 pacho Exp $
 
 EAPI=5
 
@@ -25,14 +25,16 @@ RDEPEND="${DEPEND}
 src_prepare () {
 	epatch "${FILESDIR}"/${PN}-0.4.4-gcc47.patch
 	epatch "${FILESDIR}"/${PN}-0.4.4-zlib-1.2.5.2.patch
+	epatch "${FILESDIR}"/${PN}-0.4.5-underlink.patch
+	epatch_user
 }
 
 src_compile () {
-	emake CXX=$(tc-getCXX) || die "emake getdelta failed"
+	emake CXX=$(tc-getCXX)
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dodoc README ChangeLog
 	doman deltup.1
 }
