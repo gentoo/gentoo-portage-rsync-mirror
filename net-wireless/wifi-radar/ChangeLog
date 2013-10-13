@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wifi-radar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.32 2013/02/02 12:09:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wifi-radar/ChangeLog,v 1.33 2013/10/13 17:16:00 pacho Exp $
+
+*wifi-radar-2.0.8-r2 (13 Oct 2013)
+
+  13 Oct 2013; Pacho Ramos <pacho@gentoo.org> +wifi-radar-2.0.8-r2.ebuild:
+  Use new eclasses, fix ifconfig path (#484380) and add missing dep on sudo
+  (#484378)
 
   02 Feb 2013; Pacho Ramos <pacho@gentoo.org> -wifi-radar-1.9.8-r1.ebuild,
   -wifi-radar-1.9.9.ebuild, -wifi-radar-2.0.8.ebuild, metadata.xml:
