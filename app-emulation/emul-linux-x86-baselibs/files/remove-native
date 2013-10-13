@@ -62,8 +62,7 @@ usr/lib32/libusb-1.0.so.0.1.0
 usr/lib32/libusb.so
 usr/lib32/pkgconfig/libusb-1.0.pc
 usr/lib32/pkgconfig/libusb.pc
-lib32/libudev.so.1
-lib32/libudev.so.1.2.1
+lib32/libudev.so.1*
 usr/lib32/libudev.so
 usr/lib32/pkgconfig/libudev.pc
 lib32/libsystemd-daemon.so.0.0.7
@@ -189,3 +188,5 @@ usr/lib32/terminfo
 lib32/libgpm.so.1
 lib32/libgpm.so.1.20.0
 usr/lib32/libgpm.so
+usr/lib32/libgmp.so*
+usr/lib32/libgmpxx.so*

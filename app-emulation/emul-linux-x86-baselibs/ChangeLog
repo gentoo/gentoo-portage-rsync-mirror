@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.162 2013/10/09 07:25:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.163 2013/10/13 02:13:50 floppym Exp $
+
+*emul-linux-x86-baselibs-20131008-r2 (13 Oct 2013)
+
+  13 Oct 2013; Mike Gilbert <floppym@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r2.ebuild,
+  -emul-linux-x86-baselibs-20131008-r1.ebuild, files/remove-native:
+  Resolve file collision with dev-libs/gmp-5.1.3-r1.
 
 *emul-linux-x86-baselibs-20131008-r1 (09 Oct 2013)
 
