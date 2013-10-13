@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-9999.ebuild,v 1.3 2013/10/12 09:11:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/tcc-9999.ebuild,v 1.4 2013/10/13 01:33:16 patrick Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ EGIT_REPO_URI="http://repo.or.cz/r/tinycc.git"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 
 DEPEND="dev-lang/perl" # doc generation
 # Both tendra and tinycc install /usr/bin/tcc

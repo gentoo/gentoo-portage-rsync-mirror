@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.1.55.ebuild,v 1.2 2013/10/01 16:54:32 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183.ebuild,v 1.1 2013/10/13 01:52:09 prometheanfire Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
 
 DESCRIPTION="Spotify is a social music platform"
 HOMEPAGE="https://www.spotify.com/ch-de/download/previews/"
-MY_PV="${PV}.gbdd3b79.203-1"
+MY_PV="${PV}.g644e24e.428-1"
 MY_P="${PN}-client_${MY_PV}"
 SRC_BASE="http://repository.spotify.com/pool/non-free/${PN:0:1}/${PN}/"
 SRC_URI="
@@ -17,7 +17,7 @@ SRC_URI="
 LICENSE="Spotify"
 SLOT="0"
 #amd64 and x86 keywords removed due to security concerns, see bug 474010
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="gnome pax_kernel pulseaudio"
 RESTRICT="mirror strip"
 
@@ -63,6 +63,7 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}
 
 QA_PREBUILT="/opt/spotify/spotify-client/spotify
+			/opt/spotify/spotify-client/Data/SpotifyHelper
 			/opt/spotify/spotify-client/libcef.so"
 
 src_prepare() {
@@ -70,11 +71,17 @@ src_prepare() {
 	sed -i \
 		-e 's/\(lib\(ssl\|crypto\).so\).0.9.8/\1.1.0.0/g' \
 		opt/spotify/spotify-client/spotify || die "sed failed"
+	sed -i \
+		-e 's/\(lib\(ssl\|crypto\).so\).0.9.8/\1.1.0.0/g' \
+		opt/spotify/spotify-client/Data/SpotifyHelper || die "sed failed"
 	# different NSPR / NSS library names for some reason
+	sed -i \
+		-e 's/\(lib\(plc4\|nspr4\).so\).9\(.\)/\1.0d\3\3/g' \
+		opt/spotify/spotify-client/Data/SpotifyHelper || die "sed failed"
 	sed -i \
 		-e 's/\(lib\(nss3\|nssutil3\|smime3\).so\).1d/\1\x00\x00\x00/g' \
 		-e 's/\(lib\(plc4\|nspr4\).so\).0d\(.\)/\1\x00\x00\3\3/g' \
-		opt/spotify/spotify-client/libcef.so || die "sed failed"
+		opt/spotify/spotify-client/Data/libcef.so || die "sed failed"
 	# Fix desktop entry to launch spotify-dbus.py for GNOME integration
 	if use gnome ; then
 	sed -i \
@@ -101,6 +108,7 @@ src_install() {
 	insinto ${SPOTIFY_HOME}
 	doins -r opt/spotify/spotify-client/*
 	fperms +x ${SPOTIFY_HOME}/spotify
+	fperms +x ${SPOTIFY_HOME}/Data/SpotifyHelper
 
 	dodir /usr/bin
 	cat <<-EOF >"${D}"/usr/bin/spotify
@@ -126,8 +134,11 @@ src_install() {
 	if use pax_kernel; then
 		#create the headers, reset them to default, then paxmark -m them
 		pax-mark C "${ED}"/opt/${PN}/spotify-client/${PN} || die
+		pax-mark C "${ED}"/opt/${PN}/spotify-client/Data/SpotifyHelper || die
 		pax-mark z "${ED}"/opt/${PN}/spotify-client/${PN} || die
+		pax-mark z "${ED}"/opt/${PN}/spotify-client/Data/SpotifyHelper || die
 		pax-mark m "${ED}"/opt/${PN}/spotify-client/${PN} || die
+		pax-mark m "${ED}"/opt/${PN}/spotify-client/Data/SpotifyHelper || die
 		eqawarn "You have set USE=pax_kernel meaning that you intendto run"
 		eqawarn "${PN} under a PaX enabled kernel.  To do so, we must modify"
 		eqawarn "the ${PN} binary itself and this *may* lead to breakage!  If"
@@ -139,6 +150,12 @@ src_install() {
 	dosym /usr/lib/libnspr4.so /opt/spotify/spotify-client/libnspr4.so.9
 	dosym /usr/lib/libplc4.so /opt/spotify/spotify-client/libplc4.so.9
 	sed -i 's/libcef\.so/libcef\.so\ \/opt\/spotify\/spotify\-client\/libnspr4\.so\.9\ \/opt\/spotify\/spotify\-client\/libplc4\.so\.9/g' "${ED}/usr/bin/spotify"
+
+	#TODO maybe this symlink is not needed and could be fixed with previous sed
+	dosym /opt/${PN}/spotify-client/Data/libcef.so /opt/${PN}/spotify-client/
+
+	#TODO fix for x86
+	dosym /usr/lib64/libudev.so /opt/${PN}/spotify-client/Data/libudev.so.0
 }
 
 pkg_preinst() {
