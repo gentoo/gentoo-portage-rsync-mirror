@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/taglib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.146 2013/08/27 19:19:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/ChangeLog,v 1.147 2013/10/13 10:27:45 johu Exp $
+
+*taglib-1.9.1 (13 Oct 2013)
+
+  13 Oct 2013; Johannes Huber <johu@gentoo.org> +taglib-1.9.1.ebuild:
+  Version bump wrt bug #487446.
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org> taglib-1.8-r1.ebuild:
   keyword ~amd64-fbsd

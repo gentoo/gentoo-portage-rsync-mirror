@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.39 2013/07/04 12:26:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.40 2013/10/13 10:18:51 tomwij Exp $
+
+  13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Updated Nikoli's e-mail address for easier automatic assignment.
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> miniupnpc-1.8.ebuild:
   Stable for x86, wrt bug #474772

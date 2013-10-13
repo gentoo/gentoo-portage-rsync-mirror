@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/fcgiwrap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.14 2013/02/18 19:10:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.15 2013/10/13 10:19:57 tomwij Exp $
+
+  13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Updated Nikoli's e-mail address for easier automatic assignment.
 
 *fcgiwrap-1.1.0 (18 Feb 2013)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/bedup-9999.ebuild,v 1.1 2013/07/15 19:54:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bedup/bedup-9999.ebuild,v 1.2 2013/10/13 10:13:28 pacho Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_2} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 #if LIVE
 # Note: we ignore submodules since we use btrfs-progs-9999.
