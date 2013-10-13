@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.0.ebuild,v 1.5 2013/10/09 17:10:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/polarssl-1.3.0.ebuild,v 1.6 2013/10/13 09:55:57 tommy Exp $
 
 EAPI=5
 
@@ -47,10 +47,10 @@ src_compile() {
 
 src_test() {
 	cd programs || die
-	emake test/selftest || die "emake selftest failed"
+	emake test/selftest $(usex zlib "ZLIB=1" "") || die "emake selftest failed"
 	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:../library" ./test/selftest || die "selftest failed"
 	cd "${S}" || die
-	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:../library" emake check
+	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:../library" emake check $(usex zlib "ZLIB=1" "")
 }
 
 src_install() {
