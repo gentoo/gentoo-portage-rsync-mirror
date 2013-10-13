@@ -4,10 +4,10 @@ DESCRIPTION=ZABBIX is software for monitoring of your applications, network and 
 EAPI=5
 HOMEPAGE=http://www.zabbix.com/
 IUSE=agent java curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server ssh snmp sqlite iodbc odbc static elibc_FreeBSD java
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=snmp? ( net-analyzer/net-snmp ) ldap? ( net-nds/openldap =dev-libs/cyrus-sasl-2* net-libs/gnutls ) mysql? ( >=virtual/mysql-5.0 ) sqlite? ( >=dev-db/sqlite-3.3.5 ) postgres? ( >=dev-db/postgresql-base-8.3.0 ) oracle? ( >=dev-db/oracle-instantclient-basic-10.0.0.0 ) jabber? ( dev-libs/iksemel ) curl? ( net-misc/curl ) openipmi? ( sys-libs/openipmi ) ssh? ( net-libs/libssh2 ) java? ( >=virtual/jdk-1.4 ) odbc? ( iodbc? ( dev-db/libiodbc ) !iodbc? ( dev-db/unixODBC ) ) proxy? ( <=net-analyzer/fping-2.9 ) server? ( <=net-analyzer/fping-2.9 app-admin/webapp-config ) java? ( >=virtual/jre-1.4 dev-java/slf4j-api dev-java/json-simple ) frontend? ( dev-lang/php[bcmath,ctype,sockets,gd,truetype,xml,session,xmlreader,xmlwriter,nls,sysvipc,unicode] || ( dev-lang/php[apache2] dev-lang/php[cgi] dev-lang/php[fpm] ) media-libs/gd[png] app-admin/webapp-config ) java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=http://prdownloads.sourceforge.net/zabbix/zabbix-2.0.9rc1.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	depend.php	df169a364e191b840b695604097e3c21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=308618333ad3b22a4391ce023619f196
+_md5_=035d20061abead32a43cf3d673a04600
