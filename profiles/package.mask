@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15153 2013/10/13 08:00:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15154 2013/10/13 09:02:22 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego Elio Pettenò <flameeyes@gentoo.org> (1 Nov 2012)
+# Requires a custom patch to www-server/apache which is not present in
+# Gentoo's ebuilds. If you want to play with this, please don't open
+# bugs related to Apache.
+www-apache/mod_spdy
 
 # Pacho Ramos <pacho@gentoo.org> (12 Oct 2013)
 # No package is needing it but it still needs obsolete

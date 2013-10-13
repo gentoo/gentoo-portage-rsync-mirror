@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/yapsy-1.10.1.ebuild,v 1.3 2013/04/17 08:22:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/yapsy/yapsy-1.10.1.ebuild,v 1.4 2013/10/13 09:14:01 pacho Exp $
 
 EAPI="5"
 
 MY_P="Yapsy-${PV}-pythons2n3"
-PYTHON_COMPAT=( python{2_7,3_2} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit distutils-r1
 
