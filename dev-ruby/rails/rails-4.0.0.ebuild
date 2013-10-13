@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-4.0.0.ebuild,v 1.1 2013/10/07 12:37:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-4.0.0.ebuild,v 1.2 2013/10/13 22:11:25 maekke Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.rubyonrails.org"
 
 LICENSE="MIT"
 SLOT="$(get_version_component_range 1-2)"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 
 IUSE="+asset-pipeline"
 

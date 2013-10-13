@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.241 2013/10/07 12:35:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.242 2013/10/13 22:10:12 maekke Exp $
+
+  13 Oct 2013; Markus Meier <maekke@gentoo.org> actionmailer-4.0.0.ebuild:
+  add ~arm, bug #487206
 
 *actionmailer-4.0.0 (07 Oct 2013)
 

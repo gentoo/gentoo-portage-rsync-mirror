@@ -4,7 +4,7 @@ DESCRIPTION=Tools for creating, working with, and running Rails applications.
 EAPI=5
 HOMEPAGE=http://github.com/rails/rails
 IUSE=test elibc_FreeBSD ruby_targets_ruby19 test test
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~arm
 LICENSE=MIT
 RDEPEND=>=app-admin/eselect-rails-0.19 ruby_targets_ruby19? ( ~dev-ruby/activesupport-4.0.0[ruby_targets_ruby19] ~dev-ruby/actionpack-4.0.0[ruby_targets_ruby19] >=dev-ruby/thor-0.18.1[ruby_targets_ruby19] >=dev-ruby/rake-0.8.7[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
 REQUIRED_USE=|| ( ruby_targets_ruby19 )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=4.0
 SRC_URI=http://github.com/rails/rails/archive/v4.0.0.tar.gz -> rails-4.0.0.tgz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	ruby-fakegem	6e366daedf25d7020291916549562bbf	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=4914cc01d109ed794037b19bff9154eb
+_md5_=d0876f4a8fd98b20436d56c1898c506a

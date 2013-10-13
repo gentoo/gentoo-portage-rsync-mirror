@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.59 2013/10/07 12:36:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.60 2013/10/13 22:07:25 maekke Exp $
+
+  13 Oct 2013; Markus Meier <maekke@gentoo.org> railties-4.0.0.ebuild:
+  add ~arm, bug #487206
 
 *railties-4.0.0 (07 Oct 2013)
 
