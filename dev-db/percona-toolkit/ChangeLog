@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/percona-toolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.5 2013/09/10 09:47:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.6 2013/10/12 23:38:34 idl0r Exp $
+
+*percona-toolkit-2.2.4 (12 Oct 2013)
+
+  12 Oct 2013; Christian Ruppert <idl0r@gentoo.org>
+  +percona-toolkit-2.2.4.ebuild:
+  Bump, bug 464872
 
 *percona-toolkit-2.1.7-r1 (10 Sep 2013)
 
