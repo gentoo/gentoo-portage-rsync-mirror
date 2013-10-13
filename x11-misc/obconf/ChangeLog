@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.110 2013/08/17 12:02:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.111 2013/10/13 18:25:23 hwoarang Exp $
+
+  13 Oct 2013; Markos Chandras <hwoarang@gentoo.org> obconf-2.0.4.ebuild:
+  Add ~mips
 
 *obconf-2.0.4 (17 Aug 2013)
 

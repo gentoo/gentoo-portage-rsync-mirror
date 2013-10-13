@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.4.ebuild,v 1.1 2013/08/17 12:02:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/obconf-2.0.4.ebuild,v 1.2 2013/10/13 18:25:23 hwoarang Exp $
 
 EAPI=5
 inherit fdo-mime
@@ -11,7 +11,7 @@ SRC_URI="http://openbox.org/dist/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="nls"
 
 RDEPEND="gnome-base/libglade:2.0
