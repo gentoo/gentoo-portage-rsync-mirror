@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.12.ebuild,v 1.1 2013/10/10 18:10:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.5.12.ebuild,v 1.2 2013/10/13 02:51:26 zerochaos Exp $
 
 EAPI="5"
 
@@ -24,11 +24,6 @@ src_prepare() {
 	# Don't build or install locate because it conflicts with slocate,
 	# which is a secure version of locate.  See bug 18729
 	sed -i '/^SUBDIRS/s/locate//' Makefile.in
-
-	if use prefix ; then #469206
-		cp tests/{rmdir,unlink,unlinkat,at-func}.c gl/lib/ || die
-		epatch "${FILESDIR}/${P}-unlinkat.patch"
-	fi
 }
 
 src_configure() {
