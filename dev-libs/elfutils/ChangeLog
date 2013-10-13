@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.169 2013/09/19 19:22:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.170 2013/10/13 19:57:05 mgorny Exp $
+
+  13 Oct 2013; Michał Górny <mgorny@gentoo.org> elfutils-0.155-r1.ebuild,
+  elfutils-0.156.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
 
   19 Sep 2013; Mike Frysinger <vapier@gentoo.org>
   +files/elfutils-0.156-nested-funcs.patch, elfutils-0.156.ebuild:

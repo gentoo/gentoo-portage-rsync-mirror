@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.155-r1.ebuild,v 1.1 2013/08/16 12:36:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.155-r1.ebuild,v 1.2 2013/10/13 19:57:05 mgorny Exp $
 
 EAPI="4"
 
@@ -66,6 +66,7 @@ multilib_src_test() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
 	dodoc NOTES
 	# These build quick, and are needed for most tests, so don't
 	# disable their building when the USE flag is disabled.
