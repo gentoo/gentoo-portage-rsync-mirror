@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.6 2013/10/13 11:16:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-9999.ebuild,v 1.7 2013/10/13 11:33:59 ryao Exp $
 
 EAPI=5
 
-inherit cmake-utils
+inherit cmake-utils multilib
 
 CMAKE_USE_DIR="${S}/cmake"
-PREFIX="/usr/bin"
 
 if [ ${PV} == "9999" ] ; then
 	inherit subversion
@@ -39,7 +38,14 @@ src_configure() {
 }
 
 src_install() {
+	dodir /usr
+	dodir "/usr/$(get_libdir)"
+	ln -s "${ED}/usr/$(get_libdir)" "${ED}usr/lib" || \
+		die "Cannot create temporary symlink from usr/lib to usr/$(get_libdir)"
+
 	cmake-utils_src_install
+
+	rm "${ED}usr/lib"
 
 	if [ -f "${ED}usr/bin/lz4c64" ]
 	then

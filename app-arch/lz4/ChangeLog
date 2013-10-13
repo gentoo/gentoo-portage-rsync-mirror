@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.6 2013/10/13 11:16:59 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.7 2013/10/13 11:33:59 ryao Exp $
+
+  13 Oct 2013; Richard Yao <ryao@gentoo.org> -lz4-0_p106.ebuild,
+  lz4-9999.ebuild:
+  Remove lz4-0_p106.ebuild pending a fix for incorrectly installed paths
 
 *lz4-0_p106 (13 Oct 2013)
 
