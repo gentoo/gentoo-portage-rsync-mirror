@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.3.ebuild,v 1.25 2013/09/01 14:38:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.3.ebuild,v 1.26 2013/10/13 21:10:09 tetromino Exp $
 
 EAPI="5"
 
@@ -102,12 +102,25 @@ DEPEND="${RDEPEND}
 	virtual/yacc
 	sys-devel/flex"
 
-src_unpack() {
-	if use win64 ; then
-		[[ $(( $(gcc-major-version) * 100 + $(gcc-minor-version) )) -lt 404 ]] \
-			&& die "you need gcc-4.4+ to build 64bit wine"
-	fi
+wine_build_environment_check() {
+	[[ ${MERGE_TYPE} = "binary" ]] && return 0
 
+	if use win64 && [[ $(( $(gcc-major-version) * 100 + $(gcc-minor-version) )) -lt 404 ]]; then
+		eerror "You need gcc-4.4+ to build 64-bit wine"
+		eerror
+		return 1
+	fi
+}
+
+pkg_pretend() {
+	wine_build_environment_check || die
+}
+
+pkg_setup() {
+	wine_build_environment_check || die
+}
+
+src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
 		git-2_src_unpack
 	else
