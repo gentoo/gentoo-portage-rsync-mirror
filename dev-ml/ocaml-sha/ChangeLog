@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocaml-sha
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sha/ChangeLog,v 1.4 2013/08/19 13:41:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sha/ChangeLog,v 1.5 2013/10/13 07:52:47 aballier Exp $
+
+*ocaml-sha-1.9 (13 Oct 2013)
+
+  13 Oct 2013; Alexis Ballier <aballier@gentoo.org> +ocaml-sha-1.9.ebuild:
+  version bump
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> ocaml-sha-1.8.ebuild:
   eapi5, define subslot and add := dep on ocaml packages

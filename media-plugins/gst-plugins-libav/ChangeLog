@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.32 2013/10/12 09:58:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libav/ChangeLog,v 1.33 2013/10/13 07:42:31 ago Exp $
+
+  13 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-libav-1.1.0_pre20130128-r1.ebuild:
+  Stable for ppc64, wrt bug #480908
 
   12 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-libav-1.1.0_pre20130128-r1.ebuild:

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15152 2013/10/12 20:18:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15153 2013/10/13 08:00:00 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,10 +40,6 @@
 # This meta is no longer needed, bug #480612
 # Removal in a month.
 >=gnome-extra/gnome-utils-3.4
-
-# Ulrich Mueller <ulm@gentoo.org> (12 Oct 2013)
-# mg cannot save files with some libcs, bug 487758.
-=app-editors/mg-20130922
 
 # Markos Chandras <hwoarang@gentoo.org> (10 Oct 2013)
 # Masked for futher testing with various pam setups

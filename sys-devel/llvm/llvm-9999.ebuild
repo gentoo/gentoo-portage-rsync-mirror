@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.55 2013/10/04 15:43:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.56 2013/10/13 07:44:58 mgorny Exp $
 
 EAPI=5
 
@@ -178,7 +178,9 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	local CONF_FLAGS="--enable-keep-symbols
+	# disable timestamps since they confuse ccache
+	local CONF_FLAGS="--disable-timestamps
+		--enable-keep-symbols
 		--enable-shared
 		--with-optimize-option=
 		$(use_enable !debug optimized)

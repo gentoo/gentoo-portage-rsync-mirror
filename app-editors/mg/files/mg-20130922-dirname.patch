@@ -1,9 +1,28 @@
-Fix dirname(3) call in writeout function.
+Fix dirname(3) call in readin and writeout functions.
 https://bugs.gentoo.org/487758
 
 --- mg-20130922-orig/file.c
 +++ mg-20130922/file.c
-@@ -669,11 +669,11 @@
+@@ -210,7 +210,7 @@
+ 	struct stat	 statbuf;
+ 	int	 status, i, ro = FALSE;
+ 	PF	*ael;
+-	char	*dp;
++	char	 ts[NFILEN], *dp;
+ 
+ 	/* might be old */
+ 	if (bclear(curbp) != TRUE)
+@@ -255,7 +255,8 @@
+ 		if (errno != ENOENT)
+ 			ro = TRUE;
+ 		else if (errno == ENOENT) {
+-			dp = dirname(fname);
++			(void)strlcpy(ts, fname, NFILEN);
++			dp = dirname(ts);
+ 			if (stat(dp, &statbuf) == -1 && errno == ENOENT) {
+ 				/* no read-only; like emacs */
+ 				ewprintf("Use M-x make-directory RET RET to "
+@@ -669,11 +670,11 @@
  {
  	struct stat	statbuf;
  	int	 s;

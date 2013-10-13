@@ -1,25 +1,22 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/linuxfromscratch-7.1.ebuild,v 1.4 2013/09/05 05:53:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/linuxfromscratch-7.4.ebuild,v 1.1 2013/10/13 07:45:03 dirtyepic Exp $
 
-EAPI="4"
+EAPI=5
 
 MY_SRC="http://www.linuxfromscratch.org/lfs/downloads/${PV}"
-
-BOOTSCRIPT_PV="20120229"
-UDEV_PV="20100128"
+BOOTSCRIPT_PV="20130821"
 
 DESCRIPTION="LFS documents building a Linux system entirely from source."
 HOMEPAGE="http://www.linuxfromscratch.org/lfs"
 SRC_URI="${MY_SRC}/LFS-BOOK-${PV}.tar.bz2
 		${MY_SRC}/lfs-bootscripts-${BOOTSCRIPT_PV}.tar.bz2
-		${MY_SRC}/udev-config-${UDEV_PV}.tar.bz2
-		htmlsingle? ( ${MY_SRC}/LFS-BOOK-${PV}-NOCHUNKS.html.bz2 )
+		htmlsingle? ( ${MY_SRC}/LFS-BOOK-${PV}-NOCHUNKS.html )
 		pdf? ( ${MY_SRC}/LFS-BOOK-${PV}.pdf )"
 
 LICENSE="CC-BY-NC-SA-2.5 MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="htmlsingle pdf"
 
 DEPEND=""
@@ -29,10 +26,9 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack LFS-BOOK-${PV}.tar.bz2 \
-		lfs-bootscripts-${BOOTSCRIPT_PV}.tar.bz2 \
-		udev-config-${UDEV_PV}.tar.bz2
+		lfs-bootscripts-${BOOTSCRIPT_PV}.tar.bz2
 
-	use htmlsingle && unpack LFS-BOOK-${PV}-NOCHUNKS.html.bz2
+	use htmlsingle && cp "${DISTDIR}"/LFS-BOOK-${PV}-NOCHUNKS.html "${S}"
 	use pdf && cp "${DISTDIR}"/LFS-BOOK-${PV}.pdf "${S}"
 }
 

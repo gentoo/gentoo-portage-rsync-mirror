@@ -1,13 +1,13 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.61 2013/10/13 07:12:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.62 2013/10/13 07:34:48 ulm Exp $
 
 *mg-20130922-r1 (13 Oct 2013)
 
   13 Oct 2013; Ulrich Müller <ulm@gentoo.org> -mg-20130922.ebuild,
   +mg-20130922-r1.ebuild, +files/mg-20130922-dirname.patch:
-  Fix dirname(3) call in writeout function, bug 487758. Thanks to Marien Zwart
-  <marienz@gentoo.org>.
+  Fix dirname(3) call in readin and writeout functions, bug 487758. Thanks to
+  Marien Zwart <marienz@gentoo.org>.
 
   09 Oct 2013; Ulrich Müller <ulm@gentoo.org> mg-20130922.ebuild:
   Specify CPPFLAGS not CFLAGS for preprocessor options. Add missing EPREFIX.
