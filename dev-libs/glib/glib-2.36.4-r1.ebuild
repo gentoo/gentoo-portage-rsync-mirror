@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.4-r1.ebuild,v 1.4 2013/09/29 10:39:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.36.4-r1.ebuild,v 1.5 2013/10/13 20:17:01 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -214,6 +214,8 @@ multilib_src_configure() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
+
 	if use utils ; then
 		python_replicate_script "${ED}"/usr/bin/gtester-report
 	else

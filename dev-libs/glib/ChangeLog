@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.578 2013/09/29 10:39:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.579 2013/10/13 20:17:01 mgorny Exp $
+
+  13 Oct 2013; Michał Górny <mgorny@gentoo.org> glib-2.36.4-r1.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
 
   29 Sep 2013; Pacho Ramos <pacho@gentoo.org> glib-2.36.4-r1.ebuild:
   Support compilation in clang until upstream solves this, upstream bug #691608
