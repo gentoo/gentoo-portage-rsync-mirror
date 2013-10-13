@@ -1,8 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/kraft-0.51.ebuild,v 1.1 2013/09/23 03:45:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kraft/kraft-0.53.ebuild,v 1.1 2013/10/13 21:37:44 johu Exp $
 
 EAPI=5
+
+KDE_LINGUAS="bg bs cs da de en_GB eo es et fi fr ga gl hu it ja lt mai mr nds
+nl pl pt pt_BR sk sv tr ug uk zh_CN"
 inherit kde4-base
 
 DESCRIPTION="Software for operating a small business, helping create documents such as offers and invoices"
@@ -12,12 +15,12 @@ SRC_URI="mirror://sourceforge/kraft/${P}.tar.bz2"
 SLOT="4"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="debug"
 
 DEPEND="
 	dev-cpp/ctemplate
+	dev-qt/qtsql:4[mysql,sqlite]
 	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)')
-	>=dev-qt/qtsql-${QT_MINIMAL}:4[mysql,sqlite]
 "
 RDEPEND="${DEPEND}"
 
