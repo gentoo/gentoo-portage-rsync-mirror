@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/klayout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.18 2013/10/13 18:35:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.19 2013/10/13 19:13:04 dilfridge Exp $
+
+*klayout-0.22.9 (13 Oct 2013)
+
+  13 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -klayout-0.22.8.ebuild, +klayout-0.22.9.ebuild:
+  Version bump; remove old
 
   13 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -klayout-0.20.2.ebuild, -files/klayout-0.20.2-Makefile.conf.linux-gentoo,

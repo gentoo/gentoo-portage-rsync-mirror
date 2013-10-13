@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/mingw64-runtime-3.0.0.ebuild,v 1.1 2013/09/30 08:16:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/mingw64-runtime-3.0.0.ebuild,v 1.2 2013/10/13 19:23:48 alonbl Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://sourceforge/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v$
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="crosscompile_opts_headers-only idl tools"
+IUSE="crosscompile_opts_headers-only idl"
 RESTRICT="strip"
 
 S="${WORKDIR}/mingw-w64-v${PV}"
@@ -45,10 +45,7 @@ src_configure() {
 	if just_headers; then
 		extra_conf+=( --without-crt )
 	else
-		extra_conf+=(
-			--with-crt
-			$(use_with tools)
-		)
+		extra_conf+=( --with-crt )
 	fi
 
 	case ${CTARGET} in

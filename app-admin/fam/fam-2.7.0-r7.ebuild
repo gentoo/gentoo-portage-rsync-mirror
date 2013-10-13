@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r7.ebuild,v 1.1 2013/08/01 01:28:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r7.ebuild,v 1.2 2013/10/13 19:25:54 mgorny Exp $
 
 EAPI=5
 inherit eutils autotools multilib-minimal
@@ -43,6 +43,7 @@ multilib_src_configure() {
 
 multilib_src_install_all() {
 	prune_libtool_files
+	einstalldocs
 
 	sed -i "${D}"/etc/fam.conf \
 		-e "s:local_only = false:local_only = true:g" \
