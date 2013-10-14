@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.119 2013/10/03 17:23:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.120 2013/10/14 19:10:13 hwoarang Exp $
+
+  14 Oct 2013; Markos Chandras <hwoarang@gentoo.org> qmmp-0.7.3.ebuild,
+  qmmp-9999.ebuild:
+  Add missing dev-qt/qtdbus dep for USE=mpris. Bug #487928
 
 *qmmp-0.7.3 (03 Oct 2013)
 

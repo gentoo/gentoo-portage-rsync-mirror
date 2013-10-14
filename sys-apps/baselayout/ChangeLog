@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.545 2013/07/27 22:56:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.546 2013/10/14 19:16:47 williamh Exp $
+
+  14 Oct 2013; William Hubbs <williamh@gentoo.org> -baselayout-2.1-r1.ebuild:
+  remove old version
 
   27 Jul 2013; William Hubbs <williamh@gentoo.org> baselayout-2.2.ebuild:
   drop pdepend on openrc for bug #409385 since it is now part of @system via

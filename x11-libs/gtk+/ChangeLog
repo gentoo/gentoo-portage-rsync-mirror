@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.679 2013/10/12 09:55:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.680 2013/10/14 19:17:25 pacho Exp $
+
+  14 Oct 2013; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.22.ebuild:
+  Drop unneeded gobject-introspection-common dep (#488026 by wojtek)
 
 *gtk+-2.24.22 (12 Oct 2013)
 
