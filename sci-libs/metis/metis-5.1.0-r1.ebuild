@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.1.0-r1.ebuild,v 1.1 2013/10/14 13:24:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.1.0-r1.ebuild,v 1.2 2013/10/14 13:50:38 jlec Exp $
 
 EAPI=5
 
@@ -21,14 +21,17 @@ RDEPEND="${DEPEND}
 
 DOCS=( manual/manual.pdf )
 
+PATCHES=(
+	"${FILESDIR}"/${P}-datatype.patch
+	"${FILESDIR}"/${P}-shared-GKlib.patch
+	"${FILESDIR}"/${P}-multilib.patch
+	)
+
 src_prepare() {
 	sed \
 		-e 's:-O3::g' \
 		-i GKlib/GKlibSystem.cmake || die
 
-	sed \
-		-e "s:lib$:$(get_libdir):g" \
-		-i libmetis/CMakeLists.txt || die
 	cmake-utils_src_prepare
 }
 
@@ -39,6 +42,15 @@ src_configure() {
 		$(cmake-utils_use openmp)
 	)
 	cmake-utils_src_configure
+}
+
+src_test() {
+	cd graphs || die
+	PATH="${BUILD_DIR}"/programs/:${PATH} LD_LIBRARY_PATH="${BUILD_DIR}"/lib ndmetis mdual.graph || die
+	PATH="${BUILD_DIR}"/programs/:${PATH} LD_LIBRARY_PATH="${BUILD_DIR}"/lib mpmetis metis.mesh 2 || die
+	PATH="${BUILD_DIR}"/programs/:${PATH} LD_LIBRARY_PATH="${BUILD_DIR}"/lib gpmetis test.mgraph 4 || die
+	PATH="${BUILD_DIR}"/programs/:${PATH} LD_LIBRARY_PATH="${BUILD_DIR}"/lib gpmetis copter2.graph 4 || die
+	PATH="${BUILD_DIR}"/programs/:${PATH} LD_LIBRARY_PATH="${BUILD_DIR}"/lib graphchk 4elt.graph || die
 }
 
 src_install() {

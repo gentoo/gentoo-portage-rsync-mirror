@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8302 2013/10/14 12:44:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8303 2013/10/14 13:33:19 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Oct 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  Mask metis-5 due to API change
 
   14 Oct 2013; Justin Lecher <jlec@gentoo.org> use.desc:
   fortran is a known language today, so we don't need toreference to f77
