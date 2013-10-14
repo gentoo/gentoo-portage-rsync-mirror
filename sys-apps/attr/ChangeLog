@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.158 2013/09/05 09:49:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.159 2013/10/14 18:20:05 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> attr-2.4.47-r1.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
 
   05 Sep 2013; Mike Frysinger <vapier@gentoo.org> attr-2.4.46-r2.ebuild:
   Mark m68k/sh stable #470570.

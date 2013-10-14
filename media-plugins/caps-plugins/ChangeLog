@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/caps-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.38 2013/08/26 17:14:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/ChangeLog,v 1.40 2013/10/14 18:07:20 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> caps-plugins-0.4.5-r2.ebuild:
+  Fix mistaken debug commit.
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> caps-plugins-0.4.5-r2.ebuild,
+  caps-plugins-0.9.10.ebuild, caps-plugins-0.9.15.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
 
 *caps-plugins-0.9.15 (26 Aug 2013)
 

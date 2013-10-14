@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.294 2013/08/07 13:24:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.295 2013/10/14 18:14:16 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> mpg123-1.15.4-r1.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> mpg123-1.15.4.ebuild:
   Stable for x86, wrt bug #477588

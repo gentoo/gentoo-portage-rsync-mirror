@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.24 2013/08/26 21:20:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxx/libcxx-9999.ebuild,v 1.25 2013/10/14 18:21:00 mgorny Exp $
 
 EAPI=5
 
@@ -154,6 +154,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
 	insinto /usr/include/c++/v1
 	doins -r include/*
 }

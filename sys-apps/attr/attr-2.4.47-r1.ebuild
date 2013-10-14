@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.47-r1.ebuild,v 1.2 2013/08/10 17:20:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.47-r1.ebuild,v 1.3 2013/10/14 18:20:05 mgorny Exp $
 
 EAPI="4"
 
@@ -59,7 +59,8 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	use static-libs || find "${ED}" -name '*.la' -delete
+	use static-libs || prune_libtool_files --all
+	einstalldocs
 	# the man-pages packages provides the man2 files
 	rm -r "${ED}"/usr/share/man/man2 || die
 }

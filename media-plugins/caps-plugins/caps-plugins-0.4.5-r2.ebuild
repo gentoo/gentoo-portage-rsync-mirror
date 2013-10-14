@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.4.5-r2.ebuild,v 1.1 2013/06/27 15:00:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.4.5-r2.ebuild,v 1.3 2013/10/14 18:07:20 mgorny Exp $
 
 EAPI=5
 
@@ -42,6 +42,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
 	insinto /usr/share/ladspa/rdf
 	insopts -m0644
 	doins *.rdf

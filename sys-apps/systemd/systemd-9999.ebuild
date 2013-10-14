@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.68 2013/10/13 20:15:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.69 2013/10/14 18:17:39 mgorny Exp $
 
 EAPI=5
 
@@ -269,6 +269,7 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	prune_libtool_files --modules
+	einstalldocs
 
 	# we just keep sysvinit tools, so no need for the mans
 	rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \

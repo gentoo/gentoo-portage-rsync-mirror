@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.24.ebuild,v 1.1 2013/08/14 19:48:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.24.ebuild,v 1.2 2013/10/14 18:17:31 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -49,4 +49,5 @@ multilib_src_configure() {
 
 multilib_src_install_all() {
 	prune_libtool_files
+	einstalldocs
 }

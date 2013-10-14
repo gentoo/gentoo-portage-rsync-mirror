@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dirac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/ChangeLog,v 1.43 2013/08/12 15:38:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/ChangeLog,v 1.44 2013/10/14 18:16:32 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> dirac-1.0.2-r1.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
 
 *dirac-1.0.2-r1 (12 Aug 2013)
 
@@ -155,4 +159,3 @@
   First addition to portage, needed to build dirac codec support on VLC. Added
   patch to make documentation compilation optional. It uses cppunit if present
   to do unit testing, but it has its own testsuite also if it's not present.
-

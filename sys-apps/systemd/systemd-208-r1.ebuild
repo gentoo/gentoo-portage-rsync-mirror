@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-208-r1.ebuild,v 1.2 2013/10/02 12:52:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-208-r1.ebuild,v 1.3 2013/10/14 18:17:39 mgorny Exp $
 
 EAPI=5
 
@@ -245,6 +245,7 @@ multilib_src_install() {
 
 multilib_src_install_all() {
 	prune_libtool_files --modules
+	einstalldocs
 
 	# we just keep sysvinit tools, so no need for the mans
 	rm "${D}"/usr/share/man/man8/{halt,poweroff,reboot,runlevel,shutdown,telinit}.8 \

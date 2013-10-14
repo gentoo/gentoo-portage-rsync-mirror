@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.2-r1.ebuild,v 1.1 2013/08/12 15:38:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.2-r1.ebuild,v 1.2 2013/10/14 18:16:32 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils multilib-minimal
@@ -52,5 +52,6 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	find "${ED}"usr -name '*.la' -exec rm -f {} +
+	prune_libtool_files --all
+	einstalldocs
 }

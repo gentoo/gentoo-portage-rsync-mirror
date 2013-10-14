@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.9 2013/08/26 21:19:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.10 2013/10/14 18:21:46 mgorny Exp $
 
 EAPI=5
 
@@ -65,6 +65,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
 	insinto /usr/include/libcxxrt/
 	doins src/cxxabi.h src/unwind*.h
 }

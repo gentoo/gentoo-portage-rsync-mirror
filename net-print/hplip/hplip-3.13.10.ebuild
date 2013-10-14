@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.9.ebuild,v 1.2 2013/10/14 18:16:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.10.ebuild,v 1.1 2013/10/14 18:30:49 billie Exp $
 
 EAPI=5
 
@@ -12,11 +12,11 @@ inherit eutils fdo-mime linux-info python-single-r1 udev autotools toolchain-fun
 DESCRIPTION="HP Linux Imaging and Printing. Includes printer, scanner, fax drivers and service tools."
 HOMEPAGE="http://hplipopensource.com/hplip-web/index.html"
 SRC_URI="mirror://sourceforge/hplip/${P}.tar.gz
-		http://dev.gentoo.org/~billie/distfiles/${PN}-3.13.9-patches-1.tar.xz"
+		http://dev.gentoo.org/~billie/distfiles/${PN}-3.13.10-patches-1.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 # zeroconf does not work properly with >=cups-1.4.
 # Thus support for it is also disabled in hplip.
@@ -246,17 +246,6 @@ src_install() {
 	if use !minimal ; then
 		python_export EPYTHON PYTHON
 		python_optimize "${D}"/usr/share/hplip
-	fi
-}
-
-pkg_preinst() {
-	# remove temporary directory so it is recreated with correct permissions
-	# this ensures correct permissions when upgrading from vulnerable versions
-	# remove this after some time
-	# Gentoo bug: https://bugs.gentoo.org/show_bug.cgi?id=452586
-	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/1016507
-	if [[ $(stat -c '%A' /var/lib/hp/) =~ w.$ ]] ; then
-		rm -rf "${ROOT%/}/var/log/hp"
 	fi
 }
 

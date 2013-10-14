@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-xmlbuilder/java-xmlbuilder-0.6.ebuild,v 1.1 2013/10/14 17:40:27 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-xmlbuilder/java-xmlbuilder-0.6-r1.ebuild,v 1.1 2013/10/14 18:03:36 ercpe Exp $
 
 EAPI=5
 
-JAVA_PKG_IUSE="doc source"
+JAVA_PKG_IUSE="doc source test"
 
 inherit java-pkg-2 java-pkg-simple
 
@@ -21,12 +21,17 @@ CDEPEND="dev-java/base64:0"
 RDEPEND=">=virtual/jre-1.5
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.5
-	${CDEPEND}"
+	${CDEPEND}
+	test? ( dev-java/junit:0 )
+"
 
 S="${WORKDIR}/${P}"
 JAVA_SRC_DIR="src/main/java"
 JAVA_GENTOO_CLASSPATH="base64"
 
 src_test() {
-	die
+	mkdir target/tests || die
+	testcp="$(java-pkg_getjars ${JAVA_GENTOO_CLASSPATH},junit):target/tests:${S}/${PN}.jar"
+	ejavac -cp "${testcp}" -d target/tests src/test/java/com/jamesmurty/utils/TestXmlBuilder.java
+	ejunit4 -cp "${testcp}" com.jamesmurty.utils.TestXmlBuilder
 }
