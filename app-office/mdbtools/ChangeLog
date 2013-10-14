@@ -1,6 +1,13 @@
 # ChangeLog for app-office/mdbtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.59 2013/05/28 12:14:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/ChangeLog,v 1.60 2013/10/14 13:30:15 pinkbyte Exp $
+
+*mdbtools-0.7.1 (14 Oct 2013)
+
+  14 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> mdbtools-0.7.ebuild,
+  +mdbtools-0.7.1.ebuild, +files/mdbtools-0.7.1-parallel-make.patch:
+  Version bump, wrt bug #487866. Add parallel make fixes, wrt bug #486434,
+  thanks to Chris Kerr <gingekerr AT yahoo.co.uk>
 
 *mdbtools-0.7 (28 May 2013)
 
