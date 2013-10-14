@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sloccount
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.29 2013/07/04 12:25:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.30 2013/10/14 09:32:29 patrick Exp $
+
+*sloccount-2.26-r3 (14 Oct 2013)
+
+  14 Oct 2013; Patrick Lauer <patrick@gentoo.org>
+  +files/sloccount-2.26-gentoo.patch, +sloccount-2.26-r3.ebuild:
+  Add support for gentoo file formats (ebuild,initscripts)
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> sloccount-2.26-r2.ebuild:
   Stable for x86, wrt bug #472770
