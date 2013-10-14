@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.3.ebuild,v 1.1 2013/10/09 20:37:48 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.10.3.ebuild,v 1.2 2013/10/14 21:51:13 dilfridge Exp $
 
 EAPI=5
 
@@ -31,11 +31,11 @@ CDEPEND="
 	>=dev-libs/soprano-2.6.51
 	x11-misc/shared-mime-info
 	qt4? (
-		>=dev-qt/qtcore-4.5.0:4
-		>=dev-qt/qtdbus-4.5.0:4
-		>=dev-qt/qtgui-4.5.0:4
-		>=dev-qt/qtsql-4.5.0:4[mysql?,postgres?]
-		>=dev-qt/qttest-4.5.0:4
+		>=dev-qt/qtcore-4.8.5:4
+		>=dev-qt/qtdbus-4.8.5:4
+		>=dev-qt/qtgui-4.8.5:4
+		>=dev-qt/qtsql-4.8.5:4[mysql?,postgres?]
+		>=dev-qt/qttest-4.8.5:4
 	)
 	qt5? (
 		>=dev-libs/soprano-2.6.51[-qt4,qt5]
