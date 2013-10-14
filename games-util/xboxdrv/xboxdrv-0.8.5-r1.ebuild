@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/xboxdrv-0.8.5-r1.ebuild,v 1.3 2013/07/27 22:23:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/xboxdrv-0.8.5-r1.ebuild,v 1.4 2013/10/14 22:08:04 tristan Exp $
 
 EAPI=5
 inherit base linux-info scons-utils toolchain-funcs
@@ -27,11 +27,14 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 CONFIG_CHECK="~INPUT_EVDEV ~INPUT_JOYDEV ~INPUT_UINPUT ~!JOYSTICK_XPAD"
+PATCHES=( "${FILESDIR}"/${P}-scons.patch )
 
 src_compile() {
 	escons \
 		BUILD=custom \
 		CXX="$(tc-getCXX)" \
+		AR="$(tc-getAR)" \
+		RANLIB="$(tc-getRANLIB)" \
 		CXXFLAGS="-Wall ${CXXFLAGS}" \
 		LINKFLAGS="${LDFLAGS}"
 }
