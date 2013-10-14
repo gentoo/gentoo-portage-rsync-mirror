@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0_rc3.ebuild,v 1.1 2013/09/13 14:08:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0.ebuild,v 1.1 2013/10/14 08:00:42 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -10,7 +10,7 @@ inherit python-r1 waf-utils multilib linux-info systemd
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="mirror://samba/rc/${MY_P}.tar.gz"
+SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
 KEYWORDS="~amd64 ~hppa ~x86"
 
 DESCRIPTION="Samba Suite Version 4"
