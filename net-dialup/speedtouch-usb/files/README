@@ -218,11 +218,9 @@ contacted, then check that /etc/resolv.conf is populated, and possibly
 add the "usepeerdns" option (to use the ISP's DNS) to pppd_ppp0 in
 /etc/conf.d/net .
 
-If the problem is still not resolved, then describe the problem in the
-"discussion and bugs" tab at:
-  http://gentoo-wiki.com/HOWTO_Speedtouch_modem
-Or post to the Gentoo Forums at http://forums.gentoo.org/ - ultimately,
-if there is no answer, then file a bug at http://bugs.gentoo.org/ .
+If the problem is still not resolved, post to the Gentoo Forums
+at http://forums.gentoo.org/. If there is no answer, then
+file a bug at http://bugs.gentoo.org/ .
 
 
 Compression
@@ -250,7 +248,6 @@ it does not indicate that the connection is compressed.
 Links
 =====
 
-Gentoo wiki:          http://gentoo-wiki.com/HOWTO_Speedtouch_modem
 SpeedTouch ebuilds:   http://packages.gentoo.org/search/?sstring=speedtouch
 SpeedTouch hardware:  http://www.speedtouch.com/support.htm
 SpeedTouch firmware:  http://www.speedtouch.com/driver_upgrade_lx_3.0.1.2.htm

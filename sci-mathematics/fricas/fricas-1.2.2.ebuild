@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.2.0.ebuild,v 1.2 2013/04/30 16:22:04 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fricas/fricas-1.2.2.ebuild,v 1.1 2013/10/14 11:07:21 grozin Exp $
 EAPI=5
-inherit eutils multilib elisp-common autotools
+inherit multilib elisp-common
 
 DESCRIPTION="FriCAS is a fork of Axiom computer algebra system"
 HOMEPAGE="http://${PN}.sourceforge.net/"
@@ -37,11 +37,6 @@ DEPEND="${RDEPEND}"
 
 # necessary for clisp and gcl
 RESTRICT="strip"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-noinit.patch
-	eautoreconf
-}
 
 src_configure() {
 	local LISP n
