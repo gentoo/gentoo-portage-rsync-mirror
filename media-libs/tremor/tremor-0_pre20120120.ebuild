@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/tremor-0_pre20120120.ebuild,v 1.13 2013/02/23 10:21:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tremor/tremor-0_pre20120120.ebuild,v 1.14 2013/10/14 05:59:26 ago Exp $
 
 # svn export http://svn.xiph.org/trunk/Tremor tremor-${PV}
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 sparc x86 ~amd64-fbsd"
+KEYWORDS="amd64 arm hppa ppc ppc64 sparc x86 ~amd64-fbsd"
 IUSE="static-libs"
 
 RDEPEND="media-libs/libogg"
