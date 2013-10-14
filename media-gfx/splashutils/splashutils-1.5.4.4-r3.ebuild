@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r3.ebuild,v 1.3 2013/06/16 17:35:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.4-r3.ebuild,v 1.4 2013/10/14 12:52:34 pinkbyte Exp $
 
 EAPI=5
 inherit autotools eutils multilib toolchain-funcs
@@ -51,7 +51,7 @@ RDEPEND="
 		media-libs/lcms:0[static-libs]
 		media-libs/libmng[static-libs(+)]
 	)
-	virtual/jpeg[static-libs]
+	virtual/jpeg:0[static-libs]
 	>=sys-apps/baselayout-1.9.4-r5
 	app-arch/cpio
 	media-gfx/fbgrab
