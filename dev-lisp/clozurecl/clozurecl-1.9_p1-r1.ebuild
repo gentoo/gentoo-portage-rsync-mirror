@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/clozurecl-1.9_p1.ebuild,v 1.1 2013/04/20 14:37:10 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clozurecl/clozurecl-1.9_p1-r1.ebuild,v 1.1 2013/10/14 10:48:32 grozin Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -46,8 +46,8 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -C lisp-kernel/${CCL_KERNEL} clean || die
-	emake -C lisp-kernel/${CCL_KERNEL} all CC="$(tc-getCC)" || die
+	emake -C lisp-kernel/${CCL_KERNEL} clean
+	emake -C lisp-kernel/${CCL_KERNEL} all CC="$(tc-getCC)"
 
 	unset CCL_DEFAULT_DIRECTORY
 	./${CCL_RUNTIME} -n -b -Q -e '(ccl:rebuild-ccl :full t)' -e '(ccl:quit)' || die "Compilation failed"
@@ -76,7 +76,7 @@ src_install() {
 	find . -type f -name '*fsl' -delete
 	rm -f lisp-kernel/${CCL_KERNEL}/*.o
 	cp -a compiler level-0 level-1 lib library \
-		lisp-kernel scripts tools xdump \
+		lisp-kernel scripts tools xdump contrib \
 		"${D}"/${install_dir} || die
 	cp -a ${CCL_HEADERS} "${D}"/${install_dir} || die
 
