@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-evdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.211 2013/10/08 05:05:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-evdev/ChangeLog,v 1.212 2013/10/13 23:22:45 chithanh Exp $
+
+*xf86-input-evdev-2.8.2 (13 Oct 2013)
+
+  13 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-input-evdev-2.8.2.ebuild, -xf86-input-evdev-2.6.0.ebuild,
+  -xf86-input-evdev-2.7.3-r1.ebuild, -xf86-input-evdev-2.8.0.ebuild:
+  Version bump. Remove some old versions.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xf86-input-evdev-2.8.1.ebuild:
   Stable for x86, wrt bug #475480

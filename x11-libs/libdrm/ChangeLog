@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.244 2013/10/08 05:07:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.245 2013/10/13 23:29:30 chithanh Exp $
+
+*libdrm-2.4.47 (13 Oct 2013)
+
+  13 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +libdrm-2.4.47.ebuild:
+  Version bump.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libdrm-2.4.46.ebuild:
   Stable for x86, wrt bug #475480
