@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.615 2013/10/14 18:10:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.616 2013/10/14 18:38:57 graaff Exp $
+
+*ruby-2.0.0_p247-r2 (14 Oct 2013)
+
+  14 Oct 2013; Hans de Graaff <graaff@gentoo.org> +ruby-2.0.0_p247-r2.ebuild:
+  Remove USE=yaml since the libyaml dependency is no longer optional in Ruby
+  2.x. Fixes bug 483466.
 
   14 Oct 2013; Hans de Graaff <graaff@gentoo.org> -ruby-1.8.7_p371.ebuild,
   -ruby-1.9.3_p429.ebuild:
