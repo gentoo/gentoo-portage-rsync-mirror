@@ -1,6 +1,16 @@
 # ChangeLog for app-office/abiword
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.262 2012/08/05 21:44:50 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.264 2013/10/14 21:00:55 pacho Exp $
+
+  14 Oct 2013; Pacho Ramos <pacho@gentoo.org> abiword-3.0.0.ebuild,
+  metadata.xml:
+  Move from 'gnome' to 'goffice' (#416829 by Maxim Kammerer)
+
+*abiword-3.0.0 (14 Oct 2013)
+
+  14 Oct 2013; Pacho Ramos <pacho@gentoo.org> +abiword-3.0.0.ebuild,
+  +files/abiword-3.0.0-eds-3.6.patch, metadata.xml:
+  Version bump
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> abiword-2.8.6-r2.ebuild:
   Keyword ~arm

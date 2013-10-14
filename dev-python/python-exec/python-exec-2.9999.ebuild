@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-2.9999.ebuild,v 1.3 2013/10/07 02:56:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-2.9999.ebuild,v 1.4 2013/10/14 21:01:04 mgorny Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
 EGIT_BRANCH="python-exec2"
 
-inherit git-2
+inherit git-r3
 #endif
 
 # Kids, don't do this at home!

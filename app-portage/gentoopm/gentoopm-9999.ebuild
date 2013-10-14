@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-9999.ebuild,v 1.6 2013/09/05 18:24:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-9999.ebuild,v 1.7 2013/10/14 20:34:13 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -11,7 +11,7 @@ inherit distutils-r1
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git
 	http://git.overlays.gentoo.org/gitroot/proj/${PN}.git
 	http://bitbucket.org/mgorny/${PN}.git"
-inherit git-2
+inherit git-r3
 #endif
 
 DESCRIPTION="A common interface to Gentoo package managers"
@@ -38,16 +38,17 @@ SRC_URI=
 python_compile_all() {
 	if use doc; then
 		python_export_best
-		"${PYTHON}" setup.py doc || die
+		python_wrapper_setup
+		esetup.py doc
 	fi
 }
 
 python_test() {
-	"${PYTHON}" setup.py test || die
+	esetup.py test
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=( doc/* )
+	use doc && local HTML_DOCS=( doc/. )
 
 	distutils-r1_python_install_all
 }

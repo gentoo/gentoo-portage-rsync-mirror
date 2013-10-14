@@ -1,6 +1,13 @@
 # ChangeLog for app-office/abiword-docs
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-docs/ChangeLog,v 1.3 2011/07/23 15:31:28 tomka Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-docs/ChangeLog,v 1.4 2013/10/14 20:57:26 pacho Exp $
+
+*abiword-docs-3.0.0 (14 Oct 2013)
+
+  14 Oct 2013; Pacho Ramos <pacho@gentoo.org> +abiword-docs-3.0.0.ebuild,
+  +files/abiword-docs-3.0.0-doc1.patch, +files/abiword-docs-3.0.0-doc2.patch,
+  +files/abiword-docs-3.0.0-doc3.patch:
+  Version bump
 
   23 Jul 2011; Thomas Kahle <tomka@gentoo.org> abiword-docs-2.8.6.ebuild:
   ~x86 per bug 372185
@@ -14,4 +21,3 @@
   +metadata.xml:
   Add abiword-docs package that was splitted from abiword sometime ago by
   upstream. This also fixes that old bug #149765 (by Benno Schulenberg).
-

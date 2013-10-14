@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/cantata-1.0.3.ebuild,v 1.2 2013/06/14 23:23:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/cantata-1.1.3.ebuild,v 1.1 2013/10/14 20:52:14 johu Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
+KDE_LINGUAS="cs de en_GB es ko pl ru zh_CN"
 inherit kde4-base
 
 DESCRIPTION="A featureful and configurable Qt4 client for the music player daemon (MPD)"
@@ -26,8 +27,11 @@ REQUIRED_USE="
 "
 
 DEPEND="
+	cddb? ( media-libs/libcddb )
+	cdparanoia? ( media-sound/cdparanoia )
 	lame? ( media-sound/lame )
 	mtp? ( media-libs/libmtp )
+	musicbrainz? ( media-libs/musicbrainz:5 )
 	phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
 	qt5? (
 		dev-qt/qtconcurrent:5
@@ -52,23 +56,16 @@ DEPEND="
 	)
 	dev-libs/qjson
 	sys-libs/zlib
+	x11-libs/libX11
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep oxygen-icons)
 "
 
-PATCHES=(
-	"${FILESDIR}/${P}-audiocd-automagic.patch"
-	"${FILESDIR}/${P}-system-qjson.patch"
-)
-
 src_prepare() {
 	kde4-base_src_prepare
 
 	rm -rf 3rdparty/qjson/
-
-	# make desktop file pass validation
-	sed -e 's/MPD/MPD;/' -i ${PN}.desktop || die
 }
 
 src_configure() {

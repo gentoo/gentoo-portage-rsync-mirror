@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyh2o
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyh2o/ChangeLog,v 1.5 2013/09/05 18:46:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyh2o/ChangeLog,v 1.6 2013/10/14 20:57:21 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> pyh2o-9999.ebuild:
+  Switch to git-r3.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pyh2o-9999.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
