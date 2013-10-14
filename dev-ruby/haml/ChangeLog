@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.89 2013/10/07 06:26:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.90 2013/10/14 06:21:09 graaff Exp $
+
+  14 Oct 2013; Hans de Graaff <graaff@gentoo.org> haml-4.0.3.ebuild:
+  Use a version of minitest that is compatible with Rails 4.
 
 *haml-3.1.8-r2 (07 Oct 2013)
 

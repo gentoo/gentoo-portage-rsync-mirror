@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-4.0.3.ebuild,v 1.2 2013/10/07 06:26:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-4.0.3.ebuild,v 1.3 2013/10/14 06:21:09 graaff Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ ruby_add_rdepend "dev-ruby/tilt"
 
 ruby_add_bdepend "
 	test? (
-		dev-ruby/minitest
+		dev-ruby/minitest:0
 		dev-ruby/nokogiri
 		dev-ruby/rails
 	)
@@ -39,5 +39,7 @@ ruby_add_bdepend "
 	)"
 
 all_ruby_prepare() {
-	sed -i -e '/bundler/ s:^:#:' test/test_helper.rb || die
+	sed -i -e '/bundler/ s:^:#:' \
+		-e 's/gem "minitest"/gem "minitest", "~>4.0"/' \
+		test/test_helper.rb || die
 }
