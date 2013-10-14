@@ -1,6 +1,16 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.73 2013/10/09 18:58:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.76 2013/10/14 12:31:05 pinkbyte Exp $
+
+  14 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> linphone-3.4.3-r1.ebuild:
+  Adjust media-libs/mediastreamer dependency, wrt bug #477996
+
+  14 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> linphone-3.5.2.ebuild:
+  Stable on amd64 and x86, wrt bug #486490
+
+  14 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> -linphone-3.4.3.ebuild,
+  linphone-3.4.3-r1.ebuild:
+  Stable keyword for pcc was forgotten, bug #363311. Drop old revision
 
 *linphone-3.6.1 (09 Oct 2013)
 

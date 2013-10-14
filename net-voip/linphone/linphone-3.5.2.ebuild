@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.5.2.ebuild,v 1.4 2013/10/09 17:42:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.5.2.ebuild,v 1.5 2013/10/14 12:27:50 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://nongnu/${PN}/$(get_version_component_range 1-2).x/sources/${P}
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 # TODO: run-time test for ipv6: does it need mediastreamer[ipv6]?
 IUSE="doc gsm-nonstandard gtk ipv6 ncurses nls ssl video"
 
