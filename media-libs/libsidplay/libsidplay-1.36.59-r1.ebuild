@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.59-r1.ebuild,v 1.1 2013/07/31 17:34:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-1.36.59-r1.ebuild,v 1.2 2013/10/14 17:44:02 mgorny Exp $
 
 EAPI=4
 inherit eutils libtool multilib-minimal
@@ -29,5 +29,6 @@ multilib_src_configure() {
 }
 
 multilib_src_install_all() {
-	rm -f "${ED}"/usr/lib*/${PN}.la
+	prune_libtool_files --all
+	einstalldocs
 }

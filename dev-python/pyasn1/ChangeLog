@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyasn1
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.61 2013/10/13 08:49:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/ChangeLog,v 1.62 2013/10/14 17:55:50 chainsaw Exp $
+
+  14 Oct 2013; Tony Vroon <chainsaw@gentoo.org> pyasn1-0.1.7.ebuild:
+  Marked stable on AMD64 based on arch tester report by Elijah "Armageddon" El
+  Lazkani in bug #474194.
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> pyasn1-0.1.7.ebuild:
   Also compatible with python3_3

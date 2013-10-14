@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1-r1.ebuild,v 1.2 2013/07/02 22:08:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1.1-r1.ebuild,v 1.3 2013/10/14 17:47:48 mgorny Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib-minimal
@@ -77,11 +77,12 @@ multilib_src_install() {
 			newbin examples/.libs/${bin} theora_${bin}
 		done
 	fi
-
-	prune_libtool_files
 }
 
 multilib_src_install_all() {
+	prune_libtool_files
+	einstalldocs
+
 	if use examples && use doc; then
 		docinto examples
 		dodoc examples/*.[ch]

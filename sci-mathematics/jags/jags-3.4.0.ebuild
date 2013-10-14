@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-3.4.0.ebuild,v 1.1 2013/09/04 19:03:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-3.4.0.ebuild,v 1.2 2013/10/14 17:49:20 chainsaw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 IUSE="doc"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	virtual/blas
@@ -43,5 +43,5 @@ src_compile() {
 
 src_install() {
 	autotools-utils_src_install
-	use doc && dodoc ${BUILD_DIR}/doc/manual/*.pdf
+	use doc && dodoc "${BUILD_DIR}"/doc/manual/*.pdf
 }

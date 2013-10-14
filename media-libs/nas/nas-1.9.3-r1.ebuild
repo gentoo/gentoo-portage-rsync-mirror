@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.3-r1.ebuild,v 1.1 2013/08/22 13:26:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.9.3-r1.ebuild,v 1.2 2013/10/14 17:54:48 mgorny Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs multilib-minimal
@@ -82,6 +82,7 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
+	einstalldocs
 	if use doc; then
 		docinto doc
 		dodoc doc/{actions,protocol.txt,README}

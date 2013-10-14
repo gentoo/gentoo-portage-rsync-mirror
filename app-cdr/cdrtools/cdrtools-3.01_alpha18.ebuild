@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha17-r1.ebuild,v 1.1 2013/10/12 08:46:59 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha18.ebuild,v 1.1 2013/10/14 17:43:12 billie Exp $
 
 EAPI=5
 
@@ -70,7 +70,7 @@ src_prepare() {
 
 	# Create additional symlinks needed for some archs (armv4l already created)
 	local t
-	for t in armv4tl armv5tel armv7l ppc64 s390x; do
+	for t in armv4tl armv5tel armv7l s390x; do
 		ln -s i586-linux-cc.rul ${t}-linux-cc.rul || die
 		ln -s i586-linux-gcc.rul ${t}-linux-gcc.rul || die
 	done
@@ -85,9 +85,6 @@ src_prepare() {
 		-e "s:/usr/src/linux/include::g" \
 		-e "s:bin:root:g" \
 		Defaults.${os} || die "sed Schily make setup"
-
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-capabilities.patch"
 }
 
 # skip obsolete configure script

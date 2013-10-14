@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.162 2013/09/05 18:46:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.163 2013/10/14 18:01:04 chainsaw Exp $
+
+  14 Oct 2013; Tony Vroon <chainsaw@gentoo.org> psycopg-2.5.1.ebuild:
+  Marked stable on AMD64 based on arch tester report by Elijah "Armageddon" El
+  Lazkani in bug #487872.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> psycopg-1.1.21-r1.ebuild,
   psycopg-2.4.6-r1.ebuild, psycopg-2.4.6-r2.ebuild, psycopg-2.5.1.ebuild,
