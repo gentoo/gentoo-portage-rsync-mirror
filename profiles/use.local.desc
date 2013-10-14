@@ -345,10 +345,10 @@ app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
 app-doc/linuxfromscratch:htmlsingle - Install all-on-one-page HTML version.
 app-doc/pms:binary - Download pre-built files instead of building from sources
 app-doc/pms:html - Generate PMS as .html as well
-app-doc/tldp-howto:html - Install the docs in multipage HTML format (default)
-app-doc/tldp-howto:htmlsingle - Install the docs in single page HTML format
-app-doc/tldp-howto:pdf - Install the docs in pdf format
-app-doc/tldp-howto:text - Install the docs in plain text format
+app-doc/tldp-howto:html - Install multi-chapter HTML docs
+app-doc/tldp-howto:htmlsingle - Install all-on-one-page HTML docs
+app-doc/tldp-howto:pdf - Install pdf docs
+app-doc/tldp-howto:text - Install plain-text docs
 app-editors/emacs:athena - Enable the MIT Athena widget set (x11-libs/libXaw)
 app-editors/emacs:games - Support shared score files for games
 app-editors/emacs:gconf - Use gnome-base/gconf to read the system font name

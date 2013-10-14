@@ -3,9 +3,9 @@
 <pkgmetadata>
 	<herd>app-doc</herd>
 	<use>
-		<flag name='html'>Install the docs in multipage HTML format (default)</flag>
-		<flag name='htmlsingle'>Install the docs in single page HTML format</flag>
-		<flag name='pdf'>Install the docs in pdf format</flag>
-		<flag name='text'>Install the docs in plain text format</flag>
+		<flag name='html'>Install multi-chapter HTML docs</flag>
+		<flag name='htmlsingle'>Install all-on-one-page HTML docs</flag>
+		<flag name='pdf'>Install pdf docs</flag>
+		<flag name='text'>Install plain-text docs</flag>
 	</use>
 </pkgmetadata>
