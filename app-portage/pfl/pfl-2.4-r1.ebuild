@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.4.ebuild,v 1.1 2013/10/06 16:51:01 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.4-r1.ebuild,v 1.1 2013/10/14 19:39:28 billie Exp $
 
 EAPI=5
 
@@ -24,7 +24,8 @@ RDEPEND="${DEPEND}
 	sys-apps/portage"
 
 src_prepare() {
-	epatch "${FILESDIR}"/e-file-20110906-portageq.patch
+	epatch "${FILESDIR}"/e-file-20110906-http-response.patch \
+		"${FILESDIR}"/e-file-20110906-portageq.patch
 }
 
 python_install_all() {
