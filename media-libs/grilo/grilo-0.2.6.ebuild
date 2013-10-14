@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.6.ebuild,v 1.2 2013/08/02 22:29:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.2.6.ebuild,v 1.3 2013/10/14 20:12:07 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -35,9 +35,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	vala? ( $(vala_depend) )
 	test? (
-		${PYTHON_DEPS}
-		dev-python/pygobject:2
-		dev-python/pygobject:3
+		$(python_gen_any_dep '
+			dev-python/pygobject:2[${PYTHON_USEDEP}]
+			dev-python/pygobject:3[${PYTHON_USEDEP}]')
 		media-plugins/grilo-plugins:0.2 )
 "
 # eautoreconf requires gnome-common

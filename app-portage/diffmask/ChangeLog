@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/diffmask
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.20 2013/09/05 18:24:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/diffmask/ChangeLog,v 1.21 2013/10/14 20:20:32 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> diffmask-0.3.3-r2.ebuild,
+  diffmask-9999.ebuild:
+  Switch to git-r3. Add PYTHON_USEDEP on portage.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> diffmask-0.3.3-r2.ebuild,
   diffmask-9999.ebuild:

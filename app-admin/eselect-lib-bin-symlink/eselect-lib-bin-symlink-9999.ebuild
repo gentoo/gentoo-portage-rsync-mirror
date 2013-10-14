@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lib-bin-symlink/eselect-lib-bin-symlink-9999.ebuild,v 1.4 2013/02/19 02:50:40 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-lib-bin-symlink/eselect-lib-bin-symlink-9999.ebuild,v 1.5 2013/10/14 20:04:39 mgorny Exp $
 
 EAPI=5
 
 #if LIVE
 EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
 AUTOTOOLS_AUTORECONF=1
-inherit git-2
+inherit git-r3
 #endif
 
 inherit autotools-utils

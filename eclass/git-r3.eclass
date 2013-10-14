@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.17 2013/10/14 13:32:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.18 2013/10/14 20:30:00 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -254,7 +254,7 @@ _git-r3_set_submodules() {
 
 		# skip modules that have 'update = none', bug #487262.
 		local upd=$(echo "${data}" | git config -f /dev/fd/0 \
-			submodule."${subname}".update || die)
+			submodule."${subname}".update)
 		[[ ${upd} == none ]] && continue
 
 		submodules+=(

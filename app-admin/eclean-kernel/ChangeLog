@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eclean-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.13 2013/09/05 18:18:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.14 2013/10/14 20:02:11 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> eclean-kernel-9999.ebuild:
+  Switch to git-r3.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> -eclean-kernel-0.3.2.ebuild,
   -eclean-kernel-0.3.3.ebuild:
