@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libid3tag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.48 2013/07/31 17:35:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.49 2013/10/14 17:00:11 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> libid3tag-0.15.1b-r4.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
 
 *libid3tag-0.15.1b-r4 (31 Jul 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.87 2013/08/17 06:01:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/ChangeLog,v 1.88 2013/10/14 16:54:52 mgorny Exp $
+
+  14 Oct 2013; Michał Górny <mgorny@gentoo.org> libdv-1.0.0-r3.ebuild:
+  Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
+  #483304.
 
   17 Aug 2013; Ulrich Müller <ulm@gentoo.org> libdv-1.0.0-r3.ebuild:
   Fix blocker, bug 481398.

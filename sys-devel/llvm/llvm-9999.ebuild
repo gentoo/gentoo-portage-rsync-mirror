@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.56 2013/10/13 07:44:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.57 2013/10/14 16:39:57 mgorny Exp $
 
 EAPI=5
 
@@ -18,10 +18,24 @@ EGIT_REPO_URI="http://llvm.org/git/llvm.git
 LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
 KEYWORDS=""
-IUSE="clang debug doc gold +libffi multitarget ocaml python
+IUSE="clang debug doc gold +libffi multitarget ncurses ocaml python
 	+static-analyzer test udis86 video_cards_radeon kernel_Darwin"
 
-DEPEND="!kernel_Darwin? ( app-admin/chrpath )
+COMMON_DEPEND="
+	sys-libs/zlib:0=
+	clang? (
+		python? ( ${PYTHON_DEPS} )
+		static-analyzer? (
+			dev-lang/perl
+			${PYTHON_DEPS}
+		)
+	)
+	gold? ( >=sys-devel/binutils-2.22[cxx] )
+	libffi? ( virtual/libffi:0=[${MULTILIB_USEDEP}] )
+	ncurses? ( sys-libs/ncurses:5=[${MULTILIB_USEDEP}] )
+	ocaml? ( dev-lang/ocaml )
+	udis86? ( dev-libs/udis86:0=[pic(+),${MULTILIB_USEDEP}] )"
+DEPEND="${COMMON_DEPEND}
 	dev-lang/perl
 	dev-python/sphinx
 	>=sys-devel/make-3.79
@@ -31,23 +45,10 @@ DEPEND="!kernel_Darwin? ( app-admin/chrpath )
 		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
 	)
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
-	sys-libs/zlib
-	gold? ( >=sys-devel/binutils-2.22[cxx] )
-	libffi? ( virtual/pkgconfig
-		virtual/libffi[${MULTILIB_USEDEP}] )
-	ocaml? ( dev-lang/ocaml )
-	udis86? ( dev-libs/udis86[pic(+),${MULTILIB_USEDEP}] )
+	!kernel_Darwin? ( app-admin/chrpath )
+	libffi? ( virtual/pkgconfig )
 	${PYTHON_DEPS}"
-RDEPEND="dev-lang/perl
-	libffi? ( virtual/libffi[${MULTILIB_USEDEP}] )
-	clang? (
-		python? ( ${PYTHON_DEPS} )
-		static-analyzer? (
-			dev-lang/perl
-			${PYTHON_DEPS}
-		)
-	)
-	udis86? ( dev-libs/udis86[pic(+),${MULTILIB_USEDEP}] )
+RDEPEND="${COMMON_DEPEND}
 	clang? ( !<=sys-devel/clang-9999-r99 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
@@ -185,7 +186,9 @@ multilib_src_configure() {
 		--with-optimize-option=
 		$(use_enable !debug optimized)
 		$(use_enable debug assertions)
-		$(use_enable debug expensive-checks)"
+		$(use_enable debug expensive-checks)
+		$(use_enable ncurses terminfo)
+		$(use_enable libffi)"
 
 	if use clang; then
 		CONF_FLAGS+="
@@ -199,10 +202,6 @@ multilib_src_configure() {
 		if use video_cards_radeon; then
 			CONF_FLAGS="${CONF_FLAGS},r600"
 		fi
-	fi
-
-	if [[ ${ABI} == amd64 ]]; then
-		CONF_FLAGS="${CONF_FLAGS} --enable-pic"
 	fi
 
 	if multilib_is_native_abi && use gold; then
@@ -222,7 +221,6 @@ multilib_src_configure() {
 		local CPPFLAGS=${CPPFLAGS}
 		append-cppflags "$(pkg-config --cflags libffi)"
 	fi
-	CONF_FLAGS="${CONF_FLAGS} $(use_enable libffi)"
 
 	# build with a suitable Python version
 	python_export_best
