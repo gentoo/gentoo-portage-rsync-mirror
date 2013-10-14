@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.11.2-r1.ebuild,v 1.1 2013/10/09 23:04:32 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.11.2-r1.ebuild,v 1.2 2013/10/14 17:29:44 johu Exp $
 
 EAPI=5
 
@@ -20,7 +20,6 @@ COMMON_DEPEND="
 	app-crypt/qca:2
 	app-crypt/qca-ossl:2
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
-	$(add_kdebase_dep kdepimlibs)
 	$(add_kdebase_dep krunner)
 	$(add_kdebase_dep plasma-workspace 'semantic-desktop?')
 	x11-misc/shared-mime-info
@@ -36,7 +35,6 @@ COMMON_DEPEND="
 	scim? ( app-i18n/scim )
 	semantic-desktop? (
 		$(add_kdebase_dep kdepimlibs)
-		$(add_kdebase_dep plasma-workspace)
 	)
 "
 DEPEND="${COMMON_DEPEND}

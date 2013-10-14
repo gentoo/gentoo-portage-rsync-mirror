@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/base64
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/base64/ChangeLog,v 1.1 2013/10/14 17:06:44 ercpe Exp $
+
+*base64-2.3.7 (14 Oct 2013)
+
+  14 Oct 2013; Johann Schmitz <ercpe@gentoo.org> +base64-2.3.7.ebuild,
+  +metadata.xml:
+  Ebuild for base64 (a base64 encoder written in java) - dependency of
+  mucommander.

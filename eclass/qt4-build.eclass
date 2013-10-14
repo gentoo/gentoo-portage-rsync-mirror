@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.150 2013/08/13 10:17:54 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.152 2013/10/14 17:29:55 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -18,7 +18,7 @@ inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
 if [[ ${PV} == *9999* ]]; then
 	QT4_BUILD_TYPE="live"
-	inherit git-2
+	inherit git-r3
 else
 	QT4_BUILD_TYPE="release"
 fi
@@ -31,8 +31,10 @@ MY_P=qt-everywhere-opensource-src-${MY_PV}
 
 case ${QT4_BUILD_TYPE} in
 	live)
-		EGIT_REPO_URI="git://gitorious.org/qt/qt.git
-			https://git.gitorious.org/qt/qt.git"
+		EGIT_REPO_URI=(
+			"git://gitorious.org/qt/qt.git"
+			"https://git.gitorious.org/qt/qt.git"
+		)
 		EGIT_BRANCH=${PV%.9999}
 		;;
 	release)
@@ -120,7 +122,7 @@ qt4-build_src_unpack() {
 
 	case ${QT4_BUILD_TYPE} in
 		live)
-			git-2_src_unpack
+			git-r3_src_unpack
 			;;
 		release)
 			local tarball="${MY_P}.tar.gz" target= targets=
@@ -163,7 +165,7 @@ qt4-build_src_prepare() {
 	fi
 
 	# avoid X11 dependency in non-gui packages
-	local nolibx11_pkgs="qtcore qtdbus qtscript qtsql qttest qtxmlpatterns"
+	local nolibx11_pkgs="qtbearer qtcore qtdbus qtscript qtsql qttest qtxmlpatterns"
 	has ${PN} ${nolibx11_pkgs} && qt_nolibx11
 
 	if use aqua; then
