@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libevdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/ChangeLog,v 1.1 2013/10/13 23:11:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/ChangeLog,v 1.2 2013/10/14 14:39:04 chithanh Exp $
+
+  14 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libevdev-0.4.ebuild:
+  Keyword ~ppc.
 
 *libevdev-0.4 (13 Oct 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/libevdev-0.4.ebuild,v 1.1 2013/10/13 23:11:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/libevdev-0.4.ebuild,v 1.2 2013/10/14 14:39:04 chithanh Exp $
 
 EAPI=5
 XORG_MULTILIB=yes
@@ -18,7 +18,7 @@ else
 	SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 fi
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 
 src_prepare() {
