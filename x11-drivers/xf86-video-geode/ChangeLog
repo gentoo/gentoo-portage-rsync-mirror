@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-geode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.22 2013/07/03 08:19:54 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-geode/ChangeLog,v 1.23 2013/10/13 23:52:53 chithanh Exp $
+
+*xf86-video-geode-2.11.15 (13 Oct 2013)
+
+  13 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-geode-2.11.15.ebuild:
+  Version bump.
 
 *xf86-video-geode-2.11.14-r1 (03 Jul 2013)
 
