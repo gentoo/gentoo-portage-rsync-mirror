@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-32.ebuild,v 1.1 2013/10/13 11:05:13 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/genkernel-next-33.ebuild,v 1.1 2013/10/14 09:26:36 lxnay Exp $
 
 EAPI=5
 
