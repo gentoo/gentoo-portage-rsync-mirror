@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.64 2013/08/02 13:25:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.65 2013/10/15 08:32:57 polynomial-c Exp $
+
+*patch-2.7.1-r3 (15 Oct 2013)
+
+  15 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> -patch-2.7.1.ebuild,
+  -patch-2.7.1-r1.ebuild, patch-2.7.1-r2.ebuild, +patch-2.7.1-r3.ebuild,
+  +files/patch-2.7.1-initialize_data_structures_early_enough.patch,
+  +files/patch-2.7.1-prevent_depend_on_autotools.patch:
+  Revbump to fix segfault on nonexisting dir. Thanks to Martin von Gagern for
+  reporting this in bug #485182. Removed old versions.
 
 *patch-2.7.1-r2 (02 Aug 2013)
 
