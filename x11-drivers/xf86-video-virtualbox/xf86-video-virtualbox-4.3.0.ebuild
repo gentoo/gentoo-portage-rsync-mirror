@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.0.ebuild,v 1.1 2013/10/15 13:27:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.0.ebuild,v 1.2 2013/10/15 14:17:18 polynomial-c Exp $
 
 EAPI=5
 
@@ -109,7 +109,8 @@ src_compile() {
 		/src/VBox/Additions/x11/vboxvideo ; do
 			cd "${S}"${each}
 			MAKE="kmk" emake TOOL_YASM_AS=yasm \
-			KBUILD_PATH="${S}/kBuild"
+			KBUILD_PATH="${S}/kBuild" \
+			KBUILD_VERBOSE=2
 	done
 
 	if use dri; then

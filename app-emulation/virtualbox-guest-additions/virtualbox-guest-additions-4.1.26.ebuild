@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.26.ebuild,v 1.4 2013/06/18 12:19:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.26.ebuild,v 1.5 2013/10/15 14:19:58 polynomial-c Exp $
 
 EAPI=2
 
@@ -108,6 +108,7 @@ src_compile() {
 				cd "${S}"/src/VBox/Additions/x11/VBoxClient
 				MAKE="kmk" emake TOOL_YASM_AS=yasm \
 				KBUILD_PATH="${S}/kBuild" \
+				KBUILD_VERBOSE=2 \
 				|| die "kmk VBoxClient failed"
 		fi
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.158 2013/10/15 13:27:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.159 2013/10/15 14:11:40 polynomial-c Exp $
+
+  15 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.1.26.ebuild,
+  virtualbox-4.2.18.ebuild, virtualbox-4.3.0.ebuild:
+  Make the build process verbose.
 
 *virtualbox-4.3.0 (15 Oct 2013)
 
