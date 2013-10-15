@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.351 2013/10/14 05:58:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.352 2013/10/15 08:09:48 ago Exp $
+
+  15 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gstreamer-1.0.10.ebuild:
+  Stable for alpha, wrt bug #480908
 
   14 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gstreamer-1.0.10.ebuild:
   Stable for arm, wrt bug #480908

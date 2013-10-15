@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-gdkpixbuf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gdkpixbuf/ChangeLog,v 1.21 2013/10/14 05:58:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gdkpixbuf/ChangeLog,v 1.22 2013/10/15 08:10:28 ago Exp $
+
+  15 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-gdkpixbuf-0.10.31.ebuild, gst-plugins-gdkpixbuf-1.0.10.ebuild:
+  Stable for alpha, wrt bug #480908
 
   14 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   gst-plugins-gdkpixbuf-0.10.31.ebuild, gst-plugins-gdkpixbuf-1.0.10.ebuild:
