@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/azara
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.11 2012/02/25 03:04:59 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/ChangeLog,v 1.12 2013/10/15 11:20:06 jlec Exp $
+
+*azara-2.8-r5 (15 Oct 2013)
+
+  15 Oct 2013; Justin Lecher <jlec@gentoo.org> +azara-2.8-r5.ebuild,
+  metadata.xml:
+  Move to new python r1 eclasses
 
   25 Feb 2012; Patrick Lauer <patrick@gentoo.org> azara-2.8-r4.ebuild:
   Restricting pypy and jython
