@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.1.2.ebuild,v 1.2 2013/10/15 15:00:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.1.3.ebuild,v 1.1 2013/10/15 15:00:27 jlec Exp $
 
 EAPI=5
 
+PYTHON_COMPAT=( python{2_6,2_7} )
 WX_GTK_VER=2.8
 
-inherit cmake-utils eutils python wxwidgets multilib flag-o-matic
+inherit cmake-utils eutils python-single-r1 wxwidgets multilib flag-o-matic
 
 DESCRIPTION="Math Graphics Library"
 HOMEPAGE="http://mathgl.sourceforge.net/"
@@ -36,7 +37,7 @@ RDEPEND="
 	octave? ( >=sci-mathematics/octave-3.4.0 )
 	pdf? ( media-libs/libharu )
 	png? ( media-libs/libpng )
-	python? ( dev-python/numpy )
+	python? ( dev-python/numpy[${PYTHON_USEDEP}] ${PYTHON_DEPS} )
 	qt4? ( dev-qt/qtgui:4 )
 	wxwidgets? ( x11-libs/wxGTK:2.8 )
 	zlib? ( sys-libs/zlib )"
@@ -46,11 +47,15 @@ DEPEND="${RDEPEND}
 	octave? ( dev-lang/swig )
 	python? ( dev-lang/swig )"
 
-REQUIRED_USE="mpi? ( hdf5 ) png? ( zlib ) pdf? ( png )"
+REQUIRED_USE="
+	mpi? ( hdf5 )
+	png? ( zlib )
+	pdf? ( png )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 pkg_setup() {
 	use mpi && export CC=mpicc CXX=mpicxx
-	use python && python_pkg_setup
+	use python && python-single-r1_pkg_setup
 	use wxwidgets && wxwidgets_pkg_setup
 }
 
@@ -71,11 +76,13 @@ src_prepare() {
 	echo "" > lang/install.m || die
 	# fix desktop file
 	sed -i -e 's/.png//' udav/udav.desktop || die
-	use python && append-cppflags -I"$($(PYTHON) -c 'import numpy; print(numpy.get_include())')"
+	use python && append-cppflags -I"$(${EPYTHON} -c 'import numpy; print(numpy.get_include())')"
 }
 
 src_configure() {
 	local mycmakeargs=(
+		# No clue about this option:
+		# option(enable-mgl2 "Use names 'libmgl2-*' instead of 'libmgl-*'")
 		-DHDF4_INCLUDE_DIR="${EPREFIX}/usr/include"
 		-DMGL_LIB_INSTALL_DIR="$(get_libdir)"
 		$(cmake-utils_use doc enable-doc)
@@ -104,7 +111,6 @@ src_configure() {
 			-e "s:--prefix=\(.*\) :--prefix=\$ENV{DESTDIR}\1 :" \
 			"${CMAKE_BUILD_DIR}"/lang/cmake_install.cmake || die
 	fi
-
 }
 
 src_install() {
@@ -122,6 +128,7 @@ src_install() {
 		insinto /usr/share/${PN}/octave
 		doins "${CMAKE_BUILD_DIR}"/lang/${PN}.tar.gz
 	fi
+	use python && python_optimize
 }
 
 pkg_postinst() {
@@ -130,7 +137,6 @@ pkg_postinst() {
 		pkg install ${EROOT}/usr/share/${PN}/octave/${PN}.tar.gz
 		EOF
 	fi
-	use python && python_mod_optimize ${PN}.py
 }
 
 pkg_prerm() {
@@ -139,8 +145,4 @@ pkg_prerm() {
 		pkg uninstall ${PN}
 		EOF
 	fi
-}
-
-pkg_postrm() {
-	use python && python_mod_cleanup ${PN}.py
 }
