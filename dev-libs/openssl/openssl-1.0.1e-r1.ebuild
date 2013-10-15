@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1e-r1.ebuild,v 1.14 2013/10/14 23:06:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1e-r1.ebuild,v 1.15 2013/10/15 00:18:34 vapier Exp $
 
 EAPI="4"
 
@@ -58,6 +58,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-1.0.1-x32.patch
 		epatch "${FILESDIR}"/${PN}-1.0.1e-ipv6.patch
 		epatch "${FILESDIR}"/${P}-bad-mac-aes-ni.patch #463444
+		epatch "${FILESDIR}"/${PN}-1.0.1e-perl-5.18.patch #483820
 		epatch_user #332661
 	fi
 
