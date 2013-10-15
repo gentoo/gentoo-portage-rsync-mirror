@@ -1,23 +1,28 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.2-r1.ebuild,v 1.5 2013/10/15 18:17:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.3.ebuild,v 1.1 2013/10/15 18:17:35 jlec Exp $
 
 EAPI=5
+
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+
 inherit distutils-r1 eutils
+
 DESCRIPTION="Computer algebra system (CAS) in Python"
-HOMEPAGE="http://sympy.org/"
+HOMEPAGE="http://sympy.org/ https://github.com/sympy/sympy"
 SRC_URI="
-	python_targets_python2_6? ( http://sympy.googlecode.com/files/${P}.tar.gz )
-	python_targets_python2_7? ( http://sympy.googlecode.com/files/${P}.tar.gz )
-	python_targets_python3_2? ( http://sympy.googlecode.com/files/${P}-py3.2.tar.gz )
-	python_targets_python3_3? ( http://sympy.googlecode.com/files/${P}-py3.2.tar.gz )"
+	python_targets_python2_6? ( https://github.com/${PN}/${PN}/releases/download/${P}/${P}.tar.gz )
+	python_targets_python2_7? ( https://github.com/${PN}/${PN}/releases/download/${P}/${P}.tar.gz )
+	python_targets_python3_2? ( https://github.com/${PN}/${PN}/releases/download/${P}/${P}-py3.2.tar.gz )
+	python_targets_python3_3? ( https://github.com/${PN}/${PN}/releases/download/${P}/${P}-py3.2.tar.gz )"
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-macos"
 IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png pyglet system-mpmath test texmacs"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RDEPEND="
 	mathml? (
 		dev-libs/libxml2:2[${PYTHON_USEDEP}]
@@ -117,73 +122,89 @@ system_mpmath() {
 		epatch "${FILESDIR}"/${P}-mpmath.patch
 }
 
-src_unpack() {
-	if use python_targets_python2_6 || use python_targets_python2_7; then
-		mkdir "${WORKDIR}"/python2 || die
+python_unpack() {
+	if ! python_is_python3; then
+		mkdir "${WORKDIR}"/python2
 		cd "${WORKDIR}"/python2 || die
 		unpack ${P}.tar.gz
 	fi
-	if use python_targets_python3_2; then
-		mkdir "${WORKDIR}"/python3 || die
+	if python_is_python3; then
+		mkdir "${WORKDIR}"/python3
 		cd "${WORKDIR}"/python3 || die
 		unpack ${P}-py3.2.tar.gz
 	fi
 }
 
-src_prepare() {
+src_unpack() {
+	python_foreach_impl python_unpack
+}
+
+python_prepare() {
 	if use system-mpmath; then
-		if use python_targets_python2_6 || use python_targets_python2_7; then
-			cd "${WORKDIR}"/python2/${P}
+		if ! python_is_python3; then
+			cd "${WORKDIR}"/python2/${P} || die
 			system_mpmath
 		fi
-		if use python_targets_python3_2; then
-			cd "${WORKDIR}"/python3/${P}
+		if python_is_python3; then
+			cd "${WORKDIR}"/python3/${P} || die
 			system_mpmath
 		fi
 	fi
 }
 
+src_prepare() {
+	python_foreach_impl python_prepare
+}
+
 python_compile() {
-	case ${EPYTHON} in
-		python2*) cd "${WORKDIR}"/python2/${P};;
-		python3*) cd "${WORKDIR}"/python3/${P};;
-	esac
+	if python_is_python3; then
+		cd "${WORKDIR}"/python3/${P} || die
+		export S="${WORKDIR}"/python3/${P}
+	else
+		cd "${WORKDIR}"/python2/${P} || die
+		export S="${WORKDIR}"/python2/${P}
+	fi
 	PYTHONPATH="." distutils-r1_python_compile
 }
 
 python_compile_all() {
 	if use doc; then
-		if use python_targets_python2_6 || use python_targets_python2_7; then
-			cd "${WORKDIR}"/python2/${P}/doc
+		if python_is_python3; then
+			cd "${WORKDIR}"/python3/${P} || die
 			emake html
 		else
-			cd "${WORKDIR}"/python3/${P}/doc
+			cd "${WORKDIR}"/python2/${P} || die
 			emake html
 		fi
 	fi
 }
-
+DISTUTILS_NO_PARALLEL_BUILD=true
 python_test() {
-	case ${EPYTHON} in
-		python2*) cd "${WORKDIR}"/python2/${P};;
-		python3*) cd "${WORKDIR}"/python3/${P};;
-	esac
+	if python_is_python3; then
+		cd "${WORKDIR}"/python3/${P} || die
+	else
+		cd "${WORKDIR}"/python2/${P} || die
+	fi
 	PYTHONPATH="." py.test || ewarn "tests with ${EPYTHON} failed"
 }
 
 python_install() {
-	case ${EPYTHON} in
-		python2*) cd "${WORKDIR}"/python2/${P};;
-		python3*) cd "${WORKDIR}"/python3/${P};;
-	esac
+	if python_is_python3; then
+		cd "${WORKDIR}"/python3/${P} || die
+		export S="${WORKDIR}"/python3/${P}
+	else
+		cd "${WORKDIR}"/python2/${P} || die
+		export S="${WORKDIR}"/python2/${P}
+	fi
 	PYTHONPATH="." distutils-r1_python_install
 }
 
 python_install_all() {
-	if use python_targets_python2_6 || use python_targets_python2_7; then
-		cd "${WORKDIR}"/python2/${P}
+	distutils-r1_python_install_all
+	if python_is_python3; then
+		cd "${WORKDIR}"/python3/${P} || die
 	else
-		cd "${WORKDIR}"/python3/${P}
+		cd "${WORKDIR}"/python2/${P} || die
 	fi
 	if use doc; then
 		dohtml -r doc/_build/html/*
