@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0.ebuild,v 1.2 2013/10/14 21:00:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0.ebuild,v 1.3 2013/10/15 20:47:47 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -47,7 +47,7 @@ RDEPEND="
 		grammar? ( >=dev-libs/link-grammar-4.2.1 )
 		latex? ( dev-libs/libxslt )
 		math? ( >=x11-libs/gtkmathview-0.7.5 )
-		ots? ( >=app-text/ots-0.5 )
+		ots? ( >=app-text/ots-0.5-r1 )
 		readline? ( sys-libs/readline )
 		thesaurus? ( >=app-text/aiksaurus-1.2[gtk] )
 		wordperfect? (

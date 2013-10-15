@@ -5003,6 +5003,7 @@ net-misc/cgminer:avalon - Enable support for Avalon ASICs
 net-misc/cgminer:bflsc - Enable support for BFL ASICs
 net-misc/cgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE FPGAs
 net-misc/cgminer:icarus - Enable support for mining with Icarus FPGAs
+net-misc/cgminer:klondike - Enable support for mining with Klondik ASICs
 net-misc/cgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/cgminer:opencl - Enable support for mining with OpenCL-capable devices (GPUs)
 net-misc/cgminer:scrypt - Enable support for scrypt mining algorithm

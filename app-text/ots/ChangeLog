@@ -1,6 +1,15 @@
 # ChangeLog for app-text/ots
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.32 2012/08/05 20:51:32 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.33 2013/10/15 20:46:09 pacho Exp $
+
+*ots-0.5.0-r1 (15 Oct 2013)
+
+  15 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/ots-0.5.0-automake-1.13.patch, +files/ots-0.5.0-fix-installation.patch,
+  +files/ots-0.5.0-fix-underlinking.patch, +ots-0.5.0-r1.ebuild,
+  -files/ots-0.4.2-gcc4.diff:
+  Fix library installation (#400623), underlinking, build with latest automake,
+  dicts installation.
 
   05 Aug 2012; Anthony G. Basile <blueness@gentoo.org> ots-0.5.0.ebuild:
   Keyword ~arm
@@ -111,4 +120,3 @@
   <nadav256@hotmail.com> requested this to be added in IRC, to me.  I didn't
   see bug #24079 by MG <markgilbert@hotpop.com> where he had submitted the
   ebuild for this. Apologies to him nd foser.
-
