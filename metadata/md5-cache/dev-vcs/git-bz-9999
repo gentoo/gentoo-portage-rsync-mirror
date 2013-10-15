@@ -1,11 +1,11 @@
-DEFINED_PHASES=compile install unpack
-DEPEND=app-text/asciidoc app-text/xmlto userland_GNU? ( >=sys-apps/coreutils-8.5 ) dev-vcs/git
+DEFINED_PHASES=compile configure install setup unpack
+DEPEND=app-text/asciidoc app-text/xmlto >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Bugzilla subcommand for git
 EAPI=5
 HOMEPAGE=http://www.fishsoup.net/software/git-bz/
-IUSE=python_targets_python2_6 python_targets_python2_7 python_targets_pypy2_0
+IUSE=python_targets_python2_6 python_targets_python2_7 python_targets_pypy2_0 python_single_target_python2_6 python_single_target_python2_7 python_single_target_pypy2_0
 LICENSE=GPL-2
 RDEPEND=dev-vcs/git
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	f870f5be7eb6435bdd5968f9f4df68c2	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	python-r1	3baffd4f94003161708508813a475647	python-utils-r1	4f3595fa07cbecf9f3cfabd0f9a6f34b	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=dfd60445c09a53b717fd7b45879fc827
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-r3	f870f5be7eb6435bdd5968f9f4df68c2	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	fa36040985cb5e3cdd31d44be94d15bc	python-utils-r1	4f3595fa07cbecf9f3cfabd0f9a6f34b	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=9a9f7f5ee6c81da38541013383134142

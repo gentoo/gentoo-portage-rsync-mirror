@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/rdiscount-2.1.6.ebuild,v 1.1 2013/05/29 18:38:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/rdiscount-2.1.6.ebuild,v 1.2 2013/10/15 19:49:00 graaff Exp $
 
 EAPI=5
 
 # Has a native extension without jruby support.
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_TEST="test:unit"
 

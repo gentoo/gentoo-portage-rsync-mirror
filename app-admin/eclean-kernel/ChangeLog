@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eclean-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.14 2013/10/14 20:02:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eclean-kernel/ChangeLog,v 1.15 2013/10/15 19:46:56 mgorny Exp $
+
+*eclean-kernel-0.4.1 (15 Oct 2013)
+
+  15 Oct 2013; Michał Górny <mgorny@gentoo.org> +eclean-kernel-0.4.1.ebuild:
+  Version bump. The new version fixes finding grub & grub2 configuration files,
+  bug #485090.
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> eclean-kernel-9999.ebuild:
   Switch to git-r3.

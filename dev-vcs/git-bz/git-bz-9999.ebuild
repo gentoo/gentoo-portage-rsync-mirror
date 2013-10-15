@@ -1,17 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/git-bz-9999.ebuild,v 1.6 2013/09/05 18:42:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/git-bz-9999.ebuild,v 1.7 2013/10/15 19:37:58 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
 
-inherit python-r1
+inherit python-single-r1
 
 #if LIVE
 EGIT_REPO_URI="git://git.fishsoup.net/${PN}
 	http://git.fishsoup.net/cgit/${PN}
 	https://bitbucket.org/mgorny/${PN}.git"
-inherit git-2
+inherit git-r3
 #endif
 
 DESCRIPTION="Bugzilla subcommand for git"
@@ -31,14 +31,20 @@ DEPEND="app-text/asciidoc
 
 KEYWORDS=
 SRC_URI=
+#endif
 
+src_configure() {
+	# custom script
+	./configure --prefix="${EPREFIX}/usr" || die
+}
+
+#ifdef LIVE
 src_compile() {
 	emake ${PN}.1
 }
 #endif
 
 src_install() {
-	python_foreach_impl python_doscript ${PN}
-	doman ${PN}.1
-	dodoc TODO
+	default
+	python_fix_shebang "${ED%/}"/usr/bin/${PN}
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r7.ebuild,v 1.3 2013/10/10 10:30:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r7.ebuild,v 1.4 2013/10/15 19:32:52 aidecoe Exp $
 
 inherit eutils autotools systemd
 
@@ -86,7 +86,7 @@ update_db() {
 }
 
 pkg_config() {
-	cd "${ROOT}"/usr/share/hddtemp
+	cd "${ROOT}"/usr/share/hddtemp || die
 
 	einfo "Trying to download the latest hddtemp.db file"
 	wget http://www.guzu.net/linux/hddtemp.db -O hddtemp.db \

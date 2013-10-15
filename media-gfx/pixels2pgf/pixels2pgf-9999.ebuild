@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixels2pgf/pixels2pgf-9999.ebuild,v 1.1 2012/12/15 12:45:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixels2pgf/pixels2pgf-9999.ebuild,v 1.2 2013/10/15 19:44:15 mgorny Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ EAPI=4
 AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
 
-inherit git-2
+inherit git-r3
 #endif
 
 inherit autotools-utils
