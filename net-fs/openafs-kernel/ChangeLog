@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.161 2013/09/06 10:23:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.162 2013/10/15 19:11:13 hasufell Exp $
+
+  15 Oct 2013; Julian Ospald <hasufell@gentoo.org>
+  openafs-kernel-1.6.5-r2.ebuild:
+  add epatch_user as per user request from johnfg
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> openafs-kernel-1.6.5-r1.ebuild:
   Stable for sparc, wrt bug #478296

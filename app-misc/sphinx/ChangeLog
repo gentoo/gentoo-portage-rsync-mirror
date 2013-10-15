@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.66 2013/09/30 17:13:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.67 2013/10/15 19:04:12 graaff Exp $
+
+*sphinx-2.1.2 (15 Oct 2013)
+
+  15 Oct 2013; Hans de Graaff <graaff@gentoo.org> +sphinx-2.1.2.ebuild:
+  Version bump for 2.1 series. Add syslog and xml USE flags. Drop test
+  dependency since we cannot actually run the tests from the ebuild.
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> sphinx-2.0.9.ebuild:
   Stable for x86, wrt bug #486276

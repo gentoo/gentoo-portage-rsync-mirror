@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.17.ebuild,v 1.1 2013/01/24 09:57:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.17.ebuild,v 1.2 2013/10/15 19:03:04 pacho Exp $
 
-EAPI="2"
-
-inherit eutils toolchain-funcs
+EAPI=5
+inherit eutils readme.gentoo toolchain-funcs
 
 DESCRIPTION="Converts the native (RAW) format of various digital cameras into netpbm portable pixmap (.ppm) image"
 HOMEPAGE="http://www.cybercom.net/~dcoffin/dcraw/"
@@ -17,15 +16,19 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="nls gimp jpeg jpeg2k lcms"
 
-COMMON_DEPEND="jpeg? ( virtual/jpeg )
-	lcms? ( =media-libs/lcms-1* )
+COMMON_DEPEND="
+	jpeg? ( virtual/jpeg )
+	lcms? ( media-libs/lcms:0 )
 	jpeg2k? ( media-libs/jasper )
-	gimp? ( media-gfx/gimp )"
+	gimp? ( media-gfx/gimp )
+"
 DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )
-	gimp? ( virtual/pkgconfig )"
+	gimp? ( virtual/pkgconfig )
+"
 RDEPEND="${COMMON_DEPEND}
-	media-libs/netpbm"
+	media-libs/netpbm
+"
 
 S=${WORKDIR}/dcraw
 
@@ -34,6 +37,19 @@ LANGS="ca cs de da eo es fr hu it nl pl pt ru sv zh_CN zh_TW"
 for lng in ${LANGS}; do
 	IUSE+=" linguas_${lng}"
 done
+
+DOC_CONTENTS="
+	See conversion-examples.txt.gz on how to convert
+	the PPM files produced by dcraw to other image formats.\n
+
+	\nThe functionality of the external program 'fujiturn' was
+	incorporated into dcraw and is automatically used now.\n
+
+	\nThere's an example wrapper script included called 'dcwrap'.
+	This package also includes 'dcparse', which extracts
+	thumbnail images (preferably JPEGs) from any raw digital
+	camera formats that have them, and shows table contents.
+"
 
 # Helper function to list only langs listed in LANGS or
 linguas_list() {
@@ -88,17 +104,18 @@ src_compile() {
 }
 
 src_install() {
-	dobin dcraw dcparse || die
-	dodoc "${FILESDIR}"/{conversion-examples.txt,dcwrap} || die
+	dobin dcraw dcparse
+	dodoc "${FILESDIR}"/{conversion-examples.txt,dcwrap}
 
 	# rawphoto gimp plugin
 	if use gimp; then
 		insinto "$(pkg-config --variable=gimplibdir gimp-2.0)/plug-ins"
 		insopts -m0755
-		doins rawphoto || die
+		doins rawphoto
 	fi
 
-	doman dcraw.1 || die
+	doman dcraw.1
+
 	if use nls; then
 		for lng in $(linguas_list); do
 			[[ -f dcraw.${lng}.1 ]] && doman dcraw.${lng}.1
@@ -106,20 +123,6 @@ src_install() {
 			newins dcraw_${lng}.mo dcraw.mo || die "failed to install dcraw_${lng}.mo"
 		done
 	fi
-}
 
-pkg_postinst() {
-	elog ""
-	elog "See conversion-examples.txt.gz on how to convert"
-	elog "the PPM files produced by dcraw to other image formats."
-	elog ""
-	ewarn "The functionality of the external program 'fujiturn' was"
-	ewarn "incorporated into dcraw and is automatically used now."
-	elog ""
-	elog "There's an example wrapper script included called 'dcwrap'."
-	elog ""
-	elog "This package also includes 'dcparse', which extracts"
-	elog "thumbnail images (preferably JPEGs) from any raw digital"
-	elog "camera formats that have them, and shows table contents."
-	elog ""
+	readme.gentoo_create_doc
 }

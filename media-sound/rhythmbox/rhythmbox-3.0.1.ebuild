@@ -1,56 +1,64 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-2.99.1.ebuild,v 1.2 2013/08/30 22:46:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.1.ebuild,v 1.1 2013/10/15 19:22:33 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_7 )
+GCONF_DEBUG="no"
+PYTHON_COMPAT=( python3_2 ) # Not compatible with 3.3 due beaker not being ported yet, bug #487832
 PYTHON_REQ_USE="xml"
 
 inherit eutils gnome2 python-single-r1 multilib virtualx
 
 DESCRIPTION="Music management and playback software for GNOME"
-HOMEPAGE="http://projects.gnome.org/rhythmbox/"
+HOMEPAGE="http://www.rhythmbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="cdr clutter daap dbus html ipod libnotify libsecret lirc mtp nsplugin +python test +udev upnp-av webkit zeitgeist"
-# vala
+IUSE="cdr daap dbus +libsecret html ipod libnotify lirc mtp nsplugin +python
+test +udev upnp-av visualizer webkit zeitgeist"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
 	ipod? ( udev )
 	mtp? ( udev )
 	dbus? ( python )
-	webkit? ( python )"
+	webkit? ( python )
+	python? ( ${PYTHON_REQUIRED_USE} )
+"
 
 # FIXME: double check what to do with fm-radio plugin
+# webkit-gtk-1.10 is needed because it uses gstreamer-1.0
 COMMON_DEPEND="
-	>=dev-libs/glib-2.34:2
+	>=dev-libs/glib-2.34.0:2
 	>=dev-libs/libxml2-2.7.8:2
-	>=x11-libs/gtk+-3.6.0:3[introspection]
+	>=x11-libs/gtk+-3.6:3[introspection]
 	>=x11-libs/gdk-pixbuf-2.18.0:2
 	>=dev-libs/gobject-introspection-0.10.0
 	>=dev-libs/libpeas-0.7.3[gtk,python?]
-	>=dev-libs/totem-pl-parser-3.2
+	>=dev-libs/totem-pl-parser-3.2.0
+	>=net-libs/libsoup-2.26:2.4
 	>=net-libs/libsoup-gnome-2.26:2.4
 	media-libs/gst-plugins-base:1.0[introspection]
 	media-libs/gstreamer:1.0[introspection]
 	>=sys-libs/tdb-1.2.6
 	dev-libs/json-glib
 
-	clutter? (
+	visualizer? (
 		>=media-libs/clutter-1.8:1.0
-		media-libs/clutter-gst:2.0
+		>=media-libs/clutter-gst-1.9.92:2.0
 		>=media-libs/clutter-gtk-1.0:1.0
-		>=x11-libs/mx-1.0.1:1.0 )
+		>=x11-libs/mx-1.0.1:1.0
+		media-plugins/gst-plugins-libvisual:1.0 )
 	cdr? ( >=app-cdr/brasero-2.91.90 )
-	daap? (	>=net-libs/libdmapsharing-2.9.16:3.0 )
-	html? ( >=net-libs/webkit-gtk-1.3.9:3 )
-	libnotify? ( >=x11-libs/libnotify-0.7.0 )
+	daap? (
+		>=net-libs/libdmapsharing-2.9.19:3.0
+		media-plugins/gst-plugins-soup:1.0 )
 	libsecret? ( >=app-crypt/libsecret-0.14 )
+	html? ( >=net-libs/webkit-gtk-1.10:3 )
+	libnotify? ( >=x11-libs/libnotify-0.7.0 )
 	lirc? ( app-misc/lirc )
-	python? ( >=dev-python/pygobject-3:3[${PYTHON_USEDEP}] )
+	python? ( >=dev-python/pygobject-3.0:3[${PYTHON_USEDEP}] )
 	udev? (
 		virtual/udev[gudev]
 		ipod? ( >=media-libs/libgpod-0.7.92[udev] )
@@ -75,18 +83,19 @@ RDEPEND="${COMMON_DEPEND}
 		x11-libs/pango[introspection]
 
 		dbus? ( sys-apps/dbus )
+		libsecret? ( >=app-crypt/libsecret-0.14[introspection] )
 		webkit? (
 			dev-python/mako[${PYTHON_USEDEP}]
-			>=net-libs/webkit-gtk-1.3.9:3[introspection] ) )
+			>=net-libs/webkit-gtk-1.10:3[introspection] ) )
 "
 DEPEND="${COMMON_DEPEND}
-	app-text/scrollkeeper
-	app-text/yelp-tools
-	>=dev-util/gtk-doc-am-1.4
-	>=dev-util/intltool-0.35
 	virtual/pkgconfig
-	test? ( dev-libs/check )"
-#	vala? ( >=dev-lang/vala-0.9.4:0.12 )
+	app-text/yelp-tools
+	dev-util/gtk-doc-am
+	>=dev-util/intltool-0.35
+	>=app-text/gnome-doc-utils-0.9.1
+	test? ( dev-libs/check )
+"
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
@@ -114,7 +123,7 @@ src_configure() {
 		--disable-static \
 		--disable-vala \
 		--without-hal \
-		$(use_enable clutter visualizer) \
+		$(use_enable visualizer) \
 		$(use_enable daap) \
 		$(use_enable libnotify) \
 		$(use_enable lirc) \
@@ -132,5 +141,5 @@ src_configure() {
 src_test() {
 	unset SESSION_MANAGER
 	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check
+	Xemake check || die "test failed"
 }

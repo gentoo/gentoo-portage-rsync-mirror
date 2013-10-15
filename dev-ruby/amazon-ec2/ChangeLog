@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/amazon-ec2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.12 2012/07/28 17:24:44 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.14 2013/10/15 19:16:19 graaff Exp $
+
+*amazon-ec2-0.9.17-r1 (15 Oct 2013)
+
+  15 Oct 2013; Hans de Graaff <graaff@gentoo.org> +amazon-ec2-0.9.17-r1.ebuild:
+  Add as revision bump so people that already have this installed also get the
+  correct script in /usr/bin
+
+  15 Oct 2013; Hans de Graaff <graaff@gentoo.org> amazon-ec2-0.9.17.ebuild:
+  Drop ree18. Drop ruby18-specific limitation for yard. Install awshell script
+  in addition to the deprecated stub ec2sh, fixing bug 487298.
 
   28 Jul 2012; Hans de Graaff <graaff@gentoo.org> -amazon-ec2-0.9.15.ebuild:
   Cleanup.
