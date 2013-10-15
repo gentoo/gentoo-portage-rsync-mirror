@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.961 2013/10/10 19:28:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.962 2013/10/15 03:55:39 phajdan.jr Exp $
+
+*chromium-32.0.1664.3-r1 (15 Oct 2013)
+*chromium-31.0.1650.12-r1 (15 Oct 2013)
+*chromium-30.0.1599.66-r1 (15 Oct 2013)
+
+  15 Oct 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-30.0.1599.66-r1.ebuild, +chromium-31.0.1650.12-r1.ebuild,
+  +chromium-32.0.1664.3-r1.ebuild:
+  Fix vp9 support by switching to bundled libvpx (bug #487926 by Paul Marks).
 
 *chromium-32.0.1664.3 (10 Oct 2013)
 
