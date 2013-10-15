@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1025 2013/10/14 20:30:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1026 2013/10/15 05:36:26 dirtyepic Exp $
+
+  15 Oct 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Remove .la files for libasan and libtsan. They reference non-existent
+  libstdc++.la when fixlafiles is disabled/unsupported, and -fsanitize doesn't
+  work with -static anyways. (bug #487550)
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Fix over-use of ||die.
