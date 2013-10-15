@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=A command-line utility that simply dumps all attributes of its environment
+EAPI=5
+HOMEPAGE=https://launchpad.net/procenv/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+SLOT=0
+SRC_URI=https://launchpad.net/procenv/trunk/0.27/+download/procenv-0.27.tar.gz
+_md5_=6af46af398216bd1f50206081f3e21f7
