@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.7.0.ebuild,v 1.5 2013/10/13 21:10:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.7.0.ebuild,v 1.6 2013/10/15 17:53:38 tetromino Exp $
 
 EAPI="5"
 
@@ -99,25 +99,101 @@ COMMON_DEPEND="
 	amd64? (
 		abi_x86_64? ( ${NATIVE_DEPEND} )
 		abi_x86_32? (
+			truetype? ( || (
+				>=app-emulation/emul-linux-x86-xlibs-2.1[development]
+				>=media-libs/freetype-2.0.0[abi_x86_32]
+			) )
+			ncurses? ( || (
+				app-emulation/emul-linux-x86-baselibs[development]
+				sys-libs/ncurses[abi_x86_32]
+			) )
+			udisks? ( >=app-emulation/emul-linux-x86-baselibs-20130224[development] )
+			fontconfig? ( || (
+				app-emulation/emul-linux-x86-xlibs[development]
+				media-libs/fontconfig[abi_x86_32]
+			) )
+			gphoto2? (
+				app-emulation/emul-linux-x86-medialibs[development]
+			)
+			openal? ( || (
+				app-emulation/emul-linux-x86-sdl[development]
+				media-libs/openal[abi_x86_32]
+			) )
 			gstreamer? (
 				app-emulation/emul-linux-x86-gstplugins
 				app-emulation/emul-linux-x86-medialibs[development]
 			)
-			truetype? ( >=app-emulation/emul-linux-x86-xlibs-2.1[development] )
-			X? (
-				>=app-emulation/emul-linux-x86-xlibs-2.1[development]
-				>=app-emulation/emul-linux-x86-soundlibs-2.1[development]
-			)
-			mp3? ( app-emulation/emul-linux-x86-soundlibs[development] )
+			X? ( || (
+				app-emulation/emul-linux-x86-xlibs[development]
+				(
+					x11-libs/libICE[abi_x86_32]
+					x11-libs/libSM[abi_x86_32]
+					x11-libs/libXcursor[abi_x86_32]
+					x11-libs/libXext[abi_x86_32]
+					x11-libs/libXrandr[abi_x86_32]
+					x11-libs/libXi[abi_x86_32]
+					x11-libs/libXxf86vm[abi_x86_32]
+				)
+			) )
+			xinerama? ( || (
+				app-emulation/emul-linux-x86-xlibs[development]
+				x11-libs/libXinerama[abi_x86_32]
+			) )
+			alsa? ( || (
+				app-emulation/emul-linux-x86-soundlibs[alsa,development]
+				media-libs/alsa-lib[abi_x86_32]
+			) )
+			cups? ( app-emulation/emul-linux-x86-baselibs )
+			opencl? ( virtual/opencl[abi_x86_32] )
+			opengl? ( || (
+				app-emulation/emul-linux-x86-opengl[development]
+				(
+					virtual/glu[abi_x86_32]
+					virtual/opengl[abi_x86_32]
+				)
+			) )
+			gsm? ( || (
+				app-emulation/emul-linux-x86-soundlibs[development]
+				media-sound/gsm[abi_x86_32]
+			) )
+			jpeg? ( || (
+				app-emulation/emul-linux-x86-baselibs[development]
+				virtual/jpeg:0[abi_x86_32]
+			) )
+			ldap? ( app-emulation/emul-linux-x86-baselibs[development] )
+			lcms? ( || (
+				app-emulation/emul-linux-x86-baselibs[development]
+				media-libs/lcms:2[abi_x86_32]
+			) )
+			mp3? ( || (
+				app-emulation/emul-linux-x86-soundlibs[development]
+				>=media-sound/mpg123-1.5.0[abi_x86_32]
+			) )
+			nls? ( app-emulation/emul-linux-x86-baselibs[development] )
 			odbc? ( app-emulation/emul-linux-x86-db[development] )
-			openal? ( app-emulation/emul-linux-x86-sdl[development] )
-			opengl? ( app-emulation/emul-linux-x86-opengl[development] )
-			osmesa? ( >=app-emulation/emul-linux-x86-opengl-20121028[development] )
+			osmesa? ( || (
+				>=app-emulation/emul-linux-x86-opengl-20121028[development]
+				media-libs/mesa[osmesa,abi_x86_32]
+			) )
+			xml? ( >=app-emulation/emul-linux-x86-baselibs-20130224[development] )
 			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
-			v4l? ( app-emulation/emul-linux-x86-medialibs[development] )
-			>=app-emulation/emul-linux-x86-baselibs-20130224[development]
+			ssl? ( app-emulation/emul-linux-x86-baselibs[development] )
+			png? ( || (
+				app-emulation/emul-linux-x86-baselibs[development]
+				media-libs/libpng:0[abi_x86_32]
+			) )
+			v4l? ( || (
+				app-emulation/emul-linux-x86-medialibs[development]
+				media-libs/libv4l[abi_x86_32]
+			) )
+			xcomposite? ( || (
+				app-emulation/emul-linux-x86-xlibs[development]
+				x11-libs/libXcomposite[abi_x86_32]
+			) )
 		)
 	)"
+[[ ${PV} == "9999" ]] || COMMON_DEPEND="${COMMON_DEPEND}
+	amd64? ( abi_x86_32? ( pulseaudio? ( app-emulation/emul-linux-x86-soundlibs[development] ) ) )"
 
 RDEPEND="${COMMON_DEPEND}
 	dos? ( games-emulation/dosbox )
