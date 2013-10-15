@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-32.0.1664.3_alpha1.ebuild,v 1.1 2013/10/09 23:12:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-30.0.1599.101_p1.ebuild,v 1.1 2013/10/15 21:50:40 floppym Exp $
 
 EAPI="4"
 
@@ -69,14 +69,11 @@ RDEPEND="
 	x11-libs/gtk+:2
 	>=x11-libs/libX11-1.5.0
 	x11-libs/libXcomposite
-	x11-libs/libXdamage
 	x11-libs/libXext
 	x11-libs/libXfixes
-	x11-libs/libXi
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	x11-libs/libXScrnSaver
-	x11-libs/libXtst
 	x11-libs/pango
 	x11-misc/xdg-utils
 "
@@ -96,35 +93,36 @@ pkg_nofetch() {
 }
 
 pkg_setup() {
+	CHROME_HOME="opt/google/chrome/"
 	chromium_suid_sandbox_check_kernel_config
 }
 
 src_install() {
-	CHROME_HOME="opt/google/chrome"
+	pax-mark m ${CHROME_HOME}chrome
+	rm -rf usr/share/menu || die
+	mv usr/share/doc/${PN} usr/share/doc/${PF} || die
+
+	pushd "${CHROME_HOME}locales" > /dev/null || die
+	chromium_remove_language_paks
+	popd
 
 	mv opt usr "${D}" || die
-	cd "${D}" || die
 
-	pax-mark m "${CHROME_HOME}/chrome"
-	chmod u+s "${CHROME_HOME}/chrome-sandbox" || die
-	rm -rf usr/share/menu || die
-	mv usr/share/doc/${MY_PN} usr/share/doc/${PF} || die
-	dosym /usr/$(get_libdir)/libudev.so "${CHROME_HOME}/libudev.so.0"
+	fperms u+s "/${CHROME_HOME}chrome-sandbox" || die
 
-	pushd "${CHROME_HOME}/locales" > /dev/null || die
-	chromium_remove_language_paks
-	popd > /dev/null || die
+	dosym /usr/$(get_libdir)/libudev.so ${CHROME_HOME}/libudev.so.0
 
 	if use plugins ; then
 		local plugins="--extra-plugin-dir=/usr/$(get_libdir)/nsbrowser/plugins"
 		sed -e "/^exec/ i set -- \"${plugins}\" \"\$@\"" \
-			-i "${CHROME_HOME}/${PN}" || die
+			-i "${D}${CHROME_HOME}google-chrome" || die
 	fi
 
-	domenu "${CHROME_HOME}/${PN}.desktop" || die
+	domenu "${D}${CHROME_HOME}google-chrome.desktop" || die
 	local size
 	for size in 16 22 24 32 48 64 128 256 ; do
-		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" ${PN}.png
+		insinto /usr/share/icons/hicolor/${size}x${size}/apps
+		newins "${D}${CHROME_HOME}product_logo_${size}.png" google-chrome.png
 	done
 }
 
