@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1e-r1.ebuild,v 1.13 2013/10/13 11:18:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.1e-r1.ebuild,v 1.14 2013/10/14 23:06:56 vapier Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://openssl/source/${P}.tar.gz
 LICENSE="openssl"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc -ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
-IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test vanilla zlib"
+IUSE="bindist gmp kerberos rfc3779 sse2 static-libs test +tls-heartbeat vanilla zlib"
 
 # Have the sub-libs in RDEPEND with [static-libs] since, logically,
 # our libssl.a depends on libz.a/etc... at runtime.
@@ -134,6 +134,7 @@ src_configure() {
 		$(use_ssl gmp gmp -lgmp) \
 		$(use_ssl kerberos krb5 --with-krb5-flavor=${krb5}) \
 		$(use_ssl rfc3779) \
+		$(use_ssl tls-heartbeat heartbeats) \
 		$(use_ssl zlib) \
 		--prefix="${EPREFIX}"/usr \
 		--openssldir="${EPREFIX}"${SSL_CNF_DIR} \
