@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.16.ebuild,v 1.1 2013/07/08 14:51:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.0.ebuild,v 1.1 2013/10/15 13:27:17 polynomial-c Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa doc extensions headless java pam pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
+IUSE="+additions alsa doc extensions headless java multilib pam pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -54,6 +54,7 @@ DEPEND="${RDEPEND}
 	sys-devel/bin86
 	sys-power/iasl
 	media-libs/libpng
+	media-libs/libvpx
 	pam? ( sys-libs/pam )
 	sys-libs/libcap
 	doc? (
@@ -185,17 +186,20 @@ src_prepare() {
 src_configure() {
 	local myconf
 	use alsa       || myconf+=" --disable-alsa"
+	use doc        || myconf+=" --disable-docs"
+	use java       || myconf+=" --disable-java"
 	use opengl     || myconf+=" --disable-opengl"
 	use pulseaudio || myconf+=" --disable-pulse"
 	use python     || myconf+=" --disable-python"
-	use java       || myconf+=" --disable-java"
 	use vboxwebsrv && myconf+=" --enable-webservice"
 	use vnc        && myconf+=" --enable-vnc"
-	use doc        || myconf+=" --disable-docs"
 	if ! use headless ; then
 		use qt4 || myconf+=" --disable-qt4"
 	else
 		myconf+=" --build-headless --disable-opengl"
+	fi
+	if use amd64 && ! use multilib ; then
+		myconf+=" --disable-vmmraw"
 	fi
 	# not an autoconf script
 	./configure \
@@ -216,7 +220,7 @@ src_compile() {
 	# strip-flags
 
 	MAKE="kmk" emake \
-		VBOX_VERSION_STRING='$(VBOX_VERSION_MAJOR).$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD)'_Gentoo_ \
+		VBOX_BUILD_PUBLISHER=_Gentoo \
 		TOOL_GCC3_CC="$(tc-getCC)" TOOL_GCC3_CXX="$(tc-getCXX)" \
 		TOOL_GCC3_AS="$(tc-getCC)" TOOL_GCC3_AR="$(tc-getAR)" \
 		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \
@@ -266,7 +270,12 @@ src_install() {
 		newconfd "${FILESDIR}"/vboxwebsrv-confd vboxwebsrv
 	fi
 
-	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,ExtPackHelperApp} *so *r0 *gc ; do
+	local GCFILE="*gc"
+	if use amd64 && ! use multilib ; then
+		GCFILE=""
+	fi
+
+	for each in VBox{Manage,SVC,XPCOMIPCD,Tunctl,NetAdpCtl,NetDHCP,ExtPackHelperApp} *so *r0 ${GCFILE} ; do
 		doins $each
 		fowners root:vboxusers /usr/$(get_libdir)/${PN}/${each}
 		fperms 0750 /usr/$(get_libdir)/${PN}/${each}

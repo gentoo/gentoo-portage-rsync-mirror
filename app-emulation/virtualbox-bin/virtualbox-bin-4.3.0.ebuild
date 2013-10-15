@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.2.16.ebuild,v 1.1 2013/07/08 14:49:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.0.ebuild,v 1.1 2013/10/15 13:24:59 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils unpacker fdo-mime gnome2 pax-utils udev
 
 MY_PV=${PV/beta/BETA}
 MY_PV=${MY_PV/rc/RC}
-VBOX_PV=${MY_PV}-86992
+VBOX_PV=${MY_PV}-89960
 SDK_PV=${VBOX_PV}
 EXTP_PV=${SDK_PV}
 MY_P=VirtualBox-${VBOX_PV}-Linux
@@ -18,7 +18,6 @@ DESCRIPTION="Family of powerful x86 virtualization products for enterprise as we
 HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}_amd64.run )
 	x86? ( http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}_x86.run )
-	sdk? ( http://download.virtualbox.org/virtualbox/${MY_PV}/VirtualBoxSDK-${SDK_PV}.zip )
 	http://download.virtualbox.org/virtualbox/${MY_PV}/${EXTP_PN}-${EXTP_PV}.vbox-extpack -> ${EXTP_PN}-${EXTP_PV}.tar.gz"
 
 LICENSE="GPL-2 PUEL"
@@ -26,6 +25,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp"
 RESTRICT="mirror"
+
+if [[ "${PV}" != *beta* ]] ; then
+	SRC_URI="${SRC_URI}
+		sdk? ( http://download.virtualbox.org/virtualbox/${MY_PV}/VirtualBoxSDK-${SDK_PV}.zip )"
+	IUSE="${IUSE} sdk"
+fi
 
 DEPEND="app-arch/unzip"
 
@@ -161,7 +166,7 @@ src_unpack() {
 	unpack ${EXTP_PN}-${EXTP_PV}.tar.gz
 	popd &>/dev/null || die
 
-	if use sdk; then
+	if [[ "${PV}" != *beta* ]] && use sdk ; then
 		unpack VirtualBoxSDK-${SDK_PV}.zip
 	fi
 }
@@ -207,7 +212,7 @@ src_install() {
 
 	doins UserManual.pdf
 
-	if use sdk ; then
+	if [[ "${PV}" != *beta* ]] && use sdk ; then
 		doins -r sdk
 	fi
 
@@ -238,10 +243,10 @@ src_install() {
 	fi
 
 	if use python; then
-		local pyver
-		for pyver in 2.5 2.6 2.7; do
-			if has_version "=dev-lang/python-${pyver}*" && [ -f "${S}/VBoxPython${pyver/./_}.so" ] ; then
-				doins VBoxPython${pyver/./_}.so
+		local pyslot
+		for pyslot in 2.6 2.7; do
+			if has_version "dev-lang/python:${pyslot}" && [ -f "${S}/VBoxPython${pyslot/./_}.so" ] ; then
+				doins VBoxPython${pyslot/./_}.so
 			fi
 		done
 	fi
