@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.68 2013/08/26 11:48:14 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.69 2013/10/15 18:35:34 pacho Exp $
+
+*redis-2.6.15-r1 (15 Oct 2013)
+
+  15 Oct 2013; Pacho Ramos <pacho@gentoo.org> +files/redis.service,
+  +files/redis.tmpfiles, +redis-2.6.15-r1.ebuild:
+  Add unit file (#488114 by Julien Sanchez)
 
   26 Aug 2013; Dirkjan Ochtman <djc@gentoo.org> -redis-2.4.10.ebuild,
   -redis-2.4.18.ebuild:

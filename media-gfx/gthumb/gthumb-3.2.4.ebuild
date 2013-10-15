@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.2.ebuild,v 1.2 2013/08/30 22:45:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.4.ebuild,v 1.1 2013/10/15 18:57:03 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -9,7 +9,7 @@ GNOME2_LA_PUNT="yes"
 inherit gnome2
 
 DESCRIPTION="Image viewer and browser for Gnome"
-HOMEPAGE="https://live.gnome.org/gthumb"
+HOMEPAGE="https://wiki.gnome.org/Apps/gthumb"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -54,7 +54,8 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	test? ( ~app-text/docbook-xml-dtd-4.1.2 )"
+	test? ( ~app-text/docbook-xml-dtd-4.1.2 )
+"
 # eautoreconf needs:
 #	gnome-base/gnome-common
 
