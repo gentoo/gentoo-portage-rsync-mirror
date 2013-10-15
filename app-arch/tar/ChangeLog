@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.190 2013/10/15 08:53:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.191 2013/10/15 09:03:17 polynomial-c Exp $
+
+  15 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> tar-1.23-r2.ebuild,
+  tar-1.23-r4.ebuild, tar-1.25.ebuild, tar-1.25-r1.ebuild, tar-1.26.ebuild,
+  tar-1.26-r1.ebuild, tar-1.27.ebuild:
+  Fixed license according to --version output from all versions in the tree.
 
 *tar-1.27 (15 Oct 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.220 2013/10/13 02:51:26 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.221 2013/10/15 09:18:33 polynomial-c Exp $
+
+  15 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> findutils-4.4.2.ebuild,
+  findutils-4.4.2-r1.ebuild, findutils-4.5.8.ebuild, findutils-4.5.9.ebuild,
+  findutils-4.5.10.ebuild, findutils-4.5.10-r1.ebuild, findutils-4.5.11.ebuild,
+  findutils-4.5.12.ebuild:
+  Fixed license according to --version output from all versions in the tree.
 
   13 Oct 2013; Rick Farina <zerochaos@gentoo.org> findutils-4.5.12.ebuild:
   fix for bug 487828 from Gregory M. Turner <gmt@be-evil.net>
