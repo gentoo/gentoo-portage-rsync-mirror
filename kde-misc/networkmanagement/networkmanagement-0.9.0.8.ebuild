@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.8.ebuild,v 1.4 2013/06/16 11:55:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.8.ebuild,v 1.5 2013/10/15 22:45:02 johu Exp $
 
 EAPI=5
 
@@ -24,7 +24,9 @@ DEPEND="
 	>=net-misc/networkmanager-0.9.4.0
 	openconnect? ( net-misc/openconnect )
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!kde-misc/plasma-nm
+"
 
 src_configure() {
 	local mycmakeargs=(

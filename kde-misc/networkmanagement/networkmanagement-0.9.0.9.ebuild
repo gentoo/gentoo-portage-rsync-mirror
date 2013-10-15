@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.9.ebuild,v 1.2 2013/10/12 11:09:58 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/networkmanagement/networkmanagement-0.9.0.9.ebuild,v 1.3 2013/10/15 22:45:02 johu Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!kde-base/solid
+	!kde-misc/plasma-nm
 "
 
 src_configure() {
