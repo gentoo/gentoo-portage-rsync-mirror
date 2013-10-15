@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_wsgi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.36 2012/11/27 19:37:31 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.37 2013/10/15 09:52:12 djc Exp $
+
+*mod_wsgi-3.4-r1 (15 Oct 2013)
+
+  15 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> -mod_wsgi-3.3.ebuild,
+  +mod_wsgi-3.4-r1.ebuild:
+  Remove old version, support python-single-r1 (bug 450022, thanks to Joachim
+  Breur <gentoo@jmbreuer.net> for the patch).
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

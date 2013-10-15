@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.125 2013/05/20 17:44:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.126 2013/10/15 09:32:26 grobian Exp $
+
+*tcsh-6.18.01-r2 (15 Oct 2013)
+
+  15 Oct 2013; Fabian Groffen <grobian@gentoo.org> +tcsh-6.18.01-r2.ebuild,
+  -tcsh-6.18.01-r1.ebuild:
+  Revbump for system malloc usage on Darwin to allow larger in memory lists
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> tcsh-6.18.01.ebuild:
   Stable for s390, wrt bug #466834

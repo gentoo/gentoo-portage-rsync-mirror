@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.18.01-r1.ebuild,v 1.2 2013/05/04 11:48:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.18.01-r2.ebuild,v 1.1 2013/10/15 09:32:26 grobian Exp $
 
 EAPI="3"
 
@@ -43,6 +43,9 @@ src_prepare() {
 	# fix gencat usage
 	sed -i -e 's/cat \$\^ \$> | \$(GENCAT) \$@/rm -f $@; $(GENCAT) $@ $> $^/' \
 		nls/Makefile.in || die
+
+	# use sysmalloc (for larger alloc sets) on Darwin also
+	sed -i -e 's/__MACHTEN__/__MACH__/' config_f.h || die
 
 	# unify ECHO behaviour
 	echo "#undef ECHO_STYLE" >> config_f.h

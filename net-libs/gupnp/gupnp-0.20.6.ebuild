@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.6.ebuild,v 1.1 2013/09/08 15:32:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.6.ebuild,v 1.2 2013/10/15 09:44:16 jlec Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ VALA_USE_DEPEND="vapigen"
 PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="xml"
 
-inherit gnome2 python-any-r1 vala
+inherit gnome2 python-r1 vala
 
 DESCRIPTION="An object-oriented framework for creating UPnP devs and control points"
 HOMEPAGE="http://gupnp.org/"
@@ -20,7 +20,10 @@ SLOT="0/4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="connman +introspection kernel_linux networkmanager"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RDEPEND="
+	${PYTHON_DEPS}
 	>=net-libs/gssdp-0.13.0:0=[introspection?]
 	>=net-libs/libsoup-2.28.2:2.4[introspection?]
 	>=dev-libs/glib-2.24:2
@@ -38,15 +41,10 @@ RDEPEND="
 	!net-libs/gupnp-vala
 "
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	>=dev-util/gtk-doc-am-1
 	sys-devel/gettext
 	virtual/pkgconfig
 "
-
-pkg_setup() {
-	python-any-r1_pkg_setup
-}
 
 src_prepare() {
 	use introspection && vala_src_prepare
@@ -67,5 +65,5 @@ src_configure() {
 
 src_install() {
 	gnome2_src_install
-	python_doscript tools/gupnp-binding-tool
+	python_parallel_foreach_impl python_doscript tools/gupnp-binding-tool
 }
