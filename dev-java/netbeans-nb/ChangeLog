@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/netbeans-nb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/ChangeLog,v 1.20 2013/02/25 13:19:02 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/ChangeLog,v 1.21 2013/10/16 09:50:31 fordfrog Exp $
+
+*netbeans-nb-7.4 (16 Oct 2013)
+
+  16 Oct 2013; Miroslav Šulc <fordfrog@gentoo.org> +netbeans-nb-7.4.ebuild,
+  +files/7.4/keychain-support.patch:
+  version bump
 
   25 Feb 2013; Miroslav Šulc <fordfrog@gentoo.org>
   +files/7.3/keychain-support.patch:

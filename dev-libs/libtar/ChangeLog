@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libtar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.34 2013/10/14 10:32:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtar/ChangeLog,v 1.35 2013/10/16 09:36:00 pinkbyte Exp $
+
+  16 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> libtar-1.2.20-r2.ebuild:
+  Stable on x86, wrt bug #487420
 
   14 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> libtar-1.2.20-r2.ebuild:
   Restore amd64 stable keyword

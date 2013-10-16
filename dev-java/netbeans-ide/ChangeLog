@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/netbeans-ide
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/ChangeLog,v 1.22 2013/05/09 14:42:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/ChangeLog,v 1.23 2013/10/16 09:47:25 fordfrog Exp $
+
+*netbeans-ide-7.4 (16 Oct 2013)
+
+  16 Oct 2013; Miroslav Šulc <fordfrog@gentoo.org> +netbeans-ide-7.4.ebuild:
+  version bump
 
   09 May 2013; Tom Wijsman <TomWij@gentoo.org> netbeans-ide-7.3.ebuild:
   Allow newer versions than Java 1.6 for Netbeans IDE, tested and compiles with

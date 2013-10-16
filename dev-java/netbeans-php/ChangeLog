@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/netbeans-php
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/ChangeLog,v 1.18 2013/02/21 15:52:10 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/ChangeLog,v 1.19 2013/10/16 09:50:56 fordfrog Exp $
+
+*netbeans-php-7.4 (16 Oct 2013)
+
+  16 Oct 2013; Miroslav Šulc <fordfrog@gentoo.org> +netbeans-php-7.4.ebuild:
+  version bump
 
 *netbeans-php-7.3 (21 Feb 2013)
 
