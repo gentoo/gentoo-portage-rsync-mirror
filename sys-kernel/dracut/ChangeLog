@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.136 2013/10/08 18:17:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.137 2013/10/16 21:40:17 aidecoe Exp $
+
+*dracut-034-r1 (16 Oct 2013)
+
+  16 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-034-r1.ebuild,
+  +files/034-0006-resume-fix-swap-detection-in-hostonly.patch:
+  Fixed bug #487322 (resume support in hostonly mode) and bug #486516
+  (redundant inclusion of libs from lib32 directory).
+
+  Thanks to Alexander Tsoy <alexander@tsoy.me> for patch for bug #486516.
 
   08 Oct 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-031.ebuild:
   Removed old revision of 031.
