@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/vim-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/ChangeLog,v 1.4 2013/09/05 18:18:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/ChangeLog,v 1.5 2013/10/16 12:20:28 mgorny Exp $
+
+*vim-qt-20130201-r1 (16 Oct 2013)
+*vim-qt-20130220-r1 (16 Oct 2013)
+
+  16 Oct 2013; Michał Górny <mgorny@gentoo.org> +vim-qt-20130201-r1.ebuild,
+  +vim-qt-20130220-r1.ebuild, -vim-qt-20130201.ebuild, -vim-qt-20130220.ebuild:
+  Fix Python support, use python-single-r1 since the package links to a specific
+  version of Python.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> vim-qt-20130201.ebuild,
   vim-qt-20130220.ebuild:

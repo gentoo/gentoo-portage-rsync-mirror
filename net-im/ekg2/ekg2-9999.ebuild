@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-9999.ebuild,v 1.7 2013/09/05 18:59:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-9999.ebuild,v 1.8 2013/10/16 12:13:32 mgorny Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="git://github.com/leafnode/${PN}.git
 	http://github.com/leafnode/${PN}.git"
 
-inherit git-2
+inherit git-r3
 #endif
 
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,26 +25,26 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gadu gpm gpg gtk minimal ncurses nls nntp openssl
 	perl python readline rss spell sqlite sqlite2 ssl xmpp unicode zlib"
 
-RDEPEND="dev-libs/glib:2
-	gadu? ( net-libs/libgadu )
-	gpg? ( app-crypt/gpgme )
-	gtk? ( x11-libs/gtk+:2 )
-	nls? ( virtual/libintl )
-	openssl? ( dev-libs/openssl )
-	perl? ( dev-lang/perl )
+RDEPEND="dev-libs/glib:2=
+	gadu? ( net-libs/libgadu:0= )
+	gpg? ( app-crypt/gpgme:1= )
+	gtk? ( x11-libs/gtk+:2= )
+	nls? ( virtual/libintl:0= )
+	openssl? ( dev-libs/openssl:0= )
+	perl? ( dev-lang/perl:0= )
 	python? ( ${PYTHON_DEPS} )
-	readline? ( sys-libs/readline )
-	rss? ( dev-libs/expat )
-	ssl? ( net-libs/gnutls )
-	xmpp? ( dev-libs/expat )
-	zlib? ( sys-libs/zlib )
+	readline? ( sys-libs/readline:0= )
+	rss? ( dev-libs/expat:0= )
+	ssl? ( net-libs/gnutls:0= )
+	xmpp? ( dev-libs/expat:0= )
+	zlib? ( sys-libs/zlib:0= )
 
-	ncurses? ( sys-libs/ncurses[unicode=]
-		gpm? ( sys-libs/gpm )
-		spell? ( app-text/aspell ) )
+	ncurses? ( sys-libs/ncurses:5=[unicode=]
+		gpm? ( sys-libs/gpm:0= )
+		spell? ( app-text/aspell:0= ) )
 	sqlite? (
-		!sqlite2? ( dev-db/sqlite:3 )
-		sqlite2? ( dev-db/sqlite:0 ) )"
+		!sqlite2? ( dev-db/sqlite:3= )
+		sqlite2? ( dev-db/sqlite:0= ) )"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
@@ -63,7 +63,7 @@ SRC_URI=
 
 pkg_pretend() {
 	if ! use gtk && ! use ncurses && ! use readline; then
-		ewarn 'ekg2 is being compiled without any frontend, you should consider'
+		ewarn 'ekg2 is being compiled without any frontend. You should consider'
 		ewarn 'enabling at least one of following USEflags:'
 		ewarn '  gtk, ncurses, readline.'
 	fi

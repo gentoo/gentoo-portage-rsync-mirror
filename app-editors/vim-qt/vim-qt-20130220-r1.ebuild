@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/vim-qt-20130201.ebuild,v 1.3 2013/09/05 18:18:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-qt/vim-qt-20130220-r1.ebuild,v 1.1 2013/10/16 12:20:28 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="threads"
-inherit eutils fdo-mime flag-o-matic python-any-r1
+inherit eutils fdo-mime flag-o-matic python-single-r1
 
 DESCRIPTION="Qt GUI version of the Vim text editor"
 HOMEPAGE="https://bitbucket.org/equalsraf/vim-qt/wiki/Home"
@@ -40,9 +40,11 @@ RDEPEND="app-admin/eselect-vi
 	ruby? ( || ( dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) )"
 DEPEND="${RDEPEND}"
 
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+
 pkg_setup() {
 	export LC_COLLATE="C" # prevent locale brokenness bug #82186
-	use python && python-any-r1_pkg_setup
+	use python && python-single-r1_pkg_setup
 }
 
 src_configure() {
