@@ -1,6 +1,18 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.54 2013/09/16 11:55:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.55 2013/10/16 01:07:10 tomwij Exp $
+
+*broadcom-sta-6.30.223.141 (16 Oct 2013)
+
+  16 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +broadcom-sta-6.30.223.141.ebuild,
+  +files/broadcom-sta-6.30.223.141-eth-to-wlan.patch,
+  +files/broadcom-sta-6.30.223.141-gcc.patch,
+  +files/broadcom-sta-6.30.223.141-license.patch,
+  +files/broadcom-sta-6.30.223.141-linux-recent.patch,
+  +files/broadcom-sta-6.30.223.141-makefile.patch:
+  Version bump to 6.30.223.141; proxied commit for M. B. (tomboy64), fixes bug
+  #484676.
 
   16 Sep 2013; Sergey Popov <pinkbyte@gentoo.org>
   -broadcom-sta-5.100.82.112-r2.ebuild,
