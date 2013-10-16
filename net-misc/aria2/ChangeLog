@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/aria2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.90 2013/03/28 09:37:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/ChangeLog,v 1.91 2013/10/16 20:57:56 mgorny Exp $
+
+*aria2-1.18.0 (16 Oct 2013)
+
+  16 Oct 2013; Michał Górny <mgorny@gentoo.org> +aria2-1.18.0.ebuild,
+  metadata.xml:
+  Version bump. Add SLOT operator dependencies. Enable libaria2.
 
   28 Mar 2013; Michał Górny <mgorny@gentoo.org> -aria2-1.12.1.ebuild,
   -aria2-1.14.1.ebuild, -aria2-1.15.0.ebuild, -aria2-1.16.0.ebuild,
