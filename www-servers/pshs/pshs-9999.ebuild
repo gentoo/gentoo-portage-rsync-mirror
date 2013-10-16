@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/pshs-9999.ebuild,v 1.1 2012/12/15 12:44:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/pshs-9999.ebuild,v 1.2 2013/10/16 13:27:31 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 #if LIVE
 AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
 
-inherit git-2
+inherit git-r3
 #endif
 
 inherit autotools-utils
@@ -22,9 +22,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+magic +netlink upnp"
 
-RDEPEND=">=dev-libs/libevent-2
-	magic? ( sys-apps/file )
-	upnp? ( net-libs/miniupnpc )"
+RDEPEND=">=dev-libs/libevent-2:0=
+	magic? ( sys-apps/file:0= )
+	upnp? ( net-libs/miniupnpc:0= )"
 DEPEND="${RDEPEND}
 	netlink? ( sys-apps/iproute2
 		>=sys-kernel/linux-headers-2.6.27 )"

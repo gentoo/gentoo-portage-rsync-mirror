@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/pshs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/ChangeLog,v 1.5 2012/12/15 12:44:58 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/ChangeLog,v 1.6 2013/10/16 13:27:31 mgorny Exp $
+
+  16 Oct 2013; Michał Górny <mgorny@gentoo.org> pshs-9999.ebuild:
+  Switch to git-r3. Add SLOT operators to dependencies.
 
 *pshs-9999 (15 Dec 2012)
 

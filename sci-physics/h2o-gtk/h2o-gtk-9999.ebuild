@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/h2o-gtk/h2o-gtk-9999.ebuild,v 1.1 2012/12/15 13:02:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/h2o-gtk/h2o-gtk-9999.ebuild,v 1.2 2013/10/16 13:21:02 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 #if LIVE
 AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
 
-inherit git-2
+inherit git-r3
 #endif
 
 inherit autotools-utils
@@ -22,9 +22,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-cpp/gtkmm
-	sci-libs/libh2oxx
-	sci-libs/plotmm"
+RDEPEND="dev-cpp/gtkmm:2.4=
+	sci-libs/libh2oxx:0=
+	sci-libs/plotmm:0="
 DEPEND="${RDEPEND}"
 
 #if LIVE

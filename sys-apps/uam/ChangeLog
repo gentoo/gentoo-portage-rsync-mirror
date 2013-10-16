@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/uam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.32 2013/09/26 21:16:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.33 2013/10/16 13:23:16 mgorny Exp $
+
+  16 Oct 2013; Michał Górny <mgorny@gentoo.org> uam-9999.ebuild:
+  Switch to git-r3.
 
 *uam-0.3.2 (26 Sep 2013)
 
