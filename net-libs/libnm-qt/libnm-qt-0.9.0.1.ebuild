@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/libnm-qt-0.9.0.1.ebuild,v 1.1 2013/10/15 22:28:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/libnm-qt-0.9.0.1.ebuild,v 1.2 2013/10/16 18:38:18 johu Exp $
 
 EAPI=5
 
@@ -32,7 +32,10 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 "
 
-PATCHES=( "${FILESDIR}/${P}-tests-optional.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-libmm-optional.patch"
+	"${FILESDIR}/${P}-tests-optional.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(

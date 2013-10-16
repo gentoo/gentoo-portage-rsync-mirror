@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnm-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/ChangeLog,v 1.1 2013/10/15 22:28:39 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnm-qt/ChangeLog,v 1.2 2013/10/16 18:38:18 johu Exp $
+
+  16 Oct 2013; Johannes Huber <johu@gentoo.org>
+  +files/libnm-qt-0.9.0.1-libmm-optional.patch, libnm-qt-0.9.0.1.ebuild:
+  Backport upstream patch spotted by Bartosz Brachaczek
+  <b.brachaczek@gmail.com>. Fixes build with USE="-modemmanager" and net-libs
+  /libmm-qt not installed, bug #488238.
 
 *libnm-qt-0.9.0.1 (15 Oct 2013)
 
@@ -8,4 +14,3 @@
   +files/libnm-qt-0.9.0.1-tests-optional.patch, +metadata.xml:
   New package. Import from kde overlay, Qt networkmanager abstraction library.
   Will be required for kde-misc/plasma-nm.
-
