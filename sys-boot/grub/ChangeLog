@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.283 2013/10/14 00:15:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.284 2013/10/16 14:58:17 polynomial-c Exp $
+
+*grub-2.00_p5107-r2 (16 Oct 2013)
+
+  16 Oct 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -grub-2.00_p5107-r1.ebuild, +grub-2.00_p5107-r2.ebuild:
+  Fixed automagic linking against libdevmapper.so (bug #488234). Permission
+  kindly granted by floppym. Revbump comitted straight to stable.
 
   14 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r1.ebuild:
   Stable on amd64 and x86, bug 455544.

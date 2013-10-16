@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r1.ebuild,v 1.8 2013/10/14 00:15:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.1 2013/10/16 14:58:17 polynomial-c Exp $
 
 EAPI=5
 
@@ -179,6 +179,7 @@ grub_configure() {
 		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html
 		$(use_enable debug mm-debug)
 		$(use_enable debug grub-emu-usb)
+		$(use_enable device-mapper)
 		$(use_enable mount grub-mount)
 		$(use_enable nls)
 		$(use_enable truetype grub-mkfont)
