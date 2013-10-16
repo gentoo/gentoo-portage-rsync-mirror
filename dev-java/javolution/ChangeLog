@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/javolution
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.15 2008/03/30 22:05:30 ken69267 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javolution/ChangeLog,v 1.16 2013/10/16 12:49:26 tomwij Exp $
+
+*javolution-6.0.0 (16 Oct 2013)
+
+  16 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/javolution-6.0.0-javadoc-fix.patch, +javolution-6.0.0.ebuild:
+  Version bump to 6.0.0.
 
   30 Mar 2008; Kenneth Prugh <ken69267@gentoo.org> javolution-4.0.2.ebuild:
   amd64 stable, bug #214776
@@ -69,4 +75,3 @@
   14 Nov 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +javolution-1.1.0.ebuild:
   initial import, ebuild submitted by Jan Brinkmann <lucky@the-luckyduck.de>
-
