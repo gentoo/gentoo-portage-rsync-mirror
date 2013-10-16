@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.57 2013/09/22 06:49:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.58 2013/10/16 06:07:34 graaff Exp $
+
+*bundler-1.3.5-r1 (16 Oct 2013)
+
+  16 Oct 2013; Hans de Graaff <graaff@gentoo.org> +bundler-1.3.5-r1.ebuild:
+  Add ruby20, fixing bug 476230.
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bundler-1.3.5.ebuild:
   Stable for x86, wrt bug #484444
