@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.105 2013/08/04 11:33:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.106 2013/10/16 04:16:30 robbat2 Exp $
+
+*sg3_utils-1.37 (16 Oct 2013)
+
+  16 Oct 2013; Robin H. Johnson <robbat2@gentoo.org> +sg3_utils-1.37.ebuild:
+  Bump.
 
   04 Aug 2013; Agostino Sarubbo <ago@gentoo.org> sg3_utils-1.36.ebuild:
   Stable for ia64, wrt bug #477568
