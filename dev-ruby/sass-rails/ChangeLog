@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sass-rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.10 2013/10/13 22:11:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.11 2013/10/16 05:57:43 graaff Exp $
+
+*sass-rails-4.0.1 (16 Oct 2013)
+
+  16 Oct 2013; Hans de Graaff <graaff@gentoo.org> +sass-rails-4.0.1.ebuild:
+  Version bump.
 
   13 Oct 2013; Markus Meier <maekke@gentoo.org> sass-rails-4.0.0.ebuild:
   add ~arm, bug #487206
