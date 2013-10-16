@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.74 2013/09/18 21:15:20 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.75 2013/10/15 23:16:42 chutzpah Exp $
+
+*ganeti-2.7.2 (15 Oct 2013)
+
+  15 Oct 2013; Patrick McLean <chutzpah@gentoo.org> -ganeti-2.7.1.ebuild,
+  +ganeti-2.7.2.ebuild, metadata.xml:
+  Version bump, install logrotate script included in source (bug #433153).
+  Remove version 2.7.1.
 
 *ganeti-2.7.1 (18 Sep 2013)
 

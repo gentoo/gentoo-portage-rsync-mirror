@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install preinst prepare setup
+DEPEND=>=virtual/jdk-1.5 dev-java/felix-bundlerepository:0 dev-java/felix-gogo-runtime:0 dev-java/osgi-compendium:0 dev-java/osgi-core-api:0 >=dev-java/java-config-2.1.9-r1 >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
+DESCRIPTION=Felix Gogo Command
+EAPI=5
+HOMEPAGE=http://felix.apache.org/site/apache-felix-gogo.html
+IUSE=elibc_FreeBSD elibc_FreeBSD elibc_FreeBSD
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=>=virtual/jre-1.5 dev-java/felix-bundlerepository:0 dev-java/felix-gogo-runtime:0 dev-java/osgi-compendium:0 dev-java/osgi-core-api:0 >=dev-java/java-config-2.1.9-r1
+SLOT=0
+SRC_URI=mirror://apache/felix/org.apache.felix.gogo.command-0.12.0-project.tar.gz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-osgi	fb81d0ede6b5759b64ec19226fe6d2f2	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=1bb29424b8338ac2828681c64e5b1529

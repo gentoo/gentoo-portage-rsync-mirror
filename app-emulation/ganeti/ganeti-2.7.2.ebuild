@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.7.1.ebuild,v 1.1 2013/09/18 21:15:20 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.7.2.ebuild,v 1.1 2013/10/15 23:16:42 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_{6,7})
@@ -99,8 +99,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.6-fix-args.patch"
 	epatch "${FILESDIR}/${PN}-2.6-add-pgrep.patch"
 	epatch "${FILESDIR}/${PN}-2.7-fix-tests.patch"
-
-	python_fix_shebang tools daemons/import-export lib/ovf.py lib/tools
 }
 
 src_configure () {
@@ -113,7 +111,7 @@ src_configure () {
 		$(use_enable syslog) \
 		$(usex filestorage "--with-file-storage-dir=" "--with-file-storage-dir=" "/var/lib/ganeti-storage/file" "no") \
 		$(usex sharedstorage "--with-shared-file-storage-dir=" "--with-shared-file-storage-dir=" "/var/lib/ganeti-storage/shared" "no") \
-		$(usex kvm "--with-kvm-path=/usr/bin/qemu-kvm" '' '' '') \
+		$(usex kvm '--with-kvm-path=' '' '/usr/bin/qemu-kvm' '') \
 		$(usex haskell-daemons "--enable-confd=haskell" '' '' '')
 }
 
@@ -127,19 +125,26 @@ src_install () {
 	dodoc INSTALL UPGRADE NEWS README doc/*.rst
 	dohtml -r doc/html/*
 	rm -rf "${D}"/usr/share/doc/ganeti
+
 	docinto examples
-	#dodoc doc/examples/{basic-oob,ganeti.cron,gnt-config-backup}
 	dodoc doc/examples/{ganeti.cron,gnt-config-backup}
+
 	docinto examples/hooks
 	dodoc doc/examples/hooks/{ipsec,ethers}
+
 	insinto /etc/cron.d
-	newins doc/examples/ganeti.cron ganeti
+	newins doc/examples/ganeti.cron ${PN}
+
+	insinto /etc/logrotate.d
+	newins doc/examples/ganeti.logrotate ${PN}
 
 	python_fix_shebang "${D}"/usr/sbin/ "${D}"/usr/"$(get_libdir)"/ganeti/ensure-dirs
 
 	keepdir /var/{lib,log,run}/ganeti/
 	keepdir /usr/share/ganeti/os/
 	keepdir /var/lib/ganeti-storage/{export,file,shared}/
+
+	python_fix_shebang "${ED}"
 }
 
 src_test () {
