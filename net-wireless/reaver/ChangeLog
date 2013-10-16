@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/reaver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/reaver/ChangeLog,v 1.2 2013/03/17 17:11:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/reaver/ChangeLog,v 1.3 2013/10/16 17:36:22 maksbotan Exp $
+
+*reaver-1.4-r1 (16 Oct 2013)
+
+  16 Oct 2013; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/reaver-1.4_var_db.patch, +reaver-1.4-r1.ebuild:
+  Store database in /var/db instead of /etc, bug #424840. Thanks to Oleg
+  Kravchenko.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml and add missing attribute

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.97 2013/10/14 18:02:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.98 2013/10/16 17:56:29 jer Exp $
+
+  16 Oct 2013; Jeroen Roovers <jer@gentoo.org> cython-0.19.1.ebuild:
+  Stable for HPPA (bug #487896).
 
   14 Oct 2013; Tony Vroon <chainsaw@gentoo.org> cython-0.19.1.ebuild:
   Marked stable on AMD64 based on arch tester report by Elijah "Armageddon" El
