@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.115 2013/09/21 15:27:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.116 2013/10/16 14:25:59 jer Exp $
+
+  16 Oct 2013; Jeroen Roovers <jer@gentoo.org> metalog-3-r1.ebuild:
+  Stable for HPPA (bug #486310).
 
 *metalog-3-r1 (21 Sep 2013)
 

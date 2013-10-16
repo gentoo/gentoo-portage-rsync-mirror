@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/shorewall-core-4.5.18-r1.ebuild,v 1.1 2013/09/22 13:14:41 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-core/shorewall-core-4.5.18-r1.ebuild,v 1.2 2013/10/16 14:07:30 jer Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www1.shorewall.net/pub/shorewall/${MY_PV_TREE}/${MY_P}/${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="selinux"
 
 DEPEND=">=net-firewall/iptables-1.2.4
