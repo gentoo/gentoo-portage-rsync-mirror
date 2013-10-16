@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_wsgi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.37 2013/10/15 09:52:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.38 2013/10/16 15:07:59 djc Exp $
+
+  16 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> mod_wsgi-3.4-r1.ebuild:
+  We no longer support python-3.1, remove it.
 
 *mod_wsgi-3.4-r1 (15 Oct 2013)
 

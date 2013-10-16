@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-3.4-r1.ebuild,v 1.1 2013/10/15 09:52:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-3.4-r1.ebuild,v 1.2 2013/10/16 15:07:59 djc Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python2_6 python2_7 python3_1 python3_2 python3_3 )
+PYTHON_COMPAT=( python2_6 python2_7 python3_2 python3_3 )
 PYTHON_REQ_USE="threads"
 
 inherit apache-module eutils python-single-r1
