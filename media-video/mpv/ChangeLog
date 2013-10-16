@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.29 2013/10/05 07:51:39 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.30 2013/10/16 17:07:27 tomwij Exp $
+
+*mpv-0.2.0 (16 Oct 2013)
+
+  16 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +mpv-0.2.0.ebuild,
+  mpv-9999.ebuild:
+  Version bump to 0.2.0, LICENSE recently switched from GPL-3 to GPL-2; proxied
+  commit for Nikoli, fixes bug #488254.
 
   05 Oct 2013; Alexander Vershilov <qnikst@gentoo.org> metadata.xml,
   mpv-9999.ebuild:
