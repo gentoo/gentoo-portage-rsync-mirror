@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-magic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.4 2013/10/12 18:52:45 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.5 2013/10/16 19:34:37 thev00d00 Exp $
+
+*python-magic-0.4.6-r1 (16 Oct 2013)
+
+  16 Oct 2013; Ian Whyman <thev00d00@gentoo.org> +python-magic-0.4.6-r1.ebuild,
+  -python-magic-0.4.3.ebuild, -python-magic-0.4.6.ebuild:
+  Block python use on sys-apps/file #488270
 
 *python-magic-0.4.6 (12 Oct 2013)
 

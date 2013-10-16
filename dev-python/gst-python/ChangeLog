@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.126 2013/10/16 13:31:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.127 2013/10/16 19:59:27 ago Exp $
+
+  16 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gst-python-0.10.22-r1.ebuild:
+  Stable for ia64, wrt bug #480908
 
   16 Oct 2013; Jeroen Roovers <jer@gentoo.org> gst-python-0.10.22-r1.ebuild:
   Stable for HPPA (bug #480908).
