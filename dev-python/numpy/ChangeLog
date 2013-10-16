@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.206 2013/10/14 17:59:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.207 2013/10/16 14:00:34 jer Exp $
+
+  16 Oct 2013; Jeroen Roovers <jer@gentoo.org> numpy-1.7.1.ebuild:
+  Stable for HPPA (bug #487870).
 
   14 Oct 2013; Tony Vroon <chainsaw@gentoo.org> numpy-1.7.1.ebuild:
   Marked stable on AMD64 based on arch tester report by Elijah "Armageddon" El

@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinynotify-send/tinynotify-send-9999.ebuild,v 1.2 2013/03/19 16:16:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinynotify-send/tinynotify-send-9999.ebuild,v 1.3 2013/10/16 13:36:35 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 #if LIVE
 AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="http://bitbucket.org/mgorny/${PN}.git"
 
-inherit git-2
+inherit git-r3
 #endif
 
 inherit autotools-utils
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-admin/eselect-notify-send
-	x11-libs/libtinynotify
+	x11-libs/libtinynotify:0=
 	~x11-libs/libtinynotify-cli-${PV}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

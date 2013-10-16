@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sw-notify-send/sw-notify-send-9999.ebuild,v 1.1 2012/12/15 12:47:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sw-notify-send/sw-notify-send-9999.ebuild,v 1.2 2013/10/16 13:38:07 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 #if LIVE
 AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="http://bitbucket.org/mgorny/tinynotify-send.git"
 
-inherit git-2
+inherit git-r3
 #endif
 
 inherit autotools-utils
@@ -25,15 +25,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/libtinynotify
+RDEPEND="x11-libs/libtinynotify:0=
 	~x11-libs/libtinynotify-cli-${PV}
-	x11-libs/libtinynotify-systemwide"
+	x11-libs/libtinynotify-systemwide:0="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
 #if LIVE
+EGIT_CHECKOUT_DIR=${WORKDIR}/${MY_P}
 KEYWORDS=
 SRC_URI=
 DEPEND="${DEPEND}
