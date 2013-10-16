@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.41 2013/07/22 20:06:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.42 2013/10/16 02:36:59 floppym Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ DEPEND="
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 	dev-python/beautifulsoup:python-2[${PYTHON_USEDEP}]
 	>=dev-python/beautifulsoup-4.1:4[${PYTHON_USEDEP}]
-	<dev-python/beautifulsoup-4.3:4[${PYTHON_USEDEP}]
+	<dev-python/beautifulsoup-4.4:4[${PYTHON_USEDEP}]
 	dev-python/html5lib[${PYTHON_USEDEP}]
 	dev-python/jinja[${PYTHON_USEDEP}]
 	>=dev-python/jsonschema-2.0[${PYTHON_USEDEP}]
@@ -45,7 +45,7 @@ DEPEND="
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
 	dev-python/python-tvrage[${PYTHON_USEDEP}]
 	>=dev-python/requests-1.0[${PYTHON_USEDEP}]
-	<dev-python/requests-1.99
+	<dev-python/requests-2.99[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
 "
