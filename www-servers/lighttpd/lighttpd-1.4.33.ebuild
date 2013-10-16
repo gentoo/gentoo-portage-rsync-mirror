@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.33.ebuild,v 1.1 2013/09/28 13:07:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.33.ebuild,v 1.2 2013/10/16 20:26:13 hwoarang Exp $
 
 EAPI="4"
 inherit base autotools eutils depend.php readme.gentoo user systemd
@@ -45,6 +45,8 @@ DEPEND="${RDEPEND}
 		virtual/perl-Test-Harness
 		dev-libs/fcgi
 	)"
+
+PATCHES=( "${FILESDIR}"/${P}-fix-ipv6-build.patch )
 
 # update certain parts of lighttpd.conf based on conditionals
 update_config() {

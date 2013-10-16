@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.311 2013/09/28 13:07:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.312 2013/10/16 20:26:13 hwoarang Exp $
+
+  16 Oct 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/lighttpd-1.4.33-fix-ipv6-build.patch, lighttpd-1.4.33.ebuild:
+  Add upstream patch to restore build for USE=-ipv6. Bug #486426
 
 *lighttpd-1.4.33 (28 Sep 2013)
 
