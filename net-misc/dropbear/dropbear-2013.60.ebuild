@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2013.59.ebuild,v 1.1 2013/10/12 21:13:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2013.60.ebuild,v 1.1 2013/10/16 16:50:41 vapier Exp $
 
 EAPI="4"
 
@@ -39,8 +39,6 @@ set_options() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.46-dbscp.patch
-	epatch "${FILESDIR}"/${P}-exec-prefix.patch
-	epatch "${FILESDIR}"/${P}-scp-inst.patch
 	sed -i '1i#define _GNU_SOURCE' scpmisc.c || die
 	sed -i \
 		-e '/SFTPSERVER_PATH/s:".*":"/usr/lib/misc/sftp-server":' \
@@ -49,17 +47,13 @@ src_prepare() {
 	sed -i \
 		-e '/pam_start/s:sshd:dropbear:' \
 		svr-authpam.c || die
-	# patch sent upstream to make configure option work.
-	# XXX: Need to add libtomcrypt to the tree and change this to 0.
-	sed -i \
-		-e '/BUNDLED_LIBTOM=1/s:=1:=1:' \
-		configure || die
 	restore_config options.h
 }
 
 src_configure() {
+	# XXX: Need to add libtomcrypt to the tree and re-enable this.
+	#	--disable-bundled-libtom
 	econf \
-		--disable-bundled-libtom \
 		$(use_enable zlib) \
 		$(use_enable pam) \
 		$(use_enable !bsdpty openpty) \
