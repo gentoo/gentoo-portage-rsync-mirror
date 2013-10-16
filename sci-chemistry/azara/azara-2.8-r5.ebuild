@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.8-r5.ebuild,v 1.2 2013/10/15 13:20:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.8-r5.ebuild,v 1.3 2013/10/16 07:30:30 jlec Exp $
 
 EAPI=5
 
@@ -58,6 +58,7 @@ src_compile() {
 	emake ${mymake}
 
 	compilation() {
+		python_export PYTHON_CFLAGS PYTHON_LIBS
 		cd "${BUILD_DIR}" || die
 		emake DataRows_clean
 		emake \
