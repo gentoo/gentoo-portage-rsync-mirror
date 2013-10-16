@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.0.ebuild,v 1.1 2013/10/15 13:24:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.3.0.ebuild,v 1.2 2013/10/16 06:46:45 polynomial-c Exp $
 
 EAPI=5
 
@@ -23,13 +23,13 @@ SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${MY_PV}/${MY_P}_amd
 LICENSE="GPL-2 PUEL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp"
+IUSE="+additions +chm headless python vboxwebsrv rdesktop-vrdp"
 RESTRICT="mirror"
 
 if [[ "${PV}" != *beta* ]] ; then
-	SRC_URI="${SRC_URI}
+	SRC_URI+="
 		sdk? ( http://download.virtualbox.org/virtualbox/${MY_PV}/VirtualBoxSDK-${SDK_PV}.zip )"
-	IUSE="${IUSE} sdk"
+	IUSE+=" sdk"
 fi
 
 DEPEND="app-arch/unzip"
@@ -64,7 +64,6 @@ RDEPEND="!!app-emulation/virtualbox
 	python? ( || (
 			dev-lang/python:2.7
 			dev-lang/python:2.6
-			dev-lang/python:2.5
 		) )"
 
 S=${WORKDIR}
@@ -77,7 +76,6 @@ QA_TEXTRELS_x86="opt/VirtualBox/VBoxGuestPropSvc.so
 	opt/VirtualBox/VBoxDD2.so
 	opt/VirtualBox/VBoxOGLrenderspu.so
 	opt/VirtualBox/VBoxPython.so
-	opt/VirtualBox/VBoxPython2_5.so
 	opt/VirtualBox/VBoxPython2_6.so
 	opt/VirtualBox/VBoxPython2_7.so
 	opt/VirtualBox/VBoxDD.so
@@ -98,7 +96,6 @@ QA_TEXTRELS_x86="opt/VirtualBox/VBoxGuestPropSvc.so
 	opt/VirtualBox/components/VBoxC.so
 	opt/VirtualBox/components/VBoxSVCM.so
 	opt/VirtualBox/VBoxREM32.so
-	opt/VirtualBox/VBoxPython2_5.so
 	opt/VirtualBox/VBoxXPCOMC.so
 	opt/VirtualBox/VBoxOGLhostcrutil.so
 	opt/VirtualBox/VBoxNetDHCP.so
@@ -120,7 +117,6 @@ QA_PRESTRIPPED="opt/VirtualBox/VBoxDD.so
 	opt/VirtualBox/VBoxOGLhosterrorspu.so
 	opt/VirtualBox/VBoxOGLrenderspu.so
 	opt/VirtualBox/VBoxPython.so
-	opt/VirtualBox/VBoxPython2_5.so
 	opt/VirtualBox/VBoxPython2_6.so
 	opt/VirtualBox/VBoxPython2_7.so
 	opt/VirtualBox/VBoxREM.so

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.162 2013/10/15 13:24:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.163 2013/10/16 06:46:45 polynomial-c Exp $
+
+  16 Oct 2013; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-bin-4.1.26.ebuild, virtualbox-bin-4.2.18.ebuild,
+  virtualbox-bin-4.3.0.ebuild:
+  Removed duplicate IUSE entry and references to no longer available
+  python-2.5. Thanks to Arfrever for reporting this in IRC.
 
 *virtualbox-bin-4.3.0 (15 Oct 2013)
 
