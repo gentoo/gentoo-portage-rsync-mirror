@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install postinst preinst
+DEFINED_PHASES=configure install postinst preinst prepare
 DESCRIPTION=Minimal baselayout and e-functions for Gentoo Prefix installs
 EAPI=3
 HOMEPAGE=http://www.gentoo.org/
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gentoo/baselayout-2.2.tar.bz2 http://dev.gentoo.org/~vapier/dist/baselayout-2.2.tar.bz2 http://dev.gentoo.org/~grobian/distfiles/einfo-1.0.3.tar.xz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=022dec8358a1728d0c655115e5e8bd19
+_md5_=52086991e2eca57035d4bfea696cad11

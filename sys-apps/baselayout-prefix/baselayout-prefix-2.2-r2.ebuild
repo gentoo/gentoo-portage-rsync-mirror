@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r2.ebuild,v 1.6 2013/09/25 17:03:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r2.ebuild,v 1.7 2013/10/17 14:35:50 haubi Exp $
 
 EAPI=3
 
@@ -26,6 +26,11 @@ pkg_preinst() {
 	# pending updates to avoid user having to do etc-update (and make the
 	# pkg_postinst logic simpler).
 	rm -f "${EROOT}"/etc/._cfg????_gentoo-release
+}
+
+src_prepare() {
+	# POSIX specifies <termios.h>, AIX lacks <sys/termios.h>
+	sed -i -e 's|<sys/termios.h>|<termios.h>|' src/libeinfo/libeinfo.c || die
 }
 
 src_configure() {

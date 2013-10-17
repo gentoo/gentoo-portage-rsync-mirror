@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.29 2013/09/25 17:03:13 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.30 2013/10/17 14:35:50 haubi Exp $
+
+  17 Oct 2013; Michael Haubenwallner <haubi@gentoo.org>
+  baselayout-prefix-2.2-r2.ebuild:
+  POSIX specifies <termios.h>, AIX lacks <sys/termios.h>, fixed in OpenRC.
 
   25 Sep 2013; Rick Farina <zerochaos@gentoo.org>
   baselayout-prefix-2.2-r2.ebuild:
