@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.5-r1.ebuild,v 1.9 2013/02/12 20:22:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6.ebuild,v 1.1 2013/10/17 14:02:00 axs Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="branding pam consolekit"
 REQUIRED_USE="consolekit? ( pam )"
 
@@ -22,11 +22,12 @@ RDEPEND="x11-libs/libXmu
 	x11-libs/libXpm
 	x11-libs/libXft
 	media-libs/libpng:0=
-	virtual/jpeg
+	virtual/jpeg:=
 	x11-apps/sessreg
 	consolekit? ( sys-auth/consolekit
 		sys-apps/dbus )
-	pam? ( virtual/pam )"
+	pam? (	virtual/pam
+		!x11-misc/slimlock )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	x11-proto/xproto"
@@ -35,8 +36,11 @@ PDEPEND="branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
 src_prepare() {
 	# Our Gentoo-specific config changes
 	epatch "${FILESDIR}"/${PN}-1.3.4-config.diff
-	epatch "${FILESDIR}"/${P}-arm.patch
-	epatch "${FILESDIR}"/${P}-systemd-service.patch
+	epatch "${FILESDIR}"/${PN}-1.3.5-arm.patch
+	epatch "${FILESDIR}"/${P}-honour-cflags.patch
+	epatch "${FILESDIR}"/${P}-lib-linking.patch
+	epatch "${FILESDIR}"/${PN}-1.3.5-disable-ck-for-systemd.patch
+	epatch "${FILESDIR}"/${P}-strip-systemd-unit-install.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
@@ -63,6 +67,8 @@ src_install() {
 	if use pam ; then
 		pamd_mimic system-local-login slim auth account session
 	fi
+
+	systemd_dounit slim.service
 
 	insinto /usr/share/slim
 	newins "${FILESDIR}/Xsession-r3" Xsession

@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.285 2013/10/17 04:11:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.286 2013/10/17 14:20:15 floppym Exp $
+
+  17 Oct 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  We don't rename /boot/grub.
 
   17 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r2.ebuild,
   grub-9999.ebuild:

@@ -24,7 +24,7 @@
 	</flag>
 	<flag name='multislot'>
 		Allow concurrent installation of <pkg>sys-boot/grub:0</pkg> and
-		<pkg>sys-boot/grub:2</pkg> by renaming all programs and /boot/grub
+		<pkg>sys-boot/grub:2</pkg> by renaming all programs.
 	</flag>
 </use>
 </pkgmetadata>
