@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-9999.ebuild,v 1.4 2013/06/16 16:50:41 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/mirrorselect-9999.ebuild,v 1.5 2013/10/17 07:13:38 dolsen Exp $
 
 EAPI="5"
 
@@ -32,10 +32,11 @@ python_prepare_all()  {
 	eprefixify setup.py mirrorselect/main.py
 	echo Now setting version... VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version
 	VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version || die "setup.py set_version failed"
+	distutils-r1_python_prepare_all
 }
 
 pkg_postinst() {
-	distutils_pkg_postinst
+	distutils-r1_pkg_postinst
 
 	einfo "This is a development version."
 	einfo "Please report any bugs you encounter."
