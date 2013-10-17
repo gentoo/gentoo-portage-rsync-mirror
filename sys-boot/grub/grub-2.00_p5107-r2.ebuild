@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.1 2013/10/16 14:58:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.2 2013/10/17 04:11:03 floppym Exp $
 
 EAPI=5
 
@@ -79,6 +79,7 @@ DEPEND="${RDEPEND}
 	sys-apps/help2man
 	sys-apps/texinfo
 	static? (
+		app-arch/xz-utils[static-libs(+)]
 		truetype? (
 			app-arch/bzip2[static-libs(+)]
 			media-libs/freetype[static-libs(+)]
@@ -200,7 +201,7 @@ grub_configure() {
 
 src_configure() {
 	use custom-cflags || unset CCASFLAGS CFLAGS CPPFLAGS LDFLAGS
-	use static && append-ldflags -static
+	use static && export HOST_LDFLAGS="${HOST_LDFLAGS} -static"
 
 	if version_is_at_least 4.8 "$(gcc-version)"; then
 		export TARGET_LDFLAGS+=" -fuse-ld=bfd"

@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.965 2013/10/16 12:48:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.966 2013/10/17 04:30:33 phajdan.jr Exp $
+
+*chromium-32.0.1671.3 (17 Oct 2013)
+
+  17 Oct 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-system-jinja-r1.patch, -chromium-32.0.1664.3.ebuild,
+  +chromium-32.0.1671.3.ebuild:
+  Dev channel bump. Remove old.
 
   16 Oct 2013; Agostino Sarubbo <ago@gentoo.org> chromium-30.0.1599.101.ebuild:
   Stable for x86, wrt bug #488148
