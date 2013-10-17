@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.360 2013/10/14 16:21:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.361 2013/10/17 16:08:09 mr_bones_ Exp $
+
+*syslog-ng-3.4.4 (17 Oct 2013)
+
+  17 Oct 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/3.4/syslog-ng-3.4.4-autotools.patch, +syslog-ng-3.4.4.ebuild:
+  version bump
 
   14 Oct 2013; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.4.3.ebuild:
   better systemd support (bug #487996)

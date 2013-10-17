@@ -1,0 +1,11 @@
+--- syslog-ng-3.4.1.orig/modules/afmongodb/libmongo-client/configure.ac
++++ syslog-ng-3.4.1/modules/afmongodb/libmongo-client/configure.ac
+@@ -15,7 +15,7 @@
+ 
+ AC_CONFIG_MACRO_DIR([m4])
+ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ AC_ARG_WITH([versioned-symbols], AC_HELP_STRING([--with-versioned-symbols],[Use versioned symbols]),[dnl
+ vsymldflags="-Wl,--version-script,\${srcdir}/libmongo-client.ver -Wl,-O1"
