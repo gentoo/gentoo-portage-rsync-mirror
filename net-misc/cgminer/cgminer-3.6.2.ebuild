@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.4.2.ebuild,v 1.2 2013/09/14 11:27:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.6.2.ebuild,v 1.1 2013/10/17 13:13:42 blueness Exp $
 
 EAPI=5
 
@@ -8,16 +8,16 @@ inherit autotools flag-o-matic
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA/ASIC miner in C"
 HOMEPAGE="http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer"
-#SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
-SRC_URI="https://github.com/ckolivas/cgminer/archive/v${PV}.tar.gz"
+SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
+#SRC_URI="https://github.com/ckolivas/cgminer/archive/v${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples hardened ncurses opencl adl scrypt
-	avalon bflsc bitforce icarus modminer ztex"
+	avalon bflsc bitforce icarus klondike modminer"
 
-REQUIRED_USE="|| ( opencl avalon bflsc bitforce icarus modminer ztex )
+REQUIRED_USE="|| ( opencl avalon bflsc bitforce icarus klondike modminer )
 	adl? ( opencl )
 	scrypt? ( opencl )"
 
@@ -30,8 +30,7 @@ DEPEND="net-misc/curl
 	bflsc? ( virtual/libusb:1 )
 	bitforce? ( virtual/libusb:1 )
 	icarus? ( virtual/libusb:1 )
-	modminer? ( virtual/libusb:1 )
-	ztex? (	virtual/libusb:1 )"
+	modminer? ( virtual/libusb:1 )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -50,8 +49,8 @@ src_configure() {
 		$(use_enable bflsc) \
 		$(use_enable bitforce) \
 		$(use_enable icarus) \
-		$(use_enable modminer) \
-		$(use_enable ztex)
+		$(use_enable klondike) \
+		$(use_enable modminer)
 	# sanitize directories (is this still needed?)
 	sed -i 's~^\(\#define CGMINER_PREFIX \).*$~\1"'"${EPREFIX}/usr/lib/cgminer"'"~' config.h
 }
@@ -62,7 +61,7 @@ src_install() { # How about using some make install?
 		dodoc AUTHORS NEWS README API-README
 		use opencl && dodoc GPU-README
 		use scrypt && dodoc SCRYPT-README
-		use icarus || use bitforce || use ztex || use modminer && dodoc FPGA-README
+		use icarus || use bitforce || use modminer && dodoc FPGA-README
 		use avalon || use bflsc && dodoc ASIC-README
 	fi
 
@@ -74,11 +73,6 @@ src_install() { # How about using some make install?
 	if use opencl; then
 		insinto /usr/lib/cgminer
 		doins *.cl
-	fi
-	if use ztex; then
-		insinto /usr/lib/cgminer/ztex
-		doins bitstreams/*.bit
-		dodoc bitstreams/COPYING_ztex
 	fi
 	if use examples; then
 		docinto examples
