@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/gallery
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.206 2013/07/05 10:55:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.207 2013/10/17 15:06:50 jer Exp $
+
+  17 Oct 2013; Jeroen Roovers <jer@gentoo.org> gallery-3.0.9.ebuild:
+  Stable for HPPA (bug #472282).
 
   05 Jul 2013; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
   The address of the proxy-maintainer is not anymore a valid address in our

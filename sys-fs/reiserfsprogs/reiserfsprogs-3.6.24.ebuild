@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.22.ebuild,v 1.2 2013/04/27 09:38:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/reiserfsprogs-3.6.24.ebuild,v 1.1 2013/10/17 15:08:41 polynomial-c Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils flag-o-matic
+inherit flag-o-matic
 
 DESCRIPTION="Reiserfs Utilities"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/fs/reiserfs/"
@@ -15,11 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.6.21-fsck-n.patch
-	sed -i '/VERSION=/s:21:22:' configure || die
-}
 
 src_configure() {
 	append-flags -std=gnu89 #427300

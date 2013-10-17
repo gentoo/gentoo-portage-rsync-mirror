@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.75 2013/10/10 19:28:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.76 2013/10/17 15:08:41 polynomial-c Exp $
+
+*reiserfsprogs-3.6.24 (17 Oct 2013)
+
+  17 Oct 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -reiserfsprogs-3.6.19-r2.ebuild, -reiserfsprogs-3.6.21.ebuild,
+  -reiserfsprogs-3.6.22.ebuild, +reiserfsprogs-3.6.24.ebuild:
+  Version bump (bug #488374). Removed old.
 
 *reiserfsprogs-3.6.23 (10 Oct 2013)
 
