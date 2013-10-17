@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure prepare
-DEPEND=dev-libs/glib:2 dev-libs/libgee:0 lxde-base/lxde-common x11-libs/gtk+:2 x11-libs/libX11 sys-apps/dbus || ( dev-lang/vala:0.20 dev-lang/vala:0.18 dev-lang/vala:0.16 dev-lang/vala:0.14 ) dev-util/intltool sys-devel/gettext virtual/pkgconfig x11-proto/xproto || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-libs/glib:2 dev-libs/libgee:0 dev-libs/dbus-glib lxde-base/lxde-common x11-libs/gtk+:2 x11-libs/libX11 sys-apps/dbus || ( dev-lang/vala:0.20 dev-lang/vala:0.18 dev-lang/vala:0.16 dev-lang/vala:0.14 ) dev-util/intltool sys-devel/gettext virtual/pkgconfig x11-proto/xproto || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=LXDE session manager (lite version)
 EAPI=5
 HOMEPAGE=http://lxde.sf.net/
 IUSE=nls upower
 KEYWORDS=~alpha ~amd64 ~arm ~ppc ~x86 ~arm-linux ~x86-linux
 LICENSE=GPL-2
-RDEPEND=dev-libs/glib:2 dev-libs/libgee:0 lxde-base/lxde-common x11-libs/gtk+:2 x11-libs/libX11 sys-apps/dbus !lxde-base/lxsession-edit upower? ( sys-power/upower )
+RDEPEND=dev-libs/glib:2 dev-libs/libgee:0 dev-libs/dbus-glib lxde-base/lxde-common x11-libs/gtk+:2 x11-libs/libX11 sys-apps/dbus !lxde-base/lxsession-edit upower? ( sys-power/upower )
 SLOT=0
 SRC_URI=mirror://sourceforge/lxde/lxsession-0.4.9.2.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vala	b365480bc54c4e356dc1e953da9fe356
-_md5_=782e7af331ac169ddfe48c8148bc346a
+_md5_=fbefab6dfadd04cacca26acfe2e0d3c1
