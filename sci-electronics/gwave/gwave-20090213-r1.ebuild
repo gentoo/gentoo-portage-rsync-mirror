@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20090213-r1.ebuild,v 1.5 2013/03/12 08:36:06 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20090213-r1.ebuild,v 1.6 2013/10/17 18:26:26 tomjbe Exp $
 
-EAPI="2"
+EAPI="5"
 
-inherit autotools eutils fdo-mime gnome2-utils
+inherit autotools eutils flag-o-matic fdo-mime gnome2-utils
 
 MY_PN="gwave2"
 MY_P="${MY_PN}-${PV}"
@@ -29,13 +29,14 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	append-libs -lX11
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
-	dodoc AUTHORS NEWS README TODO || die "Installation of documentation failed"
+	emake DESTDIR="${D}" install
+	nonfatal dodoc AUTHORS NEWS README TODO
 	newicon icons/wave-drag-ok.xpm gwave.xpm
 	make_desktop_entry gwave "Gwave" gwave "Electronics"
 }

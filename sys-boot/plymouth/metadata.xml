@@ -10,7 +10,6 @@
 		<flag name="gdm">Enables smooth transition to GDM</flag>
 		<flag name="libkms">Provides abstraction to the DRM drivers (intel,
 			nouveau and vmwgfx at this moment)</flag>
-		<flag name="openrc">Installs plugin for OpenRC</flag>
 		<flag name="pango">Adds support for printing text on splash screen and
 			text prompts, e.g. for password</flag>
 	</use>

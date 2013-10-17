@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.41 2013/10/16 20:01:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.42 2013/10/17 18:02:05 pacho Exp $
+
+  17 Oct 2013; Pacho Ramos <pacho@gentoo.org> -plymouth-0.8.8-r1.ebuild,
+  -plymouth-0.8.8-r3.ebuild, metadata.xml:
+  Drop old
 
 *plymouth-0.8.8-r4 (16 Oct 2013)
 

@@ -6064,7 +6064,6 @@ sys-boot/lilo:minimal - Do not install the dolilo helper script
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-boot/plymouth:gdm - Enables smooth transition to GDM
 sys-boot/plymouth:libkms - Provides abstraction to the DRM drivers (intel, nouveau and vmwgfx at this moment)
-sys-boot/plymouth:openrc - Installs plugin for OpenRC
 sys-boot/plymouth:pango - Adds support for printing text on splash screen and text prompts, e.g. for password
 sys-cluster/ceph:fuse - Build fuse client
 sys-cluster/ceph:libatomic - Use libatomic instead of builtin atomic operations

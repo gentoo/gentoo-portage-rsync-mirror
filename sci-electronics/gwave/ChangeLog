@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gwave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.31 2013/03/12 08:36:06 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.32 2013/10/17 18:26:26 tomjbe Exp $
+
+  17 Oct 2013; Thomas Beierlein <tomjbe@gentoo.org> gwave-20090213-r1.ebuild:
+  Fix missing -lX11 (bug #487934). Thanks M. Rowell for reporting
 
   12 Mar 2013; Thomas Beierlein <tomjbe@gentoo.org> gwave-20090213-r1.ebuild:
   Fix Homepage
