@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/keepalived
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.100 2013/03/05 13:40:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/ChangeLog,v 1.101 2013/10/17 12:29:43 ultrabug Exp $
+
+*keepalived-1.2.8 (17 Oct 2013)
+
+  17 Oct 2013; Ultrabug <ultrabug@gentoo.org> +keepalived-1.2.8.ebuild:
+  version bump, fix #483712
 
 *keepalived-1.2.7-r2 (05 Mar 2013)
 
