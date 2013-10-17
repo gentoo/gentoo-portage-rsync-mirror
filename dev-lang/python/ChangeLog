@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.709 2013/10/10 08:06:30 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.710 2013/10/16 23:43:45 floppym Exp $
+
+*python-2.7.5-r3 (16 Oct 2013)
+*python-3.2.5-r3 (16 Oct 2013)
+
+  16 Oct 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/python-2.7-issue16248.patch, +files/python-3.2-issue16248.patch,
+  +python-2.7.5-r3.ebuild, +python-3.2.5-r3.ebuild, -python-2.7.5-r2.ebuild,
+  -python-3.2.5-r2.ebuild:
+  Apply upstream fix for regression in Tkinter, bug 488208 by jlec.
 
   10 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> -files/python-3.2.3-x32.patch,
   -python-2.6.8-r1.ebuild, -python-2.6.8-r2.ebuild, -python-2.7.3-r2.ebuild,

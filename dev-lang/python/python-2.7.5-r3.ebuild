@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5-r2.ebuild,v 1.14 2013/09/26 19:17:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5-r3.ebuild,v 1.1 2013/10/16 23:43:45 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -99,6 +99,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-library-path.patch" #474882
 	epatch "${FILESDIR}/${P}-re_unsigned_ptrdiff.patch" #476426
 	epatch "${FILESDIR}/CVE-2013-4238_py27.patch"
+	epatch "${FILESDIR}/python-2.7-issue16248.patch"
 
 	# Fix for cross-compiling.
 	epatch "${FILESDIR}/python-2.7.5-nonfatal-compileall.patch"
