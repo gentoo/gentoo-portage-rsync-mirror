@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.118 2013/10/17 14:02:00 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.119 2013/10/17 18:39:31 axs Exp $
+
+*slim-1.3.6-r1 (17 Oct 2013)
+
+  17 Oct 2013; Ian Stakenvicius <axs@gentoo.org>
+  +files/slim-1.3.6-libslim-cmake-fixes.patch, +slim-1.3.6-r1.ebuild,
+  -files/slim-1.3.6-lib-linking.patch, -slim-1.3.6.ebuild:
+  revbump and patch adjustment for build system to fix bug 488388
 
 *slim-1.3.6 (17 Oct 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6.ebuild,v 1.1 2013/10/17 14:02:00 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6-r1.ebuild,v 1.1 2013/10/17 18:39:31 axs Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.3.4-config.diff
 	epatch "${FILESDIR}"/${PN}-1.3.5-arm.patch
 	epatch "${FILESDIR}"/${P}-honour-cflags.patch
-	epatch "${FILESDIR}"/${P}-lib-linking.patch
+	epatch "${FILESDIR}"/${P}-libslim-cmake-fixes.patch
 	epatch "${FILESDIR}"/${PN}-1.3.5-disable-ck-for-systemd.patch
 	epatch "${FILESDIR}"/${P}-strip-systemd-unit-install.patch
 

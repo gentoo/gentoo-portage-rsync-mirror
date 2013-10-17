@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.69 2013/10/14 18:17:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.70 2013/10/17 18:36:53 mgorny Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ AUTOTOOLS_AUTORECONF=yes
 EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
 	http://cgit.freedesktop.org/${PN}/${PN}/"
 
-inherit git-2
+inherit git-r3
 #endif
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
@@ -31,24 +31,24 @@ IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
 
 MINKV="3.0"
 
-COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
-	>=sys-apps/util-linux-2.20
-	sys-libs/libcap
-	acl? ( sys-apps/acl )
-	audit? ( >=sys-process/audit-2 )
-	cryptsetup? ( >=sys-fs/cryptsetup-1.6 )
-	gcrypt? ( >=dev-libs/libgcrypt-1.4.5 )
-	gudev? ( >=dev-libs/glib-2[${MULTILIB_USEDEP}] )
-	http? ( net-libs/libmicrohttpd )
-	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	kmod? ( >=sys-apps/kmod-14-r1 )
-	lzma? ( app-arch/xz-utils[${MULTILIB_USEDEP}] )
-	pam? ( virtual/pam )
+COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1:0=
+	>=sys-apps/util-linux-2.20:0=
+	sys-libs/libcap:0=
+	acl? ( sys-apps/acl:0= )
+	audit? ( >=sys-process/audit-2:0= )
+	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
+	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0= )
+	gudev? ( dev-libs/glib:2=[${MULTILIB_USEDEP}] )
+	http? ( net-libs/libmicrohttpd:0= )
+	introspection? ( >=dev-libs/gobject-introspection-1.31.1:0= )
+	kmod? ( >=sys-apps/kmod-15:0= )
+	lzma? ( app-arch/xz-utils:0=[${MULTILIB_USEDEP}] )
+	pam? ( virtual/pam:= )
 	python? ( ${PYTHON_DEPS} )
-	qrcode? ( media-gfx/qrencode )
-	selinux? ( sys-libs/libselinux )
-	tcpd? ( sys-apps/tcp-wrappers )
-	xattr? ( sys-apps/attr )
+	qrcode? ( media-gfx/qrencode:0= )
+	selinux? ( sys-libs/libselinux:0= )
+	tcpd? ( sys-apps/tcp-wrappers:0= )
+	xattr? ( sys-apps/attr:0= )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
@@ -69,10 +69,10 @@ PDEPEND=">=sys-apps/hwids-20130717-r1[udev]
 	!vanilla? ( sys-apps/gentoo-systemd-integration )"
 
 DEPEND="${COMMON_DEPEND}
-	app-arch/xz-utils
+	app-arch/xz-utils:0
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt
+	dev-libs/libxslt:0
 	dev-util/gperf
 	>=dev-util/intltool-0.50
 	>=sys-devel/binutils-2.23.1
@@ -84,7 +84,7 @@ DEPEND="${COMMON_DEPEND}
 #if LIVE
 DEPEND="${DEPEND}
 	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5
+	>=dev-libs/libgcrypt-1.4.5:0
 	>=dev-util/gtk-doc-1.18"
 
 SRC_URI=
@@ -165,7 +165,6 @@ multilib_src_configure() {
 		$(use_enable pam)
 		$(use_enable policykit polkit)
 		$(use_enable python python-devel)
-		$(use python && echo PYTHON_CONFIG=/usr/bin/python-config-${EPYTHON#python})
 		$(use_enable qrcode qrencode)
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
