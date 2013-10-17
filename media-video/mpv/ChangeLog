@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.30 2013/10/16 17:07:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.31 2013/10/17 17:17:41 jer Exp $
+
+  17 Oct 2013; Jeroen Roovers <jer@gentoo.org> mpv-0.2.0.ebuild:
+  Drop ~hppa for now (bug #488318).
 
 *mpv-0.2.0 (16 Oct 2013)
 
