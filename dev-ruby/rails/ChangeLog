@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.273 2013/10/13 22:11:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.274 2013/10/17 06:38:26 graaff Exp $
+
+*rails-3.2.15 (17 Oct 2013)
+
+  17 Oct 2013; Hans de Graaff <graaff@gentoo.org> +rails-3.2.15.ebuild:
+  Version bump for security bug 488298.
 
   13 Oct 2013; Markus Meier <maekke@gentoo.org> rails-4.0.0.ebuild:
   add ~arm, bug #487206

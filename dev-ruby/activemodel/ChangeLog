@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.61 2013/10/13 22:07:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.62 2013/10/17 06:34:41 graaff Exp $
+
+*activemodel-3.2.15 (17 Oct 2013)
+
+  17 Oct 2013; Hans de Graaff <graaff@gentoo.org> +activemodel-3.2.15.ebuild:
+  Version bump for security bug 488298.
 
   13 Oct 2013; Markus Meier <maekke@gentoo.org> activemodel-4.0.0.ebuild:
   add ~arm, bug #487206
