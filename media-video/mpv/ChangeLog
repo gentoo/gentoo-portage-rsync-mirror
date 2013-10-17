@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.31 2013/10/17 17:17:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.32 2013/10/17 19:36:21 tomwij Exp $
+
+  17 Oct 2013; Tom Wijsman <TomWij@gentoo.org> mpv-0.2.0.ebuild,
+  mpv-9999.ebuild:
+  Fix up a typo in the luajit conditional configure flag, proxied commit for
+  Nikoli; fixes bug #488348.
 
   17 Oct 2013; Jeroen Roovers <jer@gentoo.org> mpv-0.2.0.ebuild:
   Drop ~hppa for now (bug #488318).

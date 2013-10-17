@@ -11,4 +11,4 @@ REQUIRED_USE=enca? ( iconv ) lcms? ( opengl ) libguess? ( iconv ) luajit? ( lua 
 SLOT=0
 SRC_URI=https://github.com/mpv-player/mpv/archive/v0.2.0.tar.gz -> mpv-0.2.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=54ff856d22e78601e9cb34dbbafed0d6
+_md5_=d4286040bdc7541fc1d75e7f90228d17
