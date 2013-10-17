@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1026 2013/10/15 05:36:26 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1027 2013/10/17 22:53:59 ottxor Exp $
+
+  17 Oct 2013; Christoph Junghans <ottxor@gentoo.org> subversion.eclass:
+  added prefix support (bug #485534)
 
   15 Oct 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Remove .la files for libasan and libtsan. They reference non-existent

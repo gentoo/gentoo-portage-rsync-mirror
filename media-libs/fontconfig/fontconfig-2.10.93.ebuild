@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.93.ebuild,v 1.1 2013/08/21 08:42:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.10.93.ebuild,v 1.2 2013/10/17 22:49:36 ottxor Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -13,7 +13,7 @@ SRC_URI="http://fontconfig.org/release/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-aix ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="doc static-libs"
 
 # Purposefully dropped the xml USE flag and libxml2 support.  Expat is the
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 		=app-text/docbook-sgml-dtd-3.1*
 		app-text/docbook-sgml-utils[jadetex]
 	)"
-PDEPEND="app-admin/eselect-fontconfig
+PDEPEND="!x86-winnt? ( app-admin/eselect-fontconfig )
 	virtual/ttf-fonts"
 
 PATCHES=(
@@ -44,13 +44,32 @@ pkg_setup() {
 }
 
 src_configure() {
+	local addfonts
+	# harvest some font locations, such that users can benefit from the
+	# host OS's installed fonts
+	case ${CHOST} in
+		*-darwin*)
+			addfonts=",/Library/Fonts,/System/Library/Fonts"
+		;;
+		*-solaris*)
+			[[ -d /usr/X/lib/X11/fonts/TrueType ]] && \
+				addfonts=",/usr/X/lib/X11/fonts/TrueType"
+			[[ -d /usr/X/lib/X11/fonts/Type1 ]] && \
+				addfonts="${addfonts},/usr/X/lib/X11/fonts/Type1"
+		;;
+		*-linux-gnu)
+			use prefix && [[ -d /usr/share/fonts ]] && \
+				addfonts=",/usr/share/fonts"
+		;;
+	esac
+
 	local myeconfargs=(
 		$(use_enable doc docbook)
 		# always enable docs to install manpages
 		--enable-docs
 		--localstatedir="${EPREFIX}"/var
 		--with-default-fonts="${EPREFIX}"/usr/share/fonts
-		--with-add-fonts="${EPREFIX}"/usr/local/share/fonts
+		--with-add-fonts="${EPREFIX}/usr/local/share/fonts${addfonts}" \
 		--with-templatedir="${EPREFIX}"/etc/fonts/conf.avail
 	)
 

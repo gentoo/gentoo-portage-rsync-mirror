@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.107 2013/09/06 18:32:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.108 2013/10/17 23:00:00 floppym Exp $
+
+  17 Oct 2013; Mike Gilbert <floppym@gentoo.org> -serf-0.7.2.ebuild,
+  -serf-1.1.1.ebuild, -serf-1.2.0.ebuild:
+  Remove per Arfrever.
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> serf-1.2.1.ebuild:
   Stable for sparc, wrt bug #479586
