@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.4.ebuild,v 1.1 2013/09/28 19:49:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.4.ebuild,v 1.2 2013/10/17 20:45:25 maekke Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ HOMEPAGE="http://glade.gnome.org/"
 
 LICENSE="GPL-2+ FDL-1.1+"
 SLOT="3/11" # subslot = suffix of libgladeui-1.so
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="gnome python"
 
 RDEPEND="

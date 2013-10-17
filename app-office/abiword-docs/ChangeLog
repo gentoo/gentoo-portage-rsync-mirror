@@ -1,6 +1,13 @@
 # ChangeLog for app-office/abiword-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-docs/ChangeLog,v 1.4 2013/10/14 20:57:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-docs/ChangeLog,v 1.5 2013/10/17 20:43:16 pacho Exp $
+
+*abiword-docs-3.0.0-r1 (17 Oct 2013)
+
+  17 Oct 2013; Pacho Ramos <pacho@gentoo.org> +abiword-docs-3.0.0-r1.ebuild,
+  -abiword-docs-3.0.0.ebuild, -files/abiword-docs-3.0.0-doc1.patch,
+  -files/abiword-docs-3.0.0-doc2.patch, -files/abiword-docs-3.0.0-doc3.patch:
+  abiword is not fixed and, hence, we don't need to patch abiword-docs
 
 *abiword-docs-3.0.0 (14 Oct 2013)
 

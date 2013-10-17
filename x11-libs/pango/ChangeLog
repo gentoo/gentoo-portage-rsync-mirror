@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.376 2013/06/09 23:06:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.377 2013/10/17 20:42:28 maekke Exp $
+
+  17 Oct 2013; Markus Meier <maekke@gentoo.org> pango-1.32.5.ebuild:
+  arm stable, bug #476364
 
   09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.

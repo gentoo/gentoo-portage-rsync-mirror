@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.153 2013/03/02 22:55:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.155 2013/10/17 20:51:41 floppym Exp $
+
+  17 Oct 2013; Mike Gilbert <floppym@gentoo.org> kvirc-4.4_pre6250.ebuild,
+  kvirc-9999.ebuild:
+  4.4_pre6250: Minor cleanup. Fix build failure with >=sys-kernel/linux-
+  headers-3.9. 9999: Minor cleanup. Patch by Arfrever.
+
+  17 Oct 2013; Mike Gilbert <floppym@gentoo.org> -kvirc-4.2_pre6066.ebuild:
+  Remove per Arfrever.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> kvirc-4.2_pre6066.ebuild,
   kvirc-4.4_pre6250.ebuild, kvirc-9999.ebuild:

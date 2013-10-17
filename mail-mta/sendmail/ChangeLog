@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/sendmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.117 2013/10/08 14:13:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.118 2013/10/17 20:55:24 maekke Exp $
+
+  17 Oct 2013; Markus Meier <maekke@gentoo.org> sendmail-8.14.7-r1.ebuild:
+  arm stable, bug #485648
 
   08 Oct 2013; Jeroen Roovers <jer@gentoo.org> sendmail-8.14.7-r1.ebuild:
   Stable for HPPA (bug #485648).

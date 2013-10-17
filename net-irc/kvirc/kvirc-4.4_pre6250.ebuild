@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.4_pre6250.ebuild,v 1.4 2013/03/02 22:55:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.4_pre6250.ebuild,v 1.5 2013/10/17 20:51:41 floppym Exp $
 
-EAPI="4"
+EAPI="5"
 PYTHON_DEPEND="python? 2"
 
 inherit cmake-utils flag-o-matic multilib python
@@ -16,11 +16,11 @@ SLOT="4"
 KEYWORDS="~alpha amd64 ~ppc ~ppc64 x86"
 IUSE="audiofile dcc_video +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus +ssl theora +transparency webkit"
 
-RDEPEND="sys-libs/zlib
-	x11-libs/libX11
-	>=dev-qt/qtcore-4.6:4
+RDEPEND=">=dev-qt/qtcore-4.6:4
 	>=dev-qt/qtgui-4.6:4
 	>=dev-qt/qtsql-4.6:4
+	sys-libs/zlib
+	x11-libs/libX11
 	dcc_video? (
 		media-libs/libv4l
 		theora? ( media-libs/libogg media-libs/libtheora )
@@ -33,7 +33,6 @@ RDEPEND="sys-libs/zlib
 	ssl? ( dev-libs/openssl )
 	webkit? ( >=dev-qt/qtwebkit-4.6:4 )"
 DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.6.4
 	virtual/pkgconfig
 	x11-proto/scrnsaverproto
 	nls? ( sys-devel/gettext )
@@ -59,6 +58,10 @@ src_prepare() {
 
 src_configure() {
 	append-flags -fno-strict-aliasing
+
+	if use dcc_video && has_version ">=sys-kernel/linux-headers-3.9"; then
+		append-cppflags -DV4L2_CID_HCENTER="\\\"(V4L2_CID_BASE+22)\\\"" -DV4L2_CID_VCENTER="\\\"(V4L2_CID_BASE+23)\\\""
+	fi
 
 	local libdir="$(get_libdir)"
 	local mycmakeargs=(
