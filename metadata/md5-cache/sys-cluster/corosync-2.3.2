@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=!sys-cluster/heartbeat infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm ) dev-libs/nss >=sys-cluster/libqb-0.14.4 virtual/pkgconfig doc? ( sys-apps/groff ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=OSI Certified implementation of a complete cluster engine
+EAPI=4
+HOMEPAGE=http://www.corosync.org/
+IUSE=doc infiniband static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2 public-domain
+RDEPEND=!sys-cluster/heartbeat infiniband? ( sys-infiniband/libibverbs sys-infiniband/librdmacm ) dev-libs/nss >=sys-cluster/libqb-0.14.4
+SLOT=0
+SRC_URI=https://github.com/corosync/corosync/tarball/v2.3.2 -> corosync-2.3.2.tar.gz
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=d418efb73872a42658954be4f1105cf3
