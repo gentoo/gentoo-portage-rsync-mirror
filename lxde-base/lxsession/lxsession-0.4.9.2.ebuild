@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.9.2.ebuild,v 1.2 2013/10/08 18:32:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.9.2.ebuild,v 1.3 2013/10/17 08:19:58 nullishzero Exp $
 
 EAPI=5
 
 VALA_MIN_API_VERSION="0.14"
 VALA_MAX_API_VERSION="0.20"
 
-inherit vala
+inherit vala autotools
 
 DESCRIPTION="LXDE session manager (lite version)"
 HOMEPAGE="http://lxde.sf.net/"
@@ -36,6 +36,13 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto"
 
 DOCS="AUTHORS ChangeLog README"
+
+src_prepare() {
+	# bug #488082
+	epatch "${FILESDIR}"/${P}-makefile.patch
+
+	eautoreconf
+}
 
 src_configure() {
 	# dbus is used for restart/shutdown (CK, logind?), and suspend/hibernate (UPower)
