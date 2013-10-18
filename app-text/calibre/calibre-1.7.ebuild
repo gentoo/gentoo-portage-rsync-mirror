@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.4.ebuild,v 1.1 2013/09/20 13:10:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-1.7.ebuild,v 1.1 2013/10/18 11:32:23 zmedico Exp $
 
 EAPI=5
 
@@ -10,9 +10,6 @@ DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
 [[ ${PV} == ${PV%.*}.${PV#*.} ]] && MY_PV=${PV}.0 || MY_PV=${PV}
 SRC_URI="http://sourceforge.net/projects/calibre/files/${MY_PV}/${PN}-${MY_PV}.tar.xz"
-
-# Restrict mirror due non-free prs500 fonts (bug #470212).
-RESTRICT="mirror"
 
 LICENSE="
 	GPL-3+
@@ -112,9 +109,6 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}/${PN}-no_updates_dialog.patch" \
 		"${FILESDIR}/${PN}-disable_plugins.patch"
-
-	# Remove non-free fonts (bug #470212).
-	rm -r resources/fonts/prs500 || die
 }
 
 src_install() {
