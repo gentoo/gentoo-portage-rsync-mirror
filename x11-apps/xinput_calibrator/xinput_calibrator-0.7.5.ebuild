@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput_calibrator/xinput_calibrator-0.7.5.ebuild,v 1.4 2012/04/23 17:23:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput_calibrator/xinput_calibrator-0.7.5.ebuild,v 1.5 2013/10/18 21:30:18 vapier Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://github/tias/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 arm x86"
 IUSE="gtk"
 
 DEPEND="x11-libs/libX11

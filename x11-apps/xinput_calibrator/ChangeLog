@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinput_calibrator
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput_calibrator/ChangeLog,v 1.5 2012/04/23 17:23:37 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput_calibrator/ChangeLog,v 1.6 2013/10/18 21:30:18 vapier Exp $
+
+  18 Oct 2013; Mike Frysinger <vapier@gentoo.org>
+  xinput_calibrator-0.7.5.ebuild:
+  Add arm love.
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org>
   xinput_calibrator-0.7.5.ebuild:
@@ -23,4 +27,3 @@
   10 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   +xinput_calibrator-0.7.5.ebuild, +metadata.xml:
   Initial commit. Fixes bug #338816. Ebuild written by me.
-
