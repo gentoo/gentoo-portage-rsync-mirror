@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15163 2013/10/14 19:16:54 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15164 2013/10/18 02:54:59 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org (18 Oct 2013)
+# Masked for testing
+=media-libs/libraw-0.16*
+
 # Stanislav Ochotnicky <sochotnicky@gentoo.org (14 Oct 2013)
 # Mask live ebuild of sys-fs/simple-mtpfs (#488038)
 =sys-fs/simple-mtpfs-9999
