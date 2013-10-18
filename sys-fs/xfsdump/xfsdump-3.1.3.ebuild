@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.0.1.ebuild,v 1.5 2010/05/11 20:51:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.1.3.ebuild,v 1.1 2013/10/18 08:26:00 polynomial-c Exp $
 
-inherit multilib
+EAPI="4"
+
+inherit multilib eutils
 
 DESCRIPTION="xfs dump/restore utilities"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
@@ -11,7 +13,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/cmd_tars/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 -sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86"
 IUSE=""
 
 RDEPEND="sys-fs/e2fsprogs
@@ -21,16 +23,16 @@ RDEPEND="sys-fs/e2fsprogs
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/^PKG_DOC_DIR/s:@pkg_name@:${PF}:" \
 		include/builddefs.in \
 		|| die
+	epatch "${FILESDIR}"/${PN}-3.0.5-prompt-overflow.patch #335115
+	epatch "${FILESDIR}"/${PN}-3.0.4-no-symlink.patch #311881
 }
 
-src_compile() {
+src_configure() {
 	unset PLATFORM #184564
 	export OPTIMIZER=${CFLAGS}
 	export DEBUG=-DNDEBUG
@@ -38,12 +40,5 @@ src_compile() {
 	econf \
 		--libdir=/$(get_libdir) \
 		--libexecdir=/usr/$(get_libdir) \
-		--sbindir=/sbin \
-		|| die
-	emake || die
-}
-
-src_install() {
-	emake DIST_ROOT="${D}" install || die
-	prepalldocs
+		--sbindir=/sbin
 }
