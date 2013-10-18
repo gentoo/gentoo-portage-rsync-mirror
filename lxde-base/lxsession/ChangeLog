@@ -1,18 +1,19 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.47 2013/10/17 20:16:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.48 2013/10/18 03:21:53 nullishzero Exp $
 
   17 Oct 2013; Markos Chandras <hwoarang@gentoo.org> lxsession-0.4.9.2.ebuild:
   Add missing dependency to dev-libs/dbus-glib
 
-  17 Oct 2013;  <paul@gentoo.org> files/lxsession-0.4.9.2-makefile.patch:
+  17 Oct 2013; Pavel Kazakov <nullishzero@gentoo.org>
+  files/lxsession-0.4.9.2-makefile.patch:
   Add upstream link to patch
 
-  17 Oct 2013;  <paul@gentoo.org> lxsession-0.4.9.2.ebuild:
+  17 Oct 2013; Pavel Kazakov <nullishzero@gentoo.org> lxsession-0.4.9.2.ebuild:
   Add inherit eutils
 
-  17 Oct 2013;  <paul@gentoo.org> +files/lxsession-0.4.9.2-makefile.patch,
-  lxsession-0.4.9.2.ebuild:
+  17 Oct 2013; Pavel Kazakov <nullishzero@gentoo.org>
+  +files/lxsession-0.4.9.2-makefile.patch, lxsession-0.4.9.2.ebuild:
   Add patch for bug #488082; patch thanks to Jacob Godserv.
 
   08 Oct 2013; Markos Chandras <hwoarang@gentoo.org> lxsession-0.4.9.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1671.3.ebuild,v 1.1 2013/10/17 04:30:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1671.3.ebuild,v 1.2 2013/10/18 03:30:36 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -75,7 +75,7 @@ DEPEND="${RDEPEND}
 	)
 	dev-lang/perl
 	dev-perl/JSON
-	dev-python/jinja
+	>=dev-python/jinja-2.7
 	dev-python/ply
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
