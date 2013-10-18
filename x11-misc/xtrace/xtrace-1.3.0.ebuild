@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrace/xtrace-1.3.0.ebuild,v 1.2 2012/05/01 06:09:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrace/xtrace-1.3.0.ebuild,v 1.3 2013/10/18 21:59:32 vapier Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="https://alioth.debian.org/frs/download.php/${MY_CODE}/${P/-/_}.orig.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~s390 ~sh ~x86"
 IUSE=""
 
 DEPEND="x11-libs/libX11"
