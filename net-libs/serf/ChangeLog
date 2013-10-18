@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.108 2013/10/17 23:00:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.109 2013/10/17 23:25:13 floppym Exp $
+
+*serf-1.3.2 (17 Oct 2013)
+
+  17 Oct 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/serf-1.3.2-disable_linking_against_unneeded_libraries.patch,
+  +serf-1.3.2.ebuild:
+  Version bump. Ebuild and patch by Arfrever.
 
   17 Oct 2013; Mike Gilbert <floppym@gentoo.org> -serf-0.7.2.ebuild,
   -serf-1.1.1.ebuild, -serf-1.2.0.ebuild:
