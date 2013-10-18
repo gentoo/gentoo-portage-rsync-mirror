@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>java</herd>
-	<maintainer>
-		<email>multilib@gentoo.org</email>
-		<name>Gentoo multilib project</name>
-	</maintainer>
 	<use>
 		<flag name="pax_kernel">Use paxctl to mark the JVM binaries.</flag>
 	</use>
