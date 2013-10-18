@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.35-r1.ebuild,v 1.2 2013/10/16 14:12:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.35-r1.ebuild,v 1.3 2013/10/18 19:29:46 maekke Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://openldap/openldap-release/${P}.tgz
 
 LICENSE="OPENLDAP"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 IUSE_DAEMON="crypt icu samba slp tcpd experimental minimal"
 IUSE_BACKEND="+berkdb"

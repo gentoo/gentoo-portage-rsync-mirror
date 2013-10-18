@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-204-r2.ebuild,v 1.1 2013/10/05 13:17:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-204-r2.ebuild,v 1.2 2013/10/18 19:07:26 floppym Exp $
 
 EAPI=5
 
@@ -86,9 +86,9 @@ pkg_pretend() {
 	# and see which path to systemd was used (if any)
 	local init_path
 	IFS= read -r -d '' init_path < /proc/1/cmdline
-	if [[ ${init_path} == */bin/systemd ]]; then
+	if [[ ${init_path} == */bin/systemd && -e ${init_path} ]]; then
 		eerror "You are using a compatibility symlink to run systemd. The symlink"
-		eerror "has been removed. Please update your bootloader to use:"
+		eerror "is going to be removed. Please update your bootloader to use:"
 		eerror
 		eerror "	init=/usr/lib/systemd/systemd"
 		eerror

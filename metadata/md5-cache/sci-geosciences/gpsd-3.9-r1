@@ -4,11 +4,11 @@ DESCRIPTION=GPS daemon and library to support USB/serial GPS devices and various
 EAPI=4
 HOMEPAGE=http://catb.org/gpsd/
 IUSE=gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fury gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_geostar gpsd_protocols_gpsclock gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_nmea2000 gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_superstar2 gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ubx bluetooth cxx debug dbus ipv6 latency_timing ncurses ntp python qt4 +shm +sockets systemd test udev usb X
-KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86
+KEYWORDS=~amd64 arm ~ppc ~ppc64 ~x86
 LICENSE=BSD
 RDEPEND=X? ( dev-python/pygtk:2 ) ncurses? ( sys-libs/ncurses ) bluetooth? ( net-wireless/bluez ) usb? ( virtual/libusb:1 ) dbus? ( sys-apps/dbus dev-libs/dbus-glib ) ntp? ( || ( net-misc/ntp net-misc/chrony ) ) systemd? ( sys-apps/systemd ) qt4? ( dev-qt/qtgui:4 ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
 REQUIRED_USE=X? ( python ) gpsd_protocols_nmea2000? ( gpsd_protocols_aivdm )
 SLOT=0
 SRC_URI=mirror://nongnu/gpsd/gpsd-3.9.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=9bf937a7063e08b48b71848ef698cc8e
+_md5_=0210a0ae692d0f58ad063aed431041d8

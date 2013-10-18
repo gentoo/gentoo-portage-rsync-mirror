@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.193 2013/10/17 18:36:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.194 2013/10/18 19:07:26 floppym Exp $
+
+  18 Oct 2013; Mike Gilbert <floppym@gentoo.org> systemd-204-r1.ebuild,
+  systemd-204-r2.ebuild:
+  Don't die in pkg_pretend if the user has manually removed the systemd
+  compatibility symlink. Patch by Łukasz Stelmach. Bug 487232.
 
   17 Oct 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Bump kmod dep following upstream changes. Remove python-config hack wrt bug
