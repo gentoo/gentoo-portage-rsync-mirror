@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.4-r2.ebuild,v 1.1 2013/10/12 18:53:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.4-r3.ebuild,v 1.1 2013/10/18 20:05:17 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -10,9 +10,17 @@ inherit autotools eutils gnome2 pam readme.gentoo systemd user
 DESCRIPTION="GNOME Display Manager for managing graphical display servers and user logins"
 HOMEPAGE="https://wiki.gnome.org/GDM"
 
-LICENSE="GPL-2+"
+SRC_URI="${SRC_URI}
+	branding? ( http://www.mail-archive.com/tango-artists@lists.freedesktop.org/msg00043/tango-gentoo-v1.1.tar.gz )
+"
+
+LICENSE="
+	GPL-2+
+	branding? ( CC-Sampling-Plus-1.0 )
+"
+
 SLOT="0"
-IUSE="accessibility audit fallback fprint +gnome-shell +introspection ipv6 plymouth selinux smartcard +systemd tcpd test xinerama"
+IUSE="accessibility audit branding fallback fprint +gnome-shell +introspection ipv6 plymouth selinux smartcard +systemd tcpd test xinerama"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
@@ -145,6 +153,9 @@ src_prepare() {
 			-i data/00-upstream-settings || die "sed failed"
 	fi
 
+	# Show logo when branding is enabled
+	use branding && epatch "${FILESDIR}/${PN}-3.8.4-logo.patch"
+
 	mkdir -p "${S}"/m4
 	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	eautoreconf
@@ -200,6 +211,8 @@ src_install() {
 	# install XDG_DATA_DIRS gdm changes
 	echo 'XDG_DATA_DIRS="/usr/share/gdm"' > 99xdg-gdm
 	doenvd 99xdg-gdm
+
+	use branding && newicon "${WORKDIR}/tango-gentoo-v1.1/scalable/gentoo.svg" gentoo-gdm.svg
 
 	readme.gentoo_create_doc
 }

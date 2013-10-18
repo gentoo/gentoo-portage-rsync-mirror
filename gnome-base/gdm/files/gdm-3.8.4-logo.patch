@@ -1,0 +1,11 @@
+--- data/org.gnome.login-screen.gschema.xml.in.old	2013-10-18 21:58:06.333027980 +0200
++++ data/org.gnome.login-screen.gschema.xml.in	2013-10-18 21:58:31.550372126 +0200
+@@ -31,7 +31,7 @@
+       </_description>
+     </key>
+     <key name="logo" type="s">
+-      <default>''</default>
++      <default>'/usr/share/pixmaps/gentoo-gdm.svg'</default>
+       <_summary>
+         Path to small image at top of user list
+       </_summary>
