@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/daemontools-encore
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/ChangeLog,v 1.5 2011/07/20 17:35:53 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/ChangeLog,v 1.6 2013/10/18 09:26:46 chainsaw Exp $
+
+*daemontools-encore-1.06 (18 Oct 2013)
+
+  18 Oct 2013; Tony Vroon <chainsaw@gentoo.org>
+  +daemontools-encore-1.06.ebuild:
+  Version bump, as requested by Agostino "ago" Sarubbo in bug #469058. This
+  release fixes problems with svc & svstat.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
