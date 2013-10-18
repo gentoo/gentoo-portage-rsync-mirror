@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.23 2013/10/18 13:36:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.24 2013/10/18 22:57:21 tomwij Exp $
 
 EAPI=5
 
@@ -286,7 +286,6 @@ src_configure() {
 		--confdir="${EPREFIX}"/etc/${PN} \
 		--mandir="${EPREFIX}"/usr/share/man \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--localedir="${EPREFIX}"/usr/share/locale \
 		${myconf} || die
 
 	MAKEOPTS+=" V=1"

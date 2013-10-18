@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.69 2013/09/30 17:17:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.70 2013/10/18 22:56:00 radhermit Exp $
+
+*dulwich-0.9.3 (18 Oct 2013)
+
+  18 Oct 2013; Tim Harder <radhermit@gentoo.org> +dulwich-0.9.3.ebuild:
+  Version bump, switch to pypi for SRC_URI.
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> dulwich-0.9.0-r1.ebuild:
   Stable for x86, wrt bug #485732
