@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.211 2013/02/25 12:09:57 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.212 2013/10/18 18:42:51 sbriesen Exp $
+
+*cyrus-imapd-2.4.17-r1 (18 Oct 2013)
+
+  18 Oct 2013; Stefan Briesenick <sbriesen@gentoo.org>
+  +cyrus-imapd-2.4.17-r1.ebuild, +files/cyrus-imapd-2.4.17-statuscache.diff:
+  fix configure-error with USE=mysql (bug #477782) and added patch for squatter
+  segfaults.
 
   25 Feb 2013; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.17.ebuild:
   Add cmulocal m4dir to eautoreconf - bug #458956
