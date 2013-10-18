@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.38 2013/10/14 14:36:12 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.39 2013/10/18 16:25:53 ryao Exp $
+
+*zfs-kmod-0.6.2-r2 (18 Oct 2013)
+
+  18 Oct 2013; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.2-r2.ebuild:
+  Update 0.6.2 patchset with sys-fs/zfs-kmod-0.6.2-r2: Fixes memory leak
+  regression introduced by Compressed L2ARC support in 0.6.2 (fix ported from
+  Illumos); Fixes metaslab condensing race regression introduced by 0.6.2 (fix
+  ported from Illumos); Fixes bobj panic (fix ported from Illumos); fixes
+  logging of negative GUIDs to SPA history (fixed ported from Illumos)
 
   14 Oct 2013; Richard Yao <ryao@gentoo.org> zfs-kmod-0.6.2-r1.ebuild:
   Reverse stabilization of sys-fs/zfs-kmod-0.6.2-r1 (to avoid confusing users
