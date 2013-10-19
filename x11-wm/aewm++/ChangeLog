@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/aewm++
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.21 2011/12/21 08:54:22 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/aewm++/ChangeLog,v 1.22 2013/10/19 15:19:15 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   21 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> aewm++-1.1.5-r1.ebuild:
   x86 stable wrt bug #393947

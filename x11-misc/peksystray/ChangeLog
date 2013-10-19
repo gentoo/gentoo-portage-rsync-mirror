@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/peksystray
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.19 2010/01/14 16:22:47 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/peksystray/ChangeLog,v 1.20 2013/10/19 15:14:40 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   14 Jan 2010; Samuli Suominen <ssuominen@gentoo.org>
   peksystray-0.4.0.ebuild, +files/peksystray-0.4.0-asneeded.patch:
@@ -78,4 +81,3 @@
   10 Jan 2004; Tavis Ormandy <taviso@gentoo.org> peksystray-0.2.ebuild,
   files/peksystray-gcc3-mlsl.diff:
   Initial import.
-

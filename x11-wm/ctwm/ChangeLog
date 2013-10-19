@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ctwm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.27 2012/02/07 22:13:07 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ChangeLog,v 1.28 2013/10/19 15:20:49 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
 *ctwm-3.8.1 (07 Feb 2012)
 
@@ -112,4 +115,3 @@
   03 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> files/ctwm-3.6-gentoo.diff:
   Initial import. Ebuild submitted by Tobias Anderberg <tba@softhome.net>
   This closes Bug #20628
-

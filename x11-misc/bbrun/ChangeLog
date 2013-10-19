@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbrun
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.30 2012/05/05 04:53:48 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbrun/ChangeLog,v 1.31 2013/10/19 15:04:06 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> -bbrun-1.6.ebuild, metadata.xml:
+  Cleanup due desktop-wm removal
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> bbrun-1.6.ebuild,
   bbrun-1.6-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/amiwm
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.13 2011/06/11 11:52:47 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/amiwm/ChangeLog,v 1.14 2013/10/19 15:20:01 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> -amiwm-0.20_p48.ebuild,
+  metadata.xml:
+  Cleanup due desktop-wm removal
 
 *amiwm-0.21_p2 (11 Jun 2011)
 

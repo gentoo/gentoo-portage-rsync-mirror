@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/jwm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.27 2013/04/09 13:30:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/ChangeLog,v 1.28 2013/10/19 15:25:31 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> -jwm-2.0.1.ebuild, metadata.xml:
+  Cleanup due desktop-wm removal
 
   09 Apr 2013; Naohiro Aota <naota@gentoo.org> jwm-2.1.0.ebuild:
   Add ~x86-fbsd wrt bug #157553

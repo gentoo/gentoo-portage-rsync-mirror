@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/commonbox-styles
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.31 2010/10/17 03:14:38 leio Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.32 2013/10/19 15:16:43 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   17 Oct 2010; Mart Raudsepp <leio@gentoo.org> commonbox-styles-0.6.ebuild:
   Drop to ~mips

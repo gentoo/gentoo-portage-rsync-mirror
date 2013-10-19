@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.70 2013/05/15 02:22:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.71 2013/10/19 15:20:22 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   15 May 2013; Patrick Lauer <patrick@gentoo.org> blackbox-0.70.1.ebuild:
   Automake 1.13 fix

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbdate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.25 2012/12/31 09:19:28 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbdate/ChangeLog,v 1.26 2013/10/19 15:01:56 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> -bbdate-0.2.4.ebuild,
+  metadata.xml:
+  Cleanup due desktop-wm removal
 
   31 Dec 2012; Agostino Sarubbo <ago@gentoo.org> bbdate-0.2.4-r1.ebuild:
   Stable for sparc, wrt bug #392841

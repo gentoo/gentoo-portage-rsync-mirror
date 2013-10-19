@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbppp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.21 2012/11/25 10:34:23 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbppp/ChangeLog,v 1.22 2013/10/19 15:03:24 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
 *bbppp-0.2.5-r1 (25 Nov 2012)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/bbweather
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.38 2012/12/06 04:23:31 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.39 2013/10/19 15:05:07 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> -bbweather-0.6.2.ebuild,
+  -bbweather-0.6.3.ebuild, metadata.xml:
+  Cleanup due desktop-wm removal
 
   06 Dec 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   bbweather-0.6.3-r1.ebuild:

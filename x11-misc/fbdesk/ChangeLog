@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fbdesk
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.36 2011/09/13 13:02:03 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/ChangeLog,v 1.37 2013/10/19 15:05:24 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   13 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> fbdesk-1.4.1.ebuild,
   +files/fbdesk-1.4.1-libpng15.patch:

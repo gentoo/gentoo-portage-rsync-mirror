@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/iceicons
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.14 2012/10/12 18:36:51 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/iceicons/ChangeLog,v 1.15 2013/10/19 15:18:24 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   12 Oct 2012; Agostino Sarubbo <ago@gentoo.org> iceicons-0.10.0.ebuild:
   Stable for amd64, wrt bug #437842
@@ -45,4 +48,3 @@
   19 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> iceicons-0.10.0.ebuild:
   Initial import. Ebuild submitted by archan <archanp@hotpop.com>,
   closing bug #50702
-

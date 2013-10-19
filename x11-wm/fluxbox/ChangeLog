@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.310 2013/06/30 14:27:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.311 2013/10/19 15:22:40 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   30 Jun 2013; Kacper Kowalik <xarthisius@gentoo.org> metadata.xml:
   Remove unused local USE-description

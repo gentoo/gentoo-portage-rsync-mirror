@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/treewm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.20 2010/09/19 01:03:48 jer Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/treewm/ChangeLog,v 1.21 2013/10/19 15:31:00 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
 *treewm-0.4.5-r1 (19 Sep 2010)
 

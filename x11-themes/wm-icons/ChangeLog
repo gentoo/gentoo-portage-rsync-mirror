@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/wm-icons
 # Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.22 2013/02/28 15:54:42 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.23 2013/10/19 15:18:48 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   28 Feb 2013; Christoph Junghans <ottxor@gentoo.org> wm-icons-0.4.0.ebuild,
   wm-icons-0.4.0_pre1-r1.ebuild:
