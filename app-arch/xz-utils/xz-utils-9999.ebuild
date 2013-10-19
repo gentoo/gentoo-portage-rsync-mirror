@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.16 2013/08/07 22:47:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.17 2013/10/19 02:28:15 vapier Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
@@ -25,7 +25,8 @@ fi
 DESCRIPTION="utils for managing LZMA compressed files"
 HOMEPAGE="http://tukaani.org/xz/"
 
-LICENSE="LGPL-2.1"
+# See top-level COPYING file as it outlines the various pieces and their licenses.
+LICENSE="public-domain LGPL-2.1+ GPL-2+"
 SLOT="0"
 IUSE="nls static-libs +threads"
 

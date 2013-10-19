@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.64 2013/08/07 22:47:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.65 2013/10/19 02:28:16 vapier Exp $
+
+  19 Oct 2013; Mike Frysinger <vapier@gentoo.org> xz-utils-5.0.5-r1.ebuild,
+  xz-utils-9999.ebuild:
+  Update LICENSE as pointed out by Marc MERLIN.
 
   07 Aug 2013; Michał Górny <mgorny@gentoo.org> xz-utils-5.0.5-r1.ebuild,
   xz-utils-9999.ebuild:
