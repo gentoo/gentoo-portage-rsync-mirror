@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.402 2013/09/05 18:29:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.403 2013/10/19 14:05:37 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  -files/libxml2-2.7.8-disable_static_modules.patch,
+  -files/libxml2-2.8.0-icu-linking.patch,
+  -files/libxml2-2.8.0-xmlParseAttValueComplex-underflow.patch,
+  -files/libxml2-2.9.0-disable_static_modules.patch,
+  -files/libxml2-2.9.0-excessive-entity-expansion.patch,
+  -files/libxml2-2.9.0-large-file-parse.patch,
+  -files/libxml2-2.9.0-nsclean.patch, -files/libxml2-2.9.0-rand_seed.patch,
+  -files/libxml2-2.9.0-streaming-validation.patch,
+  -files/libxml2-2.9.0-thread-portability.patch, -libxml2-2.8.0-r3.ebuild,
+  -libxml2-2.9.0-r2.ebuild, -libxml2-2.9.1.ebuild:
+  Drop old
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> libxml2-2.9.0-r2.ebuild,
   libxml2-2.9.1-r1.ebuild, libxml2-2.9.1.ebuild:

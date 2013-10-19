@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/rgain
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rgain/ChangeLog,v 1.6 2012/10/25 20:37:48 eva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rgain/ChangeLog,v 1.7 2013/10/19 14:25:25 sochotnicky Exp $
+
+*rgain-1.2.1 (19 Oct 2013)
+
+  19 Oct 2013; Stanislav Ochotnicky <sochotnicky@gentoo.org>
+  -rgain-1.0.1.ebuild, +rgain-1.2.1.ebuild:
+  Version bump to 1.2.1, migrate to EAPI 5, add use flags (#488528)
 
   25 Oct 2012; Gilles Dartiguelongue <eva@gentoo.org> rgain-1.0.1.ebuild,
   rgain-1.0.2.ebuild:
