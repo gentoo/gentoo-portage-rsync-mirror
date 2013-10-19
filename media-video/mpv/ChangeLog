@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.34 2013/10/18 22:57:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.35 2013/10/19 22:54:39 tomwij Exp $
+
+  19 Oct 2013; Tom Wijsman <TomWij@gentoo.org> mpv-0.1.6.ebuild,
+  mpv-0.1.7.ebuild, mpv-0.2.0.ebuild, mpv-9999.ebuild:
+  Playing things with quvi need libav or ffmpeg with networking support, proxied
+  commit for Nikoli.
 
   18 Oct 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
   Upstream removed support for gettext, removed localedir configure parameter as

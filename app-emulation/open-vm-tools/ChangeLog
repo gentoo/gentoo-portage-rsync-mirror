@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.74 2013/10/19 01:42:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.75 2013/10/19 22:52:38 floppym Exp $
+
+  19 Oct 2013; Mike Gilbert <floppym@gentoo.org>
+  -open-vm-tools-2012.10.14.874563.ebuild,
+  -open-vm-tools-2012.12.26.958366.ebuild,
+  -open-vm-tools-2013.04.16.1098359.ebuild, -open-vm-tools-8.8.2.590212.ebuild,
+  -open-vm-tools-9.2.2.893683.ebuild:
+  Remove old.
 
 *open-vm-tools-2013.09.16.1328054 (19 Oct 2013)
 

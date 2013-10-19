@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.70 2013/10/11 08:21:17 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.71 2013/10/19 22:40:44 creffett Exp $
+
+*vixie-cron-4.1-r14 (19 Oct 2013)
+
+  19 Oct 2013; Chris Reffett <creffett@gentoo.org>
+  +files/vixie-cron-4.1-crontabrace.patch, +vixie-cron-4.1-r14.ebuild:
+  Security bump. Add backported patch wrt bug 308055.
 
   11 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> vixie-cron-4.1-r13.ebuild:
   Stable on x86, wrt bug #480122
