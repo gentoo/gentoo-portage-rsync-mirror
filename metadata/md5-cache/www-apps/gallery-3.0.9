@@ -4,11 +4,11 @@ DESCRIPTION=Web based (PHP Script) photo album viewer/creator
 EAPI=5
 HOMEPAGE=http://gallery.menalto.com/
 IUSE=ffmpeg +gd imagemagick mysql mysqli vhosts
-KEYWORDS=~amd64 hppa ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 hppa ~ppc ~ppc64 x86
 LICENSE=GPL-2
 RDEPEND=imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) ffmpeg? ( virtual/ffmpeg ) >=dev-lang/php-5.2.3[ctype,filter,iconv,json,simplexml,tokenizer,unicode,gd?,mysql?,mysqli?] virtual/httpd-php >=app-admin/webapp-config-1.50.15
 REQUIRED_USE=|| ( gd imagemagick ) || ( mysql mysqli )
 SLOT=3.0.9
 SRC_URI=mirror://sourceforge/gallery/gallery/gallery-3.0.9.zip
 _eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=76706c8654c16fdde421aa66a68fe5c7
+_md5_=9ecd4e50d7f6190628bf73fcc71d64e8

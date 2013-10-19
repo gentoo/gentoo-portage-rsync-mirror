@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.112 2013/10/13 10:17:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.113 2013/10/19 19:39:40 tomwij Exp $
+
+  19 Oct 2013; Tom Wijsman <TomWij@gentoo.org> mplayer2-9999.ebuild:
+  Added REQUIRED_USE entry as the libass USE flag now needs iconv to be enabled,
+  proxied commit for Nikoli; fixes bug #488604, reported by adel_blakdeath.
 
   13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Nikoli's e-mail address for easier automatic assignment.

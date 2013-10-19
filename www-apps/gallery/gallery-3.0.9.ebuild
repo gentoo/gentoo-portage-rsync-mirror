@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-3.0.9.ebuild,v 1.2 2013/10/17 15:06:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/gallery-3.0.9.ebuild,v 1.4 2013/10/19 19:50:20 ago Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gallery.menalto.com/"
 SRC_URI="mirror://sourceforge/gallery/${PN}/${P}.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 hppa ~ppc ~ppc64 x86"
 IUSE="ffmpeg +gd imagemagick mysql mysqli"
 
 # Build depend is on unzip
