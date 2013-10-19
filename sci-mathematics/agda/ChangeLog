@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/agda
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.23 2013/09/13 06:58:23 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/ChangeLog,v 1.24 2013/10/19 11:07:42 gienah Exp $
+
+  19 Oct 2013; Mark Wright <gienah@gentoo.org> agda-2.3.2.1-r1.ebuild:
+  Byte-compile the emacs elisp files, to make Mx agda2-type-and-context work,
+  fixes https://code.google.com/p/agda/issues/detail?id=792. Loosen the alex
+  DEPEND.
 
 *agda-2.3.2.1-r1 (13 Sep 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-2.3.2.1-r1.ebuild,v 1.1 2013/09/13 06:58:23 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda/agda-2.3.2.1-r1.ebuild,v 1.2 2013/10/19 11:07:42 gienah Exp $
 
 EAPI=5
 
@@ -64,7 +64,8 @@ src_prepare() {
 	CABAL_FILE=${MY_PN}.cabal cabal_chdeps \
 		'binary >= 0.4.4 && < 0.6' 'binary >= 0.4.4 && < 0.8' \
 		'hashtables == 1.0.*' 'hashtables >= 1.0 && < 1.2' \
-		'haskell-src-exts >= 1.9.6 && < 1.14' 'haskell-src-exts >= 1.9.6 && < 1.15'
+		'haskell-src-exts >= 1.9.6 && < 1.14' 'haskell-src-exts >= 1.9.6 && < 1.15' \
+		'alex >= 2.3.1 && < 3.1' 'alex >= 2.3.1 && < 3.2'
 	sed -e '/.*emacs-mode.*$/d' \
 		-e '/^executable agda/,$d' \
 		-i "${S}/${MY_PN}.cabal" \
@@ -82,6 +83,12 @@ src_prepare() {
 src_configure() {
 	haskell-cabal_src_configure \
 		$(cabal_flag epic epic)
+}
+
+src_compile() {
+	elisp-compile src/data/emacs-mode/*.el \
+		|| die "Failed to compile emacs mode"
+	haskell-cabal_src_compile
 }
 
 src_install() {

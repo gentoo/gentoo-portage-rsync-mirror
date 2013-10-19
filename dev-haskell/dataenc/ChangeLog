@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/dataenc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.35 2013/07/21 17:48:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.36 2013/10/19 11:29:30 gienah Exp $
+
+*dataenc-0.14.0.5-r1 (19 Oct 2013)
+
+  19 Oct 2013; Mark Wright <gienah@gentoo.org> +dataenc-0.14.0.5-r1.ebuild:
+  Loosen the base dependency in dataenc-0.14.0.5-r1 to allow >=ghc-7.7. Used the
+  repoman --force option as --force the repoman complaints about missing
+  KEYWORDS are only on dependencies that are used in the tests, and dev-haskell
+  /test-framework-th may not build on those architectures
 
   21 Jul 2013; Christoph Junghans <ottxor@gentoo.org> dataenc-0.14.0.5.ebuild:
   added ~amd64-linux (tested by me)

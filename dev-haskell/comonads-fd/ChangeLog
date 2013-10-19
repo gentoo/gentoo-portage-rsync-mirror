@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/comonads-fd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/comonads-fd/ChangeLog,v 1.1 2013/08/26 10:28:21 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/comonads-fd/ChangeLog,v 1.2 2013/10/19 11:10:15 gienah Exp $
+
+*comonads-fd-4.0 (19 Oct 2013)
+
+  19 Oct 2013; Mark Wright <gienah@gentoo.org> +comonads-fd-4.0.ebuild:
+  Bump comonads-fd to 4.0
 
 *comonads-fd-3.0.3 (26 Aug 2013)
 *comonads-fd-3.0.2 (26 Aug 2013)
