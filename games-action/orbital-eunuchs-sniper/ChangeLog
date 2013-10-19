@@ -1,6 +1,10 @@
 # ChangeLog for games-action/orbital-eunuchs-sniper
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.11 2008/04/30 20:40:58 nyhm Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/orbital-eunuchs-sniper/ChangeLog,v 1.12 2013/10/19 19:13:10 tristan Exp $
+
+  19 Oct 2013; Tristan Heaven <tristan@gentoo.org>
+  orbital-eunuchs-sniper-1.30.ebuild:
+  Remove unnecessary build delay
 
   30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/orbital-eunuchs-sniper-1.30-gcc43.patch,

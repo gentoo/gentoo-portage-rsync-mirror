@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.3.ebuild,v 1.1 2013/09/28 16:00:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.3.ebuild,v 1.2 2013/10/19 19:26:07 floppym Exp $
 
 EAPI=5
 
@@ -19,7 +19,8 @@ DESCRIPTION="Profile based network connection tool from Arch Linux"
 HOMEPAGE="https://wiki.archlinux.org/index.php/Netctl
 	https://www.archlinux.org/packages/core/any/netctl/
 	https://projects.archlinux.org/netctl.git/"
-LICENSE="BSD"
+
+LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
 
