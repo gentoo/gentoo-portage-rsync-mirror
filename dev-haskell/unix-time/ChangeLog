@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/unix-time
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-time/ChangeLog,v 1.1 2013/08/26 11:27:51 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unix-time/ChangeLog,v 1.2 2013/10/19 09:52:21 gienah Exp $
+
+*unix-time-0.2.1 (19 Oct 2013)
+
+  19 Oct 2013; Mark Wright <gienah@gentoo.org> +unix-time-0.2.1.ebuild:
+  Bump unix-time to 0.2.1
 
 *unix-time-0.2.0 (26 Aug 2013)
 
