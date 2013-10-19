@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mash
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mash/ChangeLog,v 1.7 2012/08/13 18:23:39 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mash/ChangeLog,v 1.8 2013/10/19 06:15:08 mrueg Exp $
+
+*mash-0.1.1-r2 (19 Oct 2013)
+
+  19 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +mash-0.1.1-r2.ebuild:
+  Add ruby20 target.
 
   13 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> mash-0.1.1-r1.ebuild:
   Bump to EAPI 4; add Ruby 1.9, Ruby EE and JRuby support; use the new rspec

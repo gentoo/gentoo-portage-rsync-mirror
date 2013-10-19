@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/nagios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios/ChangeLog,v 1.5 2013/06/20 07:08:56 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nagios/ChangeLog,v 1.6 2013/10/19 06:17:21 mrueg Exp $
+
+*nagios-0.0.4-r1 (19 Oct 2013)
+
+  19 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +nagios-0.0.4-r1.ebuild,
+  -nagios-0.0.3.ebuild:
+  Add ruby20 target. Remove old.
 
   20 Jun 2013; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from maintainers

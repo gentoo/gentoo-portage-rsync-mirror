@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8310 2013/10/18 23:43:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8311 2013/10/19 06:05:11 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Oct 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask Rails 3.1 for security bug 488298.
 
   18 Oct 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Mask new media-video/rtmpdump snapshots for testing

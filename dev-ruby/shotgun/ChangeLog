@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/shotgun
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shotgun/ChangeLog,v 1.7 2012/09/23 06:51:57 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shotgun/ChangeLog,v 1.8 2013/10/19 06:11:20 mrueg Exp $
+
+*shotgun-0.9-r1 (19 Oct 2013)
+
+  19 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +shotgun-0.9-r1.ebuild:
+  Add ruby20 target.
 
   23 Sep 2012; Hans de Graaff <graaff@gentoo.org> shotgun-0.9.ebuild:
   EAPI=4. Add ruby19.
@@ -38,4 +43,3 @@
   25 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org> +shotgun-0.5.ebuild,
   +files/shotgun-0.5-optional-launchy.patch, +metadata.xml:
   Initial import of shotgun, a way to auto-relaod rackup servers.
-

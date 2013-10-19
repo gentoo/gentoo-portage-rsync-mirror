@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>dev-embedded</herd>
-<longdescription>This software is a GUI (Graphical User Interface) which allows
-    you to easy assemble PIC programs. It uses gpasm software, an assembler for
-    PIC microcontrolers.</longdescription>
-</pkgmetadata>

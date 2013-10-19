@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ntlm-http
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ntlm-http/ChangeLog,v 1.6 2013/09/15 09:30:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ntlm-http/ChangeLog,v 1.7 2013/10/19 06:13:38 mrueg Exp $
+
+*ntlm-http-0.1.1-r1 (19 Oct 2013)
+
+  19 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +ntlm-http-0.1.1-r1.ebuild:
+  Add ruby20 target.
 
   15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> ntlm-http-0.1.1.ebuild:
   Stable for x86, wrt bug #483694
