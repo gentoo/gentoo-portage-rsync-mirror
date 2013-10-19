@@ -2,12 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vmware</herd>
-	<herd>proxy-maintainers</herd>
-	<maintainer>
-	    <email>gentoo@mattwhitlock.name</email>
-		<name>Matt Whitlock</name>
-		<description>proxied co-maintainer</description>
-	</maintainer>
 	<longdescription lang="en">
 		VMware Player - free desktop virtualization software application - makes it 
 		easy to operate any virtual machine created by VMware Workstation, VMware Fusion,
@@ -17,5 +11,4 @@
     <use>
 		<flag name="vmware-tools">Install VMware Tools images</flag>
 	</use>
-
 </pkgmetadata>

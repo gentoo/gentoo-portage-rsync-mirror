@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/icewm-themes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.20 2011/08/24 18:42:50 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.21 2013/10/19 15:32:57 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   24 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   icewm-themes-0.0.1-r1.ebuild, icewm-themes-0.0.2.ebuild:
@@ -81,4 +84,3 @@
   21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +icewm-themes-0.0.1.ebuild:
   Initial import. Ebuild submitted by <seather@scygro.za.net>,
   closing bug #53207
-

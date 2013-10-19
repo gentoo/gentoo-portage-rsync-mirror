@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.21.ebuild,v 1.2 2013/04/24 11:19:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/tinc-1.0.23.ebuild,v 1.1 2013/10/19 15:58:57 blueness Exp $
 
 EAPI="5"
+inherit systemd
 
 DESCRIPTION="tinc is an easy to configure VPN implementation"
 HOMEPAGE="http://www.tinc-vpn.org/"
@@ -37,6 +38,7 @@ src_install() {
 	doinitd "${FILESDIR}"/tincd.lo
 	doconfd "${FILESDIR}"/tinc.networks
 	newconfd "${FILESDIR}"/tincd.conf tincd
+	systemd_newunit "${FILESDIR}"/tincd_at.service "tincd@.service"
 }
 
 pkg_postinst() {

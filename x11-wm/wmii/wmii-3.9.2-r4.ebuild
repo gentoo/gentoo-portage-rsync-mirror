@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2-r3.ebuild,v 1.3 2013/04/09 13:24:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.9.2-r4.ebuild,v 1.1 2013/10/19 15:42:25 pacho Exp $
 
-EAPI=2
+EAPI=5
 inherit flag-o-matic multilib toolchain-funcs
 
 MY_P=wmii+ixp-${PV}
@@ -16,26 +16,31 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
-COMMON_DEPEND=">=sys-libs/libixp-0.5_p20110208-r3
+COMMON_DEPEND="
+	>=sys-libs/libixp-0.5_p20110208-r3
 	x11-libs/libXft
 	x11-libs/libXext
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	x11-libs/libX11
 	x11-libs/libXinerama
-	>=media-libs/freetype-2"
+	>=media-libs/freetype-2
+"
 RDEPEND="${COMMON_DEPEND}
 	x11-apps/xmessage
 	x11-apps/xsetroot
-	media-fonts/font-misc-misc"
+	media-fonts/font-misc-misc
+"
 DEPEND="${COMMON_DEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 S=${WORKDIR}/${MY_P}
 
-MAKEOPTS="${MAKEOPTS} -j1"
+# Force dynamic linking, bug #273332
+MAKEOPTS="${MAKEOPTS} STATIC= -j1"
 
-pkg_setup() {
+src_prepare() {
 	mywmiiconf=(
 		PREFIX=/usr
 		DOC=/usr/share/doc/${PF}
@@ -47,9 +52,7 @@ pkg_setup() {
 		DESTDIR="${D}"
 		LIBIXP=/usr/$(get_libdir)/libixp.so
 		)
-}
 
-src_prepare() {
 	# punt internal copy of sys-libs/libixp #323037
 	rm -f include/ixp{,_srvutil}.h || die
 	sed -i -e '/libixp/d' Makefile || die

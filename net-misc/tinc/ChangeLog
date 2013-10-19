@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tinc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.45 2013/09/01 12:22:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.46 2013/10/19 15:58:57 blueness Exp $
+
+*tinc-1.0.23 (19 Oct 2013)
+
+  19 Oct 2013; Anthony G. Basile <blueness@gentoo.org> +tinc-1.0.23.ebuild,
+  -tinc-1.0.21.ebuild, -tinc-1.0.22.ebuild:
+  Version bump
 
   01 Sep 2013; Anthony G. Basile <blueness@gentoo.org> files/tincd,
   files/tincd.lo:
