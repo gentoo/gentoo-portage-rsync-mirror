@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-exec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.56 2013/10/17 15:26:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.57 2013/10/19 03:40:22 vapier Exp $
+
+  19 Oct 2013; Mike Frysinger <vapier@gentoo.org> python-exec-0.3.1.ebuild,
+  python-exec-0.9999.ebuild, python-exec-2.0-r1.ebuild,
+  python-exec-2.9999.ebuild:
+  Add ~m68k love.
 
   17 Oct 2013; Jeroen Roovers <jer@gentoo.org> python-exec-2.0-r1.ebuild:
   Stable for HPPA (bug #487676).
