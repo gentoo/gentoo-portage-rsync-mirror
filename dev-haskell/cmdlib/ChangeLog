@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cmdlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.9 2012/12/10 21:53:13 slyfox Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.10 2013/10/19 10:10:02 gienah Exp $
+
+*cmdlib-0.3.5-r1 (19 Oct 2013)
+
+  19 Oct 2013; Mark Wright <gienah@gentoo.org> +cmdlib-0.3.5-r1.ebuild:
+  Add EAPI=5 cmdlib-0.3.5-r1
 
   10 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org> cmdlib-0.3.5.ebuild:
   stable on alpha/ia64/sparc (bug #421351)
