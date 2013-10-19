@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=tarsnap
 RDEPEND=dev-libs/openssl:0 sys-libs/e2fsprogs-libs sys-libs/zlib acl? ( sys-apps/acl ) bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) xattr? ( sys-apps/attr )
 SLOT=0
-SRC_URI=https://www.tarsnap.com/download/tarsnap-autoconf-1.0.33.tgz
-_md5_=3b37211a2b254cceedd7aebccf96fdc0
+SRC_URI=https://www.tarsnap.com/download/tarsnap-autoconf-1.0.35.tgz
+_md5_=652fdf1e42292662de1cf43739a9f705
