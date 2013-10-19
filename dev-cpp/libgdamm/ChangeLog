@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgdamm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.33 2013/04/25 19:42:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.34 2013/10/19 13:31:34 hwoarang Exp $
+
+  19 Oct 2013; Markos Chandras <hwoarang@gentoo.org> -libgdamm-4.1.3.ebuild:
+  Remove version for SLOT=4. Bug #482910
 
 *libgdamm-4.99.7 (25 Apr 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.1.ebuild,v 1.1 2013/10/15 19:22:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.1.ebuild,v 1.2 2013/10/19 13:57:13 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -17,6 +17,11 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="cdr daap dbus +libsecret html ipod libnotify lirc mtp nsplugin +python
 test +udev upnp-av visualizer webkit zeitgeist"
+
+# Let people emerge this by default, bug #472932, reconsider when it starts
+# to support another implementation
+IUSE+=" +python_single_target_python3_2"
+
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
