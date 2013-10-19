@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/evtest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/ChangeLog,v 1.8 2013/03/09 18:10:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evtest/ChangeLog,v 1.9 2013/10/19 00:11:16 vapier Exp $
+
+  19 Oct 2013; Mike Frysinger <vapier@gentoo.org> evtest-1.30.ebuild:
+  Add keywords for everyone.
 
   09 Mar 2013; Agostino Sarubbo <ago@gentoo.org> evtest-1.30.ebuild:
   Stable for x86, wrt bug #457244
