@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giflib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.70 2013/09/27 05:58:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/ChangeLog,v 1.71 2013/10/19 05:51:56 vapier Exp $
+
+  19 Oct 2013; Mike Frysinger <vapier@gentoo.org> giflib-4.2.3.ebuild:
+  Fix building w/automake-1.13 #486542 by Arfrever Frehtes Taifersar Arahesis.
 
 *giflib-4.2.3 (27 Sep 2013)
 

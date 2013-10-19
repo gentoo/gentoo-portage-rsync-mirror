@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/domain_name-0.5.12.ebuild,v 1.1 2013/07/14 08:08:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/domain_name-0.5.14.ebuild,v 1.1 2013/10/19 05:51:45 mrueg Exp $
 
 EAPI=5
 

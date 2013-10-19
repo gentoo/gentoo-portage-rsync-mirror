@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/liquid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/liquid/ChangeLog,v 1.8 2013/10/04 17:46:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/liquid/ChangeLog,v 1.9 2013/10/19 05:45:47 mrueg Exp $
+
+*liquid-2.5.3 (19 Oct 2013)
+
+  19 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +liquid-2.5.3.ebuild:
+  Version bump. Add ruby20.
 
 *liquid-2.5.2-r1 (04 Oct 2013)
 
