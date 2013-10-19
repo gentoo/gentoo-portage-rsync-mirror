@@ -1,5 +1,8 @@
 # ChangeLog for dev-cpp/gtest
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.33 2013/08/16 14:44:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/ChangeLog,v 1.34 2013/10/19 01:54:42 vapier Exp $
+
+  19 Oct 2013; Mike Frysinger <vapier@gentoo.org> gtest-1.6.0-r2.ebuild:
+  Add m68k keywords.
 
   16 Aug 2013; Michał Górny <mgorny@gentoo.org> gtest-1.6.0-r2.ebuild:
   Convert to python-any-r1.

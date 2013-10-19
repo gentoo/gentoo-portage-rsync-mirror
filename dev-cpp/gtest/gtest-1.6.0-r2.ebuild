@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.6.0-r2.ebuild,v 1.3 2013/08/16 14:44:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtest/gtest-1.6.0-r2.ebuild,v 1.4 2013/10/19 01:54:42 vapier Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="http://googletest.googlecode.com/files/${P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-fbsd ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="examples static-libs"
 
 DEPEND="app-arch/unzip

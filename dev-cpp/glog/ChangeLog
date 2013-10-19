@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.13 2013/08/18 13:25:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/ChangeLog,v 1.14 2013/10/19 01:59:01 vapier Exp $
+
+  19 Oct 2013; Mike Frysinger <vapier@gentoo.org> glog-0.3.3.ebuild:
+  Add keywords for everyone.
 
   18 Aug 2013; Agostino Sarubbo <ago@gentoo.org> glog-0.3.3.ebuild:
   Stable for x86, wrt bug #478210

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.69 2013/10/11 22:27:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.70 2013/10/19 01:58:38 vapier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -389,3 +389,6 @@ clvm
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
 # virtual/opencl is not keyworded
 opencl
+
+# Unmask once sys-libs/libunwind gets keyworded.
+unwind
