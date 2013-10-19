@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.44 2013/10/19 14:48:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.45 2013/10/19 18:10:14 ulm Exp $
+
+  19 Oct 2013; Ulrich Müller <ulm@gentoo.org> libafterimage-1.20.ebuild,
+  +files/libafterimage-giflib42.patch:
+  Fix compilation failure with media-libs/giflib-4.2.3, bug 486804. Thanks to
+  Andrew Savchenko <bircoph@gmail.com> for providing a patch.
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Move to maintainer-needed
