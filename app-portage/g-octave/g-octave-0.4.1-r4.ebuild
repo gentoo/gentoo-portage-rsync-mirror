@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r3.ebuild,v 1.1 2012/12/03 01:12:33 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r4.ebuild,v 1.1 2013/10/19 21:02:38 rafaelmartins Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -32,6 +32,7 @@ src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-add_cave_support.patch"
 	epatch "${FILESDIR}/${P}-fix-sourceforge-svn-root.patch"
+	epatch "${FILESDIR}/${P}-fix-Makefile.patch"
 	sed -i -e 's/^has_fetch.*$/has_fetch = False/' scripts/g-octave \
 		|| die 'failed to patch the g-octave main script'
 }

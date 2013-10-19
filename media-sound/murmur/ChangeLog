@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.46 2013/10/09 18:58:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.47 2013/10/19 21:17:17 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> murmur-1.2.4-r2.ebuild:
+  amd64 stable, bug #486304
 
 *murmur-1.2.4-r2 (09 Oct 2013)
 

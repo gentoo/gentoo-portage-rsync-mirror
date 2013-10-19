@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/igmpproxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/igmpproxy/ChangeLog,v 1.7 2013/10/01 20:29:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/igmpproxy/ChangeLog,v 1.8 2013/10/19 21:03:08 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> igmpproxy-0.1-r1.ebuild:
+  amd64 stable, bug #487742
 
 *igmpproxy-0.1-r1 (01 Oct 2013)
 

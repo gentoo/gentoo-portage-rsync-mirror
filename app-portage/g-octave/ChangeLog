@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/g-octave
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.8 2012/12/03 01:12:33 rafaelmartins Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.9 2013/10/19 21:02:38 rafaelmartins Exp $
+
+*g-octave-0.4.1-r4 (19 Oct 2013)
+
+  19 Oct 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +files/g-octave-0.4.1-fix-Makefile.patch, +g-octave-0.4.1-r4.ebuild,
+  -g-octave-0.4.1-r3.ebuild:
+  Fix .oct installation path. Thanks to Fabio Rossi (bug #488534).
 
 *g-octave-0.4.1-r3 (03 Dec 2012)
 
@@ -40,4 +47,3 @@
   27 Sep 2010; Rafael G. Martins <rafaelmartins@gentoo.org>
   +g-octave-0.4.ebuild, +metadata.xml:
   Initial commit, moved from the science overlay. (bug #299039)
-

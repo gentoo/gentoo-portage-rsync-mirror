@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.314 2013/10/18 19:30:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.315 2013/10/19 21:12:22 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> lighttpd-1.4.32-r3.ebuild:
+  amd64 stable, bug #486314
 
   18 Oct 2013; Markus Meier <maekke@gentoo.org> lighttpd-1.4.32-r3.ebuild:
   arm stable, bug #486314

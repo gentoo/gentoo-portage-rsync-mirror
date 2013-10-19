@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.4-r2.ebuild,v 1.1 2013/10/09 18:58:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.4-r2.ebuild,v 1.2 2013/10/19 21:17:17 pacho Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="amd64 ~ia64 ~x86"
 IUSE="+dbus debug +ice pch zeroconf"
 
 RDEPEND=">=dev-libs/openssl-1.0.0b
