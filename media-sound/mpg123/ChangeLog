@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.295 2013/10/14 18:14:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.296 2013/10/19 22:14:30 chainsaw Exp $
+
+*mpg123-1.16.0 (19 Oct 2013)
+
+  19 Oct 2013; Tony Vroon <chainsaw@gentoo.org> +mpg123-1.16.0.ebuild:
+  Version bump, as requested by "Shark" in bug #488618. New Huffman decoding
+  scheme and some lovingly hand-optimised assembler for AVX & SSE.
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> mpg123-1.15.4-r1.ebuild:
   Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
