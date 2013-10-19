@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.35 2013/09/11 12:07:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.36 2013/10/19 21:33:52 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  mcelog-1.0_pre3_p20130621-r1.ebuild:
+  amd64 stable, bug #486296
 
 *mcelog-1.0_pre3_p20130621-r1 (11 Sep 2013)
 
