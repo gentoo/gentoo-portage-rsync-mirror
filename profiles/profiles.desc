@@ -20,6 +20,7 @@ amd64           default/linux/amd64/13.0/desktop                stable
 amd64           default/linux/amd64/13.0/desktop/gnome          stable
 amd64		default/linux/amd64/13.0/desktop/gnome/systemd	stable
 amd64           default/linux/amd64/13.0/desktop/kde            stable
+amd64		default/linux/amd64/13.0/desktop/kde/systemd	stable
 amd64           default/linux/amd64/13.0/developer              stable
 amd64           default/linux/amd64/13.0/no-multilib            dev
 amd64           default/linux/amd64/13.0/x32                    dev
@@ -30,6 +31,7 @@ arm             default/linux/arm/13.0/desktop                  dev
 arm             default/linux/arm/13.0/desktop/gnome            dev
 arm		default/linux/arm/13.0/desktop/gnome/systemd	dev
 arm             default/linux/arm/13.0/desktop/kde              dev
+arm		default/linux/arm/13.0/desktop/kde/systemd	dev
 arm             default/linux/arm/13.0/developer                dev
 arm             default/linux/arm/13.0/armv4                    dev
 arm             default/linux/arm/13.0/armv4/desktop            dev
@@ -96,6 +98,7 @@ ppc             default/linux/powerpc/ppc32/13.0/desktop        		stable
 ppc             default/linux/powerpc/ppc32/13.0/desktop/gnome  		stable
 ppc		default/linux/powerpc/ppc32/13.0/desktop/gnome/systemd		stable
 ppc             default/linux/powerpc/ppc32/13.0/desktop/kde    		stable
+ppc		default/linux/powerpc/ppc32/13.0/desktop/kde/systemd		stable
 ppc             default/linux/powerpc/ppc32/13.0/developer      		stable
 
 # PPC64 Profiles
@@ -104,12 +107,14 @@ ppc             default/linux/powerpc/ppc64/13.0/32bit-userland/desktop         
 ppc             default/linux/powerpc/ppc64/13.0/32bit-userland/desktop/gnome   	stable
 ppc		default/linux/powerpc/ppc64/13.0/32bit-userland/desktop/gnome/systemd	stable
 ppc             default/linux/powerpc/ppc64/13.0/32bit-userland/desktop/kde     	stable
+ppc		default/linux/powerpc/ppc64/13.0/32bit-userland/desktop/kde/systemd	stable
 ppc             default/linux/powerpc/ppc64/13.0/32bit-userland/developer       	stable
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland                 	stable
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop         	stable
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/gnome   	stable
 ppc64		default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/gnome/systemd	stable
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/kde     	stable
+ppc64		default/linux/powerpc/ppc64/13.0/64bit-userland/desktop/kde/systemd	stable
 ppc64           default/linux/powerpc/ppc64/13.0/64bit-userland/developer      		stable
 
 # S390 Profiles
@@ -137,6 +142,7 @@ x86             default/linux/x86/13.0/desktop                  stable
 x86             default/linux/x86/13.0/desktop/gnome            stable
 x86		default/linux/x86/13.0/desktop/gnome/systemd	stable
 x86             default/linux/x86/13.0/desktop/kde              stable
+x86		default/linux/x86/13.0/desktop/kde/systemd	stable
 x86             default/linux/x86/13.0/developer                stable
 
 # Gentoo/FreeBSD Profiles
