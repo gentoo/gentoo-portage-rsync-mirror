@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fluxbox-styles-fluxmod
 # Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.32 2013/10/19 15:17:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/ChangeLog,v 1.33 2013/10/19 18:43:12 pchrist Exp $
+
+  19 Oct 2013; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  Add myself to metadata.xml
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal

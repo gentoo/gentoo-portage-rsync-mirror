@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/commonbox-styles
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.33 2013/10/19 18:29:03 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.34 2013/10/19 18:31:52 pchrist Exp $
+
+  19 Oct 2013; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
+  fix typo in email
 
   19 Oct 2013; Panagiotis Christopoulos <pchrist@gentoo.org> metadata.xml:
   Add myself to metadata.xml

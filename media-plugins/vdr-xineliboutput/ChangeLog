@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.69 2012/11/26 14:29:26 scarabeus Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.70 2013/10/19 18:40:11 idl0r Exp $
+
+  19 Oct 2013; Christian Ruppert <idl0r@gentoo.org>
+  vdr-xineliboutput-9999.ebuild:
+  Use vdr-plugin-2 eclass
 
   26 Nov 2012; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Update to global useflag.
