@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.3-r3.ebuild,v 1.5 2013/10/18 16:22:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.3-r3.ebuild,v 1.6 2013/10/19 08:12:03 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -74,6 +74,7 @@ PATCHES=(
 #	"${FILESDIR}/keystone-grizzly-2-CVE-2013-2157.patch"
 #
 python_test() {
+	# https://bugs.launchpad.net/keystone/+bug/1241956
 	nosetests -e 'test_keystoneclient*' || die "testsuite failed under ${EPYTHON}"
 }
 
