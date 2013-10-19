@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/bbappconf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/ChangeLog,v 1.15 2012/11/25 10:20:05 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbappconf/ChangeLog,v 1.16 2013/10/19 15:01:09 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due desktop-wm removal
 
   25 Nov 2012; Kacper Kowalik <xarthisius@gentoo.org> bbappconf-0.0.2.ebuild:
   Fix phases so that they correspond to EAPI4, fixes #423177 by Diego Elio

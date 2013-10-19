@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/asmail
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.15 2011/11/23 10:29:42 eras Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.16 2013/10/19 14:49:15 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop afterstep herd
 
   23 Nov 2011; Eray Aslan <eras@gentoo.org> -asmail-0.56.ebuild:
   remove old
@@ -54,4 +57,3 @@
   +asmail-0.56.ebuild:
   Initial revision. Ebuild submitted by MATSUU Takuto <matsuu@gentoo.org>,
   closes #21494.
-

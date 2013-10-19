@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/asclock
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/ChangeLog,v 1.24 2012/06/12 13:32:15 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/ChangeLog,v 1.25 2013/10/19 14:50:21 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop afterstep herd
 
   12 Jun 2012; Agostino Sarubbo <ago@gentoo.org> asclock-2.0.12-r1.ebuild:
   Stable for amd64, wrt bug #418669

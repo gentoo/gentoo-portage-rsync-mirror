@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libafterimage
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.43 2012/05/05 08:02:44 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.44 2013/10/19 14:48:38 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Move to maintainer-needed
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libafterimage-1.20.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -172,4 +175,3 @@
   +files/libafterimage-config.patch, +files/libafterimage-examples.patch,
   +metadata.xml, +libafterimage-1.07.ebuild:
   Initial import. Closing bug #149088.
-
