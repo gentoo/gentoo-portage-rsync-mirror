@@ -3,10 +3,10 @@ DEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Ensure that a platform has weaken support
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Task-Weaken/
-KEYWORDS=amd64 ~hppa ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
+KEYWORDS=amd64 ~hppa ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/A/AD/ADAMK/Task-Weaken-1.04.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=77cbdf65596e9bd934de5871c0405c60
+_md5_=b4be33d03e6da9582d0b2cbd3d87219d
