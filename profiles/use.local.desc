@@ -1260,6 +1260,7 @@ dev-haskell/citeproc-hs:network - use dev-haskell/network and dev-haskell/http t
 dev-haskell/citeproc-hs:small_base - Choose the new smaller, split-up base package.
 dev-haskell/cmdargs:quotation - Build quote module
 dev-haskell/cmdargs:testprog - Build the test program
+dev-haskell/comonad:test-doctests - Run the doctests test suite
 dev-haskell/crypto-api:all_cpolys - Build all the CMAC polynomes up to 10000 bits instead of just the usual ones
 dev-haskell/crypto-pubkey:benchmark - Build benchmarks.
 dev-haskell/cryptohash:cryptoapi - Defines crypto-api instances

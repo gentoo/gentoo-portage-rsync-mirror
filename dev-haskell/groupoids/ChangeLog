@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/groupoids
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/groupoids/ChangeLog,v 1.1 2013/08/26 10:34:57 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/groupoids/ChangeLog,v 1.2 2013/10/19 11:35:30 gienah Exp $
+
+*groupoids-4.0 (19 Oct 2013)
+
+  19 Oct 2013; Mark Wright <gienah@gentoo.org> +groupoids-4.0.ebuild:
+  Bump groupoids to 4.0
 
 *groupoids-3.0.1.1 (26 Aug 2013)
 

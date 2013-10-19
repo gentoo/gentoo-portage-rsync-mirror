@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-9.0.2.1031769-r1.ebuild,v 1.1 2013/07/24 21:47:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-9.0.2.1031769-r1.ebuild,v 1.2 2013/10/19 11:38:38 dilfridge Exp $
 
 EAPI="4"
 
@@ -458,7 +458,7 @@ src_install() {
 	fi
 
 	# install systemd unit files
-	systemd_dounit ${WORKDIR}/systemd-vmware-${SYSTEMD_UNITS_TAG}/*.{service,target}
+	systemd_dounit "${WORKDIR}/systemd-vmware-${SYSTEMD_UNITS_TAG}"/*.{service,target}
 }
 
 pkg_config() {

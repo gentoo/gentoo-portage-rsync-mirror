@@ -1,6 +1,16 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.107 2013/08/11 17:24:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.108 2013/10/19 11:42:47 dilfridge Exp $
+
+*vmware-modules-279.0 (19 Oct 2013)
+
+  19 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/279-3.10.0.patch, +files/279-apic.patch,
+  +files/279-makefile-include.patch, +files/279-makefile-kernel-dir.patch,
+  +files/279-netdevice.patch, +files/279-putname.patch,
+  +files/279-vmblock.patch, +vmware-modules-279.0.ebuild:
+  Version bump, added without keywords for testing. Bug 484098. Thanks to Billy
+  DeVincentis for the files.
 
   11 Aug 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   +files/264-3.10.0.patch, +files/271-3.10.0.patch,

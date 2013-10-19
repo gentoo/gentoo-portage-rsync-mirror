@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.246 2013/07/24 21:47:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.247 2013/10/19 11:38:38 dilfridge Exp $
+
+*vmware-workstation-10.0.0.1295980 (19 Oct 2013)
+
+  19 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +vmware-workstation-10.0.0.1295980.ebuild, +files/vmware-10.0.rc,
+  +files/vmware-server-10.0.rc:
+  Version bump, added without keywords for testing. Bug 484098. Thanks to Billy
+  DeVincentis for the files.
 
 *vmware-workstation-9.0.2.1031769-r1 (24 Jul 2013)
 

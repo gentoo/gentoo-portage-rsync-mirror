@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/semigroupoid-extras
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroupoid-extras/ChangeLog,v 1.1 2013/08/26 10:35:11 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/semigroupoid-extras/ChangeLog,v 1.2 2013/10/19 11:59:39 gienah Exp $
+
+*semigroupoid-extras-4.0 (19 Oct 2013)
+
+  19 Oct 2013; Mark Wright <gienah@gentoo.org> +semigroupoid-extras-4.0.ebuild:
+  Bump semigroupoid-extras to 4.0
 
 *semigroupoid-extras-3.0.1 (26 Aug 2013)
 
