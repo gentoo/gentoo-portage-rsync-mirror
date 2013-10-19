@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/duplicity
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/ChangeLog,v 1.86 2013/10/10 19:48:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/duplicity/ChangeLog,v 1.87 2013/10/19 12:37:14 radhermit Exp $
+
+  19 Oct 2013; Tim Harder <radhermit@gentoo.org> duplicity-0.6.22.ebuild:
+  Add post install message about optional deps for various backends.
 
   10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> duplicity-0.6.22.ebuild:
   Marked stable on AMD64 based on arch tester report by Elijah "Armageddon" El

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.6.ebuild,v 1.1 2013/10/18 16:50:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.6.ebuild,v 1.2 2013/10/19 12:39:36 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
@@ -60,6 +60,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
 	app-text/docbook-xml-dtd:4.1.2
 	dev-libs/libxslt
+	dev-util/gdbus-codegen
 	virtual/pkgconfig
 	X? (
 		x11-proto/xextproto
@@ -105,6 +106,7 @@ src_prepare() {
 	# epatch "${FILESDIR}/${PN}-3.3.18-fallback-theme.patch"
 
 	# This files shouldn't be in tarball, upstream bug #709974
+	# This needs dev-util/gdbus-codegen in DEPEND
 	rm -f gtk/gtkdbusgenerated.{h,c} || die
 
 	if use test; then

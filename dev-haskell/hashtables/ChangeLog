@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/hashtables
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.13 2013/10/03 04:00:24 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.14 2013/10/19 13:00:59 gienah Exp $
+
+*hashtables-1.1.2.1 (19 Oct 2013)
+
+  19 Oct 2013; Mark Wright <gienah@gentoo.org> +hashtables-1.1.2.1.ebuild,
+  metadata.xml:
+  Bump hashtables to 1.1.2.1
 
 *hashtables-1.1.2.0 (03 Oct 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/bufexplorer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bufexplorer/ChangeLog,v 1.4 2013/08/20 01:29:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bufexplorer/ChangeLog,v 1.5 2013/10/19 12:59:35 radhermit Exp $
+
+*bufexplorer-7.4.1 (19 Oct 2013)
+
+  19 Oct 2013; Tim Harder <radhermit@gentoo.org> +bufexplorer-7.4.1.ebuild:
+  Version bump.
 
 *bufexplorer-7.3.6 (20 Aug 2013)
 
