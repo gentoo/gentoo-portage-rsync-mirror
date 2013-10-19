@@ -1,6 +1,13 @@
 # ChangeLog for media-video/rtmpdump
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.23 2012/11/25 10:53:36 hwoarang Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.24 2013/10/18 23:44:22 hwoarang Exp $
+
+*rtmpdump-2.4_p20131018 (18 Oct 2013)
+
+  18 Oct 2013; Markos Chandras <hwoarang@gentoo.org>
+  +rtmpdump-2.4_p20131018.ebuild:
+  Add new media-video/rtmpdump snapshot. Required by new applications. Bug
+  #488510
 
   25 Nov 2012; Markos Chandras <hwoarang@gentoo.org> rtmpdump-2.3.ebuild,
   rtmpdump-2.4.ebuild, rtmpdump-9999.ebuild:
