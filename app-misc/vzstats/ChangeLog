@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/vzstats
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vzstats/ChangeLog,v 1.4 2013/07/14 07:27:55 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vzstats/ChangeLog,v 1.5 2013/10/19 16:07:16 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due vserver removal
 
 *vzstats-0.5.1 (14 Jul 2013)
 

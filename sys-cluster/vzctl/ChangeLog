@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.117 2013/09/04 07:05:04 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.118 2013/10/19 16:09:14 pacho Exp $
+
+  19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due vserver removal
 
   04 Sep 2013; Alexander Vershilov <qnikst@gentoo.org> -vzctl-9999.ebuild:
   sys-cluster/vzctl: remove live version due lack of the resources

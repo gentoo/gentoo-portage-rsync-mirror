@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2013.09.16.1328054.ebuild,v 1.1 2013/10/19 01:42:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2013.09.16.1328054.ebuild,v 1.2 2013/10/19 16:30:10 floppym Exp $
 
 EAPI="5"
 
-inherit eutils linux-mod versionator
+inherit eutils linux-mod versionator udev
 
 MY_PN="${PN/-kmod}"
 MY_PV="$(replace_version_separator 3 '-')"
@@ -53,11 +53,5 @@ src_configure() {
 
 src_install() {
 	linux-mod_src_install
-
-	local udevrules="${T}/60-vmware.rules"
-	cat > "${udevrules}" <<-EOF
-		KERNEL=="vsock", GROUP="vmware", MODE=660
-	EOF
-	insinto /lib/udev/rules.d/
-	doins "${udevrules}"
+	udev_dorules "${FILESDIR}/60-vmware.rules"
 }
