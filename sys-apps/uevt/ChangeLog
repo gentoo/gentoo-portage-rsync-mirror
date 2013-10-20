@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/uevt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/ChangeLog,v 1.13 2013/04/27 14:43:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uevt/ChangeLog,v 1.14 2013/10/20 08:22:00 ssuominen Exp $
+
+  20 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> uevt-2.3-r1.ebuild:
+  Fix missing dev-lang/vala DEPEND wrt #488686 by Jesús Guerrero
 
   27 Apr 2013; Jeroen Roovers <jer@gentoo.org> uevt-2.3-r1.ebuild:
   Use vala.eclass (bug #467402).

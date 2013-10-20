@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1.ebuild,v 1.3 2013/09/15 23:54:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1-r1.ebuild,v 1.1 2013/10/20 08:18:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -156,6 +156,9 @@ src_prepare() {
 	# Fix automagic gnome-bluetooth dep, bug #398145
 	epatch "${FILESDIR}/${PN}-1.6.1-automagic-gnome-bluetooth.patch"
 
+	# Optional NetworkManager, bug #488684
+	epatch "${FILESDIR}/${PN}-1.8.8.1-optional-networkmanager.patch"
+
 	# Gentoo uses /usr/libexec
 	sed -e "s:/usr/lib/gnome-session/gnome-session-check-accelerated:${EPREFIX}/usr/libexec/gnome-session-check-accelerated:" \
 		-i "files/usr/share/gnome-session/sessions/cinnamon.session" || die "sed 1 failed"
@@ -189,6 +192,7 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-jhbuild-wrapper-script \
 		$(use_with bluetooth) \
+		$(use_enable networkmanager) \
 		--with-ca-certificates="${EPREFIX}/etc/ssl/certs/ca-certificates.crt" \
 		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins"
 }
