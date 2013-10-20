@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-4.8.4.ebuild,v 1.1 2013/03/02 15:35:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-4.8.4.ebuild,v 1.2 2013/10/20 22:57:46 pesa Exp $
 
 EAPI=4
 
@@ -26,8 +26,8 @@ DEPEND="
 	gstreamer? (
 		dev-libs/glib:2
 		dev-libs/libxml2:2[!icu?]
-		media-libs/gstreamer:0.10
-		media-libs/gst-plugins-base:0.10
+		>=media-libs/gstreamer-0.10.36:0.10
+		>=media-libs/gst-plugins-base-0.10.36:0.10
 	)
 	icu? ( dev-libs/icu )
 "

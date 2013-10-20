@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.1.2.3.ebuild,v 1.1 2013/10/04 19:31:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.1.2.3.ebuild,v 1.2 2013/10/20 22:49:10 chainsaw Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ BASE_SRC_URI="http://download.documentfoundation.org/${PN/-l10n/}/testing/${MY_P
 
 LICENSE="|| ( LGPL-3 MPL-1.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp"
 
 LANGUAGES_HELP="am ast bg bn_IN bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA

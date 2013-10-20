@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/libmwaw-0.1.10.ebuild,v 1.1 2013/06/27 18:59:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/libmwaw-0.1.10.ebuild,v 1.2 2013/10/20 22:47:13 chainsaw Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~x86"
 IUSE="doc static-libs"
 
 RDEPEND="

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.89 2013/10/04 19:31:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.90 2013/10/20 22:49:10 chainsaw Exp $
+
+  20 Oct 2013; Tony Vroon <chainsaw@gentoo.org>
+  libreoffice-l10n-4.1.2.3.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #486204.
 
 *libreoffice-l10n-4.1.2.3 (04 Oct 2013)
 
