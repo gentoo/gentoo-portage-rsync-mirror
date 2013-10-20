@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sochotnicky@gentoo.org</email>
-		<name>Stanislav Ochotnicky</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 The purpose of beets is to get your music collection right once and for all. It catalogs your collection, automatically improving its metadata as it goes using the MusicBrainz database. (It also downloads cover art for albums it imports.) Then it provides a bouquet of tools for manipulating and accessing your music.
@@ -17,7 +16,7 @@ Because beets is designed as a library, it can do almost anything you can imagin
   * Clean up crufty tags left behind by other, less-awesome tools.
   * Browse your music library graphically through a Web browser and play it in any browser that supports HTML5 Audio.
 
-If beets doesn’t do what you want yet, writing your own plugin is shockingly simple if you know a little Python.		
+If beets doesn’t do what you want yet, writing your own plugin is shockingly simple if you know a little Python.
 	</longdescription>
 	<use>
 		<flag name="bpd">Enable support for <pkg>media-sound/mpd</pkg> server emulation</flag>
@@ -30,4 +29,3 @@ If beets doesn’t do what you want yet, writing your own plugin is shockingly s
 		<flag name="web">Enable embedded webserver support through <pkg>dev-python/flask</pkg></flag>
 	</use>
 </pkgmetadata>
-

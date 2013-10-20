@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xombrero/xombrero-9999.ebuild,v 1.2 2013/07/05 22:20:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xombrero/xombrero-9999.ebuild,v 1.3 2013/10/20 19:11:42 ago Exp $
 
 EAPI="5"
 
@@ -62,6 +62,7 @@ src_prepare() {
 	sed -i \
 		"s#Icon=#Icon=/usr/share/${PN}/#" \
 		../xombrero.desktop || die 'sed ../xombrero.desktop failed.'
+	sed -i "s:Application;::" ../xombrero.desktop || die
 }
 
 src_compile() {

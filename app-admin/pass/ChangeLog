@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pass
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.4 2013/04/16 07:34:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/ChangeLog,v 1.5 2013/10/20 19:13:56 grobian Exp $
+
+  20 Oct 2013; Fabian Groffen <grobian@gentoo.org> pass-1.4.2.ebuild:
+  Fix for Darwin, based on work by Changyuan Yu in bug #481194
 
   16 Apr 2013; Justin Lecher <jlec@gentoo.org> pass-1.4.2.ebuild,
   pass-9999.ebuild, metadata.xml:

@@ -2,11 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sochotnicky@gentoo.org</email>
-		<name>Stanislav Ochotnicky</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 This library implements webservice bindings for the Musicbrainz NGS site, also known as /ws/2.
 	</longdescription>
 </pkgmetadata>
-

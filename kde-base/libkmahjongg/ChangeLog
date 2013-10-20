@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/libkmahjongg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/ChangeLog,v 1.178 2013/10/10 01:27:12 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/ChangeLog,v 1.179 2013/10/20 19:16:21 johu Exp $
+
+  20 Oct 2013; Johannes Huber <johu@gentoo.org>
+  +files/libkmahjongg-4.11.2-no-need-libkdegames.patch,
+  libkmahjongg-4.11.2.ebuild:
+  Add upstream patch to fix build. Patch will be included in KDE SC 4.11.3. kde-
+  base/libkdegames was required in configure phase, but not needed at build and
+  runtime, fixes bug #486828.
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -libkmahjongg-4.11.1.ebuild:
   Drop KDE SC 4.11.1

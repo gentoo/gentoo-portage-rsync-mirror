@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sochotnicky@gentoo.org</email>
-		<name>Stanislav Ochotnicky</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 This is a Python port of Text::Unidecode Perl module
@@ -17,4 +16,3 @@ What Unidecode provides is a middle road: function unidecode() takes Unicode dat
 Note that this module generally produces better results than simply stripping accents from characters (which can be done in Python with built-in functions). It is based on hand-tuned character mappings that for example also contain ASCII approximations for symbols and non-Latin alphabets.
 	</longdescription>
 </pkgmetadata>
-

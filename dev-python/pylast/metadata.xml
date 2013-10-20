@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sochotnicky@gentoo.org</email>
-		<name>Stanislav Ochotnicky</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 Python interface to last.fm and other api-compatible websites
@@ -20,4 +19,3 @@ Features:
  * Python3-friendly (Starting from 0.5).
 	</longdescription>
 </pkgmetadata>
-
