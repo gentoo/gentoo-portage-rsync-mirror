@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-junit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit/ChangeLog,v 1.38 2013/08/28 22:13:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit/ChangeLog,v 1.39 2013/10/20 09:32:46 ago Exp $
+
+  20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ant-junit-1.9.2.ebuild:
+  Correct the keyword declaration
 
 *ant-junit-1.9.2 (28 Aug 2013)
 

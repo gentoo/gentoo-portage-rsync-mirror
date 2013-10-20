@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.86 2013/10/18 19:54:19 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.87 2013/10/20 09:38:25 radhermit Exp $
+
+  20 Oct 2013; Tim Harder <radhermit@gentoo.org> libssh-0.6.0_rc1.ebuild:
+  Update test dep to use cmocka (bug #488664).
 
 *libssh-0.6.0_rc1 (18 Oct 2013)
 
