@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/happstack-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happstack-server/ChangeLog,v 1.1 2013/06/20 05:35:37 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happstack-server/ChangeLog,v 1.2 2013/10/20 02:25:33 gienah Exp $
+
+*happstack-server-7.3.1 (20 Oct 2013)
+
+  20 Oct 2013; Mark Wright <gienah@gentoo.org> +happstack-server-7.3.1.ebuild,
+  metadata.xml:
+  Bump happstack-server to 7.3.1
 
 *happstack-server-7.1.7.1 (20 Jun 2013)
 
