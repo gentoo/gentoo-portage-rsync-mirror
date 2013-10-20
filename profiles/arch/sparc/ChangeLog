@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.212 2013/10/16 17:05:32 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.213 2013/10/20 17:15:52 tomwij Exp $
+
+  20 Oct 2013; Tom Wijsman <TomWij@gentoo.org> package.use.mask:
+  Adjusted media-video/mpv luajit USE mask to support future versions.
 
   16 Oct 2013; Tom Wijsman <TomWij@gentoo.org> package.use.mask:
   Mask luajit on ~media-video/mpv-0.2.0 because it only has amd64 x86 keywords.
