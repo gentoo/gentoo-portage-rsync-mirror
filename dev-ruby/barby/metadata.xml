@@ -4,19 +4,9 @@
   <herd>ruby</herd>
 
   <use>
-    <flag name="datamatrix">
-      Add support for datamatrix 2D codes using
-      <pkg>dev-ruby/semacode</pkg>.
-    </flag>
-
     <flag name="qrcode">
       Add support for QRCode 2D codes using
       <pkg>dev-ruby/rqrcode</pkg>.
-    </flag>
-
-    <flag name="pdf-writer">
-      Add support for writing PDF documents using
-      <pkg>dev-ruby/pdf-writer</pkg>.
     </flag>
 
     <flag name="prawn">
