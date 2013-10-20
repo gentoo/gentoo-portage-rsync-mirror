@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-testutil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-testutil/ChangeLog,v 1.22 2013/10/20 11:15:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-testutil/ChangeLog,v 1.23 2013/10/20 15:12:34 ago Exp $
+
+  20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ant-testutil-1.9.2.ebuild:
+  Stable for ppc, wrt bug #476958
 
   20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ant-testutil-1.9.2.ebuild:
   Stable for x86, wrt bug #476958
