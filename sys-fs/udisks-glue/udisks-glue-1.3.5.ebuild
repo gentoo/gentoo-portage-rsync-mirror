@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks-glue/udisks-glue-1.3.3.ebuild,v 1.3 2012/05/04 19:09:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks-glue/udisks-glue-1.3.5.ebuild,v 1.1 2013/10/20 08:47:03 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools
 
 DESCRIPTION="A tool to associate udisks events to user-defined actions"
@@ -14,11 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEPEND=">=dev-libs/dbus-glib-0.92
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.100.2
 	>=dev-libs/glib-2
 	dev-libs/confuse"
 RDEPEND="${COMMON_DEPEND}
-	sys-fs/udisks:0"
+	>=sys-fs/udisks-1.0.4-r5:0"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
