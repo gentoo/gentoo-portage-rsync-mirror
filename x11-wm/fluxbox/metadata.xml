@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>proxy-maintainers</herd>
 <maintainer>
 	<email>pchrist@gentoo.org</email>
 	<name>Panagiotis Christopoulos</name>
+</maintainer>
+<maintainer>
+	<email>dlcampbell@gmx.com</email>
+	<name>Daniel Campbell</name>
+	<description>Mantainer. Assign bugs to him</description>
 </maintainer>
 	<longdescription><![CDATA[
 		Fluxbox is yet another windowmanager for X. Originally based upon the
