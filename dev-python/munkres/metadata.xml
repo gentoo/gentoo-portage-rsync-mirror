@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>sochotnicky@gentoo.org</email>
-		<name>Stanislav Ochotnicky</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">The Munkres module provides an implementation of the Munkres algorithm (also called the Hungarian algorithm or the Kuhn-Munkres algorithm), useful for solving the Assignment Problem.
 	</longdescription>
