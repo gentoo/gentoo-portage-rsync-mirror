@@ -2,8 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-	  <email>jdhore@gentoo.org</email>
-	  <name>Jeff Horelick</name>
+    <email>jdhore@gentoo.org</email>
+    <name>Jeff Horelick</name>
+  </maintainer>
+  <maintainer>
+    <email>mgorny@gentoo.org</email>
+    <name>Michał Górny</name>
   </maintainer>
   <use>
     <flag name="pbins">Enable binary package support. Adds dependency upon

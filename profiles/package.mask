@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15168 2013/10/19 13:32:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15170 2013/10/20 07:10:38 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (20 Oct 2013)
+# Mask more ruby18-only packages for removal in 30 days.
+# All of these packages no longer have dependencies on them.
+dev-ruby/amstd
+dev-ruby/markaby
+dev-ruby/pdf-writer
+dev-ruby/ruby-bdb
+dev-ruby/semacode
 
 # Hans de Graaff <graaff@gentoo.org> (19 Oct 2013)
 # Mask Rails 3.1 for removal in 30 days. This version of rails

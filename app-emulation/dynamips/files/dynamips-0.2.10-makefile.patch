@@ -1,0 +1,52 @@
+--- stable/Makefile.orig	2013-10-20 11:17:50.242929187 +0400
++++ stable/Makefile	2013-10-20 11:19:19.395936956 +0400
+@@ -3,12 +3,7 @@
+ 
+ # Replace x86 by amd64 for a build on x86_64.
+ # Use "nojit" for architectures that are not x86 or x86_64.
+-DYNAMIPS_ARCH?=x86
+-#DYNAMIPS_ARCH?=amd64
+-
+-ifeq ($(DYNAMIPS_ARCH),ppc32)
+-DYNAMIPS_ARCH=x86
+-endif
++DYNAMIPS_ARCH?=nojit
+ 
+ # Get include files from the current directory and from the common directory
+ INCLUDE+=-I. -I../common
+@@ -47,7 +42,7 @@
+ PPC32_ARCH_INC_FILE=\"ppc32_$(DYNAMIPS_ARCH)_trans.h\"
+ OSNAME=unknown
+ 
+-CFLAGS+= $(INCLUDE) -Wall -O2 -fomit-frame-pointer \
++CFLAGS+= $(INCLUDE) -Wall \
+ 	-DJIT_ARCH=\"$(DYNAMIPS_ARCH)\" -DJIT_CPU=CPU_$(DYNAMIPS_ARCH) \
+ 	-DMIPS64_ARCH_INC_FILE=$(MIPS64_ARCH_INC_FILE) \
+ 	-DPPC32_ARCH_INC_FILE=$(PPC32_ARCH_INC_FILE) \
+@@ -72,7 +67,7 @@
+ #   PCAP_LIB=-lpcap
+    OSNAME=Linux
+    CFLAGS+=-I/usr/include -I. $(PTHREAD_CFLAGS)
+-   LIBS=-L/usr/lib -L. -ldl -lrt -luuid -lelf $(PTHREAD_LIBS)
++   LIBS=$(LDFLAGS) -L/usr/lib -L. -ldl -lrt -luuid -lelf $(PTHREAD_LIBS)
+    DESTDIR=/usr
+ else
+ ifeq ($(shell uname -s), Darwin)
+@@ -274,7 +269,7 @@
+ 
+ asmdefs$(BIN_EXT): asmdefs.c mips64.h
+ 	@echo "Linking $@"
+-	@$(CC) -Wall $(CFLAGS) -o $@ asmdefs.c
++	@$(CC) -Wall $(CFLAGS) $(LDFLAGS) -o $@ asmdefs.c
+ 
+ asmdefs.h: asmdefs$(BIN_EXT)
+ 	@echo "Building assembly definitions header file"
+@@ -282,7 +277,7 @@
+ 
+ nvram_export$(BIN_EXT): nvram_export.o fs_nvram.o
+ 	@echo "Linking $@"
+-	@$(CC) -Wall $(CFLAGS) $(INCLUDE) -o $@ nvram_export.o fs_nvram.o
++	@$(CC) -Wall $(CFLAGS) $(LDFLAGS) $(INCLUDE) -o $@ nvram_export.o fs_nvram.o
+ 
+ install: $(PROG) nvram_export$(BIN_EXT)
+ 	@echo "Installing"

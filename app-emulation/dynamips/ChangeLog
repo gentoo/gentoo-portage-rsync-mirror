@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/dynamips
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.11 2013/08/25 14:51:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dynamips/ChangeLog,v 1.12 2013/10/20 07:24:02 pinkbyte Exp $
+
+*dynamips-0.2.10 (20 Oct 2013)
+
+  20 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> -dynamips-0.2.8_rc3.ebuild,
+  -dynamips-0.2.8.ebuild, -files/dynamips-0.2.8_rc3-makefile.patch,
+  +dynamips-0.2.10.ebuild, +files/dynamips-0.2.10-makefile.patch:
+  Version bump, drop old
 
 *dynamips-0.2.8-r1 (25 Aug 2013)
 
