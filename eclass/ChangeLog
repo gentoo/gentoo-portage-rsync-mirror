@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1028 2013/10/20 16:27:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1029 2013/10/20 21:45:31 pesa Exp $
+
+  20 Oct 2013; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Updates from qt overlay: drop USE="c++0x" from 4.8.5 and later versions; warn
+  on downgrade instead of dying.
 
   20 Oct 2013; Julian Ospald <hasufell@gentoo.org> multilib-minimal.eclass:
   make doc installation part of default multilib_src_install_all() wrt #483304

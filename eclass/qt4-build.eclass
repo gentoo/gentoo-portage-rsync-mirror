@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.152 2013/10/14 17:29:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.153 2013/10/20 21:45:31 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -43,7 +43,9 @@ case ${QT4_BUILD_TYPE} in
 esac
 
 IUSE="aqua debug pch"
-[[ ${CATEGORY}/${PN} != dev-qt/qtwebkit ]] && IUSE+=" c++0x"
+if ! version_is_at_least 4.8.5; then
+	[[ ${CATEGORY}/${PN} != dev-qt/qtwebkit ]] && IUSE+=" c++0x"
+fi
 [[ ${CATEGORY}/${PN} != dev-qt/qtxmlpatterns ]] && IUSE+=" +exceptions"
 
 DEPEND="virtual/pkgconfig"
@@ -57,16 +59,12 @@ S=${WORKDIR}/${MY_P}
 # @DESCRIPTION:
 # Sets up PATH and LD_LIBRARY_PATH.
 qt4-build_pkg_setup() {
-	# Protect users by not allowing downgrades between releases.
-	# Downgrading revisions within the same release should be allowed.
+	# Warn users of possible breakage when downgrading to a previous release.
+	# Downgrading revisions within the same release is safe.
 	if has_version ">${CATEGORY}/${P}-r9999:4"; then
-		if [[ -z ${I_KNOW_WHAT_I_AM_DOING} ]]; then
-			eerror "    ***  Sanity check to keep you from breaking your system  ***"
-			eerror "Downgrading Qt is completely unsupported and will break your system!"
-			die "aborting to save your system"
-		else
-			ewarn "Downgrading Qt is completely unsupported and will break your system!"
-		fi
+		ewarn
+		ewarn "Downgrading Qt is completely unsupported and can break your system!"
+		ewarn
 	fi
 
 	PATH="${S}/bin${PATH:+:}${PATH}"
@@ -101,21 +99,21 @@ qt4-build_pkg_setup() {
 qt4-build_src_unpack() {
 	setqtenv
 
-	if ! version_is_at_least 4.1 $(gcc-version); then
-		ewarn "Using a GCC version lower than 4.1 is not supported."
-	elif use_if_iuse c++0x && ! version_is_at_least 4.4 $(gcc-version); then
-		ewarn "USE=c++0x requires GCC 4.4 or later."
+	if ! version_is_at_least 4.4 $(gcc-version); then
+		ewarn
+		ewarn "Using a GCC version lower than 4.4 is not supported."
+		ewarn
 	fi
 
 	if [[ ${CATEGORY}/${PN} == dev-qt/qtwebkit ]]; then
 		eshopts_push -s extglob
 		if is-flagq '-g?(gdb)?([1-9])'; then
-			echo
+			ewarn
 			ewarn "You have enabled debug info (probably have -g or -ggdb in your CFLAGS/CXXFLAGS)."
 			ewarn "You may experience really long compilation times and/or increased memory usage."
 			ewarn "If compilation fails, please try removing -g/-ggdb before reporting a bug."
 			ewarn "For more info check out https://bugs.gentoo.org/307861"
-			echo
+			ewarn
 		fi
 		eshopts_pop
 	fi
