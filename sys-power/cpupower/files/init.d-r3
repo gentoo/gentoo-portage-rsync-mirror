@@ -1,0 +1,43 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/files/init.d-r3,v 1.1 2013/10/20 14:17:59 ssuominen Exp $
+
+CPUFREQ_SYSFS=/sys/devices/system/cpu/cpufreq
+
+change() {
+	local c ret=0 opts="$1"
+	shift
+	if [ -n "$opts" ] ; then
+		ebegin "Running cpupower -c all frequency-set ${opts}"
+			cpupower -c all frequency-set ${opts} >/dev/null 2>&1
+			: $(( ret += $? ))
+		eend ${ret}
+
+		if [ -d ${CPUFREQ_SYSFS} ] && [ $# -gt 0 ] ; then
+			c=1
+			einfo "Setting extra options: $*"
+			if cd ${CPUFREQ_SYSFS} ; then
+				local o v
+				for o in "$@" ; do
+					v=${o#*=}
+					o=${o%%=*}
+					echo ${v} > ${o} || break
+				done
+				c=0
+			fi
+			eend ${c}
+			: $(( ret += c ))
+		fi
+	fi
+
+	return ${ret}
+}
+
+start() {
+	change "${START_OPTS}" "${SYSFS_EXTRA}"
+}
+
+stop() {
+	change "${STOP_OPTS}"
+}

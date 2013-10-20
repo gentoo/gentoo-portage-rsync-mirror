@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.11.2.ebuild,v 1.1 2013/10/09 23:04:38 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.11.2.ebuild,v 1.2 2013/10/20 14:06:30 johu Exp $
 
 EAPI=5
 
@@ -13,8 +13,8 @@ inherit kde4-meta
 
 DESCRIPTION="System settings utility"
 HOMEPAGE+=" http://userbase.kde.org/System_Settings"
-IUSE="debug gtk +usb"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+IUSE="debug gtk semantic-desktop +usb"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 COMMONDEPEND="
 	app-misc/strigi
@@ -41,11 +41,11 @@ DEPEND="${COMMONDEPEND}
 	x11-proto/xextproto
 "
 RDEPEND="${COMMONDEPEND}
-	$(add_kdebase_dep nepomuk)
 	sys-libs/timezone-data
 	x11-apps/setxkbmap
 	x11-misc/xkeyboard-config
 	gtk? ( kde-misc/kde-gtk-config )
+	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
 "
 
 KMEXTRA="

@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-shares-plugin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/ChangeLog,v 1.10 2013/04/25 09:05:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/ChangeLog,v 1.11 2013/10/20 14:09:33 ssuominen Exp $
+
+  20 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-shares-plugin-0.2.0_p20101105.ebuild:
+  Keyword ~arm wrt #488722 by Michael Kurinnoy
 
   25 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   thunar-shares-plugin-0.2.0_p20101105.ebuild:
@@ -59,4 +63,3 @@
   01 Dec 2008; Christoph Mende <angelos@gentoo.org>
   +thunar-shares-0.16.ebuild:
   Initial import, bug 248265
-

@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install prepare setup
+DEPEND=sys-apps/pciutils !sys-apps/linux-misc-apps !sys-power/cpufrequtils virtual/os-headers virtual/pkgconfig nls? ( sys-devel/gettext )
+DESCRIPTION=Shows and sets processor power related values
+EAPI=5
+HOMEPAGE=http://www.kernel.org/
+IUSE=cpufreq_bench debug nls
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/pciutils !sys-apps/linux-misc-apps !sys-power/cpufrequtils
+SLOT=0
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.11.tar.xz
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=e4e6f15f2c100d43ff7584898608d522
