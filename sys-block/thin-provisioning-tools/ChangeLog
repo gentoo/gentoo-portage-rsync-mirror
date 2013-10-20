@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/thin-provisioning-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.23 2013/10/20 08:12:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.24 2013/10/20 14:43:14 ssuominen Exp $
+
+  20 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
+  thin-provisioning-tools-0.2.8.ebuild:
+  Remove now unnecessary GCC 4.7.x check because upstream stopped using
+  --std=c++11 wrt http://github.com/jthornber/thin-provisioning-
+  tools/commit/0029962f200ca4f256de114779bb5fad96836d89
 
   20 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
   -files/thin-provisioning-tools-0.2.1-LDFLAGS.patch,
