@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-nodeps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.42 2013/08/28 22:21:40 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-nodeps/ChangeLog,v 1.44 2013/10/20 11:15:14 ago Exp $
+
+  20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ant-nodeps-1.9.2.ebuild:
+  Stable for x86, wrt bug #476958
+
+  20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ant-nodeps-1.9.2.ebuild:
+  Stable for amd64, wrt bug #476958
 
 *ant-nodeps-1.9.2 (28 Aug 2013)
 

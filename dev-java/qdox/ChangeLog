@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/qdox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.40 2013/09/01 11:41:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/ChangeLog,v 1.42 2013/10/20 11:16:00 ago Exp $
+
+  20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> qdox-1.12-r1.ebuild:
+  Stable for x86, wrt bug #476958
+
+  20 Oct 2013; Agostino Sarubbo <ago@gentoo.org> qdox-1.12-r1.ebuild:
+  Stable for amd64, wrt bug #476958
 
   01 Sep 2013; Fabian Groffen <grobian@gentoo.org> qdox-1.6.3.ebuild:
   Marked *-macos

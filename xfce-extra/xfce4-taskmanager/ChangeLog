@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-taskmanager
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/ChangeLog,v 1.60 2012/11/28 12:22:56 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-taskmanager/ChangeLog,v 1.61 2013/10/20 11:23:14 ssuominen Exp $
+
+*xfce4-taskmanager-1.0.0-r1 (20 Oct 2013)
+
+  20 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +files/xfce4-taskmanager-1.0.0-UTF-8.patch,
+  +xfce4-taskmanager-1.0.0-r1.ebuild:
+  Include pango related UTF-8 fix wrt #488626 by Michael Kurinnoy
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org>
   xfce4-taskmanager-1.0.0.ebuild:
@@ -262,4 +269,3 @@
   19 Jan 2005; Brad Cowan <bcowan@gentoo.org>
   +xfce4-taskmanager-0.0.1.ebuild:
   Initial import.
-

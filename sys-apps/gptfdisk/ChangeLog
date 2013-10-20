@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.36 2013/05/22 21:35:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.37 2013/10/20 11:29:19 ssuominen Exp $
+
+*gptfdisk-0.8.8 (20 Oct 2013)
+
+  20 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> +gptfdisk-0.8.8.ebuild:
+  Version bump.
 
   22 May 2013; Mike Gilbert <floppym@gentoo.org> gptfdisk-0.8.6.ebuild:
   Use correct ICU flags. Patch by Arfrever.
