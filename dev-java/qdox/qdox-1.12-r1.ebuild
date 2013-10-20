@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.12-r1.ebuild,v 1.6 2013/10/20 15:13:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qdox/qdox-1.12-r1.ebuild,v 1.7 2013/10/20 16:32:44 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://snapshots.repository.codehaus.org/com/thoughtworks/qdox/qdox/1.1
 
 LICENSE="Apache-2.0"
 SLOT="1.12"
-KEYWORDS="amd64 ppc x86 ~amd64-fbsd ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 ppc ppc64 x86 ~amd64-fbsd ~ppc-macos ~x64-macos ~x86-macos"
 
 S="${WORKDIR}/${PN}-${PV}-SNAPSHOT"
 
