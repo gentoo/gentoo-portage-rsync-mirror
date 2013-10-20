@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-1.4.2.ebuild,v 1.3 2013/10/20 10:49:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-1.4.2.ebuild,v 1.4 2013/10/20 15:53:28 mgorny Exp $
 
 EAPI=4
 
@@ -45,8 +45,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/sandbox"
 
-# Keep syntax as a PDEPEND. It avoids issues when Paludis is used as the
-# default virtual/portage provider.
 PDEPEND="app-admin/eselect-package-manager"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -79,11 +77,6 @@ pkg_setup() {
 	enewuser "paludisbuild" -1 -1 "/var/tmp/paludis" "paludisbuild,tty"
 
 	python-single-r1_pkg_setup
-}
-
-csep() {
-	local IFS=,
-	echo "${*}"
 }
 
 src_configure() {
