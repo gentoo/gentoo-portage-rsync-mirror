@@ -4,10 +4,10 @@ DESCRIPTION=Graphical boot animation (splash) and logger
 EAPI=5
 HOMEPAGE=http://cgit.freedesktop.org/plymouth/
 IUSE=video_cards_intel video_cards_radeon debug gdm +gtk +libkms +pango static-libs
-KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=>=media-libs/libpng-1.2.16 gtk? ( dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 ) libkms? ( x11-libs/libdrm[libkms] ) pango? ( >=x11-libs/pango-1.21 ) video_cards_intel? ( x11-libs/libdrm[video_cards_intel] ) video_cards_radeon? ( x11-libs/libdrm[video_cards_radeon] ) virtual/udev
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/plymouth/releases/plymouth-0.8.8.tar.bz2 http://dev.gentoo.org/~aidecoe/distfiles/sys-boot/plymouth/gentoo-logo.png
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	5f912199ed4fdfb0bfbde29c7ac7dbdb	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=97e0c717ac78c4ca01132aba444e4db6
+_md5_=3118adf8c295016cb518f779112400cc
