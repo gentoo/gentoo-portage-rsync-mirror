@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.76 2013/10/19 23:14:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.77 2013/10/20 01:28:43 patrick Exp $
+
+  20 Oct 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
 *open-vm-tools-9.4.0.1280544 (19 Oct 2013)
 

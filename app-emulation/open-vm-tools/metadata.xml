@@ -13,6 +13,5 @@
 		<flag name='fuse'>Build vmblock-fuse in favor of FUSE based blocking
 		mechanism for DnD</flag>
 		<flag name="pic">Force shared libraries to be built as PIC</flag>
-		<flag name='unity'>Enable host unity support</flag>
 	</use>
 </pkgmetadata>
