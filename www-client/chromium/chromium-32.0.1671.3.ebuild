@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1671.3.ebuild,v 1.2 2013/10/18 03:30:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1671.3.ebuild,v 1.3 2013/10/20 02:47:13 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -316,10 +316,11 @@ src_configure() {
 
 	local myarch="$(tc-arch)"
 	if [[ $myarch = amd64 ]] ; then
-		myconf+=" -Dtarget_arch=x64"
+		target_arch=x64
 	elif [[ $myarch = x86 ]] ; then
-		myconf+=" -Dtarget_arch=ia32"
+		target_arch=ia32
 	elif [[ $myarch = arm ]] ; then
+		target_arch=arm
 		# TODO: re-enable NaCl (NativeClient).
 		local CTARGET=${CTARGET:-${CHOST}}
 		if [[ $(tc-is-softfloat) == "no" ]]; then
@@ -334,19 +335,14 @@ src_configure() {
 		else
 			myconf+=" -Darmv7=0"
 		fi
-		myconf+=" -Dtarget_arch=arm
-			-Dsysroot=
+		myconf+=" -Dsysroot=
 			$(gyp_use neon arm_neon)
 			-Ddisable_nacl=1"
 	else
 		die "Failed to determine target arch, got '$myarch'."
 	fi
 
-	if host-is-pax; then
-		# Prevent the build from failing (bug #301880, bug #487144). The performance
-		# difference is very small.
-		myconf+=" -Dv8_use_snapshot=0"
-	fi
+	myconf+=" -Dtarget_arch=${target_arch}"
 
 	# Make sure that -Werror doesn't get added to CFLAGS by the build system.
 	# Depending on GCC version the warnings are different and we don't want
@@ -389,6 +385,10 @@ src_compile() {
 	if use test; then
 		ninja_targets+=" $test_targets"
 	fi
+
+	# Build mksnapshot and pax-mark it.
+	ninja -C out/Release -v -j $(makeopts_jobs) mksnapshot.${target_arch} || die
+	pax-mark m out/Release/mksnapshot.${target_arch}
 
 	# Even though ninja autodetects number of CPUs, we respect
 	# user's options, for debugging with -j 1 or any other reason.
