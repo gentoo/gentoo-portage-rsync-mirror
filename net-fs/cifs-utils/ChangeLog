@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.68 2013/10/19 21:42:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.69 2013/10/20 20:22:03 maekke Exp $
+
+  20 Oct 2013; Markus Meier <maekke@gentoo.org> cifs-utils-6.1-r1.ebuild:
+  arm stable, bug #486312
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> cifs-utils-6.1-r1.ebuild:
   amd64 stable, bug #486312

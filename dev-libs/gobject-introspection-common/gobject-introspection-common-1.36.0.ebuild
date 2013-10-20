@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/gobject-introspection-common-1.36.0.ebuild,v 1.1 2013/03/28 16:41:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection-common/gobject-introspection-common-1.36.0.ebuild,v 1.2 2013/10/20 20:11:02 ssuominen Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="gobject-introspection"
@@ -17,8 +17,9 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	!<dev-libs/gobject-introspection-1.32.0"
+	!<dev-libs/gobject-introspection-1.36.0"
 # Before 1.32.0, ${PN} was part of gobject-introspection
+# Update: Changed blocker from 1.32.0 to 1.36.0 to prevent http://forums.gentoo.org/viewtopic-p-7421930.html
 
 src_configure() { :; }
 

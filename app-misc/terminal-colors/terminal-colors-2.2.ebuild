@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/terminal-colors/terminal-colors-2.2.ebuild,v 1.1 2013/08/15 05:07:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/terminal-colors/terminal-colors-2.2.ebuild,v 1.2 2013/10/20 20:19:15 grobian Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~radhermit/distfiles/${P}.bz2"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x64-macos"
 
 RDEPEND="${PYTHON_DEPS}"
 
