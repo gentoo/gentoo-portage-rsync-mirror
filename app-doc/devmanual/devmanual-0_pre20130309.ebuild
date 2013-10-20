@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20130309.ebuild,v 1.2 2013/03/29 00:01:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20130309.ebuild,v 1.3 2013/10/20 19:32:21 grobian Exp $
 
 EAPI=5
 
@@ -18,8 +18,7 @@ fi
 
 LICENSE="CC-BY-SA-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
-~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x64-macos"
 IUSE=""
 
 DEPEND="dev-libs/libxslt
@@ -27,7 +26,7 @@ DEPEND="dev-libs/libxslt
 
 DOC_CONTENTS="In order to browse the Gentoo Development Guide in
 	offline mode, point your browser to the following url:
-	/usr/share/doc/devmanual/html/index.html"
+	${EPREFIX}/usr/share/doc/devmanual/html/index.html"
 
 src_compile() {
 	# Imagemagick uses inkscape (if present) to delegate
