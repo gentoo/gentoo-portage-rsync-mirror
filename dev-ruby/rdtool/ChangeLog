@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.59 2013/09/23 06:12:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.60 2013/10/20 06:10:20 graaff Exp $
+
+  20 Oct 2013; Hans de Graaff <graaff@gentoo.org> -rdtool-0.6.22-r1.ebuild:
+  Cleanup.
 
   23 Sep 2013; Hans de Graaff <graaff@gentoo.org> rdtool-0.6.38.ebuild:
   Add x86 keyword because it is signed off in bug 475978 comment 2.
