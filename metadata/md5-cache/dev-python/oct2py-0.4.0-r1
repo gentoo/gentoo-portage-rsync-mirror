@@ -1,9 +1,9 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=sci-libs/scipy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] sci-mathematics/octave doc? ( dev-python/sphinx[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+DEPEND=sci-libs/scipy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] sci-mathematics/octave doc? ( dev-python/sphinx[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) test? ( dev-python/nose[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 DESCRIPTION=Python to GNU Octave bridge
 EAPI=5
 HOMEPAGE=http://pypi.python.org/pypi/oct2py
-IUSE=doc examples python_targets_python2_6 python_targets_python2_7
+IUSE=doc examples test python_targets_python2_6 python_targets_python2_7
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=MIT
 RDEPEND=sci-libs/scipy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] sci-mathematics/octave python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://pypi/o/oct2py/oct2py-0.4.0.tar.gz
 _eclasses_=distutils-r1	ebca16ab3836a4a53197539bdeac9f2c	eutils	4878e7f88afc0ba0866ac112190b0fd4	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	python-r1	3baffd4f94003161708508813a475647	python-utils-r1	4f3595fa07cbecf9f3cfabd0f9a6f34b	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=bde75f6286d99221eb690e9cb166f834
+_md5_=31c657f9fa9b706126a61333e7d4b993
