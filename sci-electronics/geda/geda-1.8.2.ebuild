@@ -1,19 +1,20 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.6.2.ebuild,v 1.9 2012/05/04 07:10:20 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.8.2.ebuild,v 1.1 2013/10/20 10:26:50 tomjbe Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils versionator
 
-MY_P=${PN}-gaf-${PV}
+MY_PN=${PN}-gaf
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="GPL Electronic Design Automation (gEDA):gaf core package"
 HOMEPAGE="http://www.gpleda.org/"
-SRC_URI="http://geda.seul.org/release/v$(get_version_component_range 1-2)/${PV}/${MY_P}.tar.gz"
+SRC_URI="http://ftp.geda-project.org/${MY_PN}/stable/v$(get_version_component_range 1-2)/${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc examples nls stroke threads"
 
 CDEPEND="
@@ -39,8 +40,6 @@ S=${WORKDIR}/${MY_P}
 DOCS="AUTHORS NEWS README"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-correct_glib_include.patch
-
 	if ! use doc ; then
 		sed -i -e '/^SUBDIRS = /s/docs//' Makefile.in || die
 	fi
