@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.191 2013/09/20 23:30:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.192 2013/10/21 01:15:02 tomwij Exp $
 
 EAPI="5"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then
-	SCM=git-2
-	EGIT_BOOTSTRAP="bootstrap"
+	SCM="git-r3"
+
 	if [ "${PV%.9999}" != "${PV}" ] ; then
 		EGIT_REPO_URI="git://git.videolan.org/vlc/vlc-${PV%.9999}.git"
 	else
@@ -32,9 +32,6 @@ else
 	SRC_URI="http://download.videolan.org/pub/videolan/testing/${MY_P}/${MY_P}.tar.xz"
 fi
 
-# SRC_URI="${SRC_URI}
-#	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
-
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 
@@ -44,20 +41,21 @@ else
 	KEYWORDS=""
 fi
 IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
-	+avformat bidi bluray cdda cddb dbus dc1394 debug dirac
+	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug dirac
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
 	libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
-	mtp musepack ncurses neon ogg omxil opengl optimisememory oss png
-	+postproc projectm pulseaudio +qt4 rtsp run-as-root samba schroedinger
-	sdl sdl-image shine shout sid skins speex sse svg +swscale
-	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vorbis waveout
-	wma-fixed +X x264 +xcb xml xv zvbi"
+	mtp musepack ncurses neon ogg omxil opencv opengl optimisememory oss png
+	+postproc projectm pulseaudio +qt4 rdp rtsp run-as-root samba schroedinger
+	sdl sdl-image sftp shine shout sid skins speex sse svg +swscale
+	taglib theora truetype twolame udev upnp vaapi v4l vcdx vlm vnc vorbis
+	waveout wma-fixed +X x264 +xcb xml xv zvbi"
 
 RDEPEND="
+		>=sys-devel/gettext-0.18.3
 		>=sys-libs/zlib-1.2.5.1-r2[minizip]
 		a52? ( >=media-libs/a52dec-0.7.4-r3 )
 		aalib? ( media-libs/aalib )
@@ -69,6 +67,7 @@ RDEPEND="
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		bluray? ( >=media-libs/libbluray-0.2.1 )
 		cddb? ( >=media-libs/libcddb-1.2.0 )
+		chromaprint? ( >=media-libs/chromaprint-0.6 )
 		dbus? ( >=sys-apps/dbus-1.0.2 )
 		dc1394? ( >=sys-libs/libraw1394-2.0.1 >=media-libs/libdc1394-2.0.2 )
 		dirac? ( >=media-video/dirac-0.10.0 )
@@ -108,16 +107,19 @@ RDEPEND="
 		musepack? ( >=media-sound/musepack-tools-444 )
 		ncurses? ( sys-libs/ncurses[unicode] )
 		ogg? ( media-libs/libogg )
+		opencv? ( >=media-libs/opencv-2.0 )
 		opengl? ( virtual/opengl >=x11-libs/libX11-1.3.99.901 )
 		png? ( media-libs/libpng sys-libs/zlib )
 		postproc? ( || ( media-video/ffmpeg:0 media-libs/libpostproc ) )
 		projectm? ( media-libs/libprojectm media-fonts/dejavu )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22 )
 		qt4? ( dev-qt/qtgui:4 dev-qt/qtcore:4 )
+		rdp? ( net-misc/freerdp )
 		samba? ( >=net-fs/samba-3.4.6[smbclient] )
 		schroedinger? ( >=media-libs/schroedinger-1.0.10 )
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
+		sftp? ( net-libs/libssh2 )
 		shout? ( media-libs/libshout )
 		sid? ( media-libs/libsidplay:2 )
 		skins? ( x11-libs/libXext x11-libs/libXpm x11-libs/libXinerama )
@@ -135,6 +137,7 @@ RDEPEND="
 		vaapi? ( x11-libs/libva )
 		vcdx? ( >=dev-libs/libcdio-0.78.2 >=media-video/vcdimager-0.7.22 )
 		vorbis? ( media-libs/libvorbis )
+		vnc? ( >=net-libs/libvncserver-0.9.9 )
 		X? ( x11-libs/libX11 )
 		x264? ( >=media-libs/x264-0.0.20090923:= )
 		xcb? ( >=x11-libs/libxcb-1.6 >=x11-libs/xcb-util-0.3.4 )
@@ -143,10 +146,10 @@ RDEPEND="
 		"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/gettext-0.18.3
 	kde? ( >=kde-base/kdelibs-4 )
 	xcb? ( x11-proto/xproto )
 	app-arch/xz-utils
-	>=sys-devel/gettext-0.18.3
 	virtual/pkgconfig"
 
 REQUIRED_USE="
@@ -175,24 +178,51 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	if [ "${PV%9999}" != "${PV}" ] ; then
-		git-2_src_unpack
+		git-r3_src_unpack
+	else
+		unpack ${A}
 	fi
 }
 
 src_prepare() {
-	# Make it build with libtool 1.5
-	rm -f m4/lt* m4/libtool.m4
+	# Remove unnecessary warnings about unimplemented pragmas on gcc for now.
+	# Need to recheck this with gcc 4.9 and every subsequent minor bump of gcc.
+	#
+	# config.h:792: warning: ignoring #pragma STDC FENV_ACCESS [-Wunknown-pragmas]
+	# config.h:793: warning: ignoring #pragma STDC FP_CONTRACT [-Wunknown-pragmas]
+	#
+	# http://gcc.gnu.org/c99status.html
+	if [[ "$(tc-getCC)" == *"gcc"* ]] ; then
+		sed -i 's/ifndef __FAST_MATH__/if 0/g' configure.ac || die
+	fi
 
-#	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	# Bootstrap when we are on a git checkout.
+	if [[ "${PV%9999}" != "${PV}" ]] ; then
+		./bootstrap
+	fi
+
+	# Make it build with libtool 1.5
+	rm -f m4/lt* m4/libtool.m4 || die
+
+	# We are not in a real git checkout due to the absence of a .git directory.
+	touch src/revision.txt || die
+
+	# Patch up problems and reconfigure autotools.
+	epatch "${FILESDIR}"/${PN}-2.1.0-freetype-proper-default-font.patch
+	epatch "${FILESDIR}"/${PN}-2.1.0-newer-rdp.patch
+	epatch "${FILESDIR}"/${PN}-2.1.0-libva-1.2.1-compat.patch
+
 	eautoreconf
 }
 
 src_configure() {
-	# needs libresid-builder from libsidplay:2 which is in another directory...
+	# Needs libresid-builder from libsidplay:2 which is in another directory...
 	# FIXME!
 	use sid && append-ldflags "-L/usr/$(get_libdir)/sidplay/builders/"
 
-	if use truetype || use projectm; then
+	# Need to check if this works and is correct so we can drop the patch above.
+	# TODO!
+	if use truetype || use projectm ; then
 		local dejavu="/usr/share/fonts/dejavu/"
 		myconf="--with-default-font=${dejavu}/DejaVuSans.ttf \
 				--with-default-font-family=Sans \
@@ -217,6 +247,7 @@ src_configure() {
 		$(use_enable bluray) \
 		$(use_enable cdda vcd) \
 		$(use_enable cddb libcddb) \
+		$(use_enable chromaprint) \
 		$(use_enable dbus) \
 		$(use_enable dirac) \
 		$(use_enable directfb) \
@@ -270,6 +301,7 @@ src_configure() {
 		$(use_enable neon) \
 		$(use_enable ogg) $(use_enable ogg mux_ogg) \
 		$(use_enable omxil) \
+		$(use_enable opencv) \
 		$(use_enable opengl glx) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable oss) \
@@ -278,6 +310,7 @@ src_configure() {
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable qt4 qt) \
+		$(use_enable rdp freerdp) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \
 		$(use_enable samba smbclient) \
@@ -302,6 +335,7 @@ src_configure() {
 		$(use_enable vaapi libva) \
 		$(use_enable vcdx) \
 		$(use_enable vlm) \
+		$(use_enable vnc) \
 		$(use_enable vorbis) \
 		$(use_enable waveout) \
 		$(use_enable wma-fixed) \
@@ -312,7 +346,13 @@ src_configure() {
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-optimizations \
-		--enable-fast-install
+		--enable-fast-install \
+		--disable-decklink \
+		--disable-goom \
+		--disable-mfx \
+		--disable-vsxu
+
+		# ^ We don't have decklink, goom, mfx or vsxu in the Portage tree.
 }
 
 src_install() {

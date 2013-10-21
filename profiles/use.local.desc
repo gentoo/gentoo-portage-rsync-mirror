@@ -4024,6 +4024,7 @@ media-video/vlc:audioqueue - Enables AudioQueue audio module for Mac OS X.
 media-video/vlc:avcodec - Enables libavcodec support for video/audio encoding/decoding. libavcodec is part of FFmpeg.
 media-video/vlc:avformat - Enables libformat support for reading and writing various media containers. libavformat is part of FFmpeg.
 media-video/vlc:bluray - Enables libbluray for Blu-ray disc support.
+media-video/vlc:chromaprint - Enables libchromaprint for Chromaprint based audio fingerprinter support.
 media-video/vlc:dc1394 - Enables IIDC cameras support.
 media-video/vlc:dirac - Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.
 media-video/vlc:direct2d - Enable Win7/VistaPU Direct2D support.
@@ -4056,16 +4057,19 @@ media-video/vlc:macosx-vout - Enables Mac OS X video output module.
 media-video/vlc:matroska - Enables matroska support using reference libraries (fallback on other existing matroska support if disabled, i.e., matroska enabled FFmpeg)
 media-video/vlc:media-library - Build the (sqlite based) media library.
 media-video/vlc:omxil - Enables OpenMAX Integration Layer codec module.
+media-video/vlc:opencv - Enabled OpenCV (computer vision) filter module.
 media-video/vlc:optimisememory - Enable optimisation for memory rather than performance.
 media-video/vlc:opus - Support opus decoding via libopus.
 media-video/vlc:postproc - Enables image post-processing via libpostproc (part of FFmpeg).
 media-video/vlc:projectm - Enables the projectM visualization plugin.
 media-video/vlc:pvr - Enables PVR cards access module.
 media-video/vlc:qt4 - Builds a x11-libs/qt based frontend. It is now the most up-to-date graphical interface available.
+media-video/vlc:rdp - Enables freerdp for RDP/Remote Desktop client support
 media-video/vlc:rtsp - Enables real audio and RTSP modules.
 media-video/vlc:run-as-root - Allows vlc to start for root. Don't enable this unless you have a very specific (e.g. embedded) need for it!
 media-video/vlc:schroedinger - Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).
 media-video/vlc:sdl-image - Enables sdl image video decoder (depends on sdl)
+media-video/vlc:sftp - Enables libssh2 to support SFTP file transfer.
 media-video/vlc:shine - Enables shine fixed point mp3 encoder.
 media-video/vlc:shout - Enables libshout output.
 media-video/vlc:sid - Adds support for playing C64 SID files through media-libs/libsidplay-2.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.2 2013/10/17 04:11:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.3 2013/10/21 01:20:56 floppym Exp $
 
 EAPI=5
 
@@ -65,8 +65,6 @@ RDEPEND="
 	mount? ( sys-fs/fuse )
 	truetype? (
 		media-libs/freetype
-		media-fonts/dejavu
-		>=media-fonts/unifont-5
 	)
 	ppc? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
 	ppc64? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
@@ -89,6 +87,10 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-libs/libisoburn
 		app-emulation/qemu
+	)
+	truetype? (
+		media-fonts/dejavu
+		>=media-fonts/unifont-5
 	)
 "
 RDEPEND+="
