@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/tokyocabinet
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tokyocabinet/ChangeLog,v 1.1 2013/10/21 17:08:11 a3li Exp $
+
+*tokyocabinet-1.29.1 (21 Oct 2013)
+
+  21 Oct 2013; Alex Legler <a3li@gentoo.org> +tokyocabinet-1.29.1.ebuild,
+  +metadata.xml:
+  Initial commit; dependency of net-irc/rbot
+

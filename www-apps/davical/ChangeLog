@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/davical
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/davical/ChangeLog,v 1.5 2013/03/17 15:36:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/davical/ChangeLog,v 1.6 2013/10/21 17:15:00 tomwij Exp $
+
+  21 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Removed François from metadata.xml per his request.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
