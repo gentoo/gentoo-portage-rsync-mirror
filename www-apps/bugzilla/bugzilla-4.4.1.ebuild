@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.0.10.ebuild,v 1.1 2013/09/18 03:18:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.4.1.ebuild,v 1.1 2013/10/21 02:32:30 creffett Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit webapp depend.apache versionator eutils
 
-MY_PB=$(get_version_component_range 1-2)
+#MY_PB=$(get_version_component_range 1-2)
+MY_PB="4.0"
 
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
@@ -15,7 +16,7 @@ HOMEPAGE="http://www.bugzilla.org"
 LICENSE="MPL-1.1"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="modperl extras graphviz mysql postgres test"
+IUSE="modperl extras graphviz mysql postgres sqlite test"
 
 COMMON_DEPS="
 	>=dev-lang/perl-5.8.8
@@ -37,6 +38,8 @@ COMMON_DEPS="
 
 	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-MIME-Base64-3.07
+
+	dev-perl/Math-Random-ISAAC
 "
 
 DEPEND="test? ( ${COMMON_DEPS} )"
@@ -47,6 +50,7 @@ RDEPEND="
 
 	postgres? ( >=dev-perl/DBD-Pg-1.49 )
 	mysql? ( >=dev-perl/DBD-mysql-4.00.5 )
+	sqlite? ( >=dev-perl/DBD-SQLite-1.29 )
 
 	extras? (
 		>=dev-perl/GD-2.35[png,truetype]
@@ -57,20 +61,23 @@ RDEPEND="
 		dev-perl/XML-Twig
 		>=dev-perl/MIME-tools-5.427
 		dev-perl/libwww-perl
-		>=dev-perl/PatchReader-0.9.5
+		>=dev-perl/PatchReader-0.9.6
 		dev-perl/perl-ldap
+		dev-perl/RadiusPerl
 		dev-perl/Authen-SASL
 		>=dev-perl/SOAP-Lite-0.712
 		dev-perl/JSON-RPC
 		>=dev-perl/JSON-XS-2.0
 		dev-perl/Test-Taint
-		>=dev-perl/HTML-Parser-3.60
+		>=dev-perl/HTML-Parser-3.67
 		dev-perl/HTML-Scrubber
+		>=virtual/perl-Encode-2.21
+		dev-perl/Encode-Detect
 		dev-perl/Email-MIME-Attachment-Stripper
 		dev-perl/Email-Reply
 		dev-perl/TheSchwartz
 		dev-perl/Daemon-Generic
-		>=dev-perl/Math-Random-Secure-0.50
+		dev-perl/File-MimeInfo
 
 		|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
 		dev-perl/MIME-tools
@@ -78,7 +85,7 @@ RDEPEND="
 
 	modperl? (
 		www-apache/mod_perl:1
-		>=dev-perl/Apache-SizeLimit-0.93
+		>=dev-perl/Apache-SizeLimit-0.96
 	)
 
 	graphviz? ( media-gfx/graphviz )
@@ -129,4 +136,7 @@ src_install () {
 
 	# configuration must be executable
 	chmod u+x "${D}${MY_HTDOCSDIR}"/checksetup.pl
+
+	# bug 487476
+	mkdir "${D}${MY_HTDOCSDIR}"/lib
 }

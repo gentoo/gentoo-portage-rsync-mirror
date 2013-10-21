@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.215 2013/09/21 10:55:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.216 2013/10/21 02:32:30 creffett Exp $
+
+*bugzilla-4.4.1 (21 Oct 2013)
+*bugzilla-4.2.7 (21 Oct 2013)
+*bugzilla-4.0.11 (21 Oct 2013)
+
+  21 Oct 2013; Chris Reffett <creffett@gentoo.org> +bugzilla-4.0.11.ebuild,
+  +bugzilla-4.2.7.ebuild, +bugzilla-4.4.1.ebuild, -bugzilla-3.6.8.ebuild,
+  -bugzilla-4.0.10.ebuild, -bugzilla-4.2.5.ebuild:
+  Proxy commit: Bump wrt security bug, bug 488432. Build fix, bug 487476.
 
   21 Sep 2013; Agostino Sarubbo <ago@gentoo.org> bugzilla-3.6.13.ebuild:
   Stable for x86, wrt bug #458562

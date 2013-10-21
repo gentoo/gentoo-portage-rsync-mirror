@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.2.5.ebuild,v 1.1 2013/09/18 03:18:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-4.2.7.ebuild,v 1.1 2013/10/21 02:32:30 creffett Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.bugzilla.org"
 LICENSE="MPL-1.1"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="modperl extras graphviz mysql postgres test"
+IUSE="modperl extras graphviz mysql postgres sqlite test"
 
 COMMON_DEPS="
 	>=dev-lang/perl-5.8.8
@@ -50,6 +50,7 @@ RDEPEND="
 
 	postgres? ( >=dev-perl/DBD-Pg-1.49 )
 	mysql? ( >=dev-perl/DBD-mysql-4.00.5 )
+	sqlite? ( >=dev-perl/DBD-SQLite-1.29 )
 
 	extras? (
 		>=dev-perl/GD-2.35[png,truetype]
@@ -62,6 +63,7 @@ RDEPEND="
 		dev-perl/libwww-perl
 		>=dev-perl/PatchReader-0.9.6
 		dev-perl/perl-ldap
+		dev-perl/RadiusPerl
 		dev-perl/Authen-SASL
 		>=dev-perl/SOAP-Lite-0.712
 		dev-perl/JSON-RPC
@@ -75,6 +77,7 @@ RDEPEND="
 		dev-perl/Email-Reply
 		dev-perl/TheSchwartz
 		dev-perl/Daemon-Generic
+		dev-perl/File-MimeInfo
 
 		|| ( media-gfx/imagemagick[perl] media-gfx/graphicsmagick[imagemagick,perl] )
 		dev-perl/MIME-tools
@@ -133,4 +136,7 @@ src_install () {
 
 	# configuration must be executable
 	chmod u+x "${D}${MY_HTDOCSDIR}"/checksetup.pl
+
+	# bug 487476
+	mkdir "${D}${MY_HTDOCSDIR}"/lib
 }
