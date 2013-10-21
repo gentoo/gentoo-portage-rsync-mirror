@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jansson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.12 2013/06/26 16:52:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.13 2013/10/21 07:27:43 tomwij Exp $
+
+  21 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Reordered metadata to make automatic assignment easier.
 
   26 Jun 2013; Anthony G. Basile <blueness@gentoo.org> jansson-2.4.ebuild:
   Keyword ~arm for bfgminer

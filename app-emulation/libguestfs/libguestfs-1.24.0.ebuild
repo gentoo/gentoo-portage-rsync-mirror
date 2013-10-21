@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.18.11.ebuild,v 1.1 2013/03/25 12:15:48 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.24.0.ebuild,v 1.1 2013/10/21 07:04:59 qnikst Exp $
 
 EAPI="5"
 
-AUTOTOOLS_AUTORECONF=1
+WANT_LIBTOOL=latest
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-inherit bash-completion-r1 autotools-utils versionator eutils \
-multilib linux-info perl-module
+inherit autotools-utils autotools versionator eutils \
+multilib linux-info perl-module base
 
 MY_PV_1="$(get_version_component_range 1-2)"
 MY_PV_2="$(get_version_component_range 2)"
@@ -21,12 +21,13 @@ SRC_URI="http://libguestfs.org/download/${MY_PV_1}-${SD}/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0/${MY_PV_1}"
-# Upstream NOT supported 32-bit version, keyword in own risk
+
 KEYWORDS="~amd64"
-IUSE="erlang +fuse debug ocaml doc +perl ruby static-libs
-selinux systemtap introspection inspect-icons"
+IUSE="erlang +fuse debug +ocaml doc +perl ruby static-libs
+selinux systemtap introspection inspect-icons test lua"
 
 # Failires - doc
+# Failures - bash-completion, see GBZ #486306
 
 COMMON_DEPEND="
 	sys-libs/ncurses
@@ -36,7 +37,7 @@ COMMON_DEPEND="
 	app-arch/cpio
 	dev-lang/perl
 	app-cdr/cdrkit
-	>=app-emulation/qemu-1.0[qemu_user_targets_x86_64,qemu_softmmu_targets_x86_64,tci,systemtap?]
+	>=app-emulation/qemu-1.2.2[qemu_user_targets_x86_64,qemu_softmmu_targets_x86_64,tci,systemtap?,selinux?,filecaps]
 	sys-apps/fakeroot
 	sys-apps/file
 	app-emulation/libvirt
@@ -63,10 +64,17 @@ COMMON_DEPEND="
 		)
 	selinux? ( sys-libs/libselinux  sys-libs/libsemanage )
 	systemtap? ( dev-util/systemtap )
-	ocaml? ( dev-lang/ocaml[ocamlopt] dev-ml/findlib[ocamlopt] )
+	ocaml? ( dev-lang/ocaml[ocamlopt]
+			dev-ml/findlib[ocamlopt]
+			dev-ml/ocaml-gettext
+			)
 	erlang? ( dev-lang/erlang )
 	inspect-icons? ( media-libs/netpbm
-			media-gfx/icoutils )
+			media-gfx/icoutils
+			)
+	virtual/acl
+	sys-libs/libcap
+	lua? ( dev-lang/lua )
 	"
 
 DEPEND="${COMMON_DEPEND}
@@ -78,9 +86,9 @@ RDEPEND="${COMMON_DEPEND}
 	app-emulation/libguestfs-appliance
 	"
 
-PATCHES=("${FILESDIR}"/1.18/0*.patch  )
+PATCHES=("${FILESDIR}"/1.24/0*.patch  )
 
-DOCS=(AUTHORS BUGS HACKING README RELEASE-NOTES ROADMAP TODO)
+DOCS=(AUTHORS BUGS ChangeLog HACKING README  ROADMAP TODO)
 
 pkg_setup () {
 		CONFIG_CHECK="~KVM ~VIRTIO"
@@ -88,7 +96,10 @@ pkg_setup () {
 }
 
 src_prepare() {
-	autotools-utils_src_prepare
+	base_src_prepare
+	eaclocal
+	eautomake
+	eautoconf
 }
 
 src_configure() {
@@ -102,10 +113,9 @@ src_configure() {
 	export vmchannel_test=no
 
 	local myeconfargs=(
+		$(use_enable test gcc-warnings)
 		--disable-appliance
 		--disable-daemon
-		--with-drive-if=virtio
-		--with-net-if=virtio-net-pci
 		--with-extra="-gentoo"
 		--with-readline
 		--disable-php
@@ -116,10 +126,10 @@ src_configure() {
 		$(use_enable ocaml)
 		$(use_enable ruby)
 		--disable-haskell
-		$(use_enable doc)
 		$(use_enable introspection gobject)
 		$(use_enable erlang)
 		$(use_enable systemtap probes)
+		$(use_enable lua)
 	)
 	autotools-utils_src_configure
 }
@@ -137,11 +147,15 @@ src_install() {
 	strip-linguas -i po
 	autotools-utils_src_install "LINGUAS=""${LINGUAS}"""
 
-	dobashcomp "${D}/etc"/bash_completion.d/guestfish-bash-completion.sh
-
-	rm -fr "${D}/etc"/bash* || die
-
-	newenvd "${FILESDIR}"/env.file 99"${PN}"
-
 	use perl && fixlocalpod
+}
+
+pkg_postinst() {
+
+	if ! use perl ; then
+		einfo "Perl based tools NOT build"
+	fi
+	if ! use ocaml ; then
+		einfo "Ocaml based tools ( sysprep , ... ) NOT installed"
+	fi
 }

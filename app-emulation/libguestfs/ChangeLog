@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.29 2013/10/01 17:51:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.30 2013/10/21 07:04:59 qnikst Exp $
+
+*libguestfs-1.22.7 (21 Oct 2013)
+*libguestfs-1.24.0 (21 Oct 2013)
+
+  21 Oct 2013; Alexander Vershilov <qnikst@gentoo.org>
+  +libguestfs-1.22.7.ebuild, +libguestfs-1.24.0.ebuild,
+  -libguestfs-1.16.34.ebuild, -libguestfs-1.18.11.ebuild,
+  -libguestfs-1.20.4.ebuild, -libguestfs-1.22.6.ebuild:
+  drop old, add new versions, request by slepnoga
 
 *libguestfs-1.22.6 (01 Oct 2013)
 
