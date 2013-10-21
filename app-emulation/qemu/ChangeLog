@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.242 2013/09/17 17:00:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.243 2013/10/21 02:13:33 cardoe Exp $
+
+*qemu-1.6.1 (21 Oct 2013)
+
+  21 Oct 2013; Doug Goldstein <cardoe@gentoo.org> +qemu-1.6.1.ebuild,
+  metadata.xml:
+  Version bump. Fixes CVE-2013-4377 (bug #486352). Fix automagic depend on
+  libssh2 (bug #487918). Fix automagic depend on libusbx (bug #487810)
 
 *qemu-1.6.0-r1 (17 Sep 2013)
 
