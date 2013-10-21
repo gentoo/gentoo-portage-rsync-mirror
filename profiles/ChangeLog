@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8317 2013/10/21 03:08:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8318 2013/10/21 06:18:12 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Oct 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Also mask relevant asset pipeline packages for Rails 3.1, fixing bug 488824
+  and 488826.
 
   21 Oct 2013; Mike Gilbert <floppym@gentoo.org> package.mask:
   Mask media-fonts/unifont-6.3
