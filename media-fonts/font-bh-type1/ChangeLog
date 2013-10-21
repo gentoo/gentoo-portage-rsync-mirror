@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-type1
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-type1/ChangeLog,v 1.43 2012/05/13 16:38:02 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-type1/ChangeLog,v 1.44 2013/10/21 12:14:12 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> font-bh-type1-1.0.3.ebuild:
+  Marked ~x64-macos, bug #486818
 
   13 May 2012; Alexis Ballier <aballier@gentoo.org> font-bh-type1-1.0.3.ebuild:
   keyword ~amd64-fbsd
@@ -171,4 +174,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +font-bh-type1-0.99.0.ebuild:
   Initial commit for modular X.
-

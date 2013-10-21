@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r5.ebuild,v 1.9 2013/02/21 21:58:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r5.ebuild,v 1.10 2013/10/21 12:27:33 grobian Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.netlib.org/blas/blast-forum/${MyPN}.tgz"
 SLOT="0"
 LICENSE="public-domain"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
 
 RDEPEND="
 	virtual/blas

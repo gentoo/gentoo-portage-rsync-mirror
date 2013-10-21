@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwebp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.63 2013/10/03 15:58:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.64 2013/10/21 12:26:38 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> libwebp-0.3.1.ebuild:
+  Marked ~x64-macos, bug #486818
 
   03 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> libwebp-0.3.1.ebuild:
   Stop building gif2webp binary for non-native ABI to avoid build failure (and

@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-bh-ttf
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.53 2012/05/13 17:26:45 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-bh-ttf/ChangeLog,v 1.54 2013/10/21 12:12:42 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> font-bh-ttf-1.0.3.ebuild:
+  Marked ~x64-macos, bug #486818
 
   13 May 2012; Alexis Ballier <aballier@gentoo.org> font-bh-ttf-1.0.3.ebuild:
   keyword ~amd64-fbsd
@@ -203,4 +206,3 @@
   08 Aug 2005; Donnie Berkholz <spyderous@gentoo.org>;
   +font-bh-ttf-0.99.0.ebuild:
   Initial commit for modular X.
-

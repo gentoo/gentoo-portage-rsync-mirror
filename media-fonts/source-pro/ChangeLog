@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/source-pro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/source-pro/ChangeLog,v 1.4 2013/03/16 07:13:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/source-pro/ChangeLog,v 1.5 2013/10/21 12:18:39 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> source-pro-20130316.ebuild:
+  Marked ~x64-macos, bug #486818
 
 *source-pro-20130316 (16 Mar 2013)
 

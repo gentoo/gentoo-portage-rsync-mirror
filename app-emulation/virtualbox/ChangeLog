@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.161 2013/10/20 22:36:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.162 2013/10/21 12:24:34 polynomial-c Exp $
+
+*virtualbox-4.3.0-r1 (21 Oct 2013)
+
+  21 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> -virtualbox-4.3.0.ebuild,
+  +virtualbox-4.3.0-r1.ebuild:
+  Fixed installation of NAT module.
 
   20 Oct 2013; Tony Vroon <chainsaw@gentoo.org> virtualbox-4.2.18.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-gentium
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-gentium/ChangeLog,v 1.9 2012/05/27 12:38:20 yngwin Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-gentium/ChangeLog,v 1.10 2013/10/21 12:17:50 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> sil-gentium-1.508.ebuild:
+  Marked ~x64-macos, bug #486818
 
   27 May 2012; Ben de Groot <yngwin@gentoo.org> -sil-gentium-1.0.2.ebuild,
   sil-gentium-1.508.ebuild:
@@ -85,4 +88,3 @@
   +ttf-gentium-1.0.1.ebuild:
   Initial import. Ebuild submitted by Dorian Gray <gentoo-bugs@tintar.com>,
   closing bug #38659
-
