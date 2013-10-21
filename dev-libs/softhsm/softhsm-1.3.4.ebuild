@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/softhsm-1.3.4.ebuild,v 1.1 2012/12/18 16:10:18 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/softhsm-1.3.4.ebuild,v 1.2 2013/10/21 20:59:21 mschiff Exp $
 
 EAPI=4
 
@@ -24,6 +24,7 @@ DOCS=( AUTHORS NEWS README )
 src_configure() {
 	econf \
 		--disable-static \
+		--localstatedir=/var \
 		--with-botan="${EPREFIX}/usr/" \
 		$(use_enable amd64 64bit) \
 		$(use debug && echo "--with-loglevel=4")
