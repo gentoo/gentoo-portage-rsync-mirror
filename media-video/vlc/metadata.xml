@@ -22,6 +22,7 @@
 	<flag name="dxva2">Enables Win32 DxVA2 support.</flag>
 	<flag name="egl">Enables EGL video output module.</flag>
 	<flag name="fbosd">Enables the framebuffer overlay plugin.</flag>
+    <flag name="fdk">Enables the Fraunhofer AAC codec library.</flag>
     <flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis (with external sound fonts).</flag>
     <flag name="gcrypt">Enables cryptography support via libgcrypt.</flag>
     <flag name="gme">Enables support for <pkg>media-libs/game-music-emu</pkg> for playing various video game music formats.</flag>
@@ -64,11 +65,13 @@
     <flag name="skins">Enables support for the skins2 interface.</flag>
 	<flag name="switcher">Enables MPEG2 video switcher stream output module.</flag>
 	<flag name="swscale">Enables image scaling and conversion via libswscale (part of FFmpeg).</flag>
+    <flag name="tremor">Enables tremor, a fixed-point version of the Ogg Vorbis decoder.</flag>
     <flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
     <flag name="upnp">Enables support for Intel UPnP stack.</flag>
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
     <flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
     <flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>
+    <flag name="vpx">Enables the decoder(s) from the WebM VP8 / VP9 Codec SDK.</flag>
 	<flag name="waveout">Enable win32 waveOut plugin.</flag>
 	<flag name="wingdi">Enable Win32 GDI module.</flag>
     <flag name="wma-fixed">Enables fixed point WMA decoder.</flag>

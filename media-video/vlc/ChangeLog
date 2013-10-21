@@ -1,6 +1,27 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.854 2013/10/21 01:15:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.855 2013/10/21 19:15:29 tomwij Exp $
+
+  21 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  -files/vlc-2.1.0-freetype-proper-default-font.patch, metadata.xml,
+  vlc-9999.ebuild:
+  Worked further on the 2.1.0 version bump: Added USE flags and dependencies to
+  support fdk(aac), opus, tremor, vdpau and vpx. Added support for the upcming
+  Qt 5 release. Added missing dependencies (libgpg-error used in HTML
+  communication, libidn which is used by most objects, gdb-pixbuf, glib and xcb-
+  util-keysyms) SLOTted all dependencies, used the slot operator where
+  dependencies have sub slots; to avoid incorrect dependencies, new SLOTs and
+  overlays versions from breaking the vlc package. Moved gettext to RDEPEND as
+  it was duplicated. Remove _FORTIFY_SOURCE definition as it is set to Gentoo's
+  default to shorten the build log by removing unnecessary warnings. Removed the
+  freetype patch as the configure parameters work. Ensured that there are less
+  to none automagic dependencies. Enumerated almost all configure parameters as
+  there were some missing. Removed oss due to compile error due to missing
+  package. Run tests using virtualx to avoid a window from popping up.
+  Simplified src_install. Documented fdk, tremor and vpx USE flags in
+  metadata.xml. More changes and testing will follow; there still appear
+  warnings and errors to look into (also resid_builder), which probably requires
+  configure.ac patching. Progress is being tracked mainly in bug #479566.
 
   21 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
   +files/vlc-2.1.0-freetype-proper-default-font.patch,
