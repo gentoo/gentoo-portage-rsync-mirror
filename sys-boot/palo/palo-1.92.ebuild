@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.92.ebuild,v 1.1 2013/10/18 15:41:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.92.ebuild,v 1.2 2013/10/21 15:17:22 jer Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ src_install() {
 
 	doman palo.8
 	dohtml README.html
-	dodoc palo.conf
+	dodoc Changes TODO debian/changelog
 
 	insinto /etc
 	doins "${FILESDIR}"/palo.conf

@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.564 2013/10/01 21:10:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.565 2013/10/21 15:21:03 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> cups-1.7_rc1.ebuild,
+  cups-9999.ebuild:
+  Fix cups.sock location for Prefix, bug #488204
 
 *cups-1.6.4 (01 Oct 2013)
 
