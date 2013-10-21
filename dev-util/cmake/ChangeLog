@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.255 2013/10/19 12:18:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.256 2013/10/21 03:27:53 creffett Exp $
+
+*cmake-2.8.12 (21 Oct 2013)
+
+  21 Oct 2013; Chris Reffett <creffett@gentoo.org> +cmake-2.8.12.ebuild:
+  Move from KDE overlay wrt bug 487604
 
   19 Oct 2013; Johannes Huber <johu@gentoo.org> -cmake-2.8.11.1.ebuild,
   -files/cmake-2.8.10-FindPythonLibs.patch, -files/cmake-2.8.10-tests.patch,
