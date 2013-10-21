@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/designer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.1 2013/07/09 11:05:43 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/designer/ChangeLog,v 1.2 2013/10/21 01:38:24 patrick Exp $
+
+  21 Oct 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag descriptions from metadata.xml
 
 *designer-4.8.5 (09 Jul 2013)
 
