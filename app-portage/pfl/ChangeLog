@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.58 2013/10/14 19:42:05 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.59 2013/10/20 23:17:57 jer Exp $
+
+  20 Oct 2013; Jeroen Roovers <jer@gentoo.org> pfl-2.4-r1.ebuild:
+  Stable for HPPA (bug #488730).
 
   14 Oct 2013; Daniel Pielmeier <billie@gentoo.org> -pfl-2.4.ebuild:
   Remove old.
