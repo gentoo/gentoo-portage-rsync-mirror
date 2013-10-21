@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>mschiff@gentoo.org</email>
+		<name>Marc Schiffbauer</name>
+	</maintainer>
+	<use>
+		<flag name='clientonly'>Only install file-daemon (client)</flag>
+		<flag name='director'>Install director</flag>
+		<flag name='storage-daemon'>Install storage daemon (bareos-sd)</flag>
+		<flag name='logwatch'>Install support files for logwatch</flag>
+		<flag name='ndmp'>Enable support for NDMP (Network Data Management Protocol)</flag>
+		<flag name='sql-pooling'>Enable SQL pooling support</flag>
+		<flag name='scsi-crypto'>Enable low level SCSI crypto support</flag>
+	</use>
+</pkgmetadata>

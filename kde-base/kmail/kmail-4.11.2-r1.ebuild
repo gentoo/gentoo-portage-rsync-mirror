@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.11.2.ebuild,v 1.1 2013/10/09 23:04:45 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.11.2-r1.ebuild,v 1.1 2013/10/21 21:51:52 dilfridge Exp $
 
 EAPI=5
 
@@ -62,6 +62,8 @@ KMEXTRA="
 "
 
 KMLOADLIBS="kdepim-common-libs"
+
+PATCHES=( "${FILESDIR}/${P}-gnupgattach.patch" )
 
 src_configure() {
 	# Bug 308903

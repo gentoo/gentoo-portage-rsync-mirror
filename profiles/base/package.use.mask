@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.513 2013/09/15 18:45:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.514 2013/10/21 21:41:18 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Oct 2013)
+# Masked for security bug #472280, CVE 2013-1872
+<=media-libs/mesa-9.0.3 video_cards_intel video_cards_i965
 
 # Tom Wijsman <TomWij@gentoo.org> (15 Sep 2013)
 # Mask JCE functionality of diablo-jdk because it depends on masked sun-jce-bin,

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ccache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.125 2013/09/28 22:44:47 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.126 2013/10/21 21:40:07 ottxor Exp $
+
+*ccache-3.1.9-r3 (21 Oct 2013)
+
+  21 Oct 2013; Christoph Junghans <ottxor@gentoo.org> +ccache-3.1.9-r3.ebuild:
+  use readme.gentoo.eclass (bug #486404)
 
 *ccache-3.1.9-r2 (28 Sep 2013)
 

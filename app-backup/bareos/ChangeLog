@@ -1,0 +1,13 @@
+# ChangeLog for app-backup/bareos
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/ChangeLog,v 1.1 2013/10/21 21:52:51 mschiff Exp $
+
+*bareos-12.4.5 (21 Oct 2013)
+
+  21 Oct 2013; Marc Schiffbauer <mschiff@gentoo.org> +bareos-12.4.5.ebuild,
+  +files/bareos-12.4.5-Makefile.patch, +files/bareos-12.4.5-bat-ldflags.patch,
+  +files/bareos-dir.confd, +files/bareos-dir.initd, +files/bareos-fd.confd,
+  +files/bareos-fd.initd, +files/bareos-sd.confd, +files/bareos-sd.initd,
+  +metadata.xml:
+  Initial commit of bareos.
+

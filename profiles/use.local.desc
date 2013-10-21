@@ -256,6 +256,13 @@ app-backup/bacula:bacula-clientonly - Disable DB support, and just build a clien
 app-backup/bacula:bacula-nodir - Disable building of director
 app-backup/bacula:bacula-nosd - Disable building of storage daemon
 app-backup/bacula:logwatch - Install support files for logwatch
+app-backup/bareos:clientonly - Only install file-daemon (client)
+app-backup/bareos:director - Install director
+app-backup/bareos:logwatch - Install support files for logwatch
+app-backup/bareos:ndmp - Enable support for NDMP (Network Data Management Protocol)
+app-backup/bareos:scsi-crypto - Enable low level SCSI crypto support
+app-backup/bareos:sql-pooling - Enable SQL pooling support
+app-backup/bareos:storage-daemon - Install storage daemon (bareos-sd)
 app-backup/boxbackup:client-only - Disable server support, and just build a client
 app-backup/dar:dar32 - Enables --enable-mode=32 option, which replace infinite by 32 bit integers
 app-backup/dar:dar64 - Enables --enable-mode=64 option, which replace infinite by 64 bit integers
