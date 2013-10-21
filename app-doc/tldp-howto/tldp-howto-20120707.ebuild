@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/tldp-howto-20120707.ebuild,v 1.1 2013/10/14 05:08:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/tldp-howto-20120707.ebuild,v 1.2 2013/10/21 03:42:12 dirtyepic Exp $
 
 EAPI=5
 
@@ -57,11 +57,6 @@ src_unpack() {
 }
 
 src_install() {
-	if use text; then
-		docinto text
-		dodoc "${S}"/text/*
-		rm -r "${S}"/text
-	fi
 	insinto /usr/share/doc/${PF}
 	doins -r "${S}"/*
 }

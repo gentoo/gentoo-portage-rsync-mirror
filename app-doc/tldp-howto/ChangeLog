@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/tldp-howto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.9 2013/10/14 05:08:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/tldp-howto/ChangeLog,v 1.10 2013/10/21 03:42:12 dirtyepic Exp $
+
+  21 Oct 2013; Ryan Hill <dirtyepic@gentoo.org> tldp-howto-20120707.ebuild:
+  Fix install error when "text" is the only USE flag enabled (bug #488706).
 
 *tldp-howto-20120707 (14 Oct 2013)
 
