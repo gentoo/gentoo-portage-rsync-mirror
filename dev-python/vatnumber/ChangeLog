@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/vatnumber
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vatnumber/ChangeLog,v 1.5 2013/09/05 18:47:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vatnumber/ChangeLog,v 1.6 2013/10/21 07:35:25 patrick Exp $
+
+*vatnumber-1.1 (21 Oct 2013)
+
+  21 Oct 2013; Patrick Lauer <patrick@gentoo.org> +vatnumber-1.1.ebuild:
+  Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> vatnumber-1.0-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

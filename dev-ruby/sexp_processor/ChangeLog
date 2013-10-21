@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/sexp_processor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.22 2013/10/05 10:29:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.23 2013/10/21 07:32:12 mrueg Exp $
+
+*sexp_processor-4.4.0 (21 Oct 2013)
+
+  21 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +sexp_processor-4.4.0.ebuild,
+  -sexp_processor-4.3.0.ebuild:
+  Version bump. Cleanup old.
 
 *sexp_processor-4.3.0-r1 (05 Oct 2013)
 

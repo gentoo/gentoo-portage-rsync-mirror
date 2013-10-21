@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/split2flac
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/ChangeLog,v 1.12 2013/10/13 10:16:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/ChangeLog,v 1.13 2013/10/21 07:56:37 tomwij Exp $
+
+*split2flac-113_p20131017 (21 Oct 2013)
+
+  21 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +split2flac-113_p20131017.ebuild,
+  split2flac-9999.ebuild:
+  Version bump to 113_p20131017; fixes bug #488230, reported by Marc Joliet and
+  proxied commit for Nikoli.
 
   13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Nikoli's e-mail address for easier automatic assignment.
