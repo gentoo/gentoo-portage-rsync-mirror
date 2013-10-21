@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.216 2013/10/21 02:32:30 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.218 2013/10/21 17:49:12 ago Exp $
+
+  21 Oct 2013; Agostino Sarubbo <ago@gentoo.org> bugzilla-4.2.7.ebuild:
+  Stable for x86, wrt bug #488624
+
+  21 Oct 2013; Agostino Sarubbo <ago@gentoo.org> bugzilla-4.2.7.ebuild:
+  Stable for amd64, wrt bug #488624
 
 *bugzilla-4.4.1 (21 Oct 2013)
 *bugzilla-4.2.7 (21 Oct 2013)

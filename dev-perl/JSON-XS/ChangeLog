@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/JSON-XS
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/ChangeLog,v 1.38 2013/08/15 07:01:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON-XS/ChangeLog,v 1.40 2013/10/21 17:49:17 ago Exp $
+
+  21 Oct 2013; Agostino Sarubbo <ago@gentoo.org> JSON-XS-2.340.0.ebuild:
+  Stable for x86, wrt bug #488624
+
+  21 Oct 2013; Agostino Sarubbo <ago@gentoo.org> JSON-XS-2.340.0.ebuild:
+  Stable for amd64, wrt bug #488624
 
 *JSON-XS-2.340.0 (15 Aug 2013)
 
