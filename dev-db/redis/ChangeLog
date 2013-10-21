@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.69 2013/10/15 18:35:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.70 2013/10/21 06:55:24 djc Exp $
+
+*redis-2.6.16 (21 Oct 2013)
+
+  21 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> +redis-2.6.16.ebuild:
+  Version bump redis to 2.6.16 (bug 483828).
 
 *redis-2.6.15-r1 (15 Oct 2013)
 
