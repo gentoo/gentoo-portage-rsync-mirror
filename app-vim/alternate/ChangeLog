@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/alternate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.50 2013/01/12 11:23:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/alternate/ChangeLog,v 1.51 2013/10/21 11:52:14 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> alternate-2.18.ebuild:
+  Marked ~x64-macos, bug #486818
 
   12 Jan 2013; Ulrich Müller <ulm@gentoo.org> alternate-2.18.ebuild:
   Fix LICENSE.
@@ -182,4 +185,3 @@
   15 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> alternate-2.4.ebuild,
   metadata.xml:
   Initial version
-

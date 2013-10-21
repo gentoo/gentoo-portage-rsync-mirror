@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-qxl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.20 2013/10/08 05:06:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.21 2013/10/21 11:56:39 chithanh Exp $
+
+*xf86-video-qxl-0.1.1 (21 Oct 2013)
+
+  21 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-qxl-0.1.1.ebuild:
+  Version bump, security bug #454722.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xf86-video-qxl-0.1.0-r1.ebuild:
   Stable for x86, wrt bug #475480

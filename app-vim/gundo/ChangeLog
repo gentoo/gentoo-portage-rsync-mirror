@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gundo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/ChangeLog,v 1.10 2013/09/05 19:44:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/ChangeLog,v 1.11 2013/10/21 11:56:16 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> gundo-2.5.0.ebuild:
+  Marked ~x64-macos, bug #486818
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> gundo-2.5.0.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

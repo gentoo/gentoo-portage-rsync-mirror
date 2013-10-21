@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/nerdtree
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/nerdtree/ChangeLog,v 1.3 2012/10/07 10:23:45 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nerdtree/ChangeLog,v 1.4 2013/10/21 11:57:23 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> nerdtree-4.2.0.ebuild:
+  Marked ~x64-macos, bug #486818
 
   07 Oct 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, #274113
