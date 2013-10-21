@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/open-vm-tools-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.40 2013/10/19 23:14:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.41 2013/10/21 22:19:08 floppym Exp $
+
+  21 Oct 2013; Mike Gilbert <floppym@gentoo.org> +files/vmhgfs-linux-3.11.patch,
+  open-vm-tools-kmod-2013.09.16.1328054.ebuild:
+  Add patch to fix vmhgfs in linux-3.11, bug 488648.
 
 *open-vm-tools-kmod-9.4.0.1280544 (19 Oct 2013)
 

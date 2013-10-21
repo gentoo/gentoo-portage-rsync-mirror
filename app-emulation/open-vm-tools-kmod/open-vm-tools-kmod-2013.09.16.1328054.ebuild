@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2013.09.16.1328054.ebuild,v 1.3 2013/10/19 17:02:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2013.09.16.1328054.ebuild,v 1.4 2013/10/21 22:19:08 floppym Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ pkg_setup() {
 	if kernel_is -lt 3 9; then
 		MODULES+=" vmci vsock"
 	else
-		CONFIG_CHECK+=" ~VMWARE_VMCI ~VMWARE_VMCI_VSOCKETS"
+		CONFIG_CHECK+=" VMWARE_VMCI ~VMWARE_VMCI_VSOCKETS"
 	fi
 
 	if kernel_is -lt 3; then
@@ -48,8 +48,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/frozen.patch"
-	epatch "${FILESDIR}/putname.patch"
+	epatch "${FILESDIR}/vmhgfs-linux-3.11.patch"
 	epatch_user
 }
 

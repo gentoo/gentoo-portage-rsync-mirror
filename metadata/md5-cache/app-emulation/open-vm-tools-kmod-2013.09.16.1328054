@@ -10,4 +10,4 @@ RDEPEND=kernel_linux? ( virtual/modutils )
 SLOT=0
 SRC_URI=mirror://sourceforge/open-vm-tools/open-vm-tools-2013.09.16-1328054.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	linux-info	a9cbd6bbe2b28166e403321882f3c73c	linux-mod	708d6a92c561743e612fca9d8fde5309	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=75d143588ef52b8fa2041aa0ca077776
+_md5_=f905c2f0ef311f9a96ef087b998210f5
