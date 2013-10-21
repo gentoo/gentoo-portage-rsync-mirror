@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.7.ebuild,v 1.3 2013/10/20 02:52:08 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/pax-utils-0.7.ebuild,v 1.4 2013/10/21 10:45:40 heroxbd Exp $
 
 EAPI=4
 
@@ -40,5 +40,4 @@ src_test() {
 
 src_install() {
 	_emake DESTDIR="${ED}" PKGDOCDIR='$(DOCDIR)'/${PF} install
-	prepalldocs
 }
