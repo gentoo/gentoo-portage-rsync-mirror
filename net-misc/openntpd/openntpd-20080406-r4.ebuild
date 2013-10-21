@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r4.ebuild,v 1.1 2013/10/21 17:13:38 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r4.ebuild,v 1.2 2013/10/21 19:44:22 ottxor Exp $
 
 EAPI=5
 
@@ -64,7 +64,7 @@ src_install() {
 	newinitd "${FILESDIR}/${PN}.init.d-${PVR}" ntpd
 	newconfd "${FILESDIR}/${PN}.conf.d-${PV}-r3" ntpd
 
-	systemd_newunit "${FILESDIR}/${PN}.service-${PVR}" ntpd.service
+	systemd_newunit "${FILESDIR}/${PN}.service-${PV}-r3" ntpd.service
 }
 
 pkg_postinst() {

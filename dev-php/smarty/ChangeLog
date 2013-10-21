@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/smarty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.120 2013/10/09 17:09:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.121 2013/10/21 19:39:25 olemarkus Exp $
+
+*smarty-2.6.28 (21 Oct 2013)
+
+  21 Oct 2013; Ole Markus With <olemarkus@gentoo.org> +smarty-2.6.28.ebuild,
+  smarty-2.6.27.ebuild:
+  Version bump. Bunch of security fixes
 
   09 Oct 2013; Agostino Sarubbo <ago@gentoo.org> smarty-3.1.12.ebuild:
   Stable for sparc, wrt bug #435618
