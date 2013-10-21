@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.77 2013/09/28 11:40:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.78 2013/10/21 10:17:05 ultrabug Exp $
+
+*mongodb-2.4.6-r2 (21 Oct 2013)
+*mongodb-2.2.6-r1 (21 Oct 2013)
+
+  21 Oct 2013; Ultrabug <ultrabug@gentoo.org> +mongodb-2.2.6-r1.ebuild,
+  +mongodb-2.4.6-r2.ebuild:
+  switch to bundled v8 as per chromium team request wrt #477300 #471582, drop
+  2.2.x v8 support as it was not bundled and experimental
 
 *mongodb-2.4.6-r1 (28 Sep 2013)
 
