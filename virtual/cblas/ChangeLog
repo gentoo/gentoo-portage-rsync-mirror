@@ -1,6 +1,9 @@
 # ChangeLog for virtual/cblas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.9 2013/02/02 07:55:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/cblas/ChangeLog,v 1.10 2013/10/21 13:33:55 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> cblas-1.0.ebuild:
+  Marked ~x64-macos, bug #486818
 
   02 Feb 2013; Justin Lecher <jlec@gentoo.org> cblas-1.0.ebuild, metadata.xml:
   Drop atlas from deps
@@ -33,4 +36,3 @@
   10 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +cblas-1.0.ebuild:
   New style virtual for cblas. Version number is abitrary.
-

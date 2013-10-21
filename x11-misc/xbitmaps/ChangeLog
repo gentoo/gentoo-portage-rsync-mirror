@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xbitmaps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.46 2013/02/21 18:45:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbitmaps/ChangeLog,v 1.47 2013/10/21 13:56:54 grobian Exp $
+
+  21 Oct 2013; Fabian Groffen <grobian@gentoo.org> xbitmaps-1.1.1.ebuild:
+  Marked ~x64-macos, bug #486818
 
   21 Feb 2013; Zac Medico <zmedico@gentoo.org> xbitmaps-1.1.1.ebuild:
   Add ~arm-linux keyword.
