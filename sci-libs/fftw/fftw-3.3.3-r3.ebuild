@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r3.ebuild,v 1.1 2013/09/17 19:12:18 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.3-r3.ebuild,v 1.2 2013/10/21 13:29:10 grobian Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ if [[ ${PV} = *9999 ]]; then
 	AUTOTOOLS_AUTORECONF=1
 else
 	SRC_URI="http://www.fftw.org/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 fi
 
 LICENSE="GPL-2"

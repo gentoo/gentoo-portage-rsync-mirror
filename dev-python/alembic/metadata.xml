@@ -6,7 +6,7 @@
         <maintainer><email>idella4@gentoo.org</email>
                 <name>Ian idella4 Delaney</name>
 	</maintainer>
-	<maintainer><email>yac@blesmrt.net</email>
-		<name>Jan Matějka proxy maintainer</name>
+	<maintainer><email>yac@gentoo.org</email>
+		<name>Jan Matějka</name>
 	</maintainer>
 </pkgmetadata>
