@@ -1,17 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.11.2-r1.ebuild,v 1.1 2013/10/09 23:04:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-runtime-meta/kdebase-runtime-meta-4.11.2-r1.ebuild,v 1.2 2013/10/21 14:07:41 johu Exp $
 
 EAPI=5
 inherit kde4-meta-pkg
 
 DESCRIPTION="Merge this to pull in all kdebase-runtime-derived packages"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+handbook semantic-desktop"
 
 RDEPEND="
 	$(add_kdebase_dep attica)
-	$(add_kdebase_dep drkonqi)
 	$(add_kdebase_dep kcmshell)
 	$(add_kdebase_dep kcontrol)
 	$(add_kdebase_dep kdebase-data)
@@ -44,5 +43,8 @@ RDEPEND="
 	$(add_kdebase_dep renamedlg-plugins)
 	$(add_kdebase_dep solid-runtime)
 	handbook? ( $(add_kdebase_dep khelpcenter) )
-	semantic-desktop? ( $(add_kdebase_dep nepomuk) )
+	semantic-desktop? (
+		$(add_kdebase_dep drkonqi)
+		$(add_kdebase_dep nepomuk)
+	)
 "
