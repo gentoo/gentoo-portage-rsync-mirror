@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15175 2013/10/21 21:44:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15176 2013/10/22 01:40:15 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -90,9 +90,8 @@ media-video/pyqtrailer
 >=sys-devel/make-4.0
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (13 Oct 2013)
-# Requires a custom patch to www-server/apache which is not present in
-# Gentoo's ebuilds. If you want to play with this, please don't open
-# bugs related to Apache.
+# Requires a NPN support in mod_ssl (www-server/apache) to work.
+# See #471512 for more details.
 www-apache/mod_spdy
 
 # Pacho Ramos <pacho@gentoo.org> (12 Oct 2013)
