@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.163 2013/10/10 05:26:49 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.164 2013/10/22 21:13:54 dilfridge Exp $
+
+*kdepim-runtime-4.11.2-r1 (22 Oct 2013)
+
+  22 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdepim-runtime-4.11.2.ebuild, +kdepim-runtime-4.11.2-r1.ebuild,
+  +files/kdepim-runtime-4.11.2-flags.patch:
+  Revision bump backporting the fix for kde bug 278082
 
 *kdepim-runtime-4.4.11.1-r1 (10 Oct 2013)
 

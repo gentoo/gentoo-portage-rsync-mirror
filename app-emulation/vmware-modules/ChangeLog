@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.108 2013/10/19 11:42:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.109 2013/10/22 21:21:05 dilfridge Exp $
+
+  22 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/238-2.6.39.patch, -files/238-makefile-kernel-dir.patch,
+  -files/238-3.2.0.patch, -files/238-d-make-root.patch,
+  -files/238-jobserver.patch, -files/238-makefile-include.patch,
+  -files/238-netdevice.patch, -files/238-sema.patch,
+  -files/238-unlocked_ioctl.patch, -vmware-modules-238.6.ebuild:
+  Drop old
 
 *vmware-modules-279.0 (19 Oct 2013)
 

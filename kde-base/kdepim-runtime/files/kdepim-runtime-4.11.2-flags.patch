@@ -1,0 +1,154 @@
+commit c561149538336804f212f5a12ea6cf3d1a3a19f5
+Author: Andre Woebbeking <Woebbeking@kde.org>
+Date:   Fri Sep 27 22:19:42 2013 +0200
+
+    Don't bother IMAP servers with not supported flags
+    
+    Created a new method ResourceTask::fromAkonadiToSupportedImapFlags() to convert
+    Akonadi to IMAP flags supported by the server and use it everywhere instead of
+    fromAkonadiFlags().
+    
+    fromAkonadiFlags() was made private to make it impossible to call it by accident.
+    
+    BUG:278082
+    FIXED-IN: 4.11.3
+    REVIEW:112724
+    
+    CCBUG:287356
+    
+    This also reduces the risk to trigger 287356 as the insert on the IMAP server
+    doesn't fail due to unsupported IMAP flags.
+
+diff --git a/resources/imap/additemtask.cpp b/resources/imap/additemtask.cpp
+index da965a1..af427ff 100644
+--- a/resources/imap/additemtask.cpp
++++ b/resources/imap/additemtask.cpp
+@@ -64,7 +64,7 @@ void AddItemTask::doStart( KIMAP::Session *session )
+   KIMAP::AppendJob *job = new KIMAP::AppendJob( session );
+   job->setMailBox( mailBox );
+   job->setContent( msg->encodedContent( true ) );
+-  job->setFlags( fromAkonadiFlags( item().flags().toList() ) );
++  job->setFlags( fromAkonadiToSupportedImapFlags( item().flags().toList() ) );
+   connect( job, SIGNAL(result(KJob*)), SLOT(onAppendMessageDone(KJob*)) );
+   job->start();
+ }
+diff --git a/resources/imap/changeitemsflagstask.cpp b/resources/imap/changeitemsflagstask.cpp
+index 1c7f415..d7eb183 100644
+--- a/resources/imap/changeitemsflagstask.cpp
++++ b/resources/imap/changeitemsflagstask.cpp
+@@ -91,7 +91,7 @@ KIMAP::StoreJob* ChangeItemsFlagsTask::prepareJob( KIMAP::Session *session )
+ void ChangeItemsFlagsTask::triggerAppendFlagsJob(KIMAP::Session* session)
+ {
+   KIMAP::StoreJob *store = prepareJob( session );
+-  store->setFlags( fromAkonadiFlags( addedFlags().toList() ) );
++  store->setFlags( fromAkonadiToSupportedImapFlags( addedFlags().toList() ) );
+   store->setMode( KIMAP::StoreJob::AppendFlags );
+   connect( store, SIGNAL(result(KJob*)), SLOT(onAppendFlagsDone(KJob*)) );
+   store->start();
+@@ -100,7 +100,7 @@ void ChangeItemsFlagsTask::triggerAppendFlagsJob(KIMAP::Session* session)
+ void ChangeItemsFlagsTask::triggerRemoveFlagsJob(KIMAP::Session* session)
+ {
+   KIMAP::StoreJob *store = prepareJob( session );
+-  store->setFlags( fromAkonadiFlags( removedFlags().toList() ) );
++  store->setFlags( fromAkonadiToSupportedImapFlags( removedFlags().toList() ) );
+   store->setMode( KIMAP::StoreJob::RemoveFlags );
+   connect( store, SIGNAL(result(KJob*)), SLOT(onRemoveFlagsDone(KJob*)) );
+   store->start();
+diff --git a/resources/imap/changeitemtask.cpp b/resources/imap/changeitemtask.cpp
+index 1a5e969..242e202 100644
+--- a/resources/imap/changeitemtask.cpp
++++ b/resources/imap/changeitemtask.cpp
+@@ -34,7 +34,6 @@
+ 
+ #include "imapflags.h"
+ #include "uidnextattribute.h"
+-#include "collectionflagsattribute.h"
+ 
+ ChangeItemTask::ChangeItemTask( ResourceStateInterface::Ptr resource, QObject *parent )
+   : ResourceTask( DeferIfNoSession, resource, parent ), m_session( 0 ), m_oldUid( 0 ), m_newUid( 0 )
+@@ -67,7 +66,7 @@ void ChangeItemTask::doStart( KIMAP::Session *session )
+ 
+     job->setMailBox( mailBox );
+     job->setContent( msg->encodedContent( true ) );
+-    job->setFlags( fromAkonadiFlags( item().flags().toList() ) );
++    job->setFlags( fromAkonadiToSupportedImapFlags( item().flags().toList() ) );
+ 
+     connect( job, SIGNAL(result(KJob*)),
+              this, SLOT(onAppendMessageDone(KJob*)) );
+@@ -105,19 +104,7 @@ void ChangeItemTask::onPreStoreSelectDone( KJob *job )
+ 
+ void ChangeItemTask::triggerStoreJob()
+ {
+-  QList<QByteArray> flags = fromAkonadiFlags( item().flags().toList() );
+-  Akonadi::CollectionFlagsAttribute *flagAttr = item().parentCollection().attribute<Akonadi::CollectionFlagsAttribute>();
+-  // the server does not support arbitrary flags, so filter out those it can't handle
+-  if ( flagAttr && !flagAttr->flags().isEmpty() && !flagAttr->flags().contains( "\\*" ) ) {
+-    for ( QList< QByteArray >::iterator it = flags.begin(); it != flags.end(); ) {
+-      if ( flagAttr->flags().contains( *it ) ) {
+-        ++it;
+-      } else {
+-        kDebug() << "Server does not support flag" << *it;
+-        it = flags.erase( it );
+-      }
+-    }
+-  }
++  QList<QByteArray> flags = fromAkonadiToSupportedImapFlags( item().flags().toList() );
+ 
+   KIMAP::StoreJob *store = new KIMAP::StoreJob( m_session );
+ 
+diff --git a/resources/imap/resourcetask.cpp b/resources/imap/resourcetask.cpp
+index a41e884..1de07f3 100644
+--- a/resources/imap/resourcetask.cpp
++++ b/resources/imap/resourcetask.cpp
+@@ -25,6 +25,7 @@
+ 
+ #include <KDE/KLocale>
+ 
++#include "collectionflagsattribute.h"
+ #include "imapflags.h"
+ #include "sessionpool.h"
+ #include "resourcestateinterface.h"
+@@ -347,6 +348,26 @@ void ResourceTask::showInformationDialog( const QString &message, const QString
+   m_resource->showInformationDialog( message, title, dontShowAgainName );
+ }
+ 
++QList<QByteArray> ResourceTask::fromAkonadiToSupportedImapFlags( const QList<QByteArray> &flags ) const
++{
++  QList<QByteArray> imapFlags = fromAkonadiFlags( flags );
++
++  const Akonadi::CollectionFlagsAttribute *flagAttr = collection().attribute<Akonadi::CollectionFlagsAttribute>();
++  // the server does not support arbitrary flags, so filter out those it can't handle
++  if ( flagAttr && !flagAttr->flags().isEmpty() && !flagAttr->flags().contains( "\\*" ) ) {
++    for ( QList< QByteArray >::iterator it = imapFlags.begin(); it != imapFlags.end(); ) {
++      if ( flagAttr->flags().contains( *it ) ) {
++        ++it;
++      } else {
++        kDebug() << "Server does not support flag" << *it;
++        it = imapFlags.erase( it );
++      }
++    }
++  }
++
++  return imapFlags;
++}
++
+ QList<QByteArray> ResourceTask::fromAkonadiFlags( const QList<QByteArray> &flags )
+ {
+   QList<QByteArray> newFlags;
+diff --git a/resources/imap/resourcetask.h b/resources/imap/resourcetask.h
+index f2bfed0..69c1a64 100644
+--- a/resources/imap/resourcetask.h
++++ b/resources/imap/resourcetask.h
+@@ -125,7 +125,12 @@ protected:
+   const QChar separatorCharacter() const;
+   void setSeparatorCharacter( const QChar &separator );
+ 
++  QList<QByteArray> fromAkonadiToSupportedImapFlags( const QList<QByteArray> &flags ) const;
++
+   static QList<QByteArray> toAkonadiFlags( const QList<QByteArray> &flags );
++
++private:
++
+   static QList<QByteArray> fromAkonadiFlags( const QList<QByteArray> &flags );
+ 
+ private slots:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio-paranoia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.10 2013/08/10 22:09:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio-paranoia/ChangeLog,v 1.11 2013/10/22 21:28:50 blueness Exp $
+
+  22 Oct 2013; Anthony G. Basile <blueness@gentoo.org>
+  libcdio-paranoia-0.90_p1-r1.ebuild, libcdio-paranoia-0.90_p1.ebuild:
+  Keyword ~mips
 
 *libcdio-paranoia-0.90_p1-r1 (10 Aug 2013)
 
