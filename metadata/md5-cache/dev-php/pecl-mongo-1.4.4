@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=|| ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 )
+DESCRIPTION=MongoDB database driver
+EAPI=5
+HOMEPAGE=http://pecl.php.net/mongo
+IUSE=php_targets_php5-5 php_targets_php5-4
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=php_targets_php5-5? ( dev-lang/php:5.5 ) php_targets_php5-4? ( dev-lang/php:5.4 )
+REQUIRED_USE=|| ( php_targets_php5-5 php_targets_php5-4 )
+SLOT=0
+SRC_URI=http://pecl.php.net/get/mongo-1.4.4.tgz
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c2a1c4f4f4a4475eaf83591b695878d9

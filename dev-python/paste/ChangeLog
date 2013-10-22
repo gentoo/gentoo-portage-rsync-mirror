@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paste
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.22 2013/09/05 18:46:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.23 2013/10/22 14:15:13 grobian Exp $
+
+  22 Oct 2013; Fabian Groffen <grobian@gentoo.org> paste-1.7.5.1-r1.ebuild:
+  Marked ~x64-macos, bug #487670
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> paste-1.7.5.1-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

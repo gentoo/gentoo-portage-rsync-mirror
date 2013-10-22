@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.13-r1.ebuild,v 1.2 2013/05/10 03:56:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/routes/routes-1.13-r1.ebuild,v 1.3 2013/10/22 14:24:30 grobian Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc test"
 
 # Note: although setup.py states that tests require webtest,
