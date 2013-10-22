@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2013.09.16.1328054.ebuild,v 1.4 2013/10/21 22:19:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/open-vm-tools-kmod-2013.09.16.1328054.ebuild,v 1.5 2013/10/22 22:21:05 floppym Exp $
 
 EAPI="5"
 
@@ -22,7 +22,8 @@ IUSE=""
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	CONFIG_CHECK="~DRM_VMWGFX ~VMWARE_BALLOON ~VMWARE_PVSCSI ~VMXNET3"
+	CONFIG_CHECK="~DRM_VMWGFX ~VMWARE_BALLOON ~VMWARE_PVSCSI ~VMXNET3
+		!UIDGID_STRICT_TYPE_CHECKS"
 
 	# See logic in configure.ac.
 	local MODULES="vmxnet vmhgfs"
