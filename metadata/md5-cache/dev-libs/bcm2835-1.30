@@ -7,5 +7,5 @@ IUSE=doc examples
 KEYWORDS=~arm
 LICENSE=GPL-2
 SLOT=0
-SRC_URI=http://www.airspayce.com/mikem/bcm2835/bcm2835-1.26.tar.gz
-_md5_=e5cfc1f764bf623e812fced1cfa390ab
+SRC_URI=http://www.airspayce.com/mikem/bcm2835/bcm2835-1.30.tar.gz
+_md5_=5a6fa0529cf04a68c57e2c993c521be8

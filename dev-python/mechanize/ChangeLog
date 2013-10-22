@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mechanize
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.44 2013/09/05 18:46:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mechanize/ChangeLog,v 1.45 2013/10/22 12:00:37 grobian Exp $
+
+  22 Oct 2013; Fabian Groffen <grobian@gentoo.org> mechanize-0.2.5-r1.ebuild:
+  Marked ~x64-macos, bug #487670
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> mechanize-0.2.5-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
