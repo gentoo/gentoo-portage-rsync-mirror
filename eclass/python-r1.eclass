@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.62 2013/09/26 11:24:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.63 2013/10/22 15:16:56 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -710,6 +710,21 @@ python_parallel_foreach_impl() {
 	local MULTIBUILD_VARIANTS
 	_python_obtain_impls
 	multibuild_parallel_foreach_variant _python_multibuild_wrapper "${@}"
+}
+
+# @FUNCTION: python_setup
+# @DESCRIPTION:
+# Find the best (most preferred) Python implementation enabled
+# and set the Python build environment up for it.
+#
+# This function needs to be used when Python is being called outside
+# of python_foreach_impl calls (e.g. for shared processes like doc
+# building). python_foreach_impl sets up the build environment itself.
+python_setup() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_export_best
+	python_wrapper_setup
 }
 
 # @FUNCTION: python_export_best

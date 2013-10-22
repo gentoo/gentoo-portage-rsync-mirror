@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/bmrblib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/bmrblib/ChangeLog,v 1.6 2013/09/05 19:04:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/bmrblib/ChangeLog,v 1.7 2013/10/22 15:12:55 jlec Exp $
+
+*bmrblib-1.0.3 (22 Oct 2013)
+
+  22 Oct 2013; Justin Lecher <jlec@gentoo.org> +bmrblib-1.0.3.ebuild:
+  Verion Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> bmrblib-1.0.0-r1.ebuild,
   bmrblib-1.0.1_pre198.ebuild, bmrblib-1.0.2.ebuild:

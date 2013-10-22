@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.22 2013/09/26 11:24:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.23 2013/10/22 15:16:56 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -202,11 +202,11 @@ _python_single_set_globals() {
 }
 _python_single_set_globals
 
-# @FUNCTION: python-single-r1_pkg_setup
+# @FUNCTION: python_setup
 # @DESCRIPTION:
-# Determine what the selected Python implementation is and set EPYTHON
-# and PYTHON accordingly.
-python-single-r1_pkg_setup() {
+# Determine what the selected Python implementation is and set
+# the Python build environment up for it.
+python_setup() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	unset EPYTHON
@@ -248,6 +248,15 @@ python-single-r1_pkg_setup() {
 		echo
 		die "No supported Python implementation in PYTHON_SINGLE_TARGET."
 	fi
+}
+
+# @FUNCTION: python-single-r1_pkg_setup
+# @DESCRIPTION:
+# Runs python_setup.
+python-single-r1_pkg_setup() {
+	debug-print-function ${FUNCNAME} "${@}"
+
+	python_setup
 }
 
 # @FUNCTION: python_fix_shebang

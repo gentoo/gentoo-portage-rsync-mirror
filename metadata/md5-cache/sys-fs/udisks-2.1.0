@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.32 >=dev-libs/libatasmart-0.19 >=sys-auth/polkit-0.110 virtual/acl >=virtual/udev-197[gudev,hwdb(+)] introspection? ( >=dev-libs/gobject-introspection-1.30 ) selinux? ( sec-policy/selinux-devicekit ) systemd? ( >=sys-apps/systemd-197 ) >=sys-apps/util-linux-2.20.1-r2 >=sys-block/parted-3 virtual/eject cryptsetup? ( sys-fs/cryptsetup[udev(+)] sys-fs/lvm2[udev(+)] ) gptfdisk? ( >=sys-apps/gptfdisk-0.8 )
 SLOT=2
 SRC_URI=http://udisks.freedesktop.org/releases/udisks-2.1.0.tar.bz2
-_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	4878e7f88afc0ba0866ac112190b0fd4	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	4878e7f88afc0ba0866ac112190b0fd4	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=58ca934293ebd3aa60108bd28847b13f

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.16 >=sys-apps/dbus-1.2.24 >=net-firewall/iptables-1.4.8 net-libs/gnutls bluetooth? ( net-wireless/bluez ) ofono? ( net-misc/ofono ) policykit? ( sys-auth/polkit ) openvpn? ( net-misc/openvpn ) vpnc? ( net-misc/vpnc ) wifi? ( >=net-wireless/wpa_supplicant-0.7[dbus] )
 SLOT=0
 SRC_URI=mirror://kernel/linux/network/connman/connman-1.15.tar.xz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	systemd	e80fe2d5b43ec0f0160c6e8ef931fa4c	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=15923ee9291587f723d94256d6708cd4

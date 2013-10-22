@@ -10,5 +10,5 @@ RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) pytho
 REQUIRED_USE=|| ( chrome gtk qt4 )
 SLOT=0
 SRC_URI=https://github.com/lyricat/Hotot/archive/0.9.8.14.tar.gz -> hotot-0.9.8.14.tar.gz
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	fa36040985cb5e3cdd31d44be94d15bc	python-utils-r1	4f3595fa07cbecf9f3cfabd0f9a6f34b	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	677393e4f4667059846e1a73f205010d	python-utils-r1	4f3595fa07cbecf9f3cfabd0f9a6f34b	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=38c0357bbfa07c4496026c7005ed2890
