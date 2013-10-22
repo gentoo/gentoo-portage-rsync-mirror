@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-1.4.2.ebuild,v 1.4 2013/10/20 15:53:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-1.4.2-r1.ebuild,v 1.1 2013/10/22 16:06:28 mgorny Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ COMMON_DEPEND="
 	python? (
 		${PYTHON_DEPS}
 		>=dev-libs/boost-1.41.0[python,${PYTHON_USEDEP}] )
-	ruby? ( >=dev-lang/ruby-1.8 )
+	ruby? ( dev-lang/ruby:1.9 )
 	xml? ( >=dev-libs/libxml2-2.6 )
 	search-index? ( >=dev-db/sqlite-3 )"
 
@@ -77,6 +77,14 @@ pkg_setup() {
 	enewuser "paludisbuild" -1 -1 "/var/tmp/paludis" "paludisbuild,tty"
 
 	python-single-r1_pkg_setup
+}
+
+src_prepare() {
+	# The package explicitly wants ruby1.9, so fix the script on it.
+	# https://bugs.gentoo.org/show_bug.cgi?id=439372#c2
+	sed -i -e '1s/ruby/&19/' ruby/demos/*.rb || die
+
+	epatch_user
 }
 
 src_configure() {

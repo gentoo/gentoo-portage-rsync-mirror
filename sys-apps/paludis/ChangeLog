@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.239 2013/10/20 15:53:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.240 2013/10/22 16:06:28 mgorny Exp $
+
+*paludis-1.4.2-r1 (22 Oct 2013)
+
+  22 Oct 2013; Michał Górny <mgorny@gentoo.org> +paludis-1.4.2-r1.ebuild,
+  -paludis-1.4.2.ebuild:
+  Change the ruby dep to :1.9 and fix the script shebangs on this version.
+  Noticed by Hans de Graaff on bug #439372.
 
   20 Oct 2013; Michał Górny <mgorny@gentoo.org> paludis-1.4.2.ebuild:
   Drop leftover csep function and comments.
