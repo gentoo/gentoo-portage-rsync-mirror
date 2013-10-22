@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.80 2013/10/10 05:19:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.81 2013/10/22 16:44:53 blueness Exp $
+
+  22 Oct 2013; Anthony G. Basile <blueness@gentoo.org>
+  -files/0.4.2-Makefile.gentoo, -files/0.4.4+bip16-eligius_sendfee.patch,
+  -files/0.4.7-reopen_log_file.patch,
+  -files/0.5.0.5+bip16-eligius_sendfee.patch,
+  -files/0.6.0.8-reopen_log_file.patch, -files/0.8.0-sys_leveldb.patch:
+  Remove older patches
 
   10 Oct 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag descriptions from metadata.xml

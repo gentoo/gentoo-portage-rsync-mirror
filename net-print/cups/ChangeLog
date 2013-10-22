@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.565 2013/10/21 15:21:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.566 2013/10/22 16:41:12 dilfridge Exp $
+
+  22 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6.2-r5.ebuild:
+  Drop stable keywords on unstable-only arches
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> cups-1.7_rc1.ebuild,
   cups-9999.ebuild:
