@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.88 2013/10/22 15:15:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.89 2013/10/22 19:23:47 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -492,7 +492,7 @@ distutils-r1_python_install() {
 		flags+=( --install-scripts="${PYTHON_SCRIPTDIR}" )
 	fi
 
-	esetup.py install "${@}" "${flags[@]}"
+	esetup.py install "${@}" install "${flags[@]}"
 
 	if [[ -d ${root}$(python_get_sitedir)/tests ]]; then
 		die "Package installs 'tests' package, file collisions likely."

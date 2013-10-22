@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1032 2013/10/22 15:16:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1033 2013/10/22 19:23:47 mgorny Exp $
+
+  22 Oct 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Fix failing to pass default install arguments when user passes an additional
+  command. Reported by radhermit.
 
   22 Oct 2013; Michał Górny <mgorny@gentoo.org> python-any-r1.eclass,
   python-r1.eclass, python-single-r1.eclass:
