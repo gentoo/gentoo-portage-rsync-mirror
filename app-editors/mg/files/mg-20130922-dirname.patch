@@ -1,39 +1,52 @@
 Fix dirname(3) call in readin and writeout functions.
 https://bugs.gentoo.org/487758
 
+Patch from OpenBSD CVS:
+http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/mg/file.c.diff?r1=1.87;r2=1.89
+
 --- mg-20130922-orig/file.c
 +++ mg-20130922/file.c
-@@ -210,7 +210,7 @@
+@@ -210,7 +210,7 @@ readin(char *fname)
  	struct stat	 statbuf;
  	int	 status, i, ro = FALSE;
  	PF	*ael;
 -	char	*dp;
-+	char	 ts[NFILEN], *dp;
++	char	 dp[NFILEN];
  
  	/* might be old */
  	if (bclear(curbp) != TRUE)
-@@ -255,7 +255,8 @@
+@@ -255,7 +255,8 @@ readin(char *fname)
  		if (errno != ENOENT)
  			ro = TRUE;
  		else if (errno == ENOENT) {
 -			dp = dirname(fname);
-+			(void)strlcpy(ts, fname, NFILEN);
-+			dp = dirname(ts);
++			(void)xdirname(dp, fname, sizeof(dp));
++			(void)strlcat(dp, "/", sizeof(dp));
  			if (stat(dp, &statbuf) == -1 && errno == ENOENT) {
  				/* no read-only; like emacs */
  				ewprintf("Use M-x make-directory RET RET to "
-@@ -669,11 +670,11 @@
+@@ -669,19 +670,17 @@ writeout(FILE ** ffp, struct buffer *bp, char *fn)
  {
  	struct stat	statbuf;
  	int	 s;
 -	char    *dp;
--
--	dp = dirname(fn);
-+	char	 ts[NFILEN], *dp;
++	char     dp[NFILEN];
  
+-	dp = dirname(fn);
+-
  	if (stat(fn, &statbuf) == -1 && errno == ENOENT) {
-+		(void)strlcpy(ts, fn, NFILEN);
-+		dp = dirname(ts);
  		errno = 0;
++		(void)xdirname(dp, fn, sizeof(dp));
++		(void)strlcat(dp, "/", sizeof(dp));
  		if (access(dp, W_OK) && errno == EACCES) {
- 			ewprintf("Directory %s%s write-protected", dp,
+-			ewprintf("Directory %s%s write-protected", dp,
+-			    (dp[0] == '/' && dp[1] == '\0') ? "" : "/");
++			ewprintf("Directory %s write-protected", dp);
+ 			return (FIOERR);
+ 		} else if (errno == ENOENT) {
+-                        ewprintf("%s%s: no such directory", dp,
+-                            (dp[0] == '/' && dp[1] == '\0') ? "" : "/");
++                        ewprintf("%s: no such directory", dp);
+ 			return (FIOERR);
+ 		}
+         }

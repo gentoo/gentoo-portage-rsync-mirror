@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.69 2013/10/20 20:22:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.70 2013/10/22 10:46:10 polynomial-c Exp $
+
+  22 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> cifs-utils-5.9-r1.ebuild,
+  cifs-utils-6.0.ebuild, cifs-utils-6.1-r1.ebuild, cifs-utils-6.2.ebuild,
+  metadata.xml:
+  Removed "upcall" USE flag as it provides the same features like "ads" USE
+  flag.
 
   20 Oct 2013; Markus Meier <maekke@gentoo.org> cifs-utils-6.1-r1.ebuild:
   arm stable, bug #486312

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.72 2013/10/14 06:29:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.73 2013/10/22 10:53:32 jlec Exp $
+
+  22 Oct 2013; Justin Lecher <jlec@gentoo.org> aufs3-3_p20131007.ebuild,
+  aufs3-3_p20131014.ebuild, +files/pax-3.8.patch, +files/pax-3.11.patch:
+  Fix pax patches, #466582 & #488560; thanks Zorzo Luca and Sergey Anufrienko
 
 *aufs3-3_p20131014 (14 Oct 2013)
 
