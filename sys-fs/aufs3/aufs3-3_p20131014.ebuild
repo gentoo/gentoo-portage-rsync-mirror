@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131014.ebuild,v 1.2 2013/10/22 10:53:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131014.ebuild,v 1.3 2013/10/22 13:10:14 jlec Exp $
 
 EAPI=5
 
@@ -124,8 +124,6 @@ src_prepare() {
 	if use pax_kernel; then
 		if kernel_is ge 3 11; then
 			epatch "${FILESDIR}"/pax-3.11.patch
-		elif kernel_is 3 8; then
-			epatch "${FILESDIR}"/pax-3.8.patch
 		else
 			epatch "${FILESDIR}"/pax-3.patch
 		fi
