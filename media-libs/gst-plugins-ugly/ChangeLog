@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.138 2013/10/20 21:22:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.139 2013/10/22 07:20:22 ago Exp $
+
+  22 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-ugly-1.0.10.ebuild:
+  Stable for sparc, wrt bug #480908
 
   20 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   This is only maintained by gstreamer herd
