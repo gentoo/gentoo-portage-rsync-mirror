@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27.ebuild,v 1.2 2013/10/15 09:03:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27-r1.ebuild,v 1.1 2013/10/22 08:12:16 polynomial-c Exp $
 
 EAPI="3"
 
@@ -14,9 +14,11 @@ SRC_URI="mirror://gnu/tar/${P}.tar.bz2
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="minimal nls static userland_GNU xattr"
+IUSE="acl minimal nls selinux static userland_GNU xattr"
 
-RDEPEND="xattr? ( sys-apps/attr )"
+RDEPEND="acl? ( virtual/acl )
+	selinux? ( sys-libs/libselinux )
+	xattr? ( sys-apps/attr )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.10.35 )"
 
@@ -37,7 +39,9 @@ src_configure() {
 		--bindir="${EPREFIX}"/bin \
 		--libexecdir="${EPREFIX}"/usr/sbin \
 		$(usex userland_GNU "" "--program-prefix=g") \
+		$(use_with acl posix-acls) \
 		$(use_enable nls) \
+		$(use_with selinux) \
 		$(use_with xattr xattrs)
 }
 
@@ -60,7 +64,7 @@ src_install() {
 	fi
 
 	dodoc AUTHORS ChangeLog* NEWS README* THANKS
-	newman "${FILESDIR}"/tar.1 ${p}tar.1
+	newman "${FILESDIR}"/tar.1-${PV} ${p}tar.1
 	mv "${ED}"/usr/sbin/${p}backup{,-tar}
 	mv "${ED}"/usr/sbin/${p}restore{,-tar}
 
