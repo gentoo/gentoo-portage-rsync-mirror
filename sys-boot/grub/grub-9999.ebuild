@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.109 2013/10/21 01:20:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.110 2013/10/22 20:15:04 floppym Exp $
 
 EAPI=5
 
@@ -24,8 +24,9 @@ if [[ ${PV} != 9999 ]]; then
 	KEYWORDS="~amd64 ~x86"
 	PATCHES=()
 else
-	inherit bzr
-	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/grub/trunk/grub/"
+	inherit git-r3
+	EGIT_REPO_URI="git://git.sv.gnu.org/grub.git
+		http://git.savannah.gnu.org/r/grub.git"
 fi
 
 DESCRIPTION="GNU GRUB boot loader"

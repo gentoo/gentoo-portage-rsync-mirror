@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-1.23.1.ebuild,v 1.1 2013/05/28 15:09:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-1.23.1.ebuild,v 1.2 2013/10/22 20:23:04 polynomial-c Exp $
 
 EAPI=5
 inherit eutils fdo-mime gnome2-utils
@@ -43,7 +43,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" DOCDIR="${ED}/usr/share/doc/${PF}" install || die
+	emake DESTDIR="${D}" DOCDIR="${ED}/usr/share/doc/${PF}" install
 	rm -f "${ED}"/usr/share/doc/${PF}/{COPYING,GPL-2,ScintillaLicense.txt}
 	prune_libtool_files --all
 }

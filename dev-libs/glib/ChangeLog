@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.580 2013/10/17 20:34:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.581 2013/10/22 20:18:06 ottxor Exp $
+
+  22 Oct 2013; Christoph Junghans <ottxor@gentoo.org> glib-2.36.4-r1.ebuild:
+  fixed build on Darwin (bug #488500)
 
   17 Oct 2013; Markus Meier <maekke@gentoo.org> glib-2.34.3-r1.ebuild:
   arm stable, bug #476364
