@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.9999.ebuild,v 1.1 2013/10/22 05:57:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.9999.ebuild,v 1.2 2013/10/22 18:26:59 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -37,11 +37,11 @@ RDEPEND="${DEPEND}
 	dev-python/paste[${PYTHON_USEDEP}]
 	>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
 	sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
+	          <dev-python/sqlalchemy-0.7.99[sqlite,${PYTHON_USEDEP}] )
 	mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
+	         <dev-python/sqlalchemy-0.7.99[mysql,${PYTHON_USEDEP}] )
 	postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
+	            <dev-python/sqlalchemy-0.7.99[postgres,${PYTHON_USEDEP}] )
 	>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
 	>=dev-python/lxml-2.3[${PYTHON_USEDEP}]

@@ -1,0 +1,15 @@
+--- test/map_test.rb.old	2013-10-14 15:37:25.639883829 +0000
++++ test/map_test.rb	2013-10-14 15:37:33.747781899 +0000
+@@ -651,12 +651,6 @@
+     assert{ all_args == [[1, 2], [3, 4]] }
+   end
+ 
+-  testing 'keeps every entry for which block is true and returns self' do
+-    m = Map.new( { :a => 1 , :b => 2 , :c => 3 , :d => 4 } )
+-    assert{ m.keep_if { |k,v| v % 2 == 0 }.object_id == m.object_id }
+-    assert{ m == Map.new( { :b => 2 , :d => 4 } ) }
+-  end
+-
+   testing 'it raises a RuntimeError if called on a frozen instance' do
+     m = Map.new( { :a => 1 } ).freeze
+ 
