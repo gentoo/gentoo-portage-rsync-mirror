@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fxload
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.29 2013/07/08 15:06:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/ChangeLog,v 1.30 2013/10/22 14:48:36 jer Exp $
+
+  22 Oct 2013; Jeroen Roovers <jer@gentoo.org> fxload-20081013-r1.ebuild:
+  Stable for HPPA (bug #488412).
 
 *fxload-20081013-r1 (08 Jul 2013)
 
