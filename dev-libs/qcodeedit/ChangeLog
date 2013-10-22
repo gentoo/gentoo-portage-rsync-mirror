@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/qcodeedit
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qcodeedit/ChangeLog,v 1.1 2013/10/22 10:06:58 jlec Exp $
+
+*qcodeedit-2.2.3 (22 Oct 2013)
+
+  22 Oct 2013; Justin Lecher <jlec@gentoo.org> +qcodeedit-2.2.3.ebuild,
+  +metadata.xml:
+  New addition
+

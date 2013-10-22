@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.78 2013/10/21 10:17:05 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.79 2013/10/22 10:02:42 ultrabug Exp $
+
+*mongodb-2.4.7 (22 Oct 2013)
+
+  22 Oct 2013; Ultrabug <ultrabug@gentoo.org> +mongodb-2.4.7.ebuild:
+  version bump
 
 *mongodb-2.4.6-r2 (21 Oct 2013)
 *mongodb-2.2.6-r1 (21 Oct 2013)
