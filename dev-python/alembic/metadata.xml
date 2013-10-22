@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-        <herd>python</herd>
-        <herd>proxy-maintainers</herd>
-        <maintainer><email>idella4@gentoo.org</email>
-                <name>Ian idella4 Delaney</name>
-	</maintainer>
-	<maintainer><email>yac@gentoo.org</email>
-		<name>Jan Matějka</name>
-	</maintainer>
+    <herd>python</herd>
+    <maintainer>
+        <email>yac@gentoo.org</email>
+        <name>Jan Matějka</name>
+    </maintainer>
 </pkgmetadata>

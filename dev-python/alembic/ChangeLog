@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/alembic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/alembic/ChangeLog,v 1.6 2013/10/21 13:23:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/alembic/ChangeLog,v 1.8 2013/10/22 03:16:22 yac Exp $
+
+  22 Oct 2013; Jan Matejka <yac@gentoo.org> metadata.xml:
+  removing idella and proxy-maintainers
+
+*alembic-0.6.0 (22 Oct 2013)
+
+  22 Oct 2013; Jan Matejka <yac@gentoo.org> +alembic-0.6.0.ebuild:
+  verbump with python 3.3 support, refs 488862
 
   21 Oct 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix e-mail address.
