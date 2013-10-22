@@ -2,12 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>dolsen@gentoo.org</email>
-		<name>Brian Dolbec</name>
-	</maintainer>
-	<maintainer>
 		<email>radhermit@gentoo.org</email>
 		<name>Tim Harder</name>
+	</maintainer>
+	<maintainer>
+		<email>dolsen@gentoo.org</email>
+		<name>Brian Dolbec</name>
 	</maintainer>
 	<use>
 		<flag name="doc">Build and install API docs.</flag>
