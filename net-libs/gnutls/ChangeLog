@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.449 2013/09/22 14:06:38 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.450 2013/10/22 18:41:24 grobian Exp $
+
+  22 Oct 2013; Fabian Groffen <grobian@gentoo.org> gnutls-3.2.4.ebuild:
+  Add patch from upstream to fix compilation on Darwin, bug #488498
 
   22 Sep 2013; Chris Reffett <creffett@gentoo.org> -gnutls-2.12.20.ebuild:
   Drop affected version wrt bug 455560

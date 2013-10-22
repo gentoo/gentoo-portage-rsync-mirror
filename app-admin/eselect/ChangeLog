@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.253 2013/10/10 14:05:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.254 2013/10/22 18:31:18 ulm Exp $
+
+  22 Oct 2013; Ulrich Müller <ulm@gentoo.org> eselect-9999.ebuild:
+  Return to git-2.eclass, reverting previous commit.
 
   10 Oct 2013; Ulrich Müller <ulm@gentoo.org> eselect-9999.ebuild:
   Migrate to git-r3.eclass.

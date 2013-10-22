@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.4.ebuild,v 1.1 2013/09/01 18:51:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.4.ebuild,v 1.2 2013/10/22 18:41:24 grobian Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ inherit autotools libtool eutils versionator
 
 DESCRIPTION="A TLS 1.2 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
-SRC_URI="ftp://ftp.gnutls.org/gcrypt/gnutls/v$(get_version_component_range 1-2)/${P}.tar.xz"
+SRC_URI="ftp://ftp.gnutls.org/gcrypt/gnutls/v$(get_version_component_range 1-2)/${P}.tar.xz
+	https://gitorious.org/gnutls/gnutls/commit/1df1b0f7b28c733bf01e5d1faa2f8ccdb3db1665.patch -> ${P}-no-error.patch"
 
 # LGPL-3 for libgnutls library and GPL-3 for libgnutls-extra library.
 # soon to be relicensed as LGPL-2.1 unless heartbeat extension enabled.
@@ -61,6 +62,9 @@ src_prepare() {
 	for file in $(grep -l AutoGen-ed src/*.c) ; do
 		rm src/$(basename ${file} .c).{c,h} || die
 	done
+
+	# from upstream, #488498
+	epatch "${DISTDIR}"/${P}-no-error.patch
 
 	# support user patches
 	epatch_user
