@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.0-r1.ebuild,v 1.1 2013/10/21 12:24:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.0-r2.ebuild,v 1.1 2013/10/22 04:17:17 polynomial-c Exp $
 
 EAPI=5
 
@@ -107,7 +107,8 @@ QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox/VBoxPython2_7.so
 	usr/lib/virtualbox/VBoxXPCOMC.so
 	usr/lib/virtualbox/VBoxOGLhostcrutil.so
-	usr/lib/virtualbox/VBoxNetDHCP.so"
+	usr/lib/virtualbox/VBoxNetDHCP.so
+	usr/lib/virtualbox/VBoxNetNAT.so"
 
 REQUIRED_USE="
 	java? ( sdk )
@@ -284,6 +285,7 @@ src_install() {
 	# VBoxNetAdpCtl and VBoxNetDHCP binaries need to be suid root in any case..
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetAdpCtl
 	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetDHCP
+	fperms 4750 /usr/$(get_libdir)/${PN}/VBoxNetNAT
 
 	# VBoxSVC needs to be pax-marked (bug #403453)
 	pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxSVC || die
