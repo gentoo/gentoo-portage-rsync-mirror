@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.22 2013/09/12 22:29:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.23 2013/10/22 12:09:18 grobian Exp $
+
+  22 Oct 2013; Fabian Groffen <grobian@gentoo.org> networkx-1.8.1.ebuild:
+  Marked ~x64-macos, bug #487670
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> networkx-1.6-r1.ebuild,
   networkx-1.7-r2.ebuild, networkx-1.8.1.ebuild:
