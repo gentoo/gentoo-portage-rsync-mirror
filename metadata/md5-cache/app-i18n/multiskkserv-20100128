@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=app-arch/xz-utils dev-db/cdb test? ( app-i18n/nkf ) >=sys-apps/sed-4 || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=app-arch/xz-utils dev-db/cdb test? ( app-i18n/nkf ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=SKK server that handles multiple dictionaries
 EAPI=3
 HOMEPAGE=http://www3.big.or.jp/~sian/linux/products/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=|| ( >=app-i18n/skk-jisyo-200705[cdb] app-i18n/skk-jisyo-cdb )
 SLOT=0
 SRC_URI=http://www3.big.or.jp/~sian/linux/products/multiskkserv-20100128.tar.xz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	fixheadtails	f96922acc9287f1e889a1e50a6c8986e	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=4b19c5bb39c4d6a5bcb33086e764420d
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=09b544106aecf57b79130fa997e21e26

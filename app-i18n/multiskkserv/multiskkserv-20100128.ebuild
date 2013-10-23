@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20100128.ebuild,v 1.5 2012/10/09 12:47:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20100128.ebuild,v 1.6 2013/10/23 14:19:58 hattya Exp $
 
 EAPI="3"
 
-inherit eutils fixheadtails autotools
+inherit autotools eutils
 
 DESCRIPTION="SKK server that handles multiple dictionaries"
 HOMEPAGE="http://www3.big.or.jp/~sian/linux/products/"
@@ -24,7 +24,6 @@ RDEPEND="|| (
 	)"
 
 src_prepare() {
-	ht_fix_all
 	epatch "${FILESDIR}"/${P}-cdb.patch
 	eautoreconf
 }
