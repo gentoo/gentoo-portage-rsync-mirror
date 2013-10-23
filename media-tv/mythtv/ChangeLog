@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.406 2013/10/10 16:18:21 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.407 2013/10/23 14:57:50 rich0 Exp $
+
+  23 Oct 2013; Richard Freeman <rich0@gentoo.org> mythtv-0.27_p20130924.ebuild,
+  +files/mythbackend.service:
+  Add systemd unit - 482714 - thanks to Stefan G. Weichinger for testing/etc.
 
   10 Oct 2013; Richard Freeman <rich0@gentoo.org> mythtv-0.27_p20130924.ebuild:
   Fix vaapi configuration - 487442.

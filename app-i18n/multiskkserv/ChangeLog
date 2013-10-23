@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/multiskkserv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.21 2013/10/23 14:19:58 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/ChangeLog,v 1.22 2013/10/23 14:53:09 hattya Exp $
+
+  23 Oct 2013; Akinori Hattori <hattya@gentoo.org> multiskkserv-20100128.ebuild:
+  update to EAPI 5
 
   23 Oct 2013; Akinori Hattori <hattya@gentoo.org> -files/cdb-0.75-errno.diff,
   -files/multiskkserv-20020201-gcc34.diff, -multiskkserv-20020201.ebuild,

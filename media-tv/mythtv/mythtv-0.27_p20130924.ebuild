@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.27_p20130924.ebuild,v 1.2 2013/10/10 16:18:21 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.27_p20130924.ebuild,v 1.3 2013/10/23 14:57:50 rich0 Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2:2.6"
 BACKPORTS="d9561055abeec11fba234c9bdfbde5e79e695803"
 MY_P=${P%_p*}
 
-inherit flag-o-matic multilib eutils python user
+inherit flag-o-matic multilib eutils python user systemd
 
 MYTHTV_VERSION="v0.27"
 MYTHTV_BRANCH="fixes/0.27"
@@ -267,7 +267,8 @@ src_install() {
 
 	newinitd "${FILESDIR}"/mythbackend.init mythbackend
 	newconfd "${FILESDIR}"/mythbackend.conf mythbackend
-
+	systemd_dounit "${FILESDIR}"/mythbackend.service
+	
 	dodoc keys.txt
 
 	keepdir /etc/mythtv
