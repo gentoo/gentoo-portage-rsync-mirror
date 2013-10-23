@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libkpass/libkpass-3.ebuild,v 1.3 2011/12/14 15:07:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libkpass/libkpass-6.ebuild,v 1.3 2013/10/23 13:25:18 joker Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Libkpass is a from-scratch C implementation of accessing KeePass 1.x format password databases"
 HOMEPAGE="http://libkpass.sourceforge.net/"

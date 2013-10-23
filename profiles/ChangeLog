@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8321 2013/10/22 15:43:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8322 2013/10/23 13:06:46 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Oct 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Mask qt-creator 3.0 beta.
 
   22 Oct 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   virtual/pyparsing has been removed.
