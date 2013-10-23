@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.241 2013/09/19 11:23:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.242 2013/10/23 10:14:55 mgorny Exp $
+
+*PyQt4-4.10.3-r1 (23 Oct 2013)
+
+  23 Oct 2013; Michał Górny <mgorny@gentoo.org> +PyQt4-4.10.3-r1.ebuild:
+  Support python-exec:2.
 
   19 Sep 2013; Ben de Groot <yngwin@gentoo.org> PyQt4-4.10.3.ebuild:
   Depend on sip >=4.15.0 to fix build failure (bug #485274)
