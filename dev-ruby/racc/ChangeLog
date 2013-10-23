@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.98 2013/09/05 15:46:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.99 2013/10/23 05:53:11 graaff Exp $
+
+*racc-1.4.10 (23 Oct 2013)
+
+  23 Oct 2013; Hans de Graaff <graaff@gentoo.org> +racc-1.4.10.ebuild:
+  Version bump. Compiled version no longer compatible with ruby18.
 
   05 Sep 2013; Jeroen Roovers <jer@gentoo.org> racc-1.4.9.ebuild:
   Stable for HPPA (bug #483254).
