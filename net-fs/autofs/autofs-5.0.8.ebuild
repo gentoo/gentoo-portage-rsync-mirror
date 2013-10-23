@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.8.ebuild,v 1.1 2013/10/21 02:16:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.8.ebuild,v 1.2 2013/10/23 04:02:26 patrick Exp $
 
 EAPI=5
 
@@ -46,7 +46,6 @@ DEPEND="${RDEPEND}
 	virtual/yacc"
 
 CONFIG_CHECK="~AUTOFS4_FS"
-
 
 src_prepare() {
 	# Upstream's patchset

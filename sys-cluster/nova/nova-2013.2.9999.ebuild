@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.1 2013/10/23 03:52:15 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.9999.ebuild,v 1.2 2013/10/23 04:12:48 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -11,7 +11,7 @@ DESCRIPTION="Nova is a cloud computing fabric controller (main part of an
 IaaS system). It is written in Python."
 HOMEPAGE="https://launchpad.net/nova"
 EGIT_REPO_URI="https://github.com/openstack/nova.git"
-EGIT_BRANCH="stable/grizzly"
+EGIT_BRANCH="stable/havana"
 
 LICENSE="Apache-2.0"
 SLOT="0"
