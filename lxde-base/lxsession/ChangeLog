@@ -1,6 +1,16 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.48 2013/10/18 03:21:53 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.50 2013/10/23 09:53:44 nullishzero Exp $
+
+*lxsession-0.4.9.2-r1 (23 Oct 2013)
+
+  23 Oct 2013; Pavel Kazakov <nullishzero@gentoo.org>
+  +lxsession-0.4.9.2-r1.ebuild:
+  Add run-time dependency on sys-apps/lsb-release (required by lxsession-
+  logout).
+
+  23 Oct 2013; Pavel Kazakov <nullishzero@gentoo.org> lxsession-0.4.9.2.ebuild:
+  Add dependency on sys-auth/polkit; bug #488054
 
   17 Oct 2013; Markos Chandras <hwoarang@gentoo.org> lxsession-0.4.9.2.ebuild:
   Add missing dependency to dev-libs/dbus-glib
