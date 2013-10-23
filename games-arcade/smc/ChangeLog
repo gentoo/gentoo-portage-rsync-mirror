@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/smc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.29 2012/11/19 22:19:52 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smc/ChangeLog,v 1.30 2013/10/23 22:08:17 mr_bones_ Exp $
+
+  23 Oct 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/smc-1.9-underlink.patch, smc-1.9.ebuild:
+  add underlink patch to build with newer binutils from zimous via bug #489188
 
   19 Nov 2012; Michael Sterrett <mr_bones_@gentoo.org> smc-1.9.ebuild:
   looks like cegui-0.6 is still needed

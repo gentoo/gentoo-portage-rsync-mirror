@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.3 2013/10/21 01:20:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.4 2013/10/23 22:05:11 floppym Exp $
 
 EAPI=5
 
 if [[ ${PV} == 9999 ]]; then
 	AUTOTOOLS_AUTORECONF=1
+	GRUB_AUTOGEN=1
 fi
 
 inherit autotools-utils bash-completion-r1 eutils flag-o-matic mount-boot multibuild pax-utils toolchain-funcs versionator
@@ -24,14 +25,23 @@ if [[ ${PV} != 9999 ]]; then
 	KEYWORDS="amd64 x86"
 	PATCHES=()
 else
-	inherit bzr
-	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/grub/trunk/grub/"
+	inherit git-r3
+	EGIT_REPO_URI="git://git.sv.gnu.org/grub.git
+		http://git.savannah.gnu.org/r/grub.git"
 fi
+
+DEJAVU=dejavu-sans-ttf-2.34
+UNIFONT=unifont-5.1.20080820.pcf
+SRC_URI+=" truetype? (
+	mirror://sourceforge/dejavu/${DEJAVU}.zip
+	http://unifoundry.com/${UNIFONT}.gz
+)"
 
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 
-LICENSE="GPL-3"
+# Includes licenses for dejavu and unifont
+LICENSE="GPL-3 truetype? ( BitstreamVera GPL-2-with-font-exception )"
 SLOT="2"
 IUSE="custom-cflags debug device-mapper doc efiemu mount +multislot nls static sdl test truetype libzfs"
 
@@ -63,9 +73,7 @@ RDEPEND="
 	device-mapper? ( >=sys-fs/lvm2-2.02.45 )
 	libzfs? ( sys-fs/zfs )
 	mount? ( sys-fs/fuse )
-	truetype? (
-		media-libs/freetype
-	)
+	truetype? ( media-libs/freetype )
 	ppc? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
 	ppc64? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
 "
@@ -88,10 +96,6 @@ DEPEND="${RDEPEND}
 		dev-libs/libisoburn
 		app-emulation/qemu
 	)
-	truetype? (
-		media-fonts/dejavu
-		>=media-fonts/unifont-5
-	)
 "
 RDEPEND+="
 	kernel_linux? (
@@ -101,7 +105,7 @@ RDEPEND+="
 	!multislot? ( !sys-boot/grub:0 )
 "
 
-if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
+if [[ -n ${GRUB_AUTOGEN} ]]; then
 	DEPEND+=" >=sys-devel/autogen-5.10"
 fi
 
@@ -139,6 +143,13 @@ pkg_pretend() {
 	fi
 }
 
+src_unpack() {
+	if [[ ${PV} == 9999 ]]; then
+		git-r3_src_unpack
+	fi
+	default_src_unpack
+}
+
 src_prepare() {
 	[[ ${PATCHES} ]] && epatch "${PATCHES[@]}"
 	sed -i -e /autoreconf/d autogen.sh || die
@@ -147,11 +158,18 @@ src_prepare() {
 		sed -i -e 's/^\* GRUB:/* GRUB2:/' -e 's/(grub)/(grub2)/' docs/grub.texi || die
 	fi
 	epatch_user
-	if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
+	if [[ -n ${GRUB_AUTOGEN} ]]; then
 		bash autogen.sh || die
+	fi
+	if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
 		autopoint() { return 0; }
 		eautoreconf
 	fi
+}
+
+setup_fonts() {
+	ln -s "${WORKDIR}/${DEJAVU}/ttf/DejaVuSans.ttf" DejaVuSans.ttf || die
+	ln -s "${WORKDIR}/${UNIFONT}" unifont.pcf || die
 }
 
 grub_configure() {
@@ -196,6 +214,11 @@ grub_configure() {
 
 	if use multislot; then
 		myeconfargs+=( --program-transform-name="s,grub,grub2," )
+	fi
+
+	if use truetype; then
+		mkdir -p "${BUILD_DIR}" || die
+		run_in_build_dir setup_fonts
 	fi
 
 	autotools-utils_src_configure
