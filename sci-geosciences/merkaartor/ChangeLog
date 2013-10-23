@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/merkaartor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.28 2013/03/03 02:23:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/merkaartor/ChangeLog,v 1.29 2013/10/23 19:17:27 hanno Exp $
+
+  23 Oct 2013; Hanno Boeck <hanno@gentoo.org> metadata.xml:
+  remove myself as maintainer, now maintained by sci-geosciences herd
 
   03 Mar 2013; Davide Pesavento <pesa@gentoo.org> metadata.xml:
   Adjust metadata for Qt category move.

@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-geosciences</herd>
-  <maintainer>
-    <email>hanno@gentoo.org</email>
-  </maintainer>
   <use>
     <flag name="dmtx">Enable libdmtx support for summarizing waypoints as  2D barcode</flag>
     <flag name="gpsbabel">Enable support for wide range of geodata file formats</flag>

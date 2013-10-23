@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.969 2013/10/20 02:47:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.970 2013/10/23 19:08:06 phajdan.jr Exp $
+
+*chromium-32.0.1678.0 (23 Oct 2013)
+
+  23 Oct 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-32.0.1664.3-r1.ebuild, +chromium-32.0.1678.0.ebuild:
+  Dev channel bump. Use readme.gentoo eclass (bug #487136 by pacho; patch by
+  floppym based on pacho's original patch). Remove old.
 
   20 Oct 2013; Mike Gilbert <floppym@gentoo.org> chromium-32.0.1671.3.ebuild:
   Re-enable V8 snapshot on PaX systems.
