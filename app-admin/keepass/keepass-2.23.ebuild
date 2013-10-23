@@ -1,15 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.22.ebuild,v 1.2 2013/10/23 11:36:19 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.23.ebuild,v 1.2 2013/10/23 11:36:19 tomwij Exp $
 
 EAPI=5
 
-inherit eutils fdo-mime gnome2-utils mono multilib
+inherit eutils fdo-mime gnome2-utils mono-env multilib
 
 MY_PN="KeePass"
 DESCRIPTION="A free, open source, light-weight and easy-to-use password manager"
 HOMEPAGE="http://keepass.info/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}-Source.zip"
+SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}-Source.zip
+http://keepass.info/filepool/Resources_131022.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,6 +24,15 @@ DEPEND="${COMMON_DEPEND}
 	app-arch/unzip"
 
 S=${WORKDIR}
+
+src_unpack() {
+	unpack "${MY_PN}-${PV}-Source.zip"
+
+	# Use fixed version of the images, see #472764
+	pushd "${S}/KeePass/Resources" > /dev/null || die
+	unpack "Resources_131022.zip"
+	popd > /dev/null || die
+}
 
 src_prepare() {
 	# Remove Windows-specific things

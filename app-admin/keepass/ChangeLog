@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/keepass
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/ChangeLog,v 1.7 2013/04/09 10:54:20 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/ChangeLog,v 1.9 2013/10/23 11:36:19 tomwij Exp $
+
+*keepass-2.23 (23 Oct 2013)
+
+  23 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +keepass-2.23.ebuild,
+  metadata.xml:
+  Version bump to 2.23, fixes bug #472764 and bug #486936. Still has an
+  unhandled exception when closing the window that still needs to be resolved,
+  see bug #489120. Proxied commit for Alessandro Di Federico.
 
 *keepass-2.22 (09 Apr 2013)
 

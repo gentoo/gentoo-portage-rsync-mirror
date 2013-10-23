@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.21.ebuild,v 1.1 2013/02/04 17:06:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.21.ebuild,v 1.2 2013/10/23 11:36:19 tomwij Exp $
 
 EAPI=5
 
