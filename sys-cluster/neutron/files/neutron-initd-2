@@ -1,0 +1,60 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+depend() {
+    need net
+}
+
+BASENAME=$(echo $SVCNAME | cut -d '-' -f 1)
+SERVERNAME=$(echo $SVCNAME | cut -d '-' -f 2)
+
+checkconfig() {
+    if [ ! -r /etc/conf.d/$BASENAME ]; then
+        eerror "No neutron conf.d file found: /etc/conf.d/$BASENAME)"
+        return 1
+    fi
+    return 0
+}
+
+start() {
+    checkconfig || return $?
+    . /etc/conf.d/$BASENAME
+    
+    ebegin "Starting ${SVCNAME}"
+
+    if [ ! -d ${PID_PATH} ]; then
+        mkdir ${PID_PATH}
+    fi
+
+    start-stop-daemon --start \
+        --user neutron:neutron \
+        --quiet \
+        --pidfile "${PID_PATH}/${SVCNAME}.pid" \
+        --make-pidfile \
+        --background \
+        --exec /usr/bin/${SVCNAME} -- \
+            --config-file /etc/neutron/neutron.conf \
+            --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini \
+                        --log-file /var/log/neutron/server.log
+
+    eend $? "Failed to start ${SVCNAME}"
+}
+
+stop() {
+    checkconfig || return $?
+    . /etc/conf.d/$BASENAME
+    
+    ebegin "Stopping ${SVCNAME}"
+    
+    start-stop-daemon --stop --user neutron --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" \
+                      --exec /usr/bin/${SVCNAME} -- \
+                      --config-file /etc/neutron/neutron.conf \
+                      --config-file /etc/neutron/plugins/openvswitch/ovs_neutron_plugin.ini \
+                                          --log-file /var/log/neutron/server.log
+    eend $? "Failed to stop ${SVCNAME}"
+}
+
+#restart() {
+#
+#}

@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.495 2013/10/15 01:53:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.496 2013/10/23 16:10:35 vapier Exp $
+
+*openssl-1.0.1e-r2 (23 Oct 2013)
+
+  23 Oct 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.1e-s_client-verify.patch, +openssl-1.0.1e-r2.ebuild:
+  Add fix for s_client verify #472584 by Fabio Coatti.  Disable 128bit math
+  logic for now #469976 by Jim Faulkner.
 
   15 Oct 2013; Mike Frysinger <vapier@gentoo.org> openssl-1.0.1e-r1.ebuild:
   Disable 5 second delay in config when building for some targets.

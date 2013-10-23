@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.2.9999.ebuild,v 1.1 2013/10/23 03:39:07 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.2.9999.ebuild,v 1.2 2013/10/23 16:13:26 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -78,40 +78,42 @@ pkg_setup() {
 	enewuser neutron -1 -1 /var/lib/neutron neutron
 }
 
+src_prepare() {
+	#it's /bin/ip not /sbin/ip
+	sed -i 's/sbin\/ip\,/bin\/ip\,/g' etc/neutron/rootwrap.d/*
+}
+
 python_install() {
 	distutils-r1_python_install
-	newconfd "${FILESDIR}/neutron-confd" "quantum"
-	newinitd "${FILESDIR}/neutron-initd" "quantum"
+	newconfd "${FILESDIR}/neutron-confd" "neutron"
+	newinitd "${FILESDIR}/neutron-initd" "neutron"
 
-	use server && dosym /etc/init.d/quantum /etc/init.d/quantum-server
-	use dhcp && dosym /etc/init.d/quantum /etc/init.d/quantum-dhcp-agent
-	use l3 && dosym /etc/init.d/quantum /etc/init.d/quantum-l3-agent
-	use metadata && dosym /etc/init.d/quantum /etc/init.d/quantum-metadata-agent
-	use openvswitch && dosym /etc/init.d/quantum /etc/init.d/quantum-openvswitch-agent
+	use server && dosym /etc/init.d/neutron /etc/init.d/neutron-server
+	use dhcp && dosym /etc/init.d/neutron /etc/init.d/neutron-dhcp-agent
+	use l3 && dosym /etc/init.d/neutron /etc/init.d/neutron-l3-agent
+	use metadata && dosym /etc/init.d/neutron /etc/init.d/neutron-metadata-agent
+	use openvswitch && dosym /etc/init.d/neutron /etc/init.d/neutron-openvswitch-agent
 
 	diropts -m 750
-	dodir /var/log/neutron /var/log/quantum
+	dodir /var/log/neutron /var/log/neutron
 	fowners neutron:neutron /var/log/neutron
-	keepdir /etc/quantum
-	insinto /etc/quantum
-
-	#it's /bin/ip not /sbin/ip
-	sed -i 's/sbin\/ip\,/bin\/ip\,/g' "etc/quantum/rootwrap.d/*"
+	keepdir /etc/neutron
+	insinto /etc/neutron
 
 	doins "etc/api-paste.ini"
 	doins "etc/dhcp_agent.ini"
 	doins "etc/l3_agent.ini"
 	doins "etc/policy.json"
-	doins "etc/quantum.conf"
+	doins "etc/neutron.conf"
 	doins "etc/rootwrap.conf"
 	insinto /etc
-	doins -r "etc/quantum/"
+	doins -r "etc/neutron/"
 
 	#remove the etc stuff from usr...
 	rm -R "${D}/usr/etc/"
 
-	insinto "/usr/lib64/python2.7/site-packages/quantum/db/migration/alembic_migrations/"
-	doins -r "quantum/db/migration/alembic_migrations/versions"
+	insinto "/usr/lib64/python2.7/site-packages/neutron/db/migration/alembic_migrations/"
+	doins -r "neutron/db/migration/alembic_migrations/versions"
 
 	#add sudoers definitions for user neutron
 	insinto /etc/sudoers.d/
