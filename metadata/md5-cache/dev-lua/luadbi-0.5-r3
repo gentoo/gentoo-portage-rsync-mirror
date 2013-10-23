@@ -4,11 +4,11 @@ DESCRIPTION=DBI module for Lua
 EAPI=5
 HOMEPAGE=http://code.google.com/p/luadbi/
 IUSE=mysql postgres sqlite
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~arm ~x86
 LICENSE=MIT
 RDEPEND=>=dev-lang/lua-5.1 mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) sqlite? ( >=dev-db/sqlite-3 )
 REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=0
 SRC_URI=http://luadbi.googlecode.com/files/luadbi.0.5.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=0a2e1f7f2815181bc4395210dfe09ecd
+_md5_=27682bb09907846304243981c68468e2

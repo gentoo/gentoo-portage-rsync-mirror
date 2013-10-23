@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luadbi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.16 2013/08/08 19:25:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.17 2013/10/23 16:47:14 maekke Exp $
+
+  23 Oct 2013; Markus Meier <maekke@gentoo.org> luadbi-0.5-r3.ebuild:
+  add ~arm, bug #488410
 
   08 Aug 2013; Markus Meier <maekke@gentoo.org> luadbi-0.5-r2.ebuild:
   add ~arm, bug #476264
