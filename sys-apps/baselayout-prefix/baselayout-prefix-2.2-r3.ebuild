@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r3.ebuild,v 1.1 2013/10/22 09:28:31 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r3.ebuild,v 1.2 2013/10/23 07:28:36 haubi Exp $
 
 EAPI=3
 
@@ -29,6 +29,7 @@ pkg_preinst() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${EINFO}-checkfuncs-aix.patch # generic aix port
 	# POSIX specifies <termios.h>, AIX lacks <sys/termios.h>
 	sed -i -e 's|<sys/termios.h>|<termios.h>|' src/libeinfo/libeinfo.c || die
 	# exotic platforms still aren't fixed in upstream libtool
