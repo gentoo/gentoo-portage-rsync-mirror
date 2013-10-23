@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0-r1.ebuild,v 1.5 2012/12/15 13:27:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsearch/vdr-epgsearch-1.0.0-r1.ebuild,v 1.6 2013/10/22 23:11:52 hd_brummy Exp $
 
 EAPI="5"
 
@@ -49,6 +49,8 @@ src_prepare() {
 	if has_version ">=media-video/vdr-1.7.33"; then
 		epatch "${FILESDIR}/${P}_vdr-1.7.33.diff"
 	fi
+
+	epatch "${FILESDIR}/${P}_vdr-2.1.2.diff"
 
 	# disable automagic deps
 	sed -i Makefile -e '/^AUTOCONFIG=/s/^/#/'
