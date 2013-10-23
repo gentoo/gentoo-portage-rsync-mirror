@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/qrencode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.36 2013/08/22 13:08:09 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/ChangeLog,v 1.38 2013/10/23 13:37:04 joker Exp $
+
+  23 Oct 2013; Christian Birchinger <joker@gentoo.org> qrencode-3.4.3.ebuild:
+  No reason for a ~x86-fbsd drop found, re-adding keyword
+
+  23 Oct 2013; Christian Birchinger <joker@gentoo.org> -qrencode-3.4.1.ebuild,
+  -qrencode-3.4.2.ebuild:
+  Remove old versions
 
 *qrencode-3.4.3 (22 Aug 2013)
 
