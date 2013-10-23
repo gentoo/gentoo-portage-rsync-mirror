@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/glassfish-xmlrpc-api
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-xmlrpc-api/ChangeLog,v 1.2 2013/10/23 17:21:57 tomwij Exp $
+
+  23 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  glassfish-xmlrpc-api-1.1.1.ebuild:
+  This is not necessarily Enterprise, changed DESCRIPTION.
+
+*glassfish-xmlrpc-api-1.1.1 (23 Oct 2013)
+
+  23 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +glassfish-xmlrpc-api-1.1.1.ebuild, +metadata.xml:
+  New ebuild for dev-java/glassfish-xmlrpc-api, project GlassFish Enterprise XML
+  RPC API; indirect dependency of dev-java/spring-context and dev-java/struts-
+  xwork.

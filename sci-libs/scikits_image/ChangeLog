@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/scikits_image
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.15 2013/09/18 14:58:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_image/ChangeLog,v 1.16 2013/10/23 17:19:56 bicatali Exp $
+
+*scikits_image-0.9.1 (23 Oct 2013)
+
+  23 Oct 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +scikits_image-0.9.1.ebuild, metadata.xml:
+  Version bump
 
   18 Sep 2013; Justin Lecher <jlec@gentoo.org> scikits_image-0.8.2.ebuild,
   metadata.xml:

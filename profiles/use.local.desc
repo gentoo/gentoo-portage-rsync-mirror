@@ -5740,6 +5740,7 @@ sci-libs/plplot:dynamic - Build with dynamic drivers
 sci-libs/plplot:octave - Add bindings for sci-mathematics/octave
 sci-libs/plplot:qhull - Add bindings for media-libs/qhull
 sci-libs/scikits_image:freeimage - Enable support for image i/o via media-libs/freeimage
+sci-libs/scikits_image:pyamg - Enable support for algebraic solvers via dev-python/pyamg
 sci-libs/scipy:sparse - Adds support for sparse solving with sci-libs/umfpack
 sci-libs/scotch:int64 - Build the 64 bits integer library (needed for > 2^31 vertices)
 sci-libs/scotch:tools - Build and install extra exec tools
