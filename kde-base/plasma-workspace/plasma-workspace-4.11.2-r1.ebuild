@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.2-r1.ebuild,v 1.1 2013/10/09 23:04:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.2-r1.ebuild,v 1.2 2013/10/23 21:11:41 johu Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ OPENGL_REQUIRED="always"
 inherit python-single-r1 kde4-meta
 
 DESCRIPTION="Plasma: KDE desktop framework"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug gps json python qalculate semantic-desktop"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -24,11 +24,10 @@ COMMONDEPEND="
 	!kde-misc/ktouchpadenabler
 	$(add_kdebase_dep kactivities)
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
-	$(add_kdebase_dep kdepimlibs)
 	$(add_kdebase_dep kephal)
 	$(add_kdebase_dep ksysguard)
 	$(add_kdebase_dep libkworkspace)
-	$(add_kdebase_dep libplasmaclock)
+	$(add_kdebase_dep libplasmaclock 'semantic-desktop?')
 	$(add_kdebase_dep libplasmagenericshell)
 	$(add_kdebase_dep libtaskmanager)
 	x11-libs/libX11
@@ -48,6 +47,7 @@ COMMONDEPEND="
 	qalculate? ( sci-libs/libqalculate )
 	semantic-desktop? (
 		dev-libs/soprano
+		$(add_kdebase_dep kdepimlibs)
 		$(add_kdebase_dep nepomuk-core)
 	)
 "
@@ -108,6 +108,7 @@ src_configure() {
 		$(cmake-utils_use_with python PythonLibrary)
 		$(cmake-utils_use_with qalculate)
 		$(cmake-utils_use_with semantic-desktop Akonadi)
+		$(cmake-utils_use_with semantic-desktop KdepimLibs)
 		$(cmake-utils_use_with semantic-desktop NepomukCore)
 		$(cmake-utils_use_with semantic-desktop Soprano)
 		-DWITH_Xmms=OFF

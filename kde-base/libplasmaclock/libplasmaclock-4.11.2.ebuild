@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/libplasmaclock-4.11.2.ebuild,v 1.1 2013/10/09 23:04:01 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/libplasmaclock-4.11.2.ebuild,v 1.2 2013/10/23 21:06:12 johu Exp $
 
 EAPI=5
 
@@ -9,11 +9,12 @@ KMMODULE="libs/plasmaclock"
 inherit kde4-meta
 
 DESCRIPTION="Libraries for KDE Plasma's clocks"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="debug semantic-desktop"
 
 DEPEND="
 	$(add_kdebase_dep kephal)
+	semantic-desktop? ( $(add_kdebase_dep kdepimlibs) )
 "
 RDEPEND="${DEPEND}"
 
@@ -22,3 +23,11 @@ KMSAVELIBS="true"
 KMEXTRACTONLY="
 	libs/kephal/
 "
+
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_with semantic-desktop KdepimLibs)
+	)
+
+	kde4-meta_src_configure
+}

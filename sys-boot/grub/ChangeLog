@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.289 2013/10/22 20:44:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.290 2013/10/23 21:29:46 floppym Exp $
+
+  23 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-9999-r1.ebuild:
+  Remove build-time dependency on dejavu and unifont by downloading our own
+  copies. Add GRUB_AUTOGEN variable to control autogen separately from
+  autoreconf.
 
 *grub-9999-r1 (22 Oct 2013)
 
