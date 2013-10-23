@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-unixsocket/jnr-unixsocket-0.3.ebuild,v 1.1 2013/06/06 10:39:05 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-unixsocket/jnr-unixsocket-0.3.ebuild,v 1.2 2013/10/23 18:27:11 tomwij Exp $
 
 EAPI="5"
 
@@ -30,6 +30,7 @@ java_prepare() {
 	cp "${FILESDIR}"/${P}-build.xml build.xml || die
 }
 
+JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_GENTOO_CLASSPATH="jnr-constants,jnr-enxio,jnr-ffi-0.7"
 
 src_install() {

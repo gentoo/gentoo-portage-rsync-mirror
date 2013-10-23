@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-enxio/jnr-enxio-0.4.ebuild,v 1.1 2013/06/06 10:38:38 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-enxio/jnr-enxio-0.4.ebuild,v 1.2 2013/10/23 18:21:45 tomwij Exp $
 
 EAPI="5"
 
@@ -29,6 +29,7 @@ java_prepare() {
 	cp "${FILESDIR}"/${P}-build.xml build.xml || die
 }
 
+JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_GENTOO_CLASSPATH="jnr-constants,jnr-ffi-0.7"
 
 src_install() {

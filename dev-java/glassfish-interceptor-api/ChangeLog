@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/glassfish-interceptor-api
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-interceptor-api/ChangeLog,v 1.1 2013/10/23 18:02:25 tomwij Exp $
+
+*glassfish-interceptor-api-3.1 (23 Oct 2013)
+
+  23 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/glassfish-interceptor-api-3.1-build.xml.patch,
+  +glassfish-interceptor-api-3.1.ebuild, +metadata.xml:
+  New ebuild for dev-java/glassfish-interceptor-api, project GlassFish
+  Interceptor API; indirect dependency of dev-java/spring-context and dev-java
+  /struts-xwork.
