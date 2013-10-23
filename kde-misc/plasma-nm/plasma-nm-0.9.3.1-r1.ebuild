@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.1.ebuild,v 1.1 2013/10/15 22:37:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.1-r1.ebuild,v 1.1 2013/10/23 21:43:29 johu Exp $
 
 EAPI=5
 
@@ -32,6 +32,8 @@ DEPEND="
 RDEPEND="${DEPEND}
 	!kde-misc/networkmanagement
 "
+
+PATCHES=( "${FILESDIR}/${P}-vpn.patch" )
 
 src_configure() {
 	local mycmakeargs=(
