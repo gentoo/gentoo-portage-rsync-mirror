@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0_p20130504.ebuild,v 1.1 2013/10/05 16:46:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0_p20130504.ebuild,v 1.2 2013/10/23 02:11:45 hd_brummy Exp $
 
 EAPI="5"
 
@@ -57,6 +57,8 @@ src_prepare() {
 	rm "${S}"/po/{ca_ES,da_DK,el_GR,et_EE,hr_HR,hu_HU,nl_NL,nn_NO,pt_PT,ro_RO,ru_RU,sl_SI,sv_SE,tr_TR}.po
 
 	vdr-plugin-2_src_prepare
+
+	epatch "${FILESDIR}/${P}_vdr-2.1.2.diff"
 
 	if ! use pcre; then
 		sed -i "s:^HAVE_LIBPCRECPP:#HAVE_LIBPCRECPP:" Makefile || die
