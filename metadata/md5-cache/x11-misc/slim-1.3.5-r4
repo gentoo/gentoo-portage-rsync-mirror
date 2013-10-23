@@ -4,7 +4,7 @@ DESCRIPTION=Simple Login Manager
 EAPI=5
 HOMEPAGE=http://slim.berlios.de
 IUSE=branding pam consolekit
-KEYWORDS=~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~amd64 ~arm ~mips ~ppc ppc64 ~sparc ~x86 ~x86-fbsd
 LICENSE=GPL-2
 PDEPEND=branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )
 RDEPEND=x11-libs/libXmu x11-libs/libX11 x11-libs/libXpm x11-libs/libXft media-libs/libpng:0= virtual/jpeg x11-apps/sessreg consolekit? ( sys-auth/consolekit sys-apps/dbus ) pam? ( virtual/pam )
@@ -12,4 +12,4 @@ REQUIRED_USE=consolekit? ( pam )
 SLOT=0
 SRC_URI=mirror://berlios/slim/slim-1.3.5.tar.gz
 _eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=db3be1515714be5263d2cd45e3632662
+_md5_=c6658a1170a9abf3e84c5e470f72ffe0

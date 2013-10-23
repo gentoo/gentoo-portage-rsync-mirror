@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cocaine/cocaine-0.4.2.ebuild,v 1.1 2012/12/16 09:31:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cocaine/cocaine-0.5.3.ebuild,v 1.1 2013/10/23 17:31:35 graaff Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19 jruby"
+EAPI=5
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md"
@@ -21,6 +21,8 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
+
+ruby_add_rdepend "dev-ruby/climate_control:0"
 
 ruby_add_bdepend "
 	test? (

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.100 2013/10/22 11:40:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.101 2013/10/23 17:40:19 ago Exp $
+
+  23 Oct 2013; Agostino Sarubbo <ago@gentoo.org> cython-0.19.1.ebuild:
+  Stable for ppc64, wrt bug #488048
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> cython-0.19.1.ebuild:
   Marked ~x64-macos, bug #487670

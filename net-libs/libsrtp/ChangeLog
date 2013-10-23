@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsrtp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.33 2013/10/14 06:17:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.34 2013/10/23 17:39:40 ago Exp $
+
+  23 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
+  libsrtp-1.4.4_p20121108-r1.ebuild:
+  Stable for ppc64, wrt bug #472302
 
   14 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   libsrtp-1.4.4_p20121108-r1.ebuild:

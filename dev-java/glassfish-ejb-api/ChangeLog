@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/glassfish-ejb-api
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-ejb-api/ChangeLog,v 1.1 2013/10/23 17:15:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-ejb-api/ChangeLog,v 1.2 2013/10/23 17:50:52 tomwij Exp $
+
+  23 Oct 2013; Tom Wijsman <TomWij@gentoo.org> glassfish-ejb-api-3.2.ebuild:
+  Use the virtual instead for XML RPC.
 
 *glassfish-ejb-api-3.2 (23 Oct 2013)
 

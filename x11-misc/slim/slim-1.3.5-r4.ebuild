@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.5-r4.ebuild,v 1.1 2013/10/22 14:56:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.5-r4.ebuild,v 1.2 2013/10/23 17:39:27 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="branding pam consolekit"
 REQUIRED_USE="consolekit? ( pam )"
 
