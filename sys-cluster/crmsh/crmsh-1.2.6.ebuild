@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.6.ebuild,v 1.1 2013/10/17 12:21:11 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/crmsh/crmsh-1.2.6.ebuild,v 1.2 2013/10/24 12:32:45 xarthisius Exp $
 
 EAPI=5
 
@@ -25,7 +25,8 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}
 	>=sys-cluster/pacemaker-1.1.8"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-python/lxml[${PYTHON_USEDEP}]"
 
 S="${WORKDIR}/${PN}-${MY_TREE}"
 
