@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.226 2013/10/17 20:35:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.227 2013/10/24 13:48:12 jer Exp $
+
+  24 Oct 2013; Jeroen Roovers <jer@gentoo.org> pygobject-3.4.2-r1.ebuild:
+  Stable for HPPA (bug #476364).
 
   17 Oct 2013; Markus Meier <maekke@gentoo.org> pygobject-3.4.2-r1.ebuild:
   arm stable, bug #476364
