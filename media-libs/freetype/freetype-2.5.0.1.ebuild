@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.0.1.ebuild,v 1.2 2013/10/06 05:07:31 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.0.1.ebuild,v 1.3 2013/10/24 22:40:21 gienah Exp $
 
 EAPI=5
 
@@ -81,6 +81,14 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.4.11-sizeof-types.patch # 459966
 
 	epatch "${FILESDIR}"/${PN}-2.4.12-clean-include.patch # 482172
+
+	if use png; then
+		local pnglibs=$(pkg-config libpng --libs) # 488222 487646
+		sed -e "s@Libs.private: %LIBZ% %LIBBZ2% %FT2_EXTRA_LIBS%@Libs.private: %LIBZ% %LIBBZ2% %FT2_EXTRA_LIBS% ${pnglibs}@" \
+			-e 's@Requires:@Requires.private: zlib libpng\nRequires:@' \
+			-i "${S}/builds/unix/freetype2.in" \
+			|| die "Could not sed pkg-config libpng --libs in builds/unix/freetype2.in"
+	fi
 
 	if use utils; then
 		cd "${WORKDIR}/ft2demos-${MY_PV}" || die
