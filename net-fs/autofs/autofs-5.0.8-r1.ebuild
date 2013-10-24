@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.8.ebuild,v 1.2 2013/10/23 04:02:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.8-r1.ebuild,v 1.1 2013/10/24 14:02:56 jlec Exp $
 
 EAPI=5
 
@@ -53,6 +53,7 @@ src_prepare() {
 		EPATCH_SUFFIX="patch" \
 			epatch "${WORKDIR}"/patches
 	fi
+	epatch "${FILESDIR}"/${P}-ldap-wo-sasl.patch
 	sed -i -e "s:/usr/bin/kill:/bin/kill:" samples/autofs.service.in || die #bug #479492
 	autotools-utils_src_prepare
 }

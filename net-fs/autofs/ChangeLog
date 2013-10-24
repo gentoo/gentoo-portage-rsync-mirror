@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.169 2013/10/23 04:02:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.170 2013/10/24 14:02:56 jlec Exp $
+
+*autofs-5.0.8-r1 (24 Oct 2013)
+
+  24 Oct 2013; Justin Lecher <jlec@gentoo.org> -autofs-5.0.8.ebuild,
+  +autofs-5.0.8-r1.ebuild, +files/autofs-5.0.8-ldap-wo-sasl.patch:
+  Backport fix for ldap without sasl, #489128
 
   23 Oct 2013; Patrick Lauer <patrick@gentoo.org> autofs-5.0.8.ebuild:
   Whitespace
