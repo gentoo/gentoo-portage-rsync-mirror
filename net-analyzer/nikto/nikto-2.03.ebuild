@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-2.03.ebuild,v 1.2 2010/05/26 16:38:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/nikto-2.03.ebuild,v 1.3 2013/10/24 13:20:09 zlogene Exp $
 
 EAPI="3"
 
 DESCRIPTION="Web Server vulnerability scanner."
-HOMEPAGE="http://www.cirt.net/code/nikto.shtml"
+HOMEPAGE="http://www.cirt.net/Nikto2"
 SRC_URI="http://www.cirt.net/source/nikto/${P}.tar.bz2"
 
 LICENSE="GPL-2"

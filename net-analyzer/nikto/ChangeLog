@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nikto
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.27 2012/09/20 12:48:52 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.28 2013/10/24 13:20:09 zlogene Exp $
+
+  24 Oct 2013; Mikle Kolyada <zlogene@gentoo.org> nikto-1.36.ebuild,
+  nikto-2.03.ebuild, nikto-2.1.4.ebuild:
+  updated HOMEPAGE wrt bug #489238
 
   20 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -113,4 +117,3 @@
   nikto-1.31.ebuild:
   Bug 12116; original ebuild submitted by Marlon Jabbur <mjabbur@terra.com.br>;
   edited to meet requirements of new/current version of nikto.
-
