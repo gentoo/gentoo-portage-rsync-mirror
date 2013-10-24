@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.27 2013/09/05 18:47:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.28 2013/10/24 18:22:26 prometheanfire Exp $
+
+*subunit-0.0.15 (24 Oct 2013)
+
+  24 Oct 2013; Matthew Thode <prometheanfire@gentoo.org> +subunit-0.0.15.ebuild:
+  update of subunit to 0.0.15 and added support for normal python-r1
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> subunit-0.0.10-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
