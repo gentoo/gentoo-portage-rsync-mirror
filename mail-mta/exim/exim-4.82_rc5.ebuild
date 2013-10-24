@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc4.ebuild,v 1.1 2013/10/22 14:09:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc5.ebuild,v 1.1 2013/10/24 07:03:04 grobian Exp $
 
 EAPI="4"
 
