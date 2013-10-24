@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.8.ebuild,v 1.2 2013/07/16 09:01:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.8-r1.ebuild,v 1.1 2013/10/24 19:32:40 tomwij Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source test"
@@ -36,7 +36,7 @@ CDEPEND=">=dev-java/bytelist-1.0.8:0
 	dev-java/ant-core:0
 	dev-java/bsf:2.3
 	dev-java/osgi-core-api:0
-	>=dev-java/snakeyaml-1.9:0
+	dev-java/snakeyaml:1.9
 	dev-java/jzlib:1.1"
 
 RDEPEND="${CDEPEND}
@@ -75,7 +75,7 @@ JAVA_ANT_IGNORE_SYSTEM_CLASSES="true"
 EANT_GENTOO_CLASSPATH="ant-core asm-3 bsf-2.3 bytelist jnr-constants jay \
 jcodings jffi-1.0 jline \
 joda-time joni jnr-ffi-0.5 jnr-posix-1.1 jnr-netdb jvyamlb nailgun jgrapht osgi-core-api \
-snakeyaml jzlib-1.1"
+snakeyaml-1.9 jzlib-1.1"
 EANT_NEEDS_TOOLS="true"
 
 pkg_setup() {
@@ -132,8 +132,7 @@ src_compile() {
 
 	export RUBYOPT=""
 	einfo $RUBYOPT
-	#eant jar $(use_doc apidocs) -Djdk1.5+=true ${flags}
-	eant -Djdk1.5+=true ${flags}
+	eant jar $(use_doc apidocs) -Djdk1.5+=true ${flags}
 }
 
 src_test() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/testng/testng-6.8.ebuild,v 1.1 2013/10/12 16:21:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/testng/testng-6.8-r1.ebuild,v 1.1 2013/10/24 19:32:48 tomwij Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ CDEPEND="dev-java/ant-core:0
 	dev-java/guice:2
 	dev-java/jcommander:0
 	dev-java/junit:4
-	dev-java/snakeyaml:0"
+	dev-java/snakeyaml:1.9"
 
 DEPEND=">=virtual/jdk-1.5
 	${CDEPEND}"
@@ -33,7 +33,7 @@ RDEPEND=">=virtual/jre-1.5
 JAVA_PKG_BSFIX_NAME="build.xml build-tests.xml"
 JAVA_ANT_REWRITE_CLASSPATH="true"
 JAVA_ANT_CLASSPATH_TAGS+=" testng javadocs-current"
-EANT_GENTOO_CLASSPATH="ant-core,bsh,guice-2,jcommander,junit-4,snakeyaml"
+EANT_GENTOO_CLASSPATH="ant-core,bsh,guice-2,jcommander,junit-4,snakeyaml-1.9"
 EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH}"
 
 EANT_BUILD_TARGET="build"

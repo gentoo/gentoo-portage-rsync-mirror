@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.7.2.ebuild,v 1.2 2012/08/20 02:32:48 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.6.5.1-r1.ebuild,v 1.1 2013/10/24 19:32:40 tomwij Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source test"
@@ -13,7 +13,7 @@ HOMEPAGE="http://jruby.codehaus.org/"
 SRC_URI="http://jruby.org.s3.amazonaws.com/downloads/${PV}/${PN}-src-${PV}.tar.gz"
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 ~x86"
 IUSE="bsf ssl"
 
 # jffi still needed? Or do we call that jnr-ffi?
@@ -36,8 +36,7 @@ CDEPEND=">=dev-java/bytelist-1.0.8:0
 	dev-java/ant-core:0
 	dev-java/bsf:2.3
 	dev-java/osgi-core-api:0
-	>=dev-java/snakeyaml-1.9:0
-	dev-java/jzlib:1.1"
+	dev-java/snakeyaml:1.9"
 
 RDEPEND="${CDEPEND}
 	>=virtual/jre-1.6"
@@ -75,7 +74,7 @@ JAVA_ANT_IGNORE_SYSTEM_CLASSES="true"
 EANT_GENTOO_CLASSPATH="ant-core asm-3 bsf-2.3 bytelist jnr-constants jay \
 jcodings jffi-1.0 jline \
 joda-time joni jnr-ffi-0.5 jnr-posix-1.1 jnr-netdb jvyamlb nailgun jgrapht osgi-core-api \
-snakeyaml jzlib-1.1"
+snakeyaml-1.9"
 EANT_NEEDS_TOOLS="true"
 
 pkg_setup() {
@@ -121,19 +120,18 @@ java_prepare() {
 
 	# Delete the bundled JARs but keep invokedynamic.jar.
 	# No source is available and it's only a dummy anyway.
-	find build_lib -name "*.jar" ! -name "jsr292-mock.jar" ! -name "yecht.jar" ! -name 'coro-mock-1.0-SNAPSHOT.jar' -delete || die
+	find build_lib -name "*.jar" ! -name "jsr292-mock.jar" ! -name "yecht.jar" -delete || die
 }
 
 src_compile() {
 	# Avoid generating the ri cache since that currently fails.
 	local flags="-Dgenerate-ri-cache.hasrun=true"
 	#local flags=""
-	use bsf && flags="-Dbsf.present=true"
+	use bsf && flags+=" -Dbsf.present=true"
 
 	export RUBYOPT=""
 	einfo $RUBYOPT
-	#eant jar $(use_doc apidocs) -Djdk1.5+=true ${flags}
-	eant -Djdk1.5+=true ${flags}
+	eant jar $(use_doc apidocs) -Djdk1.5+=true ${flags}
 }
 
 src_test() {
@@ -152,7 +150,7 @@ src_test() {
 	#bsf optionally depends on jruby, which means that the previously
 	#installed jruby will be added to classpath, nasty things will happen.
 	local cpath=`java-pkg_getjars ${EANT_GENTOO_CLASSPATH// /,},junit-4`
-	cpath="$(echo ${cpath} | sed -e "s_${EROOT}/usr/share/jruby/lib/jruby.jar:__g")"
+	cpath="$(echo ${cpath} | sed -e "s_${ROOT}/usr/share/jruby/lib/jruby.jar:__g")"
 	cpath="${cpath}:$(java-pkg_getjars --build-only commons-logging,xalan)"
 	EANT_GENTOO_CLASSPATH=""
 
@@ -193,7 +191,7 @@ src_install() {
 
 	# Remove all the references to RubyGems as we're just going to
 	# install it through dev-ruby/rubygems.
-	find "${ED}${RUBY_HOME}" -type f \
+	find "${D}${RUBY_HOME}" -type f \
 		'(' '(' -path '*rubygems*' -not -name 'jruby.rb' ')' -or -name 'ubygems.rb' -or -name 'datadir.rb' ')' \
 		-delete || die
 }

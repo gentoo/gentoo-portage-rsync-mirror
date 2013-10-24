@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.90 2013/07/16 09:01:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.92 2013/10/24 19:34:54 tomwij Exp $
+
+*jruby-1.6.7.2-r1 (24 Oct 2013)
+*jruby-1.6.8-r1 (24 Oct 2013)
+*jruby-1.6.5.1-r1 (24 Oct 2013)
+
+  24 Oct 2013; Tom Wijsman <TomWij@gentoo.org> +jruby-1.6.5.1-r1.ebuild,
+  +jruby-1.6.7.2-r1.ebuild, +jruby-1.6.8-r1.ebuild, -jruby-1.6.7.2.ebuild,
+  -jruby-1.6.8.ebuild:
+  Revision bumps; fixed up snakeyaml dependency to use SLOT 1.9, fixed up
+  documentation because install phase was failing due to missing index.html.
+  Fixes bug #488496, reported by Michel Boaventura.
 
   16 Jul 2013; Hans de Graaff <graaff@gentoo.org> jruby-1.6.8.ebuild:
   Add back accidentally dropped jvyamlb dependency, fixing bug 474488.
