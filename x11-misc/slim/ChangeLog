@@ -1,6 +1,17 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.122 2013/10/23 18:05:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.123 2013/10/24 18:55:57 axs Exp $
+
+*slim-1.3.6-r3 (24 Oct 2013)
+
+  24 Oct 2013; Ian Stakenvicius <axs@gentoo.org> +files/slim-1.3.6-config.diff,
+  +files/slim-1.3.6-session-chooser.patch,
+  +files/slim-1.3.6-systemd-session.patch, +slim-1.3.6-r3.ebuild,
+  -slim-1.3.6-r2.ebuild:
+  fixed regression for session-chooser (bug 489078), changed default session
+  list to be from xsession .desktop files, changed operation of -nodaemon and
+  slim.service to fix systemd session issue after multiple logins
+  (bugs.freedesktop.org/show_bug.cgi?id=62866)
 
 *slim-1.3.6-r2 (23 Oct 2013)
 
