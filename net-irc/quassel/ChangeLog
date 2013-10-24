@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.156 2013/10/14 16:57:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.158 2013/10/23 23:58:13 creffett Exp $
+
+  23 Oct 2013; Chris Reffett <creffett@gentoo.org> quassel-0.9.1.ebuild,
+  quassel-9999.ebuild:
+  Fix typo in DESCRIPTION as pointed out by yngwin
+
+  23 Oct 2013; Chris Reffett <creffett@gentoo.org> -quassel-0.8.0.ebuild,
+  -quassel-0.9.0.ebuild:
+  Drop affected wrt sec bug 487632
 
   14 Oct 2013; Mikle Kolyada <zlogene@gentoo.org> quassel-0.9.1.ebuild:
   x86 stable wrt bug #487632
