@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8322 2013/10/23 13:06:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8323 2013/10/24 06:25:02 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Oct 2013; Tiziano Müller <dev-zero@gentoo.org>
+  desc/nginx_modules_http.desc, package.mask:
+  Add USE_EXPAND descriptions for nginx' auth_request and push_stream modules.
+  Mask nginx mainline version bump.
 
   23 Oct 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
   Mask qt-creator 3.0 beta.

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15178 2013/10/23 13:06:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15179 2013/10/24 06:25:02 dev-zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tiziano Müller <dev-zero@gentoo.org> (24 Oct 2013)
+# Mask mainline version branch
+=www-servers/nginx-1.5*
 
 # Davide Pesavento <pesa@gentoo.org> (23 Oct 2013)
 # Some features require Qt 5.2, which is not in tree yet.
