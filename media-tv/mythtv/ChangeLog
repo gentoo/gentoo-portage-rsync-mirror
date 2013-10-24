@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.407 2013/10/23 14:57:50 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.408 2013/10/24 03:21:30 patrick Exp $
+
+  24 Oct 2013; Patrick Lauer <patrick@gentoo.org> mythtv-0.27_p20130924.ebuild:
+  Whitespace
 
   23 Oct 2013; Richard Freeman <rich0@gentoo.org> mythtv-0.27_p20130924.ebuild,
   +files/mythbackend.service:
