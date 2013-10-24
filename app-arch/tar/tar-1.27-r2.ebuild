@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27-r1.ebuild,v 1.1 2013/10/22 08:12:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27-r2.ebuild,v 1.1 2013/10/24 06:45:16 polynomial-c Exp $
 
 EAPI="3"
 
@@ -17,12 +17,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="acl minimal nls selinux static userland_GNU xattr"
 
 RDEPEND="acl? ( virtual/acl )
-	selinux? ( sys-libs/libselinux )
-	xattr? ( sys-apps/attr )"
+	selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
-	nls? ( >=sys-devel/gettext-0.10.35 )"
+	nls? ( >=sys-devel/gettext-0.10.35 )
+	xattr? ( sys-apps/attr )"
 
 src_prepare() {
+	EPATCH_OPTS="-Z" \
+	epatch "${FILESDIR}"/${P}-acl_configure_fix.patch
+
 	if ! use userland_GNU ; then
 		sed -i \
 			-e 's:/backup\.sh:/gbackup.sh:' \

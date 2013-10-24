@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.192 2013/10/22 08:12:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.193 2013/10/24 06:45:16 polynomial-c Exp $
+
+*tar-1.27-r2 (24 Oct 2013)
+
+  24 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> -tar-1.27-r1.ebuild,
+  +tar-1.27-r2.ebuild, +files/tar-1.27-acl_configure_fix.patch:
+  Fixed "acl" USE flag reported by Arfrever Frehtes Taifersar Arahesis in bug
+  #489106. Moved dependency on sys-apps/attr from RDEPEND to DEPEND (bug
+  #489170).
 
 *tar-1.27-r1 (22 Oct 2013)
 

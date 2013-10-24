@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.368 2013/10/17 08:06:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.369 2013/10/24 06:41:17 dev-zero Exp $
+
+*nginx-1.5.6 (24 Oct 2013)
+
+  24 Oct 2013; Tiziano Müller <dev-zero@gentoo.org> +nginx-1.5.6.ebuild,
+  -nginx-1.4.1-r2.ebuild, -nginx-1.4.1-r3.ebuild, -nginx-1.4.1-r4.ebuild,
+  nginx-1.4.3.ebuild:
+  Version bump for nginx mainline/development version branch (bug #472524,
+  thanks to jbergstroem for the havily lifting). Drop syslog patch for now since
+  it fails to apply to nginx-1.5.x. Drop the http_push module completely since
+  upstream is dead, use http_push_stream instead. Drop obsolete verisons.
 
 *nginx-1.4.3 (17 Oct 2013)
 

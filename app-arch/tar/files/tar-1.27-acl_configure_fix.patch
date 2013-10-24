@@ -1,0 +1,25 @@
+--- tar-1.27/configure.ac	2013-10-05 21:50:52.000000000 +0200
++++ tar-1.27/configure.ac	2013-10-05 21:50:52.000000000 +0200
+@@ -74,7 +74,8 @@
+ AC_ARG_WITH([posix-acls],
+     AS_HELP_STRING([--without-posix-acls],
+                    [do not use POSIX.1e access control lists]),
+-    [with_posix_acls=no])
++    [],
++    [with_posix_acls=yes])
+ if test "x$with_posix_acls" != "xno"; then
+   AC_CHECK_HEADERS(sys/acl.h,, [with_posix_acls=no])
+   for tar_acl_func in acl_get_file acl_get_fd acl_set_file acl_set_fd \
+--- tar-1.27/configure	2013-10-05 21:52:03.000000000 +0200
++++ tar-1.27/configure	2013-10-05 21:52:03.000000000 +0200
+@@ -7828,7 +7828,9 @@
+ 
+ # Check whether --with-posix-acls was given.
+ if test "${with_posix_acls+set}" = set; then :
+-  withval=$with_posix_acls; with_posix_acls=no
++  withval=$with_posix_acls;
++else
++  with_posix_acls=yes
+ fi
+ 
+ if test "x$with_posix_acls" != "xno"; then

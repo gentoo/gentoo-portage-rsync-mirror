@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.3.ebuild,v 1.1 2013/10/17 08:06:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.4.3.ebuild,v 1.2 2013/10/24 06:41:17 dev-zero Exp $
 
 EAPI="5"
 
@@ -639,7 +639,7 @@ pkg_postinst() {
 	# If su is not available we display the warning nevertheless since we can't check properly
 	su -s /bin/sh -c 'cd /var/log/nginx/ && ls' nginx >&/dev/null
 	if [ $? -ne 0 ] ; then
-		ewarn "Please make sure that the nginx user or group has"
+		ewarn "Please make sure that the nginx user or group has at least"
 		ewarn "'rx' permissions on /var/log/nginx (default on a fresh install)"
 		ewarn "Otherwise you end up with empty log files after a logrotate."
 	fi
