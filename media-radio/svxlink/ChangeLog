@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.29 2013/08/26 14:20:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.30 2013/10/24 14:34:18 chainsaw Exp $
+
+  24 Oct 2013; Tony Vroon <chainsaw@gentoo.org> svxlink-13.07.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488454.
 
 *svxlink-13.07 (26 Aug 2013)
 

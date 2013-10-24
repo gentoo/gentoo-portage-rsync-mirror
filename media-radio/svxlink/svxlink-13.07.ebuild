@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-13.07.ebuild,v 1.1 2013/08/26 14:20:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-13.07.ebuild,v 1.2 2013/10/24 14:34:18 chainsaw Exp $
 
 EAPI=4
 inherit eutils multilib qt4-r2 user
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/svxlink/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/tcl

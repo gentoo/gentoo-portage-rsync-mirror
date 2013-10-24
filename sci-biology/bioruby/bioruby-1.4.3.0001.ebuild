@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/bioruby-1.4.3.0001.ebuild,v 1.1 2013/09/14 12:54:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/bioruby-1.4.3.0001.ebuild,v 1.2 2013/10/24 14:31:54 chainsaw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.${PN}.org/archive/${P}.tar.gz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 each_ruby_configure() {
 	${RUBY} setup.rb config || die

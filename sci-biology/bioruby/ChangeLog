@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bioruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/ChangeLog,v 1.16 2013/09/14 12:55:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/ChangeLog,v 1.17 2013/10/24 14:31:54 chainsaw Exp $
+
+  24 Oct 2013; Tony Vroon <chainsaw@gentoo.org> bioruby-1.4.3.0001.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488414.
 
   14 Sep 2013; Manuel Rüger <mrueg@gentoo.org> bioruby-9999.ebuild:
   NMU: Fix whitespace.
