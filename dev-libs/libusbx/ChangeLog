@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusbx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/ChangeLog,v 1.21 2013/09/10 06:20:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/ChangeLog,v 1.22 2013/10/24 15:23:23 jer Exp $
+
+  24 Oct 2013; Jeroen Roovers <jer@gentoo.org> libusbx-1.0.17.ebuild:
+  Stable for HPPA (bug #488708).
 
   10 Sep 2013; Samuli Suominen <ssuominen@gentoo.org> -files/libusbx-1.0.16-hotp
   lug-Remove-use-of-pthread_cancel-from-linux_udev.patch, -files/libusbx-1.0.16-
