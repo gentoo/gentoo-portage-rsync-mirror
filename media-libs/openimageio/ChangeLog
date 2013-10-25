@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openimageio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/ChangeLog,v 1.24 2013/06/13 12:32:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openimageio/ChangeLog,v 1.25 2013/10/25 12:37:01 ssuominen Exp $
+
+*openimageio-1.3.5 (25 Oct 2013)
+
+  25 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> +openimageio-1.3.5.ebuild:
+  Version bump (known to solve multiple build issues)
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> openimageio-1.1.1.ebuild,
   openimageio-1.1.7.ebuild:
