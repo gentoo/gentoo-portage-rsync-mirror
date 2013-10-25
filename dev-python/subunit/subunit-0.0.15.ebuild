@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.15.ebuild,v 1.1 2013/10/24 18:22:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.15.ebuild,v 1.2 2013/10/25 07:01:46 prometheanfire Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit autotools-utils python-r1
 
 DESCRIPTION="A streaming protocol for test results"
 HOMEPAGE="https://launchpad.net/subunit http://pypi.python.org/pypi/python-subunit"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/p/python-${PN}/python-${P}.tar.gz"
 
 LICENSE="Apache-2.0 BSD"
 SLOT="0"
