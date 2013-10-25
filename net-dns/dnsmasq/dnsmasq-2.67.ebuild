@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.63-r1.ebuild,v 1.3 2013/08/16 15:47:07 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.67.ebuild,v 1.1 2013/10/25 18:23:51 chutzpah Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs flag-o-matic user systemd
 
@@ -13,28 +13,28 @@ SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${P}.tar.xz"
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="conntrack dbus +dhcp dhcp-tools idn ipv6 lua nls script selinux tftp"
+IUSE="auth-dns conntrack dbus +dhcp dhcp-tools idn ipv6 lua nls script selinux tftp"
 DM_LINGUAS="de es fi fr id it no pl pt_BR ro"
 for dm_lingua in ${DM_LINGUAS}; do
 	IUSE+=" linguas_${dm_lingua}"
 done
 
 RDEPEND="dbus? ( sys-apps/dbus )
-	idn? ( net-dns/libidn )
-	lua? ( dev-lang/lua )
-	conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) )
-	nls? (
-		sys-devel/gettext
-		net-dns/libidn
-	)
-	selinux? ( sec-policy/selinux-dnsmasq )"
+		idn? ( net-dns/libidn )
+		lua? ( dev-lang/lua )
+		conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) )
+		nls? (
+			sys-devel/gettext
+			net-dns/libidn
+		)
+		selinux? ( sec-policy/selinux-dnsmasq )"
 
 DEPEND="${RDEPEND}
-	virtual/pkgconfig
-	app-arch/xz-utils"
+		virtual/pkgconfig
+		app-arch/xz-utils"
 
-REQUIRED_USE="lua? ( script )
-			  dhcp-tools? ( dhcp )
+REQUIRED_USE="dhcp-tools? ( dhcp )
+			  lua? ( script )
 			  s390? ( !conntrack )"
 
 use_have() {
@@ -60,13 +60,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# dnsmasq on FreeBSD wants the config file in a silly location, this fixes
-	epatch "${FILESDIR}/${PN}-2.47-fbsd-config.patch"
 	sed -i -r 's:lua5.[0-9]+:lua:' Makefile
 }
 
 src_configure() {
-	COPTS="$(use_have conntrack)"
+	COPTS="$(use_have -n auth-dns auth)"
+	COPTS+="$(use_have conntrack)"
 	COPTS+="$(use_have dbus)"
 	COPTS+="$(use_have -n dhcp)"
 	COPTS+="$(use_have idn)"
@@ -84,6 +83,7 @@ src_compile() {
 		CFLAGS="${CFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
 		COPTS="${COPTS}" \
+		CONFFILE="/etc/${PN}.conf" \
 		all$(use nls && echo "-i18n")
 
 	use dhcp-tools && emake -C contrib/wrt \
