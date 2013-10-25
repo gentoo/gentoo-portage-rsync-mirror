@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.90 2013/10/22 20:24:22 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.91 2013/10/25 03:01:34 mattm Exp $
+
+  25 Oct 2013; Matthew Marlowe <mattm@gentoo.org> apcupsd-3.14.10-r5.ebuild:
+  Keyword ~arm to resolve bug 489090.
 
   22 Oct 2013; Matthew Marlowe <mattm@gentoo.org> -apcupsd-3.14.10-r1.ebuild,
   -apcupsd-3.14.10-r2.ebuild, -apcupsd-3.14.10-r4.ebuild,
