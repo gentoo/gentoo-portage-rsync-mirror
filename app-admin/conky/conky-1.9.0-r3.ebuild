@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r3.ebuild,v 1.1 2013/10/24 17:00:02 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.9.0-r3.ebuild,v 1.2 2013/10/25 14:38:33 billie Exp $
 
 EAPI=5
 
@@ -63,7 +63,8 @@ src_prepare() {
 		"${FILESDIR}/${P}-ncurses.patch" \
 		"${FILESDIR}/${P}-lines-fix.patch" \
 		"${FILESDIR}/${P}-update-when-message-count-decreases.patch" \
-		"${FILESDIR}/${P}-apcupsd.patch"
+		"${FILESDIR}/${P}-apcupsd.patch" \
+		"${FILESDIR}/${P}-default-graph-size.patch"
 
 	# Allow user patches #478482
 	# Only run autotools if user patched something

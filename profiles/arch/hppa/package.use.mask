@@ -1,8 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.130 2013/10/14 18:34:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.131 2013/10/25 14:52:39 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (25 Oct 2013)
+# Building against libatomic_ops fails (bug #453704)
+sys-libs/libunwind libatomic
 
 # Jeroen Roovers <jer@gentoo.org> (23 Jul 2013)
 # graphite is not implemented on HPPA

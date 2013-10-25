@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.603 2013/10/21 21:41:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.604 2013/10/25 14:58:25 pesa Exp $
+
+  25 Oct 2013; Davide Pesavento <pesa@gentoo.org> package.use.force:
+  Remove obsolete entry.
 
   21 Oct 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.use.mask:
