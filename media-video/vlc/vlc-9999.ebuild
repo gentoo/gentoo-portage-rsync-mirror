@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.193 2013/10/21 19:15:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.194 2013/10/24 23:34:33 tomwij Exp $
 
 EAPI="5"
 
@@ -52,7 +52,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
-	vlm vnc	vorbis waveout vpx wma-fixed +X x264 +xcb xml xv zvbi"
+	vlm vnc	vorbis vpx wma-fixed +X x264 +xcb xml xv zvbi"
 
 RDEPEND="
 		dev-libs/libgpg-error:0
@@ -225,6 +225,9 @@ src_prepare() {
 	# We are not in a real git checkout due to the absence of a .git directory.
 	touch src/revision.txt || die
 
+	# Fix mistakes.
+	epatch "${FILESDIR}"/${PN}-2.1.0-fix-libtremor-libs.patch
+
 	# Patch up incompatibilities and reconfigure autotools.
 	epatch "${FILESDIR}"/${PN}-2.1.0-newer-rdp.patch
 	epatch "${FILESDIR}"/${PN}-2.1.0-libva-1.2.1-compat.patch
@@ -248,9 +251,14 @@ src_configure() {
 				--with-default-monospace-font-family=Monospace"
 	fi
 
+	local qt_flag=""
+	if use qt4 || use qt5 ; then
+		qt_flag="--enable-qt"
+	fi
+
 	econf \
 		${myconf} \
-		--enable-vlc
+		--enable-vlc \
 		--docdir=/usr/share/doc/${PF} \
 		--disable-dependency-tracking \
 		--disable-optimizations \
@@ -284,7 +292,7 @@ src_configure() {
 		$(use_enable dxva2) \
 		$(use_enable egl) \
 		$(use_enable encode sout) \
-		$(use_enable fdk fdkaac)
+		$(use_enable fdk fdkaac) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
 		$(use_enable fontconfig) \
@@ -328,14 +336,13 @@ src_configure() {
 		$(use_enable omxil) \
 		$(use_enable opencv) \
 		$(use_enable opengl glx) $(use_enable opengl glspectrum) \
-		$(use_enable opus)
+		$(use_enable opus) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable png) \
 		$(use_enable postproc) \
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
-		$(use_enable qt4 qt) \
-		$(use_enable qt5 qt) \
+		${qt_flag} \
 		$(use_enable rdp freerdp) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \
@@ -366,7 +373,6 @@ src_configure() {
 		$(use_enable vnc) \
 		$(use_enable vorbis) \
 		$(use_enable vpx) \
-		$(use_enable waveout) \
 		$(use_enable wma-fixed) \
 		$(use_with X x) \
 		$(use_enable x264) \

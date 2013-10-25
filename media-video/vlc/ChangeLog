@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.855 2013/10/21 19:15:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.857 2013/10/24 23:40:49 tomwij Exp $
+
+  24 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/vlc-2.1.0-fix-libtremor-libs.patch, vlc-9999.ebuild:
+  More preparations for 2.1.0 version bump: Added missing line continuation
+  characters which absence caused the econf command to split. Made sure qt5
+  being disabled doesn't override qt4's state. Removed the waveout flag. Fixed a
+  bug in the libraries libtremor uses by patching the Makefile. Progress is
+  tracked in bug #479566.
 
   21 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
   -files/vlc-2.1.0-freetype-proper-default-font.patch, metadata.xml,
