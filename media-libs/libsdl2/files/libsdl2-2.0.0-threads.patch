@@ -10,9 +10,8 @@ stepik-777
 
 Thread local storage is used to store current window and current opengl context. OpenGL worked before this changeset: 7596 (45e5c263c096)
 
-diff -r 384d5ba7ee44 -r e928464b98ec src/thread/SDL_systhread.h
---- a/src/thread/SDL_systhread.h	Thu Sep 05 07:02:27 2013 -0700
-+++ b/src/thread/SDL_systhread.h	Thu Sep 05 07:15:26 2013 -0700
+--- a/src/thread/SDL_systhread.h
++++ b/src/thread/SDL_systhread.h
 @@ -26,6 +26,7 @@
  #define _SDL_systhread_h
  
@@ -21,9 +20,8 @@ diff -r 384d5ba7ee44 -r e928464b98ec src/thread/SDL_systhread.h
  
  /* This function creates a thread, passing args to SDL_RunThread(),
     saves a system-dependent thread id in thread->id, and returns 0
-diff -r 384d5ba7ee44 -r e928464b98ec src/thread/SDL_thread.c
---- a/src/thread/SDL_thread.c	Thu Sep 05 07:02:27 2013 -0700
-+++ b/src/thread/SDL_thread.c	Thu Sep 05 07:15:26 2013 -0700
+--- a/src/thread/SDL_thread.c
++++ b/src/thread/SDL_thread.c
 @@ -125,6 +125,7 @@
      SDL_TLSEntry *entry;
      SDL_TLSData *storage = NULL;
@@ -50,9 +48,8 @@ diff -r 384d5ba7ee44 -r e928464b98ec src/thread/SDL_thread.c
  
      return storage;
  }
-diff -r 384d5ba7ee44 -r e928464b98ec src/thread/SDL_thread_c.h
---- a/src/thread/SDL_thread_c.h	Thu Sep 05 07:02:27 2013 -0700
-+++ b/src/thread/SDL_thread_c.h	Thu Sep 05 07:15:26 2013 -0700
+--- a/src/thread/SDL_thread_c.h
++++ b/src/thread/SDL_thread_c.h
 @@ -23,6 +23,8 @@
  #ifndef _SDL_thread_c_h
  #define _SDL_thread_c_h
