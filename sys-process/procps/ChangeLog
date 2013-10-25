@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.97 2013/08/03 07:33:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.98 2013/10/25 13:02:08 polynomial-c Exp $
+
+*procps-3.3.8-r1 (25 Oct 2013)
+
+  25 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> +procps-3.3.8-r1.ebuild:
+  Fixed write error when using top with pipes. Thanks to Florian Knodt for
+  reporting this in bug #485952.
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> procps-3.3.6.ebuild:
   Stable for sparc, wrt bug #468266
