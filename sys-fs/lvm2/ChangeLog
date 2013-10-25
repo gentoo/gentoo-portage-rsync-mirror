@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.324 2013/10/05 11:49:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.325 2013/10/25 13:55:30 jer Exp $
+
+  25 Oct 2013; Jeroen Roovers <jer@gentoo.org> lvm2-2.02.103.ebuild:
+  Stable for HPPA (bug #486278).
 
   05 Oct 2013; Samuli Suominen <ssuominen@gentoo.org>
   -files/lvm2-2.02.100-ignored_loop.patch, -files/lvm2-2.02.100-lvm_path.patch,

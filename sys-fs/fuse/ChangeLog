@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.188 2013/10/19 03:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.189 2013/10/25 13:49:38 jer Exp $
+
+  25 Oct 2013; Jeroen Roovers <jer@gentoo.org> fuse-2.9.3.ebuild:
+  Stable for HPPA (bug #489102).
 
   19 Oct 2013; Mike Frysinger <vapier@gentoo.org> fuse-2.9.3.ebuild:
   Add m68k/mips/s390/sh love.
