@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.105 2013/10/17 12:58:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.106 2013/10/25 11:04:39 ago Exp $
+
+  25 Oct 2013; Agostino Sarubbo <ago@gentoo.org> dmenu-4.5-r3.ebuild:
+  x86 stable wrt bug #487892
 
   17 Oct 2013; Jeroen Roovers <jer@gentoo.org> dmenu-4.5-r3.ebuild:
   Stable for HPPA (bug #487892).
