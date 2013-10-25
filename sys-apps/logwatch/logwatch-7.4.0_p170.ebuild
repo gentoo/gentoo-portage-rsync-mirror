@@ -1,10 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.3.7_pre20100217.ebuild,v 1.3 2010/04/24 20:35:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.4.0_p170.ebuild,v 1.1 2013/10/25 09:32:36 polynomial-c Exp $
+
+EAPI=5
+
+inherit eutils
 
 DESCRIPTION="Analyzes and Reports on system logs"
 HOMEPAGE="http://www.logwatch.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+#SRC_URI="mirror://sourceforge/${PN}/${P}/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~polynomial-c/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -21,6 +26,10 @@ RDEPEND="virtual/cron
 	dev-perl/Tie-IxHash
 	dev-perl/Sys-CPU
 	dev-perl/Sys-MemInfo"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P/_p*}-openssh-hpn.patch"
+}
 
 src_install() {
 	dodir /usr/share/logwatch/lib
@@ -64,8 +73,8 @@ src_install() {
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}"/logwatch 00-logwatch
 
-	doman logwatch.8
-	dodoc project/CHANGES README HOWTO-Customize-LogWatch
+	doman logwatch.8 amavis-logwatch.1 postfix-logwatch.1
+	dodoc README HOWTO-Customize-LogWatch
 }
 
 pkg_postinst() {

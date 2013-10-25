@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/logwatch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.83 2013/01/16 18:15:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/ChangeLog,v 1.84 2013/10/25 09:32:36 polynomial-c Exp $
+
+*logwatch-7.4.0_p170 (25 Oct 2013)
+
+  25 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> -logwatch-7.3.6.ebuild,
+  -logwatch-7.3.7_pre20091210.ebuild, -logwatch-7.3.7_pre20100217.ebuild,
+  +logwatch-7.4.0_p170.ebuild:
+  Added svn snapshot (rev. 170) as per request by Pinkbyte. Should fix bug
+  #424862. Removed old versions.
 
 *logwatch-7.4.0-r1 (16 Jan 2013)
 
