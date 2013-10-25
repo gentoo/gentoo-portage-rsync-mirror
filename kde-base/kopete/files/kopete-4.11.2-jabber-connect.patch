@@ -1,0 +1,33 @@
+commit dd536999ce5611ad5d80adb813f7857ab29f20d4
+Author: Pali Rohár <pali.rohar@gmail.com>
+Date:   Mon Oct 21 15:33:54 2013 +0200
+
+    Do not allow overwriting bare jid of myself account in jabber client
+    
+    Kopete account id and myself contact id cannot be changed. This means that all
+    jabber code must use bare jid for myself contact specified in account dialog.
+    Jabber server can change user jid after successfull login, but there is no
+    way in Kopete to propage it. So allow changing only of resource name and do not
+    tell other Kopete code about bare jid changes (which is account id and myself
+    contact id). Chaning resource name is OK. Without this patch it is not possible
+    to login to jabber servers which chaning bare jid (e.g facebook).
+    
+    BUG: 324937
+    FIXED-IN: 4.12
+
+diff --git a/protocols/jabber/jabberclient.cpp b/protocols/jabber/jabberclient.cpp
+index c1d5f58..b96241e 100644
+--- a/protocols/jabber/jabberclient.cpp
++++ b/protocols/jabber/jabberclient.cpp
+@@ -1059,9 +1059,8 @@ void JabberClient::slotCSAuthenticated ()
+ 		d->jabberClient->s5bManager()->setServer ( s5bServer () );
+ 	}
+ 
+-	
+-	//update the resource:
+-	d->jid = d->jabberClientStream->jid();
++	// update only resource and do not change bare jid, see bug 324937
++	d->jid = XMPP::Jid ( d->jid.node(), d->jid.domain(), d->jabberClientStream->jid().resource() );
+ 
+ 	// start the client operation
+ 	d->jabberClient->start ( jid().domain (), jid().node (), d->password, jid().resource () );
