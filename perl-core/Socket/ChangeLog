@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Socket
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Socket/ChangeLog,v 1.9 2013/08/14 06:30:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Socket/ChangeLog,v 1.10 2013/10/25 14:06:58 jer Exp $
+
+  25 Oct 2013; Jeroen Roovers <jer@gentoo.org> Socket-2.9.0.ebuild:
+  Stable for HPPA (bug #474822).
 
 *Socket-2.9.0 (14 Aug 2013)
 

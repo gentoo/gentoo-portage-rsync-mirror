@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.70 2013/09/14 22:55:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.71 2013/10/25 14:09:20 jer Exp $
+
+  25 Oct 2013; Jeroen Roovers <jer@gentoo.org> pycups-1.9.63.ebuild:
+  Stable for HPPA (bug #488760).
 
   14 Sep 2013; Mike Gilbert <floppym@gentoo.org> pycups-1.9.63.ebuild:
   Add -fno-strict-aliasing for python2.

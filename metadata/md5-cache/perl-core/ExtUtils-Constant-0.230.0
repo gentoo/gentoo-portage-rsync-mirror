@@ -3,10 +3,10 @@ DEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Generate XS code to import C header constants
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/ExtUtils-Constant/
-KEYWORDS=~amd64 ~hppa ~x86
+KEYWORDS=~amd64 hppa ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/N/NW/NWCLARK/ExtUtils-Constant-0.23.tar.gz
 _eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=36212500262210f4cd461756feafd4f7
+_md5_=ae5c5b5d842bd1fb76a71aa6446f9d41
