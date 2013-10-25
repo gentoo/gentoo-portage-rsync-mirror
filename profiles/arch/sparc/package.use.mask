@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.148 2013/10/21 15:23:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.149 2013/10/25 15:19:56 pesa Exp $
 
 # Tom Wijsman <TomWij@gentoo.org> (16 Oct 2013)
 # Mask luajit on ~media-video/mpv-0.2.0 because it only has amd64 x86 keywords. See bug #488318.
@@ -64,12 +64,6 @@ gnome-extra/libgda reports
 # MySQL 5.5 wants systemtap, tcmalloc & jemalloc
 >=dev-db/mysql-5.5 systemtap tcmalloc jemalloc
 >=dev-db/mariadb-5.5 systemtap tcmalloc jemalloc
-
-# Raúl Porcel <armin76@gentoo.org> (08 Jul 2012)
-# dev-qt/qtwebkit doesn't seem to work
-dev-python/PyQt4 webkit
-dev-qt/qtdeclarative webkit
-dev-qt/qthelp webkit
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (24 Jun 2012)
 # Requires libpcre with jit
@@ -171,11 +165,6 @@ sci-libs/gdal ecwj2k
 
 # uses games-board/ggz-gtk-client
 games-strategy/freeciv ggz
-
-# Raúl Porcel <armin76@gentoo.org> (02 Mar 2010)
-# needs dev-python/mako which depends on
-# dev-python/beaker which sigbuses
-media-sound/rhythmbox webkit
 
 # Alexey Shvetsov <alexxy@gentoo.org> (09 Feb 2010)
 # need dev-db/virtuoso-* keyworded

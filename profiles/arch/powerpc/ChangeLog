@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.255 2013/10/21 15:23:51 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.256 2013/10/25 15:06:41 pesa Exp $
+
+  25 Oct 2013; Davide Pesavento <pesa@gentoo.org> package.use.force:
+  Remove obsolete entry.
 
   21 Oct 2013; Tom Wijsman <TomWij@gentoo.org> package.use.mask:
   Added bug reference to media-video/mpv luajit mask.
