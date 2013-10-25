@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/stringex-2.0.8.ebuild,v 1.2 2013/08/24 16:26:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/stringex-2.0.8.ebuild,v 1.3 2013/10/25 09:05:58 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_DOC_DIR="rdoc"
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
@@ -24,13 +24,23 @@ IUSE="test"
 # USE flags at all.
 ruby_add_bdepend "
 	test? (
-		>=dev-ruby/activerecord-3
-		dev-ruby/sqlite3
 		dev-ruby/redcloth
 		dev-ruby/test-unit:2
 	)"
 
-each_ruby_test() {
-	# rake seems to break this
-	ruby-ng_testrb-2 -Ilib -Itest test/{unit,performance}/*_test.rb || die "tests failed"
+USE_RUBY="ruby18 ruby19" ruby_add_bdepend "test? ( >=dev-ruby/activerecord-3 dev-ruby/sqlite3 )"
+
+each_ruby_prepare() {
+	case ${RUBY} in
+		*ruby20)
+			# Avoid tests depending on Rails until we have a version
+			# keyworded.
+			rm -rf test/unit/{acts_as_url,localization}* || die
+			;;
+	esac
 }
+
+#each_ruby_test() {
+#	# rake seems to break this
+#	ruby-ng_testrb-2 -Ilib -Itest test/{unit,performance}/*_test.rb || die "tests failed"
+#}

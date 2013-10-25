@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bcache-tools/bcache-tools-9999.ebuild,v 1.2 2013/07/10 06:12:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bcache-tools/bcache-tools-9999.ebuild,v 1.3 2013/10/25 09:22:11 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE=""
 src_prepare() {
 	tc-export CC
 	sed \
-		-e '/CFLAGS/d' \
+		-e '/^CFLAGS/d' \
 		-i Makefile || die
 }
 
@@ -31,7 +31,7 @@ src_install() {
 	insinto /etc/initramfs-tools/hooks/bcache
 	doins initramfs/hook
 
-	udev_dorules 61-bcache.rules
+	udev_dorules 69-bcache.rules
 
 	exeinto $(get_udevdir)
 	doexe bcache-register

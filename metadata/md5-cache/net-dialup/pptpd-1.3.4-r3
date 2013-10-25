@@ -4,10 +4,10 @@ DESCRIPTION=Linux Point-to-Point Tunnelling Protocol Server
 EAPI=5
 HOMEPAGE=http://poptop.sourceforge.net/
 IUSE=gre-extreme-debug tcpd
-KEYWORDS=amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86
+KEYWORDS=amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=GPL-2
 RDEPEND=net-dialup/ppp:= tcpd? ( sys-apps/tcp-wrappers )
 SLOT=0
 SRC_URI=mirror://sourceforge/poptop/pptpd-1.3.4.tar.gz
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=bf7a0af2b28a5fe5c3455d5c3514270b
+_md5_=cc593758de121e877e89d3f9d2104f1e

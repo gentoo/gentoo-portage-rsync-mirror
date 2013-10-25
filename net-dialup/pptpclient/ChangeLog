@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.64 2013/05/25 14:25:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.65 2013/10/25 09:27:10 pinkbyte Exp $
+
+  25 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> pptpclient-1.7.2-r3.ebuild:
+  Add ~arm keyword wrt bug #488572, thanks to Michael Kurinnoy <viewizard AT
+  viewizard.com>
 
   25 May 2013; Agostino Sarubbo <ago@gentoo.org> pptpclient-1.7.2-r3.ebuild:
   Stable for alpha, wrt bug #455470
