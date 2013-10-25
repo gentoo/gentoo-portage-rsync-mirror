@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/roboto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/roboto/ChangeLog,v 1.3 2013/10/21 12:16:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/roboto/ChangeLog,v 1.4 2013/10/25 17:14:52 yngwin Exp $
+
+*roboto-20130731 (25 Oct 2013)
+
+  25 Oct 2013; Ben de Groot <yngwin@gentoo.org> +files/90-roboto-regular.conf,
+  +roboto-20130731.ebuild:
+  Version bump. Add fontconfig file to set Regular weight as default, instead of
+  Black. Thanks to John Flatness in bug #464666.
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> roboto-20120823.ebuild:
   Marked ~x64-macos, bug #486818
