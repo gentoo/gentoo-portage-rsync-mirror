@@ -1,6 +1,16 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.98 2013/09/24 19:35:31 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.100 2013/10/26 15:59:06 jer Exp $
+
+  26 Oct 2013; Jeroen Roovers <jer@gentoo.org> synergy-1.4.12.ebuild,
+  synergy-1.4.15.ebuild, +files/synergy-1.4.12-pthread.patch:
+  Append -pthread to CXXFLAGS not CFLAGS (bug #486174 by Vincent de Phily).
+
+*synergy-1.4.15 (26 Oct 2013)
+
+  26 Oct 2013; Jeroen Roovers <jer@gentoo.org> +synergy-1.4.15.ebuild,
+  +files/synergy-1.4.15-cryptopp.patch:
+  Version bump (bug #489444 by Patrick).
 
   24 Sep 2013; Chema Alonso <nimiux@gentoo.org> synergy-1.4.12.ebuild:
   Stable for amd64 wrt bug #485864
