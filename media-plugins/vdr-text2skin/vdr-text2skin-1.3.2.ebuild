@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.3.2.ebuild,v 1.7 2012/06/10 14:28:19 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-text2skin/vdr-text2skin-1.3.2.ebuild,v 1.8 2013/10/26 20:39:42 hd_brummy Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit vdr-plugin-2
 
@@ -60,6 +60,8 @@ src_prepare() {
 	if has_version ">=media-video/vdr-1.7.27"; then
 		epatch "${FILESDIR}/vdr-1.7.27.diff"
 	fi
+
+	epatch "${FILESDIR}/${P}_vdr-2.1.2.diff"
 }
 
 src_install() {

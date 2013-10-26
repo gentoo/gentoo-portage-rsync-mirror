@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kwave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.32 2013/08/26 16:04:06 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.33 2013/10/26 20:39:52 ago Exp $
+
+  26 Oct 2013; Agostino Sarubbo <ago@gentoo.org> kwave-0.8.10.ebuild:
+  Stable for amd64, wrt bug #489412
 
   26 Aug 2013; Chris Reffett <creffett@gentoo.org> kwave-0.8.10.ebuild:
   Change dependencies to work with KDE 4.11, fixes bug 482322

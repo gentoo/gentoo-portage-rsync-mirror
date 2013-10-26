@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.5.ebuild,v 1.1 2013/08/14 09:11:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/kmidimon-0.7.5.ebuild,v 1.2 2013/10/26 20:39:42 ago Exp $
 
 EAPI=5
 KDE_LINGUAS="cs es ja"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="

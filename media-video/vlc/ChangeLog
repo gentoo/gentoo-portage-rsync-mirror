@@ -1,6 +1,18 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.866 2013/10/26 17:16:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.868 2013/10/26 20:47:50 tomwij Exp $
+
+  26 Oct 2013; Tom Wijsman <TomWij@gentoo.org> vlc-9999.ebuild:
+  Actually, upon checking I now see that in the 9999 branch the configure flag
+  was renamed from libfreerdp to freerdp; it is due to this that the bug occured
+  as I was changing the backport of the freerdp USE flag right before committing
+  2.1.0.
+
+  26 Oct 2013; Tom Wijsman <TomWij@gentoo.org> vlc-2.1.0.ebuild,
+  vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Corrected name of freerdp configure flag; reported by Jouni Kosonen, fixes bug
+  #489504. Since it was automatically enabled and a rather minor feature in
+  terms of size, not worth the compile time of a revision bump.
 
 *vlc-2.1.0 (26 Oct 2013)
 

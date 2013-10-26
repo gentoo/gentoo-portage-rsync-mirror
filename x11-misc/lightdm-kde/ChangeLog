@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lightdm-kde
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/ChangeLog,v 1.13 2013/08/01 12:00:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-kde/ChangeLog,v 1.14 2013/10/26 20:39:59 ago Exp $
+
+  26 Oct 2013; Agostino Sarubbo <ago@gentoo.org> lightdm-kde-0.3.2.1.ebuild:
+  Stable for amd64, wrt bug #489414
 
   01 Aug 2013; Michael Palimaka <kensington@gentoo.org>
   +files/lightdm-kde-0.3.2.1-lightdm-1.7.patch, lightdm-kde-0.3.2.1.ebuild:
