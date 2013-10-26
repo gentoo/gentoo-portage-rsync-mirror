@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.1.ebuild,v 1.1 2013/10/26 07:46:35 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.1.ebuild,v 1.2 2013/10/26 10:54:25 jlec Exp $
 
 EAPI=5
 
@@ -40,15 +40,17 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc NEWS README AUTHORS ChangeLog || die "dodoc failed"
-	doman doc/*.[1-9] || die "doman failed"
+	emake DESTDIR="${D}" install
+	dodoc NEWS AUTHORS ChangeLog
+	doman doc/*.[1-9]
 
 	# remove useless .la files
-	find "${D}" -name '*.la' -delete
+	find "${D}" -name '*.la' -delete || die
 
 	# remove useless .a (only for non static compilation)
-	use static-libs || find "${D}" -name '*.a' -delete
+	if use static-libs; then
+		find "${D}" -name '*.a' -delete || die
+	fi
 }
 
 src_test() {

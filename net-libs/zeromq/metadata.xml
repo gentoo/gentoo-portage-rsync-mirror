@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>qnikst@gentoo.org</email>
-		<name>Alexander Vershilov</name>
-	</maintainer>
-	<upstream>
-		<maintainer>
-			<email>sustrik@fastmq.com</email>
-			<name>Martin Sustrik</name>
-			<description>iMatrix Corporation</description>
-		</maintainer>
-		<doc>http://zguide.zeromq.org/chapter:1</doc>
-		<bugs-to>http://github.com/zeromq/zeromq2/issues</bugs-to>
-		<!-- remote-id type="github">zeromq/zeromq2</remote-id-->
-	</upstream>
-	<longdescription lang="en">
+  <maintainer>
+    <email>qnikst@gentoo.org</email>
+    <name>Alexander Vershilov</name>
+  </maintainer>
+  <upstream>
+    <maintainer>
+      <email>sustrik@fastmq.com</email>
+      <name>Martin Sustrik</name>
+      <description>iMatrix Corporation</description>
+    </maintainer>
+    <doc>http://zguide.zeromq.org/chapter:1</doc>
+    <bugs-to>http://github.com/zeromq/zeromq2/issues</bugs-to>
+    <!-- remote-id type="github">zeromq/zeromq2</remote-id-->
+  </upstream>
+  <longdescription lang="en">
 		The 0MQ lightweight messaging kernel is a library which
 		extends the standard socket interfaces with features
 		traditionally provided by specialised messaging middleware
@@ -24,11 +24,10 @@
 		(subscriptions), seamless access to multiple transport protocols
 		and more.
 	</longdescription>
-	<use>
-		<flag name="pgm">
+  <use>
+    <flag name="pgm">
 			0MQ is build with 'Pragmatic General Multicast' (RFC 3208) support
 			using the excellent OpenPGM implementation.
 		</flag>
-	</use>
+  </use>
 </pkgmetadata>
-
