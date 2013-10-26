@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.26.0_p20130922.ebuild,v 1.1 2013/09/23 11:51:02 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/mythplugins-0.26.0_p20130922.ebuild,v 1.2 2013/10/26 02:02:47 rich0 Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.osuosl.org/pub/mythtv/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 MYTHPLUGINS="mytharchive mythbrowser mythgallery mythgame \
 mythmusic mythnetvision mythnews mythweather mythzoneminder"

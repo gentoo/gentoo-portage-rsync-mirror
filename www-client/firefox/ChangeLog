@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.279 2013/10/07 20:37:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.280 2013/10/26 02:13:18 anarchy Exp $
+
+  26 Oct 2013; Jory A. Pratt <anarchy@gentoo.org> firefox-24.0-r1.ebuild:
+  ia64 support, bug #487250
 
   07 Oct 2013; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-24.0-r1.ebuild:
   Fix sqlite dependency
