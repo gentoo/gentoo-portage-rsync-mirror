@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-exec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.57 2013/10/19 03:40:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/ChangeLog,v 1.58 2013/10/26 16:35:52 mgorny Exp $
+
+*python-exec-2.0-r2 (26 Oct 2013)
+
+  26 Oct 2013; Michał Górny <mgorny@gentoo.org> +python-exec-2.0-r2.ebuild,
+  -python-exec-2.0-r1.ebuild, python-exec-2.9999.ebuild:
+  Pass "g" option to sed to fix all the occurences of python-exec in dep trees.
 
   19 Oct 2013; Mike Frysinger <vapier@gentoo.org> python-exec-0.3.1.ebuild,
   python-exec-0.9999.ebuild, python-exec-2.0-r1.ebuild,

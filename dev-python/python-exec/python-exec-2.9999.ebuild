@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-2.9999.ebuild,v 1.5 2013/10/19 03:40:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-2.9999.ebuild,v 1.6 2013/10/26 16:35:52 mgorny Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ cleanup_vardb_deps() {
 	local v
 	for v in ${REPLACING_VERSIONS}; do
 		# if 2.0-r1+ was installed already, no need for cleaning up again.
-		if version_is_at_least 2.0-r1 ${v}; then
+		if version_is_at_least 2.0-r2 ${v}; then
 			return 0
 		fi
 	done
@@ -65,7 +65,7 @@ cleanup_vardb_deps() {
 
 	if [[ ${files[@]} ]]; then
 		ebegin "Fixing unslotted python-exec dependencies in installed packages"
-		sed -i -e 's,dev-python/python-exec\[,dev-python/python-exec:0[,' \
+		sed -i -e 's,dev-python/python-exec\[,dev-python/python-exec:0[,g' \
 			"${files[@]}"
 		eend ${?}
 
