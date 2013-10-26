@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.13.ebuild,v 1.10 2013/07/21 16:09:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colordiff/colordiff-1.0.13.ebuild,v 1.11 2013/10/26 16:11:46 jlec Exp $
 
 EAPI=5
 
@@ -15,12 +15,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~ppc-aix ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
-RDEPEND="sys-apps/diffutils"
+RDEPEND="
+	dev-lang/perl
+	sys-apps/diffutils"
 
 src_prepare() {
 	# set proper etcdir for Gentoo Prefix
-	sed -i -e "s:'/etc:'@GENTOO_PORTAGE_EPREFIX@/etc:" "${S}/colordiff.pl" \
-		|| die "sed etcdir failed"
+	sed \
+		-e "s:'/etc:'@GENTOO_PORTAGE_EPREFIX@/etc:" \
+		-i "${S}/colordiff.pl" || die "sed etcdir failed"
 	eprefixify "${S}"/colordiff.pl
 }
 
