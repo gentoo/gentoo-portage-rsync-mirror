@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.48 2013/09/30 17:17:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.49 2013/10/26 07:48:20 djc Exp $
+
+*requests-2.0.1 (26 Oct 2013)
+
+  26 Oct 2013; Dirkjan Ochtman <djc@gentoo.org> +requests-2.0.1.ebuild:
+  Version bump requests to 2.0.1 (bug 489388).
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> requests-1.2.3.ebuild:
   Stable for x86, wrt bug #470630

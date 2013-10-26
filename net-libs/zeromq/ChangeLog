@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.47 2013/09/30 17:12:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.48 2013/10/26 07:46:35 qnikst Exp $
+
+*zeromq-4.0.1 (26 Oct 2013)
+
+  26 Oct 2013; Alexander Vershilov <qnikst@gentoo.org> +zeromq-4.0.1.ebuild:
+  add zeromq-4.0.1 (bug #488370)
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> zeromq-3.2.3.ebuild:
   Stable for x86, wrt bug #474752

@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare test
+DEPEND=sys-devel/gcc pgm? ( virtual/pkgconfig =net-libs/openpgm-5.1.118 ) sys-apps/util-linux || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=ZeroMQ is a brokerless kernel
+EAPI=5
+HOMEPAGE=http://www.zeromq.org/
+IUSE=pgm test static-libs elibc_glibc
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=LGPL-3
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://download.zeromq.org/zeromq-4.0.1.tar.gz
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=34f81d6d7bd425822087a683ec1f7bc8

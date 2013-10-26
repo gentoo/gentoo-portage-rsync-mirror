@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.27 2013/10/26 06:24:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.28 2013/10/26 07:39:02 tomwij Exp $
 
 EAPI="5"
 
@@ -229,6 +229,9 @@ src_prepare() {
 	if use truetype || use projectm ; then
 		epatch "${FILESDIR}"/${PN}-2.0.8-freetype-proper-default-font.patch
 	fi
+
+	# Patch up incompatibilities and reconfigure autotools.
+	epatch "${FILESDIR}"/${PN}-2.0.8-support-uclibc.patch
 
 	# We are not in a real git checkout due to the absence of a .git directory.
 	touch src/revision.txt || die
