@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.49 2013/10/26 10:54:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.50 2013/10/26 11:19:16 jlec Exp $
+
+*zeromq-4.0.1-r1 (26 Oct 2013)
+
+  26 Oct 2013; Justin Lecher <jlec@gentoo.org> +zeromq-4.0.1-r1.ebuild:
+  Drop Werror, #485774; add dev-libs/libsodium to deps because of automagic
+  otherwise; fix RDEPENDs; general style improvements (indention, sorting,
+  usage of default phase functions); use prune_libtool_files() from
+  eutils.eclass instead of manual cleaning
 
   26 Oct 2013; Justin Lecher <jlec@gentoo.org> zeromq-4.0.1.ebuild,
   metadata.xml:
