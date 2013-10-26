@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.31 2013/10/26 08:58:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.8a.ebuild,v 1.1 2013/10/26 08:58:23 tomwij Exp $
 
 EAPI="5"
 
@@ -35,7 +35,7 @@ LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
 
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 -sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="~amd64 ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd"
 else
 	KEYWORDS=""
 fi

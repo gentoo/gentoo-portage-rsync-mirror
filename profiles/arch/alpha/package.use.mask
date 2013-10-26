@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.139 2013/10/21 15:24:01 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.140 2013/10/26 08:55:51 gienah Exp $
+
+# Mark Wright <gienah@gentoo.org> (26 Oct 2013)
+# template-haskell not yet available
+dev-haskell/dataenc test
 
 # Tom Wijsman <TomWij@gentoo.org> (16 Oct 2013)
 # Mask luajit on ~media-video/mpv-0.2.0 because it only has amd64 x86 keywords. See bug #488318.
