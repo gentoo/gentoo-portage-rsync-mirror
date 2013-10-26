@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.223 2013/08/06 12:33:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.224 2013/10/26 09:31:56 aballier Exp $
+
+*libpcre-8.33-r1 (26 Oct 2013)
+
+  26 Oct 2013; Alexis Ballier <aballier@gentoo.org> +libpcre-8.33-r1.ebuild:
+  Convert to multilib, bug #481300
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libpcre-8.33.ebuild:
   Stable for s390, wrt bug #453948
