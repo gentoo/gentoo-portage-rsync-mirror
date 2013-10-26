@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-9999.ebuild,v 1.7 2013/10/14 20:30:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/flaggie-9999.ebuild,v 1.8 2013/10/26 15:01:00 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -34,13 +34,13 @@ python_install_all() {
 }
 
 pkg_postinst() {
-	ewarn "Please denote that flaggie creates backups of your package.* files"
+	ewarn "Please note that flaggie creates backups of your package.* files"
 	ewarn "before performing each change through appending a single '~'."
 	ewarn "If you'd like to keep your own backup of them, please use another"
 	ewarn "naming scheme (or even better some VCS)."
-	elog
-	elog "bash-completion support requires:"
-	elog "	app-shells/gentoo-bashcomp"
-	has_version app-shells/gentoo-bashcomp && \
-		elog "(installed already)"
+	if ! has_version app-shells/gentoo-bashcomp; then
+		elog
+		elog "If you want to use bash-completion, you need to install:"
+		elog "	app-shells/gentoo-bashcomp"
+	fi
 }
