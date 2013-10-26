@@ -7,5 +7,5 @@ IUSE=elibc_glibc ipv6 kernel_linux +udev
 LICENSE=BSD-2
 RDEPEND=udev? ( virtual/udev )
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-r3	f870f5be7eb6435bdd5968f9f4df68c2	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-r3	b52f116af035ac6c5f27730feb311d24	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ec2aac0da38dc4fa81262937f4d8ad47

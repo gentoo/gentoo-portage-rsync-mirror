@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.18 2013/10/14 20:30:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.19 2013/10/26 06:19:13 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -515,8 +515,13 @@ git-r3_fetch() {
 			if [[ ! ${commit} ]]; then
 				die "Unable to get commit id for submodule ${subname}"
 			fi
+			if [[ ${url} == ./* || ${url} == ../* ]]; then
+				local subrepos=( "${repos[@]/%//${url}}" )
+			else
+				local subrepos=( "${url}" )
+			fi
 
-			git-r3_fetch "${url}" "${commit}" "${local_id}/${subname}"
+			git-r3_fetch "${subrepos[*]}" "${commit}" "${local_id}/${subname}"
 
 			submodules=( "${submodules[@]:3}" ) # shift
 		done
@@ -614,6 +619,10 @@ git-r3_checkout() {
 			local subname=${submodules[0]}
 			local url=${submodules[1]}
 			local path=${submodules[2]}
+
+			if [[ ${url} == ./* || ${url} == ../* ]]; then
+				url=${repos[0]%%/}/${url}
+			fi
 
 			git-r3_checkout "${url}" "${GIT_WORK_TREE}/${path}" \
 				"${local_id}/${subname}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.194 2013/10/24 23:34:33 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.195 2013/10/26 06:24:22 tomwij Exp $
 
 EAPI="5"
 
@@ -184,6 +184,14 @@ REQUIRED_USE="
 "
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	if [[ "$(tc-getCC)" == *"gcc"* ]] ; then
+		if [[ $(gcc-major-version) < 4 || ( $(gcc-major-version) == 4 && $(gcc-minor-version) < 5 ) ]] ; then
+			die "You need to have at least >=sys-devel/gcc-4.5 to build and/or have a working vlc, see bug #426754."
+		fi
+	fi
+}
 
 src_unpack() {
 	if [ "${PV%9999}" != "${PV}" ] ; then

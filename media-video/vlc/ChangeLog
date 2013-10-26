@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.858 2013/10/26 05:53:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.860 2013/10/26 06:29:04 tomwij Exp $
+
+  26 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Proper indentation of metadata.xml.
+
+  26 Oct 2013; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.9999.ebuild,
+  vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Fix bug #426754 by bailing out on <sys-devel/gcc-4.5. Prepared for version
+  bumps by fixing up SRC_URI to support the a release.
 
 *vlc-2.1.9999 (26 Oct 2013)
 

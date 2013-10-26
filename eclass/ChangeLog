@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1033 2013/10/22 19:23:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1034 2013/10/26 06:19:13 mgorny Exp $
+
+  26 Oct 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Fix handling relative submodule paths.
 
   22 Oct 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
   Fix failing to pass default install arguments when user passes an additional

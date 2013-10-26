@@ -6,5 +6,5 @@ HOMEPAGE=http://www.emesene.org
 LICENSE=|| ( GPL-2 GPL-3 LGPL-3 )
 RDEPEND=dev-python/pygtk:2 dev-python/notify-python dev-python/pywebkitgtk dev-python/pyopenssl dev-python/xmpppy =dev-lang/python-2* =dev-lang/python-2*[sqlite]
 SLOT=0
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	f870f5be7eb6435bdd5968f9f4df68c2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	b52f116af035ac6c5f27730feb311d24	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=40027c7e37db351a7c05da4d155771be
