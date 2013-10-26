@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tptest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.17 2013/10/09 17:09:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.18 2013/10/26 20:06:15 pinkbyte Exp $
+
+  26 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> -tptest-3.1.7.ebuild:
+  Drop old vulnerable revision, wrt bug #261191
 
   09 Oct 2013; Agostino Sarubbo <ago@gentoo.org> tptest-3.1.7-r2.ebuild:
   Stable for sparc, wrt bug #261191

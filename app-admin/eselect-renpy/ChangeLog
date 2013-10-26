@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-renpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-renpy/ChangeLog,v 1.4 2013/05/14 09:40:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-renpy/ChangeLog,v 1.5 2013/10/26 20:27:46 hasufell Exp $
+
+*eselect-renpy-0.3 (26 Oct 2013)
+
+  26 Oct 2013; Julian Ospald <hasufell@gentoo.org> +eselect-renpy-0.3.ebuild,
+  +files/renpy.eselect-0.3:
+  version bump preparing for games-engines/renpy:6.16
 
   14 May 2013; Agostino Sarubbo <ago@gentoo.org> eselect-renpy-0.2.ebuild:
   Stable for x86, wrt bug #469734

@@ -1,0 +1,18 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sat Oct 26 19:40:23 UTC 2013
+Subject: fix underlinking
+
+https://bugs.gentoo.org/show_bug.cgi?id=488964
+
+--- gcompris-12.11/configure.ac
++++ gcompris-12.11/configure.ac
+@@ -57,7 +57,8 @@
+   gtk+-2.0 >= $GTK_REQUIRED \
+   librsvg-2.0 >= $LIBRSVG_REQUIRED \
+   libxml-2.0 >= $LIBXML_REQUIRED \
+-  gthread-2.0 )
++  gthread-2.0 \
++  gmodule-2.0 )
+ 
+ AC_SUBST(GCOMPRIS_CFLAGS)
+ AC_SUBST(GCOMPRIS_LIBS)

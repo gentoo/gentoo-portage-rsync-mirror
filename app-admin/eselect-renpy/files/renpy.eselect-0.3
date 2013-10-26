@@ -1,0 +1,15 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Id: renpy.eselect-0.3,v 1.1 2013/10/26 20:27:46 hasufell Exp $
+
+DESCRIPTION="Manage default renpy version"
+MAINTAINER="hasufell@gentoo.org"
+VERSION="0.3"
+
+SYMLINK_PATH="@GAMES_BINDIR@/renpy"
+SYMLINK_TARGETS=( renpy-6.14 renpy-6.15 renpy-6.16 )
+SYMLINK_DESCRIPTION='default renpy'
+SYMLINK_CRUCIAL=1
+
+inherit bin-symlink
+
