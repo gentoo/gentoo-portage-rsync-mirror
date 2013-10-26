@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.89 2013/10/22 19:23:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.90 2013/10/26 17:47:51 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -463,6 +463,7 @@ _distutils-r1_wrap_scripts() {
 distutils-r1_python_install() {
 	debug-print-function ${FUNCNAME} "${@}"
 
+	local args=( "${@}" )
 	local flags
 
 	case "${EPYTHON}" in
@@ -485,39 +486,58 @@ distutils-r1_python_install() {
 	[[ ${DISTUTILS_SINGLE_IMPL} ]] && root=${D}
 	flags+=( --root="${root}" )
 
-	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]] && _python_want_python_exec2
-	then
-		local PYTHON_SCRIPTDIR
-		python_export PYTHON_SCRIPTDIR
-		flags+=( --install-scripts="${PYTHON_SCRIPTDIR}" )
+	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
+		# user may override --install-scripts
+		# note: this is poor but distutils argv parsing is dumb
+		local mydistutilsargs=( "${mydistutilsargs[@]}" )
+		local scriptdir=${EPREFIX}/usr/bin
+
+		# construct a list of mydistutilsargs[0] args[0] args[1]...
+		local arg arg_vars
+		[[ ${mydistutilsargs[@]} ]] && eval arg_vars+=(
+			'mydistutilsargs['{0..$(( ${#mydistutilsargs[@]} - 1 ))}']'
+		)
+		[[ ${args[@]} ]] && eval arg_vars+=(
+			'args['{0..$(( ${#args[@]} - 1 ))}']'
+		)
+
+		set -- "${arg_vars[@]}"
+		while [[ ${@} ]]; do
+			local arg_var=${1}
+			shift
+			local a=${!arg_var}
+
+			case "${a}" in
+				--install-scripts=*)
+					scriptdir=${a#--install-scripts=}
+					if _python_want_python_exec2; then
+						unset "${arg_var}"
+					fi
+					;;
+				--install-scripts)
+					scriptdir=${!1}
+					if _python_want_python_exec2; then
+						unset "${arg_var}" "${1}"
+					fi
+					shift
+					;;
+			esac
+		done
+
+		if _python_want_python_exec2; then
+			local PYTHON_SCRIPTDIR
+			python_export PYTHON_SCRIPTDIR
+			flags+=( --install-scripts="${PYTHON_SCRIPTDIR}" )
+		fi
 	fi
 
-	esetup.py install "${@}" install "${flags[@]}"
+	esetup.py install "${flags[@]}" "${args[@]}"
 
 	if [[ -d ${root}$(python_get_sitedir)/tests ]]; then
 		die "Package installs 'tests' package, file collisions likely."
 	fi
 
 	if [[ ! ${DISTUTILS_SINGLE_IMPL} ]]; then
-		# user may override --install-scripts
-		# note: this is poor but distutils argv parsing is dumb
-		local scriptdir=${EPREFIX}/usr/bin
-		set -- "${mydistutilsargs[@]}" "${@}"
-		while [[ ${@} ]]; do
-			local a=${1}
-			shift
-
-			case "${a}" in
-				--install-scripts=*)
-					scriptdir=${a#--install-scripts=}
-					;;
-				--install-scripts)
-					scriptdir=${1}
-					shift
-					;;
-			esac
-		done
-
 		_distutils-r1_wrap_scripts "${root}" "${scriptdir}"
 		multibuild_merge_root "${root}" "${D}"
 	fi
