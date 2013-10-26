@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.8.3.ebuild,v 1.3 2013/07/25 22:30:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.8.3-r1.ebuild,v 1.1 2013/10/26 12:53:54 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -53,6 +53,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 "
+
+src_prepare() {
+	# Fix terminal not loading (adapted from 'master')
+	epatch "${FILESDIR}/${PN}-3.8.3-terminal-background.patch"
+	gnome2_src_prepare
+}
 
 src_configure() {
 	# DEFAULT_PLUGINS from configure.ac

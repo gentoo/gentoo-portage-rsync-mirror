@@ -1,0 +1,25 @@
+diff -Naur vdr-vdrmanager-0.9.orig/helpers.cpp vdr-vdrmanager-0.9/helpers.cpp
+--- vdr-vdrmanager-0.9.orig/helpers.cpp	2013-10-26 11:11:37.000000000 +0200
++++ vdr-vdrmanager-0.9/helpers.cpp	2013-10-26 11:20:59.000000000 +0200
+@@ -272,12 +272,21 @@
+ 
+ 	cString FileName = recording->FileName();
+ 
++#if VDRVERSNUM > 20101
++    if (RecordingsHandler.GetUsage(FileName)) {
++       RecordingsHandler.Del(FileName);
++       recording = Recordings.GetByName(FileName); // RecordingsHandler.Del() might have deleted it if it was the edited version
++       // we continue with the code below even if recording is NULL,
++       // in order to have the menu updated etc.
++     }
++#else
+ 	if (cCutter::Active(recording->FileName())) {
+ 		cCutter::Stop();
+ 		recording = Recordings.GetByName(FileName); // cCutter::Stop() might have deleted it if it was the edited version
+ 		// we continue with the code below even if recording is NULL,
+ 		// in order to have the menu updated etc.
+ 	}
++#endif
+ 
+ 	if (cReplayControl::NowReplaying()
+ 			&& strcmp(cReplayControl::NowReplaying(), FileName) == 0) {

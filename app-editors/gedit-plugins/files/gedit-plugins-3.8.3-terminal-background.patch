@@ -1,0 +1,11 @@
+--- plugins/terminal/terminal.py~	2013-06-18 12:16:09.000000000 +0200
++++ plugins/terminal/terminal.py	2013-10-26 14:49:48.619158171 +0200
+@@ -58,8 +58,6 @@
+         self.system_settings.connect("changed::monospace-font-name", self.font_changed)
+ 
+         self._vte = Vte.Terminal()
+-        self._vte.set_background_image(None)
+-        self._vte.set_background_transparent(False)
+         self.reconfigure_vte()
+         self._vte.set_size(self._vte.get_column_count(), 5)
+         self._vte.set_size_request(200, 50)

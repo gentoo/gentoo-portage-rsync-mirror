@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.36 2013/08/31 01:10:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.37 2013/10/26 12:53:54 pacho Exp $
+
+*gedit-plugins-3.8.3-r1 (26 Oct 2013)
+
+  26 Oct 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gedit-plugins-3.8.3-terminal-background.patch,
+  +gedit-plugins-3.8.3-r1.ebuild, -gedit-plugins-3.8.2.ebuild,
+  -gedit-plugins-3.8.3.ebuild:
+  Adapt upstream patch from master to let terminal plugin work again
 
   31 Aug 2013; Patrick Lauer <patrick@gentoo.org>
   -gedit-plugins-3.6.1-r1.ebuild:
