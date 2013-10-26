@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.4 2013/10/26 08:29:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.5 2013/10/26 17:16:29 tomwij Exp $
 
 EAPI="5"
 
@@ -49,7 +49,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opencv opengl optimisememory opus
-	png +postproc projectm pulseaudio +qt4 qt5 rtsp run-as-root samba
+	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
 	vlm	vorbis wma-fixed +X x264 +xcb xml xv zvbi"
@@ -57,7 +57,6 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 RDEPEND="
 		dev-libs/libgpg-error:0
 		net-dns/libidn:0
-		net-misc/freerdp:0
 		>=sys-devel/gettext-0.18.3:0
 		>=sys-libs/zlib-1.2.5.1-r2:0[minizip]
 		a52? ( >=media-libs/a52dec-0.7.4-r3:0 )
@@ -120,6 +119,7 @@ RDEPEND="
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22:0 )
 		qt4? ( dev-qt/qtgui:4 dev-qt/qtcore:4 )
 		qt5? ( dev-qt/qtgui:5 dev-qt/qtcore:5 )
+		rdp? ( net-misc/freerdp:0= )
 		samba? ( || ( >=net-fs/samba-3.4.6:0[smbclient] >=net-fs/samba-4.0.0:0[client] ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
 		sdl? ( >=media-libs/libsdl-1.2.8:0
@@ -235,6 +235,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1.0-newer-rdp.patch
 	epatch "${FILESDIR}"/${PN}-2.1.0-libva-1.2.1-compat.patch
 
+	# Fix up broken audio; first is a fixed reversed bisected commit, latter two are backported.
+	epatch "${FILESDIR}"/${PN}-2.1.0-TomWij-bisected-PA-broken-underflow.patch
+
 	eautoreconf
 
 	# Disable automatic running of tests.
@@ -349,6 +352,7 @@ src_configure() {
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
 		${qt_flag} \
+		$(use_enable rdp freerdp) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \
 		$(use_enable samba smbclient) \

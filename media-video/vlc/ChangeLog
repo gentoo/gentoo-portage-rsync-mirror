@@ -1,6 +1,25 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.865 2013/10/26 08:58:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.866 2013/10/26 17:16:29 tomwij Exp $
+
+*vlc-2.1.0 (26 Oct 2013)
+
+  26 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/vlc-2.1.0-TomWij-bisected-PA-broken-underflow.patch,
+  +files/vlc-2.1.0-avcodec-check-update-buffered_time-earlier-so-we-sho.patch,
+  +files/vlc-2.1.0-transcode-don-t-check-drift-if-we-have-VLC_TS_INVALI.patch,
+  +vlc-2.1.0.ebuild, vlc-2.0.8.ebuild, vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild,
+  vlc-2.0.9999.ebuild, vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Version bump to 2.1.0; summary of the commits leading up to this: Removed and
+  added USE flags so users are adviced to check them, dependencies were also
+  revised, Qt5 support has been added, increased freerdp and libva
+  compatibility, downstream bisected and/or backported fixes of broken audio,
+  default fonts are now set trough econf based on USE flags, configure flags
+  were revised and automagic dependencies have been fixed. Fixes bug #479566.
+  Unrelated to this summary; for the other versions (>=2.0.8) the freerdp and
+  gettext dependencies were updated in this commit to reflect what vlc needs and
+  provides, thanks to Nikoli and Mike Gilbert (floppym) for reporting this last
+  issue on IRC.
 
 *vlc-2.0.8 (26 Oct 2013)
 *vlc-2.0.9 (26 Oct 2013)
