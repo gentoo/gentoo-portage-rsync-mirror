@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/dataenc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.37 2013/10/26 08:11:09 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.38 2013/10/26 09:19:25 gienah Exp $
+
+  26 Oct 2013; Mark Wright <gienah@gentoo.org> dataenc-0.14.0.5-r1.ebuild:
+  The test dependencies package.use.mask'd on those platforms where template-
+  haskell is not yet available.
 
   26 Oct 2013; Mark Wright <gienah@gentoo.org> dataenc-0.14.0.5-r1.ebuild:
   Fix bug 488606 template haskell may not be available on some architectures.
