@@ -4042,6 +4042,7 @@ media-video/vlc:dshow - Enables Win32 DirectShow support.
 media-video/vlc:dvbpsi - Enables support for Mpeg-TS files (.ts, .m2ts, .mts) via media-libs/libdvbpsi.
 media-video/vlc:dxva2 - Enables Win32 DxVA2 support.
 media-video/vlc:egl - Enables EGL video output module.
+media-video/vlc:faad - Enable AAC audio decoding library support via media-libs/faad2.
 media-video/vlc:fbosd - Enables the framebuffer overlay plugin.
 media-video/vlc:fdk - Enables the Fraunhofer AAC codec library.
 media-video/vlc:fluidsynth - Enables Fluidsynth MIDI software synthesis (with external sound fonts).

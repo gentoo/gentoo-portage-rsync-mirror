@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sbc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/ChangeLog,v 1.8 2013/10/09 13:54:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sbc/ChangeLog,v 1.9 2013/10/26 08:09:20 aballier Exp $
+
+*sbc-1.1-r1 (26 Oct 2013)
+
+  26 Oct 2013; Alexis Ballier <aballier@gentoo.org> +sbc-1.1-r1.ebuild:
+  Convert to multilib, by Reinis Danne, bug #488282
 
   09 Oct 2013; Jeroen Roovers <jer@gentoo.org> sbc-1.1.ebuild:
   Stable for HPPA (bug #477662).

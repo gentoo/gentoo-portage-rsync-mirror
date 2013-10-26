@@ -1,6 +1,18 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.862 2013/10/26 07:39:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.864 2013/10/26 08:29:54 tomwij Exp $
+
+  26 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml,
+  vlc-2.0.9999.ebuild, vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Renamed the aac USE flag to faad as with --disable-faad, libavcodec will do
+  aac decoding; documented the faad USE flag in metadata.xml; solution for bug
+  #476598, reported by Nikoli.
+
+  26 Oct 2013; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.9999.ebuild,
+  vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Support Samba 4; reported and patch provided by Torsten Kurbad, patch slightly
+  adapted to keep minimal version restriction in place (USE flags will
+  differentiate between both), fixes bug #452048.
 
   26 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
   +files/vlc-2.0.8-support-uclibc.patch, vlc-2.0.9999.ebuild,

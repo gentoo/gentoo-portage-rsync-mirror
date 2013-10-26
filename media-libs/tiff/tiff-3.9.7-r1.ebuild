@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.7-r1.ebuild,v 1.3 2013/08/19 13:57:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.9.7-r1.ebuild,v 1.4 2013/10/26 08:19:22 mgorny Exp $
 
 EAPI=5
 
@@ -66,8 +66,7 @@ multilib_src_install() {
 	rm -rf "${ED}"/tmp
 }
 
-src_install() {
-	multilib-minimal_src_install
-	# Setting DOCS="" is broken wrt bug #481642
-	rm -rf "${ED}"/usr/share
+multilib_src_install_all() {
+	# (avoid installing docs)
+	:
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/dataenc-0.14.0.5-r1.ebuild,v 1.1 2013/10/19 11:29:30 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/dataenc-0.14.0.5-r1.ebuild,v 1.2 2013/10/26 08:11:09 gienah Exp $
 
 EAPI=5
 
@@ -22,12 +22,23 @@ RDEPEND=">=dev-lang/ghc-6.10.4:=
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.6.0.3
-	test? ( dev-haskell/hunit:=[profile?]
-			>=dev-haskell/quickcheck-2.5:=[profile?] <dev-haskell/quickcheck-2.7:=[profile?]
-			dev-haskell/test-framework:=[profile?]
-			dev-haskell/test-framework-hunit:=[profile?]
-			dev-haskell/test-framework-quickcheck2:=[profile?]
-			dev-haskell/test-framework-th:=[profile?] )
+	!alpha?
+	( !ia64?
+		( !ppc?
+			( !ppc64?
+				( !sparc?
+					( test?
+						( dev-haskell/hunit:=[profile?]
+						>=dev-haskell/quickcheck-2.5:=[profile?] <dev-haskell/quickcheck-2.7:=[profile?]
+						dev-haskell/test-framework:=[profile?]
+						dev-haskell/test-framework-hunit:=[profile?]
+						dev-haskell/test-framework-quickcheck2:=[profile?]
+						dev-haskell/test-framework-th:=[profile?] )
+					)
+				)
+			)
+		)
+	)
 "
 
 src_prepare() {

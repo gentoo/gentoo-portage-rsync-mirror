@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libasyncns
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.34 2012/12/20 17:40:53 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.35 2013/10/26 08:01:52 aballier Exp $
+
+*libasyncns-0.8-r3 (26 Oct 2013)
+
+  26 Oct 2013; Alexis Ballier <aballier@gentoo.org> +libasyncns-0.8-r3.ebuild:
+  convert to multilib, by Reinis Danne, bug #488278
 
   20 Dec 2012; Julian Ospald <hasufell@gentoo.org> libasyncns-0.8-r2.ebuild:
   fix missing doc compression wrt #447936

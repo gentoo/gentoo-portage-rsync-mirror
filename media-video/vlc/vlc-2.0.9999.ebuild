@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.28 2013/10/26 07:39:02 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.30 2013/10/26 08:29:54 tomwij Exp $
 
 EAPI="5"
 
@@ -40,10 +40,10 @@ else
 	KEYWORDS=""
 fi
 
-IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
+IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+avformat bidi bluray cdda cddb dbus dc1394 debug dirac direct2d
 	directfb directx dshow dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode
-	fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
+	faad fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
 	libproxy libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
@@ -63,7 +63,6 @@ RDEPEND="
 		>=sys-libs/zlib-1.2.5.1-r2:0[minizip]
 		a52? ( >=media-libs/a52dec-0.7.4-r3:0 )
 		aalib? ( media-libs/aalib:0 )
-		aac? ( >=media-libs/faad2-2.6.1:0 )
 		alsa? ( >=media-libs/alsa-lib-1.0.23:0 )
 		avahi? ( >=net-dns/avahi-0.6:0[dbus] )
 		avcodec? ( virtual/ffmpeg:0 )
@@ -80,6 +79,7 @@ RDEPEND="
 		dvd? ( media-libs/libdvdread:0 >=media-libs/libdvdnav-0.1.9:0 )
 		egl? ( virtual/opengl:0 )
 		elibc_glibc? ( >=sys-libs/glibc-2.8:2.2 )
+		faad? ( >=media-libs/faad2-2.6.1:0 )
 		flac? ( media-libs/libogg:0 >=media-libs/flac-1.1.2:0 )
 		fluidsynth? ( media-sound/fluidsynth:0 )
 		fontconfig? ( media-libs/fontconfig:1.0 )
@@ -119,7 +119,7 @@ RDEPEND="
 		projectm? ( media-libs/libprojectm:0 media-fonts/dejavu:0 )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.22:0 )
 		qt4? ( dev-qt/qtgui:4 dev-qt/qtcore:4 )
-		samba? ( >=net-fs/samba-3.4.6:0[smbclient] )
+		samba? ( || ( >=net-fs/samba-3.4.6:0[smbclient] >=net-fs/samba-4.0.0:0[client] ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.10:0 )
 		sdl? ( >=media-libs/libsdl-1.2.8:0
 			sdl-image? ( media-libs/sdl-image:0 sys-libs/zlib:0 ) )
@@ -240,6 +240,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# Compatibility fix for Samba 4.
+	use samba && append-cppflags "-I/usr/include/samba-4.0"
+
 	# Needs libresid-builder from libsidplay:2 which is in another directory...
 	# FIXME!
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders/"
@@ -256,7 +259,6 @@ src_configure() {
 		--enable-screen \
 		$(use_enable a52) \
 		$(use_enable aalib aa) \
-		$(use_enable aac faad) \
 		$(use_enable alsa) \
 		$(use_enable altivec) \
 		$(use_enable atmo) \
@@ -282,6 +284,7 @@ src_configure() {
 		$(use_enable dxva2) \
 		$(use_enable egl) \
 		$(use_enable encode sout) \
+		$(use_enable faad) \
 		$(use_enable fbosd) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
