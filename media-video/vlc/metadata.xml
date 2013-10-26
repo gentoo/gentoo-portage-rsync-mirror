@@ -36,6 +36,7 @@
 		<flag name="libtiger">Enables Ogg Kate subtitles rendering using libtiger.</flag>
 		<flag name="linsys">Enables support for Linux Linear Systems Ltd. SDI and HD-SDI input cards.</flag>
 		<flag name="live">Enables live555 streaming media support (client support for rtsp).</flag>
+		<flag name="lua">Enable Lua scripting support, needed for including support for Jamendo (online music platform) and similar things.</flag>
 		<flag name="macosx">Enables Mac OS X gui support.</flag>
 		<flag name="macosx-audio">Enables Mac OS X audio module.</flag>
 		<flag name="macosx-dialog-provider">Enables Mac OS X dialog module.</flag>
