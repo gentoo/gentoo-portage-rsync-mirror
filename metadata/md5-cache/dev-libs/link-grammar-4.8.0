@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell ) java? ( >=virtual/jdk-1.5 dev-java/ant-core ) app-arch/xz-utils >=sys-apps/sed-4 java? ( >=dev-java/java-config-2.1.9-r1 )
+DESCRIPTION=A Syntactic English parser
+EAPI=5
+HOMEPAGE=http://www.abisource.com/projects/link-grammar/ http://www.link.cs.cmu.edu/link/
+IUSE=aspell +hunspell java static-libs threads elibc_FreeBSD java
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=BSD
+RDEPEND=aspell? ( app-text/aspell ) hunspell? ( app-text/hunspell ) java? ( >=virtual/jdk-1.5 dev-java/ant-core ) java? ( >=dev-java/java-config-2.1.9-r1 )
+SLOT=0
+SRC_URI=http://www.abisource.com/downloads/link-grammar/4.8.0/link-grammar-4.8.0.tar.gz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=940f0ba4e3c0c44e6ab8f976cae4cde6

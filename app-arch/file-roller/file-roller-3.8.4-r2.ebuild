@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.8.4.ebuild,v 1.1 2013/08/25 18:43:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.8.4-r2.ebuild,v 1.1 2013/10/26 19:09:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -66,6 +66,18 @@ src_prepare() {
 	# Use absolute path to GNU tar since star doesn't have the same
 	# options. On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
 	epatch "${FILESDIR}"/${PN}-2.10.3-use_bin_tar.patch
+
+	# app-arch/{un,}rar-5 support, https://bugzilla.gnome.org/show_bug.cgi?id=707568
+	epatch "${FILESDIR}"/${PN}-3.8.4-rar-5.patch
+
+	# libarchive: fixed failure when extracting some tar archives
+	epatch "${FILESDIR}"/${PN}-3.8.4-extract-failure.patch
+
+	# libarchive: restore the folders modification time correctly
+	epatch "${FILESDIR}"/${PN}-3.8.4-modifications-time.patch
+
+	# Ignore errors when setting file attributes
+	epatch "${FILESDIR}"/${PN}-3.8.4-ignore-errors.patch
 
 	# File providing Gentoo package names for various archivers
 	cp -f "${FILESDIR}/3.6.0-packages.match" data/packages.match || die

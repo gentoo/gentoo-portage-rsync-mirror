@@ -1,6 +1,16 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.325 2013/09/09 00:40:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.326 2013/10/26 19:09:33 pacho Exp $
+
+*file-roller-3.8.4-r2 (26 Oct 2013)
+
+  26 Oct 2013; Pacho Ramos <pacho@gentoo.org> +file-roller-3.8.4-r2.ebuild,
+  +files/file-roller-3.8.4-extract-failure.patch,
+  +files/file-roller-3.8.4-ignore-errors.patch,
+  +files/file-roller-3.8.4-modifications-time.patch,
+  -file-roller-3.8.4-r1.ebuild, -file-roller-3.8.4.ebuild:
+  Apply upstream patches fixing some problems when unpacking (#489074 by Philipp
+  Leonhardt), drop old.
 
 *file-roller-3.8.4-r1 (09 Sep 2013)
 
