@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.15.0.ebuild,v 1.1 2013/10/08 13:34:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.15.0.ebuild,v 1.2 2013/10/26 13:59:36 jlec Exp $
 
 EAPI=5
 
@@ -37,12 +37,13 @@ done
 RDEPEND="
 	>=dev-db/sqlite-3.5.9:3
 	>=dev-libs/dbus-glib-0.80
-	>=dev-libs/glib-2.30.0:2
+	>=dev-libs/glib-2.33.0:2
 	>=dev-libs/json-glib-0.7.6
-	>=dev-libs/libgee-0.8.5:0.8
+	>=dev-libs/libgee-0.8.0:0.8
 	>=dev-libs/libxml2-2.6.32:2
+	>=dev-util/desktop-file-utils-0.13
 	gnome-base/dconf
-	>=media-libs/gexiv2-0.4.90
+	>=media-libs/gexiv2-0.5
 	media-libs/gst-plugins-base:1.0
 	media-libs/gst-plugins-good:1.0
 	media-libs/gstreamer:1.0
@@ -51,13 +52,13 @@ RDEPEND="
 	>=media-libs/libgphoto2-2.4.2:=
 	>=media-libs/libraw-0.13.2:=
 	>=net-libs/libsoup-2.26.0:2.4
-	net-libs/rest:0.7
-	net-libs/webkit-gtk:3
+	>=net-libs/rest-0.7:0.7
+	>=net-libs/webkit-gtk-1.4:3
 	>=virtual/udev-145[gudev]
 	>=x11-libs/gtk+-3.6.0:3"
 DEPEND="${RDEPEND}
 	$(vala_depend)
-	sys-devel/m4"
+	>=sys-devel/m4-1.4.13"
 
 DOCS=( AUTHORS MAINTAINERS NEWS README THANKS )
 

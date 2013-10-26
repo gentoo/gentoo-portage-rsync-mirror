@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jist
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jist/ChangeLog,v 1.13 2013/06/25 12:55:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jist/ChangeLog,v 1.14 2013/10/26 13:56:02 hasufell Exp $
+
+  26 Oct 2013; Julian Ospald <hasufell@gentoo.org> jist-1.5.1.ebuild:
+  add ruby20
 
   25 Jun 2013; Agostino Sarubbo <ago@gentoo.org> jist-1.5.1.ebuild:
   Stable for amd64, wrt bug #474372
