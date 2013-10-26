@@ -1,6 +1,16 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.857 2013/10/24 23:40:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.858 2013/10/26 05:53:46 tomwij Exp $
+
+*vlc-2.1.9999 (26 Oct 2013)
+
+  26 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/vlc-2.0.8-freetype-proper-default-font.patch, +vlc-2.1.9999.ebuild,
+  metadata.xml, vlc-2.0.9999.ebuild:
+  Updated 2.0.9999 and added 2.1.9999 by backporting fixes from 9999; adapted
+  2.0.9999 to work for the 2.0 branch, disabled opencv support because it breaks
+  against current ~ versions of opencv and requires multiple commits to be
+  backported.
 
   24 Oct 2013; Tom Wijsman <TomWij@gentoo.org>
   +files/vlc-2.1.0-fix-libtremor-libs.patch, vlc-9999.ebuild:

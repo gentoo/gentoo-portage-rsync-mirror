@@ -70,6 +70,7 @@
     <flag name="upnp">Enables support for Intel UPnP stack.</flag>
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
     <flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
+    <flag name="visual">Enables a libvisual based visualization plugin.</flag>
     <flag name="vlm">New videolan (media) manager (vlm), a little manager designed to launch and manage multiple streams from within one instance of VLC.</flag>
     <flag name="vpx">Enables the decoder(s) from the WebM VP8 / VP9 Codec SDK.</flag>
 	<flag name="waveout">Enable win32 waveOut plugin.</flag>
