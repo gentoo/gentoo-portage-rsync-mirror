@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.21-r1.ebuild,v 1.4 2011/10/15 14:46:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.21-r1.ebuild,v 1.5 2013/10/26 19:50:45 hasufell Exp $
 
 EAPI="2"
 
@@ -38,6 +38,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.20-gentoo.patch"
 	epatch "${FILESDIR}/${P}-libpng1.5.patch" #378199
 	epatch "${FILESDIR}/${P}-LDFLAGS.patch" #334571
+	epatch "${FILESDIR}/${P}-underlinking.patch" #484434
 
 	sed -i \
 		-e "s|linux_PREFIX:=/usr/local|linux_PREFIX:=/usr|" \

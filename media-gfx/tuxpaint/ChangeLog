@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.68 2013/02/16 12:43:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.69 2013/10/26 19:50:45 hasufell Exp $
+
+  26 Oct 2013; Julian Ospald <hasufell@gentoo.org> tuxpaint-0.9.21-r1.ebuild,
+  +files/tuxpaint-0.9.21-underlinking.patch:
+  fix underlinking wrt #484434
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436
