@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.13.ebuild,v 1.2 2013/10/06 18:41:30 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.13.ebuild,v 1.3 2013/10/26 22:04:02 pacho Exp $
 
 EAPI=5
 
-inherit eutils user
+inherit eutils readme.gentoo user
 
 DESCRIPTION="Minimalistic Murmur (Mumble server)"
 HOMEPAGE="http://code.google.com/p/umurmur/"
@@ -21,6 +21,12 @@ DEPEND=">=dev-libs/protobuf-c-0.14
 	!polarssl? ( dev-libs/openssl )"
 
 RDEPEND="${DEPEND}"
+
+DOC_CONTENTS="
+	A configuration file has been installed at /etc/umurmur.conf - you may
+	want to review it. See also\n
+	http://code.google.com/p/umurmur/wiki/Configuring02x
+"
 
 pkg_setup() {
 	enewgroup murmur
@@ -57,12 +63,12 @@ src_install() {
 	insinto ${confdir}
 	doins "${FILESDIR}"/umurmur.conf
 	fperms 0640 ${confdir}/umurmur.conf
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
-	elog "A configuration file has been installed at /etc/umurmur.conf - you may "
-	elog "want to review it. See also"
-	elog "   http://code.google.com/p/umurmur/wiki/Configuring02x"
+	readme.gentoo_print_elog
 
 	if use polarssl ; then
 		elog
