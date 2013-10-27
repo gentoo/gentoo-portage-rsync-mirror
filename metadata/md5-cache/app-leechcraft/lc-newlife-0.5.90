@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=~app-leechcraft/lc-core-0.5.90
 SLOT=0
 SRC_URI=mirror://sourceforge/leechcraft/leechcraft-0.5.90.tar.xz http://dist.leechcraft.org/LeechCraft/0.5.90/leechcraft-0.5.90.tar.xz
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	leechcraft	4557a8dab7ef51789fcdf55a9a94992d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	leechcraft	4557a8dab7ef51789fcdf55a9a94992d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=20844282d80f52df548b2176049e2e53

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-7.0.39.ebuild,v 1.1 2013/03/28 12:55:47 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-7.0.47.ebuild,v 1.1 2013/10/27 07:40:46 fordfrog Exp $
 
-EAPI="2"
+EAPI="5"
 JAVA_PKG_IUSE="source"
 
 inherit eutils java-pkg-2 java-ant-2
@@ -15,7 +15,7 @@ SRC_URI="mirror://apache/tomcat/tomcat-7/v${PV}/src/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="3.0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.6"
@@ -27,7 +27,7 @@ java_prepare() {
 	cp "${FILESDIR}/${SLOT}-build.xml" build.xml || die "Could not replace build.xml"
 	rm -fR */*/build.xml
 	einfo "Removing bundled jars and classes"
-	find "${S}" '(' -name '*.class' -o -name '*.jar' ')' -delete
+	find "${S}" '(' -name '*.class' -o -name '*.jar' ')' -exec rm -frv {} +
 }
 
 src_install() {

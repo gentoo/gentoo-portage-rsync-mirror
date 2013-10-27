@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-im/jabber-base-0.01 >=dev-libs/expat-1.95 >=dev-lang/erlang-12.2.5[ssl] odbc? ( dev-db/unixODBC ) ldap? ( =net-nds/openldap-2* ) >=dev-libs/openssl-0.9.8e captcha? ( media-gfx/imagemagick[truetype,png] ) zlib? ( sys-libs/zlib ) >=sys-apps/shadow-4.1.4.2-r3 pam? ( virtual/pam )
 SLOT=0
 SRC_URI=http://www.process-one.net/downloads/ejabberd/2.1.12/ejabberd-2.1.12.tgz mod_statsdx? ( http://dev.gentoo.org/~radhermit/dist/ejabberd-mod_statsdx-1118.patch.gz )
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=bbe9847a20e9aca1aeccc1971b2e413b

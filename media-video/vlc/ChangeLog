@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.869 2013/10/26 22:22:45 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.870 2013/10/27 07:04:09 tomwij Exp $
+
+  27 Oct 2013; Tom Wijsman <TomWij@gentoo.org> vlc-2.1.0.ebuild,
+  vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Update the dependency restrictions from configure.ac, as dependencies like
+  gnutls need a more strict version; fixes bug #489516, reported by Timo
+  Rothenpieler as well as reported by Vasco Flores over mail.
 
   26 Oct 2013; Tom Wijsman <TomWij@gentoo.org> vlc-2.1.0.ebuild,
   vlc-2.1.9999.ebuild, vlc-9999.ebuild:

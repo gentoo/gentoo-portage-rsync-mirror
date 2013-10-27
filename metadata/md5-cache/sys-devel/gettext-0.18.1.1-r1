@@ -10,5 +10,5 @@ PDEPEND=emacs? ( app-emacs/po-mode )
 RDEPEND=virtual/libiconv dev-libs/libxml2 sys-libs/ncurses dev-libs/expat acl? ( virtual/acl ) git? ( dev-vcs/git )
 SLOT=0
 SRC_URI=mirror://gnu/gettext/gettext-0.18.1.1.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	08a40a43c401c96d16477c02e56d9a64	libtool	b1c8688e60f9580bcb9bb46e08737eb1	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	libtool	b1c8688e60f9580bcb9bb46e08737eb1	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=09e43d79191a2287ea1177a8ef6317f9
