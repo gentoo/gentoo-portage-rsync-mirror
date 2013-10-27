@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.551 2013/10/25 13:33:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.552 2013/10/27 15:15:58 jer Exp $
+
+*wireshark-1.11.0-r2 (27 Oct 2013)
+
+  27 Oct 2013; Jeroen Roovers <jer@gentoo.org> -wireshark-1.11.0-r1.ebuild,
+  +wireshark-1.11.0-r2.ebuild:
+  Install a new .desktop file for wireshark-qt (bug #489500 by Markus Wernig).
 
 *wireshark-1.11.0-r1 (25 Oct 2013)
 

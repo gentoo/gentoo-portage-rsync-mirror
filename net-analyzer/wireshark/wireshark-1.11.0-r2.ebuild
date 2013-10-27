@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.0-r1.ebuild,v 1.1 2013/10/25 13:33:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.0-r2.ebuild,v 1.1 2013/10/27 15:15:58 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps user
@@ -200,7 +200,15 @@ src_install() {
 				newins image/${c}${d}-app-wireshark.png wireshark.png
 			done
 		done
+	fi
+
+	if use gtk2 || use gtk3; then
 		domenu wireshark.desktop
+	fi
+
+	if use qt4; then
+		sed -e '/Exec=/s|wireshark|&-qt|g' wireshark.desktop > wireshark-qt.desktop || die
+		domenu wireshark-qt.desktop
 	fi
 
 	use pcap && chmod o-x "${ED}"/usr/bin/dumpcap #357237
