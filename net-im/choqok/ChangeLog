@@ -1,6 +1,9 @@
 # ChangeLog for net-im/choqok
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.38 2013/10/26 21:02:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.39 2013/10/27 00:57:25 johu Exp $
+
+  27 Oct 2013; Johannes Huber <johu@gentoo.org> -choqok-1.3_p20130618.ebuild:
+  Remove old.
 
   26 Oct 2013; Agostino Sarubbo <ago@gentoo.org> choqok-1.4.ebuild:
   Stable for x86, wrt bug #489314
