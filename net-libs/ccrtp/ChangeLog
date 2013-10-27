@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ccrtp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.30 2013/08/10 12:55:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.31 2013/10/27 09:35:38 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> -ccrtp-1.6.0.ebuild,
+  -ccrtp-1.7.0.ebuild, -ccrtp-2.0.3.ebuild, metadata.xml:
+  Cleanup due voip herd removal:
+  http://article.gmane.org/gmane.linux.gentoo.devel/88434
 
   10 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ccrtp-2.0.5.ebuild:
   Stable for ppc, wrt bug #470546

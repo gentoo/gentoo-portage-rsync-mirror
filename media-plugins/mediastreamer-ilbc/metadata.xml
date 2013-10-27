@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>voip</herd>
+<maintainer><email>maintainer-needed@gentoo.org</email></maintainer>
 	<use>
 		<flag name='20ms-frames'>enable 20ms frame size (default is 30ms). Some
 		VOIP providers such as Gizmo5 (aka Sipphone) require the codec to be

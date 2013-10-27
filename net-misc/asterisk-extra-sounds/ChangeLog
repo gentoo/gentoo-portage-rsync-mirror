@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-extra-sounds
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-extra-sounds/ChangeLog,v 1.5 2013/02/07 22:34:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-extra-sounds/ChangeLog,v 1.6 2013/10/27 09:48:03 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due voip herd removal:
+  http://article.gmane.org/gmane.linux.gentoo.devel/88434
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org>
   asterisk-extra-sounds-1.4.11.ebuild:
@@ -23,4 +27,3 @@
   20 Aug 2010; <chainsaw@gentoo.org> +asterisk-extra-sounds-1.4.11.ebuild,
   +metadata.xml:
   Initial commit, ebuild by Jaco Kroon. For bug #328513.
-

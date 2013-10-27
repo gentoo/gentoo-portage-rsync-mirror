@@ -2,8 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gnome</herd>
-<herd>voip</herd>
-<herd>net-im</herd>
 <use>
   <flag name='zeroconf'>Enable Link-Local Messaging via the zeroconf or Bonjour protocol.</flag>
   <flag name='sip'>Enable SIP/SIMPLE messaging and calling.</flag>

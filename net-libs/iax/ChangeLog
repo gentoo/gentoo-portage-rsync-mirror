@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/iax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.11 2010/11/04 17:32:53 fauli Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/ChangeLog,v 1.12 2013/10/27 09:38:21 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due voip herd removal:
+  http://article.gmane.org/gmane.linux.gentoo.devel/88434
 
   04 Nov 2010; Christian Faulhammer <fauli@gentoo.org> iax-0.2.2-r1.ebuild:
   stable x86, bug 342757
@@ -37,4 +41,3 @@
 
   27 Jul 2002; Sean Summers <ebuild@generalprotectionfault.com> iax-0.2.2.ebuild :
   Initial package
-

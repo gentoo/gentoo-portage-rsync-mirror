@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>voip</herd>
 	<maintainer>
 		<email>neurogeek@gentoo.org</email>
 		<name>Jesus Rivero</name>
-		<description>Assign to herd and CC me</description>
 	</maintainer>
 	<use>
 		<flag name="asn">Enable ASN decoding/encoding support</flag>

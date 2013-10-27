@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>gnome</herd>
-	<herd>voip</herd>
 	<use>
 		<flag name="vala">Enable bindings for <pkg>dev-lang/vala</pkg></flag>
 	</use>

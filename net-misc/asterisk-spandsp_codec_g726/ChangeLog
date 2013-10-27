@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk-spandsp_codec_g726
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-spandsp_codec_g726/ChangeLog,v 1.5 2013/07/21 09:06:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-spandsp_codec_g726/ChangeLog,v 1.6 2013/10/27 09:49:05 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due voip herd removal:
+  http://article.gmane.org/gmane.linux.gentoo.devel/88434
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #92799

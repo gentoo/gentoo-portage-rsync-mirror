@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_survival/minetest_survival-0.4.6.ebuild,v 1.1 2013/08/05 22:43:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_survival/minetest_survival-0.4.6.ebuild,v 1.2 2013/10/27 09:59:35 hasufell Exp $
 
 EAPI=5
 inherit vcs-snapshot games
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/minetest/survival/archive/${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="GPL-2 CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=games-action/minetest-${PV}[-dedicated]"

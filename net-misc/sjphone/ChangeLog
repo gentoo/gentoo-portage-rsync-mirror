@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sjphone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/ChangeLog,v 1.6 2013/04/17 18:29:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sjphone/ChangeLog,v 1.7 2013/10/27 09:54:56 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Needed by net-misc/siproxd
 
   17 Apr 2013; Ulrich Müller <ulm@gentoo.org> sjphone-1.60.2235.ebuild:
   Fix LICENSE, see LICENSE and README files, bug 465196.
@@ -27,4 +30,3 @@
   05 May 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +sjphone-299a.ebuild:
   New ebuild thanks to karpi <karpi.web@email.cz> in bug 132064
-

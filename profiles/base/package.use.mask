@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.514 2013/10/21 21:41:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.515 2013/10/27 09:55:06 hasufell Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Julian Ospald <hasufell@gentoo.org> (27 Oct 2013)
+# luajit is in ~arch, prepare for minetest stabilization
+games-action/minetest luajit
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Oct 2013)
 # Masked for security bug #472280, CVE 2013-1872

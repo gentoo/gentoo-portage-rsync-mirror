@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.604 2013/10/25 14:58:25 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.605 2013/10/27 09:55:06 hasufell Exp $
+
+  27 Oct 2013; Julian Ospald <hasufell@gentoo.org> package.use.mask:
+  mask luajit useflag for games-action/minetest
 
   25 Oct 2013; Davide Pesavento <pesa@gentoo.org> package.use.force:
   Remove obsolete entry.

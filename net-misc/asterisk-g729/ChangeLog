@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk-g729
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.8 2013/01/14 12:49:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-g729/ChangeLog,v 1.9 2013/10/27 09:48:15 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Voip herd is removed: http://article.gmane.org/gmane.linux.gentoo.devel/88434
 
   14 Jan 2013; Tony Vroon <chainsaw@gentoo.org>
   asterisk-g729-1.8.4.3.1.5-r2.ebuild:

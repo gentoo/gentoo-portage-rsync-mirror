@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/openmcu
 # Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/ChangeLog,v 1.5 2013/03/06 19:00:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/openmcu/ChangeLog,v 1.6 2013/10/27 09:56:54 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> -openmcu-2.2.1.ebuild,
+  metadata.xml:
+  Cleanup due voip herd removal:
+  http://article.gmane.org/gmane.linux.gentoo.devel/88434
 
 *openmcu-2.2.5 (06 Mar 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmimic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.22 2013/08/10 19:09:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/ChangeLog,v 1.23 2013/10/27 10:01:21 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due voip herd removal:
+  http://article.gmane.org/gmane.linux.gentoo.devel/88434
 
 *libmimic-1.0.4-r2 (10 Aug 2013)
 
@@ -78,4 +82,3 @@
   21 May 2006; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
   +libmimic-1.0.4.ebuild:
   New ebuild libmimic, dep of gst-plugins-farsight, dep of tapioca, bug 127383
-
