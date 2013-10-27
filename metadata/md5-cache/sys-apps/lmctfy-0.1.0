@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install
+DEPEND=dev-libs/protobuf dev-cpp/gflags dev-libs/re2
+DESCRIPTION=Linux application container management from Google
+EAPI=5
+HOMEPAGE=https://github.com/google/lmctfy
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=dev-libs/protobuf dev-cpp/gflags dev-libs/re2
+SLOT=0
+SRC_URI=https://github.com/google/lmctfy/archive/0.1.0.tar.gz -> lmctfy-0.1.0.tar.gz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=3175ed3f8421c6e0a037993b15effb9f
