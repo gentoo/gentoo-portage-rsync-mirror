@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=>=dev-libs/boost-1.34[threads] dev-libs/fribidi media-libs/libsdl[opengl] media-libs/libvorbis media-libs/sdl-image[png] media-libs/sdl-net media-libs/sdl-ttf media-libs/speex virtual/glu virtual/opengl >=sys-apps/sed-4 dev-util/scons
+DESCRIPTION=Real Time Strategy (RTS) game involving a brave army of globs
+EAPI=5
+HOMEPAGE=http://globulation2.org/
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3
+RDEPEND=>=dev-libs/boost-1.34[threads] dev-libs/fribidi media-libs/libsdl[opengl] media-libs/libvorbis media-libs/sdl-image[png] media-libs/sdl-net media-libs/sdl-ttf media-libs/speex virtual/glu virtual/opengl
+SLOT=0
+SRC_URI=mirror://nongnu/glob2/0.9.4/glob2-0.9.4.4.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=77665cb31e1d8004591a269faa85aec2

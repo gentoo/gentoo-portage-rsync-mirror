@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r3.ebuild,v 1.2 2013/10/23 07:28:36 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r3.ebuild,v 1.3 2013/10/27 16:47:02 grobian Exp $
 
 EAPI=3
 
 inherit eutils multilib libtool
 
 MY_P=${P/-prefix/}  # just use "upstream" sources
-EINFO=einfo-1.0.3
+EINFO=einfo-1.0.4
 DESCRIPTION="Minimal baselayout and e-functions for Gentoo Prefix installs"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
@@ -29,9 +29,6 @@ pkg_preinst() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${EINFO}-checkfuncs-aix.patch # generic aix port
-	# POSIX specifies <termios.h>, AIX lacks <sys/termios.h>
-	sed -i -e 's|<sys/termios.h>|<termios.h>|' src/libeinfo/libeinfo.c || die
 	# exotic platforms still aren't fixed in upstream libtool
 	elibtoolize
 }
