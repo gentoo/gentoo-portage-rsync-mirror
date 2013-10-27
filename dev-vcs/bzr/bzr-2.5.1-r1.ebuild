@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.5.1-r1.ebuild,v 1.1 2013/05/07 17:55:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.5.1-r1.ebuild,v 1.2 2013/10/27 08:42:31 mgorny Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -38,12 +38,9 @@ PATCHES=(
 	"${FILESDIR}/${P}-sphinx-test-failures.patch"
 )
 
-src_compile() {
+python_configure_all() {
 	# Generate the locales first to avoid a race condition.
-	python_export_best
-	"${PYTHON}" setup.py build_mo || die
-
-	distutils-r1_src_compile
+	esetup.py build_mo
 }
 
 python_compile() {
