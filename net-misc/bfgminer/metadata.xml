@@ -14,9 +14,15 @@
 		<flag name='adl'>Enable support for controlling fans and overclocking on AMD cards with AMD Display Library</flag>
 		<flag name='avalon'>Enable support for mining with Avalon ASIC modules</flag>
 		<flag name='bitforce'>Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs</flag>
+		<flag name='bfsb'>Enable support for mining on BFSB host Raspberry Pi</flag>
+		<flag name='bigpic'>Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)</flag>
+		<flag name='bitfury'>Enable support for mining with 55nm Bitfury-based devices</flag>
 		<flag name='cpumining'>Enable support for mining with CPUs</flag>
 		<flag name='icarus'>Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)</flag>
+		<flag name='littlefury'>Enable support for mining with LittleFury USB sticks</flag>
+		<flag name='metabank'>Enable support for mining on Metabank host Raspberry Pi</flag>
 		<flag name='modminer'>Enable support for mining with ModMiner FPGAs</flag>
+		<flag name='nanofury'>Enable support for mining with NanoFury USB sticks</flag>
 		<flag name='opencl'>Enable support for mining with OpenCL-capable devices (GPUs)</flag>
 		<flag name='padlock'>Enable support for mining with VIA Padlock CPUs</flag>
 		<flag name='proxy'>Enable support for virtual proxy device</flag>
