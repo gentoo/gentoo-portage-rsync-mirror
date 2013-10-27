@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/rbot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.54 2013/08/20 12:20:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.55 2013/10/27 18:24:53 a3li Exp $
+
+*rbot-0.9.15_p20131020 (27 Oct 2013)
+
+  27 Oct 2013; Alex Legler <a3li@gentoo.org> +rbot-0.9.15_p20131020.ebuild,
+  -rbot-9999-r10.ebuild, +files/rbot-rakefile.patch:
+  Add git snapshot fixing bug 488674. Remove 9999-r10, bug 479812.
 
   20 Aug 2013; Patrick Lauer <patrick@gentoo.org> -rbot-0.9.10-r1.ebuild:
   QA: Remove version with unsatisfiable dependencies

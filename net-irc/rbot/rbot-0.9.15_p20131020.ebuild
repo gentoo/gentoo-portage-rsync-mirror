@@ -1,73 +1,60 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r10.ebuild,v 1.9 2013/01/12 08:24:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-0.9.15_p20131020.ebuild,v 1.1 2013/10/27 18:24:53 a3li Exp $
 
-inherit ruby eutils user
+EAPI="2"
+USE_RUBY="ruby18 ruby19"
 
-[[ ${PV} == *"9999" ]] && inherit git-2
+inherit ruby-ng eutils user
 
 DESCRIPTION="rbot is a ruby IRC bot"
 HOMEPAGE="http://ruby-rbot.org/"
+SRC_URI="http://dev.a3li.li/gentoo/distfiles/${P}.tar.gz"
 
 LICENSE="|| ( feh GPL-2 )"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="spell aspell timezone translator shorturl nls dict figlet
 	fortune cal host toilet"
-ILINGUAS="zh_CN zh_TW ru nl de fr it ja"
+ILINGUAS="zh_CN zh_TW ru nl de fi fr it ja"
+S="${WORKDIR}/${PN}-master"
 
 for lang in $ILINGUAS; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
-RDEPEND=">=dev-lang/ruby-1.8
-	dev-ruby/ruby-bdb
-	timezone? ( dev-ruby/tzinfo )
+RDEPEND+="
 	spell? (
 		aspell? ( app-text/aspell )
 		!aspell? ( app-text/hunspell )
 	)
-	translator? ( dev-ruby/mechanize )
-	shorturl? ( dev-ruby/shorturl )
-	nls? ( dev-ruby/ruby-gettext )
-	dict? ( dev-ruby/ruby-dict )
 	figlet? ( app-misc/figlet )
 	toilet? ( app-misc/toilet )
 	fortune? ( games-misc/fortune-mod )
 	cal? ( || ( sys-apps/util-linux sys-freebsd/freebsd-ubin ) )
 	host? ( net-dns/bind-tools )"
-DEPEND="
+
+ruby_add_bdepend "
 	nls? (
-		dev-ruby/ruby-gettext
+		>=dev-ruby/ruby-gettext-2
 		dev-ruby/rake
 	)"
 
-if [[ ${PV} == *"9999" ]]; then
-	SRC_URI=""
-	EGIT_REPO_URI="git://ruby-rbot.org/rbot.git"
-else
-	MY_P="${P/_/-}"
-	S="${WORKDIR}/${P%_*}"
-	SRC_URI="http://ruby-rbot.org/download/${MY_P}.tgz"
-fi
+ruby_add_rdepend "
+	dev-ruby/tokyocabinet
+	timezone? ( dev-ruby/tzinfo )
+	translator? ( dev-ruby/mechanize )
+	shorturl? ( dev-ruby/shorturl )
+	nls? ( dev-ruby/ruby-gettext >=dev-ruby/locale-2.0.5-r2 )
+	dict? ( >=dev-ruby/ruby-dict-0.9.4-r2 )"
+
+RUBY_PATCHES=( "rbot-rakefile.patch" )
 
 pkg_setup() {
 	enewuser rbot -1 -1 /var/lib/rbot nobody
 }
 
-src_unpack() {
-	if [[ ${PV} == *"9999" ]]; then
-		git-2_src_unpack
-
-		cd "${S}"
-		sed -i -e '/\$version=/s:".\+":"'${PV}'":' bin/rbot \
-			|| die "Unable to fix rbot script version."
-	else
-		unpack ${A}
-	fi
-}
-
-src_compile() {
+all_ruby_compile() {
 	disable_rbot_plugin() {
 		mv "${S}"/data/rbot/plugins/$1.rb{,.disabled}
 	}
@@ -133,6 +120,7 @@ src_compile() {
 			local lang_rbot_ru="russian"
 			local lang_rbot_nl="dutch"
 			local lang_rbot_de="german"
+			local lang_rbot_fi="finnish"
 			local lang_rbot_fr="french"
 			local lang_rbot_it="italian"
 			local lang_rbot_ja="japanese"
@@ -148,33 +136,41 @@ src_compile() {
 					"${S}"/data/rbot/templates/lart/larts-${lang_rbot} \
 					"${S}"/data/rbot/templates/lart/praises-${lang_rbot} \
 					"${S}"/data/rbot/templates/salut/salut-${lang_rbot} \
-					"${S}"/po/${lang}
+					"${S}"/po/${lang} &>/dev/null
 			done
 		fi
 
-		rake makemo || die "locale generation failed"
+		ruby /usr/bin/rake makemo || die "locale generation failed"
 	fi
-
-	ruby_econf || die "ruby_econf failed"
 }
 
-src_install() {
+each_ruby_compile() {
+	${RUBY} setup.rb config --prefix="/usr" \
+		|| die "setup.rb install failed"
+}
+
+each_ruby_install() {
 	${RUBY} setup.rb install --prefix="${D}" \
 		|| die "setup.rb install failed"
+}
 
+all_ruby_install() {
 	diropts -o rbot -g nobody -m 0700
 	keepdir /var/lib/rbot
 
 	insinto /etc
 	doins "${T}"/rbot.conf
 
-	newinitd "${FILESDIR}/rbot.init" rbot
-	newconfd "${FILESDIR}/rbot.conf" rbot
+	newinitd "${FILESDIR}/rbot.init2" rbot
+	newconfd "${FILESDIR}/rbot.conf2" rbot
 }
 
 pkg_postinst() {
-	einfo
-	elog "rbot now can be started as a normal service."
+	elog "rbot can be started as a normal service."
 	elog "Check /etc/conf.d/rbot file for more information about this feature."
-	einfo
+	ewarn "DEPRECATION NOTICE:"
+	ewarn "The bdb database backend is deprecated and only available on Ruby 1.8."
+	ewarn "To migrate to the new tokyocabinet-based backend, change the core.db"
+	ewarn "parameter in your bot's conf.yaml to 'tc' and restart rbot."
+	ewarn "This procedure requires a Ruby version supporting both BDB and TC."
 }
