@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.65 2013/09/06 18:11:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.66 2013/10/26 23:21:20 hasufell Exp $
+
+  26 Oct 2013; Julian Ospald <hasufell@gentoo.org> fpc-2.6.2.ebuild:
+  stable on x86 wrt #478690
 
   06 Sep 2013; Tim Harder <radhermit@gentoo.org> fpc-2.6.2.ebuild:
   Update sparc bootstrap compiler (bug #483980).
