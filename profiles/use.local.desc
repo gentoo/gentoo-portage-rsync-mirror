@@ -2608,17 +2608,12 @@ gnome-extra/zeitgeist:telepathy - Enable telepathy framework as data source
 gnome-extra/zeitgeist-datahub:download - Monitor XDG download directory
 gnome-extra/zeitgeist-datahub:telepathy - Telepathy logging support for 1-to-1 chats, calls and file transfers
 gnome-extra/zeitgeist-datasources:bzr - Zeitgeist plugin for dev-vcs/bzr as data source
-gnome-extra/zeitgeist-datasources:chromium - Zeitgeist plugin for www-client/chromium as data source
 gnome-extra/zeitgeist-datasources:emacs - Zeitgeist plugin for emacs as data source
-gnome-extra/zeitgeist-datasources:eog - Zeitgeist plugin for media-gfx/eog as data source
 gnome-extra/zeitgeist-datasources:firefox - Zeitgeist plugin for www-client/firefox as data source
 gnome-extra/zeitgeist-datasources:geany - Zeitgeist plugin for dev-util/geany as data source
-gnome-extra/zeitgeist-datasources:gedit - Zeitgeist plugin for app-editors/gedit as data source
-gnome-extra/zeitgeist-datasources:rhythmbox - Zeitgeist plugin for media-sound/rhythmbox as data source
 gnome-extra/zeitgeist-datasources:telepathy - Zeitgeist plugin for telepathy framework as data source
 gnome-extra/zeitgeist-datasources:thunderbird - Zeitgeist plugin for mail-client/thunderbird as data source
 gnome-extra/zeitgeist-datasources:tomboy - Zeitgeist plugin for app-misc/tomboy as data source
-gnome-extra/zeitgeist-datasources:totem - Zeitgeist plugin for media-video/totem as data source
 gnome-extra/zeitgeist-datasources:vim - Zeitgeist plugin for vim as data source
 gnome-extra/zeitgeist-datasources:xchat - Zeitgeist plugin for net-irc/xchat-gnome as data source
 gnome-extra/zeitgeist-extensions:fts - Enable the full text search

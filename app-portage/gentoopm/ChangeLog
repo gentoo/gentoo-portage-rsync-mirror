@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.48 2013/10/14 20:34:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.49 2013/10/27 17:01:07 mgorny Exp $
+
+  27 Oct 2013; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.6.ebuild,
+  gentoopm-0.2.8.ebuild, gentoopm-0.2.9.ebuild, gentoopm-9999.ebuild:
+  Remove redundant python_export_best (done by the eclass).
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> gentoopm-9999.ebuild:
   Switch to git-r3. Clean up a bit.

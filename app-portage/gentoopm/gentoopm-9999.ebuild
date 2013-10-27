@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-9999.ebuild,v 1.7 2013/10/14 20:34:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-9999.ebuild,v 1.8 2013/10/27 17:01:07 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -37,8 +37,6 @@ SRC_URI=
 
 python_compile_all() {
 	if use doc; then
-		python_export_best
-		python_wrapper_setup
 		esetup.py doc
 	fi
 }

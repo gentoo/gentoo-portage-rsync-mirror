@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.1.ebuild,v 1.3 2013/09/08 14:25:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.1.ebuild,v 1.4 2013/10/27 17:27:56 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ AUTOTOOLS_AUTORECONF=true
 VALA_MIN_API_VERSION=0.14
 PYTHON_COMPAT=( python{2_6,2_7}  )
 
-inherit autotools-utils eutils mono multilib python-single-r1 versionator vala
+inherit autotools-utils eutils mono-env multilib python-single-r1 versionator vala
 
 DIR_PV=$(get_version_component_range 1-2)
 DIR_PV2=$(get_version_component_range 1-3)
@@ -35,7 +35,7 @@ RDEPEND="
 	geany? ( dev-util/geany )
 	mono? ( dev-util/monodevelop )
 	telepathy? (
-		dev-python/telepathy-python[${PYTHON_USEDEP}]
+		net-libs/telepathy-glib[${PYTHON_USEDEP}]
 		dev-python/dbus-python[${PYTHON_USEDEP}]
 		dev-python/pygobject[${PYTHON_USEDEP}]
 		)
