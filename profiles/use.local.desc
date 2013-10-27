@@ -1446,6 +1446,7 @@ dev-lang/io:libxml2 - Build add-on for dev-libs/libxml2
 dev-lang/io:md5sum - Build md5sum add-on
 dev-lang/io:sha1 - Build sha1 add-on
 dev-lang/io:twitter - Build twitter add-on
+dev-lang/lazarus:minimal - Don't build extra packages from the bigide component
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
 dev-lang/logtalk:gnupl - Support GNU Prolog back-end compiler
 dev-lang/logtalk:qupl - Support Qu-Prolog back-end compiler

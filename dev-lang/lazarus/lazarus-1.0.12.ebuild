@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-1.0.12.ebuild,v 1.1 2013/09/13 07:08:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-1.0.12.ebuild,v 1.2 2013/10/26 23:56:18 hasufell Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2 LGPL-2.1-with-linking-exception"
 KEYWORDS="~amd64 ~ppc ~x86"
 DESCRIPTION="Lazarus IDE is a feature rich visual programming environment emulating Delphi."
 HOMEPAGE="http://www.lazarus.freepascal.org/"
-IUSE=""
+IUSE="minimal"
 SRC_URI="http://downloads.sourceforge.net/project/${PN}/Lazarus%20Zip%20_%20GZip/Lazarus%20${PV}/${PN}-${PV}-0.tar.gz"
 
 DEPEND=">=dev-lang/fpc-${FPCVER}[source]
@@ -42,7 +42,9 @@ src_prepare() {
 }
 
 src_compile() {
-	LCL_PLATFORM=gtk2 emake -j1 || die "make failed!"
+	LCL_PLATFORM=gtk2 emake \
+		$(usex minimal "" "bigide") \
+		-j1
 }
 
 src_install() {
@@ -61,12 +63,13 @@ src_install() {
 		--exclude="killme*" --exclude=".gdb_hist*" \
 		--exclude="debian"  --exclude="COPYING*" \
 		--exclude="*.app" \
-		"${S}" "${D}"usr/share \
+		"${S}" "${ED%/}"/usr/share \
 	|| die "Unable to copy files!"
 
 	dosym ../share/lazarus/startlazarus /usr/bin/startlazarus
 	dosym ../share/lazarus/startlazarus /usr/bin/lazarus
 	dosym ../share/lazarus/lazbuild /usr/bin/lazbuild
+	use minimal || dosym ../share/lazarus/components/chmhelp/lhelp/lhelp /usr/bin/lhelp
 	dosym ../lazarus/images/ide_icon48x48.png /usr/share/pixmaps/lazarus.png
 
 	make_desktop_entry startlazarus "Lazarus IDE" "lazarus" || die "Failed making desktop entry!"

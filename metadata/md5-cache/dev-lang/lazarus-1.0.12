@@ -3,6 +3,7 @@ DEPEND=>=dev-lang/fpc-2.6.0[source] net-misc/rsync x11-libs/gtk+:2 >=sys-devel/b
 DESCRIPTION=Lazarus IDE is a feature rich visual programming environment emulating Delphi.
 EAPI=5
 HOMEPAGE=http://www.lazarus.freepascal.org/
+IUSE=minimal
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2 LGPL-2.1-with-linking-exception
 RDEPEND=>=dev-lang/fpc-2.6.0[source] net-misc/rsync x11-libs/gtk+:2 !=gnome-base/librsvg-2.16.1
@@ -10,4 +11,4 @@ RESTRICT=strip
 SLOT=0
 SRC_URI=http://downloads.sourceforge.net/project/lazarus/Lazarus%20Zip%20_%20GZip/Lazarus%201.0.12/lazarus-1.0.12-0.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=781d64553b88e421a5b0a3de37b4100c
+_md5_=29519b78a8f1938264efa1063d15ff82

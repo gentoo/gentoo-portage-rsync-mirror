@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.38 2013/09/27 05:17:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.39 2013/10/26 23:56:18 hasufell Exp $
+
+  26 Oct 2013; Julian Ospald <hasufell@gentoo.org> lazarus-1.0.12.ebuild,
+  metadata.xml:
+  add minimal useflag wrt #349674
 
   27 Sep 2013; Tim Harder <radhermit@gentoo.org> -lazarus-0.9.26-r4.ebuild,
   -lazarus-0.9.28.2-r1.ebuild, -lazarus-1.0.4.ebuild,
