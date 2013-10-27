@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc5.ebuild,v 1.1 2013/10/24 07:03:04 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82_rc5.ebuild,v 1.2 2013/10/27 20:56:22 grobian Exp $
 
 EAPI="4"
 
@@ -9,15 +9,15 @@ inherit eutils toolchain-funcs multilib pam systemd
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis selinux syslog spf srs gnutls sqlite doc dovecot-sasl radius maildir +dkim dcc dsn dlfunc dmarc"
 REQUIRED_USE="spf? ( exiscan-acl ) srs? ( exiscan-acl ) dmarc? ( spf dkim )"
 
-DSN_EXIM_V=469
+DSN_EXIM_V=482  # local version patched by us
 DSN_V=1_3
 COMM_URI="ftp://ftp.exim.org/pub/exim/exim4$([[ ${PV} == *_rc* ]] && echo /test)"
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="${COMM_URI}/${P//rc/RC}.tar.bz2
 	mirror://gentoo/system_filter.exim.gz
-	dsn? ( mirror://sourceforge/eximdsn/eximdsn-patch-1.3/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch )
 	doc? ( ${COMM_URI}/${PN}-html-${PV//rc/RC}.tar.bz2 )"
+	#dsn? ( mirror://sourceforge/eximdsn/eximdsn-patch-1.3/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch )
 HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
@@ -92,9 +92,7 @@ src_prepare() {
 	fi
 
 	if use dsn ; then
-		cp "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch . || die
-		epatch "${FILESDIR}"/${PN}-4.76-dsn.patch
-		epatch exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
+		epatch "${FILESDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
 	fi
 
 	if use ipv6 ; then
