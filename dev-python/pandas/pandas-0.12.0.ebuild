@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.12.0.ebuild,v 1.4 2013/08/20 21:11:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.12.0.ebuild,v 1.5 2013/10/27 08:05:32 mgorny Exp $
 
 EAPI=5
 
@@ -78,7 +78,6 @@ python_prepare_all() {
 }
 
 python_compile_all() {
-	python_export_best
 	# To build docs the need be located in $BUILD_DIR,
 	# else PYTHONPATH points to unusable modules.
 	if use doc; then

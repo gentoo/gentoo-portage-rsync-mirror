@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/statsmodels
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/ChangeLog,v 1.3 2013/08/21 17:46:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/ChangeLog,v 1.4 2013/10/27 08:26:43 mgorny Exp $
+
+  27 Oct 2013; Michał Górny <mgorny@gentoo.org> statsmodels-0.5.0.ebuild:
+  Remove redundant python_export_best (done by the eclass).
 
   21 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> statsmodels-0.5.0.ebuild:
   Fix sandbox violation (bug #481822), second tentative

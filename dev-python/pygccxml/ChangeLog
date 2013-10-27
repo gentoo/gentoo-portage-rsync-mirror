@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/pygccxml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygccxml/ChangeLog,v 1.1 2013/08/30 10:43:33 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygccxml/ChangeLog,v 1.2 2013/10/27 08:19:30 mgorny Exp $
+
+  27 Oct 2013; Michał Górny <mgorny@gentoo.org> pygccxml-1.0.0.ebuild:
+  Remove redundant python_export_best (done by the eclass). Fix eclass use.
 
 *pygccxml-1.0.0 (30 Aug 2013)
 
   30 Aug 2013; Benda Xu <heroxbd@gentoo.org> +pygccxml-1.0.0.ebuild:
   Initial commit. bug 212013. Credits to k0001, yury, Mishael and Ross for
   submitting, testing and refining the ebuild.
-

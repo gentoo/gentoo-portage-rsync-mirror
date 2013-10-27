@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygccxml/pygccxml-1.0.0.ebuild,v 1.1 2013/08/30 10:43:33 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygccxml/pygccxml-1.0.0.ebuild,v 1.2 2013/10/27 08:19:30 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,28 +16,23 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
 
-DEPEND="doc? ( >=dev-python/epydoc-3 )
+DEPEND="doc? ( >=dev-python/epydoc-3[${PYTHON_USEDEP}] )
 	app-arch/unzip"
 RDEPEND=">=dev-cpp/gccxml-0.6"
 
 python_compile_all() {
 	if use doc; then
-		python_export_best
-		"${PYTHON}" setup.py doc || die
+		esetup.py doc || die
 	fi
 }
 
 python_test() {
-	"$(PYTHON)" unittests/test_all.py
+	"${PYTHON}" unittests/test_all.py
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=( docs/apidocs/* )
-
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r docs/example
-	fi
+	use doc && local HTML_DOCS=( docs/apidocs/. )
+	use examples && local EXAMPLES=( docs/example/. )
 
 	distutils-r1_python_install_all
 }

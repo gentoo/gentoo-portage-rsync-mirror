@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/pyplusplus-1.0.0-r1.ebuild,v 1.1 2013/09/16 11:59:54 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/pyplusplus-1.0.0-r1.ebuild,v 1.2 2013/10/27 08:24:43 mgorny Exp $
 
 EAPI=5
 
@@ -17,30 +17,25 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples +indexing"
 
-DEPEND="doc? ( >=dev-python/epydoc-3 )
+DEPEND="doc? ( >=dev-python/epydoc-3[${PYTHON_USEDEP}] )
 	app-arch/unzip"
-RDEPEND="=dev-python/pygccxml-1.0.0"
+RDEPEND="=dev-python/pygccxml-1.0.0[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/Py++-${PV}
 
 python_compile_all() {
 	if use doc; then
-		python_export_best
-		"$(PYTHON)" setup.py doc
+		esetup.py doc
 	fi
 }
 
 python_test() {
-	"$(PYTHON)" unittests/test_all.py
+	"${PYTHON}" unittests/test_all.py
 }
 
 python_install_all() {
-	use doc && local HTML_DOCS=(  docs/documentation/apidocs/* )
-
-	if use examples; then
-		insinto /usr/share/doc/${PF}
-		doins -r examples
-	fi
+	use doc && local HTML_DOCS=( docs/documentation/apidocs/. )
+	use examples && local EXAMPLES=( examples/. )
 
 	if use indexing; then
 		insinto /usr/include/boost/python/suite/indexing

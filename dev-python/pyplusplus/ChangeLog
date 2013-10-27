@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyplusplus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/ChangeLog,v 1.2 2013/09/16 11:59:54 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyplusplus/ChangeLog,v 1.3 2013/10/27 08:24:44 mgorny Exp $
+
+  27 Oct 2013; Michał Górny <mgorny@gentoo.org> pyplusplus-1.0.0-r1.ebuild,
+  pyplusplus-1.0.0.ebuild:
+  Remove redundant python_export_best (done by the eclass). Fix eclass use.
 
 *pyplusplus-1.0.0-r1 (16 Sep 2013)
 

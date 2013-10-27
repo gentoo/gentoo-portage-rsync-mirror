@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/statsmodels-0.5.0.ebuild,v 1.3 2013/08/21 17:46:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/statsmodels/statsmodels-0.5.0.ebuild,v 1.4 2013/10/27 08:26:43 mgorny Exp $
 
 EAPI=5
 
@@ -40,7 +40,6 @@ pkg_setup() {
 
 python_compile_all() {
 	if use doc; then
-		python_export_best
 		VARTEXFONTS="${T}"/fonts ${EPYTHON} setup.py build_sphinx || die
 	fi
 }
