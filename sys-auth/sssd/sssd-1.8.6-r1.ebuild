@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.8.6-r1.ebuild,v 1.2 2013/07/03 20:26:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.8.6-r1.ebuild,v 1.3 2013/10/27 11:58:57 maksbotan Exp $
 
 EAPI=4
 
+AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_DEPEND="python? 2:2.6"
 
 inherit python multilib pam linux-info autotools-utils
@@ -91,7 +92,6 @@ src_configure(){
 
 src_install(){
 	autotools-utils_src_install
-	remove_libtool_files all
 
 	insinto /etc/sssd
 	insopts -m600
