@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bluelet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bluelet/ChangeLog,v 1.5 2013/09/10 03:04:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bluelet/ChangeLog,v 1.6 2013/10/27 09:09:51 pacho Exp $
+
+  27 Oct 2013; Pacho Ramos <pacho@gentoo.org> -bluelet-0.1.ebuild, metadata.xml:
+  Move to maintainer-needed as discussed with him
 
   10 Sep 2013; Patrick Lauer <patrick@gentoo.org> bluelet-0.2.0.ebuild:
   Whitespace
