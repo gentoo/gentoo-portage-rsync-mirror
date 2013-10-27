@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.137 2013/10/16 21:40:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.138 2013/10/27 17:51:45 swift Exp $
+
+  27 Oct 2013; Sven Vermeulen <swift@gentoo.org> dracut-026-r2.ebuild,
+  dracut-027-r3.ebuild, dracut-029.ebuild, dracut-030.ebuild,
+  dracut-031-r1.ebuild, dracut-033-r3.ebuild, dracut-034.ebuild,
+  dracut-034-r1.ebuild:
+  Fix bug #489080 - Depend on sec-policy/selinux-dracut if USE=selinux
 
 *dracut-034-r1 (16 Oct 2013)
 
