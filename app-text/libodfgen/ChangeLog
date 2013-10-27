@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libodfgen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/ChangeLog,v 1.5 2013/10/20 22:45:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libodfgen/ChangeLog,v 1.6 2013/10/27 12:05:10 ago Exp $
+
+  27 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libodfgen-0.0.2.ebuild:
+  Stable for x86, wrt bug #486204
 
   20 Oct 2013; Tony Vroon <chainsaw@gentoo.org> libodfgen-0.0.2.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

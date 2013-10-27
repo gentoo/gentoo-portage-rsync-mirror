@@ -1,0 +1,18 @@
+--- Makefile.old	2012-08-24 11:10:58.083907845 +0300
++++ Makefile	2012-08-24 11:13:34.167906088 +0300
+@@ -5,13 +5,13 @@
+ # Dovecot's header directory
+ DOVECOT_INC_PATH = /usr/include/dovecot
+ # Dovecot's IMAP plugin path
+-DOVECOT_IMAP_PLUGIN_PATH = /usr/lib/dovecot/imap
++DOVECOT_IMAP_PLUGIN_PATH = /usr/lib/dovecot/
+ 
+ ## usually no need to configure anything below this line ##
+ 
+ # plugin source & target name #
+ PLUGIN_SOURCES = deleted-to-trash-plugin.c
+-PLUGIN_NAME = lib_deleted_to_trash_plugin.so
++PLUGIN_NAME = lib99_deleted_to_trash_plugin.so
+ 
+ #### configuration end ####
+ 

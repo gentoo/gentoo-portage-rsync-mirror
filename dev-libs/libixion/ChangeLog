@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libixion
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.7 2013/10/20 22:40:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/ChangeLog,v 1.8 2013/10/27 12:05:23 ago Exp $
+
+  27 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libixion-0.5.0.ebuild:
+  Stable for x86, wrt bug #486204
 
   20 Oct 2013; Tony Vroon <chainsaw@gentoo.org> libixion-0.5.0.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

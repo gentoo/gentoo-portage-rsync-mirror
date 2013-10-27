@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-0.5.0.ebuild,v 1.5 2013/10/20 22:40:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libixion/libixion-0.5.0.ebuild,v 1.6 2013/10/27 12:05:23 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://gitorious.org/ixion/pages/Home"
 LICENSE="MIT"
 SLOT="0/0.5"
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE="static-libs"
 
 RDEPEND="dev-libs/boost:="

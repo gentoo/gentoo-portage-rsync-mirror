@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.105 2013/09/09 22:14:29 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.107 2013/10/27 12:13:15 caster Exp $
+
+  27 Oct 2013; Vlastimil Babka <caster@gentoo.org> icedtea-7.2.4.3.ebuild:
+  Allow switching to the new shared icedtea-web:0
+
+*icedtea-7.2.4.3 (27 Oct 2013)
+
+  27 Oct 2013; Vlastimil Babka <caster@gentoo.org> +icedtea-7.2.4.3.ebuild:
+  Version bump, security bug #489570. Icedtea-6 allowed again for building.
+  USE=jbootstrap no longer default, disabling leads to much faster builds.
 
   09 Sep 2013; Rick Farina <zerochaos@gentoo.org> -icedtea-7.2.3.8.ebuild,
   -icedtea-7.2.3.9.ebuild:
