@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.498 2013/09/13 06:44:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.499 2013/10/28 20:29:54 a3li Exp $
+
+  28 Oct 2013; Alex Legler <a3li@gentoo.org> -phpmyadmin-3.5.3.ebuild,
+  -phpmyadmin-3.5.8.ebuild:
+  Removing vulnerable versions
 
 *phpmyadmin-4.0.6 (13 Sep 2013)
 
