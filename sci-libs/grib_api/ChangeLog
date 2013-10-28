@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/grib_api
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.13 2013/06/13 12:45:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.14 2013/10/28 17:25:56 bicatali Exp $
+
+*grib_api-1.11.0 (28 Oct 2013)
+
+  28 Oct 2013; Sébastien Fabbro <bicatali@gentoo.org> +grib_api-1.11.0.ebuild,
+  metadata.xml:
+  Version bump
 
   13 Jun 2013; Michael Weber <xmw@gentoo.org> grib_api-1.9.16.ebuild:
   Depend on SLOT=0 of media-libs/openjpeg (bug 440086)
