@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-9999.ebuild,v 1.2 2013/10/28 18:50:02 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.14.ebuild,v 1.1 2013/10/28 18:50:02 nativemad Exp $
 
 EAPI=4
 inherit eutils git-2 toolchain-funcs flag-o-matic waf-utils
 
 DESCRIPTION="Digital Audio Workstation"
 HOMEPAGE="http://ardour.org/"
-EGIT_REPO_URI="git://git.ardour.org/ardour/ardour.git"
+EGIT_REPO_URI="http://git.ardour.org/ardour/ardour.git"
 
 if [ ${PV} = 9999 ]; then
 	KEYWORDS=""
