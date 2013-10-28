@@ -1,0 +1,6 @@
+DEFINED_PHASES=-
+DESCRIPTION=Virtual for podlators
+KEYWORDS=~amd64 ~x86
+RDEPEND=~perl-core/podlators-2.500.300
+SLOT=0
+_md5_=79ec778d98ad0b524e3900f6709554bb
