@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.4.2.ebuild,v 1.3 2013/10/20 19:13:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pass/pass-1.4.2.ebuild,v 1.4 2013/10/28 06:41:21 grobian Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://git.zx2c4.com/password-store/snapshot/password-store-${PV}.tar.x
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86 ~x86-macos"
-IUSE="+git X zsh-completion fish-completion libc_Darwin"
+IUSE="+git X zsh-completion fish-completion elibc_Darwin"
 
 RDEPEND="
 	app-crypt/gnupg
@@ -21,7 +21,7 @@ RDEPEND="
 	app-text/tree
 	git? ( dev-vcs/git )
 	X? ( x11-misc/xclip )
-	libc_Darwin? ( app-misc/getopt )
+	elibc_Darwin? ( app-misc/getopt )
 	zsh-completion? ( app-shells/zsh )
 	fish-completion? ( app-shells/fish )
 "
