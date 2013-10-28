@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/opendbx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.35 2012/11/25 14:29:37 swegener Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.36 2013/10/28 18:13:58 grobian Exp $
+
+  28 Oct 2013; Fabian Groffen <grobian@gentoo.org> opendbx-1.4.6.ebuild,
+  opendbx-1.5.0.ebuild:
+  Marked ~x86-solaris
 
 *opendbx-1.5.0 (25 Nov 2012)
 *opendbx-1.4.6 (25 Nov 2012)
@@ -167,4 +171,3 @@
   06 Nov 2006; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +opendbx-1.0.3.ebuild:
   Initial commit, ebuild written by me.
-
