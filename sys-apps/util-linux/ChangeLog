@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.438 2013/09/29 01:41:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.439 2013/10/28 22:13:54 polynomial-c Exp $
+
+*util-linux-2.24 (28 Oct 2013)
+
+  28 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> +util-linux-2.24.ebuild:
+  Version bump (bug #489342).
 
 *util-linux-2.23.2-r2 (29 Sep 2013)
 

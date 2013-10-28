@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.1_alpha-r1.ebuild,v 1.1 2013/10/28 19:41:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.1_alpha-r2.ebuild,v 1.1 2013/10/28 22:16:36 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils flag-o-matic systemd versionator
+inherit eutils flag-o-matic readme.gentoo systemd versionator
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_PF}"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy threads upnp web"
+IUSE="-bufferevents +ecc nat-pmp selinux stats tor-hardening transparent-proxy threads test upnp web"
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
@@ -65,6 +65,8 @@ src_test() {
 }
 
 src_install() {
+	readme.gentoo_create_doc
+
 	newconfd "${FILESDIR}"/tor.confd tor
 	newinitd "${FILESDIR}"/tor.initd-r6 tor
 	systemd_dounit "${FILESDIR}/${PN}.service"
@@ -83,14 +85,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
-	elog "We created a configuration file for tor, /etc/tor/torrc, but you can"
-	elog "change it according to your needs.  Use the torrc.sample that is in"
-	elog "that directory as a guide.  Also, to have privoxy work with tor"
-	elog "just add the following line"
-	elog
-	elog "forward-socks4a / localhost:9050 ."
-	elog
-	elog "to /etc/privoxy/config.  Notice the . at the end!"
-	elog
+	readme.gentoo_pkg_postinst
 }

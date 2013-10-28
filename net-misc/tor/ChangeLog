@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.387 2013/10/28 19:41:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.389 2013/10/28 22:16:36 blueness Exp $
+
+*tor-0.2.5.1_alpha-r2 (28 Oct 2013)
+*tor-0.2.4.17_rc-r1 (28 Oct 2013)
+
+  28 Oct 2013; Anthony G. Basile <blueness@gentoo.org> +files/README.gentoo,
+  +tor-0.2.4.17_rc-r1.ebuild, +tor-0.2.5.1_alpha-r2.ebuild,
+  -tor-0.2.4.17_rc.ebuild, -tor-0.2.5.1_alpha-r1.ebuild,
+  -tor-0.2.5.1_alpha.ebuild:
+  Use readme.gentoo.eclass to limit elog, bug #489678
+
+  28 Oct 2013; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.4.16_rc.ebuild:
+  Remove older RC
 
 *tor-0.2.5.1_alpha-r1 (28 Oct 2013)
 

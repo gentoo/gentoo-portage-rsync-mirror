@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.17_rc.ebuild,v 1.1 2013/09/05 20:03:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.17_rc-r1.ebuild,v 1.1 2013/10/28 22:16:36 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils flag-o-matic versionator
+inherit eutils flag-o-matic readme.gentoo versionator
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -59,6 +59,8 @@ src_configure() {
 }
 
 src_install() {
+	readme.gentoo_create_doc
+
 	newconfd "${FILESDIR}"/tor.confd tor
 	newinitd "${FILESDIR}"/tor.initd-r6 tor
 
@@ -76,14 +78,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
-	elog "We created a configuration file for tor, /etc/tor/torrc, but you can"
-	elog "change it according to your needs.  Use the torrc.sample that is in"
-	elog "that directory as a guide.  Also, to have privoxy work with tor"
-	elog "just add the following line"
-	elog
-	elog "forward-socks4a / localhost:9050 ."
-	elog
-	elog "to /etc/privoxy/config.  Notice the . at the end!"
-	elog
+	readme.gentoo_pkg_postinst
 }
