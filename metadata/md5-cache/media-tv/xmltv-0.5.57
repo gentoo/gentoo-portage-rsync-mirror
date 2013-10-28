@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare test unpack
+DEPEND=>=dev-perl/libwww-perl-5.65 >=dev-perl/XML-Parser-2.34 >=dev-perl/XML-Twig-3.10 >=dev-perl/DateManip-5.42 >=dev-perl/XML-Writer-0.6 virtual/perl-Memoize virtual/perl-Storable >=dev-perl/Lingua-Preferred-0.2.4 >=dev-perl/Term-ProgressBar-2.03 virtual/perl-IO-Compress dev-perl/Unicode-String dev-perl/TermReadKey dev-perl/File-Slurp >=dev-lang/perl-5.6.1 dev-perl/XML-LibXML nl? ( dev-perl/HTML-Tree ) na_icons? ( dev-perl/HTML-TableExtract >=dev-perl/WWW-Mechanize-1.02 ) dk? ( dev-perl/HTML-Tree dev-perl/DateTime dev-perl/Parse-RecDescent ) fi? ( dev-perl/HTML-Tree ) fr? ( >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree ) huro? ( dev-perl/HTML-Tree ) it? ( dev-perl/XML-Simple ) is? ( dev-perl/XML-LibXSLT ) na_dd? ( dev-perl/SOAP-Lite dev-perl/TermReadKey ) no_gf? ( dev-perl/HTTP-Cache-Transparent dev-perl/IO-stringy dev-perl/XML-LibXML ) pt? ( dev-perl/HTML-Tree dev-perl/Unicode-UTF8simple ) eu_epg? ( dev-perl/Archive-Zip ) se_swedb? ( dev-perl/HTTP-Cache-Transparent dev-perl/IO-stringy dev-perl/XML-LibXML ) hr? ( dev-perl/HTTP-Cache-Transparent dev-perl/IO-stringy dev-perl/XML-LibXML ) uk_rt? ( dev-perl/HTTP-Cache-Transparent dev-perl/IO-stringy ) uk_bleb? ( dev-perl/Archive-Zip dev-perl/IO-stringy ) ee? ( dev-perl/IO-stringy ) re? ( dev-perl/Lingua-EN-Numbers-Ordinate ) tv_combiner? ( dev-perl/XML-LibXML ) tv_check? ( dev-perl/perl-tk dev-perl/Tk-TableMatrix ) tv_pick_cgi? ( virtual/perl-CGI dev-perl/Lingua-EN-Numbers-Ordinate ) na_dtv? ( >=dev-perl/WWW-Mechanize-1.02 dev-perl/TimeDate dev-perl/IO-stringy dev-perl/XML-LibXML ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+DESCRIPTION=Set of utilities to manage TV listings stored in the XMLTV format
+EAPI=5
+HOMEPAGE=http://xmltv.org
+IUSE=ar ch dtvla uk_rt uk_bleb is it na_dd na_icons fi es_laguiatv es_miguiatv ee re huro dk se_swedb hr no_gf fr pt eu_epg tv_combiner tv_pick_cgi tv_check na_dtv za nl in il
+KEYWORDS=~amd64 ~ppc ~x86 ~x86-linux
+LICENSE=GPL-2
+RDEPEND=>=dev-perl/libwww-perl-5.65 >=dev-perl/XML-Parser-2.34 >=dev-perl/XML-Twig-3.10 >=dev-perl/DateManip-5.42 >=dev-perl/XML-Writer-0.6 virtual/perl-Memoize virtual/perl-Storable >=dev-perl/Lingua-Preferred-0.2.4 >=dev-perl/Term-ProgressBar-2.03 virtual/perl-IO-Compress dev-perl/Unicode-String dev-perl/TermReadKey dev-perl/File-Slurp >=dev-lang/perl-5.6.1 dev-perl/XML-LibXML || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
+REQUIRED_USE=na_icons? ( na_dd )
+SLOT=0
+SRC_URI=mirror://sourceforge/xmltv/xmltv-0.5.57.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=224689a12f1f9bbd7fc23f5ef1ec8bbd

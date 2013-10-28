@@ -18,6 +18,8 @@
     <flag name="fr">France tv listing grabber</flag>
     <flag name="hr">Croatia tv listing grabber</flag>
     <flag name="huro">Hungarian tv listing grabber</flag>
+    <flag name="in">India tv listing grabber</flag>
+    <flag name="il">Israel tv listing grabber</flag>
     <flag name="is">Iceland tv listing grabber</flag>
     <flag name="it">Italy tv listing grabber</flag>
     <flag name="jp">Japan tv listing grabber</flag>
