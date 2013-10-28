@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.73 2013/06/04 15:35:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.74 2013/10/28 08:40:50 patrick Exp $
+
+*rpy-2.3.8 (28 Oct 2013)
+
+  28 Oct 2013; Patrick Lauer <patrick@gentoo.org> +rpy-2.3.8.ebuild:
+  Bump
 
   04 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> -rpy-2.2.6-r1.ebuild,
   -rpy-2.3.1.ebuild, -rpy-2.3.2.ebuild, -rpy-2.3.3.ebuild, -rpy-2.3.4.ebuild,
