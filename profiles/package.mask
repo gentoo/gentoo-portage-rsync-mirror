@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15180 2013/10/28 10:18:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15181 2013/10/28 17:52:52 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -127,10 +127,6 @@ dev-games/gigi
 # experimental features and accept a more unstable release.
 >=www-client/chromium-32
 >=dev-lang/v8-3.22
-
-# Fabian Groffen <grobian@gentoo.org> (30 Sep 2013)
-# Mask release candidates
-=mail-mta/exim-4.82_rc*
 
 # Manuel Rüger <mrueg@gentoo.org> (27 Sep 2013)
 # Mask further ruby-1.8 only packages
