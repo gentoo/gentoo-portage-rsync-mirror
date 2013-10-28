@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.7.ebuild,v 1.1 2013/10/22 10:02:42 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.4.7.ebuild,v 1.2 2013/10/28 14:30:33 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -74,6 +74,9 @@ src_prepare() {
 
 	# bug #462606
 	sed -i -e "s@\$INSTALL_DIR/lib@\$INSTALL_DIR/$(get_libdir)@g" src/SConscript.client || die
+
+	# bug #482576
+	sed -i -e "/-Werror/d" src/third_party/v8/SConscript || die
 }
 
 src_compile() {
