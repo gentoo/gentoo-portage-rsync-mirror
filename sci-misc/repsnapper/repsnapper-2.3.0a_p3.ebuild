@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/repsnapper/repsnapper-2.3.0.ebuild,v 1.1 2013/10/11 05:10:31 slis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/repsnapper/repsnapper-2.3.0a_p3.ebuild,v 1.1 2013/10/28 09:15:14 slis Exp $
 
 EAPI=5
 
@@ -30,6 +30,5 @@ DEPEND="
 RDEPEND=${DEPEND}
 
 src_prepare() {
-	epatch "${FILESDIR}/typo.patch"
 	eautoreconf
 }
