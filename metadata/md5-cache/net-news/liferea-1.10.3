@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=x11-libs/gtk+:3 >=dev-libs/glib-2.26.0:2 dev-libs/json-glib >=dev-libs/libpeas-1.0.0[gtk] >=net-libs/libsoup-2.28.2:2.4 dev-libs/libunique:3 >=dev-libs/libxml2-2.6.27:2 >=dev-libs/libxslt-1.1.19 >=dev-db/sqlite-3.7.0:3 >=gnome-base/gconf-1.1.9:2 gnome-base/gsettings-desktop-schemas >=net-libs/webkit-gtk-1.6.1:3 >=x11-libs/pango-1.4.0 ayatana? ( dev-libs/libindicate ) libnotify? ( >=x11-libs/libnotify-0.3.2 ) dev-util/intltool virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=News Aggregator for RDF/RSS/CDF/Atom/Echo feeds
+EAPI=5
+HOMEPAGE=http://liferea.sourceforge.net/
+IUSE=ayatana libnotify
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:3 >=dev-libs/glib-2.26.0:2 dev-libs/json-glib >=dev-libs/libpeas-1.0.0[gtk] >=net-libs/libsoup-2.28.2:2.4 dev-libs/libunique:3 >=dev-libs/libxml2-2.6.27:2 >=dev-libs/libxslt-1.1.19 >=dev-db/sqlite-3.7.0:3 >=gnome-base/gconf-1.1.9:2 gnome-base/gsettings-desktop-schemas >=net-libs/webkit-gtk-1.6.1:3 >=x11-libs/pango-1.4.0 ayatana? ( dev-libs/libindicate ) libnotify? ( >=x11-libs/libnotify-0.3.2 )
+SLOT=0
+SRC_URI=mirror://sourceforge/liferea/liferea-1.10.3.tar.bz2
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=65d4442b75c019465e1cd1de91bab20b
