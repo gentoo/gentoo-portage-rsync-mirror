@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.28 2013/10/03 02:25:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.29 2013/10/28 11:10:33 pinkbyte Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Sergey Popov <pinkbyte@gentoo.org> (28 Oct 2013)
+# sys-cluster/cman is still in ~arch.
+sys-cluster/pacemaker cman
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (02 Oct 2013)
 # We want to stabilize zukitwo before gnome-shell
