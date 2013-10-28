@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8323 2013/10/24 06:25:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8324 2013/10/28 10:18:56 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Masked app-arch/xz-utils alpha releases for testing.
 
   24 Oct 2013; Tiziano Müller <dev-zero@gentoo.org>
   desc/nginx_modules_http.desc, package.mask:
