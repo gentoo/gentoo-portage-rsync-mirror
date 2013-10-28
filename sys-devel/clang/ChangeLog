@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.98 2013/09/05 19:08:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.99 2013/10/28 00:25:12 ottxor Exp $
+
+  28 Oct 2013; Christoph Junghans <ottxor@gentoo.org> clang-3.3-r100.ebuild,
+  clang-9999-r100.ebuild:
+  added ccache support (bug #486402)
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> clang-3.2.ebuild,
   clang-3.3.ebuild, clang-9999.ebuild:
