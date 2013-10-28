@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipcalc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipcalc/ChangeLog,v 1.1 2013/08/31 15:51:11 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipcalc/ChangeLog,v 1.2 2013/10/28 07:05:07 patrick Exp $
+
+*ipcalc-1.1.1 (28 Oct 2013)
+
+  28 Oct 2013; Patrick Lauer <patrick@gentoo.org> +ipcalc-1.1.1.ebuild:
+  Bump
 
 *ipcalc-1.0.0 (31 Aug 2013)
 
