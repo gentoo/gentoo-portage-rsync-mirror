@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/clearlooks-phenix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/clearlooks-phenix/ChangeLog,v 1.6 2013/06/08 16:28:35 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/clearlooks-phenix/ChangeLog,v 1.7 2013/10/28 22:51:40 hasufell Exp $
+
+*clearlooks-phenix-3.0.16 (28 Oct 2013)
+*clearlooks-phenix-2.0.18 (28 Oct 2013)
+
+  28 Oct 2013; Julian Ospald <hasufell@gentoo.org>
+  +clearlooks-phenix-2.0.18.ebuild, +clearlooks-phenix-3.0.16.ebuild,
+  clearlooks-phenix-9999.ebuild:
+  version bump wrt #461280, also allow parallel installation
 
 *clearlooks-phenix-3.0.15 (08 Jun 2013)
 *clearlooks-phenix-2.0.17 (08 Jun 2013)
