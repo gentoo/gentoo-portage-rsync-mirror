@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0.ebuild,v 1.1 2013/10/14 08:00:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0-r1.ebuild,v 1.1 2013/10/29 13:54:28 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -19,32 +19,41 @@ LICENSE="GPL-3"
 
 SLOT="0"
 
-IUSE="acl addns ads aio avahi client cluster cups gnutls iprint
-ldap pam quota selinux syslog test winbind"
+IUSE="acl addns ads aio avahi client cluster cups fam gnutls iprint
+ldap quota selinux syslog test winbind"
 
+# sys-apps/attr is an automagic dependency (see bug #489748)
+# dev-libs/libaio is an automagic dependency (see bug #489764)
+# sys-libs/pam is an automagic dependency (see bug #489770)
 RDEPEND="${PYTHON_DEPS}
+	>=app-crypt/heimdal-1.5[-ssl]
 	dev-libs/iniparser
+	dev-libs/libaio
 	dev-libs/popt
 	sys-libs/readline
 	virtual/libiconv
 	dev-python/subunit
+	sys-apps/attr
 	sys-libs/libcap
 	>=sys-libs/ldb-1.1.16
 	>=sys-libs/tdb-1.2.11[python]
 	>=sys-libs/talloc-2.0.8[python]
 	>=sys-libs/tevent-0.9.18
 	sys-libs/zlib
-	>=app-crypt/heimdal-1.5[-ssl]
+	virtual/pam
+	acl? ( virtual/acl )
 	addns? ( net-dns/bind-tools[gssapi] )
 	client? ( net-fs/cifs-utils[ads?] )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
+	fam? ( virtual/fam )
+	gnutls? ( dev-libs/libgcrypt
+		>=net-libs/gnutls-1.4.0 )
 	ldap? ( net-nds/openldap )
-	gnutls? ( >=net-libs/gnutls-1.4.0 )
 	selinux? ( sec-policy/selinux-samba )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
-REQUIRED_USE="ads? ( ldap )"
+REQUIRED_USE="ads? ( acl ldap )"
 
 RESTRICT="mirror"
 
@@ -80,6 +89,7 @@ src_configure() {
 		--localstatedir=/var \
 		--with-modulesdir=/usr/$(get_libdir)/samba \
 		--with-pammodulesdir=/$(get_libdir)/security \
+		--with-piddir=/run/${PN} \
 		--disable-rpath \
 		--disable-rpath-install \
 		--nopyc \
@@ -87,18 +97,19 @@ src_configure() {
 		--bundled-libraries=ntdb \
 		--builtin-libraries=ntdb \
 		$(use_with addns dnsupdate) \
-		$(use_with acl) \
+		$(use_with acl acl-support) \
 		$(use_with ads) \
 		$(use_with aio aio-support) \
 		$(use_enable avahi) \
 		$(use_with cluster cluster-support) \
 		$(use_enable cups) \
+		$(use_with fam) \
 		$(use_enable gnutls) \
 		$(use_enable iprint) \
 		$(use_with ldap) \
-		$(use_with pam) \
-		$(use_with pam pam_smbpass) \
-		$(use_with quota) \
+		--with-pam \
+		--with-pam_smbpass \
+		$(use_with quota quotas) \
 		$(use_with syslog) \
 		$(use_with winbind)
 		"
