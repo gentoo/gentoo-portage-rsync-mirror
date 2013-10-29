@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15181 2013/10/28 17:52:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15182 2013/10/29 03:56:39 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -127,22 +127,6 @@ dev-games/gigi
 # experimental features and accept a more unstable release.
 >=www-client/chromium-32
 >=dev-lang/v8-3.22
-
-# Manuel Rüger <mrueg@gentoo.org> (27 Sep 2013)
-# Mask further ruby-1.8 only packages
-# Masked for removal in 30 days
-app-office/tpp
-dev-ruby/ncurses-ruby
-net-news/raggle
-
-# Manuel Rüger <mrueg@gentoo.org> (27 Sep 2013)
-# Mask further ruby-1.8 only packages
-# Masked for removal in 30 days
-dev-ruby/heckle
-dev-ruby/main
-dev-ruby/rcov
-dev-ruby/rqr
-dev-ruby/ruby-svg
 
 # Agostino Sarubbo <ago@gentoo.org> (23 Sep 2013)
 # Masked because of vulnerable versions

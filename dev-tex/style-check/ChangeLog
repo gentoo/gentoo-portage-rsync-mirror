@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/style-check
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/ChangeLog,v 1.15 2012/03/09 10:58:53 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/ChangeLog,v 1.16 2013/10/29 04:00:07 mrueg Exp $
+
+  29 Oct 2013; Manuel Rüger <mrueg@gentoo.org> -style-check-0.12.ebuild,
+  -style-check-0.7.ebuild:
+  Remove ruby18-only versions, acked by aballier. See bug #483100
 
   09 Mar 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> style-check-0.14.ebuild:
   x86 stable wrt bug #400347
@@ -60,4 +64,3 @@
   +style-check-0.7.ebuild:
   Initial import. Ebuild submitted by Jacob Martin <jmartin@chem.uga.edu>;
   bug #76721.
-
