@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.1.3-r6.ebuild,v 1.1 2013/09/27 00:41:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.1.4.ebuild,v 1.1 2013/10/29 06:00:08 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -70,6 +70,10 @@ RDEPEND=">=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 pkg_setup() {
 	enewgroup neutron
 	enewuser neutron -1 -1 /var/lib/neutron neutron
+}
+
+src_prepare() {
+	sed -i 's/setuptools_git>=0.4//g' "${S}/setup.py"
 }
 
 python_install() {
