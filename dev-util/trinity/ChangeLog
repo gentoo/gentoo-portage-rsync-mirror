@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/trinity
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/trinity/ChangeLog,v 1.5 2013/09/07 20:24:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/trinity/ChangeLog,v 1.6 2013/10/29 22:25:53 radhermit Exp $
+
+  29 Oct 2013; Tim Harder <radhermit@gentoo.org> trinity-9999.ebuild:
+  Update sed lines to respect CFLAGS and CC.
 
   07 Sep 2013; Tim Harder <radhermit@gentoo.org> trinity-9999.ebuild:
   Update to git-r3 eclass.

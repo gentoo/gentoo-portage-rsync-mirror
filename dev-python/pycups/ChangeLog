@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.71 2013/10/25 14:09:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.72 2013/10/29 22:20:52 chainsaw Exp $
+
+  29 Oct 2013; Tony Vroon <chainsaw@gentoo.org> pycups-1.9.63.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488760.
 
   25 Oct 2013; Jeroen Roovers <jer@gentoo.org> pycups-1.9.63.ebuild:
   Stable for HPPA (bug #488760).

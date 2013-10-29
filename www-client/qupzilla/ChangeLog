@@ -1,6 +1,10 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.32 2013/09/09 11:38:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.33 2013/10/29 22:16:25 chainsaw Exp $
+
+  29 Oct 2013; Tony Vroon <chainsaw@gentoo.org> qupzilla-1.4.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488830.
 
 *qupzilla-1.4.4 (09 Sep 2013)
 
