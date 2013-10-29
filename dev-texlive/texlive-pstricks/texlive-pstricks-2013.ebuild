@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/texlive-pstricks-2013.ebuild,v 1.1 2013/06/28 16:44:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/texlive-pstricks-2013.ebuild,v 1.2 2013/10/29 19:48:12 aballier Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-texlive/texlive-basic-2013
 RDEPEND="${DEPEND} dev-texlive/texlive-genericrecommended
 "
 TEXLIVE_MODULE_BINSCRIPTS="
-	texmf-dist/scripts/pst2pdf
+	texmf-dist/scripts/pst2pdf/pst2pdf.pl
 	texmf-dist/scripts/pedigree-perl/pedigree.pl
 "
 PATCHES=( "${FILESDIR}/pedigreeloc.patch" )

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/opendmarc-1.1.3.ebuild,v 1.1 2013/09/30 19:21:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/opendmarc-1.1.3.ebuild,v 1.2 2013/10/29 19:45:35 grobian Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND="dev-db/opendbx
+DEPEND="dev-perl/DBI
 	mail-filter/libmilter"
 RDEPEND="${DEPEND}
 	virtual/perl-Switch"
