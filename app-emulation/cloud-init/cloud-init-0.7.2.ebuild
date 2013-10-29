@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/cloud-init-0.7.2.ebuild,v 1.1 2013/09/22 19:11:45 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cloud-init/cloud-init-0.7.2.ebuild,v 1.2 2013/10/29 04:42:05 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -11,7 +11,7 @@ DESCRIPTION="Package provides configuration and customization of cloud instance.
 HOMEPAGE="https://launchpad.net/cloud-init"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
-LICENSE="Apache-2.0"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
@@ -30,5 +30,6 @@ RDEPEND="dev-python/cheetah[${PYTHON_USEDEP}]
 		dev-python/jsonpatch[${PYTHON_USEDEP}]"
 
 src_prepare() {
-	sed -i '/exclude/d' "${S}/setup.py"
+	sed -i "s/'tests'//g" "${S}/setup.py"
+	rm -R "${S}/tests"
 }
