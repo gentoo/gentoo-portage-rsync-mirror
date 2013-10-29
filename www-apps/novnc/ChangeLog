@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/novnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/ChangeLog,v 1.3 2013/10/24 13:01:45 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/ChangeLog,v 1.4 2013/10/29 06:55:05 prometheanfire Exp $
+
+  29 Oct 2013; Matthew Thode <prometheanfire@gentoo.org> files/noVNC.initd,
+  novnc-0.4.ebuild:
+  many changes from bug 486568, thanks alonbl
 
   24 Oct 2013; Alon Bar-Lev <alonbl@gentoo.org> novnc-0.4.ebuild:
   Remove unneeded installation and dependency if not USE nova, partial work of

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/novnc-0.4.ebuild,v 1.4 2013/10/24 13:01:45 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/novnc/novnc-0.4.ebuild,v 1.5 2013/10/29 06:55:05 prometheanfire Exp $
 
 EAPI=5
 
@@ -16,12 +16,10 @@ IUSE="nova"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	nova? (
-		dev-python/websockify
-		sys-cluster/nova
-		dev-python/matplotlib
-		dev-python/numpy
-	)"
+		nova? ( dev-python/websockify
+				sys-cluster/nova
+				dev-python/matplotlib
+				dev-python/numpy )"
 
 src_install() {
 	dodir /usr/share/novnc
@@ -29,9 +27,12 @@ src_install() {
 	doins -r *.html images include
 	dodoc README.md
 
+
 	if use nova; then
-		newconfd "${FILESDIR}/noVNC.confd" noVNC
-		newinitd "${FILESDIR}/noVNC.initd" noVNC
+		dobin utils/nova-novncproxy
+
+		newconfd "${FILESDIR}/noVNC.confd" nova-noVNC
+		newinitd "${FILESDIR}/noVNC.initd" nova-noVNC
 
 		diropts -m 0750
 		dodir /var/log/noVNC

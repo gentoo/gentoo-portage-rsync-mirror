@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183.ebuild,v 1.1 2013/10/13 01:52:09 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183-r1.ebuild,v 1.1 2013/10/29 07:00:18 prometheanfire Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
@@ -155,7 +155,7 @@ src_install() {
 	dosym /opt/${PN}/spotify-client/Data/libcef.so /opt/${PN}/spotify-client/
 
 	#TODO fix for x86
-	dosym /usr/lib64/libudev.so /opt/${PN}/spotify-client/Data/libudev.so.0
+	dosym /usr/lib/libudev.so /opt/${PN}/spotify-client/Data/libudev.so.0
 }
 
 pkg_preinst() {
