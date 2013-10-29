@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.297 2013/10/15 20:07:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.298 2013/10/29 17:55:11 blueness Exp $
+
+  29 Oct 2013; Anthony G. Basile <blueness@gentoo.org> -curl-7.21.4.ebuild,
+  -curl-7.25.0-r1.ebuild, -curl-7.26.0.ebuild, -curl-7.29.0-r1.ebuild,
+  -curl-7.30.0.ebuild, -files/curl-7.18.2-prefix.patch,
+  -files/curl-7.19.7-test241.patch, -files/curl-7.20.0-strip-ldflags.patch,
+  -files/curl-7.27.0-curl-config.patch,
+  -files/curl-7.27.0-fix-metalink-gnutls.patch,
+  -files/curl-7.27.0-fix-nettle-include.patch, -files/curl-7.27.0-prefix.patch,
+  -files/curl-7.28.0-fix-http-auth.patch, -files/curl-7.28.0-prefix.patch,
+  -files/curl-7.29.0-fix-null-pointer.patch, -files/curl-respect-cflags.patch,
+  metadata.xml:
+  Cleanup for security bug #474354
 
 *curl-7.33.0 (15 Oct 2013)
 

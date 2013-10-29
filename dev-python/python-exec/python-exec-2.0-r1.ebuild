@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-2.0-r2.ebuild,v 1.2 2013/10/29 17:58:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-exec/python-exec-2.0-r1.ebuild,v 1.6 2013/10/29 17:58:32 mgorny Exp $
 
 EAPI=5
 

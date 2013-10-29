@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.24.3.ebuild,v 1.1 2013/10/29 09:04:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.24.3.ebuild,v 1.2 2013/10/29 17:38:45 johu Exp $
 
 EAPI=5
 
@@ -72,7 +72,7 @@ src_configure() {
 		$(cmake-utils_use_with jpeg)
 		$(cmake-utils_use_with png)
 		$(cmake-utils_use_with qt4)
-		-DWITH_QT5=OFF				# this probably does not work yet
+		-DCMAKE_DISABLE_FIND_PACKAGE_Qt5Core=ON
 		$(cmake-utils_use_with tiff)
 	)
 	if use lcms; then
