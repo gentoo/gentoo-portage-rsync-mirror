@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.71 2013/09/05 19:44:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.72 2013/10/29 01:35:31 blueness Exp $
+
+  29 Oct 2013; Anthony G. Basile <blueness@gentoo.org> gnubg-20121201.ebuild,
+  gnubg-20130203.ebuild:
+  Keyword ~arm
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> gnubg-20130203.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

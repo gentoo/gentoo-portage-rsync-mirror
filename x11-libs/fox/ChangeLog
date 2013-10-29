@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.174 2013/10/10 14:52:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.175 2013/10/29 01:44:07 blueness Exp $
+
+  29 Oct 2013; Anthony G. Basile <blueness@gentoo.org> fox-1.7.40.ebuild,
+  fox-1.7.41.ebuild, fox-1.7.42.ebuild:
+  Keyword ~arm
 
   10 Oct 2013; Jeroen Roovers <jer@gentoo.org> fox-1.6.49.ebuild:
   Stable for HPPA (bug #487034).

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/reswrap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.20 2012/05/05 17:42:54 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.21 2013/10/29 01:43:26 blueness Exp $
+
+  29 Oct 2013; Anthony G. Basile <blueness@gentoo.org> reswrap-4.0.0.ebuild:
+  Keyword ~arm
 
   05 May 2012; Raúl Porcel <armin76@gentoo.org> reswrap-4.0.0.ebuild:
   alpha/ia64/sparc stable wrt #400351
@@ -69,4 +72,3 @@
   +reswrap-3.1.0.ebuild, +reswrap-3.2.0.ebuild:
   Added Yaakov Selkowitz's eclass based fox ebuilds for testing.
   Fixes #88924
-
