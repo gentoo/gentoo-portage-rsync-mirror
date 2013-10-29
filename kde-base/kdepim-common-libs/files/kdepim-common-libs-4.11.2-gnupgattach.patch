@@ -1,0 +1,57 @@
+commit bbbdbc2180036040cac2b66492e6f0fd01c2b28c
+Author: Sandro Knauß <mail@sandroknauss.de>
+Date:   Mon Oct 21 02:47:31 2013 +0200
+
+    Fix 286481 - Unable to open attachments in encrypted messages
+    
+    The node has to get a correct extra content and the filename must be
+    correctly point to the attachments inside the encrypted message.
+    
+    BUG: 286481
+    BUG: 300937
+    FIXED-IN: 4.11.3
+    REVIEW: 113361
+
+diff --git a/messageviewer/viewer/nodehelper.cpp b/messageviewer/viewer/nodehelper.cpp
+index 311f655..8c8ff79 100644
+--- a/messageviewer/viewer/nodehelper.cpp
++++ b/messageviewer/viewer/nodehelper.cpp
+@@ -223,7 +223,7 @@ QString NodeHelper::writeNodeToTempFile(KMime::Content* node)
+     return existingFileName.toLocalFile();
+   }
+ 
+-  QString fname = createTempDir( node->index().toString() );
++  QString fname = createTempDir( persistentIndex( node ) );
+   if ( fname.isEmpty() )
+     return QString();
+ 
+@@ -237,7 +237,6 @@ QString NodeHelper::writeNodeToTempFile(KMime::Content* node)
+   fname += '/' + fileName;
+ 
+   //kDebug() << "Create temp file: " << fname;
+-
+   QByteArray data = node->decodedContent();
+   if ( node->contentType()->isText() && data.size() > 0 ) {
+     // convert CRLF to LF before writing text attachments to disk
+@@ -260,7 +259,7 @@ KUrl NodeHelper::tempFileUrlFromNode( const KMime::Content *node )
+   if (!node)
+     return KUrl();
+ 
+-  const QString index = node->index().toString();
++  const QString index = persistentIndex( node );
+ 
+   foreach ( const QString &path, mAttachmentFilesDir->temporaryFiles() ) {
+     int right = path.lastIndexOf( '/' );
+diff --git a/messageviewer/viewer/objecttreeparser.cpp b/messageviewer/viewer/objecttreeparser.cpp
+index cde17da..369ad95 100644
+--- a/messageviewer/viewer/objecttreeparser.cpp
++++ b/messageviewer/viewer/objecttreeparser.cpp
+@@ -803,7 +803,7 @@ bool ObjectTreeParser::writeOpaqueOrMultipartSignedData( KMime::Content* data,
+       bIsOpaqueSigned = true;
+ 
+       CryptoProtocolSaver cpws( this, cryptProto );
+-      createAndParseTempNode( data, doCheck ? cleartext.data() : cleartextData->data(),
++      createAndParseTempNode( &sign, doCheck ? cleartext.data() : cleartextData->data(),
+                               "opaque signed data" );
+ 
+       if ( htmlWriter() )
