@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0-r1.ebuild,v 1.1 2013/10/29 13:54:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.0-r1.ebuild,v 1.2 2013/10/29 14:06:56 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -22,6 +22,7 @@ SLOT="0"
 IUSE="acl addns ads aio avahi client cluster cups fam gnutls iprint
 ldap quota selinux syslog test winbind"
 
+# sys-apps/dmapi is an automagic dependency (see bug #474492)
 # sys-apps/attr is an automagic dependency (see bug #489748)
 # dev-libs/libaio is an automagic dependency (see bug #489764)
 # sys-libs/pam is an automagic dependency (see bug #489770)
@@ -34,6 +35,7 @@ RDEPEND="${PYTHON_DEPS}
 	virtual/libiconv
 	dev-python/subunit
 	sys-apps/attr
+	sys-apps/dmapi
 	sys-libs/libcap
 	>=sys-libs/ldb-1.1.16
 	>=sys-libs/tdb-1.2.11[python]
