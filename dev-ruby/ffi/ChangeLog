@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.51 2013/10/20 22:25:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.52 2013/10/29 15:55:55 graaff Exp $
+
+*ffi-1.9.1 (29 Oct 2013)
+
+  29 Oct 2013; Hans de Graaff <graaff@gentoo.org> +ffi-1.9.1.ebuild:
+  Version bump. Add ruby20. Drop ree18. Drop alpha,ia64,ppc64,sparc keywords
+  for bug 465948.
 
   20 Oct 2013; Tony Vroon <chainsaw@gentoo.org> ffi-1.4.0.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

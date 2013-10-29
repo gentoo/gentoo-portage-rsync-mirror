@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/iobuffer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.12 2012/08/20 18:18:18 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.13 2013/10/29 15:39:05 mrueg Exp $
+
+*iobuffer-1.1.2-r3 (29 Oct 2013)
+
+  29 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +iobuffer-1.1.2-r3.ebuild:
+  Add ruby20 target.
 
   20 Aug 2012; Hans de Graaff <graaff@gentoo.org> -iobuffer-1.0.0.ebuild,
   -iobuffer-1.1.2-r1.ebuild:
