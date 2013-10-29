@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r9.ebuild,v 1.1 2013/04/25 14:22:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r9.ebuild,v 1.2 2013/10/29 02:32:50 patrick Exp $
 
 EAPI="3"
 
@@ -19,7 +19,9 @@ SRC_URI="http://www3.justsystem.co.jp/download/atok/up/lin/${MY_UPDATE_P}.tar.gz
 LICENSE="ATOK MIT"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+#KEYWORDS="~amd64 ~x86"
+# since emul-linux-x86-baselibs-20121202 has been removed this package is now uninstallable
+KEYWORDS=""
 IUSE="multilib"
 
 RESTRICT="strip mirror"
