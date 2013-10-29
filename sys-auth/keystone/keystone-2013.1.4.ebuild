@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.3-r3.ebuild,v 1.6 2013/10/19 08:12:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.4.ebuild,v 1.1 2013/10/29 05:25:28 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -42,8 +42,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			dev-python/webtest
 			dev-python/python-memcached
 			)"
-RDEPEND="${DEPEND}
-	dev-python/eventlet[${PYTHON_USEDEP}]
+RDEPEND="dev-python/eventlet[${PYTHON_USEDEP}]
 	dev-python/greenlet[${PYTHON_USEDEP}]
 	>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
 	>=dev-python/python-keystoneclient-0.2.1[${PYTHON_USEDEP}]
@@ -68,8 +67,6 @@ RDEPEND="${DEPEND}
 	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
 PATCHES=(
-	"${FILESDIR}/2013.1.3-CVE-2013-4222.patch"
-	"${FILESDIR}/keystone-cve-2013-4294-grizzly.patch"
 )
 #	"${FILESDIR}/keystone-grizzly-2-CVE-2013-2157.patch"
 #
