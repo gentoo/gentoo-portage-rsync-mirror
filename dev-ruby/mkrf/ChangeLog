@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mkrf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.33 2013/07/08 05:10:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mkrf/ChangeLog,v 1.34 2013/10/29 16:23:47 graaff Exp $
+
+  29 Oct 2013; Hans de Graaff <graaff@gentoo.org> mkrf-0.2.3-r2.ebuild:
+  Restrict tests since they now fail and this package is deprecated and will be
+  removed once ruby-opengl 0.8.0 is stable.
 
   08 Jul 2013; Hans de Graaff <graaff@gentoo.org> -mkrf-0.2.3-r1.ebuild:
   Cleanup.
