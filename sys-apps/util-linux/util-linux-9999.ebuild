@@ -1,9 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.46 2013/08/07 22:49:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.47 2013/10/29 20:25:08 polynomial-c Exp $
 
-EAPI="4"
-inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1
+EAPI=5
+
+PYTHON_COMPAT=( python2_7 python3_{2,3} )
+
+inherit eutils toolchain-funcs libtool flag-o-matic bash-completion-r1 python-single-r1
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -21,7 +24,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
 LICENSE="GPL-2 GPL-3 LGPL-2.1 BSD-4 MIT public-domain"
 SLOT="0"
-IUSE="bash-completion caps +cramfs cytune fdformat ncurses nls old-linux selinux slang static-libs +suid test tty-helpers udev unicode"
+IUSE="bash-completion caps +cramfs cytune fdformat ncurses nls pam python selinux slang static-libs +suid test tty-helpers udev unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -33,6 +36,8 @@ RDEPEND="!sys-process/schedutils
 	caps? ( sys-libs/libcap-ng )
 	cramfs? ( sys-libs/zlib )
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 )
+	pam? ( sys-libs/pam )
+	python? ( ${PYTHON_DEPS} )
 	selinux? ( sys-libs/libselinux )
 	slang? ( sys-libs/slang )
 	udev? ( virtual/udev )"
@@ -41,6 +46,8 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	test? ( sys-devel/bc )
 	virtual/os-headers"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -67,6 +74,7 @@ lfs_fallocate_test() {
 
 src_configure() {
 	lfs_fallocate_test
+	export ac_cv_header_security_pam_misc_h=$(usex pam) #485486
 	econf \
 		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
 		$(use_enable nls) \
@@ -77,13 +85,14 @@ src_configure() {
 		$(use_enable cramfs) \
 		$(use_enable cytune) \
 		$(use_enable fdformat) \
-		$(use_enable old-linux elvtune) \
 		--with-ncurses=$(usex ncurses $(usex unicode auto yes) no) \
 		--disable-kill \
 		--disable-last \
 		--disable-login \
 		$(use_enable tty-helpers mesg) \
+		--disable-nologin \
 		--enable-partx \
+		$(use_with python) \
 		--enable-raw \
 		--enable-rename \
 		--disable-reset \
@@ -104,6 +113,8 @@ src_install() {
 	default
 	dodoc AUTHORS NEWS README* Documentation/{TODO,*.txt,releases/*}
 
+	use python && python_optimize
+
 	# need the libs in /
 	gen_usr_ldscript -a blkid mount uuid
 
@@ -112,6 +123,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	if ! use tty-helpers; then
+		elog "The mesg/wall/write tools have been disabled due to USE=-tty-helpers."
+	fi
+
 	if [[ -z ${REPLACING_VERSIONS} ]]; then
 		elog "The agetty util now clears the terminal by default. You"
 		elog "might want to add --noclear to your /etc/inittab lines."

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libechonest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/ChangeLog,v 1.25 2013/10/13 10:20:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libechonest/ChangeLog,v 1.26 2013/10/29 20:03:16 maksbotan Exp $
+
+  29 Oct 2013; Maxim Koltsov <maksbotan@gentoo.org> libechonest-2.0.3.ebuild,
+  libechonest-2.1.0.ebuild:
+  Introduce subslots, bug 472824. Thanks to Nikoli.
 
   13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Nikoli's e-mail address for easier automatic assignment.
