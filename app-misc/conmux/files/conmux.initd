@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+checkconfig() {
+	if [[ ! -f ${CONMUX_CONFIG} ]]; then
+		eerror ""
+		eerror "No conmux configuration file was found!"
+		eerror "Please read the conmux README file."
+		eerror ""
+		return 1
+	fi
+	# Sane default
+	if [[ -z ${CONMUX_LOG} ]]; then
+		CONMUX_LOG="/var/log/conmux.log"
+	fi
+	return 0
+}
+
+start() {
+	checkconfig || exit 1
+	ebegin "Starting CONMUX daemon"
+	start-stop-daemon -b --start -1 ${CONMUX_LOG} \
+		-2 ${CONMUX_LOG} -p /run/conmux.pid \
+		--exec /usr/sbin/conmux -- ${CONMUX_CONFIG}
+}
+
+stop() {
+	ebegin "Stopping CONMUX daemon"
+	start-stop-daemon --stop --pidfile /run/conmux.pid
+	eend $?
+}

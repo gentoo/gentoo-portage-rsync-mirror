@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/conmux
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/ChangeLog,v 1.1 2013/10/29 21:12:59 hwoarang Exp $
+
+*conmux-0.15.1 (29 Oct 2013)
+
+  29 Oct 2013; Markos Chandras <hwoarang@gentoo.org> +conmux-0.15.1.ebuild,
+  +files/conmux-registry.confd, +files/conmux-registry.initd,
+  +files/conmux.confd, +files/conmux.initd, +metadata.xml:
+  Initial commit for the conmux console multiplexor

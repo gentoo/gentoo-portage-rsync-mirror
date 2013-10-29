@@ -1,13 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.15 2013/10/22 18:31:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.16 2013/10/29 21:08:27 ulm Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/eselect.git"
-EGIT_BOOTSTRAP="autogen.bash"
 
-inherit git-2 bash-completion-r1
+inherit autotools git-r3 bash-completion-r1
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Eselect"
@@ -31,6 +30,10 @@ RDEPEND="!app-admin/eselect-news
 
 PDEPEND="emacs? ( app-emacs/eselect-mode )
 	vim-syntax? ( app-vim/eselect-syntax )"
+
+src_prepare() {
+	eautoreconf
+}
 
 src_compile() {
 	emake

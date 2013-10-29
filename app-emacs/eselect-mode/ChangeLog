@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/eselect-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/ChangeLog,v 1.21 2013/10/22 18:31:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/ChangeLog,v 1.22 2013/10/29 21:09:37 ulm Exp $
+
+  29 Oct 2013; Ulrich Müller <ulm@gentoo.org> eselect-mode-9999.ebuild:
+  Change to git-r3 again, following partial fix of bug 489100.
 
   22 Oct 2013; Ulrich Müller <ulm@gentoo.org> eselect-mode-9999.ebuild:
   Return to git-2.eclass, reverting previous commit.
