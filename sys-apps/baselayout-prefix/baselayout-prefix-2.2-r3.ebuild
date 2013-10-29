@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r3.ebuild,v 1.3 2013/10/27 16:47:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r3.ebuild,v 1.4 2013/10/29 21:00:57 haubi Exp $
 
 EAPI=3
 
@@ -29,6 +29,7 @@ pkg_preinst() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${EINFO}-termcap-check.patch
 	# exotic platforms still aren't fixed in upstream libtool
 	elibtoolize
 }

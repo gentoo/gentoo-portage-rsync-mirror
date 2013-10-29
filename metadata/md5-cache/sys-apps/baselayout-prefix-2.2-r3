@@ -8,4 +8,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gentoo/baselayout-2.2.tar.bz2 http://dev.gentoo.org/~vapier/dist/baselayout-2.2.tar.bz2 http://dev.gentoo.org/~grobian/distfiles/einfo-1.0.4.tar.xz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=b5c24a0952d2595adc4b3eaf3346bf81
+_md5_=ffab6fff3463f3c6262927701bfadbbc
