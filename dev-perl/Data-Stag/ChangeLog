@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-Stag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stag/ChangeLog,v 1.9 2013/08/16 07:52:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stag/ChangeLog,v 1.10 2013/10/29 07:01:13 patrick Exp $
+
+*Data-Stag-0.140.0 (29 Oct 2013)
+
+  29 Oct 2013; Patrick Lauer <patrick@gentoo.org> +Data-Stag-0.140.0.ebuild:
+  Bump
 
 *Data-Stag-0.130.0 (16 Aug 2013)
 

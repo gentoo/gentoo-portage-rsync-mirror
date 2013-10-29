@@ -5,4 +5,8 @@
     <email>idl0r@gentoo.org</email>
     <name>Christian Ruppert</name>
   </maintainer>
+  <maintainer>
+    <email>jlec@gentoo.org</email>
+    <name>Justin Lecher</name>
+  </maintainer>
 </pkgmetadata>
