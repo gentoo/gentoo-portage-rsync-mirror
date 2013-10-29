@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.6.ebuild,v 1.5 2013/10/28 23:31:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-2.3.7.ebuild,v 1.1 2013/10/28 23:31:47 mr_bones_ Exp $
 
 EAPI=4
 inherit flag-o-matic eutils autotools-utils
@@ -13,7 +13,7 @@ SRC_URI="http://clanlib.org/download/releases-2.0/${MY_P}.tgz"
 
 LICENSE="ZLIB"
 SLOT="2.3"
-KEYWORDS="amd64 x86" #not big endian safe #82779
+KEYWORDS="~amd64 ~x86" #not big endian safe #82779
 IUSE="doc ipv6 mikmod opengl sound sqlite sse2 static-libs vorbis X"
 REQUIRED_USE="opengl? ( X )"
 
@@ -44,7 +44,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}"/${P}-{autotools,mesa}.patch )
+PATCHES=( "${FILESDIR}"/${P}-autotools.patch )
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=(

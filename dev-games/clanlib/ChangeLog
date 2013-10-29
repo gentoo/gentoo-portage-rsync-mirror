@@ -1,6 +1,14 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.63 2013/01/31 00:19:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.64 2013/10/28 23:31:47 mr_bones_ Exp $
+
+*clanlib-2.3.7 (28 Oct 2013)
+
+  28 Oct 2013; Michael Sterrett <mr_bones_@gentoo.org> +clanlib-2.3.7.ebuild,
+  +files/clanlib-2.3.6-mesa.patch, +files/clanlib-2.3.7-autotools.patch,
+  clanlib-2.3.6.ebuild:
+  version bump and apply upstream patch to stable to fix building with newer
+  mesa (bug #447258)
 
   31 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -clanlib-2.3.4.ebuild,
   -files/clanlib-2.3.4-autotools.patch:
