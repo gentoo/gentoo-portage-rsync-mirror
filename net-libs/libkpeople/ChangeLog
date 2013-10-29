@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libkpeople
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/ChangeLog,v 1.1 2013/10/29 19:04:09 johu Exp $
+
+*libkpeople-0.1.0 (29 Oct 2013)
+
+  29 Oct 2013; Johannes Huber <johu@gentoo.org> +libkpeople-0.1.0.ebuild,
+  +metadata.xml:
+  New package. Import from kde overlay. Will be required for KDE Telepathy 0.7.
+
