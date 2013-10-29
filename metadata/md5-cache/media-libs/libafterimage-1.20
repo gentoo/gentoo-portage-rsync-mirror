@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare
 DEPEND=x11-libs/libSM x11-libs/libXext x11-libs/libXrender png? ( >=media-libs/libpng-1.4:0 ) jpeg? ( virtual/jpeg ) gif? ( media-libs/giflib ) svg? ( gnome-base/librsvg ) tiff? ( media-libs/tiff:0 ) truetype? ( media-libs/freetype ) virtual/pkgconfig x11-proto/xextproto !!x11-wm/afterstep || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Afterstep's standalone generic image manipulation library
-EAPI=3
+EAPI=5
 HOMEPAGE=http://www.afterstep.org/afterimage/index.php
-IUSE=gif jpeg mmx nls png svg tiff examples static-libs truetype
+IUSE=examples gif jpeg mmx nls png static-libs svg tiff truetype
 KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=LGPL-2.1
 RDEPEND=x11-libs/libSM x11-libs/libXext x11-libs/libXrender png? ( >=media-libs/libpng-1.4:0 ) jpeg? ( virtual/jpeg ) gif? ( media-libs/giflib ) svg? ( gnome-base/librsvg ) tiff? ( media-libs/tiff:0 ) truetype? ( media-libs/freetype )
 SLOT=0
 SRC_URI=ftp://ftp.afterstep.org/stable/libAfterImage/libAfterImage-1.20.tar.bz2
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=27b3ec1f440dcde44722fb54acdcf363
+_md5_=fe393fb2e062e0129f690a849a49f5c4

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.45 2013/10/19 18:10:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.46 2013/10/29 16:48:05 bicatali Exp $
+
+  29 Oct 2013; Sébastien Fabbro <bicatali@gentoo.org> libafterimage-1.20.ebuild,
+  metadata.xml:
+  Do not build examples, assign to sci-physics herd because of sci-physics/root
+  dependency, and some cosmetics
 
   19 Oct 2013; Ulrich Müller <ulm@gentoo.org> libafterimage-1.20.ebuild,
   +files/libafterimage-giflib42.patch:

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.14 2013/10/19 18:10:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.15 2013/10/29 16:48:05 bicatali Exp $
 
-EAPI=3
+EAPI=5
 inherit eutils autotools
 
 MY_PN=libAfterImage
@@ -14,9 +14,10 @@ SRC_URI="ftp://ftp.afterstep.org/stable/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="gif jpeg mmx nls png svg tiff examples static-libs truetype"
+IUSE="examples gif jpeg mmx nls png static-libs svg tiff truetype"
 
-RDEPEND="x11-libs/libSM
+RDEPEND="
+	x11-libs/libSM
 	x11-libs/libXext
 	x11-libs/libXrender
 	png?  ( >=media-libs/libpng-1.4:0 )
@@ -30,7 +31,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	!!x11-wm/afterstep"
 
-S=${WORKDIR}/${MY_PN}-${PV}
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
 	# fix some ldconfig problem in makefile.in
@@ -41,7 +42,13 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gif.patch
 	# fix for libpng15 compability
 	epatch "${FILESDIR}"/${PN}-libpng15.patch
-	epatch "${FILESDIR}"/${PN}-giflib42.patch #486804
+	# fix for gif library bug  #486804
+	epatch "${FILESDIR}"/${PN}-giflib42.patch
+	# do not build examples
+	sed -i \
+		-e '/^all:/s/apps//' \
+		-e '/^install:/s/install.apps//' \
+		Makefile.in || die
 	# remove forced flags
 	sed -i \
 		-e 's/CFLAGS="-O3"//' \
@@ -76,13 +83,13 @@ src_install() {
 	emake \
 		DESTDIR="${D}" \
 		AFTER_DOC_DIR="${ED}/usr/share/doc/${PF}" \
-		install || die "emake install failed"
-	dodoc ChangeLog README || die
+		install
+	dodoc ChangeLog README
 	if use examples; then
 		cd apps || die
 		emake clean
-		rm -f Makefile*
+		rm Makefile* || die
 		insinto /usr/share/doc/${PF}/examples
-		doins * || die "install examples failed"
+		doins *
 	fi
 }
