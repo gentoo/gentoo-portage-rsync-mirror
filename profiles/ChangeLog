@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8327 2013/10/30 18:20:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8328 2013/10/30 20:27:36 maksbotan Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Oct 2013; Maxim Koltsov <maksbotan@gentoo.org> base/package.use.mask:
+  Unmask use ipod for >=media-sound/clementine-1.2.0
 
   30 Oct 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Unmask rtmpdump snapshot
