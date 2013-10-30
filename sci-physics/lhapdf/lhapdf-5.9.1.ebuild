@@ -1,10 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.8.ebuild,v 1.1 2012/08/07 17:34:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.9.1.ebuild,v 1.1 2013/10/30 17:16:28 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
-inherit versionator eutils
+AUTOTOOLS_IN_SOURCE_BUILD=yes
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit versionator autotools-utils python-single-r1
 
 MY_PV=$(get_version_component_range 1-3 ${PV})
 MY_PF=${PN}-${MY_PV}
@@ -23,8 +26,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="cxx doc examples octave python static-libs test"
-REQUIRED_USE="octave? ( cxx )"
-RDEPEND="octave? ( sci-mathematics/octave )"
+REQUIRED_USE="octave? ( cxx ) python? ( ${PYTHON_REQUIRED_USE} )"
+
+RDEPEND="
+	octave? ( sci-mathematics/octave )
+	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[latex] )
 	python? ( dev-lang/swig )"
@@ -39,16 +45,18 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		$(use_enable cxx ccwrap) \
-		$(use_enable cxx old-ccwrap ) \
-		$(use_enable doc doxygen) \
-		$(use_enable octave) \
-		$(use_enable python pyext) \
-		$(use_enable static-libs static)
+	local myeconfargs=(
+		$(use_enable cxx ccwrap)
+		$(use_enable cxx old-ccwrap)
+		$(use_enable doc doxygen)
+		$(use_enable octave)
+		$(use_enable python pyext)
+	)
+	autotools-utils_src_configure
 }
 
 src_test() {
+	cd "${BUILD_DIR}"
 	# need to make a bogus link for octave test
 	ln -s "${DISTDIR}" PDFsets
 	LHAPATH="${PWD}/PDFsets" \
@@ -57,7 +65,9 @@ src_test() {
 }
 
 src_install() {
-	default
+	autotools-utils_src_install
+	use python \
+		&& python_fix_shebang "${ED}"/usr/bin/lhapdf-{getdata,query}
 	use doc && use cxx && dohtml -r ccwrap/doxy/html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
@@ -67,5 +77,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "To install data files, you have to run as root:"
-	elog "lhapdf-getdata --dest=${EROOT}usr/share/lhapdf/PDFsets --all"
+	elog "lhapdf-getdata --dest=${EROOT%/}/usr/share/lhapdf/PDFsets --all"
 }

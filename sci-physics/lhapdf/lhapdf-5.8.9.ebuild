@@ -1,11 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.9.ebuild,v 1.1 2013/06/04 17:47:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-5.8.9.ebuild,v 1.2 2013/10/30 17:16:28 bicatali Exp $
 
 EAPI=5
 
 AUTOTOOLS_IN_SOURCE_BUILD=yes
-inherit versionator autotools-utils
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit versionator autotools-utils python-single-r1
 
 MY_PV=$(get_version_component_range 1-3 ${PV})
 MY_PF=${PN}-${MY_PV}
@@ -24,8 +26,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="cxx doc examples octave python static-libs test"
-REQUIRED_USE="octave? ( cxx )"
-RDEPEND="octave? ( sci-mathematics/octave )"
+REQUIRED_USE="octave? ( cxx ) python? ( ${PYTHON_REQUIRED_USE} )"
+
+RDEPEND="
+	octave? ( sci-mathematics/octave )
+	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[latex] )
 	python? ( dev-lang/swig )"
@@ -70,5 +75,5 @@ src_install() {
 
 pkg_postinst() {
 	elog "To install data files, you have to run as root:"
-	elog "lhapdf-getdata --dest=${EROOT}usr/share/lhapdf/PDFsets --all"
+	elog "lhapdf-getdata --dest=${EROOT%/}/usr/share/lhapdf/PDFsets --all"
 }
