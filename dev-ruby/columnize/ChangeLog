@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/columnize
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.27 2012/08/05 08:00:01 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/columnize/ChangeLog,v 1.28 2013/10/30 03:41:02 mrueg Exp $
+
+*columnize-0.3.6-r1 (30 Oct 2013)
+
+  30 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +columnize-0.3.6-r1.ebuild:
+  Add ruby20 target.
 
   05 Aug 2012; Hans de Graaff <graaff@gentoo.org> -columnize-0.3.4.ebuild,
   -columnize-0.3.5.ebuild:
@@ -118,4 +123,3 @@
   28 Dec 2008; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
   +columnize-0.2.ebuild:
   Initial import. New dependency of dev-ruby/ruby-debug.
-

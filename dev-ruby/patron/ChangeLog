@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/patron
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.25 2013/01/01 09:04:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.26 2013/10/30 03:39:40 mrueg Exp $
+
+*patron-0.4.18-r1 (30 Oct 2013)
+
+  30 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +patron-0.4.18-r1.ebuild:
+  Add ruby20 target.
 
   01 Jan 2013; Agostino Sarubbo <ago@gentoo.org> patron-0.4.18.ebuild:
   Stable for x86, wrt bug #448672
