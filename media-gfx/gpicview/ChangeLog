@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gpicview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.29 2013/02/23 02:06:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.30 2013/10/30 03:05:25 nullishzero Exp $
+
+  30 Oct 2013; Pavel Kazakov <nullishzero@gentoo.org> metadata.xml:
+  Add lxde herd
 
   23 Feb 2013; Zac Medico <zmedico@gentoo.org> gpicview-0.2.3.ebuild:
   Add ~arm-linux and ~x86-linux keywords.
