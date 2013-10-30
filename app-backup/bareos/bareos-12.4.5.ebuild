@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-12.4.5.ebuild,v 1.1 2013/10/21 21:52:51 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-12.4.5.ebuild,v 1.2 2013/10/30 01:17:33 mschiff Exp $
 
 EAPI="5"
 
@@ -159,6 +159,7 @@ src_configure() {
 		$(use_with python) \
 		$(use_with readline readline /usr) \
 		$(use_with sqlite3) \
+		$(use sqlite3 || echo "--without-sqlite3") \
 		$(use_with ssl openssl) \
 		$(use_with tcpd tcp-wrappers) \
 		"
