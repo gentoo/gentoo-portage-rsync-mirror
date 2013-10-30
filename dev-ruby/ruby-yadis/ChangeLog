@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-yadis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-yadis/ChangeLog,v 1.6 2012/09/22 08:06:11 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-yadis/ChangeLog,v 1.7 2013/10/30 04:23:04 mrueg Exp $
+
+*ruby-yadis-0.3.4-r2 (30 Oct 2013)
+
+  30 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +ruby-yadis-0.3.4-r2.ebuild:
+  Add ruby20 target.
 
   22 Sep 2012; Hans de Graaff <graaff@gentoo.org> ruby-yadis-0.3.4-r1.ebuild:
   EAPI=4. Add ruby19,jruby. Drop useless test dependency.

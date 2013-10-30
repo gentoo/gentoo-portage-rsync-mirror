@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-tcpwrap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.21 2012/09/22 06:24:11 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.22 2013/10/30 04:21:26 mrueg Exp $
+
+*ruby-tcpwrap-0.6-r2 (30 Oct 2013)
+
+  30 Oct 2013; Manuel Rüger <mrueg@gentoo.org> +ruby-tcpwrap-0.6-r2.ebuild:
+  Add ruby20 target.
 
   22 Sep 2012; Hans de Graaff <graaff@gentoo.org> -ruby-tcpwrap-0.6.ebuild:
   Cleanup.
