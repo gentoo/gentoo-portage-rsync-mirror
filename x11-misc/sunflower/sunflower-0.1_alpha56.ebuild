@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.1_alpha56.ebuild,v 1.1 2013/06/14 22:43:20 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/sunflower-0.1_alpha56.ebuild,v 1.2 2013/10/30 22:18:37 hasufell Exp $
 
 EAPI=5
 
@@ -23,6 +23,7 @@ DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	>=dev-python/pygtk-2.15.0[${PYTHON_USEDEP}]
 	>=dev-python/notify-python-0.1[${PYTHON_USEDEP}]
+	gnome-base/librsvg:2
 	virtual/python-argparse[${PYTHON_USEDEP}]"
 
 S=${WORKDIR}/${MY_PN}
