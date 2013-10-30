@@ -1,0 +1,41 @@
+commit ce0b5d9b435f4102aae35b3a3d5e9e6d0cb27154
+Author: Anant Kamath <kamathanant@gmail.com>
+Date:   Mon Oct 7 04:15:55 2013 +0530
+
+    Fixed to use ModemManagerQt 0.5.1 API correctly
+    
+    BUG: 325377
+
+diff --git a/plugins/pintxo/modem-combobox.cpp b/plugins/pintxo/modem-combobox.cpp
+index db949c4..9e15c0c 100644
+--- a/plugins/pintxo/modem-combobox.cpp
++++ b/plugins/pintxo/modem-combobox.cpp
+@@ -33,8 +33,8 @@ ModemComboBox::ModemComboBox(QWidget* parent) : QComboBox(parent)
+         Q_FOREACH(ModemManager::ModemInterface::Ptr modem, modems) {
+             ModemManager::ModemGsmCardInterface::Ptr simCard = ModemManager::findModemInterface(modem->udi(), ModemManager::ModemInterface::GsmCard).objectCast<ModemManager::ModemGsmCardInterface>();
+             if(!simCard.isNull()) {
+-                QString simIdent = simCard->getSimIdentifier();
+-                QDBusReply<QString> spn  = simCard->getSpn();
++                QString simIdent = simCard->simIdentifier();
++                QDBusReply<QString> spn  = simCard->serviceProviderName();
+                 addItem(spn.isValid() ? spn.value() : QLatin1String("Unknown modem"));
+             }
+         }
+@@ -51,7 +51,7 @@ QString ModemComboBox::selectedSimIdentifier()
+     if(!modem.isNull()){
+         ModemManager::ModemGsmCardInterface::Ptr simCard = ModemManager::findModemInterface(modems.at(currentIndex())->udi(), ModemManager::ModemInterface::GsmCard).objectCast<ModemManager::ModemGsmCardInterface>();
+         if(!simCard.isNull()) {
+-            return simCard->getSimIdentifier();
++            return simCard->simIdentifier();
+         }
+     }
+     return QString();
+@@ -64,7 +64,7 @@ void ModemComboBox::setSelectedModem(const QString &selectedSimIdentifier)
+         Q_FOREACH(ModemManager::ModemInterface::Ptr modem, modems) {
+             ModemManager::ModemGsmCardInterface::Ptr simCard = ModemManager::findModemInterface(modem->udi(), ModemManager::ModemInterface::GsmCard).objectCast<ModemManager::ModemGsmCardInterface>();
+             if(!simCard.isNull()) {
+-                QString simIdent = simCard->getSimIdentifier();
++                QString simIdent = simCard->simIdentifier();
+                 if (simIdent == selectedSimIdentifier) {
+                     setCurrentIndex(i);
+                     return;
