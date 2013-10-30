@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15182 2013/10/29 03:56:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15183 2013/10/30 18:20:01 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -73,11 +73,6 @@ dev-ruby/mail:2.3
 dev-ruby/sprockets:2.0
 =dev-ruby/coffee-rails-3.1.1
 =dev-ruby/sass-rails-3.1.5
-
-# Markos Chandras <hwoarang@gentoo.org> (18 Oct 2013)
-# Masked for testing
-# Bug #488510
-=media-video/rtmpdump-2.4_p*
 
 # Tim Harder <radhermit@gentoo.org (18 Oct 2013)
 # Masked for testing

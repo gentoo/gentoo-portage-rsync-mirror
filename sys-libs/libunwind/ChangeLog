@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.36 2013/10/25 14:53:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.37 2013/10/30 18:24:41 vapier Exp $
+
+  30 Oct 2013; Mike Frysinger <vapier@gentoo.org> libunwind-1.1.ebuild:
+  Call elibtoolize to fix relinking issues when cross-compiling.
 
   25 Oct 2013; Jeroen Roovers <jer@gentoo.org> libunwind-1.1.ebuild:
   Marked ~hppa too.

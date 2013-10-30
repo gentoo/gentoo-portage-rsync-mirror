@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.10 2013/10/25 14:53:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.11 2013/10/30 18:24:41 vapier Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="Portable and efficient API to determine the call-chain of a program"
 HOMEPAGE="http://savannah.nongnu.org/projects/libunwind"
@@ -32,6 +32,7 @@ src_prepare() {
 	echo 'int main(){return 0;}' > tests/Ltest-dyn1.c
 
 	sed -i -e '/LIBLZMA/s:-lzma:-llzma:' configure{,.ac} || die #444050
+	elibtoolize
 }
 
 src_configure() {

@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.4.1.ebuild,v 1.1 2013/08/11 20:02:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.13.ebuild,v 1.1 2013/10/30 18:04:34 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
 PYTHON_REQ_USE="xml"
 
-inherit autotools eutils python-single-r1 systemd
+inherit autotools eutils python-single-r1 udev systemd
 
 MY_P=${PN%-common}-${PV}
 
@@ -35,7 +35,7 @@ COMMON_DEPEND="
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/pycups-1.9.60[${PYTHON_USEDEP}]
 	dev-python/pycurl[${PYTHON_USEDEP}]
-	dev-python/pygobject:3[${PYTHON_USEDEP}]
+	>=dev-python/pygobject-2.21.5:2[${PYTHON_USEDEP}]
 	net-print/cups[dbus]
 	virtual/libusb:1
 	>=virtual/udev-172
@@ -57,7 +57,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.4.1-split.patch
+	epatch "${FILESDIR}"/${PN}-1.3.13-split.patch
 	eautoreconf
 }
 
@@ -74,7 +74,11 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake \
+		DESTDIR="${D}" \
+		udevhelperdir="$(udev_get_udevdir)" \
+		udevrulesdir="$(udev_get_udevdir)/rules.d" \
+		install
 
 	dodoc AUTHORS ChangeLog README
 	use doc && dohtml -r html/
