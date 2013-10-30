@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.160 2013/10/27 07:49:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.161 2013/10/30 08:00:35 radhermit Exp $
+
+*py-1.4.18 (30 Oct 2013)
+
+  30 Oct 2013; Tim Harder <radhermit@gentoo.org> +py-1.4.18.ebuild:
+  Version bump.
 
 *py-1.4.17 (27 Oct 2013)
 
