@@ -3,9 +3,9 @@ DEPEND=app-arch/xz-utils
 DESCRIPTION=Shows legacy tray icons on top
 EAPI=5
 HOMEPAGE=https://extensions.gnome.org/extension/495/topicons/
-KEYWORDS=~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2+
 RDEPEND=app-admin/eselect-gnome-shell-extensions >=gnome-base/gnome-shell-3.7.92
 SLOT=0
 SRC_URI=http://94.247.144.115/repo/topicons/snapshot/topicons-17.tar.xz
-_md5_=c2e96642a99582afb470fe40529bb036
+_md5_=cb8284e0c47a488fc53b155c030d6cdd

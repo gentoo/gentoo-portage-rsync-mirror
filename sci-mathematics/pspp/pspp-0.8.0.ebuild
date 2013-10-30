@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.8.0.ebuild,v 1.2 2013/09/10 02:40:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.8.0.ebuild,v 1.3 2013/10/30 17:36:56 jlec Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ RDEPEND="
 	virtual/libiconv
 	cairo? ( x11-libs/cairo )
 	emacs? ( virtual/emacs )
-	gtk? ( x11-libs/gtk+:2 gnome-base/libglade:2.0 )
+	gtk? ( x11-libs/gtk+:2 gnome-base/libglade:2.0 >=x11-libs/gtksourceview-2.2:2.0 )
 	ncurses? ( sys-libs/ncurses )
 	postgres? ( dev-db/postgresql-server )"
 DEPEND="${RDEPEND}

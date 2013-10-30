@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/pspp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.25 2013/10/30 16:21:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.26 2013/10/30 17:36:56 jlec Exp $
+
+*pspp-0.8.1-r1 (30 Oct 2013)
+
+  30 Oct 2013; Justin Lecher <jlec@gentoo.org> pspp-0.8.0.ebuild,
+  -pspp-0.8.1.ebuild, +pspp-0.8.1-r1.ebuild, +files/pspp-0.8.1-oos.patch,
+  +files/pspp-0.8.1-underlinking.patch, metadata.xml:
+  Fix underlinking and out-of-source build
 
 *pspp-0.8.1 (30 Oct 2013)
 

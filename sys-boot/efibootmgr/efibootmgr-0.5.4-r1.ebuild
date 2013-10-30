@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4-r1.ebuild,v 1.4 2013/10/12 20:04:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4-r1.ebuild,v 1.5 2013/10/30 17:43:12 floppym Exp $
 
 EAPI=5
 
 inherit flag-o-matic toolchain-funcs eutils
 
-DESCRIPTION="Interact with the EFI Boot Manager on IA-64 Systems"
+DESCRIPTION="Interact with the EFI Boot Manager"
 HOMEPAGE="http://developer.intel.com/technology/efi"
 SRC_URI="http://linux.dell.com/efibootmgr/${P}.tar.gz"
 

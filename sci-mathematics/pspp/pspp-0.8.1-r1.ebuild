@@ -1,20 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.8.1.ebuild,v 1.1 2013/10/30 16:21:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/pspp-0.8.1-r1.ebuild,v 1.1 2013/10/30 17:36:56 jlec Exp $
 
 EAPI=5
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
+AUTOTOOLS_AUTORECONF=1
 
 inherit eutils elisp-common autotools-utils multilib
 
 DESCRIPTION="Program for statistical analysis of sampled data"
 HOMEPAGE="http://www.gnu.org/software/pspp/pspp.html"
 SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
-LICENSE="GPL-3"
 
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="cairo doc emacs examples gtk ncurses nls perl postgres static-libs"
 
 RDEPEND="
@@ -26,9 +26,10 @@ RDEPEND="
 	virtual/libiconv
 	cairo? ( x11-libs/cairo )
 	emacs? ( virtual/emacs )
-	gtk? ( x11-libs/gtk+:2
-		   gnome-base/libglade:2.0
-		   >=x11-libs/gtksourceview-2.2:2.0 )
+	gtk? (
+			gnome-base/libglade:2.0
+			x11-libs/gtk+:2
+			>=x11-libs/gtksourceview-2.2:2.0 )
 	ncurses? ( sys-libs/ncurses )
 	postgres? ( dev-db/postgresql-server )"
 DEPEND="${RDEPEND}
@@ -37,8 +38,11 @@ DEPEND="${RDEPEND}
 
 SITEFILE=50${PN}-gentoo.el
 
-# if autoreconf is needed, might need patch for gettext in
-# https://savannah.gnu.org/bugs/index.php?39708
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.8.0-gettext.patch
+	"${FILESDIR}"/${P}-underlinking.patch
+	"${FILESDIR}"/${P}-oos.patch
+)
 
 src_configure() {
 	local myeconfargs=(
