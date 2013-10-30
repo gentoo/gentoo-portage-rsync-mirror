@@ -1,0 +1,18 @@
+https://bugs.gentoo.org/484198
+
+--- debian/tora.desktop.orig	2013-10-30 21:37:09.624133990 +0100
++++ debian/tora.desktop	2013-10-30 21:37:51.847371678 +0100
+@@ -4,11 +4,11 @@
+ Exec=tora
+ Icon=tora
+ Type=Application
+-MimeType=application/x-tora
++MimeType=application/x-tora;
+ Comment=A graphical toolkit for database administration and development
+ Comment[fr]=Une boite à outil graphique pour l'administration et le développement de base de données
+ Comment[de]=Grafisches Toolkit zur Administration und Entwicklung von Datenbanken
+ X-KDE-StartupNotify=true
+ Terminal=false
+-Categories=Database;Office;Development;KDE;Qt
++Categories=Database;Office;Development;KDE;Qt;
+ 

@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.101 2013/09/25 17:30:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.102 2013/10/30 21:22:41 haubi Exp $
+
+*tora-2.1.3-r3 (30 Oct 2013)
+
+  30 Oct 2013; Michael Haubenwallner <haubi@gentoo.org> +tora-2.1.3-r3.ebuild,
+  +files/tora-2.1.3-desktop.patch:
+  Fix tora.desktop file to pass validation, bug#484198.
+  Bump EAPI 3.
 
   25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> tora-2.1.3-r2.ebuild:
   Stable for ppc, wrt bug #477176
