@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.100 2013/04/06 23:53:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.101 2013/10/30 08:43:27 pinkbyte Exp $
+
+*minicom-2.6.2-r1 (30 Oct 2013)
+
+  30 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> -minicom-2.6.2.ebuild,
+  +minicom-2.6.2-r1.ebuild:
+  Revision bump: respect AR, wrt bug #489734, thanks to Mikle Kolyada for
+  discovering this issue. Drop old revision
 
 *minicom-2.6.2 (06 Apr 2013)
 

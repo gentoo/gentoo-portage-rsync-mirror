@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.6.2.ebuild,v 1.1 2013/04/06 23:53:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.6.2-r1.ebuild,v 1.1 2013/10/30 08:43:27 pinkbyte Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 STUPID_NUM="3869"
 
@@ -38,6 +38,10 @@ src_configure() {
 	econf \
 		--sysconfdir="${EPREFIX}"/etc/${PN} \
 		$(use_enable nls)
+}
+
+src_compile() {
+	emake AR="$(tc-getAR)"
 }
 
 src_install() {
