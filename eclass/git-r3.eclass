@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.21 2013/10/27 13:44:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.22 2013/10/30 19:21:12 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -579,9 +579,25 @@ git-r3_checkout() {
 		fi
 	fi
 
+	# Note: this is a hack to avoid parallel checkout issues.
+	# I will try to handle it without locks when I have more time.
+	local lockfile=${GIT_DIR}/.git-r3_checkout_lock
+	local lockfile_l=${lockfile}.${BASHPID}
+	touch "${lockfile_l}" || die
+	until ln "${lockfile_l}" "${lockfile}" &>/dev/null; do
+		sleep 1
+	done
+	rm "${lockfile_l}" || die
+
 	set -- git checkout -f "${local_id}"/__main__ .
 	echo "${@}" >&2
-	"${@}" || die "git checkout ${local_id}/__main__ failed"
+	"${@}"
+	local ret=${?}
+
+	# Remove the lock!
+	rm "${lockfile}" || die
+
+	[[ ${ret} == 0 ]] || die "git checkout ${local_id}/__main__ failed"
 
 	# diff against previous revision (if any)
 	local new_commit_id=$(git rev-parse --verify "${local_id}"/__main__)

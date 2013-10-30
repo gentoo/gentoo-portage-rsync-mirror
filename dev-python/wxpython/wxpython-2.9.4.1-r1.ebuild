@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.4.1-r1.ebuild,v 1.6 2013/09/17 20:46:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.4.1-r1.ebuild,v 1.7 2013/10/30 19:22:40 mgorny Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ RDEPEND="
 	opengl?	( dev-python/pyopengl[${PYTHON_USEDEP}] )"
 
 DEPEND="${RDEPEND}
-	dev-python/python-exec:0[${PYTHON_USEDEP}]
+	dev-lang/python-exec:0[${PYTHON_USEDEP}]
 	virtual/pkgconfig"
 
 S="${WORKDIR}/${MY_PN}-2.9.4.0/wxPython"

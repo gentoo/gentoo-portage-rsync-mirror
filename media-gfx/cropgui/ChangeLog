@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/cropgui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/ChangeLog,v 1.10 2013/09/17 20:17:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/ChangeLog,v 1.11 2013/10/30 19:25:27 mgorny Exp $
+
+  30 Oct 2013; Michał Górny <mgorny@gentoo.org> cropgui-0.1.1-r2.ebuild:
+  Update the dep to use dev-lang/python-exec.
 
   17 Sep 2013; Michał Górny <mgorny@gentoo.org> cropgui-0.1.1-r2.ebuild:
   Add explicit dep on python-exec:0 since the package wraps the script manually.

@@ -6,9 +6,9 @@ HOMEPAGE=http://www.a-a-p.org/
 IUSE=doc python_targets_python2_7 python_single_target_python2_7
 KEYWORDS=~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-2
-RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
+RDEPEND=python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?]
 REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/a-a-p/aap-1.091.zip
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	677393e4f4667059846e1a73f205010d	python-utils-r1	448d1943861aa5dffe1f328a6f7cb6b6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	4d9f916e821994a2ccdbbcfc8ac225c9	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=7eb85e52d682a9911874ee6dc194126e

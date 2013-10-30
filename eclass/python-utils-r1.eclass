@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.44 2013/10/27 07:27:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.45 2013/10/30 19:14:02 mgorny Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -981,7 +981,7 @@ _python_want_python_exec2() {
 
 	# Check if we cached the result, or someone put an override.
 	if [[ ! ${_PYTHON_WANT_PYTHON_EXEC2+1} ]]; then
-		has_version 'dev-python/python-exec:2'
+		has_version 'dev-lang/python-exec:2'
 		_PYTHON_WANT_PYTHON_EXEC2=$(( ! ${?} ))
 	fi
 

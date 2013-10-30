@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.10.5.ebuild,v 1.8 2013/09/17 20:48:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.10.5.ebuild,v 1.9 2013/10/30 19:24:51 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -26,7 +26,7 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
-	dev-python/python-exec:0[${PYTHON_USEDEP}]
+	dev-lang/python-exec:0[${PYTHON_USEDEP}]
 	sys-devel/libtool
 "
 

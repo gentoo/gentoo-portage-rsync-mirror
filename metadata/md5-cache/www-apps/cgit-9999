@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-vcs/git sys-libs/zlib dev-libs/openssl virtual/httpd-cgi highlight? ( app-text/highlight ) >=app-admin/webapp-config-1.50.15
 SLOT=0
 SRC_URI=mirror://kernel/software/scm/git/git-1.7.4.tar.bz2
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	50d4901f6fbc60f376f4af3b555143c8	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	536297c3f55d49069f6d2785b061e4d9	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=0c4af8693569ade74024bac7e7d27106

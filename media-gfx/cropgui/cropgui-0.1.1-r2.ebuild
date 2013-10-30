@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/cropgui-0.1.1-r2.ebuild,v 1.4 2013/09/17 20:17:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cropgui/cropgui-0.1.1-r2.ebuild,v 1.5 2013/10/30 19:25:27 mgorny Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}
-	dev-python/python-exec:0[${PYTHON_USEDEP}]"
+	dev-lang/python-exec:0[${PYTHON_USEDEP}]"
 RDEPEND="${PYTHON_DEPS}
 	virtual/python-imaging[${PYTHON_USEDEP}]
 	dev-python/pygobject:2[${PYTHON_USEDEP}]

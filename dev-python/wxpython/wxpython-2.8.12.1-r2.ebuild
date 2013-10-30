@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r2.ebuild,v 1.1 2013/10/23 10:46:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r2.ebuild,v 1.2 2013/10/30 19:22:40 mgorny Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd
 IUSE="cairo doc examples opengl"
 
 RDEPEND="
-	dev-python/python-exec:2[${PYTHON_USEDEP}]
+	dev-lang/python-exec:2[${PYTHON_USEDEP}]
 	>=x11-libs/wxGTK-${PV}:${WX_GTK_VER}[opengl?,tiff,X]
 	dev-libs/glib:2
 	dev-python/setuptools[${PYTHON_USEDEP}]

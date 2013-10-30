@@ -1,14 +1,14 @@
 DEFINED_PHASES=configure install setup
-DEPEND=gnome-keyring? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/gnome-keyring-python gnome-base/libgnome-keyring ) idn? ( net-dns/libidn ) nls? ( virtual/libintl ) sasl? ( virtual/gsasl ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl ) ) nls? ( sys-devel/gettext ) virtual/pkgconfig
+DEPEND=gnome-keyring? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/gnome-keyring-python gnome-base/libgnome-keyring ) idn? ( net-dns/libidn ) nls? ( virtual/libintl ) sasl? ( virtual/gsasl ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl ) ) nls? ( sys-devel/gettext ) virtual/pkgconfig
 DESCRIPTION=A small, fast, and portable POP3 client
 EAPI=5
 HOMEPAGE=http://mpop.sourceforge.net/
 IUSE=gnome-keyring gnutls idn nls sasl ssl vim-syntax python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=gnome-keyring? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/gnome-keyring-python gnome-base/libgnome-keyring ) idn? ( net-dns/libidn ) nls? ( virtual/libintl ) sasl? ( virtual/gsasl ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl ) )
+RDEPEND=gnome-keyring? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/gnome-keyring-python gnome-base/libgnome-keyring ) idn? ( net-dns/libidn ) nls? ( virtual/libintl ) sasl? ( virtual/gsasl ) ssl? ( gnutls? ( net-libs/gnutls ) !gnutls? ( dev-libs/openssl ) )
 REQUIRED_USE=gnutls? ( ssl )
 SLOT=0
 SRC_URI=mirror://sourceforge/mpop/mpop-1.0.28.tar.bz2
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	677393e4f4667059846e1a73f205010d	python-utils-r1	448d1943861aa5dffe1f328a6f7cb6b6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	4d9f916e821994a2ccdbbcfc8ac225c9	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d98a27ac0704455cc98ef05a15d37001

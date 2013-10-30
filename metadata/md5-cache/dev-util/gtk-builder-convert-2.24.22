@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install setup
-DEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] app-arch/xz-utils
+DEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] app-arch/xz-utils
 DESCRIPTION=Converts Glade files to GtkBuilder XML format
 EAPI=5
 HOMEPAGE=http://www.gtk.org/
 IUSE=python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=LGPL-2+
-RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] !<=x11-libs/gtk+-2.24.10:2
+RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] !<=x11-libs/gtk+-2.24.10:2
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gtk+/2.24/gtk+-2.24.22.tar.xz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	677393e4f4667059846e1a73f205010d	python-utils-r1	448d1943861aa5dffe1f328a6f7cb6b6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	4d9f916e821994a2ccdbbcfc8ac225c9	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=37be3613a3bee23596e32fd4f8f63e60

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.23 2013/10/22 15:16:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-single-r1.eclass,v 1.24 2013/10/30 19:14:02 mgorny Exp $
 
 # @ECLASS: python-single-r1
 # @MAINTAINER:
@@ -109,7 +109,7 @@ fi
 #
 # Example value:
 # @CODE
-# dev-python/python-exec:0
+# dev-lang/python-exec:=
 # python_single_target_python2_6? ( dev-lang/python:2.6[gdbm] )
 # python_single_target_python2_7? ( dev-lang/python:2.7[gdbm] )
 # @CODE
@@ -195,9 +195,9 @@ _python_single_set_globals() {
 	# 3) use whichever python-exec slot installed in EAPI 5. For EAPI 4,
 	# just fix :2 since := deps are not supported.
 	if [[ ${EAPI} != 4 ]]; then
-		PYTHON_DEPS+="dev-python/python-exec:=[${PYTHON_USEDEP}]"
+		PYTHON_DEPS+="dev-lang/python-exec:=[${PYTHON_USEDEP}]"
 	else
-		PYTHON_DEPS+="dev-python/python-exec:2[${PYTHON_USEDEP}]"
+		PYTHON_DEPS+="dev-lang/python-exec:2[${PYTHON_USEDEP}]"
 	fi
 }
 _python_single_set_globals

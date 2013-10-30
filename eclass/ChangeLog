@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1039 2013/10/27 13:44:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1041 2013/10/30 19:21:12 mgorny Exp $
+
+  30 Oct 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
+  Fix parallel checkout race conditions, bug #489280.
+
+  30 Oct 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass,
+  python-single-r1.eclass, python-utils-r1.eclass:
+  Switch the eclasses to use dev-lang/python-exec.
 
   27 Oct 2013; Michał Górny <mgorny@gentoo.org> git-r3.eclass:
   Create a fake ".git" directory inside the checkout to satisfy git rev-parse

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.64 2013/09/26 12:13:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.65 2013/10/30 19:21:36 mgorny Exp $
+
+  30 Oct 2013; Michał Górny <mgorny@gentoo.org> snakeoil-0.5.2.ebuild:
+  Update the dep to use dev-lang/python-exec.
 
   26 Sep 2013; Julian Ospald <hasufell@gentoo.org> snakeoil-9999.ebuild:
   fix fetching (server does not support shallow clients)

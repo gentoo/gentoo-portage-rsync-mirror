@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
-DEPEND=>=dev-python/pygtk-2.24 dev-util/intltool userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=sys-apps/sed-4
+DEPEND=>=dev-python/pygtk-2.24 dev-util/intltool userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=sys-apps/sed-4
 DESCRIPTION=audio library tagger, manager, and player for GTK+
 EAPI=5
 HOMEPAGE=http://code.google.com/p/quodlibet/
 IUSE=+dbus gstreamer ipod +udev python_targets_python2_7
 KEYWORDS=amd64 ppc ppc64 x86
 LICENSE=GPL-2
-RDEPEND=>=dev-python/pygtk-2.24 dev-libs/keybinder:0[python] dev-python/feedparser dev-python/pygobject:2 >=media-libs/mutagen-1.20 gstreamer? ( >=dev-python/gst-python-0.10.2:0.10 media-libs/gst-plugins-good:0.10 media-plugins/gst-plugins-meta:0.10 ) !gstreamer? ( media-libs/xine-lib ) dbus? ( app-misc/media-player-info dev-python/dbus-python ) ipod? ( media-libs/libgpod[python] ) udev? ( virtual/udev ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+RDEPEND=>=dev-python/pygtk-2.24 dev-libs/keybinder:0[python] dev-python/feedparser dev-python/pygobject:2 >=media-libs/mutagen-1.20 gstreamer? ( >=dev-python/gst-python-0.10.2:0.10 media-libs/gst-plugins-good:0.10 media-plugins/gst-plugins-meta:0.10 ) !gstreamer? ( media-libs/xine-lib ) dbus? ( app-misc/media-player-info dev-python/dbus-python ) ipod? ( media-libs/libgpod[python] ) udev? ( virtual/udev ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=ipod? ( dbus ) || ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://quodlibet.googlecode.com/files/quodlibet-2.5.tar.gz
-_eclasses_=distutils-r1	26fe65665d086911163d4502473bd093	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	python-r1	2ac4b3ff6f2fd520c8672843482ed427	python-utils-r1	448d1943861aa5dffe1f328a6f7cb6b6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils-r1	26fe65665d086911163d4502473bd093	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	python-r1	b81583006559e9b008883355c9889e29	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c292358bd2dab4d9ee57219a856e14c7

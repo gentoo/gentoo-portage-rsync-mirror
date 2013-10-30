@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=dev-libs/expat dev-libs/libevent >=dev-libs/openssl-0.9.8 >=net-libs/ldns-1.6.13[ecdsa,ssl,gost?] selinux? ( sec-policy/selinux-bind ) python? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-python/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-lang/swig ) test? ( net-dns/ldns-utils[examples] dev-util/splint app-text/wdiff )
+DEPEND=dev-libs/expat dev-libs/libevent >=dev-libs/openssl-0.9.8 >=net-libs/ldns-1.6.13[ecdsa,ssl,gost?] selinux? ( sec-policy/selinux-bind ) python? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-lang/swig ) test? ( net-dns/ldns-utils[examples] dev-util/splint app-text/wdiff )
 DESCRIPTION=A validating, recursive and caching DNS resolver
 EAPI=5
 HOMEPAGE=http://unbound.net/
@@ -10,5 +10,5 @@ RDEPEND=dev-libs/expat dev-libs/libevent >=dev-libs/openssl-0.9.8 >=net-libs/ldn
 REQUIRED_USE=python? ( python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=http://unbound.net/downloads/unbound-1.4.21.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	677393e4f4667059846e1a73f205010d	python-utils-r1	448d1943861aa5dffe1f328a6f7cb6b6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	4d9f916e821994a2ccdbbcfc8ac225c9	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=cb212fc037f567ead506cfeede07c4f9
