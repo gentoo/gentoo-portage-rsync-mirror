@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ipmiutil-2.8.5.ebuild,v 1.3 2012/12/26 22:20:16 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ipmiutil-2.8.5.ebuild,v 1.4 2013/10/30 16:07:58 jer Exp $
 
 EAPI=4
 inherit autotools systemd
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~hppa x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/openssl-1:0"

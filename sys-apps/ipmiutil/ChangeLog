@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ipmiutil
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.22 2012/12/26 22:20:16 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.23 2013/10/30 16:07:58 jer Exp $
+
+  30 Oct 2013; Jeroen Roovers <jer@gentoo.org> ipmiutil-2.8.5.ebuild:
+  Marked ~hppa too.
 
   26 Dec 2012; Jeff Horelick <jdhore@gentoo.org> ipmiutil-2.8.5.ebuild:
   marked x86 per bug 441510

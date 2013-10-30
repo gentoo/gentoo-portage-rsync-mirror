@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/pspp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.24 2013/09/10 02:40:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pspp/ChangeLog,v 1.25 2013/10/30 16:21:48 bicatali Exp $
+
+*pspp-0.8.1 (30 Oct 2013)
+
+  30 Oct 2013; Sébastien Fabbro <bicatali@gentoo.org> +pspp-0.8.1.ebuild:
+  Version bump, patches not needed anymore, fix bug #489526, thanks
+  cujyaz@googlemail.com
 
   10 Sep 2013; Patrick Lauer <patrick@gentoo.org> pspp-0.8.0.ebuild:
   Whitespace
