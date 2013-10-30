@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/openipmi
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.27 2012/08/19 18:41:17 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/ChangeLog,v 1.28 2013/10/30 15:55:09 jer Exp $
+
+  30 Oct 2013; Jeroen Roovers <jer@gentoo.org> openipmi-2.0.18.ebuild:
+  Marked ~hppa too.
 
   19 Aug 2012; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Re-assign to sysadmin herd.
