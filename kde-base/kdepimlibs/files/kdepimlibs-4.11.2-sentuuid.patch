@@ -1,0 +1,75 @@
+From 498d6678f478bd1bd9bdc944bb790f6b16b7ade4 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Dan=20Vr=C3=A1til?= <dvratil@redhat.com>
+Date: Wed, 30 Oct 2013 16:46:45 +0100
+Subject: [PATCH] Wait for changes from resource to be written to Akonadi
+ before marking change as processed
+
+This fixes a problem with invalid RIDs after inter-resource moves.
+When there is an another changeReplay for the just moved item
+scheduled in the new parent resource, the item will have invalid RID
+(or rather RID assigned to it by the previous parent resource).
+It's because the ItemModifyJob dispatched from ResourceBase::changesCommitted()
+with the new RID is not finished yet when the next task is dispatched,
+and so the item in resource's EntityCache is not invalidated
+and the resource will use it instead of the updated one.
+
+By waiting for the ItemModifyJob dispatched from changesCommited()
+to finish before marking the change as processed and dispatching
+next task we make sure that in case the next task involves the
+same item the change will be stored in Akonadi and the item will
+be invalidated in local caches, forcing the resource to fetch the
+item again from Akonadi before starting the task.
+
+This fixes 'Invalid uidset' error reported by IMAP resources after
+the MailDispatcher agent moves the mail from local Outbox to remote
+Sent folder and updates it's flags.
+
+BUG: 323762
+BUG: 324807
+CCBUG: 314964
+FIXED-IN: 4.11.3
+---
+ akonadi/resourcebase.cpp | 16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+
+diff --git a/akonadi/resourcebase.cpp b/akonadi/resourcebase.cpp
+index 70c8286..2383ba0 100644
+--- a/akonadi/resourcebase.cpp
++++ b/akonadi/resourcebase.cpp
+@@ -670,12 +670,11 @@ void ResourceBase::changeCommitted( const Item& item )
+ 
+ void ResourceBase::changesCommitted(const Item::List& items)
+ {
+-  Q_D( ResourceBase );
+   ItemModifyJob *job = new ItemModifyJob( items );
+   job->d_func()->setClean();
+   job->disableRevisionCheck(); // TODO: remove, but where/how do we handle the error?
+   job->setIgnorePayload( true ); // we only want to reset the dirty flag and update the remote id
+-  d->changeProcessed();
++  connect( job, SIGNAL(finished(KJob*)), this, SLOT(changeCommittedResult(KJob*)) );
+ }
+ 
+ void ResourceBase::changeCommitted( const Collection &collection )
+@@ -687,9 +686,16 @@ void ResourceBase::changeCommitted( const Collection &collection )
+ void ResourceBasePrivate::changeCommittedResult( KJob *job )
+ {
+   Q_Q( ResourceBase );
+-  if ( job->error() )
+-    emit q->error( i18nc( "@info", "Updating local collection failed: %1.", job->errorText() ) );
+-  mChangeRecorder->d_ptr->invalidateCache( static_cast<CollectionModifyJob*>( job )->collection() );
++  if ( qobject_cast<CollectionModifyJob*>( job ) ) {
++    if ( job->error() ) {
++      emit q->error( i18nc( "@info", "Updating local collection failed: %1.", job->errorText() ) );
++    }
++    mChangeRecorder->d_ptr->invalidateCache( static_cast<CollectionModifyJob*>( job )->collection() );
++  } else {
++    // TODO: Error handling for item changes?
++    // Item cache is invalidated by ItemModifyJob
++  }
++
+   changeProcessed();
+ }
+ 
+-- 
+1.8.3.2
+
