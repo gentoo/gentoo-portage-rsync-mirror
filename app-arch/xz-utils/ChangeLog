@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.66 2013/10/28 10:21:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.67 2013/10/31 14:27:08 jer Exp $
+
+  31 Oct 2013; Jeroen Roovers <jer@gentoo.org> xz-utils-5.0.5-r1.ebuild:
+  Stable for HPPA (bug #489362).
 
 *xz-utils-5.1.3_alpha (28 Oct 2013)
 
