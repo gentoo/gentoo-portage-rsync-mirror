@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.57 2013/10/14 16:39:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.58 2013/10/31 16:22:00 mgorny Exp $
 
 EAPI=5
 
@@ -204,7 +204,7 @@ multilib_src_configure() {
 		fi
 	fi
 
-	if multilib_is_native_abi && use gold; then
+	if multilib_build_binaries && use gold; then
 		CONF_FLAGS="${CONF_FLAGS} --with-binutils-include=${EPREFIX}/usr/include/"
 	fi
 	if multilib_is_native_abi && use ocaml; then
@@ -282,7 +282,7 @@ multilib_src_install() {
 			"${ED}"/usr/bin/* || die
 	fi
 
-	if multilib_is_native_abi; then
+	if multilib_build_binaries; then
 		# Move files back.
 		if path_exists -o "${ED}"/tmp/llvm-config.*; then
 			mv "${ED}"/tmp/llvm-config.* "${ED}"/usr/bin || die
