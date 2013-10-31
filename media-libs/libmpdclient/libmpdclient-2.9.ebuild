@@ -1,16 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/libmpdclient-2.7.ebuild,v 1.8 2012/07/29 16:02:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpdclient/libmpdclient-2.9.ebuild,v 1.1 2013/10/31 11:19:59 angelos Exp $
 
 EAPI=4
 
 DESCRIPTION="A library for interfacing Music Player Daemon (media-sound/mpd)"
 HOMEPAGE="http://www.musicpd.org"
-SRC_URI="mirror://sourceforge/musicpd/${PN}/${PV}/${P}.tar.bz2"
+SRC_URI="http://www.musicpd.org/download/${PN}/${PV%.*}/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc examples static-libs"
 
 RDEPEND=""
@@ -23,7 +23,8 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		$(use_enable static-libs static)
+		$(use_enable static-libs static) \
+		$(use_enable doc documentation)
 }
 
 src_install() {
