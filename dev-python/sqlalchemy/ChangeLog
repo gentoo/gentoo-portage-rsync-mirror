@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.109 2013/10/31 04:51:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.112 2013/10/31 05:12:26 floppym Exp $
+
+  31 Oct 2013; Mike Gilbert <floppym@gentoo.org> sqlalchemy-0.7.9-r1.ebuild:
+  Remove backslash from KEYWORDS.
+
+  31 Oct 2013; Mike Gilbert <floppym@gentoo.org> sqlalchemy-0.7.10.ebuild:
+  Remove backslash from KEYWORDS.
+
+*sqlalchemy-0.8.2-r1 (31 Oct 2013)
+
+  31 Oct 2013; Mike Gilbert <floppym@gentoo.org> +sqlalchemy-0.8.2-r1.ebuild,
+  sqlalchemy-0.8.2.ebuild:
+  Revbump for previous change.
 
   31 Oct 2013; Mike Gilbert <floppym@gentoo.org> sqlalchemy-0.8.2.ebuild:
   Rearrange python_test to avoid calling 2to3 on source tree twice, bug 489518.
