@@ -5,11 +5,14 @@
 #  * for amd64: CFLAGS="-march=x86-64 -mtune=generic -O2 -pipe -g"
 
 # What you can set:
-VERSION="4.1.2.3"
-BINVERSION="4.1.2.3"
+VERSION="4.1.3.2"
+BINVERSION="4.1.3.2"
 OPTS="-v"
 USEFILE="/etc/portage/package.use/libreo"
 MYPKGDIR="$( portageq pkgdir )"
+MYTMPDIR=/root/tmp
+MYDISTDIR=/root/distfiles
+
 ################################################
 
 # bug 473974
@@ -84,40 +87,41 @@ echo "Base"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
 FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-base-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Base - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_NK}" > ${USEFILE}
 FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-base-java-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-base-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # kde flavor
 echo "KDE"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_NG} ${IUSES_K}" > ${USEFILE}
 FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-kde-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "KDE - java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_NG} ${IUSES_K}" > ${USEFILE}
 FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-kde-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
 # gnome flavor
 echo "Gnome"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_NJ} ${IUSES_G} ${IUSES_NK}" > ${USEFILE}
 FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-gnome-${BINVERSION}.tbz2  || die "Moving package failed"
 
 echo "Gnome -java"
 echo "app-office/libreoffice ${IUSES_BASE} ${IUSES_J} ${IUSES_G} ${IUSES_NK}" > ${USEFILE}
 FEATURES="${FEATURES} splitdebug" CFLAGS="${MYFLAGS}" CXXFLAGS="${MYFLAGS}" emerge ${OPTS} =libreoffice-${VERSION} || die "emerge failed"
 quickpkg libreoffice --include-config=y
-mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ./libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
+mv ${MYPKGDIR}/app-office/libreoffice-${VERSION}.tbz2 ${MYTMPDIR}/libreoffice-gnome-java-${BINVERSION}.tbz2  || die "Moving package failed"
 
+cd ${MYTMPDIR}
 
 for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do
 
@@ -145,10 +149,16 @@ for name in ./libreoffice-*-${BINVERSION}.tbz2 ; do
   cd ../..
   rm -rf tmp.lo
 
+  echo "Removing original package file"
+  rm -f $BN.tbz2
+
+  echo "Moving results to distfiles storage"
+  mv -v $ARCH-bin-$BN.tar.xz $MYDISTDIR
+  mv -v $ARCH-debug-$BN.tar.xz $MYDISTDIR
+
   echo "Done with $BN.tbz2"
 
 done
 
 rm -f ${USEFILE} || die "Removing ${USEFILE} failed"
 
-rm -f libreoffice*${VERSION}*.tbz2 || die "Removing un-split package files failed"
