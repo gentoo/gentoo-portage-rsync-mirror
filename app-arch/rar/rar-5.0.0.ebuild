@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-5.0.0_beta8.ebuild,v 1.1 2013/09/01 22:26:30 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-5.0.0.ebuild,v 1.1 2013/10/31 01:11:20 jdhore Exp $
 EAPI=4
 MY_PV="${PV/0_beta/b}"
 DESCRIPTION="RAR compressor/uncompressor"

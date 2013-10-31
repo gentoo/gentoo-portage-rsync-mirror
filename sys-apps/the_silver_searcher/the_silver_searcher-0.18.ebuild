@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/the_silver_searcher-0.15.ebuild,v 1.1 2013/09/02 00:13:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/the_silver_searcher/the_silver_searcher-0.18.ebuild,v 1.1 2013/10/31 01:21:20 jdhore Exp $
 
 EAPI=5
 inherit autotools bash-completion-r1
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
-RDEPEND="dev-libs/libpcre"
+RDEPEND="app-arch/xz-utils
+		dev-libs/libpcre"
 DEPEND="${RDEPEND}
 		virtual/pkgconfig"
 
