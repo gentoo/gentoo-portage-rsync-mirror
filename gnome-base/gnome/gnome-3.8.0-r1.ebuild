@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.8.0.ebuild,v 1.7 2013/10/02 06:44:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-3.8.0-r1.ebuild,v 1.1 2013/10/31 07:24:03 pacho Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SLOT="2.0" # Cannot be installed at the same time as gnome-2
 # double check none of the deps are still masked !
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
-IUSE="accessibility +bluetooth +cdr cups +extras fallback"
+IUSE="accessibility +bluetooth +classic +cdr cups +extras flashback"
 
 S=${WORKDIR}
 
@@ -39,8 +39,9 @@ RDEPEND="
 		>=app-accessibility/caribou-0.4.4.2
 		>=app-accessibility/orca-3.6.3-r1
 		>=gnome-extra/mousetweaks-${PV} )
+	classic? ( >=gnome-extra/gnome-shell-extensions-${PV} )
 	extras? ( >=gnome-base/gnome-extra-apps-${PV} )
-	fallback? (
+	flashback? (
 		>=gnome-base/gnome-fallback-${PV} )
 "
 
