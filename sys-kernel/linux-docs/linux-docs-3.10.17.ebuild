@@ -1,7 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.1.ebuild,v 1.2 2011/11/24 01:04:36 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/linux-docs-3.10.17.ebuild,v 1.1 2013/10/31 12:23:09 mpagano Exp $
 
+EAPI=3
 inherit toolchain-funcs
 
 MY_P=linux-${PV}
@@ -22,8 +23,7 @@ DEPEND="app-text/docbook-sgml-utils
 		~app-text/docbook-xml-dtd-4.1.2"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 
 	sed -i \
 		-e "s:db2:docbook2:g" \

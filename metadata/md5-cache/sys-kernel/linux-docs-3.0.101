@@ -1,12 +1,11 @@
-DEFINED_PHASES=compile install prepare
+DEFINED_PHASES=compile install unpack
 DEPEND=app-text/docbook-sgml-utils app-text/xmlto sys-apps/sed ~app-text/docbook-xml-dtd-4.1.2
 DESCRIPTION=Developer documentation generated from the Linux kernel
-EAPI=3
 HOMEPAGE=http://www.kernel.org/
 IUSE=html
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 LICENSE=GPL-2
 SLOT=0
-SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.7.1.tar.bz2
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.0.101.tar.bz2
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=d9001c591dee0cef9d0c1ad10d272c1f
+_md5_=5f63e973b3d14116b68563e7107dcf17

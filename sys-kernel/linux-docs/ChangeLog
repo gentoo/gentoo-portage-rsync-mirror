@@ -1,6 +1,20 @@
 # ChangeLog for sys-kernel/linux-docs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.40 2013/01/15 20:12:26 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.41 2013/10/31 12:23:09 mpagano Exp $
+
+*linux-docs-3.11.6 (31 Oct 2013)
+*linux-docs-3.10.17 (31 Oct 2013)
+*linux-docs-3.4.67 (31 Oct 2013)
+*linux-docs-3.0.101 (31 Oct 2013)
+
+  31 Oct 2013; Michael Pagano <mpagano@gentoo.org> -linux-docs-2.6.16.ebuild,
+  -linux-docs-2.6.27.7.ebuild, -linux-docs-2.6.32.23.ebuild,
+  -linux-docs-3.0.ebuild, +linux-docs-3.0.101.ebuild, -linux-docs-3.1.ebuild,
+  -linux-docs-3.2.1.ebuild, -linux-docs-3.4.1.ebuild,
+  +linux-docs-3.4.67.ebuild, -linux-docs-3.6.11.ebuild,
+  -linux-docs-3.7.1.ebuild, +linux-docs-3.10.17.ebuild,
+  +linux-docs-3.11.6.ebuild:
+  Cleanup. Remove old, commit new.
 
 *linux-docs-3.6.11 (15 Jan 2013)
 
