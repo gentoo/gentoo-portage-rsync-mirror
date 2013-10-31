@@ -19,14 +19,16 @@ checkconfig() {
 
 start() {
 	checkconfig || exit 1
-	ebegin "Starting CONMUX daemon"
-	start-stop-daemon -b --start -1 ${CONMUX_LOG} \
+	# Make sure conmux finds everything
+	export PATH="${PATH}:/usr/share/conmux/drivers:/usr/share/conmux/helpers"
+	ebegin "Starting conmux daemon"
+	start-stop-daemon -m b --start -1 ${CONMUX_LOG} \
 		-2 ${CONMUX_LOG} -p /run/conmux.pid \
 		--exec /usr/sbin/conmux -- ${CONMUX_CONFIG}
 }
 
 stop() {
-	ebegin "Stopping CONMUX daemon"
+	ebegin "Stopping conmux daemon"
 	start-stop-daemon --stop --pidfile /run/conmux.pid
 	eend $?
 }

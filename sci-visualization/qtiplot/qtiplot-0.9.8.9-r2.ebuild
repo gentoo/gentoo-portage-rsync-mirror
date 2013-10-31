@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.3 2013/07/12 15:22:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.4 2013/10/31 20:06:39 dilfridge Exp $
 
 EAPI=5
 
@@ -41,9 +41,9 @@ CDEPEND="
 	dev-qt/qtsvg:4
 	>=x11-libs/gl2ps-1.3.5[png]
 	>=dev-cpp/muParser-1.32
-	>=dev-libs/boost-1.35.0
+	>=dev-libs/boost-1.35.0:=
 	dev-libs/quazip
-	media-libs/libpng
+	media-libs/libpng:=
 	sci-libs/alglib
 	sci-libs/gsl
 	sci-libs/tamu_anova
