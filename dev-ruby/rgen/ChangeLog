@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rgen
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/ChangeLog,v 1.1 2013/10/31 06:51:41 graaff Exp $
+
+*rgen-0.6.6 (31 Oct 2013)
+
+  31 Oct 2013; Hans de Graaff <graaff@gentoo.org> +rgen-0.6.6.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for puppet, bug 489868.
+
