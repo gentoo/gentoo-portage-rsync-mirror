@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r54.ebuild,v 1.1 2013/10/02 17:15:46 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r54.ebuild,v 1.2 2013/10/31 13:48:14 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
 	${PYTHON_DEPS}
 "
 DEPEND="${COMMON_DEPEND}
-	dev-python/python-exec:0
+	dev-lang/python-exec:0
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
 	test? (

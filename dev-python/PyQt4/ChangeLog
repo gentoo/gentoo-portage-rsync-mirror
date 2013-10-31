@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.243 2013/10/23 14:41:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.244 2013/10/31 13:47:01 mgorny Exp $
+
+  31 Oct 2013; Michał Górny <mgorny@gentoo.org> PyQt4-4.10.2.ebuild,
+  PyQt4-4.10.3-r1.ebuild, PyQt4-4.10.3.ebuild, PyQt4-4.9.6-r2.ebuild:
+  Update the ebuilds to dep on dev-lang/python-exec.
 
   23 Oct 2013; Davide Pesavento <pesa@gentoo.org> -PyQt4-4.10.1.ebuild:
   old

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r55.ebuild,v 1.1 2013/10/17 18:05:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r55.ebuild,v 1.2 2013/10/31 13:48:14 mgorny Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE="examples libffi test"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND=">=dev-libs/glib-2.24.0:2
-	dev-python/python-exec:2
+	dev-lang/python-exec:2
 	libffi? ( virtual/libffi:= )
 	${PYTHON_DEPS}
 "
