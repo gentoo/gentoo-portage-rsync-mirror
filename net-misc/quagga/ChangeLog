@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.164 2013/10/10 06:30:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.165 2013/10/31 07:41:25 pinkbyte Exp $
+
+  31 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> quagga-0.99.22.4.ebuild,
+  +files/quagga-0.99.22.4-ipctl-forwarding.patch:
+  Fix for missing definitions on some hardened configuration, bug #437292.
+  Thanks to Graham Murray <gmurray AT webwayone.co.uk> for pointing on reasons
+  of this issue
 
   10 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> -quagga-0.99.20.ebuild,
   -quagga-0.99.20-r1.ebuild, -quagga-0.99.21.ebuild,
