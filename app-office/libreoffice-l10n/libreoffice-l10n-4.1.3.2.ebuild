@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.0.5.2.ebuild,v 1.1 2013/08/30 08:34:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-4.1.3.2.ebuild,v 1.1 2013/10/31 15:46:25 scarabeus Exp $
 
 EAPI=4
 
@@ -17,11 +17,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="offlinehelp"
 
-LANGUAGES_HELP="ast bg bn_IN bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA eo
-es et eu fi fr gl gu he hi hr hu id is it ja ka km ko mk nb ne nl nn om pl pt_BR
-pt ro ru si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
-LANGUAGES="${LANGUAGES_HELP} af am ar as be br brx cy dgo fa ga gd kk kn kok ks
-ku lb lo lt lv mai ml mn mni mr my nr nso oc or pa_IN rw sa_IN sat sd sh sr
+LANGUAGES_HELP="am ast bg bn_IN bn bo bs ca_XV ca cs da de dz el en_GB en en_ZA
+eo es et eu fi fr gl gu he hi hr hu id is it ja ka km ko mk nb ne nl nn om pl
+pt_BR pt ru si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
+LANGUAGES="${LANGUAGES_HELP} af ar as be br brx cy dgo fa ga gd kk kn kok ks ku
+lb lo lt lv mai ml mn mni mr my nr nso oc or pa_IN ro rw sa_IN sat sd sh sr
 ss st sw_TZ ta te th tn ts tt uz ve xh zu"
 
 for lang in ${LANGUAGES_HELP}; do

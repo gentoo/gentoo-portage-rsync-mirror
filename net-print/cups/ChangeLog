@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.567 2013/10/30 21:48:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.569 2013/10/31 15:55:13 ago Exp $
+
+  31 Oct 2013; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
+  Stable for x86, wrt bug #489914
+
+  31 Oct 2013; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
+  Stable for amd64, wrt bug #489914
 
 *cups-1.7.0 (30 Oct 2013)
 

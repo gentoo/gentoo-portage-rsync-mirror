@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.36-r1.ebuild,v 1.4 2013/08/27 15:27:57 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.36-r1.ebuild,v 1.6 2013/10/31 15:55:06 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ "${PV}" == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="http://www.openprinting.org/download/${PN}/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~s390 ~x86 ~amd64-fbsd"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86 ~amd64-fbsd"
 fi
 DESCRIPTION="Cups PDF filters"
 HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat"
