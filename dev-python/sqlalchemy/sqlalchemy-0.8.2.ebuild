@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.8.2.ebuild,v 1.4 2013/09/05 18:47:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.8.2.ebuild,v 1.5 2013/10/31 04:51:56 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -32,14 +32,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-# Required for testsuite, mainly py3
-DISTUTILS_IN_SOURCE_BUILD=1
-
-python_prepare() {
+python_prepare_all() {
 	# Disable tests hardcoding function call counts specific to Python versions.
-	if [[ "${EPYTHON}" == 'python2.5' || "${EPYTHON}" == 'python2.6' ]]; then
-		rm -fr test/aaa_profiling
-	fi
+	rm -r test/aaa_profiling || die
+	distutils-r1_python_prepare_all
 }
 
 python_compile() {
@@ -51,11 +47,15 @@ python_compile() {
 }
 
 python_test() {
+	# Create copies of necessary files in BUILD_DIR.
+	cp -pR examples sa2to3.py sqla_nose.py setup.cfg test "${BUILD_DIR}" || die
+	pushd "${BUILD_DIR}" || die
 	if python_is_python3; then
-		"${PYTHON}" sa2to3.py --no-diffs -w lib test examples
+		"${PYTHON}" sa2to3.py --no-diffs -w examples test || die
 	fi
 	# No longer has postgresql support
 	"${PYTHON}" sqla_nose.py -I test_postgresql || die "Testsuite failed under ${EPYTHON}"
+	popd || die
 }
 
 python_install_all() {

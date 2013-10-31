@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.108 2013/09/30 15:31:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.109 2013/10/31 04:51:56 floppym Exp $
+
+  31 Oct 2013; Mike Gilbert <floppym@gentoo.org> sqlalchemy-0.8.2.ebuild:
+  Rearrange python_test to avoid calling 2to3 on source tree twice, bug 489518.
+  As a side effect, we can disable in-source builds.
 
   30 Sep 2013; Mike Gilbert <floppym@gentoo.org> sqlalchemy-0.7.10.ebuild:
   Call distutils-r1_python_install_all
