@@ -1,37 +1,36 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.4.ebuild,v 1.1 2013/04/09 08:20:28 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.ebuild,v 1.1 2013/10/31 12:50:49 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
-SRC_URI="http://www.musicpd.org/download/${PN}/${PV%.*}/${P}.tar.bz2"
+SRC_URI="http://www.musicpd.org/download/${PN}/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x64-macos"
-IUSE="aac +alsa ao audiofile bzip2 cdio +curl debug +fifo +ffmpeg flac
-fluidsynth gme +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate +mad
-mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio recorder
-sid sndfile soundcloud soup sqlite systemd tcpd twolame unicode vorbis wavpack
-wildmidi zeroconf zip"
+KEYWORDS="~amd64 ~ppc ~sh ~x86 ~x86-fbsd ~x64-macos"
+IUSE="adplug +alsa ao audiofile bzip2 cdio +curl debug faad +fifo +ffmpeg flac
+	fluidsynth gme +id3tag inotify ipv6 jack lame mms libmpdclient
+	libsamplerate +mad mikmod modplug mpg123 musepack +network ogg openal opus
+	oss pipe pulseaudio recorder sid sndfile soundcloud sqlite systemd tcpd
+	twolame unicode vorbis wavpack wildmidi zeroconf zip"
 
 OUTPUT_PLUGINS="alsa ao fifo jack network openal oss pipe pulseaudio recorder"
-INPUT_PLUGINS="aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123
-	musepack ogg flac sid vorbis wavpack wildmidi"
+DECODER_PLUGINS="adplug audiofile faad ffmpeg flac fluidsynth mad mikmod
+	modplug mpg123 musepack ogg flac sid vorbis wavpack wildmidi"
 ENCODER_PLUGINS="audiofile flac lame twolame vorbis"
 
 REQUIRED_USE="|| ( ${OUTPUT_PLUGINS} )
-	|| ( ${INPUT_PLUGINS} )
+	|| ( ${DECODER_PLUGINS} )
 	network? ( || ( ${ENCODER_PLUGINS} ) )
-	recorder? ( || ( ${ENCODER_PLUGINS} ) )
-	lastfmradio? ( curl )"
+	recorder? ( || ( ${ENCODER_PLUGINS} ) )"
 
 RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	dev-libs/glib:2
-	aac? ( media-libs/faad2 )
+	adplug? ( media-libs/adplug )
 	alsa? ( media-sound/alsa-utils
 		media-libs/alsa-lib )
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
@@ -39,6 +38,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	bzip2? ( app-arch/bzip2 )
 	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	curl? ( net-misc/curl )
+	faad? ( media-libs/faad2 )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
 	fluidsynth? ( media-sound/fluidsynth )
@@ -57,11 +57,11 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 		!lame? ( !vorbis? ( media-libs/libvorbis ) ) )
 	ogg? ( media-libs/libogg )
 	openal? ( media-libs/openal )
+	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
 	sid? ( media-libs/libsidplay:2 )
 	sndfile? ( media-libs/libsndfile )
 	soundcloud? ( >=dev-libs/yajl-2 )
-	soup? ( net-libs/libsoup:2.4 )
 	sqlite? ( dev-db/sqlite:3 )
 	systemd? ( sys-apps/systemd )
 	tcpd? ( sys-apps/tcp-wrappers )
@@ -97,14 +97,14 @@ src_prepare() {
 	if has_version dev-libs/libcdio-paranoia; then
 		sed -i \
 			-e 's:cdio/paranoia.h:cdio/paranoia/paranoia.h:' \
-			src/input/cdio_paranoia_input_plugin.c || die
+			src/input/CdioParanoiaInputPlugin.cxx || die
 	fi
 }
 
 src_configure() {
-	local mpdconf="--disable-despotify --disable-documentation --disable-ffado
-		--disable-mvp --disable-roar --enable-largefile
-		--enable-tcp --enable-un --docdir=${EPREFIX}/usr/share/doc/${PF}"
+	local mpdconf="--disable-despotify --disable-documentation --disable-roar
+		--enable-largefile --enable-tcp --enable-un
+		--docdir=${EPREFIX}/usr/share/doc/${PF}"
 
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
@@ -121,7 +121,6 @@ src_configure() {
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
 
 	econf \
-		$(use_enable aac) \
 		$(use_enable alsa) \
 		$(use_enable ao) \
 		$(use_enable audiofile) \
@@ -130,6 +129,7 @@ src_configure() {
 		$(use_enable cdio iso9660) \
 		$(use_enable curl) \
 		$(use_enable debug) \
+		$(use_enable faad aac) \
 		$(use_enable ffmpeg) \
 		$(use_enable fifo) \
 		$(use_enable flac) \
@@ -139,7 +139,7 @@ src_configure() {
 		$(use_enable inotify) \
 		$(use_enable ipv6) \
 		$(use_enable jack) \
-		$(use_enable lastfmradio lastfm) \
+		$(use_enable libmpdclient) \
 		$(use_enable libsamplerate lsr) \
 		$(use_enable mad) \
 		$(use_enable mikmod) \
@@ -155,7 +155,6 @@ src_configure() {
 		$(use_enable sid sidplay) \
 		$(use_enable sndfile sndfile) \
 		$(use_enable soundcloud) \
-		$(use_enable soup) \
 		$(use_enable sqlite) \
 		$(use_enable systemd systemd-daemon) \
 		$(use_enable tcpd libwrap) \
@@ -180,6 +179,9 @@ src_install() {
 		sed -i -e 's:^#filesystem_charset.*$:filesystem_charset "UTF-8":' \
 			"${ED}"/etc/mpd.conf || die "sed failed"
 	fi
+
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/${PN}.logrotate ${PN}
 
 	use prefix || diropts -m0755 -o mpd -g audio
 	dodir /var/lib/mpd

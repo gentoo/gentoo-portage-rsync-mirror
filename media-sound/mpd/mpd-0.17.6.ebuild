@@ -1,25 +1,25 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.3.ebuild,v 1.3 2013/02/16 08:00:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.17.6.ebuild,v 1.1 2013/10/31 12:50:49 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
-SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
+SRC_URI="http://www.musicpd.org/download/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x64-macos"
-IUSE="aac +alsa ao audiofile bzip2 cdio +curl debug +fifo +ffmpeg flac
+IUSE="+alsa ao audiofile bzip2 cdio +curl debug faad +fifo +ffmpeg flac
 fluidsynth gme +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate +mad
 mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio recorder
 sid sndfile soundcloud soup sqlite systemd tcpd twolame unicode vorbis wavpack
 wildmidi zeroconf zip"
 
 OUTPUT_PLUGINS="alsa ao fifo jack network openal oss pipe pulseaudio recorder"
-INPUT_PLUGINS="aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123
+INPUT_PLUGINS="audiofile faad ffmpeg flac fluidsynth mad mikmod modplug mpg123
 	musepack ogg flac sid vorbis wavpack wildmidi"
 ENCODER_PLUGINS="audiofile flac lame twolame vorbis"
 
@@ -31,7 +31,6 @@ REQUIRED_USE="|| ( ${OUTPUT_PLUGINS} )
 
 RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	dev-libs/glib:2
-	aac? ( media-libs/faad2 )
 	alsa? ( media-sound/alsa-utils
 		media-libs/alsa-lib )
 	ao? ( media-libs/libao[alsa?,pulseaudio?] )
@@ -39,6 +38,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	bzip2? ( app-arch/bzip2 )
 	cdio? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
 	curl? ( net-misc/curl )
+	faad? ( media-libs/faad2 )
 	ffmpeg? ( virtual/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
 	fluidsynth? ( media-sound/fluidsynth )
@@ -92,7 +92,8 @@ src_prepare() {
 		sure that MPD's pid_file is unset."
 
 	cp -f doc/mpdconf.example doc/mpdconf.dist || die "cp failed"
-	epatch "${FILESDIR}"/${PN}-0.16.conf.patch
+	epatch "${FILESDIR}"/${PN}-0.16.conf.patch \
+		"${FILESDIR}"/${PN}-0.17.4-ffmpeg2.patch
 
 	if has_version dev-libs/libcdio-paranoia; then
 		sed -i \
@@ -121,7 +122,6 @@ src_configure() {
 	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
 
 	econf \
-		$(use_enable aac) \
 		$(use_enable alsa) \
 		$(use_enable ao) \
 		$(use_enable audiofile) \
@@ -130,6 +130,7 @@ src_configure() {
 		$(use_enable cdio iso9660) \
 		$(use_enable curl) \
 		$(use_enable debug) \
+		$(use_enable faad aac) \
 		$(use_enable ffmpeg) \
 		$(use_enable fifo) \
 		$(use_enable flac) \
@@ -180,6 +181,9 @@ src_install() {
 		sed -i -e 's:^#filesystem_charset.*$:filesystem_charset "UTF-8":' \
 			"${ED}"/etc/mpd.conf || die "sed failed"
 	fi
+
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/${PN}.logrotate ${PN}
 
 	use prefix || diropts -m0755 -o mpd -g audio
 	dodir /var/lib/mpd
