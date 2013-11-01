@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/smbc-1.2.2-r2.ebuild,v 1.3 2012/05/21 19:15:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/smbc-1.2.2-r2.ebuild,v 1.4 2013/11/01 16:41:21 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~ppc ~x86"
+KEYWORDS=" ~ppc ~x86"
 IUSE="nls debug"
 
 DEPEND="net-fs/samba

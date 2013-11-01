@@ -20,6 +20,7 @@ datahub does not track events like opening websites etc.
     <flag name="telepathy">Zeitgeist plugin for telepathy framework as data source</flag>
     <flag name="xchat">Zeitgeist plugin for <pkg>net-irc/xchat-gnome</pkg> as data source</flag>
     <flag name="firefox">Zeitgeist plugin for <pkg>www-client/firefox</pkg> as data source</flag>
+    <flag name="chromium">Zeitgeist plugin for <pkg>www-client/chromium</pkg> as data source</flag>
     <flag name="thunderbird">Zeitgeist plugin for <pkg>mail-client/thunderbird</pkg> as data source</flag>
   </use>
 </pkgmetadata>
