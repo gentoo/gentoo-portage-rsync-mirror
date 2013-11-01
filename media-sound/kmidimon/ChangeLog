@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kmidimon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/ChangeLog,v 1.11 2013/11/01 13:48:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmidimon/ChangeLog,v 1.12 2013/11/01 19:34:33 johu Exp $
+
+  01 Nov 2013; Johannes Huber <johu@gentoo.org> -kmidimon-0.7.4.ebuild:
+  Remove old.
 
   01 Nov 2013; Agostino Sarubbo <ago@gentoo.org> kmidimon-0.7.5.ebuild:
   Stable for x86, wrt bug #489410

@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82.ebuild,v 1.2 2013/10/30 00:59:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82.ebuild,v 1.3 2013/11/01 19:55:09 grobian Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils toolchain-funcs multilib pam systemd
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis selinux syslog spf srs gnutls sqlite doc dovecot-sasl radius maildir +dkim dcc dsn dlfunc dmarc"
-REQUIRED_USE="spf? ( exiscan-acl ) srs? ( exiscan-acl ) dmarc? ( spf dkim )"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis selinux syslog spf srs gnutls pkcs11 sqlite doc dovecot-sasl radius maildir +dkim dcc dsn dlfunc dmarc"
+REQUIRED_USE="spf? ( exiscan-acl ) srs? ( exiscan-acl ) dmarc? ( spf dkim ) pkcs11? ( gnutls )"
 
 DSN_EXIM_V=482  # local version patched by us
 DSN_V=1_3
@@ -31,7 +31,7 @@ COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	pam? ( virtual/pam )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
-	gnutls? ( net-libs/gnutls[pkcs11]
+	gnutls? ( net-libs/gnutls[pkcs11?]
 			  dev-libs/libtasn1 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	mysql? ( virtual/mysql )
@@ -93,13 +93,6 @@ src_prepare() {
 
 	if use dsn ; then
 		epatch "${FILESDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
-	fi
-
-	if use ipv6 ; then
-		# set a sensible default, bug #448314
-		sed -i \
-			-e '/^hostlist\s\+relay_from_hosts/s/\(127.0.0.1\)/\1 : ::::1/' \
-			src/configure.default || die
 	fi
 
 	# user Exim believes it should be
@@ -215,6 +208,7 @@ src_configure() {
 		if use gnutls; then
 			echo "USE_GNUTLS=yes" >> Makefile
 			echo "USE_GNUTLS_PC=gnutls" >> Makefile
+			use pkcs11 || echo "AVOID_GNUTLS_PKCS11=yes" >> Makefile
 		else
 			echo "USE_OPENSSL_PC=openssl" >> Makefile
 		fi
