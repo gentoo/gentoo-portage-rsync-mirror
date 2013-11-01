@@ -1,6 +1,10 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.31 2013/09/22 06:50:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.32 2013/11/01 20:33:25 hasufell Exp $
+
+  01 Nov 2013; Julian Ospald <hasufell@gentoo.org> prosody-0.9.1.ebuild,
+  prosody-0.9.1-r1.ebuild:
+  add missing inherit
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> prosody-0.8.2-r1.ebuild:
   Stable for x86, wrt bug #480080

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.1-r1.ebuild,v 1.1 2013/09/16 21:54:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.1-r1.ebuild,v 1.2 2013/11/01 20:33:25 hasufell Exp $
 
 EAPI=5
 
-inherit flag-o-matic multilib versionator
+inherit flag-o-matic multilib versionator toolchain-funcs
 
 MY_PV=$(replace_version_separator 3 '')
 MY_P="${PN}-${MY_PV}"
