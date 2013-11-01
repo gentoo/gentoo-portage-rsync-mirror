@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=net-misc/curl sys-libs/zlib
+DESCRIPTION=performs automatic updates of GeoIP2 and GeoIP Legacy binary databases
+EAPI=5
+HOMEPAGE=https://github.com/maxmind/geoipupdate
+KEYWORDS=~amd64 ~hppa ~x86
+LICENSE=GPL-2
+RDEPEND=net-misc/curl sys-libs/zlib !<dev-libs/geoip-1.6.0
+SLOT=0
+SRC_URI=https://github.com/maxmind/geoipupdate/releases/download/v2.0.0/geoipupdate-2.0.0.tar.gz
+_md5_=716dcc655cc9a7e4f89c610fadfdafd9
