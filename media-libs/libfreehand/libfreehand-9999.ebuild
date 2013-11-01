@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfreehand/libfreehand-9999.ebuild,v 1.1 2013/11/01 08:50:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfreehand/libfreehand-9999.ebuild,v 1.2 2013/11/01 09:01:47 scarabeus Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Library for import of FreeHand drawings"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/libfreehand/"
 [[ ${PV} == 9999 ]] || SRC_URI="http://dev-www.libreoffice.org/src/${P}.tar.xz"
 
-LICENSE="|| ( GPL-2+ LGPL-2.1 MPL-1.1 )"
+LICENSE="MPL-2.0"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
