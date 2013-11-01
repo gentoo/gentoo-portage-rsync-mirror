@@ -4,10 +4,10 @@ DESCRIPTION=Library parsing the visio documents
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/libvisio
 IUSE=doc static-libs
-KEYWORDS=~amd64 ~arm ~ppc ~x86
+KEYWORDS=amd64 ~arm ppc x86
 LICENSE=|| ( GPL-2+ LGPL-2.1 MPL-1.1 )
 RDEPEND=app-text/libwpd:0.9 app-text/libwpg:0.2 dev-libs/icu:= dev-libs/libxml2 sys-libs/zlib
 SLOT=0
 SRC_URI=http://dev-www.libreoffice.org/src/libvisio-0.0.30.tar.xz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=239fc3f05103bf992a68d07aa740d8be
+_md5_=fd228bee79972afb592ebb7467c2f5f3
