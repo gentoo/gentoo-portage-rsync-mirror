@@ -1,0 +1,9 @@
+# ChangeLog for x11-proto/presentproto
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/presentproto/ChangeLog,v 1.1 2013/11/01 03:20:35 mattst88 Exp $
+
+*presentproto-1.0 (01 Nov 2013)
+
+  01 Nov 2013; Matt Turner <mattst88@gentoo.org> +metadata.xml,
+  +presentproto-1.0.ebuild:
+  New package.
