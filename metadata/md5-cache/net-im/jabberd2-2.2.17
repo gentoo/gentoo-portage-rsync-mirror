@@ -1,15 +1,15 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=dev-libs/expat net-libs/udns net-dns/libidn virtual/gsasl berkdb? ( >=sys-libs/db-4.1.25 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) ssl? ( dev-libs/openssl:0 ) sqlite? ( dev-db/sqlite:3 ) zlib? ( sys-libs/zlib ) app-arch/xz-utils virtual/pkgconfig test? ( dev-libs/check )
+DEPEND=dev-libs/expat net-libs/udns net-dns/libidn virtual/gsasl berkdb? ( >=sys-libs/db-4.1.25 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) ssl? ( >=dev-libs/openssl-1.0.1:0 ) sqlite? ( dev-db/sqlite:3 ) zlib? ( sys-libs/zlib ) app-arch/xz-utils virtual/pkgconfig test? ( dev-libs/check )
 DESCRIPTION=Open Source Jabber Server
 EAPI=5
 HOMEPAGE=http://jabberd2.org
-IUSE=berkdb debug memdebug mysql ldap pam postgres sqlite ssl test zlib
+IUSE=berkdb debug ldap memdebug mysql pam postgres sqlite ssl test zlib
 KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~x86-fbsd
 LICENSE=GPL-2
-RDEPEND=dev-libs/expat net-libs/udns net-dns/libidn virtual/gsasl berkdb? ( >=sys-libs/db-4.1.25 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) ssl? ( dev-libs/openssl:0 ) sqlite? ( dev-db/sqlite:3 ) zlib? ( sys-libs/zlib ) >=net-im/jabber-base-0.01
+RDEPEND=dev-libs/expat net-libs/udns net-dns/libidn virtual/gsasl berkdb? ( >=sys-libs/db-4.1.25 ) ldap? ( net-nds/openldap ) mysql? ( virtual/mysql ) pam? ( virtual/pam ) postgres? ( dev-db/postgresql-base ) ssl? ( >=dev-libs/openssl-1.0.1:0 ) sqlite? ( dev-db/sqlite:3 ) zlib? ( sys-libs/zlib ) >=net-im/jabber-base-0.01
 REQUIRED_USE=memdebug? ( debug )
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://github/jabberd2/jabberd2/jabberd-2.2.17.tar.xz
 _eclasses_=db-use	1c719875d6599536f956fafea9e1f404	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=28b594caa8cf3c2ecb331f420ab41a00
+_md5_=23dd7ad960ed8514fdcbccb0c0613f14

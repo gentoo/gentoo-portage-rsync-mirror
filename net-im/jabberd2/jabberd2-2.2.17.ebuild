@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.17.ebuild,v 1.1 2013/11/01 21:50:22 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.17.ebuild,v 1.4 2013/11/01 22:11:47 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://github/jabberd2/jabberd2/jabberd-${PV}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="berkdb debug memdebug mysql ldap pam postgres sqlite ssl test zlib"
+IUSE="berkdb debug ldap memdebug mysql pam postgres sqlite ssl test zlib"
 REQUIRED_USE="memdebug? ( debug )"
 
 # broken
@@ -28,7 +28,7 @@ DEPEND="dev-libs/expat
 	mysql? ( virtual/mysql )
 	pam? ( virtual/pam )
 	postgres? ( dev-db/postgresql-base )
-	ssl? ( dev-libs/openssl:0 )
+	ssl? ( >=dev-libs/openssl-1.0.1:0 )
 	sqlite? ( dev-db/sqlite:3 )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
@@ -41,6 +41,24 @@ DEPEND="${DEPEND}
 DOCS=( AUTHORS README UPGRADE )
 
 S=${WORKDIR}/jabberd-${PV}
+
+src_prepare() {
+	# Fix some default directory locations
+	sed -i \
+		-e 's,@localstatedir@/@package@/pid/,/var/run/@package@/,g' \
+		-e 's,@localstatedir@/@package@/run/pbx,/var/run/@package@/pbx,g' \
+		-e 's,@localstatedir@/@package@/log/,/var/log/@package@/,g' \
+		-e 's,@localstatedir@/lib/jabberd2/fs,@localstatedir@/@package@/fs,g' \
+		-e 's,@localstatedir@,/var/spool,g' \
+		-e 's,@package@,jabber,g' \
+		etc/{sm,router,c2s,s2s}.xml.dist.in || die
+
+	# If the package wasn't merged with sqlite then default to use berkdb
+	use sqlite ||
+		sed -i \
+			-e 's,<\(module\|driver\)>sqlite<\/\1>,<\1>db</\1>,g' \
+			etc/{c2s,sm}.xml.dist.in || die
+}
 
 src_configure() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=207655#c3
@@ -64,24 +82,6 @@ src_configure() {
 		$(use_enable test tests) \
 		$(usex berkdb "--with-extra-include-path=$(db_includedir)" "") \
 		$(use_with zlib)
-}
-
-src_prepare() {
-	# Fix some default directory locations
-	sed -i \
-		-e 's,@localstatedir@/@package@/pid/,/var/run/@package@/,g' \
-		-e 's,@localstatedir@/@package@/run/pbx,/var/run/@package@/pbx,g' \
-		-e 's,@localstatedir@/@package@/log/,/var/log/@package@/,g' \
-		-e 's,@localstatedir@/lib/jabberd2/fs,@localstatedir@/@package@/fs,g' \
-		-e 's,@localstatedir@,/var/spool,g' \
-		-e 's,@package@,jabber,g' \
-		etc/{sm,router,c2s,s2s}.xml.dist.in || die
-
-	# If the package wasn't merged with sqlite then default to use berkdb
-	use sqlite ||
-		sed -i \
-			-e 's,<\(module\|driver\)>sqlite<\/\1>,<\1>db</\1>,g' \
-			etc/{c2s,sm}.xml.dist.in || die
 }
 
 src_install() {
@@ -119,7 +119,6 @@ pkg_postinst() {
 		echo
 		einfo 'You will need to setup or update your database using the'
 		einfo "scripts in /usr/share/doc/${PF}/tools/"
-		einfo 'e.g. bzcat db-setup.sqlite.bz2 | sqlite3 /var/spool/jabber/db/sqlite.db'
 		echo
 	fi
 

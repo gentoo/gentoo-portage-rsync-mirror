@@ -7,4 +7,7 @@
 			Requires USE="debug" to be set.
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type='github'>jabberd2/jabberd2</remote-id>
+	</upstream>
 </pkgmetadata>
