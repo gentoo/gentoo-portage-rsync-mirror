@@ -2,7 +2,7 @@ DEFINED_PHASES=configure install prepare
 DEPEND=sys-libs/zlib || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=easily lookup countries by IP addresses, even when Reverse DNS entries don't exist
 EAPI=5
-HOMEPAGE=https://github.com/maxmind/geoip-api-c/releases
+HOMEPAGE=https://github.com/maxmind/geoip-api-c
 IUSE=city ipv6 static-libs
 KEYWORDS=~amd64 ~hppa ~x86
 LICENSE=LGPL-2.1 GPL-2 MaxMind2
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/zlib net-misc/geoipupdate
 SLOT=0
 SRC_URI=https://github.com/maxmind/geoip-api-c/archive/v1.6.0.tar.gz -> geoip-1.6.0.tar.gz http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz http://geolite.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz city? ( http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz ) ipv6? ( http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz city? ( http://geolite.maxmind.com/download/geoip/database/GeoLiteCityv6-beta/GeoLiteCityv6.dat.gz ) )
 _eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=581598e057fcb2b8aed14f019dff0d4f
+_md5_=e37e0f5a03e2e8a8d0a756e1fbe1d9ee

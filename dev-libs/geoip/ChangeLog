@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.191 2013/11/01 17:51:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.192 2013/11/01 18:05:09 jer Exp $
+
+  01 Nov 2013; Jeroen Roovers <jer@gentoo.org> geoip-1.6.0.ebuild:
+  Better HOMEPAGE.
 
   01 Nov 2013; Jeroen Roovers <jer@gentoo.org> geoip-1.6.0.ebuild:
   Update HOMEPAGE.
