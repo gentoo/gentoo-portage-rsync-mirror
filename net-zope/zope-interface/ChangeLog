@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.49 2013/09/05 19:44:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.50 2013/11/01 00:29:15 yac Exp $
+
+  01 Nov 2013; Jan Matejka <yac@gentoo.org> zope-interface-4.0.5.ebuild:
+  fix bug 486840 - missing unzip DEPEND
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> zope-interface-4.0.5.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
