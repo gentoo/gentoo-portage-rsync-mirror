@@ -4,10 +4,10 @@ DESCRIPTION=Perl updater client for dynamic DNS services
 EAPI=4
 HOMEPAGE=http://ddclient.sourceforge.net/
 IUSE=hardened
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.1 dev-perl/Digest-SHA1 dev-perl/IO-Socket-SSL hardened? ( sys-apps/iproute2 )
 SLOT=0
 SRC_URI=mirror://sourceforge/ddclient/ddclient-3.8.1.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=30b6d85d0f2d25dae53a5b588002e34f
+_md5_=86ebd1121cfa248a21de70997862ce00
