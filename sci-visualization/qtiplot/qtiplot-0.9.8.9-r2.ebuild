@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.4 2013/10/31 20:06:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.5 2013/11/01 11:20:26 dilfridge Exp $
 
 EAPI=5
 
@@ -71,6 +71,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-set_col_values.patch
 	"${FILESDIR}"/${P}-adopt_to_alglib3.patch
 	"${FILESDIR}"/${P}-crasher_without_internet.patch
+	"${FILESDIR}"/${P}-private.patch
 	)
 
 pkg_setup() {

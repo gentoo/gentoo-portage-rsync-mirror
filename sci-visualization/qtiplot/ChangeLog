@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.102 2013/10/31 20:06:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.103 2013/11/01 11:20:26 dilfridge Exp $
+
+  01 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  qtiplot-0.9.8.9-r2.ebuild, +files/qtiplot-0.9.8.9-private.patch:
+  Add build fix from bug 485940, thanks Vadim Dyadkin
 
   31 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   qtiplot-0.9.8.9-r2.ebuild:
