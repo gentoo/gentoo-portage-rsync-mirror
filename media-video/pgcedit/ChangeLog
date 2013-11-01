@@ -1,6 +1,10 @@
 # ChangeLog for media-video/pgcedit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pgcedit/ChangeLog,v 1.1 2012/12/31 00:46:07 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/pgcedit/ChangeLog,v 1.2 2013/11/01 20:26:36 ulm Exp $
+
+  01 Nov 2013; Ulrich Müller <ulm@gentoo.org> pgcedit-0.8.6.ebuild,
+  -files/pgcedit.png:
+  Move pgcedit.png from filesdir to mirrors, bug 457008.
 
 *pgcedit-0.8.6 (31 Dec 2012)
 

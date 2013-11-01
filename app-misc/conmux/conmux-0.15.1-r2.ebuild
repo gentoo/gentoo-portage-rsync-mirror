@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/conmux-0.15.1-r1.ebuild,v 1.1 2013/10/31 20:01:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/conmux-0.15.1-r2.ebuild,v 1.1 2013/11/01 20:04:40 hwoarang Exp $
 
 EAPI=5
 
@@ -28,8 +28,9 @@ src_install() {
 		perlinfo
 		emake BASE="${D}/usr" install
 		# helpers and drivers have been removed in src_prepare
-		insinto /usr/share/${PN}
-		doins -r drivers helpers
+		insinto /usr/share/${PN}/
+		doins -r drivers/  helpers/
+		fperms -R 0750 /usr/share/${PN}/{drivers,helpers}/
 		dodir /etc/${PN}
 		# no need to have the init script in /sbin
 		rm "${D}"/usr/sbin/start || die "failed to remove init script"

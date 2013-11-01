@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pgcedit/pgcedit-0.8.6.ebuild,v 1.1 2012/12/31 00:46:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pgcedit/pgcedit-0.8.6.ebuild,v 1.2 2013/11/01 20:26:36 ulm Exp $
 
 EAPI="4"
 
@@ -13,7 +13,8 @@ MY_PDOC="${MY_PN}_Manual_html"
 DESCRIPTION="DVD IFO and Menu editor"
 HOMEPAGE="http://download.videohelp.com/r0lZ/pgcedit/"
 SRC_URI="http://download.videohelp.com/r0lZ/${PN}/versions/${MY_P}.zip
-	http://download.videohelp.com/r0lZ/${PN}/versions/${MY_PDOC}.zip"
+	http://download.videohelp.com/r0lZ/${PN}/versions/${MY_PDOC}.zip
+	mirror://gentoo/${PN}.png"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,7 +45,7 @@ src_install() {
 	doins -r bin lib
 	dohtml -r doc/*
 
-	doicon "${FILESDIR}"/${PN}.png
+	doicon "${DISTDIR}"/${PN}.png
 	make_desktop_entry ${PN} ${MY_PN} ${PN} "AudioVideo;Video;"
 
 	dodoc HISTORY.txt TODO.txt
