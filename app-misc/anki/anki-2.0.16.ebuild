@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-2.0.15.ebuild,v 1.1 2013/10/23 14:57:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-2.0.16.ebuild,v 1.1 2013/11/01 12:09:05 tomka Exp $
 
 EAPI=5
 
