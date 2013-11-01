@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.109 2013/09/30 17:16:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.110 2013/11/01 07:47:41 robbat2 Exp $
+
+  01 Nov 2013; Robin H. Johnson <robbat2@gentoo.org> acpid-2.0.17-r1.ebuild,
+  acpid-2.0.18.ebuild, acpid-2.0.19.ebuild, acpid-2.0.20.ebuild:
+  Compile fix: KEY_MICMUTE is used in newer versions, and only available in
+  >=sys-kernel/linux-headers-3.
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> acpid-2.0.19.ebuild:
   Stable for x86, wrt bug #482252
