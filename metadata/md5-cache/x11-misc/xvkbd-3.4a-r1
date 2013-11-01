@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install
+DEFINED_PHASES=compile configure install prepare
 DEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXaw3d x11-libs/libXmu x11-libs/libXt x11-libs/libXtst app-text/rman x11-misc/gccmakedep x11-misc/imake x11-proto/inputproto x11-proto/xextproto x11-proto/xproto
 DESCRIPTION=virtual keyboard for X window system
 EAPI=5
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXaw x11-libs/libXaw3d x11-libs/libXmu x11-libs/libXt x11-libs/libXtst
 SLOT=0
 SRC_URI=http://homepage3.nifty.com/tsato/xvkbd/xvkbd-3.4a.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=c687791d60344bc913fbe52601305e20
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=b6d473f4bdcfb12b610d3876cbecb965
