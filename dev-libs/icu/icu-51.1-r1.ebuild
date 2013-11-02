@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-51.1-r1.ebuild,v 1.1 2013/10/29 22:26:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-51.1-r1.ebuild,v 1.2 2013/11/02 15:21:15 dilfridge Exp $
 
 EAPI=5
 
@@ -11,7 +11,13 @@ HOMEPAGE="http://www.icu-project.org/"
 SRC_URI="http://download.icu-project.org/files/icu4c/${PV/_/}/icu4c-${PV//./_}-src.tgz"
 
 LICENSE="BSD"
+
 SLOT="0/51.1"
+# As far as I can remember, icu consumers reacted rather sensitive to icu upgrades in the past. 
+# Even if revdep-rebuild did not rebuild (i.e. soname did not change), random crashes and 
+# other irregularities occured until the consumers were rebuilt. So let's rather err on the side
+# of caution and more rebuilds here. See also bug 464876. dilfridge
+
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 -amd64-fbsd -x86-fbsd"
 IUSE="debug doc examples static-libs"
 
