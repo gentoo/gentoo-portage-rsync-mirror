@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.6.0.ebuild,v 1.1 2013/03/31 16:22:06 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.6.0.ebuild,v 1.2 2013/11/02 17:32:09 hd_brummy Exp $
 
 EAPI="5"
 
@@ -24,6 +24,8 @@ REQUIRED_USE="|| ( client server )"
 
 # vdr-plugin-2.eclass changes
 PO_SUBDIR="client server"
+
+PATCHES=( "${FILESDIR}/${P}_vdr-2.1.2.diff" )
 
 src_prepare() {
 	vdr-plugin-2_src_prepare

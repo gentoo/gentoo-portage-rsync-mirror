@@ -1,0 +1,15 @@
+diff -Naur streamdev-0.6.0.orig/server/connectionVTP.c streamdev-0.6.0/server/connectionVTP.c
+--- streamdev-0.6.0.orig/server/connectionVTP.c	2013-11-02 18:22:55.000000000 +0100
++++ streamdev-0.6.0/server/connectionVTP.c	2013-11-02 18:24:57.000000000 +0100
+@@ -1377,7 +1377,11 @@
+ 	if (*Option) {
+ 		if (strcasecmp(Option, "DISK") == 0) {
+ 			int FreeMB, UsedMB;
++#if APIVERSNUM < 20102
+ 			int Percent = VideoDiskSpace(&FreeMB, &UsedMB);
++#else
++			int Percent = cVideoDirectory::VideoDiskSpace(&FreeMB, &UsedMB);
++#endif
+ 			Reply(250, "%dMB %dMB %d%%", FreeMB + UsedMB, FreeMB, Percent);
+ 		}
+ 		else if (strcasecmp(Option, "NAME") == 0) {
