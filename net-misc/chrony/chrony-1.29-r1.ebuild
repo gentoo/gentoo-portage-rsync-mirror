@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.29-r1.ebuild,v 1.1 2013/09/21 15:20:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-1.29-r1.ebuild,v 1.2 2013/11/02 15:49:50 swift Exp $
 
 EAPI=5
 inherit eutils systemd toolchain-funcs
@@ -12,11 +12,12 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="caps ipv6 +readline +rtc"
+IUSE="caps ipv6 +readline +rtc selinux"
 
 RDEPEND="
 	caps? ( sys-libs/libcap )
 	readline? ( >=sys-libs/readline-4.1-r4 )
+	selinux? ( sec-policy/selinux-chronyd )
 "
 DEPEND="
 	${RDEPEND}

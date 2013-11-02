@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.114 2013/09/21 15:20:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.115 2013/11/02 15:49:50 swift Exp $
+
+  02 Nov 2013; Sven Vermeulen <swift@gentoo.org> chrony-1.29.ebuild,
+  chrony-1.29-r1.ebuild:
+  Add dependency on selinux-chronyd (bug #488694)
 
 *chrony-1.29-r1 (21 Sep 2013)
 

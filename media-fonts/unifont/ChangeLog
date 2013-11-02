@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/unifont
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.38 2013/10/21 03:09:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.39 2013/11/02 15:58:37 floppym Exp $
+
+*unifont-6.3.20131020 (02 Nov 2013)
+
+  02 Nov 2013; Mike Gilbert <floppym@gentoo.org> +unifont-6.3.20131020.ebuild:
+  Version bump.
 
 *unifont-6.3.20131006 (21 Oct 2013)
 
