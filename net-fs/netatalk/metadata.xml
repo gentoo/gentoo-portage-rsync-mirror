@@ -27,6 +27,9 @@
     <flag name="shadow">
 			Add shadow support
 		</flag>
+    <flag name="tracker">
+			Add support for spotlight like tracker
+		</flag>
     <flag name="utils">
 			Install afpstats script
 		</flag>

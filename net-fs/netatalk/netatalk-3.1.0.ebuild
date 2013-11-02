@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.0.5.ebuild,v 1.4 2013/11/01 13:50:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.0.ebuild,v 1.1 2013/11/02 11:59:14 jlec Exp $
 
 EAPI=5
 
@@ -8,41 +8,47 @@ PYTHON_COMPAT=( python2_{6,7} )
 
 AUTOTOOLS_AUTORECONF=yes
 
-inherit autotools-utils flag-o-matic multilib pam python-r1 systemd
+inherit autotools-utils flag-o-matic multilib pam python-r1 systemd versionator
 
 DESCRIPTION="Open Source AFP server"
 HOMEPAGE="http://netatalk.sourceforge.net/"
-SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/project/${PN}/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
-IUSE="acl avahi cracklib debug pgp kerberos ldap pam quota samba +shadow ssl static-libs tcpd +utils"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="acl avahi cracklib dbus debug pgp kerberos ldap pam quota samba +shadow ssl static-libs tracker tcpd +utils"
 
-DEPEND="
+CDEPEND="
 	!app-editors/yudit
 	dev-libs/libevent
 	dev-libs/libgcrypt
 	sys-apps/coreutils
 	>=sys-libs/db-4.2.52
+	sys-libs/tdb
 	acl? (
 		sys-apps/attr
 		sys-apps/acl
 	)
 	avahi? ( net-dns/avahi[dbus] )
 	cracklib? ( sys-libs/cracklib )
+	dbus? ( sys-apps/dbus dev-libs/dbus-glib )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam )
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
+	tracker? ( app-misc/tracker )
 	utils? ( ${PYTHON_DEPS} )
 	"
-RDEPEND="${DEPEND}
+RDEPEND="${CDEPEND}
 	utils? (
 		dev-lang/perl
 		dev-python/dbus-python[${PYTHON_USEDEP}]
 	)"
+DEPEND="${CDEPEND}
+	virtual/yacc
+	sys-devel/flex"
 
 RESTRICT="test"
 
@@ -50,7 +56,7 @@ REQUIRED_USE="
 	ldap? ( acl )
 	utils? ( ${PYTHON_REQUIRED_USE} )"
 
-PATCHES=( "${FILESDIR}"/${PN}-3.0.1-gentoo.patch )
+PATCHES=( "${FILESDIR}"/${P}-gentoo.patch )
 
 src_prepare() {
 	if ! use utils; then
@@ -87,10 +93,12 @@ src_configure() {
 		$(use_enable quota)
 		$(use_enable tcpd tcp-wrappers)
 		$(use_with cracklib)
+		$(use_with dbus afpstats)
 		$(use_with pam)
 		$(use_with samba smbsharemodes)
 		$(use_with shadow)
 		$(use_with ssl ssl-dir)
+		$(use_with tracker tracker /dev/null )
 		--enable-overwrite
 		--disable-krb4-uam
 		--disable-afs
@@ -100,6 +108,9 @@ src_configure() {
 		--with-uams-path=/usr/$(get_libdir)/${PN}
 		--disable-silent-rules
 		--with-init-style=gentoo
+		--without-libevent
+		--without-tdb
+		--with-lockfile=/run/lock/${PN}
 		)
 	autotools-utils_src_configure
 }
@@ -114,11 +125,12 @@ src_install() {
 	fi
 
 	# The pamd file isn't what we need, use pamd_mimic_system
-	rm -rf "${D}/etc/pam.d"
+	rm -rf "${ED}/etc/pam.d" || die
 	pamd_mimic_system netatalk auth account password session
 
 	sed \
 		-e "s|:SBINDIR:|${EPREFIX}/usr/sbin|g" \
+		-e "s|:PATH_NETATALK_LOCK:|/run/lock/netatalk|g" \
 		distrib/initscripts/service.systemd.tmpl \
 		> "${T}"/service.systemd || die
 	systemd_newunit "${T}"/service.systemd ${PN}.service
