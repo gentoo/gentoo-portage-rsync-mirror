@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/dalli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.4 2013/10/13 22:05:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.5 2013/11/02 19:59:39 mrueg Exp $
+
+  02 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -dalli-2.1.0.ebuild,
+  -dalli-2.5.0.ebuild:
+  Cleanup old.
 
   13 Oct 2013; Markus Meier <maekke@gentoo.org> dalli-2.6.4.ebuild:
   add ~arm, bug #487206
@@ -20,4 +24,3 @@
   02 Aug 2012; Hans de Graaff <graaff@gentoo.org> +dalli-2.1.0.ebuild,
   +metadata.xml:
   Initial import. Successor of dev-ruby/memcache-client.
-

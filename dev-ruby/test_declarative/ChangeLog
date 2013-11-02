@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test_declarative
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.9 2013/10/05 11:24:27 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.10 2013/11/02 19:50:25 mrueg Exp $
+
+  02 Nov 2013; Manuel Rüger <mrueg@gentoo.org>
+  -test_declarative-0.0.5-r1.ebuild, -test_declarative-0.0.5.ebuild:
+  Cleanup old.
 
 *test_declarative-0.0.5-r2 (05 Oct 2013)
 

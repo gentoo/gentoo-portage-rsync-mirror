@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/loquacious
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.19 2013/10/06 11:39:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.20 2013/11/02 19:57:51 mrueg Exp $
+
+  02 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -loquacious-1.9.1.ebuild:
+  Cleanup old.
 
 *loquacious-1.9.1-r1 (06 Oct 2013)
 

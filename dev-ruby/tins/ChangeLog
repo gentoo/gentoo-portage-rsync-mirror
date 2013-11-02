@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/tins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.26 2013/10/19 06:01:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.27 2013/11/02 19:43:30 mrueg Exp $
+
+  02 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -tins-0.10.0.ebuild,
+  -tins-0.11.0.ebuild, -tins-0.9.0.ebuild:
+  Cleanup old.
 
 *tins-0.12.0 (19 Oct 2013)
 
