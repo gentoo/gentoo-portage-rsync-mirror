@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8330 2013/10/31 18:07:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8331 2013/11/02 16:17:22 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Nov 2013; Markos Chandras <hwoarang@gentoo.org> ChangeLog:
+  mask app-arch/xarchiver for removal
 
   31 Oct 2013; Fabian Groffen <grobian@gentoo.org> profiles.desc:
   Add profile for OS X Mavericks (10.9)
