@@ -1,22 +1,22 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-tar_scm/obs-service-tar_scm-0.2.3.ebuild,v 1.2 2013/06/21 12:20:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/obs-service-git_tarballs/obs-service-git_tarballs-0.1.7.ebuild,v 1.1 2013/11/02 09:55:21 scarabeus Exp $
 
 EAPI=5
 
 inherit obs-service
 
-SRC_URI="${OBS_URI}/${P}.tar.gz"
+HASH="git.1375261502.72b5224"
+SRC_URI="${OBS_URI}/${P}+${HASH}.tar.gz"
 IUSE=""
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	dev-vcs/bzr
 	dev-vcs/git
-	dev-vcs/mercurial
-	dev-vcs/subversion
 "
+
+S="${WORKDIR}/${P}+${HASH}"
 
 src_unpack() {
 	default
@@ -29,7 +29,4 @@ src_install() {
 
 	insinto /usr/libexec/obs/service
 	doins ${OBS_SERVICE_NAME}.service
-
-	insinto /etc/obs/services
-	newins ${OBS_SERVICE_NAME}.rc ${OBS_SERVICE_NAME}
 }

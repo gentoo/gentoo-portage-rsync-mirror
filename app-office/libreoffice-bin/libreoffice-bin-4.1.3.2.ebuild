@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.0.4.2.ebuild,v 1.6 2013/09/16 11:32:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.1.3.2.ebuild,v 1.1 2013/11/02 09:56:10 dilfridge Exp $
 
 EAPI=5
 
@@ -54,17 +54,18 @@ SRC_URI="
 IUSE="debug gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	=app-text/libexttextcat-3.4*
-	app-text/poppler:0/35
-	=dev-libs/boost-1.49*
-	dev-libs/icu:0/51.1
+	app-text/poppler:0/43
+	dev-libs/boost:0/1.52
+	dev-libs/icu:0/51.2
 	=media-gfx/graphite2-1.2*
-	=media-libs/libpng-1.5*
+	=media-libs/harfbuzz-0.9.12
+	=media-libs/libpng-1.5.15
 	>=sys-libs/glibc-2.15-r3
-	kde? ( >=kde-base/kdelibs-4.10.4:4 >=dev-qt/qtcore-4.8.4-r5:4 )
+	kde? ( >=kde-base/kdelibs-4.10.5-r1:4 >=dev-qt/qtcore-4.8.4-r5:4 )
 	|| ( <media-libs/libjpeg-turbo-1.3.0-r2 =media-libs/jpeg-8* )
 "
 
@@ -83,6 +84,8 @@ COMMON_DEPEND="
 	>=app-text/libexttextcat-3.2
 	app-text/liblangtag
 	app-text/libmspub
+	>=app-text/libmwaw-0.1.7
+	app-text/libodfgen
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
@@ -90,18 +93,20 @@ COMMON_DEPEND="
 	>=dev-cpp/clucene-2.3.3.4-r2
 	>=dev-cpp/libcmis-0.3.1:0.3
 	dev-db/unixODBC
+	>=dev-libs/boost-1.46:=
 	dev-libs/expat
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1.1:=
-	=dev-libs/liborcus-0.3*
+	>=dev-libs/liborcus-0.5.1:=
 	>=dev-libs/nspr-4.8.8
 	>=dev-libs/nss-3.12.9
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-1.0.0d
-	>=dev-libs/redland-1.0.14[ssl]
+	>=dev-libs/redland-1.0.16[ssl]
 	media-gfx/graphite2
 	>=media-libs/fontconfig-2.8.0
 	media-libs/freetype:2
+	>=media-libs/harfbuzz-0.9.10:=[icu(+)]
 	media-libs/lcms:2
 	>=media-libs/libpng-1.4
 	>=media-libs/libcdr-0.0.5
@@ -138,7 +143,7 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 PDEPEND="
-	=app-office/libreoffice-l10n-4.0*
+	=app-office/libreoffice-l10n-${PV}*
 "
 
 DEPEND=""
