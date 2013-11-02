@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.59 2013/09/06 16:05:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.60 2013/11/02 10:59:23 hwoarang Exp $
+
+  02 Nov 2013; Markos Chandras <hwoarang@gentoo.org> ldb-1.1.16.ebuild:
+  Add ~mips per #444688
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> ldb-1.1.15.ebuild:
   Stable for sparc, wrt bug #478260
