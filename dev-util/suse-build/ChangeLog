@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.17 2013/07/16 13:52:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.19 2013/11/02 09:05:08 scarabeus Exp $
+
+  02 Nov 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  -suse-build-2013.05.17-r1.ebuild, suse-build-2013.10.15.ebuild:
+  Stabilise latest on amd64 and x86 to ensure build is correct and matching what
+  obs is doing.
+
+*suse-build-2013.10.15 (02 Nov 2013)
+
+  02 Nov 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +suse-build-2013.10.15.ebuild, suse-build-9999.ebuild:
+  Version bump to the latest fixing building for factory.
 
 *suse-build-2013.05.17-r1 (16 Jul 2013)
 

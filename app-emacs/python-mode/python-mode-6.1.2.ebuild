@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-6.1.0.ebuild,v 1.1 2013/01/04 10:50:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-6.1.2.ebuild,v 1.1 2013/11/02 09:23:03 ulm Exp $
 
-EAPI=4
+EAPI=5
 
-inherit elisp
+inherit readme.gentoo elisp
 
 MY_P="${PN}.el-${PV}"
 DESCRIPTION="An Emacs major mode for editing Python source"
@@ -18,9 +18,5 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~x86-free
 S="${WORKDIR}/${MY_P}"
 SITEFILE="50${PN}-gentoo.el"
 DOCS="NEWS README"
-
-pkg_postinst() {
-	elisp-site-regen
-	elog "Note that doctest and pymacs are in their own packages,"
-	elog "app-emacs/doctest-mode and app-emacs/pymacs, respectively."
-}
+DOC_CONTENTS="Note that doctest and pymacs are in their own packages,
+	app-emacs/doctest-mode and app-emacs/pymacs, respectively."

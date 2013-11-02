@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.8 2013/07/16 13:52:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-9999.ebuild,v 1.9 2013/11/02 09:03:52 scarabeus Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ inherit eutils ${EXTRA_ECLASS}
 unset EXTRA_ECLASS
 
 DESCRIPTION="Script to build SUSE Linux RPMs"
-HOMEPAGE="https://build.opensuse.org/package/show?package=build&project=openSUSE%3ATools"
+HOMEPAGE="https://build.opensuse.org/package/show/openSUSE:Tools/build"
 
 [[ "${PV}" == "9999" ]] || SRC_URI="${OBS_URI}/${PN/suse/obs}-${PV//.}.tar.gz"
 
@@ -56,5 +56,5 @@ src_install() {
 	find . -type f -exec sed -i 's|/usr/lib/build|/usr/libexec/suse-build|' {} +
 
 	# create symlink for default build config
-	dosym /usr/libexec/suse-build/configs/sl13.1.conf /usr/libexec/suse-build/configs/default.conf
+	dosym /usr/libexec/suse-build/configs/sl13.2.conf /usr/libexec/suse-build/configs/default.conf
 }

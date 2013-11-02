@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.58 2013/09/05 19:44:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.59 2013/11/02 09:30:08 ulm Exp $
+
+  02 Nov 2013; Ulrich Müller <ulm@gentoo.org> -pymacs-0.24_beta2.ebuild:
+  Remove intermediate version.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pymacs-0.25-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
