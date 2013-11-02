@@ -1,16 +1,14 @@
-diff -ur vmblock-onlya/linux/control.c vmblock-only/linux/control.c
---- vmblock-only/linux/control.c        2013-02-26 10:17:29.000000000 +0200
-+++ vmblock-only/linux/control.c        2013-07-05 19:56:48.298553173 +0300
-@@ -208,17 +208,18 @@
+diff -ruN work.orig/vmblock-only/linux/control.c work/vmblock-only/linux/control.c
+--- work.orig/vmblock-only/linux/control.c	2013-11-02 18:05:39.960226399 +0100
++++ work/vmblock-only/linux/control.c	2013-11-02 18:09:11.760231432 +0100
+@@ -208,17 +208,14 @@
     VMBlockSetProcEntryOwner(controlProcMountpoint);
  
     /* Create /proc/fs/vmblock/dev */
 -   controlProcEntry = create_proc_entry(VMBLOCK_CONTROL_DEVNAME,
-+   /*controlProcEntry = create_proc_entry(VMBLOCK_CONTROL_DEVNAME,
-                                         VMBLOCK_CONTROL_MODE,
+-                                        VMBLOCK_CONTROL_MODE,
 -                                        controlProcDirEntry);
 -   if (!controlProcEntry) {
-+                                        controlProcDirEntry);*/
 +   controlProcEntry = proc_create(VMBLOCK_CONTROL_DEVNAME, VMBLOCK_CONTROL_MODE, controlProcDirEntry, &ControlFileOps);
 +   if (controlProcEntry == NULL) {
        Warning("SetupProcDevice: could not create " VMBLOCK_DEVICE "\n");
@@ -20,8 +18,6 @@ diff -ur vmblock-onlya/linux/control.c vmblock-only/linux/control.c
     }
  
 -   controlProcEntry->proc_fops = &ControlFileOps;
-+   /* controlProcEntry->proc_fops = &ControlFileOps; */
     return 0;
- } 
-
+ }
  

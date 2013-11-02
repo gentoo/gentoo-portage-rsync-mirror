@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.109 2013/10/22 21:21:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.111 2013/11/02 17:27:17 dilfridge Exp $
+
+  02 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/279-3.10.0.patch, vmware-modules-279.0.ebuild:
+  Re-add keywords after testing
+
+  02 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  files/279-vmblock.patch, vmware-modules-279.0.ebuild:
+  Apply proper patches. Tested with 3.10.7-gentoo-r1.
 
   22 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/238-2.6.39.patch, -files/238-makefile-kernel-dir.patch,

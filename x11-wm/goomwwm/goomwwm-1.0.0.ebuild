@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/goomwwm/goomwwm-1.0.0.ebuild,v 1.2 2013/05/22 22:00:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/goomwwm/goomwwm-1.0.0.ebuild,v 1.3 2013/11/02 17:27:04 jer Exp $
 
 EAPI=5
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Get out of my way, Window Manager!"
 HOMEPAGE="http://aerosuidae.net/goomwwm/"
@@ -26,15 +26,16 @@ DEPEND="
 	x11-proto/xproto
 "
 
+src_prepare() {
+	sed -i -e 's|$(LDADD) $(LDFLAGS)|$(LDFLAGS) $(LDADD)|g' Makefile || die
+}
+
 src_configure() {
 	use debug && append-cflags -DDEBUG
-	append-cflags -include proto.h
 }
 
 src_compile() {
-	emake \
-		CC=$(tc-getCC) \
-		proto normal
+	emake CC=$(tc-getCC) proto normal
 }
 
 src_install() {

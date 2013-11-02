@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-279.0.ebuild,v 1.1 2013/10/19 11:42:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-279.0.ebuild,v 1.3 2013/11/02 17:27:17 dilfridge Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="pax_kernel"
 
 RDEPEND=""
@@ -65,8 +65,7 @@ src_prepare() {
 	use pax_kernel && epatch "${FILESDIR}/hardened.patch"
 	epatch "${FILESDIR}/${PV_MAJOR}-apic.patch"
 	kernel_is ge 3 7 0 && epatch "${FILESDIR}/${PV_MAJOR}-putname.patch"
-	kernel_is ge 3 10 0 && epatch "${FILESDIR}/${PV_MAJOR}-3.10.0.patch"
-	kernel_is ge 3 11 0 && epatch "${FILESDIR}/${PV_MAJOR}-vmblock.patch"
+	kernel_is ge 3 10 0 && epatch "${FILESDIR}/${PV_MAJOR}-vmblock.patch"
 
 	# Allow user patches so they can support RC kernels and whatever else
 	epatch_user

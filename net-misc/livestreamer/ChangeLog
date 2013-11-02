@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/livestreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.1 2013/10/30 18:22:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.2 2013/11/02 17:07:42 hwoarang Exp $
+
+  02 Nov 2013; Markos Chandras <hwoarang@gentoo.org> livestreamer-1.6.1.ebuild:
+  Add ~mips
 
 *livestreamer-1.6.1 (30 Oct 2013)
 
