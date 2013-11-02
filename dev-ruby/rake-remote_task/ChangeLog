@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rake-remote_task
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-remote_task/ChangeLog,v 1.16 2013/10/05 10:26:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-remote_task/ChangeLog,v 1.17 2013/11/02 20:38:14 mrueg Exp $
+
+  02 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -rake-remote_task-2.0.6.ebuild,
+  -rake-remote_task-2.1.0.ebuild, -rake-remote_task-2.2.1.ebuild:
+  Cleanup old.
 
 *rake-remote_task-2.2.1-r1 (05 Oct 2013)
 

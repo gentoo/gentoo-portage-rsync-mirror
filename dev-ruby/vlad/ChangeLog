@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/vlad
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vlad/ChangeLog,v 1.24 2013/10/06 11:15:10 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vlad/ChangeLog,v 1.25 2013/11/02 20:40:22 mrueg Exp $
+
+  02 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -vlad-2.2.5.ebuild,
+  -vlad-2.3.1.ebuild, -vlad-2.4.1.ebuild, -vlad-2.6.1.ebuild,
+  -vlad-2.6.2.ebuild:
+  Cleanup old.
 
 *vlad-2.6.2-r1 (06 Oct 2013)
 
