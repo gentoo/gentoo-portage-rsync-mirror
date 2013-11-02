@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/easy-align
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/easy-align/ChangeLog,v 1.4 2013/10/21 21:57:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/easy-align/ChangeLog,v 1.5 2013/11/02 12:37:10 radhermit Exp $
+
+*easy-align-2.8.0 (02 Nov 2013)
+
+  02 Nov 2013; Tim Harder <radhermit@gentoo.org> +easy-align-2.8.0.ebuild:
+  Version bump.
 
 *easy-align-2.7.0 (21 Oct 2013)
 

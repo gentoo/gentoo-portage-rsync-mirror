@@ -1,6 +1,15 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.88 2013/06/29 07:34:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.89 2013/11/02 12:35:00 hwoarang Exp $
+
+*minitube-2.1.3 (02 Nov 2013)
+*minitube-2.1 (02 Nov 2013)
+
+  02 Nov 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/minitube-2.1-disable-updates.patch,
+  +files/minitube-2.1.3-disable-updates.patch, +minitube-2.1.3.ebuild,
+  +minitube-2.1.ebuild:
+  Version bump. Bug #489634
 
   29 Jun 2013; Michael Palimaka <kensington@gentoo.org>
   -files/minitube-1.9-desktop.patch, -minitube-1.9.ebuild:

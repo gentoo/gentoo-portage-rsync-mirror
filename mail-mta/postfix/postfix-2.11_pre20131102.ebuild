@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20131101.ebuild,v 1.1 2013/11/01 15:59:46 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20131102.ebuild,v 1.1 2013/11/02 12:43:59 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
@@ -202,9 +202,11 @@ src_install () {
 	# Provide another link for legacy FSH
 	dosym /usr/sbin/sendmail /usr/$(get_libdir)/sendmail
 
-	# Install qshape tool
+	# Install qshape tool and posttls-finger
 	dobin auxiliary/qshape/qshape.pl
 	doman man/man1/qshape.1
+	dobin bin/posttls-finger
+	doman man/man1/posttls-finger.1
 
 	# Performance tuning tools and their manuals
 	dosbin bin/smtp-{source,sink} bin/qmqp-{source,sink}

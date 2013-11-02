@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=3.0.7-r2
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.0.tar.xz http://pf.natalenko.name/sources/3.0/patch-3.0.7-pf.bz2
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	kernel-2	72c82b0482225ffcdcdbaf48b37cea58	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	kernel-2	cfcb408286f35bb67644ce1a46310880	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=94435e6fc9f1720f37adfdf2d60d5422
