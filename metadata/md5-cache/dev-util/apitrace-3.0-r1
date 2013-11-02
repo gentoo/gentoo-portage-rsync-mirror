@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=app-arch/snappy media-libs/libpng:0= sys-libs/zlib media-libs/mesa[egl?] egl? ( || ( >=media-libs/mesa-8.0[gles1,gles2] <media-libs/mesa-8.0[gles] ) ) x11-libs/libX11 multilib? ( app-emulation/emul-linux-x86-baselibs ) qt4? ( >=dev-qt/qtcore-4.7:4 >=dev-qt/qtgui-4.7:4 >=dev-qt/qtwebkit-4.7:4 >=dev-libs/qjson-0.5 ) || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=https://github.com/apitrace/apitrace/tarball/3.0 -> apitrace-3.0.tar.gz
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=dccd4b8f728b4801993336f16da9a988

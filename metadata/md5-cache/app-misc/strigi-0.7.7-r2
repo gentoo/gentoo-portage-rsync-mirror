@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/bzip2:0 dev-libs/libxml2:2 sys-libs/zlib:0 virtual/libiconv clucene? ( >=dev-cpp/clucene-0.9.21[-debug] ) dbus? ( sys-apps/dbus qt4? ( dev-qt/qtdbus:4 ) ) exif? ( >=media-gfx/exiv2-0.17 ) fam? ( virtual/fam ) ffmpeg? ( virtual/ffmpeg ) hyperestraier? ( app-text/hyperestraier ) log? ( >=dev-libs/log4cxx-0.10.0 ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~johu/distfiles/strigi-0.7.7.tar.xz
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=2b5ebb35a96ed97aa87e94bafa33a604

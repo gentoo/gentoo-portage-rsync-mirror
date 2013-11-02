@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/boost:= dev-libs/expat dev-libs/json-c:= dev-libs/libgcrypt:= net-misc/curl sys-devel/binutils sys-libs/glibc sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://github/Grive/grive/tarball/v0.2.0 -> grive-0.2.0.tar.gz
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	8b38b0911d1a88cc7c0a22b59b10b5cb	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=8026115be104b1d36b9a4d9a312dc372
