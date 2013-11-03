@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/notify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/notify/ChangeLog,v 1.8 2013/10/05 10:21:02 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/notify/ChangeLog,v 1.9 2013/11/03 03:42:20 mrueg Exp $
+
+  03 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -notify-0.4.0.ebuild,
+  -notify-0.5.1.ebuild, -notify-0.5.2.ebuild:
+  Cleanup old.
 
 *notify-0.5.2-r1 (05 Oct 2013)
 

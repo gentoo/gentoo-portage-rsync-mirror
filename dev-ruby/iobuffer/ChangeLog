@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/iobuffer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.13 2013/10/29 15:39:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.14 2013/11/03 03:50:08 mrueg Exp $
+
+  03 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -iobuffer-1.1.2-r2.ebuild:
+  Cleanup old.
 
 *iobuffer-1.1.2-r3 (29 Oct 2013)
 
