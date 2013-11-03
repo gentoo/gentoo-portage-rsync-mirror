@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/screen-message
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/ChangeLog,v 1.4 2013/01/26 22:31:29 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/ChangeLog,v 1.5 2013/11/03 12:39:52 hasufell Exp $
+
+  03 Nov 2013; Julian Ospald <hasufell@gentoo.org> screen-message-0.20.ebuild:
+  update blocker on jabberd2 wrt #453994
 
   26 Jan 2013; Sebastian Pipping <sping@gentoo.org> screen-message-0.19.ebuild,
   screen-message-0.20.ebuild:
@@ -20,4 +23,3 @@
   09 Nov 2011; Sebastian Pipping <sping@gentoo.org>
   +screen-message-0.19.ebuild, +metadata.xml:
   New package
-
