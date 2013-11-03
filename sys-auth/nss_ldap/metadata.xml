@@ -9,4 +9,7 @@
   <email>robbat2@gentoo.org</email>
   <name>Robin H. Johnson</name>
 </maintainer>
+<maintainer>
+	<email>prometheanfire@gentoo.org</email>
+</maintainer>
 </pkgmetadata>

@@ -4,6 +4,9 @@
 <maintainer>
   <email>robbat2@gentoo.org</email>
 </maintainer>
+	<maintainer>
+		<email>prometheanfire@gentoo.org</email>
+	</maintainer>
 <longdescription>This package really just provides acpidump and associated tools
 for extracting ACPI tables to edit/reload buggy BIOS tables (works with iasl). 
 Useful for all ACPI-based systems (not just mobile/laptop systems).
