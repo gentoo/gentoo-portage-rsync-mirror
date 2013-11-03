@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/method_source
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.19 2013/10/09 00:39:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.20 2013/11/03 04:21:27 mrueg Exp $
+
+  03 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -method_source-0.8.2.ebuild:
+  Cleanup old.
 
 *method_source-0.8.2-r1 (09 Oct 2013)
 
