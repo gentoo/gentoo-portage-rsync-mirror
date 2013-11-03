@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/qt-meta-4.8.5.ebuild,v 1.1 2013/07/28 01:52:54 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-meta/qt-meta-4.8.5.ebuild,v 1.3 2013/11/03 13:06:34 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://qt-project.org/ http://qt.digia.com/"
 
 LICENSE="|| ( LGPL-2.1 GPL-3 )"
 SLOT="4"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="+dbus examples kde openvg +qt3support +webkit"
 
 DEPEND=""

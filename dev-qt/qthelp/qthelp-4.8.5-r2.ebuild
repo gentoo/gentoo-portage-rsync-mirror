@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5-r2.ebuild,v 1.2 2013/08/01 06:44:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5-r2.ebuild,v 1.4 2013/11/03 13:07:09 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="4"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-linux"
+	KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos"
 fi
 
 IUSE="compat doc"

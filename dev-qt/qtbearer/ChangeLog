@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtbearer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.5 2013/10/12 13:51:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.7 2013/11/03 13:06:43 ago Exp $
+
+  03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> qtbearer-4.8.5.ebuild:
+  Stable for x86, wrt bug #488536
+
+  03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> qtbearer-4.8.5.ebuild:
+  Stable for amd64, wrt bug #488536
 
   12 Oct 2013; Markos Chandras <hwoarang@gentoo.org> qtbearer-4.8.5.ebuild:
   Add ~mips per #412915

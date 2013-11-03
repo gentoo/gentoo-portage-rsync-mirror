@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtdemo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.5 2013/07/25 09:07:41 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.7 2013/11/03 13:07:00 ago Exp $
+
+  03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> qtdemo-4.8.5-r1.ebuild:
+  Stable for x86, wrt bug #488536
+
+  03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> qtdemo-4.8.5-r1.ebuild:
+  Stable for amd64, wrt bug #488536
 
 *qtdemo-4.8.5-r1 (25 Jul 2013)
 
