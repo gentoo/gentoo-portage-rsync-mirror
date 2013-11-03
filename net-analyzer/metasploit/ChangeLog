@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.69 2013/07/10 13:42:29 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.70 2013/11/03 03:07:32 mrueg Exp $
+
+  03 Nov 2013; Manuel Rüger <mrueg@gentoo.org> metasploit-4.0.0-r1.ebuild,
+  metasploit-4.2.0.ebuild, metasploit-4.3.0.ebuild, metasploit-4.4.0-r1.ebuild,
+  metasploit-4.4.0.ebuild, metasploit-9999.ebuild:
+  Non-maintainer update: Remove dependency on obsolete dev-ruby/postgres,
+  dependency for dev-ruby/pg is covered by dev-ruby/activerecord[postgres] so no
+  need to readd it. Acked by Rick Farina. Fixes bug #479688
 
   10 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
   metasploit-4.2.0.ebuild:
