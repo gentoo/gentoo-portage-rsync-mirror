@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8334 2013/11/03 14:26:33 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8335 2013/11/03 14:42:26 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Nov 2013; Luca Barbato <lu_zero@gentoo.org> package.mask:
+  Add a libav-0.8.9 multilib-ready version.
 
   03 Nov 2013; Johannes Huber <johu@gentoo.org> package.mask:
   Mask kde-misc/qtrans for removal.
