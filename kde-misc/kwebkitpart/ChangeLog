@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kwebkitpart
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.29 2013/04/09 18:29:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.30 2013/11/03 11:54:55 johu Exp $
+
+*kwebkitpart-1.3.3 (03 Nov 2013)
+
+  03 Nov 2013; Johannes Huber <johu@gentoo.org> +kwebkitpart-1.3.3.ebuild:
+  Version bump wrt bug #490084.
 
   09 Apr 2013; Agostino Sarubbo <ago@gentoo.org> kwebkitpart-1.3.1.ebuild:
   Stable for ppc64, wrt to bug #462890
