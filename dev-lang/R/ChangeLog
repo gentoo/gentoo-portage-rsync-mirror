@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.223 2013/09/30 17:12:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.224 2013/11/03 20:38:33 mattst88 Exp $
+
+  03 Nov 2013; Matt Turner <mattst88@gentoo.org> R-2.10.1.ebuild,
+  R-2.15.3.ebuild, R-3.0.1-r1.ebuild, R-3.0.1.ebuild, R-3.0.2.ebuild:
+  Dropped alpha keywords, bug 437508.
 
   30 Sep 2013; Agostino Sarubbo <ago@gentoo.org> R-3.0.1.ebuild:
   Stable for x86, wrt bug #437508

@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.41 2013/05/28 16:04:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.42 2013/11/03 20:36:05 robbat2 Exp $
+
+*libmcal-0.7-r6 (03 Nov 2013)
+
+  03 Nov 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/libmcal-0.7-flex-2.5.37.patch, +files/libmcal-0.7-r6-fpic.patch,
+  +files/libmcal-0.7-r6-gcc4.patch, +libmcal-0.7-r6.ebuild:
+  Lots of build fixes: Bug #243924, #312951, #336096, #440848. All thanks to
+  Michael Mair-Keimberger (iamnr3) <bu9zilla@gmail.com>.
 
   28 May 2013; Jeroen Roovers <jer@gentoo.org> files/libmcal-0.7-gcc4.patch:
   Fix patch.
