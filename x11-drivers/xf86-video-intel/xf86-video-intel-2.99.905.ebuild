@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.99.905.ebuild,v 1.1 2013/10/23 19:16:20 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.99.905.ebuild,v 1.2 2013/11/03 18:20:28 remi Exp $
 
 EAPI=5
 
@@ -12,7 +12,10 @@ DESCRIPTION="X.Org driver for Intel cards"
 KEYWORDS="~amd64 ~x86 ~amd64-fbsd -x86-fbsd"
 IUSE="glamor +sna +udev uxa xvmc"
 
-REQUIRED_USE="|| ( glamor sna uxa )"
+REQUIRED_USE="
+	|| ( sna uxa )
+	glamor? ( uxa )
+"
 
 RDEPEND="x11-libs/libXext
 	x11-libs/libXfixes
