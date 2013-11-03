@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1.ebuild,v 1.7 2012/08/22 23:23:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-6.8.1.ebuild,v 1.8 2013/11/03 17:09:14 hasufell Exp $
 
 EAPI=4
 
@@ -42,6 +42,8 @@ src_prepare() {
 	EPATCH_SOURCE="${WORKDIR}/patches" \
 	EPATCH_SUFFIX="patch" \
 	epatch
+
+	epatch "${FILESDIR}"/${P}-automake-1.13.patch
 
 	# remove bundled stuff
 	rm -rf "${S}"/{itcl,tcl,tk,readline} || die

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/insight
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.56 2013/02/04 07:16:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.57 2013/11/03 17:09:14 hasufell Exp $
+
+  03 Nov 2013; Julian Ospald <hasufell@gentoo.org> insight-6.8.1.ebuild,
+  insight-6.8.1-r1.ebuild, +files/insight-6.8.1-automake-1.13.patch:
+  fix build with automake-1.13 wrt #486414
 
 *insight-6.8.1-r1 (04 Feb 2013)
 
