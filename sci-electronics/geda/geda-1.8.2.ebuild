@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.8.2.ebuild,v 1.1 2013/10/20 10:26:50 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda/geda-1.8.2.ebuild,v 1.2 2013/11/03 10:06:07 tomjbe Exp $
 
 EAPI=4
-inherit eutils fdo-mime gnome2-utils versionator
+inherit eutils fdo-mime flag-o-matic gnome2-utils versionator
 
 MY_PN=${PN}-gaf
 MY_P=${MY_PN}-${PV}
@@ -40,6 +40,7 @@ S=${WORKDIR}/${MY_P}
 DOCS="AUTHORS NEWS README"
 
 src_prepare() {
+	append-libs -lgio-2.0
 	if ! use doc ; then
 		sed -i -e '/^SUBDIRS = /s/docs//' Makefile.in || die
 	fi

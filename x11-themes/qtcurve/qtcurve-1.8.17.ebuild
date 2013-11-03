@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17.ebuild,v 1.1 2013/11/03 08:17:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17.ebuild,v 1.2 2013/11/03 10:05:49 yngwin Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -32,9 +32,11 @@ RDEPEND="X? ( x11-libs/libxcb
 		dev-qt/qtgui:4
 		dev-qt/qtsvg:4
 	)
-	qt5? ( dev-qt/qtdbus:5
-		dev-qt/qtgui:5
+	qt5? ( dev-qt/qtgui:5
 		dev-qt/qtsvg:5
+		dev-qt/qtwidgets:5
+		X? ( dev-qt/qtdbus:5
+			dev-qt/qtx11extras:5 )
 	)
 	kde? ( $(add_kdebase_dep systemsettings)
 		windeco? ( $(add_kdebase_dep kwin) )
