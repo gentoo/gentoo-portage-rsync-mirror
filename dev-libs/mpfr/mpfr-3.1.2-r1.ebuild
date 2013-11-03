@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.2-r1.ebuild,v 1.4 2013/10/30 12:08:10 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/mpfr-3.1.2-r1.ebuild,v 1.5 2013/11/03 07:16:52 heroxbd Exp $
 
 EAPI="3"
 
@@ -46,8 +46,8 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		--with-gmp-lib="${EPREFIX}"/usr/$(get_libdir) \
-		--with-gmp-include="${EPREFIX}"/usr/include \
+		--with-gmp-lib="${EROOT}"usr/$(get_libdir) \
+		--with-gmp-include="${EROOT}"usr/include \
 		$(use_enable static-libs static)
 }
 
