@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmemcache
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.35 2011/11/20 09:39:09 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.36 2013/11/03 05:45:09 prometheanfire Exp $
+
+  03 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
+  adding myself as maintainer
 
   20 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libmemcache-1.4.0_rc2-r1.ebuild,
@@ -145,4 +148,3 @@
   28 Aug 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
   +libmemcache-1.2.4.ebuild:
   Initial commit.
-

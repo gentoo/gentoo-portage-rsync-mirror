@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ifenslave
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.31 2012/11/02 19:08:17 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.32 2013/11/03 05:59:19 prometheanfire Exp $
+
+  03 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
+  adding myself to maintainers
 
   02 Nov 2012; Robin H. Johnson <robbat2@gentoo.org> ifenslave-1.1.0-r6.ebuild:
   Bug #440894: ~alpha keyword.

@@ -4,6 +4,9 @@
 	<maintainer>
 		<email>robbat2@gentoo.org</email>
 	</maintainer>
+	<maintainer>
+		<email>prometheanfire@gentoo.org</email>
+	</maintainer>
 	<longdescription>
 	libmemcached is a C client library to the memcached server
 	(http://danga.com/memcached). It has been designed to be light on memory

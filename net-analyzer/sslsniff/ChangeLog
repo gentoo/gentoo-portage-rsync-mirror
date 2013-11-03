@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sslsniff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.8 2013/09/16 06:30:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.9 2013/11/03 05:56:12 prometheanfire Exp $
+
+  03 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
+  adding myself to the list of maintainers
 
   16 Sep 2013; Rick Farina <zerochaos@gentoo.org> sslsniff-0.8-r1.ebuild:
   fix subslot dep on boost
