@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.255 2013/11/01 21:53:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.256 2013/11/03 16:46:25 xarthisius Exp $
+
+*doxygen-1.8.5 (03 Nov 2013)
+
+  03 Nov 2013; Kacper Kowalik <xarthisius@gentoo.org> +doxygen-1.8.5.ebuild:
+  Version bump. Fixes #490124 by David Hallas <david@cgp.dk>
 
   01 Nov 2013; Markos Chandras <hwoarang@gentoo.org> doxygen-1.8.4-r2.ebuild:
   Add ~mips per #444688
