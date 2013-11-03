@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.128 2013/11/01 13:35:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.129 2013/11/03 22:59:28 mattst88 Exp $
+
+  03 Nov 2013; Matt Turner <mattst88@gentoo.org> zlib-1.2.8-r1.ebuild:
+  alpha stable, bug 488916.
 
   01 Nov 2013; Agostino Sarubbo <ago@gentoo.org> zlib-1.2.8-r1.ebuild:
   Stable for x86, wrt bug #488916
