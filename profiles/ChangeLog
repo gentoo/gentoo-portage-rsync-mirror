@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8331 2013/11/02 16:17:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8332 2013/11/03 08:21:56 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Nov 2013; Ben de Groot <yngwin@gentoo.org> +updates/4Q-2013:
+  package move x11-themes/qtcurve-qt4 x11-themes/qtcurve
 
   02 Nov 2013; Markos Chandras <hwoarang@gentoo.org> ChangeLog:
   mask app-arch/xarchiver for removal
@@ -414,7 +417,7 @@
   still depend on an unqualified dev-lang/ruby, bug 483254.
 
   03 Sep 2013; <creffett@gentoo.org> package.mask:
-  Lastrite dev-games/neo{engine,tools} 
+  Lastrite dev-games/neo{engine,tools}
 
   02 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Temporarily mask libsecret-0.16 due to API/ABI change (bug #483414).
@@ -545,7 +548,7 @@
 
   17 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Remove obsolete mask on dev-perl/Date-ISO
-  
+
 
   17 Aug 2013; <creffett@gentoo.org> package.mask:
   Remove tg-widgets-* from package.mask as they are now gone from the tree
@@ -1048,15 +1051,15 @@
   Masked for removal in 30 days, bug #440670.
 
   07 Jun 2013; Rick Farina <zerochaos@gentoo.org>
-  package.mask: removing gnuradio-3.7 and gr-osmosdr-0.1.0/gr-iqbal 
+  package.mask: removing gnuradio-3.7 and gr-osmosdr-0.1.0/gr-iqbal
   masks now that upstream has a working release
 
   07 Jun 2013; Rick Farina <zerochaos@gentoo.org>
-  package.mask: adding gr-iqbal-0.37.0 and gr-osmosdr-0.1.0, they don't 
+  package.mask: adding gr-iqbal-0.37.0 and gr-osmosdr-0.1.0, they don't
   work together due to upstream issues
 
   07 Jun 2013; Rick Farina <zerochaos@gentoo.org>
-  package.mask: masking gnuradio-3.7 because basically nothing works 
+  package.mask: masking gnuradio-3.7 because basically nothing works
   with it
 
   06 Jul 2013; Ulrich Müller <ulm@gentoo.org> +updates/3Q-2013:
