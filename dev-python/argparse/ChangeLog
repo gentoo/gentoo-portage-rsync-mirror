@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.60 2013/09/05 18:47:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.61 2013/11/03 15:19:53 mgorny Exp $
+
+  03 Nov 2013; Michał Górny <mgorny@gentoo.org> argparse-1.2.1-r1.ebuild:
+  Remove stale implementations from the ebuild. Reported by jlec.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> argparse-1.2.1-r2.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
