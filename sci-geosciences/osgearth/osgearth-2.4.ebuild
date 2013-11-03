@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osgearth/osgearth-2.4.ebuild,v 1.2 2013/07/21 17:58:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osgearth/osgearth-2.4.ebuild,v 1.3 2013/11/03 12:02:48 hasufell Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="doc qt4"
 RDEPEND="
 	dev-db/sqlite:3
 	dev-games/openscenegraph[curl,qt4?]
-	dev-lang/v8:=
+	=dev-lang/v8-3.18.5.14
 	dev-libs/tinyxml
 	net-misc/curl
 	sci-libs/gdal

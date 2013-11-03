@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libg15
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.30 2013/05/13 03:20:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.31 2013/11/03 12:04:17 polynomial-c Exp $
+
+  03 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
+  Added myself as maintainer.
 
   13 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Removing removed lcd herd from metadata
