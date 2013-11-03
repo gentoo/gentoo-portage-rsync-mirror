@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_sqlite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_sqlite/ChangeLog,v 1.37 2013/01/09 11:26:01 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_sqlite/ChangeLog,v 1.38 2013/11/03 21:12:19 mabi Exp $
+
+*PEAR-MDB2_Driver_sqlite-1.5.0_beta4 (03 Nov 2013)
+
+  03 Nov 2013; Matti Bickel <mabi@gentoo.org>
+  +PEAR-MDB2_Driver_sqlite-1.5.0_beta4.ebuild:
+  version bump
 
   09 Jan 2013; Ole Markus With <olemarkus@gentoo.org>
   PEAR-MDB2_Driver_sqlite-1.5.0_beta3.ebuild:

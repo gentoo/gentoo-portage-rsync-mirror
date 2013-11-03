@@ -1,6 +1,16 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_ibase
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_ibase/ChangeLog,v 1.5 2011/11/04 09:28:09 nativemad Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_ibase/ChangeLog,v 1.7 2013/11/03 21:09:58 mabi Exp $
+
+  03 Nov 2013; Matti Bickel <mabi@gentoo.org>
+  PEAR-MDB2_Driver_ibase-1.5.0_beta4.ebuild:
+  version bump
+
+*PEAR-MDB2_Driver_ibase-1.5.0_beta4 (03 Nov 2013)
+
+  03 Nov 2013; Matti Bickel <mabi@gentoo.org>
+  +PEAR-MDB2_Driver_ibase-1.5.0_beta4.ebuild:
+  version bump
 
   04 Nov 2011; Andreas Schuerch <nativemad@gentoo.org>
   PEAR-MDB2_Driver_ibase-1.5.0_beta3.ebuild:
@@ -34,4 +44,3 @@
   15 Mar 2008; Jakub Moc <jakub@gentoo.org>
   +PEAR-MDB2_Driver_ibase-1.5.0_beta1.ebuild:
   New ebuild for MDB2 firebird/interbase support.
-
