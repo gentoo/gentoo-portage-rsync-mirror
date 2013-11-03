@@ -1,13 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-1.2.ebuild,v 1.1 2013/05/20 15:26:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-1.2-r1.ebuild,v 1.1 2013/11/03 09:56:29 yngwin Exp $
 
-EAPI=4
-
+EAPI=5
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.6 3.*"
-
 inherit eutils distutils
 
 MY_P="${P/_/}"
@@ -22,16 +20,14 @@ IUSE="+acoustid +cdda nls"
 
 DEPEND="dev-python/PyQt4[X]
 	media-libs/mutagen
-	acoustid? ( media-libs/chromaprint[tools] )
-	cdda? ( >=media-libs/libdiscid-0.1.1 )
-	"
+	acoustid? ( >=media-libs/chromaprint-1.0[tools] )
+	cdda? ( >=media-libs/libdiscid-0.1.1 )"
 RDEPEND="${DEPEND}"
 
 # doesn't work with ebuilds
 RESTRICT="test"
 
-S="${WORKDIR}/${MY_P}"
-
+S=${WORKDIR}/${MY_P}
 DOCS="AUTHORS.txt NEWS.txt"
 
 src_compile() {

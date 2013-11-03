@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/picard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.45 2013/05/20 15:26:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.46 2013/11/03 09:56:29 yngwin Exp $
+
+*picard-1.2-r1 (03 Nov 2013)
+
+  03 Nov 2013; Ben de Groot <yngwin@gentoo.org> +picard-1.2-r1.ebuild,
+  -picard-1.2.ebuild:
+  Make sure to use chromaprint version that actually works; bug #489920
 
 *picard-1.2 (20 May 2013)
 

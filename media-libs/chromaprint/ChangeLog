@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/chromaprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/ChangeLog,v 1.9 2013/04/05 11:04:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/ChangeLog,v 1.10 2013/11/03 09:40:39 yngwin Exp $
+
+*chromaprint-1.0 (03 Nov 2013)
+
+  03 Nov 2013; Ben de Groot <yngwin@gentoo.org> +chromaprint-1.0.ebuild,
+  +files/chromaprint-1.0-libav9.patch:
+  version bump, bug #489918
 
   05 Apr 2013; Agostino Sarubbo <ago@gentoo.org> chromaprint-0.7.ebuild:
   Stable for x86, wrt bug #464532
