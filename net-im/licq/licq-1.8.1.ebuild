@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.0-r1.ebuild,v 1.2 2013/09/13 13:36:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.1.ebuild,v 1.1 2013/11/04 11:42:28 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ inherit cmake-utils eutils flag-o-matic
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
+	https://github.com/${PN}-im/${PN}/commit/f288367c758de16fc013c6f4c9851ca85813eb59.patch -> ${P}-qt4-gui_build_fix.patch"
 
 LICENSE="GPL-2"
 SLOT="2"
@@ -23,12 +24,14 @@ RDEPEND=">=app-crypt/gpgme-1
 	xosd? ( x11-libs/xosd )
 	aosd? ( x11-libs/libaosd )"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )
+	doc? ( app-doc/doxygen[dot] )
 	nls? ( sys-devel/gettext )
 	dev-libs/boost"
 
 src_prepare() {
-	#epatch "${FILESDIR}"/${PN}-1.5.1-find-libcdk.patch
+	pushd plugins &>/dev/null || die
+	epatch "${DISTDIR}"/${P}-qt4-gui_build_fix.patch
+	popd &>/dev/null || die
 
 	local licq_plugins="auto-reply icq rms"
 	use msn && licq_plugins+=" msn"
@@ -53,10 +56,11 @@ pkg_setup() {
 src_configure() {
 	local myopts="-DCMAKE_BUILD_TYPE=$(use debug && echo 'Debug' || echo 'Release')"
 	mycmakeargs="$myopts
+		$(cmake-utils_use doc USE_DOXYGEN)
 		$(cmake-utils_use linguas_he USE_HEBREW)
+		$(cmake-utils_use nls ENABLE_NLS)
 		$(cmake-utils_use socks5 USE_SOCKS5)
 		$(cmake-utils_use ssl USE_OPENSSL)
-		$(cmake-utils_use nls ENABLE_NLS)
 		-DUSE_FIFO=ON
 		-DBUILD_PLUGINS=ON"
 

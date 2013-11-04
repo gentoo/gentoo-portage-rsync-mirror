@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.194 2013/10/04 18:06:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.195 2013/11/04 11:37:51 idella4 Exp $
+
+*xen-tools-4.3.0-r1 (04 Nov 2013)
+
+  04 Nov 2013; Ian Delaney <idella4@gentoo.org> +xen-tools-4.3.0-r1.ebuild,
+  metadata.xml:
+  ocaml deps findlib, ocaml combined & re-located under DEPEND, stable fault
+  unfixable due to sole reliance on assigned maintainer of Bug 486076 submitting
+  a dev-lang/ocaml-4x for stable. Electing for now not to purge IUSE ocaml and
+  related deps though flagged as a future option.
 
   04 Oct 2013; Ian Delaney <idella4@gentoo.org> -xen-tools-4.2.1-r5.ebuild,
   xen-tools-4.2.2-r3.ebuild, xen-tools-4.2.2-r4.ebuild, xen-tools-4.3.0.ebuild:

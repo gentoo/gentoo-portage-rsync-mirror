@@ -1,6 +1,13 @@
 # ChangeLog for net-im/licq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.127 2013/09/28 15:03:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/ChangeLog,v 1.128 2013/11/04 11:42:28 polynomial-c Exp $
+
+*licq-1.8.1 (04 Nov 2013)
+
+  04 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> -licq-1.8.0-r1.ebuild,
+  licq-1.8.0-r2.ebuild, +licq-1.8.1.ebuild, -files/licq-1.8.0-doxygen.patch,
+  -files/licq-1.8.0-socks5.patch:
+  Version bump. Removed old.
 
 *licq-1.8.0-r2 (28 Sep 2013)
 
