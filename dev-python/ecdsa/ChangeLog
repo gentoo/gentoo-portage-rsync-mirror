@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.7 2013/10/24 13:35:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.8 2013/11/04 17:05:59 jer Exp $
+
+  04 Nov 2013; Jeroen Roovers <jer@gentoo.org> ecdsa-0.10.ebuild:
+  Marked ~hppa (bug #490374).
 
 *ecdsa-0.10 (24 Oct 2013)
 
