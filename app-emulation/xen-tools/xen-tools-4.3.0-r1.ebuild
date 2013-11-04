@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0-r1.ebuild,v 1.2 2013/11/04 12:58:47 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0-r1.ebuild,v 1.3 2013/11/04 15:33:56 idella4 Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ LICENSE="GPL-2"
 SLOT="0"
 # Inclusion of IUSE ocaml on stabalizing requires aballier to (get off his hands and) make >=dev-lang/ocaml-4 stable
 # Otherwise IUSE ocaml and ocaml capable build need be purged
-IUSE="api custom-cflags debug doc flask hvm qemu ocaml python pygrub screen static-libs xend"
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml +pam python pygrub screen static-libs xend"
 
 REQUIRED_USE="hvm? ( qemu )"
 
@@ -42,7 +42,7 @@ DEPEND="dev-libs/lzo:2
 	dev-libs/yajl
 	dev-libs/libgcrypt
 	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/pypam[${PYTHON_USEDEP}]
+	pam? ( dev-python/pypam[${PYTHON_USEDEP}] )
 	sys-libs/zlib
 	sys-power/iasl
 	hvm? ( media-libs/libsdl )
@@ -232,11 +232,17 @@ src_prepare() {
 
 src_configure() {
 	local myconf="--prefix=/usr --disable-werror"
+
 	if use ocaml
 	then
 		myconf="${myconf} $(use_enable ocaml ocamltools)"
 	else
 		myconf="${myconf} --disable-ocamltools"
+	fi
+
+	if ! use pam
+	then
+		myconf="${myconf} --disable-pam"
 	fi
 
 	econf ${myconf}
