@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/imagesize
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.7 2011/08/20 12:45:01 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.8 2013/11/04 22:08:18 mrueg Exp $
+
+*imagesize-0.1.1_p20100902 (04 Nov 2013)
+
+  04 Nov 2013; Manuel Rüger <mrueg@gentoo.org>
+  +imagesize-0.1.1_p20100902.ebuild:
+  Version bump to github snapshot. Fix tests. Add ruby19,ruby20 target.
 
   20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -imagesize-0.1.1.ebuild:
   Remove old version.
@@ -31,4 +37,3 @@
   +imagesize-0.1.1.ebuild:
   Initial import, dependency for app-misc/alexandria. Thanks to John Keeping in
   #215458 for providing the initial ebuild.
-

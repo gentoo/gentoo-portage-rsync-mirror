@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1046 2013/11/04 21:36:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1047 2013/11/04 22:05:31 floppym Exp $
+
+  04 Nov 2013; Mike Gilbert <floppym@gentoo.org> mercurial.eclass:
+  Initialize cert_opt to an empty array instead of an empty string. Reported by
+  Kristian Fiskerstrand.
 
   04 Nov 2013; Ulrich Müller <ulm@gentoo.org> elisp-common.eclass:
   Don't create site-gentoo.el in postrm phase.
