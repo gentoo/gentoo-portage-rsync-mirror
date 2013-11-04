@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/tpacpi-bat-9999.ebuild,v 1.3 2013/01/11 22:39:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/tpacpi-bat-9999.ebuild,v 1.4 2013/11/04 04:05:31 ottxor Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils systemd
 
 if [ "${PV}" = "9999" ]; then
 	inherit git-2
@@ -29,6 +29,8 @@ RDEPEND="sys-power/acpi_call
 src_install() {
 	dodoc README battery_asl
 	dobin tpacpi-bat
-	newinitd "${FILESDIR}"/${PN}.initd.0 ${PN}
+	newinitd "${FILESDIR}"/${PN}.initd.1 ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd.0 ${PN}
+	systemd_newunit tpacpi.service ${PN}.service
+
 }

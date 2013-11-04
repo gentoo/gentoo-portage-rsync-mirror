@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/tpacpi-bat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/ChangeLog,v 1.3 2013/09/21 00:49:05 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpacpi-bat/ChangeLog,v 1.4 2013/11/04 04:05:31 ottxor Exp $
+
+  04 Nov 2013; Christoph Junghans <ottxor@gentoo.org> +files/tpacpi-bat.initd.1,
+  tpacpi-bat-9999.ebuild:
+  fixes for new call syntax (bug #485526#c2)
 
 *tpacpi-bat-1.0-r1 (21 Sep 2013)
 
