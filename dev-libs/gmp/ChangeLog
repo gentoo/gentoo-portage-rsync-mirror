@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.187 2013/10/29 12:48:06 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.188 2013/11/03 23:28:41 mattst88 Exp $
+
+  03 Nov 2013; Matt Turner <mattst88@gentoo.org> gmp-5.1.2.ebuild:
+  alpha stable, bug 487796.
 
   29 Oct 2013; Chema Alonso <nimiux@gentoo.org> gmp-5.1.2.ebuild:
   Stable for amd64 wrt bug #487796
