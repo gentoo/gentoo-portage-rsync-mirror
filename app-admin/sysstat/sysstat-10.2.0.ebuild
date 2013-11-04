@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.1.5.ebuild,v 1.1 2013/04/02 19:34:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.2.0.ebuild,v 1.1 2013/11/04 01:17:02 jer Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -13,15 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cron debug +doc isag nls lm_sensors"
-
-SYSSTAT_LINGUAS="
-	af cs da de eo es eu fi fr hr id it ja ky lv mt nb nl nn pl pt pt_BR ro ru
-	sk sr sv uk vi zh_CN zh_TW
-"
-
-for SYSSTAT_LINGUA in ${SYSSTAT_LINGUAS}; do
-	IUSE="${IUSE} linguas_${SYSSTAT_LINGUA}"
-done
 
 RDEPEND="
 	cron? ( sys-process/cronbase )
@@ -39,20 +30,17 @@ DEPEND="
 "
 
 src_prepare() {
-	local po_count li_count lingua NLSDIR="${S}/nls"
-
-	count() { echo ${#}; }
-	po_count=$(count ${NLSDIR}/*.po)
-	li_count=$(count ${SYSSTAT_LINGUAS})
-	[[ ${po_count} = ${li_count} ]] \
-		|| die "Number of LINGUAS does not match number of .po files"
-	unset count
-
-	for lingua in ${SYSSTAT_LINGUAS}; do
-		if ! use linguas_${lingua}; then
-			rm -f "${NLSDIR}/${lingua}.po" || die
-		fi
-	done
+	if use nls; then
+		strip-linguas -i nls/
+		local lingua pofile
+		for pofile in nls/*.po; do
+			lingua=${pofile/nls\/}
+			lingua=${lingua/.po}
+			if ! has ${lingua} ${LINGUAS}; then
+				rm "nls/${lingua}.po" || die
+			fi
+		done
+	fi
 	epatch "${FILESDIR}"/${PN}-10.0.4-flags.patch
 }
 
