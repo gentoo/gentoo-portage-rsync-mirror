@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/linguist
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/linguist/ChangeLog,v 1.5 2013/11/03 13:06:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/linguist/ChangeLog,v 1.6 2013/11/04 13:55:24 jer Exp $
+
+  04 Nov 2013; Jeroen Roovers <jer@gentoo.org> linguist-4.8.5.ebuild:
+  Marked ~hppa (bug #488536).
 
   03 Nov 2013; Agostino Sarubbo <ago@gentoo.org> linguist-4.8.5.ebuild:
   Stable for x86, wrt bug #488536

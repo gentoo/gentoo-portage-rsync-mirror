@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.0-r1.ebuild,v 1.4 2013/10/26 02:15:17 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.1.0-r1.ebuild,v 1.1 2013/11/04 13:41:14 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -12,7 +12,7 @@ es-ES et eu fi fr fy-NL ga-IE gd gl he hr hu hy-AM id is it ja ko lt nb-NO
 nl nn-NO pa-IN pl pt-BR pt-PT rm ro ru si sk sl sq sr sv-SE ta-LK tr uk vi
 zh-CN zh-TW )
 
-# Convert the ebuild version to the upstream mozilla version, used by mozlinguas
+# Convert the ebuild version to th firefox-24.0-patches-0.4.tar.xze upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_beta/b}"
 # ESR releases have slightly version numbers
 if [[ ${MOZ_ESR} == 1 ]]; then
@@ -21,7 +21,7 @@ fi
 MOZ_P="${PN}-${MOZ_PV}"
 
 # Enigmail version
-EMVER="1.5.2"
+EMVER="1.6"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -38,21 +38,19 @@ LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist crypt gstreamer +jit ldap +lightning +minimal mozdom pulseaudio selinux system-cairo system-icu system-jpeg system-sqlite"
 
 PATCH="thunderbird-24.0-patches-0.1"
-PATCHFF="firefox-24.0-patches-0.4"
+PATCHFF="firefox-24.0-patches-0.6"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
 	${MOZ_HTTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
-	crypt? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz )
+	crypt? ( http://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
-	http://dev.gentoo.org/~nirbheek/mozilla/patchsets/${PATCHFF}.tar.xz
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 RDEPEND="
-	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.15.1
 	>=dev-libs/nspr-4.10
 	>=dev-libs/glib-2.26:2
@@ -62,7 +60,7 @@ RDEPEND="
 	gstreamer? ( media-plugins/gst-plugins-meta:0.10[ffmpeg] )
 	pulseaudio? ( media-sound/pulseaudio )
 	system-cairo? ( >=x11-libs/cairo-1.12[X] )
-	system-icu? ( dev-libs/icu )
+	system-icu? ( >=dev-libs/icu-0.51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
 	system-sqlite? ( >=dev-db/sqlite-3.7.17:3[secure-delete,debug=] )
 	>=media-libs/libvpx-1.0.0
@@ -80,6 +78,7 @@ RDEPEND="
 	) )"
 
 DEPEND="${RDEPEND}
+	>=sys-devel/binutils-2.16.1
 	virtual/pkgconfig
 	amd64? ( ${ASM_DEPEND}
 		virtual/opengl )
@@ -122,8 +121,6 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/thunderbird"
-	# drop -Wl,--build-id from LDFLAGS, bug #465466
-	epatch "${FILESDIR}"/moz${PV%%\.*}-drop-Wl-build-id.patch
 
 	# Apply our patchset from firefox to thunderbird as well
 	pushd "${S}"/mozilla &>/dev/null || die
@@ -134,9 +131,6 @@ src_prepare() {
 
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
-		pushd "${S}"/mailnews/extensions/enigmail &>/dev/null || die
-		epatch "${FILESDIR}"/enigmail_mailnews_extensions_genxpi.patch
-		popd &>/dev/null || die
 	fi
 
 	# Ensure that are plugins dir is enabled as default
@@ -257,8 +251,8 @@ src_compile() {
 		cd "${S}"/mailnews/extensions/enigmail || die
 		./makemake -r 2&> /dev/null
 		cd "${S}"/tbird/mailnews/extensions/enigmail
-		emake -j1 || die "make enigmail failed"
-		emake -j1 xpi || die "make enigmail xpi failed"
+		emake || die "make enigmail failed"
+		emake xpi || die "make enigmail xpi failed"
 	fi
 }
 

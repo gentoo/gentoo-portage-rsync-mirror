@@ -1,6 +1,18 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.280 2013/10/26 02:13:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.281 2013/11/04 13:46:39 anarchy Exp $
+
+*firefox-24.1.0-r1 (04 Nov 2013)
+*firefox-25.0-r1 (04 Nov 2013)
+
+  04 Nov 2013; Jory A. Pratt <anarchy@gentoo.org> +firefox-24.1.0-r1.ebuild,
+  +firefox-25.0-r1.ebuild, -files/bug-846986.patch,
+  -files/firefox-14.0_beta7-gst-aac-mp3.patch,
+  -files/firefox-14.0_beta7-gst-youtube-h264.patch,
+  -files/firefox-15.0-fix-gstreamer-html5-crash.patch,
+  -files/firefox-20-hppa.patch, -files/firefox-21-hppa.patch,
+  -files/moz24-drop-Wl-build-id.patch, -firefox-24.0-r1.ebuild:
+  New esr and testing release, security update
 
   26 Oct 2013; Jory A. Pratt <anarchy@gentoo.org> firefox-24.0-r1.ebuild:
   ia64 support, bug #487250
