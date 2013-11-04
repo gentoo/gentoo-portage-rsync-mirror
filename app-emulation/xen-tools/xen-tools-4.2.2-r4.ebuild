@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r4.ebuild,v 1.7 2013/10/04 18:06:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r4.ebuild,v 1.8 2013/11/04 12:58:47 idella4 Exp $
 
 EAPI=5
 
@@ -232,6 +232,9 @@ src_prepare() {
 
 	# Bug 445986
 	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' -i tools/firmware/Makefile || die
+
+	# Bug 379537
+	epatch "${FILESDIR}"/fix-gold-ld.patch
 
 	epatch_user
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0-r1.ebuild,v 1.1 2013/11/04 11:37:51 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0-r1.ebuild,v 1.2 2013/11/04 12:58:47 idella4 Exp $
 
 EAPI=5
 
@@ -223,6 +223,9 @@ src_prepare() {
 	use flask || sed -e "/SUBDIRS-y += flask/d" -i tools/Makefile || die
 	use api   || sed -e "/SUBDIRS-\$(LIBXENAPI_BINDINGS) += libxen/d" -i tools/Makefile || die
 	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' -i tools/firmware/Makefile || die
+
+	# Bug 379537
+	epatch "${FILESDIR}"/fix-gold-ld.patch
 
 	epatch_user
 }

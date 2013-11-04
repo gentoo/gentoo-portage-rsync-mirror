@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/libkscreen-1.0.1.ebuild,v 1.1 2013/08/02 05:44:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libkscreen/libkscreen-1.0.1.ebuild,v 1.2 2013/11/04 12:37:29 johu Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ VIRTUALX_REQUIRED="test"
 inherit kde4-base
 
 DESCRIPTION="KDE screen management library"
-HOMEPAGE="https://projects.kde.org/projects/playground/libs/libkscreen"
+HOMEPAGE="https://projects.kde.org/projects/kdereview/libkscreen"
 SRC_URI="mirror://kde/stable/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="4"

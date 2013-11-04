@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.1.ebuild,v 1.1 2013/08/02 05:47:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.1.ebuild,v 1.2 2013/11/04 12:40:03 johu Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ sl sv tr uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="Alternative KDE screen management"
-HOMEPAGE="https://projects.kde.org/projects/playground/base/kscreen"
+HOMEPAGE="https://projects.kde.org/projects/kdereview/kscreen"
 SRC_URI="mirror://kde/stable/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
