@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.14.ebuild,v 1.12 2013/03/03 03:28:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.14.ebuild,v 1.13 2013/11/04 06:38:44 polynomial-c Exp $
 
 EAPI="4"
 
@@ -35,7 +35,8 @@ REQUIRED_USE="ntlm? ( !gnutls ssl ) gnutls? ( ssl )"
 DOCS=( AUTHORS MAILING-LIST NEWS README doc/sample.wgetrc )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.13.4-openssl-pkg-config.patch
+	epatch "${FILESDIR}"/${PN}-1.13.4-openssl-pkg-config.patch \
+		"${FILESDIR}"/${P}-texi2pod.patch
 	eautoreconf
 }
 
