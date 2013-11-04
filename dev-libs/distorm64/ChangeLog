@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/distorm64
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.8 2012/03/21 22:17:29 ikelos Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.9 2013/11/04 12:11:19 slyfox Exp $
+
+*distorm64-3.3 (04 Nov 2013)
+
+  04 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org> +distorm64-3.3.ebuild,
+  metadata.xml:
+  Version bump. Added myself to metadata.
 
   21 Mar 2012; Mike Auty <ikelos@gentoo.org> distorm64-3.1.ebuild:
   Add in dependency on app-arch/unzip fixing bug 409123.
@@ -38,4 +44,3 @@
   03 Feb 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
   +distorm64-1.7.30.ebuild:
   Initial import. Ebuild from Tuna <tuna@lyua.org>. Closes #201148
-

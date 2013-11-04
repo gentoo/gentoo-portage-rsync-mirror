@@ -11,6 +11,10 @@
 		<name>Mike Auty</name>
 		<description>Maintainer</description>
 	</maintainer>
+	<maintainer>
+		<email>slyfox@gentoo.org</email>
+		<name>Sergei Trofimovich</name>
+	</maintainer>
 	<upstream>
 		<remote-id type="google-code">distorm</remote-id>
 	</upstream>

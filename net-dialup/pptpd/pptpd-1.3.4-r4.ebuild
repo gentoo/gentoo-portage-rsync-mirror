@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4-r4.ebuild,v 1.1 2013/10/25 11:23:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4-r4.ebuild,v 1.2 2013/11/04 12:14:10 pinkbyte Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/poptop/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="gre-extreme-debug tcpd"
 
 DEPEND="net-dialup/ppp:=
