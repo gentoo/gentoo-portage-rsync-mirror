@@ -6674,7 +6674,7 @@ www-servers/pshs:netlink - Use libnetlink (sys-apps/iproute2) to get network int
 www-servers/resin:admin - Enable Resin admin webapp
 www-servers/tomcat:extra-webapps - Build also the docs and examples webapp
 www-servers/uwsgi:carbon - Enable support for sending statistics to a carbon server (see http://projects.unbit.it/uwsgi/wiki/Carbon).
-www-servers/uwsgi:erlang - Let the uWSGI server as as an Erlang C-Node and exchange messages and rpc with Erlang nodes. Together with the USE=python this enables erlang support in python (see the mappings table in http://projects.unbit.it/uwsgi/wiki/ErlangIntegration).
+www-servers/uwsgi:erlang - Let the uWSGI server act as an Erlang C-Node and exchange messages and rpc with Erlang nodes. Together with the USE=python this enables erlang support in python (see the mappings table in http://projects.unbit.it/uwsgi/wiki/ErlangIntegration).
 www-servers/uwsgi:gevent - Use dev-python/gevent for async request dispatching and as LoopEngine (see http://projects.unbit.it/uwsgi/wiki/Gevent).
 www-servers/uwsgi:graylog2 - Enable logging to graylog2 (see http://graylog2.org/).
 www-servers/uwsgi:json - Support json as a configuration file format.

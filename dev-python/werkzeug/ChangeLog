@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.49 2013/10/22 14:31:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.50 2013/11/04 13:23:34 djc Exp $
+
+  04 Nov 2013; Dirkjan Ochtman <djc@gentoo.org> -werkzeug-0.8.2.ebuild,
+  -werkzeug-0.8.3.ebuild, -werkzeug-0.9.1.ebuild, -werkzeug-0.9.2.ebuild:
+  Remove old versions of werkzeug.
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> werkzeug-0.9.4.ebuild:
   Marked ~x64-macos, bug #487670

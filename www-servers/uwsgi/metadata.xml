@@ -7,7 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name='carbon'>Enable support for sending statistics to a carbon server (see http://projects.unbit.it/uwsgi/wiki/Carbon).</flag>
-		<flag name='erlang'>Let the uWSGI server as as an Erlang C-Node and exchange messages and rpc with Erlang nodes. Together with the USE=python this enables erlang support in python (see the mappings table in http://projects.unbit.it/uwsgi/wiki/ErlangIntegration).</flag>
+		<flag name='erlang'>Let the uWSGI server act as an Erlang C-Node and exchange messages and rpc with Erlang nodes. Together with the USE=python this enables erlang support in python (see the mappings table in http://projects.unbit.it/uwsgi/wiki/ErlangIntegration).</flag>
 		<flag name='gevent'>Use <pkg>dev-python/gevent</pkg> for async request dispatching and as LoopEngine (see http://projects.unbit.it/uwsgi/wiki/Gevent).</flag>
 		<flag name='graylog2'>Enable logging to graylog2 (see http://graylog2.org/).</flag>
 		<flag name='json'>Support json as a configuration file format.</flag>
