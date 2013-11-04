@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Trigger
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.50 2012/09/01 11:22:25 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Trigger/ChangeLog,v 1.51 2013/11/04 18:09:25 pinkbyte Exp $
+
+  04 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> Class-Trigger-0.140.0.ebuild:
+  Add ~arm and ~mips keywords
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Class-Trigger-0.140.0.ebuild:
   Marked ~ppc-aix, bug #432288

@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-16.2.ebuild,v 1.1 2013/11/04 15:55:58 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-16.2.ebuild,v 1.2 2013/11/04 18:02:37 djc Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
 
-inherit elisp-common eutils java-pkg-opt-2 multilib systemd versionator wxwidgets
+inherit autotools elisp-common eutils java-pkg-opt-2 multilib systemd versionator wxwidgets
 
 # NOTE: If you need symlinks for binaries please tell maintainers or
 # open up a bug to let it be created.
@@ -72,7 +72,7 @@ src_prepare() {
 	# bug 383697
 	sed -i '1i#define OF(x) x' erts/emulator/drivers/common/gzio.c || die
 	epatch "${FILESDIR}/${PV}-tinfo.patch" || die
-	cd erts && autoconf || die
+	cd erts && eautoreconf || die
 }
 
 src_configure() {
