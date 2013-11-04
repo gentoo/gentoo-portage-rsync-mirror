@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/atomix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.14 2012/05/04 04:45:28 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.15 2013/11/04 19:44:33 mr_bones_ Exp $
+
+  04 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> atomix-2.14.0.ebuild:
+  remove warnings from the desktop file
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> atomix-2.14.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

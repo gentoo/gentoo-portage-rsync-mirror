@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/circuit_macros/circuit_macros-7.7.ebuild,v 1.1 2013/10/29 14:58:48 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/circuit_macros/circuit_macros-7.7-r1.ebuild,v 1.1 2013/11/04 19:33:20 calchan Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ src_install() {
 	rm -f doc/CMman.pdf
 	use doc && dodoc -r doc
 	use examples && dodoc -r examples
-	use script && dobin "${FILESDIR}/CM2pdf"
+	use script && dobin "${FILESDIR}/cm2pdf"
 	docompress -x \
 		/usr/share/doc/${PF}/Makefile \
 		/usr/share/doc/${PF}/doc \
@@ -46,7 +46,7 @@ src_install() {
 
 pkg_postinst() {
 	etexmf-update
-	use script && einfo "CM2pdf was installed to automatically create PDFs"
+	use script && einfo "cm2pdf was installed to automatically create PDFs. Run cm2pdf --help for usage help."
 }
 
 pkg_postrm() {

@@ -9,4 +9,4 @@ RDEPEND=|| ( app-text/texlive[graphics] app-text/texlive[pstricks] ) media-gfx/d
 SLOT=0
 SRC_URI=http://mirrors.ctan.org/graphics/circuit_macros.zip -> circuit_macros-7.7.zip
 _eclasses_=texlive-common	04b9b0d6ae9d9855e9221a0dbf4acd9e	unpacker	658a981a81fd7cb0767315a541bab01d
-_md5_=0c2d82e2f61dccd7de07a8ec8baa02e8
+_md5_=a4d41cecbc2d254d380ead067c286642

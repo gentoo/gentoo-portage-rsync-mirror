@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>jdhore@gentoo.org</email>
-		<name>Jeff Horelick</name>
+		<email>polynomial-c@gentoo.org</email>
+		<name>Lars Wendler</name>
 	</maintainer>
 </pkgmetadata>
