@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.251 2013/10/31 17:32:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.252 2013/11/04 14:30:29 johu Exp $
+
+  04 Nov 2013; Johannes Huber <johu@gentoo.org>
+  +files/kdevelop-4.5.2-kdevplatform-without-qjson.patch, kdevelop-4.5.2.ebuild,
+  metadata.xml:
+  Fix build on dev-util/kdevplatform[-reviewboard] by adding upstream patch and
+  introducing a use flag reviewboard wrt bug #490002.
 
 *kdevelop-4.5.2 (31 Oct 2013)
 
