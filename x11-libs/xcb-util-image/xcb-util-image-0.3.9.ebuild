@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/xcb-util-image-0.3.9.ebuild,v 1.9 2013/02/23 02:48:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/xcb-util-image-0.3.9.ebuild,v 1.10 2013/11/04 00:28:33 chithanh Exp $
 
 EAPI=4
 
@@ -23,6 +23,10 @@ RDEPEND=">=x11-libs/xcb-util-${PV}
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.1
 	test? ( >=dev-libs/check-0.9.4 )"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-return-type.patch
+)
 
 pkg_setup() {
 	XORG_CONFIGURE_OPTIONS=(
