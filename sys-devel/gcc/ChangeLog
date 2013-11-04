@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.977 2013/10/15 16:13:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.978 2013/11/04 02:29:58 mattst88 Exp $
+
+  04 Nov 2013; Matt Turner <mattst88@gentoo.org> gcc-4.8.1-r1.ebuild:
+  Added ~alpha, bug 487266.
 
   15 Oct 2013; Jeroen Roovers <jer@gentoo.org> gcc-4.7.3-r1.ebuild:
   Mark ^hppa (bug #486618).
