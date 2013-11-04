@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.90 2013/10/24 16:01:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.91 2013/11/04 04:44:48 mattst88 Exp $
+
+  04 Nov 2013; Matt Turner <mattst88@gentoo.org> openntpd-20080406-r4.ebuild:
+  alpha stable, bug 488946.
 
   24 Oct 2013; Jeroen Roovers <jer@gentoo.org> openntpd-20080406-r4.ebuild:
   Stable for HPPA (bug #488946).

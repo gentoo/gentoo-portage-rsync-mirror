@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/qtcurve-qt4-1.8.14.ebuild,v 1.9 2013/10/01 21:47:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.14.ebuild,v 1.1 2013/11/04 04:51:58 yngwin Exp $
 
 EAPI=4
 KDE_REQUIRED="optional"
 inherit cmake-utils kde4-base
 
-MY_P="${P/qtcurve-qt4/QtCurve-KDE4}"
+MY_P="${P/qtcurve/QtCurve-KDE4}"
 
 DESCRIPTION="A set of widget styles for Qt4 based apps, also available for GTK2"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=40492"
