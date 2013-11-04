@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17.ebuild,v 1.2 2013/11/03 10:05:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17.ebuild,v 1.3 2013/11/04 08:22:29 polynomial-c Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
 inherit cmake-utils kde4-base
 
 DESCRIPTION="A set of widget styles for Qt and GTK2"
-HOMEPAGE="https://github.com/QtCurve/qtcurve-qt4"
+HOMEPAGE="https://github.com/QtCurve/qtcurve"
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3

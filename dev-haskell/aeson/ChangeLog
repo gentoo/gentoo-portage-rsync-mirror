@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/aeson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson/ChangeLog,v 1.4 2013/10/19 09:59:32 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson/ChangeLog,v 1.5 2013/11/04 07:51:40 slyfox Exp $
+
+  04 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org> -aeson-0.6.1.0.ebuild,
+  -aeson-0.6.2.0-r1.ebuild, aeson-0.6.2.1.ebuild:
+  Restored dlist depend (bug #490286 by  Elijah Armageddon El Lazkani), dropped
+  old.
 
 *aeson-0.6.2.1 (19 Oct 2013)
 
