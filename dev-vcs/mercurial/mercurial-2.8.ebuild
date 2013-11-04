@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.7.1.ebuild,v 1.1 2013/09/06 14:43:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-2.8.ebuild,v 1.1 2013/11/04 16:13:26 polynomial-c Exp $
 
 EAPI=5
 
@@ -97,15 +97,15 @@ EOF
 
 src_test() {
 	cd tests || die
-	rm -rf *svn* || die					# Subversion tests fail with 1.5
-	rm -f test-archive* || die			# Fails due to verbose tar output changes
+	rm -rf *svn* || die			# Subversion tests fail with 1.5
+	rm -f test-archive* || die		# Fails due to verbose tar output changes
 	rm -f test-convert-baz* || die		# GNU Arch baz
 	rm -f test-convert-cvs* || die		# CVS
 	rm -f test-convert-darcs* || die	# Darcs
 	rm -f test-convert-git* || die		# git
 	rm -f test-convert-mtn* || die		# monotone
 	rm -f test-convert-tla* || die		# GNU Arch tla
-	rm -f test-doctest* || die			# doctest always fails with python 2.5.x
+	rm -f test-doctest* || die		# doctest always fails with python 2.5.x
 	rm -f test-largefiles* || die		# tends to time out
 	if [[ ${EUID} -eq 0 ]]; then
 		einfo "Removing tests which require user privileges to succeed"

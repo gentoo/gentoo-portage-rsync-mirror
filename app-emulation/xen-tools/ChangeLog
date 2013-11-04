@@ -1,10 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.197 2013/11/04 15:33:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.198 2013/11/04 16:12:31 idella4 Exp $
 
-  04 Nov 2013; Ian Delaney <idella4@gentoo.org> metadata.xml,
-  xen-tools-4.2.2-r4.ebuild, xen-tools-4.3.0-r1.ebuild:
-  add IUSE pam, fixes Bug #488660 by Pat Erley
+*xen-tools-4.3.0-r2 (04 Nov 2013)
+
+  04 Nov 2013; Ian Delaney <idella4@gentoo.org> -xen-tools-4.3.0.ebuild,
+  -xen-tools-4.3.0-r1.ebuild, metadata.xml, xen-tools-4.2.2-r4.ebuild, 
+  +xen-tools-4.3.0-r2.ebuild:
+  revbump; add IUSE pam, fixes Bug #488660 by Pat Erley
 
   04 Nov 2013; Ian Delaney <idella4@gentoo.org> +files/fix-gold-ld.patch,
   xen-tools-4.2.2-r4.ebuild, xen-tools-4.3.0-r1.ebuild:

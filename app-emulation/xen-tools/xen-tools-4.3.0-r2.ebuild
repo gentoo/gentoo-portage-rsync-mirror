@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0.ebuild,v 1.20 2013/10/04 18:06:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0-r2.ebuild,v 1.1 2013/11/04 16:12:31 idella4 Exp $
 
 EAPI=5
 
@@ -32,7 +32,9 @@ DOCS=( README docs/README.xen-bugtool )
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="api custom-cflags debug doc flask hvm qemu ocaml python pygrub screen static-libs xend"
+# Inclusion of IUSE ocaml on stabalizing requires aballier to (get off his hands and) make >=dev-lang/ocaml-4 stable
+# Otherwise IUSE ocaml and ocaml capable build need be purged
+IUSE="api custom-cflags debug doc flask hvm qemu ocaml +pam python pygrub screen static-libs xend"
 
 REQUIRED_USE="hvm? ( qemu )"
 
@@ -40,10 +42,9 @@ DEPEND="dev-libs/lzo:2
 	dev-libs/yajl
 	dev-libs/libgcrypt
 	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/pypam[${PYTHON_USEDEP}]
+	pam? ( dev-python/pypam[${PYTHON_USEDEP}] )
 	sys-libs/zlib
 	sys-power/iasl
-	dev-ml/findlib
 	hvm? ( media-libs/libsdl )
 	${PYTHON_DEPS}
 	api? ( dev-libs/libxml2
@@ -69,10 +70,11 @@ DEPEND="dev-libs/lzo:2
 	)
 	hvm? ( x11-proto/xproto
 		!net-libs/libiscsi )
-	qemu? ( x11-libs/pixman )"
+	qemu? ( x11-libs/pixman )
+	ocaml? ( dev-ml/findlib
+		>=dev-lang/ocaml-4 )"
 RDEPEND="sys-apps/iproute2
 	net-misc/bridge-utils
-	ocaml? ( >=dev-lang/ocaml-4 )
 	screen? (
 		app-misc/screen
 		app-admin/logrotate
@@ -222,16 +224,25 @@ src_prepare() {
 	use api   || sed -e "/SUBDIRS-\$(LIBXENAPI_BINDINGS) += libxen/d" -i tools/Makefile || die
 	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' -i tools/firmware/Makefile || die
 
+	# Bug 379537
+	epatch "${FILESDIR}"/fix-gold-ld.patch
+
 	epatch_user
 }
 
 src_configure() {
 	local myconf="--prefix=/usr --disable-werror"
+
 	if use ocaml
 	then
 		myconf="${myconf} $(use_enable ocaml ocamltools)"
 	else
 		myconf="${myconf} --disable-ocamltools"
+	fi
+
+	if ! use pam
+	then
+		myconf="${myconf} --disable-pam"
 	fi
 
 	econf ${myconf}
