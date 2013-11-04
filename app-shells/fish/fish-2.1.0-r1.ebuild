@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-2.1.0.ebuild,v 1.1 2013/10/31 02:44:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-2.1.0-r1.ebuild,v 1.1 2013/11/04 09:51:08 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ inherit base autotools
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
 HOMEPAGE="http://fishshell.com/"
-SRC_URI="http://fishshell.com/files/${PV}/${P}.tar.gz"
+SRC_URI="http://fishshell.com/files/${PV}/${P}.tar.gz
+	https://github.com/fish-shell/fish-shell/commit/9a3643501607bff8b314977931916081dd39646a.patch -> ${P}-docdir.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -23,6 +24,8 @@ DEPEND="sys-libs/ncurses
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+	epatch "${DISTDIR}"/${P}-docdir.patch #489934
+
 	eautoreconf
 }
 

@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.37 2013/09/14 09:08:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.38 2013/11/04 09:47:59 pacho Exp $
+
+*cogl-1.14.1_pre20130901-r1 (04 Nov 2013)
+
+  04 Nov 2013; Pacho Ramos <pacho@gentoo.org>
+  +cogl-1.14.1_pre20130901-r1.ebuild,
+  +files/cogl-1.14.1-framebuffer-allocate.patch:
+  Try to prevent crashes with nvidia-drivers, upstream bug #703174
 
   14 Sep 2013; Pacho Ramos <pacho@gentoo.org> cogl-1.14.1_pre20130901.ebuild:
   Profiling needs uprof, which is not available in portage yet, bug #484750;
