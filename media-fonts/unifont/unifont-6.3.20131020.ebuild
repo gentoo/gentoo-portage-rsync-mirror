@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-6.3.20131020.ebuild,v 1.2 2013/11/04 18:51:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-6.3.20131020.ebuild,v 1.3 2013/11/04 20:48:35 floppym Exp $
 
 EAPI=5
 
@@ -15,7 +15,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="fontforge"
 
-DEPEND="fontforge? ( media-gfx/fontforge )"
+DEPEND="
+	fontforge? (
+		media-gfx/fontforge
+		x11-apps/bdftopcf
+	)
+"
 RDEPEND=""
 
 src_prepare() {

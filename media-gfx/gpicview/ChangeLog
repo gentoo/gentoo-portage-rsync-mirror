@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gpicview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.30 2013/10/30 03:05:25 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.31 2013/11/04 20:50:54 nullishzero Exp $
+
+*gpicview-0.2.4 (04 Nov 2013)
+
+  04 Nov 2013; Pavel Kazakov <nullishzero@gentoo.org> +gpicview-0.2.4.ebuild:
+  Version bump
 
   30 Oct 2013; Pavel Kazakov <nullishzero@gentoo.org> metadata.xml:
   Add lxde herd

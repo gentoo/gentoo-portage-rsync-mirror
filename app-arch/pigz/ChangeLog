@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.31 2013/09/20 16:57:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.32 2013/11/04 20:56:35 radhermit Exp $
+
+*pigz-2.3.1 (04 Nov 2013)
+
+  04 Nov 2013; Tim Harder <radhermit@gentoo.org> +pigz-2.3.1.ebuild:
+  Version bump.
 
   20 Sep 2013; Jeroen Roovers <jer@gentoo.org> pigz-2.3.ebuild:
   Marked ~hppa too.
