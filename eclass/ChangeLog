@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1045 2013/11/03 07:58:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1046 2013/11/04 21:36:36 ulm Exp $
+
+  04 Nov 2013; Ulrich Müller <ulm@gentoo.org> elisp-common.eclass:
+  Don't create site-gentoo.el in postrm phase.
 
   03 Nov 2013; Michał Górny <mgorny@gentoo.org> tests/python-utils-r1.sh:
   Fix python-utils-r1 tests to accomodate versions in PYTHON_PKG_DEP.
