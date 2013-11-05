@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script/coffee-script-2.2.0.ebuild,v 1.4 2013/01/15 06:33:36 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coffee-script/coffee-script-2.2.0-r1.ebuild,v 1.1 2013/11/05 01:07:51 mrueg Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19 ree18"
+EAPI=5
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -12,7 +12,7 @@ RUBY_FAKEGEM_EXTRADOC="README.md"
 inherit ruby-fakegem
 
 DESCRIPTION="Ruby CoffeeScript is a bridge to the official CoffeeScript compiler."
-HOMEPAGE="https://github.com/rails/coffee-rails"
+HOMEPAGE="https://github.com/josh/ruby-coffee-script https://github.com/rails/coffee-rails"
 
 LICENSE="MIT"
 SLOT="0"
