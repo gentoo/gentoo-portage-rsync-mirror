@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>nixphoeni@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Gourmet Recipe Manager is an application to store, organize
@@ -26,5 +26,7 @@
 		<flag name='rtf'>Enable export to RTF</flag>
 		<flag name='gnome-print'>Enable pretty Python printing with
 			gnome-print</flag>
+		<flag name='web'>Enable the web import plugin</flag>
+		<flag name='spell'>Enable spell checking support</flag>
 	</use>
 </pkgmetadata>
