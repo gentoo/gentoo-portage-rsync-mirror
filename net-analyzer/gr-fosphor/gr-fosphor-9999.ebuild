@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gr-fosphor/gr-fosphor-9999.ebuild,v 1.1 2013/11/05 16:22:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gr-fosphor/gr-fosphor-9999.ebuild,v 1.2 2013/11/05 20:39:24 chithanh Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -22,7 +22,7 @@ fi
 
 LICENSE="GPL-3+"
 SLOT="0"
-IUSE="glfw qt4 wxwidgets"
+IUSE="+glfw qt4 wxwidgets"
 
 RDEPEND="qt4? (
 		dev-qt/qtcore:4
@@ -30,6 +30,7 @@ RDEPEND="qt4? (
 		dev-qt/qtopengl:4
 	)
 	>=net-wireless/gnuradio-3.7_rc:0=[qt4?,wxwidgets?]
+	net-wireless/gr-osmosdr
 	glfw? ( >=media-libs/glfw-3 )
 	virtual/opencl
 	virtual/opengl

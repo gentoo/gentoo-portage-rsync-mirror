@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.4.ebuild,v 1.5 2013/10/09 05:24:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.12.4-r1.ebuild,v 1.1 2013/11/05 20:37:41 idl0r Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
 
-inherit eutils python-any-r1
+inherit autotools eutils python-any-r1
 
 DESCRIPTION="SPICE server and client."
 HOMEPAGE="http://spice-space.org/"
@@ -19,7 +19,6 @@ IUSE="client sasl smartcard static-libs" # static
 
 RDEPEND=">=x11-libs/pixman-0.17.7
 	>=dev-libs/glib-2.22:2
-	media-libs/alsa-lib
 	>=media-libs/celt-0.5.1.1:0.5.1
 	dev-libs/openssl
 	virtual/jpeg
@@ -27,6 +26,7 @@ RDEPEND=">=x11-libs/pixman-0.17.7
 	sasl? ( dev-libs/cyrus-sasl )
 	smartcard? ( >=app-emulation/libcacard-0.1.2 )
 	client? (
+		media-libs/alsa-lib
 		>=x11-libs/libXrandr-1.2
 		x11-libs/libX11
 		x11-libs/libXext
@@ -69,9 +69,11 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/0.11.0-gold.patch"
+		"${FILESDIR}/0.11.0-gold.patch" \
+		"${FILESDIR}/${P}-alsa-conditional.patch"
 
 	epatch_user
+	eautoreconf
 }
 
 src_configure() {

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.56 2013/10/09 05:24:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.57 2013/11/05 20:37:41 idl0r Exp $
+
+*spice-0.12.4-r1 (05 Nov 2013)
+
+  05 Nov 2013; Christian Ruppert <idl0r@gentoo.org> -spice-0.12.4.ebuild,
+  +spice-0.12.4-r1.ebuild, +files/spice-0.12.4-alsa-conditional.patch:
+  ALSA is only required with USE=client, 490416
 
   09 Oct 2013; Michał Górny <mgorny@gentoo.org> spice-0.12.3-r1.ebuild,
   spice-0.12.4.ebuild:
