@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-2.0.12.ebuild,v 1.4 2013/08/18 13:47:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-2.0.12.ebuild,v 1.5 2013/11/05 14:49:50 tomka Exp $
 
 EAPI=5
 
@@ -36,8 +36,8 @@ pkg_setup(){
 
 src_prepare() {
 	rm -r thirdparty || die
-	sed -i -e "s/suppressUpdate=False/suppressUpdate=True/" \
-		aqt/profiles.py
+	sed -i -e "s/updates=True/updates=False/" \
+		aqt/profiles.py || die
 }
 
 # Nothing to configure or compile

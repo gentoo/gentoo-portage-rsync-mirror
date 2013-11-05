@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.6.6.ebuild,v 1.2 2013/11/05 14:36:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.7.2.ebuild,v 1.1 2013/11/05 14:36:38 blueness Exp $
 
 EAPI=5
 
@@ -8,16 +8,16 @@ inherit autotools flag-o-matic
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA/ASIC miner in C"
 HOMEPAGE="http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer"
-#SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
-SRC_URI="http://ck.kolivas.org/apps/cgminer/3.6/${P}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
+#SRC_URI="http://ck.kolivas.org/apps/cgminer/3.7/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples hardened ncurses opencl adl scrypt
-	avalon bflsc bitforce icarus klondike modminer"
+	avalon bflsc bitforce bitfury icarus klondike modminer"
 
-REQUIRED_USE="|| ( opencl avalon bflsc bitforce icarus klondike modminer )
+REQUIRED_USE="|| ( opencl avalon bflsc bitforce bitfury icarus klondike modminer )
 	adl? ( opencl )
 	scrypt? ( opencl )"
 
@@ -29,6 +29,7 @@ DEPEND="net-misc/curl
 	avalon? ( virtual/libusb:1 )
 	bflsc? ( virtual/libusb:1 )
 	bitforce? ( virtual/libusb:1 )
+	bitfury? ( virtual/libusb:1 )
 	icarus? ( virtual/libusb:1 )
 	modminer? ( virtual/libusb:1 )"
 RDEPEND="${DEPEND}"
@@ -48,6 +49,7 @@ src_configure() {
 		$(use_enable avalon) \
 		$(use_enable bflsc) \
 		$(use_enable bitforce) \
+		$(use_enable bitfury) \
 		$(use_enable icarus) \
 		$(use_enable klondike) \
 		$(use_enable modminer)
