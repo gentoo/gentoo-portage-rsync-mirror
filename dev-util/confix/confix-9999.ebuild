@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.6 2011/01/08 20:50:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/confix-9999.ebuild,v 1.7 2013/11/05 14:29:15 haubi Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ inherit distutils eutils subversion
 
 DESCRIPTION="Confix: A Build Tool on Top of GNU Automake"
 HOMEPAGE="http://confix.sourceforge.net"
-ESVN_REPO_URI="https://confix.svn.sourceforge.net/svnroot/confix/confix/trunk"
+ESVN_REPO_URI="http://svn.code.sf.net/p/confix/svn/confix/trunk"
 ESVN_PROJECT="${PN}"
 
 LICENSE="GPL-2"

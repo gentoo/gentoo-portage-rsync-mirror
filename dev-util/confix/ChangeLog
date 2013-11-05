@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/confix
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.19 2011/01/08 20:50:31 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/confix/ChangeLog,v 1.20 2013/11/05 14:29:15 haubi Exp $
+
+  05 Nov 2013; Michael Haubenwallner <haubi@gentoo.org> confix-9999.ebuild:
+  Follow upstream repository move.
 
   08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   confix-2.3.5-r1.ebuild, confix-9999.ebuild:

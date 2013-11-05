@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=dev-util/confix-wrapper sys-devel/autoconf-archive sys-devel/automake sys-devel/libtool =dev-lang/python-2*
 SLOT=2
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	subversion	de38ef8c5baf84d80e695a4d6ad26554	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=fab6cfac37d61e0c21cd0162e2992954
+_md5_=f4675d4a644a3c3123c849c734c7b531
