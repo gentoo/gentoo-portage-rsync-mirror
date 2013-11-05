@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/s25rttr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/ChangeLog,v 1.3 2013/02/16 22:39:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/ChangeLog,v 1.4 2013/11/05 15:41:29 chithanh Exp $
+
+  05 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  s25rttr-0.8.ebuild:
+  Not compatible with >=media-libs/glfw-3
 
   16 Feb 2013; Agostino Sarubbo <ago@gentoo.org> s25rttr-0.8.ebuild:
   Stable for x86, wrt bug #457886

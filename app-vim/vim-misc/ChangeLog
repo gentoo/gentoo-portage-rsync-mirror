@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/vim-misc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-misc/ChangeLog,v 1.1 2013/09/01 22:53:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-misc/ChangeLog,v 1.2 2013/11/05 15:58:49 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> vim-misc-1.8.5.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #481874.
 
 *vim-misc-1.8.5 (01 Sep 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/glfw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.16 2013/02/04 20:28:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/ChangeLog,v 1.17 2013/11/05 15:48:21 chithanh Exp $
+
+*glfw-3.0.3 (05 Nov 2013)
+
+  05 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +glfw-3.0.3.ebuild, metadata.xml:
+  Version bump, bug #474872.
 
   04 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> glfw-2.7.7.ebuild:
   add static-libs support (bug #442752)

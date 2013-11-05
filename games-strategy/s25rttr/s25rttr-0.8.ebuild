@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/s25rttr-0.8.ebuild,v 1.3 2013/02/16 22:39:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/s25rttr-0.8.ebuild,v 1.4 2013/11/05 15:41:29 chithanh Exp $
 
 EAPI=4
 inherit eutils cmake-utils gnome2-utils games
@@ -24,7 +24,7 @@ RDEPEND="app-arch/bzip2
 	net-libs/miniupnpc
 	virtual/libiconv
 	virtual/opengl
-	glfw? ( media-libs/glfw )"
+	glfw? ( <media-libs/glfw-3 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 

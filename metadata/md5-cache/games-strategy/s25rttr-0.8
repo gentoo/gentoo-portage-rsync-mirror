@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
-DEPEND=app-arch/bzip2 media-libs/libsamplerate media-libs/libsdl[X,audio,opengl,video] media-libs/libsndfile media-libs/sdl-mixer[vorbis] net-libs/miniupnpc virtual/libiconv virtual/opengl glfw? ( media-libs/glfw ) sys-devel/gettext sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
+DEPEND=app-arch/bzip2 media-libs/libsamplerate media-libs/libsdl[X,audio,opengl,video] media-libs/libsndfile media-libs/sdl-mixer[vorbis] net-libs/miniupnpc virtual/libiconv virtual/opengl glfw? ( <media-libs/glfw-3 ) sys-devel/gettext sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4
 DESCRIPTION=Open Source remake of The Settlers II game (needs original game files)
 EAPI=4
 HOMEPAGE=http://www.siedler25.org/
 IUSE=debug glfw
 KEYWORDS=-* amd64 x86
 LICENSE=GPL-3
-RDEPEND=app-arch/bzip2 media-libs/libsamplerate media-libs/libsdl[X,audio,opengl,video] media-libs/libsndfile media-libs/sdl-mixer[vorbis] net-libs/miniupnpc virtual/libiconv virtual/opengl glfw? ( media-libs/glfw )
+RDEPEND=app-arch/bzip2 media-libs/libsamplerate media-libs/libsdl[X,audio,opengl,video] media-libs/libsndfile media-libs/sdl-mixer[vorbis] net-libs/miniupnpc virtual/libiconv virtual/opengl glfw? ( <media-libs/glfw-3 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hasufell/distfiles/s25rttr-0.8.tar.xz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=80acdc38dfff875736bdb72226d3621e
+_md5_=d23af5fbea75b0162a83474b9c92f6d9
