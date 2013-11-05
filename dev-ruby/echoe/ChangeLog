@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/echoe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.45 2013/06/04 17:51:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/echoe/ChangeLog,v 1.46 2013/11/05 06:53:25 graaff Exp $
+
+*echoe-4.6.5 (05 Nov 2013)
+
+  05 Nov 2013; Hans de Graaff <graaff@gentoo.org> +echoe-4.6.5.ebuild:
+  Version bump. Drop ree18, add ruby20. EAPI 5.
 
   04 Jun 2013; Hans de Graaff <graaff@gentoo.org> -echoe-4.3.1-r1.ebuild:
   Cleanup.
