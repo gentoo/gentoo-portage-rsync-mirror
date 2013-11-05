@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/gitv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.4 2012/08/29 16:54:06 grobian Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/ChangeLog,v 1.5 2013/11/05 15:22:47 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> gitv-1.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #481868.
 
   29 Aug 2012; Fabian Groffen <grobian@gentoo.org> gitv-1.1.ebuild:
   Marked ~ppc-macos, thanks Konstantin Tokarev, bug #432762

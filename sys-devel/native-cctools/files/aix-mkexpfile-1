@@ -1,0 +1,56 @@
+#! /usr/bin/env bash
+# Copyright 2013-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/files/aix-mkexpfile-1,v 1.1 2013/11/05 15:03:13 haubi Exp $
+
+# Creating shared libraries on AIX involves lots of commands. While there is
+# the ld-wrapper supporting the '-soname' flag already, it also is necessary
+# to create the list of exported symbols from all the local object files only,
+# because with the -bexpfull linker flag we would export symbols from static
+# objects found in libc.a too, which should be privately linked into
+# subsequent shared libs instead of importing them from current sharedlib.
+
+# Also, -bexpfull may trigger this AIX 7.1 kernel bug:
+# https://www-304.ibm.com/support/docview.wss?uid=isg1IV39558
+
+# Example to use this helper script, in combination with ld-wrapper:
+# gcc -shared -soname=lib.so.1 -o lib.so *.o -Wl,-bexport:`mkexpfile *.o`
+
+nm=${0%mkexpfile}nm
+showwith=
+expfile="ld.aix.exports.$$"
+srcobjs=()
+
+while [[ $# -gt 0 ]]
+do
+    arg=$1
+    shift
+
+    case ${arg} in
+    --) srcobjs=( "${srcobjs[@]}" "$@" ); break ;;
+    --show-with=*) showwith=${arg#--show-with=} ;;
+    -o) expfile=$1; shift ;;
+    -o*) expfile=${arg#-o}; ;;
+    *) srcobjs=( "${srcobjs[@]}" "${arg}" ) ;;
+    esac
+done
+
+rm -f "${expfile}" || exit 1
+
+type ${nm} >/dev/null 2>&1 || nm=nm
+
+${nm} -PCpgl "${srcobjs[@]}" |
+  awk '{
+    if ((($2 == "T") || ($2 == "D") || ($2 == "B") || ($2 == "W") || ($2 == "V") || ($2 == "Z")) && (substr($1,1,1) != ".")) {
+      if (($2 == "W") || ($2 == "V") || ($2 == "Z")) {
+	print $1 " weak"
+      } else {
+	print $1
+      }
+    }
+  }' |
+  sort -u > "${expfile}" || exit 1
+
+printf "%s\n" "${showwith}${expfile}"
+
+exit 0

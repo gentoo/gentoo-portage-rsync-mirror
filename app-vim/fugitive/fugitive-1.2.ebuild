@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/fugitive/fugitive-1.2.ebuild,v 1.4 2013/10/21 11:54:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/fugitive/fugitive-1.2.ebuild,v 1.5 2013/11/05 15:18:03 chainsaw Exp $
 
 EAPI="4"
 VIM_PLUGIN_VIM_VERSION="7.2"
@@ -11,7 +11,7 @@ DESCRIPTION="vim plugin: a git wrapper for vim"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2975"
 SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=15542 -> ${P}.zip"
 LICENSE="vim"
-KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos"
+KEYWORDS="amd64 ~x86 ~ppc-macos ~x64-macos"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="fugitive.txt"
