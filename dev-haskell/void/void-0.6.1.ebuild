@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/void/void-0.6.1.ebuild,v 1.1 2013/09/13 06:39:31 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/void/void-0.6.1.ebuild,v 1.2 2013/11/05 10:20:13 chainsaw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="safe"
 
 RDEPEND=">=dev-haskell/hashable-1.1:=[profile?]

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/cereal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.6 2013/01/06 09:17:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.7 2013/11/05 10:23:51 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> cereal-0.3.5.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488750.
 
   06 Jan 2013; Agostino Sarubbo <ago@gentoo.org> cereal-0.3.5.2.ebuild:
   Add ~sparc, wrt bug #449220
