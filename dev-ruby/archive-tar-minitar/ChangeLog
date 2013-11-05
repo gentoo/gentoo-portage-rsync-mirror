@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.50 2013/09/04 13:34:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.51 2013/11/05 03:27:13 mrueg Exp $
+
+*archive-tar-minitar-0.5.4-r1 (05 Nov 2013)
+
+  05 Nov 2013; Manuel Rüger <mrueg@gentoo.org>
+  +archive-tar-minitar-0.5.4-r1.ebuild:
+  Add ruby20 support. Tests still broken, but no difference to ruby19.
 
   04 Sep 2013; Manuel Rüger <mrueg@gentoo.org>
   -archive-tar-minitar-0.5.2-r2.ebuild:
