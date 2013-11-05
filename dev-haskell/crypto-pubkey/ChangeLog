@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/crypto-pubkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-pubkey/ChangeLog,v 1.3 2013/09/13 06:00:08 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-pubkey/ChangeLog,v 1.4 2013/11/05 11:08:35 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> crypto-pubkey-0.2.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488750.
 
 *crypto-pubkey-0.2.1 (13 Sep 2013)
 
