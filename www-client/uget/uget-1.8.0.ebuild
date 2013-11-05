@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.8.0.ebuild,v 1.6 2012/12/02 17:09:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.8.0.ebuild,v 1.7 2013/11/05 21:04:22 wired Exp $
 
 EAPI="4"
 
 inherit base
 
 DESCRIPTION="Download manager using gtk+ and libcurl"
-HOMEPAGE="http://urlget.sourceforge.net/"
+HOMEPAGE="http://www.ugetdm.com"
 SRC_URI="mirror://sourceforge/urlget/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"

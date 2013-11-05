@@ -1,6 +1,10 @@
 # ChangeLog for www-client/uget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.40 2013/07/17 19:16:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/ChangeLog,v 1.41 2013/11/05 21:04:22 wired Exp $
+
+  05 Nov 2013; Alex Alexander <wired@gentoo.org> uget-1.8.0.ebuild,
+  uget-1.10.3.ebuild, uget-1.10.3-r1.ebuild:
+  updated HOMEPAGE to http://www.ugetdm.com, thanks Armageddon
 
   17 Jul 2013; Markus Meier <maekke@gentoo.org> uget-1.10.3-r1.ebuild:
   add ~arm, bug #473416
