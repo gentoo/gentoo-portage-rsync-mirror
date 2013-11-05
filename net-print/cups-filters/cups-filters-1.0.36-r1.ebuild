@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.36-r1.ebuild,v 1.11 2013/11/03 06:23:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.36-r1.ebuild,v 1.12 2013/11/04 23:29:39 dilfridge Exp $
 
 EAPI=5
 
@@ -41,6 +41,8 @@ RDEPEND="
 	zeroconf? ( net-dns/avahi[dbus] )
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-parallel.patch" )
 
 src_prepare() {
 	base_src_prepare
