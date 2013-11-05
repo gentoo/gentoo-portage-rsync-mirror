@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.4-r1.ebuild,v 1.3 2013/11/05 10:30:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.4-r1.ebuild,v 1.4 2013/11/05 19:10:18 billie Exp $
 
 EAPI=5
 
@@ -40,8 +40,8 @@ python_install_all() {
 
 pkg_postinst() {
 	if [[ ! -e "${EROOT%/}/var/lib/${PN}/pfl.info" ]]; then
-		touch "${EROOT%/}/var/lib/${PN}/pfl.info"
-		chown -R 0:portage "${EROOT%/}/var/lib/${PN}"
-		chmod 775 "${EROOT%/}/var/lib/${PN}"
+		touch "${EROOT%/}/var/lib/${PN}/pfl.info" || die
+		chown -R 0:portage "${EROOT%/}/var/lib/${PN}" || die
+		chmod 775 "${EROOT%/}/var/lib/${PN}" || die
 	fi
 }

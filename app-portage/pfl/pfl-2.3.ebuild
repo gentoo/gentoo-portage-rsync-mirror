@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3.ebuild,v 1.8 2013/02/02 12:39:58 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.3.ebuild,v 1.9 2013/11/05 19:10:18 billie Exp $
 
 EAPI=4
 
@@ -67,9 +67,9 @@ pkg_postinst() {
 	python_mod_optimize ${PN}
 
 	if [[ ! -e "${EROOT%/}/var/lib/${PN}/pfl.info" ]]; then
-		touch "${EROOT%/}/var/lib/${PN}/pfl.info"
-		chown -R 0:portage "${EROOT%/}/var/lib/${PN}"
-		chmod 775 "${EROOT%/}/var/lib/${PN}"
+		touch "${EROOT%/}/var/lib/${PN}/pfl.info" || die
+		chown -R 0:portage "${EROOT%/}/var/lib/${PN}" || die
+		chmod 775 "${EROOT%/}/var/lib/${PN}" || die
 	fi
 }
 
