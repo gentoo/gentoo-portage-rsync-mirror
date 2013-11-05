@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.283 2013/10/10 01:26:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.284 2013/11/05 22:22:28 dilfridge Exp $
+
+*kdesu-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org> +kdesu-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -kdesu-4.11.1.ebuild:
   Drop KDE SC 4.11.1

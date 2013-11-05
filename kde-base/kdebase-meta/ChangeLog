@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.291 2013/10/10 01:26:46 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.292 2013/11/05 22:22:30 dilfridge Exp $
+
+*kdebase-meta-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdebase-meta-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -kdebase-meta-4.11.1.ebuild:
   Drop KDE SC 4.11.1

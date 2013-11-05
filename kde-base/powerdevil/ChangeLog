@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.181 2013/10/10 01:27:17 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.182 2013/11/05 22:22:26 dilfridge Exp $
+
+*powerdevil-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +powerdevil-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -powerdevil-4.11.1.ebuild:
   Drop KDE SC 4.11.1

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.186 2013/10/10 01:27:16 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.187 2013/11/05 22:22:51 dilfridge Exp $
+
+*parley-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org> +parley-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -parley-4.11.1.ebuild:
   Drop KDE SC 4.11.1

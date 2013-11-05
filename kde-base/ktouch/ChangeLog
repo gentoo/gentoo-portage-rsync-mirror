@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.281 2013/10/30 21:50:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.282 2013/11/05 22:22:27 dilfridge Exp $
+
+*ktouch-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org> +ktouch-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
 
   30 Oct 2013; Johannes Huber <johu@gentoo.org> ktouch-4.11.2.ebuild:
   Add missing RDEPEND by Maks Verver <maksverver@geocities.com> wrt bug #489696.

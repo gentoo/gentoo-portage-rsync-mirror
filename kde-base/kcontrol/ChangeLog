@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.315 2013/10/10 01:26:41 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.316 2013/11/05 22:22:45 dilfridge Exp $
+
+*kcontrol-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kcontrol-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
 
   10 Oct 2013; Chris Reffett <creffett@gentoo.org> -kcontrol-4.11.1.ebuild:
   Drop KDE SC 4.11.1

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.371 2013/10/21 21:51:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.372 2013/11/05 22:23:19 dilfridge Exp $
+
+*kmail-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org> +kmail-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
 
 *kmail-4.11.2-r1 (21 Oct 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/akregator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.290 2013/10/10 05:26:53 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/ChangeLog,v 1.291 2013/11/05 22:22:53 dilfridge Exp $
+
+*akregator-4.11.3 (05 Nov 2013)
+
+  05 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +akregator-4.11.3.ebuild:
+  Version bump KDE SC 4.11.3
 
 *akregator-4.4.11.1-r1 (10 Oct 2013)
 
