@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/omnicppcomplete/omnicppcomplete-0.41.ebuild,v 1.2 2012/12/07 18:39:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/omnicppcomplete/omnicppcomplete-0.41.ebuild,v 1.3 2013/11/05 13:51:26 chainsaw Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=1520"
 SRC_URI="http://www.vim.org/scripts/download_script.php?src_id=7722 -> ${P}.zip"
 
 LICENSE="vim.org"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"

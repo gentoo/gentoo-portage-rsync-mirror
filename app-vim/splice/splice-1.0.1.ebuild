@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/splice/splice-1.0.1.ebuild,v 1.2 2013/05/30 07:18:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/splice/splice-1.0.1.ebuild,v 1.3 2013/11/05 13:53:17 chainsaw Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -10,7 +10,7 @@ inherit vim-plugin python-single-r1
 DESCRIPTION="vim plugin: resolve conflicts during three-way merges"
 HOMEPAGE="http://sjl.bitbucket.org/splice.vim/ http://vim.sourceforge.net/scripts/script.php?script_id=4026"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="|| ( app-editors/vim[python] app-editors/gvim[python] )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-9999.ebuild,v 1.3 2013/11/05 09:12:19 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-9999.ebuild,v 1.4 2013/11/05 13:32:59 nativemad Exp $
 
 EAPI=4
 inherit eutils git-2 toolchain-funcs flag-o-matic waf-utils
@@ -64,6 +64,10 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen[dot] )"
+	if ! [ ${PV} = 9999 ]; then
+		DEPEND="${DEPEND}
+		app-arch/unzip"
+	fi
 
 src_unpack() {
 	if [ ${PV} = 9999 ]; then

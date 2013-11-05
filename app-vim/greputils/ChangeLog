@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/greputils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.17 2010/11/11 10:13:26 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/greputils/ChangeLog,v 1.18 2013/11/05 13:54:24 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> greputils-2.8.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #481854.
 
   11 Nov 2010; Tim Harder <radhermit@gentoo.org> -greputils-2.3.ebuild,
   -greputils-2.4.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/libosmocore-9999.ebuild,v 1.4 2013/05/24 07:57:52 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosmocore/libosmocore-9999.ebuild,v 1.5 2013/11/05 13:31:39 chithanh Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit autotools eutils git-2
 

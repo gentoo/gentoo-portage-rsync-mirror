@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.122 2013/11/05 09:12:19 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.123 2013/11/05 13:32:59 nativemad Exp $
+
+  05 Nov 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.5.14.ebuild,
+  ardour-9999.ebuild:
+  Added app-arch/unzip do the deps. see bug 484674. Thanks Samuli.
 
   05 Nov 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.5.14.ebuild,
   ardour-9999.ebuild:

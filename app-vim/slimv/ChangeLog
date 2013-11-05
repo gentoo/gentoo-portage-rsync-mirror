@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/slimv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/ChangeLog,v 1.22 2013/09/11 05:01:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/ChangeLog,v 1.23 2013/11/05 13:31:39 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> slimv-0.9.11.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #481838.
 
 *slimv-0.9.11 (11 Sep 2013)
 
