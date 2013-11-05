@@ -1,0 +1,8 @@
+# ChangeLog for games-misc/doge
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/ChangeLog,v 1.1 2013/11/05 18:14:44 vikraman Exp $
+
+*doge-0.9.0 (05 Nov 2013)
+
+  05 Nov 2013; Vikraman <vikraman@gentoo.org> +doge-0.9.0.ebuild, +metadata.xml:
+  New ebuild for games-misc/doge.
