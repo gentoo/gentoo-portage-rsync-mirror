@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.64 2013/08/21 19:34:38 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.65 2013/11/05 00:15:54 mrueg Exp $
+
+*obexftp-0.23-r2 (05 Nov 2013)
+
+  05 Nov 2013; Manuel Rüger <mrueg@gentoo.org>
+  +files/obexftp-0.23-fix-ruby19.patch, +obexftp-0.23-r2.ebuild:
+  NMU: Update ebuild to work with ruby 1.9 only. Fixes bug #483096.
 
   21 Aug 2013; Chris Reffett <creffett@gentoo.org> obexftp-0.23-r1.ebuild:
   Update to distutils-r1. Fix bugs 312725 and 398113.

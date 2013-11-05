@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/rbtree-0.4.1.ebuild,v 1.1 2013/04/13 16:03:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/rbtree-0.4.1-r1.ebuild,v 1.1 2013/11/05 00:30:07 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
@@ -31,7 +31,7 @@ each_ruby_configure() {
 }
 
 each_ruby_compile() {
-	emake || die
+	emake V=1
 }
 
 each_ruby_test() {
