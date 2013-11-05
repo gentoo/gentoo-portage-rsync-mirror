@@ -15,6 +15,7 @@
     <flag name="amr">Enables Adaptive Multi-Rate Audio support</flag>
 	<flag name="amrenc">Enables Adaptive Multi-Rate Audio encoding support with <pkg>media-libs/vo-amrwbenc</pkg>.</flag>
     <flag name="avx">Adds support for Advanced Vector Extensions instructions (Intel Sandy Bridge, AMD Bulldozer and later chips)</flag>
+    <flag name="avx2">Adds support for Advanced Vector Extensions 2 instructions (Intel Haswell and later chips)</flag>
 	<flag name="bindist">Enforces license compatibility constraints via REQUIRED_USE.</flag>
 	<flag name="bluray">Enable playback of Blu-ray filesystems</flag>
     <flag name="cdio">Enables audio CD grabbing with <pkg>dev-libs/libcdio</pkg>.</flag>
@@ -38,6 +39,7 @@
 	<flag name="quvi">Adds support for playing media from Internet services using the quvi project.</flag>
     <flag name="rtmp">Enable Real Time Messaging Protocol using librtmp</flag>
     <flag name="schroedinger">Enable Dirac video support (an advanced royalty-free video compression format) via libschroedinger (high-speed implementation in C of the Dirac codec).</flag>
+	<flag name="ssh">Enable SSH/sftp support via <pkg>net-libs/libssh</pkg>.</flag>
     <flag name="ssse3">Faster floating point optimization for SSSE3 capable chips (Intel Core 2 and later chips)</flag>
 	<flag name="twolame">Enables MP2 encoding via <pkg>media-sound/twolame</pkg> as an alternative to the internal encoder.</flag>
 	<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
