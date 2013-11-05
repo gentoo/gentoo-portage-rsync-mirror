@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/transformers-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers-base/ChangeLog,v 1.4 2013/07/21 17:25:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/transformers-base/ChangeLog,v 1.5 2013/11/05 09:49:48 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> transformers-base-0.4.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488750.
 
   21 Jul 2013; Christoph Junghans <ottxor@gentoo.org>
   transformers-base-0.4.1.ebuild:

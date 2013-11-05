@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hslua
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslua/ChangeLog,v 1.1 2013/09/17 16:58:08 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslua/ChangeLog,v 1.2 2013/11/05 09:37:23 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> hslua-0.3.6.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488750.
 
 *hslua-0.3.6.1 (17 Sep 2013)
 

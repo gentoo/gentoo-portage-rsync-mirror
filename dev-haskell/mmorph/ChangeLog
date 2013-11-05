@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/mmorph
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmorph/ChangeLog,v 1.1 2013/08/25 07:12:01 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mmorph/ChangeLog,v 1.2 2013/11/05 09:52:17 chainsaw Exp $
+
+  05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> mmorph-1.0.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #488750.
 
 *mmorph-1.0.0 (25 Aug 2013)
 

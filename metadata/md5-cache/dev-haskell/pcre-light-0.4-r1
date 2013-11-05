@@ -4,10 +4,10 @@ DESCRIPTION=A small, efficient and portable regex library for Perl 5 compatible 
 EAPI=5
 HOMEPAGE=http://code.haskell.org/~dons/code/pcre-light
 IUSE=doc hscolour profile
-KEYWORDS=~amd64 ~x86 ~amd64-linux
+KEYWORDS=amd64 ~x86 ~amd64-linux
 LICENSE=BSD
 RDEPEND=>=dev-lang/ghc-6.10.4:= dev-libs/libpcre
 SLOT=0/0.4
 SRC_URI=mirror://hackage/packages/archive/pcre-light/0.4/pcre-light-0.4.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	48f0813cd6c66200944782b078f0a188	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=d666cd4f8b9fb2e4c1cc965bc742b31d
+_md5_=e8772f30db4848924e952fea39e41052

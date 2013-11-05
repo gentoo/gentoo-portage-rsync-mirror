@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslua/hslua-0.3.6.1.ebuild,v 1.1 2013/09/17 16:58:08 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslua/hslua-0.3.6.1.ebuild,v 1.2 2013/11/05 09:37:23 chainsaw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/mtl-2.1:=[profile?]
