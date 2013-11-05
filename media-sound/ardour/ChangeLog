@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.121 2013/10/28 18:50:02 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.122 2013/11/05 09:12:19 nativemad Exp $
+
+  05 Nov 2013; Andreas Schuerch <nativemad@gentoo.org> ardour-3.5.14.ebuild,
+  ardour-9999.ebuild:
+  Moved the versioned build to the github zip instead of using git directly.
+  See bug 484674
 
 *ardour-3.5.14 (28 Oct 2013)
 

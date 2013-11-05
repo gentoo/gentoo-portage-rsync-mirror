@@ -1,19 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.14.ebuild,v 1.1 2013/10/28 18:50:02 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-3.5.14.ebuild,v 1.2 2013/11/05 09:12:19 nativemad Exp $
 
 EAPI=4
 inherit eutils git-2 toolchain-funcs flag-o-matic waf-utils
 
 DESCRIPTION="Digital Audio Workstation"
 HOMEPAGE="http://ardour.org/"
-EGIT_REPO_URI="http://git.ardour.org/ardour/ardour.git"
 
 if [ ${PV} = 9999 ]; then
 	KEYWORDS=""
+	EGIT_REPO_URI="http://git.ardour.org/ardour/ardour.git"
+
 else
-	EGIT_COMMIT="${PV}"
 	KEYWORDS="~amd64 ~x86"
+	SRC_URI="https://github.com/Ardour/ardour/archive/${PV}.zip -> ${P}.zip"
 fi
 
 LICENSE="GPL-2"
@@ -65,10 +66,18 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[dot] )"
 
 src_unpack() {
-	git-2_src_unpack
+	if [ ${PV} = 9999 ]; then
+		git-2_src_unpack
+	else
+		unpack ${A}
+	fi
 }
 
 src_prepare(){
+	if ! [ ${PV} = 9999 ]; then
+		sed -e '/cmd = "git describe --tags/,/utf-8/{s:cmd = \"git describe --tags HEAD\":rev = \"'${PV}'\":p;d}' -i "${S}"/wscript
+		sed -e 's/'os.path.exists\(\'.git'/'os.path.exists\(\'wscript/'' -i "${S}"/wscript
+	fi
 	epatch "${FILESDIR}"/${PN}-3.5-syslibs.patch
 	sed 's/python/python2/' -i waf
 }
