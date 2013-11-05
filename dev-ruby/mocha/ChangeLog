@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.88 2013/10/23 05:39:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.89 2013/11/05 18:54:25 graaff Exp $
+
+*mocha-0.12.10 (05 Nov 2013)
+
+  05 Nov 2013; Hans de Graaff <graaff@gentoo.org> +mocha-0.12.10.ebuild:
+  Version bump. Add ruby20. Drop alpha,ia64,ppc64,sparc keywords for bug
+  465948.
 
 *mocha-0.13.3-r1 (23 Oct 2013)
 

@@ -12,4 +12,4 @@ RESTRICT=binchecks strip
 SLOT=3.12.0
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.12.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.12.N/deblob-3.12 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.12.N/deblob-check -> deblob-check-3.12 ) http://dev.gentoo.org/~jlec/distfiles/aufs-sources-3.12_p20131104.tar.xz !vanilla? ( mirror://gentoo/genpatches-3.12-1.base.tar.xz mirror://gentoo/genpatches-3.12-1.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.12-1.experimental.tar.xz ) )
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	kernel-2	cfcb408286f35bb67644ce1a46310880	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=388aa6433869ac01fb2d4100bd6b4a89
+_md5_=8e4717c8edf13b3a858219253c07e114
