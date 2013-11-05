@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-attoparsec/http-attoparsec-0.1.0.ebuild,v 1.1 2013/08/26 08:31:18 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-attoparsec/http-attoparsec-0.1.0.ebuild,v 1.2 2013/11/05 11:46:33 chainsaw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/attoparsec-0.10.4.0:=[profile?]
