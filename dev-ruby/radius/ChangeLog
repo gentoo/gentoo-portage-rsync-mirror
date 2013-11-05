@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/radius
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radius/ChangeLog,v 1.13 2013/09/20 02:43:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/radius/ChangeLog,v 1.14 2013/11/05 00:59:03 mrueg Exp $
+
+*radius-0.7.4-r1 (05 Nov 2013)
+
+  05 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +radius-0.7.4-r1.ebuild,
+  -radius-0.7.3.ebuild, -radius-0.7.4.ebuild:
+  Add ruby20 target. Cleanup old.
 
 *radius-0.7.4 (20 Sep 2013)
 

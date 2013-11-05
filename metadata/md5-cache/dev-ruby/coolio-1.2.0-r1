@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=dev-libs/libev test? ( ruby_targets_ruby18? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby20] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby18? ( doc? ( dev-ruby/rake[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( doc? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( doc? ( dev-ruby/rake[ruby_targets_ruby20] ) ) ruby_targets_ruby18? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/rspec:2[ruby_targets_ruby20] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) )
+DESCRIPTION=A high performance event framework for Ruby which uses the libev C library
+EAPI=5
+HOMEPAGE=http://coolio.github.com/
+IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 doc test test
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=dev-libs/libev ruby_targets_ruby18? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby19] ) ruby_targets_ruby20? ( >=dev-ruby/iobuffer-1[ruby_targets_ruby20] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] )
+REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 )
+SLOT=0
+SRC_URI=mirror://rubygems/cool.io-1.2.0.gem
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	ruby-fakegem	6e366daedf25d7020291916549562bbf	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=bbb7a84f17bbd1af6f6e02b149a30285

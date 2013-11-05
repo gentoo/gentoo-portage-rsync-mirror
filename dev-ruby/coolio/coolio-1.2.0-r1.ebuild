@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/coolio-1.2.0.ebuild,v 1.1 2013/07/14 06:11:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/coolio-1.2.0-r1.ebuild,v 1.1 2013/11/05 00:56:41 mrueg Exp $
 
 EAPI=5
 
 # iobuffer: -jruby -rbx
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_EXTRADOC="CHANGES.md README.md"
