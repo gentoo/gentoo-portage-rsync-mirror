@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/repeat/repeat-1.1.ebuild,v 1.1 2013/07/09 19:48:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/repeat/repeat-1.1.ebuild,v 1.2 2013/11/05 16:43:43 chainsaw Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="vim plugin: use the repeat command \".\" with plugin maps"
 HOMEPAGE="https://github.com/tpope/vim-repeat/ http://www.vim.org/scripts/script.php?script_id=2136"
 SRC_URI="https://github.com/tpope/${MY_PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="vim"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 S=${WORKDIR}/${MY_P}
 
