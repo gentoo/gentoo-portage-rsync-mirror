@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1047 2013/11/04 22:05:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1048 2013/11/05 05:21:30 dirtyepic Exp $
+
+  05 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Update for libmudflap removal.
 
   04 Nov 2013; Mike Gilbert <floppym@gentoo.org> mercurial.eclass:
   Initialize cert_opt to an empty array instead of an empty string. Reported by
