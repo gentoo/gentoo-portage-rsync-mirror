@@ -19,10 +19,12 @@ Because beets is designed as a library, it can do almost anything you can imagin
 If beets doesn’t do what you want yet, writing your own plugin is shockingly simple if you know a little Python.
 	</longdescription>
 	<use>
+		<flag name="beatport">Enable support for beetport.com API</flag>
 		<flag name="bpd">Enable support for <pkg>media-sound/mpd</pkg> server emulation</flag>
 		<flag name="chroma">Enable support for acoustic fingerprinting plugin using
 			(<pkg>media-libs/chromaprint</pkg>)</flag>
 		<flag name="convert">Enable support for the convert plugin which makes it possible to transcode files</flag>
+		<flag name="discogs">Enable support for the discogs API plugin</flag>
 		<flag name="echonest_tempo">Enable support for writing the BPM of a track into its metadata</flag>
        	<flag name="lastgenre">Enable support for importing music genres from last.fm tags</flag>
 		<flag name="replaygain">Enable support for Replay Gain metadata calculation during import</flag>
