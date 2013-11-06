@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.17 2013/06/15 22:27:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.2.ebuild,v 1.18 2013/11/06 21:45:32 alonbl Exp $
 
 EAPI=5
 
@@ -24,6 +24,7 @@ RDEPEND="
 	static? ( >=sys-libs/ncurses-5.7-r5[static-libs,-gpm] )
 "
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	gtk? ( virtual/pkgconfig )
 	qt4? ( virtual/pkgconfig )
 "

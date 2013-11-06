@@ -1,6 +1,10 @@
 # ChangeLog for games-board/hexxagon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.37 2013/02/25 12:18:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/ChangeLog,v 1.38 2013/11/06 21:35:24 mr_bones_ Exp $
+
+  06 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/hexxagon-1.0.1-gcc47.patch, -hexxagon-1.0.1.ebuild:
+  old
 
   25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> hexxagon-1.0.2.ebuild:
   Stable for x86, wrt bug #458232
