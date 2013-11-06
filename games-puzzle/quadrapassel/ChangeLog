@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/quadrapassel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/ChangeLog,v 1.4 2013/08/31 15:33:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadrapassel/ChangeLog,v 1.5 2013/11/06 21:03:20 pacho Exp $
+
+  06 Nov 2013; Pacho Ramos <pacho@gentoo.org> -quadrapassel-3.8.1.ebuild,
+  quadrapassel-3.8.2.ebuild:
+  x86 keyword, bug #476710; drop old
 
   31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> quadrapassel-3.8.2.ebuild:
   Add ~arm keyword, wrt bug #476710

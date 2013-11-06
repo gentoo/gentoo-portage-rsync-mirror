@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/gnome-sudoku
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.5 2013/08/31 08:20:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.6 2013/11/06 21:01:57 pacho Exp $
+
+  06 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-sudoku-3.8.1.ebuild:
+  x86 keyword, bug #476710
 
   31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> gnome-sudoku-3.8.1.ebuild:
   Add ~arm keyword, wrt bug #476710
