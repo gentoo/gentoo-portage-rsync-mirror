@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.5.ebuild,v 1.1 2013/11/03 16:46:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.8.5.ebuild,v 1.2 2013/11/06 07:50:09 xarthisius Exp $
 
 EAPI=4
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -107,11 +107,6 @@ src_prepare() {
 	# prefix search tools patch, plus OSX fixes
 	epatch "${FILESDIR}"/${PN}-1.8.1-prefix-misc-alt.patch
 	epatch "${FILESDIR}"/${PN}-1.8.3.1-empty-line-sigsegv.patch #454348
-
-	# fix final DESTDIR issue
-	sed -i.orig -e "s:\$(INSTALL):\$(DESTDIR)/\$(INSTALL):g" \
-		-e "s/all: Makefile.doxywizard/all:/g" \
-		addon/doxywizard/Makefile.in || die
 
 	# fix pdf doc
 	sed -i.orig -e "s:g_kowal:g kowal:" \
