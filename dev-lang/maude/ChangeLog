@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/maude
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/ChangeLog,v 1.15 2012/01/26 17:51:48 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/ChangeLog,v 1.16 2013/11/06 18:01:37 bicatali Exp $
+
+*maude-2.6-r1 (06 Nov 2013)
+
+  06 Nov 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/maude-2.6-gcc47.patch, +files/maude-2.6-search-datadir.patch,
+  +maude-2.6-r1.ebuild, -files/2.1.1-gcc3.4.patch, -files/23maude,
+  -files/maude-2.3.0-gcc43.patch, -maude-2.3.0.ebuild, -maude-2.5.0.ebuild,
+  -maude-2.6.ebuild, metadata.xml:
+  Fixed with newer gcc (bug #454072), build in source fixing bug #488450, switch
+  to EAPI5, separate doc and examples flags, include patch from Debian to look
+  for datadir at compile time removing the need to define MAUDE_LIB system-wide,
+  removed older ebuilds which do not build anymore
 
 *maude-2.6 (26 Jan 2012)
 
@@ -69,4 +81,3 @@
   metadata.xml, files/23maude:
   Initial import, ebuild by Peter Simons <simons+gentoo@cryp.to> and
   olivier.fisette@sympatico.ca - see bug #39399
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4-r3.ebuild,v 1.4 2013/10/25 09:24:36 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.4.0.ebuild,v 1.1 2013/11/06 18:26:56 pinkbyte Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/poptop/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gre-extreme-debug tcpd"
 
 DEPEND="net-dialup/ppp:=
@@ -23,7 +23,6 @@ DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
-	epatch "${FILESDIR}/${P}-more-reodering-fixes.patch"
 	epatch "${FILESDIR}/${P}-sandbox-fix.patch"
 
 	# Match pptpd-logwtmp.so's version with pppd's version (#89895)
@@ -31,9 +30,6 @@ src_prepare() {
 	PPPD_VER=${PPPD_VER#*/*-} #reduce it to ${PV}-${PR}
 	PPPD_VER=${PPPD_VER%%[_-]*} # main version without beta/pre/patch/revision
 	sed -i -e "s:\\(#define[ \\t]*VERSION[ \\t]*\\)\".*\":\\1\"${PPPD_VER}\":" plugins/patchlevel.h || die
-
-	# respect LDFLAGS
-	sed -i -e "/^LDFLAGS/{s:=:+=:}" plugins/Makefile || die
 
 	# Automake 1.13, compatibility, bug #469476
 	sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADER/' configure.in || die 'sed on configure.ac failed'
@@ -74,6 +70,5 @@ src_install () {
 	newconfd "${FILESDIR}/pptpd-confd" pptpd
 
 	dodoc README.*
-	docinto samples
-	dodoc samples/*
+	dodoc -r samples
 }
