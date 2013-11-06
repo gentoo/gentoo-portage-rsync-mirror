@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.299 2013/10/30 15:41:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.300 2013/11/06 17:57:09 zerochaos Exp $
+
+*curl-7.30.0 (06 Nov 2013)
+
+  06 Nov 2013; Rick Farina <zerochaos@gentoo.org> +curl-7.30.0.ebuild:
+  restoring the only stable version for ia64 to allow releng autobuilds to work
 
   30 Oct 2013; Jeroen Roovers <jer@gentoo.org> curl-7.31.0.ebuild:
   Stable for HPPA (bug #474354).

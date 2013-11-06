@@ -1,0 +1,16 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare prerm pretend setup unpack
+DEPEND=app-admin/eselect-opencl kernel_linux? ( >=sys-libs/glibc-2.6.1 ) X? ( >=app-admin/eselect-opengl-1.0.9 ) kernel_linux? ( virtual/linux-sources virtual/pkgconfig ) kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) sys-apps/pciutils virtual/pkgconfig
+DESCRIPTION=NVIDIA X11 driver and GLX libraries
+EAPI=4
+HOMEPAGE=http://www.nvidia.com/
+IUSE=acpi multilib kernel_FreeBSD kernel_linux pax_kernel +tools +X kernel_linux
+KEYWORDS=-* ~amd64 ~x86 ~amd64-fbsd ~x86-fbsd
+LICENSE=GPL-2 NVIDIA-r1
+PDEPEND=X? ( >=x11-libs/libvdpau-0.3-r1 )
+RDEPEND=app-admin/eselect-opencl kernel_linux? ( >=sys-libs/glibc-2.6.1 ) X? ( >=app-admin/eselect-opengl-1.0.9 ) acpi? ( sys-power/acpid ) tools? ( dev-libs/atk dev-libs/glib x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXext x11-libs/pango[X] || ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] ) ) X? ( <x11-base/xorg-server-1.14.99 x11-libs/libXvMC multilib? ( || ( ( x11-libs/libX11[abi_x86_32] x11-libs/libXext[abi_x86_32] ) app-emulation/emul-linux-x86-xlibs ) ) ) kernel_linux? ( virtual/modutils )
+REQUIRED_USE=tools? ( X )
+RESTRICT=bindist mirror strip
+SLOT=0
+SRC_URI=amd64-fbsd? ( http://us.download.nvidia.com/XFree86/FreeBSD-x86_64/304.116/NVIDIA-FreeBSD-x86_64-304.116.tar.gz ) amd64? ( http://us.download.nvidia.com/XFree86/Linux-x86_64/304.116/NVIDIA-Linux-x86_64-304.116.run ) x86-fbsd? ( http://us.download.nvidia.com/XFree86/FreeBSD-x86/304.116/NVIDIA-FreeBSD-x86-304.116.tar.gz ) x86? ( http://us.download.nvidia.com/XFree86/Linux-x86/304.116/NVIDIA-Linux-x86-304.116.run )
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	linux-info	a9cbd6bbe2b28166e403321882f3c73c	linux-mod	708d6a92c561743e612fca9d8fde5309	multilib	892e597faee02a5b94eb02ab512e7622	nvidia-driver	92e88a2e33d056779baa88f1061c662e	portability	536c5e70c5fb252ed3b769e04aa3f05b	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_md5_=291ab5b015d62608a70d015b3b155eec
