@@ -1,11 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.7 2009/09/23 20:40:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.8 2013/11/06 02:33:31 patrick Exp $
 
 inherit eutils
 
-DESCRIPTION="Feedbackd is an add-on to the Linux Virtual Server project (LVS) to provide
-dynamic feedback of server health."
+DESCRIPTION="Linux Virtual Server (LVS) addon for dynamic server health feedback."
 
 HOMEPAGE="http://ozlabs.org/~jk/projects/feedbackd/"
 LICENSE="GPL-2"
