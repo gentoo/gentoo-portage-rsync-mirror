@@ -1,6 +1,9 @@
 # ChangeLog for games-board/xmille
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.15 2013/02/24 11:30:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xmille/ChangeLog,v 1.16 2013/11/06 19:11:04 mr_bones_ Exp $
+
+  06 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> -xmille-2.0-r1.ebuild:
+  old
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org> xmille-2.0-r2.ebuild:
   Stable for x86, wrt bug #458642
