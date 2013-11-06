@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/trollop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.20 2013/11/06 15:58:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.21 2013/11/06 16:02:58 graaff Exp $
+
+  06 Nov 2013; Hans de Graaff <graaff@gentoo.org> trollop-2.0.ebuild:
+  Add ruby20. Remove ree18.
 
 *trollop-1.16.2-r4 (06 Nov 2013)
 

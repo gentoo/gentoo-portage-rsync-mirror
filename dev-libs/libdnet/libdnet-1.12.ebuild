@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.17 2013/09/05 18:29:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.18 2013/11/06 16:12:56 jer Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="ipv6 python static-libs test"
 
 #DEPEND="test? ( dev-libs/check )"
-DEPEND="${PYTHON_DEPS}"
+DEPEND="python? ( ${PYTHON_DEPS} )"
+RDEPEND="${DEPEND}"
 RESTRICT="test"
 
 DOCS=( README THANKS TODO )
