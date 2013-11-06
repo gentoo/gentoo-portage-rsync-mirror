@@ -1,6 +1,14 @@
 # ChangeLog for media-fonts/roboto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/roboto/ChangeLog,v 1.4 2013/10/25 17:14:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/roboto/ChangeLog,v 1.5 2013/11/06 03:57:20 yngwin Exp $
+
+*roboto-1.2 (06 Nov 2013)
+
+  06 Nov 2013; Ben de Groot <yngwin@gentoo.org> +roboto-1.2.ebuild,
+  files/90-roboto-regular.conf:
+  Version bump. Adapt to packaging change. Use upstream versioning. I will mark
+  this version stable in a few days, and mask the old versions to give users a
+  regular upgrade path.
 
 *roboto-20130731 (25 Oct 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/squidsites
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squidsites/ChangeLog,v 1.15 2012/02/06 18:33:10 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squidsites/ChangeLog,v 1.16 2013/11/06 03:58:26 patrick Exp $
+
+  06 Nov 2013; Patrick Lauer <patrick@gentoo.org> squidsites-1.01-r1.ebuild,
+  squidsites-1.01.ebuild:
+  Shorten description, make repoman happier
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> squidsites-1.01-r1.ebuild:
   Marking squidsites-1.01-r1 ppc for bug 393899
@@ -47,4 +51,3 @@
   4 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, squidsites-1.01.ebuild, files/digest-squidsites-1.01 :
 
   Initial version in Portage now..
-

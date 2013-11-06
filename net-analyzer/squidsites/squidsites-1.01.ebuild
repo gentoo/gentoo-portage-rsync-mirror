@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squidsites/squidsites-1.01.ebuild,v 1.7 2008/01/21 14:56:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squidsites/squidsites-1.01.ebuild,v 1.8 2013/11/06 03:58:26 patrick Exp $
 
 inherit toolchain-funcs
 
 IUSE=""
-DESCRIPTION="Squidsites is a tool that parses Squid access log file and generates a report of the most visited sites."
+DESCRIPTION="A tool that parses Squid access log file and generates a report of the most visited sites."
 HOMEPAGE="http://www.stefanopassiglia.com/misc.htm"
 SRC_URI="http://www.stefanopassiglia.com/downloads/${P}.tar.gz"
 LICENSE="GPL-2"

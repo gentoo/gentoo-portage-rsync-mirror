@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2-r3.ebuild,v 1.2 2012/06/16 14:10:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch-usb/speedtouch-usb-3.0.1.2-r3.ebuild,v 1.3 2013/11/06 03:52:16 patrick Exp $
 
 inherit eutils linux-info
 
-DESCRIPTION="Firmware and configuration instructions for the kernel-space driver for Alcatel SpeedTouch USB modems"
+DESCRIPTION="Firmware, kernel driver and configuration instructions for Alcatel SpeedTouch USB modems"
 HOMEPAGE="http://www.speedtouch.com/"
 SRC_URI="http://www.speedtouch.com/download/drivers/USB/SpeedTouch330_firmware_${PV//./}.zip"
 

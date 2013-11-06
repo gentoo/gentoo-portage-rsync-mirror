@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.1.0.ebuild,v 1.9 2012/08/08 20:24:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/hesiod-3.1.0.ebuild,v 1.10 2013/11/06 03:45:15 patrick Exp $
 
 EAPI="2"
 inherit flag-o-matic eutils autotools
 
-DESCRIPTION="system which uses existing DNS functionality to provide access to databases of information that changes infrequently"
+DESCRIPTION="Use DNS functionality to provide access to databases of information that changes infrequently"
 HOMEPAGE="ftp://athena-dist.mit.edu/pub/ATHENA/hesiod"
 SRC_URI="ftp://athena-dist.mit.edu/pub/ATHENA/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}-patches.tgz"
