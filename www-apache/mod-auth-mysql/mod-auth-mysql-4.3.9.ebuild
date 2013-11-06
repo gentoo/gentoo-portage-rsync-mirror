@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod-auth-mysql/mod-auth-mysql-4.3.9.ebuild,v 1.1 2010/03/24 20:34:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod-auth-mysql/mod-auth-mysql-4.3.9.ebuild,v 1.2 2013/11/06 02:28:39 patrick Exp $
 
 EAPI=3
 
 inherit apache-module eutils
 
-DESCRIPTION="A module for the Apache 2 web server which enables HTTP authentication against information stored in a MySQL database. "
+DESCRIPTION="Apache 2 module enabling HTTP authentication against MySQL databases. "
 HOMEPAGE="http://packages.debian.org/source/mod-auth-mysql"
 DEBIAN_PV="13"
 MY_P="${PN}_${PV/-/_}"

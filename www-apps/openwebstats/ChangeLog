@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/openwebstats
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/ChangeLog,v 1.6 2010/09/11 15:15:28 mabi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/openwebstats/ChangeLog,v 1.7 2013/11/06 02:26:38 patrick Exp $
+
+  30 Oct 2013; Patrick Lauer <patrick@gentoo.org> openwebstats-1.1.ebuild:
+  Shorten description, fix quoting, make repoman happier
 
   11 Sep 2010; Matti Bickel <mabi@gentoo.org> openwebstats-1.1.ebuild:
   change virtual/php to dev-lang/php (bug #319623)
@@ -22,4 +25,3 @@
   09 Aug 2005; Renat Lumpau <rl03@gentoo.org> +files/config.php,
   +files/postinstall-en.txt, +metadata.xml, +openwebstats-1.1.ebuild:
   Initial ebuild wrt bug #101022. Thanks to wrobel.
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21-r1.ebuild,v 1.19 2011/09/10 09:02:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21-r1.ebuild,v 1.20 2013/11/06 02:31:02 patrick Exp $
 
 inherit linux-info
 
@@ -8,7 +8,7 @@ PATCHLEVEL="11"
 MY_PV="${PV}-${PATCHLEVEL}"
 MY_P="${PN}-${MY_PV}"
 
-DESCRIPTION="ipvsadm is a utility to administer the IP virtual server services offered by the Linux kernel with IP virtual server support."
+DESCRIPTION="utility to administer the IP virtual server services"
 HOMEPAGE="http://linuxvirtualserver.org"
 LICENSE="GPL-2"
 DEPEND=">=sys-libs/ncurses-5.2"

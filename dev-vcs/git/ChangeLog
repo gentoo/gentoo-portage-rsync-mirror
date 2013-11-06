@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.223 2013/11/05 18:30:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.224 2013/11/06 02:21:43 patrick Exp $
+
+  06 Nov 2013; Patrick Lauer <patrick@gentoo.org> git-1.8.3.2-r1.ebuild:
+  Un-stabling for amd64 as dependencies are not ready
 
   05 Nov 2013; Mikle Kolyada <zlogene@gentoo.org> git-1.8.3.2-r1.ebuild:
   amd64 stable wrt bug #480306
