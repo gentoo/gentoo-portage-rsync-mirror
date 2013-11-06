@@ -1,8 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.17.ebuild,v 1.1 2013/07/22 11:51:02 ssuominen Exp $
-
-# this ebuild is only for the libpng15.so.15 SONAME for ABI compat
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.17-r1.ebuild,v 1.1 2013/11/06 08:12:36 polynomial-c Exp $
 
 EAPI=5
 
@@ -14,19 +12,15 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
 	apng? ( mirror://sourceforge/apng/${P}-apng.patch.gz )"
 
 LICENSE="libpng"
-SLOT="1.5"
+SLOT="0" # SLOT="0/15"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
-IUSE="apng neon"
+IUSE="apng neon static-libs"
 
-RDEPEND="sys-libs/zlib:=
-	!=media-libs/libpng-1.5*:0"
+RDEPEND="sys-libs/zlib:="
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
-pkg_setup() {
-	local _preserved_lib=${EROOT}/usr/$(get_libdir)/libpng15.so.15
-	[[ -e ${_preserved_lib} ]] && rm -f "${_preserved_lib}"
-}
+DOCS=( ANNOUNCE CHANGES libpng-manual.txt README TODO )
 
 src_prepare() {
 	if use apng; then
@@ -39,14 +33,12 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-static \
-		--enable-arm-neon=$(usex neon)
-}
-
-src_compile() {
-	emake libpng15.la
+		$(use_enable static-libs static) \
+		--enable-arm-neon=$(usex neon on off)
 }
 
 src_install() {
-	newlib.so .libs/libpng15.so.15.* libpng15.so.15
+	default
+	# Even prune_libtool --all fails to remove libpng.la dead symlink wrt #436996
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
