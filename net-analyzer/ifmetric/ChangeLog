@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ifmetric
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ChangeLog,v 1.7 2012/10/26 10:53:28 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifmetric/ChangeLog,v 1.8 2013/11/06 04:05:13 patrick Exp $
+
+  06 Nov 2013; Patrick Lauer <patrick@gentoo.org> ifmetric-0.3.ebuild:
+  Shorten description, make repoman happier
 
   26 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> ifmetric-0.3.ebuild:
   Bump to EAPI 4 + small cosmetic changes
@@ -25,4 +28,3 @@
   27 Apr 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
   +ifmetric-0.3.ebuild:
   Initial commit for bug 90262.
-

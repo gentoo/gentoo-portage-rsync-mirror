@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/raddump/raddump-0.2.1.ebuild,v 1.2 2007/05/12 04:58:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/raddump/raddump-0.2.1.ebuild,v 1.3 2013/11/06 04:03:30 patrick Exp $
 
 inherit autotools
 
-DESCRIPTION="raddump interprets captured RADIUS packets to print a timestamp, packet length, RADIUS packet type, source and destination hosts and ports, and included attribute names and values for each packet."
+DESCRIPTION="RADIUS packet interpreter"
 HOMEPAGE="http://sourceforge.net/projects/raddump/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
