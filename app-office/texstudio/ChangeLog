@@ -1,6 +1,11 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.23 2013/10/22 11:34:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.24 2013/11/06 12:39:25 jlec Exp $
+
+*texstudio-2.6.6 (06 Nov 2013)
+
+  06 Nov 2013; Justin Lecher <jlec@gentoo.org> +texstudio-2.6.6.ebuild:
+  Version Bump, #490510
 
 *texstudio-2.6.4 (22 Oct 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/rebase
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.117 2013/11/02 12:38:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.118 2013/11/06 12:32:47 jlec Exp $
+
+  06 Nov 2013; Justin Lecher <jlec@gentoo.org> Manifest:
+  Fix tarball and ist checksum, #490360
 
 *rebase-1311 (02 Nov 2013)
 
