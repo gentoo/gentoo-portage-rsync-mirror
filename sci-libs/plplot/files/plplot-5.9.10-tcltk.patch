@@ -62,12 +62,6 @@ bicatali nov 2013
          if(ITK_LIBRARY)
 --- bindings/tk/tkMain.c.orig	2013-11-05 11:34:29.219602234 -0800
 +++ bindings/tk/tkMain.c	2013-11-05 11:34:48.394718925 -0800
-@@ -1,4 +1,4 @@
--// $Id: plplot-5.9.10-tcltk.patch,v 1.1 2013/11/05 23:56:14 bicatali Exp $
-+// $Id: plplot-5.9.10-tcltk.patch,v 1.1 2013/11/05 23:56:14 bicatali Exp $
- //
- // Modified version of tkMain.c, from Tk 3.6.
- // Maurice LeBrun
 @@ -85,7 +85,8 @@
  
  // From tclIntDecls.h
