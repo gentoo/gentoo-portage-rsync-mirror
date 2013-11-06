@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.10.ebuild,v 1.1 2013/10/28 19:36:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.10-r1.ebuild,v 1.1 2013/11/05 23:56:14 bicatali Exp $
 
 EAPI=5
 
@@ -8,19 +8,19 @@ WX_GTK_VER="2.8"
 FORTRAN_NEEDED=fortran
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils fortran-2 cmake-utils python-single-r1 toolchain-funcs virtualx \
-	wxwidgets java-pkg-opt-2 multilib
+inherit eutils fortran-2 cmake-utils python-single-r1 toolchain-funcs \
+	virtualx wxwidgets java-pkg-opt-2 multilib
 
 DESCRIPTION="Multi-language scientific plotting library"
 HOMEPAGE="http://plplot.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="0/11"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="ada cairo cxx doc +dynamic examples fortran gd java jpeg latex lua
-	  ocaml octave pdf perl png python qhull qt4 shapefile svg tcl test threads
-	  tk truetype wxwidgets X"
+	ocaml octave pdf perl png python qhull qt4 shapefile svg tcl test
+	threads tk truetype wxwidgets X"
 
 RDEPEND="
 	ada? ( virtual/gnat )
@@ -71,7 +71,12 @@ pkg_setup() {
 
 src_prepare() {
 	# path for python independent of python version
-	epatch "${FILESDIR}"/${PN}-5.9.6-python.patch
+	epatch \
+		"${FILESDIR}"/${PN}-5.9.6-python.patch \
+		"${FILESDIR}"/${PN}-5.9.10-tcltk.patch \
+		"${FILESDIR}"/${PN}-5.9.10-tcl86.patch \
+		"${FILESDIR}"/${PN}-5.9.10-haru.patch
+
 	# avoid installing license
 	sed -i -e '/COPYING.LIB/d' CMakeLists.txt || die
 	# prexify hard-coded /usr/include in cmake modules
@@ -176,7 +181,7 @@ src_configure() {
 		-e "/Cflags/s:-I\(${EPREFIX}\|\)/usr/include[[:space:]]::g" \
 		-e "/Libs/s:-L\(${EPREFIX}\|\)/usr/lib\(64\|\)[[:space:]]::g" \
 		-e "s:${LDFLAGS}::g" \
-		"${CMAKE_BUILD_DIR}"/pkgcfg/*pc || die
+		"${BUILD_DIR}"/pkgcfg/*pc || die
 }
 
 src_test() {
@@ -191,7 +196,7 @@ src_install() {
 	#use doc && dohtml -r doc/docbook/src/*
 	if use java; then
 		rm -r "${ED}"/usr/share/java "${ED}"/usr/$(get_libdir)/jni  || die
-		java-pkg_dojar "${CMAKE_BUILD_DIR}"/examples/java/${PN}.jar
-		java-pkg_doso "${CMAKE_BUILD_DIR}"/bindings/java/plplotjavac_wrap.so
+		java-pkg_dojar "${BUILD_DIR}"/examples/java/${PN}.jar
+		java-pkg_doso "${BUILD_DIR}"/bindings/java/plplotjavac_wrap.so
 	fi
 }

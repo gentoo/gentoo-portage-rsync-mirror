@@ -1,0 +1,30 @@
+get hpdf header in /usr/include - applied upstream in trunk
+bicatali nov 2013
+
+--- cmake/modules/Findhpdf.cmake.orig	2013-11-05 14:44:16.088810181 -0800
++++ cmake/modules/Findhpdf.cmake	2013-11-05 14:44:23.264854503 -0800
+@@ -8,7 +8,12 @@
+ #  hpdf_LIBRARY_DIRS, the directory where libhpdf (either shared or static)
+ #  is found.
+ 
+-find_path(hpdf_INCLUDE_DIR hpdf/hpdf.h /usr/local/include /usr/include)
++# Give preference to header found in hpdf subdirectory (which is the
++# result of a build and install of upstream libharu), then if not
++# found look for the case of no such subdirectory (which is how the
++# Debian system version of libharu headers is installed).
++find_path(hpdf_INCLUDE_DIR hpdf.h PATHS /usr/local/include /usr/include PATH_SUFFIXES hpdf)
++find_path(hpdf_INCLUDE_DIR hpdf.h PATHS /usr/local/include /usr/include)
+ 
+ if(hpdf_INCLUDE_DIR)
+   find_library(hpdf_LIBRARY
+--- drivers/pdf.c.orig	2013-11-05 14:55:58.928226651 -0800
++++ drivers/pdf.c	2013-11-05 14:56:10.534299828 -0800
+@@ -38,7 +38,7 @@
+ #include <math.h>
+ #include <setjmp.h>
+ 
+-#include "hpdf/hpdf.h"
++#include "hpdf.h"
+ 
+ // PLplot header files
+ #define DEBUG
