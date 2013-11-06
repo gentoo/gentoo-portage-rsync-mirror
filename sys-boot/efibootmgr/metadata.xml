@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>ia64</herd>
-<longdescription>
+  <herd>ia64</herd>
+  <longdescription>
 	This is efibootmgr, a Linux user-space application to modify the Intel
 	Extensible Firmware Interface (EFI) Boot Manager.  This application
 	can create and destroy boot entries, change the boot order, change
