@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.9.2.ebuild,v 1.1 2013/08/08 07:05:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/libquvi-0.9.3.ebuild,v 1.1 2013/11/06 06:21:19 radhermit Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -41,9 +41,5 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install
-
-	if use examples ; then
-		docinto examples
-		dodoc examples/*.{c,h}
-	fi
+	use examples && dodoc -r examples
 }

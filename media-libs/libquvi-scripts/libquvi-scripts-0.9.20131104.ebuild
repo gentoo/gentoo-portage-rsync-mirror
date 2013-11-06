@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/libquvi-scripts-0.9.20130805.ebuild,v 1.1 2013/08/08 06:59:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/libquvi-scripts-0.9.20131104.ebuild,v 1.1 2013/11/06 06:16:55 radhermit Exp $
 
 EAPI=5
 

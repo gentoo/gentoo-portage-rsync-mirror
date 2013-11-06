@@ -9,5 +9,5 @@ LICENSE=AGPL-3
 RDEPEND=>=dev-lua/LuaBitOp-1.0.1 >=dev-lua/luaexpat-1.2.0 >=dev-lua/luajson-1.1.1 >=dev-lua/luasocket-2.0.2
 RESTRICT=test
 SLOT=0
-SRC_URI=mirror://sourceforge/quvi/libquvi-scripts-0.9.20130619.tar.xz
-_md5_=5dd776351d5219476c1bf9663b9473e2
+SRC_URI=mirror://sourceforge/quvi/libquvi-scripts-0.9.20131104.tar.xz
+_md5_=dd5899cada4bf8f279194b7e34975a3c
