@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdif
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/ChangeLog,v 1.7 2012/09/07 22:36:12 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/ChangeLog,v 1.8 2013/11/06 04:37:51 patrick Exp $
+
+  06 Nov 2013; Patrick Lauer <patrick@gentoo.org> sdif-3.8.6.ebuild:
+  Shorten description, make repoman happier
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata and fix indentation.
@@ -25,4 +28,3 @@
   03 Sep 2004; Chris White <chriswhite@gentoo.org> +metadata.xml,
   +files/sdif-3.8.6-cflags.patch, +sdif-3.8.6.ebuild:
   Initial Import into the tree.
-

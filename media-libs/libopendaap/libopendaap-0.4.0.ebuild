@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/libopendaap-0.4.0.ebuild,v 1.13 2010/01/16 22:18:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopendaap/libopendaap-0.4.0.ebuild,v 1.14 2013/11/06 04:41:31 patrick Exp $
 
 inherit eutils
 
-DESCRIPTION="libopendaap is a library which enables applications to discover and connect to iTunes(R) music shares"
+DESCRIPTION="A library which enables applications to discover and connect to iTunes(R) music shares"
 SRC_URI="http://crazney.net/programs/itunes/files/${P}.tar.bz2"
 HOMEPAGE="http://crazney.net/programs/itunes/libopendaap.html"
 
