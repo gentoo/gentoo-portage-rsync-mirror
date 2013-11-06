@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rtgraph
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/ChangeLog,v 1.9 2010/12/30 22:07:22 arfrever Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/ChangeLog,v 1.10 2013/11/06 05:03:45 patrick Exp $
+
+  06 Nov 2013; Patrick Lauer <patrick@gentoo.org> rtgraph-0.70.ebuild:
+  Shorten description, make repoman happier
 
   30 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   rtgraph-0.70.ebuild:
@@ -30,4 +33,3 @@
   03 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> metadata.xml,
   rtgraph-0.70.ebuild:
   Initial import, ebuild by Lukasz Strzygowski <lucass@gentoo.pl>.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/pyosd-0.2.14.ebuild,v 1.12 2013/08/03 09:45:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/pyosd-0.2.14.ebuild,v 1.13 2013/11/06 05:11:31 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
-DESCRIPTION="PyOSD is a python module for displaying text on your X display, much like the 'On Screen Displays' used on TVs and some monitors."
+DESCRIPTION="Python module for displaying text on your X display, like the 'On Screen Displays' used on TVs."
 HOMEPAGE="http://ichi2.net/pyosd/"
 SRC_URI="http://ichi2.net/pyosd/${P}.tar.gz"
 

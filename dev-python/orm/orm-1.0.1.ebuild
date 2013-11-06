@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/orm-1.0.1.ebuild,v 1.4 2010/07/23 23:36:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/orm/orm-1.0.1.ebuild,v 1.5 2013/11/06 05:21:10 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-DESCRIPTION="The Object Relational Membrane is an attempt to write an Object Relational Layer that is as thin as possible."
+DESCRIPTION="The Object Relational Membrane is an attempt to write a minimal Object Relational Layer"
 HOMEPAGE="http://www.tux4web.de/computer/software/orm/"
 SRC_URI="http://www.tux4web.de/computer/software/orm/download/${P}.tar.gz"
 

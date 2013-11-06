@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/rtgraph-0.70.ebuild,v 1.7 2010/12/30 22:07:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtgraph/rtgraph-0.70.ebuild,v 1.8 2013/11/06 05:03:45 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils
 
-DESCRIPTION="rtgraph provides several widgets for graphing data in real-time, using PyGTK, and UI components for controlling the graphs."
+DESCRIPTION="Widgets for graphing data in real-time using PyGTK, and UI components for controlling the graphs."
 HOMEPAGE="http://navi.cx/svn/misc/trunk/rtgraph/web/index.html"
 SRC_URI="http://navi.picogui.org/releases/${P}.tar.gz"
 

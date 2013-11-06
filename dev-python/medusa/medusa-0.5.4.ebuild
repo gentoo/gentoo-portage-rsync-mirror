@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/medusa-0.5.4.ebuild,v 1.26 2011/11/16 19:08:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/medusa-0.5.4.ebuild,v 1.27 2013/11/06 05:23:44 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -9,7 +9,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
 
-DESCRIPTION="A framework for writing long-running, high-performance network servers in Python, using asynchronous sockets"
+DESCRIPTION="A framework for writing asynchronous long-running, high-performance network servers in Python"
 HOMEPAGE="http://www.amk.ca/python/code/medusa.html http://pypi.python.org/pypi/medusa"
 SRC_URI="http://www.amk.ca/files/python/${P}.tar.gz"
 

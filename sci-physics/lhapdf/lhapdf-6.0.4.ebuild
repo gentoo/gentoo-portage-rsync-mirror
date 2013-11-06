@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-6.0.4.ebuild,v 1.1 2013/10/30 17:17:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-6.0.4.ebuild,v 1.2 2013/11/06 05:28:12 patrick Exp $
 
 EAPI=5
 
@@ -61,7 +61,6 @@ src_install() {
 	   cd "${S}/wrappers/python" && distutils-r1_src_install
 	fi
 }
-
 
 pkg_postinst() {
 	elog "To install data files, download them into ${EROOT%/}/usr/share/LHAPDF:"

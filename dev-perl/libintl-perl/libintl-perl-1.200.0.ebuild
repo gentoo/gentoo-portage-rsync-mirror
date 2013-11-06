@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/libintl-perl-1.200.0.ebuild,v 1.17 2012/06/24 19:00:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/libintl-perl-1.200.0.ebuild,v 1.18 2013/11/06 05:25:43 patrick Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MODULE_AUTHOR=GUIDO
 MODULE_VERSION=1.20
 inherit perl-module
 
-DESCRIPTION="Perl internationalization library that aims to be compatible with the Uniforum message translations system"
+DESCRIPTION="High-Level Interface to Uniforum Message Translation"
 HOMEPAGE="http://guido-flohr.net/projects/libintl-perl ${HOMEPAGE}"
 
 LICENSE="LGPL-2.1"

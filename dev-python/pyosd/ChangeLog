@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyosd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.22 2013/08/03 09:45:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyosd/ChangeLog,v 1.23 2013/11/06 05:11:31 patrick Exp $
+
+  06 Nov 2013; Patrick Lauer <patrick@gentoo.org> pyosd-0.2.14.ebuild:
+  Shorten description, make repoman happier
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> pyosd-0.2.14.ebuild:
   Move dev-python/twisted to dev-python/twisted-core.
@@ -82,4 +85,3 @@
 
   19 Jan 2004; Rob Cakebread <pythonhead@gentoo.org> pyosd-0.2.7.ebuild:
   Initial commit. Bug# 33005 Thankk you Valentino Volonghi <dialtone@aruba.it>
-

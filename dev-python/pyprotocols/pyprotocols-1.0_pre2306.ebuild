@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-1.0_pre2306.ebuild,v 1.13 2012/02/22 04:54:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-1.0_pre2306.ebuild,v 1.14 2013/11/06 05:06:34 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ inherit distutils
 MY_PN="PyProtocols"
 MY_P="${MY_PN}-${PV/_pre/a0dev_r}"
 
-DESCRIPTION="Extends the PEP 246 adapt() function with a new 'declaration API' that lets you easily define your own protocols and adapters, and declare what adapters should be used to adapt what types, objects, or protocols."
+DESCRIPTION="Extends the PEP 246 adapt function with a new 'declaration API'"
 HOMEPAGE="http://peak.telecommunity.com/PyProtocols.html http://pypi.python.org/pypi/PyProtocols"
 # http://svn.eby-sarna.com/PyProtocols/
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
