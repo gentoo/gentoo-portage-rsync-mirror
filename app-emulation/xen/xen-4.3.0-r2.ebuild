@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.2.2-r1.ebuild,v 1.6 2013/11/06 06:45:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.0-r2.ebuild,v 1.1 2013/11/06 06:45:18 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
@@ -13,7 +13,7 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS="amd64 x86"
+	KEYWORDS="~amd64 ~x86"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 fi
 
@@ -36,9 +36,7 @@ RESTRICT="test"
 # Approved by QA team in bug #144032
 QA_WX_LOAD="boot/xen-syms-${PV}"
 
-REQUIRED_USE="
-	flask? ( xsm )
-	"
+REQUIRED_USE="flask? ( xsm )"
 
 pkg_setup() {
 	python-any-r1_pkg_setup
@@ -64,7 +62,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Drop .config and fix gcc-4.6
-	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4-fix_dotconfig-gcc.patch
+	epatch  "${FILESDIR}"/${PN/-pvgrub/}-4.3-fix_dotconfig-gcc.patch
 
 	if use efi; then
 		epatch "${FILESDIR}"/${PN}-4.2-efi.patch
@@ -89,9 +87,13 @@ src_prepare() {
 	sed -i 's/, "-Werror"//' "${S}/tools/python/setup.py" || die "failed to re-set setup.py"
 
 	#Security patches
-	epatch "${FILESDIR}"/${PN}-4-CVE-2013-1918-XSA-45_[1-7].patch \
-		"${FILESDIR}"/${PN}-4.2-2013-2076-XSA-52to54.patch \
-		"${FILESDIR}"/${PN}-4.2-CVE-2013-1432-XSA-58.patch
+	epatch "${FILESDIR}"/${PN}-CVE-2013-1442-XSA-62.patch \
+		"${FILESDIR}"/${PN}-CVE-2013-4355-XSA-63.patch \
+		"${FILESDIR}"/${PN}-CVE-2013-4356-XSA-64.patch \
+		"${FILESDIR}"/${PN}-CVE-2013-4361-XSA-66.patch \
+		"${FILESDIR}"/${PN}-CVE-2013-4368-XSA-67.patch \
+		"${FILESDIR}"/${PN}-CVE-2013-4375-XSA-71.patch \
+		"${FILESDIR}"/${PN}-CVE-2013-4494-XSA-73.patch
 
 	epatch_user
 }
