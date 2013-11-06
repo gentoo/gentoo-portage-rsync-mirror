@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <use>
 	<flag name='inotify'>Use the Linux Kernel notification subsystem for monitoring file alterations in realtime</flag>
