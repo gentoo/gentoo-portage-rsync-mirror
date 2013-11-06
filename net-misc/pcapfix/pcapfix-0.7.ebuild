@@ -1,11 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pcapfix/pcapfix-0.7.ebuild,v 1.2 2012/10/23 17:20:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pcapfix/pcapfix-0.7.ebuild,v 1.3 2013/11/06 03:11:15 patrick Exp $
 
 EAPI=4
 
-DESCRIPTION="pcapfix tries to repair your broken pcap files by fixing the global
-header and recovering the packets by searching und guessing the packet headers."
+DESCRIPTION="Repair and fix broken pcap files"
 HOMEPAGE="http://f00l.de/pcapfix/"
 SRC_URI="http://f00l.de/pcapfix/${P}.tar.gz"
 

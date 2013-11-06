@@ -1,10 +1,10 @@
 DEFINED_PHASES=install postinst
 DEPEND=dev-lang/perl dev-perl/TermReadKey virtual/perl-Digest-MD5 dev-perl/IO-Socket-SSL virtual/perl-MIME-Base64
-DESCRIPTION=Perl script that downloads mail from a Yahoo! webmail account to a local mail spool, an mbox file, or to procmail.
+DESCRIPTION=Downloads mail from a Yahoo! webmail account to a local mail spool, an mbox file, or to procmail.
 HOMEPAGE=http://yosucker.sourceforge.net
 KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://sourceforge/yosucker/YoSucker-pr75.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=b6965676eab0a6b2d777ab9e18e83ef8
+_md5_=b3d3b3b3e4ed2beb9ff938d50891868d

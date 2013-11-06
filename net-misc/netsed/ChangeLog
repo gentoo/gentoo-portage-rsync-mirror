@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netsed
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/ChangeLog,v 1.7 2009/09/23 19:41:18 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/ChangeLog,v 1.8 2013/11/06 03:14:08 patrick Exp $
+
+  06 Nov 2013; Patrick Lauer <patrick@gentoo.org> netsed-0.01b.ebuild:
+  Shorten description, make repoman happier
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> netsed-0.01b.ebuild:
   Remove virtual/libc

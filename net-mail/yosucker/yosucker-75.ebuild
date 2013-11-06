@@ -1,13 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-75.ebuild,v 1.1 2006/04/22 19:36:26 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/yosucker-75.ebuild,v 1.2 2013/11/06 03:27:51 patrick Exp $
 
 inherit eutils
 
 MY_P="YoSucker-pr${PV}"
 S=${WORKDIR}/${MY_P}
 IUSE=""
-DESCRIPTION="Perl script that downloads mail from a Yahoo! webmail account to a local mail spool, an mbox file, or to procmail."
+DESCRIPTION="Downloads mail from a Yahoo! webmail account to a local mail spool, an mbox file, or to procmail."
 SRC_URI="mirror://sourceforge/yosucker/${MY_P}.tar.gz"
 HOMEPAGE="http://yosucker.sourceforge.net"
 LICENSE="GPL-2"

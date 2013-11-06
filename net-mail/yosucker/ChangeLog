@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/yosucker
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.41 2007/03/30 00:01:03 ticho Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.42 2013/11/06 03:27:51 patrick Exp $
+
+  06 Nov 2013; Patrick Lauer <patrick@gentoo.org> yosucker-73.ebuild,
+  yosucker-75.ebuild, yosucker-77.ebuild:
+  Shorten description, make repoman happier
 
 *yosucker-77 (29 Mar 2007)
 
@@ -177,4 +181,3 @@
 
   29 Jun 2003; Abhishek Amit <andrd@gentoo.org> yosucker-29.ebuild:
   Initial import.
-

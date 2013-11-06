@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install postinst
 DEPEND=>=dev-libs/libevent-0.6 perl? ( dev-perl/Cache-Memcached )
-DESCRIPTION=memcached is a high-performance, distributed memory object caching system, generic in nature, but intended for use in speeding up dynamic web applications by alleviating database load.
+DESCRIPTION=High-performance, distributed memory object caching system
 HOMEPAGE=http://www.danga.com/memcached/
 IUSE=static perl doc
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd
@@ -9,4 +9,4 @@ RDEPEND=>=dev-libs/libevent-0.6 perl? ( dev-perl/Cache-Memcached )
 SLOT=0
 SRC_URI=http://www.danga.com/memcached/dist/memcached-1.1.13.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=8560420231a049ad9f836288bffcafdc
+_md5_=b181ebe435de7ca328aadfa248c2f196

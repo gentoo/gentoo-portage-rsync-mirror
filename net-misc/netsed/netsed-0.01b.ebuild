@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/netsed-0.01b.ebuild,v 1.8 2009/09/23 19:41:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netsed/netsed-0.01b.ebuild,v 1.9 2013/11/06 03:14:08 patrick Exp $
 
 inherit eutils
 
-DESCRIPTION="A small and handful utility designed to alter the contents of packets forwarded thru your network in real time"
+DESCRIPTION="Small tool for altering forwarded network data in real time" 
 HOMEPAGE="http://freshmeat.net/projects/netsed"
 SRC_URI="http://dione.ids.pl/~lcamtuf/${PN}.tgz
 	http://http.us.debian.org/debian/pool/main/n/netsed/${PN}_0.01c-2.diff.gz"
