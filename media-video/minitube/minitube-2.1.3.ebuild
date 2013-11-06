@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.1.3.ebuild,v 1.1 2013/11/02 12:35:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.1.3.ebuild,v 1.2 2013/11/06 17:29:59 hwoarang Exp $
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -18,10 +18,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug gstreamer kde"
 
-DEPEND=">=dev-qt/qtgui-4.6:4[accessibility,gtkstyle]
-	>=dev-qt/qtdbus-4.6:4
-	kde? ( || ( media-libs/phonon[gstreamer?] >=dev-qt/qtphonon-4.6:4 ) )
-	!kde? ( || ( >=dev-qt/qtphonon-4.6:4 media-libs/phonon[gstreamer?] ) )
+DEPEND=">=dev-qt/qtgui-4.8:4[accessibility,gtkstyle]
+	>=dev-qt/qtdbus-4.8:4
+	>=dev-qt/qtsql-4.8:4
+	kde? ( || ( media-libs/phonon[gstreamer?] >=dev-qt/qtphonon-4.8:4 ) )
+	!kde? ( || ( >=dev-qt/qtphonon-4.8:4 media-libs/phonon[gstreamer?] ) )
 	gstreamer? (
 		media-plugins/gst-plugins-soup:0.10
 		media-plugins/gst-plugins-ffmpeg:0.10
