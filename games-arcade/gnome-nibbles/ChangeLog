@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnome-nibbles
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-nibbles/ChangeLog,v 1.2 2013/08/31 15:30:09 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-nibbles/ChangeLog,v 1.3 2013/11/06 20:56:21 pacho Exp $
+
+  06 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-nibbles-3.8.0.ebuild:
+  x86 keyword, bug #476710
 
   31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> gnome-nibbles-3.8.0.ebuild:
   Add ~arm keyword, wrt bug #476710
@@ -10,4 +13,3 @@
   12 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
   +gnome-nibbles-3.8.0.ebuild, +metadata.xml:
   Add game splitted from gnome-games by upstream.
-

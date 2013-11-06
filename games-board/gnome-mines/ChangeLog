@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gnome-mines
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mines/ChangeLog,v 1.3 2013/08/31 08:01:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mines/ChangeLog,v 1.4 2013/11/06 20:59:27 pacho Exp $
+
+  06 Nov 2013; Pacho Ramos <pacho@gentoo.org> -gnome-mines-3.8.1.ebuild,
+  gnome-mines-3.8.2.ebuild:
+  x86 keyword, bug #476710
 
   31 Aug 2013; Sergey Popov <pinkbyte@gentoo.org> gnome-mines-3.8.2.ebuild:
   Add ~arm keyword, wrt bug #476710
