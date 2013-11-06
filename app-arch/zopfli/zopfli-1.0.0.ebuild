@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/zopfli-1.0.0.ebuild,v 1.1 2013/09/18 20:43:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/zopfli-1.0.0.ebuild,v 1.2 2013/11/06 18:43:39 pinkbyte Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="https://${PN}.googlecode.com/files/${P}.zip"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/unzip"
 
