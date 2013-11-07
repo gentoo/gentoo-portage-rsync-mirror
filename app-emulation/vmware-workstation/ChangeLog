@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.249 2013/11/02 17:25:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.250 2013/11/06 23:07:41 dilfridge Exp $
+
+*vmware-workstation-10.0.1.1379776 (06 Nov 2013)
+
+  06 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +vmware-workstation-10.0.1.1379776.ebuild:
+  Version bump
 
   02 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   vmware-workstation-10.0.0.1295980.ebuild:

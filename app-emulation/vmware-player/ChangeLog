@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.118 2013/10/21 22:31:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.119 2013/11/06 23:19:57 dilfridge Exp $
+
+  06 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  vmware-player-6.0.0.1295980.ebuild:
+  Re-add keywords
 
   21 Oct 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -vmware-player-3.1.6.744570.ebuild:
