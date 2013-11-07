@@ -5036,6 +5036,7 @@ net-misc/bfgminer:bigpic - Enable support for mining with Big Picture Mining USB
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
 net-misc/bfgminer:bitfury - Enable support for mining with 55nm Bitfury-based devices
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
+net-misc/bfgminer:hashbuster - Enable support for mining with HashBuster nano boards
 net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)
 net-misc/bfgminer:littlefury - Enable support for mining with LittleFury USB sticks
 net-misc/bfgminer:metabank - Enable support for mining on Metabank host Raspberry Pi

@@ -18,6 +18,7 @@
 		<flag name='bigpic'>Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)</flag>
 		<flag name='bitfury'>Enable support for mining with 55nm Bitfury-based devices</flag>
 		<flag name='cpumining'>Enable support for mining with CPUs</flag>
+		<flag name='hashbuster'>Enable support for mining with HashBuster nano boards</flag>
 		<flag name='icarus'>Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)</flag>
 		<flag name='littlefury'>Enable support for mining with LittleFury USB sticks</flag>
 		<flag name='metabank'>Enable support for mining on Metabank host Raspberry Pi</flag>

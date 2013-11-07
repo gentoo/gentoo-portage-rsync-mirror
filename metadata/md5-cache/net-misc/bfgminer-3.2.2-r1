@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( avalon bitforce cpumining icarus modminer opencl proxy x6500 z
 SLOT=0
 SRC_URI=http://luke.dashjr.org/programs/bitcoin/files/bfgminer/3.2.2/bfgminer-3.2.2.tbz2
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=9abd89c80f154dca1ea964bbf9f4c137
+_md5_=76aa23ff9e90d12e97d45a72d9924a40

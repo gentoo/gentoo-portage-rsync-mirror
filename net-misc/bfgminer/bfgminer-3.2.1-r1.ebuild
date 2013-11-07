@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.3.0.ebuild,v 1.1 2013/10/22 16:25:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.2.1-r1.ebuild,v 1.1 2013/11/07 17:49:02 blueness Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils
 
@@ -14,19 +14,16 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
-IUSE="+adl avalon bitforce cpumining examples hardened icarus lm_sensors modminer ncurses +opencl proxy proxy_getwork proxy_stratum scrypt +udev unicode x6500 ztex"
-REQUIRED_USE="
+IUSE="+adl avalon bitforce cpumining examples hardened icarus lm_sensors modminer ncurses +opencl proxy scrypt +udev unicode x6500 ztex"
+REQUIRED_USE='
 	|| ( avalon bitforce cpumining icarus modminer opencl proxy x6500 ztex )
 	adl? ( opencl )
 	lm_sensors? ( opencl )
 	scrypt? ( || ( cpumining opencl ) )
 	unicode? ( ncurses )
-	proxy? ( || ( proxy_getwork proxy_stratum ) )
-	proxy_getwork? ( proxy )
-	proxy_stratum? ( proxy )
-"
+'
 
-DEPEND="
+DEPEND='
 	net-misc/curl
 	ncurses? (
 		sys-libs/ncurses[unicode?]
@@ -39,11 +36,8 @@ DEPEND="
 	lm_sensors? (
 		sys-apps/lm_sensors
 	)
-	proxy_getwork? (
+	proxy? (
 		net-libs/libmicrohttpd
-	)
-	proxy_stratum? (
-		dev-libs/libevent
 	)
 	x6500? (
 		virtual/libusb:1
@@ -51,10 +45,20 @@ DEPEND="
 	ztex? (
 		virtual/libusb:1
 	)
-"
+'
 RDEPEND="${DEPEND}
 	opencl? (
-		virtual/opencl
+		|| (
+			virtual/opencl
+			virtual/opencl-sdk
+			dev-util/ati-stream-sdk
+			dev-util/ati-stream-sdk-bin
+			dev-util/amdstream
+			dev-util/amd-app-sdk
+			dev-util/amd-app-sdk-bin
+			dev-util/nvidia-cuda-sdk[opencl]
+			dev-util/intel-opencl-sdk
+		)
 	)
 "
 DEPEND="${DEPEND}
@@ -82,6 +86,8 @@ src_configure() {
 		else
 			with_curses='--with-curses=ncurses'
 		fi
+	else
+		with_curses='--without-curses'
 	fi
 
 	CFLAGS="${CFLAGS}" \
@@ -93,15 +99,13 @@ src_configure() {
 		$(use_enable cpumining) \
 		$(use_enable icarus) \
 		$(use_enable modminer) \
-		$(use_with ncurses curses) \
 		$(use_enable opencl) \
 		$(use_enable scrypt) \
 		--with-system-libblkmaker \
-		$with_curses
+		$with_curses \
 		$(use_with udev libudev) \
 		$(use_with lm_sensors sensors) \
-		$(use_with proxy_getwork libmicrohttpd) \
-		$(use_with proxy_stratum libevent) \
+		$(use_with proxy libmicrohttpd) \
 		$(use_enable x6500) \
 		$(use_enable ztex)
 }
