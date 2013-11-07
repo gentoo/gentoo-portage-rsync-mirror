@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.109 2013/05/18 21:46:03 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.110 2013/11/07 19:56:12 swegener Exp $
+
+*systemtap-2.4 (07 Nov 2013)
+
+  07 Nov 2013; Sven Wegener <swegener@gentoo.org> +systemtap-2.3.ebuild,
+  +systemtap-2.4.ebuild:
+  Version bump.
+
+*systemtap-2.3 (09 Aug 2013)
+
+  09 Aug 2013; Sven Wegener <swegener@gentoo.org> +systemtap-2.3.ebuild:
+  Version bump.
 
 *systemtap-2.2 (18 May 2013)
 
