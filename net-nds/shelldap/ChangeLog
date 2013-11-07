@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/shelldap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/shelldap/ChangeLog,v 1.4 2013/02/21 00:13:38 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/shelldap/ChangeLog,v 1.5 2013/11/07 11:12:14 pinkbyte Exp $
+
+*shelldap-1.0.2 (07 Nov 2013)
+
+  07 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> -shelldap-0.4.ebuild,
+  +shelldap-1.0.2.ebuild:
+  Version bump, drop old
 
 *shelldap-0.7_p20130220 (20 Feb 2013)
 
