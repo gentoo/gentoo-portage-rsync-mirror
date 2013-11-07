@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.493 2013/11/06 17:31:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.494 2013/11/07 00:40:40 jer Exp $
+
+  07 Nov 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-173.14.38.ebuild:
+  Raise max kernel version for 173*.
 
 *nvidia-drivers-304.116 (06 Nov 2013)
 

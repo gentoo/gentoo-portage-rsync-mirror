@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.38.ebuild,v 1.5 2013/10/12 15:14:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.38.ebuild,v 1.6 2013/11/07 00:40:40 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability \
@@ -205,11 +205,11 @@ pkg_setup() {
 
 	export _POSIX2_VERSION="199209"
 
-	if use kernel_linux && kernel_is ge 3 12 ; then
+	if use kernel_linux && kernel_is ge 3 13 ; then
 		ewarn "Gentoo supports kernels which are supported by NVIDIA"
 		ewarn "which are limited to the following kernels:"
-		ewarn "<sys-kernel/gentoo-sources-3.12"
-		ewarn "<sys-kernel/vanilla-sources-3.12"
+		ewarn "<sys-kernel/gentoo-sources-3.13"
+		ewarn "<sys-kernel/vanilla-sources-3.13"
 		ewarn ""
 		ewarn "You are free to utilize epatch_user to provide whatever"
 		ewarn "support you feel is appropriate, but will not receive"
