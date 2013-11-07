@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/backuppc-2.1.2-r1.ebuild,v 1.5 2012/05/24 04:37:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/backuppc-2.1.2-r1.ebuild,v 1.6 2013/11/07 02:33:23 patrick Exp $
 
 inherit eutils webapp user
 
@@ -9,9 +9,7 @@ IUSE="samba doc"
 MY_P=BackupPC-${PV}
 PATCH_VER=0.1
 S="${WORKDIR}"/${MY_P}
-DESCRIPTION="A high performance, enterprise grade backup system for backing up
-Linux, Windows, Mac OS X desktops and laptops to a server's disk.  No client
-side software needed."
+DESCRIPTION="A high-performance system for backing up computers to a server's disk."
 HOMEPAGE="http://backuppc.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 	mirror://gentoo/${P}-gentoo-${PATCH_VER}.tar.bz2"

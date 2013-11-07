@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/phrack-all
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/ChangeLog,v 1.16 2012/06/28 16:04:30 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack-all/ChangeLog,v 1.17 2013/11/07 02:46:23 patrick Exp $
+
+  07 Nov 2013; Patrick Lauer <patrick@gentoo.org> phrack-all-66.ebuild,
+  phrack-all-67.ebuild, phrack-all-68.ebuild:
+  Shorten description, make repoman happier
 
 *phrack-all-68 (28 Jun 2012)
 

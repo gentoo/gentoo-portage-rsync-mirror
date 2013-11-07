@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/backuppc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/ChangeLog,v 1.16 2012/05/24 04:37:05 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backuppc/ChangeLog,v 1.17 2013/11/07 02:33:23 patrick Exp $
+
+  07 Nov 2013; Patrick Lauer <patrick@gentoo.org> backuppc-2.1.2-r1.ebuild:
+  Harmonize description, make repoman happier
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> backuppc-2.1.2-r1.ebuild,
   backuppc-3.2.1-r2.ebuild:
@@ -77,4 +80,3 @@
   useit at work, and klieber and tigger^ both want to try it. Furthermore,
   it's in high demand on the forums and submitted in bug #80818 by chewi
   (James LeCuirot).  Metadata needed adjusting
-
