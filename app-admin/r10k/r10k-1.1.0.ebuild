@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/r10k-1.1.0.ebuild,v 1.1 2013/10/07 19:40:59 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/r10k-1.1.0.ebuild,v 1.2 2013/11/07 13:03:17 vikraman Exp $
 
 EAPI=5
 
@@ -17,6 +17,7 @@ HOMEPAGE="http://github.com/adrienthebo/r10k"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="git"
 
 ruby_add_bdepend "test? ( =dev-ruby/rspec-2.14* )"
 
@@ -27,6 +28,8 @@ ruby_add_rdepend "
 	<dev-ruby/systemu-2.6.0
 	>=dev-ruby/log4r-1.1.10
 	dev-ruby/json"
+
+RDEPEND="${RDEPEND} git? ( >=dev-vcs/git-1.6.6 )"
 
 all_ruby_prepare() {
 	sed -i 's/json_pure/json/' "${WORKDIR}/all/metadata" || die "metadata fix failed"
