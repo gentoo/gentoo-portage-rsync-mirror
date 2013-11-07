@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.25.ebuild,v 1.10 2013/08/08 12:36:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.25.ebuild,v 1.11 2013/11/07 14:56:35 polynomial-c Exp $
 
 EAPI="2"
 
@@ -107,7 +107,9 @@ RDEPEND="${RDEPEND}
 # init script fixup - should be rolled into next tarball #389965
 src_prepare() {
 	apache-2_src_prepare
-	sed -i -e 's/! test -f/test -f/' "${GENTOO_PATCHDIR}"/init/apache2.initd || die "Failed to fix init script"
+	pushd "${GENTOO_PATCHDIR}" &>/dev/null || die
+	epatch "${FILESDIR}"/gentoo-apache-2.2.23-initd_fixups.patch
+	popd &>/dev/null || die
 	cp "${FILESDIR}"/2.2.22-envvars-std.in "${S}"/support/envvars-std.in || die "Failed to apply LD_PRELOAD fix"
 }
 

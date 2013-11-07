@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.6-r2.ebuild,v 1.1 2013/08/01 07:16:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.6-r2.ebuild,v 1.2 2013/11/07 14:56:35 polynomial-c Exp $
 
 EAPI="2"
 
@@ -145,7 +145,9 @@ src_prepare() {
 		cd "${S}" || die "Failed to cd to ${S}"
 	fi
 	apache-2_src_prepare
-	sed -i -e 's/! test -f/test -f/' "${GENTOO_PATCHDIR}"/init/apache2.initd || die "Failed to fix init script"
+	pushd "${GENTOO_PATCHDIR}" &>/dev/null || die
+	epatch "${FILESDIR}"/gentoo-apache-2.2.23-initd_fixups.patch
+	popd &>/dev/null || die
 }
 
 src_install() {
