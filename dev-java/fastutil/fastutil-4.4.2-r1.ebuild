@@ -1,12 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.4.2-r1.ebuild,v 1.6 2007/06/27 09:49:03 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/fastutil-4.4.2-r1.ebuild,v 1.7 2013/11/07 03:50:24 patrick Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Provides type-specific maps, sets and lists with a small memory footprint for much faster access and insertion."
+DESCRIPTION="Provides faster type-specific maps, sets and lists with a small memory footprint."
 SRC_URI="http://fastutil.dsi.unimi.it/${P}-src.tar.gz"
 HOMEPAGE="http://fastutil.dsi.unimi.it"
 LICENSE="LGPL-2.1"

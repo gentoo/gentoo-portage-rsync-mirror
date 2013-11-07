@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/colt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.19 2009/12/29 02:28:33 josejx Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/ChangeLog,v 1.20 2013/11/07 03:44:01 patrick Exp $
+
+  07 Nov 2013; Patrick Lauer <patrick@gentoo.org> colt-1.2.0-r1.ebuild:
+  Shorten description, make repoman happier
 
   29 Dec 2009; Joseph Jezak <josejx@gentoo.org> colt-1.2.0-r1.ebuild:
   Marked ppc64 stable.
@@ -64,4 +67,3 @@
   15 Feb 2004; <zx@gentoo.org> colt-1.1.0.ebuild:
   Initial Import.
   Thanks to Matteo Coloberti <xteo78@libero.it> for initial ebuild. Bug #34099
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr173
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.24 2012/04/15 18:36:49 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/ChangeLog,v 1.25 2013/11/07 03:58:48 patrick Exp $
+
+  07 Nov 2013; Patrick Lauer <patrick@gentoo.org> jsr173-1.0-r1.ebuild:
+  Shorten description, make repoman happier
 
   15 Apr 2012; Mike Frysinger <vapier@gentoo.org> jsr173-1.0-r1.ebuild:
   Add back ia64 love #349020 by Dennis Schridde.
@@ -81,4 +84,3 @@
   +metadata.xml, +jsr173-1.0.ebuild:
   new packages, dep of dom4j, ebuild contributed by Josh Nichols
   <nichoj@alum.rpi.edu>
-

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.3 >=virtual/jre-1.3 dev-java/jaxme >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
-DESCRIPTION=The Streaming API for XML (StAX) is a groundbreaking new Java API for parsing and writing XML easily and efficiently
+DESCRIPTION=The Streaming API for XML (StAX) is a Java API for parsing and writing XML easily and efficiently
 HOMEPAGE=http://dev2dev.bea.com/xml/stax.html
 IUSE=elibc_FreeBSD doc source elibc_FreeBSD
 KEYWORDS=amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
@@ -9,4 +9,4 @@ RDEPEND=>=virtual/jre-1.3 dev-java/jaxme >=dev-java/java-config-2.1.9-r1 source?
 SLOT=0
 SRC_URI=http://ftpna2.bea.com/pub/downloads/jsr173.jar
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
-_md5_=7c9916bb874bb469d1e32ecaf7ba49c2
+_md5_=cc0075d2b2ba16173ed8a65e0ad2820a

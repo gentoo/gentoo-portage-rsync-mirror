@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.81 2013/08/29 17:38:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.82 2013/11/07 03:53:08 mr_bones_ Exp $
+
+  07 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/warzone2100-2.3.9-pkgconf.patch, -warzone2100-2.3.9.ebuild:
+  old
 
   29 Aug 2013; Michael Sterrett <mr_bones_@gentoo.org> warzone2100-3.1.0.ebuild:
   respect AR (bug #477608)

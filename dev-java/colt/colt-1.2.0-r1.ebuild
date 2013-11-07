@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.2.0-r1.ebuild,v 1.6 2009/12/29 02:28:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.2.0-r1.ebuild,v 1.7 2013/11/07 03:44:01 patrick Exp $
 
 JAVA_PKG_IUSE="source doc"
 
 inherit java-pkg-2 java-ant-2 eutils
 
-DESCRIPTION="Colt provides a set of Open Source Libraries for High Performance Scientific and Technical Computing in Java."
+DESCRIPTION="A set of Open Source Libraries for High Performance Scientific and Technical Computing in Java."
 SRC_URI="http://dsd.lbl.gov/~hoschek/colt-download/releases/${P}.tar.gz"
 HOMEPAGE="http://www-itg.lbl.gov/~hoschek/colt/"
 LICENSE="colt"
@@ -22,7 +22,7 @@ RDEPEND=">=virtual/jre-1.4
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-benchmark-no-deprecation.patch"

@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/jsr173-1.0-r1.ebuild,v 1.14 2012/04/15 18:36:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr173/jsr173-1.0-r1.ebuild,v 1.15 2013/11/07 03:58:48 patrick Exp $
 
 JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="The Streaming API for XML (StAX) is a groundbreaking new Java API for parsing and writing XML easily and efficiently"
+DESCRIPTION="The Streaming API for XML (StAX) is a Java API for parsing and writing XML easily and efficiently"
 HOMEPAGE="http://dev2dev.bea.com/xml/stax.html"
 SRC_URI="http://ftpna2.bea.com/pub/downloads/${PN}.jar"
 

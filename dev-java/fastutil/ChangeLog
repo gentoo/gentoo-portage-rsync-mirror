@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fastutil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.48 2013/05/30 08:51:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fastutil/ChangeLog,v 1.49 2013/11/07 03:50:24 patrick Exp $
+
+  07 Nov 2013; Patrick Lauer <patrick@gentoo.org> fastutil-4.3.1-r1.ebuild,
+  fastutil-4.4.2-r1.ebuild, fastutil-5.0.9.ebuild:
+  Shorten description, make repoman happier
 
   30 May 2013; Tom Wijsman <TomWij@gentoo.org> fastutil-6.5.4.ebuild:
   Updated path for sources USE flag.
