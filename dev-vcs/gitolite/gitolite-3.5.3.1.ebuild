@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.5.3.1.ebuild,v 1.1 2013/11/06 02:03:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.5.3.1.ebuild,v 1.2 2013/11/07 07:26:05 radhermit Exp $
 
 EAPI=5
 
-inherit perl-module user
+inherit perl-module user versionator
 
 DESCRIPTION="Highly flexible server for git directory version tracker"
 HOMEPAGE="http://github.com/sitaramc/gitolite"

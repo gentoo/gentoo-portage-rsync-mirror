@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/gitolite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.35 2013/11/06 02:03:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/ChangeLog,v 1.36 2013/11/07 07:26:05 radhermit Exp $
+
+  07 Nov 2013; Tim Harder <radhermit@gentoo.org> gitolite-3.5.3.1.ebuild:
+  Re-add versionator eclass (bug #490662).
 
 *gitolite-3.5.3.1 (06 Nov 2013)
 
