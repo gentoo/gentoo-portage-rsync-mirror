@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.417 2013/11/04 16:27:37 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.418 2013/11/07 20:29:32 sping Exp $
+
+*gimp-2.8.8-r1 (07 Nov 2013)
+
+  07 Nov 2013; Sebastian Pipping <sping@gentoo.org> +gimp-2.8.8-r1.ebuild:
+  Move to lcms 2.x
 
 *gimp-2.8.8 (04 Nov 2013)
 

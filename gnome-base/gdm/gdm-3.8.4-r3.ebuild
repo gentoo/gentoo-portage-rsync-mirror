@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.4-r3.ebuild,v 1.1 2013/10/18 20:05:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.8.4-r3.ebuild,v 1.2 2013/11/07 20:15:32 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -20,7 +20,7 @@ LICENSE="
 "
 
 SLOT="0"
-IUSE="accessibility audit branding fallback fprint +gnome-shell +introspection ipv6 plymouth selinux smartcard +systemd tcpd test xinerama"
+IUSE="accessibility audit branding fallback fprint +gnome-shell +introspection ipv6 plymouth selinux +systemd tcpd test xinerama"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 
 # NOTE: x11-base/xorg-server dep is for X_SERVER_PATH etc, bug #295686
@@ -88,10 +88,6 @@ RDEPEND="${COMMON_DEPEND}
 		sys-auth/pam_fprint )
 	gnome-shell? ( >=gnome-base/gnome-shell-3.1.90 )
 	!gnome-shell? ( x11-wm/metacity )
-	smartcard? (
-		app-crypt/coolkey
-		sys-auth/pam_pkcs11 )
-
 	!gnome-extra/fast-user-switch-applet
 "
 DEPEND="${COMMON_DEPEND}
