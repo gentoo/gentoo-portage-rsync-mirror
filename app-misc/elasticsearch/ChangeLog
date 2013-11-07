@@ -1,0 +1,13 @@
+# ChangeLog for app-misc/elasticsearch
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.1 2013/11/07 09:19:22 chainsaw Exp $
+
+*elasticsearch-0.90.6 (07 Nov 2013)
+
+  07 Nov 2013; Tony Vroon <chainsaw@gentoo.org> +elasticsearch-0.90.6.ebuild,
+  +files/elasticsearch.conf, +files/elasticsearch.init,
+  +files/elasticsearch.service, +metadata.xml:
+  Initial commit, initial ebuild by Tom Wijsman with further tweaks by Travis
+  G. Hansen around systemd compatibility and traditional init scripts. Silenced
+  QA warnings for pre-built components.
+
