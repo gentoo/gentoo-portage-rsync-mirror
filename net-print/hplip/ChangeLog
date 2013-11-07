@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.283 2013/10/14 18:30:49 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.284 2013/11/07 17:09:49 billie Exp $
+
+*hplip-3.13.11 (07 Nov 2013)
+
+  07 Nov 2013; Daniel Pielmeier <billie@gentoo.org> +hplip-3.13.11.ebuild:
+  Version bump.
 
 *hplip-3.13.10 (14 Oct 2013)
 
