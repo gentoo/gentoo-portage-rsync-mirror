@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jvmstat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/ChangeLog,v 1.9 2008/08/23 17:50:25 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jvmstat/ChangeLog,v 1.10 2013/11/07 04:01:20 patrick Exp $
+
+  07 Nov 2013; Patrick Lauer <patrick@gentoo.org> jvmstat-3.0.ebuild:
+  Shorten description, make repoman happier
 
   02 Apr 2008; Krzysiek Pawlik <nelchael@gentoo.org> jvmstat-3.0.ebuild:
   Works on amd64.
@@ -25,4 +28,3 @@
   06 Jul 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   +jvmstat-3.0.ebuild:
   Initial version.
-
