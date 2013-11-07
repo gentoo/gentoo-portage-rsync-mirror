@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.58 2013/11/06 21:33:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.59 2013/11/07 17:01:02 hasufell Exp $
+
+  07 Nov 2013; Julian Ospald <hasufell@gentoo.org> -pokerth-1.0.ebuild,
+  +pokerth-1.0.1.ebuild:
+  re-add correct version, drop old
 
   06 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/pokerth-1.0-underlinking.patch, -pokerth-1.0.1.ebuild:
