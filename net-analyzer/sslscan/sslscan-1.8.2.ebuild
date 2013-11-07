@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/sslscan-1.8.2.ebuild,v 1.4 2012/08/06 06:22:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/sslscan-1.8.2.ebuild,v 1.5 2013/11/07 10:22:55 polynomial-c Exp $
 
 EAPI=4
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Fast SSL port scanner"
-HOMEPAGE="https://www.titania-security.com/labs/sslscan"
+HOMEPAGE="http://sourceforge.net/projects/sslscan/"
 SRC_URI="mirror://sourceforge/sslscan/${P}.tgz"
 
 LICENSE="GPL-3"
