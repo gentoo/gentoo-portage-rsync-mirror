@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.3.ebuild,v 1.21 2012/05/03 02:33:10 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.3.ebuild,v 1.22 2013/11/07 03:18:43 patrick Exp $
 
 inherit eutils autotools multilib
 
-DESCRIPTION="libdbi implements a database-independent abstraction layer in C, similar to the DBI/DBD layer in Perl."
+DESCRIPTION="libdbi is a database-independent abstraction layer in C, similar to the DBI/DBD layer in Perl."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://libdbi.sourceforge.net/"
 LICENSE="LGPL-2.1"

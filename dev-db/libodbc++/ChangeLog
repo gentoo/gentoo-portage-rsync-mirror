@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libodbc++
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.20 2010/02/19 21:55:11 robbat2 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.21 2013/11/07 03:20:33 patrick Exp $
+
+  07 Nov 2013; Patrick Lauer <patrick@gentoo.org> libodbc++-0.2.5-r1.ebuild:
+  Shorten description, make repoman happier
 
 *libodbc++-0.2.5-r1 (19 Feb 2010)
 
@@ -93,4 +96,3 @@
   16 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> libodbc++-0.2.3.ebuild:
   initial commit, from bug 26140, submission by Henri Schomaecker
   <henri.schomaecker@virtual-homes.de>
-

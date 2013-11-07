@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/mbtpdfasm-1.0.28-r1.ebuild,v 1.1 2010/07/20 23:20:53 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mbtpdfasm/mbtpdfasm-1.0.28-r1.ebuild,v 1.2 2013/11/07 03:07:20 patrick Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs
 
 MY_P="mbtPdfAsm-${PV}"
 
-DESCRIPTION="mbtPdfAsm can assemble/merge PDF files, extract information from PDF files, and update the metadata in PDF files."
+DESCRIPTION="Tool to assemble/merge PDF files, extract information from, and update the metadata in PDF files."
 HOMEPAGE="http://thierry.schmit.free.fr/dev/mbtPdfAsm/mbtPdfAsm2.html"
 SRC_URI="http://thierry.schmit.free.fr/spip/IMG/gz/${MY_P}.tar.gz
 	http://sbriesen.de/gentoo/distfiles/${P}-manual.pdf.bz2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.602 2013/11/05 05:21:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.603 2013/11/07 03:19:00 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1423,9 +1423,15 @@ gcc_do_filter_flags() {
 					# https://bugs.gentoo.org/454426
 					append-ldflags -Wl,--no-relax
 					;;
+				sparc)
+					# temporary workaround for random ICEs reproduced by multiple users
+					# https://bugs.gentoo.org/457062
+					[[ ${GCC_BRANCH_VER} == 4.6 || ${GCC_BRANCH_VER} == 4.7 ]] && \
+						MAKEOPTS+=" -j1"
+					;;
 				*-macos)
 					# http://gcc.gnu.org/PR25127
-					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER}  == 4.1 ]] && \
+					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER} == 4.1 ]] && \
 						filter-flags '-mcpu=*' '-march=*' '-mtune=*'
 					;;
 			esac

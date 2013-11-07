@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1048 2013/11/05 05:21:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1050 2013/11/07 03:19:30 dirtyepic Exp $
+
+  07 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Temporarily build with -j1 on sparc due to random ICEs encountered by
+  multiple people (bug #457062).
 
   05 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Update for libmudflap removal.
