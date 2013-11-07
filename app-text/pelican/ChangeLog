@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pelican
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.12 2013/10/29 03:44:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pelican/ChangeLog,v 1.13 2013/11/07 08:56:10 yac Exp $
+
+  07 Nov 2013; Jan Matejka <yac@gentoo.org> pelican-3.3.ebuild:
+  depends on jinja-2.7 which doesn't support python 3.2
 
 *pelican-3.3 (29 Oct 2013)
 
