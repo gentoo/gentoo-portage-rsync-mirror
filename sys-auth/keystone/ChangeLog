@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.42 2013/10/29 05:25:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.44 2013/11/08 07:31:14 idella4 Exp $
+
+  08 Nov 2013; Ian Delaney <idella4@gentoo.org>
+  +files/no_admin_token_auth-paste.ini, keystone-2013.2.ebuild:
+  deleted patch that was commented out, added IUSE test, test deps, manually
+  added missing file required for testsuite (within python_prepare_all), invoked
+  test phase which now works due to addition of missing ini file
 
 *keystone-2013.2 (29 Oct 2013)
 *keystone-2013.1.4 (29 Oct 2013)
