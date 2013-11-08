@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-1.4.2-r1.ebuild,v 1.1 2013/10/22 16:06:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-1.4.2-r1.ebuild,v 1.2 2013/11/08 21:33:45 mgorny Exp $
 
 EAPI=4
 
@@ -76,7 +76,7 @@ pkg_setup() {
 	enewgroup "paludisbuild"
 	enewuser "paludisbuild" -1 -1 "/var/tmp/paludis" "paludisbuild,tty"
 
-	python-single-r1_pkg_setup
+	use python && python-single-r1_pkg_setup
 }
 
 src_prepare() {
