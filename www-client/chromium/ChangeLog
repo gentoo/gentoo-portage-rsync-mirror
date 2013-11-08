@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.973 2013/11/08 03:46:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.974 2013/11/08 16:39:08 floppym Exp $
+
+  08 Nov 2013; Mike Gilbert <floppym@gentoo.org> chromium-30.0.1599.101.ebuild,
+  chromium-31.0.1650.39.ebuild, chromium-32.0.1700.2.ebuild:
+  Update nss dependency, bug 490756.
 
 *chromium-32.0.1700.2 (08 Nov 2013)
 
