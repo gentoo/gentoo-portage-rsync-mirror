@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.138 2013/05/12 16:41:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.139 2013/11/08 11:31:31 jlec Exp $
+
+*htop-1.0.2-r2 (08 Nov 2013)
+
+  08 Nov 2013; Justin Lecher <jlec@gentoo.org> +htop-1.0.2-r2.ebuild,
+  +files/htop-1.0.2-out-of-src.patch, +files/htop-1.0.2-process.patch:
+  Fix python usage; add missing check for kernel options, #469606; allow long
+  process names
 
   12 May 2013; Samuli Suominen <ssuominen@gentoo.org>
   files/htop-1.0.2-tinfo.patch:
