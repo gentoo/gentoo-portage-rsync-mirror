@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile config configure install postinst prepare test
+DEPEND=dev-libs/json-c dev-libs/libee >=dev-libs/libestr-0.1.9 dev-libs/liblognorm net-misc/curl dbi? ( dev-db/libdbi ) extras? ( net-libs/libnet ) kerberos? ( virtual/krb5 ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) oracle? ( dev-db/oracle-instantclient-basic ) relp? ( >=dev-libs/librelp-1.0.3 ) snmp? ( net-analyzer/net-snmp ) ssl? ( net-libs/gnutls dev-libs/libgcrypt ) systemd? ( sys-apps/systemd ) zeromq? ( net-libs/czmq ) zlib? ( sys-libs/zlib ) virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=An enhanced multi-threaded syslogd with database support and more
+EAPI=4
+HOMEPAGE=http://www.rsyslog.com/
+IUSE=dbi debug doc extras kerberos mysql oracle postgres relp snmp ssl static-libs systemd zeromq zlib
+KEYWORDS=~amd64 ~arm ~hppa ~x86
+LICENSE=GPL-3 LGPL-3 Apache-2.0
+RDEPEND=dev-libs/json-c dev-libs/libee >=dev-libs/libestr-0.1.9 dev-libs/liblognorm net-misc/curl dbi? ( dev-db/libdbi ) extras? ( net-libs/libnet ) kerberos? ( virtual/krb5 ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql-base ) oracle? ( dev-db/oracle-instantclient-basic ) relp? ( >=dev-libs/librelp-1.0.3 ) snmp? ( net-analyzer/net-snmp ) ssl? ( net-libs/gnutls dev-libs/libgcrypt ) systemd? ( sys-apps/systemd ) zeromq? ( net-libs/czmq ) zlib? ( sys-libs/zlib )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://www.rsyslog.com/files/download/rsyslog/rsyslog-7.4.6.tar.gz
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	5f912199ed4fdfb0bfbde29c7ac7dbdb	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=859a6c51732e30466c28f0264dfa7211

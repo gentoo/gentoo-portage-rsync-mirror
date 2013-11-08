@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libestr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.25 2013/10/19 12:22:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.26 2013/11/08 13:42:01 ultrabug Exp $
+
+*libestr-0.1.9 (08 Nov 2013)
+
+  08 Nov 2013; Ultrabug <ultrabug@gentoo.org> +libestr-0.1.9.ebuild:
+  version bump
 
 *libestr-0.1.8 (19 Oct 2013)
 
