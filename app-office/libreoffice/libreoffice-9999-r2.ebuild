@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.198 2013/11/01 10:04:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.199 2013/11/08 09:15:11 scarabeus Exp $
 
 EAPI=5
 
@@ -102,7 +102,7 @@ COMMON_DEPEND="
 	app-text/libetonyek
 	app-text/libmspub
 	>=app-text/libmwaw-0.1.7
-	app-text/libodfgen
+	>=app-text/libodfgen-0.0.3
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
