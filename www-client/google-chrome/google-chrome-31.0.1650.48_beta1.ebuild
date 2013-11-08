@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-32.0.1700.2_alpha1.ebuild,v 1.1 2013/11/06 03:22:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1650.48_beta1.ebuild,v 1.1 2013/11/08 00:43:36 floppym Exp $
 
 EAPI="4"
 
@@ -135,7 +135,7 @@ src_install() {
 	pax-mark m "${CHROME_HOME}/chrome"
 	chmod u+s "${CHROME_HOME}/chrome-sandbox" || die
 	rm -rf usr/share/menu || die
-	mv usr/share/doc/${PN} usr/share/doc/${PF} || die
+	mv usr/share/doc/${MY_PN} usr/share/doc/${PF} || die
 	dosym /usr/$(get_libdir)/libudev.so "${CHROME_HOME}/libudev.so.0"
 
 	pushd "${CHROME_HOME}/locales" > /dev/null || die
