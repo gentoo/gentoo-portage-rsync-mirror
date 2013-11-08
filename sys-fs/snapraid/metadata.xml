@@ -5,9 +5,6 @@
 		<email>ottxor@gentoo.org</email>
 		<name>Christoph Junghans</name>
 	</maintainer>
-	<use>
-		<flag name='ssl'>use the MD5 fast implementation of the OpenSSL</flag>
-	</use>
 	<upstream>
 		<remote-id type="sourceforge">snapraid</remote-id>
 	</upstream>

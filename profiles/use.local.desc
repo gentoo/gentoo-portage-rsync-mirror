@@ -6359,7 +6359,6 @@ sys-fs/owfs:server - Enable building the OWFS server (owserver)
 sys-fs/quota:netlink - Compile daemon receiving quota messages via netlink
 sys-fs/quota:rpc - Enable quota interaction via RPC
 sys-fs/s3ql:contrib - Install additional contributed scripts
-sys-fs/snapraid:ssl - use the MD5 fast implementation of the OpenSSL
 sys-fs/squashfs-tools:xz - Enable support for XZ ("LZMA2") compression using app-arch/xz-utils
 sys-fs/udev:firmware-loader - Enable userspace firmware loader (DEPRECATED, replaced by in-kernel loader in 3.8+)
 sys-fs/udev:gudev - Build the gobject interface library
