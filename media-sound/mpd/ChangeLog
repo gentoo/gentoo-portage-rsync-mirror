@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.322 2013/11/01 15:46:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.323 2013/11/08 20:16:25 angelos Exp $
+
+*mpd-0.18.3 (08 Nov 2013)
+
+  08 Nov 2013; Christoph Mende <angelos@gentoo.org> +mpd-0.18.3.ebuild,
+  -mpd-0.18.ebuild:
+  Version bump, remove old
 
   01 Nov 2013; Jeroen Roovers <jer@gentoo.org> mpd-0.18.ebuild:
   Marked ~hppa (bug #489962).
