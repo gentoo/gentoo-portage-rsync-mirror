@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.ebuild,v 1.2 2013/11/08 07:15:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.ebuild,v 1.3 2013/11/08 07:35:56 idella4 Exp $
 
 EAPI=5
 
@@ -45,8 +45,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			dev-python/python-memcached )
 	>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 	<dev-python/pbr-1.0[${PYTHON_USEDEP}]"
-RDEPEND="${DEPEND}
-	>=dev-python/python-pam-0.1.4[${PYTHON_USEDEP}]
+RDEPEND=">=dev-python/python-pam-0.1.4[${PYTHON_USEDEP}]
 	>=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	<dev-python/webob-1.3[${PYTHON_USEDEP}]
 	>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
@@ -72,7 +71,9 @@ RDEPEND="${DEPEND}
 	>=dev-python/dogpile-cache-0.5.0[${PYTHON_USEDEP}]
 	dev-python/python-daemon[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
-	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )"
+	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
+	>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
+	<dev-python/pbr-1.0[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
 	mkdir ${PN}/tests/tmp || die

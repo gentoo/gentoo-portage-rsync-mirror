@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.44 2013/11/08 07:31:14 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.45 2013/11/08 07:35:56 idella4 Exp $
+
+  08 Nov 2013; Ian Delaney <idella4@gentoo.org> keystone-2013.2.ebuild:
+  Effectively extract 'test?' USE conditional from RDEPEND
 
   08 Nov 2013; Ian Delaney <idella4@gentoo.org>
   +files/no_admin_token_auth-paste.ini, keystone-2013.2.ebuild:
