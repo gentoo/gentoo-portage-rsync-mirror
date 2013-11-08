@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/libcilkrts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/libcilkrts/ChangeLog,v 1.4 2013/08/03 22:10:23 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/libcilkrts/ChangeLog,v 1.5 2013/11/08 04:18:01 ottxor Exp $
+
+*libcilkrts-3613 (08 Nov 2013)
+
+  08 Nov 2013; Christoph Junghans <ottxor@gentoo.org> +libcilkrts-3613.ebuild:
+  version bump
 
 *libcilkrts-3453 (03 Aug 2013)
 
