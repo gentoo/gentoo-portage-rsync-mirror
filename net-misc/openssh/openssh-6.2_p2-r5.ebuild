@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.2_p2-r3.ebuild,v 1.1 2013/07/21 10:02:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.2_p2-r5.ebuild,v 1.1 2013/11/08 18:50:19 radhermit Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -9,7 +9,7 @@ inherit eutils user flag-o-matic multilib autotools pam systemd versionator
 # and _p? releases.
 PARCH=${P/_}
 
-HPN_PATCH="${PARCH}-hpn13v14-r1.diff.bz2"
+HPN_PATCH="${PARCH}-hpn14v1.diff.gz"
 LDAP_PATCH="${PARCH/-/-lpk-}-0.3.14.patch.gz"
 X509_VER="7.5" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
 
@@ -98,13 +98,16 @@ src_prepare() {
 	# don't break .ssh/authorized_keys2 for fun
 	sed -i '/^AuthorizedKeysFile/s:^:#:' sshd_config || die
 
+	# bug 490728
+	epatch "${FILESDIR}"/${PN}-6.3_p1-aes-gcm.patch
+
 	epatch "${FILESDIR}"/${PN}-5.9_p1-sshd-gssapi-multihomed.patch #378361
 	if use X509 ; then
 		pushd .. >/dev/null
 		epatch "${FILESDIR}"/${PN}-6.2_p2-x509-glue.patch
 		popd >/dev/null
 		epatch "${WORKDIR}"/${X509_PATCH%.*}
-		epatch "${FILESDIR}"/${PN}-6.2_p2-x509-hpn-glue.patch
+		epatch "${FILESDIR}"/${PN}-6.2_p2-x509-hpn14v1-glue.patch
 		save_version X509
 	fi
 	if ! use X509 ; then
@@ -118,21 +121,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-4.7_p1-GSSAPI-dns.patch #165444 integrated into gsskex
 	if [[ -n ${HPN_PATCH} ]] && use hpn; then
 		epatch "${WORKDIR}"/${HPN_PATCH%.*}
-		epatch "${FILESDIR}"/${PN}-6.0_p1-hpn-progressmeter.patch
 		save_version HPN
-		# The AES-CTR multithreaded variant is broken, and causes random hangs
-		# when combined background threading and control sockets. To avoid
-		# this, we change the internal table to use the non-multithread version
-		# for the meantime. Do NOT remove this in new versions. See bug #354113
-		# comment #6 for testcase.
-		# Upstream reference: http://www.psc.edu/networking/projects/hpn-ssh/
-		## Additionally, the MT-AES-CTR mode cipher replaces the default ST-AES-CTR mode
-		## cipher. Be aware that if the client process is forked using the -f command line
-		## option the process will hang as the parent thread gets 'divorced' from the key
-		## generation threads. This issue will be resolved as soon as possible
-		sed -i -r \
-			-e 's:(aes(...)-ctr.*SSH_CIPHER_SSH2.*)evp_aes_ctr_mt:\1EVP_aes_\2_ctr:' \
-			cipher.c || die
 	fi
 
 	tc-export PKG_CONFIG

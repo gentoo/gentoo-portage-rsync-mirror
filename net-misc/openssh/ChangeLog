@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.483 2013/11/08 05:20:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.485 2013/11/08 18:51:37 radhermit Exp $
+
+  08 Nov 2013; Tim Harder <radhermit@gentoo.org> -openssh-6.2_p2-r3.ebuild,
+  -openssh-6.2_p2-r4.ebuild:
+  Remove insecure versions.
+
+*openssh-6.2_p2-r5 (08 Nov 2013)
+
+  08 Nov 2013; Tim Harder <radhermit@gentoo.org> +openssh-6.2_p2-r5.ebuild:
+  Apply AES-GCM cipher patch for the 6.2 series (bug #490728).
 
   08 Nov 2013; Tim Harder <radhermit@gentoo.org> -openssh-6.3_p1.ebuild:
   Remove insecure version.
