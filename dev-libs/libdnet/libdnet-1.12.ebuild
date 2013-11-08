@@ -1,12 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.18 2013/11/06 16:12:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/libdnet-1.12.ebuild,v 1.19 2013/11/08 15:11:49 jer Exp $
 
 EAPI=5
 
 AT_M4DIR="config"
 PYTHON_DEPEND="python? 2"
 PYTHON_COMPAT=( python2_6 python2_7 )
+DISTUTILS_OPTIONAL=1
 
 inherit autotools distutils-r1 eutils
 
