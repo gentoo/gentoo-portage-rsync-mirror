@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.3_p1.ebuild,v 1.1 2013/11/05 06:29:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.3_p1-r1.ebuild,v 1.1 2013/11/08 05:06:04 radhermit Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -97,6 +97,9 @@ src_prepare() {
 
 	# don't break .ssh/authorized_keys2 for fun
 	sed -i '/^AuthorizedKeysFile/s:^:#:' sshd_config || die
+
+	# bug 490728
+	epatch "${FILESDIR}"/${PN}-6.3_p1-aes-gcm.patch
 
 	epatch "${FILESDIR}"/${PN}-5.9_p1-sshd-gssapi-multihomed.patch #378361
 	if use X509 ; then
