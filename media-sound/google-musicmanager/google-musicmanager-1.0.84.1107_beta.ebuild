@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.71.8015_beta.ebuild,v 1.1 2013/07/03 22:53:00 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.84.1107_beta.ebuild,v 1.1 2013/11/08 03:38:13 ottxor Exp $
 
 EAPI=5
 
@@ -21,24 +21,18 @@ IUSE="log"
 
 RESTRICT="strip mirror"
 
+OBSOLETE="no"
+[[ $OBSOLETE = yes ]] && RESTRICT="fetch strip" || RESTRICT="strip mirror"
+
 RDEPEND="
 	dev-libs/expat
-	dev-libs/glib:2
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtwebkit:4
 	media-libs/flac
-	media-libs/fontconfig
-	media-libs/freetype:2
-	media-libs/libogg
 	media-libs/libvorbis
 	net-dns/libidn
 	sys-libs/glibc
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXi
-	x11-libs/libXrandr
-	x11-libs/libXrender
 	log? ( dev-libs/log4cxx )
 	"
 
@@ -54,9 +48,18 @@ QA_FLAGS_IGNORED="${INSTALL_BASE}/.*"
 S="${WORKDIR}/${INSTALL_BASE}"
 
 pkg_nofetch() {
-	einfo "This version is no longer available from Google."
-	einfo "Note that Gentoo cannot mirror the distfiles due to license reasons, so we have to follow the bump."
-	einfo "Please file a version bump bug on http://bugs.gentoo.org (search existing bugs for ${PN} first!)."
+	if [[ ${OBSOLETE} = yes ]]; then
+		elog "This version is no longer available from Google and the license prevents mirroring."
+		elog "This ebuild is intended for users who already downloaded it previously and have problems"
+		elog "with ${PV}+. If you can get the distfile from e.g. another computer of yours, or search"
+		use amd64 && MY_PKG="${MY_PKG/i386/amd64}"
+		elog "it with google: http://www.google.com/search?q=intitle:%22index+of%22+${MY_PKG}"
+		elog "and copy the file ${MY_PKG} to ${DISTDIR}."
+	else
+		einfo "This version is no longer available from Google."
+		einfo "Note that Gentoo cannot mirror the distfiles due to license reasons, so we have to follow the bump."
+		einfo "Please file a version bump bug on http://bugs.gentoo.org (search	existing bugs for ${PN} first!)."
+	fi
 }
 
 src_install() {
