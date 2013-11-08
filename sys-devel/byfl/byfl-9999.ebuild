@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-9999.ebuild,v 1.1 2013/11/05 20:38:23 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-9999.ebuild,v 1.2 2013/11/08 18:11:32 ottxor Exp $
 
 EAPI=5
 
-inherit autotools-utils multilib
+inherit autotools-utils flag-o-matic multilib
 
 if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="git://github.com/losalamos/${PN^b}.git http://github.com/losalamos/${PN}.git"
@@ -31,6 +31,7 @@ src_prepare() {
 	ln -s autoconf/configure.ac || die
 	eaclocal -I autoconf/m4
 	eautoconf
+	replace-flags -O? -O0 #upstream is working on this
 }
 
 src_configure() {
@@ -41,9 +42,9 @@ src_configure() {
 }
 
 src_compile() {
-	autotools-utils_src_compile VERBOSE=1
+	autotools-utils_src_compile VERBOSE=1 LOPT="$(type -p opt)"
 }
 
 src_install() {
-	autotools-utils_src_install -j1 VERBOSE=1 CXXFLAGS='-O0' LOPT="$(type -p opt)"
+	autotools-utils_src_install VERBOSE=1 LOPT="$(type -p opt)"
 }

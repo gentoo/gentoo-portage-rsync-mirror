@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/xmind-3.3.1.201212250029.ebuild,v 1.7 2013/11/08 18:03:57 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/xmind-3.4.0.201311050558.ebuild,v 1.1 2013/11/08 18:03:56 creffett Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://dl2.xmind.net/xmind-downloads/${MY_P}.zip
 	http://dev.gentoo.org/~creffett/distfiles/xmind-icons.tar.xz"
 LICENSE="EPL-1.0 LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
@@ -40,8 +40,8 @@ src_configure() {
 		XDIR="XMind_Linux"
 	fi
 	mv -v "$XDIR" XMind || die
-	mv -v XMind/.eclipseproduct  Commons/ || die
-
+	mv -v XMind/.eclipseproduct Commons || die
+	cp "${FILESDIR}"/${PN}-3.4.0-config.ini Commons/configuration || die #Combined common+linux config.ini
 	# force data instance & config area to be at home/.xmind directory
 	sed -i -e '/-configuration/d' \
 		-e '/\.\/configuration/d' \
