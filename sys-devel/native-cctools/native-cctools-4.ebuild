@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/native-cctools-3.ebuild,v 1.1 2013/11/05 15:03:13 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/native-cctools-4.ebuild,v 1.1 2013/11/08 14:19:30 haubi Exp $
 
 EAPI="3"
 
@@ -13,8 +13,7 @@ SRC_URI=""
 LICENSE="GPL-2" # actually, we don't know, the wrapper is
 SLOT="0"
 
-AIX_LD_V=2
-AIX_MKEXPFILE_V=1
+AIX_V='aix-2'
 
 KEYWORDS="~ppc-aix ~x86-interix ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 
@@ -39,8 +38,9 @@ src_install() {
 		;;
 		*-aix*)
 			nativepath=/usr/ccs/bin
-			wrappers=("${wrappers[@]}" "ld=${FILESDIR}/ld-aix-${AIX_LD_V}")
-			wrappers=("${wrappers[@]}" "mkexpfile=${FILESDIR}/aix-mkexpfile-${AIX_MKEXPFILE_V}")
+			wrappers=("${wrappers[@]}" "ld=${FILESDIR}/${AIX_V}/ld")
+			wrappers=("${wrappers[@]}" "nm=${FILESDIR}/${AIX_V}/nm")
+			wrappers=("${wrappers[@]}" "mkexpfile=${FILESDIR}/${AIX_V}/mkexpfile")
 		;;
 		*-apple-darwin*|*-netbsd*|*-openbsd*)
 			nativepath=/usr/bin
@@ -92,6 +92,7 @@ src_install() {
 	for wrapper in "${wrappers[@]}" ; do
 		source=${wrapper#*=}
 		target=${wrapper%%=*}
+		rm -f "${target}"
 		newexe "${source}" "${target}" || die
 	done
 	# Generate an env.d entry for this binutils

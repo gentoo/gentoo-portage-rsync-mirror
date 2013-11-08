@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/native-cctools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/ChangeLog,v 1.4 2013/11/05 15:03:13 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/native-cctools/ChangeLog,v 1.5 2013/11/08 14:19:30 haubi Exp $
+
+*native-cctools-4 (08 Nov 2013)
+
+  08 Nov 2013; Michael Haubenwallner <haubi@gentoo.org> -files/aix-mkexpfile-1,
+  +files/aix-2/ld, +files/aix-2/mkexpfile, +files/aix-2/nm,
+  -native-cctools-3.ebuild, +native-cctools-4.ebuild:
+  Wrapp AIX nm for long TMPDIR. Group AIX wrappers in one subdir.
 
 *native-cctools-3 (05 Nov 2013)
 

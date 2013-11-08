@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-25.0-r1.ebuild,v 1.1 2013/11/04 13:46:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-25.0-r1.ebuild,v 1.2 2013/11/08 14:15:09 jer Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -147,6 +147,9 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
+
+	# Fix systems where the stack grows up (bug #490746)
+	epatch "${FILESDIR}"/${P}-stack-grows-up.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
