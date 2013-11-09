@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/file-tail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/file-tail/ChangeLog,v 1.11 2013/11/02 20:34:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/file-tail/ChangeLog,v 1.12 2013/11/09 19:44:07 mrueg Exp $
+
+  09 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -file-tail-1.0.12.ebuild:
+  Cleanup old.
 
 *file-tail-1.0.12-r1 (02 Nov 2013)
 

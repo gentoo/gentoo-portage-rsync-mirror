@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/childlabor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.4 2013/01/15 06:59:20 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childlabor/ChangeLog,v 1.5 2013/11/09 19:40:01 mrueg Exp $
+
+*childlabor-0.0.3-r1 (09 Nov 2013)
+
+  09 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +childlabor-0.0.3-r1.ebuild:
+  Add ruby20 target. Add snapshot from github to provide tests.
 
   15 Jan 2013; Rick Farina <zerochaos@gentoo.org> childlabor-0.0.3.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps
