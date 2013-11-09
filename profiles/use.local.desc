@@ -5959,6 +5959,8 @@ sys-apps/flashrom:rayer_spi - RayeR SPIPGM hardware support
 sys-apps/flashrom:satamv - Enable programmer for Marvell SATA controllers
 sys-apps/flashrom:satasii - Enable programmer for SiI SATA controllers
 sys-apps/flashrom:serprog - Enable Serial Flasher programmer
+sys-apps/flashrom:tools - Install additional tools
+sys-apps/flashrom:usbblaster - Enable support for Altera USB-Blaster dongles
 sys-apps/flashrom:wiki - Enable wiki informations, like supported devices etc.
 sys-apps/gnome-disk-utility:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
 sys-apps/gnome-disk-utility:nautilus - Enable gnome-base/nautilus extension.

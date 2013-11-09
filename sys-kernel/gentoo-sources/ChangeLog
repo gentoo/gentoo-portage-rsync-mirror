@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1209 2013/11/09 01:44:32 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1210 2013/11/09 20:40:35 tomwij Exp $
+
+  09 Nov 2013; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.10.18.ebuild,
+  gentoo-sources-3.11.7.ebuild:
+  Bump genpatches revisions on 3.10.18 and 3.11.7 to fix up experimental
+  tarball; due to an old scripts checkout, it ended up being the same as the
+  extras tarball in that bump.
 
 *gentoo-sources-3.4.68 (09 Nov 2013)
 

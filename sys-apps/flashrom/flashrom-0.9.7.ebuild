@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.6.ebuild,v 1.4 2012/11/21 10:10:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.7.ebuild,v 1.1 2013/11/09 20:31:49 idl0r Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 else
 	SRC_URI="http://download.flashrom.org/releases/${P}.tar.bz2"
-	KEYWORDS="amd64 arm x86"
+	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
 DESCRIPTION="Utility for reading, writing, erasing and verifying flash ROM chips"
@@ -21,10 +21,10 @@ SLOT="0"
 IUSE="atahpt +bitbang_spi +buspirate_spi +dediprog doc +drkaiser
 +dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel +nicintel_spi
 nicnatsemi nicrealtek +ogp_spi rayer_spi
-+pony_spi +satasii satamv +serprog +wiki"
++pony_spi +satasii satamv +serprog tools usbblaster +wiki"
 
 COMMON_DEPEND="atahpt? ( sys-apps/pciutils )
-	dediprog? ( virtual/libusb:0 )
+	dediprog? ( virtual/libusb:1 )
 	drkaiser? ( sys-apps/pciutils )
 	ft2232_spi? ( dev-embedded/libftdi )
 	gfxnvidia? ( sys-apps/pciutils )
@@ -37,6 +37,7 @@ COMMON_DEPEND="atahpt? ( sys-apps/pciutils )
 	rayer_spi? ( sys-apps/pciutils )
 	satasii? ( sys-apps/pciutils )
 	satamv? ( sys-apps/pciutils )
+	usbblaster? ( dev-embedded/libftdi )
 	ogp_spi? ( sys-apps/pciutils )"
 RDEPEND="${COMMON_DEPEND}
 	internal? ( sys-apps/dmidecode )"
@@ -61,7 +62,7 @@ src_compile() {
 		atahpt bitbang_spi buspirate_spi dediprog drkaiser \
 		ft2232_spi gfxnvidia nic3com nicintel nicintel_spi nicnatsemi nicrealtek \
 		ogp_spi rayer_spi pony_spi \
-		satasii satamv serprog \
+		satasii satamv serprog usbblaster \
 		internal dummy
 	_flashrom_enable wiki PRINT_WIKI
 
@@ -85,15 +86,23 @@ src_compile() {
 
 	# WARNERROR=no, bug 347879
 	tc-export AR CC RANLIB
-	emake WARNERROR=no ${args} || die
+	emake WARNERROR=no ${args}
 }
 
 src_install() {
-	dosbin flashrom || die
+	dosbin flashrom
 	doman flashrom.8
 	dodoc ChangeLog README
 
 	if use doc; then
 		dodoc Documentation/*.txt
+	fi
+
+	if use tools; then
+		if use amd64; then
+			dosbin util/ich_descriptors_tool/ich_descriptors_tool
+		elif use x86; then
+			dosbin util/ich_descriptors_tool/ich_descriptors_tool
+		fi
 	fi
 }
