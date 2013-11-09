@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audacity
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.186 2013/07/11 19:25:22 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.187 2013/11/09 13:38:10 polynomial-c Exp $
+
+*audacity-2.0.5 (09 Nov 2013)
+
+  09 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> +audacity-2.0.5.ebuild:
+  Non-maintainer commit: version bump (bug #484896).
 
   11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> audacity-2.0.3.ebuild:
   ppc, ppc64 keywords added, bug 457140

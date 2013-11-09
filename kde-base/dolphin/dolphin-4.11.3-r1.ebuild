@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.11.3.ebuild,v 1.1 2013/11/05 22:23:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.11.3-r1.ebuild,v 1.1 2013/11/09 13:43:52 johu Exp $
 
 EAPI=5
 
@@ -40,6 +40,8 @@ PDEPEND="
 
 RESTRICT="test"
 # bug 393129
+
+PATCHES=( "${FILESDIR}/${P}-regression.patch" )
 
 src_configure() {
 	mycmakeargs=(
