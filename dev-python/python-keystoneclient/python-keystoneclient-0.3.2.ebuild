@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.3.2.ebuild,v 1.3 2013/11/09 08:52:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.3.2.ebuild,v 1.4 2013/11/09 10:47:56 idella4 Exp $
 
 EAPI=5
 #testsuite has unpretty httpretty deps
@@ -36,7 +36,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/pycrypto-2.6[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
-				>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
+				<=dev-python/testtools-0.9.24-r1[${PYTHON_USEDEP}]
 				>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 				<dev-python/webob-1.3[${PYTHON_USEDEP}]
 				>=dev-python/Babel-0.9.6[${PYTHON_USEDEP}] )"

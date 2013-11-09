@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu-generator/obmenu-generator-0.58.ebuild,v 1.1 2013/10/09 00:14:49 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obmenu-generator/obmenu-generator-0.58.ebuild,v 1.2 2013/11/09 10:36:14 hasufell Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/Data-Dump
-	dev-perl/Linux-DesktopFiles
+	>=dev-perl/Linux-DesktopFiles-0.80.0
 	x11-wm/openbox"
 
 S=${WORKDIR}
