@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.6 2013/03/02 21:48:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.7 2013/11/09 13:11:35 johu Exp $
+
+*qt-gstreamer-0.10.3 (09 Nov 2013)
+
+  09 Nov 2013; Johannes Huber <johu@gentoo.org> +qt-gstreamer-0.10.3.ebuild:
+  Version bump.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qt-gstreamer-0.10.2.ebuild:
   Move Qt dependencies to the new category
