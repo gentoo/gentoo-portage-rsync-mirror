@@ -1,10 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.1.0-r1.ebuild,v 1.1 2013/11/04 13:41:14 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.1.0-r2.ebuild,v 1.1 2013/11/09 15:20:56 axs Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 MOZ_ESR=""
+MOZ_LIGHTNING_VER="2.6.2"
 
 # This list can be updated using scripts/get_langs.sh from the mozilla overlay
 MOZ_LANGS=(ar ast be bg bn-BD br ca cs da de el en en-GB en-US es-AR
@@ -44,6 +45,10 @@ SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
 	${MOZ_HTTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
 	crypt? ( http://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )
+	lightning? (
+		${MOZ_HTTP_URI/${PN}/calendar/lightning}/${MOZ_LIGHTNING_VER}/linux/lightning.xpi -> lightning-${MOZ_LIGHTNING_VER}.xpi
+		${MOZ_HTTP_URI/${PN}/calendar/lightning}/${MOZ_LIGHTNING_VER}/linux/gdata-provider.xpi -> gdata-provider-${MOZ_LIGHTNING_VER}.xpi
+	)
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz"
@@ -114,6 +119,12 @@ src_unpack() {
 
 	# Unpack language packs
 	mozlinguas_src_unpack
+
+	# Unpack lightning for calendar locales
+	if use lightning ; then
+		xpi_unpack lightning-${MOZ_LIGHTNING_VER}.xpi
+		xpi_unpack gdata-provider-${MOZ_LIGHTNING_VER}.xpi
+	fi
 }
 
 src_prepare() {
@@ -154,6 +165,15 @@ src_prepare() {
 		einfo edos2unix "${file}"
 		edos2unix "${file}"
 	done
+
+	# Confirm the version of lightning being grabbed for langpacks is the same
+	# as that used in thunderbird
+	local THIS_MOZ_LIGHTNING_VER=$(cat "${S}"/calendar/sunbird/config/version.txt)
+	if [[ ${MOZ_LIGHTNING_VER} != ${THIS_MOZ_LIGHTNING_VER} ]]; then
+		eqawarn "The version of lightning used for localization differs from the version"
+		eqawarn "in thunderbird.  Please update MOZ_LIGHTNING_VER in the ebuild from ${MOZ_LIGHTNING_VER}"
+		eqawarn "to ${THIS_MOZ_LIGHTNING_VER}"
+	fi
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
@@ -304,15 +324,42 @@ src_install() {
 	fi
 
 	if use lightning ; then
-		emid="{3550f703-e582-4d05-9a08-453d09bdfdc6}"
+		local l c
+		mozlinguas_export
+
+		emid="{a62ef8ec-5fdc-40c2-873c-223b8a6925cc}"
 		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid}
 		cd "${ED}"${MOZILLA_FIVE_HOME}/extensions/${emid}
 		unzip "${S}"/${obj_dir}/mozilla/dist/xpi-stage/gdata-provider-*.xpi
+		# Install locales for gdata-provider -- each locale is a directory tree
+		insinto ${MOZILLA_FIVE_HOME}/extensions/${emid}/chrome
+		cd "${WORKDIR}"/gdata-provider-${MOZ_LIGHTNING_VER}/chrome
+		for l in "${mozlinguas[@]}"; do if [[ -d gdata-provider-${l} ]]; then
+			doins -r gdata-provider-${l}
+			echo "locale gdata-provider ${l} chrome/gdata-provider-${l}/locale/${l}/" \
+				>> "${ED}"/${MOZILLA_FIVE_HOME}/extensions/${emid}/chrome.manifest \
+				|| die "Error adding gdata-provider-${l} to chrome.manifest"
+		else
+			ewarn "Sorry, but lightning gdata-provider in ${P} does not support the ${l} locale"
+		fi; done
 
 		emid="{e2fda1a4-762b-4020-b5ad-a41df1933103}"
 		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid}
 		cd "${ED}"${MOZILLA_FIVE_HOME}/extensions/${emid}
 		unzip "${S}"/${obj_dir}/mozilla/dist/xpi-stage/lightning-*.xpi
+		# Install locales for lightning - each locale is a jar file
+		insinto ${MOZILLA_FIVE_HOME}/extensions/${emid}/chrome
+		cd "${WORKDIR}"/lightning-${MOZ_LIGHTNING_VER}/chrome
+		for l in "${mozlinguas[@]}"; do if [[ -e calendar-${l}.jar ]]; then
+			for c in calendar lightning; do
+				doins ${c}-${l}.jar
+				echo "locale ${c} $l jar:chrome/${c}-${l}.jar!/locale/${l}/${c}/" \
+					>> "${ED}"/${MOZILLA_FIVE_HOME}/extensions/${emid}/chrome.manifest \
+					|| die "Error adding ${c}-${l} to chrome.manifest"
+			done
+		else
+			ewarn "Sorry, but lightning calendar in ${P} does not support the ${l} locale"
+		fi; done
 
 		# Fix mimetype so it shows up as a calendar application in GNOME 3
 		# This requires that the .desktop file was already installed earlier

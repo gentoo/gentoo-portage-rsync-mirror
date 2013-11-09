@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.250 2013/11/04 13:41:14 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.251 2013/11/09 15:20:56 axs Exp $
+
+*thunderbird-24.1.0-r2 (09 Nov 2013)
+
+  09 Nov 2013; Ian Stakenvicius <axs@gentoo.org> +thunderbird-24.1.0-r2.ebuild,
+  -thunderbird-24.1.0-r1.ebuild:
+  Add locale support for lightning an gdata-provider, bug 333945
 
 *thunderbird-24.1.0-r1 (04 Nov 2013)
 
