@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.75 2013/10/22 11:34:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.76 2013/11/09 02:05:37 radhermit Exp $
+
+*boto-2.16.0 (09 Nov 2013)
+
+  09 Nov 2013; Tim Harder <radhermit@gentoo.org> +boto-2.16.0.ebuild:
+  Version bump.
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> boto-2.15.0.ebuild:
   Marked ~x64-macos, bug #487670
