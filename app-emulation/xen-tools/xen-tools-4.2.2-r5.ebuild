@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r5.ebuild,v 1.1 2013/11/07 00:46:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r5.ebuild,v 1.2 2013/11/09 08:14:57 mgorny Exp $
 
 EAPI=5
 
@@ -35,7 +35,8 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs xend"
 
-REQUIRED_USE="hvm? ( qemu )"
+REQUIRED_USE="hvm? ( qemu )
+	${PYTHON_REQUIRED_USE}"
 
 DEPEND="dev-libs/lzo:2
 	dev-libs/yajl

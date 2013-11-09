@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.199 2013/11/07 00:46:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.200 2013/11/09 08:14:57 mgorny Exp $
+
+  09 Nov 2013; Michał Górny <mgorny@gentoo.org> xen-tools-4.2.2-r3.ebuild,
+  xen-tools-4.2.2-r5.ebuild, xen-tools-4.3.0-r3.ebuild:
+  Add missing PYTHON_REQUIRED_USE.
 
 *xen-tools-4.3.0-r3 (07 Nov 2013)
 *xen-tools-4.2.2-r5 (07 Nov 2013)
