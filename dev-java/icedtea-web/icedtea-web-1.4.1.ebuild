@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.1.ebuild,v 1.1 2013/10/25 04:36:59 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.1.ebuild,v 1.2 2013/11/09 11:55:04 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="5"
@@ -88,7 +88,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	java-vm_check-nsplugin
+	VMHANDLE="icedtea-web@${GENTOO_VM}" java-vm_check-nsplugin
 	java_mozilla_clean_
 	readme.gentoo_print_elog
 }
