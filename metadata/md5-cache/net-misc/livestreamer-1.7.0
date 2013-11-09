@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/pycrypto >=dev-python/requests-1.0 >media-video/rtmpdump-2.4 dev-python/setuptools userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-)]
+DESCRIPTION=CLI tool that pipes video streams from services like twitch.tv into a video player
+EAPI=5
+HOMEPAGE=https://github.com/chrippa/livestreamer
+IUSE=python_targets_python2_7 python_targets_python3_2
+KEYWORDS=~amd64 ~mips ~x86
+LICENSE=Apache-2.0 BSD-2 MIT-with-advertising
+RDEPEND=dev-python/pycrypto >=dev-python/requests-1.0 >media-video/rtmpdump-2.4 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_2(-)?,-python_single_target_python2_7(-),-python_single_target_python3_2(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_2 )
+SLOT=0
+SRC_URI=https://github.com/chrippa/livestreamer/archive/v1.7.0.tar.gz -> livestreamer-1.7.0.tar.gz
+_eclasses_=distutils-r1	26fe65665d086911163d4502473bd093	eutils	4878e7f88afc0ba0866ac112190b0fd4	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	python-r1	b81583006559e9b008883355c9889e29	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=6b1290c7310eb6c0ecfefd79b5c15dbb

@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-cddl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.39 2013/08/26 20:41:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.40 2013/11/09 09:16:14 aballier Exp $
+
+*freebsd-cddl-9.2 (09 Nov 2013)
+
+  09 Nov 2013; Alexis Ballier <aballier@gentoo.org> +freebsd-cddl-9.2.ebuild:
+  bump to 9.2
 
 *freebsd-cddl-9.2_rc3 (26 Aug 2013)
 

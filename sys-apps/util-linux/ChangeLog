@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.440 2013/10/29 20:25:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.441 2013/11/09 09:10:56 polynomial-c Exp $
+
+  09 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> util-linux-2.24.ebuild:
+  Fixed unconditional call of python-single-r1_pkg_setup (bug #490778).
 
   29 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> util-linux-2.24.ebuild,
   util-linux-9999.ebuild:

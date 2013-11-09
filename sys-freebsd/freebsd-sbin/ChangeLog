@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.80 2013/08/26 20:44:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.81 2013/11/09 09:17:46 aballier Exp $
+
+*freebsd-sbin-9.2 (09 Nov 2013)
+
+  09 Nov 2013; Alexis Ballier <aballier@gentoo.org> +freebsd-sbin-9.2.ebuild:
+  bump to 9.2
 
 *freebsd-sbin-9.2_rc3 (26 Aug 2013)
 
