@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1050 2013/11/07 03:19:30 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1051 2013/11/09 07:49:50 dirtyepic Exp $
+
+  09 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Rename config.log tarball in the hope that people will stop attaching it to
+  build failures.
 
   07 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Temporarily build with -j1 on sparc due to random ICEs encountered by

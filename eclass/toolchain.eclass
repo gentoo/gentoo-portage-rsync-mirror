@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.603 2013/11/07 03:19:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.604 2013/11/09 07:49:50 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1285,9 +1285,10 @@ gcc_do_configure() {
 has toolchain_death_notice ${EBUILD_DEATH_HOOKS} || EBUILD_DEATH_HOOKS+=" toolchain_death_notice"
 toolchain_death_notice() {
 	pushd "${WORKDIR}"/build >/dev/null
-	tar jcf gcc-build-logs.tar.bz2 $(find -name config.log)
+	tar jcf gcc-config-logs.tar.bz2 $(find -name config.log)
 	eerror
-	eerror "Please include ${PWD}/gcc-build-logs.tar.bz2 in your bug report"
+	eerror "Please include ${PWD}/gcc-config-logs.tar.bz2"
+	eerror "in your bug report if the error occurred during configure."
 	eerror
 	popd >/dev/null
 }
