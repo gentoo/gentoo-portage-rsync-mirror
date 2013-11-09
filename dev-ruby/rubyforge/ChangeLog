@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.98 2013/09/10 17:49:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.99 2013/11/09 16:01:04 jer Exp $
+
+  09 Nov 2013; Jeroen Roovers <jer@gentoo.org> rubyforge-2.0.4-r3.ebuild:
+  Stable for HPPA (bug #490180).
 
 *rubyforge-2.0.4-r3 (10 Sep 2013)
 

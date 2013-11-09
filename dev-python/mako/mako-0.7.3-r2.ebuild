@@ -1,6 +1,6 @@
 # Copyright 1998-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.7.3-r2.ebuild,v 1.3 2013/10/22 02:40:35 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/mako-0.7.3-r2.ebuild,v 1.4 2013/11/09 15:34:15 pacho Exp $
 
 EAPI=5
 
@@ -62,8 +62,9 @@ pkg_postinst() {
 	for v in ${REPLACING_VERSIONS}; do
 		if ! version_is_at_least 0.7.3-r2 $v; then
 			ewarn "dev-python/beaker is no longer hard dependency of ${P}"
-			ewarn "If you rely on it, you should add beaker to your"
-			ewarn "/var/lib/portage/world file"
+			ewarn "If you rely on it, you should add beaker to your world"
+			ewarn "file:"
+			ewarn "# emerge --noreplace beaker"
 			break
 		fi
 	done

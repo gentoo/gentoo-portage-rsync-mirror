@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.73 2013/10/22 02:40:35 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.74 2013/11/09 15:34:15 pacho Exp $
+
+  09 Nov 2013; Pacho Ramos <pacho@gentoo.org> mako-0.7.3-r2.ebuild:
+  Modify beaker addition to world file instructions (#489896)
 
 *mako-0.7.3-r2 (22 Oct 2013)
 
