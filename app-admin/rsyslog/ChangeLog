@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.100 2013/11/08 13:46:34 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.102 2013/11/09 09:34:41 ago Exp $
+
+  09 Nov 2013; Agostino Sarubbo <ago@gentoo.org> rsyslog-7.4.4.ebuild:
+  Stable for x86, wrt bug #475882
+
+  09 Nov 2013; Agostino Sarubbo <ago@gentoo.org> rsyslog-7.4.4.ebuild:
+  Stable for amd64, wrt bug #475882
 
 *rsyslog-7.4.6 (08 Nov 2013)
 

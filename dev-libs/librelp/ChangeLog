@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/librelp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/ChangeLog,v 1.21 2013/08/16 08:33:44 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/ChangeLog,v 1.23 2013/11/09 09:34:45 ago Exp $
+
+  09 Nov 2013; Agostino Sarubbo <ago@gentoo.org> librelp-1.2.0.ebuild:
+  Stable for x86, wrt bug #475882
+
+  09 Nov 2013; Agostino Sarubbo <ago@gentoo.org> librelp-1.2.0.ebuild:
+  Stable for amd64, wrt bug #475882
 
 *librelp-1.2.0 (16 Aug 2013)
 *librelp-1.1.5 (16 Aug 2013)

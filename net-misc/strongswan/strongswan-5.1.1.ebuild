@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.1.1.ebuild,v 1.1 2013/11/01 16:35:54 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.1.1.ebuild,v 1.3 2013/11/09 09:34:50 ago Exp $
 
 EAPI=5
 inherit eutils linux-info systemd user
@@ -11,7 +11,7 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 
 LICENSE="GPL-2 RSA DES"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86"
 IUSE="+caps curl debug dhcp eap farp gcrypt ldap mysql networkmanager +non-root +openssl sqlite pam"
 
 COMMON_DEPEND="!net-misc/openswan
