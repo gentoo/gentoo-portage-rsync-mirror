@@ -1,11 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegui/simplegui-0.1.0.ebuild,v 1.1 2013/10/08 20:35:16 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegui/simplegui-0.1.0.ebuild,v 1.2 2013/11/09 11:01:20 hasufell Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
 PYTHON_REQ_USE="tk"
+DISTUTILS_IN_SOURCE_BUILD=1
 
 inherit distutils-r1
 
@@ -20,3 +21,11 @@ IUSE=""
 
 DEPEND="app-arch/unzip
 	dev-python/cx_Freeze[${PYTHON_USEDEP}]"
+
+python_compile() {
+	if [[ ${EPYTHON} == python3.* ]]; then
+		2to3 --no-diffs -w *.py || die
+	fi
+
+	distutils-r1_python_compile
+}
