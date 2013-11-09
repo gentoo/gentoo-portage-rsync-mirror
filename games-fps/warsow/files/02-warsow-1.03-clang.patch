@@ -1,0 +1,67 @@
+From c63672c41ae5332a5d123e3d59abf38417fab961 Mon Sep 17 00:00:00 2001
+From: Victor Luchits <vluchits@gmail.com>
+Date: Sat, 12 Oct 2013 15:04:53 +0400
+Subject: [PATCH] This should fix compilation in clang
+
+ctassert<false> was evaluated in template function (probably due to two-phase name lookup?). Change it to ctassert<sizeof(typename)==0) so evaluation is delayed until actual template function instantiation.
+---
+ source/ui/as/asbind.h | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/source/ui/as/asbind.h b/source/ui/as/asbind.h
+index 9906859..f78ef42 100644
+--- a/source/ui/as/asbind.h
++++ b/source/ui/as/asbind.h
+@@ -268,7 +268,7 @@ struct ctassert {
+ 	}
+ 
+ 	// throw ?
+-	template<typename T> const char * typestr() { ctassert<false>(); return "ERROR"; }
++	template<typename T> const char * typestr() { ctassert<sizeof(T)==0>(); return "ERROR"; }
+ 
+ 	template<> inline const char *typestr<signed int>() { return "int"; }
+ 	template<> inline const char *typestr<unsigned int>() { return "uint"; }
+@@ -439,7 +439,7 @@ struct __ptr<T*> {
+ struct FunctionStringProxy {
+ 	std::string operator()( const char *s )
+ 	{
+-		ctassert<false>();
++		ctassert<sizeof(R)==0>();
+ 		throw Exception( std::string("FunctionStringProxy base called with " ) + s );
+ 	}
+ };
+@@ -542,7 +542,7 @@ struct FunctionStringProxy<R (*)(A1,A2,A3,A4,A5,A6)> {
+ template<typename T> struct MethodStringProxy {
+ 	std::string operator()( const char *s  )
+ 	{
+-		ctassert<false>();
++		ctassert<sizeof(T)==0>();
+ 		throw Exception( std::string( "MethodStringProxy: base class called in " ) + s );
+ 	}
+ };
+@@ -904,12 +904,12 @@ struct StripThisProxy<R(*)(A1,A2,A3,A4,A5,A6,A7)> {
+ // first define structs to get/set arguments (struct to partial-specialize)
+ template<typename T> struct SetArg {
+ 	void operator()( asIScriptContext *ctx, int idx, T &t ) {
+-		ctassert<false>();
++		ctassert<sizeof(T)==0>();
+ 	}
+ };
+ template<typename T> struct GetArg {
+ 	T operator()() {
+-		ctassert<false>();
++		ctassert<sizeof(T)==0>();
+ 		return T();
+ 	}
+ };
+@@ -1046,7 +1046,7 @@ struct FunctionPtr : FunctionPtrBase {
+ 	FunctionPtr( asIScriptFunction *fptr=NULL ) : FunctionPtrBase( fptr ) {}
+ 	R operator()( void )
+ 	{
+-		ctassert<false>();
++		ctassert<sizeof(R)==0>();
+ 		throw std::runtime_error( "FunctionPtr baseclass called!" );
+ 		return R();
+ 	}
+-- 
+1.8.4

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.90-r1.ebuild,v 1.3 2013/10/22 21:30:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.90-r1.ebuild,v 1.4 2013/11/09 12:57:27 jlec Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -33,6 +33,12 @@ MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/cdio/cdio_config.h
 	/usr/include/cdio/version.h
 )
+
+src_prepare() {
+	sed \
+		-e "s:-lncurses:$($(tc-getPKG_CONFIG) --libs ncurses):g" \
+		-i configure || die
+}
 
 multilib_src_configure() {
 	local util_switch

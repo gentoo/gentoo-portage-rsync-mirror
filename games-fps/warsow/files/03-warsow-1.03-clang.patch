@@ -1,0 +1,39 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Sat Nov  9 12:01:14 UTC 2013
+Subject: fix clang warnings
+
+based on
+https://github.com/viciious/qfusion/commit/792e50cc9b55e0c5e4c954a1c0c4e4a61ad54e2c.patch
+
+--- a/source/cgame/cg_draw.c
++++ b/source/cgame/cg_draw.c
+@@ -309,7 +309,7 @@ void CG_DrawMiniMap( int x, int y, int i
+ 		coords[2] = ( coords[2] + (float)z_lefttop ) / (float)map_z;
+ 
+ 		// is it a player?
+-		if( ( cent->current.type == ET_PLAYER ) )
++		if( cent->current.type == ET_PLAYER )
+ 		{
+ 			int box_size = (int)( 3.0 + coords[2] * 10.0 );
+ 
+--- a/source/cgame/cg_ents.c
++++ b/source/cgame/cg_ents.c
+@@ -376,7 +376,6 @@ static void CG_UpdatePlayerState( void )
+ 	// set up the playerstates
+ 
+ 	// current
+-	index = index;
+ 	CG_SetFramePlayerState( &cg.frame, index );
+ 
+ 	// old
+--- a/source/client/console.c
++++ b/source/client/console.c
+@@ -1343,7 +1343,7 @@ void Con_KeyDown( int key )
+ 		return;
+ 	}
+ 
+-	if( ( key == K_BACKSPACE ) )
++	if( key == K_BACKSPACE )
+ 	{
+ 		if( key_linepos > 1 )
+ 		{

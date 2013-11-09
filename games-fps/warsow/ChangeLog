@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.54 2013/07/03 10:06:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.55 2013/11/09 12:44:30 hasufell Exp $
+
+*warsow-1.03 (09 Nov 2013)
+
+  09 Nov 2013; Julian Ospald <hasufell@gentoo.org> +warsow-1.03.ebuild,
+  +files/warsow-1.03-build.patch, +files/01-warsow-1.03-clang.patch,
+  +files/02-warsow-1.03-clang.patch, +files/03-warsow-1.03-clang.patch,
+  +files/warsow-1.03-pic.patch:
+  version bump and fix build with clang wrt #448714
 
   03 Jul 2013; Agostino Sarubbo <ago@gentoo.org> warsow-1.02-r1.ebuild:
   Stable for x86, wrt bug #474440

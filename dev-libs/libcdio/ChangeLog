@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.141 2013/10/22 21:30:25 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.142 2013/11/09 12:57:27 jlec Exp $
+
+  09 Nov 2013; Justin Lecher <jlec@gentoo.org> libcdio-0.90-r1.ebuild,
+  metadata.xml:
+  Fix compilation with ncurses[tinfo], #484352 & #468476
 
   22 Oct 2013; Anthony G. Basile <blueness@gentoo.org> libcdio-0.83.ebuild,
   libcdio-0.90-r1.ebuild, libcdio-0.90.ebuild:

@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install test
+DEFINED_PHASES=compile configure install prepare test
 DEPEND=!minimal? ( >=sys-libs/ncurses-5.7-r7 cddb? ( >=media-libs/libcddb-1.3.2 ) ) virtual/libiconv[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86_x32(-)?,abi_mips_n32(-)?,abi_mips_n64(-)?,abi_mips_o32(-)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r10 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] ) sys-apps/sed sys-devel/gettext virtual/pkgconfig test? ( dev-lang/perl ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=A library to encapsulate CD-ROM reading and control
 EAPI=5
@@ -10,4 +10,4 @@ RDEPEND=!minimal? ( >=sys-libs/ncurses-5.7-r7 cddb? ( >=media-libs/libcddb-1.3.2
 SLOT=0
 SRC_URI=mirror://gnu/libcdio/libcdio-0.90.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	0bf1bbb0a7a26fc4daf3e660ef004ee5	multilib-minimal	6d23cf688d036d6971741fb66703f6f7	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=1031da0b865c03ba06e8e51e68ff23e3
+_md5_=9e583ec37a22d5346f0dc1b6ab82f589
