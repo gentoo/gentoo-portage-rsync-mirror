@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/tdiff
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/ChangeLog,v 1.1 2013/11/09 10:23:31 graaff Exp $
+
+*tdiff-0.3.3 (09 Nov 2013)
+
+  09 Nov 2013; Hans de Graaff <graaff@gentoo.org> +tdiff-0.3.3.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for forthcoming nokogiri-diff.
+

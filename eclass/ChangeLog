@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1051 2013/11/09 07:49:50 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1053 2013/11/09 10:22:06 graaff Exp $
+
+  09 Nov 2013; Hans de Graaff <graaff@gentoo.org> ruby-fakegem.eclass:
+  Add a yard recipe for creating documentation.
+
+  09 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Revert previous and instead include the build log and some other info. Don't
+  pollute the build dir.
 
   09 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Rename config.log tarball in the hope that people will stop attaching it to
