@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.148 2013/10/21 10:45:40 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.149 2013/11/09 17:24:22 pacho Exp $
+
+  09 Nov 2013; Pacho Ramos <pacho@gentoo.org> pax-utils-0.7.ebuild:
+  amd64 stable, bug #487676
 
   21 Oct 2013; Benda Xu <heroxbd@gentoo.org> pax-utils-0.7.ebuild:
   remove prepalldocs after EAPI bump
