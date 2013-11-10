@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.4 2013/09/28 09:27:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.5 2013/11/10 13:16:51 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -215,6 +215,12 @@ pkg_postinst() {
 		if ! has_version "media-libs/mesa[gallium]"; then
 			ewarn "You will need to emerge media-libs/mesa with USE=gallium."
 		fi
+	fi
+
+	if ! has_version "media-libs/mesa[llvm]"; then
+		elog "llvmpipe is used as fallback when no 3D acceleration"
+		elog "is available. You will need to enable llvm USE for"
+		elog "media-libs/mesa."
 	fi
 
 	if ! systemd_is_booted; then
