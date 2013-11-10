@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-3.4.47.ebuild,v 1.1 2013/06/04 19:21:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-3.4.68.ebuild,v 1.1 2013/11/10 00:23:52 tomwij Exp $
 
 EAPI="5"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="29"
+K_GENPATCHES_VER="49"
 
 inherit kernel-2 versionator
 detect_version
@@ -14,8 +14,8 @@ detect_arch
 DESCRIPTION="TuxOnIce + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/ http://www.tuxonice.net"
 
-TUXONICE_SNAPSHOT="2013-05-26"
-TUXONICE_PV="$(replace_version_separator 2 '-')"
+TUXONICE_SNAPSHOT="2013-11-07"
+TUXONICE_PV="${PV}"
 
 TUXONICE_PATCH="tuxonice-for-linux-${TUXONICE_PV}-${TUXONICE_SNAPSHOT}.patch.bz2"
 TUXONICE_URI="http://tuxonice.net/downloads/all/${TUXONICE_PATCH}"
