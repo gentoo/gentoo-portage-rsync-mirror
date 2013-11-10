@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-9999.ebuild,v 1.1 2013/10/12 12:49:18 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-9999.ebuild,v 1.2 2013/11/10 15:03:54 tomwij Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 DOCS=( CHANGES README.rst )
 
 inherit distutils-r1
@@ -29,3 +29,13 @@ DEPEND="!app-misc/colordiff
 	sys-apps/less"
 
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}"/${PN}-0.9.2-disable-unimportant-failing-test.patch )
+
+python_test() {
+	python_export_best
+
+	${PYTHON} tests/test_cdiff.py || die "Unit tests failed."
+
+	./tests/regression.sh || die "Regression tests failed."
+}

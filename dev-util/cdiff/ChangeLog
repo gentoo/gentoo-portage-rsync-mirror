@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cdiff
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.22 2013/10/13 08:33:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/ChangeLog,v 1.23 2013/11/10 15:03:54 tomwij Exp $
+
+  10 Nov 2013; Tom Wijsman <TomWij@gentoo.org> cdiff-0.9.2.ebuild,
+  cdiff-0.9.3.ebuild, cdiff-9999.ebuild:
+  Sync up 0.9.2, 0.9.3 and 9999 versions, as they were not edited together;
+  changed src_test to python_test as requested by mgorny, fixes bug #489538.
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> cdiff-0.9.2.ebuild,
   cdiff-0.9.3.ebuild:

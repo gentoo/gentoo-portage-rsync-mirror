@@ -1,30 +1,38 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.9.2.ebuild,v 1.6 2013/10/13 08:33:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.9.2.ebuild,v 1.7 2013/11/10 15:03:54 tomwij Exp $
 
-EAPI=5
+EAPI="5"
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 DOCS=( CHANGES README.rst )
 
 inherit distutils-r1
 
+if [[ "${PV}" != *"9999"* ]] ; then
+	KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+else
+	KEYWORDS=""
+	EGIT_REPO_URI="https://github.com/ymattw/cdiff.git"
+	inherit git-r3
+fi
+
 DESCRIPTION="Colored, side-by-side diff terminal viewer."
 HOMEPAGE="https://github.com/ymattw/${PN}"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
 DEPEND="!app-misc/colordiff
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	sys-apps/less"
+
 RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-disable-unimportant-failing-test.patch )
 
-src_test() {
+python_test() {
 	python_export_best
 	${PYTHON} tests/test_cdiff.py || die "Unit tests failed."
 	./tests/regression.sh || die "Regression tests failed."
