@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.300 2013/11/06 17:57:09 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.301 2013/11/10 20:36:21 hwoarang Exp $
+
+  10 Nov 2013; Markos Chandras <hwoarang@gentoo.org> curl-7.33.0.ebuild:
+  media-video/rtmp[polarssl] is masked
 
 *curl-7.30.0 (06 Nov 2013)
 

@@ -1,6 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.43 2013/08/10 15:12:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.44 2013/11/10 20:43:20 hwoarang Exp $
+
+# Markos Chandras <hwoarang@gentoo.org> (10 Nov 2013)
+# Does not build with polarssl in the tree.
+# see eg 9e36f0475f011912ee0897aa6487d7b9c190600e
+# in polarssl upstream.
+# The polarssl use flag may go away if the rtmpdump
+# upstream will not fix this problem soon
+media-video/rtmpdump polarssl
 
 # Anthony G. Basile <blueness@gentoo.org> (10 Aug 2013)
 # mask php and mono bindings pending more testing

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.9.ebuild,v 1.2 2013/11/09 09:57:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.9.ebuild,v 1.3 2013/11/10 20:47:45 mattst88 Exp $
 
 EAPI=5
 
@@ -26,6 +26,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	rm -f py-compile
 	eautoreconf
+
+	# Remove tabs, bug 490928.
+	sed -i -e 's/	/    /' xcbgen/xtypes.py || die
 }
 
 src_configure() {
