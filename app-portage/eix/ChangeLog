@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.469 2013/10/13 01:22:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.470 2013/11/10 13:44:26 axs Exp $
+
+*eix-0.30.0 (10 Nov 2013)
+
+  10 Nov 2013; Ian Stakenvicius <axs@gentoo.org> +eix-0.30.0.ebuild:
+  version bump -- mainly internal changes; clang support no longer requires the
+  use of a use flag.
 
   13 Oct 2013; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   remove extra tools flag

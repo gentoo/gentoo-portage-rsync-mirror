@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.2-r1.ebuild,v 1.1 2013/03/05 12:56:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.0.2-r1.ebuild,v 1.2 2013/11/10 13:38:43 jlec Exp $
 
 EAPI=5
 
-inherit eutils qt4-r2
+inherit eutils multibuild qt4-r2
 
 MY_P="${PN}-${PV/_/-}"
 
@@ -32,7 +32,7 @@ src_prepare() {
 		QWT_INSTALL_LIBS = "${EPREFIX}/usr/$(get_libdir)"
 		QWT_INSTALL_HEADERS = "${EPREFIX}/usr/include/qwt6"
 		QWT_INSTALL_DOCS = "${EPREFIX}/usr/share/doc/${PF}"
-		QWT_CONFIG += QwtDll QwtPlot QwtWidgets QwtDesigner
+		QWT_CONFIG += QwtPlot QwtWidgets QwtDesigner
 		VERSION = ${PV/_*}
 		QWT_VERSION = ${PV/_*}
 		QWT_INSTALL_PLUGINS   = "${EPREFIX}/usr/$(get_libdir)/qt4/plugins/designer"
@@ -66,22 +66,48 @@ src_prepare() {
 	use svg && echo "QWT_CONFIG += QwtSvg" >> qwtconfig.pri
 
 	epatch "${FILESDIR}/${PN}-6.0.2-invalid-read.patch"
+
+	MULTIBUILD_VARIANTS=( shared )
+	use static-libs && MULTIBUILD_VARIANTS+=( static )
+
+	preparation() {
+		cp -rf "${S}" "${BUILD_DIR}" || die
+		[[ ${MULTIBUILD_VARIANT} == shared ]] && \
+			echo "QWT_CONFIG += QwtDll" >> "${BUILD_DIR}"/qwtconfig.pri
+		run_in_build_dir qt4-r2_src_prepare
+	}
+	multibuild_foreach_variant preparation
+}
+
+src_configure() {
+	multibuild_parallel_foreach_variant qt4-r2_src_configure
 }
 
 src_compile() {
+	compilation() {
+#		cd "${BUILD_DIR}" || die
+#		run_in_build_dir pwd
+#		run_in_build_dir ls -l
+#	run_in_build_dir default
+		cd "${BUILD_DIR}" || die
+		default
+	}
+#	multibuild_foreach_variant run_in_build_dir default
+	multibuild_foreach_variant compilation
+
 	building() {
 		# split compilation to allow parallel building
 		emake sub-src
 		emake
 	}
-	building
+#	building
 
-	if use static-libs; then
-		sed "/QwtDll/d" -i qwtconfig.pri || die
-		eqmake4
-		building
-		echo "CONFIG += QwtDll" >> qwtconfig.pri || die
-	fi
+#	if use static-libs; then
+#		sed "/QwtDll/d" -i qwtconfig.pri || die
+#		eqmake4
+#		building
+#		echo "QWT_CONFIG += QwtDll" >> qwtconfig.pri || die
+#	fi
 }
 
 src_test() {
@@ -93,7 +119,8 @@ src_test() {
 src_install () {
 	qt4-r2_src_install
 
-	use static-libs && dolib.a lib/libqwt.a
+#	use static-libs && dolib.so lib/*.so*
+	use static-libs && dolib.a lib/*.a
 
 	if use doc; then
 		dohtml -r doc/html/*
