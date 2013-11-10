@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.160 2013/08/01 19:43:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.161 2013/11/10 11:06:26 pacho Exp $
+
+*tracker-0.16.3 (10 Nov 2013)
+
+  10 Nov 2013; Pacho Ramos <pacho@gentoo.org> +tracker-0.16.3.ebuild,
+  -tracker-0.14.5.ebuild, -tracker-0.16.1.ebuild, metadata.xml:
+  Version bump, drop old, this is being only maintained by gnome team for a long
+  time.
 
 *tracker-0.16.2 (01 Aug 2013)
 

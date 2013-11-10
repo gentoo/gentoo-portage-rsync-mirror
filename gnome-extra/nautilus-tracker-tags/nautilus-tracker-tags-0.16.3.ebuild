@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/nautilus-tracker-tags-0.14.5.ebuild,v 1.1 2013/03/24 13:35:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-tracker-tags/nautilus-tracker-tags-0.16.3.ebuild,v 1.1 2013/11/10 11:05:17 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="tracker"
-GNOME_TARBALL_SUFFIX="xz"
 
 inherit gnome.org toolchain-funcs
 
@@ -16,12 +15,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-COMMON_DEPEND=">=app-misc/tracker-${PV}
-	>=dev-libs/glib-2.28:2
+COMMON_DEPEND="
+	~app-misc/tracker-${PV}
+	>=dev-libs/glib-2.35.1:2
 	>=gnome-base/nautilus-2.90
-	x11-libs/gtk+:3"
+	x11-libs/gtk+:3
+"
 RDEPEND="${COMMON_DEPEND}
-	!<app-misc/tracker-0.12.5-r1[nautilus]"
+	!<app-misc/tracker-0.12.5-r1[nautilus]
+"
 # Before tracker-0.12.5-r1, nautilus-tracker-tags was part of tracker
 DEPEND="${COMMON_DEPEND}"
 

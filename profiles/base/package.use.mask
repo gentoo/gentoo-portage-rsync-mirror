@@ -1,10 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.516 2013/10/30 20:27:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.517 2013/11/10 11:13:46 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Michał Górny <mgorny@gentoo.org> (10 Nov 2013)
+# (on behalf of python@)
+# USE=sandbox is not done properly in Gentoo and results in crippled
+# PyPy install that is not usable for non-sandbox clients (and there are
+# no real sandbox clients right now). Masked until the flag is
+# re-implemented or dropped. For more details, bug #429372.
+dev-python/pypy sandbox
 
 # Julian Ospald <hasufell@gentoo.org> (27 Oct 2013)
 # luajit is in ~arch, prepare for minetest stabilization
