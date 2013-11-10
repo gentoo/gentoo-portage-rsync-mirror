@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pympler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/ChangeLog,v 1.17 2013/09/23 17:42:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/ChangeLog,v 1.18 2013/11/10 09:43:59 jlec Exp $
+
+  10 Nov 2013; Justin Lecher <jlec@gentoo.org> -pympler-0.2.0.ebuild,
+  pympler-0.3.1.ebuild:
+  Always build serially, #490792
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> pympler-0.3.1.ebuild:
   Stable for ppc64, wrt bug #481896

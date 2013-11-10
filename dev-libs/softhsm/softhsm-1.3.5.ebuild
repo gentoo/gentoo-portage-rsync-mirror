@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/softhsm-1.3.3.ebuild,v 1.1 2012/08/14 19:43:10 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/softhsm-1.3.5.ebuild,v 1.1 2013/11/10 09:59:47 mschiff Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="A software PKCS#11 implementation"
 HOMEPAGE="http://www.opendnssec.org/"
@@ -24,6 +24,7 @@ DOCS=( AUTHORS NEWS README )
 src_configure() {
 	econf \
 		--disable-static \
+		--localstatedir=/var \
 		--with-botan="${EPREFIX}/usr/" \
 		$(use_enable amd64 64bit) \
 		$(use debug && echo "--with-loglevel=4")

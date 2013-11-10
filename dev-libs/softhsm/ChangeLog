@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/softhsm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/ChangeLog,v 1.10 2013/10/21 20:59:21 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/ChangeLog,v 1.11 2013/11/10 09:59:47 mschiff Exp $
+
+*softhsm-1.3.5 (10 Nov 2013)
+
+  10 Nov 2013; Marc Schiffbauer <mschiff@gentoo.org> -softhsm-1.3.3.ebuild,
+  +softhsm-1.3.5.ebuild:
+  Bump version. Remove old.
 
   21 Oct 2013; Marc Schiffbauer <mschiff@gentoo.org> softhsm-1.3.4.ebuild:
   Fix localstate dir so /var/lib/softhsm will be used

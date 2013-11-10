@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/pympler-0.3.1.ebuild,v 1.9 2013/09/23 17:42:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pympler/pympler-0.3.1.ebuild,v 1.10 2013/11/10 09:43:59 jlec Exp $
 
 EAPI=5
 
@@ -25,8 +25,9 @@ DEPEND="test? ( ${RDEPEND} )"
 
 S="${WORKDIR}"/${MY_P}
 
+DISTUTILS_NO_PARALLEL_BUILD=true
+
 python_prepare_all() {
-	use test && DISTUTILS_NO_PARALLEL_BUILD=true
 	rm pympler/util/bottle.py || die
 	sed \
 		-e '/import bottle/s:^.*$:import bottle:g' \

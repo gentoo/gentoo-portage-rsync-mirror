@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.10.18.ebuild,v 1.1 2013/11/09 09:15:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.10.18.ebuild,v 1.2 2013/11/10 09:52:45 jlec Exp $
 
 EAPI=5
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="25"
+K_GENPATCHES_VER="26"
 K_DEBLOB_AVAILABLE="1"
 inherit kernel-2 eutils
 detect_version

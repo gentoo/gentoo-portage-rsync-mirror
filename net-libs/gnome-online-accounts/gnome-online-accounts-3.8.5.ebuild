@@ -1,13 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.3.ebuild,v 1.2 2013/09/16 13:03:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.8.5.ebuild,v 1.1 2013/11/10 09:53:39 pacho Exp $
 
 EAPI="5"
+GCONF_DEBUG="yes"
 
 inherit gnome2
 
 DESCRIPTION="GNOME framework for accessing online accounts"
-HOMEPAGE="https://live.gnome.org/GnomeOnlineAccounts"
+HOMEPAGE="https://wiki.gnome.org/GnomeOnlineAccounts"
 
 LICENSE="LGPL-2+"
 SLOT="0"
@@ -29,7 +30,6 @@ RDEPEND="
 	net-libs/webkit-gtk:3
 	>=x11-libs/gtk+-3.5.1:3
 	x11-libs/pango
-
 	introspection? ( >=dev-libs/gobject-introspection-0.6.2 )
 	kerberos? (
 		app-crypt/gcr:0=
