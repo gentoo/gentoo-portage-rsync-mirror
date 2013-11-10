@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.14-r1.ebuild,v 1.1 2013/07/24 22:11:40 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.15.ebuild,v 1.1 2013/11/10 10:11:14 mschiff Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P="${P/_}"
 PKCS11_IUSE="+softhsm opensc external-hsm"
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-lang/perl
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=net-libs/ldns-1.6.12
+	net-libs/ldns
 	auditor? ( dev-lang/ruby[ssl] dev-ruby/dnsruby )
 	curl? ( net-misc/curl )
 	mysql? (

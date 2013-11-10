@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/CoverageTestRunner/CoverageTestRunner-1.9.ebuild,v 1.1 2012/10/06 23:28:09 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/CoverageTestRunner/CoverageTestRunner-1.10.ebuild,v 1.1 2013/11/10 10:26:01 mschiff Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.6:2.7"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils python
+inherit distutils-r1 python-r1
 
 MY_PN="python-coverage-test-runner"
 DESCRIPTION="fail Python program unit tests unless they test everything"
@@ -18,5 +18,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/coverage"
+DEPEND="${PYTHON_DEPS}
+	dev-python/coverage"
 RDEPEND="${DEPEND}"

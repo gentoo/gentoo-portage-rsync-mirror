@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/office-runner/office-runner-1.0.ebuild,v 1.2 2013/02/24 01:45:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/office-runner/office-runner-1.0.2.ebuild,v 1.1 2013/11/10 10:24:44 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 readme.gentoo
 
 DESCRIPTION="Lighthearted tool to temporarily inhibit GNOME's suspend on lid close behavior"
-HOMEPAGE="http://www.gnome.org/ http://www.hadess.net/search/label/office-runner"
+HOMEPAGE="http://www.hadess.net/search/label/office-runner"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -18,7 +18,7 @@ IUSE=""
 COMMON_DEPEND="
 	dev-libs/glib:2
 	>=gnome-base/gnome-settings-daemon-3.0
-	x11-libs/gtk+:3
+	>=x11-libs/gtk+-3.8:3
 "
 # requires systemd's org.freedesktop.login1 dbus service
 RDEPEND="${COMMON_DEPEND}
@@ -30,8 +30,14 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 "
 
+DOC_CONTENTS="${PN} inhibits suspend on lid close only for 10 minutes"
+
+src_install() {
+	gnome2_src_install
+	readme.gentoo_create_doc
+}
+
 pkg_postinst() {
 	gnome2_pkg_postinst
-
-	elog "Note: ${PN} inhibits suspend on lid close only for 10 minutes"
+	readme.gentoo_print_elog
 }

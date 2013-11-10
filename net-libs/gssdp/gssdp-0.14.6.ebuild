@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.14.4.ebuild,v 1.1 2013/08/01 18:44:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.14.6.ebuild,v 1.1 2013/11/10 10:15:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -37,6 +37,7 @@ src_prepare() {
 	# be free of use
 	sed 's/\(check_PROGRAMS.*\)test-functional$(EXEEXT)/\1/' \
 		-i "${S}"/tests/gtest/Makefile.in || die
+
 	use introspection && vala_src_prepare
 	gnome2_src_prepare
 }
