@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/cmdtest-0.5.ebuild,v 1.1 2012/10/07 00:35:56 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmdtest/cmdtest-0.10.ebuild,v 1.1 2013/11/10 10:32:06 mschiff Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2:2.6:2.7"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils python
+inherit distutils-r1
 
 DESCRIPTION="black box tests Unix command line tools"
 HOMEPAGE="http://liw.fi/cmdtest/"
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="
+	${PYTHON_DEPS}
 	dev-python/cliapp
 	dev-python/ttystatus
 "
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+src_compile() {
+	addwrite /proc/self/comm
+	distutils-r1_src_compile
 }

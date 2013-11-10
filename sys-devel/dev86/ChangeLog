@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/dev86
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.27 2013/02/25 11:39:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/ChangeLog,v 1.28 2013/11/10 10:56:18 ago Exp $
+
+*dev86-0.16.20 (10 Nov 2013)
+
+  10 Nov 2013; Agostino Sarubbo <ago@gentoo.org> +dev86-0.16.20.ebuild:
+  Version bump to 0.16.20
 
   25 Feb 2013; Agostino Sarubbo <ago@gentoo.org> dev86-0.16.19.ebuild:
   Stable for x86, wrt bug #457478
