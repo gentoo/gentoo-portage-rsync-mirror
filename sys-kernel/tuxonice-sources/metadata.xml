@@ -5,4 +5,7 @@
 	<upstream>
 		<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
 	</upstream>
+	<use>
+		<flag name='experimental'>Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".</flag>
+	</use>
 </pkgmetadata>

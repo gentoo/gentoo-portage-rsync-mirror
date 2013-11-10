@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.4_p1.ebuild,v 1.1 2013/11/09 01:26:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.4_p1-r1.ebuild,v 1.1 2013/11/09 23:04:08 radhermit Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -8,11 +8,10 @@ inherit eutils user flag-o-matic multilib autotools pam systemd versionator
 # Make it more portable between straight releases
 # and _p? releases.
 PARCH=${P/_}
-PARCH=${PARCH/6.4/6.3} # For 6.4 only
 
-HPN_PATCH="${PARCH}-hpnssh14v2.diff.gz"
-LDAP_PATCH="${PARCH/-/-lpk-}-0.3.14.patch.gz"
-X509_VER="7.6" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
+HPN_PATCH="${PN}-6.3p1-hpnssh14v2.diff.gz"
+LDAP_PATCH="${PN}-lpk-6.3p1-0.3.14.patch.gz"
+X509_VER="7.7" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.org/"
@@ -99,13 +98,10 @@ src_prepare() {
 	# don't break .ssh/authorized_keys2 for fun
 	sed -i '/^AuthorizedKeysFile/s:^:#:' sshd_config || die
 
-	# bug 490728
-	#epatch "${FILESDIR}"/${PN}-6.3_p1-aes-gcm.patch
-
 	epatch "${FILESDIR}"/${PN}-5.9_p1-sshd-gssapi-multihomed.patch #378361
 	if use X509 ; then
 		pushd .. >/dev/null
-		epatch "${FILESDIR}"/${PN}-6.3_p1-x509-glue.patch
+		epatch "${FILESDIR}"/${PN}-6.4_p1-x509-glue.patch
 		popd >/dev/null
 		epatch "${WORKDIR}"/${X509_PATCH%.*}
 		epatch "${FILESDIR}"/${PN}-6.3_p1-x509-hpn14v2-glue.patch
