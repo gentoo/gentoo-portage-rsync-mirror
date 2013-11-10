@@ -1,0 +1,22 @@
+diff -burN gnome-control-center-3.10.1/panels/background/Makefile.am gnome-control-center-3.10.1.new/panels/background/Makefile.am
+--- gnome-control-center-3.10.1/panels/background/Makefile.am	2013-10-11 06:19:22.000000000 -0500
++++ gnome-control-center-3.10.1.new/panels/background/Makefile.am	2013-10-24 13:38:07.801957723 -0500
+@@ -38,7 +38,9 @@
+ 	bg-wallpapers-source.c		\
+ 	bg-wallpapers-source.h		\
+ 	bg-colors-source.c		\
+-	bg-colors-source.h
++	bg-colors-source.h		\
++	bg-flickr-source.c		\
++	bg-flickr-source.h
+ 
+ libbackground_la_SOURCES =		\
+ 	cc-background-panel.c		\
+@@ -47,6 +49,7 @@
+ libbackground_la_LIBADD = $(PANEL_LIBS) $(BACKGROUND_PANEL_LIBS) libbackground-chooser.la
+ 
+ if WITH_LIBSOCIALWEB
++libbackground_chooser_la_LIBADD = $(SOCIALWEB_LIBS)
+ libbackground_la_SOURCES += bg-flickr-source.c bg-flickr-source.h
+ INCLUDES += $(SOCIALWEB_CFLAGS)
+ libbackground_la_LIBADD += $(SOCIALWEB_LIBS)

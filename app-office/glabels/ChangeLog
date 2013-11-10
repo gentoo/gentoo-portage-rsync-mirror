@@ -1,6 +1,11 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.70 2013/04/07 10:49:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.71 2013/11/10 08:43:25 pacho Exp $
+
+*glabels-3.2.0 (10 Nov 2013)
+
+  10 Nov 2013; Pacho Ramos <pacho@gentoo.org> +glabels-3.2.0.ebuild:
+  Version bump
 
   07 Apr 2013; Gilles Dartiguelongue <eva@gentoo.org> glabels-3.0.1-r1.ebuild:
   Apply team policy.

@@ -1,12 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-2.1.2-r3.ebuild,v 1.8 2012/11/06 16:59:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-2.1.2-r3.ebuild,v 1.9 2013/11/10 08:31:46 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="test_all"
 
+RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_DOCDIR="doc"
 RUBY_FAKEGEM_EXTRADOC="README CHANGES"
 

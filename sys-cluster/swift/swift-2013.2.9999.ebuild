@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2013.2.9999.ebuild,v 1.2 2013/10/22 18:05:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2013.2.9999.ebuild,v 1.3 2013/11/10 08:51:46 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -64,6 +64,12 @@ src_prepare() {
 	sed -i 's/xattr/pyxattr/g' "${S}/tools/pip-requires"
 }
 
+src_test () {
+	# https://bugs.launchpad.net/swift/+bug/1249727
+	find . \( -name test_wsgi.py -o -name test_locale.py \) -delete || die
+	sh .unittests || die
+}
+
 python_install() {
 	distutils-r1_python_install
 	keepdir /etc/swift
@@ -109,19 +115,3 @@ pkg_postinst() {
 	elog "  * cd /etc/swift"
 	elog "  * openssl req -new -x509 -nodes -out cert.crt -keyout cert.key"
 }
-
-#src_install()
-#{
-#	distutils_src_install
-#
-#	dodir "/var/run/swift"
-#
-#	if use proxy-server; then
-#		newinitd "${FILESDIR}/swift-proxy-server.initd" swift-proxy-server
-#	fi
-#
-#	if use storage-server; then
-#		newinitd "${FILESDIR}/swift-storage-server.initd" swift-storage-server
-#		newconfd "${FILESDIR}/swift-storage-server.confd" swift-storage-server
-#	fi
-#}
