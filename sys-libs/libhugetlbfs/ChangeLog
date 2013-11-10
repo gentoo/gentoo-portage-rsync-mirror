@@ -1,6 +1,18 @@
 # ChangeLog for sys-libs/libhugetlbfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/ChangeLog,v 1.9 2013/05/22 05:52:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/ChangeLog,v 1.12 2013/11/10 03:38:47 radhermit Exp $
+
+  10 Nov 2013; Tim Harder <radhermit@gentoo.org> libhugetlbfs-2.16.ebuild:
+  Fix error handling for tests build failure.
+
+  10 Nov 2013; Tim Harder <radhermit@gentoo.org> -libhugetlbfs-2.6.ebuild,
+  -libhugetlbfs-2.9.ebuild, -libhugetlbfs-2.15.ebuild:
+  Remove old.
+
+*libhugetlbfs-2.17 (10 Nov 2013)
+
+  10 Nov 2013; Tim Harder <radhermit@gentoo.org> +libhugetlbfs-2.17.ebuild:
+  Version bump, add static-libs use flag.
 
 *libhugetlbfs-2.16 (22 May 2013)
 

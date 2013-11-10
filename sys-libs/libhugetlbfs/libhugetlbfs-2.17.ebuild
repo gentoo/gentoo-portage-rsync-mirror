@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/libhugetlbfs-2.6.ebuild,v 1.5 2012/03/07 07:10:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/libhugetlbfs-2.17.ebuild,v 1.1 2013/11/10 03:36:05 radhermit Exp $
 
-EAPI=2
+EAPI="4"
+
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="easy hugepage access"
@@ -12,11 +13,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
-IUSE=""
-
-DEPEND=""
+IUSE="static-libs"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.9-build.patch #332517
 	epatch "${FILESDIR}"/${PN}-2.6-noexec-stack.patch
 	epatch "${FILESDIR}"/${PN}-2.6-fixup-testsuite.patch
 	sed -i \
@@ -33,19 +33,15 @@ src_prepare() {
 	fi
 }
 
-src_configure() {
-	:
-}
-
 src_compile() {
-	tc-export AR CC
-	emake libs tools || die
+	tc-export AR
+	emake CC="$(tc-getCC)" libs tools
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	dodoc HOWTO NEWS README
-	rm "${D}"/usr/bin/oprofile*
+	default
+	use static-libs || rm -f "${D}"/usr/$(get_libdir)/*.a
+	rm "${D}"/usr/bin/oprofile* || die
 }
 
 src_test_alloc_one() {
