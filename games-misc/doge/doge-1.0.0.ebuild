@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/doge-0.9.0.ebuild,v 1.1 2013/11/05 18:14:44 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/doge-1.0.0.ebuild,v 1.1 2013/11/10 19:58:48 vikraman Exp $
 
 EAPI=5
 
@@ -18,4 +18,4 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND} sys-process/procps"
