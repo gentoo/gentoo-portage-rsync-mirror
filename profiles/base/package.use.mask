@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.517 2013/11/10 11:13:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.518 2013/11/10 22:59:17 chithanh Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -437,10 +437,6 @@ net-dns/pdnsd isdn urandom
 =dev-db/mysql-5.1.51* debug
 =dev-db/mysql-5.1.52* debug
 =dev-db/mysql-5.1.53* debug
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
-# sys-devel/llvm is not keyworded on many arches, bug #320221
-media-libs/mesa llvm
 
 # Justin Lecher <jlec@gentoo.org> (17 Nov 2010)
 # Upstream didn't release patches for aria yet

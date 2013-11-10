@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.607 2013/11/10 11:13:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.608 2013/11/10 22:59:17 chithanh Exp $
+
+  10 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Drop mesa[llvm] mask which lives in individual arch profiles now.
 
   10 Nov 2013; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Mask USE=sandbox on pypy wrt bug #429372.
