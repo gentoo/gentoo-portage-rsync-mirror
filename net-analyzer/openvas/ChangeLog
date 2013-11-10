@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/openvas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.11 2013/09/15 09:38:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas/ChangeLog,v 1.12 2013/11/10 18:42:52 hanno Exp $
+
+*openvas-6_p1 (10 Nov 2013)
+
+  10 Nov 2013; Hanno Boeck <hanno@gentoo.org> +openvas-6_p1.ebuild:
+  Raise dependencies in meta-package for security vulnerabilities
+  CVE-2013-6765, CVE-2013-6766.
 
   15 Sep 2013; Markus Meier <maekke@gentoo.org> openvas-6.ebuild:
   add ~arm, bug #389453

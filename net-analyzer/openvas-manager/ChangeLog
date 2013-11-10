@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/openvas-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/ChangeLog,v 1.5 2013/09/15 09:37:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-manager/ChangeLog,v 1.6 2013/11/10 18:34:10 hanno Exp $
+
+*openvas-manager-4.0.4 (10 Nov 2013)
+
+  10 Nov 2013; Hanno Boeck <hanno@gentoo.org> +openvas-manager-4.0.4.ebuild:
+  Bump.
 
   15 Sep 2013; Markus Meier <maekke@gentoo.org> openvas-manager-4.0.2.ebuild:
   add ~arm, bug #389453
@@ -23,4 +28,3 @@
   09 Oct 2011; Hanno Boeck <hanno@gentoo.org> +openvas-manager-2.0.4.ebuild,
   +files/openvasmd, +metadata.xml:
   Initial commit of openvas-manager, part of openvas 4.
-
