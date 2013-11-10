@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.2.ebuild,v 1.1 2013/11/04 21:54:51 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.2.ebuild,v 1.2 2013/11/10 14:17:26 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_2 )
@@ -24,6 +24,7 @@ IUSE="python ruby"
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 	>=sys-libs/libselinux-${SELNX_VER}
 	dev-libs/ustr
+	sys-process/audit
 	ruby? (
 		$(ruby_implementations_depend)
 	)"

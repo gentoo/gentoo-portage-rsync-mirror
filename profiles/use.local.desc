@@ -1222,10 +1222,6 @@ dev-games/crystalspace:cal3d - include support for skeleton animation
 dev-games/crystalspace:cegui - include support for Crazy Eddie GUI
 dev-games/crystalspace:cg - NVIDIA toolkit plugin
 dev-games/crystalspace:ode - include support for Open Dynamics Engine
-dev-games/gigi:devil - Use DevIL instead of libpng/libjpeg/libtiff
-dev-games/gigi:eve - Add experimental eve support
-dev-games/gigi:ogre - Add support for dev-games/ogre
-dev-games/gigi:ois - Add support for dev-games/ois
 dev-games/guichan:allegro - Build the Allegro frontend
 dev-games/mygui:linguas_ru - Install some additional russian docs if 'doc' useflag enabled
 dev-games/mygui:plugins - Build MyGUI plugins
