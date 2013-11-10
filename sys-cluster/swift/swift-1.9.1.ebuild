@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.9.1.ebuild,v 1.1 2013/08/13 16:07:23 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.9.1.ebuild,v 1.2 2013/11/10 07:02:22 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -49,11 +49,6 @@ CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
 
 PATCHES=(
 )
-#	"${FILESDIR}/CVE-2013-2161.patch"
-
-src_test () {
-	sh .unittests || die
-}
 
 pkg_setup() {
 	enewuser swift
@@ -64,6 +59,12 @@ src_prepare() {
 	sed -i 's/xattr/pyxattr/g' "${S}/swift.egg-info/requires.txt"
 	sed -i 's/xattr/pyxattr/g' "${S}/tools/pip-requires"
 	distutils-r1_python_prepare_all
+}
+
+src_test () {
+	# https://bugs.launchpad.net/swift/+bug/1249727
+	find . \( -name test_wsgi.py -o -name test_locale.py \) -delete || die
+	sh .unittests || die
 }
 
 python_install() {
@@ -111,19 +112,3 @@ pkg_postinst() {
 	elog "  * cd /etc/swift"
 	elog "  * openssl req -new -x509 -nodes -out cert.crt -keyout cert.key"
 }
-
-#src_install()
-#{
-#	distutils_src_install
-#
-#	dodir "/var/run/swift"
-#
-#	if use proxy-server; then
-#		newinitd "${FILESDIR}/swift-proxy-server.initd" swift-proxy-server
-#	fi
-#
-#	if use storage-server; then
-#		newinitd "${FILESDIR}/swift-storage-server.initd" swift-storage-server
-#		newconfd "${FILESDIR}/swift-storage-server.confd" swift-storage-server
-#	fi
-#}
