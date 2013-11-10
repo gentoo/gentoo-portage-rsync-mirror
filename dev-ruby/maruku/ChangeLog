@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/maruku
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.27 2013/09/12 06:22:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.28 2013/11/10 07:36:28 graaff Exp $
+
+*maruku-0.7.0 (10 Nov 2013)
+
+  10 Nov 2013; Hans de Graaff <graaff@gentoo.org> +maruku-0.7.0.ebuild,
+  metadata.xml:
+  Version bump.
 
 *maruku-0.6.1-r1 (12 Sep 2013)
 
