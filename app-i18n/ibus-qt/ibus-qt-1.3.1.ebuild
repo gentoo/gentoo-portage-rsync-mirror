@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.1.ebuild,v 1.9 2013/03/25 11:23:46 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ibus-qt-1.3.1.ebuild,v 1.10 2013/11/11 08:14:10 jlec Exp $
 
 EAPI="5"
 inherit cmake-utils eutils multilib
@@ -12,7 +12,7 @@ SRC_URI="http://ibus.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 RDEPEND=">=app-i18n/ibus-1.3.7
@@ -30,7 +30,7 @@ S="${WORKDIR}/${MY_P}"
 
 DOCS="AUTHORS README TODO"
 
-mycmakeargs="-DLIBDIR=$(get_libdir) -DDOCDIR=/usr/share/doc/${PF} all"
+mycmakeargs="-DLIBDIR=$(get_libdir) -DDOCDIR=${EPREFIX}/usr/share/doc/${PF} all"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.2.0.20091217-doc.patch" \
