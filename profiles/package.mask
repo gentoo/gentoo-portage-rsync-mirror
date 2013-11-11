@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15197 2013/11/11 13:31:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15198 2013/11/11 16:23:23 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -175,15 +175,6 @@ www-apache/mod_spdy
 # DO NOT REMOVE OLDER VERSIONS
 # temporarily disabled as it also breaks s390 keywording
 #<net-nds/openldap-2.4.35
-
-# Ian Stakenvicius <axs@gentoo.org> (20 Sep 2013)
-# on behalf of mozilla@gentoo.org
-# Severely outdated, no interest in maintaining,
-# only a matter of time before it breaks,
-# major QA issues with newer versions.
-# See bug #442122 for discussion
-# Masked for removal in 30 days
-www-plugins/mozplugger
 
 # Tom Wijsman <TomWij@gentoo.org> (18 Sep 2013)
 # Temporarily masked due to QA issue during attempts to unbundle dependencies;

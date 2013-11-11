@@ -6639,7 +6639,6 @@ www-plugins/gnash:vaapi - Enables VAAPI (Video Acceleration API) for hardware de
 www-plugins/google-talkplugin:system-libCg - Use system libCg instead of bundled one
 www-plugins/lightspark:gles - Replace default OpenGL renderer with GLESv2
 www-plugins/lightspark:rtmp - Enable Real Time Messaging Protocol using librtmp
-www-plugins/mozplugger:xembed - Build with xembed always enabled.
 www-servers/apache:apache2_modules_access_compat - Group authorizations based on host (name or IP address). Available as a compatibility module with previous versions.
 www-servers/apache:apache2_modules_authn_core - Provides core authentication capabilities common to all authentication providers (functionality provided by authn_alias in previous versions).
 www-servers/apache:apache2_modules_authz_core - Provides core authorization capabilities to various authorization/authorization modules, such as authn_file and authz_user.

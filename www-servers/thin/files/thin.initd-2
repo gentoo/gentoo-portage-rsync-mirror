@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/files/thin.initd-2,v 1.1 2013/11/11 14:19:30 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/files/thin.initd-2,v 1.2 2013/11/11 16:29:03 a3li Exp $
 
 SERVER=${SVCNAME#*.}
 if [ ${SERVER} != thin ]; then
@@ -53,7 +53,7 @@ buildargs() {
 action() {
 	checkconfig || return 1
 
-	[ ${DO_BUNDLER} -ne 0 ] && RUBY="${RUBY} bundle exec"
+	[ ${DO_BUNDLER} -ne 0 ] && RUBY="${RUBY} /usr/bin/bundle exec"
 
 	if [ ${SERVER} = thin ]; then
 		ebegin "$2 all thin servers in ${CONFIG}"
