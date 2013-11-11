@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/cri-2.4.0.ebuild,v 1.1 2013/09/02 06:08:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/cri-2.4.0-r1.ebuild,v 1.1 2013/11/11 12:52:58 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_EXTRADOC="NEWS.md README.md"
 
@@ -21,5 +21,5 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/colored-1.2"
 
-ruby_add_bdepend "doc? ( dev-ruby/yard )"
-ruby_add_bdepend "test? ( dev-ruby/yard dev-ruby/minitest )"
+ruby_add_bdepend "doc? ( dev-ruby/yard )
+	test? ( dev-ruby/yard dev-ruby/minitest )"

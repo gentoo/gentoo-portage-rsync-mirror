@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/require_relative-1.0.3.ebuild,v 1.3 2012/05/12 07:26:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/require_relative-1.0.3-r1.ebuild,v 1.1 2013/11/11 12:38:21 mrueg Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ree18 jruby ruby19"
+EAPI=5
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 # Documentation can be generated using rocco but that is not available
 # yet.
