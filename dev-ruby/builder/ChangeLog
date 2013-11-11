@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.84 2013/11/10 08:31:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.85 2013/11/11 14:12:16 jer Exp $
+
+  11 Nov 2013; Jeroen Roovers <jer@gentoo.org> builder-3.0.4.ebuild:
+  Stable for HPPA (bug #490912).
 
   10 Nov 2013; Hans de Graaff <graaff@gentoo.org> builder-2.1.2-r3.ebuild:
   Stop building documentation since it is no longer compatible with recent

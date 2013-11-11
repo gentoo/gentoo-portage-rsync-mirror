@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.164 2013/10/26 09:31:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.165 2013/11/11 14:16:36 mgorny Exp $
+
+*emul-linux-x86-baselibs-20131008-r4 (11 Nov 2013)
+
+  11 Nov 2013; Michał Górny <mgorny@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r4.ebuild,
+  -emul-linux-x86-baselibs-20131008-r3.ebuild:
+  Make it possible to satisfy the emul-linux package with virtual/udev-204.
 
 *emul-linux-x86-baselibs-20131008-r3 (26 Oct 2013)
 

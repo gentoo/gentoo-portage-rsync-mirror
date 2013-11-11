@@ -1,6 +1,12 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.56 2013/10/08 14:23:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.57 2013/11/11 14:06:39 mgorny Exp $
+
+*udev-204 (11 Nov 2013)
+
+  11 Nov 2013; Michał Górny <mgorny@gentoo.org> +udev-204.ebuild:
+  Add a new virtual for multilib systemd-204. Bump udev/eudev deps to EAPI=5
+  versions to avoid false MULTILIB_USEDEP match.
 
   08 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> udev-206-r3.ebuild:
   Revert back to ~hppa wrt #487238
