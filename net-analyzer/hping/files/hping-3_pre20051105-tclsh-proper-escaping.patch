@@ -1,7 +1,7 @@
 Fix for https://bugs.gentoo.org/show_bug.cgi?id=486664
 
---- configure.orig	2013-11-11 18:42:29.343333615 +0400
-+++ configure	2013-11-11 18:43:04.869336711 +0400
+--- a/configure
++++ b/configure
 @@ -65,10 +65,10 @@
  do
  	for TCLVER_TRY in "8.6" "8.5" "8.4" "8.3" "8.2" "8.1" "8.0"

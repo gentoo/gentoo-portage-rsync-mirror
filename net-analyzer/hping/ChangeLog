@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.61 2013/11/11 14:53:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.62 2013/11/11 15:12:29 jer Exp $
+
+  11 Nov 2013; Jeroen Roovers <jer@gentoo.org>
+  files/hping-3_pre20051105-tclsh-proper-escaping.patch:
+  Clean up patch.
 
 *hping-3_pre20051105-r5 (11 Nov 2013)
 
