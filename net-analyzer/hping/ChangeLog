@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.60 2013/10/01 15:10:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.61 2013/11/11 14:53:16 pinkbyte Exp $
+
+*hping-3_pre20051105-r5 (11 Nov 2013)
+
+  11 Nov 2013; Sergey Popov <pinkbyte@gentoo.org>
+  -hping-3_pre20051105-r4.ebuild, +hping-3_pre20051105-r5.ebuild,
+  +files/hping-3_pre20051105-tclsh-proper-escaping.patch:
+  Revision bump: fix escaping in configure script wrt bug #486664. Drop old
+  revision
 
   01 Oct 2013; Jeroen Roovers <jer@gentoo.org> files/bytesex.h.patch:
   Clean up one more patch.

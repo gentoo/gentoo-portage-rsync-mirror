@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r4.ebuild,v 1.1 2013/10/01 15:08:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r5.ebuild,v 1.1 2013/11/11 14:53:16 pinkbyte Exp $
 
 EAPI=5
 
@@ -29,7 +29,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-tcl.patch \
 		"${FILESDIR}"/${P}-ldflags.patch \
 		"${FILESDIR}"/${P}-libtcl.patch \
-		"${FILESDIR}"/${P}-scan-overflow.patch
+		"${FILESDIR}"/${P}-scan-overflow.patch \
+		"${FILESDIR}"/${P}-tclsh-proper-escaping.patch # bug #486664
 
 	# Correct hard coded values
 	sed -i Makefile.in \
@@ -60,8 +61,7 @@ src_compile() {
 		"CFLAGS=${CFLAGS}" \
 		"AR=$(tc-getAR)" \
 		"RANLIB=$(tc-getRANLIB)" \
-		"LIBDIR=$(get_libdir)" \
-		|| die "emake failed"
+		"LIBDIR=$(get_libdir)"
 }
 
 src_install () {
@@ -71,5 +71,5 @@ src_install () {
 
 	newman docs/hping3.8 hping.8
 
-	dodoc INSTALL NEWS README TODO AUTHORS BUGS CHANGES
+	dodoc AUTHORS BUGS CHANGES INSTALL NEWS README TODO
 }
