@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.25 2013/10/19 22:54:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.26 2013/11/11 20:05:37 tomwij Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b +cdio doc-pdf dvb +dvd +enca encode +iconv jack joystick
-jpeg ladspa lcms +libass libcaca libguess lirc lua luajit mng +mp3 -openal +opengl oss
+jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mp3 -openal +opengl oss
 portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vaapi
 vcd vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
@@ -86,7 +86,6 @@ RDEPEND+="
 		!luajit? ( >=dev-lang/lua-5.1 )
 		luajit? ( dev-lang/luajit:2 )
 	)
-	mng? ( media-libs/libmng )
 	mp3? ( media-sound/mpg123 )
 	openal? ( >=media-libs/openal-1.13 )
 	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
@@ -229,7 +228,7 @@ src_configure() {
 	# Codecs #
 	##########
 	use mp3 || myconf+=" --disable-mpg123"
-	uses="jpeg mng"
+	uses="jpeg"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done

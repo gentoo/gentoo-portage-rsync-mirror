@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.9_pre2.ebuild,v 1.1 2013/10/04 10:15:06 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/evas/evas-1.7.9.ebuild,v 1.1 2013/11/11 20:22:43 tommy Exp $
 
 EAPI="5"
 
@@ -9,8 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_URI_APPEND=${PN}
 	EGIT_BRANCH=${PN}-1.7
 else
-	#SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
-	SRC_URI="http://download.enlightenment.org/pre-releases/efl-${PV/_pre2}/${P/_pre2}.tar.bz2 -> ${P}.tar.bz2"
+	SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 	EKEY_STATE="snap"
 fi
 
@@ -22,7 +21,7 @@ HOMEPAGE="http://trac.enlightenment.org/e/wiki/Evas"
 LICENSE="BSD-2"
 IUSE="altivec bidi +bmp directfb +eet fbcon +fontconfig gles gif +ico +jpeg mmx opengl +png +ppm +psd sse sse3 static-libs tga tiff wayland X xcb xpm"
 
-RDEPEND=">=dev-libs/eina-1.7.8
+RDEPEND=">=dev-libs/eina-1.7.9
 	>=media-libs/freetype-2.3.9
 	fontconfig? ( media-libs/fontconfig )
 	gles? ( media-libs/mesa[gallium,gles2] )
@@ -46,8 +45,6 @@ RDEPEND=">=dev-libs/eina-1.7.8
 		) )
 	eet? ( >=dev-libs/eet-1.7.8 )"
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/${P/_pre2}
 
 src_prepare() {
 	sed -i "s:1.7.9:1.7.8:g" configure.ac

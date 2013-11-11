@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.38 2013/11/03 13:45:08 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.39 2013/11/11 20:05:37 tomwij Exp $
+
+  11 Nov 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
+  Removed support for mng from 9999 as upstream removed support for it, proxied
+  commit for Nikoli.
 
   03 Nov 2013; Tom Wijsman <TomWij@gentoo.org> -mpv-0.1.6.ebuild:
   Removed 0.1.6, proxied commit for Nikoli.
