@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.55 2012/11/28 15:54:24 haubi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.56 2013/11/11 09:35:34 haubi Exp $
+
+  11 Nov 2013; Michael Haubenwallner <haubi@gentoo.org>
+  oracle-instantclient-basic-11.2.0.3.ebuild:
+  Add elog message for not installing sqlnet.ora, bug#465252.
 
   28 Nov 2012; Michael Haubenwallner <haubi@gentoo.org>
   oracle-instantclient-basic-11.2.0.3.ebuild:

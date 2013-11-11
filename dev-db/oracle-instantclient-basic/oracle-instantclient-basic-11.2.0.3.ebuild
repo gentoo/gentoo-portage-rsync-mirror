@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.11 2012/11/28 15:54:24 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-11.2.0.3.ebuild,v 1.12 2013/11/11 09:35:34 haubi Exp $
 
 EAPI="4"
 
@@ -180,6 +180,16 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog "${P} does not provide an sqlnet.ora"
+	elog "configuration file, redirecting oracle diagnostics for database-"
+	elog "and network-issues into ~USER/oradiag_USER/ instead."
+	elog "It should be safe to ignore this message in sqlnet.log there:"
+	elog "   Directory does not exist for read/write [ORACLE_HOME/client/log] []"
+	elog "See https://bugs.gentoo.org/show_bug.cgi?id=465252 for reference."
+	elog "If you want to directly analyse low-level debug info or don't want"
+	elog "to see it at all, so you really need an sqlnet.ora file, please"
+	elog "consult http://search.oracle.com/search/search?q=sqlnet.ora"
+	elog ""
 	elog "TNS_ADMIN has been set to ${EROOT}etc/oracle by default,"
 	elog "put your tnsnames.ora there or configure TNS_ADMIN"
 	elog "to point to your user specific configuration."
