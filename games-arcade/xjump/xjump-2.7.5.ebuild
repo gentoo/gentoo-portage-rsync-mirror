@@ -1,15 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.12 2010/10/12 04:44:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xjump/xjump-2.7.5.ebuild,v 1.13 2013/11/11 18:45:46 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
-DEBIAN_PATCH="1.2"
+DEBIAN_PATCH="6.1"
 DESCRIPTION="An X game where one tries to jump up as many levels as possible."
 HOMEPAGE="http://packages.debian.org/stable/games/xjump"
 SRC_URI="mirror://debian/pool/main/x/${PN}/${PN}_${PV}.orig.tar.gz
-	mirror://debian/pool/main/x/${PN}/${PN}_${PV}-${DEBIAN_PATCH}.diff.gz"
+	mirror://debian/pool/main/x/${PN}/${PN}_${PV}-${DEBIAN_PATCH}.debian.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -31,8 +31,8 @@ src_prepare() {
 	HISCORE_FILENAME=xjump.hiscores
 	HISCORE_FILE="${GAMES_STATEDIR}/${HISCORE_FILENAME}"
 
-	epatch "${WORKDIR}/${PN}_${PV}-${DEBIAN_PATCH}.diff"
-	epatch "${S}/debian/patches/"*.dpatch \
+	epatch \
+		"${WORKDIR}"/debian/patches/0*.patch \
 		"${FILESDIR}"/${P}-ldflags.patch
 
 	# set up where we will keep the highscores file:
@@ -41,17 +41,16 @@ src_prepare() {
 		-e "/^CFLAGS/d" \
 		-e "s,/var/games/xjump,${GAMES_STATEDIR}," \
 		-e "s,/record,/${HISCORE_FILENAME}," \
-		Makefile \
-		|| die "sed failed"
+		Makefile || die
 }
 
 src_install() {
-	dogamesbin xjump || die "dogamesbin failed"
+	dogamesbin xjump
 	dodoc README.euc
 
 	# Set up the hiscores file:
 	dodir "${GAMES_STATEDIR}"
 	touch "${D}/${HISCORE_FILE}"
-	fperms 660 "${HISCORE_FILE}" || die "setting permissions failed"
+	fperms 660 "${HISCORE_FILE}"
 	prepgamesdirs
 }
