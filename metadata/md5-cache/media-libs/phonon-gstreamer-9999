@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=media-libs/gstreamer:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.6.0 >=dev-qt/qtcore-4.6.0:4[glib] >=dev-qt/qtgui-4.6.0:4[glib] >=dev-qt/qtopengl-4.6.0:4 virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 ) >=dev-util/automoc-0.9.87 virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=media-libs/gstreamer:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.7.0[qt4?,qt5?] qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtgui:4[glib] dev-qt/qtopengl:4 ) qt5? ( dev-qt/qtcore:5[glib] dev-qt/qtgui:5[glib] dev-qt/qtopengl:5 ) virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 ) qt4? ( >=dev-util/automoc-0.9.87 ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Phonon GStreamer backend
-EAPI=4
+EAPI=5
 HOMEPAGE=https://projects.kde.org/projects/kdesupport/phonon/phonon-gstreamer
-IUSE=alsa debug +network
+IUSE=alsa debug +network +qt4 qt5
 LICENSE=LGPL-2.1
-RDEPEND=media-libs/gstreamer:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.6.0 >=dev-qt/qtcore-4.6.0:4[glib] >=dev-qt/qtgui-4.6.0:4[glib] >=dev-qt/qtopengl-4.6.0:4 virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 )
+RDEPEND=media-libs/gstreamer:0.10 media-plugins/gst-plugins-meta:0.10[alsa?,ogg,vorbis] >=media-libs/phonon-4.7.0[qt4?,qt5?] qt4? ( dev-qt/qtcore:4[glib] dev-qt/qtgui:4[glib] dev-qt/qtopengl:4 ) qt5? ( dev-qt/qtcore:5[glib] dev-qt/qtgui:5[glib] dev-qt/qtopengl:5 ) virtual/opengl network? ( media-plugins/gst-plugins-soup:0.10 )
+REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	git-2	2027b81a576527fa16bece425941e094	git-r3	536297c3f55d49069f6d2785b061e4d9	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=b6374695cd535991af22beb87a3d0828
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	git-r3	536297c3f55d49069f6d2785b061e4d9	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=0b8c6dc67f75341569d58acfbd81cbed

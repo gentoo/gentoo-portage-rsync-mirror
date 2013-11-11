@@ -1,0 +1,30 @@
+commit cf441af677beade70036453a6480d77d7e702346
+Author: Rex Dieter <rdieter@math.unl.edu>
+Date:   Tue Nov 5 20:15:03 2013 -0600
+
+    fix rpath handling
+    
+    REVIEW: 113649
+
+diff --git a/cmake/FindPhononInternal.cmake b/cmake/FindPhononInternal.cmake
+index b48bfaf..3245e9b 100644
+--- a/cmake/FindPhononInternal.cmake
++++ b/cmake/FindPhononInternal.cmake
+@@ -217,10 +217,14 @@ endif(APPLE)
+ # RPATH directories outside the current CMAKE_BINARY_DIR and also the library 
+ # install directory. Alex
+ set(CMAKE_INSTALL_RPATH_USE_LINK_PATH  TRUE)
+-list(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${LIB_INSTALL_DIR}" _isSystemPlatformLibDir)
+-list(FIND CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "${LIB_INSTALL_DIR}" _isSystemCxxLibDir)
++set(_abs_LIB_INSTALL_DIR "${LIB_INSTALL_DIR}")
++if (NOT IS_ABSOLUTE "${_abs_LIB_INSTALL_DIR}")
++   set(_abs_LIB_INSTALL_DIR "${CMAKE_INSTALL_PREFIX}/${LIB_INSTALL_DIR}")
++endif()
++list(FIND CMAKE_PLATFORM_IMPLICIT_LINK_DIRECTORIES "${_abs_LIB_INSTALL_DIR}" _isSystemPlatformLibDir)
++list(FIND CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "${_abs_LIB_INSTALL_DIR}" _isSystemCxxLibDir)
+ if("${_isSystemPlatformLibDir}" STREQUAL "-1" AND "${_isSystemCxxLibDir}" STREQUAL "-1")
+-   set(CMAKE_INSTALL_RPATH "${LIB_INSTALL_DIR}")
++   set(CMAKE_INSTALL_RPATH "${_abs_LIB_INSTALL_DIR}")
+ endif("${_isSystemPlatformLibDir}" STREQUAL "-1" AND "${_isSystemCxxLibDir}" STREQUAL "-1")
+ 
+ 

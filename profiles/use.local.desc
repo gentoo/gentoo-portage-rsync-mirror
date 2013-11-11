@@ -4500,12 +4500,10 @@ net-im/ekg2:sqlite - Support logging messages into SQLite2 database. If 'sqlite3
 net-im/ekg2:sqlite2 - Prefer SQLite2 over SQLite3 (if USE=sqlite is set).
 net-im/ekg2:sqlite3 - Support logging messages into SQLite3 database. If 'sqlite' is set too, SQLite3 will be used.
 net-im/ekg2:ssl - Enable the complete SSL/TLS support through OpenSSL. This also enables the 'sim' plugin which relies on OpenSSL.
-net-im/empathy:geocode - Enable translation between addresses and geographic coordinates using sci-geosciences/geocode-glib and Yahoo! Place Finder
 net-im/empathy:geoloc - Enable geolocation support through app-misc/geoclue
 net-im/empathy:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization (e.g. for Google Talk)
 net-im/empathy:map - Enable world map support through media-libs/libchamplain
 net-im/empathy:nautilus - Enable nautilus-sendto support
-net-im/empathy:sendto - Enable support for sending files to various devices using gnome-extra/nautilus-sendto
 net-im/empathy:webkit - Build support for Adium-style HTML-based conversation window themes using net-libs/webkit-gtk
 net-im/err:irc - Pull optional dependencies, needed for IRC backend
 net-im/err:plugins - Enable support for installing plugins with dev-vcs/git

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-9999.ebuild,v 1.20 2013/11/11 21:05:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.7.0.ebuild,v 1.1 2013/11/11 21:05:16 johu Exp $
 
 EAPI=5
 
@@ -62,7 +62,10 @@ REQUIRED_USE="
 	zeitgeist? ( qt4 )
 "
 
-PATCHES=( "${FILESDIR}/${PN}-4.7.0-plugin-install.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-plugin-install.patch"
+	"${FILESDIR}/${P}-rpath.patch"
+)
 
 pkg_setup() {
 	MULTIBUILD_VARIANTS=()
