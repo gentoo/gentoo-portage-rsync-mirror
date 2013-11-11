@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/geomview
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.17 2012/10/24 19:40:34 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.18 2013/11/11 22:16:29 mr_bones_ Exp $
+
+  11 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> geomview-1.9.4.ebuild:
+  drop gsview which is gtk+:1 only from the list of choices
 
   24 Oct 2012; Ulrich Müller <ulm@gentoo.org> geomview-1.9.4.ebuild:
   Update dependency after package move from x11-libs/openmotif to

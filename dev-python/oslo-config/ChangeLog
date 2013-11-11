@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/oslo-config
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.4 2013/11/11 04:04:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/ChangeLog,v 1.5 2013/11/11 22:04:15 prometheanfire Exp $
+
+  11 Nov 2013; Matthew Thode <prometheanfire@gentoo.org>
+  oslo-config-1.2.1.ebuild:
+  fix missing pbr dep
 
 *oslo-config-1.2.1 (11 Nov 2013)
 

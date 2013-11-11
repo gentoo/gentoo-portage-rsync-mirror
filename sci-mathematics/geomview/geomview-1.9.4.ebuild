@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.4.ebuild,v 1.8 2012/10/24 19:40:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.4.ebuild,v 1.9 2013/11/11 22:16:29 mr_bones_ Exp $
 
 EAPI=1
 
@@ -30,7 +30,6 @@ RDEPEND="${DEPEND}
 	pdf? (
 		|| ( app-text/xpdf
 			app-text/gv
-			app-text/gsview
 			app-text/epdfview
 			app-text/acroread )
 	)"

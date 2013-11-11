@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/oslo-config-1.2.1.ebuild,v 1.1 2013/11/11 04:04:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-config/oslo-config-1.2.1.ebuild,v 1.2 2013/11/11 22:04:15 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,17 +19,19 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( >=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-		dev-python/oslo-sphinx[${PYTHON_USEDEP}]
-		>=dev-python/hacking-0.5.6[${PYTHON_USEDEP}]
-		<dev-python/hacking-0.8[${PYTHON_USEDEP}]
-		>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
-		dev-python/subunit[${PYTHON_USEDEP}]
-		dev-python/nose[${PYTHON_USEDEP}]
-		>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
-		>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
-		>=dev-python/testscenarios-0.4[${PYTHON_USEDEP}]
-		>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}] )"
+		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
+		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
+		test? ( >=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
+			dev-python/oslo-sphinx[${PYTHON_USEDEP}]
+			>=dev-python/hacking-0.5.6[${PYTHON_USEDEP}]
+			<dev-python/hacking-0.8[${PYTHON_USEDEP}]
+			>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
+			dev-python/subunit[${PYTHON_USEDEP}]
+			dev-python/nose[${PYTHON_USEDEP}]
+			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
+			>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
+			>=dev-python/testscenarios-0.4[${PYTHON_USEDEP}]
+			>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}] )"
 RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
 		dev-python/six[${PYTHON_USEDEP}]"
 
