@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/aufs3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.75 2013/11/03 19:21:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.76 2013/11/11 15:45:39 jlec Exp $
+
+*aufs3-3_p20131111 (11 Nov 2013)
+
+  11 Nov 2013; Justin Lecher <jlec@gentoo.org> aufs3-3_p20131104.ebuild,
+  +aufs3-3_p20131111.ebuild:
+  Bump to latest aufs3-release; fix combinedif issue, #490790
 
 *aufs3-3_p20131104 (03 Nov 2013)
 

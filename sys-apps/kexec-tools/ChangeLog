@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.56 2013/11/01 13:49:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.57 2013/11/11 15:57:11 jlec Exp $
+
+  11 Nov 2013; Justin Lecher <jlec@gentoo.org> kexec-tools-2.0.4-r1.ebuild,
+  kexec-tools-2.0.4-r2.ebuild, kexec-tools-9999.ebuild:
+  Drop USE=zlib as it is always requiered, #490326
 
   01 Nov 2013; Agostino Sarubbo <ago@gentoo.org> kexec-tools-2.0.4-r2.ebuild:
   Stable for x86, wrt bug #486308

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/polyglot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.26 2013/01/16 00:13:32 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.27 2013/11/11 15:35:15 mrueg Exp $
+
+*polyglot-0.3.3-r1 (11 Nov 2013)
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +polyglot-0.3.3-r1.ebuild,
+  -polyglot-0.3.3.ebuild:
+  Add ruby20 target. Cleanup old.
 
   16 Jan 2013; Rick Farina <zerochaos@gentoo.org> polyglot-0.3.3.ebuild:
   adding ~arm keywords to net-analyzer/metasploit rdeps

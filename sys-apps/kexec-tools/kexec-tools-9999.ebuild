@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-9999.ebuild,v 1.8 2013/09/21 11:35:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-9999.ebuild,v 1.9 2013/11/11 15:57:11 jlec Exp $
 
 EAPI=5
 
@@ -16,11 +16,9 @@ EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/kernel/kexec/kexec-tools.git"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="booke lzma xen zlib"
+IUSE="booke lzma xen"
 
-DEPEND="
-	lzma? ( app-arch/xz-utils )
-	zlib? ( sys-libs/zlib )"
+DEPEND="lzma? ( app-arch/xz-utils )"
 RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~KEXEC"
@@ -42,7 +40,6 @@ src_configure() {
 		$(use_with booke)
 		$(use_with lzma)
 		$(use_with xen)
-		$(use_with zlib)
 		)
 	autotools-utils_src_configure
 }

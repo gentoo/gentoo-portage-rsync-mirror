@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/celluloid-0.14.1.ebuild,v 1.1 2013/07/13 06:04:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/celluloid-0.15.2-r1.ebuild,v 1.1 2013/11/11 15:43:09 mrueg Exp $
 
 EAPI=5
 # rbx or jruby recommended, but only in 1.9 mode.
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131104.ebuild,v 1.1 2013/11/03 19:21:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131104.ebuild,v 1.2 2013/11/11 15:45:39 jlec Exp $
 
 EAPI=5
 
@@ -75,19 +75,20 @@ pkg_setup() {
 	cd ${PN}-standalone || die
 	local module_branch=origin/${PN}.${PATCH_BRANCH}
 	git checkout -q -b local-gentoo ${module_branch} || die
-	combinediff ${PN}-base.patch ${PN}-mmap.patch ${PN}-standalone.patch > ${PN}-standalone-base-combined.patch
-	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < ${PN}-standalone-base-combined.patch > /dev/null ); then
+	combinediff ${PN}-base.patch ${PN}-mmap.patch > "${T}"/combined-1.patch
+	combinediff ${PN}-standalone.patch  "${T}"/combined-1.patch > ${PN}-standalone-base-mmap-combined.patch
+	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < ${PN}-standalone-base-mmap-combined.patch > /dev/null ); then
 		if use kernel-patch; then
 			cd ${KV_DIR}
 			ewarn "Patching your kernel..."
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${T}"/${PN}-standalone/${PN}-standalone-base-combined.patch >/dev/null
-			epatch "${T}"/${PN}-standalone/${PN}-standalone-base-combined.patch
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${T}"/${PN}-standalone/${PN}-standalone-base-mmap-combined.patch >/dev/null
+			epatch "${T}"/${PN}-standalone/${PN}-standalone-base-mmap-combined.patch
 			ewarn "You need to compile your kernel with the applied patch"
 			ewarn "to be able to load and use the aufs kernel module"
 		else
 			eerror "You need to apply a patch to your kernel to compile and run the ${PN} module"
 			eerror "Either enable the kernel-patch useflag to do it with this ebuild"
-			eerror "or apply "${T}"/${PN}-standalone/${PN}-standalone-base-combined.patch by hand"
+			eerror "or apply "${T}"/${PN}-standalone/${PN}-standalone-base-mmap-combined.patch by hand"
 			die "missing kernel patch, please apply it first"
 		fi
 	fi
@@ -151,7 +152,7 @@ src_install() {
 
 	use doc && doins -r Documentation
 
-	use kernel-patch || doins "${T}"/${PN}-standalone/${PN}-standalone-base-combined.patch
+	use kernel-patch || doins "${T}"/${PN}-standalone/${PN}-standalone-base-mmap-combined.patch
 
 	dodoc Documentation/filesystems/aufs/README
 }

@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1053 2013/11/09 10:22:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1054 2013/11/11 15:58:40 mgorny Exp $
+
+  11 Nov 2013; Michał Górny <mgorny@gentoo.org> distutils-r1.eclass:
+  Read all shebangs before moving files to avoid breaking symlinks that are
+  going to be scanned.
 
   09 Nov 2013; Hans de Graaff <graaff@gentoo.org> ruby-fakegem.eclass:
   Add a yard recipe for creating documentation.

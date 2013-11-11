@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.90 2013/10/26 17:47:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.91 2013/11/11 15:58:40 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -422,35 +422,48 @@ _distutils-r1_wrap_scripts() {
 		local PYTHON_SCRIPTDIR=${bindir}
 	fi
 
-	local f
-	while IFS= read -r -d '' f; do
-		local basename=${f##*/}
-		debug-print "${FUNCNAME}: found executable at ${f#${path}/}"
+	local f python_files=() non_python_files=()
 
-		[[ -d ${f} ]] && die "Unexpected directory: ${f}"
+	if [[ -d ${path}${PYTHON_SCRIPTDIR} ]]; then
+		for f in "${path}${PYTHON_SCRIPTDIR}"/*; do
+			[[ -d ${f} ]] && die "Unexpected directory: ${f}"
+			debug-print "${FUNCNAME}: found executable at ${f#${path}/}"
 
-		mkdir -p "${path}${bindir}" || die
-		local shebang
-		read -r shebang < "${f}"
-		if [[ ${shebang} == '#!'*${EPYTHON}* ]]; then
-			debug-print "${FUNCNAME}: matching shebang: ${shebang}"
+			local shebang
+			read -r shebang < "${f}"
+			if [[ ${shebang} == '#!'*${EPYTHON}* ]]; then
+				debug-print "${FUNCNAME}: matching shebang: ${shebang}"
+				python_files+=( "${f}" )
+			elif _python_want_python_exec2; then
+				debug-print "${FUNCNAME}: non-matching shebang: ${shebang}"
+				non_python_files+=( "${f}" )
+			fi
+
+			mkdir -p "${path}${bindir}" || die
+		done
+
+		for f in "${python_files[@]}"; do
+			local basename=${f##*/}
 
 			if ! _python_want_python_exec2; then
 				local newf=${f%/*}/${basename}-${EPYTHON}
-				debug-print "${FUNCNAME}: renaming to ${newf#${path}}"
+				debug-print "${FUNCNAME}: renaming ${f#${path}/} to ${newf#${path}/}"
 				mv "${f}" "${newf}" || die
 			fi
 
 			debug-print "${FUNCNAME}: installing wrapper at ${bindir}/${basename}"
 			_python_ln_rel "${path}${EPREFIX}"$(_python_get_wrapper_path) \
 				"${path}${bindir}/${basename}" || die
-		elif _python_want_python_exec2; then
-			debug-print "${FUNCNAME}: non-matching shebang: ${shebang}"
+		done
 
-			debug-print "${FUNCNAME}: moving to ${bindir}/${basename}"
+		# (non-empty only with python-exec:2)
+		for f in "${non_python_files[@]}"; do
+			local basename=${f##*/}
+
+			debug-print "${FUNCNAME}: moving ${f#${path}/} to ${bindir}/${basename}"
 			mv "${f}" "${path}${bindir}/${basename}" || die
-		fi
-	done < <(find "${path}${PYTHON_SCRIPTDIR}" -mindepth 1 -print0)
+		done
+	fi
 }
 
 # @FUNCTION: distutils-r1_python_install

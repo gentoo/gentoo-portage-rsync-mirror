@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/celluloid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/ChangeLog,v 1.5 2013/10/09 07:32:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/ChangeLog,v 1.6 2013/11/11 15:43:09 mrueg Exp $
+
+*celluloid-0.15.2-r1 (11 Nov 2013)
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +celluloid-0.15.2-r1.ebuild,
+  -celluloid-0.12.4.ebuild, -celluloid-0.13.0.ebuild, -celluloid-0.14.1.ebuild,
+  -celluloid-0.15.1.ebuild, -celluloid-0.15.2.ebuild:
+  Add ruby20 target. Cleanup old.
 
 *celluloid-0.15.2 (09 Oct 2013)
 
