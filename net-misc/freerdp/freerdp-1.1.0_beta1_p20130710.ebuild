@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710.ebuild,v 1.2 2013/08/14 19:59:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710.ebuild,v 1.3 2013/11/11 16:32:17 floppym Exp $
 
 EAPI="5"
 
@@ -32,7 +32,6 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	cups? ( net-print/cups )
 	client? (
-		directfb? ( dev-libs/DirectFB )
 		X? (
 			x11-libs/libXcursor
 			x11-libs/libXext
@@ -42,6 +41,7 @@ RDEPEND="
 			xv? ( x11-libs/libXv )
 		)
 	)
+	directfb? ( dev-libs/DirectFB )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
 		media-libs/gstreamer:0.10

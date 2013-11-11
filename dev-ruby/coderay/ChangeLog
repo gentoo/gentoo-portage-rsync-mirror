@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.77 2013/10/06 17:08:12 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.78 2013/11/11 16:55:27 mrueg Exp $
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -coderay-1.1.0.ebuild:
+  Cleanup old.
 
 *coderay-1.1.0-r1 (06 Oct 2013)
 

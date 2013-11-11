@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.52 2013/08/14 19:59:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.53 2013/11/11 16:32:17 floppym Exp $
+
+  11 Nov 2013; Mike Gilbert <floppym@gentoo.org>
+  freerdp-1.1.0_beta1_p20130710.ebuild, freerdp-9999.1.ebuild:
+  Move DirectFB dep up a level, bug 490846.
 
   14 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
   freerdp-1.1.0_beta1_p20130710.ebuild:

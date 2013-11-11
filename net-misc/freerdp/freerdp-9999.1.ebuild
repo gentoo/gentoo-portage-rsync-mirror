@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.16 2013/07/14 18:59:29 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.17 2013/11/11 16:32:17 floppym Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit cmake-utils vcs-snapshot
 if [[ ${PV} != 9999* ]]; then
 	COMMIT="780d451afad21a22d2af6bd030ee71311856f038"
 	SRC_URI="https://github.com/FreeRDP/FreeRDP/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 else
 	inherit git-2
 	SRC_URI=""
@@ -32,7 +32,6 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	cups? ( net-print/cups )
 	client? (
-		directfb? ( dev-libs/DirectFB )
 		X? (
 			x11-libs/libXcursor
 			x11-libs/libXext
@@ -42,6 +41,7 @@ RDEPEND="
 			xv? ( x11-libs/libXv )
 		)
 	)
+	directfb? ( dev-libs/DirectFB )
 	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
 		media-libs/gstreamer:0.10
