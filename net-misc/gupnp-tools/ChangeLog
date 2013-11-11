@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gupnp-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.13 2013/08/25 21:48:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.14 2013/11/11 20:53:44 pacho Exp $
+
+*gupnp-tools-0.8.8 (11 Nov 2013)
+
+  11 Nov 2013; Pacho Ramos <pacho@gentoo.org> +gupnp-tools-0.8.8.ebuild,
+  -gupnp-tools-0.8.4.ebuild, -gupnp-tools-0.8.6.ebuild, metadata.xml:
+  Version bump, drop old, this is being only maintained by gnome team for a long
+  time.
 
 *gupnp-tools-0.8.7 (25 Aug 2013)
 
@@ -61,4 +68,3 @@
   13 Sep 2007; Samuli Suominen <ssuominen@gentoo.org>
   +gupnp-tools-0.1.2.ebuild:
   Initial commit.
-
