@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-9999.ebuild,v 1.1 2013/09/28 08:59:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eina/eina-9999.ebuild,v 1.2 2013/11/11 18:28:34 tommy Exp $
 
 EAPI="4"
 
@@ -78,7 +78,7 @@ src_configure() {
 		mempool_arg='yes'
 	fi
 	for m in ${IUSE_MEMPOOLS//+} ; do
-		E_ECONF+=( $(use_enable ${m} ${m} ${MODULE_ARGUMENT}) )
+		E_ECONF+=( $(use_enable ${m} ${m} ${mempool_argT}) )
 	done
 
 	enlightenment_src_configure
