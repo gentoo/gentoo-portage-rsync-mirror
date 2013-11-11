@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/slop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.22 2013/10/09 00:47:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.23 2013/11/11 11:04:39 mrueg Exp $
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -slop-2.4.4.ebuild,
+  -slop-3.3.3.ebuild, -slop-3.4.6.ebuild:
+  Cleanup old.
 
 *slop-3.4.6-r1 (09 Oct 2013)
 *slop-2.4.4-r1 (09 Oct 2013)

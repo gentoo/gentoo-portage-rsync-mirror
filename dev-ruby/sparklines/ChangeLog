@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sparklines
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.15 2013/09/04 13:49:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.16 2013/11/11 11:18:45 mrueg Exp $
+
+*sparklines-0.5.2-r4 (11 Nov 2013)
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +sparklines-0.5.2-r4.ebuild:
+  Add ruby20 target.
 
   04 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -sparklines-0.5.2-r2.ebuild:
   Cleanup old.
