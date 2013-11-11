@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rev/ChangeLog,v 1.4 2013/03/28 22:01:19 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rev/ChangeLog,v 1.5 2013/11/11 12:28:00 mrueg Exp $
+
+*rev-0.3.2-r1 (11 Nov 2013)
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +rev-0.3.2-r1.ebuild,
+  -rev-0.3.2.ebuild:
+  Add ruby20 target. Cleanup old.
 
   28 Mar 2013; Alex Legler <a3li@gentoo.org> rev-0.3.2.ebuild:
   Fix HOMEPAGE, bug 463552
