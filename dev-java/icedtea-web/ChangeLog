@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.36 2013/11/09 11:55:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.37 2013/11/11 07:05:55 caster Exp $
+
+  11 Nov 2013; Vlastimil Babka <caster@gentoo.org> icedtea-web-1.4.1.ebuild,
+  metadata.xml:
+  Introduce icedtea7 USE flag, as it turns out that icedtea-web built with
+  icedtea-6 is missing a class necessary for icedtea-7. When built with
+  icedtea-7, it works with both versions.
 
   09 Nov 2013; Vlastimil Babka <caster@gentoo.org> icedtea-web-1.4.1.ebuild:
   Correct VMHANDLE to make automatic nsplugin activation work.

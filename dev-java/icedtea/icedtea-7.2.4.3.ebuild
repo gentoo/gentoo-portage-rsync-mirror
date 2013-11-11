@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.3.ebuild,v 1.3 2013/10/30 11:48:31 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.3.ebuild,v 1.4 2013/11/11 07:09:43 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -156,7 +156,7 @@ PDEPEND="webstart? ( || (
 			>=dev-java/icedtea-web-1.3.2:7
 		) )
 		nsplugin? ( || (
-			dev-java/icedtea-web:0[nsplugin]
+			dev-java/icedtea-web:0[icedtea7,nsplugin]
 			>=dev-java/icedtea-web-1.3.2:7[nsplugin]
 		) )"
 

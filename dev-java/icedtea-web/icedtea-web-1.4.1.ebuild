@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.1.ebuild,v 1.2 2013/11/09 11:55:04 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.4.1.ebuild,v 1.3 2013/11/11 07:05:55 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="5"
@@ -15,13 +15,16 @@ LICENSE="GPL-2 GPL-2-with-linking-exception LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="doc javascript +nsplugin test"
+IUSE="doc +icedtea7 javascript +nsplugin test"
 
 COMMON_DEP="
-	|| (
+	icedtea7? ( || (
+		dev-java/icedtea:7 dev-java/icedtea-bin:7
+	) )
+	!icedtea7? ( || (
 		dev-java/icedtea:7 dev-java/icedtea-bin:7
 		dev-java/icedtea:6 dev-java/icedtea-bin:6
-	)
+	) )
 	app-admin/eselect-java
 	nsplugin? (
 		>=dev-libs/glib-2.16
@@ -36,7 +39,10 @@ DEPEND="${COMMON_DEP}
 
 # http://mail.openjdk.java.net/pipermail/distro-pkg-dev/2010-December/011221.html
 pkg_setup() {
-	JAVA_PKG_WANT_BUILD_VM="icedtea-7 icedtea-bin-7 icedtea-6 icedtea-bin-6"
+	JAVA_PKG_WANT_BUILD_VM="icedtea-7 icedtea-bin-7"
+	if ! use icedtea7; then
+		JAVA_PKG_WANT_BUILD_VM="${JAVA_PKG_WANT_BUILD_VM} icedtea-6 icedtea-bin-6"
+	fi
 	JAVA_PKG_WANT_SOURCE="1.6"
 	JAVA_PKG_WANT_TARGET="1.6"
 
