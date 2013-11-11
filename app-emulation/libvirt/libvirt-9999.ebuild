@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.52 2013/09/05 18:20:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.53 2013/11/11 03:41:44 floppym Exp $
 
 EAPI=5
 
@@ -165,7 +165,7 @@ pkg_setup() {
 		gpasswd -a qemu kvm
 	fi
 
-	python-single-r1_pkg_setup
+	use python && python-single-r1_pkg_setup
 
 	# Handle specific kernel versions for different features
 	kernel_is lt 3 6 && LXC_CONFIG_CHECK+=" ~CGROUP_MEM_RES_CTLR"
