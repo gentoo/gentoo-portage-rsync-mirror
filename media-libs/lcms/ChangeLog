@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.157 2013/09/05 18:55:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.158 2013/11/11 13:35:29 jer Exp $
+
+  11 Nov 2013; Jeroen Roovers <jer@gentoo.org> lcms-2.5.ebuild:
+  Stable for HPPA (bug #488806).
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> lcms-1.19-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.

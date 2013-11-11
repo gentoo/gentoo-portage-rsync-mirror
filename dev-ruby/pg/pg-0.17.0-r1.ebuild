@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.16.0.ebuild,v 1.1 2013/08/22 08:38:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/pg-0.17.0-r1.ebuild,v 1.1 2013/11/11 13:35:17 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 

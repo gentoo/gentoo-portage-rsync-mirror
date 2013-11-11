@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.195 2013/11/04 12:32:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.196 2013/11/11 13:56:48 mgorny Exp $
+
+*systemd-204-r3 (11 Nov 2013)
+
+  11 Nov 2013; Michał Górny <mgorny@gentoo.org> +systemd-204-r3.ebuild,
+  systemd-204-r1.ebuild, systemd-204-r2.ebuild:
+  Backport multilib support to -204 as requested by lxnay. Add missing fcaps
+  inherit.
 
   04 Nov 2013; Michał Górny <mgorny@gentoo.org> systemd-204-r1.ebuild,
   systemd-208-r2.ebuild, systemd-9999.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.23 2013/04/13 07:46:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.24 2013/11/11 13:41:22 mrueg Exp $
+
+*ruby-ffi-2 (11 Nov 2013)
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +ruby-ffi-2.ebuild:
+  New virtual with ruby20 target, drop alpha, ia64, sparc, ppc64. Rekeywording
+  in bug #465948
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ruby-ffi-1.ebuild:
   Stable for sparc, wrt bug #464366

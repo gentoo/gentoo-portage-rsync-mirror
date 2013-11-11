@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtbearer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.10 2013/11/07 06:00:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.11 2013/11/11 13:59:30 jer Exp $
+
+  11 Nov 2013; Jeroen Roovers <jer@gentoo.org> qtbearer-4.8.5.ebuild:
+  Stable for HPPA (bug #488536).
 
   07 Nov 2013; Agostino Sarubbo <ago@gentoo.org> qtbearer-4.8.5.ebuild:
   Stable for arm, wrt bug #488536
