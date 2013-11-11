@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/hiera
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/ChangeLog,v 1.12 2013/10/02 02:46:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hiera/ChangeLog,v 1.13 2013/11/11 13:24:45 mrueg Exp $
+
+*hiera-1.2.1-r1 (11 Nov 2013)
+
+  11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +hiera-1.2.1-r1.ebuild,
+  -hiera-1.1.2-r1.ebuild:
+  Add ruby20 target. sparc keyword dropped. Rekeywording in bug #465948
 
   02 Oct 2013; Jeroen Roovers <jer@gentoo.org> hiera-1.2.1.ebuild:
   Stable for HPPA (bug #486002).

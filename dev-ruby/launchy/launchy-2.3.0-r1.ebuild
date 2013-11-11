@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/launchy/launchy-2.3.0.ebuild,v 1.1 2013/08/02 06:15:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/launchy/launchy-2.3.0-r1.ebuild,v 1.1 2013/11/11 13:04:08 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_EXTRADOC="README.md HISTORY.md"
 
@@ -20,8 +20,11 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/addressable-2.3"
 
-ruby_add_bdepend "test? ( >=dev-ruby/minitest-4.5.0
-	dev-ruby/simplecov )"
+ruby_add_bdepend "test? ( >=dev-ruby/minitest-4.5.0 )"
 
 # This test is expected to fail on linux, drop it
 RUBY_PATCHES=( "${FILESDIR}"/${P}-drop-failing-test.patch )
+
+all_ruby_prepare() {
+	sed -i -e "/[Ss]implecov/d" spec/spec_helper.rb || die
+}
