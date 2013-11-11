@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.56 2013/09/05 18:46:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.57 2013/11/11 19:23:20 radhermit Exp $
+
+*pexpect-3.0 (11 Nov 2013)
+
+  11 Nov 2013; Tim Harder <radhermit@gentoo.org> +pexpect-3.0.ebuild:
+  Version bump.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pexpect-2.4-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
