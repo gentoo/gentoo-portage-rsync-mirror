@@ -7,6 +7,6 @@
     <name>Matthew Thode</name>
   </maintainer>
   <longdescription lang="en">
-    Rackspace Cloud files sync/backup utility
+    Openstack Swift sync/backup utility
   </longdescription>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2012.2.4-r7.ebuild,v 1.1 2013/09/27 00:41:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2012.2.4-r7.ebuild,v 1.2 2013/11/10 23:04:52 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -56,7 +56,7 @@ RDEPEND="=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
 	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
 		~dev-python/webob-1.0.8[${PYTHON_USEDEP}]
-		net-misc/openvswitch
+		openvswitch? ( net-misc/openvswitch )
 		net-misc/bridge-utils
 		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
