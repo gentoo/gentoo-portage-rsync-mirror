@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pbr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.4 2013/08/09 16:18:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.5 2013/11/12 06:06:21 prometheanfire Exp $
+
+  12 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> pbr-0.5.21.ebuild:
+  adding pypy2_0 to pbr
 
   09 Aug 2013; Matthew Thode <prometheanfire@gentoo.org> pbr-0.5.21.ebuild:
   added python 3.2 and python 3.3 support

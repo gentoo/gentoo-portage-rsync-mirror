@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/pip-1.4.1.ebuild,v 1.1 2013/08/08 05:44:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/pip-1.4.1.ebuild,v 1.2 2013/11/12 06:05:31 prometheanfire Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 
 inherit bash-completion-r1 distutils-r1
 
