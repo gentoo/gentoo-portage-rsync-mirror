@@ -1,6 +1,10 @@
 # ChangeLog for games-action/chromium-bsu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium-bsu/ChangeLog,v 1.6 2013/09/05 19:22:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium-bsu/ChangeLog,v 1.7 2013/11/12 03:22:28 mr_bones_ Exp $
+
+  12 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -chromium-bsu-0.9.15.ebuild:
+  old
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> chromium-bsu-0.9.15.1.ebuild:
   Stable for x86, wrt bug #482948
