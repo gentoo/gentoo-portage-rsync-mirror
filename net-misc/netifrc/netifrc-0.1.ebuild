@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.1.ebuild,v 1.2 2013/08/20 19:41:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.1.ebuild,v 1.3 2013/11/12 13:50:33 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git-2
 else
 	SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 fi
 
 LICENSE="BSD-2"

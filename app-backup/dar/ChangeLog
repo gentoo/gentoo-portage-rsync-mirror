@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/dar
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.53 2013/04/15 14:34:59 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.54 2013/11/12 13:48:20 rich0 Exp $
+
+*dar-2.4.11 (12 Nov 2013)
+
+  12 Nov 2013; Richard Freeman <rich0@gentoo.org> +dar-2.4.11.ebuild:
+  bump
 
   15 Apr 2013; Richard Freeman <rich0@gentoo.org> dar-2.4.10.ebuild:
   Add slot operator deps for latest version.

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.971 2013/10/17 18:09:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.972 2013/11/12 13:45:57 jer Exp $
+
+  12 Nov 2013; Jeroen Roovers <jer@gentoo.org> udev-208.ebuild:
+  Stable for HPPA (bug #487340).
 
   17 Oct 2013; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Raise sys-apps/kmod requirement from 14 to 15 as per http://cgit.freedesktop.o

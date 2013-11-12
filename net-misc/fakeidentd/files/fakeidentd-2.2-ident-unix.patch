@@ -1,8 +1,0 @@
---- identd.c
-+++ identd.c
-@@ -203,4 +203,4 @@
- 
--#if 1
-+#if 0
- static const char ident_substr[] = " : USERID : OTHER : ";
- #else

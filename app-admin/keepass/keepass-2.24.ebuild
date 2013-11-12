@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.22.ebuild,v 1.2 2013/10/23 11:36:19 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.24.ebuild,v 1.1 2013/11/12 13:48:50 kensington Exp $
 
 EAPI=5
 
-inherit eutils fdo-mime gnome2-utils mono multilib
+inherit eutils fdo-mime gnome2-utils mono-env multilib
 
 MY_PN="KeePass"
 DESCRIPTION="A free, open source, light-weight and easy-to-use password manager"
