@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.3.ebuild,v 1.1 2013/11/06 18:39:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.3.ebuild,v 1.2 2013/11/12 16:40:50 bicatali Exp $
 
 EAPI=5
 
@@ -65,7 +65,7 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	use doc && dohtml -r "${WORKDIR}"/doc_html/cgal_manual/*
+	use doc && dohtml -r "${WORKDIR}"/doc_html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples demo
