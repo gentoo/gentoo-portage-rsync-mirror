@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/reduze/reduze-2.0.8.ebuild,v 1.1 2012/08/08 05:29:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/reduze/reduze-2.0.9.ebuild,v 1.1 2013/11/12 15:08:47 grozin Exp $
 
-EAPI=4
+EAPI=5
 
-inherit cmake-utils versionator
+inherit cmake-utils
 
 DESCRIPTION="Program for reducing Feynman integrals"
 HOMEPAGE="http://reduze.hepforge.org/"
@@ -31,12 +31,9 @@ src_prepare() {
 		-e "s:share/reduze:share/doc/${PF}:g" \
 		CMakeLists.txt || die
 	use doc || sed -i -e '/share/d' CMakeLists.txt
-	# prefix and db fix
-	local ver=$(best_version sys-libs/db)
-	ver=$(get_version_component_range 1-2 "${ver/*db-/}")
+	# prefix fix
 	sed -i \
 		-e "s:/usr:${EPREFIX}/usr:g" \
-		-e "s:db4:db${ver}:g" \
 		reduze/CMakeLists.txt  || die
 
 	# remove bundled yaml-cpp
