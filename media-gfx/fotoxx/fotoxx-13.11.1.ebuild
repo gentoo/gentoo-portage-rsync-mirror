@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-13.08.1.ebuild,v 1.1 2013/08/15 17:44:22 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-13.11.1.ebuild,v 1.1 2013/11/12 15:33:42 grozin Exp $
 EAPI=4
 inherit eutils toolchain-funcs fdo-mime
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND="x11-libs/gtk+:3
 	media-libs/libpng
-	media-libs/tiff"
+	media-libs/tiff
+	media-libs/lcms:2"
 RDEPEND="${DEPEND}
 	media-libs/exiftool
 	media-gfx/ufraw[gtk]
