@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r5.ebuild,v 1.1 2013/11/11 14:53:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-3_pre20051105-r5.ebuild,v 1.2 2013/11/12 00:16:46 jer Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ src_configure() {
 	tc-export CC
 
 	# Not an autotools type configure:
-	sh configure $(use tcl || echo --no-tcl) || die "configure failed"
+	sh configure $(usex tcl '' --no-tcl) || die "configure failed"
 }
 
 src_compile() {

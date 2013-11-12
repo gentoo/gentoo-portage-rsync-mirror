@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.62 2013/11/11 15:12:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.63 2013/11/12 00:16:46 jer Exp $
+
+  12 Nov 2013; Jeroen Roovers <jer@gentoo.org> hping-3_pre20051105-r5.ebuild:
+  Use usex.
 
   11 Nov 2013; Jeroen Roovers <jer@gentoo.org>
   files/hping-3_pre20051105-tclsh-proper-escaping.patch:
