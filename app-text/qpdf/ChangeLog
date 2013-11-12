@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.38 2013/11/03 03:54:45 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdf/ChangeLog,v 1.39 2013/11/12 22:49:08 bicatali Exp $
+
+  12 Nov 2013; Sébastien Fabbro <bicatali@gentoo.org> qpdf-5.0.1.ebuild:
+  Keyworded amd64-linux and x86-linux
 
   03 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   qpdf-5.0.1.ebuild:
