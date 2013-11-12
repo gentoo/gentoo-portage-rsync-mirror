@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-9999.ebuild,v 1.2 2013/11/08 18:11:32 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-9999.ebuild,v 1.3 2013/11/12 16:12:07 ottxor Exp $
 
 EAPI=5
 
@@ -39,12 +39,5 @@ src_configure() {
 		--enable-cxx11
 	)
 	autotools-utils_src_configure DRAGONEGG=/usr/$(get_libdir)/llvm/dragonegg.so
-}
-
-src_compile() {
-	autotools-utils_src_compile VERBOSE=1 LOPT="$(type -p opt)"
-}
-
-src_install() {
-	autotools-utils_src_install VERBOSE=1 LOPT="$(type -p opt)"
+	MAKEOPTS+=" VERBOSE=1 LOPT=$(type -p opt)"
 }
