@@ -1,6 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.55 2013/05/22 09:25:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.56 2013/11/12 22:09:03 mr_bones_ Exp $
+
+# Michael Sterrett <mr_bones_@gentoo.org (12 Nov 2013)
+# Mask openmedia use flag because the content generation tools
+# are missing keywords.
+games-simulation/openttd openmedia
 
 # Patrick Lauer <patrick@gentoo.org> (27 May 2013)
 # Mask useflags for stable things depending on systemd
