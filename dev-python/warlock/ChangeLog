@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/warlock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/warlock/ChangeLog,v 1.3 2013/01/20 06:34:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/warlock/ChangeLog,v 1.4 2013/11/12 05:53:53 prometheanfire Exp $
+
+*warlock-1.0.1 (12 Nov 2013)
+*warlock-0.7.0-r1 (12 Nov 2013)
+
+  12 Nov 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +warlock-0.7.0-r1.ebuild, +warlock-1.0.1.ebuild:
+  warlock update
 
   20 Jan 2013; Matthew Thode <prometheanfire@gentoo.org> warlock-0.7.0.ebuild:
   warlock requires jsonpatch-0.10 specifically
