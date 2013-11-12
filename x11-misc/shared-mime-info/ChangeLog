@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/shared-mime-info
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.199 2013/11/06 20:04:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.200 2013/11/12 20:33:24 haubi Exp $
+
+  12 Nov 2013; Michael Haubenwallner <haubi@gentoo.org>
+  shared-mime-info-1.2-r1.ebuild:
+  Add ~ppc-aix keyword.
 
 *shared-mime-info-1.2-r1 (06 Nov 2013)
 
