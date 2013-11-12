@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst
-DEPEND=dev-libs/libxslt media-gfx/imagemagick[truetype]
+DEPEND=dev-libs/libxslt media-gfx/imagemagick[truetype,svg,png]
 DESCRIPTION=The Gentoo Development Guide
 EAPI=5
 HOMEPAGE=http://devmanual.gentoo.org/
@@ -8,4 +8,4 @@ LICENSE=CC-BY-SA-2.0
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/devmanual-0_pre20130309.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=84355c6851f9b54d36feebf17be88b87
+_md5_=c1684871e1f395bc84dec616650233ba

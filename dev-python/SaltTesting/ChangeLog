@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/SaltTesting
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/SaltTesting/ChangeLog,v 1.1 2013/11/12 18:57:29 chutzpah Exp $
+
+*SaltTesting-0.5.2 (12 Nov 2013)
+
+  12 Nov 2013; Patrick McLean <chutzpah@gentoo.org> +SaltTesting-0.5.2.ebuild,
+  +files/SaltTesting-0.5.2-silence-DepricationWarning.patch, +metadata.xml:
+  Initial import, required testing tools needed in the several Salt Stack
+  projects.
+

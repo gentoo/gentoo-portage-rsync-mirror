@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/eio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eio/ChangeLog,v 1.8 2013/08/28 03:10:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eio/ChangeLog,v 1.9 2013/11/12 18:38:25 tommy Exp $
+
+*eio-1.7.9 (12 Nov 2013)
+
+  12 Nov 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +eio-1.7.9.ebuild,
+  -eio-1.7.5.ebuild, -eio-1.7.6.ebuild:
+  Version bump, drop old
 
 *eio-1.7.8 (28 Aug 2013)
 

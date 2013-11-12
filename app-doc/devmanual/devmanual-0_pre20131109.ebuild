@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20131109.ebuild,v 1.1 2013/11/09 12:49:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/devmanual-0_pre20131109.ebuild,v 1.2 2013/11/12 18:36:02 hwoarang Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND="dev-libs/libxslt
-	media-gfx/imagemagick[truetype]"
+	media-gfx/imagemagick[truetype,svg,png]"
 
 DOC_CONTENTS="In order to browse the Gentoo Development Guide in
 	offline mode, point your browser to the following url:

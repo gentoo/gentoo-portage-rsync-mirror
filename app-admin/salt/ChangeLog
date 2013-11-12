@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.24 2013/09/08 07:35:20 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.25 2013/11/12 19:00:55 chutzpah Exp $
+
+*salt-0.17.1 (12 Nov 2013)
+
+  12 Nov 2013; Patrick McLean <chutzpah@gentoo.org> +salt-0.17.1.ebuild,
+  +files/salt-0.17.1-tests-nonroot.patch:
+  Version bump, add test dep on dev-python/SaltTesting.
 
 *salt-0.16.4 (08 Sep 2013)
 

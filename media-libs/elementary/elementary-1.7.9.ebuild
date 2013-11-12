@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.7.7.ebuild,v 1.1 2013/05/20 11:03:42 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/elementary-1.7.9.ebuild,v 1.1 2013/11/12 18:59:22 tommy Exp $
 
-EAPI=2
+EAPI=3
 
 inherit autotools enlightenment
 
@@ -15,19 +15,19 @@ KEYWORDS="~amd64 ~x86"
 IUSE="dbus debug emotion ethumb examples fbcon opengl quicklaunch sdl X xcb xdg static-libs"
 
 DEPEND="
-	>=dev-libs/ecore-1.7.7[evas,fbcon?,opengl?,sdl?,X?,xcb?]
-	>=dev-libs/eet-1.7.6
-	>=media-libs/evas-1.7.7[fbcon?,opengl?,X?,xcb?]
-	>=media-libs/edje-1.7.7
+	>=dev-libs/ecore-1.7.8[evas,fbcon?,opengl?,sdl?,X?,xcb?]
+	>=dev-libs/eet-1.7.8
+	>=media-libs/evas-1.7.8[fbcon?,opengl?,X?,xcb?]
+	>=media-libs/edje-1.7.8
 	dbus? ( >=dev-libs/e_dbus-1.7.6 )
 	emotion? ( >=media-libs/emotion-1.7.6 )
 	ethumb? ( >=media-libs/ethumb-1.7.6 )
-	xdg? ( >=dev-libs/efreet-1.7.6 )
+	xdg? ( >=dev-libs/efreet-1.7.8 )
 	"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i "s:1.7.7:1.7.6:g" configure.ac
+	sed -i "s:1.7.8:1.7.6:g" configure.ac
 	eautoreconf
 }
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-1.7.6.ebuild,v 1.1 2013/04/10 21:34:51 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/emotion/emotion-1.7.9.ebuild,v 1.1 2013/11/12 18:41:06 tommy Exp $
 
-EAPI=2
+EAPI="4"
 
 inherit enlightenment
 
@@ -13,10 +13,11 @@ LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="gstreamer static-libs vlc xine"
 
-DEPEND=">=media-libs/evas-1.7.6
-	>=media-libs/edje-1.7.6
-	>=dev-libs/ecore-1.7.6
-	>=dev-libs/eeze-1.7.4
+DEPEND=">=media-libs/evas-1.7.9
+	>=media-libs/edje-1.7.9
+	>=dev-libs/ecore-1.7.9
+	>=dev-libs/eina-1.7.9
+	>=dev-libs/eeze-1.7.9
 	vlc? ( media-video/vlc )
 	xine? ( >=media-libs/xine-lib-1.1.1 )
 	!gstreamer? ( !vlc? ( !xine? ( >=media-libs/xine-lib-1.1.1 ) ) )
@@ -29,18 +30,22 @@ RDEPEND=${DEPEND}
 
 src_configure() {
 	if ! use vlc && ! use xine && ! use gstreamer ; then
-		export MY_ECONF="--enable-xine --disable-gstreamer --disable-generic-vlc"
+		E_ECONF+=(
+			--enable-xine
+			--disable-gstreamer
+			--disable-generic-vlc
+		)
 	else
-		export MY_ECONF="
-			$(use_enable xine) \
-			$(use_enable gstreamer) \
+		E_ECONF+=(
+			$(use_enable xine)
+			$(use_enable gstreamer)
 			$(use_enable vlc generic-vlc)
-		"
+		)
 	fi
 
-	MY_ECONF+="
+	E_ECONF+=(
 		$(use_enable doc)
-	"
+	)
 
 	if use gstreamer ; then
 		addpredict "/root/.gconfd"
