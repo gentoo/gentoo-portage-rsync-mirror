@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.3.1-r1.ebuild,v 1.3 2013/02/07 21:58:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.3.2.ebuild,v 1.1 2013/11/12 04:02:23 mr_bones_ Exp $
 
 EAPI=5
 inherit gnome2-utils cmake-utils eutils games
@@ -28,14 +28,7 @@ S=${WORKDIR}/AstroMenace
 
 src_prepare() {
 	# no messing with CXXFLAGS please.
-	sed -i -e '/ADD_DEFINITIONS.*O3/d' CMakeLists.txt || die
-	epatch "${FILESDIR}"/${P}-overflow.patch
-
-	# enhancements patches(all - in upstream), bug #450158
-	epatch \
-		"${FILESDIR}"/${P}-keyboard_control-fix.patch \
-		"${FILESDIR}"/${P}-rendering-blinking_triangles-fix.patch \
-		"${FILESDIR}"/${P}-textures_quality-fix.patch
+	sed -i -e '/-Os/d' CMakeLists.txt || die
 }
 
 src_configure() {
