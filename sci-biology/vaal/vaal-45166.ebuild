@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/vaal-45166.ebuild,v 1.1 2013/02/20 16:23:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/vaal-45166.ebuild,v 1.2 2013/11/12 17:44:27 jlec Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="
 
 LICENSE="Whitehead-MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 IUSE="openmp"
 
 DEPEND=">=dev-libs/boost-1.41.0-r3"

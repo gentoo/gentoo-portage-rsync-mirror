@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/vaal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.13 2013/06/02 11:57:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.14 2013/11/12 17:44:27 jlec Exp $
+
+  12 Nov 2013; Justin Lecher <jlec@gentoo.org> vaal-1.6.ebuild,
+  vaal-42179.ebuild, vaal-45166.ebuild, vaal-46233.ebuild:
+  Drop x86 as upstream gives no support and types are not easily fixable,
+  #458488, #472088 & #488550
 
 *vaal-46233 (02 Jun 2013)
 
