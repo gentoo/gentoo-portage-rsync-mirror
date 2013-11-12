@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3.ebuild,v 1.3 2012/08/12 18:58:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.3.ebuild,v 1.4 2013/11/12 19:24:02 grobian Exp $
 
 EAPI="3"
 
@@ -66,6 +66,7 @@ src_prepare() {
 	cd "${S}"/${LD64}/src
 	cp "${FILESDIR}"/ld64-128.2-Makefile Makefile
 	epatch "${FILESDIR}"/ld64-127.2-lto.patch
+	epatch "${FILESDIR}"/ld64-128.2-stdlib.patch
 
 	ln -s ../../${CCTOOLS}/include
 	cp other/prune_trie.h include/mach-o/ || die
