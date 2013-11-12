@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcharts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/ChangeLog,v 1.11 2012/06/29 05:49:50 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/ChangeLog,v 1.12 2013/11/11 23:16:12 mr_bones_ Exp $
+
+  11 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> jcharts-0.7.5-r2.ebuild:
+  remove mention of really old slot 1.4
 
   29 Jun 2012; Jeff Horelick <jdhore@gentoo.org> jcharts-0.7.5-r2.ebuild:
   marked x86 per bug 417867
@@ -43,4 +46,3 @@
   13 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
   +jcharts-0.7.5.ebuild:
   Initial addition. Ebuild written by me.
-
