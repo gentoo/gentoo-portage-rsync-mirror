@@ -1,32 +1,31 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.9_pre2.ebuild,v 1.1 2013/10/04 09:57:29 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ecore/ecore-1.7.9.ebuild,v 1.1 2013/11/12 18:14:05 tommy Exp $
 
-EAPI=2
+EAPI=3
 
 #virtualx is required for tests, which are currently broken
 #inherit virtualx
-inherit autotools enlightenment eutils
+inherit enlightenment eutils
 
 DESCRIPTION="Enlightenment's core event abstraction layer and OS abstraction layer"
-#SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
-SRC_URI="http://download.enlightenment.org/pre-releases/efl-${PV/_pre2}/${P/_pre2}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="ares curl directfb +evas examples fbcon gles glib gnutls +inotify ipv6 opengl sdl ssl static-libs +threads tslib wayland +X xcb xinerama xprint xscreensaver"
 
-RDEPEND=">=dev-libs/eina-1.7.8
+RDEPEND=">=dev-libs/eina-1.7.9
 	ares? ( net-dns/c-ares )
 	glib? ( dev-libs/glib )
 	curl? ( net-misc/curl )
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( ssl? ( dev-libs/openssl ) )
 	evas? (
-		>=media-libs/evas-1.7.8[directfb?,fbcon?,opengl?,X?,xcb?]
+		>=media-libs/evas-1.7.9[directfb?,fbcon?,opengl?,X?,xcb?]
 		opengl? ( virtual/opengl )
 		wayland? (
-			>=media-libs/evas-1.7.8[directfb?,fbcon?,gles?,opengl?,wayland?,X?,xcb?]
+			>=media-libs/evas-1.7.9[directfb?,fbcon?,gles?,opengl?,wayland?,X?,xcb?]
 		)
 	)
 	directfb? ( >=dev-libs/DirectFB-0.9.16 )
@@ -52,13 +51,6 @@ DEPEND="${RDEPEND}"
 
 #tests depend on temp data from eina WORKDIR
 RESTRICT=test
-
-S=${WORKDIR}/${P/_pre2}
-
-src_prepare() {
-	sed -i "s:1.7.9:1.7.8:g" configure.ac
-	eautoreconf
-}
 
 src_configure() {
 	local SSL_FLAGS="" EVAS_FLAGS="" X_FLAGS=""

@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.84 2013/10/31 14:33:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.85 2013/11/12 18:20:03 ulm Exp $
+
+*emacs-common-gentoo-1.3-r4 (12 Nov 2013)
+
+  12 Nov 2013; Ulrich Müller <ulm@gentoo.org>
+  +emacs-common-gentoo-1.3-r4.ebuild:
+  Create site-gentoo.el in preinst phase and have it belong to this package.
+  Refuse installation if the site-start.el file is still in its old location;
+  we have warned about this since almost two years.
 
   31 Oct 2013; Ulrich Müller <ulm@gentoo.org>
   emacs-common-gentoo-1.3-r3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.144 2013/11/10 15:14:28 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.145 2013/11/12 18:30:46 mgorny Exp $
+
+  12 Nov 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Bump make dep to 3.81 since 3.80 was reported non-working by okias.
 
   10 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   llvm-3.3-r1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/eet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.30 2013/09/28 09:13:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.31 2013/11/12 18:05:45 tommy Exp $
+
+*eet-1.7.9 (12 Nov 2013)
+
+  12 Nov 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +eet-1.7.9.ebuild:
+  Version bump
 
 *eet-9999 (28 Sep 2013)
 

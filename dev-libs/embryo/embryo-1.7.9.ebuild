@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/embryo-1.7.4.ebuild,v 1.1 2012/12/21 20:01:52 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/embryo/embryo-1.7.9.ebuild,v 1.1 2013/11/12 18:17:01 tommy Exp $
 
 inherit enlightenment
 
@@ -11,5 +11,5 @@ LICENSE="BSD-2 ZLIB"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="static-libs"
 
-DEPEND=">=dev-libs/eina-1.7.0"
+DEPEND=">=dev-libs/eina-1.7.9"
 RDEPEND=${DEPEND}

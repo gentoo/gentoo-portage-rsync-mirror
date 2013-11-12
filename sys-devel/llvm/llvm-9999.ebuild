@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.58 2013/10/31 16:22:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.59 2013/11/12 18:30:46 mgorny Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ COMMON_DEPEND="
 DEPEND="${COMMON_DEPEND}
 	dev-lang/perl
 	dev-python/sphinx
-	>=sys-devel/make-3.79
+	>=sys-devel/make-3.81
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1
