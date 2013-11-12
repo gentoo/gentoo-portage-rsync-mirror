@@ -1,0 +1,13 @@
+DEFINED_PHASES=prepare
+DEPEND=app-crypt/gnupg dev-perl/Crypt-OpenSSL-RSA dev-perl/Digest-SHA1 test? ( net-misc/socat )
+DESCRIPTION=Leverage the OpenPGP web of trust for OpenSSH and Web authentication
+EAPI=5
+HOMEPAGE=http://web.monkeysphere.info/
+IUSE=test
+KEYWORDS=~x86 ~amd64
+LICENSE=GPL-3
+RDEPEND=app-crypt/gnupg dev-perl/Crypt-OpenSSL-RSA dev-perl/Digest-SHA1 test? ( net-misc/socat )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://archive.monkeysphere.info/debian/pool/monkeysphere/m/monkeysphere/monkeysphere_0.36.orig.tar.gz
+_md5_=3a1caefd0b86449189fad56f351d042f

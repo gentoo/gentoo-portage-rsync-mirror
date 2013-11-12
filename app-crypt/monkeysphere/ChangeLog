@@ -1,0 +1,9 @@
+# ChangeLog for app-crypt/monkeysphere
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.1 2013/11/12 07:17:45 patrick Exp $
+
+*monkeysphere-0.36 (12 Nov 2013)
+
+  12 Nov 2013; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +monkeysphere-0.36.ebuild:
+  Initial import, ebuild borrowed from laurentb overlay and cleaned up
