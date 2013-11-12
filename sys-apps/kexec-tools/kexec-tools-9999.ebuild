@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-9999.ebuild,v 1.10 2013/11/12 08:14:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/kexec-tools-9999.ebuild,v 1.11 2013/11/12 09:09:20 jlec Exp $
 
 EAPI=5
 
@@ -18,7 +18,11 @@ SLOT="0"
 KEYWORDS=""
 IUSE="booke lzma xen zlib"
 
-DEPEND="lzma? ( app-arch/xz-utils )"
+REQUIRED_USE="lzma? ( zlib )"
+
+DEPEND="
+	lzma? ( app-arch/xz-utils )
+	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~KEXEC"

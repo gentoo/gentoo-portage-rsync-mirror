@@ -1,6 +1,17 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.621 2013/11/02 12:44:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.622 2013/11/12 09:28:07 polynomial-c Exp $
+
+*samba-4.1.1 (12 Nov 2013)
+*samba-4.0.11 (12 Nov 2013)
+*samba-3.6.20 (12 Nov 2013)
+
+  12 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> -samba-3.6.16.ebuild,
+  +samba-3.6.20.ebuild, +samba-4.0.11.ebuild, +samba-4.1.1.ebuild,
+  +files/samba-4.1.0-remove-dmapi-automagic.patch:
+  Security bumps for CVE-2013-4475 and CVE-2013-4476. Removed automagic
+  dependency on dmapi. Thanks to Andreas Sturmlechner for providing a patch in
+  bug #474492. Removed old.
 
   02 Nov 2013; Markos Chandras <hwoarang@gentoo.org> samba-3.6.19.ebuild:
   Add ~mips per #444688

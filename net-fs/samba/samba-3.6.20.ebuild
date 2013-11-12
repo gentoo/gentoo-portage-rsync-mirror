@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.16.ebuild,v 1.12 2013/09/06 16:04:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.20.ebuild,v 1.1 2013/11/12 09:28:07 polynomial-c Exp $
 
 EAPI=4
 
-inherit pam versionator multilib eutils systemd
+inherit pam versionator multilib eutils flag-o-matic systemd
 
 MY_PV=${PV/_/}
 MY_P="${PN}-${MY_PV}"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug dmapi doc examples fam
 	ldap ldb +netapi pam quota +readline selinux +server +smbclient smbsharemodes
 	swat syslog winbind"
@@ -130,6 +130,11 @@ src_configure() {
 
 	# Filter out -fPIE
 	[[ ${CHOST} == *-*bsd* ]] && myconf+=" --disable-pie"
+
+	#Allowing alpha/s390/sh to build
+	if use alpha || use s390 || use sh ; then
+		replace-flags -O? -O1
+	fi
 
 	# http://wiki.samba.org/index.php/CTDB_Setup
 	use cluster && myconf+=" --disable-pie"
