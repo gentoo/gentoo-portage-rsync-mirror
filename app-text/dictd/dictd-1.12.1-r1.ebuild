@@ -1,10 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.12.0.ebuild,v 1.4 2012/05/24 04:43:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.12.1-r1.ebuild,v 1.1 2013/11/12 20:20:20 pacho Exp $
 
-EAPI="4"
-
-inherit eutils user
+EAPI=5
+inherit eutils readme.gentoo systemd user
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/ http://sourceforge.net/projects/dict/"
@@ -17,15 +16,26 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~
 IUSE="dbi judy minimal"
 
 # <gawk-3.1.6 makes tests fail.
-RDEPEND="sys-apps/coreutils
+RDEPEND="
 	sys-libs/zlib
 	dev-libs/libmaa
 	dbi? ( dev-db/libdbi )
 	judy? ( dev-libs/judy )
-	>=sys-apps/coreutils-6.10"
+	>=sys-apps/coreutils-6.10
+"
 DEPEND="${RDEPEND}
 	>=sys-apps/gawk-3.1.6
-	virtual/yacc"
+	virtual/yacc
+"
+
+DOC_CONTENTS="
+	To start and use ${PN} you need to emerge at least one dictionary from
+	the app-dicts category with the package name starting with 'dictd-'.
+	To install all available dictionaries, emerge app-dicts/dictd-dicts.
+	${PN} will NOT start without at least one dictionary.\n
+	\nIf you are running systemd, you will need to review the instructions
+	explained in /etc/dict/dictd.conf comments.
+"
 
 pkg_setup() {
 	enewgroup dictd # used in src_test()
@@ -74,6 +84,7 @@ src_install() {
 
 		dodoc doc/{dicf.ms,rfc.ms,rfc.sh,rfc2229.txt}
 		dodoc doc/{security.doc,toc.ms}
+		newdoc examples/dictd1.conf dictd.conf.example
 
 		# conf files. For dict.conf see below.
 		insinto /etc/dict
@@ -84,19 +95,13 @@ src_install() {
 		# startups for dictd
 		newinitd "${FILESDIR}/1.10.11/dictd.initd" dictd
 		newconfd "${FILESDIR}/1.10.11/dictd.confd" dictd
+		systemd_dounit "${FILESDIR}"/${PN}.service
 	fi
 
 	insinto /etc/dict
 	doins "${FILESDIR}/1.10.11/dict.conf"
 	# Install docs
 	dodoc README TODO ChangeLog ANNOUNCE NEWS
-}
 
-pkg_postinst() {
-	echo
-	elog "To start and use ${PN} you need to emerge at least one dictionary from"
-	elog "the app-dicts category with the package name starting with 'dictd-'."
-	elog "To install all available dictionaries, emerge app-dicts/dictd-dicts."
-	elog "${PN} will NOT start without at least one dictionary."
-	echo
+	readme.gentoo_create_doc
 }

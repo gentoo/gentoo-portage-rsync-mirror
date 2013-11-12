@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.385 2013/11/12 13:48:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.386 2013/11/12 20:13:02 ago Exp $
+
+  12 Nov 2013; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.11.4.ebuild:
+  Stable for ia64, wrt bug #490668
 
   12 Nov 2013; Jeroen Roovers <jer@gentoo.org> mit-krb5-1.11.4.ebuild:
   Stable for HPPA (bug #490668).

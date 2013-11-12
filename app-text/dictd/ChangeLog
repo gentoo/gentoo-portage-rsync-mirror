@@ -1,6 +1,13 @@
 # ChangeLog for app-text/dictd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.92 2013/01/29 08:38:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.93 2013/11/12 20:20:20 pacho Exp $
+
+*dictd-1.12.1-r1 (12 Nov 2013)
+
+  12 Nov 2013; Pacho Ramos <pacho@gentoo.org> +dictd-1.12.1-r1.ebuild,
+  +files/dictd.service, -dictd-1.11.1-r1.ebuild, -dictd-1.12.0.ebuild,
+  files/1.10.11/dictd.conf:
+  Add unit file (#489666 by Juan and Alexander Tsoy), drop old.
 
 *dictd-1.12.1 (29 Jan 2013)
 
