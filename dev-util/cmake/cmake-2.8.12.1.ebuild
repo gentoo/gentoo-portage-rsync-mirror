@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.ebuild,v 1.2 2013/10/21 14:42:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.1.ebuild,v 1.1 2013/11/12 21:50:37 johu Exp $
 
 EAPI=5
 

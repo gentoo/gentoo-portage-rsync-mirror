@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.7.2.ebuild,v 1.2 2013/11/12 21:54:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.8.1.ebuild,v 1.1 2013/11/12 21:54:57 blueness Exp $
 
 EAPI=5
 
@@ -8,24 +8,20 @@ inherit autotools flag-o-matic
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA/ASIC miner in C"
 HOMEPAGE="http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer"
-#SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
-SRC_URI="http://ck.kolivas.org/apps/cgminer/3.7/${P}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
+#SRC_URI="http://ck.kolivas.org/apps/cgminer/3.8/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples hardened ncurses opencl adl scrypt
+IUSE="doc examples hardened ncurses
 	avalon bflsc bitforce bitfury icarus klondike modminer"
 
-REQUIRED_USE="|| ( opencl avalon bflsc bitforce bitfury icarus klondike modminer )
-	adl? ( opencl )
-	scrypt? ( opencl )"
+REQUIRED_USE="|| ( avalon bflsc bitforce bitfury icarus klondike modminer )"
 
 DEPEND="net-misc/curl
 	dev-libs/jansson
-	adl? ( x11-libs/amd-adl-sdk )
 	ncurses? ( sys-libs/ncurses )
-	opencl? ( virtual/opencl )
 	avalon? ( virtual/libusb:1 )
 	bflsc? ( virtual/libusb:1 )
 	bitforce? ( virtual/libusb:1 )
@@ -43,9 +39,6 @@ src_configure() {
 	use hardened && append-cflags "-nopie"
 
 	econf $(use_with ncurses curses) \
-		$(use_enable opencl) \
-		$(use_enable adl) \
-		$(use_enable scrypt) \
 		$(use_enable avalon) \
 		$(use_enable bflsc) \
 		$(use_enable bitforce) \
@@ -61,8 +54,6 @@ src_install() { # How about using some make install?
 	dobin cgminer
 	if use doc; then
 		dodoc AUTHORS NEWS README API-README
-		use opencl && dodoc GPU-README
-		use scrypt && dodoc SCRYPT-README
 		use icarus || use bitforce || use modminer && dodoc FPGA-README
 		use avalon || use bflsc && dodoc ASIC-README
 	fi
@@ -71,10 +62,6 @@ src_install() { # How about using some make install?
 		insinto /usr/lib/cgminer/modminer
 		doins bitstreams/*.ncd
 		dodoc bitstreams/COPYING_fpgaminer
-	fi
-	if use opencl; then
-		insinto /usr/lib/cgminer
-		doins *.cl
 	fi
 	if use examples; then
 		docinto examples
