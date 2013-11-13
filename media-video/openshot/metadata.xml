@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
 <maintainer>
-	<email>housegregory299@gmail.com</email>
-	<name>Galym Kerimbekov</name>
+	<email>TomWij@gentoo.org</email>
+	<name>Tom Wijsman</name>
 </maintainer>
 <longdescription>Free, open-source, non-linear video editor to create and edit videos and movies</longdescription>
 </pkgmetadata>
