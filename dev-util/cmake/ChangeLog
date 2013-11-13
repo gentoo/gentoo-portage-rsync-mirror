@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.260 2013/11/12 21:50:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.261 2013/11/13 18:26:34 johu Exp $
+
+*cmake-2.8.12.1-r1 (13 Nov 2013)
+
+  13 Nov 2013; Johannes Huber <johu@gentoo.org> +cmake-2.8.12.1-r1.ebuild,
+  +files/cmake-2.8.12.1-FindImageMagick.patch, -cmake-2.8.12.1.ebuild:
+  Revision bump adds patch by Arfrever Frehtes Taifersar Arahesis
+  <arfrever.fta@gmail.com>. Patch is for compatibility with media-
+  gfx/imagemagick[q32] and media-gfx/imagemagick[q64] wrt bug #491124.
 
 *cmake-2.8.12.1 (12 Nov 2013)
 
