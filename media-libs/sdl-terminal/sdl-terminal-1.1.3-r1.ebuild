@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-terminal/sdl-terminal-1.1.3-r1.ebuild,v 1.5 2012/12/04 15:39:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-terminal/sdl-terminal-1.1.3-r1.ebuild,v 1.6 2013/11/13 05:08:30 mr_bones_ Exp $
 
 EAPI=4
 inherit base libtool
 
 MY_P="${P/sdl-/SDL_}"
 DESCRIPTION="library that provides a pseudo-ansi color terminal that can be used with any SDL application"
-HOMEPAGE="http://www.loria.fr/~rougier/coding/outdated.html#sdl-terminal"
-SRC_URI="http://www.loria.fr/~rougier/pub/Software/${MY_P}.tar.gz"
+HOMEPAGE="http://sourceforge.net/projects/sdl-terminal/"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
