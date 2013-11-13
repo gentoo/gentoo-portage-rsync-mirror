@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.22 2013/10/29 05:02:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.23 2013/11/13 12:30:45 idella4 Exp $
+
+*glance-2013.2-r1 (13 Nov 2013)
+
+  13 Nov 2013; Ian Delaney <idella4@gentoo.org>
+  +files/glance-2013.2-sphinx_mapping.patch, +glance-2013.2-r1.ebuild:
+  Added; IUSE doc, test, doc build & install, test phase with diligent
+  assistance of tester/helper Chicago
 
 *glance-2013.2 (29 Oct 2013)
 *glance-2013.1.4 (29 Oct 2013)
