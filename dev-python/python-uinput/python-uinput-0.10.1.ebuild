@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-uinput/python-uinput-0.9.ebuild,v 1.3 2013/11/13 10:30:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-uinput/python-uinput-0.10.1.ebuild,v 1.1 2013/11/13 10:30:16 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=(python{2_6,2_7})
+PYTHON_COMPAT=(python{2_{6,7},3_{2,3}})
 
 inherit distutils-r1
 
@@ -20,10 +20,10 @@ IUSE=""
 DEPEND="virtual/udev"
 RDEPEND="${DEPEND}"
 
-src_install() {
-	fix_missing_newlines() {
-		sed -r -i 's/\)([A-Z]+)/\)\n\1/g' "${BUILD_DIR}"/lib/uinput/ev.py || die "sed failed"
-	}
-	python_foreach_impl fix_missing_newlines
-	distutils-r1_src_install
+python_prepare_all() {
+	sed \
+		-e "s:libudev.so.0:libudev.so:g" \
+		-i setup.py || die
+	rm libsuinput/src/libudev.h || die
+	distutils-r1_python_prepare_all
 }
