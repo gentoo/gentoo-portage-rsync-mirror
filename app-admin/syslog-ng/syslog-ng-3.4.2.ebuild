@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.2.ebuild,v 1.11 2013/09/06 14:58:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.2.ebuild,v 1.12 2013/11/13 17:29:42 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils multilib systemd
@@ -65,7 +65,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake -j1 DESTDIR="${D}" install
 
 	dodoc AUTHORS ChangeLog NEWS contrib/syslog-ng.conf* contrib/syslog2ng \
 		"${FILESDIR}/${PV%.*}/syslog-ng.conf.gentoo.hardened" \
