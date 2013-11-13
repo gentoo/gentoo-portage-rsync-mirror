@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.7.2.ebuild,v 1.6 2013/09/13 14:32:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.7.2.ebuild,v 1.7 2013/11/13 11:47:09 chainsaw Exp $
 
 EAPI=5
 inherit autotools eutils fdo-mime gnome2-utils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/xboard/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="Xaw3d +default-font gtk nls zippy"
 RESTRICT="test" #124112
 

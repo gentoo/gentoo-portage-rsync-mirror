@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.11.ebuild,v 1.1 2013/02/03 00:56:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/freedoko-0.7.11.ebuild,v 1.2 2013/11/13 11:42:07 chainsaw Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -24,7 +24,7 @@ SRC_URI="mirror://sourceforge/free-doko/FreeDoko_${PV}.src.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="+xskatcards +gnomecards +kdecards +openclipartcards +pysolcards +backgrounds net doc"
 
 RDEPEND="net? ( net-libs/gnet dev-libs/glib:2 )
