@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.182 2013/10/26 08:55:51 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.183 2013/11/13 04:18:20 mattst88 Exp $
+
+  13 Nov 2013; Matt Turner <mattst88@gentoo.org> use.mask:
+  Drop systemd from use.mask, bug 478076.
 
   26 Oct 2013; Mark Wright <gienah@gentoo.org> package.use.mask:
   mask dev-haskell/dataenc test as template-haskell not yet available

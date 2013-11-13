@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-systemd-integration
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.10 2013/09/28 20:30:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.11 2013/11/13 04:03:59 mattst88 Exp $
+
+  13 Nov 2013; Matt Turner <mattst88@gentoo.org>
+  gentoo-systemd-integration-2.ebuild:
+  Added ~alpha, bug 478076.
 
   28 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
   gentoo-systemd-integration-1.ebuild:

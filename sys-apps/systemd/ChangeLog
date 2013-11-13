@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.196 2013/11/11 13:56:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.197 2013/11/13 04:16:45 mattst88 Exp $
+
+  13 Nov 2013; Matt Turner <mattst88@gentoo.org> systemd-208-r2.ebuild:
+  Added ~alpha, bug 478076.
 
 *systemd-204-r3 (11 Nov 2013)
 
