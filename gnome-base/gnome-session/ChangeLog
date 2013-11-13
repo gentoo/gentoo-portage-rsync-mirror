@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.324 2013/07/31 03:36:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.325 2013/11/13 19:43:26 pacho Exp $
+
+*gnome-session-3.8.4-r1 (13 Nov 2013)
+
+  13 Nov 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-session-3.8.4-blacklist-nv25.patch,
+  +files/gnome-session-3.8.4-presence-crash.patch,
+  +gnome-session-3.8.4-r1.ebuild, -files/gnome-session-3.6.2-upower.patch,
+  -files/gnome-session-3.8.2.1-filter-nodisplay.patch,
+  -gnome-session-3.6.2-r2.ebuild, -gnome-session-3.8.2.1-r1.ebuild:
+  Fix a possible crash in the presence interface (from 3.8 branch), blacklist
+  nv25 (from 'master').
 
 *gnome-session-3.8.4 (31 Jul 2013)
 

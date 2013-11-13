@@ -1,14 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.6.2-r2.ebuild,v 1.1 2013/02/03 00:39:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.8.4-r1.ebuild,v 1.1 2013/11/13 19:43:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Gnome session manager"
-HOMEPAGE="http://www.gnome.org/"
+HOMEPAGE="https://git.gnome.org/browse/gnome-session"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
@@ -20,11 +20,12 @@ IUSE="doc elibc_FreeBSD gconf ipv6 systemd"
 # xdg-user-dirs-update is run during login (see 10-user-dirs-update-gnome below).
 # gdk-pixbuf used in the inhibit dialog
 COMMON_DEPEND="
-	>=dev-libs/glib-2.33.4:2
+	>=dev-libs/glib-2.35.0:2
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-2.90.7:3
 	>=dev-libs/json-glib-0.10
 	>=dev-libs/dbus-glib-0.76
+	>=gnome-base/gnome-desktop-3.7.90:3
 	>=sys-power/upower-0.9.0
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
 
@@ -59,7 +60,6 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5
 	>=sys-devel/gettext-0.10.40
 	>=dev-util/intltool-0.40.6
-	x11-libs/pango[X]
 	virtual/pkgconfig
 	!<gnome-base/gdm-2.20.4
 	doc? (
@@ -70,11 +70,18 @@ DEPEND="${COMMON_DEPEND}
 # gnome-base/gdm does not provide gnome.desktop anymore
 
 src_prepare() {
-	# upower-client problems, bug #450150; fixed in 3.6.3
-	epatch "${FILESDIR}/${P}-upower.patch"
-
 	# Silence errors due to weird checks for libX11
 	sed -e 's/\(PANGO_PACKAGES="\)pangox/\1/' -i configure.ac configure || die
+
+	# Allow people to configure startup apps, bug #464968, upstream bug #663767
+	sed -i -e '/NoDisplay/d' data/session-properties.desktop.in.in || die
+
+	# Fix a possible crash in the presence interface (from 3.8 branch)
+	epatch "${FILESDIR}/${P}-presence-crash.patch"
+
+	# Blacklist nv25 (from 'master')
+	epatch "${FILESDIR}"/${PN}-3.8.4-blacklist-nv25.patch
+
 	gnome2_src_prepare
 }
 
@@ -82,6 +89,7 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-deprecation-flags \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--enable-session-selector \
 		$(use_enable doc docbook-docs) \
 		$(use_enable gconf) \
 		$(use_enable ipv6) \

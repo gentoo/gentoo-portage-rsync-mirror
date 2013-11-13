@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.140 2013/10/26 08:55:51 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.141 2013/11/13 19:33:29 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (13 Nov 2013)
+# Missing keywords, bug #478254
+>=gnome-base/gnome-3.8 classic
 
 # Mark Wright <gienah@gentoo.org> (26 Oct 2013)
 # template-haskell not yet available

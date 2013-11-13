@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8350 2013/11/12 08:16:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8351 2013/11/13 19:33:28 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Nov 2013; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask:
+  Use mask due missing keywords, bug #478254
 
   12 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Masked <dev-vcs/git-1.8.1.5 for removal.
