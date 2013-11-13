@@ -1,6 +1,21 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.365 2013/11/13 17:29:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.367 2013/11/13 17:39:06 mr_bones_ Exp $
+
+  13 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/syslog-ng.conf.gentoo.3.2, -files/syslog-ng.conf.gentoo.fbsd.3.2,
+  -files/syslog-ng.conf.gentoo.hardened.3.2, -files/syslog-ng.rc6.3,
+  -syslog-ng-3.2.5.ebuild:
+  old
+
+  13 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/syslog-ng-3.3.5-afsocket.patch, -files/syslog-ng-3.3.5-compile.patch,
+  -files/syslog-ng-3.3.5-gprocess.patch, -files/syslog-ng-3.3.5-include.patch,
+  -files/syslog-ng-3.3.5-threading.patch, -files/syslog-ng-3.3.5-utmpx.patch,
+  -files/syslog-ng.conf.gentoo.3.3, -files/syslog-ng.conf.gentoo.fbsd.3.3,
+  -files/syslog-ng.conf.gentoo.hardened.3.3, -files/syslog-ng.rc6.3.3,
+  -syslog-ng-3.3.5-r1.ebuild:
+  old
 
   13 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.4.2.ebuild:
   add -j1 so stable users don't encounter the parallel make install bug
