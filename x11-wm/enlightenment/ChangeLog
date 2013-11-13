@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.189 2013/10/04 10:40:51 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.190 2013/11/13 22:29:07 tommy Exp $
+
+*enlightenment-0.17.5 (13 Nov 2013)
+
+  13 Nov 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +enlightenment-0.17.5.ebuild, -enlightenment-0.17.4.ebuild,
+  -enlightenment-0.17.5_pre2.ebuild:
+  Version bump for enlightenment-0.17.5, drop 0.17.4 and pre-release
 
 *enlightenment-0.17.5_pre2 (04 Oct 2013)
 
