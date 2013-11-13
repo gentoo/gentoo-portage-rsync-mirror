@@ -1,0 +1,11 @@
+--- configure.ac.orig	2013-11-13 03:29:17.623574252 +0000
++++ configure.ac	2013-11-13 03:29:39.083848250 +0000
+@@ -12,7 +12,7 @@
+ AC_INIT(ganeti, gnt_version_full, ganeti@googlegroups.com)
+ AC_CONFIG_AUX_DIR(autotools)
+ AC_CONFIG_SRCDIR(configure)
+-AM_INIT_AUTOMAKE([1.9 foreign tar-ustar -Wall -Wno-portability])
++AM_INIT_AUTOMAKE([1.9 foreign tar-ustar serial-tests -Wall -Wno-portability])
+ 
+ AC_SUBST([VERSION_MAJOR], gnt_version_major)
+ AC_SUBST([VERSION_MINOR], gnt_version_minor)
