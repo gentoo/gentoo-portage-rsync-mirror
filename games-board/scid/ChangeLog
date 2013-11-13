@@ -1,6 +1,10 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.38 2013/04/30 20:29:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.39 2013/11/13 11:12:05 chainsaw Exp $
+
+  13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> scid-4.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #490608.
 
 *scid-4.4 (30 Apr 2013)
 

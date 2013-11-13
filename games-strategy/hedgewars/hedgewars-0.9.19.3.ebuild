@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.19.3.ebuild,v 1.1 2013/09/11 12:46:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/hedgewars-0.9.19.3.ebuild,v 1.2 2013/11/13 11:23:50 chainsaw Exp $
 
 # TODO: when physfs-2.1.0 hits the tree, set
 # -DPHYSFS_SYSTEM=ON
@@ -16,7 +16,7 @@ SRC_URI="http://download.gna.org/hedgewars/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 Apache-2.0 FDL-1.3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 QA_FLAGS_IGNORED=${GAMES_BINDIR}/hwengine # pascal sucks
 QA_PRESTRIPPED=${GAMES_BINDIR}/hwengine # pascal sucks

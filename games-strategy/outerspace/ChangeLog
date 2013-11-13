@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/outerspace
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.19 2013/01/27 15:17:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/ChangeLog,v 1.20 2013/11/13 11:22:38 chainsaw Exp $
+
+  13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> outerspace-0.5.68.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #490656.
 
 *outerspace-0.5.68 (27 Jan 2013)
 

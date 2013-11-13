@@ -1,6 +1,10 @@
 # ChangeLog for games-board/gmchess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gmchess/ChangeLog,v 1.6 2013/05/14 01:40:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gmchess/ChangeLog,v 1.7 2013/11/13 11:28:35 chainsaw Exp $
+
+  13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> gmchess-0.29.6-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #490642.
 
   14 May 2013; Michael Sterrett <mr_bones_@gentoo.org> gmchess-0.29.6-r1.ebuild:
   use games_get_libdir

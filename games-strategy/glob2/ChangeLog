@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.56 2013/10/27 16:49:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.57 2013/11/13 11:16:24 chainsaw Exp $
+
+  13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> glob2-0.9.4.4-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #490660.
 
 *glob2-0.9.4.4-r1 (27 Oct 2013)
 

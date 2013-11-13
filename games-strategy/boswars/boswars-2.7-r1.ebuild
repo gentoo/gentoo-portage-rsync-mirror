@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.7-r1.ebuild,v 1.1 2013/07/29 21:28:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/boswars-2.7-r1.ebuild,v 1.2 2013/11/13 11:14:33 chainsaw Exp $
 
 EAPI=5
 inherit eutils scons-utils games
@@ -13,7 +13,7 @@ SRC_URI="http://www.boswars.org/dist/releases/${P}-src.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-lang/lua

@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.54 2013/09/11 12:46:44 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.55 2013/11/13 11:23:50 chainsaw Exp $
+
+  13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> hedgewars-0.9.19.3.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #490650.
 
 *hedgewars-0.9.19.3 (11 Sep 2013)
 
