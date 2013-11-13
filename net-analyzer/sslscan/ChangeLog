@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sslscan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/ChangeLog,v 1.8 2013/11/07 10:22:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/ChangeLog,v 1.9 2013/11/13 07:24:20 graaff Exp $
+
+  13 Nov 2013; Hans de Graaff <graaff@gentoo.org> sslscan-1.8.2.ebuild:
+  Update dependency on openssl to require -bindist, fixing bug 491102.
 
   07 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> sslscan-1.8.2.ebuild:
   Fixed HOMEPAGE.

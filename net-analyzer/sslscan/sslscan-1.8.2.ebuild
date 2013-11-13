@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/sslscan-1.8.2.ebuild,v 1.5 2013/11/07 10:22:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/sslscan-1.8.2.ebuild,v 1.6 2013/11/13 07:24:20 graaff Exp $
 
 EAPI=4
 
@@ -15,7 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/openssl:0"
+# Depend on -bindist since sslscan unconditionally requires elliptic
+# curve support, bug 491102
+DEPEND="dev-libs/openssl:0[-bindist]"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
