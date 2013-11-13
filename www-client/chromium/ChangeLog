@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.979 2013/11/13 07:47:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.980 2013/11/13 19:25:01 phajdan.jr Exp $
+
+*chromium-33.0.1707.0 (13 Nov 2013)
+
+  13 Nov 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-gnome-keyring-r0.patch, -chromium-30.0.1599.101.ebuild,
+  -chromium-31.0.1650.39.ebuild, +chromium-33.0.1707.0.ebuild:
+  Dev channel bump. Remove old.
 
   13 Nov 2013; Agostino Sarubbo <ago@gentoo.org> chromium-31.0.1650.48.ebuild:
   Stable for amd64, wrt bug #491128

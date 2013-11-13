@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-termios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.36 2013/07/21 06:27:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.37 2013/11/13 19:02:23 mrueg Exp $
+
+*ruby-termios-1.0.0 (13 Nov 2013)
+
+  13 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +ruby-termios-1.0.0.ebuild:
+  Version bump. Add ruby20 target.
 
   21 Jul 2013; Hans de Graaff <graaff@gentoo.org>
   -ruby-termios-0.9.6-r1.ebuild:

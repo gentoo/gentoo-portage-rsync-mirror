@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.6.ebuild,v 1.1 2013/11/10 08:59:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.8.6.ebuild,v 1.2 2013/11/13 19:24:15 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -130,7 +130,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.8.0-paths.patch"
 
 	# Fix linking, upstream bug #710829
-	epatch "${FILESDIR}"/${PN}-3.8.6-flickr-linking.patch
+	epatch "${FILESDIR}"/${PN}-3.8.6-flickr-linking{,2}.patch
 
 	epatch_user
 
