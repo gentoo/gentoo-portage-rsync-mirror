@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-15.ebuild,v 1.3 2013/11/12 13:46:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-15.ebuild,v 1.4 2013/11/13 03:27:10 mattst88 Exp $
 
 EAPI=5
 inherit autotools eutils libtool multilib toolchain-funcs versionator
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-2
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/kmod/${P}.tar.xz"
-	KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 
 DESCRIPTION="library and tools for managing linux kernel modules"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.972 2013/11/12 13:45:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.973 2013/11/13 03:30:35 mattst88 Exp $
+
+  13 Nov 2013; Matt Turner <mattst88@gentoo.org> udev-208.ebuild:
+  alpha stable, bug 487340.
 
   12 Nov 2013; Jeroen Roovers <jer@gentoo.org> udev-208.ebuild:
   Stable for HPPA (bug #487340).
