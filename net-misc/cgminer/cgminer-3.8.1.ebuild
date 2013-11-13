@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.8.1.ebuild,v 1.2 2013/11/12 22:03:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.8.1.ebuild,v 1.3 2013/11/13 20:03:08 blueness Exp $
 
 EAPI=5
 
@@ -31,7 +31,6 @@ DEPEND="net-misc/curl
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	ln -s /usr/include/ADL/* ADL_SDK/
 	eautoreconf
 }
 
