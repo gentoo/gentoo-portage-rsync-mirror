@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.40.ebuild,v 1.2 2013/10/29 01:44:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.43.ebuild,v 1.1 2013/11/13 21:40:03 mabi Exp $
 
 EAPI=4
 

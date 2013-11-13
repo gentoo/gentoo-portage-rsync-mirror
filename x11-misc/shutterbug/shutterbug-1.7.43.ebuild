@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/shutterbug-1.7.33.ebuild,v 1.1 2012/07/04 18:56:46 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/shutterbug-1.7.43.ebuild,v 1.1 2013/11/13 21:43:51 mabi Exp $
 
 EAPI="4"
 

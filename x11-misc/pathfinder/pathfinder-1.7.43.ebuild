@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/shutterbug-1.7.41.ebuild,v 1.1 2013/09/13 21:00:57 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/pathfinder-1.7.43.ebuild,v 1.1 2013/11/13 21:46:30 mabi Exp $
 
 EAPI="4"
 
 inherit fox
 
-DESCRIPTION="Screenshot utility based on the FOX Toolkit"
+DESCRIPTION="File manager based on the FOX Toolkit"
 
 LICENSE="GPL-2"
 SLOT="0"
