@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.494 2013/11/07 00:40:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.495 2013/11/13 21:01:56 floppym Exp $
+
+  13 Nov 2013; Mike Gilbert <floppym@gentoo.org> nvidia-drivers-331.20.ebuild:
+  Comment out broken pax-usercopy patch.
 
   07 Nov 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-173.14.38.ebuild:
   Raise max kernel version for 173*.
