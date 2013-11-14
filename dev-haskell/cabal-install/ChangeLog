@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/cabal-install
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.16 2013/09/09 20:15:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/ChangeLog,v 1.17 2013/11/14 18:20:15 slyfox Exp $
+
+*cabal-install-1.18.0.2 (14 Nov 2013)
+
+  14 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +cabal-install-1.18.0.2.ebuild, -cabal-install-1.18.0.1.ebuild:
+  Version bump.
 
 *cabal-install-1.18.0.1 (09 Sep 2013)
 

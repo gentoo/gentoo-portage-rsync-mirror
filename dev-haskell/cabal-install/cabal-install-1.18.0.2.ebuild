@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-1.18.0.1.ebuild,v 1.1 2013/09/09 20:15:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-1.18.0.2.ebuild,v 1.1 2013/11/14 18:20:15 slyfox Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+noprefs"
 
 RDEPEND=""
@@ -38,6 +38,12 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	if use noprefs; then
 		epatch "${FILESDIR}/${PN}"-0.13.3-nopref.patch
+	fi
+
+	# no chance to link to -threaded on ppc64, alpha and others
+	# who use UNREG, not only ARM
+	if ! ghc-supports-threaded-runtime; then
+		cabal_chdeps '-threaded' ' '
 	fi
 }
 

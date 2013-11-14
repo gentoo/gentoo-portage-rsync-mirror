@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.70 2013/08/02 07:12:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.71 2013/11/14 18:12:08 slyfox Exp $
+
+*alex-3.1.2 (14 Nov 2013)
+
+  14 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org> +alex-3.1.2.ebuild,
+  -alex-2.3.5.ebuild, -alex-3.0.2.ebuild, -files/alex-2.3.5-ghc-7.2.patch,
+  -files/alex-2.3.5-missing-test.patch:
+  Version bump. Removed old.
 
   02 Aug 2013; Sergei Trofimovich <slyfox@gentoo.org> alex-3.0.5.ebuild:
   Fix alex build failure on nonempty HCFLAGS (by hasufell).
