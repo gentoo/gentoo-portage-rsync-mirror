@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=>=dev-libs/glib-2.16:2 >=media-libs/freetype-2.3.7 >=media-libs/fontconfig-2.6 >=media-libs/libpng-1.4:0 x11-libs/libXrender x11-libs/libX11 x11-libs/libXt >=x11-libs/cairo-1.8.4[X] media-libs/libexif >=media-libs/giflib-4.2.3 virtual/jpeg media-libs/tiff:0 !cairo? ( >=x11-libs/pango-1.20 )
+DEPEND=>=dev-libs/glib-2.16:2 >=media-libs/freetype-2.3.7 >=media-libs/fontconfig-2.6 >=media-libs/libpng-1.4:0 x11-libs/libXrender x11-libs/libX11 x11-libs/libXt >=x11-libs/cairo-1.8.4[X] media-libs/libexif >=media-libs/giflib-4.2.3 virtual/jpeg:0 media-libs/tiff:0 !cairo? ( >=x11-libs/pango-1.20 )
 DESCRIPTION=Library for using System.Drawing with mono
 EAPI=5
 HOMEPAGE=http://www.mono-project.com
 IUSE=cairo
 KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris
 LICENSE=MIT
-RDEPEND=>=dev-libs/glib-2.16:2 >=media-libs/freetype-2.3.7 >=media-libs/fontconfig-2.6 >=media-libs/libpng-1.4:0 x11-libs/libXrender x11-libs/libX11 x11-libs/libXt >=x11-libs/cairo-1.8.4[X] media-libs/libexif >=media-libs/giflib-4.2.3 virtual/jpeg media-libs/tiff:0 !cairo? ( >=x11-libs/pango-1.20 )
+RDEPEND=>=dev-libs/glib-2.16:2 >=media-libs/freetype-2.3.7 >=media-libs/fontconfig-2.6 >=media-libs/libpng-1.4:0 x11-libs/libXrender x11-libs/libX11 x11-libs/libXt >=x11-libs/cairo-1.8.4[X] media-libs/libexif >=media-libs/giflib-4.2.3 virtual/jpeg:0 media-libs/tiff:0 !cairo? ( >=x11-libs/pango-1.20 )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.mono-project.com/sources/libgdiplus/libgdiplus-2.10.9.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=17cf47a7c05e778558f6ac0cdacd8ef4
+_md5_=adfb675dd02036b0155f55ec6b023c18

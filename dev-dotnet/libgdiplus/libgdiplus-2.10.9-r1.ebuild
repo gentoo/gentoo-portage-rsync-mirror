@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.10.9-r1.ebuild,v 1.2 2013/10/13 06:55:17 cynede Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.10.9-r1.ebuild,v 1.3 2013/11/14 16:29:52 kensington Exp $
 
 EAPI="5"
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/cairo-1.8.4[X]
 	media-libs/libexif
 	>=media-libs/giflib-4.2.3
-	virtual/jpeg
+	virtual/jpeg:0
 	media-libs/tiff:0
 	!cairo? ( >=x11-libs/pango-1.20 )"
 DEPEND="${RDEPEND}"

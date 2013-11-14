@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.145 2013/10/13 06:55:17 cynede Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.146 2013/11/14 16:29:52 kensington Exp $
+
+  14 Nov 2013; Michael Palimaka <kensington@gentoo.org>
+  libgdiplus-2.10.9-r1.ebuild:
+  Pin virtual/jpeg SLOT to 0.
 
   13 Oct 2013; Heather Cynede <cynede@gentoo.org> libgdiplus-2.10.9-r1.ebuild:
   correct giflib depend for libgdiplus 2.10.9 -r1
