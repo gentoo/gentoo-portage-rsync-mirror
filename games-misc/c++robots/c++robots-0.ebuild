@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/c++robots/c++robots-0.ebuild,v 1.7 2008/05/15 12:39:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/c++robots/c++robots-0.ebuild,v 1.8 2013/11/14 22:01:12 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE="static"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/boycott-advance-sdl
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/boycott-advance-sdl/ChangeLog,v 1.5 2007/02/21 23:18:21 peper Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/boycott-advance-sdl/ChangeLog,v 1.6 2013/11/14 21:54:05 mr_bones_ Exp $
+
+  14 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  boycott-advance-sdl-0.2.8.ebuild:
+  tidy
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
@@ -18,4 +22,3 @@
   12 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
   boycott-advance-sdl-0.2.8.ebuild, metadata.xml:
   initial commit; ebuild submitted by Chris Aniszczyk via bug 37943
-

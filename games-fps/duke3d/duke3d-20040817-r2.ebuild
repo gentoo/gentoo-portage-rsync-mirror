@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.12 2013/03/29 16:06:54 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20040817-r2.ebuild,v 1.13 2013/11/14 21:54:35 mr_bones_ Exp $
 
 EAPI=2
 fromcvs=0
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 	demo? ( app-arch/unzip )
 	!pic? ( x86? ( dev-lang/nasm ) )"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 use_tf() { use ${1} && echo "true" || echo "false"; }
 

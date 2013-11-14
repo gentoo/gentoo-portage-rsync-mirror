@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/nibbles-0.0.4.ebuild,v 1.13 2010/02/21 01:48:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/nibbles/nibbles-0.0.4.ebuild,v 1.14 2013/11/14 21:33:47 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="sys-libs/ncurses"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	sed -i \

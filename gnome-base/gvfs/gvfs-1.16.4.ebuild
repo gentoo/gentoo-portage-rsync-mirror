@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.3.ebuild,v 1.5 2013/08/30 22:43:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.4.ebuild,v 1.1 2013/11/14 21:55:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -43,10 +43,10 @@ RDEPEND="
 	gtk? ( >=x11-libs/gtk+-3.0:3 )
 	http? ( >=net-libs/libsoup-gnome-2.34.0:2.4 )
 	ios? (
-		>=app-pda/libimobiledevice-1.1.0:=
+		>=app-pda/libimobiledevice-1.1.5:=
 		>=app-pda/libplist-1:= )
 	mtp? ( >=media-libs/libmtp-1.1.5 )
-	samba? ( >=net-fs/samba-3.4.6[smbclient] )
+	samba? ( || ( >=net-fs/samba-3.4.6[smbclient] >=net-fs/samba-4.0.0[client] ) )
 	systemd? ( sys-apps/systemd )
 	udev? (
 		cdda? ( || ( dev-libs/libcdio-paranoia <dev-libs/libcdio-0.90[-minimal] ) )
@@ -72,9 +72,11 @@ DEPEND="${RDEPEND}
 # https://bugzilla.gnome.org/700162
 RESTRICT="test"
 
-REQUIRED_USE="cdda? ( udev )
+REQUIRED_USE="
+	cdda? ( udev )
 	udisks? ( udev )
-	systemd? ( udisks )"
+	systemd? ( udisks )
+"
 
 src_prepare() {
 	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits

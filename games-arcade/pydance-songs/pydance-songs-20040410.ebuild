@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance-songs/pydance-songs-20040410.ebuild,v 1.7 2010/02/08 21:58:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance-songs/pydance-songs-20040410.ebuild,v 1.8 2013/11/14 21:36:43 mr_bones_ Exp $
 
 inherit games
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="games-arcade/pydance"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_install() {
 	insinto "${GAMES_DATADIR}/pydance/songs"
