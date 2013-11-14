@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.980 2013/11/11 23:38:10 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.981 2013/11/14 01:30:37 dirtyepic Exp $
+
+  14 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> Manifest:
+  Fix manifests.
 
 *gcc-4.8.2 (11 Nov 2013)
 
