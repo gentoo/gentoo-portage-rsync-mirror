@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/rssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.37 2013/11/13 17:03:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/ChangeLog,v 1.38 2013/11/14 17:49:51 ottxor Exp $
+
+  14 Nov 2013; Christoph Junghans <ottxor@gentoo.org> rssh-2.3.4.ebuild:
+  added epatch_user (related to bug #491258)
 
   13 Nov 2013; Christoph Junghans <ottxor@gentoo.org> rssh-2.3.4.ebuild:
   added ~arm (tested by me)

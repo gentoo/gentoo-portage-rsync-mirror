@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.4.ebuild,v 1.6 2013/11/13 17:03:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.3.4.ebuild,v 1.7 2013/11/14 17:49:51 ottxor Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -17,6 +17,8 @@ IUSE="static"
 RDEPEND="virtual/ssh"
 
 src_prepare() {
+	epatch_user
+
 	sed -i 's:chmod u+s $(:chmod u+s $(DESTDIR)$(:' Makefile.in || die
 	# respect CFLAGS, bug #450458
 	sed -i -e '/$(CC) -c/s/$(CPPFLAGS)/$(CFLAGS)/' Makefile.in || die
