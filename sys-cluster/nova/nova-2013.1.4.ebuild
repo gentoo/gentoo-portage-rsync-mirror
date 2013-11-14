@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.4.ebuild,v 1.2 2013/11/14 04:23:37 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.4.ebuild,v 1.3 2013/11/14 06:54:23 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -61,7 +61,10 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]
 		app-emulation/libvirt[${PYTHON_USEDEP}]
 		novncproxy? ( www-apps/novnc )
+		sys-apps/iproute2
+		net-misc/openvswitch
 		sys-fs/sysfsutils
+		sys-fs/multipath-tools
 		kvm? ( app-emulation/qemu )
 		xen? ( app-emulation/xen
 			   app-emulation/xen-tools )"
