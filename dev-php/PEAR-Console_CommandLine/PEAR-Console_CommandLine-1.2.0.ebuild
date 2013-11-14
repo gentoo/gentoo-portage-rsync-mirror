@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_CommandLine/PEAR-Console_CommandLine-1.2.0.ebuild,v 1.1 2013/11/14 21:00:42 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_CommandLine/PEAR-Console_CommandLine-1.2.0.ebuild,v 1.2 2013/11/14 21:09:09 mabi Exp $
 
-EAPI="2"
+EAPI="4"
 inherit php-pear-r1
 
 DESCRIPTION="A full featured command line options and arguments parser"

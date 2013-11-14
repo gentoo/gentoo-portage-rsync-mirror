@@ -10,7 +10,9 @@
 alpha           default/linux/alpha/13.0                        stable
 alpha           default/linux/alpha/13.0/desktop                stable
 alpha           default/linux/alpha/13.0/desktop/gnome          stable
+alpha		default/linux/alpha/13.0/desktop/gnome/systemd	stable
 alpha           default/linux/alpha/13.0/desktop/kde            stable
+alpha		default/linux/alpha/13.0/desktop/kde/systemd	stable
 alpha           default/linux/alpha/13.0/developer              stable
 
 # AMD64 Profiles

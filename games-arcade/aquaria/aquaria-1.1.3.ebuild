@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/aquaria/aquaria-1.1.3.ebuild,v 1.4 2013/03/29 15:49:03 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/aquaria/aquaria-1.1.3.ebuild,v 1.5 2013/11/14 21:30:17 mr_bones_ Exp $
 
 inherit unpacker eutils games
 
@@ -18,7 +18,7 @@ DEPEND="app-arch/unzip"
 RDEPEND="x86? ( media-libs/libsdl >=media-libs/openal-1.5 )
 	amd64? ( app-emulation/emul-linux-x86-sdl )"
 
-S="${WORKDIR}/data"
+S=${WORKDIR}/data
 
 pkg_nofetch() {
 	echo
