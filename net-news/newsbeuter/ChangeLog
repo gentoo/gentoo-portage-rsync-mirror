@@ -1,6 +1,9 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.48 2013/09/07 20:08:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.49 2013/11/14 10:42:01 nimiux Exp $
+
+  14 Nov 2013; Chema Alonso <nimiux@gentoo.org> newsbeuter-2.7.ebuild:
+  Stable for amd64 wrt bug #490526
 
 *newsbeuter-2.7 (07 Sep 2013)
 
