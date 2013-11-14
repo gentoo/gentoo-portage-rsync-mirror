@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.4 2013/09/05 18:55:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25-r1.ebuild,v 1.5 2013/11/14 12:25:24 jlec Exp $
 
 EAPI=5
 
@@ -94,5 +94,5 @@ src_install() {
 	# note: --htmldir support fixed upstream already,
 	# next version should pass --htmldir to configure instead
 	autotools-multilib_src_install \
-		htmldocdir=/usr/share/doc/${PF}/html
+		htmldocdir="${EPREFIX}/usr/share/doc/${PF}/html"
 }
