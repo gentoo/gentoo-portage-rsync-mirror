@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/neutron
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.16 2013/11/11 03:15:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.17 2013/11/14 04:28:47 prometheanfire Exp $
+
+  14 Nov 2013; Matthew Thode <prometheanfire@gentoo.org>
+  -neutron-2012.2.4-r7.ebuild:
+  removing folsom 2012.2
 
   11 Nov 2013; Matthew Thode <prometheanfire@gentoo.org>
   neutron-2013.2.9999.ebuild, neutron-2013.2.ebuild:

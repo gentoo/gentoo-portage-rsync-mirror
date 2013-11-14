@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2013.2.ebuild,v 1.1 2013/10/29 06:07:13 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2013.2.ebuild,v 1.2 2013/11/14 04:20:23 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -58,7 +58,8 @@ RDEPEND="=dev-python/amqplib-0.6.1-r1[${PYTHON_USEDEP}]
 		<dev-python/webob-1.3[${PYTHON_USEDEP}]
 		>=sys-block/iscsitarget-1.4.20.2_p20130821
 		sys-fs/lvm2
-		sys-block/open-iscsi"
+		sys-block/open-iscsi
+		sys-fs/sysfsutils"
 
 PATCHES=( )
 
