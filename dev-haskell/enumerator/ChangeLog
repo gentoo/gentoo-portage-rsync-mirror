@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/enumerator
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/enumerator/ChangeLog,v 1.1 2013/11/14 07:58:34 slyfox Exp $
+
+*enumerator-0.4.20 (14 Nov 2013)
+
+  14 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org> +enumerator-0.4.20.ebuild,
+  +metadata.xml:
+  Initial commit. Reliable, high-performance processing with left-fold
+  enumerators.
