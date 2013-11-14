@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.305 2013/11/14 09:47:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.306 2013/11/14 17:19:04 pinkbyte Exp $
+
+*boost-1.55.0 (14 Nov 2013)
+
+  14 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> +boost-1.55.0.ebuild:
+  Version bump, wrt bug #491064. Change subslot, wrt bug #486122, thanks to
+  Arfrever Frehtes Taifersar Arahesis <arfrever.fta AT gmail.com>
 
   14 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> boost-1.53.0.ebuild,
   +files/boost-1.53.0-glibc-2.18-compat.patch, boost-1.54.0.ebuild:
