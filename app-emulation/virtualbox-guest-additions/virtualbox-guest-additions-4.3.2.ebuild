@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.3.2.ebuild,v 1.1 2013/11/02 15:17:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.3.2.ebuild,v 1.2 2013/11/14 11:27:23 lxnay Exp $
 
 EAPI=5
 
@@ -52,6 +52,8 @@ pkg_setup() {
 		BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 		enewgroup vboxguest
 		enewuser vboxguest -1 /bin/sh /dev/null vboxguest
+		# automount Error: VBoxServiceAutoMountWorker: Group "vboxsf" does not exist
+		enewgroup vboxsf
 }
 
 src_unpack() {
@@ -176,6 +178,9 @@ pkg_postinst() {
 		elog ""
 		elog "Please add users to the \"vboxguest\" group so they can"
 		elog "benefit from seamless mode, auto-resize and clipboard."
+		elog ""
+		elog "The vboxsf group has been added to make automount services work."
+		elog "These services are part of the shared folders support."
 		elog ""
 		elog "Please add:"
 		elog "/etc/init.d/${PN}"

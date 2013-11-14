@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.132 2013/11/02 15:17:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.133 2013/11/14 11:27:23 lxnay Exp $
+
+  14 Nov 2013; Fabio Erculiani <lxnay@gentoo.org>
+  virtualbox-guest-additions-4.2.18.ebuild,
+  virtualbox-guest-additions-4.3.0.ebuild,
+  virtualbox-guest-additions-4.3.2.ebuild:
+  add vboxsf group, or shared folders support won't work, commit on behalf of
+  polynomial-c
 
 *virtualbox-guest-additions-4.3.2 (02 Nov 2013)
 
