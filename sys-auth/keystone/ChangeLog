@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.45 2013/11/08 07:35:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.46 2013/11/14 04:37:28 prometheanfire Exp $
+
+  14 Nov 2013; Matthew Thode <prometheanfire@gentoo.org>
+  -keystone-2012.2.4-r9.ebuild:
+  removing 2012.2 folsom
 
   08 Nov 2013; Ian Delaney <idella4@gentoo.org> keystone-2013.2.ebuild:
   Effectively extract 'test?' USE conditional from RDEPEND
