@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.76 2013/11/09 02:05:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.77 2013/11/14 20:41:55 radhermit Exp $
+
+*boto-2.17.0 (14 Nov 2013)
+
+  14 Nov 2013; Tim Harder <radhermit@gentoo.org> +boto-2.17.0.ebuild:
+  Version bump, drop m2crypto dep (bug #491142).
 
 *boto-2.16.0 (09 Nov 2013)
 
