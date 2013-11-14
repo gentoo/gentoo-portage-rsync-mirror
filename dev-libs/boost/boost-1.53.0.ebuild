@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.53.0.ebuild,v 1.7 2013/09/05 18:29:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.53.0.ebuild,v 1.8 2013/11/14 09:47:42 pinkbyte Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	=dev-util/boost-build-${MAJOR_V}*"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 create_user-config.jam() {
 	local compiler compiler_version compiler_executable
@@ -69,8 +69,9 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.48.0-no_strict_aliasing_python2.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_libboost_python3.patch" \
 		"${FILESDIR}/${PN}-1.48.0-python_linking.patch" \
-		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch" \
-		"${FILESDIR}/${PN}-1.53.0-library_status.patch" # bug 459112
+		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch"
+	epatch	"${FILESDIR}/${PN}-1.53.0-library_status.patch" # bug 459112
+	epatch	"${FILESDIR}/${PN}-1.53.0-glibc-2.18-compat.patch" # bug 482372
 
 	# Avoid a patch for now
 	for file in libs/context/src/asm/*.S; do

@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/snap-server
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/snap-server/ChangeLog,v 1.1 2013/11/14 09:50:00 slyfox Exp $
+
+*snap-server-0.9.3.4 (14 Nov 2013)
+
+  14 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org> +metadata.xml,
+  +snap-server-0.9.3.4.ebuild:
+  Initial commit. A fast, iteratee-based, epoll-enabled web server for the Snap
+  Framework.

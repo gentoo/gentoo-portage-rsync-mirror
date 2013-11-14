@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.304 2013/09/26 17:28:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.305 2013/11/14 09:47:42 pinkbyte Exp $
+
+  14 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> boost-1.53.0.ebuild,
+  +files/boost-1.53.0-glibc-2.18-compat.patch, boost-1.54.0.ebuild:
+  Add compatibility with glibc 2.18, wrt bug #482372
 
   26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> boost-1.52.0-r6.ebuild:
   Stable for arm, wrt bug #455464
