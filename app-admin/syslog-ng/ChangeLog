@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.367 2013/11/13 17:39:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.368 2013/11/14 02:40:37 patrick Exp $
+
+  14 Nov 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   13 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/syslog-ng.conf.gentoo.3.2, -files/syslog-ng.conf.gentoo.fbsd.3.2,
