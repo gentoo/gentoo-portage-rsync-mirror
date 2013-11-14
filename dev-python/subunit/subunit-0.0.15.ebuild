@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.15.ebuild,v 1.3 2013/10/27 17:29:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.15.ebuild,v 1.4 2013/11/14 06:14:09 mattst88 Exp $
 
 EAPI=5
 
@@ -16,9 +16,9 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
 #need to keyword the following in =dev-python/extras-0.0.3 then readd the keywords here
-#alpha ia64 s390 sh sparc amd64-fbsd
+#ia64 s390 sh sparc amd64-fbsd
 IUSE=""
 
 RDEPEND=">=dev-python/testtools-0.9.30[${PYTHON_USEDEP}]
