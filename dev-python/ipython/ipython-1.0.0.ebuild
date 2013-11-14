@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.12 2013/09/26 17:59:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.0.0.ebuild,v 1.13 2013/11/14 18:48:50 floppym Exp $
 
 EAPI=5
 
@@ -22,6 +22,13 @@ IUSE="doc emacs examples matplotlib mongodb notebook nbconvert octave
 
 PY2_USEDEP=$(python_gen_usedep 'python2*')
 
+gen_python_deps() {
+	local impl
+	for impl in "${PYTHON_COMPAT[@]}"; do
+		echo "python_targets_${impl}? ( ${1}[python_targets_${impl}(-)] )"
+	done
+}
+
 CDEPEND="
 	dev-python/decorator[${PYTHON_USEDEP}]
 	dev-python/pexpect[${PY2_USEDEP}]
@@ -41,13 +48,13 @@ RDEPEND="${CDEPEND}
 		dev-python/pygments[${PYTHON_USEDEP}]
 		dev-python/pyzmq[${PYTHON_USEDEP}]
 		dev-libs/mathjax
-		dev-python/jinja[${PYTHON_USEDEP}]
+		$(gen_python_deps dev-python/jinja)
 	)
 	nbconvert? (
 		app-text/pandoc
 		dev-python/pygments[${PYTHON_USEDEP}]
 		dev-python/sphinx[${PYTHON_USEDEP}]
-		dev-python/jinja[${PYTHON_USEDEP}]
+		$(gen_python_deps dev-python/jinja)
 	)
 	qt4? ( || ( dev-python/PyQt4[${PYTHON_USEDEP}] dev-python/pyside[${PYTHON_USEDEP}] )
 			dev-python/pygments[${PYTHON_USEDEP}]
