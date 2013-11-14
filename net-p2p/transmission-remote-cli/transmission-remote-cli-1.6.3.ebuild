@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-cli/transmission-remote-cli-1.6.1.ebuild,v 1.2 2013/09/05 19:44:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission-remote-cli/transmission-remote-cli-1.6.3.ebuild,v 1.1 2013/11/14 00:47:53 xmw Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	$(python_gen_cond_dep dev-python/simplejson[$(python_gen_usedep python2_5)] python2_5)
-	geoip? ( dev-python/geoip-python )
+	geoip? ( dev-python/geoip-python[$PYTHON_USEDEP] )
 	rdns? ( dev-python/adns-python[$PYTHON_USEDEP] )"
 
 src_install() {

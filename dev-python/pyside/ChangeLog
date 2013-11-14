@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.55 2013/10/04 16:17:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.56 2013/11/14 00:46:04 pesa Exp $
+
+*pyside-1.2.1 (14 Nov 2013)
+
+  14 Nov 2013; Davide Pesavento <pesa@gentoo.org> +pyside-1.2.1.ebuild:
+  Version bump.
 
   04 Oct 2013; Mike Frysinger <vapier@gentoo.org> pyside-1.1.2-r1.ebuild:
   Mark arm stable #460234.
