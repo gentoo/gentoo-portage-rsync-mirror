@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8353 2013/11/14 01:34:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8354 2013/11/14 02:03:33 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Nov 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> base/package.use.mask,
+  package.mask:
+  Mask dev-lang/v8 and things still depending on it: dev-lang/v8cgi and v8 USE
+  flag for dev-db/drizzle.
 
   14 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Unmask gcc-4.8.2.

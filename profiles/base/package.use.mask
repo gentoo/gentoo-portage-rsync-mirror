@@ -1,10 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.519 2013/11/12 15:01:49 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.520 2013/11/14 02:03:34 phajdan.jr Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (13 Nov 2013)
+# Depends on masked dev-lang/v8
+dev-db/drizzle v8
 
 # Andrey Grozin <grozin@gentoo.org> (12 Nov 2013)
 # berkdb support works only for sys-libs/db-6.0 which is masked
