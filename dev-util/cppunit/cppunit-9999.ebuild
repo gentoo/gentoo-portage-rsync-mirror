@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-9999.ebuild,v 1.4 2013/03/03 10:29:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-9999.ebuild,v 1.5 2013/11/14 07:02:50 mattst88 Exp $
 
 EAPI=5
 
@@ -34,9 +34,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# Anything else than -O0 breaks on alpha
-	use alpha && replace-flags "-O?" -O0
-
 	econf \
 		$(use_enable static-libs static) \
 		$(use_enable doc doxygen) \
