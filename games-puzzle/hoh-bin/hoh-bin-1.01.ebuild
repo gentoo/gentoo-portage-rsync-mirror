@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.01.ebuild,v 1.13 2013/01/05 20:22:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/hoh-bin-1.01.ebuild,v 1.14 2013/11/14 22:03:12 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -17,7 +17,7 @@ RESTRICT="strip"
 DEPEND="x11-libs/libX11
 	amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.0 )"
 
-S="${WORKDIR}/hoh-install-${PV}"
+S=${WORKDIR}/hoh-install-${PV}
 
 # bug #448420
 QA_PREBUILT="

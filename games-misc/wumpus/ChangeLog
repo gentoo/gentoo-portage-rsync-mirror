@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/wumpus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/ChangeLog,v 1.13 2010/09/01 07:11:19 tupone Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/ChangeLog,v 1.14 2013/11/14 22:02:15 mr_bones_ Exp $
+
+  14 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> wumpus-1.4.ebuild:
+  tidy
 
   01 Sep 2010; Alfredo Tupone <tupone@gentoo.org> wumpus-1.4.ebuild:
   Respect LDFLAGS. Bug #335469 by flameeyes@gentoo.org

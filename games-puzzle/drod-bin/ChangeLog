@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/drod-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.19 2013/01/27 08:31:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.20 2013/11/14 22:02:47 mr_bones_ Exp $
+
+  14 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> drod-bin-1.6.7.ebuild:
+  tidy
 
   27 Jan 2013; Tupone Alfredo <tupone@gentoo.org> drod-bin-1.6.7.ebuild:
   Use QA_PREBUILT Bug #438196 by Diego Elio Pettenò

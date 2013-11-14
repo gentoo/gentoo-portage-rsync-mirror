@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.8 2009/02/08 17:35:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/anagramarama/anagramarama-0.2.ebuild,v 1.9 2013/11/14 22:02:36 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -20,7 +20,7 @@ DEPEND=">=media-libs/libsdl-1.2
 RDEPEND="${DEPEND}
 	sys-apps/miscfiles"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_prepare() {
 	sed -i \

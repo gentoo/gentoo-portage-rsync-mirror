@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.14 2010/09/01 07:11:19 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/wumpus/wumpus-1.4.ebuild,v 1.15 2013/11/14 22:02:15 mr_bones_ Exp $
 
 inherit toolchain-funcs games
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="sys-apps/less"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	local i

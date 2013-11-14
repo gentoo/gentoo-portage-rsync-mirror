@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/rfksay
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/rfksay/ChangeLog,v 1.5 2008/02/05 21:03:49 grobian Exp $
+# Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/rfksay/ChangeLog,v 1.6 2013/11/14 22:01:59 mr_bones_ Exp $
+
+  14 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> rfksay-0.1.ebuild:
+  tidy
 
   05 Feb 2008; Fabian Groffen <grobian@gentoo.org> rfksay-0.1.ebuild:
   Dropped ppc-macos keyword, see you in prefix

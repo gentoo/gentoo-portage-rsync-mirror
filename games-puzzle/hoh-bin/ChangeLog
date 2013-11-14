@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/hoh-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/ChangeLog,v 1.12 2013/01/05 20:22:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hoh-bin/ChangeLog,v 1.13 2013/11/14 22:03:12 mr_bones_ Exp $
+
+  14 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> hoh-bin-1.01.ebuild:
+  tidy
 
   05 Jan 2013; Sergey Popov <pinkbyte@gentoo.org> hoh-bin-1.01.ebuild:
   Use QA_PREBUILT, wrt bug #448420
@@ -42,4 +45,3 @@
   metadata.xml:
   initial commit; ebuild based on the one submitted by Felix Riemann via bug
   36222
-
