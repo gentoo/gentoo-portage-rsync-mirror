@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/rkflashtool
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rkflashtool/ChangeLog,v 1.1 2013/11/14 01:47:27 mrueg Exp $
+
+*rkflashtool-5.0 (14 Nov 2013)
+
+  14 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +rkflashtool-5.0.ebuild:
+  Initial version.

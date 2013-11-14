@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DEPEND=virtual/libusb:1
+DESCRIPTION=Tool for flashing Rockchip devices
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/rkflashtool/
+KEYWORDS=~amd64
+LICENSE=BSD-2
+RDEPEND=virtual/libusb:1
+SLOT=0
+SRC_URI=mirror://sourceforge/project/rkflashtool/rkflashtool-5.0/rkflashtool-5.0-src.tar.xz
+_md5_=044f18a3ab89b6c46ac592feb69f1f0a

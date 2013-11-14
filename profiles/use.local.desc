@@ -5699,6 +5699,7 @@ sci-libs/acml:int64 - Install the 64 bits integer library
 sci-libs/adolc:sparse - Add support for sparse matrix algebra with sci-libs/colpack
 sci-libs/arprec:fma - Use the Fused Multiply Add instruction set
 sci-libs/arprec:qd - Use sci-libs/qd for quad-double datatype
+sci-libs/ceres-solver:cxsparse - Enable simple support for sparse matrix algebra from sci-libs/cxsparse with no LAPACK dependencies
 sci-libs/ceres-solver:gflags - Use dev-cpp/gflags for flag parsing
 sci-libs/ceres-solver:metis - Use METIS via sci-libs/cholmod for matrix partitioning
 sci-libs/ceres-solver:protobuf - Use dev-libs/protobuf to encode structured data
@@ -6622,8 +6623,6 @@ www-misc/monitorix:lm_sensors - Additional hardware mnitoring sensors with sys-a
 www-misc/monitorix:postfix - Analyze postfix logs with net-mail/pflogsumm.
 www-misc/vdradmin-am:vdr - Support for media-video/vdr. Disable this if the VDR you want to control runs at a remote machine.
 www-misc/xxv:themes - Enable more themes via x11-themes/xxv-skins
-www-plugins/adobe-flash:32bit - For amd64-multilib, installs the 32-bit plugin
-www-plugins/adobe-flash:64bit - For amd64-multilib, installs the native 64-bit plugin
 www-plugins/adobe-flash:kde - Enables a KCM plugin for configuring flash player preferences
 www-plugins/chrome-binary-plugins:flash - Install Chrome's native Pepper Flash.
 www-plugins/chrome-binary-plugins:pdf - Install Chrome's native PDF reader plugin.

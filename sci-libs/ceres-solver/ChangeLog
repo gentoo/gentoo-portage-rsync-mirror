@@ -1,6 +1,15 @@
 # ChangeLog for sci-libs/ceres-solver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ChangeLog,v 1.6 2013/10/23 18:36:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ceres-solver/ChangeLog,v 1.7 2013/11/14 01:49:00 bicatali Exp $
+
+*ceres-solver-1.8.0 (14 Nov 2013)
+
+  14 Nov 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +ceres-solver-1.8.0.ebuild, -ceres-solver-1.4.0.ebuild,
+  -ceres-solver-1.6.0.ebuild, -files/ceres-solver-1.4.0-respect-libdir.patch,
+  -files/ceres-solver-1.4.0-test-no-suitesparse.patch, metadata.xml:
+  Version bump. Separate cxsparse (simpler library) from sparse flag, add lapack
+  flag, adapt changes upstream to be more cmake friendly
 
 *ceres-solver-1.7.0 (23 Oct 2013)
 

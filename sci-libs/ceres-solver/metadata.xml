@@ -19,6 +19,8 @@
       adjustment problems
 </longdescription>
 <use>
+  <flag name="cxsparse">Enable simple support for sparse matrix algebra from
+  <pkg>sci-libs/cxsparse</pkg> with no LAPACK dependencies</flag>
   <flag name="schur">Enable fixed-size schur specializations (disable if
   binary size is an issue)</flag>
   <flag name="metis">Use METIS via <pkg>sci-libs/cholmod</pkg> for matrix partitioning</flag>
