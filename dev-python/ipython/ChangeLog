@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.127 2013/11/14 18:48:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.128 2013/11/15 00:21:28 floppym Exp $
+
+  15 Nov 2013; Mike Gilbert <floppym@gentoo.org> ipython-1.0.0.ebuild,
+  ipython-1.1.0.ebuild:
+  Use python_gen_useflags instead of PYTHON_COMPAT directly.
 
   14 Nov 2013; Mike Gilbert <floppym@gentoo.org> ipython-1.0.0.ebuild,
   ipython-1.1.0.ebuild:

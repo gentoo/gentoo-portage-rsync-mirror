@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.1.0.ebuild,v 1.2 2013/11/14 18:48:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-1.1.0.ebuild,v 1.3 2013/11/15 00:21:28 floppym Exp $
 
 EAPI=5
 
@@ -23,9 +23,9 @@ IUSE="doc emacs examples matplotlib mongodb notebook nbconvert octave
 PY2_USEDEP=$(python_gen_usedep 'python2*')
 
 gen_python_deps() {
-	local impl
-	for impl in "${PYTHON_COMPAT[@]}"; do
-		echo "python_targets_${impl}? ( ${1}[python_targets_${impl}(-)] )"
+	local flag
+	for flag in $(python_gen_useflags '*'); do
+		echo "${flag}? ( ${1}[${flag}(-)] )"
 	done
 }
 
