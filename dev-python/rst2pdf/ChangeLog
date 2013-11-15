@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.31 2013/10/29 03:41:57 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.32 2013/11/15 12:28:50 yac Exp $
+
+  15 Nov 2013; Jan Matejka <yac@gentoo.org> rst2pdf-0.92.ebuild:
+  doesn't work with reportlab-2.6, reportlab-2.3 is out of tree for 3 years
 
 *rst2pdf-0.93-r2 (29 Oct 2013)
 

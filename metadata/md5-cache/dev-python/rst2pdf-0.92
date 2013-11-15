@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup
-DEPEND=dev-python/docutils virtual/python-imaging dev-python/pygments >=dev-python/reportlab-2.4 =dev-lang/python-2*
+DEPEND=dev-python/docutils virtual/python-imaging dev-python/pygments <dev-python/reportlab-2.6 =dev-lang/python-2*
 DESCRIPTION=Tool for transforming reStructuredText to PDF using ReportLab
 EAPI=4
 HOMEPAGE=http://rst2pdf.ralsina.com.ar/ http://pypi.python.org/pypi/rst2pdf
 KEYWORDS=amd64 x86
 LICENSE=MIT
-RDEPEND=dev-python/docutils virtual/python-imaging dev-python/pygments >=dev-python/reportlab-2.4 =dev-lang/python-2*
+RDEPEND=dev-python/docutils virtual/python-imaging dev-python/pygments <dev-python/reportlab-2.6 =dev-lang/python-2*
 SLOT=0
 SRC_URI=http://rst2pdf.googlecode.com/files/rst2pdf-0.92.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=4e70465e6fb6a99cdc32193dfbe0e094
+_md5_=c0811069d320fb3520ecfed55b732044
