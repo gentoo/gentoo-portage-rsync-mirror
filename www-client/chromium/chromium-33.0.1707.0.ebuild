@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1707.0.ebuild,v 1.1 2013/11/13 19:25:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1707.0.ebuild,v 1.2 2013/11/15 04:09:06 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -60,6 +60,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	pulseaudio? ( media-sound/pulseaudio:= )
 	sys-apps/dbus:=
 	sys-apps/pciutils:=
+	>=sys-libs/libcap-2.22:=
 	sys-libs/zlib:=[minizip]
 	virtual/udev
 	x11-libs/gtk+:2=
