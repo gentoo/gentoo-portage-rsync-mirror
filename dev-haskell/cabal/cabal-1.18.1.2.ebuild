@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.18.1.2.ebuild,v 1.1 2013/11/14 18:17:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/cabal-1.18.1.2.ebuild,v 1.2 2013/11/15 02:37:08 patrick Exp $
 
 EAPI=5
-
 
 CABAL_FEATURES="bootstrap lib profile test-suite"
 inherit haskell-cabal versionator
