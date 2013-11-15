@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.10_p1.ebuild,v 1.3 2013/07/18 17:46:07 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.12.ebuild,v 1.1 2013/11/15 15:49:14 xarthisius Exp $
 
 EAPI=5
 
@@ -56,10 +56,9 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.8.10-buildsystem.patch \
 		"${FILESDIR}"/${PN}-1.8.8-array_bounds.patch \
-		"${FILESDIR}"/${PN}-1.8.10-implicits.patch \
 		"${FILESDIR}"/${PN}-1.8.9-static_libgfortran.patch \
 		"${FILESDIR}"/${PN}-1.8.9-mpicxx.patch \
-		"${FILESDIR}"/${P}-comments.patch
+		"${FILESDIR}"/${PN}-1.8.11-implicits.patch
 	# respect gentoo examples directory
 	sed \
 		-e "s:hdf5_examples:doc/${PF}/examples:g" \
