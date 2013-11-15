@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-9999.ebuild,v 1.6 2013/11/15 09:16:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/cppunit-1.13.2.ebuild,v 1.1 2013/11/15 09:16:19 scarabeus Exp $
 
 EAPI=5
 
