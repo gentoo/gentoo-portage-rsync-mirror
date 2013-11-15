@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.3.0.ebuild,v 1.1 2013/09/27 05:12:50 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.3.1.ebuild,v 1.1 2013/11/15 20:28:02 mattm Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit cmake-utils versionator eutils user
 
