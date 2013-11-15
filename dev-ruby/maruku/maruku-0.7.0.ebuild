@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.7.0.ebuild,v 1.1 2013/11/10 07:36:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.7.0.ebuild,v 1.2 2013/11/15 19:10:12 graaff Exp $
 
 EAPI=5
 
@@ -32,8 +32,8 @@ all_ruby_prepare() {
 
 pkg_postinst() {
 	elog
-	elog "You need to emerge app-text/texlive and dev-tex/latex-unicode if"
+	elog "You need to emerge app-text/texlive and dev-texlive/texlive-latexextra if"
 	elog "you want to use --pdf with Maruku. You may also want to emerge"
-	elog "dev-tex/listings to enable LaTeX syntax highlighting."
+	elog "dev-texlive/texlive-latexrecommended to enable LaTeX syntax highlighting."
 	elog
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/afm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.1 2013/11/14 02:14:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/afm/ChangeLog,v 1.2 2013/11/15 19:19:07 graaff Exp $
+
+  15 Nov 2013; Hans de Graaff <graaff@gentoo.org> afm-0.2.0_p20130408.ebuild:
+  Add jruby needed for pdf-reader.
 
 *afm-0.2.0_p20130408 (14 Nov 2013)
 
