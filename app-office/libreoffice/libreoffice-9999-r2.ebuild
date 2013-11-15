@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.201 2013/11/15 10:14:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.202 2013/11/15 14:15:24 scarabeus Exp $
 
 EAPI=5
 
@@ -74,7 +74,7 @@ unset ADDONS_SRC
 IUSE="bluetooth +branding +cups dbus debug eds firebird gnome gstreamer +gtk
 gtk3 jemalloc kde mysql odk opengl postgres telepathy test +vba vlc +webdav"
 
-LO_EXTS="nlpsolver presenter-minimizer scripting-beanshell scripting-javascript wiki-publisher"
+LO_EXTS="nlpsolver scripting-beanshell scripting-javascript wiki-publisher"
 # Unpackaged separate extensions:
 # diagram: lo has 0.9.5 upstream is weirdly patched 0.9.4 -> wtf?
 # hunart: only on ooo extensions -> fubared download path somewhere on sf
@@ -208,7 +208,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
-	>=dev-util/mdds-0.9.0:=
+	>=dev-util/mdds-0.9.1:=
 	virtual/pkgconfig
 	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
@@ -497,7 +497,6 @@ src_configure() {
 		$(use_enable opengl) \
 		$(use_enable postgres postgresql-sdbc) \
 		$(use_enable telepathy) \
-		$(use_enable test linkoo) \
 		$(use_enable vba) \
 		$(use_enable vlc) \
 		$(use_enable webdav neon) \
@@ -517,7 +516,7 @@ src_compile() {
 		grep "^export" "${S}/config_host.mk" > "${T}/config_host.mk"
 		source "${T}/config_host.mk" 2&> /dev/null
 
-		local path="${SOLARVER}/${INPATH}/res/img"
+		local path="${WORKDIR}/helpcontent2/source/auxiliary/"
 		mkdir -p "${path}" || die
 
 		echo "perl \"${S}/helpcontent2/helpers/create_ilst.pl\" -dir=icon-themes/galaxy/res/helpimg > \"${path}/helpimg.ilst\""
