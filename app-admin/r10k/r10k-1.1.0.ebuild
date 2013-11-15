@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/r10k-1.1.0.ebuild,v 1.2 2013/11/07 13:03:17 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/r10k-1.1.0.ebuild,v 1.3 2013/11/15 16:31:07 vikraman Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://github.com/adrienthebo/r10k"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="git"
+IUSE="+git"
 
 ruby_add_bdepend "test? ( =dev-ruby/rspec-2.14* )"
 
