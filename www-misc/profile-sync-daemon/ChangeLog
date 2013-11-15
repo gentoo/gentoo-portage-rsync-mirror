@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/profile-sync-daemon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.17 2013/09/16 21:51:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/ChangeLog,v 1.18 2013/11/15 18:54:14 hasufell Exp $
+
+  15 Nov 2013; Julian Ospald <hasufell@gentoo.org>
+  profile-sync-daemon-5.40.1.ebuild:
+  re-add systemd useflag wrt #491300
 
 *profile-sync-daemon-5.40.1 (16 Sep 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-5.40.1.ebuild,v 1.1 2013/09/16 21:51:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/profile-sync-daemon/profile-sync-daemon-5.40.1.ebuild,v 1.2 2013/11/15 18:54:14 hasufell Exp $
 
 EAPI=5
 
@@ -13,14 +13,18 @@ SRC_URI="https://github.com/graysky2/profile-sync-daemon/archive/v${PV}.tar.gz -
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="systemd"
 
 RDEPEND="
 	app-shells/bash
-	net-misc/rsync"
+	net-misc/rsync
+	systemd? ( sys-apps/systemd )"
 
 src_install() {
-	emake -j1 DESTDIR="${ED}" install-openrc-all install-systemd
+	emake -j1 DESTDIR="${ED}" \
+		install-openrc-all \
+		$(usex systemd "install-systemd" "")
+
 	fperms -x /etc/cron.hourly/psd-update
 }
 

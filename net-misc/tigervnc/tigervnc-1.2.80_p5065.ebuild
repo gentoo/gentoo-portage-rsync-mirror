@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.80_p5065.ebuild,v 1.6 2013/10/05 18:23:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.2.80_p5065.ebuild,v 1.7 2013/11/15 18:58:48 josejx Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/tigervnc/tigervnc-1.2.80-201303
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc ~x86"
 IUSE="gnutls java nptl +opengl pam server +xorgmodule"
 
 RDEPEND="virtual/jpeg:0

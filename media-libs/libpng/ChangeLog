@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.424 2013/11/14 03:10:34 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.425 2013/11/15 18:54:48 josejx Exp $
+
+  15 Nov 2013; Joseph Jezak <josejx@gentoo.org> libpng-1.5.17-r1.ebuild:
+  Marked ppc/ppc64 stable for bug #490534.
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> libpng-1.5.17-r1.ebuild:
   alpha stable, bug 490534.
