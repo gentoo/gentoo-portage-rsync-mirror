@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.9999.ebuild,v 1.14 2013/09/20 20:26:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.9999.ebuild,v 1.15 2013/11/15 10:14:43 scarabeus Exp $
 
 EAPI=5
 
@@ -100,7 +100,7 @@ COMMON_DEPEND="
 	>=app-text/libexttextcat-3.2
 	app-text/liblangtag
 	app-text/libmspub
-	>=app-text/libmwaw-0.1.7
+	<app-text/libmwaw-0.2.0
 	app-text/libodfgen
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2

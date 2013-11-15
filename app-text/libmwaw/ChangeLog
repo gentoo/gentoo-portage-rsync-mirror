@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libmwaw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.8 2013/11/09 17:21:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.9 2013/11/15 10:14:42 scarabeus Exp $
+
+*libmwaw-0.2.0 (15 Nov 2013)
+
+  15 Nov 2013; Tomáš Chvátal <scarabeus@gentoo.org> +libmwaw-0.2.0.ebuild:
+  Add limwaw 0.2.0 which will be required by lo 4.2, but is incompatible with
+  4.1.
 
   09 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org> libmwaw-0.1.10.ebuild:
   Specify exact version dependency of libwpd, bug 490858
