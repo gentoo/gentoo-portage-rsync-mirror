@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python-exec/python-exec-0.3.1.ebuild,v 1.1 2013/10/30 19:12:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python-exec/python-exec-0.3.1.ebuild,v 1.2 2013/11/15 22:12:48 robbat2 Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc
 IUSE=""
 
 RDEPEND="!<dev-python/python-exec-10000"
+PDEPEND=">=dev-python/python-exec-10000:$SLOT"
 
 src_configure() {
 	local pyimpls i EPYTHON
