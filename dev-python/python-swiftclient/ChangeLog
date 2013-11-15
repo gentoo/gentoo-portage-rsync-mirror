@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/python-swiftclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/ChangeLog,v 1.6 2013/09/17 19:08:59 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/ChangeLog,v 1.7 2013/11/15 06:51:33 idella4 Exp $
+
+*python-swiftclient-1.8.0 (15 Nov 2013)
+
+  15 Nov 2013; Ian Delaney <idella4@gentoo.org>
+  +python-swiftclient-1.8.0.ebuild, metadata.xml,
+  python-swiftclient-1.6.0.ebuild:
+  metadata; add openstack herd, python-swiftclient-1.6.0; reset HOMEPAGE to
+  launchpad site, add IUSE doc with dep, doc build & install, update test phase,
+  bump
 
 *python-swiftclient-1.6.0 (17 Sep 2013)
 

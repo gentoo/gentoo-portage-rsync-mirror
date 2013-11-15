@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-4.0.10.ebuild,v 1.1 2013/07/21 08:48:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-4.0.24.ebuild,v 1.1 2013/11/15 06:54:43 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 inherit apache-module flag-o-matic multilib ruby-ng toolchain-funcs
 
@@ -37,7 +37,7 @@ pkg_setup() {
 }
 
 all_ruby_prepare() {
-	epatch "${FILESDIR}"/${PN}-${PV}-gentoo.patch
+	epatch "${FILESDIR}"/${PN}-4.0.21-gentoo.patch
 
 	# Change these with sed instead of a patch so that we can easily use
 	# the toolchain-funcs methods.
@@ -60,10 +60,14 @@ all_ruby_prepare() {
 	rm -rf ext/libev || die "Unable to remove vendored libev."
 
 	# Avoid building documentation to avoid a dependency on mizuho.
-	sed -i -e 's/, :doc//' build/packaging.rb || die
+	#sed -i -e 's/, :doc//' build/packaging.rb || die
+	touch doc/*.html || die
 
 	# Use the correct arch-specific lib directory
 	sed -i -e 's:/usr/lib/:/usr/'$(get_libdir)'/:' build/packaging.rb || die
+
+	# Fix hard-coded use of AR
+	sed -i -e "s/ar cru/"$(tc-getAR)" cru/" build/cplusplus_support.rb || die
 }
 
 all_ruby_compile() {
@@ -96,6 +100,7 @@ each_ruby_install() {
 	DISTDIR="${D}" \
 	APXS2="${APXS}" \
 	HTTPD="${APACHE_BIN}" \
+	EXTRA_LDFLAGS="${LDFLAGS}" \
 	USE_VENDORED_LIBEV="no" LIBEV_LIBS="-lev" \
 	${RUBY} -S rake fakeroot || die "rake failed"
 }
