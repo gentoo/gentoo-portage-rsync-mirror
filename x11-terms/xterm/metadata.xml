@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>dickey@radix.net</email>
+    <email>dickey@invisible-island.net</email>
     <name>Thomas Dickey</name>
   </maintainer>
   <herd>x11</herd>
