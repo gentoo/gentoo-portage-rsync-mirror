@@ -5,6 +5,7 @@
                 <email>vikraman@gentoo.org</email>
                 <name>Vikraman Choudhury</name>
         </maintainer>
+		<herd>sysadmin</herd>
 		<longdescription lang="en">
 			r10k provides a general purpose toolset for deploying Puppet environments and modules. It implements the Puppetfile format and provides a native implementation of Puppet dynamic environments.
         </longdescription>
