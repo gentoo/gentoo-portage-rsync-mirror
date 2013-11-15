@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.3 2013/10/12 14:11:18 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.4 2013/11/15 19:40:09 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -238,7 +238,7 @@ pkg_postinst() {
 		fi
 
 		if [[ -e "${EROOT}etc/NetworkManager/NetworkManager.conf" ]]; then
-			if grep -q plugins | grep -q ifnet "${EROOT}etc/NetworkManager/NetworkManager.conf"; then
+			if grep -q plugins "${EROOT}etc/NetworkManager/NetworkManager.conf" | grep -q ifnet; then
 				ewarn "You seem to use 'ifnet' plugin in ${EROOT}etc/NetworkManager/NetworkManager.conf"
 				ewarn "Since it won't be used when running under Systemd, you will need to stop setting"
 				ewarn "ifnet plugin there to allow NetworkManager to work."

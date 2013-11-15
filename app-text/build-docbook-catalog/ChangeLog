@@ -1,6 +1,10 @@
 # ChangeLog for app-text/build-docbook-catalog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.43 2013/09/30 02:25:14 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.44 2013/11/15 19:54:16 ottxor Exp $
+
+  15 Nov 2013; Christoph Junghans <ottxor@gentoo.org>
+  build-docbook-catalog-1.20.ebuild:
+  fixed installation on prefix (related bug #490754)
 
   30 Sep 2013; Christoph Junghans <ottxor@gentoo.org>
   build-docbook-catalog-1.20.ebuild:
