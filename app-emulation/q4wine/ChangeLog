@@ -1,13 +1,18 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.44 2013/10/14 18:57:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.45 2013/11/16 11:29:23 hwoarang Exp $
+
+*q4wine-1.1 (15 Nov 2013)
+
+  15 Nov 2013; Markos Chandras <hwoarang@gentoo.org> +q4wine-1.1.ebuild:
+  Version bump thanks to Alexey Malakhov <brezerk@gmail.com>
 
 *q4wine-1.0_p3-r1 (14 Oct 2013)
 
   14 Oct 2013; Markos Chandras <hwoarang@gentoo.org>
   +files/q4wine-qtsingleapp.patch, +q4wine-1.0_p3-r1.ebuild:
   Revbump to use system's qtsingleapplication package. Bug #487540. Patch by
-  John Brezerk <brezerk@gmail.com>. Also change package version format to comply
+  Alexey Malakhov <brezerk@gmail.com>>. Also change package version format to comply
   with portage standards
 
   27 Jun 2013; Michael Palimaka <kensington@gentoo.org> -q4wine-0.121.ebuild,
