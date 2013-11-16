@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.20.ebuild,v 1.1 2013/11/12 09:28:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.20.ebuild,v 1.2 2013/11/15 23:25:46 zerochaos Exp $
 
 EAPI=4
 
@@ -25,13 +25,11 @@ DEPEND="dev-libs/popt
 	>=sys-libs/tevent-0.9.18
 	virtual/libiconv
 	ads? ( virtual/krb5 sys-fs/e2fsprogs
-		client? ( sys-apps/keyutils
-			kernel_linux? ( net-fs/cifs-utils[ads] ) ) )
+		client? ( sys-apps/keyutils ) )
 	avahi? ( net-dns/avahi[dbus] )
 	caps? ( sys-libs/libcap )
 	client? ( !net-fs/mount-cifs
-		dev-libs/iniparser
-		kernel_linux? ( net-fs/cifs-utils ) )
+		dev-libs/iniparser )
 	cluster? ( >=dev-db/ctdb-1.13 )
 	cups? ( net-print/cups )
 	debug? ( dev-libs/dmalloc )
@@ -46,7 +44,9 @@ DEPEND="dev-libs/popt
 	selinux? ( sec-policy/selinux-samba )
 	syslog? ( virtual/logger )"
 
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	kernel_linux? ( ads? ( net-fs/cifs-utils[ads] )
+			client? ( net-fs/cifs-utils ) )"
 
 # Disable tests since we don't want to build that much here
 RESTRICT="test"

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.22 2013/10/30 19:21:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-r3.eclass,v 1.23 2013/11/15 23:03:23 mgorny Exp $
 
 # @ECLASS: git-r3.eclass
 # @MAINTAINER:
@@ -354,6 +354,20 @@ _git-r3_smart_fetch() {
 	return ${main_ret}
 }
 
+# @FUNCTION: _git-r3_is_local_repo
+# @USAGE: <repo-uri>
+# @INTERNAL
+# @DESCRIPTION:
+# Determine whether the given URI specifies a local (on-disk)
+# repository.
+_git-r3_is_local_repo() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	local uri=${1}
+
+	[[ ${uri} == file://* || ${uri} == /* ]]
+}
+
 # @FUNCTION: git-r3_fetch
 # @USAGE: [<repo-uri> [<remote-ref> [<local-id>]]]
 # @DESCRIPTION:
@@ -439,6 +453,10 @@ git-r3_fetch() {
 		if [[ ! ${ref[0]} ]]; then
 			nonshallow=1
 		fi
+
+		# trying to do a shallow clone of a local repo makes git try to
+		# write to the repo. we don't want that to happen.
+		_git-r3_is_local_repo "${r}" && nonshallow=1
 
 		# 1. if we need a non-shallow clone and we have a shallow one,
 		#    we need to unshallow it explicitly.

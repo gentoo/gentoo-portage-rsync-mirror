@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.10-r1.ebuild,v 1.2 2013/10/29 14:06:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.10-r1.ebuild,v 1.3 2013/11/15 23:25:46 zerochaos Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -32,7 +32,7 @@ ldap quota selinux swat syslog test winbind"
 # sys-apps/attr is an automagic dependency (see bug #489748)
 # dev-libs/libaio is an automagic dependency (see bug #489764)
 # sys-libs/pam is an automagic dependency (see bug #489770)
-RDEPEND="${PYTHON_DEPS}
+CDEPEND="${PYTHON_DEPS}
 	>=app-crypt/heimdal-1.5[-ssl]
 	dev-libs/iniparser
 	dev-libs/libaio
@@ -51,15 +51,16 @@ RDEPEND="${PYTHON_DEPS}
 	virtual/pam
 	acl? ( virtual/acl )
 	addns? ( net-dns/bind-tools[gssapi] )
-	client? ( net-fs/cifs-utils[ads?] )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
 	fam? ( virtual/fam )
 	gnutls? ( dev-libs/libgcrypt
 		>=net-libs/gnutls-1.4.0 )
 	ldap? ( net-nds/openldap )
 	selinux? ( sec-policy/selinux-samba )"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	virtual/pkgconfig"
+RDEPEND="${CDEPEND}
+	client? ( net-fs/cifs-utils[ads?] )"
 
 REQUIRED_USE="ads? ( acl ldap )"
 
