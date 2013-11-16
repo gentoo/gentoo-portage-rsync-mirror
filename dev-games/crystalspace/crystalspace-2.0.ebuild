@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-2.0.ebuild,v 1.1 2013/01/24 00:16:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-2.0.ebuild,v 1.2 2013/11/16 06:47:45 dirtyepic Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib java-pkg-opt-2 autotools wxwidgets versionator
@@ -66,7 +66,7 @@ src_prepare() {
 src_configure() {
 	if use wxwidgets; then
 		WX_GTK_VER="2.8"
-		need-wxwidgets gtk2
+		need-wxwidgets unicode
 	fi
 
 	econf \
