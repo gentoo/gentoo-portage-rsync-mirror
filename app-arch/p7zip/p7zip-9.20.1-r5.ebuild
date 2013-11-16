@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r5.ebuild,v 1.2 2013/09/19 13:27:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1-r5.ebuild,v 1.3 2013/11/16 07:49:40 dirtyepic Exp $
 
 EAPI=5
 
@@ -27,10 +27,6 @@ DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 S=${WORKDIR}/${PN}_${PV}
-
-pkg_setup() {
-	use wxwidgets && wxwidgets_pkg_setup
-}
 
 src_prepare() {
 	epatch \
