@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.0.ebuild,v 1.1 2013/10/29 20:12:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/clementine-1.2.0.ebuild,v 1.2 2013/11/16 06:30:52 dirtyepic Exp $
 
 EAPI=5
 
@@ -28,7 +28,9 @@ REQUIRED_USE="
 	wiimote? ( dbus )
 "
 
+# qca dep is temporary for bug #489850
 COMMON_DEPEND="
+	app-crypt/qca:2
 	>=dev-qt/qtgui-4.5:4
 	dbus? ( >=dev-qt/qtdbus-4.5:4 )
 	>=dev-qt/qtopengl-4.5:4

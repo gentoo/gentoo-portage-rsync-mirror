@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.983 2013/11/16 03:45:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.984 2013/11/16 06:03:19 phajdan.jr Exp $
+
+  16 Nov 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-32.0.1700.14.ebuild, chromium-33.0.1707.0.ebuild:
+  Reconfigure bundled ffmpeg to enable build with gcc-4.5, bug #491378 by
+  Ulrich Fieseler.
 
 *chromium-31.0.1650.57 (16 Nov 2013)
 

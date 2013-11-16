@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.14.ebuild,v 1.1 2013/11/15 14:39:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.14.ebuild,v 1.2 2013/11/16 06:03:19 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -396,6 +396,14 @@ src_configure() {
 	export CXX_host=$(tc-getBUILD_CXX)
 	export LD_host=${CXX_host}
 
+	# Re-configure bundled ffmpeg. See bug #491378 for example reasons.
+	einfo "Configuring bundled ffmpeg..."
+	pushd third_party/ffmpeg > /dev/null || die
+	chromium/scripts/build_ffmpeg.sh linux ${target_arch} `pwd` config-only || die
+	chromium/scripts/copy_config.sh || die
+	popd > /dev/null || die
+
+	einfo "Configuring Chromium..."
 	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
 }

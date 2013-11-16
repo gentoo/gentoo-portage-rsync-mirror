@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/clementine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.82 2013/10/29 20:12:01 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/clementine/ChangeLog,v 1.83 2013/11/16 06:30:52 dirtyepic Exp $
+
+  16 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> clementine-1.2.0.ebuild:
+  Add app-crypt/qca dependency for bug #489850.
 
 *clementine-9999 (29 Oct 2013)
 *clementine-1.2.0 (29 Oct 2013)
