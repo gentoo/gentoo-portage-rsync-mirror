@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/subsurface
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.5 2013/11/11 18:30:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.6 2013/11/16 15:15:16 tomwij Exp $
+
+*subsurface-3.1.1 (16 Nov 2013)
+
+  16 Nov 2013; Tom Wijsman <TomWij@gentoo.org> +subsurface-3.1.1.ebuild,
+  subsurface-9999.ebuild:
+  Version bump to 3.1.1, added sqlite dependency and other minor changes; fixes
+  bug #491028. Merged 3.1.1 version bump fixes and move to qt4 from bug #489394
+  into an updated 9999 ebuild, which fixes that bug. Proxied commit for Martin
+  Gysel (bearsh).
 
   11 Nov 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Aaron Bauman's e-mail address.
