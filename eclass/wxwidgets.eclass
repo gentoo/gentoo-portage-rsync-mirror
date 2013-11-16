@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.35 2013/11/16 08:21:23 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.36 2013/11/16 10:25:39 dirtyepic Exp $
 
 # @ECLASS:			wxwidgets.eclass
 # @MAINTAINER:
@@ -46,14 +46,6 @@
 
 inherit eutils multilib
 
-case "${EAPI:-0}" in
-	0|1)
-		EXPORT_FUNCTIONS pkg_setup
-		;;
-	*)
-		;;
-esac
-
 # We do this globally so ebuilds can get sane defaults just by inheriting.  They
 # can be overridden with need-wxwidgets later if need be.
 
@@ -65,12 +57,9 @@ if [[ -z ${WX_CONFIG} ]]; then
 			# newer versions don't have a seperate debug profile
 			for wxdebug in xxx release- debug-; do
 				wxconf="${wxtoolkit}-unicode-${wxdebug/xxx/}${WX_GTK_VER}"
-				if [[ -f ${EPREFIX}/usr/$(get_libdir)/wx/config/${wxconf} ]]; then
-					# if this is a wxBase install, die in pkg_setup
-					[[ ${wxtoolkit} == "base" ]] && WXBASE_DIE=1
-				else
-					continue
-				fi
+
+				[[ -f ${EPREFIX}/usr/$(get_libdir)/wx/config/${wxconf} ]] || continue
+
 				WX_CONFIG="${EPREFIX}/usr/$(get_libdir)/wx/config/${wxconf}"
 				WX_ECLASS_CONFIG="${WX_CONFIG}"
 				break
@@ -80,22 +69,6 @@ if [[ -z ${WX_CONFIG} ]]; then
 		[[ -n ${WX_CONFIG} ]] && export WX_CONFIG WX_ECLASS_CONFIG
 	fi
 fi
-
-# @FUNCTION:		wxwidgets_pkg_setup
-# @DESCRIPTION:
-#
-#  It's possible for wxGTK to be installed with USE="-X", resulting in something
-#  called wxBase.  There's only ever been a couple packages in the tree that use
-#  wxBase so this is probably not what you want.  Whenever possible, use EAPI 2
-#  USE dependencies(tm) to ensure that wxGTK was built with USE="X".  This
-#  function is only exported for EAPI 0 or 1 and catches any remaining cases.
-#
-#  If you do use wxBase, don't set WX_GTK_VER before inherit.  Use
-#  need-wxwidgets() instead.
-
-wxwidgets_pkg_setup() {
-	[[ -n $WXBASE_DIE ]] && check_wxuse X
-}
 
 # @FUNCTION:		need-wxwidgets
 # @USAGE:			<configuration>
@@ -200,38 +173,4 @@ need-wxwidgets() {
 	einfo "Requested wxWidgets:        ${1} ${WX_GTK_VER}"
 	einfo "Using wxWidgets:            ${wxconf}"
 	echo
-}
-
-
-# @FUNCTION:		check_wxuse
-# @USAGE:			<USE flag>
-# @DESCRIPTION:
-#
-#  Provides a consistant way to check if wxGTK was built with a particular USE
-#  flag enabled.  A better way is EAPI 2 USE dependencies (hint hint).
-
-check_wxuse() {
-	debug-print-function $FUNCNAME $*
-
-	if [[ -z ${WX_GTK_VER} ]]; then
-		echo
-		eerror "WX_GTK_VER must be set before calling $FUNCNAME."
-		echo
-		die "WX_GTK_VER missing"
-	fi
-
-	# TODO: Remove built_with_use
-
-	ebegin "Checking wxGTK-${WX_GTK_VER} for ${1} support"
-	if built_with_use =x11-libs/wxGTK-${WX_GTK_VER}* "${1}"; then
-		eend 0
-	else
-		eend 1
-		echo
-		eerror "${FUNCNAME} - You have requested functionality that requires ${1} support to"
-		eerror "have been built into x11-libs/wxGTK."
-		eerror
-		eerror "Please re-merge =x11-libs/wxGTK-${WX_GTK_VER}* with the ${1} USE flag enabled."
-		die "Missing USE flags."
-	fi
 }
