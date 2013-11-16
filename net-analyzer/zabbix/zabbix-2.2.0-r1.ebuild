@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.0.ebuild,v 1.2 2013/11/16 00:37:43 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.0-r1.ebuild,v 1.1 2013/11/16 07:18:54 mattm Exp $
 
 EAPI="5"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 KEYWORDS=""
-IUSE="agent java curl frontend ipv6 jabber ldap mysql openipmi oracle postgres proxy server ssh snmp sqlite iodbc odbc static"
+IUSE="agent java curl frontend ipv6 jabber ldap libxml2 mysql openipmi oracle postgres proxy server ssh snmp sqlite odbc static"
 
 COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
@@ -30,14 +30,12 @@ COMMON_DEPEND="snmp? ( net-analyzer/net-snmp )
 	postgres? ( >=dev-db/postgresql-base-8.3.0 )
 	oracle? ( >=dev-db/oracle-instantclient-basic-10.0.0.0 )
 	jabber? ( dev-libs/iksemel )
+	libxml2? ( dev-libs/libxml2 )
 	curl? ( net-misc/curl )
 	openipmi? ( sys-libs/openipmi )
 	ssh? ( net-libs/libssh2 )
 	java? ( >=virtual/jdk-1.4 )
-	odbc? (
-		iodbc? ( dev-db/libiodbc )
-		!iodbc? ( dev-db/unixODBC )
-	)"
+	odbc? ( dev-db/unixODBC )"
 
 RDEPEND="${COMMON_DEPEND}
 	proxy? ( <=net-analyzer/fping-2.9 )
@@ -210,18 +208,7 @@ pkg_postinst() {
 
 src_configure() {
 
-	local myconf
-
-	if use odbc && use iodbc ; then
-	   myconf="${myconf} --with-iodbc --without-unixodbc"
-	elif use odbc && ! use iodbc; then
-	   myconf="${myconf} --with-unixodbc --without-iodbc"
-	else
-	   myconf="${myconf} --without-unixodbc --without-iodbc"
-	fi
-
 	econf \
-		$myconf \
 		$(use_enable server) \
 		$(use_enable proxy) \
 		$(use_enable agent) \
@@ -238,6 +225,8 @@ src_configure() {
 		$(use_with curl libcurl) \
 		$(use_with openipmi openipmi) \
 		$(use_with ssh ssh2) \
+		$(use_with libxml2) \
+		$(use_with odbc unixodbc) \
 		|| die "econf failed"
 }
 
@@ -247,6 +236,8 @@ src_install() {
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
+		/var/lib/zabbix/alertscripts \
+		/var/lib/zabbix/externalscripts \
 		/var/log/zabbix
 
 	keepdir \
@@ -254,15 +245,16 @@ src_install() {
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
+		/var/lib/zabbix/alertscripts \
+		/var/lib/zabbix/externalscripts \
 		/var/log/zabbix
 
 	if use server; then
 		insinto /etc/zabbix
 		doins \
-			"${FILESDIR}/1.6.6"/zabbix_server.conf \
-			"${FILESDIR}/1.6.6"/zabbix_trapper.conf
+			"${FILESDIR}/2.2"/zabbix_server.conf \
 		doinitd \
-			"${FILESDIR}/2.0"/init.d/zabbix-server
+			"${FILESDIR}/2.2"/init.d/zabbix-server
 		dosbin \
 			src/zabbix_server/zabbix_server
 		fowners zabbix:zabbix \
@@ -275,21 +267,21 @@ src_install() {
 
 	if use proxy; then
 		doinitd \
-			"${FILESDIR}/2.0"/init.d/zabbix-proxy
+			"${FILESDIR}/2.2"/init.d/zabbix-proxy
 		dosbin \
 			src/zabbix_proxy/zabbix_proxy
 		insinto /etc/zabbix
 		doins \
-			"${FILESDIR}/2.0"/zabbix_proxy.conf
+			"${FILESDIR}/2.2"/zabbix_proxy.conf
 	fi
 
 	if use agent; then
 		insinto /etc/zabbix
 		doins \
-			"${FILESDIR}/1.6.6"/zabbix_agent.conf \
-			"${FILESDIR}/1.6.6"/zabbix_agentd.conf
+			"${FILESDIR}/2.2"/zabbix_agent.conf \
+			"${FILESDIR}/2.2"/zabbix_agentd.conf
 		doinitd \
-			"${FILESDIR}/2.0"/init.d/zabbix-agentd
+			"${FILESDIR}/2.2"/init.d/zabbix-agentd
 		dosbin \
 			src/zabbix_agent/zabbix_agent \
 			src/zabbix_agent/zabbix_agentd
@@ -309,12 +301,16 @@ src_install() {
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
+		/var/lib/zabbix/alertscripts \
+		/var/lib/zabbix/externalscripts \
 		/var/log/zabbix
 	fperms 0750 \
 		/etc/zabbix \
 		/var/lib/zabbix \
 		/var/lib/zabbix/home \
 		/var/lib/zabbix/scripts \
+		/var/lib/zabbix/alertscripts \
+		/var/lib/zabbix/externalscripts \
 		/var/log/zabbix
 
 	dodoc README INSTALL NEWS ChangeLog \

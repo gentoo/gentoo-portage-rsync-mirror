@@ -4273,8 +4273,9 @@ net-analyzer/wireshark:qt4 - Build the wireshark executable with an experimental
 net-analyzer/wireshark:smi - Use net-libs/libsmi to resolve numeric OIDs into human readable format
 net-analyzer/zabbix:agent - Enable zabbix agent (for to-be-monitored machines)
 net-analyzer/zabbix:frontend - Enable zabbix web frontend
-net-analyzer/zabbix:iodbc - Use iodbc rather than unixodbc for ODBC functions
+net-analyzer/zabbix:ipv6 - Turn on support of IPv6
 net-analyzer/zabbix:java - Enable Zabbix Java JMX Management Gateway
+net-analyzer/zabbix:libxml2 - Use libxml2 client library
 net-analyzer/zabbix:odbc - Enable Database Monitor and use UnixODBC Library by default
 net-analyzer/zabbix:openipmi - Enable openipmi things
 net-analyzer/zabbix:proxy - Enable proxy support

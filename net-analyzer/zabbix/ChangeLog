@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.142 2013/11/16 00:37:43 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.143 2013/11/16 07:18:54 mattm Exp $
+
+*zabbix-2.2.0-r1 (16 Nov 2013)
+
+  16 Nov 2013; Matthew Marlowe <mattm@gentoo.org>
+  +files/2.2/init.d/zabbix-agentd, +files/2.2/init.d/zabbix-proxy,
+  +files/2.2/init.d/zabbix-server, +files/2.2/zabbix_agent.conf,
+  +files/2.2/zabbix_agentd.conf, +files/2.2/zabbix_proxy.conf,
+  +files/2.2/zabbix_server.conf, +zabbix-2.2.0-r1.ebuild, -zabbix-2.2.0.ebuild,
+  metadata.xml:
+  Updated config and init files for zabbix 2.2, Revised use flags/configure
+  function, Other minor updates
 
   16 Nov 2013; Matthew Marlowe <mattm@gentoo.org> zabbix-2.2.0.ebuild:
   Zabbix-2.2.0 no longer happy with old zbx282 patch.
