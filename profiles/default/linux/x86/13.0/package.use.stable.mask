@@ -1,0 +1,7 @@
+# Michał Górny <mgorny@gentoo.org> (16 Nov 2013)
+# Don't apply stable masks to python-exec since we're forcing every
+# impl there anyway. Please keep this in sync with use.stable.mask.
+dev-lang/python-exec -python_targets_pypy2_0
+dev-lang/python-exec -python_single_target_pypy2_0
+dev-python/python-exec -python_targets_pypy2_0
+dev-python/python-exec -python_single_target_pypy2_0

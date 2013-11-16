@@ -1,9 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.29 2013/10/28 11:10:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.30 2013/11/16 19:08:50 mgorny Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Michał Górny <mgorny@gentoo.org> (16 Nov 2013)
+# Don't apply stable masks to python-exec since we're forcing every
+# impl there anyway. Please keep this in sync with use.stable.mask.
+dev-lang/python-exec -python_targets_python3_3
+dev-lang/python-exec -python_single_target_python3_3
+dev-python/python-exec -python_targets_python3_3
+dev-python/python-exec -python_single_target_python3_3
 
 # Sergey Popov <pinkbyte@gentoo.org> (28 Oct 2013)
 # sys-cluster/cman is still in ~arch.
