@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.39 2013/11/11 20:05:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.40 2013/11/16 13:43:07 tomwij Exp $
+
+*mpv-0.2.3 (16 Nov 2013)
+
+  16 Nov 2013; Tom Wijsman <TomWij@gentoo.org> +mpv-0.2.3.ebuild, metadata.xml,
+  mpv-9999.ebuild:
+  Version bump to 0.2.3, changed mp3 USE flag to mpg123 and restricted mpg123
+  dependency version; also corrected v4l USE flag and added dependency for it on
+  9999 version. Proxied commit for Nikoli.
 
   11 Nov 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
   Removed support for mng from 9999 as upstream removed support for it, proxied

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.71 2013/11/04 12:32:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.72 2013/11/16 13:40:35 mgorny Exp $
 
 EAPI=5
 
@@ -246,6 +246,10 @@ multilib_src_test() {
 
 multilib_src_install() {
 	local mymakeopts=(
+		# automake fails with parallel libtool relinking
+		# https://bugs.gentoo.org/show_bug.cgi?id=491398
+		-j1
+
 		udevlibexecdir="${MY_UDEVDIR}"
 		dist_udevhwdb_DATA=
 		DESTDIR="${D}"

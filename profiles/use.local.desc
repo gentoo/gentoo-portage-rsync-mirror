@@ -3957,6 +3957,7 @@ media-video/mpv:libguess - Enables support for charset discovery and conversion 
 media-video/mpv:luajit - Use dev-lang/luajit instead of dev-lang/lua
 media-video/mpv:mng - MNG input support
 media-video/mpv:mp3 - Enable support for mp3 decoding over media-sound/mpg123 instead of relying on ffmpeg support.
+media-video/mpv:mpg123 - Enable support for mp3 decoding over media-sound/mpg123 instead of relying on ffmpeg support.
 media-video/mpv:postproc - Enable image post-processing via libpostproc
 media-video/mpv:pvr - Enable Video4Linux2 MPEG PVR
 media-video/mpv:quvi - Enable support for streaming sites using media-libs/libquvi
