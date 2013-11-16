@@ -1,6 +1,11 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.77 2013/07/31 19:56:11 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.78 2013/11/16 18:34:10 johu Exp $
+
+*rekonq-2.4.0 (16 Nov 2013)
+
+  16 Nov 2013; Johannes Huber <johu@gentoo.org> +rekonq-2.4.0.ebuild:
+  Version bump.
 
   31 Jul 2013; Michael Palimaka <kensington@gentoo.org> -rekonq-2.3.0.ebuild:
   Remove old.
