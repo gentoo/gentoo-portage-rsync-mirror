@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-16.1.ebuild,v 1.1 2013/08/26 12:43:24 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-16.1.ebuild,v 1.2 2013/11/16 08:54:30 dirtyepic Exp $
 
 EAPI=3
 WX_GTK_VER="2.8"
@@ -37,7 +37,7 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	java? ( >=virtual/jdk-1.2 )
 	odbc? ( dev-db/unixODBC )"
 DEPEND="${RDEPEND}
-	wxwidgets? ( x11-libs/wxGTK:2.8[opengl] virtual/glu )
+	wxwidgets? ( x11-libs/wxGTK:2.8[X,opengl] virtual/glu )
 	sctp? ( net-misc/lksctp-tools )
 	tk? ( dev-lang/tk )"
 
@@ -46,7 +46,6 @@ S="${WORKDIR}/otp_src_${MY_PV}"
 SITEFILE=50${PN}-gentoo.el
 
 pkg_setup() {
-	use wxwidgets && wxwidgets_pkg_setup
 	if use halfword ; then
 		use amd64 || die "halfword support is limited to amd64"
 	fi

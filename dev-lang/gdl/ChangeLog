@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.41 2013/01/10 22:40:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.42 2013/11/16 09:00:03 dirtyepic Exp $
+
+  16 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> gdl-0.9.2-r2.ebuild,
+  gdl-0.9.3-r2.ebuild:
+  Remove wxwidgets_pkg_setup call (unnecessary with USE deps).
 
 *gdl-0.9.3-r2 (10 Jan 2013)
 

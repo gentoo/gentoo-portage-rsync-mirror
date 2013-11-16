@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r2.ebuild,v 1.4 2013/01/03 05:06:22 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.2-r2.ebuild,v 1.5 2013/11/16 09:00:03 dirtyepic Exp $
 
 EAPI=4
 
@@ -46,7 +46,6 @@ DEPEND="${RDEPEND}
 	>=dev-java/antlr-2.7.7-r5:0[cxx,java,script]"
 
 pkg_setup() {
-	use wxwidgets && wxwidgets_pkg_setup
 	use python && python_pkg_setup
 	use openmp && [[ $(tc-getCXX)$ == *g++* ]] && ! tc-has-openmp && \
 		die "You have openmp enabled but your current g++ does not support it"

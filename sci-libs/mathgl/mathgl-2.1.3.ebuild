@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.1.3.ebuild,v 1.1 2013/10/15 15:00:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-2.1.3.ebuild,v 1.2 2013/11/16 08:44:11 dirtyepic Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="
 	png? ( media-libs/libpng )
 	python? ( dev-python/numpy[${PYTHON_USEDEP}] ${PYTHON_DEPS} )
 	qt4? ( dev-qt/qtgui:4 )
-	wxwidgets? ( x11-libs/wxGTK:2.8 )
+	wxwidgets? ( x11-libs/wxGTK:2.8[X] )
 	zlib? ( sys-libs/zlib )"
 
 DEPEND="${RDEPEND}
@@ -56,7 +56,6 @@ REQUIRED_USE="
 pkg_setup() {
 	use mpi && export CC=mpicc CXX=mpicxx
 	use python && python-single-r1_pkg_setup
-	use wxwidgets && wxwidgets_pkg_setup
 }
 
 src_unpack() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.245 2013/11/04 18:02:37 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.246 2013/11/16 08:54:30 dirtyepic Exp $
+
+  16 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> erlang-15.2.3.1.ebuild,
+  erlang-16.ebuild, erlang-16.1.ebuild, erlang-16.1-r1.ebuild,
+  erlang-16.2.ebuild:
+  Add a USE dep instead of calling wxwidgets_pkg_setup.
 
   04 Nov 2013; Dirkjan Ochtman <djc@gentoo.org> erlang-16.1-r1.ebuild,
   erlang-16.2.ebuild:
