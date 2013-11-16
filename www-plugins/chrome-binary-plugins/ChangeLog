@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/chrome-binary-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.78 2013/11/15 02:06:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.79 2013/11/16 20:13:30 floppym Exp $
+
+  16 Nov 2013; Mike Gilbert <floppym@gentoo.org>
+  chrome-binary-plugins-31.0.1650.57_p1.ebuild,
+  chrome-binary-plugins-32.0.1700.14_beta1.ebuild,
+  chrome-binary-plugins-33.0.1707.0_alpha1.ebuild,
+  chrome-binary-plugins-9999.ebuild:
+  Remove stale postinst message.
 
 *chrome-binary-plugins-31.0.1650.57_p1 (15 Nov 2013)
 

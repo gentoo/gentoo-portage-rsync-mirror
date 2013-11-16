@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.9 2013/05/02 20:00:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/chrome-binary-plugins-9999.ebuild,v 1.10 2013/11/16 20:13:30 floppym Exp $
 
 EAPI=4
 
@@ -64,15 +64,4 @@ src_install() {
 		insinto /etc/chromium/
 		doins pepper-flash
 	fi
-}
-
-pkg_postinst() {
-	use flash || return
-
-	einfo
-	einfo "To enable Flash for Chromium, source	${ROOT}etc/chromium/pepper-flash"
-	einfo "inside ${ROOT}etc/chromium/default. You may run this as root:"
-	einfo
-	einfo "  # echo . ${ROOT}etc/chromium/pepper-flash >> ${ROOT}etc/chromium/default"
-	einfo
 }
