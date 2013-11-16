@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.3.1.ebuild,v 1.1 2013/11/15 20:28:02 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.3.1.ebuild,v 1.2 2013/11/16 00:20:43 mattm Exp $
 
 EAPI="3"
 
@@ -58,8 +58,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "$FILESDIR/cmakelist.patch"
-
 	# just to be sure
 	rm -rf Wt/Dbo/backend/amalgamation
 
