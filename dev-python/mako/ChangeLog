@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.74 2013/11/09 15:34:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.75 2013/11/16 09:47:12 pacho Exp $
+
+  16 Nov 2013; Pacho Ramos <pacho@gentoo.org> mako-0.7.3-r2.ebuild:
+  amd64 stable, bug #489894
 
   09 Nov 2013; Pacho Ramos <pacho@gentoo.org> mako-0.7.3-r2.ebuild:
   Modify beaker addition to world file instructions (#489896)

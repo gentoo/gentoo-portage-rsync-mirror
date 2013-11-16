@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.3.1.ebuild,v 1.2 2013/11/16 00:20:43 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wt/wt-3.3.1.ebuild,v 1.3 2013/11/16 09:42:54 mattm Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/witty/wt/3.3.0/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="doc +extjs fcgi graphicsmagick mysql pdf postgres resources +server ssl +sqlite test zlib"
 
 RDEPEND="

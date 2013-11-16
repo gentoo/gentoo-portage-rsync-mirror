@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/glances
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.11 2013/08/26 17:54:58 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/glances/ChangeLog,v 1.12 2013/11/16 09:33:29 xarthisius Exp $
+
+*glances-1.7.2 (16 Nov 2013)
+
+  16 Nov 2013; Kacper Kowalik <xarthisius@gentoo.org> +glances-1.7.2.ebuild,
+  -glances-1.7.ebuild:
+  Version bump, drop old
 
 *glances-1.7.1 (26 Aug 2013)
 

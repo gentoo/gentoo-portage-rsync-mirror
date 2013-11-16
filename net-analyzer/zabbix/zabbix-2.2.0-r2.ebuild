@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.0-r1.ebuild,v 1.1 2013/11/16 07:18:54 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.0-r2.ebuild,v 1.1 2013/11/16 09:33:56 mattm Exp $
 
 EAPI="5"
 
@@ -251,12 +251,9 @@ src_install() {
 
 	if use server; then
 		insinto /etc/zabbix
-		doins \
-			"${FILESDIR}/2.2"/zabbix_server.conf \
-		doinitd \
-			"${FILESDIR}/2.2"/init.d/zabbix-server
-		dosbin \
-			src/zabbix_server/zabbix_server
+		doins "${FILESDIR}/2.2"/zabbix_server.conf
+		doinitd "${FILESDIR}/2.2"/init.d/zabbix-server
+		dosbin src/zabbix_server/zabbix_server
 		fowners zabbix:zabbix \
 			/etc/zabbix/zabbix_server.conf \
 			/etc/zabbix/zabbix_trapper.conf
@@ -280,8 +277,7 @@ src_install() {
 		doins \
 			"${FILESDIR}/2.2"/zabbix_agent.conf \
 			"${FILESDIR}/2.2"/zabbix_agentd.conf
-		doinitd \
-			"${FILESDIR}/2.2"/init.d/zabbix-agentd
+		doinitd "${FILESDIR}/2.2"/init.d/zabbix-agentd
 		dosbin \
 			src/zabbix_agent/zabbix_agent \
 			src/zabbix_agent/zabbix_agentd
