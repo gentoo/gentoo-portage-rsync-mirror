@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.7.1.ebuild,v 1.1 2013/08/09 09:03:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.7.2.ebuild,v 1.1 2013/11/16 09:24:59 xarthisius Exp $
 
 EAPI=5
 
-inherit multilib versionator
+inherit flag-o-matic multilib versionator
 
 MY_PV=v$(get_version_component_range 1-2)
 
@@ -35,6 +35,14 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 DOCS=( AUTHORS NEWS README VERSION )
+
+src_prepare() {
+	if use cuda ; then
+		append-cflags -I/opt/cuda/include
+		append-cppflags -I/opt/cuda/include
+		append-ldflags -L/opt/cuda/$(get_libdir)
+    fi
+}
 
 src_configure() {
 	export HWLOC_PKG_CONFIG=$(tc-getPKG_CONFIG) #393467
