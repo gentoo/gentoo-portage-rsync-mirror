@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.7.2.ebuild,v 1.1 2013/11/16 09:24:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.7.2.ebuild,v 1.2 2013/11/16 16:09:13 xarthisius Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ src_prepare() {
 		append-cflags -I/opt/cuda/include
 		append-cppflags -I/opt/cuda/include
 		append-ldflags -L/opt/cuda/$(get_libdir)
-    fi
+	fi
 }
 
 src_configure() {
