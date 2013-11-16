@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.34 2013/08/16 07:59:17 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.35 2013/11/16 08:21:23 dirtyepic Exp $
 
 # @ECLASS:			wxwidgets.eclass
 # @MAINTAINER:
@@ -33,8 +33,7 @@
 # @CODE
 #
 #  This will get you the default configuration, which is what you want 99%
-#  of the time (in 2.6 the default is "ansi", all other versions default to
-#  "unicode").
+#  of the time.
 #
 #  If your package has optional wxGTK support controlled by a USE flag or you
 #  need to use the wxBase libraries (USE="-X") then you should not set
@@ -62,15 +61,10 @@ esac
 if [[ -z ${WX_CONFIG} ]]; then
 	# and only if WX_GTK_VER is set before inherit
 	if [[ -n ${WX_GTK_VER} ]]; then
-		if [[ ${WX_GTK_VER} == 2.6 ]]; then
-			wxchar="ansi"
-		else
-			wxchar="unicode"
-		fi
 		for wxtoolkit in gtk2 base; do
 			# newer versions don't have a seperate debug profile
 			for wxdebug in xxx release- debug-; do
-				wxconf="${wxtoolkit}-${wxchar}-${wxdebug/xxx/}${WX_GTK_VER}"
+				wxconf="${wxtoolkit}-unicode-${wxdebug/xxx/}${WX_GTK_VER}"
 				if [[ -f ${EPREFIX}/usr/$(get_libdir)/wx/config/${wxconf} ]]; then
 					# if this is a wxBase install, die in pkg_setup
 					[[ ${wxtoolkit} == "base" ]] && WXBASE_DIE=1
@@ -109,10 +103,8 @@ wxwidgets_pkg_setup() {
 #
 #  Available configurations are:
 #
-#    [2.6] ansi          [>=2.8] unicode
-#          unicode               base-unicode
-#          base
-#          base-unicode
+#    unicode       (USE="X")
+#    base-unicode  (USE="-X")
 #
 #  If your package has optional wxGTK support controlled by a USE flag, set
 #  WX_GTK_VER inside a conditional rather than before inherit.  Some broken
@@ -134,7 +126,7 @@ wxwidgets_pkg_setup() {
 need-wxwidgets() {
 	debug-print-function $FUNCNAME $*
 
-	local wxtoolkit wxchar wxdebug wxconf
+	local wxtoolkit wxdebug wxconf
 
 	if [[ -z ${WX_GTK_VER} ]]; then
 		echo
@@ -143,7 +135,7 @@ need-wxwidgets() {
 		die "WX_GTK_VER missing"
 	fi
 
-	if [[ ${WX_GTK_VER} != 2.6 && ${WX_GTK_VER} != 2.8 && ${WX_GTK_VER} != 2.9 ]]; then
+	if [[ ${WX_GTK_VER} != 2.8 && ${WX_GTK_VER} != 2.9 ]]; then
 			echo
 			eerror "Invalid WX_GTK_VER: ${WX_GTK_VER} - must be set to a valid wxGTK SLOT."
 			echo
@@ -153,53 +145,13 @@ need-wxwidgets() {
 	debug-print "WX_GTK_VER is ${WX_GTK_VER}"
 
 	case $1 in
-		ansi)
-			debug-print-section ansi
-			if [[ ${WX_GTK_VER} == 2.6 ]]; then
-				wxchar="ansi"
-			else
-				wxchar="unicode"
-			fi
-			check_wxuse X
-			;;
-		unicode)
-			debug-print-section unicode
-			check_wxuse X
-			[[ ${WX_GTK_VER} == 2.6 ]] && check_wxuse unicode
-			wxchar="unicode"
-			;;
-		base)
-			debug-print-section base
-			if [[ ${WX_GTK_VER} == 2.6 ]]; then
-				wxchar="ansi"
-			else
-				wxchar="unicode"
-			fi
-			;;
-		base-unicode)
-			debug-print-section base-unicode
-			[[ ${WX_GTK_VER} == 2.6 ]] && check_wxuse unicode
-			wxchar="unicode"
-			;;
-		# backwards compatibility
-		gtk2)
-			debug-print-section gtk2
-			if [[ ${WX_GTK_VER} == 2.6 ]]; then
-				wxchar="ansi"
-			else
-				wxchar="unicode"
-			fi
-			check_wxuse X
-			;;
+		unicode|base-unicode) ;;
 		*)
-			echo
 			eerror "Invalid $FUNCNAME argument: $1"
 			echo
-			die "Invalid argument"
+			die
 			;;
 	esac
-
-	debug-print "wxchar is ${wxchar}"
 
 	# TODO: remove built_with_use
 
@@ -212,8 +164,8 @@ need-wxwidgets() {
 
 	debug-print "wxtoolkit is ${wxtoolkit}"
 
-	# debug or release?
-	if [[ ${WX_GTK_VER} == 2.6 || ${WX_GTK_VER} == 2.8 ]]; then
+	# 2.8 has a separate debug tuple
+	if [[ ${WX_GTK_VER} == 2.8 ]]; then
 		if built_with_use =x11-libs/wxGTK-${WX_GTK_VER}* debug; then
 			wxdebug="debug-"
 		else
@@ -224,7 +176,7 @@ need-wxwidgets() {
 	debug-print "wxdebug is ${wxdebug}"
 
 	# put it all together
-	wxconf="${wxtoolkit}-${wxchar}-${wxdebug}${WX_GTK_VER}"
+	wxconf="${wxtoolkit}-unicode-${wxdebug}${WX_GTK_VER}"
 
 	debug-print "wxconf is ${wxconf}"
 

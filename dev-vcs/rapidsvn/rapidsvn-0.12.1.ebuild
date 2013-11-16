@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.1.ebuild,v 1.3 2013/08/04 11:59:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rapidsvn/rapidsvn-0.12.1.ebuild,v 1.4 2013/11/16 08:04:36 dirtyepic Exp $
 
 EAPI=4
 
@@ -48,7 +48,6 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=( HACKING.txt TRANSLATIONS )
 
 pkg_setup() {
-	wxwidgets_pkg_setup
 	python_set_active_version 2
 	python_pkg_setup
 }

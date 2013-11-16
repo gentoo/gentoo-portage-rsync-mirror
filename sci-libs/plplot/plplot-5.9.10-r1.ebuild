@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.10-r1.ebuild,v 1.1 2013/11/05 23:56:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.10-r1.ebuild,v 1.2 2013/11/16 08:28:49 dirtyepic Exp $
 
 EAPI=5
 
@@ -64,7 +64,6 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} ) qt4? ( dynamic ) test? ( latex )"
 
 pkg_setup() {
-	use wxwidgets && wxwidgets_pkg_setup
 	use python && python-single-r1_pkg_setup
 	java-pkg-opt-2_pkg_setup
 }

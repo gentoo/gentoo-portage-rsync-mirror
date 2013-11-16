@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/relax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.6 2013/10/22 16:25:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.7 2013/11/16 08:25:43 dirtyepic Exp $
+
+  16 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> relax-2.1.0.ebuild,
+  relax-2.2.1.ebuild, relax-2.2.5.ebuild, relax-3.0.1.ebuild:
+  Remove wxwidgets_pkg_setup call (unnecessary with USE deps).
 
 *relax-3.0.1 (22 Oct 2013)
 

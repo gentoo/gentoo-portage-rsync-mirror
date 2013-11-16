@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-2.2.1.ebuild,v 1.2 2013/05/29 16:27:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-2.2.1.ebuild,v 1.3 2013/11/16 08:25:43 dirtyepic Exp $
 
 EAPI=5
 
@@ -31,7 +31,6 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	wxwidgets_pkg_setup
 	python-single-r1_pkg_setup
 }
 
