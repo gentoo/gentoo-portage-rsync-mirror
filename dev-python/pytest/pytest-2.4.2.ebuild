@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.1 2013/11/14 06:13:55 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.2 2013/11/16 04:54:05 floppym Exp $
 
 EAPI="5"
 
@@ -40,7 +40,9 @@ python_compile_all() {
 }
 
 python_test() {
-	"${PYTHON}" "${BUILD_DIR}"/lib/pytest.py || die "tests failed with ${EPYTHON}"
+	"${PYTHON}" "${BUILD_DIR}"/lib/pytest.py \
+		--ignore=doc/en/example/nonpython/test_simple.yml \
+		|| die "tests failed with ${EPYTHON}"
 }
 
 python_install_all() {
