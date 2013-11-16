@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/libfprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.22 2013/05/07 11:29:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/ChangeLog,v 1.23 2013/11/16 12:27:59 pacho Exp $
+
+  16 Nov 2013; Pacho Ramos <pacho@gentoo.org> libfprint-0.4.0.ebuild:
+  amd64 stable, bug #488782
 
 *libfprint-0.5.0-r1 (07 May 2013)
 

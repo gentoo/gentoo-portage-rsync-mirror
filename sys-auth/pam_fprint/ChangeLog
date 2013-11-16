@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_fprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_fprint/ChangeLog,v 1.9 2013/02/02 23:11:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_fprint/ChangeLog,v 1.10 2013/11/16 12:30:13 pacho Exp $
+
+  16 Nov 2013; Pacho Ramos <pacho@gentoo.org> pam_fprint-0.2-r1.ebuild:
+  amd64 stable, bug #488782
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org> pam_fprint-0.2-r1.ebuild:
   Add ~arm, wrt bug #449220
