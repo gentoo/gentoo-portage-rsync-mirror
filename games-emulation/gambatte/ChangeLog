@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gambatte
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/ChangeLog,v 1.3 2013/06/06 09:49:34 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/ChangeLog,v 1.4 2013/11/16 05:16:04 mr_bones_ Exp $
+
+  16 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -gambatte-0.5.0_p20130310.ebuild, -gambatte-0.5.0_p20130413.ebuild:
+  old
 
 *gambatte-0.5.0_p20130601 (06 Jun 2013)
 
@@ -23,4 +27,3 @@
   10 Mar 2013; Julian Ospald <hasufell@gentoo.org>
   +gambatte-0.5.0_p20130310.ebuild, +metadata.xml:
   initial import wrt #214479 based on Jared Bs ebuild
-
