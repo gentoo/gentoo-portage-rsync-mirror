@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.148 2013/09/27 13:46:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.149 2013/11/17 08:11:36 naota Exp $
+
+  17 Nov 2013; Naohiro Aota <naota@gentoo.org> mtr-0.85.ebuild:
+  Add ~x86-fbsd. #482934
 
 *mtr-9999 (27 Sep 2013)
 
