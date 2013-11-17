@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/photivo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.6 2013/08/01 20:51:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/ChangeLog,v 1.7 2013/11/17 18:39:02 hwoarang Exp $
+
+*photivo-0_pre20131115 (17 Nov 2013)
+
+  17 Nov 2013; Markos Chandras <hwoarang@gentoo.org>
+  +photivo-0_pre20131115.ebuild:
+  Version bump thanks to Marios Andreopoulos <opensource@andmarios.com>
 
   01 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> photivo-9999.ebuild:
   Fix libjpeg.so.62 dependency.
