@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.0.2.ebuild,v 1.5 2013/09/05 18:46:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.0.2.ebuild,v 1.6 2013/11/17 03:36:33 prometheanfire Exp $
 
 EAPI=5
 
@@ -93,6 +93,8 @@ src_compile() {
 	mv pypy/module/cpyext/include/*.h include/ || die
 
 	use doc && emake -C pypy/doc/ html
+	#needed even without jit :( also needed in both compile and install phases
+	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
 }
 
 src_test() {
@@ -107,7 +109,8 @@ src_install() {
 	insinto "/usr/$(get_libdir)/pypy${SLOT}"
 	doins -r include lib_pypy lib-python pypy-c
 	fperms a+x ${INSDESTTREE}/pypy-c
-	use jit && pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
+	#needed even without jit :(
+	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
 	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
 	dosym ../$(get_libdir)/pypy${SLOT}/include /usr/include/pypy${SLOT}
 	dodoc README.rst

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.51 2013/09/05 18:46:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.52 2013/11/17 03:42:36 prometheanfire Exp $
+
+  17 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> pypy-2.0.2.ebuild:
+  fix for pypy on hardened
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pypy-2.0.2.ebuild,
   pypy-9999.ebuild:

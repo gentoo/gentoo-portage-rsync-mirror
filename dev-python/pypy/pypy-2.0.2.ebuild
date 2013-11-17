@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0.2.ebuild,v 1.7 2013/09/05 18:45:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-2.0.2.ebuild,v 1.8 2013/11/17 03:42:36 prometheanfire Exp $
 
 EAPI=5
 
@@ -109,6 +109,7 @@ src_compile() {
 	"${@}" || die "compile error"
 
 	use doc && emake -C pypy/doc/ html
+	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
 }
 
 src_test() {
@@ -123,7 +124,7 @@ src_install() {
 	insinto "/usr/$(get_libdir)/pypy${SLOT}"
 	doins -r include lib_pypy lib-python pypy-c
 	fperms a+x ${INSDESTTREE}/pypy-c
-	use jit && pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
+	pax-mark m "${ED%/}${INSDESTTREE}/pypy-c"
 	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
 	dodoc README.rst
 

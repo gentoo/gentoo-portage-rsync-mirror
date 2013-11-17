@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.6 2013/09/05 18:46:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/ChangeLog,v 1.7 2013/11/17 03:36:33 prometheanfire Exp $
+
+  17 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> pypy-bin-2.0.2.ebuild:
+  pypy-bin fix for hardened profiles
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pypy-bin-2.0.2.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
