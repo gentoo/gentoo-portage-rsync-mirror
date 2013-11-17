@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.136 2013/09/23 02:06:36 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.137 2013/11/17 13:24:31 teiresias Exp $
+
+*brltty-4.5-r3 (16 Nov 2013)
+
+  16 Nov 2013; Christopher Brannon <teiresias@gentoo.org>
+  -brltty-4.5-r2.ebuild, +brltty-4.5-r3.ebuild:
+  Use subslots for icu dependency. See bug #455900.
 
   23 Sep 2013; Christopher Brannon <teiresias@gentoo.org> brltty-4.5-r2.ebuild,
   +files/brltty-4.5-respect-AR.patch:

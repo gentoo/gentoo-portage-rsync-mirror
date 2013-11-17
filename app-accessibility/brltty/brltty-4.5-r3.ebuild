@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5-r2.ebuild,v 1.2 2013/09/23 02:06:36 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.5-r3.ebuild,v 1.1 2013/11/17 13:24:32 teiresias Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ REQUIRED_USE="doc? ( api )
 COMMON_DEP="bluetooth? ( net-wireless/bluez )
 	gpm? ( >=sys-libs/gpm-1.20 )
 	iconv? ( virtual/libiconv )
-	icu? ( dev-libs/icu )
+	icu? ( dev-libs/icu:= )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( virtual/libintl )
 	python? ( >=dev-python/cython-0.16 )
