@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.22-r1.ebuild,v 1.1 2013/10/27 16:18:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.22-r1.ebuild,v 1.2 2013/11/17 12:09:53 jlec Exp $
 
 EAPI="5"
 
@@ -13,11 +13,12 @@ HOMEPAGE="http://www.mutt.org/"
 SRC_URI="ftp://ftp.mutt.org/mutt/devel/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2
 	http://dev.gentoo.org/~grobian/distfiles/${P}-gentoo-patches${PATCHSET_REV}.tar.bz2"
-IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap kerberos mbox nls nntp pop qdbm sasl selinux sidebar smime smtp ssl tokyocabinet"
+IUSE="berkdb crypt debug doc gdbm gnutls gpg idn imap kerberos mbox nls nntp pop qdbm sasl selinux sidebar slang smime smtp ssl tokyocabinet"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-RDEPEND=">=sys-libs/ncurses-5.2
+RDEPEND="
+	app-misc/mime-types
 	nls? ( virtual/libintl )
 	tokyocabinet?  ( dev-db/tokyocabinet )
 	!tokyocabinet? (
@@ -47,7 +48,9 @@ RDEPEND=">=sys-libs/ncurses-5.2
 	gpg?     ( >=app-crypt/gpgme-0.9.0 )
 	smime?   ( >=dev-libs/openssl-0.9.6 )
 	selinux? ( sec-policy/selinux-mutt )
-	app-misc/mime-types"
+	slang? ( sys-libs/slang )
+	!slang? ( >=sys-libs/ncurses-5.2 )
+"
 DEPEND="${RDEPEND}
 	net-mail/mailbase
 	doc? (
@@ -133,6 +136,7 @@ src_configure() {
 		$(use_with idn) \
 		$(use_with kerberos gss) \
 		$(use_with !nntp mixmaster) \
+		$(use_with slang) \
 		--enable-compressed \
 		--enable-external-dotlock \
 		--enable-nfs-fix \

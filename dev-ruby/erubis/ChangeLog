@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.24 2013/07/27 22:21:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.25 2013/11/17 12:07:02 graaff Exp $
+
+*erubis-2.7.0-r1 (17 Nov 2013)
+
+  17 Nov 2013; Hans de Graaff <graaff@gentoo.org> +erubis-2.7.0-r1.ebuild:
+  Add ruby20. Work around even more brokenness in the tests with more recent
+  jruby and ruby:1.8 versions.
 
   27 Jul 2013; Agostino Sarubbo <ago@gentoo.org> erubis-2.7.0.ebuild:
   Stable for x86, wrt bug #477454

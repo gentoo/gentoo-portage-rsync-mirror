@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mutt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.249 2013/10/27 16:18:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.250 2013/11/17 12:09:53 jlec Exp $
+
+  17 Nov 2013; Justin Lecher <jlec@gentoo.org> mutt-1.5.22-r1.ebuild:
+  Add optional support for sys-libs/slang as an replacement for ncurses,
+  #490994
 
 *mutt-1.5.22-r1 (27 Oct 2013)
 

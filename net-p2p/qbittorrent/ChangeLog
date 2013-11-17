@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.218 2013/11/11 20:32:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.219 2013/11/17 12:23:56 hwoarang Exp $
 
 *qbittorrent-3.1.2 (11 Nov 2013)
 
@@ -17,7 +17,7 @@
 
   13 Oct 2013; Markos Chandras <hwoarang@gentoo.org>
   +qbittorrent-3.0.11-r1.ebuild, qbittorrent-9999.ebuild:
-  Use system qtsingleapplication per #487560 thanks to Nikoli
+  Use system qtsingleapplication per #487522 thanks to Nikoli
 
   27 Sep 2013; Markos Chandras <hwoarang@gentoo.org> -qbittorrent-3.0.8.ebuild,
   -qbittorrent-3.0.9.ebuild:
