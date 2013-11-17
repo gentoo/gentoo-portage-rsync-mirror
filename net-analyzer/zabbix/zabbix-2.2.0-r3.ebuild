@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.0-r2.ebuild,v 1.1 2013/11/16 09:33:56 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.0-r3.ebuild,v 1.1 2013/11/16 23:07:49 mattm Exp $
 
 EAPI="5"
 
@@ -254,12 +254,8 @@ src_install() {
 		doins "${FILESDIR}/2.2"/zabbix_server.conf
 		doinitd "${FILESDIR}/2.2"/init.d/zabbix-server
 		dosbin src/zabbix_server/zabbix_server
-		fowners zabbix:zabbix \
-			/etc/zabbix/zabbix_server.conf \
-			/etc/zabbix/zabbix_trapper.conf
-		fperms 0640 \
-			/etc/zabbix/zabbix_server.conf \
-			/etc/zabbix/zabbix_trapper.conf
+		fowners zabbix:zabbix /etc/zabbix/zabbix_server.conf
+		fperms 0640 /etc/zabbix/zabbix_server.conf
 	fi
 
 	if use proxy; then
