@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.126 2013/10/26 08:52:25 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.127 2013/11/17 09:03:01 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (17 Nov 2013)
+# Needs g-s-d, that needs systemd, bug #478076
+>=net-libs/gnome-online-accounts-3.8 gnome
 
 # Mark Wright <gienah@gentoo.org> (26 Oct 2013)
 # template-haskell not yet available

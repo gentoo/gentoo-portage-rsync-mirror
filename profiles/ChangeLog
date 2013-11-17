@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8361 2013/11/15 13:05:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8362 2013/11/17 09:03:00 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Nov 2013; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.mask,
+  eapi-5-files/package.use.stable.mask:
+  goa-3.8 needs gst-3.8, that needs systemd that cannot be keyworded yet on
+  ia64 (#478076); also gnutls-3 isn't ready for stabilization with latest pan
 
   15 Nov 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
   Unmask emacs-common-gentoo again, problem should be fixed now.

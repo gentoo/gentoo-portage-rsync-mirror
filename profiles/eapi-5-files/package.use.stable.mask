@@ -1,9 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.30 2013/11/16 19:08:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.31 2013/11/17 09:03:01 pacho Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Pacho Ramos <pacho@gentoo.org> (17 Nov 2013)
+# Still needs gnutls-3
+>=net-nntp/pan-0.139 ssl
 
 # Michał Górny <mgorny@gentoo.org> (16 Nov 2013)
 # Don't apply stable masks to python-exec since we're forcing every
