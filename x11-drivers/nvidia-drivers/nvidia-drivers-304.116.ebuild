@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.116.ebuild,v 1.1 2013/11/06 17:31:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-304.116.ebuild,v 1.2 2013/11/17 17:25:04 jer Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils flag-o-matic linux-info linux-mod multilib nvidia-driver \
 	portability toolchain-funcs unpacker user versionator udev
 
@@ -172,8 +171,8 @@ src_prepare() {
 		ewarn "Using PAX patches is not supported. You will be asked to"
 		ewarn "use a standard kernel should you have issues. Should you"
 		ewarn "need support with these patches, contact the PaX team."
-	    epatch "${FILESDIR}"/${PN}-pax-const.patch
-	    epatch "${FILESDIR}"/${PN}-pax-usercopy.patch
+		epatch "${FILESDIR}"/${PN}-pax-const.patch
+		epatch "${FILESDIR}"/${PN}-pax-usercopy.patch
 	fi
 
 	cat <<- EOF > "${S}"/nvidia.icd
@@ -244,33 +243,24 @@ src_install() {
 	if use kernel_linux; then
 		linux-mod_src_install
 
-		VIDEOGROUP="$(egetent group video | cut -d ':' -f 3)"
-		if [ -z "$VIDEOGROUP" ]; then
-			eerror "Failed to determine the video group gid."
-			die "Failed to determine the video group gid."
-		fi
-
 		# Add the aliases
-		[ -f "${FILESDIR}/nvidia-169.07" ] || die "nvidia missing in FILESDIR"
-		sed -e 's:PACKAGE:'${PF}':g' \
-			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-169.07 > \
-			"${WORKDIR}"/nvidia
+		# This file is tweaked with the appropriate video group in
+		# pkg_preinst, see bug #491414
 		insinto /etc/modprobe.d
-		newins "${WORKDIR}"/nvidia nvidia.conf || die
+		newins "${FILESDIR}"/nvidia-169.07 nvidia.conf
 
 		# Ensures that our device nodes are created when not using X
 		exeinto "$(udev_get_udevdir)"
 		doexe "${FILESDIR}"/nvidia-udev.sh
 		udev_newrules "${FILESDIR}"/nvidia.udev-rule 99-nvidia.rules
-
 	elif use kernel_FreeBSD; then
 		if use x86-fbsd; then
 			insinto /boot/modules
-			doins "${S}/src/nvidia.kld" || die
+			doins "${S}/src/nvidia.kld"
 		fi
 
 		exeinto /boot/modules
-		doexe "${S}/src/nvidia.ko" || die
+		doexe "${S}/src/nvidia.ko"
 	fi
 
 	# NVIDIA kernel <-> userspace driver config lib
@@ -284,7 +274,7 @@ src_install() {
 	if use X; then
 		# Xorg DDX driver
 		insinto /usr/$(get_libdir)/xorg/modules/drivers
-		doins ${NV_X11}/nvidia_drv.so || die "failed to install nvidia_drv.so"
+		doins ${NV_X11}/nvidia_drv.so
 
 		# Xorg GLX driver
 		donvidia ${NV_X11}/libglx.so ${NV_SOVER} \
@@ -326,23 +316,23 @@ src_install() {
 	exeinto /opt/bin/
 
 	if use X; then
-		doexe ${NV_OBJ}/nvidia-xconfig || die
+		doexe ${NV_OBJ}/nvidia-xconfig
 	fi
 
 	if use kernel_linux ; then
-		doexe ${NV_OBJ}/nvidia-debugdump || die
-		doexe ${NV_OBJ}/nvidia-cuda-proxy-control || die
-		doexe ${NV_OBJ}/nvidia-cuda-proxy-server || die
-		doexe ${NV_OBJ}/nvidia-smi || die
+		doexe ${NV_OBJ}/nvidia-debugdump
+		doexe ${NV_OBJ}/nvidia-cuda-proxy-control
+		doexe ${NV_OBJ}/nvidia-cuda-proxy-server
+		doexe ${NV_OBJ}/nvidia-smi
 		newinitd "${FILESDIR}/nvidia-smi.init" nvidia-smi
 	fi
 
 	if use tools; then
-		doexe ${NV_OBJ}/nvidia-settings || die
+		doexe ${NV_OBJ}/nvidia-settings
 	fi
 
 	exeinto /usr/bin/
-	doexe ${NV_OBJ}/nvidia-bug-report.sh || die
+	doexe ${NV_OBJ}/nvidia-bug-report.sh
 
 	# Desktop entries for nvidia-settings
 	if use tools ; then
@@ -410,7 +400,20 @@ src_install-libs() {
 }
 
 pkg_preinst() {
-	use kernel_linux && linux-mod_pkg_preinst
+	if use kernel_linux; then
+		linux-mod_pkg_preinst
+
+		local videogroup="$(egetent group video | cut -d ':' -f 3)"
+		if [ -z "${videogroup}" ]; then
+			eerror "Failed to determine the video group gid"
+			die "Failed to determine the video group gid"
+		else
+			sed -i \
+				-e "s:PACKAGE:${PF}:g" \
+				-e "s:VIDEOGID:${videogroup}:" \
+				"${D}"/etc/modprobe.d/nvidia.conf || die
+		fi
+	fi
 
 	# Clean the dynamic libGL stuff's home to ensure
 	# we dont have stale libs floating around
