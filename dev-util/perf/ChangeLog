@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/perf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.24 2013/11/17 04:48:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.25 2013/11/17 06:44:21 naota Exp $
+
+*perf-3.12 (17 Nov 2013)
+
+  17 Nov 2013; Naohiro Aota <naota@gentoo.org> +perf-3.12.ebuild:
+  version bump
 
   17 Nov 2013; Naohiro Aota <naota@gentoo.org> perf-3.8-r1.ebuild:
   Use tc-arch and replace amd64 with x86_64. #487950
