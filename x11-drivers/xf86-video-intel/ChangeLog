@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.150 2013/11/08 19:02:54 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.151 2013/11/17 22:20:35 chithanh Exp $
+
+*xf86-video-intel-2.99.906 (17 Nov 2013)
+
+  17 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-intel-2.99.906-server-crash.patch,
+  +xf86-video-intel-2.99.906.ebuild:
+  Version bump.
 
   08 Nov 2013; Rémi Cardona <remi@gentoo.org> xf86-video-intel-2.21.15.ebuild:
   Fix build failure (wrong CFLAGS variable), see bug #490342.
