@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.70 2013/08/11 15:01:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.72 2013/11/17 14:58:25 aballier Exp $
+
+  17 Nov 2013; Alexis Ballier <aballier@gentoo.org> libdc1394-2.2.1.ebuild,
+  +files/libdc1394-2.2.1-includes.patch:
+  fix out of source builds. bug #488716
+
+  17 Nov 2013; Julian Ospald <hasufell@gentoo.org> libdc1394-2.2.1.ebuild:
+  fix build failure wrt #488716
 
 *libdc1394-2.2.1 (11 Aug 2013)
 
@@ -388,4 +395,3 @@
 
   11 Oct 2003; Hanno Boeck <hanno@gentoo.org> libdc1394-0.9.1.ebuild:
   Ebuild submitted by Stephen Edwards <sed@flashmail.com>.
-
