@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.88 2013/10/07 17:09:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.89 2013/11/17 11:51:31 hwoarang Exp $
+
+  17 Nov 2013; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
+  Block lxde-base/lxshortcut to avoid file collisions
 
 *libfm-1.1.2.2 (07 Oct 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.0.ebuild,v 1.1 2013/11/02 11:59:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.0-r1.ebuild,v 1.1 2013/11/17 11:54:37 jlec Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="acl avahi cracklib dbus debug pgp kerberos ldap pam quota samba +shadow ss
 CDEPEND="
 	!app-editors/yudit
 	dev-libs/libevent
-	dev-libs/libgcrypt
+	>=dev-libs/libgcrypt-1.2.3
 	sys-apps/coreutils
 	>=sys-libs/db-4.2.52
 	sys-libs/tdb
@@ -98,7 +98,8 @@ src_configure() {
 		$(use_with samba smbsharemodes)
 		$(use_with shadow)
 		$(use_with ssl ssl-dir)
-		$(use_with tracker tracker /dev/null )
+		$(use_with tracker)
+		$(use_with tracker tracker-pkgconfig-version $(get_version_component_range 1-2 $(best_version app-misc/tracker | sed 's:app-misc/tracker-::g')))
 		--enable-overwrite
 		--disable-krb4-uam
 		--disable-afs
