@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.0.ebuild,v 1.9 2013/11/17 15:48:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.1.ebuild,v 1.1 2013/11/17 15:48:44 tomwij Exp $
 
 EAPI="5"
 
@@ -32,7 +32,7 @@ else
 fi
 
 LICENSE="LGPL-2.1 GPL-2"
-SLOT="0"
+SLOT="0/core7.0.0-vlc5.4.0"
 
 if [ "${PV%9999}" = "${PV}" ] ; then
 	KEYWORDS="~amd64 ~ppc -sparc ~x86 ~amd64-fbsd ~x86-fbsd"
@@ -238,8 +238,6 @@ src_prepare() {
 
 	# Fix up broken audio; first is a fixed reversed bisected commit, latter two are backported.
 	epatch "${FILESDIR}"/${PN}-2.1.0-TomWij-bisected-PA-broken-underflow.patch
-	epatch "${FILESDIR}"/${PN}-2.1.0-avcodec-check-update-buffered_time-earlier-so-we-sho.patch
-	epatch "${FILESDIR}"/${PN}-2.1.0-transcode-don-t-check-drift-if-we-have-VLC_TS_INVALI.patch
 
 	# Disable avcodec checks when avcodec is not used.
 	sed -i 's/^#if LIBAVCODEC_VERSION_CHECK(.*)$/#if 0/' modules/codec/avcodec/fourcc.c || die
