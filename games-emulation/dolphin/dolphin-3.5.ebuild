@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.9 2013/11/17 20:31:51 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5.ebuild,v 1.10 2013/11/17 22:38:30 twitch153 Exp $
 
 EAPI=5
 
@@ -125,6 +125,11 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
+}
+
+src_compile() {
+
+	cmake-utils_src_compile
 }
 
 src_install() {

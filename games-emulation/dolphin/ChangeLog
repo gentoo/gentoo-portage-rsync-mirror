@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.12 2013/11/17 20:31:52 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.13 2013/11/17 22:38:30 twitch153 Exp $
+
+  17 Nov 2013; Devan Franchini <twitch153@gentoo.org> dolphin-3.5.ebuild,
+  dolphin-4.0.ebuild, dolphin-9999.ebuild:
+  Adds explicit call of cmake-utils_src_compile to move the building to compile
+  phase
 
   17 Nov 2013; Devan Franchini <twitch153@gentoo.org> dolphin-3.5.ebuild,
   dolphin-4.0.ebuild, dolphin-9999.ebuild:

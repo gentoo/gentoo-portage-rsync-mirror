@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py-bcrypt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.1 2013/09/10 06:29:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.2 2013/11/17 22:52:39 prometheanfire Exp $
+
+*py-bcrypt-0.4 (17 Nov 2013)
+
+  17 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> +py-bcrypt-0.4.ebuild:
+  updating py-bcrypt to 0.4 for bug 488228
 
 *py-bcrypt-0.2 (10 Sep 2013)
 
