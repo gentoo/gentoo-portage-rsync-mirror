@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.335 2013/10/12 15:29:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/todo/package.use.mask,v 1.336 2013/11/17 14:13:57 aballier Exp $
 
 # Mask useflags that require deps with missing keywords.
 # Anyone is allowed and _very welcome_ to add masks there.
@@ -216,3 +216,6 @@ dev-libs/eina valgrind
 # dev-util/lcov
 dev-libs/eina test
 dev-libs/eet test
+
+# net-misc/freerdp (doesnt build)
+media-video/vlc rdp
