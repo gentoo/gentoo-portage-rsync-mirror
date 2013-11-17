@@ -1,0 +1,15 @@
+Fix HOST_OS detection in build_ffpeg.sh
+
+https://bugs.gentoo.org/show_bug.cgi?id=491466
+
+--- a/third_party/ffmpeg/chromium/scripts/build_ffmpeg.sh
++++ b/third_party/ffmpeg/chromium/scripts/build_ffmpeg.sh
+@@ -75,7 +75,7 @@
+ LIBAVUTIL_VERSION_MAJOR=52
+ 
+ case $(uname -sm) in
+-  Linux\ i386)
++  Linux\ i?86)
+     HOST_OS=linux
+     HOST_ARCH=ia32
+     JOBS=$(grep processor /proc/cpuinfo | wc -l)
