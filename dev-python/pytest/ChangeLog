@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.80 2013/11/16 04:54:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.81 2013/11/17 04:13:46 prometheanfire Exp $
+
+  17 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> pytest-2.4.2.ebuild:
+  added pytest-2.4.2 with restricted tests due to upstream bug
 
   16 Nov 2013; Mike Gilbert <floppym@gentoo.org> pytest-2.4.2.ebuild:
   Ignore silly test_simple.yml file when running tests. Thanks to idella4 for

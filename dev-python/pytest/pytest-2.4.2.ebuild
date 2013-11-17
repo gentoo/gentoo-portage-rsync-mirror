@@ -1,11 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.2 2013/11/16 04:54:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.3 2013/11/17 04:13:46 prometheanfire Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 inherit distutils-r1 eutils
+
+RESTRICT="test"
+#testing restricted due to test failures with pexpect-3.0 (which is required for pypy2_0 and python3_x support)
+#https://bitbucket.org/hpk42/pytest/issue/386/tests-fail-with-pexpect-30
 
 DESCRIPTION="py.test: simple powerful testing with Python"
 HOMEPAGE="http://pytest.org/ http://pypi.python.org/pypi/pytest"
@@ -19,10 +23,13 @@ IUSE="doc test"
 # When bumping, please check setup.py for the proper py version
 PY_VER="1.4.17"
 RDEPEND=">=dev-python/py-${PY_VER}[${PYTHON_USEDEP}]"
+
+#pexpect dep based on https://bitbucket.org/hpk42/pytest/issue/386/tests-fail-with-pexpect-30
 DEPEND="${RDEPEND}
 		dev-python/setuptools[${PYTHON_USEDEP}]
 		virtual/python-argparse[${PYTHON_USEDEP}]
-		test? ( dev-python/pyyaml[${PYTHON_USEDEP}] )"
+		test? ( dev-python/pyyaml[${PYTHON_USEDEP}]
+				dev-python/pexpect[${PYTHON_USEDEP}] )"
 
 python_prepare_all() {
 	# Disable versioning of py.test script to avoid collision with

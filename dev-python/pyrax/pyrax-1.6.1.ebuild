@@ -1,9 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrax/pyrax-1.6.1.ebuild,v 1.1 2013/11/09 05:52:06 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrax/pyrax-1.6.1.ebuild,v 1.2 2013/11/17 04:20:42 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
+
+RESTRICT="test"
+#due to https://github.com/rackspace/pyrax/issues/245
 
 inherit distutils-r1
 
@@ -30,8 +33,8 @@ RDEPEND="dev-python/httplib2[${PYTHON_USEDEP}]
 		>=dev-python/python-swiftclient-1.5.0[${PYTHON_USEDEP}]
 		dev-python/rackspace-novaclient[${PYTHON_USEDEP}]"
 
-#python_test() {
-#disabling due to failures https://github.com/rackspace/pyrax/issues/245
-#	"${PYTHON}" -m nose -v tests/unit --with-cover --cover-package=pyrax || die
+python_test() {
+	"${PYTHON}" -m nose -v tests/unit --with-cover --cover-package=pyrax || die
 #	"${PYTHON}" -m nose -w tests/unit || die
-#}
+#	nosetests --with-coverage --cover-package=pyrax --cover-erase -w tests/unit/ || die
+}
