@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.39 2013/07/22 17:58:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.40 2013/11/17 20:18:26 mrueg Exp $
+
+*net-scp-1.1.2-r1 (17 Nov 2013)
+
+  17 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +net-scp-1.1.2-r1.ebuild:
+  Add ruby20 target. ppc64 keyword dropped. Rekeywording in bug #465948
 
   22 Jul 2013; Hans de Graaff <graaff@gentoo.org> net-scp-1.1.2.ebuild:
   net-ssh should already be installed when building documentation, bug 477572.
