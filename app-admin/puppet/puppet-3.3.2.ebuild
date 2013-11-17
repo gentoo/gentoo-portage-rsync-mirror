@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.3.2.ebuild,v 1.1 2013/11/16 16:54:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-3.3.2.ebuild,v 1.2 2013/11/17 12:32:05 tampakrap Exp $
 
 EAPI="5"
 
@@ -118,14 +118,6 @@ pkg_postinst() {
 	elog
 	elog "Please, *don't* include the --ask option in EMERGE_EXTRA_OPTS as this could"
 	elog "cause puppet to hang while installing packages."
-	elog
-	elog "Puppet uses eix to get information about currently installed packages,"
-	elog "so please keep the eix metadata cache updated so puppet is able to properly"
-	elog "handle package installations."
-	elog
-	elog "Currently puppet only supports adding and removing services to the default"
-	elog "runlevel, if you want to add/remove a service from another runlevel you may"
-	elog "do so using symlinking."
 	elog
 	elog "Portage Puppet module with Gentoo-specific resources:"
 	elog "http://forge.puppetlabs.com/gentoo/portage"
