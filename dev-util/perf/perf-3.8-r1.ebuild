@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.8-r1.ebuild,v 1.1 2013/10/08 22:46:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.8-r1.ebuild,v 1.2 2013/11/17 04:48:21 naota Exp $
 
 EAPI="4"
 
@@ -123,12 +123,14 @@ src_prepare() {
 
 puse() { usex $1 "" no; }
 perf_make() {
+	local arch=$(tc-arch)
+	[[ "${arch}" == "amd64" ]] && arch="x86_64"
 	emake -j1 V=1 \
 		CC="$(tc-getCC)" AR="$(tc-getAR)" \
 		prefix="/usr" bindir_relative="sbin" \
 		CFLAGS_OPTIMIZE="${CFLAGS}" \
 		LDFLAGS_OPTIMIZE="${LDFLAGS}" \
-		ARCH="$(tc-arch-kernel)" \
+		ARCH="${arch}" \
 		NO_DEMANGLE=$(puse demangle) \
 		NO_LIBAUDIT=$(puse audit) \
 		NO_LIBPERL=$(puse perl) \
