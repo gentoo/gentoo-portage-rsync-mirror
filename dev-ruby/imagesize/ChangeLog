@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/imagesize
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.8 2013/11/04 22:08:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.9 2013/11/17 09:49:57 graaff Exp $
+
+  17 Nov 2013; Hans de Graaff <graaff@gentoo.org>
+  imagesize-0.1.1_p20100902.ebuild:
+  Fix version in gemspec file.
 
 *imagesize-0.1.1_p20100902 (04 Nov 2013)
 

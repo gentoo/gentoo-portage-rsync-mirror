@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.4.ebuild,v 1.1 2013/11/13 19:40:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.4.ebuild,v 1.2 2013/11/17 09:47:47 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
@@ -46,6 +46,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	id3tag? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( network? ( media-sound/lame ) )
+	libmpdclient? ( media-libs/libmpdclient )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod:0 )

@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/imagesize-0.1.1_p20100902.ebuild,v 1.1 2013/11/04 22:08:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/imagesize-0.1.1_p20100902.ebuild,v 1.2 2013/11/17 09:49:57 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.txt"
+
+RUBY_FAKEGEM_VERSION="0.1.1.20100902"
 
 inherit ruby-fakegem
 
