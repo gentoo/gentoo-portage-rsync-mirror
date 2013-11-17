@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0.ebuild,v 1.1 2013/09/26 03:37:02 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0.ebuild,v 1.2 2013/11/17 20:31:52 twitch153 Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}-emu.googlecode.com/files/${P}-src.zip"
 KEYWORDS="~amd64"
 
 DESCRIPTION="Gamecube and Wii game emulator"
-HOMEPAGE="http://www.dolphin-emulator.com/"
+HOMEPAGE="https://www.dolphin-emu.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -86,15 +86,16 @@ src_prepare() {
 	# - SOIL: The sources are not public.
 	# - Bochs-disasm: Don't know what it is.
 	# - CLRun: Part of OpenCL
+	# - polarssl: Currently fails the check as is.
 	mv Externals/SOIL . || die
 	mv Externals/Bochs_disasm . || die
 	mv Externals/CLRun . || die
 	mv Externals/polarssl . || die
 	rm -r Externals/* || die
+	mv polarssl Externals || die
 	mv CLRun Externals || die
 	mv Bochs_disasm Externals || die
 	mv SOIL Externals || die
-	mv polarssl Externals || die
 }
 
 src_configure() {

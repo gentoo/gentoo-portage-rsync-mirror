@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bson
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/ChangeLog,v 1.6 2012/05/12 06:03:34 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/ChangeLog,v 1.7 2013/11/17 20:53:43 mrueg Exp $
+
+*bson-1.6.2-r1 (17 Nov 2013)
+
+  17 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +bson-1.6.2-r1.ebuild:
+  Add ruby20 target.
 
   12 May 2012; Diego E. Pettenò <flameeyes@gentoo.org> -bson-1.5.2.ebuild,
   -bson-1.6.0.ebuild, -bson-1.6.1.ebuild, bson-1.6.2.ebuild:
@@ -29,4 +34,3 @@
   28 Dec 2011; Diego E. Pettenò <flameeyes@gentoo.org> +bson-1.5.2.ebuild,
   +metadata.xml:
   Initial import of ebuild for bson (and bson_ext).
-

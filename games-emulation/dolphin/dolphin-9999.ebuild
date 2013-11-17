@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.6 2013/09/08 22:54:49 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.7 2013/11/17 20:31:51 twitch153 Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ else
 fi
 
 DESCRIPTION="Gamecube and Wii game emulator"
-HOMEPAGE="http://www.dolphin-emulator.com/"
+HOMEPAGE="https://www.dolphin-emu.org/"
 
 LICENSE="GPL-2"
 SLOT="0"

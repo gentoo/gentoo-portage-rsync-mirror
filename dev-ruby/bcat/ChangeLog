@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bcat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.13 2013/09/01 12:46:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.14 2013/11/17 20:36:44 mrueg Exp $
+
+*bcat-0.6.2-r1 (17 Nov 2013)
+
+  17 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +bcat-0.6.2-r1.ebuild:
+  Add ruby20 target.
 
   01 Sep 2013; Hans de Graaff <graaff@gentoo.org> bcat-0.6.2.ebuild:
   Drop virtual/ruby-test-unit which is a noop, bug 380711.
