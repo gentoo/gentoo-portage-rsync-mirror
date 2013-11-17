@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst postrm preinst prepare unpack
+DEPEND=librsync-bundled? ( dev-util/patchelf ) >=sys-apps/sed-4
+DESCRIPTION=Dropbox daemon (pretends to be GUI-less)
+EAPI=5
+HOMEPAGE=http://dropbox.com/
+IUSE=+librsync-bundled X
+KEYWORDS=~amd64 ~x86 ~x86-linux
+LICENSE=CC-BY-ND-3.0 FTL MIT LGPL-2 openssl dropbox
+RDEPEND=X? ( dev-libs/glib:2 media-libs/libpng:1.2 sys-libs/zlib virtual/jpeg x11-libs/gtk+:2 x11-libs/libSM x11-libs/libXinerama x11-libs/libXxf86vm x11-libs/pango[X] x11-themes/hicolor-icon-theme ) app-arch/bzip2 dev-libs/popt !librsync-bundled? ( net-libs/librsync ) net-misc/wget >=sys-devel/gcc-4.2.0 sys-libs/zlib
+RESTRICT=mirror strip
+SLOT=0
+SRC_URI=x86? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86-2.4.7.tar.gz ) amd64? ( http://dl-web.dropbox.com/u/17/dropbox-lnx.x86_64-2.4.7.tar.gz )
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=1441345de2fcf1999c1ba2b12f6750c8
