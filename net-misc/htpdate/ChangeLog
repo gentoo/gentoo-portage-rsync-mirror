@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htpdate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.50 2013/11/13 15:43:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.51 2013/11/17 10:39:18 pinkbyte Exp $
+
+  17 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> htpdate-1.0.7.ebuild:
+  Stable on amd64 and x86, wrt bug #490586
 
   13 Nov 2013; Jeroen Roovers <jer@gentoo.org> htpdate-1.0.7.ebuild:
   Stable for HPPA (bug #490586).

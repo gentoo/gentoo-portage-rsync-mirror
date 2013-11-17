@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install postinst preinst
+DEFINED_PHASES=configure install postinst preinst prepare
 DEPEND=app-arch/xz-utils
 DESCRIPTION=small and fast portage helper tools written in C
 EAPI=3
@@ -9,4 +9,4 @@ LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://gentoo/portage-utils-0.41.tar.xz http://dev.gentoo.org/~vapier/dist/portage-utils-0.41.tar.xz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=749279e58cf8f68497501e9b0322bc70
+_md5_=9bf0fa35e5ae9096a87d0561f9e5852d

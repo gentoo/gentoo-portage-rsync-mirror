@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.18.1.ebuild,v 1.1 2013/09/01 06:05:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.18.1.ebuild,v 1.2 2013/11/17 10:45:01 graaff Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19 jruby"
+EAPI=5
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
@@ -41,6 +41,10 @@ all_ruby_prepare() {
 	# Remove mandatory coverage collection using simplecov which is not
 	# packaged.
 	sed -i -e '/require .simplecov/,/SimpleCov.start/ s:^:#:' spec/helper.rb || die
+
+	# Avoid a spec that requires UTF-8 support, so LANG=C still works,
+	# bug 430402
+	sed -i -e '/uses maximum terminal width/,/end/ s:^:#:' spec/shell/basic_spec.rb || die
 }
 
 each_ruby_prepare() {
