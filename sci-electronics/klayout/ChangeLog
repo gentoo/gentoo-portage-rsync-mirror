@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/klayout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.19 2013/10/13 19:13:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.20 2013/11/18 10:58:10 chainsaw Exp $
+
+  18 Nov 2013; Tony Vroon <chainsaw@gentoo.org> klayout-0.22.9.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #475308.
 
 *klayout-0.22.9 (13 Oct 2013)
 
