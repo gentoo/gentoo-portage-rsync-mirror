@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.10-r1.ebuild,v 1.2 2013/05/11 16:04:57 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.10-r1.ebuild,v 1.3 2013/11/18 17:06:50 binki Exp $
 
 EAPI=4
 
@@ -20,8 +20,7 @@ IUSE="curl ipv6 +extban-stacking +operoverride operoverride-verify +prefixaq
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )
-	curl? ( || ( net-misc/curl[ares]
-		net-misc/curl[adns] ) )
+	curl? ( net-misc/curl[adns] )
 	dev-libs/tre
 	>=net-dns/c-ares-1.7"
 DEPEND="${RDEPEND}
