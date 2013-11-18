@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.2.1410.ebuild,v 1.1 2013/11/04 14:25:08 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-0.2.2.1410.ebuild,v 1.2 2013/11/18 06:16:52 naota Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ each_ruby_install() {
 	exeinto /usr/share/mikutter
 	doexe mikutter.rb
 	insinto /usr/share/mikutter
-	doins -r core plugin
+	doins -r core plugin Gemfile
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
 	dodoc README
