@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.393 2013/11/16 08:40:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.394 2013/11/18 16:28:11 eras Exp $
+
+  18 Nov 2013; Eray Aslan <eras@gentoo.org> -files/CVE-2002-2443.patch,
+  -mit-krb5-1.11.2-r1.ebuild, -mit-krb5-1.11.3.ebuild:
+  Remove vulnerable
 
   16 Nov 2013; Agostino Sarubbo <ago@gentoo.org> mit-krb5-1.11.4.ebuild:
   Stable for sparc, wrt bug #490668
