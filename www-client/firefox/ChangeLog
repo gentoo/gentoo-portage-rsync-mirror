@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.283 2013/11/18 14:13:56 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.284 2013/11/18 19:37:20 jer Exp $
+
+  18 Nov 2013; Jeroen Roovers <jer@gentoo.org> firefox-25.0.1.ebuild:
+  Readd stack direction patch. Again.
 
 *firefox-25.0.1 (18 Nov 2013)
 

@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/fdupes
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.47 2012/07/06 07:28:37 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.48 2013/11/18 19:54:43 jlec Exp $
+
+*fdupes-1.51 (18 Nov 2013)
+
+  18 Nov 2013; Justin Lecher <jlec@gentoo.org> fdupes-1.50_pre2.ebuild,
+  fdupes-1.50_pre2-r1.ebuild, +fdupes-1.51.ebuild,
+  +files/fdupes-1.51-makefile.patch, metadata.xml:
+  Version Bump, #491604
 
 *fdupes-1.50_pre2-r1 (06 Jul 2012)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.50_pre2-r1.ebuild,v 1.2 2013/11/18 19:54:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.51.ebuild,v 1.1 2013/11/18 19:54:43 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ MY_P="${PN}-${PV/_pre/-PR}"
 
 DESCRIPTION="Identify/delete duplicate files residing within specified directories"
 HOMEPAGE="https://code.google.com/p/fdupes/"
-SRC_URI="http://netdial.caribe.net/~adrian2/programs/${PN}/beta/${MY_P}.tar.gz"
+SRC_URI="https://fdupes.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -22,9 +22,8 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-makefile.patch \
-		"${FILESDIR}"/${P}-compare-file.patch \
-		"${FILESDIR}"/${P}-lfs.patch \
-		"${FILESDIR}"/${P}-typo.patch
+		"${FILESDIR}"/${PN}-1.50_pre2-compare-file.patch \
+		"${FILESDIR}"/${PN}-1.50_pre2-typo.patch
 
 	append-lfs-flags
 }
