@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.138 2013/10/27 17:51:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.139 2013/11/18 19:10:48 aidecoe Exp $
+
+  18 Nov 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r1.ebuild,
+  +files/034-0007-dracut.sh-also-mkdir-run-lock-which-is.patch,
+  +files/034-0008-dracut.sh-no-need-to-make-subdirs-in-r.patch,
+  +files/034-0009-lvm-install-thin-utils-for-non-hostonl.patch,
+  +files/034-0010-module-setup.sh-add-comments-for-dracu.patch,
+  +files/034-0011-lvm-fix-thin-recognition.patch,
+  +files/034-0012-lvm-always-install-thin-utils-for-lvm.patch:
+  Fixed bug #487324 (redundant dirs) and bug #490098 (thin provisioning).
 
   27 Oct 2013; Sven Vermeulen <swift@gentoo.org> dracut-026-r2.ebuild,
   dracut-027-r3.ebuild, dracut-029.ebuild, dracut-030.ebuild,

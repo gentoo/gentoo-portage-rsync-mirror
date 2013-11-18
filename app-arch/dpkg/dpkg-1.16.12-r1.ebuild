@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.12.ebuild,v 1.1 2013/10/02 04:43:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.12-r1.ebuild,v 1.1 2013/11/18 19:28:47 jer Exp $
 
 EAPI=4
 inherit eutils multilib autotools toolchain-funcs
@@ -44,6 +44,8 @@ src_prepare() {
 	# do not expect Debian's gzip --rsyncable extension
 	epatch "${FILESDIR}"/${PN}-1.16.4.2-gzip-rsyncable.patch
 
+	epatch "${FILESDIR}"/${PN}-1.17.1-flags.patch
+
 	# Force the use of the running bash for get-version (this file is never
 	# installed, so no need to worry about hardcoding a temporary bash)
 	sed -i -e '1c\#!'"${BASH}" get-version || die
@@ -69,9 +71,7 @@ src_configure() {
 		$(use_with bzip2 bz2) \
 		$(use_with zlib) \
 		${myconf} \
-		--disable-compiler-optimisations \
 		--disable-compiler-warnings \
-		--disable-linker-optimisations \
 		--disable-silent-rules \
 		--disable-start-stop-daemon \
 		--localstatedir="${EPREFIX}"/var \

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r1.ebuild,v 1.2 2013/10/27 17:51:45 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r1.ebuild,v 1.3 2013/11/18 19:10:48 aidecoe Exp $
 
 EAPI=4
 
@@ -163,6 +163,12 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV}-0004-Use-the-same-paths-in-dracut.sh-as-tho.patch"
 	epatch "${FILESDIR}/${PV}-0005-Install-dracut-install-into-libexec-di.patch"
 	epatch "${FILESDIR}/${PV}-0006-resume-fix-swap-detection-in-hostonly.patch"
+	epatch "${FILESDIR}/${PV}-0007-dracut.sh-also-mkdir-run-lock-which-is.patch"
+	epatch "${FILESDIR}/${PV}-0008-dracut.sh-no-need-to-make-subdirs-in-r.patch"
+	epatch "${FILESDIR}/${PV}-0009-lvm-install-thin-utils-for-non-hostonl.patch"
+	epatch "${FILESDIR}/${PV}-0010-module-setup.sh-add-comments-for-dracu.patch"
+	epatch "${FILESDIR}/${PV}-0011-lvm-fix-thin-recognition.patch"
+	epatch "${FILESDIR}/${PV}-0012-lvm-always-install-thin-utils-for-lvm.patch"
 
 	local libdirs
 
