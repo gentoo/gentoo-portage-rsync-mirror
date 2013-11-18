@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.22-r1.ebuild,v 1.2 2013/11/17 12:09:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.22-r1.ebuild,v 1.3 2013/11/18 09:51:17 jlec Exp $
 
 EAPI="5"
 
@@ -136,7 +136,7 @@ src_configure() {
 		$(use_with idn) \
 		$(use_with kerberos gss) \
 		$(use_with !nntp mixmaster) \
-		$(use_with slang) \
+		$(use slang && echo --with-slang) \
 		--enable-compressed \
 		--enable-external-dotlock \
 		--enable-nfs-fix \
