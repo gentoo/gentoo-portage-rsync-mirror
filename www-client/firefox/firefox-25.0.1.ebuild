@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-25.0-r1.ebuild,v 1.2 2013/11/08 14:15:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-25.0.1.ebuild,v 1.1 2013/11/18 14:13:56 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -50,8 +50,8 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
-	>=dev-libs/nss-3.15.1
-	>=dev-libs/nspr-4.10
+	>=dev-libs/nss-3.15.3
+	>=dev-libs/nspr-4.10.2
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	>=media-libs/libpng-1.5.17[apng]
@@ -147,9 +147,6 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
-
-	# Fix systems where the stack grows up (bug #490746)
-	epatch "${FILESDIR}"/${P}-stack-grows-up.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user

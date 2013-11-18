@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.4.ebuild,v 1.4 2013/11/09 09:34:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.4.4.ebuild,v 1.5 2013/11/18 14:19:04 ultrabug Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -21,7 +21,6 @@ RDEPEND="
 	dev-libs/libee
 	>=dev-libs/libestr-0.1.5
 	dev-libs/liblognorm
-	net-misc/curl
 	dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
 	kerberos? ( virtual/krb5 )
