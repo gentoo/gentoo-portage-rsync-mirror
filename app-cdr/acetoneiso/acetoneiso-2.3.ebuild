@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.3.ebuild,v 1.3 2013/03/02 19:12:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/acetoneiso/acetoneiso-2.3.ebuild,v 1.4 2013/11/18 21:21:43 hwoarang Exp $
 
 EAPI=4
 MY_P=${PN}_${PV}
@@ -8,7 +8,7 @@ MY_P=${PN}_${PV}
 inherit flag-o-matic qt4-r2
 
 DESCRIPTION="a feature-rich and complete software application to manage CD/DVD images"
-HOMEPAGE="http://www.acetoneteam.org/"
+HOMEPAGE="http://sourceforge.net/projects/${PN}/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
