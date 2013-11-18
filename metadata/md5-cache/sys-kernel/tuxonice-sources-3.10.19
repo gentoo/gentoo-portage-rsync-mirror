@@ -11,5 +11,5 @@ RDEPEND=>=sys-apps/tuxonice-userui-1.0 || ( >=sys-power/hibernate-script-2.0 sys
 RESTRICT=binchecks strip
 SLOT=3.10.19
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.10.tar.xz mirror://gentoo/genpatches-3.10-27.base.tar.xz mirror://gentoo/genpatches-3.10-27.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.10-27.experimental.tar.xz ) http://tuxonice.net/downloads/all/tuxonice-for-linux-3.10.19-2013-11-15.patch.bz2
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	kernel-2	cfcb408286f35bb67644ce1a46310880	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	kernel-2	e604aa8dedb3e5f0a877bacbd7d9a915	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=0645f69df3a007b876edc661f7ebdccf

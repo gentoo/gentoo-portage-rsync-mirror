@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.289 2013/11/02 12:58:50 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.290 2013/11/18 13:19:49 tomwij Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -984,9 +984,10 @@ unipatch() {
 
 			local j
 			for j in ${KPATCH_DIR}/*/50*_*.patch*; do
-				if [[ ! "${K_EXP_GENPATCHES_LIST}" == *"$(basename ${j})"* ]] ; then
-					UNIPATCH_DROP+=" $(basename ${j})"
-				fi
+				for k in ${K_EXP_GENPATCHES_LIST} ; do
+					[[ "$(basename ${j})" == ${k}* ]] && continue 2
+				done
+				UNIPATCH_DROP+=" $(basename ${j})"
 			done
 		fi
 	done

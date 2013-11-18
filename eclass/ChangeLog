@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1059 2013/11/16 13:05:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1060 2013/11/18 13:19:49 tomwij Exp $
+
+  18 Nov 2013; Tom Wijsman <TomWij@gentoo.org> kernel-2.eclass:
+  Reimplemented K_EXP_GENPATCHES_LIST patch matching by switching the LHS with
+  the RHS and doing much more proper matching (50 works, *_BFQ-* works,
+  etc...); spotted by aCOSwt on the forums, my earlier tests apparently didn't
+  check this properly.
 
   16 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> wxwidgets.eclass:
   Cleanup.
