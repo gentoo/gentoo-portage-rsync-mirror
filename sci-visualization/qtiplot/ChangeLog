@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.103 2013/11/01 11:20:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.104 2013/11/18 08:05:42 jlec Exp $
+
+  18 Nov 2013; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.9-r2.ebuild,
+  +files/qtiplot-0.9.8.9-sip-4.15.patch:
+  Import fix for latest sip from freebsd ports, #490886
 
   01 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   qtiplot-0.9.8.9-r2.ebuild, +files/qtiplot-0.9.8.9-private.patch:
