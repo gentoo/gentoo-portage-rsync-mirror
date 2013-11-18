@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.236 2013/10/02 04:43:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.237 2013/11/18 14:38:05 jer Exp $
+
+*dpkg-1.17.1-r1 (18 Nov 2013)
+
+  18 Nov 2013; Jeroen Roovers <jer@gentoo.org> -dpkg-1.17.1.ebuild,
+  +dpkg-1.17.1-r1.ebuild, +files/dpkg-1.17.1-flags.patch:
+  Stop configure from mangling CFLAGS/LDFLAGS by Andrew Savchenko (bug
+  #481810).
 
 *dpkg-1.16.12 (02 Oct 2013)
 
