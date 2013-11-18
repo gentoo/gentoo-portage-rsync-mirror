@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon-vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.41 2013/11/11 21:09:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.42 2013/11/18 20:04:15 johu Exp $
+
+  18 Nov 2013; Johannes Huber <johu@gentoo.org> phonon-vlc-0.7.0.ebuild,
+  phonon-vlc-9999.ebuild:
+  Use subslot for media-libs/phonon-vlc, bug #489616.
 
 *phonon-vlc-0.7.0 (11 Nov 2013)
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/d-feet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.23 2013/10/02 22:09:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/d-feet/ChangeLog,v 1.24 2013/11/18 20:22:58 pacho Exp $
+
+*d-feet-0.3.6-r1 (18 Nov 2013)
+
+  18 Nov 2013; Pacho Ramos <pacho@gentoo.org> +d-feet-0.3.6-r1.ebuild,
+  -d-feet-0.3.6.ebuild:
+  Convert shebangs to force python2 usage (#491274 by Maciej Piechotka)
 
   02 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> d-feet-0.3.6.ebuild:
   Work around gettext-0.18.3.1 causing sandbox failures in eautoreconf (bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.6.1.ebuild,v 1.2 2013/11/13 19:30:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-3.8.6.1.ebuild,v 1.3 2013/11/18 20:30:28 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,11 +15,12 @@ LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
-IUSE="+colord +cups debug +i18n input_devices_wacom -openrc-force packagekit policykit +short-touchpad-timeout smartcard +udev"
+# smartcard support is disabled for 3.8.x, bug #491592
+IUSE="+colord +cups debug +i18n input_devices_wacom -openrc-force packagekit policykit +short-touchpad-timeout +udev" #smartcard
 REQUIRED_USE="
 	packagekit? ( udev )
-	smartcard? ( udev )
 "
+#	smartcard? ( udev )
 
 # require colord-0.1.27 dependency for connection type support
 COMMON_DEPEND="
@@ -52,9 +53,10 @@ COMMON_DEPEND="
 		>=dev-libs/libwacom-0.7
 		x11-drivers/xf86-input-wacom )
 	packagekit? ( >=app-admin/packagekit-base-0.7.4 )
-	smartcard? ( >=dev-libs/nss-3.11.2 )
 	udev? ( virtual/udev[gudev] )
 "
+#	smartcard? ( >=dev-libs/nss-3.11.2 )
+
 # Themes needed by g-s-d, gnome-shell, gtk+:3 apps to work properly
 # <gnome-color-manager-3.1.1 has file collisions with g-s-d-3.1.x
 # <gnome-power-manager-3.1.3 has file collisions with g-s-d-3.1.x
@@ -109,9 +111,10 @@ src_configure() {
 		$(use_enable debug more-warnings) \
 		$(use_enable i18n ibus) \
 		$(use_enable packagekit) \
-		$(use_enable smartcard smartcard-support) \
+		--disable-smartcard-support \
 		$(use_enable udev gudev) \
 		$(use_enable input_devices_wacom wacom)
+#		$(use_enable smartcard smartcard-support) \
 }
 
 src_test() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-9999.ebuild,v 1.13 2013/11/11 21:09:31 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-9999.ebuild,v 1.14 2013/11/18 20:04:14 johu Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ REQUIRED_USE="|| ( qt4 qt5 )"
 
 RDEPEND="
 	>=media-libs/phonon-4.7.0[qt4=,qt5=]
-	>=media-video/vlc-2.0.1[dbus,ogg,vorbis]
+	>=media-video/vlc-2.0.1:=[dbus,ogg,vorbis]
 	qt4? (
 		dev-qt/qtcore:4
 		dev-qt/qtdbus:4

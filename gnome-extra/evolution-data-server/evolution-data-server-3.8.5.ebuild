@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.5.ebuild,v 1.2 2013/09/05 19:44:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.8.5.ebuild,v 1.3 2013/11/18 20:02:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -26,7 +26,7 @@ RDEPEND="
 	>=dev-libs/glib-2.34:2
 	>=dev-db/sqlite-3.5:=
 	>=dev-libs/libgdata-0.10:=
-	>=app-crypt/libsecret-0.5
+	>=app-crypt/libsecret-0.5[crypt]
 	>=dev-libs/libical-0.43:=
 	>=net-libs/libsoup-2.40.3:2.4
 	>=dev-libs/libxml2-2
