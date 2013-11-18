@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.49 2013/11/01 13:49:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.51 2013/11/17 23:50:12 tgurr Exp $
+
+  17 Nov 2013; Timo Gurr <tgurr@gentoo.org> -murmur-1.2.3-r4.ebuild,
+  -murmur-1.2.4.ebuild, -files/mumble-1.2.3-fix-cert-validation.patch,
+  -files/murmur-1.2.3-ice-3.4.2-compat.patch,
+  -files/mumble-1.2.3-remove-certs.patch, -files/murmur.initd:
+  Remove old.
+
+  17 Nov 2013; Timo Gurr <tgurr@gentoo.org> murmur-1.2.4-r2.ebuild,
+  +files/murmur-1.2.4-ice-3.5.1-compat.patch:
+  Use readme.gentoo.eclass, bug #487462. Add ice-3.5.1-compat.patch, bug
+  #488880.
 
   01 Nov 2013; Agostino Sarubbo <ago@gentoo.org> murmur-1.2.4-r2.ebuild:
   Stable for x86, wrt bug #486304

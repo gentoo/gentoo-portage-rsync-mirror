@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/jsoncpp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/ChangeLog,v 1.8 2013/04/04 20:16:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/ChangeLog,v 1.9 2013/11/17 23:42:25 phajdan.jr Exp $
+
+  17 Nov 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> -jsoncpp-0.5.0.ebuild,
+  jsoncpp-0.5.0-r1.ebuild:
+  Only setup python for USE=doc, bug #487574 by mgorny. Also tested by John W.
+  Newman. Remove old.
 
   04 Apr 2013; Agostino Sarubbo <ago@gentoo.org> jsoncpp-0.5.0-r1.ebuild:
   Stable for x86, wrt bug #463426

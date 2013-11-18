@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mumble
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.43 2013/10/27 09:34:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/ChangeLog,v 1.44 2013/11/17 23:59:11 tgurr Exp $
+
+  17 Nov 2013; Timo Gurr <tgurr@gentoo.org> -mumble-1.2.3-r2.ebuild,
+  -files/mumble-1.2.3-fix-cert-validation.patch,
+  -files/mumble-1.2.3-set-file-permissions.patch:
+  Remove old.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Voip herd is removed: http://article.gmane.org/gmane.linux.gentoo.devel/88434
