@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gloox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.18 2013/09/05 13:10:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gloox/ChangeLog,v 1.19 2013/11/18 02:04:30 mrueg Exp $
+
+*gloox-1.0.9 (18 Nov 2013)
+
+  18 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +gloox-1.0.9.ebuild:
+  Version bump.
 
 *gloox-1.0.6 (05 Sep 2013)
 
