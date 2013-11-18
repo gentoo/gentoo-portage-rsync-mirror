@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/devilspie2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.10 2013/09/05 19:22:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/devilspie2/ChangeLog,v 1.11 2013/11/18 10:28:10 chainsaw Exp $
+
+  18 Nov 2013; Tony Vroon <chainsaw@gentoo.org> devilspie2-0.31.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #490854.
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> devilspie2-0.30.ebuild:
   Stable for x86, wrt bug #482606
