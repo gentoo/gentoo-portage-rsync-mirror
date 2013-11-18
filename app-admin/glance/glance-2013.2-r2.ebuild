@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2-r2.ebuild,v 1.1 2013/11/14 11:08:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2-r2.ebuild,v 1.2 2013/11/18 03:02:59 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -70,7 +70,7 @@ RDEPEND=">=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 		>=dev-python/kombu-2.4.8[${PYTHON_USEDEP}]
 		>=dev-python/pycrypto-2.6[${PYTHON_USEDEP}]
 		<=dev-python/iso8601-0.1.4-r1[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
+		>=dev-python/oslo-config-1.2.1[${PYTHON_USEDEP}]
 		swift? (
 			>=dev-python/python-swiftclient-1.5[${PYTHON_USEDEP}]
 			<dev-python/python-swiftclient-2[${PYTHON_USEDEP}]
@@ -87,6 +87,11 @@ RDEPEND=">=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 
 PATCHES=( "${FILESDIR}"/${P}-sphinx_mapping.patch )
 
+pkg_setup() {
+	enewgroup glance
+	enewuser glance -1 -1 /var/lib/glance glance
+}
+
 python_compile_all() {
 	use doc && "${PYTHON}" setup.py build_sphinx
 }
@@ -101,7 +106,7 @@ python_test() {
 python_install() {
 	distutils-r1_python_install
 	newconfd "${FILESDIR}/glance.confd" glance
-	newinitd "${FILESDIR}/glance-2.initd" glance
+	newinitd "${FILESDIR}/glance-3.initd" glance
 
 	for function in api registry scrubber; do
 		dosym /etc/init.d/glance /etc/init.d/glance-${function}
@@ -124,6 +129,8 @@ python_install() {
 	doins "etc/logging.cnf.sample"
 	doins "etc/policy.json"
 	doins "etc/schema-image.json"
+
+	fowners glance:glance /var/run/glance /var/log/glance /var/lib/glance/images /var/lib/glance/scrubber /etc/glance
 }
 
 python_install_all() {

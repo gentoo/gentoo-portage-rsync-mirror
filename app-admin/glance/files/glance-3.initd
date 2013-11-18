@@ -1,0 +1,71 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance-3.initd,v 1.1 2013/11/18 03:02:59 prometheanfire Exp $
+
+depend() {
+    need net
+}
+
+BASENAME=$(echo $SVCNAME | cut -d '-' -f 1)
+SERVERNAME=$(echo $SVCNAME | cut -d '-' -f 2)
+SERVICES=( api registry scrubber )
+if [ ${SVCNAME} == 'glance' ]; then
+    SERVERNAME='all'
+fi
+
+checkconfig() {
+    if [ ! -r /etc/conf.d/$BASENAME ]; then
+        eerror "No glance conf.dfile found: /etc/conf.d/$BASENAME)"
+        return 1
+    fi
+    if [ ${SVCNAME} == 'glance' ]; then
+        for service in ${SERVICES[*]}; do
+            if [ ! -r /etc/glance/glance-${service}.conf ]; then
+                eerror "No glance-${SERVICE} config file found: /etc/glance/glance-${SERVICE}.conf)"
+                return 1
+            fi
+        done
+    elif [ ! -r /etc/glance/${SVCNAME}.conf ]; then
+        eerror "No ${BASENAME} config file found: /etc/glance/${SVCNAME}.conf)"
+        return 1
+    fi
+    return 0
+}
+
+
+start() {
+    checkconfig || return $?
+    . /etc/conf.d/$BASENAME
+    
+    ebegin "Starting ${SVCNAME}"
+    if [ ! -d ${PID_PATH} ]; then
+        mkdir ${PID_PATH}
+    fi
+    
+    start-stop-daemon --start --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" --user glance --exec /usr/bin/glance-control ${SERVERNAME} start /etc/glance/glance-${SERVERNAME}.conf
+    
+    eend $? "Failed to start ${SVCNAME}"
+}
+
+stop() {
+    checkconfig || return $?
+    . /etc/conf.d/$BASENAME
+    
+    ebegin "Stopping ${SVCNAME}"
+    
+    if [ ${SVCNAME} == 'glance' ]; then
+        for service in ${SERVICES[*]}; do
+            start-stop-daemon --stop --quiet --pidfile "${PID_PATH}/glance-${service}.pid" \
+                    --exec /usr/bin/glance-control ${service} stop /etc/glance/glance-${service}.conf
+        done
+    else
+        start-stop-daemon --stop --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" \
+                --exec /usr/bin/glance-control ${SERVERNAME} stop /etc/glance/glance-${SERVERNAME}.conf
+    fi
+    eend $? "Failed to stop ${SVCNAME}"
+}
+
+#restart() {
+#
+#}

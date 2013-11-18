@@ -1,2 +1,3 @@
 CONFIG_FILE=/etc/keystone/keystone.conf
+LOG_FILE=/var/log/keystone/keystone.log
 PID_PATH=/var/run/keystone

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0.ebuild,v 1.1 2013/11/11 02:58:44 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0.ebuild,v 1.2 2013/11/18 03:08:16 prometheanfire Exp $
 
 EAPI=5
 
@@ -102,7 +102,7 @@ src_install() {
 	use monitor || rmdir "${ED}/usr/share/ovsdbmonitor"
 	use debug || rm "${ED}/usr/bin/ovs-parse-leaks"
 
-	newconfd "${FILESDIR}/ovsdb-server_conf" ovsdb-server
+	newconfd "${FILESDIR}/ovsdb-server_conf2" ovsdb-server
 	newconfd "${FILESDIR}/ovs-vswitchd_conf" ovs-vswitchd
 	newconfd "${FILESDIR}/ovs-controller_conf" ovs-controller
 	newinitd "${FILESDIR}/ovsdb-server-r1" ovsdb-server
