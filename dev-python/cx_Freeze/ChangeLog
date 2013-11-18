@@ -1,6 +1,20 @@
 # ChangeLog for dev-python/cx_Freeze
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.5 2013/09/05 18:46:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.8 2013/11/18 13:48:45 pinkbyte Exp $
+
+*cx_Freeze-4.3.2 (18 Nov 2013)
+
+  18 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> +cx_Freeze-4.3.2.ebuild:
+  Version bump
+
+  18 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> cx_Freeze-4.3.1-r2.ebuild:
+  Stable on amd64 and x86, wrt bug #491530
+
+*cx_Freeze-4.3.1-r2 (18 Nov 2013)
+
+  18 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> -cx_Freeze-4.3.1.ebuild,
+  -cx_Freeze-4.3.1-r1.ebuild, +cx_Freeze-4.3.1-r2.ebuild:
+  Revision bump: respect LDFLAGS. Drop old revisions
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> cx_Freeze-4.3.1-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
