@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.104 2013/06/29 16:28:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.105 2013/11/18 18:12:48 sera Exp $
+
+*boehm-gc-7.2e (18 Nov 2013)
+
+  18 Nov 2013; Ralph Sennhauser <sera@gentoo.org> +boehm-gc-7.2e.ebuild,
+  +files/boehm-gc-7.2e-automake-1.13.patch:
+  Version bump
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> boehm-gc-7.2d-r1.ebuild:
   Stable for sparc, wrt bug #471244

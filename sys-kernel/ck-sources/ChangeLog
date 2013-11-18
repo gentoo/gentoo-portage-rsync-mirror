@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.224 2013/11/15 19:18:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.225 2013/11/18 18:11:50 tomwij Exp $
+
+*ck-sources-3.10.17 (18 Nov 2013)
+*ck-sources-3.9.11-r1 (18 Nov 2013)
+
+  18 Nov 2013; Tom Wijsman <TomWij@gentoo.org> +ck-sources-3.10.17.ebuild,
+  +ck-sources-3.9.11-r1.ebuild:
+  Version bumps 3.9.11-r1 (3.9 branch, genpatches rev 17, 3.9-ck1 patchset
+  including bfs-430) and 3.10.17 (3.10 branch, genpatches rev 24, 3.10-ck1
+  patchset including bfs-440), proxied commit for Eric F. GARIOUD.
 
 *ck-sources-3.4.68 (15 Nov 2013)
 
