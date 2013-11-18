@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/spin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/ChangeLog,v 1.9 2012/12/30 18:30:00 phajdan.jr Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/spin/ChangeLog,v 1.10 2013/11/18 00:11:13 phajdan.jr Exp $
+
+*spin-6.2.5 (18 Nov 2013)
+
+  18 Nov 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> +spin-6.2.5.ebuild,
+  +files/spin-6.2.5-makefile.patch:
+  Version bump.
 
 *spin-6.2.3 (30 Dec 2012)
 

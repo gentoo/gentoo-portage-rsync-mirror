@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtlockedfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.4 2013/10/13 10:33:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.5 2013/11/18 00:14:20 pesa Exp $
+
+*qtlockedfile-2.4.1_p20130904 (18 Nov 2013)
+
+  18 Nov 2013; Davide Pesavento <pesa@gentoo.org>
+  +qtlockedfile-2.4.1_p20130904.ebuild:
+  New snapshot from qt-solutions git repo wrt bug 489168; ebuild cleanup.
 
   13 Oct 2013; Markus Meier <maekke@gentoo.org> qtlockedfile-2.4.1.ebuild:
   add ~arm, bug #487560
