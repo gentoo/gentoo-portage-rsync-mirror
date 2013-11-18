@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/celluloid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/ChangeLog,v 1.6 2013/11/11 15:43:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/celluloid/ChangeLog,v 1.7 2013/11/18 01:52:10 mrueg Exp $
+
+*celluloid-0.15.2-r2 (18 Nov 2013)
+
+  18 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +celluloid-0.15.2-r2.ebuild:
+  Install also spec folder, as needed by dev-ruby/listen.
 
 *celluloid-0.15.2-r1 (11 Nov 2013)
 
