@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.9.5.ebuild,v 1.11 2013/06/20 02:15:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.10.2.ebuild,v 1.1 2013/11/18 09:11:48 polynomial-c Exp $
 
 EAPI=3
 WANT_AUTOCONF="2.1"
@@ -15,33 +15,31 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v${PV}/src/${P}.tar
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="debug"
 
 src_prepare() {
 	mkdir build inst
-	epatch "${FILESDIR}"/${PN}-4.8-config.patch
-	epatch "${FILESDIR}"/${PN}-4.6.1-config-1.patch
+	cd "${S}"/nspr/
 	epatch "${FILESDIR}"/${PN}-4.6.1-lang.patch
 	epatch "${FILESDIR}"/${PN}-4.7.0-prtime.patch
 	epatch "${FILESDIR}"/${PN}-4.7.1-solaris.patch
 	epatch "${FILESDIR}"/${PN}-4.7.4-solaris.patch
-	epatch "${FILESDIR}"/${PN}-4.8.3-aix-gcc.patch
-	# Patch needs updating
-	#epatch "${FILESDIR}"/${PN}-4.8.3-aix-soname.patch
+	# epatch "${FILESDIR}"/${PN}-4.8.3-aix-gcc.patch
 	epatch "${FILESDIR}"/${PN}-4.8.4-darwin-install_name.patch
 	epatch "${FILESDIR}"/${PN}-4.8.9-link-flags.patch
+	# We do not need to pass -L$libdir via nspr-config --libs
+	epatch "${FILESDIR}"/${PN}-4.9.5_nspr_config.patch
 
 	# We must run eautoconf to regenerate configure
-	cd "${S}"/mozilla/nsprpub
 	eautoconf
 
 	# make sure it won't find Perl out of Prefix
-	sed -i -e "s/perl5//g" "${S}"/mozilla/nsprpub/configure || die
+	sed -i -e "s/perl5//g" "${S}"/nspr/configure || die
 
 	# Respect LDFLAGS
 	sed -i -e 's/\$(MKSHLIB) \$(OBJS)/\$(MKSHLIB) \$(LDFLAGS) \$(OBJS)/g' \
-		"${S}"/mozilla/nsprpub/config/rules.mk || die
+		"${S}"/nspr/config/rules.mk || die
 }
 
 src_configure() {
@@ -65,7 +63,7 @@ src_configure() {
 	esac
 
 	# Ancient autoconf needs help finding the right tools.
-	LC_ALL="C" ECONF_SOURCE="../mozilla/nsprpub" \
+	LC_ALL="C" ECONF_SOURCE="../nspr" \
 	ac_cv_path_AR="${AR}" \
 	econf \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \
@@ -88,18 +86,6 @@ src_install() {
 	cd "${ED}"/usr/$(get_libdir)
 	einfo "removing static libraries as upstream has requested!"
 	rm -f *.a || die "failed to remove static libraries."
-
-	local n=
-	# aix-soname.patch does this already
-	[[ ${CHOST} == *-aix* ]] ||
-	for file in *$(get_libname); do
-		n=${file%$(get_libname)}$(get_libname ${MINOR_VERSION})
-		mv ${file} ${n} || die "failed to mv files around"
-		ln -s ${n} ${file} || die "failed to symlink files."
-		if [[ ${CHOST} == *-darwin* ]]; then
-			install_name_tool -id "${EPREFIX}/usr/$(get_libdir)/${n}" ${n} || die
-		fi
-	done
 
 	# install nspr-config
 	dobin "${S}"/build/config/nspr-config || die "failed to install nspr-config"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.13 2013/09/05 18:46:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.14 2013/11/18 09:10:56 djc Exp $
+
+*cffi-0.8 (18 Nov 2013)
+
+  18 Nov 2013; Dirkjan Ochtman <djc@gentoo.org> +cffi-0.8.ebuild,
+  -cffi-0.6.ebuild, -cffi-0.7.ebuild:
+  Version bump cffi to 0.8.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> cffi-0.6.ebuild,
   cffi-0.7.2.ebuild, cffi-0.7.ebuild:

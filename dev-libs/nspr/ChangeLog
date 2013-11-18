@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.243 2013/10/09 17:10:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.244 2013/11/18 09:11:48 polynomial-c Exp $
+
+*nspr-4.10.2 (18 Nov 2013)
+
+  18 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> -nspr-4.9.5.ebuild,
+  +nspr-4.10.2.ebuild, -files/nspr-4.6.1-config-1.patch,
+  -files/nspr-4.8-config.patch, -files/nspr-4.9-pkgconfig-gentoo.patch:
+  Version bump. Removed old.
 
   09 Oct 2013; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.ebuild:
   Stable for sparc, wrt bug #486114
