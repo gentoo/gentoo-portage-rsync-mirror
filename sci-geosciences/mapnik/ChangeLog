@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.40 2013/02/17 07:31:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.41 2013/11/18 01:14:50 nerdboy Exp $
+
+*mapnik-2.2.0 (18 Nov 2013)
+
+  18 Nov 2013; Steve Arnold <nerdboy@gentoo.org> +mapnik-2.2.0.ebuild,
+  +files/mapnik-2.2.0-configure-only-once.patch,
+  +files/mapnik-2.2.0-dont-run-ldconfig.patch,
+  +files/mapnik-2.2.0-python3.patch, +files/mapnik-2.2.0-scons.patch:
+  Adding version 2.2.0 to keep Pinkbyte happy (among other things).
+  Tested on x86 and amd64 (full ~arch).
 
   17 Feb 2013; Sven Wegener <swegener@gentoo.org>
   files/mapnik-2.1.0-dont-run-ldconfig.patch:
