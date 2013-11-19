@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.238 2013/11/18 19:28:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.239 2013/11/19 16:24:55 jer Exp $
+
+  19 Nov 2013; Jeroen Roovers <jer@gentoo.org> dpkg-1.16.12-r1.ebuild:
+  Stable for HPPA (bug #491588).
 
 *dpkg-1.16.12-r1 (18 Nov 2013)
 
