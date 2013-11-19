@@ -3881,6 +3881,7 @@ media-video/libav:vaapi - Enable VAAPI (Video Acceleration API) for hardware dec
 media-video/libav:vis - Adds support for SIMD optimizations for UltraSPARC processors.
 media-video/libav:vpx - Enable vp8 encoding support using libvpx.
 media-video/lives:libvisual - Enable libvisual support
+media-video/minitube:download - Enable support for downloading YouTube videos
 media-video/mjpegtools:sdlgfx - Enables y4mhist to display a graphical histogram
 media-video/mjpg-streamer:input_control - Plugin giving ability to control camera movement (only specific cameras)
 media-video/mjpg-streamer:input_file - Plugin that watches given directory and send it's content

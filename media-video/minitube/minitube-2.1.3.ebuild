@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.1.3.ebuild,v 1.2 2013/11/06 17:29:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.1.3.ebuild,v 1.3 2013/11/19 19:36:39 hwoarang Exp $
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug gstreamer kde"
+IUSE="debug download gstreamer kde"
 
 DEPEND=">=dev-qt/qtgui-4.8:4[accessibility,gtkstyle]
 	>=dev-qt/qtdbus-4.8:4
@@ -54,9 +54,22 @@ src_prepare() {
 	# gcc-4.7. Bug #422977. Will probably be fixed
 	# once ubuntu moves to gcc-4.7
 	epatch "${FILESDIR}"/${PN}-1.9-gcc47.patch
+	# Enable video downloads. Bug #491344
+	use download && { echo "DEFINES += APP_DOWNLOADS" >> ${PN}.pro; }
 }
 
 src_install() {
 	qt4-r2_src_install
 	newicon images/app.png minitube.png
+}
+
+pkg_postinst() {
+	if use download; then
+		elog "You activated the 'download' USE flag. This allows you to"
+		elog "download videos from youtube, which might violate the youtube"
+		elog "terms-of-service (TOS) in some legislations. If downloading"
+		elog "youtube-videos is not allowed in your legislation, please"
+		elog "disable the 'download' use flag. For details on the youtube TOS,"
+		elog "see http://www.youtube.com/t/terms"
+	fi
 }
