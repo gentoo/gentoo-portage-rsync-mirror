@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cx_Freeze
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.8 2013/11/18 13:48:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/ChangeLog,v 1.9 2013/11/19 12:26:09 pinkbyte Exp $
+
+  19 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> cx_Freeze-4.3.1-r2.ebuild,
+  cx_Freeze-4.3.2.ebuild, +files/cx_Freeze-4.3.2-buildsystem.patch:
+  Proper fix for respecting LDFLAGS by Julian Ospald, bug #491602
 
 *cx_Freeze-4.3.2 (18 Nov 2013)
 

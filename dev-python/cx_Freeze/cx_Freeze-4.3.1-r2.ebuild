@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/cx_Freeze-4.3.1-r2.ebuild,v 1.2 2013/11/18 13:43:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cx_Freeze/cx_Freeze-4.3.1-r2.ebuild,v 1.4 2013/11/19 12:28:01 pinkbyte Exp $
 
 EAPI="5"
 
@@ -17,7 +17,6 @@ KEYWORDS="amd64 x86"
 
 DOCS=( README.txt )
 
-python_prepare() {
-	# do not strip binaries, respect LDFLAGS
-	sed -i -e '/extraArgs.append("-s")/s/extraArgs.append("-s")/extraArgs.extend(vars["LDFLAGS"].split())/' setup.py || die 'sed on setup.py failed'
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-4.3.2-buildsystem.patch" # bug #491602
+)
