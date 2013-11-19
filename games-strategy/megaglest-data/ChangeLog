@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/megaglest-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/ChangeLog,v 1.8 2013/02/07 22:17:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/ChangeLog,v 1.9 2013/11/19 01:21:05 hasufell Exp $
+
+*megaglest-data-3.9.0 (19 Nov 2013)
+
+  19 Nov 2013; Julian Ospald <hasufell@gentoo.org> +megaglest-data-3.9.0.ebuild:
+  version bump
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> megaglest-data-3.6.0.3.ebuild,
   megaglest-data-3.7.0.ebuild, megaglest-data-3.7.1-r1.ebuild:

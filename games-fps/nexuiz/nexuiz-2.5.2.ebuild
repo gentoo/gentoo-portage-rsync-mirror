@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.5 2013/03/25 23:26:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.6 2013/11/19 01:03:52 hasufell Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,10 +18,11 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa dedicated maps opengl sdl"
 
+# no headers for libpng needed
 UIRDEPEND="media-libs/libogg
 	media-libs/libvorbis
 	media-libs/libtheora
-	media-libs/libpng
+	>=media-libs/libpng-1.4
 	media-libs/libmodplug
 	x11-libs/libX11
 	x11-libs/libXau
@@ -63,6 +64,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng-1.4.patch
+
 	# Make the game automatically look in the correct data directory
 	sed -i \
 		-e "/^CC=/d" \

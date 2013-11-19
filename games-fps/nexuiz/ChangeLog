@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/nexuiz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.39 2013/03/25 23:26:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.40 2013/11/19 01:03:52 hasufell Exp $
+
+  19 Nov 2013; Julian Ospald <hasufell@gentoo.org>
+  +files/nexuiz-2.5.2-libpng-1.4.patch, nexuiz-2.5.2.ebuild:
+  fix libpng error wrt #491610
 
   25 Mar 2013; Michael Sterrett <mr_bones_@gentoo.org> nexuiz-2.5.2.ebuild:
   add x11-libs/libXpm dep (bug #463288)
