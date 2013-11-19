@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.233 2013/10/03 16:27:37 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.234 2013/11/19 10:15:16 radhermit Exp $
+
+  19 Nov 2013; Tim Harder <radhermit@gentoo.org> package.use.mask:
+  Unmask racket USE flag for app-editors/(g)vim.
 
   03 Oct 2013; Ian Stakenvicius <axs@gentoo.org> make.defaults:
   swapped USE=abi_x86_64 for ABI_X86=64 per mgorny's recommendation

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.126 2013/11/06 21:05:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.127 2013/11/19 10:15:42 radhermit Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -15,8 +15,9 @@ sci-libs/fftw quad
 
 # Tim Harder <radhermit@gentoo.org> (13 Aug 2013)
 # dev-lang/luajit keyworded for x86 (masked in base)
-app-editors/vim -luajit
-app-editors/gvim -luajit
+# dev-scheme/racket keyworded for amd64 (masked in base)
+app-editors/vim -luajit -racket
+app-editors/gvim -luajit -racket
 
 # Kacper Kowalik <xarthisius@gentoo.org> (09 Aug 2013)
 # Works on x86

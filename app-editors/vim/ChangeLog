@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.447 2013/10/15 23:15:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.448 2013/11/19 10:25:01 radhermit Exp $
+
+*vim-7.4.94 (19 Nov 2013)
+
+  19 Nov 2013; Tim Harder <radhermit@gentoo.org> +vim-7.4.94.ebuild,
+  vim-9999.ebuild, metadata.xml:
+  Version bump. Add racket use flag (bug #350887) and selinux use flag (bug
+  #490270).
 
 *vim-7.4.52 (15 Oct 2013)
 

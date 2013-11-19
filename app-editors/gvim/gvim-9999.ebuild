@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.9 2013/10/15 23:16:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.10 2013/11/19 10:28:43 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.vim.org/"
 
 SLOT="0"
 LICENSE="vim"
-IUSE="acl aqua cscope debug gnome gtk lua luajit motif neXt netbeans nls perl python ruby tcl"
+IUSE="acl aqua cscope debug gnome gtk lua luajit motif neXt netbeans nls perl python racket ruby selinux tcl"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="~app-editors/vim-core-${PV}
@@ -55,7 +55,9 @@ RDEPEND="~app-editors/vim-core-${PV}
 	nls? ( virtual/libintl )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
+	racket? ( dev-scheme/racket )
 	ruby? ( || ( dev-lang/ruby:2.0 dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) )
+	selinux? ( sys-libs/libselinux )
 	tcl? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
 	>=app-admin/eselect-vi-1.1
@@ -84,20 +86,11 @@ src_prepare() {
 			# Apply any patches available from vim.org for this version
 			epatch "${WORKDIR}"/${VIM_ORG_PATCHES%.bz2}
 		fi
-
-		if [[ -d "${WORKDIR}"/gentoo/patches-core/ ]]; then
-			# Patches for vim-core only (runtime/*)
-			EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
-				epatch "${WORKDIR}"/gentoo/patches-core/
-		fi
 	fi
 
 	# Fixup a script to use awk instead of nawk
 	sed -i '1s|.*|#!'"${EPREFIX}"'/usr/bin/awk -f|' "${S}"/runtime/tools/mve.awk \
 		|| die "mve.awk sed failed"
-
-	# Patch to build with ruby-1.8.0_pre5 and following
-	sed -i 's/defout/stdout/g' "${S}"/src/if_ruby.c
 
 	# Read vimrc and gvimrc from /etc/vim
 	echo '#define SYS_VIMRC_FILE "'${EPREFIX}'/etc/vim/vimrc"' >> "${S}"/src/feature.h
@@ -174,8 +167,15 @@ src_configure() {
 	myconf="--with-features=huge --disable-gpm --enable-multibyte"
 	myconf+=" $(use_enable acl)"
 	myconf+=" $(use_enable cscope)"
+	myconf+=" $(use_enable lua luainterp)"
+	myconf+=" $(use_with luajit)"
+	myconf+=" $(use_enable netbeans)"
 	myconf+=" $(use_enable nls)"
 	myconf+=" $(use_enable perl perlinterp)"
+	myconf+=" $(use_enable racket mzschemeinterp)"
+	myconf+=" $(use_enable ruby rubyinterp)"
+	myconf+=" $(use_enable selinux)"
+	myconf+=" $(use_enable tcl tclinterp)"
 
 	if use python ; then
 		if [[ ${EPYTHON} == python3* ]] ; then
@@ -188,12 +188,6 @@ src_configure() {
 	else
 		myconf+=" --disable-pythoninterp --disable-python3interp"
 	fi
-
-	# tclinterp is broken; when you --enable-tclinterp flag, then
-	# the following command never returns:
-	#   VIMINIT='let OS=system("uname -s")' vim
-	# mzscheme support is currently broken. bug #91970
-	#myconf+=" $(use_enable mzscheme mzschemeinterp)"
 
 	# --with-features=huge forces on cscope even if we --disable it. We need
 	# to sed this out to avoid screwiness. (1 Sep 2004 ciaranm)
@@ -250,12 +244,6 @@ src_configure() {
 	econf \
 		--with-modified-by=Gentoo-${PVR} \
 		--with-vim-name=gvim --with-x \
-		--disable-selinux \
-		$(use_enable lua luainterp) \
-		$(use_with luajit) \
-		$(use_enable netbeans) \
-		$(use_enable ruby rubyinterp) \
-		$(use_enable tcl tclinterp) \
 		${myconf}
 }
 
@@ -387,9 +375,6 @@ pkg_postinst() {
 		ewarn "default."
 		echo
 	fi
-
-	echo
-	einfo "To see what's new in this release, use :help version${VIM_VERSION/.*/}.txt"
 
 	# Make convenience symlinks
 	update_vim_symlinks

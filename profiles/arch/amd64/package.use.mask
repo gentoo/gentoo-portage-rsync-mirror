@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.172 2013/09/01 22:46:24 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.173 2013/11/19 10:15:16 radhermit Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -25,8 +25,9 @@
 
 # Tim Harder <radhermit@gentoo.org> (13 Aug 2013)
 # dev-lang/luajit keyworded for amd64 (masked in base) 
-app-editors/vim -luajit
-app-editors/gvim -luajit
+# dev-scheme/racket keyworded for amd64 (masked in base) 
+app-editors/vim -luajit -racket
+app-editors/gvim -luajit -racket
 
 # Kacper Kowalik <xarthisius@gentoo.org> (09 Aug 2013)
 # Works on amd64

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.150 2013/09/08 17:08:31 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.151 2013/11/19 10:15:42 radhermit Exp $
+
+  19 Nov 2013; Tim Harder <radhermit@gentoo.org> package.use.mask:
+  Unmask racket USE flag for app-editors/(g)vim.
 
   08 Sep 2013; Christoph Junghans <ottxor@gentoo.org> package.use.mask:
   masked sci-libs/fftw[quad]
