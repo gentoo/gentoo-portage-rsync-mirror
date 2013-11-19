@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8364 2013/11/18 02:51:25 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8365 2013/11/19 13:52:44 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask new libreoffice-bin-debug, see comment 5 on bug 490114
 
   18 Nov 2013; Matt Turner <mattst88@gentoo.org> package.mask:
   Removed pixman-0.32.2.
