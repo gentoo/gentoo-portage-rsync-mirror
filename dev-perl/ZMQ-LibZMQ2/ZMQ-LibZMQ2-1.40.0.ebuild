@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-LibZMQ2/ZMQ-LibZMQ2-1.40.0.ebuild,v 1.1 2013/01/06 10:03:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-LibZMQ2/ZMQ-LibZMQ2-1.40.0.ebuild,v 1.2 2013/11/19 12:35:15 zlogene Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ RDEPEND="
 	>=virtual/perl-XSLoader-0.20.0
 "
 DEPEND="${RDEPEND}
+	 dev-perl/Task-Weaken
 	>=virtual/perl-ExtUtils-MakeMaker-6.360.0
 	virtual/pkgconfig
 	test? (

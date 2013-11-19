@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/slang
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.133 2012/10/08 00:45:28 naota Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.134 2013/11/19 12:41:59 slyfox Exp $
+
+  19 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/slang-2.2.4-memset.patch, slang-2.2.4.ebuild:
+  Fix implicit memset() declaration in png module.
 
   08 Oct 2012;  <naota@gentoo.org> slang-2.2.4.ebuild:
   Install also pkg-config file. #433732
