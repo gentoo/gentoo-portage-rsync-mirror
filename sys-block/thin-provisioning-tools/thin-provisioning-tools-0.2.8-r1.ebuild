@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.2.8-r1.ebuild,v 1.1 2013/11/15 08:31:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.2.8-r1.ebuild,v 1.2 2013/11/19 05:43:07 patrick Exp $
 
 EAPI=5
 inherit autotools
@@ -18,8 +18,8 @@ IUSE="test"
 RDEPEND="dev-libs/expat"
 # || ( ) is a non-future proof workaround for Portage unefficiency wrt #477050
 DEPEND="${RDEPEND}
-	test? ( 
-		|| ( dev-lang/ruby:2.9 dev-lang/ruby:2.8 dev-lang/ruby:2.7 dev-lang/ruby:2.6 dev-lang/ruby:2.5 dev-lang/ruby:2.4 dev-lang/ruby:2.3 dev-lang/ruby:2.2 dev-lang/ruby:2.1 dev-lang/ruby:2.0 dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) 
+	test? (
+		|| ( dev-lang/ruby:2.9 dev-lang/ruby:2.8 dev-lang/ruby:2.7 dev-lang/ruby:2.6 dev-lang/ruby:2.5 dev-lang/ruby:2.4 dev-lang/ruby:2.3 dev-lang/ruby:2.2 dev-lang/ruby:2.1 dev-lang/ruby:2.0 dev-lang/ruby:1.9 dev-lang/ruby:1.8 )
 		dev-cpp/gmock
 		dev-util/cucumber
 		dev-util/aruba
