@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.161 2013/05/13 22:13:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.162 2013/11/19 09:03:48 haubi Exp $
+
+  19 Nov 2013; Michael Haubenwallner <haubi@gentoo.org> gawk-4.1.0.ebuild,
+  +files/gawk-4.1.0-ports.patch:
+  Add upstream patches for AIX support, bug#490266.
 
 *gawk-4.1.0 (13 May 2013)
 

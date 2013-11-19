@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131104.ebuild,v 1.2 2013/11/11 15:45:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131104.ebuild,v 1.3 2013/11/19 09:29:28 jlec Exp $
 
 EAPI=5
 
@@ -75,8 +75,8 @@ pkg_setup() {
 	cd ${PN}-standalone || die
 	local module_branch=origin/${PN}.${PATCH_BRANCH}
 	git checkout -q -b local-gentoo ${module_branch} || die
-	combinediff ${PN}-base.patch ${PN}-mmap.patch > "${T}"/combined-1.patch
-	combinediff ${PN}-standalone.patch  "${T}"/combined-1.patch > ${PN}-standalone-base-mmap-combined.patch
+	combinediff ${PN}-base.patch ${PN}-standalone.patch  > "${T}"/combined-1.patch
+	combinediff "${T}"/combined-1.patch ${PN}-mmap.patch > ${PN}-standalone-base-mmap-combined.patch
 	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < ${PN}-standalone-base-mmap-combined.patch > /dev/null ); then
 		if use kernel-patch; then
 			cd ${KV_DIR}

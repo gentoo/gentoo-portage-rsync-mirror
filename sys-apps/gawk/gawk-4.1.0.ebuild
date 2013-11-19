@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-4.1.0.ebuild,v 1.1 2013/05/13 22:13:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-4.1.0.ebuild,v 1.2 2013/11/19 09:03:48 haubi Exp $
 
 EAPI="4"
 
@@ -22,6 +22,8 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-4.1.0-ports.patch" #490266
+
 	# use symlinks rather than hardlinks, and disable version links
 	sed -i \
 		-e '/^LN =/s:=.*:= $(LN_S):' \
