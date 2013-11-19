@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.3.1.ebuild,v 1.1 2013/03/23 15:22:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/xrootd-3.3.4.ebuild,v 1.1 2013/11/19 20:12:09 bicatali Exp $
 
 EAPI=5
 
-inherit cmake-utils eutils user
+inherit cmake-utils eutils user multilib
 
 DURI="http://xrootd.slac.stanford.edu/doc/prod"
 
@@ -14,8 +14,8 @@ SRC_URI="${HOMEPAGE}/download/v${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="doc fuse kerberos perl readline ssl"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="doc fuse kerberos perl readline ssl test"
 
 RDEPEND="
 	!<sci-physics/root-5.32[xrootd]
@@ -30,12 +30,14 @@ RDEPEND="
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[dot] )
-	perl? ( dev-lang/swig )"
+	perl? ( dev-lang/swig )
+	test? ( dev-util/cppunit )"
 
 pkg_setup() {
 	enewgroup xrootd
 	enewuser xrootd -1 -1 "${EPREFIX}"/var/spool/xrootd xrootd
 }
+
 
 src_configure() {
 	local mycmakeargs=(
@@ -44,6 +46,7 @@ src_configure() {
 		$(cmake-utils_use_enable perl)
 		$(cmake-utils_use_enable readline)
 		$(cmake-utils_use_enable ssl CRYPTO)
+		$(cmake-utils_use_enable test TESTS)
 	)
 	cmake-utils_src_configure
 }

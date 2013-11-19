@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.10.ebuild,v 1.1 2013/03/30 21:47:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.13.ebuild,v 1.1 2013/11/19 20:17:34 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -11,12 +11,14 @@ PYTHON_REQ_USE="xml"
 inherit gnome2 python-r1
 
 DESCRIPTION="Input assistive technology intended for switch and pointer users"
-HOMEPAGE="https://live.gnome.org/Caribou"
+HOMEPAGE="https://wiki.gnome.org/Caribou"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	app-accessibility/at-spi2-core
@@ -84,5 +86,5 @@ src_test() {
 
 src_install() {
 	python_foreach_impl run_in_build_dir gnome2_src_install
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS NEWS README # ChangeLog simply points to git log
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.115 2013/11/02 15:49:50 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.116 2013/11/19 20:03:53 pacho Exp $
+
+  19 Nov 2013; Pacho Ramos <pacho@gentoo.org> chrony-1.29-r1.ebuild:
+  Use eclass function for the registering of ntp provider (#489044 by Kirill
+  Elagin)
 
   02 Nov 2013; Sven Vermeulen <swift@gentoo.org> chrony-1.29.ebuild,
   chrony-1.29-r1.ebuild:
