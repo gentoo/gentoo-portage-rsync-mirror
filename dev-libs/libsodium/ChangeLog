@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libsodium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.5 2013/10/28 16:14:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.6 2013/11/19 15:14:58 mrueg Exp $
+
+  19 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -libsodium-0.4.3.ebuild:
+  Cleanup old.
 
   28 Oct 2013; Sébastien Fabbro <bicatali@gentoo.org> libsodium-0.4.5.ebuild:
   Keyworded amd64-linux and x86-linux
