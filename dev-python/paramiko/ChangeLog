@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.105 2013/11/04 17:06:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.106 2013/11/19 18:49:43 grobian Exp $
+
+  19 Nov 2013; Fabian Groffen <grobian@gentoo.org> paramiko-1.12.0.ebuild:
+  Marked ~m68k-mint, bug #491080
 
   04 Nov 2013; Jeroen Roovers <jer@gentoo.org> paramiko-1.12.0.ebuild:
   Marked ~hppa (bug #490374).

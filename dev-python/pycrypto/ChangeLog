@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.155 2013/11/12 21:20:14 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.156 2013/11/19 18:48:53 grobian Exp $
+
+  19 Nov 2013; Fabian Groffen <grobian@gentoo.org> pycrypto-2.6.1.ebuild:
+  Marked ~m68k-mint, bug #491080
 
   12 Nov 2013; Dirkjan Ochtman <djc@gentoo.org> -files/pycrypto-2.1.0-gmp.patch,
   -pycrypto-2.6-r2.ebuild:
