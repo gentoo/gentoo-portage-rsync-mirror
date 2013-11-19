@@ -13,6 +13,7 @@
 	</upstream>
 	<use>
 		<flag name='editor'>Build map editor</flag>
+		<flag name='fribidi'>Enable FriBIDi support</flag>
 		<flag name='streflop'>Use the library streflop. Out of synchs may
 			occur if not enabled.</flag>
 		<flag name='tools'>Build model import/export tools</flag>
