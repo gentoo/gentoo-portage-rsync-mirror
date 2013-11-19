@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.37 2013/11/05 03:41:51 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.38 2013/11/19 02:45:49 nixphoeni Exp $
+
+*gourmet-0.16.1-r2 (19 Nov 2013)
+
+  19 Nov 2013; Joe Sapp <nixphoeni@gentoo.org> -gourmet-0.16.1.ebuild,
+  -gourmet-0.16.1-r1.ebuild, +gourmet-0.16.1-r2.ebuild,
+  +files/gourmet-0.16.1-PIL-png.patch, metadata.xml:
+  Fix deps according to https://lists.launchpad.net/gourmet/msg00008.html; add
+  dependency on dev-python/elib-intl; add patch to address incomplete
+  support for PIL; add some USE flags; remove old versions of 0.16.1
 
 *gourmet-0.16.1-r1 (05 Nov 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.16.1-r1.ebuild,v 1.1 2013/11/05 03:41:51 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.16.1-r2.ebuild,v 1.1 2013/11/19 02:45:49 nixphoeni Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -17,26 +17,28 @@ SRC_URI="https://github.com/thinkle/gourmet/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gnome-print pdf rtf spell web"
+IUSE="-i18n -ipython pdf print spell sound web"
 
-RDEPEND=">dev-python/pygtk-2.3.96
-	dev-python/sqlalchemy
-	!=dev-python/sqlalchemy-0.6.4
-	virtual/python-imaging
-	dev-db/metakit[python]
+RDEPEND=">=dev-python/pygtk-2.22.0:2[${PYTHON_USEDEP}]
+	>=dev-python/sqlalchemy-0.7.9-r1[${PYTHON_USEDEP}]
+	virtual/python-imaging[${PYTHON_USEDEP}]
+	i18n? ( dev-python/elib-intl[${PYTHON_USEDEP}] )
+	ipython? ( >=dev-python/ipython-0.13.2[${PYTHON_USEDEP}] )
+	pdf? ( >=dev-python/reportlab-2.6[${PYTHON_USEDEP}]
+	       >=dev-python/python-poppler-0.12.1-r4[${PYTHON_USEDEP}] )
+	print? ( >=dev-python/reportlab-2.6[${PYTHON_USEDEP}]
+	         >=dev-python/python-poppler-0.12.1-r4[${PYTHON_USEDEP}] )
 	spell? ( dev-python/gtkspell-python )
-	pdf? ( dev-python/reportlab dev-python/python-poppler )
-	rtf? ( dev-python/pyrtf )
-	gnome-print? ( dev-python/libgnomeprint-python
-	               dev-python/python-poppler )
-	web? ( dev-python/beautifulsoup )"
+	sound? ( >=dev-python/gst-python-0.10.22-r1:0.10[${PYTHON_USEDEP}] )
+	web? ( >=dev-python/beautifulsoup-3.2.1-r1:python-2[${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	>dev-python/python-distutils-extra-2.20"
+	>=dev-python/python-distutils-extra-2.37-r1[${PYTHON_USEDEP}]"
 
 PATCHES=( ${FILESDIR}/no-docs.patch \
 	${FILESDIR}/nutritional-db-fix.patch \
-	${FILESDIR}/desktop-entry.patch)
+	${FILESDIR}/desktop-entry.patch \
+	${FILESDIR}/${P}-PIL-png.patch )
 # distutils gets a bunch of default docs
 DOCS=( ChangeLog CODING FAQ TESTS TODO )
 

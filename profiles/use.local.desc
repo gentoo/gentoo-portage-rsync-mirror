@@ -770,10 +770,14 @@ app-misc/geoclue:plazes - Install plazes.com provider
 app-misc/geoclue:skyhook - Install skyhookwireless.com provider
 app-misc/geoclue:yahoo-geo - Install Yahoo geolocation provider
 app-misc/gnote:applet - Enable gnote applet for gnome-base/gnome-panel
-app-misc/gourmet:gnome-print - Enable pretty Python printing with gnome-print
-app-misc/gourmet:rtf - Enable export to RTF
-app-misc/gourmet:spell - Enable spell checking support
-app-misc/gourmet:web - Enable the web import plugin
+app-misc/gourmet:gnome-print - <=app-misc/gourmet-0.15.9 Enable pretty Python printing with Gnome
+app-misc/gourmet:i18n - >app-misc/gourmet-0.16 Enable support for i18n through elib.intl
+app-misc/gourmet:ipython - >app-misc/gourmet-0.16 Enable support for the interactive Python console plugin
+app-misc/gourmet:pdf - Enable export to PDF
+app-misc/gourmet:print - >app-misc/gourmet-0.16 Enable pretty Python printing
+app-misc/gourmet:rtf - <=app-misc/gourmet-0.15.9 Enable export to RTF
+app-misc/gourmet:spell - >app-misc/gourmet-0.16 Enable support for the spell check plugin
+app-misc/gourmet:web - >app-misc/gourmet-0.16 Enable support for the web import plugin
 app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
 app-misc/gramps:webkit - Use Webkit-based rendering for geographical data view.
 app-misc/graphlcd-base:g15 - Add support for app-misc/g15daemon driver (e.g. Logitech G15 Keybord)
