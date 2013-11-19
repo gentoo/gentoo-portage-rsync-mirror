@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.108 2013/11/19 03:02:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.110 2013/11/19 21:22:43 ago Exp $
+
+  19 Nov 2013; Agostino Sarubbo <ago@gentoo.org> dropbear-2013.60.ebuild:
+  Stable for arm, wrt bug #487682
+
+  19 Nov 2013; Agostino Sarubbo <ago@gentoo.org> dropbear-2013.60.ebuild:
+  Stable for alpha, wrt bug #487682
 
   19 Nov 2013; Jeroen Roovers <jer@gentoo.org> dropbear-2013.60.ebuild:
   Stable for HPPA (bug #487682).

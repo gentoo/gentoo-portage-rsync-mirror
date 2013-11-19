@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.369 2013/10/24 06:41:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.370 2013/11/19 21:11:46 dev-zero Exp $
+
+*nginx-1.5.7 (19 Nov 2013)
+*nginx-1.4.4 (19 Nov 2013)
+
+  19 Nov 2013; Tiziano Müller <dev-zero@gentoo.org> +nginx-1.4.4.ebuild,
+  +nginx-1.5.7.ebuild:
+  Version bump for security bug #490558 (CVE-2013-4547), also fix bug #490558 by
+  passing pcre-jit and lua USE flags as options to the mod_security standalone
+  build script.
 
 *nginx-1.5.6 (24 Oct 2013)
 

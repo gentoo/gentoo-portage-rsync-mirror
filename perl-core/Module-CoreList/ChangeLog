@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Module-CoreList
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.69 2013/10/28 06:13:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.70 2013/11/19 21:30:23 civil Exp $
+
+  19 Nov 2013; Vladimir Smirnov <civil@gentoo.org>
+  Module-CoreList-2.800.0.ebuild:
+  CoreList-2.800.0: Add blocker for <dev-lang/perl-5.16.3 Module doesn't contain
+  version definitions for perl 5.16.3 Bug #481170
 
 *Module-CoreList-3.000.000 (28 Oct 2013)
 
