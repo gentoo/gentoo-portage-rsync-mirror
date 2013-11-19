@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8365 2013/11/19 13:52:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8366 2013/11/19 17:18:01 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Mask mesa-10.0.0_rc1 for bugs #491632 #491644 #491646 #491660 #491664
 
   19 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask new libreoffice-bin-debug, see comment 5 on bug 490114
