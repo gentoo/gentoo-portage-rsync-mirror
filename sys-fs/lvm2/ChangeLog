@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.326 2013/11/13 10:43:23 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.327 2013/11/19 11:02:09 ssuominen Exp $
+
+*lvm2-2.02.104 (19 Nov 2013)
+
+  19 Nov 2013; Samuli Suominen <ssuominen@gentoo.org> +lvm2-2.02.104.ebuild:
+  Version bump (and make sure to pull in thin-provisioning-tools version that
+  doesn't pull in ruby by default)
 
   13 Nov 2013; Chema Alonso <nimiux@gentoo.org> lvm2-2.02.103.ebuild:
   Stable for amd64 wrt bug #486278
