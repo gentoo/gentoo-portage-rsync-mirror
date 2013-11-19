@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.144 2013/11/10 15:16:18 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.145 2013/11/19 09:44:42 voyageur Exp $
+
+*rdesktop-1.8.1 (19 Nov 2013)
+
+  19 Nov 2013; Bernard Cafarelli <voyageur@gentoo.org> -rdesktop-1.7.0.ebuild,
+  -rdesktop-1.7.0-r1.ebuild, +rdesktop-1.8.1.ebuild,
+  -files/rdesktop-1.7.0+pcsc-lite-1.6.6.patch:
+  Version bump, bugfix release. Drop 1.7.0 versions
 
   10 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> rdesktop-1.7.1.ebuild:
   Stable on arm, wrt bug #488802

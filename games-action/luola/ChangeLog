@@ -1,6 +1,10 @@
 # ChangeLog for games-action/luola
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/luola/ChangeLog,v 1.13 2013/11/12 03:26:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/luola/ChangeLog,v 1.14 2013/11/19 09:45:43 chainsaw Exp $
+
+  19 Nov 2013; Tony Vroon <chainsaw@gentoo.org> luola-1.3.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #491058.
 
   12 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> luola-1.3.2.ebuild:
   upstream website went away

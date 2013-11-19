@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.7.0.ebuild,v 1.10 2012/05/05 03:20:43 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.8.1.ebuild,v 1.1 2013/11/19 09:44:42 voyageur Exp $
 
-EAPI=2
+EAPI=5
 
 inherit autotools eutils
 
@@ -14,8 +14,8 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="alsa ao debug ipv6 libsamplerate oss pcsc-lite"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
+IUSE="alsa ao debug ipv6 kerberos libsamplerate oss pcsc-lite"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
@@ -26,6 +26,7 @@ RDEPEND=">=dev-libs/openssl-0.9.6b
 	x11-libs/libXdmcp
 	alsa? ( media-libs/alsa-lib )
 	ao? ( >=media-libs/libao-0.8.6 )
+	kerberos? ( net-libs/libgssglue )
 	libsamplerate? ( media-libs/libsamplerate )
 	pcsc-lite? ( >=sys-apps/pcsc-lite-1.6.6 )"
 DEPEND="${RDEPEND}
@@ -40,10 +41,8 @@ src_prepare() {
 
 	# Automagic dependency on libsamplerate
 	epatch "${FILESDIR}"/${PN}-1.6.0-sound_configure.patch
-	# Fix --enable-smartcard logic
-	epatch "${FILESDIR}"/${PN}-1.6.0-smartcard_configure.patch
-	# bug #349813
-	epatch "${FILESDIR}"/${P}+pcsc-lite-1.6.6.patch
+	# bug #280923
+	epatch "${FILESDIR}"/${PN}-1.7.0-libao_crash.patch
 
 	eautoreconf
 }
@@ -59,17 +58,17 @@ src_configure() {
 	fi
 
 	econf \
-		--with-openssl=/usr \
+		--with-openssl="${EPREFIX}"/usr \
 		$(use_with debug) \
 		$(use_with ipv6) \
 		$(use_with libsamplerate) \
+		$(use_enable kerberos credssp) \
 		$(use_enable pcsc-lite smartcard) \
-		${sound_conf} \
-		|| die "configuration failed"
+		${sound_conf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installation failed"
+	emake DESTDIR="${D}" install
 	dodoc doc/HACKING doc/TODO doc/keymapping.txt
 
 	# For #180313 - applies to versions >= 1.5.0
