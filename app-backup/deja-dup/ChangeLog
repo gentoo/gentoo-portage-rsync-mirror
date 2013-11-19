@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/deja-dup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.36 2013/11/17 11:19:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.37 2013/11/19 07:37:49 jlec Exp $
+
+  19 Nov 2013; Justin Lecher <jlec@gentoo.org> deja-dup-29.1.ebuild:
+  Set vala max version, #491586
 
 *deja-dup-29.1 (17 Nov 2013)
 

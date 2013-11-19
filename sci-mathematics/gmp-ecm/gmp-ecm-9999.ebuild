@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-9999.ebuild,v 1.3 2013/03/07 08:05:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmp-ecm/gmp-ecm-9999.ebuild,v 1.4 2013/11/19 07:38:58 patrick Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ inherit autotools eutils flag-o-matic subversion
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="blas +custom-tune gwnum -openmp test"
+IUSE="blas gwnum -openmp test"
 
 DEPEND="
 	dev-libs/gmp
@@ -42,15 +42,7 @@ src_configure() {
 
 src_compile() {
 	append-ldflags "-Wl,-z,noexecstack"
-	if use custom-tune; then
-		use amd64 && cd x86_64
-		use x86 && cd pentium4
-		emake
-		cd .. && make bench_mulredc || die
-		sed -i -e 's:#define TUNE_MULREDC_TABLE://#define TUNE_MULREDC_TABLE:g' `readlink ecm-params.h` || die
-		sed -i -e 's:#define TUNE_SQRREDC_TABLE://#define TUNE_SQRREDC_TABLE:g' `readlink ecm-params.h` || die
-		./bench_mulredc | tail -n 4 >> `readlink ecm-params.h` || die
-	fi
+	# the custom-tune bits are obsoleted with sane defaults
 	default
 }
 
