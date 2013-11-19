@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131111.ebuild,v 1.1 2013/11/11 15:45:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/aufs3-3_p20131111.ebuild,v 1.2 2013/11/19 07:22:53 jlec Exp $
 
 EAPI=5
 
@@ -11,6 +11,8 @@ AUFS_VERSION="${PV%%_p*}"
 PATCH_MAX_VER=12
 # highest supported version
 KERN_MAX_VER=13
+# lowest supported version
+KERN_MIN_VER=9
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
@@ -46,7 +48,7 @@ pkg_setup() {
 	[ -n "$PKG_SETUP_HAS_BEEN_RAN" ] && return
 
 	get_version
-	kernel_is lt 3 0 0 && die "kernel too old, Please use sys-fs/aufs2"
+	kernel_is lt 3 ${KERN_MIN_VER} 0 && die "the kernel version isn't supported by upstream anymore. Please upgrade."
 	kernel_is gt 3 ${KERN_MAX_VER} 99 && die "kernel too new"
 
 	linux-mod_pkg_setup

@@ -30,6 +30,7 @@ a database of telephone calls or e-mail messages
 </longdescription>
   <use>
     <flag name="devil">Enables DevIL output plugin -Tdevil</flag>
+    <flag name="gdk-pixbuf">Enables gdk-pixbuf2 plugin</flag>
     <flag name="gtk">Enables gtk+ output plugin -Tgtk (needs cairo)</flag>
     <flag name="gts">Enables support for gts</flag>
     <flag name="lasi">
