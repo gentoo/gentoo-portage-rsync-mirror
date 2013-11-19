@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.92 2013/11/05 20:14:27 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.93 2013/11/19 04:50:55 ottxor Exp $
+
+*openntpd-20080406-r5 (19 Nov 2013)
+
+  19 Nov 2013; Christoph Junghans <ottxor@gentoo.org>
+  +files/openntpd.logrotate-20080406-r5, +openntpd-20080406-r5.ebuild:
+  bring back syslog support (bug #491134)
 
   05 Nov 2013; Chema Alonso <nimiux@gentoo.org> openntpd-20080406-r4.ebuild:
   Stable for amd64 wrt bug #488946

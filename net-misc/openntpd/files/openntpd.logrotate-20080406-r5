@@ -1,0 +1,10 @@
+/var/log/ntpd.log {
+	compress
+	rotate 4
+	daily
+	missingok
+	notifempty
+	postrotate
+		/etc/init.d/ntpd restart > /dev/null 2>&1 || true
+	endscript
+}
