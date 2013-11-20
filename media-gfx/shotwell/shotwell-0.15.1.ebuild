@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.15.0.ebuild,v 1.3 2013/11/20 11:24:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.15.1.ebuild,v 1.1 2013/11/20 11:24:36 jlec Exp $
 
 EAPI=5
 
