@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.42 2013/11/16 09:00:03 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.43 2013/11/20 22:35:13 bicatali Exp $
+
+*gdl-0.9.4 (20 Nov 2013)
+
+  20 Nov 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/0.9.3-plwidth.patch, +files/0.9.4-gsl.patch, +files/0.9.4-python.patch,
+  +files/0.9.4-reorder.patch, +gdl-0.9.4.ebuild, gdl-0.9.3-r2.ebuild,
+  metadata.xml:
+  Version bump, and backport fix to newer plplot (bug #491024) for older version
 
   16 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> gdl-0.9.2-r2.ebuild,
   gdl-0.9.3-r2.ebuild:

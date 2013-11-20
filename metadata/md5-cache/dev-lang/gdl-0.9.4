@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=sci-libs/gsl sci-libs/plplot:= sys-libs/ncurses sys-libs/readline sys-libs/zlib x11-libs/libX11 fftw? ( >=sci-libs/fftw-3 ) grib? ( sci-libs/grib_api ) gshhs? ( sci-geosciences/gshhs-data sci-geosciences/gshhs ) hdf? ( sci-libs/hdf ) hdf5? ( sci-libs/hdf5 ) imagemagick? ( || ( media-gfx/graphicsmagick[cxx] media-gfx/imagemagick[cxx] ) ) netcdf? ( sci-libs/netcdf ) proj? ( sci-libs/proj ) postscript? ( dev-libs/pslib ) python? ( dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) udunits? ( sci-libs/udunits ) wxwidgets? ( x11-libs/wxGTK:2.8[X,-odbc] ) >=dev-java/antlr-2.7.7-r5:0[cxx,java,script] virtual/pkgconfig eigen? ( dev-cpp/eigen:3 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DESCRIPTION=Interactive Data Language compatible incremental compiler
+EAPI=5
+HOMEPAGE=http://gnudatalanguage.sourceforge.net/
+IUSE=+eigen fftw grib gshhs hdf hdf5 imagemagick netcdf openmp proj postscript python static-libs udunits wxwidgets python_targets_python2_6 python_targets_python2_7 test
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=sci-libs/gsl sci-libs/plplot:= sys-libs/ncurses sys-libs/readline sys-libs/zlib x11-libs/libX11 fftw? ( >=sci-libs/fftw-3 ) grib? ( sci-libs/grib_api ) gshhs? ( sci-geosciences/gshhs-data sci-geosciences/gshhs ) hdf? ( sci-libs/hdf ) hdf5? ( sci-libs/hdf5 ) imagemagick? ( || ( media-gfx/graphicsmagick[cxx] media-gfx/imagemagick[cxx] ) ) netcdf? ( sci-libs/netcdf ) proj? ( sci-libs/proj ) postscript? ( dev-libs/pslib ) python? ( dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) udunits? ( sci-libs/udunits ) wxwidgets? ( x11-libs/wxGTK:2.8[X,-odbc] )
+REQUIRED_USE=python? ( || ( python_targets_python2_6 python_targets_python2_7 ) )
+SLOT=0
+SRC_URI=mirror://sourceforge/gnudatalanguage/gdl-0.9.4.tar.gz
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	python-r1	b81583006559e9b008883355c9889e29	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	virtualx	73cfc129b4b9ba23aed1abb10c825d86	wxwidgets	0125fdb7607a15e9047c01d27b5a6da9
+_md5_=4b668d74ac6cdeb7d45f0baa8e2a2294
