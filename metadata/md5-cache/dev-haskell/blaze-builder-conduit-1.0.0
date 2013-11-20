@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-haskell/blaze-builder-0.2.1.4:=[profile?] <dev-haskell/blaze-builder-0.4:=[profile?] =dev-haskell/conduit-1.0*:=[profile?] >=dev-haskell/text-0.11:=[profile?] >=dev-haskell/transformers-0.2.2:=[profile?] <dev-haskell/transformers-0.4:=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=0/1.0.0
 SRC_URI=mirror://hackage/packages/archive/blaze-builder-conduit/1.0.0/blaze-builder-conduit-1.0.0.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	48f0813cd6c66200944782b078f0a188	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=f71ef30183bca5846a753b82be944aa3

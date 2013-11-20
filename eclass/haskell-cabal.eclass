@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.41 2013/07/29 12:31:35 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/haskell-cabal.eclass,v 1.42 2013/11/20 09:19:19 slyfox Exp $
 
 # @ECLASS: haskell-cabal.eclass
 # @MAINTAINER:
@@ -637,4 +637,26 @@ cabal_chdeps() {
 
 	echo "${new_c}" > "$cf" ||
 		die "failed to update"
+}
+
+# @FUNCTION: replace-hcflags
+# @USAGE: <old> <new>
+# @DESCRIPTION:
+# Replace the <old> flag with <new> in HCFLAGS. Accepts shell globs for <old>.
+# The implementation is picked from flag-o-matic.eclass:replace-flags()
+replace-hcflags() {
+	[[ $# != 2 ]] && die "Usage: replace-hcflags <old flag> <new flag>"
+
+	local f new=()
+	for f in ${HCFLAGS} ; do
+		# Note this should work with globs like -O*
+		if [[ ${f} == ${1} ]]; then
+			einfo "HCFLAGS: replacing '${f}' to '${2}'"
+			f=${2}
+		fi
+		new+=( "${f}" )
+	done
+	export HCFLAGS="${new[*]}"
+
+	return 0
 }
