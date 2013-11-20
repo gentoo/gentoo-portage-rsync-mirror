@@ -46,3 +46,18 @@ index 2a026cc..8ca8a23 100644
  		ENDIF()
  	ENDIF()
  ENDIF()
+--- a/mk/cmake/Modules/FindFriBiDi.cmake
++++ b/mk/cmake/Modules/FindFriBiDi.cmake
+@@ -28,9 +28,9 @@
+ SET(FRIBIDI_NAMES ${FRIBIDI_NAMES} fribidi libfribidi)
+ 
+ OPTION(WANT_STATIC_LIBS "builds as many static libs as possible" OFF)
+-IF(WANT_STATIC_LIBS)
+-	SET(FRIBIDI_NAMES fribidi.a libfribidi.a ${FRIBIDI_NAMES})
+-ENDIF()
++#IF(WANT_STATIC_LIBS)
++#	SET(FRIBIDI_NAMES fribidi.a libfribidi.a ${FRIBIDI_NAMES})
++#ENDIF()
+ 
+ MESSAGE(STATUS "** Searching for library names: [${FRIBIDI_NAMES}] ...")
+ 

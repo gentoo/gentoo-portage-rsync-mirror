@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1062 2013/11/20 09:19:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1063 2013/11/20 19:23:45 mgorny Exp $
+
+  20 Nov 2013; Michał Górny <mgorny@gentoo.org> cmake-multilib.eclass:
+  Run multilib header wrapping only when multiple ABIs are enabled, bug
+  #491752. Other eclasses do that already.
 
   20 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
   Added 'replace-hcflags()'. Filters HCFLAGS.
