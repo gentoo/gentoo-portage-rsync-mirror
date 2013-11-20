@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/merb-core-1.1.3.ebuild,v 1.4 2012/08/11 11:23:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/merb-core-1.1.3-r1.ebuild,v 1.1 2013/11/20 15:07:24 mrueg Exp $
 
-EAPI="2"
-USE_RUBY="ruby18 ruby19"
+EAPI=5
+USE_RUBY="ruby18 ruby19 ruby20"
 
 # Tools to generate docs are missing from gem distribution.
 RUBY_FAKEGEM_TASK_DOC="doc:rdoc"
@@ -25,7 +25,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_bdepend "doc? ( dev-ruby/rspec:0 )"
+ruby_add_bdepend "doc? ( dev-ruby/rspec )"
 
 ruby_add_rdepend "dev-ruby/bundler
 	>=dev-ruby/erubis-2.6.2
@@ -36,5 +36,6 @@ ruby_add_rdepend "dev-ruby/bundler
 
 all_ruby_prepare() {
 	# Remove unpackaged tool so that we can use the Rakefile.
-	sed -i '/annotation_extract/d' Rakefile || die
+	sed -i -e '/annotation_extract/d' -e 's#spec/rake/spectask#rspec/core/rake_task#'\
+		-e 's#Spec::Rake::SpecTask#RSpec::Core::RakeTask#' Rakefile || die
 }

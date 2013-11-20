@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/merb-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/ChangeLog,v 1.7 2013/07/08 05:16:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/merb-core/ChangeLog,v 1.8 2013/11/20 15:07:24 mrueg Exp $
+
+*merb-core-1.1.3-r1 (20 Nov 2013)
+
+  20 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +merb-core-1.1.3-r1.ebuild,
+  -merb-core-1.1.3.ebuild:
+  Add ruby20 target. Drop doc dependency on rspec:0
 
   08 Jul 2013; Hans de Graaff <graaff@gentoo.org> -merb-core-1.1.2.ebuild:
   Cleanup.
