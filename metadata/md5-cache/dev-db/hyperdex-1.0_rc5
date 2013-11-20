@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install setup
+DEPEND=dev-cpp/glog dev-libs/cityhash dev-libs/libpo6 dev-libs/libe dev-libs/busybee dev-libs/popt dev-libs/replicant || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+DESCRIPTION=A searchable distributed Key-Value Store
+EAPI=5
+HOMEPAGE=http://hyperdex.org
+IUSE=+python
+KEYWORDS=~amd64
+LICENSE=BSD
+RDEPEND=dev-cpp/glog dev-libs/cityhash dev-libs/libpo6 dev-libs/libe dev-libs/busybee dev-libs/popt dev-libs/replicant || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://hyperdex.org/src/hyperdex-1.0.rc5.tar.gz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=79dc943dd3e56e4b90ae2cd40fbf38ea
