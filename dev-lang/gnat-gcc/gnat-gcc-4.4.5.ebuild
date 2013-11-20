@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.4.5.ebuild,v 1.4 2011/09/20 20:15:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.4.5.ebuild,v 1.5 2013/11/20 06:39:32 nerdboy Exp $
 
 inherit gnatbuild
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.64 2013/11/14 07:22:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.65 2013/11/20 06:39:32 nerdboy Exp $
+
+  20 Nov 2013; Steve Arnold <nerdboy@gentoo.org> gnat-gcc-4.6.4.ebuild:
+  Adding openmp USE flag for updated gnatbuild.eclass.
 
 *gnat-gcc-4.6.4 (14 Nov 2013)
 

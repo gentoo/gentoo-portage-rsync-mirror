@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.6.4.ebuild,v 1.1 2013/11/14 07:22:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.6.4.ebuild,v 1.2 2013/11/20 06:39:32 nerdboy Exp $
 
 inherit gnatbuild
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNAT Ada Compiler - gcc version"
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GMGPL"
 
-IUSE="lto"
+IUSE="lto openmp"
 
 BOOT_SLOT="4.4"
 
