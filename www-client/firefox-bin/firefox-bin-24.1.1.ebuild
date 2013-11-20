@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-24.0.ebuild,v 1.1 2013/09/18 13:37:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-24.1.1.ebuild,v 1.1 2013/11/20 13:45:24 anarchy Exp $
 
 EAPI="5"
+MOZ_ESR="1"
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 MOZ_LANGS=(af ak ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
@@ -15,6 +16,12 @@ te th tr uk vi zh-CN zh-TW zu)
 MOZ_PV="${PV/_beta/b}" # Handle beta for SRC_URI
 MOZ_PV="${MOZ_PV/_rc/rc}" # Handle rc for SRC_URI
 MOZ_PN="${PN/-bin}"
+MOZ_P="${MOZ_PN}-${MOZ_PV}"
+
+if [[ ${MOZ_ESR} == 1 ]]; then
+	# ESR releases have slightly version numbers
+	MOZ_PV="${MOZ_PV}esr"
+fi
 MOZ_P="${MOZ_PN}-${MOZ_PV}"
 
 # Upstream ftp release URI that's used by mozlinguas.eclass
