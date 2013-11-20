@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.57 2013/11/14 06:20:06 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.58 2013/11/20 06:09:43 nerdboy Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -502,6 +502,31 @@ gnatbuild_src_compile() {
 					--disable-libssp \
 					--disable-libunwind-exceptions"
 
+				if in_iuse openmp ; then
+					# Make sure target has pthreads support. #326757 #335883
+					# There shouldn't be a chicken&egg problem here as openmp won't
+					# build without a C library, and you can't build that w/out
+					# already having a compiler ...
+					if ! is_crosscompile || \
+						$(tc-getCPP ${CTARGET}) -E - <<<"#include <pthread.h>" >& /dev/null
+					then
+						case $(tc-arch) in
+							arm)
+								confgcc+=( --disable-libgomp )
+								;;
+							*)
+								confgcc+=( $(use_enable openmp libgomp) )
+								;;
+						esac
+					else
+						# Force disable as the configure script can be dumb #359855
+						confgcc+=( --disable-libgomp )
+					fi
+				else
+					# For gcc variants where we don't want openmp (e.g. kgcc)
+					confgcc+=( --disable-libgomp )
+				fi
+
 				# ACT's gnat-gpl does not like libada for whatever reason..
 				if version_is_at_least 4.2 ; then
 					confgcc="${confgcc} --enable-libada"
@@ -535,6 +560,11 @@ gnatbuild_src_compile() {
 				fi
 
 				einfo "confgcc=${confgcc}"
+
+				# need to strip graphite flags or we'll get the
+				# dreaded C compiler cannot create executables...
+				# error.
+				strip-flags -floop-interchange -floop-strip-mine -floop-block
 
 				cd "${GNATBUILD}"
 				CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" "${S}"/configure \
