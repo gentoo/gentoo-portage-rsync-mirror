@@ -6,10 +6,6 @@
 		<name>Robin H. Johnson</name>
 	</maintainer>
 	<maintainer>
-		<email>cardoe@gentoo.org</email>
-		<name>Doug Goldstein</name>
-	</maintainer>
-	<maintainer>
 		<email>agk@redhat.com</email>
 		<name>Alasdair Kergon</name>
 		<description>Upstream Maintainer (please CC on bugs)</description>
