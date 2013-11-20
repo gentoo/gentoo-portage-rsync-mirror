@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.125 2013/10/11 18:35:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.126 2013/11/20 08:13:56 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -39,7 +39,7 @@ cvs)
 git)
 	extra_eclass="git-2"
 	BVER="git"
-	EGIT_REPO_URI="git://sourceware.org/git/binutils.git"
+	EGIT_REPO_URI="git://sourceware.org/git/binutils-gdb.git"
 	;;
 snap)
 	BVER=${PV/9999_pre}

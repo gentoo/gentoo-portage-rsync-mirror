@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.ebuild,v 1.3 2013/08/15 18:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.ebuild,v 1.4 2013/11/20 08:15:35 vapier Exp $
 
 EAPI="3"
 
@@ -31,7 +31,7 @@ case ${PV} in
 	;;
 9999*)
 	# live git tree
-	EGIT_REPO_URI="git://sourceware.org/git/gdb.git"
+	EGIT_REPO_URI="git://sourceware.org/git/binutils-gdb.git"
 	inherit git-2
 	SRC_URI=""
 	;;
