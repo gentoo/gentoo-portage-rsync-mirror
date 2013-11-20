@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15215 2013/11/19 17:18:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15216 2013/11/20 07:30:22 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -427,11 +427,6 @@ virtual/perl-B-Debug
 # broken; needs a version bump from bug #475552.
 dev-java/itext:5
 
-# Justin Lecher <jlec@gentoo.org> (11 Aug 2013)
-# Not needed anymore
-# All consumer upstreams moved away from it
-sci-libs/mccp4
-
 # Alexandre Rostovtsev <tetromino@gentoo.org> (04 Aug 2013)
 # API break, reverse dependencies need patching; bug #479458.
 >=sci-geosciences/geocode-glib-0.99.1
@@ -473,11 +468,6 @@ sci-geosciences/googleearth
 >=sys-kernel/raspberrypi-image-3.7_pre
 >=sys-kernel/raspberrypi-sources-3.7_pre
 >=sys-boot/raspberrypi-firmware-1_pre
-
-# Justin Lecher <jlec@gentoo.org> (17 Jul 2013)
-# superseeded by sci-biology/allpathslg
-# Upstream wants anybody to move over
-sci-biology/allpaths
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 Jul 2013)
 # pwlib/openh323 masked for removal, bugs #290062 and #290063
