@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.372 2013/11/20 20:22:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.373 2013/11/20 22:23:20 dev-zero Exp $
+
+  20 Nov 2013; Tiziano Müller <dev-zero@gentoo.org> -nginx-1.4.1-r5.ebuild,
+  -nginx-1.4.3.ebuild, -nginx-1.5.6.ebuild:
+  Remove vulnerable version.
 
   20 Nov 2013; Agostino Sarubbo <ago@gentoo.org> nginx-1.4.4.ebuild:
   Stable for x86, wrt bug #491684
