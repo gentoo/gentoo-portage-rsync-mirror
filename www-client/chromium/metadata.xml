@@ -4,6 +4,10 @@
 	<herd>chromium</herd>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
 	<use>
+		<flag name="aura">
+		    Enable Aura, new UI architecture that is GPU accelerated,
+		    see http://www.chromium.org/developers/design-documents/aura .
+		</flag>
 		<flag name="bindist">Disable patent-encumbered HTML5 video codecs</flag>
 		<flag name="system-sqlite">
 			Use system sqlite instead of bundled sqlite. This breaks WebSQL on websites,
