@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/niceogiri
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/niceogiri/ChangeLog,v 1.1 2013/11/20 15:00:43 mrueg Exp $
+
+*niceogiri-1.1.2 (20 Nov 2013)
+
+  20 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +niceogiri-1.1.2.ebuild:
+  Initial ebuild.

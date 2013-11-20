@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/safe_yaml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/ChangeLog,v 1.6 2013/11/11 15:43:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/safe_yaml/ChangeLog,v 1.7 2013/11/20 14:48:15 mrueg Exp $
+
+*safe_yaml-0.9.7-r2 (20 Nov 2013)
+
+  20 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +safe_yaml-0.9.7-r2.ebuild,
+  -safe_yaml-0.9.7-r1.ebuild:
+  Add jruby target. Cleanup old.
 
   11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -safe_yaml-0.9.7.ebuild:
   Cleanup old.
