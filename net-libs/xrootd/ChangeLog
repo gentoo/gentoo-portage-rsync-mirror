@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xrootd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.15 2013/11/19 20:12:09 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xrootd/ChangeLog,v 1.16 2013/11/20 03:10:18 patrick Exp $
+
+  20 Nov 2013; Patrick Lauer <patrick@gentoo.org> xrootd-3.3.4.ebuild:
+  Whitespace
 
 *xrootd-3.3.4 (19 Nov 2013)
 
