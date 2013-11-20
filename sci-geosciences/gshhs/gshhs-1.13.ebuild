@@ -1,8 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gshhs/gshhs-1.13.ebuild,v 1.2 2012/05/04 07:14:06 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gshhs/gshhs-1.13.ebuild,v 1.3 2013/11/20 19:50:49 bicatali Exp $
 
-EAPI=4
+EAPI=5
+
 inherit toolchain-funcs
 
 DESCRIPTION="Global Self-consistent, Hierarchical, High-resolution Shoreline programs"
@@ -11,7 +12,7 @@ SRC_URI="ftp://ftp.soest.hawaii.edu/pwessel/gshhs/gshhs_1.13_src.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+data"
 
 RDEPEND="sci-libs/netcdf
@@ -26,9 +27,9 @@ S="${WORKDIR}/${PN}"
 src_compile() {
 	local p
 	for p in gshhs gshhs_dp gshhstograss; do
-		$(tc-getCC) ${CFLAGS} $(pkg-config --cflags netcdf) \
+		$(tc-getCC) ${CFLAGS} $($(tc-getPKG_CONFIG) --cflags netcdf) \
 			${LDFLAGS} ${p}.c \
-			$(pkg-config --libs netcdf) -lgdal -lm -o ${p} \
+			$($(tc-getPKG_CONFIG) --libs netcdf) -lgdal -lm -o ${p} \
 			|| die
 	done
 }
