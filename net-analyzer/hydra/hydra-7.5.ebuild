@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-7.5.ebuild,v 1.1 2013/08/26 15:30:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-7.5.ebuild,v 1.2 2013/11/20 01:18:04 zx2c4 Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -53,6 +53,14 @@ src_configure() {
 	# Note: despite the naming convention, the top level script is not an
 	# autoconf-based script.
 	export OPTS="${CFLAGS}"
+	if ! use subversion; then
+		einfo "Disabling Subversion support..."
+		sed -i 's/-lsvn_client-1 -lapr-1 -laprutil-1 -lsvn_subr-1//;s/-DLIBSVN//' configure || die "Could not disable Subversion"
+	fi
+	if ! use mysql; then
+		einfo "Disabling MYSQL support..."
+		sed -i 's/-lmysqlclient//;s/-DLIBMYSQLCLIENT//' configure || die "Could not disable MYSQL"
+	fi
 	./configure \
 		--prefix=/usr \
 		--nostrip \
