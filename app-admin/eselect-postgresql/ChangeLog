@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-postgresql
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.41 2013/09/10 18:01:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.42 2013/11/21 11:49:57 titanofold Exp $
+
+*eselect-postgresql-1.2.1 (21 Nov 2013)
+
+  21 Nov 2013; Aaron W. Swenson <titanofold@gentoo.org>
+  -eselect-postgresql-1.0.10.ebuild, +eselect-postgresql-1.2.1.ebuild:
+  Add symlink handling for pg_config_ext.h. Fixes bug 486674.
 
   10 Sep 2013; Markus Meier <maekke@gentoo.org>
   eselect-postgresql-1.2.0.ebuild:
