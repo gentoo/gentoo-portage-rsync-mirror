@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.39 2013/10/18 16:25:53 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.40 2013/11/21 15:47:44 ryao Exp $
+
+*zfs-kmod-0.6.2-r3 (21 Nov 2013)
+
+  21 Nov 2013; Richard Yao <ryao@gentoo.org> +zfs-kmod-0.6.2-r3.ebuild,
+  -zfs-kmod-0.6.2-r1.ebuild, -zfs-kmod-0.6.2-r2.ebuild, -zfs-kmod-0.6.2.ebuild,
+  zfs-kmod-9999.ebuild:
+  Fix writeback regression introduced in -r2 that affected mmap() and AIO
+  writes; Apply locking fixes from Illumos; Reintroduce uio_prefaultpages() to
+  minimize the possibility of hitting zfsonlinux/zfs#1689; Add Linux 3.12
+  Support
 
 *zfs-kmod-0.6.2-r2 (18 Oct 2013)
 

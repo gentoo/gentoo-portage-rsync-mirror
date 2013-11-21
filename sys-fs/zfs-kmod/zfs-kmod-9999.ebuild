@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.17 2013/04/17 14:30:18 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-9999.ebuild,v 1.18 2013/11/21 15:47:44 ryao Exp $
 
 EAPI="4"
 
@@ -17,7 +17,8 @@ if [ ${PV} == "9999" ] ; then
 else
 	inherit eutils versionator
 	MY_PV=$(replace_version_separator 3 '-')
-	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz"
+	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${MY_PV}.tar.gz
+		http://dev.gentoo.org/~ryao/dist/${PN}-${MY_PV}-p2.tar.xz"
 	S="${WORKDIR}/zfs-zfs-${MY_PV}"
 	KEYWORDS="~amd64"
 fi
@@ -59,7 +60,7 @@ pkg_setup() {
 	kernel_is ge 2 6 26 || die "Linux 2.6.26 or newer required"
 
 	[ ${PV} != "9999" ] && \
-		{ kernel_is le 3 9 || die "Linux 3.9 is the latest supported version."; }
+		{ kernel_is le 3 12 || die "Linux 3.12 is the latest supported version."; }
 
 	check_extra_config
 }
@@ -67,6 +68,14 @@ pkg_setup() {
 src_prepare() {
 	# Remove GPLv2-licensed ZPIOS unless we are debugging
 	use debug || sed -e 's/^subdir-m += zpios$//' -i "${S}/module/Makefile.in"
+
+	if [ ${PV} != "9999" ]
+	then
+		# Apply patch set
+		EPATCH_SUFFIX="patch" \
+		EPATCH_FORCE="yes" \
+		epatch "${WORKDIR}/${PN}-${MY_PV}-patches"
+	fi
 
 	autotools-utils_src_prepare
 }
