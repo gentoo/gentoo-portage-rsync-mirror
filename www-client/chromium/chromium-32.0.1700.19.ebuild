@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.6.ebuild,v 1.3 2013/11/15 04:09:06 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.19.ebuild,v 1.1 2013/11/21 03:40:12 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -153,7 +153,7 @@ src_prepare() {
 	# fi
 
 	epatch "${FILESDIR}/${PN}-system-jinja-r2.patch"
-	epatch "${FILESDIR}/${PN}-blink-crash-r0.patch"
+	epatch "${FILESDIR}/${PN}-build_ffmpeg-r0.patch"
 
 	epatch_user
 
@@ -396,6 +396,14 @@ src_configure() {
 	export CXX_host=$(tc-getBUILD_CXX)
 	export LD_host=${CXX_host}
 
+	# Re-configure bundled ffmpeg. See bug #491378 for example reasons.
+	einfo "Configuring bundled ffmpeg..."
+	pushd third_party/ffmpeg > /dev/null || die
+	chromium/scripts/build_ffmpeg.sh linux ${target_arch} "${PWD}" config-only || die
+	chromium/scripts/copy_config.sh || die
+	popd > /dev/null || die
+
+	einfo "Configuring Chromium..."
 	build/linux/unbundle/replace_gyp_files.py ${myconf} || die
 	egyp_chromium ${myconf} || die
 }
