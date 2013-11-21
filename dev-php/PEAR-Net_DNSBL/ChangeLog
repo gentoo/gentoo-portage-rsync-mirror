@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Net_DNSBL
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.36 2012/05/20 11:32:58 halcy0n Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.37 2013/11/21 20:44:56 mabi Exp $
+
+*PEAR-Net_DNSBL-1.3.7 (21 Nov 2013)
+
+  21 Nov 2013; Matti Bickel <mabi@gentoo.org> +PEAR-Net_DNSBL-1.3.7.ebuild,
+  -PEAR-Net_DNSBL-1.3.0.ebuild, -PEAR-Net_DNSBL-1.3.3.ebuild:
+  version bump, remove old
 
   20 May 2012; Mark Loeser <halcy0n@gentoo.org> PEAR-Net_DNSBL-1.3.0.ebuild:
   Revert to ~ppc/~ppc64; bug #396981
@@ -144,4 +150,3 @@
   04 Aug 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Net_DNSBL-1.0.0.ebuild:
   Initial version.
-

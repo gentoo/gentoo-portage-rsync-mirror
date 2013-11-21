@@ -1,9 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.4.ebuild,v 1.2 2013/09/08 17:42:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.7.ebuild,v 1.1 2013/11/21 20:32:40 pacho Exp $
 
 EAPI="5"
-
 inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
 
 DESCRIPTION="Gimp ToolKit +"
@@ -61,6 +60,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xsl-stylesheets
 	app-text/docbook-xml-dtd:4.1.2
 	dev-libs/libxslt
+	dev-util/gdbus-codegen
 	virtual/pkgconfig
 	X? (
 		x11-proto/xextproto
@@ -105,6 +105,10 @@ src_prepare() {
 	# FIXME: https://bugzilla.gnome.org/show_bug.cgi?id=654108
 	# epatch "${FILESDIR}/${PN}-3.3.18-fallback-theme.patch"
 
+	# This files shouldn't be in tarball, upstream bug #709974
+	# This needs dev-util/gdbus-codegen in DEPEND
+	rm -f gtk/gtkdbusgenerated.{h,c} || die
+
 	if use test; then
 		# Non-working test in gentoo's env
 		sed 's:\(g_test_add_func ("/ui-tests/keys-events.*\):/*\1*/:g' \
@@ -118,7 +122,13 @@ src_prepare() {
 			-i tests/Makefile.* || die "sed 3 failed"
 
 		# Test results depend on the list of mounted filesystems!
-		rm -v tests/a11y/pickers.{ui,txt} || die "rm failed"
+		rm -f tests/a11y/pickers.{ui,txt} || die "rm failed"
+
+		# Skip failing tests, upstream bug #698448
+		epatch "${FILESDIR}/${PN}-3.8.6-skip-filechooser-test.patch"
+
+		# https://bugzilla.gnome.org/show_bug.cgi?id=710467
+		rm -f tests/a11y/buttons.{ui,txt} || die
 	else
 		# don't waste time building tests
 		strip_builddir SRC_SUBDIRS tests Makefile.am

@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.685 2013/11/14 07:18:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.686 2013/11/21 20:32:40 pacho Exp $
+
+*gtk+-3.8.7 (21 Nov 2013)
+
+  21 Nov 2013; Pacho Ramos <pacho@gentoo.org> +gtk+-3.8.7.ebuild,
+  -gtk+-3.8.4.ebuild:
+  Version bump, drop old
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> gtk+-3.6.3-r3.ebuild:
   alpha stable, bug 476364.
