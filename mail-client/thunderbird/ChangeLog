@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.251 2013/11/09 15:20:56 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.252 2013/11/21 14:35:38 anarchy Exp $
+
+*thunderbird-24.1.1 (21 Nov 2013)
+
+  21 Nov 2013; Jory A. Pratt <anarchy@gentoo.org> +thunderbird-24.1.1.ebuild,
+  -thunderbird-24.1.0-r2.ebuild:
+  Misc ui fixes, update nss/nspr deps for security
 
 *thunderbird-24.1.0-r2 (09 Nov 2013)
 
