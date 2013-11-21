@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15216 2013/11/20 07:30:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15217 2013/11/21 19:51:03 mabi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matti Bickel <mabi@gentoo.org> (20 Nov 2013)
+# Outdated, beta and abondoned upstream, removal on 20131220
+dev-php/PEAR-File_PDF
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Nov 2013)
 # Causes build failures, bugs #491632 #491644 #491646 #491660 #491664

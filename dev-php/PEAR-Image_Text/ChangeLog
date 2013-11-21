@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Image_Text
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Text/ChangeLog,v 1.8 2012/06/09 15:08:16 mabi Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Image_Text/ChangeLog,v 1.9 2013/11/21 19:59:13 mabi Exp $
+
+*PEAR-Image_Text-0.7.0 (21 Nov 2013)
+
+  21 Nov 2013; Matti Bickel <mabi@gentoo.org> +PEAR-Image_Text-0.7.0.ebuild:
+  version bump
 
   09 Jun 2012; Matti Bickel <mabi@gentoo.org>
   -PEAR-Image_Text-0.6.0_beta.ebuild:
@@ -39,4 +44,3 @@
   08 Oct 2007; Anant Narayanan <anant@gentoo.org> +metadata.xml,
   +PEAR-Image_Text-0.6.0_beta.ebuild:
   Initial import of ebuild from overlay
-
