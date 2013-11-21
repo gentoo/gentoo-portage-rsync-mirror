@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.3.ebuild,v 1.4 2013/11/11 07:09:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.3.ebuild,v 1.5 2013/11/21 13:33:03 kensington Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -98,7 +98,7 @@ COMMON_DEP="
 	>=media-libs/lcms-2.5:2
 	>=media-libs/libpng-1.2:=
 	>=sys-libs/zlib-1.2.3
-	virtual/jpeg:=
+	virtual/jpeg:0=
 	javascript? ( dev-java/rhino:1.6 )
 	nss? ( >=dev-libs/nss-3.12.5-r1 )
 	pulseaudio?  ( >=media-sound/pulseaudio-0.9.11 )
