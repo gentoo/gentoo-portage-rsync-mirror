@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/badvpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.15 2013/06/26 12:00:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/badvpn/ChangeLog,v 1.16 2013/11/21 21:07:48 hasufell Exp $
+
+*badvpn-1.999.128 (21 Nov 2013)
+
+  21 Nov 2013; Julian Ospald <hasufell@gentoo.org> +badvpn-1.999.128.ebuild:
+  version bump
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> badvpn-1.999.127.ebuild:
   Stable for arm, wrt bug #474404

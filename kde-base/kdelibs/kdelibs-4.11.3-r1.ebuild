@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.11.3.ebuild,v 1.1 2013/11/05 22:22:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.11.3-r1.ebuild,v 1.1 2013/11/21 21:09:40 johu Exp $
 
 EAPI=5
 
@@ -235,6 +235,9 @@ src_install() {
 	# use system certificates
 	rm -f "${ED}"/usr/share/apps/kssl/ca-bundle.crt || die
 	dosym /etc/ssl/certs/ca-certificates.crt /usr/share/apps/kssl/ca-bundle.crt
+
+	# conflict with kf5 tier2 - kdoctools
+	rm -rf "${ED}"/usr/share/man/ || die
 
 	if use doc; then
 		einfo "Installing API documentation. This could take a bit of time."
