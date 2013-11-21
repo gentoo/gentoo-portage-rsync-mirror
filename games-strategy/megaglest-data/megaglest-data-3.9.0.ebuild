@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/megaglest-data-3.9.0.ebuild,v 1.1 2013/11/19 01:21:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest-data/megaglest-data-3.9.0.ebuild,v 1.2 2013/11/21 17:22:33 hasufell Exp $
 
 EAPI=5
 inherit cmake-utils games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-RDEPEND="~games-strategy/megaglest-${PV}.3"
+RDEPEND="~games-strategy/megaglest-${PV}.4"
 
 DOCS=( docs/AUTHORS.data.txt docs/CHANGELOG.txt docs/README.txt )
 
