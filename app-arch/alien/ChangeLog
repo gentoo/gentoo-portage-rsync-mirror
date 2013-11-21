@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/alien
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.46 2013/09/14 13:52:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/ChangeLog,v 1.47 2013/11/21 07:48:02 patrick Exp $
+
+*alien-8.89 (21 Nov 2013)
+
+  21 Nov 2013; Patrick Lauer <patrick@gentoo.org> +alien-8.89.ebuild:
+  Bump
 
   14 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> -alien-8.87.ebuild:
   drop old wrt bug #483180
