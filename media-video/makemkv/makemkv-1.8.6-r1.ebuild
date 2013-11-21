@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.6.ebuild,v 1.2 2013/11/17 03:37:48 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.8.6-r1.ebuild,v 1.1 2013/11/21 21:35:38 mattm Exp $
 
 EAPI=4
 inherit eutils gnome2-utils multilib flag-o-matic
 
-MY_P=makemkv-oss-${PV}
+MY_P=makemkv-oss-${PV}-cfg01
 MY_PB=makemkv-bin-${PV}
 
 DESCRIPTION="Tool for ripping Blu-Ray, HD-DVD and DVD discs and copying content to a Matroska container"
@@ -28,6 +28,7 @@ RDEPEND="dev-libs/expat
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
+	|| ( >=media-video/ffmpeg-1.0.0 >=media-video/libav-0.8.9 )
 	amd64? ( multilib? ( app-emulation/emul-linux-x86-baselibs ) )"
 DEPEND="${RDEPEND}"
 
