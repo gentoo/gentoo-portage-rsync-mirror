@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3_p20130828.ebuild,v 1.1 2013/08/29 13:29:12 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.3_p20130828.ebuild,v 1.2 2013/11/21 16:42:44 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://git.ghostscript.com/?p=mupdf.git;a=snapshot;h=d396b126c7ab5c241e
 
 LICENSE="AGPL-3"
 SLOT="0/1.3"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="X vanilla static static-libs"
 
 LIB_DEPEND="dev-libs/openssl[static-libs?]

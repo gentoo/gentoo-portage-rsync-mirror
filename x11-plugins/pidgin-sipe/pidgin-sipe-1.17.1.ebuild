@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.15.1.ebuild,v 1.1 2013/04/23 19:54:19 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.17.1.ebuild,v 1.1 2013/11/21 16:43:41 thev00d00 Exp $
 
 EAPI=5
 
