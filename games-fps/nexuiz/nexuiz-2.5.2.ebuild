@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.6 2013/11/19 01:03:52 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.2.ebuild,v 1.7 2013/11/21 20:05:21 mr_bones_ Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils games
 
 MY_PN=Nexuiz
@@ -72,43 +72,40 @@ src_prepare() {
 		-e "s:-O2:${CFLAGS}:" \
 		-e "/-lm/s:$: ${LDFLAGS}:" \
 		-e '/^STRIP/s/strip/true/' \
-		makefile.inc \
-		|| die "sed failed"
+		makefile.inc || die
 
 	sed -i \
 		-e '1i DP_LINK_TO_LIBJPEG=1' \
 		-e "s:ifdef DP_.*:DP_FS_BASEDIR=${GAMES_DATADIR}/nexuiz\n&:" \
-		makefile \
-		|| die "sed failed"
+		makefile || die
 
 	if ! use alsa ; then
 		sed -i \
 			-e "/DEFAULT_SNDAPI/s:ALSA:OSS:" \
-			makefile \
-			|| die "sed failed"
+			makefile || die
 	fi
 }
 
 src_compile() {
 	if use opengl || ! use dedicated ; then
-		emake cl-${PN} || die "emake cl-${PN} failed"
+		emake cl-${PN}
 		if use sdl ; then
-			emake sdl-${PN} || die "emake sdl-${PN} failed"
+			emake sdl-${PN}
 		fi
 	fi
 
 	if use dedicated ; then
-		emake sv-${PN} || die "emake sv-${PN} failed"
+		emake sv-${PN}
 	fi
 }
 
 src_install() {
 	if use opengl || ! use dedicated ; then
-		dogamesbin ${PN}-glx || die "dogamesbin glx failed"
+		dogamesbin ${PN}-glx
 		doicon ${PN}.xpm
 		make_desktop_entry ${PN}-glx "Nexuiz (GLX)"
 		if use sdl ; then
-			dogamesbin ${PN}-sdl || die "dogamesbin sdl failed"
+			dogamesbin ${PN}-sdl
 			make_desktop_entry ${PN}-sdl "Nexuiz (SDL)"
 			dosym ${PN}-sdl "${GAMES_BINDIR}"/${PN}
 		else
@@ -117,10 +114,10 @@ src_install() {
 	fi
 
 	if use dedicated ; then
-		dogamesbin ${PN}-dedicated || die "dogamesbin dedicated failed"
+		dogamesbin ${PN}-dedicated
 	fi
 
-	cd "${WORKDIR}"/${MY_PN}
+	cd "${WORKDIR}"/${MY_PN} || die
 
 	dodoc Docs/*.txt
 	dohtml -r readme.html Docs
@@ -128,11 +125,10 @@ src_install() {
 	insinto "${GAMES_DATADIR}"/${PN}
 
 	if use dedicated ; then
-		doins -r server || die "doins server failed"
+		doins -r server
 	fi
 
-	doins -r data || die "doins data failed"
-	doins -r havoc || die "doins havoc failed"
+	doins -r data havoc
 
 	prepgamesdirs
 }
