@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/multi_xml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_xml/ChangeLog,v 1.18 2013/07/18 06:22:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_xml/ChangeLog,v 1.19 2013/11/20 23:31:32 mrueg Exp $
+
+*multi_xml-0.5.4-r1 (20 Nov 2013)
+
+  20 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +multi_xml-0.5.4-r1.ebuild,
+  -files/multi_xml-0.4.1-ruby19.patch, -multi_xml-0.5.3.ebuild,
+  -multi_xml-0.5.4.ebuild:
+  Add ruby20 target. Cleanup old.
 
 *multi_xml-0.5.4 (18 Jul 2013)
 

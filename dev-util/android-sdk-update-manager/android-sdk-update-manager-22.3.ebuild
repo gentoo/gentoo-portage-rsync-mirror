@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.3.ebuild,v 1.1 2013/11/02 03:30:43 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.3.ebuild,v 1.2 2013/11/20 23:49:06 rich0 Exp $
 
 EAPI="5"
 
-inherit eutils user
+inherit eutils user udev
 
 MY_P="android-sdk_r${PV}-linux"
 
@@ -86,6 +86,8 @@ src_install(){
 
 	insinto "/etc/revdep-rebuild" && doins "${T}/80${PN}" || die
 
+	udev_dorules "${FILESDIR}"/80-android.rules || die
+	domenu "${FILESDIR}"/android-sdk-update-manager.desktop || die
 }
 
 pkg_postinst() {

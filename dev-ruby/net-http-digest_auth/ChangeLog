@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/net-http-digest_auth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.10 2013/09/15 09:30:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-http-digest_auth/ChangeLog,v 1.11 2013/11/20 23:42:38 mrueg Exp $
+
+*net-http-digest_auth-1.4-r1 (20 Nov 2013)
+
+  20 Nov 2013; Manuel Rüger <mrueg@gentoo.org>
+  +net-http-digest_auth-1.4-r1.ebuild, -net-http-digest_auth-1.2.1.ebuild,
+  -net-http-digest_auth-1.3.ebuild:
+  Add ruby20 target. Cleanup old.
 
   15 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
   net-http-digest_auth-1.4.ebuild:

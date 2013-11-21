@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/android-sdk-update-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.57 2013/11/02 03:30:43 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.58 2013/11/20 23:49:06 rich0 Exp $
+
+  20 Nov 2013; Richard Freeman <rich0@gentoo.org> +files/80-android.rules,
+  android-sdk-update-manager-22.3.ebuild,
+  +files/android-sdk-update-manager.desktop:
+  Add desktop entry and udev rule. Thanks to C.J. Wijtmans. 491508
 
 *android-sdk-update-manager-22.3 (02 Nov 2013)
 
