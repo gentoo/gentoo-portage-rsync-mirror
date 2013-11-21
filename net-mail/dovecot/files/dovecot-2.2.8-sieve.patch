@@ -1,0 +1,46 @@
+diff -r d3cf06639864 -r f4eb4b5884b2 src/lib-storage/index/index-mail-headers.c
+--- a/src/lib-storage/index/index-mail-headers.c	Sun Feb 24 09:16:31 2013 +0200
++++ b/src/lib-storage/index/index-mail-headers.c	Wed Nov 20 14:37:44 2013 +0200
+@@ -653,7 +653,8 @@
+ 	/* cached. skip "header name: " parts in dest. */
+ 	for (i = 0; i < len; i++) {
+ 		if (data[i] == ':') {
+-			if (i+1 != len && data[++i] == ' ') i++;
++			while (IS_LWSP(data[i+1])) i++;
++			if (i+1 != len) i++;
+ 
+ 			/* @UNSAFE */
+ 			len = get_header_size(dest, i);
+
+
+
+
+
+diff -r f4eb4b5884b2 -r a91437fe94b6 src/lib-storage/index/index-mail-headers.c
+--- a/src/lib-storage/index/index-mail-headers.c	Wed Nov 20 14:37:44 2013 +0200
++++ b/src/lib-storage/index/index-mail-headers.c	Wed Nov 20 14:38:55 2013 +0200
+@@ -760,6 +760,9 @@
+ 			mail_cache_set_corrupted(_mail->box->cache,
+ 				"Broken header %s for mail UID %u",
+ 				field, _mail->uid);
++			/* retry by parsing the full header */
++		} else {
++			break;
+ 		}
+ 	}
+ 	return ret;
+@@ -788,6 +791,9 @@
+ 			mail_cache_set_corrupted(_mail->box->cache,
+ 				"Broken header %s for mail UID %u",
+ 				field, _mail->uid);
++			/* retry by parsing the full header */
++		} else {
++			break;
+ 		}
+ 	}
+ 	*value_r = list[0];
+
+
+
+
+

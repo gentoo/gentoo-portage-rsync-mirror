@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/zfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.76 2013/10/18 16:26:04 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/ChangeLog,v 1.77 2013/11/21 16:21:23 ryao Exp $
+
+*zfs-0.6.2-r3 (21 Nov 2013)
+
+  21 Nov 2013; Richard Yao <ryao@gentoo.org> +files/bash-completion-r1,
+  +zfs-0.6.2-r3.ebuild, zfs-9999.ebuild:
+  Python 3 support; Fix memory leak in libzfs; Import updated bash completion
+  script from Ubuntu (with silent sudo functionality commented out)
 
 *zfs-0.6.2-r2 (18 Oct 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-9999.ebuild,v 1.50 2013/11/21 16:21:23 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.2-r3.ebuild,v 1.1 2013/11/21 16:21:23 ryao Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_1,3_2,3_3} )
@@ -113,7 +113,7 @@ src_configure() {
 
 src_install() {
 	autotools-utils_src_install
-	gen_usr_ldscript -a uutil nvpair zpool zfs zfs_core
+	gen_usr_ldscript -a uutil nvpair zpool zfs
 	rm -rf "${ED}usr/lib/dracut"
 	use test-suite || rm -rf "${ED}usr/share/zfs"
 
