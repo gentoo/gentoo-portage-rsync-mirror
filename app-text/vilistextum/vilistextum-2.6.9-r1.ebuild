@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9-r1.ebuild,v 1.1 2013/09/11 17:29:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9-r1.ebuild,v 1.2 2013/11/22 07:40:15 jlec Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils autotools
 
@@ -63,8 +63,7 @@ src_configure() {
 
 src_test() {
 	if $(locale -a | grep -iq "en_US\.utf.*8"); then
-		emake -j1 \
-			check || die
+		emake -j1 check
 	else
 		ewarn "If you like to run the test,"
 		ewarn "please make sure en_US.UTF-8 is installed."
@@ -73,7 +72,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README CHANGES || die
-	dohtml doc/*.html || die
+	default
+	dohtml doc/*.html
 }

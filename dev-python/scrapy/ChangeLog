@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/scrapy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.14 2013/08/03 09:45:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.15 2013/11/22 07:51:55 patrick Exp $
+
+*scrapy-0.18.0 (22 Nov 2013)
+
+  22 Nov 2013; Patrick Lauer <patrick@gentoo.org> +scrapy-0.18.0.ebuild:
+  Bump
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> scrapy-0.14.4.ebuild,
   scrapy-0.16.4.ebuild, scrapy-0.17.0.ebuild:
