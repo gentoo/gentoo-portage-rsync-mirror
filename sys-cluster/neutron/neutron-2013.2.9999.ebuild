@@ -1,15 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.2.9999.ebuild,v 1.4 2013/11/11 03:15:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.2.9999.ebuild,v 1.5 2013/11/22 04:38:40 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 git-2
 
-#restricted due to packages missing and bad depends in the test ==webob-1.0.8   
-RESTRICT="test"
-DESCRIPTION="Quantum is a virtual network service for Openstack."
+DESCRIPTION="A virtual network service for Openstack."
 HOMEPAGE="https://launchpad.net/neutron"
 EGIT_REPO_URI="https://github.com/openstack/neutron.git"
 EGIT_BRANCH="stable/havana"
@@ -35,7 +33,11 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
 				>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
 				>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
-				dev-python/configobj[${PYTHON_USEDEP}] )"
+				dev-python/configobj[${PYTHON_USEDEP}]
+				<dev-python/hacking-0.8[${PYTHON_USEDEP}]
+				>=dev-python/hacking-0.5.6[${PYTHON_USEDEP}]
+				dev-python/mimeparse[${PYTHON_USEDEP}] )"
+
 RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
@@ -81,6 +83,21 @@ pkg_setup() {
 src_prepare() {
 	#it's /bin/ip not /sbin/ip
 	sed -i 's/sbin\/ip\,/bin\/ip\,/g' etc/neutron/rootwrap.d/*
+}
+
+python_test() {
+	# https://bugs.launchpad.net/neutron/+bug/1234857
+	# https://bugs.launchpad.net/swift/+bug/1249727
+	# https://bugs.launchpad.net/neutron/+bug/1251657
+	# turn multiprocessing off, testr will use it --parallel
+	local DISTUTILS_NO_PARALLEL_BUILD=1
+	# Move tests out that attempt net connection
+	mv $(find . -name test_ovs_tunnel.py) . || die
+	sed -e 's:test_app_using_ipv6_and_ssl:_&:' \
+		-e 's:test_start_random_port_with_ipv6:_&:' \
+		-i neutron/tests/unit/test_wsgi.py || die
+	testr init
+	testr run --parallel || die "failed testsuite under python2.7"
 }
 
 python_install() {

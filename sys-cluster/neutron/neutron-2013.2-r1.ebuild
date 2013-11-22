@@ -1,14 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.2.ebuild,v 1.4 2013/11/22 04:38:40 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.2-r1.ebuild,v 1.1 2013/11/22 04:38:40 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-#restricted due to packages missing and bad depends in the test ==webob-1.0.8   
-RESTRICT="test"
 DESCRIPTION="A virtual network service for Openstack."
 HOMEPAGE="https://launchpad.net/neutron"
 SRC_URI="http://launchpad.net/${PN}/havana/${PV}/+download/${P}.tar.gz"
@@ -16,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/havana/${PV}/+download/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+dhcp +l3 +metadata +openvswitch +server test sqlite mysql postgres"
+IUSE="+dhcp doc +l3 +metadata +openvswitch +server test sqlite mysql postgres"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 #the cliff dep is as below because it depends on pyparsing, which only has 2.7 OR 3.2, not both
@@ -25,16 +23,21 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
 		app-admin/sudo
 		test? ( >=dev-python/cliff-1.4.3[${PYTHON_USEDEP}]
-				>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
-				>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
-				>=dev-python/mock-1.0[${PYTHON_USEDEP}]
-				>=dev-python/mox-0.5.3[${PYTHON_USEDEP}]
-				dev-python/subunit[${PYTHON_USEDEP}]
-				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-				>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
-				>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
-				>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
-				dev-python/configobj[${PYTHON_USEDEP}] )"
+			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
+			>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
+			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
+			>=dev-python/mox-0.5.3[${PYTHON_USEDEP}]
+			dev-python/subunit[${PYTHON_USEDEP}]
+			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
+			>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
+			>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
+			>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
+			dev-python/configobj[${PYTHON_USEDEP}]
+			<dev-python/hacking-0.8[${PYTHON_USEDEP}]
+			>=dev-python/hacking-0.5.6[${PYTHON_USEDEP}]
+			dev-python/mimeparse[${PYTHON_USEDEP}]
+		)"
+
 RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3[${PYTHON_USEDEP}]
@@ -68,18 +71,47 @@ RDEPEND="dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
 		>=dev-python/python-novaclient-2.15.0[${PYTHON_USEDEP}]
 		dev-python/pyudev[${PYTHON_USEDEP}]
-		sys-apps/iproute2
-		openvswitch? ( net-misc/openvswitch )
+		net-misc/bridge-utils
+		net-misc/openvswitch
 		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
+
+PATCHES=( "${FILESDIR}"/${P}-sphinx_mapping.patch \
+		"${FILESDIR}"/${P}-json-tests.patch \
+		"${FILESDIR}"/${P}-nicira.patch )
 
 pkg_setup() {
 	enewgroup neutron
 	enewuser neutron -1 -1 /var/lib/neutron neutron
 }
 
+pkg_config() {
+	fperms 0700 /var/log/neutron
+	fowners neutron:neutron /var/log neutron
+}
+
 src_prepare() {
 	#it's /bin/ip not /sbin/ip
 	sed -i 's/sbin\/ip\,/bin\/ip\,/g' etc/neutron/rootwrap.d/*
+	distutils-r1_src_prepare
+}
+
+python_compile_all() {
+	use doc && make -C doc html
+}
+
+python_test() {
+	# https://bugs.launchpad.net/neutron/+bug/1234857
+	# https://bugs.launchpad.net/swift/+bug/1249727
+	# https://bugs.launchpad.net/neutron/+bug/1251657
+	# turn multiprocessing off, testr will use it --parallel
+	local DISTUTILS_NO_PARALLEL_BUILD=1
+	# Move tests out that attempt net connection, have failures
+	mv $(find . -name test_ovs_tunnel.py) . || die
+	sed -e 's:test_app_using_ipv6_and_ssl:_&:' \
+		-e 's:test_start_random_port_with_ipv6:_&:' \
+		-i neutron/tests/unit/test_wsgi.py || die
+	testr init
+	testr run --parallel || die "failed testsuite under python2.7"
 }
 
 python_install() {
@@ -119,7 +151,7 @@ python_install() {
 	doins "${FILESDIR}/neutron-sudoers"
 }
 
-pkg_config() {
-	fperms 0700 /var/log/neutron
-	fowners neutron:neutron /var/log neutron
+python_install_all() {
+	use doc && local HTML_DOCS=( doc/build/html/. )
+	distutils-r1_python_install_all
 }
