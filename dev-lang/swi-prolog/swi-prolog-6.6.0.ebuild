@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-6.5.1.ebuild,v 1.1 2013/08/13 07:58:42 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-6.6.0.ebuild,v 1.1 2013/11/22 17:13:01 keri Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ PATCHSET_VER="0"
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
-SRC_URI="http://www.swi-prolog.org/download/devel/src/pl-${PV}.tar.gz
+SRC_URI="http://www.swi-prolog.org/download/stable/src/pl-${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz"
 
 LICENSE="LGPL-2.1"
