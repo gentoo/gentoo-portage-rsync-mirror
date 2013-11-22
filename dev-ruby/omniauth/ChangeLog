@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/omniauth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/omniauth/ChangeLog,v 1.1 2013/11/20 23:04:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/omniauth/ChangeLog,v 1.2 2013/11/22 01:54:53 mrueg Exp $
+
+*omniauth-1.1.4-r1 (22 Nov 2013)
+
+  22 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +omniauth-1.1.4-r1.ebuild,
+  -omniauth-1.1.4.ebuild:
+  Add improvements from dev-zero's overlay.
 
 *omniauth-1.1.4 (20 Nov 2013)
 
