@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/leo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.26 2012/11/01 10:12:09 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.27 2013/11/22 08:17:41 patrick Exp $
+
+*leo-4.11 (22 Nov 2013)
+
+  22 Nov 2013; Patrick Lauer <patrick@gentoo.org> +leo-4.11.ebuild:
+  Bump
 
   01 Nov 2012; Ulrich Müller <ulm@gentoo.org> leo-4.8.ebuild, leo-4.10.ebuild:
   Specify LICENSE more precisely, MIT according to LICENSE.TXT in zipball.
@@ -107,4 +112,3 @@
   01 Dec 2004; Rob Cakebread <pythonhead@gentoo.org> +metadata.xml,
   +files/leoConfig.py.patch, +leo-4.2.ebuild:
   Initial commit. Closes bug# 69561
-

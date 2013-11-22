@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.5.ebuild,v 1.3 2013/09/18 13:46:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grc/grc-1.5.ebuild,v 1.4 2013/11/22 08:09:14 jlec Exp $
 
 EAPI=5
 
@@ -17,8 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 RDEPEND="${PYTHON_DEPS}"
-DEPEND=""
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch \
