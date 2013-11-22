@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.398 2013/09/10 03:18:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.399 2013/11/22 08:56:12 haubi Exp $
+
+  22 Nov 2013; Michael Haubenwallner <haubi@gentoo.org>
+  files/eblits/pkg_setup-v50160001.eblit,
+  files/eblits/src_configure-v50160001.eblit:
+  Support AIX platform (ppc-aix keyword).
 
   10 Sep 2013; Patrick Lauer <patrick@gentoo.org> perl-5.12.5.ebuild:
   Whitespace

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/pkg_setup-v50160001.eblit,v 1.1 2012/06/05 17:52:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/files/eblits/pkg_setup-v50160001.eblit,v 1.2 2013/11/22 08:56:13 haubi Exp $
 
 eblit-perl-pkg_setup() {
 	case ${CHOST} in
@@ -10,6 +10,7 @@ eblit-perl-pkg_setup() {
 		*-openbsd*)   osname="openbsd" ;;
 		*-darwin*)    osname="darwin" ;;
 		*-interix*)   osname="interix" ;;
+		*-aix*)       osname="aix" ;;
 		*)            osname="linux" ;;
 	esac
 

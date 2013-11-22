@@ -1,18 +1,18 @@
-Make the init script recognize failed start and stop more reliably.
-
-2013-11-07 - Lars Wendler <polynomial-c@gentoo.org>
-
 --- gentoo-apache-2.2.23/init/apache2.initd
 +++ gentoo-apache-2.2.23/init/apache2.initd
-@@ -77,12 +77,13 @@
+@@ -77,12 +77,16 @@
  	# Use start stop daemon to apply system limits #347301 
  	start-stop-daemon --start -- ${APACHE2} ${APACHE2_OPTS} -k start
  
 -	i=0
+-	while [ ! -e "${PIDFILE}" ] && [ $i -lt ${TIMEOUT} ]; do
 +	local i=0 retval=1
- 	while [ ! -e "${PIDFILE}" ] && [ $i -lt ${TIMEOUT} ]; do
++	while [ $i -lt ${TIMEOUT} ] ; do
++		if [ -e "${PIDFILE}" ] ; then
++			retval=0
++			break
++		fi
  		sleep 1 && i=$(expr $i + 1)
-+		[ -e "${PIDFILE}" ] && retval=0
  	done
  
 -	eend $(test $i -lt ${TIMEOUT})
@@ -20,7 +20,7 @@ Make the init script recognize failed start and stop more reliably.
  }
  
  stop() {
-@@ -101,13 +102,14 @@
+@@ -101,13 +105,14 @@
  	ebegin "Stopping ${SVCNAME}"
  	${APACHE2} ${APACHE2_OPTS} -k stop
  
