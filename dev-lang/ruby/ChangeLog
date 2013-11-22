@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.616 2013/10/14 18:38:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.617 2013/11/22 19:22:39 graaff Exp $
+
+*ruby-2.0.0_p353 (22 Nov 2013)
+*ruby-1.9.3_p484 (22 Nov 2013)
+
+  22 Nov 2013; Hans de Graaff <graaff@gentoo.org> +ruby-1.9.3_p484.ebuild,
+  +ruby-2.0.0_p353.ebuild:
+  Version bumps for security bug 492282.
 
 *ruby-2.0.0_p247-r2 (14 Oct 2013)
 

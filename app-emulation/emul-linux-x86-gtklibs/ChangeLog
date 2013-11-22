@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.113 2013/10/26 08:58:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.114 2013/11/22 19:30:48 pacho Exp $
+
+  22 Nov 2013; Pacho Ramos <pacho@gentoo.org>
+  emul-linux-x86-gtklibs-20131008.ebuild:
+  amd64 stable, bug #489898
 
 *emul-linux-x86-gtklibs-20131008-r1 (26 Oct 2013)
 
