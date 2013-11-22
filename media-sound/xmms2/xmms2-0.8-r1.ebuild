@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.13 2013/01/18 08:05:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.14 2013/11/22 13:10:47 slyfox Exp $
 
 EAPI=3
 
@@ -110,6 +110,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}"-ffmpeg-0.11.patch #443256
 	epatch "${FILESDIR}/${P}"-libav-9-p2.patch #443256
 	epatch "${FILESDIR}/${P}"-libav-9.patch #443256
+	epatch "${FILESDIR}/${P}"-cython-0.19.1.patch
+	epatch "${FILESDIR}/${P}"-memset.patch
 
 	if has_version dev-libs/libcdio-paranoia; then
 		sed -i -e 's:cdio/cdda.h:cdio/paranoia/cdda.h:' src/plugins/cdda/cdda.c || die

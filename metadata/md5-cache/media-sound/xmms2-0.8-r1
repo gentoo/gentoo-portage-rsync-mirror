@@ -10,4 +10,4 @@ RDEPEND=server? ( >=dev-db/sqlite-3.3.4 aac? ( >=media-libs/faad2-2.0 ) airplay?
 SLOT=0
 SRC_URI=mirror://sourceforge/xmms2/xmms2-0.8DrO_o.tar.bz2
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=f98ce96965e83afb7c681a4de0b77d4a
+_md5_=596efc497e322846241698466c686217
