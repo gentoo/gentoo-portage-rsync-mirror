@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-1.4.0.ebuild,v 1.2 2013/01/15 06:32:22 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/execjs/execjs-1.4.0.ebuild,v 1.3 2013/11/22 07:12:09 graaff Exp $
 
 EAPI=4
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 
