@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.2.1.ebuild,v 1.3 2013/07/20 10:17:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.3.4.ebuild,v 1.1 2013/11/22 12:07:46 pinkbyte Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Radically simple deployment, model-driven configuration management,
 HOMEPAGE="http://ansible.cc/"
 SRC_URI="https://github.com/ansible/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="test"
@@ -30,23 +30,22 @@ RDEPEND="
 "
 
 DOC_CONTENTS="You can define parameters through shell variables OR use config files
-Examples of config files installed in /usr/share/doc/${P}/examples\n\n
+Examples of config files installed in /usr/share/doc/${PF}/examples\n\n
 You have to create ansible hosts file!\n
 More info on http://ansible.cc/docs/gettingstarted.html"
 
-src_prepare() {
-	distutils-r1_src_prepare
+python_prepare_all() {
+	distutils-r1_python_prepare_all
 	# Skip tests which need ssh access
 	sed -i 's:$(NOSETESTS) -d -v:\0 -e \\(TestPlayBook.py\\|TestRunner.py\\):' Makefile || die "sed failed"
 }
 
-src_test() {
+python_test() {
 	make tests || die "tests failed"
 }
 
-src_install() {
-	distutils-r1_src_install
-	readme.gentoo_create_doc
+python_install_all() {
+	distutils-r1_python_install_all
 
 	doman docs/man/man1/*.1
 	dodoc -r examples
@@ -55,4 +54,9 @@ src_install() {
 	# let this choice to user
 
 	newenvd "${FILESDIR}"/${PN}.env 95ansible
+}
+
+src_install() {
+	distutils-r1_src_install
+	readme.gentoo_create_doc
 }
