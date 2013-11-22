@@ -1,6 +1,9 @@
 # ChangeLog for media-video/makemkv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.30 2013/11/22 03:16:14 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/ChangeLog,v 1.31 2013/11/22 05:29:52 mattm Exp $
+
+  22 Nov 2013; Matthew Marlowe <mattm@gentoo.org> makemkv-1.8.6-r1.ebuild:
+  src_compile make target changes in latest upstream version bump.
 
   22 Nov 2013; Matthew Marlowe <mattm@gentoo.org>
   files/makemkv-1.8.6-makefile.linux.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/omniauth/omniauth-1.1.4-r1.ebuild,v 1.1 2013/11/22 01:54:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/omniauth/omniauth-1.1.4-r1.ebuild,v 1.2 2013/11/22 05:21:53 patrick Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20"
@@ -18,7 +18,6 @@ LICENSE="MIT"
 KEYWORDS="~amd64"
 SLOT="0"
 IUSE=""
-
 
 ruby_add_rdepend "dev-ruby/rack dev-ruby/hashie"
 ruby_add_bdepend "doc? ( dev-ruby/yard )
