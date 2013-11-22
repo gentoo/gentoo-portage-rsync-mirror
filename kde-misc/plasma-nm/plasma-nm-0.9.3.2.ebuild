@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.1-r1.ebuild,v 1.1 2013/10/23 21:43:29 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.2.ebuild,v 1.1 2013/11/22 16:46:20 johu Exp $
 
 EAPI=5
 
@@ -25,15 +25,13 @@ SLOT="4"
 IUSE="debug modemmanager"
 
 DEPEND="
-	net-libs/libnm-qt[modemmanager?]
+	>=net-libs/libnm-qt-0.9.8.0[modemmanager?]
 	>=net-misc/networkmanager-0.9.8.0
-	modemmanager? ( net-libs/libmm-qt )
+	modemmanager? ( >=net-libs/libmm-qt-1.0.0 )
 "
 RDEPEND="${DEPEND}
 	!kde-misc/networkmanagement
 "
-
-PATCHES=( "${FILESDIR}/${P}-vpn.patch" )
 
 src_configure() {
 	local mycmakeargs=(

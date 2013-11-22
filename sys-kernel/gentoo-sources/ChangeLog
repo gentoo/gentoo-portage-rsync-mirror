@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1216 2013/11/21 01:00:33 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1217 2013/11/22 16:43:33 tomwij Exp $
+
+*gentoo-sources-3.12.9999 (22 Nov 2013)
+
+  22 Nov 2013; Tom Wijsman <TomWij@gentoo.org> +gentoo-sources-3.12.9999.ebuild:
+  Live 9999 ebuild for 3.12 branch.
 
 *gentoo-sources-3.12.1 (21 Nov 2013)
 *gentoo-sources-3.11.9 (21 Nov 2013)
