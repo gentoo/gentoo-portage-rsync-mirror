@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.66 2013/11/03 20:38:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.68 2013/11/22 22:18:03 hasufell Exp $
+
+  22 Nov 2013; Julian Ospald <hasufell@gentoo.org> sdlmame-0.148_p1-r1.ebuild:
+  stable on x86 wrt #486686
+
+  22 Nov 2013; Julian Ospald <hasufell@gentoo.org> sdlmame-0.148_p1-r1.ebuild:
+  fix deps
 
   03 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> -sdlmame-0.148_p1.ebuild:
   old
