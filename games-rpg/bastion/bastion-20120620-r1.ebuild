@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620-r1.ebuild,v 1.4 2013/06/02 18:51:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620-r1.ebuild,v 1.5 2013/11/22 15:47:19 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="Bastion-HIB-${TIMESTAMP}.sh"
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="bundled-libs"
 RESTRICT="bindist fetch splitdebug"
 
