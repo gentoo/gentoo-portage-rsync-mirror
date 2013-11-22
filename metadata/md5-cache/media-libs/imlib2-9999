@@ -7,5 +7,5 @@ IUSE=bzip2 gif jpeg mmx mp3 png static-libs tiff X zlib nls doc
 LICENSE=BSD
 RDEPEND==media-libs/freetype-2* bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) gif? ( >=media-libs/giflib-4.1.0 ) png? ( media-libs/libpng:0 ) jpeg? ( virtual/jpeg:0 ) tiff? ( media-libs/tiff:0 ) X? ( x11-libs/libX11 x11-libs/libXext ) mp3? ( media-libs/libid3tag ) nls? ( sys-devel/gettext )
 SLOT=0
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	enlightenment	6aee6d669b6c495a4e151bd1bd85e57c	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	enlightenment	6aee6d669b6c495a4e151bd1bd85e57c	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ee4a78c74e636d472c9ea4e6884c765a

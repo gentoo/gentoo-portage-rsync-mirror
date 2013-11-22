@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=!internal-glib? ( >=dev-libs/glib-2.30 ) !dev-util/pkgconf[pkg-config] !dev-util/pkg-config-lite !dev-util/pkgconfig-openbsd[pkg-config]
 SLOT=0
 SRC_URI=http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=60374b245e116b83b7d84691c3c02d87

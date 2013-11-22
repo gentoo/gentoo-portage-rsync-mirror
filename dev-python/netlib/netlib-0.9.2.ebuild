@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netlib/netlib-0.9.2.ebuild,v 1.1 2013/09/02 05:10:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netlib/netlib-0.9.2.ebuild,v 1.2 2013/11/22 09:08:37 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 		www-servers/pathod[${PYTHON_USEDEP}]
 	)"
 
-RESTRICT="test"
+PATCHES=( "${FILESDIR}"/${P}-skip-cert-test.patch )
 
 python_test() {
 	nosetests -v || die "Tests fail with ${EPYTHON}"

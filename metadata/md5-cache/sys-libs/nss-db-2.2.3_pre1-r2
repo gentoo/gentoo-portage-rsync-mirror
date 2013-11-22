@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2
 RDEPEND=>=sys-libs/db-4 sys-devel/make >=sys-libs/glibc-2.3 !>=sys-libs/glibc-2.15
 SLOT=0
 SRC_URI=ftp://sources.redhat.com/pub/glibc/old-releases/nss_db-2.2.3pre1.tar.gz mirror://gentoo/nss_db-2.2.3pre1-external.patch.bz2 mirror://gentoo/nss_db-2.2.3pre1-dbupgrade.patch.bz2 mirror://gentoo/nss_db-2.2.3pre1-dbopen.patch.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
 _md5_=ef97ca43346bc6f05179aee4b8865bec

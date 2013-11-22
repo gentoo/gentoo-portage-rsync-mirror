@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/netlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netlib/ChangeLog,v 1.4 2013/09/02 05:10:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netlib/ChangeLog,v 1.5 2013/11/22 09:08:37 radhermit Exp $
+
+  22 Nov 2013; Tim Harder <radhermit@gentoo.org> netlib-0.9.2.ebuild,
+  +files/netlib-0.9.2-skip-cert-test.patch:
+  Skip client cert test and enable testing.
 
 *netlib-0.9.2 (02 Sep 2013)
 

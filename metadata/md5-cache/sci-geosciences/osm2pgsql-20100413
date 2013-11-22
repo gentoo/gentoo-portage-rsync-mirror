@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/bzip2 dev-libs/libxml2:2 sci-libs/geos sci-libs/proj sys-libs/zlib dev-db/postgresql-base
 SLOT=0
 SRC_URI=http://gentoo.ccss.cz/osm2pgsql-20100413svn.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=5f869b8cc256eeeadea0618b93bc7c4d

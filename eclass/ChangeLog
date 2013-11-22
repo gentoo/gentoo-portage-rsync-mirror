@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1063 2013/11/20 19:23:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1064 2013/11/22 09:05:55 haubi Exp $
+
+  22 Nov 2013; Michael Haubenwallner <haubi@gentoo.org> libtool.eclass:
+  elibtoolize(): Besides ltmain.sh, explicitly locate configure to apply
+  patches rather than guessing based on where ltmain.sh was found.
 
   20 Nov 2013; Michał Górny <mgorny@gentoo.org> cmake-multilib.eclass:
   Run multilib header wrapping only when multiple ABIs are enabled, bug

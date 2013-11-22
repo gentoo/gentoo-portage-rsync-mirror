@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=sys-libs/ncurses dev-libs/glib:2 regex? ( >=dev-libs/boost-1.36 )
 SLOT=0
 SRC_URI=mirror://sourceforge/pms/pms-0.42.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=747482ac4d3b557998e89b7e51ec7c8e
