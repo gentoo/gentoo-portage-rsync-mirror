@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-ssl/rack-ssl-1.3.3.ebuild,v 1.1 2013/01/30 07:26:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-ssl/rack-ssl-1.3.3-r1.ebuild,v 1.1 2013/11/22 02:04:15 mrueg Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md"
