@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>vaeth@mathematik.uni-wuerzburg.de</email>
+		<email>martin@mvath.de</email>
 		<name>Martin Väth</name>
 		<description>Upstream developer, assign bugs</description>
 	</maintainer>
@@ -13,9 +13,9 @@
 	</maintainer>
 	<upstream>
 		<maintainer>
-			<email>vaeth@mathematik.uni-wuerzburg.de</email>
+			<email>martin@mvath.de</email>
 			<name>Martin Väth</name>
 		</maintainer>
-		<bugs-to>mailto:vaeth@mathematik.uni-wuerzburg.de</bugs-to>
+		<bugs-to>mailto:martin@mvath.de</bugs-to>
 	</upstream>
 </pkgmetadata>

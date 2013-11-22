@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.13.ebuild,v 1.3 2013/10/26 22:04:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/umurmur-0.2.13.ebuild,v 1.5 2013/11/22 15:11:55 hasufell Exp $
 
 EAPI=5
 
@@ -12,13 +12,12 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
-IUSE="polarssl"
+KEYWORDS="amd64 x86"
+IUSE=""
 
 DEPEND=">=dev-libs/protobuf-c-0.14
 	dev-libs/libconfig
-	polarssl? ( >=net-libs/polarssl-1.0.0 )
-	!polarssl? ( dev-libs/openssl )"
+	dev-libs/openssl:0"
 
 RDEPEND="${DEPEND}"
 
@@ -34,13 +33,7 @@ pkg_setup() {
 }
 
 src_configure() {
-	local myconf
-
-	# build uses polarssl by default, but instead, make it use openssl
-	# unless polarssl is desired.
-	use !polarssl && myconf="${myconf} --with-ssl=openssl"
-
-	econf ${myconf}
+	econf --with-ssl=openssl
 }
 
 src_install() {
@@ -69,12 +62,4 @@ src_install() {
 
 pkg_postinst() {
 	readme.gentoo_print_elog
-
-	if use polarssl ; then
-		elog
-		elog "Because you have enabled PolarSSL support, umurmurd will use a"
-		elog "predefined test-certificate and key if none are configured, which"
-		elog "is insecure. See http://code.google.com/p/umurmur/wiki/Installing02x#Installing_uMurmur_with_PolarSSL_support"
-		elog "for more information on how to create your certificate and key"
-	fi
 }
