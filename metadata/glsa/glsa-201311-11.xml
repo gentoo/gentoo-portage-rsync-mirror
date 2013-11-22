@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">ctorrent</product>
   <announced>November 20, 2013</announced>
-  <revised>November 20, 2013: 1</revised>
+  <revised>November 22, 2013: 2</revised>
   <bug>266953</bug>
   <access>remote</access>
   <affected>
@@ -42,7 +42,7 @@
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=net-p2p/ctorren-3.3.2-r1"
+      # emerge --ask --oneshot --verbose "&gt;=net-p2p/ctorrent-3.3.2-r1"
     </code>
     
   </resolution>
@@ -54,5 +54,5 @@
   <metadata tag="requester" timestamp="Fri, 07 Oct 2011 23:37:38 +0000">
     underling
   </metadata>
-  <metadata tag="submitter" timestamp="Wed, 20 Nov 2013 09:59:53 +0000">Zlogene</metadata>
+  <metadata tag="submitter" timestamp="Fri, 22 Nov 2013 10:00:47 +0000">Zlogene</metadata>
 </glsa>
