@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1650.57_p1.ebuild,v 1.2 2013/11/16 22:32:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-31.0.1650.57_p1.ebuild,v 1.3 2013/11/22 17:46:30 floppym Exp $
 
 EAPI="4"
 
@@ -96,14 +96,14 @@ DOC_CONTENTS="
 Some web pages may require additional fonts to display properly.
 Try installing some of the following packages if some characters
 are not displayed properly:
- - media-fonts/arphicfonts
- - media-fonts/bitstream-cyberbit
- - media-fonts/droid
- - media-fonts/ipamonafont
- - media-fonts/ja-ipafonts
- - media-fonts/takao-fonts
- - media-fonts/wqy-microhei
- - media-fonts/wqy-zenhei
+- media-fonts/arphicfonts
+- media-fonts/bitstream-cyberbit
+- media-fonts/droid
+- media-fonts/ipamonafont
+- media-fonts/ja-ipafonts
+- media-fonts/takao-fonts
+- media-fonts/wqy-microhei
+- media-fonts/wqy-zenhei
 
 Depending on your desktop environment, you may need
 to install additional packages to get icons on the Downloads page.
@@ -111,8 +111,8 @@ to install additional packages to get icons on the Downloads page.
 For KDE, the required package is kde-base/oxygen-icons.
 
 For other desktop environments, try one of the following:
- - x11-themes/gnome-icon-theme
- - x11-themes/tango-icon-theme
+- x11-themes/gnome-icon-theme
+- x11-themes/tango-icon-theme
 
 Please notice the bundled flash player (PepperFlash).
 You can (de)activate all flash plugins via chrome://plugins
