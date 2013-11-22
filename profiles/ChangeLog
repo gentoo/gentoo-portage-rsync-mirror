@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8370 2013/11/21 19:51:03 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8371 2013/11/22 13:38:39 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Nov 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  remove sci-geosciences/osgearth mask
 
   21 Nov 2013; Matti Bickel <mabi@gentoo.org> package.mask:
   Mask dev-php/PEAR-File_PDF for removal

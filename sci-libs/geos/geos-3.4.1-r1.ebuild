@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.4.1.ebuild,v 1.4 2013/09/30 17:12:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-3.4.1-r1.ebuild,v 1.1 2013/11/22 13:35:02 hasufell Exp $
 
 EAPI="5"
 
@@ -49,6 +49,10 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
+
+	# https://bugs.gentoo.org/show_bug.cgi?id=487068
+	insinto /usr/include/geos
+	doins include/geos/platform.h
 
 	use doc && dohtml -r doc/doxygen_docs/html/*
 	use python && python_optimize "${D}$(python_get_sitedir)"/geos/

@@ -1,40 +1,54 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/bcache-tools/bcache-tools-9999.ebuild,v 1.4 2013/10/28 10:53:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/bcache-tools/bcache-tools-9999.ebuild,v 1.5 2013/11/22 13:51:34 jlec Exp $
 
 EAPI=5
 
-inherit git-2 toolchain-funcs udev
+EGIT_NONSHALLOW=true
+
+inherit git-r3 toolchain-funcs udev
 
 DESCRIPTION="Tools for bachefs"
 HOMEPAGE="http://bcache.evilpiepirate.org/"
 SRC_URI=""
-EGIT_REPO_URI="http://evilpiepirate.org/git/bcache-tools.git"
+EGIT_REPO_URI="https://github.com/g2p/bcache-tools.git"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS=""
 IUSE=""
 
+RDEPEND=">=sys-apps/util-linux-2.24"
+DEPEND="${RDEPEND}"
+
 src_prepare() {
 	tc-export CC
 	sed \
-		-e '/^CFLAGS/d' \
+		-e '/^CFLAGS/s:-O2::' \
+		-e '/^CFLAGS/s:-g::' \
 		-i Makefile || die
 }
 
 src_install() {
 	into /
-	dosbin make-bcache probe-bcache bcache-super-show
-	doman *.8
+	dosbin make-bcache bcache-super-show
+
+	exeinto $(get_udevdir)
+	doexe bcache-register probe-bcache
+
+	udev_dorules 69-bcache.rules
 
 	insinto /etc/initramfs-tools/hooks/bcache
 	doins initramfs/hook
 
-	udev_dorules 69-bcache.rules
+	insinto /etc/initcpio/install/bcache
+	doins initcpio/install
 
-	exeinto $(get_udevdir)
-	doexe bcache-register
+	# that is what dracut does
+	insinto /usr/lib/dracut/modules.d/90bcache
+	doins dracut/module-setup.sh
+
+	doman *.8
 
 	dodoc README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osgearth/osgearth-2.4.ebuild,v 1.3 2013/11/03 12:02:48 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osgearth/osgearth-2.5.ebuild,v 1.1 2013/11/22 13:36:54 hasufell Exp $
 
 EAPI=5
 
@@ -18,7 +18,6 @@ IUSE="doc qt4"
 RDEPEND="
 	dev-db/sqlite:3
 	dev-games/openscenegraph[curl,qt4?]
-	=dev-lang/v8-3.18.5.14
 	dev-libs/tinyxml
 	net-misc/curl
 	sci-libs/gdal
@@ -37,12 +36,17 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}-${P}
 
-PATCHES=( "${FILESDIR}"/${P}-FindMiniZip.cmake.patch )
+PATCHES=( "${FILESDIR}"/${P}-cmake-options.patch )
 
 src_configure() {
+	# V8 disabled due to
+	# https://github.com/gwaldron/osgearth/issues/333
 	local mycmakeargs=(
 		-DWITH_EXTERNAL_TINYXML=ON
 		$(cmake-utils_use qt4 OSGEARTH_USE_QT)
+		-DOSGEARTH_USE_V8=OFF
+		-DOSGEARTH_USE_JAVASCRIPTCORE=OFF
+		-DOSGEARTH_USE_LIBNOISE=OFF
 	)
 
 	cmake-utils_src_configure

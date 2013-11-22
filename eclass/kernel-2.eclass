@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.290 2013/11/18 13:19:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.291 2013/11/22 13:35:09 vapier Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -232,7 +232,7 @@ detect_version() {
 	if [[ ${#OKV_ARRAY[@]} -lt 3 ]]; then
 		KV_PATCH_ARR=(${KV_PATCH//\./ })
 
-		# at this point 031412, Linus is putting all 3.x kernels in a 
+		# at this point 031412, Linus is putting all 3.x kernels in a
 		# 3.x directory, may need to revisit when 4.x is released
 		KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.x"
 
@@ -437,12 +437,16 @@ kernel_is_2_6() {
 
 # Capture the sources type and set DEPENDs
 if [[ ${ETYPE} == sources ]]; then
-	DEPEND="!build? ( sys-apps/sed
-					  >=sys-devel/binutils-2.11.90.0.31 )"
-	RDEPEND="!build? ( >=sys-libs/ncurses-5.2
-					   sys-devel/make 
-					   dev-lang/perl
-					   sys-devel/bc )"
+	DEPEND="!build? (
+		sys-apps/sed
+		>=sys-devel/binutils-2.11.90.0.31
+	)"
+	RDEPEND="!build? (
+		>=sys-libs/ncurses-5.2
+		sys-devel/make
+		dev-lang/perl
+		sys-devel/bc
+	)"
 	PDEPEND="!build? ( virtual/dev-manager )"
 
 	SLOT="${PVR}"
@@ -851,8 +855,7 @@ postinst_sources() {
 	KV_MINOR=$(get_version_component_range 2 ${OKV})
 	KV_PATCH=$(get_version_component_range 3 ${OKV})
 	if [[ "$(tc-arch)" = "sparc" ]]; then
-		if [[ ${KV_MAJOR} -ge 3 || ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} > 2.6.24 ]]
-		then
+		if [[ ${KV_MAJOR} -ge 3 || ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} > 2.6.24 ]] ; then
 			echo
 			elog "NOTE: Since 2.6.25 the kernel Makefile has changed in a way that"
 			elog "you now need to do"
@@ -938,7 +941,7 @@ unipatch() {
 				     xz) PIPE_CMD="xz -dc";;
 				   lzma) PIPE_CMD="lzma -dc";;
 				    bz2) PIPE_CMD="bzip2 -dc";;
-				  patch*) PIPE_CMD="cat";;
+				 patch*) PIPE_CMD="cat";;
 				   diff) PIPE_CMD="cat";;
 				 gz|Z|z) PIPE_CMD="gzip -dc";;
 				ZIP|zip) PIPE_CMD="unzip -p";;
@@ -1205,8 +1208,7 @@ kernel-2_src_unpack() {
 	# fix a problem on ppc where TOUT writes to /usr/src/linux breaking sandbox
 	# only do this for kernel < 2.6.27 since this file does not exist in later
 	# kernels
-	if [[ -n ${KV_MINOR} &&  ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} < 2.6.27 ]]
-	then
+	if [[ -n ${KV_MINOR} &&  ${KV_MAJOR}.${KV_MINOR}.${KV_PATCH} < 2.6.27 ]] ; then
 		sed -i \
 			-e 's|TOUT      := .tmp_gas_check|TOUT  := $(T).tmp_gas_check|' \
 			"${S}"/arch/ppc/Makefile

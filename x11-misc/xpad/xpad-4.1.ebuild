@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.1.ebuild,v 1.8 2013/06/16 19:48:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/xpad-4.1.ebuild,v 1.9 2013/11/22 13:49:55 jer Exp $
 
 EAPI=4
 inherit eutils
 
-DESCRIPTION="A GTK+ 2.0 based 'post-it' note system."
+DESCRIPTION="a sticky note application for jotting down things to remember"
 HOMEPAGE="http://mterry.name/xpad"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.bz2"
 

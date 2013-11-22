@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/pymol-apbs-plugin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-apbs-plugin/ChangeLog,v 1.10 2013/06/19 04:19:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-apbs-plugin/ChangeLog,v 1.11 2013/11/22 13:38:23 jlec Exp $
+
+*pymol-apbs-plugin-2.1_p26 (22 Nov 2013)
+
+  22 Nov 2013; Justin Lecher <jlec@gentoo.org>
+  +pymol-apbs-plugin-2.1_p26.ebuild,
+  +files/pymol-apbs-plugin-2.1_p26-tcltk8.6.patch, metadata.xml:
+  Version BUmp, add fix for tcltk8.6 support
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry
