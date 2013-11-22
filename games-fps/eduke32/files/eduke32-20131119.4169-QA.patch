@@ -6,7 +6,7 @@ Subject: build system
 
 --- eduke32_20130201-3453/Makefile
 +++ eduke32_20130201-3453/Makefile
-@@ -308,10 +308,10 @@
+@@ -311,10 +311,10 @@
  endif
  
  COMPILER=$(CC) $(OURCONLYFLAGS)
@@ -21,29 +21,29 @@ Subject: build system
  ifeq ($(PRETTY_OUTPUT),1)
 --- eduke32_20130201-3453/Makefile.common
 +++ eduke32_20130201-3453/Makefile.common
-@@ -8,13 +8,14 @@
- PRETTY_OUTPUT ?= 1
+@@ -10,13 +10,14 @@
  
  # Tools
--CC=gcc
--CXX=g++
--AS=nasm
--AR=ar
--RC=windres
--RANLIB=ranlib
--STRIP=strip
-+CC ?= gcc
-+CXX ?= g++
-+AS ?= nasm
-+AR ?= ar
-+RC ?= windres
-+RANLIB ?= ranlib
-+STRIP ?= strip
+ CROSS=
+-CC=$(CROSS)gcc
+-CXX=$(CROSS)g++
+-AS=$(CROSS)nasm
+-AR=$(CROSS)ar
+-RC=$(CROSS)windres
+-RANLIB=$(CROSS)ranlib
+-STRIP=$(CROSS)strip
++CC ?= $(CROSS)gcc
++CXX ?= $(CROSS)g++
++AS ?= $(CROSS)nasm
++AR ?= $(CROSS)ar
++RC ?= $(CROSS)windres
++RANLIB ?= $(CROSS)ranlib
++STRIP ?= $(CROSS)strip
 +PKG_CONFIG ?= pkgconfig
  
  L_CC=$(CC)
  L_CXX=$(CXX)
-@@ -152,7 +153,6 @@
+@@ -164,7 +165,6 @@
  #  FORCEWARNINGS - 1 = do not disable any compiler warnings within the source
  #  KRANDDEBUG - 1 = include logging of krand() calls for debugging the demo system
  #  EFENCE  - 1 = compile with Electric Fence for malloc() debugging
@@ -51,20 +51,26 @@ Subject: build system
  #  LTO - 1 = enable link-time optimization, for GCC 4.5 and up
  #
  CPLUSPLUS?=0
-@@ -163,7 +163,6 @@
- FORCEWARNINGS?=0
- EFENCE?=0
- DMALLOC?=0
--OPTLEVEL?=2
+@@ -178,13 +178,6 @@
  PROFILER?=0
  MUDFLAP?=0
  
-@@ -269,10 +268,9 @@
+-# Select the default optimization level for release and debug builds.
+-ifeq ($(RELEASE),0)
+-    OPTLEVEL?=0
+-else
+-    OPTLEVEL?=2
+-endif
+-
+ ifeq ($(RELEASE),0)
+     override STRIP=
+ endif
+@@ -293,10 +286,9 @@
  
  # compiler flags etc.
  BASECFLAGS=
 -BASECONLYFLAGS=-Wimplicit -Wdeclaration-after-statement
--BASECXXFLAGS= -fno-exceptions -fno-rtti -fpermissive -Wno-write-strings -Wno-narrowing
+-BASECXXFLAGS= -fno-exceptions -fno-rtti -fpermissive -Wno-write-strings
 -BASEASFLAGS=-s #-g
 -BASELDFLAGS=
 +BASECONLYFLAGS = $(CFLAGS) -std=gnu89 -Wimplicit -Wdeclaration-after-statement
@@ -73,58 +79,48 @@ Subject: build system
  
  
  ifeq (1,$(strip $(shell expr $(GCC_MAJOR) \>= 4)))
-@@ -300,14 +298,11 @@
-         debug=-g
-     else ifeq ($(PLATFORM), WII)
-         debug=-g
--    else
--        debug=-ggdb
-     endif
+@@ -330,19 +322,6 @@
  endif
  
- ifneq (0,$(RELEASE))
-     # Debugging disabled
--    debug+= -O$(OPTLEVEL)
-     ifeq (0,$(CLANG))
-         debug+= -funswitch-loops
-         ifeq (1,$(strip $(shell expr $(GCC_MAJOR) \< 4)))
-@@ -330,7 +325,6 @@
-     endif
- else
-     # Debugging enabled
--    debug+= -O0
  
-     ifeq (0,$(DEBUGANYWAY))
-         debug+= -DDEBUGGINGAIDS
-@@ -411,7 +405,7 @@
+-ifneq ($(RELEASE)$(DEBUGANYWAY),10)
+-    # debug build or DEBUGANYWAY=1 --> -g flag
+-    ifneq (0,$(CLANG))
+-        debug=-g
+-    else ifeq ($(PLATFORM), WII)
+-        debug=-g
+-    else
+-        debug=-ggdb
+-    endif
+-endif
+-
+-debug+= -O$(OPTLEVEL)
+-
+ # See http://clang.llvm.org/docs/UsersManual.html#controlling-code-generation
+ # for a list of possible UBSan options.
+ # Clang 3.2 does only supports -fsanitize=address for the AddressSanitizer
+@@ -458,7 +437,7 @@
  
- #### Lunatic development, do not touch!
- LUNATIC=0
--LUAJIT=luajit
-+LUAJIT=$(shell command -v luajit || command -v luajit-2 || command -v luajit-2.0)
- 
- # for LJ headers:
- LUAJIT_WIN_SRC:= g:/mod/LuaJIT-2.0.0-beta8/src
-@@ -424,14 +418,14 @@
-     ifeq ($(PLATFORM),WINDOWS)
-         BASECOMMONFLAGS+= -I$(LUAJIT_WIN_SRC)
-     else
--        BASECOMMONFLAGS+= -I/usr/local/include/luajit-2.0
-+        BASECOMMONFLAGS+= $(shell $(PKG_CONFIG) --cflags luajit 2>/dev/null || $(PKG_CONFIG) --cflags luajit-2.0)
-     endif
-     BASECOMMONFLAGS+= -I$(SRC)/lunatic -DLUNATIC
- 
+ #### Lunatic development
+ # LuaJIT standalone interpreter executable:
+-LUAJIT:=luajit
++LUAJIT:=$(shell command -v luajit || command -v luajit-2 || command -v luajit-2.0)
+ # Options to "luajit -b" for synthesis. Since it runs on Linux, we need to tell
+ # the native LuaJIT to emit PE object files.
+ ifneq ($(SYNTHESIS),0)
+@@ -487,7 +466,8 @@
      ifeq ($(PLATFORM),WINDOWS)
          BASELIBS+= -lluajit
      else
 -        BASELIBS+= -lluajit-5.1
++        BASECOMMONFLAGS+= $(shell $(PKG_CONFIG) --cflags luajit 2>/dev/null || $(PKG_CONFIG) --cflags luajit-2.0)
 +        BASELIBS+= $(shell $(PKG_CONFIG) --libs luajit 2>/dev/null || $(PKG_CONFIG) --libs luajit-2.0)
      endif
  endif
  
 --- eduke32_20130201-3453/build/Makefile
 +++ eduke32_20130201-3453/build/Makefile
-@@ -166,13 +166,15 @@
+@@ -167,13 +167,15 @@
  OURCOMMONFLAGS+= $(BUILDCOMMONFLAGS)
  
  COMPILER=$(CC) $(OURCONLYFLAGS)
@@ -136,13 +132,14 @@ Subject: build system
 +    LINKER=$(L_CXX) $(OURCXXFLAGS)
  endif
  
+-.SILENT:
 +ifeq ($(PRETTY_OUTPUT),1)
- .SILENT:
++ .SILENT:
 +endif
  .PHONY: clean cleanutils veryclean all utils dxutils sdlutils printutils printsdlutils printdxutils enginelib editorlib
  
  # TARGETS
-@@ -265,7 +267,7 @@
+@@ -266,7 +268,7 @@
  	if $(LINKER) -o $@ $^ $(OURLDFLAGS) $(UTILLIBS) -I$(SDLROOT)/include -I$(SDLROOT)/include/SDL; then $(ONESTEP_OK); else $(ONESTEP_FAILED); fi
  arttool$(EXESUFFIX): $(OBJ)/arttool.$o $(UTILADDOBJS)
  	$(ONESTEP_STATUS)

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15219 2013/11/22 18:59:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15220 2013/11/22 19:44:09 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -203,11 +203,6 @@ media-video/pyqtrailer
 # Requires a NPN support in mod_ssl (www-server/apache) to work.
 # See #471512 for more details.
 www-apache/mod_spdy
-
-# Pacho Ramos <pacho@gentoo.org> (12 Oct 2013)
-# This meta is no longer needed, bug #480612
-# Removal in a month.
->=gnome-extra/gnome-utils-3.4
 
 # Markos Chandras <hwoarang@gentoo.org> (10 Oct 2013)
 # Masked for futher testing with various pam setups

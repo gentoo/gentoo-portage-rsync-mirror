@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20131008.ebuild,v 1.1 2013/10/08 21:09:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/emul-linux-x86-opengl-20131008.ebuild,v 1.2 2013/11/22 19:33:06 pacho Exp $
 
 EAPI=5
 inherit emul-linux-x86
 
 SRC_URI="!abi_x86_32? ( ${SRC_URI} )"
 LICENSE="!abi_x86_32? ( BSD MIT LGPL-3 SGI-B-2.0 ) abi_x86_32? ( metapackage )"
-KEYWORDS="-* ~amd64 ~amd64-linux"
+KEYWORDS="-* amd64 ~amd64-linux"
 IUSE="abi_x86_32"
 
 DEPEND="app-admin/eselect-opengl

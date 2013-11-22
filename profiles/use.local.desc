@@ -2373,14 +2373,14 @@ games-fps/duke3d:demo - Install the demo files
 games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
 games-fps/eduke32:demo - Install games-fps/duke3d-demodata as well
 games-fps/eduke32:gtk - Compile with gtk launcher
-games-fps/eduke32:offensive - Include optional XXX texture pack
+games-fps/eduke32:offensive - Include optional XXX texture pack (needs USE 'textures')
 games-fps/eduke32:opl-musicpack - Include optional OPL (AdLib) music pack
 games-fps/eduke32:samples - Install samples
 games-fps/eduke32:sc55-musicpack - Include optional Roland SC-55 music pack
 games-fps/eduke32:server - Compile with server support
-games-fps/eduke32:textures - Include optional high-resolution textures
+games-fps/eduke32:textures - Include optional high-resolution textures (needs USE 'opengl')
 games-fps/eduke32:tools - Build several tools for modding and development
-games-fps/eduke32:vpx - Enable support for WebM VP8 Codecs
+games-fps/eduke32:vpx - Enable support for WebM VP8 Codecs (needs USE 'opengl')
 games-fps/ezquake-bin:security - install the security module needed for some servers
 games-fps/lsdldoom:freedoom - Install games-fps/freedoom wad file
 games-fps/lsdldoom:net - Enables network game support

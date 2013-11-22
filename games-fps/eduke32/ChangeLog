@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/eduke32
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/ChangeLog,v 1.8 2013/06/28 00:07:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/eduke32/ChangeLog,v 1.9 2013/11/22 19:44:23 hasufell Exp $
+
+*eduke32-20131119.4169 (22 Nov 2013)
+
+  22 Nov 2013; Julian Ospald <hasufell@gentoo.org>
+  -eduke32-20130207.3467.ebuild, -files/eduke32-20130207.3467-QA.patch,
+  -eduke32-20130317.3572.ebuild, +eduke32-20131119.4169.ebuild,
+  +files/eduke32-20131119.4169-QA.patch, metadata.xml:
+  version bump, remove old
 
 *eduke32-20130627.3905 (28 Jun 2013)
 

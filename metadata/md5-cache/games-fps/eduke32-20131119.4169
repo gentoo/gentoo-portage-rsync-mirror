@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=media-libs/flac media-libs/libogg media-libs/libsdl[X,joystick,opengl?,video] media-libs/libvorbis media-libs/sdl-mixer[timidity] sys-libs/zlib gtk? ( x11-libs/gtk+:2 ) opengl? ( virtual/glu virtual/opengl vpx? ( media-libs/libvpx ) ) png? ( media-libs/libpng:0= sys-libs/zlib ) app-arch/unzip app-arch/xz-utils x86? ( dev-lang/nasm ) >=sys-apps/sed-4
+DESCRIPTION=Port of Duke Nukem 3D for SDL
+EAPI=5
+HOMEPAGE=http://www.eduke32.com/ http://hrp.duke4.net/
+IUSE=cdinstall debug demo gtk offensive +opengl opl-musicpack +png samples sc55-musicpack +server textures tools +vpx
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 BUILDLIC textures? ( hrp_art )
+PDEPEND=cdinstall? ( games-fps/duke3d-data ) demo? ( games-fps/duke3d-demodata )
+RDEPEND=media-libs/flac media-libs/libogg media-libs/libsdl[X,joystick,opengl?,video] media-libs/libvorbis media-libs/sdl-mixer[timidity] sys-libs/zlib gtk? ( x11-libs/gtk+:2 ) opengl? ( virtual/glu virtual/opengl vpx? ( media-libs/libvpx ) ) png? ( media-libs/libpng:0= sys-libs/zlib )
+REQUIRED_USE=?? ( opl-musicpack sc55-musicpack )
+SLOT=0
+SRC_URI=http://dukeworld.duke4.net/eduke32/synthesis/20131119-4169/eduke32_src_20131119-4169.tar.xz http://dev.gentoo.org/~hasufell/distfiles/eduke32-icons.tar textures? ( http://www.duke4.org/files/nightfright/duke3d_hrp.zip -> duke3d_hrp_5.2.zip ) sc55-musicpack? ( http://www.duke4.org/files/nightfright/music/duke3d_mus.zip -> duke3d_mus_3.0.zip ) opl-musicpack? ( http://www.duke4.org/files/nightfright/music/duke3d_musopl.zip -> duke3d_musopl_2.0.zip ) offensive? ( http://www.duke4.org/files/nightfright/duke3d_xxx.zip -> duke3d_xxx_1.33.zip )
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c37052d476d8d6ef09abf21e4ec1264d
