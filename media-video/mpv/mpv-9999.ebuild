@@ -1,24 +1,26 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.27 2013/11/16 13:43:07 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.28 2013/11/22 02:55:16 tomwij Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://github.com/mpv-player/mpv.git"
+EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 
-inherit toolchain-funcs flag-o-matic multilib base pax-utils
-[[ ${PV} == *9999* ]] && inherit git-2
+inherit flag-o-matic base waf-utils pax-utils
+[[ ${PV} == *9999* ]] && inherit git-r3
 
 DESCRIPTION="Video player based on MPlayer/mplayer2"
 HOMEPAGE="http://mpv.io/"
 [[ ${PV} == *9999* ]] || \
 SRC_URI="https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+[[ ${PV} == *9999* ]] && \
+SRC_URI="https://waf.googlecode.com/files/waf-1.7.13"
 
 LICENSE="GPL-2"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa bluray bs2b +cdio doc-pdf dvb +dvd +enca encode +iconv jack -joystick
+IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd +enca encode +iconv jack -joystick
 jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mpg123 -openal +opengl oss
 portaudio +postproc pulseaudio pvr +quvi -radio samba +shm +threads v4l vaapi
 vcd vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
@@ -135,24 +137,9 @@ DEPEND="${RDEPEND}
 DOCS=( Copyright README.md etc/example.conf etc/input.conf etc/encoding-example-profiles.conf )
 
 pkg_setup() {
-	if [[ ${PV} == *9999* ]]; then
-		elog
-		elog "This is a live ebuild which installs the latest from upstream's"
-		elog "git repository, and is unsupported by Gentoo."
-		elog "Everything but bugs in the ebuild itself will be ignored."
-		elog
-	fi
-
 	if use !libass; then
 		ewarn
 		ewarn "You've disabled the libass flag. No OSD or subtitles will be displayed."
-	fi
-
-	if use openal; then
-		ewarn
-		ewarn "You've enabled the openal flag. OpenAL is disabled by default,"
-		ewarn "because it supposedly inteferes with some other configure tests"
-		ewarn "and makes them fail silently."
 	fi
 
 	einfo "For additional format support you need to enable the support on your"
@@ -160,160 +147,96 @@ pkg_setup() {
 	einfo "    media-video/libav or media-video/ffmpeg"
 }
 
-src_prepare() {
-	# fix path to bash executable in configure scripts
-	sed -i -e "1c\#!${EPREFIX}/bin/bash" \
-		configure version.sh || die
+src_unpack() {
+	if [[ ${PV} == *9999* ]]; then
+		git-r3_src_unpack
 
+		cp "${DISTDIR}"/waf-1.7.13 "${S}"/waf || die
+		chmod 0755 "${S}"/waf || die
+	else
+		default_src_unpack
+	fi
+}
+
+src_prepare() {
 	base_src_prepare
 }
 
 src_configure() {
-	local myconf=""
-	local uses i
-
-	# ebuild uses "use foo || --disable-foo" to forcibly disable
-	# compilation in almost every situation. The reason for this is
-	# because if --enable is used, it will force the build of that option,
-	# regardless of whether the dependency is available or not.
-
-	#####################
-	# Optional features #
-	#####################
-	# SDL output is fallback for platforms where nothing better is available
-	myconf+=" --disable-sdl --disable-sdl2"
-	use encode || myconf+=" --disable-encoding"
-	myconf+=" $(use_enable joystick)"
-	uses="bluray vcd"
-	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-${i}"
-	done
-	use quvi || myconf+=" --disable-libquvi4 --disable-libquvi9"
-	use samba || myconf+=" --disable-smb"
-	use lirc || myconf+=" --disable-lirc --disable-lircc"
-	use lua || myconf+=" --disable-lua"
-	use luajit && myconf+=" --lua=luajit"
-	use doc-pdf || myconf+=" --disable-pdf"
-
-	########
-	# CDDA #
-	########
-	use cdio || myconf+=" --disable-libcdio"
-
-	############
-	# DVD read #
-	############
-	use dvd || myconf+=" --disable-dvdread"
-
-	#############
-	# Subtitles #
-	#############
-	uses="enca iconv libass libguess"
-	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-${i}"
-	done
-
-	#####################################
-	# DVB / Video4Linux / Radio support #
-	#####################################
-	use dvb || myconf+=" --disable-dvb"
-	use pvr || myconf+=" --disable-pvr"
-	use v4l || myconf+=" --disable-libv4l2 --disable-tv --disable-tv-v4l2"
-	if use radio; then
-		myconf+=" --enable-radio --enable-radio-capture"
-	else
-		myconf+=" --disable-radio-v4l2"
-	fi
-
-	##########
-	# Codecs #
-	##########
-	uses="jpeg mpg123"
-	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-${i}"
-	done
-
-	################
-	# Video Output #
-	################
-	use libcaca || myconf+=" --disable-caca"
-	use postproc || myconf+=" --disable-libpostproc"
-
-	################
-	# Audio Output #
-	################
-	myconf+=" --disable-rsound" # media-sound/rsound is in pro-audio overlay only
-	uses="alsa jack ladspa portaudio"
-	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-${i}"
-	done
-	use bs2b || myconf+=" --disable-libbs2b"
-	use openal && myconf+=" --enable-openal"
-	use oss || myconf+=" --disable-ossaudio"
-	use pulseaudio || myconf+=" --disable-pulse"
-
-	####################
-	# Advanced Options #
-	####################
-	# keep build reproducible
-	myconf+=" --disable-build-date"
-	# do not add -g to CFLAGS
-	myconf+=" --disable-debug"
-	use threads || myconf+=" --disable-pthreads"
-
-	# Platform specific flags, hardcoded on amd64 (see below)
-	use shm || myconf+=" --disable-shm"
-
 	if use x86 && gcc-specs-pie; then
 		filter-flags -fPIC -fPIE
 		append-ldflags -nopie
 	fi
 
-	###########################
-	# X enabled configuration #
-	###########################
-	use X || myconf+=" --disable-x11"
-	uses="vaapi vdpau wayland xinerama xv"
-	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-${i}"
-	done
-	use opengl || myconf+=" --disable-gl"
-	use lcms || myconf+=" --disable-lcms2"
-	use xscreensaver || myconf+=" --disable-xss"
-
-	CFLAGS= LDFLAGS= ./configure \
-		--cc="$(tc-getCC)" \
-		--extra-cflags="${CFLAGS}" \
-		--extra-ldflags="${LDFLAGS}" \
-		--pkg-config="$(tc-getPKG_CONFIG)" \
-		--prefix="${EPREFIX}"/usr \
-		--bindir="${EPREFIX}"/usr/bin \
+	# keep build reproducible
+	# do not add -g to CFLAGS
+	# SDL output is fallback for platforms where nothing better is available
+	# media-sound/rsound is in pro-audio overlay only
+	waf-utils_src_configure \
+		--disable-build-date \
+		--disable-debug-build \
+		--disable-sdl \
+		--disable-sdl2 \
+		--disable-rsound \
+		$(use_enable encode encoding) \
+		$(use_enable joystick) \
+		$(use_enable bluray libbluray) \
+		$(use_enable vcd) \
+		$(use_enable quvi libquvi4) \
+		--disable-libquvi9 \
+		$(use_enable samba libsmbclient) \
+		$(use_enable lirc) \
+		$(use_enable lirc lircc) \
+		$(use_enable lua) \
+		$(usex luajit '--lua=luajit' '') \
+		$(use_enable doc-pdf pdf-build) \
+		$(use_enable vf-dlopen vf-dlopen-filters) \
+		$(use_enable cdio cdda) \
+		$(use_enable dvd dvdread) \
+		$(use_enable enca) \
+		$(use_enable iconv) \
+		$(use_enable libass) \
+		$(use_enable libguess) \
+		$(use_enable dvb) \
+		$(use_enable pvr) \
+		$(use_enable v4l libv4l2) \
+		$(use_enable v4l tv) \
+		$(use_enable v4l tv-v4l2) \
+		$(use_enable radio) \
+		$(use_enable radio radio-capture) \
+		$(use_enable radio radio-v4l2) \
+		$(use_enable mpg123) \
+		$(use_enable jpeg) \
+		$(use_enable libcaca caca) \
+		$(use_enable postproc libpostproc) \
+		$(use_enable alsa) \
+		$(use_enable jack) \
+		$(use_enable ladspa) \
+		$(use_enable portaudio) \
+		$(use_enable bs2b libbs2b) \
+		$(use_enable openal) \
+		$(use_enable oss oss-audio) \
+		$(use_enable pulseaudio pulse) \
+		$(use_enable threads pthreads) \
+		$(use_enable shm) \
+		$(use_enable X x11) \
+		$(use_enable vaapi) \
+		$(use_enable vdpau) \
+		$(use_enable wayland) \
+		$(use_enable xinerama) \
+		$(use_enable xv) \
+		$(use_enable opengl gl) \
+		$(use_enable lcms lcms2) \
+		$(use_enable xscreensaver xss) \
 		--confdir="${EPREFIX}"/etc/${PN} \
 		--mandir="${EPREFIX}"/usr/share/man \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		${myconf} || die
-
-	MAKEOPTS+=" V=1"
-}
-
-src_compile() {
-	base_src_compile
-
-	if use vf-dlopen; then
-		tc-export CC
-		emake -C TOOLS/vf_dlopen
-	fi
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}
 }
 
 src_install() {
-	base_src_install
+	waf-utils_src_install
 
 	if use luajit; then
 		pax-mark -m "${ED}"usr/bin/mpv
-	fi
-
-	if use vf-dlopen; then
-		exeinto /usr/$(get_libdir)/${PN}
-		doexe TOOLS/vf_dlopen/*.so
 	fi
 }

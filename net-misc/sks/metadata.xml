@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>kf@sumptuouscapital.com</email>
+		<name>Kristian Fiskerstrand</name>
+		<description>Maintainer, assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>mrueg@gentoo.org</email>
+		<name>Manuel Rüger</name>
+		<description>Proxy-Maintainer, CC him on bugs</description>
 	</maintainer>
 	<use>
 		<flag name="optimize">Enables bytecode optimization</flag>
 	</use>
 	<upstream>
-		<remote-id type="google-code">sks-keyserver</remote-id>
+		<remote-id type="bitbucket">skskeyserver/sks-keyserver</remote-id>
 	</upstream>
 </pkgmetadata>

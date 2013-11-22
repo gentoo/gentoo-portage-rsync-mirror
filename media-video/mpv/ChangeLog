@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.40 2013/11/16 13:43:07 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.41 2013/11/22 02:55:16 tomwij Exp $
+
+  22 Nov 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
+  Upstream migrated to waf, migrate 9999 ebuild to git-r3 and made it use https;
+  proxied commit for Nikoli.
 
 *mpv-0.2.3 (16 Nov 2013)
 

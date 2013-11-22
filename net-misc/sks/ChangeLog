@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/sks
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.6 2012/12/20 21:28:08 pacho Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/ChangeLog,v 1.7 2013/11/22 02:35:45 mrueg Exp $
+
+*sks-1.1.4 (22 Nov 2013)
+
+  22 Nov 2013; Manuel Rüger <mrueg@gentoo.org>
+  +files/sks-1.1.4-ECC_OID_fix_x86.patch, +files/sks-db.initd,
+  +files/sks-db.service, +files/sks-recon.initd, +files/sks-recon.service,
+  +files/sks.confd, +sks-1.1.4.ebuild, metadata.xml:
+  Version bump. Add initd scripts and systemd unit files by Emery Hemingway.
+  Fixes bug #427030. Add Kristian Fiskerstrand as maintainer and proxy-
+  maintainers as herd.
 
   20 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him
