@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.2 2013/11/13 20:20:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.3 2013/11/22 21:19:06 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -15,10 +15,10 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="calendar collab cups eds +goffice grammar +introspection latex map math ots openxml +plugins readline redland spell wordperfect wmf thesaurus"
+IUSE="calendar collab cups eds +goffice grammar +introspection latex map math ots +plugins readline redland spell wordperfect wmf thesaurus"
 
 # You need 'plugins' enabled if want to enable the extra plugins
-REQUIRED_USE="!plugins? ( !collab !grammar !latex !math !openxml !ots !readline !thesaurus !wordperfect !wmf )"
+REQUIRED_USE="!plugins? ( !collab !grammar !latex !math !ots !readline !thesaurus !wordperfect !wmf )"
 
 RDEPEND="
 	>=app-text/wv-1.2
@@ -94,7 +94,8 @@ src_configure() {
 
 		# Plugins not depending on anything
 		plugins="${plugins} gimp bmp freetranslation iscii s5 babelfish opml eml
-			wikipedia gdict passepartout google presentation urldict hrtext mif"
+			wikipedia gdict passepartout google presentation urldict hrtext mif
+			openxml"
 
 		# inter7eps: eps.h
 		# libtidy: gsf + tidy.h
@@ -103,7 +104,6 @@ src_configure() {
 		use goffice && plugins="${plugins} goffice"
 		use latex && plugins="${plugins} latex"
 		use math && plugins="${plugins} mathview"
-		use openxml && plugins="${plugins} openxml"
 		use ots && plugins="${plugins} ots"
 		# psion: >=psiconv-0.9.4
 		use readline && plugins="${plugins} command"
