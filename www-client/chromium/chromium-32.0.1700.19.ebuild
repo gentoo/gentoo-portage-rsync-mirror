@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.19.ebuild,v 1.1 2013/11/21 03:40:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.19.ebuild,v 1.2 2013/11/22 01:07:42 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -344,10 +344,13 @@ src_configure() {
 	local myarch="$(tc-arch)"
 	if [[ $myarch = amd64 ]] ; then
 		target_arch=x64
+		ffmpeg_target_arch=x64
 	elif [[ $myarch = x86 ]] ; then
 		target_arch=ia32
+		ffmpeg_target_arch=ia32
 	elif [[ $myarch = arm ]] ; then
 		target_arch=arm
+		ffmpeg_target_arch=$(usex neon arm-neon arm)
 		# TODO: re-enable NaCl (NativeClient).
 		local CTARGET=${CTARGET:-${CHOST}}
 		if [[ $(tc-is-softfloat) == "no" ]]; then
@@ -399,7 +402,7 @@ src_configure() {
 	# Re-configure bundled ffmpeg. See bug #491378 for example reasons.
 	einfo "Configuring bundled ffmpeg..."
 	pushd third_party/ffmpeg > /dev/null || die
-	chromium/scripts/build_ffmpeg.sh linux ${target_arch} "${PWD}" config-only || die
+	chromium/scripts/build_ffmpeg.sh linux ${ffmpeg_target_arch} "${PWD}" config-only || die
 	chromium/scripts/copy_config.sh || die
 	popd > /dev/null || die
 

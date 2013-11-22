@@ -10,4 +10,4 @@ RDEPEND=>=app-accessibility/speech-dispatcher-0.8:= app-arch/bzip2:= app-arch/sn
 SLOT=0
 SRC_URI=https://commondatastorage.googleapis.com/chromium-browser-official/chromium-32.0.1700.19.tar.xz test? ( https://commondatastorage.googleapis.com/chromium-browser-official/chromium-32.0.1700.19-testdata.tar.xz )
 _eclasses_=chromium	cb805b418b1d27c585f6b2a3321d19ee	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	pax-utils	2424f959506320f5196de8f79fa05297	portability	536c5e70c5fb252ed3b769e04aa3f05b	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=a22698bf16709aaa86fee9010bbbab47
+_md5_=8ef4988895ec8ee6a87cc42c0ea4391f
