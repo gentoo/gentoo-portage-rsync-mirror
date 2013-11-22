@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pysolfc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.12 2013/10/28 22:08:27 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.13 2013/11/22 18:50:17 mr_bones_ Exp $
+
+  22 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> pysolfc-2.0-r2.ebuild:
+  just use dev-python/pillow
 
   28 Oct 2013; Julian Ospald <hasufell@gentoo.org> pysolfc-2.0-r2.ebuild:
   respect GAMES variables wrt #489694
