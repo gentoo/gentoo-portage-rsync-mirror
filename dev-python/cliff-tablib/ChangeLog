@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/cliff-tablib
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cliff-tablib/ChangeLog,v 1.1 2013/11/23 09:59:18 idella4 Exp $
+
+*cliff-tablib-1.1 (23 Nov 2013)
+
+  23 Nov 2013; Ian Delaney <idella4@gentoo.org> +cliff-tablib-1.1.ebuild,
+  +metadata.xml:
+  new dep of test pahse of python-neutronclient, req'd for openstack, ebuild
+  prepped by me

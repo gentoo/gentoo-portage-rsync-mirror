@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-2013.1.1.ebuild,v 1.1 2013/07/07 19:15:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-2013.1.1.ebuild,v 1.2 2013/11/23 09:32:46 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit cuda distutils-r1 multilib
 
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-python/decorator[${PYTHON_USEDEP}]
 	dev-python/mako[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
-	>=dev-python/pytools-2011.2[${PYTHON_USEDEP}]
+	>=dev-python/pytools-2013[${PYTHON_USEDEP}]
 	dev-util/nvidia-cuda-toolkit
 	x11-drivers/nvidia-drivers
 	opengl? ( virtual/opengl )"

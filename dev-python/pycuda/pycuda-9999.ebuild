@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-9999.ebuild,v 1.13 2013/07/07 19:15:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-9999.ebuild,v 1.14 2013/11/23 09:32:46 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit cuda distutils-r1 git-2 multilib
 
@@ -56,7 +56,7 @@ python_prepare_all() {
 
 python_configure() {
 	local myopts=()
-	use opengl && myopts+=(--cuda-enable-gl)
+	use opengl && myopts+=( --cuda-enable-gl )
 
 	mkdir "${BUILD_DIR}" || die
 	cd "${BUILD_DIR}" || die
@@ -72,7 +72,7 @@ python_configure() {
 		--cuda-inc-dir="${EPREFIX}/opt/cuda/include" \
 		--no-use-shipped-boost \
 		"${myopts[@]}"
-	}
+}
 src_test() {
 	# we need write access to this to run the tests
 	addwrite /dev/nvidia0
