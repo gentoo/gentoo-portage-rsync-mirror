@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.338 2013/09/07 20:13:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.339 2013/11/23 13:31:33 ssuominen Exp $
+
+  23 Nov 2013; Samuli Suominen <ssuominen@gentoo.org> xscreensaver-5.22.ebuild:
+  x86 stable wrt #480990; thanks to Galym Kerimbekov and Myckel Habets for
+  testing
 
   07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> xscreensaver-5.22.ebuild:
   Stable for sparc, wrt bug #480990
