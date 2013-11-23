@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/umurmur
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/ChangeLog,v 1.7 2013/11/22 15:11:55 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/ChangeLog,v 1.8 2013/11/23 06:54:54 patrick Exp $
+
+  23 Nov 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   22 Nov 2013; Julian Ospald <hasufell@gentoo.org> umurmur-0.2.13.ebuild:
   set slot 0 for dev-libs/openssl

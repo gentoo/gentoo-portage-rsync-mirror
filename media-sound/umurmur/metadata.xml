@@ -14,10 +14,6 @@
 		run on routers with an open OS like OpenWRT. The server part
 		of Mumble is called Murmur, hence the name uMurmur.
 	</longdescription>
-	<use>
-		<flag name='polarssl'>Use <pkg>net-libs/polarssl</pkg>
-			instead of <pkg>dev-libs/openssl</pkg></flag>
-	</use>
 	<upstream>
 		<maintainer status='active'>
 			<email>fatbob.snack@gmail.com</email>
