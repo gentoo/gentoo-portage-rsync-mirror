@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.126 2013/11/12 02:40:23 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.127 2013/11/23 11:50:01 gienah Exp $
+
+*libxcb-1.9.1-r1 (23 Nov 2013)
+
+  23 Nov 2013; Mark Wright <gienah@gentoo.org>
+  +files/libxcb-1.9.1-conflicting-types-for-xcb_ge_event_t.patch,
+  +files/libxcb-1.9.1-list-object-has-no-attribute-lenfield_name.patch,
+  +libxcb-1.9.1-r1.ebuild:
+  Part of fix for bug 491496, thanks to Rion for reporting, thanks to gerardo
+  for the libxcb-list-object-has-no-attribute-lenfield_name.patch. libxcb-1.9.1
+  -conflicting-types-for-xcb_ge_event_t.patch by me. Fix bug 472032, thanks to
+  Myckel Habets for reporting.
 
   12 Nov 2013; Matt Turner <mattst88@gentoo.org> libxcb-1.9.3.ebuild:
   Update dependency on xcb-proto to make sure users get the fix for bug 490928.
