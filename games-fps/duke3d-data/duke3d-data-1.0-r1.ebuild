@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/duke3d-data-1.0-r1.ebuild,v 1.2 2013/11/22 23:06:53 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d-data/duke3d-data-1.0-r1.ebuild,v 1.3 2013/11/23 19:31:35 hasufell Exp $
 
 EAPI=5
 
@@ -16,11 +16,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="gog"
 REQUIRED_USE="^^ ( cdinstall gog )"
+RESTRICT="gog? ( fetch )"
 
 DEPEND="gog? ( app-arch/innoextract )"
 RDEPEND="|| ( games-fps/eduke32 games-fps/duke3d )"
 
 S=${WORKDIR}
+
+pkg_nofetch() {
+	einfo "Please download ${A} from your GOG.com account after buying Duke Nukem 3d"
+	einfo "and put it into ${DISTDIR}."
+}
 
 src_unpack() {
 	if use cdinstall ; then
