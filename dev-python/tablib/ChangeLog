@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/tablib
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tablib/ChangeLog,v 1.1 2013/11/23 07:29:25 idella4 Exp $
+
+*tablib-0.9.11 (23 Nov 2013)
+
+  23 Nov 2013; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +tablib-0.9.11.ebuild:
+  new dep of new dep cliff-tablib req'd for openstack, ebuild prepped by me
