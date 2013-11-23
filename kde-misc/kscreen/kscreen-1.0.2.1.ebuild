@@ -1,18 +1,18 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.1.ebuild,v 1.2 2013/11/04 12:40:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/kscreen-1.0.2.1.ebuild,v 1.1 2013/11/23 14:50:26 johu Exp $
 
 EAPI=5
 
 VIRTUALX_REQUIRED="test"
 DECLARATIVE_REQUIRED="always"
-KDE_LINGUAS="bs cs da de el es et fi fr ga gl hu it lt mr nl pt pt_BR ro ru sk
-sl sv tr uk zh_CN zh_TW"
+KDE_LINGUAS="bs ca cs da de el es et fi fr ga gl hu it lt mr nl pt pt_BR ro ru
+sk sl sv tr ug uk zh_CN zh_TW"
 inherit kde4-base
 
 DESCRIPTION="Alternative KDE screen management"
 HOMEPAGE="https://projects.kde.org/projects/kdereview/kscreen"
-SRC_URI="mirror://kde/stable/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="4"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="
-	>=x11-libs/libkscreen-${PV}
+	>=x11-libs/libkscreen-1.0.2
 	>=dev-libs/qjson-0.8
 "
 RDEPEND="${DEPEND}"
