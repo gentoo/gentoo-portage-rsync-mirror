@@ -1,9 +1,8 @@
 Many clients seem to use blockquote tags to flag quotes these days, so
 write them out as quotes, so they remain readable.
 
-diff -ru src.orig/html_tag.c src/html_tag.c
---- src.orig/html_tag.c	2013-09-11 11:51:53.000000000 +0200
-+++ src/html_tag.c	2013-09-11 12:43:25.000000000 +0200
+--- vilistextum-2.6.9/src/html_tag.c
++++ vilistextum-2.6.9/src/html_tag.c
 @@ -87,8 +87,8 @@
  
  		else if CMP("P", str)  { start_p(); }
@@ -15,9 +14,8 @@ diff -ru src.orig/html_tag.c src/html_tag.c
  		else if CMP("Q", str)  { wort_plus_ch('"'); }
  		else if CMP("/Q", str) { wort_plus_ch('"'); }
  
-diff -ru src.orig/multibyte.h src/multibyte.h
---- src.orig/multibyte.h	2005-09-20 12:57:54.000000000 +0200
-+++ src/multibyte.h	2013-09-11 11:56:13.000000000 +0200
+--- vilistextum-2.6.9/src/multibyte.h
++++ vilistextum-2.6.9/src/multibyte.h
 @@ -16,6 +16,7 @@
   #define ATOI(n) wcstoi(n)
  
@@ -34,9 +32,8 @@ diff -ru src.orig/multibyte.h src/multibyte.h
   #define WORT_PLUS_STRING(str) wort_plus_string(str)
  
   #define STRSTR(haystack, needle) strstr(haystack, needle)
-diff -ru src.orig/text.h src/text.h
---- src.orig/text.h	2013-09-11 12:48:23.000000000 +0200
-+++ src/text.h	2013-09-11 12:48:27.000000000 +0200
+--- vilistextum-2.6.9/src/text.h
++++ vilistextum-2.6.9/src/text.h
 @@ -26,6 +26,7 @@
  
  int tab;
@@ -45,9 +42,8 @@ diff -ru src.orig/text.h src/text.h
  
  void print_zeile();
  int is_zeile_empty();
-diff -ru src.orig/text.c src/text.c
---- src.orig/text.c	2006-01-22 20:31:45.000000000 +0100
-+++ src/text.c	2013-09-11 12:45:09.000000000 +0200
+--- vilistextum-2.6.9/src/text.c
++++ vilistextum-2.6.9/src/text.c
 @@ -28,6 +28,7 @@
  int breite=76,
  	hr_breite=76,
@@ -82,3 +78,36 @@ diff -ru src.orig/text.c src/text.c
        i=0;
        while (i<spaces) { zeile_plus_wort(ONESPACE,1,1); i++; }
  			if (orderedlist>0) { zeile_plus_wort(ONESPACE,1,1); }
+--- vilistextum-2.6.9/tests/check_utf8
++++ vilistextum-2.6.9/tests/check_utf8
+@@ -9,5 +9,6 @@
+ rm -f utf-8-sampler.output.test
+ ../src/vilistextum utf-8-sampler.html utf-8-sampler.output.test
+ 
+-diff >/dev/null utf-8-sampler.output utf-8-sampler.output.test
++sed 's/^> //' utf-8-sampler.output.test | \
++diff >/dev/null utf-8-sampler.output -
+ 
+--- vilistextum-2.6.9/tests/utf-8-sampler.output
++++ vilistextum-2.6.9/tests/utf-8-sampler.output
+@@ -100,8 +100,8 @@
+ ვეპხის ტყაოსანი შოთა რუსთაველი
+ 
+ ღმერთსი შემვედრე, ნუთუ კვლა დამხსნას სოფლისა შრომასა, ცეცხლს, წყალსა და
+-მიწასა, ჰაერთა თანა მრომასა; მომცნეს ფრთენი და აღვფრინდე, მივჰხვდე მას ჩემსა
+-ნდომასა, დღისით და ღამით ვჰხედვიდე მზისა ელვათა კრთომაასა.
++მიწასა, ჰაერთა თანა მრომასა; მომცნეს ფრთენი და აღვფრინდე, მივჰხვდე მას
++ჩემსა ნდომასა, დღისით და ღამით ვჰხედვიდე მზისა ელვათა კრთომაასა.
+ 
+ Tamil poetry of Cupiramaniya Paarathiyar: சுப்ரமணிய பாரதியார் (1882-1921)
+ 
+@@ -446,7 +446,8 @@
+ д, п, and/or т:
+ 
+  Bulgarian:    [ бгдпт ]    [ бгдпт ]     Мога да ям стъкло и не ме боли.
+- Russian:  [ бгдпт ]    [ бгдпт ]    Я могу есть стекло, это мне не вредит.
++ Russian:  [ бгдпт ]    [ бгдпт ]    Я могу есть стекло, это мне не
++вредит.
+  Serbian:  [ бгдпт ]    [ бгдпт ]     Могу јести стакло а да ми не шкоди.
+ 
+   ------------------------------------------------------------------------
