@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/PEAR-Net_SMTP
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.57 2011/12/03 17:48:23 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.58 2013/11/23 21:03:47 mabi Exp $
+
+*PEAR-Net_SMTP-1.6.2 (23 Nov 2013)
+
+  23 Nov 2013; Matti Bickel <mabi@gentoo.org> +PEAR-Net_SMTP-1.6.2.ebuild,
+  -PEAR-Net_SMTP-1.4.1.ebuild, -PEAR-Net_SMTP-1.5.0.ebuild,
+  -PEAR-Net_SMTP-1.5.1.ebuild, -PEAR-Net_SMTP-1.6.0.ebuild:
+  version bump, remove old
 
   03 Dec 2011; Raúl Porcel <armin76@gentoo.org> PEAR-Net_SMTP-1.6.1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #388763
@@ -249,4 +256,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Net_SMTP-1.2.6.ebuild:
   Initial ebuild for the Net_SMTP PEAR package.
-

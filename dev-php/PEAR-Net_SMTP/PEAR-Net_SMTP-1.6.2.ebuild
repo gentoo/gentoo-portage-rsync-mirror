@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/PEAR-Net_SMTP-1.5.0.ebuild,v 1.1 2011/02/15 13:04:42 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/PEAR-Net_SMTP-1.6.2.ebuild,v 1.1 2013/11/23 21:03:47 mabi Exp $
+
+EAPI=5
 
 inherit php-pear-r1
 
