@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.189 2013/10/25 13:49:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.190 2013/11/23 16:40:49 nimiux Exp $
+
+  23 Nov 2013; Chema Alonso <nimiux@gentoo.org> fuse-2.9.3.ebuild:
+  Stable for amd64 wrt bug #489102
 
   25 Oct 2013; Jeroen Roovers <jer@gentoo.org> fuse-2.9.3.ebuild:
   Stable for HPPA (bug #489102).
