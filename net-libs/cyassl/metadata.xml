@@ -41,6 +41,12 @@
 		<flag name="savecert">Support certificate saving</flag>
 		<flag name="sessioncerts">Store session certificates</flag>
 		<flag name="testcert">Enable certificate testing</flag>
+		<flag name="atomicuser">Enable Atomic User Record Layer</flag>
+		<flag name="pkcallbacks">Enable Public Key Callbacks</flag>
+		<flag name="sep">Enable sep extensions</flag>
+		<flag name="maxfragment">Enable Maximum Fragment Length</flag>
+		<flag name="truncatedhmac">Enable Truncated HMAC</flag>
+		<flag name="tlsx">Enable all TLS Extensions</flag>
 		<flag name="errorstrings">Enable error strings table</flag>
 		<flag name="memory">Enable memory callbacks</flag>
 		<flag name="dtls">Enable datagram TLS (must be disabled for tests)</flag>
