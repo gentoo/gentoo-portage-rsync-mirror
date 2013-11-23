@@ -2464,6 +2464,7 @@ games-simulation/flightgear:jsbsim - Enables JSBSim Flight Dynamics Model (defau
 games-simulation/flightgear:oldfdm - Enables deprecated Flight Dynamics Models (LaRCsim, UIUC)
 games-simulation/flightgear:subversion - Enables terrasync scenery downloader
 games-simulation/flightgear:udev - Enables event-based Input devices through virtual/udev
+games-simulation/flightgear:utils - Builds various utilities (fgpanel, terrasync, fgviewer among others)
 games-simulation/flightgear:yasim - Enables YASim Flight Dynamics Model
 games-simulation/openttd:aplaymidi - Enables midi music in game, using aplaymidi as an external player
 games-simulation/openttd:dedicated - Build only the openttd server, and not the client.
