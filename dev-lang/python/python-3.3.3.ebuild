@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.3.ebuild,v 1.1 2013/11/21 22:23:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.3.3.ebuild,v 1.2 2013/11/23 17:23:34 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -302,8 +302,10 @@ pkg_postinst() {
 
 	if [[ "${python_updater_warning}" == "1" ]]; then
 		ewarn "You have just upgraded from an older version of Python."
-		ewarn "You should switch active version of Python ${PV%%.*} and run"
-		ewarn "'python-updater [options]' to rebuild Python modules."
+		ewarn
+		ewarn "Please adjust PYTHON_TARGETS (if so desired), and run emerge with the --newuse or --chanded-use option to rebuild packages installing python modules."
+		ewarn
+		ewarn "For legacy packages, you should switch active version of Python and run 'python-updater [options]' to rebuild Python modules."
 	fi
 }
 
