@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.2.ebuild,v 1.1 2013/08/01 19:43:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.4.ebuild,v 1.1 2013/11/23 08:02:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -54,7 +54,7 @@ RDEPEND="
 		>=www-client/firefox-bin-4.0 ) )
 	flac? ( >=media-libs/flac-1.2.1 )
 	gif? ( media-libs/giflib )
-	gsf? ( >=gnome-extra/libgsf-1.13 )
+	gsf? ( >=gnome-extra/libgsf-1.14.24 )
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0 )
@@ -151,7 +151,7 @@ src_prepare() {
 		-i tests/libtracker-fts/tracker-parser-test.c || die
 	# Fails inside portage, not outside
 	# https://bugzilla.gnome.org/show_bug.cgi?id=699413
-	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+1 d' \
+	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+3 d' \
 		-i tests/tracker-steroids/tracker-test.c || die
 
 	eautoreconf # See bug #367975
