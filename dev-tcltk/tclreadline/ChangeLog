@@ -1,6 +1,17 @@
 # ChangeLog for dev-tcltk/tclreadline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.25 2013/11/17 09:31:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.26 2013/11/23 08:38:24 jlec Exp $
+
+*tclreadline-2.1.0-r4 (23 Nov 2013)
+
+  23 Nov 2013; Justin Lecher <jlec@gentoo.org> +tclreadline-2.1.0-r4.ebuild,
+  +files/tclreadline-2.1.0-alloc-free.patch,
+  files/tclreadline-2.1.0-gold.patch,
+  +files/tclreadline-2.1.0-rl-executing-macro.patch,
+  +files/tclreadline-2.1.0-rl-history-expand.patch,
+  +files/tclreadline-2.1.0-rl-prompt.patch:
+  Add multiple fixes imported from debian and kindly provided by Quentin
+  Minster, #440648
 
 *tclreadline-2.1.0-r3 (17 Nov 2013)
 
