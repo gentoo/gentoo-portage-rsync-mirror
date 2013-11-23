@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.3.5-r1.ebuild,v 1.1 2013/10/16 06:07:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.3.5-r1.ebuild,v 1.2 2013/11/23 16:13:33 graaff Exp $
 
 EAPI=5
 
@@ -12,6 +12,8 @@ RUBY_FAKEGEM_RECIPE_TEST="rspec"
 # No documentation task
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.md CHANGELOG.md ISSUES.md UPGRADING.md"
+
+RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 inherit ruby-fakegem
 
@@ -40,4 +42,8 @@ all_ruby_prepare() {
 	# failing spec, so patch out this spec for now since it is not a
 	# regression.
 	sed -i -e '/works when you bundle exec bundle/,/^  end/ s:^:#:' spec/install/deploy_spec.rb || die
+
+	# Remove unneeded git dependency from gemspec, which we need to use
+	# for bug 491826
+	sed -i -e '/files/ s:^:#:' ${RUBY_FAKEGEM_GEMSPEC} || die
 }
