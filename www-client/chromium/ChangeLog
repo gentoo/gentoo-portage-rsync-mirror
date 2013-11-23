@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.991 2013/11/22 01:07:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.992 2013/11/23 18:51:09 phajdan.jr Exp $
+
+  23 Nov 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-32.0.1700.19.ebuild, chromium-33.0.1711.3.ebuild:
+  Prepare for unmasking tcmalloc USE flag, add blocker on old nvidia-drivers.
+  Thanks to Julien Sanchez and Pavel Volkov for testing (bug #413637).
 
   22 Nov 2013; Mike Gilbert <floppym@gentoo.org> chromium-32.0.1700.19.ebuild,
   chromium-33.0.1711.3.ebuild, files/chromium-build_ffmpeg-r0.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.521 2013/11/19 10:12:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.522 2013/11/23 18:53:28 phajdan.jr Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -244,8 +244,8 @@ dev-ml/eliom ocamlduce
 <gnome-base/gvfs-1.14 udisks
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (28 Sep 2012)
-# Causes problems with e.g. NVidia drivers, bug #413637.
-www-client/chromium tcmalloc
+# Causes problems with old NVidia drivers, bug #413637.
+<www-client/chromium-32.0.1700.19 tcmalloc
 
 # Diego Elio Pettenò (27 Aug 2012)
 # The libpci access is only used for linux.

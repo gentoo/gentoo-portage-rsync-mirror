@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8376 2013/11/23 12:53:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8377 2013/11/23 18:53:27 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Nov 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> base/package.use.mask:
+  Unmask tcmalloc USE flag for >=www-client/chromium-32.0.1700.19. Thanks to
+  Julien Sanchez and Pavel Volkov for testing (bug #413637).
 
   23 Nov 2013; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
   hardened/linux/arm/armv6j: tested, thanks CMoH
