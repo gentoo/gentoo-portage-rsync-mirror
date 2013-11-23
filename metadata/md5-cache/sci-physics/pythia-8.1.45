@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=hepmc? ( sci-physics/hepmc ) virtual/fortran
 SLOT=8
 SRC_URI=http://home.thep.lu.se/~torbjorn/pythia8/pythia8145.tgz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=bab37efa4c3d00d1f3d1b82389bc3228

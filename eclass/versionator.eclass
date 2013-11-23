@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.23 2011/12/27 17:55:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.24 2013/11/23 04:35:16 jcallen Exp $
 
 # @ECLASS: versionator.eclass
 # @MAINTAINER:
-# Jonathan Callen <abcd@gentoo.org>
+# Jonathan Callen <jcallen@gentoo.org>
 # base-system@gentoo.org
 # @BLURB: functions which simplify manipulation of ${PV} and similar version strings
 # @DESCRIPTION:

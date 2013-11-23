@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=sys-libs/ncurses archive? ( app-arch/libarchive ) zlib? ( sys-libs/zlib ) odbc? ( dev-db/unixODBC ) readline? ( sys-libs/readline ) gmp? ( dev-libs/gmp ) ssl? ( dev-libs/openssl ) java? ( >=virtual/jdk-1.4 ) X? ( virtual/jpeg x11-libs/libX11 x11-libs/libXft x11-libs/libXpm x11-libs/libXt x11-libs/libICE x11-libs/libSM ) java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=http://www.swi-prolog.org/download/devel/src/pl-7.1.0.tar.gz mirror://gentoo/swi-prolog-7.1.0-gentoo-patchset-0.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=93543ae538aef9fcd3492e1154361b39

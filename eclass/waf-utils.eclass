@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.17 2012/12/06 09:28:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.18 2013/11/23 04:35:16 jcallen Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -8,7 +8,7 @@
 # @AUTHOR:
 # Original Author: Gilles Dartiguelongue <eva@gentoo.org>
 # Various improvements based on cmake-utils.eclass: Tomáš Chvátal <scarabeus@gentoo.org>
-# Proper prefix support: Jonathan Callen <abcd@gentoo.org>
+# Proper prefix support: Jonathan Callen <jcallen@gentoo.org>
 # @BLURB: common ebuild functions for waf-based packages
 # @DESCRIPTION:
 # The waf-utils eclass contains functions that make creating ebuild for

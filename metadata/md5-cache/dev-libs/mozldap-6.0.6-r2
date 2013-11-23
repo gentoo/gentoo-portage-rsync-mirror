@@ -9,5 +9,5 @@ LICENSE=MPL-1.1 GPL-2 LGPL-2.1
 RDEPEND=>=dev-libs/nss-3.11.4 >=dev-libs/nspr-4.0.1 >=dev-libs/svrcore-4.0.0 sasl? ( dev-libs/cyrus-sasl )
 SLOT=0
 SRC_URI=ftp://ftp.mozilla.org/pub/mozilla.org/directory/c-sdk/releases/v6.0.6/src/mozldap-6.0.6.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=0e69f84fe3b30c506aa148751142e434

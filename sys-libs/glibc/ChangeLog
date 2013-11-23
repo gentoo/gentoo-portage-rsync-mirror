@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.953 2013/10/30 17:04:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.954 2013/11/23 05:21:41 vapier Exp $
+
+  23 Nov 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild,
+  glibc-2.17.ebuild:
+  Fix crash on alpha #480740. Fix crash on hppa/ia64 w/gcc-4.7 #486618 #486974.
+  Add missing fanotify_mark on hppa #480268. Fix building w/make-4 #487906.
 
   30 Oct 2013; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
   Add ifunc checks for arm/hppa/ppc/s390.

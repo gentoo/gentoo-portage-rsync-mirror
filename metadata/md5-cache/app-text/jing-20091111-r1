@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=dev-java/ant-core:0 dev-java/iso-relax:0 dev-java/relaxng-datatype:0 dev-java/saxon:9 dev-java/xalan:0 dev-java/xerces:2 dev-java/xml-commons-resolver:0 >=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=http://jing-trang.googlecode.com/files/jing-20091111.zip
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-pkg-simple	d7cef87260947d4cce245c4f026377e2	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	6601b4c5b3f019a993db59a50e1854e4
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-pkg-simple	d7cef87260947d4cce245c4f026377e2	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=8af85ea14acb7480e97927f7b92e4f2d
