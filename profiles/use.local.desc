@@ -2371,6 +2371,7 @@ games-fps/doomsday:snowberry - Install Snowberry doomsday front-end
 games-fps/doomsday:tools - Build additional tools such as doomsday-shell, md2tool and texc
 games-fps/duke3d:demo - Install the demo files
 games-fps/duke3d:pic - disable optimized assembly code that is not PIC friendly
+games-fps/duke3d-data:gog - Extract the data from the GOG.com installer.
 games-fps/eduke32:demo - Install games-fps/duke3d-demodata as well
 games-fps/eduke32:gtk - Compile with gtk launcher
 games-fps/eduke32:offensive - Include optional XXX texture pack (needs USE 'textures')

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8374 2013/11/22 20:57:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8375 2013/11/22 23:06:10 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Nov 2013; Julian Ospald <hasufell@gentoo.org> arch/hppa/package.use.mask,
+  arch/powerpc/ppc32/package.use.mask:
+  mask gog useflag of games-fps/duke3d-data for hppa and ppc32
 
   22 Nov 2013; Pacho Ramos <pacho@gentoo.org> desc/cameras.desc:
   Add new description
