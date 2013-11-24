@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec-meta/hspec-meta-1.7.2.ebuild,v 1.2 2013/11/05 10:12:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec-meta/hspec-meta-1.7.2.ebuild,v 1.3 2013/11/24 19:35:47 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/ansi-terminal-0.5:=[profile?]

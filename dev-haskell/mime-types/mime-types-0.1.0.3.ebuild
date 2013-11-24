@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mime-types/mime-types-0.1.0.3.ebuild,v 1.2 2013/11/05 11:19:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/mime-types/mime-types-0.1.0.3.ebuild,v 1.3 2013/11/24 19:37:58 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-haskell/text:=[profile?]

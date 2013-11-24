@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cookie/cookie-0.4.0.1.ebuild,v 1.2 2013/11/05 11:12:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cookie/cookie-0.4.0.1.ebuild,v 1.3 2013/11/24 19:37:40 ago Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/blaze-builder-0.2.1[profile?]

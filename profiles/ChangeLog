@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8383 2013/11/24 18:14:06 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8384 2013/11/24 19:37:26 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Removed make-4.0 mask.
 
   24 Nov 2013; Julian Ospald <hasufell@gentoo.org>
   hardened/linux/amd64/no-multilib/package.mask:

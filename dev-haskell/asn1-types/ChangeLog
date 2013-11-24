@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/asn1-types
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-types/ChangeLog,v 1.3 2013/11/14 18:12:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-types/ChangeLog,v 1.4 2013/11/24 19:36:47 ago Exp $
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> asn1-types-0.2.0.ebuild:
+  Stable for x86, wrt bug #488750
 
 *asn1-types-0.2.1 (14 Nov 2013)
 

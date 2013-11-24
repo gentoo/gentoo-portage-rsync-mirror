@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/tagsoup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagsoup/ChangeLog,v 1.6 2013/11/05 09:41:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagsoup/ChangeLog,v 1.7 2013/11/24 19:33:42 ago Exp $
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> tagsoup-0.13.ebuild:
+  Stable for x86, wrt bug #488750
 
   05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> tagsoup-0.13.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

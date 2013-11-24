@@ -1,6 +1,22 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.52 2013/09/15 09:57:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.56 2013/11/24 19:51:04 ago Exp $
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> ruby2ruby-1.3.1-r1.ebuild,
+  ruby2ruby-2.0.6.ebuild:
+  Stable for sparc, wrt bug #483708
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> ruby2ruby-1.3.1-r1.ebuild,
+  ruby2ruby-2.0.6.ebuild:
+  Stable for ppc64, wrt bug #483708
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> ruby2ruby-1.3.1-r1.ebuild,
+  ruby2ruby-2.0.6.ebuild:
+  Stable for ppc, wrt bug #483708
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> ruby2ruby-1.3.1-r1.ebuild,
+  ruby2ruby-2.0.6.ebuild:
+  Stable for alpha, wrt bug #483708
 
   15 Sep 2013; Agostino Sarubbo <ago@gentoo.org> ruby2ruby-1.3.1-r1.ebuild,
   ruby2ruby-2.0.6.ebuild:

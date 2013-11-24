@@ -1,6 +1,22 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.49 2013/10/29 23:15:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.53 2013/11/24 19:50:58 ago Exp $
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> ruby_parser-2.3.1-r1.ebuild,
+  ruby_parser-3.1.3.ebuild:
+  Stable for sparc, wrt bug #483708
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> ruby_parser-2.3.1-r1.ebuild,
+  ruby_parser-3.1.3.ebuild:
+  Stable for ppc64, wrt bug #483708
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> ruby_parser-2.3.1-r1.ebuild,
+  ruby_parser-3.1.3.ebuild:
+  Stable for ppc, wrt bug #483708
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> ruby_parser-2.3.1-r1.ebuild,
+  ruby_parser-3.1.3.ebuild:
+  Stable for alpha, wrt bug #483708
 
 *ruby_parser-3.2.2-r1 (30 Oct 2013)
 
