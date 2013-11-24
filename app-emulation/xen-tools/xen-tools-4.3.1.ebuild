@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.0-r3.ebuild,v 1.3 2013/11/24 06:04:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1.ebuild,v 1.1 2013/11/24 06:04:25 idella4 Exp $
 
 EAPI=5
 
@@ -205,12 +205,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2-configsxp.patch
 
 	#Security patches, currently valid
-	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \
-		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2013-4369-XSA-68.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2013-4370-XSA-69.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2013-4371-XSA-70.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2013-4416-XSA-72.patch
+	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch
 
 	# Bug 472438
 	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \
