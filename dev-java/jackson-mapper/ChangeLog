@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jackson-mapper
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jackson-mapper/ChangeLog,v 1.1 2013/11/24 18:45:27 ercpe Exp $
+
+*jackson-mapper-1.9.13 (24 Nov 2013)
+
+  24 Nov 2013; Johann Schmitz <ercpe@gentoo.org> +jackson-mapper-1.9.13.ebuild,
+  +metadata.xml:
+  Added ebuild for jackson-mapper; the mapping component of jackson for data
+  binding

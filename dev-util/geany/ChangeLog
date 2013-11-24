@@ -1,6 +1,24 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.70 2013/10/29 22:12:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.76 2013/11/24 18:59:34 ago Exp $
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> geany-1.23.1.ebuild:
+  Stable for x86, wrt bug #488810
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> geany-1.23.1.ebuild:
+  Stable for sparc, wrt bug #488810
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> geany-1.23.1.ebuild:
+  Stable for ppc, wrt bug #488810
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> geany-1.23.1.ebuild:
+  Stable for ppc64, wrt bug #488810
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> geany-1.23.1.ebuild:
+  Stable for arm, wrt bug #488810
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> geany-1.23.1.ebuild:
+  Stable for alpha, wrt bug #488810
 
   29 Oct 2013; Tony Vroon <chainsaw@gentoo.org> geany-1.23.1.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

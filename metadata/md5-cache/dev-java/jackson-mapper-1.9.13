@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install preinst prepare setup
+DEPEND=>=virtual/jdk-1.5 dev-java/jackson:0 dev-java/joda-time:0 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+DESCRIPTION=Mapping component of jackson for data binding
+EAPI=5
+HOMEPAGE=http://jackson.codehaus.org
+IUSE=elibc_FreeBSD doc source elibc_FreeBSD
+KEYWORDS=~amd64 ~x86
+LICENSE=|| ( Apache-2.0 LGPL-2.1 )
+RDEPEND=>=virtual/jre-1.5 dev-java/jackson:0 dev-java/joda-time:0 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+SLOT=0
+SRC_URI=http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-lgpl/1.9.13/jackson-mapper-lgpl-1.9.13-sources.jar
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-pkg-simple	d7cef87260947d4cce245c4f026377e2	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=d1d9cf1f681f3554fb0806a3acc12f47

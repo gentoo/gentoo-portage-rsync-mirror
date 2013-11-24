@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.118 2013/09/23 17:23:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.120 2013/11/24 18:46:48 ago Exp $
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> musicbrainz-5.0.1.ebuild:
+  Stable for sparc, wrt bug #481900
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> musicbrainz-5.0.1.ebuild:
+  Stable for arm, wrt bug #481900
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> musicbrainz-5.0.1.ebuild:
   Stable for alpha, wrt bug #481900

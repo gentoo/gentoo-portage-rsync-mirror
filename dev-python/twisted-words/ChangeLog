@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-words
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.88 2013/09/06 16:51:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-words/ChangeLog,v 1.89 2013/11/24 18:37:45 ago Exp $
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> twisted-words-12.3.0.ebuild:
+  Stable for arm, wrt bug #468150
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> twisted-words-12.3.0.ebuild:
   Stable for sparc, wrt bug #468150
