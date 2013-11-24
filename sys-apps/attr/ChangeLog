@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.159 2013/10/14 18:20:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.160 2013/11/24 08:38:45 mgorny Exp $
+
+  24 Nov 2013; Michał Górny <mgorny@gentoo.org> attr-2.4.47-r1.ebuild:
+  Clean up manpages in the same code path as they are installed, bug #485494.
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> attr-2.4.47-r1.ebuild:
   Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
