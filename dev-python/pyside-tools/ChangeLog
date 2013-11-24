@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyside-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.28 2013/11/14 01:02:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/ChangeLog,v 1.29 2013/11/24 21:14:27 pesa Exp $
+
+  24 Nov 2013; Davide Pesavento <pesa@gentoo.org> pyside-tools-0.2.15.ebuild:
+  Don't try to install non-existent ChangeLog (bug 491440).
 
 *pyside-tools-0.2.15 (14 Nov 2013)
 

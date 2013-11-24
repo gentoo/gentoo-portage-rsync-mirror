@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.15.ebuild,v 1.1 2013/11/14 01:02:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.15.ebuild,v 1.2 2013/11/24 21:14:27 pesa Exp $
 
 EAPI=4
 
@@ -86,7 +86,7 @@ src_install() {
 	python_execute_function -s installation
 	python_merge_intermediate_installation_images "${T}/images"
 
-	dodoc AUTHORS ChangeLog
+	dodoc AUTHORS
 }
 
 pkg_postinst() {

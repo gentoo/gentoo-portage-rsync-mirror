@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/Term-ReadLine-Perl-1.30.300-r1.ebuild,v 1.2 2013/10/15 15:14:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/Term-ReadLine-Perl-1.30.300-r1.ebuild,v 1.3 2013/11/24 21:19:53 zlogene Exp $
 
 EAPI=5
 
@@ -18,4 +18,5 @@ IUSE=""
 
 RDEPEND="dev-perl/TermReadKey"
 
-SRC_TEST="do parallel"
+# bug 492212
+#SRC_TEST="do parallel"
