@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pep8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.22 2013/09/05 18:46:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pep8/ChangeLog,v 1.24 2013/11/24 13:48:57 ago Exp $
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> pep8-1.4.6.ebuild:
+  Stable for x86, wrt bug #481850
+
+  24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> pep8-1.4.6.ebuild:
+  Stable for amd64, wrt bug #481850
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pep8-1.4.5.ebuild,
   pep8-1.4.6.ebuild:
