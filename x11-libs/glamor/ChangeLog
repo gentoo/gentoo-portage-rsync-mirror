@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/glamor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/ChangeLog,v 1.23 2013/10/08 05:07:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/ChangeLog,v 1.24 2013/11/24 20:51:45 zorry Exp $
+
+  24 Nov 2013; Magnus Granberg <zorry@gentoo.org> glamor-0.5.1.ebuild:
+  Fix bug 488906 fail to load driver with hardened compiler
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> glamor-0.5.1.ebuild:
   Stable for x86, wrt bug #475480
