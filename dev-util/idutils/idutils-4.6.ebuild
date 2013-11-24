@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/idutils-4.6.ebuild,v 1.1 2012/05/11 09:10:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/idutils-4.6.ebuild,v 1.2 2013/11/24 08:17:42 pacho Exp $
 
 EAPI=4
-inherit elisp-common
+inherit elisp-common eutils
 
 DESCRIPTION="Fast, high-capacity, identifier database tool"
 HOMEPAGE="http://www.gnu.org/software/idutils/"
@@ -20,6 +20,10 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DOCS="AUTHORS ChangeLog NEWS README* THANKS TODO"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-4.6-glibc-2.16.patch"
+}
 
 src_configure() {
 	use emacs || export EMACS=no

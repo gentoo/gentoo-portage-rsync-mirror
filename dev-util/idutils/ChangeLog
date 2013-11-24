@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/idutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/ChangeLog,v 1.4 2012/05/11 09:10:44 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/idutils/ChangeLog,v 1.5 2013/11/24 08:17:42 pacho Exp $
+
+  24 Nov 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/idutils-4.6-glibc-2.16.patch, idutils-4.6.ebuild:
+  Fix build with glibc-2.16 (#426792)
 
 *idutils-4.6 (11 May 2012)
 
@@ -21,4 +25,3 @@
   +idutils-4.2.ebuild:
   New package. Vaguely based on ebuild submission in bug #150339 by CPUShare
   <cpushare@cpushare.com>.
-
