@@ -1,8 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.2.0.ebuild,v 1.2 2012/12/05 04:16:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.2.0.ebuild,v 1.3 2013/11/24 12:26:50 pinkbyte Exp $
 
 EAPI="4"
+
+GENTOO_DEPEND_ON_PERL="no"
 
 inherit eutils base linux-info perl-app autotools multilib user
 

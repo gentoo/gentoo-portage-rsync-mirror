@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.55 2013/09/08 14:33:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.56 2013/11/24 12:26:50 pinkbyte Exp $
+
+  24 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> collectd-5.1.0-r1.ebuild,
+  collectd-5.1.0-r2.ebuild, collectd-5.1.1.ebuild, collectd-5.1.1-r1.ebuild,
+  collectd-5.2.0.ebuild, collectd-5.2.0-r1.ebuild, collectd-5.2.1.ebuild,
+  collectd-5.2.2.ebuild, collectd-5.3.0.ebuild, collectd-5.4.0.ebuild:
+  Package should not depend on dev-lang/perl unconditionally, bug #487406.
+  Thanks to Nikoli <nikoli AT gmx.us> for discovering this issue
 
   08 Sep 2013; Markos Chandras <hwoarang@gentoo.org> files/collectd.initd:
   Avoid bashisms in init script. Bug #482070 thanks to Johan Bergström
