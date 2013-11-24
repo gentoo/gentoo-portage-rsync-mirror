@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.134 2013/10/28 22:18:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.135 2013/11/24 16:42:32 jlec Exp $
+
+*hugin-9999 (24 Nov 2013)
+*hugin-2012.0.0-r1 (24 Nov 2013)
+
+  24 Nov 2013; Justin Lecher <jlec@gentoo.org> +hugin-2012.0.0-r1.ebuild,
+  hugin-2013.0.0.ebuild, +hugin-9999.ebuild, +files/hugin-2012.0.0-boost.patch,
+  +files/hugin-2012.0.0-perl.patch, +files/hugin-2013.0.0-boost.patch,
+  metadata.xml:
+  Backport fix for building with newer boost; Use system cmake modules to
+  detect lapack; backport patch to use perl 5.16; fixes bugs
+  #296510,300127,373387,374337,388149,404227,484238
 
 *hugin-2013.0.0 (28 Oct 2013)
 

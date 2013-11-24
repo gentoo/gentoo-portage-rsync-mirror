@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2013.0.0.ebuild,v 1.2 2013/11/24 16:42:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2012.0.0-r1.ebuild,v 1.1 2013/11/24 16:42:32 jlec Exp $
 
 EAPI=5
 WX_GTK_VER="2.8"
@@ -11,13 +11,12 @@ inherit base python-single-r1 wxwidgets versionator cmake-utils
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-
 LICENSE="GPL-2 SIFT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-LANGS=" bg ca cs da de en_GB es eu fi fr hu it ja ko nl pl pt_BR ro ru sk sl sv uk zh_CN zh_TW"
-IUSE="lapack python sift debug $(echo ${LANGS//\ /\ linguas_})"
+LANGS=" bg ca cs da de en_GB es fi fr hu it ja ko nl pl pt_BR ro ru sk sl sv uk zh_CN zh_TW"
+IUSE="lapack python sift $(echo ${LANGS//\ /\ linguas_})"
 
 CDEPEND="
 	!!dev-util/cocom
@@ -49,7 +48,10 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
 
-PATCHES=( "${FILESDIR}"/${P}-boost.patch )
+PATCHES=(
+	"${FILESDIR}"/${P}-boost.patch
+	"${FILESDIR}"/${P}-perl.patch
+)
 
 pkg_setup() {
 	DOCS="authors.txt README TODO"
