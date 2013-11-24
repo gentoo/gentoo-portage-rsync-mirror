@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.174 2013/11/03 23:40:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.175 2013/11/24 03:52:29 vapier Exp $
+
+  24 Nov 2013; Mike Frysinger <vapier@gentoo.org> mpfr-3.1.2-r1.ebuild:
+  Revert gmp lib/include flags as they are wrong & unnecessary and tweak the
+  docdir flag to be a bit simpler #476336 by Christoph Junghans.
 
   03 Nov 2013; Matt Turner <mattst88@gentoo.org> mpfr-3.1.2-r1.ebuild:
   alpha stable, bug 487798.
