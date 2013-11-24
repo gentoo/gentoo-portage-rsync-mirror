@@ -2295,6 +2295,8 @@ games-action/d2x-rebirth:mpu401 - Enable MPU401 music support
 games-action/d2x-rebirth:music - Support for ingame music
 games-action/d2x-rebirth:opl3-musicpack - Include alternate version of the game's music, recorded with the Yamaha YMF262 OPL3 soundchip
 games-action/d2x-rebirth:sc55-musicpack - Include alternate version of the game's music, recorded with the Roland Sound Canvas SC-55 MIDI module
+games-action/hotline-miami:bundled-libs - Use bundled libraries.
+games-action/hotline-miami:launcher - Install qt launcher
 games-action/minetest:luajit - Use dev-lang/luajit instead of dev-lang/lua
 games-action/minetest:server - Build minetest server
 games-action/openlierox:breakpad - Compile with support for breakpad crash reporting system
