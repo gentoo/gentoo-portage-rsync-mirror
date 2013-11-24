@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/picard
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/picard/ChangeLog,v 1.4 2013/11/24 15:21:14 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/picard/ChangeLog,v 1.5 2013/11/24 15:32:13 ercpe Exp $
+
+  24 Nov 2013; Johann Schmitz <ercpe@gentoo.org> -picard-1.58.ebuild,
+  -picard-1.63.ebuild:
+  Dropped versions 1.58 and 1.63 as they don't meet the qa requirements and a
+  snapshotted version of the lastest version is in the tree (#491816).
 
 *picard-1.103 (24 Nov 2013)
 

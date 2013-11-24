@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15224 2013/11/24 09:37:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15225 2013/11/24 15:43:59 ercpe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1001,7 +1001,6 @@ net-misc/netcomics-cvs
 # rdep for sci-astronomy/casacore
 sci-astronomy/casa-data
 sci-astronomy/casacore
-sci-biology/picard
 =sci-electronics/qelectrotech-9999
 =sys-fs/redirfs-9999
 sys-kernel/zen-sources

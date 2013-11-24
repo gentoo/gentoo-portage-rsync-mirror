@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r7.ebuild,v 1.2 2013/10/13 19:25:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r7.ebuild,v 1.3 2013/11/24 15:42:50 jer Exp $
 
 EAPI=5
 inherit eutils autotools multilib-minimal
@@ -13,7 +13,7 @@ SRC_URI="ftp://oss.sgi.com/projects/fam/download/stable/${P}.tar.gz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static-libs"
 
 DEPEND="|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 )
