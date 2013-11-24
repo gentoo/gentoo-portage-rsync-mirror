@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8381 2013/11/24 09:37:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8382 2013/11/24 16:10:08 ercpe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Nov 2013; Johann Schmitz <ercpe@gentoo.org> ChangeLog:
+  Removed sci-biology/picard from package.mask as a version with a snapshotted
+  tarball is now in the tree and the live ebuilds are removed.
 
   24 Nov 2013; Justin Lecher <jlec@gentoo.org> package.mask:
   Drop obsolete mask for dev-tcltk/tcl-debug
