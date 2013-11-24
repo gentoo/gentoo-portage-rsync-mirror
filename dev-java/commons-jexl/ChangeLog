@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-jexl
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.10 2011/12/19 12:22:54 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jexl/ChangeLog,v 1.11 2013/11/24 14:46:46 ercpe Exp $
+
+*commons-jexl-2.1.1 (24 Nov 2013)
+
+  24 Nov 2013; Johann Schmitz <ercpe@gentoo.org> +commons-jexl-2.1.1.ebuild,
+  +files/2.1.1-build.xml:
+  Version bump of commons-jexl to 2.1.1 (wrt #480432). Dependency of picard
+  (#491816) et al.
 
   19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-jexl-1.1.ebuild:
   Fix homepage wrt #202445. Fix unquoted variables to please repoman.
@@ -45,4 +52,3 @@
   +commons-jexl-1.0.ebuild:
   Initial import. Ebuild based on the contribution by Vibhav Garg
   <vibhavgarg@gmail.com>. Fixes #70671
-

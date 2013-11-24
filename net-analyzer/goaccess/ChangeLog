@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/goaccess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.5 2013/10/13 10:23:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.6 2013/11/24 15:01:19 hwoarang Exp $
+
+*goaccess-0.6.1 (24 Nov 2013)
+
+  24 Nov 2013; Markos Chandras <hwoarang@gentoo.org> +goaccess-0.6.1.ebuild:
+  Version bump. Bug #491854 thanks to Nikoli <nikoli@gmx.us>
 
   13 Oct 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
   Updated Nikoli's e-mail address for easier automatic assignment.
