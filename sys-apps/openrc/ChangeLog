@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.288 2013/11/13 03:25:52 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.289 2013/11/24 14:26:55 pacho Exp $
+
+  24 Nov 2013; Pacho Ramos <pacho@gentoo.org> openrc-0.12.4.ebuild:
+  amd64 stable, bug #487332
 
   13 Nov 2013; Matt Turner <mattst88@gentoo.org> openrc-0.12.4.ebuild:
   alpha stable, bug 487332.

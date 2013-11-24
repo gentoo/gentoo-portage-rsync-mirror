@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.115 2013/11/13 03:27:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.116 2013/11/24 14:28:37 pacho Exp $
+
+  24 Nov 2013; Pacho Ramos <pacho@gentoo.org> kmod-15.ebuild:
+  amd64 stable, bug #487338
 
   13 Nov 2013; Matt Turner <mattst88@gentoo.org> kmod-15.ebuild:
   alpha stable, bug 487338.
