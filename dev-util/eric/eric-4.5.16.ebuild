@@ -1,24 +1,31 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.15.ebuild,v 1.1 2013/10/01 22:17:14 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.5.16.ebuild,v 1.1 2013/11/24 22:54:02 pesa Exp $
 
-EAPI="4"
+EAPI=4
+
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 # 2.4 and 2.5 are restricted to avoid conditional dependency on dev-python/simplejson.
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython 2.7-pypy-*"
 
-inherit eutils python
+PLOCALES="cs de en es fr it ru tr zh_CN"
 
-SLOT="4"
-MY_PN="${PN}${SLOT}"
-MY_PV="${PV/_pre/-snapshot-}"
-MY_P="${MY_PN}-${MY_PV}"
+inherit eutils l10n python
 
 DESCRIPTION="A full featured Python IDE using PyQt4 and QScintilla"
 HOMEPAGE="http://eric-ide.python-projects.org/"
-BASE_URI="mirror://sourceforge/eric-ide/${MY_PN}/stable/${PV}"
+
+SLOT="4"
+MY_PV=${PV/_pre/-snapshot-}
+MY_P=${PN}${SLOT}-${MY_PV}
+
+BASE_URI="mirror://sourceforge/eric-ide/${PN}${SLOT}/stable/${PV}"
 SRC_URI="${BASE_URI}/${MY_P}.tar.gz"
+for L in ${PLOCALES}; do
+	SRC_URI+=" linguas_${L}? ( ${BASE_URI}/${PN}${SLOT}-i18n-${L/zh_CN/zh_CN.GB2312}-${MY_PV}.tar.gz )"
+done
+unset L
 
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
@@ -39,13 +46,6 @@ PDEPEND="
 	spell? ( dev-python/pyenchant )
 "
 
-LANGS="cs de en es fr it ru tr zh_CN"
-for L in ${LANGS}; do
-	SRC_URI+=" linguas_${L}? ( ${BASE_URI}/${MY_PN}-i18n-${L/zh_CN/zh_CN.GB2312}-${MY_PV}.tar.gz )"
-	IUSE+=" linguas_${L}"
-done
-unset L
-
 S=${WORKDIR}/${MY_P}
 
 PYTHON_VERSIONED_EXECUTABLES=("/usr/bin/.*")
@@ -58,8 +58,7 @@ src_prepare() {
 	# dev-python/pygments and dev-python/simplejson.
 	rm -fr eric/ThirdParty
 	rm -fr eric/DebugClients/Python{,3}/coverage
-	sed -i -e '\|/coverage/|d' eric/${MY_PN}.e4p || die
-	sed -i -e 's/from DebugClients\.Python3\?\.coverage /from coverage /' \
+	sed -i -e 's/from DebugClients\.Python3\?\.coverage/from coverage/' \
 		$(grep -lr 'from DebugClients\.Python3\?\.coverage' .) || die
 }
 
@@ -76,15 +75,15 @@ src_install() {
 	python_merge_intermediate_installation_images "${T}/images"
 
 	doicon eric/icons/default/eric.png || die
-	make_desktop_entry "${MY_PN} --nosplash" ${MY_PN} eric "Development;IDE;Qt"
+	make_desktop_entry "eric4 --nosplash" eric4 eric "Development;IDE;Qt"
 }
 
 pkg_postinst() {
-	python_mod_optimize ${MY_PN}{,config.py,plugins}
+	python_mod_optimize eric4{,config.py,plugins}
 
 	elog
 	elog "If you want to use Eric with mod_python, have a look at"
-	elog "\"${EROOT}$(python_get_sitedir -b -f)/${MY_PN}/patch_modpython.py\"."
+	elog "\"${EROOT}$(python_get_sitedir -b -f)/eric4/patch_modpython.py\"."
 	elog
 	elog "The following packages will give Eric extended functionality:"
 	elog "  dev-python/pylint"
@@ -96,5 +95,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	python_mod_cleanup ${MY_PN}{,config.py,plugins}
+	python_mod_cleanup eric4{,config.py,plugins}
 }

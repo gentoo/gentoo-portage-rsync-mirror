@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.204 2013/10/14 18:05:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.205 2013/11/24 22:54:02 pesa Exp $
+
+*eric-5.3.8 (24 Nov 2013)
+*eric-4.5.16 (24 Nov 2013)
+
+  24 Nov 2013; Davide Pesavento <pesa@gentoo.org> +eric-4.5.16.ebuild,
+  +eric-5.3.8.ebuild, -eric-4.5.15.ebuild, -eric-5.3.7.ebuild,
+  -files/eric-4.4-no-interactive.patch:
+  Version bumps; tweak sed expression wrt bug 487272.
 
   14 Oct 2013; Tony Vroon <chainsaw@gentoo.org> eric-4.5.14.ebuild,
   eric-5.3.6.ebuild:

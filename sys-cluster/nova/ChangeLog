@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.39 2013/11/17 22:35:55 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.40 2013/11/24 22:42:41 prometheanfire Exp $
+
+  24 Nov 2013; Matthew Thode <prometheanfire@gentoo.org>
+  nova-2013.2.9999.ebuild:
+  forcing python_single_target_python2_7 on libvirt dep
 
 *nova-2013.2-r2 (17 Nov 2013)
 *nova-2013.1.4-r1 (17 Nov 2013)
