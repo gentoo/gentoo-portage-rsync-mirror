@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.18.ebuild,v 1.4 2013/10/06 08:51:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.18.ebuild,v 1.5 2013/11/24 17:46:11 vapier Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic gnuconfig multilib systemd unpacker multiprocessing
 
@@ -24,7 +24,7 @@ case ${PV} in
 	RELEASE_VER=${PV}
 	;;
 esac
-PATCH_VER="1"                                  # Gentoo patchset
+PATCH_VER="2"                                  # Gentoo patchset
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.16"}       # min kernel version nptl requires
 
 IUSE="debug gd hardened multilib nscd selinux systemtap profile suid vanilla crosscompile_opts_headers-only"
