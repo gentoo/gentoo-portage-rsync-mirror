@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hslogger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.20 2013/08/13 13:06:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/ChangeLog,v 1.21 2013/11/24 07:40:44 qnikst Exp $
+
+  24 Nov 2013; Alexander Vershilov <qnikst@gentoo.org> hslogger-1.2.1-r2.ebuild:
+  Restore ~amd64-linux keyword for hslogger-1.2.1-r2
 
 *hslogger-1.2.1-r2 (13 Aug 2013)
 

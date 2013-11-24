@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/hslogger-1.2.1-r2.ebuild,v 1.1 2013/08/13 13:06:24 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hslogger/hslogger-1.2.1-r2.ebuild,v 1.2 2013/11/24 07:40:44 qnikst Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND="dev-haskell/mtl:=[profile?]
