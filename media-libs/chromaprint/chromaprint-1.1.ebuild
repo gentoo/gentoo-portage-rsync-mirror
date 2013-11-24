@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-1.0.ebuild,v 1.2 2013/11/17 14:20:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-1.1.ebuild,v 1.1 2013/11/24 10:47:39 jlec Exp $
 
 EAPI=5
+
 inherit cmake-utils
 
 DESCRIPTION="A client-side library that implements a custom algorithm for extracting fingerprints"
@@ -15,7 +16,8 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd"
 IUSE="test tools"
 
 # note: use ffmpeg instead of fftw because it's recommended and required for tools
-RDEPEND=">=virtual/ffmpeg-0.10
+RDEPEND="
+	>=virtual/ffmpeg-0.10
 	tools? ( >=media-libs/taglib-1.6 )"
 DEPEND="${RDEPEND}
 	test? (
@@ -26,8 +28,10 @@ DEPEND="${RDEPEND}
 
 DOCS="NEWS.txt README.txt"
 
-PATCHES=( "${FILESDIR}/${PN}-0.7-ffmpeg.patch"
-	"${FILESDIR}/${P}-libav9.patch" )
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.7-ffmpeg.patch
+	"${FILESDIR}"/${P}-gtest.patch
+)
 
 src_configure() {
 	local mycmakeargs=(
@@ -40,11 +44,11 @@ src_configure() {
 }
 
 src_test() {
-	cd "${CMAKE_BUILD_DIR}" || die
+	cd "${BUILD_DIR}" || die
 	emake check
 }
 
 src_install() {
 	cmake-utils_src_install
-	use tools && dobin "${CMAKE_BUILD_DIR}"/tools/fpcollect
+	use tools && dobin "${BUILD_DIR}"/tools/fpcollect
 }

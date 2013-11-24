@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/libxml2:2 sci-libs/gsl sys-devel/gettext sys-libs/readline sys-libs/zlib virtual/libiconv cairo? ( x11-libs/cairo ) emacs? ( virtual/emacs ) gtk? ( gnome-base/libglade:2.0 x11-libs/gtk+:2 >=x11-libs/gtksourceview-2.2:2.0 ) ncurses? ( sys-libs/ncurses ) postgres? ( dev-db/postgresql-server )
 SLOT=0
 SRC_URI=mirror://gnu/pspp/pspp-0.8.1.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	5f912199ed4fdfb0bfbde29c7ac7dbdb	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	autotools-utils	559ed17194292ec42d68145dcca2fa32	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8a471da1825484834d78aac08c23ae0d

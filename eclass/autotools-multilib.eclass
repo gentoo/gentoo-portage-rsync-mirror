@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.18 2013/11/24 10:25:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.19 2013/11/24 10:53:43 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -50,9 +50,12 @@ _autotools-multilib_fix_multilib_minimal
 
 autotools-multilib_src_prepare() {
 	autotools-utils_src_prepare "${@}"
+
+	[[ ${AUTOTOOLS_IN_SOURCE_BUILD} ]] && multilib_copy_sources
 }
 
 multilib_src_configure() {
+	[[ ${AUTOTOOLS_IN_SOURCE_BUILD} ]] && local ECONF_SOURCE=${BUILD_DIR}
 	autotools-utils_src_configure "${_at_args[@]}"
 }
 

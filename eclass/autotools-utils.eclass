@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.71 2013/10/08 10:34:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.72 2013/11/24 10:53:13 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -191,22 +191,22 @@ EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 # Determine using IN or OUT source build
 _check_build_dir() {
 	: ${ECONF_SOURCE:=${S}}
-	if [[ -n ${AUTOTOOLS_IN_SOURCE_BUILD} ]]; then
-		BUILD_DIR="${ECONF_SOURCE}"
+	# Respect both the old variable and the new one, depending
+	# on which one was set by the ebuild.
+	if [[ ! ${BUILD_DIR} && ${AUTOTOOLS_BUILD_DIR} ]]; then
+		eqawarn "The AUTOTOOLS_BUILD_DIR variable has been renamed to BUILD_DIR."
+		eqawarn "Please migrate the ebuild to use the new one."
+
+		# In the next call, both variables will be set already
+		# and we'd have to know which one takes precedence.
+		_RESPECT_AUTOTOOLS_BUILD_DIR=1
+	fi
+
+	if [[ ${_RESPECT_AUTOTOOLS_BUILD_DIR} ]]; then
+		BUILD_DIR=${AUTOTOOLS_BUILD_DIR:-${WORKDIR}/${P}_build}
 	else
-		# Respect both the old variable and the new one, depending
-		# on which one was set by the ebuild.
-		if [[ ! ${BUILD_DIR} && ${AUTOTOOLS_BUILD_DIR} ]]; then
-			eqawarn "The AUTOTOOLS_BUILD_DIR variable has been renamed to BUILD_DIR."
-			eqawarn "Please migrate the ebuild to use the new one."
-
-			# In the next call, both variables will be set already
-			# and we'd have to know which one takes precedence.
-			_RESPECT_AUTOTOOLS_BUILD_DIR=1
-		fi
-
-		if [[ ${_RESPECT_AUTOTOOLS_BUILD_DIR} ]]; then
-			BUILD_DIR=${AUTOTOOLS_BUILD_DIR:-${WORKDIR}/${P}_build}
+		if [[ -n ${AUTOTOOLS_IN_SOURCE_BUILD} ]]; then
+			: ${BUILD_DIR:=${ECONF_SOURCE}}
 		else
 			: ${BUILD_DIR:=${WORKDIR}/${P}_build}
 		fi

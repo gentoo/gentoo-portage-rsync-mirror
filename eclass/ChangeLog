@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1065 2013/11/24 10:25:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1067 2013/11/24 10:53:43 mgorny Exp $
+
+  24 Nov 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
+  Support in-source builds.
+
+  24 Nov 2013; Michał Górny <mgorny@gentoo.org> autotools-utils.eclass:
+  Respect BUILD_DIR in in-source builds when set earlier.
 
   24 Nov 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
   Reuse multilib-minimal to reduce code duplication and allow easier function
