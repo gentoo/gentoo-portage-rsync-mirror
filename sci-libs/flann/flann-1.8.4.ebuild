@@ -1,14 +1,15 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4.ebuild,v 1.1 2013/07/09 23:11:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4.ebuild,v 1.2 2013/11/24 17:02:38 jlec Exp $
 
 EAPI=5
 
-inherit cmake-utils eutils toolchain-funcs
+inherit cmake-utils eutils multilib toolchain-funcs
 
 DESCRIPTION="Library for performing fast approximate nearest neighbor searches in high dimensional spaces"
 HOMEPAGE="http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN/"
-SRC_URI="http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip
+SRC_URI="
+	http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip
 	test? ( http://dev.gentoo.org/~bicatali/distfiles/${P}-testdata.tar.xz )"
 
 LICENSE="BSD"
@@ -61,6 +62,11 @@ src_prepare() {
 	# avoid automatic installation of pdf
 	use doc || sed -i -e '/doc/d' CMakeLists.txt
 	use cuda && cuda_src_prepare
+
+	sed \
+		-e "/FLANN_LIB_INSTALL_DIR/s:lib:$(get_libdir):g" \
+		-i cmake/flann_utils.cmake || die
+	cmake-utils_src_prepare
 }
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2012.0.0-r1.ebuild,v 1.1 2013/11/24 16:42:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2012.0.0-r1.ebuild,v 1.2 2013/11/24 17:03:45 jlec Exp $
 
 EAPI=5
 WX_GTK_VER="2.8"
@@ -33,6 +33,7 @@ CDEPEND="
 	media-libs/libpng:0=
 	media-libs/openexr:=
 	media-libs/tiff
+	sci-libs/flann
 	sys-libs/zlib
 	virtual/jpeg
 	x11-libs/wxGTK:2.8=[X,opengl,-odbc]

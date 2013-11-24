@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.132 2013/11/22 23:06:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.133 2013/11/24 17:16:52 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Julian Ospald <hasufell@gentoo.org> (23 Nov 2013)
-# FIXME: app-arch/innoextract not available under hppa yet
+# needs app-arch/innoextract (bug #492326)
 games-fps/duke3d-data gog
 
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2013)

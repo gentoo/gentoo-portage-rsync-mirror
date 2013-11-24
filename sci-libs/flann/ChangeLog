@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.18 2013/07/09 23:11:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.19 2013/11/24 17:02:38 jlec Exp $
+
+  24 Nov 2013; Justin Lecher <jlec@gentoo.org> flann-1.8.4.ebuild,
+  metadata.xml:
+  Make it multilib compatible
 
 *flann-1.8.4 (09 Jul 2013)
 
