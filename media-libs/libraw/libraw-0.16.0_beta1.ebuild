@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.16.0_alpha2-r1.ebuild,v 1.1 2013/10/20 11:06:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.16.0_beta1.ebuild,v 1.1 2013/11/23 23:09:09 radhermit Exp $
 
 EAPI=5
 
 inherit cmake-multilib toolchain-funcs
 
 MY_PN=LibRaw
-MY_PV=${PV/_a/-A}
+MY_PV=${PV/_b/-B}
 MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="LibRaw is a library for reading RAW files obtained from digital photo cameras"
@@ -37,11 +37,11 @@ S=${WORKDIR}/${MY_P}
 DOCS=( Changelog.txt README )
 
 PATCHES=(
-	"${FILESDIR}"/${P}-docs.patch
-	"${FILESDIR}"/${P}-automagic-jasper.patch
-	"${FILESDIR}"/${P}-libdir.patch
-	"${FILESDIR}"/${P}-lcms2-first.patch
-	"${FILESDIR}"/${P}-custom-demosaic-paths.patch
+	"${FILESDIR}"/${PN}-0.16.0_alpha2-docs.patch
+	"${FILESDIR}"/${PN}-0.16.0_alpha2-automagic-jasper.patch
+	"${FILESDIR}"/${PN}-0.16.0_alpha2-libdir.patch
+	"${FILESDIR}"/${PN}-0.16.0_alpha2-lcms2-first.patch
+	"${FILESDIR}"/${PN}-0.16.0_alpha2-custom-demosaic-paths.patch
 )
 
 pkg_pretend() {

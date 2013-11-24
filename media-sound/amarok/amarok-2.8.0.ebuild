@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0.ebuild,v 1.2 2013/08/18 14:06:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0.ebuild,v 1.3 2013/11/23 23:04:22 johu Exp $
 
 EAPI=5
 
@@ -10,6 +10,7 @@ tr uk zh_CN zh_TW"
 KDE_REQUIRED="never"
 KDE_HANDBOOK="optional"
 VIRTUALX_REQUIRED="test"
+VIRTUALDBUS_TEST="true"
 inherit flag-o-matic kde4-base
 
 DESCRIPTION="Advanced audio player based on KDE framework."
@@ -27,7 +28,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="4"
-IUSE="cdda debug +embedded ipod lastfm mp3tunes mtp ofa opengl test +utils"
+IUSE="cdda debug +embedded ipod lastfm mp3tunes mtp ofa opengl semantic-desktop test +utils"
 
 if [[ ${PV} == *9999* ]]; then
 	RESTRICT="test"
@@ -37,11 +38,10 @@ fi
 COMMONDEPEND="
 	app-crypt/qca:2
 	>=app-misc/strigi-0.5.7
-	$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop(+)' 4.8.4)
+	$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?' 4.8.4)
 	$(add_kdebase_dep kdebase-kioslaves)
 	>=media-libs/taglib-1.7[asf,mp4]
 	>=media-libs/taglib-extras-1.0.1
-	$(add_kdebase_dep nepomuk-core '' 4.9.0)
 	sys-libs/zlib
 	>=virtual/mysql-5.1[embedded?]
 	>=dev-qt/qtcore-4.8:4
@@ -66,6 +66,7 @@ COMMONDEPEND="
 	mtp? ( >=media-libs/libmtp-1.0.0 )
 	ofa? ( >=media-libs/libofa-0.9.0 )
 	opengl? ( virtual/opengl )
+	semantic-desktop? ( >=kde-base/nepomuk-core-4.9.0 )
 "
 DEPEND="${COMMONDEPEND}
 	dev-util/automoc
@@ -99,6 +100,8 @@ src_configure() {
 		$(cmake-utils_use_with mtp)
 		$(cmake-utils_use_with mp3tunes MP3Tunes)
 		$(cmake-utils_use_with ofa LibOFA)
+		$(cmake-utils_use_with semantic-desktop Nepomuk)
+		$(cmake-utils_use_with semantic-desktop Soprano)
 		$(cmake-utils_use_with utils UTILITIES)
 	)
 

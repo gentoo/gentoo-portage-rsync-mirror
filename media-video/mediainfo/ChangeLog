@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mediainfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.69 2013/09/14 10:03:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.71 2013/11/23 23:02:56 radhermit Exp $
+
+  23 Nov 2013; Tim Harder <radhermit@gentoo.org> -mediainfo-0.7.61.ebuild,
+  -mediainfo-0.7.62.ebuild, -mediainfo-0.7.63.ebuild:
+  Remove old.
+
+*mediainfo-0.7.65 (23 Nov 2013)
+
+  23 Nov 2013; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.65.ebuild:
+  Version bump.
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> mediainfo-0.7.64.ebuild:
   Stable for x86, wrt bug #482624

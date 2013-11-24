@@ -1,19 +1,19 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.61.ebuild,v 1.3 2012/12/16 13:50:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.65.ebuild,v 1.1 2013/11/23 23:02:15 radhermit Exp $
 
-EAPI="4"
+EAPI=5
 WX_GTK_VER="2.8"
 
 inherit eutils autotools wxwidgets multilib
 
 DESCRIPTION="MediaInfo supplies technical and tag information about media files"
-HOMEPAGE="http://mediainfo.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/source/${PN}/${PV}/${PN}_${PV}.tar.bz2"
+HOMEPAGE="http://mediaarea.net/mediainfo/"
+SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.tar.bz2"
 
-LICENSE="LGPL-3"
+LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="curl mms wxwidgets"
 
 RDEPEND="sys-libs/zlib

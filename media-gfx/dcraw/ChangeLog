@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.88 2013/10/15 19:03:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.89 2013/11/23 23:27:50 radhermit Exp $
+
+*dcraw-9.19 (23 Nov 2013)
+
+  23 Nov 2013; Tim Harder <radhermit@gentoo.org> +dcraw-9.19.ebuild,
+  metadata.xml:
+  Version bump, add myself as maintainer.
 
   15 Oct 2013; Pacho Ramos <pacho@gentoo.org> -dcraw-9.05.ebuild,
   -dcraw-9.12.ebuild, dcraw-9.17.ebuild:
