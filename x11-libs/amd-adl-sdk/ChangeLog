@@ -1,4 +1,7 @@
 
+  23 Nov 2013; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Add mrueg as maintainer, bug #492272
+
 *amd-adl-sdk-5.0 (08 Jul 2013)
 
   08 Jul 2013; Michael Weber <xmw@gentoo.org> +amd-adl-sdk-5.0.ebuild:
