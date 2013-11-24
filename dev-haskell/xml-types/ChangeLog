@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xml-types
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml-types/ChangeLog,v 1.9 2013/08/26 10:55:55 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xml-types/ChangeLog,v 1.10 2013/11/24 12:53:43 pacho Exp $
+
+  24 Nov 2013; Pacho Ramos <pacho@gentoo.org> xml-types-0.3.4.ebuild:
+  amd64 stable, bug #488808
 
 *xml-types-0.3.4 (26 Aug 2013)
 

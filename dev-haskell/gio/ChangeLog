@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/gio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.15 2013/04/03 05:26:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/ChangeLog,v 1.16 2013/11/24 13:00:08 pacho Exp $
+
+  24 Nov 2013; Pacho Ramos <pacho@gentoo.org> gio-0.12.4-r1.ebuild:
+  amd64 stable, bug #488808
 
 *gio-0.12.4-r1 (03 Apr 2013)
 

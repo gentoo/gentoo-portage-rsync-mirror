@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/crunch
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/crunch/ChangeLog,v 1.1 2013/11/24 12:39:18 pinkbyte Exp $
+
+*crunch-3.4 (24 Nov 2013)
+
+  24 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> +crunch-3.4.ebuild,
+  +files/crunch-3.4-gentoo.patch, +metadata.xml:
+  Initial commit, wrt bug #458122
+

@@ -4,10 +4,10 @@ DESCRIPTION=Binding to the Cairo library.
 EAPI=5
 HOMEPAGE=http://projects.haskell.org/gtk2hs/
 IUSE=+svg doc hscolour profile
-KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=BSD
 RDEPEND=dev-haskell/mtl:=[profile?] >=dev-lang/ghc-6.10.4:= x11-libs/cairo[svg?]
 SLOT=2/0.12.4
 SRC_URI=mirror://hackage/packages/archive/cairo/0.12.4/cairo-0.12.4.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=dc39324c951f4917af2d080211aa8fe7
+_md5_=d3f08ebd789022af214720c21e55113d
