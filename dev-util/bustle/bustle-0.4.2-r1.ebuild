@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/bustle-0.4.2-r1.ebuild,v 1.1 2013/04/03 05:23:10 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/bustle-0.4.2-r1.ebuild,v 1.2 2013/11/24 13:01:58 pacho Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://willthompson.co.uk/${PN}/releases/${PV}/${P}.tar.gz http://dev.g
 
 LICENSE="LGPL-2 GPL-2" # bustle-dbus-monitor.c is GPL-2, rest is LGPL-2
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/glib:2
