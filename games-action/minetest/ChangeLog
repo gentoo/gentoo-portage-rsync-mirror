@@ -1,6 +1,15 @@
 # ChangeLog for games-action/minetest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/ChangeLog,v 1.4 2013/10/27 10:34:39 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/ChangeLog,v 1.5 2013/11/24 23:42:51 hasufell Exp $
+
+*minetest-0.4.8 (24 Nov 2013)
+
+  24 Nov 2013; Julian Ospald <hasufell@gentoo.org>
+  +files/minetest-0.4.8-as-needed.patch,
+  +files/minetest-0.4.8-lua-luajit-option.patch,
+  +files/minetest-0.4.8-shared-irrlicht.patch, +minetest-0.4.8.ebuild,
+  metadata.xml:
+  version bump wrt #492466
 
   27 Oct 2013; Julian Ospald <hasufell@gentoo.org> minetest-0.4.7.ebuild:
   stable for x86 wrt #486228
