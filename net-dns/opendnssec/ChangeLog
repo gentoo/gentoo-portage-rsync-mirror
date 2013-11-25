@@ -1,6 +1,15 @@
 # ChangeLog for net-dns/opendnssec
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.35 2013/11/12 09:15:44 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.36 2013/11/25 22:54:50 mschiff Exp $
+
+*opendnssec-1.3.15-r2 (25 Nov 2013)
+*opendnssec-1.4.2-r2 (25 Nov 2013)
+
+  25 Nov 2013; Marc Schiffbauer <mschiff@gentoo.org>
+  +opendnssec-1.3.15-r2.ebuild, +opendnssec-1.4.2-r2.ebuild,
+  -opendnssec-1.3.15-r1.ebuild, -opendnssec-1.4.2-r1.ebuild,
+  files/opendnssec-fix-run-dir.patch:
+  fix opendnssec-fix-run-dir.patch so that ods will use proper run-dir
 
 *opendnssec-1.4.2-r1 (12 Nov 2013)
 *opendnssec-1.3.15-r1 (12 Nov 2013)
