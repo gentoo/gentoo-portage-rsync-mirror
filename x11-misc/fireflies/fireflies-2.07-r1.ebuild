@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07-r1.ebuild,v 1.6 2013/01/12 11:46:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07-r1.ebuild,v 1.7 2013/11/25 10:24:34 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 inherit autotools eutils multilib
 
 DESCRIPTION="Fireflies screensaver: Wicked cool eye candy"
@@ -30,9 +30,8 @@ src_unpack() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-build_system.patch \
-		"${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-libgfx-libpng15.patch
+		"${FILESDIR}"/${P}-gcc4{3,4}.patch \
+		"${FILESDIR}"/${P}-libgfx-libpng1{5,6}.patch
 
 	eautoreconf
 }
@@ -40,5 +39,5 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-confdir=/usr/share/xscreensaver/config \
-		--with-bindir=/usr/$(get_libdir)/misc/xscreensaver
+		--with-bindir="/usr/$(get_libdir)/misc/xscreensaver"
 }
