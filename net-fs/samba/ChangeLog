@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.631 2013/11/23 11:13:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.632 2013/11/25 13:58:56 polynomial-c Exp $
+
+*samba-4.1.2 (25 Nov 2013)
+*samba-4.0.12 (25 Nov 2013)
+
+  25 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> -samba-4.0.10-r1.ebuild,
+  +samba-4.0.12.ebuild, -samba-4.1.0-r1.ebuild, +samba-4.1.2.ebuild:
+  Version bump. Removed old.
 
   23 Nov 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.20.ebuild:
   Stable for sparc, wrt bug #491070

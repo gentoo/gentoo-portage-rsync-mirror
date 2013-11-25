@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15226 2013/11/24 19:37:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15227 2013/11/25 13:43:22 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (25 Nov 2013)
+# New multilib packages waiting for emul-linux-x86-baselibs bump.
+=sys-libs/gdbm-1.10-r1
 
 # Hans de Graaff <graaff@gentoo.org> (24 Nov 2013)
 # dev-ruby/id3lib-ruby only works with deprecated ruby 1.8.

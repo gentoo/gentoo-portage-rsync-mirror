@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.3.5.ebuild,v 1.1 2013/11/20 17:04:54 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/lynis/lynis-1.3.5-r1.ebuild,v 1.1 2013/11/25 13:39:48 idl0r Exp $
 
 EAPI="5"
 
@@ -19,6 +19,10 @@ RDEPEND="app-shells/bash"
 src_install() {
 	insinto /usr/share/${PN}
 	doins -r db/ include/ plugins/ || die "failed to install lynis base files"
+
+	insopts -m0640
+	doins -r include/
+	insopts -m0644
 
 	dosbin lynis
 
