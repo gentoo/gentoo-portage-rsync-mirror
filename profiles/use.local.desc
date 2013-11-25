@@ -1614,6 +1614,7 @@ dev-libs/libdivecomputer:tools - Install tools that can be used to test the libr
 dev-libs/libffi:pax_kernel - Use PaX emulated trampolines, for we can't use PROT_EXEC
 dev-libs/libgdata:vala - Enable bindings for dev-lang/vala
 dev-libs/libgit2:ssh - Enable SSH transport support
+dev-libs/libgit2:trace - Enable tracing support
 dev-libs/libgpg-error:common-lisp - Install common-lisp files
 dev-libs/libgusb:vala - Enable bindings for dev-lang/vala
 dev-libs/libindicate:introspection - Use dev-libs/gobject-introspection for introspection

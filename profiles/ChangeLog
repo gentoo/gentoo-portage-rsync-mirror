@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8384 2013/11/24 19:37:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8385 2013/11/24 23:02:10 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,6 +8,10 @@
 
   24 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Removed make-4.0 mask.
+
+  24 Nov 2013; Julian Ospald <hasufell@gentoo.org>
+  hardened/linux/amd64/no-multilib/package.mask:
+  mask games-action/brutal-legend for hardened no-multilib
 
   24 Nov 2013; Julian Ospald <hasufell@gentoo.org>
   hardened/linux/amd64/no-multilib/package.mask:
