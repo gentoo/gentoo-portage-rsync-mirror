@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.3.1.ebuild,v 1.3 2013/06/25 00:16:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.3.1.ebuild,v 1.4 2013/11/25 07:37:41 patrick Exp $
 
 EAPI=5
 
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc metis static-libs tbb"
 RDEPEND="
+	virtual/lapack
 	>=sci-libs/cholmod-2[metis?]
 	tbb? ( dev-cpp/tbb )"
 DEPEND="${RDEPEND}
