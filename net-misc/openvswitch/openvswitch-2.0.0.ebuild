@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0.ebuild,v 1.2 2013/11/18 03:08:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0.ebuild,v 1.3 2013/11/25 16:43:10 prometheanfire Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 CONFIG_CHECK="~NET_CLS_ACT ~NET_CLS_U32 ~NET_SCH_INGRESS ~NET_ACT_POLICE ~IPV6 ~TUN"
-MODULE_NAMES="brcompat(net:${S}/datapath/linux) openvswitch(net:${S}/datapath/linux)"
+MODULE_NAMES="openvswitch(net:${S}/datapath/linux)"
 BUILD_TARGETS="all"
 
 pkg_setup() {

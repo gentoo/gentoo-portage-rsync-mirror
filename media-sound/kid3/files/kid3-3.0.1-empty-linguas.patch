@@ -1,0 +1,36 @@
+commit 94f91f422fbbaaa4af7e46cdaf8fb55c5f675b93
+Author: Urs Fleisch <ufleisch@users.sourceforge.net>
+Date:   Mon Nov 25 07:55:53 2013 +0100
+
+    Enable building with all translations disabled, [bugs:#84].
+    
+    In Gentoo, it is possible to disable linguas by renaming them from
+    .po to .po.old. If all po files are disabled this way, cmake failed.
+
+diff --git a/po/CMakeLists.txt b/po/CMakeLists.txt
+index f036ea6..6cd9fdb 100644
+--- a/po/CMakeLists.txt
++++ b/po/CMakeLists.txt
+@@ -22,13 +22,15 @@ if (APPLE OR WIN32)
+   endforeach (_currentPoFile)
+ endif (APPLE OR WIN32)
+ 
+-add_custom_command(
+-   OUTPUT ${_tsFiles}
+-   COMMAND ${PERL_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/po2ts.pl
+-     ${QT_LUPDATE_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}
+-     ${CMAKE_CURRENT_SOURCE_DIR}/../src
+-   DEPENDS ${_poFiles}
+-)
++if (_tsFiles)
++  add_custom_command(
++     OUTPUT ${_tsFiles}
++     COMMAND ${PERL_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/po2ts.pl
++       ${QT_LUPDATE_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}
++       ${CMAKE_CURRENT_SOURCE_DIR}/../src
++     DEPENDS ${_poFiles}
++  )
++endif (_tsFiles)
+ if (APPLE OR WIN32)
+   qt4_add_translation(_qmFiles ${_tsFiles} ${_qtTsFiles})
+   add_custom_target(translations "ALL" DEPENDS ${_qmFiles})

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kid3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.77 2013/11/24 17:36:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.78 2013/11/25 16:59:47 johu Exp $
+
+  25 Nov 2013; Johannes Huber <johu@gentoo.org>
+  +files/kid3-3.0.1-empty-linguas.patch, kid3-3.0.1.ebuild:
+  Add upstream patch which fixes build when LINGUAS is empty, bug #492460.
 
 *kid3-3.0.1 (24 Nov 2013)
 

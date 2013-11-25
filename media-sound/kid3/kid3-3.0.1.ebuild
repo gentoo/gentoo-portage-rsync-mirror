@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-3.0.1.ebuild,v 1.1 2013/11/24 17:36:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-3.0.1.ebuild,v 1.2 2013/11/25 16:59:47 johu Exp $
 
 EAPI=5
 
@@ -46,6 +46,7 @@ DEPEND="${RDEPEND}"
 PATCHES=(
 	"${FILESDIR}/${P}-qt5-automagic.patch"
 	"${FILESDIR}/${P}-rpath.patch"
+	"${FILESDIR}/${P}-empty-linguas.patch"
 )
 
 src_configure() {
