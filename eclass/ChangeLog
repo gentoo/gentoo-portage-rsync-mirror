@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1068 2013/11/25 02:49:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1069 2013/11/25 03:11:57 dirtyepic Exp $
+
+  25 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Prevent comparison failures due to -frecord-gcc-switches (bug #490738).
 
   25 Nov 2013; Steve Arnold <nerdboy@gentoo.org> gnatbuild.eclass:
   Updates for handling texinfo breakage/version stuff (see bug #483192).

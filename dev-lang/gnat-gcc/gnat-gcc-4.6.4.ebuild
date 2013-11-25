@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.6.4.ebuild,v 1.2 2013/11/20 06:39:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.6.4.ebuild,v 1.3 2013/11/25 03:09:47 nerdboy Exp $
 
 inherit gnatbuild
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNAT Ada Compiler - gcc version"
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GMGPL"
 
-IUSE="lto openmp"
+IUSE="doc lto openmp"
 
 BOOT_SLOT="4.4"
 
@@ -31,7 +31,7 @@ RDEPEND=">=dev-libs/mpfr-3.1.2
 	>=sys-libs/ncurses-5.7"
 
 DEPEND="${RDEPEND}
-	<sys-apps/texinfo-5.1
+	doc? ( >=sys-apps/texinfo-5 )
 	>=sys-devel/bison-1.875
 	>=sys-libs/glibc-2.8
 	>=sys-devel/binutils-2.20"

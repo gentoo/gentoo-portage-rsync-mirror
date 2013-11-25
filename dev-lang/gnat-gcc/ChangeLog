@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.65 2013/11/20 06:39:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.66 2013/11/25 03:09:48 nerdboy Exp $
+
+  25 Nov 2013; Steve Arnold <nerdboy@gentoo.org> gnat-gcc-4.5.4.ebuild,
+  gnat-gcc-4.6.4.ebuild, +files/gnat-gcc-4.5.4-tex-version-workaround.patch:
+  Updates (and a patch from Martin von Gagern) for texinfo borkage. Closes
+  bug #483192). Upstream patches only go back to 4.6.4 so the workaround 
+  uses the aforementioned patch to disable info docs if texinfo-5.x is 
+  installed and the doc USE flag is enabled.
 
   20 Nov 2013; Steve Arnold <nerdboy@gentoo.org> gnat-gcc-4.6.4.ebuild:
   Adding openmp USE flag for updated gnatbuild.eclass.

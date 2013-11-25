@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.605 2013/11/09 10:05:12 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.606 2013/11/25 03:11:57 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1394,6 +1394,8 @@ gcc_do_filter_flags() {
 
 	# dont want to funk ourselves
 	filter-flags '-mabi*' -m31 -m32 -m64
+
+	filter-flags '-frecord-gcc-switches' # 490738
 
 	case ${GCC_BRANCH_VER} in
 		3.2|3.3)
