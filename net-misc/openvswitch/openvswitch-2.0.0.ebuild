@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0.ebuild,v 1.3 2013/11/25 16:43:10 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0.ebuild,v 1.4 2013/11/25 19:41:04 prometheanfire Exp $
 
 EAPI=5
 
@@ -38,13 +38,13 @@ BUILD_TARGETS="all"
 pkg_setup() {
 	if use modules ; then
 		CONFIG_CHECK+=" ~!OPENVSWITCH"
+		kernel_is ge 2 6 32 || die "Linux >=2.6.32 and <3.10 required"
+		kernel_is lt 3 11 || die "Linux >=2.6.18 and <3.11 required"
 		linux-mod_pkg_setup
 	else
 		CONFIG_CHECK+=" ~OPENVSWITCH"
 		linux-info_pkg_setup
 	fi
-	kernel_is ge 2 6 32 || die "Linux >=2.6.32 and <3.10 required"
-	kernel_is lt 3 11 || die "Linux >=2.6.18 and <3.11 required"
 	use monitor && python-single-r1_pkg_setup
 }
 

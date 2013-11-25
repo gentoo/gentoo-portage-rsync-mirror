@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.72 2013/11/16 13:40:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.73 2013/11/25 19:32:38 mgorny Exp $
 
 EAPI=5
 
@@ -31,8 +31,7 @@ IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
 
 MINKV="3.0"
 
-COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1:0=
-	>=sys-apps/util-linux-2.20:0=
+COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
 	sys-libs/libcap:0=
 	acl? ( sys-apps/acl:0= )
 	audit? ( >=sys-process/audit-2:0= )
@@ -64,7 +63,9 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-libs/glibc-2.10
 	!sys-fs/udev"
 
-PDEPEND=">=sys-apps/hwids-20130717-r1[udev]
+# sys-apps/daemon: the daemon only (+ build-time lib dep for tests)
+PDEPEND=">=sys-apps/dbus-1.6.8-r1:0
+	>=sys-apps/hwids-20130717-r1[udev]
 	policykit? ( sys-auth/polkit )
 	!vanilla? ( sys-apps/gentoo-systemd-integration )"
 
@@ -79,7 +80,8 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gcc-4.6
 	>=sys-kernel/linux-headers-${MINKV}
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.18 )"
+	doc? ( >=dev-util/gtk-doc-1.18 )
+	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
 #if LIVE
 DEPEND="${DEPEND}
@@ -233,6 +235,8 @@ multilib_src_compile() {
 		# prerequisites for gudev
 		use gudev && emake src/gudev/gudev{enumtypes,marshal}.{c,h}
 
+		echo 'gentoo: $(BUILT_SOURCES)' | \
+		emake "${mymakeopts[@]}" -f Makefile -f - gentoo
 		echo 'gentoo: $(lib_LTLIBRARIES) $(pkgconfiglib_DATA)' | \
 		emake "${mymakeopts[@]}" -f Makefile -f - gentoo
 	fi
