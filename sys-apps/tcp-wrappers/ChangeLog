@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.47 2013/05/14 05:46:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.48 2013/11/25 14:56:23 mgorny Exp $
+
+*tcp-wrappers-7.6.22-r1 (25 Nov 2013)
+
+  25 Nov 2013; Michał Górny <mgorny@gentoo.org> +tcp-wrappers-7.6.22-r1.ebuild:
+  Enable multilib support, bug #488390. Acked by Chainsaw.
 
   14 May 2013; Tim Harder <radhermit@gentoo.org> tcp-wrappers-7.6-r8.ebuild:
   Inherit multilib eclass for get_libdir usage and drop empty DEPEND.
