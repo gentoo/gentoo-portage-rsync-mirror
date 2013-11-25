@@ -1,4 +1,4 @@
-DEFINED_PHASES=install nofetch
+DEFINED_PHASES=install nofetch prepare
 DEPEND=app-arch/unzip
 DESCRIPTION=API to access display driver functionality for ATI graphics cards
 EAPI=5
@@ -10,4 +10,4 @@ RDEPEND=x11-drivers/ati-drivers
 RESTRICT=fetch
 SLOT=0
 SRC_URI=ADL_SDK_6.0.zip
-_md5_=0be519ae619b67c5f7f537c775eb02e8
+_md5_=c844b18392d973fefda99b99d78a819e

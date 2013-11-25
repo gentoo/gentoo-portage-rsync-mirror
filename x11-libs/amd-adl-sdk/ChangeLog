@@ -1,4 +1,10 @@
 
+*amd-adl-sdk-6.0-r1 (25 Nov 2013)
+
+  25 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +amd-adl-sdk-6.0-r1.ebuild,
+  -amd-adl-sdk-6.0.ebuild:
+  Add missing header.
+
 *amd-adl-sdk-6.0 (25 Nov 2013)
 
   25 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +amd-adl-sdk-6.0.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-6.0.ebuild,v 1.1 2013/11/25 01:33:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-6.0-r1.ebuild,v 1.1 2013/11/25 04:16:08 mrueg Exp $
 
 EAPI=5
 
@@ -23,6 +23,10 @@ S="${WORKDIR}"
 pkg_nofetch() {
 	einfo "Please visit the download page [1] and save ${A} in ${DISTDIR}"
 	einfo "[1] http://developer.amd.com/tools-and-sdks/graphics-development/display-library-adl-sdk/"
+}
+
+src_prepare() {
+	sed -i -e '/include/a \#include <wchar.h>' include/adl_structures.h || die
 }
 
 src_install() {
