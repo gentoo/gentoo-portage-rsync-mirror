@@ -1,0 +1,12 @@
+DEFINED_PHASES=install setup
+DEPEND=dev-lang/php >=dev-php/pear-1.9.0
+DESCRIPTION=PHP mess detector
+EAPI=5
+HOMEPAGE=http://www.phpmd.org
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=>=dev-php/phpdepend-1.1.1 dev-lang/php >=dev-php/pear-1.9.0
+SLOT=0
+SRC_URI=http://pear.phpmd.org/get/PHP_PMD-1.5.0.tgz
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-lib-r1	683c04445ce44b20b5df954b5050e387	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=41e920c89bafd573e648c9780c977183

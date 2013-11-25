@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.11 2013/02/07 22:07:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.12 2013/11/25 22:15:53 hasufell Exp $
 
 EAPI=4
 
@@ -14,7 +14,16 @@ SRC_URI="http://dl.trem-servers.com/${PN}-gentoopatches-${PV}-r5.zip
 	ftp://ftp.wireplay.co.uk/pub/quake3arena/mods/${PN}/${P}.zip
 	mirror://sourceforge/${PN}/${P}.zip"
 
-LICENSE="GPL-2 CC-BY-SA-2.5"
+# most media: CC-BY-SA-2.5
+# shaderlab textures: shaderlab (relicensed to CC-BY-SA-2.5 wrt
+#	http://lists.debian.org/debian-legal/2006/04/msg00229.html)
+# textures by yves allaire:  CC-BY-ND-NC-1.0
+# most part of the code: GPL-2
+# src/game/bg_lib.c: BSD
+# src/qcommon/unzip.c: ZLIB
+# src/jpeg-6/* and src/renderer/jpeg_memsrc.c: IJG
+# src/client/snd_adpcm.c: HPND
+LICENSE="BSD CC-BY-NC-ND-1.0 CC-BY-SA-2.5 GPL-2 HPND IJG ZLIB"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="dedicated openal +opengl +vorbis"
