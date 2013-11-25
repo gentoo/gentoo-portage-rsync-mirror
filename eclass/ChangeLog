@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1067 2013/11/24 10:53:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1068 2013/11/25 02:49:47 nerdboy Exp $
+
+  25 Nov 2013; Steve Arnold <nerdboy@gentoo.org> gnatbuild.eclass:
+  Updates for handling texinfo breakage/version stuff (see bug #483192).
 
   24 Nov 2013; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
   Support in-source builds.
