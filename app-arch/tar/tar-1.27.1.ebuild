@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.25-r1.ebuild,v 1.5 2013/10/15 09:03:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27.1.ebuild,v 1.1 2013/11/25 12:20:59 polynomial-c Exp $
 
 EAPI="3"
 
@@ -13,17 +13,16 @@ SRC_URI="mirror://gnu/tar/${P}.tar.bz2
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="nls static userland_GNU"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="acl minimal nls selinux static userland_GNU xattr"
 
-RDEPEND=""
+RDEPEND="acl? ( virtual/acl )
+	selinux? ( sys-libs/libselinux )"
 DEPEND="${RDEPEND}
-	nls? ( >=sys-devel/gettext-0.10.35 )"
+	nls? ( >=sys-devel/gettext-0.10.35 )
+	xattr? ( sys-apps/attr )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-incremental-fix.patch #349164
-	epatch "${FILESDIR}"/${P}-verify-fix.patch #349155
-	epatch "${FILESDIR}"/${P}-verify-check.patch
 	if ! use userland_GNU ; then
 		sed -i \
 			-e 's:/backup\.sh:/gbackup.sh:' \
@@ -33,26 +32,23 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
 	use static && append-ldflags -static
-	use userland_GNU || myconf="--program-prefix=g"
-	# Work around bug in sandbox #67051
-	gl_cv_func_chown_follows_symlink=yes \
 	FORCE_UNSAFE_CONFIGURE=1 \
 	econf \
 		--enable-backup-scripts \
 		--bindir="${EPREFIX}"/bin \
 		--libexecdir="${EPREFIX}"/usr/sbin \
+		$(usex userland_GNU "" "--program-prefix=g") \
+		$(use_with acl posix-acls) \
 		$(use_enable nls) \
-		${myconf}
+		$(use_with selinux) \
+		$(use_with xattr xattrs)
 }
 
 src_install() {
-	local p=""
-	use userland_GNU || p=g
-
 	emake DESTDIR="${D}" install || die
 
+	local p=$(usex userland_GNU "" "g")
 	if [[ -z ${p} ]] ; then
 		# a nasty yet required piece of baggage
 		exeinto /etc
@@ -68,7 +64,13 @@ src_install() {
 	fi
 
 	dodoc AUTHORS ChangeLog* NEWS README* THANKS
-	newman "${FILESDIR}"/tar.1 ${p}tar.1
+	newman "${FILESDIR}"/tar.1-1.27 ${p}tar.1
 	mv "${ED}"/usr/sbin/${p}backup{,-tar}
 	mv "${ED}"/usr/sbin/${p}restore{,-tar}
+
+	if use minimal ; then
+		find "${ED}"/etc "${ED}"/*bin/ "${ED}"/usr/*bin/ \
+			-type f -a '!' '(' -name tar -o -name ${p}tar ')' \
+			-delete
+	fi
 }
