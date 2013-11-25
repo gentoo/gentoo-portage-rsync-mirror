@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommander/jcommander-1.32.ebuild,v 1.1 2013/09/16 16:59:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommander/jcommander-1.32.ebuild,v 1.2 2013/11/25 18:46:54 ercpe Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/cbeust/${PN}/archive/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"
