@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/connection_pool
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/ChangeLog,v 1.1 2013/11/25 01:55:17 mrueg Exp $
+
+*connection_pool-1.1.0 (25 Nov 2013)
+
+  25 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +connection_pool-1.1.0.ebuild,
+  +metadata.xml:
+  Initial ebuild by Tiziano Müller (dev-zero). Taken from his overlay. Added
+  minor changes.

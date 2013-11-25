@@ -1,4 +1,10 @@
 
+*amd-adl-sdk-6.0 (25 Nov 2013)
+
+  25 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +amd-adl-sdk-6.0.ebuild,
+  -amd-adl-sdk-3.0.ebuild, -amd-adl-sdk-5.0.ebuild:
+  Version bump. Fix HOMEPAGE. Cleanup old.
+
   23 Nov 2013; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Add mrueg as maintainer, bug #492272
 

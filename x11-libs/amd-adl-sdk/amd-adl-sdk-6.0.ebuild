@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-5.0.ebuild,v 1.1 2013/07/08 15:01:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-6.0.ebuild,v 1.1 2013/11/25 01:33:14 mrueg Exp $
 
-EAPI="5"
+EAPI=5
 
 DESCRIPTION="API to access display driver functionality for ATI graphics cards"
-HOMEPAGE="http://developer.amd.com/sdks/adlsdk/"
+HOMEPAGE="http://developer.amd.com/tools-and-sdks/graphics-development/display-library-adl-sdk/"
 SRC_URI="ADL_SDK_${PV}.zip"
 
 LICENSE="AMD-ADL"
