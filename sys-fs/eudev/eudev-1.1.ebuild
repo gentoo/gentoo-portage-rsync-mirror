@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.1.ebuild,v 1.13 2013/09/03 13:35:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.1.ebuild,v 1.14 2013/11/25 09:38:20 chainsaw Exp $
 
 EAPI="5"
 
@@ -43,7 +43,6 @@ DEPEND="${COMMON_DEPEND}
 	test? ( app-text/tree dev-lang/perl )"
 
 RDEPEND="${COMMON_DEPEND}
-	hwdb? ( >=sys-apps/hwids-20121202.2[udev] )
 	!sys-fs/udev
 	!sys-apps/coldplug
 	!sys-apps/systemd
@@ -51,8 +50,8 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-fs/device-mapper
 	!<sys-fs/udev-init-scripts-18"
 
-PDEPEND=">=virtual/udev-180
-	<virtual/udev-206
+PDEPEND="hwdb? ( <sys-apps/hwids-20130915[udev] )
+	>=virtual/udev-180
 	openrc? ( >=sys-fs/udev-init-scripts-18 )"
 
 pkg_pretend()
