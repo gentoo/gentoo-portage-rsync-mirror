@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/testng/testng-6.8-r1.ebuild,v 1.1 2013/10/24 19:32:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/testng/testng-6.8-r2.ebuild,v 1.1 2013/11/25 19:08:15 ercpe Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://testng.org/"
 SRC_URI="http://${PN}.org/${P}.zip"
 
 LICENSE="Apache-2.0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 
 CDEPEND="dev-java/ant-core:0
@@ -25,6 +25,7 @@ CDEPEND="dev-java/ant-core:0
 	dev-java/snakeyaml:1.9"
 
 DEPEND=">=virtual/jdk-1.5
+	app-arch/zip
 	${CDEPEND}"
 
 RDEPEND=">=virtual/jre-1.5
