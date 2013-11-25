@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.820.0.ebuild,v 1.1 2013/11/25 12:03:02 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.820.0.ebuild,v 1.2 2013/11/25 18:09:01 civil Exp $
 
 EAPI=4
 MODULE_AUTHOR=BINGOS
@@ -26,7 +26,7 @@ PDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/6.62-delete_packlist_podlocal.patch"
+	"${FILESDIR}/6.82-delete_packlist_podlocal.patch"
 	"${FILESDIR}/6.58-RUNPATH.patch"
 )
 SRC_TEST=do
