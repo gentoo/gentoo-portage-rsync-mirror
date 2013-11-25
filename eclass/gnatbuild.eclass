@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.59 2013/11/25 02:49:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.60 2013/11/25 07:06:23 nerdboy Exp $
 #
-# Author: George Shapovalov <george@gentoo.org>
+# Authors: George Shapovalov <george@gentoo.org>
+#          Steve Arnold <nerdboy@gentoo.org>
+#
 # Belongs to: ada herd <ada@gentoo.org>
 #
 # Notes:
@@ -690,7 +692,7 @@ gnatbuild_src_install() {
 		make DESTDIR="${D}" install || die
 
 		if use doc ; then
-			if (( $(bc <<< "${GNATBRANCH} > 4.5") )) ; then
+			if (( $(bc <<< "${GNATBRANCH} > 4.3") )) ; then
 				#make a convenience info link
 				elog "Yay!  Math is good."
 				dosym gnat_ugn.info ${DATAPATH}/info/gnat.info
