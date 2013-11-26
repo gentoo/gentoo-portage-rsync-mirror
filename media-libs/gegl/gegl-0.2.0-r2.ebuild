@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r2.ebuild,v 1.11 2013/10/01 21:16:53 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r2.ebuild,v 1.12 2013/11/26 02:48:55 patrick Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ RDEPEND="
 	jpeg2k? ( >=media-libs/jasper-1.900.1 )
 	openexr? ( media-libs/openexr )
 	png? ( media-libs/libpng )
-	raw? ( >=media-libs/libopenraw-0.0.5 )
+	raw? ( =media-libs/libopenraw-0.0.9 )
 	sdl? ( media-libs/libsdl )
 	svg? ( >=gnome-base/librsvg-2.14:2 )
 	umfpack? ( sci-libs/umfpack )
