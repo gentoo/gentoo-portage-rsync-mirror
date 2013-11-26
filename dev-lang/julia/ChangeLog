@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/julia
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.1 2013/11/25 23:40:37 patrick Exp $
+
+*julia-0.2.0 (25 Nov 2013)
+
+  25 Nov 2013; Patrick Lauer <patrick@gentoo.org> +julia-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me. Needs some more cleanups, but is kinda mostly
+  working
