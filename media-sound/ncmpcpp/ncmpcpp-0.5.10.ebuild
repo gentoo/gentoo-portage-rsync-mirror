@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.10.ebuild,v 1.10 2012/12/31 17:30:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.5.10.ebuild,v 1.11 2013/11/26 11:02:51 jer Exp $
 
 EAPI="4"
 
 inherit bash-completion-r1 eutils
 
-DESCRIPTION="An ncurses mpd client, ncmpc clone with some new features, written in C++"
+DESCRIPTION="featureful ncurses based MPD client inspired by ncmpc"
 HOMEPAGE="http://ncmpcpp.rybczak.net/"
 SRC_URI="http://ncmpcpp.rybczak.net/stable/${P}.tar.bz2"
 

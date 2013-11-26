@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-9999.ebuild,v 1.1 2013/08/04 16:08:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-9999.ebuild,v 1.2 2013/11/26 11:02:51 jer Exp $
 
 EAPI=5
 
 inherit autotools bash-completion-r1 eutils git-2
 
-DESCRIPTION="NCurses Music Player Client (Plus Plus)"
+DESCRIPTION="featureful ncurses based MPD client inspired by ncmpc"
 HOMEPAGE="http://ncmpcpp.rybczak.net/"
 EGIT_REPO_URI="git://repo.or.cz/ncmpcpp.git"
 LICENSE="GPL-2"
