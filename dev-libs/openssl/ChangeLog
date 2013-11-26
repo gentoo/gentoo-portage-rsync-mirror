@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.496 2013/10/23 16:10:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.497 2013/11/26 07:27:00 polynomial-c Exp $
+
+  26 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> -openssl-0.9.8u.ebuild,
+  -openssl-0.9.8v.ebuild, -openssl-0.9.8w.ebuild, -openssl-0.9.8x.ebuild,
+  -openssl-1.0.0h.ebuild, -openssl-1.0.0i.ebuild, -openssl-1.0.1a.ebuild,
+  -openssl-1.0.1b.ebuild, -openssl-1.0.1c.ebuild, -openssl-1.0.1d.ebuild,
+  -openssl-1.0.1d-r1.ebuild, openssl-1.0.1e.ebuild,
+  -files/openssl-1.0.0d-alpha-fix-unalign.patch,
+  -files/openssl-1.0.0d-alpha-typo.patch,
+  -files/openssl-1.0.0e-pkg-config.patch, -files/openssl-1.0.1-ipv6.patch,
+  -files/openssl-1.0.1a-hmac-ia32cap.patch,
+  -files/openssl-1.0.1d-s3-packet.patch:
+  Removed old vulnerable versions. Removed all but ppc64 KEYWORDS from
+  openssl-1.0.1e.ebuild.
 
 *openssl-1.0.1e-r2 (23 Oct 2013)
 
