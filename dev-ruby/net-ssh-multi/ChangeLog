@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/net-ssh-multi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/ChangeLog,v 1.9 2013/04/13 06:03:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/ChangeLog,v 1.10 2013/11/26 02:26:56 mrueg Exp $
+
+*net-ssh-multi-1.2.0-r1 (26 Nov 2013)
+
+  26 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +net-ssh-multi-1.2.0-r1.ebuild:
+  Add ruby20 target. Drop ppc64 keyword, rekeywording in bug #465948.
 
 *net-ssh-multi-1.2.0 (13 Apr 2013)
 
