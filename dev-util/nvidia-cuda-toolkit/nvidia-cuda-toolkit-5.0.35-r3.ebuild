@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.0.35-r3.ebuild,v 1.3 2013/08/11 12:16:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-5.0.35-r3.ebuild,v 1.4 2013/11/26 09:28:44 jlec Exp $
 
 EAPI=5
 
@@ -114,7 +114,7 @@ src_install() {
 	dobin "${T}"/cuda-config
 }
 
-pkg_postinst() {
+pkg_postinst_check() {
 	local a b
 	a="$(version_sort $(cuda-config -s))"; a=( $a )
 	# greatest supported version
@@ -130,5 +130,11 @@ pkg_postinst() {
 			ewarn "--compiler-bindir=${EPREFIX}/usr/*pc-linux-gnu/gcc-bin/gcc${b}"
 			ewarn "to the nvcc compiler flags"
 			echo
+	fi
+}
+
+pkg_postinst() {
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		pkg_postinst_check
 	fi
 }
