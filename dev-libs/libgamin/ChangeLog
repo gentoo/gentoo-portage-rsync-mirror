@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgamin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.41 2013/11/24 18:50:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.42 2013/11/26 20:07:55 jer Exp $
+
+  26 Nov 2013; Jeroen Roovers <jer@gentoo.org> libgamin-0.1.10-r4.ebuild:
+  Stable for HPPA (bug #492040).
 
   24 Nov 2013; Pacho Ramos <pacho@gentoo.org> libgamin-0.1.10-r4.ebuild:
   amd64 stable, bug #492040

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/timezone-data
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.294 2013/11/19 01:27:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/timezone-data/ChangeLog,v 1.295 2013/11/26 20:20:15 hwoarang Exp $
+
+  26 Nov 2013; Markos Chandras <hwoarang@gentoo.org> timezone-data-2012j.ebuild:
+  amd64-fbsd has no stable keywords
 
 *timezone-data-2013h (19 Nov 2013)
 

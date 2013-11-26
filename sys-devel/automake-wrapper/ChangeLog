@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.77 2013/09/05 05:35:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.78 2013/11/26 20:22:04 hwoarang Exp $
+
+  26 Nov 2013; Markos Chandras <hwoarang@gentoo.org> automake-wrapper-9.ebuild:
+  amd64-fbsd has no stable keywords
 
   05 Sep 2013; Mike Frysinger <vapier@gentoo.org> automake-wrapper-9.ebuild:
   Mark m68k/ppc64/s390/sh/sparc stable #481904.
