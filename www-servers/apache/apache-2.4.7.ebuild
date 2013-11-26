@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.1 2013/11/26 03:18:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.2 2013/11/26 08:27:56 polynomial-c Exp $
 
-EAPI="2"
+EAPI=5
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20130801"
@@ -128,9 +128,9 @@ DEPEND="${DEPEND}
 	>=dev-libs/openssl-0.9.8m
 	apache2_modules_deflate? ( sys-libs/zlib )"
 
-# dependency on >=dev-libs/apr-1.4.5 for bug #368651
+# dependency on >=dev-libs/apr-1.5.0 for bug #492578
 RDEPEND="${RDEPEND}
-	>=dev-libs/apr-1.4.5
+	>=dev-libs/apr-1.5.0
 	>=dev-libs/openssl-0.9.8m
 	apache2_modules_mime? ( app-misc/mime-types )"
 
@@ -140,8 +140,7 @@ src_prepare() {
 	# GENTOO_PATCHNAME="gentoo-apache-2.4.1" ...
 	if [ -f "${FILESDIR}/${GENTOO_PATCHNAME}-${GENTOO_DEVELOPER}-${GENTOO_PATCHSTAMP}-${PVR}.patch" ]; then
 		cd "${GENTOO_PATCHDIR}" || die "Failed to cd to ${GENTOO_PATCHDIR}"
-		epatch "${FILESDIR}/${GENTOO_PATCHNAME}-${GENTOO_DEVELOPER}-${GENTOO_PATCHSTAMP}-${PVR}.patch" \
-			|| die "epatch failed"
+		epatch "${FILESDIR}/${GENTOO_PATCHNAME}-${GENTOO_DEVELOPER}-${GENTOO_PATCHSTAMP}-${PVR}.patch"
 		cd "${S}" || die "Failed to cd to ${S}"
 	fi
 	apache-2_src_prepare

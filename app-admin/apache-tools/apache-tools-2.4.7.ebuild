@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7.ebuild,v 1.1 2013/11/26 03:18:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7.ebuild,v 1.2 2013/11/26 08:26:55 polynomial-c Exp $
 
-EAPI="3"
+EAPI=5
 inherit flag-o-matic eutils multilib
 
 DESCRIPTION="Useful Apache tools - htdigest, htpasswd, ab, htdbm"
@@ -15,8 +15,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="ssl"
 RESTRICT="test"
 
-RDEPEND="=dev-libs/apr-1*
-	=dev-libs/apr-util-1*
+RDEPEND=">=dev-libs/apr-1.5.0:1
+	dev-libs/apr-util:1
 	dev-libs/libpcre
 	ssl? ( dev-libs/openssl )"
 
@@ -52,7 +52,7 @@ src_compile() {
 	emake
 }
 
-src_install () {
+src_install() {
 	cd support || die
 
 	make DESTDIR="${D}" install

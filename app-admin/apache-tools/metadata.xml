@@ -4,6 +4,10 @@
         <maintainer>
                 <email>patrick@gentoo.org</email>
         </maintainer>
+        <maintainer>
+                <email>polynomial-c@gentoo.org</email>
+                <name>Lars Wendler</name>
+        </maintainer>
 	<longdescription lang="en">
 		app-admin/apache-tools contains tools that might be useful without
 		having apache itself installed (like htdigest/htpasswd, but also ab -

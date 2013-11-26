@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/skype-call-recorder/skype-call-recorder-0.8.ebuild,v 1.5 2013/09/08 21:14:25 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/skype-call-recorder/skype-call-recorder-0.8.ebuild,v 1.6 2013/11/26 08:24:36 slyfox Exp $
 
 EAPI="4"
 
-inherit cmake-utils
+inherit cmake-utils flag-o-matic
 
 DESCRIPTION="Records Skype calls to MP3/Ogg/WAV files"
 HOMEPAGE="http://atdot.ch/scr/"
@@ -31,3 +31,7 @@ RDEPEND="${DEPEND}
 PATCHES=(
 	"${FILESDIR}/${P}-cmake.patch"
 )
+
+src_prepare() {
+	append-ldflags $(no-as-needed) -lvorbis -logg # bug 482744
+}
