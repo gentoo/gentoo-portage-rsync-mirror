@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/freerdp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.53 2013/11/11 16:32:17 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/ChangeLog,v 1.54 2013/11/26 01:58:46 floppym Exp $
+
+  26 Nov 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/freerdp-1.1.0_beta1_p20130710-ffmpeg.patch,
+  freerdp-1.1.0_beta1_p20130710.ebuild:
+  ffmpeg-2.0 compatibility fix, thanks to eroen on bug 481226.
 
   11 Nov 2013; Mike Gilbert <floppym@gentoo.org>
   freerdp-1.1.0_beta1_p20130710.ebuild, freerdp-9999.1.ebuild:
