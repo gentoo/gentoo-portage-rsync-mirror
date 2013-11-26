@@ -443,6 +443,8 @@ app-emulation/bochs:debugger - Enable debugger (slows down emulation)
 app-emulation/bochs:gdb - Enable support for the remote GDB stub
 app-emulation/bochs:x86-64 - Enable support for emulation of 64-bit CPUs
 app-emulation/crossover-bin:capi - Enable ISDN support via CAPI
+app-emulation/docker:aufs - Enables dependencies for the "aufs" driver, including necessary kernel flags.
+app-emulation/docker:device-mapper - Enables dependencies for the "device-mapper" driver, including necessary kernel flags.
 app-emulation/dosemu:fluidsynth - use media-sound/fluidsynth for MIDI emulation
 app-emulation/e-uae:capslib - Add CAPS library support
 app-emulation/e-uae:sdl-sound - Use media-libs/sdl-sound for audio output

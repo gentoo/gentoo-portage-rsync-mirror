@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.4-r1.ebuild,v 1.1 2013/11/17 06:40:29 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.4-r1.ebuild,v 1.2 2013/11/26 15:20:33 naota Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -18,7 +18,7 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="dconf deprecated +gconf gtk +gtk3 +introspection nls +python test vala wayland +X"
+IUSE="deprecated gconf gtk +gtk3 +introspection nls +python test vala wayland +X"
 REQUIRED_USE="|| ( gtk gtk3 X )
 	deprecated? ( python )
 	python? (
@@ -30,8 +30,8 @@ COMMON_DEPEND="
 	gnome-base/librsvg:2
 	sys-apps/dbus[X?]
 	app-text/iso-codes
+	>=gnome-base/dconf-0.13.4
 
-	dconf? ( >=gnome-base/dconf-0.13.4 )
 	gconf? ( >=gnome-base/gconf-2.12:2 )
 	gtk? ( x11-libs/gtk+:2 )
 	gtk3? ( x11-libs/gtk+:3 )
@@ -93,7 +93,7 @@ src_configure() {
 		python_conf="--disable-python-library --disable-setup"
 	fi
 	econf \
-		$(use_enable dconf) \
+		--enable-dconf \
 		$(use_enable introspection) \
 		$(use_enable gconf) \
 		$(use_enable gtk gtk2) \
@@ -132,20 +132,15 @@ src_install() {
 
 pkg_preinst() {
 	use gconf && gnome2_gconf_savelist
-	use gconf && gnome2_schemas_savelist
+	gnome2_schemas_savelist
 	gnome2_icon_savelist
 }
 
 pkg_postinst() {
-	if use dconf; then
-		ebegin "Updating dconf system databases"
-		dconf update
-		eend $?
-	fi
 	use gconf && gnome2_gconf_install
-	use gconf && gnome2_schemas_update
 	use gtk && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
+	gnome2_schemas_update
 	gnome2_icon_cache_update
 
 	elog "To use ibus, you should:"
@@ -167,13 +162,9 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if use dconf; then
-		ebegin "Updating dconf system databases"
-		dconf update
-		eend $?
-	fi
 	use gtk && gnome2_query_immodules_gtk2
 	use gtk3 && gnome2_query_immodules_gtk3
 	use gconf && gnome2_schemas_update
+	gnome2_schemas_savelist
 	gnome2_icon_cache_update
 }
