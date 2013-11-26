@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/shoulda-context
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/ChangeLog,v 1.1 2013/11/26 19:30:59 graaff Exp $
+
+*shoulda-context-1.1.4 (26 Nov 2013)
+
+  26 Nov 2013; Hans de Graaff <graaff@gentoo.org>
+  +shoulda-context-1.1.4.ebuild, +metadata.xml:
+  Initial import. New dependency for newer shoulda versions.
+
