@@ -10,8 +10,8 @@
   <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
   	for introspection</flag>
   <flag name="keymap">map custom hardware's multimedia keys</flag>
-  <flag name="kmod">enable module loading through libkmod (requires modules)</flag>
-  <flag name="modutils">enable module loading support</flag>
+  <flag name="kmod">enable module loading through libkmod</flag>
+  <flag name="modutils">enable module loading support - use modutils calls if kmod not enabled</flag>
   <flag name="openrc">install the OpenRC init scripts</flag>
   <flag name="rule-generator">install legacy rule generator rules and support scripts - note
 	that the functionality within was dropped from sys-fs/udev as it is not stable in

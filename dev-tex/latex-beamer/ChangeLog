@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.154 2013/10/27 07:29:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.155 2013/11/26 17:39:17 radhermit Exp $
+
+*latex-beamer-3.32 (26 Nov 2013)
+
+  26 Nov 2013; Tim Harder <radhermit@gentoo.org> +latex-beamer-3.32.ebuild:
+  Version bump.
 
 *latex-beamer-3.31 (27 Oct 2013)
 
