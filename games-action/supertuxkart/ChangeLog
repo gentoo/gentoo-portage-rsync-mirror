@@ -1,6 +1,15 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.37 2013/02/07 21:59:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.38 2013/11/26 21:22:50 hasufell Exp $
+
+*supertuxkart-0.8.1 (26 Nov 2013)
+
+  26 Nov 2013; Julian Ospald <hasufell@gentoo.org> +supertuxkart-0.8.1.ebuild,
+  +files/supertuxkart-0.8.1-desktopfile.patch,
+  +files/supertuxkart-0.8.1-gentoo.patch,
+  +files/supertuxkart-0.8.1-icon-dest.patch,
+  +files/supertuxkart-0.8.1-irrlicht.patch, metadata.xml:
+  version bump wrt #492596
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> supertuxkart-0.8.ebuild:
   Move Creative Commons licenses to shorter names.

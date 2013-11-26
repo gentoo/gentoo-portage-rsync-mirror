@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15229 2013/11/25 14:56:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15230 2013/11/26 21:24:40 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -234,55 +234,6 @@ www-apache/mod_spdy
 # - do not compile in some USE-flag combinations
 # - requires at least gcc 4.7(and possibly even 4.8 for some features)
 >=dev-libs/botan-1.11.0
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
-# removal on ~15 Oct 2013
-# dead on upstream since ~2006
-# fails on compile >=vdr-2.0
-# Bug #414275 #414177
-media-plugins/vdr-sysinfo
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
-# removal on ~15 Oct 2013
-# dead on upstream since ~2006
-# fails on compile >=vdr-2.0
-# Bug #414269 #414177
-media-plugins/vdr-taste
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
-# removal on ~15 Oct 2013
-# dead on upstream since ~2008
-# fails on compile >=vdr-2.0
-# Bug #414261 #414177
-media-plugins/vdr-timeline
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
-# removal on ~15 Oct 2013
-# dead on upstream since ~2006
-# fails on compile >=vdr-2.0
-# Bug #414257 #414177
-media-plugins/vdr-tvonscreen
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
-# removal on ~15 Oct 2013
-# homepage dead, src_uri dead, dead on upstream ~2007
-# fails on compile >=vdr-2.0
-# Bug #414255 #414177
-media-plugins/vdr-tvtv
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
-# removal on ~15 Oct 2013
-# dead on upstream since ~2004
-# fails on compile >=vdr-2.0
-# Bug #414235 #414177
-media-plugins/vdr-vdrrip
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (15 Sep 2013)
-# removal on ~15 Oct 2013
-# dead on upstream since ~2006
-# fails on compile >=vdr-2.0
-# Bug #420883 #414177
-media-plugins/vdr-prefermenu
 
 # Michał Górny <mgorny@gentoo.org> (13 Sep 2013)
 # Segfaults for me in pam_unix.so. As this makes it impossible to

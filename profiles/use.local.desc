@@ -2306,6 +2306,8 @@ games-action/minetest:server - Build minetest server
 games-action/openlierox:breakpad - Compile with support for breakpad crash reporting system
 games-action/solar2:bundled-libs - Use the upstream provided bundled libraries.
 games-action/super-hexagon:bundled-libs - Use the upstream provided bundled libraries.
+games-action/supertuxkart:fribidi - Support for right-to-left languages
+games-action/supertuxkart:wiimote - Support for wiimote input devices
 games-action/swordandsworcery:bundled-libs - Use the upstream provided bundled libraries.
 games-action/trine2:bundled-libs - Use bundled libraries.
 games-action/trine2:launcher - Install gtk+ launcher
