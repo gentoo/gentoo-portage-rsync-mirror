@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/manifestdestiny
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.12 2013/09/05 18:46:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/manifestdestiny/ChangeLog,v 1.13 2013/11/26 05:34:35 patrick Exp $
+
+*manifestdestiny-0.6 (26 Nov 2013)
+
+  26 Nov 2013; Patrick Lauer <patrick@gentoo.org> +manifestdestiny-0.6.ebuild:
+  Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> manifestdestiny-0.5.6-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
