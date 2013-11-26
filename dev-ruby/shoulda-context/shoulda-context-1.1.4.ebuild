@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/shoulda-context-1.1.4.ebuild,v 1.1 2013/11/26 19:30:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda-context/shoulda-context-1.1.4.ebuild,v 1.2 2013/11/26 19:42:20 graaff Exp $
 
 EAPI=5
 
@@ -10,6 +10,10 @@ RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 RUBY_FAKEGEM_EXTRADOC="CONTRIBUTING.md README.md"
 
 RUBY_FAKEGEM_EXTRAINSTALL="init.rb rails tasks"
+
+# Don't install the conversion script to avoid collisions with older
+# shoulda.
+RUBY_FAKEGEM_BINWRAP=""
 
 inherit ruby-fakegem
 

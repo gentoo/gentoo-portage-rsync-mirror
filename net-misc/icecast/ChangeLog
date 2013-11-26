@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/icecast
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.101 2013/09/25 17:28:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.102 2013/11/26 19:51:40 hwoarang Exp $
+
+*icecast-2.3.3-r3 (26 Nov 2013)
+
+  26 Nov 2013; Markos Chandras <hwoarang@gentoo.org> +icecast-2.3.3-r3.ebuild,
+  files/init.d.icecast:
+  Implement missing reload function. Bug #324727
 
   25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> icecast-2.3.3-r2.ebuild:
   Stable for ppc, wrt bug #485136
