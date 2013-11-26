@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.0.ebuild,v 1.6 2013/03/10 12:25:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.0.ebuild,v 1.7 2013/11/26 09:44:27 pinkbyte Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 IUSE="bindist debug firebird kerberos ldap mysql
-pam postgres ssl pcap readline ruby sqlite python odbc iodbc
+pam postgres ssl pcap readline sqlite python odbc iodbc
 oracle"
 
 RDEPEND="!net-dialup/cistronradius
@@ -39,7 +39,6 @@ RDEPEND="!net-dialup/cistronradius
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )
-	ruby? ( dev-lang/ruby:1.8 )
 	sqlite? ( dev-db/sqlite:3 )
 	odbc? ( dev-db/unixODBC )
 	iodbc? ( dev-db/libiodbc )
@@ -70,7 +69,8 @@ src_prepare() {
 	use kerberos || rm -r src/modules/rlm_krb5
 	use pam || rm -r src/modules/rlm_pam
 	use python || rm -r src/modules/rlm_python
-	use ruby || rm -r src/modules/rlm_ruby
+	# Do not install ruby rlm module, bug #483108
+	rm -r src/modules/rlm_ruby
 
 	# these are all things we don't have in portage/I don't want to deal
 	# with myself

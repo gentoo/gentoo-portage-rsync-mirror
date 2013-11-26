@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.115 2013/03/10 12:25:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.116 2013/11/26 09:44:27 pinkbyte Exp $
+
+  26 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> freeradius-2.2.0.ebuild:
+  Remove ruby rlm module support - depends on deprecated Ruby 1.8, not
+  recommended by upstream for daily usage, bug #483108
 
   10 Mar 2013; Sergey Popov <pinkbyte@gentoo.org> freeradius-2.2.0.ebuild:
   Change optional postgresql dependency to dev-db/postgresql-base wrt bug
