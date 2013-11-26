@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-init-scripts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.32 2013/11/16 09:53:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.33 2013/11/26 22:12:34 pacho Exp $
+
+  26 Nov 2013; Pacho Ramos <pacho@gentoo.org>
+  mysql-init-scripts-2.0_pre1-r6.ebuild:
+  x86 stable, bug #487458
 
   16 Nov 2013; Pacho Ramos <pacho@gentoo.org>
   mysql-init-scripts-2.0_pre1-r6.ebuild:

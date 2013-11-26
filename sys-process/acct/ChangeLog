@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.70 2013/10/10 20:03:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.71 2013/11/26 22:09:04 pacho Exp $
+
+  26 Nov 2013; Pacho Ramos <pacho@gentoo.org> acct-6.5.5-r3.ebuild:
+  x86 stable, bug #485338
 
   10 Oct 2013; Tony Vroon <chainsaw@gentoo.org> acct-6.5.5-r3.ebuild:
   Marked stable on AMD64 based on arch tester report by MJJoker in bug #485338.
