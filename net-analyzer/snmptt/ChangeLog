@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snmptt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.20 2012/05/12 16:31:50 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.21 2013/11/26 12:32:49 jer Exp $
+
+*snmptt-1.4 (26 Nov 2013)
+
+  26 Nov 2013; Jeroen Roovers <jer@gentoo.org> +snmptt-1.4.ebuild,
+  +files/snmptt.initd-r1:
+  Version bump. Clean up init script. Use /run not /var/run.
 
   12 May 2012; Raúl Porcel <armin76@gentoo.org> snmptt-1.2.ebuild,
   snmptt-1.3.ebuild:

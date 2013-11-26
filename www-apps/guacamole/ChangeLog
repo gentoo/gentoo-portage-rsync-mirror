@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/guacamole
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.7 2013/08/14 11:31:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.8 2013/11/26 12:53:33 nativemad Exp $
+
+*guacamole-0.8.3 (26 Nov 2013)
+
+  26 Nov 2013; Andreas Schuerch <nativemad@gentoo.org> guacamole-0.6.2.ebuild,
+  +guacamole-0.8.3.ebuild:
+  version bump. Added ldap backend and depend on the new guacamole-server
+  instead of guacd and its libs. Also quoted so variables on 0.6.2 to make
+  repoman happy.
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> guacamole-0.6.2.ebuild:
   Whitespace
