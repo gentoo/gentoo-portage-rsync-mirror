@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.225 2013/09/04 03:12:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.226 2013/11/26 04:38:44 radhermit Exp $
+
+*iproute2-3.12.0 (26 Nov 2013)
+
+  26 Nov 2013; Tim Harder <radhermit@gentoo.org> +iproute2-3.12.0.ebuild:
+  Version bump, add slot operator dep on iptables (bug #489884).
 
 *iproute2-3.11.0 (04 Sep 2013)
 *iproute2-3.10.0 (04 Sep 2013)
