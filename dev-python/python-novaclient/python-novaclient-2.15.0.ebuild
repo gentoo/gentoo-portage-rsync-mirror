@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-2.15.0.ebuild,v 1.1 2013/10/24 14:24:40 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-novaclient/python-novaclient-2.15.0.ebuild,v 1.2 2013/11/26 11:00:52 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,9 +15,6 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
-
-#need to package a bunch of stuff, they changed their test suite, again...
-#RESTRICT="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
@@ -41,5 +38,6 @@ RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
 		>=dev-python/Babel-0.9.6-r1[${PYTHON_USEDEP}]"
 
 python_test() {
-	"${PYTHON}" -m subunit.run discover -t ./ ./ || die
+	testr init
+	testr run --parallel || die "testsuite failed under python2.7"
 }
