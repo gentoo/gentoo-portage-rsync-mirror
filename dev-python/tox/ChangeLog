@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.13 2013/06/17 09:04:16 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tox/ChangeLog,v 1.14 2013/11/26 06:55:05 patrick Exp $
+
+*tox-1.6.1 (26 Nov 2013)
+
+  26 Nov 2013; Patrick Lauer <patrick@gentoo.org> +tox-1.6.1.ebuild:
+  Bump
 
 *tox-1.4.3-r1 (17 Jun 2013)
 

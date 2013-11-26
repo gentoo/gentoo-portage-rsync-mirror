@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py2neo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py2neo/ChangeLog,v 1.2 2013/10/02 02:54:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py2neo/ChangeLog,v 1.3 2013/11/26 06:57:33 patrick Exp $
+
+*py2neo-1.6.1 (26 Nov 2013)
+
+  26 Nov 2013; Patrick Lauer <patrick@gentoo.org> +py2neo-1.6.1.ebuild:
+  Bump
 
 *py2neo-1.6.0 (02 Oct 2013)
 
