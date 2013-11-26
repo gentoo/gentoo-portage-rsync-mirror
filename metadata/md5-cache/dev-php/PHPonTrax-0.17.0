@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst
+DEFINED_PHASES=install postinst setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Web-application and persistance framework based on Ruby on Rails
 EAPI=4
@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=virtual/httpd-php dev-lang/php[session,imap] dev-php/PEAR-MDB2 dev-php/PEAR-Mail dev-php/PEAR-Mail_Mime mysql? ( dev-php/PEAR-MDB2_Driver_mysql ) postgres? ( dev-php/PEAR-MDB2_Driver_pgsql ) sqlite? ( dev-php/PEAR-MDB2_Driver_sqlite ) !mysql? ( !postgres? ( !sqlite? ( dev-php/PEAR-MDB2_Driver_mysql ) ) ) dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.phpontrax.com/get/PHPonTrax-0.17.0.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=1f0b9c651a2dce264fdec8540a59c780

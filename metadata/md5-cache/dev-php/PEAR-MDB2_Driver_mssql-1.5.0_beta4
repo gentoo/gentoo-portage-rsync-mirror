@@ -1,4 +1,4 @@
-DEFINED_PHASES=install
+DEFINED_PHASES=install setup
 DEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 dev-lang/php[mssql] dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Database Abstraction Layer, mssql driver
 EAPI=5
@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 dev-lang/php[mssql] dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/MDB2_Driver_mssql-1.5.0b4.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=e8311678ddeace6a4cd78f494a4cb6ae

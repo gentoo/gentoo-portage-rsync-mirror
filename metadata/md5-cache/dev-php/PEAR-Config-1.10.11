@@ -1,4 +1,4 @@
-DEFINED_PHASES=install
+DEFINED_PHASES=install setup
 DEPEND=dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Provides methods for configuration manipulation. Your configuration's swiss-army knife.
 HOMEPAGE=http://pear.php.net/Config
@@ -8,5 +8,5 @@ LICENSE=PHP-2.02
 RDEPEND=xml? ( dev-php/PEAR-XML_Parser dev-php/PEAR-XML_Util ) dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Config-1.10.11.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	21c0c441f5d64d974c77685b2a05867a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=e7b4ef1ba65256fa6c7027cd45ad1c8a
