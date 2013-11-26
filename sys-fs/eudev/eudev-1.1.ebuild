@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.1.ebuild,v 1.14 2013/11/25 09:38:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.1.ebuild,v 1.15 2013/11/26 15:36:23 axs Exp $
 
 EAPI="5"
 
@@ -136,6 +136,7 @@ src_configure()
 		$(use_enable introspection)
 		$(use_enable keymap)
 		$(use_enable kmod libkmod)
+		$(use_enable kmod modules)
 		$(use_enable modutils modules)
 		$(use_enable selinux)
 		$(use_enable static-libs static)

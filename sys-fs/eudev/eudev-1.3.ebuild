@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.3.ebuild,v 1.6 2013/11/25 09:38:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.3.ebuild,v 1.7 2013/11/26 15:36:23 axs Exp $
 
 EAPI="5"
 
@@ -138,6 +138,7 @@ multilib_src_configure()
 		--enable-split-usr
 		--exec-prefix=/
 	)
+
 	# Only build libudev for non-native_abi, and only install it to libdir,
 	# that means all options only apply to native_abi
 	if multilib_is_native_abi; then econf_args+=(
@@ -147,6 +148,7 @@ multilib_src_configure()
 		$(use_enable introspection)
 		$(use_enable keymap)
 		$(use_enable kmod libkmod)
+		$(use_enable kmod modules)
 		$(use_enable modutils modules)
 		$(use_enable static-libs static)
 		$(use_enable selinux)
