@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/booh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.31 2013/08/11 07:00:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/ChangeLog,v 1.32 2013/11/26 01:29:40 mrueg Exp $
+
+*booh-0.9.4 (26 Nov 2013)
+
+  26 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +booh-0.9.4.ebuild,
+  -booh-0.9.3.ebuild, -files/booh-0.9.1-require_gems.patch:
+  Version bump. Add ruby19 support. Cleanup old.
 
   11 Aug 2013; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Drop package from ruby herd as per 2013-07-21 announcement.
@@ -133,4 +139,3 @@
 
   01 Apr 2005; <dams@gentoo.org> +metadata.xml, +booh-0.1.0.ebuild:
   first ebuild
-

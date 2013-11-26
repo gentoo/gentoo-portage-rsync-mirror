@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.9.3.ebuild,v 1.2 2011/03/01 18:40:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/booh/booh-0.9.4.ebuild,v 1.1 2013/11/26 01:29:40 mrueg Exp $
 
-EAPI="2"
-USE_RUBY="ruby18"
+EAPI=5
+USE_RUBY="ruby18 ruby19"
 
-inherit eutils bash-completion ruby-ng
+inherit eutils bash-completion-r1 ruby-ng
 
 DESCRIPTION="Static HTML photo album generator"
 HOMEPAGE="http://booh.org/index.html"
@@ -28,7 +28,7 @@ RDEPEND="${RDEPEND} ${CDEPEND}
 ruby_add_rdepend "
 	>=dev-ruby/ruby-gettext-0.8.0
 	dev-ruby/ruby-glib2
-	gtk? (	>=dev-ruby/ruby-gtk2-0.12 )"
+	gtk? ( >=dev-ruby/ruby-gtk2-0.12 )"
 
 all_ruby_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.2.2-stdc.patch
@@ -36,8 +36,10 @@ all_ruby_prepare() {
 	# Remove scripts requiring gtk if gtk is not used
 	if ! use gtk; then
 		rm bin/booh bin/booh-classifier bin/booh-fix-whitebalance \
-		bin/booh-gamma-correction
+		bin/booh-gamma-correction || die
 	fi
+	sed -i -e 's/-48x48.png//' desktop/booh-classifier.desktop || die
+	sed -i -e 's/-48x48.png//' desktop/booh.desktop || die
 }
 
 each_ruby_configure() {
@@ -45,30 +47,28 @@ each_ruby_configure() {
 	${RUBY} setup.rb setup || die "ruby setup.rb setup failed"
 	cd ext
 	${RUBY} extconf.rb || die "ruby extconf.rb failed"
-	sed -i -e 's:-Wl,--no-undefined ::' Makefile || die "--no-undefined removal failed"
-	sed -i -e 's:-Wl,-R$(libdir)::' -e 's:-Wl,-R -Wl,$(libdir)::' Makefile || die "Fix insecure RUNPATH failed"
+	sed -i -e 's:-Wl,--no-undefined ::' -e 's:-Wl,-R$(libdir)::'\
+		-e 's:-Wl,-R -Wl,$(libdir)::' Makefile || die
 }
 
 each_ruby_compile() {
-	emake -Cext || die
+	emake -Cext V=1
 }
 
 each_ruby_install() {
 	${RUBY} setup.rb install \
 		--prefix="${D}" || die "ruby setup.rb install failed"
 	cd ext
-	emake install \
-		DESTDIR=${D} \
-		libdir=${D}/`ruby -rrbconfig -e "puts Config::CONFIG['sitelibdir']"` \
-		archdir=${D}/`ruby -rrbconfig -e "puts Config::CONFIG['sitearchdir']"` \
-		|| die "emake install failed"
+	emake install V=1 \
+		DESTDIR="${D}" \
+		libdir="${D}"/$(${RUBY} -rrbconfig -e "puts Config::CONFIG['sitelibdir']") \
+		archdir="${D}"/$({$RUBY} -rrbconfig -e "puts Config::CONFIG['sitearchdir']")
 	cd ..
 }
 
 all_ruby_install() {
-	domenu desktop/booh-classifier.desktop desktop/booh.desktop || die "domenu failed"
-	doicon desktop/booh-48x48.png || die "doicon failed"
-	dobashcompletion booh.bash-completion || die "dobashcompletion failed"
-	dodoc AUTHORS ChangeLog INTERNALS README VERSION THEMES \
-		|| die "dodoc failed"
+	domenu desktop/booh-classifier.desktop desktop/booh.desktop
+	newicon -s 48 desktop/booh-48x48.png booh.png
+	dobashcomp booh.bash-completion
+	dodoc AUTHORS ChangeLog INTERNALS README VERSION THEMES
 }
