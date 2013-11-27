@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-3.0.2-r1.ebuild,v 1.1 2013/11/27 09:47:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-3.0.2-r2.ebuild,v 1.1 2013/11/27 11:27:08 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 
 WX_GTK_VER="2.8"
 
-inherit eutils python-single-r1 scons-utils toolchain-funcs wxwidgets
+inherit eutils python-single-r1 scons-utils toolchain-funcs wxwidgets virtualx
 
 DESCRIPTION="Molecular dynamics by NMR data analysis"
 HOMEPAGE="http://www.nmr-relax.com/"
@@ -44,7 +44,8 @@ src_prepare() {
 	rm -rf minfx bmrblib || die
 	epatch \
 		"${FILESDIR}"/${PN}-3.0.1-gentoo.patch \
-		"${FILESDIR}"/${P}-wxpython.patch
+		"${FILESDIR}"/${P}-wxpython.patch \
+		"${FILESDIR}"/${P}-wxpython-2.patch
 	tc-export CC
 }
 
@@ -53,8 +54,9 @@ src_compile() {
 }
 
 src_test() {
-	${EPYTHON} ./${PN}.py -s || die
-#	${EPYTHON} ./${PN}.py -x || die
+	VIRTUALX_COMMAND="${EPYTHON}"
+#	virtualmake ./${PN}.py -x || die
+	virtualmake ./${PN}.py --gui-tests || die
 }
 
 src_install() {
