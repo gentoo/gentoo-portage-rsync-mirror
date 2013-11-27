@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.247 2013/11/26 21:56:53 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.248 2013/11/27 12:01:19 chithanh Exp $
+
+*libdrm-2.4.49-r1 (27 Nov 2013)
+
+  27 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/libdrm-2.4.49-radeonsi-crash.patch, +libdrm-2.4.49-r1.ebuild:
+  Add patch to fix crash on radeonsi cards, upstream #71983.
 
 *libdrm-2.4.49 (26 Nov 2013)
 
