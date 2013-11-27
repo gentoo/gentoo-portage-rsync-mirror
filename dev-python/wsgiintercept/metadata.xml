@@ -12,4 +12,8 @@ lets you intercept calls to any specific host/port combination and redirect
 them into a WSGI application importable by your test program. Thus, you can 
 avoid spawning multiple processes or threads to test your Web app.
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">wsgi_intercept</remote-id>
+    <bugs-to>https://code.google.com/p/wsgi-intercept/issues/list</bugs-to>
+  </upstream>
 </pkgmetadata>

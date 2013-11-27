@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwts/fwts-13.09.01.ebuild,v 1.1 2013/09/23 07:56:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fwts/fwts-13.11.00.ebuild,v 1.1 2013/11/27 17:56:45 mrueg Exp $
 
 EAPI=5
 
@@ -38,6 +38,10 @@ src_prepare(){
 			src/lib/src/fwts_klog.c \
 			src/lib/src/fwts_log_json.c \
 			src/utilities/kernelscan.c || die
+		sed -e 's/-ljson/-ljson-c/'\
+			-i src/Makefile.am\
+			src/lib/src/Makefile.am\
+			src/utilities/Makefile.am || die
 	fi
 
 	eautoreconf
