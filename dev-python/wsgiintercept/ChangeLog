@@ -1,10 +1,15 @@
 # ChangeLog for dev-python/wsgiintercept
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/ChangeLog,v 1.1 2013/07/03 13:14:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/ChangeLog,v 1.2 2013/11/27 16:13:23 dev-zero Exp $
+
+*wsgiintercept-0.6.0 (27 Nov 2013)
+
+  27 Nov 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/0.6.0-fix-tests.patch, +wsgiintercept-0.6.0.ebuild:
+  Version bump, required for mwlib tests
 
 *wsgiintercept-0.5.1 (03 Jul 2013)
 
   03 Jul 2013; Justin Lecher <jlec@gentoo.org> +wsgiintercept-0.5.1.ebuild,
   +metadata.xml:
   New addition written by me
-
