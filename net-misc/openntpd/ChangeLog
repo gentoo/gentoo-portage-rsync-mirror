@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.93 2013/11/19 04:50:55 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.94 2013/11/27 21:08:21 maekke Exp $
+
+  27 Nov 2013; Markus Meier <maekke@gentoo.org> openntpd-20080406-r4.ebuild:
+  arm stable, bug #488946
 
 *openntpd-20080406-r5 (19 Nov 2013)
 
