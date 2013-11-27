@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.59 2013/11/12 18:30:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.60 2013/11/27 05:32:16 mgorny Exp $
 
 EAPI=5
 
@@ -192,7 +192,7 @@ multilib_src_configure() {
 
 	if use clang; then
 		CONF_FLAGS+="
-			--with-clang-resource-dir=../lib/clang/3.4"
+			--with-clang-resource-dir=../lib/clang/3.5"
 	fi
 
 	if use multitarget; then
