@@ -1,6 +1,21 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.128 2013/11/25 08:11:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.129 2013/11/27 07:19:33 jlec Exp $
+
+*ccpn-2.3.1_p131127 (27 Nov 2013)
+
+  27 Nov 2013; Justin Lecher <jlec@gentoo.org> -ccpn-2.2.2_p121125.ebuild,
+  -ccpn-2.2.2_p130110.ebuild, -ccpn-2.2.2_p130116.ebuild,
+  -ccpn-2.2.2_p130213.ebuild, -ccpn-2.2.2_p130318.ebuild,
+  -ccpn-2.2.2_p130318-r1.ebuild, -ccpn-2.2.2_p130530.ebuild,
+  -ccpn-2.2.2_p130618.ebuild, -ccpn-2.2.2_p130705.ebuild,
+  -ccpn-2.3.1_p130813.ebuild, -ccpn-2.3.1_p130814.ebuild,
+  -ccpn-2.3.1_p130822.ebuild, -ccpn-2.3.1_p130918.ebuild,
+  -ccpn-2.3.1_p130930.ebuild, -ccpn-2.3.1_p131008.ebuild,
+  -ccpn-2.3.1_p131010.ebuild, -ccpn-2.3.1_p131015.ebuild,
+  -ccpn-2.3.1_p131018.ebuild, -ccpn-2.3.1_p131107.ebuild,
+  +ccpn-2.3.1_p131127.ebuild:
+  Todays pthon patches; drop old
 
 *ccpn-2.3.1_p131125 (25 Nov 2013)
 
