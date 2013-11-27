@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libnatpmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/ChangeLog,v 1.20 2013/09/13 11:08:18 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/ChangeLog,v 1.21 2013/11/27 14:54:07 blueness Exp $
+
+*libnatpmp-20131126 (27 Nov 2013)
+
+  27 Nov 2013; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20131126.ebuild:
+  Version bump
 
   13 Sep 2013; Anthony G. Basile <blueness@gentoo.org>
   +files/remove-static-lib-20130911.patch, libnatpmp-20130911.ebuild:
