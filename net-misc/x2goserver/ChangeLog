@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/x2goserver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.31 2013/11/17 12:13:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.32 2013/11/27 12:53:19 voyageur Exp $
+
+*x2goserver-4.0.1.8 (27 Nov 2013)
+
+  27 Nov 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  -x2goserver-4.0.1.6.ebuild, +x2goserver-4.0.1.8.ebuild:
+  Version bump. Only build man pages with USE=doc, thanks Theofilos Intzoglou
+  in bug #490960. Force groups creation, thanks Maciej Szmigiero in bug #479650
 
 *x2goserver-4.0.1.6-r1 (17 Nov 2013)
 
