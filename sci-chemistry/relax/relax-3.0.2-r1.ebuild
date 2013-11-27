@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-3.0.2.ebuild,v 1.1 2013/11/27 07:58:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-3.0.2-r1.ebuild,v 1.1 2013/11/27 09:47:41 jlec Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RDEPEND="
 	${PYTHON_DEPS}
 	dev-python/numpy[${PYTHON_USEDEP}]
-	dev-python/wxpython[${PYTHON_USEDEP}]
+	dev-python/wxpython:${WX_GTK_VER}[${PYTHON_USEDEP}]
 	sci-chemistry/molmol
 	sci-chemistry/pymol[${PYTHON_USEDEP}]
 	sci-chemistry/vmd
@@ -42,7 +42,9 @@ pkg_setup() {
 
 src_prepare() {
 	rm -rf minfx bmrblib || die
-	epatch "${FILESDIR}"/${PN}-3.0.1-gentoo.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.0.1-gentoo.patch \
+		"${FILESDIR}"/${P}-wxpython.patch
 	tc-export CC
 }
 
