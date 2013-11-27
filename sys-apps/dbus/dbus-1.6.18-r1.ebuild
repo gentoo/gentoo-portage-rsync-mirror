@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.6.18-r1.ebuild,v 1.1 2013/11/27 17:19:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.6.18-r1.ebuild,v 1.2 2013/11/27 21:57:37 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -172,7 +172,8 @@ multilib_src_install() {
 	else
 		emake DESTDIR="${D}" install-pkgconfigDATA
 		emake DESTDIR="${D}" -C dbus \
-			install-libLTLIBRARIES install-dbusincludeHEADERS
+			install-libLTLIBRARIES install-dbusincludeHEADERS \
+			install-nodist_dbusarchincludeHEADERS
 	fi
 }
 

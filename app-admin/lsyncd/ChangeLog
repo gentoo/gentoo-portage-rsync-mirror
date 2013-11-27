@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lsyncd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.32 2013/06/10 05:28:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.33 2013/11/27 21:59:13 nimiux Exp $
+
+  27 Nov 2013; Chema Alonso <nimiux@gentoo.org> lsyncd-2.1.5.ebuild:
+  Stable for amd64 wrt bug #490528
 
 *lsyncd-2.1.5 (10 Jun 2013)
 
