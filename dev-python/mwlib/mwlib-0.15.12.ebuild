@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.15.8-r3.ebuild,v 1.2 2013/09/12 22:29:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/mwlib-0.15.12.ebuild,v 1.1 2013/11/27 17:21:30 dev-zero Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit distutils-r1 user eutils
+inherit distutils-r1 user
 
 DESCRIPTION="Tools for parsing Mediawiki content to other formats"
 HOMEPAGE="http://code.pediapress.com/wiki/wiki http://pypi.python.org/pypi/mwlib"
@@ -15,32 +15,33 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc server"
+IUSE="doc server test"
 
 RDEPEND="dev-python/lxml[${PYTHON_USEDEP}]
-	=dev-python/odfpy-0.9*[${PYTHON_USEDEP}]
-	dev-python/pyPdf[${PYTHON_USEDEP}]
-	dev-python/pyparsing[${PYTHON_USEDEP}]
-	dev-python/timelib[${PYTHON_USEDEP}]
+	>=dev-python/odfpy-0.9[${PYTHON_USEDEP}]
+	<dev-python/odfpy-0.10[${PYTHON_USEDEP}]
+	>=dev-python/pyPdf-1.12[${PYTHON_USEDEP}]
+	>=dev-python/pyparsing-1.5.5[${PYTHON_USEDEP}]
+	<dev-python/pyparsing-1.6[${PYTHON_USEDEP}]
+	>=dev-python/timelib-0.2[${PYTHON_USEDEP}]
 	virtual/latex-base
-	>=dev-python/simplejson-2.5[${PYTHON_USEDEP}]
+	>=dev-python/simplejson-2.3[${PYTHON_USEDEP}]
 	dev-python/gevent[${PYTHON_USEDEP}]
-	>=dev-python/bottle-0.11.6[${PYTHON_USEDEP}]
-	dev-python/apipkg[${PYTHON_USEDEP}]
-	dev-python/qserve[${PYTHON_USEDEP}]
+	>=dev-python/bottle-0.10[${PYTHON_USEDEP}]
+	>=dev-python/apipkg-1.2[${PYTHON_USEDEP}]
+	>=dev-python/qserve-0.2.7[${PYTHON_USEDEP}]
 	dev-python/roman[${PYTHON_USEDEP}]
-	dev-python/py[${PYTHON_USEDEP}]
+	>=dev-python/py-1.4[${PYTHON_USEDEP}]
 	dev-python/sqlite3dbm[${PYTHON_USEDEP}]
 	dev-python/pillow[${PYTHON_USEDEP}]
 	server? ( app-admin/sudo )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	app-arch/unzip
-	doc? ( dev-python/sphinx )"
+	doc? ( dev-python/sphinx )
+	test? ( >=dev-python/wsgiintercept-0.6 )"
 
 # TODO: requires ploticus to generate timelines
-
-PATCHES=( "${FILESDIR}/${PV}-fix-tests.patch" "${FILESDIR}/${PV}-nslave-add-address-parameter.patch" )
 
 DOCS=(changelog.rst)
 
@@ -61,10 +62,9 @@ python_prepare_all() {
 		-e "s/odflint.lint(path)/os.system('odflint %s' % path)/" \
 		-i tests/test_odfwriter.py || die
 
-	# Disable test which requires installed mw-zip script.
-	rm -f tests/test_{nuwiki,redirect,zipwiki}.py
-	# Disable render test that fails for no apparent reason
-	rm -f tests/test_render.py
+	# Disable test which requires installed mw-zip or mw-render script
+	# which don't get generated in distutils_install_for_testing for some reason
+	rm -f tests/test_{nuwiki,redirect,render,zipwiki}.py || die
 
 	distutils-r1_python_prepare_all
 }
@@ -83,7 +83,8 @@ python_compile_all() {
 }
 
 python_test() {
-	py.test || die
+	distutils_install_for_testing
+	PATH="${TEST_DIR}/scripts:${PATH}" py.test || die
 }
 
 python_install_all() {

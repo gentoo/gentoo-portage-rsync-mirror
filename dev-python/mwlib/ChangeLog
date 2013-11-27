@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.29 2013/09/12 22:29:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.30 2013/11/27 17:21:30 dev-zero Exp $
+
+*mwlib-0.15.12 (27 Nov 2013)
+
+  27 Nov 2013; Tiziano Müller <dev-zero@gentoo.org> +mwlib-0.15.12.ebuild,
+  -files/0.15.8-fix-tests.patch,
+  -files/0.15.8-nslave-add-address-parameter.patch, -mwlib-0.14.0.ebuild,
+  -mwlib-0.14.1.ebuild, -mwlib-0.14.3.ebuild, -mwlib-0.15.3.ebuild,
+  -mwlib-0.15.6.ebuild, -mwlib-0.15.7.ebuild, -mwlib-0.15.8-r1.ebuild,
+  -mwlib-0.15.8-r3.ebuild, -mwlib-0.15.8.ebuild:
+  Version bump (bug #481470). Drop old versions.
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> mwlib-0.14.0.ebuild,
   mwlib-0.14.1.ebuild, mwlib-0.14.3.ebuild, mwlib-0.15.3.ebuild,
