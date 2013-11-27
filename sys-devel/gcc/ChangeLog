@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.981 2013/11/14 01:30:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.982 2013/11/27 13:12:58 jer Exp $
+
+  27 Nov 2013; Jeroen Roovers <jer@gentoo.org> gcc-4.7.3-r1.ebuild:
+  Stable for HPPA (bug #486618).
 
   14 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> Manifest:
   Fix manifests.
