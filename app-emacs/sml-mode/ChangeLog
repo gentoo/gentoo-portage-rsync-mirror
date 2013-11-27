@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/sml-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.32 2013/05/23 18:34:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/ChangeLog,v 1.33 2013/11/27 10:29:44 nimiux Exp $
+
+  27 Nov 2013; Chema Alonso <nimiux@gentoo.org> sml-mode-6.4.ebuild:
+  Stable for amd64 wrt bug #490106
 
 *sml-mode-6.4 (23 May 2013)
 

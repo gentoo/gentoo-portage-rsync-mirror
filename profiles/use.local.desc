@@ -1095,6 +1095,7 @@ app-text/xiphos:webkit - Use net-libs/webkit-gtk instead of gnome-extra/gtkhtml
 app-text/yagf:cuneiform - Enable support for the app-text/cuneiform OCR engine.
 app-text/yagf:tesseract - Enable support for the app-text/tesseract OCR engine.
 app-text/zathura:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
+app-text/zathura:magic - Use libmagic to determine mimetypes
 app-text/zathura-cb:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-text/zathura-djvu:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 app-text/zathura-meta:cb - Install plug-in for ComicBook support

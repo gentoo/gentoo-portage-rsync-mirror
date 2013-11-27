@@ -11,6 +11,7 @@
   </maintainer>
   <use>
     <flag name="deprecated">Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3</flag>
+	<flag name="magic">Use libmagic to determine mimetypes</flag>
   </use>
   <upstream>
     <maintainer status="active">
