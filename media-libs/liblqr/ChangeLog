@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblqr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.23 2013/11/15 15:15:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.24 2013/11/27 18:47:16 maekke Exp $
+
+  27 Nov 2013; Markus Meier <maekke@gentoo.org> liblqr-0.4.2-r1.ebuild:
+  arm stable, bug #485672
 
   15 Nov 2013; Jeroen Roovers <jer@gentoo.org> liblqr-0.4.2-r1.ebuild:
   Stable for HPPA (bug #485672).

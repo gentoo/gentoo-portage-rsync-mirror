@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.9.0.ebuild,v 1.4 2013/11/24 08:41:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.9.0.ebuild,v 1.5 2013/11/27 18:52:15 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://libdbi.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
 IUSE="doc static-libs"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 SLOT=0
 
 DOCS="AUTHORS ChangeLog README README.osx TODO"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.328 2013/11/20 17:56:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.329 2013/11/27 18:50:06 maekke Exp $
+
+  27 Nov 2013; Markus Meier <maekke@gentoo.org> lvm2-2.02.103.ebuild:
+  arm stable, bug #486278
 
   20 Nov 2013; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   remove myself from maintainers since I haven't been involved in quite some
