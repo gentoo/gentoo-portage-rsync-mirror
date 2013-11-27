@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.9.3.ebuild,v 1.1 2013/11/26 17:32:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.9.3-r1.ebuild,v 1.1 2013/11/27 08:44:40 radhermit Exp $
 
 EAPI=5
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 RDEPEND=">=media-libs/libquvi-0.4.0
+	>=dev-cpp/glibmm-2.24:2
 	>=dev-libs/boost-1.49
 	>=dev-libs/glib-2.24:2
 	>=net-misc/curl-7.20

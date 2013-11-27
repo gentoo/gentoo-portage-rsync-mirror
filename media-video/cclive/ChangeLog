@@ -1,6 +1,12 @@
 # ChangeLog for media-video/cclive
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.66 2013/11/26 17:32:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.67 2013/11/27 08:44:40 radhermit Exp $
+
+*cclive-0.9.3-r1 (27 Nov 2013)
+
+  27 Nov 2013; Tim Harder <radhermit@gentoo.org> -cclive-0.9.3.ebuild,
+  +cclive-0.9.3-r1.ebuild:
+  Add missing glibmm dep (bug #492656).
 
 *cclive-0.9.3 (26 Nov 2013)
 *cclive-0.7.16 (26 Nov 2013)
