@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.67 2013/10/15 19:04:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.68 2013/11/27 06:58:06 graaff Exp $
+
+  27 Nov 2013; Hans de Graaff <graaff@gentoo.org> -sphinx-2.0.6.ebuild,
+  -sphinx-2.0.8.ebuild:
+  Cleanup.
 
 *sphinx-2.1.2 (15 Oct 2013)
 
