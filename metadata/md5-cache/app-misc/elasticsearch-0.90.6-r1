@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prepare setup
+DEPEND=virtual/pkgconfig
+DESCRIPTION=Open Source, Distributed, RESTful, Search Engine
+EAPI=5
+HOMEPAGE=http://www.elasticsearch.org/
+KEYWORDS=~amd64
+LICENSE=Apache-2.0
+RDEPEND=virtual/jre
+RESTRICT=strip
+SLOT=0
+SRC_URI=http://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.90.6.tar.gz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=49673dff6a2d6e466bc4ac02bab6c5a4

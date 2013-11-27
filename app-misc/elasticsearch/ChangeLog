@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/elasticsearch
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.1 2013/11/07 09:19:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.2 2013/11/27 13:44:30 chainsaw Exp $
+
+*elasticsearch-0.90.6-r1 (27 Nov 2013)
+
+  27 Nov 2013; Tony Vroon <chainsaw@gentoo.org>
+  +elasticsearch-0.90.6-r1.ebuild, +files/elasticsearch.init2:
+  Have the init script work properly, fixes by Simon Alman. Closes bug #491324.
 
 *elasticsearch-0.90.6 (07 Nov 2013)
 
