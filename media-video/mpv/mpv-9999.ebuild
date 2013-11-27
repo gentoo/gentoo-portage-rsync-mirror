@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.28 2013/11/22 02:55:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.29 2013/11/27 08:07:23 pinkbyte Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 
-inherit flag-o-matic base waf-utils pax-utils
+inherit base waf-utils pax-utils
 [[ ${PV} == *9999* ]] && inherit git-r3
 
 DESCRIPTION="Video player based on MPlayer/mplayer2"
@@ -163,11 +163,6 @@ src_prepare() {
 }
 
 src_configure() {
-	if use x86 && gcc-specs-pie; then
-		filter-flags -fPIC -fPIE
-		append-ldflags -nopie
-	fi
-
 	# keep build reproducible
 	# do not add -g to CFLAGS
 	# SDL output is fallback for platforms where nothing better is available
