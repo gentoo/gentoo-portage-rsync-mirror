@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/mythplugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.23 2013/10/26 02:02:47 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythplugins/ChangeLog,v 1.24 2013/11/27 02:51:29 rich0 Exp $
+
+*mythplugins-0.27_p20131124 (27 Nov 2013)
+
+  27 Nov 2013; Richard Freeman <rich0@gentoo.org>
+  +mythplugins-0.27_p20131124.ebuild:
+  new patchset
 
   26 Oct 2013; Richard Freeman <rich0@gentoo.org>
   mythplugins-0.26.0_p20130922.ebuild:
