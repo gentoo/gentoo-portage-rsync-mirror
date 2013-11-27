@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.133 2013/11/21 14:38:40 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.135 2013/11/27 18:18:52 ago Exp $
+
+  27 Nov 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-24.1.1.ebuild:
+  Stable for x86, wrt bug #491234
+
+  27 Nov 2013; Agostino Sarubbo <ago@gentoo.org> thunderbird-bin-24.1.1.ebuild:
+  Stable for amd64, wrt bug #491234
 
 *thunderbird-bin-24.1.1 (21 Nov 2013)
 

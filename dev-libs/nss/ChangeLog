@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.324 2013/11/26 19:02:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.325 2013/11/27 18:17:59 ago Exp $
+
+  27 Nov 2013; Agostino Sarubbo <ago@gentoo.org> nss-3.15.3.ebuild:
+  Stable for amd64, wrt bug #491234
 
   26 Nov 2013; Jeroen Roovers <jer@gentoo.org> nss-3.15.3.ebuild:
   Stable for HPPA (bug #491234).
