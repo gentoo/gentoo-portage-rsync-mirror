@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.6 2013/11/13 19:25:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.7 2013/11/27 20:32:49 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -101,7 +101,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-fonts/dejavu
 	x11-themes/gnome-icon-theme-symbolic
 
-	i18n? ( >=app-i18n/ibus-1.4.99[dconf,gtk3,introspection] )
+	i18n? ( >=app-i18n/ibus-1.4.99[dconf(+),gtk3,introspection] )
 	networkmanager? (
 		net-misc/mobile-broadband-provider-info
 		sys-libs/timezone-data )
