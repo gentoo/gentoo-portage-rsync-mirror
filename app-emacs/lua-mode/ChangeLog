@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/lua-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.49 2013/11/11 13:37:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.50 2013/11/27 09:19:54 nimiux Exp $
+
+  27 Nov 2013; Chema Alonso <nimiux@gentoo.org> lua-mode-20130419.ebuild:
+  Stable for amd64 wrt bug #490110
 
   11 Nov 2013; Jeroen Roovers <jer@gentoo.org> lua-mode-20130419.ebuild:
   Stable for HPPA (bug #490110).

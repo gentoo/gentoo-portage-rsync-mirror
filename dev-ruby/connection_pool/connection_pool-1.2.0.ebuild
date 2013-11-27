@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/connection_pool-1.1.0.ebuild,v 1.1 2013/11/25 01:55:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/connection_pool-1.2.0.ebuild,v 1.1 2013/11/27 09:15:08 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
