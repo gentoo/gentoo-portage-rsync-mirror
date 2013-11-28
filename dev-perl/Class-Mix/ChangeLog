@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Class-Mix
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Mix/ChangeLog,v 1.1 2013/11/28 14:46:08 chainsaw Exp $
+
+*Class-Mix-0.5.0 (28 Nov 2013)
+
+  28 Nov 2013; Tony Vroon <chainsaw@gentoo.org> +Class-Mix-0.5.0.ebuild,
+  +metadata.xml:
+  Initial commit; ebuild based on perl-experimental overlay submission.
+
