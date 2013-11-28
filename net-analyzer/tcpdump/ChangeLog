@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.174 2013/11/28 04:57:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.176 2013/11/28 05:07:55 radhermit Exp $
+
+  28 Nov 2013; Tim Harder <radhermit@gentoo.org> tcpdump-4.4.0-r1.ebuild:
+  Fix test logic (bug #482374).
+
+  28 Nov 2013; Tim Harder <radhermit@gentoo.org> tcpdump-4.5.1.ebuild:
+  Disable user support when drop-root is disabled (bug #488522).
 
 *tcpdump-4.5.1 (28 Nov 2013)
 

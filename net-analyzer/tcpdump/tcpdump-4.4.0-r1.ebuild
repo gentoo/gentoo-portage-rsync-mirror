@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.6 2013/06/04 08:09:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.4.0-r1.ebuild,v 1.7 2013/11/28 05:07:55 radhermit Exp $
 
 EAPI=5
 
@@ -78,7 +78,7 @@ src_configure() {
 }
 
 src_test() {
-	if has !userpriv ${FEATURES} && use drop-root; then
+	if [[ ${EUID} -ne 0 ]] || ! use drop-root; then
 		sed -i '/^\(espudp1\|eapon1\)/d;' -i tests/TESTLIST
 		emake check
 	else

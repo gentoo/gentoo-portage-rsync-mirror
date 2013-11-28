@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.12.ebuild,v 1.1 2013/09/02 04:19:23 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-0.12.ebuild,v 1.2 2013/11/28 05:29:24 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -9,13 +9,14 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 2.5 2.6 3.*"
 DISTUTILS_SRC_TEST="setup.py"
 
-HG_ECLASS=""
+GIT_ECLASS=""
 if [[ ${PV} = *9999* ]]; then
-	HG_ECLASS="mercurial"
-	EHG_REPO_URI="http://hg.rafaelmartins.eng.br/blohg/"
+	GIT_ECLASS="git-r3"
+	EGIT_REPO_URI="git://github.com/rafaelmartins/blohg.git
+		https://github.com/rafaelmartins/blohg"
 fi
 
-inherit distutils ${HG_ECLASS}
+inherit distutils ${GIT_ECLASS}
 
 DESCRIPTION="A Mercurial (or Git) based blogging engine."
 HOMEPAGE="http://blohg.org/ http://pypi.python.org/pypi/blohg"

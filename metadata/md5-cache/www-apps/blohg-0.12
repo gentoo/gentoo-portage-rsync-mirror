@@ -10,4 +10,4 @@ RDEPEND==dev-python/docutils-0.10* >=dev-python/flask-0.10.1 >=dev-python/flask-
 SLOT=0
 SRC_URI=mirror://pypi/b/blohg/blohg-0.12.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=3e992bfa3b9e400ab06986ef988a10b5
+_md5_=42cbc8d61998b1b0c8c25e230ce60b27
