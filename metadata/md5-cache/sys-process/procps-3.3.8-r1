@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] ) ncurses? ( virtual/pkgconfig )
+DEPEND=ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] ) ncurses? ( virtual/pkgconfig ) test? ( dev-util/dejagnu )
 DESCRIPTION=standard informational utilities and process-handling tools
 EAPI=4
 HOMEPAGE=http://procps.sourceforge.net/ http://gitorious.org/procps
@@ -10,4 +10,4 @@ RDEPEND=ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] )
 SLOT=0
 SRC_URI=http://pkgs.fedoraproject.org/repo/pkgs/procps-ng/procps-ng-3.3.8.tar.xz/aecbeeda2ab308f8d09dddcb4cb9a572/procps-ng-3.3.8.tar.xz https://gitorious.org/procps/procps/commit/ce5e995921e770bfcda25e42fe090aeccdbf1291.patch -> procps-3.3.8-respect_epipe_in_fileutils.patch
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=389ae2b9ab12e12237cafb1449d8b330
+_md5_=08c88abd8383185668325b96598cf825

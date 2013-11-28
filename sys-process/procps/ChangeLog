@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.98 2013/10/25 13:02:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.99 2013/11/28 22:01:38 vapier Exp $
+
+  28 Nov 2013; Mike Frysinger <vapier@gentoo.org> procps-3.3.4.ebuild,
+  procps-3.3.6.ebuild, procps-3.3.8-r1.ebuild, procps-3.3.8.ebuild:
+  Pull in dejagnu for FEATURES=test #490174 by Nikoli.
 
 *procps-3.3.8-r1 (25 Oct 2013)
 

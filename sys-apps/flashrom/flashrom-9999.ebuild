@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.4 2013/11/09 20:31:49 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.5 2013/11/28 22:05:02 vapier Exp $
 
 EAPI="5"
 
@@ -21,7 +21,7 @@ SLOT="0"
 IUSE="atahpt +bitbang_spi +buspirate_spi +dediprog doc +drkaiser
 +dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel +nicintel_spi
 nicnatsemi nicrealtek +ogp_spi rayer_spi
-+pony_spi +satasii satamv +serprog usbblaster +wiki"
++pony_spi +satasii satamv +serprog tools usbblaster +wiki"
 
 COMMON_DEPEND="atahpt? ( sys-apps/pciutils )
 	dediprog? ( virtual/libusb:1 )
@@ -86,15 +86,23 @@ src_compile() {
 
 	# WARNERROR=no, bug 347879
 	tc-export AR CC RANLIB
-	emake WARNERROR=no ${args} || die
+	emake WARNERROR=no ${args}
 }
 
 src_install() {
-	dosbin flashrom || die
+	dosbin flashrom
 	doman flashrom.8
 	dodoc ChangeLog README
 
 	if use doc; then
 		dodoc Documentation/*.txt
+	fi
+
+	if use tools; then
+		if use amd64; then
+			dosbin util/ich_descriptors_tool/ich_descriptors_tool
+		elif use x86; then
+			dosbin util/ich_descriptors_tool/ich_descriptors_tool
+		fi
 	fi
 }

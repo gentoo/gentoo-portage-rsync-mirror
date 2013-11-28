@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.8-r1.ebuild,v 1.1 2013/10/25 13:02:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.8-r1.ebuild,v 1.2 2013/11/28 22:01:38 vapier Exp $
 
 EAPI="4"
 
@@ -21,7 +21,8 @@ IUSE="+ncurses nls static-libs unicode"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] )"
 DEPEND="${RDEPEND}
-	ncurses? ( virtual/pkgconfig )"
+	ncurses? ( virtual/pkgconfig )
+	test? ( dev-util/dejagnu )"
 
 S=${WORKDIR}/${PN}-ng-${PV}
 
