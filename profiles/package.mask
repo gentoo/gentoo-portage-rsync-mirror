@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15232 2013/11/28 16:36:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15233 2013/11/28 18:50:57 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -109,10 +109,6 @@ net-analyzer/traffic-vis
 # Mask older roboto versions to give users a regular upgrade path
 # now that we've switched to upstream versioning
 >media-fonts/roboto-9999
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Nov 2013)
-# Mask prerelease xorg-server
-=x11-base/xorg-server-1.14.99*
 
 # Stanislav Ochotnicky (05 Nov 2013)
 # Masked for testing and waiting for #488074

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.957 2013/11/27 18:57:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.958 2013/11/28 18:45:27 ago Exp $
+
+  28 Nov 2013; Agostino Sarubbo <ago@gentoo.org> glibc-2.16.0.ebuild:
+  Stable for x86, wrt bug #467256
 
   27 Nov 2013; Markus Meier <maekke@gentoo.org> glibc-2.16.0.ebuild:
   arm stable, bug #467256
