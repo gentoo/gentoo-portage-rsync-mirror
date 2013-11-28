@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.17.1.ebuild,v 1.1 2013/11/21 16:43:41 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/pidgin-sipe-1.17.1.ebuild,v 1.2 2013/11/28 15:51:34 thev00d00 Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/sipe/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug kerberos ocs2005-message-hack voice"
+IUSE="debug kerberos ocs2005-message-hack telepathy voice"
 
 RDEPEND=">=dev-libs/gmime-2.4.16
 	dev-libs/libxml2
@@ -26,8 +26,14 @@ RDEPEND=">=dev-libs/gmime-2.4.16
 		>=net-im/pidgin-2.8.0[gnutls]
 	)
 	!voice? (
-		>=dev-libs/glib-2.12.0
+		>=dev-libs/glib-2.12.0:2
 		net-im/pidgin[gnutls]
+	)
+	telepathy? (
+		>=sys-apps/dbus-1.1.0
+		>=dev-libs/dbus-glib-0.61
+		>=dev-libs/glib-2.28:2
+		>=net-libs/telepathy-glib-0.18.0
 	)
 "
 
@@ -45,7 +51,7 @@ src_configure() {
 	econf \
 		--enable-purple \
 		--disable-quality-check \
-		--disable-telepathy \
+		$(use_enable telepathy) \
 		$(use_enable debug) \
 		$(use_enable ocs2005-message-hack) \
 		$(use_with kerberos krb5) \
