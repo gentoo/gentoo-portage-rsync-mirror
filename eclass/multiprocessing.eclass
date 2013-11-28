@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multiprocessing.eclass,v 1.3 2013/10/12 21:12:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multiprocessing.eclass,v 1.4 2013/11/28 20:49:14 vapier Exp $
 
 # @ECLASS: multiprocessing.eclass
 # @MAINTAINER:
@@ -53,6 +53,25 @@ makeopts_jobs() {
 		-e 's:.*[[:space:]](-j|--jobs[=[:space:]])[[:space:]]*([0-9]+).*:\2:p' \
 		-e 's:.*[[:space:]](-j|--jobs)[[:space:]].*:999:p')
 	echo ${jobs:-1}
+}
+
+# @FUNCTION: makeopts_loadavg
+# @USAGE: [${MAKEOPTS}]
+# @DESCRIPTION:
+# Searches the arguments (defaults to ${MAKEOPTS}) and extracts the value set
+# for load-average. For make and ninja based builds this will mean new jobs are
+# not only limited by the jobs-value, but also by the current load - which might
+# get excessive due to I/O and not just due to CPU load.
+# Be aware that the returned number might be a floating-point number. Test
+# whether your software supports that.
+makeopts_loadavg() {
+	[[ $# -eq 0 ]] && set -- ${MAKEOPTS}
+	# This assumes the first .* will be more greedy than the second .*
+	# since POSIX doesn't specify a non-greedy match (i.e. ".*?").
+	local lavg=$(echo " $* " | sed -r -n \
+		-e 's:.*[[:space:]](-l|--load-average[=[:space:]])[[:space:]]*([0-9]+|[0-9]+\.[0-9]+)[^0-9.]*:\2:p' \
+		-e 's:.*[[:space:]](-l|--load-average)[[:space:]].*:999:p')
+	echo ${lavg:-1}
 }
 
 # @FUNCTION: multijob_init

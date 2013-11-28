@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-perl/BerkeleyDB-0.34 >=dev-perl/Config-Tiny-2.12 >=virtual/perl-Digest-SHA-5.47 >=dev-perl/HTML-TokeParser-Simple-2.37 >=dev-perl/Class-Singleton-1.4 >=dev-perl/WWW-Curl-4.05 >=dev-perl/XML-Simple-2.18 >=dev-perl/Getopt-ArgvFile-1.11 dev-perl/URI virtual/perl-Getopt-Long virtual/perl-File-Spec clipboard? ( >=dev-perl/Clipboard-0.09 ) pager? ( >=dev-perl/IO-Pager-0.05 ) password? ( >=dev-perl/Expect-1.21 ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://sourceforge/clive/2.2/clive-2.2.26.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	perl-app	20b0a51a72b6d2c8ac53ccab1605737f	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	perl-app	20b0a51a72b6d2c8ac53ccab1605737f	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ddb2e84f867dc141aded94ee5c139986

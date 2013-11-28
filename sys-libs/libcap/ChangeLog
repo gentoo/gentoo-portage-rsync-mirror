@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.123 2013/11/25 14:26:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.124 2013/11/28 20:41:27 vapier Exp $
+
+  28 Nov 2013; Mike Frysinger <vapier@gentoo.org> libcap-2.22-r1.ebuild,
+  libcap-2.22-r2.ebuild, libcap-2.22.ebuild:
+  Force Gentoo mirrors for tarball as upstream is gone #491630 by Richard
+  Jackson.
 
 *libcap-2.22-r2 (25 Nov 2013)
 

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-apps/iproute2 sys-cluster/cluster-glue !<sys-cluster/heartbeat-3.0 libnet? ( net-libs/libnet:1.1 )
 SLOT=0
 SRC_URI=http://hg.linux-ha.org/agents/archive/agents-1.0.4.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=57e2111d985b2fcc290f004b5b3e5830

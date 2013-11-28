@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.22-r2.ebuild,v 1.1 2013/11/25 14:26:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.22-r2.ebuild,v 1.2 2013/11/28 20:41:27 vapier Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ inherit eutils multilib multilib-minimal toolchain-funcs pam
 
 DESCRIPTION="POSIX 1003.1e capabilities"
 HOMEPAGE="http://www.friedhoff.org/posixfilecaps.html"
-SRC_URI="mirror://kernel/linux/libs/security/linux-privs/libcap${PV:0:1}/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 # it's available under either of the licenses
 LICENSE="|| ( GPL-2 BSD )"

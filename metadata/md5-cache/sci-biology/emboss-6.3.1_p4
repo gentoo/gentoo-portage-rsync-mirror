@@ -10,5 +10,5 @@ PDEPEND=!minimal? ( sci-biology/aaindex sci-biology/cutg sci-biology/prints sci-
 RDEPEND=dev-libs/expat dev-libs/libpcre:3 sci-libs/plplot sys-libs/zlib mysql? ( dev-db/mysql ) pdf? ( media-libs/libharu ) png? ( sys-libs/zlib media-libs/libpng media-libs/gd ) postgres? ( dev-db/postgresql-base ) !minimal? ( sci-biology/primer3 sci-biology/clustalw ) X? ( x11-libs/libXt ) !sys-devel/cons
 SLOT=0
 SRC_URI=ftp://emboss.open-bio.org/pub/EMBOSS/old/6.3.1_p4/EMBOSS-6.3.1.tar.gz ftp://emboss.open-bio.org/pub/EMBOSS/old/6.3.1_p4/fixes/patches/patch-1-4.gz -> emboss-6.3.1_p4.patch.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=853a83d61df5548278b77eb81768c6b1

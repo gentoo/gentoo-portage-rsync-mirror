@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-6.4.ebuild,v 1.2 2013/11/27 10:29:44 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sml-mode/sml-mode-6.4.ebuild,v 1.3 2013/11/28 21:02:52 ago Exp $
 
 EAPI=5
 NEED_EMACS=24
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.el.xz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 
 SITEFILE="50${PN}-gentoo-6.1.el"
 

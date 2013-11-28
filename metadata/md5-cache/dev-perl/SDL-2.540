@@ -8,5 +8,5 @@ LICENSE=GPL-2 OFL-1.1
 RDEPEND=>=dev-perl/Alien-SDL-1.434 dev-perl/Capture-Tiny dev-perl/File-ShareDir dev-perl/Test-Most dev-perl/Tie-Simple media-libs/libpng:0 media-libs/libsdl media-libs/sdl-gfx media-libs/sdl-image media-libs/sdl-mixer media-libs/sdl-pango media-libs/sdl-ttf media-libs/smpeg media-libs/tiff:0 virtual/glu virtual/jpeg virtual/opengl virtual/perl-ExtUtils-CBuilder >=virtual/perl-Module-Build-0.400.0 virtual/perl-Scalar-List-Utils virtual/perl-Test-Simple || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JT/JTPALMER/SDL-2.540.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=bb31b0c9e86a62e4537ef1fa848e385b

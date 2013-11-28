@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.442 2013/11/09 11:37:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.443 2013/11/28 20:41:52 vapier Exp $
+
+  28 Nov 2013; Mike Frysinger <vapier@gentoo.org> util-linux-2.24.ebuild,
+  util-linux-9999.ebuild:
+  Stick to EAPI=4 for base system packages.
 
   09 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> util-linux-9999.ebuild:
   Fixed unconditional call of python-single-r1_pkg_setup (bug #490778) in live
