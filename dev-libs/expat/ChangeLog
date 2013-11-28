@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.150 2013/08/07 13:21:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.151 2013/11/28 17:17:22 jer Exp $
+
+  28 Nov 2013; Jeroen Roovers <jer@gentoo.org> expat-2.1.0-r3.ebuild:
+  Stable for HPPA (bug #492702).
 
   07 Aug 2013; Alexis Ballier <aballier@gentoo.org> expat-2.1.0-r3.ebuild:
   add blockers on emul-libs and stack it for baselibs -r7
