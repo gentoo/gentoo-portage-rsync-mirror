@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/python-swiftclient-1.8.0.ebuild,v 1.1 2013/11/15 06:51:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/python-swiftclient-1.8.0.ebuild,v 1.2 2013/11/28 06:32:32 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -46,8 +46,10 @@ python_compile_all() {
 }
 
 python_test() {
-	# https://bugs.launchpad.net/python-swiftclient/+bug/1251507
-	nosetests tests -e test_instantiation || die "testsuite failed"
+	testr init
+	testr run || die "tests failed under python2_7"
+	flake8 tests && einfo "run of tests folder by flake8 passed"
+	flake8 bin/swift && einfo "run of ./bin/swift by flake8 passed"
 }
 
 python_install_all() {
