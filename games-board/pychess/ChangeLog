@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pychess
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.27 2013/10/22 18:30:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.28 2013/11/27 23:09:26 nimiux Exp $
+
+  27 Nov 2013; Chema Alonso <nimiux@gentoo.org> pychess-0.10.1-r2.ebuild:
+  Stable for amd64 wrt bug #490612
 
   22 Oct 2013; Julian Ospald <hasufell@gentoo.org> pychess-0.10.1-r2.ebuild:
   update deps with PYTHON_USEDEP
