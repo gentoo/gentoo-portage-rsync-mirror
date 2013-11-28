@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2-r1.ebuild,v 1.1 2013/11/18 03:24:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2-r1.ebuild,v 1.2 2013/11/28 04:51:37 idella4 Exp $
 
 EAPI=5
 
@@ -81,13 +81,14 @@ PATCHES=(
 
 python_prepare_all() {
 	mkdir ${PN}/tests/tmp || die
-	cp -r "${FILESDIR}"/no_admin_token_auth-paste.ini ${PN}/tests/tmp/
+	cp etc/keystone-paste.ini ${PN}/tests/tmp/ || die
 	distutils-r1_python_prepare_all
 }
 
 python_test() {
-	# https://bugs.launchpad.net/keystone/+bug/1249198
-	nosetests || die "testsuite failed under ${EPYTHON}"
+	# Ignore (naughty) test_.py files & 1 test that connect to the network
+	nosetests -I 'test_keystoneclient*' \
+		-e test_import || die "testsuite failed under python2.7"
 }
 
 python_install() {
