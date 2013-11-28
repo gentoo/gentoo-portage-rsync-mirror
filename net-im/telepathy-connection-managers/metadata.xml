@@ -8,5 +8,6 @@
   <flag name='irc'>Enable Internet Relay Chat (IRC) support.</flag>
   <flag name='yahoo'>Enable Yahoo! messaging support.</flag>
   <flag name='jabber'>Enable XMPP protocol handler (this is also Google Talk).</flag>
+  <flag name='sipe'>Enable Sip Exchange Protocol.</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.180 2013/11/10 15:47:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.181 2013/11/28 22:49:38 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (28 Nov 2013)
+# Missing keywords, bug #492820
+net-im/telepathy-connection-managers sipe     
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Nov 2013)
 # <sys-devel/llvm-3.2 is not keyworded

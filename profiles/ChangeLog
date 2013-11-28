@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8392 2013/11/28 18:50:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8393 2013/11/28 22:49:37 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Nov 2013; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
+  arch/arm/package.use.mask, arch/ia64/package.use.mask,
+  arch/powerpc/package.use.mask, arch/sparc/package.use.mask:
+  Mask USE due missing keywords, bug #492820
 
   28 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   package.mask:
