@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.500 2013/10/12 18:16:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.501 2013/11/28 08:12:01 pinkbyte Exp $
+
+  28 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> -gnupg-1.4.14.ebuild,
+  -gnupg-2.0.20.ebuild:
+  Security cleanup wrt bug #487230
 
   12 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.15.ebuild,
   gnupg-2.0.22.ebuild:
