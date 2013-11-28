@@ -1,6 +1,9 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.130 2013/11/07 11:15:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.131 2013/11/28 11:16:52 nimiux Exp $
+
+  28 Nov 2013; Chema Alonso <nimiux@gentoo.org> nvidia-settings-325.15.ebuild:
+  Stable for amd64 wrt bug #490684
 
 *nvidia-settings-331.20 (07 Nov 2013)
 
