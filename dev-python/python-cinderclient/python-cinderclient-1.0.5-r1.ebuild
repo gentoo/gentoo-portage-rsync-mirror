@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cinderclient/python-cinderclient-1.0.5-r1.ebuild,v 1.1 2013/09/13 19:26:45 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cinderclient/python-cinderclient-1.0.5-r1.ebuild,v 1.2 2013/11/28 06:09:45 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,8 +15,6 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
-#restricting tests til upstream can decide on a testing infra, I'm tired of adding packages that stop getting used...
-RESTRICT="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		test? ( dev-python/fixtures[${PYTHON_USEDEP}]
@@ -39,5 +37,7 @@ RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
 		dev-python/six[${PYTHON_USEDEP}]"
 
 python_test() {
-	sh run_tests.sh -N -p -c
+	testr init
+	testr run
+	flake8 cinderclient/tests
 }

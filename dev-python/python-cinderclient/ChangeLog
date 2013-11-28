@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-cinderclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cinderclient/ChangeLog,v 1.6 2013/09/13 19:26:45 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-cinderclient/ChangeLog,v 1.7 2013/11/28 06:09:45 idella4 Exp $
+
+  28 Nov 2013; Ian Delaney <idella4@gentoo.org> metadata.xml,
+  python-cinderclient-1.0.5-r1.ebuild:
+  switch herd, unrestrict test & update test phase
 
 *python-cinderclient-1.0.5-r1 (13 Sep 2013)
 
