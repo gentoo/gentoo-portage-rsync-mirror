@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-9999.ebuild,v 1.3 2013/09/27 04:50:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-9999.ebuild,v 1.4 2013/11/28 19:53:24 vapier Exp $
 
 EAPI="4"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
@@ -24,9 +24,10 @@ LICENSE="BSD-2"
 SLOT="0"
 IUSE="python static-libs zlib"
 
-RDEPEND="python? ( ${PYTHON_DEPS} )
+DEPEND="python? ( ${PYTHON_DEPS} )
 	zlib? ( sys-libs/zlib )"
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}
+	python? ( !dev-python/python-magic )"
 
 src_prepare() {
 	[[ ${PV} == "9999" ]] && eautoreconf
