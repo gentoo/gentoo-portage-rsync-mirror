@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/python-glanceclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/ChangeLog,v 1.6 2013/08/11 01:43:36 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-glanceclient/ChangeLog,v 1.7 2013/11/28 13:03:45 idella4 Exp $
+
+*python-glanceclient-0.10.0-r1 (28 Nov 2013)
+
+  28 Nov 2013; Ian Delaney <idella4@gentoo.org>
+  +python-glanceclient-0.10.0-r1.ebuild, metadata.xml:
+  switch herd, add IUSE doc, doc dep, update / uncomment test deps, add doc
+  build & install, update test phase, testing support by (good ol') Chicago
 
 *python-glanceclient-0.10.0 (11 Aug 2013)
 
