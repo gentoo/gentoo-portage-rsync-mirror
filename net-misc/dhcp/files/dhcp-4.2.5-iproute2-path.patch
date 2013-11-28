@@ -12,4 +12,4 @@ https://bugs.gentoo.org/480636
 +ip=ip
  
  make_resolv_conf() {
-   if [ x"$PEER_DNS" != x ] && [ x$"PEER_DNS" != xyes ]; then
+   if [ x"$PEER_DNS" != x ] && [ x"$PEER_DNS" != xyes ]; then

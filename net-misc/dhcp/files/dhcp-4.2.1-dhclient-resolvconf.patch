@@ -4,7 +4,7 @@
  #!/bin/sh
  
  make_resolv_conf() {
-+  if [ x"$PEER_DNS" != x ] && [ x$"PEER_DNS" != xyes ]; then
++  if [ x"$PEER_DNS" != x ] && [ x"$PEER_DNS" != xyes ]; then
 +    return 0
 +  fi
 +  local conf=
@@ -60,7 +60,7 @@
  fi
  
  make_resolv_conf() {
-+  if [ x"$PEER_DNS" != x ] && [ x$"PEER_DNS" != xyes ]; then
++  if [ x"$PEER_DNS" != x ] && [ x"$PEER_DNS" != xyes ]; then
 +    return 0
 +  fi
 +  local conf=
@@ -160,7 +160,7 @@
  ip=/sbin/ip
  
  make_resolv_conf() {
-+  if [ x"$PEER_DNS" != x ] && [ x$"PEER_DNS" != xyes ]; then
++  if [ x"$PEER_DNS" != x ] && [ x"$PEER_DNS" != xyes ]; then
 +    return 0
 +  fi
 +  local conf=
@@ -224,7 +224,7 @@
 -    if [ "x$new_domain_search" != x ]; then
 -      echo search $new_domain_search >> /etc/resolv.conf.dhclient
 -    elif [ "x$new_domain_name" != x ]; then
-+  if [ x"$PEER_DNS" != x ] && [ x$"PEER_DNS" != xyes ]; then
++  if [ x"$PEER_DNS" != x ] && [ x"$PEER_DNS" != xyes ]; then
 +    return 0
 +  fi
 +  local conf=
@@ -283,7 +283,7 @@
 -    if [ x"$new_domain_search" != x ]; then
 -      echo search $new_domain_search >> /etc/resolv.conf.dhclient
 -    elif [ x"$new_domain_name" != x ]; then
-+  if [ x"$PEER_DNS" != x ] && [ x$"PEER_DNS" != xyes ]; then
++  if [ x"$PEER_DNS" != x ] && [ x"$PEER_DNS" != xyes ]; then
 +    return 0
 +  fi
 +  local conf=
@@ -337,7 +337,7 @@
  #!/bin/sh  
  
  make_resolv_conf() {
-+  if [ x"$PEER_DNS" != x ] && [ x$"PEER_DNS" != xyes ]; then
++  if [ x"$PEER_DNS" != x ] && [ x"$PEER_DNS" != xyes ]; then
 +    return 0
 +  fi
 +  local conf=
