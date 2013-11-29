@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.519 2013/11/29 16:28:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.520 2013/11/29 16:36:09 chithanh Exp $
+
+  29 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -mesa-9.2.0-r1.ebuild, -mesa-9.2.0.ebuild, -mesa-9.2.1.ebuild,
+  -mesa-9.2.2.ebuild, -mesa-9.2.3.ebuild, mesa-9.2.4.ebuild:
+  Add patches to fix building gallivm and clover against llvm-3.4, bug #488064
+  and bug #492828, and xorg state tracker against xorg-server-1.15, bug #492838.
+  Drop old 9.2 releases.
 
   29 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-10.0.0_rc2.ebuild:

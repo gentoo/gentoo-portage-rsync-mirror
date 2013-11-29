@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/netpipes
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.10 2011/12/19 19:38:17 radhermit Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.11 2013/11/29 16:34:26 jer Exp $
+
+*netpipes-4.2-r2 (29 Nov 2013)
+
+  29 Nov 2013; Jeroen Roovers <jer@gentoo.org> netpipes-4.2-r1.ebuild,
+  +netpipes-4.2-r2.ebuild, files/netpipes-4.2-string.patch:
+  Fix Manifest/WORKDIR for upstream repackaging. Clean up.
 
   19 Dec 2011; Tim Harder <radhermit@gentoo.org> -netpipes-4.2.ebuild:
   Remove old.
