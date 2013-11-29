@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.518 2013/11/28 16:45:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.519 2013/11/29 16:28:49 chithanh Exp $
+
+  29 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-10.0.0_rc2.ebuild:
+  shared-llvm-libs is not required for opencl in mesa-10
 
 *mesa-10.0.0_rc2 (28 Nov 2013)
 *mesa-9.2.4 (28 Nov 2013)

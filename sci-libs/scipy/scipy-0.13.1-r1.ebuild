@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.13.1.ebuild,v 1.2 2013/11/29 07:01:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.13.1-r1.ebuild,v 1.1 2013/11/29 16:05:42 jlec Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ CDEPEND="
 	sparse? ( sci-libs/umfpack )"
 DEPEND="${CDEPEND}
 	dev-lang/swig
-	dev-python/cython[${PYTHON_USEDEP}]
+	>=dev-python/cython-0.19.1[${PYTHON_USEDEP}]
 	virtual/pkgconfig
 	doc? ( app-arch/unzip )
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
@@ -100,6 +100,7 @@ python_prepare_all() {
 }
 
 python_compile() {
+	${EPYTHON} tools/cythonize.py || die
 	distutils-r1_python_compile ${SCIPY_FCONFIG}
 }
 
