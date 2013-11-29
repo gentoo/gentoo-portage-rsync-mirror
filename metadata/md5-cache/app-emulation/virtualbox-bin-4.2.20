@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=app-arch/unzip app-arch/xz-utils >=sys-apps/sed-4 virtual/pkgconfig
+DESCRIPTION=Family of powerful x86 virtualization products for enterprise as well as home use
+EAPI=5
+HOMEPAGE=http://www.virtualbox.org/
+IUSE=+additions +chm headless python sdk vboxwebsrv rdesktop-vrdp debug
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 PUEL
+RDEPEND=!!app-emulation/virtualbox !app-emulation/virtualbox-additions ~app-emulation/virtualbox-modules-4.2.20 !headless? ( x11-libs/libXcursor media-libs/libsdl[X] x11-libs/libXrender x11-libs/libXfixes media-libs/libpng x11-libs/libXi x11-libs/libXrandr x11-libs/libXinerama x11-libs/libXft media-libs/freetype media-libs/fontconfig x11-libs/libXext dev-libs/glib chm? ( dev-libs/expat ) ) x11-libs/libXt dev-libs/libxml2 x11-libs/libXau x11-libs/libX11 x11-libs/libXmu x11-libs/libSM x11-libs/libICE x11-libs/libXdmcp python? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) )
+RESTRICT=mirror
+SLOT=0
+SRC_URI=amd64? ( http://download.virtualbox.org/virtualbox/4.2.20/VirtualBox-4.2.20-90983-Linux_amd64.run ) x86? ( http://download.virtualbox.org/virtualbox/4.2.20/VirtualBox-4.2.20-90983-Linux_x86.run ) sdk? ( http://download.virtualbox.org/virtualbox/4.2.20/VirtualBoxSDK-4.2.20-90983.zip ) http://download.virtualbox.org/virtualbox/4.2.20/Oracle_VM_VirtualBox_Extension_Pack-4.2.20-90983.vbox-extpack -> Oracle_VM_VirtualBox_Extension_Pack-4.2.20-90983.tar.gz
+_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=93377f1dd8ed4f31b42ac08a90337cdd

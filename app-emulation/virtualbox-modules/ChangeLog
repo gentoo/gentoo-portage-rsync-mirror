@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.136 2013/11/17 12:24:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.137 2013/11/29 08:13:48 polynomial-c Exp $
+
+*virtualbox-modules-4.2.20 (29 Nov 2013)
+
+  29 Nov 2013; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-modules-4.2.20.ebuild:
+  Version bump.
 
   17 Nov 2013; Pacho Ramos <pacho@gentoo.org> +files/virtualbox.conf,
   virtualbox-modules-4.3.2.ebuild:
