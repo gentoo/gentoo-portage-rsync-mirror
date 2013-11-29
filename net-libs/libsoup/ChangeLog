@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.312 2013/11/15 20:13:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.313 2013/11/29 21:15:48 pacho Exp $
+
+  29 Nov 2013; Pacho Ramos <pacho@gentoo.org> -libsoup-2.42.2-r1.ebuild,
+  libsoup-2.42.3.1.ebuild:
+  Try to prevent more test failures, bug #413233#c7 by Markus Oehme, drop old.
 
 *libsoup-2.42.3.1 (15 Nov 2013)
 

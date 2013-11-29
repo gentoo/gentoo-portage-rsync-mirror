@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.3.1.ebuild,v 1.1 2013/11/15 20:13:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.42.3.1.ebuild,v 1.2 2013/11/29 21:15:48 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit gnome2 python-any-r1
+inherit gnome2 python-any-r1 virtualx
 
 DESCRIPTION="An HTTP library implementation in C"
 HOMEPAGE="https://wiki.gnome.org/LibSoup"
@@ -62,4 +62,10 @@ src_configure() {
 		--without-apache-httpd \
 		$(use_enable introspection) \
 		$(use_with samba ntlm-auth '${EPREFIX}'/usr/bin/ntlm_auth)
+}
+
+src_test() {
+	# Try to prevent more test failures, bug #413233#c7
+	dbus-launch
+	Xemake check
 }
