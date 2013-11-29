@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.17 2013/11/29 03:13:00 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.18 2013/11/29 03:54:22 rafaelmartins Exp $
 
-EAPI="3"
+EAPI=5
 
 PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
@@ -30,7 +30,10 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc git test"
+IUSE="doc git +mercurial test"
+
+REQUIRED_USE="|| ( git mercurial )
+	test? ( git mercurial )"
 
 RDEPEND="=dev-python/docutils-0.10*
 	>=dev-python/flask-0.10.1
@@ -38,17 +41,27 @@ RDEPEND="=dev-python/docutils-0.10*
 	>=dev-python/flask-script-0.5.3
 	>=dev-python/frozen-flask-0.7
 	>=dev-python/jinja-2.5.2
-	>=dev-vcs/mercurial-1.6
 	dev-python/pyyaml
 	dev-python/setuptools
 	dev-python/pygments
-	git? ( =dev-python/pygit2-0.20* )"
+	git? ( =dev-python/pygit2-0.20* )
+	mercurial? ( >=dev-vcs/mercurial-1.6 )"
 
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
-	test? (
-		dev-python/mock
-		=dev-python/pygit2-0.20* )"
+	test? ( dev-python/mock )"
+
+src_prepare() {
+	if ! use git; then
+		rm -rf blohg/vcs_backends/git || die 'rm failed'
+	fi
+
+	if ! use mercurial; then
+		rm -rf blohg/vcs_backends/hg || die 'rm failed'
+	fi
+
+	distutils_src_prepare
+}
 
 src_compile() {
 	distutils_src_compile
