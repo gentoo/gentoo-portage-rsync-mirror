@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.13.1.ebuild,v 1.1 2013/11/28 14:18:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.13.1.ebuild,v 1.2 2013/11/29 07:01:24 jlec Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ DISTUTILS_IN_SOURCE_BUILD=1
 src_unpack() {
 	unpack ${P}.tar.gz
 	if use doc; then
-		unzip -qo "${DISTDIR}"/${P}-html.zip -d html || die
+		unzip -qo "${DISTDIR}"/${PN}-0.13.0-html.zip -d html || die
 	fi
 }
 
@@ -116,7 +116,7 @@ sys.exit(0 if r.wasSuccessful() else 1)" || die "Tests fail with ${EPYTHON}"
 python_install_all() {
 	if use doc; then
 		dohtml -r "${WORKDIR}"/html/.
-		dodoc "${DISTDIR}"/${P}*pdf
+		dodoc "${DISTDIR}"/${PN}*pdf
 	fi
 	distutils-r1_python_install_all
 }
