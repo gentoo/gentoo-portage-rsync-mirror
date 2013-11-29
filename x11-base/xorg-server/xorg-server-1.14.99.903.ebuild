@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.99.903.ebuild,v 1.1 2013/11/28 17:30:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.99.903.ebuild,v 1.2 2013/11/29 15:39:39 chithanh Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	!minimal? (
 		>=x11-libs/libX11-1.1.5
 		>=x11-libs/libXext-1.0.5
-		>=media-libs/mesa-8[nptl=]
+		>=media-libs/mesa-9.2.0[nptl=]
 	)
 	tslib? ( >=x11-libs/tslib-1.0 )
 	udev? ( >=virtual/udev-150 )

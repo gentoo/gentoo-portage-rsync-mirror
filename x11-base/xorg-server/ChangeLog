@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.775 2013/11/28 17:30:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.776 2013/11/29 15:39:39 chithanh Exp $
+
+  29 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.14.99.903.ebuild:
+  Raise mesa dependency to 9.2, bug #492852.
 
 *xorg-server-1.14.99.903 (28 Nov 2013)
 
