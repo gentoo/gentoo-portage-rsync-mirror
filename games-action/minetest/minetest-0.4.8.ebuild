@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/minetest-0.4.8.ebuild,v 1.1 2013/11/24 23:42:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/minetest-0.4.8.ebuild,v 1.2 2013/11/29 20:41:48 hasufell Exp $
 
 EAPI=5
 inherit eutils cmake-utils gnome2-utils vcs-snapshot user games
@@ -34,7 +34,7 @@ RDEPEND="dev-db/sqlite:3
 	)
 	leveldb? ( dev-libs/leveldb )
 	luajit? ( dev-lang/luajit:2 )
-	!luajit? ( >=dev-lang/lua-5.1.4 )
+	!luajit? ( >=dev-lang/lua-5.1.4[deprecated] )
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -55,7 +55,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-lua-luajit-option.patch \
 		"${FILESDIR}"/${P}-shared-irrlicht.patch \
-		"${FILESDIR}"/${P}-as-needed.patch
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-opengles.patch
 
 	# correct gettext behavior
 	if [[ -n "${LINGUAS+x}" ]] ; then
@@ -79,6 +80,7 @@ src_prepare() {
 
 src_configure() {
 	local mycmakeargs=(
+		-DENABLE_GLES2=0
 		-DRUN_IN_PLACE=0
 		-DCUSTOM_SHAREDIR="${GAMES_DATADIR}/${PN}"
 		-DCUSTOM_BINDIR="${GAMES_BINDIR}"

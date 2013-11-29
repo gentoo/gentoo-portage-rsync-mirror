@@ -1,6 +1,9 @@
 # ChangeLog for games-action/minetest_game
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_game/ChangeLog,v 1.5 2013/11/24 23:44:01 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest_game/ChangeLog,v 1.6 2013/11/29 20:43:09 hasufell Exp $
+
+  29 Nov 2013; Julian Ospald <hasufell@gentoo.org> minetest_game-0.4.8.ebuild:
+  remove obsolete RDEPEND wrt #492882
 
 *minetest_game-0.4.8 (24 Nov 2013)
 

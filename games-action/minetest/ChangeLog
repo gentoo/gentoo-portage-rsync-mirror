@@ -1,6 +1,10 @@
 # ChangeLog for games-action/minetest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/ChangeLog,v 1.5 2013/11/24 23:42:51 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/minetest/ChangeLog,v 1.6 2013/11/29 20:41:48 hasufell Exp $
+
+  29 Nov 2013; Julian Ospald <hasufell@gentoo.org> minetest-0.4.8.ebuild,
+  +files/minetest-0.4.8-opengles.patch:
+  fix bug #492804 and bug #492878
 
 *minetest-0.4.8 (24 Nov 2013)
 
