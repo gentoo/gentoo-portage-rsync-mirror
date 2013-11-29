@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15233 2013/11/28 18:50:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15234 2013/11/29 14:58:49 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -164,25 +164,6 @@ app-arch/xarchiver
 # Davide Pesavento <pesa@gentoo.org> (23 Oct 2013)
 # Some features require Qt 5.2, which is not in tree yet.
 =dev-qt/qt-creator-3*
-
-# Hans de Graaff <graaff@gentoo.org> (19 Oct 2013)
-# Mask Rails 3.1 for removal in 30 days. This version of rails
-# is no longer supported by upstream and has known security
-# bugs: https://bugs.gentoo.org/show_bug.cgi?id=488298
-# Please update to Rails 3.2 instead.
-dev-ruby/rails:3.1
-dev-ruby/railties:3.1
-dev-ruby/activerecord:3.1
-dev-ruby/actionmailer:3.1
-dev-ruby/actionpack:3.1
-dev-ruby/activeresource:3.1
-dev-ruby/activemodel:3.1
-dev-ruby/activesupport:3.1
-dev-ruby/arel:2.1
-dev-ruby/mail:2.3
-dev-ruby/sprockets:2.0
-=dev-ruby/coffee-rails-3.1.1
-=dev-ruby/sass-rails-3.1.5
 
 # Tim Harder <radhermit@gentoo.org (18 Oct 2013)
 # Masked for testing

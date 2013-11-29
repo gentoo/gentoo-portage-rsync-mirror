@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.62 2013/11/10 14:41:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.63 2013/11/29 14:52:44 graaff Exp $
+
+  29 Nov 2013; Hans de Graaff <graaff@gentoo.org> -railties-3.1.12.ebuild:
+  Remove masked Rails 3.1.
 
   10 Nov 2013; Hans de Graaff <graaff@gentoo.org> -railties-3.2.13.ebuild,
   -railties-3.2.13-r1.ebuild, -railties-3.2.14.ebuild:

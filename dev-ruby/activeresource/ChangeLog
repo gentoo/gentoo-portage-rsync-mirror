@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.162 2013/11/10 14:43:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.163 2013/11/29 14:54:16 graaff Exp $
+
+  29 Nov 2013; Hans de Graaff <graaff@gentoo.org>
+  -activeresource-3.1.12.ebuild:
+  Remove masked Rails 3.1.
 
   10 Nov 2013; Hans de Graaff <graaff@gentoo.org>
   -activeresource-3.2.13.ebuild, -activeresource-3.2.14.ebuild:

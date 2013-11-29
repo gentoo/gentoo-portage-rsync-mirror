@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.244 2013/11/10 14:42:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.245 2013/11/29 14:53:30 graaff Exp $
+
+  29 Nov 2013; Hans de Graaff <graaff@gentoo.org> -actionmailer-3.1.12.ebuild:
+  Remove masked Rails 3.1.
 
   10 Nov 2013; Hans de Graaff <graaff@gentoo.org> -actionmailer-3.2.13.ebuild,
   -actionmailer-3.2.14.ebuild:

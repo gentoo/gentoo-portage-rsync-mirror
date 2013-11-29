@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.63 2013/11/10 14:44:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.64 2013/11/29 14:54:36 graaff Exp $
+
+  29 Nov 2013; Hans de Graaff <graaff@gentoo.org> -activemodel-3.1.12.ebuild:
+  Remove masked Rails 3.1.
 
   10 Nov 2013; Hans de Graaff <graaff@gentoo.org> -activemodel-3.2.13.ebuild,
   -activemodel-3.2.14.ebuild:

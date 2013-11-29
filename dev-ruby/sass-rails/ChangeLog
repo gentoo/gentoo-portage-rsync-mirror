@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sass-rails
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.11 2013/10/16 05:57:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass-rails/ChangeLog,v 1.12 2013/11/29 14:57:58 graaff Exp $
+
+  29 Nov 2013; Hans de Graaff <graaff@gentoo.org> -sass-rails-3.1.5.ebuild:
+  Remove masked Rails 3.1.
 
 *sass-rails-4.0.1 (16 Oct 2013)
 

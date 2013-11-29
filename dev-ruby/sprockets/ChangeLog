@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.16 2013/11/25 01:44:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.17 2013/11/29 14:57:04 graaff Exp $
+
+  29 Nov 2013; Hans de Graaff <graaff@gentoo.org> -sprockets-2.0.4.ebuild:
+  Remove masked Rails 3.1.
 
 *sprockets-2.10.1 (25 Nov 2013)
 
