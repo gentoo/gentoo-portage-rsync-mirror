@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.190 2013/11/23 16:40:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.191 2013/11/29 17:12:25 maekke Exp $
+
+  29 Nov 2013; Markus Meier <maekke@gentoo.org> fuse-2.9.3.ebuild:
+  arm stable, bug #489102
 
   23 Nov 2013; Chema Alonso <nimiux@gentoo.org> fuse-2.9.3.ebuild:
   Stable for amd64 wrt bug #489102

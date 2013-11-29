@@ -1,5 +1,8 @@
 # ChangeLog for sys-apps/xinetd
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.72 2013/11/16 10:37:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.73 2013/11/29 17:22:01 maekke Exp $
+
+  29 Nov 2013; Markus Meier <maekke@gentoo.org> xinetd-2.3.15-r1.ebuild:
+  arm stable, bug #490308
 
   16 Nov 2013; Pacho Ramos <pacho@gentoo.org> xinetd-2.3.15-r1.ebuild:
   amd64/x86 stable, bug #490308

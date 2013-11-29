@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.41 2013/11/04 12:56:58 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.42 2013/11/29 17:21:32 maekke Exp $
+
+  29 Nov 2013; Markus Meier <maekke@gentoo.org> cronie-1.4.11.ebuild:
+  arm stable, bug #490368
 
   04 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> cronie-1.4.11.ebuild:
   Stable on amd64 and x86, wrt bug #490368

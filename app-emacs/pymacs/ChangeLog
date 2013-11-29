@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.60 2013/11/11 13:39:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.61 2013/11/29 17:15:08 maekke Exp $
+
+  29 Nov 2013; Markus Meier <maekke@gentoo.org> pymacs-0.25-r1.ebuild:
+  arm stable, bug #490096
 
   11 Nov 2013; Jeroen Roovers <jer@gentoo.org> pymacs-0.25-r1.ebuild:
   Stable for HPPA (bug #490096).
