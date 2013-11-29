@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.8.ebuild,v 1.2 2013/11/28 22:22:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.8.ebuild,v 1.3 2013/11/29 14:04:14 vapier Exp $
 
 EAPI="4"
 
@@ -41,6 +41,6 @@ src_prepare() {
 
 src_install() {
 	default
-	use perl || rm /usr/bin/strace-graph
+	use perl || rm "${ED}"/usr/bin/strace-graph
 	dodoc CREDITS
 }
