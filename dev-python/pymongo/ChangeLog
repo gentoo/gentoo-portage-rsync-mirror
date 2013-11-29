@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.33 2013/11/16 11:07:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.34 2013/11/29 22:46:57 pacho Exp $
+
+  29 Nov 2013; Pacho Ramos <pacho@gentoo.org> pymongo-2.6.3.ebuild:
+  amd64 stable, bug #488738
 
   16 Nov 2013; Pacho Ramos <pacho@gentoo.org> pymongo-2.6.3.ebuild:
   amd64 stable, bug #488742

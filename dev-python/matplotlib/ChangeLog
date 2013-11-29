@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.159 2013/11/06 07:06:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.160 2013/11/29 22:48:02 pacho Exp $
+
+  29 Nov 2013; Pacho Ramos <pacho@gentoo.org> matplotlib-1.3.0.ebuild:
+  amd64 stable, bug #488738
 
   06 Nov 2013; Markos Chandras <hwoarang@gentoo.org> matplotlib-1.3.0.ebuild:
   Add ~mips

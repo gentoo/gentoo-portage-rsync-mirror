@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gevent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.14 2013/11/26 17:18:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent/ChangeLog,v 1.15 2013/11/29 22:46:35 pacho Exp $
+
+  29 Nov 2013; Pacho Ramos <pacho@gentoo.org> gevent-1.0_rc3.ebuild:
+  amd64 stable, bug #488738
 
 *gevent-1.0 (26 Nov 2013)
 

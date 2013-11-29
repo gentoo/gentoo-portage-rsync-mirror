@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.60 2013/11/17 04:08:34 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.61 2013/11/29 22:48:53 pacho Exp $
+
+  29 Nov 2013; Pacho Ramos <pacho@gentoo.org> pexpect-2.4-r1.ebuild:
+  amd64 stable, bug #488738
 
   17 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> pexpect-3.0.ebuild:
   adding ~amd64-fbsd and ~hppa, forgot :D
