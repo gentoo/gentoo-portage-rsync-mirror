@@ -1,0 +1,56 @@
+From 475ee015cb32010f735ea82272ce2a35701e85bf Mon Sep 17 00:00:00 2001
+From: Alon Bar-Lev <alon.barlev@gmail.com>
+Date: Fri, 29 Nov 2013 21:18:51 +0200
+Subject: [PATCH] aix: fix conflict with sys/types.h
+
+AIX header file <sys/types.h> defines TRUE and FALSE when _ALL_SOURCE is
+defined, conflicts with tokens within yacc.
+
+Bug-Url: https://bugs.gentoo.org/show_bug.cgi?id=492866
+Bug-Url: https://bugs.g10code.com/gnupg/issue1574
+---
+ src/asn1-parse.c | 8 ++++++++
+ src/asn1-parse.y | 8 ++++++++
+ 2 files changed, 16 insertions(+)
+
+diff --git a/src/asn1-parse.c b/src/asn1-parse.c
+index e84e13d..07294e7 100644
+--- a/src/asn1-parse.c
++++ b/src/asn1-parse.c
+@@ -89,6 +89,14 @@
+ 
+ #include "asn1-func.h"
+ 
++/* aix conflict */
++#ifdef TRUE
++#undef TRUE
++#endif
++#ifdef FALSE
++#undef FALSE
++#endif
++
+ /* It would be better to make yyparse static but there is no way to do
+    this.  Let's hope that this macros works. */
+ #define yyparse _ksba_asn1_yyparse
+diff --git a/src/asn1-parse.y b/src/asn1-parse.y
+index eedaa0a..da8bd0c 100755
+--- a/src/asn1-parse.y
++++ b/src/asn1-parse.y
+@@ -59,6 +59,14 @@
+ 
+ #include "asn1-func.h"
+ 
++/* aix conflict */
++#ifdef TRUE
++#undef TRUE
++#endif
++#ifdef FALSE
++#undef FALSE
++#endif
++
+ /* It would be better to make yyparse static but there is no way to do
+    this.  Let's hope that this macros works. */
+ #define yyparse _ksba_asn1_yyparse
+-- 
+1.8.3.2
+
