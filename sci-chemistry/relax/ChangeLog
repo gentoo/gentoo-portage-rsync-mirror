@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/relax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.12 2013/11/29 09:14:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/ChangeLog,v 1.13 2013/11/29 10:58:24 jlec Exp $
+
+*relax-9999 (29 Nov 2013)
+*relax-3.1.0-r2 (29 Nov 2013)
+
+  29 Nov 2013; Justin Lecher <jlec@gentoo.org> -relax-3.1.0-r1.ebuild,
+  +relax-3.1.0-r2.ebuild, +relax-9999.ebuild,
+  +files/relax-3.1.0-sample-script-backport.patch:
+  Add another backport for sample scripts; add live ebuild
 
 *relax-3.1.0-r1 (29 Nov 2013)
 

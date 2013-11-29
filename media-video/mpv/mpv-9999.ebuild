@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.29 2013/11/27 08:07:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.30 2013/11/29 10:39:40 pinkbyte Exp $
 
 EAPI=5
 
@@ -21,9 +21,9 @@ SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd +enca encode +iconv jack -joystick
-jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mpg123 -openal +opengl oss
-portaudio +postproc pulseaudio pvr +quvi -radio samba +shm +threads v4l vaapi
-vcd vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
+jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mpg123 -openal +opengl
+oss portaudio +postproc pulseaudio pvr +quvi -radio samba +shm v4l vaapi vcd vdpau
+vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
 	enca? ( iconv )
@@ -31,10 +31,8 @@ REQUIRED_USE="
 	libguess? ( iconv )
 	luajit? ( lua )
 	opengl? ( || ( wayland X ) )
-	portaudio? ( threads )
 	pvr? ( v4l )
 	radio? ( v4l || ( alsa oss ) )
-	v4l? ( threads )
 	vaapi? ( X )
 	vdpau? ( X )
 	wayland? ( opengl )
@@ -45,8 +43,8 @@ REQUIRED_USE="
 
 RDEPEND+="
 	|| (
-		>=media-video/libav-9:=[encode?,threads?,vaapi?,vdpau?]
-		>=media-video/ffmpeg-1.2:0=[encode?,threads?,vaapi?,vdpau?]
+		>=media-video/libav-9:=[encode?,threads,vaapi?,vdpau?]
+		>=media-video/ffmpeg-1.2:0=[encode?,threads,vaapi?,vdpau?]
 	)
 	sys-libs/ncurses
 	sys-libs/zlib
@@ -94,7 +92,7 @@ RDEPEND+="
 	postproc? (
 		|| (
 			media-libs/libpostproc
-			>=media-video/ffmpeg-1.2:0[encode?,threads?,vaapi?,vdpau?]
+			>=media-video/ffmpeg-1.2:0[encode?,threads,vaapi?,vdpau?]
 		)
 	)
 	pulseaudio? ( media-sound/pulseaudio )
@@ -212,7 +210,6 @@ src_configure() {
 		$(use_enable openal) \
 		$(use_enable oss oss-audio) \
 		$(use_enable pulseaudio pulse) \
-		$(use_enable threads pthreads) \
 		$(use_enable shm) \
 		$(use_enable X x11) \
 		$(use_enable vaapi) \

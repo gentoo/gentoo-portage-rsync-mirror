@@ -1,0 +1,111 @@
+--- trunk/sample_scripts/relax_disp/R1rho_analysis.py	2013/11/29 09:40:25	21705
++++ trunk/sample_scripts/relax_disp/R1rho_analysis.py	2013/11/29 09:42:22	21706
+@@ -58,16 +58,16 @@
+ # Set up the data pipe.
+ #######################
+ 
++# The path to the data files.
++DATA_PATH = '../../test_suite/shared_data/dispersion/r1rho_off_res_tp02'
++
+ # Create the data pipe.
+ pipe_name = 'base pipe'
+ pipe_bundle = 'relax_disp'
+ pipe.create(pipe_name=pipe_name, bundle=pipe_bundle, pipe_type='relax_disp')
+ 
+-# The path to the data files.
+-data_path = 'r1rho_off_res_tp02'
+-
+ # Load the sequence.
+-sequence.read('fake_sequence.in', res_num_col=1, res_name_col=2)
++sequence.read('fake_sequence.in', dir=DATA_PATH, res_num_col=1, res_name_col=2)
+ 
+ # Name the spins so they can be matched to the assignments.
+ spin.name(name='N')
+@@ -77,37 +77,37 @@
+ 
+ # The spectral data - spectrum ID, peak list file name, spin-lock field strength (Hz), the spin-lock offset (ppm), the relaxation time (s), spectrometer frequency (Hz), and experimental error (RMSD of the base plane noise for each spectrum).
+ data = [
+-    ['ref_500MHz',       'ref_500MHz.list',         None, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_1000.0_500MHz', 'nu_1000.0_500MHz.list', 1000.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_1500.0_500MHz', 'nu_1500.0_500MHz.list', 1500.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_2000.0_500MHz', 'nu_2000.0_500MHz.list', 2000.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_2500.0_500MHz', 'nu_2500.0_500MHz.list', 2500.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_3000.0_500MHz', 'nu_3000.0_500MHz.list', 3000.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_3500.0_500MHz', 'nu_3500.0_500MHz.list', 3500.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_4000.0_500MHz', 'nu_4000.0_500MHz.list', 4000.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_4500.0_500MHz', 'nu_4500.0_500MHz.list', 4500.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_5000.0_500MHz', 'nu_5000.0_500MHz.list', 5000.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_5500.0_500MHz', 'nu_5500.0_500MHz.list', 5500.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['nu_6000.0_500MHz', 'nu_6000.0_500MHz.list', 6000.0, 110.0, 0.1, 500e6, 200000.0]
+-    ['ref_800MHz',       'ref_800MHz.list',         None, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_1000.0_800MHz', 'nu_1000.0_800MHz.list', 1000.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_1500.0_800MHz', 'nu_1500.0_800MHz.list', 1500.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_2000.0_800MHz', 'nu_2000.0_800MHz.list', 2000.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_2500.0_800MHz', 'nu_2500.0_800MHz.list', 2500.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_3000.0_800MHz', 'nu_3000.0_800MHz.list', 3000.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_3500.0_800MHz', 'nu_3500.0_800MHz.list', 3500.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_4000.0_800MHz', 'nu_4000.0_800MHz.list', 4000.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_4500.0_800MHz', 'nu_4500.0_800MHz.list', 4500.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_5000.0_800MHz', 'nu_5000.0_800MHz.list', 5000.0, 110.0, 0.1, 800e6, 200000.0]
+-    ['nu_5500.0_800MHz', 'nu_5500.0_800MHz.list', 5500.0, 110.0, 0.1, 800e6, 200000.0]
++    ['ref_500MHz',       'ref_500MHz.list',         None, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_1000.0_500MHz', 'nu_1000.0_500MHz.list', 1000.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_1500.0_500MHz', 'nu_1500.0_500MHz.list', 1500.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_2000.0_500MHz', 'nu_2000.0_500MHz.list', 2000.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_2500.0_500MHz', 'nu_2500.0_500MHz.list', 2500.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_3000.0_500MHz', 'nu_3000.0_500MHz.list', 3000.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_3500.0_500MHz', 'nu_3500.0_500MHz.list', 3500.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_4000.0_500MHz', 'nu_4000.0_500MHz.list', 4000.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_4500.0_500MHz', 'nu_4500.0_500MHz.list', 4500.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_5000.0_500MHz', 'nu_5000.0_500MHz.list', 5000.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_5500.0_500MHz', 'nu_5500.0_500MHz.list', 5500.0, 110.0, 0.1, 500e6, 200000.0],
++    ['nu_6000.0_500MHz', 'nu_6000.0_500MHz.list', 6000.0, 110.0, 0.1, 500e6, 200000.0],
++    ['ref_800MHz',       'ref_800MHz.list',         None, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_1000.0_800MHz', 'nu_1000.0_800MHz.list', 1000.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_1500.0_800MHz', 'nu_1500.0_800MHz.list', 1500.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_2000.0_800MHz', 'nu_2000.0_800MHz.list', 2000.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_2500.0_800MHz', 'nu_2500.0_800MHz.list', 2500.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_3000.0_800MHz', 'nu_3000.0_800MHz.list', 3000.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_3500.0_800MHz', 'nu_3500.0_800MHz.list', 3500.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_4000.0_800MHz', 'nu_4000.0_800MHz.list', 4000.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_4500.0_800MHz', 'nu_4500.0_800MHz.list', 4500.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_5000.0_800MHz', 'nu_5000.0_800MHz.list', 5000.0, 110.0, 0.1, 800e6, 200000.0],
++    ['nu_5500.0_800MHz', 'nu_5500.0_800MHz.list', 5500.0, 110.0, 0.1, 800e6, 200000.0],
+     ['nu_6000.0_800MHz', 'nu_6000.0_800MHz.list', 6000.0, 110.0, 0.1, 800e6, 200000.0]
+ ]
+ 
+ # Loop over the spectra.
+ for id, file, field, offset, relax_time, H_frq, rmsd in data:
+     # Load the peak intensities and set the errors.
+-    spectrum.read_intensities(file=file, dir=data_path, spectrum_id=id, int_method='height')
+-    spectrum.baseplane_rmsd(spectrum_id=id, error=error)
++    spectrum.read_intensities(file=file, dir=DATA_PATH, spectrum_id=id, int_method='height')
++    spectrum.baseplane_rmsd(spectrum_id=id, error=rmsd)
+ 
+     # Set the relaxation dispersion experiment type.
+     relax_disp.exp_type(spectrum_id=id, exp_type='R1rho')
+@@ -125,18 +125,17 @@
+     spectrometer.frequency(id=id, frq=H_frq)
+ 
+ # Load the R1 data.
+-relax_data.read(ri_id='500MHz', ri_type='R1', frq=500e6, file='R1_500MHz.out', dir=data_path, mol_name_col=1, res_num_col=2, res_name_col=3, spin_num_col=4, spin_name_col=5, data_col=6, error_col=7)
+-relax_data.read(ri_id='800MHz', ri_type='R1', frq=800e6, file='R1_800MHz.out', dir=data_path, mol_name_col=1, res_num_col=2, res_name_col=3, spin_num_col=4, spin_name_col=5, data_col=6, error_col=7)
++relax_data.read(ri_id='500MHz', ri_type='R1', frq=500e6, file='R1_500MHz.out', dir=DATA_PATH, mol_name_col=1, res_num_col=2, res_name_col=3, spin_num_col=4, spin_name_col=5, data_col=6, error_col=7)
++relax_data.read(ri_id='800MHz', ri_type='R1', frq=800e6, file='R1_800MHz.out', dir=DATA_PATH, mol_name_col=1, res_num_col=2, res_name_col=3, spin_num_col=4, spin_name_col=5, data_col=6, error_col=7)
+ 
+-# Clustering.
+-relax_disp.cluster(cluster_id='cluster', spin_id=':1-50')
++# Clustering (only to be activated after an initial analysis without clustering).
++#relax_disp.cluster(cluster_id='cluster', spin_id=':1-50')
+ 
+ # Read the chemical shift data.
+-chemical_shift.read(file='ref_500MHz.list', dir=data_path)
++chemical_shift.read(file='ref_500MHz.list', dir=DATA_PATH)
+ 
+ # Deselect unresolved spins.
+-deselect.read(file='unresolved', dir='500_MHz', res_num_col=1)
+-deselect.read(file='unresolved', dir='800_MHz', res_num_col=1)
++deselect.read(file='unresolved', dir=DATA_PATH, res_num_col=1)
+ 
+ 
+ 
