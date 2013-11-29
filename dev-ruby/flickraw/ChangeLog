@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/flickraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickraw/ChangeLog,v 1.1 2013/01/25 21:03:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickraw/ChangeLog,v 1.2 2013/11/29 07:55:17 graaff Exp $
+
+*flickraw-0.9.7 (29 Nov 2013)
+
+  29 Nov 2013; Hans de Graaff <graaff@gentoo.org> +flickraw-0.9.7.ebuild:
+  Version bump.
 
 *flickraw-0.9.6 (25 Jan 2013)
 
