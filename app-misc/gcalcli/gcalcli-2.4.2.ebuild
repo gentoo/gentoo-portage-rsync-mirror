@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcalcli/gcalcli-2.4.2.ebuild,v 1.4 2013/09/10 03:37:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcalcli/gcalcli-2.4.2.ebuild,v 1.5 2013/11/29 19:39:53 robbat2 Exp $
 
 EAPI=5
 # google-api-python-client only supports these
@@ -20,6 +20,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="dev-python/python-dateutil
 		 dev-python/google-api-python-client
+		 dev-python/gdata
 		 dev-python/vobject"
 
 src_install() {

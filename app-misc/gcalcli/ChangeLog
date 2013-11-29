@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gcalcli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcalcli/ChangeLog,v 1.4 2013/09/10 03:37:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcalcli/ChangeLog,v 1.5 2013/11/29 19:39:53 robbat2 Exp $
+
+  29 Nov 2013; Robin H. Johnson <robbat2@gentoo.org> gcalcli-2.4.2.ebuild:
+  Missing dep.
 
   10 Sep 2013; Patrick Lauer <patrick@gentoo.org> gcalcli-2.4.2.ebuild:
   Whitespace
