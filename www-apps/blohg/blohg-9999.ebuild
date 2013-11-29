@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.16 2013/11/28 05:29:24 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/blohg-9999.ebuild,v 1.17 2013/11/29 03:13:00 rafaelmartins Exp $
 
 EAPI="3"
 
@@ -42,13 +42,13 @@ RDEPEND="=dev-python/docutils-0.10*
 	dev-python/pyyaml
 	dev-python/setuptools
 	dev-python/pygments
-	git? ( =dev-python/pygit2-0.19* )"
+	git? ( =dev-python/pygit2-0.20* )"
 
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )
 	test? (
 		dev-python/mock
-		=dev-python/pygit2-0.19* )"
+		=dev-python/pygit2-0.20* )"
 
 src_compile() {
 	distutils_src_compile
