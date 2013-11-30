@@ -1,0 +1,11 @@
+diff -ur python-keystoneclient-0.4.1.orig/doc/source/conf.py python-keystoneclient-0.4.1/doc/source/conf.py
+--- doc/source/conf.py	2013-10-17 04:33:40.000000000 +0800
++++ doc/source/conf.py	2013-11-30 15:12:37.069566832 +0800
+@@ -222,7 +222,3 @@
+ 
+ 
+ # Example configuration for intersphinx: refer to the Python standard library.
+-intersphinx_mapping = {'python': ('http://docs.python.org/', None),
+-                       'nova': ('http://nova.openstack.org', None),
+-                       'swift': ('http://swift.openstack.org', None),
+-                       'glance': ('http://glance.openstack.org', None)}

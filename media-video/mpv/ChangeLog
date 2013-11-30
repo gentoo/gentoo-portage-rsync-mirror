@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.43 2013/11/29 10:39:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.44 2013/11/30 07:27:39 tomwij Exp $
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org> mpv-9999.ebuild:
+  Use simplified configure option for disabling/enabling libquvi support.,
+  proxied commit for Nikoli.
 
   29 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> mpv-9999.ebuild:
   Update live ebuild, thanks to Nikoli

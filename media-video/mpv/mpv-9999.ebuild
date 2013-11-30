@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.30 2013/11/29 10:39:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.31 2013/11/30 07:27:39 tomwij Exp $
 
 EAPI=5
 
@@ -175,8 +175,7 @@ src_configure() {
 		$(use_enable joystick) \
 		$(use_enable bluray libbluray) \
 		$(use_enable vcd) \
-		$(use_enable quvi libquvi4) \
-		--disable-libquvi9 \
+		$(use_enable quvi libquvi) \
 		$(use_enable samba libsmbclient) \
 		$(use_enable lirc) \
 		$(use_enable lirc lircc) \

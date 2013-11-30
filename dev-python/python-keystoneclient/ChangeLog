@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/python-keystoneclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.20 2013/11/09 10:47:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.21 2013/11/30 07:28:20 idella4 Exp $
+
+*python-keystoneclient-0.4.1 (30 Nov 2013)
+
+  30 Nov 2013; Ian Delaney <idella4@gentoo.org> +files/sphinx_mapping.patch,
+  +python-keystoneclient-0.4.1.ebuild, metadata.xml,
+  python-keystoneclient-0.3.2.ebuild:
+  metadata.xml; added herd, python-keystoneclient-0.3.2; upgraded test phase,
+  revbump; updated deps inc. test requirements, restricted tests subsequent to
+  stalled dev. of httpretty, added IUSE doc & examples with pertinent build and
+  install phases
 
   09 Nov 2013; Ian Delaney <idella4@gentoo.org>
   python-keystoneclient-0.3.1.ebuild, python-keystoneclient-0.3.2.ebuild:
