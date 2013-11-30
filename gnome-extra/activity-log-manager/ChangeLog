@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/activity-log-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/ChangeLog,v 1.15 2013/07/10 07:02:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/activity-log-manager/ChangeLog,v 1.16 2013/11/30 19:14:32 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> activity-log-manager-0.9.7.ebuild:
+  amd64 stable, bug #478252
 
 *activity-log-manager-0.9.7 (10 Jul 2013)
 
@@ -86,4 +89,3 @@
   +files/activity-log-manager-0.9.0.1-ccpanel.patch,
   +files/activity-log-manager-0.9.0.1-gold.patch, +metadata.xml:
   new addition, initial ebuild by Travis Glenn Hansen
-

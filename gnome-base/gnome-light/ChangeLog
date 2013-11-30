@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-light
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.169 2013/05/17 02:55:23 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/ChangeLog,v 1.170 2013/11/30 19:09:06 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-light-3.8.0.ebuild:
+  amd64 stable, bug #478252
 
   17 May 2013; Matt Turner <mattst88@gentoo.org> gnome-light-3.6.2.ebuild:
   Added ~alpha.

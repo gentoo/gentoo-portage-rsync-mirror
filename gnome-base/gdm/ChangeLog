@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.386 2013/11/07 20:15:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.387 2013/11/30 19:05:00 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gdm-3.8.4-r3.ebuild:
+  amd64 stable, bug #478252
 
   07 Nov 2013; Pacho Ramos <pacho@gentoo.org> gdm-3.8.4-r3.ebuild, metadata.xml:
   Remove smartcard USE flag and its pulled rdeps (#488784 by Alon Bar-Lev)

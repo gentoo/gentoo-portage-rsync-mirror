@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.8.0.ebuild,v 1.1 2013/04/11 19:15:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-3.8.0.ebuild,v 1.2 2013/11/30 19:09:06 pacho Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ IUSE="cups +gnome-shell"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 # XXX: Note to developers:
 # This is a wrapper for the 'light' GNOME 3 desktop, and should only consist of

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.236 2013/09/13 22:59:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.237 2013/11/30 19:22:25 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org>
+  gnome-system-monitor-3.8.2.1-r1.ebuild:
+  amd64 stable, bug #478252
 
   14 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-system-monitor-3.6.1.ebuild, gnome-system-monitor-3.8.2.1.ebuild,

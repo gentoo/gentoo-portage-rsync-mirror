@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.111 2013/11/26 20:09:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.112 2013/11/30 19:17:48 johu Exp $
+
+  30 Nov 2013; Johannes Huber <johu@gentoo.org>
+  xdg-utils-1.1.0_rc1_p20130921.ebuild:
+  x86 stable wrt bug #492490
 
   26 Nov 2013; Jeroen Roovers <jer@gentoo.org>
   xdg-utils-1.1.0_rc1_p20130921.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.115 2013/09/05 05:54:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.116 2013/11/30 19:05:22 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-common-3.7.4.ebuild:
+  amd64 stable, bug #478252
 
   05 Sep 2013; Mike Frysinger <vapier@gentoo.org> gnome-common-3.6.0.ebuild,
   gnome-common-3.7.4.ebuild:

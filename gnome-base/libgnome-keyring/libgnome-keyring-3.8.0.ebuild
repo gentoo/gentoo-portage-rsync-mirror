@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-3.8.0.ebuild,v 1.3 2013/09/05 19:44:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-3.8.0.ebuild,v 1.4 2013/11/30 19:12:48 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -16,7 +16,7 @@ HOMEPAGE="http://live.gnome.org/GnomeKeyring"
 
 LICENSE="LGPL-2+ GPL-2+" # tests are GPL-2
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris"
 IUSE="debug +introspection test vala"
 REQUIRED_USE="vala? ( introspection )"
 

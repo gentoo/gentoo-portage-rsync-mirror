@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnome-mahjongg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/ChangeLog,v 1.4 2013/11/06 20:58:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mahjongg/ChangeLog,v 1.5 2013/11/30 19:01:26 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-mahjongg-3.8.1.ebuild:
+  amd64 stable, bug #478252
 
   06 Nov 2013; Pacho Ramos <pacho@gentoo.org> -gnome-mahjongg-3.8.0.ebuild,
   gnome-mahjongg-3.8.1.ebuild:

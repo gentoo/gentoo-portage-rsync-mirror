@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-share/nautilus-share-0.7.3-r1.ebuild,v 1.2 2012/06/07 22:23:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-share/nautilus-share-0.7.3-r1.ebuild,v 1.3 2013/11/30 19:26:47 pacho Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://debian/pool/main/n/${PN}/${PN}_${PV}.orig.tar.bz2
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 COMMON_DEPEND=">=dev-libs/glib-2.4:2
 	>=gnome-base/nautilus-2.10"

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/eiciel
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/eiciel/ChangeLog,v 1.5 2012/05/05 06:25:22 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/eiciel/ChangeLog,v 1.6 2013/11/30 19:15:56 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> eiciel-0.9.8.1.ebuild:
+  amd64 stable, bug #478252
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> eiciel-0.9.8.1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -24,4 +27,3 @@
   Add Nautilus ACL editor extension from the gnome overlay, previously
   maintained in the sunrise overlay. Thanks to Tristan Heaven and Tiziano Müller
   for the original ebuild in sunrise (bug #109221).
-

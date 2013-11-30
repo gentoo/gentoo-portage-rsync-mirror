@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-contacts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/ChangeLog,v 1.21 2013/08/09 11:43:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/ChangeLog,v 1.22 2013/11/30 19:19:15 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-contacts-3.8.3.ebuild:
+  amd64 stable, bug #478252
 
   09 Aug 2013; Pacho Ramos <pacho@gentoo.org> -gnome-contacts-3.8.2.ebuild,
   gnome-contacts-3.6.2.ebuild, gnome-contacts-3.8.3.ebuild:

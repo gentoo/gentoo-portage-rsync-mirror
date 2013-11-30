@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.283 2013/09/05 19:44:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.284 2013/11/30 19:04:36 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gconf-3.2.6-r1.ebuild:
+  amd64 stable, bug #478252
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> gconf-3.2.6-r1.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
