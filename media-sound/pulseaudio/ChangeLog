@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.307 2013/11/23 21:41:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.308 2013/11/30 16:12:45 mgorny Exp $
+
+*pulseaudio-4.0-r1 (30 Nov 2013)
+
+  30 Nov 2013; Michał Górny <mgorny@gentoo.org> +pulseaudio-4.0-r1.ebuild,
+  pulseaudio-9999.ebuild:
+  Introduce multilib support, bug #484252.
 
   23 Nov 2013; Pacho Ramos <pacho@gentoo.org> pulseaudio-4.0.ebuild:
   amd64 stable, bug #477662

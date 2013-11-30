@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.200 2013/11/24 17:16:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.201 2013/11/30 16:08:05 jer Exp $
+
+  30 Nov 2013; Jeroen Roovers <jer@gentoo.org> make.defaults:
+  Mask dev-lang/python-3.2*, unmask dev-lang/python-3.3* targets (bug #474128).
 
   24 Nov 2013; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Properly describe mask entry (bug #492326).

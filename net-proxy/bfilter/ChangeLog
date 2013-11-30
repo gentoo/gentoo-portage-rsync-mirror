@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/bfilter
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.31 2012/07/29 16:14:37 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/ChangeLog,v 1.32 2013/11/30 16:28:06 tomwij Exp $
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/bfilter-1.1.4-gtkmm-X11-underlinking.patch, bfilter-1.1.4-r1.ebuild,
+  files/bfilter.init:
+  Fix bashism in init script. Patch gtkmm X11 underlinking; fixes bug #489328,
+  reported by Mark (chaseguard).
 
   29 Jul 2012; Raúl Porcel <armin76@gentoo.org> bfilter-1.1.4-r1.ebuild:
   Drop sparc keywords
@@ -153,4 +159,3 @@
   +files/bfilter.conf, +files/bfilter.init, +metadata.xml,
   +bfilter-0.9.4.ebuild:
   Initial import from bug #103947, thanks to Alan Swanson <swanson@ukfsn.org>.
-
