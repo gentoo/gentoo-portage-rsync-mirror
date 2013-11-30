@@ -12,3 +12,6 @@ To allow udev to detect your device without reboot, run
 * and replace the group name with your choice.
 
 * In addition, you need to enable CONFIG_INPUT_UINPUT in your kernel
+
+* Do a logout/login to apply your new group ownership and replug your device
+* and everything should work as expected.

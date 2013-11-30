@@ -2,9 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>hasufell@gentoo.org</email>
 		<name>Julian Ospald</name>
+		<description>Maintainer, assign bugs to him</description>
+	</maintainer>
+	<maintainer>
+		<email>maddin081591@gmail.com</email>
+		<name>Martin-Kevin Neumann</name>
+		<description>Proxy maintainer, CC him on bugs</description>
 	</maintainer>
 	<upstream>
 		<bugs-to>https://github.com/minetest/survival/issues</bugs-to>

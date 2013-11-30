@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=x11-libs/gtk+:2 x11-libs/libnotify media-libs/libcanberra virtual/libusb:1 dev-libs/dbus-glib virtual/udev[gudev] sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=sys-apps/sed-4 virtual/pkgconfig
+DESCRIPTION=Utility for advanced configuration of Roccat devices
+EAPI=5
+HOMEPAGE=http://roccat.sourceforge.net/
+IUSE=input_devices_roccat_arvo input_devices_roccat_isku input_devices_roccat_iskufx input_devices_roccat_kone input_devices_roccat_koneplus input_devices_roccat_konepure input_devices_roccat_konepureoptical input_devices_roccat_konextd input_devices_roccat_kovaplus input_devices_roccat_lua input_devices_roccat_pyra input_devices_roccat_savu input_devices_roccat_ryos
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=x11-libs/gtk+:2 x11-libs/libnotify media-libs/libcanberra virtual/libusb:1 dev-libs/dbus-glib virtual/udev[gudev]
+REQUIRED_USE=input_devices_roccat_konextd? ( input_devices_roccat_koneplus )
+SLOT=0
+SRC_URI=mirror://sourceforge/roccat/roccat-tools-1.0.0.tar.bz2
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=891b31865540eb44d560d784e1c9abb7
