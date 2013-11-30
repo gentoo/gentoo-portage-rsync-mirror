@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/fusion-icon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.15 2012/09/07 08:26:41 pinkbyte Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.16 2013/11/30 17:44:23 floppym Exp $
+
+*fusion-icon-0.1-r4 (30 Nov 2013)
+
+  30 Nov 2013; Mike Gilbert <floppym@gentoo.org> +fusion-icon-0.1-r4.ebuild:
+  Convert to distutils-r1. Feel free to copy me on any related bugs.
 
   07 Sep 2012; Sergey Popov <pinkbyte@gentoo.org> fusion-icon-0.1-r2.ebuild,
   fusion-icon-0.1-r3.ebuild:
@@ -69,4 +74,3 @@
   27 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +metadata.xml, +fusion-icon-0.1.ebuild:
   Initial import of fusion-icon to the tree.
-

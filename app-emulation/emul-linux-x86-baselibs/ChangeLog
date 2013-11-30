@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.167 2013/11/30 17:11:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.168 2013/11/30 17:40:08 mgorny Exp $
+
+  30 Nov 2013; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-baselibs-20131008-r5.ebuild, files/remove-native:
+  Add json-c to the removal list while the ebuild is still fresh. It does not
+  collide with the package contents since it is a different version.
 
 *emul-linux-x86-baselibs-20131008-r5 (30 Nov 2013)
 

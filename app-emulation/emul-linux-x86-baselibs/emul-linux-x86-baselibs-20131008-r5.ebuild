@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20131008-r5.ebuild,v 1.1 2013/11/30 17:11:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20131008-r5.ebuild,v 1.2 2013/11/30 17:40:08 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -50,6 +50,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=sys-apps/dbus-1.6.18-r1[abi_x86_32(-)]
 		>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32(-)]
 		>=sys-libs/gdbm-1.10-r1[abi_x86_32(-)]
+		>=dev-libs/json-c-0.11-r1[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.15" # bug 340613
 

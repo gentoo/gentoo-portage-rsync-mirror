@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.11 2013/11/29 18:03:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.12 2013/11/30 17:59:24 jer Exp $
+
+  30 Nov 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Typo.
 
   29 Nov 2013; Johannes Huber <johu@gentoo.org> netifrc-0.1.ebuild:
   x86 stable wrt bug #487332

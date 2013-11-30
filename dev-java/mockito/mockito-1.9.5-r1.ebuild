@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mockito/mockito-1.9.5.ebuild,v 1.2 2013/10/12 16:17:15 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mockito/mockito-1.9.5-r1.ebuild,v 1.1 2013/11/30 17:39:59 ercpe Exp $
 
 EAPI="5"
 
@@ -19,9 +19,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 CDEPEND="dev-java/junit:4
-	dev-java/cglib:3
 	dev-java/objenesis:0
-	dev-java/hamcrest-core:0"
+	dev-java/hamcrest-core:0
+	dev-java/ant-core:0"
 RDEPEND=">=virtual/jre-1.5
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.5
@@ -31,7 +31,7 @@ DEPEND=">=virtual/jdk-1.5
 S="${WORKDIR}"
 
 JAVA_SRC_DIR="src"
-JAVA_GENTOO_CLASSPATH="junit-4,cglib-3,objenesis,hamcrest-core"
+JAVA_GENTOO_CLASSPATH="junit-4,objenesis,hamcrest-core,ant-core"
 
 src_unpack() {
 	unpack ${A}
@@ -39,6 +39,5 @@ src_unpack() {
 }
 
 java_prepare() {
-	rm -rf "${S}"/src/org/mockito/{cglib,asm} || die
-	find src/ -name "*.java" | xargs sed -i -e 's/import org.mockito.cglib/import net.sf.cglib/g' || die
+	find "${S}" -name "*.jar" -delete || die
 }

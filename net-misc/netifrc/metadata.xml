@@ -6,6 +6,6 @@
 	</maintainer>
 	<longdescription lang="en">
 		This package contains the Gentoo network interface management
-		scripts, which were separated from OpenRc.
+		scripts, which were separated from OpenRC.
 	</longdescription>
 </pkgmetadata>

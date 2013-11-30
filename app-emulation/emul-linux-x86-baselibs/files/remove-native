@@ -217,3 +217,7 @@ usr/lib32/libgdbm.so.3.0.0
 usr/lib32/libgdbm_compat.so
 usr/lib32/libgdbm_compat.so.3
 usr/lib32/libgdbm_compat.so.3.0.0
+usr/lib32/libjson.so
+usr/lib32/libjson.so.0
+usr/lib32/libjson.so.0.0.1
+usr/lib32/pkgconfig/json.pc
