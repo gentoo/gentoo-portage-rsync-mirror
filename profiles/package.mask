@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15237 2013/11/30 16:12:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15238 2013/11/30 17:12:02 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,15 +44,6 @@ dev-ruby/postgres
 # Tom Wijsman <TomWij@gentoo.org> (30 Nov 2013)
 # Mask gentoo-sources-3.12.1 as it causes sandbox violations, 3.12.2 is out now.
 =sys-kernel/gentoo-sources-3.12.1
-
-# Michał Górny <mgorny@gentoo.org> (25 Nov 2013)
-# New multilib packages waiting for emul-linux-x86-baselibs
-# and -soundlibs bump.
-=media-sound/pulseaudio-4.0-r1
-=sys-apps/dbus-1.6.18-r1
-=sys-apps/tcp-wrappers-7.6.22-r1
-=sys-libs/gdbm-1.10-r1
-=sys-libs/libcap-2.22-r2
 
 # Hans de Graaff <graaff@gentoo.org> (24 Nov 2013)
 # dev-ruby/id3lib-ruby only works with deprecated ruby 1.8.

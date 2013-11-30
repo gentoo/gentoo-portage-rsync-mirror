@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20131008-r1.ebuild,v 1.2 2013/11/22 19:34:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20131008-r2.ebuild,v 1.1 2013/11/30 17:11:51 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -37,6 +37,8 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 		>=media-sound/jack-audio-connection-kit-0.121.3-r1[abi_x86_32(-)]
 		>=media-libs/portaudio-19_pre20111121-r1[abi_x86_32(-)]
 		>=media-sound/mpg123-1.15.4-r1[abi_x86_32(-)]
+		>=media-libs/libao-1.1.0-r1[abi_x86_32(-)]
+		>=media-sound/pulseaudio-4.0-r1[abi_x86_32(-)]
 	)"
 
 src_prepare() {
