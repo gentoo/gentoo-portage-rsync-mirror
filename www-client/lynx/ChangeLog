@@ -1,6 +1,11 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.137 2013/05/19 17:45:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.138 2013/11/30 04:21:07 radhermit Exp $
+
+*lynx-2.8.8_rc1 (30 Nov 2013)
+
+  30 Nov 2013; Tim Harder <radhermit@gentoo.org> +lynx-2.8.8_rc1.ebuild:
+  Version bump.
 
   19 May 2013; Alexis Ballier <aballier@gentoo.org> lynx-2.8.8_pre15.ebuild:
   keyword ~amd64-fbsd thanks to Yuta SATOH, bug #459492

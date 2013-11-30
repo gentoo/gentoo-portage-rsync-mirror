@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.16 2013/11/30 02:45:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.17 2013/11/30 04:04:46 floppym Exp $
+
+  30 Nov 2013; Mike Gilbert <floppym@gentoo.org> cffi-0.7.2.ebuild,
+  cffi-0.8.ebuild:
+  Skip test_integration.py to avoid bugs 486736 and 489870.
 
   30 Nov 2013; Mike Gilbert <floppym@gentoo.org> cffi-0.7.2.ebuild,
   cffi-0.8.ebuild:
