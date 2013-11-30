@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.1.ebuild,v 1.5 2013/11/01 16:55:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zeitgeist-datasources/zeitgeist-datasources-0.8.1.ebuild,v 1.6 2013/11/30 20:10:37 pacho Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="https://launchpad.net/zeitgeist-datasources/ http://zeitgeist-project.
 SRC_URI="http://launchpad.net/zeitgeist-datasources/${DIR_PV}/${DIR_PV2}/+download/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-3"
 PLUGINS_IUSE="bzr chromium emacs firefox geany mono telepathy thunderbird tomboy vim xchat"
 PLUGINS="bzr chrome emacs firefox geany monodevelop telepathy thunderbird tomboy vim xchat"

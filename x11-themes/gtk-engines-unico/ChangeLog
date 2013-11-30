@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-unico
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/ChangeLog,v 1.12 2012/12/27 18:40:37 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/ChangeLog,v 1.13 2013/11/30 20:05:46 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org>
+  gtk-engines-unico-1.0.3_pre20121212.ebuild:
+  amd64 stable, bug #478252
 
 *gtk-engines-unico-1.0.3_pre20121212 (27 Dec 2012)
 
@@ -54,4 +58,3 @@
   +gtk-engines-unico-1.0.1.ebuild, +metadata.xml:
   New ebuild for the Unico gtk+-3.2 theming engine, moved from the gnome
   overlay; requested in bug #377729.
-

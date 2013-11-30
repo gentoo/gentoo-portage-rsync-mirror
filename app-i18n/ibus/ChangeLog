@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.135 2013/11/26 15:20:33 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.136 2013/11/30 20:08:50 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> ibus-1.5.2.ebuild:
+  amd64 stable, bug #478252
 
   26 Nov 2013; Naohiro Aota <naota@gentoo.org> ibus-1.5.4-r1.ebuild:
   Force USE=dconf. #490646

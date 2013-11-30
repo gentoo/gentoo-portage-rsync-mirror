@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/gcolor2-0.4-r4.ebuild,v 1.1 2013/07/20 21:47:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gcolor2/gcolor2-0.4-r4.ebuild,v 1.2 2013/11/30 20:03:37 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4:2"

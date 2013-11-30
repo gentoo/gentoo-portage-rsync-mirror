@@ -3,10 +3,10 @@ DEPEND=>=dev-libs/glib-2.26:2 >=x11-libs/cairo-1.10[glib] >=x11-libs/gtk+-3.5.2:
 DESCRIPTION=The Unico GTK+ 3.x theming engine
 EAPI=5
 HOMEPAGE=https://launchpad.net/unico
-KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 ~ppc ~ppc64 ~x86
 LICENSE=LGPL-2.1+
 RDEPEND=>=dev-libs/glib-2.26:2 >=x11-libs/cairo-1.10[glib] >=x11-libs/gtk+-3.5.2:3
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~tetromino/distfiles/gtk-engines-unico/unico-1.0.3_pre20121212.tar.bz2
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=730ea329ed5ebfcaa3c1f34d733b1bce
+_md5_=7848c2361923c4947f5b021246d3028e

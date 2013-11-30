@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.55.0.ebuild,v 1.1 2013/11/14 17:19:04 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.55.0.ebuild,v 1.2 2013/11/30 20:07:12 vapier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -77,16 +77,6 @@ src_prepare() {
 		"${FILESDIR}/${PN}-1.48.0-disable_libboost_python3.patch" \
 		"${FILESDIR}/${PN}-1.48.0-python_linking.patch" \
 		"${FILESDIR}/${PN}-1.48.0-disable_icu_rpath.patch"
-
-	# Avoid a patch for now
-	for file in libs/context/src/asm/*.S; do
-		cat - >> $file <<EOF
-
-#if defined(__linux__) && defined(__ELF__)
-.section .note.GNU-stack,"",%progbits
-#endif
-EOF
-	done
 }
 
 ejam() {

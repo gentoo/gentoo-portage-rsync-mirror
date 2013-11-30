@@ -4,10 +4,10 @@ DESCRIPTION=Status icon informing about new mail
 EAPI=5
 HOMEPAGE=http://www.nongnu.org/mailnotify/ https://github.com/epienbroek/mail-notification
 IUSE=evo +gnome-keyring sasl +sound ssl sylpheed linguas_bg linguas_ca linguas_cs linguas_de linguas_es linguas_fr linguas_ja linguas_nl linguas_pl linguas_pt linguas_pt_BR linguas_ru linguas_sr linguas_sr@Latn linguas_sv
-KEYWORDS=~amd64 ~ppc ~sparc ~x86 ~x86-linux
+KEYWORDS=amd64 ~ppc ~sparc ~x86 ~x86-linux
 LICENSE=GPL-3
 RDEPEND=x11-libs/gtk+:3 >=dev-libs/glib-2.14:2 >=gnome-base/gconf-2.6 >=gnome-base/libgnomeui-2.14 dev-libs/dbus-glib dev-libs/gmime:2.6 >=x11-libs/libnotify-0.4.1 gnome-keyring? ( gnome-base/libgnome-keyring ) ssl? ( >=dev-libs/openssl-0.9.6 ) sasl? ( >=dev-libs/cyrus-sasl-2 ) sound? ( media-libs/gstreamer:0.10 ) evo? ( >=mail-client/evolution-3 ) sylpheed? ( mail-client/sylpheed )
 SLOT=0
 SRC_URI=https://github.com/epienbroek/mail-notification/tarball/eab5c13 -> mail-notification-eab5c13.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=225248dd4eb85f7115793e1d9062d7f9
+_md5_=6475d9e93c8c761d3c02af3e335b8e45

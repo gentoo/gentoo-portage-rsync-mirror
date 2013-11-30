@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.66 2013/09/08 19:50:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.67 2013/11/30 20:03:19 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> colord-1.0.3.ebuild:
+  amd64 stable, bug #478252
 
   08 Sep 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   colord-0.1.28.ebuild, colord-0.1.31.ebuild, colord-0.1.34.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pangox-compat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pangox-compat/ChangeLog,v 1.11 2013/11/14 05:35:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pangox-compat/ChangeLog,v 1.12 2013/11/30 20:12:37 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> pangox-compat-0.0.2.ebuild:
+  amd64 stable, bug #478252
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> pangox-compat-0.0.2.ebuild:
   alpha stable, bug 476364.

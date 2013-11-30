@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/libzeitgeist-0.3.18.ebuild,v 1.9 2013/05/04 21:59:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/libzeitgeist-0.3.18.ebuild,v 1.10 2013/11/30 20:09:30 pacho Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://launchpad.net/libzeitgeist/${MY_PV}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="static-libs"
 
 CDEPEND="dev-libs/glib:2"

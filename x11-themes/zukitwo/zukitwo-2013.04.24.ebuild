@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/zukitwo-2013.04.24.ebuild,v 1.1 2013/06/16 17:56:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/zukitwo-2013.04.24.ebuild,v 1.2 2013/11/30 20:06:30 pacho Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="gnome-shell"
 
 RDEPEND=">=x11-libs/gtk+-2.10:2

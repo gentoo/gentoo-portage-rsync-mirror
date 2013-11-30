@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libzeitgeist
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/ChangeLog,v 1.17 2013/05/04 21:59:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libzeitgeist/ChangeLog,v 1.18 2013/11/30 20:09:30 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> libzeitgeist-0.3.18.ebuild:
+  amd64 stable, bug #478252
 
   04 May 2013; Justin Lecher <jlec@gentoo.org> libzeitgeist-0.3.18.ebuild,
   metadata.xml:
