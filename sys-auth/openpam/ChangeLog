@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/openpam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.24 2013/08/10 15:59:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.25 2013/11/30 13:36:25 naota Exp $
+
+*openpam-20130907 (30 Nov 2013)
+
+  30 Nov 2013; Naohiro Aota <naota@gentoo.org>
+  +files/openpam-20130907-gentoo.patch,
+  +files/openpam-20130907-module-dir.patch, +files/openpam-20130907-nbsd.patch,
+  +openpam-20130907.ebuild:
+  Version bump. patch written by Yuta SATOH <nigoro.gentoo@0x100.com>. #492616
 
 *openpam-20120526-r1 (10 Aug 2013)
 
@@ -112,4 +120,3 @@
   +files/openpam-20050201-gentoo.patch, +files/openpam-20050201-nbsd.patch,
   +metadata.xml, +openpam-20050201-r1.ebuild:
   Import openpam from gentoo-alt overlay (in sys-auth rather than sys-libs).
-

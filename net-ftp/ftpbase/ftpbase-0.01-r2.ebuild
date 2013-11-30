@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.01-r2.ebuild,v 1.8 2013/03/03 09:00:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpbase/ftpbase-0.01-r2.ebuild,v 1.9 2013/11/30 13:35:59 naota Exp $
 
 inherit eutils pam user
 
@@ -45,5 +45,10 @@ src_install() {
 	# Ideally we would create the home directory here with a dodir.
 	# But we cannot until bug #9849 is solved - so we kludge in pkg_postinst()
 
-	newpamd "${FILESDIR}/ftp-pamd-include" ftp
+	cp "${FILESDIR}/ftp-pamd-include" "${T}" || die
+	if use elibc_FreeBSD; then
+		sed -i -e "/pam_listfile.so/s/^.*$/account  required  pam_ftpusers.so no_warn disallow/" \
+			"${T}"/ftp-pamd-include || die
+	fi
+	newpamd "${T}"/ftp-pamd-include ftp
 }
