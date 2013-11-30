@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dbus-test-runner/dbus-test-runner-12.10.1.ebuild,v 1.1 2013/03/09 06:51:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dbus-test-runner/dbus-test-runner-12.10.1.ebuild,v 1.2 2013/11/30 09:00:13 pacho Exp $
 
 EAPI=4
 
@@ -18,10 +18,19 @@ IUSE="test"
 
 RDEPEND="
 	>=dev-libs/dbus-glib-0.98
-	>=dev-libs/glib-2.34
+	>=dev-libs/glib-2.34:2
 "
 DEPEND="
 	${RDEPEND}
 	dev-util/intltool
 	test? ( dev-util/bustle )
 "
+
+src_prepare() {
+	# Drop -Werror usage
+	sed -e 's/-Werror//' \
+		-i libdbustest/Makefile.{am,in} \
+		-i src/Makefile.{am,in} \
+		-i tests/Makefile.{am,in} \
+		|| die
+}

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.67 2013/11/26 17:06:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.68 2013/11/30 08:40:40 slyfox Exp $
+
+  30 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org> btrfs-progs-3.12.ebuild,
+  btrfs-progs-9999.ebuild:
+  Added 'epatch_user' to ease testing of fixes (bug #492776).
 
 *btrfs-progs-3.12 (26 Nov 2013)
 
