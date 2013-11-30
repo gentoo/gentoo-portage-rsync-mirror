@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/csv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/csv/ChangeLog,v 1.12 2013/11/05 13:46:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/csv/ChangeLog,v 1.13 2013/11/30 12:49:54 johu Exp $
+
+  30 Nov 2013; Johannes Huber <johu@gentoo.org> csv-0.28.ebuild:
+  x86 stable wrt bug #481844
 
   05 Nov 2013; Tony Vroon <chainsaw@gentoo.org> csv-0.28.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dirdiff/dirdiff-1.1.4.ebuild,v 1.2 2013/11/05 13:52:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dirdiff/dirdiff-1.1.4.ebuild,v 1.3 2013/11/30 12:51:25 johu Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ DESCRIPTION="vim plugin: diff and merge two directories recursively"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=102"
 SRC_URI="https://github.com/vim-scripts/${MY_PN}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="BSD"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="DirDiff.txt"

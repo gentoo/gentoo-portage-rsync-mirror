@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ffdiaporama
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.14 2013/11/29 23:05:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.16 2013/11/30 12:41:26 hasufell Exp $
+
+  30 Nov 2013; Julian Ospald <hasufell@gentoo.org> -ffdiaporama-1.4-r1.ebuild,
+  -ffdiaporama-1.4.ebuild, -files/ffdiaporama-1.4-desktopfile.patch,
+  -files/ffdiaporama-1.4-libav9.patch:
+  remove old
+
+  30 Nov 2013; Julian Ospald <hasufell@gentoo.org> ffdiaporama-2.0.ebuild:
+  fix openclipart useflag
 
 *ffdiaporama-2.0 (29 Nov 2013)
 

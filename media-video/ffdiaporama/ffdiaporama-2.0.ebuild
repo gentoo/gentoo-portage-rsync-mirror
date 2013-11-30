@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-2.0.ebuild,v 1.1 2013/11/29 23:05:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-2.0.ebuild,v 1.2 2013/11/30 12:40:28 hasufell Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ src_install() {
 	doicon -s 32 ffdiaporama.png
 	if use openclipart; then
 		dodir /usr/share/ffDiaporama/clipart/openclipart
-		cd "${S}"/${OPENCLI_P}/clipart || die
+		cd "${S}"/${OPENCLI_P}-svgonly/clipart || die
 		find . -type d -maxdepth 1 -not -name . -exec cp -R '{}' "${D}"/usr/share/ffDiaporama/clipart/openclipart \; || die
 	fi
 	if use texturemate; then
