@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=>=dev-lang/orc-0.4.12 dev-libs/boost:0= !<=dev-libs/boost-1.52.0-r6:0/1.52 dev-python/cheetah dev-util/cppunit sci-libs/fftw:3.0= fcd? ( virtual/libusb:1 ) alsa? ( media-libs/alsa-lib ) grc? ( dev-python/lxml dev-python/numpy dev-python/pygtk:2 ) jack? ( media-sound/jack-audio-connection-kit ) portaudio? ( >=media-libs/portaudio-19_pre ) qt4? ( dev-python/PyQt4[X,opengl] dev-python/pyqwt:5 dev-qt/qtgui:4 ) sdl? ( media-libs/libsdl ) uhd? ( >=net-wireless/uhd-3.4.3-r1:= ) wavelet? ( sci-libs/gsl ) wxwidgets? ( dev-python/wxpython:2.8 dev-python/numpy ) dev-lang/swig virtual/pkgconfig doc? ( >=app-doc/doxygen-1.5.7.1 dev-python/sphinx ) grc? ( x11-misc/xdg-utils ) oss? ( virtual/os-headers ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) =dev-lang/python-2*
+DESCRIPTION=Toolkit that provides signal processing blocks to implement software radios
+EAPI=5
+HOMEPAGE=http://gnuradio.org/
+IUSE=alsa +analog +digital doc examples fcd +filter grc jack oss performance-counters pager portaudio qt4 sdl uhd +utils wavelet wxwidgets
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-3
+RDEPEND=>=dev-lang/orc-0.4.12 dev-libs/boost:0= !<=dev-libs/boost-1.52.0-r6:0/1.52 dev-python/cheetah dev-util/cppunit sci-libs/fftw:3.0= fcd? ( virtual/libusb:1 ) alsa? ( media-libs/alsa-lib ) grc? ( dev-python/lxml dev-python/numpy dev-python/pygtk:2 ) jack? ( media-sound/jack-audio-connection-kit ) portaudio? ( >=media-libs/portaudio-19_pre ) qt4? ( dev-python/PyQt4[X,opengl] dev-python/pyqwt:5 dev-qt/qtgui:4 ) sdl? ( media-libs/libsdl ) uhd? ( >=net-wireless/uhd-3.4.3-r1:= ) wavelet? ( sci-libs/gsl ) wxwidgets? ( dev-python/wxpython:2.8 dev-python/numpy ) =dev-lang/python-2*
+REQUIRED_USE=analog? ( filter ) digital? ( filter analog ) pager? ( filter analog ) qt4? ( filter ) uhd? ( filter analog ) fcd? ( || ( alsa oss ) ) wavelet? ( analog ) wxwidgets? ( filter analog )
+SLOT=0/3.7.2.1
+SRC_URI=http://gnuradio.org/releases/gnuradio/gnuradio-3.7.2.1.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=3d32663c2c2645d61ec649d094f2637c
