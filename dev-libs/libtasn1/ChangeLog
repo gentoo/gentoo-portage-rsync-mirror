@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.191 2013/06/02 08:42:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.192 2013/11/30 02:18:21 radhermit Exp $
+
+*libtasn1-3.4 (30 Nov 2013)
+
+  30 Nov 2013; Tim Harder <radhermit@gentoo.org> +libtasn1-3.4.ebuild:
+  Version bump.
 
   02 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libtasn1-2.14.ebuild:
   Stable for sh, wrt bug #470266
