@@ -1,6 +1,13 @@
 # ChangeLog for games-board/pysolfc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.13 2013/11/22 18:50:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysolfc/ChangeLog,v 1.15 2013/11/30 19:52:48 hasufell Exp $
+
+  30 Nov 2013; Julian Ospald <hasufell@gentoo.org> pysolfc-2.0-r2.ebuild:
+  add dev-lang/python-exec:0 do build-time deps as well
+
+  30 Nov 2013; Julian Ospald <hasufell@gentoo.org> pysolfc-2.0-r2.ebuild:
+  restrict to dev-lang/python-exec:0 because dev-lang/python-exec:2 is broken
+  wrt #489646
 
   22 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> pysolfc-2.0-r2.ebuild:
   just use dev-python/pillow

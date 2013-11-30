@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/postr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/ChangeLog,v 1.6 2013/08/03 09:45:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/ChangeLog,v 1.7 2013/11/30 19:34:35 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> postr-0.13.ebuild:
+  amd64 stable, bug #478252
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> postr-0.13.ebuild:
   Move dev-python/twisted to dev-python/twisted-core.
@@ -27,4 +30,3 @@
   14 May 2012; Alexandre Rostovtsev <tetromino@gentoo.org>
   +postr-0.12.4.ebuild, +metadata.xml:
   Add yet another flickr image uploader; needed for eog-plugins.
-

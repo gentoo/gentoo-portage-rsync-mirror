@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.199 2013/10/09 11:18:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.200 2013/11/30 19:52:14 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> vino-3.8.1-r1.ebuild:
+  amd64 stable, bug #478252
 
   09 Oct 2013; Agostino Sarubbo <ago@gentoo.org> vino-2.32.2-r2.ebuild:
   Stable for ppc64, wrt bug #486694

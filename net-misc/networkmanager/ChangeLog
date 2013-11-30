@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.187 2013/11/15 19:40:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.188 2013/11/30 19:51:00 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> networkmanager-0.9.8.8.ebuild:
+  amd64 stable, bug #478252
 
   15 Nov 2013; Pacho Ramos <pacho@gentoo.org> -networkmanager-0.9.8.4.ebuild,
   -networkmanager-0.9.8.6.ebuild, networkmanager-0.9.8.8.ebuild:

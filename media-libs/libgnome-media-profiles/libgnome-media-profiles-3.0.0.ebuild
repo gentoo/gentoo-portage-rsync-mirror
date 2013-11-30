@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgnome-media-profiles/libgnome-media-profiles-3.0.0.ebuild,v 1.3 2012/05/05 08:02:31 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgnome-media-profiles/libgnome-media-profiles-3.0.0.ebuild,v 1.4 2013/11/30 19:38:44 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://git.gnome.org/browse/libgnome-media-profiles"
 
 LICENSE="LGPL-2"
 SLOT="3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="aac flac mp3 speex twolame vorbis"
 
 # FIXME: automagic dep on gladeui-3.0

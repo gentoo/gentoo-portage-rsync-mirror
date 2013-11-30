@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.8.3.ebuild,v 1.3 2013/08/25 15:28:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.8.3.ebuild,v 1.4 2013/11/30 19:40:53 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://projects.gnome.org/cheese/"
 LICENSE="GPL-2+"
 SLOT="0/7" # subslot = libcheese soname version
 IUSE="+introspection sendto test"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # using clutter-gst-2.0.0 results in GLSL errors; bug #478702
 COMMON_DEPEND="

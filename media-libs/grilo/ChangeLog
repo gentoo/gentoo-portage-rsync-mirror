@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.29 2013/10/14 20:12:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.30 2013/11/30 19:37:04 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> grilo-0.1.20.ebuild,
+  grilo-0.2.7.ebuild:
+  amd64 stable, bug #478252
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> grilo-0.2.6.ebuild,
   grilo-0.2.7.ebuild:

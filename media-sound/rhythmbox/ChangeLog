@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.250 2013/10/30 18:18:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.251 2013/11/30 19:40:07 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.0.1.ebuild:
+  amd64 stable, bug #478252
 
   30 Oct 2013; Pacho Ramos <pacho@gentoo.org> rhythmbox-3.0.1.ebuild:
   mako doesn't need beaker and, then, python-3.3 support can be added (also

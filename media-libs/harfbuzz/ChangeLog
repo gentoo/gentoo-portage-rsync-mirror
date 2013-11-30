@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.53 2013/11/14 05:22:51 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.54 2013/11/30 19:38:07 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> harfbuzz-0.9.23.ebuild:
+  amd64 stable, bug #478252
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> harfbuzz-0.9.20.ebuild:
   alpha stable, bug 476364.

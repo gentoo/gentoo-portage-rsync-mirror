@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.0.0-r2.ebuild,v 1.1 2013/07/24 13:40:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/modemmanager-1.0.0-r2.ebuild,v 1.2 2013/11/30 19:49:22 pacho Exp $
 
 EAPI="5"
 inherit autotools eutils user multilib readme.gentoo toolchain-funcs udev virtualx
@@ -11,7 +11,7 @@ SRC_URI="http://www.freedesktop.org/software/ModemManager/ModemManager-${PV}.tar
 
 LICENSE="GPL-2+"
 SLOT="0/1" # subslot = dbus interface version, i.e. N in org.freedesktop.ModemManager${N}
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="policykit +qmi qmi-newest"
 REQUIRED_USE="qmi-newest? ( qmi )"
 

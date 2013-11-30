@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.101 2013/03/30 17:09:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.102 2013/11/30 19:52:36 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> pan-0.139.ebuild:
+  amd64 stable, bug #478252
 
   30 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org> -pan-0.137.ebuild:
   Clean up old revision.

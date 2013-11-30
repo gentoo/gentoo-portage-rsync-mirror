@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-rakia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.16 2013/10/27 09:58:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-rakia/ChangeLog,v 1.17 2013/11/30 19:54:01 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> telepathy-rakia-0.8.0.ebuild:
+  amd64 stable, bug #478252
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> -telepathy-rakia-0.7.5.ebuild,
   metadata.xml:

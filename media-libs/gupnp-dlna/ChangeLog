@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gupnp-dlna
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/ChangeLog,v 1.26 2013/05/30 19:26:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/ChangeLog,v 1.27 2013/11/30 19:37:45 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gupnp-dlna-0.10.2.ebuild:
+  amd64 stable, bug #478252
 
 *gupnp-dlna-0.10.2 (30 May 2013)
 

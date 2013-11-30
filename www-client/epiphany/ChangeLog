@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.297 2013/07/24 22:09:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.298 2013/11/30 19:57:11 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> epiphany-3.8.2.ebuild:
+  amd64 stable, bug #478252
 
   24 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> epiphany-3.8.2.ebuild:
   Drop unneeded dependencies.

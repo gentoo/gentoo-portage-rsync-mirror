@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.137 2013/06/26 20:31:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.138 2013/11/30 19:35:13 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> audiofile-0.3.6-r1.ebuild:
+  amd64 stable, bug #478252
 
   26 Jun 2013; Alexis Ballier <aballier@gentoo.org> audiofile-0.3.6-r1.ebuild:
   update emul-linux blocker
