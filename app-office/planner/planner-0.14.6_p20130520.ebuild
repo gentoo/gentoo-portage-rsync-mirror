@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.3 2013/06/25 16:42:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.4 2013/11/30 09:10:53 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -61,7 +61,9 @@ src_configure() {
 }
 
 src_install() {
-	gnome2_src_install \
+	# error: relink `libstorage-mrproject-1.la' with the above command before installing it
+	# Try to drop workaround on next snapshot or bump
+	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_install \
 		sqldocdir="\$(datadir)/doc/${PF}" \
 		sampledir="\$(datadir)/doc/${PF}/examples"
 

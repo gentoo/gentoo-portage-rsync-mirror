@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/deja-dup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.38 2013/11/19 20:32:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.39 2013/11/30 09:07:07 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> deja-dup-28.0.ebuild:
+  28.0 doesn't compile with vala-0.22
 
 *deja-dup-29.1-r1 (19 Nov 2013)
 
@@ -174,4 +177,3 @@
   +metadata.xml:
   New addition, thanks Alexander van der Mey, Yoan Blanc, Manuel Wiesinger,
   Helmut Eberharter writting the initial ebuilds, #259744
-

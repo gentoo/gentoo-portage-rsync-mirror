@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/rainbow
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rainbow/ChangeLog,v 1.1 2013/11/30 09:20:24 graaff Exp $
+
+*rainbow-1.1.4 (30 Nov 2013)
+
+  30 Nov 2013; Hans de Graaff <graaff@gentoo.org> +rainbow-1.1.4.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for app-text/glark. Ebuild by Peter Wilmott in
+  the ruby overlay. Fixes bug 435596.
+
