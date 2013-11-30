@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/riel
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/riel/ChangeLog,v 1.1 2013/11/30 10:15:44 graaff Exp $
+
+*riel-1.2.0 (30 Nov 2013)
+
+  30 Nov 2013; Hans de Graaff <graaff@gentoo.org> +riel-1.2.0.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for app-text/glark. Ebuild by Peter Wilmott in
+  the ruby overlay.
+
