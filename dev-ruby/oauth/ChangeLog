@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/oauth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.21 2013/08/11 07:42:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.22 2013/11/30 15:58:53 graaff Exp $
+
+  30 Nov 2013; Hans de Graaff <graaff@gentoo.org> oauth-0.4.7.ebuild:
+  Add jruby. Drop test dependency on dev-ruby/rails:3.2 altogether since it
+  will be masked soon.
 
   11 Aug 2013; Hans de Graaff <graaff@gentoo.org> -oauth-0.4.6.ebuild:
   Cleanup.
