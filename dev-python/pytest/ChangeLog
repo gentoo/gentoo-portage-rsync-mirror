@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.81 2013/11/17 04:13:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.82 2013/11/30 03:50:52 floppym Exp $
+
+  30 Nov 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/pytest-2.4.2-pexpect-3.0.patch, pytest-2.4.2.ebuild:
+  Fix pexpect-3.0 problems in tests.
 
   17 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> pytest-2.4.2.ebuild:
   added pytest-2.4.2 with restricted tests due to upstream bug

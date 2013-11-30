@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1368 2013/11/03 23:58:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1369 2013/11/30 03:45:37 jdhore Exp $
+
+  30 Nov 2013; Jeff Horelick <jdhore@gentoo.org> portage-2.2.7.ebuild:
+  x86 stable wrt bug #488156
 
   03 Nov 2013; Matt Turner <mattst88@gentoo.org> portage-2.2.7.ebuild:
   alpha stable, bug 488156.
