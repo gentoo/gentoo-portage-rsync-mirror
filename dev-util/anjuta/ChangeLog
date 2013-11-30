@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.168 2013/09/07 10:27:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.169 2013/11/30 18:56:41 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> anjuta-3.8.4.ebuild:
+  amd64 stable, bug #478252
 
   07 Sep 2013; Gilles Dartiguelongue <eva@gentoo.org> anjuta-3.8.4.ebuild:
   Add missing configure switch.

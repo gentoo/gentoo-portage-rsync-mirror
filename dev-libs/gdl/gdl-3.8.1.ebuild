@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-3.8.1.ebuild,v 1.1 2013/04/14 18:30:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-3.8.1.ebuild,v 1.2 2013/11/30 18:46:07 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://developer.gnome.org/gdl/"
 LICENSE="LGPL-2.1+"
 SLOT="3/5"
 IUSE="+introspection"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 RDEPEND="
 	dev-libs/glib:2

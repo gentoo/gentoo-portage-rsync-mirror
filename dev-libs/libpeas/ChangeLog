@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.21 2013/08/27 22:20:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.22 2013/11/30 18:51:23 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> libpeas-1.8.1.ebuild:
+  amd64 stable, bug #478252
 
   27 Aug 2013; Alexis Ballier <aballier@gentoo.org> libpeas-1.8.1.ebuild:
   keyword ~amd64-fbsd

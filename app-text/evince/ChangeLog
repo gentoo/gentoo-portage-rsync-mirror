@@ -1,6 +1,9 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.261 2013/08/01 02:34:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.262 2013/11/30 18:40:38 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> evince-3.8.3.ebuild:
+  amd64 stable, bug #478252
 
   01 Aug 2013; Alexandre Rostovtsev <tetromino@gentoo.org> evince-3.8.2.ebuild,
   evince-3.8.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyatspi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.22 2013/07/28 18:37:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.23 2013/11/30 18:54:08 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> pyatspi-2.8.0.ebuild:
+  amd64 stable, bug #478252
 
   28 Jul 2013; Gilles Dartiguelongue <eva@gentoo.org> pyatspi-2.8.0.ebuild:
   Add missing REQUIRED_USE and drop redundant run_in_build_dir.

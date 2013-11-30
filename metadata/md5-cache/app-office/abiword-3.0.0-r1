@@ -4,11 +4,11 @@ DESCRIPTION=Fully featured yet light and fast cross platform word processor
 EAPI=5
 HOMEPAGE=http://www.abisource.com/
 IUSE=calendar collab cups eds +goffice grammar +introspection latex map math ots +plugins readline redland spell wordperfect wmf thesaurus debug
-KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=>=app-text/wv-1.2 dev-lang/perl >=dev-libs/boost-1.40.0 >=dev-libs/fribidi-0.10.4 >=dev-libs/glib-2.16:2 >=dev-libs/libgcrypt-1.4.5 >=gnome-base/librsvg-2.16:2 >=gnome-extra/libgsf-1.14.18 >=media-libs/libpng-1.2 virtual/jpeg >=x11-libs/cairo-1.10[X] >=x11-libs/gtk+-3.0.8:3[cups?] calendar? ( >=dev-libs/libical-0.46 ) eds? ( gnome-extra/evolution-data-server ) goffice? ( >=x11-libs/goffice-0.10.2:0.10 ) introspection? ( >=dev-libs/gobject-introspection-1.0.0 ) map? ( >=media-libs/libchamplain-0.12 ) plugins? ( collab? ( >=dev-libs/libxml2-2.4 >=net-libs/loudmouth-1 net-libs/libsoup:2.4 net-libs/gnutls ) grammar? ( >=dev-libs/link-grammar-4.2.1 ) latex? ( dev-libs/libxslt ) math? ( >=x11-libs/gtkmathview-0.7.5 ) ots? ( >=app-text/ots-0.5-r1 ) readline? ( sys-libs/readline ) thesaurus? ( >=app-text/aiksaurus-1.2[gtk] ) wordperfect? ( app-text/libwpd:0.9 app-text/libwpg:0.2 ) wmf? ( >=media-libs/libwmf-0.2.8 ) ) redland? ( >=dev-libs/redland-1.0.10 >=dev-libs/rasqal-0.9.17 ) spell? ( >=app-text/enchant-1.2 ) !<app-office/abiword-plugins-2.8
 REQUIRED_USE=!plugins? ( !collab !grammar !latex !math !ots !readline !thesaurus !wordperfect !wmf )
 SLOT=2
 SRC_URI=http://www.abisource.com/downloads/abiword/3.0.0/source/abiword-3.0.0.tar.gz
 _eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=d61af409e3729c7f086a3b532be34907
+_md5_=27f56f0d3b07125534001f9da7a8b80a

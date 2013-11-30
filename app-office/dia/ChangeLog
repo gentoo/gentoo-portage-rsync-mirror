@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.157 2013/09/22 21:21:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/ChangeLog,v 1.158 2013/11/30 18:38:54 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> dia-0.97.2-r2.ebuild:
+  amd64 stable, bug #478252
 
   22 Sep 2013; Pacho Ramos <pacho@gentoo.org> dia-0.97.2-r2.ebuild:
   --enable-gnome only adds support for deprecated stuff, bugs #442294 and

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.92.3.ebuild,v 1.1 2013/09/29 06:46:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.92.3.ebuild,v 1.2 2013/11/30 18:52:05 pacho Exp $
 
 EAPI=5
 inherit eutils multilib elisp-common
@@ -11,7 +11,7 @@ SRC_URI="http://download.tuxfamily.org/librep/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="emacs readline"
 
 RDEPEND="

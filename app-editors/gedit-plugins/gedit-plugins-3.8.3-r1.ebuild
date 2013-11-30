@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.8.3-r1.ebuild,v 1.1 2013/10/26 12:53:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.8.3-r1.ebuild,v 1.2 2013/11/30 18:35:18 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ DESCRIPTION="Official plugins for gedit"
 HOMEPAGE="http://live.gnome.org/GeditPlugins"
 
 LICENSE="GPL-2+"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="0"
 
 IUSE_plugins="charmap git terminal"

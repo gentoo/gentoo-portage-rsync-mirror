@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnome-nibbles
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-nibbles/ChangeLog,v 1.4 2013/11/17 10:46:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-nibbles/ChangeLog,v 1.5 2013/11/30 19:00:05 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-nibbles-3.8.1.ebuild:
+  amd64 stable, bug #478252
 
 *gnome-nibbles-3.8.1 (17 Nov 2013)
 

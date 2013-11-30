@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.67 2013/11/14 04:56:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.68 2013/11/30 18:58:12 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gdbus-codegen-2.36.4-r1.ebuild:
+  amd64 stable, bug #478252
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> gdbus-codegen-2.34.3-r1.ebuild:
   alpha stable, bug 476364.

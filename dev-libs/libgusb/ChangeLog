@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgusb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.34 2013/04/07 14:34:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.35 2013/11/30 18:50:38 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> libgusb-0.1.6.ebuild:
+  amd64 stable, bug #478252
 
 *libgusb-0.1.6 (07 Apr 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/python-slip-0.4.0.ebuild,v 1.1 2013/08/09 21:36:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/python-slip-0.4.0.ebuild,v 1.2 2013/11/30 18:56:01 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://fedorahosted.org/released/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="dbus gtk selinux"
 
 RDEPEND="

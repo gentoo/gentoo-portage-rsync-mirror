@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.135 2013/08/30 22:43:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.136 2013/11/30 18:53:25 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> totem-pl-parser-3.4.5.ebuild:
+  amd64 stable, bug #478252
 
   30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -totem-pl-parser-3.4.3-r1.ebuild, -totem-pl-parser-3.4.4.ebuild,

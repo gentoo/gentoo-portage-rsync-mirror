@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.146 2013/08/25 17:06:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.147 2013/11/30 18:42:02 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> iso-codes-3.45.ebuild:
+  amd64 stable, bug #478252
 
 *iso-codes-3.45 (25 Aug 2013)
 

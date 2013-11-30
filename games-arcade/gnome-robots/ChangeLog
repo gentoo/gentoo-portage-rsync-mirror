@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/gnome-robots
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/ChangeLog,v 1.4 2013/11/17 10:48:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/ChangeLog,v 1.5 2013/11/30 19:00:20 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-robots-3.8.2.ebuild:
+  amd64 stable, bug #478252
 
 *gnome-robots-3.8.2 (17 Nov 2013)
 

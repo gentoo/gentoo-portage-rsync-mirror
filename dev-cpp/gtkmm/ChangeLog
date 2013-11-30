@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.262 2013/10/24 13:18:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.263 2013/11/30 18:43:29 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gtkmm-2.24.4.ebuild,
+  gtkmm-3.8.1.ebuild:
+  amd64 stable, bug #478252
 
   24 Oct 2013; Jeroen Roovers <jer@gentoo.org> gtkmm-2.24.4.ebuild,
   gtkmm-3.6.0.ebuild:
