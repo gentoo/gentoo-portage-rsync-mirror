@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm setup
-DEPEND==dev-lang/python-2* || ( >=sys-devel/automake-1.12 >=sys-devel/automake-1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=rox-base/zeroinstall-injector-0.31
+DEPEND==dev-lang/python-2* || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=rox-base/zeroinstall-injector-0.31
 DESCRIPTION=Archive is a simple archiver for ROX Desktop
 HOMEPAGE=http://rox.sourceforge.net/
 IUSE=bzip2 compress rar uuencode zip ace rpm cpio
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/gzip app-arch/tar || ( app-arch/xz-utils app-arch/lzma-utils ) bzip2? ( app-arch/bzip2 ) compress? ( app-arch/ncompress ) rar? ( || ( app-arch/unrar app-arch/rar ) ) uuencode? ( app-arch/sharutils ) zip? ( app-arch/unzip app-arch/zip ) ace? ( app-arch/unace ) rpm? ( app-arch/rpm app-arch/cpio ) cpio? ( app-arch/cpio ) =dev-lang/python-2* >=rox-base/rox-2.1.0 >=rox-base/rox-lib-2.0.0
 SLOT=0
 SRC_URI=mirror://sourceforge/rox/archive-2.3.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	python	305197b0aa1194fa3ef67ca21f6faa7e	rox	673b6c35a38ec70fa57c5e8f0c13127e	rox-0install	31fdc1bb54c9be03778e9c9f5d692ddd	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	python	305197b0aa1194fa3ef67ca21f6faa7e	rox	673b6c35a38ec70fa57c5e8f0c13127e	rox-0install	31fdc1bb54c9be03778e9c9f5d692ddd	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=be1d668fc2417b192b60e3e99a34dda5

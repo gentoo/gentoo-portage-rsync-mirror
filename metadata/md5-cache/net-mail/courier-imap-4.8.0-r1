@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare test
-DEPEND=gnutls? ( net-libs/gnutls ) !gnutls? ( >=dev-libs/openssl-0.9.6 ) >=net-libs/courier-authlib-0.61 >=net-mail/mailbase-0.00-r8 berkdb? ( sys-libs/db ) fam? ( virtual/fam ) gdbm? ( >=sys-libs/gdbm-1.8.0 ) selinux? ( sec-policy/selinux-courier ) dev-lang/perl !mail-mta/courier userland_GNU? ( sys-process/procps ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DEPEND=gnutls? ( net-libs/gnutls ) !gnutls? ( >=dev-libs/openssl-0.9.6 ) >=net-libs/courier-authlib-0.61 >=net-mail/mailbase-0.00-r8 berkdb? ( sys-libs/db ) fam? ( virtual/fam ) gdbm? ( >=sys-libs/gdbm-1.8.0 ) selinux? ( sec-policy/selinux-courier ) dev-lang/perl !mail-mta/courier userland_GNU? ( sys-process/procps ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
 DESCRIPTION=An IMAP daemon designed specifically for maildirs.
 EAPI=5
 HOMEPAGE=http://www.courier-mta.org/
@@ -10,5 +10,5 @@ RDEPEND=gnutls? ( net-libs/gnutls ) !gnutls? ( >=dev-libs/openssl-0.9.6 ) >=net-
 REQUIRED_USE=|| ( berkdb gdbm )
 SLOT=0
 SRC_URI=mirror://sourceforge/courier/courier-imap-4.8.0.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=36713f8b5b13f058cb2d0e5dc4761e37

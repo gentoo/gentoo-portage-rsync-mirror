@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare
-DEPEND=>=dev-lang/ocaml-3.11.2:=[ocamlopt?] >=dev-ml/camlimages-4.0.1:=[truetype,tiff,jpeg,postscript,X] virtual/latex-base app-text/ghostscript-gpl x11-libs/libXinerama dev-texlive/texlive-pstricks dev-texlive/texlive-pictures dev-texlive/texlive-latexextra x11-proto/xineramaproto dev-ml/findlib app-text/htmlc dev-tex/hevea || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-lang/ocaml-3.11.2:=[ocamlopt?] >=dev-ml/camlimages-4.0.1:=[truetype,tiff,jpeg,postscript,X] virtual/latex-base app-text/ghostscript-gpl x11-libs/libXinerama dev-texlive/texlive-pstricks dev-texlive/texlive-pictures dev-texlive/texlive-latexextra x11-proto/xineramaproto dev-ml/findlib app-text/htmlc dev-tex/hevea || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A DVI previewer and a presenter for slides written in LaTeX
 EAPI=5
 HOMEPAGE=http://gallium.inria.fr/advi/
@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-lang/ocaml-3.11.2:=[ocamlopt?] >=dev-ml/camlimages-4.0.1:=[truetype,tiff,jpeg,postscript,X] virtual/latex-base app-text/ghostscript-gpl x11-libs/libXinerama
 SLOT=0
 SRC_URI=http://gallium.inria.fr/advi/advi-1.10.2.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	texlive-common	04b9b0d6ae9d9855e9221a0dbf4acd9e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	texlive-common	04b9b0d6ae9d9855e9221a0dbf4acd9e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=83bad9747baef31a791b27e206760e4a

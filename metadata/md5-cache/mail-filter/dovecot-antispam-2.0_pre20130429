@@ -1,5 +1,5 @@
 DEFINED_PHASES=postinst prepare
-DEPEND=>=net-mail/dovecot-2.1.16 || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=net-mail/dovecot-2.1.16 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A dovecot antispam plugin supporting multiple backends
 EAPI=5
 HOMEPAGE=http://wiki2.dovecot.org/Plugins/Antispam/
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-mail/dovecot-2.1.16
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~radhermit/distfiles/dovecot-antispam-2.0_pre20130429.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=6706f48ee259d81d39c96b332ca2ae9c

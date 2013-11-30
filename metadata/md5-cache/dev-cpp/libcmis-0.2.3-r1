@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst postrm prepare
-DEPEND=!dev-cpp/libcmis:0 dev-libs/boost dev-libs/libxml2 net-misc/curl virtual/pkgconfig man? ( app-text/docbook2X ) test? ( dev-util/cppunit ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=!dev-cpp/libcmis:0 dev-libs/boost dev-libs/libxml2 net-misc/curl virtual/pkgconfig man? ( app-text/docbook2X ) test? ( dev-util/cppunit ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=C++ client library for the CMIS interface
 EAPI=4
 HOMEPAGE=https://sourceforge.net/projects/libcmis/
@@ -10,5 +10,5 @@ RDEPEND=!dev-cpp/libcmis:0 dev-libs/boost dev-libs/libxml2 net-misc/curl
 RESTRICT=test
 SLOT=0.2
 SRC_URI=mirror://sourceforge/libcmis/libcmis-0.2.3.tar.gz
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=3e16aacac5463fc1220b26743d3a70ad

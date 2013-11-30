@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=X? ( x11-libs/motif ) gmp? ( >=dev-libs/gmp-5 ) elibc_glibc? ( threads? ( >=sys-libs/glibc-2.13 ) ) virtual/libffi || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=X? ( x11-libs/motif ) gmp? ( >=dev-libs/gmp-5 ) elibc_glibc? ( threads? ( >=sys-libs/glibc-2.13 ) ) virtual/libffi || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Poly/ML is a full implementation of Standard ML
 EAPI=5
 HOMEPAGE=http://www.polyml.org
@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=X? ( x11-libs/motif ) gmp? ( >=dev-libs/gmp-5 ) elibc_glibc? ( threads? ( >=sys-libs/glibc-2.13 ) ) virtual/libffi
 SLOT=0/5.5.0
 SRC_URI=mirror://sourceforge/polyml/polyml.5.5.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=52899ec945a0312d8ee7ba51a8848284

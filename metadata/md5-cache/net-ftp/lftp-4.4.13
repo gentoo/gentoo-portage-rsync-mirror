@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=>=sys-libs/ncurses-5.1 >=sys-libs/readline-5.1 dev-libs/expat sys-libs/zlib convert-mozilla-cookies? ( dev-perl/DBI ) socks5? ( >=net-proxy/dante-1.1.12 virtual/pam ) ssl? ( gnutls? ( >=net-libs/gnutls-1.2.3 ) openssl? ( >=dev-libs/openssl-0.9.6 ) ) verify-file? ( dev-perl/string-crc32 virtual/perl-Digest-MD5 ) =sys-devel/libtool-2* app-arch/xz-utils nls? ( sys-devel/gettext ) virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=sys-libs/ncurses-5.1 >=sys-libs/readline-5.1 dev-libs/expat sys-libs/zlib convert-mozilla-cookies? ( dev-perl/DBI ) socks5? ( >=net-proxy/dante-1.1.12 virtual/pam ) ssl? ( gnutls? ( >=net-libs/gnutls-1.2.3 ) openssl? ( >=dev-libs/openssl-0.9.6 ) ) verify-file? ( dev-perl/string-crc32 virtual/perl-Digest-MD5 ) =sys-devel/libtool-2* app-arch/xz-utils nls? ( sys-devel/gettext ) virtual/pkgconfig || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A sophisticated ftp/sftp/http/https/torrent client and file transfer program
 EAPI=5
 HOMEPAGE=http://lftp.yar.ru/
@@ -10,5 +10,5 @@ RDEPEND=>=sys-libs/ncurses-5.1 >=sys-libs/readline-5.1 dev-libs/expat sys-libs/z
 REQUIRED_USE=ssl? ( ^^ ( openssl gnutls ) )
 SLOT=0
 SRC_URI=http://lftp.yar.ru/ftp/lftp-4.4.13.tar.xz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=aee2609902d39f89908da99a0567eac6

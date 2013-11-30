@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=x11-libs/libXrandr x11-libs/libXcursor x11-libs/fox-wrapper bzip2? ( >=app-arch/bzip2-1.0.2 ) jpeg? ( virtual/jpeg ) opengl? ( virtual/glu virtual/opengl ) png? ( >=media-libs/libpng-1.2.5 ) tiff? ( >=media-libs/tiff-3.5.7 ) truetype? ( =media-libs/freetype-2* x11-libs/libXft ) zlib? ( >=sys-libs/zlib-1.1.4 ) x11-proto/xextproto x11-libs/libXt || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool doc? ( app-doc/doxygen ) dev-util/reswrap >=sys-apps/sed-4
+DEPEND=x11-libs/libXrandr x11-libs/libXcursor x11-libs/fox-wrapper bzip2? ( >=app-arch/bzip2-1.0.2 ) jpeg? ( virtual/jpeg ) opengl? ( virtual/glu virtual/opengl ) png? ( >=media-libs/libpng-1.2.5 ) tiff? ( >=media-libs/tiff-3.5.7 ) truetype? ( =media-libs/freetype-2* x11-libs/libXft ) zlib? ( >=sys-libs/zlib-1.1.4 ) x11-proto/xextproto x11-libs/libXt || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool doc? ( app-doc/doxygen ) dev-util/reswrap >=sys-apps/sed-4
 DESCRIPTION=C++ based Toolkit for developing Graphical User Interfaces easily and effectively
 EAPI=4
 HOMEPAGE=http://www.fox-toolkit.org/
@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=x11-libs/libXrandr x11-libs/libXcursor x11-libs/fox-wrapper bzip2? ( >=app-arch/bzip2-1.0.2 ) jpeg? ( virtual/jpeg ) opengl? ( virtual/glu virtual/opengl ) png? ( >=media-libs/libpng-1.2.5 ) tiff? ( >=media-libs/tiff-3.5.7 ) truetype? ( =media-libs/freetype-2* x11-libs/libXft ) zlib? ( >=sys-libs/zlib-1.1.4 )
 SLOT=1.6
 SRC_URI=ftp://ftp.fox-toolkit.org/pub/fox-1.6.45.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	fox	26650ced206327e4fca3dec6cd441381	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	fox	26650ced206327e4fca3dec6cd441381	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=ab80d069ceb303dc6cf96653dea4bf5b

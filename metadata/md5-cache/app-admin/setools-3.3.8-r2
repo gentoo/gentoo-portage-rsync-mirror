@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup
-DEPEND=>=sys-libs/libsepol-2.1.4 sys-libs/libselinux sys-devel/bison sys-devel/flex >=dev-db/sqlite-3.2:3 dev-libs/libxml2:2 virtual/pkgconfig java? ( dev-lang/swig:1 >=virtual/jdk-1.4 ) python? ( dev-lang/swig:1 ) X? ( >=dev-lang/tk-8.4.9 >=gnome-base/libglade-2.0 >=x11-libs/gtk+-2.8:2 ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool java? ( >=dev-java/java-config-2.1.9-r1 ) python? ( dev-lang/python )
+DEPEND=>=sys-libs/libsepol-2.1.4 sys-libs/libselinux sys-devel/bison sys-devel/flex >=dev-db/sqlite-3.2:3 dev-libs/libxml2:2 virtual/pkgconfig java? ( dev-lang/swig:1 >=virtual/jdk-1.4 ) python? ( dev-lang/swig:1 ) X? ( >=dev-lang/tk-8.4.9 >=gnome-base/libglade-2.0 >=x11-libs/gtk+-2.8:2 ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool java? ( >=dev-java/java-config-2.1.9-r1 ) python? ( dev-lang/python )
 DESCRIPTION=SELinux policy tools
 EAPI=2
 HOMEPAGE=http://www.tresys.com/selinux/selinux_policy_tools.shtml
@@ -10,5 +10,5 @@ RDEPEND=>=sys-libs/libsepol-2.1.4 sys-libs/libselinux >=dev-db/sqlite-3.2:3 dev-
 RESTRICT=test
 SLOT=0
 SRC_URI=http://oss.tresys.com/projects/setools/chrome/site/dists/setools-3.3.8/setools-3.3.8.tar.bz2 http://dev.gentoo.org/~swift/patches/setools/setools-3.3.8-01-fedora-patches.tar.gz http://dev.gentoo.org/~swift/patches/setools/setools-3.3.8-01-gentoo-patches.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=7e536673f406ffe1dcba81c4b1704cb9

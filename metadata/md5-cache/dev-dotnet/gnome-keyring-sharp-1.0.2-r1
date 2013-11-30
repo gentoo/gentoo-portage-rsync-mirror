@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install prepare setup
-DEPEND=>=dev-lang/mono-2.0 >=gnome-base/libgnome-keyring-2.30.0 dev-dotnet/glib-sharp virtual/pkgconfig || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-lang/mono-2.0 >=gnome-base/libgnome-keyring-2.30.0 dev-dotnet/glib-sharp virtual/pkgconfig || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=C# implementation of gnome-keyring
 EAPI=5
 HOMEPAGE=http://www.mono-project.com/ https://github.com/mono/gnome-keyring-sharp
@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=>=dev-lang/mono-2.0 >=gnome-base/libgnome-keyring-2.30.0 dev-dotnet/glib-sharp
 SLOT=0
 SRC_URI=http://www.go-mono.com/archive/gnome-keyring-sharp/gnome-keyring-sharp-1.0.2.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	mono-env	59ca1177366cc9e14521d3501e9bb281	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=9f68193aff80d1fce75f861d8dc518e4

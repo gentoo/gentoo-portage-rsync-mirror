@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=>=dev-libs/dbus-glib-0.100:= >=dev-libs/glib-2.22:2= sys-libs/zlib:= x11-libs/libX11:= acl? ( sys-apps/acl:= >=virtual/udev-171 ) pam? ( virtual/pam ) policykit? ( >=sys-auth/polkit-0.110 ) dev-libs/libxslt virtual/pkgconfig doc? ( app-text/xmlto ) test? ( app-text/docbook-xml-dtd:4.1.2 app-text/xmlto ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DEPEND=>=dev-libs/dbus-glib-0.100:= >=dev-libs/glib-2.22:2= sys-libs/zlib:= x11-libs/libX11:= acl? ( sys-apps/acl:= >=virtual/udev-171 ) pam? ( virtual/pam ) policykit? ( >=sys-auth/polkit-0.110 ) dev-libs/libxslt virtual/pkgconfig doc? ( app-text/xmlto ) test? ( app-text/docbook-xml-dtd:4.1.2 app-text/xmlto ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
 DESCRIPTION=Framework for defining and tracking users, login sessions and seats.
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/ConsoleKit
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/dbus-glib-0.100:= >=dev-libs/glib-2.22:2= sys-libs/zlib:= x11-libs/libX11:= acl? ( sys-apps/acl:= >=virtual/udev-171 ) pam? ( virtual/pam ) policykit? ( >=sys-auth/polkit-0.110 ) kernel_linux? ( sys-apps/coreutils[acl?] ) selinux? ( sec-policy/selinux-consolekit )
 SLOT=0
 SRC_URI=mirror://gentoo/ConsoleKit-0.4.5_p20120320.tar.xz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	5932e418cf62147cad2d902718aacc56	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	5932e418cf62147cad2d902718aacc56	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=86854b1960462151e5dffbb7af8281ce

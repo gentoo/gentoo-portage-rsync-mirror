@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=virtual/httpd-php !dev-php/eaccelerator !dev-php/pecl-apc php_targets_php5-5? ( !dev-lang/php:5.5[opcache] ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-4? ( dev-lang/php:5.4 ) php_targets_php5-5? ( dev-lang/php:5.5 )
+DEPEND=virtual/httpd-php !dev-php/eaccelerator !dev-php/pecl-apc php_targets_php5-5? ( !dev-lang/php:5.5[opcache] ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-4? ( dev-lang/php:5.4 ) php_targets_php5-5? ( dev-lang/php:5.5 )
 DESCRIPTION=A fast and stable PHP opcode cacher
 EAPI=5
 HOMEPAGE=http://xcache.lighttpd.net/
@@ -11,5 +11,5 @@ REQUIRED_USE=|| ( php_targets_php5-4 php_targets_php5-5 )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://xcache.lighttpd.net/pub/Releases/3.0.3/xcache-3.0.3.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=0dc33eab906c44cfdfc7512dcc324ae9

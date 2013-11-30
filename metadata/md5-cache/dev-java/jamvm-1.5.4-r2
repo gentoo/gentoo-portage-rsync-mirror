@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst postrm prepare prerm setup
-DEPEND=dev-java/gnu-classpath:0.98 libffi? ( virtual/libffi ) amd64? ( virtual/libffi ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=dev-java/gnu-classpath:0.98 libffi? ( virtual/libffi ) amd64? ( virtual/libffi ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=An extremely small and specification-compliant virtual machine.
 EAPI=4
 HOMEPAGE=http://jamvm.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-java/gnu-classpath:0.98 libffi? ( virtual/libffi ) amd64? ( virtual/libffi ) =dev-java/java-config-2* || ( app-admin/eselect-java <dev-java/java-config-2.2 )
 SLOT=0
 SRC_URI=mirror://sourceforge/jamvm/jamvm-1.5.4.tar.gz
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	pax-utils	2424f959506320f5196de8f79fa05297	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	java-vm-2	7dc6db7d110230640003e30e63a0b2bc	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	pax-utils	2424f959506320f5196de8f79fa05297	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=c21f585249eb64b205002a67320b7bbd

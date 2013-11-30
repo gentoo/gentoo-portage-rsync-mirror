@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare test
-DEPEND=>=media-libs/babl-0.1.4 <media-libs/babl-0.1.8 dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/gdk-pixbuf:2 x11-libs/pango sys-libs/zlib cairo? ( x11-libs/cairo ) exif? ( media-gfx/exiv2 ) ffmpeg? ( virtual/ffmpeg ) graphviz? ( media-gfx/graphviz ) jpeg? ( virtual/jpeg ) jpeg2k? ( media-libs/jasper ) lua? ( dev-lang/lua ) openexr? ( media-libs/openexr ) png? ( media-libs/libpng ) raw? ( media-libs/libopenraw ) sdl? ( media-libs/libsdl ) svg? ( gnome-base/librsvg:2 ) umfpack? ( sci-libs/umfpack ) v4l? ( media-libs/libv4l ) || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=media-libs/babl-0.1.4 <media-libs/babl-0.1.8 dev-libs/glib:2 x11-libs/gtk+:2 x11-libs/gdk-pixbuf:2 x11-libs/pango sys-libs/zlib cairo? ( x11-libs/cairo ) exif? ( media-gfx/exiv2 ) ffmpeg? ( virtual/ffmpeg ) graphviz? ( media-gfx/graphviz ) jpeg? ( virtual/jpeg ) jpeg2k? ( media-libs/jasper ) lua? ( dev-lang/lua ) openexr? ( media-libs/openexr ) png? ( media-libs/libpng ) raw? ( media-libs/libopenraw ) sdl? ( media-libs/libsdl ) svg? ( gnome-base/librsvg:2 ) umfpack? ( sci-libs/umfpack ) v4l? ( media-libs/libv4l ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A graph based image processing framework
 EAPI=4
 HOMEPAGE=http://www.gegl.org/
@@ -10,5 +10,5 @@ RDEPEND=>=media-libs/babl-0.1.4 <media-libs/babl-0.1.8 dev-libs/glib:2 x11-libs/
 RESTRICT=test
 SLOT=0
 SRC_URI=ftp://ftp.gimp.org/pub/gegl/0.1/gegl-0.1.6.tar.bz2
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e09e91d6d44d7fc26b19c7abb69ad24f

@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=>=dev-libs/boost-1.51.0:= >=dev-libs/libixion-0.5.0:= >=dev-util/mdds-0.7.1 dev-vcs/git || ( >=sys-devel/automake-1.12:1.12 >=sys-devel/automake-1.13:1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/boost-1.51.0:= >=dev-libs/libixion-0.5.0:= >=dev-util/mdds-0.7.1 dev-vcs/git || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Standalone file import filter library for spreadsheet documents
 EAPI=5
 HOMEPAGE=http://gitorious.org/orcus/pages/Home
@@ -7,5 +7,5 @@ IUSE=static-libs
 LICENSE=MIT
 RDEPEND=>=dev-libs/boost-1.51.0:= >=dev-libs/libixion-0.5.0:=
 SLOT=0/0.5
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=5bb8b5692c607185ad063ea2b0a2d5c4
