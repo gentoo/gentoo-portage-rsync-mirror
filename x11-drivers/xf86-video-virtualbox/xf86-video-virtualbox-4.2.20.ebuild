@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.20.ebuild,v 1.1 2013/11/29 08:15:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.20.ebuild,v 1.2 2013/11/30 18:22:20 polynomial-c Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="dri"
 
-RDEPEND="<x11-base/xorg-server-1.14.99[-minimal]
+RDEPEND=">=x11-base/xorg-server-1.7:=[-minimal]
 	x11-libs/libXcomposite"
 DEPEND="${RDEPEND}
 	>=dev-util/kbuild-0.1.9998_pre20120806
@@ -109,6 +109,7 @@ src_compile() {
 		/src/VBox/Additions/x11/vboxvideo ; do
 			cd "${S}"${each}
 			MAKE="kmk" emake TOOL_YASM_AS=yasm \
+			VBOX_USE_SYSTEM_XORG_HEADERS=1 \
 			KBUILD_PATH="${S}/kBuild" \
 			KBUILD_VERBOSE=2
 	done
@@ -128,26 +129,7 @@ src_install() {
 
 	cd "${S}/out/linux.${ARCH}/release/bin/additions"
 	insinto /usr/$(get_libdir)/xorg/modules/drivers
-
-#	# xorg-server-1.14.x
-	if has_version ">=x11-base/xorg-server-1.13.99" ; then
-		newins vboxvideo_drv_114.so vboxvideo_drv.so
-	# xorg-server-1.13.x
-	elif has_version ">=x11-base/xorg-server-1.12.99" ; then
-		newins vboxvideo_drv_113.so vboxvideo_drv.so
-	# xorg-server-1.12.x
-	elif has_version ">=x11-base/xorg-server-1.12" ; then
-		newins vboxvideo_drv_112.so vboxvideo_drv.so
-	# xorg-server-1.11.x
-	elif has_version ">=x11-base/xorg-server-1.11" ; then
-		newins vboxvideo_drv_111.so vboxvideo_drv.so
-	# xorg-server-1.10.x
-	elif has_version ">=x11-base/xorg-server-1.10" ; then
-		newins vboxvideo_drv_110.so vboxvideo_drv.so
-	# xorg-server-1.9.x
-	else
-		newins vboxvideo_drv_19.so vboxvideo_drv.so
-	fi
+	newins vboxvideo_drv_system.so vboxvideo_drv.so
 
 	# Guest OpenGL driver
 	insinto /usr/$(get_libdir)

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.165 2013/11/29 08:15:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.166 2013/11/30 18:16:40 polynomial-c Exp $
+
+*virtualbox-4.3.4 (30 Nov 2013)
+
+  30 Nov 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-4.3.0-r2.ebuild, +virtualbox-4.3.4.ebuild:
+  Version bump. Removed old.
 
 *virtualbox-4.2.20 (29 Nov 2013)
 

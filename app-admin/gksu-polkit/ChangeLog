@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gksu-polkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gksu-polkit/ChangeLog,v 1.1 2012/09/12 11:57:26 tetromino Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gksu-polkit/ChangeLog,v 1.2 2013/11/30 18:30:51 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gksu-polkit-0.0.3.ebuild:
+  amd64 stable, bug #478252
 
 *gksu-polkit-0.0.3 (12 Sep 2012)
 
@@ -8,4 +11,3 @@
   +gksu-polkit-0.0.3.ebuild, +files/gksu-polkit-0.0.3-auth_admin.patch,
   +files/gksu-polkit-0.0.3-gksupkcommon-libs.patch, +metadata.xml:
   Add a new ebuild for a polkit-based replacement for x11-libs/gksu.
-

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-additions
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.75 2013/11/29 08:14:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.76 2013/11/30 18:13:36 polynomial-c Exp $
+
+*virtualbox-additions-4.3.4 (30 Nov 2013)
+
+  30 Nov 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-additions-4.3.0.ebuild, +virtualbox-additions-4.3.4.ebuild:
+  Version bump. Removed old.
 
 *virtualbox-additions-4.2.20 (29 Nov 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/stuffit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.20 2012/02/06 03:14:33 vapier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/ChangeLog,v 1.21 2013/11/30 18:26:50 mgorny Exp $
+
+  30 Nov 2013; Michał Górny <mgorny@gentoo.org> stuffit-5.2.0.611.ebuild:
+  Remove unnecessary emul-linux-x86 dep. The package is pre-built and statically
+  linked.
 
   06 Feb 2012; Mike Frysinger <vapier@gentoo.org> stuffit-5.2.0.611.ebuild:
   Don't run env-update in pkg_* funcs -- the PM does that.

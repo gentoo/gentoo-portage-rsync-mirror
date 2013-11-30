@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.3.0.ebuild,v 1.1 2013/10/15 13:24:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.3.4.ebuild,v 1.1 2013/11/30 18:12:51 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -47,10 +47,13 @@ src_prepare() {
 
 src_install() {
 	linux-mod_src_install
+	insinto /usr/lib/modules-load.d/
+	doins "${FILESDIR}"/virtualbox.conf
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	elog "Please add \"vboxdrv\", \"vboxnetflt\" and \"vboxnetadp\" to:"
+	elog "If you are using openRC, please add \"vboxdrv\", \"vboxnetflt\""
+	elog "and \"vboxnetadp\" to:"
 	elog "/etc/conf.d/modules"
 }

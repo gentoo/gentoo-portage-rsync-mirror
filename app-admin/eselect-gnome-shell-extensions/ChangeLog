@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-gnome-shell-extensions
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnome-shell-extensions/ChangeLog,v 1.5 2013/03/05 22:34:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnome-shell-extensions/ChangeLog,v 1.6 2013/11/30 18:30:36 pacho Exp $
+
+  30 Nov 2013; Pacho Ramos <pacho@gentoo.org>
+  eselect-gnome-shell-extensions-20120911.ebuild:
+  amd64 stable, bug #478252
 
   05 Mar 2013; Gilles Dartiguelongue <eva@gentoo.org>
   -eselect-gnome-shell-extensions-20111211.ebuild:
@@ -30,4 +34,3 @@
   +eselect-gnome-shell-extensions-20110911.ebuild, +metadata.xml:
   Add eselect module for setting systemwide gnome shell extensions defaults
   from the gnome overlay.
-
