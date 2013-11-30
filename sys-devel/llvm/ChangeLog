@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.146 2013/11/27 05:32:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.147 2013/11/30 10:33:59 mgorny Exp $
+
+  30 Nov 2013; Michał Górny <mgorny@gentoo.org>
+  +files/clang-3.4-gentoo-install.patch, files/llvm-3.4-gentoo-install.patch,
+  llvm-9999.ebuild:
+  Drop the custom Gentoo "llvm" sub-dir that requires a lot of extra hacking,
+  and causes bugs like #492554 and #488216.
 
   27 Nov 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Bump clang version to 3.5, bug #491880. Thanks to Mike Lothian for finding out

@@ -6,7 +6,6 @@ Subject: [PATCH] gentoo install fixes
 ---
  Makefile.config.in                      | 6 +++---
  Makefile.rules                          | 6 +++---
- tools/gold/Makefile                     | 2 +-
  tools/llvm-config/BuildVariables.inc.in | 2 ++
  tools/llvm-config/Makefile              | 4 ++++
  tools/llvm-config/llvm-config.cpp       | 5 +++--
@@ -22,7 +21,7 @@ index dcca45f..e75ae2e 100644
  
  PROJ_bindir     := $(PROJ_prefix)/bin
 -PROJ_libdir     := $(PROJ_prefix)/lib
-+PROJ_libdir     := $(PROJ_prefix)/$(GENTOO_LIBDIR)/llvm
++PROJ_libdir     := $(PROJ_prefix)/$(GENTOO_LIBDIR)
  PROJ_datadir    := $(PROJ_prefix)/share
 -PROJ_docsdir    := $(PROJ_prefix)/docs/llvm
 -PROJ_etcdir     := $(PROJ_prefix)/etc/llvm
@@ -44,53 +43,23 @@ index e53598b..217f754 100644
    endif
  
    CXX.Flags += $(OPTIMIZE_OPTION) $(OmitFramePointer)
-@@ -615,11 +615,11 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS), Cygwin MingW))
-   endif
-   ifneq ($(HOST_OS), Darwin)
-     ifdef TOOLNAME
--      LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
-+      LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib' $(RPATH) -Wl,'$(PROJ_libdir)'
-     endif
-   else
-     ifneq ($(DARWIN_MAJVERS),4)
--      LD.Flags += $(RPATH) -Wl,@executable_path/../lib
-+      LD.Flags += $(RPATH) -Wl,@executable_path/../lib $(RPATH) -Wl,'$(PROJ_libdir)'
-     endif
-     ifeq ($(RC_XBS),YES)
-       TempFile := $(shell mkdir -p ${OBJROOT}/dSYMs ; mktemp ${OBJROOT}/dSYMs/llvm-lto.XXXXXX)
-diff --git a/tools/gold/Makefile b/tools/gold/Makefile
-index 496e31c..d36b340 100644
---- a/tools/gold/Makefile
-+++ b/tools/gold/Makefile
-@@ -24,7 +24,7 @@ include $(LEVEL)/Makefile.config
- # Because off_t is used in the public API, the largefile parts are required for
- # ABI compatibility.
- CXXFLAGS += -I$(BINUTILS_INCDIR) -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
--LDFLAGS += -L$(SharedLibDir)/$(SharedPrefix)
-+LDFLAGS += -L$(PROJ_libdir)
- 
- include $(LEVEL)/Makefile.common
- 
 diff --git a/tools/llvm-config/BuildVariables.inc.in b/tools/llvm-config/BuildVariables.inc.in
 index fe87afb..fd9f2c6 100644
 --- a/tools/llvm-config/BuildVariables.inc.in
 +++ b/tools/llvm-config/BuildVariables.inc.in
-@@ -25,3 +25,5 @@
+@@ -25,3 +25,4 @@
  #define LLVM_BUILDMODE "@LLVM_BUILDMODE@"
  #define LLVM_TARGETS_BUILT "@LLVM_TARGETS_BUILT@"
  #define LLVM_SYSTEM_LIBS "@LLVM_SYSTEM_LIBS@"
-+#define LLVM_RPATH "@LLVM_RPATH@"
 +#define LLVM_LIBDIR "@LLVM_LIBDIR@"
 diff --git a/tools/llvm-config/Makefile b/tools/llvm-config/Makefile
 index b20b6bf..fc56781 100644
 --- a/tools/llvm-config/Makefile
 +++ b/tools/llvm-config/Makefile
-@@ -55,6 +55,10 @@ $(ObjDir)/BuildVariables.inc: $(BUILDVARIABLES_SRCPATH) Makefile $(ObjDir)/.dir
+@@ -55,6 +55,8 @@ $(ObjDir)/BuildVariables.inc: $(BUILDVARIABLES_SRCPATH) Makefile $(ObjDir)/.dir
  	  >> temp.sed
  	$(Verb) $(ECHO) 's/@LLVM_TARGETS_BUILT@/$(subst /,\/,$(TARGETS_TO_BUILD))/' \
  	  >> temp.sed
-+	$(Verb) $(ECHO) 's/@LLVM_RPATH@/$(subst /,\/,$(RPATH))/' \
-+	  >> temp.sed
 +	$(Verb) $(ECHO) 's/@LLVM_LIBDIR@/$(subst /,\/,$(GENTOO_LIBDIR))/' \
 +	  >> temp.sed
  	$(Verb) $(SED) -f temp.sed < $< > $@
@@ -105,20 +74,10 @@ index 3924e2e..f439c60 100644
      ActiveIncludeDir = ActivePrefix + "/include";
      ActiveBinDir = ActivePrefix + "/bin";
 -    ActiveLibDir = ActivePrefix + "/lib";
-+    ActiveLibDir = ActivePrefix + "/" LLVM_LIBDIR "/llvm";
++    ActiveLibDir = ActivePrefix + "/" LLVM_LIBDIR;
      ActiveIncludeOption = "-I" + ActiveIncludeDir;
    }
  
-@@ -277,7 +277,8 @@ int main(int argc, char **argv) {
-       } else if (Arg == "--cxxflags") {
-         OS << ActiveIncludeOption << ' ' << LLVM_CXXFLAGS << '\n';
-       } else if (Arg == "--ldflags") {
--        OS << "-L" << ActiveLibDir << ' ' << LLVM_LDFLAGS
-+        OS << "-L" << ActiveLibDir << ' '
-+           << LLVM_RPATH << " -Wl," << ActiveLibDir << ' ' << LLVM_LDFLAGS
-            << ' ' << LLVM_SYSTEM_LIBS << '\n';
-       } else if (Arg == "--libs") {
-         PrintLibs = true;
 diff --git a/utils/FileCheck/Makefile b/utils/FileCheck/Makefile
 index 268b7bc..e7674f9 100644
 --- a/utils/FileCheck/Makefile
