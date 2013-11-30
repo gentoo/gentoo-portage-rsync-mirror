@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.57 2013/10/14 20:40:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.58 2013/11/30 14:16:17 maekke Exp $
+
+  30 Nov 2013; Markus Meier <maekke@gentoo.org>
+  smart-live-rebuild-1.3.3.ebuild:
+  arm stable, bug #490784
 
   14 Oct 2013; Michał Górny <mgorny@gentoo.org> smart-live-rebuild-9999.ebuild:
   Switch to git-r3. Clean up a bit.
