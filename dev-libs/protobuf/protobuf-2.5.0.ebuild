@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.5.0.ebuild,v 1.5 2013/09/06 18:03:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.5.0.ebuild,v 1.6 2013/11/30 22:50:23 vapier Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="source"
@@ -27,6 +27,7 @@ RDEPEND="${CDEPEND}
 	java? ( >=virtual/jre-1.5 )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-x32.patch
 	if [[ ${CHOST} != *-darwin* ]] ; then
 		# breaks Darwin, bug #472514
 		epatch "${FILESDIR}"/${PN}-2.3.0-asneeded-2.patch

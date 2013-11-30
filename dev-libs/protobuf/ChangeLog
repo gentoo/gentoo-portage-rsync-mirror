@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.53 2013/09/06 18:03:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.54 2013/11/30 22:50:23 vapier Exp $
+
+  30 Nov 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/protobuf-2.5.0-x32.patch, protobuf-2.5.0.ebuild:
+  Fix builds on x32.
 
   06 Sep 2013; Tim Harder <radhermit@gentoo.org> protobuf-2.5.0.ebuild:
   Add missing setuptools dep for python support (bug #479678 by hasufell).
