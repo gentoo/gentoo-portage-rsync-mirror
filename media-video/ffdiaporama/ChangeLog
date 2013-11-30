@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffdiaporama
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.13 2013/08/14 12:56:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.14 2013/11/29 23:05:30 hasufell Exp $
+
+*ffdiaporama-2.0 (29 Nov 2013)
+
+  29 Nov 2013; Julian Ospald <hasufell@gentoo.org> +ffdiaporama-2.0.ebuild,
+  +files/ffdiaporama-2.0-libav9-deinterlacing.patch, metadata.xml:
+  version bump by Olivier Laurantin
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> ffdiaporama-1.6.ebuild:
   Whitespace
