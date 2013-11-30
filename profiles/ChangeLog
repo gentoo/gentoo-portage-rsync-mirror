@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8394 2013/11/29 14:58:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8395 2013/11/30 00:10:42 tomwij Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
+  Mask gentoo-sources-3.12.1 as it causes sandbox violations, 3.12.2 is out
+  now.
 
   29 Nov 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   Rails 3.1 is removed, remove its mask.

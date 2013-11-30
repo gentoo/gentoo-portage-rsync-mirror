@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15234 2013/11/29 14:58:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15235 2013/11/30 00:10:42 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tom Wijsman <TomWij@gentoo.org> (30 Nov 2013)
+# Mask gentoo-sources-3.12.1 as it causes sandbox violations, 3.12.2 is out now.
+=sys-kernel/gentoo-sources-3.12.1
 
 # Michał Górny <mgorny@gentoo.org> (25 Nov 2013)
 # New multilib packages waiting for emul-linux-x86-baselibs bump.
