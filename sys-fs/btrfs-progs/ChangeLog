@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.68 2013/11/30 08:40:40 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.69 2013/11/30 20:55:15 slyfox Exp $
+
+*btrfs-progs-3.12-r1 (30 Nov 2013)
+
+  30 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +btrfs-progs-3.12-r1.ebuild,
+  +files/btrfs-progs-3.12-fix-send-subvol-492776.patch, btrfs-progs-9999.ebuild:
+  Fix 'btrfs send' on funky subvol paths (bug #492776 by Thomas Scheiblauer).
 
   30 Nov 2013; Sergei Trofimovich <slyfox@gentoo.org> btrfs-progs-3.12.ebuild,
   btrfs-progs-9999.ebuild:

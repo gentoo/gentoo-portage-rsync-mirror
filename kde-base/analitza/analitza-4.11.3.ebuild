@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/analitza-4.11.3.ebuild,v 1.1 2013/11/05 22:22:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/analitza/analitza-4.11.3.ebuild,v 1.2 2013/11/30 20:33:37 johu Exp $
 
 EAPI=5
 
@@ -17,6 +17,8 @@ DEPEND="
 	readline? ( sys-libs/readline )
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-arm.patch" )
 
 src_configure() {
 	local mycmakeargs=(
