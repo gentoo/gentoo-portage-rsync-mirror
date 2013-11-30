@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.199 2013/11/18 10:57:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.200 2013/11/30 14:47:02 billie Exp $
+
+*mjpegtools-2.1.0-r1 (30 Nov 2013)
+
+  30 Nov 2013; Daniel Pielmeier <billie@gentoo.org>
+  +mjpegtools-2.1.0-r1.ebuild, +files/mjpegtools-2.1.0-pic.patch:
+  Disable -fno_PIC. This fixes bug #267829. Thanks to a_tevelev for the report.
 
   18 Nov 2013; Tony Vroon <chainsaw@gentoo.org> mjpegtools-2.1.0.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
