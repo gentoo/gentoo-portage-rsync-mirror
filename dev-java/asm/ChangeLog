@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/asm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.86 2013/09/16 19:12:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.87 2013/11/30 08:04:04 tomwij Exp $
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org> asm-1.4.3-r3.ebuild,
+  metadata.xml:
+  Quoted S variable. Indented metadata.xml.
 
 *asm-1.4.3-r4 (16 Sep 2013)
 *asm-1.5.3-r1 (16 Sep 2013)

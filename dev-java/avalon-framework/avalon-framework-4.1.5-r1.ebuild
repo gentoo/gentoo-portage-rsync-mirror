@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/avalon-framework-4.1.5-r1.ebuild,v 1.13 2012/01/01 13:57:56 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/avalon-framework-4.1.5-r1.ebuild,v 1.14 2013/11/30 08:07:24 tomwij Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -35,7 +35,7 @@ src_unpack() {
 }
 
 src_install() {
-	java-pkg_dojar ${S}/dist/avalon-framework.jar
+	java-pkg_dojar "${S}"/dist/avalon-framework.jar
 
 	use doc && java-pkg_dojavadoc "${S}"/target/docs
 	use source && java-pkg_dosrc impl/src/java/*

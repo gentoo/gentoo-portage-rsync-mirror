@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.14-r1.ebuild,v 1.7 2007/06/10 10:32:12 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/blowfishj-2.14-r1.ebuild,v 1.8 2013/11/30 08:09:32 tomwij Exp $
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jre-1.4"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	java-ant_ignore-system-classes
 	mkdir -p target/lib

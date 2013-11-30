@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.2.4-r2.ebuild,v 1.6 2010/05/21 17:58:46 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.2.4-r2.ebuild,v 1.7 2013/11/30 08:19:52 tomwij Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -33,7 +33,7 @@ JAVA_PKG_WANT_TARGET="1.4"
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	use doc && unzip -qq ${P}-javadoc.zip
 
@@ -43,13 +43,13 @@ src_unpack() {
 	# could use a USE flag, but would result in circular dep
 	rm -rf net/sf/ehcache/hibernate
 
-	cd ${S}
+	cd "${S}"
 	rm -f *.jar *.zip
 	cp "${FILESDIR}/build.xml-${PVR}" build.xml || die
 	mv "${S}/ehcache.xml" "${S}/ehcache-failsafe.xml" || die
 
-	mkdir ${S}/lib
-	cd ${S}/lib
+	mkdir "${S}"/lib
+	cd "${S}"/lib
 
 	java-pkg_jarfrom commons-logging
 	java-pkg_jarfrom commons-collections
@@ -62,11 +62,9 @@ src_compile() {
 }
 
 src_install() {
-
 	java-pkg_dojar ${PN}.jar
 
 	dodoc *.txt ehcache.xsd
 	use source && java-pkg_dosrc src/net
 	use doc &&java-pkg_dojavadoc docs
-
 }

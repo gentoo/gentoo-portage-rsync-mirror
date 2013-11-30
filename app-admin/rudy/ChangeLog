@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/rudy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.21 2013/08/11 06:59:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.22 2013/11/30 08:16:49 graaff Exp $
+
+*rudy-0.9.8.016-r1 (30 Nov 2013)
+
+  30 Nov 2013; Hans de Graaff <graaff@gentoo.org> +rudy-0.9.8.016-r1.ebuild:
+  EAPI=5. Add ruby19.
 
   11 Aug 2013; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Drop package from ruby herd as per 2013-07-21 announcement.

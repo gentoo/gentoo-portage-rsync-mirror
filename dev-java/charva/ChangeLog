@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/charva
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.20 2013/09/02 08:06:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/ChangeLog,v 1.21 2013/11/30 08:11:04 tomwij Exp $
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org> charva-1.0.1-r1.ebuild:
+  Quoted S variable.
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> charva-1.1.4-r1.ebuild:
   Stable for x86, wrt bug #316301

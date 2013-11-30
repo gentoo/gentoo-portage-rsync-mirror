@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ehcache
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.14 2010/05/21 17:58:46 ken69267 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ChangeLog,v 1.15 2013/11/30 08:19:52 tomwij Exp $
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org> ehcache-1.1-r1.ebuild,
+  ehcache-1.2.4-r2.ebuild, ehcache-1.2.4.ebuild:
+  Quoted multiple S variables. Removed redundant cd ${S} call from start of
+  src_install.
 
   21 May 2010; Kenneth Prugh <ken69267@gentoo.org> ehcache-1.2.4-r2.ebuild:
   amd64 stable, bug #292503
@@ -63,4 +68,3 @@
 
   11 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> +ehcache-1.1.ebuild:
   Initial commit of ehcache.  There is no src file nor a build.xml.
-

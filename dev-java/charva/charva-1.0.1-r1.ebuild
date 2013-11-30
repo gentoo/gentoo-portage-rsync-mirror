@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/charva-1.0.1-r1.ebuild,v 1.5 2007/06/17 13:15:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/charva-1.0.1-r1.ebuild,v 1.6 2013/11/30 08:11:04 tomwij Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -20,7 +20,7 @@ KEYWORDS="amd64 ppc x86"
 src_unpack() {
 	unpack ${A}
 	rm -v "${S}/c/src/libTerminal.so"
-	sed -e "s,javac,javac $(java-pkg_javac-args)," -i ${S}/java/src/Makefile || die
+	sed -e "s,javac,javac $(java-pkg_javac-args)," -i "${S}"/java/src/Makefile || die
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.1-r1.ebuild,v 1.3 2010/01/03 21:33:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.1-r1.ebuild,v 1.4 2013/11/30 08:19:52 tomwij Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -25,27 +25,26 @@ DEPEND=">=virtual/jdk-1.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	unzip ${P}-src.zip || die
 	rm *.jar
 	rm -rf src/net/sf/ehcache/hibernate
 }
 
 src_compile() {
-	mkdir ${S}/classes
-	cd ${S}/src
+	mkdir "${S}"/classes
+	cd "${S}"/src
 
-	ejavac -d ${S}/classes \
+	ejavac -d "${S}"/classes \
 		-classpath 	$(java-pkg_getjars commons-logging,commons-collections) \
 		$(find . -name "*.java")
 
-	cd ${S}/classes
-	jar cf ${S}/${P}.jar * || die
+	cd "${S}"/classes
+	jar cf "${S}"/${P}.jar * || die
 }
 
 src_install() {
-	cd ${S}
-	java-pkg_newjar ${S}/${P}.jar ${PN}.jar
+	java-pkg_newjar "${S}"/${P}.jar ${PN}.jar
 	dodoc *.txt ehcache.xml ehcache.xsd
 	if use doc ; then
 		unzip ${P}-javadoc.zip || die

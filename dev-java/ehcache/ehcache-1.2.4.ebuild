@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.2.4.ebuild,v 1.1 2007/01/03 03:17:03 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ehcache/ehcache-1.2.4.ebuild,v 1.2 2013/11/30 08:19:52 tomwij Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -27,26 +27,26 @@ DEPEND=">=virtual/jdk-1.4
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	mkdir src && cd src
 	unzip -qq ../${P}-sources.jar || die
 	rm -rf net/sf/ehcache/hibernate
 }
 
 src_compile() {
-	mkdir ${S}/classes
-	cd ${S}/src
+	mkdir "${S}"/classes
+	cd "${S}"/src
 
-	ejavac -d ${S}/classes \
+	ejavac -d "${S}"/classes \
 		-classpath 	$(java-pkg_getjars commons-logging,commons-collections,servletapi-2.4) \
 		$(find . -name "*.java")
 
-	cd ${S}/classes
-	jar cf ${S}/${P}.jar * || die "failed to create jar"
+	cd "${S}"/classes
+	jar cf "${S}"/${P}.jar * || die "failed to create jar"
 }
 
 src_install() {
-	java-pkg_newjar ${S}/${P}.jar
+	java-pkg_newjar "${S}"/${P}.jar
 	dodoc *.txt ehcache.xml ehcache.xsd
 	use source && java-pkg_dosrc src
 	if use doc ; then

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-framework
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.27 2012/01/01 13:57:56 sera Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-framework/ChangeLog,v 1.28 2013/11/30 08:07:24 tomwij Exp $
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org> avalon-framework-4.1.5-r1.ebuild,
+  avalon-framework-4.2.0-r1.ebuild:
+  Quoted S variable.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org>
   avalon-framework-4.1.5-r1.ebuild, avalon-framework-4.2.0-r1.ebuild:
@@ -119,4 +123,3 @@
   +avalon-framework-4.2.0.ebuild:
   Initial import. Ebuilds contributed by Saleem A. <compnerd@gentoo.org> and
   Mark Wolfe <mwolfe@netspace.net.au>. Fixes #64652
-

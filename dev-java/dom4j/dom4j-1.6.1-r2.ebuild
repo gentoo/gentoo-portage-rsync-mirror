@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r2.ebuild,v 1.12 2012/01/01 15:28:16 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r2.ebuild,v 1.13 2013/11/30 08:16:14 tomwij Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -34,7 +34,7 @@ src_unpack() {
 	# see bug #137970
 	epatch "${WORKDIR}/${P}-java5.patch"
 
-	cd ${S}/lib
+	cd "${S}"/lib
 	#circular deps with jaxen
 	rm -f $(echo *.jar | sed 's/jaxen[^ ]\+//')
 	java-pkg_jar-from jaxme
@@ -45,17 +45,17 @@ src_unpack() {
 	java-pkg_jar-from relaxng-datatype
 	java-pkg_jar-from xsdlib
 
-	cd ${S}/lib/endorsed
+	cd "${S}"/lib/endorsed
 	rm -f *.jar
 	java-pkg_jar-from xerces-2 || die
 
-	rm -r ${S}/lib/test
+	rm -r "${S}"/lib/test
 	# we don't really to fix any of these if we're not doing testing
 #	# TODO: replace jsr173_1.0_ri.jar
 #	java-pkg_jar-from ${JUNITPERF} || die
 
 	# We don't need the stuff in tools
-	rm -r ${S}/lib/tools
+	rm -r "${S}"/lib/tools
 #	cd ${S}/lib/tools
 #	# apparently we don't really need clover's jar
 #	rm clover*

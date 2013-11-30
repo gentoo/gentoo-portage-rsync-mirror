@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blowfishj
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.13 2007/06/10 10:46:51 caster Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blowfishj/ChangeLog,v 1.14 2013/11/30 08:09:32 tomwij Exp $
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org> blowfishj-2.14-r1.ebuild,
+  metadata.xml:
+  Unquoted A variable. Indented metadata.xml.
 
   10 Jun 2007; Vlastimil Babka <caster@gentoo.org> -blowfishj-2.14.ebuild:
   Remove gen-1 revision.
@@ -51,4 +55,3 @@
   +blowfishj-2.13.ebuild:
   Initial import. Ebuild submitted by Saleem A. <compnerd@compnerd.org>, fixes
   #70326.
-

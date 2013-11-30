@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.6.0.07.02.ebuild,v 1.7 2012/05/10 18:34:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/diablo-jdk-1.6.0.07.02.ebuild,v 1.8 2013/11/30 08:13:34 tomwij Exp $
 
 EAPI="3"
 
@@ -114,7 +114,7 @@ src_install() {
 					#!${EPREFIX}/bin/sh
 
 					export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}\${LD_LIBRARY_PATH+:}${EPREFIX}/lib"
-					exec /${d#${D}}/real-bins/${bin} "\$@"
+					exec /"${d#${D}}"/real-bins/${bin} "\$@"
 				_EOD
 				chmod 755 ${bin}
 			done

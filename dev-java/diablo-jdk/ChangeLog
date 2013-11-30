@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/diablo-jdk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/ChangeLog,v 1.16 2012/05/10 18:34:12 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/diablo-jdk/ChangeLog,v 1.17 2013/11/30 08:13:34 tomwij Exp $
+
+  30 Nov 2013; Tom Wijsman <TomWij@gentoo.org> diablo-jdk-1.6.0.07.02.ebuild:
+  Quoted D variable.
 
   10 May 2012; Alexis Ballier <aballier@gentoo.org>
   diablo-jdk-1.6.0.07.02.ebuild:
@@ -74,4 +77,3 @@
   22 Jul 2006; Diego Pettenò <flameeyes@gentoo.org> +files/diablo-jdk.env,
   +metadata.xml, +diablo-jdk-1.5.0.07.00.ebuild:
   Initial import, ebuild from Timothy Redaelli in bug #141380.
-
