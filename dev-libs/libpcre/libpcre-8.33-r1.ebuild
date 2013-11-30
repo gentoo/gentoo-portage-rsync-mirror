@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.33-r1.ebuild,v 1.1 2013/10/26 09:31:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.33-r1.ebuild,v 1.2 2013/11/30 00:56:54 hwoarang Exp $
 
 EAPI="4"
 
@@ -69,7 +69,7 @@ multilib_src_configure() {
 }
 
 multilib_src_compile() {
-	emake $(multilib_is_native_abi || echo "bin_PROGRAMS=")
+	emake V=1 $(multilib_is_native_abi || echo "bin_PROGRAMS=")
 }
 
 multilib_src_install() {
