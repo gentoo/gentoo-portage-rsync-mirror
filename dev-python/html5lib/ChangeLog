@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/html5lib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.21 2013/09/05 18:46:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/html5lib/ChangeLog,v 1.22 2013/12/01 10:18:05 hattya Exp $
+
+  01 Dec 2013; Akinori Hattori <hattya@gentoo.org> html5lib-0.95-r1.ebuild:
+  keyword ~ia64 wrt bug #461346
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> html5lib-0.95-r1.ebuild,
   html5lib-1.0_beta1.ebuild, html5lib-1.0_beta3.ebuild:
