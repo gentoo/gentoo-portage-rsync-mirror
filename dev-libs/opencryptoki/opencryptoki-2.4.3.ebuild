@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.4.3.ebuild,v 1.1 2013/05/10 16:03:33 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opencryptoki/opencryptoki-2.4.3.ebuild,v 1.2 2013/12/01 06:13:50 vapier Exp $
 
 EAPI="2"
 
@@ -94,6 +94,10 @@ src_install() {
 	cp "${FILESDIR}"/pkcsslotd.init.2 "${T}"/pkcsslotd.init
 	use tpm || sed -i -e '/use tcsd/d' "${T}"/pkcsslotd.init
 	newinitd "${T}/pkcsslotd.init" pkcsslotd
+
+	# We create /var dirs at runtime as needed, so don't bother installing
+	# our own.
+	rm -r "${D}"/var/{lib,lock} || die
 
 	dodoc README AUTHORS FAQ TODO doc/openCryptoki-HOWTO.pdf || die
 }
