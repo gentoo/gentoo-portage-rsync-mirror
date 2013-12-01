@@ -1,0 +1,28 @@
+A couple of changes are necessary to make sssd work better on Gentoo Linux
+systems.
+
+- login manager can use sssd for login. Therefore it's necessary to adjust
+the dependencies of the script to use 'xdm' if it is available.
+- We need to send the debug output to files instead of stderr.
+
+Signed-off-by: Markos Chandras <hwoarang@gentoo.org>
+
+Index: sssd-1.9.6/src/sysv/gentoo/sssd
+===================================================================
+--- sssd-1.9.6.orig/src/sysv/gentoo/sssd
++++ sssd-1.9.6/src/sysv/gentoo/sssd
+@@ -2,12 +2,12 @@
+ 
+ depend(){
+     need localmount netmount clock
+-    use syslog
++    use syslog xdm
+ }
+ 
+ start(){
+     ebegin "Starting sssd"
+-    start-stop-daemon --start --exec ${exec_prefix}/sbin/sssd -- -D
++    start-stop-daemon --start --exec ${exec_prefix}/sbin/sssd -- -Df
+     eend ${?}
+ }
+ 

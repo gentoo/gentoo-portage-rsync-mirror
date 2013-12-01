@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.45 2013/10/27 11:58:57 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.46 2013/12/01 17:10:54 hwoarang Exp $
+
+*sssd-1.9.6 (01 Dec 2013)
+
+  01 Dec 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/sssd-1.9.6-fix-init.patch, +sssd-1.9.6.ebuild:
+  Version bump. Remove nscd dependency from the init script. Bug #491608
 
   27 Oct 2013; Michał Górny <mgorny@gentoo.org> sssd-1.8.6-r1.ebuild,
   sssd-1.8.6.ebuild, sssd-1.9.4-r3.ebuild, sssd-1.9.5-r1.ebuild:
