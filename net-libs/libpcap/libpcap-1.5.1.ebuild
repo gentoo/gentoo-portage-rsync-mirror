@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.5.1.ebuild,v 1.1 2013/11/28 04:54:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.5.1.ebuild,v 1.2 2013/12/01 19:42:09 grobian Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -36,6 +36,10 @@ src_prepare() {
 	sed -e 's/freebsd\*/freebsd*|solaris*/' \
 		-e 's/sparc64\*/sparc64*|sparcv9*/'  \
 		-i aclocal.m4 || die
+	# Prefix' Darwin systems are single arch, hijack Darwin7 case which
+	# assumes this setup
+	sed -e 's/darwin\[0-7\]\./darwin*/' \
+		-i configure.in || die
 
 	eautoreconf
 }
