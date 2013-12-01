@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.9-r1.ebuild,v 1.1 2013/11/30 04:29:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.9-r1.ebuild,v 1.2 2013/11/30 23:28:19 ottxor Exp $
 
 EAPI=5
 
@@ -20,12 +20,13 @@ IUSE=""
 
 RESTRICT="fetch"
 
-DEPEND="
-	|| ( >=sys-cluster/charm-6.5.1-r2 <=sys-cluster/charm-6.5.1-r1[static-libs] )
+RDEPEND="
+	>=sys-cluster/charm-6.5.1-r2
 	sci-libs/fftw:3.0
 	dev-lang/tcl"
 
-RDEPEND=${DEPEND}
+DEPEND="${RDEPEND}
+	app-shells/tcsh"
 
 NAMD_ARCH="Linux-x86_64-g++"
 
