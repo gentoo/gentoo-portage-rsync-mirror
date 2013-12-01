@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.40-r1.ebuild,v 1.2 2013/09/05 18:58:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.40-r1.ebuild,v 1.3 2013/12/01 20:36:20 zerochaos Exp $
 
 EAPI=5
 
@@ -92,6 +92,8 @@ src_prepare() {
 		-e 's|^Categories=.*|Categories=Network;System;Security;|g' \
 		zenmap/install_scripts/unix/zenmap-root.desktop \
 		zenmap/install_scripts/unix/zenmap.desktop || die
+
+	epatch_user
 }
 
 src_configure() {

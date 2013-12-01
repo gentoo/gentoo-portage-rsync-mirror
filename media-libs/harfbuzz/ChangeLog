@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.56 2013/12/01 20:29:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.57 2013/12/01 20:34:30 grobian Exp $
+
+  01 Dec 2013; Fabian Groffen <grobian@gentoo.org> harfbuzz-9999.ebuild:
+  Apply Solaris fixes to 9999 so I won't get caught by unpleasant surprise again
 
   01 Dec 2013; Fabian Groffen <grobian@gentoo.org> harfbuzz-0.9.23.ebuild:
   Restore 0.9.20 fixes for Solaris :(
