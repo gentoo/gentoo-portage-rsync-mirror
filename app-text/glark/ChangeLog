@@ -1,6 +1,13 @@
 # ChangeLog for app-text/glark
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.60 2011/03/27 21:55:29 darkside Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.61 2013/12/01 08:16:37 graaff Exp $
+
+*glark-1.10.4 (01 Dec 2013)
+
+  01 Dec 2013; Hans de Graaff <graaff@gentoo.org> +glark-1.10.4.ebuild:
+  Version bump. Ebuild by Peter Wilmott in the ruby overlay. Fixes bug 350723.
+  Dropped keywords for amd64-linux hppa mips ppc ppc-macos sparc x86 x86-linux
+  reported in bug 493006.
 
   27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -glark-1.7.8.ebuild:
   remove old ebuilds
