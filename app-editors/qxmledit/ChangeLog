@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/qxmledit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.45 2013/06/10 09:25:32 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/ChangeLog,v 1.46 2013/12/01 13:24:25 hwoarang Exp $
+
+*qxmledit-0.8.8.1 (01 Dec 2013)
+
+  01 Dec 2013; Markos Chandras <hwoarang@gentoo.org> +qxmledit-0.8.8.1.ebuild,
+  -qxmledit-0.8.3.1.ebuild, -qxmledit-0.8.4.ebuild:
+  Version bump. Remove old
 
   10 Jun 2013; Sergey Popov <pinkbyte@gentoo.org> qxmledit-0.8.5.ebuild:
   Stable on x86, wrt bug #470320

@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/qxmledit-0.8.4.ebuild,v 1.4 2013/03/19 10:33:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qxmledit/qxmledit-0.8.8.1.ebuild,v 1.1 2013/12/01 13:24:25 hwoarang Exp $
 
 EAPI=5
 
-inherit multilib eutils qt4-r2
+inherit multilib eutils qt4-r2 versionator
 
-MY_P="qxmledit-${PV}-src"
+MY_PV="$(replace_version_separator 3 '-')"
+
+MY_P="qxmledit-${MY_PV}-src"
 
 DESCRIPTION="Qt4 XML Editor"
 HOMEPAGE="http://code.google.com/p/qxmledit/"
@@ -14,7 +16,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tgz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND=">=dev-qt/qtcore-4.7:4
@@ -25,6 +27,8 @@ DEPEND=">=dev-qt/qtcore-4.7:4
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS NEWS README ROADMAP TODO"
+
+S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_prepare() {
 	# fix doc dir
