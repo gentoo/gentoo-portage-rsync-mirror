@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.485 2013/10/15 18:03:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.486 2013/12/01 09:45:09 mgorny Exp $
+
+  01 Dec 2013; Michał Górny <mgorny@gentoo.org> wine-1.7.4.ebuild,
+  wine-9999.ebuild:
+  Support multilib pulseaudio aside of emul-linux.
 
   15 Oct 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.6.ebuild,
   wine-1.7.0.ebuild, wine-1.7.3.ebuild, wine-1.7.4.ebuild, wine-9999.ebuild:

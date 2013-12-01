@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.157 2013/10/15 17:53:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.158 2013/12/01 09:45:09 mgorny Exp $
 
 EAPI="5"
 
@@ -189,7 +189,12 @@ COMMON_DEPEND="
 		)
 	)"
 [[ ${PV} == "9999" ]] || COMMON_DEPEND="${COMMON_DEPEND}
-	amd64? ( abi_x86_32? ( pulseaudio? ( app-emulation/emul-linux-x86-soundlibs[development] ) ) )"
+	amd64? ( abi_x86_32? ( pulseaudio? (
+		|| (
+			app-emulation/emul-linux-x86-soundlibs[development]
+			>=media-sound/pulseaudio-4.0-r1[abi_x86_32]
+		)
+	) ) )"
 
 RDEPEND="${COMMON_DEPEND}
 	dos? ( games-emulation/dosbox )
