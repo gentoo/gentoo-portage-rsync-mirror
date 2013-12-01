@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.9.2.ebuild,v 1.3 2013/10/26 16:50:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.9.2.ebuild,v 1.4 2013/12/01 21:29:35 pacho Exp $
 
 EAPI=5
 inherit eutils
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="
+	app-text/poppler
 	>=media-libs/t1lib-1.3.1
 	media-libs/freetype
 	virtual/jpeg

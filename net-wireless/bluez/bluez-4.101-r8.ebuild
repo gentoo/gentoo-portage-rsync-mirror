@@ -1,23 +1,25 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r5.ebuild,v 1.9 2013/06/30 15:27:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.101-r8.ebuild,v 1.1 2013/12/01 21:21:57 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
-inherit eutils multilib python-single-r1 systemd user
+inherit autotools eutils multilib python-single-r1 readme.gentoo systemd user
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
-SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz"
+SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz
+	http://dev.gentoo.org/~pacho/bluez/${P}-patches.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc ppc64 x86"
-IUSE="alsa +consolekit cups debug gstreamer pcmcia readline selinux test-programs usb"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+IUSE="alsa cups debug gstreamer hid2hci pcmcia readline selinux test-programs usb"
 
 REQUIRED_USE="test-programs? ( ${PYTHON_REQUIRED_USE} )"
 
-CDEPEND=">=dev-libs/glib-2.28:2
+CDEPEND="
+	>=dev-libs/glib-2.28:2
 	>=sys-apps/dbus-1.6:=
 	>=sys-apps/hwids-20121202.2
 	>=virtual/udev-171
@@ -40,7 +42,6 @@ DEPEND="${CDEPEND}
 	test-programs? ( >=dev-libs/check-0.9.6 )
 "
 RDEPEND="${CDEPEND}
-	consolekit? ( || ( sys-auth/consolekit sys-apps/systemd ) )
 	test-programs? (
 		>=dev-python/dbus-python-1
 		dev-python/pygobject:2
@@ -51,21 +52,26 @@ RDEPEND="${CDEPEND}
 
 DOCS=( AUTHORS ChangeLog README )
 
+DOC_CONTENTS="
+	If you want to use rfcomm as a normal user, you need to add the user
+	to the uucp group.
+"
+
 pkg_setup() {
-	use consolekit || enewgroup plugdev
+	enewgroup plugdev
 	use test-programs && python-single-r1_pkg_setup
 }
 
 src_prepare() {
-	# Revert upstream change causing bug #431624, the problem was
-	# reported to upstream but they didn't look into it. Could be solved
-	# in bluez-5... stop the revert in that version to test then.
-	epatch -R "${FILESDIR}"/${P}-mgmt-update.patch
-
-	epatch "${FILESDIR}"/${P}-network{1,2,3,4}.patch
+	# Fedora patches
+	epatch "${WORKDIR}/${P}-patches"/*.patch
 
 	# Use static group "plugdev" if there is no ConsoleKit (or systemd logind)
-	use consolekit || epatch "${FILESDIR}"/bluez-plugdev.patch
+	epatch "${FILESDIR}"/bluez-plugdev.patch
+
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
+
+	eautoreconf
 
 	if use cups; then
 		sed -i \
@@ -91,10 +97,11 @@ src_configure() {
 		$(use_enable gstreamer) \
 		$(use_enable alsa) \
 		$(use_enable usb) \
+		$(use_enable usb cable) \
 		--enable-tools \
 		--enable-bccmd \
 		$(use_enable pcmcia) \
-		--enable-hid2hci \
+		$(use_enable hid2hci) \
 		--enable-dfutool \
 		$(use_enable cups) \
 		$(use_enable test-programs test) \
@@ -135,27 +142,22 @@ src_install() {
 	newinitd "${FILESDIR}"/rfcomm-init.d rfcomm
 	newconfd "${FILESDIR}"/rfcomm-conf.d rfcomm
 
+	readme.gentoo_create_doc
+
 	prune_libtool_files --modules
 }
 
 pkg_postinst() {
+	readme.gentoo_print_elog
+
 	udevadm control --reload-rules
 
 	has_version net-dialup/ppp || elog "To use dial up networking you must install net-dialup/ppp."
 
-	if use consolekit; then
-		elog "If you want to use rfcomm as a normal user, you need to add the user"
-		elog "to the uucp group."
-	else
-		elog "Since you have the consolekit use flag disabled, you will only be able to run"
-		elog "bluetooth clients as root. If you want to be able to run bluetooth clientes as "
+	if ! has_version sys-auth/consolekit && ! has_version sys-apps/systemd; then
+		elog "Since you don't have sys-auth/consolekit neither sys-apps/systemd, you will only"
+		elog "be able to run bluetooth clients as root. If you want to be able to run bluetooth clientes as"
 		elog "a regular user, you need to enable the consolekit use flag for this package or"
 		elog "to add the user to the plugdev group."
-	fi
-
-	if [ "$(rc-config list default | grep bluetooth)" = "" ]; then
-		elog "You will need to add bluetooth service to default runlevel"
-		elog "for getting your devices detected. For that please run:"
-		elog "'rc-update add bluetooth default'"
 	fi
 }
