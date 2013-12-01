@@ -1,6 +1,11 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.99 2013/10/19 17:54:57 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.100 2013/11/30 23:43:20 johu Exp $
+
+*calligra-2.7.5 (30 Nov 2013)
+
+  30 Nov 2013; Johannes Huber <johu@gentoo.org> +calligra-2.7.5.ebuild:
+  Version bump wrt bug #492726.
 
   19 Oct 2013; Johannes Huber <johu@gentoo.org> metadata.xml:
   Fix typo reported by buscher on irc.
