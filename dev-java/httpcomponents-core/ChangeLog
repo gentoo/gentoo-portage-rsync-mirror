@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/httpcomponents-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-core/ChangeLog,v 1.1 2013/07/13 13:38:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-core/ChangeLog,v 1.2 2013/12/01 08:59:21 ercpe Exp $
+
+*httpcomponents-core-4.3 (01 Dec 2013)
+
+  01 Dec 2013; Johann Schmitz <ercpe@gentoo.org>
+  +httpcomponents-core-4.3.ebuild, metadata.xml:
+  Version bump of httpcomponents-core for httpcomponents-client
 
 *httpcomponents-core-4.2.4 (13 Jul 2013)
 
