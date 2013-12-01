@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.200 2013/11/25 19:32:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.201 2013/12/01 15:50:12 johu Exp $
+
+  01 Dec 2013; Johannes Huber <johu@gentoo.org> systemd-208-r2.ebuild:
+  x86 stable, bug #487344
 
   25 Nov 2013; Michał Górny <mgorny@gentoo.org> systemd-9999.ebuild:
   Make dbus a PDEP + test dep since upstream no longer links to the library. Add
