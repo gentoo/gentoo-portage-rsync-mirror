@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8400 2013/11/30 17:12:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8401 2013/12/01 21:40:27 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +targets/desktop/kde/package.mask:
+  Mask recent nvidia drivers in KDE profiles because of sigprocmask corruption,
+  bug 487558
 
   30 Nov 2013; Michał Górny <mgorny@gentoo.org> package.mask:
   Unmask multilib packages along with bumping emul-linux-x86-{base,sound}libs.
