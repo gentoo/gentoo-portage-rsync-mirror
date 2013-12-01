@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-client/httpcomponents-client-4.3.1.ebuild,v 1.1 2013/12/01 09:06:41 ercpe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpcomponents-client/httpcomponents-client-4.3.1-r1.ebuild,v 1.1 2013/12/01 16:08:26 ercpe Exp $
 
 EAPI="5"
 
@@ -16,6 +16,7 @@ SRC_URI="mirror://apache/${PN/-//http}/source/${P}-src.tar.gz
 LICENSE="Apache-2.0"
 SLOT="4.3"
 KEYWORDS="~amd64 ~x86"
+IUSE="deprecated"
 
 CDEPEND="
 	dev-java/commons-codec:0
@@ -48,6 +49,15 @@ java_prepare() {
 	rm "${S}"/httpclient-cache/src/main/java/org/apache/http/impl/client/cache/ehcache/EhcacheHttpCacheStorage.java \
 		"${S}"/httpclient-cache/src/test/java/org/apache/http/impl/client/cache/ehcache/TestEhcacheHttpCacheStorage.java \
 		"${S}"/httpclient-cache/src/test/java/org/apache/http/impl/client/cache/ehcache/TestEhcacheProtocolRequirements.java || die
+
+	if use deprecated; then
+		cp -r "${S}"/httpclient/src/main/java-deprecated/* \
+				"${S}"/httpclient/src/main/java/* || die
+		cp -r "${S}"/httpclient-cache/src/main/java-deprecated/* \
+				"${S}"/httpclient-cache/src/main/java/* || die
+		cp -r "${S}"/httpmime/src/main/java-deprecated/* \
+				"${S}"/httpmime/src/main/java/* || die
+	fi
 }
 
 src_install() {
