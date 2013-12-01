@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Constant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Constant/ChangeLog,v 1.7 2013/10/25 14:06:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Constant/ChangeLog,v 1.8 2013/12/01 14:44:06 johu Exp $
+
+  01 Dec 2013; Johannes Huber <johu@gentoo.org>
+  perl-ExtUtils-Constant-0.230.0-r2.ebuild:
+  x86 stable, bug #474822
 
   25 Oct 2013; Jeroen Roovers <jer@gentoo.org>
   perl-ExtUtils-Constant-0.230.0-r2.ebuild:

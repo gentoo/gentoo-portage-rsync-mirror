@@ -4,10 +4,10 @@ DESCRIPTION=A drop-in replacement for IO::Socket::INET supporting both IPv4 and 
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/IO-Socket-IP/
 IUSE=test
-KEYWORDS=~amd64 hppa ~ppc ~ppc64 ~x86
+KEYWORDS=~amd64 hppa ~ppc ~ppc64 x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=virtual/perl-Socket-1.970.0 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/P/PE/PEVANS/IO-Socket-IP-0.23.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=7d7a7b67a6cf66a51197386c311ce111
+_md5_=0d392d92b8775cd71c77c902f5660174

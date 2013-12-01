@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.159 2013/11/27 18:55:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.160 2013/12/01 14:52:19 johu Exp $
+
+  01 Dec 2013; Johannes Huber <johu@gentoo.org> cryptsetup-1.6.2.ebuild:
+  x86 stable, bug #487652
 
   27 Nov 2013; Markus Meier <maekke@gentoo.org> cryptsetup-1.6.2.ebuild:
   arm stable, bug #487652
