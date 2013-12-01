@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/atftp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.30 2012/05/13 11:13:32 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.31 2013/12/01 22:10:08 pacho Exp $
+
+*atftp-0.7-r3 (01 Dec 2013)
+
+  01 Dec 2013; Pacho Ramos <pacho@gentoo.org> +atftp-0.7-r3.ebuild,
+  +files/atftp.service, +files/atftp.service.conf:
+  Add unit file, bug #492698 by Christian Strahl
 
   13 May 2012; <swift@gentoo.org> atftp-0.7-r1.ebuild, atftp-0.7-r2.ebuild:
   SELinux policy module for TFTP is provided by selinux-tftp
