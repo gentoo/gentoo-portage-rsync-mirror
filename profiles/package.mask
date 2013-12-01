@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15238 2013/11/30 17:12:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15239 2013/12/01 03:04:38 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Doug Goldstein <cardoe@gentoo.org> (30 Nov 2013)
+# Masked for removal in 30 days. please upgrade to >=0.26
+<media-tv/mythtv-0.26
+<media-plugins/mythplugins-0.26
+<www-apps/mythweb-0.26
 
 # Hans de Graaff <graaff@gentoo.org> (30 Nov 2013)
 # Masked for removal in a month due to ruby18 deprecation.
