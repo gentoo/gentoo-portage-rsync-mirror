@@ -1,8 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1-r2.ebuild,v 1.2 2013/12/01 17:04:05 hasufell Exp $
-
-# TODO: convert dev-python/pyode wrt #493042
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1-r2.ebuild,v 1.3 2013/12/01 17:32:45 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -20,7 +18,7 @@ REQUIRED_USE=${PYTHON_REQUIRED_USE}
 
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
-	dev-python/pyode
+	dev-python/pyode[${PYTHON_USEDEP}]
 	dev-python/pygame[${PYTHON_USEDEP}]
 	dev-python/pyopengl[${PYTHON_USEDEP}]"
 
