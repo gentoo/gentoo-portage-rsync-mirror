@@ -1,0 +1,13 @@
+# ChangeLog for net-p2p/primecoind
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/ChangeLog,v 1.1 2013/12/01 15:20:47 blueness Exp $
+
+*primecoind-0.1.2 (01 Dec 2013)
+
+  01 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  +primecoind-0.1.2.ebuild, +files/primecoin.conf, +files/primecoin.confd,
+  +files/primecoin.initd, +files/primecoin.service,
+  +files/primecoin-sys_leveldb.patch, +files/primecoind.logrotate,
+  +metadata.xml:
+  Initial commit
+

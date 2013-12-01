@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/ppcoind
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ppcoind/ChangeLog,v 1.1 2013/12/01 15:14:28 blueness Exp $
+
+*ppcoind-0.3.0 (01 Dec 2013)
+
+  01 Dec 2013; Anthony G. Basile <blueness@gentoo.org> +ppcoind-0.3.0.ebuild,
+  +files/ppcoin.conf, +files/ppcoin.confd, +files/ppcoin.initd,
+  +files/ppcoin.service, +files/ppcoind.logrotate, +metadata.xml:
+  Initial commit
+
