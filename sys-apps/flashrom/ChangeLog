@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/flashrom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.38 2013/11/28 22:05:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.39 2013/12/01 06:34:43 vapier Exp $
+
+  01 Dec 2013; Mike Frysinger <vapier@gentoo.org> flashrom-0.9.7.ebuild,
+  flashrom-9999.ebuild:
+  Change back to virtual/libusb:0 as that is what the source explicitly checks
+  for.
 
   28 Nov 2013; Mike Frysinger <vapier@gentoo.org> flashrom-0.9.7.ebuild,
   flashrom-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.5 2013/11/28 22:05:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.6 2013/12/01 06:34:43 vapier Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ nicnatsemi nicrealtek +ogp_spi rayer_spi
 +pony_spi +satasii satamv +serprog tools usbblaster +wiki"
 
 COMMON_DEPEND="atahpt? ( sys-apps/pciutils )
-	dediprog? ( virtual/libusb:1 )
+	dediprog? ( virtual/libusb:0 )
 	drkaiser? ( sys-apps/pciutils )
 	ft2232_spi? ( dev-embedded/libftdi )
 	gfxnvidia? ( sys-apps/pciutils )
