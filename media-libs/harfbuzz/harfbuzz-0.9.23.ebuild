@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.23.ebuild,v 1.3 2013/12/01 19:53:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.23.ebuild,v 1.4 2013/12/01 20:29:47 grobian Exp $
 
 EAPI=5
 
@@ -52,11 +52,12 @@ src_prepare() {
 			-e '/libharfbuzz_la_LINK = /s/\<LINK\>/CXXLINK/' \
 			src/Makefile.in || die
 		sed -i \
-			-e 's/\<LINK\>/CXXLINK/' \
+			-e '/AM_V_CCLD/s/\<LINK\>/CXXLINK/' \
 			test/api/Makefile.in || die
 	fi
 
 	[[ ${PV} == 9999 ]] && eautoreconf
+	elibtoolize # for Solaris
 }
 
 src_configure() {
