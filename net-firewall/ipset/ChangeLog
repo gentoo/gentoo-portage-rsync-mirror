@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.73 2013/07/04 12:18:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.74 2013/12/01 19:16:16 robbat2 Exp $
+
+*ipset-6.20.1 (01 Dec 2013)
+
+  01 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> +files/ipset.initd-r3,
+  +ipset-6.20.1.ebuild, files/ipset.confd, files/ipset.initd-r2:
+  Bump per bug #486836, adds new modules and future warning about NET_NS. Make
+  USE=-modules not introduce kernel-sources via MODULES_OPTIONAL_USE. Bug
+  #433411: Drop use
 
   04 Jul 2013; Agostino Sarubbo <ago@gentoo.org> ipset-6.17.ebuild:
   Stable for x86, wrt bug #461978

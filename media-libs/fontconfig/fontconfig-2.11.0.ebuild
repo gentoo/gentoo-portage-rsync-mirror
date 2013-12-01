@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.0.ebuild,v 1.1 2013/10/21 04:13:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.0.ebuild,v 1.2 2013/12/01 19:19:39 grobian Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -34,6 +34,7 @@ PDEPEND="!x86-winnt? ( app-admin/eselect-fontconfig )
 PATCHES=(
 	"${FILESDIR}"/${PN}-2.7.1-latin-reorder.patch	# 130466
 	"${FILESDIR}"/${PN}-2.10.2-docbook.patch	# 310157
+	"${FILESDIR}"/${PN}-2.11.0-solaris.patch
 )
 
 pkg_setup() {

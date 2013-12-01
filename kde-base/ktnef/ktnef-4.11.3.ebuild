@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ktnef-4.11.3.ebuild,v 1.1 2013/11/05 22:22:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ktnef-4.11.3.ebuild,v 1.2 2013/12/01 19:10:24 maekke Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KMNAME="kdepim"
 inherit kde4-meta
 
 DESCRIPTION="A viewer for TNEF attachments."
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 LICENSE="LGPL-2.1"
 IUSE="debug"
 

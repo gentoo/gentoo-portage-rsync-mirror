@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.62 2013/07/24 04:34:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.63 2013/12/01 19:10:57 maekke Exp $
+
+  01 Dec 2013; Markus Meier <maekke@gentoo.org>
+  xfce4-power-manager-1.2.0-r2.ebuild:
+  add ~arm, bug #488570
 
 *xfce4-power-manager-1.2.0-r2 (24 Jul 2013)
 

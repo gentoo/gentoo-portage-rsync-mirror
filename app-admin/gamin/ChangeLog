@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.106 2013/11/26 20:08:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.107 2013/12/01 19:11:00 maekke Exp $
+
+  01 Dec 2013; Markus Meier <maekke@gentoo.org> gamin-0.1.10-r1.ebuild:
+  arm stable, bug #491890
 
   26 Nov 2013; Jeroen Roovers <jer@gentoo.org> gamin-0.1.10-r1.ebuild:
   Stable for HPPA (bug #491890).

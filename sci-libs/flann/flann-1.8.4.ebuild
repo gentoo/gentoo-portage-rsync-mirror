@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4.ebuild,v 1.2 2013/11/24 17:02:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4.ebuild,v 1.3 2013/12/01 19:05:59 jlec Exp $
 
 EAPI=5
 
@@ -18,12 +18,18 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="cuda doc mpi openmp octave python static-libs test"
 
 RDEPEND="
-	sci-libs/hdf5[mpi?]
-	mpi? ( dev-libs/boost[mpi] )
+	mpi? (
+		sci-libs/hdf5[mpi]
+		dev-libs/boost[mpi]
+	)
 	octave? ( sci-mathematics/octave )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	test? ( dev-cpp/gtest )"
+	test? (
+		dev-cpp/gtest
+		cuda? ( sci-libs/hdf5 )
+	)
+"
 PDEPEND="python? ( ~dev-python/pyflann-${PV} )"
 
 S="${WORKDIR}"/${P}-src

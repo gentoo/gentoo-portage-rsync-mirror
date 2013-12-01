@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.19 2013/11/24 17:02:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.20 2013/12/01 19:05:59 jlec Exp $
+
+  01 Dec 2013; Justin Lecher <jlec@gentoo.org> flann-1.8.4.ebuild:
+  only depend on hdf5 with USE=mpi and tests, #492584; thanks nikoli for the
+  patch
 
   24 Nov 2013; Justin Lecher <jlec@gentoo.org> flann-1.8.4.ebuild,
   metadata.xml:

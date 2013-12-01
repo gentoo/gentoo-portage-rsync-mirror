@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.56 2013/11/26 20:23:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.57 2013/12/01 19:14:57 maekke Exp $
+
+  01 Dec 2013; Markus Meier <maekke@gentoo.org> dvisvgm-1.4.ebuild:
+  arm stable, bug #491940
 
   26 Nov 2013; Jeroen Roovers <jer@gentoo.org> dvisvgm-1.4.ebuild:
   Stable for HPPA (bug #491940).

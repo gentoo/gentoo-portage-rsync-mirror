@@ -1,6 +1,14 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1073 2013/11/30 17:57:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1075 2013/12/01 19:11:24 robbat2 Exp $
+
+  01 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> linux-mod.eclass:
+  Always ensure MODULES_OPTIONAL_USE is in IUSE.
+
+  01 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> linux-mod.eclass:
+  MODULES_OPTIONAL_USE makes it possible to optionally use linux-mod without
+  introducing dependencies on virtual/linux-sources or virtual/modutils where
+  unwanted.
 
   30 Nov 2013; Mike Gilbert <floppym@gentoo.org> python-r1.eclass,
   python-single-r1.eclass:
