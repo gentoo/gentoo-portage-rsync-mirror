@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.0-r1.ebuild,v 1.1 2013/11/17 11:54:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-3.1.0-r1.ebuild,v 1.2 2013/12/01 18:59:23 jlec Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ CDEPEND="
 		sys-apps/attr
 		sys-apps/acl
 	)
-	avahi? ( net-dns/avahi[dbus] )
+	avahi? ( net-dns/avahi[dbus,-mdnsresponder-compat] )
 	cracklib? ( sys-libs/cracklib )
 	dbus? ( sys-apps/dbus dev-libs/dbus-glib )
 	kerberos? ( virtual/krb5 )
