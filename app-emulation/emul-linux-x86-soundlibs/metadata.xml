@@ -5,5 +5,8 @@
 		<email>multilib@gentoo.org</email>
 		<name>Gentoo multilib project</name>
 	</maintainer>
-	<use><flag name="development">Install pkgconfig files</flag></use>
+	<use>
+		<flag name="development">Install pkgconfig files</flag>
+		<flag name="pulseaudio">Pull in pulseaudio if using USE=abi_x86_32</flag>
+	</use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-soundlibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.111 2013/11/30 21:41:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/ChangeLog,v 1.112 2013/12/01 09:30:10 mgorny Exp $
+
+  01 Dec 2013; Michał Górny <mgorny@gentoo.org>
+  emul-linux-x86-soundlibs-20131008-r2.ebuild, metadata.xml:
+  Add USE=pulseaudio to disable PulseAudio support on multilib variant.
 
   30 Nov 2013; Michał Górny <mgorny@gentoo.org>
   emul-linux-x86-soundlibs-20131008-r2.ebuild:

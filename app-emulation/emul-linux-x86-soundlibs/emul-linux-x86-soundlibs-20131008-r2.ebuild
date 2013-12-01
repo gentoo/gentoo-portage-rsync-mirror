@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20131008-r2.ebuild,v 1.2 2013/11/30 21:41:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-20131008-r2.ebuild,v 1.3 2013/12/01 09:30:10 mgorny Exp $
 
 EAPI=5
 inherit emul-linux-x86
 
 LICENSE="BSD FDL-1.2 GPL-2 LGPL-2.1 LGPL-2 MIT gsm public-domain"
 KEYWORDS="-* amd64"
-IUSE="abi_x86_32 alsa"
+IUSE="abi_x86_32 alsa +pulseaudio"
 
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}[abi_x86_32=]
 	~app-emulation/emul-linux-x86-medialibs-${PV}[abi_x86_32=]
@@ -38,8 +38,16 @@ RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}[abi_x86_32=]
 		>=media-libs/portaudio-19_pre20111121-r1[abi_x86_32(-)]
 		>=media-sound/mpg123-1.15.4-r1[abi_x86_32(-)]
 		>=media-libs/libao-1.1.0-r1[abi_x86_32(-)]
-		>=media-sound/pulseaudio-4.0-r1[abi_x86_32(-)]
+		pulseaudio? ( >=media-sound/pulseaudio-4.0-r1[abi_x86_32(-)] )
 	)"
+
+pkg_pretend() {
+	if use abi_x86_32 && ! use pulseaudio; then
+		ewarn "You have disabled USE=pulseaudio. This is known to break pre-built"
+		ewarn "libavfilter in emul-linux-x86-medialibs. If you need that, please"
+		ewarn "turn USE=pulseaudio back on."
+	fi
+}
 
 src_prepare() {
 	_ALLOWED="${S}/etc/env.d"
