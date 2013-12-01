@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.21 2013/10/31 22:42:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.22 2013/12/01 01:16:03 floppym Exp $
+
+  01 Dec 2013; Mike Gilbert <floppym@gentoo.org> +linux/amd64/use.stable.mask:
+  Disable stable-mask for python3.3 flags, bug 474128.
 
   31 Oct 2013; Anthony G. Basile <blueness@gentoo.org>
   linux/uclibc/package.mask:
