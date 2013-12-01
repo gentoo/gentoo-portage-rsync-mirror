@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.201 2013/11/24 06:04:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.202 2013/12/01 04:28:40 idella4 Exp $
+
+*xen-tools-4.3.1-r1
+
+  1 Dec 2013; Ian Delaney <idella4@gentoo.org>
+  +xen-tools-4.3.1-r1:
+  revbump; install provisioned xencommons script with elog msg 
+  @ pkg_postinst  
 
 *xen-tools-4.3.1 (24 Nov 2013)
 
