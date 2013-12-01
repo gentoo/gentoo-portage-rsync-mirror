@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.520 2013/11/29 16:36:09 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.521 2013/12/01 07:56:43 mattst88 Exp $
+
+*mesa-10.0.0 (01 Dec 2013)
+
+  01 Dec 2013; Matt Turner <mattst88@gentoo.org> +mesa-10.0.0.ebuild:
+  Version bump to 10.0.0.
 
   29 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -mesa-9.2.0-r1.ebuild, -mesa-9.2.0.ebuild, -mesa-9.2.1.ebuild,

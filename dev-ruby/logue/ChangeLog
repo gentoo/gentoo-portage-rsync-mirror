@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/logue
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.1 2013/11/30 09:37:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.2 2013/12/01 07:51:41 graaff Exp $
+
+*logue-1.0.1 (01 Dec 2013)
+
+  01 Dec 2013; Hans de Graaff <graaff@gentoo.org> +logue-1.0.1.ebuild:
+  Version bump.
 
 *logue-1.0.0 (30 Nov 2013)
 
