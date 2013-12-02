@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.210 2013/11/26 04:32:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.211 2013/12/02 21:06:43 johu Exp $
+
+  02 Dec 2013; Johannes Huber <johu@gentoo.org> numpy-1.7.1.ebuild:
+  x86 stable, bug #487870
 
 *numpy-1.8.0 (26 Nov 2013)
 
