@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/xmlwrapp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.35 2012/06/06 03:52:57 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.36 2013/12/02 07:29:32 pinkbyte Exp $
+
+*xmlwrapp-0.6.3 (02 Dec 2013)
+
+  02 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> +xmlwrapp-0.6.3.ebuild:
+  Version bump: EAPI 5, epatch_user, prune unnecessary libtool files, install
+  static libraries conditionally, add missing dependency on Boost
 
   06 Jun 2012; Zac Medico <zmedico@gentoo.org> xmlwrapp-0.5.0-r1.ebuild:
   inherit multilib for get_libdir

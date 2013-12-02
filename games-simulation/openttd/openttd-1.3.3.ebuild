@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.3.3.ebuild,v 1.1 2013/11/30 01:45:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.3.3.ebuild,v 1.2 2013/12/02 07:18:15 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -38,7 +38,7 @@ PDEPEND="
 		aplaymidi? ( media-sound/alsa-utils )
 		!aplaymidi? ( timidity? ( media-sound/timidity++ ) )
 	)
-	openmedia? ( >=games-misc/opengfx-0.4.4 )"
+	openmedia? ( >=games-misc/opengfx-0.4.7 )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-cflags.patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.11.0.ebuild,v 1.1 2013/09/04 03:12:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.11.0.ebuild,v 1.2 2013/12/02 07:14:20 vapier Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ SLOT="0"
 IUSE="atm berkdb +iptables ipv6 minimal"
 
 RDEPEND="!net-misc/arpd
-	iptables? ( >=net-firewall/iptables-1.4.5 )
+	iptables? ( >=net-firewall/iptables-1.4.20 )
 	!minimal? ( berkdb? ( sys-libs/db ) )
 	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}
