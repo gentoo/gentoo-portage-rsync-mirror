@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.73 2013/11/25 19:32:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.74 2013/12/02 16:49:59 mgorny Exp $
 
 EAPI=5
 
@@ -142,6 +142,7 @@ pkg_setup() {
 
 multilib_src_configure() {
 	local myeconfargs=(
+		--disable-maintainer-mode
 		--localstatedir=/var
 		--with-pamlibdir=$(getpam_mod_dir)
 		# avoid bash-completion dep
