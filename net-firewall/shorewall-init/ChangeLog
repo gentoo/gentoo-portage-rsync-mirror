@@ -1,6 +1,15 @@
 # ChangeLog for net-firewall/shorewall-init
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-init/ChangeLog,v 1.1 2013/10/26 18:39:51 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-init/ChangeLog,v 1.2 2013/12/02 19:58:43 constanze Exp $
+
+*shorewall-init-4.5.21.4 (02 Dec 2013)
+
+  02 Dec 2013; Constanze Hausner <constanze@gentoo.org>
+  +files/4.5.21.4/01_Remove-ipset-functionality.patch,
+  +files/4.5.21.4/README.Gentoo.txt, +files/4.5.21.4/shorewall-init.confd,
+  +files/4.5.21.4/shorewall-init.initd, +files/4.5.21.4/shorewall-init.systemd,
+  +files/4.5.21.4/shorewallrc, +shorewall-init-4.5.21.4.ebuild:
+  Version Bump; Thanks to Thomas D.
 
 *shorewall-init-4.5.21.2 (26 Oct 2013)
 

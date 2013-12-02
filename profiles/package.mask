@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15239 2013/12/01 03:04:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15240 2013/12/02 19:54:08 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -153,18 +153,6 @@ kde-misc/qtrans
 # debug. UPnP support was disabled by upstream in kdelibs.
 # See bug #442912
 kde-misc/kio-upnp-ms
-
-# Markos Chandras <hwoarang@gentoo.org> (02 Nov 2013)
-# On behalf of Treecleaners
-# Upstream started a complete rewrite of the package
-# meaning that existing bugs will not be fixed by future
-# version bumps of the existing code.
-# It is unclear when/if the new code will be released any time
-# soon so masked for removal in 30 days.
-# The package can be re-introduced later on if the new
-# maintainer feels it is stable enough.
-# See #483588 and #473692
-app-arch/xarchiver
 
 # Lars Wendler <polynomial-c@gentoo.org> (28 Oct 2013)
 # Masked alpha releases for testing.

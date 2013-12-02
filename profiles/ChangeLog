@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8401 2013/12/01 21:40:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8402 2013/12/02 19:54:08 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Dec 2013; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  app-arch/xarchiver is gone. Bug #483588
 
   01 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   +targets/desktop/kde/package.mask:
