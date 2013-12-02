@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.5.893925.ebuild,v 1.2 2013/06/22 22:44:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-8.0.5.893925.ebuild,v 1.3 2013/12/02 08:40:19 dilfridge Exp $
 
 EAPI="4"
 
@@ -42,6 +42,7 @@ RDEPEND="dev-cpp/cairomm
 	dev-libs/libxml2
 	=dev-libs/openssl-0.9.8*
 	dev-libs/xmlrpc-c
+	=gnome-base/gnome-keyring-2*
 	gnome-base/libgnomecanvas
 	gnome-base/libgtop:2
 	gnome-base/librsvg:2

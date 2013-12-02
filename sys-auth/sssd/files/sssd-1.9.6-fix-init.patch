@@ -7,10 +7,10 @@ the dependencies of the script to use 'xdm' if it is available.
 
 Signed-off-by: Markos Chandras <hwoarang@gentoo.org>
 
-Index: sssd-1.9.6/src/sysv/gentoo/sssd
+Index: sssd-1.9.6/src/sysv/gentoo/sssd.in
 ===================================================================
---- sssd-1.9.6.orig/src/sysv/gentoo/sssd
-+++ sssd-1.9.6/src/sysv/gentoo/sssd
+--- sssd-1.9.6.orig/src/sysv/gentoo/sssd.in
++++ sssd-1.9.6/src/sysv/gentoo/sssd.in
 @@ -2,12 +2,12 @@
  
  depend(){
@@ -21,8 +21,8 @@ Index: sssd-1.9.6/src/sysv/gentoo/sssd
  
  start(){
      ebegin "Starting sssd"
--    start-stop-daemon --start --exec ${exec_prefix}/sbin/sssd -- -D
-+    start-stop-daemon --start --exec ${exec_prefix}/sbin/sssd -- -Df
+-    start-stop-daemon --start --exec @sbindir@/sssd -- -D
++    start-stop-daemon --start --exec /usr/sbin/sssd -- -Df
      eend ${?}
  }
  
