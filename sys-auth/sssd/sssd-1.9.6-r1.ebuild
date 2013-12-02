@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.6-r1.ebuild,v 1.1 2013/12/02 08:50:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.9.6-r1.ebuild,v 1.2 2013/12/02 18:25:51 hwoarang Exp $
 
 EAPI=4
 
@@ -90,7 +90,7 @@ src_configure(){
 		--with-unicode-lib="glib2"
 		--disable-rpath
 		--enable-silent-rules
-		--exec-prefix=/usr
+		--sbindir=/usr/sbin
 		$(use_with selinux)
 		$(use_with selinux semanage)
 		$(use_with python python-bindings)
