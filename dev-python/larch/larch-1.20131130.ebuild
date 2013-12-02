@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/larch/larch-1.20130316.ebuild,v 1.1 2013/03/24 12:18:50 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/larch/larch-1.20131130.ebuild,v 1.1 2013/12/02 00:07:59 mschiff Exp $
 
 EAPI=5
 

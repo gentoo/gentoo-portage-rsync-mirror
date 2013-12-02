@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.10.4.ebuild,v 1.1 2013/12/01 08:16:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/glark-1.10.4.ebuild,v 1.2 2013/12/02 00:20:43 jer Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/jpace/glark/archive/v${PV}.tar.gz -> ${PN}-git-${PV}
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE=""
 
 ruby_add_rdepend "

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/riel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/riel/ChangeLog,v 1.1 2013/11/30 10:15:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/riel/ChangeLog,v 1.2 2013/12/02 00:17:45 jer Exp $
+
+  02 Dec 2013; Jeroen Roovers <jer@gentoo.org> riel-1.2.0.ebuild:
+  Marked ~hppa (bug #493006).
 
 *riel-1.2.0 (30 Nov 2013)
 

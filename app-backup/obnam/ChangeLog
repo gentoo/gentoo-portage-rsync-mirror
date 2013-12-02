@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/obnam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/ChangeLog,v 1.14 2013/08/09 15:43:46 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/obnam/ChangeLog,v 1.15 2013/12/02 00:16:51 mschiff Exp $
+
+*obnam-1.6.1 (02 Dec 2013)
+
+  02 Dec 2013; Marc Schiffbauer <mschiff@gentoo.org> +obnam-1.6.1.ebuild,
+  -obnam-1.4.ebuild:
+  Version bump. Drop oldest version.
 
   09 Aug 2013; Marc Schiffbauer <mschiff@gentoo.org>
   -files/obnam-1.2_diff_fix.patch, -files/obnam-1.2_man_diff_fix.patch:
