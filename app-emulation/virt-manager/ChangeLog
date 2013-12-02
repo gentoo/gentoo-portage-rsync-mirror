@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.95 2013/09/25 07:24:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.97 2013/12/02 22:46:39 cardoe Exp $
+
+  02 Dec 2013; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.10.0-r1.ebuild,
+  virt-manager-0.10.0.ebuild:
+  Fix depends to account for new Python bindings package for libvirt.
+
+  02 Dec 2013; Doug Goldstein <cardoe@gentoo.org> -virt-manager-0.9.4.ebuild:
+  Remove older version
 
   25 Sep 2013; Justin Lecher <jlec@gentoo.org> virt-manager-0.10.0.ebuild,
   virt-manager-0.10.0-r1.ebuild, virt-manager-9999.ebuild:
