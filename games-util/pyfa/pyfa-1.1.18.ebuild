@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.15.ebuild,v 1.2 2013/07/30 08:16:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-1.1.18.ebuild,v 1.1 2013/12/02 02:09:29 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -10,11 +10,17 @@ inherit eutils gnome2-utils python-r1
 
 DESCRIPTION="Python Fitting Assistant - a ship fitting application for EVE Online"
 HOMEPAGE="https://github.com/DarkFenX/Pyfa"
-SRC_URI="http://go-dl.eve-files.com/media/corp/Kadesh/${P}-odyssey-1.0-src.zip"
 
 LICENSE="GPL-3+ LGPL-2.1+ CC-BY-2.5 free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+if [[ ${PV} = 9999 ]]; then
+	EGIT_REPO_URI="https://github.com/DarkFenX/Pyfa.git"
+	inherit git-2
+	KEYWORDS=""
+else
+	SRC_URI="https://github.com/DarkFenX/Pyfa/releases/download/v${PV}/${P}-rubicon-1.0-src.zip"
+	KEYWORDS="~amd64 ~arm ~x86"
+fi
 IUSE="+graph"
 
 RDEPEND="dev-python/sqlalchemy[${PYTHON_USEDEP}]
@@ -33,9 +39,6 @@ src_prepare() {
 
 	# make staticPath settable from configforced again
 	epatch "${FILESDIR}/${PN}-1.1-staticPath.patch"
-
-	# use correct slot of wxpython, http://trac.evefit.org/ticket/475
-	epatch "${FILESDIR}/${PN}-1.1.4-wxversion.patch"
 
 	# do not try to save exported html to python sitedir
 	epatch "${FILESDIR}/${PN}-1.1.8-html-export-path.patch"
@@ -59,7 +62,8 @@ src_install() {
 	pyfa_py_install() {
 		local packagedir=$(python_get_sitedir)/${PN}
 		insinto "${packagedir}"
-		doins -r eos gui icons service config*.py info.py __init__.py gpl.txt
+		doins -r eos gui icons service config*.py __init__.py gpl.txt
+		[[ -e info.py ]] && doins info.py # only in zip releases
 		doins "${BUILD_DIR}/configforced.py"
 		python_doscript "${BUILD_DIR}/pyfa"
 		python_optimize
