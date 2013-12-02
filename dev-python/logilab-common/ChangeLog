@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.131 2013/09/05 18:46:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.132 2013/12/02 12:21:44 mgorny Exp $
+
+  02 Dec 2013; Michał Górny <mgorny@gentoo.org> logilab-common-0.59.1.ebuild,
+  logilab-common-0.60.0.ebuild:
+  Fix test invocation to write to TEST_DIR rather than BUILD_DIR.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> logilab-common-0.59.1.ebuild,
   logilab-common-0.60.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.59.1.ebuild,v 1.5 2013/09/05 18:46:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.59.1.ebuild,v 1.6 2013/12/02 12:21:44 mgorny Exp $
 
 EAPI=5
 # broken with python3.3, bug #449276
@@ -58,7 +58,7 @@ python_test() {
 	export TZ=UTC
 
 	# Make sure that the tests use correct modules.
-	pushd "${BUILD_DIR}"/lib > /dev/null || die
+	pushd "${TEST_DIR}"/lib > /dev/null || die
 	"${TEST_DIR}"/scripts/pytest || die "Tests fail with ${EPYTHON}"
 	popd > /dev/null || die
 }
