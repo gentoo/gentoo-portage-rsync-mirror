@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.91 2013/11/11 15:58:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.92 2013/12/02 13:14:09 mgorny Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -249,10 +249,8 @@ distutils_install_for_testing() {
 	# 3) non-root 'install' complains about PYTHONPATH and missing dirs,
 	#    so we need to set it properly and mkdir them,
 	# 4) it runs a bunch of commands which write random files to cwd,
-	#    in order to avoid that, we need to run them ourselves to pass
-	#    alternate build paths,
-	# 5) 'install' needs to go before 'bdist_egg' or the latter would
-	#    re-set install paths.
+	#    in order to avoid that, we add the necessary path overrides
+	#    in _distutils-r1_create_setup_cfg.
 
 	TEST_DIR=${BUILD_DIR}/test
 	local bindir=${TEST_DIR}/scripts
@@ -265,12 +263,6 @@ distutils_install_for_testing() {
 			--install-lib="${libdir}"
 			--install-scripts="${bindir}"
 	)
-
-	if "${PYTHON:-python}" setup.py --help bdist_egg &>/dev/null; then
-		add_args+=(
-			bdist_egg --dist-dir="${TEST_DIR}"
-		)
-	fi
 
 	mkdir -p "${libdir}" || die
 	esetup.py "${add_args[@]}" "${@}"
@@ -367,6 +359,11 @@ _distutils-r1_create_setup_cfg() {
 
 		[egg_info]
 		egg-base = ${BUILD_DIR}
+
+		# this is needed by distutils_install_for_testing since
+		# setuptools like to create .egg files for install --home.
+		[bdist_egg]
+		dist-dir = ${BUILD_DIR}/dist
 	_EOF_
 }
 
