@@ -9,6 +9,7 @@
   </maintainer>
   <use>
     <flag name="cuda">Use nvidia cuda toolkit for speeding up cracking on capable devices</flag>
+    <flag name="mozilla"> Support mozilla password cracking</flag>
     <flag name="opencl">Enable opencl support for speeding up cracking on capable devices</flag>
   </use>
 </pkgmetadata>
