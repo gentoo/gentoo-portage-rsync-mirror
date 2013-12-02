@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/sure
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sure/ChangeLog,v 1.1 2013/12/02 01:04:19 idella4 Exp $
+
+*sure-1.2.3 (02 Dec 2013)
+
+  02 Dec 2013; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +sure-1.2.3.ebuild:
+  new dep of test suite of new package httpretty, ebuild prepped by me
