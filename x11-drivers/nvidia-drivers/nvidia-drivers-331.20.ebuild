@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-331.20.ebuild,v 1.4 2013/11/18 19:39:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-331.20.ebuild,v 1.5 2013/12/02 02:43:07 floppym Exp $
 
 EAPI=5
 
@@ -169,12 +169,12 @@ src_prepare() {
 #		convert_to_m "${NV_SRC}"/Makefile.kbuild
 	fi
 
-	#if use pax_kernel; then
-	#	ewarn "Using PAX patches is not supported. You will be asked to"
-	#	ewarn "use a standard kernel should you have issues. Should you"
-	#	ewarn "need support with these patches, contact the PaX team."
-	#	epatch "${FILESDIR}"/${P}-pax-usercopy.patch
-	#fi
+	if use pax_kernel; then
+		ewarn "Using PAX patches is not supported. You will be asked to"
+		ewarn "use a standard kernel should you have issues. Should you"
+		ewarn "need support with these patches, contact the PaX team."
+		epatch "${FILESDIR}"/${PN}-331.13-pax-usercopy.patch
+	fi
 
 	# Allow user patches so they can support RC kernels and whatever else
 	epatch_user
