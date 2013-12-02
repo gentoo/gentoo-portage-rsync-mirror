@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsimple-dyndns/dnsimple-dyndns-0.1.ebuild,v 1.1 2013/11/19 03:36:23 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsimple-dyndns/dnsimple-dyndns-0.1.ebuild,v 1.2 2013/12/02 04:37:25 rafaelmartins Exp $
 
 EAPI=5
 
@@ -28,7 +28,6 @@ fi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
 IUSE=""
 
 DEPEND=">=dev-python/requests-2.0.0

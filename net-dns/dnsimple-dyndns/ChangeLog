@@ -1,10 +1,13 @@
 # ChangeLog for net-dns/dnsimple-dyndns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsimple-dyndns/ChangeLog,v 1.1 2013/11/19 03:36:23 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsimple-dyndns/ChangeLog,v 1.2 2013/12/02 04:37:25 rafaelmartins Exp $
+
+  02 Dec 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  dnsimple-dyndns-0.1.ebuild:
+  Package was keyword-masked by mistake
 
 *dnsimple-dyndns-0.1 (19 Nov 2013)
 
   19 Nov 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
   +dnsimple-dyndns-0.1.ebuild, +metadata.xml:
   Initial commit.
-
