@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/cvmfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/ChangeLog,v 1.7 2013/09/09 16:34:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/ChangeLog,v 1.8 2013/12/01 23:36:22 bicatali Exp $
+
+*cvmfs-9999 (01 Dec 2013)
+
+  01 Dec 2013; Sébastien Fabbro <bicatali@gentoo.org> +cvmfs-9999.ebuild:
+  Added live ebuild, 2.1.15 does not pass tests
 
   09 Sep 2013; Sébastien Fabbro <bicatali@gentoo.org> -cvmfs-2.1.12.ebuild,
   cvmfs-2.1.14.ebuild:
