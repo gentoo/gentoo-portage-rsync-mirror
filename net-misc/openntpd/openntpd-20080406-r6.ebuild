@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r5.ebuild,v 1.2 2013/12/01 21:07:36 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r6.ebuild,v 1.1 2013/12/02 13:32:13 ottxor Exp $
 
 EAPI=5
 
@@ -47,6 +47,7 @@ src_prepare() {
 	sed -i '/NTPD_USER/s:_ntp:ntp:' ntpd.h || die
 
 	epatch "${WORKDIR}"/debian/patches/*.patch
+	epatch "${FILESDIR}/${P}-pidfile.patch"
 	sed -i 's:debian:gentoo:g' ntpd.conf || die
 	eautoreconf # deb patchset touches .ac files and such
 }
@@ -61,13 +62,14 @@ src_configure() {
 src_install() {
 	default
 
-	cp "${FILESDIR}/${PN}.init.d-${PV}-r4" "${T}/ntpd" || die
-	use !syslog || sed -e '8,12d' -i "${T}/ntpd" || die
-	doinitd "${T}/ntpd"
-	newconfd "${FILESDIR}/${PN}.conf.d-${PV}-r3" ntpd
-
-	insinto /etc/logrotate.d
-	newins "${FILESDIR}/${PN}.logrotate-${PVR}" "${PN}"
+	if use syslog ; then
+		newinitd "${FILESDIR}/${PN}.init.d-${PV}-r6" ntpd
+	else
+		newinitd "${FILESDIR}/${PN}.init.d-${PV}-r4" ntpd
+		insinto /etc/logrotate.d
+		newins "${FILESDIR}/${PN}.logrotate-${PV}-r5" ntpd
+	fi
+	newconfd "${FILESDIR}/${PN}.conf.d-${PV}-r6" ntpd
 
 	systemd_newunit "${FILESDIR}/${PN}.service-${PV}-r3" ntpd.service
 }
@@ -76,8 +78,11 @@ pkg_postinst() {
 	# remove localtime file from previous installations
 	rm -f "${EROOT}${NTP_HOME}"/etc/localtime
 	mkdir -p "${NTP_HOME}"/etc
-	ln -s /etc/localtime "${NTP_HOME}"/etc/localtime || die
+	ln /etc/localtime "${NTP_HOME}"/etc/localtime || die
 	chown -R root:root "${EROOT}${NTP_HOME}" || die
+
+	use syslog && [[ -f ${EROOT}/var/log/ntpd.log ]] && \
+		ewarn "There is an orphaned logfile '/var/log/ntpd.log', please remove it!"
 }
 
 pkg_postrm() {
