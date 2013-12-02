@@ -1,22 +1,22 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.2-r2.ebuild,v 1.3 2010/04/29 19:46:17 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.8.0.ebuild,v 1.1 2013/12/02 11:43:54 pinkbyte Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils toolchain-funcs
 
-MY_P=${P/client}
-MY_CMD=pptp-command-20050401
+MY_P="${P/client}"
+MY_CMD="pptp-command-20130515"
 
 DESCRIPTION="Linux client for PPTP"
 HOMEPAGE="http://pptpclient.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pptpclient/${MY_P}.tar.gz
-	mirror://gentoo/${MY_CMD}.gz"
+	http://dev.gentoo.org/~pinkbyte/distfiles/pptpclient/${MY_CMD}.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc ppc64 x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="tk"
 
 DEPEND="net-dialup/ppp
@@ -29,18 +29,19 @@ RESTRICT="test" #make test is useless and vector_test.c is broken
 
 S="${WORKDIR}/${MY_P}"
 
+DOCS=( AUTHORS ChangeLog DEVELOPERS NEWS README TODO USING )
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-process-name.patch
-	epatch "${FILESDIR}"/${P}-ip-path.patch
+	epatch_user
 }
 
 src_compile() {
-	emake OPTIMISE= DEBUG= CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)" || die "emake failed"
+	emake OPTIMISE= DEBUG= CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog DEVELOPERS NEWS README TODO USING
+	default
 	dodoc Documentation/*
 	dodir /etc/pptp.d
 
