@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tempita
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.34 2013/12/01 16:58:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.35 2013/12/02 17:18:45 bicatali Exp $
+
+  02 Dec 2013; Sébastien Fabbro <bicatali@gentoo.org> tempita-0.5.1-r2.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *tempita-0.5.1-r2 (01 Dec 2013)
 

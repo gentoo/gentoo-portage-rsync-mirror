@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.11 2013/10/23 17:40:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.12 2013/12/02 17:09:11 floppym Exp $
+
+  02 Dec 2013; Mike Gilbert <floppym@gentoo.org> pillow-2.1.0.ebuild:
+  Drop unused test flag from IUSE.
 
   23 Oct 2013; Agostino Sarubbo <ago@gentoo.org> pillow-2.1.0.ebuild:
   Stable for ppc64, wrt bug #488048
