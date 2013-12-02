@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/ccid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.99 2013/10/12 20:13:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ChangeLog,v 1.100 2013/12/02 21:43:32 flameeyes Exp $
+
+*ccid-1.4.14 (02 Dec 2013)
+
+  02 Dec 2013; Diego E. Pettenò <flameeyes@gentoo.org> +ccid-1.4.14.ebuild,
+  -ccid-1.4.11.ebuild, -ccid-1.4.13.ebuild:
+  Version bump; remove old.
 
 *ccid-1.4.13 (12 Oct 2013)
 

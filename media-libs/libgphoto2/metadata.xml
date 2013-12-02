@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<herd>graphics</herd>
+	<use>
+		<flag name="serial">Enable serial port support</flag>
+	</use>
 </pkgmetadata>

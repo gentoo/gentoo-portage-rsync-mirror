@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.16 2013/08/27 21:26:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.17 2013/12/02 21:45:17 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (02 Dec 2013)
+# Missing keywords, bug #493156
+media-libs/libgphoto2 serial
 
 # nvidia-driver uses acpid
 x11-drivers/nvidia-drivers acpi

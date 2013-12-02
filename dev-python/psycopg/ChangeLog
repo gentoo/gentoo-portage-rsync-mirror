@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.165 2013/10/23 19:47:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.166 2013/12/02 21:42:06 johu Exp $
+
+  02 Dec 2013; Johannes Huber <johu@gentoo.org> psycopg-2.5.1.ebuild:
+  x86 stable, bug #487872
 
   23 Oct 2013; Markus Meier <maekke@gentoo.org> psycopg-2.5.1.ebuild:
   arm stable, bug #487872

@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.13.ebuild,v 1.1 2013/10/12 20:13:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.4.14.ebuild,v 1.1 2013/12/02 21:43:32 flameeyes Exp $
 
 EAPI=5
 
-STUPID_NUM="3959"
+STUPID_NUM="3971"
 
 inherit eutils toolchain-funcs udev autotools-utils
 

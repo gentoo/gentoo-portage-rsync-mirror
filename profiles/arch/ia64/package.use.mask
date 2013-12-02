@@ -1,6 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.128 2013/11/28 22:49:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.129 2013/12/02 21:45:17 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (02 Dec 2013)        
+# Missing keywords, bug #493156
+media-libs/libgphoto2 serial
 
 # Pacho Ramos <pacho@gentoo.org> (28 Nov 2013)
 # Missing keywords, bug #492820

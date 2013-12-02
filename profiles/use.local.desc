@@ -3206,6 +3206,7 @@ media-libs/libextractor:magic - Enable magic support using sys-apps/file
 media-libs/libextractor:midi - Enable MIDI support through media-libs/libsmf
 media-libs/libggi:vis - Enables sparc vis support for libggi
 media-libs/libgnome-media-profiles:twolame - Allow encoding MPEG Audio Layer 2 (MP2) files using twolame
+media-libs/libgphoto2:serial - Enable serial port support
 media-libs/libgpod:gtk - Enable ArtworkDB support
 media-libs/liblastfm:fingerprint - Build the lastfm-fingerprint library
 media-libs/libmp4v2:utils - Install command-line utilities
