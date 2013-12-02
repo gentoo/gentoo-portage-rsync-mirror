@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.106 2013/11/15 08:51:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.107 2013/12/02 09:11:28 wired Exp $
+
+*pf-sources-3.12.1 (02 Dec 2013)
+
+  02 Dec 2013; Alex Alexander <wired@gentoo.org> +pf-sources-3.12.1.ebuild:
+  version bump
 
   15 Nov 2013; Markos Chandras <hwoarang@gentoo.org> -pf-sources-3.10.0.ebuild,
   -pf-sources-3.11.1.ebuild, -pf-sources-3.11.2.ebuild,
