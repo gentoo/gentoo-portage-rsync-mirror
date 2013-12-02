@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.100 2013/12/01 22:53:59 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.101 2013/12/01 23:03:05 jmbsvicetto Exp $
+
+  01 Dec 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -drupal-7.22.ebuild, -drupal-7.23.ebuild:
+  Dropping security vulnerable versions.
 
 *drupal-6.29 (01 Dec 2013)
 
