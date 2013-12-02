@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/s3fs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.30 2013/09/07 20:00:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3fs/ChangeLog,v 1.31 2013/12/02 09:54:15 radhermit Exp $
+
+*s3fs-1.74 (02 Dec 2013)
+
+  02 Dec 2013; Tim Harder <radhermit@gentoo.org> +s3fs-1.74.ebuild:
+  Version bump.
 
   07 Sep 2013; Tim Harder <radhermit@gentoo.org> -s3fs-1.61.ebuild,
   -s3fs-1.65.ebuild, -s3fs-1.67.ebuild, -s3fs-1.68.ebuild, -s3fs-1.69.ebuild,

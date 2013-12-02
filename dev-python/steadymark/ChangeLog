@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/steadymark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/steadymark/ChangeLog,v 1.1 2013/12/02 06:49:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/steadymark/ChangeLog,v 1.2 2013/12/02 09:45:59 patrick Exp $
+
+  02 Dec 2013; Patrick Lauer <patrick@gentoo.org> steadymark-0.5.3.ebuild:
+  Whitespace
 
 *steadymark-0.5.3 (02 Dec 2013)
 
