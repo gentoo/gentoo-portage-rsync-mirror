@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/paste
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.23 2013/10/22 14:15:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.24 2013/12/03 12:57:34 dev-zero Exp $
+
+*paste-1.7.5.1-r2 (03 Dec 2013)
+
+  03 Dec 2013; Tiziano Müller <dev-zero@gentoo.org>
+  +files/paste-1.7.5.1-email-mime.patch, +files/paste-1.7.5.1-hmac.patch,
+  +files/paste-1.7.5.1-python27-lambda.patch, +files/paste-1.7.5.1-rfc822.patch,
+  +files/paste-1.7.5.1-types.patch, +files/paste-1.7.5.1-unbundle-stdlib.patch,
+  +files/paste-1.7.5.1-unbundle-tempita.patch,
+  +files/paste-1.7.5.1-userdict.patch, +paste-1.7.5.1-r2.ebuild:
+  Revision bump to import patches from Debian. Unbundle Tempita in the process.
+  Add note about py3-compatibility.
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> paste-1.7.5.1-r1.ebuild:
   Marked ~x64-macos, bug #487670
