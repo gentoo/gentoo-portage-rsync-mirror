@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8403 2013/12/02 21:45:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8404 2013/12/03 07:20:49 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Dec 2013; Samuli Suominen <ssuominen@gentoo.org>
+  targets/desktop/package.use:
+  Remove legacy references to USE="hwdb keymap" for virtual/udev and co.
 
   02 Dec 2013; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
   arch/amd64-fbsd/package.use.mask, arch/ia64/package.use.mask,
