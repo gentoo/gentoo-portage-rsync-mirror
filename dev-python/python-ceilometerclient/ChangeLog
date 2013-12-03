@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-ceilometerclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ceilometerclient/ChangeLog,v 1.1 2013/10/23 05:56:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ceilometerclient/ChangeLog,v 1.2 2013/12/03 15:00:33 idella4 Exp $
+
+*python-ceilometerclient-1.0.6-r1 (03 Dec 2013)
+
+  03 Dec 2013; Ian Delaney <idella4@gentoo.org>
+  +python-ceilometerclient-1.0.6-r1.ebuild:
+  revbump; add IUSE test, test deps, test phase, thanks to Chicago for reporting
 
 *python-ceilometerclient-1.0.6 (23 Oct 2013)
 
