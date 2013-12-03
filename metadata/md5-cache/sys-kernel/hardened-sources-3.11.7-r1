@@ -11,5 +11,5 @@ RDEPEND=>=sys-devel/gcc-4.5 !build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-
 RESTRICT=binchecks strip
 SLOT=3.11.7-r1
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.11.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.11.N/deblob-3.11 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.11.N/deblob-check -> deblob-check-3.11 ) http://dev.gentoo.org/~blueness/hardened-sources/hardened-patches/hardened-patches-3.11.7-2.extras.tar.bz2 mirror://gentoo/genpatches-3.11-10.base.tar.xz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	kernel-2	4d3bcae9a98bcc93a217f087c087e16d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	kernel-2	4d3bcae9a98bcc93a217f087c087e16d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=86125d9cd63a8b60f0a3747ef6166dad

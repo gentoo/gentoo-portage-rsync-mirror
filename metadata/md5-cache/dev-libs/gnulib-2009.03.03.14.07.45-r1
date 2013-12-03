@@ -8,5 +8,5 @@ KEYWORDS=~ppc-aix ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~drizzt/distfiles/gnulib-8d2524ce78ca107074727cbd8780c26a203a107c.tar.gz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=a2f0b39ae26200660651aac4b966a417

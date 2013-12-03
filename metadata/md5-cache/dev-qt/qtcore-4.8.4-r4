@@ -10,5 +10,5 @@ PDEPEND=qt3support? ( ~dev-qt/qtgui-4.8.4[aqua=,debug=,glib=,qt3support] )
 RDEPEND=sys-libs/zlib glib? ( dev-libs/glib:2 ) icu? ( >=dev-libs/icu-49:= ) ssl? ( dev-libs/openssl ) !<x11-libs/cairo-1.10.2-r2
 SLOT=4
 SRC_URI=http://download.qt-project.org/official_releases/qt/4.8/4.8.4/qt-everywhere-opensource-src-4.8.4.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	qt4-build	df8f37ad99366cf3f89fa8d5b49ceb75	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	qt4-build	df8f37ad99366cf3f89fa8d5b49ceb75	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=53df7e9f074e5d1f0ca3457510422908

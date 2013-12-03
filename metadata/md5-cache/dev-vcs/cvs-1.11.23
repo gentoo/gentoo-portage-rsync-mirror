@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2
 RDEPEND=>=sys-libs/zlib-1.1.4
 SLOT=0
 SRC_URI=mirror://gnu/non-gnu/cvs/source/stable/1.11.23/cvs-1.11.23.tar.bz2 doc? ( mirror://gnu/non-gnu/cvs/source/stable/1.11.23/cederqvist-1.11.23.html.bz2 mirror://gnu/non-gnu/cvs/source/stable/1.11.23/cederqvist-1.11.23.pdf mirror://gnu/non-gnu/cvs/source/stable/1.11.23/cederqvist-1.11.23.ps )
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b075a3810fb2a3bc2b2d8304dd26327c

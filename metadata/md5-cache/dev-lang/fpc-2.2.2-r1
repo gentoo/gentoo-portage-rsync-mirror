@@ -8,5 +8,5 @@ LICENSE=GPL-2 LGPL-2.1-with-linking-exception
 RDEPEND=!dev-lang/fpc-bin !dev-lang/fpc-source
 SLOT=0
 SRC_URI=mirror://sourceforge/freepascal/fpcbuild-2.2.2.tar.gz x86? ( mirror://sourceforge/freepascal/fpc-2.2.2.i386-linux.tar ) sparc? ( mirror://sourceforge/freepascal/fpc-2.0.0.sparc-linux.tar ) ppc? ( mirror://sourceforge/freepascal/fpc-2.2.0.powerpc-linux.tar ) amd64? ( mirror://sourceforge/freepascal/fpc-2.2.2.x86_64-linux.tar ) doc? ( mirror://sourceforge/freepascal/fpc-2.2.2-doc-pdf.zip )
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=809fabc7acc5c78ae19688d7d4d509fc

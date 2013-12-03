@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=net-im/jabber-base >=dev-lang/lua-5.1 >=net-dns/libidn-1.1 >=dev-libs/openssl-0.9.8 dev-lua/luaexpat dev-lua/luafilesystem ipv6? ( >=dev-lua/luasocket-3 ) !ipv6? ( dev-lua/luasocket ) libevent? ( >=dev-lua/luaevent-0.4.3 ) mysql? ( dev-lua/luadbi[mysql] ) postgres? ( dev-lua/luadbi[postgres] ) sqlite? ( dev-lua/luadbi[sqlite] ) ssl? ( dev-lua/luasec ) zlib? ( dev-lua/lua-zlib )
 SLOT=0
 SRC_URI=http://prosody.im/tmp/0.9.1/prosody-0.9.1.tar.gz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=1947e9573461db7a3c97152de04584b8

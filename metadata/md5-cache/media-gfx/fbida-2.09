@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=curl? ( net-misc/curl ) gif? ( media-libs/giflib ) lirc? ( app-misc/lirc ) pdf? ( app-text/ghostscript-gpl media-libs/tiff ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) imagemagick? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) scanner? ( media-gfx/sane-backends ) X? ( >=x11-libs/motif-2.3:0 x11-libs/libX11 x11-libs/libXpm x11-libs/libXt ) !media-gfx/fbi >=media-libs/fontconfig-2.2 >=media-libs/freetype-2.0 media-libs/libexif virtual/jpeg virtual/ttf-fonts
 SLOT=0
 SRC_URI=http://www.kraxel.org/releases/fbida/fbida-2.09.tar.gz mirror://gentoo/ida.png.bz2
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=822395e5b7c403b00c4cbb6d849cdc2c

@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/ocaml-3.10:=[ocamlopt?]
 SLOT=0/6.07_p1
 SRC_URI=http://pauillac.inria.fr/~ddr/camlp5/distrib/src/camlp5-6.07.tgz http://pauillac.inria.fr/~ddr/camlp5/distrib/src/patch-6.07-1 -> camlp5-6.07-patch-1.patch
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8f47ab8adcde0b9ae9bd9e645653aa24

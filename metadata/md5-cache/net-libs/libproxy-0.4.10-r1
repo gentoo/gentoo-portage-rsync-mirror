@@ -10,5 +10,5 @@ PDEPEND=networkmanager? ( net-misc/networkmanager )
 RDEPEND=gnome? ( >=dev-libs/glib-2.26:2 ) kde? ( >=kde-base/kdelibs-4.4.5 ) mono? ( dev-lang/mono ) networkmanager? ( sys-apps/dbus ) perl? ( dev-lang/perl ) spidermonkey? ( >=dev-lang/spidermonkey-1.8.5:0 ) webkit? ( >=net-libs/webkit-gtk-1.6:3 ) python? ( || ( =dev-lang/python-2.7* =dev-lang/python-2.6* ) )
 SLOT=0
 SRC_URI=http://libproxy.googlecode.com/files/libproxy-0.4.10.tar.gz
-_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=929b459e6bafb83eed2a58757c1846b4

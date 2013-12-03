@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/pygtk dev-python/numpy >=dev-python/pycairo-1.4 dev-libs/protobuf[python] >=dev-libs/json-c-0.11 >=media-libs/lcms-2.0 media-libs/libpng || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=http://download.gna.org/mypaint/mypaint-1.1.0.tar.bz2
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=bc5d9c5ff5743bcb687a91e4b3d44b26

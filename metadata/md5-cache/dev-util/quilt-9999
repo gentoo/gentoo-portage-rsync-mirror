@@ -7,5 +7,5 @@ IUSE=graphviz
 LICENSE=GPL-2
 RDEPEND=dev-util/diffstat mail-mta/sendmail sys-apps/ed >=sys-apps/coreutils-8.5 graphviz? ( media-gfx/graphviz )
 SLOT=0
-_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	4878e7f88afc0ba0866ac112190b0fd4	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	a82a329b538368791f5a6113c60e557e	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=d98d94c41805e5c677d802abf378679f

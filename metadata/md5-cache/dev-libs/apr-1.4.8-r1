@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=elibc_glibc? ( >=sys-apps/util-linux-2.16 ) elibc_mintlib? ( >=sys-apps/util-linux-2.18 )
 SLOT=1
 SRC_URI=mirror://apache/apr/apr-1.4.8.tar.bz2
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	4878e7f88afc0ba0866ac112190b0fd4	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	67154e3c80516dc77f9f56956f5beebe	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e274bbd272c6c2ef1596a85e0efc6ccb

@@ -7,5 +7,5 @@ IUSE=+startup-notification
 LICENSE=GPL-2 LGPL-2.1
 RDEPEND=dev-libs/glib:2 dev-util/desktop-file-utils >=virtual/udev-143 virtual/freedesktop-icon-theme x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:3 x11-libs/pango x11-libs/libX11 x11-misc/shared-mime-info startup-notification? ( x11-libs/startup-notification )
 SLOT=0
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=953f92ac741b490e8d57f2c736b8bd09

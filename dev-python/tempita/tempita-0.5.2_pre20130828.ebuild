@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/tempita-0.5.1-r2.ebuild,v 1.2 2013/12/02 17:18:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/tempita-0.5.2_pre20130828.ebuild,v 1.1 2013/12/03 08:06:45 dev-zero Exp $
 
 EAPI=5
 
@@ -8,12 +8,13 @@ PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 
 inherit distutils-r1
 
-MY_PN="Tempita"
-MY_P="${MY_PN}-${PV}"
+MY_PN="tempita"
+MY_PV="abe6a7282d363fa9136199dcaf04b2c0d501d4e6"
+MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="A very small text templating language"
-HOMEPAGE="http://pythonpaste.org/tempita http://pypi.python.org/pypi/Tempita"
-SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+HOMEPAGE="http://pythonpaste.org/tempita http://pypi.python.org/pypi/Tempita https://github.com/gjhiggins/tempita"
+SRC_URI="https://github.com/gjhiggins/tempita/archive/${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -27,6 +28,5 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 python_test() {
-	cd "${BUILD_DIR}" || die
-	nosetests -v || die "Tests fail with ${EPYTHON}"
+	nosetests -w "${BUILD_DIR}" || die "Tests fail with ${EPYTHON}"
 }

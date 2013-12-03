@@ -10,5 +10,5 @@ RDEPEND==dev-lang/php-5.3*[mysqli?,postgres?,imap?,ldap?,odbc?,ctype,curl,iconv,
 REQUIRED_USE=|| ( mysqli postgres )
 SLOT=2.3.10
 SRC_URI=http://download.moodle.org/stable23/moodle-2.3.10.tgz
-_eclasses_=eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=d014c233a329ec0f4af0ec442699971b

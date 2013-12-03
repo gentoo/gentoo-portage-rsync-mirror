@@ -9,5 +9,5 @@ RDEPEND=php? ( dev-lang/php )
 REQUIRED_USE=uclibc? ( !debug )
 SLOT=0
 SRC_URI=http://monkey-project.com/releases/1.3/monkey-1.3.0.tar.gz
-_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=615a928e4da8c60b97a7c7b8e96ca348

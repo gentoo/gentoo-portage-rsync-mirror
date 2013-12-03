@@ -9,5 +9,5 @@ LICENSE=CUDPP
 RDEPEND=>=dev-util/nvidia-cuda-toolkit-4.2.9 media-libs/freeglut examples? ( >=x11-drivers/nvidia-drivers-296 media-libs/glew )
 SLOT=0
 SRC_URI=http://developer.download.nvidia.com/compute/cuda/4_2/rel/sdk/gpucomputingsdk_4.2.9_linux.run
-_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=9dd3077b975b4f9f4dad4d9f06ca21d1

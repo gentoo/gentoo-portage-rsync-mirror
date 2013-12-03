@@ -11,5 +11,5 @@ RDEPEND=>=dev-qt/qtgui-4.4:4[qt3support] >=dev-qt/qt3support-4.4:4 >=app-crypt/q
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/psi/psi-0.14.tar.bz2 http://fs.scs-tsa.de/psi_l10n/psi-0.14_langpack_for_packagers_2009-12-02.zip extras? ( mirror://gentoo/psi-extra-patches-r1428.tar.bz2 mirror://gentoo/psi-extra-iconsets-r1428.tar.bz2 )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	4878e7f88afc0ba0866ac112190b0fd4	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f03b8d2be742cc0657c6a656dd00e6f7

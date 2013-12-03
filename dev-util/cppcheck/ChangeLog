@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.42 2013/09/05 18:40:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.43 2013/12/03 08:53:50 xmw Exp $
+
+*cppcheck-1.62 (03 Dec 2013)
+*cppcheck-1.61 (03 Dec 2013)
+
+  03 Dec 2013; Michael Weber <xmw@gentoo.org> +cppcheck-1.61.ebuild,
+  +cppcheck-1.62.ebuild:
+  Version bump as reported by Christian Strahl on bug 480384.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> cppcheck-1.59-r1.ebuild,
   cppcheck-1.60.1.ebuild:
