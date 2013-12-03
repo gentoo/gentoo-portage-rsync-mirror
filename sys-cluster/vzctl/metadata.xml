@@ -12,6 +12,7 @@
 		<flag name='cgroup'>Add support to Linux kernel cgroup subsytem</flag>
 		<flag name='vz-kernel'>Support OpenVZ patched kernel (<pkg>sys-kernel/openvz-sources</pkg>)</flag>
 		<flag name='vanilla-kernel'>Support unpatched upstream Linux kernel</flag>
+		<flag name='vzmigrate'>Add support for container migration</flag>
 	</use>
 	<upstream>
 		<maintainer status="active">
