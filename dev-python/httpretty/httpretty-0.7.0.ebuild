@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httpretty/httpretty-0.7.0.ebuild,v 1.1 2013/12/02 10:24:07 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httpretty/httpretty-0.7.0.ebuild,v 1.2 2013/12/03 02:15:29 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -41,10 +41,10 @@ python_prepare_all() {
 
 python_test() {
 	# https://github.com/gabrielfalcao/HTTPretty/issues/125
-	nosetests tests \
+	nosetests tests/unit \
 		-e test_recording_calls \
 		-e test_playing_calls \
 		-e test_callback_setting_headers_and_status_response \
-		|| die "Tests failed under ${EPYTHON}"
+		tests/functional || die "Tests failed under ${EPYTHON}"
 	rm -rf tests/ "${BUILD_DIR}"/lib/tests/ || die
 }
