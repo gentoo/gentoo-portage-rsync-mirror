@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.7.ebuild,v 1.2 2013/11/30 19:59:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.7.ebuild,v 1.3 2013/12/03 22:10:06 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
@@ -25,6 +25,7 @@ KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64
 # FIXME: introspection data is built against system installation of gtk+:3
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
 # Use gtk+:2 for gtk-update-icon-cache
+# at-spi2-atk dependency needed due https://mail.gnome.org/archives/desktop-devel-list/2012-June/msg00035.html
 COMMON_DEPEND="
 	X? (
 		>=app-accessibility/at-spi2-atk-2.5.3

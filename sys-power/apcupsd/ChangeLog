@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.93 2013/11/28 20:35:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.94 2013/12/03 22:18:44 mattm Exp $
+
+  03 Dec 2013; Matthew Marlowe <mattm@gentoo.org> apcupsd-3.14.10-r5.ebuild,
+  files/apcupsd.init.4:
+  Update init file /var/run/apcupsd directory > /run/apcupsd
 
   28 Nov 2013; Mike Frysinger <vapier@gentoo.org> apcupsd-3.14.10-r5.ebuild:
   Keep KEYWORDS sorted.

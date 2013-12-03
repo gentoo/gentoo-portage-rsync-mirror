@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.1_alpha-r2.ebuild,v 1.1 2013/10/28 22:16:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.1_alpha-r2.ebuild,v 1.2 2013/12/03 22:11:01 blueness Exp $
 
 EAPI="5"
 
@@ -86,4 +86,13 @@ src_install() {
 
 pkg_postinst() {
 	readme.gentoo_pkg_postinst
+
+	if has_version ">=sys-devel/gcc-4.8.1"; then
+		ewarn "Due to a bug in  >=gcc-4.8.1, compiling ${P} with -Os leads to an infinite"
+		ewarn "loop.  See:"
+		ewarn
+		ewarn "    https://trac.torproject.org/projects/tor/ticket/10259"
+		ewarn "    http://gcc.gnu.org/bugzilla/show_bug.cgi?id=59358"
+		ewarn
+	fi
 }

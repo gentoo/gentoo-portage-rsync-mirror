@@ -1,14 +1,14 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/files/apcupsd.init.4,v 1.1 2013/10/15 09:50:19 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/files/apcupsd.init.4,v 1.2 2013/12/03 22:18:44 mattm Exp $
 
 INSTANCE="${SVCNAME#*.}"
 if [ -z "${INSTANCE}" ] || [ "${SVCNAME}" = "apcupsd" ]; then
 	INSTANCE="apcupsd"
 fi
 
-dir="/var/run/apcupsd"
+dir="/run/apcupsd"
 
 depend() {
 	use net
