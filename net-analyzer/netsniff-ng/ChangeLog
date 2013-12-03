@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/netsniff-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/ChangeLog,v 1.7 2013/08/05 07:42:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/ChangeLog,v 1.8 2013/12/03 09:22:14 xmw Exp $
+
+*netsniff-ng-0.5.8_rc3 (03 Dec 2013)
+
+  03 Dec 2013; Michael Weber <xmw@gentoo.org> +netsniff-ng-0.5.8_rc3.ebuild:
+  Version bump, add epatch_user as requested by Olipro on bug 481756.
 
 *netsniff-ng-0.5.8_rc2 (05 Aug 2013)
 

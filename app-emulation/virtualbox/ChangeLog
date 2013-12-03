@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.166 2013/11/30 18:16:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.167 2013/12/03 09:30:10 polynomial-c Exp $
+
+  03 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.3.4.ebuild:
+  New patchset. Thanks to Magnus Granberg who provided a patch for bug #488198.
 
 *virtualbox-4.3.4 (30 Nov 2013)
 
