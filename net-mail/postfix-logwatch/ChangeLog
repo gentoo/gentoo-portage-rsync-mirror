@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/postfix-logwatch
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix-logwatch/ChangeLog,v 1.1 2013/12/03 13:28:25 mjo Exp $
+
+*postfix-logwatch-1.39.07 (03 Dec 2013)
+
+  03 Dec 2013;  <mjo@gentoo.org> +metadata.xml,
+  +postfix-logwatch-1.39.07.ebuild:
+  New package: net-mail/postfix-logwatch, a log analyzer for postfix. Fixes bug
+  #309075.

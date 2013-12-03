@@ -5001,6 +5001,7 @@ net-mail/notmuch:nmbug - Install experimental tag sharing / pseudo-bug-tracking 
 net-mail/notmuch:pick - Experimental threaded message view for the emacs interface
 net-mail/notmuch:vim - Install Vim UI (experimental)
 net-mail/offlineimap:sqlite - Enable runtime support for sqlite mail status backend.
+net-mail/postfix-logwatch:logwatch - Install filters for use with sys-apps/logwatch.
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
 net-mail/qpopper:apop - Enables the pop.auth file in /etc/pop.auth
 net-mail/qpopper:drac - Enables DRAC support

@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=A log analyzer for postfix
+EAPI=5
+HOMEPAGE=http://logreporters.sourceforge.net/
+IUSE=logwatch
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=dev-lang/perl
+SLOT=0
+SRC_URI=mirror://sourceforge/logreporters/postfix-logwatch-1.39.07.tgz
+_md5_=7d529cab1e1cb1aa8da9020318f858ba

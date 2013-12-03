@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/valyriatear
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/ChangeLog,v 1.8 2013/10/03 12:39:57 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/valyriatear/ChangeLog,v 1.9 2013/12/03 13:13:30 nimiux Exp $
+
+  03 Dec 2013; Chema Alonso <nimiux@gentoo.org> valyriatear-0.6.0.ebuild:
+  Stable for amd64 wrt bug #491524
 
 *valyriatear-0.6.0 (03 Oct 2013)
 
