@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/leechcraft-meta
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.13 2013/09/24 15:54:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/ChangeLog,v 1.14 2013/12/03 18:37:55 pinkbyte Exp $
+
+  03 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> leechcraft-meta-9999.ebuild:
+  Add lc-htthare dependency
 
 *leechcraft-meta-0.6.0 (24 Sep 2013)
 

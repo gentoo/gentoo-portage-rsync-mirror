@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.993 2013/11/27 02:03:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.994 2013/12/03 18:59:46 floppym Exp $
+
+  03 Dec 2013; Mike Gilbert <floppym@gentoo.org> chromium-31.0.1650.57.ebuild,
+  chromium-32.0.1700.19.ebuild, chromium-33.0.1711.3.ebuild:
+  Set python version and libdir so that python_arch.sh can find libpython. Bug
+  492864 by Yannick Schaeffer. Thanks to John Keeping for the helpful hint.
 
   27 Nov 2013; Mike Gilbert <floppym@gentoo.org> chromium-32.0.1700.19.ebuild,
   chromium-33.0.1711.3.ebuild:

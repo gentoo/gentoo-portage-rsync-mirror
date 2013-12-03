@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.9.7.ebuild,v 1.1 2013/06/25 08:41:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-3.11.10.ebuild,v 1.1 2013/12/03 18:51:39 tomwij Exp $
 
 EAPI="5"
 ETYPE="sources"
@@ -10,8 +10,10 @@ IUSE="bfsonly"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/
 	http://users.on.net/~ckolivas/kernel/"
 
-K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="12"
+K_WANT_GENPATCHES="base extras experimental"
+K_EXP_GENPATCHES_PULL="1"
+K_EXP_GENPATCHES_NOUSE="1"
+K_GENPATCHES_VER="14"
 K_SECURITY_UNSUPPORTED="1"
 K_DEBLOB_AVAILABLE="1"
 
@@ -31,7 +33,7 @@ XTRA_INCP_MAX=""
 #--
 
 CK_VERSION="1"
-BFS_VERSION="430"
+BFS_VERSION="441"
 
 CK_FILE="patch-${K_BRANCH_ID}-ck${CK_VERSION}.bz2"
 BFS_FILE="${K_BRANCH_ID}-sched-bfs-${BFS_VERSION}.patch"
@@ -62,7 +64,7 @@ CK_INCP_LIST=""
 #-- Local patches needed for the ck-patches to apply smoothly (3.4/3.5) -------
 
 PRE_CK_FIX=""
-POST_CK_FIX="${FILESDIR}/${PN}-3.9-virt_cpu_accounting_gen-aCOSwt_P7.patch"
+POST_CK_FIX=""
 
 #--
 
@@ -81,6 +83,10 @@ fi
 UNIPATCH_LIST="${UNIPATCH_LIST} ${CK_INCP_LIST} ${POST_CK_FIX}"
 
 UNIPATCH_STRICTORDER="yes"
+
+#-- Since experimental genpatches && we want BFQ irrespective of experimental -
+
+K_EXP_GENPATCHES_LIST="50*_*.patch*"
 
 src_prepare() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.7 2013/08/21 14:40:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.8 2013/12/03 18:37:55 pinkbyte Exp $
 
 EAPI="5"
 
@@ -61,6 +61,7 @@ RDEPEND="
 		~app-leechcraft/lc-gmailnotifier-${PV}
 		~app-leechcraft/lc-nacheku-${PV}
 		~app-leechcraft/lc-xtazy-${PV}
+		~app-leechcraft/lc-htthare-${PV}
 		de? (
 			~app-leechcraft/lc-fenet-${PV}
 			~app-leechcraft/lc-kbswitch-${PV}

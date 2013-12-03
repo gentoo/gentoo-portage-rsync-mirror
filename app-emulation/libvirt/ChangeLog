@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.341 2013/11/11 03:41:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.343 2013/12/03 18:45:34 cardoe Exp $
+
+  03 Dec 2013; Doug Goldstein <cardoe@gentoo.org> libvirt-1.2.0.ebuild:
+  Each version adds more symbols into the shared library which the bindings will
+  need to be rebuilt to expose.
+
+*libvirt-1.2.0 (03 Dec 2013)
+
+  03 Dec 2013; Doug Goldstein <cardoe@gentoo.org> +libvirt-1.2.0.ebuild,
+  libvirt-9999.ebuild:
+  Version bump. Python bindings are now in their own package called dev-python
+  /libvirt-python. Update the live ebuild to the latest changes from 1.2.0.
 
   11 Nov 2013; Mike Gilbert <floppym@gentoo.org> libvirt-1.1.4.ebuild,
   libvirt-9999.ebuild:

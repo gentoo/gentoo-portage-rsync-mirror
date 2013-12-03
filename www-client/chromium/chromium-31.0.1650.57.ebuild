@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-31.0.1650.57.ebuild,v 1.3 2013/11/16 08:37:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-31.0.1650.57.ebuild,v 1.4 2013/12/03 18:59:46 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -307,6 +307,12 @@ src_configure() {
 
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
+
+	# Set python version and libdir so that python_arch.sh can find libpython.
+	# Bug 492864.
+	myconf+="
+		-Dpython_ver=${EPYTHON#python}
+		-Dsystem_libdir=$(get_libdir)"
 
 	if ! use bindist; then
 		# Enable H.264 support in bundled ffmpeg.
