@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/git-bz-9999.ebuild,v 1.7 2013/10/15 19:37:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/git-bz-9999.ebuild,v 1.8 2013/12/03 12:06:21 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} pypy2_0 )
@@ -9,8 +9,7 @@ inherit python-single-r1
 
 #if LIVE
 EGIT_REPO_URI="git://git.fishsoup.net/${PN}
-	http://git.fishsoup.net/cgit/${PN}
-	https://bitbucket.org/mgorny/${PN}.git"
+	http://git.fishsoup.net/cgit/${PN}"
 inherit git-r3
 #endif
 
