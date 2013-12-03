@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/slrn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.33 2013/07/11 19:04:41 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.34 2013/12/03 06:56:56 radhermit Exp $
+
+  03 Dec 2013; Tim Harder <radhermit@gentoo.org> -slrn-0.9.8.1_p1.ebuild,
+  -slrn-0.9.9_p1.ebuild, -slrn-1.0.0_pre18.ebuild,
+  -files/slrn-0.9.9_p1-dont-strip.patch:
+  Remove old.
 
   11 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> slrn-1.0.1.ebuild:
   ppc stable, bug 476430

@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/evented-spec/evented-spec-0.9.0.ebuild,v 1.2 2012/07/29 07:01:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/evented-spec/evented-spec-0.9.0.ebuild,v 1.3 2013/12/03 06:51:43 graaff Exp $
 
-EAPI=4
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+EAPI=5
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.textile"
