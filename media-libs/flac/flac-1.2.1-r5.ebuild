@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r5.ebuild,v 1.4 2013/06/26 20:21:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r5.ebuild,v 1.5 2013/12/02 23:31:57 radhermit Exp $
 
 EAPI=5
 
@@ -66,7 +66,7 @@ src_configure() {
 
 src_test() {
 	if [[ ${UID} != 0 ]]; then
-		autotools-multilib_src_test
+		autotools-multilib_src_test -j1
 	else
 		ewarn "Tests will fail if ran as root, skipping."
 	fi

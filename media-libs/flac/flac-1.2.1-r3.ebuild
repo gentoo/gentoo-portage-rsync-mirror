@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r3.ebuild,v 1.13 2012/05/05 08:02:39 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.2.1-r3.ebuild,v 1.14 2013/12/02 23:31:57 radhermit Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -52,7 +52,7 @@ src_configure() {
 
 src_test() {
 	if [ $UID != 0 ]; then
-		emake check || die
+		emake -j1 check || die
 	else
 		ewarn "Tests will fail if ran as root, skipping."
 	fi

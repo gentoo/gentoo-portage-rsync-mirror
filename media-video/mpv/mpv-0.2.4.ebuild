@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.2.1.ebuild,v 1.1 2013/10/20 17:16:25 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.2.4.ebuild,v 1.1 2013/12/02 23:51:37 radhermit Exp $
 
 EAPI=5
 
@@ -18,9 +18,9 @@ LICENSE="GPL-2"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa bluray bs2b +cdio doc-pdf dvb +dvd +enca encode +iconv jack joystick
-jpeg ladspa lcms +libass libcaca libguess lirc lua luajit mng +mp3 -openal +opengl oss
-portaudio +postproc pulseaudio pvr +quvi radio samba +shm +threads v4l vaapi
+IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd +enca encode +iconv jack -joystick
+jpeg ladspa lcms +libass libcaca libguess lirc lua luajit mng +mpg123 -openal +opengl oss
+portaudio +postproc pulseaudio pvr +quvi -radio samba +shm +threads v4l vaapi
 vcd vdpau vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
@@ -87,7 +87,7 @@ RDEPEND+="
 		luajit? ( dev-lang/luajit:2 )
 	)
 	mng? ( media-libs/libmng )
-	mp3? ( media-sound/mpg123 )
+	mpg123? ( media-sound/mpg123 )
 	openal? ( >=media-libs/openal-1.13 )
 	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
 	postproc? (
@@ -105,6 +105,7 @@ RDEPEND+="
 		)
 	)
 	samba? ( net-fs/samba )
+	v4l? ( media-libs/libv4l )
 	wayland? (
 		>=dev-libs/wayland-1.0.0
 		media-libs/mesa[egl,wayland]
@@ -218,7 +219,7 @@ src_configure() {
 	#####################################
 	use dvb || myconf+=" --disable-dvb"
 	use pvr || myconf+=" --disable-pvr"
-	use v4l || myconf+=" --disable-tv --disable-tv-v4l2"
+	use v4l || myconf+=" --disable-libv4l2 --disable-tv --disable-tv-v4l2"
 	if use radio; then
 		myconf+=" --enable-radio --enable-radio-capture"
 	else
@@ -228,8 +229,7 @@ src_configure() {
 	##########
 	# Codecs #
 	##########
-	use mp3 || myconf+=" --disable-mpg123"
-	uses="jpeg mng"
+	uses="jpeg mng mpg123"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
