@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-levenshtein
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/ChangeLog,v 1.18 2013/09/05 18:46:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-levenshtein/ChangeLog,v 1.19 2013/12/03 06:20:59 patrick Exp $
+
+*python-levenshtein-0.11.1 (03 Dec 2013)
+
+  03 Dec 2013; Patrick Lauer <patrick@gentoo.org>
+  +python-levenshtein-0.11.1.ebuild:
+  Bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org>
   python-levenshtein-0.10.2-r1.ebuild:
