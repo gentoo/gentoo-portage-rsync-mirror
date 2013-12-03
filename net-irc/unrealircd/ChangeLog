@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.110 2013/11/18 17:06:50 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.112 2013/12/03 05:37:20 binki Exp $
+
+  03 Dec 2013; Nathan Phillip Brink <binki@gentoo.org>
+  -unrealircd-3.2.10-r1.ebuild:
+  Drop unrealircd-3.2.10-r1, old and never stabilized.
+
+*unrealircd-3.2.10.2 (03 Dec 2013)
+
+  03 Dec 2013; Nathan Phillip Brink <binki@gentoo.org>
+  +unrealircd-3.2.10.2.ebuild:
+  Bump to unrealircd-3.2.10.2 for security bug #492526 addressing issues in
+  3.2.10 and 3.2.10.1.
 
   18 Nov 2013; Nathan Phillip Brink <binki@gentoo.org>
   unrealircd-3.2.10-r1.ebuild, unrealircd-3.2.10.1.ebuild,
