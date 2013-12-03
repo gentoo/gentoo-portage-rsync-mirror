@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.124 2013/05/21 03:02:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.125 2013/12/03 01:31:09 creffett Exp $
+
+*mantisbt-1.2.15-r1 (03 Dec 2013)
+
+  03 Dec 2013; Chris Reffett <creffett@gentoo.org>
+  +files/mantisbt-1.2.15-cve20134460.patch, +mantisbt-1.2.15-r1.ebuild:
+  Security bump wrt bug 489050
 
   21 May 2013; Patrick Lauer <patrick@gentoo.org> -mantisbt-1.2.11.ebuild,
   -mantisbt-1.2.12.ebuild, -mantisbt-1.2.8.ebuild:
