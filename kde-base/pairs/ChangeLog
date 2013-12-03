@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/pairs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pairs/ChangeLog,v 1.56 2013/11/05 22:22:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pairs/ChangeLog,v 1.57 2013/12/03 22:35:27 johu Exp $
+
+*pairs-4.11.4 (03 Dec 2013)
+
+  03 Dec 2013; Johannes Huber <johu@gentoo.org> +pairs-4.11.4.ebuild:
+  Version bump KDE SC 4.11.4
 
 *pairs-4.11.3 (05 Nov 2013)
 

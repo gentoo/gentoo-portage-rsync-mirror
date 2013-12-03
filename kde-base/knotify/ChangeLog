@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knotify
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.190 2013/11/05 22:23:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotify/ChangeLog,v 1.191 2013/12/03 22:35:35 johu Exp $
+
+*knotify-4.11.4 (03 Dec 2013)
+
+  03 Dec 2013; Johannes Huber <johu@gentoo.org> +knotify-4.11.4.ebuild:
+  Version bump KDE SC 4.11.4
 
 *knotify-4.11.3 (05 Nov 2013)
 
