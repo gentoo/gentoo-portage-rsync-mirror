@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bottle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.17 2013/09/08 13:55:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bottle/ChangeLog,v 1.18 2013/12/03 18:23:33 johu Exp $
+
+  03 Dec 2013; Johannes Huber <johu@gentoo.org> bottle-0.11.6-r1.ebuild:
+  x86 stable, bug #482298
 
   08 Sep 2013; Markus Meier <maekke@gentoo.org> bottle-0.11.6-r1.ebuild:
   arm stable, bug #482298
