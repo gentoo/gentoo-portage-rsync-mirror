@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-0.2.5.ebuild,v 1.1 2013/10/23 16:26:24 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-0.2.5.ebuild,v 1.2 2013/12/03 14:21:08 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -47,5 +47,7 @@ PATCHES=(
 #	"${FILESDIR}/0.2.3-CVE-2013-2104.patch"
 
 python_test() {
-	${PYTHON} -m subunit.run discover -t ./ . || die
+	testr init
+	testr run || die "Tests failed under python2.7"
+	flake8 heatclient/tests || die "run over tests folder by flake8 yielded error"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.61 2013/11/30 10:33:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.62 2013/12/03 14:02:42 mgorny Exp $
 
 EAPI=5
 
@@ -151,7 +151,7 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-3.4-gentoo-install.patch
-	use clang && epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
+	use clang && epatch "${FILESDIR}"/clang-3.5-gentoo-install.patch
 
 	local sub_files=(
 		Makefile.config.in
