@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/drumstick
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.13 2013/03/02 21:54:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/ChangeLog,v 1.14 2013/12/03 07:40:56 ssuominen Exp $
+
+  03 Dec 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +files/0.5.0-underlinking.patch, drumstick-0.5.0.ebuild:
+  Fix libX11 underlinking wrt #367855 by Michael Palimaka and Diego Elio Pettenò
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> drumstick-0.5.0.ebuild:
   Move Qt dependencies to the new category

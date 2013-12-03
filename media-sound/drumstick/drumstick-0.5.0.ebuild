@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.7 2013/03/02 21:54:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/drumstick/drumstick-0.5.0.ebuild,v 1.8 2013/12/03 07:40:56 ssuominen Exp $
 
 EAPI=4
 
@@ -33,6 +33,7 @@ DOCS=( AUTHORS ChangeLog NEWS README TODO )
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-doc_automagicness.patch
+	"${FILESDIR}"/${PV}-underlinking.patch
 )
 
 src_prepare() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.288 2013/12/02 20:09:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.289 2013/12/03 07:51:01 polynomial-c Exp $
+
+  03 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> mc-4.8.11.ebuild,
+  +files/mc-4.8.11-ncurses_build_fix.patch:
+  Fixed building with ncurses.
 
 *mc-4.8.11 (02 Dec 2013)
 
