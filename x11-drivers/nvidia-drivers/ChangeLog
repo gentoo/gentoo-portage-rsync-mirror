@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.498 2013/12/02 02:43:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.499 2013/12/03 11:17:43 jer Exp $
+
+*nvidia-drivers-319.76 (03 Dec 2013)
+
+  03 Dec 2013; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-319.76.ebuild:
+  Version bump by Ulenrich (bug #493160).
 
   02 Dec 2013; Mike Gilbert <floppym@gentoo.org> nvidia-drivers-331.20.ebuild:
   Restore pax-usercopy patch; passing ${P} to epatch is stupid.
