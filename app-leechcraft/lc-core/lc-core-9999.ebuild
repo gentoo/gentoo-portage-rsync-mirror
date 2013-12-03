@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-9999.ebuild,v 1.4 2013/08/08 17:48:00 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-core/lc-core-9999.ebuild,v 1.5 2013/12/03 17:23:47 pinkbyte Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ DESCRIPTION="Core of LeechCraft, the modular network client"
 
 SLOT="0"
 KEYWORDS=""
-IUSE="debug doc +sqlite postgres"
+IUSE="debug doc +sqlite postgres +qwt"
 
 COMMON_DEPEND=">=dev-libs/boost-1.46
 	dev-qt/qtcore:4
@@ -21,7 +21,8 @@ COMMON_DEPEND=">=dev-libs/boost-1.46
 	dev-qt/qtgui:4
 	dev-qt/qtscript:4
 	dev-qt/qtsql:4[postgres?,sqlite?]
-	dev-qt/qtwebkit:4"
+	dev-qt/qtwebkit:4
+	qwt? ( x11-libs/qwt:6 )"
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )"
 RDEPEND="${COMMON_DEPEND}
@@ -37,6 +38,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DWITH_PLUGINS=False
 		$(cmake-utils_use_with doc DOCS)
+		$(cmake-utils_use_with qwt QWT)
 	)
 	if [[ ${PV} != 9999 ]]; then
 		mycmakeargs+=( -DLEECHCRAFT_VERSION=${PV} )

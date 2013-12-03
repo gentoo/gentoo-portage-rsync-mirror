@@ -725,6 +725,7 @@ app-leechcraft/lc-blasq:spegnersi - Support Flickr service
 app-leechcraft/lc-blasq:vangog - Support Picasa service
 app-leechcraft/lc-blogique:hestia - Allows one to keep a local blog
 app-leechcraft/lc-blogique:metida - Support for the LiveJournal blogging platform
+app-leechcraft/lc-core:qwt - Support for QML plotting item through x11-libs/qwt
 app-leechcraft/lc-gmailnotifier:notify - Pull in a plugin to show notifications from GMail Notiifer
 app-leechcraft/lc-gmailnotifier:quark - Pull in a plugin to show GMail Notifier's quark
 app-leechcraft/lc-lmp:graffiti - Build media tags editor plugin
