@@ -3,6 +3,6 @@ DESCRIPTION=Virtual to select between sys-fs/udev and sys-fs/eudev
 EAPI=5
 IUSE=gudev hwdb introspection keymap +kmod selinux static-libs
 KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86
-RDEPEND=|| ( >=sys-fs/udev-200[gudev?,hwdb?,introspection?,keymap?,kmod?,selinux?,static-libs?] >=sys-apps/systemd-200:0/0[gudev?,introspection?,keymap(+)?,kmod?,selinux?,static-libs(-)?] kmod? ( >=sys-fs/eudev-1[modutils,gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] ) !kmod? ( >=sys-fs/eudev-1[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] ) )
+RDEPEND=|| ( >=sys-fs/udev-200[gudev?,hwdb?,introspection?,keymap?,kmod?,selinux?,static-libs?] >=sys-apps/systemd-200:0/0[gudev?,introspection?,keymap(+)?,kmod?,selinux?,static-libs(-)?] kmod? ( || ( >=sys-fs/eudev-1[modutils,gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] >=sys-fs/eudev-1.1[kmod,gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] ) ) !kmod? ( >=sys-fs/eudev-1[gudev?,hwdb?,introspection?,keymap?,selinux?,static-libs?] ) )
 SLOT=0
-_md5_=24d3621701c3d4a7f5b1f19f28f4973a
+_md5_=a3e29e7ab46f98cdcd095a7f2f6c8e99
