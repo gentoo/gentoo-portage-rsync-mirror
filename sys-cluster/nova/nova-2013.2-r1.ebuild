@@ -1,43 +1,28 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2-r1.ebuild,v 1.4 2013/11/26 09:14:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2-r1.ebuild,v 1.5 2013/12/03 20:14:39 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils multilib
 
-DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python."
+DESCRIPTION="Nova is a cloud computing fabric controller (main part of an
+IaaS system). It is written in Python."
 HOMEPAGE="https://launchpad.net/nova"
 SRC_URI="http://launchpad.net/${PN}/havana/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres sqlite test xen"
+IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
 			  || ( kvm xen )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
-		app-admin/sudo
-		test? ( >=dev-python/hacking-0.5[${PYTHON_USEDEP}]
-			<dev-python/hacking-0.8[${PYTHON_USEDEP}]
-			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
-			dev-python/feedparser[${PYTHON_USEDEP}]
-			>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
-			>=dev-python/mock-1.0[${PYTHON_USEDEP}]
-			>=dev-python/mox-0.5.3[${PYTHON_USEDEP}]
-			dev-python/mysql-python[${PYTHON_USEDEP}]
-			>=dev-python/pylint-0.25.2[${PYTHON_USEDEP}]
-			dev-python/subunit[${PYTHON_USEDEP}]
-			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
-			dev-python/oslo-sphinx[${PYTHON_USEDEP}]
-			>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
-			>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
-			dev-python/nose[${PYTHON_USEDEP}]
-		)"
+		app-admin/sudo"
 RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
 	          <dev-python/sqlalchemy-0.7.99[sqlite,${PYTHON_USEDEP}] )
 		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
@@ -75,7 +60,7 @@ RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
 		>=dev-python/websockify-0.5.1[${PYTHON_USEDEP}]
 		<dev-python/websockify-0.6[${PYTHON_USEDEP}]
 		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-		app-emulation/libvirt[${PYTHON_USEDEP}]
+		dev-python/libvirt-python[${PYTHON_USEDEP}]
 		novncproxy? ( www-apps/novnc )
 		sys-apps/iproute2
 		net-misc/openvswitch
@@ -91,25 +76,6 @@ PATCHES=(
 pkg_setup() {
 	enewgroup nova
 	enewuser nova -1 -1 /var/lib/nova nova
-}
-
-python_test() {
-	# https://bugs.launchpad.net/nova/+bug/1254943
-	sed -e 's:test_download_module_filesystem_match:_&:' \
-                -e' s:test_download_module_no_filesystem_match:_&:' \
-                -e 's:test_download_module_mountpoints:_&:' \
-                -e 's:test_download_file_url:_&:' \
-                -i nova/tests/image/test_glance.py || die
-	# Using nosetests until upstream (ever) get the suite fixed. 
-	# This gives nova @ minimum a token test phase
-	nosetests nova/tests/[c-g]*/ \
-		nova/tests/image \
-		nova/tests/[k-n]*/ \
-		-e update_test nova/tests/objects \
-		-I test_pci_whitelist.py -I test_pci_request.py nova/tests/pci \
-		nova/tests/[s-v]*/ \
-		nova/tests/test_*.py \
-		|| die "tests failed under python2.7"
 }
 
 python_install() {
