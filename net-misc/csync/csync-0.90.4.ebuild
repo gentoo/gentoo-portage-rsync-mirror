@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.90.0.ebuild,v 1.1 2013/09/17 20:13:21 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.90.4.ebuild,v 1.1 2013/12/03 03:13:08 creffett Exp $
 
 EAPI=5
 
