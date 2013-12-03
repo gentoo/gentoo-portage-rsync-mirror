@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.147 2013/11/27 10:16:53 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.148 2013/12/03 19:28:19 mattm Exp $
+
+*zabbix-2.0.9-r1 (03 Dec 2013)
+*zabbix-2.2.0-r4 (03 Dec 2013)
+
+  03 Dec 2013; Matthew Marlowe <mattm@gentoo.org>
+  +files/2.0/patches/zbx7479.patch, +files/2.2/patches/zbx7479.patch,
+  +zabbix-2.0.9-r1.ebuild, +zabbix-2.2.0-r4.ebuild, -zabbix-2.2.0-r3.ebuild:
+  Patching for Zabbix Vulnerability - Possible Shell Code Injection -
+  https://support.zabbix.com/browse/ZBX-7479
 
   27 Nov 2013; Matthew Marlowe <mattm@gentoo.org> zabbix-2.0.9.ebuild:
   Zabbix 2.0.9 keyworded ~amd64 and ~x86
