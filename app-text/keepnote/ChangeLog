@@ -1,6 +1,10 @@
 # ChangeLog for app-text/keepnote
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/ChangeLog,v 1.9 2013/02/17 17:40:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/ChangeLog,v 1.10 2013/12/03 19:56:55 floppym Exp $
+
+  03 Dec 2013; Mike Gilbert <floppym@gentoo.org> keepnote-0.7.8-r1.ebuild,
+  keepnote-0.7.9-r2.ebuild:
+  Remove pointless calls to distutils-r1_python_test.
 
   17 Feb 2013; Agostino Sarubbo <ago@gentoo.org> keepnote-0.7.8-r1.ebuild:
   Stable for x86, wrt bug #457916

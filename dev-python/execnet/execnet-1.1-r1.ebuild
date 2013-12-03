@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/execnet-1.1-r1.ebuild,v 1.2 2013/09/05 18:47:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/execnet/execnet-1.1-r1.ebuild,v 1.4 2013/12/03 19:59:42 floppym Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ src_test() {
 	# XXX: take a closer look, it may be easy to fix.
 	local DISTUTILS_NO_PARALLEL_BUILD=1
 
-	distutils-r1_python_test
+	distutils-r1_src_test
 }
 
 python_test() {

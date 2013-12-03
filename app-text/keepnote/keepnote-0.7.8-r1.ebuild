@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.8-r1.ebuild,v 1.3 2013/02/17 17:40:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/keepnote/keepnote-0.7.8-r1.ebuild,v 1.4 2013/12/03 19:56:55 floppym Exp $
 
 EAPI=5
 
@@ -26,7 +26,6 @@ PATCHES=( "${FILESDIR}"/${P}-desktopfile.patch )
 DOCS=( CHANGES )
 
 python_test() {
-	distutils-r1_python_test
 	"${PYTHON}" test/testing.py || die
 }
 

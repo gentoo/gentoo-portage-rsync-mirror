@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.92 2013/12/02 13:14:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.93 2013/12/03 20:00:39 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -392,15 +392,6 @@ distutils-r1_python_compile() {
 	_distutils-r1_copy_egg_info
 
 	esetup.py build "${@}"
-}
-
-# @FUNCTION: distutils-r1_python_test
-# @DESCRIPTION:
-# The default python_test(). A no-op.
-distutils-r1_python_test() {
-	debug-print-function ${FUNCNAME} "${@}"
-
-	:
 }
 
 # @FUNCTION: _distutils-r1_wrap_scripts
