@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lmctfy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctfy/ChangeLog,v 1.1 2013/10/27 02:20:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lmctfy/ChangeLog,v 1.2 2013/12/04 03:52:31 patrick Exp $
+
+*lmctfy-0.2.0 (04 Dec 2013)
+
+  04 Dec 2013; Patrick Lauer <patrick@gentoo.org> +lmctfy-0.2.0.ebuild:
+  Bump
 
 *lmctfy-0.1.0 (27 Oct 2013)
 
