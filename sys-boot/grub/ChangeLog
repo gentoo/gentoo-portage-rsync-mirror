@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.292 2013/10/26 14:41:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.293 2013/12/04 00:46:37 floppym Exp $
+
+  04 Dec 2013; Mike Gilbert <floppym@gentoo.org> grub-9999-r1.ebuild:
+  Require python2 and drop autogen dep.
 
   26 Oct 2013; Mike Gilbert <floppym@gentoo.org> grub-2.00_p5107-r2.ebuild,
   grub-9999-r1.ebuild:

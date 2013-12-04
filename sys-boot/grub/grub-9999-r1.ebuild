@@ -1,12 +1,17 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.3 2013/10/26 14:41:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.4 2013/12/04 00:46:37 floppym Exp $
 
 EAPI=5
 
 if [[ ${PV} == 9999 ]]; then
 	AUTOTOOLS_AUTORECONF=1
 	GRUB_AUTOGEN=1
+fi
+
+if [[ -n ${GRUB_AUTOGEN} ]]; then
+	PYTHON_COMPAT=( python{2_6,2_7} )
+	inherit python-any-r1
 fi
 
 inherit autotools-utils bash-completion-r1 eutils flag-o-matic mount-boot multibuild pax-utils toolchain-funcs versionator
@@ -78,8 +83,8 @@ RDEPEND="
 	ppc64? ( sys-apps/ibm-powerpc-utils sys-apps/powerpc-utils )
 "
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	app-misc/pax-utils
-	>=dev-lang/python-2.5.2
 	sys-devel/flex
 	sys-devel/bison
 	sys-apps/help2man
@@ -105,10 +110,6 @@ RDEPEND+="
 	)
 	!multislot? ( !sys-boot/grub:0 )
 "
-
-if [[ -n ${GRUB_AUTOGEN} ]]; then
-	DEPEND+=" >=sys-devel/autogen-5.10"
-fi
 
 STRIP_MASK="*/grub/*/*.{mod,img}"
 RESTRICT="test"
@@ -160,6 +161,7 @@ src_prepare() {
 	fi
 	epatch_user
 	if [[ -n ${GRUB_AUTOGEN} ]]; then
+		python_setup
 		bash autogen.sh || die
 	fi
 	if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
