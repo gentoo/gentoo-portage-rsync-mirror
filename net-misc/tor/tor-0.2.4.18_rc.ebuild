@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.18_rc.ebuild,v 1.1 2013/11/17 16:10:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.4.18_rc.ebuild,v 1.2 2013/12/04 14:09:06 blueness Exp $
 
 EAPI="5"
 
-inherit eutils flag-o-matic readme.gentoo versionator
+inherit eutils flag-o-matic readme.gentoo versionator toolchain-funcs
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"
@@ -79,4 +79,13 @@ src_install() {
 
 pkg_postinst() {
 	readme.gentoo_pkg_postinst
+
+	if [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -eq 8 && $(gcc-micro-version) -ge 1 ]] ; then
+		ewarn "Due to a bug in  >=gcc-4.8.1, compiling ${P} with -Os leads to an infinite"
+		ewarn "loop.  See:"
+		ewarn
+		ewarn "    https://trac.torproject.org/projects/tor/ticket/10259"
+		ewarn "    http://gcc.gnu.org/bugzilla/show_bug.cgi?id=59358"
+		ewarn
+	fi
 }

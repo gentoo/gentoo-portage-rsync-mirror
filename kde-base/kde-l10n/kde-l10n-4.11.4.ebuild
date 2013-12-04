@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.11.4.ebuild,v 1.1 2013/12/03 22:35:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.11.4.ebuild,v 1.2 2013/12/04 14:30:52 dilfridge Exp $
 
 EAPI=5
 
@@ -66,8 +66,8 @@ src_prepare() {
 	find "${S}" -name CMakeLists.txt -type f \
 		-exec sed -i -e 's:^ *add_subdirectory( *kdepim *):# no kdepim:g' {} +
 
-	# bug 481106, please remove in 4.11.1 and later
-	use linguas_pl && rm "${S}"/${PN}-pl-${PV}/messages/kde-runtime/{accountwizard*,akonadi_*}.po
+	# quick workaround for bug 493278
+	find "${S}" -name "akonadi_knut_resource*" -delete
 
 	kde4-base_src_prepare
 }

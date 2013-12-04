@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-9999.ebuild,v 1.1 2013/09/27 13:46:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-9999.ebuild,v 1.2 2013/12/04 14:23:38 jer Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic git-r3
@@ -39,8 +39,6 @@ src_prepare() {
 		"${FILESDIR}"/0.80-impl-dec.patch \
 		"${FILESDIR}"/0.85-ipv6.patch \
 		"${FILESDIR}"/0.85-gtk.patch
-
-	sed -i -e '/^AC_INIT/s|\[[0-9.]*\]|['"${EGIT_VERSION}"']|g' configure.ac || die
 
 	# Keep this comment and following mv, even in case ebuild does not need
 	# it: kept gtk-2.0.m4 in SRC_URI but you'll have to mv it before autoreconf

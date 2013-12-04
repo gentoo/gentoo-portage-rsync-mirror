@@ -10,4 +10,4 @@ RDEPEND=dev-libs/openssl sys-libs/zlib dev-libs/libevent bufferevents? ( dev-lib
 SLOT=0
 SRC_URI=https://www.torproject.org/dist/tor-0.2.5.1-alpha.tar.gz https://archive.torproject.org/tor-package-archive/tor-0.2.5.1-alpha.tar.gz
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	multilib	892e597faee02a5b94eb02ab512e7622	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=b6ec4d21941b88ef730b6a48b79a8cb2
+_md5_=336ab9afee7396b12c5530c6a7ea5ba9

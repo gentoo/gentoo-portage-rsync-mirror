@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.392 2013/12/03 23:49:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.393 2013/12/04 14:09:06 blueness Exp $
+
+  04 Dec 2013; Anthony G. Basile <blueness@gentoo.org> tor-0.2.3.25.ebuild,
+  tor-0.2.4.18_rc.ebuild, tor-0.2.5.1_alpha-r2.ebuild:
+  Improve warning about https://trac.torproject.org/projects/tor/ticket/10259
 
   03 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
   -tor-0.2.4.17_rc-r1.ebuild:
