@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.245 2013/11/29 14:53:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.246 2013/12/04 08:05:48 graaff Exp $
+
+*actionmailer-3.2.16 (04 Dec 2013)
+
+  04 Dec 2013; Hans de Graaff <graaff@gentoo.org> +actionmailer-3.2.16.ebuild:
+  Version bump for security bug 493284.
 
   29 Nov 2013; Hans de Graaff <graaff@gentoo.org> -actionmailer-3.1.12.ebuild:
   Remove masked Rails 3.1.
