@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.234 2013/11/19 10:15:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.235 2013/12/04 20:03:16 floppym Exp $
+
+  04 Dec 2013; Mike Gilbert <floppym@gentoo.org> make.defaults:
+  Set python_targets_python3_3 in BOOTSTRAP_USE.
 
   19 Nov 2013; Tim Harder <radhermit@gentoo.org> package.use.mask:
   Unmask racket USE flag for app-editors/(g)vim.
