@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15240 2013/12/02 19:54:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15242 2013/12/04 21:18:39 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -141,18 +141,6 @@ app-emulation/qenv
 # Luca Barbato <lu_zero@gentoo.org> (03 Nov 2013)
 # Multilib ready ebuild, some deps missing.
 =media-video/libav-0.8.9-r1
-
-# Johannes Huber <johu@gentoo.org> (03 Nov 2013)
-# Masked for removal in 30 days.  Doesn't build. Dead upstream.
-# Attempt to patch leads to runtime errors.
-# See bug #484100
-kde-misc/qtrans
-
-# Johannes Huber <johu@gentoo.org> (03 Nov 2013)
-# Masked for removal in 30 days.  Doesn't work without
-# debug. UPnP support was disabled by upstream in kdelibs.
-# See bug #442912
-kde-misc/kio-upnp-ms
 
 # Lars Wendler <polynomial-c@gentoo.org> (28 Oct 2013)
 # Masked alpha releases for testing.
