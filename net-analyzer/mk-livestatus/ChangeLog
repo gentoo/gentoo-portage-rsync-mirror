@@ -1,6 +1,26 @@
 # ChangeLog for net-analyzer/mk-livestatus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.6 2012/12/22 18:24:19 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mk-livestatus/ChangeLog,v 1.8 2013/12/03 23:24:23 idl0r Exp $
+
+*mk-livestatus-1.2.2_p3 (03 Dec 2013)
+
+  03 Dec 2013; Christian Ruppert <idl0r@gentoo.org>
+  -mk-livestatus-1.2.2_p2.ebuild, +mk-livestatus-1.2.2_p3.ebuild,
+  -files/mk-livestatus-1.2.2_p2-no-strip.diff,
+  -files/mk-livestatus-1.2.2_p2-test-RequireRcsKeywords.diff,
+  +files/mk-livestatus-1.2.2_p3-no-strip.diff,
+  +files/mk-livestatus-1.2.2_p3-test-RequireRcsKeywords.diff:
+  Bump to _p3...
+
+*mk-livestatus-1.2.2_p2 (03 Dec 2013)
+
+  03 Dec 2013; Christian Ruppert <idl0r@gentoo.org>
+  -mk-livestatus-1.1.8.ebuild, -mk-livestatus-1.1.10_p1.ebuild,
+  +mk-livestatus-1.2.2_p2.ebuild, +files/mk-livestatus-1.2.2_p2-no-strip.diff,
+  +files/mk-livestatus-1.2.2_p2-test-RequireRcsKeywords.diff,
+  -files/gcc-4.7-compile.patch:
+  Version bump. Cleanup. Bug 482026, thanks to Bertrand Jacquin
+  <beber@meleeweb.net>
 
   22 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mk-livestatus-1.2.0_p2.ebuild:
   Add ~ppc, wrt bug #429088
