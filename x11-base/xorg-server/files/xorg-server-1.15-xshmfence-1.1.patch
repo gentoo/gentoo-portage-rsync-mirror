@@ -1,0 +1,43 @@
+From eafba23b34be31c141ddafb8380520ac9a0622ac Mon Sep 17 00:00:00 2001
+From: Keith Packard <keithp@keithp.com>
+Date: Fri, 22 Nov 2013 06:45:18 +0000
+Subject: miext/sync: Handle libxshmfence API change
+
+libxshmfence had an unfortunate 'int32_t' type for the mapped fence.
+That changed to exposing a 'struct shmfence' instead, which is nice
+and opaque and offers fine type checking across the API.
+
+This patch requires the newer version of the library and uses
+the new interface type.
+
+Signed-off-by: Keith Packard <keithp@keithp.com>
+Reviewed-by: Julien Cristau <jcristau@debian.org>
+---
+diff --git a/configure.ac b/configure.ac
+index f6ecdc6..5a36e54 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -787,7 +787,7 @@ DMXPROTO="dmxproto >= 2.2.99.1"
+ VIDMODEPROTO="xf86vidmodeproto >= 2.2.99.1"
+ WINDOWSWMPROTO="windowswmproto"
+ APPLEWMPROTO="applewmproto >= 1.4"
+-XSHMFENCE="xshmfence"
++XSHMFENCE="xshmfence >= 1.1"
+ 
+ dnl Required modules
+ XPROTO="xproto >= 7.0.22"
+diff --git a/miext/sync/misyncshm.c b/miext/sync/misyncshm.c
+index 20780fd..01f82fc 100644
+--- a/miext/sync/misyncshm.c
++++ b/miext/sync/misyncshm.c
+@@ -38,7 +38,7 @@
+ static DevPrivateKeyRec syncShmFencePrivateKey;
+ 
+ typedef struct _SyncShmFencePrivate {
+-    int32_t             *fence;
++    struct xshmfence    *fence;
+     int                 fd;
+ } SyncShmFencePrivateRec, *SyncShmFencePrivatePtr;
+ 
+--
+cgit v0.9.0.2-2-gbebe
