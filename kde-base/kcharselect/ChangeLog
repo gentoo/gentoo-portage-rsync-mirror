@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcharselect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.262 2013/12/03 22:36:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcharselect/ChangeLog,v 1.263 2013/12/04 17:09:52 johu Exp $
+
+  04 Dec 2013; Johannes Huber <johu@gentoo.org> -kcharselect-4.11.3.ebuild:
+  Remove KDE SC 4.11.3
 
 *kcharselect-4.11.4 (03 Dec 2013)
 

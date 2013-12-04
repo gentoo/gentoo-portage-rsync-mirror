@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.286 2013/12/03 22:36:07 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.287 2013/12/04 17:09:47 johu Exp $
+
+  04 Dec 2013; Johannes Huber <johu@gentoo.org> -kdnssd-4.11.3.ebuild:
+  Remove KDE SC 4.11.3
 
 *kdnssd-4.11.4 (03 Dec 2013)
 

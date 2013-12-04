@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.187 2013/12/03 22:36:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.188 2013/12/04 17:09:48 johu Exp $
+
+  04 Dec 2013; Johannes Huber <johu@gentoo.org> -kwrite-4.11.3.ebuild:
+  Remove KDE SC 4.11.3
 
 *kwrite-4.11.4 (03 Dec 2013)
 
