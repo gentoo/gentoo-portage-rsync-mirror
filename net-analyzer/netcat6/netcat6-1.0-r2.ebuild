@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r2.ebuild,v 1.12 2013/04/24 14:37:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r2.ebuild,v 1.13 2013/12/04 03:21:59 radhermit Exp $
 
 EAPI=5
 inherit eutils autotools toolchain-funcs
@@ -24,9 +24,9 @@ S=${WORKDIR}/nc6-${PV}
 DOCS=( AUTHORS BUGS README NEWS TODO CREDITS ChangeLog )
 
 src_prepare() {
-	epatch "${FILESDIR}/netcat6-1.0-unix-sockets.patch"
-	sed -i configure.ac -e 's|^AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' || die
-	eautoreconf
+	epatch "${FILESDIR}"/netcat6-1.0-unix-sockets.patch
+	epatch "${FILESDIR}"/${P}-automake-1.14.patch
+	AM_OPTS="--force-missing" eautoreconf
 }
 
 src_configure() {
