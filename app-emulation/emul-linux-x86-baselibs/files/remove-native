@@ -222,5 +222,8 @@ usr/lib32/libjson.so.0
 usr/lib32/libjson.so.0.0.1
 usr/lib32/pkgconfig/json.pc
 usr/lib32/perl5/5.12.4/i686-linux/auto/GDBM_File/GDBM_File.so
+usr/lib32/perl5/5.12.4/i686-linux/auto/NDBM_File/NDBM_File.so
+usr/lib32/python2.7/lib-dynload/dbm.so
+usr/lib32/python3.2/lib-dynload/_dbm.cpython-32.so
 usr/lib32/python2.7/lib-dynload/gdbm.so
 usr/lib32/python3.2/lib-dynload/_gdbm.cpython-32.so

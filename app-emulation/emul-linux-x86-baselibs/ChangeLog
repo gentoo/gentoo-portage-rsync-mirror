@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.169 2013/12/04 09:12:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.170 2013/12/04 11:07:48 mgorny Exp $
+
+  04 Dec 2013; Michał Górny <mgorny@gentoo.org> files/remove-native:
+  Remove Perl & Python modules that require gdbm_compat as well.
 
 *emul-linux-x86-baselibs-20131008-r6 (04 Dec 2013)
 
