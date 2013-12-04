@@ -1,6 +1,16 @@
 # ChangeLog for www-plugins/chrome-binary-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.83 2013/12/04 03:58:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/chrome-binary-plugins/ChangeLog,v 1.84 2013/12/04 20:33:10 floppym Exp $
+
+*chrome-binary-plugins-31.0.1650.63_p1 (04 Dec 2013)
+*chrome-binary-plugins-32.0.1700.41_beta1 (04 Dec 2013)
+
+  04 Dec 2013; Mike Gilbert <floppym@gentoo.org>
+  +chrome-binary-plugins-31.0.1650.63_p1.ebuild,
+  +chrome-binary-plugins-32.0.1700.41_beta1.ebuild,
+  -chrome-binary-plugins-31.0.1650.57_p1.ebuild,
+  -chrome-binary-plugins-32.0.1700.39_beta1.ebuild:
+  Automated update.
 
   04 Dec 2013; Mike Gilbert <floppym@gentoo.org>
   chrome-binary-plugins-33.0.1726.0_alpha1.ebuild,
