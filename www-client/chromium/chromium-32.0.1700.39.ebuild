@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.14.ebuild,v 1.3 2013/11/17 17:36:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.39.ebuild,v 1.1 2013/12/04 04:49:31 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,7 +20,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux system-sqlite tcmalloc"
+IUSE="bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux system-sqlite +tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -90,10 +90,12 @@ DEPEND="${RDEPEND}
 		dev-libs/openssl:0
 		dev-python/pyftpdlib
 	)"
+# For nvidia-drivers blocker, see bug #413637 .
 RDEPEND+="
 	!=www-client/chromium-9999
 	x11-misc/xdg-utils
-	virtual/ttf-fonts"
+	virtual/ttf-fonts
+	tcmalloc? ( !<x11-drivers/nvidia-drivers-331.20 )"
 
 if ! has chromium_pkg_die ${EBUILD_DEATH_HOOKS}; then
 	EBUILD_DEATH_HOOKS+=" chromium_pkg_die";
@@ -153,7 +155,6 @@ src_prepare() {
 	# fi
 
 	epatch "${FILESDIR}/${PN}-system-jinja-r2.patch"
-	epatch "${FILESDIR}/${PN}-blink-crash-r0.patch"
 	epatch "${FILESDIR}/${PN}-build_ffmpeg-r0.patch"
 
 	epatch_user
@@ -229,10 +230,6 @@ src_configure() {
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
 
-	# Optional tcmalloc. Note it causes problems with e.g. NVIDIA
-	# drivers, bug #413637.
-	myconf+=" $(gyp_use tcmalloc linux_use_tcmalloc)"
-
 	# Disable nacl, we can't build without pnacl (http://crbug.com/269560).
 	myconf+=" -Ddisable_nacl=1"
 
@@ -294,7 +291,8 @@ src_configure() {
 		$(gyp_use gnome-keyring use_gnome_keyring)
 		$(gyp_use gnome-keyring linux_link_gnome_keyring)
 		$(gyp_use kerberos)
-		$(gyp_use pulseaudio)"
+		$(gyp_use pulseaudio)
+		$(gyp_use tcmalloc linux_use_tcmalloc)"
 
 	if use system-sqlite; then
 		elog "Enabling system sqlite. WebSQL - http://www.w3.org/TR/webdatabase/"
@@ -329,6 +327,12 @@ src_configure() {
 	# Always support proprietary codecs.
 	myconf+=" -Dproprietary_codecs=1"
 
+	# Set python version and libdir so that python_arch.sh can find libpython.
+	# Bug 492864.
+	myconf+="
+		-Dpython_ver=${EPYTHON#python}
+		-Dsystem_libdir=$(get_libdir)"
+
 	if ! use bindist; then
 		# Enable H.264 support in bundled ffmpeg.
 		myconf+=" -Dffmpeg_branding=Chrome"
@@ -345,10 +349,13 @@ src_configure() {
 	local myarch="$(tc-arch)"
 	if [[ $myarch = amd64 ]] ; then
 		target_arch=x64
+		ffmpeg_target_arch=x64
 	elif [[ $myarch = x86 ]] ; then
 		target_arch=ia32
+		ffmpeg_target_arch=ia32
 	elif [[ $myarch = arm ]] ; then
 		target_arch=arm
+		ffmpeg_target_arch=$(usex neon arm-neon arm)
 		# TODO: re-enable NaCl (NativeClient).
 		local CTARGET=${CTARGET:-${CHOST}}
 		if [[ $(tc-is-softfloat) == "no" ]]; then
@@ -397,10 +404,14 @@ src_configure() {
 	export CXX_host=$(tc-getBUILD_CXX)
 	export LD_host=${CXX_host}
 
+	# Bug 491582.
+	export TMPDIR="${WORKDIR}/temp"
+	mkdir -m 755 "${TMPDIR}" || die
+
 	# Re-configure bundled ffmpeg. See bug #491378 for example reasons.
 	einfo "Configuring bundled ffmpeg..."
 	pushd third_party/ffmpeg > /dev/null || die
-	chromium/scripts/build_ffmpeg.sh linux ${target_arch} "${PWD}" config-only || die
+	chromium/scripts/build_ffmpeg.sh linux ${ffmpeg_target_arch} "${PWD}" config-only || die
 	chromium/scripts/copy_config.sh || die
 	popd > /dev/null || die
 
