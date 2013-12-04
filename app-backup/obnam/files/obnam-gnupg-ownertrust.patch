@@ -1,0 +1,15 @@
+diff --git a/obnamlib/encryption.py b/obnamlib/encryption.py
+index 9fa849a..1d7643b 100644
+--- a/obnamlib/encryption.py
++++ b/obnamlib/encryption.py
+@@ -168,6 +168,10 @@ class Keyring(object):
+         f = open(self._keyring, 'wb')
+         f.write(self._encoded)
+         f.close()
++        _gpg(['--import-ownertrust'], stdin='''\
++# List of assigned trustvalues, created Sun 01 Dec 2013 19:13:26 GMT
++# (Use "gpg --import-ownertrust" to restore them)
++''', gpghome=self._gpghome)
+ 
+     def _cleanup(self):
+         shutil.rmtree(self._gpghome)
