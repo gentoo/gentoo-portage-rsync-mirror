@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.6.ebuild,v 1.9 2012/11/06 19:27:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.6.ebuild,v 1.10 2013/12/04 13:25:19 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ inherit distutils eutils
 
 MY_P="Genshi-${PV}"
 
-DESCRIPTION="Python toolkit for stream-based generation of output for the web."
+DESCRIPTION="Python toolkit for stream-based generation of output for the web"
 HOMEPAGE="http://genshi.edgewall.org/ http://pypi.python.org/pypi/Genshi"
 SRC_URI="ftp://ftp.edgewall.com/pub/genshi/${MY_P}.tar.gz"
 
