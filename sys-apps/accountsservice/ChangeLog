@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.32 2013/11/30 19:55:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.33 2013/12/04 19:38:30 pacho Exp $
+
+*accountsservice-0.6.35 (04 Dec 2013)
+
+  04 Dec 2013; Pacho Ramos <pacho@gentoo.org> +accountsservice-0.6.35.ebuild,
+  +files/accountsservice-0.6.35-gentoo-system-users.patch,
+  +files/accountsservice-0.6.35-nondelete-root.patch,
+  +files/accountsservice-0.6.35-older-glib.patch,
+  +files/accountsservice-0.6.35-user-logic.patch,
+  -accountsservice-0.6.30.ebuild,
+  -files/accountsservice-0.6.30-login-history-variant.patch,
+  -files/accountsservice-0.6.30-xsession-typo.patch:
+  Version bump, drop old
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> accountsservice-0.6.34.ebuild:
   amd64 stable, bug #478252
