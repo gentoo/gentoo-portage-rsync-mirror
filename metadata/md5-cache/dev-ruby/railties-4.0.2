@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=test? ( ruby_targets_ruby19? ( ~dev-ruby/activesupport-4.0.2[ruby_targets_ruby19] ~dev-ruby/actionpack-4.0.2[ruby_targets_ruby19] >=dev-ruby/thor-0.18.1[ruby_targets_ruby19] >=dev-ruby/rake-0.8.7[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/mocha:0.13[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( test? ( dev-ruby/rake[ruby_targets_ruby19] ) ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=Tools for creating, working with, and running Rails applications.
+EAPI=5
+HOMEPAGE=http://github.com/rails/rails
+IUSE=test elibc_FreeBSD ruby_targets_ruby19 test test
+KEYWORDS=~amd64 ~arm
+LICENSE=MIT
+RDEPEND=>=app-admin/eselect-rails-0.19 ruby_targets_ruby19? ( ~dev-ruby/activesupport-4.0.2[ruby_targets_ruby19] ~dev-ruby/actionpack-4.0.2[ruby_targets_ruby19] >=dev-ruby/thor-0.18.1[ruby_targets_ruby19] >=dev-ruby/rake-0.8.7[ruby_targets_ruby19] ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby19 )
+RESTRICT=test
+SLOT=4.0
+SRC_URI=http://github.com/rails/rails/archive/v4.0.2.tar.gz -> rails-4.0.2.tgz
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=38f7e6666f1a539f16d4279a9e2b9f8e
