@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1078 2013/12/03 20:00:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1079 2013/12/04 04:23:08 phajdan.jr Exp $
+
+  04 Dec 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org> chromium.eclass:
+  Check SECCOMP_FILTER kernel config option for Chromium sandbox, bug #490550
+  by ago.
 
   03 Dec 2013; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
   Remove pointless distutils-r1_python_test function.
