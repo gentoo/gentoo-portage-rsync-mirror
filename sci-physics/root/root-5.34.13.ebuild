@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.10-r2.ebuild,v 1.2 2013/12/05 17:34:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.34.13.ebuild,v 1.1 2013/12/05 17:34:12 bicatali Exp $
 
 EAPI=5
 
@@ -22,6 +22,7 @@ TMVA_DOC_PV=4.03
 PATCH_PV=5.28.00b
 PATCH_PV2=5.32.00
 PATCH_PV3=5.34.05
+PATCH_PV4=5.34.13
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
@@ -101,7 +102,7 @@ CDEPEND="
 		oracle? ( dev-db/oracle-instantclient-basic )
 		postgres? ( dev-db/postgresql-base )
 		pythia6? ( sci-physics/pythia:6 )
-		pythia8? ( <sci-physics/pythia-8.1.80:8 )
+		pythia8? ( >=sci-physics/pythia-8.1.80:8 )
 		python? ( ${PYTHON_DEPS} )
 		ruby? (
 				dev-lang/ruby
@@ -162,11 +163,13 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-prop-flags.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV3}-nobyte-compile.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV}-glibc212.patch \
-		"${FILESDIR}"/${PN}-${PATCH_PV}-unuran.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV4}-unuran.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-afs.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-cfitsio.patch \
 		"${FILESDIR}"/${PN}-${PATCH_PV2}-chklib64.patch \
-		"${FILESDIR}"/${PN}-${PATCH_PV2}-dotfont.patch
+		"${FILESDIR}"/${PN}-${PATCH_PV2}-dotfont.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV4}-pythia8.patch \
+		"${FILESDIR}"/${PN}-${PATCH_PV4}-desktop.patch
 
 	# make sure we use system libs and headers
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc || die
@@ -265,7 +268,7 @@ src_configure() {
 		$(use_enable X xft) \
 		$(use_enable afs) \
 		$(use_enable avahi bonjour) \
-		$(use_enable c++0x c++11) \
+		$(use_enable c++0x cxx11) \
 		$(use_enable fits fitsio) \
 		$(use_enable fftw fftw3) \
 		$(use_enable graphviz gviz) \
@@ -367,7 +370,7 @@ src_install() {
 		use pythia8 && echo "PYTHIA8=${EPREFIX}/usr" >> 99root
 		if use python; then
 			echo "PYTHONPATH=${EPREFIX}/usr/$(get_libdir)/root" >> 99root
-			python_optimize /usr/$(get_libdir)/root
+			python_optimize "${D}/usr/$(get_libdir)/root"
 		fi
 		use ruby && echo "RUBYLIB=${EPREFIX}/usr/$(get_libdir)/root" >> 99root
 	fi
