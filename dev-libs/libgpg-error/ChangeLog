@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgpg-error
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.98 2013/10/12 18:16:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.99 2013/12/05 12:41:29 haubi Exp $
+
+  05 Dec 2013; Michael Haubenwallner <haubi@gentoo.org>
+  libgpg-error-1.12.ebuild:
+  add ~ppc-aix keyword
 
   12 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libgpg-error-1.12.ebuild:
   Stable for ppc, wrt bug #487230

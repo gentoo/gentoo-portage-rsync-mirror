@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/File-Temp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.59 2013/10/28 06:27:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.60 2013/12/05 12:42:33 haubi Exp $
+
+  05 Dec 2013; Michael Haubenwallner <haubi@gentoo.org>
+  File-Temp-0.230.400.ebuild:
+  add ~ppc-aix keyword
 
 *File-Temp-0.230.400 (28 Oct 2013)
 
