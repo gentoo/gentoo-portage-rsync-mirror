@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-atk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.78 2013/08/17 10:37:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.79 2013/12/05 10:27:06 naota Exp $
+
+*ruby-atk-2.0.2 (05 Dec 2013)
+
+  05 Dec 2013; Naohiro Aota <naota@gentoo.org> +ruby-atk-2.0.2.ebuild:
+  version bump
 
   17 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ruby-atk-1.1.8.ebuild:
   Stable for ppc, wrt bug #480974
