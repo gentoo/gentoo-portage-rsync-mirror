@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8409 2013/12/05 07:45:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8410 2013/12/05 08:15:31 polynomial-c Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> package.mask:
+  Removed dev-vcs/git mask.
 
   05 Dec 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   Remove temporary mask now that root cause for bug 493356 is fixed.

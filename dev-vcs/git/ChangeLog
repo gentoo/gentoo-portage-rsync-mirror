@@ -1,6 +1,19 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.228 2013/12/04 23:07:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.229 2013/12/05 08:13:52 polynomial-c Exp $
+
+*git-1.8.5.1 (05 Dec 2013)
+
+  05 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> -git-1.6.4.5.ebuild,
+  -git-1.7.2.5.ebuild, -git-1.7.3.4-r1.ebuild, -git-1.7.8.6.ebuild,
+  -git-1.7.12.4.ebuild, -git-1.8.0.2.ebuild, +git-1.8.5.1.ebuild,
+  -files/git-1.6.6.1-interix6.patch, -files/git-1.7.1-interix.patch,
+  -files/git-1.7.2-always-install-js.patch, -files/git-1.7.3.2-interix.patch,
+  -files/git-1.7.3.4-avoid-shell-issues.patch,
+  -files/git-1.7.3.4-fix-perl-test-prereq.patch,
+  -files/git-1.7.3.5-optional-cvs.patch, -files/git-1.7.11-optional-cvs.patch,
+  +files/git-1.8.5-optional-cvs.patch, metadata.xml:
+  Version bump. Removed old.
 
 *git-1.8.4.5 (04 Dec 2013)
 
