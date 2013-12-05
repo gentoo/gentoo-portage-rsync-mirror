@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=ruby_targets_ruby18? ( test? ( >=dev-ruby/test-unit-2.5.1-r1[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( >=dev-ruby/test-unit-2.5.1-r1[ruby_targets_ruby19] ) ) test? ( x11-libs/cairo ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DEPEND=ruby_targets_ruby18? ( test? ( >=dev-ruby/test-unit-2.5.1-r1[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( test? ( >=dev-ruby/test-unit-2.5.1-r1[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( >=dev-ruby/test-unit-2.5.1-r1[ruby_targets_ruby20] ) ) test? ( x11-libs/cairo ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) )
 DESCRIPTION=A pkg-config implementation by Ruby
 EAPI=5
 HOMEPAGE=https://github.com/rcairo/pkg-config
-IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 test
+IUSE=test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 test
 KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
 LICENSE=|| ( LGPL-2 LGPL-2.1 LGPL-3 )
-RDEPEND=virtual/pkgconfig ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
-REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 )
+RDEPEND=virtual/pkgconfig ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] )
+REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 )
 SLOT=0
 SRC_URI=mirror://rubygems/pkg-config-1.1.4.gem
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=44d998f4c7213e74792333b11af8bd6d
+_md5_=87f12e5329be07547c85ec84f31c8659

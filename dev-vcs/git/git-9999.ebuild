@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.48 2013/10/20 20:11:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.49 2013/12/05 09:54:51 polynomial-c Exp $
 
 EAPI=5
 
@@ -220,7 +220,7 @@ src_unpack() {
 
 src_prepare() {
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-1.8.4-optional-cvs.patch
+	epatch "${FILESDIR}"/git-1.8.5-optional-cvs.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS[[:space:]]*=\).*$:\1 $(OPTCFLAGS) -Wall:' \
@@ -446,7 +446,7 @@ src_install() {
 	# svnimport - use git-svn
 	# thunderbird-patch-inline - fixes thunderbird
 	for i in \
-		buildsystems ciabot convert-objects fast-import \
+		buildsystems convert-objects fast-import \
 		hg-to-git hooks remotes2config.sh rerere-train.sh \
 		stats vim workdir \
 		; do
