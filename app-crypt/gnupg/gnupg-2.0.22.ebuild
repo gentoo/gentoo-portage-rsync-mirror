@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.22.ebuild,v 1.11 2013/10/12 18:16:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.22.ebuild,v 1.12 2013/12/05 13:41:38 alonbl Exp $
 
 EAPI="5"
 
@@ -78,6 +78,12 @@ src_configure() {
 		myconf+=( --disable-scdaemon )
 	fi
 
+	if use elibc_SunOS || use elibc_AIX; then
+		myconf+=( --disable-symcryptrun )
+	else
+		myconf+=( --enable-symcryptrun )
+	fi
+
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-gpg \
@@ -86,7 +92,6 @@ src_configure() {
 		"${myconf[@]}" \
 		$(use_with adns) \
 		$(use_enable bzip2) \
-		$(use_enable !elibc_SunOS symcryptrun) \
 		$(use_enable nls) \
 		$(use_enable mta mailto) \
 		$(use_enable ldap) \
