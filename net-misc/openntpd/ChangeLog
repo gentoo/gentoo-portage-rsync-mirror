@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.98 2013/12/02 13:49:09 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.99 2013/12/05 00:24:15 ottxor Exp $
+
+  05 Dec 2013; Christoph Junghans <ottxor@gentoo.org>
+  openntpd-20080406-r6.ebuild:
+  fixed cross-device link issue (bug #493178)
 
   02 Dec 2013; Christoph Junghans <ottxor@gentoo.org>
   -files/openntpd.init.d-20080406-r3, -openntpd-20080406-r3.ebuild:

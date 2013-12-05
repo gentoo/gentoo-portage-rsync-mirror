@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r6.ebuild,v 1.1 2013/12/02 13:32:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r6.ebuild,v 1.2 2013/12/05 00:24:15 ottxor Exp $
 
 EAPI=5
 
@@ -74,18 +74,28 @@ src_install() {
 	systemd_newunit "${FILESDIR}/${PN}.service-${PV}-r3" ntpd.service
 }
 
-pkg_postinst() {
+pkg_config() {
+	einfo "Setting up chroot for ntp in ${NTP_HOME}"
 	# remove localtime file from previous installations
-	rm -f "${EROOT}${NTP_HOME}"/etc/localtime
-	mkdir -p "${NTP_HOME}"/etc
-	ln /etc/localtime "${NTP_HOME}"/etc/localtime || die
+	rm -f "${EROOT}${NTP_HOME}"etc/localtime
+	mkdir -p "${EROOT}${NTP_HOME}"etc
+	if ! ln "${EROOT}"etc/localtime "${EROOT}${NTP_HOME}"etc/localtime ; then
+		cp "${EROOT}"etc/localtime "${EROOT}${NTP_HOME}"etc/localtime || die
+		einfo "We could not create a hardlink from /etc/localtime to ${NTP_HOME}etc/localtime,"
+		einfo "so please run 'emerge --config =${CATEGORY}/${PF}' whenever you changed"
+		einfo "your timezone."
+	fi
 	chown -R root:root "${EROOT}${NTP_HOME}" || die
+}
 
-	use syslog && [[ -f ${EROOT}/var/log/ntpd.log ]] && \
-		ewarn "There is an orphaned logfile '/var/log/ntpd.log', please remove it!"
+pkg_postinst() {
+	pkg_config
+
+	use syslog && [[ -f ${EROOT}var/log/ntpd.log ]] && \
+		ewarn "There is an orphaned logfile '${EROOT}var/log/ntpd.log', please remove it!"
 }
 
 pkg_postrm() {
 	# remove localtime file from previous installations
-	rm -f "${EROOT}${NTP_HOME}"/etc/localtime
+	rm -f "${EROOT}${NTP_HOME}"etc/localtime
 }
