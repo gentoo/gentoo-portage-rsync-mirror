@@ -1,0 +1,6 @@
+*ruby-clutter-gstreamer-2.0.2 (05 Dec 2013)
+
+  05 Dec 2013; Naohiro Aota <naota@gentoo.org> +metadata.xml,
+  +ruby-clutter-gstreamer-2.0.2.ebuild:
+  New package dev-ruby/ruby-clutter-gstreamer. Required for new version of
+  Ruby/Gnome2
