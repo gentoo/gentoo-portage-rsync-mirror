@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.9a.ebuild,v 1.4 2013/11/23 17:17:42 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.9a.ebuild,v 1.5 2013/12/05 13:24:08 polynomial-c Exp $
 
 EAPI=5
 
@@ -102,7 +102,7 @@ src_test() {
 	sleep 3
 
 	dig @127.0.0.1 -p 33455 localhost > "${T}"/dig.output 2>&1
-	cat "${T}"/dig.output
+	cat "${T}"/dig.output || die
 	fgrep -q "status: NOERROR" "${T}"/dig.output || fail_kill "www.gentoo.org lookup failed"
 
 	kill $(<"${T}/pid") || fail_kill "failed to terminate daemon"

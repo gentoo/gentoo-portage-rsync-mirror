@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/sslscan-1.8.2.ebuild,v 1.6 2013/11/13 07:24:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/sslscan-1.8.2.ebuild,v 1.8 2013/12/05 13:28:21 polynomial-c Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sslscan/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # Depend on -bindist since sslscan unconditionally requires elliptic

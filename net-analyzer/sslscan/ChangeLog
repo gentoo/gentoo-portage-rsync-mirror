@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/sslscan
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/ChangeLog,v 1.9 2013/11/13 07:24:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslscan/ChangeLog,v 1.11 2013/12/05 13:28:21 polynomial-c Exp $
+
+  05 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> sslscan-1.8.2.ebuild:
+  Stable for amd64 (bug #490690).
+
+  05 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> sslscan-1.8.2.ebuild:
+  Stable for x86 (bug #490690).
 
   13 Nov 2013; Hans de Graaff <graaff@gentoo.org> sslscan-1.8.2.ebuild:
   Update dependency on openssl to require -bindist, fixing bug 491102.
