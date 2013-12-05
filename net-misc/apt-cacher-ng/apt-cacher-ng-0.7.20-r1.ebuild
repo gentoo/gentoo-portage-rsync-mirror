@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.20-r1.ebuild,v 1.1 2013/12/05 02:45:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.20-r1.ebuild,v 1.2 2013/12/05 12:03:19 jer Exp $
 
 EAPI=5
-inherit cmake-utils user eutils
+inherit cmake-utils eutils user
 
 DESCRIPTION="Yet another implementation of an HTTP proxy for Debian/Ubuntu software packages written in C++"
 HOMEPAGE="
