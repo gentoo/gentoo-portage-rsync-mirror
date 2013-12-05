@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.107 2013/11/22 09:05:55 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.108 2013/12/05 16:52:35 blueness Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -345,9 +345,6 @@ elibtoolize() {
 							# We do not want to run libtoolize ...
 							ELT_APPLIED_PATCHES="portage"
 						fi
-						;;
-					uclibc-*)
-						[[ ${CHOST} == *-uclibc ]] && ewarn "  uClibc patch set '${p}' failed to apply!"
 						;;
 					darwin-*)
 						[[ ${CHOST} == *"-darwin"* ]] && ewarn "  Darwin patch set '${p}' failed to apply!"

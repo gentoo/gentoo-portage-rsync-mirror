@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses >=dev-libs/glib-2.6.0 ssl? ( dev-libs/openssl ) perl? ( dev-lang/perl ) socks5? ( >=net-proxy/dante-1.1.18 ) perl? ( !net-im/silc-client ) || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=http://irssi.org/files/irssi-0.8.15.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	perl-module	d93571ca1c77e98760e5aa406388b02d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=8da36b166b747c823bd8ea0283ee5598

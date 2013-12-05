@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=x11-libs/libXrandr x11-libs/libXcursor x11-libs/fox-wrapper >=sys-devel/autoconf-2.67 bzip2? ( app-arch/bzip2 ) jpeg? ( virtual/jpeg ) opengl? ( virtual/glu virtual/opengl ) png? ( media-libs/libpng ) tiff? ( media-libs/tiff ) truetype? ( media-libs/freetype:2 x11-libs/libXft ) zlib? ( sys-libs/zlib )
 SLOT=1.7
 SRC_URI=ftp://ftp.fox-toolkit.org/pub/fox-1.7.43.tar.gz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	fox	26650ced206327e4fca3dec6cd441381	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	fox	26650ced206327e4fca3dec6cd441381	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=027c5505dd7a35f035f7fd23ae2d79b8

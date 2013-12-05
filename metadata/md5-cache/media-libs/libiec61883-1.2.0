@@ -9,5 +9,5 @@ LICENSE=|| ( LGPL-2.1 GPL-2 )
 RDEPEND=>=sys-libs/libraw1394-1.2.1
 SLOT=0
 SRC_URI=mirror://kernel/linux/libs/ieee1394/libiec61883-1.2.0.tar.xz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	unpacker	658a981a81fd7cb0767315a541bab01d	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f718e46bb9f2ee39db15d41903dc377c

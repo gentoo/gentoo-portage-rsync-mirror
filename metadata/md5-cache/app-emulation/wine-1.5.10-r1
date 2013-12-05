@@ -11,5 +11,5 @@ REQUIRED_USE=elibc_glibc? ( threads ) mono? ( || ( win32 !win64 ) ) osmesa? ( op
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/wine/Source/wine-1.5.10.tar.bz2 gecko? ( mirror://sourceforge/wine/Wine%20Gecko/1.7/wine_gecko-1.7-x86.msi win64? ( mirror://sourceforge/wine/Wine%20Gecko/1.7/wine_gecko-1.7-x86_64.msi ) ) mono? ( mirror://sourceforge/wine/Wine%20Mono/0.0.4/wine-mono-0.0.4.msi ) http://source.winehq.org/patches/data/87234 -> winepulse-2012.06.15.patch
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e6ae36a6e0e295bce2f38bea86d59641

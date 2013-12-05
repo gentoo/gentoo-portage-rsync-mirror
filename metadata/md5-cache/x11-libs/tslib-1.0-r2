@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86
 LICENSE=LGPL-2
 SLOT=0
 SRC_URI=mirror://berlios/tslib/tslib-1.0.tar.bz2 mirror://gentoo/tslib-1.0-patches-5.tar.bz2
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	libtool	5932e418cf62147cad2d902718aacc56	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	eutils	a82a329b538368791f5a6113c60e557e	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	cb9b3738be1b3f35643266534a605bc6	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=b45b53d8583d7ccbad1a5ee98fa5ecc3
