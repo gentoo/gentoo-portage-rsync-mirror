@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rcairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.82 2013/07/20 06:06:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/ChangeLog,v 1.83 2013/12/05 10:43:35 naota Exp $
+
+  05 Dec 2013; Naohiro Aota <naota@gentoo.org> rcairo-1.12.6.ebuild:
+  Add ruby20 support.
 
 *rcairo-1.12.6 (20 Jul 2013)
 
@@ -338,4 +341,3 @@
   21 Nov 2005; Tom Payne <twp@gentoo.org> +metadata.xml,
   +rcairo-1.0.0.ebuild:
   Initial version.
-
