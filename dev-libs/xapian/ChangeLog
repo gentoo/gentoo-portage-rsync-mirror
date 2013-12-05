@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.111 2013/11/24 18:39:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.112 2013/12/05 18:36:55 blueness Exp $
+
+*xapian-1.2.16 (05 Dec 2013)
+
+  05 Dec 2013; Anthony G. Basile <blueness@gentoo.org> +xapian-1.2.16.ebuild:
+  Version bump
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> xapian-1.2.14.ebuild:
   Stable for sparc, wrt bug #470402
