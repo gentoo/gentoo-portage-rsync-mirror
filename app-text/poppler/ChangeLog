@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.408 2013/11/12 20:13:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.409 2013/12/06 22:29:12 dilfridge Exp $
+
+  06 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -poppler-0.24.2.ebuild:
+  Remove old
 
   12 Nov 2013; Agostino Sarubbo <ago@gentoo.org> poppler-0.24.3.ebuild:
   Stable for ia64, wrt bug #489720

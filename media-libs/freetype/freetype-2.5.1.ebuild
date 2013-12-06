@@ -1,12 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.1.ebuild,v 1.2 2013/12/06 21:42:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.1.ebuild,v 1.3 2013/12/06 22:04:42 polynomial-c Exp $
 
 EAPI=5
 
 inherit autotools-multilib flag-o-matic multilib
-
-MY_PV=${PV}
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
@@ -78,16 +76,9 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-TT_Load_Simple_Glyph_fix.patch
 
-	#if use png; then
-	#	local pnglibs=$(pkg-config libpng --libs) # 488222 487646
-	#	sed -e "s@Libs.private: %LIBZ% %LIBBZ2% %FT2_EXTRA_LIBS%@Libs.private: %LIBZ% %LIBBZ2% %FT2_EXTRA_LIBS% ${pnglibs}@" \
-	#		-e 's@Requires:@Requires.private: zlib libpng\nRequires:@' \
-	#		-i "${S}/builds/unix/freetype2.in" \
-	#		|| die "Could not sed pkg-config libpng --libs in builds/unix/freetype2.in"
-	#fi
-
 	if use utils; then
-		cd "${WORKDIR}/ft2demos-${MY_PV}" || die
+		cd "${WORKDIR}/ft2demos-${PV}" || die
+		epatch "${FILESDIR}"/ft2demos-${PV}-compilefix.patch
 		# Disable tests needing X11 when USE="-X". (bug #177597)
 		if ! use X; then
 			sed -i -e "/EXES\ +=\ ftdiff/ s:^:#:" Makefile || die
@@ -124,7 +115,7 @@ src_compile() {
 		# fix for Prefix, bug #339334
 		multilib_for_best_abi autotools-utils_src_compile \
 			X11_PATH="${EPREFIX}/usr/$(get_libdir)" \
-			FT2DEMOS=1 TOP_DIR_2="${WORKDIR}/ft2demos-${MY_PV}"
+			FT2DEMOS=1 TOP_DIR_2="${WORKDIR}/ft2demos-${PV}"
 	fi
 }
 
@@ -134,9 +125,9 @@ src_install() {
 	if use utils; then
 		install_utils() {
 			einfo "Installing utils"
-			rm "${WORKDIR}"/ft2demos-${MY_PV}/bin/README || die
+			rm "${WORKDIR}"/ft2demos-${PV}/bin/README || die
 			local ft2demo
-			for ft2demo in ../ft2demos-${MY_PV}/bin/*; do
+			for ft2demo in ../ft2demos-${PV}/bin/*; do
 				"${BUILD_DIR}"/libtool --mode=install $(type -P install) -m 755 "$ft2demo" \
 					"${ED}"/usr/bin || die
 			done
