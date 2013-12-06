@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.66 2013/12/06 20:41:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.67 2013/12/06 21:15:29 blueness Exp $
+
+  06 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  -files/varnish-3.0.2-automagic.patch, -files/varnish-3.0.3-automagic.patch,
+  -files/varnishd.confd, -files/varnishd.initd, -varnish-3.0.2-r1.ebuild,
+  -varnish-3.0.3-r1.ebuild, -varnish-3.0.4-r1.ebuild, -varnish-3.0.4.ebuild:
+  Cleanup, security bug #489944
 
   06 Dec 2013; Agostino Sarubbo <ago@gentoo.org> varnish-3.0.5.ebuild:
   Stable for x86, wrt bug #489944
