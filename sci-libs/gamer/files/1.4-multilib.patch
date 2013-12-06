@@ -11,7 +11,7 @@ index de1d7c3..b2420c8 100644
  
  libgamer_la_SOURCES = 
 -libgamer_la_LIBADD  = ${BASE_LIBS} ${BIOM_LIBS}
-+libgamer_la_LIBADD  = ${BASE_LIBS} ${BIOM_LIBS} -lm -lstdc++
++libgamer_la_LIBADD  = ${BASE_LIBS} ${BIOM_LIBS} -lm -lstdc++ ../tetgen/libtetgen.la
  libgamer_la_LDFLAGS = -version-info ${FETK_VERSION}
  
  libtriangle_la_SOURCES = 

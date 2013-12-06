@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/gamer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gamer/ChangeLog,v 1.6 2012/06/19 11:19:42 jlec Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gamer/ChangeLog,v 1.7 2013/12/06 13:03:35 jlec Exp $
+
+*gamer-1.5-r2 (06 Dec 2013)
+
+  06 Dec 2013; Justin Lecher <jlec@gentoo.org> +gamer-1.5-r2.ebuild,
+  files/1.4-multilib.patch, metadata.xml:
+  Fix underlinking issue
 
   19 Jun 2012; Justin Lecher <jlec@gentoo.org> files/1.5-underlinking.patch:
   Fix relink problems of libtool, #421749
