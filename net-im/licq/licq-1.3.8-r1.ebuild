@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.8-r1.ebuild,v 1.6 2013/03/02 22:52:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.8-r1.ebuild,v 1.8 2013/12/06 08:00:33 polynomial-c Exp $
 
 EAPI=2
 CMAKE_USE_DIR="${S}/plugins/qt4-gui"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha ia64 ppc sparc"
 IUSE="debug linguas_he ncurses msn nls crypt socks5 ssl qt4 xosd"
 
 RDEPEND="crypt? ( >=app-crypt/gpgme-1 )

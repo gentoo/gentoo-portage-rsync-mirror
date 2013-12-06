@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.1.ebuild,v 1.1 2013/11/04 11:42:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.8.1.ebuild,v 1.3 2013/12/06 08:00:33 polynomial-c Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc linguas_he nls socks5 ssl xosd aosd jabber qt4 msn"
 
 RDEPEND=">=app-crypt/gpgme-1
