@@ -1,6 +1,18 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.449 2013/11/09 15:52:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.450 2013/12/06 22:43:36 robbat2 Exp $
+
+  06 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> -openldap-2.3.43-r1.ebuild,
+  -openldap-2.4.21.ebuild, -openldap-2.4.25-r1.ebuild, -openldap-2.4.25.ebuild,
+  -openldap-2.4.28.ebuild, -openldap-2.4.31-r1.ebuild, -openldap-2.4.31.ebuild,
+  -openldap-2.4.32.ebuild, -openldap-2.4.33-r1.ebuild,
+  -openldap-2.4.33-r2.ebuild, -openldap-2.4.33.ebuild,
+  openldap-2.3.43-r3.ebuild, openldap-2.3.43-r4.ebuild,
+  openldap-2.4.19-r1.ebuild, openldap-2.4.23.ebuild, openldap-2.4.24.ebuild,
+  openldap-2.4.28-r1.ebuild, openldap-2.4.30.ebuild, openldap-2.4.35-r1.ebuild,
+  openldap-2.4.35.ebuild:
+  Bug #485166: dev-lang/perl no longer has USE=build, so update the dep; clean
+  up many older unstablized older versions.
 
   09 Nov 2013; Pacho Ramos <pacho@gentoo.org> openldap-2.4.35-r1.ebuild:
   x86 stable, bug #486302
