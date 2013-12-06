@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/iso8601
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.6 2013/11/14 06:39:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iso8601/ChangeLog,v 1.7 2013/12/06 21:37:05 floppym Exp $
+
+  06 Dec 2013; Mike Gilbert <floppym@gentoo.org> iso8601-0.1.8.ebuild:
+  Drop dependency on nose, thanks Arfrever.
 
 *iso8601-0.1.8 (14 Nov 2013)
 

@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.1.ebuild,v 1.1 2013/12/06 14:12:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.1.ebuild,v 1.2 2013/12/06 21:42:02 floppym Exp $
 
 EAPI=5
 
 inherit autotools-multilib flag-o-matic multilib
+
+MY_PV=${PV}
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
