@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.5.1-r1.ebuild,v 1.1 2013/12/06 04:43:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.5.1-r1.ebuild,v 1.2 2013/12/06 06:33:37 radhermit Exp $
 
 EAPI=5
 
@@ -53,8 +53,6 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i aclocal.m4 -e 's|\"-O2\"|\"\"|g' || die
-	sed -i configure.in -e \
-		's|-z \"$with_user\" ;|-z \"$with_user\" \&\& test \"$with_user\" != \"no\" ;|g' || die
 	eautoconf
 }
 src_configure() {
@@ -76,7 +74,7 @@ src_configure() {
 		$(use_with drop-root chroot '') \
 		$(use_with smi) \
 		$(use_with ssl crypto "${EPREFIX}/usr") \
-		$(use_with drop-root user tcpdump)
+		$(usex drop-root "--with-user=tcpdump" "")
 }
 
 src_test() {
