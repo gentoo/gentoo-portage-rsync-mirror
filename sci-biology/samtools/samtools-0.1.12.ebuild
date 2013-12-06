@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.12.ebuild,v 1.5 2011/07/18 01:50:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.12.ebuild,v 1.6 2013/12/06 12:44:16 jlec Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="MIT"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
 S="${WORKDIR}/${MY_P}"
 

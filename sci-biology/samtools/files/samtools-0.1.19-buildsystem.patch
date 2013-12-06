@@ -62,7 +62,7 @@ index 2f51bfc..4dda5a4 100644
  
  libbam.so.1-local:$(LOBJS)
 -		$(CC) -shared -Wl,-soname,libbam.so -o libbam.so.1 $(LOBJS) -lc -lz
-+		$(CC) $(LDFLAGS) -shared -Wl,-soname,libbam.so -o libbam.so.1 $(LOBJS) -lc -lz
++		$(CC) $(LDFLAGS) -shared -Wl,-soname,libbam.so -o libbam.so.1 $(LOBJS) -lc -lz -lm -lpthread
  
  dylib:
  		@$(MAKE) cleanlocal; \

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qpid-python/qpid-python-0.20.ebuild,v 1.1 2013/11/14 00:44:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qpid-python/qpid-python-0.20.ebuild,v 1.2 2013/12/06 12:40:22 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,7 +17,8 @@ LICENSE="MIT"
 SLOT="0"
 
 RDEPEND=""
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? ( dev-python/epydoc[${PYTHON_USEDEP}] )"
 
 python_compile_all() {
 	use doc && "${PYTHON}" setup.py doc_option
@@ -38,7 +39,7 @@ src_test() {
 }
 
 python_install_all() {
-	local HTML_DOCS=( ../"${P}"-python2_7/doc/. )
+	use doc && local HTML_DOCS=( ../"${P}"-python2_7/doc/. )
 	use examples && local EXAMPLES=( examples/. )
 	distutils-r1_python_install_all
 }
