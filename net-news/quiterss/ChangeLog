@@ -1,6 +1,14 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.35 2013/12/05 13:02:58 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.37 2013/12/06 05:39:07 pinkbyte Exp $
+
+  06 Dec 2013; Sergey Popov <pinkbyte@gentoo.org>
+  -files/quiterss-0.12.3-unbundle-sqlite.patch, -quiterss-0.12.5.ebuild,
+  -quiterss-0.13.2.ebuild, -quiterss-0.14.0.ebuild:
+  Drop old versions
+
+  06 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> quiterss-0.13.3.ebuild:
+  Stable on x86, wrt bug #491794
 
   05 Dec 2013; Chema Alonso <nimiux@gentoo.org> quiterss-0.13.3.ebuild:
   Stable for amd64 wrt bug #491794
