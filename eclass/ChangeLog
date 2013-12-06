@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1080 2013/12/05 16:52:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1081 2013/12/06 03:04:01 jcallen Exp $
+
+  06 Dec 2013; Jonathan Callen <jcallen@gentoo.org> multiprocessing.eclass:
+  Fix multiprocessing.eclass for non-Linux hosts
 
   05 Dec 2013; Anthony G. Basile <blueness@gentoo.org> libtool.eclass:
   Remove warning for uclibc if patching fails, bug #492640
