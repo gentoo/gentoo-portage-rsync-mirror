@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/acr38u
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/ChangeLog,v 1.7 2013/03/17 15:16:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/ChangeLog,v 1.8 2013/12/06 06:09:09 flameeyes Exp $
+
+*acr38u-1.7.11-r2 (06 Dec 2013)
+
+  06 Dec 2013; Diego E. Pettenò <flameeyes@gentoo.org> +acr38u-1.7.11-r2.ebuild,
+  +files/1.7.11-bis.rules, +files/acr38u-1.7.11-build.patch,
+  -acr38u-1.7.10-r1.ebuild, -acr38u-1.7.11.ebuild, -files/92-pcscd-acr38u.rules:
+  Remove old versions; update with Vincent Hardy's new udev rules, and a build
+  patch to be able to use autotools-utils (getting this ready for multilib).
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

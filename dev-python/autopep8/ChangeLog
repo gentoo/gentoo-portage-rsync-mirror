@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/autopep8
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.40 2013/11/24 13:49:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/autopep8/ChangeLog,v 1.41 2013/12/06 06:22:04 patrick Exp $
+
+*autopep8-0.9.7 (06 Dec 2013)
+
+  06 Dec 2013; Patrick Lauer <patrick@gentoo.org> +autopep8-0.9.7.ebuild:
+  Bump
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> autopep8-0.9.5.ebuild:
   Stable for x86, wrt bug #481850
