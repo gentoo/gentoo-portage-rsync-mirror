@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/argyllcms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/ChangeLog,v 1.34 2013/08/13 02:18:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/ChangeLog,v 1.35 2013/12/06 00:21:03 voyageur Exp $
+
+*argyllcms-1.6.2 (06 Dec 2013)
+
+  06 Dec 2013; Bernard Cafarelli <voyageur@gentoo.org>
+  argyllcms-1.4.0-r1.ebuild, argyllcms-1.4.0-r2.ebuild, argyllcms-1.5.1.ebuild,
+  +argyllcms-1.6.2.ebuild, metadata.xml:
+  Add myself to maintainers, version bump and fix some bugs (#457876, #491656
+  and maybe #485962)
 
 *argyllcms-1.5.1 (13 Aug 2013)
 
