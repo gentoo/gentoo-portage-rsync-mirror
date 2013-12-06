@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.10-r5.ebuild,v 1.4 2013/11/28 20:35:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.10-r6.ebuild,v 1.1 2013/12/06 01:24:10 mattm Exp $
 
 EAPI=4
 
@@ -61,8 +61,8 @@ src_configure() {
 		--sbindir=/sbin \
 		--sysconfdir=/etc/apcupsd \
 		--with-pwrfail-dir=/etc/apcupsd \
-		--with-lock-dir=/var/run/apcupsd \
-		--with-pid-dir=/var/run/apcupsd \
+		--with-lock-dir=/run/apcupsd \
+		--with-pid-dir=/run/apcupsd \
 		--with-log-dir=/var/log \
 		--with-nis-port=3551 \
 		--enable-net --enable-pcnet \

@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.94 2013/12/03 22:18:44 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.95 2013/12/06 01:24:10 mattm Exp $
+
+*apcupsd-3.14.10-r6 (06 Dec 2013)
+
+  06 Dec 2013; Matthew Marlowe <mattm@gentoo.org> +apcupsd-3.14.10-r6.ebuild,
+  -apcupsd-3.14.10-r5.ebuild, files/apcupsd.conf:
+  Found a few more references to /var/run/apcupsd that needed to be changed to
+  /run/apcupsd
 
   03 Dec 2013; Matthew Marlowe <mattm@gentoo.org> apcupsd-3.14.10-r5.ebuild,
   files/apcupsd.init.4:
