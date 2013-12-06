@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.249 2013/12/01 20:06:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.250 2013/12/06 17:09:38 maekke Exp $
+
+  06 Dec 2013; Markus Meier <maekke@gentoo.org> file-5.15.ebuild:
+  arm stable, bug #492916
 
 *file-5.16 (01 Dec 2013)
 

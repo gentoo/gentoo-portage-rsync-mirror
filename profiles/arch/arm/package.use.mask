@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.181 2013/11/28 22:49:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.182 2013/12/06 17:08:21 maekke Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (28 Nov 2013)
 # Missing keywords, bug #492820
@@ -337,7 +337,7 @@ media-sound/sox ladspa
 media-plugins/gst-plugins-meta aac dts dv lame libvisual taglib vcd wavpack
 
 # projectm not keyworded, bug #314969
-media-video/vlc projectm
+media-video/vlc projectm chromaprint opencv
 
 # Ultrabug <ultrabug@gentoo.org) (05 Sept 2011)
 # missing keyword for net-libs/zeromq

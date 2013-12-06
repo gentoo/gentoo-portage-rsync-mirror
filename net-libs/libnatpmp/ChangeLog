@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnatpmp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/ChangeLog,v 1.21 2013/11/27 14:54:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/ChangeLog,v 1.22 2013/12/06 17:07:16 maekke Exp $
+
+  06 Dec 2013; Markus Meier <maekke@gentoo.org> libnatpmp-20130911.ebuild:
+  arm stable, bug #492708
 
 *libnatpmp-20131126 (27 Nov 2013)
 

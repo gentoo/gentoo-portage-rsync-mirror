@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.875 2013/11/17 15:48:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.876 2013/12/06 17:11:28 maekke Exp $
+
+  06 Dec 2013; Markus Meier <maekke@gentoo.org> vlc-2.0.8.ebuild,
+  vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild, vlc-2.1.0.ebuild, vlc-2.1.1.ebuild:
+  restore ~arm, bug #489436
 
 *vlc-2.1.1 (17 Nov 2013)
 
