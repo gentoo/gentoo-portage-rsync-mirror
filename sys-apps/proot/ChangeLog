@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/proot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/ChangeLog,v 1.1 2013/01/24 08:54:46 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/proot/ChangeLog,v 1.2 2013/12/06 07:09:12 pinkbyte Exp $
+
+*proot-3.2.1 (06 Dec 2013)
+
+  06 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> +proot-3.2.1.ebuild,
+  +files/proot-3.2.1-makefile.patch:
+  Version bump, wrt bug #490840. Thanks to Tim Harder for discovering this
+  issue
 
 *proot-2.3.1 (24 Jan 2013)
 

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install prepare test
+DEPEND=sys-libs/talloc test? ( dev-util/valgrind )
+DESCRIPTION=User-space implementation of chroot, mount --bind, and binfmt_misc
+EAPI=5
+HOMEPAGE=http://proot.me
+IUSE=test
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=sys-libs/talloc
+RESTRICT=test
+SLOT=0
+SRC_URI=https://github.com/cedric-vincent/PRoot/archive/v3.2.1.tar.gz -> proot-3.2.1.tar.gz
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=291a9d0051ae72f1f9300bc4ec2aca72
