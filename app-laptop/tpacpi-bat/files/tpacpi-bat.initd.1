@@ -57,8 +57,8 @@ set_all() {
 
 	for bat in ${BATS}; do
 		ebegin "  setting thresholds for ${bat}: $tstart $tstop"
-		/usr/bin/tpacpi-bat -s startChargeThreshold ${bat} ${tstart}
-		/usr/bin/tpacpi-bat -s stopChargeThreshold ${bat} ${tstop}
+		/usr/bin/tpacpi-bat -s startThreshold ${bat} ${tstart}
+		/usr/bin/tpacpi-bat -s stopThreshold ${bat} ${tstop}
 		eend $?
 	done
 }
@@ -71,8 +71,8 @@ info() {
 	require_started
 
 	for bat in ${BATS}; do
-		tstart=$(/usr/bin/tpacpi-bat -g startChargeThreshold ${bat})
-		tstop=$(/usr/bin/tpacpi-bat -g stopChargeThreshold ${bat})
+		tstart=$(/usr/bin/tpacpi-bat -g startThreshold ${bat})
+		tstop=$(/usr/bin/tpacpi-bat -g stopThreshold ${bat})
 		einfo "Battery ${bat}: ${tstart} ${tstop}"
 	done
 }

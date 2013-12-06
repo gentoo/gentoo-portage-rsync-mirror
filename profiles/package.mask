@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15245 2013/12/05 08:15:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15246 2013/12/06 14:40:27 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -50,6 +50,7 @@ dev-ruby/postgres
 # Tom Wijsman <TomWij@gentoo.org> (30 Nov 2013)
 # Mask gentoo-sources-3.12.1 as it causes sandbox violations, 3.12.2 is out now.
 =sys-kernel/gentoo-sources-3.12.1
+=sys-kernel/aufs-sources-3.12.1
 
 # Hans de Graaff <graaff@gentoo.org> (24 Nov 2013)
 # dev-ruby/id3lib-ruby only works with deprecated ruby 1.8.

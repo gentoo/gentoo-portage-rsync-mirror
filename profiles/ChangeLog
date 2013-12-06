@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8410 2013/12/05 08:15:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8411 2013/12/06 14:40:27 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Dec 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  Mask aufs-source-12.1 for the same reason as gentoo-sources-12.1
 
   05 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Removed dev-vcs/git mask.
