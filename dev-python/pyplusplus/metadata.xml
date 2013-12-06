@@ -9,5 +9,7 @@
 	<use>
 		<flag name="indexing"> Install indexing_suite_v2 to enhance boost python
 		</flag>
+		<flag name="numpy"> Generate code for <pkg>dev-libs/boost-numpy </pkg> to accelerate arrays
+		</flag>
 	</use>
 </pkgmetadata>
