@@ -1,27 +1,21 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.0.1.ebuild,v 1.4 2013/12/06 14:12:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.1.ebuild,v 1.1 2013/12/06 14:12:05 polynomial-c Exp $
 
 EAPI=5
 
 inherit autotools-multilib flag-o-matic multilib
 
-MY_PV="${PV%.*}"
-
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
 SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
-	utils?	( mirror://sourceforge/freetype/ft2demos-${MY_PV}.tar.bz2 )
-	doc?	( mirror://sourceforge/freetype/${PN}-doc-${MY_PV}.tar.bz2 )
-	infinality? ( https://raw.github.com/bohoomil/fontconfig-ultimate/c12482bd16b69cba5798dc7581b926b55682904d/01_freetype2-iu-2.5.0.1-7/infinality-2.5.patch -> ${P}-infinality.patch )"
+	utils?	( mirror://sourceforge/freetype/ft2demos-${PV}.tar.bz2 )
+	doc?	( mirror://sourceforge/freetype/${PN}-doc-${PV}.tar.bz2 )
+	infinality? ( https://raw.github.com/bohoomil/fontconfig-ultimate/ddda669247330d1a1b8c9473cfe5052d42e1b313/01_lib32-freetype2-iu-2.5.1-2/infinality-2.5.1.patch -> ${P}-infinality.patch )"
 
 LICENSE="|| ( FTL GPL-2+ )"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
-	~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd
-	~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos
-	~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris
-	~x86-solaris ~x86-winnt"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="X +adobe-cff auto-hinter bindist bzip2 debug doc fontforge infinality png
 	static-libs utils"
 
@@ -38,13 +32,13 @@ RDEPEND="${DEPEND}
 src_prepare() {
 	enable_option() {
 		sed -i -e "/#define $1/a #define $1" \
-			include/freetype/config/ftoption.h \
+			include/config/ftoption.h \
 			|| die "unable to enable option $1"
 	}
 
 	disable_option() {
 		sed -i -e "/#define $1/ { s:^:/*:; s:$:*/: }" \
-			include/freetype/config/ftoption.h \
+			include/config/ftoption.h \
 			|| die "unable to disable option $1"
 	}
 
@@ -80,15 +74,15 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-2.4.11-sizeof-types.patch # 459966
 
-	epatch "${FILESDIR}"/${PN}-2.4.12-clean-include.patch # 482172
+	epatch "${FILESDIR}"/${P}-TT_Load_Simple_Glyph_fix.patch
 
-	if use png; then
-		local pnglibs=$(pkg-config libpng --libs) # 488222 487646
-		sed -e "s@Libs.private: %LIBZ% %LIBBZ2% %FT2_EXTRA_LIBS%@Libs.private: %LIBZ% %LIBBZ2% %FT2_EXTRA_LIBS% ${pnglibs}@" \
-			-e 's@Requires:@Requires.private: zlib libpng\nRequires:@' \
-			-i "${S}/builds/unix/freetype2.in" \
-			|| die "Could not sed pkg-config libpng --libs in builds/unix/freetype2.in"
-	fi
+	#if use png; then
+	#	local pnglibs=$(pkg-config libpng --libs) # 488222 487646
+	#	sed -e "s@Libs.private: %LIBZ% %LIBBZ2% %FT2_EXTRA_LIBS%@Libs.private: %LIBZ% %LIBBZ2% %FT2_EXTRA_LIBS% ${pnglibs}@" \
+	#		-e 's@Requires:@Requires.private: zlib libpng\nRequires:@' \
+	#		-i "${S}/builds/unix/freetype2.in" \
+	#		|| die "Could not sed pkg-config libpng --libs in builds/unix/freetype2.in"
+	#fi
 
 	if use utils; then
 		cd "${WORKDIR}/ft2demos-${MY_PV}" || die
@@ -99,9 +93,10 @@ src_prepare() {
 	fi
 
 	# we need non-/bin/sh to run configure
-	[[ -n ${CONFIG_SHELL} ]] && \
+	if [[ -n ${CONFIG_SHELL} ]] ; then
 		sed -i -e "1s:^#![[:space:]]*/bin/sh:#!$CONFIG_SHELL:" \
-			"${S}"/builds/unix/configure
+			"${S}"/builds/unix/configure || die
+	fi
 
 	autotools-utils_src_prepare
 }

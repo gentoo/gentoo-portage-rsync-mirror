@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.2.1.ebuild,v 1.4 2013/05/18 13:48:37 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.2.1.ebuild,v 1.5 2013/12/06 14:03:23 polynomial-c Exp $
 
 EAPI=4
 
@@ -47,7 +47,7 @@ CDEPEND="
 	dev-libs/openssl
 	sys-libs/zlib
 	pcre? ( dev-libs/libpcre )
-	perl? ( dev-lang/perl[-build] )
+	perl? ( dev-lang/perl[-build(-)] )
 	tk? ( dev-lang/tk )
 	curl? (
 		net-misc/curl

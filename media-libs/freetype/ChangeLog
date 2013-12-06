@@ -1,6 +1,23 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.381 2013/10/24 22:40:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.382 2013/12/06 14:12:05 polynomial-c Exp $
+
+*freetype-2.5.1 (06 Dec 2013)
+
+  06 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> freetype-2.5.0.1.ebuild,
+  +freetype-2.5.1.ebuild, -files/freetype-1.4-glibc-2.10.patch,
+  -files/freetype-1.4_pre-contrib-destdir.patch,
+  -files/freetype-1.4_pre-malloc.patch,
+  -files/freetype-1.4_pre-silence-strict-aliasing.patch,
+  -files/freetype-1.4_pre-ttf2pk-tetex-3.patch,
+  -files/freetype-1.4_pre-ttf2tfm-segfault.patch,
+  -files/freetype-1.4_pre20080316-CVE-2006-1861.patch,
+  -files/freetype-1.4_pre20080316-CVE-2007-2754.patch,
+  -files/freetype-1.4_pre20080316-CVE-2008-1808.patch,
+  -files/freetype-1.4_pre20080316-LDLFAGS.patch,
+  -files/freetype-1.4_pre20080316-kpathsea_version.patch,
+  +files/freetype-2.5.1-TT_Load_Simple_Glyph_fix.patch:
+  Version bump. Cleaned up FILESDIR. Fixed inifinality patchfile source URI.
 
   24 Oct 2013; Mark Wright <gienah@gentoo.org> freetype-2.5.0.1.ebuild:
   if use png, then sed freetype2.pc to add the png lib, to fix bug 487646.
