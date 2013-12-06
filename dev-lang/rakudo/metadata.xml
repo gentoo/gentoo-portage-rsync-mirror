@@ -6,4 +6,7 @@
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
 	</maintainer>
+        <use>
+        <flag name='parrot'>Build the parrot backend (default)</flag> 
+        </use>
 </pkgmetadata>
