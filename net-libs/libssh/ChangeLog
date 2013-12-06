@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.90 2013/10/22 14:29:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.91 2013/12/06 12:26:30 polynomial-c Exp $
+
+*libssh-0.6.0_rc2 (06 Dec 2013)
+
+  06 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> +libssh-0.6.0_rc2.ebuild:
+  Version bump with kind permission from johu.
 
   22 Oct 2013; Jeroen Roovers <jer@gentoo.org> libssh-0.6.0_rc1.ebuild:
   Marked ~hppa (bug #488696).
