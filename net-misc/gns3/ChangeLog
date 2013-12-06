@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/gns3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.8 2013/12/05 15:28:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3/ChangeLog,v 1.10 2013/12/06 10:38:05 pinkbyte Exp $
+
+*gns3-0.8.6 (06 Dec 2013)
+
+  06 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> +gns3-0.8.6.ebuild:
+  Version bump, wrt bug #493342, thanks to Aaron Bauman <aaron AT
+  flappyport.com>
+
+  06 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> -gns3-0.7.4.ebuild,
+  -files/gns3-0.7.4_set_dynamips_path.patch,
+  -files/gns3-0.7.4_set_qemu_path.patch, -gns3-0.8.2.ebuild,
+  -files/gns3-0.8.2_install_path.patch, -gns3-0.8.3.1.ebuild,
+  -files/gns3-0.8.3.1_install_path.patch:
+  Drop old versions
 
   05 Dec 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix e-mail address.
