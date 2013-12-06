@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.140 2013/06/26 11:58:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.141 2013/12/06 17:55:58 swift Exp $
+
+  06 Dec 2013; Sven Vermeulen <swift@gentoo.org> kismet-2011.03.2-r3.ebuild,
+  kismet-2013.03.1-r1.ebuild, kismet-9999.ebuild:
+  Adding dependency towards SELinux policy
 
   26 Jun 2013; Agostino Sarubbo <ago@gentoo.org> kismet-2013.03.1-r1.ebuild:
   Stable for arm, wrt bug #474292

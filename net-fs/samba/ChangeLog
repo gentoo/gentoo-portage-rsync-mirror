@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.634 2013/11/30 20:03:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.635 2013/12/06 17:56:25 polynomial-c Exp $
+
+  06 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> samba-4.0.12.ebuild,
+  samba-4.1.2.ebuild:
+  Install ldap schema. Thanks to Chan Min Wai for providing an ebuild patch in
+  bug #491002.
 
 *samba-3.6.21 (30 Nov 2013)
 
