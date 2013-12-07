@@ -1,7 +1,6 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenstored.initd,v 1.11 2013/12/06 23:34:11 idella4 Exp $
 
 depend() {
 	before xendomains xend sshd ntp-client ntpd nfs nfsmount rsyncd portmap dhcp
@@ -9,7 +8,7 @@ depend() {
 }
 
 start() {
-	! [ -x /run/xen ] && mkdir -p /run/xen
+	[ -x /run/xen ] || mkdir -p /run/xen
 	ebegin "Starting xenstored daemon"
 	start-stop-daemon --start --exec /usr/sbin/xenstored \
 		--pidfile /run/xenstored.pid \
@@ -31,3 +30,4 @@ stop() {
 		--pidfile /run/xenstored.pid
 	eend $?
 }
+

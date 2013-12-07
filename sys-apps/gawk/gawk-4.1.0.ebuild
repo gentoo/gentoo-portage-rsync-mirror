@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-4.1.0.ebuild,v 1.3 2013/12/07 06:24:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-4.1.0.ebuild,v 1.4 2013/12/07 06:45:27 vapier Exp $
 
 EAPI="4"
 
@@ -27,8 +27,12 @@ src_prepare() {
 	sed -i \
 		-e '/^LN =/s:=.*:= $(LN_S):' \
 		-e '/install-exec-hook:/s|$|\nfoo:|' \
-		Makefile.in doc/Makefile.in
+		Makefile.in doc/Makefile.in || die
 	sed -i '/^pty1:$/s|$|\n_pty1:|' test/Makefile.in #413327
+	# disable pointless build time hack that breaks cross-compiling #493362
+	sed -i \
+		-e '/check-recursive all-recursive: check-for-shared-lib-support/d' \
+		extension/Makefile.in || die
 }
 
 src_configure() {

@@ -1,7 +1,4 @@
-# /etc/conf.d/xenqemudev
+# /etc/conf.d/xencommons
 
-# To enable QEMU file backend, set to 'yes'
-XENQEMUDEV_FILE_BACKEND_ENABLE=""
-
-# Common options for xenqemudev
-XENQEMUDEV_OPTS=""
+# Load xen's kernel modules, and this will override defaults
+XEN_KERNEL_MODULES=""

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.203 2013/12/06 23:34:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.204 2013/12/07 06:49:41 idella4 Exp $
+
+  07 Dec 2013; Ian Delaney <idella4@gentoo.org> files/xencommons.confd,
+  files/xenconsoled.initd, files/xenqemudev.initd, files/xenstored.confd,
+  files/xenstored.initd, xen-tools-4.3.1-r1.ebuild, xen-tools-4.3.1-r2.ebuild:
+  corrections to previous patch by dlan, tested by him
 
 *xen-tools-4.3.1-r2 (06 Dec 2013)
 

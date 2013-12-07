@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1-r2.ebuild,v 1.1 2013/12/06 23:34:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1-r2.ebuild,v 1.2 2013/12/07 06:49:41 idella4 Exp $
 
 EAPI=5
 
@@ -319,9 +319,9 @@ src_install() {
 	newinitd "${FILESDIR}"/xenstored.initd xenstored
 	newinitd "${FILESDIR}"/xenconsoled.initd xenconsoled
 	newinitd "${FILESDIR}"/xencommons.initd xencommons
-	newinitd "${FILESDIR}"/xencommons.confd xencommons
+	newconfd "${FILESDIR}"/xencommons.confd xencommons
 	newinitd "${FILESDIR}"/xenqemudev.initd xenqemudev
-	newinitd "${FILESDIR}"/xenqemudev.confd xenqemudev
+	newconfd "${FILESDIR}"/xenqemudev.confd xenqemudev
 
 	if use screen; then
 		cat "${FILESDIR}"/xendomains-screen.confd >> "${D}"/etc/conf.d/xendomains || die
@@ -341,7 +341,7 @@ src_install() {
 	fi
 
 	# xend expects these to exist
-	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
+	keepdir /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
 
 	# for xendomains
 	keepdir /etc/xen/auto

@@ -1,117 +1,81 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenqemudev.initd,v 1.1 2013/12/06 23:34:11 idella4 Exp $
-
-extra_commands="status"
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenqemudev.initd,v 1.2 2013/12/07 06:49:41 idella4 Exp $
 
 depend() {
-	need xend
-	after dhcp
+	need xencommons xenstored xenconsoled
 }
 
-get_domname() {
-	local name_from_file=$(sed -rn 's/^name\W*=\W*\"?([[:alnum:]_\.-]+)\"?\W*;?/\1/p' "${1}" | tail -n 1)
+is_privileged_domain() {
+	grep -qsE '^control_d$' /proc/xen/capabilities
+	return $?
+}
 
-	if [ -z ${name_from_file} ] ; then
-		basename "${1}"
-	else
-		echo ${name_from_file}        
+xen_setvars() {
+	. /etc/xen/scripts/hotplugpath.sh
+
+	XENQEMUDEV_PIDFILE=/run/xenqemudev.pid
+	XEN_QEMU="${LIBEXEC}/qemu-system-i386"
+}
+
+xen_qemu_start() {
+	if [ -z "${XENQEMUDEV_FILE_BACKEND_ENABLE}" ]; then
+		ewarn " QEMU disk backend not enabled"
+		ewarn " enable XENQEMUDEV_FILE_BACKEND_ENABLE in /etc/conf.d/xenqemudev"
+		return 1
 	fi
-}
 
-is_running() {
-	/usr/sbin/xm list "${1}" >/dev/null 2>&1
-}
+	xen_setvars
 
-using_screen() {
-	[ "${SCREEN}" = "yes" -o "${SCREEN}" = "YES" ]
-}
+	if [ ! -c /dev/xen/gntdev ]; then
+		einfo " Xen gntdev driver not loaded"
+		return 1
+	fi
 
-set_screen_cmd() {
-	screen_cmd="screen -c ${SCREENRC:-/dev/null} -q -r ${SCREEN_NAME:=xen} -X"
+	if [ -e "${XEN_QEMU}" ]; then
+		einfo " Starting QEMU as disk backend for dom0"
+
+		XENQEMUDEV_DEFAULT_OPTS="-xen-domid 0 -xen-attach -name dom0 \
+			-nographic -M xenpv -daemonize \
+			-monitor /dev/null -serial /dev/null -parallel /dev/null"
+
+		XENQEMUDEV_OPTS=${XENQEMUDEV_OPTS:-${XENQEMUDEV_DEFAULT_OPTS}}
+
+		start-stop-daemon --start --exec ${XEN_QEMU} \
+			--pidfile ${XENQEMUDEV_PIDFILE} \
+			-- -pidfile ${XENQEMUDEV_PIDFILE} \
+			${XENQEMUDEV_OPTS}
+		return $?
+	fi
 }
 
 start() {
-	set_screen_cmd
+	ebegin "Starting xenqemudev daemon"
 
-	einfo "Starting Xen domains from ${AUTODIR:=/etc/xen/auto}"
-	if using_screen ; then
-		ebegin "Creating screen session to hold domain consoles"
-		( screen -c ${SCREENRC:-/dev/null} -d -m -S ${SCREEN_NAME} -t dom0 && sleep 3 \
-		&& ${screen_cmd} zombie dr \
-		&& logrotate -f /etc/xen/xen-consoles.logrotate \
-		&& ${screen_cmd} logfile /var/log/xen-consoles/%t.log \
-		&& ${screen_cmd} logfile flush ${SCREEN_LOG_INTERVAL:-1} \
-		&& ${screen_cmd} log on \
-		&& ${screen_cmd} deflog on ) >/dev/null
-		if [ $? -ne 0 ] ; then
-			eend 1
-			return 1
-		else
-			eend
-		fi
+	# not running in Xen dom0 or domU
+	if [ ! -d /proc/xen ]; then
+		eend 1 "Not running in Xen mode"
+		return 1
 	fi
-	# Create all domains with config files in AUTODIR.
-	for dom in $(ls "${AUTODIR:=/etc/xen/auto}/"* 2>/dev/null | sort); do
-		name=$(get_domname ${dom})
-		if ! is_running ${name} ; then
-			ebegin " Starting domain ${name}"
-			if using_screen ; then
-				${screen_cmd} screen -t ${name} xm create ${dom} -c
-			else
-				xm create --quiet ${dom}
-			fi
-			eend $?
-		else
-			einfo " Not starting domain ${name} - already running"
-		fi
-	done
+
+	if ! is_privileged_domain; then
+		eend 1 "Not running on a privileged domain. xenqemudev not started"
+		return 1
+	fi
+
+	xen_qemu_start
+
+	eend $? "Failed to start xenqemudev"
 }
 
-stop() {
-	set_screen_cmd
+stop () {
+	ebegin "Stopping xenqemudev"
 
-	einfo "Shutting down Xen domains from ${AUTODIR:=/etc/xen/auto}"
-	# Stop all domains with config files in AUTODIR.
-	DOMAINS="$(ls "${AUTODIR:=/etc/xen/auto}/"* 2>/dev/null | sort -r)"
+	xen_setvars
 
-	if [[ "$PARALLEL_SHUTDOWN" == "yes" ]] ; then
-		for dom in $DOMAINS ; do
-			name=$(get_domname ${dom})
-			if is_running ${name} ; then
-				ebegin " Asking domain ${name} to shutdown in the background..."
-				xm shutdown --wait ${name} >/dev/null &
-			else
-				einfo " Not stopping domain ${name} - not running"
-			fi
-		done
-		einfo " Waiting for shutdown of domains that are still running"
-		wait
-		eend $?
-	else
-		for dom in $DOMAINS ; do
-			name=$(get_domname ${dom})
-			if is_running ${name} ; then
-				ebegin " Waiting for domain ${name} to shutdown"
-				xm shutdown --wait ${name} >/dev/null
-				eend $?
-			else
-				einfo " Not stopping domain ${name} - not running"
-			fi
-		done
-	fi
-	if using_screen ; then
-		if ${screen_cmd} sleep 0 >/dev/null 2>&1 ; then
-			ebegin "Closing screen session ${SCREEN_NAME}"
-			${screen_cmd} quit
-			eend $?
-		else
-			eend 0
-		fi
-	fi
-}
+	start-stop-daemon --stop --exec ${XEN_QEMU} \
+		--pidfile ${XENQEMUDEV_PIDFILE}
 
-status() {
-	/usr/sbin/xm list
+	eend $? "Stopping xenqemudev, as it cannot be restarted."
 }
