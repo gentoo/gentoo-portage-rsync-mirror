@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/pysrt
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysrt/ChangeLog,v 1.1 2013/12/07 17:31:25 tomwij Exp $
+
+*pysrt-0.5.1 (07 Dec 2013)
+*pysrt-9999 (07 Dec 2013)
+
+  07 Dec 2013; Tom Wijsman <TomWij@gentoo.org> +metadata.xml,
+  +pysrt-0.5.1.ebuild, +pysrt-9999.ebuild:
+  New ebuild for dev-python/pysrt, a library used to edit or create SubRip
+  files; fixes bug #493510, proxied commit for Nikoli whom provided the ebuilds
+  and will maintain this package.
