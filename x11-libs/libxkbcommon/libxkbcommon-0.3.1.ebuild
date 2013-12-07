@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/libxkbcommon-0.3.1.ebuild,v 1.3 2013/09/02 16:17:12 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxkbcommon/libxkbcommon-0.3.1.ebuild,v 1.4 2013/12/07 13:02:30 johu Exp $
 
 EAPI=5
 XORG_EAUTORECONF="yes"
@@ -13,7 +13,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	XORG_BASE_INDIVIDUAL_URI=""
 	SRC_URI="http://xkbcommon.org/download/${P}.tar.xz"
-	KEYWORDS="amd64 ~arm ~x86"
+	KEYWORDS="amd64 ~arm x86"
 fi
 
 inherit xorg-2 ${GIT_ECLASS}
