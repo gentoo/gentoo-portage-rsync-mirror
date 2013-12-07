@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/gio-0.12.4-r1.ebuild,v 1.2 2013/11/24 13:00:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gio/gio-0.12.4-r1.ebuild,v 1.3 2013/12/07 19:33:14 pacho Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="${GTK_MAJ_VER}/${PV}"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-haskell/glib-0.12.0:${GTK_MAJ_VER}=[profile?]

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glade/glade-0.12.1-r1.ebuild,v 1.2 2013/11/24 12:58:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glade/glade-0.12.1-r1.ebuild,v 1.3 2013/12/07 19:32:39 pacho Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="${GTK_MAJ_VER}/${PV}"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="=dev-haskell/glib-0.12*:${GTK_MAJ_VER}=[profile?]

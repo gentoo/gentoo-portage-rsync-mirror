@@ -4,10 +4,10 @@ DESCRIPTION=Binding to the GLIB library for Gtk2Hs.
 EAPI=5
 HOMEPAGE=http://projects.haskell.org/gtk2hs/
 IUSE=doc hscolour profile
-KEYWORDS=~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=LGPL-2.1
 RDEPEND=>=dev-lang/ghc-6.10.4:= dev-libs/glib:2
 SLOT=2/0.12.4
 SRC_URI=mirror://hackage/packages/archive/glib/0.12.4/glib-0.12.4.tar.gz
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ef027204ac15613183b37b73ce529f1c
+_md5_=5b34aff28279fb1d74843671ec63781e
