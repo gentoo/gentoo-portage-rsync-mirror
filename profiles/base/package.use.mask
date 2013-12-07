@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.523 2013/12/06 23:20:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.524 2013/12/07 18:55:29 jlec Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -183,6 +183,7 @@ www-client/chromium system-sqlite
 # Justin Lecher <jlec@gentoo.org> (21 Feb 2013)
 # cuda only works on x86 and amd64
 sci-libs/cholmod cuda
+sci-libs/flann cuda
 
 # Agostino Sarubbo <ago@gentoo.org< (21 Feb 2013)
 # Mask vpx because requires new libvpx and is not ready to go to stable

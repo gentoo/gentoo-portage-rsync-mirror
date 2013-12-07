@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.145 2013/07/18 17:46:50 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.146 2013/12/07 18:50:41 jlec Exp $
+
+*octave-3.6.4-r1 (07 Dec 2013)
+
+  07 Dec 2013; Justin Lecher <jlec@gentoo.org> +octave-3.6.4-r1.ebuild,
+  +files/octave-3.6.4-gcc-4.8.patch:
+  Get gcc-4.8 fix from debian, #492488, https://savannah.gnu.org/bugs/?38746,
+  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=705485
 
   18 Jul 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   octave-3.6.4.ebuild:
