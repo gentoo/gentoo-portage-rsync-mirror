@@ -11,5 +11,5 @@ RDEPEND=dev-libs/popt dev-libs/libxml2 dev-libs/openssl sys-libs/ncurses sys-lib
 REQUIRED_USE=gtalk? ( jabber ) ^^ ( voicemail_storage_file voicemail_storage_odbc voicemail_storage_imap ) voicemail_storage_odbc? ( odbc )
 SLOT=0
 SRC_URI=http://downloads.asterisk.org/pub/telephony/asterisk/releases/asterisk-1.8.24.0.tar.gz mirror://gentoo/gentoo-asterisk-patchset-1.17.tar.bz2
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	libtool	60a86ca1cbe8068e3d9df0d3004dc520	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	564523dd5817a373c272f3ce4326a317	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	libtool	60a86ca1cbe8068e3d9df0d3004dc520	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=948e7d80507f49302e919d15f970969d

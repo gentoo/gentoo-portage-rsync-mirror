@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multiprocessing.eclass,v 1.6 2013/12/06 03:04:01 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multiprocessing.eclass,v 1.7 2013/12/07 09:14:15 vapier Exp $
 
 # @ECLASS: multiprocessing.eclass
 # @MAINTAINER:
@@ -228,7 +228,7 @@ redirect_alloc_fd() {
 	local var=$1 file=$2 redir=${3:-"<>"}
 
 	# Make sure /dev/fd is sane on Linux hosts. #479656
-	if [[ ! -L /dev/fd && $(uname) == Linux ]] ; then
+	if [[ ! -L /dev/fd && ${CBUILD} == *linux* ]] ; then
 		eerror "You're missing a /dev/fd symlink to /proc/self/fd."
 		eerror "Please fix the symlink and check your boot scripts (udev/etc...)."
 		die "/dev/fd is broken"

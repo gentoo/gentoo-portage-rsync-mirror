@@ -9,5 +9,5 @@ LICENSE=BSD LGPL-2.1
 RDEPEND=media-libs/alsa-lib >=media-libs/liblo-0.12 >=media-sound/jack-audio-connection-kit-0.99.14 >=media-libs/ladspa-sdk-1.12-r2 >=media-libs/libsndfile-1.0.11 >=media-libs/libsamplerate-0.1.1-r1 qt4? ( dev-qt/qtgui:4 )
 SLOT=0
 SRC_URI=mirror://sourceforge/dssi/dssi-1.1.0.tar.gz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	564523dd5817a373c272f3ce4326a317	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=056155277d7e87859698594ae823888c

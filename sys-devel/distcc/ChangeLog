@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.229 2013/10/19 21:18:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.230 2013/12/07 09:51:47 pacho Exp $
+
+  07 Dec 2013; Pacho Ramos <pacho@gentoo.org> distcc-3.1-r9.ebuild:
+  x86 stable, bug #480112
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> distcc-3.1-r9.ebuild:
   amd64 stable, bug #480112
