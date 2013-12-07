@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/atomix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.15 2013/11/04 19:44:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/atomix/ChangeLog,v 1.16 2013/12/07 21:39:56 tupone Exp $
+
+  07 Dec 2013; Tupone Alfredo <tupone@gentoo.org> atomix-2.14.0.ebuild,
+  +files/atomix-2.14.0-underlink.patch:
+  Fix underlink. Bug #482368 by Dennis Lissov 
 
   04 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> atomix-2.14.0.ebuild:
   remove warnings from the desktop file
