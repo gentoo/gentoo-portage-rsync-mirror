@@ -1,10 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.522 2013/11/23 18:53:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.523 2013/12/06 23:20:00 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (7 Dec 2013)
+# Too crash-prone and bitrotting
+>=app-office/libreoffice-4.1.4 kde
+>=app-office/libreoffice-bin-4.1.4 kde
+>=app-office/libreoffice-bin-debug-4.1.4 kde
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (13 Nov 2013)
 # Depends on masked dev-lang/v8
