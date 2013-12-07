@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/dogpile-cache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dogpile-cache/ChangeLog,v 1.1 2013/10/22 04:35:03 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dogpile-cache/ChangeLog,v 1.2 2013/12/07 12:14:39 idella4 Exp $
+
+*dogpile-cache-0.5.2 (07 Dec 2013)
+
+  07 Dec 2013; Ian Delaney <idella4@gentoo.org> +dogpile-cache-0.5.2.ebuild,
+  metadata.xml:
+  switch herd, bump, fixes Bug #493508, #493454
 
 *dogpile-cache-0.5.1 (22 Oct 2013)
 
