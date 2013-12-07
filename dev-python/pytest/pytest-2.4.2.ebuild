@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.4 2013/11/30 03:50:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.5 2013/12/07 01:07:36 patrick Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 inherit distutils-r1 eutils
 
 DESCRIPTION="py.test: simple powerful testing with Python"
