@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-6.1-r1.ebuild,v 1.6 2013/11/15 23:53:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-6.1-r1.ebuild,v 1.7 2013/12/07 21:13:30 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.samba.org/pub/linux-cifs/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~x86 ~arm-linux ~x86-linux"
+KEYWORDS="amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh x86 ~arm-linux ~x86-linux"
 IUSE="+acl +ads +caps +caps-ng creds"
 
 DEPEND="!net-fs/mount-cifs

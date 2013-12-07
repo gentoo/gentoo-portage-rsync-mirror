@@ -1,6 +1,14 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.524 2013/12/07 20:29:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.525 2013/12/07 21:03:18 dilfridge Exp $
+
+*libreoffice-4.1.3.2-r2 (07 Dec 2013)
+
+  07 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-4.1.3.2-r2.ebuild,
+  +files/libreoffice-4.1.3.2-kde-calchang.patch, libreoffice-4.1.9999.ebuild:
+  Backport patch against KDE drag-n-drop hang from Git master, bug 489988. No
+  testing yet, no keywords.
 
 *libreoffice-4.1.3.2-r1 (07 Dec 2013)
 
