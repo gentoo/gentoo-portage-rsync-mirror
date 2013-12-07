@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.65 2013/11/24 08:12:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.66 2013/12/07 22:27:38 pacho Exp $
+
+  07 Dec 2013; Pacho Ramos <pacho@gentoo.org> flightgear-2.10.0.ebuild:
+  x86 stable, bug #488552
 
   24 Nov 2013; Pacho Ramos <pacho@gentoo.org> flightgear-2.10.0.ebuild:
   amd64 stable, bug #488552

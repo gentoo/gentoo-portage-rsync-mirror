@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.5.0.ebuild,v 1.1 2013/10/12 18:55:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-3.5.0.ebuild,v 1.2 2013/12/07 22:12:49 dilfridge Exp $
 
 EAPI=5
 
@@ -29,7 +29,6 @@ KEYWORDS="~amd64 ~x86"
 SLOT="4"
 IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
 
-#Keep libf2c blocker until bug 433782 is resolved
 CDEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop(+)?')
 	$(add_kdebase_dep kdebase-kioslaves)
@@ -37,7 +36,6 @@ CDEPEND="
 	$(add_kdebase_dep libkexiv2 xmp)
 	$(add_kdebase_dep libkipi)
 	$(add_kdebase_dep marble plasma)
-	dev-cpp/eigen:3
 	media-libs/jasper
 	media-libs/lcms:2
 	media-libs/lensfun
@@ -65,6 +63,7 @@ RDEPEND="${CDEPEND}
 	)
 "
 DEPEND="${CDEPEND}
+	dev-cpp/eigen:3
 	dev-libs/boost
 	sys-devel/gettext
 	doc? ( app-doc/doxygen )

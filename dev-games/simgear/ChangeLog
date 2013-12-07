@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/simgear
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.60 2013/11/24 08:11:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.61 2013/12/07 22:27:58 pacho Exp $
+
+  07 Dec 2013; Pacho Ramos <pacho@gentoo.org> simgear-2.10.0.ebuild:
+  x86 stable, bug #488552
 
   24 Nov 2013; Pacho Ramos <pacho@gentoo.org> simgear-2.10.0.ebuild:
   amd64 stable, bug #488552

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libkface
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.41 2013/10/12 16:49:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.42 2013/12/07 22:18:38 dilfridge Exp $
+
+  07 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkface-3.4.0.ebuild:
+  Remove old
 
 *libkface-3.5.0 (12 Oct 2013)
 
