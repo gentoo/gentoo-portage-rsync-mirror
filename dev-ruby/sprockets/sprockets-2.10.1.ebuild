@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.10.1.ebuild,v 1.1 2013/11/25 01:44:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/sprockets-2.10.1.ebuild,v 1.2 2013/12/07 08:47:21 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -34,6 +34,7 @@ ruby_add_bdepend "test? (
 		dev-ruby/rack-test
 		=dev-ruby/coffee-script-2*
 		=dev-ruby/execjs-1*
+		=dev-ruby/sass-3* >=dev-ruby/sass-3.1
 	)"
 
 all_ruby_prepare() {
@@ -41,4 +42,7 @@ all_ruby_prepare() {
 	# eco and ejs.
 	sed -i -e '/eco templates/,/end/ s:^:#:' \
 		-e '/ejs templates/,/end/ s:^:#:' test/test_environment.rb || die
+
+	# Add missing 'json' require
+	sed -i -e '4irequire "json"' test/test_manifest.rb || die
 }

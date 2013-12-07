@@ -1,20 +1,20 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enzyme/enzyme-9999.ebuild,v 1.2 2013/12/07 08:47:21 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enzyme/enzyme-0.4.1.ebuild,v 1.1 2013/12/07 08:47:21 tomwij Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3} )
-EGIT_REPO_URI="https://github.com/Diaoul/enzyme.git"
 
-inherit distutils-r1 git-2
+inherit distutils-r1
 
 DESCRIPTION="Python video metadata parser"
 HOMEPAGE="https://github.com/Diaoul/enzyme https://pypi.python.org/pypi/enzyme"
-SRC_URI="test? ( http://downloads.sourceforge.net/project/matroska/test_files/matroska_test_w1_1.zip )"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
+	test? ( http://downloads.sourceforge.net/project/matroska/test_files/matroska_test_w1_1.zip )"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND=""
