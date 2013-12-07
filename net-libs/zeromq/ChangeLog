@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.51 2013/10/26 14:50:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.52 2013/12/07 13:34:38 maekke Exp $
+
+  07 Dec 2013; Markus Meier <maekke@gentoo.org> zeromq-4.0.1-r1.ebuild:
+  add ~arm, bug #489452
 
   26 Oct 2013; Jeroen Roovers <jer@gentoo.org> zeromq-4.0.1-r1.ebuild:
   Marked ~hppa (bug #489452).

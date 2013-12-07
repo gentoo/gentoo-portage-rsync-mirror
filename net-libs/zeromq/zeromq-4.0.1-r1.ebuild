@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.1-r1.ebuild,v 1.2 2013/10/26 14:50:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-4.0.1-r1.ebuild,v 1.3 2013/12/07 13:34:38 maekke Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ RESTRICT="mirror"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux"
 IUSE="elibc_glibc pgm static-libs test"
 
 RDEPEND="
