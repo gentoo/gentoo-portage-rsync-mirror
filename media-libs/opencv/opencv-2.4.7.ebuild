@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.7.ebuild,v 1.1 2013/12/07 00:20:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.7.ebuild,v 1.2 2013/12/07 14:31:01 dilfridge Exp $
 
 EAPI=5
 PYTHON_DEPEND="2:2.6"
@@ -86,7 +86,9 @@ src_prepare() {
 }
 
 src_configure() {
-	use openmp && tc-has-openmp || die "Please switch to an openmp compatible compiler"
+	if use openmp; then
+		tc-has-openmp || die "Please switch to an openmp compatible compiler"
+	fi
 
 	JAVA_ANT_ENCODING="iso-8859-1"
 	# set encoding so even this cmake build will pick it up.

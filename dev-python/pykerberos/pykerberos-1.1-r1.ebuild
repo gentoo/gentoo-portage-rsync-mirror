@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/pykerberos-1.1-r1.ebuild,v 1.3 2013/11/13 15:44:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/pykerberos-1.1-r1.ebuild,v 1.4 2013/12/07 14:23:02 pacho Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SRC_URI="http://dev.gentoo.org/~maksbotan/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-crypt/mit-krb5"

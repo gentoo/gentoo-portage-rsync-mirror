@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgit2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.17 2013/11/24 23:06:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.18 2013/12/07 14:26:30 pacho Exp $
+
+  07 Dec 2013; Pacho Ramos <pacho@gentoo.org> libgit2-0.19.0-r1.ebuild:
+  x86 stable, bug #488774
 
 *libgit2-0.20.0 (24 Nov 2013)
 

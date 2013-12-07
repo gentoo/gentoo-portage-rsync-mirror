@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/libgit2-0.19.0-r1.ebuild,v 1.2 2013/11/16 12:24:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/libgit2-0.19.0-r1.ebuild,v 1.3 2013/12/07 14:26:30 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~ppc-macos"
+KEYWORDS="amd64 x86 ~ppc-macos"
 IUSE="examples ssh test"
 
 RDEPEND="sys-libs/zlib
