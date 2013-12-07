@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.3.1.ebuild,v 1.12 2013/01/06 13:44:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.3.1.ebuild,v 1.13 2013/12/07 19:08:28 ulm Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit bash-completion-r1
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
-SRC_URI="mirror://gentoo/${P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~ulm/eselect/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"

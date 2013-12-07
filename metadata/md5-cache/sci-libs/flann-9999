@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=cuda? ( >=dev-util/nvidia-cuda-toolkit-5.5 ) mpi? ( sci-libs/hdf5[mpi] dev-libs/boost[mpi] ) !mpi? ( !sci-libs/hdf5[mpi] ) octave? ( >=sci-mathematics/octave-3.6.4-r1 ) app-arch/unzip doc? ( dev-tex/latex2html ) test? ( dev-cpp/gtest cuda? ( sci-libs/hdf5 ) ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) >=dev-vcs/git-1.8.2.1
+DESCRIPTION=Library for performing fast approximate nearest neighbor searches in high dimensional spaces
+EAPI=5
+HOMEPAGE=http://www.cs.ubc.ca/research/flann/
+IUSE=cuda doc examples mpi openmp octave static-libs test
+LICENSE=BSD
+RDEPEND=cuda? ( >=dev-util/nvidia-cuda-toolkit-5.5 ) mpi? ( sci-libs/hdf5[mpi] dev-libs/boost[mpi] ) !mpi? ( !sci-libs/hdf5[mpi] ) octave? ( >=sci-mathematics/octave-3.6.4-r1 )
+SLOT=0
+SRC_URI=test? ( http://dev.gentoo.org/~bicatali/distfiles/flann-1.8.4-testdata.tar.xz )
+_eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	cuda	9be39ddb95b9b07ec931f30628d40757	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=dd8bc0ed909d578200f5557d8a41d52b

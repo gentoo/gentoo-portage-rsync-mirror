@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.7.1.ebuild,v 1.4 2012/08/03 17:33:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.7.1.ebuild,v 1.5 2013/12/07 19:10:22 jlec Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ PYTHON_DEPEND="python? 2:2.5"
 inherit cmake-utils eutils python
 
 DESCRIPTION="Library for performing fast approximate nearest neighbor searches in high dimensional spaces"
-HOMEPAGE="http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN/"
+HOMEPAGE="http://www.cs.ubc.ca/research/flann/"
 SRC_URI="http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip
 	test? ( http://dev.gentoo.org/~dilfridge/distfiles/${PN}-1.6.10-testdata.tar.xz )"
 

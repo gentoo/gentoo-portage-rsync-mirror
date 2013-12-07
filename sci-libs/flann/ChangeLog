@@ -1,6 +1,21 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.20 2013/12/01 19:05:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.22 2013/12/07 19:17:02 jlec Exp $
+
+  07 Dec 2013; Justin Lecher <jlec@gentoo.org> flann-9999.ebuild:
+  Drop keywords from live ebuild
+
+*flann-9999 (07 Dec 2013)
+*flann-1.8.4-r1 (07 Dec 2013)
+
+  07 Dec 2013; Justin Lecher <jlec@gentoo.org> flann-1.7.1.ebuild,
+  -flann-1.8.4.ebuild, +flann-1.8.4-r1.ebuild, +flann-9999.ebuild,
+  +files/flann-1.8.4-CUDA_NVCC_FLAGS.patch, +files/flann-1.8.4-cuda5.5.patch,
+  +files/flann-1.8.4-docdir.patch, +files/flann-1.8.4-examples.patch,
+  +files/flann-1.8.4-multilib.patch, +files/flann-1.8.4-options.patch:
+  Fix compilation problem with cuda; depend on fixed octave version for
+  gcc-4.8, #492488; patch cmake and send patches upstream instead of sedding,
+  add missing deps; use cuda.eclass; fix HOMEPAGE
 
   01 Dec 2013; Justin Lecher <jlec@gentoo.org> flann-1.8.4.ebuild:
   only depend on hdf5 with USE=mpi and tests, #492584; thanks nikoli for the

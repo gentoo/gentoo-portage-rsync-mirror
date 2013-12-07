@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplegeneric
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.13 2013/11/29 22:48:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplegeneric/ChangeLog,v 1.14 2013/12/07 19:19:06 pacho Exp $
+
+  07 Dec 2013; Pacho Ramos <pacho@gentoo.org> simplegeneric-0.8.1-r1.ebuild:
+  x86 stable, bug #488738
 
   29 Nov 2013; Pacho Ramos <pacho@gentoo.org> simplegeneric-0.8.1-r1.ebuild:
   amd64 stable, bug #488738

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.8.4.ebuild,v 1.1 2013/12/02 01:17:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.8.4.ebuild,v 1.2 2013/12/07 19:01:36 blueness Exp $
 
 EAPI=5
 
@@ -14,12 +14,12 @@ SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="doc examples hardened ncurses
+IUSE="doc examples udev hardened ncurses
 	avalon bflsc bitforce bitfury icarus klondike modminer"
 
 REQUIRED_USE="|| ( avalon bflsc bitforce bitfury icarus klondike modminer )"
 
-DEPEND="net-misc/curl
+RDEPEND="net-misc/curl
 	dev-libs/jansson
 	ncurses? ( sys-libs/ncurses )
 	avalon? ( virtual/libusb:1 )
@@ -28,7 +28,8 @@ DEPEND="net-misc/curl
 	bitfury? ( virtual/libusb:1 )
 	icarus? ( virtual/libusb:1 )
 	modminer? ( virtual/libusb:1 )"
-RDEPEND="${DEPEND}"
+DEPEND="virtual/pkgconfig
+	${RDEPEND}"
 
 src_prepare() {
 	eautoreconf
@@ -51,6 +52,8 @@ src_configure() {
 
 src_install() { # How about using some make install?
 	dobin cgminer
+	insinto /lib/udev/rules.d
+	use udev && doins 01-cgminer.rules
 	if use doc; then
 		dodoc AUTHORS NEWS README API-README
 		use icarus || use bitforce || use modminer && dodoc FPGA-README

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.14 2013/11/24 12:52:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/ChangeLog,v 1.15 2013/12/07 19:29:20 pacho Exp $
+
+  07 Dec 2013; Pacho Ramos <pacho@gentoo.org> gtk-0.12.4-r1.ebuild:
+  x86 stable, bug #488808
 
   24 Nov 2013; Pacho Ramos <pacho@gentoo.org> gtk-0.12.4-r1.ebuild:
   amd64 stable, bug #488808

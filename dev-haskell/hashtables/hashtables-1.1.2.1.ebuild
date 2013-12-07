@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/hashtables-1.1.2.1.ebuild,v 1.2 2013/11/24 12:48:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/hashtables-1.1.2.1.ebuild,v 1.3 2013/12/07 19:27:45 pacho Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="bounds-checking debug portable sse4_1 +unsafe-tricks"
 
 RDEPEND="dev-haskell/primitive:=[profile?]

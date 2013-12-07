@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.85 2013/12/06 20:41:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.87 2013/12/07 19:13:47 ago Exp $
+
+  07 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nbd-3.5.ebuild:
+  Stable for ppc64, wrt bug #493010
+
+  07 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nbd-3.5.ebuild:
+  Stable for ppc, wrt bug #493010
 
   06 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nbd-3.5.ebuild:
   Stable for x86, wrt bug #493010

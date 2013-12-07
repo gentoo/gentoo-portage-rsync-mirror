@@ -1,38 +1,45 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.8.4.ebuild,v 1.3 2013/12/01 19:05:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-9999.ebuild,v 1.2 2013/12/07 19:17:02 jlec Exp $
 
 EAPI=5
 
-inherit cmake-utils eutils multilib toolchain-funcs
+inherit cmake-utils cuda eutils git-r3 multilib toolchain-funcs
 
 DESCRIPTION="Library for performing fast approximate nearest neighbor searches in high dimensional spaces"
-HOMEPAGE="http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN/"
-SRC_URI="
-	http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip
-	test? ( http://dev.gentoo.org/~bicatali/distfiles/${P}-testdata.tar.xz )"
+HOMEPAGE="http://www.cs.ubc.ca/research/flann/"
+SRC_URI="test? ( http://dev.gentoo.org/~bicatali/distfiles/${PN}-1.8.4-testdata.tar.xz )"
+EGIT_REPO_URI="https://github.com/mariusmuja/flann.git"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="cuda doc mpi openmp octave python static-libs test"
+KEYWORDS=""
+IUSE="cuda doc examples mpi openmp octave static-libs test"
 
 RDEPEND="
+	cuda? ( >=dev-util/nvidia-cuda-toolkit-5.5 )
 	mpi? (
 		sci-libs/hdf5[mpi]
 		dev-libs/boost[mpi]
 	)
-	octave? ( sci-mathematics/octave )"
+	!mpi? ( !sci-libs/hdf5[mpi] )
+	octave? ( >=sci-mathematics/octave-3.6.4-r1 )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	doc? ( dev-tex/latex2html )
 	test? (
 		dev-cpp/gtest
 		cuda? ( sci-libs/hdf5 )
 	)
 "
-PDEPEND="python? ( ~dev-python/pyflann-${PV} )"
 
-S="${WORKDIR}"/${P}-src
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.8.4-options.patch
+	"${FILESDIR}"/${PN}-1.8.4-CUDA_NVCC_FLAGS.patch
+	"${FILESDIR}"/${PN}-1.8.4-cuda5.5.patch
+	"${FILESDIR}"/${PN}-1.8.4-multilib.patch
+	"${FILESDIR}"/${PN}-1.8.4-docdir.patch
+)
 
 pkg_setup() {
 	if use openmp; then
@@ -43,13 +50,15 @@ pkg_setup() {
 	fi
 }
 
+src_unpack() {
+	default
+	git-r3_src_unpack
+}
+
 src_prepare() {
 	# bug #302621
-	has_version sci-libs/hdf5[mpi] && export CXX=mpicxx
-	# gentoo doc directory respected
-	sed -i \
-		-e "s:share/doc/flann:share/doc/${PF}:" \
-		doc/CMakeLists.txt || die
+	use mpi && export CXX=mpicxx
+
 	# produce pure octave files
 	# octave gentoo installation for .m files respected
 	sed -i \
@@ -59,19 +68,8 @@ src_prepare() {
 		-e 's:share/flann/octave:share/octave/site/m:' \
 		-e "/CUSTOM_TARGET/a\INSTALL(FILES \${MEX_FILE} DESTINATION libexec/octave/site/oct/${CHOST})" \
 		src/matlab/CMakeLists.txt || die
-	# do not compile examples by default
-	sed -i \
-		-e '/add_subdirectory.*examples/d' \
-		CMakeLists.txt || die
-	# compile tests only when requested
-	use test || sed -i -e '/add_subdirectory.*test/d' CMakeLists.txt
-	# avoid automatic installation of pdf
-	use doc || sed -i -e '/doc/d' CMakeLists.txt
 	use cuda && cuda_src_prepare
 
-	sed \
-		-e "/FLANN_LIB_INSTALL_DIR/s:lib:$(get_libdir):g" \
-		-i cmake/flann_utils.cmake || die
 	cmake-utils_src_prepare
 }
 
@@ -81,11 +79,19 @@ src_configure() {
 		-DBUILD_C_BINDINGS=ON
 		-DBUILD_PYTHON_BINDINGS=OFF
 		-DPYTHON_EXECUTABLE=
+		-DDOCDIR=share/doc/${PF}
 		$(cmake-utils_use_build cuda CUDA_LIB)
+		$(cmake-utils_use_build examples)
+		$(cmake-utils_use_build doc)
+		$(cmake-utils_use_build test TESTS)
 		$(cmake-utils_use_build octave MATLAB_BINDINGS)
 		$(cmake-utils_use_use mpi)
 		$(cmake-utils_use_use openmp)
 	)
+	use cuda && \
+		mycmakeargs+=(
+		-DCUDA_NVCC_FLAGS="${NVCCFLAGS},-arsch"
+		)
 	cmake-utils_src_configure
 }
 
@@ -99,5 +105,7 @@ src_test() {
 src_install() {
 	cmake-utils_src_install
 	dodoc README.md
-	use static-libs || find "${ED}" -name 'lib*.a' -exec rm -rf '{}' '+'
+	if ! use static-libs; then
+		find "${ED}" -name 'lib*.a' -exec rm -rf '{}' '+' || die
+	fi
 }
