@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/eselect-mode-1.4.ebuild,v 1.1 2013/12/07 13:27:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/eselect-mode-1.4.ebuild,v 1.2 2013/12/07 18:12:29 ulm Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit elisp
 MY_P="eselect-${PV}"
 DESCRIPTION="Emacs major mode for editing eselect files"
 HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Eselect"
-SRC_URI="mirror://gentoo/${MY_P}.tar.xz"
+SRC_URI="http://dev.gentoo.org/~ulm/eselect/${MY_P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
