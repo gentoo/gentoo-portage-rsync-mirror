@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.95 2013/12/06 01:24:10 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.96 2013/12/07 06:22:35 mattm Exp $
+
+  07 Dec 2013; Matthew Marlowe <mattm@gentoo.org> files/apcupsd-tmpfiles.conf:
+  Add D /run/apcupsd 0755 root root to systemd tmpfile spec per Bug 492992.
+  Thank you to  Billy DeVincentis for testing.
 
 *apcupsd-3.14.10-r6 (06 Dec 2013)
 
