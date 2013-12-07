@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-3.0.2-r1.ebuild,v 1.3 2013/09/05 18:46:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/pydns-3.0.2-r1.ebuild,v 1.4 2013/12/07 11:12:43 hattya Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{3_2,3_3} )
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.sourceforge.net/project/pydns/py3dns/${P/py/py3}.tar.g
 
 LICENSE="CNRI"
 SLOT="3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="examples"
 
 DEPEND="virtual/libiconv"

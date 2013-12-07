@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.86 2013/08/14 20:22:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.87 2013/12/07 11:23:26 vapier Exp $
+
+*crypto++-5.6.2-r1 (07 Dec 2013)
+
+  07 Dec 2013; Mike Frysinger <vapier@gentoo.org> +crypto++-5.6.2-r1.ebuild,
+  +files/crypto++-5.6.2-r1-make.patch:
+  Generate a local copy of libtool for building rather than using the system
+  copy.
 
   14 Aug 2013; Fabian Groffen <grobian@gentoo.org> crypto++-5.6.2.ebuild:
   Fixed and marked for ~x64-macos, bug #479554

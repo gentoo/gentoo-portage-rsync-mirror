@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/pycountry-1.2.ebuild,v 1.1 2013/11/26 06:22:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycountry/pycountry-1.2.ebuild,v 1.2 2013/12/07 11:11:02 hattya Exp $
 
 EAPI=5
 # pypy pennding actioning of bug filed upstream
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="test"
 
 DEPEND="app-arch/unzip
