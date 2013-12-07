@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.4-r1.ebuild,v 1.4 2013/11/05 19:10:18 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/pfl-2.4-r1.ebuild,v 1.5 2013/12/07 12:53:06 johu Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://files.portagefilelist.de/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ~ppc ~sparc ~x86 ~amd64-fbsd ~x64-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm hppa ~ppc ~sparc x86 ~amd64-fbsd ~x64-freebsd ~amd64-linux ~x86-linux"
 IUSE="+network-cron"
 
 DEPEND=""
