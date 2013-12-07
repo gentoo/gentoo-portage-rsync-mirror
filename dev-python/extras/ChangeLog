@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/extras
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.11 2013/11/14 05:55:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.12 2013/12/07 10:57:19 hattya Exp $
+
+  07 Dec 2013; Akinori Hattori <hattya@gentoo.org> extras-0.0.3.ebuild:
+  keyword ~ia64 wrt bug #468270
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> extras-0.0.3.ebuild:
   Added ~alpha, bug 468270.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mimeparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.19 2013/11/14 05:58:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.20 2013/12/07 10:52:46 hattya Exp $
+
+  07 Dec 2013; Akinori Hattori <hattya@gentoo.org> mimeparse-0.1.4-r1.ebuild:
+  keyword ~ia64 wrt bug #468268
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> mimeparse-0.1.4-r1.ebuild:
   Added ~alpha, bug 468268.

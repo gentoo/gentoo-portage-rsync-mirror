@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/http-parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.18 2013/09/05 18:46:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.19 2013/12/07 10:31:41 hattya Exp $
+
+  07 Dec 2013; Akinori Hattori <hattya@gentoo.org> http-parser-0.8.3.ebuild:
+  keyword ~ia64 wrt bug #463344
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> http-parser-0.7.12.ebuild,
   http-parser-0.8.1-r1.ebuild, http-parser-0.8.3.ebuild:

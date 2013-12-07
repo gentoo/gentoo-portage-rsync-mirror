@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.114 2013/11/14 05:57:51 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.115 2013/12/07 10:51:28 hattya Exp $
+
+  07 Dec 2013; Akinori Hattori <hattya@gentoo.org> simplejson-3.3.1.ebuild:
+  keyword ~ia64 wrt bug #468268
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> simplejson-3.3.1.ebuild:
   Added ~alpha, bug 468268.
