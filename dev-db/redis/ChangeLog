@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.71 2013/11/24 08:37:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.72 2013/12/07 22:35:06 pacho Exp $
+
+  07 Dec 2013; Pacho Ramos <pacho@gentoo.org> redis-2.6.15-r1.ebuild:
+  x86 stable, bug #490306
 
   24 Nov 2013; Pacho Ramos <pacho@gentoo.org> redis-2.6.15-r1.ebuild:
   amd64 stable, bug #490306
