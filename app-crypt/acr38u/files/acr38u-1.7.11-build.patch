@@ -64,7 +64,7 @@ Index: ACR38_LINUX_100711_P/configure.ac
 -	fi
 -	if test -z "$usbdropdir" ; then
 +PKG_CHECK_MODULES([PCSCLITE], [libpcsclite >= 1.2.0])
-+PKG_CHECK_VAR([USBDROPDIR], [libpcsclite], [usbdropdir], [
++PKG_CHECK_VAR([USBDROPDIR], [libpcsclite], [usbdropdir], [], [
  		if test "$prefix" = NONE ; then
 -			usbdropdir="$ac_default_prefix/pcsc/drivers"
 +			USBDROPDIR="$ac_default_prefix/pcsc/drivers"

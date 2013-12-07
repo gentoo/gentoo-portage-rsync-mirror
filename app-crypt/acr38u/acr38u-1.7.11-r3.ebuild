@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.11-r2.ebuild,v 1.1 2013/12/06 06:09:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/acr38u-1.7.11-r3.ebuild,v 1.1 2013/12/07 17:13:29 flameeyes Exp $
 
 EAPI=5
 

@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/acr38u
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/ChangeLog,v 1.8 2013/12/06 06:09:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/acr38u/ChangeLog,v 1.9 2013/12/07 17:13:29 flameeyes Exp $
+
+*acr38u-1.7.11-r3 (07 Dec 2013)
+
+  07 Dec 2013; Diego E. Pettenò <flameeyes@gentoo.org> +acr38u-1.7.11-r3.ebuild,
+  -acr38u-1.7.11-r2.ebuild, files/acr38u-1.7.11-build.patch:
+  Fix my thinko in the build patch. Thanks Vincent for reporting.
 
 *acr38u-1.7.11-r2 (06 Dec 2013)
 
