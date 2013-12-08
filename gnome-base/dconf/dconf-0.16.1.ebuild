@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.16.1.ebuild,v 1.3 2013/11/30 19:04:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.16.1.ebuild,v 1.4 2013/12/08 18:24:29 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SLOT="0"
 # TODO: coverage ?
 IUSE="test +X"
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~arm-linux ~x86-linux"
 
 RDEPEND="
 	>=dev-libs/glib-2.35.2:2

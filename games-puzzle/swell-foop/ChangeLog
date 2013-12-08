@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/swell-foop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/swell-foop/ChangeLog,v 1.6 2013/11/30 19:03:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/swell-foop/ChangeLog,v 1.7 2013/12/08 18:23:58 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> swell-foop-3.8.2.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> swell-foop-3.8.2.ebuild:
   amd64 stable, bug #478252

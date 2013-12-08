@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.124 2013/12/01 15:47:56 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.125 2013/12/08 18:25:28 maekke Exp $
+
+  08 Dec 2013; Markus Meier <maekke@gentoo.org> hwids-20130915.1.ebuild:
+  arm stable, bug #487342
 
   01 Dec 2013; Johannes Huber <johu@gentoo.org> hwids-20130915.1.ebuild:
   x86 stable, bug #487342

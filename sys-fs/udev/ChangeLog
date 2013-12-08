@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.975 2013/12/01 15:44:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.976 2013/12/08 18:25:00 maekke Exp $
+
+  08 Dec 2013; Markus Meier <maekke@gentoo.org> udev-208.ebuild:
+  arm stable, bug #487340
 
   01 Dec 2013; Johannes Huber <johu@gentoo.org> udev-208.ebuild:
   x86 stable, bug #487340

@@ -4,11 +4,11 @@ DESCRIPTION=GNOME configuration system and daemon
 EAPI=5
 HOMEPAGE=http://projects.gnome.org/gconf/
 IUSE=debug gtk +introspection ldap orbit policykit debug python_targets_python2_6 python_targets_python2_7
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux
 LICENSE=LGPL-2+
 RDEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=dev-libs/glib-2.31:2 >=dev-libs/dbus-glib-0.74:= >=sys-apps/dbus-1:= >=dev-libs/libxml2-2:2 gtk? ( >=x11-libs/gtk+-2.90:3 ) introspection? ( >=dev-libs/gobject-introspection-0.9.5:= ) ldap? ( net-nds/openldap:= ) orbit? ( >=gnome-base/orbit-2.4:2 ) policykit? ( sys-auth/polkit:= )
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=2
 SRC_URI=mirror://gnome/sources/GConf/3.2/GConf-3.2.6.tar.xz
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	python-r1	cd956d5a4bac2209a64d0f4851cc115d	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=10e1cb720eea7408a6be25f033e22e46
+_md5_=653d808e51b5e4dd98ab98c8924024b3

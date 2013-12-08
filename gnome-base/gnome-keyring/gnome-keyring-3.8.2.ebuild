@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.8.2.ebuild,v 1.4 2013/11/30 19:08:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.8.2.ebuild,v 1.5 2013/12/08 18:31:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes" # Not gnome macro but similar
@@ -14,7 +14,7 @@ HOMEPAGE="http://live.gnome.org/GnomeKeyring"
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+caps debug pam selinux"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 
 RDEPEND="
 	>=app-crypt/gcr-3.5.3:=[gtk]

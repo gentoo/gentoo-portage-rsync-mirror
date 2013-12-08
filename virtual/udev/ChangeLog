@@ -1,6 +1,9 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.65 2013/12/03 15:55:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.66 2013/12/08 18:24:35 maekke Exp $
+
+  08 Dec 2013; Markus Meier <maekke@gentoo.org> udev-208.ebuild:
+  arm stable, bug #487340
 
   03 Dec 2013; Ian Stakenvicius <axs@gentoo.org> udev-200.ebuild,
   udev-204.ebuild, udev-208.ebuild:

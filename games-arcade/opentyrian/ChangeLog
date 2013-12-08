@@ -1,6 +1,13 @@
 # ChangeLog for games-arcade/opentyrian
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.10 2011/06/07 13:45:40 chainsaw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.11 2013/12/08 18:29:31 chainsaw Exp $
+
+*opentyrian-2.1.20130907 (08 Dec 2013)
+
+  08 Dec 2013; Tony Vroon <chainsaw@gentoo.org>
+  +opentyrian-2.1.20130907.ebuild, +files/2.1.20130907-cflag-idiocy.diff,
+  +files/2.1.20130907-datapath.diff:
+  Version bump, as requested by "Lumbrius" in bug #492360. Patches rediffed.
 
 *opentyrian-20110517-r1 (07 Jun 2011)
 

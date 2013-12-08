@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.8.2.ebuild,v 1.2 2013/11/30 18:59:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.8.2.ebuild,v 1.3 2013/12/08 18:18:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://meldmerge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="+highlight gnome"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

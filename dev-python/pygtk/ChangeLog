@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.293 2013/11/30 18:55:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.294 2013/12/08 18:10:39 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> pygtk-2.24.0-r4.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> pygtk-2.24.0-r4.ebuild:
   amd64 stable, bug #478252

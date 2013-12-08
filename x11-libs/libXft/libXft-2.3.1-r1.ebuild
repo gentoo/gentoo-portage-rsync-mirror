@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/libXft-2.3.1-r1.ebuild,v 1.9 2013/10/08 05:08:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXft/libXft-2.3.1-r1.ebuild,v 1.10 2013/12/08 18:06:59 remi Exp $
 
 EAPI=5
 
@@ -20,3 +20,5 @@ RDEPEND=">=x11-libs/libXrender-0.8.2[${MULTILIB_USEDEP}]
 	x11-proto/xproto[${MULTILIB_USEDEP}]
 	virtual/ttf-fonts"
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}/${PN}-2.3.1-compile_fix.patch" )

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.7 2013/11/30 18:56:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.8.4.ebuild,v 1.8 2013/12/08 18:13:31 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -18,7 +18,7 @@ HOMEPAGE="http://projects.gnome.org/anjuta/"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="debug devhelp glade +introspection packagekit subversion test vala"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
