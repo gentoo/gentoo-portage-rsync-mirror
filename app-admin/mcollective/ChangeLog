@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/mcollective
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.17 2013/12/08 11:34:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcollective/ChangeLog,v 1.18 2013/12/08 21:30:08 prometheanfire Exp $
+
+  08 Dec 2013; Matthew Thode <prometheanfire@gentoo.org>
+  mcollective-2.2.4.ebuild:
+  added || die to sed
 
   08 Dec 2013; Johannes Huber <johu@gentoo.org> mcollective-2.2.4.ebuild:
   x86 stable, bug #491896
