@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/glib-networking
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.65 2013/11/30 19:43:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/ChangeLog,v 1.66 2013/12/08 19:21:44 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> glib-networking-2.36.2.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> glib-networking-2.36.2.ebuild:
   amd64 stable, bug #478252

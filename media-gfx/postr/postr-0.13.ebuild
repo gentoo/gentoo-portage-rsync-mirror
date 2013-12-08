@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/postr-0.13.ebuild,v 1.4 2013/11/30 19:34:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/postr/postr-0.13.ebuild,v 1.5 2013/12/08 19:08:18 pacho Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://projects.gnome.org/postr/"
 
 LICENSE="GPL-2+ CC-BY-SA-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gnome2"
 
 COMMON_DEPEND="dev-python/pygtk:2

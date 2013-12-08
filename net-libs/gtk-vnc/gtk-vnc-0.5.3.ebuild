@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.3.ebuild,v 1.2 2013/11/30 19:44:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.5.3.ebuild,v 1.3 2013/12/08 19:23:23 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -14,7 +14,7 @@ HOMEPAGE="https://live.gnome.org/gtk-vnc"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="examples +gtk3 +introspection pulseaudio python sasl vala"
 REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )

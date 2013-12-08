@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/networkmanager-openswan-0.9.8.4.ebuild,v 1.2 2013/11/30 19:49:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/networkmanager-openswan-0.9.8.4.ebuild,v 1.3 2013/12/08 19:30:25 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
@@ -11,7 +11,7 @@ DESCRIPTION="NetworkManager Openswan plugin"
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gtk"
 
 RDEPEND="

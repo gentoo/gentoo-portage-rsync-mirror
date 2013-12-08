@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.8.ebuild,v 1.2 2013/11/30 19:35:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.8.ebuild,v 1.3 2013/12/08 19:09:47 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ inherit gnome2 clutter gnome.org python-any-r1
 DESCRIPTION="GStreamer integration library for Clutter"
 
 SLOT="2.0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="examples +introspection"
 
 # FIXME: Support for gstreamer-basevideo-0.10 (HW decoder support) is automagic

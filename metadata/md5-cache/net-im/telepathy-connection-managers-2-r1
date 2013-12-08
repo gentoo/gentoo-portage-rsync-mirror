@@ -3,8 +3,8 @@ DESCRIPTION=Meta-package for Telepathy Connection Managers
 EAPI=5
 HOMEPAGE=http://telepathy.freedesktop.org/
 IUSE=msn +irc yahoo icq +jabber sip zeroconf
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux
 LICENSE=metapackage
 RDEPEND=msn? ( >=net-voip/telepathy-gabble-0.16.4 ) jabber? ( >=net-voip/telepathy-gabble-0.16.4 ) sip? ( >=net-voip/telepathy-rakia-0.7.4 ) zeroconf? ( >=net-voip/telepathy-salut-0.8.1 ) icq? ( >=net-voip/telepathy-haze-0.6.0 ) yahoo? ( >=net-voip/telepathy-haze-0.6.0 ) irc? ( >=net-irc/telepathy-idle-0.1.14 )
 SLOT=0
-_md5_=a03354a8fdd4dc031667865255994698
+_md5_=e5c5d927afe2f25571ae985ce7e9ed12

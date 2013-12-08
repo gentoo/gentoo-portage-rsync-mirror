@@ -1,6 +1,9 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.137 2013/11/30 19:42:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.138 2013/12/08 19:19:41 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> empathy-3.8.6.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> empathy-3.8.6.ebuild:
   amd64 stable, bug #478252

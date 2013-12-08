@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/modemmanager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.58 2013/11/30 19:49:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/modemmanager/ChangeLog,v 1.59 2013/12/08 19:29:46 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> modemmanager-1.0.0-r2.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> modemmanager-1.0.0-r2.ebuild:
   amd64 stable, bug #478252
