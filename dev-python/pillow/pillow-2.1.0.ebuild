@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.1.0.ebuild,v 1.4 2013/12/02 17:09:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.1.0.ebuild,v 1.5 2013/12/08 22:50:18 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -43,6 +43,7 @@ python_prepare_all() {
 	# Apply patches before executing sed.
 	local patches=(
 		"${FILESDIR}/imaging-1.1.7-no-xv.patch"
+		"${FILESDIR}/pillow-freetype-2.5.1.patch"
 	)
 	epatch "${patches[@]}"
 
