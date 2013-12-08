@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1726.0.ebuild,v 1.1 2013/12/04 04:20:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1726.0.ebuild,v 1.2 2013/12/08 03:23:23 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -424,6 +424,23 @@ src_configure() {
 	egyp_chromium ${myconf} || die
 }
 
+eninja() {
+	if [[ -z ${NINJAOPTS+set} ]]; then
+		local jobs=$(makeopts_jobs)
+		local loadavg=$(makeopts_loadavg)
+
+		if [[ ${MAKEOPTS} == *-j* && ${jobs} != 999 ]]; then
+			NINJAOPTS+=" -j ${jobs}"
+		fi
+		if [[ ${MAKEOPTS} == *-l* && ${loadavg} != 999 ]]; then
+			NINJAOPTS+=" -l ${loadavg}"
+		fi
+	fi
+	set -- ninja -v ${NINJAOPTS} "$@"
+	echo "$@"
+	"$@"
+}
+
 src_compile() {
 	# TODO: add media_unittests after fixing compile (bug #462546).
 	local test_targets=""
@@ -438,12 +455,12 @@ src_compile() {
 	fi
 
 	# Build mksnapshot and pax-mark it.
-	ninja -C out/Release -v -j $(makeopts_jobs) mksnapshot.${target_arch} || die
+	eninja -C out/Release mksnapshot.${target_arch} || die
 	pax-mark m out/Release/mksnapshot.${target_arch}
 
 	# Even though ninja autodetects number of CPUs, we respect
 	# user's options, for debugging with -j 1 or any other reason.
-	ninja -C out/Release -v -j $(makeopts_jobs) ${ninja_targets} || die
+	eninja -C out/Release ${ninja_targets} || die
 
 	pax-mark m out/Release/chrome
 	if use test; then

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1000 2013/12/06 20:41:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1001 2013/12/08 03:23:23 floppym Exp $
+
+  08 Dec 2013; Mike Gilbert <floppym@gentoo.org> chromium-33.0.1726.0.ebuild:
+  Refactor ninja option processing into eninja function. Add load average
+  support, thanks to M.B. in bug 490624.
 
   06 Dec 2013; Agostino Sarubbo <ago@gentoo.org> chromium-31.0.1650.63.ebuild:
   Stable for x86, wrt bug #493364
