@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.718 2013/12/07 10:48:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.719 2013/12/08 09:26:12 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> python-3.3.2-r2.ebuild:
+  x86 stable, bug #474128
 
   07 Dec 2013; Mike Frysinger <vapier@gentoo.org> python-2.7.6.ebuild,
   python-3.3.3.ebuild:
