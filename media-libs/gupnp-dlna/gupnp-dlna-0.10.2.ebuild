@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/gupnp-dlna-0.10.2.ebuild,v 1.2 2013/11/30 19:37:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gupnp-dlna/gupnp-dlna-0.10.2.ebuild,v 1.3 2013/12/08 09:40:47 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -55,4 +55,9 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-static \
 		$(use_enable introspection)
+}
+
+src_install() {
+	# Parallel install fails, upstream bug #720053
+	MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_install
 }
