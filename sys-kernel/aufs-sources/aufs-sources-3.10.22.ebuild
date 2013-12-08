@@ -1,25 +1,25 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.11.6.ebuild,v 1.1 2013/10/19 09:51:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.10.22.ebuild,v 1.1 2013/12/08 11:20:41 jlec Exp $
 
 EAPI=5
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="9"
+K_GENPATCHES_VER="30"
 K_DEBLOB_AVAILABLE="1"
 inherit kernel-2 eutils
 detect_version
 detect_arch
 
-AUFS_VERSION=3.11_p20131007
+AUFS_VERSION=3.10_p20131111
 AUFS_TARBALL="aufs-sources-${AUFS_VERSION}.tar.xz"
 # git archive -v --remote=git://git.code.sf.net/p/aufs/aufs3-standalone aufs${AUFS_VERSION/_p*} > aufs-sources-${AUFS_VERSION}.tar
 AUFS_URI="http://dev.gentoo.org/~jlec/distfiles/${AUFS_TARBALL}"
 
 KEYWORDS="~amd64 ~x86"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net/"
-IUSE="deblob experimental module proc vanilla"
+IUSE="deblob experimental module vanilla"
 
 DESCRIPTION="Full sources including the Gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree and aufs3 support"
 SRC_URI="
@@ -38,10 +38,12 @@ src_unpack() {
 		ewarn "This will drop all support from the gentoo kernel security team"
 	fi
 
-	UNIPATCH_LIST=""${WORKDIR}"/aufs3-kbuild.patch "${WORKDIR}"/aufs3-base.patch"
+	UNIPATCH_LIST="
+		"${WORKDIR}"/aufs3-kbuild.patch
+		"${WORKDIR}"/aufs3-base.patch
+		"${WORKDIR}"/aufs3-mmap.patch"
 
 	use module && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-standalone.patch"
-	use proc && UNIPATCH_LIST+=" "${WORKDIR}"/aufs3-proc_map.patch"
 
 	unpack ${AUFS_TARBALL}
 
@@ -52,10 +54,6 @@ src_prepare() {
 	if ! use module; then
 		sed -e 's:tristate:bool:g' -i "${WORKDIR}"/fs/aufs/Kconfig || die
 	fi
-	if ! use proc; then
-		sed '/config AUFS_PROC_MAP/,/^$/d' -i "${WORKDIR}"/fs/aufs/Kconfig || die
-	fi
-	cp -f "${WORKDIR}"/include/linux/aufs_type.h include/linux/aufs_type.h || die
 	cp -f "${WORKDIR}"/include/uapi/linux/aufs_type.h include/uapi/linux/aufs_type.h || die
 	cp -rf "${WORKDIR}"/{Documentation,fs} . || die
 }
