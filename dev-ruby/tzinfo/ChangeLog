@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.123 2013/12/08 13:32:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.124 2013/12/08 16:26:32 johu Exp $
+
+  08 Dec 2013; Johannes Huber <johu@gentoo.org> tzinfo-1.1.0.ebuild:
+  add ~x86, bug #487178
 
   08 Dec 2013; Johannes Huber <johu@gentoo.org> tzinfo-0.3.37.ebuild:
   x86 stable, bug #487180
