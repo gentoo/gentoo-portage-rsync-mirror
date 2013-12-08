@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.76 2013/06/02 10:55:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.77 2013/12/08 19:57:54 alonbl Exp $
+
+  08 Dec 2013; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/truecrypt-7.1a-build.patch, truecrypt-7.1a.ebuild:
+  Force dl library, bug#481060
 
   02 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #328951

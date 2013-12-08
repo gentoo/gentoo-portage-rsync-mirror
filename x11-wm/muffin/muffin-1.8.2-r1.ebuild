@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.8.2-r1.ebuild,v 1.2 2013/11/30 20:07:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-1.8.2-r1.ebuild,v 1.3 2013/12/08 19:55:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/linuxmint/muffin/archive/${PV}.tar.gz -> ${P}.tar.gz
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE="+introspection test xinerama"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 COMMON_DEPEND="
 	>=x11-libs/pango-1.2[X,introspection?]

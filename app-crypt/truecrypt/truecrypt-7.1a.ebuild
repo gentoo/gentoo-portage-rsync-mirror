@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.6 2013/04/09 10:14:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.1a.ebuild,v 1.7 2013/12/08 19:57:54 alonbl Exp $
 
 EAPI="4"
 
@@ -58,6 +58,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/makefile-archdetect.diff"
 	epatch "${FILESDIR}/execstack-fix.diff"
+	epatch "${FILESDIR}/${P}-build.patch"
 	mkdir "${T}"/pkcs11 || die
 	ln -s "${DISTDIR}"/${P}-pkcs11.h "${T}"/pkcs11/pkcs11.h || die
 }

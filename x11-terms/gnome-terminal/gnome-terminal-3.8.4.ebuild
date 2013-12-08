@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.8.4.ebuild,v 1.2 2013/11/30 20:04:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.8.4.ebuild,v 1.3 2013/12/08 19:51:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="https://help.gnome.org/users/gnome-terminal/"
 LICENSE="GPL-3+"
 SLOT="0"
 IUSE="+nautilus"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux"
 
 # FIXME: automagic dependency on gtk+[X]
 RDEPEND="

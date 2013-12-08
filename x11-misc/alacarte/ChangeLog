@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.120 2013/11/30 20:02:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.121 2013/12/08 19:49:41 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> alacarte-3.7.90.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> alacarte-3.7.90.ebuild:
   amd64 stable, bug #478252

@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Temp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.60 2013/12/05 12:42:33 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.61 2013/12/08 19:55:51 grobian Exp $
+
+  08 Dec 2013; Fabian Groffen <grobian@gentoo.org> File-Temp-0.230.400.ebuild:
+  Add missing Prefix keywords
 
   05 Dec 2013; Michael Haubenwallner <haubi@gentoo.org>
   File-Temp-0.230.400.ebuild:

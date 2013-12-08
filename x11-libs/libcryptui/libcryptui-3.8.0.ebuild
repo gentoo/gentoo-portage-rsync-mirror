@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.8.0.ebuild,v 1.3 2013/11/30 20:00:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.8.0.ebuild,v 1.4 2013/12/08 19:46:25 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
 LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1"
 SLOT="0"
 IUSE="+introspection libnotify test"
-KEYWORDS="amd64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 x86 ~x86-fbsd"
 
 # Pull in libnotify-0.7 because it's controlled via an automagic ifdef
 COMMON_DEPEND="

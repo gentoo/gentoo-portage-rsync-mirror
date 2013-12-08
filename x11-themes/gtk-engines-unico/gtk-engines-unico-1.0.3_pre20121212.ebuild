@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/gtk-engines-unico-1.0.3_pre20121212.ebuild,v 1.2 2013/11/30 20:05:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-unico/gtk-engines-unico-1.0.3_pre20121212.ebuild,v 1.3 2013/12/08 19:53:50 pacho Exp $
 
 EAPI=5
 inherit eutils
@@ -15,7 +15,7 @@ SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.26:2

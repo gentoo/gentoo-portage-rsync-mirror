@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.87 2013/11/30 19:56:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.88 2013/12/08 19:39:39 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-disk-utility-3.8.2.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-disk-utility-3.8.2.ebuild:
   amd64 stable, bug #478252

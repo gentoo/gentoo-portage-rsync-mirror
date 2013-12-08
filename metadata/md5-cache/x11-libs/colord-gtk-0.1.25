@@ -4,7 +4,7 @@ DESCRIPTION=GTK support library for colord
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/software/colord/
 IUSE=doc +introspection vala
-KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd
 LICENSE=LGPL-3+
 RDEPEND=>=dev-libs/glib-2.28:2 >=media-libs/lcms-2.2:2= x11-libs/gdk-pixbuf:2[introspection?] x11-libs/gtk+:3[X(+),introspection?] x11-misc/colord:=[introspection?,vala?] introspection? ( >=dev-libs/gobject-introspection-0.9.8 ) !<x11-misc/colord-0.1.27
 REQUIRED_USE=vala? ( introspection )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0/1
 SRC_URI=http://www.freedesktop.org/software/colord/releases/colord-gtk-0.1.25.tar.xz
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vala	b365480bc54c4e356dc1e953da9fe356
-_md5_=30d2a8083bb984a9edb639ee55c56e92
+_md5_=88304783c40e7ac56ae1c7e629fcfbac

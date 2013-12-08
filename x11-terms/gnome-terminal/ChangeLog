@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.276 2013/11/30 20:04:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.277 2013/12/08 19:51:13 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.8.4.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.8.4.ebuild:
   amd64 stable, bug #478252

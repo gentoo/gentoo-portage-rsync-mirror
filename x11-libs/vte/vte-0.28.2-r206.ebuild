@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r206.ebuild,v 1.4 2013/11/30 20:02:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r206.ebuild,v 1.5 2013/12/08 19:48:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="https://live.gnome.org/VTE"
 
 LICENSE="LGPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~x64-solaris ~x86-solaris"
 IUSE="debug glade +introspection python"
 
 PDEPEND="x11-libs/gnome-pty-helper"

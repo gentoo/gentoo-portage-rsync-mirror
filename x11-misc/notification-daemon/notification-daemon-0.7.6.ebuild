@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.7.6.ebuild,v 1.3 2013/11/30 20:10:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.7.6.ebuild,v 1.4 2013/12/08 20:01:06 pacho Exp $
 
 EAPI=4
 inherit gnome.org
@@ -10,7 +10,7 @@ HOMEPAGE="http://git.gnome.org/browse/notification-daemon/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.28

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.34.13.ebuild,v 1.2 2013/11/30 20:06:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.34.13.ebuild,v 1.3 2013/12/08 19:55:17 pacho Exp $
 
 EAPI="5"
 # debug only changes CFLAGS
@@ -14,7 +14,7 @@ HOMEPAGE="http://blogs.gnome.org/metacity/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="test xinerama"
 
 # XXX: libgtop is automagic, hard-enabled instead
