@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.181 2013/11/30 19:17:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.182 2013/12/08 18:44:07 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gconf-editor-3.0.1-r1.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gconf-editor-3.0.1-r1.ebuild:
   amd64 stable, bug #478252

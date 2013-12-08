@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/eiciel/eiciel-0.9.8.1.ebuild,v 1.5 2013/11/30 19:15:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/eiciel/eiciel-0.9.8.1.ebuild,v 1.6 2013/12/08 18:42:08 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ SRC_URI="http://rofi.roger-ferrer.org/eiciel/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="xattr"
 
 RDEPEND=">=sys-apps/acl-2.2.32

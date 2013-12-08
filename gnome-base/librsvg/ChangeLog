@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.321 2013/11/30 19:13:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.322 2013/12/08 18:39:07 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> librsvg-2.39.0.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> librsvg-2.39.0.ebuild:
   amd64 stable, bug #478252
