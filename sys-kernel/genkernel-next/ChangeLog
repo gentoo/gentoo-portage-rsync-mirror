@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel-next
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.28 2013/12/07 22:38:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.30 2013/12/08 17:04:03 lxnay Exp $
+
+*genkernel-next-49 (08 Dec 2013)
+
+  08 Dec 2013; Fabio Erculiani <lxnay@gentoo.org> -genkernel-next-40.ebuild,
+  -genkernel-next-47.ebuild, +genkernel-next-49.ebuild:
+  version bump, also fix bug #493346
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> genkernel-next-35.ebuild:
   x86 stable, bug #485234

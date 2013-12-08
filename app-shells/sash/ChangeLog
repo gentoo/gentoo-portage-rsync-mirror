@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.51 2013/07/09 18:37:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.52 2013/12/08 17:27:39 dastergon Exp $
+
+  08 Dec 2013; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
+  add myself as maintainer
 
   09 Jul 2013; Michael Palimaka <kensington@gentoo.org>
   -files/sash-3.6-readline.patch, -sash-3.7-r1.ebuild:
