@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IMAP-Admin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IMAP-Admin/ChangeLog,v 1.12 2013/08/26 10:23:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IMAP-Admin/ChangeLog,v 1.13 2013/12/08 10:51:48 zlogene Exp $
+
+  08 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -IMAP-Admin-1.6.7.ebuild,
+  IMAP-Admin-1.6.7-r1.ebuild:
+  amd64/x86 stable wrt bug #492172
 
 *IMAP-Admin-1.6.7-r1 (26 Aug 2013)
 

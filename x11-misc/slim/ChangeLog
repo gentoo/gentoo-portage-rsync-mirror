@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/slim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.130 2013/11/30 14:17:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.131 2013/12/08 10:59:06 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> slim-1.3.6-r3.ebuild:
+  x86 stable, bug #491492
 
   30 Nov 2013; Markus Meier <maekke@gentoo.org> slim-1.3.6-r3.ebuild:
   arm stable, bug #491492

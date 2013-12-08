@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/json-c-0.11.ebuild,v 1.5 2013/12/06 17:13:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/json-c-0.11.ebuild,v 1.6 2013/12/08 10:50:16 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://s3.amazonaws.com/json-c_releases/releases/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0/0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="doc static-libs"
 
 # tests break otherwise

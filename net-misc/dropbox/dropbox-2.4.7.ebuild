@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-2.4.7.ebuild,v 1.2 2013/11/30 13:54:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-2.4.7.ebuild,v 1.3 2013/12/08 10:51:43 pacho Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="CC-BY-ND-3.0 FTL MIT LGPL-2 openssl dropbox"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~x86-linux"
+KEYWORDS="amd64 x86 ~x86-linux"
 IUSE="+librsync-bundled X"
 RESTRICT="mirror strip"
 

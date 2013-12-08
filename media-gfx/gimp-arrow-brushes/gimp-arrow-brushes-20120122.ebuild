@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-arrow-brushes/gimp-arrow-brushes-20120122.ebuild,v 1.4 2013/10/14 06:29:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-arrow-brushes/gimp-arrow-brushes-20120122.ebuild,v 1.5 2013/12/08 10:45:51 pacho Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.gimphelp.org/DL/arrow_brushes_color_1.tar.bz2
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""
