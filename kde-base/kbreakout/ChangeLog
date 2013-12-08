@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbreakout
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.171 2013/12/04 17:10:22 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbreakout/ChangeLog,v 1.172 2013/12/08 14:08:02 ago Exp $
+
+  08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kbreakout-4.11.2.ebuild:
+  Stable for amd64, wrt bug #484884
 
   04 Dec 2013; Johannes Huber <johu@gentoo.org> -kbreakout-4.11.3.ebuild:
   Remove KDE SC 4.11.3

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.11.2.ebuild,v 1.1 2013/10/09 23:04:22 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.11.2.ebuild,v 1.2 2013/12/08 14:07:37 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit python-single-r1 kde4-base
 DESCRIPTION="A tool to create interactive applets for the KDE desktop."
 HOMEPAGE="http://www.kde.org/applications/utilities/superkaramba
 http://utils.kde.org/projects/superkaramba"
-KEYWORDS=" ~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug python"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"

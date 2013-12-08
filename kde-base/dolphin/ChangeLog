@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.211 2013/12/04 17:09:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.212 2013/12/08 14:07:57 ago Exp $
+
+  08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> dolphin-4.11.2-r1.ebuild:
+  Stable for amd64, wrt bug #484884
 
   04 Dec 2013; Johannes Huber <johu@gentoo.org> -dolphin-4.11.3-r1.ebuild:
   Remove KDE SC 4.11.3

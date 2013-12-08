@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.289 2013/12/04 17:09:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.290 2013/12/08 14:08:05 ago Exp $
+
+  08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kmix-4.11.2.ebuild:
+  Stable for amd64, wrt bug #484884
 
   04 Dec 2013; Johannes Huber <johu@gentoo.org> -kmix-4.11.3.ebuild:
   Remove KDE SC 4.11.3

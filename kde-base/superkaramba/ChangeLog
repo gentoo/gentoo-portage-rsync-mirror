@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/superkaramba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.272 2013/12/04 17:09:53 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/ChangeLog,v 1.273 2013/12/08 14:07:37 ago Exp $
+
+  08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> superkaramba-4.11.2.ebuild:
+  Stable for amd64, wrt bug #484884
 
   04 Dec 2013; Johannes Huber <johu@gentoo.org> -superkaramba-4.11.3.ebuild:
   Remove KDE SC 4.11.3
