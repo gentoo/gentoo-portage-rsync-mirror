@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mutagen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.94 2013/02/18 15:41:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mutagen/ChangeLog,v 1.95 2013/12/08 04:48:58 radhermit Exp $
+
+*mutagen-1.22 (08 Dec 2013)
+
+  08 Dec 2013; Tim Harder <radhermit@gentoo.org> +mutagen-1.22.ebuild:
+  Version bump (bug #488074) and add doc use flag.
 
   18 Feb 2013; Mike Gilbert <floppym@gentoo.org> mutagen-1.21.ebuild:
   Fix the test phase properly.
