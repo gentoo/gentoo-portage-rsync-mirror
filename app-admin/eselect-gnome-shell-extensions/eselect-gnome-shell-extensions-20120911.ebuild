@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnome-shell-extensions/eselect-gnome-shell-extensions-20120911.ebuild,v 1.2 2013/11/30 18:30:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-gnome-shell-extensions/eselect-gnome-shell-extensions-20120911.ebuild,v 1.3 2013/12/08 17:33:31 pacho Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~tetromino/distfiles/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # gnome-shell schemas are used in pkg_postinst

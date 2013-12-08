@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-spi2-core
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.44 2013/11/30 18:29:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/ChangeLog,v 1.45 2013/12/08 17:32:03 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> at-spi2-core-2.8.0.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> at-spi2-core-2.8.0.ebuild:
   amd64 stable, bug #478252

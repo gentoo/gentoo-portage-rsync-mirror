@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.90 2013/12/03 22:17:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.91 2013/12/08 17:43:18 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> workrave-1.10.ebuild:
+  x86 stable, bug #478252
 
   03 Dec 2013; Pacho Ramos <pacho@gentoo.org> workrave-1.10.ebuild:
   gnome-shell dependency is not really needed (#493134 by Kevin Bryan)

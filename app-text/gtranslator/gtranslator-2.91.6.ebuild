@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.6.ebuild,v 1.2 2013/11/30 18:41:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.6.ebuild,v 1.3 2013/12/08 17:48:57 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://gtranslator.sourceforge.net/"
 
 LICENSE="GPL-3+ FDL-1.1+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="gnome spell"
 
 COMMON_DEPEND="

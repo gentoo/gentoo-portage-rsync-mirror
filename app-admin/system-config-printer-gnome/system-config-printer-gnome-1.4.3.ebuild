@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.4.3.ebuild,v 1.2 2013/11/30 18:32:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.4.3.ebuild,v 1.3 2013/12/08 17:36:04 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
 SRC_URI="http://cyberelk.net/tim/data/system-config-printer/${MY_V}/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
 SLOT="0"
 IUSE="gnome-keyring"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

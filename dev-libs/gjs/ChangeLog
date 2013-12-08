@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gjs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.24 2013/11/30 18:46:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.25 2013/12/08 17:57:02 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gjs-1.36.1.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gjs-1.36.1.ebuild:
   amd64 stable, bug #478252

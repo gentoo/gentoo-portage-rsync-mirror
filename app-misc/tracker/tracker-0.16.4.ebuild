@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.4.ebuild,v 1.2 2013/11/30 18:37:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.16.4.ebuild,v 1.3 2013/12/08 17:42:54 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ HOMEPAGE="http://projects.gnome.org/tracker/"
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/16"
 IUSE="cue eds elibc_glibc exif firefox-bookmarks flac gif gsf gstreamer gtk iptc +iso +jpeg laptop libsecret +miner-fs mp3 nautilus networkmanager pdf playlist rss test thunderbird +tiff upnp-av +vorbis xine +xml xmp xps" # qt4 strigi
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 REQUIRED_USE="
 	^^ ( gstreamer xine )

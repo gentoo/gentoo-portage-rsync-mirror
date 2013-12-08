@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gnome-dictionary
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gnome-dictionary/ChangeLog,v 1.6 2013/11/30 18:35:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gnome-dictionary/ChangeLog,v 1.7 2013/12/08 17:40:01 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-dictionary-3.8.0.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> gnome-dictionary-3.8.0.ebuild:
   amd64 stable, bug #478252

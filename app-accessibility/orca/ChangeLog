@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.122 2013/11/30 18:30:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.123 2013/12/08 17:33:13 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> orca-3.8.2.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> orca-3.8.2.ebuild:
   amd64 stable, bug #478252

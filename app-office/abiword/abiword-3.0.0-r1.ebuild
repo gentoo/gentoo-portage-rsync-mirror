@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.4 2013/11/30 18:38:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.5 2013/12/08 17:44:16 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ SRC_URI="http://www.abisource.com/downloads/${PN}/${PV}/source/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="calendar collab cups eds +goffice grammar +introspection latex map math ots +plugins readline redland spell wordperfect wmf thesaurus"
 
 # You need 'plugins' enabled if want to enable the extra plugins

@@ -4,11 +4,11 @@ DESCRIPTION=Official plugins for gedit
 EAPI=5
 HOMEPAGE=http://live.gnome.org/GeditPlugins
 IUSE=+python charmap git terminal python_targets_python3_2 python_targets_python3_3
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2+
 RDEPEND=>=app-editors/gedit-3.7.1[python?] >=dev-libs/glib-2.32:2 >=dev-libs/libpeas-1.7.0[gtk,python?] >=x11-libs/gtk+-3.4:3 >=x11-libs/gtksourceview-3:3.0 python? ( python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2[xml] ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3[xml] ) dev-lang/python-exec:=[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=app-editors/gedit-3[introspection,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] dev-libs/libpeas[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] dev-python/dbus-python[python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] dev-python/pycairo dev-python/pygobject:3[cairo,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python3_2(-),-python_single_target_python3_3(-)] >=x11-libs/gtk+-3.4:3[introspection] >=x11-libs/gtksourceview-3:3.0[introspection] x11-libs/pango[introspection] x11-libs/gdk-pixbuf:2[introspection] ) charmap? ( >=gnome-extra/gucharmap-3:2.90[introspection] ) git? ( >=dev-libs/libgit2-glib-0.0.2 ) terminal? ( x11-libs/vte:2.90[introspection] )
 REQUIRED_USE=charmap? ( python ) git? ( python ) terminal? ( python ) python? ( )
 SLOT=0
 SRC_URI=mirror://gnome/sources/gedit-plugins/3.8/gedit-plugins-3.8.3.tar.xz
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	python-r1	cd956d5a4bac2209a64d0f4851cc115d	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=f08603ca96c7d4cc04fba688e870391f
+_md5_=b70ec3e7ce11da8034e2f3c34b2dd4de

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.84 2013/11/30 18:35:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.85 2013/12/08 17:41:18 pacho Exp $
+
+  08 Dec 2013; Pacho Ramos <pacho@gentoo.org> ghex-3.8.1.ebuild:
+  x86 stable, bug #478252
 
   30 Nov 2013; Pacho Ramos <pacho@gentoo.org> ghex-3.8.1.ebuild:
   amd64 stable, bug #478252
