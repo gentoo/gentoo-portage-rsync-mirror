@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzmq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.39 2013/12/07 19:16:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/ChangeLog,v 1.40 2013/12/08 12:21:00 maekke Exp $
+
+  08 Dec 2013; Markus Meier <maekke@gentoo.org> pyzmq-14.0.1.ebuild:
+  remove arm magic for dev-python/cffi dependency
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> pyzmq-13.1.0.ebuild:
   x86 stable, bug #488738

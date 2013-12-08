@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-14.0.1.ebuild,v 1.1 2013/12/03 08:14:54 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-14.0.1.ebuild,v 1.2 2013/12/08 12:21:00 maekke Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -22,13 +22,11 @@ RDEPEND=">=net-libs/zeromq-2.1.9
 	green? ( dev-python/gevent[${PY2_USEDEP}] )"
 DEPEND="${RDEPEND}
 	test? (
-		!arm? ( dev-python/cffi[${PYTHON_USEDEP}] )
+		dev-python/cffi[${PYTHON_USEDEP}]
 		dev-python/nose[${PY2_USEDEP}]
 		dev-python/gevent[${PY2_USEDEP}]
 		dev-python/cython[${PY2_USEDEP}]
 	)"
-
-REQUIRED_USE="test? ( !arm )"
 
 python_configure_all() {
 	tc-export CC
