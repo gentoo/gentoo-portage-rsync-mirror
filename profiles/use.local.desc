@@ -2980,6 +2980,7 @@ media-fonts/terminus-font:ru-g - Changes view of Russian letter 'ge' (see homepa
 media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like Latin u, but like "mirrored" N (see homepage)
 media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepage)
 media-fonts/unifont:fontforge - Use media-gfx/fontforge to build fonts from source
+media-fonts/unifont:utils - Install unifont utilities
 media-gfx/album:plugins - Install optional plugins
 media-gfx/album:themes - Install optional themes
 media-gfx/assimp:boost - Build assimp with boost support
