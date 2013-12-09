@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8416 2013/12/08 15:55:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8417 2013/12/09 09:33:41 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Remove mask on sys-apps/pcfclock, package was removed from tree, bug #489510
 
   08 Dec 2013; Ben de Groot <yngwin@gentoo.org> package.mask:
   New freetype2 header location breaks compilation of reverse dependencies,
