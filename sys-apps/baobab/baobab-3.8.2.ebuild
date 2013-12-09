@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/baobab-3.8.2.ebuild,v 1.4 2013/12/08 19:39:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baobab/baobab-3.8.2.ebuild,v 1.5 2013/12/09 08:49:08 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,10 +22,10 @@ COMMON_DEPEND="
 	x11-libs/gdk-pixbuf
 	>=x11-libs/gtk+-3.8.0:3
 	x11-libs/pango
-	x11-themes/gnome-icon-theme-extras
 "
 RDEPEND="${COMMON_DEPEND}
 	gnome-base/gsettings-desktop-schemas
+	x11-themes/gnome-icon-theme-extras
 	!<gnome-extra/gnome-utils-3.4
 "
 # ${PN} was part of gnome-utils before 3.4

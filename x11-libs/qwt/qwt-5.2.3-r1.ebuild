@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.3-r1.ebuild,v 1.2 2013/06/05 02:52:28 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.3-r1.ebuild,v 1.3 2013/12/09 08:32:59 jlec Exp $
 
 EAPI=5
 
@@ -73,6 +73,7 @@ src_install () {
 	if use doc; then
 		insinto /usr/share/doc/${PF}
 		rm doc/man/*/*license*
+		rm -f doc/man/*/{_,deprecated}* || die
 		doman doc/man/*/*
 		doins -r doc/html
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.1.ebuild,v 1.2 2013/11/15 23:25:46 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.13.ebuild,v 1.1 2013/12/09 08:44:49 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -10,8 +10,14 @@ inherit python-r1 waf-utils multilib linux-info systemd
 MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
-SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
-KEYWORDS="~amd64 ~hppa ~x86"
+if [ "${PV}" = "4.9999" ]; then
+	EGIT_REPO_URI="git://git.samba.org/samba.git"
+	KEYWORDS=""
+	inherit git-2
+else
+	SRC_URI="mirror://samba/stable/${MY_P}.tar.gz"
+	KEYWORDS="~amd64 ~hppa ~x86"
+fi
 
 DESCRIPTION="Samba Suite Version 4"
 HOMEPAGE="http://www.samba.org/"
@@ -20,7 +26,7 @@ LICENSE="GPL-3"
 SLOT="0"
 
 IUSE="acl addns ads aio avahi client cluster cups dmapi fam gnutls iprint
-ldap quota selinux syslog test winbind"
+ldap quota selinux swat syslog test winbind"
 
 # sys-apps/attr is an automagic dependency (see bug #489748)
 # dev-libs/libaio is an automagic dependency (see bug #489764)
@@ -99,8 +105,9 @@ src_configure() {
 		--disable-rpath-install \
 		--nopyc \
 		--nopyo \
-		--bundled-libraries=ntdb \
-		--builtin-libraries=ntdb \
+		--disable-ntdb \
+		--bundled-libraries=NONE \
+		--builtin-libraries=NONE \
 		$(use_with addns dnsupdate) \
 		$(use_with acl acl-support) \
 		$(use_with ads) \
@@ -117,6 +124,7 @@ src_configure() {
 		--with-pam_smbpass \
 		$(use_with quota quotas) \
 		$(use_with syslog) \
+		$(use_with swat) \
 		$(use_with winbind)
 		"
 	use "ads" && myconf+=" --with-shared-modules=idmap_ad"
@@ -128,14 +136,11 @@ src_configure() {
 src_install() {
 	waf-utils_src_install
 
-	# Seems like the build script gets the shebangs correct by itself
-	# (4.0.6)
-	#python_replicate_script \
-	#	"${D}/usr/sbin/samba_dnsupdate" \
-	#	"${D}/usr/sbin/samba_spnupdate" \
-	#	"${D}/usr/sbin/samba_upgradedns" \
-	#	"${D}/usr/sbin/samba_kcc" \
-	#	"${D}/usr/bin/samba-tool"
+	# install ldap schema for server (bug #491002)
+	if use ldap ; then
+		insinto /etc/openldap/schema
+		doins examples/LDAP/samba.schema
+	fi
 
 	# Make all .so files executable
 	find "${D}" -type f -name "*.so" -exec chmod +x {} +

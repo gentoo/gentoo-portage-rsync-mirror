@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.636 2013/12/08 17:05:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.637 2013/12/09 08:44:49 polynomial-c Exp $
+
+*samba-4.1.3 (09 Dec 2013)
+*samba-4.0.13 (09 Dec 2013)
+*samba-3.6.22 (09 Dec 2013)
+
+  09 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> +samba-3.6.22.ebuild,
+  -samba-4.0.11.ebuild, +samba-4.0.13.ebuild, -samba-4.1.1.ebuild,
+  +samba-4.1.3.ebuild:
+  Security bump (bug #493726). Removed old.
 
   08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.20.ebuild:
   Stable for alpha, wrt bug #491070
