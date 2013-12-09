@@ -1,9 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.32 2013/12/06 23:16:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.33 2013/12/09 11:15:56 idella4 Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Ian Delaney <idella4@gentoo.org> (09 Dec 2013)
+# subsequent to the total inaction of the maintainer of
+# ocaml to honour / respond in any way to 
+# Bug #486076, ocaml masked to allow xen to once again
+# become a stabilisable package
+app-emulation/xen-tools ocaml
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (7 Dec 2013)
 # Too crash-prone and rotting, useflag will go away in the future
