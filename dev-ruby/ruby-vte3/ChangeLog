@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-vte3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte3/ChangeLog,v 1.1 2013/05/04 16:45:00 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte3/ChangeLog,v 1.2 2013/12/09 16:09:33 naota Exp $
+
+*ruby-vte3-2.0.2 (09 Dec 2013)
+
+  09 Dec 2013; Naohiro Aota <naota@gentoo.org> +ruby-vte3-2.0.2.ebuild:
+  version bump
 
 *ruby-vte3-1.2.6 (04 May 2013)
 

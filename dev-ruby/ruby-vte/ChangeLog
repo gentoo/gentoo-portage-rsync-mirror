@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-vte
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.45 2013/08/17 10:37:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.46 2013/12/09 16:02:24 naota Exp $
+
+*ruby-vte-2.0.2 (09 Dec 2013)
+
+  09 Dec 2013; Naohiro Aota <naota@gentoo.org> +ruby-vte-2.0.2.ebuild:
+  version bump
 
   17 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ruby-vte-1.1.8.ebuild:
   Stable for ppc, wrt bug #480974
