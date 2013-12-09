@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-1.0.ebuild,v 1.2 2013/03/12 11:17:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-1.0.ebuild,v 1.3 2013/12/09 05:24:42 vapier Exp $
 
 EAPI="4"
 
@@ -53,6 +53,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog README TODO
 
 	if use doc ; then
+		# Clean up crap man pages. #356369
+		rm -vf "${CMAKE_BUILD_DIR}"/doc/man/man3/{_,usb_,deprecated}*
+
 		doman "${CMAKE_BUILD_DIR}"/doc/man/man3/*
 		dohtml "${CMAKE_BUILD_DIR}"/doc/html/*
 	fi
