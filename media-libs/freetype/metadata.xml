@@ -7,6 +7,10 @@
 		<name>Ben de Groot</name>
 	</maintainer>
 	<maintainer>
+		<email>polynomial-c@gentoo.org</email>
+		<name>Lars Wendler</name>
+	</maintainer>
+	<maintainer>
 		<email>multilib@gentoo.org</email>
 		<name>gx86-multilib project</name>
 		<description>Handling the bugs related to multilib support in the package and related changes.</description>
