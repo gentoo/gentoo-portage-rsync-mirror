@@ -1,11 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.4.1.ebuild,v 1.1 2013/12/09 17:20:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-1.4.1.ebuild,v 1.2 2013/12/09 18:53:34 prometheanfire Exp $
 
 EAPI="5"
-
-#tests restricted due to bug https://github.com/ansible/ansible/issues/5224
-RESTRICT="test"
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
@@ -36,6 +33,8 @@ DOC_CONTENTS="You can define parameters through shell variables OR use config fi
 Examples of config files installed in /usr/share/doc/${PF}/examples\n\n
 You have to create ansible hosts file!\n
 More info on http://ansible.cc/docs/gettingstarted.html"
+
+PATCHES=( "${FILESDIR}/tests-${P}.patch" )
 
 python_prepare_all() {
 	distutils-r1_python_prepare_all

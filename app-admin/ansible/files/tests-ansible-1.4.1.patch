@@ -1,0 +1,13 @@
+--- test/TestUtils.py.orig	2013-12-09 13:39:23.585258424 -0500
++++ test/TestUtils.py	2013-12-09 13:39:40.524257467 -0500
+@@ -10,6 +10,10 @@
+ import ansible.utils
+ import ansible.utils.template as template2
+ 
++import sys
++reload(sys)
++sys.setdefaultencoding("utf8")
++
+ class TestUtils(unittest.TestCase):
+ 
+     #####################################
