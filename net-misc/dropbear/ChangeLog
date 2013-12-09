@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.112 2013/12/03 19:23:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.114 2013/12/09 01:25:30 vapier Exp $
+
+  09 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/dropbear-2013.62-multi-install-man.patch,
+  +files/dropbear-2013.62-multi-no-relink.patch, dropbear-2013.62.ebuild:
+  Fix build/install when USE=multicall.
+
+  09 Dec 2013; Mike Frysinger <vapier@gentoo.org> dropbear-2013.60.ebuild,
+  dropbear-2013.62.ebuild:
+  Fix symlink install when USE=multicall #493270 by Lars.
 
 *dropbear-2013.62 (03 Dec 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2013.60.ebuild,v 1.9 2013/11/19 21:22:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2013.60.ebuild,v 1.10 2013/12/09 01:24:05 vapier Exp $
 
 EAPI="4"
 
@@ -74,12 +74,12 @@ src_install() {
 	newconfd "${FILESDIR}"/dropbear.conf.d dropbear
 	dodoc CHANGES README TODO SMALL MULTI
 
-	# The multi install target does not install the links
+	# The multi install target does not install the links right.
 	if use multicall ; then
 		cd "${ED}"/usr/bin
 		local x
 		for x in "${progs[@]}" ; do
-			ln -s dropbearmulti ${x} || die "ln -s dropbearmulti to ${x} failed"
+			ln -sf dropbearmulti ${x} || die "ln -s dropbearmulti to ${x} failed"
 		done
 		rm -f dropbear
 		dodir /usr/sbin
