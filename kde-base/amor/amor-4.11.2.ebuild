@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/amor-4.11.2.ebuild,v 1.2 2013/12/08 14:07:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/amor-4.11.2.ebuild,v 1.3 2013/12/09 05:44:18 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="KDE: Amusing Misuse Of Resources - desktop-dwelling creature"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="x11-libs/libX11

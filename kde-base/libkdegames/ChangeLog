@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdegames
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.284 2013/12/08 14:07:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdegames/ChangeLog,v 1.285 2013/12/09 05:44:23 ago Exp $
+
+  09 Dec 2013; Agostino Sarubbo <ago@gentoo.org> libkdegames-4.11.2.ebuild:
+  Stable for x86, wrt bug #484884
 
   08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> libkdegames-4.11.2.ebuild:
   Stable for amd64, wrt bug #484884

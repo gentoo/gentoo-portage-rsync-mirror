@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.289 2013/12/08 14:07:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.290 2013/12/09 05:44:14 ago Exp $
+
+  09 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kalarm-4.11.2.ebuild:
+  Stable for x86, wrt bug #484884
 
   08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kalarm-4.11.2.ebuild:
   Stable for amd64, wrt bug #484884

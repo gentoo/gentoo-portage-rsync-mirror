@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cantor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.143 2013/12/08 14:07:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/ChangeLog,v 1.144 2013/12/09 05:44:36 ago Exp $
+
+  09 Dec 2013; Agostino Sarubbo <ago@gentoo.org> cantor-4.11.2.ebuild:
+  Stable for x86, wrt bug #484884
 
   08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> cantor-4.11.2.ebuild:
   Stable for amd64, wrt bug #484884

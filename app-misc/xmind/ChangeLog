@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/xmind
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.7 2013/11/08 18:03:57 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xmind/ChangeLog,v 1.8 2013/12/09 05:37:12 creffett Exp $
+
+*xmind-3.4.0.201311050558-r1 (09 Dec 2013)
+
+  09 Dec 2013; Chris Reffett <creffett@gentoo.org> +files/xmind-wrapper,
+  +xmind-3.4.0.201311050558-r1.ebuild, -xmind-3.4.0.201311050558.ebuild:
+  Revbump. Heavily redo installation (installing into /usr/lib doesn't make
+  sense, move to /opt). Remove thumbnail/mime stuff, that was not upstream code
+  and pulls in a bunch of old gnome stuff. Add wrapper to deal with hackish
+  handling of configuration dir, fixes bug 492274.
 
   09 Oct 2013; creffett <creffett@gentoo.org> ChangeLog:
   testing

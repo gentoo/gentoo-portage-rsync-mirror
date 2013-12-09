@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.315 2013/12/08 14:08:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.316 2013/12/09 05:44:58 ago Exp $
+
+  09 Dec 2013; Agostino Sarubbo <ago@gentoo.org> konqueror-4.11.2.ebuild:
+  Stable for x86, wrt bug #484884
 
   08 Dec 2013; Agostino Sarubbo <ago@gentoo.org> konqueror-4.11.2.ebuild:
   Stable for amd64, wrt bug #484884
