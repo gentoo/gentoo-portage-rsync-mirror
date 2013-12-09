@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.19.ebuild,v 1.1 2013/10/29 16:53:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.21.ebuild,v 1.1 2013/12/09 19:16:44 jer Exp $
 
 EAPI=5
 inherit cmake-utils user
@@ -107,4 +107,9 @@ src_install() {
 		/etc/${PN} \
 		/var/log/${PN} \
 		/var/cache/${PN}
+}
+
+pkg_postinst() {
+	einfo "Gentoo mirroring support has been added to ${PN}"
+	einfo "To use it, you should run /etc/apt-cacher-ng/gentoo_mirrors.sh at least once"
 }
