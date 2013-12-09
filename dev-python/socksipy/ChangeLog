@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/socksipy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/socksipy/ChangeLog,v 1.2 2013/09/05 18:46:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/socksipy/ChangeLog,v 1.3 2013/12/09 06:54:51 vapier Exp $
+
+*socksipy-1.02 (09 Dec 2013)
+
+  09 Dec 2013; Mike Frysinger <vapier@gentoo.org> +socksipy-1.02.ebuild:
+  Version bump #468080 by Ben Sagal.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> socksipy-1.00.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
