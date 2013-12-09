@@ -1,6 +1,15 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.28 2013/11/27 04:08:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.29 2013/12/09 03:30:13 patrick Exp $
+
+*phoronix-test-suite-4.8.4 (09 Dec 2013)
+
+  09 Dec 2013; Patrick Lauer <patrick@gentoo.org>
+  +phoronix-test-suite-4.8.4.ebuild, -phoronix-test-suite-4.0.1.ebuild,
+  -phoronix-test-suite-4.2.0.ebuild, -phoronix-test-suite-4.4.0.ebuild,
+  -phoronix-test-suite-4.4.1.ebuild, -phoronix-test-suite-4.8.0.ebuild,
+  -phoronix-test-suite-4.8.1.ebuild, -phoronix-test-suite-4.8.2.ebuild:
+  Bump, remove old
 
 *phoronix-test-suite-4.8.3 (27 Nov 2013)
 
