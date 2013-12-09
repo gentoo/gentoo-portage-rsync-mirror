@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.118 2013/12/08 18:22:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.119 2013/12/09 01:55:28 vapier Exp $
+
+*kmod-15-r1 (09 Dec 2013)
+
+  09 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/kmod-15-dynamic-kmod.patch, +kmod-15-r1.ebuild:
+  Do not statically link libkmod #493630 by Nikoli.
 
   08 Dec 2013; Markus Meier <maekke@gentoo.org> kmod-15.ebuild:
   arm stable, bug #487338

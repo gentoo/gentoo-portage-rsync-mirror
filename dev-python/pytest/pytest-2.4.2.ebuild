@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.6 2013/12/09 00:41:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.7 2013/12/09 01:44:58 floppym Exp $
 
 EAPI="5"
 
@@ -24,7 +24,10 @@ RDEPEND=">=dev-python/py-${PY_VER}[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
-	test? ( dev-python/pyyaml[${PYTHON_USEDEP}] )
+	test? (
+		dev-python/pexpect[$(python_gen_usedep python{2_6,2_7,3_2,3_3})]
+		dev-python/pyyaml[${PYTHON_USEDEP}]
+	)
 "
 
 PATCHES=(
