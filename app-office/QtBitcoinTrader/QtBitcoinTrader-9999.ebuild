@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/QtBitcoinTrader/QtBitcoinTrader-9999.ebuild,v 1.2 2013/07/04 07:17:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/QtBitcoinTrader/QtBitcoinTrader-9999.ebuild,v 1.3 2013/12/09 11:41:45 alexxy Exp $
 
 EAPI=5
 
@@ -9,6 +9,7 @@ if [[ $PV = *9999* ]]; then
 	EGIT_REPO_URI="
 		git://github.com/JulyIGHOR/QtBitcoinTrader.git
 		https://github.com/JulyIGHOR/QtBitcoinTrader.git"
+	EGIT_BRANCH="testing"
 	SRC_URI=""
 	KEYWORDS=""
 else
