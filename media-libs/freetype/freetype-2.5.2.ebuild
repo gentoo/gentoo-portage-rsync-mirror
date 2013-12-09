@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.2.ebuild,v 1.1 2013/12/09 05:45:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.5.2.ebuild,v 1.2 2013/12/09 09:26:03 polynomial-c Exp $
 
 EAPI=5
 
@@ -76,7 +76,6 @@ src_prepare() {
 
 	if use utils; then
 		cd "${WORKDIR}/ft2demos-${PV}" || die
-		epatch "${FILESDIR}"/ft2demos-2.5.1-compilefix.patch
 		# Disable tests needing X11 when USE="-X". (bug #177597)
 		if ! use X; then
 			sed -i -e "/EXES\ +=\ ftdiff/ s:^:#:" Makefile || die
