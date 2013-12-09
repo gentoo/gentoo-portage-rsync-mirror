@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.199 2013/11/19 20:00:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.200 2013/12/09 20:36:19 williamh Exp $
+
+*ntp-4.2.6_p5-r9 (09 Dec 2013)
+
+  09 Dec 2013; William Hubbs <williamh@gentoo.org> +ntp-4.2.6_p5-r9.ebuild,
+  files/ntpd.confd, files/ntpd.service-r1:
+  Add -g to ntpd's command line options. This came out of a discussion with
+  robbat2, dwfreed and steev on irc. This allows ntpd to set the clock when it
+  starts without the use of ntpdate. If you keep this, you do not need to run
+  the ntp-client service.
 
 *ntp-4.2.6_p5-r8 (19 Nov 2013)
 
