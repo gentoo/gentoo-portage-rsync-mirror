@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-cairo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-cairo/ChangeLog,v 1.4 2012/04/13 19:00:41 ulm Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-cairo/ChangeLog,v 1.5 2013/12/09 21:05:50 mabi Exp $
+
+*pecl-cairo-0.3.2 (09 Dec 2013)
+
+  09 Dec 2013; Matti Bickel <mabi@gentoo.org> +pecl-cairo-0.3.2.ebuild:
+  version bump, eapi bump; Replace custom src_unpack by setting S/PHP_EXT_S
+  according to non-standard pecl-cairo packaging
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org> pecl-cairo-0.3.1.ebuild:
   Move EAPI assignment to top of ebuild, bug 411875.
@@ -24,4 +30,3 @@
   27 Sep 2010; <olemarkus@gentoo.org> +pecl-cairo-0.2.0.ebuild,
   +metadata.xml:
   Added pecl-cairo-0.2.0
-
