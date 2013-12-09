@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-Preferred
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.21 2013/09/05 15:05:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.22 2013/12/09 12:16:44 zlogene Exp $
+
+  09 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  -Lingua-Preferred-0.2.4.ebuild, Lingua-Preferred-0.2.4-r1.ebuild:
+  amd64/ppc/x86 stable wrt bug #492186; Drop old revision.
 
 *Lingua-Preferred-0.2.4-r1 (05 Sep 2013)
 
