@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.5 2013/12/07 01:07:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/pytest-2.4.2.ebuild,v 1.6 2013/12/09 00:41:26 floppym Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 inherit distutils-r1 eutils
 
 DESCRIPTION="py.test: simple powerful testing with Python"
@@ -22,10 +22,10 @@ RDEPEND=">=dev-python/py-${PY_VER}[${PYTHON_USEDEP}]"
 
 #pexpect dep based on https://bitbucket.org/hpk42/pytest/issue/386/tests-fail-with-pexpect-30
 DEPEND="${RDEPEND}
-		dev-python/setuptools[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
-		test? ( dev-python/pyyaml[${PYTHON_USEDEP}]
-				>=dev-python/pexpect-3.0[${PYTHON_USEDEP}] )"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	virtual/python-argparse[${PYTHON_USEDEP}]
+	test? ( dev-python/pyyaml[${PYTHON_USEDEP}] )
+"
 
 PATCHES=(
 	"${FILESDIR}/pytest-2.4.2-pexpect-3.0.patch"
