@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.9.2.ebuild,v 1.1 2013/11/27 03:40:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.9.2.ebuild,v 1.2 2013/12/09 03:46:42 patrick Exp $
 
 EAPI=4
 
@@ -86,6 +86,11 @@ pkg_setup() {
 		enewgroup "${QUASSEL_USER}"
 		enewuser "${QUASSEL_USER}" -1 -1 "${QUASSEL_DIR}" "${QUASSEL_USER}"
 	fi
+}
+
+src_prepare() {
+	# fix for #492756
+	epatch "${FILESDIR}/missing-bsd-includes.patch" || die
 }
 
 src_configure() {
