@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/alglib/alglib-3.8.2.ebuild,v 1.1 2013/12/06 10:50:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/alglib/alglib-3.8.2.ebuild,v 1.2 2013/12/09 10:05:05 jlec Exp $
 
 EAPI=5
 
@@ -13,15 +13,16 @@ SRC_URI="http://www.alglib.net/translator/re/${P}.cpp.tgz"
 SLOT="0"
 LICENSE="GPL-2+"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
-
-RDEPEND=""
-DEPEND="${RDEPEND}
-"
+IUSE="test"
 
 S="${WORKDIR}"/cpp/
 
 src_prepare() {
 	cp "${FILESDIR}"/CMakeLists.txt-${PV} CMakeLists.txt || die
 	cmake-utils_src_prepare
+}
+
+src_configure() {
+	local mycmakeargs=( $(cmake-utils_use_build test) )
+	cmake-utils_src_configure
 }
