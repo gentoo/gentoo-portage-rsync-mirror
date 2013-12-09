@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.41 2013/10/04 18:16:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.42 2013/12/09 10:52:39 idella4 Exp $
+
+*xen-pvgrub-4.3.1 (09 Dec 2013)
+
+  09 Dec 2013; Ian Delaney <idella4@gentoo.org>
+  +files/xen-pvgrub-4.3.1-qa.patch, +xen-pvgrub-4.3.1.ebuild:
+  bump, re-base of files/xen-pvgrub-4-qa.patch for new version
 
   04 Oct 2013; Ian Delaney <idella4@gentoo.org> -xen-pvgrub-4.2.1-r3.ebuild:
   remove old

@@ -5,6 +5,11 @@
 		<email>aidecoe@gentoo.org</email>
 		<name>Amadeusz Żołnowski</name>
 	</maintainer>
+	<maintainer>
+		<email>alexander@tsoy.me</email>
+		<name>Alexander Tsoy</name>
+	</maintainer>
+	<herd>proxy-maintainers</herd>
 	<use>
 		<flag name="debug">Module installing additional tools like strace, file
 			editor, ssh and more</flag>
