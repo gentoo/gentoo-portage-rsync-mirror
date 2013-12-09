@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1-r2.ebuild,v 1.2 2013/12/07 06:49:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1-r3.ebuild,v 1.1 2013/12/09 14:12:29 idella4 Exp $
 
 EAPI=5
 
@@ -32,8 +32,9 @@ DOCS=( README docs/README.xen-bugtool )
 
 LICENSE="GPL-2"
 SLOT="0"
-# Inclusion of IUSE ocaml on stabalizing requires aballier to (get off his hands and) make >=dev-lang/ocaml-4 stable
-# Otherwise IUSE ocaml and ocaml capable build need be purged
+# Inclusion of IUSE ocaml on stabalizing requires maintainer of ocaml to (get off his hands and) make 
+# >=dev-lang/ocaml-4 stable
+# Masked in profiles/eapi-5-files instead
 IUSE="api custom-cflags debug doc flask hvm qemu ocaml +pam python pygrub screen static-libs xend"
 
 REQUIRED_USE="hvm? ( qemu )
@@ -222,7 +223,8 @@ src_prepare() {
 
 	use flask || sed -e "/SUBDIRS-y += flask/d" -i tools/Makefile || die
 	use api   || sed -e "/SUBDIRS-\$(LIBXENAPI_BINDINGS) += libxen/d" -i tools/Makefile || die
-	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' -i tools/firmware/Makefile || die
+	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' \
+		 -i tools/firmware/Makefile || die
 
 	# Bug 379537
 	epatch "${FILESDIR}"/fix-gold-ld.patch
@@ -230,6 +232,10 @@ src_prepare() {
 	# xencommons, Bug #492332, sed lighter weight than patching
 	sed -e 's:\$QEMU_XEN -xen-domid:test -e "\$QEMU_XEN" \&\& &:' \
 		-i tools/hotplug/Linux/init.d/xencommons || die
+
+	# Bug 493232 fix from http://bugzilla.xensource.com/bugzilla/show_bug.cgi?id=1844
+	sed -e 's:bl->argsspace = 7 + :bl->argsspace = 9 + :' \
+		-i tools/libxl/libxl_bootloader.c || die
 
 	epatch_user
 }
@@ -358,7 +364,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "Official Xen Guide and the offical wiki page:"
-	elog "http://www.gentoo.org/doc/en/xen-guide.xml"
+	elog "https://wiki.gentoo.org/wiki/Xen"
 	elog "http://wiki.xen.org/wiki/Main_Page"
 	elog ""
 	elog "Recommended to utilise the xencommons script to config sytem At boot"

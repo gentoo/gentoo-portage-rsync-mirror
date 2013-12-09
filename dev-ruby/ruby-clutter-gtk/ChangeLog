@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-clutter-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter-gtk/ChangeLog,v 1.1 2013/05/04 13:08:53 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter-gtk/ChangeLog,v 1.2 2013/12/09 14:20:07 naota Exp $
+
+*ruby-clutter-gtk-2.0.2 (09 Dec 2013)
+
+  09 Dec 2013; Naohiro Aota <naota@gentoo.org> +ruby-clutter-gtk-2.0.2.ebuild:
+  version bump
 
 *ruby-clutter-gtk-1.2.6 (04 May 2013)
 
