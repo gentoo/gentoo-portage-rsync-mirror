@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15251 2013/12/09 20:40:56 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15252 2013/12/10 07:32:54 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (10 Dec 2013)
+# Dead upstream; requires java-1.5; open bugs:
+# https://bugs.gentoo.org/show_bug.cgi?id=196522
+# https://bugs.gentoo.org/show_bug.cgi?id=241512
+# https://bugs.gentoo.org/show_bug.cgi?id=355055
+# Masked for removal on 20140109
+dev-java/jdictrayapi
 
 # Ben de Groot <yngwin@gentoo.org> (08 Dec 2013)
 # New header location breaks compilation of reverse dependencies,
@@ -109,7 +117,7 @@ dev-lang/v8
 # Now included in dev-php/phpunit, removal on 20131213
 dev-php/DBUnit
 
-# Michael Sterrett <mr_bones_@gentoo.org> (13 Nov 2010)
+# Michael Sterrett <mr_bones_@gentoo.org> (13 Nov 2013)
 # gtk+:1 and glib:1 using apps masked for removal on 20131213
 app-text/gsview
 mail-client/gbuffy
