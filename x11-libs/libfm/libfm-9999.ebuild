@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.35 2013/12/09 19:51:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.36 2013/12/10 19:08:00 hwoarang Exp $
 
 EAPI=5
 
@@ -19,8 +19,7 @@ KEYWORDS=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
-	>=lxde-base/menu-cache-0.3.2:=
-	!lxde-base/lxshortcut"
+	>=lxde-base/menu-cache-0.3.2:="
 RDEPEND="${COMMON_DEPEND}
 	x11-misc/shared-mime-info
 	|| ( gnome-base/gvfs[udev,udisks] gnome-base/gvfs[udev,gdu] )"

@@ -1,6 +1,13 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.113 2013/09/21 17:09:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.114 2013/12/10 19:18:03 chithanh Exp $
+
+*glproto-1.4.17 (10 Dec 2013)
+
+  10 Dec 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +glproto-1.4.17.ebuild, -glproto-1.4.14-r1.ebuild, -glproto-1.4.15-r1.ebuild,
+  -glproto-1.4.15.ebuild:
+  Version bump. Remove old.
 
 *glproto-1.4.16-r1 (21 Sep 2013)
 

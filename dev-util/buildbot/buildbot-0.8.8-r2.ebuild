@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.8-r2.ebuild,v 1.1 2013/09/30 19:25:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.8-r2.ebuild,v 1.2 2013/12/10 19:04:12 hwoarang Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -29,8 +29,7 @@ RDEPEND=">=dev-python/jinja-2.1
 	|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-python/pysqlite:2 )
 	>=dev-python/twisted-core-8.0.0
 	dev-python/twisted-web
-	dev-python/sqlalchemy
-	dev-python/sqlalchemy-migrate
+	<dev-python/sqlalchemy-migrate-0.8
 	irc? ( dev-python/twisted-words )
 	mail? ( dev-python/twisted-mail )
 	manhole? ( dev-python/twisted-conch )"
