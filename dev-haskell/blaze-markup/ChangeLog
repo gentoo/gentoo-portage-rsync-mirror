@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/blaze-markup
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-markup/ChangeLog,v 1.8 2013/11/24 19:32:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-markup/ChangeLog,v 1.9 2013/12/10 10:09:38 gienah Exp $
+
+*blaze-markup-0.5.1.6 (10 Dec 2013)
+
+  10 Dec 2013; Mark Wright <gienah@gentoo.org> +blaze-markup-0.5.1.6.ebuild:
+  Bump blaze-markup to 0.5.1.6
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> blaze-markup-0.5.1.5.ebuild:
   Stable for x86, wrt bug #488750
