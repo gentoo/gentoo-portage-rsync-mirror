@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/jq-1.3.ebuild,v 1.4 2013/07/04 12:24:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jq/jq-1.3.ebuild,v 1.5 2013/12/10 00:52:43 radhermit Exp $
 
 EAPI=5
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A lightweight and flexible command-line JSON processor"
 HOMEPAGE="http://stedolan.github.com/jq/"
@@ -23,6 +23,7 @@ DOCS=( AUTHORS README )
 
 src_prepare() {
 	sed -i '/^dist_doc_DATA/d' Makefile.am || die
+	epatch "${FILESDIR}"/${P}-automake-1.14.patch
 	eautoreconf
 }
 
