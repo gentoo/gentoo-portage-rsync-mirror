@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.15.ebuild,v 1.4 2013/11/14 06:14:09 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.15.ebuild,v 1.5 2013/12/10 03:07:35 idella4 Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
 
-inherit autotools-utils python-r1
+inherit autotools-utils distutils-r1
 
 DESCRIPTION="A streaming protocol for test results"
 HOMEPAGE="https://launchpad.net/subunit http://pypi.python.org/pypi/python-subunit"

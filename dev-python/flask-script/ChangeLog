@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flask-script
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/ChangeLog,v 1.11 2013/11/26 05:40:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-script/ChangeLog,v 1.12 2013/12/10 03:20:51 patrick Exp $
+
+*flask-script-0.6.6 (10 Dec 2013)
+
+  10 Dec 2013; Patrick Lauer <patrick@gentoo.org> +flask-script-0.6.6.ebuild:
+  Bump
 
 *flask-script-0.6.3 (26 Nov 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.32 2013/11/14 06:15:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.33 2013/12/10 03:07:35 idella4 Exp $
+
+  10 Dec 2013; Ian Delaney <idella4@gentoo.org> metadata.xml,
+  subunit-0.0.15.ebuild:
+  Add openstack herd, substitute with distutils-r1 to allow install under
+  multiple python 'impls'
 
   14 Nov 2013; Matt Turner <mattst88@gentoo.org> subunit-0.0.15.ebuild:
   Added ~alpha, bug 468270.
