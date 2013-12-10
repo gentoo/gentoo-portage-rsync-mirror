@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.193 2013/11/04 08:55:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.194 2013/12/10 18:48:19 jer Exp $
+
+*geoip-1.6.0-r1 (10 Dec 2013)
+
+  10 Dec 2013; Jeroen Roovers <jer@gentoo.org> -geoip-1.6.0.ebuild,
+  +geoip-1.6.0-r1.ebuild:
+  Install GeoIP.dat properly (bug #493842 by Stefan Talpalaru).
 
   04 Nov 2013; Naohiro Aota <naota@gentoo.org> geoip-1.6.0.ebuild:
   Add ~x86-fbsd. #490062

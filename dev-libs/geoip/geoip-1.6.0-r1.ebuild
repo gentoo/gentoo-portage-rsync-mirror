@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.6.0.ebuild,v 1.5 2013/11/04 08:55:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/geoip-1.6.0-r1.ebuild,v 1.1 2013/12/10 18:48:19 jer Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -35,9 +35,6 @@ RDEPEND="
 S="${WORKDIR}/${PN}-api-c-${PV}"
 
 src_prepare() {
-	mkdir data || die
-	mv "${WORKDIR}"/GeoIP.dat data/ || die
-
 	sed -e 's|yahoo.com|98.139.183.24|g' \
 		-i test/country_test_name.txt test/region_test.txt || die
 
@@ -56,7 +53,7 @@ src_install() {
 	prune_libtool_files
 
 	insinto /usr/share/GeoIP
-	doins "${WORKDIR}/GeoIPASNum.dat"
+	doins "${WORKDIR}"/{GeoIP,GeoIPASNum}.dat
 	use city && newins "${WORKDIR}"/GeoLiteCity.dat GeoIPCity.dat
 
 	if use ipv6; then
