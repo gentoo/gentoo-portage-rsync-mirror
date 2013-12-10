@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.36.0-r1.ebuild,v 1.3 2013/12/08 17:59:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.36.0-r1.ebuild,v 1.4 2013/12/10 21:30:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -28,6 +28,7 @@ RDEPEND="
 	doctool? ( dev-python/mako )
 	virtual/libffi:=
 	!<dev-lang/vala-0.20.0
+	${PYTHON_DEPS}
 "
 # Wants real bison, not virtual/yacc
 DEPEND="${RDEPEND}
