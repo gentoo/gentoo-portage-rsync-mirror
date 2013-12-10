@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/agda-stdlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/ChangeLog,v 1.4 2013/09/13 06:56:46 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/agda-stdlib/ChangeLog,v 1.5 2013/12/10 11:46:28 gienah Exp $
+
+*agda-stdlib-0.7-r1 (10 Dec 2013)
+
+  10 Dec 2013; Mark Wright <gienah@gentoo.org> +agda-stdlib-0.7-r1.ebuild,
+  -agda-stdlib-0.7_pre20121118.ebuild, -agda-stdlib-0.7_pre20130109.ebuild:
+  Thanks to vikraman: The agda-lib-ffi package provides some additional haskell
+  modules which are needed by the agda standard library, such as during
+  compilation using the MAlonzo backend. It is available inside the ffi/
+  directory and needs to be built and installed by the ebuild.
 
 *agda-stdlib-0.7 (13 Sep 2013)
 

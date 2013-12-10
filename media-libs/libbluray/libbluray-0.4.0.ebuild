@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.4.0.ebuild,v 1.1 2013/09/23 20:00:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.4.0.ebuild,v 1.2 2013/12/10 11:40:13 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ inherit autotools java-pkg-opt-2 flag-o-matic eutils
 
 DESCRIPTION="Blu-ray playback libraries"
 HOMEPAGE="http://www.videolan.org/developers/libbluray.html"
-SRC_URI="http://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2"
+SRC_URI="http://ftp.videolan.org/pub/videolan/libbluray/${PV}/${P}.tar.bz2
+	http://git.videolan.org/?p=libbluray.git;a=commitdiff_plain;h=555a917995c14adbbd1b7a8b9b56a7462b483d80 -> ${P}-freetype251.patch"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -39,6 +40,8 @@ DEPEND="
 DOCS=( ChangeLog README.txt )
 
 src_prepare() {
+	epatch "${DISTDIR}"/${P}-freetype251.patch
+
 	if use java ; then
 		export JDK_HOME="$(java-config -g JAVA_HOME)"
 
