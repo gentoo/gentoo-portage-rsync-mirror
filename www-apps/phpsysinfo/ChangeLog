@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.82 2013/06/22 11:02:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.83 2013/12/10 08:07:31 radhermit Exp $
+
+*phpsysinfo-3.1.8 (10 Dec 2013)
+
+  10 Dec 2013; Tim Harder <radhermit@gentoo.org> +phpsysinfo-3.1.8.ebuild:
+  Version bump.
 
 *phpsysinfo-3.1.4 (22 Jun 2013)
 
