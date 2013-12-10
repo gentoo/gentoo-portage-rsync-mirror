@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/bash-support
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bash-support/ChangeLog,v 1.12 2013/11/30 13:10:05 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bash-support/ChangeLog,v 1.14 2013/12/10 07:25:39 radhermit Exp $
+
+  10 Dec 2013; Tim Harder <radhermit@gentoo.org> -bash-support-3.8.ebuild,
+  -bash-support-3.10.ebuild:
+  Remove old.
+
+*bash-support-4.1 (10 Dec 2013)
+
+  10 Dec 2013; Tim Harder <radhermit@gentoo.org> +bash-support-4.1.ebuild:
+  Version bump.
 
   30 Nov 2013; Johannes Huber <johu@gentoo.org> bash-support-3.12.ebuild:
   x86 stable wrt bug #481870

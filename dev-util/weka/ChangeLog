@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/weka
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.47 2012/08/23 05:46:36 xmw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.48 2013/12/10 07:24:56 mr_bones_ Exp $
+
+  10 Dec 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/weka-3.6.0-build.xml.patch, -files/weka-3.6.2-build.xml.patch,
+  -files/weka-3.6.4-build.xml.patch, -weka-3.5.7.ebuild, -weka-3.5.8.ebuild,
+  -weka-3.6.0.ebuild, -weka-3.6.2.ebuild, -weka-3.6.4.ebuild:
+  old
 
   23 Aug 2012; Michael Weber <xmw@gentoo.org> weka-3.6.6-r1.ebuild:
   ppc stable (bug 418965).
