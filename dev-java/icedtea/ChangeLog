@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.111 2013/12/09 22:31:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.112 2013/12/10 02:49:52 patrick Exp $
+
+  10 Dec 2013; Patrick Lauer <patrick@gentoo.org> icedtea-6.1.12.7.ebuild:
+  Whitespace
 
   09 Dec 2013; Vlastimil Babka <caster@gentoo.org> +icedtea-6.1.12.7.ebuild:
   Version bump, security bug #489570.
