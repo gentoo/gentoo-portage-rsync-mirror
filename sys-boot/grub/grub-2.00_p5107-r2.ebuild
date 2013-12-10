@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.5 2013/10/26 14:41:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-2.00_p5107-r2.ebuild,v 1.6 2013/12/09 23:27:48 floppym Exp $
 
 EAPI=5
 
@@ -23,7 +23,9 @@ if [[ ${PV} != 9999 ]]; then
 		S=${WORKDIR}/${P%_*}
 	fi
 	KEYWORDS="amd64 x86"
-	PATCHES=()
+	PATCHES=(
+		"${FILESDIR}/grub-2.00-freetype-2.5.1.patch"
+	)
 else
 	inherit git-r3
 	EGIT_REPO_URI="git://git.sv.gnu.org/grub.git

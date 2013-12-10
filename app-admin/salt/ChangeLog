@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.27 2013/12/03 18:43:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.28 2013/12/09 23:19:32 chutzpah Exp $
+
+  09 Dec 2013; Patrick McLean <chutzpah@gentoo.org> -salt-0.16.0.ebuild,
+  -salt-0.16.2.ebuild, -salt-0.16.3.ebuild, salt-0.16.4.ebuild:
+  Clean out old or unkeyword old versions due to bug #489792
 
   03 Dec 2013; Doug Goldstein <cardoe@gentoo.org> salt-0.16.0.ebuild,
   salt-0.16.2.ebuild, salt-0.16.3.ebuild, salt-0.16.4.ebuild,

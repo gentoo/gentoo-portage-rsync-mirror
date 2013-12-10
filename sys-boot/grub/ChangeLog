@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.294 2013/12/09 22:10:32 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.296 2013/12/09 23:27:48 floppym Exp $
+
+  09 Dec 2013; Mike Gilbert <floppym@gentoo.org>
+  +files/grub-2.00-freetype-2.5.1.patch, grub-2.00_p5107-r2.ebuild:
+  Fix build with freetype-2.5.1, bug 493634 by Thomas Axelsson.
+
+  09 Dec 2013; Mike Gilbert <floppym@gentoo.org> grub-9999-r1.ebuild:
+  Adjust *FLAGS logic and drop custom-cflags use flag.
 
   09 Dec 2013; Mike Gilbert <floppym@gentoo.org> grub-9999-r1.ebuild:
   Re-enable python3.

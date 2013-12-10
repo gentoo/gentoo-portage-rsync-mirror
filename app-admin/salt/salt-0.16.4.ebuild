@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.16.4.ebuild,v 1.2 2013/12/03 18:43:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/salt-0.16.4.ebuild,v 1.3 2013/12/09 23:19:32 chutzpah Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ if [[ ${PV} == 9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
-	KEYWORDS="~x86 ~amd64"
+	KEYWORDS=""
 fi
 
 LICENSE="Apache-2.0"
