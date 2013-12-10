@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.12.ebuild,v 1.1 2013/10/14 09:37:36 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.1.12.ebuild,v 1.2 2013/12/10 09:18:57 nimiux Exp $
 
 EAPI=5
 inherit multilib eutils flag-o-matic pax-utils
@@ -24,7 +24,7 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 RESTRICT="mirror"
 LICENSE="MIT"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="debug doc source +threads +unicode zlib"
 
 CDEPEND=">=dev-lisp/asdf-2.33-r3:="

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/uiop-3.0.2.4.ebuild,v 1.1 2013/10/14 09:33:39 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/uiop-3.0.2.4.ebuild,v 1.2 2013/12/10 09:15:02 nimiux Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://common-lisp.net/project/asdf/archives/asdf-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="~dev-lisp/asdf-${PV}"
