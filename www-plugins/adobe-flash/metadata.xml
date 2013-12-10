@@ -6,8 +6,6 @@
 <email>jer@gentoo.org</email>
 </maintainer>
 <use>
-<!-- =www-plugins/adobe-flash-10.0* has both 32- and 64-bit versions -->
-<!-- www-plugins/adobe-flash-10.3 and later has a KDE KCM thingy -->
 <flag name='kde'>Enables a KCM plugin for configuring flash player preferences</flag>
 </use>
 </pkgmetadata>

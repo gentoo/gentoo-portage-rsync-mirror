@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pbr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.5 2013/11/12 06:06:21 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.6 2013/12/10 12:54:18 idella4 Exp $
+
+*pbr-0.5.23 (10 Dec 2013)
+
+  10 Dec 2013; Ian Delaney <idella4@gentoo.org> +pbr-0.5.23.ebuild,
+  metadata.xml:
+  bump; virtual re-write
 
   12 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> pbr-0.5.21.ebuild:
   adding pypy2_0 to pbr

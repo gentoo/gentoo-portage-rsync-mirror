@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r3.ebuild,v 1.1 2013/07/20 15:58:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.7-r3.ebuild,v 1.2 2013/12/10 12:39:25 polynomial-c Exp $
 
 EAPI=5
 inherit eutils libtool multilib
@@ -63,7 +63,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-preset-free.patch \
 		"${FILESDIR}"/${P}-libav-9.patch \
 		"${FILESDIR}"/${P}-preset-force.patch \
-		"${FILESDIR}"/${P}-ffmpeg2.patch
+		"${FILESDIR}"/${P}-ffmpeg2.patch \
+		"${FILESDIR}"/${P}-freetype251.patch
 
 	elibtoolize
 }
