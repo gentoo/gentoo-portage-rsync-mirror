@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.134 2013/12/06 14:13:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.136 2013/12/10 13:34:51 ago Exp $
+
+  10 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xen-4.3.1-r1.ebuild:
+  Stable for x86, wrt bug #486354
+
+  10 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xen-4.3.1-r1.ebuild:
+  Stable for amd64, wrt bug #486354
 
 *xen-4.3.0-r4 (06 Dec 2013)
 *xen-4.3.1-r1 (06 Dec 2013)
