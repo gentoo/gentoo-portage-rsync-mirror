@@ -1,6 +1,17 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.125 2013/12/05 17:34:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.126 2013/12/10 16:41:01 jlec Exp $
+
+*root-5.34.13-r1 (10 Dec 2013)
+
+  10 Dec 2013; Justin Lecher <jlec@gentoo.org> +root-5.34.13-r1.ebuild,
+  metadata.xml:
+  Merge changes from sci overlay
+
+  10 Dec 2013; Andrew Savchenko <bircoph@gmail.com> -root-5.34.10-r2.ebuild,
+  root-5.34.13.ebuild, -files/root-5.28.00b-unuran.patch:
+  Add ROOTPrimer and Spectrum user guides.
+  Remove old versions.
 
 *root-5.34.13 (05 Dec 2013)
 
