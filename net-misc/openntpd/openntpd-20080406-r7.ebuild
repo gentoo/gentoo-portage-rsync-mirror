@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r6.ebuild,v 1.2 2013/12/05 00:24:15 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-20080406-r7.ebuild,v 1.1 2013/12/10 09:31:31 ottxor Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${MY_P}.orig.tar.gz
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="ssl selinux +syslog"
+IUSE="ssl selinux"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )
@@ -48,6 +48,8 @@ src_prepare() {
 
 	epatch "${WORKDIR}"/debian/patches/*.patch
 	epatch "${FILESDIR}/${P}-pidfile.patch"
+	epatch "${FILESDIR}/${P}-signal.patch"
+	epatch "${FILESDIR}/${P}-dns-timeout.patch"
 	sed -i 's:debian:gentoo:g' ntpd.conf || die
 	eautoreconf # deb patchset touches .ac files and such
 }
@@ -62,13 +64,7 @@ src_configure() {
 src_install() {
 	default
 
-	if use syslog ; then
-		newinitd "${FILESDIR}/${PN}.init.d-${PV}-r6" ntpd
-	else
-		newinitd "${FILESDIR}/${PN}.init.d-${PV}-r4" ntpd
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}/${PN}.logrotate-${PV}-r5" ntpd
-	fi
+	newinitd "${FILESDIR}/${PN}.init.d-${PV}-r6" ntpd
 	newconfd "${FILESDIR}/${PN}.conf.d-${PV}-r6" ntpd
 
 	systemd_newunit "${FILESDIR}/${PN}.service-${PV}-r3" ntpd.service
@@ -91,7 +87,7 @@ pkg_config() {
 pkg_postinst() {
 	pkg_config
 
-	use syslog && [[ -f ${EROOT}var/log/ntpd.log ]] && \
+	[[ -f ${EROOT}var/log/ntpd.log ]] && \
 		ewarn "There is an orphaned logfile '${EROOT}var/log/ntpd.log', please remove it!"
 }
 

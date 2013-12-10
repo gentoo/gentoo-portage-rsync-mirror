@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.5 2013/09/22 10:30:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.6 2013/12/10 09:58:32 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -13,7 +13,8 @@ MY_P=${P/_/}
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="http://www.inkscape.org/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
+	https://launchpadlibrarian.net/157792073/1255830-fix-freetype-includes-backport-0.48.x-v1.diff -> ${P}-freetype251.patch"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -78,7 +79,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-0.48.3.1-desktop.patch \
 		"${FILESDIR}"/${PN}-0.48.4-epython.patch \
 		"${FILESDIR}"/${PN}-0.48.4-fix-member-decl.patch \
-		"${FILESDIR}"/${PN}-0.48.4-automake-1.13.patch
+		"${FILESDIR}"/${PN}-0.48.4-automake-1.13.patch \
+		"${DISTDIR}"/${P}-freetype251.patch
 
 	sed -i \
 		-e "s#@EPYTHON@#${EPYTHON}#" \

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sk1libs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.23 2013/09/05 18:55:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.24 2013/12/10 09:51:02 polynomial-c Exp $
+
+  10 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> sk1libs-0.9.1-r3.ebuild:
+  Fixed compilation with >=media-libs/freetype-2.5.1 (bug #493588).
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> sk1libs-0.9.1-r2.ebuild,
   sk1libs-0.9.1-r3.ebuild:
