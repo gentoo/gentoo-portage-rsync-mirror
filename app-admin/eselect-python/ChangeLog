@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.78 2013/04/13 20:50:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.79 2013/12/10 17:45:14 floppym Exp $
+
+*eselect-python-20131210 (10 Dec 2013)
+
+  10 Dec 2013; Mike Gilbert <floppym@gentoo.org>
+  +eselect-python-20131210.ebuild, eselect-python-99999999.ebuild:
+  Version bump.
 
   13 Apr 2013; Agostino Sarubbo <ago@gentoo.org> eselect-python-20111108.ebuild:
   Stable for s390, wrt bug #462644

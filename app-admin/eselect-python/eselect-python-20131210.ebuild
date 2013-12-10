@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-99999999.ebuild,v 1.10 2013/12/10 17:45:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20131210.ebuild,v 1.1 2013/12/10 17:45:14 floppym Exp $
 
 # Keep the EAPI low here because everything else depends on it.
 # We want to make upgrading simpler.
