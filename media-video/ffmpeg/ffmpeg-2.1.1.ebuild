@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.1.1.ebuild,v 1.1 2013/11/22 06:26:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.1.1.ebuild,v 1.2 2013/12/10 12:28:38 polynomial-c Exp $
 
 EAPI="5"
 
@@ -30,7 +30,8 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 elif [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 else # Release
-	SRC_URI="http://ffmpeg.org/releases/${P/_/-}.tar.bz2"
+	SRC_URI="http://ffmpeg.org/releases/${P/_/-}.tar.bz2
+		http://git.videolan.org/?p=ffmpeg.git;a=commitdiff_plain;h=cea5812fa723c08b89d929eeba73462e05de2973 -> ${PN}-2.1.1-freetype251.patch"
 fi
 FFMPEG_REVISION="${PV#*_p}"
 
@@ -149,6 +150,8 @@ src_prepare() {
 	if [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
+
+	epatch "${DISTDIR}"/${PN}-2.1.1-freetype251.patch
 	epatch_user
 }
 

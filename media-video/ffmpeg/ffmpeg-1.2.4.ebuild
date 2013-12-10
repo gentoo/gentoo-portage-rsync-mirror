@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.2.4.ebuild,v 1.2 2013/10/26 07:36:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.2.4.ebuild,v 1.3 2013/12/10 12:28:38 polynomial-c Exp $
 
 EAPI="4"
 
@@ -131,6 +131,8 @@ src_prepare() {
 	if [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
+
+	epatch "${FILESDIR}"/${PN}-1.2.4-freetype251.patch
 	epatch_user
 }
 
