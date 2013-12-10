@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.140 2013/12/09 10:45:05 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.141 2013/12/10 19:38:08 aidecoe Exp $
+
+  10 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r1.ebuild:
+  Committing on behalf of Alexander Tsoy <alexander@tsoy.me>.
+  Fixes bug #489966.
+
+  "It seems that sys-apps/sysvinit dependency is not mandatory anymore. The
+  only
+  executables from sysvinit that still needed by dracut are: reboot, poweroff,
+  halt. All of them are also provided by sys-apps/systemd-sysv-utils.
+
+  Of course, if sys-apps/sysvinit is not installed and systemd module is not
+  included in initramfs, then shutdown functionality will likely not work."
 
   09 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
   Added Alexander Tsoy as a second maintainer and proxy-maintainers herd.

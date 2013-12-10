@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmouth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.273 2013/12/09 05:44:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.274 2013/12/10 19:48:15 ago Exp $
+
+  10 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kmouth-4.11.2.ebuild:
+  Stable for ppc, wrt bug #484884
 
   09 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kmouth-4.11.2.ebuild:
   Stable for x86, wrt bug #484884

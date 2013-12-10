@@ -1,8 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.1.ebuild,v 1.5 2013/01/09 17:26:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.8.1.ebuild,v 1.6 2013/12/10 19:45:59 hasufell Exp $
 
-EAPI=4
+EAPI=5
+CMAKE_REMOVE_MODULES="yes"
+CMAKE_REMOVE_MODULES_LIST="FindFreetype"
 inherit eutils cmake-utils
 
 MY_PV=${PV//./-}

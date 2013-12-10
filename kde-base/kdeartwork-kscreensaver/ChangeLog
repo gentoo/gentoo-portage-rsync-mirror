@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.294 2013/12/09 05:44:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.295 2013/12/10 19:48:48 ago Exp $
+
+  10 Dec 2013; Agostino Sarubbo <ago@gentoo.org>
+  kdeartwork-kscreensaver-4.11.2.ebuild:
+  Stable for ppc, wrt bug #484884
 
   09 Dec 2013; Agostino Sarubbo <ago@gentoo.org>
   kdeartwork-kscreensaver-4.11.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710.ebuild,v 1.5 2013/12/06 17:09:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.1.0_beta1_p20130710.ebuild,v 1.6 2013/12/10 19:53:41 ago Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit cmake-utils vcs-snapshot
 if [[ ${PV} != 9999* ]]; then
 	COMMIT="780d451afad21a22d2af6bd030ee71311856f038"
 	SRC_URI="https://github.com/FreeRDP/FreeRDP/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~arm ppc ~ppc64 ~x86"
 else
 	inherit git-2
 	SRC_URI=""
