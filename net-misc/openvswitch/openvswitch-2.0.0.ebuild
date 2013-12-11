@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0.ebuild,v 1.4 2013/11/25 19:41:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/openvswitch-2.0.0.ebuild,v 1.5 2013/12/11 03:05:13 prometheanfire Exp $
 
 EAPI=5
 
@@ -53,6 +53,7 @@ src_prepare() {
 	sed -i \
 		-e '/^SUBDIRS/d' \
 		datapath/Makefile.in || die "sed failed"
+	epatch "${FILESDIR}/prevent-traceback.patch"
 }
 src_configure() {
 	set_arch_to_kernel
