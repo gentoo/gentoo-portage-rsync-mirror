@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.470 2013/12/01 12:19:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.471 2013/12/11 14:38:45 polynomial-c Exp $
+
+  11 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.21.ebuild,
+  -seamonkey-2.21-r1.ebuild, -seamonkey-2.22.ebuild, -files/all-gentoo.js,
+  -files/enigmail_mailnews_extensions_genxpi.patch,
+  -files/moz24-drop-Wl-build-id.patch, metadata.xml:
+  Better description for "custom-optimization" USE flag. Removed old versions.
 
   01 Dec 2013; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.22.1.ebuild:
   Stable for x86, wrt bug #489796

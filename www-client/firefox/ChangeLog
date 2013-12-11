@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.291 2013/12/07 19:52:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.292 2013/12/11 14:36:14 polynomial-c Exp $
+
+  11 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
+  Better description for "custom-optimization" USE flag.
 
   07 Dec 2013; Agostino Sarubbo <ago@gentoo.org> firefox-24.1.1.ebuild:
   Stable for arm, wrt bug #489796

@@ -6,7 +6,7 @@
 	<flag name="bindist">Disable official Firefox branding (icons, name) which 
 		are not binary-redistributable according to upstream.</flag>
 	<flag name="custom-optimization">Fine-tune custom compiler
-		optimizations, setting this is not recommended.</flag>
+		optimizations (-Os, -O0, -O1, -O2, -O3)</flag>
 	<flag name="ipc">Use inter-process communication between tabs and plugins.
 		Allows for greater stability in case of plugin crashes</flag>
 	<flag name="minimal"> Prevent sdk and headers from being installed</flag>
