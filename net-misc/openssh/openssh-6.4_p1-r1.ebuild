@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.4_p1-r1.ebuild,v 1.1 2013/11/09 23:04:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-6.4_p1-r1.ebuild,v 1.2 2013/12/11 09:37:15 radhermit Exp $
 
 EAPI="4"
 inherit eutils user flag-o-matic multilib autotools pam systemd versionator
@@ -235,7 +235,7 @@ src_install() {
 		keepdir /var/empty/dev
 	fi
 
-	if use ldap ; then
+	if ! use X509 && [[ -n ${LDAP_PATCH} ]] && use ldap ; then
 		insinto /etc/openldap/schema/
 		newins openssh-lpk_openldap.schema openssh-lpk.schema
 	fi
