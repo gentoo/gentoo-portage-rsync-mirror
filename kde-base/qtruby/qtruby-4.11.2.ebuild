@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-4.11.2.ebuild,v 1.4 2013/12/10 19:48:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/qtruby-4.11.2.ebuild,v 1.5 2013/12/11 20:26:50 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ USE_RUBY="ruby19"
 inherit kde4-base ruby-ng
 
 DESCRIPTION="Qt Ruby bindings"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug phonon qscintilla qwt webkit"
 HOMEPAGE="http://techbase.kde.org/Development/Languages/Ruby"
 
