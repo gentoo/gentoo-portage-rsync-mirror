@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/crypto-cipher-types
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-cipher-types/ChangeLog,v 1.4 2013/11/24 19:39:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-cipher-types/ChangeLog,v 1.5 2013/12/11 05:51:35 gienah Exp $
+
+*crypto-cipher-types-0.0.9 (11 Dec 2013)
+
+  11 Dec 2013; Mark Wright <gienah@gentoo.org>
+  +crypto-cipher-types-0.0.9.ebuild:
+  Bump crypto-cipher-types to 0.0.9
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org>
   crypto-cipher-types-0.0.5.ebuild:

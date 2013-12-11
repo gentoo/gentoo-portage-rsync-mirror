@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gmic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.40 2013/09/21 15:45:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/ChangeLog,v 1.41 2013/12/11 05:35:48 radhermit Exp $
+
+*gmic-1.5.8.0 (11 Dec 2013)
+
+  11 Dec 2013; Tim Harder <radhermit@gentoo.org> +gmic-1.5.8.0.ebuild,
+  +files/gmic-1.5.8.0-makefile.patch:
+  Version bump.
 
   21 Sep 2013; Tim Harder <radhermit@gentoo.org> gmic-1.5.7.1.ebuild:
   Add threads use flag dep to fftw.
