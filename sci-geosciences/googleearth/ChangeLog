@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.55 2013/08/18 22:38:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.56 2013/12/11 15:39:52 hasufell Exp $
+
+  11 Dec 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  update maintainer
 
 *googleearth-7.1.1.1888 (18 Aug 2013)
 
