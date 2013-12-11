@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/yesod-routes
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-routes/ChangeLog,v 1.1 2013/08/26 11:50:12 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/yesod-routes/ChangeLog,v 1.2 2013/12/11 06:57:28 gienah Exp $
+
+*yesod-routes-1.2.0.2 (11 Dec 2013)
+
+  11 Dec 2013; Mark Wright <gienah@gentoo.org> +yesod-routes-1.2.0.2.ebuild:
+  Bump yesod-routes to 1.2.0.2
 
 *yesod-routes-1.2.0 (26 Aug 2013)
 *yesod-routes-1.1.2 (26 Aug 2013)

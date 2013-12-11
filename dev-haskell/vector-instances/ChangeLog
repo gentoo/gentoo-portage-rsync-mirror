@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/vector-instances
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector-instances/ChangeLog,v 1.1 2013/12/11 06:41:31 gienah Exp $
+
+*vector-instances-3.3 (11 Dec 2013)
+
+  11 Dec 2013; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +vector-instances-3.3.ebuild:
+  Add vector-instances-3.3

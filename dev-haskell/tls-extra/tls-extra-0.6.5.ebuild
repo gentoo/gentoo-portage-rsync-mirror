@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/tls-extra-0.6.5.ebuild,v 1.1 2013/09/13 06:37:07 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tls-extra/tls-extra-0.6.5.ebuild,v 1.2 2013/12/11 06:33:05 gienah Exp $
 
 EAPI=5
 
@@ -31,12 +31,12 @@ RDEPEND=">=dev-haskell/certificate-1.3.5:=[profile?] <dev-haskell/certificate-1.
 	>=dev-haskell/tls-1.1.0:=[profile?] <dev-haskell/tls-1.2.0:=[profile?]
 	dev-haskell/vector:=[profile?]
 	>=dev-lang/ghc-6.12.1:=
-	test? ( >=dev-haskell/cprng-aes-0.5.0:=[profile?]
-		dev-haskell/hunit:=[profile?]
-		>=dev-haskell/quickcheck-2:=[profile?] )
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.8.0.2
+	test? ( >=dev-haskell/cprng-aes-0.5.0:=[profile?]
+		dev-haskell/hunit:=[profile?]
+		>=dev-haskell/quickcheck-2:=[profile?] )
 "
 
 src_configure() {
