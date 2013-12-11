@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-windowck-plugin
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-windowck-plugin/ChangeLog,v 1.1 2013/12/11 15:10:41 ssuominen Exp $
+
+*xfce4-windowck-plugin-0.2.4 (11 Dec 2013)
+
+  11 Dec 2013; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-windowck-plugin-0.2.4.ebuild:
+  Initial commit.
+
