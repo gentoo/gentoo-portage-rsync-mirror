@@ -1,13 +1,14 @@
-DEFINED_PHASES=compile install postinst postrm prepare setup
-DEPEND=>=sci-libs/gsl-1.11 >=dev-python/numpy-1.3 >=sci-libs/scipy-0.7 >=dev-lang/python-2.6 doc? ( dev-python/sphinx ) dev-lang/python
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=sci-libs/gsl-1.11 >=dev-python/numpy-1.3[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=sci-libs/scipy-0.7[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] doc? ( dev-python/sphinx[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 DESCRIPTION=High-performance Python library for predictive modeling
-EAPI=4
+EAPI=5
 HOMEPAGE=https://mlpy.fbk.eu/
-IUSE=doc
+IUSE=doc python_targets_python2_6 python_targets_python2_7
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-3
-RDEPEND=>=sci-libs/gsl-1.11 >=dev-python/numpy-1.3 >=sci-libs/scipy-0.7 >=dev-lang/python-2.6 dev-lang/python
+RDEPEND=>=sci-libs/gsl-1.11 >=dev-python/numpy-1.3[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=sci-libs/scipy-0.7[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://sourceforge/mlpy/mlpy-3.5.0.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=18b3d876ff50157ff6a7efff30df882b
+_eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	a82a329b538368791f5a6113c60e557e	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	python-r1	cd956d5a4bac2209a64d0f4851cc115d	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=1a7c9d466e398c51c18729eb76104b4f

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.1.3.ebuild,v 1.4 2013/12/04 13:36:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.2.1.ebuild,v 1.1 2013/12/11 12:48:00 xarthisius Exp $
 
 EAPI=5
 
@@ -21,8 +21,8 @@ RDEPEND="
 	sci-libs/hdf5:=
 	dev-python/numpy[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/cython[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/cython[${PYTHON_USEDEP}]
 	test? ( virtual/python-unittest2[${PYTHON_USEDEP}] )"
 
 python_prepare_all() {
@@ -35,7 +35,7 @@ python_test() {
 }
 
 python_install_all() {
-	DOCS=( README.txt )
+	DOCS=( README.rst ANN.rst )
 	if use examples; then
 		docompress -x /usr/share/doc/${PF}/examples
 		insinto /usr/share/doc/${PF}

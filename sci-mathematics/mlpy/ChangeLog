@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/mlpy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mlpy/ChangeLog,v 1.2 2012/12/06 20:36:31 bicatali Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mlpy/ChangeLog,v 1.3 2013/12/11 12:49:15 jlec Exp $
+
+  11 Dec 2013; Justin Lecher <jlec@gentoo.org> mlpy-3.5.0.ebuild, metadata.xml:
+  Bump to EAPI=5 and distutils-r1.eclass
 
   06 Dec 2012; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
   mlpy-3.5.0.ebuild:
