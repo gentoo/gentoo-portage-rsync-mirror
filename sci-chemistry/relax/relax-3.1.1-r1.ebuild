@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-3.1.1.ebuild,v 1.1 2013/12/11 07:58:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/relax/relax-3.1.1-r1.ebuild,v 1.1 2013/12/11 10:05:58 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 
 WX_GTK_VER="2.9"
 
-inherit eutils python-single-r1 scons-utils toolchain-funcs wxwidgets virtualx
+inherit eutils multiprocessing python-single-r1 scons-utils toolchain-funcs wxwidgets virtualx
 
 DESCRIPTION="Molecular dynamics by NMR data analysis"
 HOMEPAGE="http://www.nmr-relax.com/"
@@ -41,13 +41,25 @@ pkg_setup() {
 	python-single-r1_pkg_setup
 }
 
+fix_png() {
+	pngcrush -q -fix -force ${1} ${1}-fixed &>/dev/null || die
+	mv ${1}-fixed ${1} || die
+	echo -e ".\c"
+}
 src_prepare() {
 	local png
 	rm -rf minfx bmrblib || die
 	epatch \
 		"${FILESDIR}"/${PN}-3.0.1-gentoo.patch
-#		"${FILESDIR}"/${P}-sample-script{,-backport}.patch
 	tc-export CC
+
+	ebegin "Fixing png files"
+	multijob_init
+	for png in $(find -type f -name "*.png"); do
+		multijob_child_init fix_png ${png}
+	done
+	multijob_finish
+	eend
 }
 
 src_compile() {

@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.233 2013/12/09 17:11:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.234 2013/12/11 10:27:22 polynomial-c Exp $
+
+  11 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> git-1.8.1.5.ebuild,
+  git-1.8.1.5-r1.ebuild, git-1.8.2.1.ebuild, git-1.8.3.2-r1.ebuild,
+  git-1.8.4.5.ebuild, git-1.8.5.1.ebuild, git-9999.ebuild:
+  Added t9402-git-cvsserver-refs.sh and t9604-cvsimport-timestamps.sh to the
+  cvs-only tests (bug #492556).
 
   09 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> git-1.8.3.2-r1.ebuild:
   ia64 stable wrt bug #480306

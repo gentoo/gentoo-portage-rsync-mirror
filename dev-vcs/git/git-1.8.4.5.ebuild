@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.4.5.ebuild,v 1.1 2013/12/04 23:07:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.4.5.ebuild,v 1.2 2013/12/11 10:27:22 polynomial-c Exp $
 
 EAPI=5
 
@@ -500,10 +500,12 @@ src_test() {
 	local tests_cvs="t9200-git-cvsexportcommit.sh \
 					t9400-git-cvsserver-server.sh \
 					t9401-git-cvsserver-crlf.sh \
+					t9402-git-cvsserver-refs.sh \
 					t9600-cvsimport.sh \
 					t9601-cvsimport-vendor-branch.sh \
 					t9602-cvsimport-branches-tags.sh \
-					t9603-cvsimport-patchsets.sh"
+					t9603-cvsimport-patchsets.sh \
+					t9604-cvsimport-timestamps.sh"
 	local tests_perl="t3701-add-interactive.sh \
 					t5502-quickfetch.sh \
 					t5512-ls-remote.sh \
