@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cereal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.8 2013/11/24 19:36:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cereal/ChangeLog,v 1.9 2013/12/11 05:15:05 gienah Exp $
+
+*cereal-0.4.0.1 (11 Dec 2013)
+
+  11 Dec 2013; Mark Wright <gienah@gentoo.org> +cereal-0.4.0.1.ebuild:
+  Bump cereal to 0.4.0.1
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> cereal-0.3.5.2.ebuild:
   Stable for x86, wrt bug #488750

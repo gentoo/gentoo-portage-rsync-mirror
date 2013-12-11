@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/wai-logger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-logger/ChangeLog,v 1.1 2013/08/26 11:29:14 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-logger/ChangeLog,v 1.2 2013/12/11 05:17:32 gienah Exp $
+
+*wai-logger-2.0.1 (11 Dec 2013)
+
+  11 Dec 2013; Mark Wright <gienah@gentoo.org> +wai-logger-2.0.1.ebuild:
+  Bump wai-logger to 2.0.1
 
 *wai-logger-0.3.1 (26 Aug 2013)
 
