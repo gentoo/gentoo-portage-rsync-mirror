@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/http-client-conduit
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client-conduit/ChangeLog,v 1.1 2013/12/11 06:06:45 gienah Exp $
+
+*http-client-conduit-0.2.0.0 (11 Dec 2013)
+
+  11 Dec 2013; Mark Wright <gienah@gentoo.org>
+  +http-client-conduit-0.2.0.0.ebuild, +metadata.xml:
+  Add http-client-conduit 0.2.0.0

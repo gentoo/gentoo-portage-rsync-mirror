@@ -1327,6 +1327,7 @@ dev-haskell/shakespeare:test_export - Test export.
 dev-haskell/shakespeare-js:test_coffee - Test coffee.
 dev-haskell/shakespeare-js:test_export - Test export.
 dev-haskell/shakespeare-js:test_roy - Test roy.
+dev-haskell/simple-sendfile:allow-bsd - Allow use of BSD sendfile (disable on GNU/kFreeBSD)
 dev-haskell/skein:big-endian - When manually selecting the endianness, use big-endian (default is little-endian).
 dev-haskell/skein:force-endianness - Use a manually selected endian when compiling (see flag 'big-endian').
 dev-haskell/skein:reference - Use the reference implementation instead of the optimized one.
