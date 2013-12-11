@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.565 2013/11/19 02:30:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.566 2013/12/11 14:28:16 jer Exp $
+
+  11 Dec 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.11.2.ebuild,
+  +files/wireshark-1.11.2-gtk-deprecated-warnings.patch:
+  Possibly fix compile problems with x11-libs/gtk+3.10* (bug #491464).
 
 *wireshark-1.11.2 (19 Nov 2013)
 
