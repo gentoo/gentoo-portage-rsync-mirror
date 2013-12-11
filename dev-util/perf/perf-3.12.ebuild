@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.12.ebuild,v 1.1 2013/11/17 06:44:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/perf-3.12.ebuild,v 1.2 2013/12/11 22:36:19 vapier Exp $
 
 EAPI="5"
 
@@ -125,8 +125,12 @@ src_prepare() {
 
 puse() { usex $1 "" no; }
 perf_make() {
-	local arch=$(tc-arch)
-	[[ "${arch}" == "amd64" ]] && arch="x86_64"
+	# The arch parsing is a bit funky.  The perf tools package is integrated
+	# into the kernel, so it wants an ARCH that looks like the kernel arch,
+	# but it also wants to know about the split value -- i386/x86_64 vs just
+	# x86.  We can get that by telling the func to use an older linux version.
+	# It's kind of a hack, but not that bad ...
+	local arch=$(KV=2.6.23 tc-arch-kernel)
 	emake -j1 V=1 \
 		CC="$(tc-getCC)" AR="$(tc-getAR)" \
 		prefix="/usr" bindir_relative="sbin" \
