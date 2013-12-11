@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffdiaporama
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.17 2013/12/11 17:09:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.18 2013/12/11 21:39:43 tomwij Exp $
+
+  11 Dec 2013; Tom Wijsman <TomWij@gentoo.org> ffdiaporama-2.0.1.ebuild:
+  Leading spaces removed for repoman.
 
 *ffdiaporama-2.0.1 (11 Dec 2013)
 

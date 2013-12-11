@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-2.0.1.ebuild,v 1.1 2013/12/11 17:09:21 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ffdiaporama-2.0.1.ebuild,v 1.2 2013/12/11 21:39:43 tomwij Exp $
 
 EAPI=5
 
@@ -40,8 +40,8 @@ DOCS=( authors.txt )
 S="${WORKDIR}"
 
 src_configure() {
-    eqmake4 ffDiaporama.pro
-    qt4-r2_src_configure
+	eqmake4 ffDiaporama.pro
+	qt4-r2_src_configure
 }
 
 src_install() {

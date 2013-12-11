@@ -1,0 +1,9 @@
+# ChangeLog for dev-haskell/tasty-quickcheck
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tasty-quickcheck/ChangeLog,v 1.1 2013/12/11 21:48:23 gienah Exp $
+
+*tasty-quickcheck-0.3.1 (11 Dec 2013)
+
+  11 Dec 2013; Mark Wright <gienah@gentoo.org> +metadata.xml,
+  +tasty-quickcheck-0.3.1.ebuild:
+  Thanks to TomWij and mrueg for reporting: Add tasty-quickcheck-0.3.1
