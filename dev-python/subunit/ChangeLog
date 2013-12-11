@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/subunit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.34 2013/12/10 04:40:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/ChangeLog,v 1.35 2013/12/11 02:33:29 floppym Exp $
+
+*subunit-0.0.16 (11 Dec 2013)
+*subunit-0.0.15-r1 (11 Dec 2013)
+
+  11 Dec 2013; Mike Gilbert <floppym@gentoo.org> +subunit-0.0.15-r1.ebuild,
+  +subunit-0.0.16.ebuild:
+  Version bump. Switch to a hybrid autotools/distutils install.
 
   10 Dec 2013; Ian Delaney <idella4@gentoo.org> subunit-0.0.15.ebuild:
   reverted to python-r1, for now

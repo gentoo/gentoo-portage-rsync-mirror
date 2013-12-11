@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183-r2.ebuild,v 1.1 2013/11/28 03:28:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spotify/spotify-0.9.4.183-r3.ebuild,v 1.1 2013/12/11 03:01:05 prometheanfire Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils pax-utils unpacker
@@ -57,6 +57,7 @@ RDEPEND="${DEPEND}
 		dev-libs/nss
 		dev-libs/glib:2
 		net-print/cups
+		virtual/udev
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.21 )
 		gnome? ( gnome-extra/gnome-integration-spotify )"
 
@@ -170,6 +171,8 @@ pkg_postinst() {
 	ewarn "If Spotify crashes after an upgrade its cache may be corrupt."
 	ewarn "To remove the cache:"
 	ewarn "rm -rf ~/.cache/spotify"
+	ewarn
+	ewarn "you need to use the ld.bfd linker with openssl"
 }
 
 pkg_postrm() {

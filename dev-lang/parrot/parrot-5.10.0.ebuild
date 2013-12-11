@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-5.10.0.ebuild,v 1.1 2013/12/01 06:46:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-5.10.0.ebuild,v 1.2 2013/12/11 02:50:25 patrick Exp $
 
 EAPI=3
 
@@ -25,7 +25,8 @@ RDEPEND="sys-libs/readline
 	gdbm? ( >=sys-libs/gdbm-1.8.3-r1 )
 	gmp? ( >=dev-libs/gmp-4.1.4 )
 	ssl? ( dev-libs/openssl )
-	pcre? ( dev-libs/libpcre )"
+	pcre? ( dev-libs/libpcre )
+	doc? ( dev-perl/JSON )"
 
 DEPEND="dev-lang/perl[doc?]
 	${RDEPEND}"
