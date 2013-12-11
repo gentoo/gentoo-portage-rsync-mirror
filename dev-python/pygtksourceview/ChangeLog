@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtksourceview
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.56 2013/12/09 17:06:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtksourceview/ChangeLog,v 1.57 2013/12/11 10:37:51 pinkbyte Exp $
+
+  11 Dec 2013; Sergey Popov <pinkbyte@gentoo.org>
+  pygtksourceview-2.10.1-r1.ebuild:
+  Stable on arm, wrt bug #480306
 
   09 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
   pygtksourceview-2.10.1-r1.ebuild:
