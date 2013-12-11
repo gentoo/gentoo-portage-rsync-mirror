@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prerm setup test
+DEPEND=dev-vcs/git dev-haskell/async dev-haskell/bloomfilter >=dev-haskell/cabal-1.8 dev-haskell/dataenc dev-haskell/dlist dev-haskell/edit-distance dev-haskell/extensible-exceptions dev-haskell/hslogger dev-haskell/http dev-haskell/ifelse dev-haskell/json[generic] dev-haskell/missingh dev-haskell/monad-control dev-haskell/monadcatchio-transformers >=dev-haskell/mtl-2 >=dev-haskell/network-2.0 >=dev-haskell/quickcheck-2.1 dev-haskell/random dev-haskell/safesemaphore dev-haskell/sha dev-haskell/text dev-haskell/unix-compat dev-haskell/utf8-string dev-haskell/uuid >=dev-lang/ghc-7.4.1 www-apps/ikiwiki android? ( dev-haskell/data-endian ) assistant? ( >=dev-haskell/stm-2.3 inotify? ( dev-haskell/hinotify ) ) cryptohash? ( >=dev-haskell/cryptohash-0.10.0 ) dbus? ( >=dev-haskell/dbus-0.10.3 ) dns? ( dev-haskell/dns ) feed? ( dev-haskell/feed ) pairing? ( dev-haskell/network-info dev-haskell/network-multicast ) s3? ( dev-haskell/aeson dev-haskell/hs3 webapp? ( !webdav? ( dev-haskell/http-types ) ) ) tdfa? ( dev-haskell/regex-tdfa ) testsuite? ( >=dev-haskell/tasty-0.5.1 >=dev-haskell/tasty-hunit-0.4.1 >=dev-haskell/tasty-quickcheck-0.3.1 ) webapp? ( dev-haskell/blaze-builder dev-haskell/case-insensitive dev-haskell/clientsession dev-haskell/crypto-api dev-haskell/data-default dev-haskell/hamlet dev-haskell/transformers dev-haskell/wai dev-haskell/wai-logger dev-haskell/warp dev-haskell/yesod dev-haskell/yesod-core dev-haskell/yesod-default dev-haskell/yesod-form dev-haskell/yesod-static ) webdav? ( >=dev-haskell/dav-0.3 dev-haskell/http-conduit dev-haskell/xml-conduit ) xmpp? ( >=dev-haskell/gnutls-0.1.4 dev-haskell/network-protocol-xmpp dev-haskell/xml-types ) dev-lang/perl doc? ( www-apps/ikiwiki net-misc/rsync ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=manage files with git, without checking their contents into git
+EAPI=5
+HOMEPAGE=http://git-annex.branchable.com/
+IUSE=android +assistant +cryptohash +dbus +dns doc +feed +inotify +pairing +production +quvi +s3 +tdfa +testsuite +webapp +webdav +xmpp
+KEYWORDS=~amd64 ~x86 ~amd64-linux
+LICENSE=GPL-3
+RDEPEND=dev-vcs/git
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://hackage/packages/archive/git-annex/5.20131130/git-annex-5.20131130.tar.gz
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=54b9b388bbd7b96183da7bec65d892c2

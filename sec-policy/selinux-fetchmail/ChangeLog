@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-fetchmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-fetchmail/ChangeLog,v 1.31 2013/09/26 17:24:38 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-fetchmail/ChangeLog,v 1.32 2013/12/11 13:20:44 swift Exp $
+
+*selinux-fetchmail-2.20130424-r4 (11 Dec 2013)
+
+  11 Dec 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-fetchmail-2.20130424-r4.ebuild:
+  Release of 2.20130424-r4
 
 *selinux-fetchmail-2.20130424-r3 (26 Sep 2013)
 

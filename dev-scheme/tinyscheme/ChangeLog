@@ -1,6 +1,17 @@
 # ChangeLog for dev-scheme/tinyscheme
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/ChangeLog,v 1.13 2013/09/07 15:05:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/tinyscheme/ChangeLog,v 1.14 2013/12/11 13:27:11 pchrist Exp $
+
+*tinyscheme-1.41 (11 Dec 2013)
+
+  11 Dec 2013; Panagiotis Christopoulos <pchrist@gentoo.org>
+  +tinyscheme-1.41.ebuild, +files/tinyscheme-1.41-makefile.patch:
+  Bump to 1.41 contains various fixes for bug #334649, bug #455294, bug
+  #455296, bug #455298, bug #455300 and bug #493694, thanks to Agostino Sarubbo
+  (ago at gentoo dot org) for reporting the QA issues. Special thanks to
+  Michael Mair-Keimberger (iamnr3) who made the patches in bug #455296. Prefix
+  (darwin) keywords dropped cause logic inside the ebuild has changed and the
+  ebuild needs rekeywording.
 
   07 Sep 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Newline.

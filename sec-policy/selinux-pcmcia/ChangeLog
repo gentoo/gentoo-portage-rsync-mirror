@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-pcmcia
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-pcmcia/ChangeLog,v 1.43 2013/09/26 17:24:38 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-pcmcia/ChangeLog,v 1.44 2013/12/11 13:20:57 swift Exp $
+
+*selinux-pcmcia-2.20130424-r4 (11 Dec 2013)
+
+  11 Dec 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pcmcia-2.20130424-r4.ebuild:
+  Release of 2.20130424-r4
 
 *selinux-pcmcia-2.20130424-r3 (26 Sep 2013)
 

@@ -1,4 +1,10 @@
 
+*selinux-pan-2.20130424-r4 (11 Dec 2013)
+
+  11 Dec 2013; Sven Vermeulen <swift@gentoo.org>
+  +selinux-pan-2.20130424-r4.ebuild:
+  Release of 2.20130424-r4
+
 *selinux-pan-2.20130424-r3 (26 Sep 2013)
 
   26 Sep 2013; Sven Vermeulen <swift@gentoo.org>

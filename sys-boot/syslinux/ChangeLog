@@ -1,6 +1,16 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.105 2013/09/23 11:56:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.106 2013/12/11 13:17:57 chithanh Exp $
+
+*syslinux-6.03_pre1 (11 Dec 2013)
+
+  11 Dec 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +syslinux-6.03_pre1.ebuild, -files/syslinux-4.00-nopie.patch,
+  -files/syslinux-4.05-asneeded-linking-order.patch, -syslinux-2.13.ebuild,
+  -syslinux-4.05.ebuild, -syslinux-4.06.ebuild, -syslinux-5.00.ebuild,
+  -syslinux-5.01.ebuild, -syslinux-6.02_pre15.ebuild,
+  -syslinux-6.02_pre16.ebuild:
+  Bump to latest prerelease. Remove some old versions.
 
   23 Sep 2013; Justin Lecher <jlec@gentoo.org> syslinux-4.07.ebuild,
   syslinux-5.00.ebuild, syslinux-5.01.ebuild, syslinux-5.10.ebuild,

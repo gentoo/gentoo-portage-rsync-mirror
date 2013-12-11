@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-4.20130815-r1.ebuild,v 1.1 2013/09/29 05:55:25 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-4.20130815-r1.ebuild,v 1.2 2013/12/11 13:26:21 gienah Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ RESTRICT="test"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="+assistant +dbus +dns doc +feed +inotify +pairing +production +s3 +tdfa +testsuite +webapp +webdav +xmpp"
 
 RDEPEND=">=dev-vcs/git-1.7.7
