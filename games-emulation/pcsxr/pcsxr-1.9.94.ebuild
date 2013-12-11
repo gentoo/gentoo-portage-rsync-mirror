@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsxr/pcsxr-1.9.94.ebuild,v 1.1 2013/12/11 18:31:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsxr/pcsxr-1.9.94.ebuild,v 1.2 2013/12/11 19:07:06 mgorny Exp $
 
 EAPI=5
 
@@ -80,6 +80,8 @@ src_configure() {
 	fi
 
 	local myeconfargs=(
+		--datarootdir="${EPREFIX%/}"/usr/share
+
 		$(use_enable nls)
 		$(use_enable cdio libcdio)
 		$(use_enable opengl)

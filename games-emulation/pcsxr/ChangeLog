@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/pcsxr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsxr/ChangeLog,v 1.1 2013/12/11 18:31:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsxr/ChangeLog,v 1.2 2013/12/11 19:07:06 mgorny Exp $
+
+  11 Dec 2013; Michał Górny <mgorny@gentoo.org> pcsxr-1.9.94.ebuild:
+  Pass missing --datarootdir.
 
 *pcsxr-1.9.94 (11 Dec 2013)
 
