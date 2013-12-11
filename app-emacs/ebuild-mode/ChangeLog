@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ebuild-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.34 2013/12/01 19:13:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.35 2013/12/11 11:31:55 nimiux Exp $
+
+  11 Dec 2013; Chema Alonso <nimiux@gentoo.org> ebuild-mode-1.24.ebuild:
+  Stable for amd64 wrt bug #491912
 
   01 Dec 2013; Markus Meier <maekke@gentoo.org> ebuild-mode-1.24.ebuild:
   arm stable, bug #491912
