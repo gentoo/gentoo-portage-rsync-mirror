@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffdiaporama
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.16 2013/11/30 12:41:26 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.17 2013/12/11 17:09:21 hasufell Exp $
+
+*ffdiaporama-2.0.1 (11 Dec 2013)
+
+  11 Dec 2013; Julian Ospald <hasufell@gentoo.org> +ffdiaporama-2.0.1.ebuild:
+  version bump by Olivier Laurantin
 
   30 Nov 2013; Julian Ospald <hasufell@gentoo.org> -ffdiaporama-1.4-r1.ebuild,
   -ffdiaporama-1.4.ebuild, -files/ffdiaporama-1.4-desktopfile.patch,
