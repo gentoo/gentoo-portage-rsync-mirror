@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.637 2013/12/09 08:44:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.638 2013/12/11 07:15:47 polynomial-c Exp $
+
+  11 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> samba-4.0.12.ebuild,
+  samba-4.0.13.ebuild, samba-4.1.2.ebuild, samba-4.1.3.ebuild:
+  Depend on cups when we build with cups USE flag being enabled. Thanks to Chan
+  Min Wai for reporting this in bug #493900.
 
 *samba-4.1.3 (09 Dec 2013)
 *samba-4.0.13 (09 Dec 2013)

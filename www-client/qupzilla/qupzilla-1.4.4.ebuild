@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.4.4.ebuild,v 1.2 2013/10/29 22:16:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.4.4.ebuild,v 1.3 2013/12/11 07:27:12 zlogene Exp $
 
 EAPI=5
 PLOCALES="ca_ES cs_CZ de_DE el_GR es_ES es_VE fa_IR fr_FR hu_HU id_ID it_IT
@@ -16,7 +16,7 @@ SRC_URI="http://www.qupzilla.com/uploads/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dbus debug kde nonblockdialogs"
 
 DEPEND="

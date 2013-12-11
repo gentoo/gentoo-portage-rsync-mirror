@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.3.ebuild,v 1.1 2013/12/09 08:44:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.3.ebuild,v 1.2 2013/12/11 07:15:47 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -44,6 +44,7 @@ CDEPEND="${PYTHON_DEPS}
 	acl? ( virtual/acl )
 	addns? ( net-dns/bind-tools[gssapi] )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
+	cups? ( net-print/cups )
 	dmapi? ( sys-apps/dmapi )
 	fam? ( virtual/fam )
 	gnutls? ( dev-libs/libgcrypt
