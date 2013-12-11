@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocaml-data-notation
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.14 2013/03/17 15:50:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-data-notation/ChangeLog,v 1.15 2013/12/11 19:33:11 aballier Exp $
+
+*ocaml-data-notation-0.0.11 (11 Dec 2013)
+
+  11 Dec 2013; Alexis Ballier <aballier@gentoo.org>
+  +ocaml-data-notation-0.0.11.ebuild:
+  version bump
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
