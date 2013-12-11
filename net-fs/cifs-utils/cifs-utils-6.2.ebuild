@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-6.2.ebuild,v 1.3 2013/11/15 23:53:27 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-6.2.ebuild,v 1.4 2013/12/11 01:14:55 jmbsvicetto Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="!net-fs/mount-cifs
 	caps? ( !caps-ng? ( sys-libs/libcap ) )
 	caps? ( caps-ng? ( sys-libs/libcap-ng ) )
 	creds? ( sys-apps/keyutils )"
-RDEPEND="${DEPEND}"
+PDEPEND="${DEPEND}"
 
 REQUIRED_USE="acl? ( ads )"
 

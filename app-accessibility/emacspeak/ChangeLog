@@ -1,6 +1,16 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.48 2013/07/09 02:25:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.49 2013/12/11 01:20:32 teiresias Exp $
+
+*emacspeak-39.0 (11 Dec 2013)
+
+  11 Dec 2013; Christopher Brannon <teiresias@gentoo.org>
+  +emacspeak-39.0.ebuild, emacspeak-9999.ebuild:
+  Add ebuild for emacspeak 39.0.
+  Move servers/ out of /usr/share, since it can contain ELF files
+  (closes bug #298012).
+  Remove the /usr/bin/emacspeak script downstream, since it is known to
+  be broken.
 
 *emacspeak-38.0 (09 Jul 2013)
 

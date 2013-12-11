@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.72 2013/12/07 21:13:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.73 2013/12/11 01:14:55 jmbsvicetto Exp $
+
+  11 Dec 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  cifs-utils-6.1-r1.ebuild, cifs-utils-6.2.ebuild:
+  Replace the RDEPEND with a PDEPEND - completely fix bug 489472. Non-maintainer
+  commit acknowledged by Patrick (bonsaikitten).
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> cifs-utils-6.1-r1.ebuild:
   x86 stable, bug #486312

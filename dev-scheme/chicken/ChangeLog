@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/chicken
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.59 2013/07/14 14:18:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/ChangeLog,v 1.60 2013/12/11 01:20:32 creffett Exp $
+
+  11 Dec 2013; Chris Reffett <creffett@gentoo.org> -chicken-3.3.0.ebuild,
+  -chicken-4.6.0.ebuild, -chicken-4.7.3-r1.ebuild, -chicken-4.8.0.3.ebuild:
+  Security cleanup wrt bug 462458
 
   14 Jul 2013; Agostino Sarubbo <ago@gentoo.org> chicken-4.8.0.3-r1.ebuild:
   Stable for alpha, wrt bug #476172
