@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.9.5.ebuild,v 1.1 2013/12/07 09:58:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.9.5.ebuild,v 1.2 2013/12/11 21:28:26 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils pam readme.gentoo systemd
@@ -42,6 +42,7 @@ PDEPEND="gtk? ( x11-misc/lightdm-gtk-greeter )
 	razor? ( razorqt-base/razorqt-lightdm-greeter )"
 
 DOCS=( NEWS )
+RESTRICT="test"
 
 src_prepare() {
 	sed -i -e 's:getgroups:lightdm_&:' tests/src/libsystem.c || die #412369

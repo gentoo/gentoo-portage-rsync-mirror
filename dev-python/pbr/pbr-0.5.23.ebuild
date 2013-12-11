@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/pbr-0.5.23.ebuild,v 1.1 2013/12/10 12:54:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/pbr-0.5.23.ebuild,v 1.2 2013/12/11 21:30:39 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -22,6 +22,9 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/fixtures-0.3.12[${PYTHON_USEDEP}]
 		dev-python/flake8[${PYTHON_USEDEP}]
 		dev-python/subunit[${PYTHON_USEDEP}]
+		dev-python/mimeparse[${PYTHON_USEDEP}]
+		~dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
+		~dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
 		>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 		>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
 		<dev-python/testresources-0.3[${PYTHON_USEDEP}]

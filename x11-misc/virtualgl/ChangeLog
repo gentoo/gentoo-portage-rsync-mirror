@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/virtualgl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.17 2013/08/31 09:14:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/ChangeLog,v 1.18 2013/12/11 21:05:38 pacho Exp $
+
+*virtualgl-2.3.3 (11 Dec 2013)
+
+  11 Dec 2013; Pacho Ramos <pacho@gentoo.org> +virtualgl-2.3.3.ebuild:
+  Version bump and allow old emul set at the same time of native multilib
+  (#489056 by iamnr3)
 
   31 Aug 2013; Agostino Sarubbo <ago@gentoo.org> virtualgl-2.3.2-r3.ebuild:
   Stable for amd64, wrt bug #480128
