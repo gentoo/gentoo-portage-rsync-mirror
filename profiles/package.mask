@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15255 2013/12/11 13:19:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15256 2013/12/12 01:11:17 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,12 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Ian Delaney <idella4@gentoo.org> (11 Dec 2013)
-# the cutdown clone dev-pyhon/python-subunit is not ready,
-# a work in progress which may likely be scrapped
-# pending the state of its source dev-pyhon/subunit
-dev-python/python-subunit
 
 # Michael Sterrett <mr_bones_@gentoo.org> (10 Dec 2013)
 # Dead upstream; requires java-1.5; open bugs:
