@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/gtk-0.12.4-r1.ebuild,v 1.3 2013/12/07 19:29:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk/gtk-0.12.4-r1.ebuild,v 1.4 2013/12/12 05:57:51 gienah Exp $
 
 EAPI=5
 
@@ -21,22 +21,22 @@ SLOT="${GTK_MAJ_VER}/${PV}"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="+gio"
 
-RDEPEND=">=dev-haskell/cairo-0.12.0:${GTK_MAJ_VER}=[profile?]
-		<dev-haskell/cairo-0.13:${GTK_MAJ_VER}=[profile?]
-		>=dev-haskell/gio-0.12.0:${GTK_MAJ_VER}=[profile?]
-		<dev-haskell/gio-0.13:${GTK_MAJ_VER}=[profile?]
-		>=dev-haskell/glib-0.12.0:${GTK_MAJ_VER}=[profile?]
-		<dev-haskell/glib-0.13:${GTK_MAJ_VER}=[profile?]
+RDEPEND=">=dev-haskell/cairo-0.12.0:0=[profile?]
+		<dev-haskell/cairo-0.13:0=[profile?]
+		>=dev-haskell/gio-0.12.0:0=[profile?]
+		<dev-haskell/gio-0.13:0=[profile?]
+		>=dev-haskell/glib-0.12.0:0=[profile?]
+		<dev-haskell/glib-0.13:0=[profile?]
 		dev-haskell/mtl:=[profile?]
-		>=dev-haskell/pango-0.12.0:${GTK_MAJ_VER}=[profile?]
-		<dev-haskell/pango-0.13:${GTK_MAJ_VER}=[profile?]
+		>=dev-haskell/pango-0.12.0:0=[profile?]
+		<dev-haskell/pango-0.13:0=[profile?]
 		>=dev-lang/ghc-6.10.4:=
 		dev-libs/glib:2
 		x11-libs/gtk+:${GTK_MAJ_VER}
-		gio? ( =dev-haskell/gio-0.12*:${GTK_MAJ_VER}[profile?] )"
+		gio? ( =dev-haskell/gio-0.12*:0[profile?] )"
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.8
-		>=dev-haskell/gtk2hs-buildtools-0.12.4:${GTK_MAJ_VER}=
+		>=dev-haskell/gtk2hs-buildtools-0.12.4:0=
 		virtual/pkgconfig"
 
 src_prepare() {
@@ -44,12 +44,12 @@ src_prepare() {
 		-e "s@gtk2hsHookGenerator@gtk2hsHookGenerator${GTK_MAJ_VER}@" \
 		-e "s@gtk2hsC2hs@gtk2hsC2hs${GTK_MAJ_VER}@" \
 		-i "${S}/Gtk2HsSetup.hs" \
-		|| die "Could not change Gtk2HsSetup.hs for GTK+ slot ${GTK_MAJ_VER}"
+		|| die "Could not change Gtk2HsSetup.hs for GTK+ slot 0"
 	sed -e "s@gtk2hsC2hs@gtk2hsC2hs${GTK_MAJ_VER}@" \
 		-e "s@gtk2hsTypeGen@gtk2hsTypeGen${GTK_MAJ_VER}@" \
 		-e "s@gtk2hsHookGenerator@gtk2hsHookGenerator${GTK_MAJ_VER}@" \
 		-i "${S}/${PN}.cabal" \
-		|| die "Could not change ${PN}.cabal for GTK+ slot ${GTK_MAJ_VER}"
+		|| die "Could not change ${PN}.cabal for GTK+ slot 0"
 }
 
 src_configure() {

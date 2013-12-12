@@ -1,6 +1,14 @@
 # ChangeLog for dev-haskell/cairo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.19 2013/12/07 19:33:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cairo/ChangeLog,v 1.20 2013/12/12 05:59:00 gienah Exp $
+
+*cairo-0.12.5.0-r1 (12 Dec 2013)
+
+  12 Dec 2013; Mark Wright <gienah@gentoo.org> +cairo-0.12.5.0-r1.ebuild,
+  cairo-0.12.0.ebuild, cairo-0.12.3.1.ebuild, cairo-0.12.3.ebuild,
+  cairo-0.12.4-r1.ebuild:
+  Bump cairo to cairo-0.12.5.0-r1. Move cairo, glib, gio, gtk2hs-buildtools,
+  pango to slot 0.
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> cairo-0.12.4-r1.ebuild:
   x86 stable, bug #488808

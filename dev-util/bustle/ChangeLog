@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/bustle
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.19 2013/12/07 19:34:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bustle/ChangeLog,v 1.20 2013/12/12 05:55:30 gienah Exp $
+
+  12 Dec 2013; Mark Wright <gienah@gentoo.org> bustle-0.2.3.ebuild,
+  bustle-0.4.0.ebuild, bustle-0.4.2-r1.ebuild, bustle-0.4.2.ebuild:
+  Move cairo, glib, gio, gtk2hs-buildtools, pango to slot 0
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> bustle-0.4.2-r1.ebuild:
   x86 stable, bug #488808
