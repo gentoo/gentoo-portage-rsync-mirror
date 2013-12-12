@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libplasmaclock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.181 2013/12/12 03:37:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.182 2013/12/12 09:25:15 patrick Exp $
+
+  12 Dec 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag from metadata.xml
 
   12 Dec 2013; Agostino Sarubbo <ago@gentoo.org> -libplasmaclock-4.10.5.ebuild:
   Remove old
