@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20131130.ebuild,v 1.1 2013/12/11 13:26:21 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20131130.ebuild,v 1.2 2013/12/12 02:26:47 gienah Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="android +assistant +cryptohash +dbus +dns doc +feed +inotify +pairing +production +quvi +s3 +tdfa +testsuite +webapp +webdav +xmpp"
+
+# hackport-args: --extra-dep='doc? ( www-apps/ikiwiki )'
 
 RDEPEND="dev-vcs/git
 "
@@ -47,13 +49,13 @@ DEPEND="${RDEPEND}
 	dev-haskell/utf8-string
 	dev-haskell/uuid
 	>=dev-lang/ghc-7.4.1
-	www-apps/ikiwiki
 	android? ( dev-haskell/data-endian )
 	assistant? ( >=dev-haskell/stm-2.3
 			inotify? ( dev-haskell/hinotify ) )
 	cryptohash? ( >=dev-haskell/cryptohash-0.10.0 )
 	dbus? ( >=dev-haskell/dbus-0.10.3 )
 	dns? ( dev-haskell/dns )
+	doc? ( www-apps/ikiwiki )
 	feed? ( dev-haskell/feed )
 	pairing? ( dev-haskell/network-info
 			dev-haskell/network-multicast )
@@ -128,6 +130,7 @@ src_install() {
 	haskell-cabal_src_install
 	dosym git-annex /usr/bin/git-annex-shell # standard make install does more, than needed
 
+	# install-mans wants ikiwiki. It returns 0 and builds the man pages without ikiwiki.
 	emake install-mans DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
 	use doc && emake install-docs DESTDIR="${D}" PREFIX="${EPREFIX}/usr"
 	mv "${ED}"/usr/share/doc/{${PN},${PF}}
