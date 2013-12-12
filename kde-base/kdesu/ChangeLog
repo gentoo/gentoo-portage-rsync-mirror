@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.291 2013/12/11 20:26:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.292 2013/12/12 03:36:59 ago Exp $
+
+  12 Dec 2013; Agostino Sarubbo <ago@gentoo.org> -kdesu-4.10.5.ebuild:
+  Remove old
 
   11 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kdesu-4.11.2.ebuild:
   Stable for ppc64, wrt bug #484884

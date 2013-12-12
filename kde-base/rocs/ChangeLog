@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.141 2013/12/11 20:12:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.142 2013/12/12 03:37:34 ago Exp $
+
+  12 Dec 2013; Agostino Sarubbo <ago@gentoo.org> -rocs-4.10.5.ebuild:
+  Remove old
 
   11 Dec 2013; Agostino Sarubbo <ago@gentoo.org> rocs-4.11.2.ebuild:
   Stable for ppc, wrt bug #484884

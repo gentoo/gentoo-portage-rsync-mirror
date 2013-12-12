@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-strigi-analyzer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-strigi-analyzer/ChangeLog,v 1.168 2013/10/10 05:26:52 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-strigi-analyzer/ChangeLog,v 1.169 2013/12/12 03:36:58 ago Exp $
+
+  12 Dec 2013; Agostino Sarubbo <ago@gentoo.org>
+  -kdepim-strigi-analyzer-4.10.5.ebuild:
+  Remove old
 
 *kdepim-strigi-analyzer-4.4.11.1 (10 Oct 2013)
 
