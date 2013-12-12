@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.258 2013/12/11 14:34:26 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.259 2013/12/12 14:52:33 anarchy Exp $
+
+*thunderbird-24.2.0 (12 Dec 2013)
+
+  12 Dec 2013; Jory A. Pratt <anarchy@gentoo.org> +thunderbird-24.2.0.ebuild:
+  Security bump bug #493850, amd64 stable
 
   11 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
   Better description for "custom-optimization" USE flag.

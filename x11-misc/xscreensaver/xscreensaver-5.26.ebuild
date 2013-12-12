@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.23.ebuild,v 1.1 2013/11/23 16:59:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.26.ebuild,v 1.1 2013/12/12 14:42:36 jer Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib pam
@@ -71,7 +71,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-5.21-gentoo.patch \
 		"${FILESDIR}"/${PN}-5.05-interix.patch \
 		"${FILESDIR}"/${PN}-5.20-blurb-hndl-test-passwd.patch \
-		"${FILESDIR}"/${PN}-5.20-conf264.patch \
 		"${FILESDIR}"/${PN}-5.20-test-passwd-segv-tty.patch \
 		"${FILESDIR}"/${PN}-5.20-tests-miscfix.patch
 
