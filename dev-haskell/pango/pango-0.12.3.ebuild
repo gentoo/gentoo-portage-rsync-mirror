@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.3.ebuild,v 1.7 2013/04/03 05:30:39 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/pango-0.12.3.ebuild,v 1.8 2013/12/12 06:06:19 gienah Exp $
 
 EAPI=4
 
@@ -13,15 +13,15 @@ HOMEPAGE="http://projects.haskell.org/gtk2hs/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-SLOT="2"
+SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="=dev-haskell/cairo-0.12*:2[profile?]
-		=dev-haskell/glib-0.12*:2[profile?]
+RDEPEND="=dev-haskell/cairo-0.12*:0[profile?]
+		=dev-haskell/glib-0.12*:0[profile?]
 		dev-haskell/mtl[profile?]
 		>=dev-lang/ghc-6.10.1
 		x11-libs/cairo
 		x11-libs/pango"
 DEPEND="${RDEPEND}
-		>=dev-haskell/gtk2hs-buildtools-0.12.3-r3:2"
+		>=dev-haskell/gtk2hs-buildtools-0.12.3-r3:0"

@@ -1,6 +1,15 @@
 # ChangeLog for dev-haskell/gtk2hs-buildtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.21 2013/12/07 19:28:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/ChangeLog,v 1.22 2013/12/12 06:05:04 gienah Exp $
+
+*gtk2hs-buildtools-0.12.5.1-r1 (12 Dec 2013)
+
+  12 Dec 2013; Mark Wright <gienah@gentoo.org>
+  +gtk2hs-buildtools-0.12.5.1-r1.ebuild, gtk2hs-buildtools-0.12.0.ebuild,
+  gtk2hs-buildtools-0.12.3-r3.ebuild, gtk2hs-buildtools-0.12.3.1.ebuild,
+  gtk2hs-buildtools-0.12.4-r2.ebuild, metadata.xml:
+  Bump gtk2hs-buildtools to gtk2hs-buildtools-0.12.5.1-r1. Move cairo, glib,
+  gio, gtk2hs-buildtools, pango to slot 0.
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   gtk2hs-buildtools-0.12.4-r2.ebuild:

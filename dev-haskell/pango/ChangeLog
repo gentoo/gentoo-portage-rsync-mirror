@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/pango
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/ChangeLog,v 1.18 2013/12/07 19:31:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pango/ChangeLog,v 1.19 2013/12/12 06:06:19 gienah Exp $
+
+*pango-0.12.5.0-r1 (12 Dec 2013)
+
+  12 Dec 2013; Mark Wright <gienah@gentoo.org> +pango-0.12.5.0-r1.ebuild,
+  pango-0.12.0.ebuild, pango-0.12.3.ebuild, pango-0.12.4-r1.ebuild:
+  Bump pango to pango-0.12.5.0-r1. Move cairo, glib, gio, gtk2hs-buildtools,
+  pango to slot 0.
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> pango-0.12.4-r1.ebuild:
   x86 stable, bug #488808

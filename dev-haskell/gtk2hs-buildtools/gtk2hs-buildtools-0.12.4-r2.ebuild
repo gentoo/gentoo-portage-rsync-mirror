@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/gtk2hs-buildtools-0.12.4-r2.ebuild,v 1.3 2013/12/07 19:28:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs-buildtools/gtk2hs-buildtools-0.12.4-r2.ebuild,v 1.4 2013/12/12 06:05:04 gienah Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://projects.haskell.org/gtk2hs/"
 SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="${GTK_MAJ_VER}/${PV}"
+SLOT="0/${PV}"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
@@ -37,5 +37,5 @@ src_prepare() {
 		-e "s@Executable gtk2hsHookGenerator@Executable gtk2hsHookGenerator${GTK_MAJ_VER}@" \
 		-e "s@Executable gtk2hsC2hs@Executable gtk2hsC2hs${GTK_MAJ_VER}@" \
 		-i "${S}/${PN}.cabal" \
-		|| die "Could not change ${PN}.cabal for GTK+ slot ${GTK_MAJ_VER}"
+		|| die "Could not change ${PN}.cabal for GTK+ slot 0"
 }
