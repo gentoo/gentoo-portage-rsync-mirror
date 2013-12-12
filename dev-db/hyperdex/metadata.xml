@@ -5,8 +5,5 @@
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
 	</maintainer>
-<use>
-  <flag name='trace-player'>Build a primitive trace-replay tool</flag>
-</use>
 </pkgmetadata>
 
