@@ -1,6 +1,16 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.49 2013/12/11 01:20:32 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.50 2013/12/12 17:45:37 teiresias Exp $
+
+*emacspeak-39.0-r1 (12 Dec 2013)
+
+  12 Dec 2013; Christopher Brannon <teiresias@gentoo.org>
+  -emacspeak-39.0.ebuild, +emacspeak-39.0-r1.ebuild, emacspeak-9999.ebuild:
+  Fix replacing of directory with symlink.
+
+  Upgrading to 39.0 was broken unless you forced it.
+  Revbumping to insure that emacspeak will be installed properly
+  for everyone.
 
 *emacspeak-39.0 (11 Dec 2013)
 
