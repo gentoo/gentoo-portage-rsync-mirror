@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1-r1.ebuild,v 1.3 2013/12/08 18:41:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-1.8.8.1-r1.ebuild,v 1.4 2013/12/12 07:38:27 jlec Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -205,9 +205,9 @@ src_install() {
 		-i "${ED}usr/bin/cinnamon-"{launcher,menu-editor,settings} \
 		-i "${ED}usr/$(get_libdir)/cinnamon-settings/cinnamon-settings.py" || die
 
-	insinto /usr/share/applications
-	doins "${FILESDIR}/cinnamon-screensaver.desktop"
-	doins "${FILESDIR}/cinnamon2d-screensaver.desktop"
+	domenu\
+		"${FILESDIR}/cinnamon-screensaver.desktop" \
+		"${FILESDIR}/cinnamon2d-screensaver.desktop"
 
 	# Required for gnome-shell on hardened/PaX, bug #398941
 	pax-mark mr "${ED}usr/bin/cinnamon"

@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.156 2013/10/27 19:10:53 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.157 2013/12/12 07:40:44 jlec Exp $
+
+  12 Dec 2013; Justin Lecher <jlec@gentoo.org> awesome-3.4.15.ebuild,
+  awesome-3.5.1.ebuild, awesome-3.5.2.ebuild, awesome-3.5.2-r1.ebuild,
+  metadata.xml:
+  Use domenu from eutils.eclass
 
 *awesome-3.5.2-r1 (27 Oct 2013)
 

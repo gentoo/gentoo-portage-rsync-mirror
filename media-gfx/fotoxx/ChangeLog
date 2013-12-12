@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fotoxx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.55 2013/11/12 15:33:42 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/ChangeLog,v 1.56 2013/12/12 07:38:18 jlec Exp $
+
+  12 Dec 2013; Justin Lecher <jlec@gentoo.org> fotoxx-13.01.ebuild,
+  fotoxx-13.09.2.ebuild, fotoxx-13.11.1.ebuild, metadata.xml:
+  Use newmenu from eutils.eclass
 
 *fotoxx-13.11.1 (12 Nov 2013)
 

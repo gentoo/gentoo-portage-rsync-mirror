@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.5.1.ebuild,v 1.1 2013/04/01 14:49:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.5.1.ebuild,v 1.2 2013/12/12 07:40:44 jlec Exp $
 
 EAPI="5"
 CMAKE_MIN_VERSION="2.8"
@@ -95,8 +95,7 @@ src_install() {
 		insinto /usr/share/gnome-session/sessions
 		doins "${FILESDIR}/${PN}-gnome.session" || die
 		# Application launcher
-		insinto /usr/share/applications
-		doins "${FILESDIR}/${PN}-gnome.desktop" || die
+		domenu "${FILESDIR}/${PN}-gnome.desktop" || die
 		# X Session
 		insinto /usr/share/xsessions/
 		doins "${FILESDIR}/${PN}-gnome-xsession.desktop" || die

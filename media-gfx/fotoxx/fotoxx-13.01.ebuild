@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-13.01.ebuild,v 1.3 2013/02/17 17:40:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-13.01.ebuild,v 1.4 2013/12/12 07:38:18 jlec Exp $
+
 EAPI=4
+
 inherit eutils toolchain-funcs fdo-mime
 
-DESCRIPTION="Program for improving image files made with a digital camera."
+DESCRIPTION="Program for improving image files made with a digital camera"
 HOMEPAGE="http://www.kornelix.com/fotoxx.html"
 SRC_URI="http://www.kornelix.com/uploads/1/3/0/3/13035936/${P}.tar.gz"
 
@@ -13,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="x11-libs/gtk+:3
+DEPEND="
+	x11-libs/gtk+:3
 	media-libs/libpng
 	media-libs/tiff"
 RDEPEND="${DEPEND}
@@ -35,8 +38,7 @@ src_install() {
 	# For the Help menu items to work, *.html must be in /usr/share/doc/${PF},
 	# and README, changelog, translations, edit-menus, KB-shortcuts must not be compressed
 	emake DESTDIR="${D}" install
-	insinto /usr/share/applications
-	newins desktop ${PN}.desktop
+	newmenu desktop ${PN}.desktop
 	rm -f "${D}"/usr/share/doc/${PF}/*.man
 	docompress -x /usr/share/doc
 }

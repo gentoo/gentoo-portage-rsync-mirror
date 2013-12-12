@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.1 2013/09/06 18:16:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/novell-groupwise-client/novell-groupwise-client-8.0.2.96933.ebuild,v 1.2 2013/12/12 07:35:23 jlec Exp $
 
 RESTRICT="binchecks fetch mirror strip"
 
@@ -56,8 +56,7 @@ src_install() {
 		fi
 	fi
 
-	insinto /usr/share/applications
-	doins "${WORKDIR}"/${PN}-${MY_PV}/opt/novell/groupwise/client/gwclient.desktop
+	domenu "${WORKDIR}"/${PN}-${MY_PV}/opt/novell/groupwise/client/gwclient.desktop
 
 	mv "${WORKDIR}"/${PN}-${MY_PV}/opt "${D}"/ || die "mv opt"
 

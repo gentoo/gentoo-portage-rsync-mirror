@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>grozin@gentoo.org</email>
-		<name>Andrey Grozin</name>
-	</maintainer>
-	<longdescription lang="en">
+  <maintainer>
+    <email>grozin@gentoo.org</email>
+    <name>Andrey Grozin</name>
+  </maintainer>
+  <longdescription lang="en">
 	  Navigate a large image collection using a thumbnail browser.
 	  Import camera RAW files and edit with 16-bit color.
 	  Save edited images as TIFF-8/16, PNG or JPEG with adjustable compression.
