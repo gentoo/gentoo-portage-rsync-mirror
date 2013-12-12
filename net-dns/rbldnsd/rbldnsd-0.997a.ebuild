@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.997a.ebuild,v 1.1 2013/12/12 03:00:03 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.997a.ebuild,v 1.2 2013/12/12 14:12:35 mjo Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -15,6 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86 ~x86-fbsd"
 IUSE="ipv6 test zlib"
+
+REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}

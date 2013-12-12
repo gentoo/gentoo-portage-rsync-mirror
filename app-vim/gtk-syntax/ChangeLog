@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/gtk-syntax
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.68 2013/12/08 13:41:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gtk-syntax/ChangeLog,v 1.69 2013/12/12 14:09:48 nimiux Exp $
+
+  12 Dec 2013; Chema Alonso <nimiux@gentoo.org> gtk-syntax-20130716.ebuild:
+  Stable for amd64 wrt bug #492350
 
   08 Dec 2013; Johannes Huber <johu@gentoo.org> gtk-syntax-20130716.ebuild:
   x86 stable, bug #492350
