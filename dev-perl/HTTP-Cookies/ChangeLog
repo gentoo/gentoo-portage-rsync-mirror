@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Cookies
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cookies/ChangeLog,v 1.21 2013/09/12 15:24:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cookies/ChangeLog,v 1.22 2013/12/12 15:28:07 jer Exp $
+
+  12 Dec 2013; Jeroen Roovers <jer@gentoo.org> HTTP-Cookies-6.0.1-r1.ebuild:
+  Stable for HPPA (bug #492168).
 
 *HTTP-Cookies-6.0.1-r1 (12 Sep 2013)
 

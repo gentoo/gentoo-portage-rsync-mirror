@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/keyring
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/keyring/ChangeLog,v 1.10 2013/10/23 05:22:25 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/keyring/ChangeLog,v 1.11 2013/12/12 15:22:02 idella4 Exp $
+
+*keyring-1.6.1 (12 Dec 2013)
+
+  12 Dec 2013; Ian Delaney <idella4@gentoo.org> +keyring-1.6.1.ebuild,
+  metadata.xml:
+  switch herd, bump; virtual re-write, req'd dep of python-keystoneclient
 
 *keyring-3.1 (23 Oct 2013)
 
