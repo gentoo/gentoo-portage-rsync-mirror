@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r2.ebuild,v 1.2 2013/10/30 19:22:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.12.1-r2.ebuild,v 1.3 2013/12/12 12:57:30 jlec Exp $
 
 EAPI=5
 
@@ -13,9 +13,11 @@ MY_P="${P/wxpython-/wxPython-src-}"
 
 DESCRIPTION="A blending of the wxWindows C++ class library with Python"
 HOMEPAGE="http://www.wxpython.org/"
-SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2
-	doc? ( mirror://sourceforge/wxpython/wxPython-docs-${PV}.tar.bz2
-		   mirror://sourceforge/wxpython/wxPython-newdocs-2.8.9.2.tar.bz2 )
+SRC_URI="
+	mirror://sourceforge/wxpython/${MY_P}.tar.bz2
+	doc? (
+		mirror://sourceforge/wxpython/wxPython-docs-${PV}.tar.bz2
+		mirror://sourceforge/wxpython/wxPython-newdocs-2.8.9.2.tar.bz2 )
 	examples? ( mirror://sourceforge/wxpython/wxPython-demo-${PV}.tar.bz2 )"
 
 LICENSE="wxWinLL-3"
@@ -143,6 +145,7 @@ python_install_all() {
 
 		docompress -x /usr/share/doc/${PF}/{demo,samples}
 	fi
+	distutils-r1_python_install_all
 }
 
 pkg_postinst() {
@@ -160,23 +163,23 @@ pkg_postinst() {
 	elog "2.6 or 2.8 with your apps:"
 	elog "http://wiki.wxpython.org/index.cgi/MultiVersionInstalls"
 	if use doc; then
-		elog
+		echo
 		elog "To access the general wxWidgets documentation, run"
 		elog "/usr/share/doc/${PF}/docs/viewdocs.py"
-		elog
+		echo
 		elog "wxPython documentation is available by pointing a browser"
 		elog "at /usr/share/doc/${PF}/docs/api/index.html"
 	fi
 	if use examples; then
-		elog
+		echo
 		elog "The demo.py app which contains hundreds of demo modules"
 		elog "with documentation and source code has been installed at"
 		elog "/usr/share/doc/${PF}/demo/demo.py"
-		elog
+		echo
 		elog "Many more example apps and modules can be found in"
 		elog "/usr/share/doc/${PF}/samples/"
 	fi
-	elog
+	echo
 	elog "Editra is not packaged with wxpython in Gentoo."
 	elog "You can find it in the tree as app-editors/editra"
 }

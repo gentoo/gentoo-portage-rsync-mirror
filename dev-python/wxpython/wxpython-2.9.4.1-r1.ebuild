@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.4.1-r1.ebuild,v 1.7 2013/10/30 19:22:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.9.4.1-r1.ebuild,v 1.8 2013/12/12 12:57:30 jlec Exp $
 
 EAPI=5
 
@@ -133,6 +133,7 @@ python_install_all() {
 
 		docompress -x /usr/share/doc/${PF}/{demo,samples}
 	fi
+	distutils-r1_python_install_all
 }
 
 pkg_postinst() {
@@ -150,11 +151,11 @@ pkg_postinst() {
 	elog "2.8 or 2.9 with your apps:"
 	elog "http://wiki.wxpython.org/index.cgi/MultiVersionInstalls"
 	if use examples; then
-		elog
+		echo
 		elog "The demo.py app which contains demo modules with"
 		elog "documentation and source code has been installed at"
 		elog "/usr/share/doc/${PF}/demo/demo.py"
-		elog
+		echo
 		elog "More example apps and modules can be found in"
 		elog "/usr/share/doc/${PF}/samples/"
 	fi

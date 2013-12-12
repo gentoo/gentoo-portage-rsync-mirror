@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.193 2013/10/30 19:22:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.194 2013/12/12 12:57:30 jlec Exp $
+
+  12 Dec 2013; Justin Lecher <jlec@gentoo.org> wxpython-2.8.12.1.ebuild,
+  wxpython-2.8.12.1-r1.ebuild, wxpython-2.8.12.1-r2.ebuild,
+  wxpython-2.9.4.1-r1.ebuild, wxpython-2.9.4.1-r2.ebuild, metadata.xml:
+  Call distutils-r1_python_install_all; don't use elog for empty lines
 
   30 Oct 2013; Michał Górny <mgorny@gentoo.org> wxpython-2.8.12.1-r1.ebuild,
   wxpython-2.8.12.1-r2.ebuild, wxpython-2.9.4.1-r1.ebuild,
