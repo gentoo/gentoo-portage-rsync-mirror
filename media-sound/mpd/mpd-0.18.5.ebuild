@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.3.ebuild,v 1.2 2013/11/17 09:47:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.18.5.ebuild,v 1.1 2013/12/13 20:15:04 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib readme.gentoo systemd user
