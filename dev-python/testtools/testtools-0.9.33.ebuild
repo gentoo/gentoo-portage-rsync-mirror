@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.32.ebuild,v 1.2 2013/12/13 05:59:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/testtools-0.9.33.ebuild,v 1.1 2013/12/13 05:59:39 idella4 Exp $
 
 EAPI=5
 
@@ -22,7 +22,9 @@ IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
 #not keyworded
-#		test? ( dev-python/mimeparse[${PYTHON_USEDEP}] ) "
+#RDEPEND="dev-python/mimeparse[${PYTHON_USEDEP}] 
+#		dev-python/extras[${PYTHON_USEDEP}] )"
+# Listed under install_requires=[ in setup.py
 RDEPEND=""
 
 python_prepare_all() {
@@ -35,7 +37,7 @@ python_prepare_all() {
 
 python_test() {
 	# XXX: tests are non-fatal currently...
-	# https://bugs.launchpad.net/testtools/+bug/1132542
+	# https://bugs.launchpad.net/testtools/+bug/1132542, STILL
 	esetup.py test
 }
 
