@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.11 2013/11/17 15:48:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.12 2013/12/13 19:41:52 tomwij Exp $
 
 EAPI="5"
 
@@ -32,10 +32,10 @@ else
 fi
 
 LICENSE="LGPL-2.1 GPL-2"
-SLOT="0/core7.0.0-vlc5.4.0"
+SLOT="0/5-7" # vlc - vlccore
 
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 -sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="~amd64 ~arm ~ppc -sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 else
 	KEYWORDS=""
 fi
@@ -52,7 +52,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
-	vlm	vorbis wma-fixed +X x264 +xcb xml xv zvbi"
+	vlm vorbis wma-fixed +X x264 +xcb xml xv zvbi"
 
 RDEPEND="
 		!<media-video/ffmpeg-1.2:0
@@ -238,6 +238,9 @@ src_prepare() {
 
 	# Fix up broken audio; first is a fixed reversed bisected commit, latter two are backported.
 	epatch "${FILESDIR}"/${PN}-2.1.0-TomWij-bisected-PA-broken-underflow.patch
+
+	# Disable avcodec checks when avcodec is not used.
+	sed -i 's/^#if LIBAVCODEC_VERSION_CHECK(.*)$/#if 0/' modules/codec/avcodec/fourcc.c || die
 
 	eautoreconf
 
