@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/gemoji
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gemoji/ChangeLog,v 1.1 2013/12/13 05:08:50 mrueg Exp $
+
+*gemoji-1.5.0 (13 Dec 2013)
+
+  13 Dec 2013; Manuel Rüger <mrueg@gentoo.org> +gemoji-1.5.0.ebuild,
+  +metadata.xml:
+  Initial ebuild.
