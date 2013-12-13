@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/seed-fu
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/seed-fu/ChangeLog,v 1.1 2013/12/13 11:15:08 mrueg Exp $
+
+*seed-fu-2.2.0 (13 Dec 2013)
+
+  13 Dec 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +seed-fu-2.2.0.ebuild:
+  Import from dev-zero's overlay. Added small changes.
