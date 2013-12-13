@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2-r2.ebuild,v 1.1 2013/12/13 16:53:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2-r2.ebuild,v 1.2 2013/12/13 17:31:29 prometheanfire Exp $
 
 EAPI=5
 
@@ -80,6 +80,11 @@ PATCHES=(
 	"${FILESDIR}/cve-2013-6391_2013.2.patch"
 )
 
+pkg_setup() {
+	enewgroup keystone
+	enewuser keystone -1 -1 /var/lib/keystone keystone
+}
+
 python_prepare_all() {
 	mkdir ${PN}/tests/tmp || die
 	cp etc/keystone-paste.ini ${PN}/tests/tmp/ || die
@@ -104,4 +109,26 @@ python_install() {
 	doins etc/keystone.conf.sample etc/logging.conf.sample
 	doins etc/default_catalog.templates etc/policy.json
 	doins etc/policy.v3cloudsample.json etc/keystone-paste.ini
+
+	fowners keystone:keystone /var/run/keystone /var/log/keystone /etc/keystone
+}
+
+pkg_postinst() {
+	elog "You might want to run:"
+	elog "emerge --config =${CATEGORY}/${PF}"
+	elog "if this is a new install."
+	elog "If you have not already configured your openssl installation"
+	elog "please do it by modifying /etc/ssl/openssl.cnf"
+	elog "BEFORE issuing the configuration command."
+	elog "Otherwise default values will be used."
+}
+
+pkg_config() {
+	if [ ! -d "${ROOT}"/etc/keystone/ssl ] ; then
+		einfo "Press ENTER to configure the keystone PKI, or Control-C to abort now..."
+		read
+		"${ROOT}"/usr/bin/keystone-manage pki_setup --keystone-user keystone --keystone-group keystone
+	else
+		einfo "keystone PKI certificates directory already present, skipping configuration"
+	fi
 }

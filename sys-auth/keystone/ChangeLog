@@ -1,6 +1,17 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.49 2013/12/13 16:53:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.50 2013/12/13 17:31:29 prometheanfire Exp $
+
+  13 Dec 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +files/keystone.initd.havana, -files/2012.2.4-upstream-1181157.patch,
+  -files/keystone-cve-2013-4294-grizzly.patch,
+  -files/keystone-folsom-4-CVE-2013-1977.patch,
+  -files/keystone-folsom-4-CVE-2013-2030.patch,
+  -files/keystone-folsom-4-CVE-2013-2059.patch,
+  -files/keystone-folsom-4-CVE-2013-2104.patch,
+  -files/keystone-folsom-4-CVE-2013-2157.patch, -keystone-2013.2-r1.ebuild,
+  keystone-2013.2-r2.ebuild, keystone-2013.2.9999.ebuild:
+  fixes for bug 494144
 
 *keystone-2013.2-r2 (13 Dec 2013)
 
