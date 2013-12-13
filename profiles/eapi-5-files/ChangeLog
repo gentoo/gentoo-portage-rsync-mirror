@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo eapi-5-files profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.31 2013/12/09 11:15:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.32 2013/12/12 23:37:16 dilfridge Exp $
+
+  12 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  package.use.stable.mask:
+  We only need to mask kde on lo-4.1.3.2 exactly, bug is fixed in later
+  versions
 
   09 Dec 2013; <idella4@gentoo.org> 
   package.use.stable.mask:

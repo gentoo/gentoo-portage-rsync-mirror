@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.124 2013/11/04 21:07:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.125 2013/12/12 23:41:53 dilfridge Exp $
+
+*libreoffice-bin-4.1.3.2-r2 (12 Dec 2013)
+
+  12 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-bin-4.1.3.2-r2.ebuild:
+  Update for newer harfbuzz, including the kde crash fixes from source
+  4.1.3.2-r2
 
   04 Nov 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-bin-4.1.2.3.ebuild, libreoffice-bin-4.1.3.2.ebuild:
