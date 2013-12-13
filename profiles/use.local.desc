@@ -3462,7 +3462,6 @@ media-sound/alsa-utils:libsamplerate - install utils that use libsamplerate (e.g
 media-sound/alsa-utils:minimal - omit utils that rely on extra packages (e.g. alsaconf and alsa-info)
 media-sound/alsa-utils:ncurses - install utils that use ncurses (e.g. alsamixer)
 media-sound/alsaplayer:id3tag - Enables ID3 tagging with id3tag library
-media-sound/amarok:daap - Enable the scripts for music sharing through DAAP. This flag adds dependencies on www-servers/mongrel to allow sharing of the Amarok music collection through DAAP protocol. Please note that turning this flag off has no effect on DAAP browsing.
 media-sound/amarok:embedded - Use libmysqld, MySQL embedded server library. Try disabling this if you encounter -PIC related in amarok, it will make amarok rely only on standalone MySQL server.
 media-sound/amarok:lastfm - Enable Last.fm streaming services support through media-libs/liblastfm
 media-sound/amarok:mp3tunes - Enable mp3tunes integration
