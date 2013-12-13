@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.15 2013/10/27 10:36:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.1.2-r1.ebuild,v 1.16 2013/12/13 18:58:00 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -70,7 +70,8 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
+	# Parallel install fails, bug #434618 (fixed in latest slot)
+	emake -j1 install DESTDIR="${D}"
 	dodoc AUTHORS README ChangeLog
 
 	# Remove .la files since static libs are no longer being installed
