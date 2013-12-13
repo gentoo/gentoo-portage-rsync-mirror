@@ -1,0 +1,12 @@
+diff -r 4069c369eaaa -r 10a7587774ea sks.pod
+--- a/sks.pod	Wed Jun 19 00:41:13 2013 -0500
++++ b/sks.pod	Tue Dec 03 18:40:52 2013 +0100
+@@ -392,7 +392,7 @@
+ 
+ =head1 SEE ALSO
+ 
+- The SKS website is located at http://minskyprimus.net/sks/.
++ The SKS website is located at https://bitbucket.org/skskeyserver/sks-keyserver/.
+ 
+ =head1 AUTHOR
+ 
