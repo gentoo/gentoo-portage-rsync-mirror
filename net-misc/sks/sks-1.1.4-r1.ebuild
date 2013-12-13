@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/sks-1.1.4-r1.ebuild,v 1.1 2013/12/13 03:40:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sks/sks-1.1.4-r1.ebuild,v 1.2 2013/12/13 09:29:03 patrick Exp $
 
 EAPI=5
 
@@ -44,7 +44,6 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}-ECC_OID_fix_x86.patch"\
 		"${FILESDIR}/${P}-man_url.patch"
-
 
 	cp Makefile.local.unused Makefile.local || die
 	sed -i \

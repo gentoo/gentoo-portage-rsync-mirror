@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.32.ebuild,v 1.3 2013/12/10 13:23:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.32.ebuild,v 1.6 2013/12/13 09:25:41 ago Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/libmicrohttpd/"
 SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz"
 
 IUSE="epoll messages ssl static-libs test"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 arm ~hppa ~mips ppc ppc64 x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
