@@ -7,5 +7,5 @@ LICENSE=free-noncomm
 RDEPEND=dev-qt/qtgui:4 dev-qt/qtcore:4
 RESTRICT=mirror
 SLOT=0
-SRC_URI=x86? ( http://www.soulseekqt.net/SoulseekQT/Linux/SoulseekQt-2013-4-10.tgz ) amd64? ( http://www.soulseekqt.net/SoulseekQT/Linux/SoulseekQt-2013-4-10-64bit.tgz )
-_md5_=ac24bf8df70df6c6b114f6228be30742
+SRC_URI=x86? ( http://www.soulseekqt.net/SoulseekQT/Linux/SoulseekQt-2013-5-18.tgz ) amd64? ( http://www.soulseekqt.net/SoulseekQT/Linux/SoulseekQt-2013-5-18-64bit.tgz )
+_md5_=bf60a99a1e09655f718dbd0409ae4df7

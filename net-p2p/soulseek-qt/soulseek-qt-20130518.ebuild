@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/soulseek-qt/soulseek-qt-20130410.ebuild,v 1.1 2013/04/23 14:54:16 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/soulseek-qt/soulseek-qt-20130518.ebuild,v 1.1 2013/12/13 11:49:55 zx2c4 Exp $
 
 EAPI=5
 
