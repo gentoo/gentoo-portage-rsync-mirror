@@ -1,6 +1,9 @@
 # ChangeLog for games-util/nml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.21 2013/11/12 03:18:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/ChangeLog,v 1.22 2013/12/13 15:27:00 hasufell Exp $
+
+  13 Dec 2013; Julian Ospald <hasufell@gentoo.org> nml-0.2.4-r2.ebuild:
+  add PYTHON_USEDEP to dev-python/ply wrt #494156
 
   12 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org> -nml-0.2.3.ebuild,
   -nml-0.2.4-r1.ebuild:

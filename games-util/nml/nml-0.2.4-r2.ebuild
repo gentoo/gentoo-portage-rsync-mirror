@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/nml/nml-0.2.4-r2.ebuild,v 1.5 2013/09/16 04:00:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/nml/nml-0.2.4-r2.ebuild,v 1.6 2013/12/13 15:27:00 hasufell Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE=""
 
 RDEPEND="dev-python/pillow[zlib,${PYTHON_USEDEP}]
-	dev-python/ply"
+	dev-python/ply[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
