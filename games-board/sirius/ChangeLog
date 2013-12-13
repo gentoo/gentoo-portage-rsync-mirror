@@ -1,6 +1,9 @@
 # ChangeLog for games-board/sirius
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/sirius/ChangeLog,v 1.8 2010/08/16 19:58:24 mr_bones_ Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/sirius/ChangeLog,v 1.9 2013/12/13 22:14:48 mr_bones_ Exp $
+
+  13 Dec 2013; Michael Sterrett <mr_bones_@gentoo.org> sirius-0.8.0.ebuild:
+  EAPI=5; fixup desktop file for bug #494176
 
   16 Aug 2010; Michael Sterrett <mr_bones_@gentoo.org> sirius-0.8.0.ebuild:
   EAPI=2; make it easier to find for reversi fans (bug #332807)
@@ -35,4 +38,3 @@
   07 Jul 2003; Michael Sterrett <msterret@gentoo.org> sirius-0.3.1.ebuild:
   Initial commit. ebuild based on the one submitted by Andrew Joyce in bug
   17729.
-

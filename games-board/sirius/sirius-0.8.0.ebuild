@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/sirius/sirius-0.8.0.ebuild,v 1.9 2010/08/16 19:58:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/sirius/sirius-0.8.0.ebuild,v 1.10 2013/12/13 22:14:48 mr_bones_ Exp $
 
-EAPI=2
-inherit games
+EAPI=5
+inherit autotools games
 
 DESCRIPTION="A program for playing the game of othello/reversi"
 HOMEPAGE="http://sirius.bitvis.nu/"
@@ -23,7 +23,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	sed -i '/-g -O3/d' configure || die "sed failed"
+	sed -i -e '/-g -O3/d' configure.in || die
+	sed -i \
+		-e '/Icon/s/\.png//' \
+		-e '/Categories/s/Application;//' \
+		sirius.desktop.in || die
+	eautoreconf
 }
 
 src_configure() {
@@ -33,7 +38,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS BUGS ChangeLog README
+	default
 	prepgamesdirs
 }
