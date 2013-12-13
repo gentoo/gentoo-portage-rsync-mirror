@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/setuptools[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy2_0(-)] test? ( dev-python/nose[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy2_0(-)] virtual/python-unittest2[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy2_0(-)] ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_pypy2_0? ( >=virtual/pypy-2.0.2:2.0 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy2_0(-)]
+DESCRIPTION=Dulwich is a pure-Python implementation of the Git file formats and protocols.
+EAPI=5
+HOMEPAGE=http://samba.org/~jelmer/dulwich/ http://pypi.python.org/pypi/dulwich
+IUSE=doc test python_targets_python2_6 python_targets_python2_7 python_targets_pypy2_0
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE=GPL-2
+RDEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_pypy2_0? ( >=virtual/pypy-2.0.2:2.0 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_pypy2_0(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_pypy2_0(-)]
+REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_pypy2_0 )
+SLOT=0
+SRC_URI=mirror://pypi/d/dulwich/dulwich-0.9.4.tar.gz
+_eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	a82a329b538368791f5a6113c60e557e	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	python-r1	cd956d5a4bac2209a64d0f4851cc115d	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=8a9e40a4ae4fa7bf0995dca7125fd389
