@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/angband
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.51 2013/01/30 18:51:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/angband/ChangeLog,v 1.52 2013/12/13 20:34:07 hasufell Exp $
+
+  13 Dec 2013; Julian Ospald <hasufell@gentoo.org> angband-3.4.1.ebuild:
+  fix datadir install location
 
   30 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org> -angband-3.3.2.ebuild:
   old

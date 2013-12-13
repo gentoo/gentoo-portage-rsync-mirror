@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.1.4.ebuild,v 1.2 2013/11/10 23:04:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.1.4-r1.ebuild,v 1.1 2013/12/13 20:47:39 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -66,6 +66,8 @@ RDEPEND=">=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		net-misc/bridge-utils
 		openvswitch? ( net-misc/openvswitch )
 		dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
+
+PATCHES=( "${FILESDIR}/CVE-2013-6419_2013.1.4.patch" )
 
 pkg_setup() {
 	enewgroup neutron

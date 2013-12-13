@@ -1,9 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r7.ebuild,v 1.5 2013/09/14 10:03:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r7.ebuild,v 1.6 2013/12/13 20:34:53 hwoarang Exp $
 
 EAPI="2"
 
+WANT_AUTOMAKE="1.12" #493996
 inherit eutils autotools
 
 DESCRIPTION="LXDE Display Manager"

@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.26 2013/09/14 10:03:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.27 2013/12/13 20:34:53 hwoarang Exp $
+
+  13 Dec 2013; Markos Chandras <hwoarang@gentoo.org> lxdm-0.4.1-r7.ebuild:
+  Require automake-1.12. Bug #493996 thanks to piruthiviraj natarajan
+  <piruthiviraj@gmail.com>
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> lxdm-0.4.1-r7.ebuild:
   Stable for x86, wrt bug #480056
