@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/testrepository-0.0.17-r1.ebuild,v 1.1 2013/12/12 11:43:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/testrepository-0.0.17-r1.ebuild,v 1.2 2013/12/13 01:41:49 idella4 Exp $
 
 EAPI=5
 # Although package supports alt. py impls, only works fully under py2.7
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-		test? ( >=dev-python/subunit-0.0.15-r1[${PYTHON_USEDEP}]
+		test? ( dev-python/subunit[${PYTHON_USEDEP}]
 			>=dev-python/testtools-0.9.30[${PYTHON_USEDEP}]
 			dev-python/fixtures[${PYTHON_USEDEP}]
 			dev-python/testresources[${PYTHON_USEDEP}]
@@ -26,7 +26,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			dev-python/pytz[${PYTHON_USEDEP}]
 		)"
 #bzr is listed but presumably req'd for a live repo test run
-RDEPEND=">=dev-python/subunit-0.0.15-r1[${PYTHON_USEDEP}]
+RDEPEND="dev-python/subunit[${PYTHON_USEDEP}]
 		>=dev-python/testtools-0.9.30[${PYTHON_USEDEP}]
 		dev-python/fixtures[${PYTHON_USEDEP}]"
 
