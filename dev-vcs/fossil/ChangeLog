@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/fossil
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.16 2013/07/18 10:50:47 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.17 2013/12/13 14:19:53 mr_bones_ Exp $
+
+*fossil-20130911114349 (13 Dec 2013)
+
+  13 Dec 2013; Michael Sterrett <mr_bones_@gentoo.org>
+  +fossil-20130911114349.ebuild, metadata.xml:
+  non-maintainer version bump per rafaelmartins
 
   18 Jul 2013; Aaron W. Swenson <titanofold@gentoo.org>
   -fossil-20111213135356.ebuild, -fossil-20121022124804.ebuild:

@@ -12,6 +12,7 @@
     </maintainer>
     <use>
         <flag name="json">Enable the JSON API of Fossil's wiki</flag>
+        <flag name="lineedit">Enable line-editing with libedit or readline</flag>
         <flag name="sqlite">
             Use the system SQLite instead of the bundled one
         </flag>

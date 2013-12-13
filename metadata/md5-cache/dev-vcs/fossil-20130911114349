@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=sys-libs/zlib lineedit? ( || ( sys-libs/readline:0= dev-libs/libedit ) ) ssl? ( dev-libs/openssl ) sqlite? ( dev-db/sqlite:3 ) tcl? ( dev-lang/tcl )
+DESCRIPTION=Simple, high-reliability, source control management, and more
+EAPI=5
+HOMEPAGE=http://www.fossil-scm.org/
+IUSE=json +lineedit sqlite +ssl tcl
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=sys-libs/zlib lineedit? ( || ( sys-libs/readline:0= dev-libs/libedit ) ) ssl? ( dev-libs/openssl ) sqlite? ( dev-db/sqlite:3 ) tcl? ( dev-lang/tcl )
+SLOT=0
+SRC_URI=http://www.fossil-scm.org/download/fossil-src-20130911114349.tar.gz
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=e7a0aa2cce74d10df027a7e1076ed1fe
