@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38.ebuild,v 1.1 2013/12/13 02:55:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r1.ebuild,v 1.1 2013/12/13 03:11:09 patrick Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs autotools systemd
 
@@ -35,7 +35,7 @@ REQUIRED_USE="cxx? ( sasl )"
 RDEPEND="icu? ( dev-libs/icu )
 	ssl? ( !gnutls? ( dev-libs/openssl )
 		gnutls? ( net-libs/gnutls dev-libs/libgcrypt ) )
-	sasl? ( dev-libs/cyrus-sasl )
+	sasl? ( dev-libs/cyrus-sasl:= )
 	!minimal? (
 		sys-devel/libtool
 		tcpd? ( sys-apps/tcp-wrappers )
@@ -49,7 +49,7 @@ RDEPEND="icu? ( dev-libs/icu )
 			dev-libs/openssl
 			app-crypt/heimdal )
 		kerberos? ( virtual/krb5 )
-		cxx? ( dev-libs/cyrus-sasl )
+		cxx? ( dev-libs/cyrus-sasl:= )
 	)
 	selinux? ( sec-policy/selinux-ldap )"
 DEPEND="${RDEPEND}
@@ -333,7 +333,6 @@ src_configure() {
 			ewarn
 			ewarn "Note: if you disable berkdb, you can only use remote-backends!"
 			ewarn
-			ebeep 5
 			myconf="${myconf} --disable-bdb --disable-hdb"
 		fi
 		for backend in dnssrv ldap meta monitor null passwd relay shell sock; do
