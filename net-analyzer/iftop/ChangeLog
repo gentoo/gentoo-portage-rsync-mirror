@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.52 2013/12/12 17:03:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.53 2013/12/13 07:31:32 pinkbyte Exp $
+
+  13 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> iftop-1.0_pre2.ebuild:
+  Stable on x86, wrt bug #490078
 
   12 Dec 2013; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre2.ebuild:
   Stable for HPPA (bug #490078).
