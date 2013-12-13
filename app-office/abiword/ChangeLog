@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.270 2013/12/08 17:44:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.271 2013/12/13 19:05:24 pacho Exp $
+
+  13 Dec 2013; Pacho Ramos <pacho@gentoo.org> abiword-3.0.0-r1.ebuild:
+  perl is only a DEPEND and libxslt is always needed (#493790 and #493878 by
+  Maxim Kammerer)
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> abiword-3.0.0-r1.ebuild:
   x86 stable, bug #478252

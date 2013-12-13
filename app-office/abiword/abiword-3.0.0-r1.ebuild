@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.5 2013/12/08 17:44:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.6 2013/12/13 19:05:24 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -22,11 +22,11 @@ REQUIRED_USE="!plugins? ( !collab !grammar !latex !math !ots !readline !thesauru
 
 RDEPEND="
 	>=app-text/wv-1.2
-	dev-lang/perl
 	>=dev-libs/boost-1.40.0
 	>=dev-libs/fribidi-0.10.4
 	>=dev-libs/glib-2.16:2
 	>=dev-libs/libgcrypt-1.4.5
+	dev-libs/libxslt
 	>=gnome-base/librsvg-2.16:2
 	>=gnome-extra/libgsf-1.14.18
 	>=media-libs/libpng-1.2
@@ -45,7 +45,6 @@ RDEPEND="
 			net-libs/libsoup:2.4
 			net-libs/gnutls )
 		grammar? ( >=dev-libs/link-grammar-4.2.1 )
-		latex? ( dev-libs/libxslt )
 		math? ( >=x11-libs/gtkmathview-0.7.5 )
 		ots? ( >=app-text/ots-0.5-r1 )
 		readline? ( sys-libs/readline )
@@ -62,6 +61,7 @@ RDEPEND="
 	!<app-office/abiword-plugins-2.8
 "
 DEPEND="${RDEPEND}
+	dev-lang/perl
 	virtual/pkgconfig
 	collab? ( dev-cpp/asio )
 "
