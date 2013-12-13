@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/settingslogic
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/settingslogic/ChangeLog,v 1.1 2013/12/13 04:36:45 mrueg Exp $
+
+*settingslogic-2.0.9 (13 Dec 2013)
+
+  13 Dec 2013; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +settingslogic-2.0.9.ebuild:
+  Import from graaf's overlay. Add ruby20.
