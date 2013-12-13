@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.1.201312081717_p1.ebuild,v 1.1 2013/12/09 18:08:34 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.1_p1-r1.ebuild,v 1.1 2013/12/13 10:43:33 zx2c4 Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.opensmtpd.org/archives/${MY_P/_}.tar.gz"
 
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="pam sqlite +mta"
 
 DEPEND="dev-libs/openssl
@@ -25,6 +25,7 @@ DEPEND="dev-libs/openssl
 		sys-libs/db
 		sqlite? ( dev-db/sqlite:3 )
 		dev-libs/libevent
+		app-misc/ca-certificates
 		!mail-mta/courier
 		!mail-mta/esmtp
 		!mail-mta/exim
@@ -54,6 +55,7 @@ src_configure() {
 		--with-privsep-path=/var/empty \
 		--with-sock-dir=/var/run \
 		--sysconfdir=/etc/opensmtpd \
+		--with-ca-file=/etc/ssl/certs/ca-certificates.crt \
 		$(use_with sqlite experimental-sqlite) \
 		$(use_with pam)
 }
