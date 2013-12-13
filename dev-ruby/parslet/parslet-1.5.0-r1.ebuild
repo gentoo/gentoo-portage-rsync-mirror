@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/parslet-1.5.0.ebuild,v 1.2 2013/12/13 01:21:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/parslet-1.5.0-r1.ebuild,v 1.1 2013/12/13 02:12:17 mrueg Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-ruby_add_rdepend "dev-ruby/blankslate"
+ruby_add_rdepend "dev-ruby/blankslate:2"
 
 all_ruby_prepare() {
 	sed -i -e "/sdoc/d" Rakefile || die

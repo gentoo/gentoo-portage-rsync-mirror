@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/parslet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/ChangeLog,v 1.2 2013/12/13 01:21:24 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parslet/ChangeLog,v 1.3 2013/12/13 02:12:17 mrueg Exp $
+
+*parslet-1.5.0-r1 (13 Dec 2013)
+
+  13 Dec 2013; Manuel Rüger <mrueg@gentoo.org> +parslet-1.5.0-r1.ebuild,
+  -parslet-1.5.0.ebuild:
+  Add correct slot for blankslate.
 
   13 Dec 2013; Manuel Rüger <mrueg@gentoo.org> parslet-1.5.0.ebuild:
   Add missing dependency.
