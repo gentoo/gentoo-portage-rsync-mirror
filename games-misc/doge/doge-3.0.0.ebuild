@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/doge-2.2.0.ebuild,v 1.1 2013/12/05 15:13:04 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/doge-3.0.0.ebuild,v 1.1 2013/12/13 01:17:21 vikraman Exp $
 
 EAPI=5
 
