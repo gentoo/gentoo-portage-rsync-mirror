@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.123 2013/11/14 16:56:02 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.124 2013/12/14 19:46:04 ago Exp $
+
+  14 Dec 2013; Agostino Sarubbo <ago@gentoo.org> boost-build-1.52.0-r1.ebuild:
+  Stable for sparc, wrt bug #455464
 
 *boost-build-1.55.0 (14 Nov 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.308 2013/11/30 20:32:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.309 2013/12/14 19:45:54 ago Exp $
+
+  14 Dec 2013; Agostino Sarubbo <ago@gentoo.org> boost-1.52.0-r6.ebuild:
+  Stable for sparc, wrt bug #455464
 
   30 Nov 2013; Mike Frysinger <vapier@gentoo.org>
   +files/boost-1.55.0-context-x32.patch, boost-1.55.0.ebuild:
