@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.2.ebuild,v 1.1 2013/12/03 22:56:16 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-13.2.2.ebuild,v 1.2 2013/12/14 03:18:06 mschiff Exp $
 
 EAPI="5"
 
@@ -12,6 +12,7 @@ inherit eutils multilib python-single-r1 qt4-r2 user
 DESCRIPTION="Featureful client/server network backup suite"
 HOMEPAGE="http://www.bareos.org/"
 SRC_URI="https://github.com/${PN}/${PN}/archive/Release/${PV}.tar.gz -> ${P}.tar.gz"
+RESTRICT="mirror"
 
 LICENSE="AGPL-3"
 SLOT="0"

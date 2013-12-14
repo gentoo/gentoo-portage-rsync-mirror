@@ -1,6 +1,13 @@
 # ChangeLog for app-office/QtBitcoinTrader
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/QtBitcoinTrader/ChangeLog,v 1.5 2013/12/09 11:41:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/QtBitcoinTrader/ChangeLog,v 1.6 2013/12/14 03:28:27 alexxy Exp $
+
+*QtBitcoinTrader-1.07.96.4 (14 Dec 2013)
+
+  14 Dec 2013; Alexey Shvetsov <alexxy@gentoo.org>
+  +QtBitcoinTrader-1.07.96.4.ebuild, -QtBitcoinTrader-1.07.05.ebuild,
+  QtBitcoinTrader-9999.ebuild:
+  Version bump
 
   09 Dec 2013; Alexey Shvetsov <alexxy@gentoo.org> QtBitcoinTrader-9999.ebuild:
   Make testing branch deafult since master is usualy frozen
