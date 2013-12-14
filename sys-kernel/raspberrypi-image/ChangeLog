@@ -1,6 +1,27 @@
 # ChangeLog for sys-kernel/raspberrypi-image
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/ChangeLog,v 1.17 2013/10/03 15:01:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/raspberrypi-image/ChangeLog,v 1.18 2013/12/14 11:14:05 xmw Exp $
+
+*raspberrypi-image-3.10.9999 (14 Dec 2013)
+*raspberrypi-image-3.10.24_pre-r20131212 (14 Dec 2013)
+
+  14 Dec 2013; Michael Weber <xmw@gentoo.org>
+  +raspberrypi-image-3.10.24_pre-r20131212.ebuild,
+  +raspberrypi-image-3.10.9999.ebuild,
+  -raspberrypi-image-3.10.10_pre-r20130830.ebuild,
+  -raspberrypi-image-3.10.4_pre-r20130802.ebuild,
+  -raspberrypi-image-3.10.6_pre-r20130805.ebuild,
+  -raspberrypi-image-3.10.7_pre-r20130815.ebuild,
+  -raspberrypi-image-3.10.9_pre-r20130820.ebuild,
+  -raspberrypi-image-3.11.0_pre-r20130904.ebuild,
+  -raspberrypi-image-3.11.1_pre-r20130915.ebuild,
+  -raspberrypi-image-3.6.11_p20130711.ebuild,
+  -raspberrypi-image-3.6.11_p20130722.ebuild,
+  -raspberrypi-image-3.6.9999.ebuild,
+  -raspberrypi-image-3.9.10_pre20130715.ebuild,
+  -raspberrypi-image-3.9.10_pre20130719.ebuild,
+  -raspberrypi-image-3.9.9999.ebuild:
+  Version bump as requested by Alexander Tsoy (bug 492832), drop old versions.
 
 *raspberrypi-image-3.11.2_pre-r20130926 (03 Oct 2013)
 

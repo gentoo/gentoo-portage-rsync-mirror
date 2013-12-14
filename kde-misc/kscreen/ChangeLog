@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kscreen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.5 2013/11/23 14:50:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kscreen/ChangeLog,v 1.6 2013/12/14 11:08:56 johu Exp $
+
+  14 Dec 2013; Johannes Huber <johu@gentoo.org> kscreen-1.0.2.1.ebuild:
+  Update HOMEPAGE.
 
 *kscreen-1.0.2.1 (23 Nov 2013)
 
