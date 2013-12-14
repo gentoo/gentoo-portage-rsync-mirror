@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15258 2013/12/12 23:34:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15259 2013/12/14 05:19:02 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -116,14 +116,6 @@ dev-lang/v8
 # Matti Bickel <mabi@gentoo.org> (13 Nov 2013)
 # Now included in dev-php/phpunit, removal on 20131213
 dev-php/DBUnit
-
-# Michael Sterrett <mr_bones_@gentoo.org> (13 Nov 2013)
-# gtk+:1 and glib:1 using apps masked for removal on 20131213
-app-text/gsview
-mail-client/gbuffy
-net-print/pup
-dev-libs/libsmtp
-net-analyzer/traffic-vis
 
 # Mike Gilbert <floppym@gentoo.org> (12 Nov 2013)
 # Dev channel releases are only for people who are developers or want more
