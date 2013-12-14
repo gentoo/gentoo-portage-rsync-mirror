@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.142 2013/12/14 16:09:23 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.143 2013/12/14 17:17:50 aidecoe Exp $
+
+  14 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r2.ebuild:
+  Added epatch_user call. Rels bug #487410.
 
 *dracut-034-r2 (14 Dec 2013)
 

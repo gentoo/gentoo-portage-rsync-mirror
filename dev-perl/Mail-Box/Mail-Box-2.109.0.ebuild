@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Box/Mail-Box-2.109.0.ebuild,v 1.1 2013/09/03 03:27:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Box/Mail-Box-2.109.0.ebuild,v 1.2 2013/12/14 17:26:47 aidecoe Exp $
 
 EAPI=4
 
@@ -32,11 +32,11 @@ RDEPEND="
 	dev-perl/Email-Simple
 "
 DEPEND="${RDEPEND}
+	dev-perl/Devel-GlobalDestruction
 	virtual/perl-ExtUtils-MakeMaker
 	test? (
 		>=virtual/perl-Test-Harness-3.0.0
 		>=dev-perl/Test-Pod-1.0.0
-		dev-perl/Devel-GlobalDestruction
 	)
 "
 

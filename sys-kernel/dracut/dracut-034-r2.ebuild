@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r2.ebuild,v 1.1 2013/12/14 16:09:23 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r2.ebuild,v 1.2 2013/12/14 17:17:50 aidecoe Exp $
 
 EAPI=4
 
@@ -195,6 +195,8 @@ src_prepare() {
 		sed -e "6asystemdsystemunitdir=\"${systemdsystemunitdir}\"" \
 			-i "${S}/dracut.conf.d/gentoo.conf.example" || die
 	fi
+
+	epatch_user
 }
 
 src_configure() {

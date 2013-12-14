@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/akonadi-google-20131213.ebuild,v 1.1 2013/12/14 00:28:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/akonadi-google-20131213.ebuild,v 1.2 2013/12/14 17:06:01 dilfridge Exp $
 
-EAPI=4
+EAPI=5
 
 KDE_SCM="git"
 inherit kde4-base
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.xz"
 LICENSE="GPL-2"
 
 SLOT="4"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
