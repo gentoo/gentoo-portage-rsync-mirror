@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/bones
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.20 2013/11/03 13:28:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.21 2013/12/14 14:03:26 graaff Exp $
+
+*bones-3.8.1 (14 Dec 2013)
+
+  14 Dec 2013; Hans de Graaff <graaff@gentoo.org> +bones-3.8.1.ebuild,
+  +files/bones-3.8.1-builder.patch, +files/bones-3.8.1-rdoc-version.patch:
+  Version bump. EAPI=5. Add ruby20. Ebuild by Peter Wilmott in the ruby
+  overlay.
 
   03 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -bones-3.6.5.ebuild,
   -bones-3.7.0.ebuild:
