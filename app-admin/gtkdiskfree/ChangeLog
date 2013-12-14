@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.41 2013/12/13 17:32:11 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.42 2013/12/14 01:20:20 patrick Exp $
+
+  14 Dec 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag from metadata.xml
 
   13 Dec 2013; Sergey Popov <pinkbyte@gentoo.org>
   -files/1.9.3-makefile-DESTDIR.patch, -gtkdiskfree-1.9.3-r1.ebuild,
@@ -155,4 +158,3 @@
   06 Nov 2002; Bruce A. Locke <blocke@shivan.org> gtkdiskfree-1.8.4.ebuild:
   Initial version.  Fixes long standing bug #654 filed by
   mr.big@pc-trouble.de (Jens Blaesche)
-

@@ -10,9 +10,6 @@
 	<email>xmw@gentoo.org</email>
 	<name>Michael Weber</name>
 </maintainer>
-<use>
-	<flag name="gtk3">Use GTK+3 instead of 2</flag>
-</use>
 <longdescription>
 gtkdiskfree is a gtk extension to the cli tool df, does the same and more
 </longdescription>
