@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-ExtUtils-Install
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/ChangeLog,v 1.30 2013/04/20 16:59:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/ChangeLog,v 1.31 2013/12/14 18:21:47 zlogene Exp $
+
+  14 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  -perl-ExtUtils-Install-1.54.ebuild, perl-ExtUtils-Install-1.540.0.ebuild:
+  drop perl-5.10* dependency; Drop old.
 
   20 Apr 2013; Matt Turner <mattst88@gentoo.org>
   perl-ExtUtils-Install-1.540.0.ebuild:

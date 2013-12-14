@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/perl-ExtUtils-Install-1.540.0.ebuild,v 1.14 2013/04/20 16:59:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Install/perl-ExtUtils-Install-1.540.0.ebuild,v 1.15 2013/12/14 18:21:47 zlogene Exp $
 
 DESCRIPTION="Virtual for ExtUtils-Install"
 HOMEPAGE=""
@@ -12,4 +12,4 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( ~dev-lang/perl-5.10.1 ~perl-core/ExtUtils-Install-${PV} )"
+RDEPEND="~perl-core/ExtUtils-Install-${PV}"
