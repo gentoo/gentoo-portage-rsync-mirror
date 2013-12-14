@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.98.ebuild,v 1.1 2013/11/06 20:27:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/pam_ssh-1.98.ebuild,v 1.2 2013/12/14 14:51:58 johu Exp $
 
 EAPI=5
 inherit pam eutils flag-o-matic readme.gentoo
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/pam-ssh/${P}.tar.bz2"
 
 LICENSE="BSD-2 BSD ISC"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE=""
 
 # Doesn't work on OpenPAM; looks for OpenSSH at build time (bug

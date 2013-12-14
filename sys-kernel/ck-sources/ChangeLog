@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.227 2013/12/03 18:51:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.228 2013/12/14 14:42:03 tomwij Exp $
+
+*ck-sources-3.10.24 (14 Dec 2013)
+*ck-sources-3.12.5 (14 Dec 2013)
+*ck-sources-3.4.74 (14 Dec 2013)
+
+  14 Dec 2013; Tom Wijsman <TomWij@gentoo.org> +ck-sources-3.10.24.ebuild,
+  +ck-sources-3.12.5.ebuild, +ck-sources-3.4.74.ebuild,
+  -ck-sources-3.11.9.ebuild, -ck-sources-3.12.1.ebuild:
+  Version bump to 3.4.74, 3.10.24 and 3.12.5; dropped old.
 
 *ck-sources-3.11.10 (03 Dec 2013)
 *ck-sources-3.12.2 (03 Dec 2013)

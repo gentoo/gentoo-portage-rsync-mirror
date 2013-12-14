@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_ssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.48 2013/11/06 20:27:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ssh/ChangeLog,v 1.49 2013/12/14 14:51:58 johu Exp $
+
+  14 Dec 2013; Johannes Huber <johu@gentoo.org> pam_ssh-1.98.ebuild:
+  x86 stable, bug #459960
 
 *pam_ssh-1.98 (06 Nov 2013)
 
