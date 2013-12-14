@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-6.1-r1.ebuild,v 1.8 2013/12/11 01:14:55 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-6.1-r1.ebuild,v 1.9 2013/12/14 00:00:14 jmbsvicetto Exp $
 
 EAPI=5
 
@@ -17,10 +17,6 @@ IUSE="+acl +ads +caps +caps-ng creds"
 
 DEPEND="!net-fs/mount-cifs
 	!<net-fs/samba-3.6_rc1
-	acl? ( || (
-		=net-fs/samba-3.6*[winbind]
-		>=net-fs/samba-4.0.0_alpha1
-	) )
 	ads? (
 		sys-apps/keyutils
 		sys-libs/talloc
@@ -29,7 +25,12 @@ DEPEND="!net-fs/mount-cifs
 	caps? ( !caps-ng? ( sys-libs/libcap ) )
 	caps? ( caps-ng? ( sys-libs/libcap-ng ) )
 	creds? ( sys-apps/keyutils )"
-PDEPEND="${DEPEND}"
+PDEPEND="${DEPEND}
+	acl? ( || (
+		=net-fs/samba-3.6*[winbind]
+		>=net-fs/samba-4.0.0_alpha1
+	) )
+"
 
 REQUIRED_USE="acl? ( ads )"
 
