@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.259 2013/12/12 14:52:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.260 2013/12/14 00:54:52 anarchy Exp $
+
+  14 Dec 2013; Jory A. Pratt <anarchy@gentoo.org>
+  +files/enigmail-1.6.0-parallel-fix.patch, thunderbird-24.2.0.ebuild:
+  Fix race condition in enigmail build, bug #494094
 
 *thunderbird-24.2.0 (12 Dec 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.2.0.ebuild,v 1.1 2013/12/12 14:52:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.2.0.ebuild,v 1.2 2013/12/14 00:54:52 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -143,6 +143,9 @@ src_prepare() {
 
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
+		pushd "${S}"/mailnews/extensions/enigmail &>/dev/null || die
+		epatch "${FILESDIR}"/enigmail-1.6.0-parallel-fix.patch
+		popd &>/dev/null || die
 	fi
 
 	# Ensure that are plugins dir is enabled as default
