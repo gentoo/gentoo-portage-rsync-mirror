@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile config configure install postinst postrm preinst prepare setup
+DEPEND=>=sys-apps/openrc-0.10.5 ssl? ( dev-libs/openssl ) monitor? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/twisted-core dev-python/twisted-conch dev-python/twisted-web pyside? ( dev-python/pyside[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) !pyside? ( dev-python/PyQt4[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) net-zope/zope-interface[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) debug? ( dev-lang/perl ) virtual/pkgconfig kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources ) virtual/pkgconfig
+DESCRIPTION=Production quality, multilayer virtual switch
+EAPI=5
+HOMEPAGE=http://openvswitch.org
+IUSE=debug modules monitor +pyside +ssl kernel_linux python_targets_python2_7 python_single_target_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0 GPL-2
+RDEPEND=>=sys-apps/openrc-0.10.5 ssl? ( dev-libs/openssl ) monitor? ( python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] dev-python/twisted-core dev-python/twisted-conch dev-python/twisted-web pyside? ( dev-python/pyside[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) !pyside? ( dev-python/PyQt4[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) net-zope/zope-interface[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] ) debug? ( dev-lang/perl ) kernel_linux? ( virtual/modutils )
+SLOT=0
+SRC_URI=http://openvswitch.org/releases/openvswitch-2.0.0.tar.gz
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	linux-info	a9cbd6bbe2b28166e403321882f3c73c	linux-mod	c07f7857b242a2407527aa521905cfba	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=fe157db80a5279e363a3ec35cbbc9ffd
