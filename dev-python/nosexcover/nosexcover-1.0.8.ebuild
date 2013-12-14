@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nosexcover/nosexcover-1.0.8.ebuild,v 1.2 2013/09/05 18:46:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nosexcover/nosexcover-1.0.8.ebuild,v 1.3 2013/12/14 12:15:51 idella4 Exp $
 
 EAPI=5
 
@@ -19,5 +19,5 @@ IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/coverage[${PYTHON_USEDEP}]"
+		>=dev-python/coverage-3.4[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
