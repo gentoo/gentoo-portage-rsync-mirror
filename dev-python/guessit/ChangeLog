@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/guessit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guessit/ChangeLog,v 1.5 2013/12/07 08:46:00 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guessit/ChangeLog,v 1.6 2013/12/14 15:27:01 tomwij Exp $
+
+  14 Dec 2013; Tom Wijsman <TomWij@gentoo.org> guessit-9999.ebuild:
+  Test fixes in live ebuild; proxied commit for Nikoli, fixes bug #494242.
 
 *guessit-0.6.2 (07 Dec 2013)
 

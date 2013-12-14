@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/par2cmdline
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.26 2012/01/16 16:01:42 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/par2cmdline/ChangeLog,v 1.27 2013/12/14 15:21:44 ssuominen Exp $
+
+*par2cmdline-0.6.3 (14 Dec 2013)
+
+  14 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> +par2cmdline-0.6.3.ebuild:
+  Version bump from new upstream (BlackIkeEagle) at github. The development at
+  the original source, parchive.sf.net has been stalled.
 
   16 Jan 2012; Samuli Suominen <ssuominen@gentoo.org>
   par2cmdline-0.4-r2.ebuild:
@@ -95,4 +101,3 @@
 
   14 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> par2cmdline-0.3.ebuild:
   add par2cmdline from par-2.0.3 as per bug #29874
-

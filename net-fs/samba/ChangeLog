@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.638 2013/12/11 07:15:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.639 2013/12/14 15:27:00 jer Exp $
+
+  14 Dec 2013; Jeroen Roovers <jer@gentoo.org> samba-3.6.22.ebuild:
+  Stable for HPPA (bug #493664).
 
   11 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> samba-4.0.12.ebuild,
   samba-4.0.13.ebuild, samba-4.1.2.ebuild, samba-4.1.3.ebuild:
