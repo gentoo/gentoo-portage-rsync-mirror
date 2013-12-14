@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.197 2013/12/12 09:24:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.198 2013/12/14 22:14:56 johu Exp $
+
+  14 Dec 2013; Johannes Huber <johu@gentoo.org>
+  -files/libkdcraw-4.10.5-extlibraw.patch:
+  Remove unused patch.
 
   12 Dec 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag from metadata.xml

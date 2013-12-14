@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.236 2013/12/12 03:37:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.237 2013/12/14 22:26:31 johu Exp $
+
+  14 Dec 2013; Johannes Huber <johu@gentoo.org>
+  -files/systemsettings-4.11.1-deps.patch:
+  Remove unused patch.
 
   12 Dec 2013; Agostino Sarubbo <ago@gentoo.org> -systemsettings-4.10.5.ebuild:
   Remove old
