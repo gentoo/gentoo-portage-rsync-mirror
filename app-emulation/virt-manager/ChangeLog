@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.98 2013/12/09 15:24:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.99 2013/12/14 02:04:48 cardoe Exp $
+
+*virt-manager-0.10.0-r2 (14 Dec 2013)
+
+  14 Dec 2013; Doug Goldstein <cardoe@gentoo.org>
+  +virt-manager-0.10.0-r2.ebuild:
+  Allow virtinst components to be installed separate from virt-manager to allow
+  users without a GUI to get the newer virtinst bits that are now merged into
+  virt-manager and maintained there. Controlled by USE=gtk.
 
   09 Dec 2013; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.10.0-r1.ebuild,
   virt-manager-9999.ebuild:

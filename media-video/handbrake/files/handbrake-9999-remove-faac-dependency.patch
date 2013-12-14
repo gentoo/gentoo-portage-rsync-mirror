@@ -170,16 +170,3 @@
          case HB_ACODEC_LAME:    return hb_get_work(WORK_ENCLAME);
          case HB_ACODEC_VORBIS:  return hb_get_work(WORK_ENCVORBIS);
          case HB_ACODEC_CA_AAC:  return hb_get_work(WORK_ENC_CA_AAC);
---- a/test/module.defs	
-+++ b/test/module.defs	
-@@ -23,10 +23,6 @@
- TEST.GCC.l += fdk-aac
- endif
- 
--ifeq (1,$(FEATURE.faac))
--TEST.GCC.l += faac
--endif
--
- ifeq (1,$(FEATURE.mp4v2))
- TEST.GCC.l += mp4v2
- endif

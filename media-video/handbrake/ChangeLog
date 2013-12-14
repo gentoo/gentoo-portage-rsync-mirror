@@ -1,6 +1,14 @@
 # ChangeLog for media-video/handbrake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.16 2013/09/16 12:42:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/ChangeLog,v 1.17 2013/12/14 02:15:05 tomwij Exp $
+
+  14 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/handbrake-0.9.9-fix-compilation-with-mp4v2-v1.9.1.patch,
+  files/handbrake-9999-fix-compilation-with-mp4v2-v1.9.1.patch,
+  files/handbrake-9999-remove-faac-dependency.patch, handbrake-0.9.9.ebuild,
+  handbrake-9999.ebuild:
+  Forward ported 9999 patches, also removed one that has been applied upstream;
+  fixes bug #494032, reported by Piotr Mitas (yabolus).
 
   16 Sep 2013; Tom Wijsman <TomWij@gentoo.org>
   +files/handbrake-0.9.9-add-gmodule-to-gtk-configure.patch,

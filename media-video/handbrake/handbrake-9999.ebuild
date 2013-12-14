@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.13 2013/09/16 12:42:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-9999.ebuild,v 1.14 2013/12/14 02:15:04 tomwij Exp $
 
 EAPI="5"
 
@@ -109,9 +109,6 @@ src_prepare() {
 
 	# Make use of an unpatched version of a52 that does not make a private field public.
 	epatch "${FILESDIR}"/${PN}-9999-use-unpatched-a52.patch
-
-	# Add gmodule to the linker command line for bug #482674.
-	epatch "${FILESDIR}"/${PN}-0.9.9-add-gmodule-to-gtk-configure.patch
 
 	# Fixup configure.ac with newer automake.
 	# TODO: Would like to see this shorten towards the future;

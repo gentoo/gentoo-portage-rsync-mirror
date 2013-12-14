@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.11 2013/09/16 12:42:28 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.12 2013/12/14 02:15:04 tomwij Exp $
 
 EAPI="5"
 
@@ -83,7 +83,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-9999-expand-MK_SUBTITLE_PGS.patch
 
 	# Fix compilation against the released 1.9.1 version of mp4v2.
-	epatch "${FILESDIR}"/${PN}-9999-fix-compilation-with-mp4v2-v1.9.1.patch
+	epatch "${FILESDIR}"/${P}-fix-compilation-with-mp4v2-v1.9.1.patch
 
 	# Remove libdvdnav duplication and call it on the original instead.
 	# It may work this way; if not, we should try to mimic the duplication.

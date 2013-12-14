@@ -1,7 +1,5 @@
 https://github.com/rbrito/pkg-handbrake/blob/master/debian/patches/0005-libhb-Fix-compilation-with-mp4v2-v1.9.1.patch
 
-Forward ported by Tom Wijsman <TomWij@gentoo.org>.
-
 From: =?UTF-8?q?Rog=C3=A9rio=20Brito?= <rbrito@ime.usp.br>
 Date: Sun, 22 Apr 2012 05:34:40 -0300
 Subject: libhb: Fix compilation with mp4v2 v1.9.1.
@@ -44,15 +42,15 @@ Signed-off-by: Rogério Theodoro de Brito <rbrito@ime.usp.br>
      if (job->largeFileSize)
      /* Use 64-bit MP4 file */
      {
--        m->file = MP4Create(m->path, MP4_DETAILS_ERROR, MP4_CREATE_64BIT_DATA);
-+        m->file = MP4Create(m->path, MP4_CREATE_64BIT_DATA);
+-        m->file = MP4Create( job->file, MP4_DETAILS_ERROR, MP4_CREATE_64BIT_DATA );
++        m->file = MP4Create( job->file, MP4_CREATE_64BIT_DATA );
          hb_deep_log( 2, "muxmp4: using 64-bit MP4 formatting.");
      }
      else
      /* Limit MP4s to less than 4 GB */
      {
--        m->file = MP4Create(m->path, MP4_DETAILS_ERROR, 0);
-+        m->file = MP4Create(m->path, 0);
+-        m->file = MP4Create( job->file, MP4_DETAILS_ERROR, 0 );
++        m->file = MP4Create( job->file, 0 );
      }
  
      if (m->file == MP4_INVALID_FILE_HANDLE)
@@ -67,9 +65,9 @@ Signed-off-by: Rogério Theodoro de Brito <rbrito@ime.usp.br>
          {
              hb_log( "muxmp4: optimizing file" );
              char filename[1024]; memset( filename, 0, 1024 );
-             snprintf(filename, 1024, "%s.tmp", m->path);
--            MP4Optimize(m->path, filename, MP4_DETAILS_ERROR);
-+            MP4Optimize(m->path, filename);
-             remove(m->path);
-             rename(filename, m->path);
+             snprintf( filename, 1024, "%s.tmp", job->file );
+-            MP4Optimize( job->file, filename, MP4_DETAILS_ERROR );
++            MP4Optimize( job->file, filename );
+             remove( job->file );
+             rename( filename, job->file );
          }
