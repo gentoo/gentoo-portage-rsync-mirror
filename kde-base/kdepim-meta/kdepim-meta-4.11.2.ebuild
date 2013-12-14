@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.11.2.ebuild,v 1.5 2013/12/11 20:27:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.11.2.ebuild,v 1.6 2013/12/14 16:55:27 johu Exp $
 
 EAPI=5
 inherit kde4-meta-pkg
@@ -29,6 +29,7 @@ RDEPEND="
 	$(add_kdebase_dep kontact)
 	$(add_kdebase_dep korganizer)
 	$(add_kdebase_dep ktimetracker)
+	$(add_kdebase_dep ktnef)
 	nls? (
 		$(add_kdebase_dep kde-l10n)
 		$(add_kdebase_dep kdepim-l10n)
