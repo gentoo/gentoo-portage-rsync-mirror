@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.141 2013/12/10 19:38:08 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.142 2013/12/14 16:09:23 aidecoe Exp $
+
+*dracut-034-r2 (14 Dec 2013)
+
+  14 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-034-r2.ebuild,
+  +files/034-0013-usrmount-always-install.patch:
+  Committing on behalf of Alexander Tsoy <alexander@tsoy.me>.
+  Fixes bug #489624 and bug #491778.
+
+  usrmount module used to be not always installed when it was needed.
 
   10 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r1.ebuild:
   Committing on behalf of Alexander Tsoy <alexander@tsoy.me>.
