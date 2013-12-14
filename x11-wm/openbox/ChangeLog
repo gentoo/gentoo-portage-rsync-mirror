@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.280 2013/10/19 15:27:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.281 2013/12/14 11:35:21 hwoarang Exp $
+
+  14 Dec 2013; Markos Chandras <hwoarang@gentoo.org>
+  -files/openbox-3.5.0-configure-imlib2.patch,
+  -files/openbox-3.5.0-fix-desktop-files.patch,
+  -files/openbox-3.5.0-gtk34.patch,
+  -files/openbox-3.5.0_p20121006-javaswing.patch,
+  -files/openbox-as-needed.patch, -openbox-3.5.0-r1.ebuild,
+  -openbox-3.5.2.ebuild:
+  Remove old files and ebuilds
 
   19 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due desktop-wm removal

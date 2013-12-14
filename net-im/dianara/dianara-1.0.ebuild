@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/dianara-1.0_beta1.ebuild,v 1.1 2013/09/22 12:29:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/dianara-1.0.ebuild,v 1.1 2013/12/14 11:33:49 hasufell Exp $
 
 EAPI=5
 
