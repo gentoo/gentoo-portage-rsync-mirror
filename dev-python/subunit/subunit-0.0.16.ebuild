@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.16.ebuild,v 1.2 2013/12/15 01:51:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subunit/subunit-0.0.16.ebuild,v 1.3 2013/12/15 19:38:36 floppym Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~x86-fbsd"
 #need to keyword the following in =dev-python/extras-0.0.3 then readd the keywords here
 #ia64 s390 sh sparc amd64-fbsd
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND=">=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]
 	dev-python/extras[${PYTHON_USEDEP}]"
@@ -28,10 +28,8 @@ DEPEND="${RDEPEND}
 	dev-util/cppunit
 	virtual/pkgconfig"
 
-DISTUTILS_IN_SOURCE_BUILD=1
-
 src_configure() {
-	econf
+	econf --enable-shared $(use_enable static-libs static)
 	distutils-r1_src_configure
 }
 
