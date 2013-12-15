@@ -1,0 +1,9 @@
+# ChangeLog for games-emulation/mupen64plus-ui-console
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-ui-console/ChangeLog,v 1.1 2013/12/15 12:12:27 mgorny Exp $
+
+*mupen64plus-ui-console-2.0 (15 Dec 2013)
+
+  15 Dec 2013; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +mupen64plus-ui-console-2.0.ebuild:
+  Introduce the console UI for mupen64plus-2.0.

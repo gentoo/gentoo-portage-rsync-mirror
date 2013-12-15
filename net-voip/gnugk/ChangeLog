@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/gnugk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/ChangeLog,v 1.13 2013/10/27 09:56:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/gnugk/ChangeLog,v 1.14 2013/12/15 12:23:19 moult Exp $
+
+  15 Dec 2013; Dion Moult <moult@gentoo.org> -gnugk-2.2.7.ebuild,
+  -gnugk-2.2.8.ebuild:
+  <=net-voip/gnugk-2.2.8 removal (pending 11 July 2013), see #290062 and #290063
+  for reference.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due voip herd removal:

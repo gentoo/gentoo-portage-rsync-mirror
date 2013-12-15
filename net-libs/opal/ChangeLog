@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.97 2013/10/27 09:43:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.98 2013/12/15 12:12:16 moult Exp $
+
+  15 Dec 2013; Dion Moult <moult@gentoo.org> -opal-2.2.11.ebuild:
+  <=net-libs/opal-2.2.11 removal (pending 11 July 2013), see #290062 and #290063
+  for reference.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due voip herd removal:

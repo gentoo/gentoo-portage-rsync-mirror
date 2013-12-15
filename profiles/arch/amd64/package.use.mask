@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.174 2013/12/07 18:55:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.175 2013/12/15 12:04:36 mgorny Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,11 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (15 Dec 2013)
+# mupen64plus' 2.0 new dynamic recompiler is supported on x86 and arm
+# only.
+games-emulation/mupen64plus-core new-dynarec
 
 # Jeff Horelick <jdhore@gentoo.org> (1 Sep 2013)
 # Dependency (media-libs/libsidplayfp) only keyworded

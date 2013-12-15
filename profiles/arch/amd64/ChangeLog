@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.235 2013/12/04 20:03:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.236 2013/12/15 12:04:36 mgorny Exp $
+
+  15 Dec 2013; Michał Górny <mgorny@gentoo.org> package.use.mask:
+  Mask mupen64plus new dynamic recompiler since it does not work on amd64.
 
   04 Dec 2013; Mike Gilbert <floppym@gentoo.org> make.defaults:
   Set python_targets_python3_3 in BOOTSTRAP_USE.
