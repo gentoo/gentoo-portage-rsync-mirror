@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.2.0.ebuild,v 1.2 2013/12/14 00:54:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.2.0.ebuild,v 1.3 2013/12/15 21:08:45 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -39,7 +39,7 @@ LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist crypt gstreamer +jit ldap +lightning +minimal mozdom pulseaudio selinux system-cairo system-icu system-jpeg system-sqlite"
 
 PATCH="thunderbird-24.0-patches-0.1"
-PATCHFF="firefox-24.0-patches-0.5"
+PATCHFF="firefox-24.0-patches-0.9"
 
 SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}${MOZ_PV}/source/${MOZ_P}.source.tar.bz2
@@ -135,7 +135,6 @@ src_prepare() {
 
 	# Apply our patchset from firefox to thunderbird as well
 	pushd "${S}"/mozilla &>/dev/null || die
-	EPATCH_EXCLUDE="8001_ia64_support_bug_910845.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"

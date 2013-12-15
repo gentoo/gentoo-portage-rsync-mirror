@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1365 2013/12/06 18:38:20 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1366 2013/12/15 21:11:43 tomwij Exp $
+
+*git-sources-3.13_rc4 (15 Dec 2013)
+
+  15 Dec 2013; Tom Wijsman <TomWij@gentoo.org> +git-sources-3.13_rc4.ebuild:
+  Version bump to 3.13_rc4.
 
 *git-sources-3.13_rc3 (06 Dec 2013)
 
