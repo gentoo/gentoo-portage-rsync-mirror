@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Netmask
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.51 2013/09/12 16:11:29 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.52 2013/12/15 16:26:06 zlogene Exp $
+
+  15 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -Net-Netmask-1.901.600.ebuild,
+  Net-Netmask-1.901.600-r1.ebuild:
+  amd64/ppc/x86 stable wrt bug #492200; Drop old.
 
 *Net-Netmask-1.901.600-r1 (12 Sep 2013)
 
