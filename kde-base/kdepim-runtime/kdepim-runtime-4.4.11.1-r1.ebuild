@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.4.11.1-r1.ebuild,v 1.13 2013/10/10 05:26:49 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.4.11.1-r1.ebuild,v 1.14 2013/12/15 14:04:09 dilfridge Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 	dev-libs/libxml2:2
 	dev-libs/libxslt
 	$(add_kdebase_dep kdelibs 'semantic-desktop(+)' 4.6)
-	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)' 4.6)
+	<kde-base/kdepimlibs-4.11.50:4[aqua=,semantic-desktop(+)]
 	$(add_kdebase_dep libkdepim)
 	x11-misc/shared-mime-info
 "

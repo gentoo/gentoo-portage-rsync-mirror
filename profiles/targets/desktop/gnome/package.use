@@ -1,6 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.19 2013/06/06 05:34:50 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.20 2013/12/15 14:19:13 pacho Exp $
+
+# Required by folks, needed by empathy
+>=gnome-extra/evolution-data-server-3.8 vala
 
 # Required for cheese in gnome3
 >=media-libs/gst-plugins-base-1.0 theora
