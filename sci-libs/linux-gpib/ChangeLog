@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/linux-gpib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.22 2013/12/06 00:04:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.23 2013/12/14 23:15:41 dilfridge Exp $
+
+  14 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  linux-gpib-3.2.20.ebuild, metadata.xml:
+  Add isa useflag
 
 *linux-gpib-3.2.20 (06 Dec 2013)
 
