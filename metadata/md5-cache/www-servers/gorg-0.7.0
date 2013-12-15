@@ -4,11 +4,11 @@ DESCRIPTION=Back-end XSLT processor for an XML-based web site
 EAPI=5
 HOMEPAGE=http://www.gentoo.org/proj/en/gdp/doc/gorg.xml
 IUSE=fastcgi test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ppc ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/libxml2-2.6.16 >=dev-libs/libxslt-1.1.12 fastcgi? ( virtual/httpd-fastcgi ) ruby_targets_ruby18? ( fastcgi? ( >=dev-ruby/fcgi-0.8.5-r1[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( fastcgi? ( >=dev-ruby/fcgi-0.8.5-r1[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( fastcgi? ( >=dev-ruby/fcgi-0.8.5-r1[ruby_targets_ruby20] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 )
 REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 )
 SLOT=0
 SRC_URI=https://github.com/gentoo/gorg/archive/v0.7.0.tar.gz -> gorg-0.7.0.tar.gz
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	ruby-ng	69c01a1b984ed066bc91b4397b002f6a	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=c2f41fcc782b9036d759fa73b96bada7
+_md5_=ab7bcfc89861c1796be9c8683e5f5e1b

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ragol/ragol-1.0.1.ebuild,v 1.2 2013/12/02 00:18:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ragol/ragol-1.0.1.ebuild,v 1.5 2013/12/15 17:37:08 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby19"
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/jpace/ragol/archive/v${PV}.tar.gz -> ${PN}-git-${PV}
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa"
+KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/logue-1.0.0"

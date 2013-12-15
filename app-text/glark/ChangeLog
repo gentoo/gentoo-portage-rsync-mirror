@@ -1,6 +1,15 @@
 # ChangeLog for app-text/glark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.63 2013/12/07 10:00:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/glark/ChangeLog,v 1.66 2013/12/15 17:37:11 ago Exp $
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> glark-1.10.4.ebuild:
+  Add ~x86, wrt bug #493006
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> glark-1.10.4.ebuild:
+  Add ~sparc, wrt bug #493006
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> glark-1.10.4.ebuild:
+  Add ~ppc, wrt bug #493006
 
   07 Dec 2013; Hans de Graaff <graaff@gentoo.org> glark-1.10.4.ebuild,
   metadata.xml:
