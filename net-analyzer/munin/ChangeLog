@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.148 2013/11/16 09:49:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.149 2013/12/15 22:12:54 flameeyes Exp $
+
+*munin-2.0.19 (15 Dec 2013)
+
+  15 Dec 2013; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/munin-node_init.d_2.0.19, +munin-2.0.19.ebuild:
+  Version bump; remove reload command to init.d as it's not working (bug
+  #465970); use tmpfilesd to create /run/munin altogether.
 
   16 Nov 2013; Pacho Ramos <pacho@gentoo.org> munin-2.0.14-r1.ebuild:
   x86 stable, bug #478770
