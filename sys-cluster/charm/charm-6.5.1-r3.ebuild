@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.5.1-r3.ebuild,v 1.1 2013/12/13 19:51:35 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.5.1-r3.ebuild,v 1.2 2013/12/15 04:19:41 nicolasbock Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic fortran-2 multilib toolchain-funcs
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+
+inherit eutils flag-o-matic fortran-2 multilib toolchain-funcs python-any-r1
 
 DESCRIPTION="Message-passing parallel language and runtime system"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
@@ -22,9 +24,12 @@ DEPEND="
 		>=app-text/poppler-0.12.3-r3[utils]
 		dev-tex/latex2html
 		virtual/tex-base
-		>=dev-python/beautifulsoup-4
-		dev-python/lxml
+		$(python_gen_any_dep '
+			>=dev-python/beautifulsoup-4[${PYTHON_USEDEP}]
+			dev-python/lxml[${PYTHON_USEDEP}]
+		')
 		media-libs/netpbm
+		${PYTHON_DEPS}
 	)"
 
 REQUIRED_USE="
@@ -33,6 +38,10 @@ REQUIRED_USE="
 	charmproduction? ( !charmdebug !charmtracing )"
 
 FORTRAN_STANDARD="90"
+
+pkg_setup() {
+	use doc && python-any-r1_pkg_setup
+}
 
 get_opts() {
 	local CHARM_OPTS

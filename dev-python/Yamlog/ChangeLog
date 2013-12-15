@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Yamlog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Yamlog/ChangeLog,v 1.1 2013/12/15 03:55:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Yamlog/ChangeLog,v 1.2 2013/12/15 04:10:23 idella4 Exp $
+
+  15 Dec 2013; Ian Delaney <idella4@gentoo.org> Yamlog-0.9.ebuild:
+  Add pypi for HOMEPAGE, for now
 
 *Yamlog-0.9 (15 Dec 2013)
 
