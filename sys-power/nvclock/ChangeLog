@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/nvclock
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.14 2013/08/16 14:23:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nvclock/ChangeLog,v 1.15 2013/12/15 11:48:50 tomwij Exp $
+
+  15 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -nvclock-0.8_p20110102-r1.ebuild,
+  nvclock-0.8_p20110102-r2.ebuild:
+  [QA] Create /usr/bin/ in image such that the rest of the src_install phase can
+  proceed; for bug #481244, reported by Alex Barker. Removed old revision.
+  Stabilization of newer version in bug #494320.
 
   16 Aug 2013; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Set new maintainer.
