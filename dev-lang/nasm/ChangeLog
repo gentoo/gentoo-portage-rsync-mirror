@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.110 2013/02/14 12:09:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.111 2013/12/15 18:34:05 mr_bones_ Exp $
+
+*nasm-2.10.09 (15 Dec 2013)
+
+  15 Dec 2013; Michael Sterrett <mr_bones_@gentoo.org> +nasm-2.10.09.ebuild:
+  version bump
 
   14 Feb 2013; Agostino Sarubbo <ago@gentoo.org> nasm-2.10.07.ebuild:
   Stable for x86, wrt bug #457116

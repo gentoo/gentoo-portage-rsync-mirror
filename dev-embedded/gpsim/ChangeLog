@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/gpsim
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.61 2012/08/05 08:37:23 ssuominen Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.62 2013/12/15 18:45:50 rafaelmartins Exp $
+
+*gpsim-0.27.0 (15 Dec 2013)
+
+  15 Dec 2013; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +gpsim-0.27.0.ebuild:
+  Version bump.
 
   05 Aug 2012; Samuli Suominen <ssuominen@gentoo.org> gpsim-0.26.1.ebuild:
   Use virtual/yacc. Block dev-embedded/gpsim-lcd because the libgpsim_lcd
