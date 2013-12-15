@@ -1,6 +1,30 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.639 2013/12/14 15:27:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.645 2013/12/15 19:25:16 ago Exp $
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for sparc, wrt bug #493664
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for arm, wrt bug #493664
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for ppc64, wrt bug #493664
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for ppc64, wrt bug #493664
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for ppc, wrt bug #493664
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for ppc, wrt bug #493664
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for x86, wrt bug #493664
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for amd64, wrt bug #493664
 
   14 Dec 2013; Jeroen Roovers <jer@gentoo.org> samba-3.6.22.ebuild:
   Stable for HPPA (bug #493664).
