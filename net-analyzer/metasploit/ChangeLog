@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.70 2013/11/03 03:07:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.71 2013/12/15 15:26:32 zerochaos Exp $
+
+  15 Dec 2013; Rick Farina <zerochaos@gentoo.org> -metasploit-4.0.0-r1.ebuild,
+  -metasploit-4.2.0.ebuild, -metasploit-4.3.0.ebuild, -metasploit-4.4.0.ebuild:
+  cleanup old ebuilds in prep for import of new ones
 
   03 Nov 2013; Manuel Rüger <mrueg@gentoo.org> metasploit-4.0.0-r1.ebuild,
   metasploit-4.2.0.ebuild, metasploit-4.3.0.ebuild, metasploit-4.4.0-r1.ebuild,
