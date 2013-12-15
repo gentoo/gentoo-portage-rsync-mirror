@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.22 2013/03/02 21:14:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.23 2013/12/15 13:36:42 mgorny Exp $
+
+*mupen64plus-2.0 (15 Dec 2013)
+
+  15 Dec 2013; Michał Górny <mgorny@gentoo.org> +mupen64plus-2.0.ebuild,
+  metadata.xml:
+  Add a meta-package for mupen64plus-2.0.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mupen64plus-1.5-r1.ebuild,
   mupen64plus-1.5-r2.ebuild:

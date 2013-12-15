@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15262 2013/12/15 11:21:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15263 2013/12/15 14:00:11 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -385,16 +385,6 @@ sci-geosciences/googleearth
 >=sys-kernel/raspberrypi-image-3.7_pre
 >=sys-kernel/raspberrypi-sources-3.7_pre
 >=sys-boot/raspberrypi-firmware-1_pre
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (11 Jul 2013)
-# pwlib/openh323 masked for removal, bugs #290062 and #290063
-dev-libs/pwlib
-net-libs/openh323
-<=net-libs/opal-2.2.11
-<=net-voip/ekiga-2.0.12
-<=net-voip/gnugk-2.2.8
-<=net-voip/openmcu-2.2.1
-<=net-voip/yate-2.0.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (12 Jul 2013)
 # Probably new versions will work with hexchat too.
