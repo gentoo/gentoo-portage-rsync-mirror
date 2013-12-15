@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/oops
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.26 2011/01/10 10:48:34 flameeyes Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.27 2013/12/15 20:26:40 tomwij Exp $
+
+*oops-1.5.24_pre20050503-r5 (15 Dec 2013)
+
+  15 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/oops-1.5.24-respect-flags.patch, +oops-1.5.24_pre20050503-r5.ebuild:
+  Revision bump. Respect LDFLAGS, LD and CXX; fixes bugs #476000, #476002 and
+  #476004. Thanks to dlan for contributing patches. Use /run instead of
+  /var/run; fixes bug #451794. EAPI 5.
 
   10 Jan 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   oops-1.5.24_pre20050503-r4.ebuild,

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/memoizable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.1 2013/12/13 02:48:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memoizable/ChangeLog,v 1.2 2013/12/15 20:26:56 mrueg Exp $
+
+*memoizable-0.3.0 (15 Dec 2013)
+
+  15 Dec 2013; Manuel Rüger <mrueg@gentoo.org> +memoizable-0.3.0.ebuild,
+  -memoizable-0.2.0.ebuild:
+  Version bump. Cleanup old.
 
 *memoizable-0.2.0 (13 Dec 2013)
 
