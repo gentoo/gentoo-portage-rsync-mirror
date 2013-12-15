@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup unpack
+DEPEND=app-arch/unzip >=sys-apps/sed-4
+DESCRIPTION=Arcade styled 2d action game centered around evacuating civilians from burning buildings
+EAPI=5
+HOMEPAGE=http://tangramgames.dk/games/mrrescue/
+KEYWORDS=~amd64 ~x86
+LICENSE=CC-BY-SA-3.0 MIT ZLIB
+RDEPEND=games-engines/love:0
+SLOT=0
+SRC_URI=https://github.com/SimonLarsen/mrrescue/releases/download/v1.02b/mrrescue-1.02b-love.zip http://dev.gentoo.org/~hasufell/distfiles/mrrescue.png
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	games	0fb7637597e0869f6c8be79b11d0135a	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=6344672e04e972d97ddb4a577ee9bc34

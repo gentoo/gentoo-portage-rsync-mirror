@@ -1,6 +1,9 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.51 2013/12/15 12:48:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.52 2013/12/15 13:10:13 hasufell Exp $
+
+  15 Dec 2013; Julian Ospald <hasufell@gentoo.org> files/jabberd2-2.3.1.init:
+  nicer pidfile detection
 
 *jabberd2-2.3.1-r1 (15 Dec 2013)
 
