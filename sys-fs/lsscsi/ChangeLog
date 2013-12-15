@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.83 2013/11/01 13:50:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.84 2013/12/15 08:53:07 ago Exp $
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lsscsi-0.27.ebuild:
+  Stable for sparc, wrt bug #474306
 
   01 Nov 2013; Agostino Sarubbo <ago@gentoo.org> lsscsi-0.27.ebuild:
   Stable for x86, wrt bug #474306

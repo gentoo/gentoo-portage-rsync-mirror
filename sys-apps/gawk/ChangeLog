@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.166 2013/12/09 13:14:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.167 2013/12/15 08:54:14 ago Exp $
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gawk-4.0.2.ebuild:
+  Stable for sparc, wrt bug #467190
 
   09 Dec 2013; Jeroen Roovers <jer@gentoo.org> gawk-4.0.2.ebuild:
   Stable for HPPA (bug #467190).
