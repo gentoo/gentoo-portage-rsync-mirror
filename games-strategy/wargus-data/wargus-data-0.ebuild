@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/wargus-data-0.ebuild,v 1.3 2012/06/06 19:27:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/wargus-data-0.ebuild,v 1.4 2013/12/15 14:39:36 hasufell Exp $
 
 EAPI=4
 
@@ -10,12 +10,11 @@ DESCRIPTION="Warcraft II data for wargus (needs DOS CD)"
 HOMEPAGE="http://wargus.sourceforge.net/"
 SRC_URI=""
 
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=games-strategy/wargus-2.2.6"
 DEPEND="${RDEPEND}
 	media-sound/cdparanoia
 	media-sound/timidity++

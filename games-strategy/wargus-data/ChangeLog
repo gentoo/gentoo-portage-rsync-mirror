@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wargus-data
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/ChangeLog,v 1.4 2012/06/06 19:38:06 hasufell Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/ChangeLog,v 1.5 2013/12/15 14:39:36 hasufell Exp $
+
+  15 Dec 2013; Julian Ospald <hasufell@gentoo.org> wargus-data-0.ebuild:
+  remove games-strategy/wargus from RDEPEND, fix license
 
   06 Jun 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   set myself as maintainer
