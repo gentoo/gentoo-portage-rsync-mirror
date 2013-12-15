@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/spork
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.19 2013/11/11 15:36:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/ChangeLog,v 1.20 2013/12/15 09:25:26 graaff Exp $
+
+  15 Dec 2013; Hans de Graaff <graaff@gentoo.org> +spork-0.9.2.ebuild:
+  Add back non-ruby20 version of spork as a stable candidate.
 
   11 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -spork-0.9.2.ebuild:
   Cleanup old.
