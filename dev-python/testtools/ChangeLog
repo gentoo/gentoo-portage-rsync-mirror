@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.81 2013/12/13 05:59:39 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.82 2013/12/15 01:37:41 floppym Exp $
+
+*testtools-0.9.34 (15 Dec 2013)
+
+  15 Dec 2013; Mike Gilbert <floppym@gentoo.org> +testtools-0.9.34.ebuild:
+  Bump.
 
 *testtools-0.9.33 (13 Dec 2013)
 

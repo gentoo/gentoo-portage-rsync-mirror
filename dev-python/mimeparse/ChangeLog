@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mimeparse
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.20 2013/12/07 10:52:46 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mimeparse/ChangeLog,v 1.21 2013/12/15 01:31:57 floppym Exp $
+
+  15 Dec 2013; Mike Gilbert <floppym@gentoo.org> mimeparse-0.1.4-r1.ebuild:
+  Add ~sparc keyword for testtools.
 
   07 Dec 2013; Akinori Hattori <hattya@gentoo.org> mimeparse-0.1.4-r1.ebuild:
   keyword ~ia64 wrt bug #468268
