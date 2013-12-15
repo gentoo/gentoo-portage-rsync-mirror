@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8425 2013/12/15 10:32:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8426 2013/12/15 11:21:13 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Dec 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask mupen64plus-2.0 before committing.
 
   15 Dec 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask Rails 2.3 for removal, bug 406547.

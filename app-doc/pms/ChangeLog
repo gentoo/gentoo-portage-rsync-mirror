@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.41 2013/12/12 12:04:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.42 2013/12/15 11:24:55 johu Exp $
+
+  15 Dec 2013; Johannes Huber <johu@gentoo.org> pms-5-r2.ebuild:
+  x86 stable, bug #491910
 
   12 Dec 2013; Chema Alonso <nimiux@gentoo.org> pms-5-r2.ebuild:
   Stable for amd64 wrt bug #491910
