@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.7.0.ebuild,v 1.1 2013/10/20 08:04:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.7.0.ebuild,v 1.3 2013/12/15 17:30:24 ago Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20"
@@ -14,7 +14,7 @@ IUSE="fastcgi"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 
 CDEPEND="
 	>=dev-libs/libxml2-2.6.16

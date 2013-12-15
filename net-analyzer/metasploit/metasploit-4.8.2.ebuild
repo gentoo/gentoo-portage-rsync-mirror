@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.6 2013/12/15 17:19:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.8.2.ebuild,v 1.1 2013/12/15 17:19:08 zerochaos Exp $
 
 EAPI="5"
 inherit eutils
@@ -21,7 +21,7 @@ fi
 
 DESCRIPTION="Advanced open-source framework for developing, testing, and using vulnerability exploit code"
 HOMEPAGE="http://www.metasploit.org/"
-SLOT="9999"
+SLOT="4.8"
 LICENSE="BSD"
 IUSE="development +java lorcon +pcap test"
 
@@ -59,7 +59,6 @@ DEPEND="${COMMON_DEPEND}
 		dev-ruby/shoulda-matchers[ruby_targets_ruby19]
 		dev-ruby/timecop[ruby_targets_ruby19] )
 	"
-		#>=dev-ruby/rake-10.0.0[ruby_targets_ruby19] re-add when in gentoo. I'm not allowed to add it :-(
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-admin/eselect-metasploit-0.10"

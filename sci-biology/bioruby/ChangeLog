@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/ChangeLog,v 1.19 2013/12/07 12:39:45 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/ChangeLog,v 1.20 2013/12/15 17:18:22 ago Exp $
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> bioruby-1.4.3.0001-r1.ebuild:
+  Stable for amd64, wrt bug #488414
 
   07 Dec 2013; Johannes Huber <johu@gentoo.org> bioruby-1.4.3.0001-r1.ebuild:
   x86 stable, bug #488414

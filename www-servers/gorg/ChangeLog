@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/gorg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.38 2013/10/20 08:04:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/ChangeLog,v 1.41 2013/12/15 17:30:36 ago Exp $
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> Manifest:
+  Stable for x86, wrt bug #492268
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gorg-0.7.0.ebuild:
+  Stable for ppc, wrt bug #492268
+
+  15 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gorg-0.7.0.ebuild:
+  Stable for amd64, wrt bug #492268
 
 *gorg-0.7.0 (20 Oct 2013)
 

@@ -4,21 +4,12 @@
 	<maintainer>
 		<email>zerochaos@gentoo.org</email>
 		<name>Rick Farina</name>
+		<description>Very delicate package, ask before you touch please</description>
 	</maintainer>
-	<herd>netmon</herd>
-	<longdescription lang="en">
-		This project is a powerful tool for penetration testing, exploit
-		development, and vulnerability research.  The Framework is written in
-		the Perl scripting language and includes various components written in
-		C, assembler, and Python.  This project can be roughly compared to
-		commercial offerings such as Immunity's CANVAS and Core Security
-		Technology's Impact.  The major difference between the Framework and
-		these commercial products is the focus; while the commercial products
-		need to always provide the latest exploits and an intuitive GUI, the
-		Framework was designed to facilitate research and experimentation with
-		new technologies.
-	</longdescription>
 	<use>
+		<flag name='development'>Install dependancies needed for metasploit and exploit development</flag>
 		<flag name='gui'>Enable Java GUI</flag>
+		<flag name='lorcon'>Enable lorcon for raw packet injection</flag>
+		<flag name='pcap'>Enable libpcap for packet sniffing</flag>
 	</use>
 </pkgmetadata>
