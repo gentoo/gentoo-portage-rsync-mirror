@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-DBI
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.53 2013/08/25 08:35:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-DBI/ChangeLog,v 1.54 2013/12/15 10:59:53 zlogene Exp $
+
+  15 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -Class-DBI-3.0.17.ebuild,
+  Class-DBI-3.0.17-r1.ebuild:
+  amd64/ppc64/x86 stable wrt bug #492088; Drop old.
 
 *Class-DBI-3.0.17-r1 (25 Aug 2013)
 
