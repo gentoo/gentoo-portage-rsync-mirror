@@ -1,6 +1,6 @@
 # Copyright 1999-20013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/Net-Kismet-0.04-r1.ebuild,v 1.1 2013/08/26 14:12:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/Net-Kismet-0.04-r1.ebuild,v 1.2 2013/12/15 16:46:56 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kismetwireless.net"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="amd64 ia64 ppc x86"
 IUSE=""
 SRC_TEST="do parallel"
 

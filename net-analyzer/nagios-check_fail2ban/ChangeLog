@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-check_fail2ban
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/ChangeLog,v 1.5 2013/06/20 07:16:57 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/ChangeLog,v 1.6 2013/12/15 16:46:09 hwoarang Exp $
+
+  15 Dec 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add Samuel Damashek <samuel.damashek@gmail.com> as proxy-maintainer
 
   20 Jun 2013; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from maintainers
@@ -24,4 +27,3 @@
   12 May 2010; Benedikt Böhm <hollow@gentoo.org>
   +nagios-check_fail2ban-2.ebuild, +metadata.xml:
   initial ebuild
-

@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/rjb
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rjb/ChangeLog,v 1.1 2013/12/15 16:41:32 zerochaos Exp $
+
+*rjb-1.4.5 (15 Dec 2013)
+
+  15 Dec 2013; Rick Farina <zerochaos@gentoo.org> +metadata.xml,
+  +rjb-1.4.5.ebuild:
+  import from pentoo for use with metasploit

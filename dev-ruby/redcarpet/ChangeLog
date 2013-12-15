@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/redcarpet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/ChangeLog,v 1.10 2013/08/22 02:46:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/ChangeLog,v 1.12 2013/12/15 16:54:41 zerochaos Exp $
+
+  15 Dec 2013; Rick Farina <zerochaos@gentoo.org> redcarpet-2.3.0.ebuild:
+  adding ~x86 with permission of maintainer (and after careful testing)
+
+  15 Dec 2013; Rick Farina <zerochaos@gentoo.org> redcarpet-2.3.0.ebuild:
+  adding ~arm
 
   22 Aug 2013; Manuel Rüger <mrueg@gentoo.org> -redcarpet-2.2.2.ebuild:
   Cleanup.

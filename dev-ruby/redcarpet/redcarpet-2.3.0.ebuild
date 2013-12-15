@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/redcarpet-2.3.0.ebuild,v 1.1 2013/08/22 00:40:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/redcarpet-2.3.0.ebuild,v 1.3 2013/12/15 16:54:41 zerochaos Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19"
@@ -17,7 +17,7 @@ HOMEPAGE="https://github.com/vmg/redcarpet"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 all_ruby_prepare() {

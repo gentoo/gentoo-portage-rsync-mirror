@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>proxy-maintainers</herd>
 <maintainer>
-  <email>maintainer-needed@gentoo.org</email>
+	<email>samuel.damashek@gmail.com</email>
+	<name>Samuel Damashek</name>
 </maintainer>
 <longdescription>
 This project includes an event-driven IRC client framework written in Python,

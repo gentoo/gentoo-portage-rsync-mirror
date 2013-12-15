@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Kismet
 # Copyright 2000-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.10 2013/08/26 14:12:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Kismet/ChangeLog,v 1.11 2013/12/15 16:46:56 zlogene Exp $
+
+  15 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -Net-Kismet-0.04.ebuild,
+  Net-Kismet-0.04-r1.ebuild:
+  amd64/ia64/ppc/x86 stable wrt bug #492198; Drop old revision.
 
 *Net-Kismet-0.04-r1 (26 Aug 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-check_pidfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_pidfile/ChangeLog,v 1.2 2013/06/20 07:18:03 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_pidfile/ChangeLog,v 1.3 2013/12/15 16:46:55 hwoarang Exp $
+
+  15 Dec 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Add Samuel Damashek <samuel.damashek@gmail.com> as proxy-maintainer
 
   20 Jun 2013; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from maintainers
@@ -10,4 +13,3 @@
   17 Dec 2012; Benedikt Böhm <hollow@gentoo.org>
   +nagios-check_pidfile-1.ebuild, +metadata.xml:
   add net-analyzer/nagios-check_pidfile
-
