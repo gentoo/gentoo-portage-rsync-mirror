@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.17.ebuild,v 1.4 2013/11/01 22:11:47 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.1-r1.ebuild,v 1.1 2013/12/15 12:48:59 hasufell Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit db-use eutils flag-o-matic pam
 
 DESCRIPTION="Open Source Jabber Server"
 HOMEPAGE="http://jabberd2.org"
-SRC_URI="mirror://github/jabberd2/jabberd2/jabberd-${PV}.tar.xz"
+SRC_URI="https://github.com/jabberd2/jabberd2/releases/download/jabberd-${PV}/jabberd-${PV}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,7 +38,7 @@ DEPEND="${DEPEND}
 	virtual/pkgconfig
 	test? ( dev-libs/check )"
 
-DOCS=( AUTHORS README UPGRADE )
+DOCS=( AUTHORS README )
 
 S=${WORKDIR}/jabberd-${PV}
 
@@ -51,17 +51,34 @@ src_prepare() {
 		-e 's,@localstatedir@/lib/jabberd2/fs,@localstatedir@/@package@/fs,g' \
 		-e 's,@localstatedir@,/var/spool,g' \
 		-e 's,@package@,jabber,g' \
-		etc/{sm,router,c2s,s2s}.xml.dist.in || die
+		etc/{sm,router,c2s,s2s}.xml.dist.in || die "fixing default directory locations failed!"
 
 	# If the package wasn't merged with sqlite then default to use berkdb
 	use sqlite ||
 		sed -i \
 			-e 's,<\(module\|driver\)>sqlite<\/\1>,<\1>db</\1>,g' \
-			etc/{c2s,sm}.xml.dist.in || die
+			etc/{c2s,sm}.xml.dist.in || die "setting berkdb as default failed!"
+
+	# avoid file collision with x11-misc/screen-message wrt #453994
+	sed -i \
+		-e 's/@jabberd_router_bin@/jabberd2-router/' \
+		-e 's/@jabberd_c2s_bin@/jabberd2-c2s/' \
+		-e 's/@jabberd_s2s_bin@/jabberd2-s2s/' \
+		-e 's/@jabberd_sm_bin@/jabberd2-sm/' \
+		etc/jabberd*.in || die "fixing file collisions failed!"
+
+	# rename pid files wrt #241472
+	sed -i \
+		-e '/pidfile/s/c2s\.pid/jabberd2-c2s\.pid/' \
+		-e '/pidfile/s/router\.pid/jabberd2-router\.pid/' \
+		-e '/pidfile/s/s2s\.pid/jabberd2-s2s\.pid/' \
+		-e '/pidfile/s/sm\.pid/jabberd2-sm\.pid/' \
+		etc/*.xml.dist.in || die "renaming pid files failed!"
 }
 
 src_configure() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=207655#c3
+	# https://github.com/jabberd2/jabberd2/issues/34
 	replace-flags -O[3s] -O2
 
 	# --enable-pool-debug is currently broken
@@ -85,6 +102,8 @@ src_configure() {
 }
 
 src_install() {
+	local i
+
 	default
 	prune_libtool_files --modules
 
@@ -94,10 +113,16 @@ src_install() {
 	fperms 770 /var/spool/jabber/{fs,db}
 	fperms 750 /usr/bin/{jabberd,router,sm,c2s,s2s}
 
-	newinitd "${FILESDIR}/${PN}-2.2.17.init" jabberd
-	newpamd "${FILESDIR}/${PN}-2.2.8.pamd" jabberd
+	# avoid file collision with x11-misc/screen-message wrt #453994
+	for i in router sm c2s s2s ; do
+		einfo "renaming /usr/bin/${i} to /usr/bin/jabberd2-${i}"
+		mv "${ED%/}"/usr/bin/${i} "${ED%/}"/usr/bin/jabberd2-${i} || die
+	done
+
+	newinitd "${FILESDIR}/${P}.init" jabberd
+	newpamd "${FILESDIR}/${P}.pamd" jabberd
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/${PN}-2.2.17.logrotate" jabberd
+	newins "${FILESDIR}/${P}.logrotate" jabberd
 
 	docompress -x /usr/share/doc/${PF}/tools
 	docinto tools
@@ -118,8 +143,11 @@ pkg_postinst() {
 	if use sqlite || use mysql || use postgres; then
 		echo
 		einfo 'You will need to setup or update your database using the'
-		einfo "scripts in /usr/share/doc/${PF}/tools/"
+		einfo 'scripts in /usr/share/doc/${PF}/tools/'
 		echo
 	fi
 
+	ewarn 'If you are upgrading from <=jabberd2-2.2.17 then you might have'
+	ewarn 'to update /etc/jabber/jabberd.cfg via etc-update because'
+	ewarn 'the binaries have been renamed to avoid file collisions!'
 }

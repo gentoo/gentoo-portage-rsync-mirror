@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/yate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.23 2013/10/27 09:58:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/ChangeLog,v 1.24 2013/12/15 12:32:54 moult Exp $
+
+  15 Dec 2013; Dion Moult <moult@gentoo.org> -yate-2.0.0.ebuild:
+  <=net-voip/yate-2.0.0 removal (pending 11 July 2013), see #290062 and #290063
+  for reference.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due voip herd removal:

@@ -1,6 +1,15 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.50 2013/12/13 14:41:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.51 2013/12/15 12:48:59 hasufell Exp $
+
+*jabberd2-2.3.1-r1 (15 Dec 2013)
+
+  15 Dec 2013; Julian Ospald <hasufell@gentoo.org> -jabberd2-2.2.17.ebuild,
+  -jabberd2-2.2.17-r1.ebuild, -files/jabberd2-2.2.17.init,
+  -files/jabberd2-2.2.17.logrotate, -jabberd2-2.3.1.ebuild,
+  +jabberd2-2.3.1-r1.ebuild, +files/jabberd2-2.3.1.init,
+  +files/jabberd2-2.3.1.logrotate, +files/jabberd2-2.3.1.pamd:
+  fix init script and revbump wrt #494302, remove old
 
 *jabberd2-2.3.1 (13 Dec 2013)
 
