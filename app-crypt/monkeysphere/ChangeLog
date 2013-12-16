@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/monkeysphere
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.1 2013/11/12 07:17:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/monkeysphere/ChangeLog,v 1.2 2013/12/16 11:26:32 tomwij Exp $
+
+*monkeysphere-0.36-r1 (16 Dec 2013)
+
+  16 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  +files/monkeysphere-0.36_default_shell.patch,
+  +files/monkeysphere-0.36_non_default_port.patch,
+  +files/monkeysphere-0.36_userid_empty_line.patch,
+  +monkeysphere-0.36-r1.ebuild, metadata.xml:
+  Revision bump, added patches from bug #313253; fixes default shell, non
+  default port, empty userid line, user, group and permissions. Added Kristian
+  Fiskerstrand (K_F) to metadata.xml as proxied maintainer.
 
 *monkeysphere-0.36 (12 Nov 2013)
 
