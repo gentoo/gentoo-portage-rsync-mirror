@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/piklab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/ChangeLog,v 1.8 2013/03/02 21:06:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/piklab/ChangeLog,v 1.9 2013/12/16 05:17:38 patrick Exp $
+
+*piklab-0.16.2 (16 Dec 2013)
+
+  16 Dec 2013; Patrick Lauer <patrick@gentoo.org> +piklab-0.16.2.ebuild:
+  Bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> piklab-0.16.1.ebuild:
   Move Qt dependencies to the new category

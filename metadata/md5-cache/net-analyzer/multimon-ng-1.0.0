@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=pulseaudio? ( media-sound/pulseaudio ) x11-libs/libX11
+DEPEND=pulseaudio? ( media-sound/pulseaudio ) dev-qt/qtcore x11-libs/libX11
 DESCRIPTION=a fork of multimon, decodes multiple digital transmission modes
 EAPI=5
 HOMEPAGE=https://github.com/EliasOenal/multimonNG
 IUSE=pulseaudio
 KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2
-RDEPEND=pulseaudio? ( media-sound/pulseaudio ) x11-libs/libX11
+RDEPEND=pulseaudio? ( media-sound/pulseaudio ) dev-qt/qtcore x11-libs/libX11
 SLOT=0
 SRC_URI=https://github.com/EliasOenal/multimonNG/archive/1.0.0.tar.gz -> multimon-ng-1.0.0.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=fad022a074f0c0911ce93207255bc688
+_md5_=9745282aa4cd4bd803937109c9f66535

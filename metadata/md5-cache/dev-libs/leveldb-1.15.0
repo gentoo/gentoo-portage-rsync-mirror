@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install test
+DEPEND=tcmalloc? ( dev-util/google-perftools ) snappy? ( app-arch/snappy static-libs? ( app-arch/snappy[static-libs] ) )
+DESCRIPTION=a fast key-value storage library written at Google
+EAPI=4
+HOMEPAGE=http://code.google.com/p/leveldb/
+IUSE=+snappy static-libs +tcmalloc
+KEYWORDS=~amd64 ~arm ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=tcmalloc? ( dev-util/google-perftools ) snappy? ( app-arch/snappy static-libs? ( app-arch/snappy[static-libs] ) )
+SLOT=0
+SRC_URI=http://leveldb.googlecode.com/files/leveldb-1.15.0.tar.gz
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=a3cbb19fe3eafb331c8f419036d673d1

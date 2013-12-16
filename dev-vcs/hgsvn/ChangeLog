@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/hgsvn
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsvn/ChangeLog,v 1.5 2013/06/01 12:15:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsvn/ChangeLog,v 1.6 2013/12/16 05:22:22 patrick Exp $
+
+*hgsvn-0.2.3 (16 Dec 2013)
+
+  16 Dec 2013; Patrick Lauer <patrick@gentoo.org> +hgsvn-0.2.3.ebuild:
+  Bump
 
   01 Jun 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #151880
