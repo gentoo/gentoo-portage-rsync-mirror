@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.159 2013/12/16 00:28:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.1.ebuild,v 1.1 2013/12/16 00:28:21 tetromino Exp $
 
 EAPI="5"
 
@@ -22,9 +22,9 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-GV="2.24"
-MV="4.5.2"
-PULSE_PATCHES="winepulse-patches-1.7.8"
+GV="2.21"
+MV="0.0.8"
+PULSE_PATCHES="winepulse-patches-1.6-rc1"
 WINE_GENTOO="wine-gentoo-2013.06.24"
 DESCRIPTION="Free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
@@ -39,7 +39,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses netapi nls odbc openal opencl +opengl osmesa oss +perl +png +prelink pulseaudio +realtime +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
+IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa oss +perl +png +prelink pulseaudio +realtime +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
 REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 	test? ( abi_x86_32 )
 	elibc_glibc? ( threads )
@@ -77,9 +77,8 @@ NATIVE_DEPEND="
 	gsm? ( media-sound/gsm:= )
 	jpeg? ( virtual/jpeg:0= )
 	ldap? ( net-nds/openldap:= )
-	lcms? ( media-libs/lcms:2= )
+	lcms? ( media-libs/lcms:0= )
 	mp3? ( >=media-sound/mpg123-1.5.0 )
-	netapi? ( net-fs/samba[netapi(+)] )
 	nls? ( sys-devel/gettext )
 	odbc? ( dev-db/unixODBC:= )
 	osmesa? ( media-libs/mesa[osmesa] )
@@ -142,7 +141,7 @@ COMMON_DEPEND="
 				media-libs/alsa-lib[abi_x86_32]
 			) )
 			cups? ( app-emulation/emul-linux-x86-baselibs )
-			opencl? ( virtual/opencl[abi_x86_32] )
+			opencl? ( virtual/opencl[abi_x86_32(+)] )
 			opengl? ( || (
 				app-emulation/emul-linux-x86-opengl[development]
 				(
@@ -161,7 +160,7 @@ COMMON_DEPEND="
 			ldap? ( app-emulation/emul-linux-x86-baselibs[development] )
 			lcms? ( || (
 				app-emulation/emul-linux-x86-baselibs[development]
-				media-libs/lcms:2[abi_x86_32]
+				media-libs/lcms:0[abi_x86_32]
 			) )
 			mp3? ( || (
 				app-emulation/emul-linux-x86-soundlibs[development]
@@ -173,7 +172,7 @@ COMMON_DEPEND="
 				>=app-emulation/emul-linux-x86-opengl-20121028[development]
 				media-libs/mesa[osmesa,abi_x86_32]
 			) )
-			xml? ( >=app-emulation/emul-linux-x86-baselibs-20131008[development] )
+			xml? ( >=app-emulation/emul-linux-x86-baselibs-20130224[development] )
 			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
 			ssl? ( app-emulation/emul-linux-x86-baselibs[development] )
 			png? ( || (
@@ -301,11 +300,7 @@ do_configure() {
 		if [[ ${ABI} == amd64 ]]; then
 			myeconfargs+=( --enable-win64 )
 		else
-			# We currently don't have 32-bit libnetapi on amd64; #494394
-			myeconfargs+=(
-				--without-netapi
-				--disable-win64
-			)
+			myeconfargs+=( --disable-win64 )
 		fi
 
 		# Note: using --with-wine64 results in problems with multilib.eclass
@@ -336,7 +331,6 @@ src_configure() {
 		$(use_with jpeg)
 		$(use_with ldap)
 		$(use_with mp3 mpg123)
-		$(use_with netapi)
 		$(use_with nls gettext)
 		$(use_with openal)
 		$(use_with opencl)
