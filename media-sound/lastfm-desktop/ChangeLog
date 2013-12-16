@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lastfm-desktop
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-desktop/ChangeLog,v 1.2 2013/10/08 12:51:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-desktop/ChangeLog,v 1.3 2013/12/16 12:23:35 jlec Exp $
+
+  16 Dec 2013; Justin Lecher <jlec@gentoo.org> lastfm-desktop-2.1.36.ebuild:
+  Add missing USE dep
 
 *lastfm-desktop-2.1.36 (08 Oct 2013)
 

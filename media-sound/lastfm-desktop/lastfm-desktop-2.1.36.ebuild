@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-desktop/lastfm-desktop-2.1.36.ebuild,v 1.1 2013/10/08 12:51:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-desktop/lastfm-desktop-2.1.36.ebuild,v 1.2 2013/12/16 12:23:35 jlec Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	dev-qt/qtsql:4
 	dev-qt/qtwebkit:4
 	media-libs/libgpod
-	media-libs/liblastfm
+	media-libs/liblastfm[fingerprint]
 	sys-libs/zlib
 	|| ( dev-qt/qtphonon:4 kde-base/phonon-kde:4 )"
 DEPEND="${RDEPEND}"
