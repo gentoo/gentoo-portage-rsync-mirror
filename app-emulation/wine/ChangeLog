@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.487 2013/12/16 00:28:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.488 2013/12/16 14:31:56 tetromino Exp $
+
+  16 Dec 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.7.8.ebuild,
+  wine-9999.ebuild:
+  Add a warning that on amd64, netapi is currently 64-bit only
 
 *wine-1.7.8 (16 Dec 2013)
 *wine-1.6.1 (16 Dec 2013)

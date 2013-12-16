@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.159 2013/12/16 00:28:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.160 2013/12/16 14:31:56 tetromino Exp $
 
 EAPI="5"
 
@@ -301,6 +301,7 @@ do_configure() {
 		if [[ ${ABI} == amd64 ]]; then
 			myeconfargs+=( --enable-win64 )
 		else
+			use netapi && ewarn "Disabling netapi in wine32; see https://bugs.gentoo.org/494394"
 			# We currently don't have 32-bit libnetapi on amd64; #494394
 			myeconfargs+=(
 				--without-netapi

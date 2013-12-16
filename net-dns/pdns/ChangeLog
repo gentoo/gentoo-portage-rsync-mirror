@@ -1,6 +1,17 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.89 2013/09/22 10:31:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.90 2013/12/16 14:56:40 ultrabug Exp $
+
+*pdns-3.3 (16 Dec 2013)
+
+  16 Dec 2013; Ultrabug <ultrabug@gentoo.org> +pdns-3.3.ebuild,
+  +files/pdns-3.3-fix-autoconf.patch,
+  +files/pdns-3.3-fix-conditional-polarssl.patch,
+  +files/pdns-3.3-fix-curl-link.patch,
+  +files/pdns-3.3-fix-polarssl_1.3.0.patch, +files/pdns-3.3-lib_lua.patch,
+  +files/pdns-3.3_sha.hh:
+  Version bump, fix #493302 thx to @Nawadanp, add support for polarSSL 1.3.0 in
+  tree
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> pdns-3.2.ebuild:
   Add ~amd64/~x86, wrt bug #456412

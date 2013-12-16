@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.47 2013/05/22 05:16:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.48 2013/12/16 14:44:30 swift Exp $
+
+  16 Dec 2013; Sven Vermeulen <swift@gentoo.org> rng-tools-4-r5.ebuild,
+  rng-tools-4-r6.ebuild:
+  Adding dependency to selinux-rngd
 
   22 May 2013; Mike Frysinger <vapier@gentoo.org> files/rngd-initd-3,
   files/rngd-initd-4, files/rngd-initd-4.1:

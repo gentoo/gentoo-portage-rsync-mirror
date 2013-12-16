@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.59 2013/08/23 18:13:25 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.60 2013/12/16 14:38:09 swift Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -200,6 +200,7 @@ sec-policy/selinux-radvd
 sec-policy/selinux-razor
 sec-policy/selinux-remotelogin
 sec-policy/selinux-rgmanager
+sec-policy/selinux-rngd
 sec-policy/selinux-roundup
 sec-policy/selinux-rpc
 sec-policy/selinux-rpcbind
