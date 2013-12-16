@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.225 2013/11/30 00:56:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.226 2013/12/16 03:43:37 radhermit Exp $
+
+*libpcre-8.34 (16 Dec 2013)
+
+  16 Dec 2013; Tim Harder <radhermit@gentoo.org> +libpcre-8.34.ebuild:
+  Version bump.
 
   30 Nov 2013; Markos Chandras <hwoarang@gentoo.org> libpcre-8.33-r1.ebuild:
   Use V=1 for verbose build log. Bug #475994
