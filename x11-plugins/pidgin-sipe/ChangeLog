@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/pidgin-sipe
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/ChangeLog,v 1.23 2013/11/28 15:51:34 thev00d00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-sipe/ChangeLog,v 1.24 2013/12/16 08:27:58 thev00d00 Exp $
+
+*pidgin-sipe-1.17.2 (16 Dec 2013)
+
+  16 Dec 2013; Ian Whyman <thev00d00@gentoo.org> +pidgin-sipe-1.17.2.ebuild:
+  Version bump to 1.17.2, thanks to AW for #493812
 
   28 Nov 2013; Ian Whyman <thev00d00@gentoo.org> -pidgin-sipe-1.16.1.ebuild,
   metadata.xml, pidgin-sipe-1.17.1.ebuild:
