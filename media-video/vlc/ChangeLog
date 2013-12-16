@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.878 2013/12/13 19:41:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.879 2013/12/15 23:07:19 tomwij Exp $
+
+*vlc-2.1.2 (15 Dec 2013)
+
+  15 Dec 2013; Tom Wijsman <TomWij@gentoo.org> +vlc-2.1.2.ebuild,
+  vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  Do not use the --started-from-file parameter on USE="-dbus" in 2.1.2 and
+  newer; fixes bug #491618, reported by Peter Wood. Version bump to 2.1.2; fixes
+  bug #493856, reported by Ulenrich.
 
   13 Dec 2013; Tom Wijsman <TomWij@gentoo.org> vlc-2.1.9999.ebuild,
   vlc-9999.ebuild:
