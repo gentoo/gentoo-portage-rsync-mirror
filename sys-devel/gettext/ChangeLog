@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.225 2013/11/30 05:48:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.226 2013/12/16 07:21:31 vapier Exp $
+
+  16 Dec 2013; Mike Frysinger <vapier@gentoo.org> gettext-0.18.2.ebuild,
+  gettext-0.18.3.1-r1.ebuild:
+  Add patch by Arc Riley for USE=ncurses flag to control ncurses dependency
+  #493390
 
   30 Nov 2013; Mike Frysinger <vapier@gentoo.org> gettext-0.18.3.1-r1.ebuild:
   Stick to EAPI=4 for now.

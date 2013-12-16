@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15265 2013/12/15 14:18:36 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15266 2013/12/16 07:18:24 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -60,6 +60,7 @@ dev-ruby/activerecord:2.3
 dev-ruby/activeresource:2.3
 dev-ruby/activesupport:2.3
 dev-ruby/actionwebservice:2.3
+dev-ruby/i18n:0.4
 dev-ruby/will_paginate:2.3
 dev-ruby/gettext_activerecord
 dev-ruby/gettext_rails

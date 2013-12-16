@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.28 2013/12/02 00:14:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.30 2013/12/16 07:07:32 ago Exp $
+
+  16 Dec 2013; Agostino Sarubbo <ago@gentoo.org> rubyzip-0.9.9.ebuild:
+  Add ~sparc, wrt bug #494410
+
+  16 Dec 2013; Agostino Sarubbo <ago@gentoo.org> rubyzip-1.0.0.ebuild:
+  Add ~sparc, wrt bug #494410
 
   02 Dec 2013; Jeroen Roovers <jer@gentoo.org> rubyzip-0.9.9.ebuild,
   rubyzip-1.0.0.ebuild:
@@ -109,4 +115,3 @@
   31 Oct 2005; Tom Payne <twp@gentoo.org> +metadata.xml,
   +rubyzip-0.5.12.ebuild:
   New package.
-

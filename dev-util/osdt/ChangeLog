@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/osdt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osdt/ChangeLog,v 1.7 2012/05/10 16:07:48 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osdt/ChangeLog,v 1.8 2013/12/16 07:21:51 patrick Exp $
+
+*osdt-1.1.5 (16 Dec 2013)
+
+  16 Dec 2013; Patrick Lauer <patrick@gentoo.org> +osdt-1.1.5.ebuild:
+  Bump
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -osdt-1.1.0-r1.ebuild:
   Remove old
@@ -30,4 +35,3 @@
   23 Jun 2007; Josh Glover <jmglov@gentoo.org> +metadata.xml,
   +osdt-1.1.0.ebuild:
   This package was submitted by Josh Glover in bug #79136
-
