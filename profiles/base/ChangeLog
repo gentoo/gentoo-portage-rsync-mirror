@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.614 2013/12/13 08:33:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.615 2013/12/15 23:48:23 tetromino Exp $
+
+  15 Dec 2013; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Simplify wine ebuilds: apply winepulse patchset only when USE=pulseaudio (bug
+  #489004), and allow -9999 users to enable it if they really want.
 
   13 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
   Mask crypt USE flag for >=seamonkey-2.23 until enigmail provides a build
