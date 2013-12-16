@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://download.mono-project.com/sources/libgdiplus/libgdiplus-2.10.9.tar.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	mono	203a4295c06155d318bdff9c6b2d5e1c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=adfb675dd02036b0155f55ec6b023c18
+_md5_=dcecefbb2d8804ba27f509687a5a64a4

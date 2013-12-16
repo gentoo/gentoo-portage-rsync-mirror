@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.146 2013/11/14 16:29:52 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.147 2013/12/16 13:40:00 polynomial-c Exp $
+
+  16 Dec 2013; Lars Wendler <polynomial-c@gentoo.org>
+  libgdiplus-2.10.9-r1.ebuild, +files/libgdiplus-2.10.9-freetype251.patch:
+  Fixed compilation with >=media-libs/freetype-2.5.1 (bug #493660).
 
   14 Nov 2013; Michael Palimaka <kensington@gentoo.org>
   libgdiplus-2.10.9-r1.ebuild:
