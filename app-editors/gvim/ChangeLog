@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.418 2013/12/14 07:35:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.419 2013/12/16 10:27:51 radhermit Exp $
+
+*gvim-7.4.131 (16 Dec 2013)
+
+  16 Dec 2013; Tim Harder <radhermit@gentoo.org> +gvim-7.4.131.ebuild,
+  gvim-9999.ebuild:
+  Version bump, add session use flag (fixes bug #492722).
 
   14 Dec 2013; Justin Lecher <jlec@gentoo.org> gvim-7.4.94.ebuild:
   Port my last changes also to versio 7.4.94
