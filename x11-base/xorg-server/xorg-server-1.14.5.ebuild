@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.99.903.ebuild,v 1.2 2013/11/29 15:39:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.5.ebuild,v 1.1 2013/12/16 22:45:39 chithanh Exp $
 
 EAPI=5
 
 XORG_DOC=doc
+# avoid maintainer mode, bug #484634
+XORG_EAUTORECONF=yes
 inherit xorg-2 multilib versionator flag-o-matic
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
 
@@ -28,9 +30,8 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	>=x11-libs/libXdmcp-1.0.2
 	>=x11-libs/libXfont-1.4.2
 	>=x11-libs/libxkbfile-1.0.4
-	>=x11-libs/libxshmfence-1.0
 	>=x11-libs/pixman-0.27.2
-	>=x11-libs/xtrans-1.3.2
+	>=x11-libs/xtrans-1.2.2
 	>=x11-misc/xbitmaps-1.0.1
 	>=x11-misc/xkeyboard-config-2.4.1-r3
 	dmx? (
@@ -53,7 +54,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 	!minimal? (
 		>=x11-libs/libX11-1.1.5
 		>=x11-libs/libXext-1.0.5
-		>=media-libs/mesa-9.2.0[nptl=]
+		>=media-libs/mesa-8[nptl=]
 	)
 	tslib? ( >=x11-libs/tslib-1.0 )
 	udev? ( >=virtual/udev-150 )
@@ -78,14 +79,12 @@ DEPEND="${RDEPEND}
 	>=x11-proto/trapproto-3.4.3
 	>=x11-proto/videoproto-2.2.2
 	>=x11-proto/xcmiscproto-1.2.0
-	>=x11-proto/xextproto-7.2.99.901
+	>=x11-proto/xextproto-7.1.99
 	>=x11-proto/xf86dgaproto-2.0.99.1
 	>=x11-proto/xf86rushproto-1.1.2
 	>=x11-proto/xf86vidmodeproto-2.2.99.1
 	>=x11-proto/xineramaproto-1.1.3
 	>=x11-proto/xproto-7.0.22
-	>=x11-proto/presentproto-1.0
-	>=x11-proto/dri3proto-1.0
 	dmx? (
 		>=x11-proto/dmxproto-2.2.99.1
 		doc? (
@@ -114,6 +113,7 @@ REQUIRED_USE="!minimal? (
 
 PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
+	"${FILESDIR}"/${PN}-1.12-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.12-ia64-fix_inx_outx.patch
 	"${FILESDIR}"/${PN}-1.12-unloadsubmodule.patch
 )
@@ -158,7 +158,6 @@ src_configure() {
 		--with-fontrootdir="${EPREFIX}"/usr/share/fonts
 		--with-xkb-output="${EPREFIX}"/var/lib/xkb
 		--disable-config-hal
-		--disable-linux-acpi
 		--without-dtrace
 		--without-fop
 		--with-os-vendor=Gentoo
@@ -191,7 +190,7 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup
-	newinitd "${FILESDIR}"/xdm.initd-9 xdm
+	newinitd "${FILESDIR}"/xdm.initd-10 xdm
 	newconfd "${FILESDIR}"/xdm.confd-4 xdm
 
 	# install the @x11-module-rebuild set for Portage
@@ -204,9 +203,6 @@ pkg_postinst() {
 	eselect opengl set xorg-x11 --use-old
 
 	if [[ ${PV} != 9999 && $(get_version_component_range 2 ${REPLACING_VERSIONS}) != $(get_version_component_range 2 ${PV}) ]]; then
-		elog "You should consider reading upgrade guide for this release:"
-		elog "  http://www.gentoo.org/proj/en/desktop/x/x11/xorg-server-$(get_version_component_range 1-2)-upgrade-guide.xml"
-		echo
 		ewarn "You must rebuild all drivers if upgrading from <xorg-server-$(get_version_component_range 1-2)"
 		ewarn "because the ABI changed. If you cannot start X because"
 		ewarn "of module version mismatch errors, this is your problem."

@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.777 2013/12/04 10:06:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.778 2013/12/16 22:45:39 chithanh Exp $
+
+*xorg-server-1.14.99.904 (16 Dec 2013)
+*xorg-server-1.14.5 (16 Dec 2013)
+
+  16 Dec 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xorg-server-1.14.5.ebuild, +xorg-server-1.14.99.904.ebuild,
+  -files/xorg-server-1.15-xshmfence-1.1.patch,
+  -xorg-server-1.14.99.903-r1.ebuild, -xorg-server-1.14.99.903.ebuild:
+  Version bump. Remove old prerelease.
 
 *xorg-server-1.14.99.903-r1 (04 Dec 2013)
 

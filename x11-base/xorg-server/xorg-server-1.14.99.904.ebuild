@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.99.903-r1.ebuild,v 1.1 2013/12/04 10:06:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.14.99.904.ebuild,v 1.1 2013/12/16 22:45:39 chithanh Exp $
 
 EAPI=5
 
@@ -68,7 +68,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/damageproto-1.1
 	>=x11-proto/fixesproto-5.0
 	>=x11-proto/fontsproto-2.0.2
-	>=x11-proto/glproto-1.4.16
+	>=x11-proto/glproto-1.4.17
 	>=x11-proto/inputproto-2.2.99.1
 	>=x11-proto/kbproto-1.0.3
 	>=x11-proto/randrproto-1.4.0
@@ -117,7 +117,6 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-1.12-ia64-fix_inx_outx.patch
 	"${FILESDIR}"/${PN}-1.12-unloadsubmodule.patch
-	"${FILESDIR}"/${PN}-1.15-xshmfence-1.1.patch
 )
 
 pkg_pretend() {
@@ -193,7 +192,7 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup
-	newinitd "${FILESDIR}"/xdm.initd-9 xdm
+	newinitd "${FILESDIR}"/xdm.initd-10 xdm
 	newconfd "${FILESDIR}"/xdm.confd-4 xdm
 
 	# install the @x11-module-rebuild set for Portage
