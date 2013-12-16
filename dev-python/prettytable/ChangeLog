@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/prettytable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/prettytable/ChangeLog,v 1.5 2013/10/13 08:37:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/prettytable/ChangeLog,v 1.6 2013/12/16 06:29:45 idella4 Exp $
+
+  16 Dec 2013; Ian Delaney <idella4@gentoo.org> prettytable-0.7.1.ebuild:
+  minor touch up, missed on last inspection
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> prettytable-0.6-r1.ebuild:
   Also compatible with python3_3
