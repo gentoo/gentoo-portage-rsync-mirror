@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.3-r2.ebuild,v 1.1 2013/11/02 06:35:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.3-r2.ebuild,v 1.2 2013/12/16 05:33:29 vapier Exp $
 
 EAPI="4"
 inherit multilib flag-o-matic systemd toolchain-funcs
@@ -67,10 +67,13 @@ src_install() {
 	into /usr
 	dodoc "${WORKDIR}/debian/README.checkarray"
 	dosbin "${WORKDIR}/debian/checkarray"
-	sed -i -e 's~/usr/share/mdadm/checkarray~/usr/sbin/checkarray~g' \
-			"${WORKDIR}"/debian/mdadm.cron.d
-	insinto /etc/cron.d/
+
+	insinto /etc/cron.d
 	newins "${WORKDIR}"/debian/mdadm.cron.d mdadm
+	sed -i \
+		-e 's:/usr/share/mdadm/checkarray:/usr/sbin/checkarray:g' \
+		-e 's: root : :' \
+		"${ED}"/etc/cron.d/mdadm || die
 }
 
 pkg_postinst() {
