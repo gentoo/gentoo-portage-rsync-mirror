@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/fisicalab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/fisicalab/ChangeLog,v 1.7 2013/03/13 19:49:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/fisicalab/ChangeLog,v 1.8 2013/12/16 20:30:06 voyageur Exp $
+
+*fisicalab-0.3.3 (16 Dec 2013)
+
+  16 Dec 2013; Bernard Cafarelli <voyageur@gentoo.org> +fisicalab-0.3.3.ebuild:
+  Version bump, bugfix release
 
 *fisicalab-0.3.2 (13 Mar 2013)
 

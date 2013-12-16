@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.66 2013/12/04 19:23:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.67 2013/12/16 20:11:15 graaff Exp $
+
+  16 Dec 2013; Hans de Graaff <graaff@gentoo.org> -activemodel-3.2.15.ebuild,
+  -activemodel-4.0.0.ebuild:
+  Cleanup for security bug 493284.
 
 *activemodel-4.0.2 (04 Dec 2013)
 

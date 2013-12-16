@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/zopfli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.3 2013/11/06 18:43:39 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.4 2013/12/16 20:27:22 pinkbyte Exp $
+
+*zopfli-1.0.0_p20131216 (16 Dec 2013)
+
+  16 Dec 2013; Sergey Popov <pinkbyte@gentoo.org>
+  +zopfli-1.0.0_p20131216.ebuild:
+  New upstream snapshot, wrt bug #492608: epatch_user, simplify ebuild cause
+  fixes went directly into buildsystem. Thanks to Alex Xu <alex_y_xu AT
+  yahoo.ca> for fixes
 
   06 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> zopfli-1.0.0.ebuild,
   zopfli-1.0.0_p20130508-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.296 2013/12/15 21:10:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.297 2013/12/16 20:17:58 anarchy Exp $
+
+  16 Dec 2013; Jory A. Pratt <anarchy@gentoo.org> firefox-26.0.ebuild:
+  Address bug #494162,494164
 
   15 Dec 2013; Jory A. Pratt <anarchy@gentoo.org> firefox-24.2.0.ebuild:
   Readd missing patch to disable buildid, bug #465466
