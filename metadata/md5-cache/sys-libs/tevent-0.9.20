@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup unpack
-DEPEND=>=sys-libs/talloc-2.0.8[python] python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] virtual/pkgconfig dev-lang/python !dev-lang/python[-threads]
+DEPEND=>=sys-libs/talloc-2.1.0[python] python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] virtual/pkgconfig dev-lang/python !dev-lang/python[-threads]
 DESCRIPTION=Samba tevent library
 EAPI=5
 HOMEPAGE=http://tevent.samba.org/
 IUSE=python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux
 LICENSE=GPL-3
-RDEPEND=>=sys-libs/talloc-2.0.8[python] python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
+RDEPEND=>=sys-libs/talloc-2.1.0[python] python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=http://samba.org/ftp/tevent/tevent-0.9.20.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
-_md5_=dc0940f57bc56a94ea5305412e9ad606
+_md5_=10e192a29c70752d7ee2668815b8dd57
