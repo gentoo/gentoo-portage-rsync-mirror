@@ -33,9 +33,6 @@
 		<flag name="wav">Enable WAVFILE support</flag>
 		<flag name="x264-static">Install x264 plugin statically linked with x264
 		</flag>
-		<!-- for 2.* -->
-		<flag name="noaudio">Disable audio codecs</flag>
-		<flag name="novideo">Disable video codecs</flag>
 		<!-- unused atm
 		<flag name="g711plc">Enable G711 Packet Loss Concealment</flag>
 		<flag name="msrp">Enable Message Session Relay Protocol</flag>

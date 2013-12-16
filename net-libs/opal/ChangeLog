@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.98 2013/12/15 12:12:16 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.99 2013/12/16 02:26:45 patrick Exp $
+
+  16 Dec 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflags from metadata.xml
 
   15 Dec 2013; Dion Moult <moult@gentoo.org> -opal-2.2.11.ebuild:
   <=net-libs/opal-2.2.11 removal (pending 11 July 2013), see #290062 and #290063
