@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.136 2013/12/10 13:34:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.139 2013/12/16 16:39:31 idella4 Exp $
+
+*xen-4.3.1-r2 (16 Dec 2013)
+*xen-4.3.0-r5 (16 Dec 2013)
+
+  16 Dec 2013; Ian Delaney <idella4@gentoo.org> +xen-4.3.0-r5.ebuild,
+  +xen-4.3.1-r2.ebuild, -xen-4.3.0-r4.ebuild, metadata.xml:
+  KEYWORDS.dropped, x86, along with IUSE pae, in 4.3.x, wrt Bug #493944
 
   10 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xen-4.3.1-r1.ebuild:
   Stable for x86, wrt bug #486354

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-input-sdl/mupen64plus-input-sdl-2.0.ebuild,v 1.1 2013/12/15 12:09:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus-input-sdl/mupen64plus-input-sdl-2.0.ebuild,v 1.2 2013/12/16 16:41:59 mgorny Exp $
 
 EAPI=5
 
@@ -22,6 +22,13 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch_user
+
+	# avoid implicitly appending CPU flags
+	sed -i -e 's:-mmmx::g' -e 's:-msse::g' projects/unix/Makefile || die
+}
 
 src_compile() {
 	MAKEARGS=(
