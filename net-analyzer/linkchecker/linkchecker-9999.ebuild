@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-9999.ebuild,v 1.1 2013/12/11 08:50:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-9999.ebuild,v 1.2 2013/12/16 10:54:30 jlec Exp $
 
 EAPI=5
 
@@ -37,9 +37,10 @@ RDEPEND="
 		dev-python/qscintilla-python[${PYTHON_USEDEP}]
 		)"
 DEPEND="
+	X? (
 	dev-qt/qthelp:4
 	dev-python/markdown2[${PYTHON_USEDEP}]
-"
+		)"
 
 RESTRICT="test"
 

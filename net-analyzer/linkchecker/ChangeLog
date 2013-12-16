@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.90 2013/12/11 08:50:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.91 2013/12/16 10:54:30 jlec Exp $
+
+  16 Dec 2013; Justin Lecher <jlec@gentoo.org> linkchecker-8.4-r1.ebuild,
+  linkchecker-9999.ebuild:
+  Add conditional to qt deps, #494306
 
 *linkchecker-9999 (11 Dec 2013)
 *linkchecker-8.4-r1 (11 Dec 2013)
