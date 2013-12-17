@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.20.1.ebuild,v 1.9 2013/09/06 18:33:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.20.1.ebuild,v 1.10 2013/12/17 16:06:38 jer Exp $
 
 EAPI=5
 inherit autotools eutils
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
-HOMEPAGE="http://www.obsession.se/gentoo/"
+HOMEPAGE="http://www.obsession.se/gentoo/ http://gentoo.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
