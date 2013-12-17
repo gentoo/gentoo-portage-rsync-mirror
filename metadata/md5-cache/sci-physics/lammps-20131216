@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install setup
+DEPEND=mpi? ( virtual/mpi ) package-meam? ( virtual/fortran )
+DESCRIPTION=Large-scale Atomic/Molecular Massively Parallel Simulator
+EAPI=5
+HOMEPAGE=http://lammps.sandia.gov/
+IUSE=doc examples gzip lammps-memalign mpi package-dipole package-meam package-rigid
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=mpi? ( virtual/mpi ) package-meam? ( virtual/fortran )
+SLOT=0
+SRC_URI=http://lammps.sandia.gov/tars/lammps-16Dec13.tar.gz
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=3f1774f6763223ffb7fdd661dac1d84a

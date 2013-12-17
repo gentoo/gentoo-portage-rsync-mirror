@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.2 2013/12/13 19:40:39 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.3 2013/12/17 19:10:01 nicolasbock Exp $
+
+*lammps-20131201 (17 Dec 2013)
+*lammps-20131216 (17 Dec 2013)
+
+  17 Dec 2013; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20131201.ebuild,
+  +lammps-20131216.ebuild:
+  sci-physics/lammps: Adding recent versions of the code.
 
   13 Dec 2013; Nicolas Bock <nicolasbock@gentoo.org> metadata.xml:
   sci-physics/lammps: Updated maintainer email to gentoo.org

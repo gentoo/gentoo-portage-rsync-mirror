@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Diver/Data-Diver-1.010.1.ebuild,v 1.3 2013/05/05 12:09:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Diver/Data-Diver-1.010.1.ebuild,v 1.4 2013/12/17 19:29:04 zlogene Exp $
 
 EAPI=5
 
@@ -13,6 +13,6 @@ inherit perl-module
 DESCRIPTION="Simple, ad-hoc access to elements of deeply nested structures"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~mips x86"
 
 SRC_TEST="do parallel"
