@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/weasyprint
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/weasyprint/ChangeLog,v 1.3 2013/09/19 11:07:43 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/weasyprint/ChangeLog,v 1.4 2013/12/17 06:33:10 patrick Exp $
+
+*weasyprint-0.20 (17 Dec 2013)
+
+  17 Dec 2013; Patrick Lauer <patrick@gentoo.org> +weasyprint-0.20.ebuild:
+  Bump
 
   19 Sep 2013; Sergey Popov <pinkbyte@gentoo.org> weasyprint-0.19.2.ebuild:
   Fix HOMEPAGE
