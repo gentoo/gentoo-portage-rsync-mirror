@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Module-ScanDeps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/ChangeLog,v 1.38 2013/01/06 18:46:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/ChangeLog,v 1.39 2013/12/17 11:55:20 zlogene Exp $
+
+*Module-ScanDeps-1.120.0 (17 Dec 2013)
+
+  17 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  +Module-ScanDeps-1.120.0.ebuild, -Module-ScanDeps-1.100.0.ebuild:
+  version bump, fix bug #494290; Drop old.
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org> -Module-ScanDeps-1.80.0.ebuild,
   -Module-ScanDeps-1.90.0.ebuild:

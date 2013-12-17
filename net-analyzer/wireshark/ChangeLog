@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.566 2013/12/11 14:28:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.567 2013/12/17 11:59:18 jer Exp $
+
+  17 Dec 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.10.3.ebuild,
+  wireshark-1.11.2.ebuild, wireshark-1.8.11.ebuild:
+  Add SLOT operators for dev-libs/libgcrypt by Thomas D. (bug #494528).
 
   11 Dec 2013; Jeroen Roovers <jer@gentoo.org> wireshark-1.11.2.ebuild,
   +files/wireshark-1.11.2-gtk-deprecated-warnings.patch:

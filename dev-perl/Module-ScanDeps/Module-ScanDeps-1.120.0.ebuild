@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/Module-ScanDeps-1.100.0.ebuild,v 1.1 2012/11/04 14:34:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/Module-ScanDeps-1.120.0.ebuild,v 1.1 2013/12/17 11:55:20 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=RSCHUPP
-MODULE_VERSION=1.10
+MODULE_VERSION=1.12
 inherit perl-module
 
 DESCRIPTION="Recursively scan Perl code for dependencies"
@@ -21,6 +21,6 @@ DEPEND="${RDEPEND}
 		dev-perl/Test-Pod
 		dev-perl/prefork
 		virtual/perl-Module-Pluggable
-	)"
+		dev-perl/Test-Requires )"
 
 SRC_TEST=do
