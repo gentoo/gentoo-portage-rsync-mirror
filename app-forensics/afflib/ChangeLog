@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/afflib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.45 2013/11/10 07:31:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.46 2013/12/17 10:38:30 radhermit Exp $
+
+*afflib-3.7.4 (17 Dec 2013)
+
+  17 Dec 2013; Tim Harder <radhermit@gentoo.org> +afflib-3.7.4.ebuild:
+  Version bump.
 
 *afflib-3.7.3 (10 Nov 2013)
 

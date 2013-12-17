@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.166 2013/12/08 10:52:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.167 2013/12/17 11:00:52 armin76 Exp $
+
+  17 Dec 2013; Raúl Porcel <armin76@gentoo.org> logrotate-3.8.6.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #485502
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> logrotate-3.8.7.ebuild:
   x86 stable, bug #492768
