@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.20 2013/08/31 22:13:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.9999.ebuild,v 1.21 2013/12/16 23:59:27 ulm Exp $
 
 EAPI=5
 
@@ -116,15 +116,6 @@ src_prepare() {
 	fi
 
 	epatch_user
-
-	if ! use gzip-el; then
-		# Emacs' build system automatically detects the gzip binary and
-		# compresses el files. We don't want that so confuse it with a
-		# wrong binary name
-		sed -i -e "/AC_PATH_PROG/s/gzip/PrEvEnTcOmPrEsSiOn/" configure.ac \
-			|| die "unable to sed configure.ac"
-	fi
-
 	AT_M4DIR=m4 eautoreconf
 }
 
@@ -215,7 +206,7 @@ src_configure() {
 		--infodir="${EPREFIX}"/usr/share/info/${EMACS_SUFFIX} \
 		--enable-locallisppath="${EPREFIX}/etc/emacs:${EPREFIX}${SITELISP}" \
 		--with-gameuser="${GAMES_USER_DED:-games}" \
-		--without-compress-info \
+		--without-compress-install \
 		--with-file-notification=$(usev gfile || usev inotify || echo no) \
 		$(use_enable acl) \
 		$(use_with dbus) \
@@ -254,6 +245,13 @@ src_install () {
 
 	# remove unused <version>/site-lisp dir
 	rm -rf "${ED}"/usr/share/emacs/${FULL_VERSION}/site-lisp
+
+	if use gzip-el; then
+		# compress .el files when a corresponding .elc exists
+		find "${ED}"/usr/share/emacs/${FULL_VERSION}/lisp -type f \
+			-name "*.elc" -print | sed 's/\.elc$/.el/' | xargs gzip -9n
+		assert "gzip .el failed"
+	fi
 
 	local cdir
 	if use source; then
