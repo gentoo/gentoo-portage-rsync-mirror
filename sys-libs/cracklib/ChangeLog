@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.180 2013/12/17 09:47:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.181 2013/12/17 22:57:59 radhermit Exp $
+
+  17 Dec 2013; Tim Harder <radhermit@gentoo.org> cracklib-2.9.1.ebuild:
+  Make python support truly optional (bug #494568).
 
 *cracklib-2.9.1 (17 Dec 2013)
 
