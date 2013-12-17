@@ -1,6 +1,12 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.165 2013/09/05 18:59:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.166 2013/12/17 15:57:49 vikraman Exp $
+
+*bitlbee-3.2.1 (17 Dec 2013)
+
+  17 Dec 2013; Vikraman <vikraman@gentoo.org> +bitlbee-3.2.1.ebuild,
+  +files/bitlbee-3.2.1-configure.patch:
+  Bump to version 3.2.1
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> bitlbee-3.2.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
