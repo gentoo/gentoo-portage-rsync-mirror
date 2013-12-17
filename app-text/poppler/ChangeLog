@@ -1,6 +1,15 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.409 2013/12/06 22:29:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.411 2013/12/17 15:09:43 dilfridge Exp $
+
+  17 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/poppler-0.22.2-findgio.patch, -files/poppler-0.22.2-interp.patch,
+  -files/poppler-0.22.2-nojpeg.patch, -poppler-0.22.2-r2.ebuild,
+  -poppler-0.22.5.ebuild:
+  Remove old
+
+  17 Dec 2013; Agostino Sarubbo <ago@gentoo.org> poppler-0.24.3.ebuild:
+  Stable for sparc, wrt bug #489720
 
   06 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -poppler-0.24.2.ebuild:
