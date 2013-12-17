@@ -4007,6 +4007,7 @@ media-video/mpv:bluray - Enable playback of Blu-ray filesystems
 media-video/mpv:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mpv:cdio - Use libcdio for CD support (instead of cdparanoia)
 media-video/mpv:doc-pdf - Build documentation in pdf format
+media-video/mpv:dvdnav - Enable support for DVD navigation using media-libs/dvdnav.
 media-video/mpv:enca - Enables support for charset discovery and conversion using app-i18n/enca
 media-video/mpv:libguess - Enables support for charset discovery and conversion using app-i18n/libguess
 media-video/mpv:luajit - Use dev-lang/luajit instead of dev-lang/lua

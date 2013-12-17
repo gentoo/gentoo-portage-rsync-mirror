@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.45 2013/12/02 23:51:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.46 2013/12/17 13:30:57 tomwij Exp $
+
+  17 Dec 2013; Tom Wijsman <TomWij@gentoo.org> metadata.xml, mpv-9999.ebuild:
+  Updated live ebuild to cover changes to lircc and caca dependencies, added
+  dvdnav USE flag; fixed bug #494042, proxied commit for Nikoli.
 
 *mpv-0.2.4 (02 Dec 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.31 2013/11/30 07:27:39 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.32 2013/12/17 13:30:57 tomwij Exp $
 
 EAPI=5
 
@@ -20,12 +20,13 @@ LICENSE="GPL-2"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd +enca encode +iconv jack -joystick
+IUSE="+alsa bluray bs2b +cdio -doc-pdf dvb +dvd dvdnav +enca encode +iconv jack -joystick
 jpeg ladspa lcms +libass libcaca libguess lirc lua luajit +mpg123 -openal +opengl
 oss portaudio +postproc pulseaudio pvr +quvi -radio samba +shm v4l vaapi vcd vdpau
 vf-dlopen wayland +X xinerama +xscreensaver +xv"
 
 REQUIRED_USE="
+	dvdnav? ( dvd )
 	enca? ( iconv )
 	lcms? ( opengl )
 	libguess? ( iconv )
@@ -69,7 +70,10 @@ RDEPEND+="
 		)
 	)
 	dvb? ( virtual/linuxtv-dvb-headers )
-	dvd? ( >=media-libs/libdvdread-4.1.3 )
+	dvd? (
+		>=media-libs/libdvdread-4.1.3
+		dvdnav? ( >=media-libs/libdvdnav-4.2.0 )
+	)
 	enca? ( app-i18n/enca )
 	iconv? ( virtual/libiconv )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -79,7 +83,7 @@ RDEPEND+="
 		>=media-libs/libass-0.9.10[enca?,fontconfig]
 		virtual/ttf-fonts
 	)
-	libcaca? ( media-libs/libcaca )
+	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
 	libguess? ( >=app-i18n/libguess-1.0 )
 	lirc? ( app-misc/lirc )
 	lua? (
@@ -178,13 +182,13 @@ src_configure() {
 		$(use_enable quvi libquvi) \
 		$(use_enable samba libsmbclient) \
 		$(use_enable lirc) \
-		$(use_enable lirc lircc) \
 		$(use_enable lua) \
 		$(usex luajit '--lua=luajit' '') \
 		$(use_enable doc-pdf pdf-build) \
 		$(use_enable vf-dlopen vf-dlopen-filters) \
 		$(use_enable cdio cdda) \
 		$(use_enable dvd dvdread) \
+		$(use_enable dvdnav) \
 		$(use_enable enca) \
 		$(use_enable iconv) \
 		$(use_enable libass) \
