@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-gnutls
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/ChangeLog,v 1.9 2012/02/22 03:58:12 patrick Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gnutls/ChangeLog,v 1.10 2013/12/17 06:29:02 patrick Exp $
+
+*python-gnutls-1.2.5 (17 Dec 2013)
+
+  17 Dec 2013; Patrick Lauer <patrick@gentoo.org> +python-gnutls-1.2.5.ebuild:
+  Bump
 
   22 Feb 2012; Patrick Lauer <patrick@gentoo.org> python-gnutls-1.2.0.ebuild,
   python-gnutls-1.2.2.ebuild, python-gnutls-1.2.4.ebuild:
@@ -44,4 +49,3 @@
   25 Apr 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
   +python-gnutls-1.1.8.ebuild:
   Initial commit. Fixes #267387. Ebuild by Ronan Bignaux.
-
