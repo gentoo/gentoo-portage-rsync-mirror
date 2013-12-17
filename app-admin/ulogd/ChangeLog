@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.81 2013/04/25 13:55:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.82 2013/12/17 21:38:07 hwoarang Exp $
+
+*ulogd-2.0.3 (17 Dec 2013)
+
+  17 Dec 2013; Markos Chandras <hwoarang@gentoo.org> +files/ulogd-2-ng.init,
+  +ulogd-2.0.3.ebuild, files/ulogd-2.logrotate:
+  Version bump. Thanks to Coacher <itumaykin@gmail.com>. Bug #493202
 
   25 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> -files/ulogd-0.98,
   -ulogd-1.23-r1.ebuild,
