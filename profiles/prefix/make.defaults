@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/make.defaults,v 1.5 2013/04/20 14:46:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/make.defaults,v 1.6 2013/12/17 20:08:52 grobian Exp $
 
 # Some USE-flags that only die-hards don't want:
 # readline:  to have some sane command line editing, e.g. in python
@@ -23,6 +23,10 @@ FEATURES="collision-protect"
 # If in the future, there does exist a working sandbox implementation then it
 # should be enabled on a per-profile basis only.
 FEATURES="${FEATURES} -sandbox"
+
+# Fabian Groffen <grobian@gentoo.org> (17 Dec 2013)
+# Unmask/use Python 3.3, bug #474128
+USE="${USE} -python_targets_python3_2 python_targets_python3_3"
 
 # this probably already is like this, but we assure that in prefix we
 # have a GNU userland

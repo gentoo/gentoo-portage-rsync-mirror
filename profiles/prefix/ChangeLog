@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.401 2013/12/08 18:40:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.402 2013/12/17 20:08:52 grobian Exp $
+
+  17 Dec 2013; Fabian Groffen <grobian@gentoo.org> eapi, make.defaults,
+  +use.stable.mask:
+  Bump eapi to 5 to unmask python-3.3, bug #493836 and bug #474128
 
   08 Dec 2013; Fabian Groffen <grobian@gentoo.org> use.mask:
   Remove obsolete python3_3 unmasks
