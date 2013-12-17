@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.1.3.ebuild,v 1.1 2013/08/20 08:54:47 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.1.8.ebuild,v 1.1 2013/12/17 13:57:58 lordvan Exp $
 
 EAPI="4"
 inherit eutils multilib versionator

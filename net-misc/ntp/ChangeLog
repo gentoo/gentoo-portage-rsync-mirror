@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.200 2013/12/09 20:36:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.201 2013/12/17 13:44:25 armin76 Exp $
+
+  17 Dec 2013; Raúl Porcel <armin76@gentoo.org> ntp-4.2.6_p5-r7.ebuild:
+  ia64/s390/sh/sparc stable wrt #480084
 
 *ntp-4.2.6_p5-r9 (09 Dec 2013)
 
