@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.7.ebuild,v 1.4 2013/12/08 19:44:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.8.7.ebuild,v 1.5 2013/12/17 19:54:07 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic gnome.org gnome2-utils multilib virtualx
@@ -141,6 +141,8 @@ src_prepare() {
 		strip_builddir SRC_SUBDIRS demos Makefile.am
 		strip_builddir SRC_SUBDIRS demos Makefile.in
 	fi
+
+	epatch_user
 }
 
 src_configure() {
