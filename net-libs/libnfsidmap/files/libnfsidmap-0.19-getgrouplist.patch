@@ -24,7 +24,7 @@ http://bugs.gentoo.org/169909
   *
 --- libnfsidmap-0.19/getgrouplist.c
 +++ libnfsidmap-0.19/getgrouplist.c
-@@ -0,0 +1,85 @@
+@@ -0,0 +1,86 @@
 +/*
 + *  getgrouplist.c
 + *
@@ -59,6 +59,7 @@ http://bugs.gentoo.org/169909
 + * SUCH DAMAGE.
 + */
 +
++#include "config.h"
 +#include <sys/types.h>
 +#include <grp.h>
 +#include <string.h>
