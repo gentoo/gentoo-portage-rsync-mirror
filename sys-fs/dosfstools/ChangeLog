@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.133 2013/11/23 20:34:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.134 2013/12/17 12:27:25 armin76 Exp $
+
+  17 Dec 2013; Raúl Porcel <armin76@gentoo.org> dosfstools-3.0.22.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #486046
 
 *dosfstools-3.0.24 (23 Nov 2013)
 

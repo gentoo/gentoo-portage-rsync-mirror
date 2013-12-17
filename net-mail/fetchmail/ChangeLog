@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.267 2013/11/27 18:56:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.268 2013/12/17 12:03:51 armin76 Exp $
+
+  17 Dec 2013; Raúl Porcel <armin76@gentoo.org> fetchmail-6.3.26-r2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #487744
 
   27 Nov 2013; Markus Meier <maekke@gentoo.org> fetchmail-6.3.26-r2.ebuild:
   arm stable, bug #487744
