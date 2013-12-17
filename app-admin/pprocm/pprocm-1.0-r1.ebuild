@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/pprocm-1.0-r1.ebuild,v 1.6 2012/07/29 16:06:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pprocm/pprocm-1.0-r1.ebuild,v 1.7 2013/12/17 20:37:28 zlogene Exp $
 
 MY_P="PProcM-"${PV}
 S=${WORKDIR}/${MY_P}
@@ -17,6 +17,8 @@ IUSE=""
 DEPEND="dev-perl/POE
 	dev-perl/Sys-Statistics-Linux
 	dev-lang/perl"
+
+RDEPEND="dev-perl/IO-Pipely"
 
 src_install() {
 	dobin PProcM || die "dobin failed"

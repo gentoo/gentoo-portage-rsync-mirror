@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Digest-SHA
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.60 2013/08/14 16:24:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.61 2013/12/17 20:32:36 maekke Exp $
+
+  17 Dec 2013; Markus Meier <maekke@gentoo.org> perl-Digest-SHA-5.820.0.ebuild:
+  arm stable, bug #494556
 
 *perl-Digest-SHA-5.850.0 (14 Aug 2013)
 

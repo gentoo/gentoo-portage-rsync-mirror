@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/opendmarc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/ChangeLog,v 1.3 2013/10/30 00:58:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/ChangeLog,v 1.4 2013/12/17 20:49:49 grobian Exp $
+
+  17 Dec 2013; Fabian Groffen <grobian@gentoo.org> opendmarc-1.1.3.ebuild:
+  Update milter dependency because sendmail provides milter interface as well,
+  by Graham Murray in bug #494558
 
   30 Oct 2013; Jeroen Roovers <jer@gentoo.org> opendmarc-1.1.3.ebuild:
   Marked ~hppa (bug #489676).
