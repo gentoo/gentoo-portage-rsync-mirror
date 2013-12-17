@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.6 2013/08/01 20:51:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photivo/photivo-9999.ebuild,v 1.7 2013/12/17 21:13:39 hwoarang Exp $
 
 EAPI=4
 
@@ -9,7 +9,6 @@ inherit qt4-r2 mercurial
 DESCRIPTION="Photo processor for RAW and Bitmap images"
 HOMEPAGE="http://www.photivo.org"
 EHG_REPO_URI="https://photivo.googlecode.com/hg/"
-EHG_REVISION="default"
 
 LICENSE="GPL-3"
 SLOT="0"

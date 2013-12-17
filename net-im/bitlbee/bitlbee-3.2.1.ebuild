@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.2.1.ebuild,v 1.1 2013/12/17 15:57:49 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.2.1.ebuild,v 1.2 2013/12/17 21:05:22 radhermit Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -75,6 +75,7 @@ src_prepare() {
 	use skype && python_fix_shebang protocols/skype/skyped.py
 
 	epatch "${FILESDIR}"/${PN}-3.2.1-configure.patch
+	epatch "${FILESDIR}"/${PN}-3.2.1-tests.patch
 	epatch "${FILESDIR}"/${PN}-3.0.5-parallel-make.patch
 }
 

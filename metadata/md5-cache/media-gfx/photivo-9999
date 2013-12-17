@@ -8,4 +8,4 @@ LICENSE=GPL-3
 RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 || ( virtual/jpeg:62 media-libs/jpeg:62 ) media-gfx/exiv2 media-libs/cimg media-libs/lcms:2 media-libs/lensfun sci-libs/fftw:3.0 media-libs/liblqr media-gfx/graphicsmagick[q16,-lcms] gimp? ( media-gfx/gimp )
 SLOT=0
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6c0e8fe5dde5e37a9a39a6470b2784aa
+_md5_=734522bb10efe6f05c9ed308fc95be86
