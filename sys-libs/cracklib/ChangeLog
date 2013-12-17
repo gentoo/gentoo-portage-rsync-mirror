@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.179 2013/08/14 11:34:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.180 2013/12/17 09:47:05 radhermit Exp $
+
+*cracklib-2.9.1 (17 Dec 2013)
+
+  17 Dec 2013; Tim Harder <radhermit@gentoo.org> +cracklib-2.9.1.ebuild:
+  Version bump, migrate to distutils-r1.
 
   14 Aug 2013; Patrick Lauer <patrick@gentoo.org> cracklib-2.9.0-r1.ebuild:
   Whitespace
