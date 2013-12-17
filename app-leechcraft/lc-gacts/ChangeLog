@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-gacts
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-gacts/ChangeLog,v 1.7 2013/09/24 15:43:43 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-gacts/ChangeLog,v 1.8 2013/12/17 11:13:08 pinkbyte Exp $
+
+  17 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> lc-gacts-9999.ebuild:
+  Use system x11-libs/libqxt instead of bundled
 
 *lc-gacts-0.6.0 (24 Sep 2013)
 
