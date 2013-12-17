@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.1.ebuild,v 1.1 2013/12/16 00:28:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.6.1.ebuild,v 1.2 2013/12/17 12:33:14 tetromino Exp $
 
 EAPI="5"
 
@@ -34,7 +34,7 @@ SRC_URI="${SRC_URI}
 		abi_x86_64? ( mirror://sourceforge/${PN}/Wine%20Gecko/${GV}/wine_gecko-${GV}-x86_64.msi )
 	)
 	mono? ( mirror://sourceforge/${PN}/Wine%20Mono/${MV}/wine-mono-${MV}.msi )
-	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2
+	pulseaudio? ( http://dev.gentoo.org/~tetromino/distfiles/${PN}/${PULSE_PATCHES}.tar.bz2 )
 	http://dev.gentoo.org/~tetromino/distfiles/${PN}/${WINE_GENTOO}.tar.bz2"
 
 LICENSE="LGPL-2.1"
@@ -172,6 +172,10 @@ COMMON_DEPEND="
 				>=app-emulation/emul-linux-x86-opengl-20121028[development]
 				media-libs/mesa[osmesa,abi_x86_32]
 			) )
+			pulseaudio? ( || (
+				app-emulation/emul-linux-x86-soundlibs[development]
+				>=media-sound/pulseaudio-4.0-r1[abi_x86_32]
+			) )
 			xml? ( >=app-emulation/emul-linux-x86-baselibs-20130224[development] )
 			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
 			ssl? ( app-emulation/emul-linux-x86-baselibs[development] )
@@ -189,24 +193,17 @@ COMMON_DEPEND="
 			) )
 		)
 	)"
-[[ ${PV} == "9999" ]] || COMMON_DEPEND="${COMMON_DEPEND}
-	amd64? ( abi_x86_32? ( pulseaudio? (
-		|| (
-			app-emulation/emul-linux-x86-soundlibs[development]
-			>=media-sound/pulseaudio-4.0-r1[abi_x86_32]
-		)
-	) ) )"
 
 RDEPEND="${COMMON_DEPEND}
 	dos? ( games-emulation/dosbox )
 	perl? ( dev-lang/perl dev-perl/XML-Simple )
 	samba? ( >=net-fs/samba-3.0.25 )
 	selinux? ( sec-policy/selinux-wine )
-	udisks? ( sys-fs/udisks:2 )"
-[[ ${PV} == "9999" ]] || RDEPEND="${RDEPEND}
+	udisks? ( sys-fs/udisks:2 )
 	pulseaudio? ( realtime? ( sys-auth/rtkit ) )"
 
 DEPEND="${COMMON_DEPEND}
+	amd64? ( abi_x86_32? ( !abi_x86_64? ( ${NATIVE_DEPEND} ) ) )
 	X? (
 		x11-proto/inputproto
 		x11-proto/xextproto

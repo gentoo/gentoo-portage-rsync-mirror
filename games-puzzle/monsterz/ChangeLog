@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/monsterz
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.34 2013/10/24 15:00:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.35 2013/12/17 12:52:20 armin76 Exp $
+
+  17 Dec 2013; Raúl Porcel <armin76@gentoo.org> monsterz-0.7.1-r2.ebuild,
+  monsterz-0.7.1-r3.ebuild:
+  Drop sparc, x86 stable wrt #488840
 
   24 Oct 2013; Tony Vroon <chainsaw@gentoo.org> monsterz-0.7.1-r3.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

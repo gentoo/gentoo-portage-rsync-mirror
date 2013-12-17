@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.75 2013/08/03 09:40:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.76 2013/12/17 12:49:37 blueness Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -53,6 +53,7 @@ en_GB - English locale for Britain
 en_US - English locale
 en_ZA - English locale for South Africa
 eo - Esperanto locale
+eo_UY - Esperanto locale for Uruguay
 es - Spanish locale
 es_AR - Spanish locale for Argentina
 es_CL - Spanish locale for Chile
@@ -116,6 +117,7 @@ kok - Konkani locale
 ks - Kashmiri locale
 ku - Kurdish (latin) locale
 ky - Kyrgyz (Kirghiz) locale
+ky_KG -  Kyrgyz (Kirghiz) locale for Kyrgyzstan
 la - Latin2 locale
 lb - Luxembourgish locale
 lg - Ganda locale

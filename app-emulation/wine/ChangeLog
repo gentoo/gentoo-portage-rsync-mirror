@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.488 2013/12/16 14:31:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.489 2013/12/17 12:33:14 tetromino Exp $
+
+  17 Dec 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.6.ebuild,
+  wine-1.6.1.ebuild, wine-1.7.0.ebuild, wine-1.7.3.ebuild, wine-1.7.4.ebuild,
+  wine-1.7.8.ebuild, wine-9999.ebuild:
+  Fix dependencies and ensure NATIVE_DEPEND is always considered in DEPEND (bug
+  #492986, thanks to Jeffrey Thomas Piercy and Nikos Chantziaras).
 
   16 Dec 2013; Alexandre Rostovtsev <tetromino@gentoo.org> wine-1.7.8.ebuild,
   wine-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.7.0.ebuild,v 1.6 2013/10/15 17:53:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.7.0.ebuild,v 1.7 2013/12/17 12:33:14 tetromino Exp $
 
 EAPI="5"
 
@@ -39,8 +39,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa oss +perl +png +prelink +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
-[[ ${PV} == "9999" ]] || IUSE="${IUSE} pulseaudio"
+IUSE="+abi_x86_32 +abi_x86_64 +alsa capi cups custom-cflags dos elibc_glibc +fontconfig +gecko gphoto2 gsm gstreamer +jpeg lcms ldap +mono mp3 ncurses nls odbc openal opencl +opengl osmesa oss +perl +png +prelink pulseaudio +run-exes samba scanner selinux +ssl test +threads +truetype +udisks v4l +X xcomposite xinerama +xml"
 REQUIRED_USE="|| ( abi_x86_32 abi_x86_64 )
 	test? ( abi_x86_32 )
 	elibc_glibc? ( threads )
@@ -85,14 +84,13 @@ NATIVE_DEPEND="
 	nls? ( sys-devel/gettext )
 	odbc? ( dev-db/unixODBC:= )
 	osmesa? ( media-libs/mesa[osmesa] )
+	pulseaudio? ( media-sound/pulseaudio )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends:= )
 	ssl? ( net-libs/gnutls:= )
 	png? ( media-libs/libpng:0= )
 	v4l? ( media-libs/libv4l )
 	xcomposite? ( x11-libs/libXcomposite )"
-[[ ${PV} == "9999" ]] || NATIVE_DEPEND="${NATIVE_DEPEND}
-	pulseaudio? ( media-sound/pulseaudio )"
 
 COMMON_DEPEND="
 	!amd64? ( ${NATIVE_DEPEND} )
@@ -107,7 +105,10 @@ COMMON_DEPEND="
 				app-emulation/emul-linux-x86-baselibs[development]
 				sys-libs/ncurses[abi_x86_32]
 			) )
-			udisks? ( >=app-emulation/emul-linux-x86-baselibs-20130224[development] )
+			udisks? ( || (
+				>=app-emulation/emul-linux-x86-baselibs-20130224[development]
+				sys-apps/dbus[abi_x86_32]
+			) )
 			fontconfig? ( || (
 				app-emulation/emul-linux-x86-xlibs[development]
 				media-libs/fontconfig[abi_x86_32]
@@ -175,6 +176,10 @@ COMMON_DEPEND="
 				>=app-emulation/emul-linux-x86-opengl-20121028[development]
 				media-libs/mesa[osmesa,abi_x86_32]
 			) )
+			pulseaudio? ( || (
+				app-emulation/emul-linux-x86-soundlibs[development]
+				>=media-sound/pulseaudio-4.0-r1[abi_x86_32]
+			) )
 			xml? ( >=app-emulation/emul-linux-x86-baselibs-20130224[development] )
 			scanner? ( app-emulation/emul-linux-x86-medialibs[development] )
 			ssl? ( app-emulation/emul-linux-x86-baselibs[development] )
@@ -192,19 +197,17 @@ COMMON_DEPEND="
 			) )
 		)
 	)"
-[[ ${PV} == "9999" ]] || COMMON_DEPEND="${COMMON_DEPEND}
-	amd64? ( abi_x86_32? ( pulseaudio? ( app-emulation/emul-linux-x86-soundlibs[development] ) ) )"
 
 RDEPEND="${COMMON_DEPEND}
 	dos? ( games-emulation/dosbox )
 	perl? ( dev-lang/perl dev-perl/XML-Simple )
 	samba? ( >=net-fs/samba-3.0.25 )
 	selinux? ( sec-policy/selinux-wine )
-	udisks? ( sys-fs/udisks:2 )"
-[[ ${PV} == "9999" ]] || RDEPEND="${RDEPEND}
+	udisks? ( sys-fs/udisks:2 )
 	pulseaudio? ( sys-auth/rtkit )"
 
 DEPEND="${COMMON_DEPEND}
+	amd64? ( abi_x86_32? ( !abi_x86_64? ( ${NATIVE_DEPEND} ) ) )
 	X? (
 		x11-proto/inputproto
 		x11-proto/xextproto
@@ -269,8 +272,6 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.4_rc2-multilib-portage.patch #395615
 		"${FILESDIR}"/${PN}-1.5.17-osmesa-check.patch #429386
 		"${FILESDIR}"/${PN}-1.6-memset-O3.patch #480508
-	)
-	[[ ${PV} == "9999" ]] || PATCHES+=(
 		"../${PULSE_PATCHES}"/*.patch #421365
 	)
 
@@ -336,6 +337,7 @@ src_configure() {
 		$(use_with osmesa)
 		$(use_with oss)
 		$(use_with png)
+		$(use_with pulseaudio pulse)
 		$(use_with threads pthread)
 		$(use_with scanner sane)
 		$(use_enable test tests)
@@ -347,8 +349,6 @@ src_configure() {
 		$(use_with xml)
 		$(use_with xml xslt)
 	)
-
-	[[ ${PV} == "9999" ]] || myeconfargs+=( $(use_with pulseaudio pulse) )
 
 	# Avoid crossdev's i686-pc-linux-gnu-pkg-config if building wine32 on amd64; #472038
 	use amd64 && use abi_x86_32 && tc-export PKG_CONFIG

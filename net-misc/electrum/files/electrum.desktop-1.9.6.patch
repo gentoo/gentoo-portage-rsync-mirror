@@ -1,0 +1,11 @@
+diff --git a/electrum.desktop b/electrum.desktop
+index 1b0c5ab..20a0b1e 100644
+--- a/electrum.desktop
++++ b/electrum.desktop
+@@ -13,5 +13,5 @@ Categories=Network;
+ StartupNotify=false
+ Terminal=false
+ Type=Application
+-MimeType=x-scheme-handler/bitcoin
++MimeType=x-scheme-handler/bitcoin;
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/htag-0.0.24-r1.ebuild,v 1.2 2013/11/22 08:02:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/htag-0.0.24-r1.ebuild,v 1.3 2013/12/17 12:51:01 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.earth.li/projectpurple/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~mips ~ppc ~sparc ~x86"
 IUSE=""
 
 src_install() {

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8430 2013/12/15 14:19:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8431 2013/12/17 12:49:36 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Dec 2013; Anthony G. Basile <blueness@gentoo.org> desc/linguas.desc:
+  Add ky_KG and eo_UY locales
 
   15 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   targets/desktop/gnome/package.use:
