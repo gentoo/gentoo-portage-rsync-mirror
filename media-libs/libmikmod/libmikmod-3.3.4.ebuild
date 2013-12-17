@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.3.4.ebuild,v 1.1 2013/12/10 19:43:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/libmikmod-3.3.4.ebuild,v 1.2 2013/12/17 17:10:06 ssuominen Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -12,11 +12,12 @@ SRC_URI="mirror://sourceforge/mikmod/${P}.tar.gz"
 LICENSE="LGPL-2+ LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="+alsa altivec coreaudio debug oss sse2 static-libs +threads"
+IUSE="+alsa altivec coreaudio debug nas oss sse2 static-libs +threads"
 
 REQUIRED_USE="|| ( alsa oss coreaudio )"
 
 RDEPEND="alsa? ( media-libs/alsa-lib:=[${MULTILIB_USEDEP}] )
+	nas? ( media-libs/nas:=[${MULTILIB_USEDEP}] )
 	!${CATEGORY}/${PN}:2
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20130224-r3
 					!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )"
@@ -32,12 +33,11 @@ multilib_src_configure() {
 		mysimd="$(use_enable sse2 simd)"
 	fi
 
-	# nas: was disabled in 3.2.0 for being broken, unknown for 3.3.2
 	# sdl, sdl2, openal: missing multilib supported ebuilds, temporarily disabled
 	ECONF_SOURCE=${S} \
 	econf \
 		$(use_enable alsa) \
-		--disable-nas \
+		$(use_enable nas) \
 		--disable-sdl \
 		--disable-sdl2 \
 		--disable-openal \
