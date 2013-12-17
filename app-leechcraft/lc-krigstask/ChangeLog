@@ -1,6 +1,9 @@
 # ChangeLog for app-leechcraft/lc-krigstask
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-krigstask/ChangeLog,v 1.1 2013/05/24 15:16:42 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-krigstask/ChangeLog,v 1.2 2013/12/17 09:28:58 pinkbyte Exp $
+
+  17 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> lc-krigstask-9999.ebuild:
+  Add missing dependency on x11-libs/libXcomposite
 
 *lc-krigstask-9999 (24 May 2013)
 
