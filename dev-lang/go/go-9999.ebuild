@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.12 2013/05/20 16:52:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.13 2013/12/17 18:39:32 williamh Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ ${PV} = 9999 ]]; then
 else
 	SRC_URI="http://go.googlecode.com/files/go${PV}.src.tar.gz"
 	# Upstream only supports go on amd64, arm and x86 architectures.
-	KEYWORDS="-* ~amd64 ~arm ~x86"
+	KEYWORDS="-* ~amd64 ~arm ~x86 ~x86-fbsd"
 fi
 
 DESCRIPTION="A concurrent garbage collected and typesafe programming language"
@@ -24,14 +24,14 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="bash-completion emacs vim-syntax zsh-completion"
 
-DEPEND="sys-apps/ed"
+DEPEND=""
 RDEPEND="bash-completion? ( app-shells/bash-completion )
 	emacs? ( virtual/emacs )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 	zsh-completion? ( app-shells/zsh-completion )"
 
 # The tools in /usr/lib/go should not cause the multilib-strict check to fail.
-QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/linux.*/.*"
+QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/.*/.*"
 
 # The go language uses *.a files which are _NOT_ libraries and should not be
 # stripped.
@@ -129,6 +129,11 @@ pkg_postinst()
 	find "${ROOT}"usr/lib/go -type f \
 		-exec touch -r "${ROOT}"${tref} {} \;
 	eend $?
+
+	if [[ ${PV} != 9999 && -n ${REPLACING_VERSIONS} &&
+		${REPLACING_VERSIONS} != ${PV} ]]; then
+		elog "Release notes are located at http://golang.org/doc/go${PV}"
+	fi
 }
 
 pkg_postrm()
