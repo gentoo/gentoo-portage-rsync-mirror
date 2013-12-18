@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/magneto-core/magneto-core-216.ebuild,v 1.1 2013/08/22 11:15:13 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/magneto-core/magneto-core-254.ebuild,v 1.1 2013/12/18 05:08:18 lxnay Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-inherit eutils python multilib
+EAPI=5
+
+PYTHON_COMPAT=( python2_7 )
+
+inherit eutils python-single-r1 multilib
 
 DESCRIPTION="Entropy Package Manager notification applet library"
 HOMEPAGE="http://www.sabayon.org"
@@ -17,22 +19,14 @@ IUSE=""
 SRC_URI="mirror://sabayon/sys-apps/entropy-${PV}.tar.bz2"
 S="${WORKDIR}/entropy-${PV}/magneto"
 
-DEPEND="~sys-apps/rigo-daemon-${PV}"
+DEPEND="~sys-apps/rigo-daemon-${PV}[${PYTHON_USEDEP}]
+	${PYTHON_DEPS}"
 RDEPEND="${DEPEND}
 	x11-misc/xdg-utils"
 
-src_compile() {
-	einfo "nothing to compile"
-}
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_install() {
 	emake DESTDIR="${D}" LIBDIR="usr/lib" magneto-core-install || die "make install failed"
-}
-
-pkg_postinst() {
-	python_mod_optimize "/usr/$(get_libdir)/entropy/magneto"
-}
-
-pkg_postrm() {
-	python_mod_cleanup "/usr/$(get_libdir)/entropy/magneto"
+	python_optimize "${D}/usr/$(get_libdir)/entropy/magneto"
 }

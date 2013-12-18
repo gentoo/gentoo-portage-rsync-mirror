@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/packagekit-base
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.31 2013/07/21 10:41:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.32 2013/12/18 05:12:15 lxnay Exp $
+
+*packagekit-base-0.8.15 (18 Dec 2013)
+
+  18 Dec 2013; Fabio Erculiani <lxnay@gentoo.org>
+  -packagekit-base-0.6.22.ebuild, +packagekit-base-0.8.15.ebuild,
+  +files/0001-entropy-PackageKitEntropyClient.output-API-update.patch,
+  -files/packagekit-base-0.6.22-npapi-sdk.patch,
+  +files/packagekit-base-0.8.x-npapi-sdk.patch, metadata.xml:
+  version bump to 0.8.15, drop old
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   connman is a global USE flag now

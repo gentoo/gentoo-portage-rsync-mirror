@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/matter/matter-216.ebuild,v 1.1 2013/08/22 11:12:47 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/matter/matter-254.ebuild,v 1.1 2013/12/18 05:04:03 lxnay Exp $
 
-EAPI=3
-PYTHON_DEPEND="2"
-inherit eutils python bash-completion-r1
+EAPI=5
+
+PYTHON_COMPAT=( python2_7 )
+
+inherit eutils python-single-r1 bash-completion-r1
 
 DESCRIPTION="Automated Packages Builder for Portage and Entropy"
 HOMEPAGE="http://www.sabayon.org"
@@ -18,8 +20,11 @@ SRC_URI="mirror://sabayon/sys-apps/entropy-${PV}.tar.bz2"
 S="${WORKDIR}/entropy-${PV}/${PN}"
 
 DEPEND=""
-RDEPEND="entropy? ( ~sys-apps/entropy-${PV} )
-	sys-apps/file[python]"
+RDEPEND="entropy? ( ~sys-apps/entropy-${PV}[${PYTHON_USEDEP}] )
+	sys-apps/file[python]
+	${PYTHON_DEPS}"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
@@ -27,12 +32,6 @@ src_install() {
 	if use entropy; then
 		emake DESTDIR="${D}" entropysrv-install || die "make base-install failed"
 	fi
-}
 
-pkg_postinst() {
-	python_mod_optimize "/usr/lib/matter"
-}
-
-pkg_postrm() {
-	python_mod_cleanup "/usr/lib/matter"
+	python_optimize "${D}/usr/lib/matter"
 }

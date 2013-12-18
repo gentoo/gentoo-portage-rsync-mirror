@@ -1,0 +1,11 @@
+DEFINED_PHASES=-
+DEPEND=gtk? ( ~app-admin/packagekit-gtk-0.8.15 )
+DESCRIPTION=PackageKit Package Manager interface (meta package)
+EAPI=5
+HOMEPAGE=http://www.packagekit.org/
+IUSE=gtk
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-2
+RDEPEND=gtk? ( ~app-admin/packagekit-gtk-0.8.15 )
+SLOT=0
+_md5_=e3e3e0c3a12e0eb5025dc50f3c203bb1

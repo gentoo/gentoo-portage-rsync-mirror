@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/packagekit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit/ChangeLog,v 1.10 2013/12/18 04:55:25 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit/ChangeLog,v 1.11 2013/12/18 05:28:40 lxnay Exp $
+
+*packagekit-0.8.15 (18 Dec 2013)
+
+  18 Dec 2013; Fabio Erculiani <lxnay@gentoo.org> +packagekit-0.8.15.ebuild:
+  version bump, drop dependency against qt4 for now, since it does not compile
 
   18 Dec 2013; Fabio Erculiani <lxnay@gentoo.org> -packagekit-0.6.22.ebuild:
   drop old 0.6.x packagekit

@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/magneto-gtk3
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/magneto-gtk3/ChangeLog,v 1.8 2013/08/24 01:45:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/magneto-gtk3/ChangeLog,v 1.9 2013/12/18 05:10:18 lxnay Exp $
+
+*magneto-gtk3-254 (18 Dec 2013)
+
+  18 Dec 2013; Fabio Erculiani <lxnay@gentoo.org> +magneto-gtk3-254.ebuild:
+  version bump
 
   24 Aug 2013; Patrick Lauer <patrick@gentoo.org> -magneto-gtk3-136.ebuild,
   -magneto-gtk3-144.ebuild, -magneto-gtk3-183.ebuild, -magneto-gtk3-189.ebuild:

@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-216.ebuild,v 1.1 2013/08/22 11:12:11 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-254.ebuild,v 1.1 2013/12/18 05:03:33 lxnay Exp $
 
-EAPI=3
-PYTHON_DEPEND="2"
-inherit eutils python bash-completion-r1
+EAPI=5
+
+PYTHON_COMPAT=( python2_7 )
+
+inherit eutils python-single-r1 bash-completion-r1
 
 DESCRIPTION="Entropy Package Manager text-based client"
 HOMEPAGE="http://www.sabayon.org"
@@ -17,8 +19,11 @@ SRC_URI="mirror://sabayon/sys-apps/entropy-${PV}.tar.bz2"
 
 S="${WORKDIR}/entropy-${PV}"
 
-DEPEND="~sys-apps/entropy-${PV}"
+DEPEND="${PYTHON_DEPS}
+	~sys-apps/entropy-${PV}[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND} sys-apps/file[python]"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_compile() {
 	cd "${S}"/client || die
@@ -29,17 +34,7 @@ src_install() {
 	cd "${S}"/client || die
 	emake DESTDIR="${D}" LIBDIR="usr/lib" install || die "make install failed"
 	newbashcomp "${S}/misc/equo-completion.bash" equo
+
+	python_optimize "${D}/usr/lib/entropy/client"
 }
 
-pkg_postinst() {
-	python_mod_optimize "/usr/lib/entropy/client"
-	echo
-	elog "If you would like to allow users in the 'entropy' group"
-	elog "to update available package repositories, please consider"
-	elog "to install sys-apps/rigo-daemon"
-	echo
-}
-
-pkg_postrm() {
-	python_mod_cleanup "/usr/lib/entropy/client"
-}

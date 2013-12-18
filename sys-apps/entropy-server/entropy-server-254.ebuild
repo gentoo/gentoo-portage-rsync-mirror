@@ -1,10 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy-server/entropy-server-216.ebuild,v 1.1 2013/08/22 11:13:23 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy-server/entropy-server-254.ebuild,v 1.1 2013/12/18 05:04:33 lxnay Exp $
 
-EAPI="3"
-PYTHON_DEPEND="2"
-inherit eutils python bash-completion-r1
+EAPI=5
+
+PYTHON_COMPAT=( python2_7 )
+
+inherit eutils python-single-r1 bash-completion-r1
 
 DESCRIPTION="Entropy Package Manager server-side tools"
 HOMEPAGE="http://www.sabayon.org"
@@ -18,24 +20,17 @@ SRC_URI="mirror://sabayon/sys-apps/entropy-${PV}.tar.bz2"
 
 S="${WORKDIR}/entropy-${PV}/server"
 
-RDEPEND="~sys-apps/entropy-${PV}
+RDEPEND="~sys-apps/entropy-${PV}[${PYTHON_USEDEP}]
 	matter? ( ~app-admin/matter-${PV}[entropy] )
+	${PYTHON_DEPS}
 	"
 DEPEND="app-text/asciidoc"
 
-src_compile() {
-	emake || die "make failed"
-}
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	newbashcomp "${S}/eit-completion.bash" eit
-}
 
-pkg_postinst() {
-	python_mod_optimize "/usr/lib/entropy/server"
-}
-
-pkg_postrm() {
-	python_mod_cleanup "/usr/lib/entropy/server"
+	python_optimize "${D}/usr/lib/entropy/server"
 }

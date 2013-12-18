@@ -1,9 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magneto-loader/magneto-loader-216.ebuild,v 1.1 2013/08/22 11:15:48 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magneto-loader/magneto-loader-254.ebuild,v 1.1 2013/12/18 05:08:48 lxnay Exp $
 
-EAPI="2"
-inherit eutils
+EAPI=5
+
+PYTHON_COMPAT=( python2_7 )
+
+inherit eutils python-single-r1
 
 DESCRIPTION="Official Sabayon Linux Entropy Notification Applet Loader"
 HOMEPAGE="http://www.sabayon.org"
@@ -16,13 +19,12 @@ IUSE=""
 SRC_URI="mirror://sabayon/sys-apps/entropy-${PV}.tar.bz2"
 S="${WORKDIR}/entropy-${PV}/magneto"
 
-DEPEND="~sys-apps/magneto-core-${PV}
-	~app-admin/rigo-${PV}"
+DEPEND="${PYTHON_DEPS}
+	~sys-apps/magneto-core-${PV}[${PYTHON_USEDEP}]
+	~app-admin/rigo-${PV}[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}"
 
-src_compile() {
-	einfo "nothing to compile"
-}
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_install() {
 	emake DESTDIR="${D}" LIBDIR="usr/lib" magneto-loader-install || die "make install failed"

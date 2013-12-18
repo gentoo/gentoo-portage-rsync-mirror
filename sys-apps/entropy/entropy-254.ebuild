@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-216.ebuild,v 1.2 2013/08/23 05:54:57 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-254.ebuild,v 1.1 2013/12/18 05:03:03 lxnay Exp $
 
 EAPI=5
 
@@ -19,7 +19,8 @@ KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.bz2"
 
-RDEPEND="dev-db/sqlite:3[soundex(+)]
+RDEPEND=">=app-misc/pax-utils-0.7
+	dev-db/sqlite:3[soundex(+)]
 	net-misc/rsync
 	sys-apps/diffutils
 	sys-apps/sandbox

@@ -167,6 +167,7 @@ app-admin/logrotate:selinux - Installs Security Enhanced Linux support
 app-admin/matter:entropy - Add Entropy support
 app-admin/mcollective:client - Install client utilities
 app-admin/openrc-settingsd:systemd - Use the versions of dbus and polkit files provided by sys-apps/systemd
+app-admin/packagekit-base:command-not-found - Enable packagekit support on shell "command not found"
 app-admin/packagekit-base:cron - Install cron script for auto-update
 app-admin/packagekit-base:entropy - Enable Entropy backend
 app-admin/packagekit-base:introspection - Use dev-libs/gobject-introspection Enable introspection
