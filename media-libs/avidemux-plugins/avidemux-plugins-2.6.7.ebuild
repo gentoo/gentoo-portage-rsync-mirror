@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-9999.ebuild,v 1.4 2013/12/17 23:28:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/avidemux-plugins-2.6.7.ebuild,v 1.1 2013/12/17 23:28:48 tomwij Exp $
 
 EAPI="5"
 

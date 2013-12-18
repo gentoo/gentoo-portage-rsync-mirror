@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/avidemux-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.17 2013/09/01 20:33:56 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-plugins/ChangeLog,v 1.18 2013/12/17 23:28:48 tomwij Exp $
+
+*avidemux-plugins-2.6.7 (17 Dec 2013)
+
+  17 Dec 2013; Tom Wijsman <TomWij@gentoo.org> +avidemux-plugins-2.6.7.ebuild,
+  avidemux-plugins-9999.ebuild, metadata.xml:
+  Version bump to 2.6.7; fixes bug #493730, reported by Frank Krömmelbein. Added
+  USE flag vdpau; fixes bug #490260, reported by Nikoli.
 
 *avidemux-plugins-2.6.5-r1 (01 Sep 2013)
 
