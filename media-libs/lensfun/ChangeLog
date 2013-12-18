@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.50 2013/04/06 10:08:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.51 2013/12/18 22:25:47 maekke Exp $
+
+*lensfun-0.2.8 (18 Dec 2013)
+
+  18 Dec 2013; Markus Meier <maekke@gentoo.org> +lensfun-0.2.8.ebuild,
+  +files/lensfun-0.2.8-build.patch:
+  version bump
 
   06 Apr 2013; Samuli Suominen <ssuominen@gentoo.org> lensfun-0.2.7.ebuild,
   +files/lensfun-0.2.7-memset.patch:
