@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.126 2013/12/07 14:30:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.127 2013/12/18 20:54:59 polynomial-c Exp $
+
+*xf86-video-virtualbox-4.3.6 (18 Dec 2013)
+
+  18 Dec 2013; Lars Wendler <polynomial-c@gentoo.org>
+  -xf86-video-virtualbox-4.1.26.ebuild, -xf86-video-virtualbox-4.3.2.ebuild,
+  +xf86-video-virtualbox-4.3.6.ebuild:
+  Version bump. Removed old.
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   xf86-video-virtualbox-4.2.18.ebuild:
