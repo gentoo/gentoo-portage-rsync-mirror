@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/py-amqp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.14 2013/11/26 06:36:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-amqp/ChangeLog,v 1.15 2013/12/18 13:21:58 idella4 Exp $
+
+*py-amqp-1.3.3-r1 (18 Dec 2013)
+
+  18 Dec 2013; Ian Delaney <idella4@gentoo.org>
+  +files/py-amqp-1.3.3-disable_socket_tests.patch, +py-amqp-1.3.3-r1.ebuild,
+  metadata.xml:
+  add herd, revbump; fix test deps, restore patch to current version, unrestrict
+  testsuite as it should
 
 *py-amqp-1.3.3 (26 Nov 2013)
 
