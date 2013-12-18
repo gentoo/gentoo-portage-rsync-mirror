@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.42 2013/11/18 21:29:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.43 2013/12/18 01:57:44 prometheanfire Exp $
+
+*icinga-1.10.2 (18 Dec 2013)
+*icinga-1.9.4 (18 Dec 2013)
+
+  18 Dec 2013; Matthew Thode <prometheanfire@gentoo.org> +icinga-1.10.2.ebuild,
+  +icinga-1.9.4.ebuild, -files/fix-prestripped-binaries.patch,
+  -icinga-1.10.0.ebuild, -icinga-1.10.1.ebuild, -icinga-1.9.3.ebuild:
+  fix for bug 494510 CVE-2013-7108
 
 *icinga-1.10.1 (18 Nov 2013)
 
