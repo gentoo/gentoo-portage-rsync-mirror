@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.477 2013/11/29 17:19:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.478 2013/12/18 06:43:31 eras Exp $
+
+*postfix-2.11_pre20131217 (18 Dec 2013)
+
+  18 Dec 2013; Eray Aslan <eras@gentoo.org> +postfix-2.11_pre20131217.ebuild,
+  -postfix-2.11_pre20131126.ebuild:
+  Version bump
 
   29 Nov 2013; Markus Meier <maekke@gentoo.org> postfix-2.10.2.ebuild:
   arm stable, bug #490126
