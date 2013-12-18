@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32e.ebuild,v 1.5 2013/12/18 17:31:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32e.ebuild,v 1.6 2013/12/18 17:38:36 jer Exp $
 
 EAPI=5
 
@@ -15,7 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk ncurses nls"
 
-REQUIRED_USE="^^ ( gtk ncurses )"
+REQUIRED_USE="
+	!gtk? ( ncurses )
+	!ncurses? ( gtk )
+"
 
 RDEPEND="
 	gtk? ( >=x11-libs/gtk+-2.4:2 )
