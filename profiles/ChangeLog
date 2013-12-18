@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8431 2013/12/17 12:49:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8432 2013/12/18 10:17:48 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Dec 2013; Alex Alexander <wired@gentoo.org> updates/2Q-2013:
+  removed old slotmoves from 2Q-2013, they were conflicting with newer ones in
+  4Q-2013 that revert them.
 
   17 Dec 2013; Anthony G. Basile <blueness@gentoo.org> desc/linguas.desc:
   Add ky_KG and eo_UY locales
