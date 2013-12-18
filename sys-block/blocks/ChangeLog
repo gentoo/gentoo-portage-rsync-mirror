@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/blocks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/blocks/ChangeLog,v 1.1 2013/12/10 08:16:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/blocks/ChangeLog,v 1.2 2013/12/18 08:00:31 jlec Exp $
+
+*blocks-0.1.4_pre131210-r1 (18 Dec 2013)
+
+  18 Dec 2013; Justin Lecher <jlec@gentoo.org> -blocks-0.1.4_pre131210.ebuild,
+  +blocks-0.1.4_pre131210-r1.ebuild, blocks-9999.ebuild:
+  fix dependency, #494570; use versioned tarball
 
 *blocks-9999 (10 Dec 2013)
 *blocks-0.1.4_pre131210 (10 Dec 2013)

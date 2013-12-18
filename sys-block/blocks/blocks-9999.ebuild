@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/blocks/blocks-9999.ebuild,v 1.1 2013/12/10 08:16:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/blocks/blocks-9999.ebuild,v 1.2 2013/12/18 08:00:32 jlec Exp $
 
 EAPI=5
 
@@ -18,9 +18,10 @@ LICENSE="GPL-3+"
 KEYWORDS=""
 IUSE="+minimal"
 
-DEPEND="dev-python/pyparted[${PYTHON_USEDEP}]"
+DEPEND="
+	dev-python/pyparted[${PYTHON_USEDEP}]
+	dev-python/python-augeas[${PYTHON_USEDEP}]"
 RDEPEND="${DEPEND}
-	>=app-admin/augeas-1.0
 	>=sys-block/parted-2.3
 	!minimal? (
 		sys-fs/btrfs-progs

@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-augeas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/ChangeLog,v 1.6 2013/12/17 21:20:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/ChangeLog,v 1.7 2013/12/18 07:59:59 jlec Exp $
+
+*python-augeas-0.4.2_pre131218 (18 Dec 2013)
+
+  18 Dec 2013; Justin Lecher <jlec@gentoo.org>
+  +python-augeas-0.4.2_pre131218.ebuild:
+  Add latest snapshot with py3 support
 
 *python-augeas-0.4.1 (17 Dec 2013)
 
