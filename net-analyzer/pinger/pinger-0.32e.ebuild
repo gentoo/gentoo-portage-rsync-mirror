@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32e.ebuild,v 1.3 2013/12/18 16:16:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32e.ebuild,v 1.4 2013/12/18 16:32:14 jer Exp $
 
 EAPI=5
 
@@ -41,8 +41,4 @@ src_configure() {
 	append-cppflags -D_GNU_SOURCE
 
 	econf $(use_enable gtk) $(use_enable nls)
-}
-
-src_install() {
-	dobin src/pinger
 }

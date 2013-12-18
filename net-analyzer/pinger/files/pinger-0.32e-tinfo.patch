@@ -1,10 +1,12 @@
 --- a/configure.in
 +++ b/configure.in
-@@ -65,8 +65,12 @@
+@@ -65,8 +65,14 @@
  					 AC_DEFINE([HAVE_GTK_2], 1, Found GTK 2),
             HAVE_GTK_2=0)
  fi
 +PKG_CHECK_MODULES(ncurses, ncurses,[
++	AC_DEFINE([HAVE_LIBNCURSES], [1], found ncurses library)
++	HAVE_CURSES=1
 +	LIBS="$LIBS $ncurses_LIBS"
 +	CFLAGS="$CFLAGS $ncurses_CFLAGS"],
  AC_CHECK_LIB(ncurses, initscr, HAVE_CURSES=1; LIBS="$LIBS -lncurses";
