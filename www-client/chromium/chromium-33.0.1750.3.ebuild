@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1726.0.ebuild,v 1.2 2013/12/08 03:23:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1750.3.ebuild,v 1.1 2013/12/18 12:24:37 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -156,6 +156,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-system-jinja-r2.patch"
 	epatch "${FILESDIR}/${PN}-build_ffmpeg-r0.patch"
+	epatch "${FILESDIR}/${PN}-gn-r0.patch"
 
 	epatch_user
 
@@ -175,7 +176,7 @@ src_prepare() {
 		'net/third_party/mozilla_security_manager' \
 		'net/third_party/nss' \
 		'third_party/WebKit' \
-		'third_party/angle_dx11' \
+		'third_party/angle' \
 		'third_party/cacheinvalidation' \
 		'third_party/cld' \
 		'third_party/cros_system_api' \
