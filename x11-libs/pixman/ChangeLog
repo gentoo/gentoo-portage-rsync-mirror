@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.184 2013/12/14 19:46:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.185 2013/12/18 18:35:33 mattst88 Exp $
+
+  18 Dec 2013; Matt Turner <mattst88@gentoo.org> metadata.xml:
+  Drop mmxext and ssse3 local descriptions, now that they are global USE flags.
 
   14 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pixman-0.32.4.ebuild:
   Stable for sparc, wrt bug #493292

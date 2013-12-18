@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/packagekit-gtk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.15 2013/12/18 05:14:53 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.16 2013/12/18 18:36:33 lxnay Exp $
+
+  18 Dec 2013; Fabio Erculiani <lxnay@gentoo.org> packagekit-gtk-0.8.15.ebuild:
+  disable bash completion, this pkg only installs gtk related stuff, see bug
+  #494648
 
 *packagekit-gtk-0.8.15 (18 Dec 2013)
 

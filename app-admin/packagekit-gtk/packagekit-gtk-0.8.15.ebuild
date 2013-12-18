@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/packagekit-gtk-0.8.15.ebuild,v 1.1 2013/12/18 05:14:53 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/packagekit-gtk-0.8.15.ebuild,v 1.2 2013/12/18 18:36:33 lxnay Exp $
 
 EAPI="3"
 
@@ -29,6 +29,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	econf \
+		--disable-bash-completion \
 		--disable-browser-plugin \
 		--disable-command-not-found \
 		--disable-cron \

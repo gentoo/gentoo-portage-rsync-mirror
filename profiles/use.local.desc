@@ -6858,8 +6858,6 @@ x11-libs/motif:motif22-compatibility - Compatibility with Open Motif 2.2
 x11-libs/mx:glade - Build the dev-util/glade catalog files
 x11-libs/mx:introspection - Use dev-libs/gobject-introspection for introspection
 x11-libs/pixman:loongson2f - Enable Loongson2f MMI optimizations.
-x11-libs/pixman:mmxext - Enable MMX2 support.
-x11-libs/pixman:ssse3 - Enable SSSE3 support.
 x11-libs/qwt:mathml - Use the MathML renderer of the Qt solutions package.
 x11-libs/vte:glade - Provide integration with dev-util/glade.
 x11-libs/vte:introspection - Use dev-libs/gobject-introspection for introspection

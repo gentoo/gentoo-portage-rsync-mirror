@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.8.15.ebuild,v 1.1 2013/12/18 05:12:15 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.8.15.ebuild,v 1.2 2013/12/18 18:33:51 lxnay Exp $
 
 EAPI="5"
 
@@ -20,9 +20,10 @@ SRC_URI="http://www.packagekit.org/releases/${MY_P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
-IUSE="connman cron command-not-found doc +introspection networkmanager nsplugin entropy static-libs systemd udev"
+IUSE="bash-completion connman cron command-not-found doc +introspection networkmanager nsplugin entropy static-libs systemd udev"
 
-CDEPEND="connman? ( net-misc/connman )
+CDEPEND="bash-completion? ( >=app-shells/bash-completion-2.0 )
+	connman? ( net-misc/connman )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.9[${PYTHON_USEDEP}] )
 	networkmanager? ( >=net-misc/networkmanager-0.6.4 )
 	nsplugin? (
@@ -79,7 +80,7 @@ src_configure() {
 		$(test -n "${LINGUAS}" && echo -n "--enable-nls" || echo -n "--disable-nls") \
 		--enable-introspection=$(use introspection && echo -n "yes" || echo -n "no") \
 		--localstatedir=/var \
-		--enable-bash-completion \
+		$(use_enable bash-completion) \
 		--disable-dependency-tracking \
 		--enable-option-checking \
 		--enable-libtool-lock \
