@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/pinger
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/ChangeLog,v 1.18 2013/08/17 16:55:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/ChangeLog,v 1.19 2013/12/18 15:09:28 jer Exp $
+
+  18 Dec 2013; Jeroen Roovers <jer@gentoo.org> pinger-0.32e.ebuild,
+  +files/gtk-2.0.m4, -files/disable_gtk.patch:
+  With USE=-gtk, AM_PATH_GTK_2_0 still needs to get expanded, so add gtk-2.0.m4
+  (bug #494636 by broot).
 
 *pinger-0.32e (17 Aug 2013)
 

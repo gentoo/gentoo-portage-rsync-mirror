@@ -1,8 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32e.ebuild,v 1.1 2013/08/17 16:55:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32e.ebuild,v 1.2 2013/12/18 15:09:28 jer Exp $
 
 EAPI=5
+
 inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Cyclic multi ping utility for selected adresses using GTK/ncurses."
@@ -26,7 +27,11 @@ DEPEND="
 DOCS=( AUTHORS BUGS ChangeLog NEWS README )
 
 src_prepare() {
+	# bug #494636
+	cp "${FILESDIR}"/gtk-2.0.m4 m4/ || die
+
 	sed -i -e '/Root privileges/d' src/Makefile.am || die
+
 	eautoreconf
 }
 
@@ -34,4 +39,8 @@ src_configure() {
 	append-cppflags -D_GNU_SOURCE
 
 	econf $(use_enable gtk) $(use_enable nls)
+}
+
+src_install() {
+	dobin src/pinger
 }
