@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.2.ebuild,v 1.3 2013/12/17 11:59:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.2.ebuild,v 1.4 2013/12/18 08:32:48 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps user
@@ -12,7 +12,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE="
 	adns +caps crypt doc doc-pdf geoip gtk2 +gtk3 ipv6 kerberos libadns lua
 	+netlink +pcap portaudio +qt4 selinux smi ssl zlib
