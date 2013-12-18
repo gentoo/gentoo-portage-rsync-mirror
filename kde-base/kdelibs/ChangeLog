@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.967 2013/12/14 21:56:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.968 2013/12/18 19:57:45 johu Exp $
+
+*kdelibs-4.12.0 (18 Dec 2013)
+
+  18 Dec 2013; Johannes Huber <johu@gentoo.org> +kdelibs-4.12.0.ebuild:
+  Version bump KDE SC 4.12.0
 
   14 Dec 2013; Johannes Huber <johu@gentoo.org>
   -files/kdelibs-4.10.2-security-url-dont-show-password.patch,

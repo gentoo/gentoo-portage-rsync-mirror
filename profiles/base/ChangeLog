@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.616 2013/12/16 14:38:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.617 2013/12/18 19:48:00 johu Exp $
+
+  18 Dec 2013; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Mask >=kde-base/kopete-4.12.0[otr] because of package mask on 
+  >=net-libs/libotr-0.4.0.
 
   16 Dec 2013; Sven Vermeulen <swift@gentoo.org> package.mask:
   Mask selinux-rngd (new SELinux policy package)

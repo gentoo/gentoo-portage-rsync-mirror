@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8433 2013/12/18 18:34:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8434 2013/12/18 19:42:03 lu_zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Dec 2013; Luca Barbato <lu_zero@gentoo.org> package.mask:
+  Alpha release to test the tree for compatibility
 
   18 Dec 2013; Matt Turner <mattst88@gentoo.org> use.desc:
   New global use flags: 3dnowext, mmxext, ssse3, sse4_1, avx, avx2. Rewritten
