@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32e.ebuild,v 1.2 2013/12/18 15:09:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pinger/pinger-0.32e.ebuild,v 1.3 2013/12/18 16:16:55 jer Exp $
 
 EAPI=5
 
@@ -29,6 +29,8 @@ DOCS=( AUTHORS BUGS ChangeLog NEWS README )
 src_prepare() {
 	# bug #494636
 	cp "${FILESDIR}"/gtk-2.0.m4 m4/ || die
+
+	epatch "${FILESDIR}"/${P}-tinfo.patch
 
 	sed -i -e '/Root privileges/d' src/Makefile.am || die
 

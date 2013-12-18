@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.10 2013/03/24 19:50:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.11 2013/12/18 16:12:07 axs Exp $
 
 EAPI="4"
 
@@ -57,6 +57,11 @@ src_prepare() {
 	# Prevent an access violation, do not create symlinks on live file system
 	# during installation.
 	sed -e 's/ install-filter / /g' -i Makefile
+
+	# Prevent an access violation, do not remove files from live filesystem
+	# during make install
+	sed -e '/rm .*LIBUDEVDIR)\//d' -i Makefile
+	sed -e '/rm .*lib\/udev\/rules.d\//d' -i hplj1000
 }
 
 src_compile() {

@@ -9,4 +9,4 @@ RDEPEND=net-print/cups net-print/foomatic-db-engine net-print/foomatic-filters v
 RESTRICT=bindist
 SLOT=0
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=d0f60f7737e7048fa462549b60c0ab69
+_md5_=9444ed08d5ffc5d236dea713b6cbaa1a
