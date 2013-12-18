@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/packagekit-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.13 2012/07/20 13:40:27 lxnay Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.14 2013/12/18 04:58:09 lxnay Exp $
+
+  18 Dec 2013; Fabio Erculiani <lxnay@gentoo.org>
+  -packagekit-gtk-0.6.22.ebuild:
+  drop old 0.6.x packagekit
 
   20 Jul 2012; Fabio Erculiani <lxnay@gentoo.org> packagekit-gtk-0.7.4.ebuild:
   Remove check for polkit-backend-1 which is now marked as noinst in polkit >=
