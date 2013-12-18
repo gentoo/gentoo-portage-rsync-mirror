@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-254.ebuild,v 1.1 2013/12/18 05:03:33 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-254.ebuild,v 1.2 2013/12/18 09:27:33 patrick Exp $
 
 EAPI=5
 
@@ -37,4 +37,3 @@ src_install() {
 
 	python_optimize "${D}/usr/lib/entropy/client"
 }
-

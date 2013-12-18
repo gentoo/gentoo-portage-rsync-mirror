@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/equo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/ChangeLog,v 1.32 2013/12/18 05:16:38 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/ChangeLog,v 1.33 2013/12/18 09:27:33 patrick Exp $
+
+  18 Dec 2013; Patrick Lauer <patrick@gentoo.org> equo-254.ebuild:
+  Whitespace
 
   18 Dec 2013; Fabio Erculiani <lxnay@gentoo.org> -equo-216.ebuild:
   drop older version 216
@@ -142,4 +145,3 @@
   19 Jul 2011; Fabio Erculiani <lxnay@gentoo.org> +equo-1.0_rc27.ebuild,
   +metadata.xml:
   new ebuild
-
