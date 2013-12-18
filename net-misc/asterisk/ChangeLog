@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.463 2013/10/30 10:35:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.464 2013/12/18 11:54:12 chainsaw Exp $
+
+*asterisk-11.7.0 (18 Dec 2013)
+*asterisk-1.8.25.0 (18 Dec 2013)
+
+  18 Dec 2013; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.25.0.ebuild,
+  +asterisk-11.7.0.ebuild:
+  Upgrades on both branches for memory corruption (AST-2013-006) & security
+  bypass (AST-2013-007) vulnerabilities, as per Agostino Sarubbo in security
+  bug #494630. Squelch unnecessary chatter from build system, as per Patryk
+  Rzadzinski in bug #489862.
 
 *asterisk-11.6.0-r1 (30 Oct 2013)
 
