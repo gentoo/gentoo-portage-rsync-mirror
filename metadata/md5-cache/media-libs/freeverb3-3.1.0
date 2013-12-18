@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install
+DEPEND=>=sci-libs/fftw-3.0.1 audacious? ( >=media-sound/audacious-3.2.4 >=dev-libs/glib-2.4.7:2 >=x11-libs/gtk+-3.0.0:3 x11-libs/pango x11-libs/cairo media-libs/libsndfile ) jack? ( media-sound/jack-audio-connection-kit >=dev-libs/glib-2.4.7:2 >=x11-libs/gtk+-3.0.0:3 x11-libs/pango x11-libs/cairo media-libs/libsndfile )
+DESCRIPTION=High Quality Reverb and Impulse Response Convolution library including XMMS/Audacious Effect plugins
+EAPI=5
+HOMEPAGE=https://savannah.nongnu.org/projects/freeverb3
+IUSE=3dnow avx sse sse2 sse3 sse4 audacious forcefpu jack openmp plugdouble threads
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sci-libs/fftw-3.0.1 audacious? ( >=media-sound/audacious-3.2.4 >=dev-libs/glib-2.4.7:2 >=x11-libs/gtk+-3.0.0:3 x11-libs/pango x11-libs/cairo media-libs/libsndfile ) jack? ( media-sound/jack-audio-connection-kit >=dev-libs/glib-2.4.7:2 >=x11-libs/gtk+-3.0.0:3 x11-libs/pango x11-libs/cairo media-libs/libsndfile )
+SLOT=0
+SRC_URI=mirror://nongnu/freeverb3/freeverb3-3.1.0.tar.xz
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=c0926ce8dca99e78b1793ef2f72b30a8
