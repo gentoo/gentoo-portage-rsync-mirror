@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jabref
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.90 2013/02/02 01:23:15 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.91 2013/12/19 01:54:09 nicolasbock Exp $
+
+*jabref-2.9.2 (19 Dec 2013)
+
+  19 Dec 2013; Nicolas Bock <nicolasbock@gentoo.org> +jabref-2.9.2.ebuild:
+  app-text/jabref: Copying current stable version 2.9.2 from sci overlay.
 
   02 Feb 2013; Denis Dupeyron <calchan@gentoo.org> jabref-2.6.ebuild:
   Search feature is broken with java 1.7.
@@ -372,4 +377,3 @@
   16 Feb 2004; Chris Aniszczyk <zx@gentoo.org> jabref-1.1.ebuild:
   Initial Import. Thanks to Morten O. Alver <mortenalver@boblefisk.org> for the
   initial ebuild. Bug #39807
-
