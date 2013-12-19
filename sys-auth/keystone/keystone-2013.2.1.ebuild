@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2-r2.ebuild,v 1.2 2013/12/13 17:31:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1.ebuild,v 1.1 2013/12/19 04:16:52 prometheanfire Exp $
 
 EAPI=5
 
@@ -20,31 +20,6 @@ IUSE="+sqlite mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 #todo, seperate out rdepend via use flags
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
-	test? ( dev-python/Babel
-			dev-python/decorator
-			dev-python/eventlet
-			dev-python/greenlet
-			dev-python/httplib2
-			dev-python/iso8601
-			dev-python/lxml
-			dev-python/netifaces
-			dev-python/nose
-			dev-python/nosexcover
-			dev-python/passlib
-			dev-python/paste
-			dev-python/pastedeploy
-			dev-python/python-pam
-			dev-python/repoze-lru
-			dev-python/routes
-			dev-python/sphinx
-			>=dev-python/sqlalchemy-migrate-0.7
-			dev-python/tempita
-			>=dev-python/webob-1.0.8
-			dev-python/webtest
-			dev-python/python-memcached )
-	>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
-	<dev-python/pbr-1.0[${PYTHON_USEDEP}]"
 RDEPEND=">=dev-python/python-pam-0.1.4[${PYTHON_USEDEP}]
 	>=dev-python/webob-1.2.3-r1[${PYTHON_USEDEP}]
 	<dev-python/webob-1.3[${PYTHON_USEDEP}]
@@ -63,10 +38,10 @@ RDEPEND=">=dev-python/python-pam-0.1.4[${PYTHON_USEDEP}]
 	>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
 	dev-python/passlib[${PYTHON_USEDEP}]
 	>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
-	>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
+	>=dev-python/iso8601-0.1.8[${PYTHON_USEDEP}]
 	>=dev-python/python-keystoneclient-0.3.2[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-	>=dev-python/Babel-0.9.6[${PYTHON_USEDEP}]
+	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 	dev-python/oauth2[${PYTHON_USEDEP}]
 	>=dev-python/dogpile-cache-0.5.0[${PYTHON_USEDEP}]
 	dev-python/python-daemon[${PYTHON_USEDEP}]
@@ -74,10 +49,32 @@ RDEPEND=">=dev-python/python-pam-0.1.4[${PYTHON_USEDEP}]
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
 	>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 	<dev-python/pbr-1.0[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+	test? ( ${RDEPEND}
+			>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
+			>=dev-python/hacking-0.5.6[${PYTHON_USEDEP}]
+			<dev-python/hacking-0.8[${PYTHON_USEDEP}]
+			dev-python/httplib2[${PYTHON_USEDEP}]
+			>=dev-python/keyring-1.6.1[${PYTHON_USEDEP}]
+			<dev-python/keyring-2.0[${PYTHON_USEDEP}]
+			>=dev-python/mox-0.5.3[${PYTHON_USEDEP}]
+			>=dev-python/netifaces-0.5[${PYTHON_USEDEP}]
+			dev-python/nose[${PYTHON_USEDEP}]
+			dev-python/nosexcover[${PYTHON_USEDEP}]
+			>=dev-python/nosehtmloutput-0.0.3[${PYTHON_USEDEP}]
+			>=dev-python/openstack-nose-plugin-0.7[${PYTHON_USEDEP}]
+			dev-python/oslo-sphinx[${PYTHON_USEDEP}]
+			>=dev-python/requests-1.1[${PYTHON_USEDEP}]
+			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
+			<dev-python/sphinx-1.2[${PYTHON_USEDEP}]
+			>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
+			>=dev-python/webtest-2.0[${PYTHON_USEDEP}]
+			>=dev-python/python-memcached-1.48[${PYTHON_USEDEP}]
+			ldap? ( ~dev-python/python-ldap-2.3.13 ) )
+	>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
+	<dev-python/pbr-1.0[${PYTHON_USEDEP}]"
 
 PATCHES=(
-	"${FILESDIR}/2013.2-CVE-2013-4477.patch"
-	"${FILESDIR}/cve-2013-6391_2013.2.patch"
 )
 
 pkg_setup() {

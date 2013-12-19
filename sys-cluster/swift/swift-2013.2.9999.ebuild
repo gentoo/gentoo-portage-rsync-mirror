@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2013.2.9999.ebuild,v 1.3 2013/11/10 08:51:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2013.2.9999.ebuild,v 1.4 2013/12/19 04:31:09 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -49,10 +49,6 @@ RDEPEND=">=dev-python/dnspython-1.9.4[${PYTHON_USEDEP}]
 CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
 ~TMPFS_XATTR ~UBIFS_FS_XATTR ~EXT2_FS_XATTR ~REISERFS_FS_XATTR ~EXT4_FS_XATTR
 ~ZFS"
-
-src_test () {
-	sh .unittests || die
-}
 
 pkg_setup() {
 	enewuser swift

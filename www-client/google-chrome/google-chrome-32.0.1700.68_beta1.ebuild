@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-32.0.1700.55_beta1.ebuild,v 1.1 2013/12/11 23:38:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-32.0.1700.68_beta1.ebuild,v 1.2 2013/12/19 04:16:16 floppym Exp $
 
 EAPI="4"
 
@@ -150,7 +150,6 @@ src_install() {
 			-i "${CHROME_HOME}/${PN}" || die
 	fi
 
-	domenu "${CHROME_HOME}/${PN}.desktop" || die
 	local size
 	for size in 16 22 24 32 48 64 128 256 ; do
 		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" ${PN}.png
