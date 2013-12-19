@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1.ebuild,v 1.1 2013/12/19 04:16:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1.ebuild,v 1.2 2013/12/19 10:04:11 idella4 Exp $
 
 EAPI=5
 
@@ -8,8 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="Keystone is the Openstack authentication, authorization, and
-service catalog written in Python."
+DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python."
 HOMEPAGE="https://launchpad.net/keystone"
 SRC_URI="http://launchpad.net/${PN}/havana/${PV}/+download/${P}.tar.gz"
 
@@ -90,6 +89,7 @@ python_prepare_all() {
 
 python_test() {
 	# Ignore (naughty) test_.py files & 1 test that connect to the network
+	# https://bugs.launchpad.net/keystone/+bug/1262564
 	nosetests -I 'test_keystoneclient*' \
 		-e test_import || die "testsuite failed under python2.7"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.8.15.ebuild,v 1.2 2013/12/18 18:33:51 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.8.15-r1.ebuild,v 1.1 2013/12/19 10:17:44 lxnay Exp $
 
 EAPI="5"
 
@@ -68,6 +68,7 @@ src_prepare() {
 
 	# Upstreamed patches
 	epatch "${FILESDIR}/0001-entropy-PackageKitEntropyClient.output-API-update.patch"
+	epatch "${FILESDIR}/${P}-qtdbus-annotate.patch"
 
 	epatch_user
 
