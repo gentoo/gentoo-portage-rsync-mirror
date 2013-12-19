@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dictd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.93 2013/11/12 20:20:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.94 2013/12/19 22:01:17 pacho Exp $
+
+  19 Dec 2013; Pacho Ramos <pacho@gentoo.org> dictd-1.12.1-r1.ebuild:
+  amd64 stable, bug #493674
 
 *dictd-1.12.1-r1 (12 Nov 2013)
 

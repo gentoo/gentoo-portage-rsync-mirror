@@ -1,0 +1,51 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Thu Dec 19 21:30:53 UTC 2013
+
+* add --with-help switch
+* don't use AM_CFLAGS in configure.ac, it is bad form
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -129,12 +129,21 @@
+   *)    pioneers_deprecationChecks=no  ;;
+ esac])
+ 
++AC_ARG_WITH([help],
++	AS_HELP_STRING([--with-help],
++		[Enable gnome help via scrollkeeper.]),
++[case "${withval}" in
++  yes)  with_help=yes ;;
++  "")   with_help=yes ;;
++  *)    with_help=no  ;;
++esac])
++
+ ## The warnings are in the same order as in 'man gcc'
+ if test "x$GCC" = xyes; then
+ 	# Flags from Debian hardening (dpkg-buildflags --get CFLAGS)
+-	AC_SUBST(AM_CFLAGS, ["$AM_CFLAGS -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security"])
+-	AC_SUBST(AM_CFLAGS, ["$AM_CFLAGS -D_FORTIFY_SOURCE=2"])
+-	AC_SUBST(AM_CFLAGS, ["$AM_CFLAGS -pie -fPIE"])
++	AC_SUBST(CFLAGS, ["$CFLAGS -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security"])
++	AC_SUBST(CFLAGS, ["$CFLAGS -D_FORTIFY_SOURCE=2"])
++	AC_SUBST(CFLAGS, ["$CFLAGS -pie -fPIE"])
+ 
+ 	if test "$pioneers_is_windows_port" = "no"; then
+ 	 	# Flags from Debian hardening (dpkg-buildflags --get LDFLAGS)
+@@ -143,7 +152,7 @@
+ 	fi
+ 
+ 	# Only link the directly needed libraries	
+-	AC_SUBST(AM_CFLAGS, ["$AM_CFLAGS -Wl,--as-needed"])
++	AC_SUBST(CFLAGS, ["$CFLAGS -Wl,--as-needed"])
+ 
+ 	if test "$pioneers_warnings" = yes -o "$pioneers_warnings" = full; then
+ 		AC_SUBST(WARNINGS, "-Wall")
+@@ -385,7 +394,7 @@
+ AM_GLIB_GNU_GETTEXT
+ 
+ if test $pioneers_is_mingw_port = yes; then
+-	AC_SUBST(AM_CFLAGS, "-mms-bitfields $AM_CFLAGS")
++	AC_SUBST(CFLAGS, "-mms-bitfields $CFLAGS")
+ 	# No console window for the graphical applications
+ 	AC_SUBST(GTK2_LIBS, "$GTK2_LIBS -mwindows")
+ 	# Don't use bin, lib and share subdirectories

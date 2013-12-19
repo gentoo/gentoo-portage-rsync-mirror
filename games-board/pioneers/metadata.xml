@@ -5,4 +5,7 @@
 <longdescription>
 	Pio (Pioneers) is a clone of the board game The Settlers of Catan.
 </longdescription>
+<use>
+	<flag name='help'>Enable gnome ingame help via scrollkeeper</flag>
+</use>
 </pkgmetadata>
