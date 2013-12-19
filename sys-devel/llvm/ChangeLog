@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.149 2013/12/19 11:08:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.151 2013/12/19 17:26:35 mgorny Exp $
+
+  19 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Remove traces of BugpointPasses in darwin branch.
+
+  19 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Delay building unnecessary tools & unittests until src_test(). Do not install
+  BugpointPasses.so (seems unused). Match man phase generation & install phases.
 
   19 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Clean up the build procedure a bit. Pass the same MAKEOPTS to all calls, and
