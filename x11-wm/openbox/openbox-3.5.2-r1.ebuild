@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.2-r1.ebuild,v 1.2 2013/10/12 23:15:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.2-r1.ebuild,v 1.3 2013/12/19 15:44:32 jer Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ if [[ ${PV} == *9999* ]]; then
 else
 	SRC_URI="http://openbox.org/dist/openbox/${P}.tar.gz
 	branding? ( http://dev.gentoo.org/~hwoarang/distfiles/surreal-gentoo.tar.gz )"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~arm-linux ~x86-linux"
 fi
 
 LICENSE="GPL-2"
