@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.4.1.ebuild,v 1.1 2013/11/30 07:28:20 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-0.4.1.ebuild,v 1.2 2013/12/19 02:05:15 prometheanfire Exp $
 
 EAPI=5
 #testsuite has unpretty httpretty deps
@@ -36,7 +36,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 				>=dev-python/pycrypto-2.6[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 				>=dev-python/testrepository-0.0.17[${PYTHON_USEDEP}]
-				<=dev-python/testtools-0.9.32-r1[${PYTHON_USEDEP}]
+				<dev-python/testtools-0.9.33[${PYTHON_USEDEP}]
 				>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
 				<dev-python/webob-1.3[${PYTHON_USEDEP}]
 			) "
@@ -64,7 +64,7 @@ python_compile_all() {
 python_test() {
 	# https://bugs.launchpad.net/python-keystoneclient/+bug/1243528
 	# https://bugs.launchpad.net/python-keystoneclient/+bug/1174410; last touched on 
-	# 2013-05-29 with 'importance: 	Undecided → Medium' and never worked since.
+	# 2013-05-29 with 'importance: 	Undecided â Medium' and never worked since.
 	sed -e 's:test_encrypt_cache_data:_&:' \
 		-e 's:test_no_memcache_protection:_&:' \
 		-e 's:test_sign_cache_data:_&:' \

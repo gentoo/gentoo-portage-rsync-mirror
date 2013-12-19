@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2.9999.ebuild,v 1.3 2013/11/18 03:02:59 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2013.2.9999.ebuild,v 1.4 2013/12/19 02:08:50 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -31,7 +31,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 			>=dev-python/nosehtmloutput-0.0.3[${PYTHON_USEDEP}]
 			>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 			>=dev-python/requests-1.1[${PYTHON_USEDEP}]
-			<=dev-python/testtools-0.9.24-r1[${PYTHON_USEDEP}]
+			>=dev-python/testtools-0.9.32[${PYTHON_USEDEP}]
 			>=dev-python/psutil-0.6.1[${PYTHON_USEDEP}]
 			dev-python/mysql-python[${PYTHON_USEDEP}]
 			dev-python/psycopg[${PYTHON_USEDEP}]

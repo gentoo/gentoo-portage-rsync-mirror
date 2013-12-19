@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-keystoneclient
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.23 2013/12/09 02:33:31 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/ChangeLog,v 1.24 2013/12/19 02:05:16 prometheanfire Exp $
+
+  19 Dec 2013; Matthew Thode <prometheanfire@gentoo.org>
+  python-keystoneclient-0.3.1.ebuild, python-keystoneclient-0.3.2.ebuild,
+  python-keystoneclient-0.4.1.ebuild:
+  changing deps to be more clear (don't like the inclusing of r1 in a <= dep)
 
   09 Dec 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
   fixing up metadata
