@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.4.0_p170.ebuild,v 1.1 2013/10/25 09:32:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.4.0_p170-r1.ebuild,v 1.1 2013/12/19 00:08:36 mjo Exp $
 
 EAPI=5
 
@@ -73,7 +73,7 @@ src_install() {
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}"/logwatch 00-logwatch
 
-	doman logwatch.8 amavis-logwatch.1 postfix-logwatch.1
+	doman logwatch.8
 	dodoc README HOWTO-Customize-LogWatch
 }
 
