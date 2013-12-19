@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sci-electronics</herd>
+	<maintainer>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
+	</maintainer>
 	<longdescription>EAGLE (Easily Applicable Graphical Layout Editor)
 		is a powerful tool for creating printed circuit boards (PCBs).
 		It requires a 586 (or higher), kernel 2.x (or higher), and

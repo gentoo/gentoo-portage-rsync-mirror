@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst unpack
+DESCRIPTION=CadSoft EAGLE schematic and printed circuit board (PCB) layout editor
+EAPI=5
+HOMEPAGE=http://www.cadsoft.de
+IUSE=doc linguas_de linguas_zh
+KEYWORDS=~amd64 ~x86 -*
+LICENSE=cadsoft
+RDEPEND=sys-libs/glibc x86? ( sys-libs/zlib dev-libs/openssl x11-libs/libXi x11-libs/libX11 x11-libs/libXext x11-libs/libXrender x11-libs/libXrandr x11-libs/libXcursor media-libs/freetype media-libs/fontconfig ) amd64? ( app-emulation/emul-linux-x86-baselibs || ( ( x11-libs/libX11[abi_x86_32] x11-libs/libXext[abi_x86_32] x11-libs/libXrender[abi_x86_32] x11-libs/libXrandr[abi_x86_32] x11-libs/libXcursor[abi_x86_32] x11-libs/libXi[abi_x86_32] media-libs/freetype[abi_x86_32] media-libs/fontconfig[abi_x86_32] ) app-emulation/emul-linux-x86-xlibs ) )
+RESTRICT=strip
+SLOT=0
+SRC_URI=ftp://ftp.cadsoft.de/eagle/program/6.5/eagle-lin-6.5.0.run
+_eclasses_=eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=56433fef4afca90084b5912ff485fea7
