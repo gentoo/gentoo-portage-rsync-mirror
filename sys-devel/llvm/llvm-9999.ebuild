@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.62 2013/12/03 14:02:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.63 2013/12/19 11:08:15 mgorny Exp $
 
 EAPI=5
 
@@ -180,7 +180,8 @@ src_prepare() {
 
 multilib_src_configure() {
 	# disable timestamps since they confuse ccache
-	local CONF_FLAGS="--disable-timestamps
+	local conf_flags=(
+		--disable-timestamps
 		--enable-keep-symbols
 		--enable-shared
 		--with-optimize-option=
@@ -188,33 +189,33 @@ multilib_src_configure() {
 		$(use_enable debug assertions)
 		$(use_enable debug expensive-checks)
 		$(use_enable ncurses terminfo)
-		$(use_enable libffi)"
+		$(use_enable libffi)
+	)
 
 	if use clang; then
-		CONF_FLAGS+="
-			--with-clang-resource-dir=../lib/clang/3.5"
+		conf_flags+=( --with-clang-resource-dir=../lib/clang/3.5 )
 	fi
 
+	local targets bindings
 	if use multitarget; then
-		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
+		targets='all'
 	else
-		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host,cpp"
-		if use video_cards_radeon; then
-			CONF_FLAGS="${CONF_FLAGS},r600"
-		fi
+		targets='host,cpp'
+		use video_cards_radeon && targets+=',r600'
+	fi
+	conf_flags+=( --enable-targets=${targets} )
+
+	if multilib_build_binaries; then
+		use gold && conf_flags+=( --with-binutils-include="${EPREFIX}"/usr/include/ )
+		# extra commas don't hurt
+		use ocaml && bindings+=',ocaml'
 	fi
 
-	if multilib_build_binaries && use gold; then
-		CONF_FLAGS="${CONF_FLAGS} --with-binutils-include=${EPREFIX}/usr/include/"
-	fi
-	if multilib_is_native_abi && use ocaml; then
-		CONF_FLAGS="${CONF_FLAGS} --enable-bindings=ocaml"
-	else
-		CONF_FLAGS="${CONF_FLAGS} --enable-bindings=none"
-	fi
+	[[ ${bindings} ]] || bindings='none'
+	conf_flags+=( --enable-bindings=${bindings} )
 
 	if use udis86; then
-		CONF_FLAGS="${CONF_FLAGS} --with-udis86"
+		conf_flags+=( --with-udis86 )
 	fi
 
 	if use libffi; then
@@ -229,13 +230,39 @@ multilib_src_configure() {
 	tc-export CC CXX
 
 	ECONF_SOURCE=${S} \
-	econf ${CONF_FLAGS}
+	econf "${conf_flags[@]}"
+}
+
+set_makeargs() {
+	MAKEARGS=(
+		VERBOSE=1
+		REQUIRES_RTTI=1
+		GENTOO_LIBDIR=$(get_libdir)
+	)
+
+	if ! multilib_build_binaries; then
+		local tools=( llvm-config )
+		use clang && tools+=( clang )
+		use test && tools+=(
+			llc llvm-objdump llvm-readobj llvm-dwarfdump llvm-rtdyld llvm-cov
+			yaml2obj obj2yaml opt llvm-mcmarkup bugpoint llvm-c-test bugpoint-passes
+			llvm-as llvm-dis llvm-nm llvm-bcanalyzer llvm-mc macho-dump llvm-ar
+			llvm-extract lli llvm-link llvm-lto
+		)
+
+		MAKEARGS+=(
+			ONLY_TOOLS="${tools[*]}"
+		)
+	fi
 }
 
 multilib_src_compile() {
-	emake VERBOSE=1 REQUIRES_RTTI=1 GENTOO_LIBDIR=$(get_libdir)
+	local MAKEARGS
+	set_makeargs
 
-	if multilib_is_native_abi; then
+	emake "${MAKEARGS[@]}"
+
+	if multilib_build_binaries; then
 		emake -C "${S}"/docs -f Makefile.sphinx man
 		use doc && emake -C "${S}"/docs -f Makefile.sphinx html
 	fi
@@ -255,9 +282,12 @@ multilib_src_compile() {
 }
 
 multilib_src_test() {
-	default
+	local MAKEARGS
+	set_makeargs
 
-	use clang && emake -C tools/clang test
+	emake "${MAKEARGS[@]}" check
+
+	use clang && emake "${MAKEARGS[@]}" -C tools/clang test
 }
 
 src_install() {
@@ -274,7 +304,10 @@ src_install() {
 }
 
 multilib_src_install() {
-	emake DESTDIR="${D}" GENTOO_LIBDIR=$(get_libdir) install
+	local MAKEARGS
+	set_makeargs
+
+	emake "${MAKEARGS[@]}" DESTDIR="${D}" install
 
 	if multilib_build_binaries; then
 		# Move files back.

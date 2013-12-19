@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.148 2013/12/03 14:02:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.149 2013/12/19 11:08:15 mgorny Exp $
+
+  19 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Clean up the build procedure a bit. Pass the same MAKEOPTS to all calls, and
+  therefore make tests verbose as well. Avoid building unnecessary tools for
+  non-native ABIs.
 
   03 Dec 2013; Michał Górny <mgorny@gentoo.org>
   +files/clang-3.5-gentoo-install.patch, llvm-9999.ebuild:
