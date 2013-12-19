@@ -1,0 +1,20 @@
+commit 76c1610c10f863e4f8b38e88af60044b42b79422
+Author: ABC <abc@telekom.ru>
+Date:   Mon Sep 30 11:07:07 2013 +0400
+
+    num_physpages to totalram_pages rename for linux 3.11
+
+diff --git a/ipt_NETFLOW.c b/ipt_NETFLOW.c
+index 5ec725d..71d4087 100644
+--- a/ipt_NETFLOW.c
++++ b/ipt_NETFLOW.c
+@@ -2025,6 +2025,9 @@ static int __init ipt_netflow_init(void)
+ 
+ 	/* determine hash size (idea from nf_conntrack_core.c) */
+ 	if (!hashsize) {
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(3,11,0)
++#define num_physpages totalram_pages
++#endif
+ 		hashsize = (((num_physpages << PAGE_SHIFT) / 16384)
+ 					 / sizeof(struct hlist_head));
+ 		if (num_physpages > (1024 * 1024 * 1024 / PAGE_SIZE))

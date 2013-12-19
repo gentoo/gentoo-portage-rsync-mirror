@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.151 2013/12/19 17:26:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.152 2013/12/19 19:08:25 mgorny Exp $
+
+  19 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Symlink the LLVM gold plugin to bfd-plugins directory to enable LLVM object
+  support in various binutils tools, bug #462554.
 
   19 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Remove traces of BugpointPasses in darwin branch.

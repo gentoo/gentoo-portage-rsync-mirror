@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.65 2013/12/19 17:26:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.66 2013/12/19 19:08:25 mgorny Exp $
 
 EAPI=5
 
@@ -329,9 +329,15 @@ multilib_src_install() {
 			mv "${ED}"/tmp/llvm-config.* "${ED}"/usr/bin || die
 		fi
 
+		# Install docs.
 		doman "${S}"/docs/_build/man/*.1
 		use clang && doman "${T}"/clang.1
 		use doc && dohtml -r "${S}"/docs/_build/html/
+
+		# Symlink the gold plugin.
+		dodir /usr/${CHOST}/binutils-bin/lib/bfd-plugins
+		dosym ../../../../$(get_libdir)/LLVMgold.so \
+			/usr/${CHOST}/binutils-bin/lib/bfd-plugins/LLVMgold.so
 	else
 		# Preserve ABI-variant of llvm-config,
 		# then drop all the executables since LLVM doesn't like to
