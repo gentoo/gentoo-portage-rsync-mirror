@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.407 2013/12/16 20:16:26 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.408 2013/12/19 13:39:48 jer Exp $
+
+  19 Dec 2013; Jeroen Roovers <jer@gentoo.org> perl-5.16.3.ebuild:
+  Stable for HPPA (bug #461898).
 
   16 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> perl-5.16.3.ebuild:
   Stable on arm, wrt bug #461898

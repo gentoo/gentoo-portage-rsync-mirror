@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.115 2013/05/02 15:12:38 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.116 2013/12/19 13:58:42 hattya Exp $
+
+  19 Dec 2013; Akinori Hattori <hattya@gentoo.org> redland-1.0.16.ebuild:
+  ia64 stable wrt bug #483186
 
   02 May 2013; Julian Ospald <hasufell@gentoo.org> redland-1.0.16.ebuild:
   fix sed-hack wrt #468298

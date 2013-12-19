@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-hppa64
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.30 2013/07/04 13:50:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.31 2013/12/19 13:34:52 jer Exp $
+
+  19 Dec 2013; Jeroen Roovers <jer@gentoo.org> binutils-hppa64-2.23.2.ebuild:
+  Stable for HPPA (bug #494670).
 
   04 Jul 2013; Jeroen Roovers <jer@gentoo.org> binutils-hppa64-2.23.1.ebuild:
   Stable for HPPA (bug #475570).

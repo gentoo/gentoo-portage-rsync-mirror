@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.23.2.ebuild,v 1.1 2013/05/01 11:54:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.23.2.ebuild,v 1.2 2013/12/19 13:34:52 jer Exp $
 
 export CTARGET=hppa64-${CHOST#*-}
 
@@ -10,7 +10,7 @@ inherit toolchain-binutils
 
 DESCRIPTION="binutils package for building 64bit kernels on HPPA"
 
-KEYWORDS="-* ~hppa"
+KEYWORDS="-* hppa"
 IUSE=""
 
 # 66_all_binutils-2.22-warn-textrel.patch fails to apply with
