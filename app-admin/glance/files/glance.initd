@@ -1,51 +1,72 @@
 #!/sbin/runscript
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance.initd,v 1.3 2013/09/12 06:27:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/files/glance.initd,v 1.4 2013/12/19 05:20:42 prometheanfire Exp $
 
 depend() {
-	need net
+    need net
 }
 
 BASENAME=$(echo $SVCNAME | cut -d '-' -f 1)
 SERVERNAME=$(echo $SVCNAME | cut -d '-' -f 2)
+SERVICES=( api registry scrubber )
+if [ ${SVCNAME} == 'glance' ]; then
+    SERVERNAME='all'
+fi
 
 checkconfig() {
-	if [ ! -r /etc/conf.d/$BASENAME ]; then
-		eerror "No glance conf.dfile found: /etc/conf.d/$BASENAME)"
-		return 1
-	fi
-	if [ ! -r /etc/glance/${SVCNAME}.conf ]; then
-		eerror "No ${BASENAME} config file found: /etc/glance/${SVCNAME}.conf)"
-		return 1
-	fi
-	return 0
+    if [ ! -r /etc/conf.d/$BASENAME ]; then
+        eerror "No glance conf.dfile found: /etc/conf.d/$BASENAME)"
+        return 1
+    fi
+    if [ ${SVCNAME} == 'glance' ]; then
+        for service in ${SERVICES[*]}; do
+            if [ ! -r /etc/glance/glance-${service}.conf ]; then
+                eerror "No glance-${SERVICE} config file found: /etc/glance/glance-${SERVICE}.conf)"
+                return 1
+            fi
+        done
+    elif [ ! -r /etc/glance/${SVCNAME}.conf ]; then
+        eerror "No ${BASENAME} config file found: /etc/glance/${SVCNAME}.conf)"
+        return 1
+    fi
+    return 0
 }
 
 
 start() {
-	checkconfig || return $?
-	. /etc/conf.d/$BASENAME
-	
-	ebegin "Starting ${SVCNAME}"
+    checkconfig || return $?
+    . /etc/conf.d/$BASENAME
+    
+    ebegin "Starting ${SVCNAME}"
     if [ ! -d ${PID_PATH} ]; then
         mkdir ${PID_PATH}
     fi
-	
-    start-stop-daemon --start --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" --exec /usr/bin/glance-control ${SERVERNAME} start 
-	
-	eend $? "Failed to start ${SVCNAME}"
+    
+    if [ ${SVCNAME} == 'glance' ]; then
+        for service in ${SERVICES[*]}; do
+            start-stop-daemon --start --quiet --background --make-pidfile --pidfile "${PID_PATH}/glance-${service}.pid" --user glance:glance --exec /usr/bin/glance-${service} -- --config-file /etc/glance/glance-${service}.conf
+        done
+    else
+        start-stop-daemon --start --quiet --background --make-pidfile --pidfile "${PID_PATH}/${SVCNAME}.pid" --user glance:glance --exec /usr/bin/glance-${SERVERNAME} -- --config-file /etc/glance/glance-${SERVERNAME}.conf
+    fi
+    eend $? "Failed to start ${SVCNAME}"
 }
 
 stop() {
-	checkconfig || return $?
-	. /etc/conf.d/$BASENAME
-	
-	ebegin "Stopping ${SVCNAME}"
-	
-	start-stop-daemon --stop --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" \
-					  --exec /usr/bin/glance-control ${SERVERNAME} stop /etc/glance/glance-${SERVERNAME}.conf
-	eend $? "Failed to stop ${SVCNAME}"
+    checkconfig || return $?
+    . /etc/conf.d/$BASENAME
+    
+    ebegin "Stopping ${SVCNAME}"
+    
+    if [ ${SVCNAME} == 'glance' ]; then
+        for service in ${SERVICES[*]}; do
+            start-stop-daemon --stop --quiet --pidfile "${PID_PATH}/glance-${service}.pid" --exec /usr/bin/glance-${service} -- --config-file /etc/glance/glance-${service}.conf
+        done
+    else
+        start-stop-daemon --stop --quiet --pidfile "${PID_PATH}/${SVCNAME}.pid" --exec /usr/bin/glance-control -- ${SERVERNAME} -- --config-file /etc/glance/glance-${SERVERNAME}.conf
+    fi
+    eend $? "Failed to stop ${SVCNAME}"
 }
 
 #restart() {

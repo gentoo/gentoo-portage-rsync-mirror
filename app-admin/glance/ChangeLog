@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.27 2013/12/19 02:08:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.28 2013/12/19 05:20:42 prometheanfire Exp $
+
+*glance-2013.2.1 (19 Dec 2013)
+
+  19 Dec 2013; Matthew Thode <prometheanfire@gentoo.org>
+  +glance-2013.2.1.ebuild, -files/glance-2.initd, -files/glance-3.initd,
+  -files/glance-gbug-474064-folsom.patch, -glance-2013.2-r2.ebuild,
+  -glance-2013.2.ebuild, files/glance.initd, glance-2013.1.9999.ebuild,
+  glance-2013.2.9999.ebuild, glance-9999.ebuild:
+  update to 2013.2.1 and bug 494184
 
   19 Dec 2013; Matthew Thode <prometheanfire@gentoo.org>
   -glance-2013.2-r1.ebuild, glance-2013.2-r2.ebuild, glance-2013.2.9999.ebuild:
