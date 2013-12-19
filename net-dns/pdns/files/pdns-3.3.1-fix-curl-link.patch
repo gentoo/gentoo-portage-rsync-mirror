@@ -1,6 +1,6 @@
 --- a/modules/remotebackend/Makefile.am	2013-12-10 11:45:24.487559267 +0100
 +++ b/modules/remotebackend/Makefile.am	2013-12-10 11:45:48.887215368 +0100
-@@ -13,7 +13,7 @@
+@@ -16,7 +16,7 @@
  libremotebackend_la_SOURCES=remotebackend.hh remotebackend.cc unixconnector.cc httpconnector.cc pipeconnector.cc 
  
  libremotebackend_la_LDFLAGS=-module -avoid-version

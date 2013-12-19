@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.3.ebuild,v 1.1 2013/12/16 14:56:40 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.3.1.ebuild,v 1.1 2013/12/19 16:34:57 ultrabug Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 # xdb: (almost) dead, surely not supported
 
 IUSE="botan cryptopp debug doc ldap lua mydns mysql odbc opendbx postgres remote
-remote-http sqlite static tinydns"
+remote-http sqlite static tools tinydns"
 
 REQUIRED_USE="mydns? ( mysql )"
 
@@ -41,7 +41,7 @@ RDEPEND="!static? (
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	static? (
-		net-libs/polarssl[static-libs(+)]
+		>=net-libs/polarssl-1.3.0[static-libs(+)]
 		>=dev-libs/boost-1.34[static-libs(+)]
 		botan? ( =dev-libs/botan-1.10*[static-libs(+)] )
 		cryptopp? ( dev-libs/crypto++[static-libs(+)] )
@@ -57,14 +57,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
-	#TODO: kill me, I'm dirty @ultrabug
-	cp "${FILESDIR}/${P}_sha.hh" pdns/sha.hh
 	epatch \
-		"${FILESDIR}/${P}-fix-polarssl_1.3.0.patch" \
-		"${FILESDIR}/${P}-fix-autoconf.patch" \
-		"${FILESDIR}/${P}-fix-conditional-polarssl.patch" \
-		"${FILESDIR}/${P}-fix-curl-link.patch" \
-		"${FILESDIR}/${P}-lib_lua.patch"
+		"${FILESDIR}/${P}-fix-curl-link.patch"
 	eautoreconf
 }
 
@@ -108,6 +102,7 @@ src_configure() {
 		--with-mysql-lib=/usr/$(get_libdir) \
 		$(use_with lua) \
 		$(use_enable static static-binaries) \
+		$(use_enable tools) \
 		${myconf}
 }
 

@@ -1,6 +1,17 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.90 2013/12/16 14:56:40 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.91 2013/12/19 16:34:57 ultrabug Exp $
+
+*pdns-3.3.1 (19 Dec 2013)
+
+  19 Dec 2013; Ultrabug <ultrabug@gentoo.org> -pdns-3.3.ebuild,
+  +pdns-3.3.1.ebuild, -files/pdns-3.3-fix-autoconf.patch,
+  -files/pdns-3.3-fix-conditional-polarssl.patch,
+  -files/pdns-3.3-fix-curl-link.patch,
+  -files/pdns-3.3-fix-polarssl_1.3.0.patch,
+  +files/pdns-3.3.1-fix-curl-link.patch, -files/pdns-3.3-lib_lua.patch,
+  -files/pdns-3.3_sha.hh, metadata.xml:
+  Version bump fix 494634 thx to @Nawadanp, add the tools IUSE, drop old
 
 *pdns-3.3 (16 Dec 2013)
 

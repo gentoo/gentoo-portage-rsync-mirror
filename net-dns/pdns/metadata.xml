@@ -19,5 +19,6 @@ standards documents. Furthermore, PowerDNS interfaces with almost any database.
 	<flag name='remote'>Use a generic socket or pipe as a backend (via JSON RPC requests).</flag>
 	<flag name='remote-http'>Enable remote connections to HTTP as backends (via RESTful JSON requests).</flag>
 	<flag name='tinydns'>Use a TinyDNS CDB database as backend.</flag>
+	<flag name='tools'>Build optional tools (dnsscan, dnsscope, etc..).</flag>
 </use>
 </pkgmetadata>
