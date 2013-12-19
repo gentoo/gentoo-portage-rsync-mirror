@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.243 2013/10/21 02:13:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.244 2013/12/19 08:49:58 vapier Exp $
+
+*qemu-1.7.0 (19 Dec 2013)
+*qemu-1.6.2 (19 Dec 2013)
+
+  19 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/qemu-1.7.0-cflags.patch, +qemu-1.6.2.ebuild, +qemu-1.7.0.ebuild,
+  qemu-9999.ebuild:
+  Version bumps.
 
 *qemu-1.6.1 (21 Oct 2013)
 

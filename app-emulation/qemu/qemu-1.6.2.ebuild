@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.61 2013/12/19 08:49:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.6.2.ebuild,v 1.1 2013/12/19 08:49:58 vapier Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ PYTHON_REQ_USE="ncurses,readline"
 inherit eutils flag-o-matic linux-info toolchain-funcs multilib python-r1 \
 	user udev fcaps readme.gentoo
 
-#BACKPORTS=49bdd50f
+BACKPORTS=
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
@@ -21,7 +21,8 @@ else
 	SRC_URI="http://wiki.qemu-project.org/download/${P}.tar.bz2
 	${BACKPORTS:+
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+	# Waiting for cardoe to sign off on this.
+	#KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -96,15 +97,15 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	static-user? ( >=dev-libs/glib-2.0[static-libs(+)] )
 	qemu_softmmu_targets_i386? (
 		>=sys-firmware/ipxe-1.0.0_p20130624
-		sys-firmware/seabios
-		sys-firmware/sgabios
-		sys-firmware/vgabios
+		~sys-firmware/seabios-1.7.3
+		~sys-firmware/sgabios-0.1_pre8
+		~sys-firmware/vgabios-0.7a
 	)
 	qemu_softmmu_targets_x86_64? (
 		>=sys-firmware/ipxe-1.0.0_p20130624
-		sys-firmware/seabios
-		sys-firmware/sgabios
-		sys-firmware/vgabios
+		~sys-firmware/seabios-1.7.3
+		~sys-firmware/sgabios-0.1_pre8
+		~sys-firmware/vgabios-0.7a
 	)
 	accessibility? ( app-accessibility/brltty )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
@@ -236,7 +237,7 @@ src_prepare() {
 		-e 's/^(C|OP_C|HELPER_C)FLAGS=/\1FLAGS+=/' \
 		Makefile Makefile.target || die
 
-	epatch "${FILESDIR}"/qemu-1.7.0-cflags.patch
+	epatch "${FILESDIR}"/qemu-9999-cflags.patch
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
@@ -423,12 +424,12 @@ src_test() {
 }
 
 qemu_python_install() {
-	python_domodule "${S}/scripts/qmp/qmp.py"
+	python_domodule "${S}/QMP/qmp.py"
 
 	python_doscript "${S}/scripts/kvm/kvm_stat"
 	python_doscript "${S}/scripts/kvm/vmxcap"
-	python_doscript "${S}/scripts/qmp/qmp-shell"
-	python_doscript "${S}/scripts/qmp/qemu-ga-client"
+	python_doscript "${S}/QMP/qmp-shell"
+	python_doscript "${S}/QMP/qemu-ga-client"
 }
 
 src_install() {
@@ -472,12 +473,12 @@ src_install() {
 	doins "${FILESDIR}/bridge.conf"
 
 	# Remove the docdir placed qmp-commands.txt
-	mv "${ED}/usr/share/doc/${PF}/html/qmp-commands.txt" "${S}/docs/qmp/"
+	mv "${ED}/usr/share/doc/${PF}/html/qmp-commands.txt" "${S}/QMP/"
 
 	cd "${S}"
 	dodoc Changelog MAINTAINERS docs/specs/pci-ids.txt
 	newdoc pc-bios/README README.pc-bios
-	dodoc docs/qmp/*.txt
+	dodoc QMP/qmp-commands.txt QMP/qmp-events.txt QMP/qmp-spec.txt
 
 	# Remove SeaBIOS since we're using the SeaBIOS packaged one
 	rm "${ED}/usr/share/qemu/bios.bin"
