@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1082 2013/12/16 14:31:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1083 2013/12/19 06:00:43 dirtyepic Exp $
+
+  19 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Refactoring: Inline gcc-compiler-configure() into gcc_do_configure(). Clean
+  up, sort and group options.
 
   16 Dec 2013; Sven Vermeulen <swift@gentoo.org> selinux-policy-2.eclass:
   Added HTTPS URL to EGIT_REPO_URI to allow live ebuilds to fetch data if
