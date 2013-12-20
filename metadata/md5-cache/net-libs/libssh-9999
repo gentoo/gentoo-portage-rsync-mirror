@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=zlib? ( >=sys-libs/zlib-1.2 ) !gcrypt? ( >=dev-libs/openssl-0.9.8 ) gcrypt? ( >=dev-libs/libgcrypt-1.4 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
+DEPEND=zlib? ( >=sys-libs/zlib-1.2 ) >=dev-libs/openssl-0.9.8 sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) dev-vcs/git
 DESCRIPTION=Access a working SSH implementation by means of a library
 EAPI=4
 HOMEPAGE=http://www.libssh.org/
-IUSE=debug examples gcrypt pcap +sftp ssh1 server static-libs zlib
+IUSE=debug examples pcap +sftp ssh1 server static-libs zlib
 LICENSE=LGPL-2.1
-RDEPEND=zlib? ( >=sys-libs/zlib-1.2 ) !gcrypt? ( >=dev-libs/openssl-0.9.8 ) gcrypt? ( >=dev-libs/libgcrypt-1.4 )
+RDEPEND=zlib? ( >=sys-libs/zlib-1.2 ) >=dev-libs/openssl-0.9.8
 SLOT=0
 _eclasses_=cmake-utils	92319f03251f1235bc887cc84e5aef21	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=946a03a3573887bc78916ca496f0e577
+_md5_=4f7ca2a3a9f6da86cf307ace443a2bda

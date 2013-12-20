@@ -1,6 +1,40 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.22 2013/12/01 01:16:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.23 2013/12/20 14:35:36 blueness Exp $
+
+  20 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  -linux/amd64/desktop/deprecated, -linux/amd64/desktop/parent,
+  -linux/amd64/developer/deprecated, -linux/amd64/developer/parent,
+  -linux/amd64/server/deprecated, -linux/amd64/server/parent,
+  -linux/ia64/desktop/deprecated, -linux/ia64/desktop/parent,
+  -linux/ia64/developer/deprecated, -linux/ia64/developer/parent,
+  -linux/ia64/server/deprecated, -linux/ia64/server/parent,
+  -linux/powerpc/ppc32/desktop/deprecated, -linux/powerpc/ppc32/desktop/parent,
+  -linux/powerpc/ppc32/developer/deprecated,
+  -linux/powerpc/ppc32/developer/parent,
+  -linux/powerpc/ppc32/server/deprecated, -linux/powerpc/ppc32/server/parent,
+  -linux/powerpc/ppc64/32bit-userland/desktop/deprecated,
+  -linux/powerpc/ppc64/32bit-userland/desktop/parent,
+  -linux/powerpc/ppc64/32bit-userland/developer/deprecated,
+  -linux/powerpc/ppc64/32bit-userland/developer/parent,
+  -linux/powerpc/ppc64/32bit-userland/server/deprecated,
+  -linux/powerpc/ppc64/32bit-userland/server/parent,
+  -linux/powerpc/ppc64/64bit-userland/desktop/deprecated,
+  -linux/powerpc/ppc64/64bit-userland/desktop/parent,
+  -linux/powerpc/ppc64/64bit-userland/developer/deprecated,
+  -linux/powerpc/ppc64/64bit-userland/developer/parent,
+  -linux/powerpc/ppc64/64bit-userland/server/deprecated,
+  -linux/powerpc/ppc64/64bit-userland/server/parent,
+  -linux/powerpc/ppc64/desktop/deprecated, -linux/powerpc/ppc64/desktop/parent,
+  -linux/powerpc/ppc64/developer/deprecated,
+  -linux/powerpc/ppc64/developer/parent,
+  -linux/powerpc/ppc64/server/deprecated, -linux/powerpc/ppc64/server/parent,
+  -linux/x86/desktop/deprecated, -linux/x86/desktop/parent,
+  -linux/x86/developer/deprecated, -linux/x86/developer/parent,
+  -linux/x86/minimal/deprecated, -linux/x86/minimal/make.defaults,
+  -linux/x86/minimal/parent, -linux/x86/server/deprecated,
+  -linux/x86/server/parent:
+  Remove all deprecated /desktop /developer /server profiles
 
   01 Dec 2013; Mike Gilbert <floppym@gentoo.org> +linux/amd64/use.stable.mask:
   Disable stable-mask for python3.3 flags, bug 474128.
