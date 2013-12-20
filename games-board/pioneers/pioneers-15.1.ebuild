@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-15.1.ebuild,v 1.1 2013/12/19 22:05:19 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pioneers/pioneers-15.1.ebuild,v 1.2 2013/12/19 23:24:03 hasufell Exp $
 
 EAPI=5
 inherit autotools eutils gnome-games
@@ -37,6 +37,7 @@ src_prepare() {
 src_configure() {
 	gnome-games_src_configure \
 		$(use_enable nls) \
+		--enable-minimal-flags \
 		$(use_with help)
 }
 
