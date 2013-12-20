@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-3.0_beta8.ebuild,v 1.1 2013/06/29 16:44:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/kshutdown-3.1_beta.ebuild,v 1.1 2013/12/20 01:35:21 mrueg Exp $
 
 EAPI=5
 

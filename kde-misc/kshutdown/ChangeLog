@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kshutdown
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.42 2013/07/15 22:17:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.43 2013/12/20 01:35:21 mrueg Exp $
+
+*kshutdown-3.1_beta (20 Dec 2013)
+
+  20 Dec 2013; Manuel Rüger <mrueg@gentoo.org> +kshutdown-3.1_beta.ebuild,
+  -kshutdown-3.0_beta8.ebuild:
+  Version bump. Cleanup old.
 
 *kshutdown-3.0 (15 Jul 2013)
 
