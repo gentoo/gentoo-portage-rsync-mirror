@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.9.ebuild,v 1.1 2013/12/20 12:31:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.9.ebuild,v 1.2 2013/12/20 16:34:44 ottxor Exp $
 
 EAPI="4"
 
@@ -44,7 +44,7 @@ src_install() {
 	default
 #	dodoc sysctl.conf
 
-	mv "${D}"/usr/bin/pidof "${D}"/bin/ || die
+	mv "${ED}"/usr/bin/pidof "${ED}"/bin/ || die
 
 	# The configure script is completely whacked in the head
 	mv "${ED}"/lib* "${ED}"/usr/ || die
