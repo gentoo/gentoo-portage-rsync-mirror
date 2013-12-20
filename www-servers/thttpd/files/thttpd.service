@@ -5,6 +5,7 @@ After=network.target
 [Service]
 Type=forking
 PIDFile=/var/run/thttpd.pid
+WorkingDirectory=/var/www/localhost
 ExecStart=/usr/sbin/thttpd -C /etc/thttpd/thttpd.conf
 
 [Install]

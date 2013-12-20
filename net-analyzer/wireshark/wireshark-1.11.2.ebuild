@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.2.ebuild,v 1.4 2013/12/18 08:32:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.2.ebuild,v 1.5 2013/12/20 15:22:27 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps user
@@ -78,11 +78,6 @@ DEPEND="
 
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	# Add group for users allowed to sniff.
-	enewgroup wireshark
-}
-
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
@@ -135,11 +130,9 @@ src_configure() {
 	use doc || export ac_cv_prog_HAVE_DOXYGEN=false
 	use doc-pdf || export ac_cv_prog_HAVE_FOP=false
 
-	# dumpcap requires libcap, setuid-install requires dumpcap
+	# dumpcap requires libcap
 	# --disable-profile-build bugs #215806, #292991, #479602
 	econf \
-		$(use pcap && use_enable !caps setuid-install) \
-		$(use pcap && use_enable caps setcap-install) \
 		$(use_enable ipv6) \
 		$(use_with caps libcap) \
 		$(use_with crypt gcrypt) \
@@ -149,7 +142,6 @@ src_configure() {
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
 		$(use_with netlink libnl) \
-		$(use_with pcap dumpcap-group wireshark) \
 		$(use_with pcap) \
 		$(use_with portaudio) \
 		$(use_with qt4 qt) \
@@ -212,8 +204,6 @@ src_install() {
 		domenu wireshark-qt.desktop
 	fi
 
-	use pcap && chmod o-x "${ED}"/usr/bin/dumpcap #357237
-
 	prune_libtool_files
 }
 
@@ -222,7 +212,7 @@ pkg_postinst() {
 	enewgroup wireshark
 
 	if use pcap; then
-		fcaps -o 0 -g wireshark -m 4550 -M 0750 \
+		fcaps -o 0 -g wireshark -m 4710 -M 0710 \
 			cap_dac_read_search,cap_net_raw,cap_net_admin \
 			"${EROOT}"/usr/bin/dumpcap
 	fi

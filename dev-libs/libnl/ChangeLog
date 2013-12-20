@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.189 2013/11/03 16:50:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.190 2013/12/20 15:05:26 jer Exp $
+
+*libnl-3.2.24_rc1 (20 Dec 2013)
+
+  20 Dec 2013; Jeroen Roovers <jer@gentoo.org> libnl-3.2.23.ebuild,
+  +libnl-3.2.24_rc1.ebuild, libnl-3.2.9999.ebuild,
+  +files/libnl-3.2.23-python.patch:
+  Version bump. Fix building netlink/genl/capi_wrap.c with USE=python (bug
+  #490584 by Philipp).
 
 *libnl-3.2.23 (03 Nov 2013)
 

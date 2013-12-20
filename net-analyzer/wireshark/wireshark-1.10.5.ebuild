@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.5.ebuild,v 1.1 2013/12/20 12:52:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.10.5.ebuild,v 1.2 2013/12/20 15:22:27 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps user
@@ -213,7 +213,7 @@ pkg_postinst() {
 	enewgroup wireshark
 
 	if use pcap; then
-		fcaps -o 0 -g wireshark -m 4550 -M 0750 \
+		fcaps -o 0 -g wireshark -m 4710 -M 0710 \
 			cap_dac_read_search,cap_net_raw,cap_net_admin \
 			"${EROOT}"/usr/bin/dumpcap
 	fi
