@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.4.0_p170-r1.ebuild,v 1.1 2013/12/19 00:08:36 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.4.0_p170-r1.ebuild,v 1.2 2013/12/20 08:27:16 jlec Exp $
 
 EAPI=5
 
@@ -41,11 +41,11 @@ src_install() {
 	keepdir /etc/logwatch
 	keepdir /var/cache/logwatch
 
-	newsbin scripts/logwatch.pl logwatch.pl || die "dosbin logwatch failed"
+	newsbin scripts/logwatch.pl logwatch.pl
 
 	for i in scripts/logfiles/* ; do
 		exeinto /usr/share/logwatch/$i
-		doexe $i/* || die "doexe $i failed"
+		doexe $i/*
 	done
 
 	exeinto /usr/share/logwatch/lib

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3.ebuild,v 1.1 2013/11/20 18:53:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3.ebuild,v 1.2 2013/12/20 08:03:49 polynomial-c Exp $
 
 EAPI="4"
 
@@ -38,6 +38,7 @@ DEPEND="${RDEPEND}
 DOCS=(CHANGES NOTICE README)
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-berkdb6.patch #476374
 	eautoreconf
 
 	elibtoolize
