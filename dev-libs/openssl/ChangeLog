@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.497 2013/11/26 07:27:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.498 2013/12/20 19:26:59 vapier Exp $
+
+*openssl-1.0.1e-r3 (20 Dec 2013)
+
+  20 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.1e-rdrand-explicit.patch,
+  +files/openssl-1.0.1e-tls-ver-crash.patch, +openssl-1.0.1e-r3.ebuild:
+  Add fix from upstream for crashes w/TLS 1.2 #494816 by Agostino Sarubbo.  Also
+  add fix from upstream for rdrand selection.
 
   26 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> -openssl-0.9.8u.ebuild,
   -openssl-0.9.8v.ebuild, -openssl-0.9.8w.ebuild, -openssl-0.9.8x.ebuild,

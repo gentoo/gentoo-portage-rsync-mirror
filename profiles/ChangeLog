@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8435 2013/12/20 17:25:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8437 2013/12/20 19:30:41 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Dec 2013; Johannes Huber <johu@gentoo.org> thirdpartymirrors:
+  Drop dead thirdpartymirrors in kde mirror group by Ben Kohler
+  <bkohler@gmail.com>, bug #494848.
+
+  20 Dec 2013; Tom Wijsman <TomWij@gentoo.org> thirdpartymirrors:
+  Remove beyondunreal, blackdown.org, macromedia, nedit, openoffice,
+  openoffice-extended and simgear mirror groups from thirdpartymirrors; partial
+  fix for bug #494660, which covers mirror groups with no ebuilds that use it
+  in the Portage tree. Three more mirror groups (netsbd, suse, vmware) to be
+  discussed in that bug might or might not be removed later.
 
   20 Dec 2013; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
   Remove obsolete mirrors (bug #494870 by Ben Kohler).

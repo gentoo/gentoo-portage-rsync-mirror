@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.7.ebuild,v 1.2 2013/12/01 06:34:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.7.ebuild,v 1.3 2013/12/20 19:13:29 vapier Exp $
 
 EAPI="5"
 
@@ -18,31 +18,32 @@ HOMEPAGE="http://flashrom.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="atahpt +bitbang_spi +buspirate_spi +dediprog doc +drkaiser
-+dummy ft2232_spi +gfxnvidia +internal +nic3com +nicintel +nicintel_spi
-nicnatsemi nicrealtek +ogp_spi rayer_spi
-+pony_spi +satasii satamv +serprog tools usbblaster +wiki"
+IUSE="atahpt +bitbang_spi +buspirate_spi +dediprog +drkaiser
++dummy ft2232_spi +gfxnvidia +internal +linux_spi +nic3com +nicintel
++nicintel_spi nicnatsemi nicrealtek +ogp_spi rayer_spi
++pony_spi +satasii satamv +serprog static tools usbblaster +wiki"
 
-COMMON_DEPEND="atahpt? ( sys-apps/pciutils )
-	dediprog? ( virtual/libusb:0 )
-	drkaiser? ( sys-apps/pciutils )
-	ft2232_spi? ( dev-embedded/libftdi )
-	gfxnvidia? ( sys-apps/pciutils )
-	internal? ( sys-apps/pciutils )
-	nic3com? ( sys-apps/pciutils )
-	nicintel? ( sys-apps/pciutils )
-	nicintel_spi? ( sys-apps/pciutils )
-	nicnatsemi? ( sys-apps/pciutils )
-	nicrealtek? ( sys-apps/pciutils )
-	rayer_spi? ( sys-apps/pciutils )
-	satasii? ( sys-apps/pciutils )
-	satamv? ( sys-apps/pciutils )
-	usbblaster? ( dev-embedded/libftdi )
-	ogp_spi? ( sys-apps/pciutils )"
-RDEPEND="${COMMON_DEPEND}
-	internal? ( sys-apps/dmidecode )"
-DEPEND="${COMMON_DEPEND}
+LIB_DEPEND="atahpt? ( sys-apps/pciutils[static-libs(+)] )
+	dediprog? ( virtual/libusb:0[static-libs(+)] )
+	drkaiser? ( sys-apps/pciutils[static-libs(+)] )
+	ft2232_spi? ( dev-embedded/libftdi[static-libs(+)] )
+	gfxnvidia? ( sys-apps/pciutils[static-libs(+)] )
+	internal? ( sys-apps/pciutils[static-libs(+)] )
+	nic3com? ( sys-apps/pciutils[static-libs(+)] )
+	nicintel? ( sys-apps/pciutils[static-libs(+)] )
+	nicintel_spi? ( sys-apps/pciutils[static-libs(+)] )
+	nicnatsemi? ( sys-apps/pciutils[static-libs(+)] )
+	nicrealtek? ( sys-apps/pciutils[static-libs(+)] )
+	rayer_spi? ( sys-apps/pciutils[static-libs(+)] )
+	satasii? ( sys-apps/pciutils[static-libs(+)] )
+	satamv? ( sys-apps/pciutils[static-libs(+)] )
+	usbblaster? ( dev-embedded/libftdi[static-libs(+)] )
+	ogp_spi? ( sys-apps/pciutils[static-libs(+)] )"
+RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )"
+DEPEND="${RDEPEND}
+	static? ( ${LIB_DEPEND} )
 	sys-apps/diffutils"
+RDEPEND+=" internal? ( sys-apps/dmidecode )"
 
 _flashrom_enable() {
 	local c="CONFIG_${2:-$(echo $1 | tr [:lower:] [:upper:])}"
@@ -60,11 +61,12 @@ src_compile() {
 	# Programmer
 	flashrom_enable \
 		atahpt bitbang_spi buspirate_spi dediprog drkaiser \
-		ft2232_spi gfxnvidia nic3com nicintel nicintel_spi nicnatsemi nicrealtek \
-		ogp_spi rayer_spi pony_spi \
-		satasii satamv serprog usbblaster \
+		ft2232_spi gfxnvidia linux_spi nic3com nicintel \
+		nicintel_spi nicnatsemi nicrealtek ogp_spi rayer_spi \
+		pony_spi satasii satamv serprog usbblaster \
 		internal dummy
 	_flashrom_enable wiki PRINT_WIKI
+	_flashrom_enable static STATIC
 
 	# You have to specify at least one programmer, and if you specify more than
 	# one programmer you have to include either dummy or internal in the list.
@@ -75,7 +77,7 @@ src_compile() {
 
 		use ${prog} && : $(( progs++ ))
 	done
-	if [ $progs -ne 1 ] ; then
+	if [[ ${progs} -ne 1 ]] ; then
 		if ! use internal && ! use dummy ; then
 			ewarn "You have to specify at least one programmer, and if you specify"
 			ewarn "more than one programmer, you have to enable either dummy or"
@@ -89,14 +91,18 @@ src_compile() {
 	emake WARNERROR=no ${args}
 }
 
+src_test() {
+	if [[ -d tests ]] ; then
+		pushd tests >/dev/null
+		./tests.py || die
+		popd >/dev/null
+	fi
+}
+
 src_install() {
 	dosbin flashrom
 	doman flashrom.8
-	dodoc ChangeLog README
-
-	if use doc; then
-		dodoc Documentation/*.txt
-	fi
+	dodoc ChangeLog README Documentation/*.txt
 
 	if use tools; then
 		if use amd64; then

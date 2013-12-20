@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/flashrom
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.39 2013/12/01 06:34:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.40 2013/12/20 19:13:29 vapier Exp $
+
+  20 Dec 2013; Mike Frysinger <vapier@gentoo.org> flashrom-0.9.7.ebuild,
+  flashrom-9999.ebuild, metadata.xml:
+  Add support for USE=static from ChromiumOS.  Kill off USE=doc as it only
+  installs already generated txt files.
 
   01 Dec 2013; Mike Frysinger <vapier@gentoo.org> flashrom-0.9.7.ebuild,
   flashrom-9999.ebuild:

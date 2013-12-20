@@ -20,6 +20,7 @@
 		<flag name="ft2232_spi">Enable ftdi programmer, flashing through FTDI/SPI USB interface</flag>
 		<flag name="gfxnvidia">Enable NVIDIA programmer</flag>
 		<flag name="internal">Enable internal/onboard support</flag>
+		<flag name="linux_spi">Enable support for Linux userspace spidev interface</flag>
 		<flag name="nic3com">Enable 3Com NIC programmer</flag>
 		<flag name="nicintel">Support for Intel NICs</flag>
 		<flag name="nicintel_spi">Support for SPI on Intel NICs</flag>

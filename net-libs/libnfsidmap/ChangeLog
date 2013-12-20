@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnfsidmap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.42 2013/12/17 00:23:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.43 2013/12/20 19:14:48 vapier Exp $
+
+  20 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  files/libnfsidmap-0.19-getgrouplist.patch:
+  Fix building with getgrouplist in older versions #494770 by smkbot.
 
 *libnfsidmap-0.25 (17 Dec 2013)
 
