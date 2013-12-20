@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ninja
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.23 2013/09/24 00:43:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.24 2013/12/20 02:42:57 mattst88 Exp $
+
+  20 Dec 2013; Matt Turner <mattst88@gentoo.org> ninja-1.4.0.ebuild:
+  alpha stable, bug 493622.
 
   24 Sep 2013; Mike Gilbert <floppym@gentoo.org> ninja-1.4.0.ebuild:
   Grab BUILD_LDFLAGS as well.

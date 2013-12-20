@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10_alpha1.ebuild,v 1.2 2013/12/19 07:38:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-10_alpha1.ebuild,v 1.3 2013/12/20 02:43:08 patrick Exp $
 
 EAPI=5
 
@@ -23,7 +23,6 @@ else # Official release
 fi
 
 SRC_URI+=" test? ( http://dev.gentoo.org/~lu_zero/libav/fate-10.tar.xz )"
-
 
 LICENSE="LGPL-2.1  gpl? ( GPL-3 )"
 SLOT="0/9"
