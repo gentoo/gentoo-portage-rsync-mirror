@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.66 2013/12/19 19:08:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.67 2013/12/20 10:53:46 mgorny Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_5,2_6,2_7} pypy{1_9,2_0} )
 
-inherit eutils flag-o-matic git-r3 multilib multilib-minimal \
+inherit cmake-utils eutils flag-o-matic git-r3 multilib multilib-minimal \
 	python-r1 toolchain-funcs pax-utils check-reqs
 
 DESCRIPTION="Low Level Virtual Machine"
@@ -19,7 +19,9 @@ LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="clang debug doc gold +libffi multitarget ncurses ocaml python
-	+static-analyzer test udis86 video_cards_radeon kernel_Darwin"
+	+static-analyzer test udis86 xml video_cards_radeon kernel_Darwin"
+
+# TODO: update libxml2 to multilib, bug #480404
 
 COMMON_DEPEND="
 	sys-libs/zlib:0=
@@ -29,6 +31,7 @@ COMMON_DEPEND="
 			dev-lang/perl
 			${PYTHON_DEPS}
 		)
+		xml? ( dev-libs/libxml2:2= )
 	)
 	gold? ( >=sys-devel/binutils-2.22[cxx] )
 	libffi? ( virtual/libffi:0=[${MULTILIB_USEDEP}] )
@@ -99,20 +102,20 @@ pkg_setup() {
 
 	# need to check if the active compiler is ok
 
-	broken_gcc=" 3.2.2 3.2.3 3.3.2 4.1.1 "
-	broken_gcc_x86=" 3.4.0 3.4.2 "
-	broken_gcc_amd64=" 3.4.6 "
+	broken_gcc=( 3.2.2 3.2.3 3.3.2 4.1.1 )
+	broken_gcc_x86=( 3.4.0 3.4.2 )
+	broken_gcc_amd64=( 3.4.6 )
 
 	gcc_vers=$(gcc-fullversion)
 
-	if [[ ${broken_gcc} == *" ${version} "* ]] ; then
+	if has "${gcc_vers}" "${broken_gcc[@]}"; then
 		elog "Your version of gcc is known to miscompile llvm."
 		elog "Check http://www.llvm.org/docs/GettingStarted.html for"
 		elog "possible solutions."
 		die "Your currently active version of gcc is known to miscompile llvm"
 	fi
 
-	if [[ ${CHOST} == i*86-* && ${broken_gcc_x86} == *" ${version} "* ]] ; then
+	if use abi_x86_32 && has "${gcc_vers}" "${broken_gcc_x86[@]}"; then
 		elog "Your version of gcc is known to miscompile llvm on x86"
 		elog "architectures.  Check"
 		elog "http://www.llvm.org/docs/GettingStarted.html for possible"
@@ -120,8 +123,7 @@ pkg_setup() {
 		die "Your currently active version of gcc is known to miscompile llvm"
 	fi
 
-	if [[ ${CHOST} == x86_64-* && ${broken_gcc_amd64} == *" ${version} "* ]];
-	then
+	if use abi_x86_64 && has "${gcc_vers}" "${broken_gcc_amd64[@]}"; then
 		elog "Your version of gcc is known to miscompile llvm in amd64"
 		elog "architectures.  Check"
 		elog "http://www.llvm.org/docs/GettingStarted.html for possible"
@@ -195,6 +197,12 @@ multilib_src_configure() {
 	if use clang; then
 		conf_flags+=( --with-clang-resource-dir=../lib/clang/3.5 )
 	fi
+	# well, it's used only by clang but easier to pass unconditionally
+	if use xml; then
+		conf_flags+=( XML2CONFIG="$(tc-getPKG_CONFIG) libxml-2.0" )
+	else
+		conf_flags+=( ac_cv_prog_XML2CONFIG="" )
+	fi
 
 	local targets bindings
 	if use multitarget; then
@@ -231,6 +239,25 @@ multilib_src_configure() {
 
 	ECONF_SOURCE=${S} \
 	econf "${conf_flags[@]}"
+
+	multilib_build_binaries && cmake_configure
+}
+
+cmake_configure() {
+	# sadly, cmake doesn't seem to have host autodetection
+	# but it's fairly easy to steal this from configured autotools
+	local targets=$(sed -n -e 's/^TARGETS_TO_BUILD=//p' Makefile.config || die)
+	local libdir=$(get_libdir)
+	local mycmakeargs=(
+		# just the stuff needed to get correct cmake modules
+		$(cmake-utils_use ncurses LLVM_ENABLE_TERMINFO)
+
+		-DLLVM_TARGETS_TO_BUILD="${targets// /;}"
+		-DLLVM_LIBDIR_SUFFIX=${libdir#lib}
+	)
+
+	BUILD_DIR=${S%/}_cmake \
+	cmake-utils_src_configure
 }
 
 set_makeargs() {
@@ -338,6 +365,9 @@ multilib_src_install() {
 		dodir /usr/${CHOST}/binutils-bin/lib/bfd-plugins
 		dosym ../../../../$(get_libdir)/LLVMgold.so \
 			/usr/${CHOST}/binutils-bin/lib/bfd-plugins/LLVMgold.so
+
+		# install cmake modules
+		emake -C "${S%/}"_cmake/cmake/modules DESTDIR="${D}" install
 	else
 		# Preserve ABI-variant of llvm-config,
 		# then drop all the executables since LLVM doesn't like to

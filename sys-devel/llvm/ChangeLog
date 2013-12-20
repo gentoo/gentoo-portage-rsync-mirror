@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.152 2013/12/19 19:08:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.153 2013/12/20 10:53:47 mgorny Exp $
+
+  20 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Fix gcc version check. Add missing libxml2 dependency (for clang). Install
+  CMake modules.
 
   19 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Symlink the LLVM gold plugin to bfd-plugins directory to enable LLVM object

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.116 2013/09/20 14:35:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.117 2013/12/20 10:52:37 johu Exp $
+
+  20 Dec 2013; Johannes Huber <johu@gentoo.org> -exiv2-0.19.ebuild,
+  -files/exiv2-0.19-syntax-fix.patch, -files/exiv2-0.21.1-time-fix.patch:
+  Remove old.
 
   20 Sep 2013; Jeroen Roovers <jer@gentoo.org> exiv2-0.23-r1.ebuild:
   Stable for HPPA (bug #481934).
