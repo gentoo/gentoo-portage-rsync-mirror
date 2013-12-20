@@ -2,4 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci-biology</herd>
+  <use>
+    <flag name="double-precision">
+	use double precision instead of single-precision floating point 
+	(2x memroy required)
+	</flag>
+  </use>
 </pkgmetadata>
