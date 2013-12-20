@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.20-r1.ebuild,v 1.2 2013/12/05 12:03:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.24.ebuild,v 1.1 2013/12/20 14:13:30 jer Exp $
 
 EAPI=5
-inherit cmake-utils eutils user
+inherit cmake-utils user
 
 DESCRIPTION="Yet another implementation of an HTTP proxy for Debian/Ubuntu software packages written in C++"
 HOMEPAGE="
@@ -38,10 +38,6 @@ pkg_setup() {
 	# add new user & group for daemon
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 -1 ${PN}
-}
-
-src_prepare() {
-	epatch "${FILESDIR}"/apt-cacher-ng-0.7.19-gentoo.diff
 }
 
 src_configure(){
@@ -111,9 +107,4 @@ src_install() {
 		/etc/${PN} \
 		/var/log/${PN} \
 		/var/cache/${PN}
-}
-
-pkg_postinst() {
-	einfo "Gentoo mirroring support has been added to ${PN}"
-	einfo "To use it, you should run /etc/apt-cacher-ng/gentoo_mirrors.sh at least once"
 }
