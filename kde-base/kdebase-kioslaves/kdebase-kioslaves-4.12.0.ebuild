@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.12.0.ebuild,v 1.1 2013/12/18 19:57:36 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.12.0.ebuild,v 1.2 2013/12/20 12:06:44 johu Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ DEPEND="
 	virtual/jpeg:0
 	!aqua? ( x11-libs/libXcursor )
 	bzip2? ( app-arch/bzip2 )
-	exif? ( media-gfx/exiv2 )
+	exif? ( media-gfx/exiv2:= )
 	openexr? ( media-libs/openexr:= )
 	samba? ( || ( <net-fs/samba-4.0.0_alpha1[smbclient] >=net-fs/samba-4.0.0_alpha1[client] ) )
 	sftp? ( >=net-libs/libssh-0.4.0:=[sftp] )
