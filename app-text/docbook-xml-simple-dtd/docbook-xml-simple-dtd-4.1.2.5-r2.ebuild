@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.5-r2.ebuild,v 1.5 2013/12/01 19:15:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/docbook-xml-simple-dtd-4.1.2.5-r2.ebuild,v 1.6 2013/12/20 20:03:56 nimiux Exp $
 
 inherit sgml-catalog
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nwalsh.com/docbook/simple/${PV}/simple4125.zip"
 
 LICENSE="docbook"
 SLOT="4.1.2.5"
-KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
 
 RDEPEND=">=app-text/build-docbook-catalog-1.6"

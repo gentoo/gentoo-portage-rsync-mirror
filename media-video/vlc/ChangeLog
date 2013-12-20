@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.880 2013/12/20 19:57:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.881 2013/12/20 20:01:29 tomwij Exp $
+
+  20 Dec 2013; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.8.ebuild,
+  vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild, vlc-2.1.0.ebuild, vlc-2.1.1.ebuild,
+  vlc-2.1.2.ebuild:
+  Swapped ffmpeg and libpostproc order in postproc dependency line to aid
+  Portage dependency resolution, low backtracking was causing blockers; reported
+  by iamben.
 
   20 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -vlc-2.0.6.ebuild:
   Drop old.
