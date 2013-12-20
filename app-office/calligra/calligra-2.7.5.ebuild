@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.7.5.ebuild,v 1.1 2013/11/30 23:43:20 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.7.5.ebuild,v 1.2 2013/12/20 12:33:23 johu Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -90,7 +90,7 @@ RDEPEND="
 	attica? ( dev-libs/libattica )
 	crypt? ( app-crypt/qca:2 )
 	eigen? ( dev-cpp/eigen:2 )
-	exif? ( media-gfx/exiv2 )
+	exif? ( media-gfx/exiv2:= )
 	fftw? ( sci-libs/fftw:3.0 )
 	fontconfig? ( media-libs/fontconfig )
 	freetds? ( dev-db/freetds )
