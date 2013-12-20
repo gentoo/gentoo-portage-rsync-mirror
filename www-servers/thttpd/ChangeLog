@@ -1,6 +1,21 @@
 # ChangeLog for www-servers/thttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.64 2013/06/01 14:21:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.68 2013/12/20 00:57:51 blueness Exp $
+
+  20 Dec 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix gpg signing of manifest, again!
+
+  20 Dec 2013; Anthony G. Basile <blueness@gentoo.org> -thttpd-2.26.4-r1.ebuild:
+  Remove older stable version
+
+  20 Dec 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix gpg signing of manifest
+
+*thttpd-2.26.4-r3 (20 Dec 2013)
+
+  20 Dec 2013; Anthony G. Basile <blueness@gentoo.org> +files/thttpd.service,
+  +thttpd-2.26.4-r3.ebuild:
+  Add systemd unit file, bug #494704.  Thanks Roc Vallès!
 
 *thttpd-9999 (01 Jun 2013)
 

@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/amavis-logwatch
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis-logwatch/ChangeLog,v 1.1 2013/12/20 00:31:31 mjo Exp $
+
+*amavis-logwatch-1.51.02 (20 Dec 2013)
+
+  20 Dec 2013; Michael Orlitzky <mjo@gentoo.org>
+  +amavis-logwatch-1.51.02.ebuild, +metadata.xml:
+  New package: net-mail/amavis-logwatch, a log analyzer for amavisd-new. Fixes
+  bug #309077.

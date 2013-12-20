@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r1.ebuild,v 1.10 2013/02/25 21:27:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r3.ebuild,v 1.1 2013/12/20 00:51:36 blueness Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic systemd toolchain-funcs
 
 MY_P="s${P}"
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ~mips ppc ppc64 sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=""
@@ -35,6 +35,10 @@ pkg_setup() {
 	enewuser ${THTTPD_USER} -1 -1 -1 ${THTTPD_GROUP}
 }
 
+src_prepare () {
+	epatch "${FILESDIR}"/thttpd-fix-world-readable-log.patch
+}
+
 src_configure() {
 	econf WEBDIR=${THTTPD_DOCROOT}
 }
@@ -50,6 +54,8 @@ src_install () {
 
 	insinto /etc/thttpd
 	doins "${FILESDIR}"/thttpd.conf.sample
+
+	systemd_dounit "${FILESDIR}/${PN}.service"
 
 	#move htdocs to docdir, bug #429632
 	docompress -x /usr/share/doc/"${PF}"/htdocs.dist
