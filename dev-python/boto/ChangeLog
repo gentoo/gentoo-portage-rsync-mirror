@@ -1,6 +1,17 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.83 2013/12/17 11:01:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.85 2013/12/20 01:15:20 radhermit Exp $
+
+  20 Dec 2013; Tim Harder <radhermit@gentoo.org> -boto-2.1.1.ebuild,
+  -boto-2.3.0.ebuild, -boto-2.9.9.ebuild, -boto-2.10.0.ebuild,
+  -boto-2.13.3.ebuild, -boto-2.15.0.ebuild, -boto-2.16.0.ebuild,
+  -boto-2.17.0.ebuild, -boto-2.18.0.ebuild:
+  Remove old.
+
+*boto-2.21.0 (20 Dec 2013)
+
+  20 Dec 2013; Tim Harder <radhermit@gentoo.org> +boto-2.21.0.ebuild:
+  Version bump.
 
 *boto-2.20.1 (17 Dec 2013)
 

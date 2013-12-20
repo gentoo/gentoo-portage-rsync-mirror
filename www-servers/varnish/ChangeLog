@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.67 2013/12/06 21:15:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.68 2013/12/20 01:06:47 blueness Exp $
+
+*varnish-3.0.5-r1 (20 Dec 2013)
+
+  20 Dec 2013; Anthony G. Basile <blueness@gentoo.org> +files/varnishd.service,
+  +varnish-3.0.5-r1.ebuild:
+  Add systemd unit file, bug #494708.  Thanks Roc Vallès!
 
   06 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
   -files/varnish-3.0.2-automagic.patch, -files/varnish-3.0.3-automagic.patch,
