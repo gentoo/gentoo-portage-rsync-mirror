@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.55 2013/12/19 14:30:36 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.56 2013/12/19 23:46:29 mrueg Exp $
+
+  19 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -ruby_parser-2.0.5.ebuild,
+  -ruby_parser-3.2.2.ebuild:
+  Cleanup old.
 
   19 Dec 2013; Akinori Hattori <hattya@gentoo.org> ruby_parser-3.1.3.ebuild:
   ia64 stable wrt bug #483708

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/plist
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plist/ChangeLog,v 1.8 2013/10/30 03:58:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/plist/ChangeLog,v 1.9 2013/12/19 23:57:22 mrueg Exp $
+
+  19 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -plist-3.1.0.ebuild:
+  Cleanup old.
 
 *plist-3.1.0-r1 (30 Oct 2013)
 
