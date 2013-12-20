@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/cs2d-0121.ebuild,v 1.1 2012/09/07 15:14:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/cs2d-0123.ebuild,v 1.1 2013/12/20 13:35:49 hasufell Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils games
 
@@ -47,7 +47,9 @@ src_prepare() {
 
 src_install() {
 	insinto "${GAMES_PREFIX_OPT}"/${PN}
-	doins -r . || die
+	doins -r .
+	# avoid file collision with untracked file
+	rm -f "${ED%/}/${GAMES_PREFIX_OPT}"/${PN}/sys/core/started.cfg
 
 	make_desktop_entry CounterStrike2D "Counter Strike 2D"
 	make_desktop_entry "CounterStrike2D -fullscreen -24bit" "Counter Strike 2D - FULLSCREEN"
