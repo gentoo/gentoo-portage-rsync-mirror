@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/libev-4.15.ebuild,v 1.9 2013/09/26 17:29:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/libev-4.15.ebuild,v 1.10 2013/12/20 19:57:20 hwoarang Exp $
 
 EAPI=5
 
@@ -27,7 +27,10 @@ src_prepare() {
 
 	# bug #411847
 	epatch "${FILESDIR}/${PN}-pc.patch"
+	# bug #493050
+	epatch "${FILESDIR}/${P}-automake-1.14.patch"
 
+	epatch_user
 	eautoreconf
 }
 

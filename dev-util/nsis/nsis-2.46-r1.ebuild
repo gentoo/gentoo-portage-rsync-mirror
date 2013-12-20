@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.46-r1.ebuild,v 1.1 2013/06/02 00:55:01 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.46-r1.ebuild,v 1.2 2013/12/20 20:00:17 alonbl Exp $
 
 EAPI="5"
 mingw32_variants=$(echo {,i{6,5,4,3}86-{,pc-,w32-,w64-}}mingw32)
@@ -38,10 +38,10 @@ mingw_CTARGET() {
 pkg_pretend() {
 	[[ -n $(mingw_CTARGET) ]] && return 0
 
-	eerror "Before you could emerge nsis, you need to install mingw"
+	eerror "Before you could emerge nsis, you need to install mingw with C++ support"
 	eerror "Run the following commands:"
 	eerror "  emerge crossdev"
-	eerror "  USE='cxx -hardened' crossdev --stable --libc '[latest] -t i686-w64-mingw32"
+	eerror "  USE='cxx' crossdev --stable --libc '[latest]' -t i686-w64-mingw32"
 	die "mingw is needed"
 }
 

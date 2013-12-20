@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.40 2013/12/01 19:18:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.41 2013/12/20 19:53:34 nimiux Exp $
+
+  20 Dec 2013; Chema Alonso <nimiux@gentoo.org> libpipeline-1.2.4.ebuild:
+  Stable for amd64 wrt bug #492044
 
   01 Dec 2013; Markus Meier <maekke@gentoo.org> libpipeline-1.2.4.ebuild:
   arm stable, bug #492044
