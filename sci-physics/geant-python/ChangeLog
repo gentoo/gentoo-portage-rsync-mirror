@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/geant-python
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/ChangeLog,v 1.10 2013/09/05 19:44:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant-python/ChangeLog,v 1.11 2013/12/20 06:09:22 heroxbd Exp $
+
+*geant-python-4.10.00 (20 Dec 2013)
+
+  20 Dec 2013; Benda Xu <heroxbd@gentoo.org>
+  +files/geant-python-4.10.0-config.patch,
+  +files/geant-python-4.10.0-polycone.patch, +geant-python-4.10.00.ebuild:
+  version bump
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> geant-python-4.9.6_p02.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
