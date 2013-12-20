@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.117 2013/12/20 10:52:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.118 2013/12/20 11:34:40 johu Exp $
+
+*exiv2-0.23-r2 (20 Dec 2013)
+
+  20 Dec 2013; Johannes Huber <johu@gentoo.org> +exiv2-0.23-r2.ebuild:
+  Revision bump adds multilib support + converted to python-single-r1 eclass by
+  Michael Weber <xmw@gentoo.org>, bug #474654. Introduces subslot, bug #456794.
 
   20 Dec 2013; Johannes Huber <johu@gentoo.org> -exiv2-0.19.ebuild,
   -files/exiv2-0.19-syntax-fix.patch, -files/exiv2-0.21.1-time-fix.patch:
