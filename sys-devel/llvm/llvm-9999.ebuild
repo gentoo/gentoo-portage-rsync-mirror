@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.68 2013/12/20 13:18:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.69 2013/12/20 21:50:34 mgorny Exp $
 
 EAPI=5
 
@@ -20,8 +20,6 @@ SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="clang debug doc gold +libffi multitarget ncurses ocaml python
 	+static-analyzer test udis86 xml video_cards_radeon kernel_Darwin"
-
-# TODO: update libxml2 to multilib, bug #480404
 
 COMMON_DEPEND="
 	sys-libs/zlib:0=
@@ -197,8 +195,8 @@ multilib_src_configure() {
 	if use clang; then
 		conf_flags+=( --with-clang-resource-dir=../lib/clang/3.5 )
 	fi
-	# well, it's used only by clang but easier to pass unconditionally
-	if use xml; then
+	# well, it's used only by clang executable c-index-test
+	if multilib_build_binaries && use xml; then
 		conf_flags+=( XML2CONFIG="$(tc-getPKG_CONFIG) libxml-2.0" )
 	else
 		conf_flags+=( ac_cv_prog_XML2CONFIG="" )
