@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/nylon-1.21-r1.ebuild,v 1.2 2013/03/04 16:04:43 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/nylon-1.21-r1.ebuild,v 1.3 2013/12/21 17:45:38 pacho Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://monkey.org/~marius/nylon/${P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libevent-0.6"
