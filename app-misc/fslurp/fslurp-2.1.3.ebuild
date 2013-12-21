@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fslurp/fslurp-2.1.3.ebuild,v 1.1 2013/12/02 10:13:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslurp/fslurp-2.1.3.ebuild,v 1.2 2013/12/21 08:52:17 radhermit Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${PN}-2.1.2-makefile.patch
 }
 
 src_compile() {
