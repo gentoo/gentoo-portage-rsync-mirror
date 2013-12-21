@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.495 2013/12/20 02:26:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.496 2013/12/21 19:16:24 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> binutils-2.23.2.ebuild:
+  Stable for ppc, wrt bug #494670
 
   20 Dec 2013; Matt Turner <mattst88@gentoo.org> binutils-2.23.2.ebuild:
   alpha stable, bug 494670.
