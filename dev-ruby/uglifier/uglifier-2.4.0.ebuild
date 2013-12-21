@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-2.3.2.ebuild,v 1.1 2013/12/02 06:59:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uglifier/uglifier-2.4.0.ebuild,v 1.1 2013/12/21 02:33:21 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20"
