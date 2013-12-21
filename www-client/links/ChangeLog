@@ -1,6 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.193 2013/12/19 13:46:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.194 2013/12/21 10:31:52 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> links-2.8-r1.ebuild:
+  Stable for ppc, wrt bug #493138
 
   19 Dec 2013; Jeroen Roovers <jer@gentoo.org> links-2.8-r1.ebuild:
   Stable for HPPA (bug #493138).
