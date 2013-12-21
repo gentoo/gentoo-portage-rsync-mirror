@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8439 2013/12/21 08:02:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8440 2013/12/21 21:57:08 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Dec 2013; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove mask on sys-libs/pam.
 
   21 Dec 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask dev-ruby/dbi and friends for removal due to ruby18 deprecation.
