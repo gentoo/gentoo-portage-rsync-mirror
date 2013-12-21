@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8438 2013/12/20 19:31:54 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8439 2013/12/21 08:02:31 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Dec 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/dbi and friends for removal due to ruby18 deprecation.
 
   20 Dec 2013; Alon Bar-Lev <alonbl@gentoo.org> thirdpartymirrors:
   Fixup gnupg mirros, bug#494842, thanks to Ben Kohler.
