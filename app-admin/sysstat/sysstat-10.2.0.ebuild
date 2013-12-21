@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.2.0.ebuild,v 1.1 2013/11/04 01:17:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.2.0.ebuild,v 1.2 2013/12/21 18:14:44 ago Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="${HOMEPAGE}${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ppc ~ppc64 ~sparc ~x86"
 IUSE="cron debug +doc isag nls lm_sensors"
 
 RDEPEND="

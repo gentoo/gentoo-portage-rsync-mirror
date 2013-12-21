@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.187 2013/12/13 14:23:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.188 2013/12/21 18:19:41 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> dialog-1.2.20130928.ebuild:
+  Stable for ppc, wrt bug #493942
 
   13 Dec 2013; Jeroen Roovers <jer@gentoo.org> dialog-1.2.20130928.ebuild:
   Stable for HPPA (bug #493942).

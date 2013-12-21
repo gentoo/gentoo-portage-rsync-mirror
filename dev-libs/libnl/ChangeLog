@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.190 2013/12/20 15:05:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.191 2013/12/21 18:19:27 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> libnl-3.2.23.ebuild:
+  Stable for ppc, wrt bug #494836
 
 *libnl-3.2.24_rc1 (20 Dec 2013)
 

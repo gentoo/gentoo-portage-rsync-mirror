@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.94 2013/06/17 02:41:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.95 2013/12/21 18:12:39 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> moinmoin-1.9.7-r1.ebuild:
+  Stable for ppc, wrt bug #494464
 
   17 Jun 2013; Patrick Lauer <patrick@gentoo.org> moinmoin-1.9.7-r1.ebuild,
   moinmoin-1.9.7.ebuild:

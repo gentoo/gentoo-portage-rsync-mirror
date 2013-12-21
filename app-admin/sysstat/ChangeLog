@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.247 2013/12/19 16:53:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.248 2013/12/21 18:14:44 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> sysstat-10.2.0.ebuild:
+  Stable for ppc, wrt bug #494248
 
   19 Dec 2013; Jeroen Roovers <jer@gentoo.org> -files/sysstat-10.0.1-nls.patch,
   -files/crontab:
