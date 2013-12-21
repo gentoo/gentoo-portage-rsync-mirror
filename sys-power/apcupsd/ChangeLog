@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.96 2013/12/07 06:22:35 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.97 2013/12/21 17:22:30 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> apcupsd-3.14.8-r2.ebuild:
+  Stable for ppc, wrt bug #485344
 
   07 Dec 2013; Matthew Marlowe <mattm@gentoo.org> files/apcupsd-tmpfiles.conf:
   Add D /run/apcupsd 0755 root root to systemd tmpfile spec per Bug 492992.

@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/privoxy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.89 2013/12/07 22:34:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/privoxy/ChangeLog,v 1.90 2013/12/21 17:24:28 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> privoxy-3.0.21-r2.ebuild:
+  Stable for ppc, wrt bug #485236
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> privoxy-3.0.21-r2.ebuild:
   x86 stable, bug #485236

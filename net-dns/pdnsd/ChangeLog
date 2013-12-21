@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.115 2013/12/05 13:24:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.116 2013/12/21 17:20:15 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pdnsd-1.2.9a.ebuild:
+  Stable for ppc, wrt bug #487284
 
   05 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> pdnsd-1.2.9a.ebuild:
   Added missing "die" in src_test().

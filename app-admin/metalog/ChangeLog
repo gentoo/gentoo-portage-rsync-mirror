@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.119 2013/11/01 13:49:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.120 2013/12/21 17:18:39 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> metalog-3-r1.ebuild:
+  Stable for ppc, wrt bug #486310
 
   01 Nov 2013; Agostino Sarubbo <ago@gentoo.org> metalog-3-r1.ebuild:
   Stable for x86, wrt bug #486310

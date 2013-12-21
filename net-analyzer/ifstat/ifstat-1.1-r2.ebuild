@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1-r2.ebuild,v 1.6 2013/12/17 11:04:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1-r2.ebuild,v 1.7 2013/12/21 17:25:07 ago Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -13,7 +13,7 @@ HOMEPAGE="http://gael.roualland.free.fr/ifstat/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 hppa ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha amd64 hppa ~mips ppc ~ppc64 sparc x86"
 
 DEPEND="snmp? ( >=net-analyzer/net-snmp-5.0 )"
 RDEPEND="${DEPEND}"

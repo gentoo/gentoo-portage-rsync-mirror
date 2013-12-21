@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.147 2013/12/17 11:57:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.148 2013/12/21 17:16:31 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> hddtemp-0.3_beta15-r7.ebuild:
+  Stable for ppc, wrt bug #487148
 
   17 Dec 2013; Raúl Porcel <armin76@gentoo.org> hddtemp-0.3_beta15-r7.ebuild:
   alpha/ia64/sparc stable wrt #487148

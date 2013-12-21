@@ -4,10 +4,10 @@ DESCRIPTION=APC UPS daemon with integrated tcp/ip remote shutdown
 EAPI=3
 HOMEPAGE=http://www.apcupsd.org/
 IUSE=snmp +usb cgi nls gnome kernel_linux
-KEYWORDS=amd64 ~ppc x86 ~x86-fbsd
+KEYWORDS=amd64 ppc x86 ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=cgi? ( >=media-libs/gd-1.8.4 ) nls? ( sys-devel/gettext ) snmp? ( net-analyzer/net-snmp ) gnome? ( >=x11-libs/gtk+-2.4.0:2 dev-libs/glib:2 >=gnome-base/gconf-2.0 ) virtual/mailx
 SLOT=0
 SRC_URI=mirror://sourceforge/apcupsd/apcupsd-3.14.8.tar.gz
 _eclasses_=eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=10a0e89d8c84b3e98c678a6e87ede5c7
+_md5_=04c357535832b5f776ceae266dbb1ca8
