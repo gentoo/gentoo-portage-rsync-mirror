@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.18 >=media-libs/gstreamer-0.10.22:0.10 >=media-libs/gst-plugins-base-0.10.22:0.10 media-libs/gst-plugins-good:0.10 >=dev-libs/liboil-0.3 >=dev-qt/qtgui-4.4:4 >=media-libs/speex-1.2_rc1 media-plugins/gst-plugins-speex:0.10 >=media-plugins/gst-plugins-vorbis-0.10.22:0.10 >=media-plugins/gst-plugins-theora-0.10.22:0.10 >=media-plugins/gst-plugins-alsa-0.10.22:0.10 >=media-plugins/gst-plugins-ogg-0.10.22:0.10 media-plugins/gst-plugins-v4l2:0.10 media-plugins/gst-plugins-jpeg:0.10 net-im/psi !<net-im/psi-0.13_rc1
 SLOT=0
 SRC_URI=http://delta.affinix.com/download/psimedia/psimedia-1.0.3.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	qt4-r2	ce0c9abfee272185e03ab73f09f5fd69	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	a82a329b538368791f5a6113c60e557e	multilib	892e597faee02a5b94eb02ab512e7622	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=fc265daa3942f61b26a497d8a120e718

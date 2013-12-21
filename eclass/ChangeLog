@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1084 2013/12/21 11:59:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1085 2013/12/21 20:11:55 pesa Exp $
+
+  21 Dec 2013; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
+  Use eqmake4() from qmake-utils.eclass
 
   21 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Reorder by phase and group functions together with the phase that uses them.
