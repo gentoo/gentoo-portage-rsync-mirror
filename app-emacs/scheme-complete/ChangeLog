@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/scheme-complete
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/scheme-complete/ChangeLog,v 1.16 2013/12/17 11:59:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scheme-complete/ChangeLog,v 1.17 2013/12/21 16:11:27 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> scheme-complete-0.8.11.ebuild:
+  Stable for ppc, wrt bug #490104
 
   17 Dec 2013; Raúl Porcel <armin76@gentoo.org> scheme-complete-0.8.11.ebuild:
   alpha/x86 stable wrt #490104

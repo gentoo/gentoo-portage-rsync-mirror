@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.167 2013/12/04 22:23:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.168 2013/12/21 16:24:15 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> psycopg-2.5.1.ebuild:
+  Stable for ppc, wrt bug #487872
 
   04 Dec 2013; Matt Turner <mattst88@gentoo.org> psycopg-2.5.1.ebuild:
   alpha stable, bug 487872.

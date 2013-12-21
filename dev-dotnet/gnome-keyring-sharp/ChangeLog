@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/gnome-keyring-sharp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/ChangeLog,v 1.15 2013/12/08 10:45:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gnome-keyring-sharp/ChangeLog,v 1.16 2013/12/21 16:27:05 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org>
+  gnome-keyring-sharp-1.0.2-r1.ebuild:
+  Stable for ppc, wrt bug #487770
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   gnome-keyring-sharp-1.0.2-r1.ebuild:
