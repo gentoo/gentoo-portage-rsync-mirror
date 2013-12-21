@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.39.0.ebuild,v 1.3 2013/12/08 18:39:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.39.0.ebuild,v 1.4 2013/12/21 13:25:02 grobian Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -46,6 +46,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Make rsvg-view non-automagic, upstream bug #653323
 	epatch "${FILESDIR}/${PN}-2.36.0-rsvg-view-automagic.patch"
+	# Fix compilation on non-GNU libcs, from upstream
+	epatch "${FILESDIR}"/${P}-canonicalize-realpath.patch
 
 	use vala && vala_src_prepare
 
