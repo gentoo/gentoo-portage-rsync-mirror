@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-3.7.3.ebuild,v 1.1 2013/09/03 21:34:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-3.7.3.ebuild,v 1.2 2013/12/21 15:51:12 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.camlcity.org/download/${MY_P}.tar.gz"
 
 LICENSE="ZLIB GPL-2+"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~x86 ~x86-fbsd"
 IUSE="cryptokit gtk ssl tk httpd +ocamlopt +pcre zip"
 RESTRICT="installsources"
 

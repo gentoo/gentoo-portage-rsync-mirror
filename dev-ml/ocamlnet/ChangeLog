@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.78 2013/09/03 21:34:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.79 2013/12/21 15:51:12 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> ocamlnet-3.7.3.ebuild:
+  Stable for ppc, wrt bug #492050
 
 *ocamlnet-3.7.3 (03 Sep 2013)
 

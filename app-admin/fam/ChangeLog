@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.82 2013/12/05 12:05:53 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.83 2013/12/21 15:55:44 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> fam-2.7.0-r7.ebuild:
+  Stable for ppc, wrt bug #491888
 
   05 Dec 2013; Chema Alonso <nimiux@gentoo.org> fam-2.7.0-r7.ebuild:
   Stable for amd64 wrt bug #491888

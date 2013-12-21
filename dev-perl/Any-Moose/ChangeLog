@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Any-Moose
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.35 2013/12/19 13:42:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.36 2013/12/21 15:55:32 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> Any-Moose-0.210.0.ebuild:
+  Stable for ppc, wrt bug #492068
 
   19 Dec 2013; Jeroen Roovers <jer@gentoo.org> Any-Moose-0.210.0.ebuild:
   Stable for HPPA (bug #492068).

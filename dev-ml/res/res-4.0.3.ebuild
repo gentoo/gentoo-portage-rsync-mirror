@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/res-4.0.3.ebuild,v 1.1 2013/07/22 13:17:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/res-4.0.3.ebuild,v 1.2 2013/12/21 15:52:01 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ LICENSE="LGPL-2.1-with-linking-exception"
 DEPEND=""
 RDEPEND="${DEPEND}"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="examples"
 
 DOCS=( "AUTHORS.txt" "CHANGES.txt" "README.md" )

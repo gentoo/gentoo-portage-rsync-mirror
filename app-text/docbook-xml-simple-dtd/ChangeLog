@@ -1,6 +1,10 @@
 # ChangeLog for app-text/docbook-xml-simple-dtd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.61 2013/12/20 20:03:56 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-simple-dtd/ChangeLog,v 1.62 2013/12/21 15:52:25 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org>
+  docbook-xml-simple-dtd-4.1.2.5-r2.ebuild:
+  Stable for ppc, wrt bug #491938
 
   20 Dec 2013; Chema Alonso <nimiux@gentoo.org>
   docbook-xml-simple-dtd-4.1.2.5-r2.ebuild:

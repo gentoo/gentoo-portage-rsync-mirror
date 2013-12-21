@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/procinfo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.28 2013/12/08 13:45:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.29 2013/12/21 15:56:34 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> procinfo-18-r2.ebuild:
+  Stable for ppc, wrt bug #491898
 
   08 Dec 2013; Johannes Huber <johu@gentoo.org> procinfo-18-r2.ebuild:
   x86 stable, bug #491898

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/po-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.30 2013/12/11 11:20:51 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.31 2013/12/21 15:50:23 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> po-mode-0.18.3.1.ebuild:
+  Stable for ppc, wrt bug #491914
 
   11 Dec 2013; Chema Alonso <nimiux@gentoo.org> po-mode-0.18.3.1.ebuild:
   Stable for amd64 wrt bug #491914
@@ -106,4 +109,3 @@
   06 Jul 2007; Ulrich Mueller <ulm@gentoo.org> +files/51po-mode-gentoo.el,
   +metadata.xml, +po-mode-0.16.1.ebuild:
   Initial import. Split off Emacs support from sys-devel/gettext, bug #149431.
-
