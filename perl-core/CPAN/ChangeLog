@@ -1,0 +1,9 @@
+# ChangeLog for perl-core/CPAN
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN/ChangeLog,v 1.4 2013/12/21 18:58:36 zlogene Exp $
+
+*CPAN-2.0.0 (21 Dec 2013)
+
+  21 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> +CPAN-2.0.0.ebuild,
+  +metadata.xml:
+  Initial commit for CPAN core module. Fix bug #483994

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.5.0-r1.ebuild,v 1.2 2013/12/21 18:09:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ots-0.5.0-r1.ebuild,v 1.3 2013/12/21 18:31:22 pacho Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/libots/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="

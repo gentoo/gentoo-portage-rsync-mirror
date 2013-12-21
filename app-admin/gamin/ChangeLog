@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.108 2013/12/08 10:48:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.109 2013/12/21 19:00:29 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gamin-0.1.10-r1.ebuild:
+  Stable for ppc, wrt bug #491890
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gamin-0.1.10-r1.ebuild:
   x86 stable, bug #491890

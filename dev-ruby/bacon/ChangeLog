@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bacon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bacon/ChangeLog,v 1.20 2013/10/04 15:35:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bacon/ChangeLog,v 1.21 2013/12/21 18:57:09 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> bacon-1.2.0-r1.ebuild:
+  Stable for ppc, wrt bug #490176
 
 *bacon-1.2.0-r1 (04 Oct 2013)
 

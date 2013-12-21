@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.262 2013/10/31 04:50:19 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.263 2013/12/21 18:59:16 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> mldonkey-3.1.3.ebuild:
+  Stable for ppc, wrt bug #477152
 
   31 Oct 2013; Benda Xu <heroxbd@gentoo.org> mldonkey-3.1.3.ebuild:
   rekeyword ~arm after gtk USE flag is masked for arm, bug 487722

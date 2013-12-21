@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/nylon
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/ChangeLog,v 1.15 2013/12/21 17:45:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/nylon/ChangeLog,v 1.16 2013/12/21 18:56:26 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nylon-1.21-r1.ebuild:
+  Stable for ppc, wrt bug #474288
 
   21 Dec 2013; Pacho Ramos <pacho@gentoo.org> nylon-1.21-r1.ebuild:
   amd64 stable, bug #474288
