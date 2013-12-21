@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.131 2013/10/21 19:03:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.132 2013/12/21 19:58:00 williamh Exp $
 
 EAPI=5
 
@@ -63,6 +63,7 @@ src_compile() {
 	MAKE_ARGS="${MAKE_ARGS}
 		LIBNAME=$(get_libdir)
 		LIBEXECDIR=${EPREFIX}/$(get_libdir)/rc
+		MKNET=$(usex newnet)
 		MKSELINUX=$(usex selinux)
 		MKSTATICLIBS=$(usex static-libs)
 	MKTOOLS=$(usex tools)"
@@ -76,7 +77,6 @@ src_compile() {
 		brand="FreeBSD"
 	fi
 	export BRANDING="Gentoo ${brand}"
-	use newnet || MAKE_ARGS="${MAKE_ARGS} MKNET=oldnet"
 	use prefix && MAKE_ARGS="${MAKE_ARGS} MKPREFIX=yes PREFIX=${EPREFIX}"
 	export DEBUG=$(usev debug)
 	export MKPAM=$(usev pam)
