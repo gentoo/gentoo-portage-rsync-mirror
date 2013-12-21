@@ -8,5 +8,5 @@ LICENSE=BSD-2
 RDEPEND=>=dev-libs/ecore-1.7.0[evas] >=dev-libs/eet-1.7.0 >=dev-libs/efreet-1.7.0 >=dev-libs/eina-1.7.0 >=media-libs/edje-1.7.0 >=media-libs/elementary-1.7.0 >=media-libs/emotion-1.7.0 >=media-libs/ethumb-1.7.0[dbus] >=media-libs/evas-1.7.0
 SLOT=0
 SRC_URI=http://download.enlightenment.org/releases/terminology-0.4.0-alpha1.tar.bz2
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=9234c915e91c8b56131eb7d4484fd4bd

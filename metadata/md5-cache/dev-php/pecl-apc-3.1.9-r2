@@ -10,5 +10,5 @@ RDEPEND=!dev-php/eaccelerator !dev-php/xcache !dev-php/pecl-apcu !dev-php/pecl-z
 REQUIRED_USE=^^ ( lock_pthreadmutex lock_pthreadrw lock_spinlock lock_semaphore ) || ( php_targets_php5-3 )
 SLOT=0
 SRC_URI=http://pecl.php.net/get/APC-3.1.9.tgz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	a82a329b538368791f5a6113c60e557e	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	39437168059a2166e012420b3ba12815	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e1f1c9f8acb7211573e568137c446754

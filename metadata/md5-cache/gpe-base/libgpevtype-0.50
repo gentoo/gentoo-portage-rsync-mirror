@@ -8,5 +8,5 @@ LICENSE=LGPL-2
 RDEPEND=gpe-base/libtododb >=dev-libs/glib-2.2 >=gpe-base/libmimedir-0.4.2 >=gpe-base/libeventdb-0.29
 SLOT=0
 SRC_URI=http://gpe.linuxtogo.org/download/source/libgpevtype-0.50.tar.bz2
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=069ada8f0074427663309c0adff0ef15

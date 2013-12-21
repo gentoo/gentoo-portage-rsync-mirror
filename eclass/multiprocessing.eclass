@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multiprocessing.eclass,v 1.7 2013/12/07 09:14:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multiprocessing.eclass,v 1.8 2013/12/21 09:40:37 vapier Exp $
 
 # @ECLASS: multiprocessing.eclass
 # @MAINTAINER:
@@ -35,6 +35,23 @@
 
 if [[ ${___ECLASS_ONCE_MULTIPROCESSING} != "recur -_+^+_- spank" ]] ; then
 ___ECLASS_ONCE_MULTIPROCESSING="recur -_+^+_- spank"
+
+# @FUNCTION: bashpid
+# @DESCRIPTION:
+# Return the process id of the current sub shell.  This is to support bash
+# versions older than 4.0 that lack $BASHPID support natively.  Simply do:
+# echo ${BASHPID:-$(bashpid)}
+#
+# Note: Using this func in any other way than the one above is not supported.
+bashpid() {
+	# Running bashpid plainly will return incorrect results.  This func must
+	# be run in a subshell of the current subshell to get the right pid.
+	# i.e. This will show the wrong value:
+	#   bashpid
+	# But this will show the right value:
+	#   (bashpid)
+	sh -c 'echo ${PPID}'
+}
 
 # @FUNCTION: makeopts_jobs
 # @USAGE: [${MAKEOPTS}]
@@ -142,7 +159,7 @@ multijob_child_init() {
 	esac
 
 	if [[ $# -eq 0 ]] ; then
-		trap 'echo ${BASHPID} $? >&'${mj_write_fd} EXIT
+		trap 'echo ${BASHPID:-$(bashpid)} $? >&'${mj_write_fd} EXIT
 		trap 'exit 1' INT TERM
 	else
 		local ret

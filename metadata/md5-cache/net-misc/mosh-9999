@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/protobuf sys-libs/ncurses:5 virtual/ssh client? ( dev-lang/perl dev-perl/IO-Tty ) utempter? ( sys-libs/libutempter )
 REQUIRED_USE=|| ( client server ) examples? ( client )
 SLOT=0
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	a82a329b538368791f5a6113c60e557e	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	326c654a30b9c5763247114fc680d5f8	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	a82a329b538368791f5a6113c60e557e	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=520d6f9ffbdbd4e52fdd02a378cb88c6
