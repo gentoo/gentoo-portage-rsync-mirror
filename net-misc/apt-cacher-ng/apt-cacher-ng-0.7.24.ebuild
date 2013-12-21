@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.24.ebuild,v 1.1 2013/12/20 14:13:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/apt-cacher-ng/apt-cacher-ng-0.7.24.ebuild,v 1.2 2013/12/21 15:11:33 jer Exp $
 
 EAPI=5
-inherit cmake-utils user
+inherit cmake-utils eutils user
 
 DESCRIPTION="Yet another implementation of an HTTP proxy for Debian/Ubuntu software packages written in C++"
 HOMEPAGE="
@@ -15,23 +15,22 @@ SLOT="0"
 SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.xz"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="doc fuse lzma tcpd"
+IUSE="doc fuse tcpd"
 
 COMMON_DEPEND="
 	app-arch/bzip2
+	app-arch/xz-utils
 	sys-libs/zlib
 "
 DEPEND="
 	${COMMON_DEPEND}
-	app-arch/xz-utils
 	dev-util/cmake
 "
 RDEPEND="
 	${COMMON_DEPEND}
-	lzma? ( app-arch/xz-utils )
+	dev-lang/perl
 	fuse? ( sys-fs/fuse )
 	tcpd? ( sys-apps/tcp-wrappers )
-	dev-lang/perl
 "
 
 pkg_setup() {
@@ -46,11 +45,6 @@ src_configure(){
 		mycmakeargs="-DHAVE_FUSE_26=yes ${mycmakeargs}"
 	else
 		mycmakeargs="-DHAVE_FUSE_26=no ${mycmakeargs}"
-	fi
-	if use lzma; then
-		mycmakeargs="-DHAVE_LZMA=yes ${mycmakeargs}"
-	else
-		mycmakeargs="-DHAVE_LZMA=no ${mycmakeargs}"
 	fi
 	if use tcpd; then
 		mycmakeargs="-DHAVE_LIBWRAP=yes ${mycmakeargs}"
