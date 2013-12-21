@@ -1,26 +1,26 @@
-From 498d79139147953da13db30afc594ede214543d9 Mon Sep 17 00:00:00 2001
+From dc0922f791c29fc16340de97b0318e7573d57a32 Mon Sep 17 00:00:00 2001
 From: Mike Frysinger <vapier@gentoo.org>
 Date: Thu, 9 Oct 2008 15:51:35 -0400
-Subject: [PATCH 2/2] add ps2 targets to config.sub
+Subject: [PATCH] add ps2 targets to config.sub
 
 ---
  config.sub | 22 ++++++++++++++++++++--
  1 file changed, 20 insertions(+), 2 deletions(-)
 
 diff --git a/config.sub b/config.sub
-index 707e9e2..de08881 100755
+index 61cb4bc..4ffb084 100755
 --- a/config.sub
 +++ b/config.sub
-@@ -262,7 +262,7 @@ case $basic_machine in
+@@ -258,7 +258,7 @@ case $basic_machine in
  	| be32 | be64 \
  	| bfin \
- 	| c4x | clipper \
+ 	| c4x | c8051 | clipper \
 -	| d10v | d30v | dlx | dsp16xx \
 +	| d10v | d30v | dlx | dsp16xx | dvp \
  	| epiphany \
  	| fido | fr30 | frv \
  	| h8300 | h8500 | hppa | hppa1.[01] | hppa2.0 | hppa2.0[nw] | hppa64 \
-@@ -812,6 +812,24 @@ case $basic_machine in
+@@ -810,6 +810,24 @@ case $basic_machine in
  		basic_machine=m68k-atari
  		os=-mint
  		;;
@@ -45,7 +45,7 @@ index 707e9e2..de08881 100755
  	mips3*-*)
  		basic_machine=`echo $basic_machine | sed -e 's/mips3/mips64/'`
  		;;
-@@ -1374,7 +1392,7 @@ case $os in
+@@ -1372,7 +1390,7 @@ case $os in
  	      | -uxpv* | -beos* | -mpeix* | -udk* \
  	      | -interix* | -uwin* | -mks* | -rhapsody* | -darwin* | -opened* \
  	      | -openstep* | -oskit* | -conix* | -pw32* | -nonstopux* \
@@ -55,5 +55,5 @@ index 707e9e2..de08881 100755
  	      | -morphos* | -superux* | -rtmk* | -rtmk-nova* | -windiss* \
  	      | -powermax* | -dnix* | -nx6 | -nx7 | -sei* | -dragonfly* \
 -- 
-1.8.0.2
+1.8.4.3
 
