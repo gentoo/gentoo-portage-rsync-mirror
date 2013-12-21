@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.7.ebuild,v 1.4 2013/11/13 11:25:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/wesnoth-1.10.7.ebuild,v 1.5 2013/12/21 16:37:21 ago Exp $
 
 EAPI=5
 inherit cmake-utils eutils multilib toolchain-funcs flag-o-matic games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wesnoth/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="dbus dedicated doc nls server"
 
 RDEPEND=">=media-libs/libsdl-1.2.7:0[joystick,video,X]

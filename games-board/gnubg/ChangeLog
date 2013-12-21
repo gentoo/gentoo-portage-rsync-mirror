@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.72 2013/10/29 01:35:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.73 2013/12/21 16:36:43 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gnubg-20130203.ebuild:
+  Stable for ppc, wrt bug #490634
 
   29 Oct 2013; Anthony G. Basile <blueness@gentoo.org> gnubg-20121201.ebuild,
   gnubg-20130203.ebuild:

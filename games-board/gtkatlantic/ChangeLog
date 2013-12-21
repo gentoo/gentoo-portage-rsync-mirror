@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gtkatlantic
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.20 2013/11/13 11:33:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gtkatlantic/ChangeLog,v 1.21 2013/12/21 16:38:12 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gtkatlantic-0.4.3.ebuild:
+  Stable for ppc, wrt bug #490616
 
   13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> gtkatlantic-0.4.3.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

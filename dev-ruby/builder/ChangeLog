@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.85 2013/11/11 14:12:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.86 2013/12/21 16:35:49 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> builder-3.0.4.ebuild:
+  Stable for ppc, wrt bug #490912
 
   11 Nov 2013; Jeroen Roovers <jer@gentoo.org> builder-3.0.4.ebuild:
   Stable for HPPA (bug #490912).
@@ -305,4 +308,3 @@
   20 Jan 2006; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
   +builder-1.2.4.ebuild:
   Initial import
-

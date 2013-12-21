@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/boswars
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.24 2013/11/13 11:14:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boswars/ChangeLog,v 1.25 2013/12/21 16:38:00 ago Exp $
+
+  21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> boswars-2.7-r1.ebuild:
+  Stable for ppc, wrt bug #490710
 
   13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> boswars-2.7-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

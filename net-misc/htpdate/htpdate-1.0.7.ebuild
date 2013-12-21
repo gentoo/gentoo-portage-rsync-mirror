@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-1.0.7.ebuild,v 1.4 2013/11/30 14:15:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-1.0.7.ebuild,v 1.5 2013/12/21 16:38:38 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.vervest.org/htp/archive/c/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~mips ~ppc ~ppc64 ~s390 ~sh x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ~mips ppc ~ppc64 ~s390 ~sh x86 ~amd64-linux ~x86-linux"
 
 DEPEND=""
 RDEPEND=""
