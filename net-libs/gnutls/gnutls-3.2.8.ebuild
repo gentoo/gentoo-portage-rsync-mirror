@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.8.ebuild,v 1.1 2013/12/21 09:14:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.8.ebuild,v 1.2 2013/12/21 12:30:42 grobian Exp $
 
 EAPI=5
 
@@ -72,6 +72,9 @@ src_configure() {
 	LINGUAS="${LINGUAS//en/en@boldquot en@quot}"
 
 	# TPM needs to be tested before being enabled
+	# hardware-accell is disabled on OSX because the asm files force
+	#   GNU-stack (as doesn't support that) and when that's removed ld
+	#   complains about duplicate symbols
 	econf \
 		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
 		--disable-valgrind-tests \
@@ -85,7 +88,8 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_with pkcs11 p11-kit) \
 		$(use_with zlib) \
-		--without-tpm
+		--without-tpm \
+		$([[ ${CHOST} == *-darwin* ]] && echo --disable-hardware-acceleration)
 }
 
 src_test() {
