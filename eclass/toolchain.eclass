@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.607 2013/12/19 06:00:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.608 2013/12/21 11:59:18 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
-#---->> eclass stuff <<----
 DESCRIPTION="The GNU Compiler Collection"
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
@@ -27,9 +26,9 @@ fi
 FEATURES=${FEATURES/multilib-strict/}
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_postinst pkg_postrm
-#----<< eclass stuff >>----
 
 #---->> globals <<----
+
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} = ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
@@ -100,9 +99,9 @@ DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_
 # Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 # We will handle /usr/include/g++-v3/ with gcc-config ...
 STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VER/\.*/}}
-#----<< globals >>----
 
 #---->> SLOT+IUSE logic <<----
+
 IUSE="multislot nls nptl regression-test vanilla"
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
@@ -128,9 +127,9 @@ if use multislot ; then
 else
 	SLOT="${GCC_BRANCH_VER}"
 fi
-#----<< SLOT+IUSE logic >>----
 
 #---->> DEPEND <<----
+
 RDEPEND="sys-libs/zlib
 	nls? ( sys-devel/gettext )"
 
@@ -192,7 +191,6 @@ if in_iuse gcj ; then
 fi
 
 PDEPEND=">=sys-devel/gcc-config-1.7"
-#----<< DEPEND >>----
 
 #---->> S + SRC_URI essentials <<----
 
@@ -207,6 +205,13 @@ S=$(
 		echo ${WORKDIR}/gcc-${GCC_RELEASE_VER}
 	fi
 )
+
+gentoo_urls() {
+	local devspace="HTTP~vapier/dist/URI HTTP~dirtyepic/dist/URI
+	HTTP~halcy0n/patches/URI HTTP~zorry/patches/gcc/URI"
+	devspace=${devspace//HTTP/http:\/\/dev.gentoo.org\/}
+	echo mirror://gentoo/$1 ${devspace//URI/$1}
+}
 
 # This function handles the basics of setting the SRC_URI for a gcc ebuild.
 # To use, set SRC_URI with:
@@ -266,14 +271,6 @@ S=$(
 #			ten Brugge's bounds-checking patches. If you want to use a patch
 #			for an older gcc version with a new gcc, make sure you set
 #			HTB_GCC_VER to that version of gcc.
-#
-gentoo_urls() {
-	local devspace="HTTP~vapier/dist/URI HTTP~dirtyepic/dist/URI
-	HTTP~halcy0n/patches/URI HTTP~zorry/patches/gcc/URI"
-	devspace=${devspace//HTTP/http:\/\/dev.gentoo.org\/}
-	echo mirror://gentoo/$1 ${devspace//URI/$1}
-}
-
 get_gcc_src_uri() {
 	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
 	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
@@ -331,237 +328,11 @@ get_gcc_src_uri() {
 
 	echo "${GCC_SRC_URI}"
 }
+
 SRC_URI=$(get_gcc_src_uri)
-#---->> S + SRC_URI essentials >>----
 
-#---->> support checks <<----
+#---->> pkg_setup <<----
 
-# Grab a variable from the build system (taken from linux-info.eclass)
-get_make_var() {
-	local var=$1 makefile=${2:-${WORKDIR}/build/Makefile}
-	echo -e "e:\\n\\t@echo \$(${var})\\ninclude ${makefile}" | \
-		r=${makefile%/*} emake --no-print-directory -s -f - 2>/dev/null
-}
-XGCC() { get_make_var GCC_FOR_TARGET ; }
-
-# The gentoo piessp patches allow for 3 configurations:
-# 1) PIE+SSP by default
-# 2) PIE by default
-# 3) SSP by default
-hardened_gcc_works() {
-	if [[ $1 == "pie" ]] ; then
-		# $gcc_cv_ld_pie is unreliable as it simply take the output of
-		# `ld --help | grep -- -pie`, that reports the option in all cases, also if
-		# the loader doesn't actually load the resulting executables.
-		# To avoid breakage, blacklist FreeBSD here at least
-		[[ ${CTARGET} == *-freebsd* ]] && return 1
-
-		want_pie || return 1
-		use_if_iuse nopie && return 1
-		hardened_gcc_is_stable pie
-		return $?
-	elif [[ $1 == "ssp" ]] ; then
-		[[ -n ${SPECS_VER} ]] || return 1
-		use_if_iuse nossp && return 1
-		hardened_gcc_is_stable ssp
-		return $?
-	else
-		# laziness ;)
-		hardened_gcc_works pie || return 1
-		hardened_gcc_works ssp || return 1
-		return 0
-	fi
-}
-
-hardened_gcc_is_stable() {
-	local tocheck
-	if [[ $1 == "pie" ]] ; then
-		if [[ ${CTARGET} == *-uclibc* ]] ; then
-			tocheck=${PIE_UCLIBC_STABLE}
-		else
-			tocheck=${PIE_GLIBC_STABLE}
-		fi
-	elif [[ $1 == "ssp" ]] ; then
-		if [[ ${CTARGET} == *-uclibc* ]] ; then
-			tocheck=${SSP_UCLIBC_STABLE}
-		else
-			tocheck=${SSP_STABLE}
-		fi
-	else
-		die "hardened_gcc_stable needs to be called with pie or ssp"
-	fi
-
-	has $(tc-arch) ${tocheck} && return 0
-	return 1
-}
-
-want_pie() {
-	! use hardened && [[ -n ${PIE_VER} ]] && use nopie && return 1
-	[[ -n ${PIE_VER} ]] && [[ -n ${SPECS_VER} ]] && return 0
-	tc_version_is_at_least 4.3.2 && return 1
-	[[ -z ${PIE_VER} ]] && return 1
-	use !nopie && return 0
-	return 1
-}
-
-want_minispecs() {
-	if tc_version_is_at_least 4.3.2 && use hardened ; then
-		if ! want_pie ; then
-			ewarn "PIE_VER or SPECS_VER is not defined in the GCC ebuild."
-		elif use vanilla ; then
-			ewarn "You will not get hardened features if you have the vanilla USE-flag."
-		elif use nopie && use nossp ; then
-			ewarn "You will not get hardened features if you have the nopie and nossp USE-flag."
-		elif ! hardened_gcc_works ; then
-			ewarn "Your $(tc-arch) arch is not supported."
-		else
-			return 0
-		fi
-		ewarn "Hope you know what you are doing. Hardened will not work."
-		return 0
-	fi
-	return 1
-}
-
-# This is to make sure we don't accidentally try to enable support for a
-# language that doesnt exist. GCC 3.4 supports f77, while 4.0 supports f95, etc.
-#
-# Also add a hook so special ebuilds (kgcc64) can control which languages
-# exactly get enabled
-gcc-lang-supported() {
-	grep ^language=\"${1}\" "${S}"/gcc/*/config-lang.in > /dev/null || return 1
-	[[ -z ${TOOLCHAIN_ALLOWED_LANGS} ]] && return 0
-	has $1 ${TOOLCHAIN_ALLOWED_LANGS}
-}
-#----<< support checks >>----
-
-#---->> specs + env.d logic <<----
-
-# configure to build with the hardened GCC specs as the default
-make_gcc_hard() {
-	# defaults to enable for all hardened toolchains
-	local gcc_hard_flags="-DEFAULT_RELRO -DEFAULT_BIND_NOW"
-
-	if hardened_gcc_works ; then
-		einfo "Updating gcc to use automatic PIE + SSP building ..."
-		gcc_hard_flags+=" -DEFAULT_PIE_SSP"
-	elif hardened_gcc_works pie ; then
-		einfo "Updating gcc to use automatic PIE building ..."
-		ewarn "SSP has not been enabled by default"
-		gcc_hard_flags+=" -DEFAULT_PIE"
-	elif hardened_gcc_works ssp ; then
-		einfo "Updating gcc to use automatic SSP building ..."
-		ewarn "PIE has not been enabled by default"
-		gcc_hard_flags+=" -DEFAULT_SSP"
-	else
-		# do nothing if hardened isnt supported, but dont die either
-		ewarn "hardened is not supported for this arch in this gcc version"
-		ebeep
-		return 0
-	fi
-
-	sed -i \
-		-e "/^HARD_CFLAGS = /s|=|= ${gcc_hard_flags} |" \
-		"${S}"/gcc/Makefile.in || die
-
-	# rebrand to make bug reports easier
-	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/Gentoo/Gentoo Hardened}
-}
-
-create_gcc_env_entry() {
-	dodir /etc/env.d/gcc
-	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}"
-
-	local gcc_specs_file
-	local gcc_envd_file="${D}${gcc_envd_base}"
-	if [[ -z $1 ]] ; then
-		# I'm leaving the following commented out to remind me that it
-		# was an insanely -bad- idea. Stuff broke. GCC_SPECS isnt unset
-		# on chroot or in non-toolchain.eclass gcc ebuilds!
-		#gcc_specs_file="${LIBPATH}/specs"
-		gcc_specs_file=""
-	else
-		gcc_envd_file+="-$1"
-		gcc_specs_file="${LIBPATH}/$1.specs"
-	fi
-
-	# We want to list the default ABI's LIBPATH first so libtool
-	# searches that directory first.  This is a temporary
-	# workaround for libtool being stupid and using .la's from
-	# conflicting ABIs by using the first one in the search path
-	local ldpaths mosdirs
-	if tc_version_is_at_least 3.2 ; then
-		local mdir mosdir abi ldpath
-		for abi in $(get_all_abis TARGET) ; do
-			mdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
-			ldpath=${LIBPATH}
-			[[ ${mdir} != "." ]] && ldpath+="/${mdir}"
-			ldpaths="${ldpath}${ldpaths:+:${ldpaths}}"
-
-			mosdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) -print-multi-os-directory)
-			mosdirs="${mosdir}${mosdirs:+:${mosdirs}}"
-		done
-	else
-		# Older gcc's didn't do multilib, so logic is simple.
-		ldpaths=${LIBPATH}
-	fi
-
-	cat <<-EOF > ${gcc_envd_file}
-	PATH="${BINPATH}"
-	ROOTPATH="${BINPATH}"
-	GCC_PATH="${BINPATH}"
-	LDPATH="${ldpaths}"
-	MANPATH="${DATAPATH}/man"
-	INFOPATH="${DATAPATH}/info"
-	STDCXX_INCDIR="${STDCXX_INCDIR##*/}"
-	CTARGET="${CTARGET}"
-	GCC_SPECS="${gcc_specs_file}"
-	MULTIOSDIRS="${mosdirs}"
-	EOF
-}
-
-setup_minispecs_gcc_build_specs() {
-	# Setup the "build.specs" file for gcc 4.3 to use when building.
-	if hardened_gcc_works pie ; then
-		cat "${WORKDIR}"/specs/pie.specs >> "${WORKDIR}"/build.specs
-	fi
-	if hardened_gcc_works ssp ; then
-		for s in ssp sspall ; do
-			cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
-		done
-	fi
-	for s in nostrict znow ; do
-		cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
-	done
-	export GCC_SPECS="${WORKDIR}"/build.specs
-}
-
-copy_minispecs_gcc_specs() {
-	# setup the hardenedno* specs files and the vanilla specs file.
-	if hardened_gcc_works ; then
-		create_gcc_env_entry hardenednopiessp
-	fi
-	if hardened_gcc_works pie ; then
-		create_gcc_env_entry hardenednopie
-	fi
-	if hardened_gcc_works ssp ; then
-		create_gcc_env_entry hardenednossp
-	fi
-	create_gcc_env_entry vanilla
-	insinto ${LIBPATH}
-	doins "${WORKDIR}"/specs/*.specs || die "failed to install specs"
-	# Build system specs file which, if it exists, must be a complete set of
-	# specs as it completely and unconditionally overrides the builtin specs.
-	if ! tc_version_is_at_least 4.4 ; then
-		$(XGCC) -dumpspecs > "${WORKDIR}"/specs/specs
-		cat "${WORKDIR}"/build.specs >> "${WORKDIR}"/specs/specs
-		doins "${WORKDIR}"/specs/specs || die "failed to install the specs file"
-	fi
-}
-
-#----<< specs + env.d logic >>----
-
-#---->> pkg_* <<----
 toolchain_pkg_setup() {
 	if [[ -n ${PRERELEASE}${SNAPSHOT} || ${PV} == *9999* ]] &&
 	   [[ -z ${I_PROMISE_TO_SUPPLY_PATCHES_WITH_BUGS} ]] ; 	then
@@ -583,116 +354,7 @@ toolchain_pkg_setup() {
 	unset LANGUAGES #265283
 }
 
-toolchain_pkg_postinst() {
-	do_gcc_config
-
-	if ! is_crosscompile ; then
-		echo
-		ewarn "If you have issues with packages unable to locate libstdc++.la,"
-		ewarn "then try running 'fix_libtool_files.sh' on the old gcc versions."
-		echo
-		ewarn "You might want to review the GCC upgrade guide when moving between"
-		ewarn "major versions (like 4.2 to 4.3):"
-		ewarn "http://www.gentoo.org/doc/en/gcc-upgrading.xml"
-		echo
-
-		# Clean up old paths
-		rm -f "${ROOT}"/*/rcscripts/awk/fixlafiles.awk "${ROOT}"/sbin/fix_libtool_files.sh
-		rmdir "${ROOT}"/*/rcscripts{/awk,} 2>/dev/null
-
-		mkdir -p "${ROOT}"/usr/{share/gcc-data,sbin,bin}
-		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/usr/share/gcc-data/ || die
-		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/usr/sbin/ || die
-
-		# Since these aren't critical files and portage sucks with
-		# handling of binpkgs, don't require these to be found
-		cp "${ROOT}/${DATAPATH}"/c{89,99} "${ROOT}"/usr/bin/ 2>/dev/null
-	fi
-
-	if use regression-test ; then
-		elog "Testsuite results have been installed into /usr/share/doc/${PF}/testsuite"
-		echo
-	fi
-}
-
-toolchain_pkg_postrm() {
-	# to make our lives easier (and saner), we do the fix_libtool stuff here.
-	# rather than checking SLOT's and trying in upgrade paths, we just see if
-	# the common libstdc++.la exists in the ${LIBPATH} of the gcc that we are
-	# unmerging.  if it does, that means this was a simple re-emerge.
-
-	# clean up the cruft left behind by cross-compilers
-	if is_crosscompile ; then
-		if [[ -z $(ls "${ROOT}"/etc/env.d/gcc/${CTARGET}* 2>/dev/null) ]] ; then
-			rm -f "${ROOT}"/etc/env.d/gcc/config-${CTARGET}
-			rm -f "${ROOT}"/etc/env.d/??gcc-${CTARGET}
-			rm -f "${ROOT}"/usr/bin/${CTARGET}-{gcc,{g,c}++}{,32,64}
-		fi
-		return 0
-	fi
-
-	# ROOT isnt handled by the script
-	[[ ${ROOT} != "/" ]] && return 0
-
-	if [[ ! -e ${LIBPATH}/libstdc++.so ]] ; then
-		# make sure the profile is sane during same-slot upgrade #289403
-		do_gcc_config
-
-		einfo "Running 'fix_libtool_files.sh ${GCC_RELEASE_VER}'"
-		/usr/sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}
-		if [[ -n ${BRANCH_UPDATE} ]] ; then
-			einfo "Running 'fix_libtool_files.sh ${GCC_RELEASE_VER}-${BRANCH_UPDATE}'"
-			/usr/sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}-${BRANCH_UPDATE}
-		fi
-	fi
-
-	return 0
-}
-
-#---->> pkg_* <<----
-
-#---->> src_* <<----
-
-guess_patch_type_in_dir() {
-	[[ -n $(ls "$1"/*.bz2 2>/dev/null) ]] \
-		&& EPATCH_SUFFIX="patch.bz2" \
-		|| EPATCH_SUFFIX="patch"
-}
-
-do_gcc_rename_java_bins() {
-	# bug #139918 - conflict between gcc and java-config-2 for ownership of
-	# /usr/bin/rmi{c,registry}.	 Done with mv & sed rather than a patch
-	# because patches would be large (thanks to the rename of man files),
-	# and it's clear from the sed invocations that all that changes is the
-	# rmi{c,registry} names to grmi{c,registry} names.
-	# Kevin F. Quinn 2006-07-12
-	einfo "Renaming jdk executables rmic and rmiregistry to grmic and grmiregistry."
-	# 1) Move the man files if present (missing prior to gcc-3.4)
-	for manfile in rmic rmiregistry ; do
-		[[ -f ${S}/gcc/doc/${manfile}.1 ]] || continue
-		mv "${S}"/gcc/doc/${manfile}.1 "${S}"/gcc/doc/g${manfile}.1
-	done
-	# 2) Fixup references in the docs if present (mission prior to gcc-3.4)
-	for jfile in gcc/doc/gcj.info gcc/doc/grmic.1 gcc/doc/grmiregistry.1 gcc/java/gcj.texi ; do
-		[[ -f ${S}/${jfile} ]] || continue
-		sed -i -e 's:rmiregistry:grmiregistry:g' "${S}"/${jfile} ||
-			die "Failed to fixup file ${jfile} for rename to grmiregistry"
-		sed -i -e 's:rmic:grmic:g' "${S}"/${jfile} ||
-			die "Failed to fixup file ${jfile} for rename to grmic"
-	done
-	# 3) Fixup Makefiles to build the changed executable names
-	#	 These are present in all 3.x versions, and are the important bit
-	#	 to get gcc to build with the new names.
-	for jfile in libjava/Makefile.am libjava/Makefile.in gcc/java/Make-lang.in ; do
-		sed -i -e 's:rmiregistry:grmiregistry:g' "${S}"/${jfile} ||
-			die "Failed to fixup file ${jfile} for rename to grmiregistry"
-		# Careful with rmic on these files; it's also the name of a directory
-		# which should be left unchanged.  Replace occurrences of 'rmic$',
-		# 'rmic_' and 'rmic '.
-		sed -i -e 's:rmic\([$_ ]\):grmic\1:g' "${S}"/${jfile} ||
-			die "Failed to fixup file ${jfile} for rename to grmic"
-	done
-}
+#----> src_unpack <----
 
 toolchain_src_unpack() {
 	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && \
@@ -820,46 +482,357 @@ toolchain_src_unpack() {
 	fi
 }
 
-gcc-abi-map() {
-	# Convert the ABI name we use in Gentoo to what gcc uses
-	local map=()
+gcc_quick_unpack() {
+	pushd "${WORKDIR}" > /dev/null
+	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
+	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
+	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
+	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
+	export SPECS_GCC_VER=${SPECS_GCC_VER:-${GCC_RELEASE_VER}}
+
+	if [[ -n ${GCC_A_FAKEIT} ]] ; then
+		unpack ${GCC_A_FAKEIT}
+	elif [[ -n ${PRERELEASE} ]] ; then
+		unpack gcc-${PRERELEASE}.tar.bz2
+	elif [[ -n ${SNAPSHOT} ]] ; then
+		unpack gcc-${SNAPSHOT}.tar.bz2
+	elif [[ ${PV} != *9999* ]] ; then
+		unpack gcc-${GCC_RELEASE_VER}.tar.bz2
+		# We want branch updates to be against a release tarball
+		if [[ -n ${BRANCH_UPDATE} ]] ; then
+			pushd "${S}" > /dev/null
+			epatch "${DISTDIR}"/gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
+			popd > /dev/null
+		fi
+	fi
+
+	if [[ -n ${D_VER} ]] && use d ; then
+		pushd "${S}"/gcc > /dev/null
+		unpack gdc-${D_VER}-src.tar.bz2
+		cd ..
+		ebegin "Adding support for the D language"
+		./gcc/d/setup-gcc.sh >& "${T}"/dgcc.log
+		if ! eend $? ; then
+			eerror "The D gcc package failed to apply"
+			eerror "Please include this log file when posting a bug report:"
+			eerror "  ${T}/dgcc.log"
+			die "failed to include the D language"
+		fi
+		popd > /dev/null
+	fi
+
+	[[ -n ${PATCH_VER} ]] && \
+		unpack gcc-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
+
+	[[ -n ${UCLIBC_VER} ]] && \
+		unpack gcc-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
+
+	if want_pie ; then
+		if [[ -n ${PIE_CORE} ]] ; then
+			unpack ${PIE_CORE}
+		else
+			unpack gcc-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2
+		fi
+		[[ -n ${SPECS_VER} ]] && \
+			unpack gcc-${SPECS_GCC_VER}-specs-${SPECS_VER}.tar.bz2
+	fi
+
+	use_if_iuse boundschecking && unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
+
+	popd > /dev/null
+}
+
+guess_patch_type_in_dir() {
+	[[ -n $(ls "$1"/*.bz2 2>/dev/null) ]] \
+		&& EPATCH_SUFFIX="patch.bz2" \
+		|| EPATCH_SUFFIX="patch"
+}
+
+do_gcc_HTB_patches() {
+	use_if_iuse boundschecking || return 0
+
+	# modify the bounds checking patch with a regression patch
+	epatch "${WORKDIR}/bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch"
+	BRANDING_GCC_PKGVERSION="${BRANDING_GCC_PKGVERSION}, HTB-${HTB_GCC_VER}-${HTB_VER}"
+}
+
+do_gcc_PIE_patches() {
+	want_pie || return 0
+	use vanilla && return 0
+
+	if tc_version_is_at_least 4.3.2 ; then
+		guess_patch_type_in_dir "${WORKDIR}"/piepatch/
+		EPATCH_MULTI_MSG="Applying pie patches ..." \
+		epatch "${WORKDIR}"/piepatch/
+	else
+		guess_patch_type_in_dir "${WORKDIR}"/piepatch/upstream
+
+		# corrects startfile/endfile selection and shared/static/pie flag usage
+		EPATCH_MULTI_MSG="Applying upstream pie patches ..." \
+		epatch "${WORKDIR}"/piepatch/upstream
+		# adds non-default pie support (rs6000)
+		EPATCH_MULTI_MSG="Applying non-default pie patches ..." \
+		epatch "${WORKDIR}"/piepatch/nondef
+		# adds default pie support (rs6000 too) if DEFAULT_PIE[_SSP] is defined
+		EPATCH_MULTI_MSG="Applying default pie patches ..." \
+		epatch "${WORKDIR}"/piepatch/def
+	fi
+
+	# we want to be able to control the pie patch logic via something other
+	# than ALL_CFLAGS...
+	sed -e '/^ALL_CFLAGS/iHARD_CFLAGS = ' \
+		-e 's|^ALL_CFLAGS = |ALL_CFLAGS = $(HARD_CFLAGS) |' \
+		-i "${S}"/gcc/Makefile.in
+	# Need to add HARD_CFLAGS to ALL_CXXFLAGS on >= 4.7
+	if tc_version_is_at_least 4.7 ; then
+		sed -e '/^ALL_CXXFLAGS/iHARD_CFLAGS = ' \
+                        -e 's|^ALL_CXXFLAGS = |ALL_CXXFLAGS = $(HARD_CFLAGS) |' \
+                        -i "${S}"/gcc/Makefile.in
+	fi
+
+	BRANDING_GCC_PKGVERSION="${BRANDING_GCC_PKGVERSION}, pie-${PIE_VER}"
+}
+
+# configure to build with the hardened GCC specs as the default
+make_gcc_hard() {
+	# defaults to enable for all hardened toolchains
+	local gcc_hard_flags="-DEFAULT_RELRO -DEFAULT_BIND_NOW"
+
+	if hardened_gcc_works ; then
+		einfo "Updating gcc to use automatic PIE + SSP building ..."
+		gcc_hard_flags+=" -DEFAULT_PIE_SSP"
+	elif hardened_gcc_works pie ; then
+		einfo "Updating gcc to use automatic PIE building ..."
+		ewarn "SSP has not been enabled by default"
+		gcc_hard_flags+=" -DEFAULT_PIE"
+	elif hardened_gcc_works ssp ; then
+		einfo "Updating gcc to use automatic SSP building ..."
+		ewarn "PIE has not been enabled by default"
+		gcc_hard_flags+=" -DEFAULT_SSP"
+	else
+		# do nothing if hardened isnt supported, but dont die either
+		ewarn "hardened is not supported for this arch in this gcc version"
+		ebeep
+		return 0
+	fi
+
+	sed -i \
+		-e "/^HARD_CFLAGS = /s|=|= ${gcc_hard_flags} |" \
+		"${S}"/gcc/Makefile.in || die
+
+	# rebrand to make bug reports easier
+	BRANDING_GCC_PKGVERSION=${BRANDING_GCC_PKGVERSION/Gentoo/Gentoo Hardened}
+}
+
+# This is a historical wart.  The original Gentoo/amd64 port used:
+#    lib32 - 32bit binaries (x86)
+#    lib64 - 64bit binaries (x86_64)
+#    lib   - "native" binaries (a symlink to lib64)
+# Most other distros use the logic (including mainline gcc):
+#    lib   - 32bit binaries (x86)
+#    lib64 - 64bit binaries (x86_64)
+# Over time, Gentoo is migrating to the latter form.
+#
+# Unfortunately, due to distros picking the lib32 behavior, newer gcc
+# versions will dynamically detect whether to use lib or lib32 for its
+# 32bit multilib.  So, to keep the automagic from getting things wrong
+# while people are transitioning from the old style to the new style,
+# we always set the MULTILIB_OSDIRNAMES var for relevant targets.
+setup_multilib_osdirnames() {
+	is_multilib || return 0
+
+	local config
+	local libdirs="../lib64 ../lib32"
+
+	# this only makes sense for some Linux targets
 	case ${CTARGET} in
-	mips*)   map=("o32 32" "n32 n32" "n64 64") ;;
-	x86_64*) map=("amd64 m64" "x86 m32" "x32 mx32") ;;
+	x86_64*-linux*)    config="i386" ;;
+	powerpc64*-linux*) config="rs6000" ;;
+	sparc64*-linux*)   config="sparc" ;;
+	s390x*-linux*)     config="s390" ;;
+	*)	               return 0 ;;
+	esac
+	config+="/t-linux64"
+
+	local sed_args=()
+	if tc_version_is_at_least 4.6 ; then
+		sed_args+=( -e 's:$[(]call if_multiarch[^)]*[)]::g' )
+	fi
+	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
+		einfo "updating multilib directories to be: ${libdirs}"
+		if tc_version_is_at_least 4.6.4 || tc_version_is_at_least 4.7 ; then
+			sed_args+=( -e '/^MULTILIB_OSDIRNAMES.*lib32/s:[$][(]if.*):../lib32:' )
+		else
+			sed_args+=( -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:" )
+		fi
+	else
+		einfo "using upstream multilib; disabling lib32 autodetection"
+		sed_args+=( -r -e 's:[$][(]if.*,(.*)[)]:\1:' )
+	fi
+	sed -i "${sed_args[@]}" "${S}"/gcc/config/${config} || die
+}
+
+gcc_version_patch() {
+	# gcc-4.3+ has configure flags (whoo!)
+	tc_version_is_at_least 4.3 && return 0
+
+	local version_string=${GCC_CONFIG_VER}
+	[[ -n ${BRANCH_UPDATE} ]] && version_string+=" ${BRANCH_UPDATE}"
+
+	einfo "patching gcc version: ${version_string} (${BRANDING_GCC_PKGVERSION})"
+
+	local gcc_sed=( -e 's:gcc\.gnu\.org/bugs\.html:bugs\.gentoo\.org/:' )
+	if grep -qs VERSUFFIX "${S}"/gcc/version.c ; then
+		gcc_sed+=( -e "/VERSUFFIX \"\"/s:\"\":\" (${BRANDING_GCC_PKGVERSION})\":" )
+	else
+		version_string="${version_string} (${BRANDING_GCC_PKGVERSION})"
+		gcc_sed+=( -e "/const char version_string\[\] = /s:= \".*\":= \"${version_string}\":" )
+	fi
+	sed -i "${gcc_sed[@]}" "${S}"/gcc/version.c || die
+}
+
+do_gcc_rename_java_bins() {
+	# bug #139918 - conflict between gcc and java-config-2 for ownership of
+	# /usr/bin/rmi{c,registry}.	 Done with mv & sed rather than a patch
+	# because patches would be large (thanks to the rename of man files),
+	# and it's clear from the sed invocations that all that changes is the
+	# rmi{c,registry} names to grmi{c,registry} names.
+	# Kevin F. Quinn 2006-07-12
+	einfo "Renaming jdk executables rmic and rmiregistry to grmic and grmiregistry."
+	# 1) Move the man files if present (missing prior to gcc-3.4)
+	for manfile in rmic rmiregistry ; do
+		[[ -f ${S}/gcc/doc/${manfile}.1 ]] || continue
+		mv "${S}"/gcc/doc/${manfile}.1 "${S}"/gcc/doc/g${manfile}.1
+	done
+	# 2) Fixup references in the docs if present (mission prior to gcc-3.4)
+	for jfile in gcc/doc/gcj.info gcc/doc/grmic.1 gcc/doc/grmiregistry.1 gcc/java/gcj.texi ; do
+		[[ -f ${S}/${jfile} ]] || continue
+		sed -i -e 's:rmiregistry:grmiregistry:g' "${S}"/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmiregistry"
+		sed -i -e 's:rmic:grmic:g' "${S}"/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmic"
+	done
+	# 3) Fixup Makefiles to build the changed executable names
+	#	 These are present in all 3.x versions, and are the important bit
+	#	 to get gcc to build with the new names.
+	for jfile in libjava/Makefile.am libjava/Makefile.in gcc/java/Make-lang.in ; do
+		sed -i -e 's:rmiregistry:grmiregistry:g' "${S}"/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmiregistry"
+		# Careful with rmic on these files; it's also the name of a directory
+		# which should be left unchanged.  Replace occurrences of 'rmic$',
+		# 'rmic_' and 'rmic '.
+		sed -i -e 's:rmic\([$_ ]\):grmic\1:g' "${S}"/${jfile} ||
+			die "Failed to fixup file ${jfile} for rename to grmic"
+	done
+}
+
+gcc_do_filter_flags() {
+	strip-flags
+
+	# In general gcc does not like optimization, and adds -O2 where
+	# it is safe.  This is especially true for gcc 3.3 + 3.4
+	replace-flags -O? -O2
+
+	# dont want to funk ourselves
+	filter-flags '-mabi*' -m31 -m32 -m64
+
+	filter-flags '-frecord-gcc-switches' # 490738
+
+	case ${GCC_BRANCH_VER} in
+		3.2|3.3)
+			replace-cpu-flags k8 athlon64 opteron x86-64
+			replace-cpu-flags pentium-m pentium3m pentium3
+			replace-cpu-flags G3 750
+			replace-cpu-flags G4 7400
+			replace-cpu-flags G5 7400
+	
+			case $(tc-arch) in
+				amd64)
+					replace-cpu-flags core2 nocona
+					filter-flags '-mtune=*'
+					;;
+				x86)
+					replace-cpu-flags core2 prescott
+					filter-flags '-mtune=*'
+					;;
+			esac
+
+			# XXX: should add a sed or something to query all supported flags
+			#      from the gcc source and trim everything else ...
+			filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
+			filter-flags -f{no-,}stack-protector{,-all}
+			filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
+			;;
+		3.4|4.*)
+			case $(tc-arch) in
+				amd64|x86)
+					filter-flags '-mcpu=*'
+					;;
+				alpha)
+					# https://bugs.gentoo.org/454426
+					append-ldflags -Wl,--no-relax
+					;;
+				sparc)
+					# temporary workaround for random ICEs reproduced by multiple users
+					# https://bugs.gentoo.org/457062
+					[[ ${GCC_BRANCH_VER} == 4.6 || ${GCC_BRANCH_VER} == 4.7 ]] && \
+						MAKEOPTS+=" -j1"
+					;;
+				*-macos)
+					# http://gcc.gnu.org/PR25127
+					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER} == 4.1 ]] && \
+						filter-flags '-mcpu=*' '-march=*' '-mtune=*'
+					;;
+			esac
+			;;
 	esac
 
-	local m
-	for m in "${map[@]}" ; do
-		l=( ${m} )
-		[[ $1 == ${l[0]} ]] && echo ${l[1]} && break
-	done
-}
-
-gcc-multilib-configure() {
-	if ! is_multilib ; then
-		confgcc+=( --disable-multilib )
-		# Fun times: if we are building for a target that has multiple
-		# possible ABI formats, and the user has told us to pick one
-		# that isn't the default, then not specifying it via the list
-		# below will break that on us.
-	else
-		confgcc+=( --enable-multilib )
-	fi
-
-	# translate our notion of multilibs into gcc's
-	local abi list
-	for abi in $(get_all_abis TARGET) ; do
-		local l=$(gcc-abi-map ${abi})
-		[[ -n ${l} ]] && list+=",${l}"
-	done
-	if [[ -n ${list} ]] ; then
-		case ${CTARGET} in
-		x86_64*)
-			tc_version_is_at_least 4.7 && confgcc+=( --with-multilib-list=${list:1} )
+	case ${GCC_BRANCH_VER} in
+		4.6)
+			case $(tc-arch) in
+				amd64|x86)
+					# https://bugs.gentoo.org/411333
+					# https://bugs.gentoo.org/466454
+					replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
+					;;
+			esac
 			;;
-		esac
+	esac
+
+	strip-unsupported-flags
+	
+	# CFLAGS logic (verified with 3.4.3):
+	# CFLAGS:
+	#	This conflicts when creating a crosscompiler, so set to a sane
+	#	  default in this case:
+	#	used in ./configure and elsewhere for the native compiler
+	#	used by gcc when creating libiberty.a
+	#	used by xgcc when creating libstdc++ (and probably others)!
+	#	  this behavior should be removed...
+	#
+	# CXXFLAGS:
+	#	used by xgcc when creating libstdc++
+	#
+	# STAGE1_CFLAGS (not used in creating a crosscompile gcc):
+	#	used by ${CHOST}-gcc for building stage1 compiler
+	#
+	# BOOT_CFLAGS (not used in creating a crosscompile gcc):
+	#	used by xgcc for building stage2/3 compiler
+
+	if is_crosscompile ; then
+		# Set this to something sane for both native and target
+		CFLAGS="-O2 -pipe"
+		FFLAGS=${CFLAGS}
+		FCFLAGS=${CFLAGS}
+
+		local VAR="CFLAGS_"${CTARGET//-/_}
+		CXXFLAGS=${!VAR}
 	fi
+
+	export GCJFLAGS=${GCJFLAGS:-${CFLAGS}}
 }
+
+#---->> src_configure <<----
 
 gcc_do_configure() {
 	local confgcc=( --host=${CHOST} )
@@ -1282,20 +1255,96 @@ gcc_do_configure() {
 	popd > /dev/null
 }
 
-has toolchain_death_notice ${EBUILD_DEATH_HOOKS} || EBUILD_DEATH_HOOKS+=" toolchain_death_notice"
-toolchain_death_notice() {
-	if [[ -e "${WORKDIR}"/build ]] ; then 
-		pushd "${WORKDIR}"/build >/dev/null
-		(echo '' | $(tc-getCC ${CTARGET}) ${CFLAGS} -v -E - 2>&1) > gccinfo.log
-		[[ -e "${T}"/build.log ]] && cp "${T}"/build.log .
-		tar jcf "${WORKDIR}"/gcc-build-logs.tar.bz2 \
-			gccinfo.log build.log $(find -name config.log)
-		rm gccinfo.log build.log
-		eerror
-		eerror "Please include ${WORKDIR}/gcc-build-logs.tar.bz2 in your bug report."
-		eerror
-		popd >/dev/null
+gcc-multilib-configure() {
+	if ! is_multilib ; then
+		confgcc+=( --disable-multilib )
+		# Fun times: if we are building for a target that has multiple
+		# possible ABI formats, and the user has told us to pick one
+		# that isn't the default, then not specifying it via the list
+		# below will break that on us.
+	else
+		confgcc+=( --enable-multilib )
 	fi
+
+	# translate our notion of multilibs into gcc's
+	local abi list
+	for abi in $(get_all_abis TARGET) ; do
+		local l=$(gcc-abi-map ${abi})
+		[[ -n ${l} ]] && list+=",${l}"
+	done
+	if [[ -n ${list} ]] ; then
+		case ${CTARGET} in
+		x86_64*)
+			tc_version_is_at_least 4.7 && confgcc+=( --with-multilib-list=${list:1} )
+			;;
+		esac
+	fi
+}
+
+gcc-abi-map() {
+	# Convert the ABI name we use in Gentoo to what gcc uses
+	local map=()
+	case ${CTARGET} in
+	mips*)   map=("o32 32" "n32 n32" "n64 64") ;;
+	x86_64*) map=("amd64 m64" "x86 m32" "x32 mx32") ;;
+	esac
+
+	local m
+	for m in "${map[@]}" ; do
+		l=( ${m} )
+		[[ $1 == ${l[0]} ]] && echo ${l[1]} && break
+	done
+}
+
+#----> src_compile <----
+
+toolchain_src_compile() {
+	gcc_do_filter_flags
+	einfo "CFLAGS=\"${CFLAGS}\""
+	einfo "CXXFLAGS=\"${CXXFLAGS}\""
+
+	# Force internal zip based jar script to avoid random
+	# issues with 3rd party jar implementations.  #384291
+	export JAR=no
+
+	# For hardened gcc 4.3 piepatchset to build the hardened specs
+	# file (build.specs) to use when building gcc.
+	if ! tc_version_is_at_least 4.4 && want_minispecs ; then
+		setup_minispecs_gcc_build_specs
+	fi
+	# Build in a separate build tree
+	mkdir -p "${WORKDIR}"/build
+	pushd "${WORKDIR}"/build > /dev/null
+
+	einfo "Configuring ${PN} ..."
+	gcc_do_configure
+
+	touch "${S}"/gcc/c-gperf.h
+
+	# Do not make manpages if we do not have perl ...
+	[[ ! -x /usr/bin/perl ]] \
+		&& find "${WORKDIR}"/build -name '*.[17]' | xargs touch
+
+	einfo "Compiling ${PN} ..."
+	gcc_do_make ${GCC_MAKE_TARGET}
+
+	popd > /dev/null
+}
+
+setup_minispecs_gcc_build_specs() {
+	# Setup the "build.specs" file for gcc 4.3 to use when building.
+	if hardened_gcc_works pie ; then
+		cat "${WORKDIR}"/specs/pie.specs >> "${WORKDIR}"/build.specs
+	fi
+	if hardened_gcc_works ssp ; then
+		for s in ssp sspall ; do
+			cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
+		done
+	fi
+	for s in nostrict znow ; do
+		cat "${WORKDIR}"/specs/${s}.specs >> "${WORKDIR}"/build.specs
+	done
+	export GCC_SPECS="${WORKDIR}"/build.specs
 }
 
 # This function accepts one optional argument, the make target to be used.
@@ -1385,146 +1434,7 @@ gcc_do_make() {
 	popd >/dev/null
 }
 
-gcc_do_filter_flags() {
-	strip-flags
-
-	# In general gcc does not like optimization, and adds -O2 where
-	# it is safe.  This is especially true for gcc 3.3 + 3.4
-	replace-flags -O? -O2
-
-	# dont want to funk ourselves
-	filter-flags '-mabi*' -m31 -m32 -m64
-
-	filter-flags '-frecord-gcc-switches' # 490738
-
-	case ${GCC_BRANCH_VER} in
-		3.2|3.3)
-			replace-cpu-flags k8 athlon64 opteron x86-64
-			replace-cpu-flags pentium-m pentium3m pentium3
-			replace-cpu-flags G3 750
-			replace-cpu-flags G4 7400
-			replace-cpu-flags G5 7400
-	
-			case $(tc-arch) in
-				amd64)
-					replace-cpu-flags core2 nocona
-					filter-flags '-mtune=*'
-					;;
-				x86)
-					replace-cpu-flags core2 prescott
-					filter-flags '-mtune=*'
-					;;
-			esac
-
-			# XXX: should add a sed or something to query all supported flags
-			#      from the gcc source and trim everything else ...
-			filter-flags -f{no-,}unit-at-a-time -f{no-,}web -mno-tls-direct-seg-refs
-			filter-flags -f{no-,}stack-protector{,-all}
-			filter-flags -fvisibility-inlines-hidden -fvisibility=hidden
-			;;
-		3.4|4.*)
-			case $(tc-arch) in
-				amd64|x86)
-					filter-flags '-mcpu=*'
-					;;
-				alpha)
-					# https://bugs.gentoo.org/454426
-					append-ldflags -Wl,--no-relax
-					;;
-				sparc)
-					# temporary workaround for random ICEs reproduced by multiple users
-					# https://bugs.gentoo.org/457062
-					[[ ${GCC_BRANCH_VER} == 4.6 || ${GCC_BRANCH_VER} == 4.7 ]] && \
-						MAKEOPTS+=" -j1"
-					;;
-				*-macos)
-					# http://gcc.gnu.org/PR25127
-					[[ ${GCC_BRANCH_VER} == 4.0 || ${GCC_BRANCH_VER} == 4.1 ]] && \
-						filter-flags '-mcpu=*' '-march=*' '-mtune=*'
-					;;
-			esac
-			;;
-	esac
-
-	case ${GCC_BRANCH_VER} in
-		4.6)
-			case $(tc-arch) in
-				amd64|x86)
-					# https://bugs.gentoo.org/411333
-					# https://bugs.gentoo.org/466454
-					replace-cpu-flags c3-2 pentium2 pentium3 pentium3m pentium-m i686
-					;;
-			esac
-			;;
-	esac
-
-	strip-unsupported-flags
-	
-	# TODO: Move to gcc_do_make()
-
-	# CFLAGS logic (verified with 3.4.3):
-	# CFLAGS:
-	#	This conflicts when creating a crosscompiler, so set to a sane
-	#	  default in this case:
-	#	used in ./configure and elsewhere for the native compiler
-	#	used by gcc when creating libiberty.a
-	#	used by xgcc when creating libstdc++ (and probably others)!
-	#	  this behavior should be removed...
-	#
-	# CXXFLAGS:
-	#	used by xgcc when creating libstdc++
-	#
-	# STAGE1_CFLAGS (not used in creating a crosscompile gcc):
-	#	used by ${CHOST}-gcc for building stage1 compiler
-	#
-	# BOOT_CFLAGS (not used in creating a crosscompile gcc):
-	#	used by xgcc for building stage2/3 compiler
-
-	if is_crosscompile ; then
-		# Set this to something sane for both native and target
-		CFLAGS="-O2 -pipe"
-		FFLAGS=${CFLAGS}
-		FCFLAGS=${CFLAGS}
-
-		local VAR="CFLAGS_"${CTARGET//-/_}
-		CXXFLAGS=${!VAR}
-	fi
-
-	export GCJFLAGS=${GCJFLAGS:-${CFLAGS}}
-}
-
-toolchain_src_compile() {
-	gcc_do_filter_flags
-	einfo "CFLAGS=\"${CFLAGS}\""
-	einfo "CXXFLAGS=\"${CXXFLAGS}\""
-
-	# Force internal zip based jar script to avoid random
-	# issues with 3rd party jar implementations.  #384291
-	export JAR=no
-
-	# For hardened gcc 4.3 piepatchset to build the hardened specs
-	# file (build.specs) to use when building gcc.
-	if ! tc_version_is_at_least 4.4 && want_minispecs ; then
-		setup_minispecs_gcc_build_specs
-	fi
-	# Build in a separate build tree
-	mkdir -p "${WORKDIR}"/build
-	pushd "${WORKDIR}"/build > /dev/null
-
-	einfo "Configuring ${PN} ..."
-	gcc_do_configure
-
-	touch "${S}"/gcc/c-gperf.h
-
-	# Do not make manpages if we do not have perl ...
-	[[ ! -x /usr/bin/perl ]] \
-		&& find "${WORKDIR}"/build -name '*.[17]' | xargs touch
-
-	einfo "Compiling ${PN} ..."
-	gcc_do_make ${GCC_MAKE_TARGET}
-
-	popd > /dev/null
-}
+#---->> src_test <<----
 
 toolchain_src_test() {
 	if use regression-test ; then
@@ -1532,6 +1442,8 @@ toolchain_src_test() {
 		emake -k check
 	fi
 }
+
+#---->> src_install <<----
 
 toolchain_src_install() {
 	cd "${WORKDIR}"/build
@@ -1692,39 +1604,6 @@ toolchain_src_install() {
 	fi
 }
 
-gcc_slot_java() {
-	local x
-
-	# Move Java headers to compiler-specific dir
-	for x in "${D}"${PREFIX}/include/gc*.h "${D}"${PREFIX}/include/j*.h ; do
-		[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}/include/
-	done
-	for x in gcj gnu java javax org ; do
-		if [[ -d ${D}${PREFIX}/include/${x} ]] ; then
-			dodir /${LIBPATH}/include/${x}
-			mv -f "${D}"${PREFIX}/include/${x}/* "${D}"${LIBPATH}/include/${x}/
-			rm -rf "${D}"${PREFIX}/include/${x}
-		fi
-	done
-
-	if [[ -d ${D}${PREFIX}/lib/security ]] || [[ -d ${D}${PREFIX}/$(get_libdir)/security ]] ; then
-		dodir /${LIBPATH}/security
-		mv -f "${D}"${PREFIX}/lib*/security/* "${D}"${LIBPATH}/security
-		rm -rf "${D}"${PREFIX}/lib*/security
-	fi
-
-	# Move random gcj files to compiler-specific directories
-	for x in libgcj.spec logging.properties ; do
-		x="${D}${PREFIX}/lib/${x}"
-		[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}/
-	done
-
-	# Rename jar because it could clash with Kaffe's jar if this gcc is
-	# primary compiler (aka don't have the -<version> extension)
-	cd "${D}"${BINPATH}
-	[[ -f jar ]] && mv -f jar gcj-jar
-}
-
 # Move around the libs to the right location.  For some reason,
 # when installing gcc, it dumps internal libraries into /usr/lib
 # instead of the private gcc lib path
@@ -1779,121 +1658,232 @@ gcc_movelibs() {
 	done
 	find "${D}" -type d | xargs rmdir >& /dev/null
 }
-#----<< src_* >>----
 
-#---->> unorganized crap in need of refactoring follows
+# make sure the libtool archives have libdir set to where they actually
+# -are-, and not where they -used- to be.  also, any dependencies we have
+# on our own .la files need to be updated.
+fix_libtool_libdir_paths() {
+	pushd "${D}" >/dev/null
 
-# gcc_quick_unpack will unpack the gcc tarball and patches in a way that is
-# consistant with the behavior of get_gcc_src_uri. The only patch it applies
-# itself is the branch update if present.
-#
-# Travis Tilley <lv@gentoo.org> (03 Sep 2004)
-#
-gcc_quick_unpack() {
-	pushd "${WORKDIR}" > /dev/null
-	export PATCH_GCC_VER=${PATCH_GCC_VER:-${GCC_RELEASE_VER}}
-	export UCLIBC_GCC_VER=${UCLIBC_GCC_VER:-${PATCH_GCC_VER}}
-	export PIE_GCC_VER=${PIE_GCC_VER:-${GCC_RELEASE_VER}}
-	export HTB_GCC_VER=${HTB_GCC_VER:-${GCC_RELEASE_VER}}
-	export SPECS_GCC_VER=${SPECS_GCC_VER:-${GCC_RELEASE_VER}}
+	pushd "./${1}" >/dev/null
+	local dir="${PWD#${D%/}}"
+	local allarchives=$(echo *.la)
+	allarchives="\(${allarchives// /\\|}\)"
+	popd >/dev/null
 
-	if [[ -n ${GCC_A_FAKEIT} ]] ; then
-		unpack ${GCC_A_FAKEIT}
-	elif [[ -n ${PRERELEASE} ]] ; then
-		unpack gcc-${PRERELEASE}.tar.bz2
-	elif [[ -n ${SNAPSHOT} ]] ; then
-		unpack gcc-${SNAPSHOT}.tar.bz2
-	elif [[ ${PV} != *9999* ]] ; then
-		unpack gcc-${GCC_RELEASE_VER}.tar.bz2
-		# We want branch updates to be against a release tarball
-		if [[ -n ${BRANCH_UPDATE} ]] ; then
-			pushd "${S}" > /dev/null
-			epatch "${DISTDIR}"/gcc-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
-			popd > /dev/null
-		fi
-	fi
+	sed -i \
+		-e "/^libdir=/s:=.*:='${dir}':" \
+		./${dir}/*.la
+	sed -i \
+		-e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${LIBPATH}/\1:g" \
+		$(find ./${PREFIX}/lib* -maxdepth 3 -name '*.la') \
+		./${dir}/*.la
 
-	if [[ -n ${D_VER} ]] && use d ; then
-		pushd "${S}"/gcc > /dev/null
-		unpack gdc-${D_VER}-src.tar.bz2
-		cd ..
-		ebegin "Adding support for the D language"
-		./gcc/d/setup-gcc.sh >& "${T}"/dgcc.log
-		if ! eend $? ; then
-			eerror "The D gcc package failed to apply"
-			eerror "Please include this log file when posting a bug report:"
-			eerror "  ${T}/dgcc.log"
-			die "failed to include the D language"
-		fi
-		popd > /dev/null
-	fi
-
-	[[ -n ${PATCH_VER} ]] && \
-		unpack gcc-${PATCH_GCC_VER}-patches-${PATCH_VER}.tar.bz2
-
-	[[ -n ${UCLIBC_VER} ]] && \
-		unpack gcc-${UCLIBC_GCC_VER}-uclibc-patches-${UCLIBC_VER}.tar.bz2
-
-	if want_pie ; then
-		if [[ -n ${PIE_CORE} ]] ; then
-			unpack ${PIE_CORE}
-		else
-			unpack gcc-${PIE_GCC_VER}-piepatches-v${PIE_VER}.tar.bz2
-		fi
-		[[ -n ${SPECS_VER} ]] && \
-			unpack gcc-${SPECS_GCC_VER}-specs-${SPECS_VER}.tar.bz2
-	fi
-
-	use_if_iuse boundschecking && unpack "bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch.bz2"
-
-	popd > /dev/null
+	popd >/dev/null
 }
 
-do_gcc_HTB_patches() {
-	use_if_iuse boundschecking || return 0
+create_gcc_env_entry() {
+	dodir /etc/env.d/gcc
+	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}"
 
-	# modify the bounds checking patch with a regression patch
-	epatch "${WORKDIR}/bounds-checking-gcc-${HTB_GCC_VER}-${HTB_VER}.patch"
-	BRANDING_GCC_PKGVERSION="${BRANDING_GCC_PKGVERSION}, HTB-${HTB_GCC_VER}-${HTB_VER}"
-}
-
-# do various updates to PIE logic
-do_gcc_PIE_patches() {
-	want_pie || return 0
-
-	use vanilla && return 0
-
-	if tc_version_is_at_least 4.3.2 ; then
-		guess_patch_type_in_dir "${WORKDIR}"/piepatch/
-		EPATCH_MULTI_MSG="Applying pie patches ..." \
-		epatch "${WORKDIR}"/piepatch/
+	local gcc_specs_file
+	local gcc_envd_file="${D}${gcc_envd_base}"
+	if [[ -z $1 ]] ; then
+		# I'm leaving the following commented out to remind me that it
+		# was an insanely -bad- idea. Stuff broke. GCC_SPECS isnt unset
+		# on chroot or in non-toolchain.eclass gcc ebuilds!
+		#gcc_specs_file="${LIBPATH}/specs"
+		gcc_specs_file=""
 	else
-		guess_patch_type_in_dir "${WORKDIR}"/piepatch/upstream
-
-		# corrects startfile/endfile selection and shared/static/pie flag usage
-		EPATCH_MULTI_MSG="Applying upstream pie patches ..." \
-		epatch "${WORKDIR}"/piepatch/upstream
-		# adds non-default pie support (rs6000)
-		EPATCH_MULTI_MSG="Applying non-default pie patches ..." \
-		epatch "${WORKDIR}"/piepatch/nondef
-		# adds default pie support (rs6000 too) if DEFAULT_PIE[_SSP] is defined
-		EPATCH_MULTI_MSG="Applying default pie patches ..." \
-		epatch "${WORKDIR}"/piepatch/def
+		gcc_envd_file+="-$1"
+		gcc_specs_file="${LIBPATH}/$1.specs"
 	fi
 
-	# we want to be able to control the pie patch logic via something other
-	# than ALL_CFLAGS...
-	sed -e '/^ALL_CFLAGS/iHARD_CFLAGS = ' \
-		-e 's|^ALL_CFLAGS = |ALL_CFLAGS = $(HARD_CFLAGS) |' \
-		-i "${S}"/gcc/Makefile.in
-	# Need to add HARD_CFLAGS to ALL_CXXFLAGS on >= 4.7
-	if tc_version_is_at_least 4.7 ; then
-		sed -e '/^ALL_CXXFLAGS/iHARD_CFLAGS = ' \
-                        -e 's|^ALL_CXXFLAGS = |ALL_CXXFLAGS = $(HARD_CFLAGS) |' \
-                        -i "${S}"/gcc/Makefile.in
+	# We want to list the default ABI's LIBPATH first so libtool
+	# searches that directory first.  This is a temporary
+	# workaround for libtool being stupid and using .la's from
+	# conflicting ABIs by using the first one in the search path
+	local ldpaths mosdirs
+	if tc_version_is_at_least 3.2 ; then
+		local mdir mosdir abi ldpath
+		for abi in $(get_all_abis TARGET) ; do
+			mdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) --print-multi-directory)
+			ldpath=${LIBPATH}
+			[[ ${mdir} != "." ]] && ldpath+="/${mdir}"
+			ldpaths="${ldpath}${ldpaths:+:${ldpaths}}"
+
+			mosdir=$($(XGCC) $(get_abi_CFLAGS ${abi}) -print-multi-os-directory)
+			mosdirs="${mosdir}${mosdirs:+:${mosdirs}}"
+		done
+	else
+		# Older gcc's didn't do multilib, so logic is simple.
+		ldpaths=${LIBPATH}
 	fi
 
-	BRANDING_GCC_PKGVERSION="${BRANDING_GCC_PKGVERSION}, pie-${PIE_VER}"
+	cat <<-EOF > ${gcc_envd_file}
+	PATH="${BINPATH}"
+	ROOTPATH="${BINPATH}"
+	GCC_PATH="${BINPATH}"
+	LDPATH="${ldpaths}"
+	MANPATH="${DATAPATH}/man"
+	INFOPATH="${DATAPATH}/info"
+	STDCXX_INCDIR="${STDCXX_INCDIR##*/}"
+	CTARGET="${CTARGET}"
+	GCC_SPECS="${gcc_specs_file}"
+	MULTIOSDIRS="${mosdirs}"
+	EOF
+}
+
+copy_minispecs_gcc_specs() {
+	# setup the hardenedno* specs files and the vanilla specs file.
+	if hardened_gcc_works ; then
+		create_gcc_env_entry hardenednopiessp
+	fi
+	if hardened_gcc_works pie ; then
+		create_gcc_env_entry hardenednopie
+	fi
+	if hardened_gcc_works ssp ; then
+		create_gcc_env_entry hardenednossp
+	fi
+	create_gcc_env_entry vanilla
+	insinto ${LIBPATH}
+	doins "${WORKDIR}"/specs/*.specs || die "failed to install specs"
+	# Build system specs file which, if it exists, must be a complete set of
+	# specs as it completely and unconditionally overrides the builtin specs.
+	if ! tc_version_is_at_least 4.4 ; then
+		$(XGCC) -dumpspecs > "${WORKDIR}"/specs/specs
+		cat "${WORKDIR}"/build.specs >> "${WORKDIR}"/specs/specs
+		doins "${WORKDIR}"/specs/specs || die "failed to install the specs file"
+	fi
+}
+
+gcc_slot_java() {
+	local x
+
+	# Move Java headers to compiler-specific dir
+	for x in "${D}"${PREFIX}/include/gc*.h "${D}"${PREFIX}/include/j*.h ; do
+		[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}/include/
+	done
+	for x in gcj gnu java javax org ; do
+		if [[ -d ${D}${PREFIX}/include/${x} ]] ; then
+			dodir /${LIBPATH}/include/${x}
+			mv -f "${D}"${PREFIX}/include/${x}/* "${D}"${LIBPATH}/include/${x}/
+			rm -rf "${D}"${PREFIX}/include/${x}
+		fi
+	done
+
+	if [[ -d ${D}${PREFIX}/lib/security ]] || [[ -d ${D}${PREFIX}/$(get_libdir)/security ]] ; then
+		dodir /${LIBPATH}/security
+		mv -f "${D}"${PREFIX}/lib*/security/* "${D}"${LIBPATH}/security
+		rm -rf "${D}"${PREFIX}/lib*/security
+	fi
+
+	# Move random gcj files to compiler-specific directories
+	for x in libgcj.spec logging.properties ; do
+		x="${D}${PREFIX}/lib/${x}"
+		[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}/
+	done
+
+	# Rename jar because it could clash with Kaffe's jar if this gcc is
+	# primary compiler (aka don't have the -<version> extension)
+	cd "${D}"${BINPATH}
+	[[ -f jar ]] && mv -f jar gcj-jar
+}
+
+#---->> pkg_post* <<----
+
+toolchain_pkg_postinst() {
+	do_gcc_config
+
+	if ! is_crosscompile ; then
+		echo
+		ewarn "If you have issues with packages unable to locate libstdc++.la,"
+		ewarn "then try running 'fix_libtool_files.sh' on the old gcc versions."
+		echo
+		ewarn "You might want to review the GCC upgrade guide when moving between"
+		ewarn "major versions (like 4.2 to 4.3):"
+		ewarn "http://www.gentoo.org/doc/en/gcc-upgrading.xml"
+		echo
+
+		# Clean up old paths
+		rm -f "${ROOT}"/*/rcscripts/awk/fixlafiles.awk "${ROOT}"/sbin/fix_libtool_files.sh
+		rmdir "${ROOT}"/*/rcscripts{/awk,} 2>/dev/null
+
+		mkdir -p "${ROOT}"/usr/{share/gcc-data,sbin,bin}
+		cp "${ROOT}/${DATAPATH}"/fixlafiles.awk "${ROOT}"/usr/share/gcc-data/ || die
+		cp "${ROOT}/${DATAPATH}"/fix_libtool_files.sh "${ROOT}"/usr/sbin/ || die
+
+		# Since these aren't critical files and portage sucks with
+		# handling of binpkgs, don't require these to be found
+		cp "${ROOT}/${DATAPATH}"/c{89,99} "${ROOT}"/usr/bin/ 2>/dev/null
+	fi
+
+	if use regression-test ; then
+		elog "Testsuite results have been installed into /usr/share/doc/${PF}/testsuite"
+		echo
+	fi
+}
+
+toolchain_pkg_postrm() {
+	# to make our lives easier (and saner), we do the fix_libtool stuff here.
+	# rather than checking SLOT's and trying in upgrade paths, we just see if
+	# the common libstdc++.la exists in the ${LIBPATH} of the gcc that we are
+	# unmerging.  if it does, that means this was a simple re-emerge.
+
+	# clean up the cruft left behind by cross-compilers
+	if is_crosscompile ; then
+		if [[ -z $(ls "${ROOT}"/etc/env.d/gcc/${CTARGET}* 2>/dev/null) ]] ; then
+			rm -f "${ROOT}"/etc/env.d/gcc/config-${CTARGET}
+			rm -f "${ROOT}"/etc/env.d/??gcc-${CTARGET}
+			rm -f "${ROOT}"/usr/bin/${CTARGET}-{gcc,{g,c}++}{,32,64}
+		fi
+		return 0
+	fi
+
+	# ROOT isnt handled by the script
+	[[ ${ROOT} != "/" ]] && return 0
+
+	if [[ ! -e ${LIBPATH}/libstdc++.so ]] ; then
+		# make sure the profile is sane during same-slot upgrade #289403
+		do_gcc_config
+
+		einfo "Running 'fix_libtool_files.sh ${GCC_RELEASE_VER}'"
+		/usr/sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}
+		if [[ -n ${BRANCH_UPDATE} ]] ; then
+			einfo "Running 'fix_libtool_files.sh ${GCC_RELEASE_VER}-${BRANCH_UPDATE}'"
+			/usr/sbin/fix_libtool_files.sh ${GCC_RELEASE_VER}-${BRANCH_UPDATE}
+		fi
+	fi
+
+	return 0
+}
+
+do_gcc_config() {
+	if ! should_we_gcc_config ; then
+		env -i ROOT="${ROOT}" gcc-config --use-old --force
+		return 0
+	fi
+
+	local current_gcc_config="" current_specs="" use_specs=""
+
+	current_gcc_config=$(env -i ROOT="${ROOT}" gcc-config -c ${CTARGET} 2>/dev/null)
+	if [[ -n ${current_gcc_config} ]] ; then
+		# figure out which specs-specific config is active
+		current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}')
+		[[ -n ${current_specs} ]] && use_specs=-${current_specs}
+	fi
+	if [[ -n ${use_specs} ]] && \
+	   [[ ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ]]
+	then
+		ewarn "The currently selected specs-specific gcc config,"
+		ewarn "${current_specs}, doesn't exist anymore. This is usually"
+		ewarn "due to enabling/disabling hardened or switching to a version"
+		ewarn "of gcc that doesnt create multiple specs files. The default"
+		ewarn "config will be used, and the previous preference forgotten."
+		use_specs=""
+	fi
+
+	gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
 }
 
 should_we_gcc_config() {
@@ -1938,129 +1928,22 @@ should_we_gcc_config() {
 	fi
 }
 
-do_gcc_config() {
-	if ! should_we_gcc_config ; then
-		env -i ROOT="${ROOT}" gcc-config --use-old --force
-		return 0
-	fi
+#---->> support and misc functions <<----
 
-	local current_gcc_config="" current_specs="" use_specs=""
-
-	current_gcc_config=$(env -i ROOT="${ROOT}" gcc-config -c ${CTARGET} 2>/dev/null)
-	if [[ -n ${current_gcc_config} ]] ; then
-		# figure out which specs-specific config is active
-		current_specs=$(gcc-config -S ${current_gcc_config} | awk '{print $3}')
-		[[ -n ${current_specs} ]] && use_specs=-${current_specs}
-	fi
-	if [[ -n ${use_specs} ]] && \
-	   [[ ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${GCC_CONFIG_VER}${use_specs} ]]
-	then
-		ewarn "The currently selected specs-specific gcc config,"
-		ewarn "${current_specs}, doesn't exist anymore. This is usually"
-		ewarn "due to enabling/disabling hardened or switching to a version"
-		ewarn "of gcc that doesnt create multiple specs files. The default"
-		ewarn "config will be used, and the previous preference forgotten."
-		use_specs=""
-	fi
-
-	gcc-config ${CTARGET}-${GCC_CONFIG_VER}${use_specs}
-}
-
-# This function allows us to gentoo-ize GCCs version number and bugzilla
-# URL without needing to use patches.
-gcc_version_patch() {
-	# gcc-4.3+ has configure flags (whoo!)
-	tc_version_is_at_least 4.3 && return 0
-
-	local version_string=${GCC_CONFIG_VER}
-	[[ -n ${BRANCH_UPDATE} ]] && version_string+=" ${BRANCH_UPDATE}"
-
-	einfo "patching gcc version: ${version_string} (${BRANDING_GCC_PKGVERSION})"
-
-	local gcc_sed=( -e 's:gcc\.gnu\.org/bugs\.html:bugs\.gentoo\.org/:' )
-	if grep -qs VERSUFFIX "${S}"/gcc/version.c ; then
-		gcc_sed+=( -e "/VERSUFFIX \"\"/s:\"\":\" (${BRANDING_GCC_PKGVERSION})\":" )
-	else
-		version_string="${version_string} (${BRANDING_GCC_PKGVERSION})"
-		gcc_sed+=( -e "/const char version_string\[\] = /s:= \".*\":= \"${version_string}\":" )
-	fi
-	sed -i "${gcc_sed[@]}" "${S}"/gcc/version.c || die
-}
-
-# This is a historical wart.  The original Gentoo/amd64 port used:
-#    lib32 - 32bit binaries (x86)
-#    lib64 - 64bit binaries (x86_64)
-#    lib   - "native" binaries (a symlink to lib64)
-# Most other distros use the logic (including mainline gcc):
-#    lib   - 32bit binaries (x86)
-#    lib64 - 64bit binaries (x86_64)
-# Over time, Gentoo is migrating to the latter form.
+# This is to make sure we don't accidentally try to enable support for a
+# language that doesnt exist. GCC 3.4 supports f77, while 4.0 supports f95, etc.
 #
-# Unfortunately, due to distros picking the lib32 behavior, newer gcc
-# versions will dynamically detect whether to use lib or lib32 for its
-# 32bit multilib.  So, to keep the automagic from getting things wrong
-# while people are transitioning from the old style to the new style,
-# we always set the MULTILIB_OSDIRNAMES var for relevant targets.
-setup_multilib_osdirnames() {
-	is_multilib || return 0
-
-	local config
-	local libdirs="../lib64 ../lib32"
-
-	# this only makes sense for some Linux targets
-	case ${CTARGET} in
-	x86_64*-linux*)    config="i386" ;;
-	powerpc64*-linux*) config="rs6000" ;;
-	sparc64*-linux*)   config="sparc" ;;
-	s390x*-linux*)     config="s390" ;;
-	*)	               return 0 ;;
-	esac
-	config+="/t-linux64"
-
-	local sed_args=()
-	if tc_version_is_at_least 4.6 ; then
-		sed_args+=( -e 's:$[(]call if_multiarch[^)]*[)]::g' )
-	fi
-	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
-		einfo "updating multilib directories to be: ${libdirs}"
-		if tc_version_is_at_least 4.6.4 || tc_version_is_at_least 4.7 ; then
-			sed_args+=( -e '/^MULTILIB_OSDIRNAMES.*lib32/s:[$][(]if.*):../lib32:' )
-		else
-			sed_args+=( -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:" )
-		fi
-	else
-		einfo "using upstream multilib; disabling lib32 autodetection"
-		sed_args+=( -r -e 's:[$][(]if.*,(.*)[)]:\1:' )
-	fi
-	sed -i "${sed_args[@]}" "${S}"/gcc/config/${config} || die
+# Also add a hook so special ebuilds (kgcc64) can control which languages
+# exactly get enabled
+gcc-lang-supported() {
+	grep ^language=\"${1}\" "${S}"/gcc/*/config-lang.in > /dev/null || return 1
+	[[ -z ${TOOLCHAIN_ALLOWED_LANGS} ]] && return 0
+	has $1 ${TOOLCHAIN_ALLOWED_LANGS}
 }
 
-# make sure the libtool archives have libdir set to where they actually
-# -are-, and not where they -used- to be.  also, any dependencies we have
-# on our own .la files need to be updated.
-fix_libtool_libdir_paths() {
-	pushd "${D}" >/dev/null
-
-	pushd "./${1}" >/dev/null
-	local dir="${PWD#${D%/}}"
-	local allarchives=$(echo *.la)
-	allarchives="\(${allarchives// /\\|}\)"
-	popd >/dev/null
-
-	sed -i \
-		-e "/^libdir=/s:=.*:='${dir}':" \
-		./${dir}/*.la
-	sed -i \
-		-e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${LIBPATH}/\1:g" \
-		$(find ./${PREFIX}/lib* -maxdepth 3 -name '*.la') \
-		./${dir}/*.la
-
-	popd >/dev/null
-}
-
-is_multilib() {
-	tc_version_is_at_least 3 || return 1
-	use multilib
+is_ada() {
+	gcc-lang-supported ada || return 1
+	use ada
 }
 
 is_cxx() {
@@ -2098,6 +1981,11 @@ is_go() {
 	use cxx && use_if_iuse go
 }
 
+is_multilib() {
+	tc_version_is_at_least 3 || return 1
+	use multilib
+}
+
 is_objc() {
 	gcc-lang-supported objc || return 1
 	use_if_iuse objc
@@ -2108,15 +1996,114 @@ is_objcxx() {
 	use cxx && use_if_iuse objc++
 }
 
-is_ada() {
-	gcc-lang-supported ada || return 1
-	use ada
-}
-
 is_treelang() {
 	use_if_iuse boundschecking && return 1 #260532
 	is_crosscompile && return 1 #199924
 	gcc-lang-supported treelang || return 1
 	#use treelang
 	return 0
+}
+
+# Grab a variable from the build system (taken from linux-info.eclass)
+get_make_var() {
+	local var=$1 makefile=${2:-${WORKDIR}/build/Makefile}
+	echo -e "e:\\n\\t@echo \$(${var})\\ninclude ${makefile}" | \
+		r=${makefile%/*} emake --no-print-directory -s -f - 2>/dev/null
+}
+
+XGCC() { get_make_var GCC_FOR_TARGET ; }
+
+# The gentoo piessp patches allow for 3 configurations:
+# 1) PIE+SSP by default
+# 2) PIE by default
+# 3) SSP by default
+hardened_gcc_works() {
+	if [[ $1 == "pie" ]] ; then
+		# $gcc_cv_ld_pie is unreliable as it simply take the output of
+		# `ld --help | grep -- -pie`, that reports the option in all cases, also if
+		# the loader doesn't actually load the resulting executables.
+		# To avoid breakage, blacklist FreeBSD here at least
+		[[ ${CTARGET} == *-freebsd* ]] && return 1
+
+		want_pie || return 1
+		use_if_iuse nopie && return 1
+		hardened_gcc_is_stable pie
+		return $?
+	elif [[ $1 == "ssp" ]] ; then
+		[[ -n ${SPECS_VER} ]] || return 1
+		use_if_iuse nossp && return 1
+		hardened_gcc_is_stable ssp
+		return $?
+	else
+		# laziness ;)
+		hardened_gcc_works pie || return 1
+		hardened_gcc_works ssp || return 1
+		return 0
+	fi
+}
+
+hardened_gcc_is_stable() {
+	local tocheck
+	if [[ $1 == "pie" ]] ; then
+		if [[ ${CTARGET} == *-uclibc* ]] ; then
+			tocheck=${PIE_UCLIBC_STABLE}
+		else
+			tocheck=${PIE_GLIBC_STABLE}
+		fi
+	elif [[ $1 == "ssp" ]] ; then
+		if [[ ${CTARGET} == *-uclibc* ]] ; then
+			tocheck=${SSP_UCLIBC_STABLE}
+		else
+			tocheck=${SSP_STABLE}
+		fi
+	else
+		die "hardened_gcc_stable needs to be called with pie or ssp"
+	fi
+
+	has $(tc-arch) ${tocheck} && return 0
+	return 1
+}
+
+want_minispecs() {
+	if tc_version_is_at_least 4.3.2 && use hardened ; then
+		if ! want_pie ; then
+			ewarn "PIE_VER or SPECS_VER is not defined in the GCC ebuild."
+		elif use vanilla ; then
+			ewarn "You will not get hardened features if you have the vanilla USE-flag."
+		elif use nopie && use nossp ; then
+			ewarn "You will not get hardened features if you have the nopie and nossp USE-flag."
+		elif ! hardened_gcc_works ; then
+			ewarn "Your $(tc-arch) arch is not supported."
+		else
+			return 0
+		fi
+		ewarn "Hope you know what you are doing. Hardened will not work."
+		return 0
+	fi
+	return 1
+}
+
+want_pie() {
+	! use hardened && [[ -n ${PIE_VER} ]] && use nopie && return 1
+	[[ -n ${PIE_VER} ]] && [[ -n ${SPECS_VER} ]] && return 0
+	tc_version_is_at_least 4.3.2 && return 1
+	[[ -z ${PIE_VER} ]] && return 1
+	use !nopie && return 0
+	return 1
+}
+
+has toolchain_death_notice ${EBUILD_DEATH_HOOKS} || EBUILD_DEATH_HOOKS+=" toolchain_death_notice"
+toolchain_death_notice() {
+	if [[ -e "${WORKDIR}"/build ]] ; then 
+		pushd "${WORKDIR}"/build >/dev/null
+		(echo '' | $(tc-getCC ${CTARGET}) ${CFLAGS} -v -E - 2>&1) > gccinfo.log
+		[[ -e "${T}"/build.log ]] && cp "${T}"/build.log .
+		tar jcf "${WORKDIR}"/gcc-build-logs.tar.bz2 \
+			gccinfo.log build.log $(find -name config.log)
+		rm gccinfo.log build.log
+		eerror
+		eerror "Please include ${WORKDIR}/gcc-build-logs.tar.bz2 in your bug report."
+		eerror
+		popd >/dev/null
+	fi
 }
