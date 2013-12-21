@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r1.ebuild,v 1.1 2013/12/13 03:11:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r1.ebuild,v 1.2 2013/12/21 20:45:37 flameeyes Exp $
 
 EAPI="5"
 
@@ -378,7 +378,7 @@ src_configure() {
 	myconf="${myconf} $(use_enable tcpd wrappers)"
 
 	local ssl_lib="no"
-	if use ssl || ( use ! minimal && use samba ) ; then
+	if use ssl || ( ! use minimal && use samba ) ; then
 		ssl_lib="openssl"
 		use gnutls && ssl_lib="gnutls"
 	fi
