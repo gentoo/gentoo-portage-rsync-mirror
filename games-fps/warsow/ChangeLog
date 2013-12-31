@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.55 2013/11/09 12:44:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.56 2013/12/31 12:38:40 hasufell Exp $
+
+  31 Dec 2013; Julian Ospald <hasufell@gentoo.org> warsow-1.03.ebuild:
+  remove angelscript useflag since disabling it breaks runtime
 
 *warsow-1.03 (09 Nov 2013)
 

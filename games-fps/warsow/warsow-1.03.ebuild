@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.03.ebuild,v 1.1 2013/11/09 12:44:30 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-1.03.ebuild,v 1.2 2013/12/31 12:38:40 hasufell Exp $
 
 EAPI=5
 inherit eutils check-reqs gnome2-utils flag-o-matic games
@@ -23,7 +23,7 @@ SRC_URI="http://funpark.warsow-esport.net/~warsow/${BASE_DATA_PV}/${BASE_DATA_P}
 LICENSE="GPL-2 ZLIB warsow"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+angelscript debug dedicated irc openal server"
+IUSE="debug dedicated irc openal server"
 
 RDEPEND=">=dev-libs/libRocket-1.2.1_p20130110
 	media-libs/freetype
@@ -100,8 +100,7 @@ src_prepare() {
 src_compile() {
 	yesno() { use ${1} && echo YES || echo NO ; }
 
-	use angelscript &&
-		emake -C ../libsrcs/angelscript/angelSVN/sdk/angelscript/projects/gnuc
+	emake -C ../libsrcs/angelscript/angelSVN/sdk/angelscript/projects/gnuc
 
 	local arch
 	if use amd64 ; then
@@ -138,7 +137,7 @@ src_compile() {
 		SYSTEM_LIBS=YES \
 		BASE_ARCH=${arch} \
 		BINDIR=lib \
-		BUILD_ANGELWRAP=$(yesno angelscript) \
+		BUILD_ANGELWRAP=YES \
 		DEBUG_BUILD=$(yesno debug) \
 		${myconf[@]}
 }
