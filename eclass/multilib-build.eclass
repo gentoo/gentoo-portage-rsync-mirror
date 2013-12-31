@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.24 2013/12/28 18:23:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.25 2013/12/31 18:31:47 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -371,9 +371,8 @@ multilib_install_wrappers() {
 # Determine whether the currently built ABI is the profile native.
 # Return true status (0) if that is true, otherwise false (1).
 #
-# This is often useful for configure calls when some of the options are
-# supposed to be disabled for multilib ABIs (like those used for
-# executables only).
+# This function is not intended to be used directly. Please use
+# multilib_build_binaries instead.
 multilib_is_native_abi() {
 	debug-print-function ${FUNCNAME} "${@}"
 
@@ -384,14 +383,14 @@ multilib_is_native_abi() {
 
 # @FUNCTION: multilib_build_binaries
 # @DESCRIPTION:
-# Determine whether to build binaries for the current build ABI.
-# Returns true status (0) if the current built ABI is the profile
-# native or COMPLETE_MULTILIB variable is set to yes, otherwise
+# Determine whether to build binaries for the currently build ABI.
+# Returns true status (0) if the currently built ABI is the profile
+# native or COMPLETE_MULTILIB variable is set to 'yes', otherwise
 # false (1).
 #
-# The COMPLETE_MULTILIB variable can be set by users or profiles
-# when they want to build binaries for none-default ABI so e.g.
-# 32bit binaries on amd64.
+# This is often useful for configure calls when some of the options are
+# supposed to be disabled for multilib ABIs (like those used for
+# executables only).
 multilib_build_binaries() {
 	debug-print-function ${FUNCNAME} "${@}"
 
