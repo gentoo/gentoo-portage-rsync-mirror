@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.18 2013/12/18 14:06:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.23.ebuild,v 1.19 2013/12/31 16:01:26 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic linux-mod multilib nvidia-driver portability unpacker user versionator
@@ -315,10 +315,9 @@ src_install() {
 		fi
 
 		# Add the aliases
-		[ -f "${FILESDIR}/nvidia-169.07" ] || die "nvidia missing in FILESDIR"
 		sed -e 's:PACKAGE:'${PF}':g' \
 			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-169.07 > \
-			"${WORKDIR}"/nvidia
+			"${WORKDIR}"/nvidia || die
 		insinto /etc/modprobe.d
 		newins "${WORKDIR}"/nvidia nvidia.conf
 	elif use x86-fbsd; then

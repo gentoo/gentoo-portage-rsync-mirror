@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-319.76.ebuild,v 1.3 2013/12/31 00:39:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-319.76.ebuild,v 1.4 2013/12/31 16:01:26 jer Exp $
 
 EAPI=5
 
@@ -248,10 +248,9 @@ src_install() {
 		fi
 
 		# Add the aliases
-		[ -f "${FILESDIR}/nvidia-169.07" ] || die "nvidia missing in FILESDIR"
 		sed -e 's:PACKAGE:'${PF}':g' \
 			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-169.07 > \
-			"${WORKDIR}"/nvidia
+			"${WORKDIR}"/nvidia || die
 		insinto /etc/modprobe.d
 		newins "${WORKDIR}"/nvidia nvidia.conf
 

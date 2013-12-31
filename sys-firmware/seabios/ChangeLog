@@ -1,6 +1,9 @@
 # ChangeLog for sys-firmware/seabios
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.25 2013/12/31 15:30:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.26 2013/12/31 15:48:22 floppym Exp $
+
+  31 Dec 2013; Mike Gilbert <floppym@gentoo.org> seabios-1.7.3.ebuild:
+  Call python-any-r1_pkg_setup to avoid breaking binpkgs.
 
   31 Dec 2013; Mike Gilbert <floppym@gentoo.org> seabios-1.7.3.ebuild:
   Don't call python_setup if USE=binary, bug 496590.
