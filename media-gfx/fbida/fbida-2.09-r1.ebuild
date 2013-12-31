@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09.ebuild,v 1.13 2013/12/31 17:23:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r1.ebuild,v 1.1 2013/12/31 17:23:48 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -11,12 +11,12 @@ SRC_URI="http://www.kraxel.org/releases/${PN}/${P}.tar.gz
 	mirror://gentoo/ida.png.bz2" #370901
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ppc ppc64 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="curl fbcon gif imagemagick lirc pdf png scanner tiff X"
 
 RDEPEND="
 	curl? ( net-misc/curl )
-	gif? ( media-libs/giflib )
+	gif? ( >media-libs/giflib-4.2 )
 	lirc? ( app-misc/lirc )
 	pdf? ( app-text/ghostscript-gpl media-libs/tiff )
 	png? ( media-libs/libpng )
@@ -61,6 +61,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/ida-desktop.patch
 	epatch "${FILESDIR}"/${PN}-2.08-posix-make.patch
+	epatch "${FILESDIR}"/${P}-giflib-4.2.patch
 }
 
 src_configure() {

@@ -1,0 +1,75 @@
+
+# HG changeset patch
+# User Mike Hommey <mh+mozilla@glandium.org>
+# Date 1386020061 -32400
+# Node ID d6f47a333fe1827bbbfdbce7b107d07b7af46bd3
+# Parent  f047d2032ad765859e40be7dc6197957207f1f0e
+Bug 944454 - Wrap non-prefixed freetype headers from newer freetype versions. r=ted
+
+diff --git a/config/system-headers b/config/system-headers
+--- a/config/system-headers
++++ b/config/system-headers
+@@ -408,16 +408,29 @@ freetype/ftoutln.h
+ freetype/ttnameid.h
+ freetype/tttables.h
+ freetype/t1tables.h
+ freetype/ftlcdfil.h
+ freetype/ftsizes.h
+ freetype/ftadvanc.h
+ freetype/ftbitmap.h
+ freetype/ftxf86.h
++freetype.h
++ftcache.h
++ftglyph.h
++ftsynth.h
++ftoutln.h
++ttnameid.h
++tttables.h
++t1tables.h
++ftlcdfil.h
++ftsizes.h
++ftadvanc.h
++ftbitmap.h
++ftxf86.h
+ fribidi/fribidi.h
+ FSp_fopen.h
+ fstream
+ fstream.h
+ ft2build.h
+ fts.h
+ gconf/gconf-client.h
+ Gdiplus.h
+diff --git a/js/src/config/system-headers b/js/src/config/system-headers
+--- a/js/src/config/system-headers
++++ b/js/src/config/system-headers
+@@ -408,16 +408,29 @@ freetype/ftoutln.h
+ freetype/ttnameid.h
+ freetype/tttables.h
+ freetype/t1tables.h
+ freetype/ftlcdfil.h
+ freetype/ftsizes.h
+ freetype/ftadvanc.h
+ freetype/ftbitmap.h
+ freetype/ftxf86.h
++freetype.h
++ftcache.h
++ftglyph.h
++ftsynth.h
++ftoutln.h
++ttnameid.h
++tttables.h
++t1tables.h
++ftlcdfil.h
++ftsizes.h
++ftadvanc.h
++ftbitmap.h
++ftxf86.h
+ fribidi/fribidi.h
+ FSp_fopen.h
+ fstream
+ fstream.h
+ ft2build.h
+ fts.h
+ gconf/gconf-client.h
+ Gdiplus.h
+

@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15292 2013/12/31 08:47:48 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15293 2013/12/31 17:20:15 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tom Wijsman <TomWij@gentoo.org> (31 Dec 2013)
+# [QA] Mask LIVEVCS.unmasked versions of docker, newer versions are available.
+<=app-emulation/docker-0.7.0
 
 # Sergey Popov <pinkbyte@gentoo.org> (31 Dec 2013)
 # Security mask of vulnerable versions, wrt bug #455464

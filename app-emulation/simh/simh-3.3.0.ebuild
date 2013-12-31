@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.3.0.ebuild,v 1.4 2012/11/29 11:31:35 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/simh/simh-3.3.0.ebuild,v 1.5 2013/12/31 17:07:43 tomwij Exp $
 
 inherit eutils versionator
 
@@ -41,7 +41,7 @@ src_install() {
 		newbin ${BINFILE} "simh-${BINFILE}"
 	done
 
-	cd ${S}
+	cd "${S}"
 	dodir /usr/share/simh
 	insinto /usr/share/simh
 	doins VAX/*.bin

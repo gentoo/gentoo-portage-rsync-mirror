@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/open-vm-tools-kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.42 2013/10/22 22:21:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools-kmod/ChangeLog,v 1.43 2013/12/31 17:03:48 tomwij Exp $
+
+  31 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/fragsize.patch:
+  [QA] Remove unused files.
 
   22 Oct 2013; Mike Gilbert <floppym@gentoo.org>
   open-vm-tools-kmod-2013.09.16.1328054.ebuild,

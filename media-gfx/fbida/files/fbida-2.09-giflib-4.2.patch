@@ -1,0 +1,29 @@
+--- a/rd/read-gif.c
++++ b/rd/read-gif.c
+@@ -25,7 +25,7 @@
+ 	if (GIF_ERROR == DGifGetRecordType(h->gif,&RecordType)) {
+ 	    if (debug)
+ 		fprintf(stderr,"gif: DGifGetRecordType failed\n");
+-	    PrintGifError();
++	    GifErrorString();
+ 	    return -1;
+ 	}
+ 	switch (RecordType) {
+@@ -42,7 +42,7 @@
+ 		if (rc == GIF_ERROR) {
+ 		    if (debug)
+ 			fprintf(stderr,"gif: DGifGetExtension failed\n");
+-		    PrintGifError();
++		    GifErrorString();
+ 		    return -1;
+ 		}
+ 		if (debug) {
+@@ -108,7 +108,7 @@
+ 	    if (GIF_ERROR == DGifGetImageDesc(h->gif)) {
+ 		if (debug)
+ 		    fprintf(stderr,"gif: DGifGetImageDesc failed\n");
+-		PrintGifError();
++		GifErrorString();
+ 	    }
+ 	    if (NULL == h->gif->SColorMap &&
+ 		NULL == h->gif->Image.ColorMap) {

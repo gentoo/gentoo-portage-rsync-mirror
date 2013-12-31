@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice-protocol
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.38 2013/07/03 15:29:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.39 2013/12/31 17:10:31 tomwij Exp $
+
+  31 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  -files/2ffbca210033be262fc75e6a73742e0f0e6d5242.patch:
+  [QA] Remove unused files.
 
 *spice-protocol-0.12.6 (03 Jul 2013)
 

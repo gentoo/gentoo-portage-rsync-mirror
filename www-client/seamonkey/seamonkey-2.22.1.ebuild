@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.22.1.ebuild,v 1.3 2013/12/01 12:19:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.22.1.ebuild,v 1.4 2013/12/31 17:06:07 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -129,6 +129,7 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
+	epatch "${FILESDIR}/${PN}-freetype251.patch"
 	popd &>/dev/null || die
 	# drop -Wl,--build-id from LDFLAGS, bug #465466
 
