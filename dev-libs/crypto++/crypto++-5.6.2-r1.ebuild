@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.2-r1.ebuild,v 1.1 2013/12/07 11:23:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.2-r1.ebuild,v 1.2 2013/12/31 17:45:36 slyfox Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ src_prepare() {
 	cat <<-EOF > configure.ac
 	AC_INIT(lt, 0)
 	AM_INIT_AUTOMAKE
+	AC_PROG_CXX
 	LT_INIT
 	AC_CONFIG_FILES(Makefile)
 	AC_OUTPUT

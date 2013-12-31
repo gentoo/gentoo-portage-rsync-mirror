@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.76 2013/12/28 13:01:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.77 2013/12/31 17:59:50 floppym Exp $
 
 EAPI=5
 
@@ -86,14 +86,17 @@ DEPEND="${COMMON_DEPEND}
 #if LIVE
 DEPEND="${DEPEND}
 	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5:0
-	>=dev-util/gtk-doc-1.18"
+	>=dev-libs/libgcrypt-1.4.5:0"
 
 SRC_URI=
 KEYWORDS=
 
 src_prepare() {
-	gtkdocize --docdir docs/ || die
+	if use doc; then
+		gtkdocize --docdir docs/ || die
+	else
+		echo 'EXTRA_DIST =' > docs/gtk-doc.make
+	fi
 
 	autotools-utils_src_prepare
 }
