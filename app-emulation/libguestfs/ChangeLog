@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/libguestfs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.31 2013/10/27 12:06:04 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/ChangeLog,v 1.32 2013/12/31 16:59:55 tomwij Exp $
+
+  31 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  -files/1.17/0002-configure_ac_automagic.patch,
+  -files/1.18/0001_add_gentoo_names_to_configure.patch,
+  -files/1.18/0002_add_doc_more_option.patch,
+  -files/1.18/0002_add_gentooway_to_remove_la_files.patch,
+  -files/1.18/0003_add_icoutils_configure_drop_automagic.patch,
+  -files/1.18/0103_disable_php_bindings_makefile.patch:
+  [QA] Remove unused files.
 
   27 Oct 2013; Maxim Koltsov <maksbotan@gentoo.org>
   +files/1.24/0001_add_gentoo_names_to_configure.patch,

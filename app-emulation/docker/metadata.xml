@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>proxy-maintainers</herd>
+	<maintainer status="active">
+		<email>admwiggin@gmail.com</email>
+		<name>Tianon</name>
+	</maintainer>
 	<longdescription>
 		Docker is an open-source project to easily create lightweight,
 		portable, self-sufficient containers from any application. The same
@@ -8,10 +13,6 @@
 		scale, in production, on VMs, bare metal, OpenStack clusters, public
 		clouds and more.
 	</longdescription>
-	<maintainer status="active">
-		<email>admwiggin@gmail.com</email>
-		<name>Tianon</name>
-	</maintainer>
 	<use>
 		<flag name="aufs">
 			Enables dependencies for the "aufs" driver, including necessary

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libxml2:2 gtk? ( >=x11-libs/gtk+-2.4:2 ) gnome? ( >=gnome-base/gnome-panel-2.10 ) sys-apps/pciutils nls? ( sys-devel/gettext ) >=app-misc/ddccontrol-db-20051114
 SLOT=0
 SRC_URI=mirror://sourceforge/ddccontrol/ddccontrol-0.3.tar.bz2
-_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f47914c5044a6de682da2c3afa9ee31d

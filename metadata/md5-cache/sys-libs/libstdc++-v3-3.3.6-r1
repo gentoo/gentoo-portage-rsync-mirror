@@ -6,5 +6,5 @@ KEYWORDS=amd64 hppa ~mips ppc -ppc64 sparc x86 ~x86-fbsd
 LICENSE=GPL-2 LGPL-2.1
 SLOT=5
 SRC_URI=ftp://gcc.gnu.org/pub/gcc/releases/gcc-3.3.6/gcc-3.3.6.tar.bz2 mirror://gentoo/gcc-3.3.6-patches-1.8.tar.bz2
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=ceb4b007ba0abaf8257c6ef388ee7fc9

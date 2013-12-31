@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.12 >=x11-libs/gtk+-2.10:2 >=xfce-base/libxfce4ui-4.8 >=xfce-base/libxfce4util-4.8
 SLOT=0
 SRC_URI=http://goodies.xfce.org/releases/xfbib/xfbib-0.0.2.tar.bz2
-_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	xfconf	ba58c6f43e7fdfc116752aa58b488d83
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	xfconf	ba58c6f43e7fdfc116752aa58b488d83
 _md5_=29f19b94ed2fb5a08e42d4adf28d4616

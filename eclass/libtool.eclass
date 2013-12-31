@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.108 2013/12/05 16:52:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.109 2013/12/31 16:53:05 vapier Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -135,6 +135,7 @@ ELT_walk_patches() {
 # The other options should be avoided in general unless you know what's going on.
 elibtoolize() {
 	local x
+	local dirs=()
 	local do_portage="no"
 	local do_reversedeps="no"
 	local do_only_patches="no"
@@ -179,9 +180,11 @@ elibtoolize() {
 			--force)
 				force="true"
 				;;
-			*)
+			-*)
 				eerror "Invalid elibtoolize option: ${x}"
 				die "elibtoolize called with ${x} ??"
+				;;
+			*)	dirs+=( "${x}" )
 		esac
 	done
 
@@ -201,16 +204,17 @@ elibtoolize() {
 		elt_patches+=" gold-conf"
 	fi
 
-	# Reuse "$@" for dirs to patch
-	set --
+	# Find out what dirs to scan.
 	if [[ ${do_shallow} == "yes" ]] ; then
-		[[ -f ${S}/ltmain.sh || -f ${S}/configure ]] && set -- "${S}"
+		[[ ${#dirs[@]} -ne 0 ]] && die "Using --shallow with explicit dirs doesn't make sense"
+		[[ -f ${S}/ltmain.sh || -f ${S}/configure ]] && dirs+=( "${S}" )
 	else
-		set -- $(find "${S}" '(' -name ltmain.sh -o -name configure ')' -printf '%h\n' | sort -u)
+		[[ ${#dirs[@]} -eq 0 ]] && dirs+=( "${S}" )
+		dirs=( $(find "${dirs[@]}" '(' -name ltmain.sh -o -name configure ')' -printf '%h\n' | sort -u) )
 	fi
 
-	local d p
-	for d in "$@" ; do
+	local d p ret
+	for d in "${dirs[@]}" ; do
 		export ELT_APPLIED_PATCHES=
 
 		if [[ -f ${d}/.elibtoolized ]] ; then
@@ -224,8 +228,6 @@ elibtoolize() {
 			ewarn "  We've already been run in this tree; you should"
 			ewarn "  avoid this if possible (perhaps by filing a bug)"
 		fi
-
-		local ret
 
 		# patching ltmain.sh
 		[[ -f ${d}/ltmain.sh ]] &&

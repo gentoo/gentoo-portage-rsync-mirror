@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-cpp/gtkmm:2.4 dev-libs/glib:2 x11-misc/xdg-utils alsa? ( >=media-libs/alsa-lib-1 ) gnome? ( >=gnome-base/libgnomeui-2 ) !gnome? ( x11-libs/libSM x11-libs/libICE ) gnutls? ( >=net-libs/gnutls-1.2 ) !gnutls? ( >=dev-libs/openssl-0.9 ) migemo? ( app-text/cmigemo )
 SLOT=0
 SRC_URI=mirror://sourceforge.jp/jd4linux/47156/jd-2.6.5-100425.tgz
-_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=2939bcb01e9a481f4e684d502675fc64

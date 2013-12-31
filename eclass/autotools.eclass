@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.158 2013/12/30 08:19:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.159 2013/12/31 16:53:05 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -221,8 +221,8 @@ eautoreconf() {
 
 	if [[ ${AT_NOELIBTOOLIZE} != "yes" ]] ; then
 		# Call it here to prevent failures due to elibtoolize called _before_
-		# eautoreconf.  We set $S because elibtoolize runs on that #265319
-		S=${PWD} elibtoolize --force
+		# eautoreconf.
+		elibtoolize --force "${PWD}"
 	fi
 
 	if [[ -n ${multitop} ]] ; then

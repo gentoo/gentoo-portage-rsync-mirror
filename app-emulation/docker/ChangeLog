@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.8 2013/12/17 02:50:41 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.9 2013/12/31 16:46:51 tomwij Exp $
+
+  31 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/docker.initd,
+  metadata.xml:
+  [QA] Remove unused files. Added proxy-maintainers to metadata.xml due to non-
+  gorg e-mail address.
 
 *docker-0.7.2 (17 Dec 2013)
 *docker-0.7.1-r1 (17 Dec 2013)
