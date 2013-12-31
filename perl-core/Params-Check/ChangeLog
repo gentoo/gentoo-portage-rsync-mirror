@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Params-Check
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Params-Check/ChangeLog,v 1.30 2013/08/14 07:50:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Params-Check/ChangeLog,v 1.31 2013/12/31 13:10:40 zlogene Exp $
+
+  31 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -Params-Check-0.26.ebuild,
+  -Params-Check-0.280.0.ebuild, -Params-Check-0.300.0.ebuild,
+  -Params-Check-0.320.0.ebuild, -Params-Check-0.340.0.ebuild:
+  Drop old
 
 *Params-Check-0.380.0 (14 Aug 2013)
 

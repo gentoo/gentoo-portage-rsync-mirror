@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.111 2013/06/30 14:52:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.112 2013/12/31 13:05:51 pacho Exp $
+
+*boinc-7.2.0-r1 (31 Dec 2013)
+
+  31 Dec 2013; Pacho Ramos <pacho@gentoo.org> +boinc-7.2.0-r1.ebuild,
+  +files/boinc.service:
+  Add unit file (#496514 by Szymon Jaranowski)
 
 *boinc-7.2.0 (30 Jun 2013)
 
