@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.230 2013/11/18 10:36:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.231 2013/12/31 19:20:49 vapier Exp $
+
+  31 Dec 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  pciutils-3.2.1.ebuild:
+  Add USE=dns by David Hendricks to control uncommon dns behavior #496336.
 
 *pciutils-3.2.1 (18 Nov 2013)
 

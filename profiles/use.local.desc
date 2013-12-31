@@ -6098,6 +6098,7 @@ sys-apps/paludis:python-bindings - Enable Python bindings. Requires a lot of RAM
 sys-apps/paludis:ruby-bindings - Enable Ruby bindings.
 sys-apps/paludis:search-index - Enable cave search --index. Requires sqlite.
 sys-apps/paludis:visibility - Enable visibility support (g++ >=4.1)
+sys-apps/pciutils:dns - Enable support for querying the central database of PCI IDs using DNS
 sys-apps/pciutils:kmod - Enable sys-apps/kmod support for the -k switch in lspci command
 sys-apps/pciutils:zlib - Support compressed pci.ids database
 sys-apps/pcmciautils:staticsocket - Add support for static sockets
