@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.170 2013/12/30 07:44:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.171 2013/12/31 12:05:37 aballier Exp $
+
+  31 Dec 2013; Alexis Ballier <aballier@gentoo.org> openal-1.15.1-r1.ebuild:
+  properly disable alstream if non native abi; reported by Michael
+  Mair-Keimberger (iamnr3) in bug #484060
 
   30 Dec 2013; Alexis Ballier <aballier@gentoo.org> openal-1.15.1-r1.ebuild:
   fix blocker on emul-sdl abi_x86_32 useflag
