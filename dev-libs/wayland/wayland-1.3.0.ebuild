@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.2.1-r1.ebuild,v 1.2 2013/12/31 18:11:14 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/wayland/wayland-1.3.0.ebuild,v 1.1 2013/12/31 18:23:49 mattst88 Exp $
 
 EAPI=5
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/git/${PN}/${PN}"
-	GIT_ECLASS="git-2"
+	GIT_ECLASS="git-r3"
 	EXPERIMENTAL="true"
 	AUTOTOOLS_AUTORECONF=1
 fi
@@ -34,6 +34,13 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig"
 
+src_prepare() {
+	# Remove resources-test from TESTS as it has failed since it was added.
+	sed -i -e 's/	resources-test$(EXEEXT)/	$(NULL)/' ${S}/tests/Makefile.in || die
+
+	autotools-multilib_src_prepare
+}
+
 src_configure() {
 	local myeconfargs=(
 		$(use_enable doc documentation)
@@ -41,7 +48,7 @@ src_configure() {
 	if tc-is-cross-compiler ; then
 		myeconfargs+=( --disable-scanner )
 	fi
-	if ! multilib_is_native_abi; then
+	if ! multilib_build_binaries; then
 		myeconfargs+=( --disable-documentation )
 	fi
 
