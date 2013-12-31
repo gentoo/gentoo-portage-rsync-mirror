@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.16.ebuild,v 1.13 2013/06/01 19:49:33 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.4.16.ebuild,v 1.14 2013/12/23 18:01:35 jsbronder Exp $
 
 EAPI=2
 WANT_AUTOMAKE="1.12"
@@ -77,6 +77,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/0002-fix-implicit-declaration-warnings.patch
 	epatch "${FILESDIR}"/disable-automagic-doc-building-2.4.14.patch
+	epatch "${FILESDIR}"/CVE-2013-4319-2.x-root-submit-fix.patch
 
 	sed -i \
 		-e 's,\(COMPACT_LATEX *=\).*,\1 NO,' \

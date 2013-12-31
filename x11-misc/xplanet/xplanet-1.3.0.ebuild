@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.3.0.ebuild,v 1.5 2012/07/03 16:42:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.3.0.ebuild,v 1.6 2013/12/27 22:55:08 robbat2 Exp $
 
 EAPI=4
-inherit flag-o-matic
+inherit base flag-o-matic
 
 DESCRIPTION="Render images of the earth into the X root window"
 HOMEPAGE="http://xplanet.sourceforge.net/"
@@ -39,6 +39,8 @@ DEPEND="${RDEPEND}
 		)"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+PATCHES=( "${FILESDIR}"/xplanet-1.3.0-giflib.patch )
 
 src_configure() {
 	# econf says 'checking pnm.h presence... no'

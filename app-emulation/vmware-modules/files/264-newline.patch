@@ -1,0 +1,11 @@
+--- vmnet-only/userif.c 2012-06-09 04:26:32.000000000 -0400
++++ vmnet-only.new/userif.c     2012-10-22 12:14:34.275953107 -0400
+@@ -956,7 +956,7 @@ VNetUserIfSetUplinkState(VNetPort *port,
+               "failed (%d)\n", userIf->port.id, retval));
+    }
+ 
+-   LOG(0, (KERN_NOTICE "userif-%d: sent link %s event.", 
++   LOG(0, (KERN_NOTICE "userif-%d: sent link %s event.\n", 
+            userIf->port.id, linkUp?"up":"down"));
+ 
+    return retval;

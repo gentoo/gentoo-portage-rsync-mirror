@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.4.7.ebuild,v 1.2 2013/11/18 10:38:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.4.7.ebuild,v 1.3 2013/12/24 12:43:28 ago Exp $
 
 EAPI=5
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://bundles.openttdcoop.org/opengfx/releases/${PV}/${P}-source.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE=""
 RESTRICT="test" # nml version affects the checksums that the test uses (bug #451444)
 

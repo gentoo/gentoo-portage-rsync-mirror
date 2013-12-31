@@ -1,6 +1,25 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.104 2013/11/19 15:14:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.108 2013/12/31 08:44:11 maekke Exp $
+
+  31 Dec 2013; Markus Meier <maekke@gentoo.org> rsyslog-7.4.7.ebuild:
+  add ~arm, bug #495230
+
+  25 Dec 2013; Jeroen Roovers <jer@gentoo.org> rsyslog-7.4.7.ebuild:
+  Marked ~hppa (bug #495230).
+
+*rsyslog-7.4.7 (24 Dec 2013)
+
+  24 Dec 2013; Ultrabug <ultrabug@gentoo.org> rsyslog-7.2.7.ebuild,
+  rsyslog-7.4.3.ebuild, rsyslog-7.4.4.ebuild, rsyslog-7.4.6.ebuild,
+  +rsyslog-7.4.7.ebuild, metadata.xml:
+  Fix #490992, #494150 thx to Marcin Mirosław & Andrey Volkov. Fix #492442,
+  #494532 using slot operators thx to Thomas D. Add mongodb to IUSE fix #494268
+  thx to Vadim Kuznetsov. Version bump.
+
+  24 Dec 2013; Ultrabug <ultrabug@gentoo.org> rsyslog-7.2.7.ebuild,
+  rsyslog-7.4.3.ebuild, rsyslog-7.4.4.ebuild, rsyslog-7.4.6.ebuild:
+  fix #495198 wrt zeromq dependencies thx to Allen Parker
 
   19 Nov 2013; Jeroen Roovers <jer@gentoo.org> rsyslog-7.4.4.ebuild:
   Stable for HPPA (bug #475882).

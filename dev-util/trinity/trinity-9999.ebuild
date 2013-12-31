@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/trinity/trinity-9999.ebuild,v 1.3 2013/10/29 22:25:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/trinity/trinity-9999.ebuild,v 1.4 2013/12/22 02:19:07 radhermit Exp $
 
 EAPI=5
 
@@ -22,7 +22,6 @@ src_prepare() {
 		-e 's/-g -O2//' \
 		-e 's/-D_FORTIFY_SOURCE=2//' \
 		-e '/-o trinity/s/$(CFLAGS)/\0 $(LDFLAGS)/' \
-		-e '/^CC :=/d' \
 		-i Makefile || die
 
 	tc-export CC

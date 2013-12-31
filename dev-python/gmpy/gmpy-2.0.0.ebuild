@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-2.0.0.ebuild,v 1.3 2013/08/07 13:28:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-2.0.0.ebuild,v 1.4 2013/12/23 12:55:20 jlec Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ MY_PN="${PN}2"
 MY_P="${MY_PN}-${PV}"
 
 DESCRIPTION="Python bindings for GMP library"
-HOMEPAGE="http://www.aleax.it/gmpy.html http://code.google.com/p/gmpy/ http://pypi.python.org/pypi/gmpy"
+HOMEPAGE="http://www.aleax.it/gmpy.html http://code.google.com/p/gmpy/ http://pypi.python.org/pypi/gmpy2"
 SRC_URI="http://gmpy.googlecode.com/files/${MY_P}.zip"
 
 LICENSE="LGPL-2.1"

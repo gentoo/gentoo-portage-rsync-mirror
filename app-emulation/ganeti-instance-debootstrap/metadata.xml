@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>virtualization</herd>
-	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
 	<longdescription lang="en">This is a guest OS definition for Ganeti (http://code.google.com/p/ganeti).
 	It will install a minimal version of Debian or Ubuntu via debootstrap (thus
 	it requires network access). This only works if you have a Debian-based node

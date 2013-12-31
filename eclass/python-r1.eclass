@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.65 2013/11/30 17:57:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-r1.eclass,v 1.66 2013/12/29 18:19:48 mgorny Exp $
 
 # @ECLASS: python-r1
 # @MAINTAINER:
@@ -523,10 +523,10 @@ _python_check_USE_PYTHON() {
 				ewarn "Please note that after switching the active Python interpreter,"
 				ewarn "you may need to run 'python-updater' to rebuild affected packages."
 				ewarn
-				ewarn "For more information on python.eclass compatibility, please see"
-				ewarn "the appropriate python-r1 User's Guide chapter [1]."
+				ewarn "For more information on PYTHON_TARGETS and python.eclass"
+				ewarn "compatibility, please see the relevant Wiki article [1]."
 				ewarn
-				ewarn "[1] http://www.gentoo.org/proj/en/Python/python-r1/user-guide.xml#doc_chap2"
+				ewarn "[1] https://wiki.gentoo.org/wiki/Project:Python/PYTHON_TARGETS"
 			fi
 		}
 
@@ -608,10 +608,10 @@ _python_check_USE_PYTHON() {
 			ewarn "Please note that after changing the USE_PYTHON variable, you may need"
 			ewarn "to run 'python-updater' to rebuild affected packages."
 			ewarn
-			ewarn "For more information on python.eclass compatibility, please see"
-			ewarn "the appropriate python-r1 User's Guide chapter [1]."
+			ewarn "For more information on PYTHON_TARGETS and python.eclass"
+			ewarn "compatibility, please see the relevant Wiki article [1]."
 			ewarn
-			ewarn "[1] http://www.gentoo.org/proj/en/Python/python-r1/user-guide.xml#doc_chap2"
+			ewarn "[1] https://wiki.gentoo.org/wiki/Project:Python/PYTHON_TARGETS"
 		fi
 	fi
 }

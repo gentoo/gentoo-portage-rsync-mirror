@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23-r2.ebuild,v 1.1 2013/12/20 11:34:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.23-r2.ebuild,v 1.2 2013/12/22 12:18:11 johu Exp $
 
 EAPI=5
 
@@ -103,7 +103,7 @@ src_install() {
 
 	if use contrib; then
 		autotools-multilib_src_install -C contrib/organize \
-			DESTDIR="${D}" -C install
+			DESTDIR="${D}" install
 	fi
 
 	use xmp && dodoc doc/{COPYING-XMPSDK,README-XMP,cmdxmp.txt}

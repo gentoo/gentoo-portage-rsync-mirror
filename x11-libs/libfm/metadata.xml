@@ -8,5 +8,6 @@
   </maintainer>
   <use>
 	<flag name='vala'>Support custom actions in menus</flag>
+	<flag name='udisks'>Use libfm's udisks-based volume monitor implementation instead of using the one from gvfs</flag>
   </use>
 </pkgmetadata>

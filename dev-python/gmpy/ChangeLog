@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.38 2013/08/07 13:28:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.39 2013/12/23 12:55:20 jlec Exp $
+
+*gmpy-2.0.3 (23 Dec 2013)
+*gmpy-1.17 (23 Dec 2013)
+
+  23 Dec 2013; Justin Lecher <jlec@gentoo.org> +gmpy-1.17.ebuild,
+  gmpy-2.0.0.ebuild, +gmpy-2.0.3.ebuild, metadata.xml:
+  Version BUmp; Bump to distutils-r1
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> gmpy-2.0.0.ebuild:
   Stable for x86, wrt bug #474182

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/snowball-stemmer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/ChangeLog,v 1.1 2013/07/18 09:03:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/snowball-stemmer/ChangeLog,v 1.2 2013/12/22 16:44:28 graaff Exp $
+
+  22 Dec 2013; Hans de Graaff <graaff@gentoo.org>
+  snowball-stemmer-0.20091122.ebuild:
+  Add all keywords from app-misc/sphinx since this library was originally
+  compiled as part of sphinx itself.
 
 *snowball-stemmer-0.20091122 (18 Jul 2013)
 

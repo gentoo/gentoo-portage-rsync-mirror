@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.100 2013/07/24 20:57:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.101 2013/12/24 14:54:26 dilfridge Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -326,6 +326,15 @@ cmake-utils_use_use() { _use_me_now USE_ "$@" ; }
 # `cmake-utils_use foo FOO` echoes -DFOO=ON if foo is enabled
 # and -DFOO=OFF if it is disabled.
 cmake-utils_use() { _use_me_now "" "$@" ; }
+
+# @FUNCTION: cmake-utils_useno
+# @USAGE: <USE flag> [flag name]
+# @DESCRIPTION:
+# Based on use_enable. See ebuild(5).
+#
+# `cmake-utils_useno foo NOFOO` echoes -DNOFOO=OFF if foo is enabled
+# and -DNOFOO=ON if it is disabled.
+cmake-utils_useno() { _use_me_now_inverted "" "$@" ; }
 
 # Internal function for modifying hardcoded definitions.
 # Removes dangerous definitions that override Gentoo settings.

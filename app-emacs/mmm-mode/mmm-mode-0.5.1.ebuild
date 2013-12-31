@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/mmm-mode-0.5.1.ebuild,v 1.3 2013/12/21 16:12:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/mmm-mode-0.5.1.ebuild,v 1.4 2013/12/24 12:45:58 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 
 SITEFILE="50${PN}-gentoo.el"
 

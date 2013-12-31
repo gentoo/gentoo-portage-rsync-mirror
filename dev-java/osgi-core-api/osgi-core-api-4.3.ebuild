@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/osgi-core-api-4.3.ebuild,v 1.4 2013/07/16 12:06:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/osgi-core-api-4.3.ebuild,v 1.5 2013/12/24 16:24:53 tomwij Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ pkg_nofetch() {
 	einfo "  http://www.osgi.org/Download/Release4V43"
 	einfo "which you can find listed as"
 	einfo "  OSGi Service Platform Release 4 Version 4.3 Core Companion Code 4.3.0"
-	einfo "after accepting the license."
+	einfo "after accepting the license, then place it in '${DISTDIR}'."
 }
 
 java_prepare() {

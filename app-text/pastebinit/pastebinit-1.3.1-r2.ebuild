@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pastebinit/pastebinit-1.3.1-r2.ebuild,v 1.1 2013/09/12 12:15:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pastebinit/pastebinit-1.3.1-r2.ebuild,v 1.3 2013/12/24 12:56:08 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -15,7 +15,7 @@ SRC_URI="https://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="crypt"
 
 RDEPEND="${PYTHON_DEPS}

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.2.4.ebuild,v 1.1 2013/07/22 13:13:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.2.4.ebuild,v 1.2 2013/12/24 12:42:28 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://projects.camlcity.org/projects/pxp.html"
 SRC_URI="http://download.camlcity.org/download/${MY_P}.tar.gz"
 
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 SLOT="0/${PV}"
 DEPEND=">=dev-ml/pcre-ocaml-4.31:=

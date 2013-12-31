@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.301 2013/10/06 09:04:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.302 2013/12/30 09:26:18 dirtyepic Exp $
+
+*wxGTK-3.0.0.0 (30 Dec 2013)
+
+  30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> +wxGTK-3.0.0.0.ebuild,
+  +files/wxGTK-3.0.0.0-collision.patch:
+  Version bump (bug #485184).
 
   06 Oct 2013; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.8.12.1.ebuild:
   Drop to ~sh.

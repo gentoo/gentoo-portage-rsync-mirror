@@ -1,6 +1,22 @@
 # ChangeLog for dev-perl/Lingua-EN-Inflect
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.45 2013/08/17 12:49:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-EN-Inflect/ChangeLog,v 1.49 2013/12/29 15:20:56 zlogene Exp $
+
+  29 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  Lingua-EN-Inflect-1.895.0.ebuild:
+  x86 stable wrt bug #492182
+
+  29 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  Lingua-EN-Inflect-1.895.0.ebuild:
+  ppc64 stable wrt bug #492182
+
+  29 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  Lingua-EN-Inflect-1.895.0.ebuild:
+  ppc stable wrt bug #492182
+
+  29 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  Lingua-EN-Inflect-1.895.0.ebuild:
+  amd64 stable wrt bug #492182
 
 *Lingua-EN-Inflect-1.895.0 (17 Aug 2013)
 

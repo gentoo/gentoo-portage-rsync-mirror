@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/serpent
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.5 2013/09/18 06:29:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/serpent/ChangeLog,v 1.6 2013/12/24 12:49:20 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> serpent-1.4.ebuild:
+  Stable for x86, wrt bug #494262
 
 *serpent-1.4 (18 Sep 2013)
 

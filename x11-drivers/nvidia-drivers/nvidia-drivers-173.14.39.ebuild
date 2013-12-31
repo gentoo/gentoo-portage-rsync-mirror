@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.39.ebuild,v 1.3 2013/12/18 14:06:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-173.14.39.ebuild,v 1.4 2013/12/31 00:39:27 jer Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ DEPEND="
 "
 RDEPEND="
 	${COMMON}
-	<x11-base/xorg-server-1.14.99
+	<x11-base/xorg-server-1.15.99
 	acpi? ( sys-power/acpid )
 	multilib? (
 		|| (

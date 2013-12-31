@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/geoclue
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.26 2013/07/21 10:42:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.27 2013/12/24 15:35:15 pacho Exp $
+
+*geoclue-2.0.0 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +geoclue-2.0.0.ebuild,
+  -geoclue-0.12.0_p20110307.ebuild, metadata.xml:
+  Version bump for Gnome 3.10, drop old
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   connman is a global USE flag now

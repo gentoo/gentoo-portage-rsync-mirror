@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.197 2013/11/10 17:21:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.199 2013/12/31 00:31:38 vapier Exp $
+
+*xbmc-12.3 (31 Dec 2013)
+
+  31 Dec 2013; Mike Frysinger <vapier@gentoo.org> +xbmc-12.3.ebuild:
+  Version bump #496496 by Charles Nérot.
+
+  30 Dec 2013; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Always require java for live git ebuilds now #488118 by hal.
 
   10 Nov 2013; Fabian Groffen <grobian@gentoo.org>
   +files/xbmc-12.1-nomythtv.patch, files/xbmc-9999-nomythtv.patch,

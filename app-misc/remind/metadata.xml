@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>desktop-misc</herd>
-  <maintainer>
-    <email>tove@gentoo.org</email>
-    <name>Torsten Veller</name>
-  </maintainer>
 </pkgmetadata>

@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
+		<email>dastergon@gentoo.org</email>
+		<name>Pavlos Ratis</name>
 	</maintainer>
 	<longdescription lang="en">
 		Cronolog is a simple filter program that reads log file entries from

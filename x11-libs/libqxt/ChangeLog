@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.26 2013/12/17 11:21:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.27 2013/12/26 01:18:32 pesa Exp $
+
+*libqxt-0.6.2-r2 (26 Dec 2013)
+
+  26 Dec 2013; Davide Pesavento <pesa@gentoo.org>
+  +files/libqxt-invoke-prev-filter.patch, +files/libqxt-media-keys.patch,
+  +files/libqxt-xrandr-missing-lib.patch, +libqxt-0.6.2-r2.ebuild,
+  -files/libqxt-0.6.2-fix-event-filters.patch, -libqxt-0.6.2-r1.ebuild:
+  Add patch from Fedora for multimedia keys support, thanks to Georg Rudoy
+  <0xd34df00d@gmail.com> in bug 495984. Fix failure to detect libXrandr caused
+  by underlinking in the configure test.
 
 *libqxt-0.6.2-r1 (17 Dec 2013)
 

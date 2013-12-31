@@ -1,5 +1,11 @@
 # ChangeLog for sys-apps/xinetd
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.74 2013/12/21 16:38:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.76 2013/12/23 16:22:54 ago Exp $
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xinetd-2.3.15-r1.ebuild:
+  Stable for sparc, wrt bug #490308
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xinetd-2.3.15-r1.ebuild:
+  Stable for ppc64, wrt bug #490308
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xinetd-2.3.15-r1.ebuild:
   Stable for ppc, wrt bug #490308

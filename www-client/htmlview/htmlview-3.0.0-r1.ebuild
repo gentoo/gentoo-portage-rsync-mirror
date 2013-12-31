@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/htmlview-3.0.0-r1.ebuild,v 1.10 2011/01/25 17:36:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/htmlview/htmlview-3.0.0-r1.ebuild,v 1.11 2013/12/25 22:23:50 creffett Exp $
 
 EAPI=3
 inherit rpm eutils prefix
@@ -11,7 +11,7 @@ RH_EXTRAVERSION="8"
 
 DESCRIPTION="A script which calls an installed HTML viewer."
 HOMEPAGE="http://www.redhat.com"
-SRC_URI="mirror://fedora/development/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
+SRC_URI="mirror://gentoo/${P}-${RH_EXTRAVERSION}.src.rpm"
 
 LICENSE="public-domain"
 SLOT="0"

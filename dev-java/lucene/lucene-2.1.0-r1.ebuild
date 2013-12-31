@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.1.0-r1.ebuild,v 1.7 2011/12/19 11:35:15 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.1.0-r1.ebuild,v 1.8 2013/12/28 19:09:56 robbat2 Exp $
 
 EAPI=3
 

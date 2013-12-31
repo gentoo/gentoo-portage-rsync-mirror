@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmldoc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.74 2012/05/06 11:40:05 xarthisius Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.75 2013/12/26 00:41:50 dilfridge Exp $
+
+  26 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  htmldoc-1.8.27-r3.ebuild:
+  Update HOMEPAGE and SRC_URI
 
   06 May 2012; Kacper Kowalik <xarthisius@gentoo.org> -htmldoc-1.8.27-r2.ebuild,
   htmldoc-1.8.27-r3.ebuild:

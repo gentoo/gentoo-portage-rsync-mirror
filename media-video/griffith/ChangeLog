@@ -1,6 +1,9 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.64 2013/06/09 18:42:42 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.65 2013/12/28 21:25:30 hwoarang Exp $
+
+  28 Dec 2013; Markos Chandras <hwoarang@gentoo.org> griffith-9999.ebuild:
+  Remove obsolete patch. Bug #496206
 
   09 Jun 2013; Mike Gilbert <floppym@gentoo.org> griffith-0.13.ebuild,
   griffith-9999.ebuild:

@@ -1,0 +1,9 @@
+# ChangeLog for dev-vcs/cvs-fast-export
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs-fast-export/ChangeLog,v 1.1 2013/12/28 22:32:24 slyfox Exp $
+
+*cvs-fast-export-1.0 (28 Dec 2013)
+
+  28 Dec 2013; Sergei Trofimovich <slyfox@gentoo.org>
+  +cvs-fast-export-1.0.ebuild, +metadata.xml:
+  Initial version. Another speedy tool to fast-export CVS repos from ',v' files.

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.256 2013/12/08 17:46:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.257 2013/12/26 14:45:00 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> gnumeric-1.12.8.ebuild:
+  add ~arm, bug #488724
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnumeric-1.12.8.ebuild:
   x86 stable, bug #478252

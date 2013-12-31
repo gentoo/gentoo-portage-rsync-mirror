@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.4.ebuild,v 1.1 2013/11/11 02:38:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netctl/netctl-1.4.ebuild,v 1.2 2013/12/24 12:49:43 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ if [[ ${PV} = *9999* ]]; then
 	DEPEND="app-text/asciidoc"
 else
 	SRC_URI="ftp://ftp.archlinux.org/other/packages/${PN}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 x86"
 fi
 
 DESCRIPTION="Profile based network connection tool from Arch Linux"

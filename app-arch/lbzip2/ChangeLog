@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.55 2013/11/10 09:50:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.58 2013/12/29 17:30:28 maekke Exp $
+
+  29 Dec 2013; Markus Meier <maekke@gentoo.org> lbzip2-2.3-r1.ebuild:
+  arm stable, bug #495322
+
+  25 Dec 2013; Jeroen Roovers <jer@gentoo.org> lbzip2-2.3-r1.ebuild:
+  Stable for HPPA (bug #495322).
+
+  25 Dec 2013; Justin Lecher <jlec@gentoo.org> lbzip2-2.3-r1.ebuild:
+  Resort some lines
 
 *lbzip2-2.3-r1 (10 Nov 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mab
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mab/ChangeLog,v 1.5 2013/09/10 14:55:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mab/ChangeLog,v 1.6 2013/12/28 07:08:17 graaff Exp $
+
+  28 Dec 2013; Hans de Graaff <graaff@gentoo.org> mab-0.0.3.ebuild:
+  Fix tests for newer minitest versions. Add ruby20, ruby21.
 
   10 Sep 2013; Manuel Rüger <mrueg@gentoo.org> -mab-0.0.2.ebuild:
   Cleanup old.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-32.0.1700.68_beta1.ebuild,v 1.2 2013/12/19 04:16:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-32.0.1700.68_beta1.ebuild,v 1.3 2013/12/25 01:19:31 floppym Exp $
 
 EAPI="4"
 
@@ -34,12 +34,17 @@ esac
 MY_PN="${PN}-${SLOT}"
 MY_P="${MY_PN}_${MY_PV}"
 
+# Bundle a copy of libgcrypt, bug 494596
+LIBGCRYPT="libgcrypt.so.11.8.2"
+
 SRC_URI="
 	amd64? (
 		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_amd64.deb
+		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-amd64.xz
 	)
 	x86? (
 		http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_i386.deb
+		http://dev.gentoo.org/~floppym/dist/${LIBGCRYPT}-x86.xz
 	)
 "
 
@@ -154,6 +159,9 @@ src_install() {
 	for size in 16 22 24 32 48 64 128 256 ; do
 		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" ${PN}.png
 	done
+
+	insinto "${CHROME_HOME}"
+	newins "${WORKDIR}/${LIBGCRYPT}-$(usev amd64)$(usev x86)" libgcrypt.so.11
 
 	readme.gentoo_create_doc
 }

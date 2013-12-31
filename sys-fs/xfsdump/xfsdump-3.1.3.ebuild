@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.1.3.ebuild,v 1.1 2013/10/18 08:26:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-3.1.3.ebuild,v 1.2 2013/12/26 17:15:43 jer Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://oss.sgi.com/projects/xfs/cmd_tars/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86"
 IUSE=""
 
 RDEPEND="sys-fs/e2fsprogs

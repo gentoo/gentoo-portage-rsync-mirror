@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=iodbc? ( dev-db/libiodbc ) kerberos? ( virtual/krb5 ) odbc? ( dev-db/unixODBC ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=iodbc? ( dev-db/libiodbc ) kerberos? ( virtual/krb5 ) odbc? ( dev-db/unixODBC ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Tabular Datastream Library
 EAPI=4
 HOMEPAGE=http://www.freetds.org/
@@ -10,5 +10,5 @@ RDEPEND=iodbc? ( dev-db/libiodbc ) kerberos? ( virtual/krb5 ) odbc? ( dev-db/uni
 RESTRICT=test
 SLOT=0
 SRC_URI=http://ibiblio.org/pub/Linux/ALPHA/freetds/stable/freetds-0.91.tar.gz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=4457e56fd54a96af56c5a8177b3eca2b

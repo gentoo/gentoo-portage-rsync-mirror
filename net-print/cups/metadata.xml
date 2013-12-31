@@ -12,14 +12,8 @@
     <flag name='python'>
       Add support for the Python interpeter in the web server CGIs.
     </flag>
-    <flag name='perl'>
-      Add support for the Perl interpeter in the web server CGIs.
-    </flag>
     <flag name='java'>
       Add support for the Java interpeter in the web server CGIs.
-    </flag>
-    <flag name='systemd'>
-      Add support for systemd socket activation.
     </flag>
   </use>
 </pkgmetadata>

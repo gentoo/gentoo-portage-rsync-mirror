@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install unpack
-DEPEND=!dev-libs/libmimedir >=gpe-base/libgpewidget-0.102 doc? ( >=dev-util/gtk-doc-0.6 ) >=dev-util/intltool-0.29 virtual/pkgconfig || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=!dev-libs/libmimedir >=gpe-base/libgpewidget-0.102 doc? ( >=dev-util/gtk-doc-0.6 ) >=dev-util/intltool-0.29 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=RFC2425 MIME Directory Profile library
 HOMEPAGE=http://gpe.linuxtogo.org
 IUSE=doc nls
@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!dev-libs/libmimedir >=gpe-base/libgpewidget-0.102
 SLOT=0
 SRC_URI=http://gpe.linuxtogo.org/download/source/libmimedir-0.4.3.tar.gz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=8d1256db684e03fb8a44d591a3a8440b

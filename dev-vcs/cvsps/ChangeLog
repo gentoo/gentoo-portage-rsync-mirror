@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/cvsps
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.19 2013/07/26 15:56:19 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsps/ChangeLog,v 1.20 2013/12/28 22:14:29 slyfox Exp $
+
+*cvsps-3.13 (28 Dec 2013)
+
+  28 Dec 2013; Sergei Trofimovich <slyfox@gentoo.org> +cvsps-3.13.ebuild:
+  Version bump (and deprecated by upstream in favour of cvs-fast-export
+  http://esr.ibiblio.org/?p=5167).
 
   26 Jul 2013; Sergei Trofimovich <slyfox@gentoo.org> -cvsps-3.7.ebuild:
   Removed old.

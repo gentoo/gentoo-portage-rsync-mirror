@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.257 2013/11/06 07:50:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.258 2013/12/27 22:00:10 tomwij Exp $
+
+  27 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/doxygen-1.5-dot-eps.patch:
+  [QA] Remove unused files.
 
   06 Nov 2013; Kacper Kowalik <xarthisius@gentoo.org> doxygen-1.8.5.ebuild:
   Remove obsolete bit fixing DESTDIR for doxywizard. Fixes bug #490298 by Dennis

@@ -7,7 +7,6 @@
 	<flag name="tracker">Load contacts from <pkg>app-misc/tracker</pkg> index</flag>
 	<flag name="telepathy">Load contacts from the Telepathy framework</flag>
 	<flag name="utils">Build the folks-inspect utility</flag>
-	<flag name="vala">Regenerate pre-generated C code from Vala source</flag>
 	<flag name="zeitgeist">Add support for Zeitgeist event tracking system</flag>
 </use>
 </pkgmetadata>

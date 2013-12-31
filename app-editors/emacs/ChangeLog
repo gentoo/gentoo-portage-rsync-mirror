@@ -1,6 +1,17 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.600 2013/10/03 09:21:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.603 2013/12/31 00:08:13 ulm Exp $
+
+  30 Dec 2013; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r6.ebuild,
+  emacs-24.3-r2.ebuild:
+  Fix build failure on hardened kernel with XATTR_PAX_FLAGS, bug 456970.
+
+  26 Dec 2013; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r6.ebuild,
+  emacs-24.2-r1.ebuild, emacs-24.3-r2.ebuild:
+  Drop to unstable keyword on s390 and sh.
+
+  26 Dec 2013; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r8.ebuild:
+  Fix USE dependency on ncurses.
 
 *emacs-18.59-r9 (03 Oct 2013)
 

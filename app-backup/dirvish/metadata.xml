@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>app-backup</herd>
-	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
 	<longdescription lang="en">Dirvish is a fast, disk based, rotating network
 		backup system. With dirvish you can maintain a set of complete images 
 		of your filesystems with unattended creation and expiration. A dirvish 

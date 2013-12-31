@@ -1,6 +1,21 @@
 # ChangeLog for media-gfx/pqiv
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.37 2013/09/08 05:09:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pqiv/ChangeLog,v 1.41 2013/12/29 03:34:47 radhermit Exp $
+
+  29 Dec 2013; Tim Harder <radhermit@gentoo.org> -pqiv-0.11.ebuild,
+  -pqiv-0.12.ebuild, -pqiv-1.0.ebuild, -files/pqiv-0.11-glib-2.31.patch:
+  Remove old.
+
+*pqiv-2.1 (29 Dec 2013)
+
+  29 Dec 2013; Tim Harder <radhermit@gentoo.org> +pqiv-2.1.ebuild:
+  Version bump.
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pqiv-2.0.ebuild:
+  Stable for x86, wrt bug #493512
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> pqiv-2.0.ebuild:
+  amd64 stable, bug #493512
 
 *pqiv-2.0 (08 Sep 2013)
 
@@ -151,4 +166,3 @@
 
   27 May 2007; Samuli Suominen <ssuominen@gentoo.org> +pqiv-0.1.ebuild:
   Initial commit for bug 166009. Ebuild and program itself by Phillip Berndt.
-

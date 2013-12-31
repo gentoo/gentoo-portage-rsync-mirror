@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0-r1.ebuild,v 1.16 2013/08/27 15:07:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.3.0-r1.ebuild,v 1.17 2013/12/26 18:49:18 dilfridge Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ MY_P=${P/_}
 
 DESCRIPTION="C++ user interface toolkit for X and OpenGL"
 HOMEPAGE="http://www.fltk.org/"
-SRC_URI="mirror://easysw/${PN}/${PV/_}/${P/_}-source.tar.gz"
+SRC_URI="http://fltk.org/pub/${PN}/${PV/_}/${P/_}-source.tar.gz"
 
 SLOT="1"
 LICENSE="FLTK LGPL-2"

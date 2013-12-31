@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.7.2-r1.ebuild,v 1.6 2013/05/20 10:56:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.7.2-r1.ebuild,v 1.7 2013/12/23 21:36:09 dirtyepic Exp $
 
 PATCH_VER="1.6"
 UCLIBC_VER="1.0"
@@ -52,15 +52,4 @@ src_unpack() {
 	use vanilla && return 0
 
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
-}
-
-pkg_setup() {
-	toolchain_pkg_setup
-
-	if use lto ; then
-		ewarn
-		ewarn "LTO support is still experimental and unstable."
-		ewarn "Any bugs resulting from the use of LTO will not be fixed."
-		ewarn
-	fi
 }

@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/unixcw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.11 2013/03/02 21:52:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/unixcw/ChangeLog,v 1.12 2013/12/25 13:26:27 tomjbe Exp $
+
+*unixcw-3.3.0 (25 Dec 2013)
+
+  25 Dec 2013; Thomas Beierlein <tomjbe@gentoo.org> +unixcw-3.3.0.ebuild:
+  Version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> unixcw-2.3-r6.ebuild,
   unixcw-3.0.2.ebuild, unixcw-3.1.1.ebuild, unixcw-3.2.0.ebuild:

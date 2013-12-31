@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9-r1.ebuild,v 1.1 2013/11/03 14:56:42 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8.9-r1.ebuild,v 1.2 2013/12/30 14:36:38 lu_zero Exp $
 
 EAPI=5
 
@@ -269,8 +269,7 @@ multilib_src_configure() {
 		fi
 	fi
 
-	cd "${S}"
-	./configure \
+	"${S}"/configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
 		--shlibdir="${EPREFIX}"/usr/$(get_libdir) \
@@ -284,7 +283,7 @@ multilib_src_configure() {
 	MAKEOPTS+=" V=1"
 }
 
-src_compile() {
+multilib_src_compile() {
 	emake
 
 	if use qt-faststart; then
@@ -295,20 +294,17 @@ src_compile() {
 
 multilib_src_install() {
 	emake DESTDIR="${D}" install-libs
-	rm -f "${ED}"/usr/$(get_libdir)/*.so
-}
+	if multilib_is_native_abi; then
+		emake DESTDIR="${D}" install install-man
+		use qt-faststart && dobin tools/qt-faststart
 
-src_install() {
-	emake DESTDIR="${D}" install install-man
-
-	dodoc Changelog README INSTALL doc/*.txt
-	use doc && dodoc doc/*.html
-
-	use qt-faststart && dobin tools/qt-faststart
-
-	for i in $(usex sdl avplay "") $(usex network avserver "") avprobe; do
-		dosym  ${i} /usr/bin/${i/av/ff}
-	done
+		for i in $(usex sdl avplay "") $(usex network avserver "") avprobe; do
+			dosym  ${i} /usr/bin/${i/av/ff}
+		done
+		cd "${S}"
+		dodoc Changelog README INSTALL doc/*.txt
+		use doc && dodoc doc/*.html
+	fi
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.174 2013/12/20 02:43:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.175 2013/12/30 14:36:38 lu_zero Exp $
+
+  30 Dec 2013; Luca Barbato <lu_zero@gentoo.org> libav-0.8.9-r1.ebuild:
+  Multilib support update
 
   20 Dec 2013; Patrick Lauer <patrick@gentoo.org> libav-10_alpha1.ebuild:
   Whitespace

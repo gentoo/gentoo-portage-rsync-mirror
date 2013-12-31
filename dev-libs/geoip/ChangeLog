@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.195 2013/12/18 15:38:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.196 2013/12/26 14:59:43 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> geoip-1.6.0-r1.ebuild:
+  add ~arm, bug #490062
 
   18 Dec 2013; Jeroen Roovers <jer@gentoo.org> geoip-1.6.0-r1.ebuild:
   Install GeoIP.dat in data/ for src_test() (bug #494650 by eroen).

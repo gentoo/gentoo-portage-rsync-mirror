@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/flyte-download-manager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flyte-download-manager/ChangeLog,v 1.2 2013/04/02 06:50:44 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flyte-download-manager/ChangeLog,v 1.3 2013/12/23 16:10:23 pacho Exp $
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #221237
 
 *flyte-download-manager-1.2.5.0 (02 Apr 2013)
 
@@ -14,4 +17,3 @@
   28 Feb 2013; Arun Raghavan <ford_prefect@gentoo.org>
   +flyte-download-manager-1.2.4.0.ebuild, +metadata.xml:
   Initial commit with version 1.2.4.0
-

@@ -1,6 +1,41 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.155 2013/12/20 21:50:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.164 2013/12/30 09:07:11 mgorny Exp $
+
+  30 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-3.3-r2.ebuild:
+  Fix building docs with USE=-clang, bug #496394.
+
+  29 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-3.3-r2.ebuild,
+  llvm-9999.ebuild:
+  Explicitly require Makefiles from CMake, to avoid failures when people like to
+  enable ninja globally. Bug #496426.
+
+  28 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-3.3-r2.ebuild:
+  Fix building R600 target, bug #496308.
+
+  28 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-3.3-r2.ebuild:
+  Fix clang blocker to match 3.3-r100.
+
+*llvm-3.3-r2 (28 Dec 2013)
+
+  28 Dec 2013; Michał Górny <mgorny@gentoo.org>
+  +files/llvm-3.3-r2-gentoo-install.patch, +llvm-3.3-r2.ebuild:
+  Backport all the fixes and install design changes from -9999 to -3.3. Fixes
+  bugs #425844 (install CMake modules), #462554 (install bfd-plugins symlink),
+  #489586 (multilib portage compat.), #488216, #492554 (RPATH issues).
+
+  28 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Add bugpoint to built tools. Switch llvm-config wrapping to use $CHOST-llvm-
+  config.
+
+  27 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Update/fix dependencies.
+
+  24 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Fix libLTO linking parallel make issue, bug #494922.
+
+  24 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Create the gold plugin symlink only with USE=gold.
 
   20 Dec 2013; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Disable libxml2 support in non-native ABIs since it is meaningful for

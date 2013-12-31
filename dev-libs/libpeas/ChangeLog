@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.23 2013/12/08 18:04:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.24 2013/12/24 15:56:52 pacho Exp $
+
+*libpeas-1.9.0 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +libpeas-1.9.0.ebuild,
+  -libpeas-1.6.2-r1.ebuild:
+  Version bump for Gnome 3.10, drop old
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> libpeas-1.8.1.ebuild:
   x86 stable, bug #478252

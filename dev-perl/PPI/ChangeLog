@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PPI
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.46 2013/09/13 13:47:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/ChangeLog,v 1.47 2013/12/25 19:26:39 zlogene Exp $
+
+  25 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -PPI-1.215.0.ebuild,
+  PPI-1.215.0-r1.ebuild:
+  amd64/x86 stable wrt bug #495444; Drop old.
 
 *PPI-1.215.0-r1 (13 Sep 2013)
 

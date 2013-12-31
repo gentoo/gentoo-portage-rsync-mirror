@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.157 2013/11/30 06:00:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.158 2013/12/30 08:19:02 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -90,7 +90,12 @@ if [[ -n ${WANT_LIBTOOL} ]] ; then
 	export WANT_LIBTOOL
 fi
 
-AUTOTOOLS_DEPEND="${_automake_atom} ${_autoconf_atom} ${_libtool_atom}"
+# Force people (nicely) to upgrade to a newer version of gettext as
+# older ones are known to be crappy.  #496454
+AUTOTOOLS_DEPEND="!<sys-devel/gettext-0.18.1.1-r3
+	${_automake_atom}
+	${_autoconf_atom}
+	${_libtool_atom}"
 RDEPEND=""
 
 # @ECLASS-VARIABLE: AUTOTOOLS_AUTO_DEPEND

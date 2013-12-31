@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.50 2013/05/26 07:32:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.53 2013/12/31 06:43:46 graaff Exp $
+
+  31 Dec 2013; Hans de Graaff <graaff@gentoo.org> -gherkin-1.0.30-r1.ebuild,
+  -gherkin-2.7.3.ebuild, -gherkin-2.11.5.ebuild:
+  Cleanup.
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> gherkin-2.11.6.ebuild:
+  arm stable, bug #493780
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> gherkin-2.11.6.ebuild:
+  Stable for HPPA (bug #493780).
 
 *gherkin-2.12.0 (26 May 2013)
 

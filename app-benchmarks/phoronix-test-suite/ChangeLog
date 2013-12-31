@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.29 2013/12/09 03:30:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.30 2013/12/27 21:39:50 tomwij Exp $
+
+  27 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/font.patch:
+  [QA] Remove unused files.
 
 *phoronix-test-suite-4.8.4 (09 Dec 2013)
 

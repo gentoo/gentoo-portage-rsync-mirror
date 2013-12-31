@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.177 2013/11/04 06:38:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.178 2013/12/23 07:23:59 vapier Exp $
+
+*wget-1.14-r1 (23 Dec 2013)
+
+  23 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/wget-1.14-gnutls-ssl.patch, +files/wget-1.14-pkg-config.patch,
+  +files/wget-1.14-wgetrc.patch, +wget-1.14-r1.ebuild:
+  Add fix from upstream for gnutls/ssl connection rejections #479948 by Scott
+  Bertilson. Document user agent issue in /etc/wgetrc wrt portage fetching
+  #327229. Update the pkg-config patch to cover more libraries #438912.
 
   04 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> wget-1.14.ebuild,
   +files/wget-1.14-texi2pod.patch:

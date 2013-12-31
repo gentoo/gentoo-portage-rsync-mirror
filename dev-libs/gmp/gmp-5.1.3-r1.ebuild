@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.3-r1.ebuild,v 1.5 2013/10/13 20:33:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.3-r1.ebuild,v 1.7 2013/12/24 08:27:04 vapier Exp $
 
 EAPI="4"
 
@@ -37,11 +37,6 @@ src_prepare() {
 	[[ -d ${FILESDIR}/${PV} ]] && EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch "${FILESDIR}"/${PV}
 	epatch "${FILESDIR}"/${PN}-4.1.4-noexecstack.patch
 
-	# disable -fPIE -pie in the tests for x86  #236054
-	if use x86 && gcc-specs-pie ; then
-		epatch "${FILESDIR}"/${PN}-5.1.0-x86-nopie-tests.patch
-	fi
-
 	# note: we cannot run autotools here as gcc depends on this package
 	elibtoolize
 
@@ -73,6 +68,7 @@ multilib_src_configure() {
 	tc-export CC
 	ECONF_SOURCE="${S}" econf \
 		--localstatedir=/var/state/gmp \
+		--enable-shared \
 		$(use_enable cxx) \
 		$(use_enable static-libs static)
 }

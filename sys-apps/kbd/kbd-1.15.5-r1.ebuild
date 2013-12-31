@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.15.5-r1.ebuild,v 1.1 2013/01/20 17:23:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.15.5-r1.ebuild,v 1.2 2013/12/30 11:47:25 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.altlinux.org/pub/people/legion/kbd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls pam"
 
 RDEPEND="pam? ( virtual/pam )"

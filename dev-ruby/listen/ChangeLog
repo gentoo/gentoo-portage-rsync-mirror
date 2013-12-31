@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/listen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.25 2013/12/05 08:16:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/ChangeLog,v 1.26 2013/12/22 18:58:20 blueness Exp $
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org> listen-1.3.1-r1.ebuild:
+  Keyword ~ppc64, bug #465948
 
 *listen-1.3.1-r1 (05 Dec 2013)
 

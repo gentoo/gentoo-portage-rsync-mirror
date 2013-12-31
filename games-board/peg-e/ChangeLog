@@ -1,6 +1,9 @@
 # ChangeLog for games-board/peg-e
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/peg-e/ChangeLog,v 1.7 2013/11/13 11:37:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/peg-e/ChangeLog,v 1.8 2013/12/24 12:56:32 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> peg-e-1.1.2.ebuild:
+  Stable for x86, wrt bug #490614
 
   13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> peg-e-1.1.2.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

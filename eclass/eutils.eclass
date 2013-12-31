@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.428 2013/12/03 08:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.430 2013/12/28 17:19:10 mgorny Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -1666,6 +1666,30 @@ prune_libtool_files() {
 	fi
 }
 
+# @FUNCTION: einstalldocs
+# @DESCRIPTION:
+# Install documentation using DOCS and HTML_DOCS.
+#
+# If DOCS is declared and non-empty, all files listed in it are
+# installed. The files must exist, otherwise the function will fail.
+# In EAPI 4 and subsequent EAPIs DOCS may specify directories as well,
+# in other EAPIs using directories is unsupported.
+#
+# If DOCS is not declared, the files matching patterns given
+# in the default EAPI implementation of src_install will be installed.
+# If this is undesired, DOCS can be set to empty value to prevent any
+# documentation from being installed.
+#
+# If HTML_DOCS is declared and non-empty, all files and/or directories
+# listed in it are installed as HTML docs (using dohtml).
+#
+# Both DOCS and HTML_DOCS can either be an array or a whitespace-
+# separated list. Whenever directories are allowed, '<directory>/.' may
+# be specified in order to install all files within the directory
+# without creating a sub-directory in docdir.
+#
+# Passing additional options to dodoc and dohtml is not supported.
+# If you needed such a thing, you need to call those helpers explicitly.
 einstalldocs() {
 	debug-print-function ${FUNCNAME} "${@}"
 

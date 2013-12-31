@@ -4,7 +4,7 @@
 <com.izforge.izpack.panels.InfoPanel id="UNKNOWN (com.izforge.izpack.panels.InfoPanel)"/>
 <com.izforge.izpack.panels.LicencePanel id="UNKNOWN (com.izforge.izpack.panels.LicencePanel)"/>
 <com.izforge.izpack.panels.TargetPanel id="UNKNOWN (com.izforge.izpack.panels.TargetPanel)">
-<installpath>ED/opt/MultiBit-0.5.15</installpath>
+<installpath>ED/opt/MultiBit</installpath>
 </com.izforge.izpack.panels.TargetPanel>
 <com.izforge.izpack.panels.ShortcutPanel id="UNKNOWN (com.izforge.izpack.panels.ShortcutPanel)"/>
 <com.izforge.izpack.panels.InstallPanel id="UNKNOWN (com.izforge.izpack.panels.InstallPanel)"/>

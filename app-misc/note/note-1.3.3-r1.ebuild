@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.3-r1.ebuild,v 1.3 2013/12/21 15:51:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/note/note-1.3.3-r1.ebuild,v 1.4 2013/12/24 12:55:08 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.daemon.de/files/mirror/ftp.daemon.de/scip/Apps/note/${P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="crypt dbm general mysql text"
 
 DEPEND="dev-perl/TermReadKey

@@ -1,6 +1,21 @@
 # ChangeLog for app-backup/amanda
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.104 2013/11/23 09:08:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/ChangeLog,v 1.107 2013/12/27 18:31:26 zlogene Exp $
+
+  27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> amanda-3.3.3-r1.ebuild:
+  x86 stable wrt bug #494576
+
+  27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> amanda-3.3.3-r1.ebuild:
+  amd64 stable wrt bug #494576
+
+  24 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  -files/amanda-2.6.0_p2-coreutils.patch,
+  -files/amanda-2.6.0_p2-syslocpath.patch,
+  -files/amanda-2.6.0p2-amcrypt-ossl-asym-race-fix.patch,
+  -files/amanda-r4593.patch, -files/amanda-r4595.patch,
+  -files/amanda-r4698.patch, -files/amanda-xinetd-2.6.0_p2-r2,
+  -files/s3-list-keys.diff, -files/s3.c.part2.diff:
+  [QA] Remove unused files.
 
 *amanda-3.3.3-r1 (23 Nov 2013)
 

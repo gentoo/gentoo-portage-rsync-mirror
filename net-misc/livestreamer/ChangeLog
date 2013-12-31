@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/livestreamer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.4 2013/12/17 13:24:11 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.5 2013/12/29 23:08:30 tomwij Exp $
+
+*livestreamer-1.7.2 (29 Dec 2013)
+
+  29 Dec 2013; Tom Wijsman <TomWij@gentoo.org> +livestreamer-1.7.2.ebuild:
+  Version bump to 1.7.2; fixes bug #496438, proxied commit for Nikos Chantziaras
+  (realnc).
 
 *livestreamer-1.7.1 (17 Dec 2013)
 

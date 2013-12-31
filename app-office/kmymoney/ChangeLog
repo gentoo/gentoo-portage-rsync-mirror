@@ -1,6 +1,17 @@
 # ChangeLog for app-office/kmymoney
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.48 2013/10/15 17:48:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/ChangeLog,v 1.51 2013/12/24 14:32:08 mrueg Exp $
+
+  24 Dec 2013; Manuel Rüger <mrueg@gentoo.org>
+  -files/kmymoney-4.6.2-gcc-4.7.patch, -files/kmymoney-4.6.3-gmp-5.1.0.patch,
+  -kmymoney-4.6.3-r1.ebuild:
+  Cleanup old.
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kmymoney-4.6.4.ebuild:
+  Stable for x86, wrt bug #492682
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> kmymoney-4.6.4.ebuild:
+  amd64 stable, bug #492682
 
 *kmymoney-4.6.4 (15 Oct 2013)
 

@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.369 2013/11/29 02:25:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.372 2013/12/31 08:30:20 mr_bones_ Exp $
+
+  31 Dec 2013; Michael Sterrett <mr_bones_@gentoo.org> -syslog-ng-3.4.5.ebuild,
+  -syslog-ng-3.4.6.ebuild:
+  clean old
+
+*syslog-ng-3.4.7 (31 Dec 2013)
+
+  31 Dec 2013; Michael Sterrett <mr_bones_@gentoo.org> +syslog-ng-3.4.7.ebuild:
+  version bump
+
+  23 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/syslog-ng.confd:
+  [QA] Remove unused files.
 
 *syslog-ng-3.4.6 (29 Nov 2013)
 

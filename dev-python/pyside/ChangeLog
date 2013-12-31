@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/pyside
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.56 2013/11/14 00:46:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/ChangeLog,v 1.58 2013/12/25 19:26:11 pesa Exp $
+
+*pyside-1.2.1-r1 (25 Dec 2013)
+
+  25 Dec 2013; Davide Pesavento <pesa@gentoo.org> +pyside-1.2.1-r1.ebuild,
+  -pyside-1.2.1.ebuild:
+  Add python 3.3 support. Fix detection of media-libs/phonon, thanks to
+  Gianluigi Tiesi <sherpya@gmail.com> in bug 475786.
+
+  25 Dec 2013; Davide Pesavento <pesa@gentoo.org> -pyside-1.2.0.ebuild:
+  old
 
 *pyside-1.2.1 (14 Nov 2013)
 

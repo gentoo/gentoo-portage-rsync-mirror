@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.52 2013/08/09 13:42:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.53 2013/12/23 16:20:49 axs Exp $
+
+*freewrl-1.22.13-r3 (23 Dec 2013)
+
+  23 Dec 2013; Ian Stakenvicius <axs@gentoo.org>
+  +files/freewrl-1.22.13-desktop.patch, +freewrl-1.22.13-r3.ebuild,
+  -freewrl-1.22.13-r2.ebuild, freewrl-9999.ebuild:
+  fixed freewrl.desktop as per bug 495108
 
   09 Aug 2013; Ian Stakenvicius <axs@gentoo.org> freewrl-1.22.13-r1.ebuild,
   freewrl-1.22.13-r2.ebuild, freewrl-9999.ebuild:

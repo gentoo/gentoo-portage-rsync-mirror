@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/redhat-artwork
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.104 2012/05/05 04:10:06 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.105 2013/12/26 18:51:41 creffett Exp $
+
+  26 Dec 2013; Chris Reffett <creffett@gentoo.org>
+  redhat-artwork-5.0.8-r4.ebuild:
+  Replace fedora mirror wrt bug 496028, change to gentoo mirror since the
+  original rpm is no longer available on upstream mirrors
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org>
   redhat-artwork-5.0.8-r4.ebuild:
@@ -433,5 +438,3 @@
 
   Original ebuild contributed by wigren@home.se (Per Wigren) with
   heavy modifications (making kde optional) by me.
-
-

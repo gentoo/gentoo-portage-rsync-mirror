@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.32 2013/12/17 13:30:57 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.35 2013/12/31 11:23:39 pinkbyte Exp $
 
 EAPI=5
 
@@ -11,10 +11,9 @@ inherit base waf-utils pax-utils
 
 DESCRIPTION="Video player based on MPlayer/mplayer2"
 HOMEPAGE="http://mpv.io/"
-[[ ${PV} == *9999* ]] || \
-SRC_URI="https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-[[ ${PV} == *9999* ]] && \
 SRC_URI="https://waf.googlecode.com/files/waf-1.7.13"
+[[ ${PV} == *9999* ]] || \
+SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -54,14 +53,14 @@ RDEPEND+="
 		x11-libs/libXxf86vm
 		opengl? ( virtual/opengl )
 		lcms? ( media-libs/lcms:2 )
-		vaapi? ( x11-libs/libva[X(+)] )
-		vdpau? ( x11-libs/libvdpau )
+		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
+		vdpau? ( >=x11-libs/libvdpau-0.2 )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
 		xv? ( x11-libs/libXv )
 	)
 	alsa? ( media-libs/alsa-lib )
-	bluray? ( media-libs/libbluray )
+	bluray? ( >=media-libs/libbluray-0.2.1 )
 	bs2b? ( media-libs/libbs2b )
 	cdio? (
 		|| (
@@ -110,7 +109,7 @@ RDEPEND+="
 	samba? ( net-fs/samba )
 	v4l? ( media-libs/libv4l )
 	wayland? (
-		>=dev-libs/wayland-1.0.0
+		>=dev-libs/wayland-1.2.0
 		media-libs/mesa[egl,wayland]
 		>=x11-libs/libxkbcommon-0.3.0
 	)
@@ -136,7 +135,7 @@ DEPEND="${RDEPEND}
 	x86? ( ${ASM_DEP} )
 	x86-fbsd? ( ${ASM_DEP} )
 "
-DOCS=( Copyright README.md etc/example.conf etc/input.conf etc/encoding-example-profiles.conf )
+DOCS=( Copyright README.md etc/example.conf etc/input.conf )
 
 pkg_setup() {
 	if use !libass; then
@@ -152,12 +151,12 @@ pkg_setup() {
 src_unpack() {
 	if [[ ${PV} == *9999* ]]; then
 		git-r3_src_unpack
-
-		cp "${DISTDIR}"/waf-1.7.13 "${S}"/waf || die
-		chmod 0755 "${S}"/waf || die
 	else
 		default_src_unpack
 	fi
+
+	cp "${DISTDIR}"/waf-1.7.13 "${S}"/waf || die
+	chmod 0755 "${S}"/waf || die
 }
 
 src_prepare() {

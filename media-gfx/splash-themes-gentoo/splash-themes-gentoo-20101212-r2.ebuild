@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20101212-r2.ebuild,v 1.1 2013/10/13 14:34:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/splash-themes-gentoo-20101212-r2.ebuild,v 1.2 2013/12/22 11:18:08 pacho Exp $
 
 EAPI="5"
 
@@ -32,7 +32,10 @@ src_install() {
 	doins -r *
 
 	# They need to be executable, bug #470100
-	fperms +x /etc/splash/emerge-world/scripts/*
+	fperms +x /etc/splash/emerge-world/scripts/svc_started-pre
+	fperms +x /etc/splash/emerge-world/scripts/svc_start-pre
+	fperms +x /etc/splash/emerge-world/scripts/svc_stopped-pre
+	fperms +x /etc/splash/emerge-world/scripts/svc_stop-pre
 }
 
 pkg_postinst() {

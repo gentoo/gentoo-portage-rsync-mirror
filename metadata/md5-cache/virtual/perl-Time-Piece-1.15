@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Object Oriented time objects
-KEYWORDS=alpha amd64 ia64 ppc ppc64 sparc x86
-RDEPEND=|| ( ~dev-lang/perl-5.10.1 ~perl-core/Time-Piece-1.15 )
-SLOT=0
-_md5_=c6e142b4ea2d593d8687cf348ba7b1cc

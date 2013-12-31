@@ -1,6 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.129 2013/12/02 21:45:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.130 2013/12/27 20:49:04 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (27 Dec 2013)      
+# 3.6 is not supported for a long time and prone to bugs
+# and security issues (#496166), until systemd is keyworded
+# (#478076) we have no other option.
+gnome-base/gnome-settings-daemon -openrc-force
+gnome-base/gnome-shell -openrc-force
 
 # Pacho Ramos <pacho@gentoo.org> (02 Dec 2013)        
 # Missing keywords, bug #493156

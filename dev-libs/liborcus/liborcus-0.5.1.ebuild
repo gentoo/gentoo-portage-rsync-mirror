@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.7 2013/10/27 12:05:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/liborcus-0.5.1.ebuild,v 1.8 2013/12/27 08:57:34 scarabeus Exp $
 
 EAPI=5
 
@@ -36,7 +36,8 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}"/${P}-linking.patch \
-		"${FILESDIR}"/${P}-mdds.patch
+		"${FILESDIR}"/${P}-mdds.patch \
+		"${FILESDIR}"/${P}-oldnamespace.patch
 	eautoreconf
 }
 

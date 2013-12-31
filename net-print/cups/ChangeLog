@@ -1,6 +1,26 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.572 2013/12/21 16:12:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.577 2013/12/29 18:18:32 dilfridge Exp $
+
+  29 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-9999.ebuild:
+  Depend on newer cups-filters that integrate foomatic, and drop filters useflag
+
+  26 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> cups-1.6.2-r5.ebuild:
+  Update SRC_URI
+
+  26 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/cups-1.4.4-dont-compress-manpages.patch,
+  -files/cups-1.4.4-perl-includes.patch, -files/cups-1.4.4-php-destdir.patch,
+  -files/cups-1.5.0-systemd-socket.patch, -files/cups-1.5.2-browsing.patch,
+  -files/cups-1.5.2-linkperl.patch, -cups-1.5.3.ebuild,
+  -files/cups-1.5.3-fix-install-perms.patch:
+  Drop cups-1.5, bug 428356 was filed 07/2012
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
+  Stable for sparc, wrt bug #489914
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
+  Stable for ppc64, wrt bug #489914
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
   Stable for ppc, wrt bug #489914

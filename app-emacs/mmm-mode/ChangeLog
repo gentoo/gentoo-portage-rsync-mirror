@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mmm-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.23 2013/12/21 16:12:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mmm-mode/ChangeLog,v 1.24 2013/12/24 12:45:58 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> mmm-mode-0.5.1.ebuild:
+  Stable for x86, wrt bug #490102
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> mmm-mode-0.5.1.ebuild:
   Stable for ppc, wrt bug #490102

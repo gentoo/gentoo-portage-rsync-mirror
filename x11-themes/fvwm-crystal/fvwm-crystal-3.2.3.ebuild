@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.2.3.ebuild,v 1.2 2013/11/06 08:49:50 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.2.3.ebuild,v 1.3 2013/12/24 12:53:42 ago Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 RDEPEND="${PYTHON_DEPS}
 	>=x11-wm/fvwm-2.6.5[png]

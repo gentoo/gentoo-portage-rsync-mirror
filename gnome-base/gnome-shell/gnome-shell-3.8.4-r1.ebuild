@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.9 2013/12/08 18:35:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.8.4-r1.ebuild,v 1.10 2013/12/27 20:50:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://live.gnome.org/GnomeShell"
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
 IUSE="+bluetooth +i18n +networkmanager -openrc-force"
-KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 # libXfixes-5.0 needed for pointer barriers
 # TODO: gstreamer support is currently automagical:

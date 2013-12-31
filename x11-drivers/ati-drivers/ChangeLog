@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.348 2013/11/10 18:48:56 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.349 2013/12/27 12:47:52 scarabeus Exp $
+
+*ati-drivers-13.12 (27 Dec 2013)
+
+  27 Dec 2013; Tomáš Chvátal <scarabeus@gentoo.org> +ati-drivers-13.12.ebuild,
+  +files/ati-drivers-13.12-acpi.patch, -ati-drivers-13.1.ebuild,
+  -ati-drivers-13.6_beta.ebuild, -ati-drivers-13.8_beta2.ebuild:
+  Version bump to 13.12. Use d.ge.o as mirror until amd stops with javascript
+  for download. Remove some older versions to keep this slim. Fixes bug#496088
 
 *ati-drivers-13.11_beta6 (10 Nov 2013)
 

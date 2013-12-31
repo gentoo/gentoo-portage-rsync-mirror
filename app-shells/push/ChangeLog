@@ -1,6 +1,16 @@
 # ChangeLog for app-shells/push
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.13 2013/11/23 03:10:03 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.16 2013/12/29 17:31:46 maekke Exp $
+
+  29 Dec 2013; Markus Meier <maekke@gentoo.org> push-1.6.ebuild:
+  arm stable, bug #495348
+
+  27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> push-1.5.ebuild,
+  push-1.5-r1.ebuild:
+  Drop s390/sh/m68k to unstable
+
+  25 Dec 2013; Jeroen Roovers <jer@gentoo.org> push-1.6.ebuild:
+  Stable for HPPA (bug #495348).
 
 *push-1.5 (23 Nov 2013)
 *push-1.6 (23 Nov 2013)

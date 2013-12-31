@@ -11,19 +11,6 @@ Collection of fixes from mandrake
 -.so bash.1
  .SH SEE ALSO
  bash(1), sh(1)
---- bash-3.1/lib/readline/complete.c
-+++ bash-3.1/lib/readline/complete.c
-@@ -1544,9 +1544,7 @@
-   if (rl_filename_completion_desired)
-     {
-       filename = tilde_expand (text);
--      s = (nontrivial_match && rl_completion_mark_symlink_dirs == 0)
--		? LSTAT (filename, &finfo)
--		: stat (filename, &finfo);
-+      s = stat (filename, &finfo);
-       if (s == 0 && S_ISDIR (finfo.st_mode))
- 	{
- 	  if (_rl_complete_mark_directories /* && rl_completion_suppress_append == 0 */)
 --- bash-3.1/Makefile.in
 +++ bash-3.1/Makefile.in
 @@ -658,7 +658,7 @@

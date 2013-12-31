@@ -9,4 +9,4 @@ RDEPEND=>=media-gfx/splashutils-1.1.9.5[png]
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://gentoo/fbsplash-theme-emergence-r2.tar.bz2 mirror://gentoo/fbsplash-theme-gentoo-r2.tar.bz2 mirror://gentoo/fbsplash-theme-emerge-world-1.0.tar.bz2 http://fbsplash.berlios.de/themes/repo/natural_gentoo-9.0-r2.tar.bz2
-_md5_=882f8b3d3dc34a9de6858960596c3698
+_md5_=a1f381c462db832131657730257cd396

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/gitv-1.1.ebuild,v 1.3 2013/11/05 15:22:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gitv/gitv-1.1.ebuild,v 1.4 2013/12/24 12:44:16 ago Exp $
 
 EAPI="4"
 VIM_PLUGIN_VIM_VERSION="7.2"
@@ -11,7 +11,7 @@ DESCRIPTION="vim plugin: gitk for vim"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=3574"
 SRC_URI="https://github.com/vim-scripts/${PN}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="vim"
-KEYWORDS="amd64 ~x86 ~ppc-macos"
+KEYWORDS="amd64 x86 ~ppc-macos"
 IUSE=""
 
 VIM_PLUGIN_HELPFILES="gitv"

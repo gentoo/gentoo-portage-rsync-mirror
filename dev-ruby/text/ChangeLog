@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/text
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/ChangeLog,v 1.2 2013/08/30 19:30:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text/ChangeLog,v 1.3 2013/12/27 02:26:13 mrueg Exp $
+
+*text-1.2.3-r1 (27 Dec 2013)
+
+  27 Dec 2013; Manuel Rüger <mrueg@gentoo.org> +text-1.2.3-r1.ebuild:
+  Add ruby21 target.
 
   30 Aug 2013; Hans de Graaff <graaff@gentoo.org> text-1.2.3.ebuild:
   Also add ruby20, jruby.

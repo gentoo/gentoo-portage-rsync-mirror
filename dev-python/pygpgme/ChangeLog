@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygpgme
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.8 2013/06/30 15:57:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygpgme/ChangeLog,v 1.9 2013/12/28 18:33:27 aidecoe Exp $
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -pygpgme-0.3.ebuild:
+  Removed ebuild using deprecated distutils eclass.
 
   30 Jun 2013; Justin Lecher <jlec@gentoo.org> pygpgme-0.3-r1.ebuild:
   Reverted last change as it was unnecessary

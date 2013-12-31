@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/equalizer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/ChangeLog,v 1.1 2013/12/13 08:30:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/ChangeLog,v 1.2 2013/12/24 06:24:04 graaff Exp $
+
+*equalizer-0.0.9 (24 Dec 2013)
+
+  24 Dec 2013; Hans de Graaff <graaff@gentoo.org> +equalizer-0.0.9.ebuild:
+  Version bump.
 
 *equalizer-0.0.8 (13 Dec 2013)
 

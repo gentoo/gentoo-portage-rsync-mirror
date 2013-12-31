@@ -1,6 +1,15 @@
 # ChangeLog for app-shells/zsh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.228 2013/09/11 07:54:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.231 2013/12/23 15:43:53 pacho Exp $
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #65652
+
+*zsh-5.0.4 (23 Dec 2013)
+
+  23 Dec 2013; Tim Harder <radhermit@gentoo.org> +zsh-5.0.4.ebuild:
+  Version bump (bug #494786), add support for run-help data (bug #431402), and
+  skip zpty tests that require LEGACY_PTYS enabled on Linux.
 
   11 Sep 2013; Tim Harder <radhermit@gentoo.org> -zsh-5.0.2.ebuild:
   Remove old.

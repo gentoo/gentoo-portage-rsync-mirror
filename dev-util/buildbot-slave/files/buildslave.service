@@ -1,0 +1,12 @@
+[Unit]
+Description=buildbot slave instances
+After=local-fs.target network.target
+
+[Service]
+Type=forking
+User=buildbot
+ExecStart=/usr/bin/buildslave start /var/lib/buildslave
+ExecStop=/usr/bin/buildslave stop /var/lib/buildslave
+
+[Install]
+WantedBy=multi-user.target

@@ -1,7 +1,7 @@
-From 242de638a030e1fb3b467af182d985d7c3bbf185 Mon Sep 17 00:00:00 2001
+From 196ea5ab614e5357da48acf73a373f103e61ee0b Mon Sep 17 00:00:00 2001
 From: Alexandre Rostovtsev <tetromino@gentoo.org>
 Date: Mon, 2 Sep 2013 13:59:18 -0400
-Subject: [PATCH] gobject: try to link with -Wl,-z,nodelete
+Subject: [PATCH 4/4] gobject: try to link with -Wl,-z,nodelete
 
 Since the type system does not support reloading its data and assumes
 that libgobject remains loaded for the lifetime of the process, we
@@ -14,10 +14,10 @@ https://bugzilla.gnome.org/show_bug.cgi?id=707298
  2 files changed, 25 insertions(+)
 
 diff --git a/configure.ac b/configure.ac
-index 0a63601..dd1045a 100644
+index 907c534..266c45d 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -3668,6 +3668,30 @@ fi
+@@ -3669,6 +3669,30 @@ fi
  AC_SUBST(GLIB_LINK_FLAGS)
  
  dnl

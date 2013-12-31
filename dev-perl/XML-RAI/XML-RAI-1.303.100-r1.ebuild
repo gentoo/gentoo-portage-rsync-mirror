@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/XML-RAI-1.303.100-r1.ebuild,v 1.1 2013/09/14 14:47:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RAI/XML-RAI-1.303.100-r1.ebuild,v 1.2 2013/12/29 13:37:14 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="RSS Abstraction Interface."
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do parallel"

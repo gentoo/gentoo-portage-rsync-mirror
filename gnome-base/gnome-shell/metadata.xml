@@ -9,7 +9,5 @@
 		enabling this flag will become your setup to be fully
 		unsupported by upstream and downstream Gnome team. Do not
 		try to enable it unless completely needed</flag>
-	<flag name="systemd">Use <pkg>sys-apps/systemd</pkg> instead of
-		<pkg>sys-auth/consolekit</pkg> for session tracking</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.201 2013/12/10 09:58:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.202 2013/12/26 14:46:55 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> inkscape-0.48.4-r1.ebuild:
+  add ~arm, bug #488594
 
   10 Dec 2013; Lars Wendler <polynomial-c@gentoo.org>
   inkscape-0.48.4-r1.ebuild:

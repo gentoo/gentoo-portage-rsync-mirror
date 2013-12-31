@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ecdsa
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.10 2013/12/03 17:03:46 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ecdsa/ChangeLog,v 1.12 2013/12/29 17:16:00 maekke Exp $
+
+  29 Dec 2013; Markus Meier <maekke@gentoo.org> ecdsa-0.10.ebuild:
+  add ~arm, bug #490374
+
+  29 Dec 2013; Akinori Hattori <hattya@gentoo.org> ecdsa-0.10.ebuild:
+  keyword ~ia64 wrt bug #490374
 
   03 Dec 2013; Naohiro Aota <naota@gentoo.org> ecdsa-0.10.ebuild:
   Add ~x86-fbsd.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.7.ebuild,v 1.4 2013/12/21 18:18:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.7.ebuild,v 1.11 2013/12/30 09:12:23 mgorny Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-3 CC-BY-SA-3.0" # See README for reasoning.
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc sse sse2"
 
 RDEPEND=">=dev-libs/glib-2.28
@@ -22,6 +22,8 @@ RDEPEND=">=dev-libs/glib-2.28
 	sys-libs/zlib:="
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-build.patch

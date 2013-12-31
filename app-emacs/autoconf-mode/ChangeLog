@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/autoconf-mode
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.49 2013/06/02 08:43:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/autoconf-mode/ChangeLog,v 1.50 2013/12/29 12:30:20 ulm Exp $
+
+  29 Dec 2013; Ulrich Müller <ulm@gentoo.org> -autoconf-mode-2.68.ebuild,
+  autoconf-mode-2.69.ebuild:
+  Specify LICENSE more precisely. Drop sparc-fbsd keyword. Drop to unstable
+  keyword on s390 and sh. Remove old.
 
   02 Jun 2013; Agostino Sarubbo <ago@gentoo.org> autoconf-mode-2.69.ebuild:
   Stable for sh, wrt bug #441064

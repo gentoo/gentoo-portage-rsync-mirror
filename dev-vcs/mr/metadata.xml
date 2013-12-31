@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>tove@gentoo.org</email>
+		<email>dastergon@gentoo.org</email>
+		<name>Pavlos Ratis</name>
 	</maintainer>
 	<longdescription lang="en">
 		The mr(1) command can checkout, update, or perform other actions on a

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.148 2013/08/09 17:47:34 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.149 2013/12/25 10:28:30 ssuominen Exp $
+
+  25 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml,
+  ntfs3g-2013.1.13.ebuild:
+  Rename USE="crypt" to USE="ntfsdecrypt" which /most/ people don't need.
 
   09 Aug 2013; Patrick McLean <chutzpah@gentoo.org> ntfs3g-2013.1.13.ebuild:
   Add die in pkg_pretend when attempting to build with gold (bug #450024),

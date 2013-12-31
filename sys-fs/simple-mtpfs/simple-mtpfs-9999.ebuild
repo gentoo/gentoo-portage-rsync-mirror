@@ -1,15 +1,16 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/simple-mtpfs/simple-mtpfs-9999.ebuild,v 1.1 2013/04/06 07:28:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/simple-mtpfs/simple-mtpfs-9999.ebuild,v 1.2 2013/12/29 17:16:47 scarabeus Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://github.com/phatina/${PN}.git"
-inherit autotools-utils eutils git-2
+inherit autotools-utils eutils
+[[ ${PV} == 9999 ]] && inherit git-r3
 
 DESCRIPTION="Simple MTP fuse filesystem driver"
 HOMEPAGE="https://github.com/phatina/simple-mtpfs"
-[[ ${PV} == 9999 ]] || SRC_URI="mirror://github/phatina/${PN}/${P}.tar.gz"
+[[ ${PV} == 9999 ]] || SRC_URI="https://github.com/phatina/${PN}/archive/${P}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -23,5 +24,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
+
+[[ ${PV} == 9999 ]] || S="${WORKDIR}/${PN}-${P}"
 
 AUTOTOOLS_AUTORECONF=1

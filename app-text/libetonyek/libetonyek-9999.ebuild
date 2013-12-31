@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/libetonyek-9999.ebuild,v 1.1 2013/11/01 10:03:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libetonyek/libetonyek-9999.ebuild,v 1.2 2013/12/27 08:53:04 scarabeus Exp $
 
 EAPI=5
 
@@ -16,12 +16,11 @@ LICENSE="|| ( GPL-2+ LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
-IUSE="doc static-libs"
+IUSE="doc static-libs test"
 
 RDEPEND="
 	app-text/libwpd:0.9
-	app-text/libwpg:0.2
-	dev-libs/icu:=
+	dev-libs/boost:=
 	dev-libs/libxml2
 	sys-libs/zlib
 "
@@ -31,6 +30,7 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen )
+	test? ( dev-util/cppunit )
 "
 
 src_prepare() {

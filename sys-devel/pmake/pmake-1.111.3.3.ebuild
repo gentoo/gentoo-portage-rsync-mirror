@@ -1,10 +1,10 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.3.ebuild,v 1.1 2013/08/10 14:28:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.3.ebuild,v 1.2 2013/12/25 23:33:22 naota Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs versionator
+inherit eutils toolchain-funcs versionator linux-info
 
 MY_P="${PN}-$(get_version_component_range 1-2)"
 DEBIAN_SOURCE="${PN}_$(get_version_component_range 1-2).orig.tar.gz"

@@ -1,6 +1,21 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.89 2013/12/21 18:19:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.94 2013/12/25 09:39:38 maekke Exp $
+
+  25 Dec 2013; Markus Meier <maekke@gentoo.org> emacs-common-gentoo-1.4.ebuild:
+  arm stable, bug #494584
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> emacs-common-gentoo-1.4.ebuild:
+  Stable for x86, wrt bug #494584
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> emacs-common-gentoo-1.4.ebuild:
+  Stable for sparc, wrt bug #494584
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> emacs-common-gentoo-1.4.ebuild:
+  amd64 stable, bug #494584
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> emacs-common-gentoo-1.4.ebuild:
+  Stable for ppc64, wrt bug #494584
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> emacs-common-gentoo-1.4.ebuild:
   Stable for ppc, wrt bug #494584

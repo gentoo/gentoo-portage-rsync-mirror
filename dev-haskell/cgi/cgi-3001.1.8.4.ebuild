@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/cgi-3001.1.8.4.ebuild,v 1.1 2013/09/13 05:35:24 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/cgi-3001.1.8.4.ebuild,v 1.3 2013/12/24 12:57:12 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 IUSE="+extensible-exceptions-in-base"
 
 RDEPEND="dev-haskell/monadcatchio-mtl:=[profile?]

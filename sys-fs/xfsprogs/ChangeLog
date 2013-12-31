@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.166 2013/10/18 08:17:44 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.167 2013/12/25 08:49:36 vapier Exp $
+
+*xfsprogs-3.1.11-r1 (25 Dec 2013)
+
+  25 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/xfsprogs-3.1.11-sharedlibs.patch, +xfsprogs-3.1.11-r1.ebuild:
+  Install extra headers for libxfs #486514 by Stefan Reimer. Rewrite shared lib
+  installs to only use libtool to avoid rpath issues.
 
 *xfsprogs-3.1.11 (18 Oct 2013)
 

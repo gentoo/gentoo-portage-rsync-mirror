@@ -1,5 +1,5 @@
 DEFINED_PHASES=install prepare
-DEPEND=>=net-analyzer/nagios-plugins-1.4.13-r1 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=net-analyzer/nagios-plugins-1.4.13-r1 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=A nagios plugin for checking MySQL server health
 EAPI=2
 HOMEPAGE=http://labs.consol.de/lang/de/nagios/check_mysql_health/
@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=net-analyzer/nagios-plugins-1.4.13-r1 virtual/mysql
 SLOT=0
 SRC_URI=http://labs.consol.de/wp-content/uploads/2010/12/check_mysql_health-2.1.5.tar.gz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=8441e9c690f5f6a8dfa798546e356ff4

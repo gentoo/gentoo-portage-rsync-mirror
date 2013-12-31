@@ -20,6 +20,8 @@ applications not using gio to access the gvfs filesystems.
 	<flag name="gdu">Enable <pkg>sys-apps/gnome-disk-utility</pkg> integration</flag>
 	<flag name="gnome-online-accounts">Enable configuration panel for <pkg>net-libs/gnome-online-accounts</pkg> accounts</flag>
 	<flag name="http">Enable the HTTP/DAV backend using <pkg>net-libs/libsoup-gnome</pkg></flag>
+	<flag name="libsecret">Enable <pkg>app-crypt/libsecret</pkg> support
+		to store login credentials.</flag>
 	<flag name="udev">Enable udev base replacement code for cdda feature</flag>
 	<flag name="udisks">Enable volume monitoring using <pkg>sys-fs/udisks</pkg></flag>
 </use>

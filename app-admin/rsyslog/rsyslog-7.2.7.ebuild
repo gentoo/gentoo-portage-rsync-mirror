@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.2.7.ebuild,v 1.6 2013/11/18 14:19:04 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-7.2.7.ebuild,v 1.8 2013/12/24 12:21:31 ultrabug Exp $
 
 EAPI=4
 AUTOTOOLS_AUTORECONF=yes
@@ -20,6 +20,7 @@ RDEPEND="
 	dev-libs/json-c
 	dev-libs/libee
 	>=dev-libs/libestr-0.1.5
+	dev-libs/libgcrypt
 	dev-libs/liblognorm
 	dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
@@ -29,8 +30,8 @@ RDEPEND="
 	oracle? ( dev-db/oracle-instantclient-basic )
 	relp? ( >=dev-libs/librelp-1.0.1 )
 	snmp? ( net-analyzer/net-snmp )
-	ssl? ( net-libs/gnutls dev-libs/libgcrypt )
-	zeromq? ( net-libs/czmq )
+	ssl? ( net-libs/gnutls )
+	zeromq? ( >=net-libs/zeromq-3 <net-libs/czmq-2 )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

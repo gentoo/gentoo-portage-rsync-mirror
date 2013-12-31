@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-15.ebuild,v 1.7 2013/12/08 18:22:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/kmod-15.ebuild,v 1.8 2013/12/27 21:40:06 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils libtool multilib toolchain-funcs versionator
@@ -38,8 +38,10 @@ DEPEND="${RDEPEND}
 	zlib? ( virtual/pkgconfig )"
 
 pkg_setup() {
-	[[ $(tc-getCPP) == *cpp ]] && ! version_is_at_least 4.6 $(gcc-version) && \
-		die "You need at least GNU GCC 4.6.x to build this package." #481020
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		[[ $(tc-getCPP) == *cpp ]] && ! version_is_at_least 4.6 $(gcc-version) && \
+			die "You need at least GNU GCC 4.6.x to build this package." #481020
+	fi
 }
 
 src_prepare() {

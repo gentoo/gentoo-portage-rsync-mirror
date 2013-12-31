@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/libgcrypt dev-libs/libgpg-error
+DESCRIPTION=Open implementation of the Advanced Access Content System (AACS) specification
+EAPI=5
+HOMEPAGE=http://www.videolan.org/developers/libaacs.html
+IUSE=static-libs
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd
+LICENSE=LGPL-2.1
+RDEPEND=dev-libs/libgcrypt dev-libs/libgpg-error
+SLOT=0
+SRC_URI=ftp://ftp.videolan.org/pub/videolan/libaacs/0.7.0/libaacs-0.7.0.tar.bz2
+_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=ec3c38472fa3104098cb2f3ba3f63571

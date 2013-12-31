@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyelftools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.14 2013/12/07 09:53:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.16 2013/12/25 09:33:43 patrick Exp $
+
+  25 Dec 2013; Patrick Lauer <patrick@gentoo.org> pyelftools-0.21-r4.ebuild:
+  Remove bogus stable keyword
+
+  23 Dec 2013; Mike Frysinger <vapier@gentoo.org> pyelftools-0.21-r4.ebuild:
+  Stabilize for all #488682.
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> pyelftools-0.21-r4.ebuild:
   x86 stable, bug #488682

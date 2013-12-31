@@ -17,7 +17,6 @@
 		<flag name='ap'>Add support for access point mode</flag>
 		<flag name='eap-sim'>Add support for EAP-SIM authentication algorithm</flag>
 		<flag name='fasteap'>Add support for FAST-EAP authentication algorithm</flag>
-		<flag name='madwifi'>Add support for madwifi (Atheros chipset)</flag>
 		<flag name='p2p'>Add support for Wi-Fi Direct mode</flag>
 		<flag name='ps3'>Add support for ps3 hypervisor driven gelic wifi</flag>
 		<flag name='wps'>Add support for Wi-Fi Protected Setup</flag>

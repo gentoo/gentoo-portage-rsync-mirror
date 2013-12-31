@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.109 2013/05/03 12:45:06 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.110 2013/12/24 13:38:03 zlogene Exp $
+
+  24 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  +files/Moose-2.60.400-cmop-package-stash.patch, -Moose-2.40.200.ebuild,
+  Moose-2.60.400.ebuild:
+  Fix tests failure wrt bug #495032; Drop old.
 
   03 May 2013; Vicente Olivert Riera <vincent@gentoo.org> Moose-2.60.400.ebuild:
   respect CFLAGS fix, wrt bug #448536

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.151 2013/09/05 05:06:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.152 2013/12/31 00:30:11 vapier Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ case ${PV} in
 9999)
 	EGIT_REPO_URI="git://github.com/xbmc/xbmc.git"
 	inherit git-2
-	SRC_URI="!java? ( mirror://gentoo/${P}-20130413-generated-addons.tar.xz )"
+	#SRC_URI="!java? ( mirror://gentoo/${P}-20130413-generated-addons.tar.xz )"
 	;;
 *_alpha*|*_beta*|*_rc*)
 	MY_PV="Frodo_${PV#*_}"
@@ -133,6 +133,9 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/cmake
 	x86? ( dev-lang/nasm )
 	java? ( virtual/jre )"
+# Force java for latest git version to avoid having to hand maintain the
+# generated addons package.  #488118
+[[ ${PV} == "9999" ]] && DEPEND+=" virtual/jre"
 
 S=${WORKDIR}/${MY_P}
 
@@ -195,7 +198,7 @@ src_prepare() {
 	epatch_user #293109
 
 	# Tweak autotool timestamps to avoid regeneration
-	find . -type f -print0 | xargs -0 touch -r configure
+	find . -type f -exec touch -r configure {} +
 }
 
 src_configure() {
@@ -206,7 +209,7 @@ src_configure() {
 	# No configure flage for this #403561
 	export ac_cv_lib_bluetooth_hci_devid=$(usex bluetooth)
 	# Requiring java is asine #434662
-	export ac_cv_path_JAVA_EXE=$(which $(usex java java true))
+	[[ ${PV} != "9999" ]] && export ac_cv_path_JAVA_EXE=$(which $(usex java java true))
 
 	econf \
 		--docdir=/usr/share/doc/${PF} \

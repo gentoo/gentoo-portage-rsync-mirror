@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-9999.ebuild,v 1.2 2013/08/09 13:42:13 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/freewrl-9999.ebuild,v 1.3 2013/12/23 16:20:49 axs Exp $
 
 EAPI=5
 
@@ -70,13 +70,15 @@ src_configure() {
 	# list of js libs without .pc support, to disable ./configure auto-checking
 	local spidermonkeys=( mozilla-js xulrunner-js firefox-js firefox2-js seamonkey-js )
 	# list of .pc supported spidermonkeys, to disable ./configure auto-checking
-	local spidermonkeys_pc=( mozjs17 mozjs187 mozjs185 )
+	local spidermonkeys_pc=( mozjs187 mozjs185 )
 
 	local myconf="--enable-fontconfig
 		--without-expat
+		--without-glu
 		--with-x
 		--with-imageconvert=/usr/bin/convert
 		--with-unzip=/usr/bin/unzip
+		--disable-mozjs-17.0
 		${spidermonkeys[@]/#/ --disable-}"
 
 	if has_version "<dev-lang/spidermonkey-1.8.5" ; then
@@ -111,7 +113,7 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable sox sound) \
 		$(usex sox "--with-soundconv=/usr/bin/sox") \
-		$(usex motif "--with-target=motif" "--with-target=X11") \
+		$(usex motif "--with-target=motif" "--with-target=x11") \
 		$(usex motif "--with-statusbar=standard" "--with-statusbar=hud")
 }
 

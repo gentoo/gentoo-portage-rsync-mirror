@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3dXft/libXaw3dXft-1.6.2b.ebuild,v 1.2 2013/12/10 10:34:49 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw3dXft/libXaw3dXft-1.6.2b.ebuild,v 1.3 2013/12/24 12:58:24 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="Xaw3dXft library"
 HOMEPAGE="http://sourceforge.net/projects/sf-xpaint"
 SRC_URI="mirror://sourceforge/sf-xpaint/${P}.tar.bz2"
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="unicode xpm"
 
 RDEPEND="x11-libs/libX11

@@ -12,6 +12,7 @@
 			as regular USB HID devices, but needs them to be
 			paired before enabling this, otherwise they won't be
 			detected</flag>
+    <flag name="obex">Enable OBEX transfer support.</flag>
   </use>
   <upstream>
     <remote-id type="cpe">cpe:/a:bluez:bluez</remote-id>

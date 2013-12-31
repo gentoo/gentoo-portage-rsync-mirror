@@ -1,0 +1,12 @@
+diff --git a/Gemfile b/Gemfile
+index 320c73c..a15b392 100644
+--- a/Gemfile
++++ b/Gemfile
+@@ -8,6 +8,7 @@ group :default do
+   gem 'memoize'
+   gem 'ruby-hmac'
+   gem 'typed-array'
++  gem 'cairo'
+ end
+ 
+ group :test do

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.8.0.ebuild,v 1.10 2013/11/07 03:29:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.8.0.ebuild,v 1.11 2013/12/23 21:36:09 dirtyepic Exp $
 
 PATCH_VER="1.3"
 UCLIBC_VER="1.0"
@@ -47,25 +47,4 @@ src_unpack() {
 	use vanilla && return 0
 
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
-}
-
-pkg_setup() {
-	toolchain_pkg_setup
-
-	if use lto ; then
-		ewarn
-		ewarn "LTO support is still experimental and unstable.  Any bug reports"
-		ewarn "about LTO that do not include an upstream patch will be closed as"
-		ewarn "invalid."
-		ewarn
-	fi
-}
-
-pkg_postinst() {
-	toolchain_pkg_postinst
-
-	elog
-	elog "Packages failing to build with GCC 4.8 are tracked at"
-	elog "https://bugs.gentoo.org/461954"
-	elog
 }

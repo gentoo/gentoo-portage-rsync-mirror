@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/guayadeque
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/ChangeLog,v 1.21 2013/07/18 06:11:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/ChangeLog,v 1.23 2013/12/29 13:35:47 jlec Exp $
+
+  29 Dec 2013; Justin Lecher <jlec@gentoo.org> guayadeque-0.3.6_pre1887.ebuild:
+  Fix USE=minimal, #496366
+
+*guayadeque-0.3.6_pre1887 (28 Dec 2013)
+
+  28 Dec 2013; Justin Lecher <jlec@gentoo.org>
+  +guayadeque-0.3.6_pre1887.ebuild,
+  +files/guayadeque-0.3.6_pre1887-underlinking.patch:
+  Version Bump; unbundle wxsqlite; handle (optional) gstreamer support, #482012
 
   18 Jul 2013; Justin Lecher <jlec@gentoo.org> guayadeque-0.3.5.ebuild,
   metadata.xml:

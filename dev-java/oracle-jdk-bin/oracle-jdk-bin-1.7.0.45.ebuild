@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.45.ebuild,v 1.4 2013/10/27 09:56:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.45.ebuild,v 1.5 2013/12/25 13:36:20 grobian Exp $
 
 EAPI="5"
 
@@ -11,10 +11,10 @@ JDK_URI="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-
 JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html"
 # This is a list of archs supported by this update.
 # Currently arm comes and goes.
-AT_AVAILABLE=( amd64 arm x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
+AT_AVAILABLE=( amd64 arm x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris x86-macos x64-macos )
 # Sometimes some or all of the demos are missing, this is to not have to rewrite half
 # the ebuild when it happens.
-DEMOS_AVAILABLE=( amd64 arm x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris )
+DEMOS_AVAILABLE=( amd64 arm x86 x64-solaris x86-solaris sparc-solaris sparc64-solaris x86-macos x64-macos )
 FX_VERSION="2_2_45"
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
@@ -27,6 +27,8 @@ AT_x86_solaris="jdk-${MY_PV}-solaris-i586.tar.gz"
 AT_x64_solaris="${AT_x86_solaris} jdk-${MY_PV}-solaris-x64.tar.gz"
 AT_sparc_solaris="jdk-${MY_PV}-solaris-sparc.tar.gz"
 AT_sparc64_solaris="${AT_sparc_solaris} jdk-${MY_PV}-solaris-sparcv9.tar.gz"
+AT_x86_macos="jdk-${MY_PV}-macosx-x64.dmg"
+AT_x64_macos="jdk-${MY_PV}-macosx-x64.dmg"
 
 FXDEMOS_linux="javafx_samples-${FX_VERSION}-linux.zip"
 
@@ -37,6 +39,8 @@ DEMOS_x86_solaris="jdk-${MY_PV}-solaris-i586-demos.tar.gz"
 DEMOS_x64_solaris="${DEMOS_x86_solaris} jdk-${MY_PV}-solaris-x64-demos.tar.gz"
 DEMOS_sparc_solaris="jdk-${MY_PV}-solaris-sparc-demos.tar.gz"
 DEMOS_sparc64_solaris="${DEMOS_sparc_solaris} jdk-${MY_PV}-solaris-sparcv9-demos.tar.gz"
+DEMOS_x86_macos="jdk-${MY_PV}-macosx-x86_64-demos.tar.gz"
+DEMOS_x64_macos="jdk-${MY_PV}-macosx-x86_64-demos.tar.gz"
 
 JCE_DIR="UnlimitedJCEPolicy"
 JCE_FILE="${JCE_DIR}JDK7.zip"
@@ -56,20 +60,20 @@ SRC_URI+=" jce? ( ${JCE_FILE} )"
 
 LICENSE="Oracle-BCLA-JavaSE examples? ( BSD )"
 SLOT="1.7"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="+X alsa derby doc examples +fontconfig jce nsplugin pax_kernel source"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+IUSE="+X alsa aqua derby doc examples +fontconfig jce nsplugin pax_kernel source"
 
 RESTRICT="fetch strip"
 QA_PREBUILT="*"
 
 RDEPEND="
-	X? (
+	X? ( !aqua? (
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/libXrender
 		x11-libs/libXtst
-	)
+	) )
 	alsa? ( media-libs/alsa-lib )
 	doc? ( dev-java/java-sdk-docs:1.7 )
 	fontconfig? ( media-libs/fontconfig )
@@ -130,6 +134,16 @@ src_unpack() {
 		fi
 		use examples && unpack javafx_samples-${FX_VERSION}-linux.zip
 		use jce && unpack ${JCE_FILE}
+	elif use x86-macos || use x64-macos ; then
+		pushd "${T}" > /dev/null
+		mkdir dmgmount
+		hdiutil attach "${DISTDIR}"/jdk-${MY_PV}-macosx-x64.dmg \
+			-mountpoint "${T}"/dmgmount
+		xar -xf dmgmount/JDK\ $(get_version_component_range 2)\ Update\ $(get_version_component_range 4).pkg
+		hdiutil detach "${T}"/dmgmount
+		zcat jdk1${MY_PV/u/0}.pkg/Payload | cpio -idv
+		mv Contents/Home "${S}"
+		popd > /dev/null
 	else
 		default
 	fi
@@ -223,19 +237,22 @@ src_install() {
 		cp src.zip "${ddest}" || die
 	fi
 
-	# Install desktop file for the Java Control Panel.
-	# Using ${PN}-${SLOT} to prevent file collision with jre and or other slots.
-	# make_desktop_entry can't be used as ${P} would end up in filename.
-	newicon jre/lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png \
-		sun-jcontrol-${PN}-${SLOT}.png || die
-	sed -e "s#Name=.*#Name=Java Control Panel for Oracle JDK ${SLOT}#" \
-		-e "s#Exec=.*#Exec=/opt/${P}/jre/bin/jcontrol#" \
-		-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}#" \
-		-e "s#Application;##" \
-		-e "/Encoding/d" \
-		jre/lib/desktop/applications/sun_java.desktop \
-		> "${T}"/jcontrol-${PN}-${SLOT}.desktop || die
-	domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
+	if use !x86-macos && use !x64-macos ; then
+		# Install desktop file for the Java Control Panel.
+		# Using ${PN}-${SLOT} to prevent file collision with jre and or
+		# other slots.  make_desktop_entry can't be used as ${P} would
+		# end up in filename.
+		newicon jre/lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png \
+			sun-jcontrol-${PN}-${SLOT}.png || die
+		sed -e "s#Name=.*#Name=Java Control Panel for Oracle JDK ${SLOT}#" \
+			-e "s#Exec=.*#Exec=/opt/${P}/jre/bin/jcontrol#" \
+			-e "s#Icon=.*#Icon=sun-jcontrol-${PN}-${SLOT}#" \
+			-e "s#Application;##" \
+			-e "/Encoding/d" \
+			jre/lib/desktop/applications/sun_java.desktop \
+			> "${T}"/jcontrol-${PN}-${SLOT}.desktop || die
+		domenu "${T}"/jcontrol-${PN}-${SLOT}.desktop
+	fi
 
 	# Prune all fontconfig files so libfontconfig will be used and only install
 	# a Gentoo specific one if fontconfig is disabled.
@@ -250,6 +267,32 @@ src_install() {
 
 	# Remove empty dirs we might have copied
 	find "${D}" -type d -empty -exec rmdir -v {} + || die
+
+	if use x86-macos || use x64-macos ; then
+		# fix misc install_name issues
+		pushd "${ddest}"/jre/lib > /dev/null || die
+		local lib needed nlib npath
+		for lib in \
+				libJObjC libdecora-sse libglass libjavafx-{font,iio} \
+				libjfxmedia libjfxwebkit libprism-es2 ;
+		do
+			lib=${lib}.dylib
+			einfo "Fixing self-reference of ${lib}"
+			install_name_tool \
+				-id "${EPREFIX}${dest}/jre/lib/${lib}" \
+				"${lib}"
+		done
+		popd > /dev/null
+		for nlib in jdk1{5,6} ; do
+			install_name_tool -change \
+				/usr/lib/libgcc_s_ppc64.1.dylib \
+				$($(tc-getCC) -print-file-name=libgcc_s_ppc64.1.dylib) \
+				"${ddest}"/lib/visualvm/profiler/lib/deployed/${nlib}/mac/libprofilerinterface.jnilib
+			install_name_tool -id \
+				"${EPREFIX}${dest}"/lib/visualvm/profiler/lib/deployed/${nlib}/mac/libprofilerinterface.jnilib \
+				"${ddest}"/lib/visualvm/profiler/lib/deployed/${nlib}/mac/libprofilerinterface.jnilib
+		done
+	fi
 
 	set_java_env
 	java-vm_revdep-mask

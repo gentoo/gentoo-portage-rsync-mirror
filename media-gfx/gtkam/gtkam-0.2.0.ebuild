@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.2.0.ebuild,v 1.3 2013/12/08 19:07:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.2.0.ebuild,v 1.4 2013/12/28 16:14:31 pacho Exp $
 
-EAPI="4"
+EAPI=5
 GCONF_DEBUG="yes"
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="A frontend for gPhoto 2"
 HOMEPAGE="http://gphoto.org/proj/gtkam"
@@ -16,38 +16,43 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 IUSE="gimp gnome nls"
 
-# FIXME: why is exif not optional ?
-RDEPEND="x11-libs/gtk+:2
+RDEPEND="
+	x11-libs/gtk+:2
 	>=media-libs/libgphoto2-2.5.0
 	>=media-libs/libexif-0.3.2
 	media-libs/libexif-gtk
 	gimp? ( >=media-gfx/gimp-2 )
 	gnome? (
 		>=gnome-base/libbonobo-2
-		>=gnome-base/libgnomeui-2 )"
+		>=gnome-base/libgnomeui-2 )
+"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig
 	app-text/scrollkeeper
-	nls? ( >=sys-devel/gettext-0.14.1 )"
-
-pkg_setup() {
-	DOCS="AUTHORS CHANGES NEWS README TODO"
-	G2CONF="${G2CONF}
-		$(use_with gimp)
-		$(use_with gnome)
-		$(use_with gnome bonobo)
-		$(use_enable nls)
-		--disable-scrollkeeper
-		--with-rpmbuild=/bin/false"
-}
+	nls? ( >=sys-devel/gettext-0.14.1 )
+"
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix .desktop validity, bug #271569
 	epatch "${FILESDIR}/${PN}-0.1.18-desktop-validation.patch"
+
+	# Fix underlinking, bug #496136
+	epatch "${FILESDIR}/${PN}-0.2.0-underlinking.patch"
+
+	eautoreconf
+	gnome2_src_prepare
 }
+
+src_configure() {
+	gnome2_src_configure \
+		$(use_with gimp) \
+		$(use_with gnome) \
+		$(use_with gnome bonobo) \
+		$(use_enable nls) \
+		--with-rpmbuild=/bin/false
+}
+
 src_install() {
 	gnome2_src_install
 	rm -rf "${ED}"/usr/share/doc/gtkam || die "rm failed"

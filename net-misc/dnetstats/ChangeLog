@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dnetstats
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.9 2013/03/02 23:00:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.10 2013/12/24 20:50:35 pesa Exp $
+
+*dnetstats-1.2.6-r1 (24 Dec 2013)
+
+  24 Dec 2013; Davide Pesavento <pesa@gentoo.org> +dnetstats-1.2.6-r1.ebuild:
+  Replace gksu/kdesu usage with pkexec (bug 486452); drop silly dependency on
+  sudo; switch to EAPI 5.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> dnetstats-1.2.6.ebuild:
   Move Qt dependencies to the new category

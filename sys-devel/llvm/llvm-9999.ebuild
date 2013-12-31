@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.69 2013/12/20 21:50:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.74 2013/12/29 22:49:49 mgorny Exp $
 
 EAPI=5
 
@@ -26,15 +26,15 @@ COMMON_DEPEND="
 	clang? (
 		python? ( ${PYTHON_DEPS} )
 		static-analyzer? (
-			dev-lang/perl
+			dev-lang/perl:*
 			${PYTHON_DEPS}
 		)
 		xml? ( dev-libs/libxml2:2= )
 	)
-	gold? ( >=sys-devel/binutils-2.22[cxx] )
+	gold? ( >=sys-devel/binutils-2.22:*[cxx] )
 	libffi? ( virtual/libffi:0=[${MULTILIB_USEDEP}] )
 	ncurses? ( sys-libs/ncurses:5=[${MULTILIB_USEDEP}] )
-	ocaml? ( dev-lang/ocaml )
+	ocaml? ( dev-lang/ocaml:0= )
 	udis86? ( dev-libs/udis86:0=[pic(+),${MULTILIB_USEDEP}] )"
 DEPEND="${COMMON_DEPEND}
 	dev-lang/perl
@@ -46,7 +46,7 @@ DEPEND="${COMMON_DEPEND}
 		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
 	)
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
-	!kernel_Darwin? ( app-admin/chrpath )
+	clang? ( xml? ( virtual/pkgconfig ) )
 	libffi? ( virtual/pkgconfig )
 	${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
@@ -58,6 +58,11 @@ RDEPEND="${COMMON_DEPEND}
 # being exceeded. probably GC does not close them fast enough.
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	test? ( || ( $(python_gen_useflags 'python*') ) )"
+
+# Some people actually override that in make.conf. That sucks since
+# we need to run install per-directory, and ninja can't do that...
+# so why did it call itself ninja in the first place?
+CMAKE_MAKEFILE_GENERATOR=emake
 
 pkg_pretend() {
 	# in megs
@@ -196,7 +201,7 @@ multilib_src_configure() {
 		conf_flags+=( --with-clang-resource-dir=../lib/clang/3.5 )
 	fi
 	# well, it's used only by clang executable c-index-test
-	if multilib_build_binaries && use xml; then
+	if multilib_build_binaries && use clang && use xml; then
 		conf_flags+=( XML2CONFIG="$(tc-getPKG_CONFIG) libxml-2.0" )
 	else
 		conf_flags+=( ac_cv_prog_XML2CONFIG="" )
@@ -272,14 +277,21 @@ set_makeargs() {
 		use clang && tools+=( clang )
 
 		if multilib_build_binaries; then
-			use gold && tools+=( gold )
 			tools+=(
 				opt llvm-as llvm-dis llc llvm-ar llvm-nm llvm-link lli
 				llvm-extract llvm-mc llvm-bcanalyzer llvm-diff macho-dump
 				llvm-objdump llvm-readobj llvm-rtdyld llvm-dwarfdump llvm-cov
 				llvm-size llvm-stress llvm-mcmarkup llvm-symbolizer obj2yaml
-				yaml2obj lto llvm-lto
+				yaml2obj lto bugpoint
 			)
+
+			# those tools require 'lto' built first, so we need to delay
+			# building them to a second run
+			if [[ ${1} != -1 ]]; then
+				tools+=( llvm-lto )
+
+				use gold && tools+=( gold )
+			fi
 		fi
 
 		MAKEARGS+=(
@@ -294,11 +306,13 @@ set_makeargs() {
 
 multilib_src_compile() {
 	local MAKEARGS
-	set_makeargs
-
+	set_makeargs -1
 	emake "${MAKEARGS[@]}"
 
 	if multilib_build_binaries; then
+		set_makeargs
+		emake -C tools "${MAKEARGS[@]}"
+
 		emake -C "${S}"/docs -f Makefile.sphinx man
 		use clang && emake -C "${S}"/tools/clang/docs/tools \
 			BUILD_FOR_WEBSITE=1 DST_MAN_DIR="${T}"/ man
@@ -348,11 +362,22 @@ multilib_src_install() {
 
 	emake "${MAKEARGS[@]}" DESTDIR="${D}" install
 
-	if multilib_build_binaries; then
+	# Preserve ABI-variant of llvm-config.
+	dodir /tmp
+	mv "${ED}"/usr/bin/llvm-config "${ED}"/tmp/"${CHOST}"-llvm-config || die
+
+	if ! multilib_build_binaries; then
+		# Drop all the executables since LLVM doesn't like to
+		# clobber when installing.
+		rm -r "${ED}"/usr/bin || die
+
+		# Backwards compat, will be happily removed someday.
+		dosym "${CHOST}"-llvm-config /tmp/llvm-config.${ABI}
+	else
 		# Move files back.
-		if path_exists -o "${ED}"/tmp/llvm-config.*; then
-			mv "${ED}"/tmp/llvm-config.* "${ED}"/usr/bin || die
-		fi
+		mv "${ED}"/tmp/*llvm-config* "${ED}"/usr/bin || die
+		# Create a symlink for host's llvm-config.
+		dosym "${CHOST}"-llvm-config /usr/bin/llvm-config
 
 		# Install docs.
 		doman "${S}"/docs/_build/man/*.1
@@ -360,19 +385,14 @@ multilib_src_install() {
 		use doc && dohtml -r "${S}"/docs/_build/html/
 
 		# Symlink the gold plugin.
-		dodir /usr/${CHOST}/binutils-bin/lib/bfd-plugins
-		dosym ../../../../$(get_libdir)/LLVMgold.so \
-			/usr/${CHOST}/binutils-bin/lib/bfd-plugins/LLVMgold.so
+		if use gold; then
+			dodir /usr/${CHOST}/binutils-bin/lib/bfd-plugins
+			dosym ../../../../$(get_libdir)/LLVMgold.so \
+				/usr/${CHOST}/binutils-bin/lib/bfd-plugins/LLVMgold.so
+		fi
 
 		# install cmake modules
 		emake -C "${S%/}"_cmake/cmake/modules DESTDIR="${D}" install
-	else
-		# Preserve ABI-variant of llvm-config,
-		# then drop all the executables since LLVM doesn't like to
-		# clobber when installing.
-		mkdir -p "${ED}"/tmp || die
-		mv "${ED}"/usr/bin/llvm-config "${ED}"/tmp/llvm-config.${ABI} || die
-		rm -r "${ED}"/usr/bin || die
 	fi
 
 	# Fix install_names on Darwin.  The build system is too complicated

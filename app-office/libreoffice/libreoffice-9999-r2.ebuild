@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.202 2013/11/15 14:15:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.205 2013/12/27 18:15:15 dilfridge Exp $
 
 EAPI=5
 
@@ -448,7 +448,7 @@ src_configure() {
 		--enable-randr \
 		--enable-randr-link \
 		--enable-release-build \
-		--enable-hardlink-deliver \
+		--disable-hardlink-deliver \
 		--disable-ccache \
 		--disable-crashdump \
 		--disable-dependency-tracking \
@@ -549,6 +549,7 @@ src_install() {
 	if use branding; then
 		insinto /usr/$(get_libdir)/${PN}/program
 		newins "${WORKDIR}/branding-sofficerc" sofficerc
+		echo "CONFIG_PROTECT=/usr/$(get_libdir)/${PN}/program/sofficerc" > "${ED}"/etc/env.d/99${PN}
 	fi
 
 	# symlink the nsplugin to proper location
@@ -562,6 +563,9 @@ src_install() {
 
 	# Remove desktop files for support to old installs that can't parse mime
 	rm -rf "${ED}"/usr/share/mimelnk/
+
+	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
+	pax-mark -m "${ED}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin
 }
 
 pkg_preinst() {
@@ -571,9 +575,6 @@ pkg_preinst() {
 
 pkg_postinst() {
 	kde4-base_pkg_postinst
-
-	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/soffice.bin
-	pax-mark -m "${EPREFIX}"/usr/$(get_libdir)/libreoffice/program/unopkg.bin
 
 	use java || \
 		ewarn 'If you plan to use lbase application you should enable java or you will get various crashes.'

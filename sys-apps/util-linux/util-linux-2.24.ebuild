@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.ebuild,v 1.4 2013/11/28 20:41:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.ebuild,v 1.5 2013/12/22 23:21:56 vapier Exp $
 
 EAPI="4"
 
@@ -60,6 +60,7 @@ src_prepare() {
 		po/update-potfiles
 		eautoreconf
 	fi
+	epatch "${FILESDIR}"/${PN}-2.24-skip-last-tests.patch #491742
 	elibtoolize
 }
 
@@ -111,6 +112,10 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_with udev) \
 		$(tc-has-tls || echo --disable-tls)
+}
+
+src_test() {
+	emake check
 }
 
 src_install() {

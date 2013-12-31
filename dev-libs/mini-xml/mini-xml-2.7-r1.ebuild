@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.7-r1.ebuild,v 1.4 2013/03/26 18:17:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mini-xml/mini-xml-2.7-r1.ebuild,v 1.5 2013/12/26 18:38:30 dilfridge Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_P="${P/mini-xml/mxml}"
 
 DESCRIPTION="Small XML parsing library to read XML and XML-like data files"
 HOMEPAGE="http://www.minixml.org/"
-SRC_URI="mirror://easysw/mxml/${PV}/${MY_P}.tar.gz"
+SRC_URI="http://www.msweet.org/files/project3/${MY_P}.tar.gz"
 
 LICENSE="Mini-XML"
 SLOT="0"

@@ -1,11 +1,11 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.6.ebuild,v 1.3 2013/12/08 17:48:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.6.ebuild,v 1.4 2013/12/25 13:59:03 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2 python-single-r1
 

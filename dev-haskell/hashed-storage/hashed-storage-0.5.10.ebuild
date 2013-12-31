@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/hashed-storage-0.5.10.ebuild,v 1.3 2012/12/07 16:32:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/hashed-storage-0.5.10.ebuild,v 1.5 2013/12/24 12:57:24 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~ppc-macos ~x86-macos"
 IUSE="test"
 
 RDEPEND="dev-haskell/binary:=[profile?]

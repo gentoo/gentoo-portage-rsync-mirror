@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.53 2013/12/10 11:40:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.54 2013/12/22 11:03:46 radhermit Exp $
+
+*libbluray-0.5.0 (22 Dec 2013)
+
+  22 Dec 2013; Tim Harder <radhermit@gentoo.org> +libbluray-0.5.0.ebuild,
+  libbluray-9999.ebuild:
+  Version bump.
 
   10 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> libbluray-0.4.0.ebuild:
   Fixed compilation with >=media-libs/freetype-2.5.1 (bug #493594).

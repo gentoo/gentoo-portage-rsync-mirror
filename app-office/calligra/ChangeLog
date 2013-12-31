@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.102 2013/12/20 19:38:51 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.103 2013/12/31 08:46:39 maekke Exp $
+
+  31 Dec 2013; Markus Meier <maekke@gentoo.org> calligra-2.7.5.ebuild:
+  add ~arm, bug #490374
 
   20 Dec 2013; Johannes Huber <johu@gentoo.org> -calligra-2.7.4.ebuild:
   Remove old.

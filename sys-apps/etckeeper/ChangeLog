@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/etckeeper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.34 2013/12/19 15:36:56 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/etckeeper/ChangeLog,v 1.37 2013/12/24 14:25:30 mrueg Exp $
+
+  24 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -etckeeper-1.4.ebuild,
+  -etckeeper-1.7.ebuild, -etckeeper-1.9.ebuild,
+  -files/etckeeper-1.4-gentoo.patch:
+  Cleanup old.
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> etckeeper-1.10.ebuild:
+  Stable for x86, wrt bug #488404
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> etckeeper-1.10.ebuild:
+  amd64 stable, bug #488404
 
 *etckeeper-1.11 (19 Dec 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.179 2013/12/17 09:18:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.180 2013/12/31 02:25:30 vapier Exp $
+
+  31 Dec 2013; Mike Frysinger <vapier@gentoo.org> files/lesspipe.sh:
+  Fallback to rpm2tar when rpm is not available
 
 *less-462 (17 Dec 2013)
 

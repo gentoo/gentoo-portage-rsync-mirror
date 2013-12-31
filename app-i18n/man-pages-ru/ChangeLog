@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.42 2013/11/06 07:38:25 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.44 2013/12/27 19:35:00 zlogene Exp $
+
+  27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  man-pages-ru-3.54.2171.1790.20131020.ebuild:
+  amd64/x86 stable wrt bug #495336
+
+  27 Dec 2013; Jeroen Roovers <jer@gentoo.org>
+  man-pages-ru-3.54.2171.1790.20131020.ebuild:
+  Stable for HPPA (bug #495336).
 
 *man-pages-ru-3.54.2171.1790.20131020 (06 Nov 2013)
 

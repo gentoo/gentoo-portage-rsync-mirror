@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/gevent-zeromq
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-zeromq/ChangeLog,v 1.2 2013/03/17 16:00:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-zeromq/ChangeLog,v 1.3 2013/12/24 11:19:00 jlec Exp $
+
+*gevent-zeromq-0.2.5-r1 (24 Dec 2013)
+
+  24 Dec 2013; Justin Lecher <jlec@gentoo.org> +gevent-zeromq-0.2.5-r1.ebuild,
+  metadata.xml:
+  Bump to EAPI=5 and distutils-r1.eclass
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

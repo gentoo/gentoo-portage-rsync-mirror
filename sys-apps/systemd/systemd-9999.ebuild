@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.75 2013/12/04 03:06:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.76 2013/12/28 13:01:30 pacho Exp $
 
 EAPI=5
 
@@ -100,7 +100,7 @@ src_prepare() {
 #endif
 
 pkg_pretend() {
-	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS
+	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS ~DMIID
 		~EPOLL ~FANOTIFY ~FHANDLE ~INOTIFY_USER ~IPV6 ~NET ~PROC_FS
 		~SECCOMP ~SIGNALFD ~SYSFS ~TIMERFD
 		~!IDE ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
@@ -108,8 +108,17 @@ pkg_pretend() {
 
 	use acl && CONFIG_CHECK+=" ~TMPFS_POSIX_ACL"
 	use pam && CONFIG_CHECK+=" ~AUDITSYSCALL"
+	use xattr && CONFIG_CHECK+=" ~TMPFS_XATTR"
 	kernel_is -lt 3 7 && CONFIG_CHECK+=" ~HOTPLUG"
 	use firmware-loader || CONFIG_CHECK+=" ~!FW_LOADER_USER_HELPER"
+
+	if linux_config_exists; then
+		local uevent_helper_path=$(linux_chkconfig_string UEVENT_HELPER_PATH)
+			if [ -n "${uevent_helper_path}" ] && [ "${uevent_helper_path}" != '""' ]; then
+				ewarn "It's recommended to set an empty value to the following kernel config option:"
+				ewarn "CONFIG_UEVENT_HELPER_PATH=${uevent_helper_path}"
+			fi
+	fi
 
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		if [[ $(gcc-major-version) -lt 4

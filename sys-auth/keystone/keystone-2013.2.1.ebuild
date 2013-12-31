@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1.ebuild,v 1.2 2013/12/19 10:04:11 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1.ebuild,v 1.3 2013/12/22 09:07:49 idella4 Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ RDEPEND=">=dev-python/python-pam-0.1.4[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
 	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 	dev-python/oauth2[${PYTHON_USEDEP}]
-	>=dev-python/dogpile-cache-0.5.0[${PYTHON_USEDEP}]
+	>=dev-python/dogpile-cache-0.5.2[${PYTHON_USEDEP}]
 	dev-python/python-daemon[${PYTHON_USEDEP}]
 	virtual/python-argparse[${PYTHON_USEDEP}]
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}] )
@@ -88,10 +88,8 @@ python_prepare_all() {
 }
 
 python_test() {
-	# Ignore (naughty) test_.py files & 1 test that connect to the network
 	# https://bugs.launchpad.net/keystone/+bug/1262564
-	nosetests -I 'test_keystoneclient*' \
-		-e test_import || die "testsuite failed under python2.7"
+	nosetests || die "testsuite failed under python2.7"
 }
 
 python_install() {

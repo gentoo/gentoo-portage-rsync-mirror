@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Time-Local
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.78 2013/03/02 16:23:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Local/ChangeLog,v 1.79 2013/12/31 08:21:33 zlogene Exp $
+
+  31 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -Time-Local-1.19.01.ebuild:
+  Drop old
 
   02 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Time-Local-1.230.0.ebuild:
   Stable for sh, wrt bug #458122

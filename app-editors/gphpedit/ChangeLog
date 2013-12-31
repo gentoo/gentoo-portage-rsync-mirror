@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gphpedit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.29 2013/02/24 09:09:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gphpedit/ChangeLog,v 1.30 2013/12/27 22:01:31 tomwij Exp $
+
+  27 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  -files/gphpedit-0.9.91-empty-apply-prefs.patch,
+  -files/gphpedit-0.9.91-find_replace.patch:
+  [QA] Remove unused files.
 
   24 Feb 2013; Pacho Ramos <pacho@gentoo.org> -gphpedit-0.9.91-r1.ebuild:
   Drop old

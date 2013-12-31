@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdnav
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.71 2013/07/30 12:48:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.72 2013/12/29 16:15:35 polynomial-c Exp $
+
+*libdvdnav-4.2.1 (29 Dec 2013)
+
+  29 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> +libdvdnav-4.2.1.ebuild:
+  Version bump.
 
 *libdvdnav-4.2.0-r1 (30 Jul 2013)
 

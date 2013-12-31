@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/uptimed
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.97 2013/05/20 09:23:15 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/uptimed/ChangeLog,v 1.98 2013/12/22 08:29:03 pacho Exp $
+
+*uptimed-0.3.17-r2 (22 Dec 2013)
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> +uptimed-0.3.17-r2.ebuild,
+  -uptimed-0.3.17-r1.ebuild:
+  Revbump to prevent people from thinking this doesn't install a systemd unit
+  file while it does for a long time (#494706 by Roc Valles)
 
   20 May 2013; Fabio Erculiani <lxnay@gentoo.org> uptimed-0.3.17-r1.ebuild,
   +files/uptimed.service:

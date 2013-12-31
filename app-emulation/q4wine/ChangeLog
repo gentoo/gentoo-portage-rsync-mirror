@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.47 2013/12/17 21:31:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.49 2013/12/28 00:10:58 pesa Exp $
+
+  28 Dec 2013; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Cleanup
+
+*q4wine-1.1_p2-r1 (28 Dec 2013)
+
+  28 Dec 2013; Davide Pesavento <pesa@gentoo.org> +q4wine-1.1_p2-r1.ebuild,
+  -q4wine-1.0_p3-r1.ebuild, -q4wine-1.1.ebuild, -q4wine-1.1_p1.ebuild,
+  -q4wine-1.1_p2.ebuild:
+  Drop pointless gksu/kdesu dependency (bug 486442); major ebuild cleanup;
+  remove older versions.
 
 *q4wine-1.1_p2 (17 Dec 2013)
 

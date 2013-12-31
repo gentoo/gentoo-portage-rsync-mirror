@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.236 2013/12/15 12:04:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.237 2013/12/27 17:13:14 pinkbyte Exp $
+
+  27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Unmask 'context' USE-flag for dev-libs/boost
 
   15 Dec 2013; Michał Górny <mgorny@gentoo.org> package.use.mask:
   Mask mupen64plus new dynamic recompiler since it does not work on amd64.

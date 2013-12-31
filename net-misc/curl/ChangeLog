@@ -1,6 +1,36 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.307 2013/12/20 00:07:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.316 2013/12/27 16:49:47 blueness Exp $
+
+*curl-7.34.0-r1 (27 Dec 2013)
+
+  27 Dec 2013; Anthony G. Basile <blueness@gentoo.org> +curl-7.34.0-r1.ebuild,
+  +files/curl-7.34.0-fix-ipv6-failover.patch, -curl-7.34.0.ebuild:
+  Add patch for bug #495170
+
+  26 Dec 2013; Michał Górny <mgorny@gentoo.org> curl-7.34.0.ebuild:
+  Add epatch_user call to make patch testing easier.
+
+  26 Dec 2013; Anthony G. Basile <blueness@gentoo.org> -curl-7.31.0.ebuild:
+  Remove vulnerable version, bug #492688
+
+  26 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> curl-7.33.0.ebuild:
+  ia64 stable wrt bug #492688
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> curl-7.33.0.ebuild:
+  Stable for sparc, wrt bug #492688
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> curl-7.33.0.ebuild:
+  Stable for x86, wrt bug #492688
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> curl-7.33.0.ebuild:
+  Stable for alpha, wrt bug #492688
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> curl-7.33.0.ebuild:
+  amd64 stable, bug #492688
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org> curl-7.33.0.ebuild:
+  Stable arm, bug #492688
 
   20 Dec 2013; Anthony G. Basile <blueness@gentoo.org> curl-7.33.0.ebuild:
   Stable ppc, ppc64, bug #492688

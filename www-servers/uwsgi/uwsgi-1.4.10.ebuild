@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.10.ebuild,v 1.2 2013/10/07 11:42:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-1.4.10.ebuild,v 1.3 2013/12/26 10:40:43 ultrabug Exp $
 
 EAPI="5"
 PYTHON_DEPEND="python? *"
@@ -41,6 +41,7 @@ CDEPEND="caps? ( sys-libs/libcap )
 	php? (
 		php_targets_php5-3? ( dev-lang/php:5.3[embed] )
 		php_targets_php5-4? ( dev-lang/php:5.4[embed] )
+		php_targets_php5-5? ( dev-lang/php:5.5[embed] )
 	)
 	probepg? ( dev-db/postgresql-base:= )
 	ruby? ( $(ruby_implementations_depend) )

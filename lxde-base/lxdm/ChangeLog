@@ -1,6 +1,33 @@
 # ChangeLog for lxde-base/lxdm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.27 2013/12/13 20:34:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.32 2013/12/23 07:43:58 nullishzero Exp $
+
+*lxdm-0.4.1-r9 (23 Dec 2013)
+
+  23 Dec 2013; Pavel Kazakov <nullishzero@gentoo.org>
+  +files/lxdm-0.4.1-fix-optional-pam.patch, +lxdm-0.4.1-r9.ebuild:
+  Make pam a conditional subdirectory; bug #469512
+
+  22 Dec 2013; Markos Chandras <hwoarang@gentoo.org>
+  files/lxdm-0.4.1-optional-consolekit.patch:
+  Update git hashes for fixes regarding the optional consolekit support as
+  pointed out by upstream. Remove obsolete comment
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> +files/lxdm.service,
+  lxdm-0.4.1-r8.ebuild:
+  Add unit file (#488014)
+
+  22 Dec 2013; Markos Chandras <hwoarang@gentoo.org>
+  files/lxdm-0.4.1-optional-consolekit.patch:
+  fix typos
+
+*lxdm-0.4.1-r8 (22 Dec 2013)
+
+  22 Dec 2013; Markos Chandras <hwoarang@gentoo.org>
+  +files/lxdm-0.4.1-optional-consolekit.patch, +lxdm-0.4.1-r8.ebuild,
+  metadata.xml:
+  Add (and fix) upstream patch for optional consolekit support. Thanks to
+  Bombino <teknocratdefunct@riseup.net>. Bug #443666
 
   13 Dec 2013; Markos Chandras <hwoarang@gentoo.org> lxdm-0.4.1-r7.ebuild:
   Require automake-1.12. Bug #493996 thanks to piruthiviraj natarajan

@@ -1,6 +1,26 @@
 # ChangeLog for media-sound/umurmur
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/ChangeLog,v 1.8 2013/11/23 06:54:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umurmur/ChangeLog,v 1.13 2013/12/26 17:14:11 polynomial-c Exp $
+
+  26 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> umurmur-0.2.13.ebuild,
+  umurmur-0.2.13-r1.ebuild:
+  Re-added polarssl USE flag and have it package.use.mask-ed for now. Should
+  settle the complaints from qa.
+
+  25 Dec 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  revert pseudo-QA commit
+
+  25 Dec 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
+
+  23 Dec 2013; Julian Ospald <hasufell@gentoo.org> metadata.xml:
+  add unused useflag since the breakage is expected to be temporary
+
+*umurmur-0.2.13-r1 (23 Dec 2013)
+
+  23 Dec 2013; Julian Ospald <hasufell@gentoo.org> +umurmur-0.2.13-r1.ebuild,
+  +files/umurmurd.service:
+  add systemd unit wrt #487940
 
   23 Nov 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

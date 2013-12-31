@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-2.0.4.ebuild,v 1.1 2013/07/22 13:14:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-2.0.4.ebuild,v 1.2 2013/12/24 12:42:22 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 
 SLOT="0/${PV}"
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 DOCS=( "AUTHORS.txt" "CHANGES.txt" "README.md" )
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.3-r2.ebuild,v 1.7 2013/12/09 08:32:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.3-r2.ebuild,v 1.11 2013/12/29 20:36:39 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://qwt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="qwt"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-macos"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-macos"
 SLOT="5"
 IUSE="doc examples static-libs svg"
 

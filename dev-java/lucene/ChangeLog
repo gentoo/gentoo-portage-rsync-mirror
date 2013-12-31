@@ -1,6 +1,26 @@
 # ChangeLog for dev-java/lucene
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.93 2012/12/09 19:37:24 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.96 2013/12/29 11:31:23 patrick Exp $
+
+  29 Dec 2013; Patrick Lauer <patrick@gentoo.org> lucene-3.6.2.ebuild:
+  Whitespace
+
+*lucene-3.6.2 (28 Dec 2013)
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> +lucene-3.6.2.ebuild:
+  Bug #392953: bump; contrib is still a little flakey.
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> lucene-1.4.3-r3.ebuild,
+  lucene-1.9.1.ebuild, lucene-2.1.0-r1.ebuild, lucene-2.1.0-r2.ebuild,
+  lucene-2.2.0-r1.ebuild, lucene-2.2.0.ebuild, lucene-2.3.0.ebuild,
+  lucene-2.3.1.ebuild, lucene-2.3.2-r1.ebuild, lucene-2.3.2-r2.ebuild,
+  lucene-2.3.2.ebuild, lucene-2.4.0.ebuild, lucene-2.4.1-r1.ebuild,
+  lucene-2.4.1.ebuild, lucene-2.9.1-r1.ebuild, lucene-2.9.4.ebuild,
+  lucene-3.0.0.ebuild, lucene-3.0.3.ebuild, lucene-3.4.0.ebuild,
+  lucene-3.5.0.ebuild:
+  With the archive mirror added to the mirror://apache/ target, we also need to
+  check multiple locations on some distfiles, when upstream had them in one of
+  two locations.
 
   09 Dec 2012; <ago@gentoo.org> lucene-3.5.0.ebuild:
   Stable for x86, wrt bug #441170
@@ -373,4 +393,3 @@
 *lucene-1.2 (25 Oct 2002)
 
   25 Oct 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import.
-

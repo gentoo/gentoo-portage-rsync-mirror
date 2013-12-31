@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/net-ssh-multi-1.2.0-r1.ebuild,v 1.1 2013/11/26 02:26:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/net-ssh-multi-1.2.0-r1.ebuild,v 1.2 2013/12/22 19:20:40 blueness Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -19,7 +19,7 @@ SRC_URI="https://github.com/net-ssh/${PN}/archive/v${PV}.tar.gz -> ${P}-git.tgz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/net-ssh-2.6.5

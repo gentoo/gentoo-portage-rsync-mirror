@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dalli
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.5 2013/11/02 19:59:39 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dalli/ChangeLog,v 1.6 2013/12/25 09:53:39 graaff Exp $
+
+  25 Dec 2013; Hans de Graaff <graaff@gentoo.org> dalli-2.6.4.ebuild:
+  Simplify dependencies and add ruby20.
 
   02 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -dalli-2.1.0.ebuild,
   -dalli-2.5.0.ebuild:

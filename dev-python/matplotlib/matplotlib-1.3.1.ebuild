@@ -1,12 +1,14 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.1.ebuild,v 1.1 2013/12/12 14:30:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.3.1.ebuild,v 1.2 2013/12/26 18:55:53 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 PYTHON_REQ_USE='tk?'
+
+VIRTUALX_REQUIRED="always"
 
 inherit distutils-r1 eutils flag-o-matic virtualx
 
@@ -74,7 +76,7 @@ RDEPEND="${COMMON_DEPEND}
 		dev-texlive/texlive-latexextra
 		dev-texlive/texlive-xetex
 	)
-	pyside? ( dev-python/pyside[X,${PY2_USEDEP},${PY32_USEDEP}] )
+	pyside? ( dev-python/pyside[X,${PYTHON_USEDEP}] )
 	qt4? ( dev-python/PyQt4[X,${PYTHON_USEDEP}] )"
 
 PY2_FLAGS="|| ( $(python_gen_useflags python2*) )"
@@ -84,7 +86,6 @@ REQUIRED_USE="
 	excel? ( ${PY2_FLAGS} )
 	fltk? ( ${PY2_FLAGS} )
 	gtk? ( ${PY2_FLAGS} )
-	pyside? ( ${PY2_FLAGS} ${PY32_FLAGS} )
 	wxwidgets? ( ${PY2_FLAGS} )
 	test? (
 		cairo fltk latex pyside qt4 tk wxwidgets
@@ -126,6 +127,12 @@ python_prepare_all() {
 	sed \
 		-e '/tol/s:32:35:g' \
 		-i lib/matplotlib/tests/test_mathtext.py || die
+
+	if use gtk || use gtk3; then
+		export XDG_RUNTIME_DIR="${T}/runtime-dir"
+		mkdir "${XDG_RUNTIME_DIR}" || die
+		chmod 0700 "${XDG_RUNTIME_DIR}" || die
+	fi
 
 	distutils-r1_python_prepare_all
 }
@@ -190,8 +197,8 @@ wrap_setup() {
 }
 
 python_compile() {
-	VIRTUALX_COMMAND="wrap_setup"
-	virtualmake distutils-r1_python_compile
+	VIRTUALX_COMMAND="wrap_setup distutils-r1_python_compile"
+	virtualmake
 }
 
 python_compile_all() {
@@ -208,15 +215,12 @@ python_compile_all() {
 }
 
 python_test() {
-	VIRTUALX_COMMAND="wrap_setup"
-	virtualmake distutils_install_for_testing
+	wrap_setup distutils_install_for_testing
 
 	cd "${TMPDIR}" || die
 	VIRTUALX_COMMAND="${PYTHON}"
-	virtualmake -c "
-import sys, matplotlib as m
-sys.exit(0 if m.test(verbosity=2) else 1)
-" || die "Tests fail with ${EPYTHON}"
+	virtualmake -c "import sys, matplotlib as m; sys.exit(0 if m.test(verbosity=2) else 1)" || \
+		die "Tests fail with ${EPYTHON}"
 }
 
 python_install() {

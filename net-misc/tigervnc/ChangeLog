@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.166 2013/11/15 18:58:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.167 2013/12/22 18:22:49 pacho Exp $
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
+  amd64 stable, bug #485436
 
   15 Nov 2013; Joseph Jezak <josejx@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
   Marked ppc/ppc64 stable for bug #485436.

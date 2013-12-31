@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.51 2013/12/18 16:12:07 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.52 2013/12/27 22:34:26 dilfridge Exp $
+
+  27 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  foo2zjs-99999999.ebuild:
+  Add cups-filters as alternative to dead foomatic-filters
 
   18 Dec 2013; Ian Stakenvicius <axs@gentoo.org> foo2zjs-99999999.ebuild:
   fix access violations, bug 420623

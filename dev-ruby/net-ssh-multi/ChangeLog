@@ -1,6 +1,19 @@
 # ChangeLog for dev-ruby/net-ssh-multi
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/ChangeLog,v 1.10 2013/11/26 02:26:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/ChangeLog,v 1.13 2013/12/23 01:46:29 mrueg Exp $
+
+*net-ssh-multi-1.1 (23 Dec 2013)
+
+  23 Dec 2013; Manuel Rüger <mrueg@gentoo.org> +net-ssh-multi-1.1.ebuild:
+  Restore as needed for app-admin/chef
+
+  22 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -net-ssh-multi-1.1.ebuild,
+  -net-ssh-multi-1.2.0.ebuild:
+  Cleanup old.
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  net-ssh-multi-1.2.0-r1.ebuild:
+  Keyword ~ppc64, bug #465948
 
 *net-ssh-multi-1.2.0-r1 (26 Nov 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/intltool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.178 2013/11/12 15:43:53 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.179 2013/12/24 12:44:44 pacho Exp $
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> -intltool-0.50.2.ebuild:
+  Drop old
 
   12 Nov 2013; Michael Haubenwallner <haubi@gentoo.org>
   intltool-0.50.2-r1.ebuild:

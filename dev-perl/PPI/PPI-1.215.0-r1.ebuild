@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.215.0-r1.ebuild,v 1.1 2013/09/13 13:47:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPI/PPI-1.215.0-r1.ebuild,v 1.2 2013/12/25 19:26:39 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parse, Analyze and Manipulate Perl (without perl)"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="amd64 ~arm ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="test"
 
 RDEPEND="

@@ -1,54 +1,51 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/qelectrotech-9999.ebuild,v 1.1 2013/06/02 20:26:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/qelectrotech-9999.ebuild,v 1.2 2013/12/22 17:08:04 pesa Exp $
 
-EAPI="4"
+EAPI=5
+PLOCALES="cs de el en es fr it pl pt ro ru"
 
-LANGS="ar ca cs de en es fr hr it pl pt ro ru sl"
-inherit qt4-r2 versionator
-
-if [[ "${PV}" == "9999" ]]; then
-	inherit subversion
-	ESVN_REPO_URI="svn://svn.tuxfamily.org/svnroot/qet/qet/trunk"
-	KEYWORDS=""
-else
-	MY_PV="${PV/_alpha/a}"
-	MY_P="${PN}-${MY_PV/30a/3a}-src"
-	SRC_URI="http://download.tuxfamily.org/qet/tags/20120513/${MY_P}.tar.gz"
-	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}"/${MY_P}
-fi
+inherit l10n qt4-r2 subversion
 
 DESCRIPTION="Qt4 application to design electric diagrams"
-HOMEPAGE="http://www.qt-apps.org/content/show.php?content=90198"
+HOMEPAGE="http://qelectrotech.org/"
+ESVN_REPO_URI="svn://svn.tuxfamily.org/svnroot/qet/qet/trunk"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="debug doc"
+KEYWORDS=""
 
-RDEPEND="dev-qt/qtgui:4
-	dev-qt/qtsvg:4"
+IUSE="doc"
+
+RDEPEND="
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtsql:4[sqlite]
+	dev-qt/qtsvg:4
+"
 DEPEND="${RDEPEND}
-	doc? ( app-doc/doxygen )"
+	doc? ( app-doc/doxygen )
+"
 
-DOCS="CREDIT ChangeLog README"
+DOCS=(CREDIT ChangeLog README)
+PATCHES=(
+	"${FILESDIR}/${PN}-0.3-fix-paths.patch"
+)
 
-PATCHES=( "${FILESDIR}/${PN}-0.3-fix-paths.patch" )
+qet_disable_translation() {
+	sed -i -e "/TRANSLATIONS +=/s: lang/qet_${1}.ts::" ${PN}.pro || die
+}
 
 src_prepare() {
-	[[ "${PV}" == "9999" ]] && subversion_src_prepare
 	qt4-r2_src_prepare
+	l10n_for_each_disabled_locale_do qet_disable_translation
 }
 
 src_install() {
 	qt4-r2_src_install
+
 	if use doc; then
 		doxygen Doxyfile || die
 		dohtml -r doc/html/*
 	fi
-	for x in ${LANGS}; do
-		if ! has ${x} ${LINGUAS}; then
-			find "${D}"/usr/share/${PN}/lang/ -name "*${x}*" -exec rm {} \;
-		fi
-	done
 }

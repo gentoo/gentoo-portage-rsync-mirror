@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20070501.ebuild,v 1.17 2008/05/07 23:57:14 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/foomatic-filters-ppds-20070501.ebuild,v 1.18 2013/12/27 22:39:12 dilfridge Exp $
 
 inherit eutils
 
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-RDEPEND="net-print/foomatic-filters"
+RDEPEND="
+	|| ( >=net-print/cups-filters-1.0.43 net-print/foomatic-filters )
+"
 
 src_unpack() {
 	unpack ${A}

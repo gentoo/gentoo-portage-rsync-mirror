@@ -1,6 +1,9 @@
 # ChangeLog for net-im/vacuum
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.17 2013/10/07 11:00:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.18 2013/12/28 20:19:54 maksbotan Exp $
+
+  28 Dec 2013; Maxim Koltsov <maksbotan@gentoo.org> vacuum-9999.ebuild:
+  Update subslot and add qtsql dependency in 9999, thanks to Nikoli
 
 *vacuum-1.2.3 (07 Oct 2013)
 

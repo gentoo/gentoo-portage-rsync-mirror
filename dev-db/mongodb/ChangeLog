@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.83 2013/12/07 14:24:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.85 2013/12/26 11:27:44 ultrabug Exp $
+
+  26 Dec 2013; Ultrabug <ultrabug@gentoo.org> mongodb-2.2.6-r1.ebuild,
+  mongodb-2.4.6-r2.ebuild, mongodb-2.4.7.ebuild, mongodb-2.4.8.ebuild:
+  Lower abusive CHECKREQS_DISK_BUILD requirement to 2400M wrt #495242
+
+  23 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> mongodb-2.2.6-r1.ebuild,
+  mongodb-2.4.6-r2.ebuild, mongodb-2.4.7.ebuild, mongodb-2.4.8.ebuild:
+  MongoDB is a massive compile: 12GB in my portage build dir, and 2.4G on disk.
+  Users should be warned of this before starting, so they have enough space for
+  it.
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> mongodb-2.4.6-r2.ebuild:
   x86 stable, bug #488742

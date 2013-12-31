@@ -1,0 +1,50 @@
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/gnome-sudoku-3.10.2.ebuild,v 1.1 2013/12/24 16:17:07 pacho Exp $
+
+EAPI="5"
+GCONF_DEBUG="no"
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit eutils gnome-games python-single-r1
+
+DESCRIPTION="Test your logic skills in this number grid puzzle"
+HOMEPAGE="https://wiki.gnome.org/GnomeSudoku"
+
+LICENSE="LGPL-2+"
+SLOT="0"
+KEYWORDS="~amd64 ~arm ~x86"
+IUSE=""
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+RDEPEND="${PYTHON_DEPS}
+	dev-libs/glib:2
+	dev-python/pycairo[${PYTHON_USEDEP}]
+	>=dev-python/pygobject-2.28.3:3[${PYTHON_USEDEP}]
+	x11-libs/gdk-pixbuf:2[introspection]
+	x11-libs/gtk+:3[introspection]
+	x11-libs/pango[introspection]
+"
+DEPEND="${RDEPEND}
+	app-text/yelp-tools
+	>=dev-util/intltool-0.35.0
+	sys-devel/gettext
+	virtual/pkgconfig
+"
+
+pkg_setup() {
+	gnome-games_pkg_setup
+	python-single-r1_pkg_setup
+}
+
+src_configure() {
+	# Workaround until we know how to fix bug #475318
+	gnome-games_src_configure \
+		--prefix="${EPREFIX}/usr" \
+		--bindir="${GAMES_BINDIR}"
+}
+
+src_install() {
+	python_fix_shebang src
+	gnome-games_src_install
+}

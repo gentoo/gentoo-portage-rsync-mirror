@@ -1,8 +1,8 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.7.3-r1.ebuild,v 1.11 2013/12/13 18:33:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.7.3-r1.ebuild,v 1.14 2013/12/24 00:59:46 dirtyepic Exp $
 
-PATCH_VER="1.3"
+PATCH_VER="1.4"
 UCLIBC_VER="1.0"
 
 # Hardened gcc 4 stuff
@@ -24,7 +24,7 @@ DESCRIPTION="The GNU Compiler Collection"
 
 LICENSE="GPL-3+ LGPL-3+ || ( GPL-3+ libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.3+"
 
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 -amd64-fbsd -x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 -amd64-fbsd -x86-fbsd"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -52,15 +52,4 @@ src_unpack() {
 	use vanilla && return 0
 
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
-}
-
-pkg_setup() {
-	toolchain_pkg_setup
-
-	if use lto ; then
-		ewarn
-		ewarn "LTO support is still experimental and unstable."
-		ewarn "Any bugs resulting from the use of LTO will not be fixed."
-		ewarn
-	fi
 }

@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/jags
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/ChangeLog,v 1.15 2013/10/14 17:49:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/ChangeLog,v 1.17 2013/12/24 14:54:10 jlec Exp $
+
+  24 Dec 2013; Justin Lecher <jlec@gentoo.org> -jags-3.3.0.ebuild,
+  metadata.xml:
+  Drop old
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> jags-3.4.0.ebuild:
+  Stable for x86, wrt bug #487024
 
   14 Oct 2013; Tony Vroon <chainsaw@gentoo.org> jags-3.4.0.ebuild:
   Quote variable and mark stable on AMD64, as per arch tester report by Elijah

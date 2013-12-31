@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/qiv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.37 2012/05/28 23:54:50 blueness Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/ChangeLog,v 1.38 2013/12/29 03:57:02 radhermit Exp $
+
+*qiv-2.3.1 (29 Dec 2013)
+
+  29 Dec 2013; Tim Harder <radhermit@gentoo.org> +qiv-2.3.1.ebuild,
+  metadata.xml:
+  Version bump. Install desktop file/icon and add exif, lcms, and magic use
+  flags.
 
   28 May 2012; Anthony G. Basile <blueness@gentoo.org> qiv-2.2.4.ebuild:
   Keyword ~mips

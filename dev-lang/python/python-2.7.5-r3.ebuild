@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5-r3.ebuild,v 1.1 2013/10/16 23:43:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.5-r3.ebuild,v 1.3 2013/12/30 21:57:26 floppym Exp $
 
 EAPI="4"
 WANT_AUTOMAKE="none"
@@ -203,6 +203,12 @@ src_configure() {
 		--enable-loadable-sqlite-extensions \
 		--with-system-expat \
 		--with-system-ffi
+
+	if use threads && grep -q "#define POSIX_SEMAPHORES_NOT_ENABLED 1" pyconfig.h; then
+		eerror "configure has detected that the sem_open function is broken."
+		eerror "Please ensure that /dev/shm is mounted as a tmpfs with mode 1777."
+		die "Broken sem_open function (bug 496328)"
+	fi
 }
 
 src_compile() {

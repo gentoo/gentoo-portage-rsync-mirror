@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.69 2013/11/27 07:05:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.70 2013/12/22 16:55:06 graaff Exp $
+
+*sphinx-2.1.4 (22 Dec 2013)
+
+  22 Dec 2013; Hans de Graaff <graaff@gentoo.org> +sphinx-2.1.4.ebuild:
+  Version bump. Depend on dev-libs/snowball-stemmer instead of compiling the
+  library as part of sphinx.
 
 *sphinx-2.1.3 (27 Nov 2013)
 

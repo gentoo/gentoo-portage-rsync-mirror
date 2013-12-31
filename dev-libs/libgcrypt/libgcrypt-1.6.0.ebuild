@@ -1,12 +1,12 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.6.0.ebuild,v 1.1 2013/12/16 22:52:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.6.0.ebuild,v 1.2 2013/12/27 20:35:32 grobian Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
 WANT_AUTOMAKE=1.12
 
-inherit autotools-utils
+inherit autotools-utils flag-o-matic
 
 DESCRIPTION="General purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -29,6 +29,12 @@ PATCHES=(
 )
 
 src_configure() {
+	if [[ ${CHOST} == *-solaris* ]] ; then
+		# ASM code uses GNU ELF syntax, divide in particular, we need to
+		# allow this via ASFLAGS, since we don't have a flag-o-matic
+		# function for that, we'll have to abuse cflags for this
+		append-cflags -Wa,--divide
+	fi
 	local myeconfargs=(
 		--disable-padlock-support # bug 201917
 		--disable-dependency-tracking

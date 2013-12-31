@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslogread
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.13 2012/10/20 09:26:00 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.14 2013/12/23 01:05:20 tomwij Exp $
+
+  23 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/0.92/syslogread.init,
+  syslogread-0.92.ebuild:
+  [QA] Remove unused files. (A stub init script that has been 7,5 years in the
+  Portage tree and was never used.)
 
   20 Oct 2012; Agostino Sarubbo <ago@gentoo.org> syslogread-0.92.ebuild:
   Add ~amd64, wrt bug #439004

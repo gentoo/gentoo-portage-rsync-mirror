@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/sass
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.43 2013/12/21 07:46:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sass/ChangeLog,v 1.45 2013/12/22 19:57:26 mrueg Exp $
+
+  22 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -sass-3.2.12-r1.ebuild,
+  -sass-3.2.12.ebuild:
+  Cleanup old.
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org> sass-3.2.13.ebuild:
+  Keyword ~ppc64, bug #465948
 
 *sass-3.2.13 (21 Dec 2013)
 

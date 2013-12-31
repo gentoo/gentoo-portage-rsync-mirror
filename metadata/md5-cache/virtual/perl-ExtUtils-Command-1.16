@@ -1,6 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for perl-core/ExtUtils-Command
-KEYWORDS=alpha amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86
-RDEPEND=|| ( ~dev-lang/perl-5.12.4 ~dev-lang/perl-5.12.3 ~dev-lang/perl-5.12.2 ~dev-lang/perl-5.10.1 ~perl-core/ExtUtils-Command-1.16 )
-SLOT=0
-_md5_=ea713afa3c3434f2d834f1513f80e0b4

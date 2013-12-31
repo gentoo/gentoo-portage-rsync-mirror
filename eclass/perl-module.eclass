@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.137 2013/07/31 05:15:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.138 2013/12/29 21:37:09 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -27,10 +27,24 @@ case "${EAPI:-0}" in
 			PERL_EXPF+=" pkg_postinst pkg_postrm"
 
 		case "${GENTOO_DEPEND_ON_PERL:-yes}" in
-			yes)
-				DEPEND="|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )"
-				RDEPEND="${DEPEND}"
+		yes)
+			case "${EAPI:-0}" in
+			5)
+				case "${GENTOO_DEPEND_ON_PERL_SUBSLOT:-yes}" in
+				yes)
+					DEPEND="dev-lang/perl:=[-build(-)]"
+					;;
+				*)
+					DEPEND="dev-lang/perl[-build(-)]"
+					;;
+				esac
 				;;
+			*)
+				DEPEND="|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )"
+				;;
+			esac
+			RDEPEND="${DEPEND}"
+			;;
 		esac
 		;;
 	*)

@@ -2,9 +2,16 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-<email>tove@gentoo.org</email>
+	<email>alice.ferrazzi@gmail.com</email>
+	<name>Alice Ferrazzi</name>
+	<description>Assign bugs to her.</description>
+</maintainer>
+<maintainer>
+	<email>mrueg@gentoo.org</email>
+	<name>Manuel Rüger</name>
+	<description>CC him on bugs.</description>
 </maintainer>
 <use>
-<flag name="extras">Installs additional modules used by ikiwiki plugins</flag>
+	<flag name="extras">Installs additional modules used by ikiwiki plugins</flag>
 </use>
 </pkgmetadata>

@@ -1,6 +1,16 @@
 # ChangeLog for sci-electronics/qelectrotech
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/ChangeLog,v 1.12 2013/06/23 09:11:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qelectrotech/ChangeLog,v 1.14 2013/12/22 17:08:04 pesa Exp $
+
+  22 Dec 2013; Davide Pesavento <pesa@gentoo.org> qelectrotech-9999.ebuild:
+  Update live ebuild too.
+
+*qelectrotech-0.30 (22 Dec 2013)
+
+  22 Dec 2013; Davide Pesavento <pesa@gentoo.org> +qelectrotech-0.30.ebuild,
+  -qelectrotech-0.30_alpha.ebuild, files/qelectrotech-0.3-fix-paths.patch,
+  metadata.xml:
+  Version bump.
 
   23 Jun 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   remove myself from metadata

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-2.0.2.ebuild,v 1.1 2013/03/16 14:55:18 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-2.0.2.ebuild,v 1.3 2013/12/26 19:40:02 robbat2 Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -65,7 +65,8 @@ kernel_asm_arch() {
 	a="${1:${ARCH}}"
 	case ${a} in
 		# Merged arches
-		x86|amd64) echo x86 ;;
+		x86) echo i386 ;; # for build on x86 userspace & 64bit kernel
+		amd64) echo x86 ;;
 		ppc*) echo powerpc ;;
 		# Non-merged
 		alpha|arm|ia64|m68k|mips|sh|sparc*) echo ${1} ;;
@@ -88,6 +89,9 @@ kernel_defconfig() {
 
 src_unpack() {
 	unpack linux-${OKV}.tar.${K_TARBALL_SUFFIX} ${P}.tar.${K_TARBALL_SUFFIX}
+}
+
+src_prepare() {
 	[[ ${PKV} ]] && EPATCH_OPTS="-d ${KS} -p1" epatch "${DISTDIR}"/patch-${PKV}.${K_TARBALL_SUFFIX}
 	cd "${S}"
 
@@ -135,7 +139,7 @@ src_compile() {
 	unset KBUILD_OUTPUT # we are using a private copy
 
 	cd "${KS}"
-	emake ${defconfig} CC="${CC}" HOSTCC="${HOSTCC}" || die "No defconfig"
+	emake ${defconfig} CC="${CC}" HOSTCC="${HOSTCC}" ARCH="${KLIBCASMARCH}" || die "No defconfig"
 	if [[ "${KLIBCARCH/arm}" != "${KLIBCARCH}" ]] && \
 	   [[ "${CHOST/eabi}" != "${CHOST}" ]]; then
 		# The delete and insert are seperate statements
@@ -148,7 +152,7 @@ src_compile() {
 		"${KS}"/.config \
 		"${S}"/defconfig
 	fi
-	emake prepare CC="${CC}" HOSTCC="${HOSTCC}" || die "Failed to prepare kernel sources for header usage"
+	emake prepare CC="${CC}" HOSTCC="${HOSTCC}" ARCH="${KLIBCASMARCH}" || die "Failed to prepare kernel sources for header usage"
 
 	cd "${S}"
 

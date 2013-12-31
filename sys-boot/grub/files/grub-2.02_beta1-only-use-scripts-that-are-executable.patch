@@ -1,0 +1,35 @@
+From b8ff36598b7c77d85984b5cb6b5f95a0b679dd52 Mon Sep 17 00:00:00 2001
+From: Lars Wendler <polynomial-c@gentoo.org>
+Date: Thu, 19 Dec 2013 14:04:23 +0100
+Subject: [PATCH] grub-mkconfig: only use scripts that are executable
+
+commit ec824e0f2a399ce2ab3a2e3353d372a236595059 breaks grub-mkconfig if one of 
+the pre-defined config files are not executable.
+
+This patch fixes https://bugs.gentoo.org/494716
+
+Signed-off-by: Lars Wendler <polynomial-c@gentoo.org>
+---
+ util/grub-mkconfig.in | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/util/grub-mkconfig.in b/util/grub-mkconfig.in
+index 0ca0db1..fe33092 100644
+--- a/util/grub-mkconfig.in
++++ b/util/grub-mkconfig.in
+@@ -260,10 +260,12 @@ for i in "${grub_mkconfig_dir}"/* ; do
+       | "${grub_mkconfig_dir}"/30_os-prober \
+       | "${grub_mkconfig_dir}"/40_custom \
+       | "${grub_mkconfig_dir}"/41_custom)
++          if test -x "$i" ; then
+ 	      echo
+               echo "### BEGIN $i ###"
+               "$i"
+               echo "### END $i ###"
++          fi
+       ;;
+     # emacsen backup files. FIXME: support other editors
+     *~) ;;
+-- 
+1.8.5.2
+

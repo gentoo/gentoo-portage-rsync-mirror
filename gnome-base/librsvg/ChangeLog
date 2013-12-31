@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.323 2013/12/21 13:25:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.324 2013/12/22 16:04:55 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> librsvg-2.39.0.ebuild:
+  Stable for HPPA (bug #478252).
 
   21 Dec 2013; Fabian Groffen <grobian@gentoo.org>
   +files/librsvg-2.39.0-canonicalize-realpath.patch, librsvg-2.39.0.ebuild:

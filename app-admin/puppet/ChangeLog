@@ -1,6 +1,31 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.178 2013/11/19 10:07:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.184 2013/12/27 16:09:23 jer Exp $
+
+  27 Dec 2013; Jeroen Roovers <jer@gentoo.org> puppet-3.4.1.ebuild:
+  Stable for HPPA (bug #494768).
+
+  27 Dec 2013; Jeroen Roovers <jer@gentoo.org> puppet-2.7.24.ebuild:
+  Stable for HPPA (bug #494768).
+
+*puppet-2.7.24 (26 Dec 2013)
+*puppet-3.4.1 (26 Dec 2013)
+
+  26 Dec 2013; Matthew Thode <prometheanfire@gentoo.org> +puppet-2.7.24.ebuild,
+  +puppet-3.4.1.ebuild, -puppet-3.3.2-r1.ebuild, -puppet-3.3.2.ebuild:
+  updating puppet for CVE-2013-4969 bug 494768
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> puppet-3.2.4.ebuild:
+  Stable for x86, wrt bug #486002
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> puppet-3.2.4.ebuild:
+  Stable for sparc, wrt bug #486002
+
+*puppet-3.3.2-r1 (23 Dec 2013)
+
+  23 Dec 2013; Matthew Thode <prometheanfire@gentoo.org> +files/tmpfiles.d,
+  +puppet-3.3.2-r1.ebuild, -puppet-3.3.0.ebuild, -puppet-3.3.1.ebuild:
+  adding systemd support for bug 489860
 
   19 Nov 2013; Chema Alonso <nimiux@gentoo.org> puppet-3.2.4.ebuild:
   Stable for amd64 wrt bug #486002

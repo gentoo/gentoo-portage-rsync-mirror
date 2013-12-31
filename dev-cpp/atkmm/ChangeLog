@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/atkmm
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.37 2013/12/08 17:50:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.38 2013/12/22 15:35:52 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> atkmm-2.22.7.ebuild:
+  Stable for HPPA (bug #478252).
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> atkmm-2.22.7.ebuild:
   x86 stable, bug #478252

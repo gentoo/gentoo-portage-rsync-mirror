@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ifstat
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.31 2013/12/21 17:25:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ChangeLog,v 1.33 2013/12/22 14:19:54 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> -ifstat-1.1.ebuild,
+  -files/ifstat-1.1-strip_and_cflags.patch:
+  Old.
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> ifstat-1.1-r2.ebuild:
+  Stable for ppc64, wrt bug #486524
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> ifstat-1.1-r2.ebuild:
   Stable for ppc, wrt bug #486524

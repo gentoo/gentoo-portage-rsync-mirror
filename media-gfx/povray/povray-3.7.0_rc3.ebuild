@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.12 2013/03/05 01:34:02 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.13 2013/12/26 00:37:51 jlec Exp $
 
 EAPI="3"
 
@@ -58,7 +58,9 @@ src_prepare() {
 	# prompts the user to interact, so remove it.
 	sed -i -e "s:biscuit.pov -f +d +p:biscuit.pov -f +d:" Makefile.am || die
 
-	epatch "${FILESDIR}"/${PV}-user-conf.patch
+	epatch \
+		"${FILESDIR}"/${PV}-user-conf.patch \
+		"${FILESDIR}"/${PN}-3.7.0_rc5+boost-1.50.patch
 
 	eautoreconf
 }

@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install postinst prepare
+DEPEND=consolekit? ( sys-auth/consolekit ) x11-libs/libxcb gtk3? ( x11-libs/gtk+:3 ) !gtk3? ( x11-libs/gtk+:2 ) nls? ( sys-devel/gettext ) pam? ( virtual/pam ) >=dev-util/intltool-0.40 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.12* >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=LXDE Display Manager
+EAPI=2
+HOMEPAGE=http://lxde.org
+IUSE=consolekit debug gtk3 nls pam
+KEYWORDS=~amd64 ~arm ~ppc ~x86
+LICENSE=GPL-3
+RDEPEND=consolekit? ( sys-auth/consolekit ) x11-libs/libxcb gtk3? ( x11-libs/gtk+:3 ) !gtk3? ( x11-libs/gtk+:2 ) nls? ( sys-devel/gettext ) pam? ( virtual/pam )
+SLOT=0
+SRC_URI=mirror://sourceforge/lxde/lxdm-0.4.1.tar.gz
+_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=6f031e020af7cd35295e901663e9b820

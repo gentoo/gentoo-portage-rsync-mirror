@@ -2,22 +2,24 @@ Use pkg-config for xerces-c
 Respect CXX and CC
 Replace CFLAGS with CXXFLAGS where needed
 Add LDFLAGS
---- makefile.old	2010-04-07 18:45:30.000000000 +0200
-+++ makefile	2012-08-15 23:48:03.218394478 +0200
-@@ -93,35 +93,39 @@
+
+--- a/makefile
++++ b/makefile
+@@ -93,35 +93,40 @@
  
  $(BINDIR_XMLIN)/InputSymbolTranslation.o: InputSymbolTranslation.cpp InputSymbolTranslation.inc
  
 -CFLAGS = -O2
++PKG_CONFIG ?= pkg-config
 +CFLAGS ?= -O2
  
  VPATH = Source:Source/BlahtexCore:Source/BlahtexXMLin
  
  INCLUDES=-I. -ISource -ISource/BlahtexCore -ISource/BlahtexXMLin
  
-+CXXFLAGS += $(shell pkg-config --cflags xerces-c)
++CXXFLAGS += $(shell $(PKG_CONFIG) --cflags xerces-c)
 +
-+XERCES_LIB = $(shell pkg-config --libs xerces-c)
++XERCES_LIB = $(shell $(PKG_CONFIG) --libs xerces-c)
 +
  $(BINDIR)/%.o:%.cpp
 -	$(CXX) $(INCLUDES) $(CFLAGS) -c $< -o $@

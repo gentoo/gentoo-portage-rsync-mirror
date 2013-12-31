@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82.ebuild,v 1.3 2013/11/01 19:55:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.82.ebuild,v 1.4 2013/12/30 08:08:58 naota Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~x86-fbsd ~x86-solaris"
 
 COMMON_DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/db-3.2
@@ -354,7 +354,7 @@ src_install () {
 	systemd_newunit "${FILESDIR}"/exim_at.service 'exim@.service'
 	systemd_newunit "${FILESDIR}"/exim-submission_at.service 'exim-submission@.service'
 
-	DIROPTIONS="--mode=0750 --owner=${MAILUSER} --group=${MAILGROUP}"
+	DIROPTIONS="-m 0750 -o ${MAILUSER} -g ${MAILGROUP}"
 	dodir /var/log/${PN}
 }
 

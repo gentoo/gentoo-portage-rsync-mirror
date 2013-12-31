@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.443 2013/11/28 20:41:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.445 2013/12/22 23:26:14 vapier Exp $
+
+  22 Dec 2013; Mike Frysinger <vapier@gentoo.org>
+  +files/util-linux-2.24-skip-last-tests.patch, util-linux-2.24.ebuild,
+  util-linux-9999.ebuild:
+  Fix last failures #489794 by Toralf Förster.  Enable parallel tests.
 
   28 Nov 2013; Mike Frysinger <vapier@gentoo.org> util-linux-2.24.ebuild,
   util-linux-9999.ebuild:

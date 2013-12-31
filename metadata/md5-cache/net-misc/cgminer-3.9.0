@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install prepare
+DEPEND=virtual/pkgconfig net-misc/curl dev-libs/jansson ncurses? ( sys-libs/ncurses ) avalon? ( virtual/libusb:1 ) bflsc? ( virtual/libusb:1 ) bitforce? ( virtual/libusb:1 ) bitfury? ( virtual/libusb:1 ) icarus? ( virtual/libusb:1 ) modminer? ( virtual/libusb:1 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Bitcoin CPU/GPU/FPGA/ASIC miner in C
+EAPI=5
+HOMEPAGE=http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer
+IUSE=doc examples udev hardened ncurses avalon bflsc bitforce bitfury drillbit icarus klondike modminer
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-3
+RDEPEND=net-misc/curl dev-libs/jansson ncurses? ( sys-libs/ncurses ) avalon? ( virtual/libusb:1 ) bflsc? ( virtual/libusb:1 ) bitforce? ( virtual/libusb:1 ) bitfury? ( virtual/libusb:1 ) icarus? ( virtual/libusb:1 ) modminer? ( virtual/libusb:1 )
+REQUIRED_USE=|| ( avalon bflsc bitforce bitfury drillbit icarus klondike modminer )
+SLOT=0
+SRC_URI=http://ck.kolivas.org/apps/cgminer/cgminer-3.9.0.tar.bz2
+_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=cc19053c941bc1fd4a4261dcee2c81aa

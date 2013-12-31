@@ -1,6 +1,20 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.93 2013/12/21 17:23:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.97 2013/12/28 18:54:34 aidecoe Exp $
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.20.ebuild:
+  Removed testing 4.20.
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.8.ebuild,
+  -pyro-4.11.ebuild, -pyro-4.17.ebuild:
+  4.17-r1 is stable long enough to remove all 4.* using deprecated distutils.
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-3.16.ebuild:
+  3.16-r1 is stable long enough to remove 3.16 using deprecated distutils
+  eclass.
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pyro-4.22.ebuild:
+  Stable for x86, wrt bug #494262
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pyro-3.16-r1.ebuild:
   Stable for ppc, wrt bug #487334

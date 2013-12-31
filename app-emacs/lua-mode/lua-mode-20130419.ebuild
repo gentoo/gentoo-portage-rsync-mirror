@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/lua-mode-20130419.ebuild,v 1.7 2013/12/21 16:12:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/lua-mode-20130419.ebuild,v 1.8 2013/12/22 12:05:36 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/immerrr/${PN}/archive/rel-${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 
 S="${WORKDIR}/${PN}-rel-${PV}"
 SITEFILE="50${PN}-gentoo.el"

@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.217 2013/12/20 15:52:38 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.220 2013/12/29 17:20:07 maekke Exp $
+
+  29 Dec 2013; Markus Meier <maekke@gentoo.org> rubygems-2.0.3.ebuild:
+  arm stable, bug #483254
+
+  26 Dec 2013; Hans de Graaff <graaff@gentoo.org> rubygems-2.0.14.ebuild:
+  Add ruby21.
+
+*rubygems-2.0.14 (25 Dec 2013)
+
+  25 Dec 2013; Hans de Graaff <graaff@gentoo.org> +rubygems-2.0.14.ebuild:
+  Version bump.
 
   20 Dec 2013; Akinori Hattori <hattya@gentoo.org> rubygems-2.0.3.ebuild:
   ia64 stable wrt bug #483254

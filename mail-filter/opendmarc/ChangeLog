@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/opendmarc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/ChangeLog,v 1.4 2013/12/17 20:49:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/ChangeLog,v 1.5 2013/12/30 08:03:52 naota Exp $
+
+  30 Dec 2013; Naohiro Aota <naota@gentoo.org> opendmarc-1.1.3.ebuild:
+  Add ~x86-fbsd.
 
   17 Dec 2013; Fabian Groffen <grobian@gentoo.org> opendmarc-1.1.3.ebuild:
   Update milter dependency because sendmail provides milter interface as well,

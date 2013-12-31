@@ -1,6 +1,17 @@
 # ChangeLog for mail-filter/spamassassin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.229 2013/12/21 18:00:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.231 2013/12/29 10:03:51 pacho Exp $
+
+  29 Dec 2013; Pacho Ramos <pacho@gentoo.org> files/spamassassin.service-r1,
+  files/spamassassin.service.conf:
+  Move -c and -H to the config file as collides with other options people want
+  to use (#496254#c10 by Evert)
+
+*spamassassin-3.3.2-r4 (28 Dec 2013)
+
+  28 Dec 2013; Pacho Ramos <pacho@gentoo.org> +files/spamassassin.service-r1,
+  +files/spamassassin.service.conf, +spamassassin-3.3.2-r4.ebuild:
+  Let people pass more options to spamd process (#496254 by Evert)
 
   21 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> spamassassin-3.3.2-r2.ebuild:
   ppc64 stable wrt bug #484916

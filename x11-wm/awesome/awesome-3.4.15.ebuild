@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.15.ebuild,v 1.8 2013/12/12 07:40:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.4.15.ebuild,v 1.9 2013/12/27 14:16:45 maksbotan Exp $
 
 EAPI="3"
 CMAKE_MIN_VERSION="2.8"
@@ -22,6 +22,7 @@ COMMON_DEPEND=">=dev-lang/lua-5.1
 	x11-libs/cairo[xcb]
 	|| ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 )
 	>=x11-libs/libxcb-1.6
+	x11-libs/libXcursor
 	>=x11-libs/pango-1.19.3
 	>=x11-libs/startup-notification-0.10_p20110426
 	>=x11-libs/xcb-util-0.3.8

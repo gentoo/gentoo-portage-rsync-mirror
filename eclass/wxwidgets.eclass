@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.37 2013/11/16 13:05:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.38 2013/12/30 08:25:35 dirtyepic Exp $
 
 # @ECLASS:			wxwidgets.eclass
 # @MAINTAINER:
@@ -94,10 +94,10 @@ need-wxwidgets() {
 		die
 	fi
 	
-	if [[ ${WX_GTK_VER} != 2.8 && ${WX_GTK_VER} != 2.9 ]]; then
-			eerror "Invalid WX_GTK_VER: ${WX_GTK_VER} - must be set to a valid wxGTK SLOT."
-			echo
-			die
+	if [[ ${WX_GTK_VER} != 2.8 && ${WX_GTK_VER} != 2.9 && ${WX_GTK_VER} != 3.0 ]]; then
+		eerror "Invalid WX_GTK_VER: ${WX_GTK_VER} - must be set to a valid wxGTK SLOT."
+		echo
+		die
 	fi
 
 	case $1 in
@@ -115,7 +115,7 @@ need-wxwidgets() {
 		wxtoolkit="base"
 	fi
 
-	# 2.8 has a separate debug tuple
+	# 2.8 has a separate debug element
 	if [[ ${WX_GTK_VER} == 2.8 ]]; then
 		if has_version "x11-libs/wxGTK:${WX_GTK_VER}[debug]"; then
 			wxdebug="debug-"

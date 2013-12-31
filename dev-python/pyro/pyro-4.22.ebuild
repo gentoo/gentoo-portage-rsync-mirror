@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.22.ebuild,v 1.1 2013/10/08 18:57:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.22.ebuild,v 1.2 2013/12/24 12:49:15 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
 RDEPEND="!dev-python/pyro:0

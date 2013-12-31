@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/drush
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/drush/ChangeLog,v 1.6 2013/03/25 20:52:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/drush/ChangeLog,v 1.8 2013/12/23 16:04:31 pacho Exp $
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> drush-5.8.ebuild:
+  Add missing dependency, bug #482382 by Michael Orlitzky
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> -drush-4.5-r1.ebuild,
+  -drush-4.6.ebuild, -drush-5.1.ebuild, metadata.xml:
+  Cleanup due bug #66351
 
   25 Mar 2013; Agostino Sarubbo <ago@gentoo.org> drush-5.8.ebuild:
   Stable for x86, wrt bug #457212

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.28 2013/11/24 23:02:10 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.29 2013/12/27 16:58:18 creffett Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 net-misc/teamviewer
@@ -63,8 +63,6 @@ dev-perl/Archive-Rar
 dev-python/skype4py
 dev-util/android-sdk-update-manager
 dev-util/biew
-dev-util/dialogblocks
-dev-util/helpblocks
 games-action/awesomenauts
 games-action/cs2d
 games-action/descent3
@@ -164,17 +162,13 @@ games-strategy/majesty-demo
 games-strategy/savage-bin
 games-strategy/smac
 games-strategy/spaz
-games-strategy/x2
-games-strategy/x2-demo
 media-fonts/acroread-asianfonts
-media-gfx/picasa
 media-sound/aucdtect
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/skype-call-recorder
 media-sound/ventrilo-server-bin
 media-tv/huludesktop
-media-tv/livestation
 media-video/binkplayer
 media-video/tsmuxer
 net-im/skype
@@ -197,6 +191,5 @@ sci-libs/ipp
 sys-apps/memtest86
 sys-apps/memtest86+
 sys-libs/lib-compat-loki
-<www-plugins/adobe-flash-11.0.1.60_beta201107131
 www-plugins/nspluginwrapper
 <sys-boot/grub-1.99

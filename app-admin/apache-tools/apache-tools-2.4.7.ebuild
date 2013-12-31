@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7.ebuild,v 1.2 2013/11/26 08:26:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.4.7.ebuild,v 1.3 2013/12/23 00:32:25 tomwij Exp $
 
 EAPI=5
 inherit flag-o-matic eutils multilib
@@ -31,7 +31,7 @@ src_configure() {
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	append-ldflags $(no-as-needed)
 
-	use ssl && myconf+=" --with-ssl=${EPREFIX}/usr --enable-ssl"
+	use ssl && myconf+=" --with-ssl=\"${EPREFIX}\"/usr --enable-ssl"
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
 	# our myconf line too

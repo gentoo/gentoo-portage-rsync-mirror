@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xplanet
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.79 2012/07/03 16:42:53 ranger Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.80 2013/12/27 22:55:08 robbat2 Exp $
+
+  27 Dec 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/xplanet-1.3.0-giflib.patch, xplanet-1.3.0.ebuild:
+  Bug #488406: newer giflib compile fixes.
 
   03 Jul 2012; Brent Baude <ranger@gentoo.org> xplanet-1.3.0.ebuild:
   Marking xplanet-1.3.0 ppc for bug 422393

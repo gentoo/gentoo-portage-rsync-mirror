@@ -1,6 +1,18 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.41 2013/12/21 15:53:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.45 2013/12/24 14:54:07 jlec Exp $
+
+  24 Dec 2013; Justin Lecher <jlec@gentoo.org> -vilistextum-2.6.9.ebuild:
+  Drop old
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> vilistextum-2.6.9-r1.ebuild:
+  Stable for x86, wrt bug #491954
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> vilistextum-2.6.9-r1.ebuild:
+  Stable for sparc, wrt bug #491954
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> vilistextum-2.6.9-r1.ebuild:
+  amd64 stable, bug #491954
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> vilistextum-2.6.9-r1.ebuild:
   Stable for ppc, wrt bug #491954

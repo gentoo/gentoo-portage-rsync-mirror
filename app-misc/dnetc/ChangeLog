@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/dnetc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.66 2012/06/01 01:55:14 zmedico Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.67 2013/12/28 04:13:26 robbat2 Exp $
+
+*dnetc-2.9110.519 (28 Dec 2013)
+*dnetc-2.9110.519b (28 Dec 2013)
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> +dnetc-2.9110.519.ebuild,
+  +dnetc-2.9110.519b.ebuild:
+  Bug #401473: bump.
 
   01 Jun 2012; Zac Medico <zmedico@gentoo.org> dnetc-2.9011.496-r1.ebuild,
   dnetc-2.9015.504.ebuild, dnetc-2.9103.509.ebuild, dnetc-2.9107.516.ebuild,

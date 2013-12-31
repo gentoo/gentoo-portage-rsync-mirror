@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.5 2012/09/29 11:04:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.7 2013/12/28 18:04:35 jer Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-proxy \
-		--with-ncurses \
+		--with-ncurses="${EPREFIX}"/usr \
 		--with-perl-lib=vendor \
 		$(use_with perl) \
 		$(use_with socks5 socks) \
@@ -52,7 +52,7 @@ src_configure() {
 src_install() {
 	emake \
 		DESTDIR="${D}" \
-		docdir=/usr/share/doc/${PF} \
+		docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		install
 
 	use perl && fixlocalpod

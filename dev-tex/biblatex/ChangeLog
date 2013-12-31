@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/biblatex
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.10 2013/10/22 21:33:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.11 2013/12/22 14:20:22 mrueg Exp $
+
+  22 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -biblatex-2.7.ebuild:
+  Cleanup old.
 
 *biblatex-2.8 (22 Oct 2013)
 

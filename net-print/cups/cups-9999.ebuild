@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.45 2013/10/30 21:48:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.46 2013/12/29 18:18:32 dilfridge Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ HOMEPAGE="http://www.cups.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="acl dbus debug +filters gnutls java kerberos lprng-compat pam
+IUSE="acl dbus debug gnutls java kerberos lprng-compat pam
 	python selinux +ssl static-libs +threads usb X xinetd zeroconf"
 
 LANGS="ca es fr it ja ru"
@@ -74,8 +74,7 @@ DEPEND="${RDEPEND}
 PDEPEND="
 	app-text/ghostscript-gpl[cups]
 	app-text/poppler[utils]
-	>=net-print/cups-filters-1.0.30
-	filters? ( net-print/foomatic-filters )
+	>=net-print/cups-filters-1.0.43
 "
 
 REQUIRED_USE="gnutls? ( ssl )

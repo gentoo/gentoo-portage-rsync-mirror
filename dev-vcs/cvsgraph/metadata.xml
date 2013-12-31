@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>cvs-utils</herd>
-	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
 	<longdescription lang="en">
 		CvsGraph is a utility to make a graphical representation of all
 		revisions and branches of a file in a CVS/RCS repository. It has been

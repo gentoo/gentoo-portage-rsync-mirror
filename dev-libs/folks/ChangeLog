@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.36 2013/12/08 17:55:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.37 2013/12/24 15:47:09 pacho Exp $
+
+*folks-0.9.6 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +folks-0.9.6.ebuild,
+  -folks-0.8.0.ebuild, metadata.xml:
+  Version bump for Gnome 3.10, drop old
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> folks-0.9.3.ebuild:
   x86 stable, bug #478252

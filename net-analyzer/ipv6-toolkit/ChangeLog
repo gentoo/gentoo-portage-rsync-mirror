@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/ipv6-toolkit
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipv6-toolkit/ChangeLog,v 1.1 2013/02/19 19:22:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipv6-toolkit/ChangeLog,v 1.3 2013/12/29 08:52:33 xarthisius Exp $
+
+  29 Dec 2013; Kacper Kowalik <xarthisius@gentoo.org> ipv6-toolkit-1.4.1.ebuild:
+  Fix SRC_URI as upstream silently replaced ungzipped tar with compressed one
+
+*ipv6-toolkit-1.4.1 (28 Dec 2013)
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/ipv6-toolkit-1.4-oui-path.patch,
+  +files/ipv6-toolkit-1.4.1-oui-path.patch, +ipv6-toolkit-1.4.1.ebuild:
+  Bug #487602: bump.
 
 *ipv6-toolkit-1.3.1 (19 Feb 2013)
 

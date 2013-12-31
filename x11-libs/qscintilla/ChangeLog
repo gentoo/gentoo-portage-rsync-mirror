@@ -1,6 +1,19 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.95 2013/11/14 01:33:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.98 2013/12/30 02:02:46 pesa Exp $
+
+*qscintilla-2.8-r1 (30 Dec 2013)
+
+  30 Dec 2013; Davide Pesavento <pesa@gentoo.org> +qscintilla-2.8-r1.ebuild,
+  -qscintilla-2.8.ebuild:
+  Remove pointless USE flag 'python'.
+
+  24 Dec 2013; Davide Pesavento <pesa@gentoo.org>
+  -files/qscintilla-2.6.2-designer.patch, -qscintilla-2.6.2.ebuild:
+  old
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> qscintilla-2.7.2.ebuild:
+  Stable for sparc, wrt bug #483112
 
 *qscintilla-2.8 (14 Nov 2013)
 

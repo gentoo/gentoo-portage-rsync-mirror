@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/pdf-inspector-1.1.0.ebuild,v 1.1 2013/04/13 06:42:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/pdf-inspector-1.1.0.ebuild,v 1.2 2013/12/28 20:03:43 mrueg Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGELOG README"
 inherit ruby-fakegem
 
 DESCRIPTION=" A tool for analyzing PDF output."
-HOMEPAGE="http://github.com/sandal/pdf-inspector"
+HOMEPAGE="https://github.com/prawnpdf/pdf-inspector"
 
 LICENSE="|| ( Ruby GPL-2 GPL-3 )"
 SLOT="0"

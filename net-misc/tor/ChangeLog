@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.395 2013/12/12 13:57:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.396 2013/12/23 14:10:19 blueness Exp $
+
+*tor-0.2.4.20 (23 Dec 2013)
+
+  23 Dec 2013; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.4.20.ebuild:
+  Version bump production branch
 
   12 Dec 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix broken gpg sig due to bug #493834

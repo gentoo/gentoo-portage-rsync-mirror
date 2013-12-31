@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/mozc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/ChangeLog,v 1.8 2013/07/28 09:42:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/mozc/ChangeLog,v 1.9 2013/12/25 03:45:26 naota Exp $
+
+*mozc-1.10.1390.102-r1 (25 Dec 2013)
+
+  25 Dec 2013; Naohiro Aota <naota@gentoo.org> +files/mozc-ibus-1.5.4.patch,
+  +mozc-1.10.1390.102-r1.ebuild, -mozc-1.10.1390.102.ebuild:
+  Apply ibus-1.5.4 patch
 
   28 Jul 2013; Naohiro Aota <naota@gentoo.org> mozc-1.10.1390.102.ebuild:
   Drop miss-added dep to dev-libs/protobuf. #478094

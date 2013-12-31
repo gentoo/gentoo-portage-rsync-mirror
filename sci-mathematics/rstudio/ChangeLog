@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/rstudio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.8 2013/12/14 13:43:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rstudio/ChangeLog,v 1.9 2013/12/23 21:33:01 hasufell Exp $
+
+  23 Dec 2013; Julian Ospald <hasufell@gentoo.org> rstudio-0.98.490.ebuild:
+  fix build with +server wrt #494362
 
 *rstudio-0.98.490 (14 Dec 2013)
 

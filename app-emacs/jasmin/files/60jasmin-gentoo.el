@@ -1,6 +1,3 @@
-
-;;; site-lisp configuration for jasmin
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'jasmin-mode "jasmin"
   "Major mode for editing Jasmin Java bytecode assembler files." t)

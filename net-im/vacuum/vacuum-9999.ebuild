@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.10 2013/09/21 12:55:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.11 2013/12/28 20:19:54 maksbotan Exp $
 
 EAPI="5"
 LANGS="de pl ru uk"
@@ -12,7 +12,7 @@ HOMEPAGE="http://code.google.com/p/vacuum-im"
 ESVN_REPO_URI="http://vacuum-im.googlecode.com/svn/trunk"
 
 LICENSE="GPL-3"
-SLOT="0/29" # subslot = libvacuumutils soname version
+SLOT="0/31" # subslot = libvacuumutils soname version
 KEYWORDS=""
 PLUGINS=" adiummessagestyle annotations autostatus avatars birthdayreminder bitsofbinary bookmarks captchaforms chatstates clientinfo commands compress console dataforms datastreamsmanager emoticons filemessagearchive filestreamsmanager filetransfer gateways inbandstreams iqauth jabbersearch messagearchiver messagecarbons multiuserchat pepmanager privacylists privatestorage recentcontacts registration remotecontrol rosteritemexchange rostersearch servermessagearchive servicediscovery sessionnegotiation shortcutmanager socksstreams urlprocessor vcard xmppuriqueries"
 SPELLCHECKER_BACKENDS="aspell +enchant hunspell"
@@ -49,6 +49,7 @@ RDEPEND="
 	>=dev-libs/openssl-1.0.0
 	adiummessagestyle? ( >=dev-qt/qtwebkit-4.8:4 )
 	filemessagearchive? ( >=dev-qt/qtsql-4.8:4[sqlite] )
+	messagearchiver? ( >=dev-qt/qtsql-4.8:4[sqlite] )
 	spell? (
 		aspell? ( app-text/aspell )
 		enchant? ( app-text/enchant )

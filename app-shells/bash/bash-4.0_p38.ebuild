@@ -1,19 +1,18 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0_p38.ebuild,v 1.5 2012/11/19 22:26:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.0_p38.ebuild,v 1.6 2013/12/22 13:42:06 vapier Exp $
 
-EAPI="1"
+EAPI="4"
 
-inherit eutils flag-o-matic toolchain-funcs multilib
+inherit eutils flag-o-matic toolchain-funcs
 
 # Official patchlevel
-# See ftp://ftp.cwru.edu/pub/bash/bash-3.2-patches/
+# See ftp://ftp.cwru.edu/pub/bash/bash-4.0-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
+MY_PV=${MY_PV/_/-}
 MY_P=${PN}-${MY_PV}
 [[ ${PV} != *_p* ]] && PLEVEL=0
-READLINE_VER=6.0
-READLINE_PLEVEL=0 # both readline patches are also released as bash patches
 patches() {
 	local opt=$1 plevel=${2:-${PLEVEL}} pn=${3:-${PN}} pv=${4:-${MY_PV}}
 	[[ ${plevel} -eq 0 ]] && return 1
@@ -31,19 +30,17 @@ patches() {
 
 DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://tiswww.case.edu/php/chet/bash/bashtop.html"
-SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)
-	$(patches ${READLINE_PLEVEL} readline ${READLINE_VER})"
+SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-3"
-SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="afs bashlogger mem-scramble +net nls plugins vanilla"
+SLOT="${MY_PV}"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="afs mem-scramble +net nls +readline"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
+	readline? ( >=sys-libs/readline-6.2 )
 	nls? ( virtual/libintl )"
-RDEPEND="${DEPEND}
-	!<sys-apps/portage-2.1.5
-	!<sys-apps/paludis-0.26.0_alpha5"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
@@ -57,37 +54,31 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
-	cd "${S}"
+}
 
+src_prepare() {
 	# Include official patches
 	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
-	cd lib/readline
-	[[ ${READLINE_PLEVEL} -gt 0 ]] && epatch $(patches -s ${READLINE_PLEVEL} readline ${READLINE_VER})
-	cd ../..
+
+	# Clean out local libs so we know we use system ones
+	rm -rf lib/{readline,termcap}/*
+	touch lib/{readline,termcap}/Makefile.in # for config.status
+	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
 
 	epatch "${FILESDIR}"/${PN}-4.0-configure.patch #304901
 	epatch "${FILESDIR}"/${PN}-4.x-deferred-heredocs.patch
+	sed -i '1i#define NEED_FPURGE_DECL' execute_cmd.c # needs fpurge() decl
+	epatch "${FILESDIR}"/${PN}-3.2-parallel-build.patch #189671
+	epatch "${FILESDIR}"/${PN}-4.0-ldflags-for-build.patch #211947
+	epatch "${FILESDIR}"/${PN}-4.0-negative-return.patch
+	epatch "${FILESDIR}"/${PN}-4.0-parallel-build.patch #267613
+	sed -i '/\.o: .*shell\.h/s:$: pathnames.h:' Makefile.in #267613
 
-	if ! use vanilla ; then
-		sed -i '1i#define NEED_FPURGE_DECL' execute_cmd.c # needs fpurge() decl
-		epatch "${FILESDIR}"/${PN}-3.2-parallel-build.patch #189671
-		epatch "${FILESDIR}"/${PN}-4.0-ldflags-for-build.patch #211947
-		epatch "${FILESDIR}"/${PN}-4.0-negative-return.patch
-		epatch "${FILESDIR}"/${PN}-4.0-parallel-build.patch #267613
-		# Log bash commands to syslog #91327
-		if use bashlogger ; then
-			ewarn "The logging patch should ONLY be used in restricted (i.e. honeypot) envs."
-			ewarn "This will log ALL output you enter into the shell, you have been warned."
-			ebeep
-			epause
-			epatch "${FILESDIR}"/${PN}-3.1-bash-logger.patch
-		fi
-		sed -i '/\.o: .*shell\.h/s:$: pathnames.h:' Makefile.in #267613
-	fi
+	epatch_user
 }
 
-src_compile() {
-	local myconf=
+src_configure() {
+	local myconf=()
 
 	# For descriptions of these, see config-top.h
 	# bashrc/#26952 bash_logout/#90488 ssh/#24762
@@ -99,83 +90,51 @@ src_compile() {
 		-DNON_INTERACTIVE_LOGIN_SHELLS \
 		-DSSH_SOURCE_BASHRC
 
-	# Always use the buildin readline, else if we update readline
-	# bash gets borked as readline is usually not binary compadible
-	# between minor versions.
-	#myconf="${myconf} $(use_with !readline installed-readline)"
-	myconf="${myconf} --without-installed-readline"
-
 	# Don't even think about building this statically without
 	# reading Bug 7714 first.  If you still build it statically,
 	# don't come crying to us with bugs ;).
 	#use static && export LDFLAGS="${LDFLAGS} -static"
-	use nls || myconf="${myconf} --disable-nls"
+	use nls || myconf+=( --disable-nls )
+
+	# Historically, we always used the builtin readline, but since
+	# our handling of SONAME upgrades has gotten much more stable
+	# in the PM (and the readline ebuild itself preserves the old
+	# libs during upgrades), linking against the system copy should
+	# be safe.
+	# Exact cached version here doesn't really matter as long as it
+	# is at least what's in the DEPEND up above.
+	export ac_cv_rl_version=6.2
 
 	# Force linking with system curses ... the bundled termcap lib
-	# sucks bad compared to ncurses
-	myconf="${myconf} --with-curses"
+	# sucks bad compared to ncurses.  For the most part, ncurses
+	# is here because readline needs it.  But bash itself calls
+	# ncurses in one or two small places :(.
 
-	use plugins && append-ldflags -Wl,-rpath,/usr/$(get_libdir)/bash
+	tc-export AR #444070
 	econf \
+		--with-installed-readline=. \
+		--with-curses \
 		$(use_with afs) \
 		$(use_enable net net-redirections) \
 		--disable-profiling \
 		$(use_enable mem-scramble) \
 		$(use_with mem-scramble bash-malloc) \
-		${myconf} || die
-	emake || die "make failed"
-
-	if use plugins ; then
-		emake -C examples/loadables all others || die
-	fi
+		$(use_enable readline) \
+		$(use_enable readline history) \
+		$(use_enable readline bang-history) \
+		"${myconf[@]}"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	into /
+	newbin bash bash-${SLOT}
 
-	dodir /bin
-	mv "${D}"/usr/bin/bash "${D}"/bin/ || die
-	dosym bash /bin/rbash
+	newman doc/bash.1 bash-${SLOT}.1
+	newman doc/builtins.1 builtins-${SLOT}.1
 
-	insinto /etc/bash
-	doins "${FILESDIR}"/{bashrc,bash_logout}
-	insinto /etc/skel
-	for f in bash{_logout,_profile,rc} ; do
-		newins "${FILESDIR}"/dot-${f} .${f}
-	done
+	insinto /usr/share/info
+	newins doc/bashref.info bash-${SLOT}.info
+	dosym bash-${SLOT}.info /usr/share/info/bashref-${SLOT}.info
 
-	sed -i -e "s:#${USERLAND}#@::" "${D}"/etc/skel/.bashrc "${D}"/etc/bash/bashrc
-	sed -i -e '/#@/d' "${D}"/etc/skel/.bashrc "${D}"/etc/bash/bashrc
-
-	if use plugins ; then
-		exeinto /usr/$(get_libdir)/bash
-		doexe $(echo examples/loadables/*.o | sed 's:\.o::g') || die
-	fi
-
-	doman doc/*.1
 	dodoc README NEWS AUTHORS CHANGES COMPAT Y2K doc/FAQ doc/INTRO
-	dosym bash.info /usr/share/info/bashref.info
-}
-
-pkg_preinst() {
-	if [[ -e ${ROOT}/etc/bashrc ]] && [[ ! -d ${ROOT}/etc/bash ]] ; then
-		mkdir -p "${ROOT}"/etc/bash
-		mv -f "${ROOT}"/etc/bashrc "${ROOT}"/etc/bash/
-	fi
-
-	if [[ -L ${ROOT}/bin/sh ]]; then
-		# rewrite the symlink to ensure that its mtime changes. having /bin/sh
-		# missing even temporarily causes a fatal error with paludis.
-		local target=$(readlink "${ROOT}"/bin/sh)
-		local tmp=$(emktemp "${ROOT}"/bin)
-		ln -sf "${target}" "${tmp}"
-		mv -f "${tmp}" "${ROOT}"/bin/sh
-	fi
-}
-
-pkg_postinst() {
-	# If /bin/sh does not exist, provide it
-	if [[ ! -e ${ROOT}/bin/sh ]]; then
-		ln -sf bash "${ROOT}"/bin/sh
-	fi
 }

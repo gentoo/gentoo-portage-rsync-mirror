@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.39 2013/06/19 05:04:21 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.40 2013/12/31 03:42:18 creffett Exp $
 
 
 # Fabian Groffen <grobian@gentoo.org> (19 Feb 2012)
@@ -32,15 +32,6 @@ media-libs/mesa
 ~sys-devel/gcc-4.4.2
 ~sys-devel/gcc-4.4.3
 ~sys-devel/gcc-4.4.4
-
-# Fabian Groffen <grobian@gentoo.org> (30 Jun 2009)
-# platform.h:81: error: conflicting types for ‘setmode’
-# /usr/include/unistd.h:570: error: previous declaration of ‘setmode’ was here
-=app-crypt/ccrypt-1.8
-
-# Elias Pipping <pipping@gentoo.org> (22 Dec 2007)
-# bug #211712: archive has no table of contents
-sci-libs/blas-atlas
 
 # Elias Pipping <pipping@gentoo.org> (09 Oct 2007)
 # darwin-miscutils are only available on darwin

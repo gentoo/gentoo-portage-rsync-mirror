@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/subsurface
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.6 2013/11/16 15:15:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/ChangeLog,v 1.7 2013/12/23 16:57:35 tomwij Exp $
+
+*subsurface-4.0 (23 Dec 2013)
+
+  23 Dec 2013; Tom Wijsman <TomWij@gentoo.org> +subsurface-4.0.ebuild,
+  subsurface-9999.ebuild:
+  Version bump to 4.0, uses Qt 4 now; fixes bug #495098, proxied commit by
+  Martin Gysel (bearsh).
 
 *subsurface-3.1.1 (16 Nov 2013)
 

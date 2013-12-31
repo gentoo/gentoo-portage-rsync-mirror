@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15269 2013/12/21 21:57:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15292 2013/12/31 08:47:48 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,184 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (31 Dec 2013)
+# Security mask of vulnerable versions, wrt bug #455464
+<dev-libs/boost-1.52.0-r6
+<dev-util/boost-build-1.52.0
+
+# Julian Ospald <hasufell@gentoo.org> (30 Dec 2013)
+# breaks every consumer
+=dev-games/ogre-1.9.0
+
+# Hans de Graaff <graaff@gentoo.org> (29 Dec 2013)
+# Mask for removal in 30 days. mkrf is an obsolete
+# build system that is not used anymore. It has no
+# dependencies in the tree left.
+dev-ruby/mkrf
+
+# Samuli Suominen <ssuominen@gentoo.org> (28 Dec 2013)
+# Replaced by 'emerge @module-rebuild' set in Portage itself.
+# Removal in 30 days, see http://bugs.gentoo.org/410739
+sys-kernel/module-rebuild
+
+# Justin Lecher <jlec@gentoo.org> (27 Dec 2013)
+# This version isn't released yet
+sys-kernel/aufs-sources:3.12.7
+
+# Samuli Suominen <ssuominen@gentoo.org> (25 Dec 2013)
+# The required icons from faenza-xfce-icon-theme are now part of
+# the faenza-icon-theme itself for a long time now.
+# Removal in 30 days.
+x11-themes/faenza-xfce-icon-theme
+
+# Hans de Graaff <graaff@gentoo.org> (25 Dec 2013)
+# Masked for removal in 30 days. Doesn't work with ruby19
+# and ruby20, dead upstream, no dependencies in the tree.
+dev-ruby/arrayfields
+
+# Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2013)
+# Gnome 3.10 mask
+# * webkit still needs some testing on hardened and some USE flag combinations
+# * bluez-5 is a major update
+# * geoclue/geocode-glib is a major update
+>=app-accessibility/at-spi2-atk-2.10
+>=app-accessibility/at-spi2-core-2.10
+>=app-accessibility/orca-3.10
+>=app-admin/gnome-system-log-3.9
+>=app-arch/file-roller-3.10
+>=app-cdr/brasero-3.10
+>=app-crypt/gcr-3.10
+>=app-crypt/seahorse-3.10
+>=app-dicts/gnome-dictionary-3.10
+>=app-editors/gedit-3.10
+>=app-editors/gedit-plugins-3.10
+>=app-editors/ghex-3.10
+>=app-misc/bijiben-3.10
+>=app-misc/geoclue-2.0
+>=app-misc/gnote-3.10
+>=app-text/evince-3.10
+>=app-text/yelp-tools-3.10
+>=dev-cpp/glibmm-2.38
+>=dev-cpp/gtkmm-3.10
+>=dev-libs/atk-2.10
+>=dev-libs/folks-0.9.6
+>=dev-libs/gdl-3.10
+>=dev-libs/gjs-1.38
+>=dev-libs/glib-2.38
+>=dev-libs/gobject-introspection-1.38
+>=dev-libs/gobject-introspection-common-1.38
+>=dev-libs/libgee-0.12
+>=dev-libs/libgweather-3.10
+>=dev-libs/libpeas-1.9
+>=dev-libs/totem-pl-parser-3.10
+>=dev-python/pyatspi-2.10
+>=dev-python/pygobject-3.10
+>=dev-util/anjuta-3.10
+>=dev-util/devhelp-3.10
+>=dev-util/gdbus-codegen-2.38
+>=dev-util/glade-3.16
+>=dev-util/gnome-devel-docs-3.10
+>=games-arcade/gnome-nibbles-3.10
+>=games-arcade/gnome-robots-3.10
+>=games-board/four-in-a-row-3.10
+>=games-board/gnome-chess-3.10
+>=games-board/gnome-mahjongg-3.10
+>=games-board/gnome-mines-3.10
+>=games-board/iagno-3.10
+>=games-board/tali-3.10
+>=games-puzzle/five-or-more-3.10
+>=games-puzzle/gnome-klotski-3.10
+>=games-puzzle/gnome-sudoku-3.10
+>=games-puzzle/gnome-tetravex-3.10
+>=games-puzzle/lightsoff-3.10
+>=games-puzzle/quadrapassel-3.10
+>=games-puzzle/swell-foop-3.10
+>=gnome-base/dconf-0.18
+>=gnome-base/gdm-3.10
+>=gnome-base/gnome-3.10
+>=gnome-base/gnome-common-3.10
+>=gnome-base/gnome-control-center-3.10
+>=gnome-base/gnome-core-apps-3.10
+>=gnome-base/gnome-core-libs-3.10
+>=gnome-base/gnome-desktop-3.10
+>=gnome-base/gnome-extra-apps-3.10
+>=gnome-base/gnome-keyring-3.10
+>=gnome-base/gnome-menus-3.10
+>=gnome-base/gnome-session-3.10
+>=gnome-base/gnome-settings-daemon-3.10
+>=gnome-base/gnome-shell-3.10
+>=gnome-base/gsettings-desktop-schemas-3.10
+>=gnome-base/gvfs-1.18
+>=gnome-base/libgnome-keyring-3.10
+>=gnome-base/nautilus-3.10
+>=gnome-extra/evolution-data-server-3.10
+>=gnome-extra/evolution-ews-3.10
+>=gnome-extra/evolution-mapi-3.10
+>=gnome-extra/gnome-boxes-3.10
+>=gnome-extra/gnome-calculator-3.10
+>=gnome-extra/gnome-clocks-3.10
+>=gnome-extra/gnome-color-manager-3.10
+>=gnome-extra/gnome-contacts-3.10
+>=gnome-extra/gnome-documents-3.10
+>=gnome-extra/gnome-power-manager-3.10
+>=gnome-extra/gnome-shell-extensions-3.10
+>=gnome-extra/gnome-system-monitor-3.10
+>=gnome-extra/gnome-tweak-tool-3.10
+>=gnome-extra/gnome-user-docs-3.10
+>=gnome-extra/gnome-user-share-3.10
+>=gnome-extra/gnome-weather-3.10
+>=gnome-extra/gucharmap-3.10
+>=gnome-extra/mousetweaks-3.10
+>=gnome-extra/seahorse-nautilus-3.10
+>=gnome-extra/sushi-3.10
+>=gnome-extra/yelp-3.10
+>=gnome-extra/yelp-xsl-3.10
+>=mail-client/evolution-3.10
+>=media-gfx/eog-3.10
+>=media-gfx/eog-plugins-3.10
+>=media-gfx/gnome-font-viewer-3.10
+>=media-gfx/gnome-photos-3.10
+>=media-gfx/gnome-screenshot-3.10
+>=media-libs/clutter-1.16
+>=media-libs/cogl-1.16
+>=media-sound/gnome-music-3.10
+>=media-video/cheese-3.10
+>=media-video/totem-3.10
+>=net-im/empathy-3.10
+>=net-libs/glib-networking-2.38
+>=net-libs/gnome-online-accounts-3.10
+>=net-libs/libsoup-2.44
+>=net-libs/libsoup-gnome-2.44
+>=net-libs/webkit-gtk-2.2
+>=net-misc/gnome-online-miners-3.10
+>=net-misc/rygel-0.20
+>=net-misc/vinagre-3.10
+>=net-misc/vino-3.10
+>=net-wireless/bluez-5
+>=net-wireless/gnome-bluetooth-3.10
+>=sci-geosciences/geocode-glib-3.10
+>=sci-geosciences/gnome-maps-3.10
+>=sys-apps/baobab-3.10
+>=sys-apps/gnome-disk-utility-3.10
+>=www-client/epiphany-3.10
+>=x11-libs/gdk-pixbuf-2.30
+>=x11-libs/gtk+-3.10
+>=x11-libs/gtksourceview-3.10
+>=x11-libs/libcryptui-3.10
+>=x11-libs/pango-1.36
+>=x11-misc/alacarte-3.10
+>=x11-terms/gnome-terminal-3.10
+>=x11-themes/gnome-backgrounds-3.10
+>=x11-themes/gnome-icon-theme-3.10
+>=x11-themes/gnome-icon-theme-symbolic-3.10
+>=x11-themes/gnome-themes-standard-3.10
+>=x11-wm/mutter-3.10
+
+# Sergey Popov <pinkbyte@gentoo.org> (23 Dec 2013)
+# Masked for removal, please migrate to dev-python/irc,
+# which is in fact just a newer version of this package.
+dev-python/python-irclib
 
 # Hans de Graaff <graaff@gentoo.org> (21 Dec 2013)
 # Masked for removal as part of the ruby18 deprecation.
@@ -122,26 +300,6 @@ app-office/rabbit
 # Only available for ruby18, no dependencies left
 dev-ruby/postgres
 
-# Tom Wijsman <TomWij@gentoo.org> (30 Nov 2013)
-# Mask gentoo-sources-3.12.{0,1} as it causes sandbox violations, please note
-# that 3.12.2 is out now. aufs-sources masked by Justin Lecher <jlec@gentoo.org>
-sys-kernel/gentoo-sources:3.12.0
-sys-kernel/gentoo-sources:3.12.1
-sys-kernel/aufs-sources:3.12.0
-sys-kernel/aufs-sources:3.12.1
-
-# Hans de Graaff <graaff@gentoo.org> (24 Nov 2013)
-# dev-ruby/id3lib-ruby only works with deprecated ruby 1.8.
-# media-sound/omptagger is its dependency and no longer maintained
-# upstream, bug 488676.
-dev-ruby/id3lib-ruby
-media-sound/omptagger
-
-# Johannes Huber <johu@gentoo.org> (24 Nov 2013)
-# Masked for removal in 30 days. Broken functionality.
-# See bug #438790
-kde-misc/polkit-kde-kcmodules
-
 # Matti Bickel <mabi@gentoo.org> (20 Nov 2013)
 # Outdated, beta and abondoned upstream, removal on 20131220
 dev-php/PEAR-File_PDF
@@ -160,21 +318,6 @@ dev-php/PEAR-File_PDF
 # Masked for testing
 ~dev-util/boost-build-1.55.0
 ~dev-libs/boost-1.55.0
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (13 Nov 2013)
-# Masked for removal in 30 days. Depends on masked dev-lang/v8, no commits
-# since 2011. See bug #429276, bug #443586, bug #443688, bug #490214.
-dev-lang/v8cgi
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (13 Nov 2013)
-# Masked for removal in 30 days. Does not have stable API resulting in compile
-# breakages in reverse dependencies. Combined with short release cycle (6 weeks)
-# this makes it pretty much unusable as a shared library. See bug #417879,
-# bug #420995, bug #471582, bug #477300, bug #484786, bug #490214.
-# Also, the following discussions:
-# - http://thread.gmane.org/gmane.linux.gentoo.devel/88222
-# - http://thread.gmane.org/gmane.linux.gentoo.devel/88811
-dev-lang/v8
 
 # Matti Bickel <mabi@gentoo.org> (13 Nov 2013)
 # Now included in dev-php/phpunit, removal on 20131213
@@ -205,10 +348,6 @@ dev-php/DBUnit
 # Davide Pesavento <pesa@gentoo.org> (23 Oct 2013)
 # Some features require Qt 5.2, which is not in tree yet.
 =dev-qt/qt-creator-3*
-
-# Tim Harder <radhermit@gentoo.org (18 Oct 2013)
-# Masked for testing
-=media-libs/libraw-0.16*
 
 # Stanislav Ochotnicky <sochotnicky@gentoo.org (14 Oct 2013)
 # Mask live ebuild of sys-fs/simple-mtpfs (#488038)
@@ -248,12 +387,6 @@ www-apache/mod_spdy
 # - requires at least gcc 4.7(and possibly even 4.8 for some features)
 >=dev-libs/botan-1.11.0
 
-# Ian Stakenvicius <axs@gentoo.org> (08 Sep 2013)
-# Collides with emul-linux-x86-sdl, will unmask after
-# fixed.
-# bug #484060
-=media-libs/openal-1.15.1-r1
-
 # Mikle Kolyada <zlogene@gentoo.org> (08 Sep 2013)
 # Untested / unconfirmed major bump of perl #479064
 # Needs proper testing before being unleashed
@@ -263,11 +396,9 @@ www-apache/mod_spdy
 =virtual/perl-Devel-PPPort-3.200.0-r2
 =virtual/perl-Dumpvalue-1.170.0-r1
 =virtual/perl-ExtUtils-Constant-0.230.0-r3
-=virtual/perl-File-Temp-0.230.0
 =virtual/perl-Filter-Simple-0.890.0
 =virtual/perl-IO-Zlib-1.100.0-r3
 =virtual/perl-Locale-Maketext-Simple-0.210.0-r3
-=virtual/perl-MIME-Base64-3.130.0-r3
 =virtual/perl-Math-BigInt-FastCalc-0.300.0-r2
 =virtual/perl-Math-Complex-1.590.0-r2
 =virtual/perl-Module-Loaded-0.80.0-r2
@@ -278,11 +409,8 @@ www-apache/mod_spdy
 =virtual/perl-Text-Balanced-2.20.0-r3
 =virtual/perl-Text-ParseWords-3.280.0-r1
 =virtual/perl-Tie-RefHash-1.390.0-r1
-=virtual/perl-Time-HiRes-1.972.500-r2
 =virtual/perl-digest-base-1.170.0-r2
 =virtual/perl-if-0.60.200
-=virtual/perl-libnet-1.220.0-r2
-=virtual/perl-parent-0.225.0-r4
 =virtual/perl-threads-1.860.0-r2
 =virtual/perl-ExtUtils-CBuilder-0.280.210
 =virtual/perl-IO-1.280.0
@@ -678,10 +806,6 @@ dev-ml/ocamlduce
 # Mask beta versions for testing
 >sci-electronics/magic-8
 
-# Markos Chandras <hwoarang@gentoo.org> (27 May 2012)
-# Mask alpha release
-=sci-electronics/qelectrotech-0.30_alpha*
-
 # Benda Xu <heroxbd@gentoo.org> (20 May 2012)
 # geant-4.9.5_p01 has a major class declaration change that renders
 # geant-python (g4py upstream) unable to compile
@@ -847,11 +971,6 @@ app-pda/multisync-gui
 <dev-lang/perl-5.12.2
 <sys-devel/libperl-5.10.1
 
-# Gilles Dartiguelongue <eva@gentoo.org> (07 Dec 2010)
-# Part of GNOME 2.32 release set by breaks my machine as hell
-# Needs more testing before unleashing
->=gnome-base/libbonobo-2.32
-
 # Markos Chandras <hwoarang@gentoo.org> (01 Nov 2010)
 # Masking alpha releases
 net-analyzer/ncrack
@@ -945,7 +1064,6 @@ net-misc/netcomics-cvs
 # rdep for sci-astronomy/casacore
 sci-astronomy/casa-data
 sci-astronomy/casacore
-=sci-electronics/qelectrotech-9999
 =sys-fs/redirfs-9999
 sys-kernel/zen-sources
 =www-plugins/google-talkplugin-9999

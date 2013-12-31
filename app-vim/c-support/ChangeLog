@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/c-support
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/c-support/ChangeLog,v 1.7 2013/11/30 13:11:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/c-support/ChangeLog,v 1.9 2013/12/30 08:11:23 radhermit Exp $
+
+  30 Dec 2013; Tim Harder <radhermit@gentoo.org> -c-support-5.16.1.ebuild,
+  -c-support-5.19.ebuild:
+  Remove old.
+
+*c-support-6.1 (30 Dec 2013)
+
+  30 Dec 2013; Tim Harder <radhermit@gentoo.org> +c-support-6.1.ebuild:
+  Version bump.
 
   30 Nov 2013; Johannes Huber <johu@gentoo.org> c-support-6.0.ebuild:
   x86 stable wrt bug #481872

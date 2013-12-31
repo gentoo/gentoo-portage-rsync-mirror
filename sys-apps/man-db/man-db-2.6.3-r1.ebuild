@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.3-r1.ebuild,v 1.15 2013/04/27 08:37:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.3-r1.ebuild,v 1.17 2013/12/29 14:47:48 swift Exp $
 
 EAPI="4"
 
@@ -12,14 +12,15 @@ SRC_URI="mirror://nongnu/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~arm-linux ~x86-linux"
-IUSE="berkdb +gdbm nls static-libs zlib"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~arm-linux ~x86-linux"
+IUSE="berkdb +gdbm nls selinux static-libs zlib"
 
 RDEPEND="dev-libs/libpipeline
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
 	!berkdb? ( !gdbm? ( sys-libs/gdbm ) )
 	sys-apps/groff
+	selinux? ( sec-policy/selinux-mandb )
 	zlib? ( sys-libs/zlib )
 	!sys-apps/man"
 DEPEND="${RDEPEND}

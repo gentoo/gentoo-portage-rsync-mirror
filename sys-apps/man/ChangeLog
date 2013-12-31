@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.175 2012/12/15 12:53:52 swift Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.176 2013/12/27 11:08:26 pinkbyte Exp $
+
+  27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> man-1.6f-r4.ebuild,
+  man-1.6g.ebuild:
+  Drop s390/sh/m68k to unstable
 
   15 Dec 2012; <swift@gentoo.org> man-1.6f-r4.ebuild, man-1.6f-r5.ebuild,
   man-1.6g.ebuild:

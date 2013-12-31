@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logsurfer+
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/ChangeLog,v 1.11 2013/05/27 12:27:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/ChangeLog,v 1.12 2013/12/23 00:49:31 tomwij Exp $
+
+  23 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/logsurfer.initd:
+  [QA] Remove unused files.
 
   24 Apr 2013; Ulrich Müller <ulm@gentoo.org> logsurfer+-1.8-r1.ebuild:
   Fix LICENSE and add bindist restriction, bug 444330.

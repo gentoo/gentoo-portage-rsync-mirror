@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.30 2013/12/13 06:07:35 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tins/ChangeLog,v 1.31 2013/12/22 13:54:21 ago Exp $
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> tins-0.13.1.ebuild:
+  Stable for ppc64, wrt bug #490178
 
   13 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -tins-0.11.0-r1.ebuild,
   -tins-0.12.0.ebuild, -tins-0.13.0.ebuild:

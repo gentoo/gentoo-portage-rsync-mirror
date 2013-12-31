@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2012.05.14.ebuild,v 1.1 2012/08/20 17:12:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2012.05.14.ebuild,v 1.3 2013/12/23 14:48:27 ago Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ if [[ ${PV} == *9999* ]]; then
 		EGIT_COMMIT="experimental"
 else
 	inherit vcs-snapshot
-	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 	SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${PV} -> ${P}.tar.gz"
 fi
 

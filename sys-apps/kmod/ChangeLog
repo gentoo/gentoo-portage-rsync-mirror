@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.119 2013/12/09 01:55:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.121 2013/12/27 21:40:06 ssuominen Exp $
+
+  27 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-15.ebuild:
+  Use MERGE_TYPE to avoid the pkg_setup() based compiler version check wrt
+  #495228
+
+*kmod-16 (27 Dec 2013)
+
+  27 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> +kmod-16.ebuild,
+  kmod-9999.ebuild:
+  Version bump (and synchronize with -9999)
 
 *kmod-15-r1 (09 Dec 2013)
 

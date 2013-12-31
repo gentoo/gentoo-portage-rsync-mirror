@@ -1,6 +1,23 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.52 2013/12/21 18:57:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.56 2013/12/22 22:33:08 blueness Exp $
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  -libmicrohttpd-0.9.27.ebuild, -libmicrohttpd-0.9.28.ebuild,
+  -libmicrohttpd-0.9.30.ebuild, -libmicrohttpd-0.9.31.ebuild:
+  Remove older versions
+
+*libmicrohttpd-0.9.33 (22 Dec 2013)
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  +libmicrohttpd-0.9.33.ebuild:
+  Version bump
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> libmicrohttpd-0.9.30.ebuild:
+  amd64 stable, bug 488644
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> libmicrohttpd-0.9.30.ebuild:
+  Stable for ppc64, wrt bug #488644
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> libmicrohttpd-0.9.30.ebuild:
   Stable for ppc, wrt bug #488644

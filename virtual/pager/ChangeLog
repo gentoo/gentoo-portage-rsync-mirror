@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pager
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.12 2013/02/22 17:45:29 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.13 2013/12/26 16:29:24 ulm Exp $
+
+  26 Dec 2013; Ulrich Müller <ulm@gentoo.org> pager-0.ebuild:
+  Drop to unstable on m68k, s390 and sh. Remove empty variable assignments.
 
   22 Feb 2013; Zac Medico <zmedico@gentoo.org> pager-0.ebuild:
   Add ~arm-linux keyword.

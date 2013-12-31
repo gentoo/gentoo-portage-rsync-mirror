@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/gnome-online-miners
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-online-miners/ChangeLog,v 1.2 2013/12/27 10:55:56 pacho Exp $
+
+  27 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-online-miners-3.10.2.ebuild:
+  Fix docdir
+
+*gnome-online-miners-3.10.2 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  +gnome-online-miners-3.10.2.ebuild, +metadata.xml:
+  New package for Gnome 3.10

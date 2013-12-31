@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/libmpeg3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.80 2012/09/09 16:07:01 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.82 2013/12/30 07:24:22 aballier Exp $
+
+*libmpeg3-1.8-r1 (30 Dec 2013)
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org> +libmpeg3-1.8-r1.ebuild,
+  +files/libmpeg3-1.8-impldecl.patch:
+  Convert to multilib, bug #496382. Fix implicit declaration of free().
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org> -libmpeg3-1.7.ebuild,
+  -files/libmpeg3-1.7-memcpy.patch:
+  remove old
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> libmpeg3-1.8.ebuild:
   alpha/ia64/sh/sparc stable wrt #419087

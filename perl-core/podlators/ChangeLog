@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/podlators
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.11 2013/10/28 05:55:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/podlators/ChangeLog,v 1.12 2013/12/30 10:28:58 zlogene Exp $
+
+  30 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -podlators-2.2.2.ebuild,
+  -podlators-2.3.0.ebuild, -podlators-2.3.1.ebuild, -podlators-2.4.0.ebuild,
+  -podlators-2.4.2.ebuild, -podlators-2.5.0.ebuild, -podlators-2.5.1.ebuild:
+  Drop old
 
 *podlators-2.500.300 (28 Oct 2013)
 

@@ -1,6 +1,23 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.80 2013/06/17 04:30:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.84 2013/12/25 09:56:14 vapier Exp $
+
+  25 Dec 2013; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.33.2-r8.ebuild:
+  Fast stabilize due to crasher in current stable #495256 by Anthony Basile.
+
+*uclibc-0.9.33.2-r8 (24 Dec 2013)
+
+  24 Dec 2013; Mike Frysinger <vapier@gentoo.org> +uclibc-0.9.33.2-r8.ebuild:
+  Update statfs64 patch from upstream #495256 by Anthony Basile.
+
+*uclibc-0.9.33.2-r7 (22 Dec 2013)
+
+  22 Dec 2013; Mike Frysinger <vapier@gentoo.org> +uclibc-0.9.33.2-r7.ebuild:
+  Add pread/pwrite fix #475920, eventfd fix #482866, and linux-headers fix
+  #490008.
+
+  22 Dec 2013; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.33.2-r6.ebuild:
+  Stabilize for all.
 
 *uclibc-0.9.33.2-r6 (17 Jun 2013)
 

@@ -1,6 +1,14 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.94 2013/12/10 19:45:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.96 2013/12/30 21:30:16 hasufell Exp $
+
+  30 Dec 2013; Julian Ospald <hasufell@gentoo.org> ogre-1.9.0.ebuild:
+  fix REQUIRED_USE to have reliable use-dependencies
+
+*ogre-1.9.0 (30 Dec 2013)
+
+  30 Dec 2013; Julian Ospald <hasufell@gentoo.org> +ogre-1.9.0.ebuild:
+  version bump
 
   10 Dec 2013; Julian Ospald <hasufell@gentoo.org> ogre-1.8.1.ebuild:
   bump eapi, use system version of FindFreetype.cmake

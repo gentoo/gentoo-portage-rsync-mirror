@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.6.3.ebuild,v 1.2 2012/09/16 13:16:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.6.3.ebuild,v 1.3 2013/12/24 02:08:43 tomwij Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ IUSE=""
 
 ECJ_GCJ_SLOT="3.6"
 
-RDEPEND="~sys-devel/gcc-${PV}[gcj,gtk]
+RDEPEND="~sys-devel/gcc-${PV}[gcj,awt]
 	dev-java/ecj-gcj:${ECJ_GCJ_SLOT}"
 DEPEND="${RDEPEND}"
 

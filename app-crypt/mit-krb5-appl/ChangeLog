@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5-appl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.36 2013/02/28 13:43:44 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5-appl/ChangeLog,v 1.37 2013/12/27 21:44:29 tomwij Exp $
+
+  27 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/CVE-2011-4862.patch:
+  [QA] Remove unused files.
 
   28 Feb 2013; Eray Aslan <eras@gentoo.org> +files/mit-krb5-appl-tinfo.patch,
   mit-krb5-appl-1.0.3.ebuild:

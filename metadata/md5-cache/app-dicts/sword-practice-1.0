@@ -1,6 +1,6 @@
 DEFINED_PHASES=install
 DEPEND=app-arch/unzip
-DESCRIPTION=The Practice of the Presence of God: The Best Rule of Holy Life by Brother Lawrence (Nicholas Herman, 1605-1691)
+DESCRIPTION=The Practice of the Presence of God: The Best Rule of Holy Life
 HOMEPAGE=http://crosswire.org/sword/modules/ModInfo.jsp?modName=Practice
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
 LICENSE=public-domain
@@ -8,4 +8,4 @@ RDEPEND=app-text/sword
 SLOT=0
 SRC_URI=mirror://gentoo/Practice-1.0.zip
 _eclasses_=sword-module	c52595ffeb9df1c705120bffa624d484
-_md5_=0857b57469c1a5cbfacb2c18ba85294b
+_md5_=4f0fdc6c8ea97e97f4507a2ae2a5a186

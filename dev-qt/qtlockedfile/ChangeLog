@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtlockedfile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.5 2013/11/18 00:14:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.6 2013/12/28 15:17:00 pesa Exp $
+
+  28 Dec 2013; Davide Pesavento <pesa@gentoo.org>
+  qtlockedfile-2.4.1_p20130904.ebuild:
+  Do not hardcode library version in sed.
 
 *qtlockedfile-2.4.1_p20130904 (18 Nov 2013)
 

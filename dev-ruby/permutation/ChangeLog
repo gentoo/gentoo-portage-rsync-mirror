@@ -1,0 +1,5 @@
+*permutation-0.1.8 (25 Dec 2013)
+
+  25 Dec 2013; Naohiro Aota <naota@gentoo.org> +metadata.xml,
+  +permutation-0.1.8.ebuild:
+  New package: dev-ruby/permutation

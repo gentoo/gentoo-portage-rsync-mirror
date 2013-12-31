@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.9.0b.ebuild,v 1.1 2013/06/19 23:07:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.9.0b.ebuild,v 1.2 2013/12/26 21:15:27 jlec Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ src_prepare() {
 		-e '/^BLASFILES/d' \
 		-e '/^LAPACKFILES/d' \
 		lib/Makefile || die
-	tc-export CC
+	tc-export CC CXX
 }
 
 src_configure() {

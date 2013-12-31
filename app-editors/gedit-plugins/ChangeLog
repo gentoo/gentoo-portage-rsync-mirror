@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.39 2013/12/08 17:40:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.40 2013/12/24 15:30:08 pacho Exp $
+
+*gedit-plugins-3.10.1 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +gedit-plugins-3.10.1.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gedit-plugins-3.8.3-r1.ebuild:
   x86 stable, bug #478252

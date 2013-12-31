@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.43 2013/10/14 14:10:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.44 2013/12/24 12:44:28 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xtables-addons-2.3.ebuild:
+  Stable for x86, wrt bug #488016
 
   14 Oct 2013; Maxim Koltsov <maksbotan@gentoo.org> -xtables-addons-1.38.ebuild,
   -xtables-addons-1.39.ebuild, -xtables-addons-1.45.ebuild,

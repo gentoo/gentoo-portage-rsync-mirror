@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=ruby_targets_ruby18? ( test? ( dev-ruby/activesupport[ruby_targets_ruby18] dev-ruby/mocha:0.12[ruby_targets_ruby18] dev-ruby/test_declarative[ruby_targets_ruby18] ) ) ruby_targets_jruby? ( test? ( dev-ruby/activesupport[ruby_targets_jruby] dev-ruby/mocha:0.12[ruby_targets_jruby] dev-ruby/test_declarative[ruby_targets_jruby] ) ) ruby_targets_ruby19? ( test? ( dev-ruby/activesupport[ruby_targets_ruby19] dev-ruby/mocha:0.12[ruby_targets_ruby19] dev-ruby/test_declarative[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( dev-ruby/activesupport[ruby_targets_ruby20] dev-ruby/mocha:0.12[ruby_targets_ruby20] dev-ruby/test_declarative[ruby_targets_ruby20] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby18? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby18] ) ) ruby_targets_jruby? ( doc? ( dev-ruby/rdoc[ruby_targets_jruby] ) ) ruby_targets_ruby19? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( doc? ( dev-ruby/rdoc[ruby_targets_ruby20] ) ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] ) )
+DESCRIPTION=Add Internationalization support to your Ruby application.
+EAPI=5
+HOMEPAGE=http://rails-i18n.org/
+IUSE=elibc_FreeBSD ruby_targets_ruby18 ruby_targets_jruby ruby_targets_ruby19 ruby_targets_ruby20 doc test
+KEYWORDS=~amd64 ~arm
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_jruby? ( dev-java/jruby ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_jruby? ( virtual/rubygems[ruby_targets_jruby] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] )
+REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_jruby ruby_targets_ruby19 ruby_targets_ruby20 )
+SLOT=0.6
+SRC_URI=mirror://rubygems/i18n-0.6.9.gem
+_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	85bc32bc2513ec4970ac4783df4846a7	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=b75d15b188be8b91fd613097bd24234f

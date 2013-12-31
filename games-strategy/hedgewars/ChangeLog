@@ -1,6 +1,16 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.55 2013/11/13 11:23:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.57 2013/12/25 17:52:05 hasufell Exp $
+
+*hedgewars-0.9.20 (25 Dec 2013)
+
+  25 Dec 2013; Julian Ospald <hasufell@gentoo.org> -hedgewars-0.9.18-r1.ebuild,
+  -files/hedgewars-0.9.18-cflags.patch, -files/hedgewars-0.9.18-cmake.patch,
+  +hedgewars-0.9.20.ebuild, +files/hedgewars-0.9.20-paths.patch:
+  version bump, remove old
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> hedgewars-0.9.19.3.ebuild:
+  Stable for x86, wrt bug #490650
 
   13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> hedgewars-0.9.19.3.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

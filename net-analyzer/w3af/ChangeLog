@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/w3af
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.18 2013/01/30 18:56:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.19 2013/12/23 18:48:10 zerochaos Exp $
+
+*w3af-1.5 (23 Dec 2013)
+*w3af-1.1-r1 (23 Dec 2013)
+
+  23 Dec 2013; Rick Farina <zerochaos@gentoo.org> +w3af-1.1-r1.ebuild,
+  +w3af-1.5.ebuild:
+  update w3af-1.1 to python-single-r1 and most of an ebuild for 1.5 (need to fix
+  deps but out of time)
 
   30 Jan 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Update metadata.xml

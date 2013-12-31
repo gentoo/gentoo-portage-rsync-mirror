@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.8.1.ebuild,v 1.1 2013/10/19 05:44:07 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.8.1.ebuild,v 1.2 2013/12/26 09:25:58 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 ruby21 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="doc"
 RUBY_FAKEGEM_EXTRADOC="CHANGES TODO README.rdoc README-json-jruby.markdown"

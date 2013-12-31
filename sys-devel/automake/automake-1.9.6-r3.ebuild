@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.6-r3.ebuild,v 1.10 2013/04/04 22:15:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.9.6-r3.ebuild,v 1.11 2013/12/24 06:48:21 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd6
 IUSE=""
 
 RDEPEND="dev-lang/perl
-	sys-devel/automake-wrapper
+	>=sys-devel/automake-wrapper-9
 	>=sys-devel/autoconf-2.59-r6
 	>=sys-apps/texinfo-4.7
 	sys-devel/gnuconfig"

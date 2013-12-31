@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.149 2013/08/06 12:35:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.150 2013/12/22 09:29:27 pacho Exp $
+
+*stunnel-4.56-r2 (22 Dec 2013)
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> +files/stunnel.tmpfiles.conf,
+  +stunnel-4.56-r2.ebuild:
+  Add unit file (#493978)
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> stunnel-4.56-r1.ebuild:
   Stable for s390, wrt bug #460278

@@ -1,9 +1,0 @@
---- src/Makefile.am	2007-01-05 01:35:49.000000000 -0600
-+++ src/Makefile.am	2007-01-05 01:35:58.000000000 -0600
-@@ -31,6 +31,5 @@
- gringotts_LDADD = @POPT@ @GTK2_LIBS@ @GDKPIX_LIBS@ @LIBGRG_LIBS@
- 
- install-exec-local:
--	strip $(DESTDIR)$(bindir)/gringotts
- 	chmod u+s $(DESTDIR)$(bindir)/gringotts
- 	

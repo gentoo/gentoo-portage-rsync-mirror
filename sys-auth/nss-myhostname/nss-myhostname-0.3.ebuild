@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-myhostname/nss-myhostname-0.3.ebuild,v 1.14 2013/11/04 00:01:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-myhostname/nss-myhostname-0.3.ebuild,v 1.15 2013/12/23 16:24:06 ago Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1+"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~arm ~ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 COMMON_DEPEND=""

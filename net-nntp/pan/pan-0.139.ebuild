@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.139.ebuild,v 1.3 2013/12/08 19:34:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.139.ebuild,v 1.4 2013/12/22 16:23:14 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/source/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="dbus gnome-keyring libnotify spell ssl"
 
 RDEPEND=">=dev-libs/glib-2.26:2

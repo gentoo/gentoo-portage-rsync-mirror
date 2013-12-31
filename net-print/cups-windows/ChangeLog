@@ -1,6 +1,15 @@
 # ChangeLog for net-print/cups-windows
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/ChangeLog,v 1.12 2012/04/23 17:31:54 mgorny Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/ChangeLog,v 1.14 2013/12/26 00:22:00 dilfridge Exp $
+
+  26 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  cups-windows-6.0-r1.ebuild:
+  Make HOMEPAGE point to generic cups page and SRC_URI refer to our mirrors;
+  seems this does not exist anywhere anymore
+
+  26 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  -cups-windows-6.0.ebuild:
+  Remove old
 
   23 Apr 2012; Michał Górny <mgorny@gentoo.org> cups-windows-6.0.ebuild,
   cups-windows-6.0-r1.ebuild:

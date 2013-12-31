@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/files/rfcomm-init.d,v 1.1 2011/12/31 21:09:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/files/rfcomm-init.d,v 1.2 2013/12/23 23:05:20 eva Exp $
 
 depend() {
 	after coldplug
@@ -23,5 +23,5 @@ start() {
 stop() {
 	ebegin "Shutting down rfcomm"
 	/usr/bin/rfcomm release all
-	eend $?	
+	eend $?
 }

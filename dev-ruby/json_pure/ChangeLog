@@ -1,0 +1,5 @@
+*json_pure-1.8.1 (27 Dec 2013)
+
+  27 Dec 2013; Naohiro Aota <naota@gentoo.org> +json_pure-1.8.1.ebuild,
+  +metadata.xml:
+  New package: dev-ruby/json_pure

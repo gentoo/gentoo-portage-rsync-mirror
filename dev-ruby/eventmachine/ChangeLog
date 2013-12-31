@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.22 2013/11/20 13:39:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.23 2013/12/22 19:18:13 blueness Exp $
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  eventmachine-1.0.3-r1.ebuild:
+  Keyword ~ppc64, bug #465948
 
   20 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -eventmachine-1.0.0.ebuild,
   -eventmachine-1.0.3.ebuild:

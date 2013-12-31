@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-3.1.4.ebuild,v 1.3 2013/01/28 15:16:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/builder-3.1.4.ebuild,v 1.4 2013/12/25 10:26:18 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="test_all"
 
@@ -26,4 +26,7 @@ all_ruby_prepare() {
 	sed -i \
 		-e '/rdoc\.template .*jamis/d' \
 		Rakefile || die
+
+	# Backport for from 3.2 for ruby20 file encoding.
+	sed -i -e '1i# encoding: us-ascii' test/test_xchar.rb || die
 }

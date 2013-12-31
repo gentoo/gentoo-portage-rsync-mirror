@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 	Drush is a command line shell and scripting interface for Drupal, a

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rudy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.22 2013/11/30 08:16:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rudy/ChangeLog,v 1.23 2013/12/22 12:52:10 mrueg Exp $
+
+  22 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -rudy-0.9.8.016.ebuild:
+  Cleanup old.
 
 *rudy-0.9.8.016-r1 (30 Nov 2013)
 
@@ -125,4 +128,3 @@
   14 Feb 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +rudy-0.9.6.002.ebuild, +metadata.xml:
   Initial import of Rudy for Amazon EC2 deployment.
-

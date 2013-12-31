@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libbinio
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.31 2013/01/20 09:55:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.33 2013/12/26 14:54:47 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> libbinio-1.4.ebuild:
+  add ~arm, bug #489962
 
   20 Jan 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup fue retirement, bug #35242

@@ -1,6 +1,18 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.23 2013/12/20 14:35:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.26 2013/12/30 16:26:08 blueness Exp $
+
+  30 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  linux/uclibc/package.mask:
+  Bug #490008 is fixed, unmask >sys-kernel/linux-headers-3.9
+
+  25 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  linux/uclibc/amd64/package.mask:
+  Unmask >sys-libs/uclibc-0.9.33.2-r4 since bug #495256 is fixed
+
+  24 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  linux/uclibc/amd64/package.mask:
+  Mask >sys-libs/uclibc-0.9.33.2-r4 until bug #495256 is fixed
 
   20 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
   -linux/amd64/desktop/deprecated, -linux/amd64/desktop/parent,

@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-tweak-tool
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/ChangeLog,v 1.26 2013/12/08 18:51:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/ChangeLog,v 1.27 2013/12/24 17:00:45 pacho Exp $
+
+*gnome-tweak-tool-3.10.1 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-tweak-tool-3.10.1-gentoo-cursor-themes.patch,
+  +gnome-tweak-tool-3.10.1.ebuild, -gnome-tweak-tool-3.8.1.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-tweak-tool-3.8.1-r1.ebuild:
   x86 stable, bug #478252

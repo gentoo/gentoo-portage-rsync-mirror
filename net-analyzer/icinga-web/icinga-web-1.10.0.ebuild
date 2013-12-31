@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.10.0.ebuild,v 1.1 2013/11/11 02:48:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/icinga-web-1.10.0.ebuild,v 1.3 2013/12/23 02:52:36 prometheanfire Exp $
 
 EAPI="5"
 
@@ -80,7 +80,7 @@ src_install() {
 	dodoc README
 	rm -f README
 
-	emake DESTDIR="${D}" install
+	emake -j5 DESTDIR="${D}" install
 
 	emake DESTDIR="${D}" install-javascript
 
@@ -88,7 +88,8 @@ src_install() {
 		dodir ${APACHE_MODULES_CONFDIR}
 		emake DESTDIR="${D}" install-apache-config
 		echo '<IfDefine ICINGA_WEB>' > "${D}/${APACHE_MODULES_CONFDIR}/99_icinga-web.conf"
-		cat "${D}/${APACHE_MODULES_CONFDIR}/icinga-web.conf" >> "${D}/${APACHE_MODULES_CONFDIR}/99_icinga-web.conf"
+		cat "${WORKDIR}/${P}/etc/apache2/icinga-web.conf" >> "${D}/${APACHE_MODULES_CONFDIR}/99_icinga-web.conf"
+		rm "${D}/${APACHE_MODULES_CONFDIR}/icinga-web.conf" || die "rm failed"
 		echo '</IfDefine>' >> "${D}/${APACHE_MODULES_CONFDIR}/99_icinga-web.conf"
 	fi
 
@@ -191,7 +192,7 @@ pkg_postinst() {
 	if use apache2 ; then
 		einfo
 		einfo "apache config was installed into"
-		einfo "/etc/apache2/modules.d//99_icinga-web.conf"
+		einfo "/etc/apache2/modules.d/99_icinga-web.conf"
 		einfo
 		einfo "The apache config value for \'ServerTokens\' must be set to at"
 		einfo "least \'Min\'."

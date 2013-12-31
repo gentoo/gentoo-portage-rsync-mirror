@@ -1,6 +1,24 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.618 2013/12/20 19:43:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.624 2013/12/30 07:50:44 aballier Exp $
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  unmask pulseaudio and openal on multilib ffmpeg
+
+  29 Dec 2013; Sven Vermeulen <swift@gentoo.org> package.mask:
+  Add mask for selinux-mandb
+
+  27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask 'context' USE-flag for dev-libs/boost
+
+  26 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
+  Add missing version to libpeas python mask.
+
+  24 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
+  Add relevant USE mask for libpeas.
+
+  23 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
+  Add gstreamer use mask for new cogl release.
 
   20 Dec 2013; Rick Farina <zerochaos@gentoo.org> package.use.mask:
   Masking test and development for metasploit until gentoo has rake 10

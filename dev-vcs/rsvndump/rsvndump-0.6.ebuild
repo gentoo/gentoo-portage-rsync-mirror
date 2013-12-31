@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/rsvndump-0.6.ebuild,v 1.1 2012/05/15 20:53:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/rsvndump-0.6.ebuild,v 1.2 2013/12/28 12:07:22 ulm Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Dump a remote Subversion repository"
 HOMEPAGE="http://rsvndump.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-LICENSE="GPL-3 BSD CC-PD"  # rsvndump, snappy-c, critbit89
+LICENSE="GPL-3+ BSD public-domain"  # rsvndump, snappy-c, critbit89
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xsri
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.17 2012/08/21 17:30:31 johu Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xsri/ChangeLog,v 1.18 2013/12/26 18:56:32 creffett Exp $
+
+  26 Dec 2013; Chris Reffett <creffett@gentoo.org> -xsri-2.1.0-r1.ebuild:
+  Remove old wrt bug 496030
 
   21 Aug 2012; Johannes Huber <johu@gentoo.org> xsri-2.1.0-r2.ebuild:
   Stable for x86, wrt bug #429240
@@ -64,4 +67,3 @@
   01 Nov 2005; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   +xsri-2.1.0.ebuild:
   New package. Bug 97375, thanks to Thomas Weidner (3.14159@gmx.net).
-

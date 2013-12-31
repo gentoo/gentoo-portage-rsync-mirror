@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.0-r5.ebuild,v 1.1 2013/12/16 16:34:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.0-r5.ebuild,v 1.2 2013/12/31 02:46:00 idella4 Exp $
 
 EAPI=5
 
@@ -13,7 +13,8 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS="~amd64"
+	# support dropped for regular 32 bit hypervisor, Bug 493944
+	KEYWORDS="~amd64 -x86"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 fi
 

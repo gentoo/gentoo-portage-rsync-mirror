@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tidy-ext
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.27 2013/10/25 08:09:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy-ext/ChangeLog,v 1.28 2013/12/26 15:56:22 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> tidy-ext-0.1.14.ebuild:
+  arm stable, bug #493780
 
   25 Oct 2013; Hans de Graaff <graaff@gentoo.org> tidy-ext-0.1.14-r1.ebuild:
   Avoid spec that requires connectivity.

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2013.60.ebuild,v 1.10 2013/12/09 01:24:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2013.60.ebuild,v 1.11 2013/12/22 14:55:31 vapier Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE="bsdpty minimal multicall pam +shadow static syslog zlib"
 
 LIB_DEPEND="zlib? ( sys-libs/zlib[static-libs(+)] )
@@ -39,6 +39,8 @@ set_options() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.46-dbscp.patch
+	epatch "${FILESDIR}"/${PN}-2013.62-multi-install-man.patch
+	epatch "${FILESDIR}"/${PN}-2013.62-multi-no-relink.patch
 	sed -i '1i#define _GNU_SOURCE' scpmisc.c || die
 	sed -i \
 		-e '/SFTPSERVER_PATH/s:".*":"/usr/lib/misc/sftp-server":' \

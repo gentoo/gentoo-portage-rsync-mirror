@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <herd>gnome</herd>
   <herd>desktop-misc</herd>
   <use>
     <flag name="geonames">Install geonames.org provider</flag>
@@ -10,6 +11,7 @@
     <flag name="manual">Install manual provider</flag>
     <flag name="nominatim">Install openstreetmap.org provider</flag>
     <flag name="plazes">Install plazes.com provider</flag>
+    <flag name="server">Install geoip server</flag>
     <flag name="skyhook">Install skyhookwireless.com provider</flag>
     <flag name="yahoo-geo">Install Yahoo geolocation provider</flag>
   </use>

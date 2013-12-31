@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2013.07.ebuild,v 1.1 2013/09/27 21:49:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2013.07.ebuild,v 1.2 2013/12/26 08:02:17 vapier Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.denx.de/pub/u-boot/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 arm x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}

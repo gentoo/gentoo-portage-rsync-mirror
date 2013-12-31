@@ -1,6 +1,12 @@
 # ChangeLog for media-radio/ax25-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ChangeLog,v 1.18 2013/08/28 11:15:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-tools/ChangeLog,v 1.19 2013/12/25 13:37:31 tomjbe Exp $
+
+  25 Dec 2013; Thomas Beierlein <tomjbe@gentoo.org>
+  -ax25-tools-0.0.10_rc2-r1.ebuild, -ax25-tools-0.0.10_rc3.ebuild,
+  -files/ax25-tools-0.0.10_rc2-cve-2011-2910.patch,
+  -files/ax25-tools-0.0.10_rc2-parallel-make.patch:
+  Drop old
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> ax25-tools-0.0.10_rc4.ebuild:
   Stable for x86, wrt bug #482110

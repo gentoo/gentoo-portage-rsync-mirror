@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Sys-Syslog
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.68 2013/08/14 07:54:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/ChangeLog,v 1.69 2013/12/30 11:50:39 zlogene Exp $
+
+  30 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  -perl-Sys-Syslog-0.270.0-r1.ebuild, -perl-Sys-Syslog-0.280.0.ebuild,
+  -perl-Sys-Syslog-0.290.0-r1.ebuild, -perl-Sys-Syslog-0.310.0.ebuild:
+  Drop old
 
 *perl-Sys-Syslog-0.330.0 (14 Aug 2013)
 

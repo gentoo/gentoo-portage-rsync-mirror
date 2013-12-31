@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.33-r1.ebuild,v 1.3 2011/10/08 16:45:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.33-r1.ebuild,v 1.4 2013/12/28 00:09:57 robbat2 Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -47,7 +47,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.kit.patch \
 		"${FILESDIR}"/${P}-as-needed.patch \
 		"${FILESDIR}"/${P}-parallel-make.patch \
-		"${FILESDIR}"/${P}-libpng15.patch
+		"${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-zlib.patch
 
 	sed  -e 's,^\(X11DIR=\).*,\1/usr/,g' \
 		 -e 's,^\(EDITOR=\).*,\1less,g'   \

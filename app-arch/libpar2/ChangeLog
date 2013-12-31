@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/libpar2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.29 2013/09/07 20:50:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.32 2013/12/24 12:54:13 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> libpar2-0.4.ebuild:
+  Stable for x86, wrt bug #491902
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> libpar2-0.4.ebuild:
+  amd64 stable, bug #491902
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> libpar2-0.4.ebuild:
+  Stable for ppc, wrt bug #491902
 
 *libpar2-0.4 (07 Sep 2013)
 
@@ -112,4 +121,3 @@
   25 Apr 2008; Ben de Groot <yngwin@gentoo.org> +metadata.xml,
   +libpar2-0.2.ebuild:
   Initial import from bug 124625, ebuild provided by Benoît Giraudou.
-

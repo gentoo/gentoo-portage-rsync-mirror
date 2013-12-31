@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-wxwidgets
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.58 2012/05/29 14:26:28 aballier Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/ChangeLog,v 1.59 2013/12/30 08:21:04 dirtyepic Exp $
+
+*eselect-wxwidgets-20131230 (30 Dec 2013)
+
+  30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org>
+  +eselect-wxwidgets-20131230.ebuild, +files/wxwin.m4-3.0:
+  Version bump. Fixes bug #448074 (do not set profile to "none" if there are
+  others available). Remove 2.6 suppport, add 3.0 support.
 
   29 May 2012; Alexis Ballier <aballier@gentoo.org>
   eselect-wxwidgets-1.4.ebuild:

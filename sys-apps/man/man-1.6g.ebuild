@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6g.ebuild,v 1.11 2012/12/15 12:53:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6g.ebuild,v 1.12 2013/12/27 11:08:26 pinkbyte Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://primates.ximian.com/~flucifredi/man/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="+lzma nls selinux"
 
 DEPEND="nls? ( sys-devel/gettext )

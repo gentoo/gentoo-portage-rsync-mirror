@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.246 2013/11/28 20:30:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.247 2013/12/26 12:58:50 pacho Exp $
+
+*dhcp-4.2.5_p1-r2 (26 Dec 2013)
+
+  26 Dec 2013; Pacho Ramos <pacho@gentoo.org> +dhcp-4.2.5_p1-r2.ebuild,
+  +files/dhcpd.tmpfiles, +files/dhcpd4.service, +files/dhcpd6.service,
+  +files/dhcrelay4.service, +files/dhcrelay4.service.conf,
+  +files/dhcrelay6.service, +files/dhcrelay6.service.conf:
+  Add unit file (#490800)
 
   28 Nov 2013; Mike Frysinger <vapier@gentoo.org> dhcp-4.2.5_p1.ebuild:
   Mark ia64 stable #488790 by Pacho Ramos.

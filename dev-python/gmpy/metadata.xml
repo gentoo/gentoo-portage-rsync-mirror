@@ -7,4 +7,7 @@
   <upstream>
     <remote-id type="google-code">gmpy</remote-id>
   </upstream>
+  <use>
+    <flag name="mpir">Use <pkg>sci-libs/mpir</pkg> as gmp implementation</flag>
+  </use>
 </pkgmetadata>

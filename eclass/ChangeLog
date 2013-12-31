@@ -1,6 +1,69 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1085 2013/12/21 20:11:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1104 2013/12/30 08:25:35 dirtyepic Exp $
+
+  30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> wxwidgets.eclass:
+  Add 3.0 support.
+
+  30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  For 4.8+ C++ is always enabled. We should eventually drop the cxx USE flag,
+  but who knows what that would break.
+
+  29 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> perl-app.eclass:
+  Do not use subslots on dev-lang/perl in perl apps (as opposed to modules)
+
+  29 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Use subslot dependencies on dev-lang/perl if possible, bug 479298
+
+  29 Dec 2013; Michał Górny <mgorny@gentoo.org> python-r1.eclass:
+  Update doc link to point to the docs on Wiki.
+
+  28 Dec 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  Fix eclassdoc for einstalldocs.
+
+  28 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Missed one.
+
+  28 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Use version ranges instead of case statements in gcc_do_filter_flags().
+
+  28 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Add tc_version_is_between() helper.
+
+  28 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Reintroduce texinfo patch to unbreak older versions (bug #496224).
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> flag-o-matic.eclass:
+  Spelling fixes.
+
+  27 Dec 2013; Julian Ospald <hasufell@gentoo.org> multilib-minimal.eclass:
+  add debug print function wrt #493214
+
+  27 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Initial EAPI support (bug #474358).
+
+  27 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> flag-o-matic.eclass:
+  Per discussion with Flameeyes, make -l and -L always valid, and only warn
+  about other arguments to append-libs. Also document expected arguments to
+  append-libs.
+
+  27 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> flag-o-matic.eclass:
+  There are usages in the tree of "append-libs $(pkg-config ...)"; if
+  pkg-config returns something other than a library, append-libs can end up
+  inserting -l-L/usr/lib64 or other weirdness. We need to check for these and
+  warn about them.
+
+  27 Dec 2013; Michał Górny <mgorny@gentoo.org> eutils.eclass:
+  Document einstalldocs.
+
+  26 Dec 2013; Hans de Graaff <graaff@gentoo.org> ruby-ng.eclass:
+  Add support for the ruby21 target.
+
+  24 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> cmake-utils.eclass:
+  Add another pathological use flag function, useno (inversion of use)
+
+  23 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Rename gtk USE flag to awt. Remove lto USE flag. Minor cleanup.
 
   21 Dec 2013; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
   Use eqmake4() from qmake-utils.eclass

@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/searchandrescue
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.39 2013/09/19 17:25:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.40 2013/12/24 12:51:37 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> searchandrescue-1.5.0.ebuild:
+  Stable for x86, wrt bug #485126
 
   19 Sep 2013; Michael Sterrett <mr_bones_@gentoo.org>
   searchandrescue-1.5.0.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.121 2013/12/08 19:49:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.122 2013/12/24 17:43:13 pacho Exp $
+
+*alacarte-3.10.0 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +alacarte-3.10.0.ebuild,
+  -alacarte-0.13.4.ebuild, -alacarte-3.6.1-r1.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> alacarte-3.7.90.ebuild:
   x86 stable, bug #478252

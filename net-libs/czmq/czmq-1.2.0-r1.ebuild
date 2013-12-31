@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-1.2.0-r1.ebuild,v 1.2 2013/08/11 12:40:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-1.2.0-r1.ebuild,v 1.3 2013/12/24 10:50:09 ultrabug Exp $
 
 EAPI=5
 inherit autotools
@@ -19,7 +19,8 @@ DEPEND="doc? (
 			app-text/asciidoc
 			app-text/xmlto
 		)
-		>=net-libs/zeromq-2.1"
+		>=net-libs/zeromq-2.1
+		<net-libs/zeromq-4"
 
 DOCS=( NEWS README AUTHORS ChangeLog )
 

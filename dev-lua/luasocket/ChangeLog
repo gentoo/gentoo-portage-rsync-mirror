@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luasocket
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.14 2013/11/26 12:55:24 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.15 2013/12/24 12:58:35 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> luasocket-3.0_rc1-r2.ebuild:
+  Stable for x86, wrt bug #489964
 
   26 Nov 2013; Chema Alonso <nimiux@gentoo.org> luasocket-3.0_rc1-r2.ebuild:
   Stable for amd64 wrt bug #489964

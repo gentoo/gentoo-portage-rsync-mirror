@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/osgi-core-api-5.0.0.ebuild,v 1.4 2013/07/16 12:06:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/osgi-core-api-5.0.0.ebuild,v 1.5 2013/12/24 16:24:53 tomwij Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ pkg_nofetch() {
 	einfo "  http://www.osgi.org/Download/Release5"
 	einfo "which you can find listed as"
 	einfo "  OSGi Core Release 5 Companion Code"
-	einfo "after accepting the license."
+	einfo "after accepting the license, then place it in '${DISTDIR}'."
 }
 
 java_prepare() {

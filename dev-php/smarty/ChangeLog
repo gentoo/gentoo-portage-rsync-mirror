@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.130 2013/12/09 01:53:52 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.131 2013/12/26 19:20:18 zlogene Exp $
+
+  26 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> smarty-3.1.12.ebuild:
+  x86 stable wrt bug #435618
 
   09 Dec 2013; Chris Reffett <creffett@gentoo.org> -smarty-2.6.24.ebuild,
   -smarty-2.6.27.ebuild:

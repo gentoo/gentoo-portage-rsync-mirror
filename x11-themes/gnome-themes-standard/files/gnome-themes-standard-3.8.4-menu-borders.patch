@@ -1,0 +1,24 @@
+From d10116eb77b09d8372a82de2e25894371805726c Mon Sep 17 00:00:00 2001
+From: Cosimo Cecchi <cosimoc@gnome.org>
+Date: Fri, 06 Sep 2013 02:13:28 +0000
+Subject: gtk3: fix menu borders when not running under gnome-shell
+
+We can just use a transparent background for the insensitive items.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=707358
+---
+diff --git a/themes/Adwaita/gtk-3.0/gtk-widgets.css b/themes/Adwaita/gtk-3.0/gtk-widgets.css
+index c013581..eb80e37 100644
+--- a/themes/Adwaita/gtk-3.0/gtk-widgets.css
++++ b/themes/Adwaita/gtk-3.0/gtk-widgets.css
+@@ -2364,7 +2364,7 @@ GtkTreeMenu .menuitem,
+ }
+ 
+ .menu .menuitem:insensitive {
+-    background-color: @menu_bg_color;
++    background-color: transparent;
+ }
+ 
+ .menu .menuitem:active,
+--
+cgit v0.9.2

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.4.ebuild,v 1.3 2013/12/08 19:07:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-3.2.4.ebuild,v 1.4 2013/12/26 14:45:38 maekke Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/gthumb"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="cdr exif gstreamer http jpeg json libsecret raw slideshow svg tiff test webkit webp"
 
 COMMON_DEPEND="

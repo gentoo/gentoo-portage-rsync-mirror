@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 )
+DESCRIPTION=vim plugin: fast file navigation for vim
+EAPI=5
+HOMEPAGE=http://www.vim.org/scripts/script.php?script_id=3025 https://wincent.com/products/command-t
+IUSE=elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=|| ( app-editors/vim[ruby] app-editors/gvim[ruby] ) || ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 )
+REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 ruby_targets_ruby20 )
+SLOT=0
+SRC_URI=mirror://gentoo/command-t-1.6.1.tar.bz2 http://dev.gentoo.org/~radhermit/vim/command-t-1.6.1.tar.bz2
+_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	ruby-ng	85bc32bc2513ec4970ac4783df4846a7	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f	vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
+_md5_=5bb3dd7a9dda1cd7950030428a0fb9de

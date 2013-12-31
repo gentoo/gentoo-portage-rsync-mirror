@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/cronolog
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.30 2012/05/13 11:36:50 maekke Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.32 2013/12/24 23:37:34 dastergon Exp $
+
+  24 Dec 2013; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
+  add myself as maintainer
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #66351
 
   13 May 2012; Markus Meier <maekke@gentoo.org> cronolog-1.6.2-r4.ebuild:
   add ~arm, bug #389539

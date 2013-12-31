@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.96 2013/12/08 17:56:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.98 2013/12/24 15:44:57 pacho Exp $
+
+*gdl-3.10.0 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +gdl-3.10.0.ebuild,
+  -gdl-3.4.2.ebuild, -gdl-3.8.0.ebuild:
+  Version bump for Gnome 3.10, drop old
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> gdl-3.8.1.ebuild:
+  Stable for HPPA (bug #478252).
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gdl-3.8.1.ebuild:
   x86 stable, bug #478252

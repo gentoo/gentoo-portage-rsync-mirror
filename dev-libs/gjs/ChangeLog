@@ -1,6 +1,24 @@
 # ChangeLog for dev-libs/gjs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.25 2013/12/08 17:57:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.29 2013/12/26 20:02:36 eva Exp $
+
+  26 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> gjs-1.38.1.ebuild:
+  Re-add ~arm keyword and -ia64 as found in spidermonkey ebuild.
+
+  25 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gjs-1.38.1-fix-unittests.patch:
+  Add forgotten patch
+
+*gjs-1.34.0-r1 (25 Dec 2013)
+
+  25 Dec 2013; Pacho Ramos <pacho@gentoo.org> +gjs-1.34.0-r1.ebuild:
+  Reintroduce the only version arm has stable at the moment
+
+*gjs-1.38.1 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +gjs-1.38.1.ebuild,
+  -gjs-1.34.0-r1.ebuild, -gjs-1.34.0.ebuild, -gjs-1.36.0.ebuild:
+  Version bump for Gnome 3.10, drop old
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gjs-1.36.1.ebuild:
   x86 stable, bug #478252

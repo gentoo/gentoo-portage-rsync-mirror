@@ -1,6 +1,19 @@
 # ChangeLog for sys-libs/newlib
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.21 2013/02/09 04:40:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.24 2013/12/24 07:47:20 vapier Exp $
+
+*newlib-9999 (24 Dec 2013)
+
+  24 Dec 2013; Mike Frysinger <vapier@gentoo.org> +newlib-9999.ebuild:
+  Add live git ebuild by Andrey Hippo #489380.
+
+*newlib-2.1.0 (24 Dec 2013)
+
+  24 Dec 2013; Mike Frysinger <vapier@gentoo.org> +newlib-2.1.0.ebuild:
+  Version bump.
+
+  24 Dec 2013; Mike Frysinger <vapier@gentoo.org> newlib-2.0.0.ebuild:
+  Stabilize for all.
 
   09 Feb 2013; Mike Frysinger <vapier@gentoo.org> newlib-1.18.0.ebuild,
   newlib-1.19.0.ebuild, newlib-1.20.0.ebuild:

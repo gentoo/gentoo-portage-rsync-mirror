@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.13 2013/09/23 20:00:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.14 2013/12/22 11:03:46 radhermit Exp $
 
 EAPI=5
 
@@ -72,10 +72,10 @@ src_install() {
 	default
 
 	if use utils; then
-		cd src/examples/
-		dobin clpi_dump index_dump mobj_dump mpls_dump sound_dump
+		cd src
+		dobin index_dump mobj_dump mpls_dump
 		cd .libs/
-		dobin bd_info bdsplice hdmv_test libbluray_test list_titles
+		dobin bd_info bdsplice clpi_dump hdmv_test libbluray_test list_titles sound_dump
 		if use java; then
 			dobin bdj_test
 		fi

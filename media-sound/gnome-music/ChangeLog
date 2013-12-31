@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/gnome-music
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/ChangeLog,v 1.1 2013/12/24 17:23:42 pacho Exp $
+
+*gnome-music-3.10.1 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +gnome-music-3.10.1.ebuild,
+  +metadata.xml:
+  New package for Gnome 3.10

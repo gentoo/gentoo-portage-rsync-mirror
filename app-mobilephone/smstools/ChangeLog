@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/smstools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.19 2012/12/20 10:41:42 chainsaw Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/smstools/ChangeLog,v 1.20 2013/12/22 09:39:34 pacho Exp $
+
+*smstools-3.1.15-r1 (22 Dec 2013)
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> +files/smsd.service,
+  +files/smsd.tmpfiles, +smstools-3.1.15-r1.ebuild:
+  Add unit file (#493908 by Marcin Kowalski)
 
 *smstools-3.1.15 (20 Dec 2012)
 
@@ -123,4 +129,3 @@
   14 Jun 2006; Tony Vroon <chainsaw@gentoo.org> +files/smsd.initd,
   +metadata.xml, +smstools-2.2.1.ebuild:
   Initial commit. Ebuild by me.
-

@@ -1,6 +1,12 @@
 # ChangeLog for app-text/htag
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.25 2013/12/21 15:53:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.27 2013/12/24 14:53:20 jlec Exp $
+
+  24 Dec 2013; Justin Lecher <jlec@gentoo.org> -htag-0.0.24.ebuild:
+  Drop old
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> htag-0.0.24-r1.ebuild:
+  Stable for x86, wrt bug #491942
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> htag-0.0.24-r1.ebuild:
   Stable for ppc, wrt bug #491942

@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.413 2013/12/08 18:39:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.414 2013/12/24 16:40:36 pacho Exp $
+
+*nautilus-3.10.1 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +nautilus-3.10.1.ebuild,
+  -nautilus-3.6.3.ebuild, -nautilus-3.8.1.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> nautilus-3.8.2.ebuild:
   x86 stable, bug #478252

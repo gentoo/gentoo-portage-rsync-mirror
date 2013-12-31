@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/dirvish
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dirvish/ChangeLog,v 1.3 2012/02/12 18:10:11 armin76 Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dirvish/ChangeLog,v 1.4 2013/12/23 15:56:23 pacho Exp $
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #66351
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> dirvish-1.2.1.ebuild:
   Drop sparc keywords
@@ -39,4 +42,3 @@
   08 Apr 2005; Lance Albertson <ramereth@gentoo.org>
   +files/master.conf.example, +metadata.xml, +dirvish-1.2.ebuild:
   New ebuild, thanks to jochen <jochen.eisinger@gmx.de> #59954
-

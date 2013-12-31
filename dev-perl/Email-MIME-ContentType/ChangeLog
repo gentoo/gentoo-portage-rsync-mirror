@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MIME-ContentType
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-ContentType/ChangeLog,v 1.32 2013/08/16 06:25:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-ContentType/ChangeLog,v 1.33 2013/12/22 14:39:07 pacho Exp $
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  Email-MIME-ContentType-1.16.0.ebuild:
+  amd64 stable, bug #492136
 
   16 Aug 2013; Patrick Lauer <patrick@gentoo.org>
   Email-MIME-ContentType-1.16.0.ebuild:

@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.24 2012/11/19 22:26:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.1_p17.ebuild,v 1.25 2013/12/22 13:42:06 vapier Exp $
+
+EAPI="4"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -8,143 +10,137 @@ inherit eutils flag-o-matic toolchain-funcs
 # See ftp://ftp.cwru.edu/pub/bash/bash-3.1-patches/
 PLEVEL=${PV##*_p}
 MY_PV=${PV/_p*}
+MY_PV=${MY_PV/_/-}
 MY_P=${PN}-${MY_PV}
-READLINE_VER=5.1
-READLINE_PLEVEL=1
+[[ ${PV} != *_p* ]] && PLEVEL=0
+patches() {
+	local opt=$1 plevel=${2:-${PLEVEL}} pn=${3:-${PN}} pv=${4:-${MY_PV}}
+	[[ ${plevel} -eq 0 ]] && return 1
+	eval set -- {1..${plevel}}
+	set -- $(printf "${pn}${pv/\.}-%03d " "$@")
+	if [[ ${opt} == -s ]] ; then
+		echo "${@/#/${DISTDIR}/}"
+	else
+		local u
+		for u in ftp://ftp.cwru.edu/pub/bash mirror://gnu/${pn} ; do
+			printf "${u}/${pn}-${pv}-patches/%s " "$@"
+		done
+	fi
+}
 
 DESCRIPTION="The standard GNU Bourne again shell"
 HOMEPAGE="http://tiswww.case.edu/php/chet/bash/bashtop.html"
-# Hit the GNU mirrors before hitting Chet's site
-#		printf 'mirror://gnu/bash/bash-%s-patches/bash%s-%03d\n' \
-#			${MY_PV} ${MY_PV/\.} ${i}
-SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz
-	ftp://ftp.cwru.edu/pub/bash/${MY_P}.tar.gz
-	$(for ((i=1; i<=PLEVEL; i++)); do
-		printf 'ftp://ftp.cwru.edu/pub/bash/bash-%s-patches/bash%s-%03d\n' \
-			${MY_PV} ${MY_PV/\.} ${i}
-	done)
-	$(for ((i=1; i<=READLINE_PLEVEL; i++)); do
-		printf 'ftp://ftp.cwru.edu/pub/bash/readline-%s-patches/readline%s-%03d\n' \
-			${READLINE_VER} ${READLINE_VER/\.} ${i}
-		printf 'mirror://gnu/bash/readline-%s-patches/readline%s-%03d\n' \
-			${READLINE_VER} ${READLINE_VER/\.} ${i}
-	done)"
+SRC_URI="mirror://gnu/bash/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="${MY_PV}"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="afs bashlogger nls vanilla"
+IUSE="afs +net nls +readline"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
+	readline? ( >=sys-libs/readline-6.2 )
 	nls? ( virtual/libintl )"
-RDEPEND=${DEPEND}
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${MY_P}.tar.gz
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
-
-	# Include official patches
-	local i
-	for ((i=1; i<=PLEVEL; i++)); do
-		epatch "${DISTDIR}"/${PN}${MY_PV/\.}-$(printf '%03d' ${i})
-	done
-	cd lib/readline
-	for ((i=1; i<=READLINE_PLEVEL; i++)); do
-		epatch "${DISTDIR}"/readline${READLINE_VER/\.}-$(printf '%03d' ${i})
-	done
-	cd ../..
-
-	if ! use vanilla ; then
-		# Fall back to /etc/inputrc
-		epatch "${FILESDIR}"/${PN}-3.0-etc-inputrc.patch
-		# Add more ulimit options (from Fedora)
-		epatch "${FILESDIR}"/${MY_P}-ulimit.patch
-		# Fix a memleak in read_builtin (from Fedora)
-		epatch "${FILESDIR}"/${PN}-3.0-read-memleak.patch
-		# Don't barf on handled signals in scripts
-		epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
-		# Fix -/bin/bash login shell #118257
-		epatch "${FILESDIR}"/bash-3.1-fix-dash-login-shell.patch
-		# Fix /dev/fd test with FEATURES=userpriv #131875
-		epatch "${FILESDIR}"/bash-3.1-dev-fd-test-as-user.patch
-		# Log bash commands to syslog #91327
-		if use bashlogger ; then
-			echo
-			ewarn "The logging patch should ONLY be used in restricted (i.e. honeypot) envs."
-			ewarn "This will log ALL output you enter into the shell, you have been warned."
-			ebeep
-			epause
-			epatch "${FILESDIR}"/${PN}-3.1-bash-logger.patch
-		fi
+pkg_setup() {
+	if is-flag -malign-double ; then #7332
+		eerror "Detected bad CFLAGS '-malign-double'.  Do not use this"
+		eerror "as it breaks LFS (struct stat64) on x86."
+		die "remove -malign-double from your CFLAGS mr ricer"
 	fi
-
-	epatch "${FILESDIR}"/${PN}-3.0-configs.patch
 }
 
-src_compile() {
-	filter-flags -malign-double
+src_unpack() {
+	unpack ${MY_P}.tar.gz
+}
 
-	local myconf=
+src_prepare() {
+	# Include official patches
+	[[ ${PLEVEL} -gt 0 ]] && epatch $(patches -s)
 
-	# Always use the buildin readline, else if we update readline
-	# bash gets borked as readline is usually not binary compadible
-	# between minor versions.
-	#myconf="${myconf} $(use_with !readline installed-readline)"
-	myconf="${myconf} --without-installed-readline"
+	# Clean out local libs so we know we use system ones
+	rm -rf lib/{readline,termcap}/*
+	touch lib/{readline,termcap}/Makefile.in # for config.status
+	sed -ri -e 's:\$[(](RL|HIST)_LIBSRC[)]/[[:alpha:]]*.h::g' Makefile.in || die
+
+	epatch "${FILESDIR}"/${PN}-3.1-gentoo.patch
+	epatch "${FILESDIR}"/autoconf-mktime-2.53.patch #220040
+	epatch "${FILESDIR}"/${PN}-3.1-ulimit.patch
+	epatch "${FILESDIR}"/${PN}-3.0-read-memleak.patch
+	epatch "${FILESDIR}"/${PN}-3.0-trap-fg-signals.patch
+	epatch "${FILESDIR}"/bash-3.1-fix-dash-login-shell.patch #118257
+	epatch "${FILESDIR}"/bash-3.1-dev-fd-test-as-user.patch #131875
+
+	epatch_user
+}
+
+src_configure() {
+	local myconf=()
+
+	# Force pgrp synchronization
+	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=81653
+	export bash_cv_pgrp_pipe=yes
+
+	# For descriptions of these, see config-top.h
+	# bashrc/#26952 bash_logout/#90488 ssh/#24762
+	append-cppflags \
+		-DDEFAULT_PATH_VALUE=\'\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\"\' \
+		-DSTANDARD_UTILS_PATH=\'\"/bin:/usr/bin:/sbin:/usr/sbin\"\' \
+		-DSYS_BASHRC=\'\"/etc/bash/bashrc\"\' \
+		-DSYS_BASH_LOGOUT=\'\"/etc/bash/bash_logout\"\' \
+		-DNON_INTERACTIVE_LOGIN_SHELLS \
+		-DSSH_SOURCE_BASHRC
 
 	# Don't even think about building this statically without
 	# reading Bug 7714 first.  If you still build it statically,
-	# don't come crying to use with bugs ;).
+	# don't come crying to us with bugs ;).
 	#use static && export LDFLAGS="${LDFLAGS} -static"
-	use nls || myconf="${myconf} --disable-nls"
+	use nls || myconf+=( --disable-nls )
+
+	# Historically, we always used the builtin readline, but since
+	# our handling of SONAME upgrades has gotten much more stable
+	# in the PM (and the readline ebuild itself preserves the old
+	# libs during upgrades), linking against the system copy should
+	# be safe.
+	# Exact cached version here doesn't really matter as long as it
+	# is at least what's in the DEPEND up above.
+	export ac_cv_rl_version=6.2
 
 	# Force linking with system curses ... the bundled termcap lib
-	# sucks bad compared to ncurses
-	myconf="${myconf} --with-curses"
+	# sucks bad compared to ncurses.  For the most part, ncurses
+	# is here because readline needs it.  But bash itself calls
+	# ncurses in one or two small places :(.
 
+	tc-export AR #444070
 	econf \
+		--with-installed-readline=. \
+		--with-curses \
 		$(use_with afs) \
+		$(use_enable net net-redirections) \
 		--disable-profiling \
 		--without-gnu-malloc \
-		${myconf} || die
-	emake -j1 || die "make failed"	# see bug 102426
+		$(use_enable readline) \
+		$(use_enable readline history) \
+		$(use_enable readline bang-history) \
+		"${myconf[@]}"
+}
+
+src_compile() {
+	emake -j1 #102426
 }
 
 src_install() {
-	einstall || die
+	into /
+	newbin bash bash-${SLOT}
 
-	dodir /bin
-	mv "${D}"/usr/bin/bash "${D}"/bin/
-	[[ ${USERLAND} != "BSD" ]] && dosym bash /bin/sh
-	dosym bash /bin/rbash
+	newman doc/bash.1 bash-${SLOT}.1
+	newman doc/builtins.1 builtins-${SLOT}.1
 
-	insinto /etc/bash
-	doins "${FILESDIR}"/{bashrc,bash_logout}
-	insinto /etc/skel
-	for f in bash{_logout,_profile,rc} ; do
-		newins "${FILESDIR}"/dot-${f} .${f}
-	done
+	insinto /usr/share/info
+	newins doc/bashref.info bash-${SLOT}.info
+	dosym bash-${SLOT}.info /usr/share/info/bashref-${SLOT}.info
 
-	sed -i -e "s:#${USERLAND}#@::" "${D}"/etc/skel/.bashrc "${D}"/etc/bash/bashrc
-	sed -i -e '/#@/d' "${D}"/etc/skel/.bashrc "${D}"/etc/bash/bashrc
-
-	doman doc/*.1
 	dodoc README NEWS AUTHORS CHANGES COMPAT Y2K doc/FAQ doc/INTRO
-	dosym bash.info.gz /usr/share/info/bashref.info.gz
-}
-
-pkg_preinst() {
-	if [[ -e ${ROOT}/etc/bashrc ]] && [[ ! -d ${ROOT}/etc/bash ]] ; then
-		mkdir -p "${ROOT}"/etc/bash
-		mv -f "${ROOT}"/etc/bashrc "${ROOT}"/etc/bash/
-	fi
-
-	# our bash_logout is just a place holder so dont
-	# force users to go through etc-update all the time
-	if [[ -e ${ROOT}/etc/bash/bash_logout ]] ; then
-		rm -f "${D}"/etc/bash/bash_logout
-	fi
 }

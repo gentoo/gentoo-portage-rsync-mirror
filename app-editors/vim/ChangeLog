@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/vim
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.449 2013/12/16 09:57:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.450 2013/12/27 22:06:19 tomwij Exp $
+
+  27 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/vimrc:
+  [QA] Remove unused files. The vimrc file has been moved to app-editors/vim-
+  core a while ago.
 
 *vim-7.4.131 (16 Dec 2013)
 

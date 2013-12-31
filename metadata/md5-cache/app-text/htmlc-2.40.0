@@ -4,9 +4,9 @@ DESCRIPTION=HTML template files expander
 EAPI=5
 HOMEPAGE=http://htmlc.inria.fr/
 IUSE=+ocamlopt
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=~amd64 ~ppc x86
 LICENSE=htmlc
 RDEPEND=>=dev-lang/ocaml-3.11.2:=[ocamlopt?]
 SLOT=0
 SRC_URI=http://htmlc.inria.fr/htmlc-2.4.0.tgz
-_md5_=ca7f1f1d24b8f4a34dc4c923dd26e605
+_md5_=53aef19e6bb2f9d4a56f023c5a9ea0a8

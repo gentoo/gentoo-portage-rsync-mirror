@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install unpack
-DEPEND=>=gpe-base/libgpewidget-0.113 >=gpe-base/libgpepimc-0.6 =dev-db/sqlite-2.8* doc? ( >=dev-util/gtk-doc-1.2 ) dev-util/gtk-doc-am >=dev-util/intltool-0.29 virtual/pkgconfig || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=gpe-base/libgpewidget-0.113 >=gpe-base/libgpepimc-0.6 =dev-db/sqlite-2.8* doc? ( >=dev-util/gtk-doc-1.2 ) dev-util/gtk-doc-am >=dev-util/intltool-0.29 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Database access library for GPE to-do list
 HOMEPAGE=http://gpe.linuxtogo.org
 IUSE=doc nls
@@ -8,5 +8,5 @@ LICENSE=LGPL-2
 RDEPEND=>=gpe-base/libgpewidget-0.113 >=gpe-base/libgpepimc-0.6 =dev-db/sqlite-2.8*
 SLOT=0
 SRC_URI=http://gpe.linuxtogo.org/download/source/libtododb-0.11.tar.bz2
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	gpe	dc397204e130de43bfcf156546e8d9d4	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=2374bf358c1ba610f6ffe1d60fc22073

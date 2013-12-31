@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.3.ebuild,v 1.2 2013/11/06 21:45:32 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.3.ebuild,v 1.3 2013/12/27 19:09:33 alonbl Exp $
 
 EAPI=5
 
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	gtk? ( virtual/pkgconfig )
 	qt4? ( virtual/pkgconfig )
+	ppc-aix? ( dev-libs/gnulib )
 "
 REQUIRED_USE="
 	|| ( ncurses gtk qt4 )
@@ -52,6 +53,12 @@ src_prepare() {
 
 src_configure() {
 	use static && append-ldflags -static
+
+	if [[ ${CHOST} == *-aix* ]] ; then
+		append-flags -I"${EPREFIX}/usr/$(get_libdir)/gnulib/include"
+		append-ldflags -L"${EPREFIX}/usr/$(get_libdir)/gnulib/$(get_libdir)"
+		append-libs -lgnu
+	fi
 
 	# Issues finding qt on multilib systems
 	export QTLIB="${QTDIR}/$(get_libdir)"

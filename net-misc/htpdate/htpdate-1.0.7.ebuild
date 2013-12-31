@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-1.0.7.ebuild,v 1.5 2013/12/21 16:38:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-1.0.7.ebuild,v 1.6 2013/12/22 14:52:44 vapier Exp $
 
 EAPI=5
 
@@ -25,6 +25,11 @@ src_unpack() {
 
 	cd "${S}" || die "change directory to ${S} failed"
 	unpacker htpdate.8.gz
+}
+
+src_prepare() {
+	# Use more standard adjtimex() to fix uClibc builds.
+	sed -i 's:ntp_adjtime:adjtimex:g' htpdate.[8c] || die
 }
 
 src_compile() {

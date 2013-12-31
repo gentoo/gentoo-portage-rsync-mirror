@@ -1,9 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sdoc/sdoc-0.3.20.ebuild,v 1.1 2013/12/15 16:30:25 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sdoc/sdoc-0.3.20.ebuild,v 1.2 2013/12/25 18:09:51 naota Exp $
 
 EAPI=5
-USE_RUBY="ruby19"
+USE_RUBY="ruby19 ruby20"
 
 inherit multilib ruby-fakegem
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904.ebuild,v 1.1 2013/11/18 00:14:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904.ebuild,v 1.2 2013/12/28 15:17:00 pesa Exp $
 
 EAPI=5
 
@@ -23,10 +23,12 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P}/${PN}
 
 src_prepare() {
+	qt4-r2_src_prepare
+
 	echo 'SOLUTIONS_LIBRARY = yes' > config.pri
 	echo 'QT -= gui' >> src/qtlockedfile.pri
 
-	sed -i -e 's/-head/-2.4/' common.pri || die
+	sed -i -e "s/-head/-${PV%.*}/" common.pri || die
 	sed -i -e '/SUBDIRS+=example/d' ${PN}.pro || die
 }
 

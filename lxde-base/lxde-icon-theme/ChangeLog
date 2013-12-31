@@ -1,6 +1,12 @@
 # ChangeLog for lxde-base/lxde-icon-theme
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.15 2013/02/23 02:03:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-icon-theme/ChangeLog,v 1.16 2013/12/24 06:00:02 nullishzero Exp $
+
+*lxde-icon-theme-0.5.0-r1 (24 Dec 2013)
+
+  24 Dec 2013; Pavel Kazakov <nullishzero@gentoo.org>
+  +lxde-icon-theme-0.5.0-r1.ebuild:
+  Generate icon-theme.cache (bug #494992); thanks to Nikoli
 
   23 Feb 2013; Zac Medico <zmedico@gentoo.org> lxde-icon-theme-0.5.0.ebuild:
   Add ~arm-linux and ~x86-linux keywords.

@@ -1,6 +1,21 @@
 # ChangeLog for games-strategy/openra
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.23 2013/09/23 18:56:43 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openra/ChangeLog,v 1.26 2013/12/25 01:19:50 hasufell Exp $
+
+  25 Dec 2013; Julian Ospald <hasufell@gentoo.org>
+  files/openra-20131223-sdl2.patch:
+  slightly different patch
+
+*openra-20131223-r1 (24 Dec 2013)
+
+  24 Dec 2013; Julian Ospald <hasufell@gentoo.org> -openra-20131223.ebuild,
+  +openra-20131223-r1.ebuild, +files/openra-20131223-sdl2.patch:
+  revbump, rm obsolete cg useflag, fix sdl2 support
+
+*openra-20131223 (22 Dec 2013)
+
+  22 Dec 2013; Julian Ospald <hasufell@gentoo.org> +openra-20131223.ebuild:
+  version bump
 
 *openra-20130915 (23 Sep 2013)
 

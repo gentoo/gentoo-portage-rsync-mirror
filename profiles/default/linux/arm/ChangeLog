@@ -1,6 +1,10 @@
 # ChangeLog for the default/linux/arm profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/arm/ChangeLog,v 1.4 2013/02/09 11:43:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/arm/ChangeLog,v 1.5 2013/12/26 15:27:39 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> 13.0/eapi,
+  +13.0/use.stable.mask:
+  update profile EAPI to 5 and unmask dev-lang/python-3.3* targets, bug #474128
 
   09 Feb 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   +10.0/armv4/deprecated, +10.0/armv4/desktop/deprecated,

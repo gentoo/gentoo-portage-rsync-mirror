@@ -1,10 +1,31 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.529 2013/12/20 19:43:18 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.536 2013/12/30 07:50:44 aballier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Sergey Popov <pinkbyte@gentoo.org> (27 Dec 2013)
+# Mask because Boost.Context library does not work on most of arches
+dev-libs/boost context
+
+# Lars Wendler <polynomial-c@gentoo.org> (26 Dec 2013)
+# Masked until upstream has fixed support with >=polarssl-1.3.0
+# (see upstream bug https://github.com/fatbob313/umurmur/issues/24)
+media-sound/umurmur polarssl
+
+# Gilles Dartiguelongue <eva@gentoo.org> (25 Dec 2013)
+# gjs: tests fail and support for it was purely and simply removed in master/1.9
+# python2_6: unit tests fail for this abi, must report usptream
+>=dev-libs/libpeas-1.9 gjs python_targets_python2_6
+
+# Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2013)
+# Gstreamer support fails to build due to libtool shortcomings when using
+# an intermediate library as a dependency of another libtool target dependency.
+# Since this is new and unused yet, keep it masked for now and check
+# with upstream if there is something that can be done to fix the issue.
+media-libs/cogl gstreamer
 
 # Rick Farina <zerochaos@gentoo.org> (20 Dec 2013)
 # masked pending rake 10 availability
@@ -86,7 +107,7 @@ app-editors/gvim luajit racket
 # Alexis Ballier <aballier@gentoo.org> (11 Aug 2013)
 # Multilib migrated version for binary compatibility.
 # Those useflags have deps that are not migrated yet.
-=media-video/ffmpeg-0.10* libass pulseaudio frei0r openal gnutls rtmp vaapi sdl openssl
+=media-video/ffmpeg-0.10* libass frei0r gnutls rtmp vaapi sdl openssl
 
 # Kacper Kowalik <xarthisius@gentoo.org> (09 Aug 2013)
 # Doesn't work on most profiles. Easier to mask here and 

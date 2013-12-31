@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/s25rttr
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/ChangeLog,v 1.4 2013/11/05 15:41:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/s25rttr/ChangeLog,v 1.5 2013/12/23 13:45:08 hasufell Exp $
+
+*s25rttr-0.8.1 (23 Dec 2013)
+
+  23 Dec 2013; Julian Ospald <hasufell@gentoo.org>
+  +files/s25rttr-0.8.1-cmake.patch, +files/s25rttr-0.8.1-soundconverter.patch,
+  +s25rttr-0.8.1.ebuild:
+  version bump
 
   05 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   s25rttr-0.8.ebuild:

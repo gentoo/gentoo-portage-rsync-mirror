@@ -1,6 +1,20 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.148 2013/10/21 12:25:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.151 2013/12/26 17:40:41 patrick Exp $
+
+  26 Dec 2013; Patrick Lauer <patrick@gentoo.org> povray-3.7.0.0.ebuild:
+  Whitespace
+
+*povray-3.7.0.0 (26 Dec 2013)
+
+  26 Dec 2013; Justin Lecher <jlec@gentoo.org> +povray-3.7.0.0.ebuild,
+  +files/povray-3.7.0.0-automagic.patch,
+  +files/povray-3.7.0.0-boost-1.50.patch,
+  +files/povray-3.7.0.0-user-conf.patch, metadata.xml:
+  Version BUmp
+
+  26 Dec 2013; Justin Lecher <jlec@gentoo.org> povray-3.7.0_rc3.ebuild:
+  Backport fix for boost 1.5*, #494322
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> povray-3.7.0_rc7.ebuild:
   Marked ~x64-macos, bug #486818

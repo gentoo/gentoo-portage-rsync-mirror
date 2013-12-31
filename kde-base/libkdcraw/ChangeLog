@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.199 2013/12/18 19:58:14 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.200 2013/12/23 14:22:03 dilfridge Exp $
+
+  23 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
+  libkdcraw-4.12.0.ebuild:
+  Depend on libraw-0.16, works more reliably
 
 *libkdcraw-4.12.0 (18 Dec 2013)
 

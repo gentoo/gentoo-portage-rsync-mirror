@@ -1,6 +1,11 @@
 # ChangeLog for app-backup/mylvmbackup
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/mylvmbackup/ChangeLog,v 1.14 2010/05/23 18:25:52 idl0r Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/mylvmbackup/ChangeLog,v 1.15 2013/12/28 01:44:12 robbat2 Exp $
+
+*mylvmbackup-0.14 (28 Dec 2013)
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> +mylvmbackup-0.14.ebuild:
+  Bug #475390: bump.
 
   23 May 2010; Christian Ruppert <idl0r@gentoo.org> mylvmbackup-0.11.ebuild,
   mylvmbackup-0.13.ebuild:
@@ -73,4 +78,3 @@
   +mylvmbackup-0.4_pre1.ebuild:
   Initial commit. Ebuild (and some upstream work) by Robin H. Johnson
   <robbat2@gentoo.org>.
-

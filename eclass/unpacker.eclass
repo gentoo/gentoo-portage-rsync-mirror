@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.13 2013/04/10 14:47:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.14 2013/12/22 14:44:07 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -22,7 +22,7 @@ ___ECLASS_ONCE_UNPACKER="recur -_+^+_- spank"
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Utility to use to decompress bzip2 files.  Will dynamically pick between
-# `pbzip2` and `bzip2`.  Make sure your choice accepts the "-c" option.
+# `pbzip2` and `bzip2`.  Make sure your choice accepts the "-dc" options.
 # Note: this is meant for users to set, not ebuilds.
 
 # for internal use only (unpack_pdv and unpack_makeself)
@@ -74,9 +74,9 @@ unpack_banner() {
 # parameter.  Here is an example:
 #
 # @CODE
-# 	vapier@vapier 0 pdv_unpack # strings hldsupdatetool.bin | grep lseek
+# 	$ strings hldsupdatetool.bin | grep lseek
 # 	lseek
-# 	vapier@vapier 0 pdv_unpack # strace -elseek ./hldsupdatetool.bin
+# 	$ strace -elseek ./hldsupdatetool.bin
 # 	lseek(3, -4, SEEK_END)					= 2981250
 # @CODE
 #

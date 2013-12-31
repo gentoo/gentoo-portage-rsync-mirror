@@ -1,6 +1,21 @@
 # ChangeLog for dev-perl/text-template
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.25 2013/08/17 13:20:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-template/ChangeLog,v 1.30 2013/12/27 17:35:20 zlogene Exp $
+
+  27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> text-template-1.460.0.ebuild:
+  alpha stable wrt bug #495556
+
+  27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> text-template-1.460.0.ebuild:
+  ppc stable wrt bug #495556
+
+  27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> text-template-1.460.0.ebuild:
+  x86 stable wrt bug #495556
+
+  27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> text-template-1.460.0.ebuild:
+  amd64 stable wrt bug #495556
+
+  27 Dec 2013; Jeroen Roovers <jer@gentoo.org> text-template-1.460.0.ebuild:
+  Stable for HPPA (bug #495556).
 
 *text-template-1.460.0 (17 Aug 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.4.ebuild,v 1.1 2013/10/15 17:48:30 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.4.ebuild,v 1.3 2013/12/24 12:47:00 ago Exp $
 
 EAPI=5
 KDE_LINGUAS="bg bs ca ca@valencia cs da de el en_GB eo es et eu fi fr ga gl
@@ -20,7 +20,7 @@ if [[ ${KDE_BUILD_TYPE} = release ]]; then
 fi
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug calendar doc hbci ofx quotes"
 

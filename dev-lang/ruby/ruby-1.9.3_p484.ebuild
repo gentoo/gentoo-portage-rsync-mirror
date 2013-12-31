@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p484.ebuild,v 1.9 2013/12/15 18:24:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p484.ebuild,v 1.10 2013/12/29 14:46:03 hattya Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ SRC_URI="mirror://ruby/1.9/${MY_P}.tar.bz2
 		 http://dev.gentoo.org/~flameeyes/ruby-team/${PN}-patches-${PATCHSET}.tar.bz2"
 
 LICENSE="|| ( Ruby-BSD BSD-2 )"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl tk xemacs ncurses +readline +yaml" #libedit
 
 # libedit support is removed everywhere because of this upstream bug:

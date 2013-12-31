@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
 	<longdescription lang="en">
 		Spine (formerly known as Cactid) is a poller for Cacti that primarily
 		strives to be as fast as possible. For this reason it is written in

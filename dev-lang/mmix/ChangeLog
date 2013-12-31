@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/mmix
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.22 2012/05/10 15:47:03 ago Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mmix/ChangeLog,v 1.23 2013/12/30 04:06:14 tomwij Exp $
+
+*mmix-20131017 (30 Dec 2013)
+
+  30 Dec 2013; Tom Wijsman <TomWij@gentoo.org> +mmix-20131017.ebuild,
+  metadata.xml:
+  Version bump to 20131017; fixes bug #493538, proxied commit by Matthias Maier
+  (tamiko) whom will maintain this package.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -mmix-20060324-r1.ebuild,
   -mmix-20060324.ebuild, -mmix-20100311.ebuild, -mmix-20110420.ebuild:

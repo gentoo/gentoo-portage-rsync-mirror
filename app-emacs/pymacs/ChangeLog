@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.62 2013/12/21 16:11:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.65 2013/12/24 12:45:33 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pymacs-0.25-r1.ebuild:
+  Stable for x86, wrt bug #490096
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> pymacs-0.25-r1.ebuild:
+  amd64 stable, bug #490096
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pymacs-0.25-r1.ebuild:
+  Stable for ppc64, wrt bug #490096
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pymacs-0.25-r1.ebuild:
   Stable for ppc, wrt bug #490096

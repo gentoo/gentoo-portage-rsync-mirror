@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/zsh-lovers
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/zsh-lovers/ChangeLog,v 1.9 2012/06/04 22:14:50 alexxy Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/zsh-lovers/ChangeLog,v 1.10 2013/12/23 15:37:23 pacho Exp $
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #65652
 
   04 Jun 2012; Alexey Shvetsov <alexxy@gentoo.org> zsh-lovers-0.8.3.ebuild:
   [app-doc/zsh-lovers] Works on ~amd64-fbsd
@@ -31,4 +34,3 @@
   01 Jun 2011; Torsten Veller <tove@gentoo.org> +zsh-lovers-0.8.3.ebuild,
   +metadata.xml:
   Split from app-shell/zsh. Keep zsh's keywords
-

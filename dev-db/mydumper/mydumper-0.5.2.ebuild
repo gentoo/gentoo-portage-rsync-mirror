@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/mydumper-0.5.2.ebuild,v 1.1 2012/12/31 02:07:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/mydumper-0.5.2.ebuild,v 1.2 2013/12/24 11:26:26 pinkbyte Exp $
 
 EAPI=5
 inherit cmake-utils versionator
 
 DESCRIPTION="A high-performance multi-threaded backup (and restore) toolset for MySQL and Drizzle"
-HOMEPAGE="http://www.mydumper.org/"
+HOMEPAGE="https://launchpad.net/mydumper"
 SRC_URI="http://launchpad.net/mydumper/$(get_version_component_range 1-2)/${PV}/+download/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"

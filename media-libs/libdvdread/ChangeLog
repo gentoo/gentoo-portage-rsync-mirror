@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.88 2013/07/30 12:48:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.89 2013/12/29 16:17:04 polynomial-c Exp $
+
+*libdvdread-4.2.1 (29 Dec 2013)
+
+  29 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> +libdvdread-4.2.1.ebuild:
+  Version bump.
 
 *libdvdread-4.2.0-r1 (30 Jul 2013)
 

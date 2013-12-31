@@ -1,6 +1,24 @@
 # ChangeLog for app-forensics/openscap
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.25 2013/09/26 08:19:06 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.27 2013/12/26 16:52:27 swift Exp $
+
+  26 Dec 2013; Sven Vermeulen <swift@gentoo.org> openscap-0.9.12.ebuild,
+  openscap-1.0.1.ebuild, openscap-9999.ebuild:
+  Fix bug #485452 - Use proper python in build
+
+  23 Dec 2013; Sven Vermeulen <swift@gentoo.org> -openscap-0.9.4.1.ebuild,
+  +openscap-1.0.1.ebuild, openscap-9999.ebuild, metadata.xml:
+  Add fixes of 1.0.1 in live ebuild
+
+  23 Dec 2013; Sven Vermeulen <swift@gentoo.org> -openscap-0.9.4.1.ebuild,
+  +openscap-1.0.1.ebuild, metadata.xml:
+  Remove old ebuilds
+
+*openscap-1.0.1 (23 Dec 2013)
+
+  23 Dec 2013; Sven Vermeulen <swift@gentoo.org> +openscap-1.0.1.ebuild,
+  metadata.xml:
+  Bump openscap to 1.0.1
 
 *openscap-9999 (26 Sep 2013)
 

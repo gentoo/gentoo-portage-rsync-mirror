@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.184 2013/10/10 13:04:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.186 2013/12/28 18:28:57 jlec Exp $
+
+  28 Dec 2013; Justin Lecher <jlec@gentoo.org> tcl-8.5.15-r1.ebuild,
+  tcl-8.6.1-r1.ebuild:
+  Exchange is_final_abi() by multilib_build_binaries(), thanks Tommy[D] telling
+  me about those things
+
+*tcl-8.6.1-r1 (26 Dec 2013)
+*tcl-8.5.15-r1 (26 Dec 2013)
+
+  26 Dec 2013; Justin Lecher <jlec@gentoo.org> +tcl-8.5.15-r1.ebuild,
+  +tcl-8.6.1-r1.ebuild:
+  Add multilib support, #496008 ; thanks Michael Mair-Keimberger for the patch
 
   10 Oct 2013; Justin Lecher <jlec@gentoo.org> -tcl-8.5.10-r1.ebuild:
   Drop old

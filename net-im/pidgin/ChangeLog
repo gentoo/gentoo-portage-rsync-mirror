@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.315 2013/12/08 19:57:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.316 2013/12/22 16:15:10 jer Exp $
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> pidgin-2.10.7-r5.ebuild:
+  Stable for HPPA (bug #478252).
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> pidgin-2.10.7-r5.ebuild:
   x86 stable, bug #478252

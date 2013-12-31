@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.239 2013/10/28 01:30:36 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.240 2013/12/26 14:48:07 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> liferea-1.10.3.ebuild:
+  add ~arm, bug #489108
 
 *liferea-1.10.3 (27 Oct 2013)
 

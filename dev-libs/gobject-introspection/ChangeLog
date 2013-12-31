@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.101 2013/12/10 21:30:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.103 2013/12/23 22:54:05 eva Exp $
+
+*gobject-introspection-1.38.0 (23 Dec 2013)
+
+  23 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  +gobject-introspection-1.38.0.ebuild:
+  Version bump for Gnome 3.10. Move configure stuff to src_configure where it
+  belongs.
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org>
+  gobject-introspection-1.36.0-r1.ebuild:
+  Stable for HPPA (bug #478252).
 
   10 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   -gobject-introspection-1.36.0.ebuild, gobject-introspection-1.36.0-r1.ebuild:

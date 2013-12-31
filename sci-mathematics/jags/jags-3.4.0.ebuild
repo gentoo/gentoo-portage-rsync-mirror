@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-3.4.0.ebuild,v 1.2 2013/10/14 17:49:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/jags/jags-3.4.0.ebuild,v 1.3 2013/12/24 12:47:55 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 IUSE="doc"
 
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	virtual/blas

@@ -1,6 +1,5 @@
-=== modified file 'src/terminal.c'
---- src/terminal.c	2008-11-17 18:29:55 +0000
-+++ src/terminal.c	2008-11-17 18:33:17 +0000
+--- a/src/terminal.c
++++ b/src/terminal.c
 @@ -190,7 +190,9 @@
  #endif
  

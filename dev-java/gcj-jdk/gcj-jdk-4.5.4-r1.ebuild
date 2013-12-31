@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.5.4-r1.ebuild,v 1.1 2013/01/23 10:30:56 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.5.4-r1.ebuild,v 1.2 2013/12/24 02:08:43 tomwij Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ ECJ_GCJ_SLOT="3.5"
 
 RDEPEND="
 	~sys-devel/gcc-${PV}[gcj]
-	X? ( ~sys-devel/gcc-${PV}[gtk] )
+	X? ( ~sys-devel/gcc-${PV}[awt] )
 	dev-java/ecj-gcj:${ECJ_GCJ_SLOT}"
 DEPEND="${RDEPEND}"
 

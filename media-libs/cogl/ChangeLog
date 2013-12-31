@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.40 2013/12/08 19:11:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.41 2013/12/23 23:28:44 eva Exp $
+
+*cogl-1.16.0 (23 Dec 2013)
+
+  23 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> -cogl-1.12.2-r1.ebuild,
+  -cogl-1.14.0.ebuild, -cogl-1.14.1_pre20130901.ebuild, +cogl-1.16.0.ebuild,
+  -files/cogl-1.12.2-dont-use-MSAA.patch:
+  Version bump for Gnome 3.10. Clean up old revisions.
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> cogl-1.14.1_pre20130901-r1.ebuild:
   x86 stable, bug #478252

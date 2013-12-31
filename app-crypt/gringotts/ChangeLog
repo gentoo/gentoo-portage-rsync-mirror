@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gringotts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.40 2012/05/03 18:16:38 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.41 2013/12/27 21:43:03 tomwij Exp $
+
+  27 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  -files/gringotts-1.2.8-desktop.patch, -files/gringotts-1.2.8-no-strip.patch:
+  [QA] Remove unused files.
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gringotts-1.2.10.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -178,5 +182,3 @@
   14 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog :
 
   New package. 
-
-

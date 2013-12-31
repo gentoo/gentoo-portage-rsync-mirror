@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mydumper
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/ChangeLog,v 1.5 2013/03/17 15:20:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/ChangeLog,v 1.6 2013/12/24 11:26:26 pinkbyte Exp $
+
+  24 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> mydumper-0.5.1.ebuild,
+  mydumper-0.5.2.ebuild:
+  Fix HOMEPAGE
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

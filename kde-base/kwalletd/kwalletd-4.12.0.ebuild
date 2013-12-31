@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/kwalletd-4.12.0.ebuild,v 1.1 2013/12/18 19:57:55 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/kwalletd-4.12.0.ebuild,v 1.2 2013/12/23 07:55:00 johu Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-qgpgme.patch" )
 
 src_configure() {
 	local mycmakeargs=(

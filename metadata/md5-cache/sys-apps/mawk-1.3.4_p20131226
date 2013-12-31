@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst postrm prepare
+DEPEND=app-admin/eselect-awk
+DESCRIPTION=an (often faster than gawk) awk-interpreter
+EAPI=4
+HOMEPAGE=http://invisible-island.net/mawk/mawk.html
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos
+LICENSE=GPL-2
+RDEPEND=app-admin/eselect-awk
+SLOT=0
+SRC_URI=ftp://invisible-island.net/mawk/mawk-1.3.4-20131226.tgz
+_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=103a4dca383382e05b6786d2d47daca0

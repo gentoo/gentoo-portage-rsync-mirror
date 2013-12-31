@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/buildbot-slave
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.52 2013/09/21 23:57:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot-slave/ChangeLog,v 1.53 2013/12/22 08:56:56 pacho Exp $
+
+*buildbot-slave-0.8.8-r1 (22 Dec 2013)
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> +buildbot-slave-0.8.8-r1.ebuild,
+  +files/buildslave.service:
+  Add unit file (#491038)
 
   21 Sep 2013; Markos Chandras <hwoarang@gentoo.org>
   -buildbot-slave-0.8.7.ebuild:

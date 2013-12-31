@@ -1,6 +1,36 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.93 2013/09/26 23:51:45 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.99 2013/12/29 11:57:22 patrick Exp $
+
+  29 Dec 2013; Patrick Lauer <patrick@gentoo.org> klibc-2.0.3-r1.ebuild:
+  Whitespace
+
+*klibc-2.0.3-r1 (26 Dec 2013)
+
+  26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/klibc-2.0.3-kernel-uapi.patch, +klibc-2.0.3-r1.ebuild:
+  Make it possible to build klibc with much newer kernels.
+
+*klibc-2.0.3 (26 Dec 2013)
+
+  26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +files/klibc-2.0.2-mkfifo.patch, +klibc-2.0.3.ebuild:
+  Version bump; also improve the nostdlib fix originally introduced in bug
+  #103437, to hopefully fix splashutils stack-protect/pie problems in bugs
+  #473512, #491512.
+
+*klibc-2.0.2-r1 (26 Dec 2013)
+
+  26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> +klibc-2.0.2-r1.ebuild:
+  Bug #461982: Make it possible to build with custom-cflags, but not by default,
+  as klibc is closer to kernel ABI than userspace.
+
+  26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> klibc-2.0.2.ebuild:
+  Bug #485482: Enable building on mixed 64-bit kernel + 32-bit userland; patch
+  by Denis Kaganovich <mahatma@bspu.unibel.by>.
+
+  26 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> klibc-2.0.2.ebuild:
+  Make repoman happy.
 
   26 Sep 2013; Chris Reffett <creffett@gentoo.org> -klibc-1.5.8.ebuild:
   Security removal of 1.5.8 wrt bug 369075

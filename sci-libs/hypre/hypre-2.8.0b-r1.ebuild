@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.9 2013/02/21 21:31:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/hypre-2.8.0b-r1.ebuild,v 1.10 2013/12/26 21:15:27 jlec Exp $
 
 EAPI=4
 
@@ -38,7 +38,7 @@ src_prepare() {
 	sed \
 		-e '/HYPRE_ARCH/s: = :=:g' \
 		-i configure || die
-	tc-export CC
+	tc-export CC CXX
 }
 
 src_configure() {

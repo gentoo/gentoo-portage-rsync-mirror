@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/yersinia
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.8 2009/06/01 20:05:53 pva Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/yersinia/ChangeLog,v 1.10 2013/12/28 16:18:22 jer Exp $
+
+  28 Dec 2013; Jeroen Roovers <jer@gentoo.org> yersinia-0.7.3.ebuild:
+  Add virtual/pkgconfig dependency.
+
+*yersinia-0.7.3 (28 Dec 2013)
+
+  28 Dec 2013; Jeroen Roovers <jer@gentoo.org> +yersinia-0.7.3.ebuild,
+  files/yersinia-0.7.1-no-ncurses.patch, +files/yersinia-0.7.3-tinfo.patch:
+  Version bump. Fix building against sys-libs/ncurses[tinfo]. Clean up patch.
 
   01 Jun 2009; Peter Volkov <pva@gentoo.org> -yersinia-0.7.ebuild:
   Removed old.

@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/litecoin-qt
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/litecoin-qt/ChangeLog,v 1.1 2013/12/01 13:18:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/litecoin-qt/ChangeLog,v 1.2 2013/12/28 20:54:54 blueness Exp $
+
+*litecoin-qt-0.8.6.1 (28 Dec 2013)
+
+  28 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  +litecoin-qt-0.8.6.1.ebuild:
+  Version bump, bug #494942
 
 *litecoin-qt-0.8.5.3_rc3 (01 Dec 2013)
 
@@ -8,4 +14,3 @@
   +litecoin-qt-0.8.5.3_rc3.ebuild, +files/litecoin-sys_leveldb.patch,
   +metadata.xml:
   Initial commit
-

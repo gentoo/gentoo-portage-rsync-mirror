@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.40 2013/11/17 20:18:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.42 2013/12/22 20:04:17 mrueg Exp $
+
+  22 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -net-scp-1.1.0.ebuild,
+  -net-scp-1.1.2.ebuild:
+  Cleanup old.
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org> net-scp-1.1.2-r1.ebuild:
+  Keyword ~ppc64, bug #465948
 
 *net-scp-1.1.2-r1 (17 Nov 2013)
 

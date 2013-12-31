@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/rsvndump
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.10 2012/05/15 20:53:21 sping Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.11 2013/12/28 12:07:22 ulm Exp $
+
+  28 Dec 2013; Ulrich Müller <ulm@gentoo.org> rsvndump-0.6.ebuild:
+  Fix LICENSE, bug 496258.
 
 *rsvndump-0.6 (15 May 2012)
 

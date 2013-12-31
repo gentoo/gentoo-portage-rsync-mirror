@@ -1,6 +1,15 @@
 # ChangeLog for dev-qt/qtsingleapplication
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.4 2013/10/13 10:33:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/ChangeLog,v 1.5 2013/12/28 22:51:55 pesa Exp $
+
+*qtsingleapplication-2.6.1_p20130904 (28 Dec 2013)
+
+  28 Dec 2013; Davide Pesavento <pesa@gentoo.org>
+  +files/2.6.1_p20130904-no-gui.patch,
+  +files/2.6.1_p20130904-unbundle-qtlockedfile.patch,
+  +qtsingleapplication-2.6.1_p20130904.ebuild:
+  New snapshot from qt-solutions git repo wrt bug 489168. Install
+  QtSingleCoreApplication header file. Implement USE="X" to solve bug 491494.
 
   13 Oct 2013; Markus Meier <maekke@gentoo.org>
   qtsingleapplication-2.6.1.ebuild:

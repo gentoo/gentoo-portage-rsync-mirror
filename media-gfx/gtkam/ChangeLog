@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gtkam
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.86 2013/12/08 19:07:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/ChangeLog,v 1.87 2013/12/28 16:14:31 pacho Exp $
+
+  28 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gtkam-0.2.0-underlinking.patch, gtkam-0.2.0.ebuild:
+  Fix underlinking (#496136 by kalle)
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gtkam-0.2.0.ebuild:
   x86 stable, bug #478252

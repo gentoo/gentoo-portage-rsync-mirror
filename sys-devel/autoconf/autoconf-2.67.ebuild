@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.67.ebuild,v 1.13 2013/04/04 22:59:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.67.ebuild,v 1.14 2013/12/23 19:54:33 vapier Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ IUSE="emacs multislot"
 DEPEND=">=sys-devel/m4-1.4.6
 	dev-lang/perl"
 RDEPEND="${DEPEND}
-	>=sys-devel/autoconf-wrapper-9-r1"
+	>=sys-devel/autoconf-wrapper-13"
 PDEPEND="emacs? ( app-emacs/autoconf-mode )"
 
 src_prepare() {

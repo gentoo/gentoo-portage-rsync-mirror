@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.34 2013/10/06 07:11:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.35 2013/12/26 14:59:34 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> rexical-1.0.5-r1.ebuild:
+  arm stable, bug #493780
 
 *rexical-1.0.5-r2 (06 Oct 2013)
 

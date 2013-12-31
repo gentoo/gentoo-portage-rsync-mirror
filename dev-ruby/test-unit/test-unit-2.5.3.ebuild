@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.5.3.ebuild,v 1.10 2013/01/21 16:00:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.5.3.ebuild,v 1.11 2013/12/26 16:09:02 maekke Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ruby19 ree18 jruby"
@@ -23,7 +23,7 @@ HOMEPAGE="http://test-unit.rubyforge.org/"
 
 LICENSE="Ruby"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="doc test"
 
 all_ruby_compile() {

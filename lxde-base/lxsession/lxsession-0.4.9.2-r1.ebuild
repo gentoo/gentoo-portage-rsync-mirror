@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.9.2-r1.ebuild,v 1.1 2013/10/23 09:53:44 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.9.2-r1.ebuild,v 1.2 2013/12/29 17:36:33 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://lxde.sf.net/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~x86 ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 arm ~ppc ~x86 ~arm-linux ~x86-linux"
 SLOT="0"
 # upower USE flag is enabled by default in the desktop profile
 IUSE="nls upower"

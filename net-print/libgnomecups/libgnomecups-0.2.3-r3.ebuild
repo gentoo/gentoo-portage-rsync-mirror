@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r3.ebuild,v 1.11 2013/04/10 20:22:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r3.ebuild,v 1.12 2013/12/24 12:46:31 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="bz2"
 
-inherit eutils gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="GNOME cups library"
 HOMEPAGE="http://www.gnome.org/"
@@ -43,5 +43,6 @@ src_prepare() {
 	# cups-1.6 compat, bug #428812
 	epatch "${FILESDIR}/${P}-cups-1.6.patch"
 
+	eautoreconf # To fix intltool files making LINGUAS to be honored
 	gnome2_src_prepare
 }

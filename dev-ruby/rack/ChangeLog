@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.114 2013/10/05 10:53:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.116 2013/12/26 16:48:54 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> rack-1.4.5.ebuild:
+  arm stable, bug #493780
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> rack-1.4.5.ebuild:
+  Stable for HPPA (bug #493780).
 
 *rack-1.5.2-r1 (05 Oct 2013)
 

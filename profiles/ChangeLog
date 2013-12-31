@@ -1,10 +1,125 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8440 2013/12/21 21:57:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8474 2013/12/31 08:46:30 pinkbyte Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Security mask of dev-libs/boost vulnerable versions
+
+  31 Dec 2013; creffett <creffett@gentoo.org> prefix/darwin/package.mask:
+  Remove invalid entry from prefix/darwin/package.mask
+
+  31 Dec 2013; creffett <creffett@gentoo.org>
+  prefix/windows/interix/package.mask:
+  Remove invalid entry from prefix/windows/interix/package.mask
+
+  31 Dec 2013; creffett <creffett@gentoo.org> prefix/linux/package.mask:
+  Remove invalid entry from prefix/linux/package.mask
+
+  30 Dec 2013; Julian Ospald <hasufell@gentoo.org> package.mask:
+  mask dev-games/ogre-1.9.0
+
+  30 Dec 2013; Johannes Huber <johu@gentoo.org> package.mask:
+  Remove mask on kde-misc/polkit-kde-kcmodules, package tree cleaned.
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask multilib readline
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask multilib openal
+
+  29 Dec 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove masked media-sound/omptagger and dependencies.
+
+  29 Dec 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/mkrf for removal.
+
+  29 Dec 2013; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask new multilib readline.
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org> thirdpartymirrors:
+  Apache mirrors have been moving old files to the archive tier, this will help
+  pick stuff up better.
+
+  28 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite sys-kernel/module-rebuild wrt #410739
+
+  27 Dec 2013; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.force,
+  arch/ia64/package.use.mask, +arch/sparc/package.use.force,
+  arch/sparc/package.use.mask:
+  We need openrc-force for ia64 and sparc until they solve #478076 to prevent
+  bugs and security issues like bug #496166
+
+  27 Dec 2013; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Fix invalid atom for x11-libs/libcryptui.
+
+  27 Dec 2013; Chris Reffett <creffett@gentoo.org> hardened/linux/amd64/no-multilib/package.mask:
+  Remove invalid entries as reported by qa-reports
+
+  27 Dec 2013; Justin Lecher <jlec@gentoo.org> package.mask:
+  Mask unreleased version
+
+  27 Dec 2013; Chris Reffett <creffett@gentoo.org> thirdpartymirrors:
+  Remove bad easysw group wrt bug 494684, credit to iamben
+
+  26 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> base/package.use.mask:
+  package.use.mask-ed polarssl USE flag in media-sound/umurmur for now. Should
+  settle the complaints from qa.
+
+  26 Dec 2013; Hans de Graaff <graaff@gentoo.org> base/package.use.force:
+  Force correct targets for ruby21 virtuals.
+
+  26 Dec 2013; Hans de Graaff <graaff@gentoo.org> desc/ruby_targets.desc:
+  Add description for Ruby 2.1.x target.
+
+  25 Dec 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  default/linux/package.use.mask:
+  Mask USE=frost for net-p2p/fms, currently broken with
+  >=net-libs/polarssl-1.3.0
+
+  25 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Lastrite faenza-xfce-icon-theme in favour of faenza-icon-theme which has
+  adopted the required icons for running the Xfce desktop.
+
+  25 Dec 2013; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/arrayfields for removal.
+
+  24 Dec 2013; Tom Wijsman <TomWij@gentoo.org> thirdpartymirrors:
+  Removed bad mirrors from apache mirror group; partially fixes bug #494676,
+  reported by Ben Kohler (bkohler a.k.a. iamben).
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Cleanup mask entry
+
+  23 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Remove unwanted gnome-nettool from Gnome 3.10 mask.
+
+  23 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add Gnome 3.10 package mask.
+
+  23 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> package.mask:
+  Mask dev-python/python-irclib
+
+  23 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove libraw-0.16 mask, all reverse deps build fine now, acked by radhermit
+
+  23 Dec 2013; Vladimir Smirnov <civil@gentoo.org> package.mask:
+  Remove some obsolete virtual/perl masks.
+
+  22 Dec 2013; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Remove obsolete sci-electronics/qelectrotech masks.
+
+  22 Dec 2013; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  arch/amd64/x32/package.mask, package.mask,
+  prefix/darwin/macos/arch/ppc/package.mask,
+  prefix/sunos/solaris/arch/sparc/package.mask:
+  Remove obsolete mask entries for v8 and v8cgi (removed from tree).
+
+  22 Dec 2013; Hans de Graaff <graaff@gentoo.org> thirdpartymirrors:
+  Update ruby mirrors for bug 494874, thanks to Ben Kohler for reporting.
 
   21 Dec 2013; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove mask on sys-libs/pam.

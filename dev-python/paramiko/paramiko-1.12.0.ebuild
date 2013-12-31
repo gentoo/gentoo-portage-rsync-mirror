@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.12.0.ebuild,v 1.3 2013/11/19 18:49:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.12.0.ebuild,v 1.5 2013/12/29 17:16:34 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~mips ~sh ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~sh ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris"
 IUSE="doc examples"
 
 RDEPEND=">=dev-python/pycrypto-2.1[${PYTHON_USEDEP}]

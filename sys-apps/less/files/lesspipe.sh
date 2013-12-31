@@ -117,7 +117,7 @@ lesspipe() {
 	*.gz|*.z|\
 	*.lz|\
 	*.lzma|*.xz)  ${DECOMPRESSOR} -- "$1" ;;
-	*.rpm)        rpm -qpivl --changelog -- "$1" ;;
+	*.rpm)        rpm -qpivl --changelog -- "$1" || rpm2tar -O "$1" | tar tvvf -;;
 	*.cpi|*.cpio) cpio -itv < "$1" ;;
 	*.ace)        unace l "$1" ;;
 	*.arc)        arc v "$1" ;;
@@ -236,7 +236,7 @@ if [[ -z $1 ]] ; then
 elif [[ $1 == "-V" || $1 == "--version" ]] ; then
 	Id="cvsid"
 	cat <<-EOF
-		$Id: lesspipe.sh,v 1.53 2013/08/06 21:35:30 vapier Exp $
+		$Id: lesspipe.sh,v 1.54 2013/12/31 02:25:30 vapier Exp $
 		Copyright 2001-2013 Gentoo Foundation
 		Mike Frysinger <vapier@gentoo.org>
 		     (with plenty of ideas stolen from other projects/distros)

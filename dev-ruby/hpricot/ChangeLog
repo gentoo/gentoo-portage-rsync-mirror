@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/hpricot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.46 2013/10/15 19:36:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/ChangeLog,v 1.48 2013/12/26 18:57:46 maekke Exp $
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org> hpricot-0.8.6-r1.ebuild:
+  arm stable, bug #493780
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> hpricot-0.8.6-r1.ebuild:
+  Stable for HPPA (bug #493780).
 
 *hpricot-0.8.6-r2 (15 Oct 2013)
 

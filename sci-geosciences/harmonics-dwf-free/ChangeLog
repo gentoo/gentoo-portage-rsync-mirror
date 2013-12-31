@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/harmonics-dwf-free
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/harmonics-dwf-free/ChangeLog,v 1.6 2013/09/02 08:14:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/harmonics-dwf-free/ChangeLog,v 1.7 2013/12/30 18:03:40 hasufell Exp $
+
+*harmonics-dwf-free-20131228 (30 Dec 2013)
+
+  30 Dec 2013; Julian Ospald <hasufell@gentoo.org>
+  +harmonics-dwf-free-20131228.ebuild:
+  version bump
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org>
   harmonics-dwf-free-20121224.ebuild:

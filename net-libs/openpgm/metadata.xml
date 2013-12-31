@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
-	<maintainer>
-		<email>toffanin.mauro@gmail.com</email>
-		<name>Mauro Toffanin</name>
-	</maintainer>
-	<maintainer>
-		<email>djc@gentoo.org</email>
-		<name>Dirkjan Ochtman</name>
-	</maintainer>
-	<upstream>
-		<remote-id type="google-code">openpgm</remote-id>
-	</upstream>
+  <herd>proxy-maintainers</herd>
+  <maintainer>
+    <email>toffanin.mauro@gmail.com</email>
+    <name>Mauro Toffanin</name>
+  </maintainer>
+  <maintainer>
+    <email>djc@gentoo.org</email>
+    <name>Dirkjan Ochtman</name>
+  </maintainer>
+  <upstream>
+    <remote-id type="google-code">openpgm</remote-id>
+  </upstream>
 </pkgmetadata>

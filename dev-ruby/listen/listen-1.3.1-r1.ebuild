@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-1.3.1-r1.ebuild,v 1.1 2013/12/05 08:16:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/listen/listen-1.3.1-r1.ebuild,v 1.2 2013/12/22 18:58:20 blueness Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="https://github.com/guard/listen/archive/v${PV}.tar.gz -> ${P}-git.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x64-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x64-macos"
 IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/rb-inotify-0.9.0"

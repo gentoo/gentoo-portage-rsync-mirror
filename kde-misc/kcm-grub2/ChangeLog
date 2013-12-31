@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcm-grub2
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.11 2013/11/11 21:31:26 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.12 2013/12/24 12:49:57 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kcm-grub2-0.6.4.ebuild:
+  Stable for x86, wrt bug #491040
 
   11 Nov 2013; Johannes Huber <johu@gentoo.org> -kcm-grub2-0.5.8.ebuild:
   Remove old.

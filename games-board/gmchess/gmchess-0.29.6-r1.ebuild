@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gmchess/gmchess-0.29.6-r1.ebuild,v 1.3 2013/11/13 11:28:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gmchess/gmchess-0.29.6-r1.ebuild,v 1.4 2013/12/24 12:53:48 ago Exp $
 
 EAPI=5
 inherit autotools libtool gnome2-utils games
@@ -12,7 +12,7 @@ RESTRICT="test"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-cpp/gtkmm:2.4"

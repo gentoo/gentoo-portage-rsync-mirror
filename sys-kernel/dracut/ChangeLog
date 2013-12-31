@@ -1,6 +1,29 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.143 2013/12/14 17:17:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.148 2013/12/28 18:36:37 aidecoe Exp $
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r3.ebuild,
+  dracut-034-r4.ebuild, +files/034-0010-module-setup.sh-add-comments.patch.bz2,
+  -files/034-0010-module-setup.sh-add-comments-for-dracu.patch:
+  Compressed patch too big.
+
+*dracut-034-r4 (28 Dec 2013)
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-034-r4.ebuild:
+  No longer require pkg-config at run-time. Paths (udev dir and systemd dirs)
+  are set in dracut config file by ebuild. It fixes bug #488504. If any of this
+  paths is changed, dracut will have to be rebuilt by a user.
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-034.ebuild,
+  -dracut-034-r1.ebuild, -dracut-034-r2.ebuild:
+  Removed old revisions of version 034.
+
+*dracut-034-r3 (28 Dec 2013)
+
+  28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r2.ebuild,
+  +dracut-034-r3.ebuild, +files/034-0014-udev-rules-add-eudev-rules.patch:
+  Committing on behalf of Alexander Tsoy <alexander@tsoy.me>.
+  Fixes bug #494188: Missing udev rules for loading kernel modules.
 
   14 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r2.ebuild:
   Added epatch_user call. Rels bug #487410.

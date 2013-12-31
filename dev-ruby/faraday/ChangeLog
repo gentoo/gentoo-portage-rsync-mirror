@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/faraday
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.16 2012/08/05 13:11:26 graaff Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.17 2013/12/25 18:58:22 graaff Exp $
+
+*faraday-0.8.8 (25 Dec 2013)
+
+  25 Dec 2013; Hans de Graaff <graaff@gentoo.org> +faraday-0.8.8.ebuild:
+  Version bump. Also fixes bug 496016.
 
   05 Aug 2012; Hans de Graaff <graaff@gentoo.org> -faraday-0.4.6.ebuild,
   -faraday-0.7.4.ebuild, -faraday-0.7.5.ebuild, -faraday-0.8.0.ebuild:

@@ -5,5 +5,5 @@ KEYWORDS=amd64 hppa ppc x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.megastep.org/makeself/makeself-2.1.5.run
-_eclasses_=unpacker	658a981a81fd7cb0767315a541bab01d
+_eclasses_=unpacker	04385b0f181c42fa9c18ec0e31729d1f
 _md5_=77dfc51d1088e17ee42610301ee39852

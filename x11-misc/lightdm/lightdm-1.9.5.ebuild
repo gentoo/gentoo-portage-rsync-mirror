@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.9.5.ebuild,v 1.2 2013/12/11 21:28:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.9.5.ebuild,v 1.3 2013/12/22 13:35:38 hwoarang Exp $
 
 EAPI=5
 inherit autotools eutils pam readme.gentoo systemd
@@ -85,6 +85,13 @@ src_configure() {
 
 src_install() {
 	default
+
+	# Delete apparmor profiles because they only work with Ubuntu's
+	# apparmor package. Bug #494426
+	if [[ -d ${D}/etc/apparmor.d ]]; then
+		rm -r "${D}/etc/apparmor.d" || die \
+			"Failed to remove apparmor profiles"
+	fi
 
 	insinto /etc/${PN}
 	doins data/{${PN},keys}.conf

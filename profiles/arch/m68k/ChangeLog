@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/m68k profile
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.29 2013/09/29 14:30:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.30 2013/12/24 01:08:19 dirtyepic Exp $
+
+  24 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> package.use.mask:
+  Drop lto, add awt.
 
   29 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org> make.defaults:
   m68k goes unstable/testing as per concil decision

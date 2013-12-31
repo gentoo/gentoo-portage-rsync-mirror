@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/invokebinder/invokebinder-1.2.ebuild,v 1.1 2013/06/04 16:32:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/invokebinder/invokebinder-1.2.ebuild,v 1.2 2013/12/24 16:13:56 tomwij Exp $
 
 EAPI="5"
 
@@ -18,15 +18,15 @@ LICENSE="Apache-2.0"
 
 S="${WORKDIR}/${PN}-${P}"
 
-DEPEND=">=virtual/jdk-1.5"
-RDEPEND=">=virtual/jre-1.5"
+DEPEND=">=virtual/jdk-1.7"
+RDEPEND=">=virtual/jre-1.7"
 
 # Tests fail, three similar errors where a string is inconvertible to int.
 # Bug #472306.
 RESTRICT="test"
 
 java_prepare() {
-	cp ${FILESDIR}/${P}-build.xml build.xml || die
+	cp "${FILESDIR}"/${P}-build.xml build.xml || die
 }
 
 src_test() {

@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=!=app-crypt/mit-krb5-1.10.1-r0 !=app-crypt/mit-krb5-1.10.1-r1 !=app-crypt/mit-krb5-1.10.1-r2 glib? ( >=dev-libs/glib-2.29 ) libev? ( >=dev-libs/libev-4.11 ) libevent? ( >=dev-libs/libevent-2.0 ) tevent? ( sys-libs/tevent ) || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=!=app-crypt/mit-krb5-1.10.1-r0 !=app-crypt/mit-krb5-1.10.1-r1 !=app-crypt/mit-krb5-1.10.1-r2 glib? ( >=dev-libs/glib-2.29 ) libev? ( >=dev-libs/libev-4.11 ) libevent? ( >=dev-libs/libevent-2.0 ) tevent? ( sys-libs/tevent ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Main event loop abstraction library
 EAPI=4
 HOMEPAGE=https://fedorahosted.org/libverto/
@@ -10,5 +10,5 @@ RDEPEND=!=app-crypt/mit-krb5-1.10.1-r0 !=app-crypt/mit-krb5-1.10.1-r1 !=app-cryp
 REQUIRED_USE=|| ( glib libev libevent tevent )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/l/i/libverto/libverto-0.2.4.tar.gz
-_eclasses_=autotools	d491cbee372fe390ce066f901abdaaaf	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	281bf36dd2befbf610ddf01da4161dbe	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=99549a22a0586982b50c0223b76c1d3b

@@ -1,6 +1,19 @@
 # ChangeLog for www-apps/ikiwiki
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.14 2013/12/15 21:22:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.19 2013/12/26 13:10:22 mrueg Exp $
+
+  26 Dec 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Add Alice Ferrazzi as maintainer.
+
+  24 Dec 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Add myself to metadata.xml.
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> ikiwiki-3.20130904.1.ebuild:
+  Add missing dependency, bug #436458 by W. Trevor King
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> -ikiwiki-3.20120629.ebuild,
+  -ikiwiki-3.20120725.ebuild, -ikiwiki-3.20121212.ebuild, metadata.xml:
+  Cleanup due bug #65652
 
 *ikiwiki-3.20130904.1 (15 Dec 2013)
 

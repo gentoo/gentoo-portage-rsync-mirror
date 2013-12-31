@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.26 2013/10/16 16:28:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.27 2013/12/28 20:31:19 jlec Exp $
+
+  28 Dec 2013; Justin Lecher <jlec@gentoo.org> sympy-0.7.3.ebuild:
+  Add workaround for XDG_CONFIG_HOME problems, #488378
 
   16 Oct 2013; Justin Lecher <jlec@gentoo.org> sympy-0.7.3.ebuild:
   Fix problems with doc building, #488172; simplify py 2/3 selection code

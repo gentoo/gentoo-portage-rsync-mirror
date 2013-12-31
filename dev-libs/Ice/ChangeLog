@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.27 2013/11/26 13:31:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.28 2013/12/24 12:43:59 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> Ice-3.5.1.ebuild:
+  Stable for x86, wrt bug #492612
 
   26 Nov 2013; Sergey Popov <pinkbyte@gentoo.org> Ice-3.5.1.ebuild:
   Use Ruby 1.9 for bindings as suggested by upstream, bug #490172

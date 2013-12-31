@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.115 2013/10/06 10:21:21 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.116 2013/12/25 09:38:03 patrick Exp $
+
+  25 Dec 2013; Patrick Lauer <patrick@gentoo.org> fxruby-1.6.25.ebuild,
+  fxruby-1.6.28.ebuild:
+  Drop ruby18 as dependencies have dropped it already
 
   06 Oct 2013; Matti Bickel <mabi@gentoo.org> fxruby-1.6.25.ebuild,
   fxruby-1.6.28.ebuild:

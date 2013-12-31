@@ -1,6 +1,20 @@
 # ChangeLog for sys-block/thin-provisioning-tools
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.30 2013/12/07 14:28:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.33 2013/12/28 00:39:05 robbat2 Exp $
+
+*thin-provisioning-tools-0.2.8-r2 (28 Dec 2013)
+
+  28 Dec 2013; Robin H. Johnson <robbat2@gentoo.org>
+  +thin-provisioning-tools-0.2.8-r2.ebuild:
+  Bug #491364: Fix complie with newer boost.
+
+  26 Dec 2013; Markus Meier <maekke@gentoo.org>
+  thin-provisioning-tools-0.2.8-r1.ebuild:
+  arm stable, bug #493400
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org>
+  thin-provisioning-tools-0.2.8-r1.ebuild:
+  Stable for HPPA (bug #493400).
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   thin-provisioning-tools-0.2.8.ebuild:

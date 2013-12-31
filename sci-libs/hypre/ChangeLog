@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hypre
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/ChangeLog,v 1.11 2013/06/19 23:07:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hypre/ChangeLog,v 1.12 2013/12/26 21:15:27 jlec Exp $
+
+  26 Dec 2013; Justin Lecher <jlec@gentoo.org> hypre-2.8.0b-r1.ebuild,
+  hypre-2.9.0b.ebuild, metadata.xml:
+  Respect CXX, #493224
 
 *hypre-2.9.0b (19 Jun 2013)
 

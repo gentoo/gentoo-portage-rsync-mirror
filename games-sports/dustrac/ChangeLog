@@ -1,0 +1,11 @@
+# ChangeLog for games-sports/dustrac
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/dustrac/ChangeLog,v 1.1 2013/12/26 13:53:52 hasufell Exp $
+
+*dustrac-1.6.2 (26 Dec 2013)
+
+  26 Dec 2013; Julian Ospald <hasufell@gentoo.org> +dustrac-1.6.2.ebuild,
+  +files/dustrac-1.6.2-cmake.patch, +files/dustrac-1.6.2-desktopfile.patch,
+  +metadata.xml:
+  initial import
+

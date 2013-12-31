@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/cacti-spine
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.38 2013/08/27 02:19:17 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.39 2013/12/23 15:59:35 pacho Exp $
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #66351
 
 *cacti-spine-0.8.8b (27 Aug 2013)
 

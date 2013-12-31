@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.7.0-r1.ebuild,v 1.1 2013/07/24 02:04:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/passepartout-0.7.0-r1.ebuild,v 1.3 2013/12/24 12:55:26 ago Exp $
 
 EAPI=5
 inherit autotools base eutils gnome2 libtool
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnome/sources/passepartout/0.7/passepartout-0.7.0.tar.bz2"
 IUSE="gnome"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 COMMON_DEPS="dev-cpp/libxmlpp:2.6
 	>=dev-libs/libxml2-2

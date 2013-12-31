@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0-r1.ebuild,v 1.1 2013/08/10 02:43:06 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0-r1.ebuild,v 1.3 2013/12/24 20:16:28 blueness Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -16,7 +16,7 @@ SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/js/${MY_PN}${PV}.tar.gz"
 
 LICENSE="NPL-1.1"
 SLOT="17"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 -mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug jit minimal static-libs test"
 
 REQUIRED_USE="debug? ( jit )"

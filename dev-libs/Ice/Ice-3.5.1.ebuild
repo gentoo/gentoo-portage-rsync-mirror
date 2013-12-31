@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.1.ebuild,v 1.2 2013/11/26 13:31:45 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.1.ebuild,v 1.3 2013/12/24 12:43:59 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${
 	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~x86 ~x86-linux ~x64-macos"
+KEYWORDS="~amd64 ~arm ~ia64 x86 ~x86-linux ~x64-macos"
 IUSE="doc examples +ncurses mono python ruby test debug"
 
 RDEPEND=">=dev-libs/expat-2.0.1

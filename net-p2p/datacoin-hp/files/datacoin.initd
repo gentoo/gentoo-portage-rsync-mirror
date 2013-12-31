@@ -1,0 +1,104 @@
+#!/sbin/runscript
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+VARDIR="/var/lib/datacoin"
+CONFFILE="${VARDIR}/.datacoin/datacoin.conf"
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [[ "${DATACOIN_USER}" == "" ]] ; then
+		eerror "Please edit /etc/conf.d/datacoind"
+		eerror "A user must be specified to run datacoind as that user."
+		eerror "Modify USER to your needs (you may also add a group after a colon)"
+		return 1
+	fi
+	if ! `getent passwd | cut -d ':' -f 1 | grep $( echo "${DATACOIN_USER}" | cut -d ':' -f 1 ) -sq` ; then
+		eerror "Please edit /etc/conf.d/datacoind"
+		eerror "Specified user must exist!"
+		return 1
+	fi
+	if `echo "${DATACOIN_USER}" | grep ':' -sq` ; then
+		if ! `cut -d ':' -f 1 /etc/group | grep $( echo "${DATACOIN_USER}" | cut -d ':' -f 2 ) -sq` ; then
+			eerror "Please edit /etc/conf.d/datacoind"
+			eerror "Specified group must exist!"
+			return 1
+		fi
+	fi
+	if ! grep -q '^rpcpassword=' "${CONFFILE}"; then
+		eerror "Please edit `readlink -f ${CONFFILE}`"
+		eerror "There must be at least a line assigning rpcpassword=something-secure"
+		return 1
+	fi
+	if ! stat -Lc '%a' "${CONFFILE}" | grep -q '^[4567]00$'; then
+		eerror "`readlink -f ${CONFFILE}` should not be readable by other users"
+		return 1
+	fi
+	return 0
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting Datacoind daemon"
+
+	pkg-config openrc
+	if [ $? = 0 ]; then
+	   start_openrc
+	else
+	   start_baselayout
+	fi
+}
+
+stop() {
+       ebegin "Stopping Datacoin daemon"
+
+       pkg-config openrc
+       if [ $? = 0 ]; then
+	   stop_openrc
+       else
+	   stop_baselayout
+       fi
+}
+
+start_openrc() {
+	start-stop-daemon \
+	--start --user "${DATACOIN_USER}" --name datacoind \
+	--pidfile /var/run/datacoind.pid --make-pidfile \
+	--env HOME="${VARDIR}" --exec /usr/bin/datacoind \
+	--nicelevel "${NICELEVEL}" \
+	--background \
+	--wait 2000 \
+	-- ${DATACOIN_OPTS}
+	eend $?
+}
+
+stop_openrc() {
+	start-stop-daemon --stop --user "${DATACOIN_USER}" \
+	--name datacoind --pidfile /var/run/datacoind.pid \
+	--wait 30000 \
+	--progress
+	eend $?
+}
+
+start_baselayout() {
+	start-stop-daemon \
+	--start --user "${DATACOIN_USER}" --name datacoind \
+	--pidfile /var/run/datacoind.pid --make-pidfile \
+	--env HOME="${VARDIR}" --exec /usr/bin/datacoind \
+	--chuid "${DATACOIN_USER}" \
+	--nicelevel "${NICELEVEL}" \
+	--background \
+	-- ${DATACOIN_OPTS}
+	eend $?
+}
+
+stop_baselayout() {
+	start-stop-daemon \
+	--stop \
+	--user "${DATACOIN_USER}" \
+	--name datacoind \
+	--pidfile /var/run/datacoind.pid
+	eend $?
+}

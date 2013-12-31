@@ -1,9 +1,0 @@
-diff -Naur usr/bin/SpiderOak usr/bin/SpiderOak
---- usr/bin/SpiderOak	2012-01-21 19:32:02.000000000 -0500
-+++ usr/bin/SpiderOak	2012-01-21 19:32:57.000000000 -0500
-@@ -3,4 +3,4 @@
- LD_LIBRARY_PATH="/opt/SpiderOak:$LD_LIBRARY_PATH"
- export LD_LIBRARY_PATH
- QT_PLUGIN_PATH= ; export QT_PLUGIN_PATH
--exec "/opt/SpiderOak/SpiderOak" "$@"
-+exec "/opt/SpiderOak/SpiderOak" --headless "$@"

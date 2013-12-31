@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.9.3.ebuild,v 1.1 2013/12/15 08:25:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/rb-inotify-0.9.3.ebuild,v 1.2 2013/12/22 18:57:39 blueness Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ HOMEPAGE="https://github.com/nex3/rb-inotify"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x64-macos"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x64-macos"
 IUSE=""
 
 ruby_add_rdepend "virtual/ruby-ffi"

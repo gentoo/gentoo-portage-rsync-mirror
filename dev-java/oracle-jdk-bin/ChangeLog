@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.47 2013/10/27 09:56:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.48 2013/12/25 13:36:21 grobian Exp $
+
+  25 Dec 2013; Fabian Groffen <grobian@gentoo.org>
+  oracle-jdk-bin-1.7.0.45.ebuild:
+  Add support for Mac OS X, bug #492996
 
   27 Oct 2013; Tom Wijsman <TomWij@gentoo.org> oracle-jdk-bin-1.7.0.45.ebuild:
   Bump samples tarball version number; reported by TheMadMan, permitted by ago.

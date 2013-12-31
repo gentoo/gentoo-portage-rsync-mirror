@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.140 2013/12/08 18:26:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.141 2013/12/24 17:55:10 pacho Exp $
+
+*gnome-control-center-3.10.2 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-control-center-3.10.2-gentoo-paths.patch,
+  +files/gnome-control-center-3.10.2-optional.patch,
+  +gnome-control-center-3.10.2.ebuild, -gnome-control-center-3.8.5-r1.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-control-center-3.8.6.ebuild:
   x86 stable, bug #478252

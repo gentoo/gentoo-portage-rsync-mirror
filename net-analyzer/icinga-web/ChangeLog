@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/icinga-web
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/ChangeLog,v 1.15 2013/11/11 02:48:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga-web/ChangeLog,v 1.17 2013/12/23 02:52:36 prometheanfire Exp $
+
+  23 Dec 2013; Matthew Thode <prometheanfire@gentoo.org>
+  icinga-web-1.10.0.ebuild:
+  trying to fix bug 493902
+
+  23 Dec 2013; Matthew Thode <prometheanfire@gentoo.org>
+  icinga-web-1.10.0.ebuild:
+  workaround upstreams make install issues...
 
 *icinga-web-1.10.0 (11 Nov 2013)
 

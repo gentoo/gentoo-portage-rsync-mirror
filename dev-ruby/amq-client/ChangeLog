@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/amq-client
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-client/ChangeLog,v 1.9 2013/12/07 07:14:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amq-client/ChangeLog,v 1.10 2013/12/24 15:56:06 graaff Exp $
+
+  24 Dec 2013; Hans de Graaff <graaff@gentoo.org> -amq-client-0.9.10.ebuild,
+  -amq-client-0.9.12.ebuild, -amq-client-1.0.2.ebuild:
+  Cleanup. Note that amq-client functionality has been incorporated into
+  dev-ruby/amqp.
 
 *amq-client-1.0.4 (07 Dec 2013)
 

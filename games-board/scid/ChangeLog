@@ -1,6 +1,9 @@
 # ChangeLog for games-board/scid
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.40 2013/12/21 16:37:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.41 2013/12/24 12:51:49 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> scid-4.4.ebuild:
+  Stable for x86, wrt bug #490608
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> scid-4.4.ebuild:
   Stable for ppc, wrt bug #490608

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/addressable
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.38 2013/11/11 10:46:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/ChangeLog,v 1.39 2013/12/22 18:45:01 blueness Exp $
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
+  addressable-2.3.5-r1.ebuild:
+  Keyword ~ppc64, bug #465948
 
 *addressable-2.3.5-r1 (11 Nov 2013)
 

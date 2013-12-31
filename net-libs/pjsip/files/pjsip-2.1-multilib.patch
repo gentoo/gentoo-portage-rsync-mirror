@@ -1,0 +1,49 @@
+Buildsystem fixes for proper respecting multilib-aware systems
+
+Gentoo bugreport: https://bugs.gentoo.org/show_bug.cgi?id=496430
+
+--- Makefile.orig	2012-03-22 15:15:59.000000000 +0400
++++ Makefile	2013-12-31 13:50:16.434307159 +0400
+@@ -108,14 +108,15 @@
+ prefix = $(ac_prefix)
+ 
+ install:
+-	mkdir -p $(DESTDIR)$(prefix)/lib
+-	cp -f $(APP_LIB_FILES) $(DESTDIR)$(prefix)/lib/
++	mkdir -p $(DESTDIR)$(PJ_INSTALL_LIB_DIR)
++	cp -f $(APP_LIB_FILES) $(DESTDIR)$(PJ_INSTALL_LIB_DIR)/
+ 	mkdir -p $(DESTDIR)$(prefix)/include
+ 	for d in pjlib pjlib-util pjnath pjmedia pjsip; do \
+ 		cp -RLf $$d/include/* $(DESTDIR)$(prefix)/include/; \
+ 	done
+-	mkdir -p $(DESTDIR)$(prefix)/lib/pkgconfig
+-	sed -e "s!@PREFIX@!$(DESTDIR)$(prefix)!" libpjproject.pc.in | \
++	mkdir -p $(DESTDIR)$(PJ_INSTALL_LIB_DIR)/pkgconfig
++	sed -e "s!@PREFIX@!$(prefix)!" libpjproject.pc.in | \
++		sed -e "s!@LIBDIR@!$(PJ_INSTALL_LIB_DIR)!" | \
+ 		sed -e "s/@PJ_VERSION@/$(PJ_VERSION)/" | \
+ 		sed -e "s!@PJ_LDLIBS@!$(PJ_LDLIBS)!" | \
+-		sed -e "s!@PJ_INSTALL_CFLAGS@!$(PJ_INSTALL_CFLAGS)!" > $(DESTDIR)/$(prefix)/lib/pkgconfig/libpjproject.pc
++		sed -e "s!@PJ_INSTALL_CFLAGS@!$(PJ_INSTALL_CFLAGS)!" > $(DESTDIR)/$(PJ_INSTALL_LIB_DIR)/pkgconfig/libpjproject.pc
+--- libpjproject.pc.in.orig	2013-12-31 13:51:08.459302831 +0400
++++ libpjproject.pc.in	2013-12-31 13:51:16.857302132 +0400
+@@ -2,7 +2,7 @@
+ 
+ prefix=@PREFIX@
+ exec_prefix=${prefix}
+-libdir=${exec_prefix}/lib
++libdir=@LIBDIR@
+ includedir=${prefix}/include
+ 
+ Name: libpjproject
+--- build.mak.in.orig	2013-12-31 13:52:22.492296672 +0400
++++ build.mak.in	2013-12-31 13:52:06.722297984 +0400
+@@ -163,7 +163,7 @@
+ # library from the install location (i.e. --prefix)
+ export PJ_INSTALL_DIR := @prefix@
+ export PJ_INSTALL_INC_DIR := $(PJ_INSTALL_DIR)/include
+-export PJ_INSTALL_LIB_DIR := $(PJ_INSTALL_DIR)/lib
++export PJ_INSTALL_LIB_DIR := @libdir@
+ export PJ_INSTALL_CFLAGS := -I$(PJ_INSTALL_INC_DIR) -DPJ_AUTOCONF=1	@CFLAGS@
+ export PJ_INSTALL_CXXFLAGS := $(PJ_INSTALL_CFLAGS)
+ export PJ_INSTALL_LDFLAGS := -L$(PJ_INSTALL_LIB_DIR) $(APP_LDLIBS)

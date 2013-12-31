@@ -1,6 +1,22 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.309 2013/12/14 19:45:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.311 2013/12/27 17:08:26 pinkbyte Exp $
+
+*boost-1.55.0-r1 (27 Dec 2013)
+
+  27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> -boost-1.55.0.ebuild,
+  +boost-1.55.0-r1.ebuild, metadata.xml:
+  Revision bump: implement conditional building of Boost.Context library via
+  'context' USE-flag. Drop old revision
+
+*boost-1.54.0-r1 (27 Dec 2013)
+*boost-1.53.0-r1 (27 Dec 2013)
+
+  27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> -boost-1.53.0.ebuild,
+  +boost-1.53.0-r1.ebuild, -boost-1.54.0.ebuild, +boost-1.54.0-r1.ebuild:
+  Properly disable all code, which depends on Boost.Context and remove all
+  redundant headers, wrt bug #493116. Thanks to Mike Frysinger for discovering
+  this issue. Drop old revisions
 
   14 Dec 2013; Agostino Sarubbo <ago@gentoo.org> boost-1.52.0-r6.ebuild:
   Stable for sparc, wrt bug #455464

@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.12 2013/12/16 10:27:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.13 2013/12/23 10:59:13 hasufell Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -344,7 +344,7 @@ src_install() {
 	newins "${FILESDIR}"/gvimrc-r1 gvimrc
 	eprefixify "${ED}"/etc/vim/gvimrc
 
-	domenu "${FILESDIR}"/gvim.desktop-r2 gvim.desktop
+	newmenu "${FILESDIR}"/gvim.desktop-r2 gvim.desktop
 	doicon "${FILESDIR}"/gvim.xpm
 
 	# bash completion script, bug #79018.

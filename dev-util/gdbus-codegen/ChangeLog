@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.69 2013/12/08 18:15:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.71 2013/12/23 22:31:19 eva Exp $
+
+*gdbus-codegen-2.38.2 (23 Dec 2013)
+
+  23 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org>
+  -gdbus-codegen-2.34.3.ebuild, -gdbus-codegen-2.36.4.ebuild,
+  +gdbus-codegen-2.38.2.ebuild:
+  Version bump for Gnome 3.10. Clean up old revisions.
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> gdbus-codegen-2.36.4-r1.ebuild:
+  Stable for HPPA (bug #478252).
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gdbus-codegen-2.36.4-r1.ebuild:
   x86 stable, bug #478252

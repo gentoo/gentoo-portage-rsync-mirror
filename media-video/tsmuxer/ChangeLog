@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tsmuxer
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.10 2013/07/21 09:03:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.11 2013/12/30 08:10:35 aballier Exp $
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
+  update multilib deps to use multilib converted packages when available. bug
+  #489058 by Michael Mair-Keimberger (iamnr3)
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #92799

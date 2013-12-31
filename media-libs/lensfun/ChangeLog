@@ -1,6 +1,28 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.52 2013/12/21 18:18:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.59 2013/12/30 09:12:23 mgorny Exp $
+
+  30 Dec 2013; Michał Górny <mgorny@gentoo.org> lensfun-0.2.7.ebuild,
+  lensfun-0.2.8.ebuild:
+  Add PYTHON_REQUIRED_USE, wrt bug #496468.
+
+  25 Dec 2013; Markus Meier <maekke@gentoo.org> lensfun-0.2.7.ebuild:
+  arm stable, bug #494692
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lensfun-0.2.7.ebuild:
+  Stable for x86, wrt bug #494692
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lensfun-0.2.7.ebuild:
+  Stable for sparc, wrt bug #494692
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> lensfun-0.2.7.ebuild:
+  amd64 stable, bug #494692
+
+  22 Dec 2013; Jeroen Roovers <jer@gentoo.org> lensfun-0.2.7.ebuild:
+  Stable for HPPA (bug #494692).
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lensfun-0.2.7.ebuild:
+  Stable for ppc64, wrt bug #494692
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lensfun-0.2.7.ebuild:
   Stable for ppc, wrt bug #494692

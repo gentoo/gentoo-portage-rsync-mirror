@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.192 2013/11/02 03:20:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.195 2013/12/28 00:25:53 robbat2 Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -599,13 +599,24 @@ replace-sparc64-flags() {
 # @FUNCTION: append-libs
 # @USAGE: <libs>
 # @DESCRIPTION:
-# Add extra <libs> to the current LIBS.
+# Add extra <libs> to the current LIBS. All arguments should be prefixed with
+# either -l or -L.  For compatibility, if arguments are not prefixed as
+# options, they are given a -l prefix automatically.
 append-libs() {
 	[[ $# -eq 0 ]] && return 0
 	local flag
 	for flag in "$@"; do
-		[[ ${flag} == -l* ]] && flag=${flag#-l}
-		export LIBS="${LIBS} -l${flag}"
+		case $flag in
+			-[lL]*) 
+				export LIBS="${LIBS} ${flag}"
+				;;
+			-*) 
+				eqawarn "Appending non-library to LIBS (${flag}); Other linker flags should be passed via LDFLAGS"
+				export LIBS="${LIBS} ${flag}"
+				;;
+			*)
+				export LIBS="${LIBS} -l${flag}"
+		esac
 	done
 
 	return 0

@@ -1,13 +1,13 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.5.0.ebuild,v 1.1 2013/03/12 12:19:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.5.0.ebuild,v 1.2 2013/12/30 07:59:56 naota Exp $
 
 EAPI=5
 
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="sqlite"
 
-inherit python
+inherit python eutils
 
 DESCRIPTION="Chinese PinYin IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -33,6 +33,10 @@ DOCS="AUTHORS ChangeLog NEWS README"
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-content-type.patch
 }
 
 src_configure() {

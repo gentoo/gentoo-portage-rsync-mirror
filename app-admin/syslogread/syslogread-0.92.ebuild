@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.13 2012/10/20 09:26:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.14 2013/12/23 01:05:20 tomwij Exp $
 
 EAPI="2"
 
@@ -41,8 +41,6 @@ src_install() {
 	dodir /usr/share/man
 	./installer || die
 
-	#newinitd "${FILESDIR}/${PV}/syslogread.init" syslogread
-
 	dodoc ANNOUNCEMENT ChangeLog README
 
 	insinto /var/lib/supervise/klogd
@@ -53,6 +51,10 @@ src_install() {
 
 	insinto /var/lib/supervise/syslogd/log
 	newins "${FILESDIR}/${PV}/syslogread-log.run" syslogread-log.run
+
+	# See ChangeLog for why these are commented out:
+
+	#newinitd "${FILESDIR}/${PV}/syslogread.init" syslogread
 
 	#keepdir /var/log/klogd
 	#keepdir /var/log/syslog

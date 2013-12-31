@@ -6,8 +6,6 @@
   <flag name="classic">Install <pkg>gnome-extra/gnome-shell-extensions</pkg>
     for the Gnome Shell Classic mode</flag>
   <flag name="extras">Install additional GNOME applications</flag>
-  <flag name="fallback">Install <pkg>gnome-base/gnome-panel</pkg> and
-    <pkg>x11-wm/metacity</pkg> for the GNOME 3 fallback mode</flag>
   <flag name="flashback">Install <pkg>gnome-base/gnome-panel</pkg> and
     <pkg>x11-wm/metacity</pkg> for the GNOME 3 Flashback mode</flag>
 </use>

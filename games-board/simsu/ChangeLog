@@ -1,6 +1,9 @@
 # ChangeLog for games-board/simsu
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/simsu/ChangeLog,v 1.9 2013/11/13 11:43:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/simsu/ChangeLog,v 1.10 2013/12/24 12:45:03 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> simsu-1.2.3.ebuild:
+  Stable for x86, wrt bug #490594
 
   13 Nov 2013; Tony Vroon <chainsaw@gentoo.org> simsu-1.2.3.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

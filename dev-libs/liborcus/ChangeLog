@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/liborcus
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.24 2013/10/27 12:05:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liborcus/ChangeLog,v 1.25 2013/12/27 08:57:34 scarabeus Exp $
+
+  27 Dec 2013; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/liborcus-0.5.1-oldnamespace.patch, liborcus-0.5.1.ebuild:
+  Add patch to build with gcc-4.8.1 again. Taken from obs where I added it few
+  months back but forgot here... Fixes bug#489836.
 
   27 Oct 2013; Agostino Sarubbo <ago@gentoo.org> liborcus-0.5.1.ebuild:
   Stable for x86, wrt bug #486204

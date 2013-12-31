@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=dev-libs/glib-2.28.0:2 >=x11-libs/gtk+-3.9.6:3 app-crypt/libsecret >=dev-libs/libxml2-2.6.31:2 >=net-libs/gtk-vnc-0.4.3[gtk3] x11-libs/cairo:= x11-libs/gdk-pixbuf:2 x11-themes/gnome-icon-theme avahi? ( >=net-dns/avahi-0.6.26[dbus,gtk3] ) rdp? ( net-misc/rdesktop ) ssh? ( >=x11-libs/vte-0.20:2.90 ) spice? ( >=net-misc/spice-gtk-0.5[gtk3] ) telepathy? ( dev-libs/dbus-glib >=net-libs/telepathy-glib-0.11.6 ) >=dev-lang/perl-5 >=dev-util/intltool-0.50 >=sys-devel/gettext-0.17 virtual/pkgconfig || ( dev-lang/vala:0.22 dev-lang/vala:0.20 dev-lang/vala:0.18 ) app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=VNC client for the GNOME desktop
+EAPI=5
+HOMEPAGE=https://wiki.gnome.org/Vinagre
+IUSE=avahi rdp +ssh spice +telepathy
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-3+
+RDEPEND=>=dev-libs/glib-2.28.0:2 >=x11-libs/gtk+-3.9.6:3 app-crypt/libsecret >=dev-libs/libxml2-2.6.31:2 >=net-libs/gtk-vnc-0.4.3[gtk3] x11-libs/cairo:= x11-libs/gdk-pixbuf:2 x11-themes/gnome-icon-theme avahi? ( >=net-dns/avahi-0.6.26[dbus,gtk3] ) rdp? ( net-misc/rdesktop ) ssh? ( >=x11-libs/vte-0.20:2.90 ) spice? ( >=net-misc/spice-gtk-0.5[gtk3] ) telepathy? ( dev-libs/dbus-glib >=net-libs/telepathy-glib-0.11.6 )
+SLOT=0
+SRC_URI=mirror://gnome/sources/vinagre/3.10/vinagre-3.10.2.tar.xz
+_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	60a86ca1cbe8068e3d9df0d3004dc520	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vala	b365480bc54c4e356dc1e953da9fe356	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=5a3cb796f25ab71e98fb9b98cee76253

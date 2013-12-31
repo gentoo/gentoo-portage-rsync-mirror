@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/t-prot
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.43 2013/01/12 08:30:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.45 2013/12/23 17:36:48 radhermit Exp $
+
+*t-prot-3.0 (23 Dec 2013)
+
+  23 Dec 2013; Tim Harder <radhermit@gentoo.org> +t-prot-3.0.ebuild,
+  metadata.xml:
+  Version bump, add myself as maintainer.
+
+  23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due bug #65652
 
   12 Jan 2013; Ulrich Müller <ulm@gentoo.org> t-prot-2.101.ebuild:
   Fix LICENSE, see t-prot.1 man page, bug 449174.
@@ -197,4 +206,3 @@
   08 Dec 2004; Torsten Veller <tove@gentoo.org> +metadata.xml,
   +t-prot-1.47.ebuild:
   Initial commit.
-

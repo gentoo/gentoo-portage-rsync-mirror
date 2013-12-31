@@ -1,6 +1,14 @@
 # ChangeLog for virtual/ruby-minitest
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.42 2013/12/20 15:55:21 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-minitest/ChangeLog,v 1.44 2013/12/29 17:17:59 maekke Exp $
+
+  29 Dec 2013; Markus Meier <maekke@gentoo.org> ruby-minitest-0-r3.ebuild:
+  arm stable, bug #483254
+
+*ruby-minitest-0-r4 (26 Dec 2013)
+
+  26 Dec 2013; Hans de Graaff <graaff@gentoo.org> +ruby-minitest-0-r4.ebuild:
+  Add ruby21.
 
   20 Dec 2013; Akinori Hattori <hattya@gentoo.org> ruby-minitest-0-r3.ebuild:
   ia64 stable wrt bug #483254

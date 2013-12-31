@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] sci-physics/root[python,python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] test? ( dev-python/nose[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
+DESCRIPTION=Interface between ROOT and numpy
+EAPI=5
+HOMEPAGE=https://github.com/rootpy/root_numpy
+IUSE=examples test python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=MIT
+RDEPEND=dev-python/numpy[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] sci-physics/root[python,python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
+REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
+SLOT=0
+SRC_URI=mirror://pypi/r/root_numpy/root_numpy-3.1.1.tar.gz
+_eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=252274bd0a5c27c0cb281baf3cc1e66a

@@ -11,7 +11,7 @@
 +# Exim: OS-specific FreeBSD make file, modified for Gentoo Prefix
 +
 +CHOWN_COMMAND=look_for_it
-+STRIP_COMMAND=look_for_it
++STRIP_COMMAND=
 +CHMOD_COMMAND=look_for_it
  
  HAVE_SA_LEN=YES

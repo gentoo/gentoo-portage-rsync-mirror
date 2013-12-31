@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libax25
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.21 2013/08/28 11:15:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.22 2013/12/25 13:43:09 tomjbe Exp $
+
+  25 Dec 2013; Thomas Beierlein <tomjbe@gentoo.org> -libax25-0.0.11-r2.ebuild,
+  -libax25-0.0.12_rc2.ebuild, -libax25-0.0.12_rc3.ebuild:
+  Drop old
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> libax25-0.0.12_rc4.ebuild:
   Stable for x86, wrt bug #482110

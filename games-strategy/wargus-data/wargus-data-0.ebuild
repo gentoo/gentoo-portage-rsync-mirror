@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/wargus-data-0.ebuild,v 1.4 2013/12/15 14:39:36 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wargus-data/wargus-data-0.ebuild,v 1.5 2013/12/24 12:48:07 ago Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="${RDEPEND}

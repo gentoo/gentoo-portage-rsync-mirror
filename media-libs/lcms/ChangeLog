@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.162 2013/12/21 18:59:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.165 2013/12/29 10:15:18 hattya Exp $
+
+  29 Dec 2013; Akinori Hattori <hattya@gentoo.org> lcms-2.5.ebuild:
+  ia64 stable wrt bug #488806
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lcms-2.5.ebuild:
+  Stable for sparc, wrt bug #488806
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lcms-2.5.ebuild:
+  Stable for ppc64, wrt bug #488806
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> lcms-2.5.ebuild:
   Stable for ppc, wrt bug #488806

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/mic-paren
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mic-paren/ChangeLog,v 1.9 2013/11/27 10:35:34 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mic-paren/ChangeLog,v 1.10 2013/12/24 12:46:16 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> mic-paren-3.11.ebuild:
+  Stable for x86, wrt bug #490108
 
   27 Nov 2013; Chema Alonso <nimiux@gentoo.org> mic-paren-3.11.ebuild:
   Stable for amd64 wrt bug #490108
@@ -40,4 +43,3 @@
   23 Sep 2007; Ulrich Mueller <ulm@gentoo.org> +files/50mic-paren-gentoo.el,
   +metadata.xml, +mic-paren-3.7.ebuild:
   Initial import. Ebuild contributed my me.
-

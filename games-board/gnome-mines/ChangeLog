@@ -1,6 +1,11 @@
 # ChangeLog for games-board/gnome-mines
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mines/ChangeLog,v 1.6 2013/12/08 18:21:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-mines/ChangeLog,v 1.7 2013/12/24 16:13:15 pacho Exp $
+
+*gnome-mines-3.10.1 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +gnome-mines-3.10.1.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-mines-3.8.2.ebuild:
   x86 stable, bug #478252

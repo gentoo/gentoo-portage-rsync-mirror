@@ -24,6 +24,7 @@ file ownership, access right.
 		<flag name='udev'>Install udev rule to make udisks use ntfs-3g instead
 		of the kernel NTFS driver.</flag>
 		<flag name='crypt'>Add support for encrypted NTFS drives/partitions.</flag>
+		<flag name='ntfsdecrypt'>Build and install the ntfsdecrypt application.</flag>
 		<flag name='ntfsprogs'>Include internal version of ntfsprogs. This will
 		block sys-fs/ntfsprogs.</flag>
 	</use>

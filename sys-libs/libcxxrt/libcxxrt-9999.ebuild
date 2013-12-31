@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.10 2013/10/14 18:21:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-9999.ebuild,v 1.11 2013/12/22 17:38:17 aballier Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ multilib_src_compile() {
 multilib_src_test() {
 	cd "${BUILD_DIR}/test"
 	LD_LIBRARY_PATH="${BUILD_DIR}/src:${LD_LIBRARY_PATH}" \
-		LIBS="-L${BUILD_DIR}/src -lcxxrt -lc" \
+		LIBS="-L${BUILD_DIR}/src -lcxxrt -l$(usex libunwind unwind gcc_s) -lc" \
 		emake check
 }
 

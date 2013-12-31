@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.402 2013/12/17 20:08:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.403 2013/12/25 13:41:39 grobian Exp $
+
+  25 Dec 2013; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.4/package.mask, darwin/macos/10.5/package.mask:
+  Mask dev-java/oracle-jdk-bin on Tiger and Leopard
 
   17 Dec 2013; Fabian Groffen <grobian@gentoo.org> eapi, make.defaults,
   +use.stable.mask:

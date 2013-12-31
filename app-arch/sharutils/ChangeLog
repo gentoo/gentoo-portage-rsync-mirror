@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/sharutils
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.115 2013/12/16 03:34:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.116 2013/12/24 01:36:04 tomwij Exp $
+
+  24 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
+  -files/sharutils-4.6.3-interix.patch:
+  [QA] Remove unused files.
 
 *sharutils-4.14 (16 Dec 2013)
 

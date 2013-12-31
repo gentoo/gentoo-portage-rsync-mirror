@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.13 2012/05/05 04:10:05 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.14 2013/12/26 18:51:41 creffett Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils rpm autotools
 
 MY_R=${PR/r/}
 DESCRIPTION="RedHat's Bluecurve theme for GTK2, KDE, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
-SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${MY_R}.fc7.src.rpm"
+SRC_URI="mirror://gentoo/${P}-${MY_R}.fc7.src.rpm"
 LICENSE="GPL-2"
 
 SLOT="0"

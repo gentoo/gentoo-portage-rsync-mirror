@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.0.ebuild,v 1.1 2013/11/26 04:32:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.0.ebuild,v 1.3 2013/12/27 01:29:05 bicatali Exp $
 
 EAPI=5
 
@@ -11,8 +11,6 @@ FORTRAN_NEEDED=lapack
 inherit distutils-r1 eutils flag-o-matic fortran-2 multilib toolchain-funcs versionator
 
 DOC_PV="${PV}"
-# upstream is lagging on docs
-DOC_PV=1.7.0
 
 DESCRIPTION="Fast array and numerical python library"
 HOMEPAGE="http://numpy.scipy.org/"
@@ -58,8 +56,9 @@ pc_libdir() {
 
 pc_libs() {
 	$(tc-getPKG_CONFIG) --libs-only-l $@ | \
-		sed -e 's/[ ]-l*\(pthread\|m\)[ ]*//g' \
-		-e 's/^-l//' -e 's/[ ]*-l/,/g' -e 's/[ ]*$//'
+		sed -e 's/[ ]-l*\(pthread\|m\)\([ ]\|$\)//g' \
+		-e 's/^-l//' -e 's/[ ]*-l/,/g' -e 's/[ ]*$//' \
+		| sort | uniq | tr '\n' ','
 }
 
 python_prepare_all() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.2.ebuild,v 1.5 2012/06/04 23:53:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.2.ebuild,v 1.7 2013/12/30 07:55:20 naota Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/sendmail/sendmail.${SENDMAIL_VER}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="ipv6 poll"
 
 DEPEND="!mail-mta/sendmail
@@ -54,10 +54,10 @@ src_install () {
 	local MY_LIBDIR=/usr/$(get_libdir)
 	dodir "${MY_LIBDIR}"
 	emake DESTDIR="${D}" LIBDIR="${MY_LIBDIR}" MANROOT=/usr/share/man/man \
-		SBINOWN=root SBINGRP=root UBINOWN=root UBINGRP=root \
-		LIBOWN=root LIBGRP=root GBINOWN=root GBINGRP=root \
-		MANOWN=root MANGRP=root INCOWN=root INCGRP=root \
-		MSPQOWN=root CFOWN=root CFGRP=root \
+		SBINOWN=root SBINGRP=0 UBINOWN=root UBINGRP=0 \
+		LIBOWN=root LIBGRP=0 GBINOWN=root GBINGRP=0 \
+		MANOWN=root MANGRP=0 INCOWN=root INCGRP=0 \
+		MSPQOWN=root CFOWN=root CFGRP=0 \
 		MILTER_SOVER=${PV} \
 		install -C obj.*/libmilter \
 		|| die "install failed"

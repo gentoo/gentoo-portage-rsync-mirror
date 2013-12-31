@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/openvas-administrator
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-administrator/ChangeLog,v 1.5 2013/11/10 18:31:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-administrator/ChangeLog,v 1.6 2013/12/27 00:18:17 creffett Exp $
+
+  27 Dec 2013; Chris Reffett <creffett@gentoo.org>
+  -openvas-administrator-1.1.1.ebuild, -openvas-administrator-1.3.0.ebuild:
+  Cleanup vulnerable versions wrt bug 490938
 
 *openvas-administrator-1.3.2 (10 Nov 2013)
 

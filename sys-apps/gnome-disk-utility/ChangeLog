@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.88 2013/12/08 19:39:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.89 2013/12/24 17:40:32 pacho Exp $
+
+*gnome-disk-utility-3.10.0 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org>
+  +files/gnome-disk-utility-3.10.0-kill-gsd-automagic.patch,
+  +files/gnome-disk-utility-3.10.0-raise-gsd-dependency.patch,
+  +gnome-disk-utility-3.10.0.ebuild, -gnome-disk-utility-3.0.2-r301.ebuild,
+  -gnome-disk-utility-3.4.1.ebuild, -gnome-disk-utility-3.6.1.ebuild,
+  -gnome-disk-utility-3.8.0.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-disk-utility-3.8.2.ebuild:
   x86 stable, bug #478252

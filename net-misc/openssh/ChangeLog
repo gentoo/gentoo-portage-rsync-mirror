@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.490 2013/12/11 15:36:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.492 2013/12/25 09:35:42 maekke Exp $
+
+  25 Dec 2013; Markus Meier <maekke@gentoo.org> openssh-6.4_p1-r1.ebuild:
+  arm stable, bug #477894
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> openssh-6.4_p1-r1.ebuild:
+  Stable for x86, wrt bug #477894
 
   11 Dec 2013; Jeroen Roovers <jer@gentoo.org> openssh-6.4_p1-r1.ebuild:
   Stable for HPPA (bug #477894).

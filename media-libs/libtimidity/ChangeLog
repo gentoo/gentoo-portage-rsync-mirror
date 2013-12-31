@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libtimidity
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.19 2012/05/05 08:02:40 jdhore Exp $
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/ChangeLog,v 1.21 2013/12/30 07:59:42 aballier Exp $
+
+*libtimidity-0.1.0-r2 (30 Dec 2013)
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org>
+  +libtimidity-0.1.0-r2.ebuild:
+  convert to multilib, bug #496388
+
+  30 Dec 2013; Alexis Ballier <aballier@gentoo.org> -libtimidity-0.1.0.ebuild:
+  remove old
 
   05 May 2012; Jeff Horelick <jdhore@gentoo.org> libtimidity-0.1.0.ebuild,
   libtimidity-0.1.0-r1.ebuild:

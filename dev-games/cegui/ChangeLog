@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.62 2013/07/14 12:13:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.63 2013/12/30 22:19:19 hasufell Exp $
+
+*cegui-0.8.3 (30 Dec 2013)
+
+  30 Dec 2013; Julian Ospald <hasufell@gentoo.org> +cegui-0.8.3.ebuild:
+  version bump
 
   14 Jul 2013; Julian Ospald <hasufell@gentoo.org> cegui-0.8.2.ebuild:
   use subslot operator for boost

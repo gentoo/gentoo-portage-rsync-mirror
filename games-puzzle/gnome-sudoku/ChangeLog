@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/gnome-sudoku
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.8 2013/12/08 18:22:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-sudoku/ChangeLog,v 1.9 2013/12/24 16:17:07 pacho Exp $
+
+*gnome-sudoku-3.10.2 (24 Dec 2013)
+
+  24 Dec 2013; Pacho Ramos <pacho@gentoo.org> +gnome-sudoku-3.10.2.ebuild:
+  Version bump for Gnome 3.10
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-sudoku-3.8.1.ebuild:
   x86 stable, bug #478252

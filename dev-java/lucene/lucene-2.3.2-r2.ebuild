@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.3.2-r2.ebuild,v 1.1 2012/09/27 16:01:26 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/lucene-2.3.2-r2.ebuild,v 1.2 2013/12/28 19:09:56 robbat2 Exp $
 
 EAPI=3
 
@@ -14,7 +14,8 @@ DESCRIPTION="High-performance, full-featured text search engine written entirely
 HOMEPAGE="http://lucene.apache.org"
 # when doing version bump, SRC_URI of the previous version should most probably
 # be changed to java/archive/ !
-SRC_URI="mirror://apache/lucene/java/${P}-src.tar.gz"
+SRC_URI="mirror://apache/lucene/java/archive/${P}-src.tar.gz
+		 mirror://apache/lucene/java/${P}-src.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="2.3"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"

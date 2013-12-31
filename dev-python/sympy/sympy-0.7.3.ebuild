@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.3.ebuild,v 1.2 2013/10/16 16:28:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.3.ebuild,v 1.3 2013/12/28 20:31:19 jlec Exp $
 
 EAPI=5
 
@@ -173,6 +173,9 @@ python_compile() {
 python_compile_all() {
 	local _py
 	if use doc; then
+		export XDG_CONFIG_HOME="${T}/config-dir"
+		mkdir "${XDG_CONFIG_HOME}" || die
+		chmod 0700 "${XDG_CONFIG_HOME}" || die
 		if python_is_python3; then
 			_py=3
 		else

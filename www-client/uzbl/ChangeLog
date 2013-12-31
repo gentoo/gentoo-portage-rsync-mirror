@@ -1,6 +1,12 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.51 2013/02/02 04:42:03 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.53 2013/12/23 14:48:27 ago Exp $
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> uzbl-2012.05.14.ebuild:
+  Stable for x86, wrt bug #404985
+
+  22 Dec 2013; Pacho Ramos <pacho@gentoo.org> uzbl-2012.05.14.ebuild:
+  amd64 stable, bug #404985
 
   02 Feb 2013; Alex Alexander <wired@gentoo.org> -uzbl-2010.11.25.ebuild,
   -uzbl-2011.02.15.ebuild, -uzbl-2011.03.17.ebuild, -uzbl-2011.07.17.ebuild,
@@ -257,4 +263,3 @@
   04 Dec 2009; Alex Alexander <wired@gentoo.org> +uzbl-0_pre20091107.ebuild,
   +files/uzbl-makefile-cleanup.patch, +metadata.xml:
   new ebuild
-

@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.959 2013/12/16 12:31:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.962 2013/12/24 16:21:46 ago Exp $
+
+  24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> glibc-2.16.0.ebuild:
+  Stable for ppc64, wrt bug #467256
+
+  23 Dec 2013; Mike Frysinger <vapier@gentoo.org> glibc-2.16.0.ebuild:
+  Mark ia64 stable #467256.
+
+  23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> glibc-2.16.0.ebuild:
+  Stable for ppc, wrt bug #467256
 
   16 Dec 2013; Raúl Porcel <armin76@gentoo.org> glibc-2.16.0.ebuild,
   glibc-2.17.ebuild:

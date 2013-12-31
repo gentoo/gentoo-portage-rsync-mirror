@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/debugger-linecache
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/debugger-linecache/ChangeLog,v 1.1 2013/11/05 03:19:43 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/debugger-linecache/ChangeLog,v 1.2 2013/12/31 06:50:14 graaff Exp $
+
+  31 Dec 2013; Hans de Graaff <graaff@gentoo.org>
+  debugger-linecache-1.2.0.ebuild:
+  Add ruby21. Avoid implicit dependency on git.
 
 *debugger-linecache-1.2.0 (05 Nov 2013)
 

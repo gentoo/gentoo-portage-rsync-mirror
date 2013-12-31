@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libevdev
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/ChangeLog,v 1.6 2013/11/04 00:00:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/ChangeLog,v 1.7 2013/12/30 19:50:00 mattst88 Exp $
+
+*libevdev-0.6 (30 Dec 2013)
+
+  30 Dec 2013; Matt Turner <mattst88@gentoo.org> +libevdev-0.6.ebuild,
+  -libevdev-0.4.ebuild:
+  Version bump to 0.6, bug 493420.
 
   04 Nov 2013; Matt Turner <mattst88@gentoo.org> libevdev-0.4.ebuild:
   Added ~alpha, bug 487944.

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/blahtexml
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/blahtexml/ChangeLog,v 1.1 2013/07/10 11:45:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/blahtexml/ChangeLog,v 1.2 2013/12/26 14:40:45 hasufell Exp $
+
+  26 Dec 2013; Julian Ospald <hasufell@gentoo.org> blahtexml-0.9.ebuild,
+  files/blahtexml-0.9-Makefile.patch:
+  respect PKG_CONFIG wrt #478514, add ~x86
 
 *blahtexml-0.9 (10 Jul 2013)
 

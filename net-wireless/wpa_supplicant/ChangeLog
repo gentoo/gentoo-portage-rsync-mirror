@@ -1,6 +1,22 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.205 2013/12/21 17:24:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.207 2013/12/22 14:40:18 gurligebis Exp $
+
+  22 Dec 2013; <gurligebis@gentoo.org> -wpa_supplicant-0.7.3-r5.ebuild,
+  -files/wpa_supplicant-0.7.3-dbus-WPAIE-fix.patch,
+  -files/wpa_supplicant-0.7.3-dbus-api-changes.patch,
+  -files/wpa_supplicant-0.7.3-dbus_path_fix.patch,
+  -files/wpa_supplicant-0.7.3-generate-libeap-peer.patch,
+  -files/wpa_supplicant-1.1-dbus-path-fix.patch,
+  -files/do-not-call-dbus-functions-with-NULL-path.patch,
+  -files/wpa_supplicant-gcc470.patch,
+  -files/wpa_supplicant-1.1-do-not-call-dbus-functions-with-NULL-path.patch,
+  -files/wpa_supplicant-1.1-generate-libeap-peer.patch,
+  -files/wpa_supplicant-1.1-libnl_path_fix.patch, metadata.xml:
+  Cleaning up, now that 2.0-r2 is stable
+
+  22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.0-r2.ebuild:
+  Stable for ppc64, wrt bug #486008
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.0-r2.ebuild:
   Stable for ppc, wrt bug #486008

@@ -1,6 +1,19 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.207 2013/09/07 20:11:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.209 2013/12/24 20:29:41 polynomial-c Exp $
+
+*automake-1.14.1 (24 Dec 2013)
+
+  24 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> +automake-1.14.1.ebuild:
+  Version bump.
+
+  24 Dec 2013; Mike Frysinger <vapier@gentoo.org> automake-1.10.3.ebuild,
+  automake-1.11.6.ebuild, automake-1.12.6.ebuild, automake-1.13.1.ebuild,
+  automake-1.13.2.ebuild, automake-1.13.3.ebuild, automake-1.13.4.ebuild,
+  automake-1.4_p6-r1.ebuild, automake-1.5-r1.ebuild, automake-1.6.3-r1.ebuild,
+  automake-1.7.9-r2.ebuild, automake-1.8.5-r4.ebuild, automake-1.9.6-r3.ebuild,
+  automake-9999.ebuild:
+  Force latest automake-wrapper to keep people up-to-date.
 
   07 Sep 2013; Agostino Sarubbo <ago@gentoo.org> automake-1.13.4.ebuild:
   Stable for sparc, wrt bug #481904

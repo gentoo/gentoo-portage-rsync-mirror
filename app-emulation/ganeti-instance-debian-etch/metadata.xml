@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<description>Lance Albertson</description>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<upstream>
 		<remote-id type="google-code">ganeti</remote-id>

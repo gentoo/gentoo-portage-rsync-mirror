@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.194 2013/12/12 12:57:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.195 2013/12/30 09:28:44 dirtyepic Exp $
+
+*wxpython-3.0.0.0 (30 Dec 2013)
+
+  30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> +wxpython-3.0.0.0.ebuild,
+  +files/wxpython-3.0.0.0-wxversion-scripts.patch,
+  +files/wxpython-3.0-wxversion-demo.patch:
+  Version bump (bug #485184).
 
   12 Dec 2013; Justin Lecher <jlec@gentoo.org> wxpython-2.8.12.1.ebuild,
   wxpython-2.8.12.1-r1.ebuild, wxpython-2.8.12.1-r2.ebuild,

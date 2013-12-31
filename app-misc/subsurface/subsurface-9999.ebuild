@@ -1,41 +1,43 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-9999.ebuild,v 1.3 2013/11/16 15:15:16 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/subsurface/subsurface-9999.ebuild,v 1.4 2013/12/23 16:57:35 tomwij Exp $
 
 EAPI="5"
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://subsurface.hohndel.org/subsurface.git"
 	GIT_ECLASS="git-2"
+	KEYWORDS=""
+	SRC_URI=""
 	LIBDC_V="0.4.1"
 else
-	SRC_URI="http://subsurface.hohndel.org/downloads/Subsurface-${PV}.tgz -> ${P}.tar.gz"
+	MY_P=${P/s/S}
+	SRC_URI="http://subsurface.hohndel.org/downloads/${MY_P}.tgz https://bitbucket.org/bearsh/bearshlay/downloads/${MY_P}.tgz"
 	KEYWORDS="~amd64 ~x86"
 	LIBDC_V="0.4.1"
-	S="${WORKDIR}/${P/s/S}"
 fi
 
-inherit eutils qt4-r2 ${GIT_ECLASS}
+PLOCALES="bg_BG da_DK de_CH de_DE es_ES et_EE fi_FI fr_FR he it_IT nb_NO nl_NL
+	pl_PL pt_BR pt_PT ru_RU sk_SK sv_SE zh_TW"
+
+inherit eutils l10n qt4-r2 ${GIT_ECLASS}
 
 DESCRIPTION="An open source dive log program"
 HOMEPAGE="http://subsurface.hohndel.org"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc usb"
-for LINGUA in ${LINGUAS}; do
-	IUSE+=" linguas_${LINGUA}"
-done
+IUSE="debug doc usb"
 
 RDEPEND="dev-db/sqlite:3
 	dev-libs/glib:2
-	dev-libs/libxml2:2
-	dev-libs/libxslt:0
-	dev-libs/libzip:0
+	dev-libs/libxml2
+	dev-libs/libxslt
+	dev-libs/libzip
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtsvg:4
 	dev-qt/qtwebkit:4
-	kde-base/marble:4
+	kde-base/marble
 "
 DEPEND="${RDEPEND}
 	>=dev-libs/libdivecomputer-${LIBDC_V}[static-libs,usb?]
@@ -50,22 +52,23 @@ src_unpack() {
 		git-2_src_unpack
 	else
 		unpack ${A}
+		mv ${MY_P}* ${P} || die "failed to mv the files to ${P}"
 	fi
 }
 
-src_compile() {
-	emake CC="$(tc-getCC)"
-
-	if use doc; then
-		cd "Documentation" && emake user-manual.xhtml
-	fi
+rm_trans() {
+	rm "${ED}/usr/share/${PN}/translations/${PN}_${1}.qm" || die "rm ${PN}_${1}.qm failed"
 }
 
 src_install() {
 	qt4-r2_src_install
 
-	if use doc; then
-		mv "${ED}/usr/share/doc/${PN}/"* "${ED}/usr/share/doc/${PF}/". || die "doc mv failed"
+	l10n_for_each_disabled_locale_do rm_trans
+
+	# this is not a translation but present (no need to die if not present)
+	rm "${ED}/usr/share/${PN}/translations/${PN}_source.qm"
+
+	if ! use doc; then
+		rm -R "${ED}/usr/share/${PN}/Documentation"* || die "rm doc failed"
 	fi
-	rm -Rf "${ED}/usr/share/doc/${PN}"
 }

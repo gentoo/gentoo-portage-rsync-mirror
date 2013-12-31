@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/samuel
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.18 2013/11/17 21:08:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/samuel/ChangeLog,v 1.19 2013/12/22 19:16:32 blueness Exp $
+
+  22 Dec 2013; Anthony G. Basile <blueness@gentoo.org> samuel-0.3.3-r1.ebuild:
+  Fix failed gpg signiture
 
 *samuel-0.3.3-r1 (17 Nov 2013)
 
