@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-net-ping
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.23 2013/08/16 03:37:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-net-ping/ChangeLog,v 1.24 2013/12/31 14:53:57 zlogene Exp $
+
+  31 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> perl-net-ping-2.36.ebuild:
+  Drop perl-5.10* dependency
 
 *perl-net-ping-2.41 (16 Aug 2013)
 
