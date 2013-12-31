@@ -17,8 +17,6 @@
   <flag name="daemon">Enable eiskaltdcpp-daemon</flag>
   <flag name="dht">Enable DHT (distributed hash table) support for libeiskaltdcpp</flag>
   <flag name="emoticons">Install emoticon packs</flag>
-  <flag name="gnome">Enable sound notifications support over libgnome2 in EiskaltDC++ Gtk</flag>
-  <flag name="gtk3">Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2</flag>
   <flag name="json">Enable JSON for cli and daemon</flag>
   <flag name="libcanberra">Enable sound notifications support over libcanberra in EiskaltDC++ Gtk</flag>
   <flag name="minimal">Don't install headers</flag>
