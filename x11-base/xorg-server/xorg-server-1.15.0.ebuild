@@ -1,10 +1,9 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.15.0.ebuild,v 1.1 2013/12/30 19:59:17 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.15.0.ebuild,v 1.2 2013/12/31 22:36:41 mattst88 Exp $
 
 EAPI=5
 
-XORG_EAUTORECONF=yes
 XORG_DOC=doc
 inherit xorg-2 multilib versionator flag-o-matic
 EGIT_REPO_URI="git://anongit.freedesktop.org/git/xorg/xserver"
@@ -205,9 +204,6 @@ pkg_postinst() {
 	eselect opengl set xorg-x11 --use-old
 
 	if [[ ${PV} != 9999 && $(get_version_component_range 2 ${REPLACING_VERSIONS}) != $(get_version_component_range 2 ${PV}) ]]; then
-		elog "You should consider reading upgrade guide for this release:"
-		elog "  http://www.gentoo.org/proj/en/desktop/x/x11/xorg-server-$(get_version_component_range 1-2)-upgrade-guide.xml"
-		echo
 		ewarn "You must rebuild all drivers if upgrading from <xorg-server-$(get_version_component_range 1-2)"
 		ewarn "because the ABI changed. If you cannot start X because"
 		ewarn "of module version mismatch errors, this is your problem."
