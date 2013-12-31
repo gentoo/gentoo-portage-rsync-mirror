@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/github-pages-publish/github-pages-publish-0.1.ebuild,v 1.1 2013/12/31 01:56:03 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/github-pages-publish/github-pages-publish-0.1.1.ebuild,v 1.1 2013/12/31 15:22:27 rafaelmartins Exp $
 
 EAPI=5
 

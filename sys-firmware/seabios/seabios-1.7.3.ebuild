@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.3.ebuild,v 1.2 2013/08/27 13:25:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/seabios-1.7.3.ebuild,v 1.3 2013/12/31 15:30:42 floppym Exp $
 
 EAPI=5
 
@@ -59,6 +59,10 @@ pkg_pretend() {
 
 	${myld} -v | grep -q "GNU gold" && \
 	ewarn "gold linker unable to handle 16-bit code using ld.bfd.  bug #438058"
+}
+
+pkg_setup() {
+	use binary || python_setup
 }
 
 src_prepare() {

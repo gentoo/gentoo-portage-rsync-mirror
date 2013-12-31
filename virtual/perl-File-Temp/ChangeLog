@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.63 2013/10/28 06:27:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.64 2013/12/31 15:03:06 zlogene Exp $
+
+  31 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
+  perl-File-Temp-0.220.0-r2.ebuild:
+  Drop perl-5.10* dependency
 
 *perl-File-Temp-0.230.400 (28 Oct 2013)
 
