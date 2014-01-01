@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/exodusii
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/ChangeLog,v 1.6 2013/07/18 23:31:13 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/exodusii/ChangeLog,v 1.7 2014/01/01 14:35:18 jlec Exp $
+
+*exodusii-6.02 (01 Jan 2014)
+*exodusii-5.26 (01 Jan 2014)
+
+  01 Jan 2014; Justin Lecher <jlec@gentoo.org> +exodusii-5.26.ebuild,
+  +exodusii-6.02.ebuild, +files/exodusii-5.26-multilib.patch:
+  Version Bump
 
   18 Jul 2013; Zac Medico <zmedico@gentoo.org> exodusii-5.24.ebuild:
   Fix SRC_URI.
