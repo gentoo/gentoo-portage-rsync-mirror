@@ -1,6 +1,12 @@
 # ChangeLog for games-misc/doge
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/ChangeLog,v 1.7 2013/12/25 20:02:30 vikraman Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/doge/ChangeLog,v 1.8 2014/01/01 10:41:57 vikraman Exp $
+
+*doge-3.4.0 (01 Jan 2014)
+
+  01 Jan 2014; Vikraman <vikraman@gentoo.org> +doge-3.4.0.ebuild,
+  -doge-3.3.0.ebuild:
+  Bump to version 3.4.0
 
 *doge-3.3.0 (25 Dec 2013)
 

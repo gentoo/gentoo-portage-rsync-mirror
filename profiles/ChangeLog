@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8475 2013/12/31 17:20:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8476 2014/01/01 10:51:06 zlogene Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> package.mask:
+  Remove obsolete perl-5.8*/perl-5.10* mask
 
   31 Dec 2013; Tom Wijsman <TomWij@gentoo.org> package.mask:
   [QA] Mask LIVEVCS.unmasked versions of docker, newer versions are available.
