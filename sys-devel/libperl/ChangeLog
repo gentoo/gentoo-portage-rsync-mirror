@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.166 2014/01/01 10:32:52 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.167 2014/01/01 13:41:54 dilfridge Exp $
+
+  01 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Remove unused useflag description
 
   01 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -libperl-5.8.8-r2.ebuild:
   Remove old version wrt bug #350785

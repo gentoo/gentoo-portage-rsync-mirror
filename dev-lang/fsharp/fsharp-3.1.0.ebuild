@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fsharp/fsharp-3.0.30.ebuild,v 1.3 2013/11/05 13:03:14 cynede Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fsharp/fsharp-3.1.0.ebuild,v 1.1 2014/01/01 13:45:36 cynede Exp $
 
 EAPI="5"
 
