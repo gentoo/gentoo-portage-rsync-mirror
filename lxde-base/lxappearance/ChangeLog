@@ -1,6 +1,12 @@
 # ChangeLog for lxde-base/lxappearance
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.35 2013/12/15 20:27:04 nullishzero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.36 2014/01/01 04:43:48 nullishzero Exp $
+
+*lxappearance-0.5.4 (01 Jan 2014)
+
+  01 Jan 2014; Pavel Kazakov <nullishzero@gentoo.org>
+  +lxappearance-0.5.4.ebuild:
+  Version bump and adding dbus use flag
 
 *lxappearance-0.5.3 (15 Dec 2013)
 
