@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/netcdf-cxx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-cxx/ChangeLog,v 1.5 2014/01/01 17:19:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf-cxx/ChangeLog,v 1.6 2014/01/01 19:04:28 jlec Exp $
+
+*netcdf-cxx-4.2-r300 (01 Jan 2014)
+
+  01 Jan 2014; Justin Lecher <jlec@gentoo.org> +netcdf-cxx-4.2-r300.ebuild:
+  Add legacy version in SLOT=3
 
 *netcdf-cxx-4.2.1 (01 Jan 2014)
 
