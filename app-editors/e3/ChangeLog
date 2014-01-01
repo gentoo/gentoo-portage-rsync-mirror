@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/e3
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.37 2012/06/09 14:47:27 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/ChangeLog,v 1.38 2014/01/01 16:42:11 ulm Exp $
+
+  01 Jan 2014; Ulrich Müller <ulm@gentoo.org> -e3-2.7.1.ebuild, e3-2.8.ebuild:
+  Specify LICENSE more precisely. Bump EAPI to 5. Remove old.
 
   09 Jun 2012; Justin Lecher <jlec@gentoo.org> e3-2.8.ebuild, metadata.xml:
   Add -- to emake so that -l doesn't get confused by [number]* make targets,

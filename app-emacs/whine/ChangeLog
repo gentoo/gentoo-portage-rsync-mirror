@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/whine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/whine/ChangeLog,v 1.9 2010/05/22 08:07:08 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/whine/ChangeLog,v 1.10 2014/01/01 16:34:42 ulm Exp $
+
+  01 Jan 2014; Ulrich Müller <ulm@gentoo.org> whine-20091222.ebuild:
+  Update SRC_URI. Bump EAPI to 5.
 
   22 May 2010; Ulrich Mueller <ulm@gentoo.org> -whine-20071227.ebuild:
   Remove old.
