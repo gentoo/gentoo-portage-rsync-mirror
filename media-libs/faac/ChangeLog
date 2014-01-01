@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.100 2013/10/13 20:49:32 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.101 2014/01/01 16:10:36 jer Exp $
+
+  01 Jan 2014; Jeroen Roovers <jer@gentoo.org> faac-1.28-r4.ebuild:
+  Stable for HPPA (bug #495712).
 
   13 Oct 2013; Michał Górny <mgorny@gentoo.org> faac-1.28-r4.ebuild:
   Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug

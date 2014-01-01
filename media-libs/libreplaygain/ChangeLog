@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libreplaygain
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.41 2013/07/28 21:25:28 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.42 2014/01/01 16:12:10 jer Exp $
+
+  01 Jan 2014; Jeroen Roovers <jer@gentoo.org> libreplaygain-477-r1.ebuild:
+  Stable for HPPA (bug #495742).
 
 *libreplaygain-477-r1 (28 Jul 2013)
 

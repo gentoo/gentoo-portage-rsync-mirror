@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdca
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.33 2013/07/29 19:57:38 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.34 2014/01/01 16:11:41 jer Exp $
+
+  01 Jan 2014; Jeroen Roovers <jer@gentoo.org> libdca-0.0.5-r3.ebuild:
+  Stable for HPPA (bug #495726).
 
   29 Jul 2013; Alexis Ballier <aballier@gentoo.org> libdca-0.0.5-r3.ebuild:
   Do not build the binaries for non native ABIs: They will be thrown away

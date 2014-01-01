@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-ErrorHandler
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.27 2013/09/05 13:17:51 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.28 2014/01/01 16:03:04 jer Exp $
+
+  01 Jan 2014; Jeroen Roovers <jer@gentoo.org>
+  Class-ErrorHandler-0.30.0.ebuild:
+  Stable for HPPA (bug #492090).
 
 *Class-ErrorHandler-0.30.0 (05 Sep 2013)
 
