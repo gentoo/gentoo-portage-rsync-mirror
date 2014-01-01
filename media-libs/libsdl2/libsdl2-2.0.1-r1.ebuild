@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.1.ebuild,v 1.1 2013/10/25 16:03:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/libsdl2-2.0.1-r1.ebuild,v 1.1 2014/01/01 00:26:03 hasufell Exp $
 
 EAPI=5
 inherit autotools flag-o-matic toolchain-funcs eutils
@@ -140,6 +140,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	use static-libs || prune_libtool_files
+	prune_libtool_files
 	dodoc {BUGS,CREDITS,README,README-SDL,README-hg,TODO,WhatsNew}.txt
 }

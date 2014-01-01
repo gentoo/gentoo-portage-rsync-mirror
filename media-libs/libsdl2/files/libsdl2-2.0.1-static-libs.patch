@@ -1,5 +1,6 @@
---- a/Makefile.in
-+++ b/Makefile.in
+diff -r c1563f514b5b Makefile.in
+--- a/Makefile.in	Thu Apr 04 11:35:22 2013 -0400
++++ b/Makefile.in	Wed Apr 17 14:17:09 2013 -0400
 @@ -33,10 +33,10 @@
  OBJECTS = @OBJECTS@
  VERSION_OBJECTS = @VERSION_OBJECTS@
@@ -12,8 +13,8 @@
 +SDLTEST_TARGET = libSDL2_test.la
  SDLTEST_OBJECTS = @SDLTEST_OBJECTS@
  
- SRC_DIST = acinclude Android.mk autogen.sh BUGS build-scripts configure configure.in COPYING CREDITS debian include INSTALL Makefile.minimal Makefile.in README* sdl2-config.in sdl2.m4 sdl2.pc.in SDL2.spec.in src test TODO VisualC.html VisualC WhatsNew Xcode Xcode-iOS
-@@ -122,15 +122,13 @@
+ SRC_DIST = *.txt acinclude Android.mk autogen.sh android-project build-scripts cmake configure configure.in debian include Makefile.* sdl2-config.in sdl2.m4 sdl2.pc.in SDL2.spec.in src test VisualC.html VisualC Xcode Xcode-iOS
+@@ -123,15 +123,13 @@
  .PHONY: all update-revision install install-bin install-hdrs install-lib install-data uninstall uninstall-bin uninstall-hdrs uninstall-lib uninstall-data clean distclean dist $(OBJECTS:.lo=.d)
  
  $(objects)/$(TARGET): $(OBJECTS) $(VERSION_OBJECTS)
@@ -23,16 +24,16 @@
  $(objects)/$(SDLMAIN_TARGET): $(SDLMAIN_OBJECTS)
 -	$(AR) cru $@ $(SDLMAIN_OBJECTS)
 -	$(RANLIB) $@
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS) -all-static
  
  $(objects)/$(SDLTEST_TARGET): $(SDLTEST_OBJECTS)
 -	$(AR) cru $@ $(SDLTEST_OBJECTS)
 -	$(RANLIB) $@
-+	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) $(EXTRA_LDFLAGS) $(LT_LDFLAGS) -all-static
  
  install: all install-bin install-hdrs install-lib install-data
  install-bin:
-@@ -151,10 +149,8 @@
+@@ -152,10 +150,8 @@
  install-lib: $(objects) $(objects)/$(TARGET) $(objects)/$(SDLMAIN_TARGET) $(objects)/$(SDLTEST_TARGET)
  	$(SHELL) $(auxdir)/mkinstalldirs $(DESTDIR)$(libdir)
  	$(LIBTOOL) --mode=install $(INSTALL) $(objects)/$(TARGET) $(DESTDIR)$(libdir)/$(TARGET)
@@ -45,9 +46,19 @@
  install-data:
  	$(SHELL) $(auxdir)/mkinstalldirs $(DESTDIR)$(datadir)/aclocal
  	$(INSTALL) -m 644 $(srcdir)/sdl2.m4 $(DESTDIR)$(datadir)/aclocal/sdl2.m4
---- a/configure.in
-+++ b/configure.in
-@@ -2659,23 +2659,23 @@
+diff -r c1563f514b5b configure.in
+--- a/configure.in	Thu Apr 04 11:35:22 2013 -0400
++++ b/configure.in	Wed Apr 17 14:17:09 2013 -0400
+@@ -2597,7 +2597,7 @@
+             have_loadso=yes
+         fi
+         # Set up the system libraries we need
+-        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lversion -luuid -XCClinker -static-libgcc"
++        EXTRA_LDFLAGS="$EXTRA_LDFLAGS -luser32 -lgdi32 -lwinmm -limm32 -lole32 -loleaut32 -lshell32 -lversion -Wl,-luuid -XCClinker -static-libgcc"
+         # The Windows platform requires special setup
+         VERSION_SOURCES="$srcdir/src/main/windows/*.rc"
+         SDLMAIN_SOURCES="$srcdir/src/main/windows/*.c"
+@@ -2873,23 +2873,23 @@
  
  VERSION_OBJECTS=`echo $VERSION_SOURCES`
  VERSION_DEPENDS=`echo $VERSION_SOURCES`
@@ -55,8 +66,9 @@
 +VERSION_OBJECTS=`echo "$VERSION_OBJECTS" | sed 's,[[^ ]]*/\([[^ ]]*\)\.rc,$(objects)/\1.lo,g'`
  VERSION_DEPENDS=`echo "$VERSION_DEPENDS" | sed "s,\\([[^ ]]*\\)/\\([[^ ]]*\\)\\.rc,\\\\
 -\\$(objects)/\\2.o: \\1/\\2.rc\\\\
+-	\\$(WINDRES) \\$< \\$@,g"`
 +\\$(objects)/\\2.lo: \\1/\\2.rc\\\\
- 	\\$(WINDRES) \\$< \\$@,g"`
++	\\$(LIBTOOL) --mode=compile --tag=RC \\$(WINDRES) -i \\$< -o \\$@,g"`
  
  SDLMAIN_OBJECTS=`echo $SDLMAIN_SOURCES`
  SDLMAIN_DEPENDS=`echo $SDLMAIN_SOURCES`
