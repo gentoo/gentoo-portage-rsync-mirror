@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/xen-pvgrub
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.44 2013/12/10 13:35:02 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.45 2014/01/01 11:47:20 tomwij Exp $
+
+  01 Jan 2014; Tom Wijsman <TomWij@gentoo.org>
+  -files/xen-4-CVE-2013-0215-XSA-38.patch,
+  -files/xen-4-CVE-2013-1919-XSA-46.patch,
+  -files/xen-4-CVE-2013-1952-XSA_49.patch,
+  -files/xen-4.2-CVE-2013-6-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-7-XSA-55.patch, xen-pvgrub-4.2.2-r1.ebuild,
+  xen-pvgrub-4.3.0.ebuild, xen-pvgrub-4.3.1.ebuild:
+  [QA] Remove unused files. Added quotes to unquoted DISTDIR variables.
 
   10 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xen-pvgrub-4.3.1.ebuild:
   Stable for x86, wrt bug #486354

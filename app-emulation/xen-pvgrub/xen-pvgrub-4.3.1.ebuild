@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.3.1.ebuild,v 1.3 2013/12/10 13:35:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.3.1.ebuild,v 1.4 2014/01/01 11:47:20 tomwij Exp $
 
 EAPI=4
 PYTHON_DEPEND="2:2.7"
@@ -93,7 +93,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN/-pvgrub/}-4-CVE-2012-6075-XSA-41.patch
 
 	#Substitute for internal downloading. pciutils copied only due to the only .bz2
-	cp $DISTDIR/pciutils-2.2.9.tar.bz2 ./stubdom/ || die "pciutils not copied to stubdom"
+	cp "${DISTDIR}"/pciutils-2.2.9.tar.bz2 ./stubdom/ || die "pciutils not copied to stubdom"
 	retar-externals || die "re-tar procedure failed"
 }
 
