@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ffi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.61 2013/12/26 16:13:57 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.62 2014/01/01 14:11:11 patrick Exp $
+
+  01 Jan 2014; Patrick Lauer <patrick@gentoo.org> ffi-1.1.5.ebuild,
+  ffi-1.4.0.ebuild, ffi-1.9.3.ebuild:
+  Remove ruby18 target as dependencies lost support already
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> ffi-1.4.0.ebuild:
   arm stable, bug #493780

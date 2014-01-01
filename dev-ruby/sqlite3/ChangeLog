@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/sqlite3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3/ChangeLog,v 1.13 2013/11/02 20:25:05 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite3/ChangeLog,v 1.14 2014/01/01 14:25:55 patrick Exp $
+
+  01 Jan 2014; Patrick Lauer <patrick@gentoo.org> sqlite3-1.3.6.ebuild,
+  sqlite3-1.3.8-r1.ebuild:
+  Remove ruby18 target as dependencies lost support already
 
   02 Nov 2013; Manuel Rüger <mrueg@gentoo.org> -sqlite3-1.3.7.ebuild,
   -sqlite3-1.3.8.ebuild:

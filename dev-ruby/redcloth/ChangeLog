@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/redcloth
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.81 2013/12/26 16:08:28 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.82 2014/01/01 14:20:51 patrick Exp $
+
+  01 Jan 2014; Patrick Lauer <patrick@gentoo.org> redcloth-4.2.9-r1.ebuild,
+  redcloth-4.2.9.ebuild:
+  Remove ruby18 target as dependencies lost support already
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> redcloth-4.2.9.ebuild:
   arm stable, bug #493780

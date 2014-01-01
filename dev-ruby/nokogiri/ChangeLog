@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nokogiri
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.89 2013/12/26 15:00:07 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.90 2014/01/01 14:17:57 patrick Exp $
+
+  01 Jan 2014; Patrick Lauer <patrick@gentoo.org> nokogiri-1.5.10.ebuild,
+  nokogiri-1.5.5.ebuild, nokogiri-1.6.0.ebuild:
+  Remove ruby18 target as dependencies lost support already
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> nokogiri-1.5.5.ebuild:
   arm stable, bug #493780

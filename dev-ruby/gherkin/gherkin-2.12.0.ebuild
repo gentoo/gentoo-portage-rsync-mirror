@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-2.12.0.ebuild,v 1.1 2013/05/26 07:32:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/gherkin-2.12.0.ebuild,v 1.2 2014/01/01 14:12:48 patrick Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19"
+USE_RUBY="ruby19"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_TASK_TEST=""

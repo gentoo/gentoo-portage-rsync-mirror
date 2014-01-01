@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/thin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.28 2013/11/11 16:29:03 a3li Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.29 2014/01/01 14:30:31 patrick Exp $
+
+  01 Jan 2014; Patrick Lauer <patrick@gentoo.org> thin-1.5.1-r1.ebuild,
+  thin-1.5.1-r2.ebuild, thin-1.5.1-r3.ebuild:
+  Remove ruby18 target as dependencies lost support already
 
   11 Nov 2013; Alex Legler <a3li@gentoo.org> files/thin.initd-2:
   Path fix
@@ -127,4 +131,3 @@
   16 Jun 2008; Robin H. Johnson <robbat2@gentoo.org> +thin-0.8.1.ebuild,
   +metadata.xml:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
