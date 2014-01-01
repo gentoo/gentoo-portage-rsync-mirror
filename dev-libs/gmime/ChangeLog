@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/gmime
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.235 2013/12/22 15:50:54 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.236 2014/01/01 21:06:25 pacho Exp $
+
+*gmime-2.6.19-r1 (01 Jan 2014)
+
+  01 Jan 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/gmime-2.6.19-extra-spaces.patch, +files/gmime-2.6.19-memory-leak.patch,
+  +gmime-2.6.19-r1.ebuild, -files/gmime-2.6.18-close-reference.patch,
+  -files/gmime-2.6.18-code-cleanup.patch,
+  -files/gmime-2.6.18-custom-headers.patch,
+  -files/gmime-2.6.18-mutexes-earlier.patch, -gmime-2.6.18-r1.ebuild,
+  metadata.xml:
+  Apply upstream patches fixing a memory leak and the addition of an extra space
+  in References (#496692 by Amadeusz Zolnowski), drop old. Gmime is only being
+  maintained by us for years.
 
   22 Dec 2013; Jeroen Roovers <jer@gentoo.org> gmime-2.4.33.ebuild,
   gmime-2.6.19.ebuild:

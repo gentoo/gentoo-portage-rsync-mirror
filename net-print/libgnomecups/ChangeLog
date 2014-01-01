@@ -1,6 +1,9 @@
 # ChangeLog for net-print/libgnomecups
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.97 2013/12/24 12:46:31 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/ChangeLog,v 1.98 2014/01/01 21:12:36 pacho Exp $
+
+  01 Jan 2014; Pacho Ramos <pacho@gentoo.org> libgnomecups-0.2.3-r3.ebuild:
+  Add missing dependency on gnome-common, bug #496648 by Jan Hrabe
 
   24 Dec 2013; Pacho Ramos <pacho@gentoo.org> -libgnomecups-0.2.3-r2.ebuild,
   libgnomecups-0.2.3-r3.ebuild:

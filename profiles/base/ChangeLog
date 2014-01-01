@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.624 2013/12/30 07:50:44 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.625 2014/01/01 21:30:29 patrick Exp $
+
+  01 Jan 2014; Patrick Lauer <patrick@gentoo.org> use.mask:
+  Masking ruby_targets_ruby18 as there's now cascading breakage of deps and
+  deps-of-deps and it's going to be removed anyway
 
   30 Dec 2013; Alexis Ballier <aballier@gentoo.org> package.use.mask:
   unmask pulseaudio and openal on multilib ffmpeg

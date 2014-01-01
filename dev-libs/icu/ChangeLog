@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/icu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.261 2013/12/27 15:35:54 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.262 2014/01/01 21:03:36 dilfridge Exp $
+
+*icu-52.1 (01 Jan 2014)
+
+  01 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> +icu-52.1.ebuild:
+  Version bump, bug 496470, thanks to polynomial-c
 
   27 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/icu-4.8.1.1-fix_ltr.patch, -files/icu-4.8.1-fix_binformat_fonts.patch,

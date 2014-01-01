@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.18-r1.ebuild,v 1.1 2013/10/02 19:23:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.19-r1.ebuild,v 1.1 2014/01/01 21:06:25 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -39,15 +39,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Minor code/comment cleanup
-	epatch "${FILESDIR}/${P}-code-cleanup.patch"
+	# Don't write out extra spaces in the References header (from 'master')
+	epatch "${FILESDIR}/${P}-extra-spaces.patch"
 
-	# Initialize mutexes earlier in g_mime_init
-	epatch "${FILESDIR}/${P}-mutexes-earlier.patch"
-
-	# Implemented custom header writer for References
-	epatch "${FILESDIR}/${P}-custom-headers.patch"
-	epatch "${FILESDIR}/${P}-close-reference.patch"
+	# Fixed a memory leak in g_mime_object_set_content_disposition_parameter (from 'master')
+	epatch "${FILESDIR}/${P}-memory-leak.patch"
 
 	gnome2_src_prepare
 	use vala && vala_src_prepare

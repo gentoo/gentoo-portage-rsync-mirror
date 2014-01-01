@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/bibtexu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.45 2013/06/28 13:53:25 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.46 2014/01/01 21:08:52 dilfridge Exp $
+
+  01 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  bibtexu-3.71_p20120701.ebuild, bibtexu-3.71_p20130530.ebuild:
+  Re-add the subslot dependency as a member of tex team.
 
   28 Jun 2013; Alexis Ballier <aballier@gentoo.org>
   bibtexu-3.71_p20130530.ebuild:
