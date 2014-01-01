@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/uboat
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.13 2008/01/25 10:57:54 robbat2 Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/uboat/ChangeLog,v 1.14 2014/01/01 15:54:36 ulm Exp $
+
+  01 Jan 2014; Ulrich Müller <ulm@gentoo.org> uboat-1.2.ebuild:
+  Bump EAPI to 5.
 
   18 Oct 2007; Ulrich Mueller <ulm@gentoo.org> uboat-1.2.ebuild:
   amd64 stable, bug #195512.
