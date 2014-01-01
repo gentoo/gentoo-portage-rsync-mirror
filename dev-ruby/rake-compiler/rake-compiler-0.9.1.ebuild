@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.9.1.ebuild,v 1.2 2013/10/06 09:50:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.9.1.ebuild,v 1.4 2014/01/01 09:43:50 patrick Exp $
 
 EAPI=5
-USE_RUBY="ruby18 ruby19 ruby20 jruby"
+USE_RUBY="ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="none"
 
@@ -25,7 +25,7 @@ IUSE=""
 
 ruby_add_rdepend "dev-ruby/rake"
 ruby_add_bdepend "test? ( dev-ruby/rspec:2 )"
-USE_RUBY="ruby18 ruby19" ruby_add_bdepend "test? ( dev-util/cucumber )"
+USE_RUBY="ruby19" ruby_add_bdepend "test? ( dev-util/cucumber )"
 
 each_ruby_prepare() {
 	case ${RUBY} in
@@ -47,7 +47,7 @@ each_ruby_test() {
 
 	# Skip cucumber for jruby (not supported) and ruby20 (not ready yet)
 	case ${RUBY} in
-		*ruby18|*ruby19)
+		*ruby19)
 			ruby-ng_cucumber
 			;;
 	esac
