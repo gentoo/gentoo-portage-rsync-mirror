@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=dev-python/python-poppler-qt4[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/PyQt4[X,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=media-sound/lilypond-2.14.2 portmidi? ( media-libs/portmidi ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=sys-apps/sed-4
+DESCRIPTION=A LilyPond sheet music text editor
+EAPI=5
+HOMEPAGE=http://www.frescobaldi.org/
+IUSE=portmidi python_targets_python2_6 python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 public-domain
+RDEPEND=dev-python/python-poppler-qt4[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] dev-python/PyQt4[X,python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] >=media-sound/lilypond-2.14.2 portmidi? ( media-libs/portmidi ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
+SLOT=0
+SRC_URI=https://github.com/wbsoft/frescobaldi/releases/download/v2.0.13/frescobaldi-2.0.13.tar.gz
+_eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=fc3a4b9add9be914acc0bd828d651572
