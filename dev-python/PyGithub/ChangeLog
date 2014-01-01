@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyGithub
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyGithub/ChangeLog,v 1.19 2013/12/30 02:36:15 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyGithub/ChangeLog,v 1.20 2014/01/01 20:30:16 radhermit Exp $
+
+  01 Jan 2014; Tim Harder <radhermit@gentoo.org> PyGithub-1.21.0.ebuild,
+  PyGithub-1.23.0.ebuild:
+  Update HOMEPAGE.
 
   30 Dec 2013; Tim Harder <radhermit@gentoo.org> -PyGithub-1.17.0.ebuild,
   -PyGithub-1.18.0.ebuild, -PyGithub-1.19.0.ebuild, -PyGithub-1.20.0.ebuild:

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8477 2014/01/01 16:56:39 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8478 2014/01/01 20:25:37 radhermit Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jan 2014; Tim Harder <radhermit@gentoo.org> package.mask:
+  Remove old lilypond development release mask.
 
   01 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Remove obsolete perl-5.8*/perl-5.10* mask
