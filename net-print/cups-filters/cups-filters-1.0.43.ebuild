@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.43.ebuild,v 1.2 2014/01/01 19:12:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-filters/cups-filters-1.0.43.ebuild,v 1.3 2014/01/01 21:00:49 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdf
 
 LICENSE="MIT GPL-2"
 SLOT="0"
-IUSE="jpeg perl png static-libs tiff zeroconf"
+IUSE="dbus jpeg perl png static-libs tiff zeroconf"
 
 RDEPEND="
 	>=app-text/ghostscript-gpl-9.09
@@ -35,8 +35,9 @@ RDEPEND="
 	sys-devel/bc
 	sys-libs/zlib
 	!net-print/foomatic-filters
+	dbus? ( sys-apps/dbus )
 	jpeg? ( virtual/jpeg:0 )
-	perl? ( dev-lang/perl )
+	perl? ( dev-lang/perl:= )
 	png? ( media-libs/libpng:0= )
 	tiff? ( media-libs/tiff )
 	zeroconf? ( net-dns/avahi[dbus] )
@@ -52,6 +53,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		$(use_enable dbus) \
 		$(use_enable zeroconf avahi) \
 		$(use_enable static-libs static) \
 		--with-fontdir="fonts/conf.avail" \
