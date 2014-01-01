@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.509 2013/12/31 16:01:26 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.510 2014/01/01 17:39:22 jer Exp $
+
+  01 Jan 2014; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-304.116.ebuild:
+  Old.
 
   31 Dec 2013; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.23.ebuild,
   nvidia-drivers-319.76.ebuild:

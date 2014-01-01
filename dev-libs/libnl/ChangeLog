@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.197 2013/12/26 14:44:37 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.198 2014/01/01 17:39:15 jer Exp $
+
+  01 Jan 2014; Jeroen Roovers <jer@gentoo.org> libnl-3.2.9999.ebuild:
+  Remove USE=doc.
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> libnl-3.2.23.ebuild:
   arm stable, bug #494836

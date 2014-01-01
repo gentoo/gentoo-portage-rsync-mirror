@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.9999.ebuild,v 1.2 2013/12/20 15:05:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.9999.ebuild,v 1.3 2014/01/01 17:39:15 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} python3_{2,3} )
@@ -12,10 +12,10 @@ HOMEPAGE="http://www.infradead.org/~tgr/libnl/"
 EGIT_REPO_URI="
 	https://github.com/tgraf/libnl.git
 "
-LICENSE="LGPL-2.1 doc? ( GPL-3 ) utils? ( GPL-2 )"
+LICENSE="LGPL-2.1 utils? ( GPL-2 )"
 SLOT="3"
 KEYWORDS=""
-IUSE="doc static-libs python utils"
+IUSE="static-libs python utils"
 
 RDEPEND="python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
