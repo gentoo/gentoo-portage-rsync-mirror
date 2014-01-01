@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.10.0.ebuild,v 1.1 2013/12/28 11:21:49 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/automx-0.10.0.ebuild,v 1.2 2014/01/01 18:53:57 mschiff Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-python/ipaddr[${PYTHON_USEDEP}]
 	dev-python/lxml[${PYTHON_USEDEP}]
 	dev-python/python-dateutil[${PYTHON_USEDEP}]
-	|| ( www-apache/mod_wsgi www-servers/uwsgi )
+	|| ( www-apache/mod_wsgi[${PYTHON_USEDEP}] www-servers/uwsgi )
 	ldap? ( dev-python/python-ldap[${PYTHON_USEDEP}]  )
 	memcached? ( dev-python/python-memcached )
 	sql? ( dev-python/sqlalchemy[${PYTHON_USEDEP}] )

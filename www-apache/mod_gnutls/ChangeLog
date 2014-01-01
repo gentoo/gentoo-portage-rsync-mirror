@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_gnutls
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.32 2013/01/03 19:09:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.33 2014/01/01 18:50:58 pacho Exp $
+
+  01 Jan 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/mod_gnutls-0.5.10-no-extra.patch, -mod_gnutls-0.5.10.ebuild,
+  mod_gnutls-0.5.10-r1.ebuild:
+  Fix compilation with gnutls-3 with Fedora patch (#421421)
 
 *mod_gnutls-0.5.10-r1 (03 Jan 2013)
 
