@@ -1,6 +1,3 @@
-
-;;; quilt-el site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'quilt-mode "quilt"
   "Toggle quilt-mode. With positive arg, enable quilt-mode." t)

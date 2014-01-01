@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/quilt-el
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.18 2011/01/04 01:29:02 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.19 2014/01/01 18:11:52 ulm Exp $
+
+*quilt-el-0.48.0 (01 Jan 2014)
+
+  01 Jan 2014; Ulrich Müller <ulm@gentoo.org> +quilt-el-0.48.0.ebuild,
+  +files/quilt-el-0.48.0-tramp-recursion.patch:
+  Version bump. Update HOMEPAGE and SRC_URI.
 
   04 Jan 2011; Michael Weber <xmw@gentoo.org> quilt-el-0.46.2.ebuild:
   arm stable (bug 327625)
