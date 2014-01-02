@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.33 2014/01/01 18:50:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.34 2014/01/02 15:57:07 pacho Exp $
+
+  02 Jan 2014; Pacho Ramos <pacho@gentoo.org> mod_gnutls-0.5.10-r1.ebuild:
+  Fix for latest automake, bug #496772 by Arfrever Frehtes Taifersar Arahesis
 
   01 Jan 2014; Pacho Ramos <pacho@gentoo.org>
   +files/mod_gnutls-0.5.10-no-extra.patch, -mod_gnutls-0.5.10.ebuild,

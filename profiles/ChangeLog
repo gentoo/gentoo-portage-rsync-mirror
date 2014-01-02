@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8479 2014/01/02 06:59:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8480 2014/01/02 15:53:01 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jan 2014; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask because breaks reverse dependencies and upstream don't want us to use it
+  (#483562)
 
   02 Jan 2014; Hans de Graaff <graaff@gentoo.org> base/use.mask:
   Remove incomplete and undocumented attempt to mask ruby18 to fix

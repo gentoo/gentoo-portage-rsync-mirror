@@ -3,10 +3,10 @@ DEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Extract data from Macintosh BinHex files
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Convert-BinHex/
-KEYWORDS=~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=GPL-1
 RDEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/S/ST/STEPHEN/Convert-BinHex-1.123.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=229f02b999216def1abca63dad434301
+_md5_=415e58bcdad727b98402d1d1f33e6573

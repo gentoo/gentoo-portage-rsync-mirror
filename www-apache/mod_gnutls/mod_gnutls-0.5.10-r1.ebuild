@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.5.10-r1.ebuild,v 1.2 2014/01/01 18:50:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/mod_gnutls-0.5.10-r1.ebuild,v 1.3 2014/01/02 15:57:07 pacho Exp $
 
 EAPI="5"
 inherit apache-module autotools eutils
@@ -28,6 +28,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-httpd24.patch"
 	epatch "${FILESDIR}/${PN}_apr_memcache_m4_dirty.patch"
 	epatch "${FILESDIR}/${P}-no-extra.patch"
+
+	sed -e "s/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/" -i configure.ac || die
+
 	epatch_user
 	eautoreconf
 }
