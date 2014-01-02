@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.4.ebuild,v 1.1 2013/10/26 19:35:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-2.0.4.ebuild,v 1.2 2014/01/02 17:46:48 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -30,7 +30,7 @@ HOMEPAGE="http://www.tvdr.de/"
 SRC_URI="ftp://ftp.tvdr.de/vdr/${MY_P}.tar.bz2
 	http://dev.gentoo.org/~hd_brummy/distfiles/${EXT_P}.patch.bz2"
 
-KEYWORDS="~arm ~amd64 ~ppc ~x86"
+KEYWORDS="~arm amd64 ~ppc x86"
 SLOT="0"
 LICENSE="GPL-2"
 

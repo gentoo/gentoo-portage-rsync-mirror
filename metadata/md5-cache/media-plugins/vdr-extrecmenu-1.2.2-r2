@@ -3,10 +3,10 @@ DEPEND=>=media-video/vdr-1.6.0 >=media-tv/gentoo-vdr-scripts-0.4.2 virtual/linux
 DESCRIPTION=Video Disk Recorder - Extended recordings menu Plugin
 EAPI=5
 HOMEPAGE=http://projects.vdr-developer.org/projects/show/plg-extrecmenu
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=media-video/vdr-1.6.0 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=mirror://vdr-developerorg/936/vdr-extrecmenu-1.2.2.tgz mirror://gentoo/dvdarchive-2.3-beta.sh.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin-2	47c67847aaf9886da4f952898e277b6d
-_md5_=736b3dfb943f449466a3ba4adc96bbd9
+_md5_=f10edd7b4c55ae19c12203c97e121ca2
