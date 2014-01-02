@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.8.3.ebuild,v 1.2 2014/01/01 09:40:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/rake-compiler-0.8.3.ebuild,v 1.3 2014/01/02 07:12:21 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 jruby"
+USE_RUBY="ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_RECIPE_TEST="none"
 

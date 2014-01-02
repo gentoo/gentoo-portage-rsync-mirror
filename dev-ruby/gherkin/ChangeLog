@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.54 2014/01/01 14:12:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.56 2014/01/02 07:19:18 graaff Exp $
+
+  02 Jan 2014; Hans de Graaff <graaff@gentoo.org> gherkin-2.11.6.ebuild:
+  Add alpha keyword that did not get included in a version bump.
+
+  02 Jan 2014; Hans de Graaff <graaff@gentoo.org> gherkin-2.11.6.ebuild,
+  gherkin-2.12.0.ebuild:
+  Add back ruby18, dependencies still support this. Drop deprecated ree18.
 
   01 Jan 2014; Patrick Lauer <patrick@gentoo.org> gherkin-2.11.6.ebuild,
   gherkin-2.12.0.ebuild:
