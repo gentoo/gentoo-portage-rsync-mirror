@@ -13,13 +13,17 @@
 	<use>
 		<flag name='adl'>Enable support for controlling fans and overclocking on AMD cards with AMD Display Library</flag>
 		<flag name='avalon'>Enable support for mining with Avalon ASIC modules</flag>
+		<flag name='bifury'>Enable support for mining with Bi*fury USB sticks</flag>
 		<flag name='bitforce'>Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs</flag>
 		<flag name='bfsb'>Enable support for mining on BFSB host Raspberry Pi</flag>
 		<flag name='bigpic'>Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)</flag>
 		<flag name='bitfury'>Enable support for mining with 55nm Bitfury-based devices</flag>
 		<flag name='cpumining'>Enable support for mining with CPUs</flag>
 		<flag name='hashbuster'>Enable support for mining with HashBuster nano boards</flag>
+		<flag name='hashbuster2'>Enable support for mining with HashBuster micro boards</flag>
 		<flag name='icarus'>Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)</flag>
+		<flag name='klondike'>Enable support for mining with Klondike USB miners</flag>
+		<flag name='libusb'>Use libusb</flag>
 		<flag name='littlefury'>Enable support for mining with LittleFury USB sticks</flag>
 		<flag name='metabank'>Enable support for mining on Metabank host Raspberry Pi</flag>
 		<flag name='modminer'>Enable support for mining with ModMiner FPGAs</flag>
@@ -32,6 +36,7 @@
 		<flag name='scrypt'>Enable support for scrypt mining algorithm</flag>
 		<flag name='sse2_4way'>Enable support for CPU SSE2 4way mining algorithm</flag>
 		<flag name='sse4'>Enable support for CPU SSE4 mining algorithm</flag>
+		<flag name='twinfury'>Enable support for mining with Twinfury USB sticks</flag>
 		<flag name='x6500'>Enable support for mining with X6500 FPGAs</flag>
 		<flag name='ztex'>Enable support for mining with Ztex FPGAs</flag>
 	</use>

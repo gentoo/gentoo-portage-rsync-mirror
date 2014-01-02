@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bitcoin-qt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.77 2013/10/22 16:35:24 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.78 2014/01/01 23:56:16 blueness Exp $
+
+*bitcoin-qt-0.8.6 (01 Jan 2014)
+
+  01 Jan 2014; Anthony G. Basile <blueness@gentoo.org> +bitcoin-qt-0.8.6.ebuild:
+  Version bump
 
   22 Oct 2013; Anthony G. Basile <blueness@gentoo.org>
   -files/0.5.0.5+bip16-eligius_sendfee.patch, -files/0.8.0-sys_leveldb.patch:

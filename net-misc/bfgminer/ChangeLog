@@ -1,6 +1,30 @@
 # ChangeLog for net-misc/bfgminer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.51 2013/11/07 17:49:02 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.52 2014/01/01 23:46:40 blueness Exp $
+
+*bfgminer-3.5.4 (01 Jan 2014)
+*bfgminer-3.8.1 (01 Jan 2014)
+*bfgminer-3.2.7 (01 Jan 2014)
+*bfgminer-3.5.5 (01 Jan 2014)
+*bfgminer-3.2.9 (01 Jan 2014)
+*bfgminer-3.9.0 (01 Jan 2014)
+*bfgminer-3.2.8 (01 Jan 2014)
+*bfgminer-3.5.6 (01 Jan 2014)
+*bfgminer-3.8.0 (01 Jan 2014)
+
+  01 Jan 2014; Anthony G. Basile <blueness@gentoo.org> +bfgminer-3.2.7.ebuild,
+  +bfgminer-3.2.8.ebuild, +bfgminer-3.2.9.ebuild, +bfgminer-3.5.4.ebuild,
+  +bfgminer-3.5.5.ebuild, +bfgminer-3.5.6.ebuild, +bfgminer-3.8.0.ebuild,
+  +bfgminer-3.8.1.ebuild, +bfgminer-3.9.0.ebuild, -bfgminer-2.10.14.ebuild,
+  -bfgminer-3.0.10.ebuild, -bfgminer-3.0.8.ebuild, -bfgminer-3.0.9.ebuild,
+  -bfgminer-3.2.1-r1.ebuild, -bfgminer-3.2.2-r1.ebuild,
+  -bfgminer-3.2.3-r1.ebuild, -bfgminer-3.2.4.ebuild, -bfgminer-3.2.5.ebuild,
+  -bfgminer-3.4.0-r1.ebuild, -bfgminer-3.5.0.ebuild, -bfgminer-3.5.1.ebuild,
+  -files/3.1.0-Bugfix-opencl-Add-missing-include-for-fpgautils.h-ne.patch,
+  -files/3.1.0-Bugfix-opencl-Build-fpgautils-even-if-OpenCL-is-the-.patch,
+  -files/Bugfix-Fix-building-without-OpenCL-support.patch,
+  bfgminer-2.5.0.ebuild, metadata.xml:
+  Version bumps, remove older, bring in line with bitcoin overlay
 
 *bfgminer-3.3.0-r2 (07 Nov 2013)
 *bfgminer-3.2.1-r1 (07 Nov 2013)

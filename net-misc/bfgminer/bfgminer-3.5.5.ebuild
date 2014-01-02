@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.4.0-r1.ebuild,v 1.1 2013/11/07 17:49:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.5.5.ebuild,v 1.1 2014/01/01 23:46:40 blueness Exp $
 
 EAPI="4"
 
@@ -18,12 +18,13 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 #KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
 # TODO: knc (needs i2c-tools header)
-IUSE="+adl avalon bitforce bfsb bigpic bitfury cpumining examples hardened icarus littlefury lm_sensors metabank modminer nanofury ncurses +opencl proxy proxy_getwork proxy_stratum scrypt +udev unicode x6500 ztex"
+IUSE="+adl avalon bitforce bfsb bigpic bitfury cpumining examples hardened hashbuster icarus littlefury lm_sensors metabank modminer nanofury ncurses +opencl proxy proxy_getwork proxy_stratum scrypt +udev unicode x6500 ztex"
 REQUIRED_USE="
 	|| ( avalon bitforce cpumining icarus modminer opencl proxy x6500 ztex )
 	adl? ( opencl )
 	bfsb? ( bitfury )
 	bigpic? ( bitfury )
+	hashbuster? ( bitfury )
 	littlefury? ( bitfury )
 	lm_sensors? ( opencl )
 	metabank? ( bitfury )
@@ -44,6 +45,9 @@ DEPEND="
 	net-libs/libblkmaker
 	udev? (
 		virtual/udev
+	)
+	hashbuster? (
+		dev-libs/hidapi
 	)
 	lm_sensors? (
 		sys-apps/lm_sensors
@@ -108,6 +112,7 @@ src_configure() {
 		$(use_enable bigpic) \
 		$(use_enable bitfury) \
 		$(use_enable cpumining) \
+		$(use_enable hashbuster) \
 		$(use_enable icarus) \
 		$(use_enable littlefury) \
 		$(use_enable metabank) \

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.2.4.ebuild,v 1.1 2013/11/07 17:49:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/bfgminer-3.2.7.ebuild,v 1.1 2014/01/01 23:46:40 blueness Exp $
 
 EAPI="4"
 
@@ -12,7 +12,10 @@ SRC_URI="http://luke.dashjr.org/programs/bitcoin/files/${PN}/${PV}/${P}.tbz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+
+# Waiting for dev-libs/hidapi to be keyworded
+#KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~x86"
 
 IUSE="+adl avalon bitforce cpumining examples hardened icarus lm_sensors modminer ncurses +opencl proxy scrypt +udev unicode x6500 ztex"
 REQUIRED_USE="

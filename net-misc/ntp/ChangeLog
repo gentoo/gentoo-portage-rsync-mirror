@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/ntp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.202 2013/12/24 11:01:52 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.203 2014/01/01 23:59:55 robbat2 Exp $
+
+*ntp-4.2.6_p5-r10 (01 Jan 2014)
+
+  01 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> +ntp-4.2.6_p5-r10.ebuild,
+  files/ntp.conf:
+  Secure default configuration (approved by NTP upstream per IRC): by default
+  deny all non-time queries so that monlist-based NTP reflection attacks are
+  blocked; Rate-limit queries and issue KoD for limit-exceeded; Ensure IPv6
+  localhost is allowed as it is used by default.
 
   24 Dec 2013; Mike Frysinger <vapier@gentoo.org> files/ntp-client.confd,
   files/ntp-client.rc:

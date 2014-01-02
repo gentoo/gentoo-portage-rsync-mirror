@@ -5105,12 +5105,16 @@ net-misc/batman-adv:nc - B.A.T.M.A.N. network coding
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
 net-misc/bfgminer:avalon - Enable support for mining with Avalon ASIC modules
 net-misc/bfgminer:bfsb - Enable support for mining on BFSB host Raspberry Pi
+net-misc/bfgminer:bifury - Enable support for mining with Bi*fury USB sticks
 net-misc/bfgminer:bigpic - Enable support for mining with Big Picture Mining USB sticks (Red/BlueFury, BF1, etc)
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
 net-misc/bfgminer:bitfury - Enable support for mining with 55nm Bitfury-based devices
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
 net-misc/bfgminer:hashbuster - Enable support for mining with HashBuster nano boards
+net-misc/bfgminer:hashbuster2 - Enable support for mining with HashBuster micro boards
 net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)
+net-misc/bfgminer:klondike - Enable support for mining with Klondike USB miners
+net-misc/bfgminer:libusb - Use libusb
 net-misc/bfgminer:littlefury - Enable support for mining with LittleFury USB sticks
 net-misc/bfgminer:metabank - Enable support for mining on Metabank host Raspberry Pi
 net-misc/bfgminer:modminer - Enable support for mining with ModMiner FPGAs
@@ -5123,6 +5127,7 @@ net-misc/bfgminer:proxy_stratum - Enable proxy support for stratum protocol
 net-misc/bfgminer:scrypt - Enable support for scrypt mining algorithm
 net-misc/bfgminer:sse2_4way - Enable support for CPU SSE2 4way mining algorithm
 net-misc/bfgminer:sse4 - Enable support for CPU SSE4 mining algorithm
+net-misc/bfgminer:twinfury - Enable support for mining with Twinfury USB sticks
 net-misc/bfgminer:x6500 - Enable support for mining with X6500 FPGAs
 net-misc/bfgminer:ztex - Enable support for mining with Ztex FPGAs
 net-misc/cfengine:html - Install HTML documentation
