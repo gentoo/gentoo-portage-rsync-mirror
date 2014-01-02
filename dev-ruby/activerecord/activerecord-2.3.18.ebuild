@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.18.ebuild,v 1.6 2014/01/01 19:11:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-2.3.18.ebuild,v 1.7 2014/01/02 07:59:23 graaff Exp $
 
 EAPI=2
-USE_RUBY="jruby"
+USE_RUBY="ruby18 jruby"
 
 # this is not null so that the dependencies will actually be filled
 RUBY_FAKEGEM_TASK_TEST="none"

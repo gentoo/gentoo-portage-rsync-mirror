@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.73 2014/01/01 14:05:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.74 2014/01/02 07:45:09 graaff Exp $
+
+  02 Jan 2014; Hans de Graaff <graaff@gentoo.org> bluecloth-2.2.0.ebuild,
+  bluecloth-2.2.0-r1.ebuild:
+  Restore ruby18. Drop ree18.
 
   01 Jan 2014; Patrick Lauer <patrick@gentoo.org> bluecloth-2.2.0-r1.ebuild,
   bluecloth-2.2.0.ebuild:

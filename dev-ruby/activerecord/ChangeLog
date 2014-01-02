@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.252 2014/01/01 19:11:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.253 2014/01/02 07:59:23 graaff Exp $
+
+  02 Jan 2014; Hans de Graaff <graaff@gentoo.org> activerecord-2.3.18.ebuild,
+  activerecord-3.2.16.ebuild:
+  Restore ruby18.
 
   01 Jan 2014; Patrick Lauer <patrick@gentoo.org> activerecord-2.3.18.ebuild,
   activerecord-3.2.16.ebuild:

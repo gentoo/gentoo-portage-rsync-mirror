@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/bin86
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.29 2013/12/09 23:54:35 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/ChangeLog,v 1.30 2014/01/02 07:37:38 polynomial-c Exp $
+
+*bin86-0.16.20-r2 (02 Jan 2014)
+
+  02 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -bin86-0.16.20-r1.ebuild,
+  +bin86-0.16.20-r2.ebuild:
+  Revbump to add upstream fix for lilo build breakage (bug #491828).
 
   09 Dec 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix gpg signing of manifest
