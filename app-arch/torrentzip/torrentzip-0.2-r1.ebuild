@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/torrentzip-0.2-r1.ebuild,v 1.3 2009/10/12 16:51:50 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/torrentzip-0.2-r1.ebuild,v 1.4 2014/01/02 14:28:24 tomwij Exp $
 
 inherit versionator eutils autotools
 
-DESCRIPTION="archiving program that uses standard values when creating zips to create identical files over multiple systems with the ability to create a torrentzip format from a zip file"
+DESCRIPTION="Archiver that creates standard zips to create identical files over multiple systems."
 HOMEPAGE="https://sourceforge.net/projects/trrntzip"
 
 MY_PN=trrntzip
@@ -18,6 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND="sys-libs/zlib"
+RDEPEND=""
 
 S=${WORKDIR}/trrntzip
 

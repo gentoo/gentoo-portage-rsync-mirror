@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/torrentzip
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/ChangeLog,v 1.4 2009/10/12 16:51:50 halcy0n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/ChangeLog,v 1.5 2014/01/02 14:28:24 tomwij Exp $
+
+  02 Jan 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml,
+  torrentzip-0.2-r1.ebuild:
+  Shortened DESCRIPTION and put the extra details in the longdescription tag of
+  metadata.xml. Added explicit RDEPEND="".
 
   12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> torrentzip-0.2-r1.ebuild:
   QA fixes; unquoted variables
@@ -21,4 +26,3 @@
   +torrentzip-0.2.ebuild:
   Initial import. Thanks to Avuton Olrich <avuton@gmail.com> and Timothy
   Redaelli <drizzt@gufi.org> for this package, #91493.
-
