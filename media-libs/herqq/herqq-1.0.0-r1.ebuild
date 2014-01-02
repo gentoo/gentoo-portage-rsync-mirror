@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/herqq-1.0.0-r1.ebuild,v 1.8 2013/03/31 16:58:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/herqq-1.0.0-r1.ebuild,v 1.9 2014/01/02 18:46:17 pinkbyte Exp $
 
 EAPI=4
 
@@ -20,6 +20,7 @@ RDEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtxmlpatterns:4
+	!media-libs/hupnp-ng
 "
 DEPEND="${RDEPEND}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/herqq
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.12 2013/03/31 16:58:33 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.13 2014/01/02 18:46:17 pinkbyte Exp $
+
+  02 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> herqq-1.0.0-r1.ebuild:
+  Add blocker for media-libs/hupnp-ng, which is fork of this library
 
   31 Mar 2013; Agostino Sarubbo <ago@gentoo.org> herqq-1.0.0-r1.ebuild:
   Stable for x86, wrt bug #462890
