@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WWW-RobotRules
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-RobotRules/ChangeLog,v 1.23 2014/01/01 16:08:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-RobotRules/ChangeLog,v 1.24 2014/01/02 12:56:42 zlogene Exp $
+
+  02 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  WWW-RobotRules-6.10.0-r1.ebuild:
+  alpha stable wrt bug #495508
 
   01 Jan 2014; Jeroen Roovers <jer@gentoo.org> WWW-RobotRules-6.10.0-r1.ebuild:
   Stable for HPPA (bug #495508).

@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/vdr-ttxtsubs-0.3.0.ebuild,v 1.1 2013/03/31 16:23:59 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ttxtsubs/vdr-ttxtsubs-0.3.0.ebuild,v 1.2 2014/01/02 12:52:32 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit vdr-plugin-2
 
@@ -12,7 +12,7 @@ DESCRIPTION="VDR Plugin: displaying, recording and replaying teletext based subt
 HOMEPAGE="http://projects.vdr-developer.org/projects/show/plg-ttxtsubs"
 SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
