@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication dev-qt/qtsql:4[sqlite] dbus? ( dev-qt/qtdbus:4 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication[X(+)] dev-qt/qtsql:4[sqlite] dbus? ( dev-qt/qtdbus:4 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Qt4 GUI configuration tool for Wine
 EAPI=5
 HOMEPAGE=http://q4wine.brezblock.org.ua/
 IUSE=+dbus debug +icoutils +wineappdb linguas_af linguas_cs linguas_de linguas_en linguas_es linguas_fa linguas_he linguas_it linguas_ru linguas_uk linguas_pl linguas_pt
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
-RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication dev-qt/qtsql:4[sqlite] dbus? ( dev-qt/qtdbus:4 ) app-admin/sudo app-emulation/wine >=sys-apps/which-2.19 sys-fs/fuseiso icoutils? ( >=media-gfx/icoutils-0.26.0 )
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication[X(+)] dev-qt/qtsql:4[sqlite] dbus? ( dev-qt/qtdbus:4 ) app-admin/sudo app-emulation/wine >=sys-apps/which-2.19 sys-fs/fuseiso icoutils? ( >=media-gfx/icoutils-0.26.0 )
 SLOT=0
 SRC_URI=mirror://sourceforge/q4wine/q4wine/q4wine%201.1-r2/q4wine-1.1-r2.tar.bz2
 _eclasses_=cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=db7f5941e180ac325b5c42a951a7ed07
+_md5_=9371a95b60db3371e11424e2c10de1ec

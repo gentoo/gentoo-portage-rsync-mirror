@@ -1,10 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-1.1_p2-r1.ebuild,v 1.1 2013/12/28 00:07:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-1.1_p2-r1.ebuild,v 1.2 2014/01/02 20:13:14 hwoarang Exp $
 
 EAPI=5
 
 PLOCALES="af cs de en es fa he it ru uk pl pt"
+PLOCALE_BACKUP="en_US"
 
 inherit cmake-utils l10n
 
@@ -25,7 +26,7 @@ IUSE="+dbus debug +icoutils +wineappdb"
 DEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qtsingleapplication
+	dev-qt/qtsingleapplication[X(+)]
 	dev-qt/qtsql:4[sqlite]
 	dbus? ( dev-qt/qtdbus:4 )
 "

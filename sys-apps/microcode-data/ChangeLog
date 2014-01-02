@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/microcode-data
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.25 2013/09/14 16:22:58 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-data/ChangeLog,v 1.26 2014/01/02 20:23:20 hwoarang Exp $
+
+  02 Jan 2014; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  microcode-data-20130222.ebuild, microcode-data-20130906.ebuild:
+  Remove dead URL from 2013* ebuilds. Bug #496794
 
 *microcode-data-20130906 (14 Sep 2013)
 
