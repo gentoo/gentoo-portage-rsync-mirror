@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>graphics</herd>
+	<herd>chromium</herd>
 	<use>
 		<flag name='experimental'>Build with -DWEBP_EXPERIMENTAL_FEATURES</flag>
 		<flag name='swap-16bit-csp'>Enable byte swapping for 16 bit colorspace</flag>
