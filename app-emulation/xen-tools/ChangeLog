@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.210 2013/12/22 12:01:08 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.211 2014/01/02 04:58:54 idella4 Exp $
+
+  02 Jan 2014; Ian Delaney <idella4@gentoo.org> files/xend.initd-r1,
+  files/xend.initd-r2:
+  Remove un-needed var 'opts' from xend init scripts noted by mva
 
   22 Dec 2013; Ian Delaney <idella4@gentoo.org> xen-tools-4.3.0-r3.ebuild,
   xen-tools-4.3.1-r3.ebuild:
