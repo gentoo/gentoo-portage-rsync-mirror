@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9107.516.ebuild,v 1.2 2012/06/01 01:55:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9107.516.ebuild,v 1.3 2014/01/02 00:06:44 robbat2 Exp $
 
 EAPI=2
 inherit user
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.distributed.net"
 SRC_URI_sparc="sparc? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-sparc-v7.tar.gz )"
 SRC_URI="${SRC_URI_amd64} ${SRC_URI_ppc} ${SRC_URI_x86} ${SRC_URI_sparc}"
 
-LICENSE="distributed.net"
+LICENSE="distributed.net GPL-2"
 SLOT="0"
 KEYWORDS="~sparc" # x86,amd64,ppc not available for this version
 IUSE=""

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9015.504.ebuild,v 1.5 2012/06/01 01:55:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9015.504.ebuild,v 1.6 2014/01/02 00:06:44 robbat2 Exp $
 
 inherit user versionator linux-info
 
@@ -11,7 +11,7 @@ DESCRIPTION="distributed.net client"
 HOMEPAGE="http://www.distributed.net"
 SRC_URI="http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-x86-elf-uclibc.tar.gz"
 
-LICENSE="distributed.net"
+LICENSE="distributed.net GPL-2"
 SLOT="0"
 KEYWORDS="-* x86"
 RESTRICT="mirror"
