@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/iw
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.70 2013/10/13 14:42:13 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.71 2014/01/01 23:16:54 radhermit Exp $
+
+*iw-3.13 (01 Jan 2014)
+
+  01 Jan 2014; Tim Harder <radhermit@gentoo.org> +iw-3.13.ebuild:
+  Version bump.
 
 *iw-3.11 (13 Oct 2013)
 
