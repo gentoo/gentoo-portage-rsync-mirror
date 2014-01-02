@@ -4,11 +4,11 @@ DESCRIPTION=VDR Plugin: Client/Server and http streaming plugin
 EAPI=5
 HOMEPAGE=http://projects.vdr-developer.org/projects/plg-streamdev
 IUSE=client +server
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=media-video/vdr-1.7.25 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 REQUIRED_USE=|| ( client server )
 SLOT=0
 SRC_URI=mirror://vdr-developerorg/969/vdr-streamdev-0.6.0.tgz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	vdr-plugin-2	47c67847aaf9886da4f952898e277b6d
-_md5_=6c68ec5192028e73cb4654e0f5c0620e
+_md5_=a2d9be5566b8cac35c4be8634dea81c1
