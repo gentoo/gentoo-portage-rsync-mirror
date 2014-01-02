@@ -1,6 +1,53 @@
 # ChangeLog for net-mail/notmuch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.83 2013/09/22 06:51:11 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.85 2014/01/02 19:48:30 aidecoe Exp $
+
+  02 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.12.ebuild,
+  -notmuch-0.13.1.ebuild, -notmuch-0.14-r1.ebuild:
+  Removed old versions which don't pass tests anymore.
+
+*notmuch-0.17 (02 Jan 2014)
+
+  02 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +notmuch-0.17.ebuild:
+  Version bump.
+
+  NEWS
+  ~~~~
+  (Extracted headlines from NEWS file. See it for details.)
+
+  - Incompatible change in SHA1 computation for big-endian architectures.
+
+  Command-Line Interface
+  ----------------------
+
+  - New options to better support handling duplicate messages
+  - Improved `notmuch new` performance for unchanged folders
+  - `notmuch reply --format=text` RFC 2047-encodes headers
+  - `notmuch compact` command
+
+  Emacs Interface
+  ---------------
+
+  - `notmuch-tree` (formerly `notmuch-pick`) has been added to mainline
+  - Tagging threads in search is now race-free
+  - `notmuch-hello` refreshes when switching to the buffer
+  - Specific mini-buffer prompts for tagging operations
+  - Built-in help improvements
+  - Quote replies as they are displayed in show view
+  - Fixed inconsistent use of configured search order
+  - Common keymap for notmuch-wide bindings
+  - The `notmuch-tag` function now requires a list of tag changes
+  - Fixed `notmuch-reply` putting reply in primary selection
+  - Fixed `notmuch-show` invisible part handling
+  - Fixed `notmuch-show` attachment viewers and stderr
+  - Fixed `notmuch-mua-reply` point placement when signature involved
+
+  Vim Interface
+  -------------
+
+  - Composing new messages in the Vim interface (as opposed reply to existing
+  messages)
+  - Support for going straight to a search
 
   22 Sep 2013; Agostino Sarubbo <ago@gentoo.org> notmuch-0.16-r1.ebuild:
   Stable for x86, wrt bug #484926

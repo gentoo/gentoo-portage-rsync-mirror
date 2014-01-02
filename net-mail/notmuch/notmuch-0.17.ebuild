@@ -1,14 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.13.1.ebuild,v 1.5 2013/09/14 17:26:31 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.17.ebuild,v 1.1 2014/01/02 19:43:36 aidecoe Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="python? 2:2.6 3:3.2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.[45] 3.1"
+DISTUTILS_OPTIONAL=1
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
-inherit elisp-common eutils pax-utils distutils
+inherit elisp-common eutils pax-utils distutils-r1
 
 DESCRIPTION="Thread-based e-mail indexer, supporting quick search and tagging"
 HOMEPAGE="http://notmuchmail.org/"
@@ -16,32 +15,38 @@ SRC_URI="${HOMEPAGE%/}/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
-REQUIRED_USE="test? ( crypt emacs python )"
-IUSE="bash-completion crypt debug doc emacs nmbug mutt python test vim
+KEYWORDS="~amd64 ~x86"
+REQUIRED_USE="
+	python? ( ${PYTHON_REQUIRED_USE} )
+	test? ( crypt emacs python )
+	"
+IUSE="bash-completion crypt debug doc emacs mutt nmbug python test
 	zsh-completion"
 
 CDEPEND="
 	>=dev-libs/glib-2.22
 	>=dev-libs/gmime-2.6.7
+	!=dev-libs/gmime-2.6.19
 	<dev-libs/xapian-1.3
 	sys-libs/talloc
 	debug? ( dev-util/valgrind )
 	emacs? ( >=virtual/emacs-23 )
+	python? ( ${PYTHON_DEPS} )
 	x86? ( >=dev-libs/xapian-1.2.7-r2 )
-	vim? ( || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 ) )
 	"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
-	doc? ( python? ( dev-python/sphinx ) )
-	test? ( app-misc/dtach sys-devel/gdb )
+	doc? ( python? ( dev-python/sphinx[${PYTHON_USEDEP}] ) )
+	test? ( app-misc/dtach || ( >=app-editors/emacs-23[libxml2]
+		>=app-editors/emacs-vcs-23[libxml2] ) sys-devel/gdb )
 	"
 RDEPEND="${CDEPEND}
 	crypt? ( app-crypt/gnupg )
 	nmbug? ( dev-vcs/git virtual/perl-File-Temp virtual/perl-PodParser )
-	mutt? ( dev-perl/Mail-Box dev-perl/MailTools dev-perl/String-ShellQuote
-		dev-perl/Term-ReadLine-Gnu virtual/perl-File-Path
-		virtual/perl-Getopt-Long virtual/perl-PodParser
+	mutt? ( dev-perl/File-Which dev-perl/Mail-Box dev-perl/MailTools
+		dev-perl/String-ShellQuote dev-perl/Term-ReadLine-Gnu
+		virtual/perl-Digest-SHA virtual/perl-File-Path virtual/perl-Getopt-Long
+		virtual/perl-PodParser
 		)
 	zsh-completion? ( app-shells/zsh )
 	"
@@ -51,25 +56,30 @@ SITEFILE="50${PN}-gentoo.el"
 MY_LD_LIBRARY_PATH="${WORKDIR}/${P}/lib"
 
 bindings() {
+	local ret=0
+
 	if use $1; then
 		pushd bindings/$1 || die
 		shift
-		$@
+		"$@"
+		ret=$?
 		popd || die
 	fi
+
+	return $ret
 }
 
 pkg_setup() {
 	if use emacs; then
 		elisp-need-emacs 23 || die "Emacs version too low"
 	fi
-	use python && python_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-0001-test-exit-with-nonzero-value-when-not-.patch"
 	default
-	bindings python distutils_src_prepare
+	bindings python distutils-r1_src_prepare
+	bindings python mv README README-python || die
+	mv contrib/notmuch-mutt/README contrib/notmuch-mutt/README-mutt || die
 }
 
 src_configure() {
@@ -88,18 +98,16 @@ src_configure() {
 
 src_compile() {
 	default
-	bindings python distutils_src_compile
+	bindings python distutils-r1_src_compile
 
 	if use mutt; then
 		pushd contrib/notmuch-mutt || die
-		mv README README-mutt || die
 		emake notmuch-mutt.1
 		popd || die
 	fi
 
 	if use doc; then
 		pydocs() {
-			mv README README-python || die
 			pushd docs || die
 			emake html
 			mv html ../python || die
@@ -123,7 +131,7 @@ src_install() {
 	fi
 
 	if use nmbug; then
-		dobin contrib/nmbug
+		dobin devel/nmbug/nmbug
 	fi
 
 	if use mutt; then
@@ -137,21 +145,12 @@ src_install() {
 		popd || die
 	fi
 
-	if use vim; then
-		insinto /usr/share/vim/vimfiles
-		doins -r vim/plugin vim/syntax
-	fi
-
-	DOCS="" bindings python distutils_src_install
-
-	if use doc; then
-		bindings python dohtml -r python
-	fi
+	DOCS="" bindings python distutils-r1_src_install
+	use doc && bindings python dohtml -r python
 }
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	use python && distutils_pkg_postinst
 
 	if use mutt && [[ ! ${NOTMUCH_MUTT_RC_EXISTS} ]]; then
 		elog "To enable notmuch support in mutt, add the following line into"
@@ -163,5 +162,4 @@ pkg_postinst() {
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
-	use python && distutils_pkg_postrm
 }
