@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/ncftp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.141 2013/04/14 14:55:08 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.142 2014/01/02 13:36:35 jer Exp $
+
+*ncftp-3.2.5-r3 (02 Jan 2014)
+
+  02 Jan 2014; Jeroen Roovers <jer@gentoo.org> +ncftp-3.2.5-r3.ebuild:
+  Fix building against sys-libs/ncurses[tinfo].
 
   14 Apr 2013; Jeroen Roovers <jer@gentoo.org> -ncftp-3.2.3.ebuild,
   -ncftp-3.2.4.1.ebuild, -ncftp-3.2.5-r1.ebuild:
