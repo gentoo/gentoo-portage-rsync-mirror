@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.181 2014/01/01 21:30:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.182 2014/01/02 06:59:56 graaff Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -348,10 +348,3 @@ qt5
 # Enabling this you will get a fully unsupported Gnome setup that
 # could suffer unexpected problem, don't expect support for it then.
 openrc-force
-
-# Patrick Lauer <patrick@gentoo.org> (01 Jan 2014)
-# Removal of ruby18 targets is now cascading out as deps and deps of deps
-# need to be fixed.
-# Masking the whole useflag so that it can be properly cleaned without 
-# transient breakage
-ruby_targets_ruby18
