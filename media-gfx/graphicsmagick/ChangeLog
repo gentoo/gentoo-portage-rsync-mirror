@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/graphicsmagick
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.119 2013/08/03 07:47:35 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.120 2014/01/02 09:01:49 radhermit Exp $
+
+*graphicsmagick-1.3.19 (02 Jan 2014)
+
+  02 Jan 2014; Tim Harder <radhermit@gentoo.org> +graphicsmagick-1.3.19.ebuild,
+  +files/graphicsmagick-1.3.19-flags.patch,
+  +files/graphicsmagick-1.3.19-freetype.patch,
+  +files/graphicsmagick-1.3.19-perl.patch, metadata.xml:
+  Version bump. Add webp use flag, fix perl bindings build issue (bug #456180,
+  patch by Tiziano Müller), and fix generated config file flags (bug #479560).
 
   03 Aug 2013; Agostino Sarubbo <ago@gentoo.org> graphicsmagick-1.3.18.ebuild:
   Stable for sparc, wrt bug #477606
