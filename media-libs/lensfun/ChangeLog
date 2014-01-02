@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lensfun
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.59 2013/12/30 09:12:23 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.60 2014/01/02 10:41:54 maekke Exp $
+
+  02 Jan 2014; Markus Meier <maekke@gentoo.org> lensfun-0.2.8.ebuild,
+  +files/lensfun-0.2.8-x32.patch:
+  fix building on x32 by Torsten Bronger, bug #466220
 
   30 Dec 2013; Michał Górny <mgorny@gentoo.org> lensfun-0.2.7.ebuild,
   lensfun-0.2.8.ebuild:
