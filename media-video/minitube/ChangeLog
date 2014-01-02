@@ -1,6 +1,11 @@
 # ChangeLog for media-video/minitube
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.93 2013/12/22 10:48:45 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.94 2014/01/02 20:46:36 hwoarang Exp $
+
+  02 Jan 2014; Markos Chandras <hwoarang@gentoo.org> minitube-2.1.3.ebuild,
+  minitube-2.1.5.ebuild:
+  Use PLOCALE_BACKUP to default to the English locale if user hasn't selected
+  one
 
 *minitube-2.1.5 (22 Dec 2013)
 
