@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8481 2014/01/02 22:16:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8483 2014/01/02 22:49:08 williamh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jan 2014; William Hubbs <williamh@gentoo.org>
+  prefix/darwin/macos/package.mask, prefix/package.mask,
+  prefix/sunos/solaris/package.mask:
+  qa: remove obsolete masks
+
+  02 Jan 2014; William Hubbs <williamh@gentoo.org>
+  features/64bit-native/package.mask:
+  qa: remove obsolete masks
 
   02 Jan 2014; William Hubbs <williamh@gentoo.org> package.mask:
   qa: remove obsolete masks

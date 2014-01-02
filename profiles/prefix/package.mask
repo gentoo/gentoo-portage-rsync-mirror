@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.118 2013/09/05 18:09:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.119 2014/01/02 22:49:08 williamh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -59,7 +59,6 @@ www-apps/trac
 # problem.  Let's just wait for the moment.
 ~sys-devel/llvm-2.9
 ~sys-devel/clang-2.9
-~sys-devel/llvm-gcc-2.9
 
 # Fabian Groffen <grobian@gentoo.org> (03 Feb 2011)
 # Diego's experimental flex for fixing from autoconf problem, breaks
