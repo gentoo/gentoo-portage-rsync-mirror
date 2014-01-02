@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-el
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-el/ChangeLog,v 1.21 2013/03/17 15:49:24 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-el/ChangeLog,v 1.22 2014/01/02 18:08:20 tampakrap Exp $
+
+  02 Jan 2014; Theo Chatzimichos <tampakrap@gentoo.org> metadata.xml:
+  Remove myself from maintainers
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

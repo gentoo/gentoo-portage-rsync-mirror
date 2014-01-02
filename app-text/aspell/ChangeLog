@@ -1,6 +1,13 @@
 # ChangeLog for app-text/aspell
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.141 2012/05/17 20:47:36 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.143 2014/01/02 18:06:54 vapier Exp $
+
+  02 Jan 2014; Mike Frysinger <vapier@gentoo.org> aspell-0.60.6.1.ebuild:
+  Fix random parallel install errors when relinking #438026 by Nathan Phillip
+  Brink.
+
+  02 Jan 2014; Mike Frysinger <vapier@gentoo.org> aspell-0.60.6.1.ebuild:
+  Use -delete with find rather than -exec rm.
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-0.60.6.1.ebuild:
   keyword ~amd64-fbsd

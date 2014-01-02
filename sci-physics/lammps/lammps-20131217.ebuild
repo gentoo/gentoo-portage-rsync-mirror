@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20130526.ebuild,v 1.1 2013/06/26 23:53:11 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20131217.ebuild,v 1.1 2014/01/02 18:06:59 nicolasbock Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ convert_month() {
 	esac
 }
 
-MY_P=${PN}-$((${PV:6:2}))$(convert_month ${PV:4:2})${PV:2:2}
+MY_P=${PN}-$((10#${PV:6:2}))$(convert_month ${PV:4:2})${PV:2:2}
 
 DESCRIPTION="Large-scale Atomic/Molecular Massively Parallel Simulator"
 HOMEPAGE="http://lammps.sandia.gov/"
@@ -72,7 +72,7 @@ lmp_emake() {
 		MPI_INC=$(usex mpi '' "-I../STUBS") \
 		MPI_PATH=$(usex mpi '' '-L../STUBS') \
 		MPI_LIB=$(usex mpi '' '-lmpi_stubs') \
- 		"$@"
+		"$@"
 }
 
 src_compile() {
@@ -93,10 +93,19 @@ src_compile() {
 
 src_install() {
 	newbin "src/lmp_serial" "lmp"
+
+	local LAMMPS_POTENTIALS="/usr/share/${PF}/potentials"
+	insinto "${LAMMPS_POTENTIALS}"
+	doins potentials/*
+	echo "LAMMPS_POTENTIALS=${LAMMPS_POTENTIALS}" > 99lammps
+	doenvd 99lammps
+
 	if use examples; then
-		insinto "/usr/share/doc/${PF}"
-		doins -r examples
+		local LAMMPS_EXAMPLES="/usr/share/${PF}/examples"
+		insinto "${LAMMPS_EXAMPLES}"
+		doins -r examples/*
 	fi
+
 	dodoc README
 	if use doc; then
 		dodoc doc/Manual.pdf

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.1.ebuild,v 1.17 2013/12/09 08:32:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.2.1.ebuild,v 1.18 2014/01/02 18:31:07 jlec Exp $
 
 EAPI=4
 
@@ -16,6 +16,7 @@ SLOT="5"
 IUSE="doc examples svg"
 
 DEPEND="
+	!>=x11-libs/qwt-6.1.0
 	dev-qt/qtgui:4
 	doc? ( !<media-libs/coin-3.1.3[doc] )
 	svg? ( dev-qt/qtsvg:4 )"

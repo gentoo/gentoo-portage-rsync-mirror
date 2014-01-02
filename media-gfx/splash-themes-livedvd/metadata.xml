@@ -9,9 +9,5 @@ A collection of Gentoo themes for splashutils.
   <email>email@missionaccomplish.com</email>
   <name>Fernando Orocu</name>
 </maintainer>
-<maintainer>
-	<email>tampakrap@gentoo.org</email>
-	<name>Theo Chatzimichos</name>
-	<description>Proxy committer</description>
-</maintainer>
+<herd>proxy-maintainers</herd>
 </pkgmetadata>
