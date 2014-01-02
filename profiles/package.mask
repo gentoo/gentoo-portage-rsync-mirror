@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15296 2014/01/02 15:53:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15297 2014/01/02 22:16:39 williamh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -152,7 +152,6 @@ dev-ruby/arrayfields
 >=gnome-base/nautilus-3.10
 >=gnome-extra/evolution-data-server-3.10
 >=gnome-extra/evolution-ews-3.10
->=gnome-extra/evolution-mapi-3.10
 >=gnome-extra/gnome-boxes-3.10
 >=gnome-extra/gnome-calculator-3.10
 >=gnome-extra/gnome-clocks-3.10
@@ -496,10 +495,6 @@ dev-java/itext:5
 # Masked for testing
 =sys-devel/bison-3*
 
-# Michael Weber <xmw@gentoo.org> (22 Jul 2013)
-# Missing _emergency image
-=sys-kernel/raspberrypi-image-3.10.1_pre-r20130719
-
 # Julian Ospald <hasufell@gentoo.org> (21 Jul 2013)
 # Mask all unfetchable versions and those with tons of random
 # bugs and segfaults (all). Don't ask for a version bump unless
@@ -584,10 +579,6 @@ dev-java/sun-jce-bin
 # use app-editors/efte instead.
 =app-editors/fte-20110708
 
-# Mike Gilbert <floppym@gentoo.org (27 May 2013)
-# Masked until reverse dependencies are tested bug 401009.
-=dev-python/imaging-2.0.0
-
 # Tim Harder <radhermit@gentoo.org> (22 May 2013)
 # masked for testing
 =media-libs/quvi-0.9*
@@ -614,14 +605,6 @@ x11-misc/pcmanfm-qt
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2013)
 # Masked to get 0.10 tested
 =net-libs/nodejs-0.11*
-
-# Ian Stakenvicius <axs@gentoo.org> (05 Apr 2013)
-# <eudev@gentoo.org>
-# masking initial tree commit of eudev-1_beta3
-# until further testing can occur to guarantee
-# there is no large end-user failures once package
-# is unmasked; should be unmasked next week
-=sys-fs/eudev-1_beta3
 
 # Mike Gilbert <floppym@gentoo.org> (04 Apr 2013)
 # Dev channel releases are only for people who are developers or want more
@@ -666,12 +649,6 @@ media-gfx/yablex
 # Masked for testing
 =dev-java/jython-2.7*
 
-# Robin H. Johnson <robbat2@gentoo.org> (04 Mar 2013)
-# MySQL 5.6 is not yet GA.
->=dev-db/mariadb-5.6
->=dev-db/mysql-5.6
->=virtual/mysql-5.6
-
 # Davide Pesavento <pesa@gentoo.org> (02 Mar 2013)
 # Depends on blender, which is masked.
 media-gfx/yafaray
@@ -680,16 +657,6 @@ media-gfx/yafaray
 # Mask experimental software
 =mail-mta/postfix-2.11*
 
-# Ian Delaney <idella4@gentoo.org> (12 Feb 2013)
-# This is a work in progress targeting an old bug
-# but followed by very keen users.  It will be either
-# abandonned or implemented down the track pending further support
-=app-emulation/xen-tools-4.2.1-r2
-
-# Ryan Hill <dirtyepic@gentoo.org> (07 Feb 2013)
-# Breaks everything (bug #456108)
-=dev-libs/openssl-1.0.1d
-
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development
 =sys-block/open-iscsi-2.0.873
@@ -697,10 +664,6 @@ media-gfx/yafaray
 # Jeroen Roovers <jer@gentoo.org> (09 Jan 2013)
 # Testing branch, unstable upstream
 >net-nntp/tin-2.1
-
-# Alexander Vershilov <qnikst@gentoo.org> (06 Jan 2013)
-# Requires >=net-fs/samba-4 (bug #450226)
-=sys-auth/sssd-1.9.4
 
 # Sergei Trofimovich <slyfox@gentoo.org> (05 Jan 2013)
 # Masked for testing. Is not compatible with cvsps-2 (bug #450424).
@@ -725,13 +688,6 @@ net-wireless/madwifi-ng
 # Tim Harder <radhermit@gentoo.org> (27 Nov 2012)
 # Masked for testing
 =media-libs/libsfml-2*
-
-# Pacho Ramos <pacho@gentoo.org> (24 Nov 2012)
-# Doesn't build with current kernels (#351225), some work is done
-# by Ubuntu users but a lot of mantainance work is still needed
-# and nobody will take care of it now (#351225#c7).
-# Looks like a proxy maintainer is working on this...
-net-dialup/hsfmodem
 
 # Robin H. Johnson <robbat2@gentoo.org> (18 Nov 2012)
 # Dead upstream, replaced by gitolite
@@ -796,11 +752,6 @@ dev-ml/ocamlduce
 # Masked for testing only beta (bug 424866)
 =sci-electronics/eagle-6.2.1_beta
 
-# Michael Weber <xmw@gentoo.org> (29 Jun 2012)
-# Masking for security reasons (bug 424025, CVE-2012-3366)
-# Users of trigger plugin, update asap.
-<app-admin/bcfg2-1.2.2-r1
-
 # Ian Stakenvicius <axs@gentoo.org> (19 Jun 2012)
 # Mask new spidermonkeys until rdeps can accept it
 # 1.8.7 will be masked indefinitely and will be removed
@@ -810,12 +761,6 @@ dev-ml/ocamlduce
 # Michael Weber <xmw@gentoo.org> (13 Jun 2012)
 # Mask beta versions for testing
 >sci-electronics/magic-8
-
-# Benda Xu <heroxbd@gentoo.org> (20 May 2012)
-# geant-4.9.5_p01 has a major class declaration change that renders
-# geant-python (g4py upstream) unable to compile
-# upstream bug http://bugzilla-geant4.kek.jp/show_bug.cgi?id=1317
-=sci-physics/geant-python-4.9.5_p01
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (20 May 2012)
 # Requires dev-scheme/guile-2.0.5 which is in lisp overlay and masked;
@@ -901,7 +846,6 @@ games-strategy/savage-bin
 # Masking the torque 2.3 series due to bug #372959.  This allows
 # sites that are ok with the vulnerability but prefer the stability
 # of 2.3.x to continue to get updates (if any).
-<sys-cluster/torque-2.4
 dev-perl/perl-PBS
 
 # Alexis Ballier <aballier@gentoo.org> (20 Aug 2011)
@@ -915,11 +859,6 @@ dev-tex/pdftex
 =dev-libs/guiloader-2.99.0
 =dev-libs/guiloader-c++-2.99.0
 =dev-util/crow-designer-2.99.0
-
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (15 July 2011)
-# Masking mariadb-5.1.55 until we have feedback about the unit tests
-# as they build for me but fail for Robin
-~dev-db/mariadb-5.1.55
 
 # Justin Lecher <jlec@gentoo.org> (27 Jun 2011)
 # Only avalable version isn't in the tree.
