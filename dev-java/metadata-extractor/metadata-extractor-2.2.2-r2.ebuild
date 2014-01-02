@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.5 2009/11/17 16:59:45 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/metadata-extractor-2.2.2-r2.ebuild,v 1.6 2014/01/02 15:22:51 tomwij Exp $
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A general metadata extraction framework. Support currently exists for Exif and Iptc metadata segments. Extraction of these segments is provided for Jpeg files"
+DESCRIPTION="Metadata extraction framework for Exif and IPTC metadata segments, extraction support for JPEG files"
 HOMEPAGE="http://www.drewnoakes.com/code/exif/"
 SRC_URI="http://www.drewnoakes.com/code/exif/metadata-extractor-${PV}-src.jar"
 LICENSE="GPL-2"

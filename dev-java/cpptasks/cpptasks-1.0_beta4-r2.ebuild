@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/cpptasks-1.0_beta4-r2.ebuild,v 1.4 2007/11/17 21:56:33 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cpptasks/cpptasks-1.0_beta4-r2.ebuild,v 1.5 2014/01/02 15:16:02 tomwij Exp $
 
 inherit java-pkg-2 java-ant-2
 
 MY_P="${PN}-${PV/_beta/b}"
-DESCRIPTION="Ant-tasks to compile various source languages and produce executables, shared libraries and static libraries"
+DESCRIPTION="Ant tasks to compile various source languages and produce executables, shared and static libraries"
 HOMEPAGE="http://ant-contrib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ant-contrib/${MY_P}.tar.gz"
 LICENSE="Apache-2.0"

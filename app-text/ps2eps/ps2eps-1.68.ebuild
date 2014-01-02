@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2eps/ps2eps-1.68.ebuild,v 1.14 2013/04/25 21:25:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2eps/ps2eps-1.68.ebuild,v 1.15 2014/01/02 15:04:45 tomwij Exp $
 
 inherit toolchain-funcs
 
-DESCRIPTION="Tool for generating Encapsulated Postscript Format (EPS,EPSF) files from one-page Postscript documents"
+DESCRIPTION="Generate Encapsulated Postscript Format (EPS,EPSF) files from one-page Postscript documents"
 HOMEPAGE="http://www.tm.uka.de/~bless/ps2eps"
 SRC_URI="http://www.tm.uka.de/~bless/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ognl-3.0.8.ebuild,v 1.2 2013/10/02 18:54:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ognl-3.0.8.ebuild,v 1.3 2014/01/02 15:07:45 tomwij Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ JAVA_PKG_IUSE="doc source"
 
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="Object-Graph Navigation Language"
+DESCRIPTION="Object-Graph Navigation Language; an expression language for getting/setting properties of objects"
 HOMEPAGE="http://www.ognl.org/"
 SRC_URI="https://github.com/jkuhnert/ognl/archive/OGNL_${PV//./_}.tar.gz
 	https://ognl.dev.java.net/source/browse/*checkout*/ognl/osbuild.xml"

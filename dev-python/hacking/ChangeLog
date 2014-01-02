@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/hacking
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hacking/ChangeLog,v 1.4 2014/01/02 03:07:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hacking/ChangeLog,v 1.5 2014/01/02 15:06:38 idella4 Exp $
+
+*hacking-0.7.2-r1 (02 Jan 2014)
+*hacking-0.8.0-r1 (02 Jan 2014)
+
+  02 Jan 2014; Ian Delaney <idella4@gentoo.org> +hacking-0.7.2-r1.ebuild,
+  +hacking-0.8.0-r1.ebuild, -hacking-0.7.2.ebuild:
+  revbumps; 0.7.2-r1; add 1 missing test dep, tidy up, both; Add py3.2 support,
+  upgrade test phase with upstream bug added for fails under py3, remove only
+  old 0.7.2 for now
 
   02 Jan 2014; Ian Delaney <idella4@gentoo.org> hacking-0.8.0.ebuild:
   correct 1 char white space

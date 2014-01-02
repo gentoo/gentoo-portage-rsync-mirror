@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ognl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.12 2013/10/02 18:54:44 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ognl/ChangeLog,v 1.14 2014/01/02 15:14:18 tomwij Exp $
+
+  02 Jan 2014; Tom Wijsman <TomWij@gentoo.org> ognl-2.6.9-r1.ebuild,
+  ognl-2.6.9-r2.ebuild, ognl-3.0.8.ebuild:
+  Shortened DESCRIPTION.
 
   02 Oct 2013; Tom Wijsman <TomWij@gentoo.org> ognl-3.0.8.ebuild:
   Fix trailing whitespace.

@@ -1,6 +1,6 @@
 DEFINED_PHASES=compile install preinst setup unpack
 DEPEND=>=virtual/jdk-1.4 app-arch/unzip dev-java/ant-core dev-java/ant-contrib >=virtual/jre-1.4 dev-java/javacc >=dev-java/javassist-3.1 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip ) >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
-DESCRIPTION=Object-Graph Navigation Language; it is an expression language for getting and setting properties of Java objects
+DESCRIPTION=Object-Graph Navigation Language; an expression language for getting/setting properties of objects
 HOMEPAGE=http://www.ognl.org/
 IUSE=elibc_FreeBSD doc source elibc_FreeBSD
 KEYWORDS=~x86 ~amd64
@@ -9,4 +9,4 @@ RDEPEND=>=virtual/jre-1.4 dev-java/javacc >=dev-java/javassist-3.1 >=dev-java/ja
 SLOT=2.6
 SRC_URI=http://www.ognl.org/2.6.9/ognl-2.6.9-dist.zip https://ognl.dev.java.net/source/browse/*checkout*/ognl/osbuild.xml
 _eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=6991185159c43d8ca6878893c93a4ed0
+_md5_=1ce5af6e78857b50fdd0ed2f088c604a

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtkdata
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtkdata/ChangeLog,v 1.1 2014/01/02 10:03:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtkdata/ChangeLog,v 1.2 2014/01/02 15:12:10 jlec Exp $
+
+  02 Jan 2014; Justin Lecher <jlec@gentoo.org> vtkdata-6.0.0.ebuild:
+  Fix installation directory
 
 *vtkdata-6.0.0 (02 Jan 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtkdata/vtkdata-6.0.0.ebuild,v 1.1 2014/01/02 10:03:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtkdata/vtkdata-6.0.0.ebuild,v 1.2 2014/01/02 15:12:10 jlec Exp $
 
 EAPI=5
 
@@ -22,6 +22,6 @@ RDEPEND="!<sci-libs/vtk-6"
 S="${WORKDIR}"/VTKDATA${PV}
 
 src_install() {
-	insinto /usr/share/${PN}/data
+	insinto /usr/share/vtk/data
 	doins -r *
 }

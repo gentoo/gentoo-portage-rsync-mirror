@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/metadata-extractor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.14 2009/11/17 16:59:45 caster Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/metadata-extractor/ChangeLog,v 1.15 2014/01/02 15:22:51 tomwij Exp $
+
+*metadata-extractor-2.2.2-r4 (02 Jan 2014)
+
+  02 Jan 2014; Tom Wijsman <TomWij@gentoo.org>
+  +metadata-extractor-2.2.2-r4.ebuild, -metadata-extractor-2.2.2-r3.ebuild,
+  metadata-extractor-2.2.2-r2.ebuild:
+  Shortened DESCRIPTION. Revision bump: EAPI 5, changed src_prepare to
+  java_prepare.
 
   17 Nov 2009; Vlastimil Babka <caster@gentoo.org>
   metadata-extractor-2.2.2-r2.ebuild:
@@ -66,4 +74,3 @@
   30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +metadata-extractor-2.2.2.ebuild:
   initial import, dependency of gallery-remote
-
