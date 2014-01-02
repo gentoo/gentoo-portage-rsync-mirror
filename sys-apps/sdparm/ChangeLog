@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sdparm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.75 2013/06/10 03:32:16 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.76 2014/01/02 16:05:35 vapier Exp $
+
+*sdparm-1.08-r1 (02 Jan 2014)
+
+  02 Jan 2014; Mike Frysinger <vapier@gentoo.org> +sdparm-1.08-r1.ebuild:
+  Fix depend on sg3_utils #479578 by Eric F. GARIOUD.
 
 *sdparm-1.08 (10 Jun 2013)
 
