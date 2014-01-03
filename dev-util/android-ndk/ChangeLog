@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/android-ndk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.10 2013/11/01 16:20:53 cardoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.11 2014/01/03 17:14:54 cardoe Exp $
+
+*android-ndk-9c (03 Jan 2014)
+
+  03 Jan 2014; Doug Goldstein <cardoe@gentoo.org> +android-ndk-9c.ebuild:
+  Version bump proxy commited for Jauhien Piatlicki <piatlicki@gmail.com>
 
 *android-ndk-9b (01 Nov 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.34 2013/12/12 23:37:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.35 2014/01/03 17:27:07 dilfridge Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -11,13 +11,6 @@
 # Bug #486076, ocaml masked to allow xen to once again
 # become a stabilisable package
 app-emulation/xen-tools ocaml
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (7 Dec 2013)
-# Too crash-prone and rotting, useflag will go away in the future
-# Added here instead of use.mask to prevent unnecessary rebuilds
-=app-office/libreoffice-4.1.3.2 kde
-=app-office/libreoffice-bin-4.1.3.2 kde
-=app-office/libreoffice-bin-debug-4.1.3.2 kde
 
 # Pacho Ramos <pacho@gentoo.org> (17 Nov 2013)
 # Still needs gnutls-3

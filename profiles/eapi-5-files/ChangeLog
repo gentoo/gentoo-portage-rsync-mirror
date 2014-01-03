@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo eapi-5-files profile directory
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.32 2013/12/12 23:37:16 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/ChangeLog,v 1.33 2014/01/03 17:27:07 dilfridge Exp $
+
+  03 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  package.use.stable.mask:
+  The buggy libreoffice version was never stabilized and is now gone.
 
   12 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   package.use.stable.mask:
