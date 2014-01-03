@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libxml2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.404 2013/12/30 05:31:08 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.405 2014/01/03 20:48:10 tetromino Exp $
+
+  03 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libxml2-2.9.1-r2.ebuild:
+  Stylistic fix: make locals local, thanks to Arfrever for noticing.
 
 *libxml2-2.9.1-r2 (30 Dec 2013)
 

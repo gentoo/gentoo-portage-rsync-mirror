@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Digest-MD4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.30 2014/01/01 16:05:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.32 2014/01/03 20:55:54 pinkbyte Exp $
+
+*Digest-MD4-1.900.0-r1 (03 Jan 2014)
+
+  03 Jan 2014; Sergey Popov <pinkbyte@gentoo.org>
+  +Digest-MD4-1.900.0-r1.ebuild:
+  Revision bump: pulls right version of DigestMD4 module
+
+  03 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> Digest-MD4-1.900.0.ebuild:
+  Stable on amd64 and x86, wrt bug #492130
 
   01 Jan 2014; Jeroen Roovers <jer@gentoo.org> Digest-MD4-1.900.0.ebuild:
   Stable for HPPA (bug #492130).
