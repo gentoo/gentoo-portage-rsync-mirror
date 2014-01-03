@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.2-r2.ebuild,v 1.2 2013/12/05 13:38:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.5.2-r3.ebuild,v 1.1 2014/01/03 10:57:11 pacho Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -104,6 +104,9 @@ src_prepare() {
 
 	# Fix libxml2 detection, bug #491782
 	epatch "${FILESDIR}"/${PN}-2.5.2-libxml2-detection{,2}.patch
+
+	# Fix Canon S100 detection, bug #496754 (fixed in 2.5.3)
+	epatch "${FILESDIR}"/${P}-canon-s100.patch
 
 	eautoreconf
 }
