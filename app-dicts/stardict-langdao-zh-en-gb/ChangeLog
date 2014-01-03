@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-langdao-zh-en-gb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.9 2009/01/23 13:27:58 pva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-langdao-zh-en-gb/ChangeLog,v 1.10 2014/01/03 11:25:33 naota Exp $
+
+  03 Jan 2014; Naohiro Aota <naota@gentoo.org>
+  stardict-langdao-zh-en-gb-2.4.2.ebuild:
+  Fix reversed language's from and to #259659
 
   23 Jan 2009; Peter Volkov <pva@gentoo.org>
   stardict-langdao-zh-en-gb-2.4.2.ebuild:
@@ -34,4 +38,3 @@
   25 Aug 2004; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
   +stardict-langdao-zh-en-gb-2.4.2.ebuild:
   Initial import. Submitted by Jackey Yang <043936y@acadiau.ca> in Bug #61322
-
