@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.278 2013/12/24 17:44:09 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.279 2014/01/02 23:58:54 tetromino Exp $
+
+  02 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-terminal-2.32.1-r1.ebuild:
+  Fix underlinking failure (bug #496804, thanks to M8R-u38wij).
 
 *gnome-terminal-3.10.2 (24 Dec 2013)
 

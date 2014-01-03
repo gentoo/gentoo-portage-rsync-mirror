@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.32.1-r1.ebuild,v 1.11 2013/04/09 16:45:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.32.1-r1.ebuild,v 1.12 2014/01/02 23:58:54 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,6 +21,7 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=x11-libs/gtk+-2.18:2
 	>=gnome-base/gconf-2.31.3
 	>=x11-libs/vte-0.26.0:0
+	x11-libs/libICE
 	x11-libs/libSM
 	gnome-base/libgnome"
 DEPEND="${RDEPEND}
@@ -32,6 +33,12 @@ DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.11"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
+
+src_prepare() {
+	# fix underlinking, bug #496804; avoid eautoreconf
+	sed -e 's/SMCLIENT_PKGS="sm"/SMCLIENT_PKGS="sm ice"/' -i configure.ac configure || die
+	gnome2_src_prepare
+}
 
 pkg_postinst() {
 	gnome2_pkg_postinst
