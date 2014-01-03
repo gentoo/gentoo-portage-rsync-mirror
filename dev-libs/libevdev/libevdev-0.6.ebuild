@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/libevdev-0.6.ebuild,v 1.1 2013/12/30 19:50:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/libevdev-0.6.ebuild,v 1.2 2014/01/03 01:25:24 mattst88 Exp $
 
 EAPI=5
 XORG_MULTILIB=yes
@@ -18,6 +18,7 @@ else
 	SRC_URI="http://www.freedesktop.org/software/${PN}/${P}.tar.xz"
 fi
 
+RESTRICT="test" # Tests need to run as root.
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~x86"
 IUSE=""
 
