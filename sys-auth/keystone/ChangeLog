@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/keystone
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.53 2013/12/22 09:07:49 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.54 2014/01/03 13:11:08 idella4 Exp $
+
+  03 Jan 2014; Ian Delaney <idella4@gentoo.org> keystone-2013.2.1.ebuild,
+  keystone-2013.2.9999.ebuild:
+  Tidy DESCRIPTION, correct SLOT entry in -2013.2 ebuilds, take out un-needed
+  mkdir in -2013.2.9999
 
   22 Dec 2013; Ian Delaney <idella4@gentoo.org> keystone-2013.2.1.ebuild:
   update dep under test?, update test phase

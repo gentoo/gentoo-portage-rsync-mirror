@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.9999.ebuild,v 1.5 2013/12/13 17:31:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.9999.ebuild,v 1.6 2014/01/03 13:11:08 idella4 Exp $
 
 EAPI=5
 
@@ -8,14 +8,13 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit git-2 distutils-r1
 
-DESCRIPTION="Keystone is the Openstack authentication, authorization, and
-service catalog written in Python."
+DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python."
 HOMEPAGE="https://launchpad.net/keystone"
 EGIT_REPO_URI="https://github.com/openstack/keystone.git"
 EGIT_BRANCH="stable/havana"
 
 LICENSE="Apache-2.0"
-SLOT="grizzly"
+SLOT="havana"
 KEYWORDS="~amd64 ~x86"
 IUSE="+sqlite mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
@@ -87,7 +86,6 @@ pkg_setup() {
 }
 
 python_prepare_all() {
-	mkdir ${PN}/tests/tmp || die
 	cp etc/keystone-paste.ini ${PN}/tests/tmp/ || die
 	distutils-r1_python_prepare_all
 }
