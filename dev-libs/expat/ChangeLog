@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.157 2013/12/23 15:59:22 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.158 2014/01/03 04:18:02 mattst88 Exp $
+
+  03 Jan 2014; Matt Turner <mattst88@gentoo.org> expat-2.1.0-r3.ebuild:
+  alpha stable, bug 492702.
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> expat-2.1.0-r3.ebuild:
   Stable for sparc, wrt bug #492702
