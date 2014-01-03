@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.149 2013/12/25 10:28:30 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.150 2014/01/03 19:46:17 nimiux Exp $
+
+  03 Jan 2014; Chema Alonso <nimiux@gentoo.org> ntfs3g-2013.1.13.ebuild:
+  Stable for amd64 wrt bug #495310
 
   25 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> metadata.xml,
   ntfs3g-2013.1.13.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/byacc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.76 2014/01/02 06:16:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/byacc/ChangeLog,v 1.77 2014/01/03 19:54:38 nimiux Exp $
+
+  03 Jan 2014; Chema Alonso <nimiux@gentoo.org> byacc-20130925.ebuild:
+  Stable for amd64 wrt bug #495656
 
 *byacc-20140101 (02 Jan 2014)
 
