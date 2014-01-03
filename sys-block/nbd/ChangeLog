@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nbd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.88 2013/12/07 19:51:27 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.89 2014/01/03 19:23:53 vapier Exp $
+
+*nbd-3.6 (03 Jan 2014)
+
+  03 Jan 2014; Mike Frysinger <vapier@gentoo.org> +nbd-3.6.ebuild:
+  Version bump.
 
   07 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nbd-3.5.ebuild:
   Stable for arm, wrt bug #493010

@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/razercfg
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.17 2013/07/31 09:11:33 joker Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.18 2014/01/03 19:14:35 joker Exp $
+
+*razercfg-0.22 (03 Jan 2014)
+
+  03 Jan 2014; Christian Birchinger <joker@gentoo.org> +razercfg-0.22.ebuild,
+  +files/razerd.init.d-r1:
+  Version bump. New version installs the systemd unit file by default.
 
 *razercfg-0.21 (31 Jul 2013)
 
