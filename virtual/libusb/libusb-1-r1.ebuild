@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/libusb-1-r1.ebuild,v 1.6 2013/12/22 12:55:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/libusb-1-r1.ebuild,v 1.7 2014/01/03 20:20:46 nimiux Exp $
 
 EAPI=5
 inherit multilib-build
@@ -11,7 +11,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="1"
-KEYWORDS="alpha ~amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="|| ( >=dev-libs/libusbx-1.0.16-r3:1[${MULTILIB_USEDEP}] >=dev-libs/libusb-1.0.9-r2:1[${MULTILIB_USEDEP}] >=sys-freebsd/freebsd-lib-9.1_rc3-r1[usb,${MULTILIB_USEDEP}] )"

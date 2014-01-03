@@ -1,0 +1,59 @@
+See https://bugs.gentoo.org/show_bug.cgi?id=496914
+
+diff --git a/configure.ac b/configure.ac
+index 3da7f33..8a0eedf 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -160,6 +160,9 @@ AC_CHECK_TYPE(socklen_t,,
+ 
+ AC_CHECK_FUNCS([setresuid setenv unsetenv clearenv getutxent updwtmpx logwtmp login logout])
+ 
++AC_CHECK_LIBM
++AC_SUBST(LIBM)
++
+ dnl checks needed for Darwin compatibility to linux **environ.
+ AC_CHECK_HEADERS(crt_externs.h)
+ AC_CHECK_FUNCS(_NSGetEnviron)
+diff --git a/gui/Makefile.am b/gui/Makefile.am
+index 577dc9f..3334381 100644
+--- a/gui/Makefile.am
++++ b/gui/Makefile.am
+@@ -123,6 +123,7 @@ gdmchooser_LDADD = \
+ 	$(XINERAMA_LIBS)	\
+ 	$(X_LIBS)		\
+ 	$(XDMCP_LIBS)		\
++	-lXau			\
+ 	-lX11			\
+ 	-lfontconfig		\
+ 	$(NULL)
+@@ -143,8 +144,10 @@ gdmlogin_LDADD = \
+ 	$(X_EXTRA_LIBS)		\
+ 	$(XINERAMA_LIBS)	\
+ 	$(X_LIBS)		\
++	-lXau			\
+ 	-lX11			\
+ 	-lfontconfig		\
++	$(LIBM)			\
+ 	$(NULL)
+ 
+ # LIBGNOMEUI should be removed from gdmsetup at some point.
+@@ -183,6 +186,7 @@ gdmphotosetup_LDADD = \
+ 	$(INTLLIBS)		\
+ 	$(EXTRA_SOCKET_LIB)	\
+ 	$(EXTRA_NSL_LIB)	\
++	-lXau			\
+ 	-lX11			\
+ 	-lfontconfig		\
+ 	$(top_builddir)/common/libgdmcommon.a \
+diff --git a/gui/greeter/Makefile.am b/gui/greeter/Makefile.am
+index fd0f500..7b9840d 100644
+--- a/gui/greeter/Makefile.am
++++ b/gui/greeter/Makefile.am
+@@ -91,6 +91,7 @@ gdmgreeter_LDADD = \
+ 	$(X_EXTRA_LIBS)		\
+ 	$(XINERAMA_LIBS)	\
+ 	$(X_LIBS)		\
++	-lXau			\
+ 	-lX11			\
+ 	-lfontconfig
+ 

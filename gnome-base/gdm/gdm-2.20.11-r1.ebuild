@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11-r1.ebuild,v 1.11 2012/09/27 08:54:42 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11-r1.ebuild,v 1.12 2014/01/03 20:13:17 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="bz2"
 
-inherit eutils pam gnome2 user
+inherit autotools eutils pam gnome2 user
 
 DESCRIPTION="GNOME Display Manager"
 HOMEPAGE="https://live.gnome.org/GDM"
@@ -101,8 +101,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# remove unneeded linker directive for selinux (#41022)
 	epatch "${FILESDIR}/${PN}-2.13.0.1-selinux-remove-attr.patch"
 
@@ -129,6 +127,13 @@ src_prepare() {
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
+
+	# Underlinking for libXau, libm; bug #496914
+	epatch "${FILESDIR}/${P}-underlinking.patch"
+	rm missing || die # old version in tarball
+	eautoreconf
+
+	gnome2_src_prepare
 }
 
 src_install() {
