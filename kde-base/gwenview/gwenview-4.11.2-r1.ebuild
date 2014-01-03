@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.11.2-r1.ebuild,v 1.5 2013/12/11 20:27:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.11.2-r1.ebuild,v 1.6 2014/01/03 00:45:52 creffett Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ DEPEND="
 	virtual/jpeg:0
 	x11-libs/libX11
 	kipi? ( $(add_kdebase_dep libkipi) )
+	semantic-desktop? ( $(add_kdebase_dep nepomuk-core) )
 "
 RDEPEND="${DEPEND}"
 

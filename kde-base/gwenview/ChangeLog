@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/gwenview
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.209 2013/12/20 11:58:26 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.210 2014/01/03 00:45:52 creffett Exp $
+
+  03 Jan 2014; Chris Reffett <creffett@gentoo.org> gwenview-4.11.2-r1.ebuild,
+  gwenview-4.11.4.ebuild, gwenview-4.12.0.ebuild:
+  Add nepomuk-core dep wrt bug 495180
 
   20 Dec 2013; Johannes Huber <johu@gentoo.org> gwenview-4.11.4.ebuild,
   gwenview-4.12.0.ebuild:
