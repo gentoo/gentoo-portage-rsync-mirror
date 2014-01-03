@@ -1,0 +1,12 @@
+--- pip-1.5/setup.py
++++ pip-1.5/setup.py
+@@ -71,8 +71,7 @@
+           'pip._vendor.distlib._backport': ['sysconfig.cfg'],
+           'pip._vendor.distlib': ['t32.exe', 't64.exe', 'w32.exe', 'w64.exe'],
+       },
+-      entry_points=dict(console_scripts=['pip=pip:main', 'pip%s=pip:main' % sys.version[:1],
+-          'pip%s=pip:main' % sys.version[:3]]),
++      entry_points=dict(console_scripts=['pip=pip:main']),
+       tests_require=tests_require,
+       zip_safe=False,
+       extras_require={
