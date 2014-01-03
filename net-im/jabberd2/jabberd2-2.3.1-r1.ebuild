@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.1-r1.ebuild,v 1.1 2013/12/15 12:48:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.1-r1.ebuild,v 1.3 2014/01/03 21:16:19 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/jabberd2/jabberd2/releases/download/jabberd-${PV}/ja
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="berkdb debug ldap memdebug mysql pam postgres sqlite ssl test zlib"
 REQUIRED_USE="memdebug? ( debug )"
 

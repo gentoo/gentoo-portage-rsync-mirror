@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12-r1.ebuild,v 1.2 2013/12/25 21:37:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.12-r1.ebuild,v 1.4 2014/01/03 21:16:37 ago Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.adaptivecomputing.com/resources/downloads/${PN}/${P}.tar.gz"
 LICENSE="torque-2.5"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="cpusets +crypt doc drmaa kernel_linux munge server static-libs +syslog threads tk xml"
 
 # ed is used by makedepend-sh

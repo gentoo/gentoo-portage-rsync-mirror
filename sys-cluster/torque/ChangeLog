@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/torque
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.158 2013/12/25 21:37:24 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.160 2014/01/03 21:16:37 ago Exp $
+
+  03 Jan 2014; Agostino Sarubbo <ago@gentoo.org> torque-2.5.12-r1.ebuild,
+  torque-4.1.5.1-r1.ebuild:
+  Stable for x86, wrt bug #484320
+
+  03 Jan 2014; Agostino Sarubbo <ago@gentoo.org> torque-2.5.12-r1.ebuild,
+  torque-4.1.5.1-r1.ebuild:
+  Stable for amd64, wrt bug #484320
 
   25 Dec 2013; Jeroen Roovers <jer@gentoo.org> torque-2.5.12-r1.ebuild,
   torque-4.1.5.1-r1.ebuild:
@@ -735,4 +743,3 @@
   23 Apr 2004; Michael Imhof <tantive@gentoo.org> torque-1.0.1-r6.ebuild, files/pbs.rc:
   New ebuild. Submitted by Joseph Spadavecchia <j.spadavecchia@ed.ac.uk>.
   Closes #47986.
-
