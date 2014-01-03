@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.15.ebuild,v 1.9 2012/10/19 10:00:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.15.ebuild,v 1.10 2014/01/03 15:28:32 ulm Exp $
 
 EAPI=4
 
@@ -13,8 +13,8 @@ SRC_URI="
 	http://wwwuser.gwdg.de/~ggroenh/qmmm/mopac/dcart.f
 	http://wwwuser.gwdg.de/~ggroenh/qmmm/mopac/gmxmop.f"
 
+LICENSE="public-domain"
 SLOT="0"
-LICENSE="mopac7"
 KEYWORDS="amd64 ppc x86 ~amd64-linux"
 IUSE="gmxmopac7 static-libs"
 

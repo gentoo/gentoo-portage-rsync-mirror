@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/testrepository-0.0.18.ebuild,v 1.1 2014/01/02 15:17:55 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testrepository/testrepository-0.0.18.ebuild,v 1.2 2014/01/03 15:09:39 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python{2_7,3_2,3_3} pypy2_0 )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit distutils-r1
 
@@ -28,12 +28,10 @@ RDEPEND=">=dev-python/subunit-0.0.10[${PYTHON_USEDEP}]
 		dev-python/fixtures[${PYTHON_USEDEP}]"
 
 REQUIRED_USE="test? ( $(python_gen_useflags python{2_7,3_2}) )"
+# Required for test phase
+DISTUTILS_IN_SOURCE_BUILD=1
 
 python_test() {
-	# The running has a gentoo python style bug, yet unknown, that corrupts the passing of
-	# impls other than py2.7. A wip
-	if [ "${EPYTHON}" == python2.7 ]; then
-		"${PYTHON}" ./testr init || die
-		"${PYTHON}" ./testr run || die "tests failed under ${EPYTHON}"
-	fi
+	"${PYTHON}" ./testr init || die
+	"${PYTHON}" setup.py testr --coverage || die "tests failed under ${EPYTHON}"
 }

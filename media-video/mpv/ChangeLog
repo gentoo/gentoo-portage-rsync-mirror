@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mpv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.49 2013/12/31 11:23:39 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.50 2014/01/03 15:07:58 zx2c4 Exp $
+
+*mpv-0.3.1 (03 Jan 2014)
+
+  03 Jan 2014; Jason A. Donenfeld <zx2c4@gentoo.org> +mpv-0.3.1.ebuild,
+  -mpv-0.3.0.ebuild:
+  Version bump for tiny bug fixes.
 
   31 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> mpv-0.3.0.ebuild,
   mpv-9999.ebuild:

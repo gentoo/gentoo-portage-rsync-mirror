@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.8 2012/10/19 10:00:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.10-r1.ebuild,v 1.9 2014/01/03 15:28:32 ulm Exp $
 
 WANT_AUTOMAKE="1.8"
 
@@ -10,8 +10,8 @@ DESCRIPTION="Autotooled, updated version of a powerful, fast semi-empirical pack
 HOMEPAGE="http://sourceforge.net/projects/mopac7/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
+LICENSE="public-domain"
 SLOT="0"
-LICENSE="mopac7"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
