@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-modules
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.141 2013/12/31 17:21:55 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.142 2014/01/03 11:38:25 polynomial-c Exp $
+
+  03 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +files/create_vbox_modules_tarball.sh:
+  Revert last QA commit.
 
   31 Dec 2013; Tom Wijsman <TomWij@gentoo.org>
   -files/create_vbox_modules_tarball.sh:
