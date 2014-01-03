@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.129 2013/10/14 18:23:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.130 2014/01/03 03:20:34 creffett Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -51,8 +51,6 @@ dev-perl/Archive-Rar
 dev-python/skype4py
 dev-util/android-sdk-update-manager
 dev-util/biew
-dev-util/dialogblocks
-dev-util/helpblocks
 games-action/cs2d
 games-action/descent3
 games-action/descent3-demo
@@ -148,17 +146,13 @@ games-strategy/majesty-demo
 games-strategy/savage-bin
 games-strategy/smac
 games-strategy/spaz
-games-strategy/x2
-games-strategy/x2-demo
 media-fonts/acroread-asianfonts
-media-gfx/picasa
 media-sound/aucdtect
 media-sound/shoutcast-server-bin
 media-sound/shoutcast-trans-bin
 media-sound/skype-call-recorder
 media-sound/ventrilo-server-bin
 media-tv/huludesktop
-media-tv/livestation
 media-video/binkplayer
 media-video/tsmuxer
 net-im/skype

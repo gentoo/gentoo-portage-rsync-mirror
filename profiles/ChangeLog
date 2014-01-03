@@ -1,10 +1,31 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8483 2014/01/02 22:49:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8489 2014/01/03 03:28:56 creffett Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jan 2014; creffett <creffett@gentoo.org>
+  arch/powerpc/ppc64/package.use.mask:
+  Remove invalid entries from arch/powerpc/ppc64/package.use.mask
+
+  03 Jan 2014; creffett <creffett@gentoo.org> prefix/darwin/package.use.mask:
+  Remove invalid entries from prefix/darwin/package.use.mask
+
+  03 Jan 2014; creffett <creffett@gentoo.org>
+  prefix/windows/interix/package.use.mask:
+  Remove invalid entries from prefix/windows/interix/package.use.mask
+
+  03 Jan 2014; creffett <creffett@gentoo.org> arch/arm/package.mask:
+  Remove invalid entries from arch/arm/package.mask
+
+  03 Jan 2014; creffett <creffett@gentoo.org>
+  arch/amd64/no-multilib/package.mask:
+  Remove invalid entries from arch/amd64/no-multilib/package.mask
+
+  03 Jan 2014; creffett <creffett@gentoo.org> arch/amd64/x32/package.use.mask:
+  Remove invalid entries from arch/amd64/x32/package.use.mask
 
   02 Jan 2014; William Hubbs <williamh@gentoo.org>
   prefix/darwin/macos/package.mask, prefix/package.mask,
