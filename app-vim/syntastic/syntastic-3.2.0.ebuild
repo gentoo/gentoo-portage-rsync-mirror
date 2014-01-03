@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/syntastic/syntastic-3.2.0.ebuild,v 1.1 2013/11/11 05:54:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/syntastic/syntastic-3.2.0.ebuild,v 1.2 2014/01/03 18:09:52 nimiux Exp $
 
 EAPI=5
 inherit vim-plugin
@@ -9,7 +9,7 @@ DESCRIPTION="vim plugin: syntax checking using external tools"
 HOMEPAGE="http://www.vim.org/scripts/script.php?script_id=2736 https://github.com/scrooloose/syntastic/"
 SRC_URI="https://github.com/scrooloose/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="WTFPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 VIM_PLUGIN_HELPFILES="${PN}"
 
