@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.68.ebuild,v 1.1 2013/12/20 01:51:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.68.ebuild,v 1.2 2014/01/03 07:32:47 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -71,15 +71,11 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	kerberos? ( virtual/krb5 )
 	selinux? ( sec-policy/selinux-chromium )"
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	!arm? (
 		dev-lang/yasm
 	)
 	dev-lang/perl
 	dev-perl/JSON
-	>=dev-python/jinja-2.7
-	dev-python/ply
-	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
 	dev-util/ninja
 	sys-apps/hwids
@@ -88,7 +84,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? (
 		dev-libs/openssl:0
-		dev-python/pyftpdlib
 	)"
 # For nvidia-drivers blocker, see bug #413637 .
 RDEPEND+="
@@ -96,6 +91,21 @@ RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts
 	tcmalloc? ( !<x11-drivers/nvidia-drivers-331.20 )"
+
+# Python dependencies. The DEPEND part needs to be kept in sync
+# with python_check_deps.
+DEPEND+=" $(python_gen_any_dep '
+	>=dev-python/jinja-2.7[${PYTHON_USEDEP}]
+	dev-python/ply[${PYTHON_USEDEP}]
+	dev-python/simplejson[${PYTHON_USEDEP}]
+	test? ( dev-python/pyftpdlib[${PYTHON_USEDEP}] )
+')"
+python_check_deps() {
+	has_version ">=dev-python/jinja-2.7[${PYTHON_USEDEP}]" && \
+		has_version "dev-python/ply[${PYTHON_USEDEP}]" && \
+		has_version "dev-python/simplejson[${PYTHON_USEDEP}]" && \
+		{ ! use test || has_version "dev-python/pyftpdlib[${PYTHON_USEDEP}]"; }
+}
 
 if ! has chromium_pkg_die ${EBUILD_DEATH_HOOKS}; then
 	EBUILD_DEATH_HOOKS+=" chromium_pkg_die";

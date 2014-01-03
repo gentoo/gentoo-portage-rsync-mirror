@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.1.0.ebuild,v 1.2 2014/01/03 07:31:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p353-r1.ebuild,v 1.1 2014/01/03 07:31:54 graaff Exp $
 
 EAPI=5
 
@@ -10,13 +10,12 @@ inherit autotools eutils flag-o-matic multilib versionator
 
 RUBYPL=$(get_version_component_range 4)
 
-MY_P="${PN}-$(get_version_component_range 1-3)"
-#MY_P="${PN}-$(get_version_component_range 1-3)-${RUBYPL:-0}"
+MY_P="${PN}-$(get_version_component_range 1-3)-${RUBYPL:-0}"
 S=${WORKDIR}/${MY_P}
 
 SLOT=$(get_version_component_range 1-2)
 MY_SUFFIX=$(delete_version_separator 1 ${SLOT})
-RUBYVERSION=2.1.0
+RUBYVERSION=2.0.0
 
 if [[ -n ${PATCHSET} ]]; then
 	if [[ ${PVR} == ${PV} ]]; then
@@ -30,7 +29,7 @@ fi
 
 DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
-SRC_URI="mirror://ruby/2.1/${MY_P}.tar.bz2
+SRC_URI="mirror://ruby/2.0/${MY_P}.tar.bz2
 		 http://dev.gentoo.org/~flameeyes/ruby-team/${PN}-patches-${PATCHSET}.tar.bz2"
 
 LICENSE="|| ( Ruby-BSD BSD-2 )"
@@ -54,10 +53,10 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 PDEPEND="
-	>=dev-ruby/rubygems-2.0.14[ruby_targets_ruby21]
-	>=dev-ruby/json-1.8.1[ruby_targets_ruby21]
-	>=dev-ruby/rake-0.9.6[ruby_targets_ruby21]
-	rdoc? ( >=dev-ruby/rdoc-4.0.1[ruby_targets_ruby21] )
+	>=dev-ruby/rubygems-2.0.2[ruby_targets_ruby20]
+	>=dev-ruby/json-1.7.7[ruby_targets_ruby20]
+	>=dev-ruby/rake-0.9.6[ruby_targets_ruby20]
+	rdoc? ( >=dev-ruby/rdoc-4.0.0[ruby_targets_ruby20] )
 	xemacs? ( app-xemacs/ruby-modes )"
 
 src_prepare() {
