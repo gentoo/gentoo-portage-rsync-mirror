@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.511 2013/12/18 18:34:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.512 2014/01/03 16:04:39 hasufell Exp $
 
 # Keep them sorted
 
@@ -333,7 +333,7 @@ sse4_1 - Use the SSE4.1 instruction set
 ssl - Add support for Secure Socket Layer connections
 startup-notification - Enable application startup event feedback mechanism
 static - !!do not set this during bootstrap!! Causes binaries to be statically linked instead of dynamically
-static-libs - Build static libraries
+static-libs - Build static versions of dynamic libraries as well
 subversion - Enable subversion (version control system) support
 suid - Enable setuid root program, with potential security risks
 svg - Add support for SVG (Scalable Vector Graphics)
