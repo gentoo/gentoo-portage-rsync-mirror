@@ -2,14 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-  <email>robbat2@gentoo.org</email>
-</maintainer>
-<maintainer>
-	<email>nicolas@boichat.ch</email>
-	<description>
-		Upstream developer. Please CC on all bugs involving ddccontrol
-		and ddccontrol-db.
-	</description>
+	<email>mrueg@gentoo.org</email>
+	<name>Manuel Rüger</name>
 </maintainer>
 <use>
  <flag name='ddcpci'>enable direct PCI memory access (the setuid ddcpci util)</flag>

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2-r2.ebuild,v 1.2 2013/07/30 15:07:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol/ddccontrol-0.4.2-r2.ebuild,v 1.3 2014/01/03 18:56:34 mrueg Exp $
 
 EAPI=5
 

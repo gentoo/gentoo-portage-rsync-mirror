@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/ddccontrol-db
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ChangeLog,v 1.18 2013/03/17 15:02:26 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ddccontrol-db/ChangeLog,v 1.19 2014/01/03 18:55:41 mrueg Exp $
+
+*ddccontrol-db-20061014_p20121105 (03 Jan 2014)
+
+  03 Jan 2014; Manuel Rüger <mrueg@gentoo.org>
+  +ddccontrol-db-20061014_p20121105.ebuild, -ddccontrol-db-20050715.ebuild,
+  -ddccontrol-db-20050813.ebuild, -ddccontrol-db-20051114.ebuild,
+  -ddccontrol-db-20060308.ebuild, -ddccontrol-db-20060730.ebuild, metadata.xml:
+  Add new snapshot. Take over maintenance.
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
