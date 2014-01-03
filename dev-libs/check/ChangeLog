@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.83 2014/01/01 20:16:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.84 2014/01/03 04:35:30 mattst88 Exp $
+
+  03 Jan 2014; Matt Turner <mattst88@gentoo.org> check-0.9.11.ebuild:
+  alpha stable, bug 489366.
 
 *check-0.9.11 (01 Jan 2014)
 
