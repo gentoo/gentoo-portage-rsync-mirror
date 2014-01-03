@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ninja
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.27 2013/12/25 09:37:07 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ninja/ChangeLog,v 1.28 2014/01/03 09:05:00 phajdan.jr Exp $
+
+  03 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> ninja-1.4.0.ebuild:
+  x86 stable wrt bug #493622
 
   25 Dec 2013; Markus Meier <maekke@gentoo.org> ninja-1.4.0.ebuild:
   arm stable, bug #493622
