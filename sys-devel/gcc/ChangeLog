@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.989 2013/12/30 01:24:06 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.990 2014/01/03 15:33:30 vapier Exp $
+
+  03 Jan 2014; Mike Frysinger <vapier@gentoo.org> gcc-4.8.2.ebuild:
+  Stop building libbacktrace with -Werror.
 
   30 Dec 2013; Ryan Hill <dirtyepic@gentoo.org> gcc-4.8.2.ebuild:
   4.8.2 p1.2: Fixes target CXXFLAGS being used with the native host compiler

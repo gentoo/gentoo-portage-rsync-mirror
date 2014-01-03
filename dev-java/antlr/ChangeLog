@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/antlr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.100 2013/09/05 18:27:44 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.102 2014/01/03 15:51:36 ulm Exp $
+
+  03 Jan 2014; Ulrich Müller <ulm@gentoo.org> -antlr-2.7.7.ebuild,
+  -antlr-2.7.7-r1.ebuild, antlr-2.7.7-r2.ebuild, -antlr-2.7.7-r3.ebuild,
+  -antlr-2.7.7-r4.ebuild, antlr-2.7.7-r5.ebuild:
+  Fix LICENSE, bug 496690. Clean up.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> antlr-2.7.7-r1.ebuild,
   antlr-2.7.7-r3.ebuild, antlr-2.7.7-r4.ebuild, antlr-2.7.7-r5.ebuild:

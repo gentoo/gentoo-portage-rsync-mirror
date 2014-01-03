@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r2.ebuild,v 1.8 2013/05/09 12:19:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r2.ebuild,v 1.9 2014/01/03 15:43:07 ulm Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -11,7 +11,7 @@ DESCRIPTION="A parser generator for C++, C#, Java, and Python"
 HOMEPAGE="http://www.antlr2.org/"
 SRC_URI="http://www.antlr2.org/download/${P}.tar.gz"
 
-LICENSE="ANTLR"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd"
 IUSE="doc debug examples mono +cxx +java python script source static-libs"

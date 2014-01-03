@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8489 2014/01/03 03:28:56 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8490 2014/01/03 15:53:34 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jan 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Remove unused ANTLR license, bug 496690.
 
   03 Jan 2014; creffett <creffett@gentoo.org>
   arch/powerpc/ppc64/package.use.mask:
