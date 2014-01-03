@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/librime
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.12 2013/09/02 08:06:22 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.13 2014/01/03 21:44:31 hwoarang Exp $
+
+*librime-1.1 (03 Jan 2014)
+
+  03 Jan 2014; Markos Chandras <hwoarang@gentoo.org> +librime-1.1.ebuild:
+  Version bump. Bug #496080. Thanks to Yixun Lan <dennis.yxun@gmail.com>
 
   02 Sep 2013; Agostino Sarubbo <ago@gentoo.org> librime-0.9.9.ebuild:
   Stable for x86, wrt bug #479718
