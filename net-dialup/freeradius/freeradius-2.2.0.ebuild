@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.0.ebuild,v 1.7 2013/11/26 09:44:27 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.2.0.ebuild,v 1.8 2014/01/03 12:06:30 naota Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.freeradius.org/pub/radius/${MY_P}.tar.gz
 	http://dev.gentoo.org/~flameeyes/${PN}/${P}-patches-${PATCHSET}.tar.xz"
 HOMEPAGE="http://www.freeradius.org/"
 
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 SLOT="0"
 
@@ -35,7 +35,7 @@ RDEPEND="!net-dialup/cistronradius
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	firebird? ( dev-db/firebird )
-	pam? ( sys-libs/pam )
+	pam? ( virtual/pam )
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
 	kerberos? ( virtual/krb5 )

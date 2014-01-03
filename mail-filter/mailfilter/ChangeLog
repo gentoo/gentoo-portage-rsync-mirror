@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/mailfilter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.32 2013/07/13 05:46:23 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.33 2014/01/03 12:22:41 naota Exp $
+
+  03 Jan 2014; Naohiro Aota <naota@gentoo.org> mailfilter-0.8.2.ebuild:
+  Add ~x86-fbsd
 
   13 Jul 2013; Agostino Sarubbo <ago@gentoo.org> mailfilter-0.8.2.ebuild:
   Stable for amd64, wrt bug #476116

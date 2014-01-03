@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.5.0.ebuild,v 1.2 2013/12/30 07:59:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-pinyin/ibus-pinyin-1.5.0.ebuild,v 1.3 2014/01/03 12:18:36 naota Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-content-type.patch
+	epatch "${FILESDIR}"/${P}-content-type-method.patch
 }
 
 src_configure() {
