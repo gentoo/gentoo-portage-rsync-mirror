@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.199 2014/01/03 04:26:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.200 2014/01/03 06:36:00 jer Exp $
+
+*libnl-3.2.24_rc1-r1 (03 Jan 2014)
+
+  03 Jan 2014; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.24_rc1.ebuild,
+  +libnl-3.2.24_rc1-r1.ebuild, +files/libnl-3.2.24_rc1-link_policy.patch:
+  Add upstream patch (bug #494890 by Alex Barker).
 
   03 Jan 2014; Matt Turner <mattst88@gentoo.org> libnl-3.2.23.ebuild:
   alpha stable, bug 494836.

@@ -1,0 +1,42 @@
+--- a/include/netlink/route/link.h
++++ b/include/netlink/route/link.h
+@@ -98,7 +98,7 @@ typedef enum {
+ 
+ #define RTNL_LINK_STATS_MAX (__RTNL_LINK_STATS_MAX - 1)
+ 
+-extern struct nla_policy link_policy[];
++extern struct nla_policy rtln_link_policy[];
+ 
+ extern struct rtnl_link *rtnl_link_alloc(void);
+ extern void	rtnl_link_put(struct rtnl_link *);
+--- a/lib/route/link.c
++++ b/lib/route/link.c
+@@ -262,7 +262,7 @@ static int link_clone(struct nl_object *_dst, struct nl_object *_src)
+ 	return 0;
+ }
+ 
+-struct nla_policy link_policy[IFLA_MAX+1] = {
++struct nla_policy rtln_link_policy[IFLA_MAX+1] = {
+ 	[IFLA_IFNAME]		= { .type = NLA_STRING,
+ 				    .maxlen = IFNAMSIZ },
+ 	[IFLA_MTU]		= { .type = NLA_U32 },
+@@ -481,7 +481,7 @@ static int link_msg_parser(struct nl_cache_ops *ops, struct sockaddr_nl *who,
+ 	int err, family;
+ 	struct nla_policy real_link_policy[IFLA_MAX+1];
+ 
+-	memcpy(&real_link_policy, link_policy, sizeof(link_policy));
++	memcpy(&real_link_policy, rtln_link_policy, sizeof(rtln_link_policy));
+ 
+ 	link = rtnl_link_alloc();
+ 	if (link == NULL) {
+--- a/lib/route/link/veth.c
++++ b/lib/route/link/veth.c
+@@ -65,7 +65,7 @@ static int veth_parse(struct rtnl_link *link, struct nlattr *data,
+ 		err = nla_parse(peer_tb, IFLA_MAX,
+ 				nla_data(nla_peer) + sizeof(struct ifinfomsg),
+ 				nla_len(nla_peer) - sizeof(struct ifinfomsg),
+-				link_policy);
++				rtln_link_policy);
+ 		if (err < 0)
+ 			goto errout;
+ 
