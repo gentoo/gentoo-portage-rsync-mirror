@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rbtree
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/ChangeLog,v 1.11 2013/11/05 00:30:07 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbtree/ChangeLog,v 1.12 2014/01/03 22:16:36 mrueg Exp $
+
+*rbtree-0.4.2 (03 Jan 2014)
+
+  03 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +rbtree-0.4.2.ebuild:
+  Version bump. Add ruby21.
 
 *rbtree-0.4.1-r1 (05 Nov 2013)
 
