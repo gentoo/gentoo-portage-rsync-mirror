@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.39-r1.ebuild,v 1.1 2013/12/23 00:40:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.39-r1.ebuild,v 1.2 2014/01/04 18:19:01 floppym Exp $
 
 EAPI="4"
 
@@ -30,7 +30,6 @@ DEPEND="${COMMON_DEPEND}
 	app-text/xmlto
 	app-text/docbook-xml-dtd:4.1.2" # see bug 237132
 RDEPEND="${COMMON_DEPEND}
-	|| ( sys-apps/net-tools[old-output] <sys-apps/net-tools-1.60_p201111202031570500 )
 	virtual/logger
 	sys-apps/iproute2"
 
