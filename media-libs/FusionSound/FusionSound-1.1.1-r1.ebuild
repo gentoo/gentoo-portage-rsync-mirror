@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.14 2012/11/25 13:51:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.15 2014/01/04 22:30:21 hasufell Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -15,6 +15,7 @@ KEYWORDS="alpha amd64 hppa ppc x86"
 IUSE="alsa cddb ffmpeg mad oss timidity vorbis"
 
 RDEPEND=">=dev-libs/DirectFB-${PV}
+	<dev-libs/DirectFB-1.6.3
 	alsa? ( media-libs/alsa-lib )
 	timidity? (
 		media-libs/libtimidity

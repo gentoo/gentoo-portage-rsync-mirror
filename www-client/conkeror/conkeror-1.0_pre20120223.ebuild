@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-1.0_pre20120223.ebuild,v 1.7 2013/02/07 22:42:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/conkeror/conkeror-1.0_pre20120223.ebuild,v 1.8 2014/01/04 22:28:16 ulm Exp $
 
 EAPI=4
 
@@ -20,7 +20,8 @@ KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( >=www-client/firefox-5.0 >=www-client/firefox-bin-5.0 )"
+RDEPEND="|| ( ( >=www-client/firefox-5.0 <www-client/firefox-26 )
+		( >=www-client/firefox-bin-23.0 <www-client/firefox-bin-26 ) )"
 
 S="${WORKDIR}/${PN}"
 

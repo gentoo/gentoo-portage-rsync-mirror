@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.7.0.1.ebuild,v 1.4 2014/01/04 22:08:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.8.0.1.ebuild,v 1.1 2014/01/04 22:08:50 chainsaw Exp $
 
 EAPI=5
 
@@ -13,23 +13,28 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Kernel modules for Digium compatible hardware (formerly known as Zaptel)."
 HOMEPAGE="http://www.asterisk.org"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/dahdi-linux/releases/${MY_P}.tar.gz
-http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fwload-vpmadt032-1.25.0.tar.gz
-http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-vpmoct032-1.12.0.tar.gz
+http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-a4a-a0017.tar.gz
+http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-a4b-b0017.tar.gz
+http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-a8a-1d0017.tar.gz
+http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-a8b-1d0017.tar.gz
+http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-hx8-2.06.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-oct6114-032-1.05.01.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-oct6114-064-1.05.01.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-oct6114-128-1.05.01.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-oct6114-256-1.05.01.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-tc400m-MR6.12.tar.gz
-http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-hx8-2.06.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-te133-6f0017.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-te134-6f0017.tar.gz
+http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-te435-e0017.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-te820-1.76.tar.gz
-mirror://gentoo/gentoo-dahdi-patchset-1.1.6.tar.bz2
+http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-vpmoct032-1.12.0.tar.gz
+http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fwload-vpmadt032-1.25.0.tar.gz
+mirror://gentoo/gentoo-dahdi-patchset-1.1.7.tar.bz2
 http://www.junghanns.net/downloads/jnet-dahdi-drivers-${JNET}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="flash"
 RESTRICT="test"
 

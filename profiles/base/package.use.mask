@@ -1,10 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.536 2013/12/30 07:50:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.537 2014/01/04 22:26:24 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (4 Jan 2014)
+# Mask until dependencies are keyworded
+dev-vcs/git mediawiki
 
 # Sergey Popov <pinkbyte@gentoo.org> (27 Dec 2013)
 # Mask because Boost.Context library does not work on most of arches

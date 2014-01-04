@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dahdi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.55 2013/12/24 12:47:43 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.56 2014/01/04 22:08:50 chainsaw Exp $
+
+*dahdi-2.8.0.1 (04 Jan 2014)
+
+  04 Jan 2014; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.8.0.1.ebuild:
+  Version bump, as requested by Oliver Jaksch in bug #494436. Initial rediff by
+  Oliver Jaksch, with some finishing touches by Jaco Kroon.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> dahdi-2.7.0.1.ebuild:
   Stable for x86, wrt bug #493206

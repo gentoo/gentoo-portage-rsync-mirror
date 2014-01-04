@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dahdi-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.27 2013/10/27 09:50:05 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.28 2014/01/04 22:22:06 chainsaw Exp $
+
+*dahdi-tools-2.8.0 (04 Jan 2014)
+
+  04 Jan 2014; Tony Vroon <chainsaw@gentoo.org> +dahdi-tools-2.8.0.ebuild:
+  Version bump, as requested by Oliver Jaksch in bug #494442. Initial rediff by
+  Oliver Jaksch, with some finishing touches by Jaco Kroon.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Voip herd is removed: http://article.gmane.org/gmane.linux.gentoo.devel/88434
