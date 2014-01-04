@@ -1,0 +1,15 @@
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -376,8 +376,7 @@ install_all: install_base cron/crontab sysstat \
+ 	   su $(CRON_OWNER) -c "crontab cron/crontab"; \
+ 	fi
+ 	if [ -x $(SYSTEMCTL) -a -d "$(SYSTEMD_UNIT_DIR)" ]; then \
+-	    $(INSTALL_DATA) sysstat.service $(SYSTEMD_UNIT_DIR); \
+-	    $(SYSTEMCTL) enable sysstat.service; \
++	    $(INSTALL_DATA) -D sysstat.service $(DESTDIR)$(SYSTEMD_UNIT_DIR); \
+ 	elif [ -d $(DESTDIR)$(INIT_DIR) ]; then \
+ 	   $(INSTALL_BIN) sysstat $(DESTDIR)$(INIT_DIR)/sysstat; \
+ 	   if [ -x $(CHKCONFIG) ]; then \
+-- 
+1.8.5.2
+

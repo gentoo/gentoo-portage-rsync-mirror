@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.253 2013/12/24 12:48:43 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.254 2014/01/04 12:40:07 jer Exp $
+
+  04 Jan 2014; Jeroen Roovers <jer@gentoo.org> sysstat-10.2.0.ebuild,
+  +files/sysstat-10.2.0-systemd.patch:
+  Fix installing systemd unit by Xake (bug #496854).
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> sysstat-10.2.0.ebuild:
   Stable for x86, wrt bug #494248

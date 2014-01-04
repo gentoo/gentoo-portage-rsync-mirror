@@ -1,6 +1,9 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.54 2014/01/03 21:16:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.55 2014/01/04 12:38:09 ago Exp $
+
+  04 Jan 2014; Agostino Sarubbo <ago@gentoo.org> jabberd2-2.3.1-r1.ebuild:
+  Stable for ppc, wrt bug #432936
 
   03 Jan 2014; Agostino Sarubbo <ago@gentoo.org> jabberd2-2.3.1-r1.ebuild:
   Stable for x86, wrt bug #432936

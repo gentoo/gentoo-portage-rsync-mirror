@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.2.0.ebuild,v 1.7 2013/12/24 12:48:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.2.0.ebuild,v 1.8 2014/01/04 12:40:07 jer Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -42,6 +42,7 @@ src_prepare() {
 		done
 	fi
 	epatch "${FILESDIR}"/${PN}-10.0.4-flags.patch
+	epatch "${FILESDIR}"/${PN}-10.2.0-systemd.patch
 }
 
 src_configure() {
