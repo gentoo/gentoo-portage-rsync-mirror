@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/openconnect
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.22 2013/06/29 02:37:48 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.24 2014/01/04 01:37:06 hasufell Exp $
+
+  04 Jan 2014; Julian Ospald <hasufell@gentoo.org> openconnect-4.08.ebuild,
+  openconnect-5.01.ebuild:
+  fix license
+
+*openconnect-5.02 (04 Jan 2014)
+
+  04 Jan 2014; Julian Ospald <hasufell@gentoo.org> +openconnect-5.02.ebuild:
+  version bump
 
   29 Jun 2013; Alexandre Rostovtsev <tetromino@gentoo.org>
   openconnect-5.01.ebuild:
