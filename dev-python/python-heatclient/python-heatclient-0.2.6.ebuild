@@ -1,33 +1,36 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-0.2.5.ebuild,v 1.3 2014/01/04 00:38:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-0.2.6.ebuild,v 1.1 2014/01/04 00:38:50 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
-DESCRIPTION="A client library for Heat built on the Heat orchestration API."
+DESCRIPTION="This is a client library for Heat built on the Heat orchestration
+API."
 HOMEPAGE="https://github.com/openstack/python-heatclient"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test"
+IUSE="doc test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
 		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
 		test? ( ~dev-python/pep8-1.4.5[${PYTHON_USEDEP}]
 				~dev-python/pyflakes-0.7.2[${PYTHON_USEDEP}]
+				<dev-python/pyflakes-0.7.4[${PYTHON_USEDEP}]
 				~dev-python/flake8-2.0[${PYTHON_USEDEP}]
-				>=dev-python/hacking-0.5.6[${PYTHON_USEDEP}]
-				<dev-python/hacking-0.7[${PYTHON_USEDEP}]
+				>=dev-python/hacking-0.8.0[${PYTHON_USEDEP}]
+				<dev-python/hacking-0.9[${PYTHON_USEDEP}]
 				>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
-				>=dev-python/fixtures-0.3.12[${PYTHON_USEDEP}]
-				>=dev-python/mock-0.8.0[${PYTHON_USEDEP}]
+				>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
+				>=dev-python/mock-1.0[${PYTHON_USEDEP}]
 				>=dev-python/mox-0.5.3[${PYTHON_USEDEP}]
+				>=dev-python/mox3-0.7.0[${PYTHON_USEDEP}]
 				>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 				>=dev-python/testscenarios-0.4[${PYTHON_USEDEP}]
 				<dev-python/testscenarios-0.5[${PYTHON_USEDEP}]
@@ -41,12 +44,17 @@ RDEPEND="virtual/python-argparse[${PYTHON_USEDEP}]
 		>=dev-python/python-keystoneclient-0.3.0[${PYTHON_USEDEP}]
 		>=dev-python/pyyaml-3.1.0[${PYTHON_USEDEP}]"
 
-PATCHES=(
-)
-#	"${FILESDIR}/0.2.3-CVE-2013-2104.patch"
+python_compile_all() {
+	use doc && sphinx-build -b html -c doc/source/ doc/source/ doc/source/html
+}
 
 python_test() {
 	testr init
-	testr run || die "Tests failed under python2.7"
+	"${PYTHON}" setup.py testr --coverage
 	flake8 heatclient/tests || die "run over tests folder by flake8 yielded error"
+}
+
+python_install_all() {
+	use doc && local HTML_DOCS=( doc/source/html/. )
+	distutils-r1_python_install_all
 }

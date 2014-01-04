@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/picmi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.47 2013/12/18 19:57:38 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.48 2014/01/04 00:41:41 dilfridge Exp $
+
+  04 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> picmi-4.12.0.ebuild:
+  Tests fail (need X)
 
 *picmi-4.12.0 (18 Dec 2013)
 
