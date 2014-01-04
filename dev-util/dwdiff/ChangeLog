@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dwdiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/ChangeLog,v 1.10 2014/01/02 09:33:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/ChangeLog,v 1.11 2014/01/04 19:09:23 polynomial-c Exp $
+
+*dwdiff-2.0.8 (04 Jan 2014)
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -dwdiff-2.0.4-r1.ebuild,
+  +dwdiff-2.0.8.ebuild, +files/dwdiff-2.0.8-configure_fix.patch:
+  Version bump. Removed old.
 
 *dwdiff-2.0.7 (02 Jan 2014)
 

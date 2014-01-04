@@ -1,0 +1,11 @@
+--- dwdiff-2.0.8/config.pkg
++++ dwdiff-2.0.8/config.pkg
+@@ -116,7 +116,7 @@
+ 
+ 		test_link "required functions for dwfilter" || {
+ 			checkfunction "fork" 'pid_t pid = fork();' "<unistd.h>" "<sys/types.h>"
+-			checkfunction "execvp" 'execvp("test", NULL);' "<unistd.h>">
++			checkfunction "execvp" 'execvp("test", NULL);' "<unistd.h>" "<sys/types.h>"
+ 			check_message_result "!! A required function for dwfilter is not availabe. Try configuring with --without-dwfilter"
+ 			exit 1
+ 		}
