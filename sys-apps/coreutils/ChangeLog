@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/coreutils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.383 2013/12/24 12:51:08 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.384 2014/01/04 18:38:40 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -coreutils-8.5.ebuild,
+  -coreutils-8.5-r1.ebuild, -coreutils-8.7.ebuild, -coreutils-8.8.ebuild,
+  -coreutils-8.9.ebuild, -coreutils-8.10.ebuild, -coreutils-8.11.ebuild,
+  -coreutils-8.12.ebuild, -coreutils-8.13.ebuild, -coreutils-8.14.ebuild,
+  -coreutils-8.15.ebuild, -coreutils-8.16.ebuild, -coreutils-8.17.ebuild,
+  -coreutils-8.18.ebuild, -coreutils-8.19.ebuild, -coreutils-8.20-r1.ebuild,
+  -coreutils-8.20-r2.ebuild:
+  Removed old versions and files.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> coreutils-8.21.ebuild:
   Stable for x86, wrt bug #467186

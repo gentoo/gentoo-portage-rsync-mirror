@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/xz-utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.75 2013/12/27 12:31:59 hattya Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.76 2014/01/04 18:41:01 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -xz-utils-4.999.9_beta.ebuild, -xz-utils-5.0.1.ebuild,
+  -xz-utils-5.0.1-r1.ebuild, -xz-utils-5.0.2.ebuild, -xz-utils-5.0.3.ebuild,
+  -xz-utils-5.0.4.ebuild, -xz-utils-5.0.4-r1.ebuild, -xz-utils-5.0.5.ebuild,
+  -files/xz-utils-5.0.1-xzgrep-typo.patch:
+  Removed old versions and files.
 
   27 Dec 2013; Akinori Hattori <hattya@gentoo.org> xz-utils-5.0.5-r1.ebuild:
   ia64 stable wrt bug #489362

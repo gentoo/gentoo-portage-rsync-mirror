@@ -8,7 +8,6 @@
 	<flag name='cytune'>build cytune for Cyclades-Z multiport serial cards</flag>
 	<flag name='ddate'>build ddate helper (Discordian dates)</flag>
 	<flag name='fdformat'>build fdformat (floppy disk format)</flag>
-	<flag name='loop-aes'>include support for Loop AES encryption</flag>
 	<flag name='pam'>build runuser helper</flag>
 	<flag name='perl'>install the chkdupexe helper script</flag>
 	<flag name='suid'>

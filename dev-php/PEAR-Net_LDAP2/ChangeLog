@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Net_LDAP2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/ChangeLog,v 1.13 2012/03/18 19:17:46 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/ChangeLog,v 1.14 2014/01/04 18:54:57 mabi Exp $
+
+*PEAR-Net_LDAP2-2.1.0 (04 Jan 2014)
+
+  04 Jan 2014; Matti Bickel <mabi@gentoo.org> +PEAR-Net_LDAP2-2.1.0.ebuild:
+  version bump
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> PEAR-Net_LDAP2-2.0.12.ebuild:
   sparc stable wrt #394067
@@ -68,4 +73,3 @@
   New ebuild. Keeping KEYWORDS from dev-php/PEAR-Net_LDAP since this is
   really just a version bump of that package with dropped PHP4
   compatibility.
-

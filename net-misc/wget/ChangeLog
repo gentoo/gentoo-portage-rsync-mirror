@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wget
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.178 2013/12/23 07:23:59 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.179 2014/01/04 18:45:31 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -wget-1.12-r3.ebuild,
+  -wget-1.13.3-r2.ebuild, -wget-1.13.4.ebuild, -wget-1.13.4-r1.ebuild,
+  -files/wget-1.12-CVE-2010-2252.patch, -files/wget-1.12-debug-tests.patch,
+  -files/wget-1.12-linking.patch, -files/wget-1.12-sae.patch,
+  -files/wget-1.12-sni.patch, -files/wget-1.13.4-no-gets.patch,
+  -files/wget-1.13-static-link-libz.patch, -files/wgetrc-ipv6:
+  Removed old versions and files.
 
 *wget-1.14-r1 (23 Dec 2013)
 

@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/util-linux
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.445 2013/12/22 23:26:14 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.446 2014/01/04 18:34:59 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -util-linux-2.19.1-r1.ebuild, -util-linux-2.20-r1.ebuild,
+  -util-linux-2.20.1.ebuild, -util-linux-2.20.1-r1.ebuild,
+  -util-linux-2.20.1-r2.ebuild, -util-linux-2.21.ebuild,
+  -util-linux-2.21.1.ebuild, -util-linux-2.21.2.ebuild,
+  -util-linux-2.22.ebuild, -util-linux-2.22.1.ebuild, -util-linux-2.23.ebuild,
+  -util-linux-2.23.1.ebuild, -util-linux-2.23.2.ebuild,
+  -util-linux-2.23.2-r1.ebuild, -files/util-linux-2.19.1-mount-a-segv.patch,
+  -files/util-linux-2.19.1-umount-l-nfs.patch,
+  -files/util-linux-2.20.1-libmount-c++.patch,
+  -files/util-linux-2.20.1-no-printf-alloc.patch,
+  -files/util-linux-2.20.1-umount-fs-search.patch,
+  -files/util-linux-2.20-dmesg-newline.patch,
+  -files/util-linux-2.20-sysfs-init.patch,
+  -files/util-linux-2.21.1-cal-nl.patch,
+  -files/util-linux-2.21.1-no-printf-alloc.patch, metadata.xml:
+  Removed old versions and files.
 
   22 Dec 2013; Mike Frysinger <vapier@gentoo.org>
   +files/util-linux-2.24-skip-last-tests.patch, util-linux-2.24.ebuild,
