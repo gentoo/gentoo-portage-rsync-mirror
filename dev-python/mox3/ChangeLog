@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/mox3
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mox3/ChangeLog,v 1.1 2014/01/03 23:58:10 idella4 Exp $
+
+*mox3-0.7.0 (03 Jan 2014)
+
+  03 Jan 2014; Ian Delaney <idella4@gentoo.org> +metadata.xml,
+  +mox3-0.7.0.ebuild:
+  new package required as a dep for python-heatclient, ebuild prepared by me
