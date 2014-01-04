@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.50 2013/12/11 10:27:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.51 2014/01/04 22:35:55 dilfridge Exp $
 
 EAPI=5
 
@@ -40,14 +40,14 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+blksha1 +curl cgi doc emacs gnome-keyring +gpg gtk highlight +iconv +nls +pcre +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
+IUSE="+blksha1 +curl cgi doc emacs gnome-keyring +gpg gtk highlight +iconv mediawiki +nls +pcre +perl +python ppcsha1 tk +threads +webdav xinetd cvs subversion test"
 
 # Common to both DEPEND and RDEPEND
 CDEPEND="
 	dev-libs/openssl
 	sys-libs/zlib
 	pcre? ( dev-libs/libpcre )
-	perl? ( dev-lang/perl[-build(-)] )
+	perl? ( dev-lang/perl:=[-build(-)] )
 	tk? ( dev-lang/tk )
 	curl? (
 		net-misc/curl
@@ -58,6 +58,7 @@ CDEPEND="
 
 RDEPEND="${CDEPEND}
 	gpg? ( app-crypt/gnupg )
+	mediawiki? ( dev-perl/MediaWiki-API )
 	perl? ( dev-perl/Error
 			dev-perl/Net-SMTP-SSL
 			dev-perl/Authen-SASL
@@ -100,6 +101,7 @@ S="${WORKDIR}/${MY_P}"
 REQUIRED_USE="
 	cgi? ( perl )
 	cvs? ( perl )
+	mediawiki? ( perl )
 	subversion? ( perl )
 	webdav? ( curl )
 	gtk? ( python )
@@ -222,6 +224,10 @@ src_prepare() {
 	# bug #350330 - automagic CVS when we don't want it is bad.
 	epatch "${FILESDIR}"/git-1.8.5-optional-cvs.patch
 
+	# install mediawiki perl modules also in vendor_dir
+	# hack, needs better upstream solution
+	epatch "${FILESDIR}"/git-1.8.5-mw-vendor.patch
+
 	sed -i \
 		-e 's:^\(CFLAGS[[:space:]]*=\).*$:\1 $(OPTCFLAGS) -Wall:' \
 		-e 's:^\(LDFLAGS[[:space:]]*=\).*$:\1 $(OPTLDFLAGS):' \
@@ -329,6 +335,11 @@ src_compile() {
 	cd "${S}"/contrib/subtree
 	git_emake
 	use doc && git_emake doc
+
+	if use mediawiki ; then
+		cd "${S}"/contrib/mw-to-git
+		git_emake
+	fi
 }
 
 src_install() {
@@ -389,6 +400,12 @@ src_install() {
 	newdoc README README.git-subtree
 	dodoc git-subtree.txt
 	cd "${S}"
+
+	if use mediawiki ; then
+		cd "${S}"/contrib/mw-to-git
+		git_emake install
+		cd "${S}"
+	fi
 
 	# git-diffall
 	dobin contrib/diffall/git-diffall

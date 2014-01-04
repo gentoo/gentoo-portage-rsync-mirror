@@ -2273,6 +2273,7 @@ dev-vcs/git:curl - Support fetching and pushing (requires webdav too) over http:
 dev-vcs/git:gpg - Pull in gnupg for signing -- without gnupg, attempts at signing will fail at runtime!
 dev-vcs/git:gtk - Include the gitview contrib tool
 dev-vcs/git:highlight - GitWeb support for app-text/highlight
+dev-vcs/git:mediawiki - Support pulling and pushing from MediaWiki
 dev-vcs/git:ppcsha1 - Make use of a bundled routine that is optimized for the PPC arch
 dev-vcs/git:subversion - Include git-svn for dev-vcs/subversion support
 dev-vcs/git:webdav - Adds support for push'ing to HTTP/HTTPS repositories via DAV

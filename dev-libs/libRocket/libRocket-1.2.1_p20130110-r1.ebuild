@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-1.2.1_p20130110-r1.ebuild,v 1.3 2013/09/05 18:29:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/libRocket-1.2.1_p20130110-r1.ebuild,v 1.4 2014/01/04 22:56:02 mgorny Exp $
 
 EAPI=5
 
@@ -41,7 +41,7 @@ multilib_src_configure() {
 		-DSAMPLES_DIR=/usr/share/${PN}/samples
 	)
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] ; then
+	if multilib_build_binaries ; then
 		mycmakeargs+=( $(cmake-utils_use_build samples SAMPLES) )
 	else
 		mycmakeargs+=( -DBUILD_SAMPLES=OFF )
@@ -49,7 +49,7 @@ multilib_src_configure() {
 
 	cmake-utils_src_configure
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] ; then
+	if multilib_build_binaries ; then
 		if use python ; then
 			cfgpybind() {
 				local mycmakeargs=(
@@ -67,7 +67,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	cmake-utils_src_compile
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] ; then
+	if multilib_build_binaries ; then
 		if use python ; then
 			buildpybind() {
 				cp "${S}-${ABI}"/{libRocketCore*,libRocketControls*} "${python_BUILD_DIR}-${EPYTHON}"/ || die
@@ -82,7 +82,7 @@ multilib_src_compile() {
 multilib_src_install() {
 	cmake-utils_src_install
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] ; then
+	if multilib_build_binaries ; then
 		if use python ; then
 			instpybind() {
 				python_domodule "${S}"/bin/rocket.py

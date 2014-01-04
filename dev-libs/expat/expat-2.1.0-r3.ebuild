@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.1.0-r3.ebuild,v 1.10 2014/01/03 04:18:02 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.1.0-r3.ebuild,v 1.11 2014/01/04 22:53:51 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool multilib toolchain-funcs multilib-minimal
@@ -72,7 +72,7 @@ multilib_src_install() {
 		popd >/dev/null
 	fi
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] ; then
+	if multilib_build_binaries ; then
 		# libgeom in /lib and ifconfig in /sbin require libexpat on FreeBSD since
 		# we stripped the libbsdxml copy starting from freebsd-lib-8.2-r1
 		use elibc_FreeBSD && gen_usr_ldscript -a expat
