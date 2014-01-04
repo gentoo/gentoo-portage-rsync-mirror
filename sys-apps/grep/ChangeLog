@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.129 2014/01/02 11:36:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.130 2014/01/04 17:48:58 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -grep-2.5.4-r1.ebuild,
+  -grep-2.6.3.ebuild, -grep-2.7.ebuild, -grep-2.8.ebuild, -grep-2.9.ebuild,
+  -grep-2.10.ebuild, -grep-2.11.ebuild, -grep-2.12.ebuild, -grep-2.13.ebuild,
+  -grep-2.15.ebuild, -files/grep-2.5.3-nls.patch,
+  -files/grep-2.5.3-po-builddir-fix.patch:
+  Removed old versions and files.
 
 *grep-2.16 (02 Jan 2014)
 

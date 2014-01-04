@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.116 2014/01/03 04:20:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.117 2014/01/04 17:40:13 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -kbd-1.12-r8.ebuild,
+  -kbd-1.13-r1.ebuild, -kbd-1.14.1-r1.ebuild, -kbd-1.15.ebuild,
+  -kbd-1.15.1.ebuild, -kbd-1.15.2.ebuild, -kbd-1.15.2-r1.ebuild,
+  -kbd-1.15.4.ebuild, -kbd-1.15.5.ebuild, -kbd-2.0.0.ebuild,
+  -files/kbd-1.08-terminal.patch, -files/kbd-1.12-Meta_utf8.patch,
+  -files/kbd-1.12-alias.patch, -files/kbd-1.12-configure-LANG.patch,
+  -files/kbd-1.12-cz-qwerty-map.patch, -files/kbd-1.12-debian.patch,
+  -files/kbd-1.12-find-map-fix.patch, -files/kbd-1.12-it-euro-map.patch,
+  -files/kbd-1.12-jp-escape.patch, -files/kbd-1.12-kbd_repeat-v2.patch,
+  -files/kbd-1.12-kbio.patch, -files/kbd-1.12-setfont-man.patch,
+  -files/kbd-1.12-unimap.patch, -files/kbd-1.12-xcompile.patch,
+  -files/kbd-1.13-dont-use-error.patch,
+  -files/kbd-1.14.1-missing-configure.patch:
+  Removed old versions and files.
 
   03 Jan 2014; Matt Turner <mattst88@gentoo.org> kbd-1.15.5-r1.ebuild:
   alpha stable, bug 496434.

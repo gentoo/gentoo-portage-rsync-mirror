@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/procps
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.109 2013/12/26 14:41:10 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.110 2014/01/04 17:52:38 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -procps-3.2.8_p11.ebuild,
+  -procps-3.3.4.ebuild, -procps-3.3.8.ebuild, -files/procps-3.2.3-noproc.patch,
+  -files/procps-3.2.7-proc-mount.patch,
+  -files/procps-3.2.8-r1-forest-prefix.patch, -files/procps-3.2.8-time_t.patch,
+  -files/procps-3.2.8-toprc-fixup.patch,
+  -files/procps-mips-define-pagesize.patch:
+  Removed old versions and files.
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> procps-3.3.8-r1.ebuild:
   arm stable, bug #494822

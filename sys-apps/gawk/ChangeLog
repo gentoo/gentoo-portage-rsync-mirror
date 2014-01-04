@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/gawk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.173 2013/12/23 09:07:37 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.174 2014/01/04 17:44:04 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -gawk-3.1.6.ebuild,
+  -gawk-3.1.7.ebuild, -gawk-4.0.0.ebuild, -gawk-4.0.1.ebuild,
+  -gawk-4.0.1-r1.ebuild, -files/autoconf-mktime-2.61.patch,
+  -files/gawk-3.1.3-getpgrp_void.patch, -files/gawk-3.1.6-gnuinfo.patch:
+  Removed old versions and files.
 
   23 Dec 2013; Mike Frysinger <vapier@gentoo.org> gawk-4.0.2.ebuild:
   Mark ia64 stable #467190.
