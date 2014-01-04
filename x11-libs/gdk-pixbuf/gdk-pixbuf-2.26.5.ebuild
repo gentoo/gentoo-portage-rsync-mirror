@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.5.ebuild,v 1.10 2013/11/14 05:46:07 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.26.5.ebuild,v 1.11 2014/01/04 20:46:23 steev Exp $
 
 EAPI="5"
 
@@ -56,7 +56,8 @@ src_configure() {
 }
 
 src_install() {
-	default
+	# Parallel install fails when no gdk-pixbuf is already installd, bug 	#481372
+	MAKEOPTS+=" -j1" default
 	dodoc AUTHORS NEWS* README*
 
 	# New library, remove .la files
