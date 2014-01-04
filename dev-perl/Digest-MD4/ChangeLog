@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-MD4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.33 2014/01/04 13:28:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.34 2014/01/04 16:10:10 jer Exp $
+
+  04 Jan 2014; Jeroen Roovers <jer@gentoo.org> Digest-MD4-1.900.0-r1.ebuild:
+  Stable for HPPA (bug #492130).
 
   04 Jan 2014; Markus Meier <maekke@gentoo.org> Digest-MD4-1.900.0.ebuild:
   arm stable, bug #492130

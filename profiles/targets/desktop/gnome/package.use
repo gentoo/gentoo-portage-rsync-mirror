@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.21 2014/01/04 02:32:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.22 2014/01/04 16:29:10 tetromino Exp $
 
 # Required by folks, needed by empathy
 >=gnome-extra/evolution-data-server-3.8 vala
@@ -23,7 +23,9 @@ app-accessibility/speech-dispatcher python
 app-i18n/ibus dconf gtk3
 app-i18n/uim gtk3
 
-# requires gnome-panel-2, preventing upgrade to gnome-3, bug #496722
+# Require gnome-panel-2, preventing upgrade to gnome-3, bug #496722
+app-i18n/im-ja -gnome
+app-dicts/verbiste -gnome
 dev-ml/lablgtk -gnome
 
 # incompatible with >=evolution-data-server-3.6, bug #449138
