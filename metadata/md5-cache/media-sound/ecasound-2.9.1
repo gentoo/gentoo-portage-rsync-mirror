@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst postrm prepare setup
+DEPEND=sys-libs/readline alsa? ( media-libs/alsa-lib ) audiofile? ( media-libs/audiofile ) jack? ( media-sound/jack-audio-connection-kit ) libsamplerate? ( media-libs/libsamplerate ) lv2? ( >=media-libs/lilv-0.5.0 ) media-libs/ladspa-sdk mikmod? ( media-libs/libmikmod:0 ) ncurses? ( sys-libs/ncurses ) oil? ( dev-libs/liboil ) osc? ( media-libs/liblo ) ruby? ( dev-lang/ruby ) sndfile? ( media-libs/libsndfile ) virtual/pkgconfig python? ( =dev-lang/python-2* ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=a package for multitrack audio processing
+EAPI=4
+HOMEPAGE=http://ecasound.seul.org/ecasound
+IUSE=alsa audiofile debug doc jack libsamplerate lv2 mikmod ncurses oil osc oss python ruby sndfile static-libs test
+KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+LICENSE=GPL-2
+RDEPEND=sys-libs/readline alsa? ( media-libs/alsa-lib ) audiofile? ( media-libs/audiofile ) jack? ( media-sound/jack-audio-connection-kit ) libsamplerate? ( media-libs/libsamplerate ) lv2? ( >=media-libs/lilv-0.5.0 ) media-libs/ladspa-sdk mikmod? ( media-libs/libmikmod:0 ) ncurses? ( sys-libs/ncurses ) oil? ( dev-libs/liboil ) osc? ( media-libs/liblo ) ruby? ( dev-lang/ruby ) sndfile? ( media-libs/libsndfile ) python? ( =dev-lang/python-2* )
+REQUIRED_USE=test? ( lv2 )
+SLOT=1
+SRC_URI=http://ecasound.seul.org/download/ecasound-2.9.1.tar.gz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=dbd117bb714c12d8309ac59e7259a1ff
