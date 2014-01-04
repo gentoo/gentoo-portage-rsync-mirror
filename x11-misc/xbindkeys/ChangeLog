@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xbindkeys
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.62 2013/09/08 19:25:55 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xbindkeys/ChangeLog,v 1.63 2014/01/04 21:10:41 radhermit Exp $
+
+*xbindkeys-1.8.6 (04 Jan 2014)
+
+  04 Jan 2014; Tim Harder <radhermit@gentoo.org> +xbindkeys-1.8.6.ebuild:
+  Version bump.
 
   08 Sep 2013; Michael Weber <xmw@gentoo.org> xbindkeys-1.8.5.ebuild:
   Add ~arm keyword

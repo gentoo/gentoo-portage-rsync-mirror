@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/tw_cli
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.39 2013/03/03 16:45:51 wschlich Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.40 2014/01/04 21:27:06 robbat2 Exp $
+
+*tw_cli-10.2.2.1 (04 Jan 2014)
+
+  04 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> +tw_cli-10.2.2.1.ebuild,
+  tw_cli-10.2.ebuild:
+  Version bump per bug #456184, also solves bug #432140. Please note the new
+  license per the LSI 3ware-buyout.
 
   03 Mar 2013; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
   removed myself from metadata.xml

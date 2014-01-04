@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.9.9-r1.ebuild,v 1.10 2013/11/22 08:52:16 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.9.9.9-r1.ebuild,v 1.11 2014/01/04 21:30:37 robbat2 Exp $
 
 EAPI=4
 inherit eutils
@@ -25,6 +25,9 @@ src_prepare() {
 		"${FILESDIR}"/${P}-force64bit-tiger.patch \
 		"${FILESDIR}"/${P}-align.patch \
 		"${FILESDIR}"/${P}-alignment.patch
+	sed -i \
+		-e 's/--netscape//' \
+		"${S}"/doc/Makefile.in
 }
 
 src_configure() {
