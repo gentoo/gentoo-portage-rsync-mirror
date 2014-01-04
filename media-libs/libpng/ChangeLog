@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.431 2014/01/03 05:30:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.432 2014/01/04 13:30:28 maekke Exp $
+
+  04 Jan 2014; Markus Meier <maekke@gentoo.org> libpng-1.6.8.ebuild:
+  arm stable, bug #494962
 
   03 Jan 2014; Matt Turner <mattst88@gentoo.org> libpng-1.6.8.ebuild:
   alpha stable, bug 494962.

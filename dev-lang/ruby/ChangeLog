@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.632 2014/01/03 07:31:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.633 2014/01/04 13:29:54 maekke Exp $
+
+  04 Jan 2014; Markus Meier <maekke@gentoo.org> ruby-2.0.0_p353.ebuild:
+  arm stable, bug #492282
 
 *ruby-2.0.0_p353-r1 (03 Jan 2014)
 

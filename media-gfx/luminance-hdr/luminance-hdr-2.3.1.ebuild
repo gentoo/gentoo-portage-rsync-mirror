@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.1.ebuild,v 1.2 2013/09/28 20:06:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.1.ebuild,v 1.3 2014/01/04 13:14:30 maekke Exp $
 
 EAPI=5
 
@@ -15,10 +15,15 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LANGS=" cs de es fi fr hi hu id it pl ro ru sk tr zh"
-IUSE="sse2 ${LANGS// / linguas_} openmp"
+IUSE="openmp sse2 test ${LANGS// / linguas_}"
 
-DEPEND="
-	>=media-gfx/exiv2-0.14
+RDEPEND="
+	dev-libs/boost:0=
+	dev-qt/qtcore:4
+	dev-qt/qtgui:4
+	dev-qt/qtsql:4
+	dev-qt/qtwebkit:4
+	>=media-gfx/exiv2-0.14:0=
 	media-libs/lcms:2
 	media-libs/libpng:0=
 	>=media-libs/libraw-0.13.4:=
@@ -26,12 +31,9 @@ DEPEND="
 	>=media-libs/tiff-3.8.2-r2:0
 	sci-libs/fftw:3.0[threads]
 	sci-libs/gsl
-	virtual/jpeg:0
-	dev-qt/qtcore:4
-	dev-qt/qtgui:4
-	dev-qt/qtsql:4
-	dev-qt/qtwebkit:4"
-RDEPEND="${DEPEND}"
+	virtual/jpeg:0"
+DEPEND="${DEPEND}
+	test? ( dev-cpp/gtest )"
 
 DOCS=( AUTHORS BUGS Changelog README TODO )
 
