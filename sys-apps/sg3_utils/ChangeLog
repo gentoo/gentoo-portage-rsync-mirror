@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sg3_utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.108 2013/12/31 08:44:54 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.109 2014/01/04 13:53:17 vapier Exp $
+
+  04 Jan 2014; Mike Frysinger <vapier@gentoo.org> sg3_utils-1.37.ebuild:
+  Drop sdparm dep as the one script that used it was moved out a while ago
+  #496822 by Fernando V..
 
   31 Dec 2013; Markus Meier <maekke@gentoo.org> sg3_utils-1.37.ebuild:
   arm stable, bug #495932

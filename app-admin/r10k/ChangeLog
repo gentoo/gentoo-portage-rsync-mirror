@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/r10k
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/ChangeLog,v 1.5 2013/11/24 08:56:21 vikraman Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/ChangeLog,v 1.6 2014/01/04 13:59:00 vikraman Exp $
+
+*r10k-1.1.1 (04 Jan 2014)
+
+  04 Jan 2014; Vikraman <vikraman@gentoo.org> +r10k-1.1.1.ebuild, metadata.xml:
+  Bump to version 1.1.1
 
   24 Nov 2013; Vikraman <vikraman@gentoo.org> metadata.xml:
   Add rubyforge upstream for euscan
