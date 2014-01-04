@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/lightdm-gtk-greeter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.18 2013/12/11 21:43:00 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.19 2014/01/03 23:23:50 hwoarang Exp $
+
+*lightdm-gtk-greeter-1.7.0 (03 Jan 2014)
+
+  03 Jan 2014; Markos Chandras <hwoarang@gentoo.org>
+  +lightdm-gtk-greeter-1.7.0.ebuild, -lightdm-gtk-greeter-1.1.6.ebuild,
+  -lightdm-gtk-greeter-1.6.0.ebuild:
+  Version bump. Remove old testing ebuilds
 
   11 Dec 2013; Pacho Ramos <pacho@gentoo.org> lightdm-gtk-greeter-1.6.1.ebuild:
   amd64/x86 stable, bug #492796
