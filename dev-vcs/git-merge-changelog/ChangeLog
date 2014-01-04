@@ -1,0 +1,10 @@
+# ChangeLog for dev-vcs/git-merge-changelog
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-merge-changelog/ChangeLog,v 1.1 2014/01/04 11:04:51 ulm Exp $
+
+*git-merge-changelog-20140103 (04 Jan 2014)
+
+  04 Jan 2014; Ulrich Müller <ulm@gentoo.org>
+  +git-merge-changelog-20140103.ebuild, +metadata.xml:
+  Initial import. Ebuild contributed by me.
+
