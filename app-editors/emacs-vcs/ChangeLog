@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/emacs-vcs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.142 2013/12/16 23:59:27 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.143 2014/01/04 20:05:39 ulm Exp $
+
+*emacs-vcs-24.3.50_pre20131231 (04 Jan 2014)
+
+  04 Jan 2014; Ulrich Müller <ulm@gentoo.org>
+  +emacs-vcs-24.3.50_pre20131231.ebuild:
+  Snapshot of trunk.
 
   17 Dec 2013; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.3.9999.ebuild:
   Option --without-compress-info is no longer available in upstream configure.
