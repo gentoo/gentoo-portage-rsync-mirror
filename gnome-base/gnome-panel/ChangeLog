@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-panel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.365 2013/12/08 18:33:21 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.366 2014/01/04 02:44:19 tetromino Exp $
+
+  04 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-panel-2.32.1-r3.ebuild, +files/gnome-panel-2.32.1-gmodule.patch:
+  Fix underlinking failure (bug #496722, thanks to David Davidson).
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnome-panel-3.8.0-r1.ebuild:
   x86 stable, bug #478252

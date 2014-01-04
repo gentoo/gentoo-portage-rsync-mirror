@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r3.ebuild,v 1.13 2013/09/08 17:53:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r3.ebuild,v 1.14 2014/01/04 02:44:19 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -94,6 +94,9 @@ src_prepare() {
 
 	# Fix underlinking, bug #384533
 	epatch "${FILESDIR}/${P}-underlinking.patch"
+
+	# More underlinking, bug #496722
+	epatch "${FILESDIR}/${P}-gmodule.patch"
 
 	# automake-1.13 fix, bug #479890
 	sed -i -e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' configure.ac || die

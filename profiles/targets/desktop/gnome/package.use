@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.20 2013/12/15 14:19:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.21 2014/01/04 02:32:24 tetromino Exp $
 
 # Required by folks, needed by empathy
 >=gnome-extra/evolution-data-server-3.8 vala
@@ -22,6 +22,9 @@ app-accessibility/speech-dispatcher python
 # gtk3 input method plugins required for gnome3; gnome-shell wants ibus[dconf]
 app-i18n/ibus dconf gtk3
 app-i18n/uim gtk3
+
+# requires gnome-panel-2, preventing upgrade to gnome-3, bug #496722
+dev-ml/lablgtk -gnome
 
 # incompatible with >=evolution-data-server-3.6, bug #449138
 dev-vcs/giggle -eds
