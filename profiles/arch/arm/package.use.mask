@@ -1,6 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.188 2013/12/31 08:46:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.189 2014/01/04 14:47:37 hasufell Exp $
+
+# Julian Ospald <hasufell@gentoo.org> (04 Jan 2014)
+# no keyword for media-libs/swfdec and media-libs/libtimidity
+>=dev-libs/DirectFB-1.7.1 timidity swfdec
 
 # Markus Meier <maekke@gentoo.org> (26 Dec 2013)
 # Unkeyworded deps, bug #493780
@@ -12,7 +16,7 @@ app-office/gnumeric libgda
 
 # Pacho Ramos <pacho@gentoo.org> (28 Nov 2013)
 # Missing keywords, bug #492820
-net-im/telepathy-connection-managers sipe     
+net-im/telepathy-connection-managers sipe
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Nov 2013)
 # <sys-devel/llvm-3.2 is not keyworded

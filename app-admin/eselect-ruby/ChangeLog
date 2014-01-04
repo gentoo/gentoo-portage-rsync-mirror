@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-ruby
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.48 2013/08/14 12:11:00 a3li Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ruby/ChangeLog,v 1.49 2014/01/04 14:34:38 a3li Exp $
+
+*eselect-ruby-20131227 (04 Jan 2014)
+
+  04 Jan 2014; Alex Legler <a3li@gentoo.org> -eselect-ruby-20120106.ebuild,
+  -eselect-ruby-20130814.ebuild, +eselect-ruby-20131227.ebuild:
+  Version bump for ruby21 support; removing unneded versions
 
 *eselect-ruby-20130814 (14 Aug 2013)
 

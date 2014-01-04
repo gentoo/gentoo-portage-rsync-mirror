@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/DirectFB
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.132 2013/03/19 20:13:40 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.133 2014/01/04 14:49:51 hasufell Exp $
+
+*DirectFB-1.7.1 (04 Jan 2014)
+
+  04 Jan 2014; Julian Ospald <hasufell@gentoo.org> +DirectFB-1.7.1.ebuild,
+  +files/DirectFB-1.7.1-build.patch, +files/DirectFB-1.7.1-flags.patch:
+  version bump wrt #476834
 
   19 Mar 2013; Mike Frysinger <vapier@gentoo.org> +files/DirectFB-1.6.3-atomic-f
   ix-compiler-error-when-building-for-thumb2.patch, DirectFB-1.6.3-r1.ebuild:

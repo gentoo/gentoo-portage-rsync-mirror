@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-whiskermenu-plugin/xfce4-whiskermenu-plugin-1.3.0.ebuild,v 1.2 2013/12/31 08:41:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-whiskermenu-plugin/xfce4-whiskermenu-plugin-1.3.0.ebuild,v 1.3 2014/01/04 14:33:14 hasufell Exp $
 
 EAPI=5
 
@@ -29,9 +29,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	local i
+	cd po || die
 	if [[ -n "${LINGUAS+x}" ]] ; then
-		for i in $(grep add_subdirectory po/CMakeLists.txt | sed 's/add_subdirectory(//;s/)$//') ; do
-			has ${i} ${LINGUAS} || { sed -i -e "/add_subdirectory(${i})/d" po/CMakeLists.txt || die ; }
+		for i in *.po ; do
+			einfo "removing ${i%.po} linguas"
+			has ${i%.po} ${LINGUAS} || { rm ${i} || die ; }
 		done
 	fi
 }

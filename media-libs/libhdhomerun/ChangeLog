@@ -1,10 +1,14 @@
 # ChangeLog for media-libs/libhdhomerun
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhdhomerun/ChangeLog,v 1.1 2013/03/24 19:54:54 cardoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhdhomerun/ChangeLog,v 1.2 2014/01/04 14:41:38 cardoe Exp $
+
+*libhdhomerun-20130328 (04 Jan 2014)
+
+  04 Jan 2014; Doug Goldstein <cardoe@gentoo.org> +libhdhomerun-20130328.ebuild:
+  Version bump. Thanks to Jess Haas <gentoo@jesshaas.com>
 
 *libhdhomerun-20130117 (24 Mar 2013)
 
   24 Mar 2013; Doug Goldstein <cardoe@gentoo.org>
   +libhdhomerun-20130117.ebuild, +files/dont-strip.patch, +metadata.xml:
   Initial version of SiliconDust's HDHomeRun utilities and library
-

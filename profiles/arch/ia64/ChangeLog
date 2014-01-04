@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.197 2013/11/10 15:38:33 chithanh Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.198 2014/01/04 14:49:28 hasufell Exp $
+
+  04 Jan 2014; Julian Ospald <hasufell@gentoo.org> package.use.mask:
+  add useflag mask for dev-libs/DirectFB-1.7.1 version bump
 
   10 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Mask llvm flag until sys-devel/llvm is keyworded, bug #320221.
