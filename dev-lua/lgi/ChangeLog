@@ -1,6 +1,11 @@
 # ChangeLog for dev-lua/lgi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.2 2013/02/08 15:48:18 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.3 2014/01/04 21:38:24 robbat2 Exp $
+
+*lgi-0.7.2 (04 Jan 2014)
+
+  04 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> +lgi-0.7.2.ebuild:
+  Bump per bug #483830.
 
 *lgi-0.6.2-r1 (08 Feb 2013)
 
