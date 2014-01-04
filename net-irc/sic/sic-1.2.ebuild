@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/sic-1.0.ebuild,v 1.4 2012/02/16 07:09:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/sic-1.2.ebuild,v 1.1 2014/01/04 05:50:07 radhermit Exp $
 
+EAPI=4
 inherit toolchain-funcs
 
 DESCRIPTION="An extremly simple IRC client"
@@ -10,31 +11,26 @@ SRC_URI="http://dl.suckless.org/tools/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s/CFLAGS =/CFLAGS +=/g" \
 		-e "s/-Os//" \
-		-e "s/LDFLAGS =/LDFLAGS +=/" \
-		-e "s/-s //g" \
+		-e "s/LDFLAGS = -s/LDFLAGS +=/" \
+		-e "/^LIBS =/d" \
 		-e "s/= cc/= $(tc-getCC)/g" \
 		config.mk || die "sed failed"
+
+	# enable verbose build
+	sed -i 's/@${CC}/${CC}/' Makefile || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed"
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed"
-
-	dodoc README
+	emake DESTDIR="${D}" PREFIX="/usr" install
 }
