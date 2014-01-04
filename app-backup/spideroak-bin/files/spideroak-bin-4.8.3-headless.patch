@@ -1,8 +1,0 @@
---- usr/bin/SpiderOak.orig	2012-08-26 08:10:42.387011624 +0200
-+++ usr/bin/SpiderOak	2012-08-26 08:10:48.899956298 +0200
-@@ -5,4 +5,4 @@
- QT_PLUGIN_PATH= ; export QT_PLUGIN_PATH
- SpiderOak_EXEC_SCRIPT=$(cd `dirname $0` ; pwd)/SpiderOak
- export SpiderOak_EXEC_SCRIPT
--exec "/opt/SpiderOak/lib/SpiderOak" "$@"
-+exec "/opt/SpiderOak/lib/SpiderOak" --headless "$@"
