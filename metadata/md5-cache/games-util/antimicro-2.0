@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure prepare
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 media-libs/libsdl:0[joystick] x11-libs/libX11 x11-libs/libXtst
+DESCRIPTION=Map keyboard and mouse buttons to gamepad buttons
+EAPI=5
+HOMEPAGE=https://github.com/Ryochan7/antimicro
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 media-libs/libsdl:0[joystick] x11-libs/libX11 x11-libs/libXtst
+SLOT=0
+SRC_URI=https://github.com/Ryochan7/antimicro/archive/2.0.tar.gz -> antimicro-2.0.tar.gz
+_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=0dfdc58e83fcf46fd2d74b90b2ca1978
