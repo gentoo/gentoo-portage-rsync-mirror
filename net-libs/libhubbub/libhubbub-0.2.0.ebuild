@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/libhubbub-0.2.0.ebuild,v 1.2 2013/06/23 16:44:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/libhubbub-0.2.0.ebuild,v 1.3 2014/01/05 19:15:29 grobian Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.netsurf-browser.org/projects/hubbub/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm"
+KEYWORDS="~amd64 ~arm ~m68k-mint"
 IUSE="doc test"
 
 #libjson.so.0.0.1 from app-emulation/emul-linux-x86-baselibs is outdated

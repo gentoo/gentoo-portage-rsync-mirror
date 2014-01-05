@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libhubbub
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/ChangeLog,v 1.2 2013/06/23 16:44:07 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/ChangeLog,v 1.3 2014/01/05 19:15:29 grobian Exp $
+
+  05 Jan 2014; Fabian Groffen <grobian@gentoo.org> libhubbub-0.2.0.ebuild:
+  Marked ~m68k-mint, bug #494512
 
   23 Jun 2013; Michael Weber <xmw@gentoo.org> libhubbub-0.2.0.ebuild:
   Migrate to netsurf.eclass

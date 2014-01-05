@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/fritzing
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/ChangeLog,v 1.9 2013/08/04 04:46:58 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/ChangeLog,v 1.10 2014/01/05 19:02:26 mrueg Exp $
+
+*fritzing-0.8.5b (05 Jan 2014)
+
+  05 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +fritzing-0.8.5b.ebuild,
+  metadata.xml:
+  Add myself as maintainer. Version bump. Fixes bug #496938.
 
 *fritzing-0.8.3b (04 Aug 2013)
 
