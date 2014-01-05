@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.210 2014/01/05 09:10:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.211 2014/01/05 09:37:39 ago Exp $
+
+  05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ntp-4.2.6_p5-r10.ebuild:
+  Stable for alpha, wrt bug #496776
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ntp-4.2.6_p5-r10.ebuild:
   Stable for arm, wrt bug #496776
