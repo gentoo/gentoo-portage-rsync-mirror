@@ -1,0 +1,26 @@
+From f2a7c6548ad508c94398e10c49c962363e15d739 Mon Sep 17 00:00:00 2001
+From: Ray Strode <rstrode@redhat.com>
+Date: Wed, 19 Sep 2012 18:27:22 -0400
+Subject: [PATCH] configure: add -lm dependency on mixer libs
+
+the mixer applet requires -lm to build.
+this commit adds that dependency.
+---
+ configure.in | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configure.in b/configure.in
+index 7c1c8fc..b318fb5 100644
+--- a/configure.in
++++ b/configure.in
+@@ -297,6 +297,7 @@ if test "x$enable_mixer" != "xno"; then
+         AC_MSG_ERROR([Mixer applet explicitly requested but a compatible gstreamer version was not found])
+     fi
+ fi
++MIXER_LIBS="$MIXER_LIBS -lm"
+ AM_CONDITIONAL(BUILD_MIXER_APPLET, test "x$enable_mixer" = "xyes")
+ AC_SUBST(MIXER_CFLAGS)
+ AC_SUBST(MIXER_LIBS)
+-- 
+1.8.5.2
+
