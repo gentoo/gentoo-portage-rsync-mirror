@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.8.ebuild,v 1.1 2013/01/06 23:04:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.9.ebuild,v 1.1 2014/01/05 16:10:13 polynomial-c Exp $
 
 EAPI="4"
 
@@ -13,13 +13,14 @@ SRC_URI="ftp://oss.sgi.com/www/projects/libnuma/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux"
-IUSE="perl static-libs"
-
-RDEPEND="perl? ( dev-lang/perl )"
+IUSE="static-libs"
 
 src_prepare() {
 	echo "printf $(get_libdir)" > getlibdir
 	epatch "${FILESDIR}"/${PN}-2.0.8-static_libs.patch
+	epatch "${FILESDIR}"/${PN}-2.0.8-cpuid-pic.patch #456238
+	epatch "${FILESDIR}"/${PN}-2.0.9-testsuite_fix.patch
+	rm numastat || die #466108
 }
 
 src_compile() {
@@ -29,6 +30,7 @@ src_compile() {
 		RANLIB="$(tc-getRANLIB)" \
 		CFLAGS="${CFLAGS}" \
 		BENCH_CFLAGS="" \
+		THREAD_SUPPORT=$(tc-has-tls && echo yes || echo no) \
 		BUILD_STATIC=$(usex static-libs)
 }
 
@@ -37,7 +39,7 @@ src_test() {
 		einfo "The only generically safe test is regress2."
 		einfo "The other test cases require 2 NUMA nodes."
 		cd test
-		./regress2 || die "regress2 failed!"
+		./regress2 || die
 	else
 		ewarn "You do not have baseline NUMA support in your kernel, skipping tests."
 	fi
@@ -49,7 +51,4 @@ src_install() {
 	rm -rf "${ED}"/usr/share/man/man[25]
 	doman *.8 # makefile doesnt get them all
 	dodoc README TODO CHANGES DESIGN
-	if ! use perl ; then
-		rm "${ED}"/usr/bin/numastat "${ED}"/usr/share/man/man8/numastat.8 || die
-	fi
 }
