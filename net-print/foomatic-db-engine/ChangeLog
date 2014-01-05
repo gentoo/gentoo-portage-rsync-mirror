@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-db-engine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.76 2013/12/27 22:36:28 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.77 2014/01/05 21:58:33 dilfridge Exp $
+
+  05 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  foomatic-db-engine-4.0.8.ebuild, foomatic-db-engine-4.0.9.ebuild:
+  Fix foomatic dependency
 
   27 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   foomatic-db-engine-4.0.9.ebuild:
