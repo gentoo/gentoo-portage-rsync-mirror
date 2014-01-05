@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jre
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.45 2013/06/29 10:58:57 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jre/ChangeLog,v 1.46 2014/01/05 20:22:24 grobian Exp $
+
+  05 Jan 2014; Fabian Groffen <grobian@gentoo.org> jre-1.7.0.ebuild:
+  Marked ~x{86,64}-macos since oracle-jdk-bin now works
 
 *jre-1.5.0-r2 (29 Jun 2013)
 *jre-1.6.0-r1 (29 Jun 2013)
