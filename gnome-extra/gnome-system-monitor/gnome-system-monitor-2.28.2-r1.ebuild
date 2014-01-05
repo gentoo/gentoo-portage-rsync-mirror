@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.28.2-r1.ebuild,v 1.6 2012/05/05 06:25:23 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-2.28.2-r1.ebuild,v 1.7 2014/01/05 07:54:15 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
-inherit gnome2 eutils
+inherit autotools gnome2 eutils
 
 DESCRIPTION="Process viewer and system resource monitor for Gnome."
 HOMEPAGE="http://library.gnome.org/users/gnome-system-monitor/"
@@ -41,8 +41,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Apply multiple fixes from 2.32 and master branches
 	epatch "${WORKDIR}/${P}-patches"/*.patch
+
+	# Underlinking, bug #497108
+	epatch "${FILESDIR}/${P}-gmodule.patch"
+
+	rm missing || die # missing script too old, causes autoreconf warnings
+	eautoreconf
+	gnome2_src_prepare
 }

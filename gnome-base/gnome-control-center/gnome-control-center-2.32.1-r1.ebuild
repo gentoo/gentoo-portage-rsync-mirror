@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.32.1-r1.ebuild,v 1.8 2012/05/05 05:38:11 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.32.1-r1.ebuild,v 1.9 2014/01/05 07:39:55 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
 
-inherit gnome2 eutils
+inherit autotools gnome2 eutils
 
 DESCRIPTION="The gnome2 Desktop configuration tool"
 HOMEPAGE="http://www.gnome.org/"
@@ -79,8 +79,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Use URL handlers for browser and mailer applications
 	epatch "${FILESDIR}/${P}-mime-handler.patch"
 
@@ -95,11 +93,18 @@ src_prepare() {
 
 	# Don't erase backgounds.xml, bug #344335
 	epatch "${FILESDIR}/${P}-erase-background.patch"
+
+	# Fix underlinking failure, bug #497112
+	epatch "${FILESDIR}/${P}-gmodule.patch"
+
+	rm missing || die # old missing script causes autoreconf warnings
+	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {
 	gnome2_src_install
 	# gmodule is used to load plugins
 	# (on POSIX systems gmodule uses dlopen)
-	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
+	prune_libtool_files --modules
 }
