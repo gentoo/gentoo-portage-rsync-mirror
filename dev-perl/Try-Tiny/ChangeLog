@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.55 2013/09/05 05:51:22 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.56 2014/01/05 01:11:43 hwoarang Exp $
+
+  05 Jan 2014; Markos Chandras <hwoarang@gentoo.org> Try-Tiny-0.180.0.ebuild:
+  Add ~mips
 
   05 Sep 2013; Mike Frysinger <vapier@gentoo.org> Try-Tiny-0.160.0.ebuild,
   Try-Tiny-0.180.0.ebuild:

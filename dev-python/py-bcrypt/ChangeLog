@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py-bcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.7 2014/01/04 04:22:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-bcrypt/ChangeLog,v 1.8 2014/01/05 01:11:42 floppym Exp $
+
+  05 Jan 2014; Mike Gilbert <floppym@gentoo.org> py-bcrypt-0.4.ebuild:
+  Add blocker on dev-python/bcrypt.
 
   04 Jan 2014; Mike Gilbert <floppym@gentoo.org> py-bcrypt-0.4.ebuild:
   Clean up useless DEPEND and RDEPEND.
