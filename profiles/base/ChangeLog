@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.626 2014/01/04 22:26:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.627 2014/01/05 18:22:47 polynomial-c Exp $
+
+  05 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
+  Adjusted polarssl use.mask for media-sound/umurmur.
 
   04 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.use.mask:
   Mask dev-vcs/git[mediawiki] until dependencies are keyworded

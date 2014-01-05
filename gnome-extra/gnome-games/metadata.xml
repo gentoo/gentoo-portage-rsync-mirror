@@ -3,12 +3,6 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <use>
-	<flag name="aisleriot">Install the card game Aisleriot (Solitaire)</flag>
 	<flag name="artworkextra">Installs extra artwork for various games</flag>
-	<flag name="clutter">Install games that use <pkg>media-libs/clutter</pkg></flag>
-	<flag name="glchess">Install Chess written in <pkg>dev-lang/vala</pkg> and
-		OpenGL</flag>
-	<flag name="sudoku">Install the game Sudoku which uses
-		<pkg>dev-python/pygobject</pkg> and introspection</flag>
 </use>
 </pkgmetadata>

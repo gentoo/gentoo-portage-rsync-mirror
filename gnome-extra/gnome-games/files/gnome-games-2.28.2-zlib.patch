@@ -1,0 +1,60 @@
+diff --git a/configure.in b/configure.in
+index a64486f..6a87c49 100644
+--- a/configure.in
++++ b/configure.in
+@@ -114,6 +114,7 @@ need_rsvg=no
+ need_guile=no
+ need_python=no
+ need_libxml=no
++need_zlib=no
+ need_clutter=no
+ need_dbus_glib=no
+ want_sound=no
+@@ -181,6 +182,10 @@ for game in $gamelist; do
+     aisleriot|blackjack) build_libgamescards=yes ;;
+     *) ;;
+   esac
++  case $game in
++    gnect) need_zlib=yes ;;
++    *) ;;
++  esac
+ done
+ 
+ AM_CONDITIONAL([LIBGAMES_SUPPORT_FULL],[test "$libgames_support_full" = "yes"])
+@@ -586,6 +591,14 @@ if test "$need_libxml" = "yes"; then
+   AC_SUBST([XML_LIBS])
+ fi
+ 
++# Check for zlib
++
++if test "$need_zlib" = "yes"; then
++  PKG_CHECK_MODULES([ZLIB], [zlib])
++  AC_SUBST([ZLIB_CFLAGS])
++  AC_SUBST([ZLIB_LIBS])
++fi
++
+ # Check for GNOME modules
+ 
+ if test "$with_platform" = "gnome"; then
+diff --git a/gnect/src/Makefile.am b/gnect/src/Makefile.am
+index 9609fdb..1e122ab 100644
+--- a/gnect/src/Makefile.am
++++ b/gnect/src/Makefile.am
+@@ -60,6 +60,7 @@ gnect_CFLAGS = \
+ 	$(GGZ_GTK_INCLUDES) $(GGZMOD_INCLUDES) $(GGZCORE_INCLUDES) \
+ 	$(LIBGGZ_INCLUDES) $(GGZDMOD_INCLUDES) \
+ 	$(GTK_CFLAGS) \
++	$(ZLIB_CFLAGS) \
+ 	$(AM_CFLAGS)
+ 
+ gnect_LDADD = \
+@@ -67,7 +68,8 @@ gnect_LDADD = \
+ 	$(GTK_LIBS) \
+ 	$(INTLLIBS) \
+ 	$(LIB_GGZMOD) \
+-	$(LIB_GGZ_GTK)
++	$(LIB_GGZ_GTK) \
++	$(ZLIB_LIBS)
+ 
+ if HAVE_GNOME
+ gnect_CFLAGS += $(GNOME_CFLAGS)

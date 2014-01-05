@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/zip
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.101 2013/02/18 22:42:54 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.102 2014/01/05 18:26:15 vapier Exp $
+
+*zip-3.0-r2 (05 Jan 2014)
+
+  05 Jan 2014; Mike Frysinger <vapier@gentoo.org> +zip-3.0-r2.ebuild:
+  Handle running configure ourselves and be stricter with feature flags so they
+  are respected #435410 by Ambroz Bizjak.
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> zip-3.0-r1.ebuild:
   Add ~arm-linux keyword.

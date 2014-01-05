@@ -1,6 +1,23 @@
 # ChangeLog for gnome-extra/gnome-games
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.334 2013/06/25 18:51:05 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.335 2014/01/05 18:30:49 tetromino Exp $
+
+  05 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-games-2.28.2.ebuild, -gnome-games-3.6.1-r1.ebuild,
+  +files/gnome-games-2.28.2-zlib.patch, metadata.xml:
+  Fix underlinking failure (bug #497114, thanks to d_dart). Remove gnome-3.6
+  version. For >=gnome-3.8, please use split gnome-games packages:
+  games-puzzle/five-or-more
+  games-board/four-in-a-row
+  games-board/gnome-chess
+  games-puzzle/gnome-klotski
+  games-board/gnome-mines
+  games-arcade/gnome-robots
+  games-puzzle/gnome-tetravex
+  games-board/iagno
+  games-puzzle/quadrapassel
+  games-puzzle/swell-foop
+  games-puzzle/gnome-sudoku
 
   25 Jun 2013; Pacho Ramos <pacho@gentoo.org> -gnome-games-3.4.2.ebuild:
   Drop old

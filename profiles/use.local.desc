@@ -2632,11 +2632,7 @@ gnome-extra/gnome-color-manager:packagekit - Enable support for the distro-neutr
 gnome-extra/gnome-do-plugins:banshee - Enables the Banshee (media-sound/banshee) plugin
 gnome-extra/gnome-dvb-daemon:totem - Build a plugin for media-video/totem
 gnome-extra/gnome-dvb-daemon:vala - Add support for dev-lang/vala
-gnome-extra/gnome-games:aisleriot - Install the card game Aisleriot (Solitaire)
 gnome-extra/gnome-games:artworkextra - Installs extra artwork for various games
-gnome-extra/gnome-games:clutter - Install games that use media-libs/clutter
-gnome-extra/gnome-games:glchess - Install Chess written in dev-lang/vala and OpenGL
-gnome-extra/gnome-games:sudoku - Install the game Sudoku which uses dev-python/pygobject and introspection
 gnome-extra/gnome-media:twolame - Allow encoding MPEG Audio Layer 2 (MP2) files using twolame
 gnome-extra/gnome-packagekit:systemd - Use sys-apps/systemd instead of sys-auth/consolekit for rebooting
 gnome-extra/gnome-power-manager:applet - Build battery monitor applet
