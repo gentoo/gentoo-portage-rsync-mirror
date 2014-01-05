@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/dwdiff-2.0.8.ebuild,v 1.1 2014/01/04 19:09:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwdiff/dwdiff-2.0.9.ebuild,v 1.1 2014/01/05 18:00:05 polynomial-c Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -21,7 +21,6 @@ DEPEND="${COMMON_DEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.0.8-configure_fix.patch
 	sed -i \
 		-e '/INSTALL/s:COPYING::' \
 		Makefile.in || die

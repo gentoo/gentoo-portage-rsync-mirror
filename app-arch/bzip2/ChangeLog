@@ -1,6 +1,15 @@
 # ChangeLog for app-arch/bzip2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.108 2013/07/28 14:04:19 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.110 2014/01/05 17:58:12 vapier Exp $
+
+*bzip2-1.0.6-r5 (05 Jan 2014)
+
+  05 Jan 2014; Mike Frysinger <vapier@gentoo.org> +bzip2-1.0.6-r5.ebuild,
+  +files/bzip2-1.0.6-out-of-tree-build.patch, bzip2-1.0.6-r4.ebuild:
+  Add minimal out-of-tree build support to speed up the build a bit.
+
+  05 Jan 2014; Mike Frysinger <vapier@gentoo.org> bzip2-1.0.6-r4.ebuild:
+  Only set -static in LDFLAGS for prog building #485690 by Greg Turner.
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> bzip2-1.0.6-r4.ebuild:
   Fix blocker on emul-libs

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.6-r4.ebuild,v 1.4 2014/01/05 17:47:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.6-r5.ebuild,v 1.1 2014/01/05 17:58:12 vapier Exp $
 
 # XXX: atm, libbz2.a is always PIC :(, so it is always built quickly
 #      (since we're building shared libs) ...
@@ -31,6 +31,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.3-no-test.patch
 	epatch "${FILESDIR}"/${PN}-1.0.4-POSIX-shell.patch #193365
 	epatch "${FILESDIR}"/${PN}-1.0.6-mingw.patch #393573
+	epatch "${FILESDIR}"/${PN}-1.0.6-out-of-tree-build.patch
 
 	# - Use right man path
 	# - Generate symlinks instead of hardlinks
@@ -40,12 +41,11 @@ src_prepare() {
 		-e 's:ln -s -f $(PREFIX)/bin/:ln -s -f :' \
 		-e 's:$(PREFIX)/lib:$(PREFIX)/$(LIBDIR):g' \
 		Makefile || die
-
-	multilib_copy_sources
 }
 
 bemake() {
 	emake \
+		VPATH="${S}" \
 		CC="$(tc-getCC)" \
 		AR="$(tc-getAR)" \
 		RANLIB="$(tc-getRANLIB)" \
@@ -53,12 +53,12 @@ bemake() {
 }
 
 multilib_src_compile() {
-	bemake -f Makefile-libbz2_so all
-	bemake all LDFLAGS="${LDFLAGS} $(usex static -static '')"
+	bemake -f "${S}"/Makefile-libbz2_so all
+	bemake -f "${S}"/Makefile all LDFLAGS="${LDFLAGS} $(usex static -static '')"
 }
 
 multilib_src_install() {
-	emake PREFIX="${ED}"/usr LIBDIR=$(get_libdir) install
+	into /usr
 
 	# Install the shared lib manually.  We install:
 	#  .x.x.x - standard shared lib behavior
@@ -69,19 +69,44 @@ multilib_src_install() {
 	for v in libbz2.so{,.{${PV%%.*},${PV%.*}}} ; do
 		dosym libbz2.so.${PV} /usr/$(get_libdir)/${v}
 	done
-	gen_usr_ldscript -a bz2
 
-	use static || newbin bzip2-shared bzip2
+	if multilib_build_binaries ; then
+		gen_usr_ldscript -a bz2
+
+		dobin bzip2recover
+		into /
+		dobin bzip2
+	fi
 }
 
 multilib_src_install_all() {
-	dodoc README* CHANGES bzip2.txt manual.*
+	# `make install` doesn't cope with out-of-tree builds, nor with
+	# installing just non-binaries, so handle things ourselves.
+	insinto /usr/include
+	doins bzlib.h
+	into /usr
+	dobin bz{diff,grep,more}
+	doman *.1
+
+	dosym bzdiff /usr/bin/bzcmp
+	dosym bzdiff.1 /usr/share/man/man1/bzcmp.1
+
+	dosym bzmore /usr/bin/bzless
+	dosym bzmore.1 /usr/share/man/man1/bzless.1
+
+	local x
+	for x in bunzip2 bzcat bzip2recover ; do
+		dosym bzip2.1 /usr/share/man/man1/${x}.1
+	done
+	for x in bz{e,f}grep ; do
+		dosym bzgrep /usr/bin/${x}
+		dosym bzgrep.1 /usr/share/man/man1/${x}.1
+	done
+
+	dodoc README* CHANGES manual.pdf
+	dohtml manual.html
 
 	# move "important" bzip2 binaries to /bin and use the shared libbz2.so
-	dodir /bin
-	mv "${ED}"/usr/bin/b{zip2,zcat,unzip2} "${ED}"/bin/ || die
 	dosym bzip2 /bin/bzcat
 	dosym bzip2 /bin/bunzip2
-
-	use static-libs || find "${ED}"/usr -name libbz2.a -delete
 }
