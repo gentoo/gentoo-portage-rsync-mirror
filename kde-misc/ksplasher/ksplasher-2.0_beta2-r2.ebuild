@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplasher/ksplasher-2.0_beta2-r2.ebuild,v 1.1 2013/09/09 04:20:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplasher/ksplasher-2.0_beta2-r2.ebuild,v 1.2 2014/01/05 21:26:20 creffett Exp $
 
-EAPI=2
-PYTHON_DEPEND="2"
-inherit python eutils
+EAPI=5
+PYTHON_COMPAT=( python{2_6,2_7} )
+inherit python-single-r1 eutils
 
-DESCRIPTION="a KSplashX engine (KDE4) Splash Screen Creator"
+DESCRIPTION="A KSplashX engine (KDE4) Splash Screen Creator"
 HOMEPAGE="http://ksplasher.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${PN}x${PV/_}.tar.gz"
 
@@ -15,18 +15,17 @@ SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/imaging
-	dev-python/PyQt4"
+RDEPEND="${PYTHON_DEPS}
+	dev-python/imaging[${PYTHON_USEDEP}]
+	dev-python/PyQt4[${PYTHON_USEDEP}]
+"
+DEPEND="${RDEPEND}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 S=${WORKDIR}/${PN}x
 
-pkg_setup() {
-	python_set_active_version 2
-}
-
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-pillow.patch"
-	python_convert_shebangs -r 2 .
 	# ksplasherx is a bash script which calls 'python foo'. We fix it here.
 	sed -i -e 's:python:/usr/bin/env python2:g' ksplasherx || die
 }
@@ -35,6 +34,7 @@ src_install() {
 	dobin ksplasherx || die
 	insinto /usr/share/ksplasherx
 	doins -r src || die
+	python_fix_shebang "${ED}/usr/share/ksplasherx/src/"
 	doicon ksicon.png
 	make_desktop_entry ${PN}x KSplasherX ksicon "Qt;KDE;Graphics"
 	dodoc README

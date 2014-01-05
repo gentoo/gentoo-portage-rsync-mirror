@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/ksplasher
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplasher/ChangeLog,v 1.4 2013/09/09 04:20:15 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksplasher/ChangeLog,v 1.5 2014/01/05 21:26:20 creffett Exp $
+
+  05 Jan 2014; Chris Reffett <creffett@gentoo.org>
+  ksplasher-2.0_beta2-r2.ebuild:
+  Bump EAPI, migrate to python-single-r1
 
 *ksplasher-2.0_beta2-r2 (09 Sep 2013)
 
