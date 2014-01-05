@@ -1,12 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.13 2012/05/03 18:33:00 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.14 2014/01/05 08:17:07 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit gnome2 multilib python eutils
+inherit autotools gnome2 multilib python eutils
 
 DESCRIPTION="A text editor for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/Gedit"
@@ -58,21 +59,20 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Do not fail if remote mounting is not supported.
 	epatch "${FILESDIR}/${PN}-2.30.2-tests-skip.patch"
+
+	# Underlinking for gmodule and libICE, bug #497110
+	epatch "${FILESDIR}/${P}-underlinking.patch"
+
+	rm missing || die # old missing file causes autoreconf warnings
+	eautoreconf
+
+	gnome2_src_prepare
 
 	# disable pyc compiling
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
-}
-
-src_install() {
-	gnome2_src_install
-
-	# Installed for plugins, but they're dlopen()-ed
-	find "${D}" -name "*.la" -delete || die "remove of la files failed"
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.9 2013/09/22 18:01:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-9999.ebuild,v 1.10 2014/01/05 08:22:36 grobian Exp $
 
 EAPI=5
 
@@ -39,11 +39,11 @@ src_configure()
 	use udev || dev="--without-dev --without-udev"
 	hooks="--with-hook=ntp.conf"
 	use elibc_glibc && hooks="${hooks} --with-hook=yp.conf"
-	use kernel_linux && rundir="--rundir=/run"
+	use kernel_linux && rundir="--rundir=${EPREFIX}/run"
 	econf \
-			--prefix="${EPREFIX}" \
-			--libexecdir="${EPREFIX}/lib/dhcpcd" \
-			--dbdir="${EPREFIX}/var/lib/dhcpcd" \
+		--prefix="${EPREFIX}" \
+		--libexecdir="${EPREFIX}/lib/dhcpcd" \
+		--dbdir="${EPREFIX}/var/lib/dhcpcd" \
 		--localstatedir="${EPREFIX}/var" \
 		${rundir} \
 		$(use_enable ipv6) \

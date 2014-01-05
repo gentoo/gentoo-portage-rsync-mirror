@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gedit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.361 2013/12/24 15:28:59 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.362 2014/01/05 08:17:07 tetromino Exp $
+
+  05 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org> gedit-2.30.4.ebuild,
+  +files/gedit-2.30.4-underlinking.patch:
+  Fix underlinking failure (bug #497110, thanks to d_dart).
 
 *gedit-3.10.3 (24 Dec 2013)
 
