@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-9-r1.ebuild,v 1.1 2013/08/06 13:48:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-9-r1.ebuild,v 1.2 2014/01/04 23:11:21 mgorny Exp $
 
 EAPI=5
 inherit eutils libtool toolchain-funcs multilib-minimal
@@ -43,7 +43,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	emake
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]]; then
+	if multilib_build_binaries; then
 		# Build exifautotran and jpegexiforient
 		cd ../debian/extra
 		emake CC="$(tc-getCC)" CFLAGS="${LDFLAGS} ${CFLAGS}"

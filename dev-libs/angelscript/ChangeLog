@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/angelscript
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/ChangeLog,v 1.13 2014/01/04 22:49:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/angelscript/ChangeLog,v 1.14 2014/01/04 23:21:34 hasufell Exp $
+
+*angelscript-2.28.0-r1 (04 Jan 2014)
+
+  04 Jan 2014; Julian Ospald <hasufell@gentoo.org> -angelscript-2.28.0.ebuild,
+  +angelscript-2.28.0-r1.ebuild:
+  install static libs for non-native ABIs as well wrt #497066
 
   04 Jan 2014; Michał Górny <mgorny@gentoo.org> angelscript-2.26.3.ebuild,
   angelscript-2.27.0.ebuild, angelscript-2.27.1.ebuild,

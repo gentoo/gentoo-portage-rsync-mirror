@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.537 2014/01/04 22:26:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.538 2014/01/04 23:17:32 dilfridge Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (4 Jan 2014)
-# Mask until dependencies are keyworded
+# Mask until dependencies are keyworded (bug 497068)
 dev-vcs/git mediawiki
 
 # Sergey Popov <pinkbyte@gentoo.org> (27 Dec 2013)

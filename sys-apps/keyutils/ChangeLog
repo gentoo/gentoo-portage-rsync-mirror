@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/keyutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.35 2012/07/01 18:21:34 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/keyutils/ChangeLog,v 1.36 2014/01/04 23:30:45 robbat2 Exp $
+
+*keyutils-1.5.8 (04 Jan 2014)
+
+  04 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> +keyutils-1.5.8.ebuild,
+  keyutils-1.5.5.ebuild:
+  Version bump, also fix bug #484452 (AR) and bug #421531 (checking kernel
+  config).
 
   01 Jul 2012; Raúl Porcel <armin76@gentoo.org> keyutils-1.5.5.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #417445
@@ -134,4 +141,3 @@
   15 Dec 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +keyutils-1.0.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

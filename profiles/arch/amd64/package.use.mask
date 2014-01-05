@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.176 2013/12/27 17:13:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.177 2014/01/04 23:23:42 dilfridge Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (4 Jan 2014)
+# While globally masked, the needed amd64 keywords are already present
+dev-vcs/git -mediawiki
 
 # Sergey Popov <pinkbyte@gentoo.org> (27 Dec 2013)
 # Boost.Context can be built on amd64

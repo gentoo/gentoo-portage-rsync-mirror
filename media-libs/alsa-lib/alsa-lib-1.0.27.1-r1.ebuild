@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1-r1.ebuild,v 1.2 2013/07/19 16:41:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.27.1-r1.ebuild,v 1.3 2014/01/04 23:06:59 mgorny Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ src_prepare() {
 multilib_src_configure() {
 	local myconf
 	# enable Python only on final ABI
-	if [[ ${ABI} == ${DEFAULT_ABI} ]]; then
+	if multilib_build_binaries; then
 		myconf="$(use_enable python)"
 	else
 		myconf="--disable-python"
@@ -61,7 +61,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	emake
 
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] && use doc; then
+	if multilib_build_binaries && use doc; then
 		emake doc
 		fgrep -Zrl "${S}" doc/doxygen/html | \
 			xargs -0 sed -i -e "s:${S}::"
@@ -70,7 +70,7 @@ multilib_src_compile() {
 
 multilib_src_install() {
 	emake DESTDIR="${D}" install
-	if [[ ${ABI} == ${DEFAULT_ABI} ]] && use doc; then
+	if multilib_build_binaries && use doc; then
 		dohtml -r doc/doxygen/html/.
 	fi
 }

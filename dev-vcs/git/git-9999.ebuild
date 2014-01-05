@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.51 2014/01/04 22:35:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.52 2014/01/04 23:22:32 dilfridge Exp $
 
 EAPI=5
 
@@ -58,7 +58,10 @@ CDEPEND="
 
 RDEPEND="${CDEPEND}
 	gpg? ( app-crypt/gnupg )
-	mediawiki? ( dev-perl/MediaWiki-API )
+	mediawiki? (
+		dev-perl/HTML-Tree
+		dev-perl/MediaWiki-API
+	)
 	perl? ( dev-perl/Error
 			dev-perl/Net-SMTP-SSL
 			dev-perl/Authen-SASL
