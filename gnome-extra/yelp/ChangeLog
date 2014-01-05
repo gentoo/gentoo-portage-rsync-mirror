@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/yelp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.306 2013/12/24 17:15:46 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.307 2014/01/05 07:21:33 tetromino Exp $
+
+  05 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  yelp-2.30.2-r200.ebuild, +files/yelp-2.30.2-gthread.patch:
+  Fix underlinking failure (bug #497106, thanks to d_dart).
 
 *yelp-3.10.1 (24 Dec 2013)
 

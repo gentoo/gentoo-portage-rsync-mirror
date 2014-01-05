@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r200.ebuild,v 1.10 2012/12/19 02:12:52 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r200.ebuild,v 1.11 2014/01/05 07:21:33 tetromino Exp $
 
 # git clone git://git.gnome.org/yelp
 # cd yelp
@@ -56,7 +56,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-uri-handler.patch \
 		"${FILESDIR}"/${P}-print-crash.patch \
 		"${FILESDIR}"/${P}-freeze-move.patch \
-		"${FILESDIR}"/${P}-xz-support.patch
+		"${FILESDIR}"/${P}-xz-support.patch \
+		"${FILESDIR}"/${P}-gthread.patch
 
 	sed -i -e '/CFLAGS/s:-pedantic -ansi::' configure.in || die #196621
 
