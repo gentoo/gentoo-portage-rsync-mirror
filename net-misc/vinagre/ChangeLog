@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vinagre
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.96 2013/12/24 17:35:43 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.97 2014/01/05 17:27:53 tetromino Exp $
+
+  05 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  vinagre-2.30.3.ebuild, +files/vinagre-2.30.3-gmodule.patch:
+  Fix underlinking failure (bug #497116, thanks to d_dart).
 
 *vinagre-3.10.2 (24 Dec 2013)
 

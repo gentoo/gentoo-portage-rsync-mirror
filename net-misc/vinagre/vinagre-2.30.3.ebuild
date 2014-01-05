@@ -1,11 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.3.ebuild,v 1.11 2013/01/07 13:44:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.30.3.ebuild,v 1.12 2014/01/05 17:27:53 tetromino Exp $
 
-EAPI="2"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
-inherit gnome2
+inherit autotools gnome2
 
 DESCRIPTION="VNC client for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/projects/vinagre/"
@@ -52,10 +54,17 @@ pkg_setup() {
 		$(use_enable telepathy)"
 }
 
+src_prepare() {
+	# underlinking failure, bug #497116
+	epatch "${FILESDIR}/${P}-gmodule.patch"
+
+	rm missing || die # old missing script causes autoreconf warnings
+	eautoreconf
+	gnome2_src_prepare
+}
+
 src_install() {
 	gnome2_src_install
-
-	find "${D}" -name "*.la" -delete || die "remove of la files failed"
 
 	# Remove it's own installation of DOCS that go to $PN instead of $P and aren't ecompressed
 	rm -rf "${D}"/usr/share/doc/vinagre
