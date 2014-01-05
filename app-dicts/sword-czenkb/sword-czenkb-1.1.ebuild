@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-czenkb/sword-czenkb-1.1.ebuild,v 1.1 2008/03/14 13:43:55 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-czenkb/sword-czenkb-1.1.ebuild,v 1.2 2014/01/05 22:32:48 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="CzeNKB"
 
 inherit sword-module

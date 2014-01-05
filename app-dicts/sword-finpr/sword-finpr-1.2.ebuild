@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-finpr/sword-finpr-1.2.ebuild,v 1.1 2008/05/13 21:26:51 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-finpr/sword-finpr-1.2.ebuild,v 1.2 2014/01/05 22:48:45 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="FinPR"
 
 inherit sword-module
