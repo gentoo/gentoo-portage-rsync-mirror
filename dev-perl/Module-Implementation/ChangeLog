@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Implementation
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Implementation/ChangeLog,v 1.17 2013/07/08 09:49:39 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Implementation/ChangeLog,v 1.18 2014/01/05 10:54:02 hwoarang Exp $
+
+  05 Jan 2014; Markos Chandras <hwoarang@gentoo.org>
+  Module-Implementation-0.60.0.ebuild:
+  Add ~mips
 
   08 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
   Module-Implementation-0.60.0.ebuild:

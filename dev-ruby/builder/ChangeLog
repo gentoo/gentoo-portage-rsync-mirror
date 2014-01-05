@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.91 2013/12/25 10:26:18 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.92 2014/01/05 10:53:57 graaff Exp $
+
+  05 Jan 2014; Hans de Graaff <graaff@gentoo.org> builder-2.1.2-r3.ebuild:
+  Drop s390 and sh stable flags for ruby.
 
   25 Dec 2013; Hans de Graaff <graaff@gentoo.org> builder-3.1.4.ebuild:
   Add ruby20 to this slot as well for Rails 4.

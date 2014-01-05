@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.378 2014/01/05 08:22:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.379 2014/01/05 10:44:56 polynomial-c Exp $
+
+  05 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> dhcpcd-6.2.0.ebuild,
+  +files/dhcpcd-6.2.0-no_ipv6_fix.patch:
+  Fixed building without ipv6 support (bug #497098).
 
   05 Jan 2014; Fabian Groffen <grobian@gentoo.org> dhcpcd-6.2.0.ebuild,
   dhcpcd-9999.ebuild:

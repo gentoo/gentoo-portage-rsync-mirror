@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/dbext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.39 2014/01/03 18:00:29 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.40 2014/01/05 10:47:37 ago Exp $
+
+  05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> dbext-20.0.ebuild:
+  Stable for x86, wrt bug #495358
 
   03 Jan 2014; Chema Alonso <nimiux@gentoo.org> dbext-20.0.ebuild:
   Stable for amd64 wrt bug #495358

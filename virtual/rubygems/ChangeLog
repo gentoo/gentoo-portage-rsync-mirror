@@ -1,6 +1,10 @@
 # ChangeLog for virtual/rubygems
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.54 2013/12/29 17:20:39 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/ChangeLog,v 1.55 2014/01/05 10:48:01 graaff Exp $
+
+  05 Jan 2014; Hans de Graaff <graaff@gentoo.org> rubygems-1.ebuild,
+  rubygems-4.ebuild:
+  Drop s390 and sh stable flags for ruby.
 
   29 Dec 2013; Markus Meier <maekke@gentoo.org> rubygems-6.ebuild:
   arm stable, bug #483254

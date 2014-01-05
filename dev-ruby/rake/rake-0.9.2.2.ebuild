@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.2.2.ebuild,v 1.16 2013/01/28 15:16:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/rake-0.9.2.2.ebuild,v 1.17 2014/01/05 10:55:30 graaff Exp $
 
 EAPI=4
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -17,7 +17,7 @@ HOMEPAGE="http://rake.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="bash-completion doc"
 
 DEPEND="${DEPEND} app-arch/gzip"

@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/aspell-da
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.55 2013/06/02 08:45:34 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/ChangeLog,v 1.56 2014/01/05 10:57:17 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -aspell-da-1.6.0.ebuild,
+  -aspell-da-1.6.34.ebuild, metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   02 Jun 2013; Agostino Sarubbo <ago@gentoo.org> aspell-da-1.7.42.ebuild:
   Stable for sh, wrt bug #461054

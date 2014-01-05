@@ -1,6 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.57 2013/09/02 07:02:22 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.58 2014/01/05 10:39:04 hwoarang Exp $
+
+# Markos Chandras <hwoarang@gentoo.org> (05 Jan 2014)
+# Perl is heavily unkeyworded on MIPS. See 497068
+dev-vcs/git mediawiki
 
 # Sergey Popov <pinkbyte@gentoo.org> (02 Sep 2013)
 # Not tested

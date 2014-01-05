@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-ssl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.26 2013/12/29 17:26:17 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.27 2014/01/05 10:48:35 graaff Exp $
+
+  05 Jan 2014; Hans de Graaff <graaff@gentoo.org> ruby-ssl-0.ebuild,
+  ruby-ssl-1.ebuild:
+  Drop s390 and sh stable flags for ruby.
 
   29 Dec 2013; Markus Meier <maekke@gentoo.org> ruby-ssl-3.ebuild:
   arm stable, bug #487004

@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/minitest
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.133 2013/12/26 09:28:14 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.134 2014/01/05 10:57:36 graaff Exp $
+
+  05 Jan 2014; Hans de Graaff <graaff@gentoo.org> minitest-2.12.1.ebuild,
+  minitest-3.5.0.ebuild, minitest-4.7.4.ebuild:
+  Drop s390 and sh stable flags for ruby.
 
   26 Dec 2013; Hans de Graaff <graaff@gentoo.org> minitest-4.7.4-r1.ebuild:
   Add ruby21.

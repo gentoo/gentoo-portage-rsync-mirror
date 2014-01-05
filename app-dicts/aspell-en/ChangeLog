@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/aspell-en
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.40 2013/08/07 13:23:26 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-en/ChangeLog,v 1.41 2014/01/05 10:59:16 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -aspell-en-0.51.1.ebuild,
+  -aspell-en-6.0.0.ebuild, metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> aspell-en-7.1.0.ebuild:
   Stable for x86, wrt bug #470304

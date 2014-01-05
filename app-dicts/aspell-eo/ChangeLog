@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/aspell-eo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-eo/ChangeLog,v 1.17 2012/05/17 19:54:26 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-eo/ChangeLog,v 1.18 2014/01/05 10:59:43 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -aspell-eo-0.50.2.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-eo-0.50.2.ebuild,
   aspell-eo-2.1.20000225.2.ebuild:

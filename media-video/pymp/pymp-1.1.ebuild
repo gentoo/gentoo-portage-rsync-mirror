@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/pymp-1.1.ebuild,v 1.4 2013/12/22 19:17:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/pymp-1.1.ebuild,v 1.5 2014/01/05 10:47:24 ago Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.5"
@@ -12,7 +12,7 @@ SRC_URI="http://jdolan.dyndns.org/jaydolan/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-fbsd"
+KEYWORDS="amd64 x86 ~amd64-fbsd"
 IUSE=""
 
 RDEPEND="media-video/mplayer

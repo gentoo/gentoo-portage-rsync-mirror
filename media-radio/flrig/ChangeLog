@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/flrig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/ChangeLog,v 1.31 2014/01/04 15:47:25 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/ChangeLog,v 1.32 2014/01/05 10:46:52 ago Exp $
+
+  05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> flrig-1.3.14.ebuild:
+  Stable for x86, wrt bug #495788
 
   04 Jan 2014; Chema Alonso <nimiux@gentoo.org> flrig-1.3.14.ebuild:
   Stable for amd64 wrt bug #495788

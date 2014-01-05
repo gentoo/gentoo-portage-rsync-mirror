@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1232 2014/01/04 18:17:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1234 2014/01/05 10:43:05 ago Exp $
+
+  05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.10.25.ebuild:
+  Stable for x86, wrt bug #496890
+
+  05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gentoo-sources-3.10.25.ebuild:
+  Stable for amd64, wrt bug #496890
 
   04 Jan 2014; Jeroen Roovers <jer@gentoo.org> gentoo-sources-3.10.25.ebuild:
   Stable for HPPA (bug #496890).

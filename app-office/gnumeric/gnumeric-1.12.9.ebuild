@@ -1,9 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.7.ebuild,v 1.2 2013/09/29 08:54:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.9.ebuild,v 1.1 2014/01/05 10:34:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit eutils gnome2 flag-o-matic python-single-r1
@@ -13,7 +14,7 @@ HOMEPAGE="http://projects.gnome.org/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="+introspection libgda perl python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -21,8 +22,8 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 # Missing gnome-extra/libgnomedb required version in tree
 # but its upstream is dead and will be dropped soon.
 
-# lots of missing files, wait for next release
-# also fails tests due to 80-bit long story
+# lots of missing files, also fails tests due to 80-bit long story
+# upstream bug #721556
 RESTRICT="test"
 
 RDEPEND="
@@ -30,7 +31,7 @@ RDEPEND="
 	sys-libs/zlib
 	>=dev-libs/glib-2.28:2
 	>=gnome-extra/libgsf-1.14.24:=
-	>=x11-libs/goffice-0.10.3:0.10
+	>=x11-libs/goffice-0.10.9:0.10
 	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.24.0:=
 
@@ -57,7 +58,7 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-static \
 		--with-zlib \
-		$(use_with libgda) \
+		$(use_with libgda gda) \
 		$(use_enable introspection) \
 		$(use_with perl) \
 		$(use_with python)
