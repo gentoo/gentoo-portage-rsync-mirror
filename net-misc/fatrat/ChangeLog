@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/fatrat
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/ChangeLog,v 1.3 2013/09/08 10:25:58 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/ChangeLog,v 1.4 2014/01/05 22:20:59 polynomial-c Exp $
+
+  05 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  fatrat-1.2.0_beta2.ebuild, +files/fatrat-1.2.0_beta2-libcrypto_linking.patch:
+  Added upstream patch for missing linking against libcrypto. Thanks to Bob Wya
+  for reporting this problem in bug #496808.
 
   08 Sep 2013; Lars Wendler <polynomial-c@gentoo.org>
   fatrat-1.2.0_beta2.ebuild:

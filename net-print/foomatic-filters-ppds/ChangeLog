@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-filters-ppds
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.28 2013/12/27 22:39:12 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters-ppds/ChangeLog,v 1.29 2014/01/05 22:05:27 dilfridge Exp $
+
+  05 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  foomatic-filters-ppds-20070501.ebuild, foomatic-filters-ppds-20080507.ebuild:
+  EAPI bump; fix foomatic dependency
 
   27 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   foomatic-filters-ppds-20070501.ebuild, foomatic-filters-ppds-20080507.ebuild:

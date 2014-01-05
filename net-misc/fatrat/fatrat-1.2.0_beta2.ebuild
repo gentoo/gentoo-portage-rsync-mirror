@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/fatrat-1.2.0_beta2.ebuild,v 1.3 2013/09/08 10:25:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/fatrat-1.2.0_beta2.ebuild,v 1.4 2014/01/05 22:20:59 polynomial-c Exp $
 
 EAPI=5
 
@@ -27,7 +27,10 @@ RDEPEND="dev-qt/qtgui:4
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-PATCHES=( "${FILESDIR}/${P}-build.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-build.patch"
+	"${FILESDIR}/${P}-libcrypto_linking.patch"
+)
 
 src_configure() {
 		local mycmakeargs="

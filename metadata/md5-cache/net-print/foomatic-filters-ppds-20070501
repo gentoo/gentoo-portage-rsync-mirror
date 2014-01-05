@@ -1,10 +1,11 @@
-DEFINED_PHASES=compile install unpack
+DEFINED_PHASES=compile install prepare
 DESCRIPTION=linuxprinting.org PPD files for non-postscript printers
+EAPI=5
 HOMEPAGE=http://www.linuxprinting.org/foomatic.html
 KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86
 LICENSE=GPL-2
-RDEPEND=|| ( >=net-print/cups-filters-1.0.43 net-print/foomatic-filters )
+RDEPEND=|| ( >=net-print/cups-filters-1.0.43-r1[foomatic] net-print/foomatic-filters )
 SLOT=0
 SRC_URI=http://gentooexperimental.org/~calchan/distfiles/foomatic-filters-ppds-20070501.tar.gz http://linuxprinting.org/download/foomatic/foomatic-filters-ppds-20070501.tar.gz
 _eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=8547233c53c7d91084c608bf56459222
+_md5_=f415e62c2c6df0e6b557bb6e8e8b96b2

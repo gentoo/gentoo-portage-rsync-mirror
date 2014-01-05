@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-bwe/sword-bwe-1.0.ebuild,v 1.1 2008/03/14 02:13:17 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-bwe/sword-bwe-1.0.ebuild,v 1.2 2014/01/05 22:18:50 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="BWE"
 
 inherit sword-module

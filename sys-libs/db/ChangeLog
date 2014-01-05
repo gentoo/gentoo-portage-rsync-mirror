@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.341 2013/09/23 19:21:24 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.342 2014/01/05 22:02:40 robbat2 Exp $
+
+  05 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> -db-4.2.52_p5.ebuild,
+  -db-4.3.29_p1.ebuild, -db-4.4.20_p4.ebuild, -db-4.5.20_p2.ebuild,
+  -db-4.7.25_p3.ebuild, -db-4.8.24.ebuild, -db-4.8.26.ebuild,
+  -db-5.0.21-r1.ebuild, -db-5.0.26.ebuild, -db-5.1.19-r2.ebuild,
+  -db-5.1.25.ebuild, -db-5.2.28.ebuild, -db-5.2.36.ebuild:
+  Cleanup old versions.
 
   23 Sep 2013; Agostino Sarubbo <ago@gentoo.org> db-4.8.30.ebuild:
   Stable for sparc, wrt bug #483184
