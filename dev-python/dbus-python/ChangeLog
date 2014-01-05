@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dbus-python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.137 2013/08/24 11:46:59 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.138 2014/01/05 19:47:54 grobian Exp $
+
+  05 Jan 2014; Fabian Groffen <grobian@gentoo.org> dbus-python-1.2.0.ebuild:
+  Marked ~m68k-mint, bug #494512
 
   24 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
   -dbus-python-1.1.1-r1.ebuild:

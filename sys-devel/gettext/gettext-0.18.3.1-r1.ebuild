@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.1-r1.ebuild,v 1.3 2013/12/16 07:21:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.1-r1.ebuild,v 1.4 2014/01/05 19:50:43 vapier Exp $
 
 EAPI="4"
 
@@ -60,6 +60,7 @@ src_configure() {
 		--with-included-libcroco \
 		--with-included-libunistring \
 		$(use_enable acl) \
+		$(use_enable cxx libasprintf) \
 		$(use_enable ncurses curses) \
 		$(use_enable openmp) \
 		$(use_enable static-libs static) \
