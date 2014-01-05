@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1107 2014/01/01 17:03:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1108 2014/01/05 10:12:49 mgorny Exp $
+
+  05 Jan 2014; Michał Górny <mgorny@gentoo.org> twisted-r1.eclass:
+  Fix twisted SRC_URI. Thanks to yac for the patch.
 
   01 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2013:
   Rotate ChangeLog
