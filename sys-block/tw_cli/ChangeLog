@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.40 2014/01/04 21:27:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.41 2014/01/05 01:43:10 tomwij Exp $
+
+  05 Jan 2014; Tom Wijsman <TomWij@gentoo.org> tw_cli-10.2.2.1.ebuild:
+  [QA] Whitespace changes to make RepoMan happy.
 
 *tw_cli-10.2.2.1 (04 Jan 2014)
 

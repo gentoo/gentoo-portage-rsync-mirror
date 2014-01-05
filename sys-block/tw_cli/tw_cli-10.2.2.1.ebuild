@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.2.2.1.ebuild,v 1.1 2014/01/04 21:27:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.2.2.1.ebuild,v 1.2 2014/01/05 01:43:10 tomwij Exp $
 
 EAPI="5"
 
@@ -45,7 +45,6 @@ RELNOTES="${SRC_URI_BASE}/${PV}_Release_Notes.pdf"
 LICENSE="LSI-tw_cli"
 SLOT="0"
 
-
 # This package can never enter stable, it can't be mirrored and upstream
 # can remove the distfiles from their mirror anytime.
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd ~amd64-fbsd"
@@ -83,7 +82,7 @@ src_install() {
 	newman ${PN}.8.nroff ${PN}.8
 	dohtml *.html
 	dodoc *.txt
-	
+
 	# to comply with license requirement 3.1.b
 	insinto /opt/tw_cli
 	newins ${PORTDIR}/licenses/${LICENSE} LICENSE
