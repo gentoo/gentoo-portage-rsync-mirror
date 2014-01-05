@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/findutils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.221 2013/10/15 09:18:33 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.222 2014/01/05 14:23:27 polynomial-c Exp $
+
+  04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -findutils-4.4.2.ebuild,
+  -findutils-4.5.8.ebuild, -findutils-4.5.9.ebuild, -findutils-4.5.10.ebuild,
+  -findutils-4.5.10-r1.ebuild, -findutils-4.5.11.ebuild,
+  -files/findutils-4.3.12-selinux.diff, -files/findutils-4.5.10-no-gets.patch,
+  -files/findutils-4.5.11-unlinkat.patch:
+  Removed old versions and files.
 
   15 Oct 2013; Lars Wendler <polynomial-c@gentoo.org> findutils-4.4.2.ebuild,
   findutils-4.4.2-r1.ebuild, findutils-4.5.8.ebuild, findutils-4.5.9.ebuild,
