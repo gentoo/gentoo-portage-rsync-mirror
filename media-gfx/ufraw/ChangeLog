@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/ufraw
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.116 2013/06/02 08:43:37 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ChangeLog,v 1.117 2014/01/05 14:37:06 maekke Exp $
+
+  05 Jan 2014; Markus Meier <maekke@gentoo.org> -ufraw-0.18.ebuild,
+  -ufraw-0.19.ebuild, -ufraw-0.19.1.ebuild:
+  remove old
 
   02 Jun 2013; Agostino Sarubbo <ago@gentoo.org> ufraw-0.19.2.ebuild:
   Stable for sh, wrt bug #470502
