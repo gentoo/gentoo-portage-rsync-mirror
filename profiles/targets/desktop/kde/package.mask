@@ -1,5 +1,5 @@
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/kde/package.mask,v 1.1 2013/12/01 21:40:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/kde/package.mask,v 1.2 2014/01/05 16:50:46 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -9,4 +9,5 @@
 # Andreas K. Huettel <dilfridge@gentoo.org> (1 Dec 2013)
 # Mask recent nvidia drivers because of sigprocmask corruption, bug 487558
 # (this hits akonadi and makes significant parts of KDE hang)
->x11-drivers/nvidia-drivers-325.15
+=x11-drivers/nvidia-drivers-319*
+=x11-drivers/nvidia-drivers-331*

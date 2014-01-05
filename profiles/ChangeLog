@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8494 2014/01/05 04:32:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8495 2014/01/05 16:50:46 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  targets/desktop/kde/package.mask:
+  Make nvidia-drivers mask more stringent, since according to user reports also
+  319.76 seems to be affected
 
   05 Jan 2014; creffett <creffett@gentoo.org> default/linux/package.use.mask:
   Remove invalid entries from default/linux/package.use.mask
