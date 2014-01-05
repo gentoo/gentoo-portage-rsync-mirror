@@ -7,5 +7,5 @@ LICENSE=myspell-en_CA-KevinAtkinson public-domain Princeton Ispell
 RDEPEND=>=app-text/aspell-0.60
 SLOT=0
 SRC_URI=mirror://gnu/aspell/dict/en/aspell6-en-7.1-0.tar.bz2
-_eclasses_=aspell-dict	8fec0fbbba24fb7023cdc7be53b64548
+_eclasses_=aspell-dict	fc25d5442beb66c8ff5933832df2222b
 _md5_=20830ea9ad039f8fd23589a051e25e70

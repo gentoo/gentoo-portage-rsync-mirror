@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/stardict-xdict-zh-en-gb
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-xdict-zh-en-gb/ChangeLog,v 1.10 2009/01/23 13:30:42 pva Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-xdict-zh-en-gb/ChangeLog,v 1.11 2014/01/05 11:32:00 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   23 Jan 2009; Peter Volkov <pva@gentoo.org>
   stardict-xdict-zh-en-gb-2.4.2.ebuild:
@@ -38,4 +42,3 @@
   04 Jun 2003; Alastair Tse <liquidx@gentoo.org>
   stardict-xdict-zh-en-gb-2.1.0.ebuild:
   new stardict dictionary. see app-dict/stardict's ChangeLog for more.
-

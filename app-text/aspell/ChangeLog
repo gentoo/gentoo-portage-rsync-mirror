@@ -1,6 +1,10 @@
 # ChangeLog for app-text/aspell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.143 2014/01/02 18:06:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.144 2014/01/05 11:33:24 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   02 Jan 2014; Mike Frysinger <vapier@gentoo.org> aspell-0.60.6.1.ebuild:
   Fix random parallel install errors when relinking #438026 by Nathan Phillip

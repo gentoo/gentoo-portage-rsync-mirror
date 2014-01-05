@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcxxrt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.20 2013/12/22 17:44:24 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.21 2014/01/05 11:37:17 naota Exp $
+
+  05 Jan 2014; Naohiro Aota <naota@gentoo.org> libcxxrt-0.0_p20131222.ebuild:
+  Add ~x86-fbsd. #482820
 
 *libcxxrt-0.0_p20131222 (22 Dec 2013)
 

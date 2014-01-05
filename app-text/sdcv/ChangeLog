@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sdcv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sdcv/ChangeLog,v 1.3 2009/10/30 09:47:58 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sdcv/ChangeLog,v 1.4 2014/01/05 11:34:20 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   30 Oct 2009; Markus Meier <maekke@gentoo.org> sdcv-0.4.2.ebuild:
   amd64/x86 stable, bug #289473
@@ -17,4 +21,3 @@
   +files/sdcv-0.4.2-respect-HOME.patch, +metadata.xml, +sdcv-0.4.2.ebuild:
   Initial import, bug #118359, thank Qiangning Hong and Andrew Savchenko for
   initial ebuild.
-

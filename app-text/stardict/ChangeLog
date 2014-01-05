@@ -1,6 +1,10 @@
 # ChangeLog for app-text/stardict
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.32 2012/10/27 16:18:52 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.33 2014/01/05 11:34:39 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   30 Jul 2012; Samuli Suominen <ssuominen@gentoo.org>
   -stardict-3.0.3-r1.ebuild:
