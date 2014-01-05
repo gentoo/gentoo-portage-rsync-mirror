@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.45 2013/12/25 13:24:57 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.46 2014/01/05 04:32:47 creffett Exp $
 
 # Thomas Sachau <tommy@gentoo.org> (25 Dez 2013)
 # mask frost USE flag, broken with >=net-libs/polarssl-1.3.0, bug 489256
@@ -18,10 +18,6 @@ media-video/rtmpdump polarssl
 # mask php and mono bindings pending more testing
 =dev-libs/xapian-bindings-1.3.1 php mono
 
-# Pacho Ramos (02 Apr 2013)
-# brasero-3.4 was removed.
-=media-sound/rhythmbox-2.97 cdr
-
 # Diego Elio Pettenò (27 Aug 2012)
 # The libpci access is only used for linux.
 net-analyzer/net-snmp -pci
@@ -37,11 +33,6 @@ sys-auth/pam_mktemp -prevent-removal
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
-
-# Anthony G. Basile <blueness@gentoo.org> (23 Jul 2012)
-# USE=system-libs is potentially unreliable and insecure
-# Bug #426798
-app-backup/spideroak-bin system-libs
 
 # Samuli Suominen <ssuominen@gentoo.org> (30 Apr 2012)
 # This is replaced by native CONFIG_INOTIFY_USER support wrt #413403

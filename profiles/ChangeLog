@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8493 2014/01/04 16:29:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8494 2014/01/05 04:32:47 creffett Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jan 2014; creffett <creffett@gentoo.org> default/linux/package.use.mask:
+  Remove invalid entries from default/linux/package.use.mask
 
   04 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   targets/desktop/gnome/package.use:
