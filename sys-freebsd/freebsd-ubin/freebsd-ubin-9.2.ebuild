@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.2.ebuild,v 1.1 2013/11/09 09:18:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-9.2.ebuild,v 1.2 2014/01/05 00:56:44 naota Exp $
 
 EAPI=5
 
@@ -157,6 +157,12 @@ src_install() {
 
 	# tip requires /var/spool/lock/, bug #200700
 	keepdir /var/spool/lock
+
+	# create locate database #472468
+	local f=/var/db/locate.database
+	mkdir "${ED}${f%/*}" || die
+	touch "${ED}${f}" || die
+	fowners nobody:nobody ${f}
 }
 
 pkg_postinst() {

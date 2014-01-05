@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.1.1.ebuild,v 1.5 2013/11/10 07:56:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-5.1.1.ebuild,v 1.6 2014/01/05 00:54:24 floppym Exp $
 
 EAPI=5
 inherit eutils linux-info systemd user
@@ -30,7 +30,8 @@ DEPEND="${COMMON_DEPEND}
 	sys-kernel/linux-headers"
 RDEPEND="${COMMON_DEPEND}
 	virtual/logger
-	sys-apps/iproute2"
+	sys-apps/iproute2
+	!net-misc/libreswan"
 
 UGID="ipsec"
 

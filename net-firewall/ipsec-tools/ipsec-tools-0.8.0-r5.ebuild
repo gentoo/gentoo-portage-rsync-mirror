@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r5.ebuild,v 1.7 2013/03/23 19:15:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.8.0-r5.ebuild,v 1.8 2014/01/05 00:58:20 floppym Exp $
 
 EAPI="4"
 
@@ -34,7 +34,9 @@ pkg_preinst() {
 		ewarn
 		ewarn "\033[1;33m**************************************************\033[00m"
 		ewarn
-		if ! has_version "net-misc/strongswan" && ! has_version "net-misc/openswan"; then
+		if ! has_version "net-misc/strongswan" &&
+			! has_version "net-misc/openswan" &&
+			! has_version "net-misc/libreswan"; then
 			ewarn "We found an earlier version of ${PN} installed."
 			ewarn "As of ${PN}-0.8.0-r5, the old configuration file,"
 			ewarn "ipsec.conf, has been changed to ipsec-tools.conf to avoid"

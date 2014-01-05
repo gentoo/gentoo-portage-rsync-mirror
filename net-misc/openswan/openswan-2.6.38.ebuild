@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.38.ebuild,v 1.7 2014/01/04 18:19:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.38.ebuild,v 1.8 2014/01/05 00:59:30 floppym Exp $
 
 EAPI="4"
 
@@ -31,7 +31,8 @@ DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2" # see bug 237132
 RDEPEND="${COMMON_DEPEND}
 	virtual/logger
-	sys-apps/iproute2"
+	sys-apps/iproute2
+	!net-misc/libreswan"
 
 pkg_setup() {
 	if use nocrypto-algorithms && ! use weak-algorithms; then

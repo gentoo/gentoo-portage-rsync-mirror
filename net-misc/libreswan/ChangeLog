@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/libreswan
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/ChangeLog,v 1.1 2014/01/05 00:44:55 floppym Exp $
+
+*libreswan-9999 (05 Jan 2014)
+*libreswan-3.7 (05 Jan 2014)
+
+  05 Jan 2014; Mike Gilbert <floppym@gentoo.org> +files/ipsec.service,
+  +files/libreswan-3.7-curl.patch, +files/libreswan-3.7-openrc.patch,
+  +libreswan-3.7.ebuild, +libreswan-9999.ebuild, +metadata.xml:
+  Fork of openswan, bug 471092. Thanks to Geaaru and Chistopher Camisa.

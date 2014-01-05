@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.94 2014/01/04 18:19:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.95 2014/01/05 00:59:30 floppym Exp $
+
+  05 Jan 2014; Mike Gilbert <floppym@gentoo.org> openswan-2.6.38.ebuild,
+  openswan-2.6.39-r1.ebuild:
+  Add blocker on net-misc/libreswan.
 
   04 Jan 2014; Mike Gilbert <floppym@gentoo.org> openswan-2.6.38.ebuild,
   openswan-2.6.39-r1.ebuild:
