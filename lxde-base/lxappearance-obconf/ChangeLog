@@ -1,0 +1,9 @@
+# ChangeLog for lxde-base/lxappearance-obconf
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance-obconf/ChangeLog,v 1.1 2014/01/05 12:26:53 nullishzero Exp $
+
+*lxappearance-obconf-0.2.1 (05 Jan 2014)
+
+  05 Jan 2014; Pavel Kazakov <nullishzero@gentoo.org>
+  +lxappearance-obconf-0.2.1.ebuild, +metadata.xml:
+  New ebuild
