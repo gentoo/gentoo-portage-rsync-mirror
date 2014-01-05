@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webapp-config
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.100 2013/11/30 16:27:54 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.101 2014/01/04 23:39:34 twitch153 Exp $
+
+*webapp-config-1.52-r1 (04 Jan 2014)
+
+  04 Jan 2014; Devan Franchini <twitch153@gentoo.org>
+  +files/webapp-config-1.52-nulls-doctest.patch, +webapp-config-1.52-r1.ebuild:
+  Adds webapp-config-1.52-r1 and patch file to null doctest code, bug #430010
 
   30 Nov 2013; Jeroen Roovers <jer@gentoo.org> webapp-config-1.52.ebuild:
   Stable for HPPA (bug #492904).
