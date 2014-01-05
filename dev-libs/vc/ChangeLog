@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/vc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/ChangeLog,v 1.1 2013/09/14 13:13:40 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/ChangeLog,v 1.2 2014/01/05 18:54:32 mrueg Exp $
+
+*vc-0.7.3 (05 Jan 2014)
+
+  05 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +vc-0.7.3.ebuild:
+  Version bump. Fixes bug #497150.
 
 *vc-0.7.2 (14 Sep 2013)
 
