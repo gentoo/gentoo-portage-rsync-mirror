@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.31 2013/10/30 17:04:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.32 2014/01/05 03:11:13 floppym Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -155,6 +155,9 @@ setup_flags() {
 	strip-flags
 	strip-unsupported-flags
 	filter-flags -m32 -m64 -mabi=*
+
+	# Bug 492892.
+	filter-flags -frecord-gcc-switches
 
 	unset CBUILD_OPT CTARGET_OPT
 	if has_multilib_profile ; then

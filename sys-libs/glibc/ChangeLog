@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.965 2014/01/03 19:51:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.966 2014/01/05 03:11:14 floppym Exp $
+
+  05 Jan 2014; Mike Gilbert <floppym@gentoo.org> files/eblits/common.eblit:
+  Filter -frecord-gcc-switches, bug 492892.
 
   03 Jan 2014; Agostino Sarubbo <ago@gentoo.org> glibc-2.17.ebuild:
   Stable for x86, wrt bug #496752
