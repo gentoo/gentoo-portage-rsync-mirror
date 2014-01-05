@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/dictd-wn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.19 2009/10/17 22:54:31 halcy0n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.20 2014/01/05 11:13:15 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> dictd-wn-2.0.ebuild:
   QA fixes; unquoted variables, redundant cd ${S}

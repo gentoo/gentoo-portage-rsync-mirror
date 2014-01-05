@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/aspell-ga
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ga/ChangeLog,v 1.9 2012/05/17 19:58:04 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-ga/ChangeLog,v 1.10 2014/01/05 11:02:08 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -aspell-ga-0.50.3.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-ga-0.50.3.ebuild,
   aspell-ga-0.50.4.ebuild:
@@ -32,4 +37,3 @@
   10 Sep 2003; Seemant Kulleen <seemant@gentoo.org> aspell-ga-0.50.3.ebuild:
   New Irish (Gaelic) language dictionary for aspell. Thanks to: Kevin Scannel
   <scannell@slu.edu> in bug #25127
-

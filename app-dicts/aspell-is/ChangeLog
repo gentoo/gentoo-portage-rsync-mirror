@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/aspell-is
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-is/ChangeLog,v 1.9 2012/05/17 20:01:45 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-is/ChangeLog,v 1.10 2014/01/05 11:04:29 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -aspell-is-0.50.4.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-is-0.50.4.ebuild,
   aspell-is-0.51.1.0.ebuild:
@@ -31,4 +36,3 @@
 
   06 Nov 2003; <rac@gentoo.org> aspell-is-0.50.4.ebuild:
   Initial commit from bug 32009
-

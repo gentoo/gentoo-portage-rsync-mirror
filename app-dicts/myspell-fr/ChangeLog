@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-fr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/ChangeLog,v 1.25 2012/06/15 09:44:41 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fr/ChangeLog,v 1.26 2014/01/05 11:20:32 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   15 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> myspell-fr-4.5-r1.ebuild:
   Really stabilise.
@@ -96,4 +100,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-fr-20060316.ebuild:
   New ebuild for French myspell dictionary
-

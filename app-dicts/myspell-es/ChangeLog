@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-es
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-es/ChangeLog,v 1.21 2012/06/13 12:22:47 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-es/ChangeLog,v 1.22 2014/01/05 11:19:33 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
 *myspell-es-0.6 (13 Jun 2012)
 
@@ -79,4 +83,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-es-20060316.ebuild:
   New ebuild for Spanish and Galician myspell dictionary
-

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-af
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-af/ChangeLog,v 1.20 2012/06/13 15:53:55 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-af/ChangeLog,v 1.21 2014/01/05 11:16:08 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
 *myspell-af-20080701 (13 Jun 2012)
 
@@ -73,4 +77,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-af-20060316.ebuild:
   New ebuild for Afrikaans myspell dictionary
-

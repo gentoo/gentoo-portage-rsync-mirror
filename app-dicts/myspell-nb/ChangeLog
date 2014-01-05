@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-nb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.26 2012/07/23 13:39:05 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nb/ChangeLog,v 1.27 2014/01/05 11:26:09 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
 *myspell-nb-2.0.10 (23 Jul 2012)
 
@@ -103,4 +107,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-nb-20060316.ebuild:
   New ebuild for Norwegian myspell dictionary
-

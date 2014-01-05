@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17-r1.ebuild,v 1.1 2013/11/04 14:26:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17-r1.ebuild,v 1.2 2014/01/05 11:09:27 polynomial-c Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -27,7 +27,8 @@ REQUIRED_USE="gtk? ( X )
 	|| ( gtk qt4 qt5 )"
 
 RDEPEND="X? ( x11-libs/libxcb
-		x11-libs/libX11 )
+		x11-libs/libX11
+		x11-libs/xcb-util-image )
 	gtk? ( x11-libs/gtk+:2 )
 	qt4? ( dev-qt/qtdbus:4
 		dev-qt/qtgui:4

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-hy
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.8 2012/05/17 20:01:05 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-hy/ChangeLog,v 1.9 2014/01/05 11:04:00 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> aspell-hy-0.10.0.ebuild:
   keyword ~amd64-fbsd
@@ -29,4 +33,3 @@
   +aspell-hy-0.10.0.ebuild:
   Added an Armenian dictionary as per bug 186228. Thanks to Karl Hakimian for
   providing the ebuild!
-

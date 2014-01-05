@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-fo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fo/ChangeLog,v 1.30 2013/08/07 13:23:54 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-fo/ChangeLog,v 1.31 2014/01/05 11:20:19 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -myspell-fo-0.4.1.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> myspell-fo-0.4.2.ebuild:
   Stable for x86, wrt bug #470306

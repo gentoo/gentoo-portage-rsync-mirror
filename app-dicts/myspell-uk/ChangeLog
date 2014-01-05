@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-uk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-uk/ChangeLog,v 1.19 2012/07/23 14:05:39 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-uk/ChangeLog,v 1.20 2014/01/05 11:31:02 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
 *myspell-uk-1.6.5 (23 Jul 2012)
 
@@ -70,4 +74,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-uk-20060316.ebuild:
   New ebuild for Ukrainian myspell dictionary
-

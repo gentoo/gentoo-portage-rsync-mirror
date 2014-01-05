@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-cs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.26 2012/06/13 15:58:03 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.27 2014/01/05 11:16:56 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   13 Jun 2012; Tomáš Chvátal <scarabeus@gentoo.org> -myspell-cs-20070926.ebuild,
   myspell-cs-20110224.ebuild:
@@ -97,4 +101,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-cs-20060316.ebuild:
   New ebuild for Czech myspell dictionary
-

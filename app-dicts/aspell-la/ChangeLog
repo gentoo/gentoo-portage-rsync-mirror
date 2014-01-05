@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/aspell-la
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-la/ChangeLog,v 1.16 2012/05/17 20:02:56 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-la/ChangeLog,v 1.17 2014/01/05 11:05:07 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org>
   aspell-la-6.0.20020503.0.ebuild:
@@ -67,4 +71,3 @@
   18 Aug 2007; Wulf C. Krueger <philantrop@gentoo.org> +metadata.xml,
   +aspell-la-6.0.20020503.0.ebuild:
   Initial ebuild as submitted by Michael Wilcox on bug 156039 for Latin.
-

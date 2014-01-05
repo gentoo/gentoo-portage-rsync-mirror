@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-tn
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-tn/ChangeLog,v 1.18 2012/05/17 18:30:39 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-tn/ChangeLog,v 1.19 2014/01/05 11:30:29 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   17 May 2012; Alexis Ballier <aballier@gentoo.org> myspell-tn-20060316.ebuild:
   keyword ~amd64-fbsd
@@ -64,4 +68,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-tn-20060316.ebuild:
   New ebuild for Setswana myspell dictionary
-

@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-nl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.27 2013/02/07 21:23:34 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-nl/ChangeLog,v 1.28 2014/01/05 11:26:23 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> myspell-nl-2.10g.ebuild:
   Move Creative Commons licenses to shorter names.
@@ -104,4 +108,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-nl-20060316.ebuild:
   New ebuild for Dutch myspell dictionary
-

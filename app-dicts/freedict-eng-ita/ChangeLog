@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/freedict-eng-ita
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-eng-ita/ChangeLog,v 1.4 2009/10/18 22:02:56 halcy0n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/freedict-eng-ita/ChangeLog,v 1.5 2014/01/05 11:14:37 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   18 Oct 2009; Mark Loeser <halcy0n@gentoo.org> freedict-eng-ita-1.0.ebuild:
   QA fixes; IUSE is not defined
@@ -17,4 +21,3 @@
   24 Apr 2005; Anders Rune Jensen <arj@gentoo.org> 
   +freedict-eng-ita-1.0.ebuild:
   new freedict dictionary for english to italien translations. Fixes #52586
-

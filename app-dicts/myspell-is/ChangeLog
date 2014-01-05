@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-is
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/ChangeLog,v 1.15 2013/02/07 21:22:30 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-is/ChangeLog,v 1.16 2014/01/05 11:23:24 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -myspell-is-2012.07.29.ebuild,
+  metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   07 Feb 2013; Ulrich Müller <ulm@gentoo.org> myspell-is-2012.07.29.ebuild,
   myspell-is-2012.09.01.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/dictd-vera
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.21 2009/10/17 22:52:43 halcy0n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.22 2014/01/05 11:12:41 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -dictd-vera-1.7-r1.ebuild,
+  -dictd-vera-1.9_pre.ebuild, metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   17 Oct 2009; Mark Loeser <halcy0n@gentoo.org> dictd-vera-1.12.ebuild:
   QA fixes; unquoted variables

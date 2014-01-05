@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-lv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.22 2012/08/24 17:23:44 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-lv/ChangeLog,v 1.23 2014/01/05 11:24:55 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   24 Aug 2012; Tomáš Chvátal <scarabeus@gentoo.org> -myspell-lv-0.9.4.ebuild,
   myspell-lv-0.9.4-r1.ebuild:

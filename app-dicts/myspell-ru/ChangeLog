@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-ru
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ru/ChangeLog,v 1.19 2012/10/20 15:15:27 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-ru/ChangeLog,v 1.20 2014/01/05 11:28:35 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
   20 Oct 2012; Sergey Popov <pinkbyte@gentoo.org> myspell-ru-20060316.ebuild:
   Mark ~amd64-linux
@@ -67,4 +71,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-ru-20060316.ebuild:
   New ebuild for Russian myspell dictionary
-

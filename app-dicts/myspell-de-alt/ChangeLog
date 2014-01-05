@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-de-alt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.14 2012/06/17 10:50:18 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.15 2014/01/05 11:18:13 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
 *myspell-de-alt-20061123 (17 Jun 2012)
 
@@ -61,4 +65,3 @@
   28 Mar 2009; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
   +myspell-de-alt-20060124.ebuild:
   Initial import, bug 258654. Ebuild contributed by me.
-

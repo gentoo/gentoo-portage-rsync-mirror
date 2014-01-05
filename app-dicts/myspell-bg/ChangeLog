@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-bg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.26 2012/06/13 11:27:16 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-bg/ChangeLog,v 1.27 2014/01/05 11:16:24 pacho Exp $
+
+  05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-
+  td271273.html
 
 *myspell-bg-4.3 (13 Jun 2012)
 
@@ -103,4 +107,3 @@
   01 May 2006; Kevin F. Quinn <kevquinn@gentoo.org> +metadata.xml,
   +myspell-bg-20060316.ebuild:
   New ebuild for Bulgarian myspell dictionary
-
