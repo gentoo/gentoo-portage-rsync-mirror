@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt-br/myspell-pt-br-3.0.0.ebuild,v 1.1 2013/06/04 13:00:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt-br/myspell-pt-br-3.0.0.ebuild,v 1.2 2014/01/06 21:45:38 jer Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ SRC_URI="
 
 LICENSE="LGPL-3 MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND=""

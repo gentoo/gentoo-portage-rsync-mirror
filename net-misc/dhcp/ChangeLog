@@ -1,6 +1,27 @@
 # ChangeLog for net-misc/dhcp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.247 2013/12/26 12:58:50 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.248 2014/01/06 21:44:16 pinkbyte Exp $
+
+  06 Jan 2014; Sergey Popov <pinkbyte@gentoo.org>
+  -files/dhcp-3.0.2-gmake.patch, -files/dhcp-3.0.3-dhclient-dbus.patch,
+  -files/dhcp-3.0.3-dhclient-hostname.patch,
+  -files/dhcp-3.0.3-dhclient-metric.patch,
+  -files/dhcp-3.0.3-dhclient-mtu.patch, -files/dhcp-3.0.3-dhclient-ntp.patch,
+  -files/dhcp-3.0.3-libdst.patch, -files/dhcp-3.0.3-no_isc_blurb.patch,
+  -files/dhcp-3.0.4-dhclient-stdin-conf.patch,
+  -files/dhcp-3.0.5-bpf-nofallback.patch,
+  -files/dhcp-3.1.0a1-dhclient-resolvconf.patch, -dhcp-3.1.2_p1.ebuild,
+  -files/dhcp-3.1.2_p1-CVE-2009-1892.patch, -dhcp-3.1.3_p1.ebuild,
+  -files/dhcp-4.0.1-dhclient-stdin-conf.patch, -dhcp-4.2.1_p1.ebuild,
+  -files/dhcp-4.2.1-dhclient-parse_option_param-Bad-format-a.patch,
+  -files/dhcp-4.2.1-dhclient-resolvconf.patch,
+  -files/dhcp-4.2.1-nogateway.patch, -dhcp-4.2.2.ebuild, -dhcp-4.2.2-r1.ebuild,
+  -dhcp-4.2.2-r2.ebuild, -dhcp-4.2.2-r3.ebuild, -dhcp-4.2.3_p1.ebuild,
+  -dhcp-4.2.3_p2.ebuild, -dhcp-4.2.4_p1.ebuild, -dhcp-4.2.4_p2.ebuild,
+  -dhcp-4.2.4_p2-r1.ebuild, -files/dhcpd.conf, -files/dhcpd.init2,
+  -files/dhcpd.init3, -files/dhcpd.init4, -files/dhcrelay.init,
+  -files/dhcrelay.init2:
+  Security cleanup, wrt bug #463848, acked by Tony Vroon
 
 *dhcp-4.2.5_p1-r2 (26 Dec 2013)
 

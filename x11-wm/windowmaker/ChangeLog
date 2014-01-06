@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.141 2013/12/06 09:50:17 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.142 2014/01/06 21:44:26 jer Exp $
+
+  06 Jan 2014; Jeroen Roovers <jer@gentoo.org> windowmaker-0.95.5-r1.ebuild:
+  Stable for HPPA (bug #496082).
 
 *windowmaker-0.95.5-r1 (06 Dec 2013)
 
