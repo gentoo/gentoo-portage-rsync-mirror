@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-mhc/sword-mhc-1.6.ebuild,v 1.1 2008/05/17 02:34:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-mhc/sword-mhc-1.6.ebuild,v 1.2 2014/01/06 00:03:05 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="MHC"
 
 inherit sword-module
