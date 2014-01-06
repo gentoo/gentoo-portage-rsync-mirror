@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-osdteletext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.26 2014/01/02 13:57:29 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/ChangeLog,v 1.27 2014/01/06 22:56:18 hd_brummy Exp $
+
+*vdr-osdteletext-0.9.4-r1 (06 Jan 2014)
+
+  06 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-osdteletext-0.9.4-r1.ebuild, +files/vdr-osdteletext.sudo:
+  fixed not mountable tmpfs, reported by L.Muresan
 
   02 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-osdteletext-0.9.4.ebuild:
