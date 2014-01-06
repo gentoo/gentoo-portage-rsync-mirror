@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Strptime
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/ChangeLog,v 1.28 2013/12/17 19:59:49 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/ChangeLog,v 1.29 2014/01/06 14:06:14 jer Exp $
+
+  06 Jan 2014; Jeroen Roovers <jer@gentoo.org>
+  DateTime-Format-Strptime-1.540.0.ebuild:
+  Marked ~hppa (bug #497068).
 
   17 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
   DateTime-Format-Strptime-1.540.0.ebuild:

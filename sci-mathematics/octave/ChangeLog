@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/octave
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.146 2013/12/07 18:50:41 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.147 2014/01/06 14:06:23 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> -octave-3.4.3-r1.ebuild:
+  Drop old; punt base.eclass
 
 *octave-3.6.4-r1 (07 Dec 2013)
 

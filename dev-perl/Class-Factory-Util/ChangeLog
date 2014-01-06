@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Factory-Util
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.29 2012/09/01 11:18:57 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.30 2014/01/06 14:07:41 jer Exp $
+
+  06 Jan 2014; Jeroen Roovers <jer@gentoo.org>
+  Class-Factory-Util-1.700.0.ebuild:
+  Marked ~hppa (bug #497068).
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   Class-Factory-Util-1.700.0.ebuild:

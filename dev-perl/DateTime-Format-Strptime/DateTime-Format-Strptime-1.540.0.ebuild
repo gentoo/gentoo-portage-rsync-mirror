@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/DateTime-Format-Strptime-1.540.0.ebuild,v 1.2 2013/12/17 19:59:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/DateTime-Format-Strptime-1.540.0.ebuild,v 1.3 2014/01/06 14:06:14 jer Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Parse and Format DateTimes using Strptime"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~ppc-aix ~x64-macos ~x86-solaris"
+KEYWORDS="amd64 ~hppa x86 ~ppc-aix ~x64-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND="

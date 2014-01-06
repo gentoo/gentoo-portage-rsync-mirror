@@ -1,11 +1,11 @@
-DEFINED_PHASES=compile configure install prepare unpack
-DESCRIPTION=Prover9 is an automated theorem prover for first-order and equational logic
-EAPI=4
+DEFINED_PHASES=install prepare
+DESCRIPTION=Automated theorem prover for first-order and equational logic
+EAPI=5
 HOMEPAGE=http://www.cs.unm.edu/~mccune/mace4/
 IUSE=examples
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.cs.unm.edu/~mccune/mace4/download/LADR-2009-11A.tar.gz http://dev.gentoo.org/~gienah/2big4tree/sci-mathematics/prover9/LADR-2009-11A-makefile.patch.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=f1455a6f0d61b0c1e316bb345f22afe0
+_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=c88427c7230d731c873ccfd452b929ff

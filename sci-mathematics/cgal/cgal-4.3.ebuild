@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.3.ebuild,v 1.2 2013/11/12 16:40:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-4.3.ebuild,v 1.3 2014/01/06 14:11:39 jlec Exp $
 
 EAPI=5
 
 CMAKE_BUILD_TYPE=Release
 
-inherit base multilib cmake-utils
+inherit multilib cmake-utils
 
 MY_P=CGAL-${PV}
 PID=32995
@@ -33,7 +33,8 @@ RDEPEND="
 	gmp? ( dev-libs/gmp[cxx] )
 	qt4? (
 		dev-qt/qtgui:4
-		dev-qt/qtopengl:4 )
+		dev-qt/qtopengl:4
+	)
 	mpfi? ( sci-libs/mpfi )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
@@ -44,7 +45,7 @@ S="${WORKDIR}/${MY_P}"
 DOCS="AUTHORS CHANGES* README"
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 	sed \
 		-e '/install(FILES AUTHORS/d' \
 		-i CMakeLists.txt || die
@@ -64,8 +65,8 @@ src_configure() {
 }
 
 src_install() {
+	use doc && HTML_DOCS=( "${WORKDIR}"/doc_html/. )
 	cmake-utils_src_install
-	use doc && dohtml -r "${WORKDIR}"/doc_html/*
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples demo
