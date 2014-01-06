@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.976 2013/12/08 18:25:00 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.977 2014/01/06 19:43:04 tommy Exp $
+
+  06 Jan 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> udev-208.ebuild,
+  udev-9999.ebuild:
+  Replace multilib_is_native_abi with multilib_build_binaries, bug 485734
 
   08 Dec 2013; Markus Meier <maekke@gentoo.org> udev-208.ebuild:
   arm stable, bug #487340

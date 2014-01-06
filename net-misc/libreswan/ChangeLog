@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/libreswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/ChangeLog,v 1.4 2014/01/06 19:29:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/ChangeLog,v 1.5 2014/01/06 19:55:34 floppym Exp $
+
+*libreswan-3.7-r1 (06 Jan 2014)
+
+  06 Jan 2014; Mike Gilbert <floppym@gentoo.org>
+  +files/libreswan-3.7-openrc-pidfile.patch, +libreswan-3.7-r1.ebuild,
+  -libreswan-3.7.ebuild:
+  Fix pidfile handling in openrc init script.
 
   06 Jan 2014; Mike Gilbert <floppym@gentoo.org> libreswan-3.7.ebuild,
   libreswan-9999.ebuild:

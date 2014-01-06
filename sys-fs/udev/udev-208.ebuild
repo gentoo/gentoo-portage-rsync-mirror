@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-208.ebuild,v 1.8 2013/12/08 18:25:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-208.ebuild,v 1.9 2014/01/06 19:43:05 tommy Exp $
 
 EAPI=5
 
@@ -221,7 +221,7 @@ multilib_src_configure() {
 			--disable-manpages
 		)
 	fi
-	if multilib_is_native_abi; then
+	if multilib_build_binaries; then
 		econf_args+=(
 			--with-rootlibdir=/$(get_libdir)
 			$(use_enable acl)
@@ -258,7 +258,7 @@ multilib_src_compile() {
 	# but not everything -- separate building of the binaries as a workaround,
 	# which will force internal libraries required for the helpers to be built
 	# early enough, like eg. libsystemd-shared.la
-	if multilib_is_native_abi; then
+	if multilib_build_binaries; then
 		local lib_targets=( libudev.la )
 		use gudev && lib_targets+=( libgudev-1.0.la )
 		emake "${lib_targets[@]}"
@@ -300,7 +300,7 @@ multilib_src_compile() {
 }
 
 multilib_src_install() {
-	if multilib_is_native_abi; then
+	if multilib_build_binaries; then
 		local lib_LTLIBRARIES="libudev.la" \
 			pkgconfiglib_DATA="src/libudev/libudev.pc"
 

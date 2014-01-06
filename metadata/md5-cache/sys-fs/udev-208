@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/systemd/systemd-208.tar.xz -> systemd-208-r1.tar.xz http://dev.gentoo.org/~ssuominen/udev-208-patches-1.tar.xz http://dev.gentoo.org/~williamh/dist/udev-208-patches-1.tar.xz
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	bf5062d2ffe64907c251cb7636421070	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	bda08c532d1c9ab7f91f9fb9ae36d5e4	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=5df070a764971978e54c2cd9c40bcff2
+_md5_=52768537367ea3c94af81926372cda8a

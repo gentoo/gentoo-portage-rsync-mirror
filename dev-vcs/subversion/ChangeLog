@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/subversion
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.154 2013/12/29 11:57:12 tommy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.155 2014/01/06 19:32:54 polynomial-c Exp $
+
+*subversion-1.8.5 (06 Jan 2014)
+
+  06 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> +subversion-1.8.5.ebuild,
+  +files/subversion-1.8.0-hpux-dso.patch,
+  +files/subversion-1.8.1-revert_bdb6check.patch:
+  Long overdue 1.8 bump. Thanks to all contributiors in bug #474848.
 
   29 Dec 2013; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   -subversion-1.7.13.ebuild:
