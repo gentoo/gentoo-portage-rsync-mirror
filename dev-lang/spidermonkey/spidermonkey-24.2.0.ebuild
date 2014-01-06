@@ -1,31 +1,30 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-17.0.0-r1.ebuild,v 1.4 2014/01/06 20:18:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-24.2.0.ebuild,v 1.1 2014/01/06 20:18:19 axs Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
 PYTHON_COMPAT=( python2_{6,7} )
 PYTHON_REQ_USE="threads"
-inherit eutils toolchain-funcs multilib python-any-r1 versionator pax-utils
+inherit autotools eutils toolchain-funcs multilib python-any-r1 versionator pax-utils
 
 MY_PN="mozjs"
-MY_P="${MY_PN}${PV}"
+MY_P="${MY_PN}-${PV/_/.}"
 DESCRIPTION="Stand-alone JavaScript C library"
 HOMEPAGE="http://www.mozilla.org/js/spidermonkey/"
-SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/js/${MY_PN}${PV}.tar.gz"
+SRC_URI="https://ftp.mozilla.org/pub/mozilla.org/js/${MY_P}.tar.bz2"
 
 LICENSE="NPL-1.1"
-SLOT="17"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa -ia64 -mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug jit minimal static-libs test"
+SLOT="24"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="debug icu jit minimal static-libs +system-icu test"
 
-REQUIRED_USE="debug? ( jit )"
-
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MY_P%.rc*}"
 BUILDDIR="${S}/js/src"
 
 RDEPEND=">=dev-libs/nspr-4.9.4
-	virtual/libffi"
+	virtual/libffi
+	system-icu? ( >=dev-libs/icu-1.51 )"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	app-arch/zip
@@ -39,17 +38,27 @@ pkg_setup(){
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-${SLOT}-js-config-shebang.patch
+	epatch "${FILESDIR}"/${PN}-${SLOT}-system-icu.patch
 	epatch_user
 
 	if [[ ${CHOST} == *-freebsd* ]]; then
 		# Don't try to be smart, this does not work in cross-compile anyway
 		ln -sfn "${BUILDDIR}/config/Linux_All.mk" "${S}/config/$(uname -s)$(uname -r).mk" || die
 	fi
+
+	cd "${BUILDDIR}" || die
+	eautoconf
 }
 
 src_configure() {
 	cd "${BUILDDIR}" || die
+
+	local myopts=""
+	if use icu; then # make sure system-icu flag only affects icu-enabled build
+		myopts+="$(use_with system-icu)"
+	else
+		myopts+="--without-system-icu"
+	fi
 
 	CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
 	AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" \
@@ -62,6 +71,7 @@ src_configure() {
 		--with-system-nspr \
 		--enable-system-ffi \
 		--enable-jemalloc \
+		$(use_enable icu intl-api) \
 		$(use_enable debug) \
 		$(use_enable jit tracejit) \
 		$(use_enable jit methodjit) \

@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/spidermonkey
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.130 2013/12/24 20:16:28 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.132 2014/01/06 20:18:19 axs Exp $
+
+*spidermonkey-24.2.0 (06 Jan 2014)
+
+  06 Jan 2014; Ian Stakenvicius <axs@gentoo.org>
+  +files/spidermonkey-24-system-icu.patch, +spidermonkey-24.2.0.ebuild,
+  -spidermonkey-1.8.2.15-r1.ebuild, -spidermonkey-1.8.2.15.ebuild, metadata.xml,
+  spidermonkey-17.0.0-r1.ebuild:
+  add new version for slot 24, remove old 1.8.2 ebuilds
+
+  06 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  spidermonkey-1.8.2.15-r2.ebuild:
+  Stable for sparc, wrt bug #480392
 
   24 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
   spidermonkey-17.0.0-r1.ebuild:

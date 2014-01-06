@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.1.ebuild,v 1.16 2013/11/26 17:29:04 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.1.ebuild,v 1.17 2014/01/06 20:12:32 axs Exp $
 
 EAPI="5"
 
