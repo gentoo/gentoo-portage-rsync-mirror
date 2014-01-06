@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=app-arch/unzip
 DESCRIPTION=John Wycliffe Bible (1395)
+EAPI=5
 HOMEPAGE=http://crosswire.org/sword/modules/ModInfo.jsp?modName=Wycliffe
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
 LICENSE=freedist
@@ -8,4 +9,4 @@ RDEPEND=app-text/sword
 SLOT=0
 SRC_URI=mirror://gentoo/Wycliffe-1.0.zip
 _eclasses_=sword-module	c52595ffeb9df1c705120bffa624d484
-_md5_=3bf06db316f2a650b8f5b68685a6074e
+_md5_=967b395b6ba264fcb0e9021aacfa5bb7
