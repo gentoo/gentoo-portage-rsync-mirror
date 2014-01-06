@@ -2309,6 +2309,7 @@ dev-vcs/rabbitvcs:thunar - Enable extension for xfce-base/thunar
 dev-vcs/subversion:ctypes-python - Build and install Ctypes Python bindings
 dev-vcs/subversion:dso - Enable runtime module search
 dev-vcs/subversion:extras - Install extra scripts (examples, tools, hooks)
+dev-vcs/subversion:http - Enable http support using net-libs/serf
 dev-vcs/subversion:webdav-neon - Enable WebDAV support using net-libs/neon
 dev-vcs/subversion:webdav-serf - Enable WebDAV support using net-libs/serf
 games-action/awesomenauts:bundled-libs - Use the upstream provided bundled libraries.

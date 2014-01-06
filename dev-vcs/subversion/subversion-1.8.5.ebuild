@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.1 2014/01/06 19:32:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.2 2014/01/06 20:44:04 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -18,7 +18,7 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="Subversion GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="apache2 berkdb ctypes-python debug doc +dso extras gnome-keyring java kde nls perl python ruby sasl test vim-syntax +webdav-serf"
+IUSE="apache2 berkdb ctypes-python debug doc +dso extras gnome-keyring +http java kde nls perl python ruby sasl test vim-syntax"
 
 COMMON_DEPEND=">=dev-db/sqlite-3.7.12
 	>=dev-libs/apr-1.3:1
@@ -35,7 +35,7 @@ COMMON_DEPEND=">=dev-db/sqlite-3.7.12
 	ruby? ( >=dev-lang/ruby-1.9.3:1.9
 		dev-ruby/rubygems[ruby_targets_ruby19] )
 	sasl? ( dev-libs/cyrus-sasl )
-	webdav-serf? ( >=net-libs/serf-1.2.1 )"
+	http? ( >=net-libs/serf-1.2.1 )"
 RDEPEND="${COMMON_DEPEND}
 	apache2? ( www-servers/apache[apache2_modules_dav] )
 	java? ( >=virtual/jre-1.5 )
@@ -52,7 +52,7 @@ DEPEND="${COMMON_DEPEND}
 	java? ( >=virtual/jdk-1.5 )
 	kde? ( virtual/pkgconfig )
 	nls? ( sys-devel/gettext )
-	webdav-serf? ( virtual/pkgconfig )"
+	http? ( virtual/pkgconfig )"
 
 REQUIRED_USE="
 	ctypes-python? ( ${PYTHON_REQUIRED_USE} )
@@ -92,10 +92,10 @@ pkg_setup() {
 
 	java-pkg-opt-2_pkg_setup
 
-	if ! use webdav-serf ; then
+	if ! use http ; then
 		ewarn "WebDAV support is disabled. You need WebDAV to"
 		ewarn "access repositories through the HTTP protocol."
-		ewarn "Consider enabling \"webdav-serf\" USE flag"
+		ewarn "Consider enabling \"http\" USE flag"
 		echo -ne "\a"
 	fi
 
@@ -204,7 +204,7 @@ src_configure() {
 		$(use_with kde kwallet) \
 		$(use_enable nls) \
 		$(use_with sasl) \
-		$(use_with webdav-serf serf "${EPREFIX}/usr") \
+		$(use_with http serf "${EPREFIX}/usr") \
 		${myconf} \
 		--with-apr="${EPREFIX}/usr/bin/apr-1-config" \
 		--with-apr-util="${EPREFIX}/usr/bin/apu-1-config" \

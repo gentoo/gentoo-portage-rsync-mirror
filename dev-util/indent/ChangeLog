@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/indent
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.66 2013/04/27 06:18:23 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/indent/ChangeLog,v 1.67 2014/01/06 20:44:37 jer Exp $
+
+  06 Jan 2014; Jeroen Roovers <jer@gentoo.org> indent-2.2.11-r1.ebuild:
+  Add GNU homepage.
 
   27 Apr 2013; Patrick Lauer <patrick@gentoo.org> indent-2.2.11-r1.ebuild:
   Automake 1.13 fix
