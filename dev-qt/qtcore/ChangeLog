@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.38 2014/01/04 13:31:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.39 2014/01/06 09:38:30 ago Exp $
+
+  06 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qtcore-4.8.5-r1.ebuild:
+  Stable for sparc, wrt bug #494728
 
   04 Jan 2014; Markus Meier <maekke@gentoo.org> qtcore-4.8.5-r1.ebuild:
   arm stable, bug #494728

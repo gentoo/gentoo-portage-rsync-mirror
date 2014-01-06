@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.1.0.ebuild,v 1.3 2013/03/02 23:17:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.1.0.ebuild,v 1.4 2014/01/06 09:50:11 jlec Exp $
 
 EAPI=5
 
-PYTHON_DEPEND="python? 2:2.5"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit cmake-utils eutils python
+inherit cmake-utils eutils python-single-r1
 
 DESCRIPTION="Advanced molecular editor that uses Qt4 and OpenGL"
 HOMEPAGE="http://avogadro.openmolecules.net/"
@@ -24,32 +24,31 @@ RDEPEND="
 	x11-libs/gl2ps
 	glsl? ( >=media-libs/glew-1.5.0 )
 	python? (
-		>=dev-libs/boost-1.35.0-r5[python]
-		dev-python/numpy
-		dev-python/sip
+		>=dev-libs/boost-1.35.0-r5[${PYTHON_USEDEP}]
+		dev-python/numpy[${PYTHON_USEDEP}]
+		dev-python/sip[${PYTHON_USEDEP}]
 	)"
 DEPEND="${RDEPEND}
-	dev-cpp/eigen:2
-	dev-util/cmake"
+	dev-cpp/eigen:2"
 
 # https://sourceforge.net/p/avogadro/bugs/653/
 RESTRICT="test"
 
-pkg_setup() {
-	python_set_active_version 2
-}
+PATCHES=(
+	"${FILESDIR}"/${P}-textrel.patch
+)
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-textrel.patch
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
 }
 
 src_configure() {
 	local mycmakeargs=(
-		"-DENABLE_THREADGL=OFF"
-		"-DENABLE_RPATH=OFF"
-		"-DENABLE_UPDATE_CHECKER=OFF"
-		"-DQT_MKSPECS_DIR=${EPREFIX}/usr/share/qt4/mkspecs"
-		"-DQT_MKSPECS_RELATIVE=share/qt4/mkspecs"
+		-DENABLE_THREADGL=OFF
+		-DENABLE_RPATH=OFF
+		-DENABLE_UPDATE_CHECKER=OFF
+		-DQT_MKSPECS_DIR="${EPREFIX}/usr/share/qt4/mkspecs"
+		-DQT_MKSPECS_RELATIVE=share/qt4/mkspecs
 		$(cmake-utils_use_enable glsl)
 		$(cmake-utils_use_enable test TESTS)
 		$(cmake-utils_use_with sse2 SSE2)
@@ -57,8 +56,4 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
-}
-
-src_test() {
-	cmake-utils_src_test
 }

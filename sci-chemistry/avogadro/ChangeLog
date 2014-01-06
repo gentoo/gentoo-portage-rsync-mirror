@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/avogadro
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.47 2013/03/02 23:17:15 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.48 2014/01/06 09:50:11 jlec Exp $
+
+*avogadro-1.0.3-r2 (06 Jan 2014)
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> -avogadro-1.0.3-r1.ebuild,
+  +avogadro-1.0.3-r2.ebuild, avogadro-1.1.0.ebuild:
+  Punt base.eclass; bump to python-single-r1.eclass
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> avogadro-1.0.3-r1.ebuild,
   avogadro-1.1.0.ebuild:

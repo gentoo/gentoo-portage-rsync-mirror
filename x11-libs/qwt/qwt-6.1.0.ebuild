@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.0.ebuild,v 1.9 2014/01/02 18:31:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-6.1.0.ebuild,v 1.10 2014/01/06 09:41:31 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://qwt.sourceforge.net/"
 SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV/_/-}/${MY_P}.tar.bz2"
 
 LICENSE="qwt mathml? ( LGPL-2.1 Nokia-Qt-LGPL-Exception-1.1 )"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 SLOT="6"
 IUSE="doc examples mathml static-libs svg"
 

@@ -1,0 +1,19 @@
+x86/HVM: only allow ring 0 guest code to make hypercalls
+
+Anything else would allow for privilege escalation.
+
+This is CVE-2013-4554 / XSA-76.
+
+Signed-off-by: Jan Beulich <jbeulich@suse.com>
+
+--- a/xen/arch/x86/hvm/hvm.c
++++ b/xen/arch/x86/hvm/hvm.c
+@@ -3359,7 +3359,7 @@ int hvm_do_hypercall(struct cpu_user_reg
+     case 4:
+     case 2:
+         hvm_get_segment_register(curr, x86_seg_ss, &sreg);
+-        if ( unlikely(sreg.attr.fields.dpl == 3) )
++        if ( unlikely(sreg.attr.fields.dpl) )
+         {
+     default:
+             regs->eax = -EPERM;

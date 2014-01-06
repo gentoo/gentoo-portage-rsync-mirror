@@ -1,12 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/bodr-9-r1.ebuild,v 1.2 2010/10/25 06:09:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/bodr-9-r1.ebuild,v 1.3 2014/01/06 09:55:01 jlec Exp $
 
-EAPI=3
+EAPI=5
 
-inherit base
-
-DESCRIPTION="The Blue Obelisk Data Repository listing element and isotope properties."
+DESCRIPTION="The Blue Obelisk Data Repository listing element and isotope properties"
 HOMEPAGE="http://sourceforge.net/projects/bodr"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 

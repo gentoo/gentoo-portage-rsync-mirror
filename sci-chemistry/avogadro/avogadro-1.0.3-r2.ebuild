@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.0.3-r1.ebuild,v 1.5 2013/03/02 23:17:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.0.3-r2.ebuild,v 1.1 2014/01/06 09:50:11 jlec Exp $
 
-EAPI=3
+EAPI=5
 
-PYTHON_DEPEND="python? 2:2.5"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit base cmake-utils eutils python
+inherit cmake-utils eutils python-single-r1
 
 DESCRIPTION="Advanced molecular editor that uses Qt4 and OpenGL"
 HOMEPAGE="http://avogadro.openmolecules.net/"
@@ -24,10 +24,9 @@ RDEPEND="
 	x11-libs/gl2ps
 	glsl? ( >=media-libs/glew-1.5.0 )
 	python? (
-		>=dev-libs/boost-1.35
-		>=dev-libs/boost-1.35.0-r5[python]
-		dev-python/numpy
-		dev-python/sip
+		>=dev-libs/boost-1.35.0-r5[${PYTHON_USEDEP}]
+		dev-python/numpy[${PYTHON_USEDEP}]
+		dev-python/sip[${PYTHON_USEDEP}]
 	)"
 DEPEND="${RDEPEND}
 	dev-cpp/eigen:2"
@@ -37,16 +36,16 @@ PATCHES=(
 )
 
 pkg_setup() {
-	python_set_active_version 2
+	use python && python-single-r1_pkg_setup
 }
 
 src_configure() {
 	local mycmakeargs=(
-		"-DENABLE_THREADGL=FALSE"
-		"-DENABLE_RPATH=OFF"
-		"-DENABLE_UPDATE_CHECKER=OFF"
-		"-DQT_MKSPECS_DIR=${EPREFIX}/usr/share/qt4/mkspecs"
-		"-DQT_MKSPECS_RELATIVE=share/qt4/mkspecs"
+		-DENABLE_THREADGL=OFF
+		-DENABLE_RPATH=OFF
+		-DENABLE_UPDATE_CHECKER=OFF
+		-DQT_MKSPECS_DIR="${EPREFIX}/usr/share/qt4/mkspecs"
+		-DQT_MKSPECS_RELATIVE=share/qt4/mkspecs
 		$(cmake-utils_use_enable glsl)
 		$(cmake-utils_use_with sse2 SSE2)
 		$(cmake-utils_use_enable python)
