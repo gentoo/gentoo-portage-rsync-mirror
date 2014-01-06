@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.17-r1.ebuild,v 1.1 2013/01/09 14:54:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.22.ebuild,v 1.1 2014/01/06 12:36:47 voyageur Exp $
 
-EAPI=4
-inherit autotools eutils multilib
+EAPI=5
+inherit autotools eutils multilib readme.gentoo
 
 DESCRIPTION="NX compression technology core libraries"
 HOMEPAGE="http://www.nomachine.com/developers.php
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="elibc_glibc"
 
 RDEPEND="elibc_glibc? ( || ( net-libs/libtirpc <sys-libs/glibc-2.14 ) )
+	media-libs/freetype:2
 	>=media-libs/libpng-1.2.8
 	>=sys-libs/zlib-1.2.3
 	virtual/jpeg"
@@ -27,6 +28,9 @@ DEPEND="${RDEPEND}
 		x11-proto/inputproto"
 
 S=${WORKDIR}/nx-libs-${PV}
+
+DOC_CONTENTS="If you get problems with rendering gtk+ apps, enable the xlib-xcb
+useflag on x11-libs/cairo."
 
 src_prepare() {
 	# For nxcl/qtnx
@@ -40,7 +44,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/1.5.0/nxcomp-1.5.0-pic.patch
 	# Drop force -O3, set AR/RANLIB and
 	# run autoreconf in all neeed folders
-	epatch "${FILESDIR}"/${P}-cflags_ar_ranlib.patch
+	epatch "${FILESDIR}"/${PN}-3.5.0.17-cflags_ar_ranlib.patch
 	for i in nxcomp nxcompext nxcompshad nxproxy; do
 		cd "${S}"/${i}
 		eautoreconf ${i}
@@ -90,9 +94,14 @@ src_install() {
 	do
 		dolib.so "${S}"/nx-X11/lib/${lib}/libNX_${lib}.so*
 	done
-	dolib.so "${S}"/nx-X11/lib/freetype2/libNX_freetype.so*
 
 	dolib.so "${S}"/nxcomp/libXcomp.so*
 	dolib.so "${S}"/nxcompext/libXcompext.so*
 	dolib.so "${S}"/nxcompshad/libXcompshad.so*
+
+	insinto /etc/nxagent
+	newins etc/keystrokes.cfg keystroke.cfg
+	doicon nx-X11/programs/Xserver/hw/nxagent/x2go.xpm
+
+	readme.gentoo_create_doc
 }
