@@ -1,6 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=app-arch/unzip
 DESCRIPTION=Bishop Wulfila Gothic Bible
+EAPI=5
 HOMEPAGE=http://crosswire.org/sword/modules/ModInfo.jsp?modName=Wulfila
 KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
 LICENSE=freedist
@@ -8,4 +9,4 @@ RDEPEND=app-text/sword
 SLOT=0
 SRC_URI=mirror://gentoo/Wulfila-1.0.zip
 _eclasses_=sword-module	c52595ffeb9df1c705120bffa624d484
-_md5_=ed726aa3630f05e81226f4fd49d7febd
+_md5_=67c986e8d89cadf3d515b0a53a45b3b3

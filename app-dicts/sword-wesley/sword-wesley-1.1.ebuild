@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-wesley/sword-wesley-1.1.ebuild,v 1.1 2008/05/17 02:45:16 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-wesley/sword-wesley-1.1.ebuild,v 1.2 2014/01/06 00:58:45 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="Wesley"
 
 inherit sword-module

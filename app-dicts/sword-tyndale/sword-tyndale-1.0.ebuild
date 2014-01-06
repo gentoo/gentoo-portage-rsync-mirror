@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-tyndale/sword-tyndale-1.0.ebuild,v 1.1 2008/03/14 01:48:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-tyndale/sword-tyndale-1.0.ebuild,v 1.2 2014/01/06 00:49:24 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="Tyndale"
 
 inherit sword-module

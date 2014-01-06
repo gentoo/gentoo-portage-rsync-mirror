@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-whnu/sword-whnu-1.10.ebuild,v 1.1 2008/05/13 21:36:08 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-whnu/sword-whnu-1.10.ebuild,v 1.2 2014/01/06 00:58:27 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="WHNU"
 
 inherit sword-module
