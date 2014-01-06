@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-geoclue
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/ChangeLog,v 1.21 2014/01/05 17:51:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-geoclue/ChangeLog,v 1.22 2014/01/06 08:20:39 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> -python-geoclue-0.1.0.ebuild:
+  Drop old
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> python-geoclue-0.1.0-r1.ebuild:
   Stable for sparc, wrt bug #481896
