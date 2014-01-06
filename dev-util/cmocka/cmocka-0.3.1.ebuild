@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/cmocka-0.3.1.ebuild,v 1.4 2013/10/22 14:28:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmocka/cmocka-0.3.1.ebuild,v 1.5 2014/01/06 06:12:51 naota Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ SRC_URI="https://open.cryptomilk.org/attachments/download/19/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc static-libs test"
 
 DEPEND="

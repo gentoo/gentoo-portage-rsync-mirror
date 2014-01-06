@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-ja
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.57 2013/07/02 07:44:26 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.58 2014/01/06 06:05:31 naota Exp $
+
+*man-pages-ja-20131015 (06 Jan 2014)
+
+  06 Jan 2014; Naohiro Aota <naota@gentoo.org> +man-pages-ja-20131015.ebuild:
+  version bump #488442
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> man-pages-ja-20130215.ebuild:
   Stable for sh, wrt bug #470326
