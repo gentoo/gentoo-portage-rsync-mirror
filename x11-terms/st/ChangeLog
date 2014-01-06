@@ -1,6 +1,15 @@
 # ChangeLog for x11-terms/st
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.16 2013/06/17 06:08:43 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/ChangeLog,v 1.18 2014/01/06 21:18:39 jer Exp $
+
+  06 Jan 2014; Jeroen Roovers <jer@gentoo.org> st-0.4.1-r1.ebuild:
+  Marked ~hppa too.
+
+*st-0.4.1-r1 (06 Jan 2014)
+
+  06 Jan 2014; Jeroen Roovers <jer@gentoo.org> -st-0.4.ebuild,
+  +st-0.4.1-r1.ebuild, st-9999.ebuild:
+  Add desktop entry. "Migrate" to git-r3.eclass.
 
   17 Jun 2013; Michael Weber <xmw@gentoo.org> st-0.4.1.ebuild, st-0.4.ebuild,
   st-9999.ebuild:

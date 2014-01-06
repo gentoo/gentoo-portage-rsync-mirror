@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.165 2014/01/06 13:08:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.167 2014/01/06 21:16:11 mgorny Exp $
+
+  06 Jan 2014; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Add a PDEP on sys-devel/clang to the live ebuild as well.
+
+*llvm-3.4 (06 Jan 2014)
+
+  06 Jan 2014; Michał Górny <mgorny@gentoo.org> +llvm-3.4.ebuild:
+  Version bump.
 
 *llvm-3.3-r3 (06 Jan 2014)
 

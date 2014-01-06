@@ -1,10 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.11 2013/06/17 06:08:43 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.12 2014/01/06 21:17:53 jer Exp $
 
 EAPI=5
-
-inherit git-2 multilib savedconfig toolchain-funcs
+inherit eutils git-r3 multilib savedconfig toolchain-funcs
 
 DESCRIPTION="simple terminal implementation for X"
 HOMEPAGE="http://st.suckless.org/"
@@ -43,6 +42,8 @@ src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}"/usr install
 	tic -s -o "${ED}"/usr/share/terminfo st.info || die
 	dodoc TODO
+
+	make_desktop_entry ${PN} simpleterm utilities-terminal 'System;TerminalEmulator;' ''
 
 	save_config config.h
 }
