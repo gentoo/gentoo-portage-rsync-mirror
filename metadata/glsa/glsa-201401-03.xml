@@ -9,13 +9,13 @@
   </synopsis>
   <product type="ebuild">nagstamon</product>
   <announced>January 06, 2014</announced>
-  <revised>January 06, 2014: 1</revised>
+  <revised>January 06, 2014: 2</revised>
   <bug>476538</bug>
   <access>remote</access>
   <affected>
     <package name="net-analyzer/nagstamon" auto="yes" arch="*">
       <unaffected range="ge">0.9.11_rc1</unaffected>
-      <vulnerable range="ge">0.9.11_rc1</vulnerable>
+      <vulnerable range="lt">0.9.11_rc1</vulnerable>
     </package>
   </affected>
   <background>
@@ -51,7 +51,7 @@
   <metadata tag="requester" timestamp="Fri, 07 Oct 2011 23:38:16 +0000">
     underling
   </metadata>
-  <metadata tag="submitter" timestamp="Mon, 06 Jan 2014 19:59:11 +0000">
+  <metadata tag="submitter" timestamp="Mon, 06 Jan 2014 22:22:38 +0000">
     creffett
   </metadata>
 </glsa>
