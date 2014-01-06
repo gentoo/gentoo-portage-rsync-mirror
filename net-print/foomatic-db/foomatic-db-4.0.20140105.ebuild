@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-4.0.20140105.ebuild,v 1.1 2014/01/05 23:40:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/foomatic-db-4.0.20140105.ebuild,v 1.2 2014/01/06 10:56:00 dilfridge Exp $
 
 EAPI=5
 
@@ -8,7 +8,8 @@ inherit versionator
 
 DESCRIPTION="Printer information files for foomatic-db-engine to generate ppds"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
-SRC_URI="http://www.openprinting.org/download/foomatic/${PN}-$(replace_version_separator 2 -).tar.gz"
+#SRC_URI="http://www.openprinting.org/download/foomatic/${PN}-$(replace_version_separator 2 -).tar.gz"
+SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${PN}-$(replace_version_separator 2 -).tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

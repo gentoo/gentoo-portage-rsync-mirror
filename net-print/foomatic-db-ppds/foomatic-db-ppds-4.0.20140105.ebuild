@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-4.0.20140105.ebuild,v 1.1 2014/01/05 23:42:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-ppds/foomatic-db-ppds-4.0.20140105.ebuild,v 1.2 2014/01/06 10:57:55 dilfridge Exp $
 
 EAPI=5
 
@@ -10,7 +10,8 @@ MY_P=${PN/-ppds}-$(replace_version_separator 2 '-')
 
 DESCRIPTION="linuxprinting.org PPD files for postscript printers"
 HOMEPAGE="http://www.linuxprinting.org/foomatic.html"
-SRC_URI="http://linuxprinting.org/download/foomatic/${MY_P}.tar.gz"
+#SRC_URI="http://linuxprinting.org/download/foomatic/${MY_P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
