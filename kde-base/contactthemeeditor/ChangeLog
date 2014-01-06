@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/contactthemeeditor
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/contactthemeeditor/ChangeLog,v 1.1 2014/01/06 11:16:53 dilfridge Exp $
+
+*contactthemeeditor-4.12.0 (06 Jan 2014)
+
+  06 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +contactthemeeditor-4.12.0.ebuild, +metadata.xml:
+  Manually copied from kde overlay
+
