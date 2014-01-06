@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/wxmacmolplt
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.10 2012/05/04 07:02:33 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/wxmacmolplt/ChangeLog,v 1.11 2014/01/06 09:27:38 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> wxmacmolplt-7.4.2.ebuild,
+  metadata.xml:
+  Bump to EAPI=5; punt base.eclass
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> wxmacmolplt-7.4.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

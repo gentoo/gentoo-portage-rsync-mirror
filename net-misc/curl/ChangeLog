@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.317 2014/01/05 23:55:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.322 2014/01/06 09:26:50 ago Exp $
+
+  06 Jan 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.34.0-r1.ebuild:
+  Stable for ppc64, wrt bug #497092
+
+  06 Jan 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.34.0-r1.ebuild:
+  Stable for sparc, wrt bug #497092
+
+  06 Jan 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.34.0-r1.ebuild:
+  Stable for alpha, wrt bug #497092
+
+  06 Jan 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.34.0-r1.ebuild:
+  Stable for x86, wrt bug #497092
+
+  06 Jan 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.34.0-r1.ebuild:
+  Stable for amd64, wrt bug #497092
 
   05 Jan 2014; Jeroen Roovers <jer@gentoo.org> curl-7.34.0-r1.ebuild:
   Stable for HPPA (bug #497092).
