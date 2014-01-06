@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/libclc-0.0.1_pre20130524.ebuild,v 1.3 2013/09/05 18:29:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libclc/libclc-0.0.1_pre20131010.ebuild,v 1.1 2014/01/06 16:49:36 chithanh Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -25,7 +25,7 @@ fi
 
 LICENSE="|| ( MIT BSD )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="
@@ -45,5 +45,10 @@ src_unpack() {
 src_configure() {
 	./configure.py \
 		--with-llvm-config="${EPREFIX}/usr/bin/llvm-config" \
-		--prefix="${EPREFIX}/usr"
+		--prefix="${EPREFIX}/usr" \
+		--pkgconfigdir="${EPREFIX}/usr/share/pkgconfig" || die
+}
+
+src_compile() {
+	emake VERBOSE=1
 }

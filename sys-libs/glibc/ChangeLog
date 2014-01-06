@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.968 2014/01/05 09:57:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.969 2014/01/06 16:55:06 vapier Exp $
+
+  06 Jan 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.18.ebuild:
+  Add a bunch of random fixes from upstream which also fix ptrace headers
+  #480218 and #482752.
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> glibc-2.17.ebuild:
   Stable for ppc64, wrt bug #496752

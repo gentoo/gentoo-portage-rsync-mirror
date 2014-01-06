@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8496 2014/01/06 16:09:56 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8497 2014/01/06 16:46:09 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jan 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  p.mask recent libclc snapshot which needs >=llvm-3.4
 
   06 Jan 2014; Matti Bickel <mabi@gentoo.org> package.mask:
   Remove masks for tree-cleaned dev-php/DBUnit, dev-php/PEAR-File_PDF
