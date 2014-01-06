@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/x2goserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.35 2014/01/06 12:20:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.36 2014/01/06 18:02:52 voyageur Exp $
+
+*x2goserver-4.0.1.11 (06 Jan 2014)
+
+  06 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goserver-4.0.1.11.ebuild:
+  Version bump, previous version had problems with dots in session ID strings
 
 *x2goserver-4.0.1.10 (06 Jan 2014)
 
