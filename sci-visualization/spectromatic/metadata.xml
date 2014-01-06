@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
   Spectromatic is a program for generating spectrograms from audio
   files. Spectrograms are a form of simple time-frequency analysis which
   lets you see how the distribution of energy at different frequencies

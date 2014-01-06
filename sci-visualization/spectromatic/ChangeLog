@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/spectromatic
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.12 2012/08/07 02:33:07 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spectromatic/ChangeLog,v 1.13 2014/01/06 13:29:11 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> spectromatic-1.0-r2.ebuild,
+  metadata.xml:
+  Punt base.eclass
 
   07 Aug 2012; Sébastien Fabbro <bicatali@gentoo.org>
   +files/spectromatic-1.0-waveheaderstruct-amd64.patch,

@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/soulseek-qt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/soulseek-qt/ChangeLog,v 1.5 2013/12/13 11:49:55 zx2c4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/soulseek-qt/ChangeLog,v 1.6 2014/01/06 13:27:56 zx2c4 Exp $
+
+*soulseek-qt-20131106 (06 Jan 2014)
+
+  06 Jan 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +soulseek-qt-20131106.ebuild, -soulseek-qt-20130518.ebuild:
+  Version bump.
 
 *soulseek-qt-20130518 (13 Dec 2013)
 

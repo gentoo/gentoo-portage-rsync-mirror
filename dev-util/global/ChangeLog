@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/global
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.113 2013/08/28 15:34:45 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.114 2014/01/06 13:28:10 naota Exp $
+
+  06 Jan 2014; Naohiro Aota <naota@gentoo.org> +files/global-6.2.9-tinfo.patch,
+  global-6.2.9.ebuild:
+  Add a patch to handle ncurses[tinfo]
 
 *global-6.2.9 (28 Aug 2013)
 

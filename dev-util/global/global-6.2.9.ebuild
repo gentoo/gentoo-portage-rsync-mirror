@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.2.9.ebuild,v 1.1 2013/08/28 15:34:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.2.9.ebuild,v 1.2 2014/01/06 13:28:10 naota Exp $
 
 EAPI="5"
 
-inherit elisp-common eutils
+inherit elisp-common eutils autotools
 
 DESCRIPTION="GNU Global is a tag system to find the locations of a specified object in various sources."
 HOMEPAGE="http://www.gnu.org/software/global/global.html"
@@ -23,6 +23,11 @@ DEPEND="${DEPEND}
 	doc? ( app-text/texi2html sys-apps/texinfo )"
 
 SITEFILE="50gtags-gentoo.el"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-tinfo.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf "$(use_with emacs lispdir "${SITELISP}/${PN}")"

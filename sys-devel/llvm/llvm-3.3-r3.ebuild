@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r2.ebuild,v 1.5 2013/12/30 09:07:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.3-r3.ebuild,v 1.1 2014/01/06 13:08:40 mgorny Exp $
 
 EAPI=5
 
@@ -155,8 +155,21 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
+	epatch "${FILESDIR}"/${P}-R600_debug.patch
 	epatch "${FILESDIR}"/${PN}-3.3-r2-gentoo-install.patch
-	use clang && epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
+
+	# Hack cmake search path for Gentoo, bug #496480
+	epatch "${FILESDIR}"/${PN}-3.3-cmake-modulepath.patch
+
+	if use clang; then
+		# Automatically select active system GCC's libraries, bugs #406163 and #417913
+		epatch "${FILESDIR}"/clang-3.1-gentoo-runtime-gcc-detection-v3.patch
+
+		epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
+
+		# backport support for g++-X.Y header location
+		epatch "${FILESDIR}"/clang-3.3-gcc-header-path.patch
+	fi
 
 	local sub_files=(
 		Makefile.config.in
