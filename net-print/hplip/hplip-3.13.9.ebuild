@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.9.ebuild,v 1.3 2013/12/24 16:56:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.13.9.ebuild,v 1.4 2014/01/05 23:08:10 dilfridge Exp $
 
 EAPI=5
 
@@ -27,7 +27,9 @@ IUSE="doc fax +hpcups hpijs kde libnotify -libusb0 minimal parport policykit qt4
 
 COMMON_DEPEND="
 	virtual/jpeg
-	hpijs? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
+	hpijs? (
+		|| ( >=net-print/cups-filters-1.0.43-r1[foomatic] >=net-print/foomatic-filters-3.0.20080507[cups] )
+	)
 	!minimal? (
 		${PYTHON_DEPS}
 		>=net-print/cups-1.4.0

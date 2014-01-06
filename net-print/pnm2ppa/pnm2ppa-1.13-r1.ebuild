@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.13-r1.ebuild,v 1.2 2013/12/27 22:45:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.13-r1.ebuild,v 1.3 2014/01/05 23:09:48 dilfridge Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ done
 RDEPEND="
 	app-text/ghostscript-gpl
 	net-print/cups
-	|| ( >=net-print/cups-filters-1.0.43 net-print/foomatic-filters )
+	|| ( >=net-print/cups-filters-1.0.43-r1[foomatic] net-print/foomatic-filters )
 	sys-libs/glibc
 	syslog? ( virtual/logger )
 "

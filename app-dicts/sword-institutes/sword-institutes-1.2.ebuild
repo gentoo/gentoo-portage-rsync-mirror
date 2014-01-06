@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-institutes/sword-institutes-1.2.ebuild,v 1.1 2009/01/10 23:41:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-institutes/sword-institutes-1.2.ebuild,v 1.2 2014/01/05 23:08:38 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="Institutes"
 
 inherit sword-module

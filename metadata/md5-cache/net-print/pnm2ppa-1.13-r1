@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=app-text/ghostscript-gpl net-print/cups || ( >=net-print/cups-filters-1.0.43 net-print/foomatic-filters ) sys-libs/glibc syslog? ( virtual/logger )
+DEPEND=app-text/ghostscript-gpl net-print/cups || ( >=net-print/cups-filters-1.0.43-r1[foomatic] net-print/foomatic-filters ) sys-libs/glibc syslog? ( virtual/logger )
 DESCRIPTION=Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series
 EAPI=4
 HOMEPAGE=http://pnm2ppa.sourceforge.net
 IUSE=syslog linguas_en linguas_cs linguas_es linguas_fr linguas_it linguas_nl
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=app-text/ghostscript-gpl net-print/cups || ( >=net-print/cups-filters-1.0.43 net-print/foomatic-filters ) sys-libs/glibc syslog? ( virtual/logger )
+RDEPEND=app-text/ghostscript-gpl net-print/cups || ( >=net-print/cups-filters-1.0.43-r1[foomatic] net-print/foomatic-filters ) sys-libs/glibc syslog? ( virtual/logger )
 SLOT=0
 SRC_URI=mirror://sourceforge/pnm2ppa/pnm2ppa-1.13.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=1ec0c4f2f69736232ab8b347208551d3
+_md5_=63d5ec43176c1d47cf197665c601a14f

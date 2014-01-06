@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/sword-hunkar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-hunkar/ChangeLog,v 1.3 2010/05/16 00:17:58 beandog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-hunkar/ChangeLog,v 1.4 2014/01/05 23:05:35 creffett Exp $
+
+  05 Jan 2014; Chris Reffett <creffett@gentoo.org> -sword-hunkar-1.2.ebuild,
+  -sword-hunkar-1.6.ebuild, sword-hunkar-1.7.ebuild:
+  Remove old, EAPI bump
 
 *sword-hunkar-1.7 (16 May 2010)
 
@@ -17,4 +21,3 @@
   13 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
   +sword-hunkar-1.2.ebuild:
   Initial commit
-

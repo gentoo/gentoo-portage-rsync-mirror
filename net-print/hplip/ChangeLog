@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.289 2013/12/27 22:43:48 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.290 2014/01/05 23:08:10 dilfridge Exp $
+
+  05 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> hplip-3.12.10a.ebuild,
+  hplip-3.13.9.ebuild, hplip-3.13.11-r1.ebuild:
+  Fix foomatic dependency
 
   27 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   hplip-3.13.11-r1.ebuild:

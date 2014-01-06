@@ -1,10 +1,12 @@
 # ChangeLog for app-dicts/sword-josephus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-josephus/ChangeLog,v 1.1 2008/05/17 02:29:48 beandog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-josephus/ChangeLog,v 1.2 2014/01/05 23:12:49 creffett Exp $
+
+  05 Jan 2014; Chris Reffett <creffett@gentoo.org> sword-josephus-1.1.ebuild:
+  EAPI bump
 
 *sword-josephus-1.1 (17 May 2008)
 
   17 May 2008; Steve Dibb <beandog@gentoo.org> +metadata.xml,
   +sword-josephus-1.1.ebuild:
   Initial commit
-
