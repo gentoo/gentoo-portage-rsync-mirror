@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.9.1-r2.ebuild,v 1.2 2014/01/03 20:48:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.9.1-r2.ebuild,v 1.3 2014/01/06 19:16:34 tommy Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -110,7 +110,7 @@ multilib_src_configure() {
 
 	local myconf
 
-	if multilib_is_native_abi; then
+	if multilib_build_binaries; then
 		myconf="$(use_with python)
 			$(use_with readline)
 			$(use_with readline history)"
@@ -133,7 +133,7 @@ multilib_src_configure() {
 
 multilib_src_compile() {
 	default
-	if multilib_is_native_abi && use python; then
+	if multilib_build_binaries && use python; then
 		python_copy_sources
 		python_foreach_impl libxml2_py_emake
 	fi
@@ -141,14 +141,14 @@ multilib_src_compile() {
 
 multilib_src_test() {
 	default
-	multilib_is_native_abi && use python && python_foreach_impl libxml2_py_emake test
+	multilib_build_binaries && use python && python_foreach_impl libxml2_py_emake test
 }
 
 multilib_src_install() {
 	emake DESTDIR="${D}" \
 		EXAMPLES_DIR="${EPREFIX}"/usr/share/doc/${PF}/examples install
 
-	if multilib_is_native_abi && use python; then
+	if multilib_build_binaries && use python; then
 		python_foreach_impl libxml2_py_emake DESTDIR="${D}" \
 			docsdir="${EPREFIX}"/usr/share/doc/${PF}/python \
 			exampledir="${EPREFIX}"/usr/share/doc/${PF}/python/examples \

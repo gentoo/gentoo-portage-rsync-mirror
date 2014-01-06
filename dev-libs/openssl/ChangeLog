@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.499 2014/01/06 15:13:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.500 2014/01/06 19:15:22 polynomial-c Exp $
+
+  06 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> openssl-1.0.1f.ebuild,
+  +files/openssl-1.0.1f-perl-5.18.patch:
+  Fixed build with perl-5.18 (bug #497286).
 
 *openssl-1.0.1f (06 Jan 2014)
 
