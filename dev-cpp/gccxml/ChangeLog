@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gccxml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.36 2012/09/02 00:55:45 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.37 2014/01/06 15:54:13 pinkbyte Exp $
+
+*gccxml-0.9.0_pre20131217 (06 Jan 2014)
+
+  06 Jan 2014; Sergey Popov <pinkbyte@gentoo.org>
+  -gccxml-0.9.0_pre20090516-r1.ebuild, +gccxml-0.9.0_pre20131217.ebuild:
+  Version bump, fixes bug #477002. Drop old
 
   02 Sep 2012; Michael Weber <xmw@gentoo.org> gccxml-0.9.0_pre20120309.ebuild:
   ppc stable (bug 424743).

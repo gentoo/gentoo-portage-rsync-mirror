@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/gebabbel-0.4.ebuild,v 1.3 2013/03/02 23:20:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/gebabbel-0.4.ebuild,v 1.4 2014/01/06 15:34:02 jlec Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ PATCHES=(
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	base_src_prepare
+	qt4-r2_src_prepare
 	# do not mess with cflags
 	sed \
 		-e "/QMAKE_CXXFLAGS/s:=.*$:= ${CXXFLAGS}:g" \

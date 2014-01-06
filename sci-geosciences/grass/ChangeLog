@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.123 2014/01/06 14:58:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.124 2014/01/06 15:37:42 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> grass-6.4.2.ebuild:
+  Punt base.eclass
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> -grass-6.4.1-r1.ebuild,
   grass-6.4.2.ebuild, metadata.xml:

@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gebabbel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/ChangeLog,v 1.8 2013/03/02 23:20:18 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/ChangeLog,v 1.9 2014/01/06 15:34:02 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> gebabbel-0.4.ebuild,
+  metadata.xml:
+  Punt base.eclass
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> gebabbel-0.4.ebuild:
   Move Qt dependencies to the new category

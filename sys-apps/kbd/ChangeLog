@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.118 2014/01/05 14:28:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.119 2014/01/06 15:32:50 vapier Exp $
+
+  06 Jan 2014; Mike Frysinger <vapier@gentoo.org> +files/kbd-2.0.1-stdarg.patch,
+  kbd-2.0.1.ebuild:
+  Add missing stdarg.h include to fix building for some C libraries #497200 by
+  Anthony Basile.
 
   05 Jan 2014; Markus Meier <maekke@gentoo.org> kbd-1.15.5-r1.ebuild:
   arm stable, bug #496434

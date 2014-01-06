@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha19.ebuild,v 1.1 2013/11/23 13:01:30 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha19.ebuild,v 1.2 2014/01/06 15:49:11 billie Exp $
 
 EAPI=5
 
@@ -79,6 +79,7 @@ src_prepare() {
 	cd "${S}"/DEFAULTS
 	local os="linux"
 	[[ ${CHOST} == *-darwin* ]] && os="mac-os10"
+	[[ ${CHOST} == *-freebsd* ]] && os="freebsd"
 
 	sed -i \
 		-e "s|^\(DEFLINKMODE=\).*|\1\tdynamic|" \

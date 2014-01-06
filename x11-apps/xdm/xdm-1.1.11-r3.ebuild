@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.11-r3.ebuild,v 1.10 2013/10/08 05:03:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.11-r3.ebuild,v 1.11 2014/01/06 16:00:50 chithanh Exp $
 
 EAPI=5
 
@@ -37,6 +37,8 @@ pkg_setup() {
 	PATCHES=(
 		"${FILESDIR}"/${PN}-consolekit.patch
 		"${FILESDIR}"/${P}-cve-2013-2179.patch
+		"${FILESDIR}"/${PN}-1.1.11-arc4random-include.patch
+		"${FILESDIR}"/${PN}-1.1.11-setproctitle-include.patch
 	)
 
 	XORG_CONFIGURE_OPTIONS=(

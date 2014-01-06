@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.5.ebuild,v 1.10 2013/01/31 10:57:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.5.ebuild,v 1.11 2014/01/06 15:32:47 jlec Exp $
 
 EAPI="3"
 
@@ -39,7 +39,7 @@ PATCHES=(
 )
 
 src_prepare() {
-	base_src_prepare
+	epatch ${PATCHES[@]}
 	sed -i 's/ getline/ v_getline/' Readseq/ureadseq.c || die
 	sed -i 's/@PerlCmd@ Makefile.PL/& INSTALLDIRS=vendor/' Perl/Makefile.am || die
 
