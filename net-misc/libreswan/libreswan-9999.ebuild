@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/libreswan-9999.ebuild,v 1.2 2014/01/05 01:07:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/libreswan-9999.ebuild,v 1.3 2014/01/06 04:57:13 floppym Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE="caps curl dnssec ldap pam"
 COMMON_DEPEND="
 	dev-libs/gmp
 	dev-libs/nspr
-	dev-libs/nss
+	dev-libs/nss[utils(+)]
 	caps? ( sys-libs/libcap-ng )
 	curl? ( net-misc/curl )
 	dnssec? ( net-dns/unbound net-libs/ldns )

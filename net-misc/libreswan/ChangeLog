@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/libreswan
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/ChangeLog,v 1.2 2014/01/05 01:07:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/ChangeLog,v 1.3 2014/01/06 04:57:13 floppym Exp $
+
+  06 Jan 2014; Mike Gilbert <floppym@gentoo.org> libreswan-3.7.ebuild,
+  libreswan-9999.ebuild:
+  Depend on dev-libs/nss[utils] for certutil.
 
   05 Jan 2014; Mike Gilbert <floppym@gentoo.org> libreswan-3.7.ebuild,
   libreswan-9999.ebuild:
