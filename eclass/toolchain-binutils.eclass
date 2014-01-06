@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.130 2013/12/22 20:59:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.131 2014/01/06 16:10:56 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -295,6 +295,8 @@ toolchain-binutils_src_configure() {
 		--enable-obsolete
 		--enable-shared
 		--enable-threads
+		# Newer versions (>=2.24) make this an explicit option. #497268
+		--enable-install-libiberty
 		--disable-werror
 		--with-bugurl=http://bugs.gentoo.org/
 		$(use_enable static-libs static)

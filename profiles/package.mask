@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15297 2014/01/02 22:16:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15298 2014/01/06 16:09:55 mabi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -308,10 +308,6 @@ app-office/rabbit
 # Only available for ruby18, no dependencies left
 dev-ruby/postgres
 
-# Matti Bickel <mabi@gentoo.org> (20 Nov 2013)
-# Outdated, beta and abondoned upstream, removal on 20131220
-dev-php/PEAR-File_PDF
-
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (10 Nov 2013)
 # Causes build failures, bug #492800
 =media-libs/mesa-10.0*
@@ -326,10 +322,6 @@ dev-php/PEAR-File_PDF
 # Masked for testing
 ~dev-util/boost-build-1.55.0
 ~dev-libs/boost-1.55.0
-
-# Matti Bickel <mabi@gentoo.org> (13 Nov 2013)
-# Now included in dev-php/phpunit, removal on 20131213
-dev-php/DBUnit
 
 # Mike Gilbert <floppym@gentoo.org> (12 Nov 2013)
 # Dev channel releases are only for people who are developers or want more

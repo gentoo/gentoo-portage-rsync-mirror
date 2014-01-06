@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/conky
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.214 2013/11/29 15:27:13 billie Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.215 2014/01/06 16:01:46 billie Exp $
+
+  06 Jan 2014; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0-r3.ebuild:
+  Fix bug #494956. Thanks to Michael Mair-Keimberger (iamnr3) for the report.
 
   29 Nov 2013; Daniel Pielmeier <billie@gentoo.org> conky-1.9.0-r3.ebuild,
   +files/conky-1.9.0-diskio-dmmajor.patch:

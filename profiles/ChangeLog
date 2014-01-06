@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8495 2014/01/05 16:50:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8496 2014/01/06 16:09:56 mabi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jan 2014; Matti Bickel <mabi@gentoo.org> package.mask:
+  Remove masks for tree-cleaned dev-php/DBUnit, dev-php/PEAR-File_PDF
 
   05 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   targets/desktop/kde/package.mask:
