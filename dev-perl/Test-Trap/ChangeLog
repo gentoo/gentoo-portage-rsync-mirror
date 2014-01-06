@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Trap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.13 2013/09/08 15:19:32 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.14 2014/01/06 07:25:26 jlec Exp $
+
+*Test-Trap-0.2.3 (06 Jan 2014)
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> +Test-Trap-0.2.3.ebuild,
+  metadata.xml:
+  Version Bump
 
 *Test-Trap-0.2.2-r1 (08 Sep 2013)
 
