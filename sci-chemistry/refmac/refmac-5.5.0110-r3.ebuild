@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.11 2013/02/27 14:40:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.12 2014/01/06 15:25:52 jlec Exp $
 
 EAPI=4
 
-inherit base fortran-2 flag-o-matic toolchain-funcs versionator
+inherit eutils fortran-2 flag-o-matic toolchain-funcs versionator
 
 DESCRIPTION="Macromolecular crystallographic refinement program"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~garib/refmac"
@@ -37,7 +37,8 @@ PATCHES=(
 	)
 
 src_prepare() {
-	base_src_prepare
+	epatch ${PATCHES[@]}
+
 	use test && epatch "${FILESDIR}"/$(get_version_component_range 1-2 ${PV})-test.log.patch
 	[[ ${FC} == *gfortran* ]] && \
 		append-fflags -fno-second-underscore && \

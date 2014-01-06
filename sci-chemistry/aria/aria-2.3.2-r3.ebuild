@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2-r3.ebuild,v 1.3 2012/07/10 06:58:29 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2-r3.ebuild,v 1.4 2014/01/06 15:27:03 jlec Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
 
-inherit base eutils python versionator
+inherit eutils python versionator
 
 MY_P="${PN}$(get_version_component_range 1-2 ${PV})"
 

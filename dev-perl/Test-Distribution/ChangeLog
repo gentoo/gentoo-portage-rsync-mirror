@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Distribution
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/ChangeLog,v 1.10 2014/01/06 14:10:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/ChangeLog,v 1.11 2014/01/06 15:14:32 naota Exp $
+
+  06 Jan 2014; Naohiro Aota <naota@gentoo.org> Test-Distribution-2.0.0.ebuild:
+  Add ~x86-fbsd wrt bug #497068
 
   06 Jan 2014; Jeroen Roovers <jer@gentoo.org> Test-Distribution-2.0.0.ebuild:
   Marked ~hppa (bug #497068).

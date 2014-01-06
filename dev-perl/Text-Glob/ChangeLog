@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Glob
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.49 2012/09/01 11:59:00 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.50 2014/01/06 15:11:57 naota Exp $
+
+  06 Jan 2014; Naohiro Aota <naota@gentoo.org> Text-Glob-0.90.0.ebuild:
+  Add ~x86-fbsd wrt bug #497068
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Text-Glob-0.90.0.ebuild:
   Marked ~ppc-aix, bug #432288

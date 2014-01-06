@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.2.1.ebuild,v 1.7 2012/11/07 22:29:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mira/mira-3.2.1.ebuild,v 1.8 2014/01/06 15:30:02 jlec Exp $
 
 EAPI="3"
 
 MIRA_3RDPARTY_PV="17-04-2010"
 
-inherit autotools base multilib
+inherit autotools eutils multilib
 
 DESCRIPTION="Whole Genome Shotgun and EST Sequence Assembler for Sanger, 454 and Solexa / Illumina"
 HOMEPAGE="http://www.chevreux.org/projects_mira.html"
@@ -49,7 +49,8 @@ src_configure() {
 #}
 
 src_install() {
-	base_src_install
+	emake DESTDIR="${D}" install
+	dodoc ${DOCS[@]}
 	dobin "${WORKDIR}"/3rdparty/{sff_extract,qual2ball,*.pl} || die
 }
 

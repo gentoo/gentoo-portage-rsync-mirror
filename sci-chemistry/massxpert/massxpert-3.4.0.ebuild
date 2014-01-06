@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-2.0.5.ebuild,v 1.4 2014/01/06 15:24:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-3.4.0.ebuild,v 1.1 2014/01/06 15:24:25 jlec Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="A software suite to predict/analyze mass spectrometric data on (bio)polymers."
+DESCRIPTION="Software suite to predict/analyze mass spectrometric data on (bio)polymers"
 HOMEPAGE="http://massxpert.org"
-SRC_URI="http://download.tuxfamily.org/${PN}/source/${P}.tar.gz"
+SRC_URI="http://download.tuxfamily.org/${PN}/source/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -51,6 +51,6 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	doicon "gui/images/${PN}-icon-32.xpm" || die "installing icon failed"
-	dodoc TODO || die "dodoc failed"
+	doicon "gui/images/${PN}-icon-32.xpm"
+	dodoc TODO
 }

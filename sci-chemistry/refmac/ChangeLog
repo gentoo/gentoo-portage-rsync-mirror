@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/refmac
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.59 2013/06/19 04:21:35 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/ChangeLog,v 1.60 2014/01/06 15:25:52 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> refmac-5.5.0110-r3.ebuild:
+  Punt base.eclass
 
   19 Jun 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Changed herd to sci-chemistry

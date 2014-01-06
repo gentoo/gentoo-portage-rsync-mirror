@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r3.ebuild,v 1.7 2012/12/13 16:00:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r3.ebuild,v 1.8 2014/01/06 15:05:37 jlec Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 
-inherit base multilib python virtualx
+inherit eutils multilib python virtualx
 
 MY_PN="${PN%i}"
 MY_P="${MY_PN}-${PV}"
@@ -50,7 +50,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	base_src_prepare
+	epatch ${PATCHES[@]}
 
 	[[ ! -z ${PATCHDATE} ]] && epatch "${WORKDIR}"/${PV}-${PATCHDATE}-updates.patch
 

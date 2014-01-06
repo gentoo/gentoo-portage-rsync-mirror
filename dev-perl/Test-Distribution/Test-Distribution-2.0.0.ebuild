@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/Test-Distribution-2.0.0.ebuild,v 1.3 2014/01/06 14:10:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/Test-Distribution-2.0.0.ebuild,v 1.4 2014/01/06 15:14:32 naota Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="perform tests on all modules of a distribution"
 
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86"
+KEYWORDS="amd64 ~hppa x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-perl/Pod-Coverage-0.20
