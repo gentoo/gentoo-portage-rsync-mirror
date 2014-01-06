@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.2.ebuild,v 1.7 2013/12/08 19:58:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.5.2.ebuild,v 1.8 2014/01/06 04:19:03 naota Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -30,6 +30,7 @@ COMMON_DEPEND="
 	gnome-base/librsvg:2
 	sys-apps/dbus[X?]
 	app-text/iso-codes
+	x11-libs/libnotify
 
 	dconf? ( >=gnome-base/dconf-0.13.4 )
 	gconf? ( >=gnome-base/gconf-2.12:2 )
@@ -116,7 +117,7 @@ src_install() {
 
 	prune_libtool_files --all
 
-	mv "${ED}"/usr/share/bash-completion/completions/ibus.bash ${T}
+	mv "${ED}"/usr/share/bash-completion/completions/ibus.bash "${T}"
 	rm -rf "${ED}"/usr/share/bash-completion || die
 	newbashcomp "${T}"/ibus.bash ${PN}
 	insinto /etc/X11/xinit/xinput.d
