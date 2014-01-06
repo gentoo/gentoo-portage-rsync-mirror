@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-manxgaelic/sword-manxgaelic-1.1.ebuild,v 1.1 2008/05/13 21:30:46 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/sword-manxgaelic/sword-manxgaelic-1.1.ebuild,v 1.2 2014/01/05 23:32:42 creffett Exp $
 
+EAPI=5
 SWORD_MODULE="ManxGaelic"
 
 inherit sword-module

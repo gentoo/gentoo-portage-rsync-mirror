@@ -1,6 +1,9 @@
 # ChangeLog for profiles/default/linux/hppa
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.19 2013/11/30 17:00:49 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.20 2014/01/05 23:33:25 robbat2 Exp $
+
+  05 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
+  Pending keywording of net-libs/miniupnpc per bug #497186
 
   30 Nov 2013; Jeroen Roovers <jer@gentoo.org> 13.0/eapi:
   Update to EAPI=5 for use.stable.mask.

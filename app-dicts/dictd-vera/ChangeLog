@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/dictd-vera
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.22 2014/01/05 11:12:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-vera/ChangeLog,v 1.23 2014/01/05 23:52:56 jer Exp $
+
+*dictd-vera-1.21a (05 Jan 2014)
+
+  05 Jan 2014; Jeroen Roovers <jer@gentoo.org> +dictd-vera-1.21a.ebuild:
+  Version bump. Do not install license.
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -dictd-vera-1.7-r1.ebuild,
   -dictd-vera-1.9_pre.ebuild, metadata.xml:

@@ -1,7 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.41 2013/10/14 04:53:56 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.42 2014/01/05 23:33:05 robbat2 Exp $
 
+# Robin H. Johnson <robbat2@gentoo.org> (05 Jan 2014)
+# Pending keywording of net-libs/miniupnpc per bug #497186
+net-proxy/dante upnp
 
 # Naohiro Aota <naota@gentoo.org> (14 Oct 2013)
 # libcap-ng is for Linux only

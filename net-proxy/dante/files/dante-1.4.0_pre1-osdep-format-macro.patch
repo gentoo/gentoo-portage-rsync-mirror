@@ -1,0 +1,15 @@
+diff -urN dante-1.4.0-pre1-orig/include/osdep.h dante-1.4.0-pre1/include/osdep.h
+--- dante-1.4.0-pre1-orig/include/osdep.h	2013-03-05 16:05:17.097007863 -0800
++++ dante-1.4.0-pre1/include/osdep.h	2013-03-05 16:05:39.259007921 -0800
+@@ -225,9 +225,9 @@
+ #endif /* HAVE_DECL_NONNULL */
+ 
+ #if HAVE_DECL_FORMAT
+-#define FORMAT(x) format(x)
++#define FORMAT(...) format(__VA_ARGS__)
+ #else
+-#define FORMAT(x)
++#define FORMAT(...)
+ #endif /* HAVE_DECL_FORMAT */
+ 
+ #if HAVE_LINUX_BUGS
