@@ -5,4 +5,8 @@
     <email>dastergon@gentoo.org</email>
     <name>Pavlos Ratis</name>
   </maintainer>
+  <maintainer>
+    <email>ottxor@gentoo.org</email>
+    <name>Christoph Junghans</name>
+  </maintainer>
 </pkgmetadata>

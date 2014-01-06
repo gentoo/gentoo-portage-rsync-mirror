@@ -1,7 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-1.ebuild,v 1.2 2012/12/08 17:24:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/sword-modules-1.ebuild,v 1.3 2014/01/06 01:35:59 creffett Exp $
 
+EAPI=5
 DESCRIPTION="A collection of modules for the SWORD project"
 HOMEPAGE="http://www.crosswire.org/sword/"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sword-modules
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.28 2012/12/08 17:24:13 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword-modules/ChangeLog,v 1.29 2014/01/06 01:35:59 creffett Exp $
+
+  06 Jan 2014; Chris Reffett <creffett@gentoo.org> sword-modules-1.ebuild:
+  EAPI bump
 
   08 Dec 2012; Ulrich Müller <ulm@gentoo.org> sword-modules-1.ebuild:
   Fix LICENSE, metapackage that doesn't install any files, bug 444582.
