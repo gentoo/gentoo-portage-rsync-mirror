@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.12.0.ebuild,v 1.1 2013/12/18 19:57:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-4.12.0.ebuild,v 1.2 2014/01/06 03:14:45 creffett Exp $
 
 EAPI=5
 inherit kde4-meta-pkg
@@ -14,6 +14,8 @@ RDEPEND="
 	$(add_kdebase_dep akonadiconsole)
 	$(add_kdebase_dep akregator)
 	$(add_kdebase_dep blogilo)
+	$(add_kdebase_dep calendarjanitor)
+	$(add_kdebase_dep contactthemeeditor)
 	$(add_kdebase_dep kabcclient)
 	$(add_kdebase_dep kaddressbook)
 	$(add_kdebase_dep kalarm)
