@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.10.00.ebuild,v 1.1 2013/12/20 06:07:41 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.10.00.ebuild,v 1.2 2014/01/06 02:12:06 heroxbd Exp $
 
 EAPI=5
 
@@ -40,7 +40,9 @@ PDEPEND="
 
 S="${WORKDIR}/${MYP}"
 
-PATCHES=( "${FILESDIR}"/${PN}-4.10.0-no-examples.patch )
+PATCHES=( "${FILESDIR}"/${PN}-4.10.0-no-examples.patch
+	  "${FILESDIR}"/${PN}-4.10.0-TrackingNavigator.patch # 496678
+	)
 
 src_configure() {
 	local mycmakeargs=(

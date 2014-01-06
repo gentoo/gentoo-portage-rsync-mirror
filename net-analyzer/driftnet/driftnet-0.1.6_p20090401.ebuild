@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6_p20090401.ebuild,v 1.8 2012/05/04 06:08:09 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6_p20090401.ebuild,v 1.9 2014/01/06 02:21:09 steev Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A program which listens to network traffic and picks out images from TCP streams it observes"
@@ -29,6 +29,10 @@ src_prepare() {
 	sed -i \
 		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
 		png.c || die
+	# With newer libpng, --cflags causes build failures.
+	sed -i \
+		-e 's:pkg-config --cflags libpng:pkg-config --libs libpng:' \
+		Makefile || die
 }
 
 src_compile() {

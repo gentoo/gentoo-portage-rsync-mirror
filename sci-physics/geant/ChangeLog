@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/geant
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.77 2013/12/20 06:07:41 heroxbd Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.78 2014/01/06 02:12:06 heroxbd Exp $
+
+  06 Jan 2014; Benda Xu <heroxbd@gentoo.org>
+  +files/geant-4.10.0-TrackingNavigator.patch, geant-4.10.00.ebuild:
+  backport upstream SetNavigatorForTracking inline function fix, credits Oliver
+  Freyermuth for reporting bug 496678
 
 *geant-4.10.00 (20 Dec 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xiphos
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.14 2012/05/04 03:33:12 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.15 2014/01/06 02:01:51 creffett Exp $
+
+  06 Jan 2014; Chris Reffett <creffett@gentoo.org> xiphos-3.1.5.ebuild:
+  Bump to EAPI 5, change to python-single-r1
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> xiphos-3.1.5.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -62,4 +65,3 @@
   +metadata.xml:
   Initial commit, bug 263309; Thanks to Greg <greg.hellings@gmail.com> for
   original ebuild
-
