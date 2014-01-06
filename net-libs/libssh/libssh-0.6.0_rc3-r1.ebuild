@@ -1,15 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.0_rc1.ebuild,v 1.6 2013/12/20 14:33:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.0_rc3-r1.ebuild,v 1.1 2014/01/06 13:35:00 polynomial-c Exp $
 
 EAPI=5
 
-MY_P=${PN}-${PV/_rc1/rc1}
+MY_P=${PN}-${PV/_rc/rc}
 inherit eutils cmake-utils multilib
 
 DESCRIPTION="Access a working SSH implementation by means of a library"
 HOMEPAGE="http://www.libssh.org/"
-SRC_URI="https://red.libssh.org/attachments/download/52/${MY_P}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://red.libssh.org/attachments/download/68/${MY_P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux"
@@ -30,7 +30,12 @@ DOCS=( AUTHORS README ChangeLog )
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}/${PN}-0.5.0-tests.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-0.5.0-tests.patch"
+	"${FILESDIR}/${P}-x2goclient_crash_fix-1.patch"
+	"${FILESDIR}/${P}-x2goclient_crash_fix-2.patch"
+	"${FILESDIR}/${P}-memleak_fix.patch"
+)
 
 src_prepare() {
 	# just install the examples do not compile them

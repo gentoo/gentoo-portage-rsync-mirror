@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/gcam
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/ChangeLog,v 1.10 2012/12/28 12:30:29 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gcam/ChangeLog,v 1.11 2014/01/06 13:44:33 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> gcam-2010.07.27-r1.ebuild,
+  -gcam-9999.ebuild, metadata.xml:
+  Punt base.eclass; drop live ebuild
 
   28 Dec 2012; Michael Palimaka <kensington@gentoo.org> -gcam-2010.07.27.ebuild:
   Remove old.

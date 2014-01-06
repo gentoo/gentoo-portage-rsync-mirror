@@ -1,0 +1,20 @@
+From f3e37000632cb380516bdb9d26fba4dc4e41d6f7 Mon Sep 17 00:00:00 2001
+From: Andreas Schneider <asn@cryptomilk.org>
+Date: Sun, 05 Jan 2014 22:05:13 +0000
+Subject: session: Fix a possible memory leak.
+
+---
+diff --git a/src/session.c b/src/session.c
+index 171779c..3a607d0 100644
+--- a/src/session.c
++++ b/src/session.c
+@@ -255,6 +255,7 @@ void ssh_free(ssh_session session) {
+       ssh_list_free(session->opts.identity);
+   }
+ 
++  SAFE_FREE(session->auth_auto_state);
+   SAFE_FREE(session->serverbanner);
+   SAFE_FREE(session->clientbanner);
+   SAFE_FREE(session->banner);
+--
+cgit v0.9.1

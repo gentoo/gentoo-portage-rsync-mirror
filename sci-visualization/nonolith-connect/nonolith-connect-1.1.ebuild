@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/nonolith-connect-1.1.ebuild,v 1.3 2012/12/11 09:48:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/nonolith-connect/nonolith-connect-1.1.ebuild,v 1.4 2014/01/06 13:31:37 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-inherit base scons-utils toolchain-funcs user
+inherit eutils scons-utils toolchain-funcs user
 
 DESCRIPTION="CEE (Control - Experiment - Explore) analog multitool"
 HOMEPAGE="http://www.nonolithlabs.com/cee/"
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="dev-libs/boost
+RDEPEND="
+	dev-libs/boost
 	virtual/udev"
 DEPEND="${RDEPEND}"
 
@@ -24,6 +25,10 @@ PATCHES=( "${FILESDIR}/${PV}-cflags-respect.patch" )
 pkg_setup() {
 	tc-export CC CXX
 	enewuser nonolithd -1 -1 /dev/null usb
+}
+
+src_prepare() {
+	epatch ${PATCHES[@]}
 }
 
 src_configure() {

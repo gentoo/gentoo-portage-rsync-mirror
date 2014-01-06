@@ -1,6 +1,12 @@
 # ChangeLog for app-laptop/i8kutils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.22 2012/08/22 13:42:00 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.23 2014/01/06 13:56:49 pacho Exp $
+
+*i8kutils-1.33-r1 (06 Jan 2014)
+
+  06 Jan 2014; Pacho Ramos <pacho@gentoo.org> +files/i8kmon.service,
+  +i8kutils-1.33-r1.ebuild:
+  Add unit file for i8kmon (#497178)
 
   22 Aug 2012; Michael Palimaka <kensington@gentoo.org> -files/i8k.init,
   -i8kutils-1.25-r1.ebuild, -i8kutils-1.25.ebuild:

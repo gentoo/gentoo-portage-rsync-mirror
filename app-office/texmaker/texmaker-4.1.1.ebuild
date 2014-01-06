@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.0.3.ebuild,v 1.1 2013/07/29 12:54:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.1.1.ebuild,v 1.1 2014/01/06 13:52:21 jlec Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ SRC_URI="http://www.xm1math.net/texmaker/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
@@ -38,20 +38,39 @@ COMMON_DEPEND="
 	x11-libs/libXext
 	dev-qt/qtgui:4
 	dev-qt/qtcore:4
+	dev-qt/qtsingleapplication
 	dev-qt/qtwebkit:4
 "
 RDEPEND="${COMMON_DEPEND}
 	virtual/latex-base
+	app-i18n/ibus-qt
 	app-text/psutils
 	app-text/ghostscript-gpl
 	media-libs/netpbm"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
-PATCHES=( "${FILESDIR}"/${P}-hunspell.patch )
+PATCHES=( "${FILESDIR}"/${PN}-4.1-unbundle.patch )
 
 DOCS=( utilities/AUTHORS utilities/CHANGELOG.txt )
 HTML_DOCS=( doc/. )
+
+src_prepare() {
+	find singleapp hunspell -delete || die
+
+	qt4-r2_src_prepare
+
+	cat >> ${PN}.pro <<- EOF
+	exists(texmakerx_my.pri):include(texmakerx_my.pri)
+	EOF
+
+	cp "${FILESDIR}"/texmakerx_my.pri . || die
+
+	sed \
+		-e '/^#include/s:hunspell/::g' \
+		-e '/^#include/s:singleapp/::g' \
+		-i *.cpp *.h || die
+}
 
 src_configure() {
 	eqmake4 \

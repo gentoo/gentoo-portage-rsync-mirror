@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwebp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.66 2014/01/05 19:06:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.67 2014/01/06 13:56:22 naota Exp $
+
+  06 Jan 2014; Naohiro Aota <naota@gentoo.org> libwebp-0.4.0.ebuild:
+  Add ~x86-fbsd #496740
 
   05 Jan 2014; Fabian Groffen <grobian@gentoo.org> libwebp-0.4.0.ebuild:
   Marked ~m68k-mint, bug #494512
