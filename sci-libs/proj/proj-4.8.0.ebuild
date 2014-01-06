@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.8.0.ebuild,v 1.10 2013/06/22 12:47:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.8.0.ebuild,v 1.11 2014/01/06 14:48:29 jlec Exp $
 
 EAPI=4
 
@@ -8,7 +8,8 @@ inherit eutils java-pkg-opt-2 flag-o-matic
 
 DESCRIPTION="Proj.4 cartographic projection software with updated NAD27 grids"
 HOMEPAGE="http://trac.osgeo.org/proj/"
-SRC_URI="ftp://ftp.remotesensing.org/pub/proj/${P}.tar.gz
+SRC_URI="
+	ftp://ftp.remotesensing.org/pub/proj/${P}.tar.gz
 	http://download.osgeo.org/proj/${PN}-datumgrid-1.5.zip
 	http://trac.osgeo.org/proj/export/2190/tags/${PV}/proj/src/org_proj4_PJ.h -> ${P}-org_proj4_PJ.h
 "
@@ -19,7 +20,8 @@ KEYWORDS="alpha amd64 ~mips ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~pp
 IUSE="java static-libs"
 
 RDEPEND=""
-DEPEND="app-arch/unzip
+DEPEND="
+	app-arch/unzip
 	java? ( >=virtual/jdk-1.5 )"
 
 src_unpack() {
@@ -42,7 +44,7 @@ src_configure() {
 
 src_install() {
 	default
-	cd nad
+	cd nad || die
 	dodoc README.{NAD,NADUS}
 	insinto /usr/share/proj
 	insopts -m 755

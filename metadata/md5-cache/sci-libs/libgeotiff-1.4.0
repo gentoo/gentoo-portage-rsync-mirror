@@ -1,13 +1,13 @@
-DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=virtual/jpeg >=media-libs/tiff-3.9.1 sci-libs/proj sys-libs/zlib doc? ( app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEFINED_PHASES=compile configure install postinst prepare
+DEPEND=virtual/jpeg >=media-libs/tiff-3.9.1:0 sci-libs/proj sys-libs/zlib doc? ( app-doc/doxygen ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Library for reading TIFF files with embedded tags for geographic (cartographic) information
 EAPI=4
 HOMEPAGE=http://geotiff.osgeo.org/
 IUSE=debug doc static-libs
 KEYWORDS=amd64 ~mips ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2
-RDEPEND=virtual/jpeg >=media-libs/tiff-3.9.1 sci-libs/proj sys-libs/zlib
+RDEPEND=virtual/jpeg >=media-libs/tiff-3.9.1:0 sci-libs/proj sys-libs/zlib
 SLOT=0
 SRC_URI=http://download.osgeo.org/geotiff/libgeotiff/libgeotiff-1.4.0.tar.gz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=2a1ae5d1de0deafeac90572f15b34788
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=95a2d12252eb08d0224169be7264effd

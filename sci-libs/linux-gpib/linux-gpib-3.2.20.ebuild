@@ -1,13 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.20.ebuild,v 1.2 2013/12/14 23:15:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.20.ebuild,v 1.3 2014/01/06 14:40:12 jlec Exp $
 
 EAPI=4
+
 PERL_EXPORT_PHASE_FUNCTIONS=no
 GENTOO_DEPEND_ON_PERL=no
 PYTHON_DEPEND="python? 2"
 
-inherit base linux-mod autotools perl-module python toolchain-funcs udev user
+inherit eutils linux-mod autotools perl-module python toolchain-funcs udev user
 
 DESCRIPTION="Kernel module and driver library for GPIB (IEEE 488.2) hardware"
 HOMEPAGE="http://linux-gpib.sourceforge.net/"
@@ -54,7 +55,8 @@ pkg_setup () {
 }
 
 src_prepare () {
-	base_src_prepare
+	epatch ${PATCHES[@]}
+	epatch_user
 	eautoreconf
 }
 

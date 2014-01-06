@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/freesteam
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/freesteam/ChangeLog,v 1.2 2012/12/15 12:44:23 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/freesteam/ChangeLog,v 1.3 2014/01/06 14:46:21 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> freesteam-2.0.ebuild,
+  freesteam-9999.ebuild, metadata.xml:
+  Punt base.eclass
 
 *freesteam-9999 (15 Dec 2012)
 

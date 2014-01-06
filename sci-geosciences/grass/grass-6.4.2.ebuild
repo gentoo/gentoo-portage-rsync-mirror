@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.9 2013/07/04 13:06:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.2.ebuild,v 1.10 2014/01/06 14:58:08 jlec Exp $
 
 EAPI=4
 
 PYTHON_DEPEND="python? 2"
 WANT_AUTOCONF="2.1"
 
-inherit eutils gnome2 multilib python versionator wxwidgets base autotools
+inherit eutils gnome2 multilib python versionator wxwidgets autotools
 
 MY_PM=${PN}$(get_version_component_range 1-2 ${PV})
 MY_PM=${MY_PM/.}
@@ -133,7 +133,8 @@ pkg_setup() {
 
 src_prepare() {
 	use opengl || epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
-	base_src_prepare
+	epatch ${PATCHES[@]}
+	epatch_user
 	eautoconf
 }
 

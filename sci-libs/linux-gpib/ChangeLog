@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/linux-gpib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.25 2013/12/24 12:53:31 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/ChangeLog,v 1.26 2014/01/06 14:40:12 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> -linux-gpib-3.2.17-r1.ebuild,
+  linux-gpib-3.2.19.ebuild, linux-gpib-3.2.20.ebuild,
+  linux-gpib-3.2.20-r1.ebuild, metadata.xml:
+  Drop old; punt base.eclass
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> linux-gpib-3.2.19.ebuild:
   Stable for x86, wrt bug #488798

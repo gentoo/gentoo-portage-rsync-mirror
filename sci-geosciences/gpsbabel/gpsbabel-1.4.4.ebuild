@@ -1,14 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.4.4.ebuild,v 1.2 2013/03/02 23:20:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/gpsbabel-1.4.4.ebuild,v 1.3 2014/01/06 14:56:17 jlec Exp $
 
 EAPI=4
 
-inherit eutils qt4-r2 base autotools
+inherit eutils qt4-r2 autotools
 
 DESCRIPTION="GPS waypoints, tracks and routes converter"
 HOMEPAGE="http://www.gpsbabel.org/"
-SRC_URI="http://dev.gentoo.org/~patrick/${P}.tar.gz
+SRC_URI="
+	http://dev.gentoo.org/~patrick/${P}.tar.gz
 	doc? ( http://www.gpsbabel.org/style3.css -> gpsbabel.org-style3.css )"
 LICENSE="GPL-2"
 
@@ -44,7 +45,8 @@ PATCHES=(
 )
 
 src_prepare() {
-	base_src_prepare
+	epatch ${PATCHES[@]}
+	epatch_user
 	rm -rf shapelib || die
 
 	use doc && cp "${DISTDIR}/gpsbabel.org-style3.css" "${S}"
@@ -58,7 +60,7 @@ src_configure() {
 		--with-zlib=system
 
 	if use qt4; then
-		pushd "${S}/gui" > /dev/null
+		pushd "${S}/gui" > /dev/null || die
 		lrelease *.ts || die
 		eqmake4
 		popd > /dev/null
@@ -68,13 +70,13 @@ src_configure() {
 src_compile() {
 	emake
 	if use qt4; then
-		pushd "${S}/gui" > /dev/null
+		pushd "${S}/gui" > /dev/null || die
 		emake
 		popd > /dev/null
 	fi
 
 	if use doc; then
-		perl xmldoc/makedoc
+		perl xmldoc/makedoc || die
 		emake gpsbabel.html
 	fi
 }

@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.9.6.ebuild,v 1.7 2013/04/02 20:57:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.9.6.ebuild,v 1.8 2014/01/06 14:43:59 jlec Exp $
 
 EAPI=5
 
 MY_PN="lib${PN/lib/}"
 
-inherit base cmake-utils
+inherit cmake-utils
 
 DESCRIPTION="INDI Astronomical Control Protocol library"
 HOMEPAGE="http://www.indilib.org/"
@@ -37,7 +37,7 @@ PATCHES=(
 S=${WORKDIR}/${MY_PN}-${PV}
 
 src_prepare() {
-	base_src_prepare
+	cmake-utils_src_prepare
 
 	sed -e "s|/etc/udev/rules.d|/lib/udev/rules.d|" \
 		-i CMakeLists.txt || die

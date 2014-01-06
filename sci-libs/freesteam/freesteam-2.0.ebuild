@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/freesteam/freesteam-2.0.ebuild,v 1.1 2011/11/26 22:55:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/freesteam/freesteam-2.0.ebuild,v 1.2 2014/01/06 14:46:21 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-inherit base multilib scons-utils toolchain-funcs
+inherit eutils multilib scons-utils toolchain-funcs
 
 DESCRIPTION="Open source implementation of IF97 steam tables"
 HOMEPAGE="http://freesteam.sourceforge.net/"
@@ -19,12 +19,10 @@ RDEPEND="sci-libs/gsl"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	local PATCHES=(
+	epatch \
 		"${FILESDIR}"/${PN}-flags.patch
 		"${FILESDIR}"/${PN}-soname-symlinks.patch
-	)
-
-	base_src_prepare
+	epatch_user
 }
 
 src_configure() {

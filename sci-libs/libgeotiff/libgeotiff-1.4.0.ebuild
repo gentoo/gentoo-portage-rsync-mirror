@@ -1,9 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.4.0.ebuild,v 1.7 2012/07/29 16:58:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeotiff/libgeotiff-1.4.0.ebuild,v 1.8 2014/01/06 14:35:20 jlec Exp $
 
 EAPI=4
-inherit base autotools
+
+inherit autotools eutils
 
 MY_P=${P/_rc/RC}
 
@@ -18,7 +19,7 @@ IUSE="debug doc static-libs"
 
 RDEPEND="
 	virtual/jpeg
-	>=media-libs/tiff-3.9.1
+	>=media-libs/tiff-3.9.1:0
 	sci-libs/proj
 	sys-libs/zlib"
 
@@ -30,7 +31,7 @@ S=${WORKDIR}/${MY_P/RC*/}
 DOCS=( README ChangeLog )
 
 src_prepare() {
-	base_src_prepare
+	epatch_user
 	sed -i \
 		-e "s:-O3::g" \
 		configure.ac || die
@@ -60,7 +61,7 @@ src_install() {
 	default
 
 	use doc && dohtml docs/api/*
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	prune_libtool_files
 }
 
 pkg_postinst() {

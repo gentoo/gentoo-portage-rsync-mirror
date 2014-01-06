@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Builder
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/ChangeLog,v 1.16 2014/01/06 14:08:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/ChangeLog,v 1.17 2014/01/06 14:56:27 naota Exp $
+
+  06 Jan 2014; Naohiro Aota <naota@gentoo.org>
+  DateTime-Format-Builder-0.810.0.ebuild:
+  Add ~x86-fbsd #497068
 
   06 Jan 2014; Jeroen Roovers <jer@gentoo.org>
   DateTime-Format-Builder-0.810.0.ebuild:
