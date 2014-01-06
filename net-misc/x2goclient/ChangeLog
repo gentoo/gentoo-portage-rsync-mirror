@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/x2goclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.24 2014/01/03 15:34:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.25 2014/01/06 12:21:15 voyageur Exp $
+
+  06 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goclient-4.0.1.0.ebuild:
+  Fix openssh warning
 
 *x2goclient-4.0.1.2 (03 Jan 2014)
 

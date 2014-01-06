@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-4.0.1.0.ebuild,v 1.4 2013/10/21 09:15:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-4.0.1.0.ebuild,v 1.5 2014/01/06 12:21:15 voyageur Exp $
 
 EAPI=4
 inherit eutils qt4-r2
@@ -43,7 +43,7 @@ pkg_postinst(){
 	if has_version "<net-libs/libssh-0.6.0_rc1"; then
 		ewarn "If x2goclient hangs at connect, you will need to either:"
 		ewarn " * use >=net-libs/libssh-0.6.0_rc1 on the *client*"
-		ewarn " * use net-misc/openssh[hpn] on the *server*"
+		ewarn " * use net-misc/openssh[-hpn] on the *server*"
 		ewarn "See bug #482548 for more information"
 	fi
 }

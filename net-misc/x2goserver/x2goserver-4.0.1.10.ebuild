@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.0.2.ebuild,v 1.4 2013/09/12 12:55:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.10.ebuild,v 1.1 2014/01/06 12:20:24 voyageur Exp $
 
 EAPI=4
-inherit eutils multilib toolchain-funcs user
+inherit eutils multilib systemd toolchain-funcs user
 
 DESCRIPTION="The X2Go server"
 HOMEPAGE="http://www.x2go.org"
@@ -11,31 +11,39 @@ SRC_URI="http://code.x2go.org/releases/source/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+fuse postgres +sqlite"
+KEYWORDS="~amd64 ~x86"
+IUSE="+doc +fuse postgres +sqlite"
 
 REQUIRED_USE="|| ( postgres sqlite )"
 
 # Requires man2html, only provided by sys-apps/man
-DEPEND="sys-apps/man"
+DEPEND="doc? ( sys-apps/man )"
 RDEPEND="dev-perl/Config-Simple
+	dev-perl/File-ReadBackwards
 	media-fonts/font-cursor-misc
 	media-fonts/font-misc-misc
 	net-misc/nx
-	net-misc/openssh[-hpn]
+	net-misc/openssh
 	x11-apps/xauth
 	fuse? ( sys-fs/sshfs-fuse )
 	postgres? ( dev-perl/DBD-Pg )
 	sqlite? ( dev-perl/DBD-SQLite )"
 
 pkg_setup() {
-	enewuser x2gouser -1 -1 /var/lib/x2go
-	enewuser x2goprint -1 -1 /var/spool/x2goprint
+	# Force the group creation, #479650
+	enewgroup x2gouser
+	enewgroup x2goprint
+	enewuser x2gouser -1 -1 /var/lib/x2go x2gouser
+	enewuser x2goprint -1 -1 /var/spool/x2goprint x2goprint
 }
 
 src_prepare() {
 	# Multilib clean
 	sed -e "/^LIBDIR=/s/lib/$(get_libdir)/" -i Makefile */Makefile || die "multilib sed failed"
+	# Skip man2html build if needed
+	if ! use doc; then
+		sed -e "s/build-indep: build_man2html/build-indep:/" -i Makefile */Makefile || die "man2html sed failed"
+	fi
 	# Use nxagent directly
 	sed -i -e "/NX_TEMP=/s/x2goagent/nxagent/" x2goserver/bin/x2gostartagent || die "sed failed"
 }
@@ -52,6 +60,7 @@ src_install() {
 	dosym /usr/share/applications /etc/x2go/applications
 
 	newinitd "${FILESDIR}"/${PN}.init x2gocleansessions
+	systemd_dounit "${FILESDIR}"/x2gocleansessions.service
 }
 
 pkg_postinst() {
