@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.3.5.ebuild,v 1.3 2012/12/10 16:31:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-4.3.5.ebuild,v 1.4 2014/01/06 08:50:53 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-inherit base eutils multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="A graphical multiple sequence alignment editor"
 HOMEPAGE="http://pbil.univ-lyon1.fr/software/seaview.html"
@@ -15,17 +15,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+xft"
 
-DEPEND="
+CDEPEND="
 	sys-libs/zlib
 	x11-libs/fltk:1
 	x11-libs/libX11
 	xft? (
 		x11-libs/libXft
 		x11-libs/fltk:1[xft] )"
-RDEPEND="${DEPEND}
+RDEPEND="${CDEPEND}
 	sci-biology/clustalw
 	|| ( sci-libs/libmuscle sci-biology/muscle )
 	sci-biology/phyml"
+DEPEND="${CDEPEND}
+	virtual/pkgconfig"
 
 S="${WORKDIR}/${PN}"
 
@@ -36,12 +38,12 @@ src_prepare() {
 		-e "s:^CXX.*:CXX = $(tc-getCXX):" \
 		-e "s:\$(OPT):${CXXFLAGS}:" \
 		-e "s:^OPT:#OPT:" \
-		-e "s:^FLTK = .*$:FLTK = /usr/include/fltk-1:" \
+		-e "s:^FLTK = .*$:FLTK = ${EPREFIX}/usr/include/fltk-1:" \
 		-e "s:^#IFLTK .*:IFLTK = $(fltk-config --use-images --cflags):" \
 		-e "s:^#LFLTK .*:LFLTK = $(fltk-config --use-images --ldflags):" \
 		-e "s:^USE_XFT:#USE_XFT:" \
 		-e "s:^#HELPFILE:HELPFILE:" \
-		-e "s:/usr/share/doc/seaview/seaview.htm:/usr/share/seaview/seaview.htm:" \
+		-e "s:/usr/share/doc/seaview/seaview.htm:${EPREFIX}/usr/share/seaview/seaview.htm:" \
 		-e "s:^#PHYMLNAME:PHYMLNAME:" \
 		-e 's:-lXinerama::g' \
 		-e 's:-lpng::g' \
@@ -51,14 +53,12 @@ src_prepare() {
 
 	if use xft; then
 		sed \
-			-e "s:^#USE_XFT .*:USE_XFT = -DUSE_XFT $(pkg-config --cflags xft):" \
-			-e "s:-lXft:$(pkg-config --libs xft):" \
+			-e "s:^#USE_XFT .*:USE_XFT = -DUSE_XFT $($(tc-getPKG_CONFIG) --cflags xft):" \
+			-e "s:-lXft:$($(tc-getPKG_CONFIG) --libs xft):" \
 			-i Makefile || die "sed failed while editing Makefile to enable xft"
 	else
 		sed -i -e "s:-lXft::" Makefile || die
 	fi
-
-	base_src_prepare
 }
 
 src_install() {

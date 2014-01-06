@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/clustalx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.29 2013/03/11 15:02:36 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalx/ChangeLog,v 1.30 2014/01/06 08:33:15 jlec Exp $
+
+*clustalx-2.1-r1 (06 Jan 2014)
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> +clustalx-2.1-r1.ebuild:
+  Make sure only system libs are used
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> -clustalx-1.83-r2.ebuild,
   metadata.xml:

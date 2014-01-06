@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/seaview
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.48 2013/03/11 16:57:16 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/ChangeLog,v 1.49 2014/01/06 08:50:53 jlec Exp $
+
+  06 Jan 2014; Justin Lecher <jlec@gentoo.org> seaview-4.3.5.ebuild:
+  Punt base.eclass; Bump EAPI to 5; add missing dep for pkg-config; Give some
+  PREFIX love; use tc-getPKG_CONFIG instead of plain pkg-config
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly

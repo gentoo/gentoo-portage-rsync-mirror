@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4
+DESCRIPTION=Graphical interface for the ClustalW multiple alignment program
+EAPI=5
+HOMEPAGE=http://www.ebi.ac.uk/tools/clustalw2/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3 LGPL-3
+RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4 >=sci-biology/clustalw-2.1
+SLOT=0
+SRC_URI=http://www.clustal.org/download/current/clustalx-2.1.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=c3aab4a0ee62032aab50a3bdeb7b5efd
