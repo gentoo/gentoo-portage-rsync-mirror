@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.18.ebuild,v 1.9 2013/05/07 17:52:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.18.ebuild,v 1.10 2014/01/07 15:20:46 jlec Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -125,7 +125,7 @@ pkg_postinst() {
 	if use secondary-wheel; then
 		elog "You have enabled the secondary-wheel USE flag."
 		elog "This allows you to scroll in secondary screens"
-		elog "(like mutt's message list/view) using the mouse wheel."
+		elog "(like mutt's message list/view or nano) using the mouse wheel."
 		elog
 		elog "To actually enable the feature you have to add"
 		elog "  URxvt*secondaryWheel: true"

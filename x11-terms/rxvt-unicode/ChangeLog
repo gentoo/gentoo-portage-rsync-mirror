@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/rxvt-unicode
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.251 2013/11/11 20:07:34 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.252 2014/01/07 15:20:46 jlec Exp $
+
+  07 Jan 2014; Justin Lecher <jlec@gentoo.org> rxvt-unicode-9.18.ebuild,
+  rxvt-unicode-9.19.ebuild:
+  Add note about secondary-wheel and nano
 
   11 Nov 2013; Jeroen Roovers <jer@gentoo.org>
   files/rxvt-unicode-9.19-fading.patch:
