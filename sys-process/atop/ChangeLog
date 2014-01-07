@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/atop
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.46 2013/08/07 17:22:35 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/atop/ChangeLog,v 1.47 2014/01/07 10:28:13 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -atop-1.25-r1.ebuild,
+  -atop-1.26.ebuild, -atop-1.26-r1.ebuild,
+  -files/atop-1.26-cve-2011-3618.patch:
+  Removed old versions and files.
 
   07 Aug 2013; Sébastien Fabbro <bicatali@gentoo.org> atop-2.0.2.ebuild:
   Keyword amd64-linux and x86-linux
