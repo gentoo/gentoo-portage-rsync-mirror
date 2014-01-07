@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/serf-1.3.3.ebuild,v 1.1 2013/12/20 00:00:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/serf-1.3.3.ebuild,v 1.2 2014/01/07 21:45:59 ottxor Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://serf.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x64-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="kerberos"
 
 RDEPEND="dev-libs/apr:1=
