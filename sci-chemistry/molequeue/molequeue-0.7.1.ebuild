@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molequeue/molequeue-0.7.1.ebuild,v 1.1 2014/01/07 13:40:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molequeue/molequeue-0.7.1.ebuild,v 1.2 2014/01/07 14:47:41 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit cmake-utils multilib python-single-r1 versionator
+inherit cmake-utils multilib python-single-r1 versionator virtualx
 
 DESCRIPTION="Abstract, manage and coordinate execution of tasks"
 HOMEPAGE="http://www.openchemistry.org/OpenChemistry/project/molequeue.html"
@@ -18,13 +18,15 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+client doc server test +zeromq"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
-	server? ( client )"
+	server? ( client )
+	test? ( server )"
 
 RDEPEND="${PYTHON_DEPS}
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	zeromq? ( net-libs/cppzmq )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )"
 
 src_configure() {
 	local mycmakeargs=(
@@ -39,4 +41,18 @@ src_configure() {
 		mycmakeargs+=( -DZeroMQ_ROOT_DIR=\"${EPREFIX}/usr\" )
 
 	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile all $(usex doc documentation)
+}
+
+src_test() {
+	VIRTUALX_COMMAND=cmake-utils_src_test
+	virtualmake
+}
+
+src_install() {
+	use doc && HTML_DOCS=( "${BUILD_DIR}"/docs/html/. )
+	cmake-utils_src_install
 }

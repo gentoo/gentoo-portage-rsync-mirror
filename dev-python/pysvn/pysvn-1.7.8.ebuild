@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.8.ebuild,v 1.2 2013/09/05 18:46:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.8.ebuild,v 1.3 2014/01/07 15:01:03 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -18,7 +18,7 @@ IUSE="doc examples"
 
 DEPEND="
 	>=dev-python/pycxx-6.2.0[${PYTHON_USEDEP}]
-	<dev-vcs/subversion-1.8"  # (bug #395533)
+	<dev-vcs/subversion-1.9"
 RDEPEND="${DEPEND}"
 # Currently fail, no facility to add new issue upstream
 RESTRICT="test"

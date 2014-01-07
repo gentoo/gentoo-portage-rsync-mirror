@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.36 2013/09/05 18:46:31 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.37 2014/01/07 15:01:03 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> pysvn-1.7.8.ebuild:
+  Fixed dependency on subversion (bug #497400).
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> pysvn-1.7.7.ebuild,
   pysvn-1.7.8.ebuild:
