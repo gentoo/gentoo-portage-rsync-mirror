@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/musca
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.22 2012/03/06 21:44:23 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.23 2014/01/07 18:20:04 jer Exp $
+
+*musca-0.9.24_p20100226-r3 (07 Jan 2014)
+
+  07 Jan 2014; Jeroen Roovers <jer@gentoo.org>
+  +musca-0.9.24_p20100226-r3.ebuild, +files/musca-0.9.24_p20100226-null.patch:
+  Fix some coding issues.
 
   06 Mar 2012; Jeroen Roovers <jer@gentoo.org>
   musca-0.9.24_p20100226-r2.ebuild:
