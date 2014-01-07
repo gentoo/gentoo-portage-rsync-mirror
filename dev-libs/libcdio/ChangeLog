@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcdio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.142 2013/11/09 12:57:27 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.143 2014/01/07 14:03:19 jer Exp $
+
+  07 Jan 2014; Jeroen Roovers <jer@gentoo.org> libcdio-0.90-r1.ebuild:
+  Stable for HPPA (bug #497246).
 
   09 Nov 2013; Justin Lecher <jlec@gentoo.org> libcdio-0.90-r1.ebuild,
   metadata.xml:
