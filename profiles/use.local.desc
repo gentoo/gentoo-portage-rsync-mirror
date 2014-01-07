@@ -5845,6 +5845,8 @@ sci-libs/linux-gpib:isa - Build ISA kernel modules; from 3.12 on the setting is 
 sci-libs/lis:fma - Use the Fused Multiply Add instruction set (x86 arches)
 sci-libs/lis:quad - Enable quadruple precision operations
 sci-libs/lis:saamg - Build the Smoothed Aggregation Algebraic MultiGrid preconditioner
+sci-libs/magma:fermi - Compile for GPU NVIDIA Fermi family (2.x cards)
+sci-libs/magma:kepler - Compile for GPU NVIDIA Kepler family (GF 6xx cards)
 sci-libs/mathgl:hdf - Add support for the Hierarchical Data Format v.4 sci-libs/hdf
 sci-libs/mathgl:octave - Add bindings for sci-mathematics/octave
 sci-libs/matio:sparse - Extend formats for sparse matrix (not matlab)
