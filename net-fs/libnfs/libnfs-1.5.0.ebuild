@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/libnfs-1.5.0.ebuild,v 1.3 2013/06/27 18:08:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/libnfs-1.5.0.ebuild,v 1.4 2014/01/07 17:48:04 maksbotan Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://github.com/sahlberg/libnfs.git"
 	inherit git-2 autotools
 else
-	SRC_URI="https://github.com/downloads/sahlberg/${PN}/${P}.tar.gz"
+	SRC_URI="mirror://github/sahlberg/${PN}/${P}.tar.gz"
 	KEYWORDS="amd64 x86"
 fi
 

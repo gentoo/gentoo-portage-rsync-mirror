@@ -1,21 +1,21 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-9999.ebuild,v 1.3 2014/01/07 17:48:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-3.1.0.ebuild,v 1.1 2014/01/07 17:48:27 tomwij Exp $
 
 EAPI="5"
 
 AUTOTOOLS_AUTORECONF="1"
 AUTOTOOLS_IN_SOURCE_BUILD="1"
 WX_GTK_VER="3.0"
-inherit autotools-utils wxwidgets git-2
+inherit autotools-utils wxwidgets
 
 DESCRIPTION="Advanced SSA/ASS subtitle editor"
 HOMEPAGE="http://www.aegisub.org/"
-EGIT_REPO_URI="https://github.com/Aegisub/Aegisub.git"
+SRC_URI="http://ftp.aegisub.org/pub/releases/${P}.tar.xz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="alsa debug +ffmpeg fftw openal oss portaudio pulseaudio spell"
 
 REQUIRED_USE="
@@ -50,8 +50,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 
-EGIT_SOURCEDIR="${S}"
-S=${S}/${PN}
+S=${WORKDIR}/${P}/${PN}
 
 src_configure() {
 	local myeconfargs=(

@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=>=x11-libs/wxGTK-3.0.0:3.0[X,opengl,debug?] virtual/opengl virtual/glu >=media-libs/libass-0.10.0[fontconfig] virtual/libiconv >=dev-lang/lua-5.1.1 >=dev-libs/boost-1.52.0:=[icu] >=dev-libs/icu-4.8.1.1:= >=media-libs/fontconfig-2.4.2 >=media-libs/freetype-2.3.5:2 alsa? ( >=media-libs/alsa-lib-1.0.16 ) portaudio? ( =media-libs/portaudio-19* ) pulseaudio? ( >=media-sound/pulseaudio-0.9.5 ) openal? ( media-libs/openal ) spell? ( >=app-text/hunspell-1.2.2 ) ffmpeg? ( >=media-libs/ffmpegsource-2.17:= ) fftw? ( >=sci-libs/fftw-3.3 ) oss? ( virtual/os-headers ) >=sys-devel/gettext-0.18 dev-util/intltool virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Advanced SSA/ASS subtitle editor
+EAPI=5
+HOMEPAGE=http://www.aegisub.org/
+IUSE=alsa debug +ffmpeg fftw openal oss portaudio pulseaudio spell
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=x11-libs/wxGTK-3.0.0:3.0[X,opengl,debug?] virtual/opengl virtual/glu >=media-libs/libass-0.10.0[fontconfig] virtual/libiconv >=dev-lang/lua-5.1.1 >=dev-libs/boost-1.52.0:=[icu] >=dev-libs/icu-4.8.1.1:= >=media-libs/fontconfig-2.4.2 >=media-libs/freetype-2.3.5:2 alsa? ( >=media-libs/alsa-lib-1.0.16 ) portaudio? ( =media-libs/portaudio-19* ) pulseaudio? ( >=media-sound/pulseaudio-0.9.5 ) openal? ( media-libs/openal ) spell? ( >=app-text/hunspell-1.2.2 ) ffmpeg? ( >=media-libs/ffmpegsource-2.17:= ) fftw? ( >=sci-libs/fftw-3.3 )
+REQUIRED_USE=|| ( alsa openal oss portaudio pulseaudio )
+SLOT=0
+SRC_URI=http://ftp.aegisub.org/pub/releases/aegisub-3.1.0.tar.xz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	755f4b28ecdf7c1213011108e566babc
+_md5_=df113dbf9a02ef3e8585292f1a941b7a

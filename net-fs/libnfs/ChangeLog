@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/libnfs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.6 2013/06/27 18:08:29 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/ChangeLog,v 1.7 2014/01/07 17:48:04 maksbotan Exp $
+
+*libnfs-1.8.0 (07 Jan 2014)
+
+  07 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +files/libnfs-1.8.0-makefile.patch, +libnfs-1.8.0.ebuild, libnfs-1.5.0.ebuild:
+  Bump to 1.8.0: migrate to EAPI 5 and autootols-utils, install examples. Use
+  mirror://github in 1.5.0 to make repoman happy.
 
   27 Jun 2013; Agostino Sarubbo <ago@gentoo.org> libnfs-1.5.0.ebuild:
   Stable for x86, wrt bug #464552
