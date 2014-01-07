@@ -1,6 +1,18 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.183 2014/01/07 02:54:58 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.184 2014/01/07 07:18:36 dolsen Exp $
+
+*layman-2.0.0-r2 (07 Jan 2014)
+*layman-2.0.0-r1 (07 Jan 2014)
+
+  07 Jan 2014; Brian Dolbec <dolsen@gentoo.org> -layman-1.4.2-r3.ebuild,
+  -layman-2.0.0.ebuild, +layman-2.0.0-r1.ebuild, +layman-2.0.0-r2.ebuild,
+  -files/layman-1.4.2-manpage-corrections.patch,
+  -files/layman-1.4.2-python-compatbility-fix.patch,
+  +files/layman-2.0.0.svn_upgrade.patch:
+  Version bump to fix a USE flag rename in subversion-1.8.5.
+  bug # 497324. Second bump to patch the internal svn upgrade handling
+  code for the new svn. Remove old/deprecated version.
 
   07 Jan 2014; Brian Dolbec <dolsen@gentoo.org> layman-1.4.2-r3.ebuild,
   layman-2.0.0.ebuild, layman-9999.ebuild:

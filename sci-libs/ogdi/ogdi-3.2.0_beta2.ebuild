@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.2.0_beta2.ebuild,v 1.6 2013/02/27 07:31:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ogdi-3.2.0_beta2.ebuild,v 1.7 2014/01/07 07:26:42 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 MY_P=${P/_/.}
 inherit eutils toolchain-funcs
@@ -18,7 +18,7 @@ IUSE="static-libs"
 
 DEPEND="
 	dev-libs/expat
-	<sci-libs/proj-4.8.0
+	>sci-libs/proj-4.8.0
 	sys-libs/zlib
 "
 RDEPEND="${DEPEND}"
@@ -31,13 +31,14 @@ src_prepare() {
 		"${FILESDIR}"/${P}-subdirs.patch \
 		"${FILESDIR}"/${P}-endianess.patch \
 		"${FILESDIR}"/${P}-64b.patch \
+		"${FILESDIR}"/${P}-proj480.patch \
 		"${FILESDIR}"/${PN}-3.1.6-fpic.patch
 	sed 's:O2:O9:g' -i configure || die
 }
 
 src_configure() {
 	export TOPDIR="${S}"
-	export TARGET=`uname`
+	export TARGET=$(uname)
 	export CFG="release"
 	export LD_LIBRARY_PATH=$TOPDIR/bin/${TARGET}
 

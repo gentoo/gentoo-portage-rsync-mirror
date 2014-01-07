@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.128 2014/01/06 13:24:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.129 2014/01/07 07:04:18 jlec Exp $
+
+  07 Jan 2014; Justin Lecher <jlec@gentoo.org> +qwt-6.0.0.ebuild:
+  Readd old version to fix broken deps, #497326
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> -qwt-5.2.1.ebuild,
   -qwt-6.0.0.ebuild:
