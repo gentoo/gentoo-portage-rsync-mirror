@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r2.ebuild,v 1.2 2013/06/20 03:34:13 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/nss_ldap-265-r2.ebuild,v 1.4 2014/01/07 22:46:13 jer Exp $
 
 EAPI=5
 inherit fixheadtails eutils multilib autotools prefix
@@ -13,7 +13,7 @@ SRC_URI="http://www.padl.com/download/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 
 DEPEND=">=net-nds/openldap-2.1.30-r5
 		sasl? ( dev-libs/cyrus-sasl )
@@ -112,7 +112,7 @@ src_install() {
 		-e '$inss_initgroups_ignoreusers ldap,openldap,mysql,syslog,root,postgres'
 
 	dodoc ldap.conf ANNOUNCE NEWS ChangeLog AUTHORS \
-		COPYING CVSVersionInfo.txt README nsswitch.ldap certutil
+		CVSVersionInfo.txt README nsswitch.ldap certutil
 	docinto docs; dodoc doc/*
 }
 
