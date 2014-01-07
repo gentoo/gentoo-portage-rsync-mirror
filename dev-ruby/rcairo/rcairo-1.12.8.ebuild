@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.12.3.ebuild,v 1.1 2012/12/25 09:15:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.12.8.ebuild,v 1.1 2014/01/07 07:08:01 graaff Exp $
 
-EAPI=4
+EAPI=5
 
 # jruby → cannot work, it's a compiled extension
-USE_RUBY="ruby18 ree18 ruby19"
+USE_RUBY="ruby18 ruby19 ruby20"
 
 RUBY_FAKEGEM_NAME="cairo"
 
@@ -44,7 +44,7 @@ each_ruby_configure() {
 }
 
 each_ruby_compile() {
-	emake -Cext/cairo || die "make failed"
+	emake V=1 -Cext/cairo || die "make failed"
 
 	# again, try to make it more standard, to install it more easily.
 	cp ext/cairo/cairo$(get_modname) lib/ || die
