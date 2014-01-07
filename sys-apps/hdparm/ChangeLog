@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hdparm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.240 2013/02/17 23:10:40 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.241 2014/01/07 08:43:20 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -hdparm-9.28.ebuild,
+  -hdparm-9.36.ebuild, -hdparm-9.37.ebuild, -hdparm-9.38.ebuild:
+  Removed old versions and files.
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> hdparm-9.43.ebuild:
   Add ~arm-linux keyword.

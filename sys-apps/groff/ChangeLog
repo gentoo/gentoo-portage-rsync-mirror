@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/groff
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.140 2013/12/07 05:55:00 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.141 2014/01/07 08:36:51 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -groff-1.20.1-r1.ebuild,
+  -groff-1.20.1-r2.ebuild, -groff-1.20.1-r3.ebuild, -groff-1.21.ebuild,
+  -groff-1.21-r1.ebuild, -groff-1.22.1.ebuild,
+  -files/groff-1.20.1-Thtml-mem-leak.patch,
+  -files/groff-1.20.1-double-frees-mem-leaks.patch,
+  -files/groff-1.20.1-pdfmark-parallel.patch,
+  -files/groff-1.20.1-tmac-ec.patch, -files/groff-1.21-gnulib.patch,
+  -files/groff-1.21-gnulib-cross.patch, -files/groff-1.21-makefile.patch,
+  -files/groff-1.22.1-pdf-subdir.patch, -files/groff-1.22.1-pdf-symlink.patch:
+  Removed old versions and files.
 
   07 Dec 2013; Mike Frysinger <vapier@gentoo.org>
   +files/groff-1.22.2-parallel-mom.patch, groff-1.22.2.ebuild:

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.1.ebuild,v 1.2 2010/06/11 19:12:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-2.5.ebuild,v 1.1 2014/01/07 08:37:33 polynomial-c Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -21,7 +21,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i -e 's/-O3//' src/makefile || die
-	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile() {
@@ -36,12 +35,12 @@ src_compile() {
 }
 
 src_install() {
-	dobin src/ne || die "dobin failed"
+	dobin src/ne
 
 	insinto /usr/share/ne/syntax
-	doins syntax/*.jsf || die "doins failed"
+	doins syntax/*.jsf
 
-	doman doc/ne.1 || die "doman failed"
-	dohtml -r doc/html/. || die "dohtml failed"
-	dodoc CHANGES README doc/*.{txt,pdf,texinfo} doc/default.* || die "dodoc failed"
+	doman doc/ne.1
+	dohtml -r doc/html/.
+	dodoc CHANGES README doc/*.{txt,pdf,texinfo} doc/default.*
 }

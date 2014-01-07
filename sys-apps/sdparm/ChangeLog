@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.76 2014/01/02 16:05:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.77 2014/01/07 08:55:51 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -sdparm-1.03.ebuild,
+  -sdparm-1.04.ebuild, -sdparm-1.05.ebuild, -sdparm-1.06.ebuild,
+  -sdparm-1.08.ebuild:
+  Removed old versions and files.
 
 *sdparm-1.08-r1 (02 Jan 2014)
 
