@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.4.2-r3.ebuild,v 1.9 2012/11/06 07:17:09 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.4.2-r3.ebuild,v 1.10 2014/01/07 02:54:58 dolsen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -29,6 +29,7 @@ RDEPEND="${COMMON_DEPS}
 	mercurial? ( dev-vcs/mercurial )
 	subversion? (
 		|| (
+			>=dev-vcs/subversion-1.5.4[http]
 			>=dev-vcs/subversion-1.5.4[webdav-neon]
 			>=dev-vcs/subversion-1.5.4[webdav-serf]
 		)

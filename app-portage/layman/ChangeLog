@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/layman
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.182 2013/09/14 23:49:08 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.183 2014/01/07 02:54:58 dolsen Exp $
+
+  07 Jan 2014; Brian Dolbec <dolsen@gentoo.org> layman-1.4.2-r3.ebuild,
+  layman-2.0.0.ebuild, layman-9999.ebuild:
+  Update the subversion dep as per bug #497324. Subversion-185's new
+  "http" use flag.
 
   14 Sep 2013; Mike Gilbert <floppym@gentoo.org> layman-2.0.0.ebuild:
   Call distutils-r1_python_prepare_all.
