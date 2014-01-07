@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/diffutils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.91 2013/09/05 09:50:41 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.92 2014/01/07 08:17:24 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -diffutils-2.8.7-r2.ebuild, -diffutils-2.9.ebuild, -diffutils-2.9-r1.ebuild,
+  -diffutils-3.0.ebuild, -diffutils-3.1.ebuild, -diffutils-3.2.ebuild,
+  -files/diffutils-2.8.4-sdiff-no-waitpid.patch,
+  -files/diffutils-2.8.7-headers.patch, -files/diffutils-3.2-no-gets.patch:
+  Removed old versions and files.
 
   29 Aug 2013; Jeroen Roovers <jer@gentoo.org> diffutils-3.3.ebuild:
   Stable for HPPA (bug #477570).

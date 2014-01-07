@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/attr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.160 2013/11/24 08:38:45 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.161 2014/01/07 08:14:51 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -attr-2.4.43.ebuild,
+  -attr-2.4.44.ebuild, -attr-2.4.44-r1.ebuild, -attr-2.4.46.ebuild,
+  -attr-2.4.46-r1.ebuild, -attr-2.4.47.ebuild,
+  -files/attr-2.4.24-only-symlink-when-needed.patch,
+  -files/attr-2.4.39-gettext.patch, -files/attr-2.4.43-linguas.patch,
+  -files/attr-2.4.44-headers.patch:
+  Removed old versions and files.
 
   24 Nov 2013; Michał Górny <mgorny@gentoo.org> attr-2.4.47-r1.ebuild:
   Clean up manpages in the same code path as they are installed, bug #485494.
