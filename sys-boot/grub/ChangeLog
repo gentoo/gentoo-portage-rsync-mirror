@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/grub
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.301 2013/12/24 22:42:11 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.302 2014/01/07 09:23:37 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -grub-0.92-r1.ebuild,
+  -grub-0.94-r1.ebuild, -grub-0.96-r1.ebuild, -grub-0.96-r2.ebuild,
+  -grub-0.96-r3.ebuild, -grub-0.97.ebuild, -grub-0.97-r2.ebuild,
+  -grub-0.97-r3.ebuild, -grub-0.97-r4.ebuild, -grub-0.97-r5.ebuild,
+  -grub-0.97-r6.ebuild, -grub-0.97-r8.ebuild, -grub-0.97-r9.ebuild,
+  -files/grub-0.97-gpt.patch:
+  Removed old versions and files.
 
 *grub-2.02_beta2 (24 Dec 2013)
 

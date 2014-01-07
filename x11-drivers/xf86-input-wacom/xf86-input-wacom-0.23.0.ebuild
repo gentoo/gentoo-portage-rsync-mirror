@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.19.0.ebuild,v 1.3 2013/07/18 10:40:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/xf86-input-wacom-0.23.0.ebuild,v 1.1 2014/01/07 09:06:30 chithanh Exp $
 
-EAPI=4
+EAPI=5
 
 inherit linux-info xorg-2
 
@@ -16,7 +16,9 @@ EGIT_REPO_URI="git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/${PN}"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
-RDEPEND="virtual/udev
+# depend on libwacom for its udev rules, bug #389633
+RDEPEND="dev-libs/libwacom
+	virtual/udev
 	>=x11-base/xorg-server-1.7
 	x11-libs/libX11
 	x11-libs/libXext

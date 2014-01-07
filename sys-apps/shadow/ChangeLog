@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/shadow
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.290 2013/09/15 19:11:22 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.291 2014/01/07 09:12:01 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -shadow-4.1.4.2-r6.ebuild, -shadow-4.1.4.3.ebuild, -shadow-4.1.5.ebuild,
+  -shadow-4.1.5-r1.ebuild, -shadow-4.1.5-r2.ebuild, -shadow-4.1.5.1.ebuild,
+  shadow-4.1.5.1-r1.ebuild, -files/pam.d-include/system-auth-1.1,
+  -files/shadow-4.1.4.2-env-reset-keep-locale.patch,
+  -files/shadow-4.1.4.2-fix-etc-gshadow-reading.patch,
+  -files/shadow-4.1.4.2-groupmod-pam-check.patch,
+  -files/shadow-4.1.4.2-su_no_sanitize_env.patch,
+  -files/shadow-4.1.4.3-dup-install-targets.patch,
+  -files/shadow-4.1.5-grremove.patch,
+  -files/shadow-4.1.5-nscd-ignore-exit-1.patch,
+  -files/shadow-4.1.5-nscd-newline-msg.patch,
+  -files/shadow-4.1.5-selinux-groupadd.patch, -files/shadow-4.1.5-stdarg.patch,
+  -files/login.defs, -files/login.pamd.3, -files/login_defs.awk,
+  -files/pam.d-include/login, -files/pam.d-include/other,
+  -files/pam.d-include/su, -files/pam.d-include/su-openpam,
+  -files/pam.d-include/system-auth:
+  Removed old versions and files. Converted remaining ebuild to EAPI-4.
 
   15 Sep 2013; Mike Frysinger <vapier@gentoo.org> shadow-4.1.5.1-r1.ebuild:
   Add ttymxc{2,3} #484834 by Steev Klimaszewski.

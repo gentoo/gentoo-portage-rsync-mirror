@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.1-r1.ebuild,v 1.14 2013/09/15 19:11:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.5.1-r1.ebuild,v 1.15 2014/01/07 09:12:01 polynomial-c Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -67,7 +67,7 @@ set_login_opt() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" suidperms=4711 install || die
+	emake DESTDIR="${D}" suidperms=4711 install
 
 	# Remove libshadow and libmisc; see bug 37725 and the following
 	# comment from shadow's README.linux:
@@ -115,15 +115,15 @@ src_install() {
 		set_login_opt LOGIN_RETRIES 3
 		set_login_opt ENCRYPT_METHOD SHA512
 	else
-		dopamd "${FILESDIR}"/pam.d-include/shadow || die
+		dopamd "${FILESDIR}"/pam.d-include/shadow
 
 		for x in chpasswd chgpasswd newusers; do
-			newpamd "${FILESDIR}"/pam.d-include/passwd ${x} || die
+			newpamd "${FILESDIR}"/pam.d-include/passwd ${x}
 		done
 
 		for x in chage chsh chfn \
 				 user{add,del,mod} group{add,del,mod} ; do
-			newpamd "${FILESDIR}"/pam.d-include/shadow ${x} || die
+			newpamd "${FILESDIR}"/pam.d-include/shadow ${x}
 		done
 
 		# comment out login.defs options that pam hates
