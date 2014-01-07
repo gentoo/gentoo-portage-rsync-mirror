@@ -17,5 +17,7 @@ output files collected using a standard interface.
 </longdescription>
   <use>
     <flag name="zeromq">Build with <pkg>net-libs/zeromq</pkg> support</flag>
+    <flag name="client">Build the client application</flag>
+    <flag name="server">Build the serve application</flag>
   </use>
 </pkgmetadata>

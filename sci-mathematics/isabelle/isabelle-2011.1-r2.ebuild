@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2012.ebuild,v 1.5 2012/12/09 09:24:29 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2011.1-r2.ebuild,v 1.1 2014/01/07 13:36:33 tomwij Exp $
 
 EAPI="5"
 
@@ -10,21 +10,15 @@ MY_PN="Isabelle"
 MY_PV=$(replace_all_version_separators '-')
 MY_P="${MY_PN}${MY_PV}"
 
-JEDIT_PV="20120414"
-JEDIT_PN="jedit_build"
-JEDIT_P="${JEDIT_PN}-${JEDIT_PV}"
-
 DESCRIPTION="Isabelle is a generic proof assistant"
 HOMEPAGE="http://www.cl.cam.ac.uk/research/hvg/isabelle/index.html"
-SRC_URI="http://www.cl.cam.ac.uk/research/hvg/isabelle/dist/${MY_P}.tar.gz
-		doc? ( http://dev.gentoo.org/~gienah/snapshots/${MY_P}-doc-src.tar.gz )
-		pide? ( http://www4.in.tum.de/~wenzelm/test/${JEDIT_P}.tar.gz )"
+SRC_URI="http://www.cl.cam.ac.uk/research/hvg/isabelle/dist/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
 KEYWORDS="~amd64 ~x86"
 ALL_LOGICS="Pure FOL +HOL ZF CCL CTT Cube FOLP LCF Sequents"
-IUSE="${ALL_LOGICS} doc graphbrowsing ledit readline pide +proofgeneral test"
+IUSE="${ALL_LOGICS} doc graphbrowsing ledit readline +proofgeneral test"
 
 #upstream says
 #bash 2.x/3.x, Poly/ML 5.x, Perl 5.x,
@@ -42,9 +36,6 @@ RDEPEND="dev-perl/libwww-perl
 	proofgeneral? (
 		app-emacs/proofgeneral
 	)
-	pide? (
-		>=dev-lang/scala-2.8.2
-	)
 	ledit? (
 		app-misc/ledit
 	)
@@ -54,7 +45,6 @@ RDEPEND="dev-perl/libwww-perl
 	${DEPEND}"
 
 S="${WORKDIR}"/Isabelle${MY_PV}
-JEDIT_S="${WORKDIR}/${JEDIT_P}"
 TARGETDIR="/usr/share/Isabelle"${MY_PV}
 LIBDIR="/usr/"$(get_libdir)"/Isabelle"${MY_PV}
 
@@ -71,11 +61,7 @@ pkg_setup() {
 
 src_prepare() {
 	java-pkg-2_src_prepare
-	epatch "${FILESDIR}/${PN}-2012-gentoo-settings.patch"
-	# http://article.gmane.org/gmane.science.mathematics.logic.isabelle.devel/2732
-	epatch "${FILESDIR}/${PN}-2012-signal-handling.patch"
-	# http://article.gmane.org/gmane.science.mathematics.logic.isabelle.devel/2780
-	epatch "${FILESDIR}/${PN}-2012-redundant-equations-in-function-definitions-error.patch"
+	epatch "${FILESDIR}/${PN}-2011.1-gentoo-settings.patch"
 	polymlver=$(poly -v | cut -d' ' -f2)
 	polymlarch=$(poly -v | cut -d' ' -f9 | cut -d'-' -f1)
 	sed -e "s@5.4.0@${polymlver}@g" \
@@ -93,8 +79,8 @@ src_prepare() {
 	sed -e "s@/usr/lib64/Isabelle${MY_PV}@${LIBDIR}@g" \
 		-i "${S}/etc/settings" \
 		|| die "Could not configure Isabelle lib directory in etc/settings"
-	epatch "${FILESDIR}/${PN}-2012-graphbrowser.patch"
-	epatch "${FILESDIR}/${PN}-2012-libsha1.patch"
+	epatch "${FILESDIR}/${PN}-2011.1-graphbrowser.patch"
+	epatch "${FILESDIR}/${PN}-2011.1-libsha1.patch"
 	cat <<- EOF >> "${S}/etc/settings"
 
 		ISABELLE_GHC="${ROOT}usr/bin/ghc"
@@ -104,14 +90,8 @@ src_prepare() {
 		SCALA_HOME="${ROOT}usr/share/scala"
 		SHA1_HOME="/usr/$(get_libdir)/sha1-polyml"
 	EOF
-	if use pide; then
-		cat <<- EOF >> "${S}/etc/settings"
-			ISABELLE_JEDIT_BUILD_HOME="\$ISABELLE_HOME/${JEDIT_P}"
-			init_component ${JEDIT_S}
-		EOF
-	fi
-	if use ledit && !use readline; then
-		epatch "${FILESDIR}/${PN}-2012-reverse-line-editor-order.patch"
+	if use ledit && ! use readline; then
+		epatch "${FILESDIR}/${PN}-2011.1-reverse-line-editor-order.patch"
 	fi
 }
 
@@ -134,20 +114,6 @@ src_compile() {
 		./build || die "failed building the graph browser"
 		popd
 	fi
-	if use pide; then
-		pushd "${S}/src/Tools/jEdit" \
-			|| die "Could not change directory to src/Tools/jEdit"
-		"${S}"/bin/isabelle jedit -b -f \
-			|| die "pide build failed"
-		popd
-		# The jedit_build stuff is only required to build
-		# Isabelle/jEdit Prover IDE (PIDE).  These 2 lines need to be deleted
-		# from etc/settings as the jedit_build source code is not installed
-		sed -e '/ISABELLE_JEDIT_BUILD_HOME/d' \
-			-e '/init_component/d' \
-			-i "${S}/etc/settings" \
-			|| die "Could not delete jedit_build lines from etc/settings"
-	fi
 }
 
 src_test() {
@@ -163,94 +129,72 @@ src_install() {
 	doins -r src
 	doins -r lib
 
-	docompress -x /usr/share/doc/${PF}
-	dodoc -r doc
-	if use doc; then
-		dosym /usr/share/doc/${PF}/doc "${TARGETDIR}/doc"
-		# The build of sci-mathematics/haskabelle with use doc requires
-		# sci-mathematics/isabelle[doc?]. The haskabelle doc build requires
-		# the doc-src directory stuff in the isabelle package.  Which is not
-		# provided in the Isabelle 2012 src tarball.  So extract it from a
-		# snapshot of the isabelle repo taken soon after the Isabelle 2012
-		# release.
-		doins -r doc-src
-		for i in "./doc-src/IsarRef/showsymbols" \
-			"./doc-src/TutorialI/Overview/LNCS/makeDemo" \
-			"./doc-src/TutorialI/isa-index" \
-			"./doc-src/sedindex"
-		do
-			exeinto $(dirname "${TARGETDIR}/${i}")
-			doexe ${i}
-		done
-	fi
-
 	for i in "./build" \
-		"./src/Pure/mk" \
-		"./src/Pure/build-jars" \
-		"./src/Tools/JVM/build" \
-		"./src/Tools/JVM/java_ext_dirs" \
-		"./src/Tools/jEdit/lib/Tools/jedit" \
-		"./src/Tools/Metis/fix_metis_license" \
-		"./src/Tools/Metis/make_metis" \
-		"./src/Tools/Metis/scripts/mlpp" \
-		"./src/Tools/WWW_Find/lib/Tools/wwwfind" \
-		"./src/Tools/Code/lib/Tools/codegen" \
-		"./src/HOL/Mirabelle/lib/Tools/mirabelle" \
-		"./src/HOL/Tools/Predicate_Compile/lib/scripts/swipl_version" \
-		"./src/HOL/Tools/SMT/lib/scripts/remote_smt" \
-		"./src/HOL/Tools/ATP/scripts/remote_atp" \
-		"./src/HOL/Tools/ATP/scripts/spass" \
-		"./src/HOL/Mutabelle/lib/Tools/mutabelle" \
-		"./src/HOL/TPTP/TPTP_Parser/make_mlyacclib" \
-		"./src/HOL/TPTP/TPTP_Parser/make_tptp_parser" \
-		"./src/HOL/TPTP/lib/Tools/tptp_isabelle_demo" \
-		"./src/HOL/TPTP/lib/Tools/tptp_graph" \
-		"./src/HOL/TPTP/lib/Tools/tptp_isabelle_comp" \
-		"./src/HOL/TPTP/lib/Tools/tptp_refute" \
-		"./src/HOL/TPTP/lib/Tools/tptp_translate" \
-		"./src/HOL/TPTP/lib/Tools/tptp_sledgehammer" \
-		"./src/HOL/TPTP/lib/Tools/tptp_nitpick" \
-		"./src/HOL/Library/Sum_of_Squares/neos_csdp_client" \
-		"./src/HOL/IMP/export.sh" \
-		"./lib/browser/build" \
-		"./lib/Tools/tty" \
-		"./lib/Tools/mkproject" \
-		"./lib/Tools/keywords" \
-		"./lib/Tools/browser" \
-		"./lib/Tools/install" \
-		"./lib/Tools/mkdir" \
-		"./lib/Tools/unsymbolize" \
-		"./lib/Tools/getenv" \
-		"./lib/Tools/java" \
-		"./lib/Tools/make" \
-		"./lib/Tools/emacs" \
-		"./lib/Tools/scala" \
-		"./lib/Tools/print" \
-		"./lib/Tools/latex" \
-		"./lib/Tools/findlogics" \
-		"./lib/Tools/doc" \
-		"./lib/Tools/logo" \
-		"./lib/Tools/usedir" \
-		"./lib/Tools/yxml" \
-		"./lib/Tools/version" \
-		"./lib/Tools/makeall" \
-		"./lib/Tools/scalac" \
-		"./lib/Tools/document" \
-		"./lib/Tools/env" \
-		"./lib/Tools/display" \
-		"./lib/Tools/dimacs2hol" \
-		"./lib/scripts/keywords" \
-		"./lib/scripts/unsymbolize" \
-		"./lib/scripts/run-polyml" \
-		"./lib/scripts/run-smlnj" \
-		"./lib/scripts/feeder" \
-		"./lib/scripts/yxml" \
-		"./lib/scripts/polyml-version" \
-		"./lib/scripts/process"
+		"src/Pure/mk" \
+		"src/Pure/build-jars" \
+		"src/Tools/jEdit/dist/build-support/ci/copy_properties.groovy" \
+		"src/Tools/jEdit/dist/build-support/ci/ci_release.groovy" \
+		"src/Tools/jEdit/lib/Tools/jedit" \
+		"src/Tools/Metis/fix_metis_license" \
+		"src/Tools/Metis/make_metis" \
+		"src/Tools/Metis/scripts/mlpp" \
+		"src/Tools/WWW_Find/lib/Tools/wwwfind" \
+		"src/Tools/Code/lib/Tools/codegen" \
+		"src/HOL/Mirabelle/lib/Tools/mirabelle" \
+		"src/HOL/Tools/Predicate_Compile/lib/scripts/swipl_version" \
+		"src/HOL/Tools/SMT/lib/scripts/remote_smt" \
+		"src/HOL/Tools/ATP/scripts/remote_atp" \
+		"src/HOL/Tools/ATP/scripts/spass" \
+		"src/HOL/Tools/Nitpick/lib/Tools/nitrox" \
+		"src/HOL/Mutabelle/lib/Tools/mutabelle" \
+		"src/HOL/Library/Sum_of_Squares/neos_csdp_client" \
+		"lib/browser/build" \
+		"lib/Tools/tty" \
+		"lib/Tools/mkproject" \
+		"lib/Tools/keywords" \
+		"lib/Tools/browser" \
+		"lib/Tools/install" \
+		"lib/Tools/mkdir" \
+		"lib/Tools/unsymbolize" \
+		"lib/Tools/getenv" \
+		"lib/Tools/java" \
+		"lib/Tools/make" \
+		"lib/Tools/emacs" \
+		"lib/Tools/scala" \
+		"lib/Tools/print" \
+		"lib/Tools/latex" \
+		"lib/Tools/findlogics" \
+		"lib/Tools/doc" \
+		"lib/Tools/logo" \
+		"lib/Tools/usedir" \
+		"lib/Tools/yxml" \
+		"lib/Tools/version" \
+		"lib/Tools/makeall" \
+		"lib/Tools/scalac" \
+		"lib/Tools/document" \
+		"lib/Tools/env" \
+		"lib/Tools/display" \
+		"lib/Tools/dimacs2hol" \
+		"lib/scripts/keywords" \
+		"lib/scripts/unsymbolize" \
+		"lib/scripts/run-polyml" \
+		"lib/scripts/run-smlnj" \
+		"lib/scripts/feeder" \
+		"lib/scripts/java_ext_dirs" \
+		"lib/scripts/yxml" \
+		"lib/scripts/raw_dump" \
+		"lib/scripts/polyml-version" \
+		"lib/scripts/process"
 	do
 		exeinto $(dirname "${TARGETDIR}/${i}")
 		doexe ${i}
 	done
+
+	docompress -x /usr/share/doc/${PF}
+	dodoc -r doc
+	if use doc; then
+		dosym /usr/share/doc/${PF}/doc "${TARGETDIR}/doc"
+	fi
 
 	dodir /etc/isabelle
 	insinto /etc/isabelle
@@ -268,21 +212,11 @@ src_install() {
 	dodoc ANNOUNCE CONTRIBUTORS COPYRIGHT NEWS README
 
 	java-pkg_regjar \
-		"${ED}${TARGETDIR}/src/Tools/JVM/java_ext_dirs.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/QuickNotepad.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/Console.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/ErrorList.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/Hyperlinks.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/SideKick.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/cobra.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/js.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/scala-compiler.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jars/Isabelle-jEdit.jar" \
-		"${ED}${TARGETDIR}/src/Tools/jEdit/dist/jedit.jar" \
-		"${ED}${TARGETDIR}/lib/classes/ext/scala-swing.jar" \
-		"${ED}${TARGETDIR}/lib/classes/ext/scala-library.jar" \
+		"${ED}${TARGETDIR}/lib/browser/GraphBrowser.jar" \
 		"${ED}${TARGETDIR}/lib/classes/ext/Pure.jar" \
-		"${ED}${TARGETDIR}/lib/browser/GraphBrowser.jar"
+		"${ED}${TARGETDIR}/lib/classes/ext/scala-library.jar" \
+		"${ED}${TARGETDIR}/lib/classes/ext/scala-swing.jar" \
+		"${ED}${TARGETDIR}/lib/classes/java_ext_dirs.jar"
 }
 
 pkg_postinst() {

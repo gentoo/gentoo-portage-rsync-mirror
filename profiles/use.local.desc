@@ -5720,6 +5720,8 @@ sci-chemistry/gsim:emf - Support for .emf export
 sci-chemistry/icm:32bit - Automatically generated description for 32bit
 sci-chemistry/icm:64bit - Automatically generated description for 64bit
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd
+sci-chemistry/molequeue:client - Build the client application
+sci-chemistry/molequeue:server - Build the serve application
 sci-chemistry/molequeue:zeromq - Build with net-libs/zeromq support
 sci-chemistry/mopac7:gmxmopac7 - Add support library for gromacs
 sci-chemistry/oasis:minimal - Restricts functionality on free software

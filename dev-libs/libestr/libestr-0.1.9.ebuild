@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/libestr-0.1.9.ebuild,v 1.2 2014/01/04 13:32:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/libestr-0.1.9.ebuild,v 1.3 2014/01/07 13:57:00 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://libestr.adiscon.com/files/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 arm ~hppa ~x86"
+KEYWORDS="~amd64 arm hppa ~x86"
 IUSE="debug static-libs"
 
 DEPEND=""

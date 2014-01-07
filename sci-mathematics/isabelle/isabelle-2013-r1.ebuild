@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013.ebuild,v 1.2 2013/09/01 08:30:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/isabelle/isabelle-2013-r1.ebuild,v 1.1 2014/01/07 13:36:33 tomwij Exp $
 
 EAPI="5"
 
@@ -128,7 +128,7 @@ src_prepare() {
 		contrib/${JEDIT_P}
 		contrib/${JFREECHART_P}
 	EOF
-	if use ledit && !use readline; then
+	if use ledit && ! use readline; then
 		epatch "${FILESDIR}/${PN}-2012-reverse-line-editor-order.patch"
 	fi
 	rm -f "${S}/contrib/jfreechart-1.0.14/lib/iText-2.1.5.jar" \
