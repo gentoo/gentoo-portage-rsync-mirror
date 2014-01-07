@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.41.ebuild,v 1.3 2013/11/17 10:40:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.41.ebuild,v 1.4 2014/01/07 19:13:36 vapier Exp $
 
 EAPI="3"
 
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="small and fast portage helper tools written in C"
 HOMEPAGE="http://www.gentoo.org/doc/en/portage-utils.xml"
@@ -22,6 +22,7 @@ RDEPEND=""
 src_prepare() {
 	# can go next release, backport from CVS
 	epatch "${FILESDIR}"/${P}-scandirat.patch
+	epatch_user
 }
 
 src_configure() {
