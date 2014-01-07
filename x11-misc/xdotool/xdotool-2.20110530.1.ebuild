@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-2.20110530.1.ebuild,v 1.9 2012/12/23 20:27:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-2.20110530.1.ebuild,v 1.10 2014/01/07 16:56:09 vapier Exp $
 
 EAPI=2
 
@@ -27,12 +27,14 @@ DEPEND="${RDEPEND}"
 RESTRICT="test"
 
 src_prepare() {
-	sed -e "s/installheader post-install$/installheader/" \
-		-i Makefile || die "sed failed"
+	sed -i \
+		-e "s/installheader post-install$/installheader/" \
+		-e 's:\<pkg-config\>:$(PKG_CONFIG):' \
+		Makefile || die "sed failed"
 }
 
 src_compile() {
-	tc-export CC LD
+	tc-export CC LD PKG_CONFIG
 	default
 }
 
