@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install preinst prepare setup unpack
-DEPEND=>=dev-qt/qtgui-4.7:4 >=app-crypt/qca-2.0.2:2 dbus? ( >=dev-qt/qtdbus-4.7:4 ) whiteboarding? ( dev-qt/qtsvg:4 ) spell? ( enchant? ( >=app-text/enchant-1.3.0 ) !enchant? ( app-text/aspell ) ) xscreensaver? ( x11-libs/libXScrnSaver ) extras? ( webkit? ( dev-qt/qtwebkit:4 ) ) app-arch/unzip || ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 ) extras? ( sys-devel/qconf ) doc? ( app-doc/doxygen ) virtual/pkgconfig dev-vcs/git || ( dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEPEND=>=dev-qt/qtgui-4.7:4 >=app-crypt/qca-2.0.2:2 dbus? ( >=dev-qt/qtdbus-4.7:4 ) whiteboarding? ( dev-qt/qtsvg:4 ) spell? ( enchant? ( >=app-text/enchant-1.3.0 ) !enchant? ( app-text/aspell ) ) xscreensaver? ( x11-libs/libXScrnSaver ) extras? ( webkit? ( dev-qt/qtwebkit:4 ) ) app-arch/unzip || ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 ) extras? ( sys-devel/qconf ) doc? ( app-doc/doxygen ) virtual/pkgconfig dev-vcs/git || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=Qt4 Jabber client, with Licq-like interface
 EAPI=4
 HOMEPAGE=http://psi-im.org/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-qt/qtgui-4.7:4 >=app-crypt/qca-2.0.2:2 dbus? ( >=dev-qt/qtdbus-4.7
 REQUIRED_USE=iconsets? ( extras ) plugins? ( extras ) powersave? ( extras ) webkit? ( extras )
 RESTRICT=test
 SLOT=0
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	892e597faee02a5b94eb02ab512e7622	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	subversion	de38ef8c5baf84d80e695a4d6ad26554	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	892e597faee02a5b94eb02ab512e7622	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=49cb1fb51cdc283272a3384a4d267720
