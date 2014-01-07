@@ -49,7 +49,6 @@ lensfun
 kde
 metalink
 upnp
-systemd
 webm
 fdk
 valgrind

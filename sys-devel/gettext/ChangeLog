@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.227 2014/01/05 19:50:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.228 2014/01/07 09:33:35 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -gettext-0.18.1.1-r1.ebuild, -gettext-0.18.1.1-r2.ebuild,
+  -gettext-0.18.1.1-r3.ebuild, -gettext-0.18.3.1.ebuild,
+  -files/gettext-0.14.1-lib-path-tests.patch,
+  -files/gettext-0.14.2-fix-race.patch,
+  -files/gettext-0.15-expat-no-dlopen.patch, -files/gettext-0.17-gnuinfo.patch,
+  -files/gettext-0.17-open-args.patch, -files/gettext-0.17-x-python.patch,
+  -files/gettext-0.18.1.1-no-gets.patch,
+  -files/gettext-0.18.1.1-uclibc-sched_param-def.patch:
+  Removed old versions and files.
 
   05 Jan 2014; Mike Frysinger <vapier@gentoo.org> gettext-0.18.3.1-r1.ebuild:
   Control libasprintf (a C++ library) via USE=cxx #496926 by Sylvain BERTRAND.

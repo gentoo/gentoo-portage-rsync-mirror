@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/libtool
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.210 2013/09/26 17:32:20 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.211 2014/01/07 09:42:20 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -libtool-1.5.26.ebuild,
+  -libtool-2.2.10.ebuild, -files/1.5.10/libtool-1.5.10-locking.patch,
+  -files/1.5.6/libtool-1.5-filter-host-tags.patch:
+  Removed old versions and files.
 
   26 Sep 2013; Agostino Sarubbo <ago@gentoo.org> libtool-2.4.2.ebuild:
   Stable for arm, wrt bug #477178

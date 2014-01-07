@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gnuconfig
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.75 2013/12/21 09:26:15 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/ChangeLog,v 1.76 2014/01/07 09:36:37 polynomial-c Exp $
+
+  07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -gnuconfig-20100924.ebuild, -gnuconfig-20110202.ebuild,
+  -gnuconfig-20110814.ebuild, -gnuconfig-20120116.ebuild,
+  -gnuconfig-20120818.ebuild, -gnuconfig-20121010.ebuild,
+  -gnuconfig-20130111.ebuild:
+  Removed old versions and files.
 
 *gnuconfig-20131128 (21 Dec 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-9999.ebuild,v 1.4 2013/10/06 12:18:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-ui/systemd-ui-9999.ebuild,v 1.5 2014/01/07 09:58:32 pacho Exp $
 
 EAPI=4
 
@@ -12,7 +12,8 @@ EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/${PN}
 inherit git-2
 #endif
 
-VALA_MIN_API_VERSION=0.14
+# Needed per https://bugs.freedesktop.org/show_bug.cgi?id=69643#c5
+VALA_MIN_API_VERSION=0.22
 
 inherit autotools-utils systemd vala
 

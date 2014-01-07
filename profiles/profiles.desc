@@ -70,7 +70,9 @@ hppa            default/linux/hppa/13.0/developer               dev
 ia64            default/linux/ia64/13.0                         stable
 ia64            default/linux/ia64/13.0/desktop                 stable
 ia64            default/linux/ia64/13.0/desktop/gnome           stable
+ia64		default/linux/ia64/13.0/desktop/gnome/systemd	stable
 ia64            default/linux/ia64/13.0/desktop/kde             stable
+ia64		default/linux/ia64/13.0/desktop/kde/systemd	stable
 ia64            default/linux/ia64/13.0/developer               stable
 
 # M68K Profiles

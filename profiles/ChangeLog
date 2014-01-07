@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8499 2014/01/06 23:23:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8501 2014/01/07 09:46:49 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Jan 2014; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.force,
+  arch/ia64/package.use.mask:
+  Drop no longer needed USE force on ia64
+
+  07 Jan 2014; Pacho Ramos <pacho@gentoo.org> arch/ia64/use.mask,
+  +default/linux/ia64/13.0/desktop/gnome/systemd/parent,
+  +default/linux/ia64/13.0/desktop/kde/systemd/parent, profiles.desc:
+  Add ia64 profiles (#478076)
 
   06 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Add dragonegg to llvm-3.4 mask

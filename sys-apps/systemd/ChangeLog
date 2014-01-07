@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.207 2013/12/31 18:55:28 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.208 2014/01/07 09:41:03 pacho Exp $
+
+  07 Jan 2014; Pacho Ramos <pacho@gentoo.org> systemd-208-r2.ebuild,
+  systemd-9999.ebuild:
+  Keyword on ia64 (#478076 by Emeric Maschino)
 
   31 Dec 2013; Mike Gilbert <floppym@gentoo.org> metadata.xml,
   systemd-9999.ebuild:

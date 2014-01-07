@@ -1,17 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.131 2014/01/04 14:49:28 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.132 2014/01/07 09:46:50 pacho Exp $
 
 # Julian Ospald <hasufell@gentoo.org> (04 Jan 2014)
 # no keyword for media-libs/tremor
 >=dev-libs/DirectFB-1.7.1 tremor
-
-# Pacho Ramos <pacho@gentoo.org> (27 Dec 2013)
-# 3.6 is not supported for a long time and prone to bugs
-# and security issues (#496166), until systemd is keyworded
-# (#478076) we have no other option.
-gnome-base/gnome-settings-daemon -openrc-force
-gnome-base/gnome-shell -openrc-force
 
 # Pacho Ramos <pacho@gentoo.org> (02 Dec 2013)
 # Missing keywords, bug #493156
