@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8501 2014/01/07 09:46:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8502 2014/01/07 16:24:32 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  kdesdk-strigi-analyzer was NOT discontinued, so do not mask anymore.
 
   07 Jan 2014; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.force,
   arch/ia64/package.use.mask:
