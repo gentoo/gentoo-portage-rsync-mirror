@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1109 2014/01/05 11:39:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1110 2014/01/08 08:38:10 patrick Exp $
+
+  08 Jan 2014; Patrick Lauer <patrick@gentoo.org> apache-2.eclass,
+  python-utils-r1.eclass:
+  Removing silly beep from apache-2.eclass
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> aspell-dict.eclass,
   freedict.eclass, myspell.eclass, myspell-r2.eclass:

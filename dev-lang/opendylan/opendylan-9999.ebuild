@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-9999.ebuild,v 1.7 2014/01/07 05:26:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/opendylan/opendylan-9999.ebuild,v 1.8 2014/01/08 09:00:47 patrick Exp $
 EAPI=4
 
 inherit autotools git-2
@@ -34,7 +34,7 @@ src_prepare() {
 src_configure() {
 	if has_version =dev-lang/opendylan-bin-2013.2; then
 		PATH=/opt/opendylan-2013.2/bin/:$PATH
-        elif has_version =dev-lang/opendylan-bin-2013.1; then
+	elif has_version =dev-lang/opendylan-bin-2013.1; then
 		PATH=/opt/opendylan-2013.1/bin/:$PATH
 	elif has_version =dev-lang/opendylan-bin-2012.1; then
 		PATH=/opt/opendylan-2012.1/bin/:$PATH
