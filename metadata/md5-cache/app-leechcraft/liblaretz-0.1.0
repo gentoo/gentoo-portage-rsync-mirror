@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/boost sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Shared library to be used by the Laretz sync server and its clients
+EAPI=5
+HOMEPAGE=http://leechcraft.org
+KEYWORDS=~amd64 ~x86
+LICENSE=Boost-1.0
+RDEPEND=dev-libs/boost
+SLOT=0
+SRC_URI=https://github.com/0xd34df00d/laretz/archive/0.1.0.tar.gz -> liblaretz-0.1.0.tar.gz
+_eclasses_=cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=1486d17cc9eb3ba13e34cccb594e0892

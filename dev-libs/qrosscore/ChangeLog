@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/qrosscore
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.8 2013/12/27 15:06:51 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.9 2014/01/08 09:30:36 maksbotan Exp $
+
+*qrosscore-0.3.1 (08 Jan 2014)
+
+  08 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org> +qrosscore-0.3.1.ebuild:
+  Bump to 0.3.1, thanks to 0xd34df00d
 
   27 Dec 2013; Maxim Koltsov <maksbotan@gentoo.org> -qrosscore-0.2.0.ebuild,
   qrosscore-0.2.2.ebuild, qrosscore-9999.ebuild:
