@@ -4,12 +4,12 @@
 <!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
 <glsa id="201401-04">
   <title>Python: Multiple vulnerabilities</title>
-  <synopsis>Multiple vulnerabilities have been found in Python, worst of which
-    allows remote attackers to cause a Denial of Service condition.
+  <synopsis>Multiple vulnerabilities have been found in Python, the worst of
+    which allow remote attackers to cause a Denial of Service condition.
   </synopsis>
   <product type="ebuild">python</product>
   <announced>January 06, 2014</announced>
-  <revised>January 08, 2014: 2</revised>
+  <revised>January 08, 2014: 3</revised>
   <bug>325593</bug>
   <bug>355927</bug>
   <bug>358663</bug>
@@ -42,7 +42,7 @@
   </description>
   <impact type="normal">
     <p>A remote attacker could possibly cause a Denial of Service condition or
-      perform man-in-the-middle attack to disclose  sensitive information.
+      perform a man-in-the-middle attack to disclose sensitive information.
     </p>
   </impact>
   <workaround>
@@ -90,7 +90,7 @@
   <metadata tag="requester" timestamp="Wed, 18 Sep 2013 03:32:23 +0000">
     creffett
   </metadata>
-  <metadata tag="submitter" timestamp="Wed, 08 Jan 2014 00:44:00 +0000">
+  <metadata tag="submitter" timestamp="Wed, 08 Jan 2014 01:12:43 +0000">
     creffett
   </metadata>
 </glsa>
