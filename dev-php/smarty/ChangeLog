@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/smarty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.133 2014/01/08 17:26:13 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.134 2014/01/08 17:32:09 mabi Exp $
+
+  08 Jan 2014; Matti Bickel <mabi@gentoo.org> smarty-3.1.12.ebuild:
+  we only need unzip when we need to unpack the documentation, thanks Michael
+  Orlitzky for noticing (bug #481778)
 
   08 Jan 2014; Matti Bickel <mabi@gentoo.org> -smarty-3.1.8.ebuild:
   cleanup

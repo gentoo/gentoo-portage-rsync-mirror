@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/groovy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.53 2013/10/23 18:49:46 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/ChangeLog,v 1.54 2014/01/08 17:46:48 tomwij Exp $
+
+  08 Jan 2014; Tom Wijsman <TomWij@gentoo.org> groovy-1.8.5.ebuild:
+  Fixed up Copyright year.
 
 *groovy-1.8.5-r1 (23 Oct 2013)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit4/ant-junit4-1.7.1.ebuild,v 1.6 2010/02/21 00:24:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit4/ant-junit4-1.7.1.ebuild,v 1.7 2014/01/08 17:44:52 tomwij Exp $
 
 EAPI=1
 

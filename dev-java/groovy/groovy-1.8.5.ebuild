@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.8.5.ebuild,v 1.2 2012/12/10 17:31:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.8.5.ebuild,v 1.3 2014/01/08 17:46:48 tomwij Exp $
 
 # Groovy's build system is Ant based, but they use Maven for fetching the dependencies.
 # We just have to remove the fetch dependencies target, and then we can use Ant for this ebuild.

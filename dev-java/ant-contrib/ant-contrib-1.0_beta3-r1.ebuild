@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta3.ebuild,v 1.7 2010/02/28 12:02:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta3-r1.ebuild,v 1.1 2014/01/08 17:40:06 tomwij Exp $
 
-EAPI=1
+EAPI="5"
+
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-ivy"
 
@@ -11,10 +12,10 @@ inherit java-pkg-2 java-ant-2
 DESCRIPTION="A collection of tasks (and at one point maybe types and other tools) for Apache Ant."
 HOMEPAGE="http://ant-contrib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ant-contrib/${PN}-${PV/_beta/b}-src.tar.bz2"
+
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
-IUSE=""
 
 #	test? ( dev-java/ant-junit dev-java/ant-testutil )
 RDEPEND=">=virtual/jre-1.4
@@ -23,12 +24,13 @@ RDEPEND=">=virtual/jre-1.4
 	dev-java/xerces:2
 	dev-java/ant-ivy:0
 	>=dev-java/ant-core-1.7.0"
+
 # javatoolkit for cElementTree
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/javatoolkit-0.3.0-r2
 	${RDEPEND}"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 rewrite_build_xml() {
 	python <<EOF
@@ -47,11 +49,11 @@ EOF
 	[[ $? != 0 ]] && die "Removing taskdefs failed"
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+java_prepare() {
 	epatch "${FILESDIR}/tests-visibility.patch"
+
 	find . -name "*.jar" -print -delete || die
+
 	rewrite_build_xml
 }
 
@@ -68,7 +70,9 @@ src_install() {
 	java-pkg_dojar target/${PN}.jar
 
 	java-pkg_register-ant-task
+
 	use doc && java-pkg_dojavadoc target/docs/api
 	use source && java-pkg_dosrc src/java/net
+
 	java-pkg_dohtml -r docs/manual
 }

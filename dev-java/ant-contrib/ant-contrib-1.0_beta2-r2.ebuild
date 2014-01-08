@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2-r2.ebuild,v 1.9 2010/02/28 12:02:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ant-contrib-1.0_beta2-r2.ebuild,v 1.10 2014/01/08 17:40:06 tomwij Exp $
 
 JAVA_PKG_IUSE="doc source"
 

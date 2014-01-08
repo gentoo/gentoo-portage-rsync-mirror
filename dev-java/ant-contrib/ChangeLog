@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ant-contrib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.36 2010/02/28 12:02:54 caster Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-contrib/ChangeLog,v 1.37 2014/01/08 17:40:06 tomwij Exp $
+
+*ant-contrib-1.0_beta3-r1 (08 Jan 2014)
+
+  08 Jan 2014; Tom Wijsman <TomWij@gentoo.org> +ant-contrib-1.0_beta3-r1.ebuild,
+  -ant-contrib-1.0_beta3.ebuild, ant-contrib-1.0_beta2-r2.ebuild:
+  Fixed up Copyright year. Revision bump for beta3, EAPI 5.
 
   28 Feb 2010; Vlastimil Babka <caster@gentoo.org>
   ant-contrib-1.0_beta3.ebuild:
@@ -155,4 +161,3 @@
   31 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +ant-contrib-1.0_beta1.ebuild:
   initial import, requested 58693
-

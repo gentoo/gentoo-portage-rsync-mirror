@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit4/ant-junit4-1.8.0.ebuild,v 1.1 2010/02/21 00:24:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-junit4/ant-junit4-1.8.0-r1.ebuild,v 1.1 2014/01/08 17:44:52 tomwij Exp $
 
-EAPI=1
+EAPI="5"
 
 ANT_TASK_JDKVER=1.5
 ANT_TASK_JREVER=1.5
@@ -13,7 +13,6 @@ inherit ant-tasks
 DESCRIPTION="A copy of ant-junit package which uses junit-4 to run <junit> tasks."
 
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE=""
 
 # xalan is a runtime dependency of the XalanExecutor task
 # which was for some reason moved to ant-junit by upstream

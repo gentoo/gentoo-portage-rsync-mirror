@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/itext
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.99 2013/09/05 10:56:08 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/ChangeLog,v 1.100 2014/01/08 17:48:51 tomwij Exp $
+
+  08 Jan 2014; Tom Wijsman <TomWij@gentoo.org> itext-5.2.0.ebuild:
+  Fixed up Copyright year.
 
   05 Sep 2013; Tom Wijsman <TomWij@gentoo.org> -itext-2.1.5.ebuild:
   Dropped 2.1.5 as 2.1.5-r2 was stabilized, fixes bug #481240 by Patrick Lauer.

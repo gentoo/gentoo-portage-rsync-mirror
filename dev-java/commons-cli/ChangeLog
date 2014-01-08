@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-cli
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.47 2011/11/30 12:12:03 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-cli/ChangeLog,v 1.48 2014/01/08 17:45:25 tomwij Exp $
+
+  08 Jan 2014; Tom Wijsman <TomWij@gentoo.org> commons-cli-1.2.ebuild:
+  Fixed up Copyright year.
 
   30 Nov 2011; Fabian Groffen <grobian@gentoo.org> commons-cli-1.2.ebuild:
   Marked ~x64-macos
@@ -184,4 +187,3 @@
   16 Mar 2003; Dylan Carlson <absinthe@gentoo.org> commons-cli-1.0.ebuild:
   Initial import. Jakarta Commons CLI provides a simple and easy-to-use API for
   working with commandline arguments and options in Java.
-
