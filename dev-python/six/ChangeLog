@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.36 2014/01/08 04:29:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.37 2014/01/08 05:35:32 idella4 Exp $
+
+  08 Jan 2014; Ian Delaney <idella4@gentoo.org> six-1.5.2.ebuild:
+  Add ~sparc keyword, again
 
 *six-1.5.2 (08 Jan 2014)
 

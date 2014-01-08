@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.9999.ebuild,v 1.11 2013/11/14 06:54:23 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.9999.ebuild,v 1.12 2014/01/08 06:00:45 vapier Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 multilib
+inherit distutils-r1 eutils git-2 multilib user
 
 DESCRIPTION="Nova is a cloud computing fabric controller (main part of an
 IaaS system). It is written in Python."

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/tpg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/ChangeLog,v 1.17 2012/06/06 08:06:46 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tpg/ChangeLog,v 1.18 2014/01/08 05:33:41 patrick Exp $
+
+*tpg-3.2.2 (08 Jan 2014)
+
+  08 Jan 2014; Patrick Lauer <patrick@gentoo.org> +tpg-3.2.2.ebuild:
+  Bump
 
 *tpg-3.2.1 (06 Jun 2012)
 
@@ -73,4 +78,3 @@
   02 May 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
   +tpg-3.0.2.ebuild:
   Initial import, bug #48538.
-

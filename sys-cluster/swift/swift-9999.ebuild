@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-9999.ebuild,v 1.6 2013/11/10 08:51:46 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-9999.ebuild,v 1.7 2014/01/08 05:59:48 vapier Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 linux-info
+inherit distutils-r1 eutils git-2 linux-info user
 
 DESCRIPTION="A highly available, distributed, eventually consistent object/blob store"
 HOMEPAGE="https://launchpad.net/swift"

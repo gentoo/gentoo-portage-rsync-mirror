@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.1.9999.ebuild,v 1.11 2013/11/10 23:04:52 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2013.1.9999.ebuild,v 1.12 2014/01/08 05:57:29 vapier Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 git-2
+inherit distutils-r1 git-2 user
 
 #restricted due to packages missing and bad depends in the test ==webob-1.0.8   
 RESTRICT="test"
