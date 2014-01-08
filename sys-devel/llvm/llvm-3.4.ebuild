@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.ebuild,v 1.2 2014/01/08 13:31:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.ebuild,v 1.3 2014/01/08 21:42:23 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,8 @@ DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
 SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.gz
 	clang? ( http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.gz
-		http://llvm.org/releases/${PV}/clang-${PV}.src.tar.gz )
+		http://llvm.org/releases/${PV}/clang-${PV}.src.tar.gz
+		http://llvm.org/releases/${PV}/clang-tools-extra-${PV}.src.tar.gz )
 	!doc? ( http://dev.gentoo.org/~mgorny/dist/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
@@ -150,6 +151,8 @@ src_unpack() {
 			|| die "clang source directory move failed"
 		mv "${WORKDIR}"/compiler-rt-${PV} "${S}"/projects/compiler-rt \
 			|| die "compiler-rt source directory move failed"
+		mv "${WORKDIR}"/clang-tools-extra-${PV} "${S}"/tools/clang/tools/extra \
+			|| die "clang-tools-extra source directory move failed"
 	fi
 }
 
@@ -289,12 +292,15 @@ set_makeargs() {
 				yaml2obj lto bugpoint
 			)
 
-			# those tools require 'lto' built first, so we need to delay
-			# building them to a second run
+			# the build system runs explicitly specified tools in parallel,
+			# so we need to split it into two runs
 			if [[ ${1} != -1 ]]; then
+				# those require lto
 				tools+=( llvm-lto )
-
 				use gold && tools+=( gold )
+
+				# those require clang :)
+				use clang && tools+=( clang/tools/extra )
 			fi
 		fi
 

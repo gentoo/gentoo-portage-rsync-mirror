@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.75 2014/01/06 21:16:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.76 2014/01/08 21:42:23 mgorny Exp $
 
 EAPI=5
 
@@ -142,6 +142,8 @@ src_unpack() {
 			https://github.com/llvm-mirror/compiler-rt.git"
 		git-r3_fetch "http://llvm.org/git/clang.git
 			https://github.com/llvm-mirror/clang.git"
+		git-r3_fetch "http://llvm.org/git/clang-tools-extra.git
+			https://github.com/llvm-mirror/clang-tools-extra.git"
 	fi
 	git-r3_fetch
 
@@ -150,6 +152,8 @@ src_unpack() {
 			"${S}"/projects/compiler-rt
 		git-r3_checkout http://llvm.org/git/clang.git \
 			"${S}"/tools/clang
+		git-r3_checkout http://llvm.org/git/clang-tools-extra.git \
+			"${S}"/tools/clang/tools/extra
 	fi
 	git-r3_checkout
 }
@@ -286,12 +290,15 @@ set_makeargs() {
 				yaml2obj lto bugpoint
 			)
 
-			# those tools require 'lto' built first, so we need to delay
-			# building them to a second run
+			# the build system runs explicitly specified tools in parallel,
+			# so we need to split it into two runs
 			if [[ ${1} != -1 ]]; then
+				# those require lto
 				tools+=( llvm-lto )
-
 				use gold && tools+=( gold )
+
+				# those require clang :)
+				use clang && tools+=( clang/tools/extra )
 			fi
 		fi
 

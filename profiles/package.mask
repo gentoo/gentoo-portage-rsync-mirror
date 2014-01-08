@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15317 2014/01/08 19:58:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15318 2014/01/08 21:42:50 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -348,14 +348,6 @@ kde-base/kdesdk-scripts
 kde-base/kstartperf
 kde-base/kuiviewer
 kde-base/solid
-
-# Michael Sterrett <mr_bones_@gentoo.org> (10 Dec 2013)
-# Dead upstream; requires java-1.5; open bugs:
-# https://bugs.gentoo.org/show_bug.cgi?id=196522
-# https://bugs.gentoo.org/show_bug.cgi?id=241512
-# https://bugs.gentoo.org/show_bug.cgi?id=355055
-# Masked for removal on 20140109
-dev-java/jdictrayapi
 
 # Ben de Groot <yngwin@gentoo.org> (08 Dec 2013)
 # New header location breaks compilation of reverse dependencies,
