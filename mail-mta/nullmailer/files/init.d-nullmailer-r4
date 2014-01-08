@@ -1,12 +1,16 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/files/init.d-nullmailer-r2,v 1.2 2013/01/08 12:44:00 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/files/init.d-nullmailer-r4,v 1.1 2014/01/08 15:08:13 jlec Exp $
 
-DAEMON="/usr/sbin/nullmailer-send"
-ARGS="--daemon"
-USER=nullmail
-GROUP=nullmail
+command="/usr/sbin/nullmailer-send"
+
+start_stop_daemon_args="--chdir /var/nullmailer --user nullmail:nullmail"
+
+required_dirs="/var/nullmailer"
+pidfile="/run/nullmailer.pid"
+command_background="true"
+command_args="-s"
 
 depend() {
 	use net logger
@@ -38,19 +42,10 @@ checkconfig() {
 	fi
 }
 
-start() {
+start_pre() {
 	checkconfig
-	ebegin "Starting nullmailer"
-	cd /var/nullmailer
-	start-stop-daemon --start --quiet --user ${USER}:${GROUP} \
-			  --exec ${DAEMON} -- ${ARGS}
-	eend $?
 }
 
-stop() {
+stop_pre() {
 	checkconfig # to avoid init.d stopping svscan instance
-	ebegin "Stopping nullmailer"
-	cd /var/nullmailer
-	start-stop-daemon --stop --user ${USER} --exec ${DAEMON} 
-	eend $?
 }

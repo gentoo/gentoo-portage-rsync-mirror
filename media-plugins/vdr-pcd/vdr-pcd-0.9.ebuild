@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.8 2013/06/17 19:20:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pcd/vdr-pcd-0.9.ebuild,v 1.9 2014/01/08 15:25:11 hd_brummy Exp $
 
-EAPI=3
+EAPI=5
 
-inherit vdr-plugin flag-o-matic eutils
+inherit vdr-plugin-2 flag-o-matic eutils
 
 DESCRIPTION="VDR Plugin: adds the functionality to view PhotoCDs"
 HOMEPAGE="http://www.heiligenmann.de/vdr/vdr/plugins/pcd.html"
@@ -20,7 +20,7 @@ DEPEND=">=media-video/vdr-1.4.4
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	epatch "${FILESDIR}/${P}-ffmpeg-1.patch"
 
