@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.68.ebuild,v 1.2 2014/01/03 07:32:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.68.ebuild,v 1.3 2014/01/08 14:07:06 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,7 +20,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux system-sqlite +tcmalloc"
+IUSE="bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -32,7 +32,6 @@ QA_PRESTRIPPED=".*\.nexe"
 RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
 	app-arch/snappy:=
-	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
 		dev-libs/libgcrypt:=
 		>=net-print/cups-1.3.11:=
@@ -303,15 +302,6 @@ src_configure() {
 		$(gyp_use kerberos)
 		$(gyp_use pulseaudio)
 		$(gyp_use tcmalloc linux_use_tcmalloc)"
-
-	if use system-sqlite; then
-		elog "Enabling system sqlite. WebSQL - http://www.w3.org/TR/webdatabase/"
-		elog "will not work. Please report sites broken by this"
-		elog "to https://bugs.gentoo.org"
-		myconf+="
-			-Duse_system_sqlite=1
-			-Denable_sql_database=0"
-	fi
 
 	# Use explicit library dependencies instead of dlopen.
 	# This makes breakages easier to detect by revdep-rebuild.

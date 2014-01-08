@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1734.0.ebuild,v 1.1 2013/12/11 05:32:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1750.18.ebuild,v 1.1 2014/01/08 14:07:06 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,7 +20,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="aura bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux system-sqlite +tcmalloc"
+IUSE="aura bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -32,7 +32,6 @@ QA_PRESTRIPPED=".*\.nexe"
 RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
 	app-arch/snappy:=
-	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
 		dev-libs/libgcrypt:=
 		>=net-print/cups-1.3.11:=
@@ -55,6 +54,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/harfbuzz:=[icu(+)]
 	>=media-libs/libjpeg-turbo-1.2.0-r1:=
 	media-libs/libpng:0=
+	>=media-libs/libwebp-0.4.0:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
@@ -71,15 +71,11 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	kerberos? ( virtual/krb5 )
 	selinux? ( sec-policy/selinux-chromium )"
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	!arm? (
 		dev-lang/yasm
 	)
 	dev-lang/perl
 	dev-perl/JSON
-	>=dev-python/jinja-2.7
-	dev-python/ply
-	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
 	dev-util/ninja
 	sys-apps/hwids
@@ -88,7 +84,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? (
 		dev-libs/openssl:0
-		dev-python/pyftpdlib
 	)"
 # For nvidia-drivers blocker, see bug #413637 .
 RDEPEND+="
@@ -96,6 +91,21 @@ RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts
 	tcmalloc? ( !<x11-drivers/nvidia-drivers-331.20 )"
+
+# Python dependencies. The DEPEND part needs to be kept in sync
+# with python_check_deps.
+DEPEND+=" $(python_gen_any_dep '
+	>=dev-python/jinja-2.7[${PYTHON_USEDEP}]
+	dev-python/ply[${PYTHON_USEDEP}]
+	dev-python/simplejson[${PYTHON_USEDEP}]
+	test? ( dev-python/pyftpdlib[${PYTHON_USEDEP}] )
+')"
+python_check_deps() {
+	has_version ">=dev-python/jinja-2.7[${PYTHON_USEDEP}]" && \
+		has_version "dev-python/ply[${PYTHON_USEDEP}]" && \
+		has_version "dev-python/simplejson[${PYTHON_USEDEP}]" && \
+		{ ! use test || has_version "dev-python/pyftpdlib[${PYTHON_USEDEP}]"; }
+}
 
 if ! has chromium_pkg_die ${EBUILD_DEATH_HOOKS}; then
 	EBUILD_DEATH_HOOKS+=" chromium_pkg_die";
@@ -176,7 +186,7 @@ src_prepare() {
 		'net/third_party/mozilla_security_manager' \
 		'net/third_party/nss' \
 		'third_party/WebKit' \
-		'third_party/angle_dx11' \
+		'third_party/angle' \
 		'third_party/cacheinvalidation' \
 		'third_party/cld' \
 		'third_party/cros_system_api' \
@@ -193,7 +203,6 @@ src_prepare() {
 		'third_party/libsrtp' \
 		'third_party/libusb' \
 		'third_party/libvpx' \
-		'third_party/libwebp' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
 		'third_party/libyuv' \
@@ -258,7 +267,6 @@ src_configure() {
 	# TODO: use_system_libvpx (bug #487926).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
-	# TODO: use_system_libwebp (http://crbug.com/288019).
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
@@ -268,6 +276,7 @@ src_configure() {
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
+		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_libxslt=1
 		-Duse_system_minizip=1
@@ -298,15 +307,6 @@ src_configure() {
 		$(gyp_use kerberos)
 		$(gyp_use pulseaudio)
 		$(gyp_use tcmalloc linux_use_tcmalloc)"
-
-	if use system-sqlite; then
-		elog "Enabling system sqlite. WebSQL - http://www.w3.org/TR/webdatabase/"
-		elog "will not work. Please report sites broken by this"
-		elog "to https://bugs.gentoo.org"
-		myconf+="
-			-Duse_system_sqlite=1
-			-Denable_sql_database=0"
-	fi
 
 	# Use explicit library dependencies instead of dlopen.
 	# This makes breakages easier to detect by revdep-rebuild.
@@ -511,7 +511,10 @@ chromium_test() {
 		(( exitstatus |= st ))
 	}
 
-	runtest out/Release/base_unittests
+	local excluded_base_unittests=(
+		"OutOfMemoryDeathTest.ViaSharedLibraries" # bug #497512
+	)
+	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 	runtest out/Release/cacheinvalidation_unittests
 
 	local excluded_content_unittests=(

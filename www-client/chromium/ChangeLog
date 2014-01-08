@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1006 2014/01/03 07:32:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1007 2014/01/08 14:07:06 phajdan.jr Exp $
+
+*chromium-33.0.1750.18 (08 Jan 2014)
+
+  08 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-32.0.1700.68.ebuild, -chromium-33.0.1734.0.ebuild,
+  +chromium-33.0.1750.18.ebuild:
+  Dev channel bump. Use system libwebp again. Drop system-sqlite flag, it
+  doesn't work (bug #466266 by Alphat-PC). Remove old.
 
   02 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   chromium-32.0.1700.68.ebuild, chromium-33.0.1750.3.ebuild:
