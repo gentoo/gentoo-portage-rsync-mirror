@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailgraph
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.43 2011/12/29 21:37:27 halcy0n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.44 2014/01/08 06:41:44 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> mailgraph-1.14-r2.ebuild,
+  mailgraph-1.14.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   29 Dec 2011; Mark Loeser <halcy0n@gentoo.org> mailgraph-1.14.ebuild,
   mailgraph-1.14-r2.ebuild:
@@ -165,4 +169,3 @@
   +files/mailgraph.initd, +metadata.xml, +mailgraph-1.11.ebuild:
   Initial commit of mailgraph. Thanks to Aaron Walker <ka0ttic@gentoo.org> for
   the init scripts and ebuild. More info on bug #74372
-

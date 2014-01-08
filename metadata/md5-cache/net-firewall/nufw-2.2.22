@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2 dev-libs/libgcrypt >=dev-libs/cyrus-sasl-2 net-firewall/iptables >=net-libs/gnutls-1.1 ldap? ( >=net-nds/openldap-2 ) mysql? ( virtual/mysql ) pam? ( sys-libs/pam ) pam_nuauth? ( sys-libs/pam ) postgres? ( dev-db/postgresql-server ) nfqueue? ( net-libs/libnfnetlink net-libs/libnetfilter_queue ) nfconntrack? ( net-libs/libnetfilter_conntrack ) prelude? ( dev-libs/libprelude ) dev-python/ipy
 SLOT=0
 SRC_URI=http://www.nufw.org/attachments/download/39/nufw-2.2.22.tar.bz2
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	ssl-cert	0b45da48a22fda62c57c1809b8b55315	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=e411a3a9380874c212245fb79072d2cd

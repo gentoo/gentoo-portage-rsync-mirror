@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gofish
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.19 2012/06/22 11:05:59 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/ChangeLog,v 1.20 2014/01/08 06:34:08 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> gofish-1.0.ebuild,
+  gofish-1.1-r1.ebuild, gofish-1.1.ebuild, gofish-1.2.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   22 Jun 2012; Agostino Sarubbo <ago@gentoo.org> gofish-1.2.ebuild:
   Stable for amd64, wrt bug #422929
@@ -77,4 +81,3 @@
   files/gofish.confd, files/gofish.rc:
   Initial release, ebuild submitted by Emil Skoldberg <emil@math.su.se>
   Closes #35125
-

@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~
 LICENSE=BitstreamVera
 SLOT=0
 SRC_URI=mirror://gnome/sources/ttf-bitstream-vera/1.10/ttf-bitstream-vera-1.10.tar.bz2
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	font	37271e0911f39dd15a28adcaf94f6956	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	font	37271e0911f39dd15a28adcaf94f6956	gnome.org	8fef8f967214f56e08fa92d61163d891	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=50e43e4d00056ee7d6299693b96b75d9

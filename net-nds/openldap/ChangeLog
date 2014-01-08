@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/openldap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.456 2013/12/23 16:24:29 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.457 2014/01/08 06:32:30 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> openldap-2.4.35-r1.ebuild,
+  openldap-2.4.35.ebuild, openldap-2.4.38-r1.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> openldap-2.4.35-r1.ebuild:
   Stable for sparc, wrt bug #486302

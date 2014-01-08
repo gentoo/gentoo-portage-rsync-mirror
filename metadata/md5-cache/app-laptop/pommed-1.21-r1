@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/alsa-lib x86? ( sys-apps/pciutils ) amd64? ( sys-apps/pciutils ) dev-libs/confuse >=sys-apps/dbus-1.1 dev-libs/dbus-glib sys-libs/zlib media-libs/audiofile gtk? ( x11-libs/gtk+:2 gnome-base/libglade:2.0 ) X? ( x11-libs/libX11 x11-libs/libXpm ) media-sound/alsa-utils virtual/eject
 SLOT=0
 SRC_URI=http://alioth.debian.org/frs/download.php/2499/pommed-1.21.tar.gz
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=b0c929b215ce7d556fc77a78eb268e18

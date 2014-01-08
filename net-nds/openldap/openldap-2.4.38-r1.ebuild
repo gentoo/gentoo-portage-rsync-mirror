@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r1.ebuild,v 1.2 2013/12/21 20:45:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.38-r1.ebuild,v 1.3 2014/01/08 06:32:30 vapier Exp $
 
 EAPI="5"
 
-inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs autotools systemd
+inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs autotools user systemd
 
 BIS_PN=rfc2307bis.schema
 BIS_PV=20120525

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-1.1.18.ebuild,v 1.1 2013/10/31 10:01:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-server/silc-server-1.1.18.ebuild,v 1.2 2014/01/08 06:41:24 vapier Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic user
 
 DESCRIPTION="Server for Secure Internet Live Conferencing"
 SRC_URI="http://www.silcnet.org/download/server/sources/${P}.tar.bz2"

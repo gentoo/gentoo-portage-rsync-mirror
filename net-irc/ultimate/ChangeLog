@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ultimate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.24 2012/08/11 14:28:40 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.25 2014/01/08 06:39:09 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ultimate-3.0.2-r2.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   11 Aug 2012; Markus Meier <maekke@gentoo.org> ultimate-3.0.2-r2.ebuild:
   x86 stable, bug #419255
@@ -114,4 +117,3 @@
   files/Ultimate-2.8.7-gentoo.patch, files/setup.h, files/ultimateircd.conf,
   files/ultimateircd.rc:
   Initial version, closes #31466.
-

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/asuka
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.19 2009/09/23 18:43:11 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.20 2014/01/08 06:34:55 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> asuka-1.0.6.ebuild,
+  asuka-1.2.1.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> asuka-1.0.6.ebuild:
   Remove virtual/libc
@@ -63,4 +67,3 @@
   27 Oct 2003; Chuck Short <zul@gentoo.org> files/asuka.conf.d,
   files/asuka.init.d:
   Initial version, closes bug #31615.
-

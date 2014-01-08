@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r4.ebuild,v 1.8 2012/12/15 16:54:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r4.ebuild,v 1.9 2014/01/08 06:38:13 vapier Exp $
 
 EAPI="1"
-inherit eutils multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs user
 
 DESCRIPTION="A tiny pseudoshell which only permits scp and sftp"
 HOMEPAGE="http://www.sublimation.org/scponly/"

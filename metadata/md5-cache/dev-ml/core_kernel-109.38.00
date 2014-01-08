@@ -10,5 +10,5 @@ RDEPEND=>=dev-ml/bin-prot-109.15.00:= >=dev-ml/comparelib-109.27.00:= >=dev-ml/f
 RESTRICT=test
 SLOT=0/109.38.00
 SRC_URI=http://ocaml.janestreet.com/ocaml-core/109.38.00/individual/core_kernel-109.38.00.tar.gz http://dev.gentoo.org/~aballier/distfiles/core_kernel-109.38.00.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	892e597faee02a5b94eb02ab512e7622	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=13e60a39b5b89d9acead0a7a30b40d52

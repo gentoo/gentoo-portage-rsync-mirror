@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-fs/lvm2-2.02.45 >=virtual/udev-171 dev-libs/libaio sys-libs/readline systemd? ( sys-apps/systemd )
 SLOT=0
 SRC_URI=http://christophe.varoqui.free.fr/multipath-tools/multipath-tools-0.5.0.tar.bz2
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de
 _md5_=5df548521fb74d441011ea31bab7eda2

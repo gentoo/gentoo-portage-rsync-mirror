@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ngircd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.57 2013/10/06 07:51:03 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.58 2014/01/08 06:34:18 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ngircd-0.12.1.ebuild,
+  ngircd-13.ebuild, ngircd-17.1.ebuild, ngircd-18.ebuild, ngircd-20.3.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   06 Oct 2013; Agostino Sarubbo <ago@gentoo.org> ngircd-20.3.ebuild:
   Stable for x86, wrt bug #482582

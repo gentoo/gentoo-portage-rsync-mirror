@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=net-firewall/iptables sys-apps/iproute2 =net-firewall/shorewall-core-4.5.18
 SLOT=0
 SRC_URI=http://www1.shorewall.net/pub/shorewall/4.5/shorewall-4.5.18/shorewall-lite-4.5.18.tar.bz2 doc? ( http://www1.shorewall.net/pub/shorewall/4.5/shorewall-4.5.18/shorewall-docs-html-4.5.18.tar.bz2 )
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=7d7cfc670d9987d97d88c94d05c592f8

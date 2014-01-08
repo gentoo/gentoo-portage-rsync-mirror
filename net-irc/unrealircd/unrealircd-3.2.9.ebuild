@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.9.ebuild,v 1.10 2013/11/18 17:06:50 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.9.ebuild,v 1.11 2014/01/08 06:39:36 vapier Exp $
 
 EAPI=4
 
-inherit eutils ssl-cert versionator multilib
+inherit eutils ssl-cert versionator multilib user
 
 MY_P=Unreal${PV/_/-}
 

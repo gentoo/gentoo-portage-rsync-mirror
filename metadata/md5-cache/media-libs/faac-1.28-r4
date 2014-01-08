@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1 MPEG-4
 RDEPEND=media-libs/libmp4v2:0= abi_x86_32? ( !<=app-emulation/emul-linux-x86-medialibs-20130224-r1 !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=mirror://sourceforge/faac/faac-1.28.tar.gz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	libtool	bf5062d2ffe64907c251cb7636421070	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	bda08c532d1c9ab7f91f9fb9ae36d5e4	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	bda08c532d1c9ab7f91f9fb9ae36d5e4	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=d030dfa5b8002ca89a7df01907ddcfe2

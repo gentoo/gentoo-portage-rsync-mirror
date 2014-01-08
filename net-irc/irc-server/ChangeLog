@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irc-server
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.14 2008/07/14 18:13:22 armin76 Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.15 2014/01/08 06:35:38 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> irc-server-2.10.3_p3.ebuild,
+  irc-server-2.11.1_p1-r2.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   14 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   irc-server-2.11.1_p1-r2.ebuild:
@@ -66,4 +70,3 @@
   03 Oct 2003; Greg Fitzgerald <gregf@gentoo.org> irc-server-2.10.3_p3.ebuild,
   files/ircd.rc:
   Initial Release
-

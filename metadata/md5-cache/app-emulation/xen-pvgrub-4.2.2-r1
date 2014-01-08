@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-emulation/xen-4.2.1 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://bits.xensource.com/oss-xen/release/4.2.2/xen-4.2.2.tar.gz mirror://gnu-alpha/grub/grub-0.97.tar.gz http://xenbits.xensource.com/xen-extfiles/zlib-1.2.3.tar.gz ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/pciutils-2.2.9.tar.bz2 http://xenbits.xensource.com/xen-extfiles/lwip-1.3.0.tar.gz http://xenbits.xensource.com/xen-extfiles/newlib/newlib-1.16.0.tar.gz http://dev.gentoo.org/~idella4//patches/XSA-55patches.tar.gz
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=ce85c024e07bd601bceb0398ac9157aa

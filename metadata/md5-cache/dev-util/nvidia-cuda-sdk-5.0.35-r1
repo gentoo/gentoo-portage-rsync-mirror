@@ -9,5 +9,5 @@ LICENSE=CUDPP
 RDEPEND=>=dev-util/nvidia-cuda-toolkit-5.0.35 media-libs/freeglut examples? ( media-libs/freeimage media-libs/glew virtual/mpi >=x11-drivers/nvidia-drivers-304.54 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/nvidia-cuda-sdk-5.0.35-asneeded.patch.xz amd64? ( http://developer.download.nvidia.com/compute/cuda/5_0/rel-update-1/installers//cuda_5.0.35_linux_64_fedora16-1.run ) x86? ( http://developer.download.nvidia.com/compute/cuda/5_0/rel-update-1/installers//cuda_5.0.35_linux_32_fedora16-1.run )
-_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	unpacker	04385b0f181c42fa9c18ec0e31729d1f	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	unpacker	04385b0f181c42fa9c18ec0e31729d1f	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=f88e8e56c53969ff234cbe64fd8eacec

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ptlink-ircd
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.14 2009/06/06 14:58:30 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.15 2014/01/08 06:37:51 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ptlink-ircd-6.19.6-r1.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   06 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
   ptlink-ircd-6.19.6-r1.ebuild:
@@ -102,4 +105,3 @@
   ptlink-6.14.2.ebuild, files/ptlinkircd.confd, files/ptlinkircd.rc:
   Added new ebuild by James Webster jimmyj@netstat.org.
   Closes bug #15007.
-

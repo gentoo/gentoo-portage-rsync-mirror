@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-17.1.ebuild,v 1.3 2011/09/22 11:29:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ngircd-17.1.ebuild,v 1.4 2014/01/08 06:34:18 vapier Exp $
 
 EAPI=4
 
-inherit autotools-utils eutils
+inherit autotools-utils eutils user
 
 DESCRIPTION="A IRC server written from scratch"
 HOMEPAGE="http://ngircd.barton.de/"

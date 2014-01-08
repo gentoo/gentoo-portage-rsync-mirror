@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=kernel_linux? ( sys-libs/libutempter ) kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-lib-9.0 sys-libs/libutempter ) ) >=sys-libs/ncurses-5.7-r7 x11-apps/xmessage x11-libs/libX11 x11-libs/libXaw x11-libs/libXft x11-libs/libxkbfile x11-libs/libXmu x11-libs/libXrender x11-libs/libXt unicode? ( x11-apps/luit ) Xaw3d? ( x11-libs/libXaw3d ) media-fonts/font-misc-misc
 SLOT=0
 SRC_URI=ftp://invisible-island.net/xterm/xterm-285.tgz
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=aa65a51807cd347f59884f093ac45192

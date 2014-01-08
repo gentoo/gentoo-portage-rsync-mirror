@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dot-forward
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.36 2012/12/22 16:48:53 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.37 2014/01/08 06:40:53 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> dot-forward-0.71-r2.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   22 Dec 2012; Ulrich Müller <ulm@gentoo.org> dot-forward-0.71-r2.ebuild,
   dot-forward-0.71-r3.ebuild:

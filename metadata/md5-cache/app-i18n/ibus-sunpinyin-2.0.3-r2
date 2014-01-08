@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1 CDDL
 RDEPEND=app-i18n/ibus ~app-i18n/sunpinyin-2.0.3 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
 SLOT=0
 SRC_URI=http://sunpinyin.googlecode.com/files/ibus-sunpinyin-2.0.3.tar.gz
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=2f53960af9a4c44a2d57d7189fd52d51

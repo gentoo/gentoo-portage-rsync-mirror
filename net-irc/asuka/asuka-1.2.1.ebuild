@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.2.1.ebuild,v 1.7 2007/05/06 12:19:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.2.1.ebuild,v 1.8 2014/01/08 06:34:55 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic user
 
 DESCRIPTION="The QuakeNet IRC Server"
 HOMEPAGE="http://dev-com.quakenet.org/"

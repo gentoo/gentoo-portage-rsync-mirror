@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.5 2008/09/10 10:46:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ip-sentinel/ip-sentinel-0.12.ebuild,v 1.6 2014/01/08 06:35:12 vapier Exp $
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Prevent unauthorized usage of IPs within the local ethernet broadcastdomain by giving an answer to ARP-requests"
 HOMEPAGE="http://www.nongnu.org/ip-sentinel/"

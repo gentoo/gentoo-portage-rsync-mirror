@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=tiff? ( media-libs/tiff )
 SLOT=0
 SRC_URI=http://tesseract-ocr.googlecode.com/files/tesseract-2.04.tar.gz http://tesseract-ocr.googlecode.com/files/tesseract-2.00.eng.tar.gz linguas_de? ( http://tesseract-ocr.googlecode.com/files/tesseract-2.00.deu.tar.gz http://tesseract-ocr.googlecode.com/files/tesseract-2.01.deu-f.tar.gz ) linguas_eu? ( http://tesseract-ocr.googlecode.com/files/tesseract-2.04.eus.tar.gz ) linguas_es? ( http://tesseract-ocr.googlecode.com/files/tesseract-2.00.spa.tar.gz ) linguas_fr? ( http://tesseract-ocr.googlecode.com/files/tesseract-2.00.fra.tar.gz ) linguas_it? ( http://tesseract-ocr.googlecode.com/files/tesseract-2.00.ita.tar.gz ) linguas_nl? ( http://tesseract-ocr.googlecode.com/files/tesseract-2.00.nld.tar.gz ) linguas_pt_BR? ( http://tesseract-ocr.googlecode.com/files/tesseract-2.01.por.tar.gz ) linguas_vi? ( http://tesseract-ocr.googlecode.com/files/tesseract-2.01.vie.tar.gz )
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=80d4d007d1586e7d7e6a3f7de367dc37

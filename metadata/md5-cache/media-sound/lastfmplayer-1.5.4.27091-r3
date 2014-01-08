@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-qt/qtgui:4 dev-qt/qtsql:4 media-libs/libsamplerate sci-libs/fftw media-libs/libmad ipod? ( >=media-libs/libgpod-0.5.2 ) media-libs/alsa-lib
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/lastfm-1.5.4.27091+dfsg.tar.gz http://dev.gentoo.org/~hwoarang/distfiles/lastfm_1.5.4.27091+dfsg-2.debian.tar.gz dbus? ( http://glue.umd.edu/~rossatok/dbusextension-2.0.tar.bz2 )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=57375405370194e973dd0e0a12fcf69d

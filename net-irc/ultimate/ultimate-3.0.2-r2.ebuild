@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.2-r2.ebuild,v 1.3 2012/08/11 14:28:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ultimate-3.0.2-r2.ebuild,v 1.4 2014/01/08 06:39:09 vapier Exp $
 
 EAPI=4
 
 AT_M4DIR=autoconf
-inherit autotools eutils fixheadtails prefix ssl-cert
+inherit autotools eutils fixheadtails prefix ssl-cert user
 
 MY_P=Ultimate${PV/_/.}
 

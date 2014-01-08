@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/scponly
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.55 2013/10/13 16:47:28 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.56 2014/01/08 06:38:13 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> scponly-4.8-r4.ebuild,
+  scponly-4.8-r5.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *scponly-4.8-r5 (13 Oct 2013)
 

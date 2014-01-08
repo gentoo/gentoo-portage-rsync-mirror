@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cmd5checkpw
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.58 2012/12/22 17:19:59 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.59 2014/01/08 06:40:33 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> cmd5checkpw-0.30-r1.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   22 Dec 2012; Ulrich Müller <ulm@gentoo.org> cmd5checkpw-0.30-r1.ebuild:
   Fix LICENSE, see README and notices in source files, bug 446474.
@@ -214,4 +217,3 @@
   01 Feb 2003; Nick Hadaway <raker@gentoo.org> cmd5checkpw-0.22.ebuild,
   files/digest-cmd5checkpw-0.22 :
   New ebuild for support of a fully featured smtp auth in qmail.
-

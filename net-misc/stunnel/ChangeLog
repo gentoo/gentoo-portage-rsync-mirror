@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.150 2013/12/22 09:29:27 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.151 2014/01/08 06:37:48 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> stunnel-4.44.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *stunnel-4.56-r2 (22 Dec 2013)
 

@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/minbif-1.0.5.ebuild,v 1.4 2012/08/21 08:41:43 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/minbif/minbif-1.0.5.ebuild,v 1.5 2014/01/08 06:41:12 vapier Exp $
 
 EAPI=4
-inherit cmake-utils eutils
+inherit cmake-utils eutils user
 
 DESCRIPTION="an IRC gateway to IM networks"
 HOMEPAGE="https://symlink.me/projects/minbif/wiki/"

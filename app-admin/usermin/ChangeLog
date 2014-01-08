@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/usermin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.158 2013/11/21 07:50:08 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.159 2014/01/08 06:45:26 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> usermin-1.540-r1.ebuild,
+  usermin-1.570.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *usermin-1.570 (21 Nov 2013)
 

@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.0.2.ebuild,v 1.4 2013/08/12 19:48:52 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-3.0.2.ebuild,v 1.5 2014/01/08 06:40:32 vapier Exp $
 
 EAPI="4"
-inherit eutils multilib python versionator
+inherit eutils multilib python versionator user
 
 DESCRIPTION="DBMail is an open-source project that enables storage of mail messages in a relational database."
 HOMEPAGE="http://www.dbmail.org/"

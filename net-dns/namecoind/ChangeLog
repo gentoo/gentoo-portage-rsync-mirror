@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/namecoind
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/namecoind/ChangeLog,v 1.1 2013/12/01 15:26:44 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/namecoind/ChangeLog,v 1.2 2014/01/08 06:45:52 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> namecoind-0.3.72.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *namecoind-0.3.72 (01 Dec 2013)
 
@@ -9,4 +12,3 @@
   +files/namecoin.conf, +files/namecoin.confd, +files/namecoin.initd,
   +metadata.xml:
   Initial commit
-

@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.10 2005/09/02 15:10:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/irc-server-2.10.3_p3.ebuild,v 1.11 2014/01/08 06:35:38 vapier Exp $
 
-inherit eutils versionator flag-o-matic
+inherit eutils versionator flag-o-matic user
 
 MY_P=irc${PV/_/}
 

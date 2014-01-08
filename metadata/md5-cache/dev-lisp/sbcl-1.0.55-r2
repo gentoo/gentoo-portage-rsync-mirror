@@ -8,5 +8,5 @@ LICENSE=MIT
 RDEPEND=asdf? ( >=dev-lisp/gentoo-init-0.1 )
 SLOT=0
 SRC_URI=mirror://sourceforge/sbcl/sbcl-1.0.55-source.tar.bz2 x86? ( mirror://sourceforge/sbcl/sbcl-1.0.37-x86-linux-binary.tar.bz2 ) amd64? ( mirror://sourceforge/sbcl/sbcl-1.0.37-x86-64-linux-binary.tar.bz2 ) ppc? ( mirror://sourceforge/sbcl/sbcl-1.0.28-powerpc-linux-binary.tar.bz2 ) sparc? ( mirror://sourceforge/sbcl/sbcl-1.0.28-sparc-linux-binary.tar.bz2 ) alpha? ( mirror://sourceforge/sbcl/sbcl-1.0.28-alpha-linux-binary.tar.bz2 )
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=45a910e99e4fb28f46a0b34fc6777f9d

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.467 2013/12/23 12:27:52 chainsaw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.468 2014/01/08 06:33:50 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> asterisk-1.8.25.0.ebuild,
+  asterisk-11.7.0.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   23 Dec 2013; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.23.1.ebuild,
   -asterisk-1.8.24.0.ebuild, -asterisk-11.5.1.ebuild, -asterisk-11.6.0.ebuild,

@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.00.ebuild,v 1.11 2010/06/15 18:12:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-base/jabber-base-0.00.ebuild,v 1.12 2014/01/08 06:41:06 vapier Exp $
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Jabber servers and transports layout package"
 SRC_URI=""

@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/gofish-1.0.ebuild,v 1.2 2007/04/22 16:35:53 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gofish/gofish-1.0.ebuild,v 1.3 2014/01/08 06:34:08 vapier Exp $
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Gofish gopher server"
 HOMEPAGE="http://gofish.sourceforge.net"

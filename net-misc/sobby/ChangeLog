@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sobby
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.33 2012/06/08 12:14:32 phajdan.jr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.34 2014/01/08 06:32:41 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> sobby-0.4.7.ebuild,
+  sobby-0.4.8.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   08 Jun 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> sobby-0.4.8.ebuild:
   x86 stable wrt bug #419319
@@ -116,4 +120,3 @@
 
   23 Jan 2006; Chris Gianelloni <wolf31o2@gentoo.org> sobby-0.3.0.ebuild:
   Marking stable on x86 wrt bug #115113.
-

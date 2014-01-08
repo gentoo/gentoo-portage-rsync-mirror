@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3.1.ebuild,v 1.2 2012/11/18 18:44:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/srvx/srvx-1.3.1.ebuild,v 1.3 2014/01/08 06:36:54 vapier Exp $
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="A complete set of services for IRCu 2.10.10+ and bahamut based networks"
 HOMEPAGE="http://www.srvx.net/"

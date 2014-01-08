@@ -9,5 +9,5 @@ PDEPEND=app-i18n/sunpinyin-data
 RDEPEND=dev-db/sqlite:3
 SLOT=0/1
 SRC_URI=http://dev.gentoo.org/~yngwin/distfiles/sunpinyin-2.0.4_pre20130108.tar.xz
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=cb20e89272bc994ade20ffa9931ab665

@@ -10,5 +10,5 @@ RDEPEND=net-misc/curl ncurses? ( sys-libs/ncurses[unicode?] ) >=dev-libs/jansson
 REQUIRED_USE=|| ( avalon bitforce cpumining icarus modminer opencl proxy x6500 ztex ) adl? ( opencl ) bfsb? ( bitfury ) bigpic? ( bitfury ) littlefury? ( bitfury ) lm_sensors? ( opencl ) metabank? ( bitfury ) scrypt? ( || ( cpumining opencl ) ) unicode? ( ncurses ) proxy? ( || ( proxy_getwork proxy_stratum ) ) proxy_getwork? ( proxy ) proxy_stratum? ( proxy )
 SLOT=0
 SRC_URI=http://luke.dashjr.org/programs/bitcoin/files/bfgminer/3.3.0/bfgminer-3.3.0.tbz2
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=af63faa822ff2d401b6a9a9abe2b6db0

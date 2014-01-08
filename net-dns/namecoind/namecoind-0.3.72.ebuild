@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/namecoind/namecoind-0.3.72.ebuild,v 1.1 2013/12/01 15:26:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/namecoind/namecoind-0.3.72.ebuild,v 1.2 2014/01/08 06:45:52 vapier Exp $
 
 EAPI=4
 
 DB_VER="4.8"
 
-inherit db-use eutils toolchain-funcs
+inherit db-use eutils toolchain-funcs user
 
 DESCRIPTION="A P2P network based domain name system"
 HOMEPAGE="https://dot-bit.org/"

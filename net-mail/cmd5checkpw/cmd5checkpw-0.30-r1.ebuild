@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30-r1.ebuild,v 1.13 2012/12/22 17:19:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/cmd5checkpw-0.30-r1.ebuild,v 1.14 2014/01/08 06:40:33 vapier Exp $
 
-inherit eutils fixheadtails
+inherit eutils fixheadtails user
 
 MY_VER="030"
 

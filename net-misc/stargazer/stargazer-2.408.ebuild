@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stargazer/stargazer-2.408.ebuild,v 1.2 2013/02/24 19:23:13 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stargazer/stargazer-2.408.ebuild,v 1.3 2014/01/08 06:37:14 vapier Exp $
 
 EAPI="5"
 
-inherit eutils linux-info multilib
+inherit eutils linux-info multilib user
 
 DESCRIPTION="Billing system for small home and office networks"
 HOMEPAGE="http://stg.dp.ua/"

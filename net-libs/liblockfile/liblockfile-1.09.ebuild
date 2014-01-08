@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.09.ebuild,v 1.15 2013/02/20 23:43:05 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.09.ebuild,v 1.16 2014/01/08 06:42:31 vapier Exp $
 
 EAPI=4
 
-inherit eutils multilib autotools
+inherit eutils multilib autotools user
 
 DESCRIPTION="Implements functions designed to lock the standard mailboxes"
 HOMEPAGE="http://www.debian.org/"

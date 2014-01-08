@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ptlink-opm-1.3.1.ebuild,v 1.3 2004/11/25 21:46:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ptlink-opm-1.3.1.ebuild,v 1.4 2014/01/08 06:37:57 vapier Exp $
 
-inherit eutils
+inherit eutils user
 
 MY_P="PTlink.OPM${PV}"
 

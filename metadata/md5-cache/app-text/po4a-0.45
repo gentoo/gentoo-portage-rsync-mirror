@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/SGMLSpm >=sys-devel/gettext-0.13 app-text/openjade dev-libs/libxslt dev-perl/Locale-gettext dev-perl/TermReadKey dev-perl/Text-WrapI18N || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/po4a/po4a_0.45.orig.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-app	4c2027b6530baeab97482b706149e640	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-app	4c2027b6530baeab97482b706149e640	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=13b3e35c5d67b80d2ff0adc6547ede8b

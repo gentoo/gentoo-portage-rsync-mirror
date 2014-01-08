@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/jinja-2.1 || ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson ) || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-python/pysqlite:2 ) >=dev-python/twisted-core-8.0.0 dev-python/twisted-web <dev-python/sqlalchemy-migrate-0.8 irc? ( dev-python/twisted-words ) mail? ( dev-python/twisted-mail ) manhole? ( dev-python/twisted-conch ) =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://pypi/b/buildbot/buildbot-0.8.8.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f22c13aad465a6f24f32c19609c34f90

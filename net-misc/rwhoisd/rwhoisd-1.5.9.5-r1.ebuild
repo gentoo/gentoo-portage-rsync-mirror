@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/rwhoisd-1.5.9.5-r1.ebuild,v 1.2 2010/10/28 10:35:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rwhoisd/rwhoisd-1.5.9.5-r1.ebuild,v 1.3 2014/01/08 06:35:57 vapier Exp $
 
 EAPI=0
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="ARIN rwhois daemon"
 HOMEPAGE="http://projects.arin.net/rwhois/"

@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/unrealircd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.116 2013/12/09 03:57:36 binki Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.117 2014/01/08 06:39:36 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> unrealircd-3.2.9.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   09 Dec 2013; Nathan Phillip Brink <binki@gentoo.org>
   -unrealircd-3.2.10.1.ebuild:

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=cgi? ( >=media-libs/gd-1.8.4 ) nls? ( sys-devel/gettext ) snmp? ( net-analyzer/net-snmp ) gnome? ( >=x11-libs/gtk+-2.4.0:2 dev-libs/glib:2 >=gnome-base/gconf-2.0 ) virtual/mailx
 SLOT=0
 SRC_URI=mirror://sourceforge/apcupsd/apcupsd-3.14.8.tar.gz
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=04c357535832b5f776ceae266dbb1ca8

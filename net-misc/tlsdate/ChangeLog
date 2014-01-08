@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tlsdate
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.8 2013/03/18 17:16:18 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tlsdate/ChangeLog,v 1.9 2014/01/08 06:31:38 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> tlsdate-0.0.4-r2.ebuild,
+  tlsdate-0.0.5.ebuild, tlsdate-0.0.6.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   18 Mar 2013; Mike Frysinger <vapier@gentoo.org> tlsdate-0.0.6.ebuild:
   Stabilize for all.

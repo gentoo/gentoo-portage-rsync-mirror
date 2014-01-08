@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/elasticsearch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.2 2013/11/27 13:44:30 chainsaw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.3 2014/01/08 06:44:18 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  elasticsearch-0.90.6-r1.ebuild, elasticsearch-0.90.6.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *elasticsearch-0.90.6-r1 (27 Nov 2013)
 
@@ -16,4 +20,3 @@
   Initial commit, initial ebuild by Tom Wijsman with further tweaks by Travis
   G. Hansen around systemd compatibility and traditional init scripts. Silenced
   QA warnings for pre-built components.
-

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ircservices
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.52 2012/01/09 19:49:51 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.53 2014/01/08 06:34:11 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ircservices-5.0.63.ebuild,
+  ircservices-5.1.17.ebuild, ircservices-5.1.24.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   09 Jan 2012; Brent Baude <ranger@gentoo.org> ircservices-5.1.24.ebuild:
   Marking ircservices-5.1.24 ppc for bug 394387
@@ -249,4 +253,3 @@
   +files/5.0.37-fPIC.patch, +files/ircservices.init.d,
   +ircservices-5.0.37.ebuild:
   Initial import, ebuild written by me.
-

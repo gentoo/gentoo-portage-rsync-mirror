@@ -10,5 +10,5 @@ RDEPEND=office_implementation_libreoffice? ( || ( app-office/libreoffice app-off
 REQUIRED_USE=|| ( office_implementation_libreoffice office_implementation_openoffice )
 SLOT=0
 SRC_URI=https://ooofbtools.googlecode.com/files/OOoFBTools-2.12.7z
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	multilib	892e597faee02a5b94eb02ab512e7622	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	office-ext-r1	370fdf6c0ffd835405efe2e8e16d1771	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=b5a79909124ea70b4bd3587f39b9d191

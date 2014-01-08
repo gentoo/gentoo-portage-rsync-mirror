@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.1.0.ebuild,v 1.4 2012/07/12 15:31:56 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/spread-4.1.0.ebuild,v 1.5 2014/01/08 06:32:47 vapier Exp $
 
 EAPI="4"
-inherit eutils
+inherit eutils user
 
 MY_PN="spread-src"
 

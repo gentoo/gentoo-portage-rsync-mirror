@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.15.ebuild,v 1.8 2013/10/22 08:06:43 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.15.ebuild,v 1.9 2014/01/08 06:42:15 vapier Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
 
-inherit eutils python multilib systemd
+inherit eutils python multilib systemd user
 
 DESCRIPTION="A python-based mailing list server with an extensive web interface"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"

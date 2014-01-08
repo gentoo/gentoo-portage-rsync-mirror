@@ -9,5 +9,5 @@ RDEPEND=dev-java/sun-jaf dev-java/sun-javamail dev-java/xsdlib >=virtual/jdk-1.4
 RESTRICT=fetch
 SLOT=0
 SRC_URI=sun_java_wireless_toolkit-2.5.2_01-linuxi486.bin.sh
-_eclasses_=eutils	d04e3933e3ec7e338a0561a6b0ae66b1	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=48bebf95a1e6acc2fae6806890d21793
