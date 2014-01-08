@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-3.0.0.0.ebuild,v 1.1 2013/12/30 09:26:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-3.0.0.0.ebuild,v 1.2 2014/01/08 00:28:11 dirtyepic Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2
 	doc? ( mirror://sourceforge/wxpython/wxPython-docs-${PV}.tar.bz2 )"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="+X aqua doc debug gnome gstreamer opengl sdl tiff webkit"
+IUSE="+X aqua doc debug gstreamer libnotify opengl sdl tiff webkit"
 
 SLOT="3.0"
 
@@ -28,15 +28,15 @@ RDEPEND="
 		sys-libs/zlib
 		virtual/jpeg
 		>=x11-libs/gtk+-2.18:2
+		x11-libs/gdk-pixbuf
 		x11-libs/libSM
-		x11-libs/libXinerama
 		x11-libs/libXxf86vm
 		x11-libs/pango[X]
-		gnome? ( gnome-base/libgnomeprintui:2.2 )
 		gstreamer? (
 			gnome-base/gconf:2
 			media-libs/gstreamer:0.10
 			media-libs/gst-plugins-base:0.10 )
+		libnotify? ( x11-libs/libnotify )
 		opengl? ( virtual/opengl )
 		tiff?   ( media-libs/tiff:0 )
 		webkit? ( net-libs/webkit-gtk:2 )
@@ -95,6 +95,7 @@ src_configure() {
 	use X && \
 		myconf="${myconf}
 			--enable-graphics_ctx
+			--with-gtkprint
 			--enable-gui
 			--with-libpng=sys
 			--with-libxpm=sys
@@ -102,9 +103,8 @@ src_configure() {
 			--without-gnomevfs
 			$(use_enable gstreamer mediactrl)
 			$(use_enable webkit webview)
+			$(use_with libnotify)
 			$(use_with opengl)
-			$(use_with gnome gnomeprint)
-			$(use_with !gnome gtkprint)
 			$(use_with tiff libtiff sys)"
 
 	use aqua && \

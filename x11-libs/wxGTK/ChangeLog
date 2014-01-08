@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/wxGTK
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.302 2013/12/30 09:26:18 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.303 2014/01/08 00:28:11 dirtyepic Exp $
+
+  08 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> wxGTK-3.0.0.0.ebuild:
+  Stop using libgnomeprint (bug #358445) and drop now-unused gnome USE flag.
+  Add missing dependency on libnotify (with USE flag due to hppa). Update other
+  dependencies.
 
 *wxGTK-3.0.0.0 (30 Dec 2013)
 

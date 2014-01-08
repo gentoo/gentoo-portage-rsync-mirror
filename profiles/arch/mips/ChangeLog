@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.126 2014/01/05 10:39:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.127 2014/01/08 00:26:44 dirtyepic Exp $
+
+  08 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> package.use.mask:
+  Mask webkit USE flag for wxGTK.
 
   05 Jan 2014; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
   Masking dev-vcs/git mediawiki per #497068
