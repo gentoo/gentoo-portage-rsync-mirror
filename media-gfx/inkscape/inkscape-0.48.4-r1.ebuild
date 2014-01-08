@@ -1,8 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.7 2013/12/26 14:46:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.8 2014/01/08 11:54:52 jlec Exp $
 
 EAPI=5
+
 PYTHON_COMPAT=( python{2_6,2_7} )
 PYTHON_REQ_USE="xml"
 GCONF_DEBUG=no
@@ -13,17 +14,21 @@ MY_P=${P/_/}
 
 DESCRIPTION="A SVG based generic vector-drawing program"
 HOMEPAGE="http://www.inkscape.org/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
+SRC_URI="
+	mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	https://launchpadlibrarian.net/157792073/1255830-fix-freetype-includes-backport-0.48.x-v1.diff -> ${P}-freetype251.patch"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE="dia gnome postscript inkjar lcms nls spell wmf"
+
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
+	app-text/libwpd:0.9
+	app-text/libwpg:0.2
 	>=app-text/poppler-0.12.3-r3:=[cairo,xpdf-headers(+)]
 	dev-cpp/glibmm
 	>=dev-cpp/gtkmm-2.18.0:2.4
@@ -38,8 +43,6 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/libpng:0
-	app-text/libwpd:0.9
-	app-text/libwpg:0.2
 	sci-libs/gsl
 	x11-libs/libX11
 	>=x11-libs/gtk+-2.10.7:2
@@ -64,9 +67,9 @@ RDEPEND="${COMMON_DEPEND}
 
 DEPEND="${COMMON_DEPEND}
 	dev-libs/boost
+	>=dev-util/intltool-0.29
 	sys-devel/gettext
-	virtual/pkgconfig
-	>=dev-util/intltool-0.29"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 
@@ -74,12 +77,15 @@ RESTRICT="test"
 
 src_prepare() {
 	gnome2_src_prepare
-	epatch "${FILESDIR}"/${PN}-0.48.0-spell.patch \
+	epatch \
+		"${FILESDIR}"/${PN}-0.48.0-spell.patch \
 		"${FILESDIR}"/${PN}-0.48.2-libwpg.patch \
 		"${FILESDIR}"/${PN}-0.48.3.1-desktop.patch \
 		"${FILESDIR}"/${PN}-0.48.4-epython.patch \
 		"${FILESDIR}"/${PN}-0.48.4-fix-member-decl.patch \
 		"${FILESDIR}"/${PN}-0.48.4-automake-1.13.patch \
+		"${FILESDIR}"/${P}-gc74-configure.patch \
+		"${FILESDIR}"/${P}-gc74.patch \
 		"${DISTDIR}"/${P}-freetype251.patch
 
 	sed -i \

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-atscepg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.5 2012/06/30 17:31:40 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.6 2014/01/08 11:40:57 hd_brummy Exp $
+
+  08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-atscepg-0.1.1.ebuild, -files/vdr-atscepg-0.1.1-gcc-4.4.diff,
+  vdr-atscepg-0.3.0.ebuild:
+  cleanup; minor depend fixes
 
   30 Jun 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-atscepg-0.3.0.ebuild:

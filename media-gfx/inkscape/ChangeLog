@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/inkscape
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.202 2013/12/26 14:46:55 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.203 2014/01/08 11:54:52 jlec Exp $
+
+  08 Jan 2014; Justin Lecher <jlec@gentoo.org> inkscape-0.48.4-r1.ebuild,
+  +files/inkscape-0.48.4-gc74-configure.patch,
+  +files/inkscape-0.48.4-gc74.patch:
+  Fix compatibility with API changes in boehm-gc-7.4.0, #495210
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> inkscape-0.48.4-r1.ebuild:
   add ~arm, bug #488594

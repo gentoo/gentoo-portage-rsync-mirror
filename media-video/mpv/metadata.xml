@@ -16,7 +16,6 @@
 	<flag name="libguess">Enables support for charset discovery and conversion using <pkg>app-i18n/libguess</pkg></flag>
 	<flag name="luajit">Use <pkg>dev-lang/luajit</pkg> instead of <pkg>dev-lang/lua</pkg></flag>
 	<flag name="mng">MNG input support</flag>
-	<flag name="mp3">Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg support.</flag>
 	<flag name="mpg123">Enable support for mp3 decoding over <pkg>media-sound/mpg123</pkg> instead of relying on ffmpeg support.</flag>
 	<flag name="postproc">Enable image post-processing via libpostproc</flag>
 	<flag name="pvr">Enable Video4Linux2 MPEG PVR</flag>
