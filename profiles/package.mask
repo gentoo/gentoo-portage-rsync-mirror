@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15313 2014/01/08 17:15:24 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15315 2014/01/08 18:52:28 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
+# masked for removal, wrt bug 420859
+media-plugins/vdr-softdevice
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
+# masked for removal, wrt bug 420881
+media-plugin/vdr-reelchannelscan
 
 # Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
 # masked for removal 08/Feb/2014, bundled with dev-php/phpunit
