@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lziprecover
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lziprecover/ChangeLog,v 1.1 2013/10/21 13:44:11 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lziprecover/ChangeLog,v 1.2 2014/01/08 10:42:57 polynomial-c Exp $
+
+  08 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> lziprecover-1.15.ebuild:
+  amd64 stable (bug #496084).
 
 *lziprecover-1.15 (21 Oct 2013)
 

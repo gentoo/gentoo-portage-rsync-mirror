@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15303 2014/01/07 16:24:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15304 2014/01/08 10:35:10 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,9 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+# Joerg Bornkessle <hd_brummy@gentoo.org> (08 Jan 2014)
+# masked for removal ~08 Feb 2014, wrt bug 424257
+media-plugins/vdr-analogtv
 
 # Michał Górny <mgorny@gentoo.org> (06 Jan 2014)
 # Masked for testing.

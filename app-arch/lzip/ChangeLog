@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.41 2013/12/29 17:31:07 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.42 2014/01/08 10:47:24 polynomial-c Exp $
+
+  08 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> lzip-1.15.ebuild:
+  amd64 stable (bug #495324).
 
   29 Dec 2013; Markus Meier <maekke@gentoo.org> lzip-1.15.ebuild:
   arm stable, bug #495324
