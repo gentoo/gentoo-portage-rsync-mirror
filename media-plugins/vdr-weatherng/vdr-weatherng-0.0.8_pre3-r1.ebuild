@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3-r1.ebuild,v 1.2 2009/10/30 19:50:06 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-weatherng/vdr-weatherng-0.0.8_pre3-r1.ebuild,v 1.3 2014/01/08 19:18:09 hd_brummy Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit vdr-plugin eutils
+inherit vdr-plugin-2
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -30,8 +30,7 @@ VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.0.8.sh"
 PATCHES=("${FILESDIR}/${P}-i18n-fix.diff")
 
 src_prepare() {
-	vdr-plugin_src_prepare
-#	cd "${S}"
+	vdr-plugin-2_src_prepare
 
 	epatch "${FILESDIR}/${P}-gentoo.diff"
 	epatch "${FILESDIR}/${P}-timeout.diff"
@@ -41,10 +40,12 @@ src_prepare() {
 
 	# /bin/sh is not necessaryly bash, so explicitly use /bin/bash
 	sed -e 's#/bin/sh#/bin/bash#' -i examples/weatherng.sh
+
+	sed -i weatherng.c -e "s:RegisterI18n:n://RegisterI18n:"
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	insinto /usr/share/vdr/weatherng/images
 	doins "${S}"/images/*.png
@@ -58,7 +59,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	echo
 	elog "To display the weather for your location"

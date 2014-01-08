@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15315 2014/01/08 18:52:28 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15316 2014/01/08 19:24:03 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,7 +32,11 @@
 #--- END OF EXAMPLES ---
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
-# masked for removal, wrt bug 420859
+# masked for removal, wrt bug 414193
+media-plugins/vdr-softplay
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
+# masked for removal, wrt bug 420859 
 media-plugins/vdr-softdevice
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
