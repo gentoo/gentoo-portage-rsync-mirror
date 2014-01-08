@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/starpu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/ChangeLog,v 1.8 2013/03/02 20:04:56 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/starpu/ChangeLog,v 1.9 2014/01/07 23:03:34 bicatali Exp $
+
+*starpu-1.1.0 (07 Jan 2014)
+
+  07 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +starpu-1.1.0.ebuild,
+  -starpu-1.0.4.ebuild:
+  Version bump. Add opengl flag, documentation is now built, tests are run with
+  -j1 to avoid oversuscribing
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> starpu-1.0.4.ebuild,
   starpu-1.0.5.ebuild:
