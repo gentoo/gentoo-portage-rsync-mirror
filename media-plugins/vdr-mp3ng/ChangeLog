@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-mp3ng
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/ChangeLog,v 1.18 2014/01/08 14:40:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/ChangeLog,v 1.19 2014/01/08 18:29:40 hd_brummy Exp $
+
+  08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-mp3ng-0.0.1_pre4.ebuild:
+  cleanup old, depended on vdr-plugin.eclass
 
   08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-mp3ng-0.0.1_pre5.ebuild:
