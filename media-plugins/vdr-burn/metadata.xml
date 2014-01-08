@@ -8,8 +8,6 @@
     </maintainer>
     <longdescription>VDR plugin to burn DVD's and DVD file structures</longdescription>
 	<use>
-		<flag name='projectx'>Enables support for
-			<pkg>media-video/projectx</pkg></flag>
 		<flag name='dvdarchive'>DMH DVD - Archive</flag>
 	</use>
 </pkgmetadata>

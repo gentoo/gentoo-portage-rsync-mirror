@@ -1,6 +1,18 @@
 # ChangeLog for media-plugins/vdr-burn
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.59 2013/04/01 19:20:13 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.60 2014/01/08 12:07:25 hd_brummy Exp $
+
+  08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-burn-0.1.0_pre21-r6.ebuild, -files/0.1.0_pre21/i18n.diff,
+  -files/0.1.0_pre21/vdr-burn-0.1.0_pre21-gcc43.patch,
+  -files/0.1.0_pre21/menuburn.diff,
+  -files/0.1.0_pre21/vdr-burn-0.1.0_pre21-gentoo.diff,
+  -files/0.1.0_pre21/menuitems.diff,
+  -files/0.1.0_pre21/vdr-burn-0.1.0_pre21-makefile.diff,
+  -files/0.1.0_pre21/requantfactor.diff,
+  -files/0.1.0_pre21/vdr-burn-0.1.0_pre21_setdefaults-V2.diff,
+  -files/0.1.0_pre21/charset-vdr-1.5.diff, metadata.xml:
+  clean up
 
   01 Apr 2013; Joerg Bornkessel <hd_brummy@gentoo.org>
   files/0.1.0_pre21/vdr-burn-0.1.0_pre21-gentoo.diff,

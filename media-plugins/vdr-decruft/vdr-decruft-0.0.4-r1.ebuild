@@ -1,11 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/vdr-decruft-0.0.4-r1.ebuild,v 1.3 2011/01/28 18:49:56 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-decruft/vdr-decruft-0.0.4-r1.ebuild,v 1.4 2014/01/08 12:20:56 hd_brummy Exp $
 
-EAPI="3"
+EAPI=5
 
 IUSE=""
-inherit vdr-plugin eutils
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: Clean unwanted entries from channels.conf"
 HOMEPAGE="http://www.rst38.org.uk/vdr/decruft/"
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 PATCHES=("${FILESDIR}/${P}-avoid-vdr-patch.diff")
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 	insinto /etc/vdr/plugins
 	doins examples/decruft.conf
 }

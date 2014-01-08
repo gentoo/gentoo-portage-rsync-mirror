@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/libpcre sys-libs/libunwind sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Ignominous Profiler for analysing application memory and performance characteristics
+EAPI=5
+HOMEPAGE=http://igprof.org
+IUSE=debug
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/libpcre sys-libs/libunwind
+SLOT=0
+SRC_URI=http://github.com/ktf/igprof/archive/v5.9.11.tar.gz -> igprof-5.9.11.tar.gz
+_eclasses_=cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=4ca78ba30e737ec032585eba6a41f81f

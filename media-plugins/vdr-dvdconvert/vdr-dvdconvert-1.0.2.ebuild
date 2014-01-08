@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/vdr-dvdconvert-1.0.2.ebuild,v 1.4 2011/01/28 19:04:29 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dvdconvert/vdr-dvdconvert-1.0.2.ebuild,v 1.5 2014/01/08 12:23:41 hd_brummy Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit vdr-plugin eutils
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: for exec dvd2vdr & dvd2dvd scripts"
 HOMEPAGE="http://home.lausitz.net/lini/vdr/"
@@ -31,7 +31,7 @@ PATCHES=( "${FILESDIR}/${P}-gentoo.diff"
 		"${FILESDIR}/${P}-vobcopy-perm.diff" )
 
 pkg_setup() {
-	vdr-plugin_pkg_setup
+	vdr-plugin-2_pkg_setup
 
 	if has_version "<=media-video/dvdconvert-1.0.0" ; then
 		echo
@@ -43,7 +43,7 @@ pkg_setup() {
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	insinto /usr/share/vdr/dvdconvert
 	doins "${S}"/scripts/dvdconvert.{conf,conf.save}
