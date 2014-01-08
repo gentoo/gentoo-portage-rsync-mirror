@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-lcdproc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcdproc/ChangeLog,v 1.5 2012/05/10 15:29:02 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcdproc/ChangeLog,v 1.6 2014/01/08 13:15:46 hd_brummy Exp $
+
+  08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-lcdproc-0.0.10.3.ebuild, -vdr-lcdproc-0.0.10.4.ebuild,
+  -vdr-lcdproc-0.0.10.6.ebuild:
+  cleanup
 
 *vdr-lcdproc-0.0.10.9 (10 May 2012)
 

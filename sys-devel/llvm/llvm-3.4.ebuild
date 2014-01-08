@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.ebuild,v 1.1 2014/01/06 21:06:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.ebuild,v 1.2 2014/01/08 13:31:22 voyageur Exp $
 
 EAPI=5
 
@@ -154,6 +154,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix_varargs.patch
+
 	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-3.4-gentoo-install.patch
 	use clang && epatch "${FILESDIR}"/clang-3.4-gentoo-install.patch
