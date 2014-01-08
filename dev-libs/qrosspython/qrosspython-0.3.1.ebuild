@@ -1,20 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosspython/qrosspython-9999.ebuild,v 1.2 2014/01/08 13:36:06 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosspython/qrosspython-0.3.1.ebuild,v 1.1 2014/01/08 13:36:06 maksbotan Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
-EGIT_REPO_URI="git://github.com/0xd34df00d/Qross.git"
 
-inherit git-2 python-single-r1 cmake-utils
+inherit python-single-r1 cmake-utils
 
 DESCRIPTION="Python scripting backend for Qross."
 HOMEPAGE="http://github.com/0xd34df00d/Qross"
+SRC_URI="https://github.com/0xd34df00d/Qross/archive/${PV}.tar.gz -> qrosscore-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="

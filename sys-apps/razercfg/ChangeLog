@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/razercfg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.18 2014/01/03 19:14:35 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.19 2014/01/08 13:55:02 joker Exp $
+
+*razercfg-0.22-r1 (08 Jan 2014)
+
+  08 Jan 2014; Christian Birchinger <joker@gentoo.org>
+  +razercfg-0.22-r1.ebuild:
+  Force Python 2.x because the included scripts don't support Python 3.x
 
 *razercfg-0.22 (03 Jan 2014)
 
