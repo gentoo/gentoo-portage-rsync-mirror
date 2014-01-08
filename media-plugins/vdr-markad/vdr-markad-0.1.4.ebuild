@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.1.4.ebuild,v 1.2 2013/06/17 19:57:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-markad/vdr-markad-0.1.4.ebuild,v 1.3 2014/01/08 02:32:04 hd_brummy Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit vdr-plugin-2
 
@@ -12,7 +12,7 @@ DESCRIPTION="VDR Plugin: marks advertisements in VDR recordings"
 HOMEPAGE="http://projects.vdr-developer.org/projects/plg-markad/"
 SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
