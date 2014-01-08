@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-Validate
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.45 2011/03/21 08:37:40 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/ChangeLog,v 1.46 2014/01/08 16:55:43 mabi Exp $
+
+*PEAR-Validate-0.8.5 (08 Jan 2014)
+
+  08 Jan 2014; Matti Bickel <mabi@gentoo.org> +PEAR-Validate-0.8.5.ebuild,
+  -PEAR-Validate-0.8.3.ebuild:
+  version bump, cleanup
 
 *PEAR-Validate-0.8.4 (21 Mar 2011)
 
@@ -176,4 +182,3 @@
   21 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Validate-0.5.0.ebuild:
   Initial ebuild.
-

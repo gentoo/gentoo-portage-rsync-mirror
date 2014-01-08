@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/PEAR-Validate-0.8.3.ebuild,v 1.1 2010/01/05 06:00:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Validate/PEAR-Validate-0.8.5.ebuild,v 1.1 2014/01/08 16:55:43 mabi Exp $
+
+EAPI=5
 
 inherit php-pear-r1
 
@@ -12,4 +14,4 @@ SLOT="0"
 IUSE=""
 
 DEPEND=""
-RDEPEND=">=dev-php/PEAR-Date-1.4.3-r1"
+RDEPEND=""
