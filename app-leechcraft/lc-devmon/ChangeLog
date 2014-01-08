@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-devmon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-devmon/ChangeLog,v 1.1 2013/08/18 18:32:02 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-devmon/ChangeLog,v 1.2 2014/01/08 09:45:40 maksbotan Exp $
+
+*lc-devmon-0.6.60 (08 Jan 2014)
+
+  08 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-devmon-0.6.60.ebuild:
+  Bump to LeecChraft-0.6.60 release, thanks to 0xd34df00d.
 
 *lc-devmon-9999 (18 Aug 2013)
 

@@ -1,10 +1,15 @@
 # ChangeLog for app-leechcraft/lc-mellonetray
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-mellonetray/ChangeLog,v 1.1 2013/05/24 15:22:50 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-mellonetray/ChangeLog,v 1.2 2014/01/08 09:51:21 maksbotan Exp $
+
+*lc-mellonetray-0.6.60 (08 Jan 2014)
+
+  08 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +lc-mellonetray-0.6.60.ebuild:
+  Bump to LeecChraft-0.6.60 release, thanks to 0xd34df00d.
 
 *lc-mellonetray-9999 (24 May 2013)
 
   24 May 2013; Sergey Popov <pinkbyte@gentoo.org> +lc-mellonetray-9999.ebuild,
   +metadata.xml:
   Initial commit, thanks to 0xd34df00d
-

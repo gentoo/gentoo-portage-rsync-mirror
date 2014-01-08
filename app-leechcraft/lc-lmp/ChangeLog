@@ -1,6 +1,11 @@
 # ChangeLog for app-leechcraft/lc-lmp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.9 2013/09/24 16:54:44 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-lmp/ChangeLog,v 1.10 2014/01/08 09:51:07 maksbotan Exp $
+
+*lc-lmp-0.6.60 (08 Jan 2014)
+
+  08 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-lmp-0.6.60.ebuild:
+  Bump to LeecChraft-0.6.60 release, thanks to 0xd34df00d.
 
   24 Sep 2013; Maxim Koltsov <maksbotan@gentoo.org> lc-lmp-9999.ebuild,
   metadata.xml:

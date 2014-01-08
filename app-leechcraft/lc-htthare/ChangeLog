@@ -1,10 +1,14 @@
 # ChangeLog for app-leechcraft/lc-htthare
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-htthare/ChangeLog,v 1.1 2013/12/03 17:25:45 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-htthare/ChangeLog,v 1.2 2014/01/08 09:47:48 maksbotan Exp $
+
+*lc-htthare-0.6.60 (08 Jan 2014)
+
+  08 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-htthare-0.6.60.ebuild:
+  Bump to LeecChraft-0.6.60 release, thanks to 0xd34df00d.
 
 *lc-htthare-9999 (03 Dec 2013)
 
   03 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> +lc-htthare-9999.ebuild,
   +metadata.xml:
   Initial commit, thanks to 0xd34df00d
-

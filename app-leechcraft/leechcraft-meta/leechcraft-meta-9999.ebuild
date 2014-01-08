@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.8 2013/12/03 18:37:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/leechcraft-meta/leechcraft-meta-9999.ebuild,v 1.9 2014/01/08 09:58:21 maksbotan Exp $
 
 EAPI="5"
 
@@ -33,6 +33,7 @@ RDEPEND="
 		~app-leechcraft/lc-historyholder-${PV}
 		~virtual/leechcraft-notifier-${PV}
 		~app-leechcraft/lc-knowhow-${PV}
+		~app-leechcraft/lc-imgaste-${PV}
 		~app-leechcraft/lc-lackman-${PV}
 		~app-leechcraft/lc-launchy-${PV}
 		~app-leechcraft/lc-lemon-${PV}
@@ -43,6 +44,7 @@ RDEPEND="
 		~app-leechcraft/lc-qrosp-${PV}
 		~app-leechcraft/lc-pintab-${PV}
 		~app-leechcraft/lc-secman-${PV}
+		~app-leechcraft/lc-scroblibre-${PV}
 		~app-leechcraft/lc-summary-${PV}
 		~app-leechcraft/lc-tabslist-${PV}
 		~app-leechcraft/lc-tabsessmanager-${PV}
@@ -63,11 +65,13 @@ RDEPEND="
 		~app-leechcraft/lc-xtazy-${PV}
 		~app-leechcraft/lc-htthare-${PV}
 		de? (
+			~app-leechcraft/lc-devmon-${PV}
 			~app-leechcraft/lc-fenet-${PV}
 			~app-leechcraft/lc-kbswitch-${PV}
 			~app-leechcraft/lc-krigstask-${PV}
 			~app-leechcraft/lc-laughty-${PV}
 			~app-leechcraft/lc-mellonetray-${PV}
+			~app-leechcraft/lc-sysnotify-${PV}
 		)
 		"
 DEPEND=""

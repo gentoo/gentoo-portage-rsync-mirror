@@ -1,6 +1,12 @@
 # ChangeLog for app-leechcraft/lc-touchstreams
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-touchstreams/ChangeLog,v 1.8 2013/10/02 08:28:53 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-touchstreams/ChangeLog,v 1.9 2014/01/08 09:56:39 maksbotan Exp $
+
+*lc-touchstreams-0.6.60 (08 Jan 2014)
+
+  08 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +lc-touchstreams-0.6.60.ebuild:
+  Bump to LeecChraft-0.6.60 release, thanks to 0xd34df00d.
 
   02 Oct 2013; Maxim Koltsov <maksbotan@gentoo.org> lc-touchstreams-9999.ebuild:
   Add dev-libs/qjson dependency to lc-touchstreams-9999, thanks to 0d34df00d

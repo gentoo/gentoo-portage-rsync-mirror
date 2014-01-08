@@ -1,6 +1,12 @@
 # ChangeLog for app-leechcraft/lc-dbusmanager
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-dbusmanager/ChangeLog,v 1.7 2013/09/24 15:42:54 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-dbusmanager/ChangeLog,v 1.8 2014/01/08 09:45:11 maksbotan Exp $
+
+*lc-dbusmanager-0.6.60 (08 Jan 2014)
+
+  08 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org>
+  +lc-dbusmanager-0.6.60.ebuild:
+  Bump to LeecChraft-0.6.60 release, thanks to 0xd34df00d.
 
 *lc-dbusmanager-0.6.0 (24 Sep 2013)
 
