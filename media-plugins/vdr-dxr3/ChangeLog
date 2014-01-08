@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-dxr3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.26 2013/03/17 15:33:49 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.28 2014/01/08 12:36:14 hd_brummy Exp $
+
+  08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -files/vdr-dxr3-0.2.8-ffmpeg-includes.diff:
+  cleanup
+
+  08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-dxr3-0.2.8.ebuild,
+  -vdr-dxr3-0.2.10.ebuild, -vdr-dxr3-0.2.12.ebuild:
+  cleanup
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
