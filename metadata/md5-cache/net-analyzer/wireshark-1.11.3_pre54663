@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare
+DEPEND=>=dev-libs/glib-2.14:2 netlink? ( dev-libs/libnl ) adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) ) crypt? ( dev-libs/libgcrypt:0 ) caps? ( sys-libs/libcap ) geoip? ( dev-libs/geoip ) gtk2? ( x11-libs/gdk-pixbuf x11-libs/pango x11-misc/xdg-utils >=x11-libs/gtk+-2.4.0:2 ) gtk3? ( x11-libs/gdk-pixbuf x11-libs/pango x11-misc/xdg-utils x11-libs/gtk+:3 ) kerberos? ( virtual/krb5 ) libadns? ( net-libs/adns ) lua? ( >=dev-lang/lua-5.1 ) pcap? ( net-libs/libpcap[-netlink] ) portaudio? ( media-libs/portaudio ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 x11-misc/xdg-utils ) selinux? ( sec-policy/selinux-wireshark ) smi? ( net-libs/libsmi ) ssl? ( net-libs/gnutls ) zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 ) doc? ( app-doc/doxygen app-text/asciidoc dev-libs/libxml2 dev-libs/libxslt doc-pdf? ( dev-java/fop ) www-client/lynx ) >=virtual/perl-Pod-Simple-3.170.0 sys-devel/bison sys-devel/flex virtual/perl-Getopt-Long virtual/perl-Time-Local virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool filecaps? ( sys-libs/libcap )
+DESCRIPTION=A network protocol analyzer formerly known as ethereal
+EAPI=5
+HOMEPAGE=http://www.wireshark.org/
+IUSE=adns +caps crypt doc doc-pdf geoip gtk2 +gtk3 ipv6 kerberos libadns lua +netlink +pcap portaudio +qt4 selinux smi ssl zlib +filecaps
+LICENSE=GPL-2
+RDEPEND=>=dev-libs/glib-2.14:2 netlink? ( dev-libs/libnl ) adns? ( !libadns? ( >=net-dns/c-ares-1.5 ) ) crypt? ( dev-libs/libgcrypt:0 ) caps? ( sys-libs/libcap ) geoip? ( dev-libs/geoip ) gtk2? ( x11-libs/gdk-pixbuf x11-libs/pango x11-misc/xdg-utils >=x11-libs/gtk+-2.4.0:2 ) gtk3? ( x11-libs/gdk-pixbuf x11-libs/pango x11-misc/xdg-utils x11-libs/gtk+:3 ) kerberos? ( virtual/krb5 ) libadns? ( net-libs/adns ) lua? ( >=dev-lang/lua-5.1 ) pcap? ( net-libs/libpcap[-netlink] ) portaudio? ( media-libs/portaudio ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 x11-misc/xdg-utils ) selinux? ( sec-policy/selinux-wireshark ) smi? ( net-libs/libsmi ) ssl? ( net-libs/gnutls ) zlib? ( sys-libs/zlib !=sys-libs/zlib-1.2.4 )
+REQUIRED_USE=?? ( gtk2 gtk3 ) ssl? ( crypt )
+SLOT=0/1.11.3_pre54663
+SRC_URI=http://www.wireshark.org/download/automated/src/wireshark-1.11.3-SVN-54663.tar.bz2
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=5c231741698f6a808b9ebd11cf834cd2

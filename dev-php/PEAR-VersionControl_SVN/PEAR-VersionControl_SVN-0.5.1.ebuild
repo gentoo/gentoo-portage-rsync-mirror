@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/PEAR-VersionControl_SVN-0.3.3-r1.ebuild,v 1.2 2010/03/27 23:30:35 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/PEAR-VersionControl_SVN-0.5.1.ebuild,v 1.1 2014/01/08 17:08:48 mabi Exp $
+
+EAPI=5
 
 inherit php-pear-r1
 
@@ -9,10 +11,9 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
-RDEPEND=">=dev-php/PEAR-XML_Parser-1.2.7"
+RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	einfo "Patching SVN.php to use proper paths by default"
 	sed -i -e 's:/usr/local:/usr:g' SVN.php || die "sed failed"
 }

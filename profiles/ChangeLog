@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8510 2014/01/08 16:54:01 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8511 2014/01/08 17:15:25 mabi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jan 2014; Matti Bickel <mabi@gentoo.org> package.mask:
+  Mask dev-php/PHPUnit_MockObject, dev-php/PHPUnit_Selenium for removal
 
   08 Jan 2014; Matti Bickel <mabi@gentoo.org> package.mask:
   Mask dev-php/PEAR-Tree for removal

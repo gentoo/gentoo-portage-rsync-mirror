@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/PEAR-VersionControl_SVN
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.32 2011/03/19 16:35:57 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-VersionControl_SVN/ChangeLog,v 1.33 2014/01/08 17:08:48 mabi Exp $
+
+*PEAR-VersionControl_SVN-0.5.1 (08 Jan 2014)
+
+  08 Jan 2014; Matti Bickel <mabi@gentoo.org>
+  +PEAR-VersionControl_SVN-0.5.1.ebuild,
+  -PEAR-VersionControl_SVN-0.3.3-r1.ebuild:
+  version bump (removes XML_Parser dep), add a info explaining "bad md5sum"
+  warning, cleanup
 
 *PEAR-VersionControl_SVN-0.3.4 (19 Mar 2011)
 
@@ -148,4 +156,3 @@
   04 Jul 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-VersionControl_SVN-0.3.0_alpha1.ebuild:
   Initial ebuild, closes bug 92405.
-
