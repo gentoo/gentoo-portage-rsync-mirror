@@ -1,13 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8514 2014/01/08 19:24:03 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8515 2014/01/08 19:58:13 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
-  media-plugins/vdr-softdevice masked for removal
+  media-plugins/vdr-premiereepg removal ~ 08/Feb/2014
+
+  08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-softplay masked for removal
 
   08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-plugins/vdr-softdevice, masked for removal, #420859

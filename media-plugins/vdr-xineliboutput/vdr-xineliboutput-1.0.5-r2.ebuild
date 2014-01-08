@@ -1,18 +1,17 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4_p20091118.ebuild,v 1.5 2012/04/13 19:31:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.5-r2.ebuild,v 1.1 2014/01/08 19:42:13 hd_brummy Exp $
 
-EAPI=2
-GENTOO_VDR_CONDITIONAL=yes
+EAPI=5
 
-inherit vdr-plugin eutils multilib versionator
+inherit vdr-plugin-2 multilib versionator
 
 MY_PV=${PV#*_p}
 MY_P=${PN}-cvs-${MY_PV}
 
 DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
 HOMEPAGE="http://sourceforge.net/projects/xineliboutput/"
-SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN#vdr-}/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -22,7 +21,10 @@ IUSE="+vdr +xine fbcon X libextractor xinerama"
 # both vdr plugin or vdr-sxfe can use X11
 # still depends need some cleanup
 COMMON_DEPEND="
-	vdr? ( >=media-video/vdr-1.4.0 )
+	vdr? (
+		>=media-video/vdr-1.4.0
+		!>=media-video/vdr-1.7
+	)
 
 	xine? ( >=media-libs/xine-lib-1.1.1 )
 
@@ -49,12 +51,14 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}"
 
-S=${WORKDIR}/${MY_P#vdr-}
+#S=${WORKDIR}/${MY_P#vdr-}
+
+GENTOO_VDR_CONDITIONAL=yes
 
 VDR_CONFD_FILE=${FILESDIR}/confd-1.0.0_pre6
 
 pkg_setup() {
-	vdr-plugin_pkg_setup
+	vdr-plugin-2_pkg_setup
 
 	if ! use vdr && ! use xine; then
 		eerror "Compiling ${PN} with USE='-vdr -xine' is not possible."
@@ -80,10 +84,9 @@ use_onoff_xine() {
 }
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
-#	epatch "${FILESDIR}/${PN}-1.0.4_p20090810-compile-fix.diff"
-
+	epatch "${FILESDIR}/${P}-ldflags.patch"
 	if use xine; then
 		XINE_PLUGIN_DIR=$(xine-config --plugindir)
 		if [[ ${XINE_PLUGIN_DIR} = "" ]]; then
@@ -119,12 +122,10 @@ src_prepare() {
 	mkdir -p "${WORKDIR}/lib"
 }
 
-src_configure() { :; }
-
 src_install() {
 	if use vdr; then
 		# install vdr plugin
-		vdr-plugin_src_install
+		vdr-plugin-2_src_install
 
 		# version number that the sources contain
 		local SO_VERSION="$(grep 'static const char \*VERSION *=' xineliboutput.c |\
