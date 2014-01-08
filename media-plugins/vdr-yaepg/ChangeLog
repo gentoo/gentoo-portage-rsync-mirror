@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-yaepg
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/ChangeLog,v 1.10 2012/09/24 17:24:14 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-yaepg/ChangeLog,v 1.11 2014/01/08 01:33:09 hd_brummy Exp $
+
+  08 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-yaepg-0.0.2.1.ebuild, -vdr-yaepg-0.0.2.1-r1.ebuild,
+  -files/vdr-yaepg-0.0.2.1-uint64.diff,
+  -files/vdr-yaepg-0.0.2.1-vdr-1.5.3.diff, vdr-yaepg-0.0.10.ebuild:
+  clean up; stable amd64 x86
 
 *vdr-yaepg-0.0.10 (24 Sep 2012)
 
