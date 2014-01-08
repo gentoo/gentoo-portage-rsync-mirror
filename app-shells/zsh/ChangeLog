@@ -1,6 +1,12 @@
 # ChangeLog for app-shells/zsh
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.231 2013/12/23 15:43:53 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.232 2014/01/08 02:10:24 radhermit Exp $
+
+*zsh-5.0.5 (08 Jan 2014)
+
+  08 Jan 2014; Tim Harder <radhermit@gentoo.org> +zsh-5.0.5.ebuild:
+  Version bump (bug #497392). Drop explicit term-lib settings (fixes bug
+  #457570).
 
   23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #65652
