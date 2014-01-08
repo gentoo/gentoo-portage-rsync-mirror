@@ -5,8 +5,8 @@
      apr_status_t status;
  
 +#if defined(__hpux) && defined(__hppa)
-+    libname = apr_psprintf(pool, "libsvn_ra_%s-%d.sl.0",
-+			   ra_name, SVN_VER_MAJOR);
++    libname = apr_psprintf(pool, "libsvn_ra_%s-%d.sl.%d",
++			   ra_name, SVN_VER_MAJOR, SVN_SOVERSION);
 +#else
      libname = apr_psprintf(pool, "libsvn_ra_%s-%d.so.%d",
                             ra_name, SVN_VER_MAJOR, SVN_SOVERSION);

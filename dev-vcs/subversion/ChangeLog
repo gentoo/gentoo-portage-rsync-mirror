@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.158 2014/01/08 09:42:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.159 2014/01/08 10:09:27 polynomial-c Exp $
+
+  08 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  files/subversion-1.8.0-hpux-dso.patch:
+  Really fix hpux-dso patch this time. Thanks to Arfrever.
 
   08 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> subversion-1.8.5.ebuild:
   Really use pkg-config for finding serf.
