@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prover9/prover9-2009.11a.ebuild,v 1.3 2014/01/06 14:02:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/prover9/prover9-2009.11a.ebuild,v 1.4 2014/01/08 15:59:39 jlec Exp $
 
 EAPI=5
 
-inherit eutils versionator
+inherit eutils toolchain-funcs versionator
 
 MY_PN="LADR"
 typeset -u MY_PV
@@ -15,7 +15,7 @@ DESCRIPTION="Automated theorem prover for first-order and equational logic"
 HOMEPAGE="http://www.cs.unm.edu/~mccune/mace4/"
 SRC_URI="
 	http://www.cs.unm.edu/~mccune/mace4/download/${MY_P}.tar.gz
-	http://dev.gentoo.org/~gienah/2big4tree/sci-mathematics/prover9/${MY_PN}-2009-11A-makefile.patch.bz2"
+	http://dev.gentoo.org/~jlec/distfiles/${MY_PN}-2009-11A-makefile.patch.xz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -23,8 +23,8 @@ LICENSE="GPL-2"
 IUSE="examples"
 
 PATCHES=(
-	"${DISTDIR}/${MY_PN}-2009-11A-makefile.patch.bz2"
-	"${FILESDIR}/${MY_PN}-2009-11A-manpages.patch"
+	"${WORKDIR}"/${MY_PN}-2009-11A-makefile.patch
+	"${FILESDIR}"/${MY_PN}-2009-11A-manpages.patch
 	)
 
 S="${WORKDIR}/${MY_P}/"
@@ -32,6 +32,13 @@ S="${WORKDIR}/${MY_P}/"
 src_prepare() {
 	MAKEOPTS+=" -j1"
 	epatch ${PATCHES[@]}
+	sed \
+		-e "/^CC =/s:gcc:$(tc-getCC):g" \
+		-i */Makefile || die
+}
+
+src_compile() {
+	emake all
 }
 
 src_install () {

@@ -1,4 +1,4 @@
-DEFINED_PHASES=install prepare
+DEFINED_PHASES=compile install prepare
 DESCRIPTION=Automated theorem prover for first-order and equational logic
 EAPI=5
 HOMEPAGE=http://www.cs.unm.edu/~mccune/mace4/
@@ -6,6 +6,6 @@ IUSE=examples
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
-SRC_URI=http://www.cs.unm.edu/~mccune/mace4/download/LADR-2009-11A.tar.gz http://dev.gentoo.org/~gienah/2big4tree/sci-mathematics/prover9/LADR-2009-11A-makefile.patch.bz2
+SRC_URI=http://www.cs.unm.edu/~mccune/mace4/download/LADR-2009-11A.tar.gz http://dev.gentoo.org/~jlec/distfiles/LADR-2009-11A-makefile.patch.xz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=c88427c7230d731c873ccfd452b929ff
+_md5_=44d1c1e7768c1173ec86ac7fb0385cbe

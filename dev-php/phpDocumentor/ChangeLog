@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/phpDocumentor
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpDocumentor/ChangeLog,v 1.1 2014/01/08 15:42:38 mabi Exp $
+
+*phpDocumentor-2.2.0 (08 Jan 2014)
+
+  08 Jan 2014; Matti Bickel <mabi@gentoo.org> +files/channel.xml, +metadata.xml,
+  +phpDocumentor-2.2.0.ebuild:
+  initial version, intended as an update to dev-php/PEAR-PhpDocumentor; note the
+  use of bundled libraries we do not provide in-tree
