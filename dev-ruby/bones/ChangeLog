@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bones
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.21 2013/12/14 14:03:26 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bones/ChangeLog,v 1.22 2014/01/08 05:00:43 mrueg Exp $
+
+  08 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -bones-3.8.0.ebuild:
+  Cleanup old.
 
 *bones-3.8.1 (14 Dec 2013)
 

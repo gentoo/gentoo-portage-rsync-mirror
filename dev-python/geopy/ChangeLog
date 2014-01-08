@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/geopy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/ChangeLog,v 1.4 2013/11/26 06:08:05 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geopy/ChangeLog,v 1.5 2014/01/08 04:56:04 patrick Exp $
+
+*geopy-0.97 (08 Jan 2014)
+
+  08 Jan 2014; Patrick Lauer <patrick@gentoo.org> +geopy-0.97.ebuild:
+  Bump
 
 *geopy-0.96.2 (26 Nov 2013)
 
