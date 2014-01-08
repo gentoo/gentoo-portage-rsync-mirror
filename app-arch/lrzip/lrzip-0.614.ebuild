@@ -1,8 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/lrzip-0.614.ebuild,v 1.12 2013/12/24 16:55:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/lrzip-0.614.ebuild,v 1.13 2014/01/08 14:36:26 blueness Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="Long Range ZIP or Lzma RZIP optimized for compressing large files"
 HOMEPAGE="http://ck.kolivas.org/apps/lrzip/README"
@@ -19,6 +21,10 @@ RDEPEND="dev-libs/lzo
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	virtual/perl-PodParser"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-missing-stdarg_h.patch
+}
 
 src_configure() {
 	econf --docdir="/usr/share/doc/${P}"

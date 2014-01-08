@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lrzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.32 2014/01/03 03:26:08 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.33 2014/01/08 14:36:26 blueness Exp $
+
+  08 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/lrzip-missing-stdarg_h.patch, lrzip-0.614.ebuild, lrzip-0.616.ebuild:
+  Add missing stdarg.h header, bug #492976
 
   03 Jan 2014; Matt Turner <mattst88@gentoo.org> lrzip-0.616.ebuild:
   Added ~alpha, bug 468854.

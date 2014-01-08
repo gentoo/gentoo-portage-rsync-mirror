@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.10.2.ebuild,v 1.3 2013/01/09 21:48:55 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.10.2.ebuild,v 1.4 2014/01/08 14:57:18 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit vdr-plugin-2
 
@@ -27,6 +27,16 @@ PATCHES=( "${FILESDIR}/${PV}/01_gentoo.diff" )
 
 VDR_RCADDON_FILE=${FILESDIR}/rc-addon-0.9.15.sh
 VDR_CONFD_FILE=${FILESDIR}/confd-0.9.15.sh
+
+src_prepare() {
+	vdr-plugin-2_src_prepare
+
+	if has_version ">=media-video/vdr-2.1.2"; then
+		sed -e "s#VideoDirectory#cVideoDirectory::Name\(\)#" \
+		-i decoder.c \
+		-i player-mplayer.c
+	fi
+}
 
 src_install() {
 	vdr-plugin-2_src_install
