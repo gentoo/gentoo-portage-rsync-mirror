@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/cntlm-0.93_beta5.ebuild,v 1.1 2012/10/02 13:47:12 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/cntlm-0.93_beta5.ebuild,v 1.2 2014/01/08 06:23:51 vapier Exp $
 
 EAPI=2
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="Cntlm is an NTLM/NTLMv2 authenticating HTTP proxy"
 HOMEPAGE="http://cntlm.sourceforge.net/"

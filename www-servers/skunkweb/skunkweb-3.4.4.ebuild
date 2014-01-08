@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.4.ebuild,v 1.2 2010/04/22 18:42:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/skunkweb-3.4.4.ebuild,v 1.3 2014/01/08 06:09:02 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit apache-module eutils multilib python
+inherit apache-module eutils multilib python user
 
 DESCRIPTION="robust Python web application server"
 HOMEPAGE="http://skunkweb.sourceforge.net/"

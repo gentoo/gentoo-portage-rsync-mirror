@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/saku
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/saku/ChangeLog,v 1.5 2013/01/12 04:56:54 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/saku/ChangeLog,v 1.6 2014/01/08 06:25:39 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> saku-3.10.1-r1.ebuild,
+  saku-3.11.0-r1.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *saku-3.11.0-r1 (12 Jan 2013)
 *saku-3.10.1-r1 (12 Jan 2013)

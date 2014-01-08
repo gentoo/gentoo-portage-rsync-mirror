@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-1.1.0.ebuild,v 1.2 2013/12/13 22:09:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-1.1.0.ebuild,v 1.3 2014/01/08 06:15:29 vapier Exp $
 
 EAPI=5
 
-inherit readme.gentoo cmake-utils gnome2-utils udev
+inherit readme.gentoo cmake-utils gnome2-utils udev user
 
 DESCRIPTION="Utility for advanced configuration of Roccat devices"
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r4.ebuild,v 1.5 2011/01/10 10:48:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/oops-1.5.24_pre20050503-r4.ebuild,v 1.6 2014/01/08 06:24:04 vapier Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic toolchain-funcs autotools
+inherit eutils flag-o-matic toolchain-funcs autotools user
 
 MY_P="${PN}-1.5.23"
 

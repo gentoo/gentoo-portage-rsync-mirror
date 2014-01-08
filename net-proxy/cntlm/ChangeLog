@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/cntlm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/ChangeLog,v 1.4 2012/10/02 13:47:12 haubi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/ChangeLog,v 1.5 2014/01/08 06:23:51 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> cntlm-0.35.1-r1.ebuild,
+  cntlm-0.35.1-r2.ebuild, cntlm-0.92.3.ebuild, cntlm-0.93_beta5.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *cntlm-0.93_beta5 (02 Oct 2012)
 
@@ -25,4 +29,3 @@
   24 Feb 2010; Markus Duft <mduft@gentoo.org> +cntlm-0.35.1-r1.ebuild,
   +files/cntlm.confd, +files/cntlm.initd, +metadata.xml:
   initially added cntlm to tree
-

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.1_alpha-r2.ebuild,v 1.3 2013/12/04 14:09:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.5.1_alpha-r2.ebuild,v 1.4 2014/01/08 06:31:16 vapier Exp $
 
 EAPI="5"
 
-inherit eutils flag-o-matic readme.gentoo systemd toolchain-funcs versionator
+inherit eutils flag-o-matic readme.gentoo systemd toolchain-funcs versionator user
 
 MY_PV="$(replace_version_separator 4 -)"
 MY_PF="${PN}-${MY_PV}"

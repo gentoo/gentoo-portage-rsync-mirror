@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.211 2014/01/05 09:37:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.212 2014/01/08 06:19:03 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ntp-4.2.4_p7-r1.ebuild,
+  ntp-4.2.6_p2-r1.ebuild, ntp-4.2.6_p3-r1.ebuild, ntp-4.2.6_p3.ebuild,
+  ntp-4.2.6_p4.ebuild, ntp-4.2.6_p5-r1.ebuild, ntp-4.2.6_p5.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ntp-4.2.6_p5-r10.ebuild:
   Stable for alpha, wrt bug #496776

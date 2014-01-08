@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.4-r1.ebuild,v 1.6 2013/11/30 16:28:06 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/bfilter/bfilter-1.1.4-r1.ebuild,v 1.7 2014/01/08 06:23:50 vapier Exp $
 
 EAPI=4
 
-inherit eutils autotools
+inherit eutils autotools user
 
 DESCRIPTION="An ad-filtering web proxy featuring an effective heuristic ad-detection algorithm"
 HOMEPAGE="http://bfilter.sourceforge.net/"

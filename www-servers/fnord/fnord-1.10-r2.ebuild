@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.6 2012/03/24 10:50:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/fnord-1.10-r2.ebuild,v 1.7 2014/01/08 06:08:32 vapier Exp $
 
 EAPI="3"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs user
 
 DESCRIPTION="Yet another small httpd."
 HOMEPAGE="http://www.fefe.de/fnord/"

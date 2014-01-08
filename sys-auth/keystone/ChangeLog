@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/keystone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.54 2014/01/03 13:11:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/ChangeLog,v 1.55 2014/01/08 06:14:45 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> keystone-2013.2.1.ebuild,
+  keystone-2013.2.9999.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   03 Jan 2014; Ian Delaney <idella4@gentoo.org> keystone-2013.2.1.ebuild,
   keystone-2013.2.9999.ebuild:

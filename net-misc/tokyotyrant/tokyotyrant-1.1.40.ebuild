@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/tokyotyrant-1.1.40.ebuild,v 1.1 2010/02/19 13:28:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/tokyotyrant-1.1.40.ebuild,v 1.2 2014/01/08 06:30:37 vapier Exp $
 
 EAPI=2
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="A network interface to Tokyo Cabinet"
 HOMEPAGE="http://1978th.net/tokyotyrant/"

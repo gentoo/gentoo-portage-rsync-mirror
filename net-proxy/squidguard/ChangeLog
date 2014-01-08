@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squidguard
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.45 2013/09/17 12:51:48 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.46 2014/01/08 06:24:19 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> squidguard-1.4-r4.ebuild,
+  squidguard-1.5_beta.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *squidguard-1.5_beta (17 Sep 2013)
 

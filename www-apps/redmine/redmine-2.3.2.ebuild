@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-2.3.2.ebuild,v 1.1 2013/09/02 14:13:43 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-2.3.2.ebuild,v 1.2 2014/01/08 06:12:53 vapier Exp $
 
 EAPI="4"
 USE_RUBY="ruby18 ruby19"
-inherit eutils depend.apache ruby-ng
+inherit eutils depend.apache ruby-ng user
 
 DESCRIPTION="Redmine is a flexible project management web application written using Ruby on Rails framework"
 HOMEPAGE="http://www.redmine.org/"

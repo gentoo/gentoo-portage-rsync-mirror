@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101-r1.ebuild,v 1.3 2012/07/15 17:59:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.101-r1.ebuild,v 1.4 2014/01/08 06:08:37 vapier Exp $
 
 EAPI=4
 PYTHON_DEPEND="admin? 2"
 PYTHON_USE_WITH="threads"
 
-inherit eutils multilib pam python versionator
+inherit eutils multilib pam python versionator user
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="http://www.cherokee-project.com/download/$(get_version_component_range 1-2)/${PV}/${P}.tar.gz"

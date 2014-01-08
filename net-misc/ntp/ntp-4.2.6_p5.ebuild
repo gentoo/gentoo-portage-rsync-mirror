@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5.ebuild,v 1.2 2012/09/28 00:30:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p5.ebuild,v 1.3 2014/01/08 06:19:03 vapier Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic user
 
 MY_P=${P/_p/p}
 DESCRIPTION="Network Time Protocol suite/programs"

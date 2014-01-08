@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.10 2013/09/20 01:15:34 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.11 2014/01/08 06:24:59 vapier Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic wxwidgets
+inherit eutils flag-o-matic wxwidgets user
 
 MY_P=${PN/m/M}-${PV}
 S="${WORKDIR}"/${MY_P}

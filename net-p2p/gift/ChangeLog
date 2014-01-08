@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gift
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.76 2012/10/22 10:13:51 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.77 2014/01/08 06:28:17 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> gift-0.11.8.1-r1.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   22 Oct 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.
@@ -183,4 +186,3 @@
 
   18 Nov 2003; Brandon Low <lostlogic@gentoo.org>; gift-cvs-0.11.1.ebuild:
   Initial import of a release giFT version
-

@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/moosefs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/ChangeLog,v 1.6 2013/06/07 10:38:45 ultrabug Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/ChangeLog,v 1.7 2014/01/08 06:01:36 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> moosefs-1.6.26-r1.ebuild,
+  moosefs-1.6.27.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *moosefs-1.6.27 (07 Jun 2013)
 *moosefs-1.6.26-r1 (07 Jun 2013)
@@ -33,4 +37,3 @@
   08 Jul 2011; Ultrabug <ultrabug@gentoo.org> -moosefs-1.6.20.ebuild,
   +moosefs-1.6.20-r1.ebuild, files/mfs.confd, files/mfs.initd:
   Enhanced init script, add an autorestore functionnality. Drop old.
-

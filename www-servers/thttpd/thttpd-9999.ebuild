@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-9999.ebuild,v 1.1 2013/06/01 14:21:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-9999.ebuild,v 1.2 2014/01/08 06:09:12 vapier Exp $
 
 EAPI="5"
 
-inherit autotools eutils flag-o-matic toolchain-funcs
+inherit autotools eutils flag-o-matic toolchain-funcs user
 
 if [[ ${PV} = 9999* ]]
 then

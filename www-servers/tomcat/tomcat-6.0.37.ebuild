@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.37.ebuild,v 1.5 2013/10/07 19:49:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.37.ebuild,v 1.6 2014/01/08 06:09:20 vapier Exp $
 
 EAPI=4
 
 JAVA_PKG_IUSE="source test"
 
-inherit eutils java-pkg-2 java-ant-2 prefix
+inherit eutils java-pkg-2 java-ant-2 prefix user
 
 MY_P="apache-${P}-src"
 

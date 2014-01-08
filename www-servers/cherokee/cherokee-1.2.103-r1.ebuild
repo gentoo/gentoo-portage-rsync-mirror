@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.103-r1.ebuild,v 1.2 2013/09/28 10:56:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.103-r1.ebuild,v 1.3 2014/01/08 06:08:37 vapier Exp $
 
 EAPI="5"
 PYTHON_DEPEND="admin? 2"
@@ -8,7 +8,7 @@ PYTHON_USE_WITH="threads"
 
 WANT_AUTOMAKE="1.11"
 
-inherit autotools eutils multilib pam python systemd
+inherit autotools eutils multilib pam python systemd user
 
 DESCRIPTION="An extremely fast and tiny web server."
 SRC_URI="https://github.com/cherokee/webserver/archive/v${PV}.zip -> ${P}.zip

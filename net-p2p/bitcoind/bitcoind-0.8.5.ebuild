@@ -1,12 +1,12 @@
-# Copyright 2010-2013 Gentoo Foundation
+# Copyright 2010-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.5.ebuild,v 1.5 2013/09/26 17:30:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/bitcoind-0.8.5.ebuild,v 1.6 2014/01/08 06:25:08 vapier Exp $
 
 EAPI="4"
 
 DB_VER="4.8"
 
-inherit bash-completion-r1 db-use eutils versionator systemd toolchain-funcs
+inherit bash-completion-r1 db-use eutils versionator systemd toolchain-funcs user
 
 MyPV="${PV/_/}"
 MyPN="bitcoin"

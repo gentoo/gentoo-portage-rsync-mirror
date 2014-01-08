@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vde
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.28 2013/03/29 10:58:20 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.29 2014/01/08 06:29:32 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> vde-2.2.2.ebuild,
+  vde-2.3.1.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   29 Mar 2013; Markos Chandras <hwoarang@gentoo.org> files/vde.init:
   Drop bashisms from init script. Thanks to Nico Baggus

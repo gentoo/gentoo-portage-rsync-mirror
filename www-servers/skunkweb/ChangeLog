@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/skunkweb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.23 2012/11/27 19:43:20 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/skunkweb/ChangeLog,v 1.24 2014/01/08 06:09:02 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> skunkweb-3.4.4.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   27 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop apache herd as discussed in http://www.gossamer-

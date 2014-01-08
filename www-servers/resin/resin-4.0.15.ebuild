@@ -1,12 +1,12 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.15.ebuild,v 1.1 2011/03/15 20:12:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-4.0.15.ebuild,v 1.2 2014/01/08 06:08:58 vapier Exp $
 
 EAPI="2"
 
 JAVA_PKG_IUSE="source"
 
-inherit java-pkg-2 java-ant-2 eutils flag-o-matic multilib autotools
+inherit java-pkg-2 java-ant-2 eutils flag-o-matic multilib autotools user
 
 DESCRIPTION="A fast Servlet and JSP engine."
 HOMEPAGE="http://www.caucho.com"

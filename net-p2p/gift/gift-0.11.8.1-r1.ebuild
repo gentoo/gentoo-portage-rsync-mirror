@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1-r1.ebuild,v 1.8 2007/05/24 19:47:06 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.8.1-r1.ebuild,v 1.9 2014/01/08 06:28:17 vapier Exp $
 
-inherit eutils libtool
+inherit eutils libtool user
 
 DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network daemon"
 HOMEPAGE="http://gift.sourceforge.net"

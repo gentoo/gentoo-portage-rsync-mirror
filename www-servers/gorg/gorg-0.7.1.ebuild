@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.7.1.ebuild,v 1.1 2013/12/25 19:51:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.7.1.ebuild,v 1.2 2014/01/08 06:08:42 vapier Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20"
 
-inherit ruby-ng eutils
+inherit ruby-ng eutils user
 
 DESCRIPTION="Back-end XSLT processor for an XML-based web site"
 HOMEPAGE="http://www.gentoo.org/proj/en/gdp/doc/gorg.xml"

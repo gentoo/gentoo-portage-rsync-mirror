@@ -1,4 +1,6 @@
 
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> bitflu-1.43.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   18 Sep 2012; Johannes Huber <johu@gentoo.org> bitflu-1.50.ebuild:
   Stable for x86, wrt bug #433345
@@ -84,4 +86,3 @@
   30 Jun 2011; Anthony G. Basile <blueness@gentoo.org> +bitflu-1.37.ebuild,
   +files/bitflu.config, +files/bitflu.initd, +metadata.xml:
   Initial commit
-

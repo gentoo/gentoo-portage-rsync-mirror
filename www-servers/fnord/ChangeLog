@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/fnord
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.28 2012/03/24 10:50:33 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.29 2014/01/08 06:08:32 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> fnord-1.10-r2.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   24 Mar 2012; Pacho Ramos <pacho@gentoo.org> fnord-1.10-r2.ebuild:
   Create nofiles group, bug #388565 by Michael Orlitzky.

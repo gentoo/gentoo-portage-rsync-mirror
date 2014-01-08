@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.13.ebuild,v 1.2 2013/06/07 22:52:28 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.13.ebuild,v 1.3 2014/01/08 06:08:34 vapier Exp $
 
 EAPI="4"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs user
 
 DESCRIPTION="High performance web server"
 HOMEPAGE="http://www.fefe.de/gatling/"

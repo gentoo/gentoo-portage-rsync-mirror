@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.11.ebuild,v 1.7 2013/02/28 13:35:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cluster-glue/cluster-glue-1.0.11.ebuild,v 1.8 2014/01/08 06:03:39 vapier Exp $
 
 EAPI=4
 
 MY_P="${P/cluster-}"
-inherit autotools multilib eutils base
+inherit autotools multilib eutils base user
 
 DESCRIPTION="Library pack for Heartbeat / Pacemaker"
 HOMEPAGE="http://www.linux-ha.org/wiki/Cluster_Glue"

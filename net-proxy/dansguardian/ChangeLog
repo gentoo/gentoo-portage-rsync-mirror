@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dansguardian
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.56 2013/04/09 18:36:01 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.57 2014/01/08 06:26:17 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  dansguardian-2.12.0.3-r1.ebuild, dansguardian-2.12.0.3-r2.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *dansguardian-2.10.0.3-r1 (09 Apr 2013)
 *dansguardian-2.12.0.3-r2 (09 Apr 2013)

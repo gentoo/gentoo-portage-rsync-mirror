@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.326 2013/10/27 07:52:55 fordfrog Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.327 2014/01/08 06:09:20 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> tomcat-6.0.37.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   27 Oct 2013; Miroslav Šulc <fordfrog@gentoo.org>
   -files/tomcat-6.0.36-build.xml.patch, -files/tomcat-7.0.32-build.xml.patch,

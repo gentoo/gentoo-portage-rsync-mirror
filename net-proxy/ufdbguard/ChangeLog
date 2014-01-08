@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/ufdbguard
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.28 2012/12/28 11:59:31 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.29 2014/01/08 06:25:17 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ufdbguard-1.24-r1.ebuild,
+  ufdbguard-1.29.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   28 Dec 2012; Diego E. Pettenò <flameeyes@gentoo.org>
   -ufdbguard-1.27-r1.ebuild, -ufdbguard-1.28.ebuild, files/ufdb.initd.2:

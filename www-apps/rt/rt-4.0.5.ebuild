@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.0.5.ebuild,v 1.2 2012/03/01 20:56:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.0.5.ebuild,v 1.3 2014/01/08 06:12:48 vapier Exp $
 
 EAPI=4
 
-inherit webapp eutils depend.apache
+inherit webapp eutils depend.apache user
 
 DESCRIPTION="RT is an enterprise-grade ticketing system"
 HOMEPAGE="http://www.bestpractical.com/rt/"

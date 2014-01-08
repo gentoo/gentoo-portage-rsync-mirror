@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/oops
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.27 2013/12/15 20:26:40 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.28 2014/01/08 06:24:04 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  oops-1.5.24_pre20050503-r2.ebuild, oops-1.5.24_pre20050503-r4.ebuild,
+  oops-1.5.24_pre20050503-r5.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *oops-1.5.24_pre20050503-r5 (15 Dec 2013)
 

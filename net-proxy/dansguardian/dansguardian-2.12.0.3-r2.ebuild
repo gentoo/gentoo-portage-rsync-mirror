@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.12.0.3-r2.ebuild,v 1.1 2013/04/09 18:36:01 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.12.0.3-r2.ebuild,v 1.2 2014/01/08 06:26:17 vapier Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="Web content filtering via proxy"
 HOMEPAGE="http://www.${PN}.org"

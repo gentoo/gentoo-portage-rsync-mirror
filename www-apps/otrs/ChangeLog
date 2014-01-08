@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/otrs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.72 2013/12/02 05:47:35 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/ChangeLog,v 1.73 2014/01/08 06:13:45 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> otrs-3.1.11.ebuild,
+  otrs-3.1.12.ebuild, otrs-3.2.3.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *otrs-3.2.12 (02 Dec 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/resin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.117 2012/12/16 14:21:55 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.118 2014/01/08 06:08:59 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> resin-4.0.13-r1.ebuild,
+  resin-4.0.14.ebuild, resin-4.0.15.ebuild, resin-4.0.22.ebuild,
+  resin-4.0.25.ebuild, resin-4.0.26.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   16 Dec 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due retirement, #95685

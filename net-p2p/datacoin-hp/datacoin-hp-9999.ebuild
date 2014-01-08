@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/datacoin-hp-9999.ebuild,v 1.1 2013/12/28 16:15:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/datacoin-hp/datacoin-hp-9999.ebuild,v 1.2 2014/01/08 06:29:46 vapier Exp $
 
 EAPI=5
 
 DB_VER="4.8"
 
-inherit bash-completion-r1 git-2 eutils db-use systemd
+inherit bash-completion-r1 git-2 eutils db-use systemd user
 
 MyPV="${PV/_/-}"
 MyPN="${PN/-hp/d}"

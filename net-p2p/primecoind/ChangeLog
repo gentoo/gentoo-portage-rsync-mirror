@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/primecoind
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/ChangeLog,v 1.1 2013/12/01 15:20:47 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoind/ChangeLog,v 1.2 2014/01/08 06:27:22 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> primecoind-0.1.2.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *primecoind-0.1.2 (01 Dec 2013)
 
@@ -10,4 +13,3 @@
   +files/primecoin-sys_leveldb.patch, +files/primecoind.logrotate,
   +metadata.xml:
   Initial commit
-

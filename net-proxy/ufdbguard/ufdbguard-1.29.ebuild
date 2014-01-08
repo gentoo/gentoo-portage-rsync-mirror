@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.29.ebuild,v 1.1 2012/08/29 22:30:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.29.ebuild,v 1.2 2014/01/08 06:25:16 vapier Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic user
 
 MY_P="ufdbGuard-${PV}"
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1.ebuild,v 1.4 2014/01/03 13:11:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1.ebuild,v 1.5 2014/01/08 06:14:45 vapier Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1
+inherit distutils-r1 user
 
 DESCRIPTION="The Openstack authentication, authorization, and service catalog written in Python."
 HOMEPAGE="https://launchpad.net/keystone"

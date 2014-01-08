@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/amule
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.169 2013/09/20 01:15:34 hanno Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.170 2014/01/08 06:24:59 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> amule-2.3.1.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   20 Sep 2013; Hanno Boeck <hanno@gentoo.org> amule-2.3.1.ebuild:
   Add slot to dependency to let amule compile against wxGTK-2.8, fix #462208

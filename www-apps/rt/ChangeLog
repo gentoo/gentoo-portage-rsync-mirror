@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.79 2013/10/12 11:55:01 pva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.80 2014/01/08 06:12:48 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> rt-3.8.11.ebuild,
+  rt-3.8.15.ebuild, rt-4.0.5.ebuild, rt-4.0.8-r1.ebuild, rt-4.0.8.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
 *rt-4.0.8-r1 (12 Oct 2013)
 

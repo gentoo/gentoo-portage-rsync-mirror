@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.6 2012/03/01 23:37:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.7 2014/01/08 06:29:32 vapier Exp $
 
-inherit base eutils
+inherit base eutils user
 
 MY_P="${PN}2-${PV}"
 S="${WORKDIR}/${MY_P}"

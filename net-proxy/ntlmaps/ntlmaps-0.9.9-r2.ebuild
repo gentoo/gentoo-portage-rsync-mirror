@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9-r2.ebuild,v 1.10 2013/04/19 20:33:58 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ntlmaps/ntlmaps-0.9.9-r2.ebuild,v 1.11 2014/01/08 06:24:05 vapier Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils user
 
 DESCRIPTION="NTLM proxy Authentication against MS proxy/web server"
 HOMEPAGE="http://ntlmaps.sourceforge.net/"

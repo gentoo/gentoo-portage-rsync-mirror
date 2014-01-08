@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/phxd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/ChangeLog,v 1.10 2013/08/03 09:45:37 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/phxd/ChangeLog,v 1.11 2014/01/08 06:30:17 vapier Exp $
+
+  08 Jan 2014; Mike Frysinger <vapier@gentoo.org> phxd-0.1.0_pre23092005.ebuild:
+  Inherit the user eclass for enewuser/etc...
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org>
   phxd-0.1.0_pre23092005.ebuild:
@@ -40,4 +43,3 @@
   26 Jun 2005; Guillaume Destuynder <kang@gentoo.org> ChangeLog:
   Initial import. This ebuild provides a replacement for net-p2p/mhxd which is
   not supported anymore upstream.
-

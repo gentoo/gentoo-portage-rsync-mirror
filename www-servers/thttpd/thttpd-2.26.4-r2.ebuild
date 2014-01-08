@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r2.ebuild,v 1.6 2013/04/02 10:55:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.26.4-r2.ebuild,v 1.7 2014/01/08 06:09:12 vapier Exp $
 
 EAPI="4"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs user
 
 MY_P="s${P}"
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.3.2-r1.ebuild,v 1.2 2013/05/05 21:53:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.3.2-r1.ebuild,v 1.3 2014/01/08 06:24:08 vapier Exp $
 
 EAPI="5"
 
-inherit autotools eutils
+inherit autotools eutils user
 
 DESCRIPTION="A free socks4,5 and msproxy implementation"
 HOMEPAGE="http://www.inet.no/dante/"

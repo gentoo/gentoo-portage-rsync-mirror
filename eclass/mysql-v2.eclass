@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.25 2013/06/26 19:31:49 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.26 2014/01/08 06:20:29 vapier Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -46,7 +46,7 @@ MYSQL_EXTRAS=""
 # Use "none" to disable it's use
 [[ ${MY_EXTRAS_VER} == "live" ]] && MYSQL_EXTRAS="git-2"
 
-inherit eutils flag-o-matic gnuconfig ${MYSQL_EXTRAS} ${BUILD_INHERIT} mysql_fx versionator toolchain-funcs
+inherit eutils flag-o-matic gnuconfig ${MYSQL_EXTRAS} ${BUILD_INHERIT} mysql_fx versionator toolchain-funcs user
 
 #
 # Supported EAPI versions and export functions

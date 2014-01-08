@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.31 2013/04/28 16:15:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.32 2014/01/08 06:20:29 vapier Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -10,7 +10,7 @@
 # This eclass handles apache-2.x ebuild functions such as LoadModule generation
 # and inter-module dependency checking.
 
-inherit autotools eutils flag-o-matic multilib ssl-cert
+inherit autotools eutils flag-o-matic multilib ssl-cert user
 
 # ==============================================================================
 # INTERNAL VARIABLES

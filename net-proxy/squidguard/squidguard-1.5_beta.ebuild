@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.5_beta.ebuild,v 1.1 2013/09/17 12:51:48 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.5_beta.ebuild,v 1.2 2014/01/08 06:24:19 vapier Exp $
 
 EAPI="5"
 
 WANT_AUTOMAKE=none
 
-inherit eutils autotools
+inherit eutils autotools user
 
 MY_P="squidGuard-${PV/_/-}"
 
