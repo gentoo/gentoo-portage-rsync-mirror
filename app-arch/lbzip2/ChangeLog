@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.59 2014/01/09 13:54:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.60 2014/01/09 14:19:35 polynomial-c Exp $
+
+  09 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> lbzip2-2.3-r1.ebuild:
+  amd64 stable (bug #495322).
 
   09 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> lbzip2-2.3-r1.ebuild:
   x86 stable (bug #495322).

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sg3_utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.110 2014/01/09 13:49:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/ChangeLog,v 1.111 2014/01/09 14:15:15 polynomial-c Exp $
+
+  09 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> sg3_utils-1.37.ebuild:
+  amd64 stable (bug #495932).
 
   09 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> sg3_utils-1.37.ebuild:
   x86 stable (bug #495932).
