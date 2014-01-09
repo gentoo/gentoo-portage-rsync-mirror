@@ -1,6 +1,6 @@
 ####################################################################
 
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15318 2014/01/08 21:42:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15319 2014/01/09 13:14:19 nativemad Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas Schuerch <nativemad@gentoo.org> (09/Jan/2014)
+# masked for removal in 30 days as of bug 497262
+net-libs/libguac
+net-libs/libguac-client-rdp
+net-libs/libguac-client-vnc
+net-misc/guacd
+<www-apps/guacamole-0.8.3
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
 # masked for removal, wrt bug 497574

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/imlib2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.117 2013/09/28 09:37:31 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.118 2014/01/09 13:07:24 vapier Exp $
+
+*imlib2-1.4.6 (09 Jan 2014)
+
+  09 Jan 2014; Mike Frysinger <vapier@gentoo.org> +imlib2-1.4.6.ebuild:
+  Version bump #496730 by pavel sanda.
 
 *imlib2-9999 (28 Sep 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.159 2014/01/03 05:24:25 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.160 2014/01/09 13:29:00 polynomial-c Exp $
+
+  09 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> diffstat-1.58.ebuild:
+  x86 stable (bug #495664).
 
   03 Jan 2014; Matt Turner <mattst88@gentoo.org> diffstat-1.58.ebuild:
   alpha stable, bug 495664.

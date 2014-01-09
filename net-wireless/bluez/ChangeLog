@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.182 2014/01/07 14:43:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.183 2014/01/09 13:24:42 joker Exp $
+
+  09 Jan 2014; Christian Birchinger <joker@gentoo.org>
+  files/bluetooth-init.d-r3:
+  The bluez 5 bluetoothd doesn't fork into background. Use start-stop-daemon
+  --background to handle this.
 
   07 Jan 2014; Jeroen Roovers <jer@gentoo.org> bluez-4.101-r8.ebuild:
   Stable for HPPA (bug #496866).

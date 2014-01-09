@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>web-apps</herd>
+	<maintainer>
+		<email>jmbsvicetto@gentoo.org</email>
+		<name>Jorge Manuel B. S. Vicetto</name>
+	</maintainer>
 	<longdescription lang="en">
 		DokuWiki is a standards compliant, simple to use Wiki, mainly aimed at
 		creating documentation of any kind. It is targeted at developer teams,

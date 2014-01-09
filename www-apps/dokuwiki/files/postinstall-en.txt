@@ -41,7 +41,12 @@ To complete installation you need to perform the following steps:
     This enables apache to write to the files for editing the acl/user
     creation capability.
 
-[1] http://wiki.splitbrain.org/wiki:config
-[2] http://wiki.splitbrain.org/wiki:dokuwiki
-[3] http://wiki.splitbrain.org/wiki:acl
-[4] http://wiki.splitbrain.org/wiki:auth_plain
+    If you're updating from an older version of Dokuwiki or want to learn about
+    other authentication methods, check the documentation about authentication
+    backends and plugins[5].
+
+[1] https://www.dokuwiki.org/config
+[2] https://www.dokuwiki.org/dokuwiki
+[3] https://www.dokuwiki.org/acl
+[4] https://www.dokuwiki.org/plugin:authplain
+[5] https://www.dokuwiki.org/auth
