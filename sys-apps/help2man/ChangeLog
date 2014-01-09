@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.105 2014/01/08 10:38:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.106 2014/01/09 13:42:13 polynomial-c Exp $
+
+  09 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> help2man-1.43.3.ebuild:
+  x86 stable (bug #497368).
 
   08 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> help2man-1.43.3.ebuild:
   amd64 stable (bug #497368).
