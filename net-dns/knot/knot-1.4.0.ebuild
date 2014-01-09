@@ -1,17 +1,20 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.3.0-r1.ebuild,v 1.1 2013/08/21 09:23:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.4.0.ebuild,v 1.1 2014/01/09 18:04:02 scarabeus Exp $
 
 EAPI=5
 
-inherit eutils autotools user
+EGIT_REPO_URI="https://gitlab.labs.nic.cz/labs/${PN}.git"
+[[ ${PV} == 9999 ]] && inherit autotools git-r3
+inherit eutils user
 
 DESCRIPTION="High-performance authoritative-only DNS server"
 HOMEPAGE="http://www.knot-dns.cz/"
-SRC_URI="http://public.nic.cz/files/knot-dns/${P/_/-}.tar.gz"
+[[ ${PV} == 9999 ]] || SRC_URI="http://public.nic.cz/files/knot-dns/${P/_/-}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
+[[ ${PV} == 9999 ]] || \
 KEYWORDS="~amd64 ~x86"
 IUSE="debug caps +fastparser"
 
@@ -31,10 +34,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P/_/-}"
 
 src_prepare() {
-	sed -i \
-		-e 's:-Werror::g' \
-		configure.ac || die
-	eautoreconf
+	[[ ${PV} == 9999 ]] && eautoreconf
 }
 
 src_configure() {
