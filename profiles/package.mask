@@ -1,6 +1,5 @@
 ####################################################################
-
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15319 2014/01/09 13:14:19 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15321 2014/01/09 15:38:49 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +30,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Andreas Schuerch <nativemad@gentoo.org> (09/Jan/2014)
+# Tom Wijsman <TomWij@gentoo.org> (09 Jan 2014)
+# Monolithic dev-dotnet/{gnome,gtk}-sharp introduction mask, see bug #382491.
+>=dev-dotnet/gnome-sharp-2.24.2-r1
+>=dev-dotnet/gtk-sharp-2.12.21
+
+# Andreas Schuerch <nativemad@gentoo.org> (09 Jan 2014)
 # masked for removal in 30 days as of bug 497262
 net-libs/libguac
 net-libs/libguac-client-rdp
@@ -39,59 +43,59 @@ net-libs/libguac-client-vnc
 net-misc/guacd
 <www-apps/guacamole-0.8.3
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
+# Joerg Bornkessel <hd_brummy@gentoo.org> (08 Jan 2014)
 # masked for removal, wrt bug 497574
 media-plugins/vdr-premiereepg
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
+# Joerg Bornkessel <hd_brummy@gentoo.org> (08 Jan 2014)
 # masked for removal, wrt bug 414193
 media-plugins/vdr-softplay
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
+# Joerg Bornkessel <hd_brummy@gentoo.org> (08 Jan 2014)
 # masked for removal, wrt bug 420859 
 media-plugins/vdr-softdevice
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
+# Joerg Bornkessel <hd_brummy@gentoo.org> (08 Jan 2014)
 # masked for removal, wrt bug 420881
 media-plugin/vdr-reelchannelscan
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, bundled with dev-php/phpunit
 dev-php/PHPUnit_MockObject
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, bundled with dev-php/phpunit
 dev-php/PHPUnit_Selenium
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
 dev-php/PEAR-Tree
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
 dev-php/PEAR-Text_Highlighter
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
 dev-php/PEAR-Structures_DataGrid
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
 dev-php/PEAR-HTTP_WebDAV_Server
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
 dev-php/PEAR-HTTP_Upload
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
 dev-php/PEAR-HTML_QuickForm_ElementGrid
 
-# Matti Bickel <mabi@gentoo.org> (08/Jan/2014)
+# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
 dev-php/PEAR-HTML_BBcodeParser
 
-# Joerg Bornkessel <hd_brummy@gentoo.org> (08/Jan/2014)
+# Joerg Bornkessel <hd_brummy@gentoo.org> (08 Jan 2014)
 # masked for removal ~08/Feb/2014, wrt bug 424281
 media-plugins/vdr-dvdconvert
 
