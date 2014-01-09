@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.52 2014/01/05 06:27:11 nullishzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.53 2014/01/09 06:41:41 nullishzero Exp $
+
+*lxsession-0.4.9.2-r3 (09 Jan 2014)
+
+  09 Jan 2014; Pavel Kazakov <nullishzero@gentoo.org>
+  +files/lxsession-0.4.9.2-fix-logind-dbus-calls.patch,
+  +lxsession-0.4.9.2-r3.ebuild:
+  Fix for bug #496880
 
 *lxsession-0.4.9.2-r2 (05 Jan 2014)
 
