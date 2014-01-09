@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bacon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bacon/ChangeLog,v 1.26 2013/12/24 14:20:33 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bacon/ChangeLog,v 1.27 2014/01/09 06:15:32 graaff Exp $
+
+*bacon-1.2.0-r2 (09 Jan 2014)
+
+  09 Jan 2014; Hans de Graaff <graaff@gentoo.org> +bacon-1.2.0-r2.ebuild:
+  Add ruby21.
 
   24 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -bacon-1.1.0-r1.ebuild,
   -bacon-1.2.0.ebuild, -files/bacon-1.1.0+ruby-1.9.2.patch:
