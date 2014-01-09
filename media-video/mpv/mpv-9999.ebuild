@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.36 2014/01/08 12:00:42 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.37 2014/01/08 23:46:46 tomwij Exp $
 
 EAPI=5
 
@@ -119,12 +119,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=dev-lang/perl-5.8
 	dev-python/docutils
-	doc-pdf? (
-		dev-texlive/texlive-latex
-		dev-texlive/texlive-latexrecommended
-		dev-texlive/texlive-latexextra
-		dev-tex/xcolor
-	)
+	doc-pdf? ( dev-python/rst2pdf )
 	X? (
 		x11-proto/videoproto
 		x11-proto/xf86vidmodeproto
