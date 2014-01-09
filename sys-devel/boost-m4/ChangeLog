@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/boost-m4
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.12 2013/10/21 13:31:25 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.13 2014/01/09 15:10:14 jer Exp $
+
+  09 Jan 2014; Jeroen Roovers <jer@gentoo.org> boost-m4-0.4.ebuild:
+  Stable for HPPA (bug #496904).
 
   21 Oct 2013; Fabian Groffen <grobian@gentoo.org> boost-m4-0.4.ebuild:
   Marked ~x64-macos, bug #486818
