@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/moarvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/ChangeLog,v 1.5 2014/01/09 08:16:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/ChangeLog,v 1.6 2014/01/09 08:59:37 patrick Exp $
+
+  09 Jan 2014; Patrick Lauer <patrick@gentoo.org> +files/Configure-9999.patch,
+  moarvm-9999.ebuild:
+  Hack up -9999 ebuild to have a chance of working with nqp
 
 *moarvm-9999 (09 Jan 2014)
 
