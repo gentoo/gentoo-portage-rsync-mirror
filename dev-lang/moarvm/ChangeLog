@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/moarvm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/ChangeLog,v 1.3 2013/12/06 03:26:29 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/ChangeLog,v 1.4 2014/01/09 07:55:34 patrick Exp $
+
+  09 Jan 2014; Patrick Lauer <patrick@gentoo.org> moarvm-2013.10.1.ebuild,
+  moarvm-2013.10.ebuild:
+  Fix homepage
 
   06 Dec 2013; Patrick Lauer <patrick@gentoo.org> moarvm-2013.10.1.ebuild:
   Hack in version so that build system doesn't make us sad

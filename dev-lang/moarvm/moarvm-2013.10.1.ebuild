@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/moarvm-2013.10.1.ebuild,v 1.2 2013/12/06 03:26:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/moarvm-2013.10.1.ebuild,v 1.3 2014/01/09 07:55:34 patrick Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit eutils multilib
 MY_PN="MoarVM"
 
 DESCRIPTION="A 6model-based VM for NQP and Rakudo Perl 6"
-HOMEPAGE="http://https://github.com/MoarVM/MoarVM"
+HOMEPAGE="https://github.com/MoarVM/MoarVM"
 SRC_URI="http://gentooexperimental.org/~patrick/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="Artistic-2"

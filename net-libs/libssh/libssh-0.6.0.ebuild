@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.0.ebuild,v 1.1 2014/01/08 12:29:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.6.0.ebuild,v 1.2 2014/01/09 07:56:12 polynomial-c Exp $
 
 EAPI=5
 
@@ -14,12 +14,14 @@ SRC_URI="https://red.libssh.org/attachments/download/71/${MY_P}.tar.xz -> ${P}.t
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux ~x86-linux"
 SLOT="0/4" # subslot = soname major version
-IUSE="debug doc examples pcap +sftp ssh1 server static-libs test zlib"
+IUSE="debug doc examples gcrypt kerberos pcap +sftp ssh1 server static-libs test zlib"
 # Maintainer: check IUSE-defaults at DefineOptions.cmake
 
 RDEPEND="
 	zlib? ( >=sys-libs/zlib-1.2 )
-	>=dev-libs/openssl-0.9.8
+	!gcrypt? ( >=dev-libs/openssl-0.9.8 )
+	gcrypt? ( >=dev-libs/libgcrypt-1.5 )
+	kerberos? ( virtual/krb5 )
 "
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
@@ -32,6 +34,7 @@ S=${WORKDIR}/${MY_P}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.5.0-tests.patch"
+	"${FILESDIR}/${PN}-0.6.0-libgcrypt-1.6.0.patch"
 )
 
 src_prepare() {
@@ -47,6 +50,8 @@ src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use_with debug DEBUG_CALLTRACE)
 		$(cmake-utils_use_with debug DEBUG_CRYPTO)
+		$(cmake-utils_use_with gcrypt)
+		$(cmake-utils_use_with kerberos gssapi)
 		$(cmake-utils_use_with pcap)
 		$(cmake-utils_use_with server)
 		$(cmake-utils_use_with sftp)
@@ -55,7 +60,6 @@ src_configure() {
 		$(cmake-utils_use_with test STATIC_LIB)
 		$(cmake-utils_use_with test TESTING)
 		$(cmake-utils_use_with zlib)
-		-DWITH_GCRYPT=OFF
 	)
 
 	cmake-utils_src_configure
