@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15321 2014/01/09 15:38:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15322 2014/01/09 16:46:12 mabi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -70,10 +70,6 @@ dev-php/PHPUnit_Selenium
 # Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
 dev-php/PEAR-Tree
-
-# Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
-# masked for removal 08/Feb/2014, outdated, not maintained
-dev-php/PEAR-Text_Highlighter
 
 # Matti Bickel <mabi@gentoo.org> (08 Jan 2014)
 # masked for removal 08/Feb/2014, outdated, not maintained
