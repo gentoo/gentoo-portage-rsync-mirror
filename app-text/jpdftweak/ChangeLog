@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jpdftweak
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jpdftweak/ChangeLog,v 1.3 2014/01/08 17:17:17 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jpdftweak/ChangeLog,v 1.4 2014/01/09 14:41:06 tomwij Exp $
+
+  09 Jan 2014; Tom Wijsman <TomWij@gentoo.org> jpdftweak-0.9-r1.ebuild:
+  Run src_prepare only once; fixes bug #497616, reported by tman.
 
 *jpdftweak-0.9-r1 (08 Jan 2014)
 
