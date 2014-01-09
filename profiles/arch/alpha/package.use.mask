@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.144 2014/01/08 21:23:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.145 2014/01/09 03:39:33 floppym Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2013)
 # systemd[pam] cannot be provided for alpha, bug #438368
 gnome-base/gdm systemd
+sys-auth/pambase systemd
 
 # Pacho Ramos <pacho@gentoo.org> (02 Dec 2013)        
 # Missing keywords, bug #493156

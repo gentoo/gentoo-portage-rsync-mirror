@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.184 2013/12/13 06:14:43 mattst88 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.185 2014/01/09 03:39:33 floppym Exp $
+
+  09 Jan 2014; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Mask sys-auth/pambase[systemd].
 
   13 Dec 2013; Matt Turner <mattst88@gentoo.org> make.defaults:
   Mask dev-lang/python-3.2*, unmask dev-lang/python-3.3* targets (bug #474128).

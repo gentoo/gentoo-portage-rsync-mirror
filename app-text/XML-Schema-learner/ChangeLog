@@ -1,0 +1,9 @@
+# ChangeLog for app-text/XML-Schema-learner
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/ChangeLog,v 1.1 2014/01/09 03:31:56 mjo Exp $
+
+*XML-Schema-learner-1.0.0 (09 Jan 2014)
+
+  09 Jan 2014; Michael Orlitzky <mjo@gentoo.org>
+  +XML-Schema-learner-1.0.0.ebuild, +metadata.xml:
+  New package: app-text/XML-Schema-learner, an XML schema inferencer.
