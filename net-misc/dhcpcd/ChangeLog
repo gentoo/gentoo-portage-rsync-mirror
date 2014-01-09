@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.379 2014/01/05 10:44:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.380 2014/01/09 18:46:28 williamh Exp $
+
+*dhcpcd-6.2.0-r1 (09 Jan 2014)
+
+  09 Jan 2014; William Hubbs <williamh@gentoo.org> +dhcpcd-6.2.0-r1.ebuild,
+  +files/dhcpcd-6.2.0-dynamic-init.patch:
+  make the init system selection dynamic for bug #496870
 
   05 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> dhcpcd-6.2.0.ebuild,
   +files/dhcpcd-6.2.0-no_ipv6_fix.patch:
