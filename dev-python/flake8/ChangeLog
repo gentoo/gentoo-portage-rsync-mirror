@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flake8
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.6 2013/12/11 19:30:09 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.7 2014/01/09 21:54:55 prometheanfire Exp $
+
+*flake8-2.1.0 (09 Jan 2014)
+
+  09 Jan 2014; Matthew Thode <prometheanfire@gentoo.org> +flake8-2.1.0.ebuild:
+  bump of flake8 to 2.1.0
 
   11 Dec 2013; Mike Gilbert <floppym@gentoo.org> flake8-2.0.ebuild:
   Depend on dev-python/mccabe for tests, bug 493922 by Nikoli.
