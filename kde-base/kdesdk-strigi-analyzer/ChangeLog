@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-strigi-analyzer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.164 2014/01/07 16:25:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.165 2014/01/09 08:30:22 kensington Exp $
+
+  09 Jan 2014; Michael Palimaka <kensington@gentoo.org>
+  kdesdk-strigi-analyzer-4.12.0.ebuild:
+  Drop KEYWORDS for archs that have unsatisfied dependencies, wrt bug #497476.
 
   07 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org>
   -kdesdk-strigi-analyzer-4.10.5.ebuild:

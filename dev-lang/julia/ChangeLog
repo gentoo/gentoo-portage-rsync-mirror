@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/julia
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.1 2013/11/25 23:40:37 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/ChangeLog,v 1.2 2014/01/09 08:02:20 patrick Exp $
+
+  09 Jan 2014; Patrick Lauer <patrick@gentoo.org> julia-0.2.0.ebuild:
+  Fix homepage
 
 *julia-0.2.0 (25 Nov 2013)
 

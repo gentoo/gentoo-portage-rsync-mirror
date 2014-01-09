@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.0.ebuild,v 1.1 2013/11/25 23:40:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/julia/julia-0.2.0.ebuild,v 1.2 2014/01/09 08:02:20 patrick Exp $
 EAPI=5
 
 inherit eutils
 
 DESCRIPTION="High-level, high-performance dynamic programming language for technical computing"
 
-HOMEPAGE="http://http://julialang.org/"
+HOMEPAGE="http://julialang.org/"
 
 # uses gfortran in some places, dependencies don't reflect that yet
 
@@ -34,7 +34,7 @@ JULIAMAKEARGS="QUIET_MAKE= USE_SYSTEM_LLVM=1 USE_SYSTEM_READLINE=1 USE_SYSTEM_PC
 		USE_SYSTEM_MPFR=1 USE_SYSTEM_SUITESPARSE=1  USE_SYSTEM_ARPACK=1 USE_SYSTEM_BLAS=1 USE_SYSTEM_LAPACK=1 \
 		LLVM_CONFIG=/usr/bin/llvm-config"
 
-# scons is a dep of double-conversion                                                                                                                                                                                                                                          
+# scons is a dep of double-conversion
 DEPEND="
 	=sys-devel/llvm-3.3*
 	dev-lang/perl
@@ -55,7 +55,7 @@ DEPEND="
 RDEPEND="sys-libs/readline"
 
 src_prepare() {
-	#uurgh, no fetching in ebuild                                                                                                                                                                                                                                          
+	#uurgh, no fetching in ebuild
 	sed -i -e 's~$(JLDOWNLOAD)~/bin/true~' deps/Makefile || die "Oopsie"
 	sed -i -e 's~git submodule~/bin/true~g' deps/Makefile || die "Ooopsie"
 	# and we need to build stuff, so ... let's just copy around and pray!
