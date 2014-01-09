@@ -1,6 +1,11 @@
 # ChangeLog for www-client/weboob
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/ChangeLog,v 1.6 2013/09/12 20:59:05 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/weboob/ChangeLog,v 1.7 2014/01/09 04:52:46 patrick Exp $
+
+*weboob-0h (09 Jan 2014)
+
+  09 Jan 2014; Patrick Lauer <patrick@gentoo.org> +weboob-0h.ebuild:
+  Bump for #497592
 
   12 Sep 2013; Michał Górny <mgorny@gentoo.org> weboob-0g.ebuild,
   weboob-9998.ebuild, weboob-9999.ebuild:
