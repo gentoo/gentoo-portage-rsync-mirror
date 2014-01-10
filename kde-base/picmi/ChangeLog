@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/picmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.49 2014/01/06 13:35:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.50 2014/01/10 04:22:10 creffett Exp $
+
+*picmi-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +picmi-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
   06 Jan 2014; Patrick Lauer <patrick@gentoo.org> picmi-4.12.0.ebuild:
   Whitespace

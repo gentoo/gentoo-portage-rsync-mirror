@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kephal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.179 2013/12/12 03:37:01 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.180 2014/01/10 04:21:26 creffett Exp $
+
+*kephal-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +kephal-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
   12 Dec 2013; Agostino Sarubbo <ago@gentoo.org> -kephal-4.10.5.ebuild:
   Remove old

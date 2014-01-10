@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/juk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.299 2013/12/18 19:57:37 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.300 2014/01/10 04:22:03 creffett Exp $
+
+*juk-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +juk-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
 *juk-4.12.0 (18 Dec 2013)
 

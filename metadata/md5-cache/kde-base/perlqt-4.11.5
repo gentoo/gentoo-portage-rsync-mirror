@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
+DEPEND=>=dev-lang/perl-5.10.1 dev-perl/List-MoreUtils >=kde-base/smokeqt-4.11.5:4[aqua=,declarative?,multimedia?,opengl?,phonon?,qimageblitz?,qscintilla?,qthelp?,qwt?,webkit?] >=sys-apps/sed-4 test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) declarative? ( >=dev-qt/qtdeclarative-4.8.0:4 ) qthelp? ( >=dev-qt/qthelp-4.8.0:4 ) opengl? ( >=dev-qt/qtopengl-4.8.0:4 ) multimedia? ( >=dev-qt/qtmultimedia-4.8.0:4 )
+DESCRIPTION=Qt Perl bindings
+EAPI=5
+HOMEPAGE=http://www.kde.org/
+IUSE=debug phonon qimageblitz qscintilla qwt webkit test declarative qthelp opengl multimedia aqua
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=>=dev-lang/perl-5.10.1 dev-perl/List-MoreUtils >=kde-base/smokeqt-4.11.5:4[aqua=,declarative?,multimedia?,opengl?,phonon?,qimageblitz?,qscintilla?,qthelp?,qwt?,webkit?] declarative? ( >=dev-qt/qtdeclarative-4.8.0:4 ) qthelp? ( >=dev-qt/qthelp-4.8.0:4 ) opengl? ( >=dev-qt/qtopengl-4.8.0:4 ) multimedia? ( >=dev-qt/qtmultimedia-4.8.0:4 )
+SLOT=4
+SRC_URI=mirror://kde/stable/4.11.5/src/perlqt-4.11.5.tar.xz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	kde4-base	5ba60672833e2a1cafaa86c446439d47	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_md5_=deac2725b791c0c63ac80837bbffda9c

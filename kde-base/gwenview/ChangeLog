@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.210 2014/01/03 00:45:52 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.211 2014/01/10 04:21:48 creffett Exp $
+
+*gwenview-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +gwenview-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
   03 Jan 2014; Chris Reffett <creffett@gentoo.org> gwenview-4.11.2-r1.ebuild,
   gwenview-4.11.4.ebuild, gwenview-4.12.0.ebuild:

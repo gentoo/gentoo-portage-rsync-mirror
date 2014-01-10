@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kompare
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.279 2013/12/18 19:58:09 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.280 2014/01/10 04:21:42 creffett Exp $
+
+*kompare-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +kompare-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
 *kompare-4.12.0 (18 Dec 2013)
 

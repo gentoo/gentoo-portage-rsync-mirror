@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qyoto
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.97 2013/12/18 19:57:44 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qyoto/ChangeLog,v 1.98 2014/01/10 04:22:09 creffett Exp $
+
+*qyoto-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +qyoto-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
 *qyoto-4.12.0 (18 Dec 2013)
 

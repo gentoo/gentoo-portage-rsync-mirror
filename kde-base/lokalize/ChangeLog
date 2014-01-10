@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/lokalize
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.190 2014/01/07 16:26:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/ChangeLog,v 1.191 2014/01/10 04:22:19 creffett Exp $
+
+*lokalize-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +lokalize-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
   07 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org> lokalize-4.11.2-r1.ebuild,
   lokalize-4.11.4.ebuild, lokalize-4.12.0.ebuild:

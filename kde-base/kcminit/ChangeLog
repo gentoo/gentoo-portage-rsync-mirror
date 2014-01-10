@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcminit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.274 2013/12/12 03:36:48 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.275 2014/01/10 04:21:35 creffett Exp $
+
+*kcminit-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +kcminit-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
   12 Dec 2013; Agostino Sarubbo <ago@gentoo.org> -kcminit-4.10.5.ebuild:
   Remove old

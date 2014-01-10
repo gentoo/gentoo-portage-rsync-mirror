@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ffmpegthumbs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.134 2013/12/18 19:58:05 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.135 2014/01/10 04:21:44 creffett Exp $
+
+*ffmpegthumbs-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +ffmpegthumbs-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
 *ffmpegthumbs-4.12.0 (18 Dec 2013)
 

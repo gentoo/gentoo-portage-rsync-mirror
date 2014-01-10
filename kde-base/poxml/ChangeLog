@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/poxml
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/ChangeLog,v 1.16 2013/12/18 19:58:18 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/ChangeLog,v 1.17 2014/01/10 04:21:42 creffett Exp $
+
+*poxml-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +poxml-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
 *poxml-4.12.0 (18 Dec 2013)
 

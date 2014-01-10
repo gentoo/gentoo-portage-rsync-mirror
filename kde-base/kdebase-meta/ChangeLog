@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-meta
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.301 2013/12/18 19:57:47 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.302 2014/01/10 04:21:35 creffett Exp $
+
+*kdebase-meta-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +kdebase-meta-4.11.5.ebuild:
+  Bump KDE SC 4.11.5
 
 *kdebase-meta-4.12.0 (18 Dec 2013)
 

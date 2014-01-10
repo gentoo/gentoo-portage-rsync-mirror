@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kcheckpass
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.299 2013/12/12 03:36:48 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.300 2014/01/10 04:21:49 creffett Exp $
+
+*kcheckpass-4.11.5 (10 Jan 2014)
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> +kcheckpass-4.11.5.ebuild,
+  files/kcheckpass-4.4.2-no-SUID-no-GUID.patch:
+  Bump KDE SC 4.11.5
 
   12 Dec 2013; Agostino Sarubbo <ago@gentoo.org> -kcheckpass-4.10.5.ebuild:
   Remove old
