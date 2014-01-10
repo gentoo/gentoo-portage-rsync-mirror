@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15322 2014/01/09 16:46:12 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15324 2014/01/10 07:26:47 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (10 Jan 2014)
+# aufs3 patches do not apply cleanly onto 3.12.7
+sys-kernel/aufs-sources:3.12.7
 
 # Tom Wijsman <TomWij@gentoo.org> (09 Jan 2014)
 # Monolithic dev-dotnet/{gnome,gtk}-sharp introduction mask, see bug #382491.
@@ -137,10 +141,6 @@ dev-ruby/mkrf
 # Replaced by 'emerge @module-rebuild' set in Portage itself.
 # Removal in 30 days, see http://bugs.gentoo.org/410739
 sys-kernel/module-rebuild
-
-# Justin Lecher <jlec@gentoo.org> (27 Dec 2013)
-# This version isn't released yet
-sys-kernel/aufs-sources:3.12.7
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Dec 2013)
 # The required icons from faenza-xfce-icon-theme are now part of

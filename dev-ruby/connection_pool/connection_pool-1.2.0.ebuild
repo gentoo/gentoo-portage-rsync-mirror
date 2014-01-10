@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/connection_pool-1.2.0.ebuild,v 1.1 2013/11/27 09:15:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/connection_pool-1.2.0.ebuild,v 1.2 2014/01/10 07:06:49 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -24,4 +24,6 @@ ruby_add_bdepend "test? ( >=dev-ruby/minitest-5 )"
 all_ruby_prepare() {
 	# Fix test
 	sed -i -e "2s/.*/require 'minitest'/" test/helper.rb || die "sed failed"
+
+	sed -i -e '/git ls-files/d' connection_pool.gemspec || die
 }
