@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst prepare
-DEPEND=>=dev-libs/check-0.9.4 >=dev-libs/glib-2.26 sys-apps/dbus >=x11-libs/gtk+-2.12:2 >=x11-libs/libgxim-0.3.1 >=x11-libs/libnotify-0.7 x11-libs/libX11 gconf? ( gnome-base/gconf ) gtk3? ( x11-libs/gtk+:3 ) qt4? ( dev-qt/qtcore:4 ) xfconf? ( xfce-base/xfconf ) virtual/pkgconfig dev-util/intltool doc? ( dev-util/gtk-doc )
+DEPEND=>=dev-libs/check-0.9.4 >=dev-libs/glib-2.26 sys-apps/dbus >=x11-libs/gtk+-2.12:2 >=x11-libs/libgxim-0.3.1 >=x11-libs/libnotify-0.7 x11-libs/libX11 gconf? ( gnome-base/gconf ) gtk3? ( x11-libs/gtk+:3 ) qt4? ( dev-qt/qtcore:4 ) xfconf? ( xfce-base/xfconf ) virtual/pkgconfig dev-util/intltool doc? ( dev-util/gtk-doc ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=Delivery framework for general Input Method configuration
 EAPI=5
 HOMEPAGE=http://tagoh.github.com/imsettings/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/check-0.9.4 >=dev-libs/glib-2.26 sys-apps/dbus >=x11-libs/gtk
 RESTRICT=test
 SLOT=0
 SRC_URI=http://imsettings.googlecode.com/files/imsettings-1.5.0.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=bb8d5e32468a37120c58df95ff9a8c4d
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=4170d5e50ed1cf2e00b8bf09f7641783

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.5.0.ebuild,v 1.1 2013/05/04 00:17:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imsettings/imsettings-1.5.0.ebuild,v 1.2 2014/01/10 10:13:52 naota Exp $
 
 EAPI=5
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Delivery framework for general Input Method configuration"
 HOMEPAGE="http://tagoh.github.com/imsettings/"
@@ -52,6 +52,8 @@ src_prepare() {
 	if ! use xfconf; then
 		sed -i -e 's:libxfconf-0:dIsAbLe&:' configure || die
 	fi
+	epatch "${FILESDIR}"/${P}-gir-scanner.patch
+	eautoreconf
 }
 
 src_configure() {
