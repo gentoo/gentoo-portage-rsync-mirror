@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/redmine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.39 2014/01/08 06:12:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/ChangeLog,v 1.40 2014/01/10 12:20:19 pva Exp $
+
+*redmine-2.3.4 (10 Jan 2014)
+
+  10 Jan 2014; Peter Volkov <pva@gentoo.org> +redmine-2.3.4.ebuild:
+  Version bump. Fixed bad log file permissions problem reported by Jan Matějka
+  in bug #480980.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> redmine-2.2.4.ebuild,
   redmine-2.3.2.ebuild:
