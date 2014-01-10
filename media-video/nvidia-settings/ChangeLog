@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-settings
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.134 2013/12/24 14:38:28 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.135 2014/01/10 08:22:16 jlec Exp $
+
+  10 Jan 2014; Justin Lecher <jlec@gentoo.org> -nvidia-settings-304.116.ebuild,
+  -nvidia-settings-304.117.ebuild:
+  Clean old
 
 *nvidia-settings-304.117 (24 Dec 2013)
 *nvidia-settings-304.116 (24 Dec 2013)
