@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.511 2014/01/01 18:45:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.512 2014/01/10 14:10:02 jer Exp $
+
+*nvidia-drivers-319.82 (10 Jan 2014)
+
+  10 Jan 2014; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-319.82.ebuild:
+  Version bump.
 
   01 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2013:
   Rotate ChangeLog
