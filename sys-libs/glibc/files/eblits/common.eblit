@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.32 2014/01/05 03:11:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.33 2014/01/10 15:18:19 zorry Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -183,7 +183,7 @@ setup_flags() {
 	# building glibc with SSP is fraught with difficulty, especially
 	# due to __stack_chk_fail_local which would mean significant changes
 	# to the glibc build process. See bug #94325 #293721
-	use hardened && gcc-specs-ssp && append-cflags $(test-flags-CC -fno-stack-protector)
+	gcc-specs-ssp && append-cflags $(test-flags-CC -fno-stack-protector)
 
 	if use hardened && gcc-specs-pie ; then
 		# Force PIC macro definition for all compilations since they're all

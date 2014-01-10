@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.990 2014/01/03 15:33:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.991 2014/01/10 15:09:25 zorry Exp $
+
+  10 Jan 2014; Magnus Granberg <zorry@gentoo.org> gcc-4.8.2.ebuild:
+  Updated it with the default ssp patchset bug 484714
 
   03 Jan 2014; Mike Frysinger <vapier@gentoo.org> gcc-4.8.2.ebuild:
   Stop building libbacktrace with -Werror.

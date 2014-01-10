@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.969 2014/01/06 16:55:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.970 2014/01/10 15:18:18 zorry Exp $
+
+  10 Jan 2014; Magnus Granberg <zorry@gentoo.org> files/eblits/common.eblit:
+  Remove the hardened check on ssp #484714
 
   06 Jan 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.18.ebuild:
   Add a bunch of random fixes from upstream which also fix ptrace headers
