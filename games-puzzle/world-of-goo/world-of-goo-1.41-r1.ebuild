@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/world-of-goo-1.41-r1.ebuild,v 1.3 2013/01/13 11:21:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/world-of-goo-1.41-r1.ebuild,v 1.4 2014/01/10 05:33:48 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -22,7 +22,7 @@ KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="fetch strip"
 
-RDEPEND="media-libs/libsdl[audio,opengl,video]
+RDEPEND="media-libs/libsdl[alsa,audio,opengl,video]
 	media-libs/sdl-mixer[vorbis]
 	sys-libs/glibc
 	virtual/opengl
@@ -47,7 +47,7 @@ pkg_nofetch() {
 
 src_install() {
 	exeinto "${dir}"
-	doexe ${MY_PN%Demo}* || die
+	doexe ${MY_PN%Demo}{,.$(usex amd64 bin64 bin32)} || die
 
 	games_make_wrapper ${PN} "${dir}"/${MY_PN%Demo} || die
 

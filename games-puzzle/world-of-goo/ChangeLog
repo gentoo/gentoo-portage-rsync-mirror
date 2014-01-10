@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/world-of-goo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/ChangeLog,v 1.8 2013/01/22 18:44:28 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo/ChangeLog,v 1.9 2014/01/10 05:33:48 mr_bones_ Exp $
+
+  10 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  world-of-goo-1.41-r1.ebuild:
+  fix libsdl use deps (bug #460626); skip install for 32bit on amd64 (bug
+  #417187)
 
   22 Jan 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -world-of-goo-1.41.ebuild:
