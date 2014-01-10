@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8520 2014/01/10 07:26:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8521 2014/01/10 16:11:16 zorry Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jan 2014; Magnus Granberg <zorry@gentoo.org> package.mask:
+  Mask sys-devel/gcc-4.8.2-r1 has default ssp and need testing
 
   10 Jan 2014; Justin Lecher <jlec@gentoo.org> package.mask:
   Mask +sys-kernel/aufs-sources:3.12.7 because aufs3 patches do not apply

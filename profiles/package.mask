@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15324 2014/01/10 07:26:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15325 2014/01/10 16:11:17 zorry Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Magnus Granberg <zorry@gentoo.org>
+# Gcc 4.8.2-r1 has default ssp and need testing,
+# See #484714
+=sys-devel/gcc-4.8.2-r1
 
 # Justin Lecher <jlec@gentoo.org> (10 Jan 2014)
 # aufs3 patches do not apply cleanly onto 3.12.7
