@@ -1,23 +1,25 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.7 2013/12/24 23:20:42 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-9999.ebuild,v 1.8 2014/01/10 05:11:51 zerochaos Exp $
 
 EAPI="5"
-inherit eutils
-
-#MY_P=${PN/metasploit/framework}-${PV}
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="https://github.com/rapid7/metasploit-framework.git"
+	EGIT_CHECKOUT_DIR="${WORKDIR}"/all
 	inherit git-r3
 	KEYWORDS=""
-#	S="${WORKDIR}/${MY_P}"
 else
 	#https://github.com/rapid7/metasploit-framework/wiki/Downloads-by-Version
 	SRC_URI="http://downloads.metasploit.com/data/releases/archive/framework-${PV}.tar.bz2"
 	KEYWORDS="~amd64 ~arm ~x86"
 	S="${WORKDIR}"/msf3
 fi
+
+#ruby18 is well beyond EoL
+#ruby20 doesn't have wide enough support in gentoo yet (but is semi-supported upstream)
+USE_RUBY="ruby19"
+inherit eutils ruby-ng
 
 DESCRIPTION="Advanced open-source framework for developing, testing, and using vulnerability exploit code"
 HOMEPAGE="http://www.metasploit.org/"
@@ -26,42 +28,44 @@ LICENSE="BSD"
 IUSE="development +java lorcon +pcap test"
 
 #multiple known bugs with tests reported upstream and ignored
+#http://dev.metasploit.com/redmine/issues/8418 - worked around (fix user creation when possible)
 RESTRICT="test"
 
-COMMON_DEPEND="dev-db/postgresql-server
-	dev-lang/ruby:1.9[ssl]
-	|| ( dev-ruby/activesupport:3.1[ruby_targets_ruby19] dev-ruby/activesupport:3.2[ruby_targets_ruby19] )
-	dev-ruby/activerecord:3.2[ruby_targets_ruby19]
-	dev-ruby/json[ruby_targets_ruby19]
-	>=dev-ruby/metasploit_data_models-0.16.9[ruby_targets_ruby19]
-	dev-ruby/msgpack[ruby_targets_ruby19]
-	dev-ruby/nokogiri[ruby_targets_ruby19]
-	dev-ruby/builder:3[ruby_targets_ruby19]
-	>=dev-ruby/pg-0.11[ruby_targets_ruby19]
-	>=dev-ruby/packetfu-1.1.9[ruby_targets_ruby19]
-	dev-ruby/robots[ruby_targets_ruby19]
-	dev-ruby/kissfft[ruby_targets_ruby19]
-	>=app-crypt/johntheripper-1.7.9-r1[-minimal]
-	net-analyzer/nmap
-	!arm? ( java? ( dev-ruby/rjb[ruby_targets_ruby19] ) )
-	pcap? ( dev-ruby/pcaprub[ruby_targets_ruby19]
-		dev-ruby/network_interface[ruby_targets_ruby19] )
+RUBY_COMMON_DEPEND="virtual/ruby-ssl
+	dev-ruby/activesupport:3.2
+	dev-ruby/activerecord:3.2
+	dev-ruby/json
+	>=dev-ruby/metasploit_data_models-0.16.9
+	dev-ruby/msgpack
+	dev-ruby/nokogiri
+	dev-ruby/builder:3
+	>=dev-ruby/pg-0.11
+	>=dev-ruby/packetfu-1.1.9
+	dev-ruby/robots
+	dev-ruby/kissfft
+	java? ( dev-ruby/rjb )
 	lorcon? ( net-wireless/lorcon[ruby] )
-	dev-ruby/bundler[ruby_targets_ruby19]
-	development? ( dev-ruby/redcarpet[ruby_targets_ruby19]
-			dev-ruby/yard[ruby_targets_ruby19]
-			dev-ruby/rake[ruby_targets_ruby19]
-			>=dev-ruby/factory_girl-4.1.0[ruby_targets_ruby19] )"
-DEPEND="${COMMON_DEPEND}
-	test? (	>=dev-ruby/factory_girl-4.1.0[ruby_targets_ruby19]
-		dev-ruby/database_cleaner[ruby_targets_ruby19]
-		>=dev-ruby/rspec-2.12[ruby_targets_ruby19]
-		dev-ruby/shoulda-matchers[ruby_targets_ruby19]
-		dev-ruby/timecop[ruby_targets_ruby19] )
-	"
+	pcap? ( dev-ruby/pcaprub
+		dev-ruby/network_interface )
+	dev-ruby/bundler
+	development? ( dev-ruby/redcarpet
+			dev-ruby/yard
+			dev-ruby/rake
+			>=dev-ruby/factory_girl-4.1.0 )"
+ruby_add_bdepend "${RUBY_COMMON_DEPEND}
+		test? ( >=dev-ruby/factory_girl-4.1.0
+		dev-ruby/database_cleaner
+		>=dev-ruby/rspec-2.12
+		dev-ruby/shoulda-matchers
+		dev-ruby/timecop )"
 		#>=dev-ruby/rake-10.0.0[ruby_targets_ruby19] re-add when in gentoo. I'm not allowed to add it :-(
+ruby_add_rdepend "${RUBY_COMMON_DEPEND}"
 
-RDEPEND="${COMMON_DEPEND}
+COMMON_DEPEND="dev-db/postgresql-server
+	>=app-crypt/johntheripper-1.7.9-r1[-minimal]
+	net-analyzer/nmap"
+DEPEND+=" ${COMMON_DEPEND}"
+RDEPEND+=" ${COMMON_DEPEND}
 	>=app-admin/eselect-metasploit-0.10"
 
 RESTRICT="strip"
@@ -100,36 +104,31 @@ pkg_setup() {
 		fi
 		su postgres -c "createdb --owner=msf_test_user msf_test_database" || die
 	fi
+	ruby-ng_pkg_setup
 }
 
-src_prepare() {
+all_ruby_unpack() {
+	git-r3_src_unpack
+}
+
+all_ruby_prepare() {
 	# add psexec patch from pull request 2657 to allow custom exe templates from any files, bypassing most AVs
 	epatch "${FILESDIR}/agix_psexec_pull-2657.patch"
-	#so much cruft is bundled with msf that we will fix it in src_prepare to make intentions more clear
-
-	#stop asking about bloody bundler
-	#sed -i "/require 'bundler\/setup'/d" lib/msfenv.rb
 
 	#unbundle johntheripper, at least it now defaults to running the system version
-	rm -rf "${S}"/data/john/run.*
-	rm -rf "${S}"/data/john/src.tar.bz2
+	rm -r data/john/run.*
+	rm -r data/john/src.tar.bz2
 	#remove random "cpuinfo" binaries which a only needed to detect which bundled john to run
-	rm -rf "${S}"/data/cpuinfo
+	rm -r data/cpuinfo
 
-	#remove random included sources
-	rm -rf "${S}"/external/source
-
-	#remove unused "external" modules
-	rm -rf "${S}"/external/ruby-kissfft
-	rm -rf "${S}"/external/ruby-lorcon
-	rm -rf "${S}"/external/ruby-lorcon2
+	#remove random oudated collected garbage
+	rm -r external
 
 	#remove unneeded ruby bundler versioning files
 	#Gemfile.lock contains the versions tested by the msf team but not the hard requirements
-	#we regen this file with src_test
-	rm -f "${S}"/Gemfile.lock
-	#The Gemfile contains real known deps, we keep it for use in src_test
-	#rm -f "${S}"/Gemfile
+	#we regen this file in each_ruby_prepare
+	rm Gemfile.lock
+	#The Gemfile contains real known deps
 	#now we edit the Gemfile based on use flags
 	#even if we pass --without=blah bundler still calculates the deps and messes us up
 	if ! use pcap; then
@@ -149,79 +148,64 @@ src_prepare() {
 		sed -i -e "s#gem 'simplecov', '0.5.4', :require => false##" Gemfile || die
 		sed -i -e "s#require 'simplecov'##" spec/spec_helper.rb || die
 	fi
-	bundle install --local || die
-	bundle check || die
 
-	#they removed bundled armitage from releases so let's just keep it external
-	rm -rf "${S}"/armitage "${S}"/data/armitage
-
-	#whiles we are commiting fixes for filth, let's bogart msfupdate
-	rm "${S}"/msfupdate
-	echo "#!/bin/sh" > "${S}"/msfupdate
-	echo "echo \"[*]\"" >> "${S}"/msfupdate
-	echo "echo \"[*] Attempting to update the Metasploit Framework...\"" >> "${S}"/msfupdate
-	echo "echo \"[*]\"" >> "${S}"/msfupdate
-	echo "echo \"\"" >> "${S}"/msfupdate
+	#let's bogart msfupdate
+	rm msfupdate
+	echo "#!/bin/sh" > msfupdate
+	echo "echo \"[*]\"" >> msfupdate
+	echo "echo \"[*] Attempting to update the Metasploit Framework...\"" >> msfupdate
+	echo "echo \"[*]\"" >> msfupdate
+	echo "echo \"\"" >> msfupdate
 	if [[ ${PV} == "9999" ]] ; then
-		echo "ESVN_REVISION=HEAD emerge --oneshot \"=${CATEGORY}/${PF}\"" >> "${S}"/msfupdate
+		echo "ESVN_REVISION=HEAD emerge --oneshot \"=${CATEGORY}/${PF}\"" >> msfupdate
 	else
-		echo "echo \"Unable to update tagged version of metasploit.\"" >> "${S}"/msfupdate
-		echo "echo \"If you want the latest please install and eselect the live version (metasploit9999)\"" >> "${S}"/msfupdate
-		echo "echo \"emerge metasploit:9999 -vat && eselect metasploit set metasploit9999\"" >> "${S}"/msfupdate
+		echo "echo \"Unable to update tagged version of metasploit.\"" >> msfupdate
+		echo "echo \"If you want the latest please install and eselect the live version (metasploit9999)\"" >> msfupdate
+		echo "echo \"emerge metasploit:9999 -vat && eselect metasploit set metasploit9999\"" >> msfupdate
 	fi
 	#this is set executable in src_install
 
 	#install our database.yml file before tests are run
-	cp "${FILESDIR}"/database.yml "${S}"/config/
+	cp "${FILESDIR}"/database.yml config/
+
+}
+
+each_ruby_prepare() {
+	${RUBY} -S bundle install --local || die
+	${RUBY} -S bundle check || die
 
 	#force all metasploit executables to ruby19, ruby18 is not supported anymore and ruby20 is not supported yet
 	#https://dev.metasploit.com/redmine/issues/8357
-	for file in $(ls -1 "${S}"/msf*)
+	for file in $(ls -1 msf*)
 	do
 		#poorly adapted from python.eclass
-		sed -e "1s:^#![[:space:]]*\([^[:space:]]*/usr/bin/env[[:space:]]\)\?[[:space:]]*\([^[:space:]]*/\)\?ruby\([[:digit:]]\+\(\.[[:digit:]]\+\)\?\)\?\(\$\|[[:space:]].*\):#!\1\2ruby19:" -i "${file}" || die "Conversion of shebang in '${file}' failed"
+		sed -e "1s:^#![[:space:]]*\([^[:space:]]*/usr/bin/env[[:space:]]\)\?[[:space:]]*\([^[:space:]]*/\)\?ruby\([[:digit:]]\+\(\.[[:digit:]]\+\)\?\)\?\(\$\|[[:space:]].*\):#!\1\2${RUBY}:" -i "${file}" || die "Conversion of shebang in '${file}' failed"
 	done
 }
 
-#serialport does not work with ruby19 at this time
-#src_compile() {
-#	if use serialport; then
-#		cd "${S}"/external/serialport
-#		ruby extconf.rb
-#		emake
-#	fi
-#}
-
-src_test() {
+each_ruby_test() {
 	#rake --trace spec || die
-	#MSF_DATABASE_CONFIG="${S}"/config/database.yml
 	# https://dev.metasploit.com/redmine/issues/8425
-	rake db:migrate || die
-	RAILS_ENV=test MSF_DATABASE_CONFIG="${S}"/config/database.yml rake spec || die
+	${RUBY} -S rake db:migrate || die
+	RAILS_ENV=test MSF_DATABASE_CONFIG=config/database.yml ${RUBY} -S rake spec || die
 	su postgres -c "dropuser msf_test_user" || die "failed to cleanup msf_test-user"
 }
 
-src_install() {
+each_ruby_install() {
 	#Tests have already been run, we don't need this stuff
-	rm -rf "${S}"/spec
-	rm -rf "${S}"/test
+	rm -rf spec
+	rm -rf test
 
 	# should be as simple as copying everything into the target...
 	dodir /usr/$(get_libdir)/${PN}${SLOT}
-	cp -R "${S}"/* "${ED}"/usr/$(get_libdir)/${PN}${SLOT} || die "Copy files failed"
+	cp -R * "${ED}"/usr/$(get_libdir)/${PN}${SLOT} || die "Copy files failed"
 	rm -Rf "${ED}"/usr/$(get_libdir)/${PN}${SLOT}/documentation "${ED}"/usr/$(get_libdir)/${PN}${SLOT}/README.md
 	fowners -R root:0 /
 
 	# do not remove LICENSE, bug #238137
 	dodir /usr/share/doc/${PF}
-	cp -R "${S}"/{documentation,README.md} "${ED}"/usr/share/doc/${PF} || die
+	cp -R {documentation,README.md} "${ED}"/usr/share/doc/${PF} || die
 	dosym /usr/share/doc/${PF}/documentation /usr/$(get_libdir)/${PN}${SLOT}/documentation
-
-	#does not work with ruby19 at this time
-	#if use serialport; then
-	#	cd "${S}"/external/serialport
-	#	emake DESTDIR="${ED}" install
-	#fi
 
 	fperms +x /usr/$(get_libdir)/${PN}${SLOT}/msfupdate
 }
