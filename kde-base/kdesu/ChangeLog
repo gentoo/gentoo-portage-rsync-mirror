@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.294 2014/01/10 04:22:20 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/ChangeLog,v 1.295 2014/01/10 04:31:46 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kdesu-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kdesu-4.11.5 (10 Jan 2014)
 

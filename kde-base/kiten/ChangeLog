@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.283 2014/01/10 04:22:01 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.284 2014/01/10 04:31:54 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kiten-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kiten-4.11.5 (10 Jan 2014)
 

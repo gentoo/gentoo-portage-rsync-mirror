@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktouch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.292 2014/01/10 04:21:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktouch/ChangeLog,v 1.293 2014/01/10 04:32:07 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -ktouch-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *ktouch-4.11.5 (10 Jan 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bomber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.177 2014/01/10 04:21:33 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.178 2014/01/10 04:31:22 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -bomber-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *bomber-4.11.5 (10 Jan 2014)
 

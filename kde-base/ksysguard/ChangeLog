@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.318 2014/01/10 04:21:25 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.319 2014/01/10 04:32:05 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -ksysguard-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *ksysguard-4.11.5 (10 Jan 2014)
 

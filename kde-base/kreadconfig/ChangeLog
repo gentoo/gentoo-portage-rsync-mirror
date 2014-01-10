@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.263 2014/01/10 04:22:08 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.264 2014/01/10 04:32:01 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kreadconfig-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kreadconfig-4.11.5 (10 Jan 2014)
 

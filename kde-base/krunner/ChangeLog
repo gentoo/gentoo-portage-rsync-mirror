@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.205 2014/01/10 04:22:03 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.206 2014/01/10 04:32:03 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -krunner-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *krunner-4.11.5 (10 Jan 2014)
 

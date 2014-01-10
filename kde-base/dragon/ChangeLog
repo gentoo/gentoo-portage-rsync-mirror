@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dragon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dragon/ChangeLog,v 1.67 2014/01/10 04:22:00 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dragon/ChangeLog,v 1.68 2014/01/10 04:31:23 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -dragon-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *dragon-4.11.5 (10 Jan 2014)
 

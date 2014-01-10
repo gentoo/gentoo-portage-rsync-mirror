@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kioclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.198 2014/01/10 04:21:28 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.199 2014/01/10 04:31:53 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kioclient-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kioclient-4.11.5 (10 Jan 2014)
 

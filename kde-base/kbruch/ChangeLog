@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbruch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.279 2014/01/10 04:21:42 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbruch/ChangeLog,v 1.280 2014/01/10 04:31:27 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kbruch-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kbruch-4.11.5 (10 Jan 2014)
 

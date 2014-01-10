@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.287 2014/01/10 04:22:17 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.288 2014/01/10 04:31:32 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org>
+  -kdeartwork-meta-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kdeartwork-meta-4.11.5 (10 Jan 2014)
 

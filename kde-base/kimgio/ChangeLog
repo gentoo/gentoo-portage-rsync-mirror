@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kimgio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimgio/ChangeLog,v 1.15 2014/01/10 04:22:02 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimgio/ChangeLog,v 1.16 2014/01/10 04:31:53 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kimgio-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kimgio-4.11.5 (10 Jan 2014)
 

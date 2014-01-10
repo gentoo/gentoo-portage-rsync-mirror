@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kinfocenter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.193 2014/01/10 04:21:43 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.194 2014/01/10 04:31:53 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kinfocenter-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kinfocenter-4.11.5 (10 Jan 2014)
 

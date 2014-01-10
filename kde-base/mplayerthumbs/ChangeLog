@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mplayerthumbs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.167 2014/01/10 04:21:31 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mplayerthumbs/ChangeLog,v 1.168 2014/01/10 04:32:13 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -mplayerthumbs-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *mplayerthumbs-4.11.5 (10 Jan 2014)
 

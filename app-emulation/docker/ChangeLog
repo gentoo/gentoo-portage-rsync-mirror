@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.12 2014/01/10 03:39:29 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.13 2014/01/10 04:58:15 gregkh Exp $
+
+  10 Jan 2014; Greg Kroah-Hartman <gregkh@gentoo.org> -docker-0.6.3-r1.ebuild,
+  -docker-0.6.3.ebuild, -docker-0.6.5.ebuild, -docker-0.6.6.ebuild,
+  -docker-0.6.7.ebuild:
+  remove 0.6.* versions
 
 *docker-0.7.5 (10 Jan 2014)
 

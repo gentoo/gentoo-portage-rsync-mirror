@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.178 2014/01/10 04:21:59 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.179 2014/01/10 04:31:41 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org>
+  -kdepim-runtime-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kdepim-runtime-4.11.5 (10 Jan 2014)
 

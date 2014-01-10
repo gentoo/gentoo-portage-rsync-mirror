@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.181 2014/01/10 04:21:40 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.182 2014/01/10 04:32:03 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -ksirk-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *ksirk-4.11.5 (10 Jan 2014)
 

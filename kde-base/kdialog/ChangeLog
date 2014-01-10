@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.282 2014/01/10 04:21:31 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.283 2014/01/10 04:31:48 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kdialog-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *kdialog-4.11.5 (10 Jan 2014)
 

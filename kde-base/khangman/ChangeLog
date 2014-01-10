@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khangman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/ChangeLog,v 1.289 2014/01/10 04:21:40 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/ChangeLog,v 1.290 2014/01/10 04:31:51 creffett Exp $
+
+  10 Jan 2014; Chris Reffett <creffett@gentoo.org> -khangman-4.11.4.ebuild:
+  Remove KDE SC 4.11.4
 
 *khangman-4.11.5 (10 Jan 2014)
 
