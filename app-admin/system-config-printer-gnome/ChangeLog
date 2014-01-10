@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/system-config-printer-gnome
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.78 2013/12/08 17:36:04 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.79 2014/01/10 20:40:26 pacho Exp $
+
+*system-config-printer-gnome-1.4.3-r1 (10 Jan 2014)
+
+  10 Jan 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/system-config-printer-gnome-1.4.3-typo-dbus.patch,
+  +system-config-printer-gnome-1.4.3-r1.ebuild:
+  Fixed typo in D-Bus signature decorator, bug #496792 by taevago and poncho
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org>
   system-config-printer-gnome-1.4.3.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.0.3.ebuild,v 1.4 2013/12/08 19:50:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-1.0.3.ebuild,v 1.5 2014/01/10 20:46:44 pacho Exp $
 
 EAPI="5"
 VALA_MIN_API_VERSION="0.18"
@@ -26,7 +26,7 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.32.0:2
 	>=media-libs/lcms-2.5:2=
 	>=sys-auth/polkit-0.103
-	gusb? ( >=dev-libs/libgusb-0.1.1 )
+	gusb? ( >=dev-libs/libgusb-0.1.1[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 	scanner? ( media-gfx/sane-backends )
 	systemd? ( >=sys-apps/systemd-44 )

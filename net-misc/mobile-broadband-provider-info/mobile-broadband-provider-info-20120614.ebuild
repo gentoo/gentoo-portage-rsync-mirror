@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/mobile-broadband-provider-info-20120614.ebuild,v 1.11 2013/12/23 16:00:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/mobile-broadband-provider-info-20120614.ebuild,v 1.12 2014/01/10 20:58:15 pacho Exp $
 
 EAPI=4
 inherit gnome.org
 
 DESCRIPTION="Database of mobile broadband service providers"
-HOMEPAGE="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"
+HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager/MobileBroadband"
 
 LICENSE="CC-PD"
 SLOT="0"

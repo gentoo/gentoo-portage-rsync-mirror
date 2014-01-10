@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.2.ebuild,v 1.4 2013/11/20 13:15:49 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.8-r1.ebuild,v 1.1 2014/01/10 20:32:13 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ GNOME_ORG_MODULE="network-manager-applet"
 inherit eutils gnome2
 
 DESCRIPTION="GNOME applet for NetworkManager"
-HOMEPAGE="http://projects.gnome.org/NetworkManager/"
+HOMEPAGE="https://wiki.gnome.org/Projects/NetworkManager"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -54,4 +54,12 @@ src_configure() {
 		$(use_enable gconf migration) \
 		$(use_enable introspection) \
 		$(use_with modemmanager modem-manager-1)
+}
+
+src_prepare() {
+	# Revert "libnm-gtk: default to system CA certificates for validation for new connections"
+	# bug #497296 (from 'master')
+	epatch "${FILESDIR}/${PN}-0.9.8.8-revert-ca-certificates.patch"
+
+	gnome2_src_prepare
 }

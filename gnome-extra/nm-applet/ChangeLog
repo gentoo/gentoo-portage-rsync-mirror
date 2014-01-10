@@ -1,6 +1,17 @@
 # ChangeLog for gnome-extra/nm-applet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.110 2013/12/08 18:58:50 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.111 2014/01/10 20:32:13 pacho Exp $
+
+*nm-applet-0.9.8.8-r1 (10 Jan 2014)
+
+  10 Jan 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/nm-applet-0.9.8.8-revert-ca-certificates.patch,
+  +nm-applet-0.9.8.8-r1.ebuild,
+  -files/nm-applet-0.9.6.4-systray-icon-size.patch,
+  -files/nm-applet-0.9.8.4-autostart.patch, -nm-applet-0.9.6.4-r1.ebuild,
+  -nm-applet-0.9.8.2.ebuild, -nm-applet-0.9.8.4.ebuild:
+  Revert 'libnm-gtk: default to system CA certificates for validation for new
+  connections', bug #497296 by mateakos. Drop old.
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> nm-applet-0.9.8.8.ebuild:
   x86 stable, bug #478252
