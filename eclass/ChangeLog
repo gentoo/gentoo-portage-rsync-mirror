@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1110 2014/01/08 08:38:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1111 2014/01/10 13:59:44 zorry Exp $
+
+  10 Jan 2014; Magnus Granberg <zorry@gentoo.org> toolchain.eclass:
+  Add support for default ssp on >=gcc-4.8.2 #484714
 
   08 Jan 2014; Patrick Lauer <patrick@gentoo.org> apache-2.eclass,
   python-utils-r1.eclass:
