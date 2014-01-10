@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.287 2014/01/04 14:47:37 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.288 2014/01/10 02:41:56 zerochaos Exp $
+
+  08 Jan 2014; Rick Farina <zerochaos@gentoo.org> package.use.mask:
+  mask java use flag on metasploit since rjb doesn't work
 
   04 Jan 2014; Julian Ospald <hasufell@gentoo.org> package.use.mask:
   add useflag mask for dev-libs/DirectFB-1.7.1 version bump
