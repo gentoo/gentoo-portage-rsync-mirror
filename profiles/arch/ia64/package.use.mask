@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.132 2014/01/07 09:46:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.133 2014/01/11 08:24:16 pacho Exp $
 
 # Julian Ospald <hasufell@gentoo.org> (04 Jan 2014)
 # no keyword for media-libs/tremor
@@ -13,10 +13,6 @@ media-libs/libgphoto2 serial
 # Pacho Ramos <pacho@gentoo.org> (28 Nov 2013)
 # Missing keywords, bug #492820
 net-im/telepathy-connection-managers sipe
-
-# Pacho Ramos <pacho@gentoo.org> (17 Nov 2013)
-# Needs g-s-d, that needs systemd, bug #478076
->=net-libs/gnome-online-accounts-3.8 gnome
 
 # Mark Wright <gienah@gentoo.org> (26 Oct 2013)
 # template-haskell not yet available
