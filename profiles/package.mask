@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15326 2014/01/11 11:19:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15327 2014/01/11 13:25:20 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -310,7 +310,8 @@ dev-ruby/sqlite-ruby
 # Michał Górny <mgorny@gentoo.org> (15 Dec 2013)
 # Masked for testing due to almost complete redesign. It is now
 # completely split and no longer has an integrated GUI. Currently,
-# the only working GUI is the PyQt4 GUI.
+# the only working GUI is the PyQt4 GUI and it has license issues
+# (bug #494524).
 >=games-emulation/mupen64plus-2
 games-emulation/mupen64plus-core
 games-emulation/mupen64plus-audio-sdl
