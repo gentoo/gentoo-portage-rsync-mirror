@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=dev-libs/openssl sys-libs/ncurses firebird? ( dev-db/firebird ) gtk? ( dev-libs/atk dev-libs/glib:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 ) idn? ( net-dns/libidn ) mysql? ( virtual/mysql ) ncp? ( net-fs/ncpfs ) oracle? ( dev-db/oracle-instantclient-basic ) pcre? ( dev-libs/libpcre ) postgres? ( dev-db/postgresql-base ) ssl? ( >=net-libs/libssh-0.4.0 ) subversion? ( dev-vcs/subversion ) virtual/pkgconfig
+DESCRIPTION=Advanced parallized login hacker
+EAPI=5
+HOMEPAGE=http://www.thc.org/thc-hydra/
+IUSE=firebird gtk idn mysql ncp oracle pcre postgres ssl subversion
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=GPL-3
+RDEPEND=dev-libs/openssl sys-libs/ncurses firebird? ( dev-db/firebird ) gtk? ( dev-libs/atk dev-libs/glib:2 x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 ) idn? ( net-dns/libidn ) mysql? ( virtual/mysql ) ncp? ( net-fs/ncpfs ) oracle? ( dev-db/oracle-instantclient-basic ) pcre? ( dev-libs/libpcre ) postgres? ( dev-db/postgresql-base ) ssl? ( >=net-libs/libssh-0.4.0 ) subversion? ( dev-vcs/subversion )
+SLOT=0
+SRC_URI=http://freeworld.thc.org/releases/hydra-7.6.tar.gz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=25d43ca0d32bf87a49c19f2be88dab49

@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/hydra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.81 2013/11/20 01:18:04 zx2c4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.82 2014/01/11 12:22:54 jer Exp $
+
+*hydra-7.6 (11 Jan 2014)
+
+  11 Jan 2014; Jeroen Roovers <jer@gentoo.org> +hydra-7.6.ebuild:
+  Version bump (bug #497764 by Anton Bolshakov). Fix building against
+  sys-libs/ncurses[tinfo].
 
   20 Nov 2013; Jason A. Donenfeld <zx2c4@gentoo.org> hydra-7.5.ebuild:
   Don't link to svn and mysql if it's not enabled in the use flags. This is
