@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.88 2014/01/10 21:14:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.89 2014/01/11 09:37:52 pacho Exp $
+
+  11 Jan 2014; Pacho Ramos <pacho@gentoo.org> linux-logo-5.11-r2.ebuild:
+  ppc/sparc stable, bug #494578
 
   10 Jan 2014; Pacho Ramos <pacho@gentoo.org> linux-logo-5.11-r2.ebuild:
   amd64/x86 stable, bug #494578

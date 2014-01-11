@@ -1,5 +1,8 @@
 # ChangeLog for sys-apps/xinetd
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.76 2013/12/23 16:22:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.77 2014/01/11 09:34:33 pacho Exp $
+
+  11 Jan 2014; Pacho Ramos <pacho@gentoo.org> xinetd-2.3.15-r1.ebuild:
+  alpha/ia64, bug #490308
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> xinetd-2.3.15-r1.ebuild:
   Stable for sparc, wrt bug #490308
