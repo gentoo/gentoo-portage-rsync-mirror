@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/fim-0.4_pre.ebuild,v 1.2 2013/08/23 14:55:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/fim-0.4_pre.ebuild,v 1.3 2014/01/11 01:31:35 xmw Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="media-fonts/terminus-font
 	dia? ( app-office/dia )
 	djvu? ( app-text/djvu )
 	exif? ( media-libs/libexif )
-	gif? ( media-libs/giflib )
+	gif? ( <media-libs/giflib-4.2 )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )
 	jpeg? ( virtual/jpeg )
