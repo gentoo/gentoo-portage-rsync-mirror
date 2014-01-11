@@ -1,6 +1,13 @@
 # ChangeLog for dev-haskell/cgi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.33 2013/12/24 12:57:12 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cgi/ChangeLog,v 1.34 2014/01/11 14:59:52 slyfox Exp $
+
+*cgi-3001.1.8.4-r1 (11 Jan 2014)
+
+  11 Jan 2014; Sergei Trofimovich <slyfox@gentoo.org> +cgi-3001.1.8.4-r1.ebuild,
+  +files/cgi-3001.1.8.4-mci.patch:
+  Fix build failure against latest monadcatchio-mtl-0.3.1.0 (bug #497496 by
+  Jason Mours).
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> cgi-3001.1.8.4.ebuild:
   Stable for x86, wrt bug #491984
