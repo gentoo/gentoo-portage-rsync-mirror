@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mikmod
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.28 2013/10/26 07:29:11 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mikmod/ChangeLog,v 1.29 2014/01/11 14:30:04 aballier Exp $
+
+*mikmod-3.2.5 (11 Jan 2014)
+
+  11 Jan 2014; Alexis Ballier <aballier@gentoo.org> +mikmod-3.2.5.ebuild:
+  version bump
 
 *mikmod-3.2.4 (26 Oct 2013)
 
