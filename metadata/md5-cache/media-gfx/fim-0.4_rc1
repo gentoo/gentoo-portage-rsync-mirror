@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=media-fonts/terminus-font aalib? ( media-libs/aalib[slang] ) dia? ( app-office/dia ) djvu? ( app-text/djvu ) exif? ( media-libs/libexif ) gif? ( media-libs/giflib ) graphicsmagick? ( media-gfx/graphicsmagick ) imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) ) jpeg? ( virtual/jpeg ) pdf? ( app-text/poppler ) png? ( media-libs/libpng ) postscript? ( app-text/libspectre ) readline? ( sys-libs/readline ) sdl? ( media-libs/libsdl ) svg? ( media-gfx/inkscape ) tiff? ( media-libs/tiff ) xfig? ( media-gfx/xfig ) sys-devel/bison sys-devel/flex !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=Fbi-IMproved is a framebuffer image viewer based on Fbi and inspired from Vim
+EAPI=5
+HOMEPAGE=http://savannah.nongnu.org/projects/fbi-improved
+IUSE=aalib dia djvu exif fbcon gif graphicsmagick imagemagick jpeg pdf png postscript readline sdl static svg tiff xfig
+KEYWORDS=~amd64 ~arm ~x86
+LICENSE=GPL-2
+RDEPEND=media-fonts/terminus-font aalib? ( media-libs/aalib[slang] ) dia? ( app-office/dia ) djvu? ( app-text/djvu ) exif? ( media-libs/libexif ) gif? ( media-libs/giflib ) graphicsmagick? ( media-gfx/graphicsmagick ) imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) ) jpeg? ( virtual/jpeg ) pdf? ( app-text/poppler ) png? ( media-libs/libpng ) postscript? ( app-text/libspectre ) readline? ( sys-libs/readline ) sdl? ( media-libs/libsdl ) svg? ( media-gfx/inkscape ) tiff? ( media-libs/tiff ) xfig? ( media-gfx/xfig )
+SLOT=0
+SRC_URI=http://download.savannah.gnu.org/releases/fbi-improved/fim-0.4-rc1.tar.bz2
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=c977de1e16cff79073fd16f145d34f97
