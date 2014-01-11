@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.91 2013/09/29 14:36:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.92 2014/01/11 16:10:04 zlogene Exp $
+
+  11 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> package.use.mask:
+  Masking dev-vcs/git mediawiki (bug #497068)
 
   29 Sep 2013; Andreas K. Huettel <dilfridge@gentoo.org> make.defaults:
   sh goes unstable/testing as per council decision

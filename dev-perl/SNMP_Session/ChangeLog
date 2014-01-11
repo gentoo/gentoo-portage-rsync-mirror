@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/SNMP_Session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.32 2014/01/03 09:20:29 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SNMP_Session/ChangeLog,v 1.33 2014/01/11 16:20:58 zlogene Exp $
+
+  11 Jan 2014;  <zlogene@gentoo.org> -SNMP_Session-1.13.ebuild,
+  SNMP_Session-1.13-r1.ebuild:
+  alpha/ia64/ppc64/ppc/sparc stable wrt bug #495462; Drop old
 
   03 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> SNMP_Session-1.13-r1.ebuild:
   Stable on arm, wrt bug #495462
