@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.993 2014/01/10 16:19:22 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.994 2014/01/11 01:12:39 dirtyepic Exp $
+
+  11 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> gcc-4.8.2.ebuild:
+  Fix patchset and manifest. Once a distfile is uploaded it cannot be replaced
+  by another with the same name.
 
   10 Jan 2014; Magnus Granberg <zorry@gentoo.org> gcc-4.8.2-r1.ebuild:
   Removed the keywords from gcc-4.8.2-r1
