@@ -1,6 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.145 2014/01/09 03:39:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.146 2014/01/11 08:36:58 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (11 Jan 2013)
+sys-kernel/dracut -dracut_modules_systemd
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2013)
 # systemd[pam] cannot be provided for alpha, bug #438368

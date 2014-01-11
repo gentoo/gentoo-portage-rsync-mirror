@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8524 2014/01/11 08:29:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8525 2014/01/11 08:36:58 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Jan 2014; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
+  arch/ia64/package.use.mask, arch/powerpc/package.use.mask:
+  Drop obsolete masking for systemd in dracut on arches that now have systemd
 
   11 Jan 2014; Pacho Ramos <pacho@gentoo.org>
   arch/powerpc/ppc64/package.use.mask:
