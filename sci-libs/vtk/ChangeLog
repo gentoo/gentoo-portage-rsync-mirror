@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.111 2014/01/11 16:55:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.112 2014/01/11 17:31:17 jlec Exp $
+
+  11 Jan 2014; Justin Lecher <jlec@gentoo.org> +files/vtk-6.0.0-cg-path.patch:
+  Add missing patch
 
 *vtk-6.0.0 (11 Jan 2014)
 

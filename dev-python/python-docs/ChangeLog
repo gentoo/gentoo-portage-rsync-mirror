@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.186 2014/01/05 17:49:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.187 2014/01/11 17:13:57 floppym Exp $
+
+*python-docs-3.3.3 (11 Jan 2014)
+
+  11 Jan 2014; Mike Gilbert <floppym@gentoo.org> +python-docs-3.3.3.ebuild:
+  Bump.
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> python-docs-3.3.2.ebuild:
   Stable for ppc64, wrt bug #474128
