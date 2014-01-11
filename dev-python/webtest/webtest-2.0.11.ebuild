@@ -1,10 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.11.ebuild,v 1.1 2014/01/08 05:25:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.11.ebuild,v 1.2 2014/01/11 22:06:26 floppym Exp $
 
 EAPI=5
 
-# sigh.
 RESTRICT="test"
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -37,8 +36,8 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/pyquery[${PYTHON_USEDEP}]
 		dev-python/wsgiproxy2[${PYTHON_USEDEP}]
-		dev-python/paste
-		dev-python/pastedeploy )"
+		dev-python/pyquery[${PYTHON_USEDEP}]
+		virtual/python-unittest2[${PYTHON_USEDEP}] )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -48,7 +47,13 @@ python_compile_all() {
 	fi
 }
 
+src_test() {
+	DISTUTILS_NO_PARALLEL_BUILD=1 distutils-r1_src_test
+}
+
 python_test() {
+	# Tests raise ImportErrors with our default PYTHONPATH.
+	unset PYTHONPATH
 	nosetests || die "Tests fail with ${EPYTHON}"
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webtest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.74 2014/01/08 05:25:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/ChangeLog,v 1.75 2014/01/11 22:06:26 floppym Exp $
+
+  11 Jan 2014; Mike Gilbert <floppym@gentoo.org> webtest-1.4.3-r1.ebuild,
+  webtest-2.0.11.ebuild:
+  Fix tests in 1.4.3-r1, and port changes to 2.0.11. Bug 484222.
 
 *webtest-2.0.11 (08 Jan 2014)
 
