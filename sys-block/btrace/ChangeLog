@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/btrace
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.24 2012/02/21 08:11:00 robbat2 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/btrace/ChangeLog,v 1.25 2014/01/11 21:27:55 pacho Exp $
+
+  11 Jan 2014; Pacho Ramos <pacho@gentoo.org> -btrace-0.0.20071210202527.ebuild:
+  Drop old version that cannot be downloaded (#269121 by Jan Kunzmann)
 
 *btrace-1.0.3 (21 Feb 2012)
 
@@ -118,4 +121,3 @@
   07 May 2006; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
   +btrace-0.0.20060428050322.ebuild:
   Initial package by Robin H. Johnson <robbat2@gentoo.org>.
-

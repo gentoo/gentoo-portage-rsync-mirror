@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.3.6.ebuild,v 1.2 2014/01/11 21:25:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.2.22.ebuild,v 1.1 2014/01/11 21:25:31 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 inherit eutils linux-mod multilib python-single-r1 versionator toolchain-funcs
 
 MY_PV="${PV/beta/BETA}"
-MY_PV="${MY_PV/rc/RC}"
+MY_PV="${PV/rc/RC}"
 MY_P=VirtualBox-${MY_PV}
 DESCRIPTION="VirtualBox video driver"
 HOMEPAGE="http://www.virtualbox.org/"
@@ -22,7 +22,7 @@ IUSE="dri"
 RDEPEND=">=x11-base/xorg-server-1.7:=[-minimal]
 	x11-libs/libXcomposite"
 DEPEND="${RDEPEND}
-	>=dev-util/kbuild-0.1.9998_pre20131130
+	>=dev-util/kbuild-0.1.9998_pre20120806
 	${PYTHON_DEPS}
 	>=dev-lang/yasm-0.6.2
 	sys-power/iasl
@@ -87,7 +87,7 @@ src_prepare() {
 
 	# Patch to link with lazy on hardened #394757
 	if gcc-specs-now ; then
-		epatch "${FILESDIR}/${PN}-4.3.6-link-lazy.patch"
+		epatch "${FILESDIR}/${PN}-link-lazy.patch"
 	fi
 }
 
