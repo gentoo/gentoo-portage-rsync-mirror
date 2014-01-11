@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.457 2014/01/08 06:32:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.458 2014/01/10 23:48:57 pacho Exp $
+
+  10 Jan 2014; Pacho Ramos <pacho@gentoo.org> openldap-2.4.35-r1.ebuild:
+  ia64 stable, bug #486302
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> openldap-2.4.35-r1.ebuild,
   openldap-2.4.35.ebuild, openldap-2.4.38-r1.ebuild:
