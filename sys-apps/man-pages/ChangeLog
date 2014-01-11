@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.203 2014/01/07 08:52:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.204 2014/01/11 18:50:23 robbat2 Exp $
+
+*man-pages-3.56 (11 Jan 2014)
+
+  11 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> +man-pages-3.56.ebuild:
+  Bump.
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -man-pages-3.28.ebuild,
   -man-pages-3.29.ebuild, -man-pages-3.30.ebuild, -man-pages-3.31.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3-r1.ebuild,v 1.4 2014/01/11 09:36:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3-r1.ebuild,v 1.5 2014/01/11 18:57:15 robbat2 Exp $
 
 EAPI=5
 inherit autotools eutils perl-module user systemd
@@ -373,8 +373,13 @@ src_install() {
 		"${AMANDA_USER_HOMEDIR}" "${AMANDA_TAR_LISTDIR}" \
 		"${AMANDA_TMPDIR}" "${AMANDA_TMPDIR}/dumps" \
 		 "${AMANDA_USER_HOMEDIR}/amanda" \
-		 "${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}" \
-		 /etc/amanda /etc/amanda/${AMANDA_CONFIG_NAME}
+		 /etc/amanda
+
+	if ! use minimal ; then
+		fperms 0700 \
+			 "${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}" \
+	         /etc/amanda/${AMANDA_CONFIG_NAME}
+	fi
 
 	einfo "Setting setuid permissions"
 	amanda_permissions_fix "${D}"
