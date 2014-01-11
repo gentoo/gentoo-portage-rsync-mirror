@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fast_xs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.22 2013/12/26 18:56:59 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.23 2014/01/11 12:34:37 jer Exp $
+
+  11 Jan 2014; Jeroen Roovers <jer@gentoo.org> fast_xs-0.8.0-r1.ebuild:
+  Stable for HPPA (bug #497490).
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> fast_xs-0.8.0.ebuild:
   arm stable, bug #493780
