@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libevdev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/ChangeLog,v 1.8 2014/01/03 01:25:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevdev/ChangeLog,v 1.9 2014/01/11 10:56:15 mgorny Exp $
+
+*libevdev-0.6-r1 (11 Jan 2014)
+
+  11 Jan 2014; Michał Górny <mgorny@gentoo.org> +libevdev-0.6-r1.ebuild:
+  Backport the python-any-r1 conversion from x11 overlay.
 
   03 Jan 2014; Matt Turner <mattst88@gentoo.org> libevdev-0.6.ebuild:
   Restrict tests, since they need to be run as root.
