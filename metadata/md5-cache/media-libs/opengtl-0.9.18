@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=media-libs/libpng:0= >=sys-devel/llvm-3.1 test? ( dev-util/lcov ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DEPEND=media-libs/libpng:0= ( <sys-devel/llvm-3.4 >=sys-devel/llvm-3.1 ) test? ( dev-util/lcov ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 DESCRIPTION=Collection of libraries for graphics transformation algorithms
 EAPI=5
 HOMEPAGE=http://opengtl.org/
 IUSE=debug test
 KEYWORDS=amd64 ~arm x86
 LICENSE=LGPL-2
-RDEPEND=media-libs/libpng:0= >=sys-devel/llvm-3.1
+RDEPEND=media-libs/libpng:0= ( <sys-devel/llvm-3.4 >=sys-devel/llvm-3.1 )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.opengtl.org/OpenGTL-0.9.18.tar.bz2 http://dev.gentoo.org/~creffett/distfiles/opengtl-0.9.18-llvm-3.3.patch
 _eclasses_=cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=3e9054230b678699ddebfad1bb8b930a
+_md5_=de2f1361a0539b313ab0e937ddcbe62a
