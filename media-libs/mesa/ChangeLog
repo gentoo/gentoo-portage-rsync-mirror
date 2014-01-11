@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.527 2014/01/09 22:26:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.528 2014/01/11 11:15:22 mgorny Exp $
+
+  11 Jan 2014; Michał Górny <mgorny@gentoo.org> mesa-9.1.6.ebuild,
+  mesa-9.2.5.ebuild:
+  Depend on llvm < 3.4 where 3.4 is not supported.
 
   09 Jan 2014; Matt Turner <mattst88@gentoo.org> -mesa-10.0.0.ebuild,
   -mesa-10.0.0_rc2.ebuild, -mesa-10.0.1.ebuild, -mesa-9.2.4.ebuild:

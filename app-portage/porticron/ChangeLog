@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/porticron
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.31 2013/06/20 06:59:52 hollow Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.33 2014/01/11 11:21:47 xmw Exp $
+
+*porticron-0.7_p20131113 (11 Jan 2014)
+
+  11 Jan 2014; Michael Weber <xmw@gentoo.org> +porticron-0.7_p20131113.ebuild:
+  Version bump, add ~ppc64 (bug 459188).
+
+  11 Jan 2014; Michael Weber <xmw@gentoo.org> metadata.xml:
+  Taking maint.
 
   20 Jun 2013; Benedikt Böhm <hollow@gentoo.org> metadata.xml:
   remove myself from maintainers
@@ -129,4 +137,3 @@
   28 Oct 2008; Benedikt Böhm <hollow@gentoo.org> +files/porticron-0.1,
   +metadata.xml, +porticron-0.1.ebuild:
   initial version
-

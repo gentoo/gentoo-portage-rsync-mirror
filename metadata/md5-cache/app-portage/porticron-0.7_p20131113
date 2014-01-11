@@ -1,0 +1,11 @@
+DEFINED_PHASES=install unpack
+DESCRIPTION=cron script to sync portage and send update mails to root
+EAPI=5
+HOMEPAGE=http://github.com/hollow/porticron
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
+LICENSE=BSD
+RDEPEND=net-dns/bind-tools
+SLOT=0
+SRC_URI=https://github.com/hollow/porticron/tarball/df727fe -> porticron-0.7_p20131113.tar.gz
+_eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_md5_=ff9ba975ca9d33894bde802f90bc6b49

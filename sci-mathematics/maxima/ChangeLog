@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/maxima
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.107 2013/10/14 10:59:26 grozin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.108 2014/01/11 11:21:18 grozin Exp $
+
+*maxima-5.32.1 (11 Jan 2014)
+
+  11 Jan 2014; Andrey Grozin <grozin@gentoo.org> +maxima-5.32.1.ebuild:
+  Version bump
 
 *maxima-5.31.2 (14 Oct 2013)
 

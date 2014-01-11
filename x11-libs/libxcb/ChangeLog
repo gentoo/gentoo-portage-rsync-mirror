@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libxcb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.127 2013/11/23 11:50:01 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.128 2014/01/11 11:15:20 mgorny Exp $
+
+*libxcb-1.9.3-r1 (11 Jan 2014)
+
+  11 Jan 2014; Michał Górny <mgorny@gentoo.org> +libxcb-1.9.3-r1.ebuild:
+  Backport the python-any-r1 conversion from x11 overlay.
 
 *libxcb-1.9.1-r1 (23 Nov 2013)
 
