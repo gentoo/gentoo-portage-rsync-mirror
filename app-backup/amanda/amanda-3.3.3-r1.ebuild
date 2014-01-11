@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3-r1.ebuild,v 1.5 2014/01/11 18:57:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.3-r1.ebuild,v 1.6 2014/01/11 19:24:51 robbat2 Exp $
 
 EAPI=5
 inherit autotools eutils perl-module user systemd
@@ -283,6 +283,9 @@ src_configure() {
 
 	# build manpages
 	myconf="${myconf} --enable-manpage-build"
+
+	# bug #483120
+	tc-export AR
 
 	econf \
 		$(use_with readline) \
