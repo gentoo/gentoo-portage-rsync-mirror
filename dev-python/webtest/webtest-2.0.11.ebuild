@@ -1,10 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.11.ebuild,v 1.2 2014/01/11 22:06:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.11.ebuild,v 1.3 2014/01/11 22:32:26 floppym Exp $
 
 EAPI=5
-
-RESTRICT="test"
 
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
@@ -35,11 +33,15 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( dev-python/nose[${PYTHON_USEDEP}]
 		dev-python/pyquery[${PYTHON_USEDEP}]
+		dev-python/pastedeploy[${PYTHON_USEDEP}]
 		dev-python/wsgiproxy2[${PYTHON_USEDEP}]
-		dev-python/pyquery[${PYTHON_USEDEP}]
-		virtual/python-unittest2[${PYTHON_USEDEP}] )"
+		virtual/python-unittest2[${PYTHON_USEDEP}]
+	)"
 
 S="${WORKDIR}/${MY_P}"
+
+# Makes testing easier; otherwise we get errors from pkg_resources.
+DISTUTILS_IN_SOURCE_BUILD=1
 
 python_compile_all() {
 	if use doc; then
@@ -53,7 +55,7 @@ src_test() {
 
 python_test() {
 	# Tests raise ImportErrors with our default PYTHONPATH.
-	unset PYTHONPATH
+	local -x PYTHONPATH=
 	nosetests || die "Tests fail with ${EPYTHON}"
 }
 
