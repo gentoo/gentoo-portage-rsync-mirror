@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/x11
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.32 2013/07/29 05:26:28 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.33 2014/01/11 15:20:19 slyfox Exp $
+
+  11 Jan 2014; Sergei Trofimovich <slyfox@gentoo.org> x11-1.6.1.1.ebuild:
+  Raise lower bound up to ghc-7.4 (uses 'void' from Control.Monad). Bug #485200
+  by Jan Matějka .
 
   29 Jul 2013; Agostino Sarubbo <ago@gentoo.org> x11-1.6.1.1.ebuild:
   Stable for x86, wrt bug #478288

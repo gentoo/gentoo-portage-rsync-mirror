@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.6.1.1.ebuild,v 1.3 2013/07/29 05:26:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/x11-1.6.1.1.ebuild,v 1.4 2014/01/11 15:20:19 slyfox Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ KEYWORDS="amd64 ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="+screensaver +xinerama"
 
 RDEPEND="dev-haskell/data-default:=[profile?]
-		>=dev-lang/ghc-6.10.4:=
+		>=dev-lang/ghc-7.4.1:=
 		x11-libs/libX11
 		x11-libs/libXext
 		x11-libs/libXrandr
