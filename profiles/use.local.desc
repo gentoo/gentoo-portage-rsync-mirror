@@ -5899,7 +5899,11 @@ sci-libs/vtk:R - Enable support for dev-lang/R
 sci-libs/vtk:boost - Add support for boost
 sci-libs/vtk:cg - Use nvidia's cg shaders
 sci-libs/vtk:chemistry - Add chemistry support
+sci-libs/vtk:imaging - Building Imaging modules
+sci-libs/vtk:offscreen - Offscreen rendering through OSMesa
 sci-libs/vtk:patented - Build patented classes
+sci-libs/vtk:rendering - Building Redering modules
+sci-libs/vtk:views - Building Views modules
 sci-mathematics/Macaulay2:optimization - Accept upstream's choices for -O option, i.e. -O3 almost everywhere.
 sci-mathematics/agda:epic - Add support for the epic compiler.
 sci-mathematics/agda:stdlib - Install the standard library.
