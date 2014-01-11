@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/zinnia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.9 2014/01/05 14:01:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zinnia/ChangeLog,v 1.10 2014/01/11 06:59:23 naota Exp $
+
+  11 Jan 2014; Naohiro Aota <naota@gentoo.org> zinnia-0.06-r3.ebuild:
+  Proper empty array setting. #497670
 
 *zinnia-0.06-r3 (05 Jan 2014)
 
