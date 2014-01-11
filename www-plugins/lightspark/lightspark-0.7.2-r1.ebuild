@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.7.2-r1.ebuild,v 1.2 2013/11/23 13:52:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.7.2-r1.ebuild,v 1.3 2014/01/11 10:22:03 mgorny Exp $
 
 EAPI=4
 inherit cmake-utils nsplugins multilib toolchain-funcs
@@ -21,7 +21,10 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	media-libs/libpng
 	media-libs/libsdl
 	>=sys-devel/gcc-4.6.0[cxx]
-	>=sys-devel/llvm-3
+	(
+		<sys-devel/llvm-3.4
+		>=sys-devel/llvm-3
+	)
 	x11-libs/cairo
 	x11-libs/gtk+:2
 	x11-libs/libX11

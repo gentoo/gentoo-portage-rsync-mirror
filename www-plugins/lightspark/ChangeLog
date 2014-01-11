@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/lightspark
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.54 2013/11/23 13:52:37 chithanh Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.55 2014/01/11 10:22:03 mgorny Exp $
+
+  11 Jan 2014; Michał Górny <mgorny@gentoo.org> lightspark-0.7.2-r1.ebuild:
+  Depend on llvm < 3.4, since 3.4 does not work.
 
   23 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   +files/lightspark-0.7.2-ffmpeg20.patch, lightspark-0.7.2-r1.ebuild:

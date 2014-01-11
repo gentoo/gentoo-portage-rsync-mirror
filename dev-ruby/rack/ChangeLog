@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.116 2013/12/26 16:48:54 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.117 2014/01/11 10:13:21 graaff Exp $
+
+  11 Jan 2014; Hans de Graaff <graaff@gentoo.org> -rack-1.5.2.ebuild:
+  Cleanup.
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> rack-1.4.5.ebuild:
   arm stable, bug #493780
