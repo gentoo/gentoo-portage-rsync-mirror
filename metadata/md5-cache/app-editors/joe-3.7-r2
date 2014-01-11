@@ -4,10 +4,10 @@ DESCRIPTION=A free ASCII-Text Screen Editor for UNIX
 EAPI=3
 HOMEPAGE=http://sourceforge.net/projects/joe-editor/
 IUSE=xterm
-KEYWORDS=~alpha ~amd64 arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris
+KEYWORDS=~alpha amd64 arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris
 LICENSE=GPL-1
 RDEPEND=xterm? ( >=x11-terms/xterm-239 )
 SLOT=0
 SRC_URI=mirror://sourceforge/joe-editor/joe-3.7.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=f99606408d7e8378e41c8e07850e715a
+_md5_=be72127446a1e929ad1687d5f03a873d
