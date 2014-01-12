@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/xmlcopyeditor
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.27 2013/04/06 05:54:59 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xmlcopyeditor/ChangeLog,v 1.28 2014/01/12 10:53:42 hwoarang Exp $
+
+*xmlcopyeditor-1.2.0.12 (12 Jan 2014)
+
+  12 Jan 2014; Markos Chandras <hwoarang@gentoo.org>
+  +xmlcopyeditor-1.2.0.12.ebuild, metadata.xml:
+  Version bump by David Abbott <dabbott@gentoo.org>. Bug #497724
 
   06 Apr 2013; Sergey Popov <pinkbyte@gentoo.org> xmlcopyeditor-1.2.0.9.ebuild:
   Restore app-text/aspell dependency, wrt bug #464698
