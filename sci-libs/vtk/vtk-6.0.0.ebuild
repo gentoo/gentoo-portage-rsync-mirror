@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.0.0.ebuild,v 1.1 2014/01/11 16:55:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.0.0.ebuild,v 1.2 2014/01/12 09:15:22 jlec Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ RDEPEND="
 	sys-libs/zlib
 	virtual/jpeg
 	virtual/opengl
-	x11-libs/gl2ps
+	>=x11-libs/gl2ps-1.3.8
 	x11-libs/libX11
 	x11-libs/libXmu
 	x11-libs/libXt

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numexpr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.14 2013/10/21 08:07:32 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.15 2014/01/12 09:26:52 jlec Exp $
+
+  12 Jan 2014; Justin Lecher <jlec@gentoo.org> numexpr-2.1.ebuild,
+  numexpr-2.2.ebuild, numexpr-2.2.2.ebuild, metadata.xml:
+  Fix src_prepare handling in distutils-r1.eclass
 
 *numexpr-2.2.2 (21 Oct 2013)
 
