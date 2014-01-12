@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.63.ebuild,v 1.1 2014/01/08 22:33:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.63-r1.ebuild,v 1.1 2014/01/12 02:05:54 xmw Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	emake CFGDIR="/usr/share/${PN}/cfg"
 	if use qt4 ; then
 		pushd gui
 		qt4-r2_src_compile
@@ -47,6 +47,8 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}"
 	dodoc readme.txt
+	insinto "/usr/share/${PN}/cfg"
+	doins cfg/*.cfg
 	if use qt4 ; then
 		dobin gui/${PN}-gui
 		dodoc readme_gui.txt gui/{projectfile.txt,gui.cppcheck}
