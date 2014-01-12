@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install preinst prepare setup
+DEPEND=>=virtual/jdk-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+DESCRIPTION=High Performance Inter-Thread Messaging Library
+EAPI=5
+HOMEPAGE=http://lmax-exchange.github.io/disruptor/
+IUSE=elibc_FreeBSD doc source elibc_FreeBSD
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=>=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
+SLOT=0
+SRC_URI=http://repo1.maven.org/maven2/com/lmax/disruptor/3.2.0/disruptor-3.2.0-sources.jar
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-pkg-simple	d7cef87260947d4cce245c4f026377e2	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=253f65ba3d1ddb210a1aede026a25a65
