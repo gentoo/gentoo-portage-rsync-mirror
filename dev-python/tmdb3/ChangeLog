@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/tmdb3
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tmdb3/ChangeLog,v 1.1 2014/01/11 23:04:42 floppym Exp $
+
+*tmdb3-0.6.17 (11 Jan 2014)
+
+  11 Jan 2014; Mike Gilbert <floppym@gentoo.org> +metadata.xml,
+  +tmdb3-0.6.17.ebuild:
+  New package, dependency of net-misc/flexget.

@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/flexget
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.46 2013/10/16 02:36:59 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.48 2014/01/11 23:11:46 floppym Exp $
+
+  11 Jan 2014; Mike Gilbert <floppym@gentoo.org> flexget-9999.ebuild:
+  Convert to git-r3.
+
+*flexget-1.2.31 (11 Jan 2014)
+
+  11 Jan 2014; Mike Gilbert <floppym@gentoo.org> +flexget-1.2.31.ebuild,
+  flexget-9999.ebuild:
+  Version bump.
 
 *flexget-1.1.138 (16 Oct 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.44 2014/01/11 23:11:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.2.31.ebuild,v 1.1 2014/01/11 23:10:09 floppym Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ ${PV} != 9999 ]]; then
 		http://download.flexget.com/archive/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 else
-	inherit git-r3
+	inherit git-2
 	EGIT_REPO_URI="git://github.com/Flexget/Flexget.git
 		https://github.com/Flexget/Flexget.git"
 fi
