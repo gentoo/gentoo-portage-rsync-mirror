@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31-r2.ebuild,v 1.14 2013/10/12 12:14:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.31-r2.ebuild,v 1.15 2014/01/12 15:45:11 blueness Exp $
 
 EAPI="5"
 
@@ -44,6 +44,7 @@ COMMON_DEPEND="
 		gtk? ( dev-dotnet/gtk-sharp )
 	)
 	python? (
+		${PYTHON_DEPS}
 		gtk? ( dev-python/pygtk )
 		dbus? ( dev-python/dbus-python )
 	)
