@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r5.ebuild,v 1.2 2014/01/08 06:38:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r5.ebuild,v 1.3 2014/01/12 20:06:08 pacho Exp $
 
 EAPI=5
 inherit eutils multilib readme.gentoo toolchain-funcs user
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scponly/${P}.tgz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="+sftp scp winscp gftp rsync unison subversion wildcards quota passwd logging"
 REQUIRED_USE="
 	|| ( sftp scp winscp rsync unison subversion )

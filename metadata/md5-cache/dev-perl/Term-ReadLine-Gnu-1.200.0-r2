@@ -3,10 +3,10 @@ DEPEND=>=sys-libs/readline-6.2 dev-lang/perl:=[-build(-)]
 DESCRIPTION=GNU Readline XS library wrapper
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Term-ReadLine-Gnu/
-KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~sparc ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=sys-libs/readline-6.2 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/H/HA/HAYASHI/Term-ReadLine-Gnu-1.20.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=2233e47a7598c2ce208f4f1ac6c3af2e
+_md5_=f3c77e30b4527ad551d97e6b61f4bfc0

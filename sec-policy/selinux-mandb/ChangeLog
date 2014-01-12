@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-mandb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mandb/ChangeLog,v 1.2 2013/12/29 14:39:30 swift Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mandb/ChangeLog,v 1.3 2014/01/12 20:22:41 swift Exp $
+
+  12 Jan 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-mandb-2.20130424-r4.ebuild:
+  Stabilize 2.20130424-r4
 
   29 Dec 2013; Sven Vermeulen <swift@gentoo.org>
   selinux-mandb-2.20130424-r2.ebuild:
@@ -16,4 +20,3 @@
   +selinux-mandb-2.20130424-r4.ebuild, +selinux-mandb-9999.ebuild,
   +metadata.xml:
   Adding selinux-mandb to the tree
-

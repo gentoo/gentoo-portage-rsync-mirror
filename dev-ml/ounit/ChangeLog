@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.37 2013/10/12 18:28:41 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.38 2014/01/12 20:09:43 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> ounit-2.0.0.ebuild:
+  amd64 stable, bug #495418
 
 *ounit-2.0.0 (12 Oct 2013)
 
@@ -132,4 +135,3 @@
   ounit-1.0.0.ebuild:
   OUnit is a unit test framework for ocaml, thanks to Bardur Arantsson
   <gentoo@scientician.net> for the submission (bug #51255).
-

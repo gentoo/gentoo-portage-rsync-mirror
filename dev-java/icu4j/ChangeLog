@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/icu4j
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.60 2012/12/08 12:34:03 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icu4j/ChangeLog,v 1.62 2014/01/12 20:31:01 tomwij Exp $
+
+*icu4j-52.1 (12 Jan 2014)
+
+  12 Jan 2014; Tom Wijsman <TomWij@gentoo.org>
+  +files/icu4j-52.1-fix-test-DataDrivenFormat-ConsistentPivot-1.patch,
+  +files/icu4j-52.1-fix-test-DataDrivenFormat-ConsistentPivot-2.patch,
+  +icu4j-52.1.ebuild:
+  Version bump to 52.1; fixes bug #497930, reported by Arfrever Frehtes
+  Taifersar Arahesis whom also found a fix for a failing test.
 
   08 Dec 2012; Agostino Sarubbo <ago@gentoo.org> icu4j-49.1.ebuild:
   Stable for ppc64, wrt bug #428078
@@ -247,4 +256,3 @@
   19 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +icu4j-3.0.ebuild:
   initial import, ebuild created by me as a dep
-

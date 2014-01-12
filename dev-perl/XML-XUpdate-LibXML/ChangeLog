@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-XUpdate-LibXML
-# Copyright 2002-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.27 2013/08/27 13:23:04 idella4 Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.28 2014/01/12 20:12:51 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org>
+  XML-XUpdate-LibXML-0.6.0-r1.ebuild:
+  amd64 stable, bug #495526
 
 *XML-XUpdate-LibXML-0.6.0-r1 (27 Aug 2013)
 

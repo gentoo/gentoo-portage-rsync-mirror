@@ -4,10 +4,10 @@ DESCRIPTION=Adds a lot of image formats to Tcl/Tk
 EAPI=5
 HOMEPAGE=http://tkimg.sourceforge.net/
 IUSE=doc test static-libs test
-KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~ppc ~x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 RDEPEND=dev-lang/tk >=dev-tcltk/tcllib-1.11 media-libs/tiff:0= >=media-libs/libpng-1.6:0= >=sys-libs/zlib-1.2.7:= x11-libs/libX11 virtual/jpeg
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/tkimg-1.4-patchset-1.tar.xz mirror://sourceforge/tkimg/1.4/tkimg1.4.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=e9fbe348cccc7273d98b12d36ec7e4f3
+_md5_=4cc83de918156e20f354d44ef9fc208b

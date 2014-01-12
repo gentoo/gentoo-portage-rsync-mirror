@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustalw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/ChangeLog,v 1.30 2014/01/06 08:46:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/ChangeLog,v 1.31 2014/01/12 20:19:34 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> clustalw-1.83-r3.ebuild:
+  amd64 stable, bug #497214
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> +clustalw-1.83-r2.ebuild,
   +clustalw-1.83-r3.ebuild:

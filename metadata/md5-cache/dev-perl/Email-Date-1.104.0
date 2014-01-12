@@ -3,10 +3,10 @@ DEPEND=>=dev-perl/TimeDate-1.16 >=dev-perl/Email-Abstract-2.13.1 dev-perl/Email-
 DESCRIPTION=Find and Format Date Headers
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/Email-Date/
-KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 ~ppc ~ppc64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=dev-perl/TimeDate-1.16 >=dev-perl/Email-Abstract-2.13.1 dev-perl/Email-Date-Format virtual/perl-Time-Local virtual/perl-Time-Piece || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/R/RJ/RJBS/Email-Date-1.104.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=ae68d0ca72fb6a780ebad4cfa83f956a
+_md5_=7d66d35a1897d55ddfb0b91af82c8df8

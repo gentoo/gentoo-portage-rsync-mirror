@@ -4,11 +4,11 @@ DESCRIPTION=Powerful IMAP/Maildir synchronization and reader support
 EAPI=5
 HOMEPAGE=http://offlineimap.org
 IUSE=doc ssl sqlite python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
-KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
+KEYWORDS=~alpha amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 LICENSE=GPL-2
 RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[threads,sqlite?,ssl?] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads,sqlite?,ssl?] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?]
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=https://github.com/OfflineIMAP/offlineimap/tarball/v6.5.5 -> offlineimap-6.5.5.tar.gz
 _eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=ed787af88f834a0ec34b28c420de77ac
+_md5_=445d22bd32ae4fe19ae67ea50106815e

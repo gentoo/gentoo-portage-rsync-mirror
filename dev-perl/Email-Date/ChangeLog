@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Date
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/ChangeLog,v 1.34 2013/08/25 07:52:54 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/ChangeLog,v 1.35 2014/01/12 20:11:08 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> Email-Date-1.104.0.ebuild:
+  amd64 stable, bug #492132
 
 *Email-Date-1.104.0 (25 Aug 2013)
 

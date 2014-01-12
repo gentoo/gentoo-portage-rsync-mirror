@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-rngd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rngd/ChangeLog,v 1.1 2013/12/16 14:40:39 swift Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rngd/ChangeLog,v 1.2 2014/01/12 20:22:31 swift Exp $
+
+  12 Jan 2014; Sven Vermeulen <swift@gentoo.org>
+  selinux-rngd-2.20130424-r4.ebuild:
+  Stabilize 2.20130424-r4
 
 *selinux-rngd-9999 (16 Dec 2013)
 *selinux-rngd-2.20130424-r4 (16 Dec 2013)
@@ -10,4 +14,3 @@
   +selinux-rngd-2.20130424-r2.ebuild, +selinux-rngd-2.20130424-r4.ebuild,
   +selinux-rngd-9999.ebuild, +metadata.xml:
   Adding policy for rngd (rng-tools)
-

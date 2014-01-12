@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuseiso
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.6 2013/08/23 10:30:29 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuseiso/ChangeLog,v 1.7 2014/01/12 20:29:21 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> fuseiso-20070708-r1.ebuild:
+  amd64 stable, bug #495952
 
 *fuseiso-20070708-r1 (23 Aug 2013)
 
@@ -28,4 +31,3 @@
   25 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   +fuseiso-20070708.ebuild, +files/fuseiso-20070708-largeiso.patch:
   Initial commit wrt #143307, thanks to Thomas Fischer for reporting.
-

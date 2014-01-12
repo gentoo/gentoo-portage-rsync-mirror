@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-amanda/selinux-amanda-2.20130424-r4.ebuild,v 1.1 2013/12/11 13:20:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-amanda/selinux-amanda-2.20130424-r4.ebuild,v 1.2 2014/01/12 20:22:30 swift Exp $
 EAPI="4"
 
 IUSE=""
@@ -11,7 +11,7 @@ inherit selinux-policy-2
 
 DESCRIPTION="SELinux policy for amanda"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="${DEPEND}
 	sec-policy/selinux-inetd
 "

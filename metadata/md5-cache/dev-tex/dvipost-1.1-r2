@@ -3,10 +3,10 @@ DEPEND=virtual/latex-base >=sys-apps/texinfo-4.2-r5
 DESCRIPTION=post processor for dvi files
 EAPI=2
 HOMEPAGE=http://efeu.cybertec.at/index_en.html
-KEYWORDS=~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos
+KEYWORDS=~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos
 LICENSE=GPL-2
 RDEPEND=virtual/latex-base
 SLOT=0
 SRC_URI=http://efeu.cybertec.at/dist/dvipost-1.1.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	latex-package	999c52f495ebb8dd3b69bda982bb2817	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=38b09e747a39b20a90cd346b299dde2c
+_md5_=845d397e9ee28e0eb58c839885ef30f8

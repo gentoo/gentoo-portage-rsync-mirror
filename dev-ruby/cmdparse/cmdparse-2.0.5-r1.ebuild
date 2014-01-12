@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/cmdparse-2.0.5-r1.ebuild,v 1.1 2013/10/06 12:01:22 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cmdparse/cmdparse-2.0.5-r1.ebuild,v 1.2 2014/01/12 20:18:41 pacho Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 DESCRIPTION="Advanced command line parser supporting commands"
 HOMEPAGE="http://cmdparse.rubyforge.org/"
 
-KEYWORDS="~amd64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc64 ~x86"
 LICENSE="LGPL-3"
 SLOT="0"
 

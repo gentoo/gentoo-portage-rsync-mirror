@@ -4,11 +4,11 @@ DESCRIPTION=A Python extension for wpa_supplicant/hostapd control interface acce
 EAPI=5
 HOMEPAGE=http://projects.otaku42.de/wiki/PythonWpaCtrl
 IUSE=python_targets_python2_6 python_targets_python2_7
-KEYWORDS=~amd64 ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 ~ppc ~ppc64 ~x86
 LICENSE=|| ( GPL-2 BSD )
 RDEPEND=python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
 SLOT=0
 SRC_URI=mirror://gentoo/python-wpactrl-20081102.tar.bz2
 _eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=1bad9c03e370366068de039092034486
+_md5_=bd28026f33daeb8d8054e11c0aaec08b

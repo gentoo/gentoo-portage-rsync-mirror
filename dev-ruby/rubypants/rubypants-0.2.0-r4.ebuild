@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0-r4.ebuild,v 1.1 2013/10/29 23:18:58 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0-r4.ebuild,v 1.2 2014/01/12 20:18:13 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://chneukirchen.org/repos/rubypants/README"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 all_ruby_prepare() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.24 2014/01/03 03:58:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.25 2014/01/12 20:15:51 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> pip-1.4.1.ebuild:
+  amd64 stable, bug #490380
 
 *pip-1.5 (03 Jan 2014)
 

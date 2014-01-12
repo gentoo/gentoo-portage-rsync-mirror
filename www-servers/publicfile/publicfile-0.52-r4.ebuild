@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r4.ebuild,v 1.2 2013/12/25 20:37:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/publicfile/publicfile-0.52-r4.ebuild,v 1.3 2014/01/12 20:08:49 pacho Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://cr.yp.to/publicfile/${P}.tar.gz
 
 LICENSE="all-rights-reserved"
 SLOT="0"
-KEYWORDS=" ~amd64 ~ppc ~x86"
+KEYWORDS=" amd64 ~ppc ~x86"
 IUSE="selinux vanilla"
 RESTRICT="mirror bindist test"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.9.3.ebuild,v 1.3 2013/11/10 15:03:54 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-0.9.3.ebuild,v 1.4 2014/01/12 20:26:35 pacho Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ DOCS=( CHANGES README.rst )
 inherit distutils-r1
 
 if [[ "${PV}" != *"9999"* ]] ; then
-	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 else
 	KEYWORDS=""

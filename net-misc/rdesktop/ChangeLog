@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.147 2014/01/11 17:14:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.148 2014/01/12 20:30:14 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> rdesktop-1.8.1.ebuild:
+  amd64 stable, bug #495884
 
   11 Jan 2014; Markus Meier <maekke@gentoo.org> rdesktop-1.8.1.ebuild:
   arm stable, bug #495884
