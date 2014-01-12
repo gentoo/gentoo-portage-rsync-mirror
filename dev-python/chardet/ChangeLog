@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/chardet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.32 2014/01/11 23:28:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chardet/ChangeLog,v 1.33 2014/01/12 00:25:27 floppym Exp $
+
+  12 Jan 2014; Mike Gilbert <floppym@gentoo.org> chardet-2.2.1.ebuild:
+  Update DESCRIPTION.
 
 *chardet-2.2.1 (11 Jan 2014)
 
