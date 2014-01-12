@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jnr-ffi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/ChangeLog,v 1.12 2013/09/21 12:25:53 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/ChangeLog,v 1.13 2014/01/12 03:10:32 tomwij Exp $
+
+*jnr-ffi-1.0.10 (12 Jan 2014)
+
+  12 Jan 2014; Tom Wijsman <TomWij@gentoo.org> +jnr-ffi-1.0.10.ebuild:
+  Version bump to 1.0.10; fixes bug #486030, reported by Arfrever Frehtes
+  Taifersar Arahesis.
 
 *jnr-ffi-1.0.6 (21 Sep 2013)
 
