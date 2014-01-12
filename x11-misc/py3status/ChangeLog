@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/py3status
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/py3status/ChangeLog,v 1.4 2013/12/15 17:46:33 ultrabug Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/py3status/ChangeLog,v 1.5 2014/01/12 21:30:24 ultrabug Exp $
+
+*py3status-1.2 (12 Jan 2014)
+
+  12 Jan 2014; Ultrabug <ultrabug@gentoo.org> +py3status-1.2.ebuild:
+  version bump
 
 *py3status-1.1 (15 Dec 2013)
 

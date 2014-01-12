@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/to-the-moon
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/to-the-moon/ChangeLog,v 1.1 2014/01/12 21:26:31 hasufell Exp $
+
+*to-the-moon-0 (12 Jan 2014)
+
+  12 Jan 2014; Julian Ospald <hasufell@gentoo.org> +to-the-moon-0.ebuild,
+  +metadata.xml:
+  initial import
+
