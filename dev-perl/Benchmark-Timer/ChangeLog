@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Benchmark-Timer
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Benchmark-Timer/ChangeLog,v 1.1 2014/01/12 14:55:20 civil Exp $
+
+*Benchmark-Timer-0.7102 (12 Jan 2014)
+
+  12 Jan 2014; Vladimir Smirnov <civil@gentoo.org>
+  +Benchmark-Timer-0.7102.ebuid, +Benchmark-Timer-0.7102.ebuild, +metadata.xml:
+  Initial ebuild. Submitted by Ryan Hill. Fixes to #474760
