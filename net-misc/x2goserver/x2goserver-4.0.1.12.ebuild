@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.12.ebuild,v 1.1 2014/01/09 16:23:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/x2goserver-4.0.1.12.ebuild,v 1.2 2014/01/12 16:57:01 pacho Exp $
 
 EAPI=4
 inherit eutils multilib systemd toolchain-funcs user
@@ -11,7 +11,7 @@ SRC_URI="http://code.x2go.org/releases/source/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+doc +fuse postgres +sqlite"
 
 REQUIRED_USE="|| ( postgres sqlite )"
