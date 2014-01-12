@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/vdr-osdteletext-0.9.4-r1.ebuild,v 1.1 2014/01/06 22:56:18 hd_brummy Exp ${VDRPLUGIN}/vdr-${VDRPLUGIN}-0.3.1.ebuild,v 1.1 2003/05/13 09:39:19 fow0ryl Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdteletext/vdr-osdteletext-0.9.4-r1.ebuild,v 1.2 2014/01/12 21:33:10 hd_brummy Exp ${VDRPLUGIN}/vdr-${VDRPLUGIN}-0.3.1.ebuild,v 1.1 2003/05/13 09:39:19 fow0ryl Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.7.39"
 RDEPEND="${DEPEND}"
 
-VDR_RCADDON_FILE="${FILESDIR}/rc-addon-v2.sh"
+VDR_RCADDON_FILE="${FILESDIR}/rc-addon-v3.sh"
 VDR_CONFD_FILE="${FILESDIR}/confd-v2"
 
 src_install() {
