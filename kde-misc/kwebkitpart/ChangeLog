@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kwebkitpart
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.30 2013/11/03 11:54:55 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kwebkitpart/ChangeLog,v 1.31 2014/01/12 20:01:01 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> kwebkitpart-1.3.3.ebuild:
+  amd64 stable, bug #495682
 
 *kwebkitpart-1.3.3 (03 Nov 2013)
 

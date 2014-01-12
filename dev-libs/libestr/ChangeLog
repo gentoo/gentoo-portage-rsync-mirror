@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libestr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.28 2014/01/07 13:57:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libestr/ChangeLog,v 1.29 2014/01/12 19:45:37 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> libestr-0.1.9.ebuild:
+  amd64 stable, bug #495406
 
   07 Jan 2014; Jeroen Roovers <jer@gentoo.org> libestr-0.1.9.ebuild:
   Stable for HPPA (bug #495406).

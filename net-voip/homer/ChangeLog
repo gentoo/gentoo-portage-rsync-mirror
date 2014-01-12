@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/homer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.11 2013/08/13 21:06:55 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/homer/ChangeLog,v 1.12 2014/01/12 19:53:17 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> homer-0.25-r1.ebuild:
+  amd64 stable, bug #495904
 
   13 Aug 2013; Markos Chandras <hwoarang@gentoo.org> homer-0.25-r1.ebuild:
   Fix URL for ffmpeg2 patch thanks to Marcel Pennewiß <marcel@pennewiss.de>

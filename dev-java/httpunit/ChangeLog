@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/httpunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/ChangeLog,v 1.9 2014/01/01 12:42:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/ChangeLog,v 1.10 2014/01/12 19:58:52 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> httpunit-1.7.ebuild:
+  amd64 stable, bug #496668
 
   01 Jan 2014; Tom Wijsman <TomWij@gentoo.org> httpunit-1.7.ebuild:
   Remove TODO comment as META-INF is usual Java metadata and that thus isn't a

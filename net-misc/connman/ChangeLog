@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.74 2014/01/05 14:26:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.75 2014/01/12 19:51:51 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> connman-1.19.ebuild:
+  amd64 stable, bug #495870
 
   05 Jan 2014; Markus Meier <maekke@gentoo.org> connman-1.19.ebuild:
   arm stable, bug #495870

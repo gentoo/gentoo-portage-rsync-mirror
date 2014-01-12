@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/autopano-sift-C-2.5.1.ebuild,v 1.7 2013/08/28 16:51:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/autopano-sift-C-2.5.1.ebuild,v 1.8 2014/01/12 19:43:25 maekke Exp $
 
 EAPI=5
 inherit cmake-utils eutils versionator
@@ -18,7 +18,7 @@ S=${WORKDIR}/${PN}-"$(get_version_component_range 1-3)"
 
 RDEPEND="!media-gfx/autopano-sift
 	dev-libs/libxml2
-	media-libs/libpano13
+	media-libs/libpano13:0=
 	media-libs/libpng:0=
 	media-libs/tiff:0=
 	sys-libs/zlib

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15327 2014/01/11 13:25:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15328 2014/01/12 19:41:01 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markus Meier <maekke@gentoo.org> (12 Jan 2014)
+# masked for testing
+>=media-libs/libpano13-2.9.19_beta1
+>=media-gfx/hugin-2014.0.0_beta1
 
 # Magnus Granberg <zorry@gentoo.org>
 # Gcc 4.8.2-r1 has default ssp and need testing,

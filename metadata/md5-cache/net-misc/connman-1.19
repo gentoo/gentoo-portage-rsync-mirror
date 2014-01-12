@@ -4,10 +4,10 @@ DESCRIPTION=Provides a daemon for managing internet connections
 EAPI=5
 HOMEPAGE=http://connman.net
 IUSE=bluetooth debug doc examples +ethernet ofono openvpn policykit tools vpnc +wifi
-KEYWORDS=~amd64 arm ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 arm ~ppc ~ppc64 ~x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.16 >=sys-apps/dbus-1.2.24 >=net-firewall/iptables-1.4.8 net-libs/gnutls bluetooth? ( net-wireless/bluez ) ofono? ( net-misc/ofono ) policykit? ( sys-auth/polkit ) openvpn? ( net-misc/openvpn ) vpnc? ( net-misc/vpnc ) wifi? ( >=net-wireless/wpa_supplicant-0.7[dbus] )
 SLOT=0
 SRC_URI=mirror://kernel/linux/network/connman/connman-1.19.tar.xz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=fa8d2d03fe1e15088c9d6e71abe43862
+_md5_=24c40a035f07a4e2ce4dcf80409d9687

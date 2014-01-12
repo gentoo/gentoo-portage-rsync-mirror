@@ -4,10 +4,10 @@ DESCRIPTION=Open source command-line RTMP client intended to stream audio or vid
 EAPI=4
 HOMEPAGE=http://rtmpdump.mplayerhq.hu/
 IUSE=gnutls polarssl ssl
-KEYWORDS=~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux
 LICENSE=GPL-2 LGPL-2.1
 RDEPEND=ssl? ( gnutls? ( net-libs/gnutls ) polarssl? ( !gnutls? ( >=net-libs/polarssl-0.14.0 ) ) !gnutls? ( !polarssl? ( dev-libs/openssl ) ) ) sys-libs/zlib
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~hwoarang/distfiles/rtmpdump-2.4_p20131018.tar.gz
 _eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=f5bb8601415b35b5a3b135fb375e35ce
+_md5_=c5bea2922c68017752caba52b3208a55

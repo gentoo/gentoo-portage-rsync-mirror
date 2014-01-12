@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Trap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.14 2014/01/06 07:25:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Trap/ChangeLog,v 1.15 2014/01/12 19:59:43 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> Test-Trap-0.2.2-r1.ebuild:
+  amd64 stable, bug #495492
 
 *Test-Trap-0.2.3 (06 Jan 2014)
 

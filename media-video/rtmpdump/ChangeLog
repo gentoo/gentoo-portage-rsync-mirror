@@ -1,6 +1,9 @@
 # ChangeLog for media-video/rtmpdump
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.26 2014/01/02 14:32:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.27 2014/01/12 19:58:24 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> rtmpdump-2.4_p20131018.ebuild:
+  amd64 stable, bug #496436
 
   02 Jan 2014; Jeroen Roovers <jer@gentoo.org> rtmpdump-2.4.ebuild:
   Stable for HPPA (bug #496436).

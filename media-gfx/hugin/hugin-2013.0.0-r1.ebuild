@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2013.0.0-r1.ebuild,v 1.2 2013/12/08 12:11:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2013.0.0-r1.ebuild,v 1.3 2014/01/12 19:45:37 maekke Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ CDEPEND="
 	media-libs/freeglut
 	media-libs/glew:=
 	media-libs/lensfun
-	>=media-libs/libpano13-2.9.18
+	>=media-libs/libpano13-2.9.18:0=
 	media-libs/libpng:0=
 	media-libs/openexr:=
 	media-libs/tiff

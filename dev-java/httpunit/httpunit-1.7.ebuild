@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/httpunit-1.7.ebuild,v 1.3 2014/01/01 12:42:22 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/httpunit-1.7.ebuild,v 1.4 2014/01/12 19:58:52 pacho Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 CDEPEND="
 	>=dev-java/junit-3.8:0

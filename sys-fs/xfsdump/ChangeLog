@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsdump
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.103 2013/12/26 17:15:43 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/ChangeLog,v 1.104 2014/01/12 19:48:48 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> xfsdump-3.1.3.ebuild:
+  amd64 stable, bug #495956
 
   26 Dec 2013; Jeroen Roovers <jer@gentoo.org> xfsdump-3.1.3.ebuild:
   Stable for HPPA (bug #495956).

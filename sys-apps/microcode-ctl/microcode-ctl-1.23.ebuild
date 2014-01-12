@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.23.ebuild,v 1.2 2013/09/15 18:00:47 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.23.ebuild,v 1.3 2014/01/12 19:47:26 pacho Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="https://fedorahosted.org/released/${PN/-/_}/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE="selinux"
 
 DEPEND="selinux? ( sec-policy/selinux-cpucontrol )"

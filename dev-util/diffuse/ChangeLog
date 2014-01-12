@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffuse
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.19 2013/07/12 20:02:22 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.20 2014/01/12 19:55:40 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> diffuse-0.4.7-r1.ebuild:
+  amd64 stable, bug #495666
 
   12 Jul 2013; Fabian Groffen <grobian@gentoo.org> diffuse-0.4.7-r1.ebuild:
   Fix for Prefix, patch by igrek in bug #456720
