@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.1.ebuild,v 1.1 2014/01/04 11:30:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.8.8.1.ebuild,v 1.2 2014/01/12 11:34:49 maekke Exp $
 
 EAPI=5
 inherit multilib toolchain-funcs versionator libtool flag-o-matic eutils
@@ -34,11 +34,11 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 	lcms? ( media-libs/lcms:2 )
 	lqr? ( media-libs/liblqr )
 	opencl? ( virtual/opencl )
-	openexr? ( media-libs/openexr )
+	openexr? ( media-libs/openexr:0= )
 	pango? ( x11-libs/pango )
-	pdf? ( app-text/mupdf )
-	perl? ( >=dev-lang/perl-5.8.8 )
-	png? ( media-libs/libpng:0 )
+	pdf? ( app-text/mupdf:0= )
+	perl? ( >=dev-lang/perl-5.8.8:0= )
+	png? ( media-libs/libpng:0= )
 	postscript? ( app-text/ghostscript-gpl )
 	raw? ( media-gfx/ufraw )
 	svg? ( gnome-base/librsvg )
@@ -47,7 +47,7 @@ RDEPEND=">=sys-devel/libtool-2.2.6b
 		media-fonts/urw-fonts
 		>=media-libs/freetype-2
 		)
-	webp? ( media-libs/libwebp )
+	webp? ( media-libs/libwebp:0= )
 	wmf? ( media-libs/libwmf )
 	X? (
 		x11-libs/libICE
