@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/gmock
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.17 2013/12/09 19:29:59 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.18 2014/01/12 06:34:39 dirtyepic Exp $
+
+*gmock-1.7.0 (12 Jan 2014)
+
+  12 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> +gmock-1.7.0.ebuild:
+  Version bump (bug #490406 by Jauhien Piatlicki).
 
   09 Dec 2013; Jeroen Roovers <jer@gentoo.org> gmock-1.6.0.ebuild:
   Stable for HPPA (bug #493400).
