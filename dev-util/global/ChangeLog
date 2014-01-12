@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.114 2014/01/06 13:28:10 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.115 2014/01/12 09:44:10 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> global-6.2.9.ebuild:
+  amd64 stable, bug #495670
 
   06 Jan 2014; Naohiro Aota <naota@gentoo.org> +files/global-6.2.9-tinfo.patch,
   global-6.2.9.ebuild:
