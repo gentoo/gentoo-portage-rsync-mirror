@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mhonarc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.32 2013/09/03 15:08:59 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/ChangeLog,v 1.33 2014/01/12 18:21:21 pacho Exp $
+
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> mhonarc-2.6.18-r2.ebuild:
+  amd64 stable, bug #495864
 
 *mhonarc-2.6.18-r2 (03 Sep 2013)
 

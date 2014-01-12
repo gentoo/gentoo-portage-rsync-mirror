@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.18-r2.ebuild,v 1.1 2013/09/03 15:08:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mhonarc/mhonarc-2.6.18-r2.ebuild,v 1.2 2014/01/12 18:21:21 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mhonarc.org/release/MHonArc/tar/MHonArc-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~x86"
+KEYWORDS="amd64 ~mips ~ppc ~x86"
 # Warrants IUSE examples, and here it is + ? IUSE doc; see also extras folder with html docs
 IUSE="examples"
 

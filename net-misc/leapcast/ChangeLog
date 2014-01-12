@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leapcast
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leapcast/ChangeLog,v 1.1 2014/01/12 18:09:35 vapier Exp $
+
+*leapcast-0.1.1 (12 Jan 2014)
+*leapcast-9999 (12 Jan 2014)
+
+  12 Jan 2014; Mike Frysinger <vapier@gentoo.org> +leapcast-0.1.1.ebuild,
+  +leapcast-9999.ebuild, +metadata.xml:
+  Initial ebuild by me.
