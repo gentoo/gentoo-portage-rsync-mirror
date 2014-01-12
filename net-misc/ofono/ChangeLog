@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/ofono
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.56 2013/04/12 15:08:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.57 2014/01/12 12:44:59 dlan Exp $
+
+*ofono-1.14 (12 Jan 2014)
+
+  12 Jan 2014; Yixun Lan <dlan@gentoo.org> +ofono-1.14.ebuild,
+  -ofono-1.10-r1.ebuild, -ofono-1.10.ebuild, metadata.xml:
+  version bump 1.14 and drop old, update maintainer emails
 
   12 Apr 2013; Agostino Sarubbo <ago@gentoo.org> ofono-1.12.ebuild:
   Stable for arm, wrt bug #464470

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/rime-data
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/ChangeLog,v 1.11 2014/01/11 01:10:00 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rime-data/ChangeLog,v 1.12 2014/01/12 12:50:30 dlan Exp $
+
+  12 Jan 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
+  update metadata.xml, correct email address
 
 *rime-data-0.32 (11 Jan 2014)
 

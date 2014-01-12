@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/librime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.13 2014/01/03 21:44:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/librime/ChangeLog,v 1.14 2014/01/12 12:48:09 dlan Exp $
+
+  12 Jan 2014; Yixun Lan <dlan@gentoo.org> metadata.xml:
+  update metadata.xml, correct email address
 
 *librime-1.1 (03 Jan 2014)
 

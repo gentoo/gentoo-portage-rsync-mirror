@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>proxy-maintainers</herd>
   <herd>cjk</herd>
   <maintainer>
-    <email>dennis.yxun@gmail.com</email>
-    <name>Lan Yixun (dlan)</name>
+    <email>dlan@gentoo.org</email>
+    <name>Yixun Lan</name>
   </maintainer>
   <upstream>
     <maintainer>
