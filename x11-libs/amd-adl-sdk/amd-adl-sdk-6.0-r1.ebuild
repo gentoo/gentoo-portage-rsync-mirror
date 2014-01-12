@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-6.0-r1.ebuild,v 1.1 2013/11/25 04:16:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/amd-adl-sdk/amd-adl-sdk-6.0-r1.ebuild,v 1.2 2014/01/12 17:38:05 pacho Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="ADL_SDK_${PV}.zip"
 
 LICENSE="AMD-ADL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc examples"
 
 RDEPEND="x11-drivers/ati-drivers"

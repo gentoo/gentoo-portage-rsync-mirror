@@ -1,4 +1,7 @@
 
+  12 Jan 2014; Pacho Ramos <pacho@gentoo.org> amd-adl-sdk-6.0-r1.ebuild:
+  amd64 stable, bug #496936
+
 *amd-adl-sdk-6.0-r1 (25 Nov 2013)
 
   25 Nov 2013; Manuel Rüger <mrueg@gentoo.org> +amd-adl-sdk-6.0-r1.ebuild,
