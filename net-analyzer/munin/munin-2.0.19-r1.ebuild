@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.14.ebuild,v 1.2 2013/06/11 19:08:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.19-r1.ebuild,v 1.1 2014/01/12 11:10:54 lxnay Exp $
 
 EAPI=5
 
 PATCHSET=1
 
-inherit eutils user java-pkg-opt-2
+inherit eutils user java-pkg-opt-2 systemd
 
 MY_P=${P/_/-}
 
@@ -51,6 +51,7 @@ DEPEND_COM="dev-lang/perl[berkdb]
 			dev-perl/List-MoreUtils
 			dev-perl/Log-Log4perl
 			dev-perl/Net-CIDR
+			dev-perl/Net-DNS
 			dev-perl/Net-Netmask
 			dev-perl/Net-SNMP
 			dev-perl/net-server[ipv6(-)?]
@@ -185,10 +186,20 @@ src_install() {
 	insinto /etc/munin/plugin-conf.d/
 	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
 
-	newinitd "${FILESDIR}"/munin-node_init.d_2.0.7 munin-node
+	newinitd "${FILESDIR}"/munin-node_init.d_2.0.19 munin-node
 	newconfd "${FILESDIR}"/munin-node_conf.d_1.4.6-r2 munin-node
 
 	newinitd "${FILESDIR}"/munin-asyncd.init.2 munin-asyncd
+
+	dodir /usr/lib/tmpfiles.d
+	cat - > "${D}"/usr/lib/tmpfiles.d/${CATEGORY}:${PN}:${SLOT}.conf <<EOF
+d /run/munin 0700 munin munin - -
+EOF
+
+	systemd_dounit "${FILESDIR}"/munin-async.service
+	systemd_dounit "${FILESDIR}"/munin-graph.{service,socket}
+	systemd_dounit "${FILESDIR}"/munin-html.{service,socket}
+	systemd_dounit "${FILESDIR}"/munin-node.service
 
 	cat - >> "${T}"/munin.env <<EOF
 CONFIG_PROTECT=/var/spool/munin-async/.ssh
@@ -204,7 +215,7 @@ EOF
 
 	dodir /etc/logrotate.d/
 	sed -e "s:@CGIUSER@:$(usex apache apache munin):g" \
-		"${FILESDIR}"/logrotate.d-munin.2 > "${D}"/etc/logrotate.d/munin
+		"${FILESDIR}"/logrotate.d-munin.3 > "${D}"/etc/logrotate.d/munin
 
 	dosym ipmi_ /usr/libexec/munin/plugins/ipmi_sensor_
 
@@ -230,11 +241,6 @@ EOF
 		# the non-minimal install...
 		rm "${D}"/usr/libexec/munin/plugins/munin_stats
 	else
-		dodir /usr/lib/tmpfiles.d
-		cat - > "${D}"/usr/lib/tmpfiles.d/${CATEGORY}:${PN}:${SLOT}.conf <<EOF
-d /run/munin 0700 munin munin - -
-EOF
-
 		# remove font files so that we don't have to keep them around
 		rm "${D}"/usr/libexec/${PN}/*.ttf || die
 
@@ -349,7 +355,7 @@ pkg_config() {
 
 pkg_postinst() {
 	elog "Please follow the munin documentation to set up the plugins you"
-	elog "need, afterwards start munin-node via /etc/init.d/munin-node."
+	elog "need, afterwards start munin-node."
 	elog ""
 	elog "To make use of munin-async, make sure to set up the corresponding"
 	elog "SSH key in /var/lib/munin-async/.ssh/authorized_keys"

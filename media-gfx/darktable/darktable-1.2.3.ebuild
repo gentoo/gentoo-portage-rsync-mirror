@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.2.3.ebuild,v 1.2 2013/09/29 11:29:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.2.3.ebuild,v 1.3 2014/01/12 11:25:14 maekke Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ CDEPEND="
 	media-gfx/exiv2[xmp]
 	media-libs/lcms:2
 	>=media-libs/lensfun-0.2.3
-	media-libs/libpng:0
+	media-libs/libpng:0=
 	media-libs/openexr
 	media-libs/tiff:0
 	net-misc/curl

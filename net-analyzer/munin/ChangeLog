@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.152 2013/12/23 13:26:31 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.153 2014/01/12 11:10:54 lxnay Exp $
+
+*munin-2.0.19-r1 (12 Jan 2014)
+
+  12 Jan 2014; Fabio Erculiani <lxnay@gentoo.org> -munin-2.0.14.ebuild,
+  +munin-2.0.19-r1.ebuild, munin-2.1.9999.ebuild, +files/logrotate.d-munin.3:
+  add systemd support to the logrotate file, call init.d only when running with
+  openrc, revbump 2.0.19-r1, drop unstable-only 2.0.14 (there is 2.0.14-r1
+  which is also stable...). All this on behalf of flameeyes@g.o.
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> munin-2.0.19.ebuild:
   Stable for amd64, wrt bug #493290

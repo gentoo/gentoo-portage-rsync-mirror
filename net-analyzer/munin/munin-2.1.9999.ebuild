@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.1.9999.ebuild,v 1.1 2013/01/19 15:26:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.1.9999.ebuild,v 1.2 2014/01/12 11:10:54 lxnay Exp $
 
 EAPI=5
 
@@ -194,7 +194,7 @@ EOF
 
 	dodir /etc/logrotate.d/
 	sed -e "s:@CGIUSER@:$(usex apache apache munin):g" \
-		"${FILESDIR}"/logrotate.d-munin.2 > "${D}"/etc/logrotate.d/munin
+		"${FILESDIR}"/logrotate.d-munin.3 > "${D}"/etc/logrotate.d/munin
 
 	dosym ipmi_ /usr/libexec/munin/plugins/ipmi_sensor_
 
