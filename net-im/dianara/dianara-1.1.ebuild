@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/dianara-1.1.ebuild,v 1.1 2014/01/12 00:23:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/dianara-1.1.ebuild,v 1.2 2014/01/12 13:13:08 hasufell Exp $
 
 EAPI=5
 
-inherit eutils gnome2-utils qt4-r2
+inherit eutils gnome2-utils qmake-utils
 
 MY_P=${PN}-v${PV/_beta/beta}
 DESCRIPTION="Qt-based client for the pump.io distributed social network"
@@ -28,20 +28,8 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	default
-}
-
-src_prepare() {
-	default
-}
-
 src_configure() {
 	eqmake4
-}
-
-src_compile() {
-	default
 }
 
 src_install() {

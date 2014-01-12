@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.212 2014/01/08 06:19:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.213 2014/01/12 13:17:06 ago Exp $
+
+  12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ntp-4.2.6_p5-r10.ebuild:
+  Stable for ia64, wrt bug #496776
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> ntp-4.2.4_p7-r1.ebuild,
   ntp-4.2.6_p2-r1.ebuild, ntp-4.2.6_p3-r1.ebuild, ntp-4.2.6_p3.ebuild,

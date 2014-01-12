@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.649 2014/01/11 21:42:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.650 2014/01/12 13:14:39 ago Exp $
+
+  12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> samba-3.6.22.ebuild:
+  Stable for ia64, wrt bug #493664
 
 *samba-4.1.4 (11 Jan 2014)
 

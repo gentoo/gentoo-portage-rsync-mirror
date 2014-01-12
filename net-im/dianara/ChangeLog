@@ -1,6 +1,9 @@
 # ChangeLog for net-im/dianara
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/ChangeLog,v 1.5 2014/01/12 00:23:07 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/dianara/ChangeLog,v 1.6 2014/01/12 13:13:08 hasufell Exp $
+
+  12 Jan 2014; Julian Ospald <hasufell@gentoo.org> dianara-1.1.ebuild:
+  use qmake-utils rather than qt4-r2
 
 *dianara-1.1 (12 Jan 2014)
 

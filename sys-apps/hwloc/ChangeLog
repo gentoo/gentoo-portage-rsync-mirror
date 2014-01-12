@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.39 2014/01/05 09:04:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.40 2014/01/12 13:15:09 ago Exp $
+
+  12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hwloc-1.6.1.ebuild:
+  Stable for ia64, wrt bug #484320
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hwloc-1.6.1.ebuild:
   Stable for sparc, wrt bug #484320
