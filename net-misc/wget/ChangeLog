@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.179 2014/01/04 18:45:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.180 2014/01/13 21:42:38 vapier Exp $
+
+  13 Jan 2014; Mike Frysinger <vapier@gentoo.org> wget-1.14-r1.ebuild:
+  Cut over to new configure flags rather than set ac_cv_xxx vars directly
+  #497896 by James Le Cuirot.
 
   04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -wget-1.12-r3.ebuild,
   -wget-1.13.3-r2.ebuild, -wget-1.13.4.ebuild, -wget-1.13.4-r1.ebuild,

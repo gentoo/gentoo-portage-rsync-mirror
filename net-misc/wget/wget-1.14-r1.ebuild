@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.14-r1.ebuild,v 1.1 2013/12/23 07:23:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.14-r1.ebuild,v 1.2 2014/01/13 21:42:38 vapier Exp $
 
 EAPI="4"
 
@@ -52,10 +52,6 @@ src_configure() {
 	# the included gnutls -- force ioctl.h to include this header
 	[[ ${CHOST} == *-solaris* ]] && append-flags -DBSD_COMP=1
 
-	# some libraries tests lack configure options :( #432468
-	eval export ac_cv_{header_pcre_h,lib_pcre_pcre_compile}=$(usex pcre)
-	eval export ac_cv_{header_uuid_uuid_h,lib_uuid_uuid_generate}=$(usex uuid)
-
 	if use static ; then
 		append-ldflags -static
 		tc-export PKG_CONFIG
@@ -70,7 +66,9 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable nls) \
 		$(use_enable ntlm) \
+		$(use_enable pcre) \
 		$(use_enable debug) \
+		$(use_with uuid libuuid) \
 		$(use_with zlib)
 }
 
