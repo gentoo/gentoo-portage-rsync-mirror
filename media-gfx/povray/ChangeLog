@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.151 2013/12/26 17:40:41 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.152 2014/01/13 14:54:29 jer Exp $
+
+  13 Jan 2014; Jeroen Roovers <jer@gentoo.org> povray-3.7.0.0.ebuild:
+  Stable for HPPA (bug #497970).
 
   26 Dec 2013; Patrick Lauer <patrick@gentoo.org> povray-3.7.0.0.ebuild:
   Whitespace
