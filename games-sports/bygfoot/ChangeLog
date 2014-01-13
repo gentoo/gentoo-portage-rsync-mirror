@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/bygfoot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.30 2012/10/04 06:51:52 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-sports/bygfoot/ChangeLog,v 1.31 2014/01/13 00:57:23 mr_bones_ Exp $
+
+  13 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org> bygfoot-2.3.2.ebuild:
+  fix underlinking (bug #497932; EAPI=5
 
   04 Oct 2012; Michael Sterrett <mr_bones_@gentoo.org> bygfoot-2.3.2.ebuild:
   add zip rdep (bug #437126)
