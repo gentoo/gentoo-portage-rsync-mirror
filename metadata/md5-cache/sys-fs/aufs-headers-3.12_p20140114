@@ -1,0 +1,10 @@
+DEFINED_PHASES=install
+DESCRIPTION=User space headers for aufs3
+EAPI=5
+HOMEPAGE=http://aufs.sourceforge.net/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~jlec/distfiles/aufs-headers-3.12_p20140114.tar.xz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=93ccd13c7836604b5b069187914c7179
