@@ -938,8 +938,6 @@ app-office/lyx:monolithic-build - This should speed up compilation significantly
 app-office/lyx:rcs - Add support for revision control via dev-vcs/rcs
 app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/lyx:xetex - Add support for XeTeX typesetting
-app-office/rabbit:markdown - Markdown support (dev-ruby/kramdown)
-app-office/rabbit:tgif - tgif support (media-gfx/tgif)
 app-office/scribus:aspell - Enable support for spell checking with app-text/aspell
 app-office/scribus:graphicsmagick - Add support for media-gfx/graphicsmagick
 app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell

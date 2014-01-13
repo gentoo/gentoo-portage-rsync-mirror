@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/liquid
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/liquid/ChangeLog,v 1.12 2013/11/26 07:02:46 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/liquid/ChangeLog,v 1.13 2014/01/13 02:52:12 mrueg Exp $
+
+*liquid-2.6.1 (13 Jan 2014)
+
+  13 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +liquid-2.6.1.ebuild:
+  Version bump.
 
 *liquid-2.6.0 (26 Nov 2013)
 
