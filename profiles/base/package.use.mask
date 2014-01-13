@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.539 2014/01/05 18:22:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.540 2014/01/13 17:31:25 polynomial-c Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -44,11 +44,6 @@ net-analyzer/metasploit development test
 # Alexandre Rostovtsev <tetromino@gentoo.org> (15 Dec 2013)
 # pulseaudio patchset breaks too often on live wine ebuild
 =app-emulation/wine-9999 pulseaudio
-
-# Lars Wendler <polynomial-c@gentoo.org> (13 Dec 2013)
-# mozilla changed their build system and enigmail will not provide a fix before
-# christmas.
->=www-client/seamonkey-2.23 crypt
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (13 Nov 2013)
 # Depends on masked dev-lang/v8

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.23.ebuild,v 1.3 2013/12/17 11:30:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.23.ebuild,v 1.4 2014/01/13 17:30:22 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -30,7 +30,7 @@ inherit check-reqs flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-
 
 PATCHFF="firefox-26.0-patches-0.3"
 PATCH="${PN}-2.23-patches-01"
-EMVER="1.6"
+EMVER="1.6.1_pre20140112"
 
 DESCRIPTION="Seamonkey Web Browser"
 HOMEPAGE="http://www.seamonkey-project.org"
@@ -53,7 +53,8 @@ SRC_URI="${SRC_URI}
 	${MOZ_FTP_URI}/source/${MY_MOZ_P}.source.tar.bz2 -> ${P}.source.tar.bz2
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz
 	http://dev.gentoo.org/~polynomial-c/mozilla/patchsets/${PATCH}.tar.xz
-	crypt? ( http://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )"
+	crypt? ( http://dev.gentoo.org/~polynomial-c/mozilla/enigmail-${EMVER}.tar.xz )"
+	#crypt? ( http://www.enigmail.net/download/source/enigmail-${EMVER}.tar.gz )
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
@@ -241,6 +242,12 @@ src_configure() {
 	# Finalize and report settings
 	mozconfig_final
 
+	if use crypt ; then
+		pushd "${S}"/mailnews/extensions/enigmail &>/dev/null || die
+		./configure || die
+		popd &>/dev/null || die
+	fi
+
 	# Work around breakage in makeopts with --no-print-directory
 	MAKEOPTS="${MAKEOPTS/--no-print-directory/}"
 
@@ -261,8 +268,6 @@ src_compile() {
 	# Only build enigmail extension if conditions are met.
 	if use crypt ; then
 		cd "${S}"/mailnews/extensions/enigmail || die
-		./makemake -r 2&> /dev/null
-		cd "${S}"/seamonk/mailnews/extensions/enigmail
 		emake || die "make enigmail failed"
 		emake xpi || die "make enigmail xpi failed"
 	fi
@@ -303,13 +308,14 @@ src_install() {
 	cp -f "${FILESDIR}"/icon/${PN}.desktop "${T}" || die
 
 	if use crypt ; then
+		local em_dir="${S}/mailnews/extensions/enigmail/build"
 		cd "${T}" || die
-		unzip "${S}"/${obj_dir}/mozilla/dist/bin/enigmail*.xpi install.rdf || die
+		unzip "${em_dir}"/enigmail*.xpi install.rdf || die
 		emid=$(sed -n '/<em:id>/!d; s/.*\({.*}\).*/\1/; p; q' install.rdf)
 
 		dodir ${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid} || die
-		unzip "${S}"/${obj_dir}/mozilla/dist/bin/enigmail*.xpi || die
+		unzip "${em_dir}"/enigmail*.xpi || die
 
 		cd "${S}" || die
 	fi
