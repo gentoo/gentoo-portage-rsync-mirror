@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ReadLine-Gnu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.27 2014/01/12 20:12:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.28 2014/01/13 13:38:48 zlogene Exp $
+
+  13 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Term-ReadLine-Gnu-1.200.0-r2.ebuild:
+  x86 stable wrt bug #495482
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org>
   Term-ReadLine-Gnu-1.200.0-r2.ebuild:

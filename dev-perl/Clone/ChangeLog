@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.85 2014/01/12 20:10:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.86 2014/01/13 13:32:58 zlogene Exp $
+
+  13 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> Clone-0.350.0.ebuild:
+  x86 stable wrt bug #492094
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> Clone-0.350.0.ebuild:
   amd64 stable, bug #492094
