@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.54 2014/01/08 03:22:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.56 2014/01/13 01:49:30 jer Exp $
+
+  13 Jan 2014; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre3.ebuild:
+  Set RDEPEND, DEPEND on virtual/pkgconfig by cyberbat (bug #497926).
 
 *iftop-1.0_pre3 (08 Jan 2014)
 
@@ -26,10 +29,10 @@
 
   03 May 2013; Justin Lecher <jlec@gentoo.org> iftop-1.0_pre2.ebuild,
   +files/iftop-1.0_pre2-tinfo.patch, metadata.xml:
-  Add fix for ncurss[tinfo], #468520
+  Add fix for ncurses[tinfo], #468520
 
   18 Jan 2013; Lars Wendler <polynomial-c@gentoo.org> iftop-1.0_pre2.ebuild:
-  non-maintaienr commit: Removed ipv6 dependency now that a proper fix went
+  non-maintainer commit: Removed ipv6 dependency now that a proper fix went
   into libpcap (bug #452832).
 
   23 Jul 2012; Anthony G. Basile <blueness@gentoo.org> iftop-1.0_pre2.ebuild:
@@ -45,7 +48,7 @@
 *iftop-1.0_pre2 (29 May 2012)
 
   29 May 2012; Justin Lecher <jlec@gentoo.org> +iftop-1.0_pre2.ebuild:
-  Non maintainer Version BUmp
+  Non maintainer Version Bump
 
   01 Jan 2010; Christian Faulhammer <fauli@gentoo.org> iftop-0.17.ebuild:
   Transfer Prefix keywords
