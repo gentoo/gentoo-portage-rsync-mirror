@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/pkg-config
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.21 2013/12/05 09:57:18 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.22 2014/01/13 05:30:26 mrueg Exp $
+
+*pkg-config-1.1.5 (13 Jan 2014)
+
+  13 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +pkg-config-1.1.5.ebuild:
+  Version bump.
 
   05 Dec 2013; Naohiro Aota <naota@gentoo.org> pkg-config-1.1.4-r1.ebuild:
   Add ruby20 support
