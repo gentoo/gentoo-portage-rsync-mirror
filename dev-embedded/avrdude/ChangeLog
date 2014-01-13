@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/avrdude
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.58 2012/05/30 07:38:31 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avrdude/ChangeLog,v 1.59 2014/01/13 04:49:30 mrueg Exp $
+
+*avrdude-6.0.1 (13 Jan 2014)
+
+  13 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +avrdude-6.0.1.ebuild:
+  NMU: Version bump. Fixes bug #471030.
 
   30 May 2012; Tim Harder <radhermit@gentoo.org> -avrdude-5.4.ebuild,
   -avrdude-5.5.ebuild:
@@ -227,4 +232,3 @@
   24 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +avrdude-4.4.0.ebuild:
   initial import thanks to Eric Donnelly <ed@ericdonnelly.com> in bug #41015
-
