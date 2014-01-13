@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/rapidxml
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rapidxml/ChangeLog,v 1.1 2014/01/13 17:42:49 jlec Exp $
+
+*rapidxml-1.13 (13 Jan 2014)
+
+  13 Jan 2014; Justin Lecher <jlec@gentoo.org> +rapidxml-1.13.ebuild,
+  +metadata.xml:
+  New package, #406937; initial ebuild written by Patrick McMunn
+
