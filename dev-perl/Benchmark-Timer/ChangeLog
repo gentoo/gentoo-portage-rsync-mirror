@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Benchmark-Timer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Benchmark-Timer/ChangeLog,v 1.1 2014/01/12 14:55:20 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Benchmark-Timer/ChangeLog,v 1.2 2014/01/12 23:40:18 civil Exp $
+
+  12 Jan 2014; Vladimir Smirnov <civil@gentoo.org>
+  Benchmark-Timer-0.7102.ebuild:
+  Add MODULE_VERSION variable.
 
 *Benchmark-Timer-0.7102 (12 Jan 2014)
 
