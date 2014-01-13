@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-1.1.1.ebuild,v 1.3 2012/10/28 17:47:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-1.1.1-r1.ebuild,v 1.1 2014/01/13 06:01:34 mrueg Exp $
 
-EAPI=4
+EAPI=5
 
 GITHUB_USER=yob
 
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
 

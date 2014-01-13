@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.619 2014/01/10 13:59:44 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.620 2014/01/13 06:02:35 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -115,10 +115,12 @@ STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VE
 
 #---->> SLOT+IUSE logic <<----
 
-IUSE="multislot nls nptl regression-test vanilla"
+IUSE="multislot regression-test vanilla"
+IUSE_DEF="nls nptl"
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
-	IUSE+=" altivec cxx fortran"
+	IUSE+=" altivec"
+	IUSE_DEF+=" cxx fortran"
 	[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
 	[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
 	[[ -n ${D_VER}   ]] && IUSE+=" d"
@@ -127,11 +129,14 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	tc_version_is_at_least 4.0 && IUSE+=" objc-gc"
 	tc_version_is_between 4.0 4.9 && IUSE+=" mudflap"
 	tc_version_is_at_least 4.1 && IUSE+=" libssp objc++"
-	tc_version_is_at_least 4.2 && IUSE+=" openmp"
+	tc_version_is_at_least 4.2 && IUSE_DEF+=" openmp"
 	tc_version_is_at_least 4.3 && IUSE+=" fixed-point"
 	tc_version_is_at_least 4.6 && IUSE+=" graphite"
 	tc_version_is_at_least 4.7 && IUSE+=" go"
 fi
+
+[[ ${EAPI:-0} != 0 ]] && IUSE_DEF="+${IUSE_DEF// / +}"
+IUSE+=" ${IUSE_DEF}"
 
 # Support upgrade paths here or people get pissed
 if use multislot ; then

@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/skkserv/skkserv-0.ebuild,v 1.2 2011/04/17 17:45:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/skkserv/skkserv-0.ebuild,v 1.3 2014/01/13 06:15:10 mrueg Exp $
 
 EAPI=3
 
@@ -16,5 +16,4 @@ IUSE=""
 DEPEND=""
 RDEPEND="|| ( app-i18n/skkserv
 		app-i18n/mecab-skkserv
-		app-i18n/multiskkserv
-		app-i18n/rskkserv )"
+		app-i18n/multiskkserv )"

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1111 2014/01/10 13:59:44 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1112 2014/01/13 06:02:35 dirtyepic Exp $
+
+  13 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
+  Add EAPI 0 compatible USE defaults (bug #372663).
 
   10 Jan 2014; Magnus Granberg <zorry@gentoo.org> toolchain.eclass:
   Add support for default ssp on >=gcc-4.8.2 #484714

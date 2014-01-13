@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/pdf-reader
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.32 2012/10/28 17:47:45 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.33 2014/01/13 06:01:34 mrueg Exp $
+
+*pdf-reader-1.1.1-r1 (13 Jan 2014)
+
+  13 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +pdf-reader-1.1.1-r1.ebuild,
+  -pdf-reader-1.1.1.ebuild:
+  Add ruby20 target.
 
   28 Oct 2012; Raúl Porcel <armin76@gentoo.org> pdf-reader-1.1.1.ebuild:
   Add ~alpha/~ia64/~sparc wrt #431384
@@ -131,4 +137,3 @@
   16 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   +pdf-reader-0.7.4.ebuild, +metadata.xml:
   Initial import of pdf-reader as test dependency of prawn.
-
