@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iotools/iotools-1.5.ebuild,v 1.1 2013/04/23 18:31:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iotools/iotools-1.5.ebuild,v 1.2 2014/01/13 22:18:48 vapier Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://iotools.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 IUSE="static make-symlinks"
 
 src_prepare() {
@@ -31,11 +31,15 @@ src_install() {
 
 	# Note: This is done manually because invoking the iotools binary
 	# when cross-compiling will likely fail.
-	local known_cmds="and btr bts busy_loop cmos_read cmos_write cpu_list cpuid io_read16 io_read32 io_read8 io_write16 io_write32 io_write8 mem_dump mem_read16 mem_read32 mem_read64 mem_read8 mem_write16 mem_write32 mem_write64 mem_write8 mmio_dump mmio_read16 mmio_read32 mmio_read64 mmio_read8 mmio_write16 mmio_write32 mmio_write64 mmio_write8 not or pci_list pci_read16 pci_read32 pci_read8 pci_write16 pci_write32 pci_write8 rdmsr rdtsc runon shl shr smbus_quick smbus_read16 smbus_read8 smbus_readblock smbus_receive_byte smbus_send_byte smbus_write16 smbus_write8 smbus_writeblock wrmsr xor"
+	local known_cmds="and btr bts busy_loop cmos_read cmos_write cpu_list mem_dump mem_read16 mem_read32 mem_read64 mem_read8 mem_write16 mem_write32 mem_write64 mem_write8 mmio_dump mmio_read16 mmio_read32 mmio_read64 mmio_read8 mmio_write16 mmio_write32 mmio_write64 mmio_write8 not or pci_list pci_read16 pci_read32 pci_read8 pci_write16 pci_write32 pci_write8 runon shl shr smbus_quick smbus_read16 smbus_read8 smbus_readblock smbus_receive_byte smbus_send_byte smbus_write16 smbus_write8 smbus_writeblock xor"
+	case ${ARCH} in
+	amd64|x86) known_cmds+=" cpuid io_read16 io_read32 io_read8 io_write16 io_write32 io_write8 rdmsr rdtsc wrmsr";;
+	esac
 	if ! tc-is-cross-compiler ; then
+		local sorted_cmds=$(echo $(printf '%s\n' ${known_cmds} | LC_ALL=C sort))
 		local check_cmds=$(echo $(./iotools --list-cmds 2>/dev/null | grep '^  ' | LC_ALL=C sort))
-		if [[ ${known_cmds} != "${check_cmds:-${known_cmds}}" ]] ; then
-			eerror "known_cmds = ${known_cmds}"
+		if [[ ${sorted_cmds} != "${check_cmds:-${sorted_cmds}}" ]] ; then
+			eerror "known_cmds = ${sorted_cmds}"
 			eerror "check_cmds = ${check_cmds}"
 			die "need to update known_cmds cache in the ebuild"
 		fi
