@@ -1,0 +1,24 @@
+# ChangeLog for sci-libs/chemkit
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/chemkit/ChangeLog,v 1.2 2014/01/13 14:28:56 jlec Exp $
+
+  13 Jan 2014; Justin Lecher <jlec@gentoo.org> chemkit-0.1.ebuild:
+  Updated deps
+
+  13 Jan 2014; Justin Lecher <jlec@gentoo.org> +chemkit-0.1.ebuild,
+  +files/chemkit-0.1-multilib.patch, +metadata.xml:
+  Imported from sci overlay
+
+  13 Jan 2014; Justin Lecher <jlec@gentoo.org> chemkit-0.1.ebuild,
+  +files/chemkit-0.1-multilib.patch:
+  Fix multilib installation; fix test
+
+  11 Jan 2014; Justin Lecher <jlec@gentoo.org> chemkit-0.1.ebuild:
+  Add missing eclass
+
+*chemkit-0.1 (22 Jul 2013)
+
+  22 Jul 2013; Justin Lecher <jlec@gentoo.org> +chemkit-0.1.ebuild,
+  +metadata.xml:
+  New addition written by me
+
