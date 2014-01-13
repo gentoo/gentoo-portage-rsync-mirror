@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-python/pygtk dev-python/pygtkglext dev-python/pyopengl userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+DESCRIPTION=Open Source CAM - Toolpath Generation for 3-Axis CNC machining
+EAPI=5
+HOMEPAGE=http://pycam.sourceforge.net/
+IUSE=python_targets_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-3
+RDEPEND=dev-python/pygtk dev-python/pygtkglext dev-python/pyopengl python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~slis/pycam-0.6_pre20130416.tar.gz
+_eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_md5_=a7c829ba09882bd2be2b3de6fa318fdf
