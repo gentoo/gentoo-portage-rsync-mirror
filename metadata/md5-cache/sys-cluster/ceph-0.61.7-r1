@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=app-arch/snappy dev-libs/boost dev-libs/fcgi dev-libs/libaio dev-libs/libedit dev-libs/leveldb dev-libs/crypto++ sys-apps/keyutils fuse? ( sys-fs/fuse ) libatomic? ( dev-libs/libatomic_ops ) gtk? ( x11-libs/gtk+:2 dev-cpp/gtkmm:2.4 gnome-base/librsvg ) radosgw? ( dev-libs/fcgi dev-libs/expat net-misc/curl ) tcmalloc? ( dev-util/google-perftools ) sys-fs/btrfs-progs
 SLOT=0
 SRC_URI=http://ceph.com/download/ceph-0.61.7.tar.bz2
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	udev	a9a8d051efb42bfe884c1db82ce161de
 _md5_=38ffa0f604b1a23054ca5f2cefd43705

@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=allegro? ( media-libs/allegro:0 ) gif? ( media-libs/giflib ) glut? ( media-libs/freeglut ) jpeg? ( virtual/jpeg ) jpeg2k? ( media-libs/jasper ) lcms? ( =media-libs/lcms-1* ) mng? ( media-libs/libmng ) nvtt? ( media-gfx/nvidia-texture-tools ) openexr? ( media-libs/openexr ) opengl? ( virtual/opengl virtual/glu ) png? ( media-libs/libpng:0 ) sdl? ( media-libs/libsdl ) tiff? ( media-libs/tiff:0 ) xpm? ( x11-libs/libXpm ) X? ( x11-libs/libXext x11-libs/libX11 x11-libs/libXrender )
 SLOT=0
 SRC_URI=mirror://sourceforge/openil/DevIL-1.7.8.tar.gz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=da3bc6829b28d98251e5d7a415562165

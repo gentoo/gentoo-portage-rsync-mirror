@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/bzip2 x11-libs/gtk+:2 >=media-libs/libpng-1.2:0 x11-libs/libXinerama wmf? ( >=media-libs/libwmf-0.2.8 ) mng? ( media-libs/libmng ) svg? ( gnome-base/librsvg ) mplayer? ( media-video/mplayer )
 SLOT=0
 SRC_URI=mirror://sourceforge/gtkmmviewer/gimageview-0.2.27.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=6f3a30b04312618e1d0156a88df7ef35

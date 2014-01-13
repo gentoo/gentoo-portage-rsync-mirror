@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=!static? ( dev-libs/libgpg-error >=dev-libs/popt-1.7 >=sys-apps/util-linux-2.17.2 >=dev-libs/libgcrypt-1.1.42 >=sys-fs/lvm2-2.02.64 virtual/udev >=sys-libs/e2fsprogs-libs-1.41 ) !<sys-apps/baselayout-2 !sys-fs/cryptsetup-luks selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=http://cryptsetup.googlecode.com/files/cryptsetup-1.4.1.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=e7e8390bf7dbdc2ad687d96f3a11bea7

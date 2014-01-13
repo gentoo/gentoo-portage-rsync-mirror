@@ -11,5 +11,5 @@ RDEPEND=>=app-admin/eselect-postgresql-1.0.7 virtual/libintl !!dev-db/libpq !!de
 RESTRICT=test
 SLOT=8.4
 SRC_URI=mirror://postgresql/source/v8.4.17/postgresql-8.4.17.tar.bz2 http://dev.gentoo.org/~titanofold/postgresql-patches-8.4-r3.tbz2
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=91d9049f6d3e41760cc53272e3d1a7ed

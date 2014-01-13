@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.109 2013/12/31 16:53:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.110 2014/01/13 19:49:25 vapier Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -21,11 +21,11 @@ ___ECLASS_ONCE_LIBTOOL="recur -_+^+_- spank"
 # libtool.eclass, we'll have ECLASSDIR pointing to the active overlay's
 # eclass/ dir, but libtool.eclass is still in the main Gentoo tree.  So
 # add a check to locate the ELT-patches/ regardless of what's going on.
-ECLASSDIR_LOCAL=${BASH_SOURCE[0]%/*}
+_LIBTOOL_ECLASSDIR_LOCAL=${BASH_SOURCE[0]%/*}
 elt_patch_dir() {
 	local d="${ECLASSDIR}/ELT-patches"
 	if [[ ! -d ${d} ]] ; then
-		d="${ECLASSDIR_LOCAL}/ELT-patches"
+		d="${_LIBTOOL_ECLASSDIR_LOCAL}/ELT-patches"
 	fi
 	echo "${d}"
 }

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl dev-libs/gmp sci-electronics/gplcver sci-electronics/iverilog x11-libs/gtk+:2 dev-scheme/guile media-gfx/graphviz sci-electronics/espresso-ab sci-electronics/gtkwave
 SLOT=0
 SRC_URI=ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/4.0/balsa-4.0.tar.gz ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/4.0/balsa-sim-verilog-4.0.tar.gz ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/4.0/balsa-tech-example-4.0.tar.gz ftp://ftp.cs.man.ac.uk/pub/amulet/balsa/4.0/balsa-tech-xilinx-4.0.tar.gz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=460d87d38e155e11c789c4f740ebaffe

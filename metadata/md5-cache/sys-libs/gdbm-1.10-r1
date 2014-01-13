@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20131008-r4 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=mirror://gnu/gdbm/gdbm-1.10.tar.gz exporter? ( mirror://gnu/gdbm/gdbm-1.8.3.tar.gz )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	bf5062d2ffe64907c251cb7636421070	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	bda08c532d1c9ab7f91f9fb9ae36d5e4	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multilib-build	bda08c532d1c9ab7f91f9fb9ae36d5e4	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=2dc974f03cbd3c8b971b61bdfcdce4b4

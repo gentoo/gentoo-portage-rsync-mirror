@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=x11-libs/xtrans x11-libs/libfontenc truetype? ( >=media-libs/freetype-2 ) bzip2? ( app-arch/bzip2 ) x11-proto/xproto x11-proto/fontsproto
 SLOT=0
 SRC_URI=http://xorg.freedesktop.org/releases/individual/lib/libXfont-1.4.5.tar.bz2
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	xorg-2	17812f511eef87a499b62ab14e6aeaad
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	xorg-2	17812f511eef87a499b62ab14e6aeaad
 _md5_=e2fd10f7dee08802b8447db25f132ec4

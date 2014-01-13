@@ -10,5 +10,5 @@ PDEPEND=emacs? ( app-emacs/imaxima )
 RDEPEND=X? ( x11-misc/xdg-utils sci-visualization/gnuplot[gd] tk? ( dev-lang/tk ) ) latex? ( virtual/latex-base ) emacs? ( virtual/emacs latex? ( app-emacs/auctex ) ) xemacs? ( app-editors/xemacs latex? ( app-emacs/auctex ) ) clisp? ( dev-lisp/clisp ) clozurecl? ( dev-lisp/clozurecl app-misc/rlwrap ) ecls? ( >=dev-lisp/ecls-10 app-misc/rlwrap ) gcl? ( >=dev-lisp/gcl-2.6.8_pre[ansi] ) cmucl? ( dev-lisp/cmucl app-misc/rlwrap ) sbcl? ( dev-lisp/sbcl app-misc/rlwrap ) !clisp? ( !clozurecl? ( !ecls? ( !gcl? ( !cmucl? ( dev-lisp/sbcl app-misc/rlwrap ) ) ) ) )
 SLOT=0
 SRC_URI=mirror://sourceforge/maxima/maxima-5.26.0.tar.gz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	bf5062d2ffe64907c251cb7636421070	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
 _md5_=8e777e567484d11cfc1c1fa30a516223
