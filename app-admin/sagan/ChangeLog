@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sagan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.24 2013/05/08 16:02:59 maksbotan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.25 2014/01/13 13:16:22 nimiux Exp $
+
+  13 Jan 2014; Chema Alonso <nimiux@gentoo.org> sagan-0.2.3.ebuild:
+  Stable for amd64 wrt bug #496260
 
   08 May 2013; Maxim Koltsov <maksbotan@gentoo.org> -sagan-0.2.0-r1.ebuild,
   -sagan-0.2.0-r3.ebuild, -sagan-0.2.1-r2.ebuild, -sagan-0.2.1.ebuild,
