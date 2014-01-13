@@ -1,6 +1,12 @@
 # ChangeLog for dev-lua/luadbi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.18 2013/12/24 12:52:24 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.19 2014/01/13 03:48:03 mrueg Exp $
+
+*luadbi-0.5-r4 (13 Jan 2014)
+
+  13 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +luadbi-0.5-r4.ebuild:
+  Add fix for postgres' server include path by Alexander Sulfrian. Fixes bug
+  #497698.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> luadbi-0.5-r3.ebuild:
   Stable for x86, wrt bug #488410
