@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafaxplus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/ChangeLog,v 1.8 2014/01/11 00:14:52 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafaxplus/ChangeLog,v 1.9 2014/01/13 06:51:44 mattm Exp $
+
+  13 Jan 2014; Matthew Marlowe <mattm@gentoo.org> hylafaxplus-5.5.4-r1.ebuild:
+  keyword 5.5.4-r1 patch bump for testing (~amd64,~x86)
 
 *hylafaxplus-5.5.4-r1 (11 Jan 2014)
 

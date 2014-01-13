@@ -4,9 +4,10 @@ DESCRIPTION=Enterprise client-server fax package for class 1 and 2 fax modems.
 EAPI=5
 HOMEPAGE=http://hylafax.sourceforge.net
 IUSE=jbig html ldap mgetty pam
+KEYWORDS=~amd64 ~x86
 LICENSE=hylafaxplus
 RDEPEND=>=sys-libs/zlib-1.1.4 app-text/ghostscript-gpl virtual/mta media-libs/tiff[jbig?] virtual/jpeg jbig? ( media-libs/jbigkit ) virtual/awk ldap? ( net-nds/openldap ) pam? ( virtual/pam ) mgetty? ( net-dialup/mgetty[-fax] ) net-mail/metamail !net-dialup/sendpage
 SLOT=0
 SRC_URI=mirror://sourceforge/hylafax/hylafax-5.5.4.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
-_md5_=b893092dbe844d994489e1ab7ebde1a5
+_md5_=e2b4cd036441da3a6a7512b9d975626b

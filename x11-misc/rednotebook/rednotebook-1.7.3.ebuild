@@ -1,9 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.7.3.ebuild,v 1.1 2014/01/11 00:35:06 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-1.7.3.ebuild,v 1.2 2014/01/13 06:42:33 mattm Exp $
 
 EAPI="4"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_JOBS="1"
 
 inherit python-r1 eutils distutils-r1
 
@@ -16,15 +17,16 @@ SLOT="0"
 KEYWORDS=""
 IUSE="libyaml spell"
 
-RDEPEND="dev-python/pyyaml[libyaml?]
+RDEPEND="${PYTHON_DEPS}
+	dev-python/pyyaml[libyaml?]
 	>=dev-python/pygtk-2.13
 	>=dev-python/pywebkitgtk-1.1.5
 	dev-python/chardet
 	spell? ( dev-python/gtkspell-python )"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	python_setup
 }
 
 src_prepare() {

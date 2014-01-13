@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/rednotebook
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.71 2014/01/11 00:35:06 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.72 2014/01/13 06:42:33 mattm Exp $
+
+  13 Jan 2014; Matthew Marlowe <mattm@gentoo.org> rednotebook-1.7.3.ebuild:
+  Another try at conversion of rednotebook ebuild version bumps to new python-r1
+  eclass use.
 
 *rednotebook-1.7.3 (11 Jan 2014)
 
