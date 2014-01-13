@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xtrlock
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.27 2014/01/06 14:34:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtrlock/ChangeLog,v 1.28 2014/01/13 15:29:04 jer Exp $
+
+*xtrlock-2.6 (13 Jan 2014)
+
+  13 Jan 2014; Jeroen Roovers <jer@gentoo.org> +xtrlock-2.6.ebuild:
+  Version bump.
 
 *xtrlock-2.5 (06 Jan 2014)
 
