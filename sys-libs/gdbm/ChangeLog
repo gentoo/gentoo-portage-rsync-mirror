@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gdbm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.66 2013/11/28 19:58:40 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.67 2014/01/13 15:41:08 polynomial-c Exp $
+
+*gdbm-1.11 (13 Jan 2014)
+
+  13 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> +gdbm-1.11.ebuild:
+  Version bump.
 
   28 Nov 2013; Mike Frysinger <vapier@gentoo.org> gdbm-1.10-r1.ebuild:
   Add USE=nls support #491202 by Seemant Kulleen.
