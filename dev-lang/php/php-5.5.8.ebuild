@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.3-r1.ebuild,v 1.4 2013/09/10 03:17:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.5.8.ebuild,v 1.1 2014/01/13 09:15:07 olemarkus Exp $
 
 EAPI=5
 
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use libtool
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 function php_get_uri ()
 {
@@ -72,11 +72,11 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	oci8-instant-client odbc +opcache pcntl pdo +phar +posix postgres qdbm
 	readline recode selinux +session sharedmem
 	+simplexml snmp soap sockets spell sqlite ssl
-	sybase-ct systemd sysvipc tidy +tokenizer truetype unicode wddx
+	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
 	+xml xmlreader xmlwriter xmlrpc xpm xslt zip zlib"
 
 DEPEND="
-	>=app-admin/eselect-php-0.7.1-r1[apache2?,fpm?]
+	>=app-admin/eselect-php-0.7.0[apache2?,fpm?]
 	>=dev-libs/libpcre-8.32[unicode]
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
@@ -126,7 +126,6 @@ DEPEND="
 	spell? ( >=app-text/aspell-0.50 )
 	sqlite? ( >=dev-db/sqlite-3.7.6.3 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
-	systemd? ( sys-apps/systemd )
 	sybase-ct? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
 	truetype? (
@@ -180,8 +179,6 @@ REQUIRED_USE="
 	readline? ( !libedit )
 	recode? ( !imap !mysql !mysqli )
 	sharedmem? ( !threads )
-
-	systemd? ( fpm )
 
 	!cli? ( !cgi? ( !fpm? ( !apache2? ( !embed? ( cli ) ) ) ) )"
 
@@ -285,10 +282,6 @@ src_prepare() {
 	# Get the alpha/beta/rc version
 	sed -re	"s|^(PHP_EXTRA_VERSION=\").*(\")|\1-pl${PR/r/}-gentoo\2|g" \
 		-i configure.in || die "Unable to change PHP branding"
-
-	epatch "${FILESDIR}"/iodbc-pkgconfig-r1.patch
-	epatch "${FILESDIR}"/stricter-libc-client-symlink-check.patch
-	epatch "${FILESDIR}"/all_strict_aliasing.patch
 
 	# Patch PHP to show Gentoo as the server platform
 	sed -e 's/PHP_UNAME=`uname -a | xargs`/PHP_UNAME=`uname -s -n -r -v | xargs`/g' \
@@ -546,10 +539,6 @@ src_configure() {
 						sapi_conf="${sapi_conf} --enable-${sapi}"
 					else
 						sapi_conf="${sapi_conf} --disable-${sapi}"
-					fi
-
-					if [[ ${sapi} == "fpm" ]] && use systemd ; then
-						sapi_conf+=" --with-fpm-systemd"
 					fi
 					;;
 
