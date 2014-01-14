@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.42 2014/01/12 20:00:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.43 2014/01/14 18:37:50 jlec Exp $
+
+  14 Jan 2014; Justin Lecher <jlec@gentoo.org>
+  nvidia-cuda-sdk-5.0.35-r1.ebuild, nvidia-cuda-sdk-5.5.22.ebuild:
+  Depend on equal version of toolkit, #497500
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> nvidia-cuda-sdk-5.5.22.ebuild:
   amd64 stable, bug #497686

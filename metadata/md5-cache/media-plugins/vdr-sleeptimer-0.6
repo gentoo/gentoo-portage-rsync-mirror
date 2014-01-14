@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile config install postinst postrm setup unpack
+DEFINED_PHASES=compile config configure install postinst postrm prepare setup unpack
 DEPEND=>=media-video/vdr-1.2.6 >=media-tv/gentoo-vdr-scripts-0.4.2 virtual/linuxtv-dvb-headers
-DESCRIPTION=Video Disk Recorder Sleeptimer PlugIn
+DESCRIPTION=VDR Plugin: Sleeptimer
+EAPI=5
 HOMEPAGE=http://linvdr.org/download/vdr-sleeptimer
-KEYWORDS=x86 ~amd64
+KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=>=media-video/vdr-1.2.6 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
+RDEPEND=>=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=http://linvdr.org/download/vdr-sleeptimer/sleeptimer-0.6.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	vdr-plugin	b34d39bcf21b36fb278c28e40c967f15
-_md5_=dd88e69e06c1126f84e264df7e153a5e
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	vdr-plugin-2	47c67847aaf9886da4f952898e277b6d
+_md5_=89d4ac29ccfca89b45dc7343f7c279af

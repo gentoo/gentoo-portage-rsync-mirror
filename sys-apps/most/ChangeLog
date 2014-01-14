@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/most
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.46 2011/04/12 22:01:02 abcd Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.47 2014/01/14 18:47:42 grobian Exp $
+
+  14 Jan 2014; Fabian Groffen <grobian@gentoo.org> most-5.0.0a.ebuild:
+  Marked ~x64-macos
 
   12 Apr 2011; Jonathan Callen <abcd@gentoo.org> most-5.0.0a.ebuild:
   Add prefix support, bump EAPI to 4, add prefix keywords, cleanup

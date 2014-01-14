@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-5.0.35-r1.ebuild,v 1.2 2013/06/26 16:13:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-5.0.35-r1.ebuild,v 1.3 2014/01/14 18:37:50 jlec Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug +doc +examples opencl +cuda"
 
 RDEPEND="
-	>=dev-util/nvidia-cuda-toolkit-${PV}
+	~dev-util/nvidia-cuda-toolkit-${PV}
 	media-libs/freeglut
 	examples? (
 		media-libs/freeimage

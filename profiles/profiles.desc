@@ -9,7 +9,7 @@
 # Aarch64 Profiles
 aarch64         default/linux/aarch64/13.0                      dev
 aarch64         default/linux/aarch64/13.0/desktop              dev
-aarch64         default/linux/aarch64/13.0/server               dev
+aarch64         default/linux/aarch64/13.0/developer            dev
 
 # Alpha Profiles
 alpha           default/linux/alpha/13.0                        stable

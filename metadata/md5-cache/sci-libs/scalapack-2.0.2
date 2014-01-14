@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=virtual/lapack virtual/mpi virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) virtual/fortran
+DESCRIPTION=Subset of LAPACK routines redesigned for heterogenous (MPI) computing
+EAPI=5
+HOMEPAGE=http://www.netlib.org/scalapack/
+IUSE=static-libs test
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=virtual/lapack virtual/mpi virtual/fortran
+SLOT=0
+SRC_URI=http://www.netlib.org/scalapack//scalapack-2.0.2.tgz
+_eclasses_=cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_md5_=92f6671dc3e2a5fa22a9e25f1f3b5835
