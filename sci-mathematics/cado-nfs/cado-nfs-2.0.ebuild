@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cado-nfs/cado-nfs-2.0_alpha2.ebuild,v 1.1 2013/10/21 02:34:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cado-nfs/cado-nfs-2.0.ebuild,v 1.1 2014/01/14 03:19:37 patrick Exp $
 
 EAPI=4
 DESCRIPTION="Number Field Sieve (NFS) implementation for factoring integers"
 HOMEPAGE="http://cado-nfs.gforge.inria.fr/"
-SRC_URI="https://gforge.inria.fr/frs/download.php/32988/${PN}-2.0alpha_55e97b6a.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://gforge.inria.fr/frs/download.php/33131/${P}.tar.gz"
 
 inherit eutils cmake-utils
 
