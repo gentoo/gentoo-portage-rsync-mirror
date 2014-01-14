@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.0.0.ebuild,v 1.2 2014/01/12 09:15:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-6.0.0.ebuild,v 1.3 2014/01/14 11:08:41 jlec Exp $
 
 EAPI=5
 
@@ -79,7 +79,12 @@ RDEPEND="
 		)
 	tcl? ( dev-lang/tcl )
 	tk? ( dev-lang/tk )
-	video_cards_nvidia? ( media-video/nvidia-settings )
+	video_cards_nvidia? (
+		|| (
+			media-video/nvidia-settings
+			x11-drivers/nvidia-drivers[tools]
+			)
+		)
 	R? ( dev-lang/R )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
