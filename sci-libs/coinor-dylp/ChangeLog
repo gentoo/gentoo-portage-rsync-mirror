@@ -1,0 +1,27 @@
+# ChangeLog for sci-libs/coinor-dylp
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-dylp/ChangeLog,v 1.1 2014/01/14 18:03:16 bicatali Exp $
+
+*coinor-dylp-1.9.4 (14 Jan 2014)
+
+  14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +coinor-dylp-1.9.4.ebuild, +metadata.xml:
+  Initial import in main tree
+
+*coinor-dylp-1.9.3 (07 Dec 2013)
+
+  07 Dec 2013; Sébastien Fabbro <bicatali@gentoo.org> +coinor-dylp-1.9.3.ebuild,
+  -coinor-dylp-1.9.0.ebuild:
+  sci-libs/coinor-dylp: Version bump
+
+*coinor-dylp-1.9.0 (17 Jul 2013)
+
+  17 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +coinor-dylp-1.9.0.ebuild,
+  -coinor-dylp-1.8.3.ebuild:
+  sci-libs/coinor-dylp: Version bump
+
+*coinor-dylp-1.8.3 (16 Jul 2012)
+
+  16 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +coinor-dylp-1.8.3.ebuild,
+  +metadata.xml:
+  sci-libs/coinor-dylp: Initial import

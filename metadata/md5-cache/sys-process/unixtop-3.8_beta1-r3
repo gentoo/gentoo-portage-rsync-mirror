@@ -2,10 +2,10 @@ DEFINED_PHASES=compile install unpack
 DEPEND=sys-libs/ncurses !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=top for UNIX systems
 HOMEPAGE=http://unixtop.sourceforge.net/
-KEYWORDS=~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~amd64-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=BSD
 RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://sourceforge/unixtop/top-3.8beta1.tar.bz2
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
-_md5_=bd3d78a08689c188af1f2f38c193b800
+_md5_=70d3a99e2c8db9240c8e0a85d76550c7
