@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.128 2014/01/14 19:14:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.129 2014/01/14 20:46:26 vapier Exp $
+
+  14 Jan 2014; Mike Frysinger <vapier@gentoo.org> parent, use.mask:
+  Use unified arch/base/ like all other arches.
 
   14 Jan 2014; Markos Chandras <hwoarang@gentoo.org> use.mask:
   Remove old libnotify entry

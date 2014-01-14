@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libdvdread media-video/lsdvd X? ( dev-perl/perl-tk dev-perl/Tk-JPEG-Lite virtual/cdrtools >=media-video/dvdauthor-0.6.5 >=app-cdr/dvd+rw-tools-5.13.4.7.4 )
 SLOT=0
 SRC_URI=http://www.badabum.de/down/streamdvd-0.4.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=fd92f5f8d7025892935cee8bb7d2c4b6

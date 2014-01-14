@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1112 2014/01/13 06:02:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1113 2014/01/14 20:50:23 mpagano Exp $
+
+  14 Jan 2014; Michael Pagano <mpagano@gentoo.org> linux-mod.eclass:
+  Remove use of sed in linux-mod.eclass. Replace with bash.
 
   13 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Add EAPI 0 compatible USE defaults (bug #372663).

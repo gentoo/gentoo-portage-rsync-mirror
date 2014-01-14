@@ -8,5 +8,5 @@ RDEPEND=dev-qt/qtcore:4 dev-qt/qtgui:4[accessibility,xinerama] dev-qt/qtsql:4 sy
 RESTRICT=fetch mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://ftp.4players.de/pub/hosted/ts3/releases/3.0.12/TeamSpeak3-Client-linux_amd64-3.0.12.run ) x86? ( http://ftp.4players.de/pub/hosted/ts3/releases/3.0.12/TeamSpeak3-Client-linux_x86-3.0.12.run )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	unpacker	04385b0f181c42fa9c18ec0e31729d1f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	unpacker	04385b0f181c42fa9c18ec0e31729d1f
 _md5_=dd6949633d858d8b4ad1763eda7260e4

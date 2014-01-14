@@ -7,5 +7,5 @@ LICENSE=docbook
 RDEPEND=>=app-text/docbook-xsl-stylesheets-1.65 >=app-text/build-docbook-catalog-1.2
 SLOT=4.1.2
 SRC_URI=http://www.docbook.org/xml/4.1.2/docbkx412.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	sgml-catalog	115ce04390f5bb32de8fef875ea71b4b	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	sgml-catalog	115ce04390f5bb32de8fef875ea71b4b	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=6bdb3e1a49098e0050fcb6fe0144f994

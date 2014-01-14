@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=x11-libs/libXaw x11-libs/libXp x11-libs/libXaw3d nls? ( x11-libs/libXaw3d[unicode] ) x11-libs/libXi x11-libs/libXt virtual/jpeg media-libs/libpng media-fonts/font-misc-misc media-fonts/urw-fonts >=media-gfx/transfig-3.2.5-r1 media-libs/netpbm
 SLOT=0
 SRC_URI=mirror://sourceforge/mcj/xfig.3.2.5b.full.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=0124c1e2a92f1feacaf0945f91865cf0

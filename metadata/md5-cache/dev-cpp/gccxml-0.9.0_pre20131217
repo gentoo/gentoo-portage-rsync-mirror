@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~arm ~mips ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-mac
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pinkbyte/distfiles/snapshots/gccxml-0.9.0_pre20131217.tar.xz
-_eclasses_=cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=0fd57700b8eb7def901f2be8114aaf7e

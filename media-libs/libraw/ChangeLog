@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libraw
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.74 2013/12/23 14:17:36 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/ChangeLog,v 1.75 2014/01/14 21:27:53 pacho Exp $
+
+  14 Jan 2014; Pacho Ramos <pacho@gentoo.org> libraw-0.15.4.ebuild:
+  ia64 stable, bug #488908 (thanks to Emeric Maschino for testing)
 
   23 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org>
   -libraw-0.16.0_alpha3.ebuild, -libraw-0.16.0_beta1.ebuild:

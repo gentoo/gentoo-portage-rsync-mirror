@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses:5 x11-libs/gtk+:2 x11-libs/cairo[X] nls? ( sys-devel/gettext )
 SLOT=0
 SRC_URI=http://www.frantz.fi/software/gperiodic-2.0.10.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=7c763409a5fd34b84517832b9e8cbd9b

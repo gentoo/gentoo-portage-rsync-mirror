@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/geany
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.76 2013/11/24 18:59:34 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.77 2014/01/14 21:26:34 pacho Exp $
+
+  14 Jan 2014; Pacho Ramos <pacho@gentoo.org> geany-1.23.1.ebuild:
+  ia64 stable, bug #488810 (thanks to Emeric Maschino for testing)
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> geany-1.23.1.ebuild:
   Stable for x86, wrt bug #488810

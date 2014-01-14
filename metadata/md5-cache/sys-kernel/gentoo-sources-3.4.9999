@@ -10,5 +10,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=3.4.9999
 SRC_URI=https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.4.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	f089608c770d9ad72a2c92b547d2b20d	kernel-2	4d3bcae9a98bcc93a217f087c087e16d	multilib	892e597faee02a5b94eb02ab512e7622	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	f089608c770d9ad72a2c92b547d2b20d	kernel-2	4d3bcae9a98bcc93a217f087c087e16d	multilib	892e597faee02a5b94eb02ab512e7622	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=90817c457beefce7f94c27bc3a6c06fa

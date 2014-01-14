@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2
 RDEPEND=dev-libs/openssl sys-libs/zlib dev-libs/libevent bufferevents? ( dev-libs/libevent[ssl] ) nat-pmp? ( net-libs/libnatpmp ) upnp? ( net-libs/miniupnpc ) selinux? ( sec-policy/selinux-tor )
 SLOT=0
 SRC_URI=https://www.torproject.org/dist/tor-0.2.4.20.tar.gz https://archive.torproject.org/tor-package-archive/tor-0.2.4.20.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=4229233fb0901e5fa4d6f62e02507086

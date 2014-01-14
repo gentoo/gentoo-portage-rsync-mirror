@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.5.1.3.ebuild,v 1.11 2013/12/23 16:00:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.5.1.3.ebuild,v 1.12 2014/01/14 21:22:43 pacho Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.us.xiph.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0.5.1"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha amd64 ~arm ia64 ppc ppc64 sparc x86"
 IUSE="ogg static-libs"
 
 DEPEND="ogg? ( media-libs/libogg )"

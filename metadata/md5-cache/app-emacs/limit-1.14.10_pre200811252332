@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-emacs/apel-10.3 !app-emacs/flim >=virtual/emacs-21
 SLOT=0
 SRC_URI=http://www.jpl.org/ftp/pub/m17n/limit-1_14-200811252332.tar.gz
-_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=0c54cfaf1ad27a3d5b3e91b1f2c53b6c

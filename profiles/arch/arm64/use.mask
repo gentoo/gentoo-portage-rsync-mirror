@@ -1,5 +1,5 @@
 # Unmask the flag which corresponds to ARCH.
--aarch64
+-arm64
 
 # doomsday ebuild is not available on this architecture
 doomsday

@@ -10,5 +10,5 @@ RDEPEND=bidi? ( dev-libs/fribidi ) devil? ( media-libs/devil ) expat? ( dev-libs
 REQUIRED_USE=|| ( expat tinyxml xerces-c xml )
 SLOT=0
 SRC_URI=mirror://sourceforge/crayzedsgui/CEGUI-0.7.7.tar.gz doc? ( mirror://sourceforge/crayzedsgui/CEGUI-DOCS-0.7.7.tar.gz )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=6d251380b4335fb11bd9d5ff1709ae3b

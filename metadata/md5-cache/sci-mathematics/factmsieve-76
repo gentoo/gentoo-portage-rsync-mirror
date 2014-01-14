@@ -7,5 +7,5 @@ LICENSE=BSD
 RDEPEND=|| ( dev-lang/python:2.7 dev-lang/python:2.6 ) sci-mathematics/msieve sci-mathematics/ggnfs
 SLOT=0
 SRC_URI=http://gladman.plushost.co.uk/oldsite/computing/factmsieve.76.zip
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=220c67ed0f0cf3b9097762ea112612e9

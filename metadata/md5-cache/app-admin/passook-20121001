@@ -7,5 +7,5 @@ LICENSE=GPL-3+
 RDEPEND=dev-lang/perl sys-apps/miscfiles
 SLOT=0
 SRC_URI=mirror://gentoo/passook-20121001.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=a75cfd476f5bb4bdaedd91d9e2f80a3e

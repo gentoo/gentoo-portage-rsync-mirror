@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/netpbm-10.41.0 media-libs/libpng sys-libs/zlib >=app-text/gocr-0.39
 SLOT=0
 SRC_URI=mirror://sourceforge/subtitleripper/subtitleripper-0.3-4.tgz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=20f42cdbe1a014413c69a97b36ee0675

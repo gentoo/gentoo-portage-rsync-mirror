@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.22 sys-apps/dbus >=sys-auth/polkit-0.110 introspection? ( dev-libs/gobject-introspection ) kernel_linux? ( virtual/libusb:1 >=virtual/udev-200[gudev] ios? ( >=app-pda/libimobiledevice-1:= >=app-pda/libplist-1:= ) ) kernel_linux? ( !systemd? ( >=sys-power/pm-utils-1.4.1 ) systemd? ( app-shells/bash >=sys-apps/systemd-200 ) )
 SLOT=0
 SRC_URI=http://upower.freedesktop.org/releases/upower-0.9.21.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=8f16d04088112eaec1be227b3c005506

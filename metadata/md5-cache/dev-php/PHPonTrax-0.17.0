@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=virtual/httpd-php dev-lang/php[session,imap] dev-php/PEAR-MDB2 dev-php/PEAR-Mail dev-php/PEAR-Mail_Mime mysql? ( dev-php/PEAR-MDB2_Driver_mysql ) postgres? ( dev-php/PEAR-MDB2_Driver_pgsql ) sqlite? ( dev-php/PEAR-MDB2_Driver_sqlite ) !mysql? ( !postgres? ( !sqlite? ( dev-php/PEAR-MDB2_Driver_mysql ) ) ) dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.phpontrax.com/get/PHPonTrax-0.17.0.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=1f0b9c651a2dce264fdec8540a59c780

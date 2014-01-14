@@ -9,5 +9,5 @@ LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=dev-perl/IO-Socket-SSL || ( ( >dev-perl/libwww-perl-6 dev-perl/HTML-Form ) <dev-perl/libwww-perl-6 ) >=dev-perl/URI-1.36 >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/J/JE/JESSE/WWW-Mechanize-1.72.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=7f5a2e775954407e2335af562dacc259

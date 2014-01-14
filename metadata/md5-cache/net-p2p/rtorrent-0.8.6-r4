@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-libs/libtorrent-0.12.6 >=dev-libs/libsigc++-2.2.2:2 >=net-misc/curl-7.19.1 sys-libs/ncurses xmlrpc? ( dev-libs/xmlrpc-c ) daemon? ( app-misc/screen )
 SLOT=0
 SRC_URI=http://libtorrent.rakshasa.no/downloads/rtorrent-0.8.6.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=53a921a0b72c533f5ae04d8451299128

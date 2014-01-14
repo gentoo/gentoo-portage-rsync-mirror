@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbredir
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.35 2013/12/23 16:22:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbredir/ChangeLog,v 1.36 2014/01/14 21:24:14 pacho Exp $
+
+  14 Jan 2014; Pacho Ramos <pacho@gentoo.org> usbredir-0.6.ebuild:
+  ia64 stable, bug #488928 (thanks to Emeric Maschino for testing)
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> usbredir-0.6.ebuild:
   Stable for sparc, wrt bug #488928

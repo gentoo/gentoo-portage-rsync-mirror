@@ -1,7 +1,7 @@
-# Main Aarch64 (ARMv8) profile; endian independent.
+# Main ARM64 (Aarch64/ARMv8) profile; endian independent.
 
-ARCH="aarch64"
-ACCEPT_KEYWORDS="aarch64"
+ARCH="arm64"
+ACCEPT_KEYWORDS="arm64"
 
 CFLAGS="-O2"
 CXXFLAGS="${CFLAGS}"

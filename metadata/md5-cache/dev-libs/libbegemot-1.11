@@ -5,5 +5,5 @@ KEYWORDS=~amd64 ~amd64-fbsd ~x86-fbsd
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://people.freebsd.org/~harti/libbegemot/libbegemot-1.11.tar.gz
-_eclasses_=libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=fa41bf8fe1c922ac5d3e12a588bfb17e

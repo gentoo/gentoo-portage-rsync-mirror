@@ -8,5 +8,5 @@ LICENSE=HPND
 RDEPEND=app-arch/bzip2 >=media-libs/libpng-1.0.5 >=sys-libs/zlib-1.1.4 virtual/jpeg:0 x11-libs/libXext
 SLOT=0
 SRC_URI=http://pantransit.reptiles.org/prog/xli/xli-2005-02-27.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=de8579339476e01955a53e9bdc85f7de

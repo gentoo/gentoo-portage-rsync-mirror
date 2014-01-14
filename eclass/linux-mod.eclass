@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.115 2013/12/01 19:11:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.116 2014/01/14 20:50:23 mpagano Exp $
 
 # @ECLASS: linux-mod.eclass
 # @MAINTAINER:
@@ -431,7 +431,7 @@ generate_modulesd() {
 
 			for t in ${module_modinfo}
 			do
-				myVAR="$(echo ${t#*:} | grep -e " [0-9][ =]" | sed "s:.*\([01][= ]\).*:\1:")"
+				myVAR="$(echo ${t#*:}  | grep -o "[^ ]*[0-9][ =][^ ]*" | tail -1  | grep -o "[0-9]")"
 				if [[ -n ${myVAR} ]]
 				then
 					module_opts="${module_opts} ${t%%:*}:${myVAR}"

@@ -9,5 +9,5 @@ PDEPEND=bash-completion? ( app-shells/bash-completion )
 RDEPEND=>=app-crypt/mhash-0.8.18-r1 bash-completion? ( app-admin/eselect )
 SLOT=0
 SRC_URI=ftp://mcrypt.hellug.gr/pub/mcrypt/shash/shash-0.2.6.tar.gz
-_eclasses_=bash-completion	f913ed18b57a2d3372c4291680454db4	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=bash-completion	f913ed18b57a2d3372c4291680454db4	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=e06f88b6fcab26740c46d8106fa1b971

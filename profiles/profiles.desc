@@ -6,11 +6,6 @@
 #layout:
 #arch		profile_directory				status
 
-# Aarch64 Profiles
-aarch64         default/linux/aarch64/13.0                      dev
-aarch64         default/linux/aarch64/13.0/desktop              dev
-aarch64         default/linux/aarch64/13.0/developer            dev
-
 # Alpha Profiles
 alpha           default/linux/alpha/13.0                        stable
 alpha           default/linux/alpha/13.0/desktop                stable
@@ -65,6 +60,11 @@ arm             default/linux/arm/13.0/armv7a/desktop           dev
 arm             default/linux/arm/13.0/armv7a/desktop/gnome     dev
 arm             default/linux/arm/13.0/armv7a/desktop/kde       dev
 arm             default/linux/arm/13.0/armv7a/developer         dev
+
+# ARM64 Profiles
+arm64           default/linux/arm64/13.0                        exp
+arm64           default/linux/arm64/13.0/desktop                exp
+arm64           default/linux/arm64/13.0/developer              exp
 
 # HPPA Profiles
 hppa            default/linux/hppa/13.0                         stable

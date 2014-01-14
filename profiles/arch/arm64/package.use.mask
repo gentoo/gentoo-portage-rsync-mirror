@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/aarch64/package.use.mask,v 1.1 2014/01/14 05:30:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm64/package.use.mask,v 1.1 2014/01/14 20:47:46 vapier Exp $
 
 # Rick Farina <zerochaos@gentoo.org> (09 Jan 2014)
 # rjb doesn't work on arm, so no java hacks for metasploit

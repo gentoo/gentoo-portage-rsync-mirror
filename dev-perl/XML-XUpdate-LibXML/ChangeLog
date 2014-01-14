@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-XUpdate-LibXML
 # Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.29 2014/01/14 13:59:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.30 2014/01/14 20:36:55 zlogene Exp $
+
+  14 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -XML-XUpdate-LibXML-0.6.0.ebuild, XML-XUpdate-LibXML-0.6.0-r1.ebuild:
+  alpha/ia64/sparc stable wrt bug #495526; Drop old.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   XML-XUpdate-LibXML-0.6.0-r1.ebuild:

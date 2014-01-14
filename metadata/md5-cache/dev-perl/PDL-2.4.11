@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses app-arch/sharutils dev-perl/Astro-FITS-Header dev-perl/
 REQUIRED_USE=plplot? ( badval )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CH/CHM/PDL-2.4.11.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=5207f6a306a0028833dfa61447fe30af

@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=mpi? ( virtual/mpi ) gsl? ( >=sci-libs/gsl-1.12 )
 SLOT=0
 SRC_URI=ftp://selab.janelia.org/pub/software/hmmer3/3.0/hmmer-3.0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=c5e7b3d1abbad6f6c5bc9e539f555233

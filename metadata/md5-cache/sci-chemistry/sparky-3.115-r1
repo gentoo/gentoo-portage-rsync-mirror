@@ -10,5 +10,5 @@ RDEPEND=app-shells/tcsh dev-lang/tcl dev-lang/tk
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://www.cgl.ucsf.edu/home/sparky/distrib-3.115/sparky-source-3.115.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=473062466a4546762e23b37b30df52f2

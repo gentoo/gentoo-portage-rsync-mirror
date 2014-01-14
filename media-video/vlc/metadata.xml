@@ -54,7 +54,7 @@
 		<flag name="postproc">Enables image post-processing via libpostproc (part of FFmpeg).</flag>
 		<flag name="projectm">Enables the projectM visualization plugin.</flag>
 		<flag name="pvr">Enables PVR cards access module.</flag>
-		<flag name="qt4" restrict="&gt;=media-video/vlc-0.9">Builds a <pkg>x11-libs/qt</pkg> based frontend. It is now the most up-to-date graphical interface available.</flag>
+		<flag name="qt4" restrict="&gt;=media-video/vlc-0.9">Builds a <pkg>x11-libs/qt</pkg> based frontend, a graphical interface.</flag>
 		<flag name="rdp">Enables freerdp for RDP/Remote Desktop client support</flag>
 		<flag name="rtsp">Enables real audio and RTSP modules.</flag>
 		<flag name="run-as-root">Allows vlc to start for root. Don't enable this unless you have a very specific (e.g. embedded) need for it!</flag>

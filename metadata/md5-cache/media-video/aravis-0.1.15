@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/glib-2.22 dev-libs/libxml2 X? ( >=x11-libs/gtk+-2.12:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 media-libs/gst-plugins-base:0.10 media-plugins/gst-plugins-xvideo:0.10 ) gstreamer? ( media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/aravis/0.1/aravis-0.1.15.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=763843d6773eaadc5ef39a1ffea80ea7

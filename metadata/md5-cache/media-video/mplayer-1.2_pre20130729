@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses app-arch/bzip2 sys-libs/zlib || ( >=media-video/ffmpeg-
 REQUIRED_USE=bindist? ( !faac ) dga? ( X ) dvdnav? ( dvd ) dxr3? ( X ) enca? ( iconv ) ggi? ( X ) libass? ( truetype ) opengl? ( X ) osdmenu? ( X ) truetype? ( iconv ) vdpau? ( X ) vidix? ( X ) xinerama? ( X ) xscreensaver? ( X ) xv? ( X ) xvmc? ( xv )
 SLOT=0
 SRC_URI=mirror://gentoo/mplayer-1.2_pre20130729.tar.xz !truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=71bd102be76019fdb25c0da2b6e7ce19

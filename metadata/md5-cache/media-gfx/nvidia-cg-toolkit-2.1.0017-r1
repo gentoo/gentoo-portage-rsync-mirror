@@ -9,5 +9,5 @@ RDEPEND=media-libs/freeglut
 RESTRICT=strip
 SLOT=0
 SRC_URI=x86? ( http://developer.download.nvidia.com/cg/Cg_2.1/2.1.0017/Cg-2.1_February2009_x86.tgz ) amd64? ( http://developer.download.nvidia.com/cg/Cg_2.1/2.1.0017/Cg-2.1_February2009_x86_64.tgz )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=5f4592a6d6528105173e41ab24544048

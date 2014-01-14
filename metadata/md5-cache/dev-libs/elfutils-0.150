@@ -8,5 +8,5 @@ LICENSE=GPL-2-with-exceptions
 RDEPEND=zlib? ( >=sys-libs/zlib-1.2.2.3 ) bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/e/l/elfutils/0.150/elfutils-0.150.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
 _md5_=2486b1ab2c7565223924c8de88cb237f
