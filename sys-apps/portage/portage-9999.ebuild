@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.90 2014/01/13 19:56:36 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.91 2014/01/13 23:25:48 floppym Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -90,7 +90,7 @@ prefix_src_archives() {
 }
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/portage.git
-	git@github.com:gentoo/portage.git"
+	https://github.com/gentoo/portage.git"
 S="${WORKDIR}"/${PN}
 
 compatible_python_is_selected() {
