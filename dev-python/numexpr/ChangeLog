@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numexpr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.17 2014/01/14 13:55:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.18 2014/01/14 14:11:26 jlec Exp $
+
+  14 Jan 2014; Justin Lecher <jlec@gentoo.org> -numexpr-2.1.ebuild,
+  -numexpr-2.2.ebuild:
+  Drop old
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> numexpr-2.2.2.ebuild:
   Stable for x86, wrt bug #497870

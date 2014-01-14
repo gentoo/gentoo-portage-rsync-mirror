@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.62 2014/01/14 13:56:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.63 2014/01/14 14:12:33 jlec Exp $
+
+  14 Jan 2014; Justin Lecher <jlec@gentoo.org> -tkimg-1.4-r7.ebuild:
+  Drop old
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tkimg-1.4-r9.ebuild:
   Stable for x86, wrt bug #497706

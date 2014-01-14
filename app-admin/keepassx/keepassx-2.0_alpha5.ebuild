@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-2.0_alpha5.ebuild,v 1.1 2013/12/26 03:44:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepassx/keepassx-2.0_alpha5.ebuild,v 1.2 2014/01/14 14:20:26 polynomial-c Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 DEPEND="
-	dev-libs/libgcrypt:0/11
+	dev-libs/libgcrypt:=
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
@@ -28,6 +28,11 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 DOCS=(CHANGELOG)
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libgcrypt-1.6.0.patch
+	cmake-utils_src_prepare
+}
 
 src_configure() {
 	local mycmakeargs=(

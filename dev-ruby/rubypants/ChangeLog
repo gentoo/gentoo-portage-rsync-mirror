@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubypants
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.22 2014/01/14 14:00:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/ChangeLog,v 1.23 2014/01/14 14:23:55 mrueg Exp $
+
+  14 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -rubypants-0.2.0-r3.ebuild:
+  Cleanup old.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rubypants-0.2.0-r4.ebuild:
   Stable for x86, wrt bug #496124
