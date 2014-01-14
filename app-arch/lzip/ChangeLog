@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.43 2014/01/09 13:25:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.44 2014/01/14 15:34:22 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lzip-1.15.ebuild:
+  Stable for ppc, wrt bug #495324
 
   09 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> lzip-1.15.ebuild:
   x86 stable (bug #495324).

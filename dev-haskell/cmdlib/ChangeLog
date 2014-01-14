@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/cmdlib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.12 2014/01/14 13:57:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cmdlib/ChangeLog,v 1.13 2014/01/14 15:31:08 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cmdlib-0.3.5-r1.ebuild:
+  Stable for ppc, wrt bug #495376
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cmdlib-0.3.5-r1.ebuild:
   Stable for x86, wrt bug #495376

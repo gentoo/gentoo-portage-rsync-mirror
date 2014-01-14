@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.239 2014/01/14 13:55:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.240 2014/01/14 15:33:40 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gmime-2.6.19-r1.ebuild:
+  Stable for ppc, wrt bug #496840
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gmime-2.6.19-r1.ebuild:
   Stable for x86, wrt bug #496840

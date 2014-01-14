@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.55 2014/01/14 13:53:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.56 2014/01/14 15:33:33 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lxsession-0.4.9.2-r1.ebuild:
+  Stable for ppc, wrt bug #495684
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lxsession-0.4.9.2-r1.ebuild:
   Stable for x86, wrt bug #495684

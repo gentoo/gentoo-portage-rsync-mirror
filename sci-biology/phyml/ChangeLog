@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/phyml
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/ChangeLog,v 1.10 2013/02/18 07:33:31 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phyml/ChangeLog,v 1.11 2014/01/14 15:33:23 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> phyml-2.4.5-r2.ebuild:
+  Stable for ppc, wrt bug #497216
 
   18 Feb 2013; Justin Lecher <jlec@gentoo.org> -phyml-2.4.5.ebuild,
   metadata.xml:

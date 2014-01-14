@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.143 2014/01/12 19:43:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.144 2014/01/14 15:32:23 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> windowmaker-0.95.5-r1.ebuild:
+  Stable for ppc, wrt bug #496082
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> windowmaker-0.95.5-r1.ebuild:
   amd64 stable, bug #496082

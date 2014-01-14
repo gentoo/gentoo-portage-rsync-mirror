@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgii
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.47 2014/01/14 13:54:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.48 2014/01/14 15:35:07 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libgii-1.0.2-r1.ebuild:
+  Stable for ppc, wrt bug #495732
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libgii-1.0.2-r1.ebuild:
   Stable for x86, wrt bug #495732

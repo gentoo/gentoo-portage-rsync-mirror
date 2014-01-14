@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.124 2014/01/14 13:53:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.125 2014/01/14 15:34:55 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libdvdcss-1.2.13-r1.ebuild:
+  Stable for ppc, wrt bug #495728
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libdvdcss-1.2.13-r1.ebuild:
   Stable for x86, wrt bug #495728
