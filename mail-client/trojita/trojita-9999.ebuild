@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.20 2013/10/04 11:38:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.21 2014/01/14 08:20:46 ago Exp $
 
 EAPI=5
 
@@ -29,6 +29,7 @@ for MY_LANG in ${MY_LANGS} ; do
 done
 
 RDEPEND="
+	>=dev-qt/qtbearer-${QT_REQUIRED}:4
 	>=dev-qt/qtgui-${QT_REQUIRED}:4
 	>=dev-qt/qtsql-${QT_REQUIRED}:4[sqlite]
 	>=dev-qt/qtwebkit-${QT_REQUIRED}:4
