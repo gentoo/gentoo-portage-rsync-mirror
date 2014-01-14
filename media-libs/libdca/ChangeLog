@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdca
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.37 2014/01/14 13:53:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdca/ChangeLog,v 1.38 2014/01/14 15:11:04 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libdca-0.0.5-r3.ebuild:
+  Stable for ppc, wrt bug #495726
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libdca-0.0.5-r3.ebuild:
   Stable for x86, wrt bug #495726

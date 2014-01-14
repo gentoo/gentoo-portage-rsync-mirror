@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.18 2014/01/14 14:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.19 2014/01/14 15:18:47 vapier Exp $
 
 EAPI="3"
 
@@ -130,6 +130,9 @@ src_configure() {
 			--enable-64-bit-bfd
 			--disable-install-libbfd
 			--disable-install-libiberty
+			# This only disables building in the readline subdir.
+			# For gdb itself, it'll use the system version.
+			--disable-readline
 			--with-system-readline
 			--with-separate-debug-dir="${EPREFIX}"/usr/lib/debug
 			$(use_with expat)

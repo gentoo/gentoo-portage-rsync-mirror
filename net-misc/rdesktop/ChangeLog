@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.149 2014/01/14 13:57:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.150 2014/01/14 15:30:57 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rdesktop-1.8.1.ebuild:
+  Stable for ppc, wrt bug #495884
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rdesktop-1.8.1.ebuild:
   Stable for x86, wrt bug #495884

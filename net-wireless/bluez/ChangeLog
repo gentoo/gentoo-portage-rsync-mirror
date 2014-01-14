@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.183 2014/01/09 13:24:42 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.184 2014/01/14 15:10:43 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> bluez-4.101-r8.ebuild:
+  Stable for ppc, wrt bug #496866
 
   09 Jan 2014; Christian Birchinger <joker@gentoo.org>
   files/bluetooth-init.d-r3:

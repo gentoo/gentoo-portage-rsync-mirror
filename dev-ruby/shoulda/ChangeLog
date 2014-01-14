@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.24 2014/01/10 11:42:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.25 2014/01/14 15:08:29 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> shoulda-2.11.3-r1.ebuild:
+  Stable for ppc, wrt bug #495114
 
 *shoulda-2.11.3-r2 (10 Jan 2014)
 

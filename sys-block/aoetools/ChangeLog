@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/aoetools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.49 2014/01/14 13:58:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.50 2014/01/14 15:31:30 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> aoetools-36.ebuild:
+  Stable for ppc, wrt bug #495940
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> aoetools-36.ebuild:
   Stable for x86, wrt bug #495940
