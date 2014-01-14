@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8531 2014/01/13 10:19:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8532 2014/01/14 17:00:48 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jan 2014; Justin Lecher <jlec@gentoo.org> package.mask:
+  Drop mask as patches apply now
 
   13 Jan 2014; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Mask off Asterisk 12 as the first ebuild goes in.

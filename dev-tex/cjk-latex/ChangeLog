@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cjk-latex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.66 2014/01/14 15:08:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.67 2014/01/14 16:48:18 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cjk-latex-4.8.3-r1.ebuild:
+  Stable for ppc64, wrt bug #495650
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cjk-latex-4.8.3-r1.ebuild:
   Stable for ppc, wrt bug #495650

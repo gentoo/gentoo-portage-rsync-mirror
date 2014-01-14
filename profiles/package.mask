@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15332 2014/01/13 10:21:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15333 2014/01/14 17:00:48 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -45,11 +45,6 @@
 # Gcc 4.8.2-r1 has default ssp and need testing,
 # See #484714
 =sys-devel/gcc-4.8.2-r1
-
-# Justin Lecher <jlec@gentoo.org> (10 Jan 2014)
-# aufs3 patches do not apply cleanly onto 3.12.7
-sys-kernel/aufs-sources:3.12.7
-sys-kernel/aufs-sources:3.10.26
 
 # Tom Wijsman <TomWij@gentoo.org> (09 Jan 2014)
 # Monolithic dev-dotnet/{gnome,gtk}-sharp introduction mask, see bug #382491.

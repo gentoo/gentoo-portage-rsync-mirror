@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.4.0.ebuild,v 1.1 2014/01/09 18:04:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/knot-1.4.1.ebuild,v 1.1 2014/01/14 16:51:43 scarabeus Exp $
 
 EAPI=5
 
