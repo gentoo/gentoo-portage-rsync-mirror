@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r5.ebuild,v 1.3 2014/01/12 09:51:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/frox/frox-0.7.18-r5.ebuild,v 1.4 2014/01/14 13:56:06 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://frox.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE="clamav ssl transparent"
 

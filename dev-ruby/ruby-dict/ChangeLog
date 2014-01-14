@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.14 2014/01/12 17:43:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dict/ChangeLog,v 1.15 2014/01/14 13:59:40 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ruby-dict-0.9.4-r3.ebuild:
+  Stable for x86, wrt bug #495008
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> ruby-dict-0.9.4-r3.ebuild:
   amd64 stable, bug #495008

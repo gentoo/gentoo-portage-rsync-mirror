@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclreadline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.27 2014/01/12 20:22:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclreadline/ChangeLog,v 1.28 2014/01/14 13:52:02 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tclreadline-2.1.0-r4.ebuild:
+  Stable for x86, wrt bug #495648
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> tclreadline-2.1.0-r4.ebuild:
   amd64 stable, bug #495648

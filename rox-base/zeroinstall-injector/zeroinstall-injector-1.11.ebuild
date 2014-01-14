@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-1.11.ebuild,v 1.2 2014/01/12 20:07:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/zeroinstall-injector-1.11.ebuild,v 1.3 2014/01/14 13:57:33 ago Exp $
 
 EAPI="5"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/zero-install/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 
 DEPEND="!<=rox-base/rox-session-0.30"
 RDEPEND=">=dev-python/pygtk-2.0

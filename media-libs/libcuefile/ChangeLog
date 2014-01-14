@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.41 2014/01/12 09:02:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.42 2014/01/14 13:53:42 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libcuefile-477-r1.ebuild:
+  Stable for x86, wrt bug #495724
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> libcuefile-477-r1.ebuild:
   amd64 stable, bug #495724

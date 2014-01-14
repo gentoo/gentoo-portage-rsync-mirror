@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-pt-br
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt-br/ChangeLog,v 1.6 2014/01/12 20:02:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt-br/ChangeLog,v 1.7 2014/01/14 13:59:10 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> myspell-pt-br-3.0.0.ebuild:
+  Stable for x86, wrt bug #491906
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> myspell-pt-br-3.0.0.ebuild:
   amd64 stable, bug #491906

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/uam
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.34 2014/01/12 20:29:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/uam/ChangeLog,v 1.35 2014/01/14 13:58:14 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> uam-0.3.2.ebuild:
+  Stable for x86, wrt bug #495936
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> uam-0.3.2.ebuild:
   amd64 stable, bug #495936

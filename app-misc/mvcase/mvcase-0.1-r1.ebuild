@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/mvcase-0.1-r1.ebuild,v 1.3 2014/01/12 20:03:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mvcase/mvcase-0.1-r1.ebuild,v 1.4 2014/01/14 13:56:19 ago Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/utils/file/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-libs/shhopt"

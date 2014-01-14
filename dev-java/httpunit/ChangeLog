@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/httpunit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/ChangeLog,v 1.10 2014/01/12 19:58:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/httpunit/ChangeLog,v 1.11 2014/01/14 13:51:58 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> httpunit-1.7.ebuild:
+  Stable for x86, wrt bug #496668
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> httpunit-1.7.ebuild:
   amd64 stable, bug #496668

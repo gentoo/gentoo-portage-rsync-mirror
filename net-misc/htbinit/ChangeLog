@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htbinit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.24 2014/01/12 20:05:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.25 2014/01/14 13:56:51 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> htbinit-0.8.5-r6.ebuild:
+  Stable for x86, wrt bug #495874
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> htbinit-0.8.5-r6.ebuild:
   amd64 stable, bug #495874

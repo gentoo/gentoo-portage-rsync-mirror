@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.59 2014/01/12 09:06:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.60 2014/01/14 13:54:10 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libmms-0.6.2-r1.ebuild:
+  Stable for x86, wrt bug #495736
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> libmms-0.6.2-r1.ebuild:
   amd64 stable, bug #495736

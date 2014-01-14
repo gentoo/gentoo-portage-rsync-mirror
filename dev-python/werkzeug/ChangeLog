@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.51 2014/01/12 20:16:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.52 2014/01/14 13:59:27 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> werkzeug-0.9.4.ebuild:
+  Stable for x86, wrt bug #490384
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> werkzeug-0.9.4.ebuild:
   amd64 stable, bug #490384

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.70 2014/01/12 09:48:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.71 2014/01/14 13:54:55 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> musepack-tools-465-r1.ebuild:
+  Stable for x86, wrt bug #495806
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> musepack-tools-465-r1.ebuild:
   amd64 stable, bug #495806

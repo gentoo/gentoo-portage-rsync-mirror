@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.2.9.ebuild,v 1.3 2014/01/12 09:44:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-6.2.9.ebuild,v 1.4 2014/01/14 13:52:35 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE="doc emacs vim"
 
 RDEPEND="sys-devel/libtool

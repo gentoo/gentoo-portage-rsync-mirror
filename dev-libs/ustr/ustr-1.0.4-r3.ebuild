@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ustr-1.0.4-r3.ebuild,v 1.3 2014/01/12 20:28:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ustr-1.0.4-r3.ebuild,v 1.4 2014/01/14 13:58:01 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.and.org/pub/james/ustr/${PV}/${P}.tar.bz2"
 
 LICENSE="|| ( BSD-2 MIT LGPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips ~x86"
+KEYWORDS="amd64 ~arm ~mips x86"
 IUSE=""
 
 DEPEND=""

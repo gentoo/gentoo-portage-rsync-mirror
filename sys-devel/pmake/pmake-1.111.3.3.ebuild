@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.3.ebuild,v 1.4 2014/01/12 19:50:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.3.ebuild,v 1.5 2014/01/14 13:58:38 ago Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://debian/pool/main/p/pmake/${DEBIAN_SOURCE}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=""

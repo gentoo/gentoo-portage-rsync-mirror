@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ustr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.12 2014/01/12 20:28:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.13 2014/01/14 13:58:01 ago Exp $
+
+  14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ustr-1.0.4-r3.ebuild:
+  Stable for x86, wrt bug #495414
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> ustr-1.0.4-r3.ebuild:
   amd64 stable, bug #495414
