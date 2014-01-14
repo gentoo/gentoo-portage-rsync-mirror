@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/libSM-1.2.2.ebuild,v 1.10 2013/10/08 05:07:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/libSM-1.2.2.ebuild,v 1.11 2014/01/14 20:00:57 grobian Exp $
 
 EAPI=5
 
@@ -16,13 +16,13 @@ IUSE="doc ipv6 +uuid"
 RDEPEND=">=x11-libs/libICE-1.0.5[${MULTILIB_USEDEP}]
 	x11-libs/xtrans
 	x11-proto/xproto[${MULTILIB_USEDEP}]
-	!elibc_FreeBSD? ( !elibc_SunOS? (
+	!elibc_FreeBSD? ( !elibc_SunOS? ( !elibc_Darwin? (
 		uuid? (
 			>=sys-apps/util-linux-2.16
 			amd64? ( abi_x86_32? (
 				app-emulation/emul-linux-x86-baselibs[development] ) )
 		)
-	) )"
+	) ) )"
 DEPEND="${RDEPEND}"
 
 src_configure() {

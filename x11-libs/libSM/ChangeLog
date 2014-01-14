@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libSM
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.112 2013/10/08 05:07:25 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.113 2014/01/14 20:00:57 grobian Exp $
+
+  14 Jan 2014; Fabian Groffen <grobian@gentoo.org> libSM-1.2.2.ebuild:
+  Do not require util-linux on Darwin for uuid either, since it doesn't provide
+  it there
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> libSM-1.2.2.ebuild:
   Stable for x86, wrt bug #475480
