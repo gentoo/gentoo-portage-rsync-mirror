@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.135 2014/01/10 08:22:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.137 2014/01/14 07:06:58 jlec Exp $
+
+  14 Jan 2014; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop myself as maintainer
+
+  14 Jan 2014; Justin Lecher <jlec@gentoo.org> nvidia-settings-331.20.ebuild:
+  Avoid shadowing nvidia-settings from x11-drivers/nvidia-drivers
 
   10 Jan 2014; Justin Lecher <jlec@gentoo.org> -nvidia-settings-304.116.ebuild,
   -nvidia-settings-304.117.ebuild:
