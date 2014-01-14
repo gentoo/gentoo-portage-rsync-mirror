@@ -1,4 +1,7 @@
 
+  14 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -amd-adl-sdk-4.0.ebuild:
+  Cleanup old.
+
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> amd-adl-sdk-6.0-r1.ebuild:
   Stable for x86, wrt bug #496936
 
