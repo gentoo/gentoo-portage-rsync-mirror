@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6.ebuild,v 1.1 2014/01/14 18:52:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.1 2014/01/14 21:45:03 bicatali Exp $
 
 EAPI=5
 
@@ -22,7 +22,8 @@ RDEPEND="
 	sci-libs/coinor-utils:=
 	glpk? ( sci-mathematics/glpk:= )
 	metis? ( || ( sci-libs/metis sci-libs/parmetis ) )
-	mumps? ( sci-libs/mumps )"
+	mumps? ( sci-libs/mumps )
+	sparse? ( sci-libs/cholmod )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen[dot] )
@@ -30,25 +31,32 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.15.6-mpi-header.patch
+	"${FILESDIR}"/${PN}-1.15.6-overflow.patch
+)
+
 src_prepare() {
 	# as-needed fix
 	# hack to avoid eautoreconf (coinor has its own weird autotools)
 	sed -i \
-		-e 's:\(libOsiClp_la_LIBADD.*=\).*:\1 $(top_builddir)/src/libClp.la:g' \
+		-e 's:^#\(libOsiClp_la_LIBADD.*=\).*:\1 $(top_builddir)/src/libClp.la:g' \
 		src/OsiClp/Makefile.in || die
 	sed -i \
 		-e 's:\(libClp_la_LIBADD.*=\).*:\1 @CLPLIB_LIBS@:g' \
 		src/Makefile.in || die
-	epatch "${FILESDIR}"/${PN}-1.15.6-mpi-header.patch
 	if has_version sci-libs/mumps[-mpi]; then
 		ln -s "${EPREFIX}"/usr/include/mpiseq/mpi.h src/mpi.h
 	elif has_version sci-libs/mumps[mpi]; then
 		export CXX=mpicxx
 	fi
+	autotools-utils_src_prepare
 }
 
 src_configure() {
 	local myeconfargs=(
+		--enable-aboca
+		--enable-dependency-linking
 		$(use_with doc dot)
 	)
 	if use glpk; then

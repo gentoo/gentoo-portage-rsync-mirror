@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/coinor-clp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/ChangeLog,v 1.1 2014/01/14 18:52:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/ChangeLog,v 1.2 2014/01/14 21:45:03 bicatali Exp $
+
+*coinor-clp-1.15.6-r1 (14 Jan 2014)
+
+  14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +coinor-clp-1.15.6-r1.ebuild, +files/coinor-clp-1.15.6-overflow.patch,
+  -coinor-clp-1.15.6.ebuild:
+  Forced building of Aboca solver, fixed as-needed and and leak
 
 *coinor-clp-1.15.6 (14 Jan 2014)
 

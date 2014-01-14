@@ -1,0 +1,27 @@
+# ChangeLog for sci-libs/coinor-flopcpp
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-flopcpp/ChangeLog,v 1.1 2014/01/14 21:59:55 bicatali Exp $
+
+*coinor-flopcpp-1.1.7 (14 Jan 2014)
+
+  14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +coinor-flopcpp-1.1.7.ebuild, +metadata.xml:
+  Initial import in main tree
+
+*coinor-flopcpp-1.1.6 (07 Dec 2013)
+
+  07 Dec 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +coinor-flopcpp-1.1.6.ebuild, -coinor-flopcpp-1.1.3.ebuild:
+  sci-libs/coinor-flopcpp: Version bump
+
+*coinor-flopcpp-1.1.3 (17 Jul 2013)
+
+  17 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +coinor-flopcpp-1.1.3.ebuild, -coinor-flopcpp-1.1.2.ebuild:
+  sci-libs/coinor-flopcpp: Version bump
+
+*coinor-flopcpp-1.1.2 (26 May 2013)
+
+  26 May 2013; Sébastien Fabbro <bicatali@gentoo.org>
+  +coinor-flopcpp-1.1.2.ebuild, +metadata.xml:
+  sci-libs/coinor-flopcpp: Initial import
