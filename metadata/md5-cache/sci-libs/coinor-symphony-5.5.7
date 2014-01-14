@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=sci-libs/coinor-cgl:= sci-libs/coinor-clp:= sci-libs/coinor-dylp:= sci-libs/coinor-osi:= sci-libs/coinor-utils:= sci-libs/coinor-vol:= glpk? ( sci-mathematics/glpk:= ) virtual/pkgconfig doc? ( virtual/latex-base ) test? ( sci-libs/coinor-sample )
+DESCRIPTION=COIN-OR solver for mixed-integer linear programs
+EAPI=5
+HOMEPAGE=https://projects.coin-or.org/SYMPHONY/
+IUSE=doc examples glpk static-libs test
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=EPL-1.0
+RDEPEND=sci-libs/coinor-cgl:= sci-libs/coinor-clp:= sci-libs/coinor-dylp:= sci-libs/coinor-osi:= sci-libs/coinor-utils:= sci-libs/coinor-vol:= glpk? ( sci-mathematics/glpk:= )
+SLOT=0/3
+SRC_URI=http://www.coin-or.org/download/source/SYMPHONY/SYMPHONY-5.5.7.tgz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
+_md5_=a87ec93349fa39f137ddb24f58e7be7e
