@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-1.1.ebuild,v 1.1 2013/11/24 10:47:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/chromaprint/chromaprint-1.1.ebuild,v 1.2 2014/01/14 10:06:53 polynomial-c Exp $
 
 EAPI=5
 
@@ -31,6 +31,7 @@ DOCS="NEWS.txt README.txt"
 PATCHES=(
 	"${FILESDIR}"/${PN}-0.7-ffmpeg.patch
 	"${FILESDIR}"/${P}-gtest.patch
+	"${FILESDIR}"/${P}-ffmpeg2.patch
 )
 
 src_configure() {
