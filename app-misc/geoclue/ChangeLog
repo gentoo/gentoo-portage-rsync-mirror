@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/geoclue
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.27 2013/12/24 15:35:15 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/ChangeLog,v 1.28 2014/01/14 12:12:43 blueness Exp $
+
+  14 Jan 2014; Anthony G. Basile <blueness@gentoo.org> geoclue-0.12.99.ebuild,
+  geoclue-2.0.0.ebuild:
+  Keyword ~mips
 
 *geoclue-2.0.0 (24 Dec 2013)
 
