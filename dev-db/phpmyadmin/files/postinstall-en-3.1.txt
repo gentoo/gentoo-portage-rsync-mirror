@@ -8,7 +8,7 @@ a) Create config.inc.php. You can use the web-based installer
    mkdir ${MY_INSTALLDIR}/config
    chown ${VHOST_SERVER_UID}:${VHOST_SERVER_UID} ${MY_INSTALLDIR}/config
 
-   then go to http://${VHOST_HOSTNAME}${VHOST_APPDIR}/setup/
+   then go to http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/setup/
 
    once you've saved the configuration:
 

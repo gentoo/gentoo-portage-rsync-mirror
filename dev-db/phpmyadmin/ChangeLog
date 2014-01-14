@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/phpmyadmin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.499 2013/10/28 20:29:54 a3li Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.501 2014/01/14 01:45:34 jmbsvicetto Exp $
+
+  14 Jan 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  files/postinstall-en-3.1.txt:
+  Really add the missing "/" on the URL (postinstall file).
+
+*phpmyadmin-4.1.4 (14 Jan 2014)
+
+  14 Jan 2014; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phpmyadmin-4.1.4.ebuild:
+  Bump to 4.1.4 release - fixes bug 492284. Add missing "/" on URL of
+  postinstall file.
 
   28 Oct 2013; Alex Legler <a3li@gentoo.org> -phpmyadmin-3.5.3.ebuild,
   -phpmyadmin-3.5.8.ebuild:
