@@ -1,0 +1,30 @@
+# ChangeLog for sci-libs/coinor-vol
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-vol/ChangeLog,v 1.1 2014/01/14 18:00:42 bicatali Exp $
+
+*coinor-vol-1.4.4 (14 Jan 2014)
+
+  14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +coinor-vol-1.4.4.ebuild, +metadata.xml:
+  Initial import in main tree
+
+*coinor-vol-1.4.3 (07 Dec 2013)
+
+  07 Dec 2013; Sébastien Fabbro <bicatali@gentoo.org> +coinor-vol-1.4.3.ebuild,
+  -coinor-vol-1.4.0.ebuild:
+  sci-libs/coinor-vol: Version bump
+
+*coinor-vol-1.4.0 (17 Jul 2013)
+
+  17 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +coinor-vol-1.4.0.ebuild,
+  -coinor-vol-1.3.3.ebuild:
+  sci-libs/coinor-vol: Version bump
+
+  18 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> coinor-vol-1.3.3.ebuild:
+  sci-libs/coinor-vol: Fixed for occasional parallel install breaks
+
+*coinor-vol-1.3.3 (16 Jul 2012)
+
+  16 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> +coinor-vol-1.3.3.ebuild,
+  +metadata.xml:
+  sci-libs/coinor-vol: Initial import

@@ -5816,6 +5816,8 @@ sci-libs/chemkit:applications - Build also applications not only the libraries
 sci-libs/cholmod:cuda - Use nvidia cuda toolkit for speeding up computations
 sci-libs/cholmod:metis - Enable the Partition module to cholmod using sci-libs/metis
 sci-libs/cholmod:supernodal - Enable the Supernodal module (needs virtual/lapack)
+sci-libs/coinor-osi:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
+sci-libs/coinor-utils:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/fftw:avx - Adds support for Advanced Vector Extensions
 sci-libs/fftw:float - Link default library to single precision instead of double (symlinks only and fftw-2.1)
 sci-libs/fftw:fma - Use the Fused Multiply Add instruction set (fma3/fma4 either one)
