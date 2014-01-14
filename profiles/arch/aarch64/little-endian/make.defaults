@@ -1,0 +1,3 @@
+# Little endian Aarch64 settings.
+
+CHOST="aarch64-unknown-linux-gnu"

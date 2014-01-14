@@ -1,0 +1,14 @@
+# Main Aarch64 (ARMv8) profile; endian independent.
+
+ARCH="aarch64"
+ACCEPT_KEYWORDS="aarch64"
+
+CFLAGS="-O2"
+CXXFLAGS="${CFLAGS}"
+FFLAGS="${CFLAGS}"
+FCFLAGS="${CFLAGS}"
+
+USE="-python_targets_python3_2 python_targets_python3_3"
+
+# Defaults for video drivers
+VIDEO_CARDS="fbdev"
