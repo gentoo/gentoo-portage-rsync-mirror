@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/emech
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.12 2009/06/06 21:45:19 cla Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.13 2014/01/14 06:58:17 patrick Exp $
+
+*emech-3.0.3 (14 Jan 2014)
+
+  14 Jan 2014; Patrick Lauer <patrick@gentoo.org> +emech-3.0.3.ebuild:
+  Bump
 
   06 Jun 2009; Dawid Węgliński <cla@gentoo.org> emech-3.0.2.ebuild:
   Don't specify full path of installed doc files since PORTAGE_COMPRESS comes
@@ -46,4 +51,3 @@
   30 Jul 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +emech-2.8.5.1.ebuild:
   Initial import, ebuild written by me.
-

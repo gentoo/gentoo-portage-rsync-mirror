@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>openstack</herd>
+  <herd>python</herd>
   <maintainer>
     <email>prometheanfire@gentoo.org</email>
     <name>Matthew Thode</name>
