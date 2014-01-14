@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_fcgid
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.56 2013/12/23 16:01:53 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.57 2014/01/14 08:56:47 hanno Exp $
+
+*mod_fcgid-2.3.9 (14 Jan 2014)
+
+  14 Jan 2014; Hanno Boeck <hanno@gentoo.org> +mod_fcgid-2.3.9.ebuild:
+  Bump, fixes CVE-2013-4365.
 
   23 Dec 2013; Pacho Ramos <pacho@gentoo.org> -mod_fcgid-2.3.5.ebuild,
   -mod_fcgid-2.3.6.ebuild, metadata.xml:
