@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/cvsd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsd/ChangeLog,v 1.2 2012/06/07 21:48:58 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsd/ChangeLog,v 1.3 2014/01/14 07:39:44 patrick Exp $
+
+*cvsd-1.0.17 (14 Jan 2014)
+
+  14 Jan 2014; Patrick Lauer <patrick@gentoo.org> +cvsd-1.0.17.ebuild:
+  Bump
 
   07 Jun 2012; Zac Medico <zmedico@gentoo.org> cvsd-1.0.16.ebuild,
   cvsd-1.0.7.ebuild, cvsd-1.0.8.ebuild:
@@ -124,4 +129,3 @@
   26 Jul 2003; Grant Goodyear <g2boojum@gentoo.org> cvsd-0.9.19.ebuild,
   files/cvsd.confd, files/cvsd.init:
   New package, long overdue, with many thanks to Enrico Morelli (Bug 18380).
-
