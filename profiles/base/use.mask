@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.182 2014/01/02 06:59:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.183 2014/01/14 19:15:08 aballier Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -58,10 +58,12 @@ sse3
 sse4
 sse4a
 sse4_1
+sse4_2
 ssse3
 avx
 avx128fma
 avx256
+fma4
 svga
 nvram
 
@@ -75,6 +77,10 @@ n32
 n64
 fixed-point
 loongson2f
+mips32r2
+mipsdspr1
+mipsdspr2
+mipsfpu
 
 # ppc64 arch specific USE flags
 ibm
@@ -85,6 +91,10 @@ vis
 ultra1
 
 # arm arch specific USE flags
+armvfp
+armv5te
+armv6
+armv6t2
 iwmmxt
 neon
 

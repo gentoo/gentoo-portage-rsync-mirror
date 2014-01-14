@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15335 2014/01/14 18:33:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15336 2014/01/14 19:17:50 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (14 Jan 2014)
+# plugin fails on compile >=vdr-1.7.27
+# dead on upstream, wrt bug 414887
+# removal ~ 14/02/2014
+media-plugins/vdr-skinclassic
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (14 Jan 2014)
 # plugin fails on compile

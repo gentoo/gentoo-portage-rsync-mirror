@@ -1,15 +1,17 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/vdr-serial-0.0.6a-r1.ebuild,v 1.5 2011/12/13 22:56:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-serial/vdr-serial-0.0.6a-r1.ebuild,v 1.6 2014/01/14 19:09:24 hd_brummy Exp $
 
-inherit vdr-plugin
+EAPI=5
+
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: attach some buttons with diodes to the serial port"
 HOMEPAGE="http://www.lf-klueber.de/vdr.htm"
 SRC_URI="http://www.lf-klueber.de/${P}.tgz
 		mirror://vdrfiles/${PN}/${P}.tgz"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
@@ -17,7 +19,7 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.2.6"
 
 pkg_setup() {
-	vdr-plugin_pkg_setup
+	vdr-plugin-2_pkg_setup
 
 	if ! getent group uucp | grep -q vdr; then
 		echo
@@ -28,8 +30,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	vdr-plugin_src_unpack
+src_prepare() {
+	vdr-plugin-2_src_prepare
+
+	sed -i serial.c -e "s:RegisterI18n://RegisterI18n:"
+
 	cd "${S}"/tools
 	emake clean
 }

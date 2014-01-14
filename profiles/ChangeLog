@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8535 2014/01/14 18:33:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8537 2014/01/14 19:17:50 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-plugins/vdr-skinclassic masked for removal ~14/02/2014, wrt bug 414887
+
+  14 Jan 2014; Alexis Ballier <aballier@gentoo.org> arch/amd64/use.mask,
+  arch/x86/use.mask, base/use.mask:
+  Add some usemasks for cpu related useflags that will be added to
+  media-video/ffmpeg. Unmask relevant flags on amd64/x86. Leave arm and mips
+  useflags to the arch team that know better where to unmask them.
 
   14 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-plugins/vdr-sky masked for removal ~ 14/02/2014, wrt bug 420869

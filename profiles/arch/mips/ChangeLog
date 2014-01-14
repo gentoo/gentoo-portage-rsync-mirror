@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.127 2014/01/08 00:26:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.128 2014/01/14 19:14:03 hwoarang Exp $
+
+  14 Jan 2014; Markos Chandras <hwoarang@gentoo.org> use.mask:
+  Remove old libnotify entry
 
   08 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> package.use.mask:
   Mask webkit USE flag for wxGTK.
