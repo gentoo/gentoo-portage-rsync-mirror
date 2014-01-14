@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/nomacs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nomacs/ChangeLog,v 1.5 2013/06/12 14:39:56 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nomacs/ChangeLog,v 1.6 2014/01/14 10:46:06 pinkbyte Exp $
+
+*nomacs-1.6.2 (14 Jan 2014)
+
+  14 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> -nomacs-1.0.0.ebuild,
+  +nomacs-1.6.2.ebuild, +files/nomacs-1.6.2-use-system-webp.patch,
+  metadata.xml:
+  Version bump: add support for tiff and webp. Drop old
 
 *nomacs-1.0.2 (12 Jun 2013)
 

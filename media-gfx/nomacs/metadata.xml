@@ -6,4 +6,7 @@
 		<remote-id type="sourceforge">nomacs</remote-id>
 		<bugs-to>http://www.nomacs.org/redmine/projects/nomacs</bugs-to>
 	</upstream>
+	<use>
+		<flag name="webp">Build support for WEBP image format</flag>
+	</use>
 </pkgmetadata>

@@ -3121,6 +3121,7 @@ media-gfx/k3d:gts - Add Support for the GNU Triangulated Surface Library sci-lib
 media-gfx/kphotoalbum:geolocation - Add support for kde-base/marble
 media-gfx/kphotoalbum:kipi - Support for the KDE Image Plugin Interface
 media-gfx/nip2:goffice - use x11-libs/goffice to show plots
+media-gfx/nomacs:webp - Build support for WEBP image format
 media-gfx/nvidia-texture-tools:cg - Enable NVIDIA C graphics compiler toolkit plug-in
 media-gfx/nvidia-texture-tools:cuda - Enable NVIDIA CUDA toolkit support
 media-gfx/nvidia-texture-tools:glew - Enable support for The OpenGL Extension Wrangler Library (media-libs/glew)
