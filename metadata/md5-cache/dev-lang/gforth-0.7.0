@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=dev-libs/ffcall emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=mirror://gnu/gforth/gforth-0.7.0.tar.gz
-_eclasses_=elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
 _md5_=15d40d1812024bb931fea431ddf811c8

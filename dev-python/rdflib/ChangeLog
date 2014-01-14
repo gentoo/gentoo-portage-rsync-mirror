@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/rdflib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.35 2013/12/19 14:12:00 hattya Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.36 2014/01/14 05:37:04 patrick Exp $
+
+*rdflib-4.1.0 (14 Jan 2014)
+
+  14 Jan 2014; Patrick Lauer <patrick@gentoo.org> +rdflib-4.1.0.ebuild:
+  Bump
 
   19 Dec 2013; Akinori Hattori <hattya@gentoo.org> rdflib-3.2.3-r1.ebuild:
   ia64 stable wrt bug #482056

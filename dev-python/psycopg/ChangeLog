@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/psycopg
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.171 2013/12/29 09:45:54 hattya Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.172 2014/01/14 05:46:18 patrick Exp $
+
+*psycopg-2.5.2 (14 Jan 2014)
+
+  14 Jan 2014; Patrick Lauer <patrick@gentoo.org> +psycopg-2.5.2.ebuild:
+  Bump
 
   29 Dec 2013; Akinori Hattori <hattya@gentoo.org> psycopg-2.5.1.ebuild:
   ia64 stable wrt bug #487872

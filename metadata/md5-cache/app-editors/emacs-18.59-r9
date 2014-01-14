@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses >=app-admin/eselect-emacs-1.2 amd64? ( sys-libs/ncurses
 REQUIRED_USE=amd64? ( || ( abi_x86_32 abi_x86_x32 ) )
 SLOT=18
 SRC_URI=mirror://gnu/old-gnu/emacs/emacs-18.59.tar.gz ftp://ftp.splode.com/pub/users/friedman/emacs/emacs-18.59-linux22x-elf-glibc21.diff.gz mirror://gentoo/emacs-18.59-patches-8.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
 _md5_=2178501c8f9d7485cbf9683d049daaed

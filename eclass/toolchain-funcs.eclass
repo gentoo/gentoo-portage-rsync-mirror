@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.123 2013/10/12 21:31:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.124 2014/01/14 05:33:12 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -368,7 +368,7 @@ ninj() { [[ ${type} == "kern" ]] && echo $1 || echo $2 ; }
 	ewarn "QA: Kernel version could not be determined, please inherit kernel-2 or linux-info"
 
 	case ${host} in
-		aarch64*)	ninj arm64 arm;;
+		aarch64*)	ninj arm64 aarch64;;
 		alpha*)		echo alpha;;
 		arm*)		echo arm;;
 		avr*)		ninj avr32 avr;;

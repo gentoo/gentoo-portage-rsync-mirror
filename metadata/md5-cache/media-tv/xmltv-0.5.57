@@ -10,5 +10,5 @@ RDEPEND=>=dev-perl/libwww-perl-5.65 >=dev-perl/XML-Parser-2.34 >=dev-perl/XML-Tw
 REQUIRED_USE=na_icons? ( na_dd )
 SLOT=0
 SRC_URI=mirror://sourceforge/xmltv/xmltv-0.5.57.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
 _md5_=224689a12f1f9bbd7fc23f5ef1ec8bbd

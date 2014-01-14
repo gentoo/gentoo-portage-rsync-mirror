@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/siege
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.61 2013/11/27 04:00:30 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.62 2014/01/14 06:25:29 patrick Exp $
+
+*siege-3.0.6 (14 Jan 2014)
+
+  14 Jan 2014; Patrick Lauer <patrick@gentoo.org> +siege-3.0.6.ebuild:
+  Bump
 
 *siege-3.0.5 (27 Nov 2013)
 

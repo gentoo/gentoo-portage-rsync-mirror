@@ -10,5 +10,5 @@ RDEPEND=media-libs/libvorbis >=sys-devel/libtool-2.2.6b alsa? ( media-libs/alsa-
 REQUIRED_USE=udev? ( alsa )
 SLOT=0
 SRC_URI=http://0pointer.de/lennart/projects/libcanberra/libcanberra-0.30.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	c905e5f2c8dfafd30586c7dd4fe787ac
 _md5_=aace48dec684c3725f2bb36ebb382358
