@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.2-r1.ebuild,v 1.2 2013/12/31 17:45:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/crypto++-5.6.2-r1.ebuild,v 1.3 2014/01/14 20:30:35 grobian Exp $
 
 EAPI=5
 
@@ -65,6 +65,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="$(get_libdir)" PREFIX="${EPREFIX}/usr" install
+	emake DESTDIR="${D}" LIBDIR="$(get_libdir)" PREFIX="${EPREFIX}/usr" LIBTOOL="./libtool" install
 	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.la
 }
