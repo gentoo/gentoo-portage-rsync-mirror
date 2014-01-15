@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-bcps/coinor-bcps-0.93.9.ebuild,v 1.1 2014/01/14 21:49:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-bcps/coinor-bcps-0.93.9.ebuild,v 1.2 2014/01/15 18:32:48 bicatali Exp $
 
 EAPI=5
 
@@ -12,10 +12,10 @@ DESCRIPTION="COIN-OR BiCEPS data handling library"
 HOMEPAGE="https://projects.coin-or.org/CHiPPS/"
 SRC_URI="http://www.coin-or.org/download/source/${MYPN}/${MYPN}-${PV}.tgz"
 
-LICENSE="EPL-1.0"
+LICENSE="CPL-1.0"
 SLOT="0/1"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc examples static-libs test"
+IUSE="examples static-libs test"
 
 RDEPEND="
 	sci-libs/coinor-utils:=
@@ -23,43 +23,22 @@ RDEPEND="
 	sci-libs/coinor-alps:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	doc? ( app-doc/doxygen[dot] )
 	test? ( sci-libs/coinor-sample )"
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
-src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:\(libBcps_la_LIBADD.*=\).*:\1 @BCPSLIB_LIBS@:g' \
-		src/Makefile.in || die
-	# bug for later versions of subversions
-	sed -i \
-		-e 's/xexported/xexported -a "x$svn_rev_tmp" != "xUnversioned directory"/' \
-		configure
-}
-
 src_configure() {
 	local myeconfargs=(
-		$(use_with doc dot)
+		--enable-dependency-linking
 	)
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
-}
-
-src_compile() {
-	autotools-utils_src_compile all $(use doc && echo doxydoc)
+	autotools-utils_src_configure
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {
-	use doc && HTML_DOC=("${BUILD_DIR}/doxydocs/html/")
 	autotools-utils_src_install
 	if use examples; then
 		insinto /usr/share/doc/${PF}

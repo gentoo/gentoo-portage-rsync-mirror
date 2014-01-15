@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=sci-libs/coinor-utils:= sci-libs/coinor-clp:= sci-libs/coinor-alps:= virtual/pkgconfig doc? ( app-doc/doxygen[dot] ) test? ( sci-libs/coinor-sample )
+DEPEND=sci-libs/coinor-utils:= sci-libs/coinor-clp:= sci-libs/coinor-alps:= virtual/pkgconfig test? ( sci-libs/coinor-sample )
 DESCRIPTION=COIN-OR BiCEPS data handling library
 EAPI=5
 HOMEPAGE=https://projects.coin-or.org/CHiPPS/
-IUSE=doc examples static-libs test
+IUSE=examples static-libs test
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
-LICENSE=EPL-1.0
+LICENSE=CPL-1.0
 RDEPEND=sci-libs/coinor-utils:= sci-libs/coinor-clp:= sci-libs/coinor-alps:=
 SLOT=0/1
 SRC_URI=http://www.coin-or.org/download/source/Bcps/Bcps-0.93.9.tgz
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=22623a4781f63b13eab9ed05a47d03d7
+_md5_=4eeabfae0f05385c2cd8696988ca9c3b
