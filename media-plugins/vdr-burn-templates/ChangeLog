@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-burn-templates
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn-templates/ChangeLog,v 1.9 2012/12/16 23:06:14 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn-templates/ChangeLog,v 1.10 2014/01/15 00:11:13 hd_brummy Exp $
+
+  15 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-burn-templates-0.0.2.ebuild:
+  rekeyworded ~ARCH ~x86, due depends on ~arch media-plugins/vdr-burn; wrt bug
+  497602
 
   16 Dec 2012; Ulrich Müller <ulm@gentoo.org> vdr-burn-templates-0.0.2.ebuild:
   Fix LICENSE, bug 445862.
