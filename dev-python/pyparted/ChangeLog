@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.83 2013/12/23 15:29:43 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.84 2014/01/15 09:29:14 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.ebuild:
+  Stable for ia64, wrt bug #493130
 
   23 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pyparted-3.10.ebuild:
   Stable for sparc, wrt bug #493130

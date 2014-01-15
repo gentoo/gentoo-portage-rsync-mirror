@@ -4,7 +4,7 @@ DESCRIPTION=Full sources including the Gentoo patchset for the 3.10 kernel tree
 EAPI=5
 HOMEPAGE=http://dev.gentoo.org/~mpagano/genpatches
 IUSE=deblob experimental symlink build deblob
-KEYWORDS=~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86
+KEYWORDS=~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86
 LICENSE=GPL-2 !deblob? ( freedist )
 PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
@@ -12,4 +12,4 @@ RESTRICT=binchecks strip
 SLOT=3.10.25
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.10.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.10.N/deblob-3.10 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.10.N/deblob-check -> deblob-check-3.10 ) mirror://gentoo/genpatches-3.10-32.base.tar.xz mirror://gentoo/genpatches-3.10-32.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.10-32.experimental.tar.xz )
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	kernel-2	4d3bcae9a98bcc93a217f087c087e16d	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ddf81575e9f11b4667ec34b0e602d43f
+_md5_=bf5521920d58f15d37ac2111ac1540e6

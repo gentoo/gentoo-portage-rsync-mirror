@@ -4,11 +4,11 @@ DESCRIPTION=A tool that allows both-side communication beetween Python and Emacs
 EAPI=5
 HOMEPAGE=http://pymacs.progiciels-bpi.ca/
 IUSE=doc python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
-KEYWORDS=amd64 arm hppa ~ia64 ppc ppc64 ~s390 ~sh x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-21 python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 )
 SLOT=0
 SRC_URI=https://github.com/pinard/Pymacs/tarball/v0.25 -> pymacs-0.25.tar.gz
 _eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=bba3d438ae8064d01ad3b8b4bd522b66
+_md5_=5c7f5b90ebf48f7d1727afb35013b79f

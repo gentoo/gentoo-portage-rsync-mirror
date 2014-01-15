@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.159 2014/01/04 22:53:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.160 2014/01/15 09:20:12 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> expat-2.1.0-r3.ebuild:
+  Stable for ia64, wrt bug #492702
 
   04 Jan 2014; Michał Górny <mgorny@gentoo.org> expat-2.1.0-r3.ebuild:
   Replace the explicit ABI==DEFAULT_ABI check with multilib_build_binaries

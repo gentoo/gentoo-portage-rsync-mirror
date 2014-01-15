@@ -4,11 +4,11 @@ DESCRIPTION=Python bindings for sys-block/parted
 EAPI=5
 HOMEPAGE=https://fedorahosted.org/pyparted/
 IUSE=test python_targets_python2_7 python_targets_python3_3
-KEYWORDS=~alpha amd64 hppa ~ia64 ppc ppc64 sparc x86
+KEYWORDS=~alpha amd64 hppa ia64 ppc ppc64 sparc x86
 LICENSE=GPL-2
 RDEPEND=>=sys-block/parted-3.1 dev-python/decorator sys-libs/ncurses python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_targets_python3_3(-)?,-python_single_target_python2_7(-),-python_single_target_python3_3(-)]
 REQUIRED_USE=|| ( python_targets_python2_7 python_targets_python3_3 )
 SLOT=0
 SRC_URI=https://fedorahosted.org/releases/p/y/pyparted/pyparted-3.10.tar.gz
 _eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=c1b76babb36501f668b4d768147ab7dc
+_md5_=ddab1b9b2cd2e37662f3572bddbdda73

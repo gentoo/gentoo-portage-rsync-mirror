@@ -4,10 +4,10 @@ DESCRIPTION=A distributed, collaborative spam detection and filtering network
 EAPI=3
 HOMEPAGE=http://pyzor.sourceforge.net/
 IUSE=pyzord
-KEYWORDS=~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha ~amd64 hppa ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND==dev-lang/python-2* pyzord? ( =dev-lang/python-2*[gdbm] )
 SLOT=0
 SRC_URI=mirror://sourceforge/pyzor/pyzor-0.5.0.tar.bz2
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=7973a2d4f0ef991f495aaf3da9422dbc
+_md5_=b11f19a6d0774d1345f9a7a97a6bf208
