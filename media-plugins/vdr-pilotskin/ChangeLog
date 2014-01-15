@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pilotskin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pilotskin/ChangeLog,v 1.7 2009/03/12 19:02:15 zzam Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pilotskin/ChangeLog,v 1.8 2014/01/15 00:41:58 hd_brummy Exp $
+
+  15 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-pilotskin-0.0.2.ebuild, vdr-pilotskin-0.0.2-r1.ebuild:
+  cleanup; eapi=5; vdr-plugin-2.eclass; rekeyworded ~x86; removed i18n crap
 
   12 Mar 2009; Matthias Schwarzott <zzam@gentoo.org>
   vdr-pilotskin-0.0.2-r1.ebuild:
