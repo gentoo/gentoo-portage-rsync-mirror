@@ -5827,6 +5827,7 @@ sci-libs/chemkit:applications - Build also applications not only the libraries
 sci-libs/cholmod:cuda - Use nvidia cuda toolkit for speeding up computations
 sci-libs/cholmod:metis - Enable the Partition module to cholmod using sci-libs/metis
 sci-libs/cholmod:supernodal - Enable the Supernodal module (needs virtual/lapack)
+sci-libs/coinor-bonmin:glpk - Undocumented USE
 sci-libs/coinor-clp:glpk - Enable GNU Linear Programming Kit sci-mathematics/glpk support
 sci-libs/coinor-clp:metis - Enable partitioning with sci-libs/metis
 sci-libs/coinor-clp:mumps - Enable sci-libs/mumps support
@@ -5857,6 +5858,8 @@ sci-libs/grib_api:jasper - Use media-libs/jasper instead of media-libs/openjpeg 
 sci-libs/gsl:cblas-external - Link gsl with external cblas provided by (virtual/cblas) instead of shipped internal version
 sci-libs/hdf5:fortran2003 - enable new features that require Fortran 2003 (http://www.hdfgroup.org/HDF5/doc/fortran/NewFeatures_F2003.pdf)
 sci-libs/indilib:nova - Enable support for nova celestial mechanics calculations
+sci-libs/ipopt:hsl - hsl
+sci-libs/ipopt:mumps - Enable sci-libs/mumps support
 sci-libs/lemon:tools - Build additional tools
 sci-libs/libghemical:mopac7 - Use sci-chemistry/mopac7 for semi-empirical calculations
 sci-libs/libghemical:mpqc - Use sci-chemistry/mpqc for quantum-mechanical calculations

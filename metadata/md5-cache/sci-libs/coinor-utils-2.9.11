@@ -10,4 +10,4 @@ RDEPEND=sys-libs/readline bzip2? ( app-arch/bzip2 ) blas? ( virtual/blas ) glpk?
 SLOT=0/3
 SRC_URI=http://www.coin-or.org/download/source/CoinUtils/CoinUtils-2.9.11.tgz
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=c3289da907111adc9914c6d93f657d71
+_md5_=096afbbcc5282ac7ed75e9f99f71f0c5

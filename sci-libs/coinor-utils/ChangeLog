@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/coinor-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-utils/ChangeLog,v 1.1 2014/01/14 17:51:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-utils/ChangeLog,v 1.2 2014/01/15 20:00:22 bicatali Exp $
+
+  14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  coinor-utils-2.9.11.ebuild:
+  Cleanup, as-needed as applied upstream
 
 *coinor-utils-2.9.11 (14 Jan 2014)
 

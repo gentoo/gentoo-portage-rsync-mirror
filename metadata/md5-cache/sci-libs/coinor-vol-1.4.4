@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=sci-libs/coinor-osi sci-libs/coinor-utils virtual/pkgconfig doc? ( app-doc/doxygen[dot] ) test? ( sci-libs/coinor-sample )
+DEPEND=sci-libs/coinor-osi:= sci-libs/coinor-utils:= virtual/pkgconfig doc? ( app-doc/doxygen[dot] ) test? ( sci-libs/coinor-sample )
 DESCRIPTION=COIN-OR Volume algorithm linear programming solver
 EAPI=5
 HOMEPAGE=https://projects.coin-or.org/Vol
 IUSE=doc examples static-libs test
 KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=EPL-1.0
-RDEPEND=sci-libs/coinor-osi sci-libs/coinor-utils
+RDEPEND=sci-libs/coinor-osi:= sci-libs/coinor-utils:=
 SLOT=0/1
 SRC_URI=http://www.coin-or.org/download/source/Vol/Vol-1.4.4.tgz
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=243d50b50f5cefc63b5859391b47e752
+_md5_=81b8c4572c8836c42712949175cd19ee

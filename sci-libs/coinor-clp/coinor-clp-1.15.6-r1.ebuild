@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.1 2014/01/14 21:45:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.2 2014/01/15 19:37:56 bicatali Exp $
 
 EAPI=5
 
@@ -37,14 +37,6 @@ PATCHES=(
 )
 
 src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:^#\(libOsiClp_la_LIBADD.*=\).*:\1 $(top_builddir)/src/libClp.la:g' \
-		src/OsiClp/Makefile.in || die
-	sed -i \
-		-e 's:\(libClp_la_LIBADD.*=\).*:\1 @CLPLIB_LIBS@:g' \
-		src/Makefile.in || die
 	if has_version sci-libs/mumps[-mpi]; then
 		ln -s "${EPREFIX}"/usr/include/mpiseq/mpi.h src/mpi.h
 	elif has_version sci-libs/mumps[mpi]; then
@@ -89,9 +81,7 @@ src_configure() {
 	else
 		myeconfargs+=( --without-mumps )
 	fi
-
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
+	autotools-utils_src_configure
 }
 
 src_compile() {
@@ -101,9 +91,7 @@ src_compile() {
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {

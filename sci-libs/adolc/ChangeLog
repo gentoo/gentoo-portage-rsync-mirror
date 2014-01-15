@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/adolc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.4 2013/05/26 15:55:01 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/adolc/ChangeLog,v 1.5 2014/01/15 19:44:44 bicatali Exp $
+
+  15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> -adolc-2.4.0.ebuild,
+  adolc-2.4.1.ebuild:
+  Cleanup, removed old, sub-slotted
 
 *adolc-2.4.1 (26 May 2013)
 

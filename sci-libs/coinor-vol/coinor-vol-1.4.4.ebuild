@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-vol/coinor-vol-1.4.4.ebuild,v 1.1 2014/01/14 18:00:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-vol/coinor-vol-1.4.4.ebuild,v 1.2 2014/01/15 19:52:49 bicatali Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs test"
 
 RDEPEND="
-	sci-libs/coinor-osi
-	sci-libs/coinor-utils"
+	sci-libs/coinor-osi:=
+	sci-libs/coinor-utils:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen[dot] )
@@ -27,23 +27,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
-src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:\(libOsiVol_la_LIBADD.*=\).*:\1 $(top_builddir)/src/libVol.la @OSI_LIBS@:g' \
-		src/OsiVol*/Makefile.in || die
-	sed -i \
-		-e 's:\(libVol_la_LIBADD.*=\).*:\1 @VOLLIB_LIBS@:g' \
-		src/Makefile.in || die
-}
-
 src_configure() {
 	local myeconfargs=(
+		--enable-dependency-linking
 		$(use_with doc dot)
 	)
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
+	autotools-utils_src_configure
 }
 
 src_compile() {
@@ -53,9 +42,7 @@ src_compile() {
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {

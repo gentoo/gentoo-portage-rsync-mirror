@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-cbc/coinor-cbc-2.8.8.ebuild,v 1.1 2014/01/14 18:58:08 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-cbc/coinor-cbc-2.8.8.ebuild,v 1.2 2014/01/15 19:35:03 bicatali Exp $
 
 EAPI=5
 
@@ -31,29 +31,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
-src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:\(libOsiCbc_la_LIBADD.*=\).*:\1 $(top_builddir)/src/libCbc.la $(top_builddir)/src/libCbcSolver.la:g' \
-		src/OsiCbc/Makefile.in || die
-	sed -i \
-		-e 's:\(libCbc_la_LIBADD.*=.*\)$:\1 @CBCLIB_LIBS@:' \
-		-e 's:\(libCbcSolver_la_LIBADD.*=.*\)$:\1 libCbc.la:' \
-		-e 's:\(libCbcSolver_la_DEPENDENCIES.*=\).*:\1 libCbc.la:' \
-		src/Makefile.in || die
-	# bug for later versions of subversions
-	sed -i \
-		-e 's/xexported/xexported -a "x$svn_rev_tmp" != "xUnversioned directory"/' \
-		configure
-}
-
 src_configure() {
 	local myeconfargs=(
+		--enable-dependency-linking
 		$(use_with doc dot)
 	)
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
+	autotools-utils_src_configure
 }
 
 src_compile() {
@@ -64,9 +47,7 @@ src_compile() {
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-csdp/coinor-csdp-6.1.1.ebuild,v 1.1 2014/01/14 21:54:44 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-csdp/coinor-csdp-6.1.1.ebuild,v 1.2 2014/01/15 19:51:27 bicatali Exp $
 
 EAPI=5
 
@@ -65,9 +65,9 @@ src_prepare() {
 		append-cflags -DUSEOPENMP
 	fi
 	use amd64 && append-cflags -DBIT64
-	[[ $($(tc-getPKG_CONFIG) --libs blas) =~ -latlas ]] && append-cflags -DUSEATLAS
+	[[ $($(tc-getPKG_CONFIG) --libs blas) =~ atlas ]] && append-cflags -DUSEATLAS
 	sed -i \
-		-e "s:-O3:${CFLAGS}:" \
+		-e "s:-O3:${CFLAGS} ${LDFLAGS}:" \
 		-e "s:ar :$(tc-getAR) :" \
 		*/Makefile || die
 }

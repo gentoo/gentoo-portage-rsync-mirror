@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=sci-libs/metis virtual/blas virtual/pkgconfig virtual/fortran
+DESCRIPTION=HSL mathematical software library for IPOPT
+EAPI=5
+HOMEPAGE=http://www.hsl.rl.ac.uk/ipopt
+IUSE=static-libs
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=HSL
+RDEPEND=sci-libs/metis virtual/blas virtual/fortran
+RESTRICT=mirror fetch
+SLOT=0
+SRC_URI=coinhsl-2014.01.10.tar.gz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
+_md5_=30bfef15d36eda2f6abc22b608dc4c98

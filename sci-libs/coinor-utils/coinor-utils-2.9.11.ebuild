@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-utils/coinor-utils-2.9.11.ebuild,v 1.1 2014/01/14 17:51:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-utils/coinor-utils-2.9.11.ebuild,v 1.2 2014/01/15 20:00:22 bicatali Exp $
 
 EAPI=5
 
@@ -31,16 +31,9 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
-src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:\(libCoinUtils_la_LIBADD.*=\).*:\1 @COINUTILSLIB_LIBS@:' \
-		src/Makefile.in || die
-}
-
 src_configure() {
 	local myeconfargs=(
+		--enable-dependency-linking
 		$(use_enable zlib)
 		$(use_enable bzip2 bzlib)
 		$(use_with doc dot)
@@ -63,18 +56,15 @@ src_configure() {
 	else
 		myeconfargs+=( --without-lapack )
 	fi
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
+	autotools-utils_src_configure
 }
 
 src_compile() {
 	autotools-utils_src_compile all $(use doc && echo doxydoc)
 }
 
-src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+psrc_test() {
+	autotools-utils_src_test test
 }
 
 src_install() {

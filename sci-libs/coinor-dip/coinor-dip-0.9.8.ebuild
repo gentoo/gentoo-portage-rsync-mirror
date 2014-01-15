@@ -1,15 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-dip/coinor-dip-0.83.2.ebuild,v 1.2 2014/01/15 04:38:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-dip/coinor-dip-0.9.8.ebuild,v 1.1 2014/01/15 20:00:33 bicatali Exp $
 
 EAPI=5
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
 inherit autotools-utils multilib
 
 MYPN=Dip
 
-DESCRIPTION="COIN-OR Decomposition in Integer Programming"
+DESCRIPTION="COIN-OR Decomposition in Integer Programming library"
 HOMEPAGE="https://projects.coin-or.org/Dip/"
 SRC_URI="http://www.coin-or.org/download/source/${MYPN}/${MYPN}-${PV}.tgz"
 
@@ -29,16 +28,11 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
-src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:\(libDecomp_la_LIBADD.*=\).*:\1 @DIPLIB_LIBS@:g' \
-		src/Makefile.in || die
-	# bug for later versions of subversions
-	sed -i \
-		-e 's/xexported/xexported -a "x$svn_rev_tmp" != "xUnversioned directory"/' \
-		configure
+src_configure() {
+	local myeconfarg=(
+		--enable-dependency-linking
+	)
+	autotools-utils_src_configure
 }
 
 src_test() {

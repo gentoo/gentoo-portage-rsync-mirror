@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-alps/coinor-alps-1.4.8.ebuild,v 1.1 2014/01/14 19:01:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-alps/coinor-alps-1.4.8.ebuild,v 1.2 2014/01/15 19:50:16 bicatali Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="COIN-OR Framework for implementing parallel graph search algorithms
 HOMEPAGE="https://projects.coin-or.org/CHiPPS/"
 SRC_URI="http://www.coin-or.org/download/source/${MYPN}/${MYPN}-${PV}.tgz"
 
-LICENSE="EPL-1.0"
+LICENSE="CPL-1.0"
 SLOT="0/3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs test"
@@ -41,6 +41,7 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
+		--enable-dependency-linking
 		$(use_with doc dot)
 	)
 	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \

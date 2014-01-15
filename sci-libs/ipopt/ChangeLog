@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/ipopt
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipopt/ChangeLog,v 1.1 2014/01/15 19:45:36 bicatali Exp $
+
+*ipopt-3.11.7 (15 Jan 2014)
+
+  15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +ipopt-3.11.7.ebuild,
+  +metadata.xml:
+  Import from science overlay, version bump, removed as-needed (applied
+  upstream)
