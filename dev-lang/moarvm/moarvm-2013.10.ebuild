@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/moarvm-2013.10.ebuild,v 1.2 2014/01/09 07:55:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/moarvm/moarvm-2013.10.ebuild,v 1.3 2014/01/15 03:09:47 patrick Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_prepare() {
-	epatch ${FILESDIR}/Configure.patch || die
+	epatch "${FILESDIR}/Configure.patch" || die
 }
 
 src_configure() {
