@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.2 2013/11/26 08:27:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.3 2014/01/15 22:48:44 robbat2 Exp $
 
 EAPI=5
 
@@ -93,6 +93,7 @@ MODULE_DEFINES="
 	proxy_ftp:PROXY
 	proxy_http:PROXY
 	proxy_fcgi:PROXY
+	proxy_scgi:PROXY
 	socache_shmcb:SSL
 	ssl:SSL
 	status:STATUS
