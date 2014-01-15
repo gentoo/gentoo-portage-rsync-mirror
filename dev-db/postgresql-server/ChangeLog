@@ -1,6 +1,23 @@
 # ChangeLog for dev-db/postgresql-server
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.278 2013/12/22 13:40:36 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.280 2014/01/15 10:28:14 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  -postgresql-server-8.4.17-r1.ebuild, -postgresql-server-8.4.17.ebuild,
+  -postgresql-server-8.4.18.ebuild, -postgresql-server-9.0.13-r1.ebuild,
+  -postgresql-server-9.0.13.ebuild, -postgresql-server-9.0.14.ebuild,
+  -postgresql-server-9.1.10.ebuild, -postgresql-server-9.1.9-r1.ebuild,
+  -postgresql-server-9.1.9.ebuild, -postgresql-server-9.2.4-r1.ebuild,
+  -postgresql-server-9.2.4.ebuild, -postgresql-server-9.2.5.ebuild,
+  -postgresql-server-9.3.0-r1.ebuild, -postgresql-server-9.3.0.ebuild,
+  -postgresql-server-9.3.1.ebuild:
+  Remove old
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  postgresql-server-8.4.19.ebuild, postgresql-server-9.0.15.ebuild,
+  postgresql-server-9.1.11.ebuild, postgresql-server-9.2.6.ebuild,
+  postgresql-server-9.3.2.ebuild:
+  Stable for ia64, wrt bug #492558
 
   22 Dec 2013; Agostino Sarubbo <ago@gentoo.org>
   postgresql-server-8.4.19.ebuild, postgresql-server-9.0.15.ebuild,

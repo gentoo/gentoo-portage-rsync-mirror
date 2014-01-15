@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15337 2014/01/14 19:35:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15338 2014/01/15 10:19:42 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Górny <mgorny@gentoo.org> (15 Jan 2014)
+# Multilib conversion and Python support code seriously broken.
+# Has dependencies that are not converted to multilib yet.
+# Do not unmask without prior review from multilib@g.o.
+# https://bugs.gentoo.org/show_bug.cgi?id=474654#c5
+=media-gfx/exiv2-0.23-r2
 
 # Joerg Bornkessel <hd_brummy@gentoo.org (14 Jan 2014)
 # plugin fails on compile >=vdr-1.7.27
