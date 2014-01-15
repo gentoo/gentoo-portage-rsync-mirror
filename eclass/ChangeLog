@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1113 2014/01/14 20:50:23 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1114 2014/01/15 01:12:10 hd_brummy Exp $
+
+  15 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
+  vdr-plugin.eclass marked @DEAD
 
   14 Jan 2014; Michael Pagano <mpagano@gentoo.org> linux-mod.eclass:
   Remove use of sed in linux-mod.eclass. Replace with bash.
