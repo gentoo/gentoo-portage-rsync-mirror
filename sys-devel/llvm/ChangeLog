@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.171 2014/01/10 17:29:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.172 2014/01/15 18:08:11 mgorny Exp $
+
+  15 Jan 2014; Michał Górny <mgorny@gentoo.org> llvm-3.4.ebuild,
+  llvm-9999.ebuild:
+  Make tests respect TMPDIR. Solution suggested by NAKAMURA Takumi on
+  http://llvm.org/bugs/show_bug.cgi?id=18335.
 
   10 Jan 2014; Michał Górny <mgorny@gentoo.org> llvm-3.4.ebuild,
   llvm-9999.ebuild:

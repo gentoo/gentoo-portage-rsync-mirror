@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.77 2014/01/10 17:29:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.78 2014/01/15 18:08:11 mgorny Exp $
 
 EAPI=5
 
@@ -351,6 +351,8 @@ multilib_src_test() {
 	pax-mark m unittests/ExecutionEngine/MCJIT/Release/MCJITTests
 	pax-mark m unittests/Support/Release/SupportTests
 
+	# respect TMPDIR!
+	local -x LIT_PRESERVES_TMP=1
 	emake "${MAKEARGS[@]}" check
 	use clang && emake "${MAKEARGS[@]}" -C tools/clang test
 }

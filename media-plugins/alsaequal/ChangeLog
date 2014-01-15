@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/alsaequal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/ChangeLog,v 1.6 2013/06/27 18:41:11 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/ChangeLog,v 1.7 2014/01/15 18:06:44 pacho Exp $
+
+*alsaequal-0.6-r2 (15 Jan 2014)
+
+  15 Jan 2014; Pacho Ramos <pacho@gentoo.org> +alsaequal-0.6-r2.ebuild,
+  +files/alsaequal-0.6-eq-name.patch:
+  Fix compat with latest caps-plugins (#498018 by Markus)
 
 *alsaequal-0.6-r1 (27 Jun 2013)
 
@@ -27,4 +33,3 @@
 
   15 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> +alsaequal-0.4.ebuild:
   Initial commit wrt #279790, thanks to Jude Pereira for reporting.
-
