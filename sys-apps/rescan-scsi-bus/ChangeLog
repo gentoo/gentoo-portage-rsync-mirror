@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rescan-scsi-bus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.38 2013/08/27 05:46:18 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rescan-scsi-bus/ChangeLog,v 1.39 2014/01/14 23:35:40 vapier Exp $
+
+  14 Jan 2014; Mike Frysinger <vapier@gentoo.org> rescan-scsi-bus-1.57.ebuild:
+  Add s390 love.
 
 *rescan-scsi-bus-1.57 (27 Aug 2013)
 
@@ -163,4 +166,3 @@
   +rescan-scsi-bus-1.24.ebuild:
   Re-add this back to Gentoo. The version in sg3_utils is stale, and the
   direct upstream fixes some bugs.
-

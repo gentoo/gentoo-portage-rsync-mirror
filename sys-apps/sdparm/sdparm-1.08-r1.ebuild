@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-1.08-r1.ebuild,v 1.1 2014/01/02 16:05:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/sdparm-1.08-r1.ebuild,v 1.2 2014/01/14 23:36:24 vapier Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="http://sg.danny.cz/sg/p/${P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE=""
 
 # Older releases contain a conflicting sas_disk_blink

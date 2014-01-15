@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.77 2014/01/07 08:55:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.78 2014/01/14 23:36:24 vapier Exp $
+
+  14 Jan 2014; Mike Frysinger <vapier@gentoo.org> sdparm-1.08-r1.ebuild:
+  Add s390 love.
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -sdparm-1.03.ebuild,
   -sdparm-1.04.ebuild, -sdparm-1.05.ebuild, -sdparm-1.06.ebuild,
