@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/libvisual-plugins
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.60 2013/02/02 22:57:27 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/ChangeLog,v 1.61 2014/01/15 12:46:20 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  libvisual-plugins-0.4.0-r2.ebuild:
+  Stable for sparc, wrt bug #497180
 
   02 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   libvisual-plugins-0.4.0-r2.ebuild:

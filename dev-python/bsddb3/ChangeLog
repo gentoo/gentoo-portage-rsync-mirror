@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.95 2014/01/08 05:47:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.99 2014/01/15 12:41:37 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> bsddb3-6.0.0.ebuild:
+  Stable for sparc, wrt bug #482056
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> bsddb3-6.0.0.ebuild:
+  Stable for ppc, wrt bug #482056
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> bsddb3-6.0.0.ebuild:
+  Stable for ppc64, wrt bug #482056
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> bsddb3-6.0.0.ebuild:
+  Stable for alpha, wrt bug #482056
 
 *bsddb3-6.0.1 (08 Jan 2014)
 

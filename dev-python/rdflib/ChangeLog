@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.36 2014/01/14 05:37:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.40 2014/01/15 12:41:28 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3-r1.ebuild:
+  Stable for sparc, wrt bug #482056
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3-r1.ebuild:
+  Stable for ppc, wrt bug #482056
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3-r1.ebuild:
+  Stable for ppc64, wrt bug #482056
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rdflib-3.2.3-r1.ebuild:
+  Stable for alpha, wrt bug #482056
 
 *rdflib-4.1.0 (14 Jan 2014)
 

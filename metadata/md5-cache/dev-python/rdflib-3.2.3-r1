@@ -4,11 +4,11 @@ DESCRIPTION=RDF library containing a triple store and parser/serializer
 EAPI=5
 HOMEPAGE=https://github.com/RDFLib/rdflib http://pypi.python.org/pypi/rdflib
 IUSE=berkdb examples mysql redland sqlite test python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
-KEYWORDS=~alpha amd64 arm ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux
+KEYWORDS=alpha amd64 arm ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux
 LICENSE=BSD
 RDEPEND=dev-python/isodate[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] berkdb? ( dev-python/bsddb3 ) mysql? ( dev-python/mysql-python[python_targets_python2_6(-)?,-python_single_target_python2_6(-),python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) redland? ( dev-libs/redland-bindings[python] ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 )
 SLOT=0
 SRC_URI=mirror://pypi/r/rdflib/rdflib-3.2.3.tar.gz
 _eclasses_=distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=c201dd9305c0433a6b9f1b864f42f2e5
+_md5_=8934e8b1ba41955c81b6e2f5edea2d6f

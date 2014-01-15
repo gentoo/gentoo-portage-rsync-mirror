@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/fprintd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/ChangeLog,v 1.21 2014/01/14 21:19:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/fprintd/ChangeLog,v 1.22 2014/01/15 12:57:10 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> fprintd-0.5.0.ebuild:
+  Stable for alpha, wrt bug #488782
 
   14 Jan 2014; Pacho Ramos <pacho@gentoo.org> fprintd-0.5.0.ebuild:
   ia64 stable, bug #488782 (thanks to Emeric Maschino for testing)

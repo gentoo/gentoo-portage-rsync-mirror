@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libvisual
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libvisual/ChangeLog,v 1.142 2013/10/16 13:47:57 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libvisual/ChangeLog,v 1.143 2014/01/15 12:47:11 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  gst-plugins-libvisual-1.0.10.ebuild:
+  Stable for sparc, wrt bug #488804
 
   16 Oct 2013; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-libvisual-1.0.10.ebuild:

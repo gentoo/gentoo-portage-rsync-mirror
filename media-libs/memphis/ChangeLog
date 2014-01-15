@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.24 2014/01/14 21:17:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.26 2014/01/15 12:58:16 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> memphis-0.2.3.ebuild:
+  Stable for arm, wrt bug #488770
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> memphis-0.2.3.ebuild:
+  Stable for alpha, wrt bug #488770
 
   14 Jan 2014; Pacho Ramos <pacho@gentoo.org> memphis-0.2.3.ebuild:
   ia64 stable, bug #488770 (thanks to Emeric Maschino for testing)
