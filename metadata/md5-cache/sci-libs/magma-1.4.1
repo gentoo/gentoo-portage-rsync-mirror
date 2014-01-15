@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=dev-util/nvidia-cuda-toolkit virtual/cblas virtual/fortran virtual/lapack virtual/pkgconfig test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) ) virtual/fortran
+DESCRIPTION=Matrix Algebra on GPU and Multicore Architectures
+EAPI=5
+HOMEPAGE=http://icl.cs.utk.edu/magma/
+IUSE=fermi kepler static-libs test
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=dev-util/nvidia-cuda-toolkit virtual/cblas virtual/fortran virtual/lapack virtual/fortran
+REQUIRED_USE=?? ( fermi kepler )
+RESTRICT=userpriv
+SLOT=0
+SRC_URI=http://icl.cs.utk.edu/projectsfiles/magma/downloads/magma-1.4.1.tar.gz
+_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	892e597faee02a5b94eb02ab512e7622	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=6e57f100d26dd5079711f7c12391ff9e

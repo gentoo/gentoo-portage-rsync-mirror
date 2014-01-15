@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/coinor-mp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-mp/ChangeLog,v 1.1 2014/01/14 22:02:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-mp/ChangeLog,v 1.2 2014/01/15 20:11:28 bicatali Exp $
+
+  15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> coinor-mp-1.7.6.ebuild:
+  As-needed applied upstream
 
 *coinor-mp-1.7.6 (14 Jan 2014)
 

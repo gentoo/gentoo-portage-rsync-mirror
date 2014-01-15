@@ -1,6 +1,10 @@
 # ChangeLog for app-text/yelp-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.35 2014/01/14 12:56:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.36 2014/01/15 20:27:15 bicatali Exp $
+
+  15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> yelp-tools-3.10.0.ebuild,
+  yelp-tools-3.6.1.ebuild:
+  Keyworded amd64-linux
 
   14 Jan 2014; Anthony G. Basile <blueness@gentoo.org> yelp-tools-3.10.0.ebuild,
   yelp-tools-3.6.1.ebuild:

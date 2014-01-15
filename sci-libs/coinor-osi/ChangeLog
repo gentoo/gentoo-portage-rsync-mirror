@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/coinor-osi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-osi/ChangeLog,v 1.1 2014/01/14 17:58:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-osi/ChangeLog,v 1.2 2014/01/15 20:09:00 bicatali Exp $
+
+  14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  coinor-osi-0.106.5.ebuild:
+  Cleanup, as-needed applied upstream
 
 *coinor-osi-0.106.5 (14 Jan 2014)
 

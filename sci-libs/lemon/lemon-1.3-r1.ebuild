@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lemon/lemon-1.3-r1.ebuild,v 1.1 2014/01/14 14:24:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lemon/lemon-1.3-r1.ebuild,v 1.2 2014/01/15 20:12:20 bicatali Exp $
 
 EAPI=5
 
@@ -13,19 +13,23 @@ SRC_URI="http://lemon.cs.elte.hu/pub/sources/${P}.tar.gz"
 LICENSE="Boost-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc static-libs test tools"
+IUSE="+coin doc glpk static-libs test tools"
 
-RDEPEND="sci-mathematics/glpk"
+RDEPEND="
+	glpk? ( sci-mathematics/glpk )
+	coin? ( sci-libs/coinor-cbc:= sci-libs/coinor-clp:= )"
 DEPEND="${RDEPEND}
 	doc? (
 		app-text/ghostscript-gpl
 		dev-libs/mathjax
 		app-doc/doxygen )"
 
+REQUIRED_USE="|| ( coin glpk )"
+
 PATCHES=(
 	"${FILESDIR}"/${P}-multilib.patch
 	"${FILESDIR}"/${P}-underlinking.patch
-	)
+)
 
 src_prepare() {
 	sed -i \
@@ -66,9 +70,9 @@ src_configure() {
 		-DLEMON_DOC_MATHJAX_RELPATH="${EPREFIX}/usr/share/mathjax"
 		$(cmake-utils_use doc LEMON_DOC_SOURCE_BROWSER)
 		$(cmake-utils_use doc LEMON_DOC_USE_MATHJAX)
-		-DLEMON_ENABLE_GLPK=YES
+		$(cmake-utils_use coin LEMON_ENABLE_COIN)
+		$(cmake-utils_use glpk LEMON_ENABLE_GLPK)
 		-DLEMON_ENABLE_ILOG=NO
-		-DLEMON_ENABLE_COIN=NO
 		-DLEMON_ENABLE_SOPLEX=NO
 	)
 	cmake-utils_src_configure

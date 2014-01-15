@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-dylp/coinor-dylp-1.9.4.ebuild,v 1.1 2014/01/14 18:03:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-dylp/coinor-dylp-1.9.4.ebuild,v 1.2 2014/01/15 20:05:12 bicatali Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SLOT="0/1"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs test"
 
-RDEPEND="sci-libs/coinor-osi"
+RDEPEND="sci-libs/coinor-osi:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen[dot] )
@@ -25,23 +25,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
-src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:\(libOsiDylp_la_LIBADD.*=.*\)$:\1 $(top_builddir)/src/Dylp/libDylp.la @OSIDYLPLIB_LIBS@:g' \
-		src/OsiDylp/Makefile.in || die
-	sed -i \
-		-e 's:\(libDylpStdLib_la_LIBADD.*=.*\)$:\1 @DYLPLIB_LIBS@:g' \
-		src/DylpStdLib/Makefile.in || die
-}
-
 src_configure() {
 	local myeconfargs=(
+		--enable-dependency-linking
 		$(use_with doc dot)
 	)
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
+	autotools-utils_src_configure
 }
 
 src_compile() {
@@ -49,9 +38,7 @@ src_compile() {
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/coinor-flopcpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-flopcpp/ChangeLog,v 1.1 2014/01/14 21:59:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-flopcpp/ChangeLog,v 1.2 2014/01/15 20:10:15 bicatali Exp $
+
+  15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  coinor-flopcpp-1.1.7.ebuild:
+  As-needed applied upstream
 
 *coinor-flopcpp-1.1.7 (14 Jan 2014)
 

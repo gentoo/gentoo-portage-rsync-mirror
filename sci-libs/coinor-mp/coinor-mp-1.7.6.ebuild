@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-mp/coinor-mp-1.7.6.ebuild,v 1.1 2014/01/14 22:02:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-mp/coinor-mp-1.7.6.ebuild,v 1.2 2014/01/15 20:11:28 bicatali Exp $
 
 EAPI=5
 
@@ -24,25 +24,20 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
 src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:\(libCoinMP_la_LIBADD.*=.*\)$:\1 @COINMP_LIBS@:' \
-		src/Makefile.in || die
 	sed -i \
 		-e '/addlibsdir/s/$(DESTDIR)//' \
 		Makefile.in || die
 }
 
 src_configure() {
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
+	local myeconfargs=(
+		--enable-dependency-linking
+	)
+	autotools-utils_src_configure
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {

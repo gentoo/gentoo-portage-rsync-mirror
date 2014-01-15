@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-flopcpp/coinor-flopcpp-1.1.7.ebuild,v 1.1 2014/01/14 21:59:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-flopcpp/coinor-flopcpp-1.1.7.ebuild,v 1.2 2014/01/15 20:10:15 bicatali Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit autotools-utils multilib
 
 MYPN=FlopC++
 
-DESCRIPTION="COIN-OR algebraic modelling language for linear optimization"
+DESCRIPTION="COIN-OR algebraic modeling language for linear optimization"
 HOMEPAGE="https://projects.coin-or.org/FlopC++/"
 SRC_URI="http://www.coin-or.org/download/source/${MYPN}/${MYPN}-${PV}.tgz"
 
@@ -27,20 +27,12 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/FlopCpp"
 
-src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools)
-	sed -i \
-		-e 's:\(libFlopCpp_la_LIBADD.*=.*\)$:\1 @FLOPCPP_LIBS@:' \
-		src/Makefile.in || die
-}
-
 src_configure() {
 	local myeconfargs=(
+		--enable-dependency-linking
 		$(use_with doc dot)
 	)
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
+	autotools-utils_src_configure
 }
 
 src_compile() {
@@ -52,9 +44,7 @@ src_compile() {
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {

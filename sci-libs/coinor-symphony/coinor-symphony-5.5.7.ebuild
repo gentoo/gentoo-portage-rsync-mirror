@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-symphony/coinor-symphony-5.5.7.ebuild,v 1.1 2014/01/14 22:09:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-symphony/coinor-symphony-5.5.7.ebuild,v 1.2 2014/01/15 20:03:34 bicatali Exp $
 
 EAPI=5
 
@@ -32,19 +32,10 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
-src_prepare() {
-	# as-needed fix
-	# hack to avoid eautoreconf (coinor has its own weird autotools
-	sed -i \
-		-e 's:\(libOsiSym_la_LIBADD.*=\).*:\1 $(top_builddir)/src/libSym.la:' \
-		src/OsiSym/Makefile.in || die
-	sed -i \
-		-e 's:\(libSym_la_LIBADD.*=\).*:\1 @SYMPHONYLIB_LIBS@:g' \
-		src/Makefile.in || die
-}
-
 src_configure() {
-	local myeconfargs=()
+	local myeconfargs=(
+		--enable-dependency-linking
+	)
 	if use glpk; then
 		myeconfargs+=(
 			--with-glpk-incdir="${EPREFIX}"/usr/include
@@ -52,8 +43,7 @@ src_configure() {
 	else
 		myeconfargs+=( --without-glpk )
 	fi
-	PKG_CONFIG_PATH+="${ED}"/usr/$(get_libdir)/pkgconfig \
-		autotools-utils_src_configure
+	autotools-utils_src_configure
 }
 
 src_compile() {
@@ -70,9 +60,7 @@ src_compile() {
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {
