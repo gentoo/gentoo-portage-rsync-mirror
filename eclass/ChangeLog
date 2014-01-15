@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1114 2014/01/15 01:12:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1115 2014/01/15 12:12:41 mgorny Exp $
+
+  15 Jan 2014; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
+  Actually enable in-source build support.
 
   15 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin.eclass:
   vdr-plugin.eclass marked @DEAD

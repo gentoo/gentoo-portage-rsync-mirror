@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.228 2014/01/15 10:11:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.229 2014/01/15 12:17:57 jlec Exp $
+
+  15 Jan 2014; Justin Lecher <jlec@gentoo.org> -R-2.10.1.ebuild,
+  -R-2.15.3.ebuild:
+  Drop old; fixes #478572 (EAPI <4 should be removed), #476010 & #476008
+  (Respect AR and LDFLAGS), #438544 (Installation Problems with version 2),
+  #425708 (stack smashing)
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> R-3.0.1.ebuild:
   Stable for ia64, wrt bug #437508

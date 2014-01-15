@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.19 2013/11/24 10:53:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-multilib.eclass,v 1.20 2014/01/15 12:12:41 mgorny Exp $
 
 # @ECLASS: autotools-multilib.eclass
 # @MAINTAINER:
@@ -28,10 +28,6 @@ case ${EAPI:-0} in
 	4|5) ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
-
-if [[ ${AUTOTOOLS_IN_SOURCE_BUILD} ]]; then
-	die "${ECLASS}: multilib support requires out-of-source builds."
-fi
 
 inherit autotools-utils eutils multilib-build multilib-minimal
 
