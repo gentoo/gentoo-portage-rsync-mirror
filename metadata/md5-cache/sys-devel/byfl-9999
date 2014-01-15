@@ -1,10 +1,10 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=sys-devel/dragonegg-9999 >=sys-devel/llvm-9999 >=sys-devel/clang-9999 dev-vcs/git
+DEPEND=>=sys-devel/dragonegg-3.4 >=sys-devel/llvm-3.4 >=sys-devel/clang-3.4 dev-vcs/git
 DESCRIPTION=Compiler-based Application Analysis
 EAPI=5
 HOMEPAGE=https://github.com/losalamos/Byfl
 LICENSE=BSD
-RDEPEND=>=sys-devel/dragonegg-9999 >=sys-devel/llvm-9999 >=sys-devel/clang-9999
+RDEPEND=>=sys-devel/dragonegg-3.4 >=sys-devel/llvm-3.4 >=sys-devel/clang-3.4
 SLOT=0
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=7d686ed57fd144bcd819a8faafae44da
+_md5_=d0d8a4bb8afaa4ada4bb11b0eebc18e7
