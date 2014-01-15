@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.267 2014/01/10 01:33:13 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.268 2014/01/15 15:54:21 jer Exp $
+
+  15 Jan 2014; Jeroen Roovers <jer@gentoo.org>
+  files/cmake-2.8.11.2-hppa-bootstrap.patch:
+  Fix HPPA bootstrap/linker patch to properly handle C++ code by Guy Martin.
 
 *cmake-2.8.12.1-r3 (10 Jan 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.335 2014/01/09 13:11:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.336 2014/01/15 15:59:54 jer Exp $
+
+  15 Jan 2014; Jeroen Roovers <jer@gentoo.org> nss-3.15.4.ebuild:
+  Stable for HPPA (bug #498172).
 
 *nss-3.15.4 (09 Jan 2014)
 
