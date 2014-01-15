@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-6.0.20.ebuild,v 1.1 2013/07/10 08:57:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.3.28.ebuild,v 1.1 2014/01/15 07:44:39 polynomial-c Exp $
 
-EAPI=5
+EAPI=4
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
 
 #Number of official patches
@@ -26,8 +26,8 @@ for (( i=1 ; i<=${PATCHNO} ; i++ )) ; do
 	export SRC_URI="${SRC_URI} http://www.oracle.com/technology/products/berkeley-db/db/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
-LICENSE="AGPL-3"
-SLOT="6.0"
+LICENSE="Sleepycat"
+SLOT="5.3"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc java cxx tcl test"
 
@@ -49,14 +49,18 @@ src_prepare() {
 	do
 		epatch "${DISTDIR}"/patch."${MY_PV}"."${i}"
 	done
+
 	# use the includes from the prefix
 	epatch "${FILESDIR}"/${PN}-4.6-jni-check-prefix-first.patch
 	epatch "${FILESDIR}"/${PN}-4.3-listen-to-java-options.patch
 
 	# sqlite configure call has an extra leading ..
 	# upstreamed:5.2.36, missing in 5.3.x
-	# still needs to be patched in 6.0.19
-	epatch "${FILESDIR}"/${PN}-6.0.19-sqlite-configure-path.patch
+	epatch "${FILESDIR}"/${PN}-5.2.28-sqlite-configure-path.patch
+
+	# The upstream testsuite copies .lib and the binaries for each parallel test
+	# core, ~300MB each. This patch uses links instead, saves a lot of space.
+	epatch "${FILESDIR}"/${PN}-6.0.20-test-link.patch
 
 	# Upstream release script grabs the dates when the script was run, so lets
 	# end-run them to keep the date the same.
@@ -65,22 +69,22 @@ src_prepare() {
 		"${S_BASE}"/dist/configure)"
 	sed -r -i \
 		-e "/^DB_RELEASE_DATE=/s~=.*~='${REAL_DB_RELEASE_DATE}'~g" \
-		"${S_BASE}"/dist/RELEASE
+		"${S_BASE}"/dist/RELEASE || die
 
 	# Include the SLOT for Java JAR files
 	# This supersedes the unused jarlocation patches.
 	sed -r -i \
 		-e '/jarfile=.*\.jar$/s,(.jar$),-$(LIBVERSION)\1,g' \
-		"${S_BASE}"/dist/Makefile.in
+		"${S_BASE}"/dist/Makefile.in || die
 
-	cd "${S_BASE}"/dist
+	cd "${S_BASE}"/dist || die
 	rm -f aclocal/libtool.m4
 	sed -i \
 		-e '/AC_PROG_LIBTOOL$/aLT_OUTPUT' \
-		configure.ac
+		configure.ac || die
 	sed -i \
 		-e '/^AC_PATH_TOOL/s/ sh, none/ bash, none/' \
-		aclocal/programs.m4
+		aclocal/programs.m4 || die
 	AT_M4DIR="aclocal aclocal_java" eautoreconf
 	# Upstream sucks - they do autoconf and THEN replace the version variables.
 	. ./RELEASE
@@ -90,7 +94,7 @@ src_prepare() {
 		DB_VERSION \
 		DB_RELEASE_DATE ; do
 		local ev="__EDIT_${v}__"
-		sed -i -e "s/${ev}/${!v}/g" configure
+		sed -i -e "s/${ev}/${!v}/g" configure || die
 	done
 }
 
@@ -127,7 +131,6 @@ src_configure() {
 
 	# sql_compat will cause a collision with sqlite3
 	# --enable-sql_compat
-	cd "${S}"
 	ECONF_SOURCE="${S_BASE}"/dist \
 	STRIP="true" \
 	econf \
@@ -148,12 +151,8 @@ src_configure() {
 		"$@"
 }
 
-src_compile() {
-	emake || die "make failed"
-}
-
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}"
 
 	db_src_install_usrbinslot
 
@@ -165,8 +164,10 @@ src_install() {
 
 	dodir /usr/sbin
 	# This file is not always built, and no longer exists as of db-4.8
-	[[ -f "${D}"/usr/bin/berkeley_db_svc ]] && \
-	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db"${SLOT/./}"_svc
+	if [[ -f "${D}"/usr/bin/berkeley_db_svc ]] ; then
+		mv "${D}"/usr/bin/berkeley_db_svc \
+			"${D}"/usr/sbin/berkeley_db"${SLOT/./}"_svc || die
+	fi
 
 	if use java; then
 		java-pkg_regso "${D}"/usr/"$(get_libdir)"/libdb_java*.so
@@ -193,7 +194,7 @@ src_test() {
 	#	"${S_BASE}/test/testparams.tcl"
 	sed -ri \
 		-e '/multi_repmgr/d' \
-		"${S_BASE}/test/tcl/test.tcl"
+		"${S_BASE}/test/tcl/test.tcl" || die
 
 	# This is the only failure in 5.2.28 so far, and looks like a false positive.
 	# Repmgr018 (btree): Test of repmgr stats.
@@ -206,7 +207,7 @@ src_test() {
 	sed -ri \
 		-e '/set parms.*repmgr018/d' \
 		-e 's/repmgr018//g' \
-		"${S_BASE}/test/tcl/test.tcl"
+		"${S_BASE}/test/tcl/test.tcl" || die
 
 	db_src_test
 }

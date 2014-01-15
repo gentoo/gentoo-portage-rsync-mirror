@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.342 2014/01/05 22:02:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.343 2014/01/15 07:44:39 polynomial-c Exp $
+
+*db-5.3.28 (15 Jan 2014)
+
+  15 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> db-4.8.30.ebuild,
+  +db-5.3.28.ebuild, -db-6.0.20.ebuild, db-6.0.20-r1.ebuild:
+  Version bump. Removed EAPI-5 ebuild (not allowed for base-system packages).
+  Converted some ebuilds to EAPI-4.
 
   05 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> -db-4.2.52_p5.ebuild,
   -db-4.3.29_p1.ebuild, -db-4.4.20_p4.ebuild, -db-4.5.20_p2.ebuild,

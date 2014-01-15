@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-unit-rr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.19 2013/12/26 15:10:37 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit-rr/ChangeLog,v 1.20 2014/01/15 07:53:07 graaff Exp $
+
+*test-unit-rr-1.0.3 (15 Jan 2014)
+
+  15 Jan 2014; Hans de Graaff <graaff@gentoo.org> +test-unit-rr-1.0.3.ebuild:
+  Version bump. Add ruby20.
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> test-unit-rr-1.0.2.ebuild:
   arm stable, bug #493780

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/packetfu
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/packetfu/ChangeLog,v 1.1 2013/12/15 16:34:31 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/packetfu/ChangeLog,v 1.2 2014/01/15 07:39:09 graaff Exp $
+
+*packetfu-1.1.10 (15 Jan 2014)
+
+  15 Jan 2014; Hans de Graaff <graaff@gentoo.org> +packetfu-1.1.10.ebuild:
+  Version bump. Run tests. Drop unused sdoc dependency. Fix broken USE=doc and
+  install documentation.
 
 *packetfu-1.1.9 (15 Dec 2013)
 

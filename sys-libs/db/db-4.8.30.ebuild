@@ -1,6 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.8.30.ebuild,v 1.16 2013/09/23 19:21:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.8.30.ebuild,v 1.17 2014/01/15 07:44:39 polynomial-c Exp $
+
+EAPI=4
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
 
@@ -39,7 +41,10 @@ RDEPEND="tcl? ( dev-lang/tcl )
 
 src_unpack() {
 	unpack "${MY_P}".tar.gz
-	cd "${WORKDIR}"/"${MY_P}"
+}
+
+src_prepare() {
+	cd "${WORKDIR}"/"${MY_P}" || die
 	for (( i=1 ; i<=${PATCHNO} ; i++ ))
 	do
 		epatch "${DISTDIR}"/patch."${MY_PV}"."${i}"
@@ -52,22 +57,23 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-4.6-jni-check-prefix-first.patch
 	epatch "${FILESDIR}"/${PN}-4.3-listen-to-java-options.patch
 
-	sed -e "/^DB_RELEASE_DATE=/s/%B %e, %Y/%Y-%m-%d/" -i dist/RELEASE
+	sed -e "/^DB_RELEASE_DATE=/s/%B %e, %Y/%Y-%m-%d/" -i dist/RELEASE \
+		|| die
 
 	# Include the SLOT for Java JAR files
 	# This supersedes the unused jarlocation patches.
 	sed -r -i \
 		-e '/jarfile=.*\.jar$/s,(.jar$),-$(LIBVERSION)\1,g' \
-		"${S}"/../dist/Makefile.in
+		"${S}"/../dist/Makefile.in || die
 
-	cd "${S}"/../dist
+	cd "${S}"/../dist || die
 	rm -f aclocal/libtool.m4
 	sed -i \
 		-e '/AC_PROG_LIBTOOL$/aLT_OUTPUT' \
-		configure.ac
+		configure.ac || die
 	sed -i \
 		-e '/^AC_PATH_TOOL/s/ sh, none/ bash, none/' \
-		aclocal/programs.m4
+		aclocal/programs.m4 || die
 	AT_M4DIR="aclocal aclocal_java" eautoreconf
 	# Upstream sucks - they do autoconf and THEN replace the version variables.
 	. ./RELEASE
@@ -77,10 +83,10 @@ src_unpack() {
 		-e "s/__EDIT_DB_VERSION_PATCH__/$DB_VERSION_PATCH/g" \
 		-e "s/__EDIT_DB_VERSION_STRING__/$DB_VERSION_STRING/g" \
 		-e "s/__EDIT_DB_VERSION_UNIQUE_NAME__/$DB_VERSION_UNIQUE_NAME/g" \
-		-e "s/__EDIT_DB_VERSION__/$DB_VERSION/g" configure
+		-e "s/__EDIT_DB_VERSION__/$DB_VERSION/g" configure || die
 }
 
-src_compile() {
+src_configure() {
 	local myconf=''
 
 	# compilation with -O0 fails on amd64, see bug #171231
@@ -111,7 +117,6 @@ src_compile() {
 		myconf="${myconf} --disable-tcl"
 	fi
 
-	cd "${S}"
 	ECONF_SOURCE="${S}"/../dist \
 	STRIP="true" \
 	econf \
@@ -126,12 +131,10 @@ src_compile() {
 		${myconf} \
 		$(use_enable test) \
 		"$@"
-
-	emake || die "make failed"
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}"
 
 	db_src_install_usrbinslot
 
@@ -143,8 +146,10 @@ src_install() {
 
 	dodir /usr/sbin
 	# This file is not always built, and no longer exists as of db-4.8
-	[[ -f "${D}"/usr/bin/berkeley_db_svc ]] && \
-	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db"${SLOT/./}"_svc
+	if [[ -f "${D}"/usr/bin/berkeley_db_svc ]] ; then
+		mv "${D}"/usr/bin/berkeley_db_svc \
+			"${D}"/usr/sbin/berkeley_db"${SLOT/./}"_svc || die
+	fi
 
 	if use java; then
 		java-pkg_regso "${D}"/usr/"$(get_libdir)"/libdb_java*.so

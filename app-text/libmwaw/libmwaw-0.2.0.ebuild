@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/libmwaw-0.2.0.ebuild,v 1.1 2013/11/15 10:14:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/libmwaw-0.2.0.ebuild,v 1.2 2014/01/15 07:54:58 radhermit Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="doc static-libs"
 
 RDEPEND="
 	app-text/libwpd:0.9
-	app-text/libwpg:0.2
+	>=app-text/libwpg-0.2.2:0.2
 	dev-libs/libxml2
 	sys-libs/zlib
 "
