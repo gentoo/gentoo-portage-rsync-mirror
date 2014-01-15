@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libusbx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/ChangeLog,v 1.27 2014/01/15 10:24:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusbx/ChangeLog,v 1.30 2014/01/15 10:44:18 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libusbx-1.0.17.ebuild:
+  Stable for x86, wrt bug #488708
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libusbx-1.0.17.ebuild:
+  Stable for sparc, wrt bug #488708
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libusbx-1.0.17.ebuild:
+  Stable for ppc, wrt bug #488708
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libusbx-1.0.17.ebuild:
   Stable for ia64, wrt bug #488708
