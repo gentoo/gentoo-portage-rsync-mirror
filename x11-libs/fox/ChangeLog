@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.183 2014/01/10 18:26:56 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.184 2014/01/15 09:54:24 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> fox-1.6.49.ebuild:
+  Stable for ia64, wrt bug #487034
 
 *fox-1.7.45 (10 Jan 2014)
 

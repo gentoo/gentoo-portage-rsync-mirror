@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.104 2014/01/07 08:27:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.105 2014/01/15 09:39:40 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ethtool-3.12.1.ebuild:
+  Stable for ia64, wrt bug #495920
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -ethtool-0.6.ebuild,
   -ethtool-2.6.36.ebuild, -ethtool-2.6.37.ebuild, -ethtool-2.6.38.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-db
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.55 2013/12/31 08:45:39 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.56 2014/01/15 09:39:55 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> man-db-2.6.5.ebuild:
+  Stable for ia64, wrt bug #495924
 
   31 Dec 2013; Markus Meier <maekke@gentoo.org> man-db-2.6.5.ebuild:
   arm stable, bug #495924

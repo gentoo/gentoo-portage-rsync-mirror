@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-MD4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.36 2014/01/13 13:24:59 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.37 2014/01/15 09:59:35 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> Digest-MD4-1.900.0-r1.ebuild:
+  Stable for ia64, wrt bug #492130
 
   13 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> Digest-MD4-1.900.0-r1.ebuild:
   alpha stable wrt bug #492130

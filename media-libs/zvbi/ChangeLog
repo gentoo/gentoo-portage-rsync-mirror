@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/zvbi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.51 2013/09/21 16:33:02 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.52 2014/01/15 09:38:09 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> zvbi-0.2.35.ebuild:
+  Stable for ia64, wrt bug #495752
 
 *zvbi-0.2.35 (21 Sep 2013)
 
@@ -187,4 +190,3 @@
   
   Initial cvs import. 
   Ebuild written by: Alastair Tse <altse@cse.unsw.edu.au>
-

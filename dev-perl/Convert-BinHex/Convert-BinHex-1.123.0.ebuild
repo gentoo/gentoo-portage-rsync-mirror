@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/Convert-BinHex-1.123.0.ebuild,v 1.6 2014/01/14 15:09:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/Convert-BinHex-1.123.0.ebuild,v 1.7 2014/01/15 09:59:22 ago Exp $
 
 EAPI=4
 
@@ -12,5 +12,5 @@ DESCRIPTION="Extract data from Macintosh BinHex files"
 
 SLOT="0"
 LICENSE="GPL-1"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 ~sparc x86"
 IUSE=""

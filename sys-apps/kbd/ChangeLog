@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.121 2014/01/09 13:37:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.122 2014/01/15 09:41:11 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kbd-1.15.5-r1.ebuild:
+  Stable for ia64, wrt bug #496434
 
   09 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> kbd-1.15.5-r1.ebuild:
   x86 stable (bug #496434).

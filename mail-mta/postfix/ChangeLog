@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.486 2014/01/01 18:50:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.487 2014/01/15 09:57:01 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> postfix-2.10.2.ebuild:
+  Stable for ia64, wrt bug #490126
 
   01 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog-2013:
   Rotate ChangeLog

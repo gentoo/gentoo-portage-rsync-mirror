@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-BinHex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.26 2014/01/14 15:09:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.27 2014/01/15 09:59:22 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> Convert-BinHex-1.123.0.ebuild:
+  Stable for ia64, wrt bug #492102
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> Convert-BinHex-1.123.0.ebuild:
   Stable for ppc, wrt bug #492102

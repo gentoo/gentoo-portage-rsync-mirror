@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.6.ebuild,v 1.5 2014/01/14 15:33:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0.6.ebuild,v 1.6 2014/01/15 09:35:22 ago Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ~ppc64 ~sparc x86"
 IUSE="examples test"
 
 RDEPEND="app-arch/xz-utils"

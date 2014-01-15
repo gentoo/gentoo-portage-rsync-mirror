@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libasyncns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.40 2014/01/14 15:34:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/ChangeLog,v 1.41 2014/01/15 09:38:52 ago Exp $
+
+  15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libasyncns-0.8-r3.ebuild:
+  Stable for ia64, wrt bug #495852
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libasyncns-0.8-r3.ebuild:
   Stable for ppc, wrt bug #495852

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.05.ebuild,v 1.5 2014/01/14 15:32:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.05.ebuild,v 1.6 2014/01/15 09:33:13 ago Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}"
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 SLOT="0/${PV}"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ia64 ppc ~sparc x86 ~x86-fbsd"
 
 src_configure() {
 	# make configuration file

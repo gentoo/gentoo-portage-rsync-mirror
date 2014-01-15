@@ -3,10 +3,10 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=converting Perl structures to strings and back
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/FreezeThaw/
-KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
+KEYWORDS=~alpha ~amd64 ~hppa ia64 ~ppc ~s390 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/I/IL/ILYAZ/modules/FreezeThaw-0.5001.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=e556e10f964a807b452830d2198a2bc8
+_md5_=6ce57734f3e99b3ef18d03a407f03dd5
