@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/twelf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/twelf/ChangeLog,v 1.4 2014/01/06 14:26:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/twelf/ChangeLog,v 1.5 2014/01/15 08:07:11 gienah Exp $
+
+  15 Jan 2014; Mark Wright <gienah@gentoo.org>
+  +files/twelf-1.7.1-mlton-mlb.patch, twelf-1.7.1.ebuild:
+  Apply patch from upstream to fix twelf build with mlton-20130715. Add -fno-PIE
+  to fix compile with mlton-20130715 on Gentoo hardened.
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> twelf-1.7.1.ebuild,
   metadata.xml:

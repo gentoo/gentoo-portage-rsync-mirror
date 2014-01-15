@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-9999.ebuild,v 1.5 2014/01/15 08:21:14 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.72.2.ebuild,v 1.1 2014/01/15 08:21:14 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )

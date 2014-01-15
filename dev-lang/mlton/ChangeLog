@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/mlton
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.14 2013/04/25 07:27:21 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton/ChangeLog,v 1.15 2014/01/15 08:13:28 gienah Exp $
+
+*mlton-20130715 (15 Jan 2014)
+
+  15 Jan 2014; Mark Wright <gienah@gentoo.org>
+  +files/mlton-20070826-no-execmem.patch, +files/mlton-20130715-no-PIE.patch,
+  +files/mlton-20130715-split-make-for-pax-mark.patch, +mlton-20130715.ebuild:
+  Bump to mlton-20130715, fixes bug 480750. Thanks to David Brown, jer and Jason
+  Mours for testing and suggestions.
 
   25 Apr 2013; Mark Wright <gienah@gentoo.org>
   +files/mlton-20100608-gmp-const.patch, mlton-20100608.ebuild:

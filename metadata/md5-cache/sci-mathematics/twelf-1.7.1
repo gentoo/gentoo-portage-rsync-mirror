@@ -1,6 +1,6 @@
-DEFINED_PHASES=compile install postinst postrm prepare
+DEFINED_PHASES=compile configure install postinst postrm prepare unpack
 DEPEND=dev-lang/mlton doc? ( virtual/latex-base ) emacs? ( virtual/emacs )
-DESCRIPTION=Implementation of the logical framework LF
+DESCRIPTION=Twelf is an implementation of the logical framework LF.
 EAPI=5
 HOMEPAGE=http://twelf.org/
 IUSE=doc emacs examples
@@ -10,5 +10,5 @@ RDEPEND=dev-lang/mlton doc? ( virtual/latex-base ) emacs? ( virtual/emacs )
 RESTRICT=test
 SLOT=0/1.7.1
 SRC_URI=http://twelf.plparty.org/releases/twelf-src-1.7.1.tar.gz
-_eclasses_=elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=f352ad4762fb00b92432c01dea3237fa
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
+_md5_=46ac3b056185d88134463ad23fc7e3d3

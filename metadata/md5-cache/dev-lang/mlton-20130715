@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst prepare pretend setup unpack
+DEPEND=dev-libs/gmp doc? ( virtual/latex-base )
+DESCRIPTION=Standard ML optimizing compiler and libraries
+EAPI=5
+HOMEPAGE=http://www.mlton.org
+IUSE=binary doc
+KEYWORDS=-* ~amd64 ~x86
+LICENSE=HPND MIT
+RDEPEND=dev-libs/gmp
+SLOT=0/20130715
+SRC_URI=!binary? ( mirror://sourceforge/mlton/mlton-20130715.src.tgz ) binary? ( amd64? ( mirror://sourceforge/mlton/mlton-20130715-1.amd64-linux.tgz ) x86? ( mirror://sourceforge/mlton/mlton-20130715-1.x86-linux.tgz ) )
+_eclasses_=check-reqs	0efdf29c9002a1995388968bf54e9d3d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
+_md5_=612da0b42df63662caf8bc6c1ba6fbb3
