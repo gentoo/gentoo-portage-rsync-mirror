@@ -1,10 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/lis-1.3.32.ebuild,v 1.1 2013/03/05 21:01:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lis/lis-1.4.23.ebuild,v 1.1 2014/01/15 05:38:39 bicatali Exp $
 
 EAPI=5
 
 AUTOTOOLS_AUTORECONF=yes
+AUTOTOOLS_IN_SOURCE_BUILD=yes
+
 inherit autotools-utils fortran-2
 
 DESCRIPTION="Library of Iterative Solvers for Linear Systems"
@@ -19,7 +21,7 @@ IUSE="doc fma fortran mpi openmp quad saamg sse2 static-libs"
 RDEPEND="mpi? ( virtual/mpi )"
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/${PN}-1.2.120-autotools.patch )
+PATCHES=( "${FILESDIR}"/${PN}-1.4.23-autotools.patch )
 
 pkg_setup() {
 	if use openmp; then
