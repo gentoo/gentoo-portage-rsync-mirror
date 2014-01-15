@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-331.20.ebuild,v 1.4 2014/01/14 07:05:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-331.20.ebuild,v 1.5 2014/01/15 15:29:15 jer Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ COMMON_DEPEND="x11-libs/libX11
 	dev-libs/jansson"
 
 RDEPEND="
-	=x11-drivers/nvidia-drivers-3*[-tools]
+	=x11-drivers/nvidia-drivers-3*
 	${COMMON_DEPEND}
 	x11-libs/libvdpau"
 DEPEND="${RDEPEND}
