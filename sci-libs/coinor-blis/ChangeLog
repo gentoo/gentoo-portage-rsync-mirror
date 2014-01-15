@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/coinor-blis
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-blis/ChangeLog,v 1.1 2014/01/14 21:51:36 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-blis/ChangeLog,v 1.2 2014/01/15 19:29:32 bicatali Exp $
+
+  14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  coinor-blis-0.93.9.ebuild:
+  Fixed license, cleanup, as-needed applied upstream
 
 *coinor-blis-0.93.8 (07 Dec 2013)
 
