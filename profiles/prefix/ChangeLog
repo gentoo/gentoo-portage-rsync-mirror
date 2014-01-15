@@ -1,6 +1,12 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.404 2014/01/14 20:03:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.406 2014/01/15 06:43:29 grobian Exp $
+
+  15 Jan 2014; Fabian Groffen <grobian@gentoo.org> package.use.mask:
+  Drop pointless dante[upnp] mask again
+
+  15 Jan 2014; Fabian Groffen <grobian@gentoo.org> package.use.mask:
+  Mask net-proxy/dante[upnp], bug #497186
 
   14 Jan 2014; Fabian Groffen <grobian@gentoo.org> darwin/package.mask,
   sunos/solaris/package.mask:

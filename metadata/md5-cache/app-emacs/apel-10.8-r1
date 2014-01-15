@@ -9,4 +9,4 @@ RDEPEND=>=virtual/emacs-21
 SLOT=0
 SRC_URI=ftp://ftp.jpl.org/pub/elisp/apel/apel-10.8.tar.gz http://dev.gentoo.org/~gienah/2big4tree/app-emacs/apel/apel-10.8-030_Use-new-style-backquotes.patch.gz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=f768ef14458805002aa7d3e8f63dc959
+_md5_=faced1d3e5a48c971cc97631839c6fe4
