@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.201 2014/01/15 09:31:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.202 2014/01/15 16:24:50 jer Exp $
+
+  15 Jan 2014; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.22.ebuild,
+  -libnl-3.2.22-r2.ebuild, -files/libnl-3.2.22-python.patch:
+  Old.
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libnl-3.2.23.ebuild:
   Stable for ia64, wrt bug #494836
