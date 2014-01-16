@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pygresql
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.59 2012/11/28 21:07:38 titanofold Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.60 2014/01/16 11:26:06 titanofold Exp $
+
+*pygresql-4.1.1 (16 Jan 2014)
+
+  16 Jan 2014; Aaron W. Swenson <titanofold@gentoo.org> +pygresql-4.1.1.ebuild:
+  Version bump. Fixes bug 289228 and 482704.
 
   28 Nov 2012; <titan@gentoo.org> pygresql-3.8.1.ebuild, pygresql-4.0.ebuild:
   Changed license from "as-is" to "POSTGRESQL". Fixes bug 444746.
