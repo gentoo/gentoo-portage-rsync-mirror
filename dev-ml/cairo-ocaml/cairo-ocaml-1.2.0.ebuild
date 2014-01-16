@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cairo-ocaml/cairo-ocaml-1.2.0.ebuild,v 1.2 2013/08/16 23:08:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cairo-ocaml/cairo-ocaml-1.2.0.ebuild,v 1.3 2014/01/15 23:59:30 bicatali Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://cgit.freedesktop.org/cairo-ocaml/snapshot/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0/${PV}"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples gtk pango svg"
 
 RDEPEND="dev-lang/ocaml:=

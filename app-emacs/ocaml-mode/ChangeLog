@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ocaml-mode
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.70 2013/02/20 15:35:15 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.71 2014/01/16 00:00:54 bicatali Exp $
+
+  16 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> ocaml-mode-4.00.1.ebuild:
+  Keyworded amd64-linux, x86-linux
 
   20 Feb 2013; Jeroen Roovers <jer@gentoo.org> ocaml-mode-3.12.1-r1.ebuild:
   Stable for HPPA (bug #456440).
