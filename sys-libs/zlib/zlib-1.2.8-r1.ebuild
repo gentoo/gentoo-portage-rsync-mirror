@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.8-r1.ebuild,v 1.11 2013/12/27 12:26:11 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.8-r1.ebuild,v 1.12 2014/01/16 22:43:01 vapier Exp $
 
 EAPI=4
 AUTOTOOLS_AUTO_DEPEND="no"
@@ -15,7 +15,7 @@ SRC_URI="http://zlib.net/${P}.tar.gz
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="minizip static-libs"
 
 DEPEND="minizip? ( ${AUTOTOOLS_DEPEND} )"
