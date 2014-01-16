@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libowfat
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.34 2012/11/05 06:52:33 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.35 2014/01/16 13:52:34 jer Exp $
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> libowfat-0.28-r1.ebuild,
+  libowfat-0.29.ebuild:
+  Drop HPPA keywording.
 
 *libowfat-0.29 (05 Nov 2012)
 

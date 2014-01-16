@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.228 2014/01/07 09:33:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.229 2014/01/16 13:35:35 polynomial-c Exp $
+
+*gettext-0.18.3.2 (16 Jan 2014)
+
+  16 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> +gettext-0.18.3.2.ebuild:
+  Version bump. Added multilib support (bug #496218).
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
   -gettext-0.18.1.1-r1.ebuild, -gettext-0.18.1.1-r2.ebuild,

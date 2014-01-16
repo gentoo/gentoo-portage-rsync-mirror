@@ -3,11 +3,11 @@ DEPEND=>=dev-libs/dietlibc-0.30-r2 dev-libs/beecrypt net-firewall/iptables net-m
 DESCRIPTION=Linux-VServer admin utilities
 HOMEPAGE=http://www.nongnu.org/util-vserver/
 IUSE=bash-completion
-KEYWORDS=~alpha amd64 hppa ~sparc x86
+KEYWORDS=~alpha amd64 ~sparc x86
 LICENSE=GPL-2
 PDEPEND=bash-completion? ( app-shells/bash-completion )
 RDEPEND=dev-libs/beecrypt net-firewall/iptables net-misc/vconfig sys-apps/iproute2 || ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp ) bash-completion? ( app-admin/eselect )
 SLOT=0
 SRC_URI=http://people.linux-vserver.org/~dhozac/t/uv-testing/util-vserver-0.30.216-pre2910.tar.bz2
 _eclasses_=bash-completion	f913ed18b57a2d3372c4291680454db4	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=c194e97968f4d6af299e26dc7d9685e2
+_md5_=cb213f6ac3309b767dde9422b249021e

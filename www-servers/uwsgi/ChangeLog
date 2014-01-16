@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/uwsgi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.47 2013/12/26 10:40:43 ultrabug Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.48 2014/01/16 13:40:41 ultrabug Exp $
+
+*uwsgi-2.0 (16 Jan 2014)
+
+  16 Jan 2014; Ultrabug <ultrabug@gentoo.org> -uwsgi-1.0.2.1.ebuild,
+  -uwsgi-1.2.6.ebuild, -uwsgi-1.9.6.ebuild, +uwsgi-2.0.ebuild,
+  -files/1.2.6-fixed-typecasting.patch, -files/uwsgi-1.0.2.1-no-werror.patch,
+  +files/gentoo.buildconf, -files/uwsgi.confd, -files/uwsgi.initd,
+  metadata.xml:
+  version bump introducing UWSGI_PLUGINS USE_EXPAND with help of @dev-zero fix
+  #497534 #497364 #488398 #484366 #469098 #469536, drop obsolete versions,
+  cleanup
 
   26 Dec 2013; Ultrabug <ultrabug@gentoo.org> uwsgi-1.4.10.ebuild:
   fix php5.5 support
