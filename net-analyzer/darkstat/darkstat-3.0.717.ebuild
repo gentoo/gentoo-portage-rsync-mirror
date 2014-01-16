@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.717.ebuild,v 1.1 2013/08/26 08:05:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.717.ebuild,v 1.2 2014/01/16 08:55:03 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://unix4lyfe.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="net-libs/libpcap"
 RDEPEND="${DEPEND}"

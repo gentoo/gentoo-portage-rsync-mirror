@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/darkstat
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.55 2013/08/26 08:05:12 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/ChangeLog,v 1.56 2014/01/16 08:55:03 pinkbyte Exp $
+
+  16 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> darkstat-3.0.717.ebuild:
+  Stable on amd64 and x86, wrt bug #495830
 
 *darkstat-3.0.717 (26 Aug 2013)
 
