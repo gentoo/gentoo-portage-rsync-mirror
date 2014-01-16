@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/memcached
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.137 2014/01/16 15:11:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.139 2014/01/16 20:17:31 ago Exp $
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> memcached-1.4.17.ebuild:
+  Stable for x86, wrt bug #496506
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> memcached-1.4.17.ebuild:
+  Stable for amd64, wrt bug #496506
 
   16 Jan 2014; Jeroen Roovers <jer@gentoo.org> memcached-1.4.17.ebuild:
   Stable for HPPA (bug #496506).

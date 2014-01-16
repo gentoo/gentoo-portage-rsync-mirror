@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.335.ebuild,v 1.1 2014/01/14 15:07:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.2.202.335.ebuild,v 1.3 2014/01/16 20:17:39 ago Exp $
 
 EAPI=5
 inherit nsplugins toolchain-funcs versionator multilib multilib-minimal
@@ -29,7 +29,7 @@ REQUIRED_USE="
 "
 SLOT="0"
 
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 LICENSE="AdobeFlash-11.x"
 RESTRICT="strip mirror"
 

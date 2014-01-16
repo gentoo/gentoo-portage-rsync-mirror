@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-additions
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.79 2014/01/11 21:19:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.81 2014/01/16 20:28:47 ago Exp $
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  virtualbox-additions-4.2.22.ebuild:
+  Stable for x86, wrt bug #498166
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  virtualbox-additions-4.2.22.ebuild:
+  Stable for amd64, wrt bug #498166
 
 *virtualbox-additions-4.2.22 (11 Jan 2014)
 

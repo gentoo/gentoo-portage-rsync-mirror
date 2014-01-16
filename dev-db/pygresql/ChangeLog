@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.61 2014/01/16 14:06:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.63 2014/01/16 20:17:22 ago Exp $
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pygresql-4.0.ebuild:
+  Stable for x86, wrt bug #289228
+
+  16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pygresql-4.0.ebuild:
+  Stable for amd64, wrt bug #289228
 
   16 Jan 2014; Jeroen Roovers <jer@gentoo.org> pygresql-4.1.1.ebuild:
   Stable for HPPA (bug #289228).
@@ -222,4 +228,3 @@
 
   04 May 2004; Masatomo Nakano <nakano@gentoo.org> :
   Initial import. This modules was separated from PostgereSQL package.
-

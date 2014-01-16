@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.26 2014/01/16 18:53:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.27 2014/01/16 20:05:12 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -423,7 +423,7 @@ multilib_is_native_abi() {
 
 # @FUNCTION: multilib_build_binaries
 # @DESCRIPTION:
-# Determine whether to build binaries for the currently build ABI.
+# Determine whether to build binaries for the currently built ABI.
 # Returns true status (0) if the currently built ABI is the profile
 # native or COMPLETE_MULTILIB variable is set to 'yes', otherwise
 # false (1).

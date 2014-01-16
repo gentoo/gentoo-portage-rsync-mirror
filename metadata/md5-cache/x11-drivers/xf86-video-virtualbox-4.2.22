@@ -4,11 +4,11 @@ DESCRIPTION=VirtualBox video driver
 EAPI=5
 HOMEPAGE=http://www.virtualbox.org/
 IUSE=dri kernel_linux python_targets_python2_7 python_single_target_python2_7
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=GPL-2
 RDEPEND=>=x11-base/xorg-server-1.7:=[-minimal] x11-libs/libXcomposite kernel_linux? ( virtual/modutils )
 REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_7 )
 SLOT=0
 SRC_URI=http://download.virtualbox.org/virtualbox/4.2.22/VirtualBox-4.2.22.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	linux-info	a9cbd6bbe2b28166e403321882f3c73c	linux-mod	101302d4b7b694ea9622bbffb187d0de	multilib	892e597faee02a5b94eb02ab512e7622	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	49ee0ca5e1019d8f256a23692dad2642	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=b4c6cf3fd6c5e7b8eb39b38a3d1ed58b
+_md5_=8fbd371d10f07821d3cd8e8d388ed155

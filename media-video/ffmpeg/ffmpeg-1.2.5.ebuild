@@ -1,19 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.0.2.ebuild,v 1.3 2013/12/10 12:28:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-1.2.5.ebuild,v 1.1 2014/01/16 20:10:55 aballier Exp $
 
-EAPI="5"
-
-# Subslot: libavutil major.libavcodec major.libavformat major
-# Since FFmpeg ships several libraries, subslot is kind of limited here.
-# Most consumers will use those three libraries, if a "less used" library
-# changes its soname, consumers will have to be rebuilt the old way
-# (preserve-libs).
-# If, for example, a package does not link to libavformat and only libavformat
-# changes its ABI then this package will be rebuilt needlessly. Hence, such a
-# package is free _not_ to := depend on FFmpeg but I would strongly encourage
-# doing so since such a case is unlikely.
-FFMPEG_SUBSLOT=52.55.55
+EAPI="4"
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
@@ -35,18 +24,17 @@ fi
 FFMPEG_REVISION="${PV#*_p}"
 
 LICENSE="GPL-2 amr? ( GPL-3 ) encode? ( aac? ( GPL-3 ) )"
-SLOT="0/${FFMPEG_SUBSLOT}"
+SLOT="0"
 if [ "${PV#9999}" = "${PV}" ] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 fi
 IUSE="
-	aac aacplus alsa amr amrenc bindist bluray +bzip2 cdio celt
+	aac aacplus alsa amr bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
-	gme	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k
-	libass libcaca libsoxr libv4l modplug mp3 +network openal openssl opus oss
-	pic pulseaudio quvi rtmp schroedinger sdl speex static-libs test theora
-	threads truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid
-	+zlib
+	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k libass
+	libcaca libsoxr libv4l modplug mp3 +network openal openssl opus oss pic
+	pulseaudio rtmp schroedinger sdl speex static-libs test theora threads
+	truetype twolame v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -57,7 +45,7 @@ for i in ${CPU_FEATURES}; do
 	IUSE="${IUSE} ${i%:*}"
 done
 
-FFTOOLS="aviocat cws2fws ffescape ffeval ffhash fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
+FFTOOLS="aviocat cws2fws ffescape ffeval fourcc2pixfmt graph2dot ismindex pktdumper qt-faststart trasher"
 
 for i in ${FFTOOLS}; do
 	IUSE="${IUSE} +fftools_$i"
@@ -73,20 +61,18 @@ RDEPEND="
 	encode? (
 		aac? ( media-libs/vo-aacenc )
 		aacplus? ( media-libs/libaacplus )
-		amrenc? ( media-libs/vo-amrwbenc )
+		amr? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
 		fdk? ( media-libs/fdk-aac )
 		mp3? ( >=media-sound/lame-3.98.3 )
 		theora? ( >=media-libs/libtheora-1.1.1[encode] media-libs/libogg )
 		twolame? ( media-sound/twolame )
-		wavpack? ( media-sound/wavpack )
-		x264? ( >=media-libs/x264-0.0.20111017:= )
+		x264? ( >=media-libs/x264-0.0.20111017 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	flite? ( app-accessibility/flite )
 	fontconfig? ( media-libs/fontconfig )
 	frei0r? ( media-plugins/frei0r-plugins )
-	gme? ( media-libs/game-music-emu )
 	gnutls? ( >=net-libs/gnutls-2.12.16 )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	iconv? ( virtual/libiconv )
@@ -103,7 +89,6 @@ RDEPEND="
 	openssl? ( dev-libs/openssl )
 	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
-	quvi? ( media-libs/libquvi )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
 	schroedinger? ( media-libs/schroedinger )
@@ -147,7 +132,6 @@ src_prepare() {
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
 
-	epatch "${FILESDIR}"/${PN}-2.0.2-freetype251.patch
 	epatch_user
 }
 
@@ -167,13 +151,13 @@ src_configure() {
 	# Encoders
 	if use encode
 	then
-		ffuse="${ffuse} aac:libvo-aacenc amrenc:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
-		for i in aacplus faac theora twolame wavpack x264 xvid; do
+		ffuse="${ffuse} aac:libvo-aacenc amr:libvo-amrwbenc mp3:libmp3lame fdk:libfdk-aac"
+		for i in aacplus faac theora twolame x264 xvid; do
 			ffuse="${ffuse} ${i}:lib${i}"
 		done
 
 		# Licensing.
-		if use aac || use amrenc ; then
+		if use aac || use amr ; then
 			myconf="${myconf} --enable-version3"
 		fi
 		if use aacplus || use faac || use fdk ; then
@@ -187,7 +171,7 @@ src_configure() {
 	ffuse="${ffuse}	cdio:libcdio iec61883:libiec61883 ieee1394:libdc1394 libcaca openal"
 
 	# Indevs
-	use v4l || myconf="${myconf} --disable-indev=v4l2 --disable-outdev=v4l2"
+	use v4l || myconf="${myconf} --disable-indev=v4l2"
 	for i in alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
 	done
@@ -210,7 +194,7 @@ src_configure() {
 	# Decoders
 	ffuse="${ffuse} amr:libopencore-amrwb amr:libopencore-amrnb	jpeg2k:libopenjpeg"
 	use amr && myconf="${myconf} --enable-version3"
-	for i in bluray celt gme gsm modplug opus quvi rtmp schroedinger speex vorbis vpx; do
+	for i in bluray celt gsm modplug opus rtmp schroedinger speex vorbis vpx; do
 		ffuse="${ffuse} ${i}:lib${i}"
 	done
 
