@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.629 2014/01/16 00:12:06 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.630 2014/01/16 13:18:32 ultrabug Exp $
+
+  16 Jan 2014; Ultrabug <ultrabug@gentoo.org> make.defaults:
+  add new USWGI_PLUGINS USE_EXPAND
 
   14 Jan 2014; Ruud Koolen <redlizard@gentoo.org> use.mask:
   Add prefix-guest use mask for new prefix profiles.
