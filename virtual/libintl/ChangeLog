@@ -1,6 +1,11 @@
 # ChangeLog for virtual/libintl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.13 2013/02/17 19:52:15 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.14 2014/01/16 15:36:06 mgorny Exp $
+
+*libintl-0-r1 (16 Jan 2014)
+
+  16 Jan 2014; Michał Górny <mgorny@gentoo.org> +libintl-0-r1.ebuild:
+  Add multilib libintl, bug #496220.
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> libintl-0.ebuild:
   Add ~arm-linux keyword.

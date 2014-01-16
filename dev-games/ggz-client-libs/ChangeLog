@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ggz-client-libs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.49 2013/02/24 18:08:12 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.50 2014/01/16 15:55:07 blueness Exp $
+
+  16 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  ggz-client-libs-0.0.14.1-r1.ebuild, ggz-client-libs-0.0.14.1.ebuild:
+  Keyword ~mips
 
   24 Feb 2013; Agostino Sarubbo <ago@gentoo.org>
   ggz-client-libs-0.0.14.1-r1.ebuild:
