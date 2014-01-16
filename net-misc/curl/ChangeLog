@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.325 2014/01/12 13:15:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.326 2014/01/16 06:27:47 vapier Exp $
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> curl-7.33.0.ebuild,
+  curl-7.34.0-r1.ebuild:
+  Mark m68k/s390/sh stable.
 
   12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.34.0-r1.ebuild:
   Stable for ia64, wrt bug #497092
