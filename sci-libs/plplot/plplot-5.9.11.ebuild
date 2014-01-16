@@ -1,83 +1,119 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.9-r1.ebuild,v 1.11 2013/11/16 08:28:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.11.ebuild,v 1.1 2014/01/16 00:49:50 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 WX_GTK_VER="2.8"
-PYTHON_DEPEND="python? 2"
 FORTRAN_NEEDED=fortran
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils fortran-2 cmake-utils python toolchain-funcs virtualx \
-	wxwidgets java-pkg-opt-2 multilib
+inherit eutils fortran-2 cmake-utils python-single-r1 toolchain-funcs \
+	virtualx wxwidgets java-pkg-opt-2 multilib
 
 DESCRIPTION="Multi-language scientific plotting library"
 HOMEPAGE="http://plplot.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
-SLOT="0"
+SLOT="0/12"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="ada cairo cxx doc dynamic examples fortran gd java jpeg latex lua
-	  ocaml octave pdf perl png python qhull qt4 svg tcl test threads tk
-	  truetype wxwidgets X"
+IUSE="ada cairo cxx doc +dynamic examples fortran gd java jpeg latex lua
+	ocaml octave pdf pdl png python qhull qt4 shapefile svg tcl test
+	threads tk truetype wxwidgets X"
 
 RDEPEND="
 	ada? ( virtual/gnat )
 	cairo? ( x11-libs/cairo[svg?,X?] )
 	java? ( >=virtual/jre-1.5 )
 	gd? ( media-libs/gd[jpeg?,png?] )
-	latex? ( virtual/latex-base app-text/ghostscript-gpl )
+	latex? (
+		app-text/ghostscript-gpl
+		virtual/latex-base
+	)
 	lua? ( dev-lang/lua )
 	ocaml? (
 		dev-lang/ocaml
 		dev-ml/camlidl
-		cairo? ( dev-ml/cairo-ocaml[gtk] ) )
+		cairo? ( dev-ml/cairo-ocaml[gtk] )
+	)
 	octave? ( sci-mathematics/octave )
 	pdf? ( media-libs/libharu )
-	perl? ( dev-perl/PDL dev-perl/XML-DOM )
+	pdl? (
+		dev-perl/PDL
+		dev-perl/XML-DOM
+	)
 	python? (
-		dev-python/numpy
-		qt4? ( dev-python/PyQt4 ) )
+		dev-python/numpy[${PYTHON_USEDEP}]
+		qt4? ( dev-python/PyQt4[${PYTHON_USEDEP}] )
+	)
 	qhull? ( media-libs/qhull )
 	qt4? (
 		dev-qt/qtgui:4
-		dev-qt/qtsvg:4 )
-	tcl? ( dev-lang/tcl dev-tcltk/itcl
-		tk? ( dev-lang/tk dev-tcltk/itk ) )
+		dev-qt/qtsvg:4
+	)
+	shapefile? ( sci-libs/shapelib )
+	tcl? (
+		dev-lang/tcl
+		dev-tcltk/itcl
+		tk? (
+			dev-lang/tk
+			dev-tcltk/itk
+		)
+	)
 	truetype? (
-				media-fonts/freefont
-				media-libs/lasi
-				gd? ( media-libs/gd[truetype] ) )
-	wxwidgets? ( x11-libs/wxGTK:2.8[X] x11-libs/agg[truetype?] )
-	X? ( x11-libs/libX11 x11-libs/libXau x11-libs/libXdmcp )"
+		media-fonts/freefont
+		media-libs/lasi
+		gd? ( media-libs/gd[truetype] )
+	)
+	wxwidgets? (
+		x11-libs/wxGTK:2.8[X]
+		x11-libs/agg[truetype?]
+	)
+	X? (
+		x11-libs/libX11
+		x11-libs/libXau
+		x11-libs/libXdmcp
+	)"
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	java? ( >=virtual/jdk-1.5 dev-lang/swig )
+	java? (
+		>=virtual/jdk-1.5
+		dev-lang/swig
+	)
 	ocaml? ( dev-ml/findlib )
 	python? ( dev-lang/swig )
-	test? ( media-fonts/font-misc-misc
-			media-fonts/font-cursor-misc )"
-REQUIRED_USE="test? ( latex )"
+	test? (
+		media-fonts/font-misc-misc
+		media-fonts/font-cursor-misc
+	)"
+
+REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} ) qt4? ( dynamic ) test? ( latex )"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-5.9.6-python.patch
+	"${FILESDIR}"/${PN}-5.9.11-ocaml.patch
+	"${FILESDIR}"/${PN}-5.9.11-octave.patch
+	"${FILESDIR}"/${PN}-5.9.11-multiarch.patch
+	"${FILESDIR}"/${PN}-5.9.11-config.patch
+)
 
 pkg_setup() {
-	use python && python_set_active_version 2
+	use python && python-single-r1_pkg_setup
 	java-pkg-opt-2_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-tk86.patch
-	# path for python independent of python version
-	epatch "${FILESDIR}"/${PN}-5.9.6-python.patch
-	# test with pdf assumes a modified bundled libharu
-	epatch "${FILESDIR}"/${PN}-5.9.9-no-pdftest.patch
-	# gentoo bug #419743 fixed upstream
-	epatch "${FILESDIR}"/${PN}-5.9.9-CMakeLists.txt.patch
-
+	cmake-utils_src_prepare
 	# avoid installing license
 	sed -i -e '/COPYING.LIB/d' CMakeLists.txt || die
-
+	# prexify hard-coded /usr/include in cmake modules
+	sed -i \
+		-e "s:/usr/include:${EPREFIX}/usr/include:g" \
+		-e "s:/usr/lib:${EPREFIX}/usr/$(get_libdir):g" \
+		-e "s:/usr/share:${EPREFIX}/usr/share:g" \
+		cmake/modules/*.cmake || die
 	# change default install directories for doc and examples
 	sed -i \
 		-e 's:${DATA_DIR}/examples:${DOC_DIR}/examples:g' \
@@ -90,12 +126,19 @@ src_prepare() {
 }
 
 src_configure() {
-	mycmakeargs=(
+	# don't build doc, it brings a whole lot of horrible dependencies
+	local mycmakeargs=(
 		-DDEFAULT_ALL_DEVICES=ON
 		-DTEST_DYNDRIVERS=OFF
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
+		-DENABLE_d=OFF
+		-DBUILD_DVI=OFF
+		-DDOX_DOC=OFF
+		-DBUILD_DOC=OFF
+		$(cmake-utils_use doc PREBUILT_DOC)
 		$(cmake-utils_use_build test)
-		$(cmake-utils_use_has python numpy)
+		$(cmake-utils_use_has python NUMPY)
+		$(cmake-utils_use_has shapefile SHAPELIB)
 		$(cmake-utils_use_with truetype FREETYPE)
 		$(cmake-utils_use_enable ada)
 		$(cmake-utils_use_enable cxx)
@@ -105,7 +148,7 @@ src_configure() {
 		$(cmake-utils_use_enable lua)
 		$(cmake-utils_use_enable ocaml)
 		$(cmake-utils_use_enable octave)
-		$(cmake-utils_use_enable perl pdl)
+		$(cmake-utils_use_enable pdl)
 		$(cmake-utils_use_enable python)
 		$(cmake-utils_use_enable qt4 qt)
 		$(cmake-utils_use_enable tcl)
@@ -147,7 +190,6 @@ src_configure() {
 		$(cmake-utils_use truetype PLD_psttf)
 		$(cmake-utils_use svg PLD_svg)
 		$(cmake-utils_use wxwidgets PLD_wxpng)
-		$(cmake-utils_use test PLD_ps)
 		$(cmake-utils_use wxwidgets PLD_wxwidgets)
 		$(cmake-utils_use X PLD_xwin)
 	)
@@ -160,9 +202,16 @@ src_configure() {
 	use truetype && mycmakeargs+=(
 		-DPL_FREETYPE_FONT_PATH:PATH="${EPREFIX}/usr/share/fonts/freefont"
 	)
+	use shapefile && mycmakeargs+=(
+		-DSHAPELIB_INCLUDE_DIR="${EPREFIX}/usr/include/libshp"
+	)
+	use ocaml && mycmakeargs+=(
+		-DOCAML_INSTALL_DIR="$(ocamlc -where)"
+	)
+	use python && mycmakeargs+=(
+		$(cmake-utils_use_enable qt4 pyqt4)
+	)
 
-	use python && mycmakeargs+=( $(cmake-utils_use_enable qt4 pyqt4) )
-	use doc && mycmakeargs+=( -DPREBUILT_DOC=ON )
 	cmake-utils_src_configure
 
 	# clean up bloated pkg-config files (help linking properly on prefix)
@@ -170,21 +219,25 @@ src_configure() {
 		-e "/Cflags/s:-I\(${EPREFIX}\|\)/usr/include[[:space:]]::g" \
 		-e "/Libs/s:-L\(${EPREFIX}\|\)/usr/lib\(64\|\)[[:space:]]::g" \
 		-e "s:${LDFLAGS}::g" \
-		"${CMAKE_BUILD_DIR}"/pkgcfg/*pc || die
+		"${BUILD_DIR}"/pkgcfg/*pc || die
 }
 
 src_test() {
-	pushd "${CMAKE_BUILD_DIR}" > /dev/null
+	pushd "${BUILD_DIR}" > /dev/null
 	Xemake test || die "tests failed"
 	popd > /dev/null
 }
 
 src_install() {
 	cmake-utils_src_install
-	use examples || rm -rf "${ED}"/usr/share/doc/${PF}/examples
+	if use examples; then
+		docompress -x /usr/share/doc/${PF}/examples
+	else
+		rm -r "${ED}"/usr/share/doc/${PF}/examples || die
+	fi
 	if use java; then
-		rm -rf "${ED}"/usr/share/java "${ED}"/usr/$(get_libdir)/jni
-		java-pkg_dojar "${CMAKE_BUILD_DIR}"/examples/java/${PN}.jar
-		java-pkg_doso "${CMAKE_BUILD_DIR}"/bindings/java/plplotjavac_wrap.so
+		rm -r "${ED}"/usr/share/java "${ED}"/usr/$(get_libdir)/jni  || die
+		java-pkg_dojar "${BUILD_DIR}"/examples/java/${PN}.jar
+		java-pkg_doso "${BUILD_DIR}"/bindings/java/plplotjavac_wrap.so
 	fi
 }

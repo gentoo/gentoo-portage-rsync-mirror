@@ -1,9 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/libnova-0.15.0.ebuild,v 1.4 2013/01/06 19:10:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/libnova-0.15.0.ebuild,v 1.5 2014/01/16 00:57:27 bicatali Exp $
 
-EAPI=4
-inherit eutils autotools
+EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
+inherit autotools-utils
 
 DESCRIPTION="Celestial Mechanics and Astronomical Calculation Library"
 HOMEPAGE="http://libnova.sourceforge.net/"
@@ -19,24 +21,20 @@ RDEPEND=""
 
 src_prepare() {
 	sed -i -e '/CFLAGS=-Wall/d' configure.in || die
-	eautoreconf
-}
-
-src_configure() {
-	econf $(use_enable static-libs static)
+	autotools-utils_src_prepare
 }
 
 src_compile() {
-	emake
-	use doc && emake -C doc doc
+	autotools-utils_src_compile
+	use doc && autotools-utils_src_compile -C doc doc
 }
 
 src_install() {
-	default
+	autotools-utils_src_install
 	use doc && dohtml doc/html/*
 	if use examples; then
 		make clean
-		rm -f examples/Makefile*
+		rm examples/Makefile*
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
