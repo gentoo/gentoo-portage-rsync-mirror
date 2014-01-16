@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.717.ebuild,v 1.2 2014/01/16 08:55:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/darkstat/darkstat-3.0.717.ebuild,v 1.3 2014/01/16 09:13:10 pinkbyte Exp $
 
 EAPI=5
 
 inherit eutils user
 
-DESCRIPTION="darkstat is a network traffic analyzer"
+DESCRIPTION="Network traffic analyzer with cute web interface"
 HOMEPAGE="http://unix4lyfe.org/darkstat/"
 SRC_URI="http://unix4lyfe.org/${PN}/${P}.tar.bz2"
 
