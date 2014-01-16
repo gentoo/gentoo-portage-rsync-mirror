@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-cppad/coinor-cppad-20140112.ebuild,v 1.1 2014/01/15 19:47:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-cppad/coinor-cppad-20140116.ebuild,v 1.1 2014/01/16 15:10:36 bicatali Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="COIN-OR C++ Algorithmic Differentiation"
 HOMEPAGE="https://projects.coin-or.org/CppAD/"
 SRC_URI="http://www.coin-or.org/download/source/CppAD/${MYP}.gpl.tgz"
 
-LICENSE="|| ( EPL-1.0 GPL-3 )"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.17.ebuild,v 1.2 2014/01/08 06:19:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.17.ebuild,v 1.3 2014/01/16 15:11:57 jer Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic user
@@ -14,7 +14,7 @@ SRC_URI="http://www.memcached.org/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="test slabs-reassign debug sasl" # hugetlbfs later
 
 RDEPEND=">=dev-libs/libevent-1.4
