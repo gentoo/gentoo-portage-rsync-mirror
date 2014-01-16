@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nanomsg
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nanomsg/ChangeLog,v 1.5 2013/09/25 13:04:39 djc Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nanomsg/ChangeLog,v 1.6 2014/01/16 11:54:36 steev Exp $
+
+  16 Jan 2014; Steev Klimaszewski <steev@gentoo.org> nanomsg-0.2.ebuild:
+  Add ~arm keyword to nanomsg 0.2. All tests pass.
 
 *nanomsg-0.2 (25 Sep 2013)
 

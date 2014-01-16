@@ -1,0 +1,78 @@
+--- cnet-3.2.4/Makefile.orig	2012-03-23 11:42:31.000000000 +0400
++++ cnet-3.2.4/Makefile	2013-08-24 16:37:29.449886061 +0400
+@@ -6,7 +6,7 @@
+ # Change the following 4 constants to suit your system:
+ #
+ # PREFIX defines the directory below which cnet will be installed.
+-PREFIX		= /usr/local
++PREFIX		= /usr
+ #PREFIX		= $(HOME)
+ #
+ # BINDIR defines the directory where the cnet binary will be installed.
+@@ -16,7 +16,6 @@
+ LIBDIR		= $(PREFIX)/lib/cnet
+ #
+ # WWWDIR defines the directory to hold cnet's web-based documentation
+-WWWDIR		= /home/httpd/html/cnet
+ #WWWDIR		= $(HOME)/WWW/cnet
+ #
+ # ---------------------------------------------------------------------
+@@ -26,15 +26,14 @@
+ 	@ls -l $(NAME) *.a
+ 
+ install:
+-	make
+-	@mkdir -p  $(BINDIR) $(LIBDIR)
+-	@chmod 755 $(BINDIR) $(LIBDIR)
+-	@cp $(NAME) $(BINDIR)/$(NAME)
+-	@chmod 755 $(BINDIR)/$(NAME)
+-	@rm -rf $(LIBDIR)/*
+-	@cp lib/* *.a $(LIBDIR)
+-	@chmod 644 $(LIBDIR)/*
+-	@ls -l $(BINDIR)/$(NAME) $(LIBDIR)/*.a
++	@mkdir -p  $(DESTDIR)$(BINDIR) $(DESTDIR)$(LIBDIR)
++	@chmod 755 $(DESTDIR)$(BINDIR) $(DESTDIR)$(LIBDIR)
++	@cp $(NAME) $(DESTDIR)$(BINDIR)/$(NAME)
++	@chmod 755 $(DESTDIR)$(BINDIR)/$(NAME)
++	@rm -rf $(DESTDIR)$(LIBDIR)/*
++	@cp lib/* *.a $(DESTDIR)$(LIBDIR)
++	@chmod 644 $(DESTDIR)$(LIBDIR)/*
++	@ls -l $(DESTDIR)$(BINDIR)/$(NAME) $(DESTDIR)$(LIBDIR)/*.a
+ 
+ AND	= html/CLICK html/KEYBOARD html/STOPANDWAIT html/TICKTOCK
+ www:
+--- cnet-3.2.4/src/Makefile.linux.orig	2012-03-23 11:42:33.000000000 +0400
++++ cnet-3.2.4/src/Makefile.linux	2013-08-24 16:25:46.437455826 +0400
+@@ -20,10 +20,10 @@
+ XINCLUDES	= -I/usr/include/tcl8.5
+ XLIBS		= -ltcl8.5 -ltk8.5 -lX11
+ #
+-C99		= gcc -std=c99 -Wall -Werror -pedantic
+-CFLAGS		= -O3 -fPIC $(INCLUDES) $(XINCLUDES)
++C99		= $(CC) -std=c99 -pedantic
++CFLAGS		+= -fPIC $(INCLUDES) $(XINCLUDES)
+ #
+-LD		= gcc -rdynamic
++LD		= $(CC) -rdynamic
+ LIBDIRS		= $(XLIBDIRS)
+ LIBS		= -lelf -ldl -lm
+ STRIP		= strip
+--- cnet-3.2.4/support/Makefile.common.orig	2014-01-16 13:40:28.364197103 +0400
++++ cnet-3.2.4/support/Makefile.common	2014-01-16 13:41:00.956198672 +0400
+@@ -1,13 +1,13 @@
+ #
+ CC		= gcc
+-CFLAGS		= -O -std=c99 -pedantic -Wall -Werror -fPIC
++CFLAGS		+= -O -std=c99 -pedantic -fPIC
+ 
+ DOTH		= cnetsupport.h
+ OBJ		= hashtable.o lexical.o md5.o queue.o vector.o
+ 
+ $(NAME):	$(OBJ)
+-		ar rc $(NAME) $(OBJ)
+-		ranlib $(NAME)
++		$(AR) rc $(NAME) $(OBJ)
++		$(RANLIB) $(NAME)
+ 		@cp -p $(NAME) ..
+ 
+ %.o : %.c $(DOTH)

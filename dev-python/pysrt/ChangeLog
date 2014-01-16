@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pysrt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysrt/ChangeLog,v 1.1 2013/12/07 17:31:25 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysrt/ChangeLog,v 1.2 2014/01/16 12:00:38 xmw Exp $
+
+*pysrt-1.0.0 (16 Jan 2014)
+
+  16 Jan 2014; Michael Weber <xmw@gentoo.org> +pysrt-1.0.0.ebuild,
+  pysrt-9999.ebuild:
+  Version bump by Nikoli.
 
 *pysrt-0.5.1 (07 Dec 2013)
 *pysrt-9999 (07 Dec 2013)

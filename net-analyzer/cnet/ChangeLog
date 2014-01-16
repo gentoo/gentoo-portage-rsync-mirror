@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/cnet
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.16 2009/01/15 05:02:55 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.17 2014/01/16 11:31:45 pinkbyte Exp $
+
+*cnet-3.2.4 (16 Jan 2014)
+
+  16 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> +cnet-3.2.4.ebuild,
+  +files/cnet-3.2.4-gentoo.patch:
+  Version bump, wrt bug #482320. Thanks to Andrew Savchenko <bircoph AT
+  gmail.com> for initial ebuild and patch
 
   15 Jan 2009; Jeroen Roovers <jer@gentoo.org>
   files/cnet-2.0.10-gentoo.patch, cnet-2.0.10.ebuild:
