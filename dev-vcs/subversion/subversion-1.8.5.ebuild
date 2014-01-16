@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.3 2014/01/08 09:42:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.4 2014/01/16 19:30:06 grobian Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -103,6 +103,9 @@ pkg_setup() {
 		append-cppflags -DSVN_DEBUG -DAP_DEBUG
 	fi
 
+	# http://mail-archives.apache.org/mod_mbox/subversion-dev/201306.mbox/%3C51C42014.3060700@wandisco.com%3E
+	[[ ${CHOST} == *-solaris2* ]] && append-cppflags -D__EXTENSIONS__
+
 	# Allow for custom repository locations.
 	SVN_REPOS_LOC="${SVN_REPOS_LOC:-${EPREFIX}/var/svn}"
 }
@@ -124,6 +127,23 @@ src_prepare() {
 	# this bites us in particular on Solaris
 	sed -i -e '1c\#!/usr/bin/env sh' build/transform_libtool_scripts.sh || \
 		die "/bin/sh is not POSIX shell!"
+
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# replace provided script that tries too hard to do a framework
+		# build, ending up with host-provided Python
+		cat > build/get-py-info.py << EOS
+import sys
+import sysconfig
+if '--compile' in sys.argv:
+	print('${CHOST}-gcc')
+
+if '--libs' in sys.argv or '--link' in sys.argv:
+	libs = sysconfig.get_config_var('LIBS').split() + sysconfig.get_config_var('SYSLIBS').split()
+	libs.append('-lpython' + sysconfig.get_config_var('VERSION'))
+	print(' '.join(libs))
+EOS
+		fperms +x build/get-py-info.py
+	fi
 
 	eautoconf
 	elibtoolize

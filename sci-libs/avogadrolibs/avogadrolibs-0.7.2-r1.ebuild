@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/avogadrolibs-0.7.2.ebuild,v 1.3 2014/01/16 18:56:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/avogadrolibs/avogadrolibs-0.7.2-r1.ebuild,v 1.1 2014/01/16 19:26:41 jlec Exp $
 
 EAPI=5
 
@@ -33,6 +33,8 @@ RDEPEND="
 "
 DEPEND="${DEPEND}
 	test? ( dev-cpp/gtest )"
+
+PATCHES=( "${FILESDIR}"/${P}-6464.patch )
 
 src_configure() {
 	local mycmakeargs=(

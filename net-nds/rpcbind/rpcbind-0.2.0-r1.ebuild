@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0-r1.ebuild,v 1.10 2013/09/23 19:20:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.0-r1.ebuild,v 1.11 2014/01/16 19:29:35 vapier Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ if [[ ${PV} == "9999" ]] ; then
 	#KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
-	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 fi
 
 DESCRIPTION="portmap replacement which supports RPC over various protocols"
