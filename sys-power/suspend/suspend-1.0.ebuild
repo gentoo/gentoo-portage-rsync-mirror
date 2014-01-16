@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-1.0.ebuild,v 1.7 2013/05/11 11:02:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/suspend-1.0.ebuild,v 1.8 2014/01/16 08:03:10 xmw Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ X86_DEPEND="
 	>=sys-apps/pciutils-2.2.4"
 RDEPEND=">=dev-libs/lzo-2[static-libs]
 	fbsplash? ( >=media-gfx/splashutils-1.5.2 )
-	crypt? ( dev-libs/libgcrypt[static-libs]
+	crypt? ( <dev-libs/libgcrypt-1.6.0[static-libs]
 		dev-libs/libgpg-error[static-libs] )
 	x86? ( ${X86_RDEPEND} )
 	amd64? ( ${X86_RDEPEND} )"

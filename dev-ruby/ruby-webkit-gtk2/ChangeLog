@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-webkit-gtk2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-webkit-gtk2/ChangeLog,v 1.2 2013/12/09 16:13:22 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-webkit-gtk2/ChangeLog,v 1.3 2014/01/16 08:31:04 naota Exp $
+
+*ruby-webkit-gtk2-2.1.0 (16 Jan 2014)
+
+  16 Jan 2014; Naohiro Aota <naota@gentoo.org> +ruby-webkit-gtk2-2.1.0.ebuild:
+  version bump
 
 *ruby-webkit-gtk2-2.0.2 (09 Dec 2013)
 

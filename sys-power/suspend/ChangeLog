@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/suspend
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.26 2013/05/11 11:02:43 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/suspend/ChangeLog,v 1.27 2014/01/16 08:03:10 xmw Exp $
+
+  16 Jan 2014; Michael Weber <xmw@gentoo.org> suspend-0.8-r1.ebuild,
+  suspend-1.0.ebuild:
+  needs old libgcrypt (bug 494638)
 
   11 May 2013; Agostino Sarubbo <ago@gentoo.org> suspend-1.0.ebuild:
   Stable for x86, wrt bug #469386
