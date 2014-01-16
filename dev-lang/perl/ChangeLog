@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.410 2014/01/01 13:39:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.411 2014/01/16 19:51:59 vapier Exp $
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-5.16.3.ebuild:
+  Mark m68k/s390/sh stable.
 
   01 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Remove unused useflag description
