@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.5.0_pre20131214.ebuild,v 1.1 2013/12/13 15:07:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-4.4.99_pre20140116.ebuild,v 1.1 2014/01/16 16:22:38 jer Exp $
 
 EAPI=5
 inherit autotools eutils libtool
 
-MY_P="${PN}-pre${PV/_pre*/}.${PV/*_pre/}"
+MY_P="${P/_pre/.}"
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https/torrent client and file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
