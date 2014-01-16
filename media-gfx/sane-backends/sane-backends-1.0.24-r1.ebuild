@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r1.ebuild,v 1.4 2014/01/15 12:17:44 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r1.ebuild,v 1.5 2014/01/16 16:53:40 jer Exp $
 
 EAPI="5"
 
@@ -287,6 +287,6 @@ pkg_postinst() {
 		elog "/etc/sane.d/saned.conf and /etc/hosts.allow"
 	fi
 
-	elog "If you are using an USB scanner, add all users who want"
+	elog "If you are using a USB scanner, add all users who want"
 	elog "to access your scanner to the \"scanner\" group."
 }
