@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipsvd
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.10 2011/07/20 17:26:39 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.11 2014/01/16 17:30:12 jer Exp $
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Spelling.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -ipsvd-1.0.0.ebuild,
   metadata.xml:
@@ -42,4 +45,3 @@
   27 Oct 2007; Thilo Bangert <bangert@gentoo.org> +metadata.xml,
   +ipsvd-0.13.0.ebuild:
   initial release - ebuild thanks to Dean Hall - bug #76522
-

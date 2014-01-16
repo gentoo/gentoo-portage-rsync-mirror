@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.97 2013/12/21 17:22:30 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.98 2014/01/16 17:28:22 jer Exp $
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> files/apcupsd.conf:
+  Spelling.
 
   21 Dec 2013; Agostino Sarubbo <ago@gentoo.org> apcupsd-3.14.8-r2.ebuild:
   Stable for ppc, wrt bug #485344

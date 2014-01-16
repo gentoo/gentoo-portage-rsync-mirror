@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.224 2014/01/10 04:32:14 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.225 2014/01/16 17:20:43 jer Exp $
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> okular-4.11.2.ebuild,
+  okular-4.11.5.ebuild, okular-4.12.0.ebuild:
+  Spelling.
 
   10 Jan 2014; Chris Reffett <creffett@gentoo.org> -okular-4.11.4.ebuild:
   Remove KDE SC 4.11.4

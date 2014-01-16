@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.8.5-r1.ebuild,v 1.1 2013/10/23 18:49:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.8.5-r1.ebuild,v 1.2 2014/01/16 17:26:58 jer Exp $
 
 # Groovy's build system is Ant based, but they use Maven for fetching the dependencies.
 # We just have to remove the fetch dependencies target, and then we can use Ant for this ebuild.
 
 # We currently do not build the embeddable jar (which is created using JarJar).
-# We could provide that via an USE flag.
+# We could provide that via a USE flag.
 # We also don't use automatic build rewriting as there seems to be already some level of support
 # in the upstream build system
 

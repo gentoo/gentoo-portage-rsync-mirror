@@ -2,7 +2,7 @@
 
 # LISTEN TYPE
 #  Set to 'inet' if you want to use a TCP socket.
-#  Set to 'unix' if you want to use an UNIX socket.
+#  Set to 'unix' if you want to use a UNIX socket.
 POSTGREY_TYPE="inet"
 
 # HOST
