@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.182 2013/07/17 09:15:02 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.183 2014/01/16 17:33:01 jer Exp $
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> files/rtorrent.1:
+  Spelling.
 
   17 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> rtorrent-0.8.9.ebuild:
   ppc stable, bug 473424

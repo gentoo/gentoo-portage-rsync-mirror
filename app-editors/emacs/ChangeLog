@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.603 2013/12/31 00:08:13 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.604 2014/01/16 17:48:57 vapier Exp $
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> emacs-23.4-r6.ebuild,
+  emacs-24.2-r1.ebuild, emacs-24.3-r2.ebuild:
+  Mark s390 stable.
 
   30 Dec 2013; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r6.ebuild,
   emacs-24.3-r2.ebuild:

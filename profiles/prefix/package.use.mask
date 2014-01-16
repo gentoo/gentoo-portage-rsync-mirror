@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.20 2014/01/15 06:43:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.21 2014/01/16 17:44:47 jer Exp $
 
 
 # Kacper Kowalik <xarthisius@gentoo.org> (14 Jan 2012)
@@ -38,7 +38,7 @@ app-editors/emacs-vcs hesiod m17n-lib
 app-editors/emacs hesiod m17n-lib
 
 # Michael Haubenwallner <haubi@gentoo.org> (30 Sep 2009)
-# Most prefix platforms do/can not have an uuid implementation (#230981).
+# Most prefix platforms do/can not have a uuid implementation (#230981).
 x11-libs/libSM uuid
 
 # Jeremy Olexa <darkside@gentoo.org> (30 Sep 2009)

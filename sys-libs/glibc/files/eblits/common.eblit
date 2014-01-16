@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.33 2014/01/10 15:18:19 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.34 2014/01/16 17:38:31 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -256,7 +256,8 @@ use_multiarch() {
 	arm)       nver="2.22" ;;
 	hppa)      nver="2.23" ;;
 	ppc|ppc64) nver="2.20" ;;
-	s390)      nver="2.23" ;;
+	# ifunc was added in 2.23, but glibc also needs machinemode which is in 2.24.
+	s390)      nver="2.24" ;;
 	sparc)     nver="2.21" ;;
 	*)         return 1 ;;
 	esac

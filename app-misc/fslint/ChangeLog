@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/fslint
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/ChangeLog,v 1.5 2013/08/28 11:14:30 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslint/ChangeLog,v 1.6 2014/01/16 17:50:42 jer Exp $
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> fslint-2.42.ebuild,
+  metadata.xml:
+  Spelling. Drop longdescription (== DESCRIPTION).
 
   28 Aug 2013; Agostino Sarubbo <ago@gentoo.org> fslint-2.42.ebuild:
   Stable for x86, wrt bug #481946

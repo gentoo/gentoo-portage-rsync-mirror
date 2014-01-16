@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/vde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.29 2014/01/08 06:29:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/ChangeLog,v 1.30 2014/01/16 17:42:46 jer Exp $
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> vde-2.2.2.ebuild,
+  vde-2.3.1.ebuild:
+  Spelling.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> vde-2.2.2.ebuild,
   vde-2.3.1.ebuild:

@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemonize/daemonize-1.6.ebuild,v 1.3 2010/08/26 09:44:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemonize/daemonize-1.6.ebuild,v 1.4 2014/01/16 17:32:56 jer Exp $
 
 EAPI=2
 
-DESCRIPTION="Runs a command as an Unix daemon"
+DESCRIPTION="Runs a command as a Unix daemon"
 HOMEPAGE="http://bmc.github.com/daemonize/"
 SRC_URI="http://github.com/bmc/${PN}/tarball/release-${PV} -> ${P}.tar.gz"
 

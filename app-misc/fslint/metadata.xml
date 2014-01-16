@@ -5,7 +5,4 @@
     <email>TomWij@gentoo.org</email>
     <name>Tom Wijsman</name>
   </maintainer>
-  <longdescription>
-    An utility to find various forms of lint on a filesystem.
-  </longdescription>
 </pkgmetadata>

@@ -1,6 +1,13 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.406 2014/01/15 06:43:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.408 2014/01/16 17:45:58 jer Exp $
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> bsd/package.use.mask,
+  linux/package.use.mask:
+  Spelling.
+
+  16 Jan 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Spelling.
 
   15 Jan 2014; Fabian Groffen <grobian@gentoo.org> package.use.mask:
   Drop pointless dante[upnp] mask again

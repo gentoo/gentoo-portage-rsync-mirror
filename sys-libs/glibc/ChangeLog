@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.972 2014/01/16 07:46:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.973 2014/01/16 17:38:31 vapier Exp $
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Require binutils-2.24+ for ifunc support on s390.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild:
   Mark ia64/s390 stable #496752.

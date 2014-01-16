@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.7 2014/01/08 06:29:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.8 2014/01/16 17:42:46 jer Exp $
 
 inherit base eutils user
 
@@ -35,6 +35,6 @@ pkg_postinst() {
 	einfo "To start vde automatically add it to the default runlevel:"
 	einfo "# rc-update add vde default"
 	einfo "You need to setup tap0 in /etc/conf.d/net"
-	einfo "To use it as an user be sure to set a group in /etc/conf.d/vde"
+	einfo "To use it as a user be sure to set a group in /etc/conf.d/vde"
 	einfo "Users of the group can then run: $ vdeq qemu -sock /var/run/vde.ctl ..other opts"
 }
