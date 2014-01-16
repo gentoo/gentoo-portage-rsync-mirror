@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=dev-db/sqlite:3 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication dev-qt/qtsql:4[sqlite] dev-qt/qtwebkit:4 phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) ) dev-vcs/mercurial
+DEPEND=dev-db/sqlite:3 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication dev-qt/qtsql:4[sqlite] dev-qt/qtwebkit:4 phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) ) virtual/pkgconfig dev-vcs/mercurial
 DESCRIPTION=A Qt4-based RSS/Atom feed reader
 EAPI=5
 HOMEPAGE=https://quiterss.org
-IUSE=debug phonon linguas_ar linguas_cs linguas_de linguas_el_GR linguas_es linguas_fa linguas_fr linguas_hu linguas_it linguas_ja linguas_ko linguas_lt linguas_nl linguas_pl linguas_pt_BR linguas_pt_PT linguas_ro_RO linguas_ru linguas_sk linguas_sr linguas_sv linguas_tg_TJ linguas_th linguas_tr linguas_uk linguas_vi linguas_zh_CN linguas_zh_TW
+IUSE=debug phonon linguas_ar linguas_cs linguas_de linguas_el_GR linguas_es linguas_fa linguas_fi linguas_fr linguas_hu linguas_it linguas_ja linguas_ko linguas_lt linguas_nl linguas_pl linguas_pt_BR linguas_pt_PT linguas_ro_RO linguas_ru linguas_sk linguas_sr linguas_sv linguas_tg_TJ linguas_tr linguas_uk linguas_vi linguas_zh_CN linguas_zh_TW
 LICENSE=GPL-3
 RDEPEND=dev-db/sqlite:3 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtsingleapplication dev-qt/qtsql:4[sqlite] dev-qt/qtwebkit:4 phonon? ( || ( media-libs/phonon dev-qt/qtphonon:4 ) )
 SLOT=0
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	l10n	33bde4fb0cfd3a21a277b66bfd837e19	mercurial	6bb94b704fb44f17b02994ca3fa756a9	multilib	892e597faee02a5b94eb02ab512e7622	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
-_md5_=daa142168579253a8bd727870cadbdfd
+_md5_=d29d32a052853df76e54a599b94f5c42

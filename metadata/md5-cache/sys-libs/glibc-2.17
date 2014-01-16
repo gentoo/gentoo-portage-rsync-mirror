@@ -3,11 +3,11 @@ DEPEND=>=app-misc/pax-utils-0.1.10 !<sys-apps/sandbox-1.6 !<sys-apps/portage-2.1
 DESCRIPTION=GNU libc6 (also called glibc2) C library
 HOMEPAGE=http://www.gnu.org/software/libc/libc.html
 IUSE=debug gd hardened multilib nscd selinux systemtap profile suid vanilla crosscompile_opts_headers-only
-KEYWORDS=alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86
+KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sh ~sparc x86
 LICENSE=LGPL-2.1+ BSD HPND ISC inner-net rc PCRE
 RDEPEND=!sys-kernel/ps3-sources selinux? ( sys-libs/libselinux ) !sys-libs/nss-db vanilla? ( !sys-libs/timezone-data ) !vanilla? ( sys-libs/timezone-data )
 RESTRICT=strip
 SLOT=2.2
 SRC_URI=mirror://gnu/glibc/glibc-2.17.tar.xz ftp://sourceware.org/pub/glibc/releases/glibc-2.17.tar.xz ftp://sourceware.org/pub/glibc/snapshots/glibc-2.17.tar.xz mirror://gentoo/glibc-2.17.tar.xz mirror://gentoo/glibc-2.17-patches-8.tar.bz2 http://dev.gentoo.org/~vapier/dist/glibc-2.17-patches-8.tar.bz2 http://dev.gentoo.org/~azarah/glibc/glibc-2.17-patches-8.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	unpacker	04385b0f181c42fa9c18ec0e31729d1f	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=079bc63acf476fa4c94deb7405461636
+_md5_=ec9dfe0565ace96bc52e383ba8042d3e

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.994 2014/01/11 01:12:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.995 2014/01/16 07:48:45 vapier Exp $
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> gcc-4.7.3-r1.ebuild:
+  Mark m68k/s390 stable.
 
   11 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> gcc-4.8.2.ebuild:
   Fix patchset and manifest. Once a distfile is uploaded it cannot be replaced

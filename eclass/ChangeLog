@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1115 2014/01/15 12:12:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1116 2014/01/16 07:57:40 graaff Exp $
+
+  16 Jan 2014; Hans de Graaff <graaff@gentoo.org> ruby-ng.eclass:
+  Explicitly cp symlinks as-is. The default for this changed in coreutils 8.22.
+  Fixes bug 472710.
 
   15 Jan 2014; Michał Górny <mgorny@gentoo.org> autotools-multilib.eclass:
   Actually enable in-source build support.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nomacs/nomacs-1.6.2.ebuild,v 1.1 2014/01/14 10:46:06 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nomacs/nomacs-1.6.2.ebuild,v 1.2 2014/01/16 07:47:30 pinkbyte Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-source.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~amd64-linux"
 IUSE="raw tiff webp"
 
 PATCHES=( "${FILESDIR}/${P}-use-system-webp.patch" )

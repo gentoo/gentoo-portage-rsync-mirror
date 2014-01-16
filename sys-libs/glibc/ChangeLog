@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.971 2014/01/12 19:57:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.972 2014/01/16 07:46:43 vapier Exp $
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild:
+  Mark ia64/s390 stable #496752.
 
   12 Jan 2014; Markus Meier <maekke@gentoo.org> glibc-2.17.ebuild:
   arm stable, bug #496752
