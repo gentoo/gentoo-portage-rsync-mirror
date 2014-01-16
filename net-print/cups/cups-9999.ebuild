@@ -1,13 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.47 2014/01/12 17:41:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-9999.ebuild,v 1.48 2014/01/16 20:55:38 grobian Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python{2_6,2_7} )
 
 inherit autotools base fdo-mime gnome2-utils flag-o-matic linux-info \
-	multilib pam python-single-r1 user versionator java-pkg-opt-2 systemd
+	multilib pam python-single-r1 user versionator java-pkg-opt-2 systemd \
+	toolchain-funcs
 
 MY_P=${P/_rc/rc}
 MY_P=${MY_P/_beta/b}
@@ -158,6 +159,12 @@ src_configure() {
 		myconf+="
 			--disable-gnutls
 			--disable-openssl
+		"
+	fi
+
+	if tc-is-static-only; then 
+		myconf+="
+			--disable-shared
 		"
 	fi
 
