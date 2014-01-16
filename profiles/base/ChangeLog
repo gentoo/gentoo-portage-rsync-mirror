@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.628 2014/01/13 17:31:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.629 2014/01/16 00:12:06 redlizard Exp $
+
+  14 Jan 2014; Ruud Koolen <redlizard@gentoo.org> use.mask:
+  Add prefix-guest use mask for new prefix profiles.
 
   13 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> package.use.mask:
   Removed use.mask entry for seamonkey's crypt USE flag.
