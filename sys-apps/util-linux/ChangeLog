@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.446 2014/01/04 18:34:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.447 2014/01/16 01:57:53 vapier Exp $
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> util-linux-2.24.ebuild:
+  Delete bigyear test for now; the next release should fix it #489794 by Toralf
+  Förster.
 
   04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
   -util-linux-2.19.1-r1.ebuild, -util-linux-2.20-r1.ebuild,

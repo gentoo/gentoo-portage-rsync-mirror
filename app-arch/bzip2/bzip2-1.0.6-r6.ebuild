@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.6-r5.ebuild,v 1.1 2014/01/05 17:58:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.6-r6.ebuild,v 1.1 2014/01/16 01:41:34 vapier Exp $
 
 # XXX: atm, libbz2.a is always PIC :(, so it is always built quickly
 #      (since we're building shared libs) ...
@@ -69,6 +69,7 @@ multilib_src_install() {
 	for v in libbz2.so{,.{${PV%%.*},${PV%.*}}} ; do
 		dosym libbz2.so.${PV} /usr/$(get_libdir)/${v}
 	done
+	use static-libs && dolib.a libbz2.a
 
 	if multilib_build_binaries ; then
 		gen_usr_ldscript -a bz2
