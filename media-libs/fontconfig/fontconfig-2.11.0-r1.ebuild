@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.0.ebuild,v 1.3 2013/12/26 20:01:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.11.0-r1.ebuild,v 1.1 2014/01/16 14:43:34 polynomial-c Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=yes
@@ -36,6 +36,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.10.2-docbook.patch	# 310157
 	"${FILESDIR}"/${PN}-2.11.0-solaris.patch    # from fc git
 	"${FILESDIR}"/${PN}-2.11.0-solaris10.patch  # from fc git
+	"${FILESDIR}"/${PN}-2.11.0-baseconfigdir_fix.patch # 498246
 )
 
 pkg_setup() {
