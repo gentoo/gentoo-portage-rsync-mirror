@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PDL
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.111 2013/04/16 18:23:04 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/ChangeLog,v 1.112 2014/01/16 03:09:38 patrick Exp $
+
+  16 Jan 2014; Patrick Lauer <patrick@gentoo.org> PDL-2.4.11.ebuild,
+  metadata.xml:
+  Remove proj support #497328
 
   16 Apr 2013; Ulrich Müller <ulm@gentoo.org> PDL-2.4.3-r1.ebuild,
   PDL-2.4.7.ebuild, PDL-2.4.11.ebuild:

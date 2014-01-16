@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.9 2013/04/16 18:23:04 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.11.ebuild,v 1.10 2014/01/16 03:09:38 patrick Exp $
 
 EAPI=4
 
@@ -15,7 +15,8 @@ DESCRIPTION="Perl Data Language for scientific computing"
 LICENSE="|| ( Artistic GPL-1+ ) public-domain PerlDL"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="+badval doc fftw fortran gd gsl hdf netpbm pdl2 proj pgplot plplot threads"
+# proj support removed #497328
+IUSE="+badval doc fftw fortran gd gsl hdf netpbm pdl2 pgplot plplot threads"
 
 RDEPEND="sys-libs/ncurses
 	app-arch/sharutils
@@ -38,7 +39,6 @@ RDEPEND="sys-libs/ncurses
 	hdf? ( sci-libs/hdf )
 	netpbm? ( media-libs/netpbm virtual/ffmpeg )
 	pdl2? ( dev-perl/Devel-REPL )
-	proj? ( <sci-libs/proj-4.8 )
 	pgplot? ( dev-perl/PGPLOT )
 	plplot? ( sci-libs/plplot )"
 
@@ -83,7 +83,7 @@ src_configure() {
 		-e "/WITH_PGPLOT/s/=>.*/=> $(use pgplot && echo 1 || echo 0),/" \
 		-e "/WITH_PLPLOT/s/=>.*/=> $(use plplot && echo 1 || echo 0),/" \
 		-e "/WITH_POSIX_THREADS/s/=>.*/=> $(use threads && echo 1 || echo 0),/" \
-		-e "/WITH_PROJ/s/=>.*/=> $(use proj && echo 1 || echo 0),/" \
+		-e "/WITH_PROJ/s/=>.*/=> $(echo 0),/" \
 		-e "/WITH_SLATEC/s/=>.*/=> $(use fortran && echo 1|| echo 0),/" \
 		perldl.conf || die
 	perl-module_src_configure

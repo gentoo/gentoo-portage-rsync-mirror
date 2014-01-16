@@ -17,7 +17,6 @@
   <flag name="hdf">Enable HDF (version 4) format support</flag>
   <flag name="netpbm">Enable NETPBM and MPEG support</flag>
   <flag name="pdl2">Build pdf2 shell (requires Devel-REPL)</flag>
-  <flag name="proj">Enable projection support</flag>
   <flag name="pgplot">Enable PGPLOT plotting capabilities</flag>
   <flag name="plplot">Enable plplot plotting capabilities</flag>
 </use>
