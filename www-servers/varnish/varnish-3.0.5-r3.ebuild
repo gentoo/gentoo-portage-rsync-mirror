@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.5-r2.ebuild,v 1.1 2014/01/16 18:04:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-3.0.5-r3.ebuild,v 1.1 2014/01/16 18:49:32 blueness Exp $
 
 EAPI="5"
 
@@ -43,6 +43,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.0.4-fix-automake-1.13.patch
 	"${FILESDIR}"/${PN}-3.0.4-automagic.patch
 	"${FILESDIR}"/${PN}-3.0.3-pthread-uclibc.patch
+	"${FILESDIR}"/${PN}-3.0.5-fix-python-path.patch
+	"${FILESDIR}"/${PN}-3.0.5-path-to-vmod_vcc.patch
 )
 
 AUTOTOOLS_AUTORECONF="yes"
@@ -87,6 +89,8 @@ src_install() {
 	systemd_dounit "${FILESDIR}/${PN}d.service"
 
 	python_doscript lib/libvmod_std/vmod.py
+	insinto /etc/varnish
+	doins  lib/libvmod_std/vmod.vcc
 }
 
 pkg_postinst () {

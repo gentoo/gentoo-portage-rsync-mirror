@@ -5815,6 +5815,8 @@ sci-libs/acml:int64 - Install the 64 bits integer library
 sci-libs/adolc:sparse - Add support for sparse matrix algebra with sci-libs/colpack
 sci-libs/arprec:fma - Use the Fused Multiply Add instruction set
 sci-libs/arprec:qd - Use sci-libs/qd for quad-double datatype
+sci-libs/avogadrolibs:static-plugins - build all plugins statically into main plugin modules
+sci-libs/avogadrolibs:vtk - include vtk support
 sci-libs/ceres-solver:cxsparse - Enable simple support for sparse matrix algebra from sci-libs/cxsparse with no LAPACK dependencies
 sci-libs/ceres-solver:gflags - Use dev-cpp/gflags for flag parsing
 sci-libs/ceres-solver:metis - Use METIS via sci-libs/cholmod for matrix partitioning

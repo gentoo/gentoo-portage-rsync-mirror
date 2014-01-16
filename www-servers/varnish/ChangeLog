@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.69 2014/01/16 18:04:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.70 2014/01/16 18:49:32 blueness Exp $
+
+*varnish-3.0.5-r3 (16 Jan 2014)
+
+  16 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/varnish-3.0.5-fix-python-path.patch,
+  +files/varnish-3.0.5-path-to-vmod_vcc.patch, +varnish-3.0.5-r3.ebuild,
+  -varnish-3.0.5-r2.ebuild:
+  Account for bug #498274
 
 *varnish-3.0.5-r2 (16 Jan 2014)
 

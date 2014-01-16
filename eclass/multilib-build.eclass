@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.25 2013/12/31 18:31:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib-build.eclass,v 1.26 2014/01/16 18:53:41 mgorny Exp $
 
 # @ECLASS: multilib-build.eclass
 # @MAINTAINER:
@@ -237,6 +237,31 @@ multilib_copy_sources() {
 # )
 # @CODE
 
+# @ECLASS-VARIABLE: MULTILIB_CHOST_TOOLS
+# @DESCRIPTION:
+# A list of tool executables to preserve for each multilib ABI.
+# The listed executables will be renamed to ${CHOST}-${basename},
+# and the native variant will be symlinked to the generic name.
+#
+# This variable has to be a bash array. Paths shall be relative to
+# installation root (${ED}), and name regular files. Recursive wrapping
+# is not supported.
+#
+# Please note that tool wrapping is *discouraged*. It is preferred to
+# install pkg-config files for each ABI, and require reverse
+# dependencies to use that.
+#
+# Packages that search for tools properly (e.g. using AC_PATH_TOOL
+# macro) will find the wrapper executables automatically. Other packages
+# will need explicit override of tool paths.
+#
+# Example:
+# @CODE
+# MULTILIB_CHOST_TOOLS=(
+#	/usr/bin/foo-config
+# )
+
+# @CODE
 # @FUNCTION: multilib_prepare_wrappers
 # @USAGE: [<install-root>]
 # @DESCRIPTION:
@@ -333,6 +358,21 @@ _EOF_
 			# Note: match a space afterwards to avoid collision potential.
 			sed -e "/${abi_flag} /s&error.*&include <${CHOST}${f}>&" \
 				-i "${ED}/tmp/multilib-include${f}" || die
+		fi
+	done
+
+	for f in "${MULTILIB_CHOST_TOOLS[@]}"; do
+		# drop leading slash if it's there
+		f=${f#/}
+
+		local dir=${f%/*}
+		local fn=${f##*/}
+
+		mv "${root}/${f}" "${root}/${dir}/${CHOST}-${fn}" || die
+
+		# symlink the native one back
+		if multilib_build_binaries; then
+			ln -s "${CHOST}-${fn}" "${root}/${f}" || die
 		fi
 	done
 }
