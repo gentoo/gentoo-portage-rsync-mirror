@@ -4,10 +4,10 @@ DESCRIPTION=A SQL Database Engine in a C Library
 EAPI=5
 HOMEPAGE=http://sqlite.org/
 IUSE=debug doc icu +readline secure-delete static-libs tcl test
-KEYWORDS=~alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE=public-domain
 RDEPEND=icu? ( dev-libs/icu:= ) readline? ( sys-libs/readline ) tcl? ( dev-lang/tcl:= )
 SLOT=3
 SRC_URI=doc? ( http://sqlite.org/2013/sqlite-doc-3080200.zip ) tcl? ( http://sqlite.org/2013/sqlite-src-3080200.zip ) !tcl? ( test? ( http://sqlite.org/2013/sqlite-src-3080200.zip ) !test? ( http://sqlite.org/2013/sqlite-autoconf-3080200.tar.gz ) )
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=1b2b71b3234914b80b859f8cd3de3108
+_md5_=52b63fbb051b26db09c52006c8872141

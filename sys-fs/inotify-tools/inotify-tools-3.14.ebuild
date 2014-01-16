@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/inotify-tools-3.14.ebuild,v 1.6 2014/01/14 13:55:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/inotify-tools/inotify-tools-3.14.ebuild,v 1.7 2014/01/16 21:07:25 maekke Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://github.com/downloads/rvoicilas/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa x86"
+KEYWORDS="amd64 arm hppa x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.19-r1.ebuild,v 1.6 2014/01/15 09:20:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.19-r1.ebuild,v 1.7 2014/01/16 21:05:32 maekke Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/ http://developer.gnome.org/gmime/
 
 SLOT="2.6"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha amd64 ~arm hppa ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 arm hppa ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="doc mono static-libs vala"
 
 RDEPEND="
