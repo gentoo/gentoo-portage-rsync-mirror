@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/rsnapshot/rsnapshot-1.3.1-r1.ebuild,v 1.4 2012/04/18 02:12:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/rsnapshot/rsnapshot-1.3.1-r1.ebuild,v 1.5 2014/01/16 18:18:27 polynomial-c Exp $
 
 EAPI=4
 
@@ -22,9 +22,9 @@ RDEPEND=">=dev-lang/perl-5.8.2
 		>=net-misc/rsync-2.6.0"
 DEPEND="${RDEPEND}"
 
-PATCHES=(
-	"${FILESDIR}"/${P}-cp_al.patch
-)
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cp_al.patch
+}
 
 src_install() {
 	# Change sysconfdir to install the template file as documentation

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molequeue/molequeue-0.7.1.ebuild,v 1.2 2014/01/07 14:47:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molequeue/molequeue-0.7.1.ebuild,v 1.3 2014/01/16 18:07:13 jlec Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ src_configure() {
 }
 
 src_compile() {
-	cmake-utils_src_compile all $(usex doc documentation)
+	cmake-utils_src_compile all $(usex doc documentation "")
 }
 
 src_test() {

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.176 2013/12/27 11:08:26 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.177 2014/01/16 18:19:15 vapier Exp $
+
+  16 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-1.6f-r4.ebuild,
+  man-1.6g.ebuild:
+  Mark m68k/s390/sh stable.
 
   27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> man-1.6f-r4.ebuild,
   man-1.6g.ebuild:
