@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.8-r1.ebuild,v 1.11 2014/01/15 09:31:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.8-r2.ebuild,v 1.1 2014/01/16 09:35:36 polynomial-c Exp $
 
 EAPI="4"
 
@@ -12,7 +12,8 @@ HOMEPAGE="http://procps.sourceforge.net/ http://gitorious.org/procps"
 # SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.xz"
 FEDORA_HASH="aecbeeda2ab308f8d09dddcb4cb9a572"
 SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/${PN}-ng/${PN}-ng-${PV}.tar.xz/${FEDORA_HASH}/${PN}-ng-${PV}.tar.xz
-	https://gitorious.org/${PN}/${PN}/commit/ce5e995921e770bfcda25e42fe090aeccdbf1291.patch -> ${P}-respect_epipe_in_fileutils.patch"
+	https://gitorious.org/procps/procps/commit/ce5e995921e770bfcda25e42fe090aeccdbf1291.patch -> ${PN}-3.3.8-respect_epipe_in_fileutils.patch
+	https://gitorious.org/procps/procps/commit/e6a78f2745ca6c7ceed4406d3ce5397e77518b11.patch -> ${PN}-3.3.8-top_user_filter.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +29,8 @@ S=${WORKDIR}/${PN}-ng-${PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-kill-neg-pid.patch \
-		"${DISTDIR}"/${P}-respect_epipe_in_fileutils.patch
+		"${DISTDIR}"/${P}-respect_epipe_in_fileutils.patch \
+		"${DISTDIR}"/${P}-top_user_filter.patch
 }
 
 src_configure() {

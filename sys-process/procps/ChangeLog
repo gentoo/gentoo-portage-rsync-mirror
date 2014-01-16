@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.111 2014/01/15 09:31:03 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.112 2014/01/16 09:35:36 polynomial-c Exp $
+
+*procps-3.3.8-r2 (16 Jan 2014)
+
+  16 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -procps-3.3.8-r1.ebuild,
+  +procps-3.3.8-r2.ebuild:
+  Added upstream patch to fix user filter in top (bug #497438). Committed
+  straight to stable.
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> procps-3.3.8-r1.ebuild:
   Stable for ia64, wrt bug #494822
