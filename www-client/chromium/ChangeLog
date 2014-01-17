@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1011 2014/01/16 20:19:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1012 2014/01/17 04:42:44 phajdan.jr Exp $
+
+*chromium-34.0.1788.0 (17 Jan 2014)
+
+  17 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-gn-r1.patch, -chromium-31.0.1650.63.ebuild,
+  -chromium-32.0.1700.72.ebuild, +chromium-34.0.1788.0.ebuild,
+  +files/chromium-system-libjpeg-r0.patch:
+  Dev channel bump. Use system libvpx again. Remove old.
 
   16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> chromium-32.0.1700.77.ebuild:
   Stable for x86, wrt bug #498168

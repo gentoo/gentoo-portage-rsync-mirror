@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libintl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.14 2014/01/16 15:36:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.15 2014/01/17 04:23:13 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> libintl-0-r1.ebuild,
+  libintl-0.ebuild:
+  Add arm64 keywords.
 
 *libintl-0-r1 (16 Jan 2014)
 

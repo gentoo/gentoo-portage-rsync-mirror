@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.211 2014/01/16 06:25:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.212 2014/01/17 04:23:15 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> automake-1.10.3.ebuild,
+  automake-1.11.6.ebuild, automake-1.12.6.ebuild, automake-1.13.4.ebuild,
+  automake-1.14.1.ebuild, automake-1.14.ebuild, automake-1.4_p6-r1.ebuild,
+  automake-1.5-r1.ebuild, automake-1.6.3-r1.ebuild, automake-1.7.9-r2.ebuild,
+  automake-1.8.5-r4.ebuild, automake-1.9.6-r3.ebuild:
+  Add arm64 keywords.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> automake-1.13.4.ebuild:
   Mark m68k/s390/sh stable.

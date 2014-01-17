@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.109 2014/01/16 23:07:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.110 2014/01/17 04:23:10 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> autoconf-wrapper-13.ebuild:
+  Add arm64 keywords.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> autoconf-wrapper-13.ebuild:
   Mark m68k/sh stable.

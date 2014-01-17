@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.125 2014/01/14 20:48:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.126 2014/01/17 03:46:31 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -475,6 +475,7 @@ tc-endian() {
 		m68*)		echo big;;
 		mips*l*)	echo little;;
 		mips*)		echo big;;
+		powerpc*le)	echo little;;
 		powerpc*)	echo big;;
 		s390*)		echo big;;
 		sh*b*)		echo big;;

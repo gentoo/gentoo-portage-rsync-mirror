@@ -8,5 +8,5 @@ LICENSE=QPL-1.0 LGPL-2
 RDEPEND=>=dev-lang/ocaml-3.10.2:=[ocamlopt]
 SLOT=0/1.05
 SRC_URI=http://caml.inria.fr/distrib/bazar-ocaml/camlidl-1.05.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	93bf619f7442bc6320ec155d9d24031c
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=dd9971bd3840ac81ed420c6ffe11572c

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-32.0.1700.72.ebuild,v 1.1 2014/01/09 00:49:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1788.0.ebuild,v 1.1 2014/01/17 04:42:44 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -14,13 +14,13 @@ inherit chromium eutils flag-o-matic multilib multiprocessing pax-utils \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.xz
+SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}-lite.tar.xz
 	test? ( https://commondatastorage.googleapis.com/chromium-browser-official/${P}-testdata.tar.xz )"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
+IUSE="aura bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -54,6 +54,8 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/harfbuzz:=[icu(+)]
 	>=media-libs/libjpeg-turbo-1.2.0-r1:=
 	media-libs/libpng:0=
+	>=media-libs/libvpx-1.3.0:=
+	>=media-libs/libwebp-0.4.0:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
@@ -164,7 +166,8 @@ src_prepare() {
 	# fi
 
 	epatch "${FILESDIR}/${PN}-system-jinja-r2.patch"
-	epatch "${FILESDIR}/${PN}-build_ffmpeg-r0.patch"
+	epatch "${FILESDIR}/${PN}-system-libjpeg-r0.patch"
+	epatch "${FILESDIR}/${PN}-gn-r1.patch"
 
 	epatch_user
 
@@ -184,7 +187,8 @@ src_prepare() {
 		'net/third_party/mozilla_security_manager' \
 		'net/third_party/nss' \
 		'third_party/WebKit' \
-		'third_party/angle_dx11' \
+		'third_party/angle' \
+		'third_party/brotli' \
 		'third_party/cacheinvalidation' \
 		'third_party/cld' \
 		'third_party/cros_system_api' \
@@ -195,12 +199,11 @@ src_prepare() {
 		'third_party/jstemplate' \
 		'third_party/khronos' \
 		'third_party/leveldatabase' \
+		'third_party/libaddressinput' \
 		'third_party/libjingle' \
 		'third_party/libphonenumber' \
 		'third_party/libsrtp' \
 		'third_party/libusb' \
-		'third_party/libvpx' \
-		'third_party/libwebp' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
 		'third_party/libyuv' \
@@ -211,8 +214,10 @@ src_prepare() {
 		'third_party/mt19937ar' \
 		'third_party/npapi' \
 		'third_party/ots' \
+		'third_party/polymer' \
 		'third_party/pywebsocket' \
 		'third_party/qcms' \
+		'third_party/readability' \
 		'third_party/sfntly' \
 		'third_party/skia' \
 		'third_party/smhasher' \
@@ -260,10 +265,8 @@ src_configure() {
 	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_libsrtp (bug #459932).
 	# TODO: use_system_libusb (http://crbug.com/266149).
-	# TODO: use_system_libvpx (bug #487926).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
-	# TODO: use_system_libwebp (http://crbug.com/288019).
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
@@ -273,6 +276,8 @@ src_configure() {
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
+		-Duse_system_libvpx=1
+		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_libxslt=1
 		-Duse_system_minizip=1
@@ -295,6 +300,7 @@ src_configure() {
 	# Optional dependencies.
 	# TODO: linux_link_kerberos, bug #381289.
 	myconf+="
+		$(gyp_use aura)
 		$(gyp_use cups)
 		$(gyp_use gnome use_gconf)
 		$(gyp_use gnome-keyring use_gnome_keyring)
@@ -420,6 +426,23 @@ src_configure() {
 	egyp_chromium ${myconf} || die
 }
 
+eninja() {
+	if [[ -z ${NINJAOPTS+set} ]]; then
+		local jobs=$(makeopts_jobs)
+		local loadavg=$(makeopts_loadavg)
+
+		if [[ ${MAKEOPTS} == *-j* && ${jobs} != 999 ]]; then
+			NINJAOPTS+=" -j ${jobs}"
+		fi
+		if [[ ${MAKEOPTS} == *-l* && ${loadavg} != 999 ]]; then
+			NINJAOPTS+=" -l ${loadavg}"
+		fi
+	fi
+	set -- ninja -v ${NINJAOPTS} "$@"
+	echo "$@"
+	"$@"
+}
+
 src_compile() {
 	# TODO: add media_unittests after fixing compile (bug #462546).
 	local test_targets=""
@@ -434,12 +457,12 @@ src_compile() {
 	fi
 
 	# Build mksnapshot and pax-mark it.
-	ninja -C out/Release -v -j $(makeopts_jobs) mksnapshot.${target_arch} || die
+	eninja -C out/Release mksnapshot.${target_arch} || die
 	pax-mark m out/Release/mksnapshot.${target_arch}
 
 	# Even though ninja autodetects number of CPUs, we respect
 	# user's options, for debugging with -j 1 or any other reason.
-	ninja -C out/Release -v -j $(makeopts_jobs) ${ninja_targets} || die
+	eninja -C out/Release ${ninja_targets} || die
 
 	pax-mark m out/Release/chrome
 	if use test; then
@@ -489,7 +512,10 @@ chromium_test() {
 		(( exitstatus |= st ))
 	}
 
-	runtest out/Release/base_unittests
+	local excluded_base_unittests=(
+		"OutOfMemoryDeathTest.ViaSharedLibraries" # bug #497512
+	)
+	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 	runtest out/Release/cacheinvalidation_unittests
 
 	local excluded_content_unittests=(
@@ -507,6 +533,7 @@ chromium_test() {
 		"NetUtilTest.IDNToUnicode*" # bug 361885
 		"NetUtilTest.FormatUrl*" # see above
 		"SpdyFramerTests/SpdyFramerTest.CreatePushPromiseCompressed/2" # bug #478168
+		"HostResolverImplTest.BypassCache" # bug #498304
 		"HostResolverImplTest.FlushCacheOnIPAddressChange" # bug #481812
 		"HostResolverImplTest.ResolveFromCache" # see above
 		"ProxyResolverV8TracingTest.*" # see above

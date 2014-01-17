@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/libreswan-9999.ebuild,v 1.4 2014/01/06 19:29:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/libreswan/libreswan-9999.ebuild,v 1.5 2014/01/17 03:42:05 floppym Exp $
 
 EAPI=5
 
@@ -86,6 +86,8 @@ src_install() {
 
 	dodoc BUGS CHANGES README
 	dodoc -r docs
+
+	find "${D}" -type d -empty -delete || die
 }
 
 pkg_postinst() {
