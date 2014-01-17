@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.59 2014/01/16 20:17:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.60 2014/01/17 20:46:57 ago Exp $
+
+  17 Jan 2014; Agostino Sarubbo <ago@gentoo.org> mod_fcgid-2.3.9.ebuild:
+  Stable for ppc, wrt bug #487314
 
   16 Jan 2014; Agostino Sarubbo <ago@gentoo.org> mod_fcgid-2.3.9.ebuild:
   Stable for x86, wrt bug #487314
