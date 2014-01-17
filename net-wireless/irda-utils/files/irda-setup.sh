@@ -2,7 +2,7 @@
 #
 # irda-setup
 #
-# Initialize IrDA devices. Based on an Ubuntu init-script,
+# Initialize IrDA devices. Based on a Ubuntu init-script,
 # but adapted to be called directly from udev.
 #
 # params: sir/fir <module> <options>

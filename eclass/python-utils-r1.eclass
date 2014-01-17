@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.45 2013/10/30 19:14:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python-utils-r1.eclass,v 1.46 2014/01/17 14:35:11 jer Exp $
 
 # @ECLASS: python-utils-r1
 # @MAINTAINER:
@@ -10,7 +10,7 @@
 # Based on work of: Krzysztof Pawlik <nelchael@gentoo.org>
 # @BLURB: Utility functions for packages with Python parts.
 # @DESCRIPTION:
-# An utility eclass providing functions to query Python implementations,
+# A utility eclass providing functions to query Python implementations,
 # install Python modules and scripts.
 #
 # This eclass does not set any metadata variables nor export any phase

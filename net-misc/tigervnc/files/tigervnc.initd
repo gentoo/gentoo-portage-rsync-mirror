@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/files/tigervnc.initd,v 1.5 2012/09/16 17:46:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/files/tigervnc.initd,v 1.6 2014/01/17 14:43:12 jer Exp $
 
 depend() {
 	need net
@@ -43,7 +43,7 @@ start() {
 		usrvar=$usropts"["$usrdisp"]"
 		[ -z ${!usrvar} ] && vnc_opts=$VNC_OPTS || vnc_opts=${!usrvar}
 
-		# An user may have an invalid shell, so we default to /bin/sh if its the case
+		# A user may have an invalid shell, so we default to /bin/sh if its the case
 		if [ -x /usr/bin/getent ] ; then
 			usrshell=`getent passwd ${user%%:*} | cut -d: -f 7`
 			case "$usrshell" in

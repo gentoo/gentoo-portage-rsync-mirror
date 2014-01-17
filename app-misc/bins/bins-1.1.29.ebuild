@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.15 2012/03/25 16:15:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bins/bins-1.1.29.ebuild,v 1.16 2014/01/17 14:40:12 jer Exp $
 
 inherit eutils
 
@@ -56,7 +56,7 @@ src_install() {
 pkg_postinst() {
 	ewarn
 	ewarn "A new XML format is use for pictures and albums description files in"
-	ewarn "BINS 1.1.0. There is an utility bins_txt2xml to convert from old"
+	ewarn "BINS 1.1.0. There is a utility bins_txt2xml to convert from old"
 	ewarn "format to new one."
 	ewarn "WARNING: make a backup of your album before proceding to the"
 	ewarn "migration, just in case something goes wrong."

@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/glimmerhmm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.9 2013/03/11 15:19:06 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/ChangeLog,v 1.10 2014/01/17 14:50:43 jer Exp $
+
+  17 Jan 2014; Jeroen Roovers <jer@gentoo.org> glimmerhmm-3.0.1-r1.ebuild:
+  Spelling.
 
   11 Mar 2013; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Drop Andrey as maintainer so that bugs get assigned to sci-biology directly
@@ -35,4 +38,3 @@
   07 Sep 2008; weaver <weaver@gentoo.org> +metadata.xml,
   +glimmerhmm-3.0.1.ebuild:
   Import from science overlay
-

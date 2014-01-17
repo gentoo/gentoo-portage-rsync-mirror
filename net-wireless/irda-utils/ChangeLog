@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/irda-utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.44 2013/10/13 16:36:13 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.45 2014/01/17 14:37:36 jer Exp $
+
+  17 Jan 2014; Jeroen Roovers <jer@gentoo.org> files/irda-setup.sh:
+  Spelling.
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org>
   +files/irda-utils-0.9.18-headers.patch, irda-utils-0.9.18-r4.ebuild:

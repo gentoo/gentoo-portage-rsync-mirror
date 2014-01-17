@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1-r1.ebuild,v 1.3 2012/10/17 03:47:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1-r1.ebuild,v 1.4 2014/01/17 14:50:43 jer Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs
 
 MY_P=GlimmerHMM
 
-DESCRIPTION="An eukaryotic gene finding system from TIGR"
+DESCRIPTION="A eukaryotic gene finding system from TIGR"
 HOMEPAGE="http://www.cbcb.umd.edu/software/GlimmerHMM/"
 SRC_URI="ftp://ftp.cbcb.umd.edu/pub/software/glimmerhmm/${MY_P}-${PV}.tar.gz"
 

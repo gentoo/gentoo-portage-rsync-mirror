@@ -8,4 +8,4 @@ RDEPEND=>=dev-lang/perl-5.6.1-r6 >=media-gfx/imagemagick-6.2.2.0 >=dev-perl/Imag
 SLOT=0
 SRC_URI=http://zubro.chez.tiscali.fr/BINS/bins-1.1.29.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=9f7efb277189803c4d57258e15b8a14a
+_md5_=5906062cb75c94e1362c12ab3b5a94f1

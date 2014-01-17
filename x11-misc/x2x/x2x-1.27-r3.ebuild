@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r3.ebuild,v 1.8 2013/08/14 12:09:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r3.ebuild,v 1.9 2014/01/17 14:46:22 jer Exp $
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="An utility to connect the Mouse and KeyBoard to another X"
+DESCRIPTION="A utility to connect the Mouse and KeyBoard to another X"
 HOMEPAGE="http://www.the-labs.com/X11/#x2x"
 LICENSE="x2x"
 SRC_URI="http://ftp.digital.com/pub/Digital/SRC/x2x/${P}.tar.gz

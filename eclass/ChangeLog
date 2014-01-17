@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1118 2014/01/16 20:05:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1119 2014/01/17 14:35:11 jer Exp $
+
+  17 Jan 2014; Jeroen Roovers <jer@gentoo.org> mozcoreconf-2.eclass,
+  python-utils-r1.eclass:
+  Spelling.
 
   16 Jan 2014; Michał Górny <mgorny@gentoo.org> multilib-build.eclass:
   Typo.
