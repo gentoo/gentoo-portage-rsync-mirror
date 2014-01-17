@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/robodoc/robodoc-4.99.36.ebuild,v 1.1 2009/06/09 22:35:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/robodoc/robodoc-4.99.36.ebuild,v 1.2 2014/01/17 18:50:27 creffett Exp $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="Automating Software Documentation"
 HOMEPAGE="http://www.xs4all.nl/~rfsber/Robo/robodoc.html"
@@ -29,7 +29,6 @@ src_install() {
 	doins Contributions/* || die "doins failed"
 
 	rm -f "${D}"/usr/share/doc/${PF}/{COPYING,INSTALL}
-	prepalldocs
 
 	if use examples; then
 		insinto /usr/share/${PN}

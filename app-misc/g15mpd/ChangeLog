@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/g15mpd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15mpd/ChangeLog,v 1.4 2013/05/13 03:12:00 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15mpd/ChangeLog,v 1.5 2014/01/17 18:48:48 creffett Exp $
+
+*g15mpd-1.0.0-r1 (17 Jan 2014)
+
+  17 Jan 2014; Chris Reffett <creffett@gentoo.org>
+  +files/g15mpd-1.0.0-cflags-and-lib-fix.patch, +g15mpd-1.0.0-r1.ebuild,
+  -g15mpd-1.0.0.ebuild:
+  Revision bump: Add patch to fix compile and not force CFLAGS, EAPI bump,
+  remove prepalldocs call
 
   13 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove removed lcd herd from metadata
