@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.2 2014/01/15 19:37:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.3 2014/01/17 18:11:19 bicatali Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE="doc examples glpk metis mumps sparse static-libs test"
 RDEPEND="
 	sci-libs/coinor-osi:=
 	sci-libs/coinor-utils:=
-	glpk? ( sci-mathematics/glpk:= )
+	glpk? ( sci-mathematics/glpk:= sci-libs/amd )
 	metis? ( || ( sci-libs/metis sci-libs/parmetis ) )
 	mumps? ( sci-libs/mumps )
 	sparse? ( sci-libs/cholmod )"
@@ -53,6 +53,8 @@ src_configure() {
 	)
 	if use glpk; then
 		myeconfargs+=(
+			--with-amd-incdir="${EPREFIX}"/usr/include
+			--with-amd-lib=-lamd
 			--with-glpk-incdir="${EPREFIX}"/usr/include
 			--with-glpk-lib=-lglpk )
 	else
@@ -86,7 +88,7 @@ src_configure() {
 
 src_compile() {
 	# hack for parallel build, to overcome not patching Makefile.am above
-	autotools-utils_src_compile -C src libClp.la
+	#autotools-utils_src_compile -C src libClp.la
 	autotools-utils_src_compile all $(use doc && echo doxydoc)
 }
 
@@ -97,7 +99,7 @@ src_test() {
 src_install() {
 	use doc && HTML_DOC=("${BUILD_DIR}/doxydocs/html/")
 	# hack for parallel install, to overcome not patching Makefile.am above
-	autotools-utils_src_install -C src install-am
+	#autotools-utils_src_install -C src install-am
 	autotools-utils_src_install
 	# already installed
 	rm "${ED}"/usr/share/coin/doc/${MYPN}/{README,AUTHORS,LICENSE} || die

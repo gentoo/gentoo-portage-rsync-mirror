@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/flasm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/ChangeLog,v 1.12 2012/05/10 15:10:59 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/ChangeLog,v 1.13 2014/01/17 18:02:25 creffett Exp $
+
+  17 Jan 2014; Chris Reffett <creffett@gentoo.org> flasm-1.63.ebuild:
+  EAPI bump
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -flasm-1.62.ebuild:
   Remove old
@@ -53,4 +56,3 @@
   08 Dec 2006; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   +files/flasm-1.6.1-makefile.patch, +metadata.xml, +flasm-1.6.1.ebuild:
   new ebuild from drizzt@gentoo.org, #126156
-

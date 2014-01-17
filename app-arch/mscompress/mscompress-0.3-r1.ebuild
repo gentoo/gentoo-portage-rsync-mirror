@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3-r1.ebuild,v 1.4 2012/05/21 11:41:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mscompress/mscompress-0.3-r1.ebuild,v 1.5 2014/01/17 18:19:08 creffett Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils flag-o-matic toolchain-funcs
 

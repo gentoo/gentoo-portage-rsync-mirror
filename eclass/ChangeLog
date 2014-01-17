@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1120 2014/01/17 16:33:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1121 2014/01/17 18:14:23 mpagano Exp $
+
+  17 Jan 2014; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Fix kernel-2.eclass to use python.eclass for it's python needs. (deblob
+  script). See bug #497966
 
   17 Jan 2014; Jeroen Roovers <jer@gentoo.org> mozcoreconf-2.eclass:
   Revert inadvertent change, as noted by arfrever.
