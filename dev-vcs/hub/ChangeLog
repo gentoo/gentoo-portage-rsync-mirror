@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/hub
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/ChangeLog,v 1.6 2014/01/15 22:18:22 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/ChangeLog,v 1.7 2014/01/17 17:25:16 vikraman Exp $
+
+  17 Jan 2014; Vikraman Choudhury <vikraman@gentoo.org> hub-1.11.0.ebuild,
+  hub-1.11.1.ebuild:
+  Add ~x86 keyword
 
 *hub-1.11.1 (15 Jan 2014)
 
