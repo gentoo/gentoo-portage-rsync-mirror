@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.501 2014/01/16 17:37:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.502 2014/01/17 01:44:54 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> openssl-1.0.1f.ebuild:
+  Mark m68k/s390/sh stable #497838.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> openssl-1.0.1e-r1.ebuild:
   Mark m68k/s390/sh stable.
