@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.292 2014/01/17 18:14:23 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.293 2014/01/17 19:05:05 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -80,7 +80,7 @@
 # If you do change them, there is a chance that we will not fix resulting bugs;
 # that of course does not mean we're not willing to help.
 
-inherit eutils toolchain-funcs versionator multilib
+inherit eutils toolchain-funcs versionator multilib python
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_preinst pkg_postinst pkg_postrm
 
 # Added by Daniel Ostrow <dostrow@gentoo.org>
@@ -491,7 +491,6 @@ if [[ ${ETYPE} == sources ]]; then
 			#deblob script currently only works with python-2
 			PYTHON_DEPEND="python? 2"
         	PYTHON_USE_WITH_OPT="python"
-        	inherit python
 
 			KERNEL_URI="${KERNEL_URI}
 				deblob? (

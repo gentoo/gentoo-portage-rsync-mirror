@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1121 2014/01/17 18:14:23 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1122 2014/01/17 19:05:05 mpagano Exp $
+
+  17 Jan 2014; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Fix QA warning concerning inherit
 
   17 Jan 2014; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Fix kernel-2.eclass to use python.eclass for it's python needs. (deblob
