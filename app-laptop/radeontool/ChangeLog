@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/radeontool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.31 2012/12/05 04:48:25 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/radeontool/ChangeLog,v 1.32 2014/01/17 19:42:58 creffett Exp $
+
+  17 Jan 2014; Chris Reffett <creffett@gentoo.org> radeontool-1.6.3.ebuild:
+  EAPI bump
 
   05 Dec 2012; Michael Palimaka <kensington@gentoo.org>
   -files/radeontool-1.5-mmap.patch, -files/radeontool-1.5-pagesize.patch,
