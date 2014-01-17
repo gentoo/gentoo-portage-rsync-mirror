@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 )
+DESCRIPTION=Linux kernel fork with new features, including the -ck patchset (BFS), BFQ, TuxOnIce and UKSM
+EAPI=5
+HOMEPAGE=http://pf.natalenko.name/
+IUSE=symlink build
+KEYWORDS=-* ~amd64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2 freedist
+PDEPEND=!build? ( virtual/dev-manager )
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=3.12.4
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.12.tar.xz http://pf.natalenko.name/sources/3.12/patch-3.12.4-pf.bz2
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	kernel-2	5bb1b1c1d6bc7004acb2e89d5abc74fc	multilib	fac675dcccf94392371a6abee62d909f	python	305197b0aa1194fa3ef67ca21f6faa7e	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=75eca1490af30bca6c490a25b0ef4dbc

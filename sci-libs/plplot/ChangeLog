@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.54 2014/01/16 00:49:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.55 2014/01/17 20:17:24 bicatali Exp $
+
+*plplot-5.9.11-r1 (17 Jan 2014)
+
+  17 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +plplot-5.9.11-r1.ebuild,
+  -files/plplot-5.9.11-config.patch, -plplot-5.9.11.ebuild:
+  Removing the plplot_config patch since it creates more problems than it solves
+  (bug #498234)
 
 *plplot-5.9.11 (16 Jan 2014)
 

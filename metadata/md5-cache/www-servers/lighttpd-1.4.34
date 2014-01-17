@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=bzip2? ( app-arch/bzip2 ) fam? ( virtual/fam ) gdbm? ( sys-libs/gdbm ) ldap? ( >=net-nds/openldap-2.1.26 ) libev? ( >=dev-libs/libev-4.01 ) lua? ( >=dev-lang/lua-5.1 ) memcache? ( dev-libs/libmemcache ) mysql? ( >=virtual/mysql-4.0 ) pcre? ( >=dev-libs/libpcre-3.1 ) php? ( dev-lang/php[cgi] ) rrdtool? ( net-analyzer/rrdtool ) selinux? ( sec-policy/selinux-apache ) ssl? ( >=dev-libs/openssl-0.9.7[kerberos?] ) webdav? ( dev-libs/libxml2 >=dev-db/sqlite-3 sys-fs/e2fsprogs ) xattr? ( kernel_linux? ( sys-apps/attr ) ) zlib? ( >=sys-libs/zlib-1.1 ) virtual/pkgconfig doc? ( dev-python/docutils ) test? ( virtual/perl-Test-Harness dev-libs/fcgi ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=Lightweight high-performance web server
+EAPI=4
+HOMEPAGE=http://www.lighttpd.net/
+IUSE=bzip2 doc fam gdbm ipv6 kerberos ldap libev lua minimal mmap memcache mysql pcre php rrdtool selinux ssl test uploadprogress webdav xattr zlib
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd
+LICENSE=BSD GPL-2
+RDEPEND=bzip2? ( app-arch/bzip2 ) fam? ( virtual/fam ) gdbm? ( sys-libs/gdbm ) ldap? ( >=net-nds/openldap-2.1.26 ) libev? ( >=dev-libs/libev-4.01 ) lua? ( >=dev-lang/lua-5.1 ) memcache? ( dev-libs/libmemcache ) mysql? ( >=virtual/mysql-4.0 ) pcre? ( >=dev-libs/libpcre-3.1 ) php? ( dev-lang/php[cgi] ) rrdtool? ( net-analyzer/rrdtool ) selinux? ( sec-policy/selinux-apache ) ssl? ( >=dev-libs/openssl-0.9.7[kerberos?] ) webdav? ( dev-libs/libxml2 >=dev-db/sqlite-3 sys-fs/e2fsprogs ) xattr? ( kernel_linux? ( sys-apps/attr ) ) zlib? ( >=sys-libs/zlib-1.1 )
+REQUIRED_USE=kerberos? ( ssl )
+SLOT=0
+SRC_URI=http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-1.4.34.tar.bz2
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	base	ec46b36a6f6fd1d0b505a33e0b74e413	depend.php	df169a364e191b840b695604097e3c21	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	phpconfutils	e108303831029e5b8a9d24b991b1d62a	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=2475bfe0f0fb97c5a7dc202ebdfad32b
