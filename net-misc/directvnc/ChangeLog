@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/directvnc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.29 2013/03/17 15:05:27 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.30 2014/01/17 07:15:32 dlan Exp $
+
+  17 Jan 2014; Yixun Lan <dlan@gentoo.org> -directvnc-0.7.5.ebuild,
+  -directvnc-0.7.5-r1.ebuild, metadata.xml:
+  drop old, update maintainer email
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

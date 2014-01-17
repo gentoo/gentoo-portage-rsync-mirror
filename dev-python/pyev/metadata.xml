@@ -2,16 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>python</herd>
-  <herd>proxy-maintainers</herd>
   <maintainer>
-    <email>dennis.yxun@gmail.com</email>
-    <name>Dennis (dlan) Lan</name>
-    <description>maintainer, assign bugs</description>
-  </maintainer>
-  <maintainer>
-    <email>tomka@gentoo.org</email>
-    <name>Thomas Kahle</name>
-    <description>proxy maintainer, CC on bugs</description>
+    <email>dlan@gentoo.org</email>
+    <name>Yixun Lan</name>
   </maintainer>
   <longdescription lang="en">
 	 Pyev is the python interface of <pkg>dev-libs/libev</pkg>

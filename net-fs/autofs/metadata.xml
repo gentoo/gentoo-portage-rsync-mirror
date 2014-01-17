@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>dennis.yxun@gmail.com</email>
-    <name>Dennis (dlan) Lan</name>
-    <description>Primary maintainer, assign bugs to this maintainer.</description>
-  </maintainer>
-  <maintainer>
-    <email>robbat2@gentoo.org</email>
-    <name>Robin Johnson</name>
-    <description>Proxy maintainer, CC this maintainer on bugs.</description>
-  </maintainer>
   <herd>net-fs</herd>
-  <herd>proxy-maintainers</herd>
+  <maintainer>
+    <email>dlan@gentoo.org</email>
+    <name>Yixun Lan</name>
+  </maintainer>
   <use>
     <flag name="dmalloc">Enable debugging with the dmalloc library</flag>
     <flag name="hesiod">Install hesiod module</flag>

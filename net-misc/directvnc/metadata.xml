@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>proxy-maintainers</herd>
   <maintainer>
-    <email>dennis.yxun@gmail.com</email>
-    <name>Dennis (dlan) Lan</name>
-    <description>maintainer, assign bugs</description>
-  </maintainer>
-  <maintainer>
-    <email>tomka@gentoo.org</email>
-    <name>Thomas Kahle</name>
-    <description>proxy maintainer, CC on bugs</description>
+    <email>dlan@gentoo.org</email>
+    <name>Yixun Lan</name>
   </maintainer>
   <use>
     <flag name="mouse">Adds mouse support</flag>
