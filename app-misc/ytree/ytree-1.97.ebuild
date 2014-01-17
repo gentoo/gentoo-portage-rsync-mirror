@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ytree-1.97.ebuild,v 1.3 2012/03/23 14:21:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ytree/ytree-1.97.ebuild,v 1.4 2014/01/17 17:54:51 creffett Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -15,8 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="sys-libs/readline
-	sys-libs/ncurses"
+DEPEND="
+	sys-libs/readline
+	sys-libs/ncurses
+"
 RDEPEND="${DEPEND}"
 
 src_prepare() {

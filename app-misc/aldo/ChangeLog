@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/aldo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.23 2012/06/27 16:18:14 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/aldo/ChangeLog,v 1.24 2014/01/17 17:52:00 creffett Exp $
+
+  17 Jan 2014; Chris Reffett <creffett@gentoo.org> -aldo-0.7.6.ebuild,
+  aldo-0.7.7.ebuild:
+  Remove old, bump EAPI to 5
 
   27 Jun 2012; Michael Palimaka <kensington@gentoo.org> -aldo-0.7.5.ebuild:
   Remove old.
