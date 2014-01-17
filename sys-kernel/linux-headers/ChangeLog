@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.402 2014/01/17 02:31:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.403 2014/01/17 03:15:47 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> linux-headers-3.10.ebuild,
+  linux-headers-3.11.ebuild, linux-headers-3.12.ebuild,
+  linux-headers-3.9.ebuild:
+  Add arm64 keywords.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> linux-headers-3.9.ebuild:
   Mark m68k/s390/sh stable.

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.509 2014/01/16 16:37:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.510 2014/01/17 03:15:48 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> binutils-2.23.2.ebuild,
+  binutils-2.24-r1.ebuild:
+  Add arm64 keywords.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> binutils-2.23.2.ebuild:
   Mark m68k/s390/sh stable.
