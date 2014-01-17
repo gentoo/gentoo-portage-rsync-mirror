@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=sci-libs/gsl || ( sci-biology/probcons sci-biology/mafft sci-biology/t-coffee sci-biology/kalign sci-biology/clustalw sci-biology/muscle )
 SLOT=0
 SRC_URI=http://www.theseus3d.org/src/theseus_1.6.2.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=b45101b1c110615ae14fc24ccf42005b

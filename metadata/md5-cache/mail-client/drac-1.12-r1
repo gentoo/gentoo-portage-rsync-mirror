@@ -8,5 +8,5 @@ LICENSE=rc
 RDEPEND=virtual/mta >=sys-libs/db-3.2.9 >=sys-apps/sed-4 >=net-nds/portmap-5b-r6
 SLOT=0
 SRC_URI=ftp://ftp.cc.umanitoba.ca/src/drac.tar.Z
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=7156a53ed0b536518acd4bdb243a9a4b

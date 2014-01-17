@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.977 2014/01/06 19:43:04 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.978 2014/01/17 06:53:07 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> udev-208.ebuild:
+  Mark m68k/s390/sh stable.
 
   06 Jan 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> udev-208.ebuild,
   udev-9999.ebuild:

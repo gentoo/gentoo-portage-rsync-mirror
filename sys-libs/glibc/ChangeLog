@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.974 2014/01/17 03:15:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.975 2014/01/17 06:23:22 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_compile.eblit:
+  Use tc-is-softfloat consistently.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild,
   glibc-2.18.ebuild:

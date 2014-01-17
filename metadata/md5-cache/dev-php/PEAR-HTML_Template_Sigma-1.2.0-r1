@@ -8,5 +8,5 @@ LICENSE=PHP-3.01
 RDEPEND=dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/HTML_Template_Sigma-1.2.0.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=e38036d8194852ebf6c4421c94c4d615

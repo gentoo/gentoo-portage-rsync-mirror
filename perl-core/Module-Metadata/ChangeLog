@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Module-Metadata
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.37 2013/03/02 16:20:05 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Metadata/ChangeLog,v 1.38 2014/01/17 06:10:54 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> Module-Metadata-1.0.11.ebuild:
+  Mark m68k stable.
 
   02 Mar 2013; Agostino Sarubbo <ago@gentoo.org> Module-Metadata-1.0.11.ebuild:
   Stable for sh, wrt bug #458122

@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x8
 LICENSE=GPL-2 MIT
 SLOT=0
 SRC_URI=http://www.liberix.cz/doplnky/slovniky/ooo//dict-cs-2.oxt -> myspell-cs-20110224.zip
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	892e597faee02a5b94eb02ab512e7622	myspell-r2	003136484d2902411a2a4841efcda076	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	d6b7a574c4559c5d4a205f704c0446a3	myspell-r2	003136484d2902411a2a4841efcda076	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=71cfdbf0e0d988a120aaff99c68e59df

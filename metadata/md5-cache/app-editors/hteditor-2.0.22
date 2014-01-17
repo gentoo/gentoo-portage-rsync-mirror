@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses X? ( x11-libs/libX11 ) >=dev-libs/lzo-2
 SLOT=0
 SRC_URI=mirror://sourceforge/hte/ht-2.0.22.tar.bz2
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=049677215fae01adea2383afbe442acf

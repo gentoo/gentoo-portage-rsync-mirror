@@ -5,5 +5,5 @@ KEYWORDS=alpha arm hppa ~mips ppc sh sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~vapier/netboot-base-20050110.tar.bz2 mirror://gentoo/netboot-base-20050110.tar.bz2
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=c00ec105d16412c8489a72ef9bc6112e

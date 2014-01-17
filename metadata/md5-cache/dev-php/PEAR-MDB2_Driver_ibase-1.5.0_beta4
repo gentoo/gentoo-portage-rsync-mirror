@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=>=dev-php/PEAR-MDB2-2.5.0_beta3 || ( dev-lang/php[firebird] dev-lang/php[interbase] ) dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/MDB2_Driver_ibase-1.5.0b4.tgz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=30e93960579f1c002c124c860b6b9958

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.121 2013/12/27 21:40:06 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.122 2014/01/17 06:52:25 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> kmod-15-r1.ebuild:
+  Mark ia64/m68k/s390/sh stable #487338.
 
   27 Dec 2013; Samuli Suominen <ssuominen@gentoo.org> kmod-15.ebuild:
   Use MERGE_TYPE to avoid the pkg_setup() based compiler version check wrt

@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Test-Harness
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.86 2013/12/30 21:47:51 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.87 2014/01/17 06:11:33 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> Test-Harness-3.260.0.ebuild:
+  Mark m68k stable.
 
   30 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -Test-Harness-3.17.ebuild,
   -Test-Harness-3.22.ebuild, -Test-Harness-3.230.0.ebuild,

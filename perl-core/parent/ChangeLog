@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/parent
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/parent/ChangeLog,v 1.22 2013/10/28 05:28:05 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/parent/ChangeLog,v 1.23 2014/01/17 06:05:56 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> parent-0.225.0.ebuild:
+  Mark sh stable.
 
 *parent-0.228 (28 Oct 2013)
 

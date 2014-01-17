@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-MakeMaker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ChangeLog,v 1.57 2013/11/25 18:09:01 civil Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ChangeLog,v 1.58 2014/01/17 06:05:59 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  ExtUtils-MakeMaker-6.56-r1.ebuild:
+  Mark sh stable.
 
   25 Nov 2013;  <civil@gentoo.org> +files/6.82-delete_packlist_podlocal.patch,
   ExtUtils-MakeMaker-6.820.0.ebuild:

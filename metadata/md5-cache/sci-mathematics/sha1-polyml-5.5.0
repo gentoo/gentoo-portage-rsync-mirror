@@ -6,5 +6,5 @@ KEYWORDS=~x86 ~amd64
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=http://isabelle.in.tum.de/components/polyml-5.5.0.tar.gz
-_eclasses_=multilib	892e597faee02a5b94eb02ab512e7622	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=6fb12dfa5faa9a7e56d3d0149787ed95

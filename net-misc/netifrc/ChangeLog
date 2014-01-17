@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.13 2014/01/14 21:11:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.14 2014/01/17 06:55:43 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> netifrc-0.1.ebuild:
+  Mark m68k/s390/sh stable.
 
   14 Jan 2014; Pacho Ramos <pacho@gentoo.org> netifrc-0.1.ebuild:
   ia64 stable, bug #487332 (thanks to Emeric Maschino for testing)
