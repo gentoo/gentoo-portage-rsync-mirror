@@ -1,6 +1,9 @@
 # ChangeLog for virtual/udev
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.66 2013/12/08 18:24:35 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.67 2014/01/17 05:46:22 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> udev-208.ebuild:
+  Mark m68k/s390/sh stable.
 
   08 Dec 2013; Markus Meier <maekke@gentoo.org> udev-208.ebuild:
   arm stable, bug #487340

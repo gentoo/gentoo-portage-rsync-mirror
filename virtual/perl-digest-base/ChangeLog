@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-digest-base
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.56 2013/12/30 16:39:45 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-digest-base/ChangeLog,v 1.57 2014/01/17 05:58:49 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-digest-base-1.170.0-r1.ebuild:
+  Mark m68k stable.
 
   30 Dec 2013; Mikle Kolyada <zlogene@gentoo.org>
   -perl-digest-base-1.160.0-r1.ebuild:

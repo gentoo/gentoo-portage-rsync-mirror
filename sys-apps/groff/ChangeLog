@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.141 2014/01/07 08:36:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.142 2014/01/17 05:42:08 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> groff-1.22.2.ebuild:
+  Mark m68k/s390/sh stable.
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -groff-1.20.1-r1.ebuild,
   -groff-1.20.1-r2.ebuild, -groff-1.20.1-r3.ebuild, -groff-1.21.ebuild,

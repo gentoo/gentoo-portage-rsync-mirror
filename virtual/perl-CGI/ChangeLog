@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-CGI
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.113 2013/08/29 18:37:16 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.114 2014/01/17 05:51:12 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-CGI-3.630.0.ebuild:
+  Mark m68k stable.
 
   29 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -perl-CGI-3.510.ebuild,
   -perl-CGI-3.520.ebuild, -perl-CGI-3.530.0.ebuild, -perl-CGI-3.540.0.ebuild,

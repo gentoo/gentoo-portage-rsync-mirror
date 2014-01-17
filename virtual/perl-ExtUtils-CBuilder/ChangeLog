@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-ExtUtils-CBuilder
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-CBuilder/ChangeLog,v 1.61 2013/09/05 05:46:03 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-CBuilder/ChangeLog,v 1.62 2014/01/17 05:53:54 vapier Exp $
+
+  17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-ExtUtils-CBuilder-0.27.03.ebuild,
+  perl-ExtUtils-CBuilder-0.280.205.ebuild:
+  Mark m68k/s390/sh stable.
 
   05 Sep 2013; Patrick Lauer <patrick@gentoo.org>
   perl-ExtUtils-CBuilder-0.280.210.ebuild:
