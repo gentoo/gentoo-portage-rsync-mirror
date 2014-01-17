@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.111 2014/01/17 06:18:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.112 2014/01/17 15:56:33 ottxor Exp $
+
+  17 Jan 2014; Christoph Junghans <ottxor@gentoo.org>
+  e2fsprogs-libs-1.42.9.ebuild:
+  added prefix support (bug #498212)
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> e2fsprogs-libs-1.42.7.ebuild:
   Mark m68k stable.
