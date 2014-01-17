@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyds9
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/ChangeLog,v 1.9 2013/04/24 21:20:51 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/ChangeLog,v 1.10 2014/01/17 22:13:23 bicatali Exp $
+
+*pyds9-1.7 (17 Jan 2014)
+
+  17 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +pyds9-1.7.ebuild:
+  Version bump
 
   24 Apr 2013; Sébastien Fabbro <bicatali@gentoo.org> pyds9-1.6.ebuild:
   Propagate use depedencies for python targets
