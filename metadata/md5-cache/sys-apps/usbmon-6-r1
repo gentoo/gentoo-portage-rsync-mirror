@@ -7,5 +7,5 @@ KEYWORDS=~x86 ~ppc ~amd64
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://people.redhat.com/zaitcev/linux//usbmon-6.tar.gz
-_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=049b11772ac6b50ceeb3560390cc0166

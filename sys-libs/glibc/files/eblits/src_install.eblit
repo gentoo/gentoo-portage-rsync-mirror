@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.32 2013/10/06 08:51:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.33 2014/01/17 07:45:29 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -92,6 +92,20 @@ toolchain-glibc_src_install() {
 		sparc32 /lib/ld-linux.so.2
 		sparc64 /lib64/ld-linux.so.2
 	)
+	case $(tc-endian) in
+	little)
+		ldso_abi_list+=(
+			# arm
+			arm64   /lib/ld-linux-aarch64.so.1
+		)
+		;;
+	big)
+		ldso_abi_list+=(
+			# arm
+			arm64   /lib/ld-linux-aarch64_be.so.1
+		)
+		;;
+	esac
 	if [[ ${SYMLINK_LIB} == "yes" ]] && [[ ! -e ${ED}/$(alt_prefix)/lib ]] ; then
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) $(alt_prefix)/lib
 	fi

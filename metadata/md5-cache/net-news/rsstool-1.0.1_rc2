@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libxml2 net-misc/curl
 SLOT=0
 SRC_URI=mirror://sourceforge/rsstool/rsstool-1.0.1rc2-src.zip
-_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=69b33da7f9de6a7ac26f76b6f7d6d93a

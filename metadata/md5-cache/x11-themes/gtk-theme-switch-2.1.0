@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:2
 SLOT=0
 SRC_URI=mirror://debian/pool/main/g/gtk-theme-switch/gtk-theme-switch_2.1.0.orig.tar.gz
-_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=1307c45bd34486fbdc1d9c9618efbe1f

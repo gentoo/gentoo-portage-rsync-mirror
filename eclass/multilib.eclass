@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.104 2014/01/17 06:21:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.105 2014/01/17 07:44:45 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -294,13 +294,13 @@ multilib_env() {
 			export CTARGET_arm=${CHOST_arm}
 			export LIBDIR_arm="lib"
 
-			export CFLAGS_aarch64=${CFLAGS_aarch64-}
-			export CHOST_aarch64=${CTARGET}
-			export CTARGET_aarch64=${CHOST_aarch64}
-			export LIBDIR_aarch64="lib64"
+			export CFLAGS_arm64=${CFLAGS_arm64-}
+			export CHOST_arm64=${CTARGET}
+			export CTARGET_arm64=${CHOST_arm64}
+			export LIBDIR_arm64="lib64"
 
-			: ${MULTILIB_ABIS=aarch64}
-			: ${DEFAULT_ABI=aarch64}
+			: ${MULTILIB_ABIS=arm64}
+			: ${DEFAULT_ABI=arm64}
 		;;
 		x86_64*)
 			export CFLAGS_x86=${CFLAGS_x86--m32}

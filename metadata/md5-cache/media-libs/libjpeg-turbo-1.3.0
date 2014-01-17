@@ -9,5 +9,5 @@ LICENSE=BSD IJG
 RDEPEND=!media-libs/jpeg:0 java? ( >=virtual/jre-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=mirror://sourceforge/libjpeg-turbo/libjpeg-turbo-1.3.0.tar.gz mirror://debian/pool/main/libj/libjpeg8/libjpeg8_8d-1.debian.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=f72565354094661a0d31b16fabacd44f

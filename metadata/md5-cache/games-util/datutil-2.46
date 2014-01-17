@@ -6,5 +6,5 @@ KEYWORDS=amd64 x86 ~x86-fbsd
 LICENSE=as-is
 SLOT=0
 SRC_URI=http://www.logiqx.com/Tools/DatUtil/dutil246.zip http://www.logiqx.com/Tools/DatLib/datlib236.zip
-_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=cd530481d4ecc03b73a9d058c4154476

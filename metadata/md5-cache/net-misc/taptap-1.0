@@ -6,5 +6,5 @@ KEYWORDS=~amd64 ~sparc ~x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://www.munted.org.uk/programming/taptap/taptap-1.0.tar.bz2
-_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a43f380ad21ecbfcacf95474623d893c

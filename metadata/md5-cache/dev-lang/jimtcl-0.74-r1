@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=LGPL-2
 SLOT=0
 SRC_URI=https://github.com/msteveb/jimtcl/zipball/0.74 -> jimtcl-0.74.zip
-_eclasses_=multilib	d6b7a574c4559c5d4a205f704c0446a3	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=2405bfa08f773126b5e396d196c43db9
