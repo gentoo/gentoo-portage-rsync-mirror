@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.330 2013/05/23 14:48:46 hattya Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.331 2014/01/17 13:34:50 hattya Exp $
+
+*sylpheed-3.3.0-r1 (17 Jan 2014)
+
+  17 Jan 2014; Akinori Hattori <hattya@gentoo.org> +sylpheed-3.3.0-r1.ebuild:
+  install attachment_tool plugin, fixes bug #497544
 
   23 May 2013; Akinori Hattori <hattya@gentoo.org> -sylpheed-3.2.0.ebuild:
   remove old ebuild
