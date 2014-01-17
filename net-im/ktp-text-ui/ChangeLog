@@ -1,6 +1,11 @@
 # ChangeLog for net-im/ktp-text-ui
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-text-ui/ChangeLog,v 1.22 2013/10/29 21:48:20 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/ktp-text-ui/ChangeLog,v 1.23 2014/01/17 22:38:02 mrueg Exp $
+
+*ktp-text-ui-0.7.1 (17 Jan 2014)
+
+  17 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +ktp-text-ui-0.7.1.ebuild:
+  Version bump.
 
   29 Oct 2013; Johannes Huber <johu@gentoo.org> -ktp-text-ui-0.6.2.ebuild,
   -files/ktp-text-ui-0.6.2-compile.patch:

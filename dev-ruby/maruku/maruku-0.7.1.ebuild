@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.7.0-r1.ebuild,v 1.2 2014/01/07 13:27:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.7.1.ebuild,v 1.1 2014/01/17 23:00:15 mrueg Exp $
 
 EAPI=5
 
@@ -27,6 +27,8 @@ IUSE="highlight test"
 
 ruby_add_bdepend "test? ( dev-ruby/nokogiri-diff )"
 ruby_add_rdepend "highlight? ( dev-ruby/syntax )"
+
+DEPEND+=" test? ( app-text/blahtexml )"
 
 all_ruby_prepare() {
 	sed -i -e '/[Ss]imple[Cc]ov/ s:^:#:' spec/spec_helper.rb || die
