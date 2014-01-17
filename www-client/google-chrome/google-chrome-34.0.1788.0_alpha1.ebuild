@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-32.0.1700.77_beta1.ebuild,v 1.1 2014/01/14 02:56:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-34.0.1788.0_alpha1.ebuild,v 1.1 2014/01/17 02:25:09 floppym Exp $
 
 EAPI="4"
 
@@ -132,18 +132,11 @@ pkg_setup() {
 }
 
 src_install() {
-	CHROME_HOME="opt/google/chrome"
+	CHROME_HOME="opt/google/chrome-${SLOT}"
 
-	mv opt usr "${D}" || die
-	cd "${D}" || die
-
-	pax-mark m "${CHROME_HOME}/chrome"
-	chmod u+s "${CHROME_HOME}/chrome-sandbox" || die
-	rm -rf usr/share/menu || die
+	rm -r usr/share/menu || die
 	rmdir usr/share/doc/${PN} || die
 	mv usr/share/doc/${MY_PN} usr/share/doc/${PF} || die
-	chmod 755 usr/share/doc/${PF} || die
-	dosym /usr/$(get_libdir)/libudev.so "${CHROME_HOME}/libudev.so.0"
 
 	pushd "${CHROME_HOME}/locales" > /dev/null || die
 	chromium_remove_language_paks
@@ -159,6 +152,14 @@ src_install() {
 	for size in 16 22 24 32 48 64 128 256 ; do
 		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" ${PN}.png
 	done
+
+	insinto /
+	doins -r opt usr
+
+	fperms 755 "/${CHROME_HOME}"/{{,google-}chrome,nacl_helper{,_bootstrap},xdg-{mime,settings}}
+	fperms 4755 "/${CHROME_HOME}/chrome-sandbox"
+	pax-mark m "${ED}${CHROME_HOME}/chrome"
+	dosym /usr/$(get_libdir)/libudev.so "${CHROME_HOME}/libudev.so.0"
 
 	insinto "${CHROME_HOME}"
 	newins "${WORKDIR}/${LIBGCRYPT}-$(usev amd64)$(usev x86)" libgcrypt.so.11
