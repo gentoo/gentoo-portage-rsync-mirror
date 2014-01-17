@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1244 2014/01/16 20:24:03 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1245 2014/01/17 02:58:04 josejx Exp $
+
+  17 Jan 2014; Joseph Jezak <josejx@gentoo.org> gentoo-sources-3.10.25.ebuild:
+  Marked ppc/ppc64 stable for bug #496890.
 
 *gentoo-sources-3.4.77 (16 Jan 2014)
 
