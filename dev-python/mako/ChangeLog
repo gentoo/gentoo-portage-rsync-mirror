@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.79 2013/12/27 13:30:58 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.80 2014/01/18 16:00:43 maekke Exp $
+
+  18 Jan 2014; Markus Meier <maekke@gentoo.org> mako-0.7.3-r1.ebuild:
+  arm stable, bug #450174
 
   27 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> mako-0.7.3-r2.ebuild:
   sparc stable wrt bug #489894
