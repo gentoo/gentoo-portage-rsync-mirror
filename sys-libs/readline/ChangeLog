@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.190 2014/01/07 10:25:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.191 2014/01/18 02:22:43 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> readline-6.2_p1.ebuild,
+  readline-6.2_p5-r1.ebuild:
+  Add arm64 love.
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -readline-6.1.ebuild,
   -readline-6.1_p2.ebuild, -readline-6.2.ebuild, -readline-6.2_p1-r1.ebuild,
