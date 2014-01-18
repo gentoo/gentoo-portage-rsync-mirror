@@ -1,12 +1,7 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/13.0/use.stable.mask,v 1.2 2014/01/09 03:39:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/13.0/use.stable.mask,v 1.3 2014/01/18 08:11:58 vapier Exp $
 
 # Mike Gilbert <floppym@gentoo.org> (09 Jan 2014)
 # systemd is not stable on this arch
 systemd
-
-# Matt Turner <mattst88@gentoo.org> (12 Dec 2013)
-# Unmask dev-lang/python-3.3* targets (bug #474128)
--python_targets_python3_3
--python_single_target_python3_3

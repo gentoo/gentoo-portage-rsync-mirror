@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.409 2014/01/18 02:01:21 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.410 2014/01/18 08:15:44 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Drop explicit python 3.3 target updates now that the base profile does this
+  for us #474128.
 
   18 Jan 2014; Ruud Koolen <redlizard@gentoo.org> eapi, make.defaults,
   package.mask, packages, package.use.mask, parent, use.force, use.mask,

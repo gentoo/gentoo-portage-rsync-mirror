@@ -1,8 +1,0 @@
-# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/13.0/use.stable.mask,v 1.1 2013/11/30 16:08:05 jer Exp $
-
-# Jeroen Roovers <jer@gentoo.org> (30 Nov 2013)
-# Unmask dev-lang/python-3.3* targets (bug #474128)
--python_targets_python3_3
--python_single_target_python3_3

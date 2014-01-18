@@ -1,8 +1,0 @@
-# Copyright 1999-2013 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/use.stable.mask,v 1.1 2013/12/08 09:30:16 pacho Exp $
-
-# Pacho Ramos <pacho@gentoo.org> (08 Dec 2013)
-# Python 3.3 is going to stable, bug #474128
--python_targets_python3_3
--python_single_target_python3_3

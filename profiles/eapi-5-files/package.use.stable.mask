@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.35 2014/01/03 17:27:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/eapi-5-files/package.use.stable.mask,v 1.36 2014/01/18 08:10:33 vapier Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
@@ -15,14 +15,6 @@ app-emulation/xen-tools ocaml
 # Pacho Ramos <pacho@gentoo.org> (17 Nov 2013)
 # Still needs gnutls-3
 >=net-nntp/pan-0.139 ssl
-
-# Michał Górny <mgorny@gentoo.org> (16 Nov 2013)
-# Don't apply stable masks to python-exec since we're forcing every
-# impl there anyway. Please keep this in sync with use.stable.mask.
-dev-lang/python-exec -python_targets_python3_3
-dev-lang/python-exec -python_single_target_python3_3
-dev-python/python-exec -python_targets_python3_3
-dev-python/python-exec -python_single_target_python3_3
 
 # Sergey Popov <pinkbyte@gentoo.org> (28 Oct 2013)
 # sys-cluster/cman is still in ~arch.
