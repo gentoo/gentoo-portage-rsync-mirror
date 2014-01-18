@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.3.ebuild,v 1.1 2013/10/02 22:36:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.1.3.ebuild,v 1.2 2014/01/18 03:59:08 vapier Exp $
 
 inherit flag-o-matic eutils libtool unpacker toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="doc cxx pgo static-libs"
 
 DEPEND="sys-devel/m4

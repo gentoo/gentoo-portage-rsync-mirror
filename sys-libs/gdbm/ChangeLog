@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.67 2014/01/13 15:41:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.68 2014/01/18 03:55:06 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> gdbm-1.10-r1.ebuild,
+  gdbm-1.10.ebuild, gdbm-1.11.ebuild, gdbm-1.8.3-r4.ebuild,
+  gdbm-1.9.1-r2.ebuild:
+  Add arm64 love.
 
 *gdbm-1.11 (13 Jan 2014)
 

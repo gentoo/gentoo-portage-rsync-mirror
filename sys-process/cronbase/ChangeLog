@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronbase
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.40 2012/05/24 05:52:37 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.41 2014/01/18 03:47:15 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> cronbase-0.3.3.ebuild:
+  Add arm64 love.
 
   24 May 2012; Mike Frysinger <vapier@gentoo.org> cronbase-0.3.2-r1.ebuild,
   cronbase-0.3.2.ebuild, cronbase-0.3.3.ebuild:

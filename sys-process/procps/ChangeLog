@@ -1,6 +1,14 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.113 2014/01/17 06:54:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.115 2014/01/18 03:51:39 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> procps-3.3.8-r2.ebuild,
+  procps-3.3.9.ebuild:
+  Add arm64 love.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> procps-3.3.6.ebuild,
+  procps-3.3.8-r2.ebuild:
+  Mark m68k/s390/sh stable.
 
   17 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> procps-3.3.8-r2.ebuild,
   procps-3.3.9.ebuild:

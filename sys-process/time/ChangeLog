@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/time
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/time/ChangeLog,v 1.7 2012/06/03 23:28:04 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/time/ChangeLog,v 1.8 2014/01/18 03:51:44 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> time-1.7-r1.ebuild:
+  Add arm64 love.
 
   03 Jun 2012; Mike Frysinger <vapier@gentoo.org> time-1.7-r1.ebuild:
   Update to EAPI=4.
@@ -63,4 +66,3 @@
   27 Feb 2002; Bruce A. Locke <blocke@shivan.org> time-1.7.ebuild :
 
   Time ebuild contributed by naz@themoonsofjupiter.net (Michael M Nazaroff)
-

@@ -4,10 +4,10 @@ DESCRIPTION=Library for arithmetic on arbitrary precision integers, rational num
 EAPI=4
 HOMEPAGE=http://gmplib.org/
 IUSE=doc cxx pgo static-libs abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 LICENSE=LGPL-3
 RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20131008-r1 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=mirror://gnu/gmp/gmp-5.1.3.tar.xz ftp://ftp.gmplib.org/pub/gmp-5.1.3/gmp-5.1.3.tar.xz doc? ( http://gmplib.org/gmp-man-5.1.3.pdf )
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=aedd3abb88ee99749f2c6b691958330c
+_md5_=37612d1eda1bd1a735065eafbd9f8487

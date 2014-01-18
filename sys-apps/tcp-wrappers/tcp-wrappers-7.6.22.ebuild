@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6.22.ebuild,v 1.4 2013/02/17 20:06:54 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/tcp-wrappers-7.6.22.ebuild,v 1.5 2014/01/18 03:46:43 vapier Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz
 
 LICENSE="tcp_wrappers_license"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux"
 IUSE="ipv6 netgroups static-libs"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.195 2013/12/24 12:49:32 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.196 2014/01/18 03:59:08 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> gmp-5.1.2.ebuild,
+  gmp-5.1.3-r1.ebuild, gmp-5.1.3.ebuild:
+  Add arm64 love.
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> gmp-5.1.2.ebuild:
   Stable for x86, wrt bug #487796

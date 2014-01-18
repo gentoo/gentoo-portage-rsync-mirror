@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tcp-wrappers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.49 2014/01/14 20:20:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcp-wrappers/ChangeLog,v 1.50 2014/01/18 03:46:43 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> tcp-wrappers-7.6-r8.ebuild,
+  tcp-wrappers-7.6.22-r1.ebuild, tcp-wrappers-7.6.22.ebuild:
+  Add arm64 love.
 
   14 Jan 2014; Fabian Groffen <grobian@gentoo.org>
   tcp-wrappers-7.6.22-r1.ebuild:
