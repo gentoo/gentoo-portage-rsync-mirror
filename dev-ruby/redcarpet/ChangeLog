@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/redcarpet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/ChangeLog,v 1.12 2013/12/15 16:54:41 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/ChangeLog,v 1.13 2014/01/18 06:45:22 mrueg Exp $
+
+*redcarpet-2.3.0-r1 (18 Jan 2014)
+
+  18 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +redcarpet-2.3.0-r1.ebuild:
+  Add ruby20 target.
 
   15 Dec 2013; Rick Farina <zerochaos@gentoo.org> redcarpet-2.3.0.ebuild:
   adding ~x86 with permission of maintainer (and after careful testing)
