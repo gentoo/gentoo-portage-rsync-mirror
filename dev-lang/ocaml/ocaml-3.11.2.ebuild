@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.11.2.ebuild,v 1.8 2011/01/22 22:58:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.11.2.ebuild,v 1.9 2014/01/18 13:12:48 gienah Exp $
 
 EAPI="1"
 
@@ -18,11 +18,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="emacs gdbm latex ncurses +ocamlopt tk X xemacs"
 
-DEPEND="tk? ( >=dev-lang/tk-3.3.3 )
+RDEPEND="tk? ( >=dev-lang/tk-3.3.3 )
 	ncurses? ( sys-libs/ncurses )
 	X? ( x11-libs/libX11 x11-proto/xproto )
 	gdbm? ( sys-libs/gdbm )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 PDEPEND="emacs? ( app-emacs/ocaml-mode )
 	xemacs? ( app-xemacs/ocaml )"
@@ -43,6 +44,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	# Bug #459512
+	epatch "${FILESDIR}/${PN}-4.01.0-pkg-config-ncurses.patch"
+	# Upstream bug: http://caml.inria.fr/mantis/view.php?id=5237
+	epatch "${FILESDIR}/${PN}-3.11.2-Fix-ocamlopt-w.r.t.-binutils-2.21.patch"
 }
 
 src_compile() {

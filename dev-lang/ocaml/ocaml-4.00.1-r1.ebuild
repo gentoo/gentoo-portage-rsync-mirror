@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1-r1.ebuild,v 1.2 2013/06/19 03:19:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-4.00.1-r1.ebuild,v 1.3 2014/01/18 13:12:48 gienah Exp $
 
 EAPI="5"
 
@@ -20,10 +20,11 @@ SLOT="0/${PV}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="emacs latex ncurses +ocamlopt tk X xemacs"
 
-DEPEND="tk? ( >=dev-lang/tk-3.3.3 )
+RDEPEND="tk? ( >=dev-lang/tk-3.3.3 )
 	ncurses? ( sys-libs/ncurses )
 	X? ( x11-libs/libX11 x11-proto/xproto )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 PDEPEND="emacs? ( app-emacs/ocaml-mode )
 	xemacs? ( app-xemacs/ocaml )"
@@ -42,6 +43,8 @@ pkg_setup() {
 
 src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
+	# Bug #459512
+	epatch "${FILESDIR}/${PN}-4.01.0-pkg-config-ncurses.patch"
 }
 
 src_configure() {

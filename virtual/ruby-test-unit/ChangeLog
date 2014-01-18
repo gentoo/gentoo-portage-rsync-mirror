@@ -1,6 +1,11 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.37 2014/01/05 10:49:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.38 2014/01/18 13:29:00 graaff Exp $
+
+  18 Jan 2014; Hans de Graaff <graaff@gentoo.org> -ruby-test-unit-0.ebuild,
+  -ruby-test-unit-0-r1.ebuild, -ruby-test-unit-0-r2.ebuild,
+  -ruby-test-unit-0-r3.ebuild:
+  Cleanup.
 
   05 Jan 2014; Hans de Graaff <graaff@gentoo.org> ruby-test-unit-0.ebuild,
   ruby-test-unit-0-r4.ebuild:

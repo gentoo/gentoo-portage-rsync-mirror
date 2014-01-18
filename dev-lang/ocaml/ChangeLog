@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.218 2014/01/15 22:05:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.219 2014/01/18 13:12:48 gienah Exp $
+
+  18 Jan 2014; Mark Wright <gienah@gentoo.org>
+  +files/ocaml-3.11.2-Fix-ocamlopt-w.r.t.-binutils-2.21.patch,
+  +files/ocaml-4.01.0-pkg-config-ncurses.patch, ocaml-3.11.2.ebuild,
+  ocaml-3.12.1.ebuild, ocaml-4.00.1-r1.ebuild, ocaml-4.01.0.ebuild:
+  Fix bug #459512 - dev-lang/ocaml with sys-libs/ncurses[tinfo] -
+  .../work/ocaml-4.00.1/byterun/terminfo.c:54: undefined reference to 'tgetent',
+  thanks to Reinis Danne for reporting (patch by me). Add virtual/pkg-config to
+  DEPEND as the ocaml configure script calls pkg-config. Apply patch from
+  upstream for upstream bug http://caml.inria.fr/mantis/view.php?id=5237 to
+  ocaml-3.11.2.
 
   15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> ocaml-4.01.0.ebuild:
   Prefixified and keyworded amd64-linux, x86-linux

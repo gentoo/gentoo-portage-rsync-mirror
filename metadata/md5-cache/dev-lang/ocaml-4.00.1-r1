@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare setup
-DEPEND=tk? ( >=dev-lang/tk-3.3.3 ) ncurses? ( sys-libs/ncurses ) X? ( x11-libs/libX11 x11-proto/xproto )
+DEPEND=tk? ( >=dev-lang/tk-3.3.3 ) ncurses? ( sys-libs/ncurses ) X? ( x11-libs/libX11 x11-proto/xproto ) virtual/pkgconfig
 DESCRIPTION=Fast modern type-inferring functional programming language descended from the ML family
 EAPI=5
 HOMEPAGE=http://www.ocaml.org/
@@ -11,4 +11,4 @@ RDEPEND=tk? ( >=dev-lang/tk-3.3.3 ) ncurses? ( sys-libs/ncurses ) X? ( x11-libs/
 SLOT=0/4.00.1
 SRC_URI=ftp://ftp.inria.fr/INRIA/Projects/cristal/ocaml/ocaml-4.00/ocaml-4.00.1.tar.bz2 mirror://gentoo/ocaml-patches-5.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=43b10ff3c5c50b81368e8e7d491daf47
+_md5_=0c77ff888800e432db79163b18ae5126
