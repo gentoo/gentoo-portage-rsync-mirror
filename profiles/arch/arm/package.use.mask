@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.190 2014/01/10 02:41:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.191 2014/01/18 16:23:42 maekke Exp $
 
 # Rick Farina <zerochaos@gentoo.org> (09 Jan 2014)
 # rjb doesn't work on arm, so no java hacks for metasploit
@@ -52,7 +52,8 @@ kde-base/solid-runtime networkmanager
 
 # Sergey Popov <pinkbyte@gentoo.org> (06 Sep 2013)
 # sci-libs/hdf does not build properly on arm
-dev-perl/PDL	hdf
+# sci-libs/plplot not keyworded
+dev-perl/PDL	hdf plplot
 
 # Michael Weber <xmw@gentoo.org> (23 Aug 2013)
 # Unkeyworded deps
