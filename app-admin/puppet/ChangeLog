@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.191 2014/01/15 19:07:03 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.192 2014/01/18 07:33:11 prometheanfire Exp $
+
+  18 Jan 2014; Matthew Thode <prometheanfire@gentoo.org> -puppet-2.7.23.ebuild,
+  -puppet-3.2.4.ebuild:
+  removing the old and janky (vulnerable)
 
 *puppet-3.4.2-r1 (15 Jan 2014)
 
