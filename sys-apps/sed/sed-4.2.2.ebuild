@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.2.ebuild,v 1.2 2014/01/18 04:37:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.2.ebuild,v 1.3 2014/01/18 06:04:26 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -50,6 +50,8 @@ src_compile() {
 		bindir=/usr/bin
 	fi
 
+	# Should be able to drop this hack in next release. #333887
+	tc-is-cross-compiler && export gl_cv_func_working_acl_get_file=yes
 	export ac_cv_search_setfilecon=$(usex selinux -lselinux)
 	export ac_cv_header_selinux_{context,selinux}_h=$(usex selinux)
 	use static && append-ldflags -static
