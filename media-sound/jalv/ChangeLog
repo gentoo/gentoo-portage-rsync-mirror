@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jalv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jalv/ChangeLog,v 1.5 2013/03/02 21:55:48 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jalv/ChangeLog,v 1.6 2014/01/18 12:24:51 aballier Exp $
+
+*jalv-1.4.4 (18 Jan 2014)
+
+  18 Jan 2014; Alexis Ballier <aballier@gentoo.org> +jalv-1.4.4.ebuild:
+  version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> jalv-1.0.0.ebuild,
   jalv-1.2.0.ebuild, jalv-1.4.0.ebuild:

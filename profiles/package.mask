@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15343 2014/01/18 10:13:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15344 2014/01/18 12:11:46 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (18 Jan 2014)
+# Rev. deps fail to build
+>=media-libs/aubio-0.4
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (18 Jan 2014)
 # Dev channel releases are only for people who are developers or want more

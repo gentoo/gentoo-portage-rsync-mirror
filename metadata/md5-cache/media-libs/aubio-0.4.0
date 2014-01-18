@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=ffmpeg? ( virtual/ffmpeg ) fftw? ( sci-libs/fftw:3.0 ) jack? ( media-sound/jack-audio-connection-kit ) libsamplerate? ( media-libs/libsamplerate ) python? ( dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) sndfile? ( media-libs/libsndfile ) virtual/pkgconfig app-text/txt2man doc? ( app-doc/doxygen ) userland_GNU? ( >=sys-apps/coreutils-8.5 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-lang/python !dev-lang/python[-threads]
+DESCRIPTION=Library for audio labelling
+EAPI=5
+HOMEPAGE=http://aubio.org/
+IUSE=doc double-precision examples ffmpeg fftw jack libsamplerate sndfile python python_targets_python2_7
+KEYWORDS=~amd64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-3
+RDEPEND=ffmpeg? ( virtual/ffmpeg ) fftw? ( sci-libs/fftw:3.0 ) jack? ( media-sound/jack-audio-connection-kit ) libsamplerate? ( media-libs/libsamplerate ) python? ( dev-python/numpy[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] ) sndfile? ( media-libs/libsndfile ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+REQUIRED_USE=|| ( python_targets_python2_7 )
+SLOT=0
+SRC_URI=http://aubio.org//pub/aubio-0.4.0.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	distutils-r1	59b53892e6e67d8f2c5592e8a5ff3aac	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
+_md5_=1611f4fb9b8d649329f181546fef47b5

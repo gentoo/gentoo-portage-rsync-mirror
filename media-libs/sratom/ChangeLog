@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/sratom
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sratom/ChangeLog,v 1.7 2013/02/21 10:13:24 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sratom/ChangeLog,v 1.8 2014/01/18 12:18:36 aballier Exp $
+
+*sratom-0.4.4 (18 Jan 2014)
+
+  18 Jan 2014; Alexis Ballier <aballier@gentoo.org> +sratom-0.4.4.ebuild:
+  version bump"
 
 *sratom-0.4.2 (21 Feb 2013)
 

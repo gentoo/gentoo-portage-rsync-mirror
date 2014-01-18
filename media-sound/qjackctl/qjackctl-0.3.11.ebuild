@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.8.ebuild,v 1.5 2013/03/02 21:59:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.11.ebuild,v 1.1 2014/01/18 12:29:14 aballier Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/qjackctl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 
 IUSE="alsa dbus debug portaudio"
 
@@ -26,6 +26,8 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog README TODO TRANSLATORS"
+
+PATCHES=( "${FILESDIR}/${PN}-0.3.9-gcc47.patch" )
 
 src_configure() {
 	econf \

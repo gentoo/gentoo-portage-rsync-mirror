@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=plugins? ( x11-libs/gtk+:2 media-libs/libsndfile ) plugins? ( virtual/pkgconfig ) doc? ( app-doc/doxygen dev-python/rdflib ) dev-lang/python !dev-lang/python[-threads]
+DESCRIPTION=LV2 is a simple but extensible successor of LADSPA
+EAPI=4
+HOMEPAGE=http://lv2plug.in/
+IUSE=doc plugins
+KEYWORDS=~amd64 ~ppc ~x86
+LICENSE=MIT
+RDEPEND=plugins? ( x11-libs/gtk+:2 media-libs/libsndfile ) !<media-libs/slv2-0.4.2 !media-libs/lv2core !media-libs/lv2-ui
+SLOT=0
+SRC_URI=http://lv2plug.in/spec/lv2-1.8.0.tar.bz2
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
+_md5_=67ed33e319b427b935c970e4ba289eed

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/suil
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/ChangeLog,v 1.13 2013/03/02 21:49:15 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/suil/ChangeLog,v 1.14 2014/01/18 12:20:50 aballier Exp $
+
+*suil-0.8.0 (18 Jan 2014)
+
+  18 Jan 2014; Alexis Ballier <aballier@gentoo.org> +suil-0.8.0.ebuild:
+  version bump
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> suil-0.4.4.ebuild,
   suil-0.6.0.ebuild, suil-0.6.10.ebuild, suil-0.6.12.ebuild, suil-0.6.2.ebuild,

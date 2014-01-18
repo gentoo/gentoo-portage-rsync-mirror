@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.10.0.ebuild,v 1.1 2013/12/24 17:40:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.10.0.ebuild,v 1.2 2014/01/18 12:04:29 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -36,6 +36,7 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.50
 	dev-libs/libxslt
+	gnome-base/gnome-common
 	virtual/pkgconfig
 "
 

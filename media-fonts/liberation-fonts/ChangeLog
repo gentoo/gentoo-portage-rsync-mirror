@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/liberation-fonts
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.44 2013/09/04 16:02:57 je_fro Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.45 2014/01/18 12:18:40 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  liberation-fonts-2.00.0-r1.ebuild, liberation-fonts-2.00.1.ebuild:
+  Add arm64 love.
 
   04 Sep 2013; Jeff Gardner <je_fro@gentoo.org> liberation-fonts-2.00.1.ebuild:
   Re-adding 60-liberation.conf, fixing bug #482840 thanks to Derek Dolney
