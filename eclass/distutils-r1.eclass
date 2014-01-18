@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.93 2013/12/03 20:00:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils-r1.eclass,v 1.94 2014/01/18 15:06:56 floppym Exp $
 
 # @ECLASS: distutils-r1
 # @MAINTAINER:
@@ -482,6 +482,7 @@ distutils-r1_python_install() {
 	# failures if some packages haven't compiled their modules yet.
 	addpredict "$(python_get_sitedir)"
 	addpredict /usr/lib/portage/pym
+	addpredict /usr/local # bug 498232
 
 	local root=${D}/_${EPYTHON}
 	[[ ${DISTUTILS_SINGLE_IMPL} ]] && root=${D}
