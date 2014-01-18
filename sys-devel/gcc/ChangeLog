@@ -1,6 +1,31 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.996 2014/01/17 03:15:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.997 2014/01/18 07:22:35 dirtyepic Exp $
+
+  18 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> -gcc-4.3.3-r2.ebuild,
+  -gcc-4.3.4.ebuild, -gcc-4.3.5.ebuild, -gcc-4.4.2.ebuild,
+  -gcc-4.4.3-r3.ebuild, -gcc-4.4.4-r2.ebuild, -gcc-4.4.5.ebuild,
+  -gcc-4.4.6-r1.ebuild, -files/3.2.1/gcc31-loop-load-final-value.patch,
+  -files/3.2.1/gcc32-arm-disable-mathf.patch,
+  -files/3.2.1/gcc32-arm-reload1-fix.patch,
+  -files/3.2.1/gcc32-athlon-alignment.patch,
+  -files/3.2.1/gcc32-sparc32-hack.patch, -files/3.2.1/gcc32-strip-dotdot.patch,
+  -files/3.2.2/gcc-3.2.2-cross-compile.patch,
+  -files/3.2.2/gcc-3.2.2-no-COPYING-cross-compile.patch,
+  -files/3.2.2/gcc32-pr7768.patch, -files/3.2.2/gcc32-pr8213.patch,
+  -files/3.2.2/gcc322-ggc_page-speedup.patch,
+  -files/3.2.3/gcc-3.2.3-mergel-fix.patch,
+  -files/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch,
+  -files/3.2.3/gcc-3.2.3-poisoned-malloc.patch,
+  -files/3.2.3/gcc-323-propolice-version.patch,
+  -files/3.2.3/gcc32-c++-classfn-member-template.patch,
+  -files/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch,
+  -files/3.2.3/gcc323-gentoo-branding.patch,
+  -files/3.2.3/gcc323-hppa-default_assemble_visibility.patch,
+  -files/3.3.6/gcc-3.3.6-cross-compile.patch,
+  -files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch,
+  -files/3.4.1/gcc-3.4.1-r2-gentoo-branding.patch, -files/mkinfodir:
+  Move old ebuilds to toolchain overlay and drop unused patches.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> gcc-4.8.2.ebuild:
   Add arm64 keywords.
