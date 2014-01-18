@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/crossdev
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.106 2013/11/07 20:37:57 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.107 2014/01/18 03:11:36 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> crossdev-20131011.ebuild,
+  crossdev-20131107.ebuild, crossdev-99999999.ebuild:
+  Add arm64 love.
 
 *crossdev-20131107 (07 Nov 2013)
 

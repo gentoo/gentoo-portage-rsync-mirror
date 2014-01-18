@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.222 2014/01/05 14:23:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.223 2014/01/18 03:28:45 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> findutils-4.4.2-r1.ebuild,
+  findutils-4.5.12.ebuild:
+  Add arm64 love.
 
   04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -findutils-4.4.2.ebuild,
   -findutils-4.5.8.ebuild, -findutils-4.5.9.ebuild, -findutils-4.5.10.ebuild,

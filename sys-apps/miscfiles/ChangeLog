@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/miscfiles
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/ChangeLog,v 1.47 2012/07/15 17:30:23 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/ChangeLog,v 1.48 2014/01/18 03:28:41 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> miscfiles-1.5-r1.ebuild:
+  Add arm64 love.
 
   15 Jul 2012; Raúl Porcel <armin76@gentoo.org> miscfiles-1.5-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #422181

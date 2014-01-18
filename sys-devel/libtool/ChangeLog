@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.211 2014/01/07 09:42:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.212 2014/01/18 03:13:57 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libtool-2.4.2.ebuild:
+  Mark m68k/s390/sh stable.
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -libtool-1.5.26.ebuild,
   -libtool-2.2.10.ebuild, -files/1.5.10/libtool-1.5.10-locking.patch,

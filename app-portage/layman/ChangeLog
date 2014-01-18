@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.184 2014/01/07 07:18:36 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.185 2014/01/18 03:19:39 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> layman-2.0.0-r1.ebuild,
+  layman-2.0.0-r2.ebuild:
+  Add arm64/m68k/s390/sh love.
 
 *layman-2.0.0-r2 (07 Jan 2014)
 *layman-2.0.0-r1 (07 Jan 2014)

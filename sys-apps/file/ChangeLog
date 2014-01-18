@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.256 2014/01/03 05:33:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.258 2014/01/18 03:06:30 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> file-5.15.ebuild,
+  file-5.16.ebuild, file-9999.ebuild:
+  Add arm64 love.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> file-5.15.ebuild:
+  Mark m68k/s390/sh stable.
 
   03 Jan 2014; Matt Turner <mattst88@gentoo.org> file-5.15.ebuild:
   alpha stable, bug 492916.

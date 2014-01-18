@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/editor-wrapper
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.21 2013/11/08 13:16:59 haubi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.22 2014/01/18 03:03:10 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> editor-wrapper-4.ebuild:
+  Add arm64 love.
 
   08 Nov 2013; Michael Haubenwallner <haubi@gentoo.org>
   editor-wrapper-4.ebuild:

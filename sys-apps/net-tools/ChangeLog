@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/net-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.137 2013/05/13 16:29:38 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.138 2014/01/18 03:28:51 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  net-tools-1.60_p20120127084908.ebuild, net-tools-1.60_p20130513023548.ebuild,
+  net-tools-9999.ebuild:
+  Add arm64 love.
 
 *net-tools-1.60_p20130513023548 (13 May 2013)
 

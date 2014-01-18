@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.5-r1.ebuild,v 1.9 2012/07/15 17:30:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/miscfiles/miscfiles-1.5-r1.ebuild,v 1.10 2014/01/18 03:28:41 vapier Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/miscfiles/${P}.tar.gz
 
 LICENSE="GPL-2 unicode"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="minimal"
 
 # Collides with older versions/revisions
