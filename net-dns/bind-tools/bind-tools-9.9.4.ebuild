@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.4.ebuild,v 1.1 2013/10/13 14:06:04 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.9.4.ebuild,v 1.2 2014/01/18 18:17:11 idl0r Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc gssapi idn ipv6 readline ssl urandom xml"
 # no PKCS11 currently as it requires OpenSSL to be patched, also see bug 409687
 
-DEPEND="ssl? ( dev-libs/openssl )
+DEPEND="ssl? ( dev-libs/openssl:0 )
 	xml? ( dev-libs/libxml2 )
 	idn? ( net-dns/idnkit )
 	gssapi? ( virtual/krb5 )

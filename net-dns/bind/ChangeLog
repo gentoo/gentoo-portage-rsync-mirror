@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.480 2014/01/17 20:46:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.481 2014/01/18 18:16:15 idl0r Exp $
+
+  18 Jan 2014; Christian Ruppert <idl0r@gentoo.org> bind-9.8.6.ebuild,
+  bind-9.9.3_p2.ebuild, bind-9.9.4_p2.ebuild:
+  Fix openssl dependencies as request per bug 498470
 
   17 Jan 2014; Agostino Sarubbo <ago@gentoo.org> bind-9.9.4_p2.ebuild:
   Stable for ppc, wrt bug #498016

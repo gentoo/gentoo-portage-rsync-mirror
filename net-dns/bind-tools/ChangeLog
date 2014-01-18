@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.249 2013/10/13 14:06:04 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.250 2014/01/18 18:17:11 idl0r Exp $
+
+  18 Jan 2014; Christian Ruppert <idl0r@gentoo.org> bind-tools-9.9.3_p2.ebuild,
+  bind-tools-9.9.4.ebuild:
+  Fix openssl dependencies as request per bug 498470
 
 *bind-tools-9.9.4 (13 Oct 2013)
 
