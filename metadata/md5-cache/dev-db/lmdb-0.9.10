@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile configure install prepare
+DESCRIPTION=An ultra-fast, ultra-compact key-value embedded data store
+EAPI=5
+HOMEPAGE=http://symas.com/mdb/
+IUSE=static-libs
+KEYWORDS=~amd64 ~x86
+LICENSE=OPENLDAP
+SLOT=0
+SRC_URI=mirror://openldap/openldap-release/openldap-2.4.38.tgz
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=4e4a8edfc760fff03419e817c5fced61

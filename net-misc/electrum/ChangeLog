@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/electrum
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.19 2013/12/17 12:51:33 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.20 2014/01/18 13:55:28 blueness Exp $
+
+*electrum-1.9.7 (18 Jan 2014)
+
+  18 Jan 2014; Anthony G. Basile <blueness@gentoo.org> +electrum-1.9.7.ebuild,
+  -electrum-1.9.6.ebuild, metadata.xml:
+  Version bump
 
   17 Dec 2013; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix gpg signiture on Manifest

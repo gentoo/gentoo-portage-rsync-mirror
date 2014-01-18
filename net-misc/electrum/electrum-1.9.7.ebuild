@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.9.6.ebuild,v 1.1 2013/12/17 12:50:09 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.9.7.ebuild,v 1.1 2014/01/18 13:55:28 blueness Exp $
 
 EAPI="5"
 
@@ -16,9 +16,12 @@ SRC_URI="http://download.electrum.org/download/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-LINGUAS="ar_SA de_DE es_ES hu_HU it_IT ky_KG nl_NL pt_BR ru_RU ta_IN zh_CN
-		 cs_CZ eo_UY fr_FR id_ID ja_JP lv_LV pl_PL pt_PT sl_SI vi_VN"
-IUSE="gtk qt4"
+LINGUAS="ar_SA cs_CZ de_DE eo_UY es_ES fr_FR hu_HU
+		 id_ID it_IT ja_JP ky_KG lv_LV nl_NL
+		 pl_PL pt_BR pt_PT ro_RO ru_RU sl_SI
+		 ta_IN th_TH vi_VN zh_CN"
+
+IUSE="gtk qrcode +qt4 webkit"
 
 for lingua in ${LINGUAS}; do
 		IUSE+=" linguas_${lingua}"
@@ -29,7 +32,11 @@ RDEPEND="
 	>=dev-python/ecdsa-0.9
 	dev-python/slowaes
 	gtk? ( dev-python/pygtk:2 )
-	qt4? ( dev-python/PyQt4 )"
+	qrcode? ( media-gfx/zbar[python] )
+	qt4? (
+		 webkit? ( dev-python/PyQt4[webkit] )
+		 dev-python/PyQt4
+		 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -65,6 +72,14 @@ src_prepare() {
 		else
 			sed -i "s/config.get('gui','classic')/ config.get('gui','text')/" electrum || die
 		fi
+	fi
+
+	if use !webkit; then
+		sed -i "/'electrum_plugins.coinbase_buyback/d" setup.py || die
+	fi
+
+	if use !qrcode; then
+		sed -i "/'electrum_plugins.qrscanner/d" setup.py || die
 	fi
 
 	distutils-r1_src_prepare
