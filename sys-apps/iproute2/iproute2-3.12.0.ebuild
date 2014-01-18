@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.12.0.ebuild,v 1.3 2014/01/18 05:37:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-3.12.0.ebuild,v 1.4 2014/01/18 11:02:22 vapier Exp $
 
 EAPI="5"
 
@@ -43,6 +43,7 @@ src_prepare() {
 		-e "s:-O2:${CFLAGS} ${CPPFLAGS}:" \
 		-e "/^HOSTCC/s:=.*:= $(tc-getBUILD_CC):" \
 		-e "/^WFLAGS/s:-Werror::" \
+		-e "/^DBM_INCLUDE/s:=.*:=${T}:" \
 		Makefile || die
 
 	# build against system headers

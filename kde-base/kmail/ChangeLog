@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.383 2014/01/10 04:31:55 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.384 2014/01/18 11:23:39 dilfridge Exp $
+
+*kmail-4.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> +kmail-4.12.1.ebuild:
+  Version bump KDE SC 4.12.1
 
   10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kmail-4.11.4.ebuild:
   Remove KDE SC 4.11.4

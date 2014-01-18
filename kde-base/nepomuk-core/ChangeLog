@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/nepomuk-core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.79 2014/01/10 04:32:14 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nepomuk-core/ChangeLog,v 1.80 2014/01/18 11:23:58 dilfridge Exp $
+
+*nepomuk-core-4.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +nepomuk-core-4.12.1.ebuild:
+  Version bump KDE SC 4.12.1
 
   10 Jan 2014; Chris Reffett <creffett@gentoo.org> -nepomuk-core-4.11.4.ebuild:
   Remove KDE SC 4.11.4

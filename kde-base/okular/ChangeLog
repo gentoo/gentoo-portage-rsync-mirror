@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.225 2014/01/16 17:20:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.226 2014/01/18 11:24:13 dilfridge Exp $
+
+*okular-4.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> +okular-4.12.1.ebuild:
+  Version bump KDE SC 4.12.1
 
   16 Jan 2014; Jeroen Roovers <jer@gentoo.org> okular-4.11.2.ebuild,
   okular-4.11.5.ebuild, okular-4.12.0.ebuild:

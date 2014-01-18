@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.131 2014/01/10 04:31:25 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.132 2014/01/18 11:24:03 dilfridge Exp $
+
+*kajongg-4.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kajongg-4.12.1.ebuild:
+  Version bump KDE SC 4.12.1
 
   10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kajongg-4.11.4.ebuild:
   Remove KDE SC 4.11.4

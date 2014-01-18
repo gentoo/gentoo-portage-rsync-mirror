@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.124 2014/01/10 04:31:36 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.125 2014/01/18 11:24:04 dilfridge Exp $
+
+*kdepim-common-libs-4.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-common-libs-4.12.1.ebuild:
+  Version bump KDE SC 4.12.1
 
   10 Jan 2014; Chris Reffett <creffett@gentoo.org>
   -kdepim-common-libs-4.11.4.ebuild:

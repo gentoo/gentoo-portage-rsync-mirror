@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.294 2014/01/10 04:31:28 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.295 2014/01/18 11:23:44 dilfridge Exp $
+
+*kcalc-4.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> +kcalc-4.12.1.ebuild:
+  Version bump KDE SC 4.12.1
 
   10 Jan 2014; Chris Reffett <creffett@gentoo.org> -kcalc-4.11.4.ebuild:
   Remove KDE SC 4.11.4

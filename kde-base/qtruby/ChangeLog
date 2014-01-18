@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.189 2014/01/10 04:32:17 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.190 2014/01/18 11:23:47 dilfridge Exp $
+
+*qtruby-4.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> +qtruby-4.12.1.ebuild:
+  Version bump KDE SC 4.12.1
 
   10 Jan 2014; Chris Reffett <creffett@gentoo.org> -qtruby-4.11.4.ebuild:
   Remove KDE SC 4.11.4

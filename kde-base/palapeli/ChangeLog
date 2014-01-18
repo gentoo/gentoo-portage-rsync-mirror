@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/palapeli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.141 2014/01/10 04:32:15 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.142 2014/01/18 11:23:54 dilfridge Exp $
+
+*palapeli-4.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +palapeli-4.12.1.ebuild:
+  Version bump KDE SC 4.12.1
 
   10 Jan 2014; Chris Reffett <creffett@gentoo.org> -palapeli-4.11.4.ebuild:
   Remove KDE SC 4.11.4
