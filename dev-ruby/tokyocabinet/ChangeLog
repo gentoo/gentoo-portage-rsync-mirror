@@ -1,10 +1,13 @@
 # ChangeLog for dev-ruby/tokyocabinet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tokyocabinet/ChangeLog,v 1.1 2013/10/21 17:08:11 a3li Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tokyocabinet/ChangeLog,v 1.2 2014/01/18 14:45:58 blueness Exp $
+
+  18 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  tokyocabinet-1.29.1.ebuild:
+  Keyword ~ppc for bug #488674
 
 *tokyocabinet-1.29.1 (21 Oct 2013)
 
   21 Oct 2013; Alex Legler <a3li@gentoo.org> +tokyocabinet-1.29.1.ebuild,
   +metadata.xml:
   Initial commit; dependency of net-irc/rbot
-

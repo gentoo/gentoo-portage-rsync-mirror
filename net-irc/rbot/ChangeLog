@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/rbot
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.55 2013/10/27 18:24:53 a3li Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/ChangeLog,v 1.56 2014/01/18 14:47:53 blueness Exp $
+
+  18 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  rbot-0.9.15_p20131020.ebuild:
+  Keyword ~ppc for bug #488674
 
 *rbot-0.9.15_p20131020 (27 Oct 2013)
 
