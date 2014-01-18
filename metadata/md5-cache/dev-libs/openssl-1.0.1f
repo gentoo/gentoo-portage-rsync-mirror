@@ -4,11 +4,11 @@ DESCRIPTION=full-strength general purpose cryptography library (including SSL an
 EAPI=4
 HOMEPAGE=http://www.openssl.org/
 IUSE=bindist gmp kerberos rfc3779 sse2 static-libs test +tls-heartbeat vanilla zlib
-KEYWORDS=~alpha ~amd64 ~arm arm64 hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux
+KEYWORDS=~alpha amd64 ~arm arm64 hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux
 LICENSE=openssl
 PDEPEND=app-misc/ca-certificates
 RDEPEND=static-libs? ( gmp? ( dev-libs/gmp[static-libs(+)] ) zlib? ( sys-libs/zlib[static-libs(+)] ) kerberos? ( app-crypt/mit-krb5 ) ) !static-libs? ( gmp? ( dev-libs/gmp ) zlib? ( sys-libs/zlib ) kerberos? ( app-crypt/mit-krb5 ) ) !<net-misc/openssh-5.9_p1-r4 !<net-libs/neon-0.29.6-r1
 SLOT=0
 SRC_URI=mirror://openssl/source/openssl-1.0.1f.tar.gz http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/openssl/openssl-c_rehash.sh?rev=1.7 -> openssl-c_rehash.sh.1.7
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=020f47e80e29e53fd2b83b608070c121
+_md5_=4285ca97572275bbef26cdc7393b9229

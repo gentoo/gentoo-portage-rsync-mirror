@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.58 2014/01/18 02:36:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.59 2014/01/18 19:30:20 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-db-2.6.5.ebuild:
+  Add arm64 love.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-db-2.6.5.ebuild:
   Add warning when USE flags are ambiguous #496150 by Sergey Popov.

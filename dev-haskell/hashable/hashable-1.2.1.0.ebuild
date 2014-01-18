@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/hashable-1.2.1.0.ebuild,v 1.1 2013/10/03 03:48:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashable/hashable-1.2.1.0.ebuild,v 1.2 2014/01/18 19:16:56 slyfox Exp $
 
 EAPI=5
 
@@ -30,6 +30,11 @@ DEPEND="${RDEPEND}
 		dev-haskell/test-framework-hunit
 		>=dev-haskell/test-framework-quickcheck2-0.2.9 )
 "
+
+src_prepare() {
+	# a workaround for <cabal-1.18 #498480
+	hsc2hs tests/Regress/Mmap.{hsc,hs} || die
+}
 
 src_configure() {
 	haskell-cabal_src_configure \

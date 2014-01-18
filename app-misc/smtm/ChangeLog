@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/smtm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.22 2013/08/28 13:44:26 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.23 2014/01/18 19:01:50 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> smtm-1.6.10-r1.ebuild:
+  amd64 stable, bug #491930
 
   28 Aug 2013; Ian Delaney <idella4@gentoo.org> -smtm-1.6.10.ebuild,
   -smtm-1.6.8.ebuild:

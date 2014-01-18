@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.3.ebuild,v 1.1 2013/09/26 08:32:32 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.3.ebuild,v 1.2 2014/01/18 19:05:00 pacho Exp $
 EAPI=5
 
 inherit eutils autotools
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/worldforge/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=""
