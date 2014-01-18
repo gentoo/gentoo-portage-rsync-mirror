@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11_pre20131228.ebuild,v 1.1 2013/12/30 15:55:29 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.10.3.ebuild,v 1.1 2014/01/18 14:16:12 eras Exp $
 
 EAPI=5
-inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
+inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam user versionator systemd
 
 MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
-MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
+MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
 VDA_PV="2.10.0"
 VDA_P="${PN}-vda-v13-${VDA_PV}"
 RC_VER="2.7"
@@ -129,14 +129,15 @@ src_configure() {
 	fi
 
 	if ! use nis; then
-		mycc="${mycc} -DNO_NIS"
+		sed -i -e "s|#define HAS_NIS|//#define HAS_NIS|g" \
+			src/util/sys_defs.h || die "sed failed"
 	fi
 
 	if ! use berkdb; then
 		mycc="${mycc} -DNO_DB"
 		if use cdb; then
 			# change default hash format from Berkeley DB to cdb
-			mycc="${mycc} -DEF_DB_TYPE=\\\"cdb\\\""
+			sed -i -e "s/hash/cdb/" src/util/sys_defs.h || die
 		fi
 	fi
 
@@ -202,11 +203,9 @@ src_install () {
 	# Provide another link for legacy FSH
 	dosym /usr/sbin/sendmail /usr/$(get_libdir)/sendmail
 
-	# Install qshape tool and posttls-finger
+	# Install qshape tool
 	dobin auxiliary/qshape/qshape.pl
 	doman man/man1/qshape.1
-	dobin bin/posttls-finger
-	doman man/man1/posttls-finger.1
 
 	# Performance tuning tools and their manuals
 	dosbin bin/smtp-{source,sink} bin/qmqp-{source,sink}

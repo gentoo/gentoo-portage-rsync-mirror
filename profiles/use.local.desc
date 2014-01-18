@@ -2979,6 +2979,7 @@ mail-mta/netqmail:noauthcram - If you do NOT want AUTHCRAM to be available
 mail-mta/opensmtpd:mta - Enable this to install as system-wide MTA
 mail-mta/postfix:dovecot-sasl - Enable net-mail/dovecot protocol version 1 (server only) SASL implementation
 mail-mta/postfix:ldap-bind - Adds support for binding to LDAP backend using dev-libs/cyrus-sasl
+mail-mta/postfix:lmdb - Adds support for using dev-db/lmdb for lookup tables
 mail-mta/postfix:memcached - Adds support for using net-misc/memcached for lookup tables
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
 mail-mta/qmail-ldap:cluster - Enable this if you want to have cluster support in qmail-ldap
@@ -5125,6 +5126,7 @@ net-misc/batman-adv:bla - B.A.T.M.A.N. bridge loop avoidance
 net-misc/batman-adv:dat - B.A.T.M.A.N. distributed arp table
 net-misc/batman-adv:nc - B.A.T.M.A.N. network coding
 net-misc/bfgminer:adl - Enable support for controlling fans and overclocking on AMD cards with AMD Display Library
+net-misc/bfgminer:antminer - Enable support for mining with AntMiner U1 sticks
 net-misc/bfgminer:avalon - Enable support for mining with Avalon ASIC modules
 net-misc/bfgminer:bfsb - Enable support for mining on BFSB host Raspberry Pi
 net-misc/bfgminer:bifury - Enable support for mining with Bi*fury USB sticks
@@ -5132,8 +5134,10 @@ net-misc/bfgminer:bigpic - Enable support for mining with Big Picture Mining USB
 net-misc/bfgminer:bitforce - Enable support for mining with ButterFly Labs BitFORCE ASICs and/or FPGAs
 net-misc/bfgminer:bitfury - Enable support for mining with 55nm Bitfury-based devices
 net-misc/bfgminer:cpumining - Enable support for mining with CPUs
+net-misc/bfgminer:drillbit - Enable support for mining with Drillbit boards
 net-misc/bfgminer:hashbuster - Enable support for mining with HashBuster nano boards
 net-misc/bfgminer:hashbuster2 - Enable support for mining with HashBuster micro boards
+net-misc/bfgminer:hashfast - Enable support for mining with HashFast devices
 net-misc/bfgminer:icarus - Enable support for mining with Icarus-compatible devices (including Block Erupter Sapphire ASICs)
 net-misc/bfgminer:klondike - Enable support for mining with Klondike USB miners
 net-misc/bfgminer:libusb - Use libusb

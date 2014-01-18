@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15344 2014/01/18 12:11:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15346 2014/01/18 14:22:08 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (18 Jan 2014)
+# Mask experimental software
+=mail-mta/postfix-2.12*
 
 # Alexis Ballier <aballier@gentoo.org> (18 Jan 2014)
 # Rev. deps fail to build
@@ -730,10 +734,6 @@ media-gfx/yablex
 # Davide Pesavento <pesa@gentoo.org> (02 Mar 2013)
 # Depends on blender, which is masked.
 media-gfx/yafaray
-
-# Eray Aslan <eras@gentoo.org> (13 Feb 2013)
-# Mask experimental software
-=mail-mta/postfix-2.11*
 
 # Doug Goldstein <cardoe@gentoo.org> (22 Jan 2013)
 # Masked for development

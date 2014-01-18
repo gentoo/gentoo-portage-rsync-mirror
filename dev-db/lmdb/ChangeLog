@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/lmdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.2 2014/01/18 13:47:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.3 2014/01/18 14:09:31 eras Exp $
+
+*lmdb-0.9.11 (18 Jan 2014)
+
+  18 Jan 2014; Eray Aslan <eras@gentoo.org> +lmdb-0.9.11.ebuild:
+  Version bump
 
   18 Jan 2014; Eray Aslan <eras@gentoo.org> lmdb-0.9.10.ebuild:
   Fix whitespace
