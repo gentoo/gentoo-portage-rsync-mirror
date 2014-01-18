@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1122 2014/01/17 19:05:05 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1123 2014/01/18 00:43:03 dilfridge Exp $
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> kde4-base.eclass:
+  Sync from kde overlay, adds subslot
 
   17 Jan 2014; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Fix QA warning concerning inherit

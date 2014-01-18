@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.131 2013/08/15 15:36:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.132 2014/01/18 00:43:03 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -34,12 +34,12 @@ ___ECLASS_ONCE_KDE4_BASE="recur -_+^+_- spank"
 # for tests you should proceed with setting VIRTUALX_REQUIRED=test.
 : ${VIRTUALX_REQUIRED:=manual}
 
-inherit kde4-functions toolchain-funcs fdo-mime flag-o-matic gnome2-utils base virtualx versionator eutils multilib
+inherit kde4-functions toolchain-funcs fdo-mime flag-o-matic gnome2-utils virtualx versionator eutils multilib
 
 if [[ ${KDE_BUILD_TYPE} = live ]]; then
 	case ${KDE_SCM} in
 		svn) inherit subversion ;;
-		git) inherit git-2 ;;
+		git) inherit git-r3 ;;
 	esac
 fi
 
@@ -66,7 +66,14 @@ KDE_MINIMAL="${KDE_MINIMAL:-4.4}"
 # Set slot for KDEBASE known packages
 case ${KDEBASE} in
 	kde-base)
-		SLOT=4
+		case ${EAPI} in
+			5)
+				SLOT=4/$(get_version_component_range 1-2)
+				;;
+			*)
+				SLOT=4
+				;;
+		esac
 		KDE_MINIMAL="${PV}"
 		;;
 	kdevelop)
@@ -87,7 +94,7 @@ case ${KDEBASE} in
 					KDEVELOP_VERSION=${PV}
 					KDEVPLATFORM_VERSION="$(($(get_major_version)-3)).$(get_after_major_version)"
 					;;
-				kdevplatform|kdevelop-php*)
+				kdevplatform|kdevelop-php*|kdevelop-python)
 					KDEVELOP_VERSION="$(($(get_major_version)+3)).$(get_after_major_version)"
 					KDEVPLATFORM_VERSION=${PV}
 					;;
@@ -290,13 +297,6 @@ kdecommondepend="
 	>=dev-qt/qtsvg-${QT_MINIMAL}:4
 	>=dev-qt/qttest-${QT_MINIMAL}:4
 	>=dev-qt/qtwebkit-${QT_MINIMAL}:4
-	!aqua? (
-		x11-libs/libXext
-		x11-libs/libXt
-		x11-libs/libXxf86vm
-		x11-libs/libXcomposite
-		x11-libs/libxkbfile
-	)
 "
 
 if [[ ${PN} != kdelibs ]]; then
@@ -554,8 +554,12 @@ _calculate_live_repo() {
 			[[ ${PV} != 9999* && ${KDEBASE} == kde-base ]] && \
 				EGIT_BRANCH="KDE/$(get_kde_version)"
 
+			# kde-workspace master needs Qt5/kf5
+			[[ ${PV} == 9999 && ${_kmname} == kde-workspace ]] && \
+				EGIT_BRANCH="KDE/4.11"
+
 			# default repo uri
-			EGIT_REPO_URI="${EGIT_MIRROR}/${_kmname}"
+			EGIT_REPO_URI+=( "${EGIT_MIRROR}/${_kmname}" )
 
 			debug-print "${FUNCNAME}: Repository: ${EGIT_REPO_URI}"
 			debug-print "${FUNCNAME}: Branch: ${EGIT_BRANCH}"
@@ -623,7 +627,7 @@ kde4-base_src_unpack() {
 				subversion_src_unpack
 				;;
 			git)
-				git-2_src_unpack
+				git-r3_src_unpack
 				;;
 		esac
 	else
@@ -676,8 +680,8 @@ kde4-base_src_prepare() {
 		esac
 	fi
 
-	# Apply patches
-	base_src_prepare
+	# Apply patches, cmake-utils does the job already
+	cmake-utils_src_prepare
 
 	# Save library dependencies
 	if [[ -n ${KMSAVELIBS} ]] ; then
