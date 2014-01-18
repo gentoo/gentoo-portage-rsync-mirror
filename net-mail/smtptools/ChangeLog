@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/smtptools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/ChangeLog,v 1.7 2011/06/06 06:19:25 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/smtptools/ChangeLog,v 1.8 2014/01/18 05:37:54 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> smtptools-0.2.3.ebuild:
+  Add arm64 love.
 
   06 Jun 2011; Eray Aslan <eras@gentoo.org> smtptools-0.2.3.ebuild:
   Add blocker against net-mail/qtools - bug #248094. Fix home page.
@@ -28,4 +31,3 @@
   +smtptools-0.2.3.ebuild:
   Initial import, closes #65848. Ebuild submitted by Jesse D. Guardiani
   <jesse@wingnet.net>.
-

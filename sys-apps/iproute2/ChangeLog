@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.228 2014/01/16 06:51:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.229 2014/01/18 05:37:49 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> iproute2-3.11.0.ebuild,
+  iproute2-3.12.0.ebuild, iproute2-3.8.0.ebuild, iproute2-3.9.0.ebuild,
+  iproute2-9999.ebuild:
+  Add arm64 love.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> iproute2-3.8.0.ebuild:
   Mark sh stable.

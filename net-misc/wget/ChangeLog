@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.180 2014/01/13 21:42:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.181 2014/01/18 05:35:17 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> wget-1.14-r1.ebuild,
+  wget-1.14.ebuild:
+  Add arm64 love.
 
   13 Jan 2014; Mike Frysinger <vapier@gentoo.org> wget-1.14-r1.ebuild:
   Cut over to new configure flags rather than set ac_cv_xxx vars directly

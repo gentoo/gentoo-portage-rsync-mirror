@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/iputils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.124 2013/10/26 15:33:16 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.125 2014/01/18 05:37:45 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> iputils-20121221-r1.ebuild,
+  iputils-20121221.ebuild, iputils-99999999.ebuild:
+  Add arm64 love.
 
   26 Oct 2013; Mike Frysinger <vapier@gentoo.org> iputils-20101006-r2.ebuild,
   iputils-20121221-r1.ebuild, iputils-20121221.ebuild, iputils-99999999.ebuild:

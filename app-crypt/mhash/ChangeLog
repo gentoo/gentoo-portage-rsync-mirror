@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mhash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.68 2014/01/04 21:30:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.69 2014/01/18 05:39:56 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> mhash-0.9.9.9-r1.ebuild:
+  Add arm64 love.
 
   04 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> mhash-0.9.9.9-r1.ebuild:
   Build fix per bug #488898.

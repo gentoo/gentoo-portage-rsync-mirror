@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.238 2014/01/16 16:31:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.239 2014/01/18 05:56:45 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.9-r1.ebuild,
+  nfs-utils-1.2.9.ebuild:
+  Add arm64 love.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.9.ebuild:
   Mark s390/sh stable.

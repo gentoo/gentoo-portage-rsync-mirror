@@ -4,10 +4,10 @@ DESCRIPTION=kernel routing and traffic control utilities
 EAPI=4
 HOMEPAGE=http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
 IUSE=atm berkdb +iptables ipv6 minimal
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=!net-misc/arpd iptables? ( >=net-firewall/iptables-1.4.20 ) !minimal? ( berkdb? ( sys-libs/db ) ) atm? ( net-dialup/linux-atm )
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/net/iproute2/iproute2-3.11.0.tar.xz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=29e7069e4b843f4739d85f4f5a165434
+_md5_=a0fd104fe0e173ef6f5ee4bde0cc3e49

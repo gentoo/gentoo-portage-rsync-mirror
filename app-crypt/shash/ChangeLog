@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/shash
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.25 2012/05/04 11:10:25 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/ChangeLog,v 1.26 2014/01/18 05:39:58 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> shash-0.2.6-r1.ebuild:
+  Add arm64 love.
 
   04 May 2012; Alexis Ballier <aballier@gentoo.org> shash-0.2.6-r1.ebuild:
   keyword ~amd64-fbsd
@@ -80,4 +83,3 @@
 
   20 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> shash-0.2.6.ebuild:
   initial commit, ebuild by Sven Wegener <sven.wegener@stealer.net>, bug #38108
-
