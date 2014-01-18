@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.106 2014/01/15 09:35:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.107 2014/01/18 20:10:31 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> faac-1.28-r4.ebuild:
+  Stable for alpha, wrt bug #495712
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> faac-1.28-r4.ebuild:
   Stable for ia64, wrt bug #495712

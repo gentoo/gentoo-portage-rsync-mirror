@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.583 2014/01/18 19:55:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.584 2014/01/18 20:09:16 dilfridge Exp $
+
+  18 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> -cups-1.6.2-r5.ebuild,
+  -files/cups-1.6.3-colord-profile.patch, -cups-1.7.0-r1.ebuild,
+  -files/pdftops-1.20.gentoo, -files/cupsd.init.d:
+  Remove old
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.6.4.ebuild:
   Stable for alpha, wrt bug #489914

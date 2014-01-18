@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.4.0_p170-r1.ebuild,v 1.7 2014/01/14 15:32:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/logwatch/logwatch-7.4.0_p170-r1.ebuild,v 1.8 2014/01/18 20:14:56 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~polynomial-c/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 DEPEND=""

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/boost-m4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.18 2014/01/15 09:41:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.19 2014/01/18 20:17:12 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> boost-m4-0.4.ebuild:
+  Stable for alpha, wrt bug #496904
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> boost-m4-0.4.ebuild:
   Stable for ia64, wrt bug #496904

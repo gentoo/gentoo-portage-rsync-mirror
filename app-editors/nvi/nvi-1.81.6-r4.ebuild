@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r4.ebuild,v 1.5 2014/01/14 15:34:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r4.ebuild,v 1.6 2014/01/18 20:16:29 ago Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ SRC_URI="http://garage.linux.student.kuleuven.be/~skimo/nvi/devel/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ~ppc64 ~sparc x86"
 IUSE="perl tcl unicode"
 
 CDEPEND="|| ( ${DBDEPENDS} )

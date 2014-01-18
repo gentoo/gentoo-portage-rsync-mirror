@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.93 2014/01/15 09:38:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.94 2014/01/18 20:12:56 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> mpg321-0.3.1-r1.ebuild:
+  Stable for alpha, wrt bug #495804
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> mpg321-0.3.1-r1.ebuild:
   Stable for ia64, wrt bug #495804

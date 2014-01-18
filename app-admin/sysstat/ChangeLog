@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.255 2014/01/06 14:39:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.256 2014/01/18 20:03:40 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> sysstat-10.2.0.ebuild:
+  Stable for alpha, wrt bug #494248
 
   06 Jan 2014; Jeroen Roovers <jer@gentoo.org>
   files/sysstat-10.2.0-systemd.patch:

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-sdk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.61 2014/01/14 15:10:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.62 2014/01/18 20:10:44 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ladspa-sdk-1.13-r2.ebuild:
+  Stable for alpha, wrt bug #495722
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ladspa-sdk-1.13-r2.ebuild:
   Stable for ppc, wrt bug #495722

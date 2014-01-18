@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5-r1.ebuild,v 1.1 2014/01/18 19:32:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.5-r1.ebuild,v 1.2 2014/01/18 20:19:17 vapier Exp $
 
 EAPI="4"
 
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.4.5-no-my-libs.patch #497894
+	epatch "${FILESDIR}"/${PN}-1.4.5-giflib-5.patch #457634
 }
 
 src_configure() {

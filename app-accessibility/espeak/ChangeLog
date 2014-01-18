@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeak
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.122 2013/12/25 09:38:47 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.123 2014/01/18 20:04:08 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> espeak-1.47.11-r1.ebuild:
+  Stable for alpha, wrt bug #494346
 
   25 Dec 2013; Markus Meier <maekke@gentoo.org> espeak-1.47.11-r1.ebuild:
   arm stable, bug #494346

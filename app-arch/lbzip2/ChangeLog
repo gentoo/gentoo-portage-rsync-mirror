@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.64 2014/01/18 01:52:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.65 2014/01/18 20:06:55 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lbzip2-2.3-r1.ebuild:
+  Stable for alpha, wrt bug #495322
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> lbzip2-2.3-r1.ebuild:
   Add arm64 love.

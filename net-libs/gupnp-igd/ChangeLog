@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.48 2014/01/18 19:01:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.49 2014/01/18 20:16:44 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gupnp-igd-0.2.2-r1.ebuild:
+  Stable for alpha, wrt bug #496626
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> gupnp-igd-0.2.2-r1.ebuild:
   amd64 stable, bug #496626

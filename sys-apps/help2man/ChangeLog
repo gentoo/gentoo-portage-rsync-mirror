@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.109 2014/01/17 06:14:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.110 2014/01/18 20:17:39 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> help2man-1.43.3.ebuild:
+  Stable for alpha, wrt bug #497368
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> help2man-1.43.3.ebuild:
   Mark m68k/s390/sh stable.

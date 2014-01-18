@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.286 2014/01/14 15:34:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.287 2014/01/18 20:03:28 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openbox-3.5.2-r1.ebuild:
+  Stable for alpha, wrt bug #494226
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openbox-3.5.2-r1.ebuild:
   Stable for ppc, wrt bug #494226

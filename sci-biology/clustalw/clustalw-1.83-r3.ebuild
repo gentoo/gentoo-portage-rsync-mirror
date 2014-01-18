@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/clustalw-1.83-r3.ebuild,v 1.7 2014/01/14 15:11:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/clustalw-1.83-r3.ebuild,v 1.8 2014/01/18 20:17:25 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/software/unix/clustalw/${PN}${PV}.UNIX.tar.gz"
 
 LICENSE="clustalw"
 SLOT="1"
-KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="alpha amd64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE=""
 
 S="${WORKDIR}"/${PN}${PV}

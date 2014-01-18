@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boehm-gc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.113 2014/01/15 09:31:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/ChangeLog,v 1.114 2014/01/18 20:05:46 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> boehm-gc-7.2e.ebuild:
+  Stable for alpha, wrt bug #494998
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> boehm-gc-7.2e.ebuild:
   Stable for ia64, wrt bug #494998
