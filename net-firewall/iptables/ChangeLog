@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.305 2014/01/18 05:37:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.306 2014/01/18 19:48:53 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> iptables-1.4.20.ebuild:
+  Stable for alpha, wrt bug #485190
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> iptables-1.4.20.ebuild,
   iptables-1.4.21.ebuild:

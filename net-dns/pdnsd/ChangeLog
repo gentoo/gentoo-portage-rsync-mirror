@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.119 2014/01/15 09:55:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.120 2014/01/18 19:53:50 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pdnsd-1.2.9a.ebuild:
+  Stable for alpha, wrt bug #487284
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pdnsd-1.2.9a.ebuild:
   Stable for ia64, wrt bug #487284

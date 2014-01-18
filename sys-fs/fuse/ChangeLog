@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.196 2014/01/15 09:24:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.197 2014/01/18 19:54:53 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> fuse-2.9.3.ebuild:
+  Stable for alpha, wrt bug #489102
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> fuse-2.9.3.ebuild:
   Stable for ia64, wrt bug #489102

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblqr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.26 2013/12/22 11:58:23 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.27 2014/01/18 19:49:55 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> liblqr-0.4.2-r1.ebuild:
+  Stable for alpha, wrt bug #485672
 
   22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> liblqr-0.4.2-r1.ebuild:
   Stable for ppc64, wrt bug #485672

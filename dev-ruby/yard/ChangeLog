@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.69 2014/01/05 10:47:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.70 2014/01/18 19:54:26 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> yard-0.8.7.2.ebuild:
+  Stable for alpha, wrt bug #488914
 
   05 Jan 2014; Agostino Sarubbo <ago@gentoo.org> yard-0.8.7.2.ebuild:
   Stable for x86, wrt bug #488914

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6.ebuild,v 1.1 2014/01/09 13:07:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.6-r1.ebuild,v 1.1 2014/01/18 19:32:23 vapier Exp $
 
 EAPI="4"
 
@@ -36,6 +36,10 @@ DEPEND="${RDEPEND}
 		x11-proto/xextproto
 		x11-proto/xproto
 	)"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.4.5-no-my-libs.patch #497894
+}
 
 src_configure() {
 	# imlib2 has diff configure options for x86/amd64 mmx

@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/align
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.69 2013/12/29 08:34:32 hattya Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.70 2014/01/18 19:58:50 ago Exp $
+
+  18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> align-43.ebuild:
+  Stable for alpha, wrt bug #491968
 
   29 Dec 2013; Akinori Hattori <hattya@gentoo.org> align-43.ebuild:
   ia64 stable wrt bug #491968

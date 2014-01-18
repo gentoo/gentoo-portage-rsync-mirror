@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/lib_users-0.6-r1.ebuild,v 1.5 2013/12/24 12:50:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lib_users/lib_users-0.6-r1.ebuild,v 1.6 2014/01/18 19:57:03 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://schwarzvogel.de/pkgs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 hppa ppc x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
