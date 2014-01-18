@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/superadduser
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.41 2009/10/11 23:54:29 halcy0n Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/superadduser/ChangeLog,v 1.42 2014/01/18 09:11:50 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> superadduser-1.0.9.ebuild:
+  Add arm64 love.
 
   11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> superadduser-1.0.9.ebuild:
   QA fixes; unquoted variables

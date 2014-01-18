@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.240 2014/01/17 05:20:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.241 2014/01/18 09:26:02 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> git-1.8.1.5-r1.ebuild,
+  git-1.8.3.2-r1.ebuild:
+  Mark s390/sh stable.
 
   17 Jan 2014; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
   removing myself as maintainer of git

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.160 2014/01/16 19:30:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.161 2014/01/18 09:29:07 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> subversion-1.7.14.ebuild:
+  Mark s390/sh stable.
 
   16 Jan 2014; Fabian Groffen <grobian@gentoo.org> subversion-1.8.5.ebuild:
   Fix compilation on Solaris, help it find a proper python on Darwin

@@ -1,0 +1,13 @@
+DEFINED_PHASES=install nofetch
+DESCRIPTION=emulator for a basic ARMv8 platform environment (for running bare metal & Linux)
+EAPI=4
+HOMEPAGE=https://silver.arm.com/browse/FM00A
+IUSE=examples
+KEYWORDS=-* ~amd64
+LICENSE=ARM-FAST-MODEL
+RDEPEND=sys-libs/glibc sys-devel/gcc
+RESTRICT=fetch strip
+SLOT=0
+SRC_URI=https://silver.arm.com/download/Development_Tools/ESL:_Fast_Models/Fast_Models/FM000-KT-00035-r0p8-52rel06/FM000-KT-00035-r0p8-52rel06.tgz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=9b3d22cf546f710cb0bf8e0cf6f23a84
