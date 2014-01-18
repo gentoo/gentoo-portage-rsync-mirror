@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mediastreamer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.74 2013/10/27 09:30:27 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.75 2014/01/18 10:32:07 hwoarang Exp $
+
+  18 Jan 2014; Markos Chandras <hwoarang@gentoo.org> mediastreamer-2.9.0.ebuild:
+  Bump ortp dependency to 0.21.0. Bug #494766
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Voip herd is removed: http://article.gmane.org/gmane.linux.gentoo.devel/88434
