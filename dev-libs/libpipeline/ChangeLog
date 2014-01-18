@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.49 2014/01/16 18:20:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.50 2014/01/18 02:32:16 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libpipeline-1.2.4.ebuild,
+  libpipeline-1.2.5.ebuild:
+  Add arm64 love.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> libpipeline-1.2.4.ebuild:
   Mark m68k/s390/sh stable.

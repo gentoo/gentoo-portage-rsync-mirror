@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.406 2014/01/06 19:16:34 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.408 2014/01/18 02:53:03 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libxml2-2.9.1-r1.ebuild,
+  libxml2-2.9.1-r2.ebuild:
+  Add arm64 love.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libxml2-2.9.1-r1.ebuild:
+  Mark m68k stable.
 
   06 Jan 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   libxml2-2.9.1-r2.ebuild:

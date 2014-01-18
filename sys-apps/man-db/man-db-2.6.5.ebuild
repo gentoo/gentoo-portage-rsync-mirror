@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.5.ebuild,v 1.8 2014/01/16 07:10:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.6.5.ebuild,v 1.9 2014/01/18 02:36:28 vapier Exp $
 
 EAPI="4"
 
@@ -35,6 +35,10 @@ pkg_setup() {
 	# Create user now as Makefile in src_install does setuid/chown
 	enewgroup man 15
 	enewuser man 13 -1 /usr/share/man man
+
+	if (use gdbm && use berkdb) || (use !gdbm && use !berkdb) ; then #496150
+		ewarn "Defaulting to USE=gdbm due to ambiguous berkdb/gdbm USE flag settings"
+	fi
 }
 
 src_configure() {

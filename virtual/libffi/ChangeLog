@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libffi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.32 2013/07/30 22:55:45 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.33 2014/01/18 02:49:06 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libffi-3.0.13-r1.ebuild:
+  Add arm64 love.
 
   30 Jul 2013; Alexis Ballier <aballier@gentoo.org> libffi-3.0.13-r1.ebuild:
   no need to block emul-libs here since it doesnt install any file

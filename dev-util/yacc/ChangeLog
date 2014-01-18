@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/yacc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.29 2012/09/26 07:34:45 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/yacc/ChangeLog,v 1.30 2014/01/18 02:57:12 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> yacc-1.9.1-r4.ebuild,
+  yacc-1.9.1-r5.ebuild:
+  Add arm64 love.
 
   26 Sep 2012; Ulrich Müller <ulm@gentoo.org> yacc-1.9.1-r4.ebuild,
   yacc-1.9.1-r5.ebuild:

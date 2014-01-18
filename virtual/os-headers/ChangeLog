@@ -1,6 +1,9 @@
 # ChangeLog for virtual/os-headers
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/ChangeLog,v 1.7 2013/02/19 00:24:40 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/os-headers/ChangeLog,v 1.8 2014/01/18 02:58:29 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> os-headers-0.ebuild:
+  Add arm64 love.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> os-headers-0.ebuild:
   Add ~arm-linux keyword.

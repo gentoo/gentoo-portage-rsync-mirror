@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.175 2014/01/16 07:40:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.176 2014/01/18 02:58:35 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> gawk-4.0.2.ebuild,
+  gawk-4.1.0.ebuild:
+  Add arm64 love.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> gawk-4.0.2.ebuild:
   Mark m68k/s390/sh stable.
