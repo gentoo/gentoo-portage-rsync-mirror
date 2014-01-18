@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.446 2014/01/18 19:52:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.447 2014/01/18 22:16:27 eras Exp $
+
+*squid-3.4.2 (18 Jan 2014)
+
+  18 Jan 2014; Eray Aslan <eras@gentoo.org> +files/squid.initd-r4,
+  +squid-3.4.2.ebuild:
+  Version bump - bug #498426.  Fix cache generation for rock storage - bug
+  #496578.  Thanks to Jochen Erwied. Fix pid file creation in /run - bug #496452
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> squid-3.3.8.ebuild:
   Stable for alpha, wrt bug #486848
