@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/triplea
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.56 2013/12/24 12:48:14 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/ChangeLog,v 1.58 2014/01/18 18:50:27 mr_bones_ Exp $
+
+  18 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org> -triplea-1.6.1.2.ebuild:
+  old
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> triplea-1.7.0.3.ebuild:
+  amd64 stable, bug #490654
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> triplea-1.7.0.3.ebuild:
   Stable for x86, wrt bug #490654

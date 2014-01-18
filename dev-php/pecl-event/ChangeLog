@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pecl-event
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-event/ChangeLog,v 1.4 2014/01/15 09:54:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-event/ChangeLog,v 1.5 2014/01/18 18:36:40 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> pecl-event-1.8.0.ebuild:
+  amd64 stable, bug #487120
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pecl-event-1.8.0.ebuild:
   Stable for ia64, wrt bug #487120

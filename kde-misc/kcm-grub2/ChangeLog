@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcm-grub2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.12 2013/12/24 12:49:57 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.13 2014/01/18 18:49:08 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> kcm-grub2-0.6.4.ebuild:
+  amd64 stable, bug #491040
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> kcm-grub2-0.6.4.ebuild:
   Stable for x86, wrt bug #491040

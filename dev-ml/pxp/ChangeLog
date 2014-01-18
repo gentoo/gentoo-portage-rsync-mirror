@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pxp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.35 2013/12/24 12:42:28 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.36 2014/01/18 18:40:20 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> pxp-1.2.4.ebuild:
+  amd64 stable, bug #492060
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pxp-1.2.4.ebuild:
   Stable for x86, wrt bug #492060

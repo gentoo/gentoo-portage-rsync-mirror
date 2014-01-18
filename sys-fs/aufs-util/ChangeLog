@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/aufs-util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.23 2014/01/13 08:33:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs-util/ChangeLog,v 1.24 2014/01/18 18:56:38 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> aufs-util-3.9_p20130915.ebuild:
+  amd64 stable, bug #491640
 
 *aufs-util-3.12_p20140114 (13 Jan 2014)
 
@@ -120,4 +123,3 @@
   13 Nov 2012; Justin Lecher <jlec@gentoo.org> +aufs-util-3.6.ebuild,
   +aufs-util-9999.ebuild, +metadata.xml:
   New addition
-

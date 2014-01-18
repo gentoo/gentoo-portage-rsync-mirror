@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ebuild-mode/ebuild-mode-1.24.ebuild,v 1.2 2013/12/06 23:31:54 matsl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ebuild-mode/ebuild-mode-1.24.ebuild,v 1.3 2014/01/18 18:49:34 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND=">=app-editors/xemacs-21.4.20-r5
 	app-xemacs/sh-script"

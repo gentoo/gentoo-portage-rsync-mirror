@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-1.7.0.3.ebuild,v 1.3 2013/12/24 12:48:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/triplea/triplea-1.7.0.3.ebuild,v 1.4 2014/01/18 18:39:21 pacho Exp $
 
 EAPI=5
 inherit eutils java-pkg-2 java-ant-2 versionator games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/triplea/${PN}_${MY_PV}_source_code_only.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 RESTRICT="test" # Needs X11 maybe use virtualx.eclass
 

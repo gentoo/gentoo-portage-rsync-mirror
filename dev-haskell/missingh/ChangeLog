@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/missingh
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.29 2013/09/28 02:45:40 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/missingh/ChangeLog,v 1.30 2014/01/18 18:54:02 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> missingh-1.2.0.2.ebuild:
+  amd64 stable, bug #495384
 
 *missingh-1.2.0.2 (28 Sep 2013)
 

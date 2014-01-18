@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pomap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.31 2013/12/24 12:47:18 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.32 2014/01/18 18:39:51 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> pomap-3.0.2.ebuild:
+  amd64 stable, bug #492056
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> pomap-3.0.2.ebuild:
   Stable for x86, wrt bug #492056

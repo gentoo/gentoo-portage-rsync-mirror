@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/certificate
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/certificate/ChangeLog,v 1.5 2013/11/24 19:36:35 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/certificate/ChangeLog,v 1.6 2014/01/18 18:53:01 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> certificate-1.3.9.ebuild:
+  amd64 stable, bug #495372
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> certificate-1.3.8-r1.ebuild:
   Stable for x86, wrt bug #488750

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-13.11.ebuild,v 1.1 2013/11/12 16:26:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-13.11.ebuild,v 1.2 2014/01/18 18:51:47 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_6 python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/gcompris/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="gstreamer"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

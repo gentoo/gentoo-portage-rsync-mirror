@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/aufs-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.84 2014/01/16 19:57:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/ChangeLog,v 1.85 2014/01/18 18:57:12 pacho Exp $
+
+  18 Jan 2014; Pacho Ramos <pacho@gentoo.org> aufs-sources-3.10.25.ebuild:
+  amd64 stable, bug #491642
 
 *aufs-sources-3.12.8 (16 Jan 2014)
 *aufs-sources-3.10.27 (16 Jan 2014)
