@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20130421.ebuild,v 1.13 2013/06/26 12:00:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20131230.ebuild,v 1.1 2014/01/18 16:33:56 chithanh Exp $
 
 EAPI=5
 inherit savedconfig
@@ -12,7 +12,7 @@ if [[ ${PV} == 99999999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://gentoo/${P}.tar.xz"
-	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 fi
 
 DESCRIPTION="Linux firmware files"
@@ -44,6 +44,7 @@ RDEPEND="!savedconfig? (
 		!net-wireless/rt2860-firmware
 		!net-wireless/rt2870-firmware
 		!sys-block/qla-fc-firmware
+		!sys-firmware/amd-ucode
 		!sys-firmware/iwl1000-ucode
 		!sys-firmware/iwl2000-ucode
 		!sys-firmware/iwl2030-ucode
