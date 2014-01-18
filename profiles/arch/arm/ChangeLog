@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.288 2014/01/10 02:41:56 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.289 2014/01/18 01:03:37 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Drop python targets hacks now that base/ has it #474128.
 
   08 Jan 2014; Rick Farina <zerochaos@gentoo.org> package.use.mask:
   mask java use flag on metasploit since rjb doesn't work

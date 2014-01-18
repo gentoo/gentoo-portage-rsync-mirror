@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/make.defaults,v 1.5 2013/12/13 06:14:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/make.defaults,v 1.6 2014/01/18 01:03:19 vapier Exp $
 
 ARCH="alpha"
 ACCEPT_KEYWORDS="alpha"
@@ -19,7 +19,3 @@ VIDEO_CARDS="fbdev glint mach64 mga nv r128 radeon savage tdfx voodoo"
 # Defaults for audio drivers. These are copied from x86 (minus modems), since
 # Alpha supports the same busses.
 ALSA_CARDS="ali5451 als4000 bt87x ca0106 cmipci emu10k1 ens1370 ens1371 es1938 es1968 fm801 hda-intel intel8x0 maestro3 trident usb-audio via82xx ymfpci"
-
-# Matt Turner <mattst88@gentoo.org> (12 Dec 2013)
-# Bug 474128.
-USE="${USE} -python_targets_python3_2 python_targets_python3_3"

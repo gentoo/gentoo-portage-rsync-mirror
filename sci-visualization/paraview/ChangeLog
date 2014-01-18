@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/paraview
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.75 2013/08/03 09:45:42 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.76 2014/01/18 01:25:24 hasufell Exp $
+
+*paraview-4.1.0 (18 Jan 2014)
+
+  18 Jan 2014; Julian Ospald <hasufell@gentoo.org> +paraview-4.1.0.ebuild:
+  version bump, fix sci-libs/netcdf dep wrt #498076
 
   03 Aug 2013; Michał Górny <mgorny@gentoo.org> paraview-4.0.1.ebuild,
   paraview-4.0.1-r1.ebuild:

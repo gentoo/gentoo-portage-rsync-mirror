@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/gzip
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.123 2013/06/11 03:07:21 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/gzip/ChangeLog,v 1.124 2014/01/18 01:18:08 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> gzip-1.5.ebuild,
+  gzip-1.6.ebuild:
+  Add arm64 love.
 
 *gzip-1.6 (11 Jun 2013)
 

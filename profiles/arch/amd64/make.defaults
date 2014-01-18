@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/make.defaults,v 1.20 2013/12/04 20:03:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/make.defaults,v 1.21 2014/01/18 01:03:24 vapier Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -37,11 +37,6 @@ CHOST_x32="x86_64-pc-linux-gnux32"
 # They are masked, but we can enable them anyway for those who have 
 # >=portage-2.1.2_pre3-r4
 USE="mmx sse sse2"
-
-# Pacho Ramos <pacho@gentoo.org> (30 Nov 2013)
-# Python 3.3 is going to stable, bug #474128
-USE="${USE} -python_targets_python3_2 python_targets_python3_3"
-BOOTSTRAP_USE="${BOOTSTRAP_USE} -python_targets_python3_2 python_targets_python3_3"
 
 # Michał Górny <mgorny@gentoo.org> (03 Sep 2013)
 # Enable abi_x86_64 for packages that don't have it forced.

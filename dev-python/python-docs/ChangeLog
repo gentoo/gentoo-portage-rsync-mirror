@@ -1,6 +1,16 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.188 2014/01/15 12:34:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.190 2014/01/18 01:08:18 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> python-docs-2.7.3.ebuild,
+  python-docs-2.7.4.ebuild, python-docs-2.7.5.ebuild, python-docs-3.3.2.ebuild,
+  python-docs-3.3.3.ebuild:
+  Add arm64 love.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> python-docs-2.6.8.ebuild,
+  python-docs-2.7.3.ebuild, python-docs-3.1.5.ebuild, python-docs-3.2.3.ebuild,
+  python-docs-3.3.2.ebuild:
+  Mark m68k/s390/sh stable.
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> python-docs-3.3.2.ebuild:
   Stable for ia64, wrt bug #474128

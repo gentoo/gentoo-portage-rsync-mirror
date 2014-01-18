@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.195 2013/12/30 09:28:44 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.196 2014/01/18 01:24:44 dirtyepic Exp $
+
+  18 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> wxpython-3.0.0.0.ebuild:
+  Add libnotify USE flag to force a rebuild if the corresponding wxGTK flag
+  changes (bug #498068).
 
 *wxpython-3.0.0.0 (30 Dec 2013)
 

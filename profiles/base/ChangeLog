@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.630 2014/01/16 13:18:32 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.631 2014/01/18 01:02:47 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Update PYTHON_TARGETS from 3.2 to 3.3 now that it is stable #474128.
 
   16 Jan 2014; Ultrabug <ultrabug@gentoo.org> make.defaults:
   add new USWGI_PLUGINS USE_EXPAND

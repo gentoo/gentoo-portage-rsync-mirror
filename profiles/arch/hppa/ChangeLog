@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.201 2013/11/30 16:08:05 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.202 2014/01/18 01:03:39 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Drop python targets hacks now that base/ has it #474128.
 
   30 Nov 2013; Jeroen Roovers <jer@gentoo.org> make.defaults:
   Mask dev-lang/python-3.2*, unmask dev-lang/python-3.3* targets (bug #474128).

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/cpio
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.118 2013/02/17 20:32:53 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cpio/ChangeLog,v 1.119 2014/01/18 01:18:03 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> cpio-2.11-r1.ebuild,
+  cpio-2.11.ebuild:
+  Add arm64 love.
 
   17 Feb 2013; Zac Medico <zmedico@gentoo.org> cpio-2.11-r1.ebuild:
   Add ~arm-linux keyword.

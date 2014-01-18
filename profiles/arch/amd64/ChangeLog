@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.239 2014/01/07 12:17:23 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.240 2014/01/18 01:03:24 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Drop python targets hacks now that base/ has it #474128.
 
   07 Jan 2014; Tom Wijsman <TomWij@gentoo.org> x32/parent:
   [QA] Removed comment from x32/parent per PMS for bug #470094.
