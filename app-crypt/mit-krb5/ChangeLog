@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/mit-krb5
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.394 2013/11/18 16:28:11 eras Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.395 2014/01/18 21:08:09 eras Exp $
+
+*mit-krb5-1.12.1 (18 Jan 2014)
+
+  18 Jan 2014; Eray Aslan <eras@gentoo.org> +mit-krb5-1.12.1.ebuild:
+  Version bump
 
   18 Nov 2013; Eray Aslan <eras@gentoo.org> -files/CVE-2002-2443.patch,
   -mit-krb5-1.11.2-r1.ebuild, -mit-krb5-1.11.3.ebuild:
