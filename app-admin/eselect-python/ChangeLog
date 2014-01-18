@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-python
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.79 2013/12/10 17:45:14 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.80 2014/01/18 05:30:07 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  eselect-python-20111108.ebuild, eselect-python-20131210.ebuild,
+  eselect-python-99999999.ebuild:
+  Add arm64 love.
 
 *eselect-python-20131210 (10 Dec 2013)
 

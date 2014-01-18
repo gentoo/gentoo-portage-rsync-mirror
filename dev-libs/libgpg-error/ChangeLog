@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgpg-error
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.99 2013/12/05 12:41:29 haubi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.101 2014/01/18 05:05:38 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libgpg-error-1.12.ebuild:
+  Add arm64 love.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libgpg-error-1.12.ebuild:
+  Mark m68k/s390/sh stable.
 
   05 Dec 2013; Michael Haubenwallner <haubi@gentoo.org>
   libgpg-error-1.12.ebuild:

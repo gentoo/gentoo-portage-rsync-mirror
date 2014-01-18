@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.6.0-r1.ebuild,v 1.13 2013/07/28 11:08:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/tree-1.6.0-r1.ebuild,v 1.14 2014/01/18 05:27:18 vapier Exp $
 
 EAPI=4
 inherit toolchain-funcs flag-o-matic bash-completion-r1
@@ -11,7 +11,7 @@ SRC_URI="ftp://mama.indstate.edu/linux/tree/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="!=sci-biology/meme-4.8.1"

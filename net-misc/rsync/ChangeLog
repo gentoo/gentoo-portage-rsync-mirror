@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rsync
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.248 2013/10/10 20:40:40 chainsaw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.249 2014/01/18 05:09:48 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> rsync-3.0.9-r3.ebuild,
+  rsync-3.1.0.ebuild:
+  Add arm64 love.
 
 *rsync-3.1.0 (10 Oct 2013)
 

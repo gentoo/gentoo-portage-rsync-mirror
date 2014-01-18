@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/makedev
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/ChangeLog,v 1.14 2011/06/25 16:35:50 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/makedev/ChangeLog,v 1.15 2014/01/18 05:09:40 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> makedev-3.23.1.ebuild:
+  Add arm64 love.
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> makedev-3.23.1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #369085

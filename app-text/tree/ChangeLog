@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.106 2013/07/28 11:08:58 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.107 2014/01/18 05:27:18 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> tree-1.6.0-r1.ebuild:
+  Add arm64 love.
 
   28 Jul 2013; Fabian Groffen <grobian@gentoo.org> tree-1.6.0-r1.ebuild:
   Fix compilation on non-glibc platforms, bug #433972

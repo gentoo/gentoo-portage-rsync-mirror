@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.130 2014/01/04 17:48:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.131 2014/01/18 05:07:32 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> grep-2.14.ebuild,
+  grep-2.15-r1.ebuild, grep-2.16.ebuild:
+  Add arm64 love.
 
   04 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -grep-2.5.4-r1.ebuild,
   -grep-2.6.3.ebuild, -grep-2.7.ebuild, -grep-2.8.ebuild, -grep-2.9.ebuild,

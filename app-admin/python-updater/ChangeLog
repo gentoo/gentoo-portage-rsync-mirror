@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/python-updater
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.89 2013/08/07 13:36:20 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.90 2014/01/18 05:25:06 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> python-updater-0.11.ebuild:
+  Mark m68k/sh stable.
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> python-updater-0.11.ebuild:
   Stable for x86, wrt bug #477950

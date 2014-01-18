@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.163 2014/01/15 09:35:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.165 2014/01/18 05:29:02 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> diffstat-1.58.ebuild:
+  Add arm64 love.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> diffstat-1.58.ebuild:
+  Mark s390/sh stable.
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> diffstat-1.58.ebuild:
   Stable for ia64, wrt bug #495664

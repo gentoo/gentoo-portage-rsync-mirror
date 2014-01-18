@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.205 2014/01/17 05:41:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.206 2014/01/18 05:07:01 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-pages-3.55.ebuild,
+  man-pages-3.56.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-pages-3.55.ebuild:
   Stabilize for all.

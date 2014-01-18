@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/popt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.101 2013/02/19 03:05:09 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/ChangeLog,v 1.102 2014/01/18 05:05:46 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> popt-1.16-r1.ebuild:
+  Add arm64 love.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> popt-1.16-r1.ebuild:
   Add ~arm-linux and ~x86-linux keywords.

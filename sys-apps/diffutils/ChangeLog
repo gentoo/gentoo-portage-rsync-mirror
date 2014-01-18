@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/diffutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.92 2014/01/07 08:17:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/ChangeLog,v 1.93 2014/01/18 05:12:18 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> diffutils-3.3.ebuild:
+  Add arm64 love.
 
   07 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
   -diffutils-2.8.7-r2.ebuild, -diffutils-2.9.ebuild, -diffutils-2.9-r1.ebuild,
