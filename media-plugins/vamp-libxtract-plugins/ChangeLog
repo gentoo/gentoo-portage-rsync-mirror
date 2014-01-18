@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vamp-libxtract-plugins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-libxtract-plugins/ChangeLog,v 1.9 2010/12/30 12:58:31 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-libxtract-plugins/ChangeLog,v 1.10 2014/01/18 12:56:17 aballier Exp $
+
+*vamp-libxtract-plugins-0.6.6.20121204 (18 Jan 2014)
+
+  18 Jan 2014; Alexis Ballier <aballier@gentoo.org>
+  +vamp-libxtract-plugins-0.6.6.20121204.ebuild:
+  version bump
 
   30 Dec 2010; Alexis Ballier <aballier@gentoo.org>
   vamp-libxtract-plugins-0.4.5.20081202.ebuild:
