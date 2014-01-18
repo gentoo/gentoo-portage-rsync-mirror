@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.227 2014/01/06 15:56:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.228 2014/01/18 04:23:16 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libpcre-8.33-r1.ebuild,
+  libpcre-8.33.ebuild, libpcre-8.34.ebuild:
+  Add arm64 love.
 
   06 Jan 2014; Mike Frysinger <vapier@gentoo.org> libpcre-8.34.ebuild:
   Use multilib_build_binaries helper #489580 by Thomas Sachau.

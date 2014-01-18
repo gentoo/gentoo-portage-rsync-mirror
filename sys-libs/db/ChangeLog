@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.343 2014/01/15 07:44:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.345 2014/01/18 04:14:32 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> db-1.85-r3.ebuild,
+  db-3.2.9_p2.ebuild, db-4.2.52_p5-r1.ebuild, db-4.3.29_p1-r1.ebuild,
+  db-4.4.20_p4-r1.ebuild, db-4.5.20_p2-r1.ebuild, db-4.6.21_p4.ebuild,
+  db-4.7.25_p4.ebuild, db-4.8.30.ebuild, db-5.0.32.ebuild, db-5.1.29.ebuild,
+  db-5.2.42.ebuild, db-5.3.21.ebuild, db-5.3.28.ebuild, db-6.0.20-r1.ebuild:
+  Add arm64 love.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> db-4.8.30.ebuild:
+  Mark m68k/s390/sh stable.
 
 *db-5.3.28 (15 Jan 2014)
 

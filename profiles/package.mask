@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15341 2014/01/17 01:41:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15342 2014/01/18 04:20:40 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (18 Jan 2014)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-34
 
 # Michael Sterrett <mr_bones_@gentoo.org> (16 Jan 2014)
 # testing mask for 3.5.x releases
@@ -425,11 +430,6 @@ kde-base/solid
 # Masked for testing
 ~dev-util/boost-build-1.55.0
 ~dev-libs/boost-1.55.0
-
-# Mike Gilbert <floppym@gentoo.org> (12 Nov 2013)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-33
 
 # Ben de Groot <yngwin@gentoo.org> (11 Nov 2013)
 # Mask older roboto versions to give users a regular upgrade path

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1750.3.ebuild,v 1.2 2014/01/03 07:32:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-33.0.1750.29.ebuild,v 1.1 2014/01/18 04:10:59 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,7 +20,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="aura bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux system-sqlite +tcmalloc"
+IUSE="aura bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -32,7 +32,6 @@ QA_PRESTRIPPED=".*\.nexe"
 RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
 	app-arch/snappy:=
-	system-sqlite? ( dev-db/sqlite:3 )
 	cups? (
 		dev-libs/libgcrypt:=
 		>=net-print/cups-1.3.11:=
@@ -55,6 +54,8 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	media-libs/harfbuzz:=[icu(+)]
 	>=media-libs/libjpeg-turbo-1.2.0-r1:=
 	media-libs/libpng:0=
+	>=media-libs/libvpx-1.3.0:=
+	>=media-libs/libwebp-0.4.0:=
 	media-libs/opus:=
 	media-libs/speex:=
 	pulseaudio? ( media-sound/pulseaudio:= )
@@ -202,8 +203,6 @@ src_prepare() {
 		'third_party/libphonenumber' \
 		'third_party/libsrtp' \
 		'third_party/libusb' \
-		'third_party/libvpx' \
-		'third_party/libwebp' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
 		'third_party/libyuv' \
@@ -265,10 +264,8 @@ src_configure() {
 	# TODO: use_system_hunspell (upstream changes needed).
 	# TODO: use_system_libsrtp (bug #459932).
 	# TODO: use_system_libusb (http://crbug.com/266149).
-	# TODO: use_system_libvpx (bug #487926).
 	# TODO: use_system_ssl (http://crbug.com/58087).
 	# TODO: use_system_sqlite (http://crbug.com/22208).
-	# TODO: use_system_libwebp (http://crbug.com/288019).
 	myconf+="
 		-Duse_system_bzip2=1
 		-Duse_system_flac=1
@@ -278,6 +275,8 @@ src_configure() {
 		-Duse_system_libevent=1
 		-Duse_system_libjpeg=1
 		-Duse_system_libpng=1
+		-Duse_system_libvpx=1
+		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_libxslt=1
 		-Duse_system_minizip=1
@@ -308,15 +307,6 @@ src_configure() {
 		$(gyp_use kerberos)
 		$(gyp_use pulseaudio)
 		$(gyp_use tcmalloc linux_use_tcmalloc)"
-
-	if use system-sqlite; then
-		elog "Enabling system sqlite. WebSQL - http://www.w3.org/TR/webdatabase/"
-		elog "will not work. Please report sites broken by this"
-		elog "to https://bugs.gentoo.org"
-		myconf+="
-			-Duse_system_sqlite=1
-			-Denable_sql_database=0"
-	fi
 
 	# Use explicit library dependencies instead of dlopen.
 	# This makes breakages easier to detect by revdep-rebuild.
@@ -521,7 +511,10 @@ chromium_test() {
 		(( exitstatus |= st ))
 	}
 
-	runtest out/Release/base_unittests
+	local excluded_base_unittests=(
+		"OutOfMemoryDeathTest.ViaSharedLibraries" # bug #497512
+	)
+	runtest out/Release/base_unittests "${excluded_base_unittests[@]}"
 	runtest out/Release/cacheinvalidation_unittests
 
 	local excluded_content_unittests=(

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailbase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.92 2014/01/08 06:41:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/ChangeLog,v 1.93 2014/01/18 04:15:22 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> mailbase-1.1.ebuild:
+  Add arm64 love.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> mailbase-1.ebuild:
   Inherit the user eclass for enewuser/etc...

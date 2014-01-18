@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r3.ebuild,v 1.17 2012/11/25 19:23:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85-r3.ebuild,v 1.18 2014/01/18 04:14:32 vapier Exp $
 
 inherit eutils toolchain-funcs multilib multilib
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.oracle.com/berkeley-db/db.${PV}.tar.gz
 
 LICENSE="Sleepycat"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 DEPEND=""

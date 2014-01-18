@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.6.21_p4.ebuild,v 1.15 2012/11/25 19:23:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.6.21_p4.ebuild,v 1.16 2014/01/18 04:14:32 vapier Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools multilib
 
@@ -26,7 +26,7 @@ done
 
 LICENSE="Sleepycat"
 SLOT="4.6"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="tcl java doc cxx rpc"
 
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )

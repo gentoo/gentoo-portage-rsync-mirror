@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.134 2014/01/14 21:13:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.135 2014/01/18 04:03:09 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pambase-20120417-r1.ebuild,
+  pambase-20120417-r3.ebuild, pambase-20120417.ebuild:
+  Mark m68k/s390/sh stable.
 
   14 Jan 2014; Pacho Ramos <pacho@gentoo.org> pambase-20120417-r3.ebuild:
   ia64 stable, bug #491034 (thanks to Emeric Maschino for testing)
