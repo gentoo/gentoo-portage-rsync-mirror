@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha17.ebuild,v 1.12 2014/01/18 22:21:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha17.ebuild,v 1.13 2014/01/18 22:33:34 vapier Exp $
 
 EAPI=5
 
-inherit fcaps multilib eutils toolchain-funcs flag-o-matic
+inherit fcaps multilib eutils toolchain-funcs flag-o-matic gnuconfig
 
 MY_P="${P/_alpha/a}"
 
@@ -32,8 +32,10 @@ FILECAPS=(
 )
 
 src_prepare() {
+	gnuconfig_update
+
 	# Remove profiled make files.
-	rm -f $(find . -name '*_p.mk') || die "rm profiled"
+	rm -f *_p.mk || die "rm profiled"
 
 	# Adjusting hardcoded paths.
 	sed -i -e 's:opt/schily:usr:' \

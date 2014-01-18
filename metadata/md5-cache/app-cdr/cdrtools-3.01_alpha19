@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare
-DEPEND=acl? ( virtual/acl ) nls? ( virtual/libintl ) !app-cdr/cdrkit nls? ( >=sys-devel/gettext-0.18.1.1 ) filecaps? ( sys-libs/libcap )
+DEPEND=acl? ( virtual/acl ) nls? ( virtual/libintl ) !app-cdr/cdrkit nls? ( >=sys-devel/gettext-0.18.1.1 ) filecaps? ( sys-libs/libcap ) sys-devel/gnuconfig
 DESCRIPTION=A set of tools for CD/DVD reading and recording, including cdrecord
 EAPI=5
 HOMEPAGE=http://cdrecord.berlios.de/private/cdrecord.html
@@ -9,5 +9,5 @@ LICENSE=GPL-2 LGPL-2.1 CDDL-Schily
 RDEPEND=acl? ( virtual/acl ) nls? ( virtual/libintl ) !app-cdr/cdrkit
 SLOT=0
 SRC_URI=ftp://ftp.berlios.de/pub/cdrecord/alpha//cdrtools-3.01a19.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=dcbefc12651fbc2d5ab6a0810554e0df
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=15bc360d09b07505b59d1900b3e81581
