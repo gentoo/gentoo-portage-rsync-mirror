@@ -1,6 +1,9 @@
 # ChangeLog for virtual/acl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/acl/ChangeLog,v 1.6 2013/03/22 16:03:21 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/acl/ChangeLog,v 1.7 2014/01/18 01:42:41 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> acl-0-r1.ebuild:
+  Add arm64 love.
 
   22 Mar 2013; Jeroen Roovers <jer@gentoo.org> acl-0-r1.ebuild:
   Stable for HPPA (bug #212517).
@@ -25,4 +28,3 @@
   +metadata.xml:
   Initial import of an acl virtual to depend on the proper packages for
   Linux and FreeBSD.
-

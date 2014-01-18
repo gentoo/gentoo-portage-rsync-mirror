@@ -1,6 +1,12 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.408 2014/01/16 17:45:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.409 2014/01/18 02:01:21 redlizard Exp $
+
+  18 Jan 2014; Ruud Koolen <redlizard@gentoo.org> eapi, make.defaults,
+  package.mask, packages, package.use.mask, parent, use.force, use.mask,
+  use.mask.stable:
+  Moved base prefix profile content to ../features/prefix, to be shared with
+  prefix-standalone profiles.
 
   16 Jan 2014; Jeroen Roovers <jer@gentoo.org> bsd/package.use.mask,
   linux/package.use.mask:

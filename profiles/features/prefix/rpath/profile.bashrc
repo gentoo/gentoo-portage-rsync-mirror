@@ -1,5 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/profile.bashrc,v 1.5 2012/11/10 09:46:11 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/prefix/rpath/profile.bashrc,v 1.1 2014/01/18 02:01:20 redlizard Exp $
 
 # Hack to avoid every package that uses libiconv/gettext
 # install a charset.alias that will collide with libiconv's one

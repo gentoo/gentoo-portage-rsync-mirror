@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.35 2014/01/03 13:47:47 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.36 2014/01/18 01:43:34 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pigz-2.3.1.ebuild:
+  Add arm64 love.
 
   03 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> -pigz-2.2.4.ebuild:
   Security cleanup, wrt bug #457794

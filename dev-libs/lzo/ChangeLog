@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.76 2013/07/01 18:54:34 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.77 2014/01/18 01:50:39 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> lzo-2.06.ebuild:
+  Add arm64 love.
 
   01 Jul 2013; Fabian Groffen <grobian@gentoo.org> lzo-2.06.ebuild:
   Marked ~x64-solaris

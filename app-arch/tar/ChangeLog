@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.195 2014/01/10 08:05:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.196 2014/01/18 01:55:14 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> tar-1.26-r1.ebuild,
+  tar-1.27-r2.ebuild, tar-1.27.1-r1.ebuild, tar-1.27.1.ebuild:
+  Add arm64 love.
 
 *tar-1.27.1-r1 (10 Jan 2014)
 

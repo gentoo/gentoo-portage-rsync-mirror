@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.40 2012/08/14 18:46:49 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.41 2014/01/18 01:50:41 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> lzop-1.03.ebuild:
+  Add arm64 love.
 
   14 Aug 2012; Mike Frysinger <vapier@gentoo.org> lzop-1.03.ebuild:
   Mark arm stable.

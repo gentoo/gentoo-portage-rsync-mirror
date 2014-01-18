@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.111 2014/01/16 01:41:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.112 2014/01/18 01:43:22 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> bzip2-1.0.6-r3.ebuild,
+  bzip2-1.0.6-r4.ebuild, bzip2-1.0.6-r6.ebuild:
+  Add arm64 love.
 
 *bzip2-1.0.6-r6 (16 Jan 2014)
 
