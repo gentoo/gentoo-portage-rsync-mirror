@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.1.0.ebuild,v 1.1 2013/09/20 16:52:49 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-6.1.0.ebuild,v 1.2 2014/01/18 10:25:23 vapier Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ else
 	MY_P="${MY_P/_beta/-beta}"
 	MY_P="${MY_P/_rc/-rc}"
 	SRC_URI="http://roy.marples.name/downloads/${PN}/${MY_P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 	S="${WORKDIR}/${MY_P}"
 fi
 

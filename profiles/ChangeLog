@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8543 2014/01/18 04:20:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8544 2014/01/18 10:13:52 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jan 2014; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove mask for Rails 2.3 now that the packages have been removed.
 
   18 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Update dev channel mask for chromium-34
