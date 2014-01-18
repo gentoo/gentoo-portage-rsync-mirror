@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activesupport
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.241 2013/12/25 09:43:57 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.242 2014/01/18 09:55:26 graaff Exp $
+
+  18 Jan 2014; Hans de Graaff <graaff@gentoo.org> -activesupport-2.3.18.ebuild:
+  Remove masked version.
 
   25 Dec 2013; Hans de Graaff <graaff@gentoo.org> activesupport-4.0.2.ebuild:
   Add ruby20.

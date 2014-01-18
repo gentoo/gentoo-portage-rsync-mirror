@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r5.ebuild,v 1.5 2014/01/18 04:53:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/sysvinit-2.88-r5.ebuild,v 1.6 2014/01/18 09:32:29 vapier Exp $
 
 EAPI="4"
 
@@ -41,6 +41,7 @@ src_prepare() {
 	local insert=()
 	use ppc && insert=( '#psc0:12345:respawn:/sbin/agetty 115200 ttyPSC0 linux' )
 	use arm && insert=( '#f0:12345:respawn:/sbin/agetty 9600 ttyFB0 vt100' )
+	use arm64 && insert=( 'f0:12345:respawn:/sbin/agetty 9600 ttyAMA0 vt100' )
 	use hppa && insert=( 'b0:12345:respawn:/sbin/agetty 9600 ttyB0 vt100' )
 	use s390 && insert=( 's0:12345:respawn:/sbin/agetty 38400 console' )
 	if use ibm ; then

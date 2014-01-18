@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.253 2014/01/02 07:59:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.254 2014/01/18 09:54:39 graaff Exp $
+
+  18 Jan 2014; Hans de Graaff <graaff@gentoo.org> -activerecord-2.3.18.ebuild:
+  Remove masked version.
 
   02 Jan 2014; Hans de Graaff <graaff@gentoo.org> activerecord-2.3.18.ebuild,
   activerecord-3.2.16.ebuild:
