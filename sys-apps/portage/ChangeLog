@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1378 2014/01/17 06:16:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1379 2014/01/18 11:37:44 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> portage-2.2.7.ebuild,
+  portage-2.2.8.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> portage-2.1.11.62.ebuild,
   portage-2.1.12.2.ebuild, portage-2.2.1.ebuild, portage-2.2.7.ebuild:

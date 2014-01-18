@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook-xml-dtd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.96 2013/11/12 16:57:52 haubi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/ChangeLog,v 1.97 2014/01/18 11:46:02 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  docbook-xml-dtd-4.1.2-r6.ebuild, docbook-xml-dtd-4.2-r2.ebuild,
+  docbook-xml-dtd-4.3-r1.ebuild, docbook-xml-dtd-4.4-r2.ebuild,
+  docbook-xml-dtd-4.5-r1.ebuild:
+  Add arm64 love.
 
   12 Nov 2013; Michael Haubenwallner <haubi@gentoo.org>
   docbook-xml-dtd-4.1.2-r6.ebuild, docbook-xml-dtd-4.5-r1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/build-docbook-catalog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.44 2013/11/15 19:54:16 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.45 2014/01/18 11:46:00 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  build-docbook-catalog-1.19.1-r1.ebuild, build-docbook-catalog-1.19.1.ebuild,
+  build-docbook-catalog-1.20.ebuild:
+  Add arm64 love.
 
   15 Nov 2013; Christoph Junghans <ottxor@gentoo.org>
   build-docbook-catalog-1.20.ebuild:
