@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-3-r1.ebuild,v 1.8 2013/12/23 09:17:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-3-r1.ebuild,v 1.9 2014/01/18 04:33:54 vapier Exp $
 
 EAPI="3"
 inherit eutils systemd
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="unicode"
 
 RDEPEND=">=dev-libs/libpcre-3.4"

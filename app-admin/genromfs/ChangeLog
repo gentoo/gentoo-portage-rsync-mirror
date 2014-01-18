@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/genromfs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.19 2012/10/04 07:46:22 kensington Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/genromfs/ChangeLog,v 1.20 2014/01/18 05:00:53 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> genromfs-0.5.2.ebuild:
+  Add arm64 love.
 
   04 Oct 2012; Michael Palimaka <kensington@gentoo.org>
   -files/genromfs-0.5.1-build.patch, -genromfs-0.5.1.ebuild:

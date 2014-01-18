@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.33 2014/01/16 19:29:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.34 2014/01/18 04:53:00 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> rpcbind-0.2.0-r1.ebuild,
+  rpcbind-9999.ebuild:
+  Add arm64 love.
 
   16 Jan 2014; Mike Frysinger <vapier@gentoo.org> rpcbind-0.2.0-r1.ebuild:
   Mark s390/sh stable.

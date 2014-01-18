@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/glib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.588 2013/12/23 22:40:42 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.590 2014/01/18 04:44:00 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> glib-2.36.4-r1.ebuild,
+  glib-2.38.2.ebuild:
+  Add arm64 love.
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> glib-2.34.3-r1.ebuild,
+  glib-2.36.4-r1.ebuild:
+  Mark m68k/s390/sh stable.
 
   23 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
   Restore metadata.xml upstream tag.

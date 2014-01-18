@@ -1,6 +1,9 @@
 # ChangeLog for virtual/pager
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.14 2014/01/17 05:40:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.15 2014/01/18 04:37:19 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pager-0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> pager-0.ebuild:
   Mark m68k/s390/sh stable.

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.3-r1.ebuild,v 1.6 2013/11/14 04:57:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.34.3-r1.ebuild,v 1.7 2014/01/18 04:39:44 vapier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_{6,7} )
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI}
 LICENSE="LGPL-2+"
 SLOT="2"
 IUSE="debug fam kernel_linux selinux static-libs systemtap test utils xattr"
-KEYWORDS="alpha ~amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="alpha ~amd64 arm hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 
 RDEPEND="virtual/libiconv
 	virtual/libffi

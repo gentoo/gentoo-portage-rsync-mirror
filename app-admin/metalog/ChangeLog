@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.122 2013/12/23 09:17:49 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.123 2014/01/18 04:33:54 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> metalog-3-r1.ebuild:
+  Add arm64 love.
 
   23 Dec 2013; Mike Frysinger <vapier@gentoo.org> metalog-3-r1.ebuild:
   Mark alpha/ia64/sparc stable #486310.

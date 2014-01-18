@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sed
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.123 2012/12/25 03:33:00 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.124 2014/01/18 04:37:11 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> sed-4.2.1-r1.ebuild,
+  sed-4.2.2.ebuild:
+  Add arm64 love.
 
 *sed-4.2.2 (25 Dec 2012)
 

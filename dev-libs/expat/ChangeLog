@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.161 2014/01/18 03:57:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.162 2014/01/18 04:35:28 vapier Exp $
+
+  18 Jan 2014; Mike Frysinger <vapier@gentoo.org> expat-2.1.0-r3.ebuild:
+  Add arm64 love.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> expat-2.1.0-r3.ebuild:
   Mark m68k/s390/sh stable.

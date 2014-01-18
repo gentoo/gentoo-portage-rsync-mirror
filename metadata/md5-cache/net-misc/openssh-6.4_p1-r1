@@ -4,10 +4,10 @@ DESCRIPTION=Port of OpenBSD's free SSH release
 EAPI=4
 HOMEPAGE=http://www.openssh.org/
 IUSE=bindist +hpn kerberos ldap ldns libedit pam selinux skey static tcpd X X509
-KEYWORDS=~alpha amd64 arm hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux
+KEYWORDS=~alpha amd64 arm arm64 hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~arm-linux ~x86-linux
 LICENSE=BSD GPL-2
 RDEPEND=!static? ( selinux? ( >=sys-libs/libselinux-1.28 ) skey? ( >=sys-auth/skey-1.1.5-r1 ) libedit? ( dev-libs/libedit ) >=dev-libs/openssl-0.9.6d:0[bindist=] dev-libs/openssl >=sys-libs/zlib-1.2.3 tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) ldns? ( !bindist? ( net-libs/ldns[ecdsa,ssl] ) bindist? ( net-libs/ldns[-ecdsa,ssl] ) ) ) pam? ( virtual/pam ) kerberos? ( virtual/krb5 ) ldap? ( net-nds/openldap ) pam? ( >=sys-auth/pambase-20081028 ) userland_GNU? ( virtual/shadow ) X? ( x11-apps/xauth )
 SLOT=0
 SRC_URI=mirror://openbsd/OpenSSH/portable/openssh-6.4p1.tar.gz hpn? ( mirror://gentoo/openssh-6.3p1-hpnssh14v2.diff.gz ) ldap? ( mirror://gentoo/openssh-lpk-6.3p1-0.3.14.patch.gz ) X509? ( http://roumenpetrov.info/openssh/x509-7.7/openssh-6.4p1+x509-7.7.diff.gz )
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ee6bef8a1c23ef6cfb4c447e23c161ee
+_md5_=9e04bf908684b72ad8afb8a552dfb634
