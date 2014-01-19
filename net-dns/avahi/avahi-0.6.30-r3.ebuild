@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.18 2013/08/03 09:45:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r3.ebuild,v 1.19 2014/01/19 21:27:11 moult Exp $
 
 EAPI="3"
 
@@ -54,7 +54,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	doc? (
 		app-doc/doxygen
-		mono? ( >=virtual/monodoc-1.1.8 )
+		mono? ( >=dev-lang/mono-1.1.8 )
 	)"
 RDEPEND="${COMMON_DEPEND}
 	howl-compat? ( !net-misc/howl )

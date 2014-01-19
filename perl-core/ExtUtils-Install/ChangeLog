@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-Install
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Install/ChangeLog,v 1.32 2013/12/14 18:17:38 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Install/ChangeLog,v 1.33 2014/01/19 21:08:51 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  ExtUtils-Install-1.540.0.ebuild:
+  Add arm64 love.
 
   14 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -ExtUtils-Install-1.54.ebuild:
   drop old

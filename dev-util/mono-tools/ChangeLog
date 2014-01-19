@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mono-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.88 2012/05/08 00:57:21 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.89 2014/01/19 21:21:02 moult Exp $
+
+  19 Jan 2014; Dion Moult <moult@gentoo.org> mono-tools-2.10.ebuild:
+  Change virtual/monodoc dep to dev-lang/mono as former is treecleaned (bug
+  471180)
 
   08 May 2012; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   webkit is now global wrt #285743
@@ -397,4 +401,3 @@
   +mono-tools-1.1.9.ebuild:
   First commit. Includes the GUI browser previously found in the monodoc
   package, plus a few other programs.
-

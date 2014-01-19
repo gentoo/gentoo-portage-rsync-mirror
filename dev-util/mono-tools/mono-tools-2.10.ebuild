@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.10.ebuild,v 1.7 2012/05/04 17:51:44 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-2.10.ebuild,v 1.8 2014/01/19 21:21:02 moult Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="+webkit gtkhtml"
 
-RDEPEND="=virtual/monodoc-${GO_MONO_REL_PV}*
+RDEPEND="=dev-lang/mono-${GO_MONO_REL_PV}*
 	>=dev-dotnet/gtk-sharp-2.12.6:2
 	>=dev-dotnet/glade-sharp-2.12.6:2
 	>=dev-dotnet/gconf-sharp-2:2

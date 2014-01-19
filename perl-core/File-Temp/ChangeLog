@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/File-Temp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.61 2013/12/08 19:55:51 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Temp/ChangeLog,v 1.62 2014/01/19 21:03:23 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> File-Temp-0.220.0.ebuild,
+  File-Temp-0.230.100.ebuild, File-Temp-0.230.400.ebuild:
+  Add arm64 love.
 
   08 Dec 2013; Fabian Groffen <grobian@gentoo.org> File-Temp-0.230.400.ebuild:
   Add missing Prefix keywords

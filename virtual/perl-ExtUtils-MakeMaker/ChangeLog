@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-ExtUtils-MakeMaker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.67 2013/11/25 12:05:45 civil Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/ChangeLog,v 1.68 2014/01/19 21:09:28 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-ExtUtils-MakeMaker-6.640.0.ebuild,
+  perl-ExtUtils-MakeMaker-6.720.0.ebuild,
+  perl-ExtUtils-MakeMaker-6.740.0.ebuild,
+  perl-ExtUtils-MakeMaker-6.820.0.ebuild:
+  Add arm64 love.
 
 *perl-ExtUtils-MakeMaker-6.820.0 (25 Nov 2013)
 

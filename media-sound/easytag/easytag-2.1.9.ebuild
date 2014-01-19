@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.9.ebuild,v 1.1 2014/01/19 14:32:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.9.ebuild,v 1.2 2014/01/19 21:23:46 polynomial-c Exp $
 
 EAPI=5
 inherit eutils autotools gnome.org fdo-mime
@@ -30,6 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.24:2
 		media-libs/libvorbis
 		)"
 DEPEND="${RDEPEND}
+	app-text/yelp-tools
 	dev-util/intltool
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
