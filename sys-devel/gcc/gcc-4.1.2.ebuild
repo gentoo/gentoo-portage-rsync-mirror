@@ -1,12 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.2.ebuild,v 1.36 2013/12/28 01:38:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.1.2.ebuild,v 1.37 2014/01/19 01:51:34 dirtyepic Exp $
+
+EAPI="2"
 
 PATCH_VER="1.5"
 UCLIBC_VER="1.0"
 D_VER="0.24"
 
-inherit toolchain
+inherit eutils toolchain
 
 DESCRIPTION="The GNU Compiler Collection"
 
@@ -19,8 +21,8 @@ DEPEND="${RDEPEND}
 	ppc64? ( >=${CATEGORY}/binutils-2.17 )
 	>=${CATEGORY}/binutils-2.15.94"
 
-src_unpack() {
-	toolchain_src_unpack
+src_prepare() {
+	toolchain_src_prepare
 
 	use vanilla && return 0
 
