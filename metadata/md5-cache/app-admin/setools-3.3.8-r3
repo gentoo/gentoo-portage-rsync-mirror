@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup
+DEPEND=>=sys-libs/libsepol-2.1.4 sys-libs/libselinux sys-devel/bison sys-devel/flex >=dev-db/sqlite-3.2:3 dev-libs/libxml2:2 virtual/pkgconfig java? ( dev-lang/swig:1 >=virtual/jdk-1.4 ) python? ( dev-lang/swig:1 ) X? ( >=dev-lang/tk-8.4.9 >=gnome-base/libglade-2.0 >=x11-libs/gtk+-2.8:2 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool java? ( >=dev-java/java-config-2.1.9-r1 ) python? ( dev-lang/python )
+DESCRIPTION=SELinux policy tools
+EAPI=2
+HOMEPAGE=http://www.tresys.com/selinux/selinux_policy_tools.shtml
+IUSE=X debug java python elibc_FreeBSD java
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-libs/libsepol-2.1.4 sys-libs/libselinux >=dev-db/sqlite-3.2:3 dev-libs/libxml2:2 java? ( >=virtual/jre-1.4 ) X? ( >=dev-lang/tk-8.4.9 >=dev-tcltk/bwidget-1.8 >=gnome-base/libglade-2.0 >=x11-libs/gtk+-2.8:2 ) java? ( >=dev-java/java-config-2.1.9-r1 ) python? ( dev-lang/python )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://oss.tresys.com/projects/setools/chrome/site/dists/setools-3.3.8/setools-3.3.8.tar.bz2 http://dev.gentoo.org/~swift/patches/setools/setools-3.3.8-01-fedora-patches.tar.gz http://dev.gentoo.org/~swift/patches/setools/setools-3.3.8-02-gentoo-patches.tar.gz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=50c164cb1571dd5db679b6e8d29a86ed

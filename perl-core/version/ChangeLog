@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/version
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.72 2014/01/17 06:12:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/version/ChangeLog,v 1.73 2014/01/19 20:51:02 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> version-0.990.100.ebuild,
+  version-0.990.200.ebuild, version-0.990.300.ebuild, version-0.990.400.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> version-0.940.0.ebuild,
   version-0.990.100.ebuild:

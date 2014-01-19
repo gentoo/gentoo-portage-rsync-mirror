@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.165 2014/01/19 13:46:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.166 2014/01/19 20:36:30 jsbronder Exp $
+
+  19 Jan 2014; Justin Bronder <jsbronder@gentoo.org> -torque-2.4.16.ebuild,
+  -torque-2.4.16-r1.ebuild, -files/0001-fix-parallel-doc-install.patch,
+  -files/0002-fix-implicit-declaration-warnings.patch,
+  -files/0003-disable-automagic-doc-building.patch,
+  -files/disable-automagic-doc-building-2.4.14.patch:
+  cleanup
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> torque-2.5.12-r1.ebuild,
   torque-4.1.5.1-r1.ebuild:

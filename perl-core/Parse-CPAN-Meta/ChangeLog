@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Parse-CPAN-Meta
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Parse-CPAN-Meta/ChangeLog,v 1.45 2013/10/28 06:01:00 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Parse-CPAN-Meta/ChangeLog,v 1.46 2014/01/19 21:01:28 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  Parse-CPAN-Meta-1.440.400.ebuild, Parse-CPAN-Meta-1.440.500.ebuild,
+  Parse-CPAN-Meta-1.440.700.ebuild, Parse-CPAN-Meta-1.440.900.ebuild:
+  Add arm64 love.
 
 *Parse-CPAN-Meta-1.440.900 (28 Oct 2013)
 

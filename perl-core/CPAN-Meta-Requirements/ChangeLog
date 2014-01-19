@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/CPAN-Meta-Requirements
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-Requirements/ChangeLog,v 1.18 2013/10/28 06:19:54 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-Requirements/ChangeLog,v 1.19 2014/01/19 20:51:42 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  CPAN-Meta-Requirements-2.122.0.ebuild, CPAN-Meta-Requirements-2.123.0.ebuild,
+  CPAN-Meta-Requirements-2.125.0.ebuild:
+  Add arm64 love.
 
 *CPAN-Meta-Requirements-2.125.0 (28 Oct 2013)
 
