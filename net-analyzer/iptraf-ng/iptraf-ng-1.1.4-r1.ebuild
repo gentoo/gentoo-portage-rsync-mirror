@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.1.4.ebuild,v 1.1 2013/07/23 18:30:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf-ng/iptraf-ng-1.1.4-r1.ebuild,v 1.1 2014/01/19 14:14:40 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -39,6 +39,8 @@ src_prepare() {
 		-e 's|rvnamed|&-ng|g' \
 		-e 's|RVNAMED|&-NG|g' \
 		src/*.8 || die
+
+	epatch "${FILESDIR}"/${P}-tcplog_flowrate_msg.patch
 }
 
 # configure does not do very much we do not already control
