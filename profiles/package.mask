@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15352 2014/01/19 16:56:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15353 2014/01/19 17:46:35 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Ruppert <idl0r@gentoo.org> (19 Jan 2014)
+# Experimental, for now
+=dev-vcs/gitolite-gentoo-3*
 
 # Dion Moult <moult@gentoo.org> (19 Jan 2014)
 # Mask for removal in 30 days. Packages now depend on dev-lang/mono directly and
