@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glyr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glyr/ChangeLog,v 1.18 2013/05/26 07:41:59 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glyr/ChangeLog,v 1.19 2014/01/19 18:56:06 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> glyr-1.0.1.ebuild:
+  amd64 stable, bug 496018
 
 *glyr-1.0.1 (26 May 2013)
 
@@ -73,5 +76,3 @@
   18 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   +glyr-0_pre20111118.ebuild:
   Initial commit.
-
-
