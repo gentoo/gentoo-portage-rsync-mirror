@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1125 2014/01/18 15:06:56 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1126 2014/01/19 08:23:36 slyfox Exp $
+
+  19 Jan 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass:
+  Add 'ghc-supports-interpreter' helper to detect interpreter support.
 
   18 Jan 2014; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
   Silence sandbox for /usr/local, bug 498232.

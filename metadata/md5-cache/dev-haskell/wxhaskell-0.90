@@ -9,5 +9,5 @@ LICENSE=wxWinLL-3.1
 RDEPEND=dev-haskell/stm:=[profile?] >=dev-haskell/wxcore-0.90:2.9=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=2.9/0.90
 SRC_URI=mirror://hackage/packages/archive/wx/0.90/wx-0.90.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	2d57c65a8826a1c4234d2de7f1b9f486	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	419a74a0fe876385690dfe3c4281bac7	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=4b6b7e5bd8b2a0431d0a26b1fcb2cdf1
