@@ -1,19 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.0.5.6.ebuild,v 1.2 2013/10/25 18:10:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.1.3.3.ebuild,v 1.1 2014/01/19 21:42:08 cardoe Exp $
 
 EAPI=5
 
-#BACKPORTS=b8430867
+#BACKPORTS=062ad8b2
 AUTOTOOLIZE=yes
 
 MY_P="${P/_rc/-rc}"
 
-PYTHON_DEPEND="python? 2:2.5"
-#RESTRICT_PYTHON_ABIS="3.*"
-#SUPPORT_PYTHON_ABIS="1"
+PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils python user autotools linux-info systemd
+inherit eutils python-single-r1 user autotools linux-info systemd readme.gentoo
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-2
@@ -23,10 +21,10 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://libvirt.org/sources/stable_updates/${MY_P}.tar.gz
-		ftp://libvirt.org/libvirt/stable_updates/${MY_P}.tar.gz
+		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
 		${BACKPORTS:+
 			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-${BACKPORTS}.tar.xz}"
-	KEYWORDS="amd64 x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 S="${WORKDIR}/${P%_rc*}"
 
@@ -47,7 +45,8 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 	virtualbox? ( libvirtd )
 	xen? ( libvirtd )
 	virt-network? ( libvirtd )
-	firewalld? ( virt-network )"
+	firewalld? ( virt-network )
+	python? ( ${PYTHON_REQUIRED_USE} )"
 
 # gettext.sh command is used by the libvirt command wrappers, and it's
 # non-optional, so put it into RDEPEND.
@@ -86,6 +85,7 @@ RDEPEND="sys-libs/readline
 	)
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	policykit? ( >=sys-auth/polkit-0.9 )
+	python? ( ${PYTHON_DEPS} )
 	qemu? (
 		>=app-emulation/qemu-0.13.0
 		dev-libs/yajl
@@ -109,9 +109,18 @@ RDEPEND="sys-libs/readline
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1
-	dev-libs/libxslt
 	dev-lang/perl
-	=dev-lang/python-2*"
+	dev-libs/libxslt"
+
+DOC_CONTENTS="For the basic networking support (bridged and routed networks)
+you don't need any extra software. For more complex network modes
+including but not limited to NATed network, you can enable the
+'virt-network' USE flag.\n\n
+If you are using dnsmasq on your system, you will have
+to configure /etc/dnsmasq.conf to enable the following settings:\n\n
+ bind-interfaces\n
+ interface or except-interface\n\n
+Otherwise you might have issues with your existing DNS server."
 
 LXC_CONFIG_CHECK="
 	~CGROUPS
@@ -130,10 +139,12 @@ LXC_CONFIG_CHECK="
 	~IPC_NS
 	~PID_NS
 	~NET_NS
+	~USER_NS
 	~DEVPTS_MULTIPLE_INSTANCES
 	~VETH
 	~MACVLAN
 	~POSIX_MQUEUE
+	~SECURITYFS
 	~!GRKERNSEC_CHROOT_MOUNT
 	~!GRKERNSEC_CHROOT_DOUBLE
 	~!GRKERNSEC_CHROOT_PIVOT
@@ -150,12 +161,11 @@ VIRTNET_CONFIG_CHECK="
 	~NETFILTER_XT_MARK
 "
 
-MACVTAP_CONFIG_CHECK="~MACVTAP"
+MACVTAP_CONFIG_CHECK=" ~MACVTAP"
+
+LVM_CONFIG_CHECK=" ~BLK_DEV_DM ~DM_SNAPSHOT ~DM_MULTIPATH"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-
 	enewgroup qemu 77
 	enewuser qemu 77 -1 -1 qemu kvm
 
@@ -167,14 +177,17 @@ pkg_setup() {
 		gpasswd -a qemu kvm
 	fi
 
+	python-single-r1_pkg_setup
+
 	# Handle specific kernel versions for different features
 	kernel_is lt 3 6 && LXC_CONFIG_CHECK+=" ~CGROUP_MEM_RES_CTLR"
 	kernel_is ge 3 6 &&	LXC_CONFIG_CHECK+=" ~MEMCG ~MEMCG_SWAP ~MEMCG_KMEM"
 
 	CONFIG_CHECK=""
 	use fuse && CONFIG_CHECK+=" ~FUSE_FS"
+	use lvm && CONFIG_CHECK+="${LVM_CONFIG_CHECK}"
 	use lxc && CONFIG_CHECK+="${LXC_CONFIG_CHECK}"
-	use macvtap && CONFIG_CHECK+="${MACVTAP}"
+	use macvtap && CONFIG_CHECK+="${MACVTAP_CONFIG_CHECK}"
 	use virt-network && CONFIG_CHECK+="${VIRTNET_CONFIG_CHECK}"
 	if [[ -n ${CONFIG_CHECK} ]]; then
 		linux-info_pkg_setup
@@ -208,7 +221,7 @@ src_prepare() {
 	local iscsi_init=
 	local rbd_init=
 	local firewalld_init=
-	cp "${FILESDIR}/libvirtd.init-r12" "${S}/libvirtd.init"
+	cp "${FILESDIR}/libvirtd.init-r13" "${S}/libvirtd.init"
 	use avahi && avahi_init='avahi-daemon'
 	use iscsi && iscsi_init='iscsid'
 	use rbd && rbd_init='ceph'
@@ -346,8 +359,8 @@ src_install() {
 	emake install \
 		DESTDIR="${D}" \
 		HTML_DIR=/usr/share/doc/${PF}/html \
-		DOCS_DIR=/usr/share/doc/${PF}/python \
-		EXAMPLE_DIR=/usr/share/doc/${PF}/python/examples \
+		DOCS_DIR=/usr/share/doc/${PF} \
+		EXAMPLE_DIR=/usr/share/doc/${PF}/examples \
 		SYSTEMD_UNIT_DIR="$(systemd_get_unitdir)" \
 		|| die "emake install failed"
 
@@ -358,8 +371,13 @@ src_install() {
 
 	newinitd "${S}/libvirtd.init" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
+	newinitd "${FILESDIR}/virtlockd.init" virtlockd || die
 
 	keepdir /var/lib/libvirt/images
+
+	use python && python_optimize
+
+	readme.gentoo_create_doc
 }
 
 pkg_preinst() {
@@ -375,12 +393,11 @@ pkg_preinst() {
 	fi
 
 	# Only sysctl files ending in .conf work
+	dodir /etc/sysctl.d
 	mv "${D}"/usr/lib/sysctl.d/libvirtd.conf "${D}"/etc/sysctl.d/libvirtd.conf
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize libvirt.py
-
 	if [[ -e "${ROOT}"/etc/libvirt/qemu/networks/default.xml ]]; then
 		touch "${ROOT}"/etc/libvirt/qemu/networks/default.xml
 	fi
@@ -407,27 +424,10 @@ pkg_postinst() {
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
-	elog
-	elog "For the basic networking support (bridged and routed networks)"
-	elog "you don't need any extra software. For more complex network modes"
-	elog "including but not limited to NATed network, you can enable the"
-	elog "'virt-network' USE flag."
-	elog
-	if has_version net-dns/dnsmasq; then
-		ewarn "If you have a DNS server setup on your machine, you will have"
-		ewarn "to configure /etc/dnsmasq.conf to enable the following settings: "
-		ewarn " bind-interfaces"
-		ewarn " interface or except-interface"
-		ewarn
-		ewarn "Otherwise you might have issues with your existing DNS server."
-	fi
+	readme.gentoo_print_elog
 
 	if use caps && use qemu; then
 		elog "libvirt will now start qemu/kvm VMs with non-root privileges."
 		elog "Ensure any resources your VMs use are accessible by qemu:qemu"
 	fi
-}
-
-pkg_postrm() {
-	use python && python_mod_cleanup libvirt.py
 }

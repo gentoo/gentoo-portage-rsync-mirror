@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.88 2014/01/14 15:46:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.89 2014/01/19 22:01:35 xmw Exp $
+
+*xpra-0.10.12-r1 (19 Jan 2014)
+
+  19 Jan 2014; Michael Weber <xmw@gentoo.org>
+  +files/xpra-0.10.12-launcher.patch, +xpra-0.10.12-r1.ebuild,
+  -xpra-0.10.12.ebuild:
+  Fix launcher (bug 498278, thanks Torsten Kaiser).
 
 *xpra-0.10.12 (14 Jan 2014)
 
