@@ -2589,7 +2589,6 @@ gnome-base/gnome-extra-apps:games - Install Gnome Games
 gnome-base/gnome-extra-apps:shotwell - Install the media-gfx/shotwell photo manager
 gnome-base/gnome-extra-apps:tracker - Install the app-misc/tracker indexer and the GNOME packages that require it
 gnome-base/gnome-light:automount - Use gnome-base/gvfs[gdu] for automounting of drives in nautilus
-gnome-base/gnome-light:fallback - Install gnome-base/gnome-panel and x11-wm/metacity for the GNOME 3 fallback mode
 gnome-base/gnome-light:gnome-shell - Install gnome-base/gnome-shell and x11-wm/mutter for the standard GNOME 3 desktop mode
 gnome-base/gnome-panel:bonobo - Enable Bonobo compatibility modules for applets still not ported to DBUS.
 gnome-base/gnome-session:gconf - Optional support for gnome-base/gconf configuration storage system

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_kernel/core_kernel-109.60.00.ebuild,v 1.1 2014/01/19 15:59:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core_kernel/core_kernel-109.60.00.ebuild,v 1.2 2014/01/19 19:40:00 zlogene Exp $
 
 EAPI="5"
 
@@ -34,7 +34,7 @@ RDEPEND="
 	!dev-ml/zero
 	"
 DEPEND="${RDEPEND}
-	test? ( 
+	test? (
 		dev-ml/pa_ounit
 		>=dev-ml/core-109.60.00
 	)"

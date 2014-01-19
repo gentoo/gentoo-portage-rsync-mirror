@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gentoo-systemd-integration
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.15 2014/01/07 09:36:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.16 2014/01/19 19:36:35 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org>
+  gentoo-systemd-integration-2.ebuild:
+  sparc keyword, bug #478076
 
   07 Jan 2014; Pacho Ramos <pacho@gentoo.org>
   gentoo-systemd-integration-2.ebuild:

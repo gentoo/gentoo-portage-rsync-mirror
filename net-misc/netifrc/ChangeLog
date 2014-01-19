@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/netifrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.15 2014/01/18 09:10:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/ChangeLog,v 1.18 2014/01/19 19:38:15 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> netifrc-0.1.ebuild:
+  Stable for sparc, wrt bug #487332
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> netifrc-0.1.ebuild:
+  Stable for ppc64, wrt bug #487332
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> netifrc-0.1.ebuild:
+  Stable for ppc, wrt bug #487332
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> netifrc-0.1.ebuild,
   netifrc-9999.ebuild:

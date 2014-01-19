@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Return-Value
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/ChangeLog,v 1.21 2013/09/14 13:09:15 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Return-Value/ChangeLog,v 1.22 2014/01/19 19:50:43 zlogene Exp $
+
+  19 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -Return-Value-1.666.1.ebuild,
+  Return-Value-1.666.1-r1.ebuild:
+  amd64/ppc/ppc64/x86 stable wrt bug #495458; Drop old
 
 *Return-Value-1.666.1-r1 (14 Sep 2013)
 
