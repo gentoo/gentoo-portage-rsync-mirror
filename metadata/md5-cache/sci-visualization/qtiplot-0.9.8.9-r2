@@ -4,11 +4,11 @@ DESCRIPTION=Qt based clone of the Origin plotting package
 EAPI=5
 HOMEPAGE=http://soft.proindependent.com/qtiplot.html http://www.staff.science.uu.nl/~zeven101/qtiplot.html
 IUSE=bindist doc mono latex python linguas_zh_CN linguas_cs linguas_de linguas_es linguas_fr linguas_ja linguas_ro linguas_ru linguas_sv python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2 GPL-3
 RDEPEND=media-libs/libemf dev-qt/qthelp:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 dev-qt/qt3support:4 || ( >=dev-qt/qthelp-4.7.0:4[compat] <dev-qt/qthelp-4.7.0:4 ) dev-qt/qtsvg:4 >=x11-libs/gl2ps-1.3.5[png] >=dev-cpp/muParser-1.32 >=dev-libs/boost-1.35.0:= dev-libs/quazip media-libs/libpng:= sci-libs/alglib sci-libs/gsl sci-libs/tamu_anova latex? ( dev-tex/qtexengine ) mono? ( dev-dotnet/libgdiplus ) python? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) python? ( dev-python/PyQt4[X,python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] )
 REQUIRED_USE=python? ( python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 ) )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~dilfridge/distfiles/qtiplot-0.9.8.9.tar.bz2 http://dev.gentoo.org/~dilfridge/distfiles/qtiplot-0.9.8.9-origin.patch.bz2
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=870365dfdb19e086bc75d187113d4c45
+_md5_=07dfe435e73e1b01d63c02e7283896c1

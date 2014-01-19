@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/vector
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.17 2014/01/19 08:26:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/ChangeLog,v 1.18 2014/01/19 09:39:57 slyfox Exp $
+
+  19 Jan 2014; Sergei Trofimovich <slyfox@gentoo.org> vector-0.10.0.1.ebuild,
+  vector-0.10.9.1.ebuild:
+  Raise lower bound of ghc up to 7.6.3 on pcc due to a GHCi bug #481644 by
+  Agostino Sarubbo.
 
   19 Jan 2014; Sergei Trofimovich <slyfox@gentoo.org> vector-0.10.0.1.ebuild,
   vector-0.10.9.1.ebuild, vector-0.9.1.ebuild:

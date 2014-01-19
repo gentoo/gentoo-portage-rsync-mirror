@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.90 2014/01/18 09:51:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.91 2014/01/19 09:54:31 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> test-unit-2.5.5-r1.ebuild:
+  amd64 stable, bug 490178
 
 *test-unit-2.5.5-r2 (10 Jan 2014)
 

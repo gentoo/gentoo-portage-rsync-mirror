@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/tcl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.186 2013/12/28 18:28:57 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.188 2014/01/19 09:51:31 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> tcl-8.5.13-r1.ebuild,
+  tcl-8.5.14.ebuild, tcl-8.5.15-r1.ebuild, tcl-8.5.15.ebuild,
+  tcl-8.6.0-r1.ebuild, tcl-8.6.1-r1.ebuild, tcl-8.6.1.ebuild:
+  Add arm64 love.
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> tcl-8.5.13-r1.ebuild,
+  tcl-8.5.14.ebuild, tcl-8.5.15-r1.ebuild, tcl-8.5.15.ebuild,
+  tcl-8.6.0-r1.ebuild, tcl-8.6.1-r1.ebuild, tcl-8.6.1.ebuild:
+  Fix cross-compiling w/out compat funcs.
 
   28 Dec 2013; Justin Lecher <jlec@gentoo.org> tcl-8.5.15-r1.ebuild,
   tcl-8.6.1-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/vector-0.10.9.1.ebuild,v 1.2 2014/01/19 08:26:34 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/vector/vector-0.10.9.1.ebuild,v 1.3 2014/01/19 09:39:57 slyfox Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="+boundschecks internalchecks unsafechecks"
 RDEPEND=">=dev-haskell/deepseq-1.1:=[profile?] <dev-haskell/deepseq-1.4:=[profile?]
 	>=dev-haskell/primitive-0.5.0.1:=[profile?] <dev-haskell/primitive-0.6:=[profile?]
 	>=dev-lang/ghc-6.10.4:=
+	ppc? ( >=dev-lang/ghc-7.6.1 )
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.6.0.3

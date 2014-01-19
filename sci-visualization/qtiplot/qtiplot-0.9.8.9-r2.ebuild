@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.6 2013/11/18 08:05:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.9-r2.ebuild,v 1.7 2014/01/19 09:38:26 pacho Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="bindist doc mono latex python"
 
 LANGS="cn cz de es fr ja ro ru sv"
