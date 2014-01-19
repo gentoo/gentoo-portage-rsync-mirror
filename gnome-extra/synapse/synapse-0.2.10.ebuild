@@ -1,11 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.8 2013/05/05 12:59:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/synapse/synapse-0.2.10.ebuild,v 1.9 2014/01/19 15:20:08 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 VALA_MIN_API_VERSION=0.14
+VALA_MAX_API_VERSION=0.20
 
 inherit gnome2 autotools-utils gnome2-utils vala
 

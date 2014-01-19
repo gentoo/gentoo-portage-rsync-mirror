@@ -1,7 +1,7 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test unpack
-DEPEND=dev-libs/libgee:0 dev-libs/glib:2 dev-libs/json-glib dev-libs/libunique:1 sys-apps/dbus x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtkhotkey x11-libs/gtk+:2 x11-libs/libnotify x11-libs/pango x11-themes/gnome-icon-theme plugins? ( net-libs/rest ) zeitgeist? ( dev-libs/libzeitgeist gnome-extra/zeitgeist gnome-extra/zeitgeist-extensions || ( gnome-extra/zeitgeist[fts] gnome-extra/zeitgeist-extensions[fts] ) ) || ( dev-lang/vala:0.22 dev-lang/vala:0.20 dev-lang/vala:0.18 dev-lang/vala:0.16 dev-lang/vala:0.14 ) dev-util/intltool virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
+DEPEND=dev-libs/libgee:0 dev-libs/glib:2 dev-libs/json-glib dev-libs/libunique:1 sys-apps/dbus x11-libs/cairo x11-libs/gdk-pixbuf:2 x11-libs/gtkhotkey x11-libs/gtk+:2 x11-libs/libnotify x11-libs/pango x11-themes/gnome-icon-theme plugins? ( net-libs/rest ) zeitgeist? ( dev-libs/libzeitgeist gnome-extra/zeitgeist gnome-extra/zeitgeist-extensions || ( gnome-extra/zeitgeist[fts] gnome-extra/zeitgeist-extensions[fts] ) ) || ( dev-lang/vala:0.20 dev-lang/vala:0.18 dev-lang/vala:0.16 dev-lang/vala:0.14 ) dev-util/intltool virtual/pkgconfig app-arch/xz-utils >=sys-apps/sed-4 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool >=sys-apps/sed-4
 DESCRIPTION=A program launcher in the style of GNOME Do
-EAPI=4
+EAPI=5
 HOMEPAGE=http://launchpad.net/synapse-project/
 IUSE=plugins +zeitgeist debug
 KEYWORDS=~amd64 ~x86
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/libgee:0 dev-libs/glib:2 dev-libs/json-glib dev-libs/libunique:
 SLOT=0
 SRC_URI=http://launchpad.net/synapse-project/0.2/0.2.10/+download/synapse-0.2.10.tar.gz
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ad22e9e9bcbb0c6ccfe5db423ea3edcf
+_md5_=bdff74f8d11ea92ce96027f2b2da05db
