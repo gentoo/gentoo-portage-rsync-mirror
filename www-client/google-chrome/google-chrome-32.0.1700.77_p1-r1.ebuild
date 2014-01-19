@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-33.0.1750.29_beta1.ebuild,v 1.1 2014/01/17 02:25:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-32.0.1700.77_p1-r1.ebuild,v 1.1 2014/01/19 00:29:51 floppym Exp $
 
-EAPI="4"
+EAPI="5"
 
 CHROMIUM_LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he
 	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt_BR pt_PT ro ru sk sl sr
@@ -13,26 +13,13 @@ inherit readme.gentoo chromium eutils multilib pax-utils unpacker
 DESCRIPTION="The web browser from Google"
 HOMEPAGE="http://www.google.com/chrome"
 
-case ${PV} in
-	*_alpha*)
-		SLOT="unstable"
-		MY_PV=${PV/_alpha/-}
-		;;
-	*_beta*)
-		SLOT="beta"
-		MY_PV=${PV/_beta/-}
-		;;
-	*_p*)
-		SLOT="stable"
-		MY_PV=${PV/_p/-}
-		;;
-	*)
-		die "Invalid value for \${PV}: ${PV}"
-		;;
-esac
+if [[ ${PN} == google-chrome ]]; then
+	MY_PN=${PN}-stable
+else
+	MY_PN=${PN}
+fi
 
-MY_PN="${PN}-${SLOT}"
-MY_P="${MY_PN}_${MY_PV}"
+MY_P="${MY_PN}_${PV/_p/-}"
 
 # Bundle a copy of libgcrypt, bug 494596
 LIBGCRYPT="libgcrypt.so.11.8.2"
@@ -49,6 +36,7 @@ SRC_URI="
 "
 
 LICENSE="google-chrome"
+SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="+plugins"
 RESTRICT="bindist mirror strip"
@@ -86,12 +74,20 @@ RDEPEND="
 	x11-misc/xdg-utils
 "
 
-# Add blockers for the other slots.
-for x in 0 beta stable; do
-	if [[ ${SLOT} != ${x} ]]; then
-		RDEPEND+=" !${CATEGORY}/${PN}:${x}"
+if [[ ${PN} == google-chrome ]]; then
+	RDEPEND+="
+		!www-client/google-chrome:beta
+		!www-client/google-chrome:stable
+		!www-client/google-chrome:unstable
+	"
+fi
+
+for x in google-chrome{,-beta,-unstable}; do
+	if [[ ${PN} != ${x} ]]; then
+		RDEPEND+=" !www-client/${x}"
 	fi
 done
+unset x
 
 QA_PREBUILT="*"
 S=${WORKDIR}
@@ -132,10 +128,10 @@ pkg_setup() {
 }
 
 src_install() {
-	CHROME_HOME="opt/google/chrome-${SLOT}"
+	CHROME_HOME="opt/google/chrome${PN#google-chrome}"
 
 	rm -r usr/share/menu || die
-	rmdir usr/share/doc/${PN} || die
+	rmdir usr/share/doc/google-chrome || die
 	mv usr/share/doc/${MY_PN} usr/share/doc/${PF} || die
 
 	pushd "${CHROME_HOME}/locales" > /dev/null || die
@@ -145,12 +141,12 @@ src_install() {
 	if use plugins ; then
 		local plugins="--extra-plugin-dir=/usr/$(get_libdir)/nsbrowser/plugins"
 		sed -e "/^exec/ i set -- \"${plugins}\" \"\$@\"" \
-			-i "${CHROME_HOME}/${PN}" || die
+			-i "${CHROME_HOME}/google-chrome" || die
 	fi
 
 	local size
 	for size in 16 22 24 32 48 64 128 256 ; do
-		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" ${PN}.png
+		newicon -s ${size} "${CHROME_HOME}/product_logo_${size}.png" google-chrome.png
 	done
 
 	insinto /

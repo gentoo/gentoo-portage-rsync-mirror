@@ -6776,6 +6776,8 @@ www-client/firefox:system-jpeg - Use the system-wide media-libs/libjpeg-turbo Us
 www-client/firefox:system-sqlite - Use the system-wide dev-db/sqlite installation with secure-delete enabled
 www-client/firefox:webm - Use system media-libs/libvpx for HTML5 WebM video support.
 www-client/google-chrome:plugins - Add system plugins path to launcher
+www-client/google-chrome-beta:plugins - Add system plugins path to launcher
+www-client/google-chrome-unstable:plugins - Add system plugins path to launcher
 www-client/jumanji:deprecated - Use x11-libs/gtk+:2 instead of x11-libs/gtk+:3
 www-client/links:deprecated - Install deprecated 'links2 -> links' symlink for compability reasons temporarily
 www-client/luakit:luajit - Use the lua just-in-time compiler dev-lang/luajit instead of dev-lang/lua, which should make luakit faster.
