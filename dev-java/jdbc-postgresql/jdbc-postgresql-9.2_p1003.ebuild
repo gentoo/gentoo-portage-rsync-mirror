@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-9.2_p1003.ebuild,v 1.2 2014/01/18 18:56:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-9.2_p1003.ebuild,v 1.3 2014/01/19 10:13:03 ago Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://jdbc.postgresql.org/"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ppc64 ~x86"
 IUSE="test"
 
 DEPEND="

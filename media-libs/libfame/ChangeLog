@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfame
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.64 2014/01/18 20:11:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfame/ChangeLog,v 1.65 2014/01/19 10:23:17 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libfame-0.9.1-r2.ebuild:
+  Stable for ppc64, wrt bug #495730
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libfame-0.9.1-r2.ebuild:
   Stable for alpha, wrt bug #495730

@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-bashcomp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.67 2013/09/05 06:01:01 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.68 2014/01/19 10:12:40 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  gentoo-bashcomp-20121024.ebuild, gentoo-bashcomp-20130804.ebuild:
+  Add arm64 love.
 
   05 Sep 2013; Mike Frysinger <vapier@gentoo.org>
   gentoo-bashcomp-20121024.ebuild:

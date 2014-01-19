@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/zvbi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.54 2014/01/18 20:12:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/ChangeLog,v 1.55 2014/01/19 10:24:35 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> zvbi-0.2.35.ebuild:
+  Stable for ppc64, wrt bug #495752
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> zvbi-0.2.35.ebuild:
   Stable for alpha, wrt bug #495752

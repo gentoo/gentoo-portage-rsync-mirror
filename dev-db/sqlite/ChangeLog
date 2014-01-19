@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.502 2014/01/18 20:19:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.503 2014/01/19 10:03:46 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> sqlite-3.8.2.ebuild:
+  Add arm64 love.
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> sqlite-3.8.2.ebuild:
   Stable for alpha, wrt bug #497736

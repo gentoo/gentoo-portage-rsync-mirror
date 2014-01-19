@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/joe
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.83 2014/01/18 20:00:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.84 2014/01/19 10:15:07 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> joe-3.7-r2.ebuild:
+  Stable for ppc64, wrt bug #492230
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> joe-3.7-r2.ebuild:
   Stable for alpha, wrt bug #492230

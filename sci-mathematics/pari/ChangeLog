@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.98 2014/01/18 20:03:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.99 2014/01/19 10:16:05 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pari-2.3.5.ebuild:
+  Stable for ppc64, wrt bug #494330
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pari-2.3.5.ebuild:
   Stable for alpha, wrt bug #494330

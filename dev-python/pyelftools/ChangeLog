@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyelftools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.16 2013/12/25 09:33:43 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.17 2014/01/19 10:15:49 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> pyelftools-0.21-r4.ebuild:
+  Add arm64 love.
 
   25 Dec 2013; Patrick Lauer <patrick@gentoo.org> pyelftools-0.21-r4.ebuild:
   Remove bogus stable keyword

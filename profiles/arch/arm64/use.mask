@@ -74,7 +74,13 @@ prelude
 mssql
 
 # havent tested yet
+bazaar
+darcs
+mercurial
+kerberos
 cupsddk
+doc
+emacs
 gphoto2
 mythtv
 afs
@@ -130,6 +136,16 @@ gts
 anthy
 ace
 csharp
+icu
+gtk
+qt4
+qt5
+R
+sdl
+slang
+tk
+vim-syntax
+X
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available

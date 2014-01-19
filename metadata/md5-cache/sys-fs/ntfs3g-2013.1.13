@@ -4,10 +4,10 @@ DESCRIPTION=Open source read-write NTFS driver that runs under FUSE
 EAPI=5
 HOMEPAGE=http://www.tuxera.com/community/ntfs-3g-download/
 IUSE=acl debug +external-fuse ntfsdecrypt +ntfsprogs static-libs suid xattr
-KEYWORDS=alpha amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux
+KEYWORDS=alpha amd64 ~arm ~ppc ppc64 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=!<sys-apps/util-linux-2.20.1-r2 !sys-fs/ntfsprogs ntfsdecrypt? ( >=dev-libs/libgcrypt-1.2.2 >=net-libs/gnutls-1.4.4 ) external-fuse? ( >=sys-fs/fuse-2.8.0 )
 SLOT=0
 SRC_URI=http://tuxera.com/opensource/ntfs-3g_ntfsprogs-2013.1.13.tgz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=1fc38e0061a156d135c4e73ad84e1c51
+_md5_=954ab05c4a6af3623d5dde51c3369901

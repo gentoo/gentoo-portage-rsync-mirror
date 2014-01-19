@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r6.ebuild,v 1.2 2012/06/09 07:10:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.12.12-r6.ebuild,v 1.4 2014/01/19 10:30:16 vapier Exp $
 
-inherit eutils pam
+inherit eutils pam toolchain-funcs
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
 HOMEPAGE="http://www.nongnu.org/cvs/"
@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/non-gnu/cvs/source/feature/${PV}/${P}.tar.bz2
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 
 IUSE="crypt doc kerberos nls pam server"
 
@@ -36,6 +36,11 @@ src_unpack() {
 }
 
 src_compile() {
+	if tc-is-cross-compiler ; then
+		# Sane defaults when cross-compiling (as these tests want to
+		# try and execute code).
+		export cvs_cv_func_printf_ptr="yes"
+	fi
 	econf \
 		--with-external-zlib \
 		--with-tmpdir=/tmp \

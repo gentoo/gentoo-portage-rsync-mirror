@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-amrwbenc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.42 2014/01/18 20:12:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-amrwbenc/ChangeLog,v 1.43 2014/01/19 10:24:22 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> vo-amrwbenc-0.1.3.ebuild:
+  Stable for ppc64, wrt bug #495748
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> vo-amrwbenc-0.1.3.ebuild:
   Stable for alpha, wrt bug #495748

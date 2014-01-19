@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.94 2014/01/18 20:16:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.95 2014/01/19 10:29:36 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> nvi-1.81.6-r4.ebuild:
+  Stable for ppc64, wrt bug #496600
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> nvi-1.81.6-r4.ebuild:
   Stable for alpha, wrt bug #496600

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.135 2013/12/31 23:35:05 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.136 2014/01/19 10:30:04 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gromacs-4.6.5.ebuild:
+  Stable for ppc64, wrt bug #496632
 
   31 Dec 2013; Christoph Junghans <ottxor@gentoo.org>
   -files/gromacs-4.5.5-cmake-cpp-asm.patch,

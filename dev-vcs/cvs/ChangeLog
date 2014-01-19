@@ -1,6 +1,19 @@
 # ChangeLog for dev-vcs/cvs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.12 2013/04/24 10:05:28 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.14 2014/01/19 10:30:16 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> cvs-1.12.12-r10.ebuild,
+  cvs-1.12.12-r6.ebuild, cvs-1.12.12-r7.ebuild, cvs-1.12.12-r8.ebuild,
+  cvs-1.12.12-r9.ebuild, cvs-1.12.13-r1.ebuild, cvs-1.12.13-r2.ebuild,
+  cvs-1.12.13.1-r1.ebuild, cvs-1.12.13.1-r2.ebuild, cvs-1.12.13.1.ebuild:
+  Fix cross-compiling due to AC_TRY_RUN.
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> cvs-1.11.23.ebuild,
+  cvs-1.12.12-r10.ebuild, cvs-1.12.12-r6.ebuild, cvs-1.12.12-r7.ebuild,
+  cvs-1.12.12-r8.ebuild, cvs-1.12.12-r9.ebuild, cvs-1.12.13-r1.ebuild,
+  cvs-1.12.13-r2.ebuild, cvs-1.12.13.1-r1.ebuild, cvs-1.12.13.1-r2.ebuild,
+  cvs-1.12.13.1.ebuild:
+  Add arm64 love.
 
 *cvs-1.12.13.1-r2 (24 Apr 2013)
 
