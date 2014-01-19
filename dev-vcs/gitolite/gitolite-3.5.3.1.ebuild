@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.5.3.1.ebuild,v 1.3 2013/12/31 10:31:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-3.5.3.1.ebuild,v 1.4 2014/01/19 16:48:26 idl0r Exp $
 
 EAPI=5
 
@@ -70,7 +70,7 @@ src_install() {
 pkg_postinst() {
 	if [ "$(get_major_version $REPLACING_VERSIONS)" = "2" ]; then
 		ewarn
-		elog "***NOTE** This is a major upgrade and will likely break your existing gitolite-2.x setup!"
+		elog "***NOTE*** This is a major upgrade and will likely break your existing gitolite-2.x setup!"
 		elog "Please read http://sitaramc.github.com/gitolite/install.html#migr first!"
 	fi
 

@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8548 2014/01/19 12:19:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8549 2014/01/19 16:56:36 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jan 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Remove mask for app-editors/emacs-vcs. The live ebuild will switch to empty
+  keywords instead.
 
   19 Jan 2014; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
   Remove Easynet (bug #498536 by Helmut Jarausch).

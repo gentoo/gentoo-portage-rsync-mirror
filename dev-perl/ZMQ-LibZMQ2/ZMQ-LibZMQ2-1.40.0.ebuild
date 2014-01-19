@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-LibZMQ2/ZMQ-LibZMQ2-1.40.0.ebuild,v 1.2 2013/11/19 12:35:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-LibZMQ2/ZMQ-LibZMQ2-1.40.0.ebuild,v 1.3 2014/01/19 16:58:38 zlogene Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="test"
 
 RDEPEND="
-	net-libs/zeromq
+	=net-libs/zeromq-2*
 	>=dev-perl/ZMQ-Constants-1.0.0
 	>=virtual/perl-XSLoader-0.20.0
 "

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/math-pari
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.72 2013/12/22 16:37:36 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.73 2014/01/19 16:40:04 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> math-pari-2.10.806.50.ebuild:
+  amd64 stable, bug #494288
 
   22 Dec 2013; Jeroen Roovers <jer@gentoo.org> math-pari-2.10.806.50.ebuild:
   Stable for HPPA (bug #494288).

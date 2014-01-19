@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.10.806.50.ebuild,v 1.3 2013/12/22 16:37:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/math-pari-2.10.806.50.ebuild,v 1.4 2014/01/19 16:40:04 pacho Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~mips ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha amd64 hppa ~mips ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 # Math::Pari requires that a copy of the pari source in a parallel

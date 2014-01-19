@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/kdevelop-python-1.5.2.ebuild,v 1.1 2013/10/30 16:03:50 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-python/kdevelop-python-1.5.2.ebuild,v 1.2 2014/01/19 16:36:33 pacho Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ MY_P="${MY_PN}-${MY_PV}"
 
 if [[ $PV != *9999* ]]; then
 	SRC_URI="mirror://kde/stable/kdevelop/${MY_PN}/${PV}/src/${MY_P}.tar.xz"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	S=${WORKDIR}/${MY_P}
 else
 	EGIT_REPO_URI="git://anongit.kde.org/kdev-python.git"

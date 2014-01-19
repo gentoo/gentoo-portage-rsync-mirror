@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs-vcs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.143 2014/01/04 20:05:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/ChangeLog,v 1.144 2014/01/19 16:57:21 ulm Exp $
+
+  19 Jan 2014; Ulrich Müller <ulm@gentoo.org> emacs-vcs-24.3.9999.ebuild:
+  Follow devmanual policy and switch from package.mask to empty KEYWORDS.
+  Unmasking should now be done in package.accept_keywords instead of
+  package.unmask.
 
 *emacs-vcs-24.3.50_pre20131231 (04 Jan 2014)
 
