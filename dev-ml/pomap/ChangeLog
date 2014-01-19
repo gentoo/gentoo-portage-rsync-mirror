@@ -1,6 +1,15 @@
 # ChangeLog for dev-ml/pomap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.32 2014/01/18 18:39:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.34 2014/01/19 13:14:56 aballier Exp $
+
+  19 Jan 2014; Alexis Ballier <aballier@gentoo.org> -pomap-3.0.1.ebuild,
+  -files/pomap-3.0.1-ocaml-4.01.patch:
+  remove old
+
+*pomap-3.0.3 (19 Jan 2014)
+
+  19 Jan 2014; Alexis Ballier <aballier@gentoo.org> +pomap-3.0.3.ebuild:
+  version bump
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> pomap-3.0.2.ebuild:
   amd64 stable, bug #492056
