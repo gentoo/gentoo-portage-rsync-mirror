@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/lmdb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.3 2014/01/18 14:09:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb/ChangeLog,v 1.4 2014/01/19 11:46:29 jer Exp $
+
+  19 Jan 2014; Jeroen Roovers <jer@gentoo.org> lmdb-0.9.11.ebuild:
+  Marked ~hppa (bug #498466).
 
 *lmdb-0.9.11 (18 Jan 2014)
 

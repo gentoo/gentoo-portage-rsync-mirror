@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/platinfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/platinfo/ChangeLog,v 1.9 2014/01/14 13:54:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/platinfo/ChangeLog,v 1.10 2014/01/19 11:33:54 aidecoe Exp $
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -platinfo-0.15.0.ebuild:
+  Removed old revision using old distutils eclass.
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> platinfo-0.15.0-r1.ebuild:
   Stable for x86, wrt bug #496304

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.140 2014/01/18 20:05:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.141 2014/01/19 11:57:20 jer Exp $
+
+  19 Jan 2014; Jeroen Roovers <jer@gentoo.org> -gentoo-0.19.13.ebuild,
+  -gentoo-0.20.1.ebuild, -gentoo-0.20.3.ebuild:
+  Old.
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gentoo-0.20.4.ebuild:
   Stable for alpha, wrt bug #494966
