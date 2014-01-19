@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.24-r1.ebuild,v 1.3 2014/01/17 03:15:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.24-r2.ebuild,v 1.1 2014/01/19 04:47:02 vapier Exp $
 
-PATCHVER="1.2"
+PATCHVER="1.3"
 ELF2FLT_VER=""
 inherit toolchain-binutils
 
