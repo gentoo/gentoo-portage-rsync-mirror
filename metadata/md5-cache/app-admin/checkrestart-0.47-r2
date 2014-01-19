@@ -2,10 +2,10 @@ DEFINED_PHASES=install prepare
 DESCRIPTION=the sysadmin's rolling upgrade tool
 EAPI=4
 HOMEPAGE=http://arcdraco.net/checkrestart
-KEYWORDS=~amd64 ~hppa ~x86
+KEYWORDS=~amd64 ~arm ~hppa ~x86
 LICENSE=GPL-2
 RDEPEND==dev-lang/python-2* sys-apps/lsb-release app-portage/portage-utils sys-process/lsof
 SLOT=0
 SRC_URI=http://arcdraco.net/~dragon/checkrestart-0.47-sep.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=d03145a7793bcf86a49d18e2a1d3110a
+_md5_=0ee11d0f13c8a1e5805455e8465384a5

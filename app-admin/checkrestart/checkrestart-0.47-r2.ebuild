@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/checkrestart/checkrestart-0.47-r2.ebuild,v 1.1 2011/12/12 22:54:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/checkrestart/checkrestart-0.47-r2.ebuild,v 1.2 2014/01/19 16:21:39 maekke Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://arcdraco.net/~dragon/${P}-sep.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE=""
 
 RDEPEND="
