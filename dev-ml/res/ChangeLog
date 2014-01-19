@@ -1,6 +1,14 @@
 # ChangeLog for dev-ml/res
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.23 2014/01/18 18:40:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.25 2014/01/19 12:37:13 aballier Exp $
+
+  19 Jan 2014; Alexis Ballier <aballier@gentoo.org> -res-4.0.2.ebuild:
+  remove old
+
+*res-4.0.4 (19 Jan 2014)
+
+  19 Jan 2014; Alexis Ballier <aballier@gentoo.org> +res-4.0.4.ebuild:
+  version bump
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> res-4.0.3.ebuild:
   amd64 stable, bug #492062
