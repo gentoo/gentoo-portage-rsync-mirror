@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha21.ebuild,v 1.2 2014/01/18 22:33:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha21.ebuild,v 1.3 2014/01/19 01:12:49 vapier Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/$([[ -z ${PV/*_alpha*} ]] && echo 'al
 
 LICENSE="GPL-2 LGPL-2.1 CDDL-Schily"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="acl nls unicode"
 
 RDEPEND="acl? ( virtual/acl )
@@ -30,6 +30,13 @@ FILECAPS=(
 	cap_dac_override,cap_sys_admin,cap_sys_nice,cap_net_bind_service,cap_sys_rawio+ep usr/bin/cdda2wav --
 	cap_dac_override,cap_sys_admin,cap_net_bind_service,cap_sys_rawio+ep usr/bin/readcd
 )
+
+cdrtools_os() {
+	local os="linux"
+	[[ ${CHOST} == *-darwin* ]] && os="mac-os10"
+	[[ ${CHOST} == *-freebsd* ]] && os="freebsd"
+	echo "${os}"
+}
 
 src_prepare() {
 	gnuconfig_update
@@ -72,9 +79,7 @@ src_prepare() {
 
 	# Schily make setup.
 	cd "${S}"/DEFAULTS
-	local os="linux"
-	[[ ${CHOST} == *-darwin* ]] && os="mac-os10"
-	[[ ${CHOST} == *-freebsd* ]] && os="freebsd"
+	local os=$(cdrtools_os)
 
 	sed -i \
 		-e "s|^\(DEFLINKMODE=\).*|\1\tdynamic|" \
@@ -87,8 +92,108 @@ src_prepare() {
 		Defaults.${os} || die "sed Schily make setup"
 }
 
-# skip obsolete configure script
-src_configure() { : ; }
+ac_cv_sizeof() {
+	cat <<-EOF >"${T}"/test.c
+	#include <inttypes.h>
+	#include <stddef.h>
+	#include <stdint.h>
+	#include <sys/types.h>
+	int main () {
+		static int test_array [1 - 2 * !((sizeof(TYPE)) == LEN)];
+		test_array [0] = 0;
+		return test_array [0];
+	}
+	EOF
+
+	local i=1
+	while [[ ${i} -lt 20 ]] ; do
+		if ${CC} ${CPPFLAGS} ${CFLAGS} -c "${T}"/test.c -o /dev/null -DTYPE="$1" -DLEN=$i 2>/dev/null; then
+			echo ${i}
+			return 0
+		fi
+		: $(( i += 1 ))
+	done
+	return 1
+}
+
+src_configure() {
+	# skip obsolete configure script
+	if tc-is-cross-compiler ; then
+		# Cache known values for targets. #486680
+
+		tc-export CC
+		local var val t types=(
+			char "short int" int "long int" "long long"
+			"unsigned char" "unsigned short int" "unsigned int"
+			"unsigned long int" "unsigned long long"
+			float double "long double" size_t ssize_t ptrdiff_t
+			mode_t uid_t gid_t pid_t dev_t time_t wchar_t
+            "char *" "unsigned char *"
+		)
+		for t in "${types[@]}" ; do
+			var="ac_cv_sizeof_${t// /_}"
+			var=${var//[*]/p}
+			val=$(ac_cv_sizeof "${t}") || die "could not compute ${t}"
+			export "${var}=${val}"
+			einfo "Computing sizeof(${t}) as ${val}"
+		done
+		# We don't have these types.
+		export ac_cv_sizeof___int64=0
+		export ac_cv_sizeof_unsigned___int64=0
+		export ac_cv_sizeof_major_t=${ac_cv_sizeof_dev_t}
+		export ac_cv_sizeof_minor_t=${ac_cv_sizeof_dev_t}
+		export ac_cv_sizeof_wchar=${ac_cv_sizeof_wchar_t}
+
+		export ac_cv_type_prototypes="yes"
+		export ac_cv_func_mlock{,all}="yes"
+		export ac_cv_func_{e,f,g}cvt=$(usex elibc_glibc)
+		export ac_cv_func_dtoa_r="no"
+		export ac_cv_func_sys_siglist{,_def}="no"
+		export ac_cv_func_printf_{j,ll}="yes"
+		export ac_cv_realloc_null="yes"
+		export ac_cv_no_user_malloc="no"
+		export ac_cv_var_timezone="yes"
+		export ac_cv_var___progname{,_full}="yes"
+		export ac_cv_fnmatch_igncase="yes"
+		export ac_cv_file__dev_{fd_{0,1,2},null,std{err,in,out},tty,zero}="yes"
+		export ac_cv_file__usr_src_linux_include="no"
+
+		case $(cdrtools_os) in
+		linux)
+			export ac_cv_func_bsd_{g,s}etpgrp="no"
+			export ac_cv_hard_symlinks="yes"
+			export ac_cv_link_nofollow="yes"
+			export ac_cv_access_e_ok="no"
+
+			export ac_cv_dev_minor_noncontig="yes"
+			case ${ac_cv_sizeof_long_int} in
+			4) export ac_cv_dev_minor_bits="32";;
+			8) export ac_cv_dev_minor_bits="44";;
+			esac
+
+			cat <<-EOF >"${T}"/test.c
+			struct {
+				char start[6];
+				unsigned char x1:4;
+				unsigned char x2:4;
+				char end[5];
+			} a = {
+				.start = {'S', 't', 'A', 'r', 'T', '_'},
+				.x1 = 5,
+				.x2 = 4,
+				.end = {'_', 'e', 'N', 'd', 'X'},
+			};
+			EOF
+			${CC} ${CPPFLAGS} ${CFLAGS} -c "${T}"/test.c -o "${T}"/test.o
+			if grep -q 'StArT_E_eNdX' "${T}"/test.o ; then
+				export ac_cv_c_bitfields_htol="no"
+			elif grep -q 'StArT_T_eNdX' "${T}"/test.o ; then
+				export ac_cv_c_bitfields_htol="yes"
+			fi
+			;;
+		esac
+	fi
+}
 
 src_compile() {
 	if use unicode; then
