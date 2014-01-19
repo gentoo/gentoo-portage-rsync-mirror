@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calligra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.103 2013/12/31 08:46:39 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.104 2014/01/19 11:03:52 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> calligra-2.7.5.ebuild:
+  amd64 stable, bug 492678
 
   31 Dec 2013; Markus Meier <maekke@gentoo.org> calligra-2.7.5.ebuild:
   add ~arm, bug #490374

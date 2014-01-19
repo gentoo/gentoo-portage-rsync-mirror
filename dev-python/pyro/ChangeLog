@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.97 2013/12/28 18:54:34 aidecoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.98 2014/01/19 11:20:21 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> pyro-4.22.ebuild:
+  amd64 stable, bug 494262
 
   28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> -pyro-4.20.ebuild:
   Removed testing 4.20.

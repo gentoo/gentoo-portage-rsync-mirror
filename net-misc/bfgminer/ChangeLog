@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/bfgminer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.53 2014/01/18 14:05:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bfgminer/ChangeLog,v 1.54 2014/01/19 11:31:19 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> bfgminer-3.5.6.ebuild:
+  amd64 stable, bug 489300
 
 *bfgminer-3.5.7 (18 Jan 2014)
 *bfgminer-3.10.0 (18 Jan 2014)

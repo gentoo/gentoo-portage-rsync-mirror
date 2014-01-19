@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.7.5.ebuild,v 1.3 2013/12/31 08:46:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.7.5.ebuild,v 1.4 2014/01/19 11:03:51 pacho Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -40,7 +40,7 @@ SLOT="4"
 
 # Don't move KEYWORDS on the previous line or ekeyword won't work # 399061
 [[ ${PV} == *9999 ]] || \
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm ~x86"
 
 IUSE="attica +crypt +eigen +exif fftw +fontconfig freetds +gif glew +glib +gsf
 gsl +jpeg jpeg2k +kdcraw kde kdepim +lcms marble mysql +okular opengtl openexr

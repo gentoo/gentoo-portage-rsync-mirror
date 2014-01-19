@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/vc-0.7.2.ebuild,v 1.1 2013/09/14 13:13:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/vc-0.7.2.ebuild,v 1.2 2014/01/19 11:03:06 pacho Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI+=" https://gitorious.org/${PN}/${PN}/archive-tarball/${PV} -> ${P}.tar.g
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="test"
 
 src_unpack() {

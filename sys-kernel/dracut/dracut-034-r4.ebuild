@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r4.ebuild,v 1.2 2013/12/28 17:41:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-034-r4.ebuild,v 1.3 2014/01/19 11:27:02 aidecoe Exp $
 
 EAPI=4
 
@@ -18,7 +18,9 @@ add_req_use_for() {
 
 DESCRIPTION="Generic initramfs generation tool"
 HOMEPAGE="http://dracut.wiki.kernel.org"
-SRC_URI="mirror://kernel/linux/utils/boot/${PN}/${P}.tar.bz2"
+AIDECOE_DISTFILES="http://dev.gentoo.org/~aidecoe/distfiles"
+SRC_URI="mirror://kernel/linux/utils/boot/${PN}/${P}.tar.bz2
+	${AIDECOE_DISTFILES}/${CATEGORY}/${PN}/${PV}-0010-module-setup.sh-add-comments.patch.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
@@ -166,7 +168,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PV}-0007-dracut.sh-also-mkdir-run-lock-which-is.patch"
 	epatch "${FILESDIR}/${PV}-0008-dracut.sh-no-need-to-make-subdirs-in-r.patch"
 	epatch "${FILESDIR}/${PV}-0009-lvm-install-thin-utils-for-non-hostonl.patch"
-	epatch "${FILESDIR}/${PV}-0010-module-setup.sh-add-comments.patch.bz2"
+	epatch "${DISTDIR}/${PV}-0010-module-setup.sh-add-comments.patch.bz2"
 	epatch "${FILESDIR}/${PV}-0011-lvm-fix-thin-recognition.patch"
 	epatch "${FILESDIR}/${PV}-0012-lvm-always-install-thin-utils-for-lvm.patch"
 	epatch "${FILESDIR}/${PV}-0013-usrmount-always-install.patch"

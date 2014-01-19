@@ -18,9 +18,6 @@
 			so.</flag>
 		<flag name="net">Set of helper modules providing networking support. You
 			need to enable this only if emerge says so.</flag>
-		<flag name="optimization">Build optimized version of dracut_install
-			function.  It will be used instead of the one written in
-			bash.</flag>
 	</use>
 	<longdescription lang="en">
 	Generic, modular initramfs generation tool that can be used across various

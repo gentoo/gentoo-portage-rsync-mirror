@@ -1,6 +1,49 @@
 # ChangeLog for sys-kernel/dracut
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.148 2013/12/28 18:36:37 aidecoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.151 2014/01/19 11:29:56 aidecoe Exp $
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
+  Removed desc. of no longer existing 'optimization' flag.
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r4.ebuild,
+  -files/034-0010-module-setup.sh-add-comments.patch.bz2:
+  Moved compressed patch out of portdir, fixes bug #498062.
+
+  19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-026-r2.ebuild,
+  -dracut-027-r3.ebuild, -dracut-029.ebuild, -dracut-030.ebuild,
+  -dracut-031-r1.ebuild, -dracut-033-r3.ebuild, -dracut-034-r3.ebuild,
+  -files/026-0000-fix-version-print.patch,
+  -files/027-0000-fix-version-print.patch,
+  -files/026-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/027-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/029-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/030-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/031-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/033-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/026-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/027-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/029-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/030-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/031-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/033-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/027-0003-Do-not-call-plymouth-with-full-path.patch,
+  -files/029-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch,
+  -files/030-0003-LatArCyrHeb-16-as-a-default-i18n-font-.patch,
+  -files/031-0003-Revert-base-setup-correct-system-time-.patch,
+  -files/026-0003-Revert-crypt-dmraid-mdraid-use-for_eac.patch,
+  -files/033-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  -files/033-0004-Install-dracut-install-into-libexec-di.patch,
+  -files/026-0004-lsinitrd.sh-fix-for-default-initrd-not.patch,
+  -files/027-0004-plymouth-plymouth-pretrigger.sh-fixup-.patch,
+  -files/033-0005-dracut.sh-harden-host_modalias-reading.patch,
+  -files/026-0005-lsinitrd.sh-removed-trailing.patch,
+  -files/033-0006-ifup-do-not-dhcp-on-network-interface-.patch,
+  -files/026-0006-make-host_fs_types-a-hashmap.patch,
+  -files/033-0007-lvm-mdraid-Fix-LVM-on-MD-activation.patch,
+  -files/033-0008-mdraid-module-setup.sh-install-configs.patch,
+  -files/033-0009-mdraid-module-setup.sh-fixes-for-mdadm.patch:
+  Removed old versions. Rels bug #498062. Versions prior to 034-r4 have bugs
+  which were not backported from 034-r4, so there's no reason to keep them.
 
   28 Dec 2013; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-034-r3.ebuild,
   dracut-034-r4.ebuild, +files/034-0010-module-setup.sh-add-comments.patch.bz2,

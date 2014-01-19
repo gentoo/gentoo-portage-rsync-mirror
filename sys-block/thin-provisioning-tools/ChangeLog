@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/thin-provisioning-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.37 2014/01/19 10:56:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/ChangeLog,v 1.38 2014/01/19 11:24:16 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org>
+  thin-provisioning-tools-0.2.8-r1.ebuild:
+  amd64 stable, bug #493400
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   thin-provisioning-tools-0.2.8.ebuild:

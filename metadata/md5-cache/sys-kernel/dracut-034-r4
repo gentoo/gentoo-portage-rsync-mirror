@@ -10,6 +10,6 @@ RDEPEND=virtual/udev dracut_modules_systemd? ( >=sys-apps/systemd-199 ) selinux?
 REQUIRED_USE=dracut_modules_bootchart? ( !dracut_modules_systemd ) dracut_modules_crypt-gpg? ( dracut_modules_crypt ) dracut_modules_crypt-loop? ( dracut_modules_crypt ) dracut_modules_livenet? ( dracut_modules_dmsquash-live ) dracut_modules_crypt? ( device-mapper ) dracut_modules_dmraid? ( device-mapper ) dracut_modules_dmsquash-live? ( device-mapper ) dracut_modules_livenet? ( device-mapper ) dracut_modules_lvm? ( device-mapper ) dracut_modules_cifs? ( net ) dracut_modules_iscsi? ( net ) dracut_modules_livenet? ( net ) dracut_modules_nbd? ( net ) dracut_modules_nfs? ( net ) dracut_modules_ssh-client? ( net )
 RESTRICT=test
 SLOT=0
-SRC_URI=mirror://kernel/linux/utils/boot/dracut/dracut-034.tar.bz2
+SRC_URI=mirror://kernel/linux/utils/boot/dracut/dracut-034.tar.bz2 http://dev.gentoo.org/~aidecoe/distfiles/sys-kernel/dracut/034-0010-module-setup.sh-add-comments.patch.bz2
 _eclasses_=bash-completion-r1	d339dd40b2014cf1edba8592580eef42	eutils	40081e8c7e7f7c4f9db349a1d6d52925	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=5f891db7451c504da9a3c8059f813e06
+_md5_=8e2b398d4a33898b92268ef6517d5eae

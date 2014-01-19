@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dolphin-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.131 2014/01/19 10:58:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin-plugins/ChangeLog,v 1.132 2014/01/19 11:02:38 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> dolphin-plugins-4.12.1.ebuild:
+  Add ~ppc, wrt bug #498424
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> dolphin-plugins-4.12.1.ebuild:
   Add ~arm, wrt bug #498424

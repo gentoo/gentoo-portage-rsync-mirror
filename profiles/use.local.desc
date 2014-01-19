@@ -6551,7 +6551,6 @@ sys-kernel/ck-sources:urwlocks - Use upgradable read/write locks in place of the
 sys-kernel/dracut:debug - Module installing additional tools like strace, file editor, ssh and more
 sys-kernel/dracut:device-mapper - Set of helper modules providing support for device mapper. You need to enable this only if emerge says so.
 sys-kernel/dracut:net - Set of helper modules providing networking support. You need to enable this only if emerge says so.
-sys-kernel/dracut:optimization - Build optimized version of dracut_install function. It will be used instead of the one written in bash.
 sys-kernel/genkernel:crypt - Obsolete USE flag. Use cryptsetup for LUKS support. (bug ##414523)
 sys-kernel/genkernel:cryptsetup - Enable support for Luks disk encryption using sys-fs/cryptsetup
 sys-kernel/genkernel-next:cryptsetup - Enable support for Luks disk enrcyption using sys-fs/cryptsetup
