@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pragha
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/ChangeLog,v 1.27 2013/08/24 12:16:21 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/ChangeLog,v 1.28 2014/01/19 19:06:38 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> pragha-1.1.2.1.ebuild:
+  amd64 stable, bug 496018
 
 *pragha-1.1.2.1 (24 Aug 2013)
 

@@ -1,0 +1,7 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/sparc/13.0/use.stable.mask,v 1.1 2014/01/19 19:23:51 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (19 Jan 2014)
+# systemd is not stable on this arch
+systemd

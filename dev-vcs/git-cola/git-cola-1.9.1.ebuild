@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-1.9.1.ebuild,v 1.1 2013/11/07 16:56:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/git-cola-1.9.1.ebuild,v 1.2 2014/01/19 19:04:32 jlec Exp $
 
 EAPI=5
 
@@ -26,15 +26,23 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-text/asciidoc
 	app-text/xmlto
-	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	sys-devel/gettext
-	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	test? (
+		dev-python/nose[${PYTHON_USEDEP}]
+		sys-apps/net-tools
+		)"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-disable-tests.patch
 	"${FILESDIR}"/${P}-system-ssh-askpass.patch
 	)
 
+pkg_pretend() {
+	if use test && [[ -z "$(hostname -d)" ]] ; then
+		die "Test will fail if no domain is set"
+	fi
+}
 python_prepare_all() {
 	rm share/git-cola/bin/*askpass* || die
 

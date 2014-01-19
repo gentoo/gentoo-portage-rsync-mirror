@@ -1,6 +1,0 @@
-# Pacho Ramos <pacho@gentoo.org> (27 Dec 2013)      
-# 3.6 is not supported for a long time and prone to bugs
-# and security issues (#496166), until systemd is keyworded
-# (#478076) we have no other option.
-gnome-base/gnome-settings-daemon openrc-force
-gnome-base/gnome-shell openrc-force

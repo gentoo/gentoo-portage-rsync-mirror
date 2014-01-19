@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.18 2014/01/15 12:00:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.19 2014/01/19 19:04:32 jlec Exp $
+
+  19 Jan 2014; Justin Lecher <jlec@gentoo.org> git-cola-1.9.1.ebuild,
+  git-cola-1.9.3.ebuild:
+  Block test if domain name is unset, #497876
 
 *git-cola-1.9.3 (15 Jan 2014)
 

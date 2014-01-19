@@ -141,7 +141,9 @@ sh              default/linux/sh/13.0/developer                 dev
 sparc           default/linux/sparc/13.0                        stable
 sparc           default/linux/sparc/13.0/desktop                stable
 sparc           default/linux/sparc/13.0/desktop/gnome          stable
+sparc		default/linux/sparc/13.0/desktop/gnome/systemd	stable
 sparc           default/linux/sparc/13.0/desktop/kde            stable
+sparc		default/linux/sparc/13.0/desktop/kde/systemd	stable
 sparc           default/linux/sparc/13.0/developer              stable
 
 # x86 Profiles

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libcircle/libcircle-0.1.0_rc1.ebuild,v 1.2 2014/01/19 02:27:37 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libcircle/libcircle-0.1.0_rc1.ebuild,v 1.3 2014/01/19 19:27:26 ottxor Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ else
 	[[ ${PV} = *rc* ]] && MY_PV="${PV%%_rc*}-rc.${PV#*_rc}" || MY_PV="${PV}"
 	inherit vcs-snapshot
 	SRC_URI="https://github.com/hpc/${PN}/archive/v${MY_PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="an API for distributing embarrassingly parallel workloads using self-stabilization"
