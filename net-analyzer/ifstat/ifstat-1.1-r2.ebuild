@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1-r2.ebuild,v 1.8 2013/12/22 12:05:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstat/ifstat-1.1-r2.ebuild,v 1.9 2014/01/19 12:27:32 jer Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -22,6 +22,8 @@ DOCS=( HISTORY README TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make.patch
+	epatch "${FILESDIR}"/${P}-hardened.patch
+
 	eautoreconf
 }
 

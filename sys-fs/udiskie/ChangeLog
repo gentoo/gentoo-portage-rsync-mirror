@@ -1,6 +1,20 @@
 # ChangeLog for sys-fs/udiskie
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.24 2013/09/26 05:38:38 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.27 2014/01/19 12:24:15 ssuominen Exp $
+
+  19 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> udiskie-0.6.2.ebuild:
+  Entirely drop SLOT specification of sys-fs/udisks dependency because we can't
+  know from the .ebuild which parameters the user will use, --use-udisks1 or
+  --use-udisks2. Forcing either one at this point would be wrong.
+
+  19 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> udiskie-0.6.2.ebuild:
+  Build and install udiskie(8) manpage.
+
+*udiskie-0.6.2 (19 Jan 2014)
+
+  19 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> +udiskie-0.6.2.ebuild:
+  Version bump; with switch to UDisks2 wrt #439648, thanks to upstream adding
+  support for it.
 
 *udiskie-0.5.0 (26 Sep 2013)
 

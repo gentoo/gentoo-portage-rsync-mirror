@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/smtm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.23 2014/01/18 19:01:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/smtm/ChangeLog,v 1.25 2014/01/19 12:25:02 zlogene Exp $
+
+  19 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -smtm-1.6.6.ebuild,
+  smtm-1.6.10-r1.ebuild:
+  ppc stable wrt bug #491930; Drop old.
+
+  19 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> smtm-1.6.10-r1.ebuild:
+  x86 stable wrt bug #491930
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> smtm-1.6.10-r1.ebuild:
   amd64 stable, bug #491930

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TermReadKey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.49 2014/01/19 10:20:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.50 2014/01/19 12:02:38 zlogene Exp $
+
+  19 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> TermReadKey-2.300.200.ebuild:
+  sparc stable wrt bug #495484
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> TermReadKey-2.300.200.ebuild:
   Stable for ppc64, wrt bug #495484
