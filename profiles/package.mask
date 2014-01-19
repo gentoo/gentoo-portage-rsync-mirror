@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15346 2014/01/18 14:22:08 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15347 2014/01/19 00:33:02 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,23 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (19 Jan 2014)
+# To prevent accidental switching of release channels (bug 498306),
+# google-chrome has been split into 3 packages:
+#
+# www-client/google-chrome
+# www-client/google-chrome-beta
+# www-client/google-chrome-unstable
+#
+# The stable channel remains as www-client/google-chrome, but has been
+# switched to SLOT="0".
+#
+# Please unmerge your currently installed version and remerge one of the new
+# packages.
+www-client/google-chrome:beta
+www-client/google-chrome:stable
+www-client/google-chrome:unstable
 
 # Eray Aslan <eras@gentoo.org> (18 Jan 2014)
 # Mask experimental software
@@ -687,12 +704,6 @@ x11-misc/pcmanfm-qt
 # Patrick Lauer <patrick@gentoo.org> (09 Apr 2013)
 # Masked to get 0.10 tested
 =net-libs/nodejs-0.11*
-
-# Mike Gilbert <floppym@gentoo.org> (04 Apr 2013)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
-www-client/google-chrome:unstable
-www-plugins/chrome-binary-plugins:unstable
 
 # Sergey Popov <pinkbyte@gentoo.org> (02 Apr 2013)
 # Masking =media-libs/ffmpegsource-2.17.4_pre753

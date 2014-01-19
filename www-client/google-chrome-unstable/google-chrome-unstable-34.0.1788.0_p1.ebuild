@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/google-chrome-unstable-34.0.1788.0_p1.ebuild,v 1.1 2014/01/19 00:30:38 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/google-chrome-unstable-34.0.1788.0_p1.ebuild,v 1.2 2014/01/19 00:32:19 floppym Exp $
 
 EAPI="5"
 
@@ -14,9 +14,9 @@ DESCRIPTION="The web browser from Google"
 HOMEPAGE="http://www.google.com/chrome"
 
 if [[ ${PN} == google-chrome ]]; then
-    MY_PN=${PN}-stable
+	MY_PN=${PN}-stable
 else
-    MY_PN=${PN}
+	MY_PN=${PN}
 fi
 
 MY_P="${MY_PN}_${PV/_p/-}"
@@ -76,17 +76,17 @@ RDEPEND="
 "
 
 if [[ ${PN} == google-chrome ]]; then
-    RDEPEND+="
-        !www-client/google-chrome:beta
-        !www-client/google-chrome:stable
-        !www-client/google-chrome:unstable
-    "
+	RDEPEND+="
+		!www-client/google-chrome:beta
+		!www-client/google-chrome:stable
+		!www-client/google-chrome:unstable
+	"
 fi
 
 for x in google-chrome{,-beta,-unstable}; do
-    if [[ ${PN} != ${x} ]]; then
-        RDEPEND+=" !www-client/${x}"
-    fi
+	if [[ ${PN} != ${x} ]]; then
+		RDEPEND+=" !www-client/${x}"
+	fi
 done
 unset x
 
