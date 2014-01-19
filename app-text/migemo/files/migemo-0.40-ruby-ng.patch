@@ -5,21 +5,21 @@
  
  migemo-dict: # SKK-JISYO.L
 -	ruby -I. migemo-convert.rb SKK-JISYO.L > $@
-+	$(RUBY) -I. migemo-convert.rb SKK-JISYO.L > $@
++	$(RUBY) -Eeuc-jp -I. migemo-convert.rb SKK-JISYO.L > $@
  
  migemo-dict.idx: migemo-dict
 -	ruby -I. migemo-index.rb migemo-dict > migemo-dict.idx
-+	$(RUBY) -I. migemo-index.rb migemo-dict > migemo-dict.idx
++	$(RUBY) -Eeuc-jp -I. migemo-index.rb migemo-dict > migemo-dict.idx
  
  migemo-dict.cache: frequent-chars migemo-dict migemo-dict.idx
 -	sort frequent-chars | ruby -I. migemo-cache.rb migemo-dict
-+	sort frequent-chars | $(RUBY) -I. migemo-cache.rb migemo-dict
++	sort frequent-chars | $(RUBY) -Eeuc-jp -I. migemo-cache.rb migemo-dict
  
  frequent-chars: genchars.sh migemo-dict
 -	sh genchars.sh > tmp.list1
 -	cat tmp.list1 | ruby -rromkan -ne 'puts $$_.to_kunrei' > tmp.list2
 +	RUBY=$(RUBY) sh genchars.sh > tmp.list1
-+	cat tmp.list1 | $(RUBY) -rromkan -ne 'puts $$_.to_kunrei' > tmp.list2
++	cat tmp.list1 | $(RUBY) -Eeuc-jp -rromkan -ne 'puts $$_.to_kunrei' > tmp.list2
  	cat tmp.list1 tmp.list2 | sort | uniq > frequent-chars
  
  clean-local:
@@ -61,16 +61,16 @@
  
  test-dict.idx: test-dict ../migemo-index.rb
 -	ruby -I.. ../migemo-index.rb test-dict > test-dict.idx
-+	$(RUBY) -I.. ../migemo-index.rb test-dict > test-dict.idx
++	$(RUBY) -Eeuc-jp -I.. ../migemo-index.rb test-dict > test-dict.idx
  
  test-dict.cache: test-dict test-dict.idx ../migemo-cache.rb
 -	ruby -rromkan -ne 'puts $$1.to_roma if /^(.+?)	/' test-dict |\
-+	$(RUBY) -rromkan -ne 'puts $$1.to_roma if /^(.+?)	/' test-dict |\
++	$(RUBY) -Eeuc-jp -rromkan -ne 'puts $$1.to_roma if /^(.+?)	/' test-dict |\
  	while read line; do\
 -	    echo $$line | ruby -ne 'chomp!;1.upto($$_.length) do |x| puts $$_[0,x] end';\
 -	done | ruby -I.. ../migemo-cache.rb test-dict
-+	    echo $$line | $(RUBY) -ne 'chomp!;1.upto($$_.length) do |x| puts $$_[0,x] end';\
-+	done | $(RUBY) -I.. ../migemo-cache.rb test-dict
++	    echo $$line | $(RUBY) -Eeuc-jp -ne 'chomp!;1.upto($$_.length) do |x| puts $$_[0,x] end';\
++	done | $(RUBY) -Eeuc-jp -I.. ../migemo-cache.rb test-dict
  
  clean-local:
  	rm -f tmp.*

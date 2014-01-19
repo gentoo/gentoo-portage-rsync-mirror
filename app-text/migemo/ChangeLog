@@ -1,6 +1,13 @@
 # ChangeLog for app-text/migemo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.43 2013/02/21 13:19:44 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.44 2014/01/19 05:26:35 naota Exp $
+
+*migemo-0.40_p2 (19 Jan 2014)
+
+  19 Jan 2014; Naohiro Aota <naota@gentoo.org>
+  +files/migemo-0.40_p2-ruby-ng.patch, +migemo-0.40_p2.ebuild,
+  files/migemo-0.40-ruby-ng.patch:
+  version bump to support ruby19. #493028
 
   21 Feb 2013; Agostino Sarubbo <ago@gentoo.org> migemo-0.40-r5.ebuild:
   Stable for ia64, wrt bug #455952
