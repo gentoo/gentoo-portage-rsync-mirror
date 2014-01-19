@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libcircle/libcircle-0.1.0_rc1.ebuild,v 1.1 2014/01/18 02:23:17 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libcircle/libcircle-0.1.0_rc1.ebuild,v 1.2 2014/01/19 02:27:37 ottxor Exp $
 
 EAPI=5
 
@@ -35,8 +35,8 @@ DOCS=( HACKING.md README.md )
 
 src_configure() {
 	local myeconfargs=(
-		$(use_enable test tests)
-		$(use_enable doc doxygen)
+		$(usex test '--enable-tests' '')
+		$(usex doc '--enable-doxygen' '')
 	)
 	autotools-utils_src_configure
 }

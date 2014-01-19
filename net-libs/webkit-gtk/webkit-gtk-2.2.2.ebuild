@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.2.ebuild,v 1.2 2013/12/30 12:33:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.2.ebuild,v 1.3 2014/01/19 02:30:55 gienah Exp $
 
 EAPI="5"
 
@@ -181,6 +181,9 @@ src_prepare() {
 
 	# Do not build unittests unless requested
 	epatch "${FILESDIR}"/${PN}-2.2.2-unittests-build.patch
+
+	# bug #493654, upstream bug #125074
+	epatch "${FILESDIR}/${PN}-2.2.2-freetype-2.5.1.patch"
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf

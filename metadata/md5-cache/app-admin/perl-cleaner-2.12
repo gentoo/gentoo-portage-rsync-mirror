@@ -2,9 +2,9 @@ DEFINED_PHASES=install
 DESCRIPTION=User land tool for cleaning up old perl installs
 EAPI=4
 HOMEPAGE=http://www.gentoo.org/proj/en/perl/
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd
 LICENSE=GPL-2
 RDEPEND=app-shells/bash || ( >=sys-apps/coreutils-8.15 app-misc/realpath sys-freebsd/freebsd-bin ) dev-lang/perl
 SLOT=0
 SRC_URI=mirror://gentoo/perl-cleaner-2.12.tar.bz2 http://dev.gentoo.org/~tove/distfiles/app-admin/perl-cleaner/perl-cleaner-2.12.tar.bz2
-_md5_=c5dfebfbfaea9e2909f975dcfc77c877
+_md5_=29e92ca15e7c83f7b57f7c051a2b1f39

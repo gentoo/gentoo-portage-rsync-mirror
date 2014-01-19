@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15347 2014/01/19 00:33:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15349 2014/01/19 02:29:32 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Dion Moult <moult@gentoo.org> (19 Jan 2014)
+# Mask for removal in 30 days. usleep is actually provided part of
+# app-admin/killproc (bug #467212)
+sys-apps/usleep
+
+# Dion Moult <moult@gentoo.org> (19 Jan 2014)
+# Mask for removal in 30 days. Flyte service discontinued so package is useless.
+# (bug #495138)
+app-misc/flyte-download-manager
 
 # Mike Gilbert <floppym@gentoo.org> (19 Jan 2014)
 # To prevent accidental switching of release channels (bug 498306),

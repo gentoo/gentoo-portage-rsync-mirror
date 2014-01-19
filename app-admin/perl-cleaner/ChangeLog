@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/perl-cleaner
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.80 2012/04/29 07:39:43 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/ChangeLog,v 1.81 2014/01/19 02:09:59 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-cleaner-2.10.ebuild,
+  perl-cleaner-2.12.ebuild, perl-cleaner-2.7.ebuild, perl-cleaner-2.8.ebuild:
+  Add arm64 love.
 
 *perl-cleaner-2.12 (29 Apr 2012)
 
@@ -347,4 +351,3 @@
   05 Jun 2005; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
   +perl-cleaner-1.0.ebuild:
   Initial import, prepping so perl-cleaner can be called from revdep-rebuilder
-

@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/webkit-gtk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.229 2013/12/30 12:33:32 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.230 2014/01/19 02:30:55 gienah Exp $
+
+  19 Jan 2014; Mark Wright <gienah@gentoo.org>
+  +files/webkit-gtk-2.0.4-freetype-2.5.1.patch,
+  +files/webkit-gtk-2.2.2-freetype-2.5.1.patch, webkit-gtk-2.0.4.ebuild,
+  webkit-gtk-2.2.2.ebuild:
+  Apply upstream patch to fix bug #493654, thanks to pacho for finding the
+  patch, Brandon Penglase for tweaking the patch to apply to webkit-gtk-2.0.4,
+  Clemente Aguiar for reporting.
 
   30 Dec 2013; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.0.4.ebuild,
   webkit-gtk-2.2.2.ebuild:
