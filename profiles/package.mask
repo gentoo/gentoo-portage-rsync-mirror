@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15350 2014/01/19 02:51:24 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15351 2014/01/19 07:26:20 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,11 +34,6 @@
 # Mask for removal in 30 days. Packages now depend on dev-lang/mono directly and
 # not on virtual/monodoc (bug #471180)
 virtual/monodoc
-
-# Dion Moult <moult@gentoo.org> (19 Jan 2014)
-# Mask for removal in 30 days. usleep is actually provided part of
-# app-admin/killproc (bug #467212)
-sys-apps/usleep
 
 # Dion Moult <moult@gentoo.org> (19 Jan 2014)
 # Mask for removal in 30 days. Flyte service discontinued so package is useless.
