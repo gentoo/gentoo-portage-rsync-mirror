@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-15.ebuild,v 1.10 2013/08/29 05:54:07 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-15.ebuild,v 1.11 2014/01/19 08:51:00 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="+ocamlopt static"
 
 LIB_DEPEND="~app-text/mupdf-1.2:=[static-libs]

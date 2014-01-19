@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.81 2014/01/19 01:59:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.82 2014/01/19 08:52:48 floppym Exp $
+
+  19 Jan 2014; Mike Gilbert <floppym@gentoo.org> eselect-python-20140115.ebuild,
+  eselect-python-99999999.ebuild:
+  Tidy up RDEPEND. Don't call eselect python update when python is not
+  installed, bug 380567.
 
 *eselect-python-20140115 (19 Jan 2014)
 

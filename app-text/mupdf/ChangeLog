@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.90 2013/11/21 16:42:44 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.92 2014/01/19 08:52:09 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> mupdf-1.2.ebuild:
+  amd64 stable, bug #472532
 
   21 Nov 2013; Jeroen Roovers <jer@gentoo.org> mupdf-1.3_p20130828.ebuild:
   Marked ~hppa (bug #491876).

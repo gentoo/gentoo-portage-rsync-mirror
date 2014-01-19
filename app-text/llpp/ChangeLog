@@ -1,6 +1,9 @@
 # ChangeLog for app-text/llpp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.52 2013/08/30 06:28:59 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.54 2014/01/19 08:52:51 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> llpp-15.ebuild:
+  amd64 stable, bug #472532
 
   30 Aug 2013; Michael Weber <xmw@gentoo.org> llpp-16_p20130828.ebuild:
   Put stable tarball on devspace, new checksum.

@@ -6,4 +6,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.3
 SLOT=0
 SRC_URI=mirror://gentoo/eselect-python-20140115.tar.bz2 http://dev.gentoo.org/~floppym/dist/eselect-python-20140115.tar.bz2
-_md5_=9b232bbd4dcee0f3f1bd3000bb9f28ea
+_md5_=faf027e97ebe20579e172c4166d08f20

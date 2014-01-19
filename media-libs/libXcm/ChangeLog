@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libXcm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.13 2013/06/24 17:18:39 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libXcm/ChangeLog,v 1.14 2014/01/19 08:51:26 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> libXcm-0.5.2-r1.ebuild:
+  amd64 stable, bug 472532
 
   24 Jun 2013; Michael Weber <xmw@gentoo.org> -libXcm-0.5.1.ebuild,
   -libXcm-0.5.2.ebuild, libXcm-0.5.2-r1.ebuild:
