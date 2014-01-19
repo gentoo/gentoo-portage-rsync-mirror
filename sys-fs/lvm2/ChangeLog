@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.331 2014/01/14 21:09:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.334 2014/01/19 10:56:10 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.103.ebuild:
+  Stable for ppc64, wrt bug #486278
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.103.ebuild:
+  Stable for ppc, wrt bug #486278
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.103.ebuild:
+  Stable for sparc, wrt bug #486278
 
   14 Jan 2014; Pacho Ramos <pacho@gentoo.org> lvm2-2.02.103.ebuild:
   ia64 stable, bug #486278 (thanks to Emeric Maschino for testing)

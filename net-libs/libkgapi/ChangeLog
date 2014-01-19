@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libkgapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.25 2014/01/18 18:58:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkgapi/ChangeLog,v 1.26 2014/01/19 10:32:57 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libkgapi-2.0.2.ebuild:
+  Stable for ppc64, wrt bug #497680
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> libkgapi-2.0.2.ebuild:
   amd64 stable, bug #497680

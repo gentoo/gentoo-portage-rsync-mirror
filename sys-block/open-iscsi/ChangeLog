@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/open-iscsi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.57 2014/01/18 19:25:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/ChangeLog,v 1.58 2014/01/19 10:36:46 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> open-iscsi-2.0.872-r2.ebuild:
+  Stable for ppc64, wrt bug #498446
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> open-iscsi-2.0.872-r2.ebuild:
   ia64 stable, bug #498446 (thanks to Emeric Maschino for testing)

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.292 2014/01/18 11:24:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.293 2014/01/19 10:58:49 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kdegames-meta-4.12.1.ebuild:
+  Add ~arm, wrt bug #498424
 
 *kdegames-meta-4.12.1 (18 Jan 2014)
 
