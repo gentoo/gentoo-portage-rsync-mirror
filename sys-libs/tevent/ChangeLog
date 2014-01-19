@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/tevent
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.56 2013/12/16 08:58:48 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/ChangeLog,v 1.57 2014/01/18 23:19:27 polynomial-c Exp $
+
+*tevent-0.9.21 (18 Jan 2014)
+
+  18 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> +tevent-0.9.21.ebuild:
+  Version bump.
 
   16 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> tevent-0.9.20.ebuild:
   Raised dependency on sys-libs/talloc to version 2.1.0 for bug #481174.
