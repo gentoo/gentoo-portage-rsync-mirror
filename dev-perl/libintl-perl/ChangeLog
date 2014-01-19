@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/libintl-perl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.55 2013/12/23 14:30:39 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.56 2014/01/19 20:28:17 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> libintl-perl-1.200.0.ebuild,
+  libintl-perl-1.230.0.ebuild:
+  Add arm64 love.
 
   23 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -libintl-perl-1.210.0.ebuild,
   libintl-perl-1.230.0.ebuild:

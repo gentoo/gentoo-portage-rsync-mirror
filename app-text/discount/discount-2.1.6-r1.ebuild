@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/discount/discount-2.1.6-r1.ebuild,v 1.8 2013/11/24 19:00:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/discount/discount-2.1.6-r1.ebuild,v 1.9 2014/01/19 20:05:54 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.pell.portland.or.us/~orc/Code/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
 IUSE="minimal"
 
 src_prepare() {

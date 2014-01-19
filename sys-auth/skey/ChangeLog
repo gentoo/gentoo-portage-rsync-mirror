@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/skey
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.26 2012/11/04 20:24:14 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.27 2014/01/19 20:08:26 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> skey-1.1.5-r8.ebuild:
+  Add arm64 love.
 
   04 Nov 2012; Ulrich Müller <ulm@gentoo.org> skey-1.1.5-r8.ebuild:
   Update LICENSE, RSA-MD4 and RSA-MD5 are replaced by RSA license template.
@@ -286,4 +289,3 @@
   05 Sep 2003; Tavis Ormandy <taviso@gentoo.org> skey-1.1.5.ebuild:
   Initial import, Thanks to Jeb Campbell <jebc@c4solutions.net> for
   submitting the ebuild in #11478
-

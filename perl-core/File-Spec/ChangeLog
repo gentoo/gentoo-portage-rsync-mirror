@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/File-Spec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.100 2014/01/17 06:09:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/File-Spec/ChangeLog,v 1.101 2014/01/19 20:30:49 vapier Exp $
+
+  19 Jan 2014; Mike Frysinger <vapier@gentoo.org> File-Spec-3.400.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> File-Spec-3.400.0.ebuild:
   Mark m68k stable.
