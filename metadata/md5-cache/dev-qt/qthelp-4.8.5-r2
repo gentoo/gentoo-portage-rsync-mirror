@@ -4,10 +4,10 @@ DESCRIPTION=The Help module for the Qt toolkit
 EAPI=5
 HOMEPAGE=http://qt-project.org/ http://qt.digia.com/
 IUSE=compat doc aqua debug pch +exceptions
-KEYWORDS=~alpha amd64 arm ~ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos
+KEYWORDS=alpha amd64 arm ~ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos
 LICENSE=|| ( LGPL-2.1 GPL-3 )
 RDEPEND=~dev-qt/qtcore-4.8.5[aqua=,debug=] ~dev-qt/qtgui-4.8.5[aqua=,debug=] ~dev-qt/qtsql-4.8.5[aqua=,debug=,sqlite] compat? ( ~dev-qt/qtdbus-4.8.5[aqua=,debug=] sys-libs/zlib )
 SLOT=4
 SRC_URI=http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz compat? ( ftp://ftp.qt.nokia.com/qt/source/qt-assistant-qassistantclient-library-compat-src-4.6.3.tar.gz http://dev.gentoo.org/~pesa/distfiles/qt-assistant-compat-headers-4.7.tar.gz )
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	qt4-build	df8f37ad99366cf3f89fa8d5b49ceb75	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=05f22c654c4710705de9c1e3ae4051bc
+_md5_=4dbcb776947f94079ba08cd0c7402933

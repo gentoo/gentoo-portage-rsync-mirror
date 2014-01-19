@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qt3support
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt3support/ChangeLog,v 1.10 2014/01/06 09:38:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt3support/ChangeLog,v 1.11 2014/01/19 13:53:09 ago Exp $
+
+  19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qt3support-4.8.5.ebuild:
+  Stable for alpha, wrt bug #494728
 
   06 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qt3support-4.8.5.ebuild:
   Stable for sparc, wrt bug #494728

@@ -4,10 +4,10 @@ DESCRIPTION=Resource manager and queuing system based on OpenPBS
 EAPI=4
 HOMEPAGE=http://www.adaptivecomputing.com/products/open-source/torque
 IUSE=cpusets +crypt doc drmaa kernel_linux munge nvidia server +syslog tk
-KEYWORDS=~alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86
+KEYWORDS=alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86
 LICENSE=torque-2.5
 RDEPEND=sys-libs/ncurses sys-libs/readline cpusets? ( sys-apps/hwloc ) munge? ( sys-auth/munge ) nvidia? ( >=x11-drivers/nvidia-drivers-275 ) tk? ( dev-lang/tk ) syslog? ( virtual/logger ) !games-util/qstat crypt? ( net-misc/openssh ) !crypt? ( net-misc/netkit-rsh )
 SLOT=0
 SRC_URI=http://www.adaptivecomputing.com/index.php?wpfb_dl=1058 -> torque-4.1.5.1.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=f22064274c1dea2d7e2aef4389e6f1ce
+_md5_=0a93206935b707d31d7b5dabbf38a641
