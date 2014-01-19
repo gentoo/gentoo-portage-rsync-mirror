@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20140115.ebuild,v 1.2 2014/01/19 08:52:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20140115.ebuild,v 1.3 2014/01/19 15:59:11 floppym Exp $
 
 # Keep the EAPI low here because everything else depends on it.
 # We want to make upgrading simpler.
@@ -42,10 +42,10 @@ pkg_postinst() {
 	if has_version 'dev-lang/python'; then
 		eselect python update --if-unset
 	fi
-	if has_version '=dev-lang/python2*'; then
+	if has_version '=dev-lang/python-2*'; then
 		eselect python update --python2 --if-unset
 	fi
-	if has_version '=dev-lang/python3*'; then
+	if has_version '=dev-lang/python-3*'; then
 		eselect python update --python3 --if-unset
 	fi
 }

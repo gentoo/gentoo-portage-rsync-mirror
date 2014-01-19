@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-BinHex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.28 2014/01/19 10:14:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.29 2014/01/19 15:56:05 zlogene Exp $
+
+  19 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> Convert-BinHex-1.123.0.ebuild:
+  sparc syable wrt bug #492102
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> Convert-BinHex-1.123.0.ebuild:
   Stable for ppc64, wrt bug #492102

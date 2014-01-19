@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/herelib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/herelib/ChangeLog,v 1.7 2013/08/19 13:27:22 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/herelib/ChangeLog,v 1.8 2014/01/19 15:46:34 aballier Exp $
+
+*herelib-109.35.02 (19 Jan 2014)
+
+  19 Jan 2014; Alexis Ballier <aballier@gentoo.org> +herelib-109.35.02.ebuild:
+  version bump
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> -herelib-109.11.00.ebuild,
   -herelib-109.14.00.ebuild, -herelib-109.15.00.ebuild:
