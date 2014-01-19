@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.65 2014/01/02 07:21:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.66 2014/01/19 09:21:15 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> cucumber-1.2.1.ebuild:
+  amd64 stable, bug 493780
 
   02 Jan 2014; Hans de Graaff <graaff@gentoo.org> cucumber-1.2.1.ebuild:
   Add alpha keyword that did not get included in a version bump.

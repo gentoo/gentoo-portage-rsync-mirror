@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.29 2013/12/26 18:59:42 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.30 2014/01/19 09:23:17 pacho Exp $
+
+  19 Jan 2014; Pacho Ramos <pacho@gentoo.org> aruba-0.5.3.ebuild:
+  amd64 stable, bug 493780
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> aruba-0.5.3.ebuild:
   arm stable, bug #493780
