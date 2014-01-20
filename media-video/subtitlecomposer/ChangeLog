@@ -1,6 +1,12 @@
 # ChangeLog for media-video/subtitlecomposer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.16 2013/06/25 18:30:50 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.18 2014/01/20 11:15:24 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org>
+  +files/subtitlecomposer-0.5.3-gold-gstreamer.patch,
+  subtitlecomposer-0.5.3-r2.ebuild:
+  Add patch from Debian fixing linking with gold and USE="gstreamer", wrt bug
+  #498482.
 
 *subtitlecomposer-0.5.3-r2 (25 Jun 2013)
 
