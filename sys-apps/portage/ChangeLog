@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1379 2014/01/18 11:37:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1380 2014/01/20 17:41:31 floppym Exp $
+
+  20 Jan 2014; Mike Gilbert <floppym@gentoo.org> portage-2.2.8.ebuild,
+  portage-9999.ebuild:
+  Enforce python_targets on pyxattr dep, bug 498478.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> portage-2.2.7.ebuild,
   portage-2.2.8.ebuild:
