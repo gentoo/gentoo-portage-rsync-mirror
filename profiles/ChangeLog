@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8550 2014/01/19 19:23:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8551 2014/01/20 07:18:41 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jan 2014; Pacho Ramos <pacho@gentoo.org> profiles.desc:
+  Replace tabs by spaces (thanks to vapier for noticing)
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> arch/sparc/package.use.force,
   arch/sparc/package.use.mask, arch/sparc/use.mask,

@@ -78,6 +78,9 @@ bazaar
 darcs
 mercurial
 kerberos
+gpg
+gnome
+gnome-keyring
 cupsddk
 doc
 emacs
