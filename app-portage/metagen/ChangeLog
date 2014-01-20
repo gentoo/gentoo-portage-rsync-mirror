@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/metagen
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.36 2012/02/07 16:19:50 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.37 2014/01/20 03:46:53 floppym Exp $
+
+*metagen-0.6.2-r1 (20 Jan 2014)
+
+  20 Jan 2014; Mike Gilbert <floppym@gentoo.org> +metagen-0.6.2-r1.ebuild,
+  metagen-9999.ebuild:
+  Convert to distutils-r1.
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> metagen-0.6.2.ebuild:
   Stable for HPPA (bug #399949).
@@ -136,4 +142,3 @@
 
   22 Aug 2004; Rob Cakebread <pythonhead@gentoo.org> +metagen-0.1.ebuild:
   Initial commit
-
