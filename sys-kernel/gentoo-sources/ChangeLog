@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1245 2014/01/17 02:58:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1246 2014/01/20 17:02:58 mpagano Exp $
+
+*gentoo-sources-3.13.0 (20 Jan 2014)
+
+  20 Jan 2014; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.13.0.ebuild:
+  Support for namespace user.pax.* on tmpfs. Enable mic mute led in thinkpads.
+  Zero copy for infiniband psm userspace driver. Disable Windows 8
+  compatibility for some Lenovo ThinkPads. Ensure that /dev/root doesn't appear
+  in /proc/mounts when bootint without an initramfs. Do not lock when UMH is
+  waiting on current thread spawned by linuxrc. Bootsplash successor by Michal
+  Januszewski ported by Jeremy. Support for Pogoplug e02 (bug #460350),
+  adjusted to be opt-in by TomWij. Add Gentoo Linux support config settings and
+  defaults. BFQ patch 
 
   17 Jan 2014; Joseph Jezak <josejx@gentoo.org> gentoo-sources-3.10.25.ebuild:
   Marked ppc/ppc64 stable for bug #496890.

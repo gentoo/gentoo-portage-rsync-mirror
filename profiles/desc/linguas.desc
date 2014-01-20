@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation.
+# Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.76 2013/12/17 12:49:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.77 2014/01/20 17:20:32 yngwin Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -25,6 +25,7 @@ bn - Bengali locale
 bn_BD - Bengalie locale for Bangladesh
 bn_IN - Bengali locale for India
 bo - Tibetan locale
+bo_CN - Tibetan locale for China
 br - Breton locale
 brx - Bodo locale for India
 bs - Bosnian locale
@@ -38,6 +39,7 @@ cs_CZ - Czech locale for Czech Republic
 csb - Kashubian locale
 cy - Welsh locale
 da - Danish locale
+da_DK - Danish locale for Denmark
 de - German locale
 de_DE - German locale for Germany
 de_FR - German locale for France
@@ -82,6 +84,7 @@ ga - Irish locale
 ga_IE - Irish locale for Ireland
 gd - Gaelic locale
 gl - Galician locale
+gl_ES - Galician locale for Spain
 gu - Gujarati locale
 gu_IN - Gujarati locale for India
 he - Hebrew locale
@@ -139,6 +142,7 @@ ms - Malay locale
 ms_MY - Malay locale for Malaysia
 mt - Maltese locale
 my - Burmese locale
+my_MM - Burmese  locale for Myanmar
 nan - Min Nan locale
 nb - Norwegian (Bokmal) locale
 nb_NO - Norwegian (Bokmal) locale for Norway
@@ -150,6 +154,7 @@ nl_NL - Dutch locale for Netherlands
 nn - Nynorsk locale
 nn_NO - Nynorsk locale for Norway
 no - Norwegian locale
+nqo - N'Ko locale
 nr - Ndebele (South) locale
 ns - Northern Sotho locale
 nso - Northern Sotho locale
@@ -193,6 +198,7 @@ sr@ijekavianlatin - Serbian-Ijekavian (latin) locale
 sr@latin - Serbian (latin) locale
 sr@Latn - Serbian (latin) locale
 sr_BA - Serbian locale for Bosnia and Herzegovina
+sr_BA@latin - Serbian (latin) locale for Bosnia and Herzegovina
 sr_CS - Serbian locale
 sr_RS - Serbian locale for Serbia
 sr_RS@cyrillic - Serbian (cyrillic) locale for Serbia

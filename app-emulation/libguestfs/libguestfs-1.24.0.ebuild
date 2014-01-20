@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.24.0.ebuild,v 1.1 2013/10/21 07:04:59 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs/libguestfs-1.24.0.ebuild,v 1.2 2014/01/20 17:22:50 maksbotan Exp $
 
 EAPI="5"
 
@@ -43,7 +43,7 @@ COMMON_DEPEND="
 	app-emulation/libvirt
 	dev-libs/libxml2:2
 	>=sys-apps/fakechroot-2.8
-	>=app-admin/augeas-0.7.1
+	>=app-admin/augeas-1.0.0
 	sys-fs/squashfs-tools
 	dev-libs/libconfig
 	dev-libs/libpcre
