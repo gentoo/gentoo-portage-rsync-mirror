@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.152 2014/01/19 10:17:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.153 2014/01/20 15:50:59 ago Exp $
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ntfs3g-2013.1.13.ebuild:
+  Stable for ppc, wrt bug #495310
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ntfs3g-2013.1.13.ebuild:
   Stable for ppc64, wrt bug #495310

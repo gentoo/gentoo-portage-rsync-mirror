@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.96 2014/01/18 19:02:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.97 2014/01/20 15:51:35 ago Exp $
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pgadmin3-1.18.1.ebuild:
+  Stable for ppc, wrt bug #495364
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> pgadmin3-1.18.1.ebuild:
   amd64 stable, bug #495364

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Negotiate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/ChangeLog,v 1.22 2014/01/20 01:19:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/ChangeLog,v 1.23 2014/01/20 15:48:22 ago Exp $
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> HTTP-Negotiate-6.0.1-r1.ebuild:
+  Stable for ppc, wrt bug #492170
 
   20 Jan 2014; Jeroen Roovers <jer@gentoo.org> HTTP-Negotiate-6.0.1-r1.ebuild:
   Stable for HPPA (bug #492170).

@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/atftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.34 2014/01/19 10:28:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.35 2014/01/20 15:55:47 ago Exp $
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> atftp-0.7-r3.ebuild:
+  Stable for ppc, wrt bug #496272
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> atftp-0.7-r3.ebuild:
   Stable for ppc64, wrt bug #496272

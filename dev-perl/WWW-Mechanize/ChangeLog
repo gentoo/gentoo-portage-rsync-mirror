@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/WWW-Mechanize
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.91 2013/09/03 03:08:04 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Mechanize/ChangeLog,v 1.92 2014/01/20 15:52:15 ago Exp $
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> WWW-Mechanize-1.730.0.ebuild:
+  Stable for ppc, wrt bug #495506
 
 *WWW-Mechanize-1.730.0 (03 Sep 2013)
 

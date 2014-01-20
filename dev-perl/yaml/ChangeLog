@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.106 2014/01/20 01:21:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.107 2014/01/20 15:55:32 ago Exp $
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> yaml-0.840.0.ebuild:
+  Stable for ppc, wrt bug #496172
 
   20 Jan 2014; Jeroen Roovers <jer@gentoo.org> yaml-0.840.0.ebuild:
   Stable for HPPA (bug #496172).

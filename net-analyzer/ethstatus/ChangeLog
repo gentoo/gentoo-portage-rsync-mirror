@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ethstatus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.15 2014/01/16 07:51:37 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethstatus/ChangeLog,v 1.16 2014/01/20 15:53:29 ago Exp $
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ethstatus-0.4.3.ebuild:
+  Stable for ppc, wrt bug #495832
 
   16 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> ethstatus-0.4.3.ebuild:
   Add ~amd64-linux and ~x86-linux keywords

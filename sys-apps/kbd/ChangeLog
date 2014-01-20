@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.125 2014/01/19 10:29:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.126 2014/01/20 15:56:26 ago Exp $
+
+  20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kbd-1.15.5-r1.ebuild:
+  Stable for ppc, wrt bug #496434
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kbd-1.15.5-r1.ebuild:
   Stable for ppc64, wrt bug #496434
