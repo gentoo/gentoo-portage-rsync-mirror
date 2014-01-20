@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.692 2013/12/24 15:19:32 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.693 2014/01/20 21:23:54 pacho Exp $
+
+  20 Jan 2014; Pacho Ramos <pacho@gentoo.org> gtk+-2.24.22.ebuild,
+  gtk+-3.10.6.ebuild:
+  Rekeyword now that depending packages were keyworded (#469722)
 
 *gtk+-3.10.6 (24 Dec 2013)
 
