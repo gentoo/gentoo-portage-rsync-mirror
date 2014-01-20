@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.12.8.ebuild,v 1.1 2014/01/16 19:57:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aufs-sources/aufs-sources-3.12.8.ebuild,v 1.2 2014/01/20 16:35:29 jlec Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ src_unpack() {
 
 	unpack ${AUFS_TARBALL}
 
-	epatch "${FILESDIR}"/${P}-mmap-aufs3.patch
+	epatch "${FILESDIR}"/${PN}-3.12.7-mmap-aufs3.patch
 
 	kernel-2_src_unpack
 }
