@@ -10,7 +10,7 @@
   </synopsis>
   <product type="ebuild">PostgreSQL</product>
   <announced>September 28, 2012</announced>
-  <revised>September 28, 2012: 1</revised>
+  <revised>January 20, 2014: 2</revised>
   <bug>406037</bug>
   <bug>419727</bug>
   <bug>431766</bug>
@@ -21,6 +21,16 @@
       <unaffected range="rge">9.0.9</unaffected>
       <unaffected range="rge">8.4.13</unaffected>
       <unaffected range="rge">8.3.20</unaffected>
+      <unaffected range="rge">8.4.17</unaffected>
+      <unaffected range="rge">8.4.19</unaffected>
+      <unaffected range="rge">9.0.13</unaffected>
+      <unaffected range="rge">9.0.14</unaffected>
+      <unaffected range="rge">9.0.15</unaffected>
+      <unaffected range="rge">8.4.14</unaffected>
+      <unaffected range="rge">8.4.15</unaffected>
+      <unaffected range="rge">8.4.16</unaffected>
+      <unaffected range="rge">9.0.16</unaffected>
+      <unaffected range="rge">9.0.17</unaffected>
       <vulnerable range="lt">9.1.5</vulnerable>
     </package>
   </affected>
@@ -90,5 +100,5 @@
   <metadata tag="requester" timestamp="Sun, 08 Apr 2012 15:26:13 +0000">
     underling
   </metadata>
-  <metadata tag="submitter" timestamp="Fri, 28 Sep 2012 11:27:50 +0000">ackle</metadata>
+  <metadata tag="submitter" timestamp="Mon, 20 Jan 2014 09:36:28 +0000">ackle</metadata>
 </glsa>
