@@ -1,0 +1,9 @@
+# ChangeLog for app-misc/asciinema
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/asciinema/ChangeLog,v 1.1 2014/01/20 19:25:30 kensington Exp $
+
+*asciinema-0.9.7 (20 Jan 2014)
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> +asciinema-0.9.7.ebuild,
+  +metadata.xml:
+  New package wrt bug #497648. Ebuild by Ondrej Sukup <mimi.vx@gmail.com>.

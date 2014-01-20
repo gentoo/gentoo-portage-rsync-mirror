@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/stomp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/ChangeLog,v 1.32 2014/01/19 16:54:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stomp/ChangeLog,v 1.33 2014/01/20 19:19:53 mrueg Exp $
+
+  20 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -stomp-1.2.7.ebuild:
+  Cleanup old.
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> stomp-1.2.16.ebuild:
   amd64 stable, bug #490020

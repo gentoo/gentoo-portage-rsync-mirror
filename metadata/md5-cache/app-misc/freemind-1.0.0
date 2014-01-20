@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install preinst prepare setup
+DEPEND=dev-java/javahelp:0 dev-java/jgoodies-forms:0 dev-java/jibx:0 dev-java/jortho:0 >=dev-java/simplyhtml-0.13.1:0 groovy? ( dev-java/groovy ) latex? ( dev-java/hoteqn:0 ) pdf? ( dev-java/batik:1.7 >=dev-java/fop-0.95:0 ) svg? ( dev-java/batik:1.7 >=dev-java/fop-0.95:0 ) >=virtual/jdk-1.4 pdf? ( dev-java/avalon-framework:4.2 ) svg? ( dev-java/avalon-framework:4.2 ) >=dev-java/java-config-2.1.9-r1 >=dev-java/ant-core-1.8.2 >=dev-java/javatoolkit-0.3.0-r2 >=dev-lang/python-2.4
+DESCRIPTION=Mind-mapping software written in Java
+EAPI=5
+HOMEPAGE=http://freemind.sourceforge.net
+IUSE=groovy latex pdf svg elibc_FreeBSD doc elibc_FreeBSD
+KEYWORDS=~amd64
+LICENSE=GPL-2
+RDEPEND=dev-java/javahelp:0 dev-java/jgoodies-forms:0 dev-java/jibx:0 dev-java/jortho:0 >=dev-java/simplyhtml-0.13.1:0 groovy? ( dev-java/groovy ) latex? ( dev-java/hoteqn:0 ) pdf? ( dev-java/batik:1.7 >=dev-java/fop-0.95:0 ) svg? ( dev-java/batik:1.7 >=dev-java/fop-0.95:0 ) >=virtual/jre-1.4 >=dev-java/java-config-2.1.9-r1
+SLOT=0
+SRC_URI=mirror://sourceforge/freemind/freemind-src-1.0.0.tar.gz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-ant-2	8f79fa38524086d2b7d4e9cd442ca6cc	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=99398fda8ad57ad1299338d71205cf8b
