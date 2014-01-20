@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/numad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.5 2013/02/27 00:28:26 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/ChangeLog,v 1.6 2014/01/20 07:50:15 jlec Exp $
+
+*numad-0.5-r1 (20 Jan 2014)
+
+  20 Jan 2014; Justin Lecher <jlec@gentoo.org> +numad-0.5-r1.ebuild,
+  numad-9999.ebuild, metadata.xml:
+  Respect CC and CFLAGS as upstream recommends, #429508
 
   27 Feb 2013; Michael Sterrett <mr_bones_@gentoo.org> numad-9999.ebuild:
   fix PV check; empty KEYWORDS

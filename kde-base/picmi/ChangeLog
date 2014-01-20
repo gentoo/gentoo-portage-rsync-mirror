@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/picmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.53 2014/01/19 10:58:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.54 2014/01/20 08:00:55 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> picmi-4.11.5.ebuild:
+  Restore keywords that were accidentally omitted.
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> picmi-4.12.1.ebuild:
   Add ~arm, wrt bug #498424

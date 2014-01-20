@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/numad-9999.ebuild,v 1.2 2013/02/27 00:28:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numad/numad-9999.ebuild,v 1.3 2014/01/20 07:50:15 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-inherit linux-info git-2
+inherit git-r3 linux-info toolchain-funcs
 
 if [[ ${PV} = "9999" ]]; then
 	inherit git-2
@@ -17,24 +17,26 @@ fi
 
 DESCRIPTION="The NUMA daemon that manages application locality"
 HOMEPAGE="http://fedoraproject.org/wiki/Features/numad"
-#SRC_URI=""
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE=""
-
-DEPEND=""
-RDEPEND="${DEPEND}"
 
 CONFIG_CHECK="~NUMA ~CPUSETS"
 
 src_prepare() {
 	EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${FILESDIR}" \
 		epatch
+
+	tc-export CC
 }
 
 src_configure() {
 	:
+}
+
+src_compile() {
+	emake CFLAGS="${CFLAGS} -std=gnu99"
 }
 
 src_install() {

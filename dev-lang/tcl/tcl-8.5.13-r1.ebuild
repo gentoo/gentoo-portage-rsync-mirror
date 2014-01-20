@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.13-r1.ebuild,v 1.14 2014/01/19 09:51:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.13-r1.ebuild,v 1.15 2014/01/20 07:34:30 jlec Exp $
 
 EAPI=4
 
@@ -19,18 +19,6 @@ IUSE="debug threads"
 
 SPARENT="${WORKDIR}/${MY_P}"
 S="${SPARENT}"/unix
-
-pkg_setup() {
-	if use threads ; then
-		echo
-		ewarn "PLEASE NOTE: You are compiling ${P} with"
-		ewarn "threading enabled."
-		ewarn "Threading is not supported by all applications"
-		ewarn "that compile against tcl. You use threading at"
-		ewarn "your own discretion."
-		echo
-	fi
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-multilib.patch

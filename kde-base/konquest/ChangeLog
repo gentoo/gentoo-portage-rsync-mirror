@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.284 2014/01/18 11:24:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.285 2014/01/20 08:00:56 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> konquest-4.11.5.ebuild:
+  Restore keywords that were accidentally omitted.
 
 *konquest-4.12.1 (18 Jan 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kioclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.200 2014/01/18 11:24:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kioclient/ChangeLog,v 1.201 2014/01/20 08:00:17 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> kioclient-4.11.5.ebuild:
+  Restore keywords that were accidentally omitted.
 
 *kioclient-4.12.1 (18 Jan 2014)
 

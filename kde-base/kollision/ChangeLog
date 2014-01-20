@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kollision
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.180 2014/01/18 11:24:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kollision/ChangeLog,v 1.181 2014/01/20 08:00:38 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> kollision-4.11.5.ebuild:
+  Restore keywords that were accidentally omitted.
 
 *kollision-4.12.1 (18 Jan 2014)
 

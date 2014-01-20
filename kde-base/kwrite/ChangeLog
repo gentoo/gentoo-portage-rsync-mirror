@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.198 2014/01/18 11:24:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.199 2014/01/20 08:00:08 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> kwrite-4.11.5.ebuild:
+  Restore keywords that were accidentally omitted.
 
 *kwrite-4.12.1 (18 Jan 2014)
 

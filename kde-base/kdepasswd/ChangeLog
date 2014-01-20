@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepasswd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.298 2014/01/18 11:23:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepasswd/ChangeLog,v 1.299 2014/01/20 08:00:19 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> kdepasswd-4.11.5.ebuild:
+  Restore keywords that were accidentally omitted.
 
 *kdepasswd-4.12.1 (18 Jan 2014)
 

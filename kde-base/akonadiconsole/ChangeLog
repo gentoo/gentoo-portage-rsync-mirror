@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/akonadiconsole
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.109 2014/01/18 11:23:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadiconsole/ChangeLog,v 1.110 2014/01/20 08:00:12 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org>
+  akonadiconsole-4.11.5.ebuild:
+  Restore keywords that were accidentally omitted.
 
 *akonadiconsole-4.12.1 (18 Jan 2014)
 

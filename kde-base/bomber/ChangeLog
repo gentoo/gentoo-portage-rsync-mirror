@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bomber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.179 2014/01/18 11:23:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bomber/ChangeLog,v 1.180 2014/01/20 08:00:31 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> bomber-4.11.5.ebuild:
+  Restore keywords that were accidentally omitted.
 
 *bomber-4.12.1 (18 Jan 2014)
 
