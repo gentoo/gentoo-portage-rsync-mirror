@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.9999.ebuild,v 1.9 2014/01/20 05:58:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.1.9999.ebuild,v 1.10 2014/01/20 06:08:12 prometheanfire Exp $
 
 EAPI=5
 #test restricted becaues of bad requirements given (old webob for instance)
@@ -82,8 +82,7 @@ python_install() {
 	newinitd "${FILESDIR}/keystone.initd" keystone
 
 	diropts -m 0750
-	dodir /var/log/keystone /etc/keystone
-	keepdir /etc/keystone
+	keepdir /etc/keystone /var/log/keystone
 	insinto /etc/keystone
 	doins etc/keystone.conf.sample etc/logging.conf.sample
 	doins etc/default_catalog.templates etc/policy.json

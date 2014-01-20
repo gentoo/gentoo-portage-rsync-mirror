@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1-r1.ebuild,v 1.1 2014/01/20 05:58:14 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1-r1.ebuild,v 1.2 2014/01/20 06:08:12 prometheanfire Exp $
 
 EAPI=5
 
@@ -98,14 +98,13 @@ python_install() {
 	newinitd "${FILESDIR}/keystone.initd" keystone
 
 	diropts -m 0750
-	dodir /var/log/keystone /etc/keystone
-	keepdir /etc/keystone
+	keepdir /etc/keystone /var/log/keystone
 	insinto /etc/keystone
 	doins etc/keystone.conf.sample etc/logging.conf.sample
 	doins etc/default_catalog.templates etc/policy.json
 	doins etc/policy.v3cloudsample.json etc/keystone-paste.ini
 
-	fowners keystone:keystone /var/log/keystone /etc/keystone
+	fowners keystone:keystone /etc/keystone /var/log/keystone
 }
 
 pkg_postinst() {

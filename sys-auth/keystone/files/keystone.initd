@@ -1,56 +1,17 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/files/keystone.initd,v 1.3 2013/11/18 03:24:30 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/files/keystone.initd,v 1.4 2014/01/20 06:08:12 prometheanfire Exp $
+
+description="Starts both the service and administrative APIs in a single process to provide catalog, authorization, and authentication services for OpenStack"
+
+command=/usr/bin/keystone-all
+pidfile=/var/run/keystone.pid
+required_files="${KEYSTONE_CONF:-/etc/keystone/keystone.conf}"
+
+start_stop_daemon_args="--background --make-pidfile --user ${KEYSTONE_USER:-keystone}"
+command_args="${KEYSTONE_ARGS}"
 
 depend() {
 	need net
 }
-
-BASENAME=$(echo $SVCNAME | cut -d '-' -f 1)
-
-checkconfig() {
-	if [ ! -r /etc/conf.d/$BASENAME ]; then
-		eerror "No keystone service confd file found: /etc/conf.d/$BASENAME)"
-		return 1
-	fi
-	. /etc/conf.d/$BASENAME
-
-	if [ ! -r ${CONFIG_FILE} ]; then
-		eerror "No keystone config file found: ${CONFIG_FILE})"
-		return 1
-	fi
-
-	return 0
-}
-
-
-start() {
-	checkconfig || return $?
-	. /etc/conf.d/$BASENAME
-
-    if [ ! -d ${PID_PATH} ]; then
-        mkdir ${PID_PATH}
-    fi
-	
-	ebegin "Starting ${SVCNAME}"
-	
-	start-stop-daemon --start --quiet --make-pidfile --pidfile "${PID_PATH}/${SVCNAME}.pid" --exec /usr/bin/${SVCNAME}-all --background -- --config-file=${CONFIG_FILE} --log-file=${LOG_FILE}
-	
-	eend $? "Failed to start ${SVCNAME}"
-}
-
-stop() {
-	checkconfig || return $?
-	. /etc/conf.d/$BASENAME
-	
-	ebegin "Stopping ${SVCNAME}"
-	
-	start-stop-daemon --stop --pidfile "${PID_PATH}/${SVCNAME}.pid" \
-					  --exec /usr/bin/${SVCNAME}-all
-	eend $? "Failed to stop ${SVCNAME}"
-}
-
-#restart() {
-#
-#}
