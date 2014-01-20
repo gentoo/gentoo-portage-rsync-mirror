@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17-r1.ebuild,v 1.2 2014/01/05 11:09:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17-r1.ebuild,v 1.3 2014/01/20 09:18:05 yngwin Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -34,7 +34,8 @@ RDEPEND="X? ( x11-libs/libxcb
 		dev-qt/qtgui:4
 		dev-qt/qtsvg:4
 	)
-	qt5? ( dev-qt/qtgui:5
+	qt5? ( dev-qt/qtdeclarative:5
+		dev-qt/qtgui:5
 		dev-qt/qtsvg:5
 		dev-qt/qtwidgets:5
 		X? ( dev-qt/qtdbus:5
@@ -49,7 +50,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 DOCS=( AUTHORS ChangeLog.md README.md TODO.md )
-
 PATCHES=( "${DISTDIR}/${P}-old_config_file.patch" )
 
 pkg_setup() {
