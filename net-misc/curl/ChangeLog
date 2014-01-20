@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.327 2014/01/18 05:35:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.328 2014/01/20 13:11:06 blueness Exp $
+
+  20 Jan 2014; Anthony G. Basile <blueness@gentoo.org> -curl-7.33.0.ebuild:
+  Remove vulnerable version, bug #497092
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> curl-7.34.0-r1.ebuild:
   Add arm64 love.

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/opus-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/ChangeLog,v 1.8 2013/12/13 16:08:59 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/ChangeLog,v 1.9 2014/01/20 13:15:07 yngwin Exp $
+
+  20 Jan 2014; Ben de Groot <yngwin@gentoo.org> -opus-tools-0.1.2.ebuild,
+  -opus-tools-0.1.5.ebuild, -opus-tools-0.1.7.ebuild, opus-tools-0.1.8.ebuild:
+  Adjust media-libs/opus dependency (bug #487888). Drop old.
 
 *opus-tools-0.1.8 (13 Dec 2013)
 

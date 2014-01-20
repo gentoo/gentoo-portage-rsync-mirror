@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/commons-el
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.28 2011/12/19 12:49:28 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-el/ChangeLog,v 1.29 2014/01/20 13:30:27 sera Exp $
+
+*commons-el-1.0-r3 (20 Jan 2014)
+
+  20 Jan 2014; Ralph Sennhauser <sera@gentoo.org> -commons-el-1.0-r1.ebuild,
+  +commons-el-1.0-r3.ebuild, +files/commons-el-1.0-java-1.7-compiler.patch:
+  Fix building with java 1.7 compiler. Patch by Robert Schultz
+  <robert@cosmicrealms.com> #486376
+  Replace dependency on servletapi #398689
+  EAPI bump and cleanup
 
   19 Dec 2011; Ralph Sennhauser <sera@gentoo.org> commons-el-1.0-r1.ebuild,
   commons-el-1.0-r2.ebuild:
