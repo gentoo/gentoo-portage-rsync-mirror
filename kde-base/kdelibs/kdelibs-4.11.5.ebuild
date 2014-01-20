@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.11.5.ebuild,v 1.2 2014/01/20 08:00:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.11.5.ebuild,v 1.3 2014/01/20 10:24:01 kensington Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ COMMONDEPEND="
 	>=app-misc/strigi-0.7.7
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xsl-stylesheets
-	>=dev-libs/libattica-0.4.2
+	>=dev-libs/libattica-0.4.2[qt4]
 	>=dev-libs/libdbusmenu-qt-0.3.2
 	dev-libs/libpcre[unicode]
 	dev-libs/libxml2

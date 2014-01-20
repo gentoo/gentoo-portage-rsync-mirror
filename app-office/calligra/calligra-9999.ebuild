@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.42 2013/12/20 12:33:23 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.43 2014/01/20 10:20:58 kensington Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -87,7 +87,7 @@ RDEPEND="
 	sys-libs/zlib
 	>=dev-qt/qtgui-4.8.1-r1:4
 	virtual/libiconv
-	attica? ( dev-libs/libattica )
+	attica? ( dev-libs/libattica[qt4] )
 	crypt? ( app-crypt/qca:2 )
 	eigen? ( dev-cpp/eigen:2 )
 	exif? ( media-gfx/exiv2:= )

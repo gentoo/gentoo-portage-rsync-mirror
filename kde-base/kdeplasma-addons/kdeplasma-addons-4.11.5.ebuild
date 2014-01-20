@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.11.5.ebuild,v 1.2 2014/01/20 08:00:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.11.5.ebuild,v 1.3 2014/01/20 10:27:26 kensington Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ COMMON_DEPEND="
 	$(add_kdebase_dep krunner)
 	$(add_kdebase_dep plasma-workspace 'semantic-desktop?')
 	x11-misc/shared-mime-info
-	attica? ( dev-libs/libattica )
+	attica? ( dev-libs/libattica[qt4] )
 	desktopglobe? ( $(add_kdebase_dep marble) )
 	exif? ( $(add_kdebase_dep libkexiv2) )
 	fcitx? ( app-i18n/fcitx[dbus(+)] )
