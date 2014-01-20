@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=iconv? ( virtual/libiconv ) idn? ( net-dns/libidn ) nls? ( virtual/libintl ) app-arch/xz-utils >=dev-lang/perl-5 nls? ( sys-devel/gettext )
+DESCRIPTION=improved Whois Client
+EAPI=4
+HOMEPAGE=http://www.linux.it/~md/software/
+IUSE=iconv idn nls
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=iconv? ( virtual/libiconv ) idn? ( net-dns/libidn ) nls? ( virtual/libintl )
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://debian/pool/main/w/whois/whois_5.1.1.tar.xz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=c06dd6d9ce1d4c946f8be533fbc64051
