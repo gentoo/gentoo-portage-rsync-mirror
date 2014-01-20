@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha21.ebuild,v 1.3 2014/01/19 01:12:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha21.ebuild,v 1.4 2014/01/20 02:32:59 patrick Exp $
 
 EAPI=5
 
@@ -128,7 +128,7 @@ src_configure() {
 			"unsigned long int" "unsigned long long"
 			float double "long double" size_t ssize_t ptrdiff_t
 			mode_t uid_t gid_t pid_t dev_t time_t wchar_t
-            "char *" "unsigned char *"
+			"char *" "unsigned char *"
 		)
 		for t in "${types[@]}" ; do
 			var="ac_cv_sizeof_${t// /_}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.11.ebuild,v 1.13 2014/01/18 05:55:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/python-updater-0.11.ebuild,v 1.14 2014/01/20 02:49:18 floppym Exp $
 
 EAPI=5
 
@@ -23,8 +23,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND="$([[ "${PV}" == "9999" ]] && echo "sys-apps/help2man")"
-RDEPEND="dev-lang/python
-	|| ( >=sys-apps/portage-2.1.6 >=sys-apps/paludis-0.56.0 )"
+RDEPEND="|| ( >=sys-apps/portage-2.1.6 >=sys-apps/paludis-0.56.0 )"
 
 src_compile() {
 	if [[ "${PV}" == "9999" ]]; then

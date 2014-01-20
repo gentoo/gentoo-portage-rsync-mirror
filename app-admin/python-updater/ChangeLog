@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.91 2014/01/18 05:55:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.93 2014/01/20 02:49:18 floppym Exp $
+
+  20 Jan 2014; Mike Gilbert <floppym@gentoo.org> python-updater-0.11.ebuild,
+  python-updater-9999.ebuild:
+  Avoid a circular dependency on dev-lang/python.
+
+  20 Jan 2014; Mike Gilbert <floppym@gentoo.org> -python-updater-0.10-r2.ebuild,
+  -python-updater-0.10.ebuild:
+  Remove old.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> python-updater-0.11.ebuild,
   python-updater-9999.ebuild:

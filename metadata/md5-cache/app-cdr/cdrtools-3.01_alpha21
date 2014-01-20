@@ -10,4 +10,4 @@ RDEPEND=acl? ( virtual/acl ) nls? ( virtual/libintl ) !app-cdr/cdrkit
 SLOT=0
 SRC_URI=ftp://ftp.berlios.de/pub/cdrecord/alpha//cdrtools-3.01a21.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fcaps	832d0c7d930e7df835c19b5d0a5f6f4b	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	gnuconfig	ee02e61d6c68cee478e2e69214b7caef	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=8c3771dbffff4739a60ecd117c0988bf
+_md5_=77a3c036ab293afb0892c47e9ff26426

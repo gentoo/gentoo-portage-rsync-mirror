@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.329 2014/01/19 01:12:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.330 2014/01/20 02:32:59 patrick Exp $
+
+  20 Jan 2014; Patrick Lauer <patrick@gentoo.org> cdrtools-3.01_alpha21.ebuild:
+  Whitespace
 
   19 Jan 2014; Mike Frysinger <vapier@gentoo.org> cdrtools-3.01_alpha21.ebuild:
   Add cross-compiling support #486680.
