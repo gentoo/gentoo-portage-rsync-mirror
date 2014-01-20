@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/swift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.23 2014/01/08 05:59:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.24 2014/01/20 05:41:12 prometheanfire Exp $
+
+*swift-1.10.0-r1 (20 Jan 2014)
+*swift-1.11.0-r1 (20 Jan 2014)
+
+  20 Jan 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/CVE-2014-0006-havana.diff, +files/CVE-2014-0006-master.diff,
+  +swift-1.10.0-r1.ebuild, +swift-1.11.0-r1.ebuild, -swift-1.10.0.ebuild,
+  -swift-1.11.0.ebuild:
+  update for bug 498544 CVE-2014-0006 and fixing testing
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> swift-1.10.0.ebuild,
   swift-1.11.0.ebuild, swift-2013.1.9999.ebuild, swift-2013.2.9999.ebuild,

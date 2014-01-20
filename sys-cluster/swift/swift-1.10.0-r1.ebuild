@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.10.0.ebuild,v 1.4 2014/01/08 05:59:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-1.10.0-r1.ebuild,v 1.1 2014/01/20 05:41:12 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -49,6 +49,8 @@ CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
 ~TMPFS_XATTR ~UBIFS_FS_XATTR ~EXT2_FS_XATTR ~REISERFS_FS_XATTR ~EXT4_FS_XATTR
 ~ZFS"
 
+PATCHES=( "${FILESDIR}/CVE-2014-0006-havana.diff" )
+
 pkg_setup() {
 	enewuser swift
 	enewgroup swift
@@ -57,12 +59,13 @@ pkg_setup() {
 src_prepare() {
 	sed -i 's/xattr/pyxattr/g' "${S}/swift.egg-info/requires.txt"
 	sed -i 's/xattr/pyxattr/g' "${S}/requirements.txt"
+	distutils-r1_python_prepare_all
 }
 
 src_test () {
 	# https://bugs.launchpad.net/swift/+bug/1249727
 	find . \( -name test_wsgi.py -o -name test_locale.py \) -delete || die
-	sh .unittests || die
+	SKIP_PIP_INSTALL=1 PBR_VERSION=0.5.23 sh .unittests || die
 }
 
 python_install() {

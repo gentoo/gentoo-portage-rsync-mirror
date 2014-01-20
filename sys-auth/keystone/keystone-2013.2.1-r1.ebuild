@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1.ebuild,v 1.5 2014/01/08 06:14:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2013.2.1-r1.ebuild,v 1.1 2014/01/20 05:58:14 prometheanfire Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://launchpad.net/keystone"
 SRC_URI="http://launchpad.net/${PN}/havana/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
-SLOT="havana"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+sqlite mysql postgres ldap test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
@@ -98,14 +98,14 @@ python_install() {
 	newinitd "${FILESDIR}/keystone.initd" keystone
 
 	diropts -m 0750
-	dodir /var/run/keystone /var/log/keystone /etc/keystone
+	dodir /var/log/keystone /etc/keystone
 	keepdir /etc/keystone
 	insinto /etc/keystone
 	doins etc/keystone.conf.sample etc/logging.conf.sample
 	doins etc/default_catalog.templates etc/policy.json
 	doins etc/policy.v3cloudsample.json etc/keystone-paste.ini
 
-	fowners keystone:keystone /var/run/keystone /var/log/keystone /etc/keystone
+	fowners keystone:keystone /var/log/keystone /etc/keystone
 }
 
 pkg_postinst() {
