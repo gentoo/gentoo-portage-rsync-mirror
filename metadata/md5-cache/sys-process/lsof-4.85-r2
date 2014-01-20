@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=rpc? ( net-libs/libtirpc ) selinux? ( sys-libs/libselinux )
+DEPEND=rpc? ( net-libs/libtirpc ) selinux? ( sys-libs/libselinux ) rpc? ( virtual/pkgconfig )
 DESCRIPTION=Lists open files for running Unix processes
 EAPI=2
 HOMEPAGE=ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/
@@ -10,4 +10,4 @@ RDEPEND=rpc? ( net-libs/libtirpc ) selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/lsof_4.85.tar.bz2 ftp://vic.cc.purdue.edu/pub/tools/unix/lsof/lsof_4.85.tar.bz2 ftp://ftp.cerias.purdue.edu/pub/tools/unix/sysutils/lsof/lsof_4.85.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=0b3d4e65f9cb470cf5a17cce9ed2d4be
+_md5_=da3df15d00900735ef6467b3138c7b61

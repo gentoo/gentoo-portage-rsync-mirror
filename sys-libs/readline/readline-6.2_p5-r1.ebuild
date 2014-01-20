@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p5-r1.ebuild,v 1.5 2014/01/18 02:22:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p5-r1.ebuild,v 1.6 2014/01/20 06:34:37 vapier Exp $
 
 EAPI="4"
 
@@ -42,7 +42,8 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2[${MULTILIB_USEDEP}]
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 		!<=app-emulation/emul-linux-x86-baselibs-20131008-r7
 	)"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
 

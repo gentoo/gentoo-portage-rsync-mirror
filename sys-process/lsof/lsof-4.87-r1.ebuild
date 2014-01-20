@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.87-r1.ebuild,v 1.2 2014/01/18 03:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/lsof/lsof-4.87-r1.ebuild,v 1.3 2014/01/20 06:40:56 vapier Exp $
 
 EAPI="4"
 
@@ -20,7 +20,8 @@ IUSE="examples ipv6 rpc selinux static"
 
 RDEPEND="rpc? ( net-libs/libtirpc )
 	selinux? ( sys-libs/libselinux )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	rpc? ( virtual/pkgconfig )"
 
 S=${WORKDIR}/${MY_P}/${MY_P}_src
 
@@ -52,7 +53,7 @@ target() {
 src_configure() {
 	use static && append-ldflags -static
 
-	append-cppflags $(usex rpc "$($(tc-getPKG_CONFIG) libtirpc --cflags)" "-DHASNOTRPC -DHASNORPC_H")
+	append-cppflags $(use rpc && $(tc-getPKG_CONFIG) libtirpc --cflags || echo "-DHASNOTRPC -DHASNORPC_H")
 	append-cppflags $(usex ipv6 -{D,U}HASIPv6)
 
 	export LSOF_CFGL="${CFLAGS} ${LDFLAGS} \
