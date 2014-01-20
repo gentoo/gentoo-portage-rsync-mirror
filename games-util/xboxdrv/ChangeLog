@@ -1,6 +1,10 @@
 # ChangeLog for games-util/xboxdrv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.33 2013/10/14 22:08:04 tristan Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xboxdrv/ChangeLog,v 1.34 2014/01/20 18:20:39 mr_bones_ Exp $
+
+  20 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org> -xboxdrv-0.8.4-r1.ebuild,
+  -xboxdrv-0.8.4.ebuild, -xboxdrv-0.8.5.ebuild:
+  old
 
   14 Oct 2013; Tristan Heaven <tristan@gentoo.org> xboxdrv-0.8.5-r1.ebuild,
   +files/xboxdrv-0.8.5-scons.patch:
