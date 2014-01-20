@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.195 2014/01/20 08:00:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.196 2014/01/20 14:59:58 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> -bovo-4.12.0.ebuild:
+  Remove KDE SC 4.12.0
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org> bovo-4.11.5.ebuild:
   Restore keywords that were accidentally omitted.

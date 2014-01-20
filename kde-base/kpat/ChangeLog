@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.286 2014/01/20 08:00:20 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpat/ChangeLog,v 1.287 2014/01/20 15:00:00 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org> -kpat-4.12.0.ebuild:
+  Remove KDE SC 4.12.0
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org> kpat-4.11.5.ebuild:
   Restore keywords that were accidentally omitted.

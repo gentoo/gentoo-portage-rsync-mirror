@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-apps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.187 2014/01/20 08:00:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.188 2014/01/20 14:59:38 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org>
+  -plasma-apps-4.12.0.ebuild:
+  Remove KDE SC 4.12.0
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org>
   plasma-apps-4.11.5.ebuild:

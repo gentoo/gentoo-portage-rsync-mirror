@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.285 2014/01/20 08:00:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.286 2014/01/20 14:59:42 kensington Exp $
+
+  20 Jan 2014; Michael Palimaka <kensington@gentoo.org>
+  -umbrello-4.12.0.ebuild:
+  Remove KDE SC 4.12.0
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org> umbrello-4.11.5.ebuild:
   Restore keywords that were accidentally omitted.
