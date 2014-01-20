@@ -1,6 +1,11 @@
 # ChangeLog for sys-firmware/seabios
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.26 2013/12/31 15:48:22 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/seabios/ChangeLog,v 1.27 2014/01/19 23:01:55 cardoe Exp $
+
+*seabios-1.7.3.2 (19 Jan 2014)
+
+  19 Jan 2014; Doug Goldstein <cardoe@gentoo.org> +seabios-1.7.3.2.ebuild:
+  Version bump. The pre-built version is the binary shipped with qemu-1.7.0.
 
   31 Dec 2013; Mike Gilbert <floppym@gentoo.org> seabios-1.7.3.ebuild:
   Call python-any-r1_pkg_setup to avoid breaking binpkgs.

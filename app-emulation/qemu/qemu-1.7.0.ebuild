@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.7.0.ebuild,v 1.1 2013/12/19 08:49:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-1.7.0.ebuild,v 1.2 2014/01/19 23:04:58 cardoe Exp $
 
 EAPI=5
 
@@ -97,13 +97,13 @@ RDEPEND="!static-softmmu? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	static-user? ( >=dev-libs/glib-2.0[static-libs(+)] )
 	qemu_softmmu_targets_i386? (
 		>=sys-firmware/ipxe-1.0.0_p20130624
-		~sys-firmware/seabios-1.7.3
+		~sys-firmware/seabios-1.7.3.2
 		~sys-firmware/sgabios-0.1_pre8
 		~sys-firmware/vgabios-0.7a
 	)
 	qemu_softmmu_targets_x86_64? (
 		>=sys-firmware/ipxe-1.0.0_p20130624
-		~sys-firmware/seabios-1.7.3
+		~sys-firmware/seabios-1.7.3.2
 		~sys-firmware/sgabios-0.1_pre8
 		~sys-firmware/vgabios-0.7a
 	)
