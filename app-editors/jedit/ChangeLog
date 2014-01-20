@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.109 2014/01/03 20:27:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.110 2014/01/20 20:26:18 sera Exp $
+
+  20 Jan 2014; Ralph Sennhauser <sera@gentoo.org> -jedit-4.3.2.ebuild,
+  -jedit-4.4.2.ebuild, -jedit-4.4.2-r1.ebuild, -jedit-4.5.2.ebuild:
+  Drop versions incompatible with java 1.7 #442772
 
   03 Jan 2014; Chema Alonso <nimiux@gentoo.org> jedit-5.0.0.ebuild:
   Stable for amd64 wrt bug #494344

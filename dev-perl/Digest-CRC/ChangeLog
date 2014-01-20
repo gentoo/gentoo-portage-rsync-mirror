@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-CRC
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.22 2013/08/06 13:12:51 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.23 2014/01/20 20:28:41 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Digest-CRC-0.180.0.ebuild:
+  Add arm64 love.
 
   06 Aug 2013; Agostino Sarubbo <ago@gentoo.org> Digest-CRC-0.180.0.ebuild:
   Stable for s390, wrt bug #476898

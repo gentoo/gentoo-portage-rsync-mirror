@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.2.5-r2.ebuild,v 1.1 2014/01/12 13:49:10 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.2.5-r2.ebuild,v 1.2 2014/01/20 20:08:51 swift Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -23,7 +23,7 @@ http://dev.gentoo.org/~swift/patches/policycoreutils/patchbundle-${P}-gentoo-r1.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}[python]
 	>=sys-libs/glibc-2.4

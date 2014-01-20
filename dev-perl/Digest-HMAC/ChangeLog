@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-HMAC
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.46 2013/02/19 01:59:10 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-HMAC/ChangeLog,v 1.47 2014/01/20 20:30:15 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Digest-HMAC-1.30.0.ebuild:
+  Add arm64 love.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> Digest-HMAC-1.30.0.ebuild:
   Add ~arm-linux keyword.

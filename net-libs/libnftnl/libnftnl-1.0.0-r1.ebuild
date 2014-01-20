@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/libnftnl-1.0.0.ebuild,v 1.1 2014/01/20 19:54:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/libnftnl-1.0.0-r1.ebuild,v 1.1 2014/01/20 20:09:40 chainsaw Exp $
 
 EAPI=5
 
@@ -20,12 +20,13 @@ RDEPEND="
 "
 
 src_configure() {
-	econf $(use_enable static-libs static)
+	econf \
+		--libdir="${EPREFIX}"/$(get_libdir) \
+		$(use_enable static-libs static)
 }
 
 src_install() {
 	default
-	gen_usr_ldscript -a nftnl
 	prune_libtool_files
 
 	if use examples; then

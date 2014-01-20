@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.2.ebuild,v 1.1 2013/11/04 21:56:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.2.ebuild,v 1.2 2014/01/20 20:07:04 swift Exp $
 
 inherit toolchain-funcs eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20131030/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug"
 
 DEPEND=">=sys-libs/libsepol-${SEPOL_VER}

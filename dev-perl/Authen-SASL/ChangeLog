@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Authen-SASL
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.100 2013/02/19 02:04:40 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.101 2014/01/20 20:28:06 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Authen-SASL-2.160.0.ebuild:
+  Add arm64 love.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> Authen-SASL-2.160.0.ebuild:
   Add ~arm-linux keyword.
