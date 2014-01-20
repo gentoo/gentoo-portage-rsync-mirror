@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/freetype
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.387 2013/12/09 09:26:03 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.388 2014/01/20 12:41:59 yngwin Exp $
+
+*freetype-2.5.2-r1 (20 Jan 2014)
+
+  20 Jan 2014; Ben de Groot <yngwin@gentoo.org> +freetype-2.5.2-r1.ebuild,
+  -freetype-2.5.1.ebuild, -freetype-2.5.2.ebuild:
+  Fix png detection, bug #487138. Drop some older ebuilds.
 
   09 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> freetype-2.5.2.ebuild:
   Removed no longer needed ft2demos patch from ebuild.

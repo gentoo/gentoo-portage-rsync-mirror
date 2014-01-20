@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/cairo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.357 2013/09/06 14:59:45 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.358 2014/01/20 12:55:37 yngwin Exp $
+
+  20 Jan 2014; Ben de Groot <yngwin@gentoo.org> cairo-1.12.14-r4.ebuild,
+  cairo-1.12.16.ebuild:
+  Specify automagic dev-libs/lzo dependency (bug #477078)
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> cairo-1.12.14-r4.ebuild:
   Stable for sparc, wrt bug #447354

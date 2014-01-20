@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-2.1-r2.ebuild,v 1.1 2013/12/31 10:15:54 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pjsip/pjsip-2.1-r2.ebuild,v 1.2 2014/01/20 12:36:10 pinkbyte Exp $
 
 EAPI="5"
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Multimedia communication libraries written in C language for building VoIP applications"
 HOMEPAGE="http://www.pjsip.org/"
@@ -37,7 +37,10 @@ src_prepare() {
 
 src_configure() {
 	# Disable through portage available codecs
-	econf --disable-gsm-codec \
+	# libdir should be defined explicitly, bug #497744
+	econf \
+		--libdir="/usr/$(get_libdir)" \
+		--disable-gsm-codec \
 		--disable-speex-codec \
 		--disable-ilbc-codec \
 		--disable-speex-aec \
