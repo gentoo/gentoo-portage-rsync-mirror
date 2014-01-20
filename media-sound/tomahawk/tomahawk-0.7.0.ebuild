@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.7.0.ebuild,v 1.4 2013/07/23 14:07:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.7.0.ebuild,v 1.5 2014/01/20 10:37:11 kensington Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ DEPEND="
 	app-crypt/qca:2
 	>=dev-cpp/clucene-2.3.3.4
 	>=dev-libs/boost-1.41
-	>=dev-libs/libattica-0.4.0
+	>=dev-libs/libattica-0.4.0[qt4]
 	dev-libs/qjson
 	dev-libs/quazip
 	>=dev-qt/qtcore-${QT_MINIMAL}:4

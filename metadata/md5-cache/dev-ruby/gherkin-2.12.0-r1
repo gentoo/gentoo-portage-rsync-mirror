@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=dev-util/ragel ruby_targets_ruby18? ( dev-ruby/rake-compiler[ruby_targets_ruby18] test? ( >=dev-ruby/builder-2.1.2[ruby_targets_ruby18] >=dev-util/cucumber-1.1.3[ruby_targets_ruby18] >=dev-ruby/rspec-2.6.0[ruby_targets_ruby18] >=dev-ruby/term-ansicolor-1.0.5[ruby_targets_ruby18] ) doc? ( >=dev-ruby/yard-0.8.3[ruby_targets_ruby18] ) ) ruby_targets_ruby19? ( dev-ruby/rake-compiler[ruby_targets_ruby19] test? ( >=dev-ruby/builder-2.1.2[ruby_targets_ruby19] >=dev-util/cucumber-1.1.3[ruby_targets_ruby19] >=dev-ruby/rspec-2.6.0[ruby_targets_ruby19] >=dev-ruby/term-ansicolor-1.0.5[ruby_targets_ruby19] ) doc? ( >=dev-ruby/yard-0.8.3[ruby_targets_ruby19] ) ) test? ( ruby_targets_ruby18? ( >=dev-ruby/multi_json-1.3[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/multi_json-1.3[ruby_targets_ruby19] ) ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) test? ( ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) )
+DESCRIPTION=Fast Gherkin lexer and parser based on Ragel.
+EAPI=5
+HOMEPAGE=https://github.com/cucumber/gherkin
+IUSE=doc test test elibc_FreeBSD ruby_targets_ruby18 ruby_targets_ruby19 doc test
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86
+LICENSE=MIT
+RDEPEND=ruby_targets_ruby18? ( >=dev-ruby/multi_json-1.3[ruby_targets_ruby18] ) ruby_targets_ruby19? ( >=dev-ruby/multi_json-1.3[ruby_targets_ruby19] ) ruby_targets_ruby18? ( dev-lang/ruby:1.8 ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby18? ( virtual/rubygems[ruby_targets_ruby18] ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] )
+REQUIRED_USE=|| ( ruby_targets_ruby18 ruby_targets_ruby19 )
+SLOT=0
+SRC_URI=https://github.com/cucumber/gherkin/archive/v2.12.0.tar.gz -> gherkin-2.12.0-git.tgz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	ruby-fakegem	4021487250c740e3dc16b181228db818	ruby-ng	14f0490e24cbad7c17cece628b3d111e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=f102d7dc25ff35ba0a359173f1f85394

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/smokekde-4.11.2-r1.ebuild,v 1.5 2013/12/11 20:26:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/smokekde-4.11.2-r1.ebuild,v 1.6 2014/01/20 10:34:00 kensington Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://techbase.kde.org/Development/Languages/Smoke"
 DEPEND="
 	$(add_kdebase_dep kdelibs 'semantic-desktop?')
 	$(add_kdebase_dep smokeqt)
-	attica? ( dev-libs/libattica )
+	attica? ( dev-libs/libattica[qt4] )
 	kate? ( $(add_kdebase_dep kate) )
 	okular? ( $(add_kdebase_dep okular) )
 	semantic-desktop? ( $(add_kdebase_dep kdepimlibs) )

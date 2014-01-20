@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.57 2014/01/19 09:20:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.58 2014/01/20 10:53:46 graaff Exp $
+
+*gherkin-2.12.0-r1 (20 Jan 2014)
+
+  20 Jan 2014; Hans de Graaff <graaff@gentoo.org> +gherkin-2.12.0-r1.ebuild:
+  Add back -O0 optimization since this may fix crashes with the C-based lexers.
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> gherkin-2.11.6.ebuild:
   amd64 stable, bug 493780
