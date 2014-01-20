@@ -1,6 +1,12 @@
 # ChangeLog for perl-core/Module-CoreList
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.80 2014/01/17 06:05:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-CoreList/ChangeLog,v 1.81 2014/01/20 20:57:02 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  Module-CoreList-2.840.0.ebuild, Module-CoreList-2.940.0.ebuild,
+  Module-CoreList-2.960.0.ebuild, Module-CoreList-2.970.0.ebuild,
+  Module-CoreList-3.000.000.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   Module-CoreList-2.800.0.ebuild, Module-CoreList-2.840.0.ebuild:

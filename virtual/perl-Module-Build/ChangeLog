@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Module-Build
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.85 2014/01/17 05:56:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Build/ChangeLog,v 1.86 2014/01/20 21:01:33 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-Module-Build-0.36.07.ebuild, perl-Module-Build-0.362.400.ebuild,
+  perl-Module-Build-0.400.0.ebuild, perl-Module-Build-0.400.100.ebuild,
+  perl-Module-Build-0.400.200.ebuild, perl-Module-Build-0.400.300.ebuild,
+  perl-Module-Build-0.400.700.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   perl-Module-Build-0.400.300.ebuild:

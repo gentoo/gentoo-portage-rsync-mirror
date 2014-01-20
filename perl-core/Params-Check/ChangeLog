@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Params-Check
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Params-Check/ChangeLog,v 1.32 2014/01/17 06:11:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Params-Check/ChangeLog,v 1.33 2014/01/20 20:48:49 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Params-Check-0.360.0.ebuild,
+  Params-Check-0.380.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> Params-Check-0.360.0.ebuild:
   Mark m68k stable.

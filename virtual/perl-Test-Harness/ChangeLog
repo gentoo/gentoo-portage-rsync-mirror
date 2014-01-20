@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-Test-Harness
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.86 2014/01/17 05:58:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Harness/ChangeLog,v 1.87 2014/01/20 20:46:04 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-Test-Harness-3.260.0.ebuild, perl-Test-Harness-3.280.0.ebuild,
+  perl-Test-Harness-3.290.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   perl-Test-Harness-3.260.0.ebuild:

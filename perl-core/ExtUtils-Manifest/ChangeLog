@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/ExtUtils-Manifest
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ChangeLog,v 1.36 2014/01/19 21:08:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ChangeLog,v 1.37 2014/01/20 20:58:11 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  ExtUtils-Manifest-1.580.0.ebuild, ExtUtils-Manifest-1.590.0.ebuild,
+  ExtUtils-Manifest-1.600.0.ebuild:
+  Add arm64 love.
 
   19 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   ExtUtils-Manifest-1.610.0.ebuild, ExtUtils-Manifest-1.630.0.ebuild:

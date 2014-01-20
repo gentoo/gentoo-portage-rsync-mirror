@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Test
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.21 2013/02/23 08:59:53 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.22 2014/01/20 20:45:58 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-Test-1.25.ebuild,
+  perl-Test-1.250.200_rc-r1.ebuild, perl-Test-1.260.0.ebuild:
+  Add arm64 love.
 
   23 Feb 2013; Agostino Sarubbo <ago@gentoo.org> perl-Test-1.260.0.ebuild:
   Stable for sparc, wrt bug #458122

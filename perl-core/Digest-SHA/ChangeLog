@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.52 2014/01/17 06:08:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.53 2014/01/20 20:45:47 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Digest-SHA-5.820.0.ebuild,
+  Digest-SHA-5.850.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> Digest-SHA-5.820.0.ebuild:
   Mark m68k/s390/sh stable.

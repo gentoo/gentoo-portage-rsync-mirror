@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-ExtUtils-Constant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Constant/ChangeLog,v 1.9 2014/01/19 08:59:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Constant/ChangeLog,v 1.10 2014/01/20 21:00:01 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-ExtUtils-Constant-0.230.0-r2.ebuild,
+  perl-ExtUtils-Constant-0.230.0-r3.ebuild:
+  Add arm64 love.
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org>
   perl-ExtUtils-Constant-0.230.0-r2.ebuild:

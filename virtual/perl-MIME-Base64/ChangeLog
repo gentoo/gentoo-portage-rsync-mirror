@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-MIME-Base64
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/ChangeLog,v 1.66 2014/01/17 05:55:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-MIME-Base64/ChangeLog,v 1.67 2014/01/20 20:33:55 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-MIME-Base64-3.130.0-r2.ebuild, perl-MIME-Base64-3.140.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   perl-MIME-Base64-3.130.0-r2.ebuild:

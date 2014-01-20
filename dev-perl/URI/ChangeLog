@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.108 2013/02/19 00:21:50 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.109 2014/01/20 20:33:58 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> URI-1.600.0.ebuild:
+  Add arm64 love.
 
   19 Feb 2013; Zac Medico <zmedico@gentoo.org> URI-1.600.0.ebuild:
   Add ~arm-linux keyword.

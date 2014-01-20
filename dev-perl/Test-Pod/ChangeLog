@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Pod
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.73 2013/09/08 15:01:46 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.74 2014/01/20 20:37:19 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Test-Pod-1.42.ebuild,
+  Test-Pod-1.460.0.ebuild, Test-Pod-1.480.0.ebuild:
+  Add arm64 love.
 
   08 Sep 2013; Ian Delaney <idella4@gentoo.org> -Test-Pod-1.450.0.ebuild:
   remove old, -1.42 req'd, only stable candidate

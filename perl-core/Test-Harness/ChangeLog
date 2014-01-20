@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Test-Harness
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.87 2014/01/17 06:11:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Test-Harness/ChangeLog,v 1.88 2014/01/20 20:46:24 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Test-Harness-3.260.0.ebuild,
+  Test-Harness-3.280.0.ebuild, Test-Harness-3.290.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> Test-Harness-3.260.0.ebuild:
   Mark m68k stable.

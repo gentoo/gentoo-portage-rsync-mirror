@@ -1,6 +1,15 @@
 # ChangeLog for virtual/perl-Compress-Raw-Bzip2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Bzip2/ChangeLog,v 1.68 2014/01/17 05:52:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Bzip2/ChangeLog,v 1.69 2014/01/20 20:44:48 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  perl-Compress-Raw-Bzip2-2.33.ebuild, perl-Compress-Raw-Bzip2-2.35.0.ebuild,
+  perl-Compress-Raw-Bzip2-2.36.0.ebuild, perl-Compress-Raw-Bzip2-2.37.0.ebuild,
+  perl-Compress-Raw-Bzip2-2.40.0.ebuild, perl-Compress-Raw-Bzip2-2.43.0.ebuild,
+  perl-Compress-Raw-Bzip2-2.49.0.ebuild, perl-Compress-Raw-Bzip2-2.52.0.ebuild,
+  perl-Compress-Raw-Bzip2-2.55.0.ebuild, perl-Compress-Raw-Bzip2-2.59.0.ebuild,
+  perl-Compress-Raw-Bzip2-2.60.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   perl-Compress-Raw-Bzip2-2.60.0.ebuild:

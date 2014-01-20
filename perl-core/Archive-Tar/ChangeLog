@@ -1,6 +1,14 @@
 # ChangeLog for perl-core/Archive-Tar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.61 2014/01/17 06:06:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.62 2014/01/20 20:44:32 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Archive-Tar-1.54.ebuild,
+  Archive-Tar-1.72.ebuild, Archive-Tar-1.760.0.ebuild,
+  Archive-Tar-1.780.0.ebuild, Archive-Tar-1.800.0.ebuild,
+  Archive-Tar-1.820.0.ebuild, Archive-Tar-1.840.0.ebuild,
+  Archive-Tar-1.860.0.ebuild, Archive-Tar-1.880.0.ebuild,
+  Archive-Tar-1.900.0.ebuild, Archive-Tar-1.920.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> Archive-Tar-1.900.0.ebuild:
   Mark m68k stable.

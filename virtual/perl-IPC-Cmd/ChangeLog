@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-IPC-Cmd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.49 2014/01/17 05:55:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IPC-Cmd/ChangeLog,v 1.50 2014/01/20 20:53:36 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-IPC-Cmd-0.680.ebuild,
+  perl-IPC-Cmd-0.720.0.ebuild, perl-IPC-Cmd-0.760.0-r1.ebuild,
+  perl-IPC-Cmd-0.780.0.ebuild, perl-IPC-Cmd-0.800.0.ebuild,
+  perl-IPC-Cmd-0.840.0.ebuild:
+  Add arm64 love.
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-IPC-Cmd-0.780.0.ebuild:
   Mark m68k stable.
