@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/libnftnl
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.1 2014/01/20 19:54:23 chainsaw Exp $
+
+*libnftnl-1.0.0 (20 Jan 2014)
+
+  20 Jan 2014; Tony Vroon <chainsaw@gentoo.org> +libnftnl-1.0.0.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by me. Dependency of net-firewall/nftables, as
+  requested by Robin Kauffman in bug #498724.
+
