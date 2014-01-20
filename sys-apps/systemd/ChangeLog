@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.209 2014/01/19 12:01:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.210 2014/01/20 22:53:07 floppym Exp $
+
+*systemd-208-r3 (20 Jan 2014)
+
+  20 Jan 2014; Mike Gilbert <floppym@gentoo.org> +systemd-208-r3.ebuild,
+  systemd-208-r2.ebuild, systemd-9999.ebuild:
+  Replace dialout with uucp group in udev rules, bug 463376.
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> systemd-208-r2.ebuild:
   Add ~sparc, wrt bug #478076

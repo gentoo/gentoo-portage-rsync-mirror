@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.174 2014/01/17 07:09:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.175 2014/01/20 22:33:20 polynomial-c Exp $
+
+  20 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.2.22.ebuild,
+  virtualbox-4.3.6.ebuild:
+  Added pax-mark call to VBoxManage.
 
   17 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
   -virtualbox-4.2.18.ebuild, -virtualbox-4.2.20.ebuild,

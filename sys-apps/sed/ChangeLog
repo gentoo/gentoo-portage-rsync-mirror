@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.125 2014/01/18 06:04:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.126 2014/01/20 22:54:25 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> sed-4.2.2.ebuild:
+  Depend on libselinux when USE=selinux #408213 by Markus Knetschke.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> sed-4.2.2.ebuild:
   Add hack for gnulib acl check when cross-compiling #333887 by Luca Barbato.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.22.ebuild,v 1.3 2014/01/16 20:28:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.2.22.ebuild,v 1.4 2014/01/20 22:33:20 polynomial-c Exp $
 
 EAPI=5
 
@@ -280,6 +280,8 @@ src_install() {
 
 	# VBoxSVC needs to be pax-marked (bug #403453)
 	pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxSVC || die
+
+	pax-mark -m "${D}"/usr/$(get_libdir)/${PN}/VBoxManage || die
 
 	if ! use headless ; then
 		for each in VBox{SDL,Headless} ; do

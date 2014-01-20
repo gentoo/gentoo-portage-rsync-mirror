@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-208-r2.ebuild,v 1.13 2014/01/19 12:01:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-208-r2.ebuild,v 1.14 2014/01/20 22:53:07 floppym Exp $
 
 EAPI=5
 
@@ -130,6 +130,9 @@ src_prepare() {
 	local PATCHES=(
 		"${WORKDIR}"/${PN}-gentoo-patchset*/*.patch
 	)
+
+	# Bug 463376
+	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
 	autotools-utils_src_prepare
 }
@@ -333,9 +336,6 @@ migrate_locale() {
 }
 
 pkg_postinst() {
-	# for udev rules
-	enewgroup dialout
-
 	enewgroup systemd-journal
 	if use http; then
 		enewgroup systemd-journal-gateway

@@ -1,16 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.80 2014/01/20 22:53:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-208-r3.ebuild,v 1.1 2014/01/20 22:53:07 floppym Exp $
 
 EAPI=5
-
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-r3
-#endif
 
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python2_7 )
@@ -20,34 +12,36 @@ inherit autotools-utils bash-completion-r1 fcaps linux-info multilib \
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
-SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
+SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz -> ${P}-r1.tar.xz
+	http://dev.gentoo.org/~mgorny/dist/${PN}-gentoo-patchset-${PV}_p19.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/1"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl audit cryptsetup doc +firmware-loader gcrypt gudev http introspection
-	+kdbus +kmod lzma pam policykit python qrcode selinux tcpd test
+	+kmod lzma pam policykit python qrcode selinux tcpd test
 	vanilla xattr"
 
 MINKV="3.0"
 
-COMMON_DEPEND=">=sys-apps/util-linux-2.20:0=
-	sys-libs/libcap:0=
-	acl? ( sys-apps/acl:0= )
-	audit? ( >=sys-process/audit-2:0= )
-	cryptsetup? ( >=sys-fs/cryptsetup-1.6:0= )
-	gcrypt? ( >=dev-libs/libgcrypt-1.4.5:0= )
-	gudev? ( dev-libs/glib:2=[${MULTILIB_USEDEP}] )
-	http? ( net-libs/libmicrohttpd:0= )
-	introspection? ( >=dev-libs/gobject-introspection-1.31.1:0= )
-	kmod? ( >=sys-apps/kmod-15:0= )
-	lzma? ( app-arch/xz-utils:0=[${MULTILIB_USEDEP}] )
-	pam? ( virtual/pam:= )
+COMMON_DEPEND=">=sys-apps/dbus-1.6.8-r1
+	>=sys-apps/util-linux-2.20
+	sys-libs/libcap
+	acl? ( sys-apps/acl )
+	audit? ( >=sys-process/audit-2 )
+	cryptsetup? ( >=sys-fs/cryptsetup-1.6 )
+	gcrypt? ( >=dev-libs/libgcrypt-1.4.5 )
+	gudev? ( >=dev-libs/glib-2[${MULTILIB_USEDEP}] )
+	http? ( net-libs/libmicrohttpd )
+	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
+	kmod? ( >=sys-apps/kmod-14-r1 )
+	lzma? ( app-arch/xz-utils[${MULTILIB_USEDEP}] )
+	pam? ( virtual/pam )
 	python? ( ${PYTHON_DEPS} )
-	qrcode? ( media-gfx/qrencode:0= )
-	selinux? ( sys-libs/libselinux:0= )
-	tcpd? ( sys-apps/tcp-wrappers:0= )
-	xattr? ( sys-apps/attr:0= )
+	qrcode? ( media-gfx/qrencode )
+	selinux? ( sys-libs/libselinux )
+	tcpd? ( sys-apps/tcp-wrappers )
+	xattr? ( sys-apps/attr )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r9
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 
@@ -62,19 +56,17 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-libs/glibc-2.10
 	!sys-fs/udev"
 
-# sys-apps/daemon: the daemon only (+ build-time lib dep for tests)
-PDEPEND=">=sys-apps/dbus-1.6.8-r1:0
-	>=sys-apps/hwids-20130717-r1[udev]
+PDEPEND=">=sys-apps/hwids-20130717-r1[udev]
 	>=sys-fs/udev-init-scripts-25
 	policykit? ( sys-auth/polkit )
 	!vanilla? ( sys-apps/gentoo-systemd-integration )"
 
 # Newer linux-headers needed by ia64, bug #480218
 DEPEND="${COMMON_DEPEND}
-	app-arch/xz-utils:0
+	app-arch/xz-utils
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt:0
+	dev-libs/libxslt
 	dev-util/gperf
 	>=dev-util/intltool-0.50
 	>=sys-devel/binutils-2.23.1
@@ -82,30 +74,7 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-kernel/linux-headers-${MINKV}
 	ia64? ( >=sys-kernel/linux-headers-3.9 )
 	virtual/pkgconfig
-	doc? ( >=dev-util/gtk-doc-1.18 )
-	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
-
-#if LIVE
-DEPEND="${DEPEND}
-	dev-libs/gobject-introspection
-	>=dev-libs/libgcrypt-1.4.5:0"
-
-SRC_URI=
-KEYWORDS=
-
-src_prepare() {
-	if use doc; then
-		gtkdocize --docdir docs/ || die
-	else
-		echo 'EXTRA_DIST =' > docs/gtk-doc.make
-	fi
-
-	# Bug 463376
-	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
-
-	autotools-utils_src_prepare
-}
-#endif
+	doc? ( >=dev-util/gtk-doc-1.18 )"
 
 pkg_pretend() {
 	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS ~DMIID
@@ -157,9 +126,19 @@ pkg_setup() {
 	use python && python-single-r1_pkg_setup
 }
 
+src_prepare() {
+	local PATCHES=(
+		"${WORKDIR}"/${PN}-gentoo-patchset*/*.patch
+	)
+
+	# Bug 463376
+	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
+
+	autotools-utils_src_prepare
+}
+
 multilib_src_configure() {
 	local myeconfargs=(
-		--disable-maintainer-mode
 		--localstatedir=/var
 		--with-pamlibdir=$(getpam_mod_dir)
 		# avoid bash-completion dep
@@ -181,12 +160,12 @@ multilib_src_configure() {
 		$(use_enable gudev)
 		$(use_enable http microhttpd)
 		$(use_enable introspection)
-		$(use_enable kdbus)
 		$(use_enable kmod)
 		$(use_enable lzma xz)
 		$(use_enable pam)
 		$(use_enable policykit polkit)
 		$(use_enable python python-devel)
+		$(use python && echo PYTHON_CONFIG=/usr/bin/python-config-${EPYTHON#python})
 		$(use_enable qrcode qrencode)
 		$(use_enable selinux)
 		$(use_enable tcpd tcpwrap)
@@ -254,8 +233,6 @@ multilib_src_compile() {
 		# prerequisites for gudev
 		use gudev && emake src/gudev/gudev{enumtypes,marshal}.{c,h}
 
-		echo 'gentoo: $(BUILT_SOURCES)' | \
-		emake "${mymakeopts[@]}" -f Makefile -f - gentoo
 		echo 'gentoo: $(lib_LTLIBRARIES) $(pkgconfiglib_DATA)' | \
 		emake "${mymakeopts[@]}" -f Makefile -f - gentoo
 	fi
