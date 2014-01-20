@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.178 2014/01/02 17:46:48 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.179 2014/01/20 18:40:31 hd_brummy Exp $
+
+*vdr-2.0.5 (20 Jan 2014)
+
+  20 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-2.0.5.ebuild:
+  bump; use-flag setup and depended plugin vdr-setup will be removed in the
+  future, use as equivalent plugin vdr-menuorg
 
   02 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-2.0.2-r1.ebuild,
   -vdr-2.0.3.ebuild, vdr-2.0.4.ebuild:

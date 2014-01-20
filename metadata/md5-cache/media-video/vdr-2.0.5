@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst preinst prepare setup
+DEPEND=virtual/jpeg sys-libs/libcap >=media-libs/fontconfig-2.4.2 >=media-libs/freetype-2 >=virtual/linuxtv-dvb-headers-5.3 sys-devel/gettext
+DESCRIPTION=Video Disk Recorder - turns a pc into a powerful set top box for DVB
+EAPI=5
+HOMEPAGE=http://www.tvdr.de/
+IUSE=bidi debug html vanilla alternatechannel ddepgentry dvlvidprefer graphtft jumpplay jumpingseconds mainmenuhooks menuorg naludump permashift pinplugin rotor setup ttxtsubs vasarajanauloja wareagleicon yaepg
+KEYWORDS=~arm ~amd64 ~ppc ~x86
+LICENSE=GPL-2
+RDEPEND=virtual/jpeg sys-libs/libcap >=media-libs/fontconfig-2.4.2 >=media-libs/freetype-2 dev-lang/perl >=media-tv/gentoo-vdr-scripts-0.2.0 media-fonts/corefonts bidi? ( dev-libs/fribidi )
+REQUIRED_USE=setup? ( !menuorg ) menuorg? ( !setup )
+SLOT=0
+SRC_URI=ftp://ftp.tvdr.de/vdr/vdr-2.0.5.tar.bz2 http://dev.gentoo.org/~hd_brummy/distfiles/extpng-vdr-2.0.4-gentoo-edition-v1.patch.bz2
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=6265ab0ea6b49f60334763ff093f5327
