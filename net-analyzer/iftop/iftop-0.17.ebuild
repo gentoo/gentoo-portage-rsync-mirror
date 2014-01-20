@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-0.17.ebuild,v 1.12 2010/01/01 17:36:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-0.17.ebuild,v 1.13 2014/01/20 14:06:32 jlec Exp $
 
 inherit eutils
 
 DESCRIPTION="display bandwidth usage on an interface"
-SRC_URI="http://www.ex-parrot.com/~pdw/iftop/download/${P}.tar.gz"
-HOMEPAGE="http://www.ex-parrot.com/~pdw/iftop/"
+HOMEPAGE="http://www.ex-parrot.com/pdw/iftop/"
+SRC_URI="http://www.ex-parrot.com/pdw/iftop/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

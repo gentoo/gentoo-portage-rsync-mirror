@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre2.ebuild,v 1.12 2014/01/20 14:06:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/iftop-1.0_pre4.ebuild,v 1.1 2014/01/20 14:22:30 jlec Exp $
 
 EAPI=5
 
@@ -12,18 +12,22 @@ HOMEPAGE="http://www.ex-parrot.com/pdw/iftop/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 	net-libs/libpcap
 	sys-libs/ncurses"
+DEPEND="
+	${RDEPEND}
+	virtual/pkgconfig
+"
 
 S="${WORKDIR}"/${P/_/}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-tinfo.patch
-	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 
 	# bug 490168
 	cat "${FILESDIR}"/ax_pthread.m4 >> "${S}"/acinclude.m4 || die
