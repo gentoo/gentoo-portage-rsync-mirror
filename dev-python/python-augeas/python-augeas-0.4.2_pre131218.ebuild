@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/python-augeas-0.4.2_pre131218.ebuild,v 1.1 2013/12/18 07:59:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-augeas/python-augeas-0.4.2_pre131218.ebuild,v 1.2 2014/01/21 12:12:00 ultrabug Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ IUSE=""
 DEPEND="app-admin/augeas"
 RDEPEND="${DEPEND}"
 
-DOCS="AUTHORS README.txt PKG-INFO"
+DOCS="AUTHORS README.txt"
 PYTHON_MODNAME="augeas.py"
 
 python_test() {
