@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/raidutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.15 2010/07/31 14:56:18 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/ChangeLog,v 1.16 2014/01/21 04:00:13 creffett Exp $
+
+  21 Jan 2014; Chris Reffett <creffett@gentoo.org> raidutils-0.0.6-r2.ebuild:
+  EAPI bump
 
   31 Jul 2010; Markos Chandras <hwoarang@gentoo.org>
   raidutils-0.0.6-r2.ebuild:
@@ -67,4 +70,3 @@
   10 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
   +raidutils-0.0.5.ebuild, raidutils-0.0.5-i2octl-fixpath.patch:
   added to portage, fixed i2octl path /dev/i2o/ctl -> /dev/i2octl
-

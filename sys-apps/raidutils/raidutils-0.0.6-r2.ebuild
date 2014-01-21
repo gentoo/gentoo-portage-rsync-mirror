@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.6-r2.ebuild,v 1.4 2010/07/31 14:56:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/raidutils/raidutils-0.0.6-r2.ebuild,v 1.5 2014/01/21 04:00:13 creffett Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 DESCRIPTION="Utilities to manage i2o/dtp RAID controllers."
