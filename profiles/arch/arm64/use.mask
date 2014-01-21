@@ -220,3 +220,8 @@ clvm
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
 # virtual/opencl is not keyworded
 opencl
+
+# We don't care about older python versions.  Time to upgrade.
+python_targets_python2_6
+python_targets_python3_0
+python_targets_python3_1

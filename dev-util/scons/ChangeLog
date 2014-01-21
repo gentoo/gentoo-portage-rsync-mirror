@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.135 2013/10/19 03:43:08 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.136 2014/01/21 00:27:05 vapier Exp $
+
+  21 Jan 2014; Mike Frysinger <vapier@gentoo.org> scons-2.2.0-r1.ebuild,
+  scons-2.2.0.ebuild, scons-2.3.0.ebuild:
+  Add arm64 love.
 
   19 Oct 2013; Mike Frysinger <vapier@gentoo.org> scons-2.3.0.ebuild:
   Add m68k/s390/sh love.

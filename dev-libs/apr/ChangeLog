@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.202 2013/11/20 18:48:47 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.203 2014/01/21 00:12:07 vapier Exp $
+
+  21 Jan 2014; Mike Frysinger <vapier@gentoo.org> apr-1.4.8-r1.ebuild,
+  apr-1.5.0.ebuild:
+  Add arm64 love.
 
 *apr-1.5.0 (20 Nov 2013)
 
