@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-mail
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.85 2014/01/20 08:38:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-mail/ChangeLog,v 1.86 2014/01/21 04:52:10 patrick Exp $
+
+  21 Jan 2014; Patrick Lauer <patrick@gentoo.org> -twisted-mail-10.2.0.ebuild,
+  -twisted-mail-11.0.0.ebuild, -twisted-mail-11.1.0.ebuild,
+  -twisted-mail-12.0.0.ebuild, -twisted-mail-12.2.0.ebuild:
+  Remove old
 
 *twisted-mail-13.2.0 (20 Jan 2014)
 

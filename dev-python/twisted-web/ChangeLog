@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.97 2014/01/20 04:04:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.98 2014/01/21 04:55:29 patrick Exp $
+
+  21 Jan 2014; Patrick Lauer <patrick@gentoo.org> -twisted-web-10.2.0.ebuild,
+  -twisted-web-11.0.0.ebuild, -twisted-web-11.1.0.ebuild,
+  -twisted-web-12.0.0.ebuild, -twisted-web-12.2.0.ebuild:
+  Remove old
 
   20 Jan 2014; Mike Gilbert <floppym@gentoo.org> twisted-web-13.2.0.ebuild:
   Remove SRC_URI and let the eclass handle it. Resolves bug 498594.

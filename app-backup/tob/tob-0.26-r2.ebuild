@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tob/tob-0.26-r2.ebuild,v 1.2 2012/02/17 10:58:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tob/tob-0.26-r2.ebuild,v 1.3 2014/01/21 04:57:12 creffett Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils
 

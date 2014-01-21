@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-lore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.73 2014/01/20 08:26:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-lore/ChangeLog,v 1.74 2014/01/21 04:51:29 patrick Exp $
+
+  21 Jan 2014; Patrick Lauer <patrick@gentoo.org> -twisted-lore-10.2.0.ebuild,
+  -twisted-lore-11.0.0.ebuild, -twisted-lore-11.1.0.ebuild,
+  -twisted-lore-12.0.0.ebuild, -twisted-lore-12.2.0.ebuild:
+  Remove old
 
 *twisted-lore-13.2.0 (20 Jan 2014)
 
