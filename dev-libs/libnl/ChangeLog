@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.202 2014/01/15 16:24:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.203 2014/01/21 20:39:40 jer Exp $
+
+*libnl-3.2.24 (21 Jan 2014)
+
+  21 Jan 2014; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.24_rc1-r1.ebuild,
+  +libnl-3.2.24.ebuild, -files/libnl-3.2.24_rc1-link_policy.patch:
+  Version bump.
 
   15 Jan 2014; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.22.ebuild,
   -libnl-3.2.22-r2.ebuild, -files/libnl-3.2.22-python.patch:

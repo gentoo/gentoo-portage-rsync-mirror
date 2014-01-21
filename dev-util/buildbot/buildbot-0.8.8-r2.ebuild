@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.8-r2.ebuild,v 1.4 2014/01/21 19:54:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.8-r2.ebuild,v 1.6 2014/01/21 20:56:27 maekke Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris"
 IUSE="doc examples irc mail manhole test"
 
 # sqlite3 module of Python 2.5 is not supported.
@@ -35,7 +35,7 @@ RDEPEND=">=dev-python/jinja-2.1
 	manhole? ( dev-python/twisted-conch )"
 DEPEND="${DEPEND}
 	dev-python/setuptools
-	doc? ( sys-apps/texinfo )
+	doc? ( dev-python/sphinx )
 	test? (
 		dev-python/python-dateutil
 		dev-python/mock
@@ -65,7 +65,8 @@ src_compile() {
 	if use doc; then
 		einfo "Generation of documentation"
 		pushd docs > /dev/null
-		emake buildbot.html buildbot.info
+		#'man' target is currently broken
+		emake html
 		popd > /dev/null
 	fi
 }
@@ -76,8 +77,8 @@ src_install() {
 	doman docs/buildbot.1
 
 	if use doc; then
-		dohtml -r docs/buildbot.html docs/images
-		doinfo docs/buildbot.info
+		dohtml -r docs/_build/html
+		# TODO: install man pages
 	fi
 
 	if use examples; then

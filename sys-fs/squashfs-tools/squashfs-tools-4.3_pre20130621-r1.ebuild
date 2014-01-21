@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.3_pre20130621.ebuild,v 1.1 2014/01/21 10:25:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.3_pre20130621-r1.ebuild,v 1.1 2014/01/21 20:58:25 jer Exp $
 
 EAPI=5
 
@@ -26,24 +26,20 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${P}/squashfs-tools"
 
-use_sed() {
-	local u=$1 s="${2:-`echo $1 | tr '[:lower:]' '[:upper:]'`}_SUPPORT"
-	printf '/^#?%s =/%s\n' "${s}" \
-		"$( use $u && echo s:.*:${s} = 1: || echo d )"
-}
-
-_src_prepare() {
-	epatch "${WORKDIR}"/${P}.patch
-}
-
 src_configure() {
+	# set up make command line variables in EMAKE_SQUASHFS_CONF
+	EMAKE_SQUASHFS_CONF=(
+		$(usex lzma LZMA_XZ_SUPPORT= LZMA_XS_SUPPORT= 1 0)
+		$(usex lzo LZO_SUPPORT= LZO_SUPPORT= 1 0)
+		$(usex xattr XATTR_DEFAULT= XATTR_DEFAULT= 1 0)
+		$(usex xz XZ_SUPPORT= XZ_SUPPORT= 1 0)
+	)
+
 	tc-export CC
-	sed -i -r \
-		-e "$(use_sed xz XZ)" \
-		-e "$(use_sed lzo)" \
-		-e "$(use_sed xattr)" \
-		-e "$(use_sed lzma LZMA_XZ)" \
-		Makefile || die
+}
+
+src_compile() {
+	emake ${EMAKE_SQUASHFS_CONF[@]}
 }
 
 src_install() {

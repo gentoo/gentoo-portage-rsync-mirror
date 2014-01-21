@@ -1,20 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.12 2014/01/21 20:35:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.4.ebuild,v 1.1 2014/01/21 20:35:00 maekke Exp $
 
 EAPI=5
 
-inherit cmake-utils toolchain-funcs gnome2-utils fdo-mime git-2 pax-utils eutils
-
-EGIT_REPO_URI="git://github.com/darktable-org/darktable.git"
+inherit cmake-utils toolchain-funcs gnome2-utils fdo-mime pax-utils eutils
 
 DESCRIPTION="A virtual lighttable and darkroom for photographers"
 HOMEPAGE="http://www.darktable.org/"
-SRC_URI=""
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
+	doc? ( mirror://sourceforge/${PN}/${PV}/${PN}-usermanual.pdf -> ${PN}-usermanual-${PV}.pdf )"
 
 LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 LANGS=" cs da de el es fr it ja nl pl pt_BR pt_PT ru sq sv uk"
 # TODO add lua once dev-lang/lua-5.2 is unmasked
 IUSE="colord doc flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
@@ -100,6 +99,7 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
+	use doc && dodoc "${DISTDIR}"/${PN}-usermanual-${PV}.pdf
 
 	for lang in ${LANGS} ; do
 		use linguas_${lang} || rm -r "${ED}"/usr/share/locale/${lang}

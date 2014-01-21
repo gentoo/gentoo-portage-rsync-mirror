@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.146 2014/01/21 19:56:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.148 2014/01/21 20:56:27 maekke Exp $
+
+  21 Jan 2014; Markus Meier <maekke@gentoo.org> buildbot-0.8.8-r2.ebuild:
+  arm stable, bug #487736
+
+  21 Jan 2014; Markos Chandras <hwoarang@gentoo.org> buildbot-0.8.8-r2.ebuild,
+  buildbot-9999.ebuild:
+  Fix build for IUSE=doc and add missing sphinx dependency. Bug #498672
 
   21 Jan 2014; Markus Meier <maekke@gentoo.org> buildbot-9999.ebuild:
   add dev-python/python-dateutil test dependency to live ebuild too
