@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/redis
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redis/ChangeLog,v 1.1 2013/12/26 21:59:46 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redis/ChangeLog,v 1.2 2014/01/21 19:05:09 graaff Exp $
+
+*redis-3.0.6 (21 Jan 2014)
+
+  21 Jan 2014; Hans de Graaff <graaff@gentoo.org> +redis-3.0.6.ebuild,
+  +files/redis-3.0.6-local-redis-server.patch:
+  Version bump by Peter Wilmott in the ruby overlay.
 
 *redis-3.0.5 (26 Dec 2013)
 
