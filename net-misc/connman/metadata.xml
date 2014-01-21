@@ -8,6 +8,7 @@
 	<use>
 		<flag name="ethernet">Enable ethernet support.</flag>
 		<flag name="ofono">Use <pkg>net-misc/ofono</pkg> for telephony support.</flag>
+		<flag name="openconnect">Use <pkg>net-misc/openconnect</pkg> for VPN support.</flag>
 		<flag name="openvpn">Use <pkg>net-misc/openvpn</pkg> for openvpn support.</flag>
 		<flag name="tools">Enable testing tools.</flag>
 		<flag name="vpnc">Use <pkg>net-misc/vpnc</pkg> for cisco VPN support.</flag>

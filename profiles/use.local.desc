@@ -5172,6 +5172,7 @@ net-misc/cgminer:ztex - Enable support for mining with Ztex FPGAs
 net-misc/chrony:rtc - Include support for the Linux Real Time Clock interface
 net-misc/connman:ethernet - Enable ethernet support.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
+net-misc/connman:openconnect - Use net-misc/openconnect for VPN support.
 net-misc/connman:openvpn - Use net-misc/openvpn for openvpn support.
 net-misc/connman:tools - Enable testing tools.
 net-misc/connman:vpnc - Use net-misc/vpnc for cisco VPN support.
