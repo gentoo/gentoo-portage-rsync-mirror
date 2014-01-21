@@ -1,0 +1,16 @@
+--- Tk-804.031/PNG/Makefile.PL.old	2014-01-21 17:04:09.961441121 +0400
++++ Tk-804.031/PNG/Makefile.PL	2014-01-21 17:08:15.582448981 +0400
+@@ -17,10 +17,10 @@
+ 
+ my $libpng_cflags;
+ my $libpng_libs;
+-system('pkg-config --exists libpng');
++system('pkg-config --exists png');
+ if ($? == 0) {
+-    chomp($libpng_cflags = `pkg-config --cflags libpng`);
+-    chomp($libpng_libs   = `pkg-config --libs libpng`);
++    chomp($libpng_cflags = `pkg-config --cflags png`);
++    chomp($libpng_libs   = `pkg-config --libs png`);
+ } else {
+     warn "'pkg-config libpng' failed, continue with fallback values for cflags and libs...\n";
+     $libpng_cflags = '-I/usr/local/include';
