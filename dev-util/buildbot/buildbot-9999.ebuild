@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.5 2014/01/21 20:39:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.6 2014/01/21 22:29:52 floppym Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -85,7 +85,7 @@ src_install() {
 	doman docs/buildbot.1
 
 	if use doc; then
-		dohtml -r docs/_build/html
+		dohtml -r docs/_build/html/
 		# TODO: install man pages
 	fi
 
