@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.85 2014/01/20 07:07:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.86 2014/01/21 15:09:49 jer Exp $
+
+*check-0.9.12 (21 Jan 2014)
+
+  21 Jan 2014; Jeroen Roovers <jer@gentoo.org> +check-0.9.12.ebuild:
+  Version bump.
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> check-0.9.10.ebuild,
   check-0.9.11.ebuild, check-0.9.8-r1.ebuild, check-0.9.9.ebuild:
