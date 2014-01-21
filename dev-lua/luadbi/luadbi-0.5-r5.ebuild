@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r4.ebuild,v 1.1 2014/01/13 03:48:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/luadbi-0.5-r5.ebuild,v 1.1 2014/01/21 02:48:27 mrueg Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://luadbi.googlecode.com/files/${PN}.${PV}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="mysql postgres sqlite"
+IUSE="mysql postgres +sqlite"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 RDEPEND=">=dev-lang/lua-5.1

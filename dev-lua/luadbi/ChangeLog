@@ -1,6 +1,12 @@
 # ChangeLog for dev-lua/luadbi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.20 2014/01/18 18:41:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luadbi/ChangeLog,v 1.21 2014/01/21 02:48:27 mrueg Exp $
+
+*luadbi-0.5-r5 (21 Jan 2014)
+
+  21 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +luadbi-0.5-r5.ebuild,
+  -luadbi-0.5-r2.ebuild, -luadbi-0.5-r4.ebuild:
+  Enable sqlite per default. Fixes bug #498486. Cleanup old.
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> luadbi-0.5-r3.ebuild:
   amd64 stable, bug #488410
