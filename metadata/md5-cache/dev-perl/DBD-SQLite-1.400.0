@@ -4,10 +4,10 @@ DESCRIPTION=Self Contained RDBMS in a DBI Driver
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/DBD-SQLite/
 IUSE=test
-KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=dev-db/sqlite-3.6.22[extensions(+)] >=dev-perl/DBI-1.57 !<dev-perl/DBD-SQLite-1 || ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/I/IS/ISHIGAKI/DBD-SQLite-1.40.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=7a3216a4f15285aca27b344c147cc23d
+_md5_=54a5cd62179a0dc9cbf4d6860d311d56

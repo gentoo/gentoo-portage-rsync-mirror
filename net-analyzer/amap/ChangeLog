@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/amap
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.53 2012/03/07 20:50:57 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.54 2014/01/20 23:21:46 robbat2 Exp $
+
+  20 Jan 2014; Robin H. Johnson <robbat2@gentoo.org> amap-5.4.ebuild:
+  Download only available via HTTPS.
 
   07 Mar 2012; Jeroen Roovers <jer@gentoo.org> -amap-5.2-r1.ebuild,
   -amap-5.2-r2.ebuild:
@@ -204,4 +207,3 @@
   03 Aug 2003; <iggy@gentoo.org> amap-2.7.ebuild, metadata.xml:
   new package fixes bugs 23088, 24452, thanks to Antonio Dolcetta
   <zagarna@yahoo.com> and Lina Pezzella <Lina.Pezzella@huskymail.uconn.edu>
-

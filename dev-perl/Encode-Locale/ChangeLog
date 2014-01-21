@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Encode-Locale
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.32 2013/02/18 23:14:08 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.33 2014/01/20 23:24:16 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Encode-Locale-1.30.0.ebuild:
+  Add arm64 love.
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> Encode-Locale-1.30.0.ebuild:
   Add ~arm-linux keyword.

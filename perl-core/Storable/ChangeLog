@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Storable
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.65 2013/08/27 15:57:30 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.66 2014/01/20 23:09:42 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Storable-2.390.0.ebuild,
+  Storable-2.450.0.ebuild:
+  Add arm64 love.
 
   27 Aug 2013; Mikle Kolyada <zlogene@gentoo.org> -Storable-2.20.ebuild,
   -Storable-2.250.ebuild, -Storable-2.300.0.ebuild, -Storable-2.350.0.ebuild:

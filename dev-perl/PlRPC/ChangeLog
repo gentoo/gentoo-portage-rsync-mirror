@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.68 2014/01/20 15:58:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.69 2014/01/20 23:09:01 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> PlRPC-0.202.0-r1.ebuild,
+  PlRPC-0.202.0-r2.ebuild:
+  Add arm64 love.
 
   20 Jan 2014; Agostino Sarubbo <ago@gentoo.org> PlRPC-0.202.0-r2.ebuild:
   Stable for ppc, wrt bug #497692

@@ -1,14 +1,14 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.4.ebuild,v 1.6 2012/03/02 21:21:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-5.4.ebuild,v 1.7 2014/01/20 23:21:46 robbat2 Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="A network scanning tool for pentesters"
-HOMEPAGE="http://www.thc.org/thc-amap/"
-SRC_URI="http://www.thc.org/releases/${P}.tar.gz"
+HOMEPAGE="https://www.thc.org/thc-amap/"
+SRC_URI="https://www.thc.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Sys-Syslog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.67 2013/12/30 11:53:43 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Sys-Syslog/ChangeLog,v 1.68 2014/01/20 23:09:41 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Sys-Syslog-0.320.0.ebuild,
+  Sys-Syslog-0.330.0.ebuild:
+  Add arm64 love.
 
   30 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> -Sys-Syslog-0.270.0.ebuild,
   -Sys-Syslog-0.280.0.ebuild, -Sys-Syslog-0.290.0.ebuild,

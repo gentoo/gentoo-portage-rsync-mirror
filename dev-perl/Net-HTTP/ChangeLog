@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-HTTP
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.45 2013/09/29 07:37:14 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.46 2014/01/20 23:25:38 vapier Exp $
+
+  20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Net-HTTP-6.60.0.ebuild:
+  Add arm64 love.
 
   29 Sep 2013; Mikle Kolyada <zlogene@gentoo.org> Net-HTTP-6.30.0.ebuild,
   Net-HTTP-6.50.0.ebuild, Net-HTTP-6.60.0.ebuild:
