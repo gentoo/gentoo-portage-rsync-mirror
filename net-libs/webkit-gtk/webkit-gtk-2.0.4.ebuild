@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.4.ebuild,v 1.10 2014/01/19 02:30:55 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.0.4.ebuild,v 1.11 2014/01/21 22:42:01 eva Exp $
 
 EAPI="5"
 
@@ -45,7 +45,7 @@ RDEPEND="
 	x11-libs/libXt
 	>=x11-libs/gtk+-2.24.10:2
 
-	geoloc? ( app-misc/geoclue )
+	geoloc? ( app-misc/geoclue:0 )
 	gstreamer? (
 		>=media-libs/gstreamer-1.0.3:1.0
 		>=media-libs/gst-plugins-base-1.0.3:1.0 )

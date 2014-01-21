@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-clocks/gnome-clocks-3.10.1.ebuild,v 1.1 2013/12/24 16:48:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-clocks/gnome-clocks-3.10.1.ebuild,v 1.2 2014/01/21 22:50:17 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-libs/libgweather-3.9.91:=
 	>=gnome-base/gnome-desktop-3.7.90:=
 	>=sci-geosciences/geocode-glib-0.99.4
-	>=app-misc/geoclue-1.99.3
+	>=app-misc/geoclue-1.99.3:2.0
 	>=x11-libs/libnotify-0.7:=
 "
 DEPEND="${RDEPEND}

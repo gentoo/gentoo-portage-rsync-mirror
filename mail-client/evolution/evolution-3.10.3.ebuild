@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.10.3.ebuild,v 1.2 2013/12/26 22:39:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.10.3.ebuild,v 1.3 2014/01/21 22:57:04 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -50,7 +50,7 @@ COMMON_DEPEND="
 		( >=app-crypt/gnupg-2.0.1-r2 ${PINENTRY_DEPEND} )
 		=app-crypt/gnupg-1.4* ) )
 	map? (
-		>=app-misc/geoclue-0.12.0
+		>=app-misc/geoclue-0.12.0:0
 		>=media-libs/libchamplain-0.12:0.12[gtk]
 		>=media-libs/clutter-1.0.0:1.0
 		>=media-libs/clutter-gtk-0.90:1.0

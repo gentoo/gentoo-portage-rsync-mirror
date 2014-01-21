@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.410 2013/12/26 22:39:43 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.411 2014/01/21 22:57:04 eva Exp $
+
+  21 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org> evolution-3.10.3.ebuild:
+  Pin geoclue dependency to slot 0.
 
   26 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org> evolution-3.10.3.ebuild:
   Remove useless myconf variable.

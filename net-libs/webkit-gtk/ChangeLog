@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.230 2014/01/19 02:30:55 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.231 2014/01/21 22:42:01 eva Exp $
+
+  21 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-1.8.3-r201.ebuild,
+  webkit-gtk-1.8.3-r300.ebuild, webkit-gtk-1.10.2-r300.ebuild,
+  webkit-gtk-2.0.4.ebuild, webkit-gtk-2.2.2.ebuild:
+  Pin geoclue dependency to slot 0, bug #496106.
 
   19 Jan 2014; Mark Wright <gienah@gentoo.org>
   +files/webkit-gtk-2.0.4-freetype-2.5.1.patch,
