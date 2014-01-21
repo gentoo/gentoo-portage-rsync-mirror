@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.10 2013/03/03 12:29:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.7_beta11.ebuild,v 1.11 2014/01/21 02:19:38 creffett Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic autotools
 
 DESCRIPTION="realize the collective dream of sleeping computers from all over the internet"
