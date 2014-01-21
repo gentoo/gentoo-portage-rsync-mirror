@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-news
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.70 2013/11/24 18:37:31 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-news/ChangeLog,v 1.71 2014/01/20 23:36:00 idella4 Exp $
+
+*twisted-news-13.2.0 (20 Jan 2014)
+
+  20 Jan 2014; Ian Delaney <idella4@gentoo.org> +twisted-news-13.2.0.ebuild:
+  bump
 
   24 Nov 2013; Agostino Sarubbo <ago@gentoo.org> twisted-news-12.3.0.ebuild:
   Stable for arm, wrt bug #468150
