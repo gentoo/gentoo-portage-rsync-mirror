@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.10.2.ebuild,v 1.1 2013/12/24 17:33:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.10.2.ebuild,v 1.2 2014/01/21 21:38:03 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="https://wiki.gnome.org/GnomeOnlineAccounts"
 
 LICENSE="LGPL-2+"
 SLOT="0/1"
-IUSE="gnome +introspection kerberos telepathy"
+IUSE="gnome +introspection kerberos" # telepathy"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # pango used in goaeditablelabel
@@ -27,6 +27,7 @@ RDEPEND="
 	dev-libs/libxml2:2
 	>=net-libs/libsoup-2.42:2.4
 	net-libs/rest:0.7
+	net-libs/telepathy-glib
 	>=net-libs/webkit-gtk-2.1.90:3
 	>=x11-libs/gtk+-3.5.1:3
 	x11-libs/pango
@@ -35,8 +36,8 @@ RDEPEND="
 	kerberos? (
 		app-crypt/gcr:0=
 		app-crypt/mit-krb5 )
-	telepathy? ( net-libs/telepathy-glib )
 "
+#	telepathy? ( net-libs/telepathy-glib )
 # goa-daemon can launch gnome-control-center
 PDEPEND="gnome? ( >=gnome-base/gnome-control-center-3.2[gnome-online-accounts(+)] )"
 
@@ -54,18 +55,21 @@ QA_CONFIGURE_OPTIONS=".*"
 
 src_configure() {
 	# TODO: Give users a way to set the G/Y!/FB/Twitter/Windows Live secrets
+	# Twitter/Y! disabled per upstream recommendation, bug #497168
+	# telepathy optional support is really badly done, bug #494456
 	gnome2_src_configure \
 		--disable-static \
+		--disable-twitter \
+		--disable-yahoo \
 		--enable-documentation \
 		--enable-exchange \
 		--enable-facebook \
 		--enable-flickr \
-		--enable-twitter \
-		--enable-yahoo \
 		--enable-imap-smtp \
 		--enable-owncloud \
-		$(use_enable kerberos) \
-		$(use_enable telepathy)
+		--enable-telepathy \
+		$(use_enable kerberos)
+		#$(use_enable telepathy)
 	# gudev & cheese from sub-configure is overriden
 	# by top level configure, and disabled so leave it like that
 }

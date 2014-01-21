@@ -4,6 +4,5 @@
   <herd>livecd</herd>
   <use>
     <flag name="xz">Enable support for XZ ("LZMA2") compression using <pkg>app-arch/xz-utils</pkg></flag>
-    <flag name="xattr">Enable (re)storing of extended attributes by default</flag>
   </use>
 </pkgmetadata>
