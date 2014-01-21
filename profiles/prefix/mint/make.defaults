@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/mint/make.defaults,v 1.5 2012/10/04 06:50:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/mint/make.defaults,v 1.6 2014/01/21 04:30:29 dirtyepic Exp $
 
 # System-wide defaults for all MiNT profiles
 # This file should rarely need to be changed
@@ -9,4 +9,4 @@
 ELIBC="mintlib"
 KERNEL="freemint"
 
-USE="fortran mudflap static-libs"
+USE="fortran static-libs"

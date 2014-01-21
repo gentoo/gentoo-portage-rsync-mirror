@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/reportmagic-2.21.ebuild,v 1.15 2011/02/25 18:08:05 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/reportmagic/reportmagic-2.21.ebuild,v 1.16 2014/01/21 04:15:05 creffett Exp $
 
-EAPI=1
+EAPI=5
 
 DESCRIPTION="Makes usable statistics from your web site log file analysis"
 HOMEPAGE="http://www.reportmagic.org/"

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8553 2014/01/20 17:20:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8554 2014/01/21 04:30:28 dirtyepic Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> default/linux/make.defaults:
+  Drop mudflap from default USE.
 
   20 Jan 2014; Ben de Groot <yngwin@gentoo.org> desc/linguas.desc:
   Add linguas needed for qupzilla

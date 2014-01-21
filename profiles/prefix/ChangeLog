@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.410 2014/01/18 08:15:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.411 2014/01/21 04:30:28 dirtyepic Exp $
+
+  21 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> linux/make.defaults,
+  mint/make.defaults:
+  Drop mudflap from default USE.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
   Drop explicit python 3.3 target updates now that the base profile does this
