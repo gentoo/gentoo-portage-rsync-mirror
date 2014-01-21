@@ -57,6 +57,7 @@ dev-libs/glib abi_x86_32
 dev-libs/gmp abi_x86_32
 dev-libs/json-c abi_x86_32
 dev-libs/libcdio abi_x86_32
+dev-libs/libcdio-paranoia abi_x86_32
 dev-libs/libconfig abi_x86_32
 dev-libs/libcss abi_x86_32
 dev-libs/libedit abi_x86_32

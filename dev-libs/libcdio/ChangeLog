@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.148 2014/01/19 17:18:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.149 2014/01/21 07:56:40 ssuominen Exp $
+
+*libcdio-0.92 (21 Jan 2014)
+
+  21 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> +libcdio-0.92.ebuild:
+  Version bump wrt #494452 by Lars Wendler
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> libcdio-0.90-r1.ebuild:
   amd64 stable, bug 497246

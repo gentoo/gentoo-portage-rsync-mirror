@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.1.ebuild,v 1.1 2014/01/20 19:17:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.1-r1.ebuild,v 1.1 2014/01/21 07:55:56 polynomial-c Exp $
 
 EAPI="4"
 
@@ -82,6 +82,7 @@ src_configure() {
 	lfs_fallocate_test
 	export ac_cv_header_security_pam_misc_h=$(usex pam) #485486
 	econf \
+		--docdir="/usr/share/doc/${PF}" \
 		--enable-fs-paths-extra=/usr/sbin:/bin:/usr/bin \
 		$(use_enable nls) \
 		--enable-agetty \
