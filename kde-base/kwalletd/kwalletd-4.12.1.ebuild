@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/kwalletd-4.12.1.ebuild,v 1.1 2014/01/18 11:23:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/kwalletd-4.12.1.ebuild,v 1.2 2014/01/21 05:20:13 kensington Exp $
 
 EAPI=5
 
@@ -18,6 +18,8 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-nosemanticdesktop.patch" )
 
 src_configure() {
 	local mycmakeargs=(

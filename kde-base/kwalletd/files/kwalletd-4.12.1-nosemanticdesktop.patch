@@ -1,0 +1,57 @@
+From 3ecfd295947fce6c2009ca23e626887bafece1ea Mon Sep 17 00:00:00 2001
+From: Valentin Rusu <kde@rusu.info>
+Date: Mon, 20 Jan 2014 22:37:41 +0100
+Subject: [PATCH 1/2] Fix compilation withoug gpgme
+
+BUG: 328476
+FIXED-IN: 4.12.2
+FIXED-IN: 4.13
+---
+ kwalletd/kwalletwizard.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/kwalletd/kwalletwizard.h b/kwalletd/kwalletwizard.h
+index b29bddc..95b422b 100644
+--- a/kwalletd/kwalletwizard.h
++++ b/kwalletd/kwalletwizard.h
+@@ -20,7 +20,9 @@
+ #define KWALLETWIZARD_H
+ 
+ #include <QWizard>
++#ifdef HAVE_QGPGME
+ #include <gpgme++/key.h>
++#endif
+ 
+ class PageGpgKey;
+ class PagePassword;
+-- 
+1.8.3.2
+
+
+From 6a79fc09c0b0d48bd0cc09d32fb0c8b306251c00 Mon Sep 17 00:00:00 2001
+From: Valentin Rusu <kde@rusu.info>
+Date: Mon, 20 Jan 2014 23:48:48 +0100
+Subject: [PATCH 2/2] Fix compilation without gpgme++
+
+BUG: 328476
+---
+ kwalletd/kwalletd.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/kwalletd/kwalletd.cpp b/kwalletd/kwalletd.cpp
+index 0266bdf..20bc8c0 100644
+--- a/kwalletd/kwalletd.cpp
++++ b/kwalletd/kwalletd.cpp
+@@ -49,7 +49,9 @@
+ #include <kpluginfactory.h>
+ #include <kpluginloader.h>
+ #include <KNotification>
++#ifdef HAVE_QGPGME
+ #include <gpgme++/key.h>
++#endif
+ 
+ #include <QtCore/QDir>
+ #include <QTextDocument> // Qt::escape
+-- 
+1.8.3.2
+
