@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test unpack
-DEPEND=dev-python/setuptools doc? ( sys-apps/texinfo ) test? ( dev-python/mock dev-python/twisted-mail dev-python/twisted-web dev-python/twisted-words ) dev-vcs/git =dev-lang/python-2* virtual/pkgconfig
+DEPEND=dev-python/setuptools doc? ( sys-apps/texinfo ) test? ( dev-python/python-dateutil dev-python/mock dev-python/twisted-mail dev-python/twisted-web dev-python/twisted-words ) dev-vcs/git =dev-lang/python-2* virtual/pkgconfig
 DESCRIPTION=BuildBot build automation system
 EAPI=5
 HOMEPAGE=http://trac.buildbot.net/ http://code.google.com/p/buildbot/ http://pypi.python.org/pypi/buildbot
@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-python/jinja-2.1 || ( dev-lang/python:2.7 dev-lang/python:2.6 dev-python/simplejson ) || ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] dev-python/pysqlite:2 ) >=dev-python/twisted-core-8.0.0 dev-python/twisted-web <dev-python/sqlalchemy-migrate-0.8 irc? ( dev-python/twisted-words ) mail? ( dev-python/twisted-mail ) manhole? ( dev-python/twisted-conch ) =dev-lang/python-2*
 SLOT=0
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	fac675dcccf94392371a6abee62d909f	python	305197b0aa1194fa3ef67ca21f6faa7e	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=6557fdfac6c9748ff344a31100ffdb41
+_md5_=52155d171922bb22fcd49b89dd16d5ee

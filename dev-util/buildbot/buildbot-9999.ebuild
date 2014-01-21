@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.3 2013/12/10 19:04:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-9999.ebuild,v 1.4 2014/01/21 19:56:41 maekke Exp $
 
 EAPI="5"
 PYTHON_DEPEND="2"
@@ -43,6 +43,7 @@ DEPEND="${DEPEND}
 	dev-python/setuptools
 	doc? ( sys-apps/texinfo )
 	test? (
+		dev-python/python-dateutil
 		dev-python/mock
 		dev-python/twisted-mail
 		dev-python/twisted-web

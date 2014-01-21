@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare setup test
-DEPEND=dev-python/setuptools doc? ( sys-apps/texinfo ) test? ( dev-python/mock dev-python/twisted-mail dev-python/twisted-web dev-python/twisted-words ) =dev-lang/python-2* virtual/pkgconfig
+DEPEND=dev-python/setuptools doc? ( sys-apps/texinfo ) test? ( dev-python/python-dateutil dev-python/mock dev-python/twisted-mail dev-python/twisted-web dev-python/twisted-words ) =dev-lang/python-2* virtual/pkgconfig
 DESCRIPTION=BuildBot build automation system
 EAPI=5
 HOMEPAGE=http://trac.buildbot.net/ http://code.google.com/p/buildbot/ http://pypi.python.org/pypi/buildbot
@@ -10,4 +10,4 @@ RDEPEND=>=dev-python/jinja-2.1 || ( dev-lang/python:2.7 dev-lang/python:2.6 dev-
 SLOT=0
 SRC_URI=mirror://pypi/b/buildbot/buildbot-0.8.8.tar.gz
 _eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python	305197b0aa1194fa3ef67ca21f6faa7e	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
-_md5_=a00c2f48568a7dd71100c7228ce2c9a1
+_md5_=577e0b1d91b8ae33bb65f90c66049304
