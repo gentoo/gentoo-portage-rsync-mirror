@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/x2goserver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.38 2014/01/12 16:57:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goserver/ChangeLog,v 1.39 2014/01/21 00:42:01 phajdan.jr Exp $
+
+  21 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  x2goserver-4.0.1.12.ebuild:
+  x86 stable wrt security bug #497260
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> x2goserver-4.0.1.12.ebuild:
   amd64 stable, bug #497260
