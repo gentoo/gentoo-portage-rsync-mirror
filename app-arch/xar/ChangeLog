@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/ChangeLog,v 1.24 2012/08/26 17:02:08 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xar/ChangeLog,v 1.25 2014/01/21 06:37:09 patrick Exp $
+
+  21 Jan 2014; Patrick Lauer <patrick@gentoo.org> -xar-1.5.2.ebuild:
+  Remove old
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xar-1.5.2-r1.ebuild:
   alpha/ia64/sparc stable wrt #418509
