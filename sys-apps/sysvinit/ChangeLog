@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/sysvinit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.131 2014/01/18 09:32:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sysvinit/ChangeLog,v 1.132 2014/01/21 01:19:42 vapier Exp $
+
+  21 Jan 2014; Mike Frysinger <vapier@gentoo.org> sysvinit-2.88-r4.ebuild,
+  sysvinit-2.88-r5.ebuild, sysvinit-2.88-r6.ebuild:
+  Configure default s390 consoles with TERM=dumb as these lack the ability to
+  interpret color sequences and the like.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> sysvinit-2.88-r4.ebuild,
   sysvinit-2.88-r5.ebuild, sysvinit-2.88-r6.ebuild:
