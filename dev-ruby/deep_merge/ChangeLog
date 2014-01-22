@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/deep_merge
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deep_merge/ChangeLog,v 1.4 2013/12/31 06:53:21 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deep_merge/ChangeLog,v 1.5 2014/01/22 06:42:20 graaff Exp $
+
+*deep_merge-1.0.1 (22 Jan 2014)
+
+  22 Jan 2014; Hans de Graaff <graaff@gentoo.org> +deep_merge-1.0.1.ebuild:
+  Version bump.
 
   31 Dec 2013; Hans de Graaff <graaff@gentoo.org> deep_merge-1.0.0-r1.ebuild:
   Add ruby21.

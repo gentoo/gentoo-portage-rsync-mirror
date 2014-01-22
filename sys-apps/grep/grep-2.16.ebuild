@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.16.ebuild,v 1.2 2014/01/18 05:07:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.16.ebuild,v 1.3 2014/01/22 06:50:05 radhermit Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)]} )
 	nls? ( virtual/libintl )
 	virtual/libiconv"
 DEPEND="${RDEPEND}
+	virtual/pkgconfig
 	nls? ( sys-devel/gettext )
 	static? ( ${LIB_DEPEND} )"
 
