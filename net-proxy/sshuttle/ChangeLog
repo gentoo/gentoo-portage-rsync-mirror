@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/sshuttle
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.14 2012/12/13 21:02:37 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.15 2014/01/22 07:09:26 radhermit Exp $
+
+*sshuttle-0.61-r1 (22 Jan 2014)
+
+  22 Jan 2014; Tim Harder <radhermit@gentoo.org> +sshuttle-0.61-r1.ebuild:
+  Drop shadow or sudo dep (bug #498152).
 
   13 Dec 2012; Tim Harder <radhermit@gentoo.org> -sshuttle-0.60.ebuild:
   Remove old.

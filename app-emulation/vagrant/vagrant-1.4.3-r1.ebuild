@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.4.3.ebuild,v 1.1 2014/01/04 06:23:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vagrant/vagrant-1.4.3-r1.ebuild,v 1.1 2014/01/22 07:19:51 radhermit Exp $
 
 EAPI="5"
 USE_RUBY="ruby19"
@@ -25,6 +25,7 @@ IUSE="test"
 RESTRICT="test"
 
 RDEPEND="${RDEPEND}
+	app-arch/libarchive
 	net-misc/curl
 	!x64-macos? ( || ( app-emulation/virtualbox app-emulation/virtualbox-bin ) )"
 

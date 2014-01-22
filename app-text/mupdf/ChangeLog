@@ -1,6 +1,13 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.92 2014/01/19 08:52:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.93 2014/01/22 07:14:40 xmw Exp $
+
+*mupdf-1.3_p20140118 (22 Jan 2014)
+
+  22 Jan 2014; Michael Weber <xmw@gentoo.org> +mupdf-1.3_p20140118.ebuild,
+  mupdf-9999.ebuild:
+  Include buffer overflow fix (bug 498876, thanks  Hank Leininger), include
+  mupdf-select-file for .desktop file (bug 482920, thanks Andreas Proteus).
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> mupdf-1.2.ebuild:
   amd64 stable, bug #472532
