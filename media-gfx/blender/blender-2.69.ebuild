@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.69.ebuild,v 1.1 2013/11/01 18:41:17 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.69.ebuild,v 1.2 2014/01/22 01:11:12 hasufell Exp $
 
 # TODO:
 #   bundled-deps: bullet is modified
@@ -55,7 +55,7 @@ RDEPEND="
 	virtual/opengl
 	x11-libs/libXi
 	x11-libs/libX11
-	boost? ( >=dev-libs/boost-1.44[threads(+)] )
+	boost? ( >=dev-libs/boost-1.44[nls?,threads(+)] )
 	collada? ( media-libs/opencollada )
 	colorio? ( media-libs/opencolorio )
 	cycles? (

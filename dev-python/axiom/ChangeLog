@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/axiom
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.43 2013/08/09 17:28:24 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.44 2014/01/22 01:27:25 idella4 Exp $
+
+*axiom-0.7.0 (22 Jan 2014)
+
+  22 Jan 2014; Ian Delaney <idella4@gentoo.org> +axiom-0.7.0.ebuild:
+  bump: add; pytest for test phase, test phase
 
   09 Aug 2013; Michał Górny <mgorny@gentoo.org> axiom-0.6.0-r1.ebuild:
   Own the dropin.cache for axiom.plugins.

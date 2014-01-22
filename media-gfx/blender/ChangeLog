@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.258 2013/11/01 18:41:17 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.259 2014/01/22 01:11:12 hasufell Exp $
+
+  22 Jan 2014; Julian Ospald <hasufell@gentoo.org> blender-2.69.ebuild:
+  fix build with nls enabled
 
 *blender-2.69 (01 Nov 2013)
 
