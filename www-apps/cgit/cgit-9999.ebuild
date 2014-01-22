@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.8 2014/01/21 19:50:01 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.9 2014/01/22 14:43:25 zx2c4 Exp $
 
 EAPI="4"
 
@@ -52,9 +52,9 @@ src_prepare() {
 	echo "DESTDIR = ${D}" >> cgit.conf
 	if use lua; then
 		if use jit; then
-			echo "LUA_IMPLEMENTATION = JIT" >> cgit.conf
+			echo "LUA_PKGCONFIG = luajit" >> cgit.conf
 		else
-			echo "LUA_IMPLEMENTATION = VANILLA" >> cgit.conf
+			echo "LUA_PKGCONFIG = lua" >> cgit.conf
 		fi
 	else
 		echo "NO_LUA = 1" >> cgit.conf

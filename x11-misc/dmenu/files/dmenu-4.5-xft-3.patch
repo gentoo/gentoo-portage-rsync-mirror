@@ -115,27 +115,29 @@
  
  	if(lines > 0) {
  		/* draw vertical list */
-@@ -321,7 +337,8 @@
+@@ -321,7 +337,9 @@
  		sel = matchend;
  		break;
  	case XK_Escape:
 -		exit(EXIT_FAILURE);
-+        ret = EXIT_FAILURE;
-+        running = False;
++		ret = EXIT_FAILURE;
++		running = False;
++		break;
  	case XK_Home:
  		if(sel == matches) {
  			cursor = 0;
-@@ -359,7 +376,8 @@
+@@ -359,7 +377,9 @@
  	case XK_Return:
  	case XK_KP_Enter:
  		puts((sel && !(ev->state & ShiftMask)) ? sel->text : text);
 -		exit(EXIT_SUCCESS);
 +		ret = EXIT_SUCCESS;
 +		running = False;
++		break;
  	case XK_Right:
  		if(text[cursor] != '\0') {
  			cursor = nextrune(+1);
-@@ -490,7 +508,7 @@
+@@ -490,7 +510,7 @@
  run(void) {
  	XEvent ev;
  
@@ -144,7 +146,7 @@
  		if(XFilterEvent(&ev, win))
  			continue;
  		switch(ev.type) {
-@@ -524,11 +542,6 @@
+@@ -524,11 +544,6 @@
  	XineramaScreenInfo *info;
  #endif
  
@@ -156,7 +158,7 @@
  	clip = XInternAtom(dc->dpy, "CLIPBOARD",   False);
  	utf8 = XInternAtom(dc->dpy, "UTF8_STRING", False);
  
-@@ -582,7 +595,7 @@
+@@ -582,7 +597,7 @@
  
  	/* create menu window */
  	swa.override_redirect = True;
