@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.10 2013/10/17 20:37:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.14.2.ebuild,v 1.11 2014/01/22 21:59:54 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -64,6 +64,7 @@ RDEPEND=">=dev-libs/glib-2.33.12:2
 		virtual/udev[gudev] )
 	udisks? ( >=sys-fs/udisks-1.97:2 )"
 DEPEND="${RDEPEND}
+	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig

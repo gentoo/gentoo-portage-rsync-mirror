@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r1.ebuild,v 1.1 2014/01/22 21:22:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r1.ebuild,v 1.2 2014/01/22 21:33:36 vapier Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ DOCS=(CHANGES NOTICE README)
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.0-mint.patch
-	epatch "${FILESDIR}"/${PN}-1.4.8-libtool.patch
+	epatch "${FILESDIR}"/${PN}-1.5.0-libtool.patch
 
 	# Apply user patches, bug #449048
 	epatch_user

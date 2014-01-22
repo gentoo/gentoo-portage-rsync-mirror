@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libsocialweb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.23 2013/08/30 22:50:39 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.24 2014/01/22 21:35:47 eva Exp $
+
+*libsocialweb-0.25.21-r1 (22 Jan 2014)
+
+  22 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  libsocialweb-0.25.21.ebuild, +libsocialweb-0.25.21-r1.ebuild:
+  EAPI bump and switch to python*-r1 eclass.
 
   30 Aug 2013; Gilles Dartiguelongue <eva@gentoo.org>
   libsocialweb-0.25.21.ebuild:

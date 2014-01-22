@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.4.ebuild,v 1.3 2013/12/08 18:36:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.16.4.ebuild,v 1.4 2014/01/22 21:59:54 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -55,6 +55,7 @@ RDEPEND="
 	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.7.1 )
 "
 DEPEND="${RDEPEND}
+	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	>=dev-util/intltool-0.40
 	virtual/pkgconfig

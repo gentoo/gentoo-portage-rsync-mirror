@@ -1,26 +1,33 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.21.ebuild,v 1.11 2014/01/22 21:35:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.21-r1.ebuild,v 1.1 2014/01/22 21:35:47 eva Exp $
 
-EAPI="4"
+EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python{2_6,2_7} )
 VALA_MIN_API_VERSION="0.12"
 VALA_USE_DEPEND="vapigen"
 
-inherit autotools eutils gnome2 python vala
+inherit autotools eutils gnome2 python-any-r1 vala
 
 DESCRIPTION="Social web services integration framework"
 HOMEPAGE="http://git.gnome.org/browse/libsocialweb"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="connman +gnome +introspection +networkmanager vala"
 
+# Introspection is needed for vala bindings
+REQUIRED_USE="
+	?? ( connman networkmanager )
+	vala? ( introspection )
+"
+
 # NOTE: coverage testing should not be enabled
-RDEPEND=">=dev-libs/glib-2.14:2
+RDEPEND="
+	>=dev-libs/glib-2.14:2
 	>=net-libs/rest-0.7.10
 
 	gnome-base/gconf:2
@@ -32,37 +39,18 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	gnome? ( >=net-libs/libsoup-gnome-2.25.1:2.4 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 	networkmanager? ( net-misc/networkmanager )
-	!networkmanager? ( connman? ( net-misc/connman ) )"
+	!networkmanager? ( connman? ( net-misc/connman ) )
+"
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.15
 	>=dev-util/intltool-0.40
 	sys-devel/gettext
 	virtual/pkgconfig
-	vala? ( $(vala_depend) )"
-
-# Introspection is needed for vala bindings
-REQUIRED_USE="vala? ( introspection )"
+	vala? ( $(vala_depend) )
+"
 
 pkg_setup() {
-	# TODO: enable sys-apps/keyutils support (--without-kernel-keyring)
-	G2CONF="${G2CONF}
-		--disable-static
-		--disable-gcov
-		--without-kernel-keyring
-		--enable-all-services
-		$(use_enable introspection)
-		$(use_enable vala vala-bindings)
-		$(use_with gnome)
-		--with-online=always"
-
-	# NetworkManager always overrides connman support
-	use connman && G2CONF="${G2CONF} --with-online=connman"
-	use networkmanager && G2CONF="${G2CONF} --with-online=networkmanager"
-
-	DOCS="AUTHORS README TODO"
-
-	python_set_active_version 2
-	python_pkg_setup
+	python-any-r1_pkg_setup
 }
 
 src_prepare() {
@@ -76,10 +64,30 @@ src_prepare() {
 
 	eautoreconf
 
-	gnome2_src_prepare
 	use vala && vala_src_prepare
+	gnome2_src_prepare
 
 	# Fix python shebang (FIXME: should be in utils-r1)
-	sed -e "/^#!/ s/python/${PYTHON}/" \
+	sed -e "/^#!/ s:.*:#!${PYTHON}:" \
 		-i  "${S}/tools/glib-ginterface-gen.py" || die
+}
+
+src_configure() {
+	local myconf
+
+	# NetworkManager always overrides connman support
+	use connman && myconf="${myconf} --with-online=connman"
+	use networkmanager && myconf="${myconf} --with-online=networkmanager"
+
+	# TODO: enable sys-apps/keyutils support (--without-kernel-keyring)
+	gnome2_src_configure \
+		--disable-static \
+		--disable-gcov \
+		--without-kernel-keyring \
+		--enable-all-services \
+		$(use_enable introspection) \
+		$(use_enable vala vala-bindings) \
+		$(use_with gnome) \
+		--with-online=always \
+		${myconf}
 }
