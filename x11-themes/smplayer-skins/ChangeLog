@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/smplayer-skins
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-skins/ChangeLog,v 1.1 2013/05/25 07:41:29 yngwin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/smplayer-skins/ChangeLog,v 1.2 2014/01/22 06:22:48 yngwin Exp $
+
+*smplayer-skins-20130605 (22 Jan 2014)
+
+  22 Jan 2014; Ben de Groot <yngwin@gentoo.org> +smplayer-skins-20130605.ebuild:
+  version bump
 
 *smplayer-skins-20121029 (25 May 2013)
 
