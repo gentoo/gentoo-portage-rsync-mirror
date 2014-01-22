@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r1.ebuild,v 1.2 2014/01/22 21:33:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r1.ebuild,v 1.3 2014/01/22 22:27:42 vapier Exp $
 
 EAPI="4"
 
@@ -25,6 +25,7 @@ DOCS=(CHANGES NOTICE README)
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.0-mint.patch
 	epatch "${FILESDIR}"/${PN}-1.5.0-libtool.patch
+	epatch "${FILESDIR}"/${PN}-1.5.0-cross-types.patch
 
 	# Apply user patches, bug #449048
 	epatch_user
@@ -87,6 +88,14 @@ src_configure() {
 }
 
 src_compile() {
+	if tc-is-cross-compiler; then
+		# This header is the same across targets, so use the build compiler.
+		emake tools/gen_test_char
+		tc-export_build_env BUILD_CC
+		${BUILD_CC} ${BUILD_CFLAGS} ${BUILD_CPPFLAGS} ${BUILD_LDFLAGS} \
+			tools/gen_test_char.c -o tools/gen_test_char || die
+	fi
+
 	emake
 
 	if use doc; then

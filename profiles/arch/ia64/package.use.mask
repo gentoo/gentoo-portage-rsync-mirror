@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.135 2014/01/19 19:59:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.136 2014/01/22 22:08:09 eva Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (19 Jan 2014)  
 # Missing keywords, bug #478254
@@ -69,12 +69,6 @@ net-misc/modemmanager qmi qmi-newest
 # Alexandre Rostovtsev <tetromino@gentoo.org> (22 Jan 2013)
 # remove mask if/when media-gfx/argyllcms is keywored here.
 x11-misc/colord extra-print-profiles
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (07 Jan 2012)
-# remove when media-libs/libquvi is stable on ia64
-=dev-libs/totem-pl-parser-2.32.6-r1 quvi
-=media-video/mplayer2-2.0_p20120828 quvi
-=media-video/totem-2.32.0-r2 youtube
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Dec 2012)
 # remove mask if/when mail-client/thunderbird is keyworded here

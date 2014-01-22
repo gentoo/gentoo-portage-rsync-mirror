@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.540 2014/01/13 17:31:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.541 2014/01/22 22:04:45 eva Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -332,11 +332,6 @@ dev-db/firebird client
 # Requires icc which does not emerge (distfile unavailable)
 media-libs/opencv ipp
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (10 May 2012)
-# This entry can be removed by anyone after gnome-panel-3.* is stabilized
-# Mask to allow stabilization (bug #414983)
-=app-misc/gnote-0.8.2 applet
-
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (02 May 2012)
 # Causes crashes and build failures, not needed by any package, bug #412177
 x11-libs/cairo qt4
@@ -470,11 +465,6 @@ media-video/mplayer2 bluray
 #
 # Mask pdnsd's Linux-specific USE flags.
 net-dns/pdnsd isdn urandom
-
-# Gilles Dartiguelongue <eva@gentoo.org> (26 Mar 2011)
-# Mask due to unsatisfied dependencies
-# applet is required for the search panel applet
->=app-misc/tracker-0.10 applet
 
 # Raúl Porcel <armin76@gentoo.org> (13 Feb 2011)
 # Masked until devs know how to use repoman
