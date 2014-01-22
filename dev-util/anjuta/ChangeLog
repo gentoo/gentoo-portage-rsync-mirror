@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.171 2013/12/24 16:05:59 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.172 2014/01/21 23:57:45 eva Exp $
+
+  21 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org> anjuta-3.10.2.ebuild:
+  Raise vala to latest version proposed by configure, bug #497018.
 
 *anjuta-3.10.2 (24 Dec 2013)
 

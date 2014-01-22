@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.10.2.ebuild,v 1.1 2013/12/24 16:05:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.10.2.ebuild,v 1.2 2014/01/21 23:57:45 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -8,7 +8,7 @@ GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_6,2_7} )
 # libanjuta-language-vala.so links to a specific slot of libvala; we want to
 # avoid automagic behavior.
-VALA_MIN_API_VERSION="0.20"
+VALA_MIN_API_VERSION="0.22"
 VALA_MAX_API_VERSION="${VALA_MIN_API_VERSION}"
 
 inherit gnome2 flag-o-matic readme.gentoo python-single-r1 vala
