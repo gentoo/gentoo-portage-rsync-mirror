@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.13-r1.ebuild,v 1.3 2013/02/22 19:39:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.13-r1.ebuild,v 1.4 2014/01/22 20:03:07 hasufell Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit eutils
 
@@ -15,29 +15,30 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="avahi crypt fbcon +jpeg ssl system-libvncserver threads tk xinerama +zlib"
 
-RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zlib=] )
-	!system-libvncserver? (
-		zlib? ( sys-libs/zlib )
-		jpeg? ( virtual/jpeg:0 )
-	)
-	ssl? ( dev-libs/openssl )
-	tk? ( dev-lang/tk )
-	avahi? ( >=net-dns/avahi-0.6.4 )
-	xinerama? ( x11-libs/libXinerama )
+RDEPEND="
 	x11-libs/libXfixes
 	x11-libs/libXrandr
 	x11-libs/libX11
 	>=x11-libs/libXtst-1.1.0
 	x11-libs/libXdamage
-	x11-libs/libXext"
+	x11-libs/libXext
+	avahi? ( >=net-dns/avahi-0.6.4 )
+	ssl? ( dev-libs/openssl )
+	system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zlib=] )
+	!system-libvncserver? (
+		zlib? ( sys-libs/zlib )
+		jpeg? ( virtual/jpeg:0 )
+	)
+	tk? ( dev-lang/tk )
+	xinerama? ( x11-libs/libXinerama )"
 DEPEND="${RDEPEND}
 	x11-libs/libXt
-	xinerama? ( x11-proto/xineramaproto )
 	x11-proto/inputproto
 	x11-proto/trapproto
 	x11-proto/recordproto
 	x11-proto/xproto
-	x11-proto/xextproto"
+	x11-proto/xextproto
+	xinerama? ( x11-proto/xineramaproto )"
 
 pkg_setup() {
 	if use avahi && ! use threads ; then
@@ -47,29 +48,29 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-warnings.patch
-	epatch "${FILESDIR}"/${P}-shm-cleanup.patch
+	epatch "${FILESDIR}"/${P}-warnings.patch \
+		"${FILESDIR}"/${P}-shm-cleanup.patch
 }
 
 src_configure() {
 	# --without-v4l because of missing video4linux 2.x support wrt #389079
 	econf \
 		$(use_with system-libvncserver) \
-		$(use_with avahi) \
 		$(use_with xinerama) \
-		$(use_with ssl) \
-		$(use_with ssl crypto) \
-		$(use_with crypt) \
 		--without-v4l \
+		$(use_with fbcon fbdev) \
+		$(use_with crypt) \
+		$(use_with ssl crypto) \
+		$(use_with ssl) \
+		$(use_with avahi) \
 		$(use_with jpeg) \
 		$(use_with zlib) \
-		$(use_with threads pthread) \
-		$(use_with fbcon fbdev)
+		$(use_with threads pthread)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	dodoc x11vnc/{ChangeLog,README}
 	# Remove include files, which conflict with net-libs/libvncserver
-	rm -rf "${D}"/usr/include
+	rm -rf "${ED%/}"/usr/include
 }
