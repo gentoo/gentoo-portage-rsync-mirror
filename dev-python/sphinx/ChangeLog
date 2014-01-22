@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/sphinx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.158 2013/12/12 09:24:51 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.159 2014/01/22 13:19:53 jlec Exp $
+
+*sphinx-1.2.1 (22 Jan 2014)
+
+  22 Jan 2014; Justin Lecher <jlec@gentoo.org> sphinx-1.2.ebuild,
+  +sphinx-1.2.1.ebuild:
+  Version Bump
 
 *sphinx-1.2 (12 Dec 2013)
 
