@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnftnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.2 2014/01/20 20:09:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.3 2014/01/22 22:40:15 chainsaw Exp $
+
+*libnftnl-1.0.0-r2 (22 Jan 2014)
+
+  22 Jan 2014; Tony Vroon <chainsaw@gentoo.org> -libnftnl-1.0.0-r1.ebuild,
+  +libnftnl-1.0.0-r2.ebuild, +files/libnftnl-1.0.0-91264d8.patch:
+  My previous revert was unnecessary. This is an improved ebuild by dwfreed
+  which brings in an upstream patch and additional functionality.
 
 *libnftnl-1.0.0-r1 (20 Jan 2014)
 

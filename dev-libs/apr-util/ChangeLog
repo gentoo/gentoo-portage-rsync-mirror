@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr-util
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.192 2013/12/20 08:03:49 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.193 2014/01/22 22:57:33 vapier Exp $
+
+  22 Jan 2014; Mike Frysinger <vapier@gentoo.org> apr-util-1.5.2.ebuild,
+  apr-util-1.5.3.ebuild:
+  Add arm64 love.
 
   20 Dec 2013; Lars Wendler <polynomial-c@gentoo.org> apr-util-1.5.3.ebuild,
   +files/apr-util-1.5.3-berkdb6.patch:

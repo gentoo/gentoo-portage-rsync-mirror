@@ -4902,6 +4902,7 @@ net-libs/libkgapi:oldpim - Allow the use of non-akonadi kdepim-4.4
 net-libs/libkolabxml:csharp - Enable C# language bindings
 net-libs/libmicrohttpd:epoll - use epoll() system call
 net-libs/libmicrohttpd:messages - enable error messages
+net-libs/libnftnl:json - Supports parsing of JSON
 net-libs/libnids:glib - Use dev-libs/glib for multiprocessing support
 net-libs/libnids:libnet - Include code requiring net-libs/libnet
 net-libs/libnm-qt:modemmanager - Enable support for mobile broadband devices
