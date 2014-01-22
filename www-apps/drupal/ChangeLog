@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/drupal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.101 2013/12/01 23:03:05 jmbsvicetto Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.102 2014/01/22 16:47:48 sdamashek Exp $
+
+*drupal-7.26 (22 Jan 2014)
+*drupal-6.30 (22 Jan 2014)
+
+  22 Jan 2014; Samuel Damashek <sdamashek@gentoo.org> +drupal-6.30.ebuild,
+  +drupal-7.26.ebuild, -drupal-6.28.ebuild, -drupal-6.29.ebuild,
+  -drupal-7.24.ebuild:
+  Version bump and cleanup wrt bug 498464
 
   01 Dec 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -drupal-7.22.ebuild, -drupal-7.23.ebuild:
