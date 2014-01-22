@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook2X
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.47 2013/07/29 10:48:04 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/ChangeLog,v 1.48 2014/01/22 04:47:55 floppym Exp $
+
+*docbook2X-0.8.8-r4 (22 Jan 2014)
+
+  22 Jan 2014; Mike Gilbert <floppym@gentoo.org> +docbook2X-0.8.8-r4.ebuild:
+  Add some symlinks for docbook2x-{man,texi} for Debian compatibility, bug
+  205703.
 
 *docbook2X-0.8.8-r3 (29 Jul 2013)
 
