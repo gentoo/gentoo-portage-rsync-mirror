@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.108 2013/10/01 04:47:59 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.109 2014/01/22 03:50:28 floppym Exp $
+
+  22 Jan 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Remove myself.
 
   01 Oct 2013; Mike Frysinger <vapier@gentoo.org>
   files/x11vnc-0.9.13-shm-cleanup.patch:

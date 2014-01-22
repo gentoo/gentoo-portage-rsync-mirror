@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.73 2013/02/27 04:24:49 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.74 2014/01/22 03:47:11 floppym Exp $
+
+  22 Jan 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
+  Remove myself.
 
   27 Feb 2013; Zac Medico <zmedico@gentoo.org> libvncserver-0.9.9-r1.ebuild:
   Add ~arm-linux keyword.
