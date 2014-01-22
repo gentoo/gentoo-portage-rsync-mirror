@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8554 2014/01/21 04:30:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8555 2014/01/22 19:32:20 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove mask for still work-in-progress bash-completion layout that was
+  temporarily removed from tree.
 
   21 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> default/linux/make.defaults:
   Drop mudflap from default USE.

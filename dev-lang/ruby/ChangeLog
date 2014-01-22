@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.635 2014/01/05 11:03:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.636 2014/01/22 19:34:07 graaff Exp $
+
+  22 Jan 2014; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p484.ebuild,
+  ruby-2.0.0_p353-r1.ebuild, ruby-2.1.0.ebuild:
+  Ruby does not support tcl/tk 8.6 so adjust tk dependency accordingly. "Fixes"
+  bug 497130.
 
   05 Jan 2014; Hans de Graaff <graaff@gentoo.org> -ruby-1.9.3_p448.ebuild,
   -ruby-1.9.3_p448-r1.ebuild:

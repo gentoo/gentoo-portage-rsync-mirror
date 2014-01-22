@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.1.0.ebuild,v 1.2 2014/01/03 07:31:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.1.0.ebuild,v 1.3 2014/01/22 19:34:07 graaff Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ RDEPEND="
 	gdbm? ( sys-libs/gdbm )
 	ssl? ( dev-libs/openssl )
 	socks5? ( >=net-proxy/dante-1.1.13 )
-	tk? ( dev-lang/tk[threads] )
+	tk? ( <dev-lang/tk-8.6[threads] )
 	ncurses? ( sys-libs/ncurses )
 	readline?  ( sys-libs/readline )
 	dev-libs/libyaml

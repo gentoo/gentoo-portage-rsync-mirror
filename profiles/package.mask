@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15354 2014/01/20 08:31:45 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15355 2014/01/22 19:32:20 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -538,35 +538,6 @@ virtual/perl-B-Debug
 # Mask 5.1 series because the backport of the CVE-2012-5627
 # has not be done. bug #446240 comment 2
 =dev-db/mariadb-5.1.67
-
-# Tom Wijsman <TomWij@gentoo.org> (28 Aug 2013)
-# on behalf of Luca Barbato <lu_zero@gentoo.org>
-# Masked new bash-completion, because it breaks
-# starting bash for some users, has broken
-# bash completions (eg. git) and some people
-# manually need to source bash completions after
-# a lot of confusion what is really going on.
-#
-# These packages need one or more of: a news
-# article explaining what is going on and what
-# the new way of using bash completions is, bug
-# fixes such that a large share just works and
-# consider to bring back lost the lost eselect.
-#
-# References:
-#
-# - Bug #395091 Comment #17: Is there any plan?
-# - Bug #476992 Comment #5: This doesn't imply that I like ...
-# - Bug #477920: 'git-prompt' is not really a bash-completion file.
-# - Bug #477380: Tracker for changed install paths.
-# - Bug #482732: After upgrade, 'bash' hangs on startup.
-# - Bugs: https://bugs.gentoo.org/buglist.cgi?quicksearch=bash-completion
-# - Bugs: https://bugs.gentoo.org/buglist.cgi?quicksearch="bash%20completion"
-# - Forum: http://forums.gentoo.org/viewtopic-t-964768.html
-#
-# Masked for QA problems and regressions.
-=app-shells/bash-completion-2.1-r1
-=app-shells/gentoo-bashcomp-20130804
 
 # Sergey Popov <pinkbyte@gentoo.org> (27 Aug 2013)
 # Masked for testing

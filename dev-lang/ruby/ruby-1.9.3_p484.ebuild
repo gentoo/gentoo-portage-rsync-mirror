@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p484.ebuild,v 1.10 2013/12/29 14:46:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p484.ebuild,v 1.11 2014/01/22 19:34:07 graaff Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ RDEPEND="
 	gdbm? ( sys-libs/gdbm )
 	ssl? ( dev-libs/openssl )
 	socks5? ( >=net-proxy/dante-1.1.13 )
-	tk? ( dev-lang/tk[threads] )
+	tk? ( <dev-lang/tk-8.6[threads] )
 	ncurses? ( sys-libs/ncurses )
 	readline?  ( sys-libs/readline )
 	yaml? ( dev-libs/libyaml )

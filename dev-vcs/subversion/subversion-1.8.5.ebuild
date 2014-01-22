@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.4 2014/01/16 19:30:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.5 2014/01/22 19:47:03 grobian Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -128,23 +128,6 @@ src_prepare() {
 	sed -i -e '1c\#!/usr/bin/env sh' build/transform_libtool_scripts.sh || \
 		die "/bin/sh is not POSIX shell!"
 
-	if [[ ${CHOST} == *-darwin* ]] ; then
-		# replace provided script that tries too hard to do a framework
-		# build, ending up with host-provided Python
-		cat > build/get-py-info.py << EOS
-import sys
-import sysconfig
-if '--compile' in sys.argv:
-	print('${CHOST}-gcc')
-
-if '--libs' in sys.argv or '--link' in sys.argv:
-	libs = sysconfig.get_config_var('LIBS').split() + sysconfig.get_config_var('SYSLIBS').split()
-	libs.append('-lpython' + sysconfig.get_config_var('VERSION'))
-	print(' '.join(libs))
-EOS
-		fperms +x build/get-py-info.py
-	fi
-
 	eautoconf
 	elibtoolize
 
@@ -152,6 +135,13 @@ EOS
 		-i build-outputs.mk || die "sed failed"
 
 	if use python; then
+		if [[ ${CHOST} == *-darwin* ]] ; then
+			# http://mail-archives.apache.org/mod_mbox/subversion-dev/201306.mbox/%3C20130614113003.GA19257@tarsus.local2%3E
+			# in short, we don't have gnome-keyring stuff here, patch
+			# borrowed from MacPorts
+			epatch "${FILESDIR}"/${P}-swig-python-no-gnome-keyring.patch
+		fi
+
 		# XXX: make python_copy_sources accept path
 		S=${S}/subversion/bindings/swig/python python_copy_sources
 		rm -r "${S}"/subversion/bindings/swig/python || die
@@ -206,6 +196,12 @@ src_configure() {
 	# for build-time scripts
 	if use ctypes-python || use python || use test; then
 		python_export_best
+	fi
+
+	if use python && [[ ${CHOST} == *-darwin* ]] ; then
+		export ac_cv_python_link="$(tc-getCC) "'$(PYTHON_CFLAGS) -bundle -undefined dynamic_lookup $(PYTHON_LIBS)'
+		export ac_cv_python_libs='$(PYTHON_CFLAGS) -bundle -undefined dynamic_lookup $(PYTHON_LIBS)'
+		export ac_cv_python_compile="$(tc-getCC)"
 	fi
 
 	#force ruby-1.8 for bug 399105
