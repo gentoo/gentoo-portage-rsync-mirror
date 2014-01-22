@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.13.0.ebuild,v 1.1 2014/01/22 07:59:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.13.0.ebuild,v 1.2 2014/01/22 13:41:41 jlec Exp $
 
 EAPI=5
 
@@ -38,11 +38,12 @@ DEPEND="${CDEPEND}
 		dev-python/pytz[${PYTHON_USEDEP}]
 		dev-python/rpy[$(python_gen_usedep 'python2_7')]
 		sci-libs/scipy[${PYTHON_USEDEP}]
-		dev-python/sphinx[${PYTHON_USEDEP}]
+		>=dev-python/sphinx-1.2.1[${PYTHON_USEDEP}]
 		dev-python/xlrd[$(python_gen_usedep 'python2*')]
 		dev-python/xlwt[$(python_gen_usedep 'python2*')]
 		sci-libs/scikits_timeseries[$(python_gen_usedep 'python2*')]
-		x11-misc/xclip )
+		x11-misc/xclip
+		)
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 # dev-python/statsmodels invokes a circular dep
 #  hence rm from doc? ( ), again
@@ -60,8 +61,9 @@ RDEPEND="${CDEPEND}
 	)
 	html? (
 		dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
-		|| ( dev-python/lxml[${PYTHON_USEDEP}]
-			 dev-python/html5lib[${PYTHON_USEDEP}] )
+		|| (
+			dev-python/lxml[${PYTHON_USEDEP}]
+			dev-python/html5lib[${PYTHON_USEDEP}] )
 	)
 	R? ( dev-python/rpy[$(python_gen_usedep 'python2_7')] )"
 
@@ -100,8 +102,7 @@ python_test() {
 
 python_install_all() {
 	if use doc; then
-		cd  "${BUILD_DIR}"/lib || die
-		dohtml -r doc/build/html/*
+		dohtml -r "${BUILD_DIR}"/lib/doc/build/html/*
 		einfo "An initial build of docs is absent of references to statsmodels"
 		einfo "due to circular dependency. To have them included, emerge"
 		einfo "statsmodels next and re-emerge pandas with USE doc"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.21 2014/01/22 07:59:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.22 2014/01/22 13:41:41 jlec Exp $
+
+  22 Jan 2014; Justin Lecher <jlec@gentoo.org> pandas-0.13.0.ebuild:
+  Doesn't build docs correctly with <sphinx-1.2.1, #498856
 
 *pandas-0.13.0 (22 Jan 2014)
 
