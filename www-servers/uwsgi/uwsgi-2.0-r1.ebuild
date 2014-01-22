@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0.ebuild,v 1.1 2014/01/16 13:40:41 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0-r1.ebuild,v 1.1 2014/01/22 17:07:11 ultrabug Exp $
 
 EAPI="5"
 
@@ -176,8 +176,12 @@ src_configure() {
 	embedded_plugins="${embedded_plugins/sqlite/sqlite3}"
 
 	# override defaults as requested by the user
-	use xml && (use expat && xml="expat" || xml="libxml2" )
-	use json && (use yajl && xml="yajl" || xml="jansson" )
+	if use xml; then
+		use expat && xml="expat" || xml="libxml2"
+	fi
+	if use json; then
+		use yajl && json="yajl" || json="jansson"
+	fi
 	use jemalloc && malloc_impl="jemalloc"
 
 	# prepare the buildconf for gentoo
