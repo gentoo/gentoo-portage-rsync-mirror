@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.100 2014/01/22 07:20:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrkit/ChangeLog,v 1.101 2014/01/22 10:38:31 nimiux Exp $
+
+  22 Jan 2014; Chema Alonso <nimiux@gentoo.org> cdrkit-1.1.11-r2.ebuild:
+  Stable for amd64 wrt bug #498750
 
   22 Jan 2014; Jeroen Roovers <jer@gentoo.org> cdrkit-1.1.11-r2.ebuild:
   Stable for HPPA (bug #498750).
