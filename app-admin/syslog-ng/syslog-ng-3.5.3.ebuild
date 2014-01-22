@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.2.ebuild,v 1.13 2014/01/22 04:25:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.5.3.ebuild,v 1.1 2014/01/22 04:25:36 mr_bones_ Exp $
 
 EAPI=5
-inherit autotools eutils multilib systemd
+inherit eutils multilib systemd
 
 MY_PV=${PV/_/}
 DESCRIPTION="syslog replacement with advanced filtering features"
@@ -12,8 +12,8 @@ SRC_URI="http://www.balabit.com/downloads/files/syslog-ng/sources/${MY_PV}/sourc
 
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 ~sh sparc x86 ~x86-fbsd"
-IUSE="caps dbi geoip ipv6 json mongodb +pcre smtp spoof-source ssl tcpd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="caps dbi geoip ipv6 json mongodb +pcre smtp spoof-source ssl systemd tcpd"
 RESTRICT="test"
 
 RDEPEND="
@@ -27,7 +27,8 @@ RDEPEND="
 	json? ( >=dev-libs/json-c-0.9 )
 	caps? ( sys-libs/libcap )
 	geoip? ( >=dev-libs/geoip-1.5.0 )
-	dbi? ( >=dev-db/libdbi-0.8.3 )"
+	dbi? ( >=dev-db/libdbi-0.8.3 )
+	systemd? ( sys-apps/systemd )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/flex"
@@ -35,11 +36,20 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${PV%.*}/${P}-compile.patch \
-		"${FILESDIR}"/${PV%.*}/${P}-autotools.patch
-	mv configure.in configure.ac || die
-	eautoreconf
+	cp "${FILESDIR}"/*logrotate*.in "${TMPDIR}" || die
+	cd "${TMPDIR}" || die
+
+	for f in *logrotate*.in ; do
+		if use systemd ; then
+			sed \
+				's/@GENTOO_RESTART@/systemctl kill -s HUP syslog-ng/' \
+				$f > ${f/.in/} || die
+		else
+			sed \
+				's:@GENTOO_RESTART@:/etc/init.d/syslog-ng reload:' \
+				$f > ${f/.in/} || die
+		fi
+	done
 }
 
 src_configure() {
@@ -52,6 +62,7 @@ src_configure() {
 		--with-pidfile-dir=/var/run \
 		--with-module-dir=/usr/$(get_libdir)/syslog-ng \
 		$(systemd_with_unitdir) \
+		$(use_enable systemd) \
 		$(use_enable caps linux-caps) \
 		$(use_enable geoip) \
 		$(use_enable ipv6) \
@@ -66,11 +77,12 @@ src_configure() {
 }
 
 src_install() {
+	# -j1 for bug #484470
 	emake -j1 DESTDIR="${D}" install
 
-	dodoc AUTHORS ChangeLog NEWS contrib/syslog-ng.conf* contrib/syslog2ng \
+	dodoc AUTHORS NEWS contrib/syslog-ng.conf* contrib/syslog2ng \
 		"${FILESDIR}/${PV%.*}/syslog-ng.conf.gentoo.hardened" \
-		"${FILESDIR}/syslog-ng.logrotate.hardened" \
+		"${TMPDIR}/syslog-ng.logrotate.hardened" \
 		"${FILESDIR}/README.hardened"
 
 	# Install default configuration
@@ -82,7 +94,7 @@ src_install() {
 	fi
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/syslog-ng.logrotate" syslog-ng
+	newins "${TMPDIR}/syslog-ng.logrotate" syslog-ng
 
 	newinitd "${FILESDIR}/${PV%.*}/syslog-ng.rc6" syslog-ng
 	newconfd "${FILESDIR}/${PV%.*}/syslog-ng.confd" syslog-ng
@@ -92,7 +104,7 @@ src_install() {
 
 pkg_postinst() {
 	elog "For detailed documentation please see the upstream website:"
-	elog "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.4-guides/en/syslog-ng-ose-v3.4-guide-admin/html/index.html"
+	elog "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.5-guides/en/syslog-ng-ose-v3.5-guide-admin/html/index.html"
 
 	# bug #355257
 	if ! has_version app-admin/logrotate ; then

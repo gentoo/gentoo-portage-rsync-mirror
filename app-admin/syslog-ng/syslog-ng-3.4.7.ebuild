@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.7.ebuild,v 1.1 2013/12/31 08:24:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.4.7.ebuild,v 1.2 2014/01/22 04:25:36 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils multilib systemd
@@ -35,8 +35,26 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
+src_prepare() {
+	cp "${FILESDIR}"/*logrotate*.in "${TMPDIR}" || die
+	cd "${TMPDIR}" || die
+
+	for f in *logrotate*.in ; do
+		if use systemd ; then
+			sed \
+				's/@GENTOO_RESTART@/systemctl kill -s HUP syslog-ng/' \
+				$f > ${f/.in/} || die
+		else
+			sed \
+				's:@GENTOO_RESTART@:/etc/init.d/syslog-ng reload:' \
+				$f > ${f/.in/} || die
+		fi
+	done
+}
+
 src_configure() {
 	econf \
+		--disable-docs \
 		--with-ivykis=internal \
 		--with-libmongo-client=internal \
 		--sysconfdir=/etc/syslog-ng \
@@ -64,7 +82,7 @@ src_install() {
 
 	dodoc AUTHORS NEWS contrib/syslog-ng.conf* contrib/syslog2ng \
 		"${FILESDIR}/${PV%.*}/syslog-ng.conf.gentoo.hardened" \
-		"${FILESDIR}/syslog-ng.logrotate.hardened" \
+		"${TMPDIR}/syslog-ng.logrotate.hardened" \
 		"${FILESDIR}/README.hardened"
 
 	# Install default configuration
@@ -76,7 +94,7 @@ src_install() {
 	fi
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/syslog-ng.logrotate" syslog-ng
+	newins "${TMPDIR}/syslog-ng.logrotate" syslog-ng
 
 	newinitd "${FILESDIR}/${PV%.*}/syslog-ng.rc6" syslog-ng
 	newconfd "${FILESDIR}/${PV%.*}/syslog-ng.confd" syslog-ng
