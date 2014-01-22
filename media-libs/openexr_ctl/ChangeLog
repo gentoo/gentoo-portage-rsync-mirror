@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/openexr_ctl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.26 2013/07/23 09:42:23 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.27 2014/01/22 18:54:22 ssuominen Exp $
+
+  22 Jan 2014; Samuli Suominen <ssuominen@gentoo.org>
+  openexr_ctl-1.0.1-r1.ebuild:
+  Force old version of OpenEXR for openexr_ctl without the -namespace.patch wrt
+  #477898
 
 *openexr_ctl-1.0.1-r2 (23 Jul 2013)
 
@@ -105,4 +110,3 @@
   +openexr_ctl-1.0.0.ebuild:
   Initial import, split of media-libs/openexr, thanks to : Arfrever Frehtes
   Taifersar Arahesis <Arfrever.FTA@GMail.Com> for the ebuilds, bug #189798
-

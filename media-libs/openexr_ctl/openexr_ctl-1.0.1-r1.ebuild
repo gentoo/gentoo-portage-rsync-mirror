@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/openexr_ctl-1.0.1-r1.ebuild,v 1.11 2013/03/21 04:01:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/openexr_ctl-1.0.1-r1.ebuild,v 1.12 2014/01/22 18:54:21 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="static-libs"
 
-RDEPEND="media-libs/ilmbase:=
-	media-libs/openexr:=
+RDEPEND="<media-libs/ilmbase-2.0.0:=
+	<media-libs/openexr-2.0.0:=
 	media-libs/ctl:="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
