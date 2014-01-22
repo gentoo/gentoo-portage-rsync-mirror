@@ -1,6 +1,9 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.57 2014/01/06 14:44:42 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.58 2014/01/22 16:29:55 hasufell Exp $
+
+  22 Jan 2014; Julian Ospald <hasufell@gentoo.org> jabberd2-2.3.1-r1.ebuild:
+  remove useless upstart files wrt #498900
 
   06 Jan 2014; Julian Ospald <hasufell@gentoo.org> -files/jabberd2-2.2.8.init,
   -files/jabberd2-2.2.8.pamd, -jabberd2-2.2.14-r1.ebuild:
