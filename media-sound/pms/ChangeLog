@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pms
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/ChangeLog,v 1.8 2012/11/20 19:17:12 wired Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/ChangeLog,v 1.9 2014/01/23 11:46:20 pinkbyte Exp $
+
+*pms-0.42-r1 (23 Jan 2014)
+
+  23 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> +pms-0.42-r1.ebuild:
+  Revision bump: EAPI 5, compatibility with automake 1.14, add subslot operator
+  to boost dependency, add epatch_user
 
   20 Nov 2012; Alex Alexander <wired@gentoo.org> pms-0.42.ebuild,
   pms-9999.ebuild:
