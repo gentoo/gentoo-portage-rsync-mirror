@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/requests
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.51 2013/12/10 03:38:01 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.52 2014/01/23 02:27:23 radhermit Exp $
+
+*requests-2.2.0 (23 Jan 2014)
+
+  23 Jan 2014; Tim Harder <radhermit@gentoo.org> +requests-2.2.0.ebuild,
+  +files/requests-2.2.0-system-chardet.patch:
+  Version bump. Drop python3.2 support since it was dropped upstream and tests
+  fail.
 
 *requests-2.1.0 (10 Dec 2013)
 
