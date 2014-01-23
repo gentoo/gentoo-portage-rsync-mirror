@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.172 2014/01/15 18:08:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.173 2014/01/23 13:05:27 voyageur Exp $
+
+  23 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.3-r1.ebuild,
+  llvm-3.3-r3.ebuild, llvm-3.4.ebuild:
+  Keep arm_neon.h header, thanks Yuta SATOH <nigoro.gentoo@0x100.com> in bug
+  #498908
 
   15 Jan 2014; Michał Górny <mgorny@gentoo.org> llvm-3.4.ebuild,
   llvm-9999.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.514 2014/01/17 16:14:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.515 2014/01/23 13:14:35 jer Exp $
+
+  23 Jan 2014; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-319.76.ebuild,
+  -nvidia-drivers-331.20.ebuild, nvidia-drivers-331.38.ebuild:
+  Stable for AMD64 x86 too.
 
   17 Jan 2014; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-319.82.ebuild:
   Superseded by 331.38 for GeForce 820M support.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.ebuild,v 1.6 2014/01/15 18:08:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.4.ebuild,v 1.7 2014/01/23 13:05:27 voyageur Exp $
 
 EAPI=5
 
@@ -380,7 +380,7 @@ src_install() {
 	multilib-minimal_src_install
 
 	# Remove unnecessary headers on FreeBSD, bug #417171
-	use kernel_FreeBSD && use clang && rm "${ED}"usr/lib/clang/${PV}/include/{arm_neon,std,float,iso,limits,tgmath,varargs}*.h
+	use kernel_FreeBSD && use clang && rm "${ED}"usr/lib/clang/${PV}/include/{std,float,iso,limits,tgmath,varargs}*.h
 }
 
 multilib_src_install() {
