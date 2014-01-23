@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.10-r1.ebuild,v 1.1 2013/12/10 09:12:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.10-r1.ebuild,v 1.2 2014/01/23 21:22:38 grobian Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -39,6 +39,7 @@ RDEPEND=">=dev-libs/glib-2.30.2:2
 	>=media-libs/gegl-0.2.0
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
+	aqua? ( x11-libs/gtk-mac-integration )
 	curl? ( net-misc/curl )
 	dbus? ( dev-libs/dbus-glib )
 	gnome? ( gnome-base/gvfs )

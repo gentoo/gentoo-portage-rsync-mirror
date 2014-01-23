@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/tntnet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.22 2013/06/28 19:42:16 zzam Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.23 2014/01/23 21:05:00 hd_brummy Exp $
+
+*tntnet-2.2.1 (23 Jan 2014)
+
+  23 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> +tntnet-2.2.1.ebuild:
+  bump; use-flag cgi removed, support removed in source; useflag sdk removed,
+  --with-skd enabled by default, will not compile without sdk support
 
 *tntnet-2.2 (28 Jun 2013)
 
