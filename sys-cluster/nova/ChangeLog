@@ -1,6 +1,15 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.47 2014/01/08 06:00:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.48 2014/01/23 16:31:28 prometheanfire Exp $
+
+*nova-2013.2.1-r2 (23 Jan 2014)
+*nova-2013.1.4-r4 (23 Jan 2014)
+
+  23 Jan 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/CVE-2013-7130-stable-grizzly.patch,
+  +files/CVE-2013-7130-stable-havana.patch, +nova-2013.1.4-r4.ebuild,
+  +nova-2013.2.1-r2.ebuild, -nova-2013.1.4-r3.ebuild, -nova-2013.2.1-r1.ebuild:
+  fixes for CVE-2013-7130, old badness removed
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> nova-2013.1.4-r3.ebuild,
   nova-2013.1.9999.ebuild, nova-2013.2.1-r1.ebuild, nova-2013.2.9999.ebuild,

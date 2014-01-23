@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.1.4-r3.ebuild,v 1.2 2014/01/08 06:00:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.1-r2.ebuild,v 1.1 2014/01/23 16:31:28 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -9,57 +9,58 @@ inherit distutils-r1 eutils multilib user
 
 DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python."
 HOMEPAGE="https://launchpad.net/nova"
-SRC_URI="http://launchpad.net/${PN}/grizzly/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/${PN}/havana/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy xen sqlite mysql postgres"
+IUSE="+api +cert +compute +conductor +consoleauth +kvm +network +novncproxy +scheduler +spicehtml5proxy +xvpvncproxy sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
 			  || ( kvm xen )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
+		>=dev-python/pbr-0.5.21[${PYTHON_USEDEP}]
+		<dev-python/pbr-1.0[${PYTHON_USEDEP}]
 		app-admin/sudo"
 
-RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
-		>=dev-python/anyjson-0.2.4[${PYTHON_USEDEP}]
-		>=dev-python/cheetah-2.4.4[${PYTHON_USEDEP}]
-		sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
-	          <dev-python/sqlalchemy-0.7.10[sqlite,${PYTHON_USEDEP}] )
+RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
+	          <dev-python/sqlalchemy-0.7.99[sqlite,${PYTHON_USEDEP}] )
 		mysql? ( >=dev-python/sqlalchemy-0.7.8[mysql,${PYTHON_USEDEP}]
-	         <dev-python/sqlalchemy-0.7.10[mysql,${PYTHON_USEDEP}] )
+	         <dev-python/sqlalchemy-0.7.99[mysql,${PYTHON_USEDEP}] )
 		postgres? ( >=dev-python/sqlalchemy-0.7.8[postgres,${PYTHON_USEDEP}]
-	            <dev-python/sqlalchemy-0.7.10[postgres,${PYTHON_USEDEP}] )
-		dev-python/boto[${PYTHON_USEDEP}]
+	            <dev-python/sqlalchemy-0.7.99[postgres,${PYTHON_USEDEP}] )
+		>=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
+		>=dev-python/anyjson-0.3.3[${PYTHON_USEDEP}]
+		virtual/python-argparse[${PYTHON_USEDEP}]
+		>=dev-python/boto-2.4.0[${PYTHON_USEDEP}]
+		!~dev-python/boto-2.13.0[${PYTHON_USEDEP}]
+		>=dev-python/eventlet-0.13.0[${PYTHON_USEDEP}]
+		dev-python/jinja[${PYTHON_USEDEP}]
+		>=dev-python/kombu-2.4.8[${PYTHON_USEDEP}]
 		>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
-		>=dev-python/eventlet-0.9.17[${PYTHON_USEDEP}]
-		>=dev-python/kombu-1.0.4-r1[${PYTHON_USEDEP}]
 		>=dev-python/routes-1.12.3-r1[${PYTHON_USEDEP}]
-		~dev-python/webob-1.2.3[${PYTHON_USEDEP}]
-		>=dev-python/greenlet-0.3.1[${PYTHON_USEDEP}]
+		>=dev-python/webob-1.2.3[${PYTHON_USEDEP}]
+		<dev-python/webob-1.3[${PYTHON_USEDEP}]
+		>=dev-python/greenlet-0.3.2[${PYTHON_USEDEP}]
 		>=dev-python/pastedeploy-1.5.0-r1[${PYTHON_USEDEP}]
 		dev-python/paste[${PYTHON_USEDEP}]
 		>=dev-python/sqlalchemy-migrate-0.7.2[${PYTHON_USEDEP}]
 		dev-python/netaddr[${PYTHON_USEDEP}]
 		>=dev-python/suds-0.4[${PYTHON_USEDEP}]
-		dev-python/paramiko[${PYTHON_USEDEP}]
+		>=dev-python/paramiko-1.8.0[${PYTHON_USEDEP}]
 		dev-python/pyasn1[${PYTHON_USEDEP}]
-		>=dev-python/Babel-0.9.6[${PYTHON_USEDEP}]
-		>=dev-python/iso8601-0.1.4[${PYTHON_USEDEP}]
-		dev-python/httplib2[${PYTHON_USEDEP}]
-		>=dev-python/setuptools-git-0.4[${PYTHON_USEDEP}]
-		>=dev-python/python-cinderclient-1.0.1[${PYTHON_USEDEP}]
-		>=dev-python/python-glanceclient-0.5.0[${PYTHON_USEDEP}]
-		<dev-python/python-glanceclient-2[${PYTHON_USEDEP}]
-		>=dev-python/python-neutronclient-2.2.0[${PYTHON_USEDEP}]
+		>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
+		>=dev-python/iso8601-0.1.8[${PYTHON_USEDEP}]
+		>=dev-python/python-cinderclient-1.0.5[${PYTHON_USEDEP}]
+		>=dev-python/python-neutronclient-2.3.0[${PYTHON_USEDEP}]
 		<=dev-python/python-neutronclient-3.0.0[${PYTHON_USEDEP}]
-		>=dev-python/python-keystoneclient-0.2.0[${PYTHON_USEDEP}]
-		>=dev-python/stevedore-0.7[${PYTHON_USEDEP}]
-		<dev-python/websockify-0.4[${PYTHON_USEDEP}]
-		>=dev-python/oslo-config-1.1.0[${PYTHON_USEDEP}]
-		<dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
-		virtual/python-argparse[${PYTHON_USEDEP}]
-		app-emulation/libvirt[${PYTHON_USEDEP}]
+		>=dev-python/python-glanceclient-0.9.0[${PYTHON_USEDEP}]
+		>=dev-python/python-keystoneclient-0.3.2[${PYTHON_USEDEP}]
+		>=dev-python/stevedore-0.10[${PYTHON_USEDEP}]
+		>=dev-python/websockify-0.5.1[${PYTHON_USEDEP}]
+		<dev-python/websockify-0.6[${PYTHON_USEDEP}]
+		>=dev-python/oslo-config-1.2.0[${PYTHON_USEDEP}]
+		dev-python/libvirt-python[${PYTHON_USEDEP}]
 		novncproxy? ( www-apps/novnc )
 		sys-apps/iproute2
 		net-misc/openvswitch
@@ -70,26 +71,14 @@ RDEPEND=">=dev-python/amqplib-0.6.1[${PYTHON_USEDEP}]
 			   app-emulation/xen-tools )"
 
 PATCHES=(
-	"${FILESDIR}/CVE-2013-4463_4469-grizzly.patch"
-	"${FILESDIR}/CVE-2013-4497-grizzly-1.patch"
-	"${FILESDIR}/CVE-2013-4497-grizzly-2.patch"
-	"${FILESDIR}/CVE-2013-6419_2013.1.4.patch"
-	"${FILESDIR}/CVE-2013-6437-2012.1.4.patch"
+	"${FILESDIR}/CVE-2013-6437-2012.2.1.patch"
+	"${FILESDIR}/CVE-2013-7130-stable-havana.patch"
 )
 
 pkg_setup() {
 	enewgroup nova
 	enewuser nova -1 -1 /var/lib/nova nova
 }
-
-src_prepare() {
-	sed -i 's/setuptools_git>=0.4//g' "${S}/setup.py"
-	distutils-r1_src_prepare
-}
-
-#python_test() {
-#	nosetests || die
-#}
 
 python_install() {
 	distutils-r1_python_install

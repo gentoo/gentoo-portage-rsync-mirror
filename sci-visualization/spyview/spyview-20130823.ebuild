@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20130823.ebuild,v 1.4 2014/01/06 13:35:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/spyview/spyview-20130823.ebuild,v 1.5 2014/01/23 16:12:13 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 COMMON_DEPEND="
 	dev-libs/boost:=
 	media-libs/netpbm
-	x11-libs/fltk:1
+	x11-libs/fltk:1[opengl]
 	app-text/ghostscript-gpl
 	virtual/glu
 "

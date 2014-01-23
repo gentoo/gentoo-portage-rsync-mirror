@@ -1,6 +1,20 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.43 2014/01/15 13:45:32 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.45 2014/01/23 16:20:12 dlan Exp $
+
+  23 Jan 2014; Yixun Lan <dlan@gentoo.org> -ceph-0.56.4.ebuild,
+  -ceph-0.56.5.ebuild, -ceph-0.61.1.ebuild, -ceph-0.61.7-r1.ebuild,
+  -ceph-0.67.ebuild, -ceph-0.67.5-r1.ebuild, -ceph-0.72.2-r1.ebuild,
+  -files/ceph-0.61.7-install.patch:
+  prune old ebuilds
+
+*ceph-0.75 (23 Jan 2014)
+*ceph-0.72.2-r2 (23 Jan 2014)
+*ceph-0.67.5-r2 (23 Jan 2014)
+
+  23 Jan 2014; Yixun Lan <dlan@gentoo.org> +ceph-0.67.5-r2.ebuild,
+  +ceph-0.72.2-r2.ebuild, +ceph-0.75.ebuild, ceph-9999.ebuild, metadata.xml:
+  use subslot, adjust deps, update to python-any-r1
 
 *ceph-0.67.5-r1 (15 Jan 2014)
 *ceph-0.72.2-r1 (15 Jan 2014)
