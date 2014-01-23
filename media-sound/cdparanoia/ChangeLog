@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.118 2014/01/19 17:19:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.119 2014/01/23 16:43:11 ssuominen Exp $
+
+  23 Jan 2014; Samuli Suominen <ssuominen@gentoo.org>
+  cdparanoia-3.10.2-r6.ebuild:
+  Avoid the use of append-flags for passing -I wrt #498614 by Paweł Hajdan, Jr.
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> cdparanoia-3.10.2-r6.ebuild:
   amd64 stable, bug 497246
