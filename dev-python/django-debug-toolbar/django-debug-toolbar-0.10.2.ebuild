@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/django-debug-toolbar-0.10.0.ebuild,v 1.2 2014/01/23 09:55:52 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-debug-toolbar/django-debug-toolbar-0.10.2.ebuild,v 1.1 2014/01/23 09:55:52 idella4 Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://pypi.python.org/pypi/django-debug-toolbar/
 	https://github.com/django-debug-toolbar/django-debug-toolbar/"
 SRC_URI="https://github.com/django-debug-toolbar/django-debug-toolbar/archive/${PV}.tar.gz -> ${P}.tar.gz"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc test"
+IUSE="doc examples test"
 
 LICENSE="MIT"
 SLOT="0"
@@ -52,5 +52,6 @@ python_install() {
 
 python_install_all() {
 	use doc && local HTML_DOCS=( docs/_build/html/. )
+	use example && local EXAMPLES=( example/. )
 	distutils-r1_python_install_all
 }

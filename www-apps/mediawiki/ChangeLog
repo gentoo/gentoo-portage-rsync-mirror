@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.256 2014/01/23 09:04:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.257 2014/01/23 09:46:58 zlogene Exp $
+
+  23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> mediawiki-1.19.10.ebuild,
+  mediawiki-1.21.4.ebuild:
+  ppc stable wrt bug #498064
 
   23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> mediawiki-1.19.10.ebuild,
   mediawiki-1.21.4.ebuild:
