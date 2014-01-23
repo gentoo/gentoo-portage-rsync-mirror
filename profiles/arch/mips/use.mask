@@ -1,9 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.72 2014/01/14 20:46:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.73 2014/01/23 18:10:56 hwoarang Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
+
+# Markos Chandras <hwoarang@gentoo.org>
+# Profiles are ISA agnostic so these
+# should be masked on per user basis
+# See #498082
+-mips32r2
+-mipsdspr1
+-mipsdspr2
+-mipsfpu
 
 # Markos Chandras <hwoarang@gentoo.org>
 # Needs packages that lack ~mips keywords
