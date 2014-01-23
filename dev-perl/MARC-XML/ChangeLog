@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/MARC-XML
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-XML/ChangeLog,v 1.10 2013/08/25 10:20:03 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-XML/ChangeLog,v 1.11 2014/01/23 17:15:46 zlogene Exp $
+
+*MARC-XML-1.000.300 (23 Jan 2014)
+
+  23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> +MARC-XML-1.000.300.ebuild,
+  -MARC-XML-0.930.0.ebuild, -MARC-XML-1.000.100.ebuild:
+  Security bump wrt bug #498866; Drop old.
 
 *MARC-XML-1.000.100 (25 Aug 2013)
 

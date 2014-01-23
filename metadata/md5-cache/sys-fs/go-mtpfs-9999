@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/hanwen/go-mtpfs
 LICENSE=BSD
 RDEPEND=virtual/libusb media-libs/libmtp
 SLOT=0
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=58708131d714b9f13e17bd23bf13fcfa
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	git-r3	f089608c770d9ad72a2c92b547d2b20d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=aa2bb751510b83d186747cbc51ac27e5
