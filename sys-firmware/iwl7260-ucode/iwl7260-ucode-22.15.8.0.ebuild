@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7260-ucode/iwl7260-ucode-22.15.8.0.ebuild,v 1.2 2014/01/23 08:19:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7260-ucode/iwl7260-ucode-22.15.8.0.ebuild,v 1.3 2014/01/23 22:43:40 gienah Exp $
 
 EAPI=5
 inherit linux-info
@@ -34,6 +34,6 @@ pkg_pretend() {
 
 src_install() {
 	insinto /lib/firmware
-	doins "${S}/iwlwifi-7260-7.ucode"
+	doins "${S}/iwlwifi-7260-8.ucode"
 	dodoc README*
 }
