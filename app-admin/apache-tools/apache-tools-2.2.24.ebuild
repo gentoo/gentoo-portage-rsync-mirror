@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.24.ebuild,v 1.12 2013/03/05 09:19:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.24.ebuild,v 1.13 2014/01/23 05:08:22 vapier Exp $
 
 EAPI="4"
 inherit flag-o-matic eutils
@@ -36,6 +36,9 @@ src_prepare() {
 
 src_configure() {
 	local myconf=""
+
+	# Brain dead check.
+	tc-is-cross-compiler && export ap_cv_void_ptr_lt_long="no"
 
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	append-ldflags $(no-as-needed)
