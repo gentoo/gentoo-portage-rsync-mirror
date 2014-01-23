@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.15.4.ebuild,v 1.9 2014/01/22 23:09:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.15.4.ebuild,v 1.10 2014/01/23 01:02:11 vapier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -82,6 +82,7 @@ nssarch() {
 	# Most of the arches are the same as $ARCH
 	local t=${1:-${CHOST}}
 	case ${t} in
+	aarch64*)echo "aarch64";;
 	hppa*)   echo "parisc";;
 	i?86*)   echo "i686";;
 	x86_64*) echo "x86_64";;

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.343 2014/01/22 23:09:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.344 2014/01/23 01:02:11 vapier Exp $
+
+  23 Jan 2014; Mike Frysinger <vapier@gentoo.org> nss-3.15.4.ebuild:
+  Add aarch64 arch to avoid clashing with arm* in build system.
 
   22 Jan 2014; Mike Frysinger <vapier@gentoo.org> nss-3.15.4.ebuild:
   Add arm64 love.
