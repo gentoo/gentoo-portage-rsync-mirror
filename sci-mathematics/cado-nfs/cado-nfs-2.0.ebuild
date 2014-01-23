@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cado-nfs/cado-nfs-2.0.ebuild,v 1.1 2014/01/14 03:19:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cado-nfs/cado-nfs-2.0.ebuild,v 1.2 2014/01/23 02:45:28 patrick Exp $
 
 EAPI=4
 DESCRIPTION="Number Field Sieve (NFS) implementation for factoring integers"
@@ -11,8 +11,7 @@ inherit eutils cmake-utils
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-#KEYWORDS="~amd64 ~x86"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/gmp
@@ -22,9 +21,6 @@ RDEPEND="dev-libs/gmp
 	"
 DEPEND="${RDEPEND}
 	"
-
-# sigh :(
-S="${WORKDIR}/cado-nfs-2.0alpha_55e97b6a"
 
 src_prepare() {
 	# looks like packaging mistake

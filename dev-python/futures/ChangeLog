@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/futures
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/ChangeLog,v 1.8 2013/12/05 07:10:08 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/ChangeLog,v 1.9 2014/01/23 02:32:24 radhermit Exp $
+
+*futures-2.1.6 (23 Jan 2014)
+
+  23 Jan 2014; Tim Harder <radhermit@gentoo.org> +futures-2.1.6.ebuild:
+  Version bump.
 
 *futures-2.1.5 (05 Dec 2013)
 

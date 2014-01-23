@@ -8,5 +8,5 @@ LICENSE=WTFPL-2
 RDEPEND=dev-lang/perl dev-perl/Digest-HMAC dev-perl/IO-Socket-SSL dev-perl/Mail-IMAPClient dev-perl/TermReadKey virtual/perl-Digest-MD5 virtual/perl-MIME-Base64
 RESTRICT=test
 SLOT=0
-SRC_URI=https://fedorahosted.org/released/imapsync/imapsync-1.547.tgz
-_md5_=7eeed28c14911050cc02cba756c19cba
+SRC_URI=https://fedorahosted.org/released/imapsync/imapsync-1.580.tgz
+_md5_=86ba77661c6b3aade3c77f19bb751e0d
