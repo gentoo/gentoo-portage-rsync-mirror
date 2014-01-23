@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.36 2014/01/18 01:43:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.37 2014/01/23 00:16:23 radhermit Exp $
+
+*pigz-2.3.1-r1 (23 Jan 2014)
+
+  23 Jan 2014; Tim Harder <radhermit@gentoo.org> +pigz-2.3.1-r1.ebuild,
+  +files/0001-Do-not-return-non-zero-exit-code-when-warnings-issue.patch:
+  Don't return an error exit status when decompressing zero-padded files (bug
+  #417657).
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pigz-2.3.1.ebuild:
   Add arm64 love.
