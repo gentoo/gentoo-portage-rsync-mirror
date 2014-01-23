@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/files/lircd-0.8.6-r2,v 1.1 2012/07/19 19:52:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/files/lircd-0.8.6-r2,v 1.2 2014/01/23 21:37:11 vapier Exp $
 
 PIDFILE=/var/run/lirc/${SVCNAME}.pid
 : ${LIRCD_SYMLINKFILE:=/dev/lircd}
@@ -20,7 +20,7 @@ start() {
 
 	for retval in ${LIRCD_SET_SYSCLASSRCS} ; do
 		if [ -e /sys/class/rc/${retval}/protocols ] && \
-		grep 'lirc' /sys/class/rc/${retval}/protocols &>/dev/null ; then
+		grep -qs 'lirc' /sys/class/rc/${retval}/protocols ; then
 			einfo "Setting lirc protocol active for ${retval}"
 			echo lirc >/sys/class/rc/${retval}/protocols
 		fi
