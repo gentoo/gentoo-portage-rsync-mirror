@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.10.4.ebuild,v 1.1 2013/09/24 23:55:48 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.11.0.ebuild,v 1.1 2014/01/23 00:49:06 xmw Exp $
 
 EAPI=5
 
@@ -9,12 +9,12 @@ inherit distutils-r1 eutils
 
 DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy"
 HOMEPAGE="http://xpra.org/ http://xpra.org/src/"
-SRC_URI="http://xpra.org/src/${P}.tar.bz2"
+SRC_URI="http://xpra.org/src/${P}.tar.xz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+client +clipboard csc dec_av opengl pulseaudio +rencode server sound vpx webp x264"
+IUSE="+client +clipboard csc dec_av dec_av2 opengl pulseaudio +rencode server sound vpx webp x264"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	clipboard? ( || ( server client ) )
@@ -71,6 +71,8 @@ python_prepare_all() {
 			epatch patches/old-libav.patch
 		fi
 	fi
+
+	distutils-r1_python_prepare_all
 }
 
 python_configure_all() {
@@ -79,6 +81,7 @@ python_configure_all() {
 		$(use_with clipboard)
 		$(use_with csc csc_swscale)
 		$(use_with dec_av dec_avcodec)
+		$(use_with dec_av2 dec_avcodec2)
 		$(use_with opengl)
 		$(use_with rencode)
 		$(use_with server cymaths)
@@ -90,12 +93,10 @@ python_configure_all() {
 		$(use_with x264 enc_x264)
 		--with-Xdummy
 		--with-argb
-		--without-csc_nvcuda
 		--with-cyxor
 		--with-gtk2
 		--without-gtk3
 		--without-qt4
-		--with-nvenc
 		--with-strict
 		--with-warn
 		--with-x11

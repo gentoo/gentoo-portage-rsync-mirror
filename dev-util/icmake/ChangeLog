@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/icmake
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/icmake/ChangeLog,v 1.2 2013/09/07 20:36:51 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/icmake/ChangeLog,v 1.3 2014/01/23 00:49:27 radhermit Exp $
+
+*icmake-7.21.01 (23 Jan 2014)
+
+  23 Jan 2014; Tim Harder <radhermit@gentoo.org> +icmake-7.21.01.ebuild:
+  Version bump.
 
 *icmake-7.21.00 (07 Sep 2013)
 
