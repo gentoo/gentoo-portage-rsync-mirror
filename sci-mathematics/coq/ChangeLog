@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/coq
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.81 2013/08/19 15:06:15 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.82 2014/01/23 08:17:49 jlec Exp $
+
+*coq-8.4_p3 (23 Jan 2014)
+
+  23 Jan 2014; Justin Lecher <jlec@gentoo.org> coq-8.3_p1.ebuild,
+  coq-8.4_p1.ebuild, coq-8.4_p2.ebuild, +coq-8.4_p3.ebuild, metadata.xml:
+  Version Bump, fixes problems with make-4, #493144
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> coq-8.4_p1.ebuild,
   coq-8.4_p2.ebuild:

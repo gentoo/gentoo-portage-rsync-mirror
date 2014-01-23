@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p2.ebuild,v 1.3 2014/01/23 08:17:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p3.ebuild,v 1.1 2014/01/23 08:17:49 jlec Exp $
 
 EAPI="5"
 
@@ -36,8 +36,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_configure() {
-	ocaml_lib=`ocamlc -where`
-	local myconf="--prefix /usr
+	ocaml_lib=$(ocamlc -where)
+	local myconf=(
+		--prefix /usr
 		--bindir /usr/bin
 		--libdir /usr/$(get_libdir)/coq
 		--mandir /usr/share/man
@@ -45,25 +46,36 @@ src_configure() {
 		--coqdocdir /usr/$(get_libdir)/coq/coqdoc
 		--docdir /usr/share/doc/${PF}
 		--configdir /etc/xdg/${PN}
-		--lablgtkdir ${ocaml_lib}/lablgtk2"
+		--lablgtkdir ${ocaml_lib}/lablgtk2
+		)
 
-	use debug && myconf="--debug $myconf"
-	use doc || myconf="$myconf --with-doc no"
+	use debug && myconf+=( --debug )
+	use doc || myconf+=( --with-doc no )
 
 	if use gtk; then
-		use ocamlopt && myconf="$myconf --coqide opt"
-		use ocamlopt || myconf="$myconf --coqide byte"
+		if use ocamlopt; then
+			myconf+=( --coqide opt )
+		else
+			myconf+=( --coqide byte )
+		fi
 	else
-		myconf="$myconf --coqide no"
+		myconf+=( --coqide no )
 	fi
-	use ocamlopt || myconf="$myconf -byte-only"
-	use ocamlopt && myconf="$myconf --opt"
 
-	use camlp5 || myconf="$myconf --usecamlp4"
-	use camlp5 && myconf="$myconf --camlp5dir ${ocaml_lib}/camlp5"
+	if use ocamlopt; then
+		myconf+=( --opt )
+	else
+		myconf+=( -byte-only )
+	fi
+
+	if use camlp5; then
+		myconf+=( --camlp5dir ${ocaml_lib}/camlp5 )
+	else
+		myconf+=( --usecamlp4 )
+	fi
 
 	export CAML_LD_LIBRARY_PATH="${S}/kernel/byterun/"
-	./configure $myconf || die "configure failed"
+	./configure ${myconf[@]} || die "configure failed"
 }
 
 src_compile() {
@@ -74,5 +86,5 @@ src_install() {
 	emake STRIP="true" COQINSTALLPREFIX="${D}" install
 	dodoc README CREDITS CHANGES
 
-	use gtk && make_desktop_entry "/usr/bin/coqide" "Coq IDE" "/usr/share/coq/coq.png"
+	use gtk && make_desktop_entry "coqide" "Coq IDE" "${EPREFIX}/usr/share/coq/coq.png"
 }

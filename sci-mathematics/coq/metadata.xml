@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>ml</herd>
-<herd>sci-mathematics</herd>
-<longdescription lang='en'>
+  <herd>ml</herd>
+  <herd>sci-mathematics</herd>
+  <longdescription lang="en">
   Developed in the LogiCal project, the Coq tool is a formal proof
   management system: a proof done with Coq is mechanically checked
   by the machine.
@@ -16,7 +16,7 @@
   Constructions" extended by a modular development system for
   theories.
 </longdescription>
-<use>
-	<flag name='camlp5'>Build using camlp5. This is required for some plugins like Ssreflect.</flag>
-</use>
+  <use>
+    <flag name="camlp5">Build using camlp5. This is required for some plugins like Ssreflect.</flag>
+  </use>
 </pkgmetadata>

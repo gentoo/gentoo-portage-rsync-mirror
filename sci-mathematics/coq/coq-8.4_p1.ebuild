@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p1.ebuild,v 1.5 2013/08/19 15:06:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.4_p1.ebuild,v 1.6 2014/01/23 08:17:49 jlec Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ inherit eutils multilib
 MY_PV=${PV/_p/pl}
 MY_P=${PN}-${MY_PV}
 
-DESCRIPTION="Coq is a proof assistant written in O'Caml"
+DESCRIPTION="Proof assistant written in O'Caml"
 HOMEPAGE="http://coq.inria.fr/"
 SRC_URI="http://${PN}.inria.fr/V${MY_PV}/files/${MY_P}.tar.gz"
 
