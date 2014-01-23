@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.92.ebuild,v 1.5 2014/01/23 14:20:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-1.92.ebuild,v 1.6 2014/01/23 14:43:42 jer Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ src_prepare() {
 
 src_compile() {
 	local target
-	for target in '-C palo' '-C ipl' 'MACHINE=parisc iplboot'; do
+	for target in '-C palo' '-C ipl' 'iplboot'; do
 		emake AR=$(tc-getAR) CC=$(tc-getCC) LD=$(tc-getLD) ${target}
 	done
 }

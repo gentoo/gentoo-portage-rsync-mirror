@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8555 2014/01/22 19:32:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8556 2014/01/23 14:42:53 hasufell Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jan 2014; Julian Ospald <hasufell@gentoo.org> +updates/1Q-2014:
+  pkgmove of games-board/capitalism to games-board/CapiCity
 
   22 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove mask for still work-in-progress bash-completion layout that was

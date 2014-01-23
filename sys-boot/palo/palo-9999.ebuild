@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.5 2014/01/23 14:14:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.6 2014/01/23 14:43:42 jer Exp $
 
 EAPI=5
 
@@ -23,9 +23,9 @@ src_prepare() {
 }
 
 src_compile() {
-	emake MACHINE=parisc AR=$(tc-getAR) CC=$(tc-getCC) LD=$(tc-getLD) \
+	emake AR=$(tc-getAR) CC=$(tc-getCC) LD=$(tc-getLD) \
 		makepalo makeipl || die
-	emake MACHINE=parisc CC=$(tc-getCC) iplboot || die
+	emake CC=$(tc-getCC) iplboot || die
 }
 
 src_install() {

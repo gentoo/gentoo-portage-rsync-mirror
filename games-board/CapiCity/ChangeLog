@@ -1,6 +1,12 @@
-# ChangeLog for games-board/capitalism
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/capitalism/ChangeLog,v 1.10 2013/03/02 21:11:46 hwoarang Exp $
+# ChangeLog for games-board/CapiCity
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/CapiCity/ChangeLog,v 1.1 2014/01/23 14:39:55 hasufell Exp $
+
+*CapiCity-1.0 (23 Jan 2014)
+
+  23 Jan 2014; Julian Ospald <hasufell@gentoo.org> +CapiCity-1.0.ebuild,
+  +metadata.xml:
+  version bump and rename of games-board/capitalism
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> capitalism-0.5.1.ebuild:
   Move Qt dependencies to the new category
