@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.4 2013/07/21 14:13:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/palo-9999.ebuild,v 1.5 2014/01/23 14:14:20 jer Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic git-2 toolchain-funcs
+inherit eutils flag-o-matic git-r3 toolchain-funcs
 
 DESCRIPTION="PALO : PArisc Linux Loader"
-HOMEPAGE="http://parisc-linux.org/"
+HOMEPAGE="http://parisc-linux.org/ https://parisc.wiki.kernel.org/"
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/deller/palo.git"
 
 LICENSE="GPL-2"

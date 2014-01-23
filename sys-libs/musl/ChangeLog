@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.14 2014/01/14 17:52:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.16 2014/01/23 14:17:50 blueness Exp $
+
+  23 Jan 2014; Anthony G. Basile <blueness@gentoo.org> musl-0.9.15.ebuild,
+  musl-9999.ebuild:
+  RDEPEND on sys-apps/getent to provide user/group management
+
+  23 Jan 2014; Anthony G. Basile <blueness@gentoo.org> -musl-0.9.14.ebuild:
+  Remove older version
 
 *musl-0.9.15 (14 Jan 2014)
 

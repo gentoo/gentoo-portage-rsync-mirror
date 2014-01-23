@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.5 2013/08/09 00:50:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-9999.ebuild,v 1.6 2014/01/23 14:17:50 blueness Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
@@ -29,6 +29,8 @@ fi
 LICENSE="MIT"
 SLOT="0"
 IUSE="crosscompile_opts_headers-only"
+
+RDEPEND="sys-apps/getent"
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
@@ -83,7 +85,9 @@ pkg_postinst() {
 	is_crosscompile && return 0
 
 	[ "${ROOT}" != "/" ] && return 0
-	# update cache before reloading init
+
+	# TODO: musl doesn't use ldconfig, instead here we can
+	# create sym links to libraries outside of /lib and /usr/lib
 	ldconfig
 	# reload init ...
 	/sbin/telinit U 2>/dev/null

@@ -1,6 +1,18 @@
 # ChangeLog for sys-boot/palo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.42 2013/12/06 16:54:54 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.45 2014/01/23 14:21:28 jer Exp $
+
+  23 Jan 2014; Jeroen Roovers <jer@gentoo.org> -palo-1.91.ebuild,
+  -files/palo-9999-open.patch:
+  Old.
+
+  23 Jan 2014; Jeroen Roovers <jer@gentoo.org> palo-1.92.ebuild,
+  +files/palo-1.92-toolchain.patch:
+  Fix patching 1.92.
+
+  23 Jan 2014; Jeroen Roovers <jer@gentoo.org> palo-1.92.ebuild,
+  palo-9999.ebuild, files/palo-9999-toolchain.patch:
+  Add new HOMEPAGE. Fix live toolchain patch.
 
   06 Dec 2013; Jeroen Roovers <jer@gentoo.org> palo-1.92.ebuild:
   Stable for HPPA too.
