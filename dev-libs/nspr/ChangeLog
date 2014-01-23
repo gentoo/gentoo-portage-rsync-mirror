@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.250 2013/12/07 19:52:23 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.251 2014/01/22 23:07:51 vapier Exp $
+
+  22 Jan 2014; Mike Frysinger <vapier@gentoo.org> nspr-4.10.2.ebuild:
+  Add arm64 love.
 
   07 Dec 2013; Agostino Sarubbo <ago@gentoo.org> nspr-4.10.2.ebuild:
   Stable for arm, wrt bug #489796
