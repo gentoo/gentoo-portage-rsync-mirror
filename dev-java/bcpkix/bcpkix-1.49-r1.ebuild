@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/bcpkix-1.49-r1.ebuild,v 1.2 2013/06/14 19:55:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/bcpkix-1.49-r1.ebuild,v 1.3 2014/01/23 20:26:47 radhermit Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux 
 RESTRICT="test"
 
 COMMON_DEPEND="
-	~dev-java/bcprov-${PV}-r2:0[test?]"
+	~dev-java/bcprov-${PV}:0[test?]"
 
 DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip
