@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/multipart-post-1.1.5.ebuild,v 1.1 2012/04/09 12:50:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/multipart-post-2.0.0.ebuild,v 1.1 2014/01/23 07:35:38 graaff Exp $
 
-EAPI="2"
+EAPI=5
 
-USE_RUBY="ruby18 ruby19 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ruby20 ruby21 jruby"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_TASK_DOC=""
 
-RUBY_FAKEGEM_EXTRADOC="README.txt"
+RUBY_FAKEGEM_EXTRADOC="History.txt README.md"
 
 inherit ruby-fakegem eutils
 

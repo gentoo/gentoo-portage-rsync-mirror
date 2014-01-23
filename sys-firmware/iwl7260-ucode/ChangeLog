@@ -1,0 +1,11 @@
+# ChangeLog for sys-firmware/iwl7260-ucode
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7260-ucode/ChangeLog,v 1.1 2014/01/23 07:38:09 gienah Exp $
+
+*iwl7260-ucode-22.1.7.0 (23 Jan 2014)
+*iwl7260-ucode-22.15.8.0 (23 Jan 2014)
+
+  23 Jan 2014; Mark Wright <gienah@gentoo.org> +iwl7260-ucode-22.1.7.0.ebuild,
+  +iwl7260-ucode-22.15.8.0.ebuild, +metadata.xml:
+  Add sys-firmware/iwl7260-ucode. Thanks to Thomas Kear for the initial ebuild,
+  Small_Penguin for testing. Fixes bug #489714.
