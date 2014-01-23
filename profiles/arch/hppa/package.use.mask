@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.133 2013/11/24 17:16:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.134 2014/01/23 19:34:00 zlogene Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -29,10 +29,6 @@ media-libs/mesa r600-llvm-compiler
 # dev-python/restkit which is needed for dev-python/pyquery's test phase
 # (bug #452764)
 dev-python/pyquery test
-
-# Jeroen Roovers <jer@gentoo.org> (2 Jan 2013)
-# Mask sci-libs/proj for dev-perl/PDL (bug #417453)
-dev-perl/PDL proj
 
 # Jeroen Roovers <jer@gentoo.org> (2 Jan 2013)
 # Mask non-keyworded sci-libs/hdf5 for sci-mathematics/octave

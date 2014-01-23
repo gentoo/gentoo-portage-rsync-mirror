@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.202 2014/01/18 01:03:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.203 2014/01/23 19:34:00 zlogene Exp $
+
+  23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> package.use.mask
+  Remove obsolete dev-perl/PDL[proj] entry. See bug #497328 for more info.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> make.defaults:
   Drop python targets hacks now that base/ has it #474128.

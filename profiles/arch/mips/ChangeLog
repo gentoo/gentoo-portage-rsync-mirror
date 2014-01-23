@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.129 2014/01/14 20:46:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.130 2014/01/23 19:46:51 zlogene Exp $
+
+  23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> package.mask:
+  Remove old gentoo-sources entry.
 
   14 Jan 2014; Mike Frysinger <vapier@gentoo.org> parent, use.mask:
   Use unified arch/base/ like all other arches.

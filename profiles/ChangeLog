@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8557 2014/01/23 18:40:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8558 2014/01/23 19:48:33 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jan 2014; Ulrich Müller <ulm@gentoo.org> updates/1Q-2014:
+  Update package move for games-board/capicity.
 
   23 Jan 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
   Add man-pages-posix-2013 license to MISC-FREE-DOCS group.

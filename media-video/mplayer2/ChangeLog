@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.113 2013/10/19 19:39:40 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.114 2014/01/23 19:49:47 swift Exp $
+
+  23 Jan 2014; Sven Vermeulen <swift@gentoo.org> mplayer2-2.0_p20130126.ebuild,
+  mplayer2-2.0_p20130428-r1.ebuild, mplayer2-9999.ebuild:
+  Adding USE=selinux dependency towards selinux-mplayer (SELinux policy), cfr
+  bug 498578
 
   19 Oct 2013; Tom Wijsman <TomWij@gentoo.org> mplayer2-9999.ebuild:
   Added REQUIRED_USE entry as the libass USE flag now needs iconv to be enabled,
