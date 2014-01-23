@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.30.ebuild,v 1.1 2014/01/22 16:47:48 sdamashek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-6.30.ebuild,v 1.2 2014/01/23 03:35:48 sdamashek Exp $
 
 EAPI=5
 
@@ -29,9 +29,9 @@ src_install() {
 
 	local docs="MAINTAINERS.txt LICENSE.txt INSTALL.txt CHANGELOG.txt INSTALL.mysql.txt INSTALL.pgsql.txt UPGRADE.txt "
 	dodoc ${docs}
-	rm -f ${docs} INSTALL COPYRIGHT.txt
+	rm -f ${docs} INSTALL COPYRIGHT.txt || die
 
-	cp sites/default/{default.settings.php,settings.php}
+	cp sites/default/{default.settings.php,settings.php} || die
 	insinto "${MY_HTDOCSDIR}"
 	doins -r .
 
@@ -49,9 +49,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn
+	echo
 	ewarn "SECURITY NOTICE"
 	ewarn "If you plan on using SSL on your Drupal site, please consult the postinstall information:"
 	ewarn "\t# webapp-config --show-postinst ${PN} ${PV}"
-	ewarn
+	echo
 }

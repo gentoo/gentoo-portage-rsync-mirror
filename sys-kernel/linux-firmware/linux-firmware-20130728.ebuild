@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20130728.ebuild,v 1.11 2014/01/15 09:21:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20130728.ebuild,v 1.12 2014/01/23 04:00:14 gienah Exp $
 
 EAPI=5
 inherit savedconfig
@@ -56,6 +56,7 @@ RDEPEND="!savedconfig? (
 		!sys-firmware/iwl6005-ucode
 		!sys-firmware/iwl6030-ucode
 		!sys-firmware/iwl6050-ucode
+		!sys-firmware/iwl7260-ucode
 		!x11-drivers/radeon-ucode
 	)"
 #add anything else that collides to this

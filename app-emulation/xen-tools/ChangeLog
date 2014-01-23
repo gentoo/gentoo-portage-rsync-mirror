@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.211 2014/01/02 04:58:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.212 2014/01/23 03:38:35 dlan Exp $
+
+  23 Jan 2014; Yixun Lan <dlan@gentoo.org> files/xenconsoled.initd,
+  -files/xendomains.initd-r1:
+  bug #498720, shutdown all domUs
 
   02 Jan 2014; Ian Delaney <idella4@gentoo.org> files/xend.initd-r1,
   files/xend.initd-r2:

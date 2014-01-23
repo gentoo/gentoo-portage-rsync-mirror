@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.254 2014/01/22 18:15:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.255 2014/01/23 03:39:58 sdamashek Exp $
+
+  23 Jan 2014; Samuel Damashek <sdamashek@gentoo.org> mediawiki-1.19.10.ebuild,
+  mediawiki-1.21.4.ebuild, mediawiki-1.22.1.ebuild:
+  Fix ebuild syntax, add die to external commands
 
   22 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> mediawiki-1.19.10.ebuild,
   mediawiki-1.21.4.ebuild:

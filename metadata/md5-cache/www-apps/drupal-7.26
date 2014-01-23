@@ -11,4 +11,4 @@ REQUIRED_USE=|| ( mysql postgres sqlite )
 SLOT=7.26
 SRC_URI=http://drupal.org/files/projects/drupal-7.26.tar.gz
 _eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=87bf2e742fb7da964015c1b060c110ff
+_md5_=46a3c6b4b50c000bd1e8a57ec050a03c
