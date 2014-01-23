@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup
-DEPEND=>=x11-base/xorg-server-1.7:=[-minimal] x11-libs/libXcomposite >=dev-util/kbuild-0.1.9998_pre20120806 python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=dev-lang/yasm-0.6.2 sys-power/iasl x11-proto/fontsproto x11-proto/randrproto x11-proto/renderproto x11-proto/xextproto x11-proto/xineramaproto x11-proto/xproto x11-libs/libXdmcp x11-libs/libXau x11-libs/libX11 x11-libs/libXfixes x11-libs/libXext dri? ( x11-proto/xf86driproto >=x11-libs/libdrm-2.4.5 ) kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
+DEPEND=>=x11-base/xorg-server-1.7:=[-minimal] x11-libs/libXcomposite >=dev-util/kbuild-0.1.9998_pre20120806 python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,python_single_target_python2_7(+)?] >=dev-lang/yasm-0.6.2 sys-power/iasl x11-proto/fontsproto x11-proto/randrproto x11-proto/renderproto x11-proto/resourceproto x11-proto/scrnsaverproto x11-proto/xextproto x11-proto/xineramaproto x11-proto/xproto x11-libs/libXdmcp x11-libs/libXau x11-libs/libX11 x11-libs/libXfixes x11-libs/libXext dri? ( x11-proto/xf86driproto >=x11-libs/libdrm-2.4.5 ) kernel_linux? ( virtual/modutils ) sys-apps/sed kernel_linux? ( virtual/linux-sources )
 DESCRIPTION=VirtualBox video driver
 EAPI=5
 HOMEPAGE=http://www.virtualbox.org/
@@ -11,4 +11,4 @@ REQUIRED_USE=python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( p
 SLOT=0
 SRC_URI=http://download.virtualbox.org/virtualbox/4.2.22/VirtualBox-4.2.22.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	linux-info	a9cbd6bbe2b28166e403321882f3c73c	linux-mod	101302d4b7b694ea9622bbffb187d0de	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=8fbd371d10f07821d3cd8e8d388ed155
+_md5_=0c4c916888c7e919047515268be11c72

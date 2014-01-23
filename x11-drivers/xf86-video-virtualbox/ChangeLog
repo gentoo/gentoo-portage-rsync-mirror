@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.131 2014/01/17 07:08:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.132 2014/01/23 18:54:33 polynomial-c Exp $
+
+  23 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-video-virtualbox-4.2.22.ebuild, xf86-video-virtualbox-4.3.6.ebuild:
+  Added missing x11-proto/resourceproto and x11-proto/scrnsaverproto to DEPEND.
+  Thanks to Dominik Buerkle for reporting this in bug #499062.
 
   17 Jan 2014; Lars Wendler <polynomial-c@gentoo.org>
   -xf86-video-virtualbox-4.2.18.ebuild, -xf86-video-virtualbox-4.2.20.ebuild,

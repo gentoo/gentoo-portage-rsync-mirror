@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-1.11.1.ebuild,v 1.2 2014/01/17 17:25:16 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/hub-1.11.1.ebuild,v 1.3 2014/01/23 18:31:20 bicatali Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 RDEPEND="dev-vcs/git"
 
 DOC_CONTENTS="You may want to add 'alias git=hub' to your .{csh,bash}rc"
