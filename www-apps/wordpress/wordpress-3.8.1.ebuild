@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.6.ebuild,v 1.1 2013/08/02 16:40:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-3.8.1.ebuild,v 1.1 2014/01/24 09:10:22 radhermit Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ src_install() {
 	webapp_src_preinst
 
 	dohtml readme.html
-	rm -f readme.html license.txt
+	rm readme.html license.txt || die
 
 	[ -f wp-config.php ] || cp wp-config-sample.php wp-config.php
 

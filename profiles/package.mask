@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15355 2014/01/22 19:32:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15356 2014/01/24 09:08:25 mrueg Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -380,19 +380,6 @@ dev-ruby/arrayfields
 # Masked for removal, please migrate to dev-python/irc,
 # which is in fact just a newer version of this package.
 dev-python/python-irclib
-
-# Hans de Graaff <graaff@gentoo.org> (21 Dec 2013)
-# Masked for removal as part of the ruby18 deprecation.
-# These database bindings only work with ruby18 and are
-# no longer used by other packages in the tree.
-dev-ruby/dbi
-dev-ruby/dbd-mysql
-dev-ruby/dbd-odbc
-dev-ruby/dbd-pg
-dev-ruby/dbd-sqlite
-dev-ruby/dbd-sqlite3
-dev-ruby/sqlite-ruby
-
 
 # Luca Barbato <lu_zero@gentoo.org> (18 Dec 2013)
 # Alpha ebuild, unmask to test the tree.
