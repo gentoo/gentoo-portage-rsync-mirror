@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/waffle/waffle-9999.ebuild,v 1.1 2014/01/23 23:24:58 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/waffle/waffle-9999.ebuild,v 1.2 2014/01/24 02:38:01 patrick Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://people.freedesktop.org/~chadversary/waffle"
 
 if [[ ${PV} = 9999* ]]; then
-    GIT_ECLASS="git-2"
+	GIT_ECLASS="git-2"
 fi
 
 inherit cmake-utils cmake-multilib ${GIT_ECLASS}
