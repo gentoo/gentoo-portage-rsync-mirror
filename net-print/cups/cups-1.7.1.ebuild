@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.1.ebuild,v 1.3 2014/01/17 02:54:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.7.1.ebuild,v 1.4 2014/01/24 18:56:52 dilfridge Exp $
 
 EAPI=5
 
@@ -78,8 +78,11 @@ PDEPEND="
 	>=net-print/cups-filters-1.0.43
 "
 
-REQUIRED_USE="gnutls? ( ssl )
-	python? ( ${PYTHON_REQUIRED_USE} )"
+REQUIRED_USE="
+	gnutls? ( ssl )
+	python? ( ${PYTHON_REQUIRED_USE} )
+	usb? ( threads )
+"
 
 # upstream includes an interactive test which is a nono for gentoo
 RESTRICT="test"
