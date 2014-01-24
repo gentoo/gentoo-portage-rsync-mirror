@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup test unpack
-DEPEND=dev-libs/boost[python?] dev-libs/pugixml media-libs/glew media-libs/ilmbase media-libs/libpng:0 >=media-libs/libwebp-0.2.1 media-libs/openexr media-libs/tiff:0 sci-libs/hdf5 sys-libs/zlib virtual/jpeg jpeg2k? ( >=media-libs/openjpeg-1.5:0 ) colorio? ( >=media-libs/opencolorio-1.0.7 ) opencv? ( >=media-libs/opencv-2.3 ) opengl? ( virtual/glu virtual/opengl ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 ) tbb? ( dev-cpp/tbb ) truetype? ( >=media-libs/freetype-2 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) python? ( =dev-lang/python-2.7* )
+DEPEND=dev-libs/boost[python?] dev-libs/pugixml media-libs/glew media-libs/ilmbase media-libs/libpng:0 >=media-libs/libwebp-0.2.1 media-libs/openexr media-libs/tiff:0 sci-libs/hdf5 sys-libs/zlib virtual/jpeg jpeg2k? ( >=media-libs/openjpeg-1.5:0 ) colorio? ( >=media-libs/opencolorio-1.0.7 ) opencv? ( >=media-libs/opencv-2.3 || ( <media-libs/opencv-2.4.8 >media-libs/opencv-2.4.8[python?] ) ) opengl? ( virtual/glu virtual/opengl ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 ) tbb? ( dev-cpp/tbb ) truetype? ( >=media-libs/freetype-2 ) sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) python? ( =dev-lang/python-2.7* )
 DESCRIPTION=A library for reading and writing images
 EAPI=5
 HOMEPAGE=http://sites.google.com/site/openimageio/ http://github.com/OpenImageIO
 IUSE=jpeg2k colorio opencv opengl python qt4 tbb +truetype
 KEYWORDS=amd64 ~ppc64 x86
 LICENSE=BSD
-RDEPEND=dev-libs/boost[python?] dev-libs/pugixml media-libs/glew media-libs/ilmbase media-libs/libpng:0 >=media-libs/libwebp-0.2.1 media-libs/openexr media-libs/tiff:0 sci-libs/hdf5 sys-libs/zlib virtual/jpeg jpeg2k? ( >=media-libs/openjpeg-1.5:0 ) colorio? ( >=media-libs/opencolorio-1.0.7 ) opencv? ( >=media-libs/opencv-2.3 ) opengl? ( virtual/glu virtual/opengl ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 ) tbb? ( dev-cpp/tbb ) truetype? ( >=media-libs/freetype-2 ) python? ( =dev-lang/python-2.7* )
+RDEPEND=dev-libs/boost[python?] dev-libs/pugixml media-libs/glew media-libs/ilmbase media-libs/libpng:0 >=media-libs/libwebp-0.2.1 media-libs/openexr media-libs/tiff:0 sci-libs/hdf5 sys-libs/zlib virtual/jpeg jpeg2k? ( >=media-libs/openjpeg-1.5:0 ) colorio? ( >=media-libs/opencolorio-1.0.7 ) opencv? ( >=media-libs/opencv-2.3 || ( <media-libs/opencv-2.4.8 >media-libs/opencv-2.4.8[python?] ) ) opengl? ( virtual/glu virtual/opengl ) qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qtopengl:4 ) tbb? ( dev-cpp/tbb ) truetype? ( >=media-libs/freetype-2 ) python? ( =dev-lang/python-2.7* )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://github.com/OpenImageIO/oiio/tarball/Release-1.1.1 -> openimageio-1.1.1.tar.gz
 _eclasses_=cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=b5b28589f25cd1ec986734c201235133
+_md5_=3c0d0fdbf90105169b9081cff13c7f56

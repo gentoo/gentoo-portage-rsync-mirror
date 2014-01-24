@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplecv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplecv/ChangeLog,v 1.2 2013/12/23 04:26:15 jsbronder Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplecv/ChangeLog,v 1.3 2014/01/24 21:32:21 dilfridge Exp $
+
+  24 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> simplecv-1.3.ebuild:
+  Fix OpenCV dependencies (new useflag, migration to python-single-r1)
 
   23 Dec 2013; Justin Bronder <jsbronder@gentoo.org> simplecv-1.3.ebuild:
   Depend on python-imaging over imaging
