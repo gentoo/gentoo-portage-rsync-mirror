@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15357 2014/01/24 12:26:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15358 2014/01/24 20:42:42 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -762,11 +762,6 @@ app-benchmarks/ltp
 # Still requires ocaml-3, mask it until it is ported. If this does not happen in
 # the near future, we should consider removing it.
 dev-ml/ocamlduce
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (1 Nov 2012)
-# See tracker bug #440342. Will probably require GNOME 3.6 to be
-# unmasked first.
-=dev-libs/libtasn1-3*
 
 # Pacho Ramos <pacho@gentoo.org> (25 Oct 2012)
 # obexd changed its API without any warning, it's recommended to ship
