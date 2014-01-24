@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.145 2014/01/04 23:11:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.146 2014/01/24 11:30:23 ssuominen Exp $
+
+*jpeg-8d-r1 (24 Jan 2014)
+
+  24 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> +jpeg-8d-r1.ebuild:
+  Multilib version of jpeg-8d for stabilization in security bug because jpeg-9
+  has too many bugs open.
 
   04 Jan 2014; Michał Górny <mgorny@gentoo.org> jpeg-9-r1.ebuild, jpeg-9.ebuild:
   Replace the explicit ABI==DEFAULT_ABI check with multilib_build_binaries
