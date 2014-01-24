@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-8d-r1.ebuild,v 1.4 2014/01/24 11:30:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-8d-r1.ebuild,v 1.5 2014/01/24 12:00:22 ssuominen Exp $
 
 EAPI=5
 inherit eutils libtool toolchain-funcs multilib-minimal
@@ -21,7 +21,9 @@ RDEPEND="!media-libs/libjpeg-turbo:0
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-7-maxmem_sysconf.patch
+	epatch \
+		"${FILESDIR}"/${PN}-7-maxmem_sysconf.patch \
+		"${FILESDIR}"/${PN}-9-CVE-2013-6629.patch
 	elibtoolize
 }
 

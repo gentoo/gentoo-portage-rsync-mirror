@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.146 2014/01/24 11:30:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.148 2014/01/24 12:00:22 ssuominen Exp $
+
+  24 Jan 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/jpeg-8d-CVE-2013-6629.patch, jpeg-8d-r1.ebuild:
+  Fix security bug 491152 (CVE-2013-6629) for jpeg-8d. The patch still applies
+  to jpeg-9 but causes a build failure and needs to be ported.
+
+  24 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> -jpeg-9.ebuild,
+  jpeg-8d-r1.ebuild:
+  old
 
 *jpeg-8d-r1 (24 Jan 2014)
 

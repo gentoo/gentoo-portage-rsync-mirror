@@ -28,9 +28,6 @@ usr/lib32/llvm/libLTO.so
 usr/lib32/llvm/libprofile_rt.so
 usr/lib32/libpng12.so.0
 usr/lib32/pkgconfig/libpng15.pc
-usr/lib32/libjpeg.so
-usr/lib32/libturbojpeg.so
-usr/lib32/libturbojpeg.so.0*
 usr/lib32/libraw1394.so
 usr/lib32/libraw1394.so.11
 usr/lib32/libraw1394.so.11.0.1
@@ -42,6 +39,11 @@ usr/lib32/pkgconfig/libavc1394.pc
 usr/lib32/librom1394.so
 usr/lib32/librom1394.so.0
 usr/lib32/librom1394.so.0.3.0
+usr/lib32/libjpeg.so
+usr/lib32/libturbojpeg.so
+usr/lib32/libturbojpeg.so.0*
+usr/lib32/libjpeg.so.8.0.2
+usr/lib32/libjpeg.so.8
 usr/lib32/libjpeg.so.62
 usr/lib32/libexpat.so
 usr/lib32/libexpat.so.1
