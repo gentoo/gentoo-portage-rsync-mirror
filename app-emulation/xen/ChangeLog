@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.144 2014/01/24 15:25:38 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.145 2014/01/24 15:37:31 dlan Exp $
+
+  24 Jan 2014; Yixun Lan <dlan@gentoo.org> -xen-4.2.2-r2.ebuild,
+  -xen-4.3.0-r5.ebuild, -xen-4.3.0-r6.ebuild, -xen-4.3.1-r2.ebuild,
+  -xen-4.3.1-r3.ebuild:
+  clean 4.3.0, and unstable ones
 
 *xen-4.3.1-r4 (24 Jan 2014)
 *xen-4.2.2-r3 (24 Jan 2014)

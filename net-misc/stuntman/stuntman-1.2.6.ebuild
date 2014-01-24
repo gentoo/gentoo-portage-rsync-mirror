@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stuntman/stuntman-1.2.6.ebuild,v 1.1 2014/01/07 11:49:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stuntman/stuntman-1.2.6.ebuild,v 1.2 2014/01/24 15:41:25 chainsaw Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.stunprotocol.org/stunserver-${PV}.tgz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/boost
