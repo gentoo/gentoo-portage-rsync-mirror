@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libtasn1
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.192 2013/11/30 02:18:21 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.194 2014/01/24 20:30:19 radhermit Exp $
+
+  24 Jan 2014; Tim Harder <radhermit@gentoo.org> -libtasn1-2.12.ebuild,
+  -libtasn1-3.0.ebuild, -libtasn1-3.2.ebuild, -libtasn1-3.3.ebuild,
+  -files/libtasn1-3.0-cppflags.patch:
+  Remove old.
+
+  24 Jan 2014; Tim Harder <radhermit@gentoo.org> libtasn1-3.4.ebuild:
+  Add subslot.
 
 *libtasn1-3.4 (30 Nov 2013)
 

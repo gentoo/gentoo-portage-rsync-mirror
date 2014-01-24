@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.29 2014/01/23 13:01:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.30 2014/01/24 20:05:03 blueness Exp $
+
+  24 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/make.defaults,
+  linux/musl/packages, linux/musl/packages.build, linux/musl/x86/make.defaults:
+  linux/musl: fix linker path and remove libiconv
 
   23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
   linux/amd64/package.use.stable.mask:
