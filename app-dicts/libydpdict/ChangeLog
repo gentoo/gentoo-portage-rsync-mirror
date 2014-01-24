@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/libydpdict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/libydpdict/ChangeLog,v 1.9 2014/01/24 20:17:54 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/libydpdict/ChangeLog,v 1.10 2014/01/24 22:46:51 creffett Exp $
+
+  24 Jan 2014; Chris Reffett <creffett@gentoo.org> libydpdict-1.0.2.ebuild:
+  Remove extraneous || die
 
   24 Jan 2014; Chris Reffett <creffett@gentoo.org> libydpdict-1.0.2.ebuild:
   EAPI bump

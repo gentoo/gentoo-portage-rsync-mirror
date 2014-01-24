@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-1.0.2.ebuild,v 1.2 2014/01/24 20:18:49 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ydpdict/ydpdict-1.0.2.ebuild,v 1.3 2014/01/24 22:44:55 creffett Exp $
 
 EAPI=5
 
@@ -22,14 +22,12 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf \
-		$(use_with ao libao) \
-		|| die "econf failed"
+		$(use_with ao libao)
 }
 
 src_install() {
 	dodir "/etc"
-	emake DESTDIR="${D}" install || die "emake install failed"
-
+	emake DESTDIR="${D}" install
 	dodoc README
 }
 
