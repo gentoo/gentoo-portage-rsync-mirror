@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=>=dev-libs/libgpg-error-1.11 !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.12* >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=>=dev-libs/libgpg-error-1.11 !<sys-devel/gettext-0.18.1.1-r3 =sys-devel/automake-1.13* >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=General purpose crypto library based on the code used in GnuPG
 EAPI=5
 HOMEPAGE=http://www.gnupg.org/
@@ -10,4 +10,4 @@ RDEPEND=>=dev-libs/libgpg-error-1.11
 SLOT=0/20
 SRC_URI=mirror://gnupg/libgcrypt/libgcrypt-1.6.0.tar.bz2 ftp://ftp.gnupg.org/gcrypt/libgcrypt/libgcrypt-1.6.0.tar.bz2
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c209054c3642deaf0a4f3725d375f9cd
+_md5_=644515cc73e099e90d6ab127bbb19a60

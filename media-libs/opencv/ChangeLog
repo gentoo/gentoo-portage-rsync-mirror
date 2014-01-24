@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/opencv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.104 2013/12/07 14:31:01 dilfridge Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.105 2014/01/24 21:16:38 dilfridge Exp $
+
+*opencv-2.4.8 (24 Jan 2014)
+
+  24 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -opencv-2.4.6.1.ebuild, +opencv-2.4.8.ebuild,
+  +files/opencv-2.4.8-javamagic.patch:
+  Version bump; remove old
 
   07 Dec 2013; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.7.ebuild:
   Fix build without openmp, bug 493530

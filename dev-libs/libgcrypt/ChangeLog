@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.198 2014/01/18 05:07:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.199 2014/01/24 21:26:08 alonbl Exp $
+
+  24 Jan 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/libgcrypt-1.6.0-serial-tests.patch, libgcrypt-1.6.0.ebuild:
+  enable automake >= 1.14, bug#498718, thanks to wojtek
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libgcrypt-1.5.3.ebuild,
   libgcrypt-1.6.0.ebuild:
