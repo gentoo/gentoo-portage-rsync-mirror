@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/jpeg-62.ebuild,v 1.2 2013/08/02 08:30:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/jpeg-62.ebuild,v 1.3 2014/01/24 12:23:25 ssuominen Exp $
 
 EAPI=5
 

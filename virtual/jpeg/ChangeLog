@@ -1,6 +1,10 @@
 # ChangeLog for virtual/jpeg
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.16 2013/08/07 18:37:37 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.17 2014/01/24 12:23:25 ssuominen Exp $
+
+  24 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> jpeg-0-r2.ebuild,
+  jpeg-62.ebuild:
+  Accept jpeg-8d-r1 as a provider of multilib.
 
   07 Aug 2013; Samuli Suominen <ssuominen@gentoo.org> jpeg-0-r2.ebuild:
   Pull in -r1 of media-libs/jpeg-9 wrt #479808 in attempt to force the upgrade.

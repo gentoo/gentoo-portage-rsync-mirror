@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15356 2014/01/24 09:08:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15357 2014/01/24 12:26:31 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (24 Jan 2014)
+# Roll ~arch version back from .so.9 to .so.8 due to too many unresolved issues.
+# See http://bugs.gentoo.org/479818 for progress.
+>=media-libs/jpeg-9
 
 # Christian Ruppert <idl0r@gentoo.org> (19 Jan 2014)
 # Experimental, for now

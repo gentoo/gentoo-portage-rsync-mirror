@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8559 2014/01/24 09:08:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8560 2014/01/24 12:26:31 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask >=media-libs/jpeg-9 and roll ~arch back from .so.9 to .so.8 due to too
+  many issues being open at the Tracker wrt #479818
 
   24 Jan 2014; Manuel Rüger <mrueg@gentoo.org> package.mask:
   Clean up further obsolete ruby18 masks.
