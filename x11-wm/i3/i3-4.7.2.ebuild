@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.7.1.ebuild,v 1.1 2014/01/21 19:05:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.7.2.ebuild,v 1.2 2014/01/24 07:49:32 xarthisius Exp $
 
 EAPI=5
 
@@ -31,8 +31,7 @@ CDEPEND="dev-libs/libev
 	)"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig"
-RDEPEND="${CDEPEND}
-	x11-apps/xmessage"
+RDEPEND="${CDEPEND}"
 
 DOCS=( RELEASE-NOTES-${PV} )
 
