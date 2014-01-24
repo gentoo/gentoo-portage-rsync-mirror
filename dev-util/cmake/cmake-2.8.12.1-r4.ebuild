@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.1-r3.ebuild,v 1.1 2014/01/10 01:33:13 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.1-r4.ebuild,v 1.1 2014/01/24 04:17:20 creffett Exp $
 
 EAPI=5
 
 CMAKE_REMOVE_MODULES="no"
-inherit elisp-common toolchain-funcs eutils versionator cmake-utils virtualx
+inherit bash-completion-r1 elisp-common toolchain-funcs eutils versionator cmake-utils virtualx
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
@@ -185,6 +185,9 @@ src_install() {
 
 	insinto /usr/share/vim/vimfiles/ftdetect
 	doins "${FILESDIR}/${PN}.vim"
+
+	dobashcomp Docs/bash-completion/{${PN},ctest,cpack}
+	rm -rf "${D}/usr/share/cmake/completions" || die
 }
 
 pkg_postinst() {

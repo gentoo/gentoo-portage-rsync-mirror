@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.268 2014/01/15 15:54:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.269 2014/01/24 04:17:20 creffett Exp $
+
+*cmake-2.8.12.1-r4 (24 Jan 2014)
+
+  24 Jan 2014; Chris Reffett <creffett@gentoo.org> +cmake-2.8.12.1-r4.ebuild,
+  -cmake-2.8.12.1-r2.ebuild, -cmake-2.8.12.1-r3.ebuild:
+  Revision bump. Fix installation of bash completion files wrt bug 498056,
+  credit to Alex Turbov for the fix. Drop old.
 
   15 Jan 2014; Jeroen Roovers <jer@gentoo.org>
   files/cmake-2.8.11.2-hppa-bootstrap.patch:

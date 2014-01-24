@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.620 2014/01/13 06:02:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.621 2014/01/24 04:13:58 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1245,6 +1245,9 @@ gcc_do_filter_flags() {
 		case $(tc-arch) in
 			amd64|x86)
 				filter-flags '-mcpu=*'
+				
+				tc_version_is_between 4.4 4.5 && append-flags -mno-avx # 357287
+				
 				if tc_version_is_between 4.6 4.7 ; then
 					# https://bugs.gentoo.org/411333
 					# https://bugs.gentoo.org/466454
