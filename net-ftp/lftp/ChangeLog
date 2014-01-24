@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.449 2014/01/19 10:32:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.450 2014/01/24 16:55:49 jer Exp $
+
+*lftp-4.4.15 (24 Jan 2014)
+
+  24 Jan 2014; Jeroen Roovers <jer@gentoo.org> +lftp-4.4.15.ebuild:
+  Version bump.
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> lftp-4.4.14.ebuild:
   Stable for ppc64, wrt bug #497632
