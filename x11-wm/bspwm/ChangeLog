@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/bspwm
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/bspwm/ChangeLog,v 1.1 2014/01/24 08:20:56 radhermit Exp $
+
+*bspwm-0.8.8 (24 Jan 2014)
+
+  24 Jan 2014; Tim Harder <radhermit@gentoo.org> +bspwm-0.8.8.ebuild,
+  +files/bspwm-0.8.8-flags.patch, +files/bspwm-session, +metadata.xml:
+  Initial import, ebuild by me.
+
