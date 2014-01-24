@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.2-r1.ebuild,v 1.5 2013/02/04 09:49:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/psad-2.2.2.ebuild,v 1.1 2014/01/24 18:30:09 jer Exp $
 
 EAPI=4
 #PERL_EXPORT_PHASE_FUNCTIONS=no
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cipherdyne.org/psad"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="virtual/perl-ExtUtils-MakeMaker"
@@ -82,7 +82,6 @@ src_install() {
 
 	keepdir /var/lib/${PN} /var/log/${PN}
 
-	dodir /etc/psad/snort_rules
 	insinto /etc/psad/snort_rules
 	doins deps/snort_rules/*
 

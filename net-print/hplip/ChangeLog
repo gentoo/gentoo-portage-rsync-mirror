@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.295 2014/01/19 10:33:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.296 2014/01/24 18:30:00 billie Exp $
+
+  24 Jan 2014; Daniel Pielmeier <billie@gentoo.org> -hplip-3.12.10a.ebuild,
+  -hplip-3.13.9.ebuild, -hplip-3.13.11-r1.ebuild:
+  Remove old.
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hplip-3.14.1.ebuild:
   Stable for ppc64, wrt bug #497722
