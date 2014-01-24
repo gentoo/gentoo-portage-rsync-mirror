@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.133 2013/12/31 16:55:46 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.134 2014/01/23 23:03:54 tomwij Exp $
+
+*emul-linux-x86-java-1.7.0.51 (23 Jan 2014)
+
+  23 Jan 2014; Tom Wijsman <TomWij@gentoo.org>
+  +emul-linux-x86-java-1.7.0.51.ebuild, +files/emul-linux-x86-java-1.7.env-r1:
+  Version bump to 1.7.0.51 for security bug #473980.
 
   31 Dec 2013; Tom Wijsman <TomWij@gentoo.org> -files/construct-1.6.sh:
   [QA] Remove unused files.
