@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.150 2014/01/24 12:18:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.152 2014/01/24 13:59:22 ssuominen Exp $
+
+  24 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> -jpeg-9-r1.ebuild:
+  old
+
+*jpeg-9a (24 Jan 2014)
+
+  24 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> +jpeg-9a.ebuild:
+  Version bump.
 
 *jpeg-6b-r12 (24 Jan 2014)
 

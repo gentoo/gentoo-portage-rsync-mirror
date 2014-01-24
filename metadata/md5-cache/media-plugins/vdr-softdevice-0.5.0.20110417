@@ -10,5 +10,5 @@ RDEPEND=>=media-video/vdr-1.5.9 || ( >=virtual/ffmpeg-0.10.2[-theora] ( >=virtua
 REQUIRED_USE=^^ ( xv fbcon directfb )
 SLOT=0
 SRC_URI=mirror://gentoo/vdr-softdevice-cvs-20110417.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vdr-plugin-2	47c67847aaf9886da4f952898e277b6d	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vdr-plugin-2	b7d55f85409545355f6f01857ec6285a	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=da73993f43eff1c164c94bb4dea05e05

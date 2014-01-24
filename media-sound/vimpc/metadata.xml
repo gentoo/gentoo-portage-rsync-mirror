@@ -6,5 +6,8 @@
 		<email>angelos@gentoo.org</email>
 		<name>Christoph Mende</name>
 	</maintainer>
+	<use>
+		<flag name="boost">Use boost instead of C++11 libraries</flag>
+	</use>
 </pkgmetadata>
 

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1128 2014/01/24 04:13:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1129 2014/01/24 13:51:18 hd_brummy Exp $
+
+  24 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  changed debug info in vdr-plugin-2_src_install for Makefile handling
 
   24 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> toolchain.eclass:
   Work around bug #357287.
