@@ -1,14 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0-r1.ebuild,v 1.1 2013/04/07 18:20:39 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.3.0_p20130504-r1.ebuild,v 1.1 2014/01/24 05:04:56 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit vdr-plugin-2 ssl-cert
 
 DESCRIPTION="VDR Plugin: Web Access To Settings"
 HOMEPAGE="http://live.vdr-developer.org"
-SRC_URI="http://live.vdr-developer.org/downloads/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+		http://dev.gentoo.org/~hd_brummy/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,10 +17,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="pcre ssl"
 
 DEPEND="media-video/vdr
-	>=dev-libs/tntnet-2.0[ssl=,sdk]
-	>=dev-libs/cxxtools-2.0
+	>=dev-libs/tntnet-2.2.1[ssl=]
+	>=dev-libs/cxxtools-2.2.1
 	pcre? ( >=dev-libs/libpcre-8.12[cxx] )"
 RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${P}"
 
 VDR_CONFD_FILE="${FILESDIR}/confd-0.2"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-0.2.sh"
@@ -54,6 +57,8 @@ src_prepare() {
 	rm "${S}"/po/{ca_ES,da_DK,el_GR,et_EE,hr_HR,hu_HU,nl_NL,nn_NO,pt_PT,ro_RO,ru_RU,sl_SI,sv_SE,tr_TR}.po
 
 	vdr-plugin-2_src_prepare
+
+	epatch "${FILESDIR}/${P}_vdr-2.1.2.diff"
 
 	if ! use pcre; then
 		sed -i "s:^HAVE_LIBPCRECPP:#HAVE_LIBPCRECPP:" Makefile || die
