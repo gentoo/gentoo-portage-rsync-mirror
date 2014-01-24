@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/beancounter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.16 2013/08/27 16:33:08 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beancounter/ChangeLog,v 1.17 2014/01/24 19:37:29 zlogene Exp $
+
+  24 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -beancounter-0.8.10.ebuild:
+  Remove version with old EAPI
 
 *beancounter-0.8.10-r1 (27 Aug 2013)
 
