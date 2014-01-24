@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.231 2014/01/21 22:42:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.232 2014/01/24 19:06:31 vapier Exp $
+
+  24 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/webkit-gtk-1.8.3-bison-3.patch, webkit-gtk-1.8.3-r201.ebuild,
+  webkit-gtk-1.8.3-r300.ebuild:
+  Fix building w/bison-3 #485818 by Patrick Lauer.
 
   21 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org>
   webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-1.8.3-r201.ebuild,
