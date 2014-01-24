@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.6-r1.ebuild,v 1.3 2013/11/07 14:56:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.6-r1.ebuild,v 1.4 2014/01/24 03:39:51 vapier Exp $
 
 EAPI="2"
 
@@ -113,7 +113,7 @@ MODULE_CRITICAL="
 use ssl && MODULE_CRITICAL+=" socache_shmcb"
 use doc && MODULE_CRITICAL+=" alias negotiation setenvif"
 
-inherit eutils apache-2 systemd
+inherit eutils apache-2 systemd toolchain-funcs
 
 DESCRIPTION="The Apache Web Server."
 HOMEPAGE="http://httpd.apache.org/"
@@ -148,6 +148,13 @@ src_prepare() {
 	pushd "${GENTOO_PATCHDIR}" &>/dev/null || die
 	epatch "${FILESDIR}"/gentoo-apache-2.2.23-initd_fixups.patch
 	popd &>/dev/null || die
+}
+
+src_configure() {
+	# Brain dead check.
+	tc-is-cross-compiler && export ap_cv_void_ptr_lt_long="no"
+
+	apache-2_src_configure
 }
 
 src_install() {
