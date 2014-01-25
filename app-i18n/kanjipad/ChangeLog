@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kanjipad
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.16 2013/09/19 04:37:17 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kanjipad/ChangeLog,v 1.17 2014/01/25 05:38:28 naota Exp $
+
+  25 Jan 2014; Naohiro Aota <naota@gentoo.org>
+  +files/kanjipad-2.0.0-underlinking.patch, kanjipad-2.0.0.ebuild:
+  Add patch to deal with underlinking. #498872
 
   19 Sep 2013; Michael Sterrett <mr_bones_@gentoo.org> -kanjipad-1.2.3.ebuild:
   clean old
