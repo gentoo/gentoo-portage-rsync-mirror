@@ -1,6 +1,17 @@
 # ChangeLog for sys-firmware/iwl7260-ucode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7260-ucode/ChangeLog,v 1.3 2014/01/23 22:43:40 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl7260-ucode/ChangeLog,v 1.4 2014/01/25 04:48:53 gienah Exp $
+
+*iwl7260-ucode-22.15.8.0-r1 (25 Jan 2014)
+*iwl7260-ucode-22.1.7.0-r1 (25 Jan 2014)
+
+  25 Jan 2014; Mark Wright <gienah@gentoo.org>
+  +iwl7260-ucode-22.1.7.0-r1.ebuild, +iwl7260-ucode-22.15.8.0-r1.ebuild,
+  metadata.xml:
+  Add bluetooth use flag to pull in sys-firmware/iwl3160-7260-bt-ucode for the
+  Intel Wireless Bluetooth 3160 and Intel Wireless Bluetooth 7260 devices. Part
+  of bug #489714, thanks to Thomas Kear for reporting, testing and initial
+  ebuilds.
 
   23 Jan 2014; Mark Wright <gienah@gentoo.org> iwl7260-ucode-22.15.8.0.ebuild:
   Thanks to Thomas Kear for testing and this fix (for my copy-paste bug): sys-

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.14 2014/01/24 17:23:50 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.15 2014/01/25 04:40:29 twitch153 Exp $
+
+  25 Jan 2014; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
+  Saves external GL folder from removal
 
   24 Jan 2014; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
   Removes deletion of CLRun dir, and updates dependency for glew

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/aspectj
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.28 2013/09/16 17:56:23 ercpe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/ChangeLog,v 1.29 2014/01/25 04:56:04 radhermit Exp $
+
+*aspectj-1.7.4 (25 Jan 2014)
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> +aspectj-1.7.4.ebuild:
+  Version bump.
 
 *aspectj-1.7.3-r1 (16 Sep 2013)
 
