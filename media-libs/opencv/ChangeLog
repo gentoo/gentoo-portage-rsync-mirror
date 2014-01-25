@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.106 2014/01/24 23:57:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.107 2014/01/25 11:01:29 dilfridge Exp $
+
+  25 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.8.ebuild:
+  Remove constraint on opengl useflag, bug 499188
 
   24 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.8.ebuild:
   Only enable Qt4 so far, bug 483648

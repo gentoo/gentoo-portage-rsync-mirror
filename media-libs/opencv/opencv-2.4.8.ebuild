@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.8.ebuild,v 1.2 2014/01/24 23:57:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.8.ebuild,v 1.3 2014/01/25 11:01:29 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -17,13 +17,13 @@ SLOT="0/2.4"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
 IUSE="cuda doc +eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k opencl openexr opengl openmp pch png +python qt4 testprograms threads tiff v4l xine"
 REQUIRED_USE="
-	opengl? ( || ( gtk qt4 ) )
 	python? ( ${PYTHON_REQUIRED_USE} )
 "
 
 # The following logic is intrinsic in the build system, but we do not enforce
 # it on the useflags since this just blocks emerging pointlessly:
 #	gtk? ( !qt4 )
+#	opengl? ( || ( gtk qt4 ) )
 #	openmp? ( !threads )
 
 RDEPEND="

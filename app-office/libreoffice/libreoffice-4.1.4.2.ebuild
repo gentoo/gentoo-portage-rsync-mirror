@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.4.2.ebuild,v 1.3 2013/12/27 18:15:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-4.1.4.2.ebuild,v 1.4 2014/01/25 11:25:22 dilfridge Exp $
 
 EAPI=5
 
@@ -234,6 +234,9 @@ PATCHES=(
 	# picked from git master
 	"${FILESDIR}/${PN}-4.1.3.2-kde-recursiverepaint.patch"
 	"${FILESDIR}/${PN}-4.1.3.2-kde-calchang.patch"
+
+	# staged for git master
+	"${FILESDIR}/${PN}-4.1.4.2-curl-config.patch"
 )
 
 REQUIRED_USE="
