@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xz-java
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.4 2014/01/25 06:51:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.5 2014/01/25 10:21:53 radhermit Exp $
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Add to the java herd.
 
 *xz-java-1.4 (25 Jan 2014)
 

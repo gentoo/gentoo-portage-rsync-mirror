@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pudb/pudb-2013.3.3.ebuild,v 1.2 2013/09/05 18:46:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pudb/pudb-2013.5.1.ebuild,v 1.1 2014/01/25 10:02:11 radhermit Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/joda-convert
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/ChangeLog,v 1.5 2013/05/09 22:02:55 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joda-convert/ChangeLog,v 1.6 2014/01/25 10:29:14 radhermit Exp $
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> joda-convert-1.3.1.ebuild:
+  Update HOMEPAGE.
 
   09 May 2013; Tim Harder <radhermit@gentoo.org> joda-convert-1.3.1.ebuild:
   Fix doc install.

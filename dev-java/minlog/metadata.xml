@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>java</herd>
 	<upstream>
-		<remote-id type="google-code">minlog</remote-id>
+		<remote-id type='github'>EsotericSoftware/minlog</remote-id>
 	</upstream>
 </pkgmetadata>
 
