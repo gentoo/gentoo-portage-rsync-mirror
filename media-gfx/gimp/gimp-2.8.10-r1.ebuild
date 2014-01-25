@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.10-r1.ebuild,v 1.3 2014/01/24 20:25:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.8.10-r1.ebuild,v 1.4 2014/01/25 18:54:54 hasufell Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -119,6 +119,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.7.4-no-deprecation.patch  # bug 395695, comment 9 and 16
 	epatch "${DISTDIR}"/${P}-freetype251.patch # bug #493466
+	epatch "${FILESDIR}"/${P}-clang.patch # bug 449370 compile with clang
 	sed -i -e 's/== "xquartz"/= "xquartz"/' configure.ac || die #494864
 	eautoreconf  # If you remove this: remove dev-util/gtk-doc-am from DEPEND, too
 

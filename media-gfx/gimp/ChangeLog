@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.422 2014/01/24 20:25:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.423 2014/01/25 18:54:54 hasufell Exp $
+
+  25 Jan 2014; Julian Ospald <hasufell@gentoo.org>
+  +files/gimp-2.8.10-clang.patch, gimp-2.8.10-r1.ebuild:
+  fix build with clang wrt #449370
 
   24 Jan 2014; Fabian Groffen <grobian@gentoo.org> gimp-2.8.10-r1.ebuild:
   Fix bashism in configure script, closing bug #494864
