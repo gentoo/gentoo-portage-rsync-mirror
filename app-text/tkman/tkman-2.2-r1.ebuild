@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.2-r1.ebuild,v 1.7 2012/09/05 07:17:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.2-r1.ebuild,v 1.8 2014/01/25 03:47:24 creffett Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 DESCRIPTION="TkMan man and info page browser"
@@ -26,7 +26,7 @@ src_prepare() {
 
 src_install() {
 	dodir /usr/bin
-	make DESTDIR="${D}" install || die
+	make DESTDIR="${D}" install
 
 	dodoc ANNOUNCE-tkman.txt CHANGES README-tkman manual.html
 

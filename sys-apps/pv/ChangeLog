@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.77 2014/01/25 03:31:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.78 2014/01/25 03:33:52 jer Exp $
+
+  25 Jan 2014; Jeroen Roovers <jer@gentoo.org> pv-1.5.1.ebuild:
+  Switch to bzip compression for SRC_URI.
 
 *pv-1.5.1 (25 Jan 2014)
 

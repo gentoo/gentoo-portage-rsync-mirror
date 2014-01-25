@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.13.ebuild,v 1.3 2012/06/07 17:25:47 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeier/libgeier-0.13.ebuild,v 1.4 2014/01/25 03:52:38 creffett Exp $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="Libgeier provides a library to access the german digital tax project ELSTER."
 HOMEPAGE="http://www.taxbird.de/"
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	dev-lang/swig"
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README || die
+	emake DESTDIR="${D}" install
+	dodoc README
 	find "${D}" -name '*.la' -delete
 }

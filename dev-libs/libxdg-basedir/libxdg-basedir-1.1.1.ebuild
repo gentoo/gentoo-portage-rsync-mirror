@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.1.1.ebuild,v 1.12 2013/08/27 20:29:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.1.1.ebuild,v 1.13 2014/01/25 03:55:12 creffett Exp $
 
-EAPI=2
+EAPI=5
 inherit libtool
 
 DESCRIPTION="Small library to access XDG Base Directories Specification paths"
@@ -32,12 +32,12 @@ src_compile() {
 	emake || die
 
 	if use doc; then
-		emake doxygen-doc || die
+		emake doxygen-doc
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	if use doc; then
 		dohtml -r doc/html/*

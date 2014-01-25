@@ -1,8 +1,8 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Python Imaging Library
 EAPI=5
-IUSE=tk
+IUSE=jpeg tk
 KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris
-RDEPEND=|| ( dev-python/pillow[tk?] dev-python/imaging[tk?] )
+RDEPEND=|| ( dev-python/pillow[jpeg?,tk?] dev-python/imaging[jpeg?,tk?] )
 SLOT=0
-_md5_=aeb7908554b9c6a19146393eaa3858e1
+_md5_=7baab5c08eed327148c108c89056ef68

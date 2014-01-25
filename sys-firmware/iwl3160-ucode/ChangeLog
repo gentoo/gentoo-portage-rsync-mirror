@@ -1,0 +1,11 @@
+# ChangeLog for sys-firmware/iwl3160-ucode
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3160-ucode/ChangeLog,v 1.1 2014/01/25 03:35:32 gienah Exp $
+
+*iwl3160-ucode-22.15.8.0 (25 Jan 2014)
+*iwl3160-ucode-22.1.7.0 (25 Jan 2014)
+
+  25 Jan 2014; Mark Wright <gienah@gentoo.org> +iwl3160-ucode-22.1.7.0.ebuild,
+  +iwl3160-ucode-22.15.8.0.ebuild, +metadata.xml:
+  Add iwl3160-ucode, which is kept in sync with iwl7260-ucode. Thanks for Thomas
+  Kear for initial ebuild and testing, bug #489714.
