@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.101 2013/12/24 14:54:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.102 2014/01/25 04:07:04 floppym Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -523,6 +523,28 @@ enable_cmake-utils_src_compile() {
 	cmake-utils_src_make "$@"
 }
 
+_ninjaopts_from_makeopts() {
+	if [[ ${NINJAOPTS+set} == set ]]; then
+		return 0
+	fi
+	local ninjaopts=()
+	set -- ${MAKEOPTS}
+	while (( $# )); do
+		case $1 in
+			-j|-l|-k)
+				ninjaopts+=( $1 $2 )
+				shift 2
+				;;
+			-j*|-l*|-k*)
+				ninjaopts+=( $1 )
+				shift 1
+				;;
+			*) shift ;;
+		esac
+	done
+	export NINJAOPTS="${ninjaopts[*]}"
+}
+
 # @FUNCTION: ninja_src_make
 # @INTERNAL
 # @DESCRIPTION:
@@ -530,14 +552,18 @@ enable_cmake-utils_src_compile() {
 ninja_src_make() {
 	debug-print-function ${FUNCNAME} "$@"
 
-		[[ -e build.ninja ]] || die "Makefile not found. Error during configure stage."
+	[[ -e build.ninja ]] || die "build.ninja not found. Error during configure stage."
 
-		if [[ "${CMAKE_VERBOSE}" != "OFF" ]]; then
-		# TODO: get load average from portage (-l option)
-		ninja ${MAKEOPTS} -v "$@" || die
+	_ninjaopts_from_makeopts
+
+	if [[ "${CMAKE_VERBOSE}" != "OFF" ]]; then
+		set -- ninja ${NINJAOPTS} -v "$@"
 	else
-		ninja "$@" || die
+		set -- ninja ${NINJAOPTS} "$@"
 	fi
+
+	echo "$@"
+	"$@" || die
 }
 
 # @FUNCTION: emake_src_make
@@ -547,11 +573,11 @@ ninja_src_make() {
 emake_src_make() {
 	debug-print-function ${FUNCNAME} "$@"
 
-		[[ -e Makefile ]] || die "Makefile not found. Error during configure stage."
+	[[ -e Makefile ]] || die "Makefile not found. Error during configure stage."
 
-		if [[ "${CMAKE_VERBOSE}" != "OFF" ]]; then
+	if [[ "${CMAKE_VERBOSE}" != "OFF" ]]; then
 		emake VERBOSE=1 "$@" || die
-		else
+	else
 		emake "$@" || die
 	fi
 

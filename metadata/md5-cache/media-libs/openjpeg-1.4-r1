@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=media-libs/lcms:2 media-libs/libpng:0 media-libs/tiff:0 sys-libs/zlib
 SLOT=0
 SRC_URI=http://openjpeg.googlecode.com/files/openjpeg_v1_4_sources_r697.tgz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	0ff4fbaea3a849e97cb3e0b87ab99136	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=7545c511f08bd727ef7a4612f7abf8fb
