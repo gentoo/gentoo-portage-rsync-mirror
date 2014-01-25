@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/Unicode-EastAsianWidth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.35 2014/01/25 10:30:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-EastAsianWidth/ChangeLog,v 1.37 2014/01/25 10:45:42 zlogene Exp $
+
+  25 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Unicode-EastAsianWidth-1.320.0.ebuild, Unicode-EastAsianWidth-1.330.0.ebuild:
+  sparc stable wrt bug #449622; Drop old.
+
+  25 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  Unicode-EastAsianWidth-1.330.0.ebuild:
+  ppc64 stable wrt bug #449622
 
   25 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
   Unicode-EastAsianWidth-1.330.0.ebuild:

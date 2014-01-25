@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.413 2014/01/20 05:00:28 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.414 2014/01/25 10:31:49 vapier Exp $
+
+  25 Jan 2014; Mike Frysinger <vapier@gentoo.org> perl-5.16.3.ebuild:
+  Mark m68k/s390/sh stable.
 
   20 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> perl-5.16.3.ebuild:
   Downgrade m68k/s390/sh to ~arch

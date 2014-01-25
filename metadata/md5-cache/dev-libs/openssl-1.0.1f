@@ -11,4 +11,4 @@ RDEPEND=static-libs? ( gmp? ( dev-libs/gmp[static-libs(+)] ) zlib? ( sys-libs/zl
 SLOT=0
 SRC_URI=mirror://openssl/source/openssl-1.0.1f.tar.gz http://cvs.pld-linux.org/cgi-bin/cvsweb.cgi/packages/openssl/openssl-c_rehash.sh?rev=1.7 -> openssl-c_rehash.sh.1.7
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=cf154c2cd17d69a732b360ae02285cbb
+_md5_=0f000cf666751168d1dfc82bf1df5c1f

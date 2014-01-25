@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.37 2014/01/08 23:46:46 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.38 2014/01/25 10:41:03 scarabeus Exp $
 
 EAPI=5
 
@@ -166,7 +166,7 @@ src_configure() {
 	waf-utils_src_configure \
 		--disable-build-date \
 		--disable-debug-build \
-		--disable-sdl \
+		--disable-sdl1 \
 		--disable-sdl2 \
 		--disable-rsound \
 		$(use_enable encode encoding) \

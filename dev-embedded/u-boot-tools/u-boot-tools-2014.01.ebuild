@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2012.10.ebuild,v 1.4 2012/11/10 07:13:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/u-boot-tools-2014.01.ebuild,v 1.1 2014/01/25 10:33:19 radhermit Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 MY_P="u-boot-${PV/_/-}"
 DESCRIPTION="utilities for working with Das U-Boot"
@@ -19,11 +19,10 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	sed -i -e "s:-g ::" tools/Makefile || die
-	# This has been fixed upstream after 2012.10
-	sed -i '/include.*config.h/d' tools/env/fw_env.[ch] || die
+	sed -i "s:-g ::" tools/Makefile || die
 	# Make sure we find local u-boot headers first #429302
 	ln -s ../include/image.h tools/ || die
+	epatch "${FILESDIR}"/u-boot-no-config.h.patch
 }
 
 src_compile() {

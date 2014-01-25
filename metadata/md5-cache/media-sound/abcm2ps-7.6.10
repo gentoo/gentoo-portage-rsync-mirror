@@ -8,5 +8,5 @@ KEYWORDS=~amd64 ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=pango? ( x11-libs/pango media-libs/freetype:2 )
 SLOT=0
-SRC_URI=http://moinejf.free.fr/abcm2ps-7.5.8.tar.gz http://moinejf.free.fr/transpose_abc.pl
-_md5_=eafb96e0ea6c4455b78a69bd039444bf
+SRC_URI=http://moinejf.free.fr/abcm2ps-7.6.10.tar.gz http://moinejf.free.fr/transpose_abc.pl
+_md5_=7cc7335fa3b6816e44c9e2c06ce58c6a

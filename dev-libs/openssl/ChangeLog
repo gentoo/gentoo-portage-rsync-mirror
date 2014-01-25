@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.509 2014/01/21 00:01:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.510 2014/01/25 10:52:23 vapier Exp $
+
+  25 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/openssl-1.0.1f-revert-alpha-perl-generation.patch,
+  openssl-1.0.1f.ebuild:
+  Fix build for alpha systems #499086 by Matt Turner.
 
   21 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> openssl-1.0.1f.ebuild:
   x86 stable wrt security bug #497838
