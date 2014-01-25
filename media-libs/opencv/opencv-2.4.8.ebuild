@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.8.ebuild,v 1.1 2014/01/24 21:16:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.8.ebuild,v 1.2 2014/01/24 23:57:27 dilfridge Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -127,7 +127,6 @@ src_configure() {
 		$(cmake-utils_use_with png)
 		$(cmake-utils_use_build python opencv_python)
 		-DWITH_PVAPI=OFF					# not packaged
-		$(cmake-utils_use_with qt4 QT)
 		-DWITH_QUICKTIME=OFF
 		$(cmake-utils_use_with threads TBB)
 		$(cmake-utils_use_with tiff)
@@ -158,6 +157,12 @@ src_configure() {
 		-DENABLE_SSE42=OFF
 		-DOPENCV_EXTRA_FLAGS_RELEASE=""				# black magic
 	)
+
+	if use qt4; then
+		mycmakeargs+=( "-DWITH_QT=4" )
+	else
+		mycmakeargs+=( "-DWITH_QT=OFF" )
+	fi
 
 	if use cuda; then
 		if [[ "$(gcc-version)" > "4.7" ]]; then

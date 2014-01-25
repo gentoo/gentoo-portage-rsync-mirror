@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.105 2014/01/24 21:16:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.106 2014/01/24 23:57:27 dilfridge Exp $
+
+  24 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.8.ebuild:
+  Only enable Qt4 so far, bug 483648
 
 *opencv-2.4.8 (24 Jan 2014)
 
