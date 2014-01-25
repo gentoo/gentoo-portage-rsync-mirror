@@ -1593,6 +1593,28 @@ dev-libs/ecore:tslib - Build with tslib support for touchscreen devices.
 dev-libs/ecore:wayland - Add support for dev-libs/wayland
 dev-libs/ecore:xprint - Enable X11 Xprint support
 dev-libs/eeze:utilities - Install some test utilities for mount/umount support in eeze
+dev-libs/efl:audio - Enable audio support.
+dev-libs/efl:bmp - Enable WBMP image loader.
+dev-libs/efl:drm - Enable DRM engine.
+dev-libs/efl:eet - Enable Eet image loader.
+dev-libs/efl:egl - Enable EGL rendering.
+dev-libs/efl:fribidi - Enable bidirectional text support.
+dev-libs/efl:gles - Enable the OpenGL ES GL implementation.
+dev-libs/efl:glib - Enable dev-libs/glib support.
+dev-libs/efl:harfbuzz - Enable complex text shaping and layout support.
+dev-libs/efl:ibus - Enable Intelligent Input Bus.
+dev-libs/efl:ico - Enable Ico image loader.
+dev-libs/efl:jp2k - Enable JPEG 2000 image loader.
+dev-libs/efl:physics - Enable Bullet physics effects and support.
+dev-libs/efl:pixman - Enable PixMan for software rendering.
+dev-libs/efl:ppm - Enable PMAPS image loader.
+dev-libs/efl:psd - Enable PSD image loader.
+dev-libs/efl:scim - Enable Smart Common Input Method.
+dev-libs/efl:tga - Enable Tga image loader.
+dev-libs/efl:tslib - Enable x11-libs/tslib for touchscreen events.
+dev-libs/efl:v4l2 - Enable Video4Linux2 support.
+dev-libs/efl:webp - Enable WebP image loader.
+dev-libs/efl:xim - Enable X Input Method.
 dev-libs/eina:default-mempool - By default use system's allocator (pass-through) instead of custom choice for Eina's own data structures.
 dev-libs/eina:mempool-buddy - Compile "buddy" memory pool allocation.
 dev-libs/eina:mempool-chained-pool - Compile "chained-pool" memory pool allocation.

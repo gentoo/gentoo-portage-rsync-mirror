@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1130 2014/01/25 04:07:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1131 2014/01/25 15:23:54 hd_brummy Exp $
+
+  25 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  major changes depend on wrt bug 497056, vdr-plugin-2.eclass
 
   25 Jan 2014; Mike Gilbert <floppym@gentoo.org> cmake-utils.eclass:
   Improve support for ninja, bug 490280.
