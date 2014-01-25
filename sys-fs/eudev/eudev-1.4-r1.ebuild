@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.4.ebuild,v 1.1 2014/01/15 00:09:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.4-r1.ebuild,v 1.1 2014/01/25 17:27:51 blueness Exp $
 
 EAPI="5"
 
@@ -204,6 +204,9 @@ multilib_src_install_all()
 
 	# drop distributed hwdb files, they override sys-apps/hwids
 	rm -f "${ED}"/etc/udev/hwdb.d/*.hwdb
+
+	insinto /lib/udev/rules.d
+	doins "${FILESDIR}"/40-gentoo.rules
 }
 
 pkg_preinst()

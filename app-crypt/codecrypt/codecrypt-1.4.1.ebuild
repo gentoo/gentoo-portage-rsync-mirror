@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/codecrypt/codecrypt-1.4.ebuild,v 1.1 2013/10/02 00:26:51 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/codecrypt/codecrypt-1.4.1.ebuild,v 1.1 2014/01/25 17:18:28 yac Exp $
 
 EAPI=5
 

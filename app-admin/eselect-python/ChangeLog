@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.83 2014/01/19 15:59:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.84 2014/01/25 17:05:36 floppym Exp $
+
+*eselect-python-20140125 (25 Jan 2014)
+
+  25 Jan 2014; Mike Gilbert <floppym@gentoo.org>
+  +eselect-python-20140125.ebuild:
+  Version bump. Includes fix for gentoo-prefix.
 
   19 Jan 2014; Mike Gilbert <floppym@gentoo.org> eselect-python-20140115.ebuild,
   eselect-python-99999999.ebuild:

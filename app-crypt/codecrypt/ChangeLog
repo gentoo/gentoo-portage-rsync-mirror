@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/codecrypt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/codecrypt/ChangeLog,v 1.5 2013/10/02 00:28:39 yac Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/codecrypt/ChangeLog,v 1.6 2014/01/25 17:18:28 yac Exp $
+
+*codecrypt-1.4.1 (25 Jan 2014)
+
+  25 Jan 2014; Jan Matejka <yac@gentoo.org> +codecrypt-1.4.1.ebuild,
+  -codecrypt-1.4.ebuild:
+  bump 1.4 -> 1.4.1
 
   02 Oct 2013; Jan Matejka <yac@gentoo.org> -codecrypt-1.2.ebuild:
   remove codecrypt-1.2
