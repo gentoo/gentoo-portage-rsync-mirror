@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/urwid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.63 2014/01/05 02:08:38 yac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.64 2014/01/25 08:30:42 radhermit Exp $
+
+*urwid-1.1.2 (25 Jan 2014)
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> +urwid-1.1.2.ebuild:
+  Version bump.
 
   05 Jan 2014; Jan Matejka <yac@gentoo.org> urwid-1.0.2.ebuild:
   <1.1 doesn't work with python > 3.2
