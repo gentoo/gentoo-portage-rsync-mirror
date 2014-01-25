@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/jaaa
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.15 2012/09/07 22:25:14 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.16 2014/01/25 19:21:32 radhermit Exp $
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> jaaa-0.6.0.ebuild:
+  Update HOMEPAGE, SRC_URI, and bump to EAPI 5.
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

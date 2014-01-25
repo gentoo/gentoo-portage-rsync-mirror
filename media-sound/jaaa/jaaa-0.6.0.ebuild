@@ -1,13 +1,13 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/jaaa-0.6.0.ebuild,v 1.2 2011/03/28 15:34:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/jaaa-0.6.0.ebuild,v 1.3 2014/01/25 19:21:32 radhermit Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="The JACK and ALSA Audio Analyser is an audio signal generator and spectrum analyser"
-HOMEPAGE="http://www.kokkinizita.net/linuxaudio"
-SRC_URI="http://www.kokkinizita.net/linuxaudio/downloads/${P}.tar.bz2"
+HOMEPAGE="http://kokkinizita.linuxaudio.org/linuxaudio/"
+SRC_URI="http://kokkinizita.linuxaudio.org/linuxaudio/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,10 +28,10 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC CXX
-	emake PREFIX=/usr || die
+	emake PREFIX=/usr
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install || die
+	emake DESTDIR="${D}" PREFIX=/usr install
 	dodoc AUTHORS README
 }
