@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.38 2014/01/25 10:41:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.39 2014/01/25 13:29:24 scarabeus Exp $
 
 EAPI=5
 
@@ -79,7 +79,7 @@ RDEPEND+="
 	jpeg? ( virtual/jpeg )
 	ladspa? ( media-libs/ladspa-sdk )
 	libass? (
-		>=media-libs/libass-0.9.10[enca?,fontconfig]
+		>=media-libs/libass-0.9.10:=[enca?,fontconfig]
 		virtual/ttf-fonts
 	)
 	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
