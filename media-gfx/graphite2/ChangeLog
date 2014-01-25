@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.63 2014/01/20 19:21:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.64 2014/01/25 21:55:35 scarabeus Exp $
+
+*graphite2-1.2.4 (25 Jan 2014)
+
+  25 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org> +graphite2-1.2.4.ebuild:
+  Version bump to 1.2.4 release.
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> graphite2-1.2.1.ebuild:
   Add s390 love #469982.

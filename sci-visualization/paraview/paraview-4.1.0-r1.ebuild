@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0.ebuild,v 1.1 2014/01/18 01:25:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r1.ebuild,v 1.1 2014/01/25 21:57:09 hasufell Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )
 
 RDEPEND="
 	dev-libs/expat
+	dev-libs/jsoncpp
 	dev-libs/libxml2:2
 	dev-libs/protobuf
 	media-libs/freetype
@@ -148,17 +149,18 @@ src_configure() {
 		-DVTK_USE_SYSTEM_GL2PS=ON
 		-DVTK_USE_SYSTEM_HDF5=ON
 		-DVTK_USE_SYSTEM_JPEG=ON
+		-DVTK_USE_SYSTEM_JSONCPP=ON
 		-DVTK_USE_SYSTEM_LIBXML2=ON
+		-DVTK_USE_SYSTEM_NETCDF=ON
 		-DVTK_USE_SYSTEM_OGGTHEORA=ON
 		-DVTK_USE_SYSTEM_PNG=ON
 		-DVTK_USE_SYSTEM_PROTOBUF=ON
 		-DVTK_USE_SYSTEM_TIFF=ON
-		-DVTK_USE_SYSTEM_NETCDF=ON
 		-DVTK_USE_SYSTEM_XDMF2=OFF
 		-DVTK_USE_SYSTEM_ZLIB=ON
 		-DPARAVIEW_USE_SYSTEM_MPI4PY=ON
-		-DPARAVIEW_USE_SYSTEM_ZOPE=ON
-		-DPARAVIEW_USE_SYSTEM_TWISTED=ON
+		-DVTK_USE_SYSTEM_ZOPE=ON
+		-DVTK_USE_SYSTEM_TWISTED=ON
 		-DCMAKE_VERBOSE_MAKEFILE=ON
 		-DCMAKE_COLOR_MAKEFILE=TRUE
 		-DVTK_USE_OFFSCREEN=TRUE

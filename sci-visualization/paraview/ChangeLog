@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.76 2014/01/18 01:25:24 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.77 2014/01/25 21:57:09 hasufell Exp $
+
+*paraview-4.1.0-r1 (25 Jan 2014)
+
+  25 Jan 2014; Julian Ospald <hasufell@gentoo.org> -paraview-4.1.0.ebuild,
+  +paraview-4.1.0-r1.ebuild:
+  fix random sandbox violations wrt #499020
 
 *paraview-4.1.0 (18 Jan 2014)
 
