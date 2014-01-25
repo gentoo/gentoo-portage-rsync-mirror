@@ -1,6 +1,9 @@
 # ChangeLog for app-office/passepartout
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.24 2013/12/24 12:55:27 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/passepartout/ChangeLog,v 1.25 2014/01/25 02:29:16 creffett Exp $
+
+  25 Jan 2014; Chris Reffett <creffett@gentoo.org> -passepartout-0.7.0.ebuild:
+  Remove old
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> passepartout-0.7.0-r1.ebuild:
   Stable for x86, wrt bug #491934
