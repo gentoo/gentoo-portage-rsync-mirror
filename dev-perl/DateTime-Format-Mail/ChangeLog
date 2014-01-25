@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DateTime-Format-Mail
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Mail/ChangeLog,v 1.24 2013/09/12 14:56:10 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Mail/ChangeLog,v 1.25 2014/01/25 20:38:47 zlogene Exp $
+
+  25 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -DateTime-Format-Mail-0.300.100.ebuild,
+  DateTime-Format-Mail-0.300.100-r1.ebuild:
+  alpha/amd64/arm/ia64/ppc/ppc64/sparc/x86 stable wrt bug #492118; Drop old.
 
 *DateTime-Format-Mail-0.300.100-r1 (12 Sep 2013)
 
