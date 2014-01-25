@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1247 2014/01/21 15:10:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1248 2014/01/25 18:04:32 mpagano Exp $
+
+*gentoo-sources-3.12.9 (25 Jan 2014)
+
+  25 Jan 2014; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.12.9.ebuild:
+  Linux patch 3.12.9
 
 *gentoo-sources-3.13.0-r1 (21 Jan 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r12.ebuild,v 1.1 2014/01/24 12:18:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r12.ebuild,v 1.3 2014/01/25 18:30:47 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/jpegsrc.v${PV}.tar.gz
 
 LICENSE="IJG"
 SLOT="62"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE=""
 
 DOCS=""

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.17 2014/01/18 19:51:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.18 2014/01/25 18:12:58 floppym Exp $
+
+*pillow-2.3.0 (25 Jan 2014)
+
+  25 Jan 2014; Mike Gilbert <floppym@gentoo.org> +pillow-2.3.0.ebuild:
+  Version bump. Require jpeg for tests, bug 486748.
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pillow-2.0.0-r1.ebuild:
   Stable for alpha, wrt bug #486326
