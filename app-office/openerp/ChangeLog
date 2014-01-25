@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openerp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/ChangeLog,v 1.14 2013/04/11 03:22:34 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openerp/ChangeLog,v 1.15 2014/01/25 14:16:09 dlan Exp $
+
+*openerp-8.0.20140125 (25 Jan 2014)
+*openerp-7.0.20140125 (25 Jan 2014)
+
+  25 Jan 2014; Yixun Lan <dlan@gentoo.org> +openerp-7.0.20140125.ebuild,
+  +openerp-8.0.20140125.ebuild, metadata.xml:
+  version bump, stable and development
 
   11 Apr 2013; Patrick Lauer <patrick@gentoo.org>
   openerp-7.0.20130219-r5.ebuild:

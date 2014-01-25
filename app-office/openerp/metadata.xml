@@ -5,4 +5,9 @@
 		<email>patrick@gentoo.org</email>
 		<name>Patrick Lauer</name>
 	</maintainer>
+	<maintainer>
+		<email>dlan@gentoo.org</email>
+		<name>Yixun Lan</name>
+		<description>Co Maintainer</description>
+	</maintainer>
 </pkgmetadata>
