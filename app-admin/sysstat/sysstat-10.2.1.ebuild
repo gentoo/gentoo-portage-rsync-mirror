@@ -1,9 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.0.5.ebuild,v 1.9 2013/04/02 19:34:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.2.1.ebuild,v 1.1 2014/01/25 15:47:19 jer Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="System performance tools for Linux"
@@ -12,17 +11,8 @@ SRC_URI="${HOMEPAGE}${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="cron debug +doc isag nls lm_sensors"
-
-SYSSTAT_LINGUAS="
-	af cs da de eo es eu fi fr hr id it ja ky lv mt nb nl nn pl pt pt_BR ro ru
-	sk sr sv uk vi zh_CN zh_TW
-"
-
-for SYSSTAT_LINGUA in ${SYSSTAT_LINGUAS}; do
-	IUSE="${IUSE} linguas_${SYSSTAT_LINGUA}"
-done
 
 RDEPEND="
 	cron? ( sys-process/cronbase )
@@ -40,21 +30,17 @@ DEPEND="
 "
 
 src_prepare() {
-	local po_count li_count lingua NLSDIR="${S}/nls"
-
-	count() { echo ${#}; }
-	po_count=$(count ${NLSDIR}/*.po)
-	li_count=$(count ${SYSSTAT_LINGUAS})
-	[[ ${po_count} = ${li_count} ]] \
-		|| die "Number of LINGUAS does not match number of .po files"
-	unset count
-
-	einfo "Keeping these locales: ${LINGUAS}."
-	for lingua in ${SYSSTAT_LINGUAS}; do
-		if ! use linguas_${lingua}; then
-			rm -f "${NLSDIR}/${lingua}.po" || die
-		fi
-	done
+	if use nls; then
+		strip-linguas -i nls/
+		local lingua pofile
+		for pofile in nls/*.po; do
+			lingua=${pofile/nls\/}
+			lingua=${lingua/.po}
+			if ! has ${lingua} ${LINGUAS}; then
+				rm "nls/${lingua}.po" || die
+			fi
+		done
+	fi
 	epatch "${FILESDIR}"/${PN}-10.0.4-flags.patch
 }
 
@@ -64,6 +50,7 @@ src_configure() {
 		conf_dir=/etc \
 		rcdir=Gentoo-does-not-use-rc.d \
 		econf \
+			--enable-copy-only \
 			$(use_enable cron install-cron) \
 			$(use_enable debug debuginfo) \
 			$(use_enable doc documentation ) \

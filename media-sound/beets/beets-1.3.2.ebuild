@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.3.2.ebuild,v 1.1 2014/01/12 13:16:19 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beets/beets-1.3.2.ebuild,v 1.2 2014/01/25 15:59:21 kensington Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-python/munkres[${PYTHON_USEDEP}]
 	>=dev-python/python-musicbrainz-ngs-0.4[${PYTHON_USEDEP}]
 	dev-python/unidecode[${PYTHON_USEDEP}]
-	>=media-libs/mutagen-0.22[${PYTHON_USEDEP}]
+	>=media-libs/mutagen-1.22[${PYTHON_USEDEP}]
 	dev-python/pyyaml[${PYTHON_USEDEP}]
 	beatport? ( dev-python/requests[${PYTHON_USEDEP}] )
 	bpd? ( dev-python/bluelet[${PYTHON_USEDEP}] )
