@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/xz-java
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.3 2012/06/11 13:06:25 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xz-java/ChangeLog,v 1.4 2014/01/25 06:51:44 radhermit Exp $
+
+*xz-java-1.4 (25 Jan 2014)
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> +xz-java-1.4.ebuild:
+  Version bump.
 
   11 Jun 2012; Johannes Huber <johu@gentoo.org> xz-java-1.0.ebuild:
   Stable for x86, wrt bug #417909

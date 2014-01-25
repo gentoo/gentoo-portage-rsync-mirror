@@ -1,6 +1,15 @@
 # ChangeLog for app-vim/tagbar
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/ChangeLog,v 1.6 2013/12/07 10:51:27 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/ChangeLog,v 1.8 2014/01/25 06:34:46 radhermit Exp $
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> -tagbar-2.2.ebuild,
+  -tagbar-2.4.1.ebuild:
+  Remove old.
+
+*tagbar-2.6.1 (25 Jan 2014)
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> +tagbar-2.6.1.ebuild:
+  Version bump.
 
 *tagbar-2.6 (07 Dec 2013)
 
