@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst prepare
+DEPEND=sys-devel/bison sys-devel/flex pam? ( virtual/pam ) virtual/pkgconfig
+DESCRIPTION=Administrative interface for the grsecurity Role Based Access Control system
+EAPI=5
+HOMEPAGE=http://www.grsecurity.net/
+IUSE=pam
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~blueness/hardened-sources/gradm/gradm-3.0-201401231926.tar.gz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=55728c72b4440858839e52fb7f700795
