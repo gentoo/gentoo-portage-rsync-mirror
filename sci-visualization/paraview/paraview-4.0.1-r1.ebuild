@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.0.1-r1.ebuild,v 1.2 2013/08/03 09:45:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.0.1-r1.ebuild,v 1.3 2014/01/25 22:57:48 hasufell Exp $
 
 EAPI=5
 
@@ -33,7 +33,8 @@ RDEPEND="
 	media-libs/libtheora
 	media-libs/tiff
 	sci-libs/hdf5[mpi=]
-	~sci-libs/netcdf-4.1.3[cxx,hdf5]
+	|| ( ( >=sci-libs/netcdf-4.2[hdf5] >=sci-libs/netcdf-cxx-4.2:3 )
+		~sci-libs/netcdf-4.1.3[cxx,hdf5] )
 	sys-libs/zlib
 	virtual/jpeg
 	virtual/opengl
