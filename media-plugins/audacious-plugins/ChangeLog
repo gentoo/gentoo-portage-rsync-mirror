@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/audacious-plugins
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.267 2013/12/26 14:57:20 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.268 2014/01/24 23:28:43 jer Exp $
+
+  24 Jan 2014; Jeroen Roovers <jer@gentoo.org> audacious-plugins-3.4.1.ebuild:
+  Stable for HPPA (bug #490463).
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> audacious-plugins-3.4.1.ebuild:
   add ~arm, bug #489352
