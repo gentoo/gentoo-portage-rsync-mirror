@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/libmikmod media-libs/libogg >=media-libs/libpng-1.4 media-libs/libsdl[X,audio,joystick,video] media-libs/libvorbis media-libs/sdl-image[png] sys-libs/zlib opengl? ( virtual/opengl )
 SLOT=0
 SRC_URI=mirror://sourceforge/sc2/uqm-0.7.0-source.tgz mirror://sourceforge/sc2/uqm-0.7.0-content.uqm music? ( mirror://sourceforge/sc2/uqm-0.7.0-3domusic.uqm ) voice? ( mirror://sourceforge/sc2/uqm-0.7.0-voice.uqm ) remix? ( mirror://sourceforge/sc2/uqm-remix-disc1.uqm mirror://sourceforge/sc2/uqm-remix-disc2.uqm mirror://sourceforge/sc2/uqm-remix-disc3.uqm )
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0fb7637597e0869f6c8be79b11d0135a	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	4ec77bd42c2d1f20bb686dd0d63b9fb9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=bcf70f09c29b5a825c8192cc620cc2cf

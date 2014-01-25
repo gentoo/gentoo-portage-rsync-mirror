@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.154 2013/04/08 07:36:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.155 2014/01/25 17:44:39 hasufell Exp $
 
 # devlist: games@gentoo.org
 #
@@ -45,6 +45,11 @@ egamesconf() {
 		if grep -q -s disable-silent-rules "${ECONF_SOURCE:-.}"/configure ; then
 			_gamesconf="--disable-silent-rules"
 		fi
+	fi
+
+	# bug 493954
+	if grep -q -s datarootdir "${ECONF_SOURCE:-.}"/configure ; then
+		_gamesconf="${_gamesconf} --datarootdir=/usr/share"
 	fi
 
 	econf \
