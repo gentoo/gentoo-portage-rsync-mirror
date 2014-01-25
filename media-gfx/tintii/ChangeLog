@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/tintii
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tintii/ChangeLog,v 1.4 2013/10/06 06:44:08 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tintii/ChangeLog,v 1.6 2014/01/25 09:26:46 radhermit Exp $
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> -tintii-2.5.3.ebuild,
+  -tintii-2.6.1.ebuild, -tintii-2.7.0.ebuild:
+  Remove old.
+
+*tintii-2.8.2 (25 Jan 2014)
+
+  25 Jan 2014; Tim Harder <radhermit@gentoo.org> +tintii-2.8.2.ebuild:
+  Version bump.
 
 *tintii-2.8.0 (06 Oct 2013)
 

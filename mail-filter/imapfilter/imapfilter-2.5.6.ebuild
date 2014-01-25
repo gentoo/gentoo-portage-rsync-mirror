@@ -1,24 +1,25 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-2.5.3.ebuild,v 1.4 2012/09/18 12:11:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/imapfilter-2.5.6.ebuild,v 1.1 2014/01/25 09:30:18 radhermit Exp $
 
-EAPI=4
+EAPI=5
 
 inherit toolchain-funcs
 
 DESCRIPTION="An IMAP mail filtering utility"
 HOMEPAGE="http://imapfilter.hellug.gr"
-SRC_URI="mirror://github/lefcha/imapfilter/${P}.tar.gz"
+SRC_URI="https://github.com/lefcha/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="dev-libs/openssl
 	dev-libs/libpcre
 	>=dev-lang/lua-5.1"
 DEPEND="${RDEPEND}"
+
+DOCS="AUTHORS NEWS README samples/*"
 
 src_prepare() {
 	sed -i -e "/^PREFIX/s:/local::" \
@@ -33,7 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS NEWS README samples/*
+	default
 	doman doc/imapfilter.1 doc/imapfilter_config.5
 }
