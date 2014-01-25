@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.76 2013/09/30 21:24:15 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pv/ChangeLog,v 1.77 2014/01/25 03:31:31 jer Exp $
+
+*pv-1.5.1 (25 Jan 2014)
+
+  25 Jan 2014; Jeroen Roovers <jer@gentoo.org> +pv-1.5.1.ebuild:
+  Version bump.
 
   30 Sep 2013; Jeroen Roovers <jer@gentoo.org> -pv-1.4.6.ebuild:
   Old.

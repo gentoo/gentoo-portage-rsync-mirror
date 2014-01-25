@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.91 2014/01/23 04:00:14 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.92 2014/01/25 03:31:13 gienah Exp $
+
+  25 Jan 2014; Mark Wright <gienah@gentoo.org> linux-firmware-20130728.ebuild,
+  linux-firmware-20131230.ebuild, linux-firmware-99999999.ebuild:
+  Add blockers against iwl3160-ucode, iwl3160-7260-bt-ucode.
 
   23 Jan 2014; Mark Wright <gienah@gentoo.org> linux-firmware-20130728.ebuild,
   linux-firmware-20131230.ebuild, linux-firmware-99999999.ebuild:
