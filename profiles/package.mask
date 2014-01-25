@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15358 2014/01/24 20:42:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15359 2014/01/25 16:16:33 hasufell Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Julian Ospald <hasufell@gentoo.org> (25 Jan 2014)
+# Causes random syndbox violations in unrelated python packages.
+# see https://bugs.gentoo.org/show_bug.cgi?id=499020
+>=sci-visualization/paraview-4.1.0
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Jan 2014)
 # Roll ~arch version back from .so.9 to .so.8 due to too many unresolved issues.

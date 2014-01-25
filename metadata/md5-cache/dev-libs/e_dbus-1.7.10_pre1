@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare unpack
+DEPEND=>=dev-libs/efl-1.8.3 sys-apps/dbus connman? ( >=net-misc/connman-0.75 ) udev? ( sys-power/upower sys-fs/udisks:0 ) doc? ( app-doc/doxygen )
+DESCRIPTION=Enlightenment's (Ecore) integration to DBus
+EAPI=4
+HOMEPAGE=http://www.enlightenment.org/
+IUSE=bluetooth +connman +libnotify ofono static-libs test-binaries +udev nls doc
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD-2
+RDEPEND=>=dev-libs/efl-1.8.3 sys-apps/dbus connman? ( >=net-misc/connman-0.75 ) udev? ( sys-power/upower sys-fs/udisks:0 ) nls? ( sys-devel/gettext )
+SLOT=0
+SRC_URI=http://download.enlightenment.org/pre-releases/efl-1.7.10/e_dbus-1.7.10.tar.bz2 -> e_dbus-1.7.10_pre1.tar.bz2
+_eclasses_=enlightenment	6aee6d669b6c495a4e151bd1bd85e57c	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=62646c6195947333e43e6a6b861deaa7

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.163 2013/08/17 14:26:28 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.164 2014/01/25 16:29:31 jer Exp $
+
+  25 Jan 2014; Jeroen Roovers <jer@gentoo.org> glib-perl-1.301.0.ebuild:
+  Stable for HPPA (bug #495540).
 
 *glib-perl-1.301.0 (17 Aug 2013)
 

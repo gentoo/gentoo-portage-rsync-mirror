@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.320 2014/01/17 20:05:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.321 2014/01/25 16:21:54 hwoarang Exp $
+
+  25 Jan 2014; Markos Chandras <hwoarang@gentoo.org> lighttpd-1.4.34.ebuild:
+  Update Manifest because upstream has changed the tarball after the initial
+  release
 
 *lighttpd-1.4.34 (17 Jan 2014)
 
