@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.494 2014/01/22 06:58:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.495 2014/01/26 10:55:18 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> wine-1.6.1.ebuild:
+  Stable for x86, wrt bug #497962
 
 *wine-1.7.11 (22 Jan 2014)
 

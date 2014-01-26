@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-39.0-r1.ebuild,v 1.3 2014/01/20 16:02:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/emacspeak-39.0-r1.ebuild,v 1.4 2014/01/26 10:56:03 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit subversion
 else
 	SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
-	KEYWORDS="amd64 ppc ~x86"
+	KEYWORDS="amd64 ppc x86"
 fi
 
 DESCRIPTION="the emacspeak audio desktop"

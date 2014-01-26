@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/nitrogen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.22 2014/01/23 12:58:41 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nitrogen/ChangeLog,v 1.23 2014/01/26 10:56:54 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> nitrogen-1.5.2.ebuild:
+  Stable for x86, wrt bug #498940
 
   23 Jan 2014; Chema Alonso <nimiux@gentoo.org> nitrogen-1.5.2.ebuild:
   Stable for amd64 wrt bug #498940
@@ -90,4 +93,3 @@
   20 Oct 2006; David Shakaryan <omp@gentoo.org> +metadata.xml,
   +nitrogen-1.0_rc4.ebuild:
   Initial ebuild by me.
-

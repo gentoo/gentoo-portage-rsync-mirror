@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.138 2014/01/23 12:35:16 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.139 2014/01/26 11:00:43 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> scons-2.3.0.ebuild:
+  Stable for x86, wrt bug #498868
 
   23 Jan 2014; Chema Alonso <nimiux@gentoo.org> scons-2.3.0.ebuild:
   Stable for amd64 wrt bug #498868

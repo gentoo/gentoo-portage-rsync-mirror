@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.9 2014/01/05 11:39:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myspell-r2.eclass,v 1.10 2014/01/26 10:59:07 pinkbyte Exp $
 
 # @ECLASS: aspell-dict.eclass
 # @MAINTAINER:
@@ -9,8 +9,6 @@
 # Tomáš Chvátal <scarabeus@gentoo.org>
 # @BLURB: An eclass to ease the construction of ebuilds for myspell dicts
 # @DESCRIPTION:
-
-inherit base
 
 EXPORT_FUNCTIONS src_unpack src_install
 

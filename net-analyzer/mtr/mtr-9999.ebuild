@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-9999.ebuild,v 1.3 2013/12/05 12:14:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-9999.ebuild,v 1.4 2014/01/26 10:38:45 jer Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic git-r3
@@ -37,7 +37,6 @@ src_unpack() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/0.80-impl-dec.patch \
-		"${FILESDIR}"/0.85-ipv6.patch \
 		"${FILESDIR}"/0.85-gtk.patch
 
 	sed -i -e "/^\s*xver=/s|$.*)|${EGIT_VERSION:0:8}|" Makefile.am || die

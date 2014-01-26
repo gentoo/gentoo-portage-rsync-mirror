@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-whiskermenu-plugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-whiskermenu-plugin/ChangeLog,v 1.15 2014/01/19 19:05:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-whiskermenu-plugin/ChangeLog,v 1.16 2014/01/26 10:59:06 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  xfce4-whiskermenu-plugin-1.2.2.ebuild:
+  Stable for x86, wrt bug #496402
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org>
   xfce4-whiskermenu-plugin-1.2.2.ebuild:

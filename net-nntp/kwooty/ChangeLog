@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/kwooty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/ChangeLog,v 1.44 2014/01/18 18:58:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/ChangeLog,v 1.45 2014/01/26 10:53:13 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kwooty-1.1.0.ebuild:
+  Stable for x86, wrt bug #497678
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> kwooty-1.1.0.ebuild:
   amd64 stable, bug #497678

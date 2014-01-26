@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-3.1.0013-r2.ebuild,v 1.3 2014/01/12 19:53:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-3.1.0013-r2.ebuild,v 1.4 2014/01/26 10:54:00 ago Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="
 
 LICENSE="NVIDIA-r1"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples multilib"
 
 RESTRICT="strip"
