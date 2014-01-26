@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/nagios-check_fail2ban-3.ebuild,v 1.2 2011/05/14 06:28:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_fail2ban/nagios-check_fail2ban-3.ebuild,v 1.3 2014/01/26 02:41:55 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit multilib autotools
 
@@ -29,5 +29,5 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 }

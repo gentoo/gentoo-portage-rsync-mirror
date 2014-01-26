@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_mysql_health/nagios-check_mysql_health-2.1.8.2.ebuild,v 1.1 2013/12/18 07:40:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-check_mysql_health/nagios-check_mysql_health-2.1.8.2.ebuild,v 1.2 2014/01/26 02:59:42 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit multilib autotools
 
