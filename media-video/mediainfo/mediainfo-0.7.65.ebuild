@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.65.ebuild,v 1.2 2014/01/19 16:51:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.65.ebuild,v 1.3 2014/01/26 11:09:05 ago Exp $
 
 EAPI=5
 WX_GTK_VER="2.8"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="curl mms wxwidgets"
 
 RDEPEND="sys-libs/zlib

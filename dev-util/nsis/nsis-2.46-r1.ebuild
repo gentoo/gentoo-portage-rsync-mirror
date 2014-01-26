@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.46-r1.ebuild,v 1.3 2014/01/18 18:59:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.46-r1.ebuild,v 1.4 2014/01/26 11:02:46 ago Exp $
 
 EAPI="5"
 mingw32_variants=$(echo {,i{6,5,4,3}86-{,pc-,w32-,w64-}}mingw32)
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2
 
 LICENSE="ZLIB BZIP2 CPL-1.0"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="bzip2 config-log doc zlib"
 RESTRICT="strip"
 

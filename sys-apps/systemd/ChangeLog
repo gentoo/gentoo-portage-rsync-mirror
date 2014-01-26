@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.213 2014/01/26 09:14:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.214 2014/01/26 11:19:19 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> systemd-208-r2.ebuild:
+  Stable for ia64, wrt bug #487344
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> systemd-208-r2.ebuild:
   Stable for sparc, wrt bug #487344
