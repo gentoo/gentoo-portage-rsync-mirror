@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtopenvg
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopenvg/ChangeLog,v 1.6 2013/11/04 21:31:20 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopenvg/ChangeLog,v 1.7 2014/01/26 18:03:18 pesa Exp $
+
+  26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -qtopenvg-4.8.4.ebuild,
+  metadata.xml:
+  Cleanup.
 
   04 Nov 2013; Agostino Sarubbo <ago@gentoo.org> qtopenvg-4.8.5.ebuild:
   Stable for ppc, wrt bug #488536

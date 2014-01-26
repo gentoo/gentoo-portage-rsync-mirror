@@ -2087,30 +2087,21 @@ dev-qt/qtgui:qt3support - Enable the Qt3Support libraries for Qt4. Note that thi
 dev-qt/qtgui:trace - Build the 'trace' graphicssystem engine which allows to record all drawing operations into a trace buffer. Later it can be replayed with the qttracereplay utility
 dev-qt/qthelp:compat - Build the extra compatibility layer required by a few packages, see http://blog.qt.digia.com/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 dev-qt/qthelp:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtmultimedia:c++0x - Build Qt using the C++11 standard
-dev-qt/qtmultimedia:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-dev-qt/qtopengl:c++0x - Build Qt using the C++11 standard
+dev-qt/qtmultimedia:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtopengl:egl - Use EGL instead of default GLX to manage OpenGL contexts on the desktop
-dev-qt/qtopengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtopengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtopengl:qt3support - Enable the Qt3Support libraries for Qt4
-dev-qt/qtopenvg:c++0x - Build Qt using the C++11 standard
 dev-qt/qtopenvg:exceptions - Build with support for exceptions
 dev-qt/qtopenvg:qt3support - Enable the Qt3Support libraries for Qt4
-dev-qt/qtphonon:c++0x - Build Qt using the C++11 standard
-dev-qt/qtphonon:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtphonon:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtphonon:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
-dev-qt/qtscript:c++0x - Build Qt using the C++11 standard
-dev-qt/qtscript:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-dev-qt/qtsql:c++0x - Build Qt using the C++11 standard
-dev-qt/qtsql:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtscript:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtsql:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtsql:qt3support - Enable the Qt3Support libraries for Qt4
-dev-qt/qtsvg:c++0x - Build Qt using the C++11 standard
-dev-qt/qtsvg:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-dev-qt/qttest:c++0x - Build Qt using the C++11 standard
-dev-qt/qttest:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-dev-qt/qtwebkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/qtsvg:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qttest:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qtwebkit:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtwebkit:gstreamer - Enable HTML5 audio/video support via media-libs/gstreamer
-dev-qt/qtxmlpatterns:c++0x - Build Qt using the C++11 standard
 dev-ruby/barby:cairo - Add support for writing images (PNG, PS, EPS and, if supported, PDF and SVG) using dev-ruby/rcairo. Not available on JRuby.
 dev-ruby/barby:png - Add support for writing PNG images using dev-ruby/chunky_png.
 dev-ruby/barby:prawn - Add support for writing PDF documents using dev-ruby/prawn.

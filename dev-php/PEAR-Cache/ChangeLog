@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Cache
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.45 2012/02/07 16:32:29 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.46 2014/01/26 18:26:02 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Cache-1.5.4-r1.ebuild, PEAR-Cache-1.5.6.ebuild:
+  Remove stable keyword for sh/s390
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Cache-1.5.6.ebuild:
   Stable for HPPA (bug #393705).

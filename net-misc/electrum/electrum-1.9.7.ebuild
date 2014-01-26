@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.9.7.ebuild,v 1.1 2014/01/18 13:55:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.9.7.ebuild,v 1.2 2014/01/26 18:17:39 blueness Exp $
 
 EAPI="5"
 
@@ -28,14 +28,14 @@ for lingua in ${LINGUAS}; do
 done
 
 RDEPEND="
-	dev-python/setuptools
-	>=dev-python/ecdsa-0.9
-	dev-python/slowaes
-	gtk? ( dev-python/pygtk:2 )
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	>=dev-python/ecdsa-0.9[${PYTHON_USEDEP}]
+	dev-python/slowaes[${PYTHON_USEDEP}]
+	gtk? ( dev-python/pygtk:2[${PYTHON_USEDEP}] )
 	qrcode? ( media-gfx/zbar[python] )
 	qt4? (
 		 webkit? ( dev-python/PyQt4[webkit] )
-		 dev-python/PyQt4
+		 dev-python/PyQt4[${PYTHON_USEDEP}]
 		 )"
 
 S=${WORKDIR}/${MY_P}

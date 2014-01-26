@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.8.1.ebuild,v 1.1 2013/08/14 06:46:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/electrum-1.8.1.ebuild,v 1.2 2014/01/26 18:17:39 blueness Exp $
 
 EAPI="5"
 
@@ -27,11 +27,11 @@ done
 unset X
 
 RDEPEND="
-	dev-python/setuptools
-	dev-python/ecdsa
-	dev-python/slowaes
-	gtk? ( dev-python/pygtk:2 )
-	qt4? ( dev-python/PyQt4 )"
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/ecdsa[${PYTHON_USEDEP}]
+	dev-python/slowaes[${PYTHON_USEDEP}]
+	gtk? ( dev-python/pygtk:2[${PYTHON_USEDEP}] )
+	qt4? ( dev-python/PyQt4[${PYTHON_USEDEP}] )"
 
 S=${WORKDIR}/${MY_P}
 

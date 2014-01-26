@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-File_Passwd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Passwd/ChangeLog,v 1.24 2012/06/09 14:45:24 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-File_Passwd/ChangeLog,v 1.25 2014/01/26 18:30:14 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-File_Passwd-1.1.7-r1.ebuild:
+  Removing stable keyword for sh/s390
 
   09 Jun 2012; Matti Bickel <mabi@gentoo.org> -PEAR-File_Passwd-1.1.6.ebuild:
   remove old
@@ -102,4 +106,3 @@
   25 Feb 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-File_Passwd-1.1.6.ebuild:
   Initial ebuild.
-

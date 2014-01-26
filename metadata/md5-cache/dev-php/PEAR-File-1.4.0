@@ -3,10 +3,10 @@ DEPEND=dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Common file and directory routines
 EAPI=2
 HOMEPAGE=http://pear.php.net/File
-KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86
+KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86
 LICENSE=PHP-3
 RDEPEND=|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 ) dev-lang/php >=dev-php/pear-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/File-1.4.0.tgz
 _eclasses_=multilib	fac675dcccf94392371a6abee62d909f	php-pear-r1	c984187b1bfa4f9c980f68a3682211d2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=12707bfdf7365c87327ec47c1274b1af
+_md5_=a1122ceb3120e16196ca6dbf0f98671a

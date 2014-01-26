@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTTP_Request
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request/ChangeLog,v 1.50 2012/03/18 19:31:16 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request/ChangeLog,v 1.51 2014/01/26 18:31:04 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-HTTP_Request-1.4.1.ebuild, PEAR-HTTP_Request-1.4.2.ebuild,
+  PEAR-HTTP_Request-1.4.4.ebuild:
+  Removing stable keyword for sh/s390
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org>
   PEAR-HTTP_Request-1.4.4.ebuild:
@@ -217,4 +222,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-HTTP_Request-1.2.4.ebuild:
   Initial ebuild for the HTTP_Request PEAR package.
-

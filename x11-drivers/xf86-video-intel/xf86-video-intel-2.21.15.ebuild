@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.21.15.ebuild,v 1.4 2013/11/08 19:02:54 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.21.15.ebuild,v 1.5 2014/01/26 18:03:06 chithanh Exp $
 
 EAPI=5
 
@@ -41,6 +41,8 @@ src_prepare() {
 	# wrong variable name, fix configure directly to avoid autoreconf
 	# see bug #490342
 	sed -e "s/DRI_CFLAGS/DRI1_CFLAGS/g" -i configure
+	# see bug #496682
+	epatch "${FILESDIR}/${PN}-2.21.15-handle-updates-to-DamageUnregister-API.patch"
 	xorg-2_src_prepare
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/pear
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.39 2012/11/18 17:41:46 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.40 2014/01/26 18:24:24 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org> pear-1.9.3.ebuild,
+  pear-1.9.4.ebuild:
+  Removing stable keyword for sh/s390
 
   18 Nov 2012; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove beandog wrt #131511

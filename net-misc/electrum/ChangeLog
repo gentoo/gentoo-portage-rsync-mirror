@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/electrum
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.21 2014/01/18 14:02:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/electrum/ChangeLog,v 1.22 2014/01/26 18:17:39 blueness Exp $
+
+  26 Jan 2014; Anthony G. Basile <blueness@gentoo.org> electrum-1.7.4.ebuild,
+  electrum-1.8.1.ebuild, electrum-1.9.7.ebuild:
+  Fix python deps, bug #494368
 
   18 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
   +files/electrum.desktop-1.9.7.patch, +files/setup.py-1.9.7.patch,

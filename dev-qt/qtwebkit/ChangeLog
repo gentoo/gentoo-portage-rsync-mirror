@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.10 2014/01/26 11:56:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.11 2014/01/26 18:11:46 pesa Exp $
+
+  26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -qtwebkit-4.8.4.ebuild,
+  metadata.xml:
+  Cleanup.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qtwebkit-4.8.5.ebuild:
   Stable for ia64, wrt bug #494728

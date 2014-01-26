@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Date
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.53 2014/01/08 16:06:50 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Date/ChangeLog,v 1.54 2014/01/26 18:28:57 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org> PEAR-Date-1.4.7.ebuild:
+  Removing stable keyword for sh/s390
 
 *PEAR-Date-1.5.0_alpha4 (08 Jan 2014)
 

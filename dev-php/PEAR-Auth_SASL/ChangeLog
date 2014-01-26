@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Auth_SASL
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_SASL/ChangeLog,v 1.44 2011/12/03 17:46:48 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth_SASL/ChangeLog,v 1.45 2014/01/26 18:27:43 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Auth_SASL-1.0.1-r1.ebuild, PEAR-Auth_SASL-1.0.2.ebuild,
+  PEAR-Auth_SASL-1.0.6.ebuild:
+  Removing stable keyword for sh/s390
 
   03 Dec 2011; Raúl Porcel <armin76@gentoo.org> PEAR-Auth_SASL-1.0.6.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #388763
@@ -184,4 +189,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Auth_SASL-1.0.1.ebuild:
   Initial ebuild for the Auth_SASL PEAR package.
-
