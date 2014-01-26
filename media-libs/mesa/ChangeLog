@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.531 2014/01/26 18:47:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.535 2014/01/26 20:30:04 mattst88 Exp $
+
+  26 Jan 2014; Matt Turner <mattst88@gentoo.org>
+  files/mesa-10.0.2-update-glxext.h.patch:
+  Remove hunk from patch that CVS insists on changing on commit.
+
+  26 Jan 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-7.10.3.ebuild, mesa-7.11.2.ebuild, mesa-8.0.4-r1.ebuild,
+  mesa-9.0.3.ebuild, mesa-9.1.6.ebuild, mesa-9.2.5.ebuild:
+  Fix repoman warnings.
+
+  26 Jan 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  files/mesa-10.0.2-update-glxext.h.patch:
+  Fix glxext.h patch for good.
 
   26 Jan 2014; Matt Turner <mattst88@gentoo.org>
   files/mesa-10.0.2-update-glxext.h.patch:
