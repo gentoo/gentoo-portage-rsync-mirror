@@ -1,6 +1,9 @@
 # ChangeLog for app-text/active-dvi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.48 2013/10/22 20:45:21 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.49 2014/01/26 15:39:48 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> active-dvi-1.10.2-r1.ebuild:
+  Stable for x86, wrt bug #486024
 
   22 Oct 2013; Alexis Ballier <aballier@gentoo.org>
   active-dvi-1.10.2-r1.ebuild:
