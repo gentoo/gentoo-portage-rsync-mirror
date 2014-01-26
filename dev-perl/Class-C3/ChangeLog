@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.29 2014/01/26 12:08:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.30 2014/01/26 15:28:34 hattya Exp $
+
+  26 Jan 2014; Akinori Hattori <hattya@gentoo.org> Class-C3-0.250.0.ebuild:
+  ia64 stable wrt bug #492086
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> Class-C3-0.250.0.ebuild:
   Stable for sparc, wrt bug #492086

@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/math-pari
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.73 2014/01/19 16:40:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/math-pari/ChangeLog,v 1.75 2014/01/26 15:29:27 zlogene Exp $
+
+  26 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> math-pari-2.10.806.50.ebuild:
+  alpha stable wrt bug #494288
+
+  26 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> math-pari-2.10.806.50.ebuild:
+  x86 stable wrt bug #494288
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> math-pari-2.10.806.50.ebuild:
   amd64 stable, bug #494288

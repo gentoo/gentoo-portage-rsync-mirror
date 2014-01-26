@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Session
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.72 2014/01/26 15:00:07 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Session/ChangeLog,v 1.73 2014/01/26 15:04:58 zlogene Exp $
+
+  26 Jan 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -Apache-Session-1.890.0.ebuild, Apache-Session-1.900.0.ebuild:
+  ppc stable wrt bug #492072; Drop old.
 
   26 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> Apache-Session-1.900.0.ebuild:
   x86 stable wrt bug #492072
