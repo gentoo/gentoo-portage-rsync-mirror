@@ -4,10 +4,10 @@ DESCRIPTION=A binding for the OpenGL Utility Toolkit
 EAPI=5
 HOMEPAGE=http://www.haskell.org/haskellwiki/Opengl
 IUSE=+usenativewindowslibraries doc hscolour profile
-KEYWORDS=amd64 ~x86
+KEYWORDS=amd64 x86
 LICENSE=BSD
 RDEPEND==dev-haskell/opengl-2.8*:=[profile?] =dev-haskell/openglraw-1.3*:=[profile?] >=dev-lang/ghc-6.12.1:= media-libs/freeglut
 SLOT=0/2.4.0.0
 SRC_URI=mirror://hackage/packages/archive/GLUT/2.4.0.0/GLUT-2.4.0.0.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	419a74a0fe876385690dfe3c4281bac7	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=050b0dad03e8d5f9499cf413dafa7a29
+_md5_=a5d44d89a08d6c215373ae78543a54a9

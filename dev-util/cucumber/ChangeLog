@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cucumber
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.66 2014/01/19 09:21:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cucumber/ChangeLog,v 1.67 2014/01/26 11:38:27 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cucumber-1.2.1.ebuild:
+  Stable for x86, wrt bug #493780
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> cucumber-1.2.1.ebuild:
   amd64 stable, bug 493780

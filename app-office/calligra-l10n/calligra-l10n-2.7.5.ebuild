@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.7.5.ebuild,v 1.2 2014/01/19 11:03:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.7.5.ebuild,v 1.3 2014/01/26 11:37:26 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 DEPEND="sys-devel/gettext"
 RDEPEND="!app-office/koffice-l10n"
 
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="doc"
 
 MY_LANGS="bs ca ca@valencia cs da de el es et fi fr gl hu ia it kk nb nds nl pl

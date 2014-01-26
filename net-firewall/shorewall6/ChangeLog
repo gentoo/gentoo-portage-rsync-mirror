@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall6
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.92 2013/12/22 15:05:22 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.93 2014/01/26 11:37:49 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> shorewall6-4.5.18-r1.ebuild:
+  Stable for x86, wrt bug #487690
 
   22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> shorewall6-4.5.18-r1.ebuild:
   Stable for ppc, wrt bug #487690

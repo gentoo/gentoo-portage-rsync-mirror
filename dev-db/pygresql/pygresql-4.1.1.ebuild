@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1.ebuild,v 1.6 2014/01/19 13:47:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1.ebuild,v 1.8 2014/01/26 12:00:39 ago Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/P/PyGreSQL/${MY_P}.tgz"
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE="doc"
 
 DEPEND="|| (

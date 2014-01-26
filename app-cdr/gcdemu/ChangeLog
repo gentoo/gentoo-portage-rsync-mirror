@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/gcdemu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.32 2014/01/19 17:24:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/ChangeLog,v 1.33 2014/01/26 11:38:09 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gcdemu-2.1.1.ebuild:
+  Stable for x86, wrt bug #494802
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> gcdemu-2.1.1.ebuild:
   amd64 stable, bug 494802

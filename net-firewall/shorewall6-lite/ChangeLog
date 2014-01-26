@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall6-lite
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.69 2013/12/02 20:06:45 constanze Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.70 2014/01/26 11:37:52 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  shorewall6-lite-4.5.18-r1.ebuild:
+  Stable for x86, wrt bug #487690
 
 *shorewall6-lite-4.5.21.4 (02 Dec 2013)
 

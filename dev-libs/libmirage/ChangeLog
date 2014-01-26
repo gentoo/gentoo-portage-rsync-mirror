@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmirage
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.36 2014/01/19 17:23:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmirage/ChangeLog,v 1.37 2014/01/26 11:37:59 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libmirage-2.1.1.ebuild:
+  Stable for x86, wrt bug #494802
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> libmirage-2.1.1.ebuild:
   amd64 stable, bug 494802

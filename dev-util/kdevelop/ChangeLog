@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.253 2014/01/19 16:35:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.254 2014/01/26 11:38:46 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kdevelop-4.5.2.ebuild:
+  Stable for x86, wrt bug #494008
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> kdevelop-4.5.2.ebuild:
   amd64 stable, bug 494008

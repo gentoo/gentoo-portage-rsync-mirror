@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/hidapi-0.8.0_pre20130121.ebuild,v 1.3 2014/01/19 11:30:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/hidapi-0.8.0_pre20130121.ebuild,v 1.4 2014/01/26 11:44:57 ago Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ SRC_URI="http://public.callutheran.edu/~abarker/${P}.tar.xz"
 
 LICENSE="|| ( BSD GPL-3 HIDAPI )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="doc static-libs X"
 
 # S is only needed for the pre_package

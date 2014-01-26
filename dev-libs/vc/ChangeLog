@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/vc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/ChangeLog,v 1.3 2014/01/19 11:03:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vc/ChangeLog,v 1.4 2014/01/26 11:37:23 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> vc-0.7.2.ebuild:
+  Stable for x86, wrt bug #492678
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> vc-0.7.2.ebuild:
   amd64 stable, bug 492678

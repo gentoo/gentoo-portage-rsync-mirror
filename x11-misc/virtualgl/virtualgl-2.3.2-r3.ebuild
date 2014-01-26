@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.2-r3.ebuild,v 1.3 2013/08/31 09:14:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.2-r3.ebuild,v 1.4 2014/01/26 11:41:50 ago Exp $
 
 EAPI=5
 inherit cmake-multilib multilib systemd
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}/${PV}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1 wxWinLL-3.1 FLTK"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ssl"
 
 RDEPEND="

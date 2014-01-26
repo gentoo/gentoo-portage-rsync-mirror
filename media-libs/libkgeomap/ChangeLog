@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkgeomap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.42 2014/01/19 15:40:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/ChangeLog,v 1.43 2014/01/26 11:39:42 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libkgeomap-3.5.0.ebuild:
+  Stable for x86, wrt bug #493578
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> libkgeomap-3.5.0.ebuild:
   amd64 stable, bug 493578

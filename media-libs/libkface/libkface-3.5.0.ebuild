@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-3.5.0.ebuild,v 1.2 2014/01/19 15:40:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-3.5.0.ebuild,v 1.3 2014/01/26 11:39:38 ago Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DESCRIPTION="Qt/C++ wrapper around LibFace to perform face recognition and detec
 HOMEPAGE="http://www.digikam.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 SLOT=4
 

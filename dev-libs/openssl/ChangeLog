@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.510 2014/01/25 10:52:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.513 2014/01/26 11:59:33 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openssl-1.0.1f.ebuild:
+  Stable for sparc, wrt bug #497838
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openssl-1.0.1f.ebuild:
+  Stable for ppc64, wrt bug #497838
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openssl-1.0.1f.ebuild:
+  Stable for ia64, wrt bug #497838
 
   25 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   +files/openssl-1.0.1f-revert-alpha-perl-generation.patch,

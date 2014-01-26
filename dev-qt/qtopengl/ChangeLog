@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtopengl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.10 2014/01/19 13:53:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.11 2014/01/26 11:56:00 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qtopengl-4.8.5.ebuild:
+  Stable for ia64, wrt bug #494728
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qtopengl-4.8.5.ebuild:
   Stable for alpha, wrt bug #494728

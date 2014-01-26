@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.344 2014/01/23 01:02:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.346 2014/01/26 12:00:07 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> nss-3.15.4.ebuild:
+  Stable for sparc, wrt bug #498172
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> nss-3.15.4.ebuild:
+  Stable for ia64, wrt bug #498172
 
   23 Jan 2014; Mike Frysinger <vapier@gentoo.org> nss-3.15.4.ebuild:
   Add aarch64 arch to avoid clashing with arm* in build system.

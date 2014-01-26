@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.399 2014/01/22 18:27:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.402 2014/01/26 12:00:21 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tor-0.2.4.20.ebuild:
+  Stable for sparc, wrt bug #498760
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tor-0.2.4.20.ebuild:
+  Stable for ppc64, wrt bug #498760
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tor-0.2.4.20.ebuild:
+  Stable for arm, wrt bug #498760
 
   22 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tor-0.2.4.20.ebuild:
   Stable for x86, wrt bug #498760
