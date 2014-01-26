@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15360 2014/01/25 21:58:59 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15361 2014/01/26 02:20:15 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (26 Jan 2014)
+# Masked until upstream website resolves again (bug #499292)
+=media-libs/portaudio-19_pre20140121_rc
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Jan 2014)
 # Roll ~arch version back from .so.9 to .so.8 due to too many unresolved issues.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.5.ebuild,v 1.2 2014/01/11 11:15:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.5.ebuild,v 1.3 2014/01/26 02:14:37 mattst88 Exp $
 
 EAPI=5
 
@@ -151,7 +151,7 @@ DEPEND="${RDEPEND}
 "
 
 python_check_deps() {
-	has_version "dev-libs/libxml2[python,${PYTHON_USEDEP}]"
+	has_version --host-root "dev-libs/libxml2[python,${PYTHON_USEDEP}]"
 }
 
 S="${WORKDIR}/${MY_P}"
