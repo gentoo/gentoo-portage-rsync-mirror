@@ -2014,15 +2014,15 @@ dev-python/ws4py:server - Install server modules
 dev-python/wxpython:doc - Install HTML wxWidgets docs and wxpython API reference.
 dev-python/wxpython:examples - Install interactive demo module browser and sample applets.
 dev-python/zsi:twisted - add support for dev-python/twisted
-dev-qt/assistant:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/assistant:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/designer:declarative - Build the qdeclarativeview plugin
-dev-qt/designer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/designer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/designer:phonon - Build the phononwidgets plugin
 dev-qt/designer:qt3support - Build the qt3supportwidgets plugin
 dev-qt/designer:webkit - Build the qwebview plugin
-dev-qt/linguist:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-dev-qt/pixeltool:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
-dev-qt/qdbusviewer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by Nokia)
+dev-qt/linguist:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/pixeltool:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
+dev-qt/qdbusviewer:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qt-creator:android - Build plugin for Android devices
 dev-qt/qt-creator:autotools - Enable autotools project manager plugin
 dev-qt/qt-creator:baremetal - Build plugin for bare metal devices
@@ -5190,6 +5190,7 @@ net-misc/cgminer:bitfury - Enable support for mining with BitFury ASICs
 net-misc/cgminer:drillbit - Enable support for mining with Drillbit BitFury ASICs
 net-misc/cgminer:icarus - Enable support for mining with Icarus FPGAs
 net-misc/cgminer:klondike - Enable support for mining with Klondik ASICs
+net-misc/cgminer:minion - Enable support for mining with BlackArrow Bitfury
 net-misc/cgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/cgminer:opencl - Enable support for mining with OpenCL-capable devices (GPUs)
 net-misc/cgminer:scrypt - Enable support for scrypt mining algorithm

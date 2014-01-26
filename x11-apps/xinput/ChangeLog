@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xinput
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.62 2013/10/08 05:03:53 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinput/ChangeLog,v 1.63 2014/01/26 16:20:08 chithanh Exp $
+
+  26 Jan 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xinput-1.6.0.ebuild, xinput-1.6.1.ebuild:
+  Add libXrandr dependency, bug #431824. Remove old.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xinput-1.6.1.ebuild:
   Stable for x86, wrt bug #475480

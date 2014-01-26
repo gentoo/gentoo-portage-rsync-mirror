@@ -19,6 +19,7 @@
 		<flag name="drillbit">Enable support for mining with Drillbit BitFury ASICs</flag>
 		<flag name="icarus">Enable support for mining with Icarus FPGAs</flag>
 		<flag name="klondike">Enable support for mining with Klondik ASICs</flag>
+		<flag name="minion">Enable support for mining with BlackArrow Bitfury </flag>
 		<flag name="modminer">Enable support for mining with ModMiner FPGAs</flag>
 		<flag name="opencl">Enable support for mining with OpenCL-capable devices (GPUs)</flag>
 		<flag name="scrypt">Enable support for scrypt mining algorithm</flag>

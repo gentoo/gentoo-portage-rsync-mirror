@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.198 2014/01/26 11:59:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.199 2014/01/26 16:27:42 chithanh Exp $
+
+  26 Jan 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -libXfont-1.4.4.ebuild, -libXfont-1.4.5-r1.ebuild, -libXfont-1.4.5.ebuild,
+  -libXfont-1.4.6.ebuild:
+  Remove vulnerable versions.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libXfont-1.4.7.ebuild:
   Stable for sparc, wrt bug #497416

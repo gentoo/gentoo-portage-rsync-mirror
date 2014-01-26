@@ -1,28 +1,23 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.9.0.1.ebuild,v 1.2 2014/01/26 16:16:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgminer/cgminer-3.11.0.ebuild,v 1.1 2014/01/26 16:16:19 blueness Exp $
 
 EAPI=5
 
-inherit autotools flag-o-matic versionator
-
-MY_PV="$(replace_version_separator 3 -)"
-
-#Some wierdness on upstream's part
-S=${WORKDIR}/${PN}-3.9.0
+inherit autotools flag-o-matic
 
 DESCRIPTION="Bitcoin CPU/GPU/FPGA/ASIC miner in C"
 HOMEPAGE="http://bitcointalk.org/?topic=28402.msg357369 http://github.com/ckolivas/cgminer"
-#SRC_URI="http://ck.kolivas.org/apps/cgminer/${PN}-${MY_PV}.tar.bz2"
-SRC_URI="http://ck.kolivas.org/apps/cgminer/3.9/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="http://ck.kolivas.org/apps/cgminer/${P}.tar.bz2"
+#SRC_URI="http://ck.kolivas.org/apps/cgminer/3.10/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="doc examples udev hardened ncurses
-	avalon bflsc bitforce bitfury drillbit icarus klondike modminer"
+	avalon bflsc bitforce bitfury drillbit icarus klondike minion modminer"
 
-REQUIRED_USE="|| ( avalon bflsc bitforce bitfury drillbit icarus klondike modminer )"
+REQUIRED_USE="|| ( avalon bflsc bitforce bitfury drillbit icarus klondike minion modminer )"
 
 RDEPEND="net-misc/curl
 	dev-libs/jansson
@@ -51,6 +46,7 @@ src_configure() {
 		$(use_enable drillbit) \
 		$(use_enable icarus) \
 		$(use_enable klondike) \
+		$(use_enable minion) \
 		$(use_enable modminer)
 	# sanitize directories (is this still needed?)
 	sed -i 's~^\(\#define CGMINER_PREFIX \).*$~\1"'"${EPREFIX}/usr/lib/cgminer"'"~' config.h
