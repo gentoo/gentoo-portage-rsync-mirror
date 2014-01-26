@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.7.1.ebuild,v 1.6 2013/10/08 05:05:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.7.1.ebuild,v 1.7 2014/01/26 19:49:57 chithanh Exp $
 
 EAPI=5
 
@@ -14,6 +14,7 @@ IUSE=""
 
 RDEPEND="sys-libs/mtdev
 	>=x11-base/xorg-server-1.12
+	<x11-base/xorg-server-1.14.99
 	>=x11-libs/libXi-1.2
 	>=x11-libs/libXtst-1.1.0"
 DEPEND="${RDEPEND}

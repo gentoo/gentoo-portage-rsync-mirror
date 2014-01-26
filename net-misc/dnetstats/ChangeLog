@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dnetstats
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.10 2013/12/24 20:50:35 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/ChangeLog,v 1.11 2014/01/26 19:47:25 pesa Exp $
+
+*dnetstats-1.2.6-r2 (26 Jan 2014)
+
+  26 Jan 2014; Davide Pesavento <pesa@gentoo.org> +dnetstats-1.2.6-r2.ebuild,
+  -dnetstats-1.2.6-r1.ebuild:
+  Fix major typo in src_install.
 
 *dnetstats-1.2.6-r1 (24 Dec 2013)
 

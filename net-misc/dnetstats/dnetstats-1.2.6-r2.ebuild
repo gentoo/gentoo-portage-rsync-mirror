@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6-r1.ebuild,v 1.1 2013/12/24 20:50:35 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dnetstats/dnetstats-1.2.6-r2.ebuild,v 1.1 2014/01/26 19:47:25 pesa Exp $
 
 EAPI=5
 
@@ -36,10 +36,10 @@ src_prepare() {
 }
 
 src_install() {
-#	newbin mythread ${PN}
+	newbin mythread ${PN}
 	dodoc ReadMe
 
-#	newicon resource/energy.png ${PN}.png
+	newicon resource/energy.png ${PN}.png
 	make_desktop_entry ${PN} DNetStats ${PN} 'Qt;Network;Dialup'
 
 	if use policykit; then
