@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.152 2014/01/26 10:38:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.153 2014/01/26 17:12:09 ulm Exp $
+
+  26 Jan 2014; Ulrich Müller <ulm@gentoo.org> mtr-0.85_p20140126.ebuild:
+  Fix SRC_URI.
 
 *mtr-0.85_p20140126 (26 Jan 2014)
 

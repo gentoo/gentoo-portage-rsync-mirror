@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/xf86-video-ati
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.207 2013/10/08 05:05:45 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.208 2014/01/26 17:29:30 chithanh Exp $
+
+*xf86-video-ati-7.3.0 (26 Jan 2014)
+
+  26 Jan 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-video-ati-7.3.0.ebuild, -files/xf86-video-ati-6.14.3-pcitag.patch,
+  -files/xf86-video-ati-6.14.3-xorg-server-1.12.patch,
+  -files/xf86-video-ati-7.0.0-r300-ring-count.patch,
+  -xf86-video-ati-6.14.3-r1.ebuild, -xf86-video-ati-7.0.0-r1.ebuild,
+  -xf86-video-ati-7.0.0.ebuild, -xf86-video-ati-7.1.0.ebuild:
+  Version bump. Drop some old versions.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org> xf86-video-ati-7.2.0.ebuild:
   Stable for x86, wrt bug #475480

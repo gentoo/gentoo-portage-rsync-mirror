@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.85_p20140126.ebuild,v 1.1 2014/01/26 10:38:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.85_p20140126.ebuild,v 1.2 2014/01/26 17:12:09 ulm Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic
 
 DESCRIPTION="My TraceRoute, an Excellent network diagnostic tool"
 HOMEPAGE="http://www.bitwizard.nl/mtr/"
-SRC_URI="https://dev/gentoo.org/~/jer/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~jer/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

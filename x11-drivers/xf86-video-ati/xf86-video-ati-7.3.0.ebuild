@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-7.1.0.ebuild,v 1.3 2013/04/20 20:21:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-7.3.0.ebuild,v 1.1 2014/01/26 17:29:30 chithanh Exp $
 
 EAPI=5
 
@@ -10,10 +10,10 @@ inherit linux-info xorg-2
 DESCRIPTION="ATI video driver"
 
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="glamor udev"
+IUSE="+glamor udev"
 
-RDEPEND=">=x11-libs/libdrm-2.4.36[video_cards_radeon]
-	glamor? ( x11-libs/glamor )
+RDEPEND=">=x11-libs/libdrm-2.4.46[video_cards_radeon]
+	glamor? ( >=x11-libs/glamor-0.6 )
 	udev? ( virtual/udev )"
 DEPEND="${RDEPEND}"
 
