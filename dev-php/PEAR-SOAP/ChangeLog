@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-SOAP
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.48 2013/08/07 13:30:38 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-SOAP/ChangeLog,v 1.49 2014/01/26 18:39:31 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org> PEAR-SOAP-0.11.0.ebuild,
+  PEAR-SOAP-0.13.0.ebuild:
+  Removing stable keyword for sh/s390
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org> PEAR-SOAP-0.13.0.ebuild:
   Stable for x86, wrt bug #470436

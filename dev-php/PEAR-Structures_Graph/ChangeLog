@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Structures_Graph
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_Graph/ChangeLog,v 1.17 2012/02/10 13:40:20 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Structures_Graph/ChangeLog,v 1.18 2014/01/26 18:40:25 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Structures_Graph-1.0.4.ebuild:
+  Removing stable keyword for sh/s390
 
   10 Feb 2012; Ole Markus With <olemarkus@gentoo.org>
   -PEAR-Structures_Graph-1.0.2.ebuild:
@@ -71,4 +75,3 @@
   23 Sep 2009; Steve Dibb <beandog@gentoo.org>
   +PEAR-Structures_Graph-1.0.2.ebuild, +metadata.xml:
   Initial commit; new split ebuilds for PEAR base install
-

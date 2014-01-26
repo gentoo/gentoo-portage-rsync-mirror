@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_mysql
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysql/ChangeLog,v 1.40 2013/11/03 21:10:51 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysql/ChangeLog,v 1.41 2014/01/26 18:34:04 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-MDB2_Driver_mysql-1.5.0_beta3.ebuild:
+  Removing stable keyword for sh/s390
 
 *PEAR-MDB2_Driver_mysql-1.5.0_beta4 (03 Nov 2013)
 

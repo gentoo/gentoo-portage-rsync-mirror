@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libintl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.15 2014/01/17 04:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libintl/ChangeLog,v 1.16 2014/01/26 18:41:17 blueness Exp $
+
+  26 Jan 2014; Anthony G. Basile <blueness@gentoo.org> libintl-0-r1.ebuild,
+  libintl-0.ebuild:
+  musl provides its own intl
 
   17 Jan 2014; Mike Frysinger <vapier@gentoo.org> libintl-0-r1.ebuild,
   libintl-0.ebuild:

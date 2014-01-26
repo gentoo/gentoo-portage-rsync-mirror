@@ -1,25 +1,12 @@
-From faa518dd947f35bca46dcc59493d3fbecf376d39 Mon Sep 17 00:00:00 2001
-From: Matt Turner <mattst88@gmail.com>
-Date: Sat, 25 Jan 2014 19:16:38 -0800
-Subject: [PATCH] glx: Update glxext.h to revision 24777.
-
-It readds the GLXContextID typedef, but under #ifndef GLX_VERSION_1_3.
-
-Bugzilla: https://cvs.khronos.org/bugzilla/show_bug.cgi?id=11454
----
- include/GL/glxext.h | 14 +++++++++++---
- 1 file changed, 11 insertions(+), 3 deletions(-)
-
-diff --git a/include/GL/glxext.h b/include/GL/glxext.h
-index cfabe8c..8c642f3 100644
---- a/include/GL/glxext.h
-+++ b/include/GL/glxext.h
-@@ -33,10 +33,10 @@ extern "C" {
+diff -ur Mesa-10.0.2.orig/include/GL/glxext.h Mesa-10.0.2/include/GL/glxext.h
+--- Mesa-10.0.2.orig/include/GL/glxext.h	2014-01-26 10:43:47.082996517 -0800
++++ Mesa-10.0.2/include/GL/glxext.h	2014-01-26 10:44:19.378000149 -0800
+@@ -33,10 +33,10 @@
  ** used to make the header, and the header can be found at
  **   http://www.opengl.org/registry/
  **
--** Khronos $Revision: 1.1 $ on $Date: 2014/01/26 03:24:22 $
-+** Khronos $Revision: 1.1 $ on $Date: 2014/01/26 03:24:22 $
+-** Khronos $Revision: 1.2 $ on $Date: 2014/01/26 18:47:01 $
++** Khronos $Revision: 1.2 $ on $Date: 2014/01/26 18:47:01 $
  */
  
 -#define GLX_GLXEXT_VERSION 20131008
@@ -27,7 +14,7 @@ index cfabe8c..8c642f3 100644
  
  /* Generated C header for:
   * API: glx
-@@ -49,6 +49,7 @@ extern "C" {
+@@ -49,6 +49,7 @@
  
  #ifndef GLX_VERSION_1_3
  #define GLX_VERSION_1_3 1
@@ -35,7 +22,7 @@ index cfabe8c..8c642f3 100644
  typedef struct __GLXFBConfigRec *GLXFBConfig;
  typedef XID GLXWindow;
  typedef XID GLXPbuffer;
-@@ -272,7 +273,6 @@ __GLXextFuncPtr glXGetProcAddressARB (const GLubyte *procName);
+@@ -272,7 +273,6 @@
  
  #ifndef GLX_EXT_import_context
  #define GLX_EXT_import_context 1
@@ -43,7 +30,7 @@ index cfabe8c..8c642f3 100644
  #define GLX_SHARE_CONTEXT_EXT             0x800A
  #define GLX_VISUAL_ID_EXT                 0x800B
  #define GLX_SCREEN_EXT                    0x800C
-@@ -433,6 +433,14 @@ void glXCopyImageSubDataNV (Display *dpy, GLXContext srcCtx, GLuint srcName, GLe
+@@ -433,6 +433,14 @@
  #endif
  #endif /* GLX_NV_copy_image */
  
@@ -58,6 +45,3 @@ index cfabe8c..8c642f3 100644
  #ifndef GLX_NV_float_buffer
  #define GLX_NV_float_buffer 1
  #define GLX_FLOAT_COMPONENTS_NV           0x20B0
--- 
-1.8.3.2
-

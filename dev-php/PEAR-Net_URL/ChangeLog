@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_URL
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.32 2007/12/06 00:42:59 jokey Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_URL/ChangeLog,v 1.33 2014/01/26 18:37:48 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Net_URL-1.0.14-r1.ebuild, PEAR-Net_URL-1.0.15.ebuild:
+  Removing stable keyword for sh/s390
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   PEAR-Net_URL-1.0.14-r1.ebuild, PEAR-Net_URL-1.0.15.ebuild:
@@ -131,4 +135,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Net_URL-1.0.14.ebuild:
   Initial ebuild for the Net_URL PEAR package.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-XML_Serializer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Serializer/ChangeLog,v 1.37 2012/06/10 11:41:20 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Serializer/ChangeLog,v 1.38 2014/01/26 18:41:40 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-XML_Serializer-0.20.2.ebuild:
+  Removing stable keyword for sh/s390
 
   10 Jun 2012; Matti Bickel <mabi@gentoo.org>
   -PEAR-XML_Serializer-0.18.0.ebuild:
@@ -163,4 +167,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-XML_Serializer-0.15.0.ebuild:
   Initial ebuild for the XML_Serializer PEAR package.
-

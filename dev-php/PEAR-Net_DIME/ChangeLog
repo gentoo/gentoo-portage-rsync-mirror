@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_DIME
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DIME/ChangeLog,v 1.31 2012/02/07 16:29:40 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DIME/ChangeLog,v 1.32 2014/01/26 18:35:44 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Net_DIME-0.3-r1.ebuild, PEAR-Net_DIME-1.0.2.ebuild:
+  Removing stable keyword for sh/s390
 
   07 Feb 2012; Jeroen Roovers <jer@gentoo.org> PEAR-Net_DIME-1.0.2.ebuild:
   Stable for HPPA (bug #392863).
@@ -126,4 +130,3 @@
   16 Feb 2005; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Net_DIME-0.3.ebuild:
   Initial ebuild for the Net_DIME PEAR package.
-

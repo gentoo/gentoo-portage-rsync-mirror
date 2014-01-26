@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.68 2014/01/26 12:22:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.69 2014/01/26 18:40:15 floppym Exp $
+
+  26 Jan 2014; Mike Gilbert <floppym@gentoo.org> -files/neon-0.29.6-doc.patch,
+  -files/neon-0.29.6-gnutls-3-backport.patch,
+  -files/neon-0.29.6-gnutls-3-functions.patch,
+  -files/neon-0.29.6-gnutls-3-types.patch,
+  -files/neon-0.29.6-no-ssl-check.patch, -neon-0.29.6-r1.ebuild,
+  -neon-0.29.6-r2.ebuild, -neon-0.29.6-r5.ebuild:
+  Remove old per Arfrever.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> neon-0.30.0.ebuild:
   Stable for sparc, wrt bug #497738

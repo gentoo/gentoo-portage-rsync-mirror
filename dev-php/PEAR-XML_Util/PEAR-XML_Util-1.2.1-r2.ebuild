@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/PEAR-XML_Util-1.2.1-r2.ebuild,v 1.9 2012/07/08 16:32:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/PEAR-XML_Util-1.2.1-r2.ebuild,v 1.10 2014/01/26 18:42:04 olemarkus Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ DESCRIPTION="XML utility class"
 
 LICENSE="PHP-2.02"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
 

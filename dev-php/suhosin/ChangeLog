@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/suhosin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/ChangeLog,v 1.13 2013/03/05 09:39:32 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/suhosin/ChangeLog,v 1.14 2014/01/26 18:43:05 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org> suhosin-0.9.33.ebuild:
+  Removing stable keyword for sh/s390
 
   05 Mar 2013; Ole Markus With <olemarkus@gentoo.org> suhosin-0.9.33.ebuild:
   EAPI bump

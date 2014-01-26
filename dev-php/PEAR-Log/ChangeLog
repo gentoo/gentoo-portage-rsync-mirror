@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Log
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.102 2012/09/09 16:56:36 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Log/ChangeLog,v 1.103 2014/01/26 18:31:30 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org> PEAR-Log-1.12.7-r1.ebuild,
+  PEAR-Log-1.12.7.ebuild:
+  Removing stable keyword for sh/s390
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> PEAR-Log-1.12.7-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #418887

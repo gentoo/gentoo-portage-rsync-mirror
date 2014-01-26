@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_SMTP
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.58 2013/11/23 21:03:47 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_SMTP/ChangeLog,v 1.59 2014/01/26 18:36:59 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Net_SMTP-1.6.1.ebuild:
+  Removing stable keyword for sh/s390
 
 *PEAR-Net_SMTP-1.6.2 (23 Nov 2013)
 

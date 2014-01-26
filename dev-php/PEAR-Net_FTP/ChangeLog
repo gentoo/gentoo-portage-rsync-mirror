@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_FTP
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_FTP/ChangeLog,v 1.33 2012/08/03 20:02:44 olemarkus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_FTP/ChangeLog,v 1.34 2014/01/26 18:36:09 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Net_FTP-1.3.7-r1.ebuild:
+  Removing stable keyword for sh/s390
 
   03 Aug 2012; Ole Markus With <olemarkus@gentoo.org>
   PEAR-Net_FTP-1.4.0_alpha3.ebuild:
@@ -135,4 +139,3 @@
   08 Mar 2006; Sebastian Bergmann <sebastian@gentoo.org> +metadata.xml,
   +PEAR-Net_FTP-1.3.2.ebuild:
   Initial ebuild.
-

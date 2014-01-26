@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Mail_mimeDecode
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_mimeDecode/ChangeLog,v 1.32 2013/08/07 13:22:45 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_mimeDecode/ChangeLog,v 1.33 2014/01/26 18:32:46 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Mail_mimeDecode-1.5.1.ebuild, PEAR-Mail_mimeDecode-1.5.5.ebuild:
+  Removing stable keyword for sh/s390
 
   07 Aug 2013; Agostino Sarubbo <ago@gentoo.org>
   PEAR-Mail_mimeDecode-1.5.5.ebuild:

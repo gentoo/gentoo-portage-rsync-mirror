@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Services_Weather
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/ChangeLog,v 1.57 2012/08/22 14:38:57 xmw Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Services_Weather/ChangeLog,v 1.58 2014/01/26 18:39:06 olemarkus Exp $
+
+  26 Jan 2014; Ole Markus With <olemarkus@gentoo.org>
+  PEAR-Services_Weather-1.4.6.ebuild:
+  Removing stable keyword for sh/s390
 
   22 Aug 2012; Michael Weber <xmw@gentoo.org>
   PEAR-Services_Weather-1.4.6.ebuild:
