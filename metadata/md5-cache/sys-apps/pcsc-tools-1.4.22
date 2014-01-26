@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile install postinst postrm prepare
+DEPEND=>=sys-apps/pcsc-lite-1.4.14 virtual/pkgconfig
+DESCRIPTION=PC/SC Architecture smartcard tools
+EAPI=4
+HOMEPAGE=http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
+IUSE=gtk network-cron
+KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=>=sys-apps/pcsc-lite-1.4.14 dev-perl/pcsc-perl gtk? ( dev-perl/gtk2-perl )
+SLOT=0
+SRC_URI=http://ludovic.rousseau.free.fr/softwares/pcsc-tools/pcsc-tools-1.4.22.tar.gz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=9392765d9e324c6b09918027229e09f0
