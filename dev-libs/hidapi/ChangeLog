@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/hidapi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.5 2014/01/26 11:44:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/ChangeLog,v 1.6 2014/01/26 13:51:06 blueness Exp $
+
+*hidapi-0.8.0_pre20130121-r1 (26 Jan 2014)
+
+  26 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
+  +hidapi-0.8.0_pre20130121-r1.ebuild, hidapi-0.8.0_pre20130121.ebuild:
+  Build with fox:1.7, bug #494090
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
   hidapi-0.8.0_pre20130121.ebuild:

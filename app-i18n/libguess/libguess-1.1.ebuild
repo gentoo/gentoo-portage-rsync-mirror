@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/libguess-1.1.ebuild,v 1.10 2013/07/18 11:43:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libguess/libguess-1.1.ebuild,v 1.11 2014/01/26 13:45:12 hattya Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://distfiles.atheme.org/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 RDEPEND="

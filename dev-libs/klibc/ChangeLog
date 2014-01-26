@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.100 2014/01/15 09:43:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.101 2014/01/26 13:49:01 radhermit Exp $
+
+  26 Jan 2014; Tim Harder <radhermit@gentoo.org> klibc-2.0.3-r1.ebuild:
+  Add kernel.org klibc directory to HOMEPAGE.
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> klibc-1.5.25.ebuild:
   Stable for ia64, wrt bug #498092

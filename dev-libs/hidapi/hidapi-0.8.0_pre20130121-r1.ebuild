@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/hidapi-0.8.0_pre20130121.ebuild,v 1.5 2014/01/26 13:51:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hidapi/hidapi-0.8.0_pre20130121-r1.ebuild,v 1.1 2014/01/26 13:51:06 blueness Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools eutils #git-2
 
@@ -19,7 +19,7 @@ SRC_URI="http://public.callutheran.edu/~abarker/${P}.tar.xz"
 
 LICENSE="|| ( BSD GPL-3 HIDAPI )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc static-libs X"
 
 # S is only needed for the pre_package
@@ -28,9 +28,14 @@ RDEPEND="virtual/libusb:0"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig
-	X? ( x11-libs/fox:1.6 )"
+	X? ( x11-libs/fox )"
 
 src_prepare() {
+	if use X && has_version x11-libs/fox:1.7 ; then
+		sed -i -e 's:PKG_CHECK_MODULES(\[fox\], \[fox\]):PKG_CHECK_MODULES(\[fox\], \[fox17\]):' \
+			configure.ac || die
+	fi
+
 	eautoreconf
 }
 
