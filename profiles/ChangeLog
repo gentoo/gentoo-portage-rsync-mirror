@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8565 2014/01/26 02:20:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8566 2014/01/26 06:58:41 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jan 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Mask dev-python/certifi.
 
   26 Jan 2014; Tim Harder <radhermit@gentoo.org> package.mask:
   Mask =media-libs/portaudio-19_pre20140121_rc until upstream resolves again
