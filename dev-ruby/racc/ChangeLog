@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.106 2014/01/13 07:19:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.108 2014/01/26 13:06:32 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> racc-1.4.9.ebuild:
+  Stable for alpha, wrt bug #483254
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> racc-1.4.9.ebuild:
+  Stable for sparc, wrt bug #483254
 
 *racc-1.4.11 (13 Jan 2014)
 

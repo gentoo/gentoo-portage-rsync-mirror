@@ -1,6 +1,12 @@
 # ChangeLog for virtual/ruby-rdoc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.27 2014/01/05 10:50:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.29 2014/01/26 13:06:41 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ruby-rdoc-3.ebuild:
+  Stable for alpha, wrt bug #483254
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ruby-rdoc-3.ebuild:
+  Stable for sparc, wrt bug #483254
 
   05 Jan 2014; Hans de Graaff <graaff@gentoo.org> ruby-rdoc-0.ebuild,
   ruby-rdoc-1.ebuild:

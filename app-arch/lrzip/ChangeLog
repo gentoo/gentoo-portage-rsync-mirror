@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lrzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.33 2014/01/08 14:36:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lrzip/ChangeLog,v 1.34 2014/01/26 13:12:49 hattya Exp $
+
+  26 Jan 2014; Akinori Hattori <hattya@gentoo.org> lrzip-0.616.ebuild:
+  keyword ~ia64 wrt bug #468854
 
   08 Jan 2014; Anthony G. Basile <blueness@gentoo.org>
   +files/lrzip-missing-stdarg_h.patch, lrzip-0.614.ebuild, lrzip-0.616.ebuild:
