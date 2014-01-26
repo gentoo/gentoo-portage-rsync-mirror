@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/boost-m4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.20 2014/01/19 10:31:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/boost-m4/ChangeLog,v 1.21 2014/01/26 12:20:54 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> boost-m4-0.4.ebuild:
+  Stable for sparc, wrt bug #496904
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> boost-m4-0.4.ebuild:
   Stable for ppc64, wrt bug #496904

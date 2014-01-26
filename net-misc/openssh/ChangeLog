@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.496 2014/01/23 04:58:51 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.497 2014/01/26 12:07:02 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openssh-6.4_p1-r1.ebuild:
+  Stable for sparc, wrt bug #477894
 
   23 Jan 2014; Joseph Jezak <josejx@gentoo.org> openssh-6.4_p1-r1.ebuild:
   Marked ppc/ppc64 stable for bug #477894.

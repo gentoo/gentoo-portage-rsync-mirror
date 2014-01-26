@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.385 2014/01/26 09:52:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.386 2014/01/26 12:24:57 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> dhcpcd-6.2.0-r1.ebuild:
+  Stable for sparc, wrt bug #499262
 
   26 Jan 2014; Jeroen Roovers <jer@gentoo.org> dhcpcd-6.2.0-r1.ebuild:
   Stable for HPPA (bug #499262).

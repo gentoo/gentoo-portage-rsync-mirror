@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.97 2014/01/16 13:51:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.98 2014/01/26 12:23:29 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org>
+  dietlibc-0.33_pre20110403.ebuild:
+  Stable for sparc, wrt bug #498094
 
   16 Jan 2014; Jeroen Roovers <jer@gentoo.org> dietlibc-0.30-r2.ebuild,
   dietlibc-0.33_pre20110403.ebuild, dietlibc-0.33_pre20130103.ebuild,

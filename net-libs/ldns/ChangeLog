@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.52 2014/01/23 04:57:40 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.53 2014/01/26 12:07:05 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ldns-1.6.16.ebuild:
+  Stable for sparc, wrt bug #477894
 
   23 Jan 2014; Joseph Jezak <josejx@gentoo.org> ldns-1.6.16.ebuild:
   Marked ppc/ppc64 stable as a dep for bug #477894.

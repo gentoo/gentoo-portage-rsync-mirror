@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cdist/cdist-3.0.0.ebuild,v 1.1 2014/01/09 21:16:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cdist/cdist-3.0.2.ebuild,v 1.1 2014/01/26 12:12:33 pinkbyte Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{3_2,3_3} )
@@ -15,20 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND="app-text/asciidoc dev-libs/libxslt"
-RDEPEND="${PYTHON_DEPS}"
+DOCS=( README )
 
-DOCS="README"
-
-src_prepare() {
-	rm cdist/conf/.gitignore || die "rm failed"
-	distutils-r1_src_prepare
-}
-
-src_install() {
+python_install_all() {
 	if use doc; then
-		HTML_DOCS="docs/man/man1/*.html docs/man/man7/*.html"
+		HTML_DOCS=( docs/man/man1/*.html docs/man/man7/*.html )
 	fi
-	distutils-r1_src_install
+	distutils-r1_python_install_all
 	doman docs/man/man1/*.1 docs/man/man7/*.7
 }

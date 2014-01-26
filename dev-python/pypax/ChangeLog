@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypax
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.81 2014/01/26 11:02:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypax/ChangeLog,v 1.82 2014/01/26 12:12:23 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pypax-0.8.4.ebuild:
+  Stable for sparc, wrt bug #495624
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pypax-0.8.4.ebuild:
   Stable for x86, wrt bug #495624

@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.81 2014/01/20 09:18:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.82 2014/01/26 12:24:09 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qtcurve-1.8.17-r1.ebuild:
+  Stable for sparc, wrt bug #498660
 
   20 Jan 2014; Ben de Groot <yngwin@gentoo.org> qtcurve-1.8.17-r1.ebuild:
   Add qtdeclarative:5 dep for masked qt5 useflag (bug #497308)

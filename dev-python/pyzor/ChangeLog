@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.65 2014/01/26 10:55:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.66 2014/01/26 12:23:16 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pyzor-0.5.0-r2.ebuild:
+  Stable for sparc, wrt bug #498050
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pyzor-0.5.0-r2.ebuild:
   Stable for x86, wrt bug #498050

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17-r1.ebuild,v 1.3 2014/01/20 09:18:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17-r1.ebuild,v 1.4 2014/01/26 12:24:09 ago Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -16,7 +16,7 @@ if [[ ${PV} == *9999* ]]; then
 else
 	SRC_URI="https://github.com/QtCurve/${PN}/archive/${PV}.tar.gz  -> ${P}.tar.gz
 		https://github.com/QtCurve/${PN}/commit/69047935dd4a9549d238cbc457e9c3cfa37386ae.patch -> ${P}-old_config_file.patch"
-	KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 sparc ~x86"
 fi
 
 LICENSE="GPL-2"

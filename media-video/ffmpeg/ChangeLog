@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.707 2014/01/19 13:48:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.708 2014/01/26 12:09:34 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ffmpeg-1.0.8.ebuild:
+  Stable for sparc, wrt bug #492252
 
 *ffmpeg-0.10.11 (19 Jan 2014)
 

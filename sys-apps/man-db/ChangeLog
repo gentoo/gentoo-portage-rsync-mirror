@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.63 2014/01/24 09:23:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.64 2014/01/26 12:18:53 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> man-db-2.6.5.ebuild:
+  Stable for sparc, wrt bug #495924
 
 *man-db-2.6.6 (24 Jan 2014)
 

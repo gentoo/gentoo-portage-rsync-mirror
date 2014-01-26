@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.134 2014/01/19 10:18:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.135 2014/01/26 12:11:23 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tcsh-6.18.01-r2.ebuild:
+  Stable for sparc, wrt bug #495350
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> tcsh-6.18.01-r2.ebuild:
   Stable for ppc64, wrt bug #495350

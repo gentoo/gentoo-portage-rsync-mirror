@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoin-qt/primecoin-qt-0.1.2.ebuild,v 1.1 2013/12/01 15:18:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/primecoin-qt/primecoin-qt-0.1.2-r1.ebuild,v 1.1 2014/01/26 12:16:42 blueness Exp $
 
 EAPI=5
 
@@ -119,7 +119,7 @@ src_install() {
 	insinto /usr/share/pixmaps
 	newins "share/pixmaps/primecoin.ico" "${PN}.ico"
 
-	make_desktop_entry "${PN} %u" "PPcoin-Qt" "/usr/share/pixmaps/${PN}.ico" "Qt;Network;P2P;Office;Finance;" "MimeType=x-scheme-handler/primecoin;\nTerminal=false"
+	make_desktop_entry "${PN} %u" "Primecoin-Qt" "/usr/share/pixmaps/${PN}.ico" "Qt;Network;P2P;Office;Finance;" "MimeType=x-scheme-handler/primecoin;\nTerminal=false"
 
 	newman contrib/debian/manpages/bitcoin-qt.1 ${PN}.1
 
