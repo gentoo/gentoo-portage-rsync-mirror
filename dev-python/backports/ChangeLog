@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/backports
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/backports/ChangeLog,v 1.1 2014/01/26 12:42:11 radhermit Exp $
+
+*backports-1.0 (26 Jan 2014)
+
+  26 Jan 2014; Tim Harder <radhermit@gentoo.org> +backports-1.0.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me.
+
