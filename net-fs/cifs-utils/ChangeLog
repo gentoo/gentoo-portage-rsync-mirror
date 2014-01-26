@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.76 2014/01/11 21:39:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.77 2014/01/26 09:51:44 pacho Exp $
+
+  26 Jan 2014; Pacho Ramos <pacho@gentoo.org> cifs-utils-6.1-r1.ebuild,
+  cifs-utils-6.2.ebuild, cifs-utils-6.3.ebuild:
+  Rekeyword as the package causing the keyword lost regained keywords time ago
+  (#476406)
 
 *cifs-utils-6.3 (11 Jan 2014)
 
