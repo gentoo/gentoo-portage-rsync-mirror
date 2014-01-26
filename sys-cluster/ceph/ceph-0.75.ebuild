@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.75.ebuild,v 1.1 2014/01/23 16:12:10 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.75.ebuild,v 1.2 2014/01/26 08:40:49 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -69,7 +69,6 @@ RDEPEND="${CDEPEND}
 	' )"
 REQUIRED_USE="
 	^^ ( nss cryptopp )
-	${PYTHON_REQUIRED_USE}
 	"
 
 STRIP_MASK="/usr/lib*/rados-classes/*"

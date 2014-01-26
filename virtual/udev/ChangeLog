@@ -1,6 +1,9 @@
 # ChangeLog for virtual/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.68 2014/01/18 05:16:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.69 2014/01/26 08:59:14 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> udev-208.ebuild:
+  Stable for ppc, wrt bug #487340
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> udev-208.ebuild:
   Add arm64 love.

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.979 2014/01/18 05:16:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.980 2014/01/26 08:59:09 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> udev-208.ebuild:
+  Stable for ppc, wrt bug #487340
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> udev-208.ebuild,
   udev-9999.ebuild:
