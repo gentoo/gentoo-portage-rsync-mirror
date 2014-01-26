@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-plugins
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.163 2012/12/16 17:26:59 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.164 2014/01/26 03:39:11 creffett Exp $
+
+  26 Jan 2014; Chris Reffett <creffett@gentoo.org> metadata.xml:
+  Update maintainers (add ahamilto as maintainer, me as proxy, proxy-maint herd
+  too)
 
   16 Dec 2012; Raúl Porcel <armin76@gentoo.org>
   nagios-plugins-1.4.16-r2.ebuild:

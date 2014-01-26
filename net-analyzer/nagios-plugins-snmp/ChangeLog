@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-plugins-snmp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.20 2012/11/20 20:10:32 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins-snmp/ChangeLog,v 1.21 2014/01/26 03:42:40 creffett Exp $
+
+  26 Jan 2014; Chris Reffett <creffett@gentoo.org>
+  -nagios-plugins-snmp-0.6.0-r1.ebuild, metadata.xml:
+  Update maintainers (add ahamilto as maintainer, me as proxy, proxy-maint herd
+  too)
 
   20 Nov 2012; Agostino Sarubbo <ago@gentoo.org>
   nagios-plugins-snmp-0.6.0-r2.ebuild:

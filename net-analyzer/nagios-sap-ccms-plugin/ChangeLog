@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-sap-ccms-plugin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.13 2012/09/24 00:47:14 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/ChangeLog,v 1.14 2014/01/26 03:45:15 creffett Exp $
+
+  26 Jan 2014; Chris Reffett <creffett@gentoo.org> metadata.xml,
+  nagios-sap-ccms-plugin-0.8.ebuild:
+  Update maintainers (add ahamilto as maintainer, me as proxy, proxy-maint herd
+  too). EAPI bump.
 
   24 Sep 2012; Mike Frysinger <vapier@gentoo.org>
   nagios-sap-ccms-plugin-0.7.3-r1.ebuild, nagios-sap-ccms-plugin-0.8.ebuild:

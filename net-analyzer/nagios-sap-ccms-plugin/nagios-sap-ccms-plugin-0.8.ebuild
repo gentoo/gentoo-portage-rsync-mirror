@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.8.ebuild,v 1.5 2012/09/24 00:47:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-sap-ccms-plugin/nagios-sap-ccms-plugin-0.8.ebuild,v 1.6 2014/01/26 03:45:15 creffett Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils multilib toolchain-funcs
 
@@ -37,7 +37,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -C src CC=$(tc-getCC) || die "emake failed"
+	emake -C src CC=$(tc-getCC)
 }
 
 src_install() {
