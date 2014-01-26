@@ -1,0 +1,63 @@
+From faa518dd947f35bca46dcc59493d3fbecf376d39 Mon Sep 17 00:00:00 2001
+From: Matt Turner <mattst88@gmail.com>
+Date: Sat, 25 Jan 2014 19:16:38 -0800
+Subject: [PATCH] glx: Update glxext.h to revision 24777.
+
+It readds the GLXContextID typedef, but under #ifndef GLX_VERSION_1_3.
+
+Bugzilla: https://cvs.khronos.org/bugzilla/show_bug.cgi?id=11454
+---
+ include/GL/glxext.h | 14 +++++++++++---
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+
+diff --git a/include/GL/glxext.h b/include/GL/glxext.h
+index cfabe8c..8c642f3 100644
+--- a/include/GL/glxext.h
++++ b/include/GL/glxext.h
+@@ -33,10 +33,10 @@ extern "C" {
+ ** used to make the header, and the header can be found at
+ **   http://www.opengl.org/registry/
+ **
+-** Khronos $Revision: 1.1 $ on $Date: 2014/01/26 03:24:22 $
++** Khronos $Revision: 1.1 $ on $Date: 2014/01/26 03:24:22 $
+ */
+ 
+-#define GLX_GLXEXT_VERSION 20131008
++#define GLX_GLXEXT_VERSION 20140114
+ 
+ /* Generated C header for:
+  * API: glx
+@@ -49,6 +49,7 @@ extern "C" {
+ 
+ #ifndef GLX_VERSION_1_3
+ #define GLX_VERSION_1_3 1
++typedef XID GLXContextID;
+ typedef struct __GLXFBConfigRec *GLXFBConfig;
+ typedef XID GLXWindow;
+ typedef XID GLXPbuffer;
+@@ -272,7 +273,6 @@ __GLXextFuncPtr glXGetProcAddressARB (const GLubyte *procName);
+ 
+ #ifndef GLX_EXT_import_context
+ #define GLX_EXT_import_context 1
+-typedef XID GLXContextID;
+ #define GLX_SHARE_CONTEXT_EXT             0x800A
+ #define GLX_VISUAL_ID_EXT                 0x800B
+ #define GLX_SCREEN_EXT                    0x800C
+@@ -433,6 +433,14 @@ void glXCopyImageSubDataNV (Display *dpy, GLXContext srcCtx, GLuint srcName, GLe
+ #endif
+ #endif /* GLX_NV_copy_image */
+ 
++#ifndef GLX_NV_delay_before_swap
++#define GLX_NV_delay_before_swap 1
++typedef Bool ( *PFNGLXDELAYBEFORESWAPNVPROC) (Display *dpy, GLXDrawable drawable, GLfloat seconds);
++#ifdef GLX_GLXEXT_PROTOTYPES
++Bool glXDelayBeforeSwapNV (Display *dpy, GLXDrawable drawable, GLfloat seconds);
++#endif
++#endif /* GLX_NV_delay_before_swap */
++
+ #ifndef GLX_NV_float_buffer
+ #define GLX_NV_float_buffer 1
+ #define GLX_FLOAT_COMPONENTS_NV           0x20B0
+-- 
+1.8.3.2
+

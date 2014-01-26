@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-core
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.187 2013/01/25 16:07:14 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.188 2014/01/26 03:31:14 creffett Exp $
+
+  26 Jan 2014; Chris Reffett <creffett@gentoo.org> metadata.xml,
+  nagios-core-3.2.3.ebuild, nagios-core-3.3.1.ebuild:
+  Update maintainers (add ahamilto as maintainer, me as proxy, proxy-maint herd
+  too). EAPI bump.
 
   25 Jan 2013; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Fix typo in metadata.

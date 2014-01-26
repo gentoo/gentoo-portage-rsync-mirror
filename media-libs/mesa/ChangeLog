@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.529 2014/01/26 02:14:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.530 2014/01/26 03:24:22 mattst88 Exp $
+
+*mesa-10.0.2-r1 (26 Jan 2014)
+
+  26 Jan 2014; Matt Turner <mattst88@gentoo.org>
+  +files/mesa-10.0.2-update-glxext.h.patch, +mesa-10.0.2-r1.ebuild,
+  -mesa-10.0.2.ebuild:
+  Update glxext.h for bug #491644.
 
   26 Jan 2014; Matt Turner <mattst88@gentoo.org> mesa-10.0.2.ebuild,
   mesa-9.2.5.ebuild:
