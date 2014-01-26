@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libcapi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libcapi/ChangeLog,v 1.1 2013/04/09 06:43:21 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libcapi/ChangeLog,v 1.2 2014/01/26 09:28:50 pinkbyte Exp $
+
+*libcapi-3.0.7-r1 (26 Jan 2014)
+
+  26 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> +libcapi-3.0.7-r1.ebuild:
+  Revision bump: add multilib support, wrt bug #498036
 
 *libcapi-3.0.7 (09 Apr 2013)
 

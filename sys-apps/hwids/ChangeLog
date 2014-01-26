@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.130 2014/01/26 08:57:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.133 2014/01/26 09:12:12 ago Exp $
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hwids-20130915.1.ebuild:
+  Stable for sparc, wrt bug #487342
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hwids-20130915.1.ebuild:
+  Stable for ia64, wrt bug #487342
+
+  26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hwids-20130915.1.ebuild:
+  Stable for ppc64, wrt bug #487342
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hwids-20130915.1.ebuild:
   Stable for ppc, wrt bug #487342

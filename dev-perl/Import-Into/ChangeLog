@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Import-Into
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Import-Into/ChangeLog,v 1.2 2013/07/20 17:31:01 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Import-Into/ChangeLog,v 1.3 2014/01/26 09:20:29 zlogene Exp $
+
+*Import-Into-1.2.0 (26 Jan 2014)
+
+  26 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> +Import-Into-1.2.0.ebuild:
+  version bump wrt bug #499302
 
   20 Jul 2013; Fabian Groffen <grobian@gentoo.org> Import-Into-1.1.0.ebuild:
   Added Prefix keywords, bug #437522

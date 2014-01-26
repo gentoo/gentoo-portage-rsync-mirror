@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.636 2014/01/22 19:34:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.637 2014/01/26 09:27:14 jlec Exp $
+
+  26 Jan 2014; Justin Lecher <jlec@gentoo.org> ruby-1.9.3_p484.ebuild,
+  ruby-2.0.0_p353-r1.ebuild, ruby-2.1.0.ebuild, metadata.xml:
+  Fix slot conflicts, #498970
 
   22 Jan 2014; Hans de Graaff <graaff@gentoo.org> ruby-1.9.3_p484.ebuild,
   ruby-2.0.0_p353-r1.ebuild, ruby-2.1.0.ebuild:

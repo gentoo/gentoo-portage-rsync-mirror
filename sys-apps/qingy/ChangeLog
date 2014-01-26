@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/qingy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.71 2013/08/25 22:38:15 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.72 2014/01/26 09:07:56 gienah Exp $
+
+*qingy-1.0.0-r1 (26 Jan 2014)
+
+  26 Jan 2014; Mark Wright <gienah@gentoo.org> +qingy-1.0.0-r1.ebuild,
+  metadata.xml, qingy-1.0.0.ebuild:
+  qingy-1.0.0: fix bug #359637 Updating sys-apps/qingy-1.0.0 autotools files:
+  thanks to Justin for reporting, hal and axs for testing, Justin and s4t4n for
+  fixing. Fix bug #462634 - sys-apps/qingy-1.0.0 build error: Thanks to Ole
+  Langbehn for reporting, Rafal Muzylo, Ellison Marks, needle and Stephan
+  Litterst for help. qingy-1.0.0-r1: Fix bug #372675 - sys-apps/qingy fails to
+  keep ConsoleKit PAM session open with default setting (using DirectFB: Thanks
+  to guboj for reporting, Richard Kenney for testing, Tomoh K. and s4t4n for
+  fixing. Patches are from qingy upstream subversion.
 
   27 May 2013; Ulrich Müller <ulm@gentoo.org> files/50qingy-gentoo.el:
   Autoload correct function in Emacs site-init file, bug 392029.

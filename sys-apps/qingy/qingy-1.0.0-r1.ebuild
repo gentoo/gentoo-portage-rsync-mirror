@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-1.0.0.ebuild,v 1.7 2014/01/26 09:07:56 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/qingy-1.0.0-r1.ebuild,v 1.1 2014/01/26 09:07:56 gienah Exp $
 
 EAPI=5
 inherit autotools elisp-common eutils pam
@@ -11,12 +11,13 @@ DESCRIPTION="a DirectFB getty replacement"
 HOMEPAGE="http://qingy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	mirror://gentoo/${PN}-gentoo-theme-${GENTOO_THEME_VERSION}.tar.bz2
-	http://dev.gentoo.org/~gienah/2big4tree/sys-apps/qingy/${P}-screensavers.patch.gz"
+	http://dev.gentoo.org/~gienah/2big4tree/sys-apps/qingy/${P}-screensavers.patch.gz
+	http://dev.gentoo.org/~gienah/2big4tree/sys-apps/qingy/${P}-consolekit-pam.patch.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="crypt directfb emacs gpm opensslcrypt pam static X"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="consolekit crypt directfb emacs gpm opensslcrypt pam static X"
 
 RDEPEND=">=sys-libs/ncurses-5.7-r7:=
 	opensslcrypt? ( dev-libs/openssl:0= )
@@ -33,6 +34,9 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.1.4-r1
 	virtual/pkgconfig"
 RDEPEND="${RDEPEND}
+	consolekit? (
+		sys-auth/consolekit
+		sys-apps/dbus )
 	pam? ( sys-auth/pambase )"
 
 SITEFILE=50${PN}-gentoo.el
@@ -41,6 +45,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-tinfo.patch
 	# bug #359637 and bug #462634 - fixes from upstream
 	epatch "${DISTDIR}"/${P}-screensavers.patch.gz
+	# bug #372675 - fix from upstream
+	epatch "${DISTDIR}"/${P}-consolekit-pam.patch.gz
 	eautoreconf
 }
 
@@ -61,6 +67,7 @@ src_configure() {
 	econf \
 		--sbindir=/sbin \
 		--disable-optimizations \
+		$(use_enable consolekit) \
 		$(use_enable pam) \
 		$(use_enable static static-build) \
 		$(use_enable gpm gpm-lock) \
