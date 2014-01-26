@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/ati-drivers
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.349 2013/12/27 12:47:52 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.350 2014/01/26 17:56:12 chithanh Exp $
+
+  26 Jan 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/ati-drivers-linux-3.13-acpi-handle.patch, ati-drivers-13.12.ebuild,
+  files/ati-drivers-kernel-3.8-acpihandle.patch:
+  Fix building against kernel 3.13, bug #498766. Import of Emil Karlson's ebuild
+  from the x11 overlay.
 
 *ati-drivers-13.12 (27 Dec 2013)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtdemo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.10 2013/12/28 02:06:13 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.11 2014/01/26 17:55:58 pesa Exp $
+
+  26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -qtdemo-4.8.4.ebuild,
+  metadata.xml:
+  Cleanup.
 
   28 Dec 2013; Davide Pesavento <pesa@gentoo.org> qtdemo-4.8.5-r1.ebuild:
   Don't fail if gstreamer is not installed, since other phonon backends may have

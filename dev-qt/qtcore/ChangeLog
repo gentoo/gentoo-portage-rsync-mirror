@@ -1,6 +1,16 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.41 2014/01/26 11:55:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.42 2014/01/26 17:47:41 pesa Exp $
+
+  26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -files/CVE-2013-0254.patch,
+  -files/blacklist-mis-issued-Turktrust-certs.patch,
+  -files/fix-call-to-QMetaObject-metaCall-from-updateProperty.patch,
+  -files/moc-workaround-for-BOOST_JOIN.patch,
+  -files/rename-qAbs-function-for-timeval.patch,
+  -files/set-pkg-config-locations-directly-to-install-dir.patch,
+  -qtcore-4.8.4-r4.ebuild, -qtcore-4.8.4-r5.ebuild, -qtcore-4.8.5.ebuild,
+  metadata.xml:
+  Cleanup.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qtcore-4.8.5-r1.ebuild:
   Stable for ia64, wrt bug #494728

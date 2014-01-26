@@ -1,0 +1,9 @@
+# ChangeLog for app-leechcraft/lc-rosenthal
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-rosenthal/ChangeLog,v 1.1 2014/01/26 17:36:21 maksbotan Exp $
+
+*lc-rosenthal-9999 (26 Jan 2014)
+
+  26 Jan 2014; Maxim Koltsov <maksbotan@gentoo.org> +lc-rosenthal-9999.ebuild,
+  +metadata.xml:
+  Add Rosenthal LeechCraft plugin, thanks to 0xd34df00d

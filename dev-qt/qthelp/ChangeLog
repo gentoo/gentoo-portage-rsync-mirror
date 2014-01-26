@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.19 2014/01/26 11:55:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.20 2014/01/26 17:59:13 pesa Exp $
+
+  26 Jan 2014; Davide Pesavento <pesa@gentoo.org> -files/disable-webkit.patch,
+  -files/qthelp-4.7-fix-compat.patch, -files/qthelp-4.8.2+gcc-4.7.patch,
+  -qthelp-4.8.4.ebuild, metadata.xml:
+  Cleanup.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> qthelp-4.8.5-r2.ebuild:
   Stable for ia64, wrt bug #494728
