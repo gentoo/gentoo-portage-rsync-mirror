@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r3.ebuild,v 1.15 2014/01/18 09:14:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc16-r3.ebuild,v 1.16 2014/01/27 22:05:32 axs Exp $
 
 EAPI=5
 
@@ -22,7 +22,8 @@ RDEPEND=">=sys-fs/lvm2-2.02.45
 	klibc? ( dev-libs/klibc )
 	dietlibc? ( dev-libs/dietlibc )"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	static? ( sys-fs/lvm2[static-libs] )"
 
 S=${WORKDIR}/${PN}/${MY_PV}/${PN}
 
