@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTTP_Request2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request2/ChangeLog,v 1.12 2013/03/25 19:57:18 mabi Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Request2/ChangeLog,v 1.13 2014/01/27 21:46:53 mabi Exp $
+
+*PEAR-HTTP_Request2-2.2.1 (27 Jan 2014)
+
+  27 Jan 2014; Matti Bickel <mabi@gentoo.org> +PEAR-HTTP_Request2-2.2.1.ebuild:
+  version bump
 
 *PEAR-HTTP_Request2-2.1.1 (25 Mar 2013)
 
