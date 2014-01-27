@@ -1,22 +1,20 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-9999.ebuild,v 1.15 2014/01/27 19:12:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.1 2014/01/27 19:12:07 idl0r Exp $
 
 EAPI=5
 GENTOO_VDR_CONDITIONAL=yes
 
-inherit vdr-plugin-2 cvs toolchain-funcs eutils
+inherit vdr-plugin-2 toolchain-funcs eutils
 
 DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
 HOMEPAGE="http://sourceforge.net/projects/xineliboutput/"
-
-ECVS_SERVER="xineliboutput.cvs.sourceforge.net:/cvsroot/xineliboutput"
-ECVS_MODULE="${PN}"
+SRC_URI="mirror://sourceforge/${PN#vdr-}/${P}.tgz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS=""
-IUSE="bluray caps cec dbus fbcon jpeg libextractor nls opengl +vdr vdpau +X +xine xinerama"
+KEYWORDS="~amd64 ~x86"
+IUSE="bluray caps dbus fbcon jpeg libextractor nls opengl +vdr vdpau +X +xine xinerama"
 
 COMMON_DEPEND="
 	vdr? (
@@ -39,9 +37,7 @@ COMMON_DEPEND="
 			bluray? ( media-libs/libbluray )
 			opengl? ( virtual/opengl )
 		)
-	)
-
-	cec? ( dev-libs/libcec )"
+	)"
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
@@ -55,7 +51,6 @@ DEPEND="${COMMON_DEPEND}
 	)"
 RDEPEND="${COMMON_DEPEND}"
 
-S=${WORKDIR}/${PN}
 VDR_CONFD_FILE="${FILESDIR}/confd-1.0.0_pre6"
 
 pkg_setup() {
@@ -108,7 +103,6 @@ src_configure() {
 		$(use_enable nls i18n) \
 		$(use_enable bluray libbluray) \
 		$(use_enable opengl) \
-		$(use_enable cec libcec) \
 		${myconf} \
 		|| die
 }

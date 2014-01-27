@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.26.2.ebuild,v 1.9 2012/12/11 03:42:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.26.2.ebuild,v 1.10 2014/01/27 19:20:25 axs Exp $
 
 EAPI="2"
 
@@ -82,6 +82,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/iscan-2.25.0-drop-ltdl.patch
 	epatch "${FILESDIR}"/iscan-2.25.0-fix-g++-test.patch
 	epatch "${FILESDIR}"/iscan-2.26.2-libpng15.patch
+	epatch "${FILESDIR}"/iscan-2.26.2-png-libs.patch
 
 	eautoreconf
 }

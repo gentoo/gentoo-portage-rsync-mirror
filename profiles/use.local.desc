@@ -3475,6 +3475,8 @@ media-plugins/vdr-text2skin:contrib - Install user contributed scripts
 media-plugins/vdr-vdrmanager:stream - Add support for streaming Video to Android client
 media-plugins/vdr-weatherng:dxr3 - enables lower osd color depth for dxr3 cards
 media-plugins/vdr-xine:yaepg - Enables support for the plugin vdr-yaepg (showing scaled video besides OSD)
+media-plugins/vdr-xineliboutput:bluray - Enable BluRay metadata support through media-libs/libbluray
+media-plugins/vdr-xineliboutput:cec - Enable CEC support through dev-libs/libcec
 media-plugins/vdr-xineliboutput:libextractor - Use media-libs/libextract to gather files' metadata in media-player
 media-plugins/vdr-xineliboutput:vdr - Compile the vdr output plugin to use local or remote xine as output
 media-plugins/vdr-xineliboutput:xine - Compile the xine input plugin for displaying vdr video and OSD
