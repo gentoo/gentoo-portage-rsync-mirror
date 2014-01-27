@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/spl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.66 2013/11/21 14:47:28 ryao Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/spl/ChangeLog,v 1.67 2014/01/27 04:48:35 ryao Exp $
+
+*spl-0.6.2-r3 (27 Jan 2014)
+
+  27 Jan 2014; Richard Yao <ryao@gentoo.org> +spl-0.6.2-r3.ebuild:
+  Linux 3.13 support and some additional patches for SPARC support
 
 *spl-0.6.2-r2 (21 Nov 2013)
 
