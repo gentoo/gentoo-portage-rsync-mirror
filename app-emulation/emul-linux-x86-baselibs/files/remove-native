@@ -243,5 +243,3 @@ lib32/libhistory.so.6
 lib32/libhistory.so.6.2
 usr/lib32/libhistory.so
 usr/lib32/libmng.so
-usr/lib32/libmng.so.1
-usr/lib32/libmng.so.1.0.0

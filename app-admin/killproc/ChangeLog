@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/killproc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.24 2013/12/31 08:43:22 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/killproc/ChangeLog,v 1.25 2014/01/27 13:06:32 hattya Exp $
+
+  27 Jan 2014; Akinori Hattori <hattya@gentoo.org> killproc-2.13.ebuild:
+  keyword ~ia64 wrt bug #494254
 
   31 Dec 2013; Markus Meier <maekke@gentoo.org> killproc-2.13.ebuild:
   add ~arm, bug #494254
