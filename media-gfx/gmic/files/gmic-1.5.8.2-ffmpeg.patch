@@ -1,0 +1,22 @@
+--- gmic-1.5.8.2/src/CImg.h
++++ gmic-1.5.8.2/src/CImg.h
+@@ -319,6 +319,7 @@
+ extern "C" {
+ #include <libavformat/avformat.h>
+ #include <libavcodec/avcodec.h>
++#include <libavutil/mathematics.h>
+ #include <libswscale/swscale.h>
+ }
+ #endif
+@@ -45789,7 +45790,11 @@
+         AVPacket pkt;
+         int got_packet;
+         av_init_packet(&pkt);
++#if LIBAVCODEC_VERSION_INT<AV_VERSION_INT(54,1,0)
++        out_size = avcodec_encode_video(c,video_outbuf,video_outbuf_size,picture);
++#else
+         out_size = avcodec_encode_video2(c,&pkt,picture,&got_packet);
++#endif
+         if (got_packet) {
+           pkt.pts = av_rescale_q(c->coded_frame->pts,c->time_base,video_str->time_base);
+           if (c->coded_frame->key_frame) pkt.flags|=AV_PKT_FLAG_KEY;

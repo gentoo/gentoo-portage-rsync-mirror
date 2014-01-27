@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxcb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.129 2014/01/26 19:09:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/ChangeLog,v 1.130 2014/01/27 02:32:05 floppym Exp $
+
+  27 Jan 2014; Mike Gilbert <floppym@gentoo.org> libxcb-1.10.ebuild:
+  Drop python3_1 (again).
 
 *libxcb-1.10 (26 Jan 2014)
 
