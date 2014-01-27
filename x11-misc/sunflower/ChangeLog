@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/sunflower
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/ChangeLog,v 1.9 2013/10/30 22:18:37 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/sunflower/ChangeLog,v 1.10 2014/01/27 13:45:28 hasufell Exp $
+
+*sunflower-0.1_alpha57 (27 Jan 2014)
+
+  27 Jan 2014; Julian Ospald <hasufell@gentoo.org>
+  +sunflower-0.1_alpha57.ebuild:
+  version bump
 
   30 Oct 2013; Julian Ospald <hasufell@gentoo.org>
   -sunflower-0.1_alpha53.ebuild, -sunflower-0.1_alpha54.ebuild,

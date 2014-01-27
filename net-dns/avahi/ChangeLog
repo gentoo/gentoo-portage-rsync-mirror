@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.259 2014/01/26 21:07:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.260 2014/01/27 13:37:36 blueness Exp $
+
+  27 Jan 2014; Anthony G. Basile <blueness@gentoo.org> avahi-0.6.31-r3.ebuild:
+  Use mono-env.eclass for USE=mono builds
 
 *avahi-0.6.31-r3 (26 Jan 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MediaWiki-API
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MediaWiki-API/ChangeLog,v 1.3 2014/01/06 15:15:53 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MediaWiki-API/ChangeLog,v 1.4 2014/01/27 13:52:02 hattya Exp $
+
+  27 Jan 2014; Akinori Hattori <hattya@gentoo.org> MediaWiki-API-0.390.0.ebuild:
+  keyword ~ia64 wrt bug #497068
 
   06 Jan 2014; Naohiro Aota <naota@gentoo.org> MediaWiki-API-0.390.0.ebuild:
   Add ~x86-fbsd wrt bug #497068

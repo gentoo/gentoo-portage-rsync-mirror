@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/DateTime-Format-ISO8601-0.80.0.ebuild,v 1.5 2014/01/06 15:15:12 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-ISO8601/DateTime-Format-ISO8601-0.80.0.ebuild,v 1.6 2014/01/27 13:51:06 hattya Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Parses ISO8601 formats"
 
 SLOT="0"
-KEYWORDS="amd64 ~hppa x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ~ia64 x86 ~x86-fbsd"
 IUSE="test"
 
 RDEPEND="dev-perl/DateTime

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/agedu/agedu-9671.ebuild,v 1.1 2012/10/21 20:14:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/agedu/agedu-10126.ebuild,v 1.1 2014/01/27 13:36:16 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
 inherit autotools eutils
 
@@ -22,7 +22,7 @@ DEPEND="doc? ( app-doc/halibut )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${MY_P}-fix-automagic.patch"
+	epatch "${FILESDIR}/${PN}-r9671-fix-automagic.patch"
 	eautoreconf
 }
 
