@@ -4,5 +4,6 @@
   <herd>livecd</herd>
   <use>
     <flag name="xz">Enable support for XZ ("LZMA2") compression using <pkg>app-arch/xz-utils</pkg></flag>
+    <flag name="lz4">Enable support for LZ4 compression using <pkg>app-arch/lz4</pkg></flag>
   </use>
 </pkgmetadata>
