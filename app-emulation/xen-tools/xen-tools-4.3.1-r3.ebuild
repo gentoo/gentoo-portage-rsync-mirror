@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1-r3.ebuild,v 1.4 2013/12/22 12:01:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1-r3.ebuild,v 1.5 2014/01/27 08:58:09 dlan Exp $
 
 EAPI=5
 
@@ -237,6 +237,17 @@ src_prepare() {
 	# Bug 493232 fix from http://bugzilla.xensource.com/bugzilla/show_bug.cgi?id=1844
 	sed -e 's:bl->argsspace = 7 + :bl->argsspace = 9 + :' \
 		-i tools/libxl/libxl_bootloader.c || die
+
+	# fix QA warning, create /var/run/, /var/lock dynamically
+	sed -i -e "/\$(INSTALL_DIR) \$(DESTDIR)\$(XEN_RUN_DIR)/d" \
+		tools/libxl/Makefile || die
+
+	sed -i -e "/\/var\/run\//d" \
+		tools/xenstore/Makefile \
+		tools/pygrub/Makefile || die
+
+	sed -i -e "/\/var\/lock\/subsys/d" \
+		tools/Makefile || die
 
 	epatch_user
 }

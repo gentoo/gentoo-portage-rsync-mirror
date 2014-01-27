@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.1-r2.ebuild,v 1.1 2014/01/23 16:31:28 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2013.2.1-r3.ebuild,v 1.1 2014/01/27 08:44:51 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -72,6 +72,7 @@ RDEPEND="sqlite? ( >=dev-python/sqlalchemy-0.7.8[sqlite,${PYTHON_USEDEP}]
 
 PATCHES=(
 	"${FILESDIR}/CVE-2013-6437-2012.2.1.patch"
+	"${FILESDIR}/CVE-2013-7048-havana.patch"
 	"${FILESDIR}/CVE-2013-7130-stable-havana.patch"
 )
 

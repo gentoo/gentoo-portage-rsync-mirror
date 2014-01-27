@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r5.ebuild,v 1.2 2013/11/09 08:14:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r5.ebuild,v 1.3 2014/01/27 08:58:09 dlan Exp $
 
 EAPI=5
 
@@ -241,6 +241,17 @@ src_prepare() {
 	# Bug 379537
 	epatch "${FILESDIR}"/fix-gold-ld.patch
 
+	# fix QA warning, create /var/run/, /var/lock dynamically
+	sed -i -e "/\$(INSTALL_DIR) \$(DESTDIR)\$(XEN_RUN_DIR)/d" \
+		tools/libxl/Makefile || die
+
+	sed -i -e "/\/var\/run\//d" \
+		tools/xenstore/Makefile \
+		tools/pygrub/Makefile || die
+
+	sed -i -e "/\/var\/lock\/subsys/d" \
+		tools/Makefile || die
+
 	epatch_user
 }
 
@@ -327,7 +338,7 @@ src_install() {
 	fi
 
 	# xend expects these to exist
-	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
+	keepdir /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
 
 	# for xendomains
 	keepdir /etc/xen/auto
