@@ -1,6 +1,13 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.36 2014/01/20 17:24:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.37 2014/01/27 01:28:28 pesa Exp $
+
+*qupzilla-1.6.0-r1 (27 Jan 2014)
+
+  27 Jan 2014; Davide Pesavento <pesa@gentoo.org> +qupzilla-1.6.0-r1.ebuild,
+  -qupzilla-1.6.0.ebuild:
+  Fix kwallet integration, add support for gnome-keyring (bug 499182). Ebuild
+  cleanup.
 
   20 Jan 2014; Ben de Groot <yngwin@gentoo.org> -qupzilla-1.4.3.ebuild:
   remove old version
