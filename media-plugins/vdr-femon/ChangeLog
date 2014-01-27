@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-femon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/ChangeLog,v 1.31 2014/01/02 17:04:20 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/ChangeLog,v 1.32 2014/01/27 15:13:06 hd_brummy Exp $
+
+*vdr-femon-2.0.2 (27 Jan 2014)
+
+  27 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-femon-2.0.2.ebuild:
+  bump; - Added initial support for CAMs
 
   02 Jan 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-femon-2.0.0.ebuild:
   stable amd64 x86, wrt bug 495760
