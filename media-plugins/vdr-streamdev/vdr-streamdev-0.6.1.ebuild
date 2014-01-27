@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.6.1.ebuild,v 1.1 2013/12/27 17:22:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-streamdev/vdr-streamdev-0.6.1.ebuild,v 1.2 2014/01/27 17:19:19 hd_brummy Exp $
 
-EAPI="5"
+EAPI=5
 
 inherit vdr-plugin-2
 
@@ -34,6 +34,8 @@ src_prepare() {
 	for flag in client server; do
 		if ! use ${flag}; then
 			sed -i Makefile \
+				-e '/^.PHONY:/s/'${flag}'//' \
+				-e '/^.PHONY:/s/'install-${flag}'//' \
 				-e '/^all:/s/'${flag}'//' \
 				-e '/^install:/s/'install-${flag}'//'
 		fi
