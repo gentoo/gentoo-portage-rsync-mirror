@@ -1,9 +1,9 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.9 2012/12/12 11:43:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.10 2014/01/27 20:14:22 axs Exp $
 
 EAPI=5
-inherit eutils udev
+inherit autotools eutils udev
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://www.kinodv.org/"
@@ -86,6 +86,9 @@ src/page_bttv.cc' po/POTFILES.in || die
 	epatch "${FILESDIR}/${P}-v4l1.patch"
 	epatch "${FILESDIR}/${P}-libav-0.7.patch"
 	epatch "${FILESDIR}/${P}-libav-0.8.patch"
+	epatch "${FILESDIR}/${P}-libavcodec-pkg-config.patch"
+
+	eautoreconf
 }
 
 src_configure() {

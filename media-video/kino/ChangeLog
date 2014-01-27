@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kino
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.132 2012/12/12 11:43:54 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.133 2014/01/27 20:14:22 axs Exp $
+
+  27 Jan 2014; Ian Stakenvicius <axs@gentoo.org>
+  +files/kino-1.3.4-libavcodec-pkg-config.patch, kino-1.3.4.ebuild:
+  fixed missing libavcodec and libavutil linker errors, bug 490628
 
   12 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> kino-1.3.4.ebuild:
   Rename kino.rules to 99-kino.rules and use udev.eclass to install it into
