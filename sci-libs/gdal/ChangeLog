@@ -1,6 +1,23 @@
 # ChangeLog for sci-libs/gdal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.140 2013/06/24 23:48:21 titanofold Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.141 2014/01/27 00:10:33 titanofold Exp $
+
+*gdal-1.10.1 (26 Jan 2014)
+
+  26 Jan 2014; Aaron W. Swenson <titanofold@gentoo.org>
+  +files/gdal-1.10.0-ruby-makefile.patch, +gdal-1.10.1.ebuild:
+  Fix bug 493236: Depend on Perl conditionally. Thanks Nikoli.
+  Fix bug 492338: Version bump. Thanks Stephan Litterst.
+  Fix bug 483074: Convert to python-r1 to support multiple Pythons. Thanks
+                  Ian Stakenvicius.
+  Fix bug 466114: Append -lisqlite3 to LIBS. Thanks cmuelle8.
+  Fix bug 482888: Modify poppler dependency to have a minimum
+                  version (>=0.24.3).
+  Fix bug 490048: Add dev-libs/libpcre and dev-libs/libxml2 to RDEPEND
+  Fix bug 489224: Add sub-slot operator to trigger rebuild when poppler or
+                  Perl is updated. Thanks Nikoli.
+  Fix bug 490046: Resolved by sci-libs/gdal version bump.
+  Fix bug 474678: Really include the patch this time.
 
 *gdal-1.10.0-r1 (24 Jun 2013)
 
