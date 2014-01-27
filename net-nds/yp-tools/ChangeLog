@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.48 2014/01/26 12:25:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.49 2014/01/27 07:26:47 jer Exp $
+
+  27 Jan 2014; Jeroen Roovers <jer@gentoo.org> yp-tools-2.12-r1.ebuild:
+  Stable for HPPA (bug #499312).
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> yp-tools-2.12-r1.ebuild:
   Stable for sparc, wrt bug #499312

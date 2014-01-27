@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/memcached
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.146 2014/01/26 19:58:35 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.147 2014/01/27 07:19:49 prometheanfire Exp $
+
+*memcached-1.4.17-r1 (27 Jan 2014)
+
+  27 Jan 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/memcached-1.4.17-EWOULDBLOCK.patch, +memcached-1.4.17-r1.ebuild,
+  -files/memcached-1.2.2-p-threads.patch:
+  some file cleanup and a fix for bug 498262
 
   26 Jan 2014; Matthew Thode <prometheanfire@gentoo.org>
   -memcached-1.1.12-r3.ebuild, -memcached-1.2.1-r2.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.37.1.ebuild,v 1.2 2014/01/26 12:25:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.37.1.ebuild,v 1.3 2014/01/27 07:27:24 jer Exp $
 
 EAPI=5
 inherit readme.gentoo systemd
@@ -14,7 +14,7 @@ SRC_URI="http://www.linux-nis.org/download/ypbind-mt/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 IUSE="debug dbus nls slp systemd"
 
 RDEPEND="

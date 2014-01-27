@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci-mathematics</herd>
-<longdescription lang="en">
+  <herd>sci-mathematics</herd>
+  <longdescription lang="en">
   PARI is a widely used computer algebra system designed for fast
   computations in number theory (factorizations, algebraic number
   theory, elliptic curves...), but also contains a large number of other
@@ -19,7 +19,7 @@
 tables (errors fixed, 1/10th the size, easier to use).
 
 </longdescription>
-<use>
-  <flag name='data'>Add additional data (elldata, galdata, seadata, nftables)</flag>  
-</use>
+  <use>
+    <flag name="data">Add additional data (elldata, galdata, seadata, nftables)</flag>
+  </use>
 </pkgmetadata>
