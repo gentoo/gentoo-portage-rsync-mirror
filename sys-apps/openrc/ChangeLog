@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.298 2014/01/19 19:38:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.299 2014/01/27 03:19:36 williamh Exp $
+
+  27 Jan 2014; William Hubbs <williamh@gentoo.org> -openrc-0.12.2.ebuild,
+  -openrc-0.12.3.ebuild:
+  remove old openrc-0.12.x versions
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openrc-0.12.4.ebuild:
   Stable for sparc, wrt bug #487332
