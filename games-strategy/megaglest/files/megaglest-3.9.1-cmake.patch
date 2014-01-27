@@ -1,0 +1,18 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Mon Jan 27 00:46:56 UTC 2014
+Subject: fix installation
+
+--- megaglest-source-3.9.1.tar.xz/source/glest_game/CMakeLists.txt
++++ megaglest-source-3.9.1.tar.xz/source/glest_game/CMakeLists.txt
+@@ -310,9 +310,9 @@
+ 		          "${PROJECT_SOURCE_DIR}/mk/linux/megaglest.png"
+ 		          "${PROJECT_SOURCE_DIR}/mk/linux/megaglest.xpm"
+ 		          "${PROJECT_SOURCE_DIR}/mk/linux/megaglest.bmp"
+-		          "${PROJECT_SOURCE_DIR}/data/glest_game/editor.ico"
++		          "${PROJECT_SOURCE_DIR}/editor.ico"
+ 		          "${PROJECT_SOURCE_DIR}/mk/linux/glest.ico"
+-		          "${PROJECT_SOURCE_DIR}/data/glest_game/g3dviewer.ico"
++		          "${PROJECT_SOURCE_DIR}/g3dviewer.ico"
+ 		          DESTINATION ${MEGAGLEST_ICON_INSTALL_PATH})
+ 	        ELSE()
+ 
