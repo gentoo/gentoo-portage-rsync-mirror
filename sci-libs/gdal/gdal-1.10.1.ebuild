@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.1.ebuild,v 1.1 2014/01/27 00:10:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.10.1.ebuild,v 1.2 2014/01/27 12:46:48 titanofold Exp $
 
 EAPI=5
 
@@ -68,6 +68,7 @@ DEPEND="${RDEPEND}
 	ruby? ( ${SWIG_DEP} )"
 
 AT_M4DIR="${S}/m4"
+MAKEOPTS+="-j1"
 
 REQUIRED_USE="
 	spatialite? ( sqlite )
