@@ -1,0 +1,9 @@
+# ChangeLog for app-text/libabw
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libabw/ChangeLog,v 1.1 2014/01/27 15:32:41 scarabeus Exp $
+
+*libabw-0.0.1 (27 Jan 2014)
+
+  27 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org> +libabw-0.0.1.ebuild,
+  +metadata.xml:
+  Initial commit. Library needed in 4.2 and later.

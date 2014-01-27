@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.537 2014/01/27 15:17:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.538 2014/01/27 15:35:49 scarabeus Exp $
+
+  27 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.2.9999.ebuild,
+  libreoffice-9999-r2.ebuild:
+  Add dep over libabw.
 
   27 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999-r2.ebuild:
   Curl patch merged to master.
