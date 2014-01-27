@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstdc++-v3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.73 2013/12/01 14:14:08 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.74 2014/01/27 14:54:25 jer Exp $
+
+  27 Jan 2014; Jeroen Roovers <jer@gentoo.org> libstdc++-v3-3.3.6-r1.ebuild,
+  libstdc++-v3-3.3.6.ebuild:
+  Drop HPPA keywording.
 
   01 Dec 2013; Johannes Huber <johu@gentoo.org> libstdc++-v3-3.3.6-r1.ebuild:
   x86 stable, bug #452614

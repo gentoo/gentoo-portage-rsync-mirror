@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/halibut
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.13 2013/07/21 09:54:40 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.14 2014/01/27 14:41:42 blueness Exp $
+
+  27 Jan 2014; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Needed for agedu which I take care of
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> -halibut-0.9.ebuild, metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-
