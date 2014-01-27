@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-0.9.15.ebuild,v 1.2 2014/01/23 14:17:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-0.9.15.ebuild,v 1.3 2014/01/27 16:11:07 blueness Exp $
 
 EAPI=5
 
@@ -28,9 +28,11 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="crosscompile_opts_headers-only"
+IUSE="crosscompile_opts_headers-only nls"
 
-RDEPEND="sys-apps/getent"
+RDEPEND="
+	nls? ( sys-devel/gettext )
+	sys-apps/getent"
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]
@@ -79,6 +81,10 @@ src_install() {
 	if is_crosscompile ; then
 		dosym usr/include /usr/${CTARGET}/sys-include
 	fi
+
+	# If we are going to use gnu's gettext then we have to
+	# move musl's libintl out of the way.
+	use nls && mv "${D}"/usr/include/libintl{,-musl}.h
 }
 
 pkg_postinst() {
