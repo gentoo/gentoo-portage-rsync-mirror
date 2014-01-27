@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-oauth-plus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-oauth-plus/ChangeLog,v 1.7 2013/10/02 06:12:16 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-oauth-plus/ChangeLog,v 1.8 2014/01/27 02:24:42 idella4 Exp $
+
+*django-oauth-plus-2.2.4 (27 Jan 2014)
+
+  27 Jan 2014; Ian Delaney <idella4@gentoo.org> +django-oauth-plus-2.2.4.ebuild:
+  bump; update deps, test phase
 
 *django-oauth-plus-2.1.5 (02 Oct 2013)
 

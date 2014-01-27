@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.191 2014/01/18 16:23:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.192 2014/01/27 02:19:31 zx2c4 Exp $
+
+# Jason A. Donenfeld <zx2c4@gentoo.org> (27 Jan 2014)
+# luajit isn't keyworded for arm yet, which is a bummer
+net-im/prosody jit
 
 # Rick Farina <zerochaos@gentoo.org> (09 Jan 2014)
 # rjb doesn't work on arm, so no java hacks for metasploit

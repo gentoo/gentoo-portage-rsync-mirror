@@ -10,4 +10,4 @@ RDEPEND=net-im/jabber-base >=dev-lang/lua-5.1 >=net-dns/libidn-1.1 >=dev-libs/op
 SLOT=0
 SRC_URI=http://prosody.im/downloads/source/prosody-0.8.2.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=c85197cb90448a26c562804e06a1c53b
+_md5_=7fc7bfc2d4cb6fdb0f13f62cfbb44444

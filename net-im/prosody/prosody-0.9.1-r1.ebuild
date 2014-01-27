@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.1-r1.ebuild,v 1.2 2013/11/01 20:33:25 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.1-r1.ebuild,v 1.3 2014/01/27 02:21:51 zx2c4 Exp $
 
 EAPI=5
 
@@ -66,7 +66,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	newinitd "${FILESDIR}/${PN}".initd ${PN}
+	newinitd "${FILESDIR}/${PN}".initd.old ${PN}
 }
 
 src_test() {

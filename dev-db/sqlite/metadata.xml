@@ -7,7 +7,6 @@
 	<description>Proxy maintainer</description>
 </maintainer>
 <use>
-  <flag name='extensions'>Enable support for dynamic loading of extensions</flag>
   <flag name='secure-delete'>Overwrite deleted information with zeros in addition to marking the space as available for reuse. This causes a performance penalty.</flag>
 </use>
 <upstream>
