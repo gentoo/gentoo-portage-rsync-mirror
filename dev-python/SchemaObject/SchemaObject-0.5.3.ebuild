@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/SchemaObject/SchemaObject-0.5.3.ebuild,v 1.2 2012/07/04 00:46:37 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/SchemaObject/SchemaObject-0.5.3.ebuild,v 1.3 2014/01/27 20:33:44 blueness Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-python/setuptools"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
