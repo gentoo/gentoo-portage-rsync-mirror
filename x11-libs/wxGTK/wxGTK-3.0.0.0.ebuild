@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-3.0.0.0.ebuild,v 1.2 2014/01/08 00:28:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-3.0.0.0.ebuild,v 1.3 2014/01/27 17:35:05 dirtyepic Exp $
 
 EAPI="5"
 
@@ -33,7 +33,6 @@ RDEPEND="
 		x11-libs/libXxf86vm
 		x11-libs/pango[X]
 		gstreamer? (
-			gnome-base/gconf:2
 			media-libs/gstreamer:0.10
 			media-libs/gst-plugins-base:0.10 )
 		libnotify? ( x11-libs/libnotify )

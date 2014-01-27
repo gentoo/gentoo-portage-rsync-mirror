@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.4.1-r1.ebuild,v 1.1 2013/08/10 06:07:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.4.1-r1.ebuild,v 1.2 2014/01/27 17:35:05 dirtyepic Exp $
 
 EAPI="5"
 
@@ -35,7 +35,6 @@ RDEPEND="
 		x11-libs/pango[X]
 		gnome? ( gnome-base/libgnomeprintui:2.2 )
 		gstreamer? (
-			gnome-base/gconf:2
 			media-libs/gstreamer:0.10
 			media-libs/gst-plugins-base:0.10 )
 		opengl? ( virtual/opengl )
