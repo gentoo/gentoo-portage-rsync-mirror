@@ -15,5 +15,6 @@
 <use>
 	<flag name='hsieh'>Use Hsieh hash algorithm.</flag>
 	<flag name='libevent'>Use the libevent event loop interface.</flag>
+	<flag name='sasl'>Use sasl auth for communications.</flag>
 </use>
 </pkgmetadata>

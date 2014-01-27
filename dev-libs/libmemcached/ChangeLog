@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/libmemcached
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.66 2013/11/03 05:48:15 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/ChangeLog,v 1.67 2014/01/27 08:30:22 prometheanfire Exp $
+
+*libmemcached-1.0.17-r1 (27 Jan 2014)
+
+  27 Jan 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/libmemcached-1.0.17-gcc4_8.patch, +libmemcached-1.0.17-r1.ebuild,
+  -libmemcached-0.22.ebuild, -libmemcached-0.25.ebuild,
+  -libmemcached-0.26.ebuild, -libmemcached-0.28.ebuild,
+  -libmemcached-0.30.ebuild, -libmemcached-0.31.ebuild,
+  -libmemcached-0.34-r1.ebuild, -libmemcached-0.34.ebuild,
+  -libmemcached-0.35.ebuild, -libmemcached-0.37.ebuild,
+  -libmemcached-0.38.ebuild, -libmemcached-0.39.ebuild,
+  -libmemcached-1.0.11.ebuild, -libmemcached-1.0.4.ebuild, metadata.xml:
+  removing the old and jankey, adding the new hotness
 
   03 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
   adding myself to maintainers
