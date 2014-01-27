@@ -1,6 +1,12 @@
 # ChangeLog for app-officeext/languagetool
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/ChangeLog,v 1.14 2013/09/15 11:09:34 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/languagetool/ChangeLog,v 1.15 2014/01/27 09:38:20 scarabeus Exp $
+
+*languagetool-2.4 (27 Jan 2014)
+
+  27 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org> +languagetool-2.4.ebuild,
+  -languagetool-2.1.ebuild, languagetool-2.2.ebuild:
+  Version bump to 2.4. Stabilise 2.2 on amd64 and x86. Remove 2.1.
 
 *languagetool-2.2 (15 Sep 2013)
 
