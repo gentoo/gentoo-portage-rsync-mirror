@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8572 2014/01/27 21:59:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8573 2014/01/28 20:55:57 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove obsolete libreoffice-bin-debug mask
 
   27 Jan 2014; Ian Stakenvicius <axs@gentoo.org>
   targets/systemd/package.use.mask:
