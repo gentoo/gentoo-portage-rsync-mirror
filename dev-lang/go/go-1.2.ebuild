@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.2.ebuild,v 1.3 2014/01/25 22:13:33 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-1.2.ebuild,v 1.4 2014/01/28 17:38:21 williamh Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/.*/.*"
 
 # The go language uses *.a files which are _NOT_ libraries and should not be
 # stripped.
-STRIP_MASK="/usr/lib/go/pkg/linux*/*.a"
+STRIP_MASK="/usr/lib/go/pkg/linux*/*.a /usr/lib/go/pkg/freebsd*/*.a"
 
 if [[ ${PV} != 9999 ]]; then
 	S="${WORKDIR}"/go

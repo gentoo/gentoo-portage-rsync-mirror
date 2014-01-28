@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.317 2014/01/28 17:05:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.318 2014/01/28 17:56:46 polynomial-c Exp $
+
+  28 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> pidgin-2.10.8.ebuild,
+  pidgin-2.10.8-r1.ebuild:
+  Added python3 support.
 
 *pidgin-2.10.8-r1 (28 Jan 2014)
 *pidgin-2.10.8 (28 Jan 2014)

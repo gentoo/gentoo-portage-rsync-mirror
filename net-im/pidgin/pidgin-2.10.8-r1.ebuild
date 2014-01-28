@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.8-r1.ebuild,v 1.1 2014/01/28 17:05:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.8-r1.ebuild,v 1.2 2014/01/28 17:56:46 polynomial-c Exp $
 
 EAPI=5
 
 GENTOO_DEPEND_ON_PERL=no
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
 inherit autotools flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 python-single-r1
 
 DESCRIPTION="GTK Instant Messenger client"
@@ -230,6 +230,11 @@ src_install() {
 		done
 	fi
 	use perl && fixlocalpod
+
+	if use python || use dbus ; then
+		python-optimize
+		python_fix_shebang "${D}"
+	fi
 
 	dodoc finch/plugins/pietray.py
 	docompress -x /usr/share/doc/${PF}/pietray.py
