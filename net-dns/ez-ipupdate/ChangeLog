@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/ez-ipupdate
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.36 2013/10/13 16:00:04 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.37 2014/01/28 09:22:49 dlan Exp $
+
+*ez-ipupdate-3.0.11.13.3_beta8-r1 (28 Jan 2014)
+
+  28 Jan 2014; Yixun Lan <dlan@gentoo.org>
+  +ez-ipupdate-3.0.11.13.3_beta8-r1.ebuild,
+  +files/ez-ipupdate-3.0.11.13.3_beta8-ipv6.diff, files/ez-ipupdate.initd:
+  support ipv6 address via -a option, bug #432764, thanks Andreas Steinmetz
 
   13 Oct 2013; Pacho Ramos <pacho@gentoo.org> files/ez-ipupdate.initd:
   Stop using deprecated stuff for init.d (#466846)

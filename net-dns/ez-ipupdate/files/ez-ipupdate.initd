@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/files/ez-ipupdate.initd,v 1.4 2013/10/13 16:00:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/files/ez-ipupdate.initd,v 1.5 2014/01/28 09:22:49 dlan Exp $
 
 extra_commands="update"
 
@@ -35,9 +35,11 @@ start() {
 		return 1
 	fi
 
-	if [ ! -d /var/run/ez-ipupdate ]; then
-		mkdir -p /var/run/ez-ipupdate && chown ez-ipupd:ez-ipupd /var/run/ez-ipupdate
-	fi
+	for dir in /var/run/ez-ipupdate /var/cache/ez-ipupdate; do
+		if [ ! -d ${dir} ]; then
+			mkdir -p /var/run/ez-ipupdate && chown ez-ipupd:ez-ipupd /var/run/ez-ipupdate
+		fi
+	done
 
 	for NAME in ${LIST}; do
 		local CONFIG="/etc/ez-ipupdate/${NAME}.conf"
@@ -45,7 +47,7 @@ start() {
 		local CACHEFILE="/var/cache/ez-ipupdate/${NAME}.cache"
 		ebegin "Starting ez-ipupdate (${NAME})"
 		start-stop-daemon -p "${PIDFILE}" --start --quiet --exec /usr/sbin/ez-ipupdate \
-			--chuid ez-ipupd -- -c "${CONFIG}" -F "${PIDFILE}" -b "${CACHEFILE}"
+			--user ez-ipupd:ez-ipupd -- -c "${CONFIG}" -F "${PIDFILE}" -b "${CACHEFILE}"
 		eend $?
 	done
 	return 0  # do not fail

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.4.ebuild,v 1.2 2014/01/25 16:38:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/dibbler-0.8.4.ebuild,v 1.3 2014/01/28 09:03:47 nimiux Exp $
 
 EAPI="5"
 inherit eutils readme.gentoo systemd
@@ -11,7 +11,7 @@ SRC_URI="http://klub.com.pl/dhcpv6/dibbler/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~mips ~x86"
+KEYWORDS="amd64 hppa ~mips ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( || (
