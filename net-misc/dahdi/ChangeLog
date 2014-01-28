@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.56 2014/01/04 22:08:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.57 2014/01/28 08:47:05 nimiux Exp $
+
+  28 Jan 2014; Chema Alonso <nimiux@gentoo.org> dahdi-2.8.0.1.ebuild:
+  Stable for amd64 wrt bug #499128
 
 *dahdi-2.8.0.1 (04 Jan 2014)
 
