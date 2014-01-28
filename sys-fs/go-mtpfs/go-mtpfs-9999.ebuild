@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/go-mtpfs/go-mtpfs-9999.ebuild,v 1.4 2014/01/23 17:16:38 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/go-mtpfs/go-mtpfs-9999.ebuild,v 1.5 2014/01/28 01:13:50 zerochaos Exp $
 
 EAPI=5
 
@@ -16,45 +16,33 @@ KEYWORDS=""
 IUSE=""
 
 COMMON_DEPEND="virtual/libusb
-		media-libs/libmtp"
+		virtual/udev"
 DEPEND="${COMMON_DEPEND}
 	dev-libs/go-fuse
-	dev-lang/go"
+	dev-lang/go
+	media-libs/libmtp"
+
 RDEPEND="${COMMON_DEPEND}"
+
+#Tests require a connected mtp device
+RESTRICT="test"
 
 GO_PN="github.com/hanwen/${PN}"
 EGIT_CHECKOUT_DIR="${S}/src/${GO_PN}"
+QA_FLAGS_IGNORED=usr/bin/go-mtpfs
 
 export GOPATH="${S}"
-export GOGCCFLAGS="${CFLAGS}"
-
-#pkg_setup() {
-#}
 
 src_compile() {
-	#if gcc-specs-pie ; then
-	#	filter-flags -fPIE
-	#	append-ldflags -nopie
-	#fi
-	go build -ldflags '-nopie' -v -x -work ${GO_PN}/fs || die
-	go build -ldflags '-nopie' -v -x -work ${GO_PN}/usb || die
-	go build -ldflags '-nopie' -v -x -work ${GO_PN}/mtp || die
-#works on hardened up to here
 	go build -ldflags '-extldflags=-fno-PIC' -v -x -work ${GO_PN} || die
 }
 
 src_test() {
-#none of this works on hardened
-	go test ${GO_PN}/fs || die
-	go test ${GO_PN}/usb || die
-	go test ${GO_PN}/mtp || die
+	go test -ldflags '-extldflags=-fno-PIC' ${GO_PN}/fs || die
+	go test -ldflags '-extldflags=-fno-PIC' ${GO_PN}/usb || die
+	go test -ldflags '-extldflags=-fno-PIC' ${GO_PN}/mtp || die
 }
 
 src_install() {
-#	go install -v -x -work ${GO_PN}/fs || die
-#	go install -v -x -work ${GO_PN}/usb || die
-#	go install -v -x -work ${GO_PN}/mtp || die
-	go install -ldflags '-extldflags=-fno-PIC' -v -x -work ${GO_PN} || die
+	dobin go-mtpfs
 }
-
-#please don't remove commented lines till it works in hardened
