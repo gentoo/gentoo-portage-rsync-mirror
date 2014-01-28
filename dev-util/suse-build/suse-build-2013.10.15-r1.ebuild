@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2013.10.15.ebuild,v 1.3 2014/01/28 13:35:22 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/suse-build-2013.10.15-r1.ebuild,v 1.1 2014/01/28 13:35:22 miska Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="symlink"
 [[ "${PV}" == "9999" ]] || \
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	virtual/perl-Digest-MD5
@@ -39,6 +39,10 @@ RDEPEND="
 "
 
 S="${WORKDIR}/${PN/suse/obs}-${PV//.}"
+
+src_prepare() {
+	epatch "${FILESDIR}/suse-build-20131015-libexec-paths.patch"
+}
 
 src_compile() { :; }
 
@@ -53,7 +57,6 @@ src_install() {
 		mv "${i}" "${i/man1\//man1/suse-}"
 		use !symlink || dosym "${i/man1\//suse-}" "/usr/${i}"
 	done
-	find . -type f -exec sed -i 's|/usr/lib/build|/usr/libexec/suse-build|' {} +
 
 	# create symlink for default build config
 	dosym /usr/libexec/suse-build/configs/sl13.2.conf /usr/libexec/suse-build/configs/default.conf

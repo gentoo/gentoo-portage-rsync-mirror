@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r6.ebuild,v 1.9 2014/01/23 16:43:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r6.ebuild,v 1.10 2014/01/28 14:00:30 ago Exp $
 
 EAPI=5
 inherit autotools eutils libtool toolchain-funcs versionator multilib-minimal
@@ -13,7 +13,7 @@ SRC_URI="http://downloads.xiph.org/releases/${PN}/${MY_P}.src.tgz
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 ~s390 sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="static-libs"
 
 RDEPEND="app-admin/eselect-cdparanoia

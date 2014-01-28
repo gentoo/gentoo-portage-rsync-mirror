@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.119 2014/01/23 16:43:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.120 2014/01/28 14:00:30 ago Exp $
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> cdparanoia-3.10.2-r6.ebuild:
+  Stable for ia64, wrt bug #497246
 
   23 Jan 2014; Samuli Suominen <ssuominen@gentoo.org>
   cdparanoia-3.10.2-r6.ebuild:
