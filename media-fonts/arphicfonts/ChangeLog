@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/arphicfonts
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.55 2012/04/26 21:11:19 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.56 2014/01/28 06:06:27 naota Exp $
+
+*arphicfonts-0.2.20080216.1-r1 (28 Jan 2014)
+
+  28 Jan 2014; Naohiro Aota <naota@gentoo.org>
+  +arphicfonts-0.2.20080216.1-r1.ebuild,
+  +files/arphicfonts-0.2.20080216.1-fontconfig.patch:
+  Add a patch to supress fontconfig warnings. #490340
 
   26 Apr 2012; Alexis Ballier <aballier@gentoo.org>
   arphicfonts-0.2.20080216.1.ebuild:
