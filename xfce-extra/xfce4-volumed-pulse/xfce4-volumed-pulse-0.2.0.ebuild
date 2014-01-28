@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volumed-pulse/xfce4-volumed-pulse-0.2.0.ebuild,v 1.2 2014/01/19 19:06:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volumed-pulse/xfce4-volumed-pulse-0.2.0.ebuild,v 1.3 2014/01/28 14:18:08 ago Exp $
 
 EAPI=5
 inherit xfconf
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug libnotify"
 
 RDEPEND=">=dev-libs/glib-2.16

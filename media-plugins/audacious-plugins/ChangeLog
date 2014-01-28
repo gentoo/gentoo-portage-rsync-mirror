@@ -1,6 +1,21 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.269 2014/01/26 12:07:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.274 2014/01/28 14:10:03 ago Exp $
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> audacious-plugins-3.4.1.ebuild:
+  Stable for alpha, wrt bug #490463
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> audacious-plugins-3.4.1.ebuild:
+  Stable for ppc64, wrt bug #490463
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> audacious-plugins-3.4.1.ebuild:
+  Stable for ppc, wrt bug #490463
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> audacious-plugins-3.4.1.ebuild:
+  Stable for x86, wrt bug #490463
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> audacious-plugins-3.4.1.ebuild:
+  Stable for amd64, wrt bug #490463
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> audacious-plugins-3.4.1.ebuild:
   Stable for sparc, wrt bug #490463

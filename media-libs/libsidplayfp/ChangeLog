@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsidplayfp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplayfp/ChangeLog,v 1.9 2014/01/25 03:02:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplayfp/ChangeLog,v 1.11 2014/01/28 14:06:31 ago Exp $
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libsidplayfp-1.1.0.ebuild:
+  Stable for x86, wrt bug #490463
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> libsidplayfp-1.1.0.ebuild:
+  Stable for amd64, wrt bug #490463
 
   25 Jan 2014; Jeroen Roovers <jer@gentoo.org> libsidplayfp-1.1.0.ebuild:
   Marked ~hppa (bug #499172).

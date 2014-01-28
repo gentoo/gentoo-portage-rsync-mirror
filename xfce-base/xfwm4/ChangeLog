@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.218 2014/01/19 18:59:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.219 2014/01/28 14:17:26 ago Exp $
+
+  28 Jan 2014; Agostino Sarubbo <ago@gentoo.org> xfwm4-4.10.1.ebuild:
+  Stable for x86, wrt bug #496018
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> xfwm4-4.10.1.ebuild:
   amd64 stable, bug 496018
