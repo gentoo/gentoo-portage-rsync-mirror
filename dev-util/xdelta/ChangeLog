@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.99 2014/01/26 12:13:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.100 2014/01/28 19:59:32 mgorny Exp $
+
+*xdelta-3.0.8 (28 Jan 2014)
+
+  28 Jan 2014; Michał Górny <mgorny@gentoo.org> +xdelta-3.0.8.ebuild,
+  metadata.xml:
+  Version bump. Take over the maintainership.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> xdelta-3.0.6.ebuild:
   Stable for sparc, wrt bug #495678

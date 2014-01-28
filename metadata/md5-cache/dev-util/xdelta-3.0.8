@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure install prepare setup test
+DEPEND=lzma? ( app-arch/xz-utils ) app-arch/xz-utils test? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=a binary diff and differential compression tools. VCDIFF (RFC 3284) delta compression.
+EAPI=5
+HOMEPAGE=http://xdelta.org/
+IUSE=examples lzma test python_targets_python2_7 python_single_target_python2_7
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2
+RDEPEND=lzma? ( app-arch/xz-utils )
+SLOT=3
+SRC_URI=http://xdelta.googlecode.com/files/xdelta3-3.0.8.tar.xz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=107ef089c3372ac1cb75b4479aa386d9
