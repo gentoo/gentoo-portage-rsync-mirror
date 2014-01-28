@@ -1,6 +1,15 @@
 # ChangeLog for sci-astronomy/idlastro
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/idlastro/ChangeLog,v 1.7 2013/06/12 16:57:27 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/idlastro/ChangeLog,v 1.9 2014/01/28 18:15:35 bicatali Exp $
+
+  28 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> idlastro-20140125.ebuild:
+  removed mirror restriction
+
+*idlastro-20140125 (28 Jan 2014)
+
+  28 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +idlastro-20140125.ebuild,
+  -idlastro-20120502.ebuild, -idlastro-20121213.ebuild:
+  Version bump
 
 *idlastro-20130501 (12 Jun 2013)
 

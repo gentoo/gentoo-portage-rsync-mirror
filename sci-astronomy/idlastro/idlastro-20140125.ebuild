@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/idlastro/idlastro-20120502.ebuild,v 1.2 2012/07/03 22:19:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/idlastro/idlastro-20140125.ebuild,v 1.2 2014/01/28 18:15:35 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 DESCRIPTION="Astronomical user routines for IDL"
 HOMEPAGE="http://idlastro.gsfc.nasa.gov/"
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 DEPEND=""
-RDEPEND=">=dev-lang/gdl-0.9.2-r1"
+RDEPEND="dev-lang/gdl"
 
 S="${WORKDIR}"
 

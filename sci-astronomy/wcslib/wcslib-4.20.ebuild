@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.17.ebuild,v 1.1 2013/02/20 20:45:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.20.ebuild,v 1.1 2014/01/28 18:23:14 bicatali Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="Astronomical World Coordinate System transformations library"
 HOMEPAGE="http://www.atnf.csiro.au/people/mcalabre/WCS/"
 SRC_URI="ftp://ftp.atnf.csiro.au/pub/software/${PN}/${P}.tar.bz2"
 
-SLOT="0"
+SLOT="0/4"
 LICENSE="LGPL-3"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc fortran fits pgplot static-libs"
