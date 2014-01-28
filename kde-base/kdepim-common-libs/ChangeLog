@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.127 2014/01/20 15:00:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.128 2014/01/27 23:24:51 dilfridge Exp $
+
+*kdepim-common-libs-4.12.1-r1 (27 Jan 2014)
+
+  27 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-common-libs-4.12.1-r1.ebuild:
+  Move all agents into kdepim-common-libs, bug 494754
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org>
   -kdepim-common-libs-4.12.0.ebuild:
