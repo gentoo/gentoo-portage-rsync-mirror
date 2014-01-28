@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.92.ebuild,v 1.2 2014/01/23 16:29:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.92.ebuild,v 1.3 2014/01/28 04:10:20 ssuominen Exp $
 
 EAPI=5
-inherit eutils multilib-minimal
+inherit eutils libtool multilib-minimal
 
 DESCRIPTION="A library to encapsulate CD-ROM reading and control"
 HOMEPAGE="http://www.gnu.org/software/libcdio/"
@@ -38,6 +38,8 @@ src_prepare() {
 	sed \
 		-e "s:-lncurses:$($(tc-getPKG_CONFIG) --libs ncurses):g" \
 		-i configure || die
+
+	elibtoolize # to prevent -L/usr/lib ending up in the linker line wrt 499510
 }
 
 multilib_src_configure() {

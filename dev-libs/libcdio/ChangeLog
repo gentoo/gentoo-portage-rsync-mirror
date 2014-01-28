@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.150 2014/01/23 16:29:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.151 2014/01/28 04:10:20 ssuominen Exp $
+
+  28 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> libcdio-0.92.ebuild:
+  Call elibtoolize to prevent -L/usr/lib ending up in the final linker line
+  because it's breaking cross-compiling wrt #499510 by James Le Cuirot
 
   23 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> libcdio-0.92.ebuild:
   Use SLOT="0/15" because SONAME changed in 0.92
