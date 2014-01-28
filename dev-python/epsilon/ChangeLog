@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/epsilon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.30 2013/08/09 15:42:55 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.31 2014/01/28 03:48:16 idella4 Exp $
+
+*epsilon-0.7.0 (28 Jan 2014)
+
+  28 Jan 2014; Ian Delaney <idella4@gentoo.org> +epsilon-0.7.0.ebuild:
+  bump; drop py2.6 (fails some tests), update deps, add IUSE test + testrunner
+  dep + test phase
 
 *epsilon-0.6.0-r2 (09 Aug 2013)
 

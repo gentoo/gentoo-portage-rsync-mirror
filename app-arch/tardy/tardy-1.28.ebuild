@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.28.ebuild,v 1.1 2013/06/28 01:51:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.28.ebuild,v 1.2 2014/01/28 03:51:43 radhermit Exp $
 
 EAPI=5
 
@@ -18,7 +18,8 @@ RDEPEND="app-arch/bzip2
 	app-arch/xz-utils
 	dev-libs/libexplain
 	sys-libs/zlib"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-libs/boost"
 
 src_prepare() {
 	sed -e 's/$(CXX) .* $(CXXFLAGS) -I./\0 -o $@/' \
