@@ -1,6 +1,11 @@
 # ChangeLog for app-text/jabref
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.92 2013/12/19 21:18:26 nicolasbock Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.93 2014/01/28 16:51:03 nicolasbock Exp $
+
+*jabref-2.10_beta2 (28 Jan 2014)
+
+  28 Jan 2014; Nicolas Bock <nicolasbock@gentoo.org> +jabref-2.10_beta2.ebuild:
+  app-text/jabref: Added current beta, 2.10_beta2.
 
   19 Dec 2013; Nicolas Bock <nicolasbock@gentoo.org> metadata.xml:
   app-text/jabref: Updated metadata.xml to include myself as maintainer.
