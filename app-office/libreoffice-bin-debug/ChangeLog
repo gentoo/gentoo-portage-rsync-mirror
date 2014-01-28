@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-bin-debug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.48 2014/01/27 23:40:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin-debug/ChangeLog,v 1.50 2014/01/28 22:44:33 dilfridge Exp $
+
+  28 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-bin-debug-4.1.4.2.ebuild:
+  amd64 stable based on testing by pacho, bug 491150
+
+  28 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
+  Grr. Fix whirlpool hashes for 4.1.3.2-r3. Again.
 
 *libreoffice-bin-debug-4.1.4.2 (27 Jan 2014)
 
