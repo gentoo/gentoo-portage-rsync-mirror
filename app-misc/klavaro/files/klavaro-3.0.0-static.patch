@@ -1,0 +1,15 @@
+ gtkdatabox/Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gtkdatabox/Makefile.am b/gtkdatabox/Makefile.am
+index 503f753..d972de9 100644
+--- a/gtkdatabox/Makefile.am
++++ b/gtkdatabox/Makefile.am
+@@ -1,6 +1,6 @@
+ # $Id: klavaro-3.0.0-static.patch,v 1.1 2014/01/28 15:52:21 jlec Exp $
+ 
+-lib_LTLIBRARIES		= libgtkdatabox.la
++noinst_LTLIBRARIES		= libgtkdatabox.la
+ libgtkdatabox_la_SOURCES= \
+ 			gtkdatabox.c\
+ 			gtkdatabox_marshal.c\

@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/klavaro
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.19 2014/01/14 13:56:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.20 2014/01/28 15:52:21 jlec Exp $
+
+*klavaro-3.0.0 (28 Jan 2014)
+
+  28 Jan 2014; Justin Lecher <jlec@gentoo.org>
+  +files/klavaro-3.0.0-out-of-source.patch, +files/klavaro-3.0.0-static.patch,
+  +klavaro-3.0.0.ebuild, -klavaro-1.9.6.ebuild:
+  Version BUmp
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> klavaro-1.9.7.ebuild:
   Stable for x86, wrt bug #495340
