@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pidgin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.316 2013/12/22 16:15:10 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.317 2014/01/28 17:05:37 polynomial-c Exp $
+
+*pidgin-2.10.8-r1 (28 Jan 2014)
+*pidgin-2.10.8 (28 Jan 2014)
+
+  28 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> +pidgin-2.10.8.ebuild,
+  +pidgin-2.10.8-r1.ebuild:
+  Security bump (bug #499596).
 
   22 Dec 2013; Jeroen Roovers <jer@gentoo.org> pidgin-2.10.7-r5.ebuild:
   Stable for HPPA (bug #478252).
