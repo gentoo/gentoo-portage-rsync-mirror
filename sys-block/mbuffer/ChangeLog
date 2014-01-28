@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/mbuffer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.31 2013/09/03 20:43:49 ryao Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.32 2014/01/28 06:45:26 radhermit Exp $
+
+*mbuffer-20140126 (28 Jan 2014)
+
+  28 Jan 2014; Tim Harder <radhermit@gentoo.org> +mbuffer-20140126.ebuild:
+  Version bump.
 
 *mbuffer-20130220 (03 Sep 2013)
 
