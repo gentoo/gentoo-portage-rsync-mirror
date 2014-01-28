@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.5 2014/01/22 19:47:03 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.5.ebuild,v 1.6 2014/01/28 07:32:04 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 DISTUTILS_OPTIONAL=1
 WANT_AUTOMAKE="none"
+GENTOO_DEPEND_ON_PERL="no"
 
 inherit autotools bash-completion-r1 db-use depend.apache distutils-r1 elisp-common flag-o-matic java-pkg-opt-2 libtool multilib perl-module eutils
 

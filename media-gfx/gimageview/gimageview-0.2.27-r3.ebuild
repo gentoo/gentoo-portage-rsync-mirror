@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r3.ebuild,v 1.4 2012/05/05 07:00:22 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r3.ebuild,v 1.5 2014/01/28 07:38:23 ssuominen Exp $
 
 # TODO: USE xine could be restored if support for xine-lib-1.2.x
 # is patched in wrt #397639
@@ -31,6 +31,9 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
 src_prepare() {
+	# link gimv executable against -lm for floor() and pow()
+	sed -i -e 's/$(gimv_LDADD)/& -lm/' src/Makefile.in || die #417995
+
 	epatch \
 		"${FILESDIR}"/${P}-sort_fix.diff \
 		"${FILESDIR}"/${P}-gtk12_fix.diff \
