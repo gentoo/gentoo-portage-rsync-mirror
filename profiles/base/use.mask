@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.184 2014/01/16 00:12:06 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.186 2014/01/28 09:48:41 olemarkus Exp $
 
 # masking here and unmasking in default/linux/
 kmod
@@ -20,9 +20,8 @@ vdpau
 # Infiniband stuff should generaly work on all arches but keyworded only on amd64/x86
 infiniband
 
-# These ABIs are in constant change and currently only available for SVN snapshots
-php_targets_php5-2
-#php_targets_php5-4
+# PHP 5.6 still has no stable version
+php_targets_php5-6
 
 # Its deps are not mature enough yet
 ayatana
