@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.161 2013/10/30 08:00:35 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.162 2014/01/29 07:54:31 idella4 Exp $
+
+*py-1.4.19 (29 Jan 2014)
+
+  29 Jan 2014; Ian Delaney <idella4@gentoo.org> +py-1.4.19.ebuild:
+  bump; add IUSE doc, doc build & install, update test phase
 
 *py-1.4.18 (30 Oct 2013)
 
