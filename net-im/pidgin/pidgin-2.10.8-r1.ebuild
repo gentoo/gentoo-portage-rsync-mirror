@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.8-r1.ebuild,v 1.2 2014/01/28 17:56:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.8-r1.ebuild,v 1.3 2014/01/29 00:39:34 floppym Exp $
 
 EAPI=5
 
@@ -232,8 +232,8 @@ src_install() {
 	use perl && fixlocalpod
 
 	if use python || use dbus ; then
-		python-optimize
 		python_fix_shebang "${D}"
+		python_optimize
 	fi
 
 	dodoc finch/plugins/pietray.py

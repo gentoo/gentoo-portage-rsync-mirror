@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.81 2014/01/26 10:52:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.82 2014/01/29 00:54:30 mrueg Exp $
+
+  29 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -rekonq-2.3.2.ebuild:
+  Cleanup old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rekonq-2.4.0.ebuild:
   Stable for x86, wrt bug #497676

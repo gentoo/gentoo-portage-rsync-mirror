@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/pkg-config
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.22 2014/01/13 05:30:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pkg-config/ChangeLog,v 1.23 2014/01/29 00:51:13 mrueg Exp $
+
+  29 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -pkg-config-1.1.4-r1.ebuild,
+  -pkg-config-1.1.4.ebuild:
+  Cleanup old.
 
 *pkg-config-1.1.5 (13 Jan 2014)
 

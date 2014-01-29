@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ffaker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffaker/ChangeLog,v 1.1 2013/12/13 13:46:41 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffaker/ChangeLog,v 1.2 2014/01/29 00:33:08 mrueg Exp $
+
+*ffaker-1.23.0 (29 Jan 2014)
+
+  29 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +ffaker-1.23.0.ebuild:
+  Version bump.
 
 *ffaker-1.22.1 (13 Dec 2013)
 

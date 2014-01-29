@@ -1,11 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ferret-0.11.8.5-r1.ebuild,v 1.2 2012/12/26 14:42:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ferret/ferret-0.11.8.5-r2.ebuild,v 1.1 2014/01/29 00:58:53 mrueg Exp $
 
-EAPI=4
+EAPI=5
 
-# ruby19 fails tests
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby18 ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_NAME="ferret"
 
@@ -26,8 +25,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND+="app-arch/bzip2"
-DEPEND+="app-arch/bzip2"
+RDEPEND+=" app-arch/bzip2"
+DEPEND+=" app-arch/bzip2"
 
 all_ruby_prepare() {
 	# Remove bundled bzlib code and use system version instead.
@@ -40,7 +39,7 @@ each_ruby_configure() {
 }
 
 each_ruby_compile() {
-	emake -Cext CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}"
+	emake -Cext CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}" V=1
 	cp ext/ferret_ext$(get_modname) lib/ || die
 }
 
