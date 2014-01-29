@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/multi_json
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.34 2013/12/22 19:21:44 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.35 2014/01/29 16:23:58 hattya Exp $
+
+  29 Jan 2014; Akinori Hattori <hattya@gentoo.org> multi_json-1.5.0.ebuild,
+  multi_json-1.6.1-r1.ebuild, multi_json-1.6.1.ebuild:
+  keyword ~ia64 wrt bug #468536
 
   22 Dec 2013; Anthony G. Basile <blueness@gentoo.org>
   multi_json-1.6.1-r1.ebuild:
