@@ -5,7 +5,7 @@ diff -urN markad-0.1.4.old/command/decoder.cpp markad-0.1.4/command/decoder.cpp
  #include <sys/types.h>
  #include <string.h>
  #include <cstdlib>
-+#include <stdio.h>
++#include <cstdio>
  
  #include "decoder.h"
  
