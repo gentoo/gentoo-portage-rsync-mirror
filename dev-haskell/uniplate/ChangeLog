@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/uniplate
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uniplate/ChangeLog,v 1.1 2014/01/29 21:50:07 slyfox Exp $
+
+*uniplate-1.6.12 (29 Jan 2014)
+
+  29 Jan 2014; Sergei Trofimovich <slyfox@gentoo.org> +metadata.xml,
+  +uniplate-1.6.12.ebuild:
+  Initial import. Help writing simple, concise and fast generic operations in
+  haskell. A dev-haskell/hlint depend.
