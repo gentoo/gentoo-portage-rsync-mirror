@@ -1,6 +1,13 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.37 2014/01/27 01:28:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.38 2014/01/29 20:27:33 pinkbyte Exp $
+
+*qupzilla-1.6.1 (29 Jan 2014)
+
+  29 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> +qupzilla-1.6.1.ebuild,
+  +files/qupzilla-1.6.1-plugins-version-check-fix.patch:
+  Version bump, wrt bug #499536. Fix version check in some plugins, partially
+  fix locales list, add check for new locales through l10n eclass
 
 *qupzilla-1.6.0-r1 (27 Jan 2014)
 

@@ -1,0 +1,10 @@
+# ChangeLog for games-rpg/zsdx
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/ChangeLog,v 1.1 2014/01/29 20:18:41 hasufell Exp $
+
+*zsdx-1.7.1 (29 Jan 2014)
+
+  29 Jan 2014; Julian Ospald <hasufell@gentoo.org> +zsdx-1.7.1.ebuild,
+  +files/zsdx-1.7.1-paths.patch, +metadata.xml:
+  initial import
+

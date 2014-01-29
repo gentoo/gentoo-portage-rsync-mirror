@@ -1,0 +1,15 @@
+From: Julian Ospald <hasufell@gentoo.org>
+Date: Wed Jan 29 02:31:24 UTC 2014
+Subject: make paths modifiable
+
+--- solarus-1.1.1/CMakeLists.txt
++++ solarus-1.1.1/CMakeLists.txt
+@@ -6,7 +6,7 @@
+ endif()
+ 
+ set(CMAKE_MODULE_PATH "${SOLARUS_ENGINE_SOURCE_DIR}/cmake/modules/")
+-set(SOLARUS_INSTALL_DESTINATION "bin")
++set(SOLARUS_INSTALL_DESTINATION "bin" CACHE PATH "binary install destination")
+ 
+ # find the headers and the libraries of dependencies
+ find_package(SDL REQUIRED)
