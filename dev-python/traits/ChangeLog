@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/traits
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.42 2013/10/09 22:12:15 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.43 2014/01/29 16:58:57 bicatali Exp $
+
+*traits-4.4.0 (29 Jan 2014)
+
+  29 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +traits-4.4.0.ebuild,
+  metadata.xml:
+  Version bump, add pypi upstream check
 
   09 Oct 2013; Mike Gilbert <floppym@gentoo.org> traits-4.3.0-r1.ebuild:
   Fix docs installation, bug 487448 by Juergen Rose. Add -fno-strict-aliasing to
