@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/tntnet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.23 2014/01/23 21:05:00 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.24 2014/01/29 02:00:43 patrick Exp $
+
+  29 Jan 2014; Patrick Lauer <patrick@gentoo.org> -tntnet-2.0-r1.ebuild,
+  -tntnet-2.1.ebuild:
+  Remove old, #499088
 
 *tntnet-2.2.1 (23 Jan 2014)
 
@@ -108,4 +112,3 @@
   29 May 2007; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +tntnet-1.6.0.ebuild:
   Initial import of ebuild.
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.4-r1.ebuild,v 1.2 2013/09/07 08:10:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.8.4-r1.ebuild,v 1.3 2014/01/29 01:47:37 naota Exp $
 
 EAPI="4"
 inherit autotools eutils multilib elisp-common flag-o-matic gnome2-utils
@@ -12,7 +12,7 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-IUSE="+anthy canna curl eb emacs libffi gnome gtk gtk3 kde libedit libnotify m17n-lib ncurses nls prime qt4 skk sqlite ssl static-libs test unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
+IUSE="+anthy canna curl eb emacs libffi gnome gtk gtk3 kde libedit libnotify m17n-lib ncurses nls qt4 skk sqlite ssl static-libs test unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RESTRICT="test"
 
@@ -45,14 +45,12 @@ RDEPEND="X? (
 	m17n-lib? ( >=dev-libs/m17n-lib-1.3.1 )
 	ncurses? ( sys-libs/ncurses )
 	nls? ( virtual/libintl )
-	prime? ( app-i18n/prime )
 	qt4? ( dev-qt/qtgui:4[qt3support] )
 	skk? ( app-i18n/skk-jisyo )
 	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( dev-libs/openssl )
 	!dev-scheme/sigscheme
-	!app-i18n/uim-svn
-	!<app-i18n/prime-0.9.4"
+	!app-i18n/uim-svn"
 #	>=dev-scheme/sigscheme-0.8.5
 #	mana? ( app-i18n/mana )
 #	scim? ( >=app-i18n/scim-1.3.0 ) # broken
@@ -165,7 +163,6 @@ src_configure() {
 		$(use_with m17n-lib m17nlib) \
 		$(use_enable ncurses fep) \
 		$(use_enable nls) \
-		$(use_with prime) \
 		--without-qt \
 		--without-qt-immodule \
 		$(use_with qt4 qt4) \

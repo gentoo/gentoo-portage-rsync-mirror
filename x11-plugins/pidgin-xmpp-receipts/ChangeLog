@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/pidgin-xmpp-receipts
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-xmpp-receipts/ChangeLog,v 1.1 2014/01/29 01:49:06 mrueg Exp $
+
+*pidgin-xmpp-receipts-0.6 (29 Jan 2014)
+
+  29 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +metadata.xml,
+  +pidgin-xmpp-receipts-0.6.ebuild:
+  Initial ebuild. Thanks to Gerion Entrup. See bug #490954.

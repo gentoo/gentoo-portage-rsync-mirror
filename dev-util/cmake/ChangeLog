@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.270 2014/01/27 12:10:44 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.271 2014/01/29 01:34:47 creffett Exp $
+
+*cmake-2.8.12.2 (29 Jan 2014)
+
+  29 Jan 2014; Chris Reffett <creffett@gentoo.org> +cmake-2.8.12.2.ebuild:
+  Version bump
 
   27 Jan 2014; Akinori Hattori <hattya@gentoo.org> cmake-2.8.11.2.ebuild:
   ia64 stable wrt bug #488586

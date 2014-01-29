@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15369 2014/01/29 00:43:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15370 2014/01/29 01:48:46 naota Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Naohiro Aota <naota@gentoo.org> (29 Jan 2014)
+# Mask for removal in 30 days. No ruby19 support. #464286
+app-i18n/prime
+app-emacs/prime-el
+app-i18n/gtkimprime
+app-i18n/scim-prime
+dev-libs/suikyo
 
 # Ole Markus With <olemarkus@gentoo.org> (28 Jan 2014)
 # PHP 5.6 still in early development
