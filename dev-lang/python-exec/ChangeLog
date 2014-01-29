@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python-exec
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python-exec/ChangeLog,v 1.15 2014/01/18 11:46:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python-exec/ChangeLog,v 1.16 2014/01/29 05:04:13 vapier Exp $
+
+  29 Jan 2014; Mike Frysinger <vapier@gentoo.org> python-exec-0.3.1.ebuild,
+  python-exec-0.9999.ebuild, python-exec-2.0.1.ebuild, python-exec-2.0.ebuild,
+  python-exec-2.9999.ebuild:
+  Fix LICENSE to right value.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> python-exec-0.3.1.ebuild,
   python-exec-0.9999.ebuild, python-exec-2.0.1.ebuild, python-exec-2.0.ebuild,

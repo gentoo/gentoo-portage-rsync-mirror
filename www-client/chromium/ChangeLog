@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1015 2014/01/28 04:03:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1016 2014/01/29 05:16:00 phajdan.jr Exp $
+
+*chromium-34.0.1809.0 (29 Jan 2014)
+
+  29 Jan 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-34.0.1809.0.ebuild, +files/chromium-depot-tools-r0.patch,
+  +files/chromium-system-jinja-r3.patch:
+  Dev channel bump. Aura is now default. Use bundled icu.
 
 *chromium-32.0.1700.102 (28 Jan 2014)
 
