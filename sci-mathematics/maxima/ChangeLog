@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.108 2014/01/11 11:21:18 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.109 2014/01/29 13:46:26 grozin Exp $
+
+*maxima-5.32.1-r1 (29 Jan 2014)
+
+  29 Jan 2014; Andrey Grozin <grozin@gentoo.org> +maxima-5.32.1-r1.ebuild,
+  +files/ecls-1.patch:
+  Fix the library version of the ecls maxima needed by sage (bug #499634),
+  thanks to Martin von Gagern <Martin.vGagern@gmx.net>
 
 *maxima-5.32.1 (11 Jan 2014)
 

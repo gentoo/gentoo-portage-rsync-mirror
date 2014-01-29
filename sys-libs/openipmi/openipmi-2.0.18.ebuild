@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.18.ebuild,v 1.3 2013/10/30 15:55:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openipmi/openipmi-2.0.18.ebuild,v 1.4 2014/01/29 13:36:56 jer Exp $
 
 inherit eutils autotools python
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 hppa ~ia64 ~ppc ~x86"
 IUSE="crypt snmp perl tcl python"
 S="${WORKDIR}/${MY_P}"
 RESTRICT='test'
