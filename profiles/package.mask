@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15371 2014/01/29 03:17:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15372 2014/01/29 10:25:57 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1103,10 +1103,6 @@ dev-embedded/msp430-gdb
 dev-embedded/msp430-libc
 dev-embedded/msp430mcu
 dev-embedded/avr-libc
-
-# Peter Volkov <pva@gentoo.org> (16 Nov 2008)
-# The development branch, to be unmasked when out of beta by upstream.
-=net-misc/socat-2.0.0*
 
 # Markus Ullmann <jokey@gentoo.org> (07 Jul 2008)
 # mask for security bug #190667 (CVE-2007-{4584,5839})
