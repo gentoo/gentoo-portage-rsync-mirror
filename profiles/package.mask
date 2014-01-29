@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15370 2014/01/29 01:48:46 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15371 2014/01/29 03:17:10 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (29 Jan 2014)
+# I suspect this package is not used. If you are using it, please contact me.
+# Otherwise, it will be removed along with its dependencies in 30 days.
+dev-python/mozrunner
 
 # Naohiro Aota <naota@gentoo.org> (29 Jan 2014)
 # Mask for removal in 30 days. No ruby19 support. #464286
