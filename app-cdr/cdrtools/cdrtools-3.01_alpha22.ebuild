@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha22.ebuild,v 1.1 2014/01/24 18:08:36 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.01_alpha22.ebuild,v 1.2 2014/01/29 20:58:03 vapier Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ src_prepare() {
 	gnuconfig_update
 
 	# Remove profiled make files.
-	rm -f *_p.mk || die "rm profiled"
+	find -name '*_p.mk' -delete
 
 	# Adjusting hardcoded paths.
 	sed -i -e "s|opt/schily|usr|" \
