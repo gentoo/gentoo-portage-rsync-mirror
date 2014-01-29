@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yard
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.71 2014/01/18 20:32:38 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yard/ChangeLog,v 1.72 2014/01/29 15:38:15 hattya Exp $
+
+  29 Jan 2014; Akinori Hattori <hattya@gentoo.org> yard-0.8.7.3.ebuild:
+  keyword ~ia64 wrt bug #465948
 
   18 Jan 2014; Manuel Rüger <mrueg@gentoo.org> -yard-0.8.3.ebuild:
   Cleanup old.

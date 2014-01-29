@@ -1,6 +1,12 @@
 # ChangeLog for net-im/skype
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.153 2013/10/17 18:32:40 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.154 2014/01/29 15:55:49 jlec Exp $
+
+*skype-4.2.0.13 (29 Jan 2014)
+
+  29 Jan 2014; Justin Lecher <jlec@gentoo.org> skype-4.2.0.11-r1.ebuild,
+  +skype-4.2.0.13.ebuild, +files/skype-4.2.0.13-desktop.patch, metadata.xml:
+  Verion Bump, #499264; thanks Jouni Kosonen for the patch
 
   17 Oct 2013; Michał Górny <mgorny@gentoo.org> skype-4.2.0.11-r1.ebuild:
   Do not require -abi_x86_32 on emul-linux to simplify installing. It does not

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.27 2013/12/26 16:14:30 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.28 2014/01/29 15:52:37 hattya Exp $
+
+  29 Jan 2014; Akinori Hattori <hattya@gentoo.org> ruby-ffi-2.ebuild:
+  keyword ~ia64 wrt bug #465948
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> ruby-ffi-1.ebuild:
   arm stable, bug #493780

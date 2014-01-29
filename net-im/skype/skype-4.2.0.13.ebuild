@@ -1,15 +1,16 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.2.0.11-r1.ebuild,v 1.5 2014/01/29 15:55:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.2.0.13.ebuild,v 1.1 2014/01/29 15:55:49 jlec Exp $
 
 EAPI=5
+
 inherit eutils gnome2-utils pax-utils
 
-DESCRIPTION="A P2P Internet Telephony (VoiceIP) client"
+DESCRIPTION="P2P Internet Telephony (VoiceIP) client"
 HOMEPAGE="http://www.skype.com/"
 SRC_URI="http://download.${PN}.com/linux/${P}.tar.bz2"
 
-LICENSE="${PN}-4.0.0.7-copyright ${PN}-4.0.0.7-third-party_attributions.txt MIT"
+LICENSE="${PN}-4.0.0.7-copyright ${PN}-4.0.0.7-third-party_attributions.txt"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pax_kernel selinux"
@@ -19,7 +20,8 @@ RESTRICT="mirror strip" #299368
 
 EMUL_X86_VER=20120520
 
-RDEPEND="virtual/ttf-fonts
+RDEPEND="
+	virtual/ttf-fonts
 	amd64? (
 		|| (
 			(
@@ -62,8 +64,10 @@ src_prepare() {
 }
 
 src_compile() {
-	type -P lrelease >/dev/null && lrelease lang/*.ts
-	rm -f lang/*.ts
+	if type -P lrelease >/dev/null; then
+		lrelease lang/*.ts || die
+	fi
+	rm -f lang/*.ts || die
 }
 
 src_install() {

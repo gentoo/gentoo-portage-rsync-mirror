@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.56 2014/01/24 08:38:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.57 2014/01/29 15:40:41 hattya Exp $
+
+  29 Jan 2014; Akinori Hattori <hattya@gentoo.org> locale-2.1.0-r1.ebuild:
+  keyword ~ia64 wrt bug #465948
 
 *locale-2.1.0-r1 (24 Jan 2014)
 
