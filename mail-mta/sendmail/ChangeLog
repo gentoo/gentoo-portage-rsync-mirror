@@ -1,6 +1,18 @@
 # ChangeLog for mail-mta/sendmail
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.123 2013/12/22 13:19:13 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.125 2014/01/29 04:09:57 radhermit Exp $
+
+  29 Jan 2014; Tim Harder <radhermit@gentoo.org> -sendmail-8.14.4.ebuild,
+  -sendmail-8.14.5.ebuild, -sendmail-8.14.5-r1.ebuild,
+  -sendmail-8.14.5-r2.ebuild, -sendmail-8.14.6.ebuild, -sendmail-8.14.7.ebuild,
+  -files/sendmail-8.14.4+db-5.0.patch, -files/mailer.conf, -files/sendmail.mc,
+  -files/sendmail-build-system.patch:
+  Remove old.
+
+*sendmail-8.14.8 (29 Jan 2014)
+
+  29 Jan 2014; Tim Harder <radhermit@gentoo.org> +sendmail-8.14.8.ebuild:
+  Version bump, respect AR and RANLIB (bug #475682).
 
   22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> sendmail-8.14.7-r1.ebuild:
   Stable for ppc64, wrt bug #485648

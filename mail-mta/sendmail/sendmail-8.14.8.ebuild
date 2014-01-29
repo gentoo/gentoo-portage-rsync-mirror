@@ -1,10 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.5-r1.ebuild,v 1.5 2013/02/28 17:54:43 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.8.ebuild,v 1.1 2014/01/29 04:05:27 radhermit Exp $
 
-EAPI="2"
-
-inherit eutils multilib toolchain-funcs user
+EAPI="5"
+inherit eutils multilib systemd toolchain-funcs user
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -12,7 +11,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ldap sasl tcpd mbox ipv6 nis sockets"
 
 DEPEND="net-mail/mailbase
@@ -53,10 +52,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/sendmail-build-system.patch
+	epatch "${FILESDIR}"/"${PN}"-8.14.6-build-system.patch
 	epatch "${FILESDIR}"/sendmail-delivered_hdr.patch
 	epatch "${FILESDIR}"/libmilter-sharedlib.patch
-	epatch "${FILESDIR}"/${P}+db-5.0.patch
+	epatch "${FILESDIR}"/"${PN}"-8.14.5+db-5.0.patch
+	epatch "${FILESDIR}"/sendmail-starttls-multi-crl.patch
 
 	local confCC="$(tc-getCC)"
 	local confCCOPTS="${CFLAGS}"
@@ -89,9 +89,9 @@ src_prepare() {
 }
 
 src_compile() {
-	sh Build || die "compilation failed in main Build script"
+	sh Build AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" || die "compilation failed in main Build script"
 	pushd libmilter
-	sh Build MILTER_SOVER=${LIBMILTER_VER} || die "libmilter compilation failed"
+	sh Build AR="$(tc-getAR)" RANLIB="$(tc-getRANLIB)" MILTER_SOVER=${LIBMILTER_VER} || die "libmilter compilation failed"
 	popd
 }
 
@@ -148,10 +148,14 @@ src_install () {
 	newdoc cf/README README.cf
 	newdoc cf/cf/README README.install-cf
 	cp -pPR cf/* "${D}"/usr/share/sendmail-cf
+
+	docinto contrib
+	dodoc contrib/*
+
 	insinto /etc/mail
 	if use mbox
 	then
-		doins "${FILESDIR}"/sendmail.mc
+		newins "${FILESDIR}"/sendmail.mc-r1 sendmail.mc
 	else
 		newins "${FILESDIR}"/sendmail-procmail.mc sendmail.mc
 	fi
@@ -182,7 +186,18 @@ src_install () {
 		KILL_OPTS="" # add -9/-15/your favorite evil SIG level here
 
 	EOF
-	doinitd "${FILESDIR}"/sendmail
-	keepdir /usr/adm/sm.bin
+	if use sasl; then
+		dodir /etc/sasl2
+		cat <<- EOF > "${D}"/etc/sasl2/Sendmail.conf
+		pwcheck_method: saslauthd
+		mech_list: PLAIN LOGIN
 
+		EOF
+	fi
+
+	doinitd "${FILESDIR}"/sendmail
+	systemd_dounit "${FILESDIR}"/sendmail.service
+	systemd_dounit "${FILESDIR}"/sm-client.service
+
+	keepdir /usr/adm/sm.bin
 }

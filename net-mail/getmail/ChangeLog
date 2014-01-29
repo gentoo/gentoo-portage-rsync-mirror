@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/getmail
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.232 2013/09/27 08:22:06 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.233 2014/01/29 04:15:06 radhermit Exp $
+
+*getmail-4.43.0-r1 (29 Jan 2014)
+
+  29 Jan 2014; Tim Harder <radhermit@gentoo.org> +getmail-4.43.0-r1.ebuild:
+  Add conditional dep on ssl enabled python (bug #488472).
 
   27 Sep 2013; Tim Harder <radhermit@gentoo.org> -getmail-4.36.0.ebuild,
   -getmail-4.39.1.ebuild, -getmail-4.40.1.ebuild, -getmail-4.40.3.ebuild:
