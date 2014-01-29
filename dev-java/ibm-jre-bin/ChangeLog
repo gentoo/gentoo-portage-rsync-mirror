@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ibm-jre-bin
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.173 2012/10/05 15:21:01 ranger Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.174 2014/01/29 19:06:05 mr_bones_ Exp $
+
+  29 Jan 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/ibm-jre-bin-1.5.env, -ibm-jre-bin-1.5.0.12_p4.ebuild,
+  -ibm-jre-bin-1.5.0.12_p5-r1.ebuild, -ibm-jre-bin-1.5.0.12_p5.ebuild:
+  clean old, unused, and gtk+:1-using slot
 
   05 Oct 2012; Brent Baude <ranger@gentoo.org>
   ibm-jre-bin-1.6.0.9_p2-r1.ebuild:
@@ -785,4 +790,3 @@
 
   01 May 2004; <SeJo@gentoo.org> +metadata.xml, +ibm-jre-bin-1.4.1.ebuild:
   new ibm-jre ebuild
-
