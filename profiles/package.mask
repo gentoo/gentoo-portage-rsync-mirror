@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15373 2014/01/29 18:21:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15374 2014/01/29 23:00:52 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -260,144 +260,6 @@ sys-kernel/module-rebuild
 # Removal in 30 days.
 x11-themes/faenza-xfce-icon-theme
 
-# Gilles Dartiguelongue <eva@gentoo.org> (23 Dec 2013)
-# Gnome 3.10 mask
-# * webkit still needs some testing on hardened and some USE flag combinations
-# * bluez-5 is a major update
-# * geoclue/geocode-glib is a major update
->=app-accessibility/at-spi2-atk-2.10
->=app-accessibility/at-spi2-core-2.10
->=app-accessibility/orca-3.10
->=app-admin/gnome-system-log-3.9
->=app-arch/file-roller-3.10
->=app-cdr/brasero-3.10
->=app-crypt/gcr-3.10
->=app-crypt/seahorse-3.10
->=app-dicts/gnome-dictionary-3.10
->=app-editors/gedit-3.10
->=app-editors/gedit-plugins-3.10
->=app-editors/ghex-3.10
->=app-misc/bijiben-3.10
->=app-misc/geoclue-2.0
->=app-misc/gnote-3.10
->=app-text/evince-3.10
->=app-text/yelp-tools-3.10
->=dev-cpp/glibmm-2.38
->=dev-cpp/gtkmm-3.10
->=dev-libs/atk-2.10
->=dev-libs/folks-0.9.6
->=dev-libs/gdl-3.10
->=dev-libs/gjs-1.38
->=dev-libs/glib-2.38
->=dev-libs/gobject-introspection-1.38
->=dev-libs/gobject-introspection-common-1.38
->=dev-libs/libgee-0.12
->=dev-libs/libgweather-3.10
->=dev-libs/libpeas-1.9
->=dev-libs/totem-pl-parser-3.10
->=dev-python/pyatspi-2.10
->=dev-python/pygobject-3.10
->=dev-util/anjuta-3.10
->=dev-util/devhelp-3.10
->=dev-util/gdbus-codegen-2.38
->=dev-util/glade-3.16
->=dev-util/gnome-devel-docs-3.10
->=games-arcade/gnome-nibbles-3.10
->=games-arcade/gnome-robots-3.10
->=games-board/four-in-a-row-3.10
->=games-board/gnome-chess-3.10
->=games-board/gnome-mahjongg-3.10
->=games-board/gnome-mines-3.10
->=games-board/iagno-3.10
->=games-board/tali-3.10
->=games-puzzle/five-or-more-3.10
->=games-puzzle/gnome-klotski-3.10
->=games-puzzle/gnome-sudoku-3.10
->=games-puzzle/gnome-tetravex-3.10
->=games-puzzle/lightsoff-3.10
->=games-puzzle/quadrapassel-3.10
->=games-puzzle/swell-foop-3.10
->=gnome-base/dconf-0.18
->=gnome-base/gdm-3.10
->=gnome-base/gnome-3.10
->=gnome-base/gnome-common-3.10
->=gnome-base/gnome-control-center-3.10
->=gnome-base/gnome-core-apps-3.10
->=gnome-base/gnome-core-libs-3.10
->=gnome-base/gnome-desktop-3.10
->=gnome-base/gnome-extra-apps-3.10
->=gnome-base/gnome-keyring-3.10
->=gnome-base/gnome-menus-3.10
->=gnome-base/gnome-session-3.10
->=gnome-base/gnome-settings-daemon-3.10
->=gnome-base/gnome-shell-3.10
->=gnome-base/gsettings-desktop-schemas-3.10
->=gnome-base/gvfs-1.18
->=gnome-base/libgnome-keyring-3.10
->=gnome-base/nautilus-3.10
->=gnome-extra/evolution-data-server-3.10
->=gnome-extra/evolution-ews-3.10
->=gnome-extra/gnome-boxes-3.10
->=gnome-extra/gnome-calculator-3.10
->=gnome-extra/gnome-clocks-3.10
->=gnome-extra/gnome-color-manager-3.10
->=gnome-extra/gnome-contacts-3.10
->=gnome-extra/gnome-documents-3.10
->=gnome-extra/gnome-power-manager-3.10
->=gnome-extra/gnome-shell-extensions-3.10
->=gnome-extra/gnome-system-monitor-3.10
->=gnome-extra/gnome-tweak-tool-3.10
->=gnome-extra/gnome-user-docs-3.10
->=gnome-extra/gnome-user-share-3.10
->=gnome-extra/gnome-weather-3.10
->=gnome-extra/gucharmap-3.10
->=gnome-extra/mousetweaks-3.10
->=gnome-extra/seahorse-nautilus-3.10
->=gnome-extra/sushi-3.10
->=gnome-extra/yelp-3.10
->=gnome-extra/yelp-xsl-3.10
->=mail-client/evolution-3.10
->=media-gfx/eog-3.10
->=media-gfx/eog-plugins-3.10
->=media-gfx/gnome-font-viewer-3.10
->=media-gfx/gnome-photos-3.10
->=media-gfx/gnome-screenshot-3.10
->=media-libs/clutter-1.16
->=media-libs/cogl-1.16
->=media-sound/gnome-music-3.10
->=media-video/cheese-3.10
->=media-video/totem-3.10
->=net-im/empathy-3.10
->=net-libs/glib-networking-2.38
->=net-libs/gnome-online-accounts-3.10
->=net-libs/libsoup-2.44
->=net-libs/libsoup-gnome-2.44
->=net-libs/webkit-gtk-2.2
->=net-misc/gnome-online-miners-3.10
->=net-misc/rygel-0.20
->=net-misc/vinagre-3.10
->=net-misc/vino-3.10
->=net-wireless/bluez-5
->=net-wireless/gnome-bluetooth-3.10
->=sci-geosciences/geocode-glib-3.10
->=sci-geosciences/gnome-maps-3.10
->=sys-apps/baobab-3.10
->=sys-apps/gnome-disk-utility-3.10
->=www-client/epiphany-3.10
->=x11-libs/gdk-pixbuf-2.30
->=x11-libs/gtk+-3.10
->=x11-libs/gtksourceview-3.10
->=x11-libs/libcryptui-3.10
->=x11-libs/pango-1.36
->=x11-misc/alacarte-3.10
->=x11-terms/gnome-terminal-3.10
->=x11-themes/gnome-backgrounds-3.10
->=x11-themes/gnome-icon-theme-3.10
->=x11-themes/gnome-icon-theme-symbolic-3.10
->=x11-themes/gnome-themes-standard-3.10
->=x11-themes/oxygen-gtk-1.3.3:3
->=x11-wm/mutter-3.10
-
 # Sergey Popov <pinkbyte@gentoo.org> (23 Dec 2013)
 # Masked for removal, please migrate to dev-python/irc,
 # which is in fact just a newer version of this package.
@@ -535,10 +397,6 @@ virtual/perl-Carp
 virtual/perl-B-Debug
 =virtual/perl-File-Temp-0.230.100
 
-# Alexandre Rostovtsev <tetromino@gentoo.org> (02 Sep 2013)
-# Silent API/ABI change; mask until seahorse is patched; bug #483414
->=app-crypt/libsecret-0.16
-
 # Agostino Sarubbo <ago@gentoo.org> (29 Aug 2013)
 # Mask 5.1 series because the backport of the CVE-2012-5627
 # has not be done. bug #446240 comment 2
@@ -557,10 +415,6 @@ virtual/perl-B-Debug
 # Dependencies are unable to satisfy current version,
 # broken; needs a version bump from bug #475552.
 dev-java/itext:5
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (04 Aug 2013)
-# API break, reverse dependencies need patching; bug #479458.
->=sci-geosciences/geocode-glib-0.99.1
 
 # Ian Delaney <idella4@gentoo.org> (01 Aug 2013)
 # Mask while awaiting bump to dep Djblets-0.7.16
@@ -657,12 +511,6 @@ dev-java/sun-jce-bin
 # Upstream stalled, improper rendering (#470818),
 # use app-editors/efte instead.
 =app-editors/fte-20110708
-
-# Tim Harder <radhermit@gentoo.org> (22 May 2013)
-# masked for testing
-=media-libs/quvi-0.9*
-=media-libs/libquvi-0.9*
-=media-libs/libquvi-scripts-0.9*
 
 # Patrick Lauer <patrick@gentoo.org> (21 May 2013)
 # broken dependencies -> uninstallable #470712

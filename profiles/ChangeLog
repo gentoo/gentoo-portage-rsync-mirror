@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8578 2014/01/29 18:21:40 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8579 2014/01/29 23:00:52 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Lift Gnome 3.10 mask after bug #499512 resolution.
 
   29 Jan 2014; Ian Stakenvicius <axs@gentoo.org> package.mask:
   adjust libav p.mask for recently added multilib-build ebuilds

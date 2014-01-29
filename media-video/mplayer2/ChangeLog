@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.115 2014/01/27 07:31:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.116 2014/01/29 22:58:13 eva Exp $
+
+  29 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  mplayer2-2.0_p20130126.ebuild, mplayer2-2.0_p20130428-r1.ebuild,
+  mplayer2-9999.ebuild:
+  Restrict libquvi versions since 0.9 is not supported, bug #499512.
 
   27 Jan 2014; Jeroen Roovers <jer@gentoo.org>
   mplayer2-2.0_p20130428-r1.ebuild:
