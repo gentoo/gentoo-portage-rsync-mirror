@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.83 2014/01/09 06:44:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.84 2014/01/29 06:57:38 graaff Exp $
+
+  29 Jan 2014; Hans de Graaff <graaff@gentoo.org> -passenger-4.0.23.ebuild,
+  -passenger-4.0.27.ebuild, -passenger-4.0.29.ebuild:
+  Cleanup.
 
 *passenger-4.0.33 (09 Jan 2014)
 
