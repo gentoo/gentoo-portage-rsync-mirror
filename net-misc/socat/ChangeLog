@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.120 2014/01/29 10:25:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.121 2014/01/29 10:45:46 jer Exp $
+
+  29 Jan 2014; Jeroen Roovers <jer@gentoo.org> socat-1.7.2.3.ebuild:
+  No need for eautoreconf.
 
 *socat-2.0.0_beta7 (29 Jan 2014)
 *socat-1.7.2.3 (29 Jan 2014)
