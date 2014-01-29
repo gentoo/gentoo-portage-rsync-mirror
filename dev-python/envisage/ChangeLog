@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/envisage
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/envisage/ChangeLog,v 1.10 2013/05/14 12:52:19 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisage/ChangeLog,v 1.11 2014/01/29 18:02:28 bicatali Exp $
+
+*envisage-4.4.0 (29 Jan 2014)
+
+  29 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +envisage-4.4.0.ebuild,
+  metadata.xml:
+  Version bump, added upstream check
 
   14 May 2013; Ian Delaney <idella4@gentoo.org> -envisage-4.0.0.ebuild,
   -envisage-4.1.0.ebuild, -envisage-4.2.0.ebuild:

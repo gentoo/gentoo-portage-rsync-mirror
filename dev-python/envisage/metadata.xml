@@ -12,4 +12,7 @@
   primarily of plug-ins. In this respect, it is similar to the Eclipse
   and Netbeans frameworks for Java applications. 
 </longdescription>
+<upstream>
+  <remote-id type="pypi">envisage</remote-id>
+</upstream>
 </pkgmetadata>

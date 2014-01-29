@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/codetools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/codetools/ChangeLog,v 1.16 2013/05/14 12:38:41 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/codetools/ChangeLog,v 1.17 2014/01/29 18:30:10 bicatali Exp $
+
+*codetools-4.2.0 (29 Jan 2014)
+
+  29 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +codetools-4.2.0.ebuild,
+  metadata.xml:
+  Version bump, add pypi upstream check
 
   14 May 2013; Ian Delaney <idella4@gentoo.org> -codetools-4.0.0.ebuild:
   drop old
