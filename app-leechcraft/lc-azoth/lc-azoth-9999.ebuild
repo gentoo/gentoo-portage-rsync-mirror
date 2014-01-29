@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.8 2013/09/25 11:10:59 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-leechcraft/lc-azoth/lc-azoth-9999.ebuild,v 1.9 2014/01/29 15:18:19 maksbotan Exp $
 
 EAPI="5"
 
@@ -23,7 +23,6 @@ COMMON_DEPEND="~app-leechcraft/lc-core-${PV}
 		otroid? ( net-libs/libotr )
 		media? ( dev-qt/qtmultimedia:4 )
 		msn? ( net-libs/libmsn )
-		spell? ( app-text/hunspell )
 		woodpecker? ( dev-libs/kqoauth )
 		xmpp? (
 			=net-libs/qxmpp-9999
@@ -47,6 +46,9 @@ RDEPEND="${COMMON_DEPEND}
 			media-gfx/graphicsmagick[imagemagick]
 		)
 		virtual/latex-base
+	)
+	spell? (
+		app-leechcraft/lc-rosenthal
 	)"
 
 REQUIRED_USE="|| ( standardstyles adiumstyles )"

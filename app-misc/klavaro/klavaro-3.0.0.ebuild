@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-3.0.0.ebuild,v 1.1 2014/01/28 15:52:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-3.0.0.ebuild,v 1.2 2014/01/29 15:02:17 kensington Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
-	sys-devel/gettext
+	>=sys-devel/gettext-0.18.3
 	dev-util/gtk-builder-convert
 	"
 

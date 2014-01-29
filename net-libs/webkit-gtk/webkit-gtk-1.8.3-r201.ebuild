@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r201.ebuild,v 1.15 2014/01/24 19:06:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.8.3-r201.ebuild,v 1.16 2014/01/29 15:03:56 leio Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ RDEPEND="
 	dev-db/sqlite:3
 	>=x11-libs/pango-1.21
 	x11-libs/libXrender
+	x11-libs/libXt
 
 	geoloc? ( app-misc/geoclue:0 )
 
