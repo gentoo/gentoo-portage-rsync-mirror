@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/ikiwiki
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.19 2013/12/26 13:10:22 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.20 2014/01/28 23:55:27 mrueg Exp $
+
+*ikiwiki-3.20140125 (28 Jan 2014)
+
+  28 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +ikiwiki-3.20140125.ebuild,
+  metadata.xml:
+  Version bump. See also #494022. Add missing test dependencies. Fix bug
+  #498444. Proxy commit for Alice Ferrazzi. Add missing proxy-maintainers herd.
 
   26 Dec 2013; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Add Alice Ferrazzi as maintainer.
