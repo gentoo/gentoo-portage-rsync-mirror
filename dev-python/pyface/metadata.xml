@@ -13,4 +13,7 @@
     * PyQt
     * PySide
 </longdescription>
+<upstream>
+  <remote-id type="pypi">pyface</remote-id>
+</upstream>
 </pkgmetadata>

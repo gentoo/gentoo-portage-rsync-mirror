@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/reportlab
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.99 2013/09/25 17:27:36 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.100 2014/01/29 17:30:11 bicatali Exp $
+
+*reportlab-2.7 (29 Jan 2014)
+
+  29 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +reportlab-2.7.ebuild,
+  metadata.xml:
+  Version bump, added upstream check
 
   25 Sep 2013; Agostino Sarubbo <ago@gentoo.org> reportlab-2.6.ebuild:
   Stable for ppc, wrt bug #484698
