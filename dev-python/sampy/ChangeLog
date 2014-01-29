@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/sampy
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sampy/ChangeLog,v 1.1 2014/01/29 18:41:56 bicatali Exp $
+
+*sampy-1.2.1 (29 Jan 2014)
+
+  29 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +sampy-1.2.1.ebuild:
+  Initial import

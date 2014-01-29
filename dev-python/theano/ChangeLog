@@ -1,0 +1,18 @@
+# ChangeLog for dev-python/theano
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/theano/ChangeLog,v 1.1 2014/01/29 18:36:04 bicatali Exp $
+
+*theano-0.6.0 (29 Jan 2014)
+
+  29 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> +theano-0.6.0.ebuild,
+  +metadata.xml:
+  Version bump and import to main tree
+
+  23 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  dev-python/theano: Updated upstream info
+
+*theano-0.6.0_rc3 (23 Jul 2013)
+
+  23 Jul 2013; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +theano-0.6.0_rc3.ebuild:
+  dev-python/theano: Initial import

@@ -1,6 +1,14 @@
 # ChangeLog for media-video/libav
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.175 2013/12/30 14:36:38 lu_zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.176 2014/01/29 18:35:18 axs Exp $
+
+*libav-10_alpha1-r1 (29 Jan 2014)
+*libav-9.10-r1 (29 Jan 2014)
+
+  29 Jan 2014; Ian Stakenvicius <axs@gentoo.org> +libav-10_alpha1-r1.ebuild,
+  +libav-9.10-r1.ebuild:
+  ported 9.10 and 10_alpha1 to multilib-minimal, commited p.masked with
+  lu_zero's blessing
 
   30 Dec 2013; Luca Barbato <lu_zero@gentoo.org> libav-0.8.9-r1.ebuild:
   Multilib support update

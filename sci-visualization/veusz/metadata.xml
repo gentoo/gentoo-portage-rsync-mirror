@@ -10,6 +10,8 @@
 </longdescription>
 <use>
   <flag name="fits">Add FITS format via <pkg>dev-python/pyfits</pkg></flag>
+  <flag name="emf">Add FITS format via <pkg>dev-python/pyemf</pkg></flag>
+  <flag name="vo">Add Virtual Observatory tools via <pkg>dev-python/astropy</pkg></flag>
 </use>
 <upstream>
   <remote-id type="pypi">veusz</remote-id>
