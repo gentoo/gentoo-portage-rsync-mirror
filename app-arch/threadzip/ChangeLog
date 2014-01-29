@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/threadzip
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/threadzip/ChangeLog,v 1.1 2014/01/29 08:38:18 vapier Exp $
+
+*threadzip-1.2 (29 Jan 2014)
+
+  29 Jan 2014; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +threadzip-1.2.ebuild:
+  Initial ebuild by me.
