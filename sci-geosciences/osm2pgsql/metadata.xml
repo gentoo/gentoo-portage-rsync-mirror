@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci-geosciences</herd>
-<longdescription lang="en">
-osm2pgsql is a utility program that converts OpenStreetMap (.OSM) data into a format that can be loaded into PostgreSQL. It is often used to render OSM data visually using Mapnik, as Mapnik can query PostgreSQL for map data, but does not work directly with OSM files. For more information on using osm2pgsql to render OpenStreetMap data with Mapnik, see the Mapnik page.
-
-osm2pgsql is a lossy conversion utility. It only adds features that have certain tags, as defined in the config file, and it converts nodes and ways to linestrings and polygons. This means that you can't tell which linestring is connected to which, but for rendering a map that's not important (c.f. routing).
-
-osm2pgsql has two main modes of running - normal (is this what it's called?) and slim mode. The first uses RAM for intermediate storage, the second uses a temporary database on-disk. As of early 2009, you must use slim-mode for planet imports on 32-bit systems, since there are too many nodes to store in RAM otherwise. This limitation doesn't apply to 64-bit systems
-</longdescription>
-<use>
-<flag name="pbf">Add support for importing the new "Protocolbuffer Binary Format"</flag>
-</use>
+    <herd>sci-geosciences</herd>
+    <herd>postgresql</herd>
+    <longdescription lang="en">
+        Converts OSM planet.osm data to a PostgreSQL / PostGIS database
+        suitable for specific applications like rendering into map tiles by
+        Mapnik or geocoding with Nominatim.
+    </longdescription>
+    <use>
+        <flag name="pbf">
+            Add support for importing the new "Protocolbuffer Binary Format"
+        </flag>
+    </use>
 </pkgmetadata>

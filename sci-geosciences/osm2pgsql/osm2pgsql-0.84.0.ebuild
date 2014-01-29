@@ -1,21 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-99999999.ebuild,v 1.9 2014/01/29 00:06:26 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-0.84.0.ebuild,v 1.1 2014/01/29 00:06:26 titanofold Exp $
 
 EAPI=5
 
-inherit autotools git-2
+inherit autotools
 
-EGIT_REPO_URI="git://github.com/openstreetmap/osm2pgsql.git"
-EGIT_BOOTSTRAP="eautoreconf"
-
-DESCRIPTION="Converts OSM planet.osm data to a PostgreSQL/PostGIS database"
+DESCRIPTION="Converts OSM data to SQL and insert into PostgreSQL db"
 HOMEPAGE="http://wiki.openstreetmap.org/wiki/Osm2pgsql"
-SRC_URI=""
+SRC_URI="https://github.com/openstreetmap/${PN}/archive/${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+lua +pbf"
 
 DEPEND="
@@ -29,3 +26,7 @@ DEPEND="
 	pbf? ( dev-libs/protobuf-c )
 "
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	eautoreconf
+}
