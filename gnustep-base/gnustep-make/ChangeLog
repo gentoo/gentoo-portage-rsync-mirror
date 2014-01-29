@@ -1,6 +1,13 @@
 # ChangeLog for gnustep-base/gnustep-make
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.118 2013/09/26 11:57:23 voyageur Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.119 2014/01/29 14:48:32 voyageur Exp $
+
+*gnustep-make-2.6.6 (29 Jan 2014)
+
+  29 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +gnustep-make-2.6.6.ebuild, +files/gnustep-5.csh, +files/gnustep-5.sh:
+  Version bump. Remove gdnc autostart (#475048), force -j1 for doc compilation
+  for now (#494096)
 
 *gnustep-make-2.6.5 (26 Sep 2013)
 
