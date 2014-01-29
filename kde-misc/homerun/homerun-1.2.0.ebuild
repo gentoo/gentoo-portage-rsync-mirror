@@ -1,20 +1,19 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/homerun/homerun-1.0.0.ebuild,v 1.1 2013/05/28 15:57:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/homerun/homerun-1.2.0.ebuild,v 1.1 2014/01/29 12:48:21 mrueg Exp $
 
 EAPI=5
 
 DECLARATIVE_REQUIRED="always"
 VIRTUALX_REQUIRED="test"
 VIRTUALDBUS_TEST="true"
-KDE_LINGUAS="bs cs da de el es et fi fr ga gl hu lt mr nl pa pl pt pt_BR ro ru
-sk sl sv tr uk zh_CN"
+KDE_LINGUAS="cs da de el es fi fr gl lt nl pl pt pt_BR ro ru sk sl sv tr uk zh_CN"
 KDE_MINIMAL="4.10"
 inherit kde4-base
 
 DESCRIPTION="Application launcher for KDE Plasma desktop"
 HOMEPAGE="https://projects.kde.org/projects/playground/base/homerun"
-[[ ${PV} == *9999 ]] || SRC_URI="mirror://kde/stable/${PN}/src/${P}.tar.bz2"
+[[ ${PV} == *9999 ]] || SRC_URI="mirror://kde/stable/${PN}/src/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1 BSD"
 KEYWORDS="~amd64 ~x86"
@@ -22,6 +21,7 @@ SLOT="4"
 IUSE="debug"
 
 DEPEND="
+	$(add_kdebase_dep libkonq)
 	$(add_kdebase_dep libkworkspace)
 "
 RDEPEND="

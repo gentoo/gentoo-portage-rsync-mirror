@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.328 2014/01/20 13:11:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.329 2014/01/29 12:54:16 blueness Exp $
+
+*curl-7.35.0 (29 Jan 2014)
+
+  29 Jan 2014; Anthony G. Basile <blueness@gentoo.org> +curl-7.35.0.ebuild:
+  Version bump, bug #499674
 
   20 Jan 2014; Anthony G. Basile <blueness@gentoo.org> -curl-7.33.0.ebuild:
   Remove vulnerable version, bug #497092
