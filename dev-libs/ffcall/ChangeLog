@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ffcall
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.41 2012/08/20 03:32:11 ottxor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ChangeLog,v 1.42 2014/01/29 14:21:48 voyageur Exp $
+
+  29 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org> metadata.xml:
+  Move to maintainer-needed
 
   20 Aug 2012; Christoph Junghans <ottxor@gentoo.org> ffcall-1.10-r3.ebuild:
   added prefix keywords
