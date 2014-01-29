@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2-r1.ebuild,v 1.1 2013/09/03 09:51:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/profxp/profxp-3_pre2-r2.ebuild,v 1.1 2014/01/29 01:18:09 mrueg Exp $
 
 EAPI=5
 
@@ -24,11 +24,11 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack profxp-v${PV/_/-}-src.tar.gz
-	cp ${DISTDIR}/SOCKS.pm ${S}/
+	cp "${DISTDIR}"/SOCKS.pm "${S}"/
 }
 
 src_prepare() {
-	sed -i 's:/home/tom/ActivePerl-5\.6:/usr:' ${S}/profxpv3.pl
+	sed -i 's:/home/tom/ActivePerl-5\.6:/usr:' "${S}"/profxpv3.pl || die
 }
 
 src_compile() {
