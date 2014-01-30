@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.9.ebuild,v 1.3 2014/01/18 18:45:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.9.ebuild,v 1.4 2014/01/30 11:11:38 pinkbyte Exp $
 
 EAPI="5"
 
@@ -45,9 +45,9 @@ RDEPEND="
 	>=dev-libs/boost-1.38
 	>=dev-libs/openssl-0.9.8
 	sys-apps/attr
-	sys-devel/gettext
 	sys-libs/zlib
 	virtual/libiconv
+	virtual/libintl
 	idn? ( net-dns/libidn )
 	lua? ( >=dev-lang/lua-5.1 )
 	pcre? ( >=dev-libs/libpcre-4.2 )
@@ -81,9 +81,10 @@ RDEPEND="
 	)
 "
 DEPEND="${RDEPEND}
+	sys-devel/gettext
 	virtual/pkgconfig
 "
-DOCS="AUTHORS ChangeLog.txt"
+DOCS=( AUTHORS ChangeLog.txt )
 
 pkg_pretend() {
 	if [[ ${MERGE_TYPE} != binary ]]; then

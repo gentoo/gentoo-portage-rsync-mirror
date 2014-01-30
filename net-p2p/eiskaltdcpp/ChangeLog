@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.61 2014/01/30 10:49:03 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.62 2014/01/30 11:11:38 pinkbyte Exp $
+
+  30 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> eiskaltdcpp-2.2.9.ebuild,
+  eiskaltdcpp-9999.ebuild:
+  Set proper build and run-time deps for localization tools, thanks to Nikoli
+  <nikoli AT gmx.us>
 
   30 Jan 2014; Sergey Popov <pinkbyte@gentoo.org>
   -files/eiskaltdcpp-2.2.7-boost-1.50.patch, -eiskaltdcpp-2.2.8.ebuild,
