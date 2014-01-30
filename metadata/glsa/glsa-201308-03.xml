@@ -10,7 +10,7 @@
   </synopsis>
   <product type="ebuild">Ebuild</product>
   <announced>August 22, 2013</announced>
-  <revised>August 22, 2013: 1</revised>
+  <revised>January 30, 2014: 2</revised>
   <bug>431732</bug>
   <bug>451058</bug>
   <bug>469960</bug>
@@ -55,7 +55,7 @@
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-2050">CVE-2012-2050</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-2051">CVE-2012-2051</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4147">CVE-2012-4147</uri>
-    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4748">CVE-2012-4148</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4148">CVE-2012-4148</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4149">CVE-2012-4149</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4150">CVE-2012-4150</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-4151">CVE-2012-4151</uri>
@@ -126,7 +126,7 @@
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-3342">CVE-2013-3342</uri>
   </references>
   <metadata tag="requester" timestamp="Mon, 04 Mar 2013 23:42:51 +0000">ackle</metadata>
-  <metadata tag="submitter" timestamp="Thu, 22 Aug 2013 22:33:56 +0000">
+  <metadata tag="submitter" timestamp="Thu, 30 Jan 2014 07:45:58 +0000">
     creffett
   </metadata>
 </glsa>
