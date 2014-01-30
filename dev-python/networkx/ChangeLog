@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/networkx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.23 2013/10/22 12:09:18 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.24 2014/01/30 15:04:25 jlec Exp $
+
+  30 Jan 2014; Justin Lecher <jlec@gentoo.org> networkx-1.8.1.ebuild:
+  Add Python 3 support, pygraphviz is optional but preferred
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> networkx-1.8.1.ebuild:
   Marked ~x64-macos, bug #487670

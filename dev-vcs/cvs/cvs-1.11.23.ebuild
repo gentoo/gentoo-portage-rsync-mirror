@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.11.23.ebuild,v 1.3 2014/01/19 10:21:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/cvs-1.11.23.ebuild,v 1.4 2014/01/30 15:25:23 grobian Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnu/non-gnu/cvs/source/stable/${PV}/${P}.tar.bz2
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 #KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-KEYWORDS="~arm64 ~ppc-aix ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~arm64 ~ppc-aix ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc emacs"
 
 DEPEND=">=sys-libs/zlib-1.1.4"

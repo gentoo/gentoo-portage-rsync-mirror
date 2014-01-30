@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/cvs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.14 2014/01/19 10:30:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvs/ChangeLog,v 1.15 2014/01/30 15:25:23 grobian Exp $
+
+  30 Jan 2014; Fabian Groffen <grobian@gentoo.org> cvs-1.11.23.ebuild,
+  cvs-1.12.13.1-r2.ebuild:
+  Marked ~x64-macos
 
   19 Jan 2014; Mike Frysinger <vapier@gentoo.org> cvs-1.12.12-r10.ebuild,
   cvs-1.12.12-r6.ebuild, cvs-1.12.12-r7.ebuild, cvs-1.12.12-r8.ebuild,
