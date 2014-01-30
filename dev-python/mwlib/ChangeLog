@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mwlib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.30 2013/11/27 17:21:30 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.31 2014/01/30 13:36:42 dev-zero Exp $
+
+*mwlib-0.15.14 (30 Jan 2014)
+
+  30 Jan 2014; Tiziano Müller <dev-zero@gentoo.org> +mwlib-0.15.14.ebuild:
+  Version bump.
 
 *mwlib-0.15.12 (27 Nov 2013)
 
