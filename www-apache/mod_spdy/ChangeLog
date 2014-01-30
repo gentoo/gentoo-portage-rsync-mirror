@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_spdy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/ChangeLog,v 1.4 2013/08/15 16:39:19 klausman Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/ChangeLog,v 1.5 2014/01/30 18:26:12 slyfox Exp $
+
+  30 Jan 2014; Sergei Trofimovich <slyfox@gentoo.org> mod_spdy-0.9.3.3.ebuild,
+  mod_spdy-9999.ebuild:
+  Fix build failure when python-3 is active by switching to python-single-r1
+  (bug #477084).
 
   15 Aug 2013; Tobias Klausmann <klausman@gentoo.org> mod_spdy-0.9.3.3.ebuild,
   mod_spdy-9999.ebuild:

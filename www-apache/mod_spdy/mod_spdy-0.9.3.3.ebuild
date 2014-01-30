@@ -1,10 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-0.9.3.3.ebuild,v 1.4 2013/08/15 16:39:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spdy/mod_spdy-0.9.3.3.ebuild,v 1.5 2014/01/30 18:26:12 slyfox Exp $
 
-EAPI="4"
+EAPI=5
 
-inherit apache-module eutils
+PYTHON_COMPAT=( python2_5 python2_6 python2_7 )
+inherit apache-module eutils python-any-r1
 
 if [[ ${PV} == 9999 ]] ; then
 	ESVN_REPO_URI="http://mod-spdy.googlecode.com/svn/trunk/src"

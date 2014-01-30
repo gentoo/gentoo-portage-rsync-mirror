@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.2 2013/12/20 20:01:29 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.2.ebuild,v 1.3 2014/01/30 18:13:24 tomwij Exp $
 
 EAPI="5"
 
@@ -58,8 +58,8 @@ RDEPEND="
 		!<media-video/ffmpeg-1.2:0
 		dev-libs/libgpg-error:0
 		net-dns/libidn:0
-		>=sys-devel/gettext-0.18.3:0
 		>=sys-libs/zlib-1.2.5.1-r2:0[minizip]
+		virtual/libintl:0
 		a52? ( >=media-libs/a52dec-0.7.4-r3:0 )
 		aalib? ( media-libs/aalib:0 )
 		alsa? ( >=media-libs/alsa-lib-1.0.24:0 )
@@ -156,6 +156,7 @@ DEPEND="${RDEPEND}
 	kde? ( >=kde-base/kdelibs-4:4 )
 	xcb? ( x11-proto/xproto:0 )
 	app-arch/xz-utils:0
+	>=sys-devel/gettext-0.18.3:0
 	virtual/pkgconfig:0
 "
 

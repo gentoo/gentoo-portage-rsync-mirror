@@ -5469,6 +5469,7 @@ net-p2p/datacoin-hp:logrotate - Use app-admin/logrotate for rotating logs
 net-p2p/dbhub:switch_user - Enable support for switching user
 net-p2p/deluge:setproctitle - Install dependencies needed for beautifying the process name
 net-p2p/deluge:webinterface - Install dependencies needed for the web interface
+net-p2p/dogecoin-qt:qrcode - Enable generation of QR Codes for receiving payments
 net-p2p/eiskaltdcpp:cli - Enable sample cli based on readline
 net-p2p/eiskaltdcpp:daemon - Enable eiskaltdcpp-daemon
 net-p2p/eiskaltdcpp:dht - Enable DHT (distributed hash table) support for libeiskaltdcpp

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.3.ebuild,v 1.5 2013/08/11 21:42:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/avidemux-core/avidemux-core-2.6.3.ebuild,v 1.6 2014/01/30 18:13:38 tomwij Exp $
 
 EAPI="5"
 
@@ -23,18 +23,19 @@ IUSE="debug nls sdl system-ffmpeg vdpau xv"
 DEPEND="
 	!<media-video/avidemux-${PV}:${SLOT}
 	dev-db/sqlite
-	nls? ( sys-devel/gettext )
 	sdl? ( media-libs/libsdl )
 	system-ffmpeg? ( >=media-video/ffmpeg-1.0:0[aac,cpudetection,mp3,theora] )
 	xv? ( x11-libs/libXv )
 	vdpau? ( x11-libs/libvdpau )
 "
 RDEPEND="
+	nls? ( virtual/libintl:0 )
 	$DEPEND
 "
 DEPEND="
 	$DEPEND
 	virtual/pkgconfig
+	nls? ( sys-devel/gettext:0 )
 	!system-ffmpeg? ( dev-lang/yasm[nls=] )
 "
 

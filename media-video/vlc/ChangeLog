@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.883 2014/01/30 16:40:37 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.884 2014/01/30 18:13:24 tomwij Exp $
+
+  30 Jan 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.8.ebuild,
+  vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild, vlc-2.1.0.ebuild, vlc-2.1.1.ebuild,
+  vlc-2.1.2.ebuild:
+  Further corrected libintl dependencies, suggested by Nikoli.
 
   30 Jan 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.9999.ebuild,
   vlc-2.1.9999.ebuild, vlc-9999.ebuild:
