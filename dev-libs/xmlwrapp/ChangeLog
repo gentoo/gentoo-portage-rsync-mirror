@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlwrapp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.39 2013/12/02 09:32:43 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.40 2014/01/30 14:54:52 jer Exp $
+
+  30 Jan 2014; Jeroen Roovers <jer@gentoo.org> xmlwrapp-0.7.1.ebuild:
+  Stable for HPPA (bug #499758).
 
 *xmlwrapp-0.7.1 (02 Dec 2013)
 
