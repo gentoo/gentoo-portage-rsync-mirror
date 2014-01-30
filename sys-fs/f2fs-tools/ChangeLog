@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/f2fs-tools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/f2fs-tools/ChangeLog,v 1.12 2013/09/05 13:27:13 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/f2fs-tools/ChangeLog,v 1.13 2014/01/30 21:05:00 blueness Exp $
+
+*f2fs-tools-1.2.0 (30 Jan 2014)
+
+  30 Jan 2014; Anthony G. Basile <blueness@gentoo.org> +f2fs-tools-1.2.0.ebuild:
+  Version bump, bug #499614
 
   05 Sep 2013; Agostino Sarubbo <ago@gentoo.org> f2fs-tools-1.1.0-r1.ebuild:
   Stable for ppc64, wrt bug #481916

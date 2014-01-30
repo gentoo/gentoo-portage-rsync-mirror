@@ -10,4 +10,4 @@ RDEPEND=>=net-libs/libtirpc-0.2.3 selinux? ( sec-policy/selinux-rpcbind ) tcpd? 
 SLOT=0
 SRC_URI=mirror://sourceforge/rpcbind/rpcbind-0.2.1.tar.bz2
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=d34f95fdeaa451388db307f7766d4338
+_md5_=178bc60ed532c96fda34e50ff0a4188e

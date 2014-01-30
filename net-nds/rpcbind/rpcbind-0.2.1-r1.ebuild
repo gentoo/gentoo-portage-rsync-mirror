@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.1.ebuild,v 1.1 2014/01/30 05:10:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-0.2.1-r1.ebuild,v 1.1 2014/01/30 21:04:39 radhermit Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ src_configure() {
 	econf \
 		--bindir="${EPREFIX}"/sbin \
 		--with-statedir="${EPREFIX}"/run/${PN} \
+		--with-rpcuser=root \
 		$(use_enable tcpd libwrap) \
 		$(use_enable debug) \
 		$(use_enable warmstarts)
