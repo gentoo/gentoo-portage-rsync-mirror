@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/palo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.46 2014/01/23 14:43:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.47 2014/01/30 15:42:39 jer Exp $
+
+  30 Jan 2014; Jeroen Roovers <jer@gentoo.org> files/palo.conf:
+  Improve helpful comments.
 
   23 Jan 2014; Jeroen Roovers <jer@gentoo.org> palo-1.92.ebuild,
   palo-9999.ebuild:
