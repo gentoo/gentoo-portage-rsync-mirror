@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/libbluedevil-1.9.4.ebuild,v 1.5 2014/01/19 11:15:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbluedevil/libbluedevil-1.9.4.ebuild,v 1.6 2014/01/30 12:56:54 mrueg Exp $
 
 EAPI=5
 
@@ -16,6 +16,6 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86"
 SLOT="4"
 IUSE="debug"
 
-RDEPEND="net-wireless/bluez"
+RDEPEND="<net-wireless/bluez-5"
 
 S=${WORKDIR}/${MY_P}

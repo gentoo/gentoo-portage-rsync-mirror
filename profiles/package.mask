@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15374 2014/01/29 23:00:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15375 2014/01/30 12:48:33 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Aaron W. Swenson <titanofold@gentoo.org> (30 Jan 2014)
+# Package no longer maintained separately from x11-misc/slim. Removal
+# in 30 days.
+x11-misc/slimlock
 
 # Mike Gilbert <floppym@gentoo.org> (29 Jan 2014)
 # I suspect this package is not used. If you are using it, please contact me.
