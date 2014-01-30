@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/uwsgi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.50 2014/01/22 17:07:11 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/ChangeLog,v 1.51 2014/01/30 08:50:18 dev-zero Exp $
+
+*uwsgi-2.0-r2 (30 Jan 2014)
+
+  30 Jan 2014; Tiziano Müller <dev-zero@gentoo.org> +uwsgi-2.0-r2.ebuild,
+  -uwsgi-2.0-r1.ebuild:
+  Fix compilation with USE=apache2 (bug #499482), add support for mono (bug
+  #473382), build rbthreads plugin with USE=ruby and build fiber with all
+  supported ruby versions (1.9,2.0,2.1).
 
 *uwsgi-2.0-r1 (22 Jan 2014)
 

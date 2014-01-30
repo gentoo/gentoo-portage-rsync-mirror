@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0-r1.ebuild,v 1.1 2014/01/22 17:07:11 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/uwsgi/uwsgi-2.0-r2.ebuild,v 1.1 2014/01/30 08:50:18 dev-zero Exp $
 
 EAPI="5"
 
@@ -41,7 +41,7 @@ UWSGI_PLUGINS_OPT=( alarm_{curl,xmpp} clock_{monotonic,realtime} curl_cron
 	sqlite ssi stats_pusher_statsd
 	systemd_logger transformation_toupper tuntap webdav xattr xslt zabbix )
 
-LANG_SUPPORT_SIMPLE=( cgi perl ) # plugins which can be built in the main build process
+LANG_SUPPORT_SIMPLE=( cgi mono perl ) # plugins which can be built in the main build process
 LANG_SUPPORT_EXTENDED=( lua php python python_gevent ruby )
 
 # plugins to be ignored (for now):
@@ -53,7 +53,6 @@ LANG_SUPPORT_EXTENDED=( lua php python python_gevent ruby )
 # exception_log: example plugin
 # *go*: TODO
 # *java*: TODO
-# *mono*: TODO
 # v8: TODO
 # matheval: TODO
 IUSE="apache2 +caps debug +embedded expat jemalloc json +pcre +routing +ssl +xml yajl yaml zeromq"
@@ -80,7 +79,6 @@ REQUIRED_USE="|| ( ${LANG_SUPPORT_SIMPLE[@]} ${LANG_SUPPORT_EXTENDED[@]} )
 # 3. Plugins
 # 4. Language/app support
 CDEPEND="sys-libs/zlib
-	apache2? ( www-servers/apache )
 	caps? ( sys-libs/libcap )
 	json? ( !yajl? ( dev-libs/jansson )
 		yajl? ( dev-libs/yajl ) )
@@ -105,6 +103,7 @@ CDEPEND="sys-libs/zlib
 	uwsgi_plugins_webdav? ( dev-libs/libxml2 )
 	uwsgi_plugins_xslt? ( dev-libs/libxslt )
 	lua? ( dev-lang/lua )
+	mono? ( =dev-lang/mono-2* )
 	perl? ( dev-lang/perl:= )
 	php? (
 		php_targets_php5-3? ( dev-lang/php:5.3[embed] )
@@ -119,6 +118,8 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	uwsgi_plugins_rrdtool? ( net-analyzer/rrdtool )"
 
+want_apache2
+
 S="${WORKDIR}/${MY_P}"
 APXS2_S="${S}/apache2"
 APACHE2_MOD_CONF="42_mod_uwsgi-r1 42_mod_uwsgi"
@@ -129,6 +130,8 @@ src_unpack() {
 
 pkg_setup() {
 	python_setup
+	use ruby && ruby-ng_pkg_setup
+	depend.apache_pkg_setup
 }
 
 src_prepare() {
@@ -218,10 +221,8 @@ each_ruby_compile() {
 	cd "${WORKDIR}/${MY_P}"
 
 	UWSGICONFIG_RUBYPATH="${RUBY}" python uwsgiconfig.py --plugin plugins/rack gentoo rack_${RUBY##*/} || die "building plugin for ${RUBY} failed"
-
-	if [[ "${RUBY}" == *ruby19 ]] ; then
-		UWSGICONFIG_RUBYPATH="${RUBY}" python uwsgiconfig.py --plugin plugins/fiber gentoo || die "building fiber plugin for ${RUBY} failed"
-	fi
+	UWSGICONFIG_RUBYPATH="${RUBY}" python uwsgiconfig.py --plugin plugins/fiber gentoo fiber_${RUBY##*/}|| die "building fiber plugin for ${RUBY} failed"
+	UWSGICONFIG_RUBYPATH="${RUBY}" python uwsgiconfig.py --plugin plugins/rbthreads gentoo rbthreads_${RUBY##*/}|| die "building rbthreads plugin for ${RUBY} failed"
 }
 
 python_compile_plugins() {
@@ -247,9 +248,9 @@ src_compile() {
 	python uwsgiconfig.py --build gentoo || die "building uwsgi failed"
 
 	if use lua ; then
-		# setting LUALIB explicitly since lua is not slotted on Gentoo
-		# and uwsgi otherwise looks for lua5.1
-		UWSGICONFIG_LUALIB="lua" python uwsgiconfig.py --plugin plugins/lua gentoo || die "building plugin for lua failed"
+		# setting the name for the pkg-config file to lua, since we don't have
+		# slotted lua
+		UWSGICONFIG_LUAPC="lua" python uwsgiconfig.py --plugin plugins/lua gentoo || die "building plugin for lua failed"
 	fi
 
 	if use php ; then
@@ -283,6 +284,7 @@ src_install() {
 
 	use cgi && dosym uwsgi /usr/bin/uwsgi_cgi
 	use lua && dosym uwsgi /usr/bin/uwsgi_lua
+	use mono && dosym uwsgi /usr/bin/uwsgi_mono
 	use perl && dosym uwsgi /usr/bin/uwsgi_psgi
 
 	if use php ; then
@@ -323,6 +325,7 @@ pkg_postinst() {
 	elog "Append the following options to the uwsgi call to load the respective language plugin:"
 	use cgi    && elog "  '--plugins cgi' for cgi"
 	use lua    && elog "  '--plugins lua' for lua"
+	use mono   && elog "  '--plugins mono' for mono"
 	use perl   && elog "  '--plugins psgi' for perl"
 
 	if use php ; then
@@ -346,9 +349,10 @@ pkg_postinst() {
 
 	if use ruby ; then
 		for ruby in $USE_RUBY; do
-			use ruby_targets_${ruby} && elog "  '--plugins rack_${ruby/.}' for ${ruby}"
-			if [[ "${ruby}" == *ruby19 ]] ; then
-				elog "  '--plugins fibre' for ruby-1.9 fibres"
+			if use ruby_targets_${ruby} ; then
+				elog "  '--plugins rack_${ruby/.}' for ${ruby}"
+				elog "  '--plugins fiber_${ruby/.}' for ${ruby} fibers"
+				elog "  '--plugins rbthreads_${ruby/.}' for ${ruby} rbthreads"
 			fi
 		done
 	fi
