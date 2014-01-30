@@ -1,6 +1,11 @@
 # ChangeLog for dev-lua/LuaBitOp
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/ChangeLog,v 1.5 2011/08/28 11:24:59 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/ChangeLog,v 1.6 2014/01/30 21:39:51 radhermit Exp $
+
+*LuaBitOp-1.0.2 (30 Jan 2014)
+
+  30 Jan 2014; Tim Harder <radhermit@gentoo.org> +LuaBitOp-1.0.2.ebuild:
+  Version bump (bug #499754).
 
   28 Aug 2011; Markos Chandras <hwoarang@gentoo.org> LuaBitOp-1.0.1-r1.ebuild,
   +files/LuaBitOp-ldflags.patch:
