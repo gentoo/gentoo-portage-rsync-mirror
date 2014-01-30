@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/man-pages-it-2.80-r1.ebuild,v 1.7 2013/09/05 05:31:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-it/man-pages-it-2.80-r1.ebuild,v 1.8 2014/01/30 20:28:08 vapier Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.pluto.it/pub/pluto/ildp/man/${P}.tar.gz"
 
 LICENSE="man-pages GPL-2+ BSD MIT FDL-1.1+ public-domain man-pages-posix"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="virtual/man"

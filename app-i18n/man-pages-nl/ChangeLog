@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-nl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-nl/ChangeLog,v 1.5 2012/09/29 14:31:56 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-nl/ChangeLog,v 1.6 2014/01/30 20:28:20 vapier Exp $
+
+  30 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-pages-nl-0.13.3.ebuild:
+  Add arm64 love.
 
   29 Sep 2012; Ulrich Müller <ulm@gentoo.org> man-pages-nl-0.13.3.ebuild:
   Specify LICENSE more precisely: "as-is" is really "man-pages", GPL is the "or

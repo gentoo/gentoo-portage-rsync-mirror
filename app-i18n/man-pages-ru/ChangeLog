@@ -1,6 +1,18 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.50 2014/01/03 08:54:08 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.52 2014/01/30 20:30:23 vapier Exp $
+
+  30 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  man-pages-ru-3.49.2170.1764.20130606.ebuild,
+  man-pages-ru-3.51.2170.1766.20130613.ebuild,
+  man-pages-ru-3.54.2171.1790.20131020.ebuild:
+  Mark m68k/s390/sh stable.
+
+  30 Jan 2014; Mike Frysinger <vapier@gentoo.org>
+  man-pages-ru-3.49.2170.1764.20130606.ebuild,
+  man-pages-ru-3.51.2170.1766.20130613.ebuild,
+  man-pages-ru-3.54.2171.1790.20131020.ebuild:
+  Add arm64 love.
 
   03 Jan 2014; Sergey Popov <pinkbyte@gentoo.org>
   man-pages-ru-3.54.2171.1790.20131020.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-de
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.26 2013/12/22 13:21:09 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-de/ChangeLog,v 1.27 2014/01/30 20:27:35 vapier Exp $
+
+  30 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-pages-de-0.12.ebuild,
+  man-pages-de-0.8.ebuild, man-pages-de-1.3.ebuild, man-pages-de-1.4.ebuild:
+  Add arm64 love.
 
 *man-pages-de-1.4 (22 Dec 2013)
 

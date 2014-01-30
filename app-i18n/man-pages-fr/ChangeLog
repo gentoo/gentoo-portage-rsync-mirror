@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-fr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.10 2013/02/24 10:42:07 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-fr/ChangeLog,v 1.11 2014/01/30 20:28:02 vapier Exp $
+
+  30 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-pages-fr-2.39.0.ebuild,
+  man-pages-fr-3.40.1.ebuild:
+  Add arm64 love.
 
   24 Feb 2013; Ulrich Müller <ulm@gentoo.org> man-pages-fr-3.40.1.ebuild:
   Fix LICENSE again, it was swept off by the last version bump.

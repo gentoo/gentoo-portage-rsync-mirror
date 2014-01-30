@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-da
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-da/ChangeLog,v 1.6 2012/05/10 14:59:43 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-da/ChangeLog,v 1.7 2014/01/30 20:27:54 vapier Exp $
+
+  30 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-pages-da-0.1.2.ebuild:
+  Add arm64 love.
 
   10 May 2012; Agostino Sarubbo <ago@gentoo.org> -man-pages-da-0.1.1.ebuild:
   Remove old

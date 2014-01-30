@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/man-pages-zh_CN
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-zh_CN/ChangeLog,v 1.5 2010/10/19 10:25:16 leio Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-zh_CN/ChangeLog,v 1.6 2014/01/30 20:28:40 vapier Exp $
+
+  30 Jan 2014; Mike Frysinger <vapier@gentoo.org> man-pages-zh_CN-1.5.ebuild:
+  Add arm64 love.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> man-pages-zh_CN-1.5.ebuild:
   Drop to ~mips
