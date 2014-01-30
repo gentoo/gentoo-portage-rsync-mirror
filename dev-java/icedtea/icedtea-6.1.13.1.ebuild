@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.13.1.ebuild,v 1.1 2014/01/29 21:26:17 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.13.1.ebuild,v 1.2 2014/01/30 20:58:13 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -135,6 +135,9 @@ src_unpack() {
 }
 
 java_prepare() {
+	# For bootstrap builds as the sandbox control file might not yet exist.
+	addpredict /proc/self/coredump_filter
+
 	# icedtea doesn't like some locales. #330433 #389717
 	export LANG="C" LC_ALL="C"
 }
@@ -298,6 +301,7 @@ src_install() {
 	if ! use X || ! use alsa || ! use cups; then
 		java-vm_revdep-mask "${dest}"
 	fi
+	java-vm_sandbox-predict /proc/self/coredump_filter
 }
 
 pkg_preinst() {
