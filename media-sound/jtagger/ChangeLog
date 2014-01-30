@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/jtagger
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.15 2010/01/03 19:02:40 betelgeuse Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/ChangeLog,v 1.16 2014/01/30 02:34:37 tomwij Exp $
+
+*jtagger-1.0-r1 (30 Jan 2014)
+
+  30 Jan 2014; Tom Wijsman <TomWij@gentoo.org> +jtagger-1.0-r1.ebuild,
+  -jtagger-1.0.ebuild:
+  Revision bump. EAPI 5.
 
   03 Jan 2010; Petteri Räty <betelgeuse@gentoo.org> jtagger-1.0.ebuild:
   Fix building. Fixes bug #290536.
@@ -69,4 +75,3 @@
   +jtagger-2007.02.ebuild:
   Initial addition. Thanks to Serkan Kaba <serkan_kaba@yahoo.com> for the
   initial ebuild. Fixes bug #173994.
-

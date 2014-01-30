@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0.ebuild,v 1.3 2010/01/03 19:02:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0-r1.ebuild,v 1.1 2014/01/30 02:34:37 tomwij Exp $
 
-EAPI="2"
+EAPI="5"
+
 JAVA_PKG_IUSE="source test"
 
 inherit eutils java-pkg-2
@@ -14,27 +15,22 @@ SRC_URI="http://dronten.googlepages.com/${PN}.zip -> ${P}.zip"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
-COMMON_DEP="dev-java/jlayer
-	>=dev-java/jid3-0.46-r1"
+COMMON_DEP="dev-java/jlayer:0
+	>=dev-java/jid3-0.46-r1:0"
+
 RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.5"
+
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.5
-	app-arch/unzip"
+	app-arch/unzip:0"
 
-S="${S}/src"
-
-src_unpack() {
-	mkdir -p "${S}" || die
-	cd "${S}" || die
-
-	unpack ${A}
-	unzip -q ${PN}.jar || die
-}
+S="${WORKDIR}"
 
 java_prepare() {
+	unzip -q ${PN}.jar || die
+
 	# Fix for bug #231571 comment #2. This removes real @Override annotations but safer.
 	sed -i -e "s/@Override//g" $(find . -name "*.java") || die "failed fixing for Java 5."
 

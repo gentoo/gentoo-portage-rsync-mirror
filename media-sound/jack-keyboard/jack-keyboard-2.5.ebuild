@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-keyboard/jack-keyboard-2.5.ebuild,v 1.3 2012/05/05 08:31:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-keyboard/jack-keyboard-2.5.ebuild,v 1.4 2014/01/30 02:39:28 tomwij Exp $
 
-EAPI=1
+EAPI=5
 
 DESCRIPTION="A virtual MIDI keyboard for JACK MIDI"
 HOMEPAGE="http://pin.if.uz.zgora.pl/~trasz/jack-keyboard/"
@@ -22,13 +22,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-apps/sed"
 
-src_compile(){
+src_configure() {
 	econf $(use_with X x11) \
 		$(use_with lash)
-	emake || die "failed to build"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc NEWS README TODO AUTHORS
 }
