@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.230 2014/01/18 06:13:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.231 2014/01/30 22:12:30 axs Exp $
+
+  30 Jan 2014; Ian Stakenvicius <axs@gentoo.org> gettext-0.18.3.2.ebuild:
+  fixed dep version on emul-linux-x86-baselibs to match the one will not collide
+  with abi_x86_32
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> gettext-0.18.2.ebuild,
   gettext-0.18.3.1-r1.ebuild, gettext-0.18.3.2.ebuild:

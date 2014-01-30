@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15375 2014/01/30 12:48:33 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15376 2014/01/30 22:25:28 axs Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -114,11 +114,6 @@ www-client/google-chrome:unstable
 # Michael Sterrett <mr_bones_@gentoo.org> (16 Jan 2014)
 # testing mask for 3.5.x releases
 >=app-admin/syslog-ng-3.5
-
-# Lars Wendler <polynomial-c@gentoo.org>
-# Multilib ready ebuild (bug #496218). Collides with emul-linux-x86-baselibs
-=sys-devel/gettext-0.18.3.2
-=virtual/libintl-0-r1
 
 # Michał Górny <mgorny@gentoo.org> (15 Jan 2014)
 # Multilib conversion and Python support code seriously broken.

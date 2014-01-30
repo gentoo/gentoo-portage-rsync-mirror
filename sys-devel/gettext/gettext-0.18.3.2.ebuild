@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.2.ebuild,v 1.2 2014/01/18 06:13:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.3.2.ebuild,v 1.3 2014/01/30 22:12:30 axs Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 	java? ( >=virtual/jre-1.4 )
 	abi_x86_32? (
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-		!<=app-emulation/emul-linux-x86-baselibs-20131008-r8
+		!<=app-emulation/emul-linux-x86-baselibs-20131008-r11
 	)"
 PDEPEND="emacs? ( app-emacs/po-mode )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20131008-r8.ebuild,v 1.1 2013/12/30 08:37:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/emul-linux-x86-baselibs-20131008-r12.ebuild,v 1.1 2014/01/30 22:24:42 axs Exp $
 
 EAPI=5
 inherit emul-linux-x86
@@ -23,7 +23,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=virtual/libffi-3.0.13-r1[abi_x86_32(-)]
 		>=sys-devel/llvm-3.3-r1[abi_x86_32(-)]
 		>=media-libs/libpng-1.2.50-r1:1.2[abi_x86_32(-)]
-		>=media-libs/libjpeg-turbo-1.3.0-r2:0[abi_x86_32(-)]
+		virtual/jpeg:62[abi_x86_32(-)]
 		>=sys-libs/libraw1394-2.1.0-r1[abi_x86_32(-)]
 		>=sys-libs/libavc1394-0.5.4-r1[abi_x86_32(-)]
 		>=dev-libs/expat-2.1.0-r3[abi_x86_32(-)]
@@ -54,6 +54,7 @@ RDEPEND="!<app-emulation/emul-linux-x86-medialibs-10.2
 		>=dev-libs/libxml2-2.9.1-r2[abi_x86_32(-)]
 		>=dev-libs/dbus-glib-0.100.2-r1[abi_x86_32(-)]
 		>=sys-libs/readline-6.2_p5-r1:0[abi_x86_32(-)]
+		>=sys-devel/gettext-0.18.3.2[abi_x86_32(-)]
 	)
 	>=sys-libs/glibc-2.15" # bug 340613
 
@@ -70,5 +71,5 @@ src_prepare() {
 	ln -s ../share/terminfo "${S}/usr/lib32/terminfo" || die
 
 	# Remove migrated stuff.
-	use abi_x86_32 && rm -f $(cat "${FILESDIR}/remove-native")
+	use abi_x86_32 && rm -f $(cat "${FILESDIR}/remove-native-${PVR}")
 }
