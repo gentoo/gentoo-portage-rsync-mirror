@@ -1,0 +1,10 @@
+# ChangeLog for gnustep-libs/sqlclient
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/sqlclient/ChangeLog,v 1.1 2014/01/30 00:07:03 voyageur Exp $
+
+*sqlclient-1.7.0 (30 Jan 2014)
+
+  30 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org> +sqlclient-1.7.0.ebuild,
+  +metadata.xml:
+  Initial commit, ebuild by adr in bug #480620
+
