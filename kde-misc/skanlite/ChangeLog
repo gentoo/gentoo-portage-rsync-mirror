@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/skanlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.31 2014/01/02 02:44:26 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/ChangeLog,v 1.32 2014/01/30 11:52:28 mrueg Exp $
+
+*skanlite-1.1-r1 (30 Jan 2014)
+
+  30 Jan 2014; Manuel Rüger <mrueg@gentoo.org> +skanlite-1.1-r1.ebuild:
+  Move gettext dependency to DEPEND. Thanks to Nikoli. Fixes bug #499766.
 
 *skanlite-1.1 (02 Jan 2014)
 

@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.15.ebuild,v 1.1 2012/12/24 03:37:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.17.ebuild,v 1.1 2014/01/30 11:34:39 jer Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils
 
