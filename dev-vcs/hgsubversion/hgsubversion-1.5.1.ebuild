@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/hgsubversion-1.5.ebuild,v 1.1 2013/06/17 10:14:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hgsubversion/hgsubversion-1.5.1.ebuild,v 1.1 2014/01/30 06:34:37 idella4 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -16,23 +16,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos ~x86-solaris"
 IUSE="test"
 
-RDEPEND="
-	>=dev-vcs/mercurial-1.4[${PYTHON_USEDEP}]
+# although any ref absent in the source, tests fail badly with >=mercurial-2.8.1  
+RDEPEND=">=dev-vcs/mercurial-1.4[${PYTHON_USEDEP}]
+	<dev-vcs/mercurial-2.8[${PYTHON_USEDEP}]
 	|| (
-		dev-python/subvertpy[${PYTHON_USEDEP}]
-		>=dev-vcs/subversion-1.5[python]
-	)"
-DEPEND="
-	dev-python/setuptools[${PYTHON_USEDEP}]
+		>=dev-python/subvertpy-0.7.4[${PYTHON_USEDEP}]
+		>=dev-vcs/subversion-1.5[python] )"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 DOCS=( README )
-
-python_prepare_all() {
-	# https://bitbucket.org/durin42/hgsubversion/issue/390/latest-release-missing-invalid_utf8targz
-	# Still no response, faile imported to files to fix tests
-	cp -r "${FILESDIR}"/invalid_utf8.tar.gz tests/fixtures/ || die "deded"
-}
 
 python_test() {
 	"${PYTHON}" tests/run.py || die "Tests failed under ${EPYTHON}"
