@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.8.2.ebuild,v 1.1 2013/12/15 17:19:08 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.8.2.ebuild,v 1.2 2014/01/30 01:24:58 zerochaos Exp $
 
 EAPI="5"
 inherit eutils
@@ -38,7 +38,7 @@ COMMON_DEPEND="dev-db/postgresql-server
 	dev-ruby/nokogiri[ruby_targets_ruby19]
 	dev-ruby/builder:3[ruby_targets_ruby19]
 	>=dev-ruby/pg-0.11[ruby_targets_ruby19]
-	>=dev-ruby/packetfu-1.1.9[ruby_targets_ruby19]
+	=dev-ruby/packetfu-1.1.9[ruby_targets_ruby19]
 	dev-ruby/robots[ruby_targets_ruby19]
 	dev-ruby/kissfft[ruby_targets_ruby19]
 	>=app-crypt/johntheripper-1.7.9-r1[-minimal]
