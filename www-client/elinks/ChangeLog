@@ -1,6 +1,9 @@
 # ChangeLog for www-client/elinks
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.166 2013/09/06 10:24:09 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/ChangeLog,v 1.167 2014/01/30 12:04:21 grobian Exp $
+
+  30 Jan 2014; Fabian Groffen <grobian@gentoo.org> elinks-0.12_pre6.ebuild:
+  Marked ~x64-macos
 
   06 Sep 2013; Agostino Sarubbo <ago@gentoo.org> elinks-0.12_pre6.ebuild:
   Stable for sparc, wrt bug #450534

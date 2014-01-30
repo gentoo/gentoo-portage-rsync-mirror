@@ -11,6 +11,7 @@
 	<flag name='fbdev'>Enable fbdev compositor support</flag>
 	<flag name='gles2'>Use GLESv2 cairo instead of full GL</flag>
 	<flag name='headless'>Headless backend and a noop renderer, mainly for testing purposes</flag>
+	<flag name='launch'>Install weston-launch utility</flag>
 	<flag name='rdp'>Enable Remote Desktop Protocol compositor support</flag>
 	<flag name='resize-optimization'>Increase performance, allocate more RAM. Recommended to disable on Raspberry Pi</flag>
 	<flag name='rpi'>Raspberry Pi GPU support</flag>

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-3.0.6.ebuild,v 1.1 2014/01/14 06:25:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-3.0.6.ebuild,v 1.2 2014/01/30 12:02:59 grobian Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.joedog.org/JoeDog/Siege"
 SRC_URI="http://www.joedog.org/pub/siege/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~x86 ~x64-macos"
 SLOT="0"
 IUSE="ssl"
 
@@ -30,7 +30,7 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	use ssl && myconf="--with-ssl=/usr" || myconf="--without-ssl"
+	use ssl && myconf="--with-ssl=${EPREFIX}/usr" || myconf="--without-ssl"
 	econf ${myconf}
 }
 
@@ -46,5 +46,5 @@ src_install() {
 pkg_postinst() {
 	echo
 	elog "An example ~/.siegerc file has been installed in"
-	elog "/usr/share/doc/${PF}/"
+	elog "${EPREFIX}/usr/share/doc/${PF}/"
 }

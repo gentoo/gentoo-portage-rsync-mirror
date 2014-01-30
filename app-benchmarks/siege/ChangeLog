@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.62 2014/01/14 06:25:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.63 2014/01/30 12:02:59 grobian Exp $
+
+  30 Jan 2014; Fabian Groffen <grobian@gentoo.org> siege-3.0.6.ebuild:
+  Fixed for Prefix, marked ~x64-macos
 
 *siege-3.0.6 (14 Jan 2014)
 
