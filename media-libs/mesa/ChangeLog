@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.535 2014/01/26 20:30:04 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.536 2014/01/30 17:15:56 chithanh Exp $
+
+  30 Jan 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-8.0.4-r1.ebuild:
+  Drop wayland support from old mesa, as it depends on obsolete wayland
+  versions.
 
   26 Jan 2014; Matt Turner <mattst88@gentoo.org>
   files/mesa-10.0.2-update-glxext.h.patch:

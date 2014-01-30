@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.4-r1.ebuild,v 1.16 2014/01/26 20:28:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-8.0.4-r1.ebuild,v 1.17 2014/01/30 17:15:56 chithanh Exp $
 
 EAPI=4
 
@@ -47,7 +47,7 @@ for card in ${VIDEO_CARDS}; do
 done
 
 IUSE="${IUSE_VIDEO_CARDS}
-	bindist +classic debug +egl g3dvl +gallium gbm gles1 gles2 +llvm +nptl openvg osmesa pax_kernel pic selinux shared-dricore +shared-glapi vdpau wayland xa xvmc kernel_FreeBSD"
+	bindist +classic debug +egl g3dvl +gallium gbm gles1 gles2 +llvm +nptl openvg osmesa pax_kernel pic selinux shared-dricore +shared-glapi vdpau xa xvmc kernel_FreeBSD"
 
 REQUIRED_USE="
 	g3dvl?  ( gallium )
@@ -93,7 +93,6 @@ RDEPEND="${EXTERNAL_DEPEND}
 	x11-libs/libXxf86vm
 	>=x11-libs/libxcb-1.8
 	vdpau? ( >=x11-libs/libvdpau-0.4.1 )
-	wayland? ( =dev-libs/wayland-0.95.0 )
 	xvmc? ( >=x11-libs/libXvMC-1.0.6 )
 	${LIBDRM_DEPSTRING}[video_cards_nouveau?,video_cards_vmware?]
 	video_cards_nouveau? ( <x11-libs/libdrm-2.4.34 )
@@ -202,7 +201,7 @@ src_configure() {
 
 	if use egl; then
 		myconf+="
-			--with-egl-platforms=x11$(use wayland && echo ",wayland")$(use gbm && echo ",drm")
+			--with-egl-platforms=x11$(use gbm && echo ",drm")
 			$(use_enable gallium gallium-egl)
 		"
 	fi
