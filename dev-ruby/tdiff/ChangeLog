@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tdiff
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/ChangeLog,v 1.1 2013/11/09 10:23:31 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tdiff/ChangeLog,v 1.2 2014/01/30 23:15:17 maekke Exp $
+
+  30 Jan 2014; Markus Meier <maekke@gentoo.org> tdiff-0.3.3.ebuild:
+  add ~arm, bug #497396
 
 *tdiff-0.3.3 (09 Nov 2013)
 

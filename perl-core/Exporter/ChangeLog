@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Exporter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Exporter/ChangeLog,v 1.1 2013/09/05 05:37:13 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Exporter/ChangeLog,v 1.2 2014/01/30 23:13:43 maekke Exp $
+
+  30 Jan 2014; Markus Meier <maekke@gentoo.org> Exporter-5.680.0.ebuild:
+  add ~arm, bug #497208
 
 *Exporter-5.680.0 (05 Sep 2013)
 

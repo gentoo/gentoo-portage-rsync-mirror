@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.166 2014/01/27 12:48:32 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.167 2014/01/30 23:11:06 maekke Exp $
+
+  30 Jan 2014; Markus Meier <maekke@gentoo.org> glib-perl-1.301.0.ebuild:
+  arm stable, bug #495540
 
   27 Jan 2014; Akinori Hattori <hattya@gentoo.org> glib-perl-1.301.0.ebuild:
   ia64 stable wrt bug #495540

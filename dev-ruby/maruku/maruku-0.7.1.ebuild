@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.7.1.ebuild,v 1.1 2014/01/17 23:00:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/maruku-0.7.1.ebuild,v 1.2 2014/01/30 23:16:04 maekke Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://maruku.rubyforge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~arm"
 IUSE="highlight test"
 
 ruby_add_bdepend "test? ( dev-ruby/nokogiri-diff )"

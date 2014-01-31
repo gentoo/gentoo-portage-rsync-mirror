@@ -1,6 +1,12 @@
 # ChangeLog for virtual/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.21 2014/01/27 14:32:03 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.23 2014/01/30 23:13:04 maekke Exp $
+
+  30 Jan 2014; Markus Meier <maekke@gentoo.org> jpeg-62.ebuild:
+  arm stable, bug #491150
+
+  30 Jan 2014; Markus Meier <maekke@gentoo.org> jpeg-0-r2.ebuild:
+  arm stable, bug #491150
 
   27 Jan 2014; Akinori Hattori <hattya@gentoo.org> jpeg-0-r2.ebuild,
   jpeg-62.ebuild:

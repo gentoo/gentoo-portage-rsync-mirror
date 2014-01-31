@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eix
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.472 2013/12/27 13:54:27 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.473 2014/01/30 23:19:08 axs Exp $
+
+*eix-0.30.1 (30 Jan 2014)
+
+  30 Jan 2014; Ian Stakenvicius <axs@gentoo.org> +eix-0.30.1.ebuild:
+  version bump
 
   27 Dec 2013; Sergey Popov <pinkbyte@gentoo.org> eix-0.25.5.ebuild:
   Drop s390/sh/m68k to unstable
