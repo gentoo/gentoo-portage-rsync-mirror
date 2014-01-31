@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/gigolo
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.15 2012/11/28 12:36:07 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.16 2014/01/31 16:01:39 ssuominen Exp $
+
+*gigolo-0.4.2 (31 Jan 2014)
+
+  31 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> +gigolo-0.4.2.ebuild:
+  Version bump; drop undocumented EAUTORECONF=1 usage because the .ebuild
+  doesn't have any calls to autotools.eclass and ChangeLog is vague too.
 
   28 Nov 2012; Samuli Suominen <ssuominen@gentoo.org> gigolo-0.4.1.ebuild:
   EAPI5
@@ -55,4 +61,3 @@
   +gigolo-0.3.2.ebuild:
   Initial commit of x11-misc/gigolo, based on ebuild written by Michal Kurgan
   (bug 271947) & angelos (xfce overlay)
-
