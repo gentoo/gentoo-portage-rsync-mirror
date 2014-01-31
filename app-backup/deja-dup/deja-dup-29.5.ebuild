@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/deja-dup-29.4.ebuild,v 1.1 2014/01/13 07:13:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/deja-dup-29.5.ebuild,v 1.1 2014/01/31 08:25:49 jlec Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="http://launchpad.net/${PN}/30/${PV}/+download/${P}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nautilus"
+IUSE="nautilus test"
 
 RESTRICT="test"
 
@@ -44,10 +44,12 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	sys-devel/gettext"
 
+PATCHES=( "${FILESDIR}"/${P}-cmake.patch )
+
 src_prepare() {
 	sed \
-	-e '/RPATH/s:PKG_LIBEXECDIR:PKG_LIBDIR:g' \
-	-i CMakeLists.txt || die
+		-e '/RPATH/s:PKG_LIBEXECDIR:PKG_LIBDIR:g' \
+		-i CMakeLists.txt || die
 	vala_src_prepare
 	gnome2_src_prepare
 	cmake-utils_src_prepare
@@ -57,8 +59,10 @@ src_configure() {
 	local mycmakeargs=(
 		-DENABLE_CCPANEL=OFF
 		-DENABLE_UNITY=OFF
-		-DUNITY_CCPANEL=OFF
+		-DENABLE_UNITY_CCPANEL=OFF
+		-DCMAKE_INSTALL_SYSCONFDIR="${EPREFIX}"/etc
 		$(cmake-utils_use_enable nautilus)
+		$(cmake-utils_use_enable test TESTING)
 	)
 	cmake-utils_src_configure
 }

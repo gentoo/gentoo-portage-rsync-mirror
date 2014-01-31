@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.33 2014/01/08 08:38:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.34 2014/01/31 08:29:39 vapier Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -10,7 +10,7 @@
 # This eclass handles apache-2.x ebuild functions such as LoadModule generation
 # and inter-module dependency checking.
 
-inherit autotools eutils flag-o-matic multilib ssl-cert user
+inherit autotools eutils flag-o-matic multilib ssl-cert user toolchain-funcs
 
 # ==============================================================================
 # INTERNAL VARIABLES
@@ -424,6 +424,14 @@ apache-2_src_prepare() {
 	# patched-in MPMs need the build environment rebuilt
 	sed -i -e '/sinclude/d' configure.in
 	AT_M4DIR=build eautoreconf
+
+	# This package really should upgrade to using pcre's .pc file.
+	cat <<-\EOF >"${T}"/pcre-config
+	#!/bin/sh
+	[ "${flag}" = "--version" ] && set -- --modversion
+	exec ${PKG_CONFIG} libpcre "$@"
+	EOF
+	chmod a+x "${T}"/pcre-config
 }
 
 # @FUNCTION: apache-2_src_configure
@@ -431,6 +439,8 @@ apache-2_src_prepare() {
 # This function adds compiler flags and runs econf and emake based on MY_MPM and
 # MY_CONF
 apache-2_src_configure() {
+	tc-export PKG_CONFIG
+
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	# Thanks to Harald van Dijk
 	append-ldflags $(no-as-needed)
@@ -442,6 +452,7 @@ apache-2_src_configure() {
 
 	# econf overwrites the stuff from config.layout, so we have to put them into
 	# our myconf line too
+	ac_cv_path_PKGCONFIG=${PKG_CONFIG} \
 	econf \
 		--includedir=/usr/include/apache2 \
 		--libexecdir=/usr/$(get_libdir)/apache2/modules \
@@ -449,9 +460,9 @@ apache-2_src_configure() {
 		--sysconfdir=/etc/apache2 \
 		--localstatedir=/var \
 		--with-mpm=${MY_MPM} \
-		--with-apr=/usr \
-		--with-apr-util=/usr \
-		--with-pcre=/usr \
+		--with-apr="${SYSROOT}"/usr \
+		--with-apr-util="${SYSROOT}"/usr \
+		--with-pcre="${T}"/pcre-config \
 		--with-z=/usr \
 		--with-port=80 \
 		--with-program-name=apache2 \

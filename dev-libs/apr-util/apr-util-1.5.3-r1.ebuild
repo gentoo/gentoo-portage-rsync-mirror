@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3.ebuild,v 1.6 2014/01/31 08:07:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/apr-util-1.5.3-r1.ebuild,v 1.1 2014/01/31 08:12:03 vapier Exp $
 
 EAPI="4"
 
@@ -39,8 +39,8 @@ DOCS=(CHANGES NOTICE README)
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-berkdb6.patch #476374
+	epatch "${FILESDIR}"/${PN}-1.5.3-sysroot.patch #385775
 	eautoreconf
-
 	elibtoolize
 }
 
@@ -56,7 +56,10 @@ src_configure() {
 		db_version="${db_version/\./}"
 		myconf+=(
 			--with-dbm=db${db_version}
-			--with-berkeley-db="$(db_includedir 2> /dev/null):${EPREFIX}/usr/$(get_libdir)"
+			# We use $T for the libdir because otherwise it'd simply be the normal
+			# system libdir.  That's pointless as the compiler will search it for
+			# us already.  This makes cross-compiling and such easier.
+			--with-berkeley-db="${SYSROOT}$(db_includedir 2>/dev/null):${T}"
 		)
 	else
 		myconf+=( --without-berkeley-db )
@@ -64,7 +67,7 @@ src_configure() {
 
 	econf \
 		--datadir="${EPREFIX}"/usr/share/apr-util-1 \
-		--with-apr="${EPREFIX}"/usr \
+		--with-apr="${SYSROOT}${EPREFIX}"/usr \
 		--with-expat="${EPREFIX}"/usr \
 		--without-sqlite2 \
 		$(use_with freetds) \
@@ -77,10 +80,17 @@ src_configure() {
 		$(use_with postgres pgsql) \
 		$(use_with sqlite sqlite3) \
 		"${myconf[@]}"
+	# Use the current env build settings rather than whatever apr was built with.
+	sed -i -r \
+		-e "/^(apr_builddir|apr_builders|top_builddir)=/s:=:=${SYSROOT}:" \
+		-e "/^CC=/s:=.*:=$(tc-getCC):" \
+		-e '/^(C|CPP|CXX|LD)FLAGS=/d' \
+		-e '/^LTFLAGS/s:--silent::' \
+		build/rules.mk || die
 }
 
 src_compile() {
-	emake CPPFLAGS="${CPPFLAGS}" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
+	emake
 	use doc && emake dox
 }
 

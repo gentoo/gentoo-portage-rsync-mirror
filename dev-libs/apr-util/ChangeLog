@@ -1,6 +1,21 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.194 2014/01/30 01:03:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.197 2014/01/31 08:12:03 vapier Exp $
+
+*apr-util-1.5.3-r1 (31 Jan 2014)
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> +apr-util-1.5.3-r1.ebuild,
+  +files/apr-util-1.5.3-sysroot.patch:
+  Utilize SYSROOT to locate build-time paths when cross-compiling, and drop
+  redundent -L/-R libdir flags to simplify linking.  Rewrite build/rules.mk to
+  pick up current env settings rather than clobbering at make time. #385775 by
+  Bertrand Jacquin.
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apr-util-1.5.3.ebuild:
+  Simplify src_compile/src_install a bit -- no functional changes.
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apr-util-1.5.3.ebuild:
+  Convert myconf to an array to make it easier to maintain.
 
   30 Jan 2014; Mike Frysinger <vapier@gentoo.org> apr-util-1.5.2.ebuild,
   apr-util-1.5.3.ebuild:

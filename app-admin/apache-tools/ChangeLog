@@ -1,6 +1,28 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.172 2014/01/23 05:08:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.177 2014/01/31 08:24:41 vapier Exp $
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apache-tools-2.2.24.ebuild,
+  apache-tools-2.2.25.ebuild, apache-tools-2.2.26.ebuild,
+  apache-tools-2.4.4-r1.ebuild, apache-tools-2.4.6.ebuild,
+  apache-tools-2.4.7-r1.ebuild, apache-tools-2.4.7.ebuild:
+  Add arm64 love.
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apache-tools-2.4.7-r1.ebuild:
+  Fix cross-compiling handling of pkg-config/pcre-config/apr/apr-util #385779 by
+  Bertrand Jacquin.
+
+*apache-tools-2.4.7-r1 (31 Jan 2014)
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> +apache-tools-2.4.7-r1.ebuild,
+  +files/apache-tools-2.4.7-Makefile.patch:
+  Fix src_install errors and install of dbmanage helper #459446 by Thomas Stein.
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apache-tools-2.4.7.ebuild:
+  Simplify src_compile/src_install a bit -- no real functional changes.
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apache-tools-2.4.7.ebuild:
+  Convert myconf to an array to make it easier to maintain.
 
   23 Jan 2014; Mike Frysinger <vapier@gentoo.org> apache-tools-2.2.24.ebuild,
   apache-tools-2.2.25.ebuild, apache-tools-2.2.26.ebuild,
