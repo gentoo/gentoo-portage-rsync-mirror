@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.254 2014/01/31 18:57:24 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.255 2014/01/31 21:37:53 idl0r Exp $
+
+  31 Jan 2014; Christian Ruppert <idl0r@gentoo.org> bind-tools-9.9.5.ebuild,
+  metadata.xml:
+  Fix libgost, bug 456136
 
 *bind-tools-9.9.5 (31 Jan 2014)
 
