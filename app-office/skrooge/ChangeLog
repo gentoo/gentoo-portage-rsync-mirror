@@ -1,6 +1,9 @@
 # ChangeLog for app-office/skrooge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.52 2014/01/19 11:09:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.53 2014/01/31 15:53:05 johu Exp $
+
+  31 Jan 2014; Johannes Huber <johu@gentoo.org> -skrooge-1.7.1.ebuild:
+  Remove old.
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> skrooge-1.8.0.ebuild:
   amd64 stable, bug #492674

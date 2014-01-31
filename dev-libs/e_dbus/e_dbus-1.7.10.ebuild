@@ -1,20 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.7.10_pre1.ebuild,v 1.1 2014/01/25 16:22:40 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/e_dbus/e_dbus-1.7.10.ebuild,v 1.1 2014/01/31 15:35:11 tommy Exp $
 
 EAPI="4"
 
 inherit enlightenment
 
 DESCRIPTION="Enlightenment's (Ecore) integration to DBus"
-#SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
-SRC_URI="http://download.enlightenment.org/pre-releases/efl-${PV%%_*}/${PN}-${PV%%_*}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="bluetooth +connman +libnotify ofono static-libs test-binaries +udev"
 
-RDEPEND=">=dev-libs/efl-1.8.3
+RDEPEND=">=dev-libs/efl-1.8.4
 	sys-apps/dbus
 	connman? ( >=net-misc/connman-0.75 )
 	udev? ( sys-power/upower sys-fs/udisks:0 )
