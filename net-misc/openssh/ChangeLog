@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.497 2014/01/26 12:07:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.498 2014/01/31 12:11:25 armin76 Exp $
+
+  31 Jan 2014; Raúl Porcel <armin76@gentoo.org> openssh-6.4_p1-r1.ebuild:
+  Move to -sparc, bug #499552
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> openssh-6.4_p1-r1.ebuild:
   Stable for sparc, wrt bug #477894
