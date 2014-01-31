@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.8-r1.ebuild,v 1.4 2014/01/29 11:00:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.8-r1.ebuild,v 1.5 2014/01/31 16:59:04 polynomial-c Exp $
 
 EAPI=5
 
@@ -53,7 +53,7 @@ RDEPEND="
 	gadu? ( || ( >=net-libs/libgadu-1.11.0[ssl,gnutls]
 		>=net-libs/libgadu-1.11.0[-ssl] ) )
 	gnutls? ( net-libs/gnutls )
-	!gnutls? ( >=dev-libs/nss-3.11 )
+	!gnutls? ( >=dev-libs/nss-3.15.4 )
 	meanwhile? ( net-libs/meanwhile )
 	silc? ( >=net-im/silc-toolkit-1.0.1 )
 	tcl? ( dev-lang/tcl )
