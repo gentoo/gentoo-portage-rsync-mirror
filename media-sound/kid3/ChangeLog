@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kid3
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.81 2014/01/26 10:53:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.82 2014/01/31 15:20:33 johu Exp $
+
+  31 Jan 2014; Johannes Huber <johu@gentoo.org> -kid3-2.2.1.ebuild:
+  Remove old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kid3-3.0.2.ebuild:
   Stable for x86, wrt bug #497682
