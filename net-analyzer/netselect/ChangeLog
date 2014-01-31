@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netselect
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.54 2013/07/02 07:42:24 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.55 2014/01/31 19:22:19 jer Exp $
+
+  31 Jan 2014; Jeroen Roovers <jer@gentoo.org> -netselect-0.3-r2.ebuild:
+  Old.
 
   02 Jul 2013; Agostino Sarubbo <ago@gentoo.org> netselect-0.3-r3.ebuild:
   Stable for sh, wrt bug #470534
