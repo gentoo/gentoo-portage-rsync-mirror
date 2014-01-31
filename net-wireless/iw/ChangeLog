@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.71 2014/01/01 23:16:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.72 2014/01/31 00:46:45 vapier Exp $
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> iw-3.13.ebuild:
+  Respect CPPFLAGS.
 
 *iw-3.13 (01 Jan 2014)
 
