@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/httpie
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/ChangeLog,v 1.12 2013/11/24 09:02:21 vikraman Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/httpie/ChangeLog,v 1.13 2014/01/31 19:43:33 vikraman Exp $
+
+*httpie-0.8.0 (31 Jan 2014)
+
+  31 Jan 2014; Vikraman Choudhury <vikraman@gentoo.org> +httpie-0.8.0.ebuild,
+  metadata.xml:
+  Bump to version 0.8.0. Bug 499868.
 
   24 Nov 2013; Vikraman <vikraman@gentoo.org> httpie-0.6.0.ebuild,
   httpie-0.7.2.ebuild:
