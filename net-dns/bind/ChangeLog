@@ -1,6 +1,20 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.485 2014/01/26 11:59:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.488 2014/01/31 21:24:49 idl0r Exp $
+
+*bind-9.9.5-r1 (31 Jan 2014)
+
+  31 Jan 2014; Christian Ruppert <idl0r@gentoo.org> -bind-9.9.5.ebuild,
+  +bind-9.9.5-r1.ebuild, +files/named.conf-r7, +files/named.init-r13:
+  Fix bug 482590
+
+  31 Jan 2014; Christian Ruppert <idl0r@gentoo.org> bind-9.9.5.ebuild:
+  Fix static-libs
+
+*bind-9.9.5 (31 Jan 2014)
+
+  31 Jan 2014; Christian Ruppert <idl0r@gentoo.org> +bind-9.9.5.ebuild:
+  Version bump. Also disable tests for now, bug 479092
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> bind-9.9.4_p2.ebuild:
   Stable for sparc, wrt bug #498016
