@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r1.ebuild,v 1.4 2014/01/22 22:37:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r1.ebuild,v 1.6 2014/01/31 07:59:32 vapier Exp $
 
 EAPI="4"
 
@@ -37,7 +37,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
+	local myconf=()
 
 	[[ ${CHOST} == *-mint* ]] && export ac_cv_func_poll=no
 
@@ -53,19 +53,17 @@ src_configure() {
 	fi
 
 	if use urandom; then
-		myconf+=" --with-devrandom=/dev/urandom"
+		myconf+=( --with-devrandom=/dev/urandom )
 	elif (( ${CHOST#*-hpux11.} <= 11 )); then
 		: # no /dev/*random on hpux11.11 and before, $PN detects this.
 	else
-		myconf+=" --with-devrandom=/dev/random"
+		myconf+=( --with-devrandom=/dev/random )
 	fi
 
-	if [[ ${CHOST} == *-mint* ]] ; then
-		myconf+=" --disable-dso"
-	fi
+	tc-is-static-only && myconf+=( --disable-dso )
 
 	# shl_load does not search runpath, but hpux11 supports dlopen
-	[[ ${CHOST} == *-hpux11* ]] && myconf="${myconf} --enable-dso=dlfcn"
+	[[ ${CHOST} == *-hpux11* ]] && myconf+=( --enable-dso=dlfcn )
 
 	if [[ ${CHOST} == *-solaris2.10 ]]; then
 		case $(<$([[ ${CHOST} != ${CBUILD} ]] && echo "${EPREFIX}/usr/${CHOST}")/usr/include/atomic.h) in
@@ -75,7 +73,7 @@ src_configure() {
 				[[ ${CHOST} == sparc* ]] && echo 118884 || echo 118885
 			)" (Problem 4954703) installed on your host ($(hostname)),"
 			elog "using generic atomic operations instead."
-			myconf="${myconf} --disable-nonportable-atomics"
+			myconf+=( --disable-nonportable-atomics )
 			;;
 		esac
 	fi
@@ -85,7 +83,7 @@ src_configure() {
 		--enable-nonportable-atomics \
 		--enable-threads \
 		$(use_enable static-libs static) \
-		${myconf}
+		"${myconf[@]}"
 }
 
 src_compile() {

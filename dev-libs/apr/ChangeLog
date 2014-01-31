@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.207 2014/01/22 22:37:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.209 2014/01/31 07:59:32 vapier Exp $
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apr-1.5.0-r1.ebuild:
+  Convert myconf to an array to make it easier to maintain.
+
+  31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apr-1.4.8-r1.ebuild,
+  apr-1.5.0-r1.ebuild, apr-1.5.0.ebuild:
+  Use tc-is-static-only rather than open coding the mint target.
 
   22 Jan 2014; Mike Frysinger <vapier@gentoo.org> apr-1.5.0-r1.ebuild:
   Drop old static-libs hacks now that we use local libtool #374355#16 by Rafał

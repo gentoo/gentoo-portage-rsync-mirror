@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.8-r1.ebuild,v 1.12 2014/01/21 00:12:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.4.8-r1.ebuild,v 1.13 2014/01/31 07:56:48 vapier Exp $
 
 EAPI="4"
 
@@ -64,9 +64,7 @@ src_configure() {
 		myconf+=" --with-devrandom=/dev/random"
 	fi
 
-	if [[ ${CHOST} == *-mint* ]] ; then
-		myconf+=" --disable-dso"
-	fi
+	tc-is-static-only && myconf+=" --disable-dso"
 
 	# shl_load does not search runpath, but hpux11 supports dlopen
 	[[ ${CHOST} == *-hpux11* ]] && myconf="${myconf} --enable-dso=dlfcn"

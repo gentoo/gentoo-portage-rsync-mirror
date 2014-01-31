@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.106 2014/01/23 08:03:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.107 2014/01/31 07:42:01 jlec Exp $
+
+  31 Jan 2014; Justin Lecher <jlec@gentoo.org> cython-0.20.ebuild:
+  Add workaround for XDG_CONFIG_HOME being present in env, #499068
 
 *cython-0.20 (23 Jan 2014)
 
