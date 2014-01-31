@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r1.ebuild,v 1.7 2014/01/31 14:56:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-1.15.1-r2.ebuild,v 1.1 2014/01/31 14:56:26 ssuominen Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -14,10 +14,9 @@ SRC_URI="http://kcat.strangesoft.net/openal-releases/${MY_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
-IUSE="alsa alstream coreaudio debug neon oss portaudio pulseaudio sse"
+IUSE="alsa coreaudio debug neon oss portaudio pulseaudio sse"
 
 RDEPEND="alsa? ( media-libs/alsa-lib[${MULTILIB_USEDEP}] )
-	alstream? ( virtual/ffmpeg )
 	portaudio? ( >=media-libs/portaudio-19_pre[${MULTILIB_USEDEP}] )
 	pulseaudio? ( media-sound/pulseaudio[${MULTILIB_USEDEP}] )
 	abi_x86_32? (
@@ -32,6 +31,7 @@ S=${WORKDIR}/${MY_P}
 DOCS="alsoftrc.sample env-vars.txt hrtf.txt README"
 
 src_configure() {
+	# -DEXAMPLES=OFF to avoid FFmpeg dependency wrt #481670
 	my_configure() {
 		local mycmakeargs=(
 			$(cmake-utils_use alsa)
@@ -41,13 +41,8 @@ src_configure() {
 			$(cmake-utils_use portaudio)
 			$(cmake-utils_use pulseaudio)
 			$(cmake-utils_use sse)
+			-DEXAMPLES=OFF
 		)
-
-		if multilib_build_binaries; then
-			mycmakeargs+=( $(cmake-utils_use alstream EXAMPLES) )
-		else
-			mycmakeargs+=( "-DEXAMPLES=OFF" )
-		fi
 
 		cmake-utils_src_configure
 	}

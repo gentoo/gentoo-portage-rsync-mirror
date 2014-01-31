@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/openal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.171 2013/12/31 12:05:37 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.173 2014/01/31 14:56:26 ssuominen Exp $
+
+*openal-1.15.1-r2 (31 Jan 2014)
+
+  31 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> +openal-1.15.1-r2.ebuild:
+  Remove USE="alstream" (example application build w/ -DEXAMPLES=ON) to drop
+  FFMpeg dependency wrt #481670 because upstream moved all examples to SDL in
+  git and because it fails to compile with certain versions of libav.
+
+  31 Jan 2014; Samuli Suominen <ssuominen@gentoo.org> openal-1.15.1-r1.ebuild:
+  Build alstream (example application) only for native ABI to avoid dependency
+  on FFmpeg wrt #497768 by Andy Kittner and Chris Slycord
 
   31 Dec 2013; Alexis Ballier <aballier@gentoo.org> openal-1.15.1-r1.ebuild:
   properly disable alstream if non native abi; reported by Michael
