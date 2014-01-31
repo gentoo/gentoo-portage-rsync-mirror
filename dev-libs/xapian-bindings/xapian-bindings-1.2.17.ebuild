@@ -1,13 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.3.1.ebuild,v 1.3 2014/01/31 13:15:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.17.ebuild,v 1.1 2014/01/31 13:15:44 blueness Exp $
 
 EAPI="5"
 
-PYTHON_DEPEND="python? 2"
-PYTHON_USE_WITH="threads"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.* *-jython 2.7-pypy-*"
+PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_REQ_USE="threads"
+USE_PYTHON='2.6 2.7'
 
 USE_PHP="php5-3 php5-4"
 
@@ -15,45 +14,49 @@ PHP_EXT_NAME="xapian"
 PHP_EXT_INI="yes"
 PHP_EXT_OPTIONAL_USE="php"
 
-inherit java-pkg-opt-2 mono-env php-ext-source-r2 python
+#mono violates sandbox, we disable it until we figure this out
+#inherit java-pkg-opt-2 mono-env php-ext-source-r2 python
+inherit java-pkg-opt-2 php-ext-source-r2 python-r1
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="http://www.xapian.org/"
-SRC_URI="http://oligarchy.co.uk/xapian/${PV}/${P}.tar.gz"
+SRC_URI="http://oligarchy.co.uk/xapian/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="java lua mono perl php python ruby tcl"
-REQUIRED_USE="|| ( java lua mono perl php python ruby tcl )"
+#IUSE="java lua mono perl php python ruby tcl"
+#REQUIRED_USE="|| ( java lua mono perl php python ruby tcl )"
+IUSE="java lua perl php python ruby tcl"
+REQUIRED_USE="|| ( java lua perl php python ruby tcl )"
 
 COMMONDEPEND="=dev-libs/xapian-${PV}*
 	lua? ( >=dev-lang/lua-5.1 )
-	mono? ( >=dev-lang/mono-1.0.8 )
 	perl? ( dev-lang/perl )
 	ruby? ( dev-lang/ruby )
 	tcl? ( >=dev-lang/tcl-8.1 )"
+#	mono? ( >=dev-lang/mono-1.0.8 )
 DEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jdk-1.3 )"
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.3 )"
 
 pkg_setup() {
-	mono-env_pkg_setup
 	java-pkg-opt-2_pkg_setup
-
-	if use python; then
-		python_pkg_setup
-	fi
 }
 
 src_prepare() {
 	java-pkg-opt-2_src_prepare
+	if use java; then
+		sed \
+			-e 's/$(JAVAC)/$(JAVAC) $(JAVACFLAGS)/' \
+			-i java{/,/org/xapian/errors/,/org/xapian/}Makefile.in || die "sed failed"
+	fi
 
 	if use python; then
 		sed \
 			-e 's:\(^pkgpylib_DATA = xapian/__init__.py\).*:\1:' \
-			-e 's|\(^xapian/__init__.py: modern/xapian.py\)|\1 xapian/_xapian$(PYTHON_SO)|' \
+			-e 's|\(^xapian/__init__.py: modern/xapian.py\)|\1 xapian/_xapian.so|' \
 			-i python/Makefile.in || die "sed failed"
 	fi
 }
@@ -75,12 +78,12 @@ src_configure() {
 	econf \
 		$(use_with java) \
 		$(use_with lua) \
-		$(use_with mono csharp) \
 		$(use_with perl) \
 		$(use_with php) \
 		$(use_with python) \
 		$(use_with ruby) \
 		$(use_with tcl)
+#		$(use_with mono csharp) \
 
 	# Python bindings are built/tested/installed manually.
 	sed -e "/SUBDIRS =/s/ python//" -i Makefile || die "sed Makefile"
@@ -90,16 +93,22 @@ src_compile() {
 	default
 
 	if use python; then
-		python_copy_sources python
+		python_copy_sources
+#		building() {
+#			emake -C python \
+#				PYTHON="$(PYTHON)" \
+#				PYTHON_INC="$(python_get_includedir)" \
+#				PYTHON_LIB="$(python_get_libdir)" \
+#				PYTHON_SO="$("$(PYTHON)" -c 'import distutils.sysconfig; print(distutils.sysconfig.get_config_vars("SO")[0])')" \
+#				pkgpylibdir="$(python_get_sitedir)/xapian"
+#		}
 		building() {
-			emake \
-				PYTHON="$(PYTHON)" \
+			emake -C python \
 				PYTHON_INC="$(python_get_includedir)" \
-				PYTHON_LIB="$(python_get_libdir)" \
-				PYTHON_SO="$("$(PYTHON)" -c 'import distutils.sysconfig; print(distutils.sysconfig.get_config_vars("SO")[0])')" \
 				pkgpylibdir="$(python_get_sitedir)/xapian"
+				VERBOSE="1"
 		}
-		python_execute_function -s --source-dir python building
+		python_foreach_impl building
 	fi
 }
 
@@ -108,16 +117,13 @@ src_test() {
 
 	if use python; then
 		testing() {
-			emake \
-				PYTHON="$(PYTHON)" \
+			emake -C python \
 				PYTHON_INC="$(python_get_includedir)" \
-				PYTHON_LIB="$(python_get_libdir)" \
-				PYTHON_SO="$("$(PYTHON)" -c 'import distutils.sysconfig; print(distutils.sysconfig.get_config_vars("SO")[0])')" \
 				pkgpylibdir="$(python_get_sitedir)/xapian" \
 				VERBOSE="1" \
 				check
 		}
-		python_execute_function -s --source-dir python testing
+		python_foreach_impl testing
 	fi
 }
 
@@ -135,16 +141,14 @@ src_install () {
 
 	if use python; then
 		installation() {
-			emake \
+			emake -C python \
 				DESTDIR="${D}" \
-				PYTHON="$(PYTHON)" \
 				PYTHON_INC="$(python_get_includedir)" \
-				PYTHON_LIB="$(python_get_libdir)" \
-				PYTHON_SO="$("$(PYTHON)" -c 'import distutils.sysconfig; print(distutils.sysconfig.get_config_vars("SO")[0])')" \
 				pkgpylibdir="$(python_get_sitedir)/xapian" \
+				VERBOSE="1" \
 				install
 		}
-		python_execute_function -s --source-dir python installation
+		python_foreach_impl installation
 	fi
 
 	if use php; then
@@ -160,17 +164,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	if use python; then
-		python_mod_optimize xapian
-	fi
-
 	if use php_targets_php5-4; then
 		ewarn "Note: subclassing Xapian classes in PHP currently doesn't work with PHP 5.4"
-	fi
-}
-
-pkg_postrm() {
-	if use python; then
-		python_mod_cleanup xapian
 	fi
 }

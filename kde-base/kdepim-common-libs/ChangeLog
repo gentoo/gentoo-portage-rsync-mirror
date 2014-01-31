@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdepim-common-libs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.128 2014/01/27 23:24:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-common-libs/ChangeLog,v 1.129 2014/01/31 13:16:01 dilfridge Exp $
+
+*kdepim-common-libs-4.12.1-r2 (31 Jan 2014)
+
+  31 Jan 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-common-libs-4.12.1-r2.ebuild:
+  Only build followupreminderagent and sendlateragent here, rest must go into
+  kmail; bug 499538
 
 *kdepim-common-libs-4.12.1-r1 (27 Jan 2014)
 

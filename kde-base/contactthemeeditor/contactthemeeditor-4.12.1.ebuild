@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/contactthemeeditor/contactthemeeditor-4.12.1.ebuild,v 1.3 2014/01/19 11:02:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/contactthemeeditor/contactthemeeditor-4.12.1.ebuild,v 1.4 2014/01/31 13:08:19 dilfridge Exp $
 
 EAPI=5
 
@@ -15,6 +15,7 @@ IUSE="debug"
 
 DEPEND="
 	$(add_kdebase_dep kaddressbook)
+	$(add_kdebase_dep kmail)
 "
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.4-r1.ebuild,v 1.5 2012/04/12 04:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.4-r1.ebuild,v 1.6 2014/01/31 13:25:49 jer Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~sparc x86"
 IUSE="debug pcapnav +tcpdump"
 
 DEPEND="
-	>=sys-devel/autogen-5.9.8
+	<sys-devel/autogen-5.16
 	dev-libs/libdnet
 	>=net-libs/libpcap-0.9
 	tcpdump? ( net-analyzer/tcpdump )

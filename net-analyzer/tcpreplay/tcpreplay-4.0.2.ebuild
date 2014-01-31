@@ -1,13 +1,13 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.4-r2.ebuild,v 1.1 2012/04/12 04:04:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-4.0.2.ebuild,v 1.1 2014/01/31 13:09:08 jer Exp $
 
-EAPI=4
-inherit autotools eutils
+EAPI=5
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
 HOMEPAGE="http://tcpreplay.synfin.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/project/${PN}/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -15,32 +15,45 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="debug pcapnav +tcpdump"
 
 DEPEND="
-	>=sys-devel/autogen-5.9.8
+	>=sys-devel/autogen-5.16.2[libopts]
 	dev-libs/libdnet
 	>=net-libs/libpcap-0.9
 	tcpdump? ( net-analyzer/tcpdump )
 	pcapnav? ( net-libs/libpcapnav )
 "
+
 RDEPEND="${DEPEND}"
+
 DOCS=( README docs/{CHANGELOG,CREDIT,HACKING,TODO} )
 
 src_prepare() {
-	echo "We don't use bundled libopts" > libopts/options.h
-	epatch \
-		"${FILESDIR}"/${P}-crash.patch \
-		"${FILESDIR}"/${P}-cross-compile.patch
+	sed -i \
+		-e '/CFLAGS=/s|-ggdb -std=gnu99|-std=gnu99|g' \
+		-e 's|-O3||g' \
+		-e 's|AM_CONFIG_HEADER|AC_CONFIG_HEADERS|g' \
+		configure.ac || die
+	sed -i \
+		-e 's|#include <dnet.h>|#include <dnet/eth.h>|g' \
+		src/common/sendpacket.c || die
+	sed -i \
+		-e 's|@\([A-Z_]*\)@|$(\1)|g' \
+		-e '/tcpliveplay_CFLAGS/s|$| $(LDNETINC)|g' \
+		-e '/tcpliveplay_LDADD/s|$| $(LDNETLIB)|g' \
+		src/Makefile.am || die
+
 	eautoreconf
 }
 
 src_configure() {
 	# By default it uses static linking. Avoid that, bug 252940
 	econf \
-		--enable-shared \
-		--enable-dynamic-link \
-		--disable-local-libopts \
-		$(use_with tcpdump tcpdump /usr/sbin/tcpdump) \
+		$(use_enable debug) \
 		$(use_with pcapnav pcapnav-config /usr/bin/pcapnav-config) \
-		$(use_enable debug)
+		$(use_with tcpdump tcpdump /usr/sbin/tcpdump) \
+		--disable-local-libopts \
+		--enable-dynamic-link \
+		--enable-shared \
+		--with-libdnet
 }
 
 src_test() {
@@ -48,9 +61,9 @@ src_test() {
 		ewarn "Some tests were disabled due to FEATURES=userpriv"
 		ewarn "To run all tests issue the following command as root:"
 		ewarn " # make -C ${S}/test"
-		emake -j1 -C test tcpprep || die "self test failed - see ${S}/test/test.log"
+		make -C test tcpprep || die "self test failed - see ${S}/test/test.log"
 	else
-		emake -j1 test || {
+		make test || {
 			ewarn "Note, that some tests require eth0 iface to be UP." ;
 			die "self test failed - see ${S}/test/test.log" ; }
 	fi

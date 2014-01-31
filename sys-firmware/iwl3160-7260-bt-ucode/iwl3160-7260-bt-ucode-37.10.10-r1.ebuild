@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3160-7260-bt-ucode/iwl3160-7260-bt-ucode-37.10.10.ebuild,v 1.2 2014/01/25 06:02:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3160-7260-bt-ucode/iwl3160-7260-bt-ucode-37.10.10-r1.ebuild,v 1.1 2014/01/31 13:05:34 gienah Exp $
 
 EAPI=5
 inherit linux-info
@@ -32,7 +32,7 @@ pkg_pretend() {
 }
 
 src_install() {
-	insinto /lib/firmware
+	insinto /lib/firmware/intel
 	doins "${S}/ibt-hw-37.7.10-fw-1.0.2.3.d.bseq"
 	doins "${S}/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq"
 	doins "${S}/ibt-hw-37.7.bseq"

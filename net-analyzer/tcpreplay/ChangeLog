@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/tcpreplay
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.47 2013/05/29 18:37:10 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.49 2014/01/31 13:25:49 jer Exp $
+
+  31 Jan 2014; Jeroen Roovers <jer@gentoo.org> tcpreplay-3.4.4-r1.ebuild:
+  Revisit sys-devel/autogen dependency.
+
+*tcpreplay-4.0.2 (31 Jan 2014)
+
+  31 Jan 2014; Jeroen Roovers <jer@gentoo.org> -tcpreplay-3.4.4-r2.ebuild,
+  -tcpreplay-3.5.0_beta1.ebuild, +tcpreplay-4.0.2.ebuild,
+  -files/tcpreplay-3.4.4-cross-compile.patch:
+  Version bump (bug #499824).
 
   29 May 2013; Jeroen Roovers <jer@gentoo.org> tcpreplay-3.5.0_beta1.ebuild:
   Fix comment. Remove extraneous whitespace.

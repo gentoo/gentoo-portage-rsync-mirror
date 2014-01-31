@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/glusterfs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.51 2013/12/31 09:04:47 ultrabug Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/ChangeLog,v 1.52 2014/01/31 13:23:02 ultrabug Exp $
+
+*glusterfs-3.4.2 (31 Jan 2014)
+
+  31 Jan 2014; Ultrabug <ultrabug@gentoo.org> +glusterfs-3.4.2.ebuild:
+  version bump fix #499704 thx to Rodrigo Severo and László Szalma
 
 *glusterfs-3.4.1 (31 Dec 2013)
 

@@ -1,6 +1,14 @@
 # ChangeLog for sys-firmware/iwl3160-7260-bt-ucode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3160-7260-bt-ucode/ChangeLog,v 1.2 2014/01/25 06:02:11 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-firmware/iwl3160-7260-bt-ucode/ChangeLog,v 1.3 2014/01/31 13:05:34 gienah Exp $
+
+*iwl3160-7260-bt-ucode-37.10.10-r1 (31 Jan 2014)
+
+  31 Jan 2014; Mark Wright <gienah@gentoo.org>
+  +iwl3160-7260-bt-ucode-37.10.10-r1.ebuild,
+  -iwl3160-7260-bt-ucode-37.10.10.ebuild:
+  Correct the Intel wireless bluetooth 3160 and 7260 firmware install directory
+  to /lib/firmware/intel
 
   25 Jan 2014; Mark Wright <gienah@gentoo.org>
   iwl3160-7260-bt-ucode-37.10.10.ebuild:
