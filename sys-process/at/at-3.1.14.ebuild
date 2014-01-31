@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13-r1.ebuild,v 1.13 2013/02/27 13:06:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.14.ebuild,v 1.1 2014/01/31 12:00:41 polynomial-c Exp $
 
-EAPI=4
+EAPI=5
 
-inherit autotools eutils flag-o-matic pam user
+inherit autotools eutils flag-o-matic pam user systemd
 
 DESCRIPTION="Queues jobs for later execution"
 HOMEPAGE="http://packages.qa.debian.org/a/at.html"
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/a/at/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="pam selinux"
 
 DEPEND="virtual/mta
@@ -32,12 +32,13 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.8-more-deny.patch
-	epatch "${FILESDIR}"/${PN}-3.1.13-Makefile.patch
+	epatch "${FILESDIR}"/${PN}-3.1.14-Makefile.patch
 	# fix parallel make issues, bug #244884
 	epatch "${FILESDIR}"/${PN}-3.1.10.2-Makefile.in-parallel-make-fix.patch
-	epatch "${FILESDIR}"/${P}-configure.in-fix-PAM-automagick-dep.patch
+	epatch "${FILESDIR}"/${PN}-3.1.13-configure.in-fix-PAM-automagick-dep.patch
 	# Fix parallel make issue (bug #408375)
 	epatch "${FILESDIR}"/${PN}-3.1.13-parallel-make-fix.patch
+	epatch "${FILESDIR}"/${PN}-3.1.13-getloadavg.patch
 
 	eautoconf
 }
@@ -55,9 +56,9 @@ src_configure() {
 }
 
 src_install() {
-	emake install IROOT="${D}" || die
+	emake install IROOT="${D}"
 
-	newinitd "${FILESDIR}"/atd.rc6 atd
+	newinitd "${FILESDIR}"/atd.rc7 atd
 	newconfd "${FILESDIR}"/atd.confd atd
 	newpamd "${FILESDIR}"/at.pamd-3.1.13-r1 atd
 
@@ -67,6 +68,8 @@ src_install() {
 		einfo "Preserving existing .SEQ file (bug #386625)."
 		cp -p "${seq_file}" "${D}"/var/spool/at/atjobs/ || die
 	fi
+
+	systemd_dounit "${FILESDIR}/atd.service"
 }
 
 pkg_postinst() {

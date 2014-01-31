@@ -5,7 +5,7 @@ After=networking.target
 [Service]
 Type=forking
 ExecStart=/usr/sbin/atd
-PIDFile=/var/run/atd.pid
+PIDFile=/run/atd.pid
 StandardOutput=syslog
 StandardError=syslog
 

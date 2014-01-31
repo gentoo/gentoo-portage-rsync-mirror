@@ -1,6 +1,5 @@
 # - install into Gentoo/FHS doc dir
 # - respect Gentoo LDFLAGS
-# - dont allow install to strip binaries
 
 --- at-3.1.13/Makefile.in
 +++ at-3.1.13/Makefile.in
