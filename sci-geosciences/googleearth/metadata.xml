@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>mschiff@gentoo.org</email>
 	</maintainer>
 	<use>
 		<flag name='bundled-libs'>Use bundled libraries.</flag>
