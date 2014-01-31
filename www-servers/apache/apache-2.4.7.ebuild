@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.5 2014/01/31 08:30:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.7 2014/01/31 08:48:40 vapier Exp $
 
 EAPI=5
 
@@ -66,6 +66,7 @@ MODULE_DEPENDS="
 	mime_magic:mime
 	proxy_ajp:proxy
 	proxy_balancer:proxy
+	proxy_balancer:slotmem_shm
 	proxy_connect:proxy
 	proxy_ftp:proxy
 	proxy_http:proxy
@@ -122,7 +123,7 @@ HOMEPAGE="http://httpd.apache.org/"
 # some helper scripts are Apache-1.1, thus both are here
 LICENSE="Apache-2.0 Apache-1.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 DEPEND="${DEPEND}
