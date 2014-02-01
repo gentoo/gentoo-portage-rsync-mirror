@@ -9,5 +9,5 @@ LICENSE=povlegal-3.6
 RDEPEND=>=dev-libs/boost-1.50.0:=[threads(+)] media-libs/libpng:0 sys-libs/zlib virtual/jpeg mkl? ( sci-libs/mkl ) openexr? ( media-libs/ilmbase media-libs/openexr ) tiff? ( media-libs/tiff:0 ) X? ( media-libs/libsdl )
 SLOT=0
 SRC_URI=http://www.povray.org/redirect/www.povray.org/beta/source/povray-3.7.0.RC7.tar.bz2
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=1e52a2cc83d8e9f75f63eaa6c65f5af6

@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=audio? ( >=media-libs/audiofile-0.1.9 ) alsa? ( media-libs/alsa-lib ) nas? ( media-libs/nas x11-libs/libXt x11-libs/libXext x11-libs/libX11 ) X? ( x11-libs/libXt x11-libs/libXext x11-libs/libX11 x11-libs/libXrandr ) directfb? ( >=dev-libs/DirectFB-0.9.19 ) ggi? ( >=media-libs/libggi-2.0_beta3 ) svga? ( >=media-libs/svgalib-1.4.2 ) aalib? ( media-libs/aalib ) libcaca? ( >=media-libs/libcaca-0.9-r1 ) opengl? ( virtual/opengl virtual/glu ) ppc64? ( ps3? ( sys-libs/libspe2 ) ) tslib? ( x11-libs/tslib ) pulseaudio? ( media-sound/pulseaudio )
 SLOT=0
 SRC_URI=http://www.libsdl.org/release/SDL-1.2.15.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=fe5a1656fe5a13c34a2e608328dc3ef1

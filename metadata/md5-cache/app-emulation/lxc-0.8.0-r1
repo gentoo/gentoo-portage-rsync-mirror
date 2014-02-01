@@ -9,5 +9,5 @@ LICENSE=LGPL-3
 RDEPEND=sys-libs/libcap sys-apps/util-linux app-misc/pax-utils >=sys-apps/openrc-0.9.9.1 virtual/awk
 SLOT=0
 SRC_URI=http://lxc.sourceforge.net/download/lxc/lxc-0.8.0.tar.gz http://dev.gentoo.org/~flameeyes/lxc/lxc-0.8.0-backports-1.tar.xz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=c08030fbf85bae93f236343e4a3fcecb

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/dbus-glib app-text/zemberek-server
 SLOT=0
 SRC_URI=http://cekirdek.uludag.org.tr/~baris/zpspell/zpspell-0.4.3.tar.bz2
-_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=3847dcf73f5009822c0a66e940ef680f

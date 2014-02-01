@@ -8,5 +8,5 @@ KEYWORDS=~alpha amd64 ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://reiserfs.linux.kiev.ua/snapshots/progsreiserfs-0.3.1-rc8.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=a5ff2b88bf5f157faf6e19f72bffb850

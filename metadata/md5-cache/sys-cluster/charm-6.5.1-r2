@@ -10,5 +10,5 @@ RDEPEND=mpi? ( virtual/mpi ) virtual/fortran
 REQUIRED_USE=doc? ( python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 ) ) cmkopt? ( !charmdebug !charmtracing ) charmproduction? ( !charmdebug !charmtracing )
 SLOT=0
 SRC_URI=http://charm.cs.uiuc.edu/distrib/charm-6.5.1.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=2fd505d669588513df9d3d09d1a73e56

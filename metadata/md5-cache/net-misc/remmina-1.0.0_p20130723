@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/gtk+:3 >=dev-libs/glib-2.31.18:2 >=net-libs/libvncserver-0.9.8.2 x11-libs/libxkbfile avahi? ( net-dns/avahi[gtk3] ) ayatana? ( dev-libs/libappindicator ) crypt? ( dev-libs/libgcrypt ) freerdp? ( >=net-misc/freerdp-1.1.0_beta1_p20130710 ) gnome-keyring? ( gnome-base/libgnome-keyring ) ssh? ( net-libs/libssh[sftp] ) telepathy? ( net-libs/telepathy-glib ) vte? ( x11-libs/vte:2.90 ) !net-misc/remmina-plugins
 SLOT=0
 SRC_URI=https://github.com/FreeRDP/Remmina/archive/b6a55ae6f4633d55f8f03e7ce2eeb5899514a8fc.tar.gz -> remmina-1.0.0_p20130723.tar.gz
-_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=a5809c12617d980c61041772d2175fe5

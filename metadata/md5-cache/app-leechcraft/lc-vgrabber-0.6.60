@@ -9,5 +9,5 @@ LICENSE=Boost-1.0
 RDEPEND=~app-leechcraft/lc-core-0.6.60 virtual/leechcraft-downloader-http
 SLOT=0
 SRC_URI=mirror://sourceforge/leechcraft/leechcraft-0.6.60.tar.xz http://dist.leechcraft.org/LeechCraft/0.6.60/leechcraft-0.6.60.tar.xz
-_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	leechcraft	4557a8dab7ef51789fcdf55a9a94992d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	leechcraft	4557a8dab7ef51789fcdf55a9a94992d	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=b22959d6926198a6849ad9f3ea0d3224

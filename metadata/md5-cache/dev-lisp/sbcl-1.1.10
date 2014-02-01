@@ -10,5 +10,5 @@ RDEPEND=>=dev-lisp/asdf-2.33-r3:= elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-
 RESTRICT=mirror
 SLOT=0/1.1.10
 SRC_URI=mirror://sourceforge/sbcl/sbcl-1.1.10-source.tar.bz2 x86? ( mirror://sourceforge/sbcl/sbcl-1.0.58-x86-linux-binary.tar.bz2 ) amd64? ( mirror://sourceforge/sbcl/sbcl-1.1.10-x86-64-linux-binary.tar.bz2 ) ppc? ( mirror://sourceforge/sbcl/sbcl-1.0.28-powerpc-linux-binary.tar.bz2 ) sparc? ( mirror://sourceforge/sbcl/sbcl-1.0.28-sparc-linux-binary.tar.bz2 ) alpha? ( mirror://sourceforge/sbcl/sbcl-1.0.28-alpha-linux-binary.tar.bz2 )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=52ea6d0953762de420dc173b36a08b2c

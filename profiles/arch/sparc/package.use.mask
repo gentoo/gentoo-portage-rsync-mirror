@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.155 2014/01/19 19:59:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.156 2014/02/01 18:50:59 armin76 Exp $
+
+# Raúl Porcel <armin76@gentoo.org> (1 Feb 2014)
+# Sigbuses
+net-misc/openssh hpn
 
 # Pacho Ramos <pacho@gentoo.org> (19 Jan 2014)  
 # Missing keywords, bug #478254

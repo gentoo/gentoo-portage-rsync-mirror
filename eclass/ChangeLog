@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1133 2014/01/26 10:59:07 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1134 2014/02/01 18:52:32 dirtyepic Exp $
+
+  01 Feb 2014; Ryan Hill <dirtyepic@gentoo.org> flag-o-matic.eclass:
+  Add -fdiagnostics* and ISA flags for 4.8 and 4.9.
 
   26 Jan 2014; Sergey Popov <pinkbyte@gentoo.org> myspell-r2.eclass:
   Drop inheriting base eclass, wrt bug #497040

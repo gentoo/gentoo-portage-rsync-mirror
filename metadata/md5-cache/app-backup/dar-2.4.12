@@ -10,5 +10,5 @@ RDEPEND=>=sys-libs/zlib-1.2.3:= !static? ( app-arch/bzip2:= ) acl? ( !static? ( 
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/dar/dar-2.4.12.tar.gz
-_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=confutils	2ab69b52fa6ea0c0669a47fb94b354b4	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=07ee4b779d824be8e574513d53b4e64c

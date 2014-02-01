@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.216 2013/11/10 15:48:14 chithanh Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.217 2014/02/01 18:50:59 armin76 Exp $
+
+  01 Feb 2014; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  P.use.mask net-misc/openssh hpn as it sigbuses, bug #499552
 
   10 Nov 2013; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Mask llvm flag until sys-devel/llvm is keyworded, bug #320221.

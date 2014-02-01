@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=gnustep-base/gnustep-make-2.0 virtual/gnustep-back debug? ( !<sys-devel/gdb-6.0 )
 SLOT=0
 SRC_URI=http://www.linuks.mine.nu/stepulator/stepulator-gs-1.0.tar.Z
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=e0ae1f835aab75e142df9db2829fec39

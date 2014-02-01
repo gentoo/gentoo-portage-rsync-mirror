@@ -10,5 +10,5 @@ RDEPEND=sys-libs/gdbm >=dev-libs/ntl-5.5.2 >=sci-mathematics/pari-2.3.4[gmp] >=s
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.math.uiuc.edu/Macaulay2/Downloads//OtherSourceCode/1.4/factory-3-1-1.tar.gz http://www.math.uiuc.edu/Macaulay2/Downloads//OtherSourceCode/1.4/libfac-3-1-1.tar.gz http://www.math.uiuc.edu/Macaulay2/Extra/gc-7.2alpha5-2010-09-03.tar.gz http://www.math.uiuc.edu/Macaulay2/Downloads//SourceCode/Macaulay2-1.4-r12617-src.tar.bz2
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=169dbda86bd006edf411f832f263a7b0

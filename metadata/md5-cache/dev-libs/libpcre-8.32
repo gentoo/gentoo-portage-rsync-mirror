@@ -10,5 +10,5 @@ RDEPEND=bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) libedit? ( dev-libs/li
 REQUIRED_USE=readline? ( !libedit ) libedit? ( !readline )
 SLOT=3
 SRC_URI=mirror://sourceforge/pcre/pcre-8.32.tar.bz2 ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.32.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=6eeb38bde0c1cddaa8b7a5c9a16bd983

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=media-libs/aubio media-libs/liblo sci-libs/fftw:3.0 media-libs/freetype:2 >=dev-libs/glib-2.10.1:2 dev-cpp/glibmm:2 >=x11-libs/gtk+-2.8.1:2 >=dev-libs/libxml2-2.6:2 >=media-libs/libsndfile-1.0.18 >=media-libs/libsamplerate-0.1 >=media-libs/rubberband-1.6.0 >=media-libs/libsoundtouch-1.6.0 media-libs/flac media-libs/raptor:2 >=media-libs/liblrdf-0.4.0-r20 >=media-sound/jack-audio-connection-kit-0.120 >=gnome-base/libgnomecanvas-2 media-libs/vamp-plugin-sdk dev-libs/libxslt dev-libs/libsigc++:2 >=dev-cpp/gtkmm-2.16:2.4 >=dev-cpp/libgnomecanvasmm-2.26:2.6 media-libs/alsa-lib x11-libs/pango x11-libs/cairo media-libs/libart_lgpl virtual/libusb:0 dev-libs/boost curl? ( net-misc/curl ) lv2? ( >=media-libs/slv2-0.6.1 media-libs/lilv media-libs/suil )
 SLOT=2
 SRC_URI=mirror://gentoo/ardour-2.8.16.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	62e05953761097ae84a70d6c7a3e2c9c	multilib	fac675dcccf94392371a6abee62d909f	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=aa33ede24b3d68c2bf875c023c4b491b
