@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/talloc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.61 2013/12/11 02:03:57 jmbsvicetto Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.62 2014/02/01 20:50:03 vostorga Exp $
+
+  01 Feb 2014; Victor Ostorga talloc-2.1.0.ebuild:
+  Adding multilib support, bug #491222 , patch thanks to Kenneth Graunke
+  <kenneth@whitecape.org>
 
   11 Dec 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   talloc-2.0.8.ebuild, talloc-2.1.0.ebuild:

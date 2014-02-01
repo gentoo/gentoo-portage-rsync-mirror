@@ -1,14 +1,14 @@
-DEFINED_PHASES=compile configure install prepare setup unpack
-DEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[threads] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] !!<sys-libs/talloc-2.0.5 dev-libs/libxslt || ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] ) dev-lang/python !dev-lang/python[-threads]
+DEFINED_PHASES=compile configure install prepare setup test unpack
+DEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[threads] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r5 ) !!<sys-libs/talloc-2.0.5 dev-libs/libxslt || ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] ) dev-lang/python !dev-lang/python[-threads] userland_GNU? ( >=sys-apps/coreutils-8.5 )
 DESCRIPTION=Samba talloc library
 EAPI=5
 HOMEPAGE=http://talloc.samba.org/
-IUSE=compat +python python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+IUSE=compat +python python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
 KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~sparc-solaris
 LICENSE=GPL-3
-RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[threads] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] !!<sys-libs/talloc-2.0.5
+RDEPEND=python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[threads] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[threads] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r5 ) !!<sys-libs/talloc-2.0.5
 REQUIRED_USE=python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
 SLOT=0
 SRC_URI=http://samba.org/ftp/talloc/talloc-2.1.0.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
-_md5_=abfe4624abb244c63be501479dd47a6c
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
+_md5_=54a6b2d260a048a861d5b08c84f029ec
