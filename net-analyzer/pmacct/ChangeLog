@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/pmacct
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.90 2013/05/09 03:03:11 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.91 2014/02/01 11:50:27 jer Exp $
+
+  01 Feb 2014; Jeroen Roovers <jer@gentoo.org> -pmacct-0.14.2.ebuild,
+  pmacct-0.14.3.ebuild:
+  Add dev-libs/geoip dependency (bug #499924 by Michael Rowell).
 
 *pmacct-0.14.3 (09 May 2013)
 

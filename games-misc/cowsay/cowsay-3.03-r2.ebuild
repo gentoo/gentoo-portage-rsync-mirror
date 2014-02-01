@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03-r2.ebuild,v 1.10 2011/04/21 20:13:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03-r2.ebuild,v 1.11 2014/02/01 11:55:59 grobian Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils
 
 DESCRIPTION="configurable talking ASCII cow (and other characters)"
@@ -11,20 +11,20 @@ SRC_URI="http://www.nog.net/~tony/warez/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ~ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x64-solaris"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5"
 
 src_prepare() {
 	sed	-i \
-		-e '1 c\#!/usr/bin/perl'\
+		-e "1 c\#!${EPREFIX}/usr/bin/perl"\
 		-e 's/\$version/\$VERSION/g'\
-		-e "s:%PREFIX%/share/cows:/usr/share/${P}/cows:" \
+		-e "s:%PREFIX%/share/cows:${EPREFIX}/usr/share/${P}/cows:" \
 		-e '/getopts/ i\$Getopt::Std::STANDARD_HELP_VERSION=1;' cowsay \
 			|| die "sed cowsay failed"
 	sed -i \
-		-e "s|%PREFIX%/share/cows|/usr/share/${P}/cows|" cowsay.1 \
+		-e "s|%PREFIX%/share/cows|${EPREFIX}/usr/share/${P}/cows|" cowsay.1 \
 			|| die "sed cowsay.1 failed"
 	epatch \
 		"${FILESDIR}/${P}"-tongue.patch \
@@ -38,5 +38,5 @@ src_install() {
 	dosym cowsay /usr/bin/cowthink
 	dosym cowsay.1 /usr/share/man/man1/cowthink.1
 	dodir /usr/share/${P}/cows
-	cp -r cows "${D}"/usr/share/${P}/ || die "cp failed"
+	cp -r cows "${ED}"/usr/share/${P}/ || die "cp failed"
 }

@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/cowsay
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.36 2011/04/21 20:13:20 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/ChangeLog,v 1.37 2014/02/01 11:55:59 grobian Exp $
+
+  01 Feb 2014; Fabian Groffen <grobian@gentoo.org> cowsay-3.03-r2.ebuild:
+  Fixed for Prefix, bug #499456
 
   21 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org>
   cowsay-3.03-r2.ebuild, +files/cowsay-3.03-utf8.patch:
