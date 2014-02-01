@@ -1,14 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.62 2014/01/19 19:12:11 swift Exp $
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
-#  on behalf of QA team <qa@gentoo.org
-#
-# Make sure uClibc is available as sys-libs/uclibc only on uclibc
-# profiles, as the "dynamic slot generation" is broken. The package is
-# still available on default profiles to be used with crossdev.
-sys-libs/uclibc
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.63 2014/02/01 06:58:15 vapier Exp $
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Jun 2013)
 # Make sure sys-libs/musl is only available for musl profiles or

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.633 2014/01/22 22:04:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.634 2014/02/01 06:58:15 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Drop bogus uclibc mask.
 
   22 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
   Clean up outdated tracker/gnote use mask entries.
