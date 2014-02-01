@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libva-vdpau-driver
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/ChangeLog,v 1.4 2013/05/03 22:18:18 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/ChangeLog,v 1.5 2014/02/01 15:24:44 axs Exp $
+
+*libva-vdpau-driver-0.7.4-r1 (01 Feb 2014)
+
+  01 Feb 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +libva-vdpau-driver-0.7.4-r1.ebuild, libva-vdpau-driver-9999.ebuild:
+  revbump ebuilds to support multilib-build, changes reviewed by aballier
 
   03 May 2013; Justin Lecher <jlec@gentoo.org> libva-vdpau-driver-0.7.4.ebuild,
   metadata.xml:
@@ -111,4 +117,3 @@
   +vdpau-video-0.6.9.ebuild, +metadata.xml:
   initial import, bug #317317, ebuild by Frank Richter
   <res@crystalspace3d.org> with small modifications by me
-

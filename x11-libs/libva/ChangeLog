@@ -1,6 +1,16 @@
 # ChangeLog for x11-libs/libva
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.54 2013/06/29 03:43:38 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.55 2014/02/01 15:24:22 axs Exp $
+
+*libva-1.2.0-r1 (01 Feb 2014)
+*libva-1.2.1-r1 (01 Feb 2014)
+*libva-1.1.1-r1 (01 Feb 2014)
+
+  01 Feb 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/libva-1.2.0-autotools-out-of-source-build.patch,
+  +libva-1.1.1-r1.ebuild, +libva-1.2.0-r1.ebuild, +libva-1.2.1-r1.ebuild,
+  libva-9999.ebuild:
+  revbump ebuilds to support multilib-build, changes reviewed by aballier
 
 *libva-1.2.1 (29 Jun 2013)
 

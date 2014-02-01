@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.19 2014/02/01 15:24:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.2.1-r1.ebuild,v 1.1 2014/02/01 15:24:22 axs Exp $
 
 EAPI=5
 

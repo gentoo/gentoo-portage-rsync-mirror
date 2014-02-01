@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/efl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.1 2014/01/25 15:02:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/efl/ChangeLog,v 1.2 2014/02/01 15:12:17 tommy Exp $
+
+*efl-1.8.5 (01 Feb 2014)
+
+  01 Feb 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +efl-1.8.5.ebuild,
+  efl-1.8.4.ebuild:
+  Version bump, also update dependency for wayland-client, fixes bug 499928, add
+  a warning message for failures due to @preserved-rebuild feature of portage
 
   25 Jan 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +metadata.xml:
   Add USE flag descriptions, thanks to Patrick McMunn for providing them
@@ -9,4 +16,3 @@
 
   25 Jan 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +efl-1.8.4.ebuild:
   Initial addition to main tree, based on version in enlightenment overlay
-

@@ -7068,7 +7068,6 @@ x11-plugins/bfm:gkrellm - Enable building of app-admin/gkrellm module
 x11-plugins/compiz-plugins-extra:gconf - Install GConf schemas for the plugins, needed when using the GConf-based configuration backend in x11-wm/compiz.
 x11-plugins/compiz-plugins-main:gconf - Install GConf schemas for the plugins, needed when using the GConf-based configuration backend in x11-wm/compiz.
 x11-plugins/pidgin-mbpurple:twitgin - Enable graphical plugin for Gtk+ interface of Pidgin.
-x11-plugins/pidgin-sipe:nss - Enable crypto support via dev-libs/nss
 x11-plugins/pidgin-sipe:ocs2005-message-hack - Disable message timeout for OCS2005 clients which causes "false" not delivered error messages
 x11-plugins/pidgin-sipe:openssl - Enable crypto support via dev-libs/openssl
 x11-plugins/pidgin-sipe:telepathy - Support use as a telepathy backend

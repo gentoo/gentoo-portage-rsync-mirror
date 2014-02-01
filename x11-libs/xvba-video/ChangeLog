@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/xvba-video
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.15 2013/09/05 19:44:48 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.16 2014/02/01 15:24:53 axs Exp $
+
+*xvba-video-0.8.0-r2 (01 Feb 2014)
+
+  01 Feb 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/xvba-video-fix-out-of-source-builds.patch, +xvba-video-0.8.0-r2.ebuild,
+  xvba-video-9999.ebuild:
+  revbump ebuilds to support multilib-build, changes reviewed by aballier
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> xvba-video-0.8.0-r1.ebuild,
   xvba-video-9999.ebuild:

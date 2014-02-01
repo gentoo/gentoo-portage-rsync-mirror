@@ -1,14 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.6_pre2.ebuild,v 1.2 2014/01/26 11:36:18 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.17.6.ebuild,v 1.1 2014/02/01 15:19:36 tommy Exp $
 
 EAPI=5
 
 inherit autotools enlightenment
 
 DESCRIPTION="Enlightenment DR17 window manager"
-#SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
-SRC_URI="http://download.enlightenment.org/pre-releases/${P%%_*}/${P%%_*}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="http://download.enlightenment.org/releases/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"
@@ -34,9 +33,9 @@ IUSE="pam spell static-libs +udev ukit ${IUSE_E_MODULES}"
 
 RDEPEND="
 	pam? ( sys-libs/pam )
-	|| ( >=dev-libs/efl-1.8.3[X,eet,jpeg,png] >=dev-libs/efl-1.8.3[xcb,eet,jpeg,png] )
-	>=dev-libs/e_dbus-1.7.10_pre1
-	ukit? ( >=dev-libs/e_dbus-1.7.9[udev] )
+	|| ( >=dev-libs/efl-1.8.4[X,eet,jpeg,png] >=dev-libs/efl-1.8.4[xcb,eet,jpeg,png] )
+	>=dev-libs/e_dbus-1.7.10
+	ukit? ( >=dev-libs/e_dbus-1.7.10[udev] )
 	x11-libs/xcb-util-keysyms"
 DEPEND="${RDEPEND}"
 
