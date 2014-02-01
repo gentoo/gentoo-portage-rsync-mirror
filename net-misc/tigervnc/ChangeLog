@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.168 2014/01/17 14:43:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.169 2014/02/01 06:04:29 hattya Exp $
+
+  01 Feb 2014; Akinori Hattori <hattya@gentoo.org> tigervnc-1.2.80_p5065.ebuild:
+  ia64 stable wrt bug #485436
 
   17 Jan 2014; Jeroen Roovers <jer@gentoo.org> files/tigervnc.initd:
   Spelling.
