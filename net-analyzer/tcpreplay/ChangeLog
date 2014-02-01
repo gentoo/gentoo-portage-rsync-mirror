@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.50 2014/01/31 13:39:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.51 2014/02/01 14:19:26 jer Exp $
+
+  01 Feb 2014; Jeroen Roovers <jer@gentoo.org> tcpreplay-4.0.2.ebuild:
+  Add new HOMEPAGE.
 
   31 Jan 2014; Jeroen Roovers <jer@gentoo.org> tcpreplay-4.0.2.ebuild:
   Set NICs to local loopback for src_test() (bug #359353).
