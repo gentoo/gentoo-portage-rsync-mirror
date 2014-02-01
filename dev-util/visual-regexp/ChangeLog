@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/visual-regexp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.14 2013/12/15 18:56:26 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.15 2014/02/01 09:44:22 pinkbyte Exp $
+
+*visual-regexp-3.1 (01 Feb 2014)
+
+  01 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -visual-regexp-3.0.ebuild,
+  +visual-regexp-3.1.ebuild, +files/visual-regexp-3.1-help-font-fix.patch,
+  +files/visual-regexp-3.1-make-regexp-fix.patch,
+  +files/visual-regexp-3.1-wish-fix.patch, -files/wish-fix.diff:
+  Version bump, wrt bug #494586, thanks to Quentin Minster <quentin AT
+  minster.io>, drop old
 
 *visual-regexp-3.0-r1 (15 Dec 2013)
 
