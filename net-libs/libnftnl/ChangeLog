@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnftnl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.3 2014/01/22 22:40:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnftnl/ChangeLog,v 1.4 2014/02/01 20:09:06 steev Exp $
+
+  01 Feb 2014; Steev Klimaszewski <steev@gentoo.org> libnftnl-1.0.0-r2.ebuild:
+  Add ~arm keyword. Tested by aholler on armv5
 
 *libnftnl-1.0.0-r2 (22 Jan 2014)
 

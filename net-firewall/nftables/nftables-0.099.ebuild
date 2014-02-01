@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/nftables-0.099.ebuild,v 1.1 2014/01/24 16:11:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/nftables/nftables-0.099.ebuild,v 1.2 2014/02/01 20:13:10 steev Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://netfilter.org/projects/nftables/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug"
 SRC_URI="http://netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
