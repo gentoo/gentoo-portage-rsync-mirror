@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.141 2014/01/18 04:44:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.142 2014/02/01 16:18:05 grobian Exp $
+
+  01 Feb 2014; Fabian Groffen <grobian@gentoo.org> pkgconfig-0.28.ebuild,
+  pkgconfig-9999.ebuild:
+  Fix glib build on some Prefix platforms with USE=internal-glib during
+  bootstrap
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> pkgconfig-0.28.ebuild,
   pkgconfig-9999.ebuild:
