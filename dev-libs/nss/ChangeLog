@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.347 2014/01/27 11:16:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.349 2014/02/01 03:41:20 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> nss-3.15.4.ebuild:
+  Keep lists of patches together.
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> nss-3.15.4.ebuild:
+  Mark m68k/s390/sh stable.
 
   27 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -nss-3.15.2.ebuild,
   -nss-3.15.3.ebuild, -nss-3.15.3.1.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.15.4.ebuild,v 1.12 2014/01/26 12:00:07 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.15.4.ebuild,v 1.14 2014/02/01 03:41:20 vapier Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/${RTM_NAME}
 
 LICENSE="|| ( MPL-2.0 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="utils"
 
 DEPEND="virtual/pkgconfig
@@ -42,6 +42,7 @@ src_prepare() {
 	epatch "${DISTDIR}/${PN}-3.14.1-add_spi+cacerts_ca_certs.patch"
 	epatch "${DISTDIR}/${PEM_PATCH}"
 	epatch "${FILESDIR}/${PN}-3.15-x32.patch"
+	epatch "${FILESDIR}/nss-3.14.2-solaris-gcc.patch"
 	cd coreconf
 	# hack nspr paths
 	echo 'INCLUDES += -I$(DIST)/include/dbm' \
@@ -60,8 +61,6 @@ src_prepare() {
 	# Fix pkgconfig file for Prefix
 	sed -i -e "/^PREFIX =/s:= /usr:= ${EPREFIX}/usr:" \
 		"${S}"/config/Makefile
-
-	epatch "${FILESDIR}/nss-3.14.2-solaris-gcc.patch"
 
 	# use host shlibsign if need be #436216
 	if tc-is-cross-compiler ; then

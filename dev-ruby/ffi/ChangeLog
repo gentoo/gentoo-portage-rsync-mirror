@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.64 2014/01/29 15:51:40 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.65 2014/02/01 03:57:56 hattya Exp $
+
+  01 Feb 2014; Akinori Hattori <hattya@gentoo.org> ffi-1.4.0.ebuild:
+  ia64 stable wrt bug #493780
 
   29 Jan 2014; Akinori Hattori <hattya@gentoo.org> ffi-1.9.3.ebuild:
   keyword ~ia64 wrt bug #465948
