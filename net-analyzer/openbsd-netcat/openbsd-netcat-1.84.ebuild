@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openbsd-netcat/openbsd-netcat-1.84.ebuild,v 1.2 2012/11/01 07:40:52 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openbsd-netcat/openbsd-netcat-1.84.ebuild,v 1.3 2014/02/01 08:47:17 heroxbd Exp $
 
 EAPI=4
 
@@ -47,8 +47,9 @@ src_prepare() {
 src_compile() {
 	use static && export STATIC="-static"
 	COMPILER=$(tc-getCC)
-	${COMPILER} ${CFLAGS} $(pkg-config --cflags --libs glib-2.0) netcat.c \
-	atomicio.c socks.c -o nc.openbsd || die
+	${COMPILER} ${CFLAGS} netcat.c atomicio.c socks.c \
+		$(pkg-config --cflags --libs glib-2.0) \
+		${LDFLAGS} -o nc.openbsd || die
 }
 
 src_install() {
@@ -57,4 +58,12 @@ src_install() {
 	doman nc.openbsd.1
 	docinto scripts
 	dodoc scripts/*
+}
+
+pkg_postinst() {
+	if [[ ${KERNEL} = "linux" ]]; then
+		ewarn "FO_REUSEPORT is introduced in linux 3.9. If your running kernel is older"
+		ewarn "and kernel header is newer, nc will not listen correctly. Matching the header"
+		ewarn "to the running kernel will do. See bug #490246 for details."
+	fi
 }

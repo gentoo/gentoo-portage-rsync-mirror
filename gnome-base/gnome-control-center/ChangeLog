@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.142 2014/01/05 07:39:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.143 2014/02/01 08:59:02 pacho Exp $
+
+  01 Feb 2014; Pacho Ramos <pacho@gentoo.org>
+  gnome-control-center-3.10.2.ebuild, gnome-control-center-3.8.6.ebuild:
+  Fix dependency on samba client for samba-4 (#499788 by Torsten Kurbad)
 
   05 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-control-center-2.32.1-r1.ebuild,
