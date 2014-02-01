@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.154 2014/01/26 12:17:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.155 2014/01/31 23:32:25 voyageur Exp $
+
+  31 Jan 2014; Bernard Cafarelli <voyageur@gentoo.org> -rdesktop-1.8.0.ebuild,
+  rdesktop-1.8.1.ebuild:
+  Remove unsused version, allow epatch_user in latest one
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> rdesktop-1.8.1.ebuild:
   Stable for sparc, wrt bug #495884

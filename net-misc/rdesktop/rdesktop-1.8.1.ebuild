@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.8.1.ebuild,v 1.10 2014/01/26 12:17:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.8.1.ebuild,v 1.11 2014/01/31 23:32:25 voyageur Exp $
 
 EAPI=5
 
@@ -43,6 +43,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.6.0-sound_configure.patch
 	# bug #280923
 	epatch "${FILESDIR}"/${PN}-1.7.0-libao_crash.patch
+
+	epatch_user
 
 	eautoreconf
 }
