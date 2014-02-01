@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/webalizer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.101 2013/07/20 05:37:14 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/ChangeLog,v 1.102 2014/02/01 15:53:16 blueness Exp $
+
+*webalizer-2.23.08 (01 Feb 2014)
+
+  01 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  +webalizer-2.23.08.ebuild:
+  Version bump, bug 99976
 
   20 Jul 2013; Jeroen Roovers <jer@gentoo.org> webalizer-2.23.05.ebuild:
   Spelling.
