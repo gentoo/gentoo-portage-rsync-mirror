@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.507 2014/01/27 02:18:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.508 2014/02/01 03:28:35 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> sqlite-3.8.2.ebuild:
+  Mark s390/sh stable.
 
   27 Jan 2014; Mike Gilbert <floppym@gentoo.org> metadata.xml:
   Remove description of 'extensions' use flag.
