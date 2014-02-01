@@ -1,5 +1,5 @@
---- configure.org	2010-02-16 13:06:04.000000000 +0100
-+++ configure	2010-02-25 22:57:08.000000000 +0100
+--- a/configure
++++ b/configure
 @@ -1103,7 +1103,7 @@
  echo $ac_n "checking whether to enable debugging compiler options""... $ac_c" 1>&6
  echo "configure:1105: checking whether to enable debugging compiler options" >&5
