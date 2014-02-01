@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-chmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chmod/ChangeLog,v 1.19 2014/02/01 18:33:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chmod/ChangeLog,v 1.20 2014/02/01 19:24:44 zlogene Exp $
+
+  01 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> File-chmod-0.360.0.ebuild:
+  ppc stable wrt bug #492150
 
   01 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> File-chmod-0.360.0.ebuild:
   alpha stable wrt bug #492150

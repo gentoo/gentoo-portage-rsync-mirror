@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-skinnopacity
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/ChangeLog,v 1.7 2014/01/28 20:20:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinnopacity/ChangeLog,v 1.8 2014/02/01 19:30:43 idl0r Exp $
+
+*vdr-skinnopacity-1.0.4 (01 Feb 2014)
+
+  01 Feb 2014; Christian Ruppert <idl0r@gentoo.org>
+  -vdr-skinnopacity-1.0.3.ebuild, +vdr-skinnopacity-1.0.4.ebuild:
+  Version bump
 
   28 Jan 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Add herd tag

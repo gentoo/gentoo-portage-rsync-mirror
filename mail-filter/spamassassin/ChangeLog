@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/spamassassin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.231 2013/12/29 10:03:51 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/ChangeLog,v 1.232 2014/02/01 19:06:20 pacho Exp $
+
+  01 Feb 2014; Pacho Ramos <pacho@gentoo.org> files/spamassassin.service-r1:
+  Add an option for reloading and move to /run instead of /var/run (#498716 by
+  Evert)
 
   29 Dec 2013; Pacho Ramos <pacho@gentoo.org> files/spamassassin.service-r1,
   files/spamassassin.service.conf:
