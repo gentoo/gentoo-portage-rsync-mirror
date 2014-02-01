@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1.ebuild,v 1.1 2013/12/24 16:21:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-3.10.0.1.ebuild,v 1.2 2014/02/01 09:12:31 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
@@ -54,7 +54,7 @@ COMMON_DEPEND="
 	systemd? ( >=sys-apps/systemd-186[pam] )
 	!systemd? (
 		>=x11-base/xorg-server-1.14.3-r1
-		sys-auth/consolekit
+		>=sys-auth/consolekit-0.4.5_p20120320-r2
 		!<sys-apps/openrc-0.12
 	)
 	sys-auth/pambase[systemd?]
@@ -159,6 +159,7 @@ src_configure() {
 		--enable-authentication-scheme=pam \
 		--with-default-pam-config=exherbo \
 		--with-at-spi-registryd-directory="${EPREFIX}"/usr/libexec \
+		--with-consolekit-directory=${EPREFIX}/usr/lib/ConsoleKit \
 		--with-initial-vt=7 \
 		--without-xevie \
 		$(use_with audit libaudit) \

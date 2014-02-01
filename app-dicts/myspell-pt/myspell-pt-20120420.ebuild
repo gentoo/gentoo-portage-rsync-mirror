@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt/myspell-pt-20120420.ebuild,v 1.2 2012/07/25 09:46:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt/myspell-pt-20120420.ebuild,v 1.3 2014/02/01 09:21:55 pacho Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ MYSPELL_THES=(
 
 inherit myspell-r2
 
-DESCRIPTION="Portugalese dictionaries for myspell/hunspell"
+DESCRIPTION="Portuguese dictionaries for myspell/hunspell"
 HOMEPAGE="http://natura.di.uminho.pt/wiki/doku.php?id=dicionarios:main"
 # The dicts are not versioned.
 # Version is determined by its date of upload to the server.

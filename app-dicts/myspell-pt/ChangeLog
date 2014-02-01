@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-pt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt/ChangeLog,v 1.21 2014/01/05 11:27:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-pt/ChangeLog,v 1.22 2014/02/01 09:21:55 pacho Exp $
+
+  01 Feb 2014; Pacho Ramos <pacho@gentoo.org> myspell-pt-20120420.ebuild:
+  Fix DESCRIPTION, reported by Pedro Carvalho
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/app-dicts-herd-is-empty-

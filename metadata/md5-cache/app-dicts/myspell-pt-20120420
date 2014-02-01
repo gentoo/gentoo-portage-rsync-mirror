@@ -1,6 +1,6 @@
 DEFINED_PHASES=install unpack
 DEPEND=app-arch/unzip
-DESCRIPTION=Portugalese dictionaries for myspell/hunspell
+DESCRIPTION=Portuguese dictionaries for myspell/hunspell
 EAPI=4
 HOMEPAGE=http://natura.di.uminho.pt/wiki/doku.php?id=dicionarios:main
 IUSE=+preao
@@ -9,4 +9,4 @@ LICENSE=GPL-2 MIT
 SLOT=0
 SRC_URI=http://darkstar.ist.utl.pt/openoffice.org/pt/oo3x-pt-PT.oxt preao? ( http://darkstar.ist.utl.pt/openoffice.org/pt/oo3x-pt-PT-preao.oxt )
 _eclasses_=myspell-r2	16f301e982001f671a68d8c364cabbd0
-_md5_=3675a88535eaa2416aa124c617121fe8
+_md5_=2a1350009375dfd4f13a8b3a6ee1a3b4
