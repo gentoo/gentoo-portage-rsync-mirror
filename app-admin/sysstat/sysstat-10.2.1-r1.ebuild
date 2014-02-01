@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.2.1.ebuild,v 1.1 2014/01/25 15:47:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-10.2.1-r1.ebuild,v 1.1 2014/02/01 12:44:08 jer Exp $
 
 EAPI=5
-inherit eutils multilib toolchain-funcs
+inherit eutils multilib systemd toolchain-funcs
 
 DESCRIPTION="System performance tools for Linux"
 HOMEPAGE="http://pagesperso-orange.fr/sebastien.godard/"
@@ -51,6 +51,7 @@ src_configure() {
 		rcdir=Gentoo-does-not-use-rc.d \
 		econf \
 			--enable-copy-only \
+			--with-systemdsystemunitdir=$(systemd_get_unitdir) \
 			$(use_enable cron install-cron) \
 			$(use_enable debug debuginfo) \
 			$(use_enable doc documentation ) \
@@ -75,7 +76,8 @@ src_install() {
 
 	dodoc contrib/sargraph/sargraph
 
-	newinitd "${FILESDIR}"/sysstat.init.d sysstat
+	newinitd "${FILESDIR}"/${PN}.init.d ${PN}
+	systemd_dounit ${PN}.service
 
 	use doc && rm -f "${D}"usr/share/doc/${PF}/COPYING
 }
