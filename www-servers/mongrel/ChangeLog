@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.54 2013/12/26 18:56:24 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.55 2014/02/01 04:29:53 hattya Exp $
+
+  01 Feb 2014; Akinori Hattori <hattya@gentoo.org> mongrel-1.1.5-r3.ebuild:
+  ia64 stable wrt bug #493780
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> mongrel-1.1.5-r3.ebuild:
   arm stable, bug #493780
