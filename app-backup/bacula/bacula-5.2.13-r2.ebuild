@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.13-r1.ebuild,v 1.1 2014/01/11 12:14:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-5.2.13-r2.ebuild,v 1.1 2014/02/01 19:32:54 pacho Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -146,6 +146,10 @@ src_prepare() {
 
 	# fix file not found error during make depend
 	epatch "${FILESDIR}"/5.2.12/${PN}-5.2.12-depend.patch
+
+	# Fix systemd unit files, bug #497748
+	sed -i -e '/Requires/d' platforms/systemd/*.service.in || die
+	sed -i -e '/StandardOutput/d' platforms/systemd/*.service.in || die
 }
 
 src_configure() {
