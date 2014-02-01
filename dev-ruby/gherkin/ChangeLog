@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.60 2014/02/01 00:39:47 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.61 2014/02/01 05:01:29 hattya Exp $
+
+  01 Feb 2014; Akinori Hattori <hattya@gentoo.org> gherkin-2.11.6.ebuild:
+  ia64 stable wrt bug #493780
 
   01 Feb 2014; Akinori Hattori <hattya@gentoo.org> gherkin-2.12.0-r1.ebuild,
   gherkin-2.12.0.ebuild:
