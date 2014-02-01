@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubyforge
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.102 2014/01/19 10:03:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyforge/ChangeLog,v 1.103 2014/02/01 01:28:59 hattya Exp $
+
+  01 Feb 2014; Akinori Hattori <hattya@gentoo.org> rubyforge-2.0.4-r3.ebuild:
+  ia64 stable wrt bug #490180
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> rubyforge-2.0.4-r3.ebuild:
   amd64 stable, bug 490180
