@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.634 2014/02/01 06:58:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.635 2014/02/01 21:02:01 floppym Exp $
+
+  01 Feb 2014; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Mask aura for chromium-33.
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> package.mask:
   Drop bogus uclibc mask.

@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.541 2014/01/22 22:04:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.542 2014/02/01 21:02:01 floppym Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Mike Gilbert <floppym@gentoo.org> (01 Feb 2014)
+# Build failures (bug 499072)
+=www-client/chromium-33* aura
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (4 Jan 2014)
 # Mask until dependencies are keyworded (bug 497068)
