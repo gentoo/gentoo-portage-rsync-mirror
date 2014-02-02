@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.109 2014/02/02 09:17:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.110 2014/02/02 15:38:07 swift Exp $
+
+*libselinux-2.2.2-r1 (02 Feb 2014)
+
+  02 Feb 2014; Sven Vermeulen <swift@gentoo.org> +libselinux-2.2.2-r1.ebuild:
+  Fix bug #480960 (multilib support). Drop ruby eclass as it messes with
+  defaults and I do not understand it. Bump to 2.2.2 release
 
   02 Feb 2014; Sven Vermeulen <swift@gentoo.org> libselinux-2.2.1-r1.ebuild:
   Support python 3.3, see bug 499604

@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.81 2014/02/01 21:15:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.82 2014/02/02 15:47:56 floppym Exp $
+
+*open-vm-tools-2013.09.16.1328054-r3 (02 Feb 2014)
+
+  02 Feb 2014; Mike Gilbert <floppym@gentoo.org>
+  +open-vm-tools-2013.09.16.1328054-r3.ebuild,
+  -open-vm-tools-2013.04.16.1098359-r1.ebuild,
+  -open-vm-tools-2013.09.16.1328054-r1.ebuild:
+  Depend on sys-fs/fuse unconditionally, bug 500002.
 
   01 Feb 2014; Mike Gilbert <floppym@gentoo.org>
   open-vm-tools-2013.09.16.1328054-r2.ebuild:

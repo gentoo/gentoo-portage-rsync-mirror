@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-2013.09.16.1328054-r1.ebuild,v 1.1 2013/10/31 20:08:41 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-2013.09.16.1328054-r3.ebuild,v 1.1 2014/02/02 15:47:56 floppym Exp $
 
 EAPI=5
 
@@ -16,14 +16,14 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X doc fuse icu +pic xinerama"
+IUSE="X doc icu modules pam +pic xinerama"
 
-RDEPEND="app-emulation/open-vm-tools-kmod
+COMMON_DEPEND="
 	dev-libs/glib:2
 	dev-libs/libdnet
 	sys-apps/ethtool
 	sys-process/procps
-	virtual/pam
+	pam? ( virtual/pam )
 	X? (
 		dev-cpp/gtkmm:2.4
 		x11-base/xorg-server
@@ -34,17 +34,21 @@ RDEPEND="app-emulation/open-vm-tools-kmod
 		x11-libs/libX11
 		x11-libs/libXtst
 	)
-	fuse? ( sys-fs/fuse )
+	sys-fs/fuse
 	icu? ( dev-libs/icu:= )
 	xinerama? ( x11-libs/libXinerama )
-	"
+"
 
-DEPEND="${RDEPEND}
+DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
 	virtual/pkgconfig
 	virtual/linux-sources
 	sys-apps/findutils
-	"
+"
+
+RDEPEND="${COMMON_DEPEND}
+	modules? ( app-emulation/open-vm-tools-kmod )
+"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -66,18 +70,22 @@ src_configure() {
 		export CUSTOM_PROCPS_LIBS="$($(tc-getPKG_CONFIG) --libs libprocps)"
 	fi
 
-	econf \
-		--with-procps \
-		--with-dnet \
-		--without-kernel-modules \
-		$(use_enable doc docs) \
-		--docdir=/usr/share/doc/${PF} \
-		$(use_with X x) \
-		$(use_with X gtk2) \
-		$(use_with X gtkmm) \
-		$(use_with icu) \
-		$(use_with pic) \
+	local myeconfargs=(
+		--with-procps
+		--with-dnet
+		--without-kernel-modules
+		$(use_enable doc docs)
+		--docdir=/usr/share/doc/${PF}
+		$(use_with X x)
+		$(use_with X gtk2)
+		$(use_with X gtkmm)
+		$(use_with icu)
+		$(use_with pam)
+		$(use_with pic)
 		$(use_enable xinerama multimon)
+	)
+
+	econf "${myeconfargs[@]}"
 
 	# Bugs 260878, 326761
 	find ./ -name Makefile | xargs sed -i -e 's/-Werror//g'  || die "sed out Werror failed"
