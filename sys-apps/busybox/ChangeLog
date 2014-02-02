@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.366 2014/01/20 06:34:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.367 2014/02/02 08:17:37 vapier Exp $
+
+  02 Feb 2014; Mike Frysinger <vapier@gentoo.org>
+  +files/busybox-1.22.1-ash.patch, +files/busybox-1.22.1-date.patch,
+  +files/busybox-1.22.1-iplink.patch, busybox-1.22.1.ebuild:
+  Add various fixes from upstream.
 
 *busybox-1.22.1 (20 Jan 2014)
 
