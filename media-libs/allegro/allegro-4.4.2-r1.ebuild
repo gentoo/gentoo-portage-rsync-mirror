@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2-r1.ebuild,v 1.8 2013/04/08 08:28:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2-r1.ebuild,v 1.9 2014/02/02 11:49:29 pinkbyte Exp $
 
 EAPI=5
 CMAKE_IN_SOURCE_BUILD=1
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 
 LICENSE="Allegro MIT GPL-2+ ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ~mips ppc ppc64 x86"
 IUSE="alsa fbcon jack jpeg opengl oss png svga test vga vorbis X"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )

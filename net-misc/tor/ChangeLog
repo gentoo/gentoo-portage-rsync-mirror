@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.403 2014/02/02 10:59:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.404 2014/02/02 12:00:30 blueness Exp $
+
+  02 Feb 2014; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.3.25.ebuild,
+  -tor-0.2.4.19.ebuild:
+  Cleanup vulnerable version, bug #498760
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> tor-0.2.4.20.ebuild:
   Stable for ppc, wrt bug #498760

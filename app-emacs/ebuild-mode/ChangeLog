@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ebuild-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.42 2014/01/23 14:49:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ebuild-mode/ChangeLog,v 1.43 2014/02/02 11:57:49 ulm Exp $
+
+*ebuild-mode-1.26 (02 Feb 2014)
+
+  02 Feb 2014; Ulrich Müller <ulm@gentoo.org> +ebuild-mode-1.26.ebuild:
+  Version bump.
 
 *ebuild-mode-1.25 (23 Jan 2014)
 
