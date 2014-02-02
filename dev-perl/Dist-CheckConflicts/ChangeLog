@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Dist-CheckConflicts
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Dist-CheckConflicts/ChangeLog,v 1.21 2013/07/08 09:45:57 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Dist-CheckConflicts/ChangeLog,v 1.22 2014/02/01 23:55:09 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org>
+  Dist-CheckConflicts-0.20.0.ebuild:
+  Add arm64/m68k love.
 
   08 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
   Dist-CheckConflicts-0.20.0.ebuild:

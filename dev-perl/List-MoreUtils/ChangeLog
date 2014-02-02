@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/List-MoreUtils
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.41 2012/09/01 11:38:00 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/List-MoreUtils/ChangeLog,v 1.42 2014/02/01 23:53:55 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> List-MoreUtils-0.330.0.ebuild:
+  Add arm64/m68k love.
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org>
   List-MoreUtils-0.330.0.ebuild:

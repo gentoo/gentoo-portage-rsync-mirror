@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Requires
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.26 2014/01/05 01:18:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.27 2014/02/01 23:52:57 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Test-Requires-0.60.0.ebuild:
+  Add arm64/m68k love.
 
   05 Jan 2014; Markos Chandras <hwoarang@gentoo.org>
   Test-Requires-0.60.0.ebuild:

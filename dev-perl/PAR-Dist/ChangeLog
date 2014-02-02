@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR-Dist
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.79 2013/07/22 21:16:17 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR-Dist/ChangeLog,v 1.80 2014/02/01 23:45:05 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> PAR-Dist-0.490.0.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   22 Jul 2013; Agostino Sarubbo <ago@gentoo.org> PAR-Dist-0.490.0.ebuild:
   Stable for ppc64, wrt bug #449604

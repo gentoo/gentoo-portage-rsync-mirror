@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-DeprecationManager
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.35 2013/07/08 09:51:22 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.36 2014/02/01 23:56:15 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org>
+  Package-DeprecationManager-0.130.0.ebuild:
+  Add arm64/m68k love.
 
   08 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
   Package-DeprecationManager-0.130.0.ebuild:

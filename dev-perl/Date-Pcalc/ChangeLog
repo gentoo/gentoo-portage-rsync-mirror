@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Date-Pcalc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.22 2013/08/01 05:20:28 mattst88 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Pcalc/ChangeLog,v 1.23 2014/02/01 23:38:10 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Date-Pcalc-6.100.0.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   01 Aug 2013; Matt Turner <mattst88@gentoo.org> -Date-Pcalc-1.2.ebuild:
   Drop old version 1.2, bugs 478752 and 478754.

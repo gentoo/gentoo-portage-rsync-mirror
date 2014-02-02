@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-Stash
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.58 2013/09/13 05:00:20 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.59 2014/02/01 23:58:29 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Package-Stash-0.340.0.ebuild,
+  Package-Stash-0.350.0.ebuild, Package-Stash-0.360.0.ebuild:
+  Add arm64/m68k love.
 
 *Package-Stash-0.360.0 (13 Sep 2013)
 

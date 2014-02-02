@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Fatal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.31 2014/01/05 10:49:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Fatal/ChangeLog,v 1.32 2014/02/01 23:53:09 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Test-Fatal-0.10.0.ebuild:
+  Add arm64/m68k love.
 
   05 Jan 2014; Markos Chandras <hwoarang@gentoo.org> Test-Fatal-0.10.0.ebuild:
   Add ~mips

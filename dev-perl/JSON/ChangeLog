@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/JSON
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.50 2013/08/15 06:45:00 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.52 2014/02/01 23:40:00 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> JSON-2.530.0.ebuild,
+  JSON-2.590.0.ebuild:
+  Mark s390/sh stable.
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> JSON-2.530.0.ebuild,
+  JSON-2.590.0.ebuild:
+  Add arm64/m68k love.
 
 *JSON-2.590.0 (15 Aug 2013)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Params-Util
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/ChangeLog,v 1.105 2012/09/09 16:17:34 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Util/ChangeLog,v 1.106 2014/02/01 23:50:37 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Params-Util-1.60.0.ebuild:
+  Add arm64/m68k love.
 
   09 Sep 2012; Raúl Porcel <armin76@gentoo.org> Params-Util-1.60.0.ebuild:
   s390/sh stable

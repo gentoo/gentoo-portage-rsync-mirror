@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.51 2012/09/01 11:15:26 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.52 2014/02/01 23:36:22 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Carp-Clan-6.40.0.ebuild:
+  Add arm64 love.
 
   01 Sep 2012; Fabian Groffen <grobian@gentoo.org> Carp-Clan-6.40.0.ebuild:
   Marked ~ppc-aix, bug #432288

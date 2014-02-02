@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Storable
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.66 2014/01/20 23:09:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Storable/ChangeLog,v 1.67 2014/02/01 23:58:20 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Storable-2.390.0.ebuild,
+  Storable-2.450.0.ebuild:
+  Add m68k love.
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> Storable-2.390.0.ebuild,
   Storable-2.450.0.ebuild:
