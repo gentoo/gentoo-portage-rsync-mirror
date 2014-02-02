@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21-r1.ebuild,v 1.5 2013/12/22 12:03:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/media-player-info/media-player-info-21-r1.ebuild,v 1.6 2014/02/02 16:23:16 ssuominen Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86"
 IUSE=""
 
 # http://cgit.freedesktop.org/media-player-info/commit/?id=d83dd01a0a1df6198ee08954da1c033b88a1004b
-RDEPEND=">=virtual/udev-196[hwdb(+)]"
+RDEPEND=">=virtual/udev-208"
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	virtual/pkgconfig"
