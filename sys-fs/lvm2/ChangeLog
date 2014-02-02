@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.336 2014/02/02 05:56:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.337 2014/02/02 06:20:21 robbat2 Exp $
+
+*lvm2-2.02.105-r1 (02 Feb 2014)
+
+  02 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.105-r1.ebuild,
+  metadata.xml:
+  Bug #479950: bring back dmsetup-only build to make some users happy. Please
+  note that this is unsupported at this point, you get to keep the pieces when
+  it breaks.
 
   02 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> files/lvm.rc-2.02.105:
   Bug #334125: Ignore an error shutting down last LVs, if they are /usr or / we
