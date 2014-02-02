@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.249 2014/01/30 23:15:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.250 2014/02/02 10:58:25 ago Exp $
+
+  02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> PyQt4-4.10.3-r2.ebuild:
+  Stable for ppc, wrt bug #495638
 
   30 Jan 2014; Markus Meier <maekke@gentoo.org> PyQt4-4.10.3-r2.ebuild:
   arm stable, bug #495638

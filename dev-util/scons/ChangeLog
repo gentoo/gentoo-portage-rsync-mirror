@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.141 2014/01/27 12:53:29 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.142 2014/02/02 11:00:26 ago Exp $
+
+  02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> scons-2.3.0.ebuild:
+  Stable for ppc, wrt bug #498868
 
   27 Jan 2014; Akinori Hattori <hattya@gentoo.org> scons-2.3.0.ebuild:
   ia64 stable wrt bug #498868
