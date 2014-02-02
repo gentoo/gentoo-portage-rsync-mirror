@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gmpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.40 2014/01/27 14:10:21 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/ChangeLog,v 1.41 2014/02/02 16:49:07 bicatali Exp $
+
+  02 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> gmpy-2.0.3.ebuild,
+  metadata.xml:
+  Keyworded for amd64-linux, cleanup
 
   27 Jan 2014; Akinori Hattori <hattya@gentoo.org> gmpy-2.0.3.ebuild:
   keyword ~ia64 wrt bug #495120

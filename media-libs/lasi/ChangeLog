@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lasi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.34 2013/07/13 09:06:03 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.35 2014/02/02 16:51:44 pinkbyte Exp $
+
+  02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> lasi-1.1.1.ebuild:
+  Add ~mips, wrt bug #499866
 
   13 Jul 2013; Justin Lecher <jlec@gentoo.org> lasi-1.1.1.ebuild, metadata.xml:
   Convert to recent changes in cmake-utils.eclass, #476660

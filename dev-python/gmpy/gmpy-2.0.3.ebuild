@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-2.0.3.ebuild,v 1.2 2014/01/27 14:10:21 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gmpy/gmpy-2.0.3.ebuild,v 1.3 2014/02/02 16:49:07 bicatali Exp $
 
 EAPI=5
 
@@ -11,13 +11,13 @@ inherit distutils-r1
 MY_PN="${PN}2"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Python bindings for GMP library"
-HOMEPAGE="http://www.aleax.it/gmpy.html http://code.google.com/p/gmpy/ http://pypi.python.org/pypi/gmpy2"
+DESCRIPTION="Python bindings for GMP, MPC, MPFR and MPIR libraries"
+HOMEPAGE="http://code.google.com/p/gmpy/"
 SRC_URI="http://gmpy.googlecode.com/files/${MY_P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~amd64 ~ia64 ~x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~ia64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="mpir"
 
 RDEPEND="
