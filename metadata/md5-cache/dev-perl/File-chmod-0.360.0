@@ -3,10 +3,10 @@ DEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 DESCRIPTION=Implements symbolic and ls chmod modes
 EAPI=4
 HOMEPAGE=http://search.cpan.org/dist/File-chmod/
-KEYWORDS=alpha amd64 hppa ia64 ppc ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris
+KEYWORDS=alpha amd64 hppa ia64 ppc sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=|| ( >=dev-lang/perl-5.16 <dev-lang/perl-5.16[-build] )
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/X/XE/XENO/File-chmod-0.36.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=60be639b40684ad4b7e3be16814e2a44
+_md5_=d6678f4610635924fde2318931053016
