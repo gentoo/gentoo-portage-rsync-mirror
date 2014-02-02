@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.2.ebuild,v 1.4 2014/01/20 20:27:23 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.2.ebuild,v 1.5 2014/02/02 09:18:25 swift Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_7 python3_2 )
+PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
 USE_RUBY="ruby18 ruby19"
 RUBY_OPTIONAL="yes"
 

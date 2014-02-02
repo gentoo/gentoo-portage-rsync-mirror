@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.2.1-r1.ebuild,v 1.1 2013/12/10 14:09:04 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.2.1-r1.ebuild,v 1.2 2014/02/02 09:17:09 swift Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python2_7 python3_2 )
+PYTHON_COMPAT=( python2_7 python3_2 python3_3 )
 USE_RUBY="ruby18 ruby19"
 RUBY_OPTIONAL="yes"
 
@@ -18,7 +18,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20131030/${P}.tar.gz
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="python ruby static-libs"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
