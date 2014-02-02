@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~ppc ~x86 ~x86-fbsd
 LICENSE=iASL
 SLOT=0
 SRC_URI=http://www.acpica.org/download/acpica-unix-20090903.tar.gz test? ( http://www.acpica.org/download/acpitests-unix-20090903.tar.gz )
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=2c8db8d763d94ccf1ebcc2434ea528da

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.196 2014/02/01 18:52:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.197 2014/02/02 22:26:13 tommy Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -56,9 +56,9 @@ setup-allowed-flags() {
 	# 4.7
 	ALLOWED_FLAGS+=" -mno-avx2 -mno-bmi2 -mno-fma -mno-lzcnt"
 	# 4.8
-	ALLOWED_FLAGS+="-mno-fxsr -mno-rtm -mno-xsave -mno-xsaveopt"
+	ALLOWED_FLAGS+=" -mno-fxsr -mno-rtm -mno-xsave -mno-xsaveopt"
 	# 4.9
-	ALLOWED_FLAGS+="-mno-avx512cd -mno-avx512er -mno-avx512f -mno-avx512pf -mno-sha"
+	ALLOWED_FLAGS+=" -mno-avx512cd -mno-avx512er -mno-avx512f -mno-avx512pf -mno-sha"
 
 	# CPPFLAGS and LDFLAGS
 	ALLOWED_FLAGS+=" -I* -L* -R* -Wl,*"

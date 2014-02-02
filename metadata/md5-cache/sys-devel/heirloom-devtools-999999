@@ -6,5 +6,5 @@ HOMEPAGE=http://heirloom.sourceforge.net/devtools.html
 LICENSE=BSD BSD-4 CDDL
 RDEPEND=app-shells/heirloom-sh
 SLOT=0
-_eclasses_=cvs	638266995fbb0c9c6b1eabbb8582c3f3	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cvs	638266995fbb0c9c6b1eabbb8582c3f3	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=284ef3ec30e536021e59fbea7010d575

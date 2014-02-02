@@ -10,5 +10,5 @@ RDEPEND=app-arch/unzip !<sci-biology/ucsc-genome-browser-223 mysql? ( virtual/my
 REQUIRED_USE=server? ( mysql )
 SLOT=0
 SRC_URI=http://hgdownload.cse.ucsc.edu/admin/jksrc.v260.zip
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	webapp	25b9b1696f5e698711f47d45c3d45e3e
 _md5_=36c4d987993d81445a49457fa09a375d

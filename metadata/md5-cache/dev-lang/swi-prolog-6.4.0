@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=sys-libs/ncurses archive? ( app-arch/libarchive ) zlib? ( sys-libs/zlib ) odbc? ( dev-db/unixODBC ) readline? ( sys-libs/readline ) gmp? ( dev-libs/gmp ) ssl? ( dev-libs/openssl ) java? ( >=virtual/jdk-1.4 ) X? ( virtual/jpeg x11-libs/libX11 x11-libs/libXft x11-libs/libXpm x11-libs/libXt x11-libs/libICE x11-libs/libSM ) java? ( >=dev-java/java-config-2.1.9-r1 )
 SLOT=0
 SRC_URI=http://www.swi-prolog.org/download/stable/src/pl-6.4.0.tar.gz mirror://gentoo/swi-prolog-6.4.0-gentoo-patchset-0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=6006745f0ccab7295507f683239a43dc

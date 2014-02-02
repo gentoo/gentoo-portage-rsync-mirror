@@ -8,5 +8,5 @@ LICENSE=NVIDIA-CUDA
 RDEPEND=|| ( sys-devel/gcc:4.4 sys-devel/gcc:4.5 sys-devel/gcc:4.6 ) !<=x11-drivers/nvidia-drivers-270.41 debugger? ( sys-libs/libtermcap-compat ) profiler? ( >=virtual/jre-1.6 )
 SLOT=0
 SRC_URI=amd64? ( http://developer.download.nvidia.com/compute/cuda/4_2/rel/toolkit/cudatoolkit_4.2.9_linux_64_ubuntu11.04.run ) x86? ( http://developer.download.nvidia.com/compute/cuda/4_2/rel/toolkit/cudatoolkit_4.2.9_linux_32_ubuntu11.04.run )
-_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	04385b0f181c42fa9c18ec0e31729d1f	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cuda	9be39ddb95b9b07ec931f30628d40757	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	04385b0f181c42fa9c18ec0e31729d1f	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=4bdfcb5db49c0d45803fea5b7bb38107

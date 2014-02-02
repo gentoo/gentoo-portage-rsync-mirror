@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=dev-libs/libpcre net-libs/libnet:1.1 >=net-libs/libpcap-0.8.1 sys-libs/zlib gtk? ( >=dev-libs/atk-1.2.4 >=dev-libs/glib-2.2.2:2 media-libs/freetype x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-2.2.2:2 >=x11-libs/pango-1.2.3 ) ncurses? ( >=sys-libs/ncurses-5.3 ) plugins? ( >=net-misc/curl-7.26.0 sys-devel/libtool ) ssl? ( dev-libs/openssl )
 SLOT=0
 SRC_URI=https://github.com/Ettercap/ettercap/archive/v0.8.0.tar.gz -> ettercap-0.8.0.tar.gz
-_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=aa2a91b1cba47d45b78b56418cfec10a

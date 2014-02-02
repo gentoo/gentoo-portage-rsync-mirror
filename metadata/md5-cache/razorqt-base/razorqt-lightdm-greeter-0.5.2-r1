@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1+
 RDEPEND=razorqt-base/razorqt-libs =x11-misc/lightdm-1.4*[qt4] razorqt-base/razorqt-data razorqt-base/razorqt-power !x11-misc/lightdm-razorqt-greeter
 SLOT=0
 SRC_URI=http://www.razor-qt.org/downloads/files/razorqt-0.5.2.tar.bz2
-_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	72788a263ef46ee00a51b7a4e03af0fc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=26ab14ad7bb49f1067189b3dbcb0609c
