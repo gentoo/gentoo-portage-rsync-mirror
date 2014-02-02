@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm prerm setup test
+DEPEND=>=dev-haskell/cpphs-1.11:=[profile?] >=dev-haskell/haskell-src-exts-1.14:=[profile?] <dev-haskell/haskell-src-exts-1.15:=[profile?] >=dev-haskell/hscolour-1.17:=[profile?] >=dev-haskell/transformers-0.0:=[profile?] >=dev-haskell/uniplate-1.5:=[profile?] >=dev-lang/ghc-6.10.4:= >=dev-haskell/cabal-1.6.0.3 doc? ( dev-haskell/haddock ) hscolour? ( dev-haskell/hscolour ) >=dev-haskell/cabal-1.1.4
+DESCRIPTION=Source code suggestions
+EAPI=5
+HOMEPAGE=http://community.haskell.org/~ndm/hlint/
+IUSE=emacs doc hscolour profile
+KEYWORDS=~amd64 ~x86
+LICENSE=BSD
+RDEPEND=>=dev-haskell/cpphs-1.11:=[profile?] >=dev-haskell/haskell-src-exts-1.14:=[profile?] <dev-haskell/haskell-src-exts-1.15:=[profile?] >=dev-haskell/hscolour-1.17:=[profile?] >=dev-haskell/transformers-0.0:=[profile?] >=dev-haskell/uniplate-1.5:=[profile?] >=dev-lang/ghc-6.10.4:=
+SLOT=0/1.8.56
+SRC_URI=mirror://hackage/packages/archive/hlint/1.8.56/hlint-1.8.56.tar.gz
+_eclasses_=elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	419a74a0fe876385690dfe3c4281bac7	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=b9ea5a2cd09b6b93b65838ddd351041e
