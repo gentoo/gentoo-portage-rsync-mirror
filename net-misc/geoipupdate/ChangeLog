@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/geoipupdate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.4 2014/01/28 14:34:34 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geoipupdate/ChangeLog,v 1.5 2014/02/02 15:23:12 pinkbyte Exp $
+
+  02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> geoipupdate-2.0.0.ebuild:
+  Add ~s390, wrt bug #490062
 
   28 Jan 2014; Akinori Hattori <hattya@gentoo.org> geoipupdate-2.0.0.ebuild:
   keyword ~ia64 wrt bug #490062
