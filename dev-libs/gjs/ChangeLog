@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gjs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.30 2014/01/30 08:31:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.31 2014/02/02 18:26:54 pacho Exp $
+
+  02 Feb 2014; Pacho Ramos <pacho@gentoo.org> gjs-1.38.1.ebuild:
+  spidermonkey was rekeyworded on ia64
 
   30 Jan 2014; Gilles Dartiguelongue <eva@gentoo.org> gjs-1.38.1.ebuild:
   Drop amd64-fbsd keyword due to dependency on spidermonkey:17.

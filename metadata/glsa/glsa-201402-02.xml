@@ -9,7 +9,7 @@
   </synopsis>
   <product type="ebuild">nvidia-drivers</product>
   <announced>February 02, 2014</announced>
-  <revised>February 02, 2014: 1</revised>
+  <revised>February 02, 2014: 2</revised>
   <bug>493448</bug>
   <access>local</access>
   <affected>
@@ -68,12 +68,13 @@
     </code>
   </resolution>
   <references>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-5986">CVE-2013-5986</uri>
     <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-5987">CVE-2013-5987</uri>
   </references>
   <metadata tag="requester" timestamp="Sat, 14 Dec 2013 04:12:07 +0000">
     BlueKnight
   </metadata>
-  <metadata tag="submitter" timestamp="Sun, 02 Feb 2014 17:54:59 +0000">
+  <metadata tag="submitter" timestamp="Sun, 02 Feb 2014 18:03:28 +0000">
     BlueKnight
   </metadata>
 </glsa>

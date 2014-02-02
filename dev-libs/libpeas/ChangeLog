@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpeas
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.24 2013/12/24 15:56:52 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.25 2014/02/02 18:24:18 pacho Exp $
+
+  02 Feb 2014; Pacho Ramos <pacho@gentoo.org> libpeas-1.9.0.ebuild:
+  spidermonkey was rekeyworded
 
 *libpeas-1.9.0 (24 Dec 2013)
 
