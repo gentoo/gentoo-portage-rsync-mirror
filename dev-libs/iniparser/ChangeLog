@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/iniparser
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.32 2014/02/01 19:59:14 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.33 2014/02/02 02:40:15 vostorga Exp $
+
+*iniparser-3.1-r1 (02 Feb 2014)
+
+  02 Feb 2014; Víctor Ostorga <vostorga@gentoo.org> iniparser-3.1.ebuild,
+  +iniparser-3.1-r1.ebuild:
+  Adding -r1 and restoring keywords, as it should be from the previous commit
 
   01 Feb 2014; Victor Ostorga iniparser-3.1.ebuild:
   Adding multilib support, bug #493746 , patch thanks to Alexander Stein
