@@ -18,12 +18,9 @@ SH, SPARC, and v850 processors.
 <use>
 	<flag name='rpc'>Enable sun nis/rpc support (you should use libtirpc though)</flag>
 	<flag name='ssp'>Force the use of ssp to be built into a hardened uclibc setup</flag>
-	<flag name='pregen'>Use pregenerated locales</flag>
 	<flag name='savedconfig'>Adds support for user defined configs</flag>
 	<flag name='uclibc-compat'>Build uclibc with backwards compatible
 		options</flag>
-	<flag name='userlocales'>Build only the locales specified in
-		/etc/locales.build</flag>
 	<flag name='wordexp'>Add support for word expansion (wordexp.h)</flag>
 </use>
 </pkgmetadata>
