@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.130 2014/01/23 19:46:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.131 2014/02/02 10:30:40 pinkbyte Exp $
+
+  02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> package.use.mask:
+  Mask nvtt USE flag in media-libs/devil
 
   23 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Remove old gentoo-sources entry.

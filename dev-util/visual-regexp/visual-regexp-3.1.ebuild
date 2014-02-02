@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/visual-regexp-3.1.ebuild,v 1.1 2014/02/01 09:44:23 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/visual-regexp-3.1.ebuild,v 1.2 2014/02/02 10:15:06 pinkbyte Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND=""

@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.59 2014/01/08 00:26:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.60 2014/02/02 10:30:40 pinkbyte Exp $
+
+# Sergey Popov <pinkbyte@gentoo.org> (02 Feb 2014)
+# media-gfx/nvidia-texture-tools is not keyworded on mips
+media-libs/devil	nvtt
 
 # Ryan Hill <dirtyepic@gentoo.org> (07 Jan 2014)
 # req net-libs/webkit-gtk:2
