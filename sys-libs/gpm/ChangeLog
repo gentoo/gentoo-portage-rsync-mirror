@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/gpm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.102 2013/09/14 10:54:24 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.104 2014/02/01 23:24:37 vapier Exp $
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> gpm-1.20.7-r1.ebuild,
+  gpm-1.20.7-r2.ebuild:
+  Add arm64 love.
+
+  01 Feb 2014; Mike Frysinger <vapier@gentoo.org> gpm-1.20.7-r1.ebuild:
+  Mark m68k/s390/sh stable.
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> gpm-1.20.7-r1.ebuild:
   Stable for alpha, wrt bug #476032
