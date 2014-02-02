@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/macchanger
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.25 2013/03/26 16:16:32 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/macchanger/ChangeLog,v 1.26 2014/02/02 20:03:42 robbat2 Exp $
+
+*macchanger-1.7.0 (02 Feb 2014)
+
+  02 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> +macchanger-1.7.0.ebuild,
+  macchanger-1.5.0-r2.ebuild, macchanger-1.6.0.ebuild:
+  Bump.
 
   26 Mar 2013; Jeroen Roovers <jer@gentoo.org> macchanger-1.5.0-r2.ebuild,
   macchanger-1.6.0.ebuild:
