@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gqradio
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.18 2012/09/07 22:19:40 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqradio/ChangeLog,v 1.20 2014/02/02 09:38:01 ssuominen Exp $
+
+  02 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/gqradio-1.9.2-underlinking.patch, gqradio-1.9.2.ebuild:
+  Fix underlinking (link against -lX11 -lm) wrt #492764 by Ted Tanberry
 
   07 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant maintainer from metadata.

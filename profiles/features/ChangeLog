@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.76 2014/01/19 19:13:09 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.77 2014/02/02 09:52:20 swift Exp $
+
+  02 Feb 2014; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
+  Cleanup of SELinux profile
+
+  02 Feb 2014; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
+  Drop SELinux related unmasking from selinux feature as base no longer masks
+  it
 
   19 Jan 2014; Sven Vermeulen <swift@gentoo.org> selinux/package.mask:
   Adding cachefilesd SELinux policy to the tree
