@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Attribute-Handlers
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.39 2013/03/02 16:10:12 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Attribute-Handlers/ChangeLog,v 1.40 2014/02/02 00:05:32 vapier Exp $
+
+  02 Feb 2014; Mike Frysinger <vapier@gentoo.org>
+  Attribute-Handlers-0.930.0.ebuild:
+  Add arm64/m68k love.
 
   02 Mar 2013; Agostino Sarubbo <ago@gentoo.org>
   Attribute-Handlers-0.930.0.ebuild:
