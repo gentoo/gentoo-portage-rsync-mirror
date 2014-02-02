@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.32 2014/01/18 04:52:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.33 2014/02/02 07:59:58 vapier Exp $
+
+*libtirpc-0.2.4-r1 (02 Feb 2014)
+
+  02 Feb 2014; Mike Frysinger <vapier@gentoo.org> +libtirpc-0.2.4-r1.ebuild:
+  Depend on virtual/krb5 for USE=kerberos rather than gssglue #493912 by Torsten
+  Kaiser.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> libtirpc-0.2.2-r1.ebuild,
   libtirpc-0.2.3.ebuild, libtirpc-0.2.4.ebuild:
