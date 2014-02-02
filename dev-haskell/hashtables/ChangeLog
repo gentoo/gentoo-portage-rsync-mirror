@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hashtables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.18 2014/01/19 10:43:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashtables/ChangeLog,v 1.19 2014/02/02 11:13:30 ago Exp $
+
+  02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> hashtables-1.1.2.1.ebuild:
+  Stable for sparc, wrt bug #488808
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hashtables-1.1.2.1.ebuild:
   Stable for ppc64, wrt bug #488808

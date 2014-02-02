@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.122 2014/02/01 22:47:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.123 2014/02/02 11:05:27 ago Exp $
+
+  02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> fail2ban-0.8.12.ebuild:
+  Stable for ppc, wrt bug #499802
 
   01 Feb 2014; Agostino Sarubbo <ago@gentoo.org> fail2ban-0.8.12.ebuild:
   Stable for x86, wrt bug #499802

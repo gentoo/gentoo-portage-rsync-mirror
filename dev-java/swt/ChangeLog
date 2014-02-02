@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.149 2013/09/21 12:54:36 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.150 2014/02/02 11:04:09 ago Exp $
+
+  02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> swt-3.7.2-r1.ebuild:
+  Stable for ppc, wrt bug #499478
 
   21 Sep 2013; Tom Wijsman <TomWij@gentoo.org> swt-4.2-r1.ebuild,
   swt-4.2-r2.ebuild, swt-4.2.ebuild:

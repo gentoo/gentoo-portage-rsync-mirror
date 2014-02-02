@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.338 2014/02/02 10:32:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.339 2014/02/02 11:08:18 ago Exp $
+
+  02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> lvm2-2.02.103.ebuild:
+  Stable for alpha, wrt bug #486278
 
   02 Feb 2014; Patrick Lauer <patrick@gentoo.org> lvm2-2.02.105-r1.ebuild:
   Whitespace

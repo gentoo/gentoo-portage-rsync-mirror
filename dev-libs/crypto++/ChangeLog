@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/crypto++
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.90 2014/01/27 07:23:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.91 2014/02/02 11:02:41 ago Exp $
+
+  02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> crypto++-5.6.2-r1.ebuild:
+  Stable for ppc, wrt bug #499322
 
   27 Jan 2014; Jeroen Roovers <jer@gentoo.org> crypto++-5.6.2-r1.ebuild:
   Stable for HPPA (bug #499322).
