@@ -10,5 +10,5 @@ RDEPEND=dedicated? ( || ( games-server/ut2004-ded games-fps/ut2004[dedicated] ) 
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=mirror://3dgamers/unrealtourn2k4/Missions/ut2004megapack-linux.tar.bz2 http://0day.icculus.org/ut2004/ut2004megapack-linux.tar.bz2 ftp://ftp.games.skynet.be/pub/misc/ut2004megapack-linux.tar.bz2 http://sonic-lux.net/data/mirror/ut2004/ut2004megapack-linux.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	4ec77bd42c2d1f20bb686dd0d63b9fb9	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0e2f69d5415e0363531260d2eabb0826	games-mods	9d44c6f45289592ca9cf29d77424a048	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=e1d92db5cfb547ac10481ded7163b900

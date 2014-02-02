@@ -8,5 +8,5 @@ RDEPEND=sys-libs/glibc dedicated? ( app-misc/screen ) amd64? ( app-emulation/emu
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://idsoftware/quake4/demo/quake4-linux-1.0-demo.x86.run http://www.3ddownloads.com/Action/Quake%204/Demos/quake4-linux-1.0-demo.x86.run mirror://3dgamers/quake4/quake4-linux-1.0-demo.x86.run http://filebase.gmpf.de/quake4/quake4-linux-1.0-demo.x86.run http://www.holarse.de/mirror/quake4-linux-1.0-demo.x86.run http://sonic-lux.net/data/mirror/quake4/quake4-linux-1.0-demo.x86.run
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	4ec77bd42c2d1f20bb686dd0d63b9fb9	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	04385b0f181c42fa9c18ec0e31729d1f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0e2f69d5415e0363531260d2eabb0826	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	04385b0f181c42fa9c18ec0e31729d1f	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=92d2ce990c2e733284e5304508fefdc9

@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.115 2014/01/18 03:51:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.116 2014/02/02 12:08:04 polynomial-c Exp $
+
+*procps-3.3.9-r1 (02 Feb 2014)
+
+  02 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +procps-3.3.9-r1.ebuild:
+  Added selinux (bug #499010) and systemd (bug #498888) support.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> procps-3.3.8-r2.ebuild,
   procps-3.3.9.ebuild:
