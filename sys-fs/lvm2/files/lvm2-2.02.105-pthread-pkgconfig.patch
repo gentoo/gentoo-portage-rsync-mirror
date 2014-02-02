@@ -1,0 +1,9 @@
+diff -Nuar LVM2.2.02.105.orig/libdm/libdevmapper.pc.in LVM2.2.02.105/libdm/libdevmapper.pc.in
+--- LVM2.2.02.105.orig/libdm/libdevmapper.pc.in	2014-01-20 11:25:30.000000000 -0800
++++ LVM2.2.02.105/libdm/libdevmapper.pc.in	2014-02-01 14:50:58.805455421 -0800
+@@ -8,4 +8,5 @@
+ Version: @DM_LIB_PATCHLEVEL@
+ Cflags: -I${includedir} 
+ Libs: -L${libdir} -ldevmapper
++Libs.private: -L${libdir} @PTHREAD_LIBS@
+ Requires.private: @SELINUX_PC@ @UDEV_PC@
