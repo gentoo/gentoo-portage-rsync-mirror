@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.636 2014/02/02 09:49:34 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.637 2014/02/03 12:42:50 vapier Exp $
+
+  03 Feb 2014; Mike Frysinger <vapier@gentoo.org> package.use.mask:
+  Mask elfutils[threads] for now. #465754 by Toralf Förster.
 
   02 Feb 2014; Sven Vermeulen <swift@gentoo.org> package.mask:
   Remove selinux mask as it is fully managed and controlled through

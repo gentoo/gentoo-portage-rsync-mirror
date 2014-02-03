@@ -1,10 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.542 2014/02/01 21:02:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.543 2014/02/03 12:42:50 vapier Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 #
+
+# Mike Frysinger <vapier@gentoo.org> (03 Feb 2014)
+# Upstream says to not use this for now.
+dev-libs/elfutils threads
 
 # Mike Gilbert <floppym@gentoo.org> (01 Feb 2014)
 # Build failures (bug 499072)

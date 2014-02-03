@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.158.ebuild,v 1.2 2014/01/18 02:44:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.158.ebuild,v 1.3 2014/02/03 12:32:51 vapier Exp $
 
 EAPI="4"
 
@@ -36,6 +36,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.118-PaX-support.patch
 	epatch "${DISTDIR}"/${P}-{portability,robustify}.patch
+	epatch "${FILESDIR}"/${PN}-0.158-tests-backtrace-native-core.patch
 	use static-libs || sed -i -e '/^lib_LIBRARIES/s:=.*:=:' -e '/^%.os/s:%.o$::' lib{asm,dw,elf}/Makefile.in
 	# some patches touch both configure and configure.ac
 	find -type f -exec touch -r configure {} +
