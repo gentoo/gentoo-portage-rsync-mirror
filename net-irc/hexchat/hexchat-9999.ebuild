@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.11 2013/10/05 02:22:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-9999.ebuild,v 1.12 2014/02/03 02:25:40 hasufell Exp $
 
 EAPI=5
 
@@ -52,7 +52,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	mkdir m4 || die
 	sed -i \
 		-e "/intl\/Makefile/d" \
 		-e "/po\/Makefile.in/d" \
