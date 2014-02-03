@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Readonly-XS
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly-XS/ChangeLog,v 1.11 2013/10/07 09:06:37 pinkbyte Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly-XS/ChangeLog,v 1.12 2014/02/03 21:04:22 zlogene Exp $
+
+  03 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Readonly-XS-1.50.0.ebuild:
+  Add ~s390 wrt bug #484456
 
   07 Oct 2013; Sergey Popov <pinkbyte@gentoo.org> Readonly-XS-1.50.0.ebuild:
   Add ~arm keyword, wrt bug #484458
