@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.199 2014/01/24 21:26:08 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.200 2014/02/03 18:22:10 alonbl Exp $
+
+*libgcrypt-1.6.0-r1 (03 Feb 2014)
+
+  03 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/libgcrypt-1.6.0-gcry_md_reset.patch, +libgcrypt-1.6.0-r1.ebuild,
+  -libgcrypt-1.6.0.ebuild:
+  fix performance issues, bug#497654, thanks to Alexandre Rostovtsev
 
   24 Jan 2014; Alon Bar-Lev <alonbl@gentoo.org>
   +files/libgcrypt-1.6.0-serial-tests.patch, libgcrypt-1.6.0.ebuild:

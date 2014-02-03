@@ -1,6 +1,15 @@
 # ChangeLog for x11-misc/slim
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.135 2013/12/22 13:23:30 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/ChangeLog,v 1.136 2014/02/03 18:19:16 axs Exp $
+
+*slim-1.3.6-r4 (03 Feb 2014)
+
+  03 Feb 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/slim-1.3.6-fix-slimlock-nopam-v2.patch, +slim-1.3.6-r4.ebuild,
+  -files/slim-1.3.4-config.diff, -files/slim-1.3.5-glibc217-crypt.patch,
+  -files/slim-1.3.5-honour-cflags.patch,
+  -files/slim-1.3.5-systemd-service.patch, -slim-1.3.5-r4.ebuild:
+  install slimlock suid, bug 500204; remove old
 
   22 Dec 2013; Agostino Sarubbo <ago@gentoo.org> slim-1.3.6-r3.ebuild:
   Stable for ppc64, wrt bug #491492

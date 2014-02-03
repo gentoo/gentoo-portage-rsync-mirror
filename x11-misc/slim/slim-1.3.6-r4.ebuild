@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.5-r4.ebuild,v 1.7 2013/12/17 13:00:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.6-r4.ebuild,v 1.1 2014/02/03 18:19:16 axs Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="branding pam consolekit"
 REQUIRED_USE="consolekit? ( pam )"
 
@@ -22,11 +22,12 @@ RDEPEND="x11-libs/libXmu
 	x11-libs/libXpm
 	x11-libs/libXft
 	media-libs/libpng:0=
-	virtual/jpeg
+	virtual/jpeg:=
 	x11-apps/sessreg
 	consolekit? ( sys-auth/consolekit
 		sys-apps/dbus )
-	pam? ( virtual/pam )"
+	pam? (	virtual/pam
+		!x11-misc/slimlock )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	x11-proto/xproto"
@@ -34,12 +35,15 @@ PDEPEND="branding? ( >=x11-themes/slim-themes-1.2.3a-r3 )"
 
 src_prepare() {
 	# Our Gentoo-specific config changes
-	epatch "${FILESDIR}"/${PN}-1.3.4-config.diff
-	epatch "${FILESDIR}"/${P}-arm.patch
-	epatch "${FILESDIR}"/${P}-systemd-service.patch
+	epatch "${FILESDIR}"/${P}-config.diff
+	epatch "${FILESDIR}"/${PN}-1.3.5-arm.patch
 	epatch "${FILESDIR}"/${P}-honour-cflags.patch
-	epatch "${FILESDIR}"/${P}-disable-ck-for-systemd.patch
-	epatch "${FILESDIR}"/${P}-glibc217-crypt.patch
+	epatch "${FILESDIR}"/${P}-libslim-cmake-fixes.patch
+	epatch "${FILESDIR}"/${PN}-1.3.5-disable-ck-for-systemd.patch
+	epatch "${FILESDIR}"/${P}-strip-systemd-unit-install.patch
+	epatch "${FILESDIR}"/${P}-systemd-session.patch
+	epatch "${FILESDIR}"/${P}-session-chooser.patch
+	epatch "${FILESDIR}"/${P}-fix-slimlock-nopam-v2.patch
 
 	if use elibc_FreeBSD; then
 		sed -i -e 's/"-DHAVE_SHADOW"/"-DNEEDS_BASENAME"/' CMakeLists.txt \
@@ -65,7 +69,10 @@ src_install() {
 
 	if use pam ; then
 		pamd_mimic system-local-login slim auth account session
+		pamd_mimic system-local-login slimlock auth
 	fi
+
+	systemd_dounit slim.service
 
 	insinto /usr/share/slim
 	newins "${FILESDIR}/Xsession-r3" Xsession
