@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/virtualenv
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.111 2013/12/24 12:52:43 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.112 2014/02/03 10:01:33 jlec Exp $
+
+*virtualenv-1.11.2 (03 Feb 2014)
+
+  03 Feb 2014; Justin Lecher <jlec@gentoo.org> +virtualenv-1.11.2.ebuild:
+  Version Bump
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> virtualenv-1.10.1.ebuild:
   Stable for x86, wrt bug #490816
