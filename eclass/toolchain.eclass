@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.621 2014/01/24 04:13:58 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.622 2014/02/02 23:43:48 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -770,6 +770,7 @@ do_gcc_rename_java_bins() {
 #---->> src_configure <<----
 
 toolchain_src_configure() {
+	downgrade_arch_flags
 	gcc_do_filter_flags
 
 	einfo "CFLAGS=\"${CFLAGS}\""
@@ -1206,6 +1207,129 @@ toolchain_src_configure() {
 	popd > /dev/null
 }
 
+# Replace -m flags unsupported by the version being built with the best
+# available equivalent
+downgrade_arch_flags() {
+	local arch bver i isa myarch mytune rep ver
+
+	bver=${1:-${GCC_BRANCH_VER}}
+	[[ $(gcc-version) < ${bver} ]] && return 0
+
+	myarch=$(get-flag march)
+	mytune=$(get-flag mtune)
+
+	# If -march=native isn't supported we have to tease out the actual arch
+	if [[ ${myarch} == native || ${mytune} == native ]] ; then
+		if [[ ${bver} < "4.2" ]] ; then
+			arch=$(echo "" | $(tc-getCC) -march=native -v -E - 2>&1 \
+				 | grep cc1 | sed -e 's:.*-march=\([^ ]*\).*:\1:')
+			replace-cpu-flags native ${arch}
+		fi
+	fi
+
+	# Handle special -mtune flags
+	[[ ${mytune} == intel && ${bver} < "4.9" ]] && replace-cpu-flags intel generic
+	[[ ${mytune} == generic && ${bver} < "4.2" ]] && filter-flags '-mtune=*'
+	[[ ${mytune} == x86-64 ]] && filter-flags '-mtune=*'
+
+	declare -a archlist
+	# "arch" "added" "replacement"
+	archlist=("bdver4 4.9 bdver3")
+	archlist+=("bonnell 4.9 atom")
+	archlist+=("broadwell 4.9 core-avx2")
+	archlist+=("haswell 4.9 core-avx2")
+	archlist+=("ivybridge 4.9 core-avx-i")
+	archlist+=("nehalem 4.9 corei7")
+	archlist+=("sandybridge 4.9 corei7-avx")
+	archlist+=("silvermont 4.9 corei7")
+	archlist+=("westmere 4.9 corei7")
+	archlist+=("bdver3 4.8 bdver2")
+	archlist+=("btver2 4.8 btver1")
+	archlist+=("bdver2 4.7 bdver1")
+	archlist+=("core-avx2 4.7 core-avx-i")
+	archlist+=("bdver1 4.6 amdfam10")
+	archlist+=("btver1 4.6 amdfam10")
+	archlist+=("core-avx-i 4.6 core2")
+	archlist+=("corei7 4.6 core2")
+	archlist+=("corei7-avx 4.6 core2")
+	archlist+=("atom 4.5 core2")
+	archlist+=("amdfam10 4.3 k8")
+	archlist+=("athlon64-sse3 4.3 k8")
+	archlist+=("barcelona 4.3 k8")
+	archlist+=("core2 4.3 nocona")
+	archlist+=("geode 4.3 k6-2") # gcc.gnu.org/PR41989#c22
+	archlist+=("k8-sse3 4.3 k8")
+	archlist+=("opteron-sse3 4.3 k8")
+	archlist+=("athlon-fx 3.4 x86-64")
+	archlist+=("athlon64 3.4 x86-64")
+	archlist+=("c3-2 3.4 c3")
+	archlist+=("k8 3.4 x86-64")
+	archlist+=("opteron 3.4 x86-64")
+	archlist+=("pentium-m 3.4 pentium3")
+	archlist+=("pentium3m 3.4 pentium3")
+	archlist+=("pentium4m 3.4 pentium4")
+
+	myarch=$(get-flag march)
+	mytune=$(get-flag mtune)
+
+	for ((i=0; i < ${#archlist[@]}; i++)) ; do
+		arch=${archlist[i]%% *}
+		ver=${archlist[i]#* } ver=${ver% *}
+		rep=${archlist[i]##* }
+
+		[[ ${myarch} != ${arch} ]] && [[ ${mytune} != ${arch} ]] && continue
+		
+		if [[ ${ver} > ${bver} ]] ; then
+			einfo "Replacing ${myarch} (added in ${ver}) with ${rep}..."
+			[[ ${myarch} == ${arch} ]] && replace-cpu-flags ${myarch} ${rep}
+			[[ ${mytune} == ${arch} ]] && replace-cpu-flags ${mytune} ${rep}
+			downgrade_arch_flags ${1:-${GCC_BRANCH_VER}}
+			break
+		else
+			break
+		fi
+	done
+
+	declare -a isalist
+	isalist=("-msha 4.9")
+	isalist+=("-mavx512pf 4.9")
+	isalist+=("-mavx512f 4.9")
+	isalist+=("-mavx512er 4.9")
+	isalist+=("-mavx512cd 4.9")
+	isalist+=("-mxsaveopt 4.8")
+	isalist+=("-mxsave 4.8")
+	isalist+=("-mrtm 4.8")
+	isalist+=("-mfxsr 4.8")
+	isalist+=("-mlzcnt 4.7")
+	isalist+=("-mbmi2 4.7")
+	isalist+=("-mavx2 4.7")
+	isalist+=("-mtbm 4.6")
+	isalist+=("-mrdrnd 4.6")
+	isalist+=("-mfsgsbase 4.6")
+	isalist+=("-mf16c 4.6")
+	isalist+=("-mbmi 4.6")
+	isalist+=("-mxop 4.5")
+	isalist+=("-mlwp 4.5")
+	isalist+=("-mfma4 4.5")
+	isalist+=("-mpclmul 4.4")
+	isalist+=("-mfma 4.4")
+	isalist+=("-mavx 4.4")
+	isalist+=("-maes 4.4")
+	isalist+=("-mssse3 4.3")
+	isalist+=("-msse4a 4.3")
+	isalist+=("-msse4 4.3")
+	isalist+=("-msse4.2 4.3")
+	isalist+=("-msse4.1 4.3")
+	isalist+=("-mpopcnt 4.3")
+	isalist+=("-mabm 4.3")
+
+	for ((i=0; i < ${#isalist[@]}; i++)) ; do
+		isa=${isalist[i]%% *}
+		ver=${isalist[i]##* }
+		[[ ${ver} > ${bver} ]] && filter-flags ${isa} ${isa/-m/-mno-}
+	done
+}
+
 gcc_do_filter_flags() {
 	strip-flags
 	replace-flags -O? -O2
@@ -1217,22 +1341,9 @@ gcc_do_filter_flags() {
 
 	if tc_version_is_between 3.2 3.4 ; then
 		# XXX: this is so outdated it's barely useful, but it don't hurt...
-		replace-cpu-flags k8 athlon64 opteron x86-64
-		replace-cpu-flags pentium-m pentium3m pentium3
 		replace-cpu-flags G3 750
 		replace-cpu-flags G4 7400
 		replace-cpu-flags G5 7400
-
-		case $(tc-arch) in
-			amd64)
-				replace-cpu-flags core2 nocona
-				filter-flags '-mtune=*'
-				;;
-			x86)
-				replace-cpu-flags core2 prescott
-				filter-flags '-mtune=*'
-				;;
-		esac
 
 		# XXX: should add a sed or something to query all supported flags
 		#      from the gcc source and trim everything else ...

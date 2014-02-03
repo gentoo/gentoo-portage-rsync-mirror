@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-6.1.4.ebuild,v 1.3 2013/06/01 08:59:57 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/zygrib/zygrib-6.2.3.ebuild,v 1.1 2014/02/02 23:42:54 mschiff Exp $
 
 EAPI=5
 
@@ -35,9 +35,6 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_prepare() {
-	sed -i 's,/usr/include/qwt ,/usr/include/qwt6 ,' src/zyGrib.pro
-	sed -i 's,/usr/local/qwt6/lib/,/usr/lib/,' src/zyGrib.pro
-	sed -i 's,-lqwt,-lqwt6,' src/zyGrib.pro
 	sed -i 's,INSTALLDIR=$(HOME)/zyGrib,INSTALLDIR=$(DESTDIR)/opt/zyGrib,' Makefile
 }
 

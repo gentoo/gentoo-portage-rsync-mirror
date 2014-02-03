@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1135 2014/02/02 12:15:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1136 2014/02/02 23:43:48 dirtyepic Exp $
+
+  02 Feb 2014; Ryan Hill <dirtyepic@gentoo.org> +tests/toolchain.sh,
+  toolchain.eclass:
+  Add downgrade_arch_flags() to automatically replace/strip unsupported -march
+  and instruction set flags. Add testsuite.
 
   02 Feb 2014; Julian Ospald <hasufell@gentoo.org> games.eclass:
   respect ECONF_SOURCE wrt #494210

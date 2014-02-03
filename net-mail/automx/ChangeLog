@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/automx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/ChangeLog,v 1.11 2014/02/02 23:28:34 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/automx/ChangeLog,v 1.12 2014/02/02 23:32:38 mschiff Exp $
+
+  02 Feb 2014; Marc Schiffbauer <mschiff@gentoo.org> -automx-0.10.0.ebuild:
+  Remove Version 0.10.0. Fixes bug #496642. Thanks to Rolf Eike Beer.
 
 *automx-0.10.1 (02 Feb 2014)
 
