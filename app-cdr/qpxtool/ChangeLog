@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/qpxtool
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.24 2014/01/31 19:31:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/ChangeLog,v 1.25 2014/02/03 06:34:59 polynomial-c Exp $
+
+  03 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> qpxtool-0.7.2.ebuild:
+  Removed useless comment.
 
 *qpxtool-0.7.2 (31 Jan 2014)
 

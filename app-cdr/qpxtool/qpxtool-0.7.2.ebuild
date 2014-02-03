@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.7.2.ebuild,v 1.1 2014/01/31 19:31:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.7.2.ebuild,v 1.2 2014/02/03 06:34:59 polynomial-c Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs qt4-r2
@@ -32,7 +32,6 @@ src_configure() {
 	cd gui || die
 	mv -v Makefile{,.orig} || die "Backup Makefile for install"
 	qt4-r2_src_configure
-	#cp -v Makefile{.orig,} || die
 }
 
 src_install() {
