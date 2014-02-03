@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.33 2014/01/27 16:12:43 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.34 2014/02/03 18:45:12 blueness Exp $
+
+  03 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/uclibc/package.mask:
+  Remove -sys-libs/uclibc from hardened/linux/uclibc/package.mask, bug #500202
 
   27 Jan 2014; Anthony G. Basile <blueness@gentoo.org> linux/musl/use.mask:
   hardened/linux/musl: provide nls support with gettext
