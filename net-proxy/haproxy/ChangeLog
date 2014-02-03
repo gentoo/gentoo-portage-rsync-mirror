@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/haproxy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.87 2013/12/17 12:31:19 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/ChangeLog,v 1.88 2014/02/03 21:49:10 idl0r Exp $
+
+*haproxy-1.5_beta22 (03 Feb 2014)
+
+  03 Feb 2014; Christian Ruppert <idl0r@gentoo.org>
+  -haproxy-1.5_beta19-r1.ebuild, +haproxy-1.5_beta22.ebuild:
+  Version bump
 
 *haproxy-1.5_beta21 (17 Dec 2013)
 

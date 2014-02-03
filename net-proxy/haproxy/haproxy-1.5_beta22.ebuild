@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5_beta19-r1.ebuild,v 1.1 2013/09/17 12:30:09 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5_beta22.ebuild,v 1.1 2014/02/03 21:49:10 idl0r Exp $
 
 EAPI="5"
 
@@ -68,7 +68,7 @@ src_compile() {
 	fi
 
 	# For now, until the strict-aliasing breakage will be fixed
-#	append-cflags -fno-strict-aliasing
+	append-cflags -fno-strict-aliasing
 
 	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args}
 
