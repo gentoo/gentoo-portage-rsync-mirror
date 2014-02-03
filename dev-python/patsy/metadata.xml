@@ -7,4 +7,7 @@
   design matrices. It is closely inspired by and compatible with the
   'formula' mini-language used in R and S.
 </longdescription>
+<upstream>
+  <remote-id type="pypi">patsy</remote-id>
+</upstream>
 </pkgmetadata>
