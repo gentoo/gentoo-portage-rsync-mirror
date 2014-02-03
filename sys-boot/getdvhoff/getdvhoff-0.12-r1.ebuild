@@ -1,13 +1,14 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/getdvhoff-0.12-r1.ebuild,v 1.4 2011/02/06 22:23:06 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/getdvhoff/getdvhoff-0.12-r1.ebuild,v 1.5 2014/02/03 09:10:58 kumba Exp $
 
+EAPI="5"
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Utility for use on LiveCDs to calculate offset of the ext2 partition for losetup"
 HOMEPAGE="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/"
 SRC_URI="ftp://ftp.linux-mips.org/pub/linux/mips/people/skylark/sgibootcd-${PV}.tar.bz2"
-LICENSE="as-is"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* ~mips"
 IUSE=""
@@ -32,5 +33,5 @@ src_compile() {
 src_install() {
 	cd ${MY_S}
 	dodir /usr/lib/${PN}
-	cp ${MY_S}/${PN} ${D}/usr/lib/${PN}
+	cp "${MY_S}"/"${PN}" "${D}"/usr/lib/"${PN}"
 }
