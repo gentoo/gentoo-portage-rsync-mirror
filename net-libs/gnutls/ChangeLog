@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.460 2014/01/24 19:56:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.461 2014/02/03 20:20:36 radhermit Exp $
+
+*gnutls-3.2.10 (03 Feb 2014)
+
+  03 Feb 2014; Tim Harder <radhermit@gentoo.org> +gnutls-3.2.10.ebuild,
+  metadata.xml:
+  Version bump, add crywrap use flag (bug #498034 by James Le Cuirot), and
+  remove C++ compiler checks when cxx support is disabled (bug #497472).
 
 *gnutls-3.2.9 (24 Jan 2014)
 
