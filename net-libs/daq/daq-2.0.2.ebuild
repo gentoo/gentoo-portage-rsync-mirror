@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-0.6.2.ebuild,v 1.7 2014/02/03 07:33:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-2.0.2.ebuild,v 1.1 2014/02/03 07:33:22 kumba Exp $
 
 EAPI="4"
 
@@ -8,10 +8,10 @@ inherit eutils multilib
 
 DESCRIPTION="Data Acquisition library, for packet I/O"
 HOMEPAGE="http://www.snort.org/"
-SRC_URI="http://www.snort.org/downloads/1339 -> ${P}.tar.gz"
+SRC_URI="http://www.snort.org/downloads/2778 -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips ~ppc x86"
+KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ipv6 +afpacket +dump +pcap nfq ipq static-libs"
 
 DEPEND="pcap? ( >=net-libs/libpcap-1.0.0 )
@@ -43,18 +43,17 @@ src_install() {
 	dodoc ChangeLog README
 
 	# Remove unneeded .la files
-	for x in pcap afpacket dump nfq ipq; do
-		rm "${D}"usr/lib64/daq/daq_${x}.la
-	done
-	for y in libdaq libdaq_static libdaq_static_modules libsfbpf; do
-		rm "${D}"usr/lib64/${y}.la
-	done
+	rm \
+		"${D}"usr/$(get_libdir)/daq/*.la \
+		"${D}"usr/$(get_libdir)/libdaq*.la \
+		"${D}"usr/$(get_libdir)/libsfbpf.la \
+	|| die
 
 	# If not using static-libs don't install the static libraries
 	# This has been bugged upstream
 	if ! use static-libs; then
 		for z in libdaq_static libdaq_static_modules; do
-			rm "${D}"usr/lib64/${z}.a
+			rm "${D}"usr/$(get_libdir)/${z}.a
 		done
 	fi
 }

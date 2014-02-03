@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-2.0.0.ebuild,v 1.1 2013/05/31 02:48:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/daq-2.0.0.ebuild,v 1.2 2014/02/03 07:33:22 kumba Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils multilib
 
@@ -39,7 +39,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
 	dodoc ChangeLog README
 
 	# Remove unneeded .la files
@@ -47,7 +47,7 @@ src_install() {
 		"${D}"usr/$(get_libdir)/daq/*.la \
 		"${D}"usr/$(get_libdir)/libdaq*.la \
 		"${D}"usr/$(get_libdir)/libsfbpf.la \
-		|| die
+	|| die
 
 	# If not using static-libs don't install the static libraries
 	# This has been bugged upstream
