@@ -1,11 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.1-r1.ebuild,v 1.6 2012/12/16 15:20:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.1-r1.ebuild,v 1.7 2014/02/03 16:43:30 jlec Exp $
 
 EAPI=4
-
-# autotools for auto* dependencies
-inherit autotools
 
 DESCRIPTION="interactive process viewer"
 HOMEPAGE="http://htop.sourceforge.net"
@@ -23,13 +20,13 @@ DOCS=( ChangeLog README )
 
 pkg_setup() {
 	if use kernel_FreeBSD && ! [[ -f ${ROOT}/compat/linux/proc/stat && -f ${ROOT}/compat/linux/proc/meminfo ]]; then
-		eerror
+		echo
 		eerror "htop requires linprocfs mounted at /compat/linux/proc to build and function."
 		eerror "To mount it, type:"
 		[ -d /compat/linux/proc ] || eerror "mkdir -p /compat/linux/proc"
 		eerror "mount -t linprocfs none /compat/linux/proc"
 		eerror "Alternatively, place this information into /etc/fstab"
-		eerror
+		echo
 		die "htop needs /compat/linux/proc mounted"
 	fi
 

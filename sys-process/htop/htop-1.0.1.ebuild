@@ -1,11 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.1.ebuild,v 1.11 2012/07/12 18:14:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.1.ebuild,v 1.12 2014/02/03 16:43:30 jlec Exp $
 
 EAPI=4
-
-# autotools for auto* dependencies
-inherit autotools
 
 DESCRIPTION="interactive process viewer"
 HOMEPAGE="http://htop.sourceforge.net"
@@ -22,12 +19,12 @@ DEPEND="${RDEPEND}"
 DOCS=( ChangeLog README )
 
 pkg_setup() {
-	if use elibc_FreeBSD && ! [[ -f ${ROOT}/proc/stat && -f ${ROOT}/proc/meminfo ]]; then
-		eerror
+	if use elibc_FreeBSD && ! [[ -f "${ROOT}/proc/stat" && -f "${ROOT}/proc/meminfo" ]]; then
+		echo
 		eerror "htop needs /proc mounted to compile and work, to mount it type"
 		eerror "mount -t linprocfs none /proc"
 		eerror "or uncomment the example in /etc/fstab"
-		eerror
+		echo
 		die "htop needs /proc mounted"
 	fi
 
