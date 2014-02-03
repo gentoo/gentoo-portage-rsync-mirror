@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/files/opendnssec.initd-1.3.x,v 1.3 2013/11/12 09:15:44 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/files/opendnssec.initd-1.3.x,v 1.4 2014/02/03 00:05:16 mschiff Exp $
 
 description="An open-source turn-key solution for DNSSEC"
 
@@ -109,6 +109,8 @@ stop_eppclient() {
 
 start() {
 	checkconfig || return $?
+	test -d /run/opendnssec || mkdir -p /run/opendnssec
+	chown opendnssec:opendnssec /run/opendnssec
 	start_enforcer || return $?
 	start_signer || return $?
 	start_eppclient || return $?

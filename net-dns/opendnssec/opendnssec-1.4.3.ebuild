@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.4.2-r2.ebuild,v 1.1 2013/11/25 22:54:50 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.4.3.ebuild,v 1.1 2014/02/03 00:05:16 mschiff Exp $
 
 EAPI=5
 
@@ -162,7 +162,6 @@ src_install() {
 	fowners root:opendnssec /etc/opendnssec
 	fowners root:opendnssec /etc/opendnssec/{addns,conf,kasp,zonelist}.xml
 	fowners opendnssec:opendnssec /var/lib/opendnssec/{,signconf,unsigned,signed,tmp}
-	fowners opendnssec:opendnssec /run/opendnssec
 
 	# install conf/init script
 	newinitd "${FILESDIR}"/opendnssec.initd opendnssec
