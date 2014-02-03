@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/sympy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.27 2013/12/28 20:31:19 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.28 2014/02/03 01:56:57 bicatali Exp $
+
+*sympy-0.7.4.1 (03 Feb 2014)
+
+  03 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +sympy-0.7.4.1.ebuild,
+  -files/sympy-0.6.6-sphinx.patch, -files/sympy-0.6.7-python-2.7.patch,
+  -files/sympy-0.7.1-mpmath.patch, -files/sympy-0.7.2-mpmath.patch,
+  -sympy-0.6.7.ebuild, -sympy-0.7.0.ebuild, -sympy-0.7.1.ebuild,
+  -sympy-0.7.2-r1.ebuild, -sympy-0.7.2.ebuild, metadata.xml:
+  Version bump and cleanup, reworked tests, forced system mpmath dependency
 
   28 Dec 2013; Justin Lecher <jlec@gentoo.org> sympy-0.7.3.ebuild:
   Add workaround for XDG_CONFIG_HOME problems, #488378
