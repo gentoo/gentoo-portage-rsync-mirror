@@ -4332,21 +4332,26 @@ net-analyzer/smokeping:echoping - Install net-analyzer/echoping for echoping fun
 net-analyzer/smokeping:ssh - Install ssh functionality
 net-analyzer/smokeping:telnet - Install dev-perl/Net-Telnet for telnet functionality
 net-analyzer/snort:active-response - Enables support for automatically sending TCP resets and ICMP unreachable messages to terminate connections. Used with inline deployments.
-net-analyzer/snort:aruba - Adds support for monitoring wireless traffic using a Aruba Mobility Controler.
-net-analyzer/snort:decoder-preprocessor-rules - Added support to provide action control (alert, drop, pass, etc) over preprocessor and decoder generated events.
+net-analyzer/snort:control-socket - Enables Snort's control socket.
 net-analyzer/snort:dynamicplugin - Enable ability to dynamically load preprocessors, detection engine, and rules library. This is required if you want to use shared object (SO) snort rules.
+net-analyzer/snort:file-inspect - Enables extended file inspection capabilities.
 net-analyzer/snort:flexresp3 - Enables support for new flexable response preprocessor for enabling connection tearing for inline deployments. Replaces flexresp and flexresp2.
 net-analyzer/snort:gre - Enable support for inspecting and processing Generic Routing Encapsulation (GRE) packet headders. Only needed if you are monitoring GRE tunnels.
+net-analyzer/snort:high-availability - Enables high-availability state sharing.
 net-analyzer/snort:inline-init-failopen - Enables support to allow traffic to pass (fail-open) through inline deployments while snort is starting and not ready to begin inspecting traffic. If this option is not enabled, network traffic will not pass (fail-closed) until snort has fully started and is ready to perform packet inspection.
 net-analyzer/snort:large-pcap-64bit - Allows Snort to read pcap files that are larger than 2 GB. ONLY VALID FOR 64bit SYSTEMS!
 net-analyzer/snort:linux-smp-stats - Enable accurate statistics reporting through /proc on systems with multipule processors.
 net-analyzer/snort:mpls - Enables support for processing and inspecting Multiprotocol Label Switching MPLS network network traffic. Only needed if you are monitoring an MPLS network.
+net-analyzer/snort:non-ether-decoders - Enable decoding of non-ethernet protocols such as TokenRing, FDDI, IPX, etc.
 net-analyzer/snort:normalizer - Enables support for normalizing packets in inline deployments to help minimize the chances of detection evasion.
 net-analyzer/snort:paf - Enables support for Protocol Aware Flushing. This allows Snort to statefully scan a stream and reassemble a complete protocol data unit regardless of segmentation.
 net-analyzer/snort:perfprofiling - Enables support for preprocessor and rule performance profiling using the perfmonitor preprocessor.
 net-analyzer/snort:ppm - Enables support for setting per rule or per packet latency limits. Helps protect against introducing network latency with inline deployments.
 net-analyzer/snort:react - Enables support for the react rule keyword. Supports interception, termination, and redirection of HTTP connections.
 net-analyzer/snort:reload-error-restart - Enables support for completely restarting snort if an error is detected durring a reload.
+net-analyzer/snort:shared-rep - Enables the use of shared memory for the Reputation Preprocessor (Only available on Linux systems)
+net-analyzer/snort:side-channel - Enables Snort's the side channel.
+net-analyzer/snort:sourcefire - Enables Sourcefire specific build options, which include --enable-perfprofiling and --enable-ppm.
 net-analyzer/snort:targetbased - Enables support in snort for using a host attibute XML file (attribute_table.dtd). This file needs to be created by the user and should define the IP address, operating system, and services for all hosts on the monitored network. This is cumbersome, but can improve intrusion detection accuracy.
 net-analyzer/snort:zlib - Enables HTTP inspection of compressed web traffic. Requires dynamicplugin be enabled.
 net-analyzer/symon:perl - Enables a generic perl symux client

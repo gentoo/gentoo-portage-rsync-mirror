@@ -31,23 +31,24 @@
 		<bugs-to>http://www.snort.org/snort-downloads/submit-a-bug/</bugs-to>
 	</upstream>
 	<use>
-		<flag name='aruba'>
-			Adds support for monitoring wireless traffic using a Aruba Mobility
-			Controler.
-		</flag>
-		<flag name='decoder-preprocessor-rules'>
-			Added support to provide action control (alert, drop, pass, etc)
-			over preprocessor and decoder generated events.
+		<flag name='control-socket'>
+			Enables Snort's control socket.
 		</flag>
 		<flag name='dynamicplugin'>
 			Enable ability to dynamically load preprocessors, detection engine,
 			and rules library. This is required if you want to use shared 
 			object (SO) snort rules.
 		</flag>
+		<flag name='file-inspect'>
+			Enables extended file inspection capabilities.
+		</flag>
 		<flag name='gre'>
 			Enable support for inspecting and processing Generic Routing 
 			Encapsulation (GRE) packet headders. Only needed if you are
 			monitoring GRE tunnels.
+		</flag>
+		<flag name='high-availability'>
+			Enables high-availability state sharing.
 		</flag>
 		<flag name='inline-init-failopen'>
 			Enables support to allow traffic to pass (fail-open) through
@@ -65,6 +66,10 @@
 			Switching MPLS network network traffic. Only needed if you are
 			monitoring an MPLS network.
 		</flag>
+		<flag name='non-ether-decoders'>
+			Enable decoding of non-ethernet protocols such as TokenRing, FDDI,
+			IPX, etc.
+		</flag>
 		<flag name='perfprofiling'>
 			Enables support for preprocessor and rule performance profiling 
 			using the perfmonitor preprocessor.
@@ -77,6 +82,17 @@
 		<flag name='react'>
 			Enables support for the react rule keyword. Supports interception,
 			termination, and redirection of HTTP connections.
+		</flag>
+		<flag name='shared-rep'>
+			Enables the use of shared memory for the Reputation Preprocessor
+			(Only available on Linux systems)
+		</flag>
+		<flag name='side-channel'>
+			Enables Snort's the side channel.
+		</flag>
+		<flag name='sourcefire'>
+			Enables Sourcefire specific build options, which include
+			--enable-perfprofiling and --enable-ppm.
 		</flag>
 		<flag name='targetbased'>
 			Enables support in snort for using a host attibute XML file 

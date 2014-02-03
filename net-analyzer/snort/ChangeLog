@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/snort
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.203 2013/08/18 03:06:45 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.204 2014/02/03 08:27:03 kumba Exp $
+
+*snort-2.9.6.0 (03 Feb 2014)
+*snort-2.9.5.6 (03 Feb 2014)
+*snort-2.9.4.6-r1 (03 Feb 2014)
+
+  03 Feb 2014; Joshua Kinard <kumba@gentoo.org> -snort-2.9.2.3-r1.ebuild,
+  -snort-2.9.4.6.ebuild, +snort-2.9.4.6-r1.ebuild, +snort-2.9.5.6.ebuild,
+  +snort-2.9.6.0.ebuild, -files/disabledynamic.patch, -files/snort.confd,
+  -files/snort.rc10, -files/snort.rc11, metadata.xml:
+  Removed EOL versions, cleaned up files/, added 2.9.5.6 and 2.9.6.0, removed
+  deprecated configure options and added newer ones. Fixes Bugs #485824 &
+  #472372.
 
   18 Aug 2013; Patrick Lauer <patrick@gentoo.org> snort-2.9.4.6.ebuild:
   Whitespace
