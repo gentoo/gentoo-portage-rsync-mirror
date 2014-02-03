@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15377 2014/01/31 13:09:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15378 2014/02/03 11:18:43 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -248,11 +248,6 @@ media-plugins/vdr-analogtv
 # Julian Ospald <hasufell@gentoo.org> (30 Dec 2013)
 # breaks every consumer
 =dev-games/ogre-1.9.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (28 Dec 2013)
-# Replaced by 'emerge @module-rebuild' set in Portage itself.
-# Removal in 30 days, see http://bugs.gentoo.org/410739
-sys-kernel/module-rebuild
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Dec 2013)
 # The required icons from faenza-xfce-icon-theme are now part of
