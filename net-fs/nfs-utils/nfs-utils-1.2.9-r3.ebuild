@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.9-r3.ebuild,v 1.1 2014/02/02 08:12:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.9-r3.ebuild,v 1.2 2014/02/03 14:30:24 vapier Exp $
 
 EAPI="4"
 
@@ -32,7 +32,6 @@ DEPEND_COMMON="tcpd? ( sys-apps/tcp-wrappers )
 		>=dev-libs/libevent-1.0b
 		>=net-libs/libnfsidmap-0.21-r1
 		kerberos? (
-			net-libs/librpcsecgss
 			>=net-libs/libtirpc-0.2.4-r1[kerberos]
 			app-crypt/mit-krb5
 		)
