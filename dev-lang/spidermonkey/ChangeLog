@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.133 2014/01/20 16:39:52 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.134 2014/02/03 13:19:33 axs Exp $
+
+  03 Feb 2014; Ian Stakenvicius <axs@gentoo.org> spidermonkey-24.2.0.ebuild:
+  restricted tests for ia64 on sm24
 
 *spidermonkey-17.0.0-r2 (20 Jan 2014)
 

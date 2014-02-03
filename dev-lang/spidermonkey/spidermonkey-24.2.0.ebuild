@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-24.2.0.ebuild,v 1.1 2014/01/06 20:18:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-24.2.0.ebuild,v 1.2 2014/02/03 13:19:33 axs Exp $
 
 EAPI="5"
 WANT_AUTOCONF="2.1"
@@ -18,6 +18,8 @@ LICENSE="NPL-1.1"
 SLOT="24"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug icu jit minimal static-libs +system-icu test"
+
+RESTRICT="ia64? ( test )"
 
 S="${WORKDIR}/${MY_P%.rc*}"
 BUILDDIR="${S}/js/src"
