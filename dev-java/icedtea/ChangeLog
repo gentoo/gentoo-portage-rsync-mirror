@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.115 2014/01/30 20:58:13 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.116 2014/02/03 08:49:54 sera Exp $
+
+*icedtea-7.2.4.5 (03 Feb 2014)
+
+  03 Feb 2014; Ralph Sennhauser <sera@gentoo.org> +icedtea-7.2.4.5.ebuild:
+  Version bump
 
   30 Jan 2014; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.13.1.ebuild:
   Fix sandbox violation #499746
