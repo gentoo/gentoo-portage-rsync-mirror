@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/burrow-owl-1.5.1.ebuild,v 1.3 2012/07/26 08:52:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/burrow-owl/burrow-owl-1.5.1.ebuild,v 1.4 2014/02/03 12:26:39 jlec Exp $
 
-EAPI=4
+EAPI=5
 
 inherit autotools-utils virtualx
 
@@ -39,13 +39,12 @@ src_configure() {
 }
 
 src_test () {
-#	autotools-utils_src_test -C test-suite check
 	cd "${AUTOTOOLS_BUILD_DIR}" || die
 	virtualmake -C test-suite check
 }
 
 src_install() {
-	use doc && HTML_DOCS=("${AUTOTOOLS_BUILD_DIR}/doc/api/html/")
+	use doc && HTML_DOCS=( "${AUTOTOOLS_BUILD_DIR}/doc/api/html/." )
 	autotools-utils_src_install
 
 	use examples && \
