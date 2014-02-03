@@ -1,6 +1,6 @@
 DEFINED_PHASES=-
 DESCRIPTION=Virtual for Switch
-KEYWORDS=amd64 ~hppa ppc x86 ~x86-fbsd
+KEYWORDS=amd64 ~hppa ~ia64 ppc x86 ~x86-fbsd
 RDEPEND=|| ( =dev-lang/perl-5.12* ~perl-core/Switch-2.160.0 )
 SLOT=0
-_md5_=ad54d6b84f5275e07c05b6a992c76658
+_md5_=cf143b24743ea9ffe37508d4542a26ee

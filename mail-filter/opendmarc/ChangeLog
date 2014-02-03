@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/opendmarc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/ChangeLog,v 1.5 2013/12/30 08:03:52 naota Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendmarc/ChangeLog,v 1.6 2014/02/03 13:36:52 hattya Exp $
+
+  03 Feb 2014; Akinori Hattori <hattya@gentoo.org> opendmarc-1.1.3.ebuild:
+  keyword ~ia64 wrt bug #489676
 
   30 Dec 2013; Naohiro Aota <naota@gentoo.org> opendmarc-1.1.3.ebuild:
   Add ~x86-fbsd.

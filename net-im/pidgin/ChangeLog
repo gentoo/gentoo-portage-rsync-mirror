@@ -1,6 +1,14 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.321 2014/01/31 16:59:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.322 2014/02/03 13:37:08 polynomial-c Exp $
+
+*pidgin-2.10.9-r1 (03 Feb 2014)
+*pidgin-2.10.9 (03 Feb 2014)
+
+  03 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -pidgin-2.10.8.ebuild,
+  -pidgin-2.10.8-r1.ebuild, +pidgin-2.10.9.ebuild, +pidgin-2.10.9-r1.ebuild:
+  Version bump to fix login errors for some XMPP servers. Committed straight to
+  stable where 2.10.8{,-r1} were stable.
 
   31 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> pidgin-2.10.8.ebuild,
   pidgin-2.10.8-r1.ebuild:
