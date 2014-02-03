@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.9-r1.ebuild,v 1.1 2014/02/02 12:08:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.3.9-r1.ebuild,v 1.2 2014/02/03 06:24:50 polynomial-c Exp $
 
 EAPI="4"
 
@@ -20,10 +20,10 @@ IUSE="+ncurses nls selinux static-libs systemd test unicode"
 
 RDEPEND="!<sys-apps/sysvinit-2.88-r6
 	ncurses? ( >=sys-libs/ncurses-5.7-r7[unicode?] )
+	selinux? ( sys-libs/libselinux )
 	systemd? ( >=sys-apps/systemd-206 )"
 DEPEND="${RDEPEND}
 	ncurses? ( virtual/pkgconfig )
-	selinux? ( sys-libs/libselinux )
 	systemd? ( virtual/pkgconfig )
 	test? ( dev-util/dejagnu )"
 
