@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.248 2014/01/06 21:44:16 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.249 2014/02/03 10:58:17 jer Exp $
+
+  03 Feb 2014; Jeroen Roovers <jer@gentoo.org> dhcp-4.2.5_p1-r2.ebuild:
+  Stable for HPPA (bug #499324).
 
   06 Jan 2014; Sergey Popov <pinkbyte@gentoo.org>
   -files/dhcp-3.0.2-gmake.patch, -files/dhcp-3.0.3-dhclient-dbus.patch,
