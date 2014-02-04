@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4.ebuild,v 1.2 2014/02/03 23:05:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4.ebuild,v 1.3 2014/02/04 07:15:41 pacho Exp $
 
 EAPI="5"
 
@@ -167,7 +167,7 @@ src_prepare() {
 		-i Source/WebKit/gtk/GNUmakefile.am || die
 
 	if ! use gstreamer; then
-		# webkit2's TestWebKitWebView requires <video> support, bug #???
+		# webkit2's TestWebKitWebView requires <video> support, upstream bug #128164
 		sed -e '/Programs\/WebKit2APITests\/TestWebKitWebView/ d' \
 			-i Tools/TestWebKitAPI/GNUmakefile.am || die
 	fi
@@ -178,7 +178,7 @@ src_prepare() {
 	# bug #459978, upstream bug #113397
 	epatch "${FILESDIR}/${PN}-1.11.90-gtk-docize-fix.patch"
 
-	# Do not build unittests unless requested, upstream bug #???
+	# Do not build unittests unless requested, upstream bug #128163
 	epatch "${FILESDIR}"/${PN}-2.2.4-unittests-build.patch
 
 	# Prevent maintainer mode from being triggered during make

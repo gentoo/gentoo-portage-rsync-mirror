@@ -1,19 +1,19 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-9999.ebuild,v 1.6 2014/02/04 07:31:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.18.0-r1.ebuild,v 1.1 2014/02/04 07:31:03 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit elisp-common autotools eutils git-2 python-single-r1
-
-EGIT_REPO_URI="git://git.sv.gnu.org/lilypond.git"
+inherit elisp-common autotools eutils python-single-r1
 
 DESCRIPTION="GNU Music Typesetter"
+SRC_URI="http://download.linuxaudio.org/lilypond/sources/v${PV:0:4}/${P}.tar.gz"
 HOMEPAGE="http://lilypond.org/"
 
 LICENSE="GPL-3 FDL-1.3"
 SLOT="0"
+KEYWORDS="~amd64 ~hppa ~x86"
 LANGS=" ca cs da de el eo es fi fr it ja nl ru sv tr uk vi zh_TW"
 IUSE="debug emacs profile vim-syntax ${LANGS// / linguas_}"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
@@ -45,6 +45,8 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.17.2-tex-docs.patch
+
 	if ! use vim-syntax ; then
 		sed -i 's/vim//' GNUmakefile.in || die
 	fi
@@ -98,7 +100,7 @@ src_install () {
 
 	python_fix_shebang "${ED}"
 
-	dodoc HACKING README.txt
+	dodoc AUTHORS.txt HACKING NEWS.txt README.txt
 }
 
 pkg_postinst() {

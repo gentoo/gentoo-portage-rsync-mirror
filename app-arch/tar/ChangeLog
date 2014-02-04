@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.196 2014/01/18 01:55:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.197 2014/02/04 07:20:08 jer Exp $
+
+  04 Feb 2014; Jeroen Roovers <jer@gentoo.org> tar-1.27.1-r1.ebuild:
+  Stable for HPPA (bug #496212).
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> tar-1.26-r1.ebuild,
   tar-1.27-r2.ebuild, tar-1.27.1-r1.ebuild, tar-1.27.1.ebuild:
