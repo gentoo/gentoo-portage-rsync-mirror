@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.130 2014/01/03 03:20:34 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.131 2014/02/04 12:19:32 polynomial-c Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -14,9 +14,6 @@ app-emulation/crossover-office-bin
 app-emulation/crossover-office-pro-bin
 app-emulation/playonlinux
 app-emulation/q4wine
-app-emulation/virtualbox
-app-emulation/virtualbox-extpack-oracle
-app-emulation/virtualbox-guest-additions
 app-emulation/vmware-player
 >=app-i18n/atokx3-3.0.0
 app-office/ooextras

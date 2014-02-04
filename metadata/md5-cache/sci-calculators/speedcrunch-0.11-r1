@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-qt/qtgui:4 dev-util/ninja >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=Fast and usable calculator for power users
+EAPI=5
+HOMEPAGE=http://speedcrunch.org/
+IUSE=doc linguas_ca_ES linguas_cs_CZ linguas_de_DE linguas_en_GB linguas_en_US linguas_es_AR linguas_es_ES linguas_et_EE linguas_eu_ES linguas_fi_FI linguas_fr_FR linguas_he_IL linguas_hu_HU linguas_id_ID linguas_it_IT linguas_ja_JP linguas_ko_KR linguas_lv_LV linguas_nb_NO linguas_nl_NL linguas_pl_PL linguas_pt_BR linguas_pt_PT linguas_ro_RO linguas_ru_RU linguas_sv_SE linguas_vi_VN linguas_zh_CN
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=dev-qt/qtgui:4
+SLOT=0
+SRC_URI=https://github.com/speedcrunch/SpeedCrunch/archive/0.11.tar.gz -> speedcrunch-0.11.tar.gz
+_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=a1c2f42bc1c56ee57c3de9a4fa7d4e02
