@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opencl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opencl/ChangeLog,v 1.6 2012/05/16 14:43:18 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opencl/ChangeLog,v 1.7 2014/02/04 20:45:23 chithanh Exp $
+
+  04 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  eselect-opencl-1.1.0-r1.ebuild:
+  Keyword ~ppc.
 
   16 May 2012; Alexis Ballier <aballier@gentoo.org>
   eselect-opencl-1.1.0-r1.ebuild:
@@ -28,4 +32,3 @@
   21 Jan 2012; Kacper Kowalik <xarthisius@gentoo.org>
   +eselect-opencl-1.1.0.ebuild, +metadata.xml:
   Initial import
-

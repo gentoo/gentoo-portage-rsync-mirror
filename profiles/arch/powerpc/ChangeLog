@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.257 2013/10/27 06:22:54 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.258 2014/02/04 20:57:22 chithanh Exp $
+
+  04 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ppc64/64ul/use.mask:
+  Mask opencl flag on ppc64, in preparation for unmasking it on ppc
 
   25 Oct 2013; Davide Pesavento <pesa@gentoo.org> package.use.force:
   Remove obsolete entry.

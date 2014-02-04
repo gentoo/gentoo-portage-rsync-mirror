@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.5.ebuild,v 1.5 2014/01/26 20:28:12 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-9.2.5.ebuild,v 1.6 2014/02/04 20:49:01 chithanh Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ FOLDER="${PV/_rc*/}"
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-SRC_PATCHES="mirror://gentoo/${PN}-9.2-gentoo-patches-02.tar.xz"
+SRC_PATCHES="mirror://gentoo/${PN}-9.2-gentoo-patches-03.tar.xz"
 if [[ $PV = 9999* ]]; then
 	SRC_URI="${SRC_PATCHES}"
 else
@@ -128,13 +128,11 @@ done
 
 DEPEND="${RDEPEND}
 	llvm? (
-		<sys-devel/llvm-3.4[${MULTILIB_USEDEP}]
 		>=sys-devel/llvm-2.9[${MULTILIB_USEDEP}]
 		r600-llvm-compiler? ( sys-devel/llvm[video_cards_radeon] )
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
 	opencl? (
-		<sys-devel/llvm-3.4[video_cards_radeon,${MULTILIB_USEDEP}]
 		>=sys-devel/llvm-3.3-r1[video_cards_radeon,${MULTILIB_USEDEP}]
 		>=sys-devel/clang-3.3[${MULTILIB_USEDEP}]
 		>=sys-devel/gcc-4.6

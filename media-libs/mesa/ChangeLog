@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.537 2014/02/03 21:44:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.538 2014/02/04 20:49:01 chithanh Exp $
+
+  04 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  mesa-9.2.5.ebuild:
+  Fix llvm-3.4 patches, bug #497886. Add patch to make opencl build on ppc,
+  upstream #68504.
 
 *mesa-10.0.3 (03 Feb 2014)
 
