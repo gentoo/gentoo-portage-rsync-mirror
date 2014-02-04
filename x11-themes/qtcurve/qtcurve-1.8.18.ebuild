@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.18.ebuild,v 1.1 2014/01/27 13:50:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.18.ebuild,v 1.2 2014/02/04 14:10:09 polynomial-c Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
-inherit cmake-utils kde4-base
+inherit kde4-base
 
 DESCRIPTION="A set of widget styles for Qt and GTK2"
 HOMEPAGE="https://github.com/QtCurve/qtcurve"
@@ -14,7 +14,8 @@ if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/QtCurve/qtcurve.git"
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/QtCurve/${PN}/archive/${PV/_/}.tar.gz  -> ${P}.tar.gz"
+	SRC_URI="https://github.com/QtCurve/${PN}/archive/${PV/_/}.tar.gz  -> ${P}.tar.gz
+		https://github.com/QtCurve/qtcurve/commit/020b70404f6202490d5ca131f0ec084355cb98e3.patch -> ${PN}-1.8.18-dont_use_c++11.patch"
 	KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 fi
 
@@ -51,7 +52,14 @@ S="${WORKDIR}/${P/_/}"
 
 DOCS=( AUTHORS ChangeLog.md README.md TODO.md )
 
+PATCHES=( "${DISTDIR}/${P}-dont_use_c++11.patch" )
+
 pkg_setup() {
+	# bug #498776
+	if ! version_is_at_least 4.7 $(gcc-version) ; then
+		append-cxxflags -Doverride=
+	fi
+
 	use kde && kde4-base_pkg_setup
 }
 

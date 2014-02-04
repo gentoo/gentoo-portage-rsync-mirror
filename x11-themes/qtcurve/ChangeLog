@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/qtcurve
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.85 2014/02/02 17:25:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/ChangeLog,v 1.86 2014/02/04 14:10:09 polynomial-c Exp $
+
+  04 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> qtcurve-1.8.17-r1.ebuild,
+  qtcurve-1.8.18.ebuild:
+  Fixed compilation with <gcc-4.7 (bug #498776).
 
   02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> qtcurve-1.8.17-r1.ebuild:
   Stable on amd64 and x86, wrt bug #498660

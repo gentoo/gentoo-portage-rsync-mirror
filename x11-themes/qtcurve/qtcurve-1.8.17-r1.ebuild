@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17-r1.ebuild,v 1.6 2014/02/02 17:25:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-1.8.17-r1.ebuild,v 1.7 2014/02/04 14:10:09 polynomial-c Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
-inherit cmake-utils kde4-base
+inherit kde4-base
 
 DESCRIPTION="A set of widget styles for Qt and GTK2"
 HOMEPAGE="https://github.com/QtCurve/qtcurve"
@@ -53,6 +53,11 @@ DOCS=( AUTHORS ChangeLog.md README.md TODO.md )
 PATCHES=( "${DISTDIR}/${P}-old_config_file.patch" )
 
 pkg_setup() {
+	# bug #498776
+	if ! version_is_at_least 4.7 $(gcc-version) ; then
+		append-cxxflags -Doverride=
+	fi
+
 	use kde && kde4-base_pkg_setup
 }
 
