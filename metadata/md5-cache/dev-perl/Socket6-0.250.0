@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=dev-lang/perl:=[-build(-)]
+DESCRIPTION=IPv6 related part of the C socket.h defines and structure manipulators
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Socket6/
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
+LICENSE=BSD
+RDEPEND=dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/U/UM/UMEMOTO/Socket6-0.25.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=dc7f4d665ee7abff200badb13a2239ac
