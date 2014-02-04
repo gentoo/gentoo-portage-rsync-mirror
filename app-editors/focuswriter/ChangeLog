@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/focuswriter
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.17 2013/05/20 08:37:14 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.18 2014/02/04 13:43:40 hasufell Exp $
+
+*focuswriter-1.4.4 (04 Feb 2014)
+
+  04 Feb 2014; Julian Ospald <hasufell@gentoo.org> +focuswriter-1.4.4.ebuild:
+  version bump wrt #500198
 
   20 May 2013; Agostino Sarubbo <ago@gentoo.org> focuswriter-1.4.2.ebuild:
   Stable for x86, wrt bug #470314
