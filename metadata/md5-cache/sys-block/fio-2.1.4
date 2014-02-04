@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare
+DEPEND=dev-libs/libaio gtk? ( x11-libs/gtk+:2 ) userland_GNU? ( >=sys-apps/coreutils-8.5 )
+DESCRIPTION=Jens Axboe's Flexible IO tester
+EAPI=5
+HOMEPAGE=http://brick.kernel.dk/snaps/
+IUSE=gtk python_targets_python2_7
+KEYWORDS=~amd64 ~ia64 ~ppc ~ppc64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-libs/libaio gtk? ( x11-libs/gtk+:2 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-lang/python-exec:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+SLOT=0
+SRC_URI=http://brick.kernel.dk/snaps/fio-2.1.4.tar.bz2
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=fbcdc5780646314c7766fcd4e6dd557e
