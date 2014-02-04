@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1019 2014/02/04 02:36:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1020 2014/02/04 17:39:33 phajdan.jr Exp $
+
+  04 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-32.0.1700.102.ebuild:
+  x86 stable wrt security bug #499502
 
 *chromium-32.0.1700.107 (04 Feb 2014)
 
