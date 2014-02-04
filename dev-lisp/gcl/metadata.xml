@@ -8,10 +8,7 @@
     code, providing for both good performance and facile portability.
   </longdescription>
   <use>
-  <flag name='ansi'>Build a GCL with ANSI support (else build a traditional
-  CLtL1 image)</flag>
-  <flag name='custreloc'>Build a GCL which uses custom GCL code for linking</flag>
-  <flag name='dlopen'>Build a GCL which uses dlopen for linking</flag>
-  <flag name='gprof'>Build a GCL with profiling support</flag>
+    <flag name='ansi'>Build a GCL with ANSI support (else build a traditional CLtL1 image)</flag>
+    <flag name='athena'>Build xgcl - an interface to <pkg>x11-libs/libXaw</pkg></flag>
   </use>
 </pkgmetadata>

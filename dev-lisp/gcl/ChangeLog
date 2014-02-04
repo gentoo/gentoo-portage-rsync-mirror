@@ -1,6 +1,16 @@
 # ChangeLog for dev-lisp/gcl
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.61 2013/03/14 12:06:29 grozin Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.62 2014/02/04 16:24:08 grozin Exp $
+
+*gcl-2.6.10 (04 Feb 2014)
+
+  04 Feb 2014; Andrey Grozin <grozin@gentoo.org> -gcl-2.6.7.ebuild,
+  -gcl-2.6.7-r1.ebuild, -gcl-2.6.7-r2.ebuild, -gcl-2.6.8_pre20120805.ebuild,
+  +gcl-2.6.10.ebuild, -files/2.6.7-fix-configure.in-gentoo.patch,
+  -files/gcl-2.6.8_pre20090419-configure.patch, +files/64gcl-gentoo.el,
+  -files/gcl-2.6.7-fix-configure.in-bfd.patch, -files/gcl-default-el.patch,
+  +files/tcl.patch, metadata.xml:
+  Version bump, cleaning old
 
 *gcl-2.6.8_pre20130314 (14 Mar 2013)
 

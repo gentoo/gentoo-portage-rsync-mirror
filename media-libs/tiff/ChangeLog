@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/tiff
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.255 2013/10/26 08:19:22 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.256 2014/02/04 16:27:21 ssuominen Exp $
+
+*tiff-4.0.3-r6 (04 Feb 2014)
+
+  04 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +files/tiff-4.0.3-CVE-2013-4244.patch, +tiff-4.0.3-r6.ebuild:
+  Use multilib_build_binaries() to be multilib-portage (multilib-overlay)
+  friendly wrt #489590 by Thomas Sachau. Force USE="jpeg" for testsuite wrt
+  #483132 by Johann Schmitz. Apply security patch from Fedora wrt #486590.
 
   26 Oct 2013; Michał Górny <mgorny@gentoo.org> tiff-3.9.7-r1.ebuild:
   Override multilib_src_install_all() not to install docs rather than removing
