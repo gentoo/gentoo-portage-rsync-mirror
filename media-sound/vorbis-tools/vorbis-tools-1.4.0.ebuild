@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.4.0.ebuild,v 1.13 2012/05/05 08:55:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.4.0.ebuild,v 1.14 2014/02/04 08:40:33 ssuominen Exp $
 
-EAPI=2
+EAPI=5
 
 DESCRIPTION="tools for using the Ogg Vorbis sound file format"
 HOMEPAGE="http://www.vorbis.com"
@@ -23,17 +23,13 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	virtual/pkgconfig"
 
+DOCS="AUTHORS CHANGES README"
+
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable nls) \
 		$(use_enable ogg123) \
 		$(use_with flac) \
 		$(use_with speex) \
 		$(use_with kate)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS CHANGES README
 }

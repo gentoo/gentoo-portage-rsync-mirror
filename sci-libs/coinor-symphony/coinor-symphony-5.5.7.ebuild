@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-symphony/coinor-symphony-5.5.7.ebuild,v 1.2 2014/01/15 20:03:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-symphony/coinor-symphony-5.5.7.ebuild,v 1.3 2014/02/04 08:47:49 jlec Exp $
 
 EAPI=5
 
@@ -32,9 +32,18 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
+src_prepare() {
+	sed -i \
+		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
+		configure || die
+	autotools-utils_src_prepare
+}
 src_configure() {
+	# needed for the --with-coin-instdir
+	dodir /usr
 	local myeconfargs=(
 		--enable-dependency-linking
+		--with-coin-instdir="${ED}"/usr
 	)
 	if use glpk; then
 		myeconfargs+=(

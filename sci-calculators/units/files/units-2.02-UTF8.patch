@@ -1,0 +1,19 @@
+--- a/units_cur	2013-07-10 01:02:17.000000000 +0200
++++ b/units_cur	2014-02-04 09:13:07.613075137 +0100
+@@ -6,6 +6,7 @@
+ # Modified to use xml format output from timegenie instead of text file
+ 
+ import datetime
++import codecs
+ import sys
+ import urllib
+ import xml.etree.ElementTree as ET
+@@ -31,7 +32,7 @@
+ # print codes here
+ 
+ codes = [x.find('code').text for x in currencies]
+-names = [x.find('description').text for x in currencies]
++names = [x.find('description').text.encode('utf-8') for x in currencies]
+ values = [x.find('rate').text for x in currencies]
+ 
+ names = [x.lower().replace(' ','') for x in names]

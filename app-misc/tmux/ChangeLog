@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.101 2014/02/03 13:04:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.102 2014/02/04 08:38:54 radhermit Exp $
+
+  04 Feb 2014; Tim Harder <radhermit@gentoo.org> -tmux-1.6.ebuild,
+  -tmux-1.7.ebuild, -tmux-1.7-r1.ebuild, -tmux-1.7-r2.ebuild,
+  -tmux-1.7-r3.ebuild:
+  Remove old.
 
   03 Feb 2014; Mike Frysinger <vapier@gentoo.org> tmux-1.8.ebuild:
   Mark alpha/arm/ia64/ppc64/s390/sh stable #469350.

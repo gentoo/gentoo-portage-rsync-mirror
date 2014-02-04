@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/vorbis-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.101 2012/05/05 08:55:25 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/ChangeLog,v 1.102 2014/02/04 08:40:33 ssuominen Exp $
+
+  04 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> vorbis-tools-1.4.0.ebuild:
+  Use EAPI5
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> vorbis-tools-1.4.0.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ipopt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipopt/ChangeLog,v 1.1 2014/01/15 19:45:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipopt/ChangeLog,v 1.2 2014/02/04 08:33:36 jlec Exp $
+
+  04 Feb 2014; Justin Lecher <jlec@gentoo.org> ipopt-3.11.7.ebuild:
+  Fix the common coinor pkg-config installation problem
 
 *ipopt-3.11.7 (15 Jan 2014)
 
