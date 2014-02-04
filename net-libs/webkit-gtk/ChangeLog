@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.234 2014/02/02 13:59:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.235 2014/02/03 23:05:03 eva Exp $
+
+  03 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org> webkit-gtk-2.2.4.ebuild,
+  webkit-gtk-2.2.4-r200.ebuild, +files/webkit-gtk-2.2.4-unittests-build.patch:
+  Fix build with USE=-gstreamer, bug #500162. Fix configure with USE=gles2
+  opengl, it is a forbidden configuration not only under the scope of the webgl
+  flag unfortunately, bug #500150. Raise dependency on gst-plugins-base, bug
+  #499964. Add dependency on rubygems[ruby21], bug #499896. Update path to
+  disable building of unittests unless requested. Update sed paths due to
+  upstream re-arranging sources.
 
 *webkit-gtk-2.2.4 (02 Feb 2014)
 *webkit-gtk-2.2.4-r200 (02 Feb 2014)

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4.ebuild,v 1.1 2014/02/02 13:59:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4.ebuild,v 1.2 2014/02/03 23:05:03 eva Exp $
 
 EAPI="5"
 
@@ -19,9 +19,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 IUSE="aqua coverage debug +egl +geoloc gles2 +gstreamer +introspection +jit libsecret +opengl spell +webgl"
 # bugs 372493, 416331
 REQUIRED_USE="
+	^^ ( gles2 opengl )
 	geoloc? ( introspection )
 	introspection? ( gstreamer )
-	webgl? ( ^^ ( gles2 opengl ) )
 	gles2? ( egl )
 "
 
@@ -51,8 +51,8 @@ RDEPEND="
 	geoloc? ( app-misc/geoclue:0 )
 	gles2? ( media-libs/mesa[gles2] )
 	gstreamer? (
-		>=media-libs/gstreamer-1.0.3:1.0
-		>=media-libs/gst-plugins-base-1.0.3:1.0 )
+		>=media-libs/gstreamer-1.2:1.0
+		>=media-libs/gst-plugins-base-1.2:1.0 )
 	introspection? ( >=dev-libs/gobject-introspection-1.32.0 )
 	libsecret? ( app-crypt/libsecret )
 	opengl? ( virtual/opengl )
@@ -70,6 +70,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	|| (
 		virtual/rubygems[ruby_targets_ruby20]
+		virtual/rubygems[ruby_targets_ruby21]
 		virtual/rubygems[ruby_targets_ruby19]
 		virtual/rubygems[ruby_targets_ruby18] )
 	>=app-accessibility/at-spi2-core-2.5.3
@@ -155,20 +156,20 @@ src_prepare() {
 	# Failing tests
 	# * webinspector -> https://bugs.webkit.org/show_bug.cgi?id=50744
 	# * keyevents is interactive
-	# * mimehandling test sometimes fails under Xvfb (works fine manually), bug #????
+	# * mimehandling test sometimes fails under Xvfb (works fine manually), bug #???
 	# * webdatasource test needs a network connection and intermittently fails with icedtea-web
 	# * webplugindatabase intermittently fails with icedtea-web, bug #????
-	sed -e '/Programs\/unittests\/testwebinspector/ d' \
-		-e '/Programs\/unittests\/testkeyevents/ d' \
-		-e '/Programs\/unittests\/testmimehandling/ d' \
-		-e '/Programs\/unittests\/testwebdatasource/ d' \
-		-e '/Programs\/unittests\/testwebplugindatabase/ d' \
+	sed -e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebinspector/ d' \
+		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testkeyevents/ d' \
+		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testmimehandling/ d' \
+		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebdatasource/ d' \
+		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebplugindatabase/ d' \
 		-i Source/WebKit/gtk/GNUmakefile.am || die
 
 	if ! use gstreamer; then
-		# webkit2's TestWebKitWebView requires <video> support, bug #????
+		# webkit2's TestWebKitWebView requires <video> support, bug #???
 		sed -e '/Programs\/WebKit2APITests\/TestWebKitWebView/ d' \
-			-i Source/WebKit2/UIProcess/API/gtk/tests/GNUmakefile.am || die
+			-i Tools/TestWebKitAPI/GNUmakefile.am || die
 	fi
 
 	# Respect CC, otherwise fails on prefix #395875
@@ -177,15 +178,15 @@ src_prepare() {
 	# bug #459978, upstream bug #113397
 	epatch "${FILESDIR}/${PN}-1.11.90-gtk-docize-fix.patch"
 
-	# Do not build unittests unless requested, upstream bug #????
-	#epatch "${FILESDIR}"/${PN}-2.2.2-unittests-build.patch
+	# Do not build unittests unless requested, upstream bug #???
+	epatch "${FILESDIR}"/${PN}-2.2.4-unittests-build.patch
 
 	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=Source/autotools eautoreconf
 }
 
 src_configure() {
-	# It doesn't compile on alpha without this in LDFLAGS, bug #????
+	# It doesn't compile on alpha without this in LDFLAGS, bug #???
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	# Sigbuses on SPARC with mcpu and co., bug #????
