@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-flopcpp/coinor-flopcpp-1.1.7.ebuild,v 1.2 2014/01/15 20:10:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-flopcpp/coinor-flopcpp-1.1.7.ebuild,v 1.3 2014/02/04 09:25:41 jlec Exp $
 
 EAPI=5
 
@@ -27,9 +27,18 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/FlopCpp"
 
+src_prepare() {
+	sed -i \
+		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
+		configure || die
+	autotools-utils_src_prepare
+}
 src_configure() {
+	# needed for the --with-coin-instdir
+	dodir /usr
 	local myeconfargs=(
 		--enable-dependency-linking
+		--with-coin-instdir="${ED}"/usr
 		$(use_with doc dot)
 	)
 	autotools-utils_src_configure

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-mp/coinor-mp-1.7.6.ebuild,v 1.4 2014/02/04 08:50:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-mp/coinor-mp-1.7.6.ebuild,v 1.5 2014/02/04 09:22:13 jlec Exp $
 
 EAPI=5
 
@@ -25,11 +25,13 @@ S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
 src_prepare() {
 	sed -i \
-		-e '/addlibsdir/s/$(DESTDIR)//' \
-		Makefile.in || die
-	sed -i \
 		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
 		configure || die
+	sed -i \
+		-e '/^addlibsdir/s/$(DESTDIR)//' \
+		-e 's/$(addlibsdir)/$(DESTDIR)\/$(addlibsdir)/g' \
+		-e 's/$(DESTDIR)$(DESTDIR)/$(DESTDIR)/g' \
+		Makefile.in || die
 	autotools-utils_src_prepare
 }
 
@@ -39,6 +41,7 @@ src_configure() {
 	local myeconfargs=(
 		--enable-dependency-linking
 		--with-coin-instdir="${ED}"/usr
+		--datadir=/usr/share
 	)
 	autotools-utils_src_configure
 }

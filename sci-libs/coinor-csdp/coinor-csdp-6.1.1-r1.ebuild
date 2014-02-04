@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-csdp/coinor-csdp-6.1.1.ebuild,v 1.2 2014/01/15 19:51:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-csdp/coinor-csdp-6.1.1-r1.ebuild,v 1.1 2014/02/04 09:31:09 jlec Exp $
 
 EAPI=5
 
@@ -56,13 +56,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-	find . -name Makefile -exec sed -i -e 's:make:$(MAKE):g' '{}' \;
+	find . -name Makefile -exec sed -i -e 's:make:$(MAKE):g' '{}' + || die
 	append-cflags -DNOSHORTS -DUSEGETTIME -I../include
 	if use openmp; then
 		[[ $(tc-getCC) == *gcc* ]] && append-cflags -fopenmp \
 			&& append-ldflags -fopenmp
 		[[ $(tc-getCC) == *icc* ]] && append-cflags -openmp
-		append-cflags -DUSEOPENMP
+			append-cflags -DUSEOPENMP
 	fi
 	use amd64 && append-cflags -DBIT64
 	[[ $($(tc-getPKG_CONFIG) --libs blas) =~ atlas ]] && append-cflags -DUSEATLAS
@@ -70,6 +70,8 @@ src_prepare() {
 		-e "s:-O3:${CFLAGS} ${LDFLAGS}:" \
 		-e "s:ar :$(tc-getAR) :" \
 		*/Makefile || die
+
+	tc-export CC
 }
 
 src_compile() {
@@ -77,8 +79,8 @@ src_compile() {
 	local libs="$($(tc-getPKG_CONFIG) --libs blas lapack)"
 	static_to_shared lib/libsdp.a ${libs}
 	use static-libs && emake -C lib clean && emake -C lib
-	emake -C solver LIBS="${libs} -L../lib -lsdp"
-	emake -C theta LIBS="${libs} -L../lib -lsdp"
+	emake -C solver LIBS="${libs} -L../lib -lsdp -lm"
+	emake -C theta LIBS="${libs} -L../lib -lsdp -lm"
 }
 
 src_test() {
