@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/coinor-bcps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-bcps/ChangeLog,v 1.2 2014/01/15 18:32:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-bcps/ChangeLog,v 1.3 2014/02/04 08:07:05 jlec Exp $
+
+*coinor-bcps-0.93.10 (04 Feb 2014)
+
+  04 Feb 2014; Justin Lecher <jlec@gentoo.org> +coinor-bcps-0.93.10.ebuild,
+  -coinor-bcps-0.93.9.ebuild:
+  Version BUmp, Fix the common coinor pkg-config installation problem
 
   14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
   coinor-bcps-0.93.9.ebuild:

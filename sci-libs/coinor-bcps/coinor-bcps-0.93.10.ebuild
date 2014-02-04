@@ -1,14 +1,14 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-blis/coinor-blis-0.93.9.ebuild,v 1.2 2014/01/15 19:29:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-bcps/coinor-bcps-0.93.10.ebuild,v 1.1 2014/02/04 08:07:05 jlec Exp $
 
 EAPI=5
 
 inherit autotools-utils multilib
 
-MYPN=Blis
+MYPN=Bcps
 
-DESCRIPTION="COIN-OR BiCePS Linear Integer Solver"
+DESCRIPTION="COIN-OR BiCEPS data handling library"
 HOMEPAGE="https://projects.coin-or.org/CHiPPS/"
 SRC_URI="http://www.coin-or.org/download/source/${MYPN}/${MYPN}-${PV}.tgz"
 
@@ -19,7 +19,6 @@ IUSE="examples static-libs test"
 
 RDEPEND="
 	sci-libs/coinor-utils:=
-	sci-libs/coinor-bcps:=
 	sci-libs/coinor-clp:=
 	sci-libs/coinor-alps:="
 DEPEND="${RDEPEND}
@@ -28,9 +27,18 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
+src_prepare() {
+	sed -i \
+		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
+		configure || die
+	autotools-utils_src_prepare
+}
 src_configure() {
+	# needed for the --with-coin-instdir
+	dodir /usr
 	local myeconfargs=(
 		--enable-dependency-linking
+		--with-coin-instdir="${ED}"/usr
 	)
 	autotools-utils_src_configure
 }

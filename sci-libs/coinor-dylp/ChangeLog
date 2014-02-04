@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/coinor-dylp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-dylp/ChangeLog,v 1.2 2014/01/15 20:05:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-dylp/ChangeLog,v 1.3 2014/02/04 08:15:36 jlec Exp $
+
+  04 Feb 2014; Justin Lecher <jlec@gentoo.org> coinor-dylp-1.9.4.ebuild:
+  Fix the common coinor pkg-config installation problem
 
   15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
   coinor-dylp-1.9.4.ebuild:

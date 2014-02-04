@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libgpod
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.98 2013/05/11 22:04:47 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.100 2014/02/04 08:21:45 ssuominen Exp $
+
+  04 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> libgpod-0.8.3.ebuild:
+  Use mono-env.eclass instead of mono.eclass as per repoman.
+
+*libgpod-0.8.3 (04 Feb 2014)
+
+  04 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> +libgpod-0.8.3.ebuild:
+  Version bump wrt #498284 by "Nikoli"
 
   11 May 2013; Samuli Suominen <ssuominen@gentoo.org> libgpod-0.8.2.ebuild:
   Use subslot operator for the libplist and libimobiledevice dependencies.
