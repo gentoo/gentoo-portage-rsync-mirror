@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.5 2014/02/04 10:01:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.6 2014/02/04 10:33:16 jlec Exp $
 
 EAPI=5
 
@@ -95,7 +95,7 @@ src_configure() {
 src_compile() {
 	# hack for parallel build, to overcome not patching Makefile.am above
 	#autotools-utils_src_compile -C src libClp.la
-	autotools-utils_src_compile all $(use doc doxydoc "")
+	autotools-utils_src_compile all $(usex doc doxydoc "")
 }
 
 src_test() {

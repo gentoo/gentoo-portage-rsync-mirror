@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-utils/coinor-utils-2.9.11.ebuild,v 1.3 2014/01/29 11:03:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-utils/coinor-utils-2.9.11.ebuild,v 1.4 2014/02/04 10:44:35 jlec Exp $
 
 EAPI=5
 
@@ -69,7 +69,7 @@ src_configure() {
 }
 
 src_compile() {
-	autotools-utils_src_compile all $(use doc && echo doxydoc)
+	autotools-utils_src_compile all $(usex doc doxydoc "")
 }
 
 psrc_test() {

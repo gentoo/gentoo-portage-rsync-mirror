@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/coinor-sample
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-sample/ChangeLog,v 1.1 2014/01/14 17:48:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-sample/ChangeLog,v 1.2 2014/02/04 10:41:20 jlec Exp $
+
+  04 Feb 2014; Justin Lecher <jlec@gentoo.org> coinor-sample-1.2.9.ebuild:
+  drop empty *DEPEND
 
   14 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org>
   +coinor-sample-1.2.9.ebuild, +metadata.xml:

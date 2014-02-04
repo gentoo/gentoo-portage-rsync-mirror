@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-vol/coinor-vol-1.4.4.ebuild,v 1.3 2014/02/04 07:36:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-vol/coinor-vol-1.4.4.ebuild,v 1.4 2014/02/04 10:45:21 jlec Exp $
 
 EAPI=5
 
@@ -28,14 +28,15 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
 src_prepare() {
+	# needed for the --with-coin-instdir
+	dodir /usr
 	sed -i \
 		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
 		configure || die
 	autotools-utils_src_prepare
 }
+
 src_configure() {
-	# needed for the --with-coin-instdir
-	dodir /usr
 	local myeconfargs=(
 		--enable-dependency-linking
 		--with-coin-instdir="${ED}"/usr
@@ -47,7 +48,7 @@ src_configure() {
 src_compile() {
 	# hack for parallel build, to overcome not patching Makefile.am above
 	autotools-utils_src_compile -C src libVol.la
-	autotools-utils_src_compile all $(use doc && echo doxydoc)
+	autotools-utils_src_compile all $(usex doc doxydoc "")
 }
 
 src_test() {
