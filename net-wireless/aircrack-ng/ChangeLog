@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/aircrack-ng
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.78 2013/10/05 02:05:28 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.79 2014/02/04 03:34:12 zerochaos Exp $
+
+*aircrack-ng-1.2_beta2 (04 Feb 2014)
+
+  04 Feb 2014; Rick Farina <zerochaos@gentoo.org> +aircrack-ng-1.2_beta2.ebuild,
+  +files/aircrack-ng-9999-fix-labels.patch:
+  version bump, bug 499850
 
   05 Oct 2013; Rick Farina <zerochaos@gentoo.org> aircrack-ng-9999.ebuild:
   minor cleanup, fix tests

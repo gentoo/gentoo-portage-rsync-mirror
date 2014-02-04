@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/urlwatch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/ChangeLog,v 1.4 2013/09/13 21:34:33 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/urlwatch/ChangeLog,v 1.5 2014/02/04 04:00:18 radhermit Exp $
+
+*urlwatch-1.16 (04 Feb 2014)
+
+  04 Feb 2014; Tim Harder <radhermit@gentoo.org> +urlwatch-1.16.ebuild:
+  Version bump, migrate to distutils-r1.
 
   13 Sep 2013; Michał Górny <mgorny@gentoo.org> urlwatch-1.14.ebuild,
   urlwatch-1.15.ebuild:
