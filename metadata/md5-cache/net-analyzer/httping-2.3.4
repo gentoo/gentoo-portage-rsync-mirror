@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare
-DEPEND=fftw? ( sci-libs/fftw:3.0 ) ncurses? ( >=sys-libs/ncurses-5 ) ssl? ( dev-libs/openssl )
+DEPEND=fftw? ( sci-libs/fftw:3.0 ) ncurses? ( >=sys-libs/ncurses-5 ) ssl? ( dev-libs/openssl ) ncurses? ( virtual/pkgconfig )
 DESCRIPTION=http protocol ping-like program
 EAPI=5
 HOMEPAGE=http://www.vanheusden.com/httping/
@@ -11,4 +11,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.vanheusden.com/httping/httping-2.3.4.tgz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=356ea3a4dd782eff5a8fd7d0df171585
+_md5_=13ca552ddb1ccb2a10fee9673bedf526

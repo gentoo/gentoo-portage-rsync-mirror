@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-2.3.4.ebuild,v 1.1 2014/02/04 03:36:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-2.3.4.ebuild,v 1.2 2014/02/04 06:49:27 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -19,7 +19,10 @@ RDEPEND="
 	ncurses? ( >=sys-libs/ncurses-5 )
 	ssl? ( dev-libs/openssl )
 "
-DEPEND="${RDEPEND}"
+DEPEND="
+	${RDEPEND}
+	ncurses? ( virtual/pkgconfig )
+"
 
 # This would bring in test? ( dev-util/cppcheck ) but unlike
 # upstream we should only care about compile/run time testing
@@ -32,6 +35,8 @@ src_prepare() {
 src_configure() {
 	# not an autotools script
 	echo > makefile.inc || die
+
+	use ncurses && LDFLAGS+=" $( $( tc-getPKG_CONFIG ) --libs ncurses )"
 }
 
 src_compile() {
