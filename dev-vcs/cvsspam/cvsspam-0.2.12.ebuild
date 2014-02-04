@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsspam/cvsspam-0.2.12.ebuild,v 1.2 2010/06/22 18:44:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsspam/cvsspam-0.2.12.ebuild,v 1.3 2014/02/04 01:42:14 creffett Exp $
 
-EAPI=2
+EAPI=5
 
 inherit eutils
 
@@ -16,18 +16,19 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="subversion"
 
 RDEPEND="dev-lang/ruby
-	subversion? ( dev-vcs/subversion )"
+	subversion? ( dev-vcs/subversion )
+"
 
 src_prepare() {
 	use subversion && epatch "${FILESDIR}/${P}-svn.patch"
 }
 
 src_install() {
-	dobin collect_diffs.rb || die
-	dobin cvsspam.rb || die
-	dobin record_lastdir.rb || die
-	insinto /etc/cvsspam || die
-	doins cvsspam.conf || die
+	dobin collect_diffs.rb
+	dobin cvsspam.rb
+	dobin record_lastdir.rb
+	insinto /etc/cvsspam
+	doins cvsspam.conf
 
 	dohtml cvsspam-doc.html
 	dodoc CREDITS TODO cvsspam-doc.pdf
