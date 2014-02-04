@@ -205,10 +205,6 @@ clvm
 # for gnome 3.6 keywording
 -zeitgeist
 
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (22 Aug 2013)
-# virtual/opencl is not keyworded
-opencl
-
 # Pacho Ramos <pacho@gentoo.org> (08 Jan 2014)
 # Unmask systemd since it is keyworded here.
 -systemd

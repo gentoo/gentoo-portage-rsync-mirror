@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/opencl-0-r4.ebuild,v 1.2 2013/09/21 20:24:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/opencl/opencl-0-r4.ebuild,v 1.3 2014/02/04 21:04:55 chithanh Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 CARDS=( fglrx nvidia )
 IUSE="${CARDS[@]/#/video_cards_}"
 

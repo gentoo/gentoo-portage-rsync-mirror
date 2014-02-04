@@ -1,6 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.187 2014/01/11 08:36:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.188 2014/02/04 21:03:10 chithanh Exp $
+
+# Chí-Thanh Christopher Nguyễn (04 Feb 2014)
+# depends on opencl enabled mesa
+<=media-gfx/imagemagick-6.8.6.8 opencl
+<=app-crypt/johntheripper-1.7.9-r6 opencl
 
 # Pacho Ramos <pacho@gentoo.org> (11 Jan 2013)
 sys-kernel/dracut -dracut_modules_systemd
