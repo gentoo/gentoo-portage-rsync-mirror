@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-cppad/coinor-cppad-20140116.ebuild,v 1.1 2014/01/16 15:10:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-cppad/coinor-cppad-20140204.ebuild,v 1.1 2014/02/04 10:11:32 jlec Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ S="${WORKDIR}/${MYP}"
 
 src_configure() {
 	local myeconfargs=( $(use doc Documentation) )
-	autotools-utils_src_configure
+	autotools-utils_src_configure CXX_FLAGS="${CXXFLAGS}"
 }
 
 src_compile() {

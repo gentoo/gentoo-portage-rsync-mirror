@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-couenne/coinor-couenne-0.4.7.ebuild,v 1.2 2014/02/04 08:46:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-couenne/coinor-couenne-0.4.7.ebuild,v 1.3 2014/02/04 10:03:52 jlec Exp $
 
 EAPI=5
 
@@ -24,14 +24,15 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
 src_prepare() {
+	# needed for the --with-coin-instdir
+	dodir /usr
 	sed -i \
 		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
 		configure || die
 	autotools-utils_src_prepare
 }
+
 src_configure() {
-	# needed for the --with-coin-instdir
-	dodir /usr
 	local myeconfargs=(
 		--enable-dependency-linking
 		--with-coin-instdir="${ED}"/usr
@@ -45,7 +46,7 @@ src_compile() {
 	# circular dependencies between libCouenne and libBonCouenne :(
 	pushd "${BUILD_DIR}"/src > /dev/null
 	rm libCouenne.la main/libBonCouenne.la || die
-	emake LIBS+="-Lmain/.libs -lBonCouenne" libCouenne.la
+	emake LIBS+=" -Lmain/.libs -lBonCouenne" libCouenne.la
 	emake -C main
 	popd > /dev/null
 }
