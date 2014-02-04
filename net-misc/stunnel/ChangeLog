@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.154 2014/02/02 11:01:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.155 2014/02/04 12:35:57 nimiux Exp $
+
+  04 Feb 2014; Chema Alonso <nimiux@gentoo.org> stunnel-4.56-r2.ebuild:
+  Stable for amd64 wrt bug #499310
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> stunnel-4.56-r2.ebuild:
   Stable for ppc, wrt bug #499310
