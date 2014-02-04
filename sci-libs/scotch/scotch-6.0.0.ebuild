@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-6.0.0.ebuild,v 1.4 2013/07/02 02:07:22 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-6.0.0.ebuild,v 1.5 2014/02/03 23:44:02 bicatali Exp $
 
 EAPI=5
 
@@ -10,13 +10,14 @@ inherit eutils toolchain-funcs versionator flag-o-matic multilib
 MYP="${PN}_${PV}_esmumps"
 # download id on gforge changes every goddamn release
 DID=31832
+SOVER=$(get_major_version)
 
 DESCRIPTION="Software for graph, mesh and hypergraph partitioning"
 HOMEPAGE="http://www.labri.u-bordeaux.fr/perso/pelegrin/scotch/"
 SRC_URI="http://gforge.inria.fr/frs/download.php/${DID}/${MYP}.tar.gz"
 
 LICENSE="CeCILL-2"
-SLOT="0"
+SLOT="0/${SOVER}"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc int64 mpi static-libs tools threads"
 
@@ -30,7 +31,7 @@ S="${WORKDIR}/${MYP/b}"
 static_to_shared() {
 	local libstatic=${1}; shift
 	local libname=$(basename ${libstatic%.a})
-	local soname=${libname}$(get_libname $(get_version_component_range 1-2))
+	local soname=${libname}$(get_libname ${SOVER})
 	local libdir=$(dirname ${libstatic})
 
 	einfo "Making ${soname} from ${libstatic}"
@@ -57,6 +58,9 @@ src_prepare() {
 		append-cflags "-DSCOTCH_PTHREAD_NUMBER=$(nproc)"
 	else
 		append-cflags "-DSCOTCH_PTHREAD_NUMBER=1"
+		sed -i \
+			-e e 's/ -DSCOTCH_PTHREAD//' \
+			src/Make.inc/Makefile.inc.i686_pc_linux3 || die
 	fi
 	sed -e "s/gcc/$(tc-getCC)/" \
 		-e "s/-O3/${CFLAGS} -pthread/" \

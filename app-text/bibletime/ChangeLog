@@ -1,6 +1,11 @@
 # ChangeLog for app-text/bibletime
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.69 2013/03/02 19:40:22 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibletime/ChangeLog,v 1.70 2014/02/03 23:57:03 creffett Exp $
+
+*bibletime-2.10.0 (03 Feb 2014)
+
+  03 Feb 2014; Chris Reffett <creffett@gentoo.org> +bibletime-2.10.0.ebuild:
+  Version bump wrt bug 500218
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> bibletime-2.9.1.ebuild:
   Move Qt dependencies to the new category

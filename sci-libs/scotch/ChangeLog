@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scotch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.15 2013/07/02 02:07:22 jsbronder Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.16 2014/02/03 23:44:02 bicatali Exp $
+
+  03 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> scotch-6.0.0.ebuild:
+  Fixed bug #499168, thanks jer and getryx, add sub-slot
 
   02 Jul 2013; Justin Bronder <jsbronder@gentoo.org> scotch-6.0.0.ebuild:
   Remove fix for #462602. Handled in sys-cluster/openmpi now.
