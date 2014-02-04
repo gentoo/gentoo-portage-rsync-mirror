@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.18.0.ebuild,v 1.1 2014/01/01 20:23:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.19.2.ebuild,v 1.1 2014/02/04 07:42:21 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -29,7 +29,10 @@ RDEPEND=">=app-text/ghostscript-gpl-8.15
 DEPEND="${RDEPEND}
 	app-text/t1utils
 	dev-lang/perl
-	|| ( <dev-texlive/texlive-metapost-2013 >=dev-tex/metapost-1.803 )
+	|| (
+		( >=dev-texlive/texlive-metapost-2013 >=dev-tex/metapost-1.803 )
+		<dev-texlive/texlive-metapost-2013
+	)
 	virtual/pkgconfig
 	media-gfx/fontforge
 	>=sys-apps/texinfo-4.11

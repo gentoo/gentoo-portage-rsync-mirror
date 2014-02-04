@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.3 2014/01/17 18:11:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.4 2014/02/04 07:49:06 jlec Exp $
 
 EAPI=5
 
@@ -42,13 +42,19 @@ src_prepare() {
 	elif has_version sci-libs/mumps[mpi]; then
 		export CXX=mpicxx
 	fi
+	sed -i \
+		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
+		configure || die
 	autotools-utils_src_prepare
 }
 
 src_configure() {
+	# needed for the --with-coin-instdir
+	dodir /usr
 	local myeconfargs=(
 		--enable-aboca
 		--enable-dependency-linking
+		--with-coin-instdir="${ED}"/usr
 		$(use_with doc dot)
 	)
 	if use glpk; then

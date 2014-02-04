@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15379 2014/02/03 16:16:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15380 2014/02/04 07:41:47 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (04 Feb 2014)
+# Masked for testing
+=media-sound/lilypond-2.19*
 
 # Aaron W. Swenson <titanofold@gentoo.org> (30 Jan 2014)
 # Package no longer maintained separately from x11-misc/slim. Removal

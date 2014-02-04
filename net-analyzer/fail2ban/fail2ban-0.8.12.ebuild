@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.12.ebuild,v 1.5 2014/02/02 11:05:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.12.ebuild,v 1.6 2014/02/04 07:37:38 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_{6,7} )
@@ -8,7 +8,7 @@ DISTUTILS_SINGLE_IMPL=yes
 
 inherit distutils-r1 systemd vcs-snapshot
 
-DESCRIPTION="Bans IP that make too many password failures"
+DESCRIPTION="scans log files and bans IPs that show malicious signs"
 HOMEPAGE="http://www.fail2ban.org/"
 SRC_URI="https://github.com/${PN}/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
