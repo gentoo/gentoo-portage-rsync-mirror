@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.2.4.ebuild,v 1.1 2013/10/06 16:47:24 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/obfsproxy/obfsproxy-0.2.6.ebuild,v 1.1 2014/02/04 13:19:52 blueness Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,6 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-PATCHES=( "${FILESDIR}"/${PN}-remove-argparse.patch )
 DOCS=( ChangeLog INSTALL README TODO doc/HOWTO.txt )
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
