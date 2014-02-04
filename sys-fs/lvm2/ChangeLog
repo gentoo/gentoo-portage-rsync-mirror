@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.343 2014/02/03 15:57:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.344 2014/02/04 02:27:45 robbat2 Exp $
+
+  04 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.105-r1.ebuild,
+  lvm2-2.02.105-r2.ebuild, lvm2-2.02.105.ebuild:
+  Bug #500058: missing dep for static builds.
 
   03 Feb 2014; Mike Frysinger <vapier@gentoo.org> lvm2-2.02.103.ebuild,
   lvm2-2.02.104.ebuild, lvm2-2.02.105-r1.ebuild, lvm2-2.02.105-r2.ebuild,

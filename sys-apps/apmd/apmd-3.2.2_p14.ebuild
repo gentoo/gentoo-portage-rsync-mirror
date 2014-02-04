@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.2_p14.ebuild,v 1.6 2011/08/30 20:42:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.2_p14.ebuild,v 1.7 2014/02/04 02:21:34 creffett Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils multilib toolchain-funcs
 
 MY_PV=${PV%_p*}
@@ -55,25 +55,25 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
 	dodir /usr/sbin
-	emake DESTDIR="${D}" PREFIX=/usr LIBDIR=/usr/$(get_libdir) install || die
+	emake DESTDIR="${D}" PREFIX=/usr LIBDIR=/usr/$(get_libdir) install
 
 	keepdir /etc/apm/{event.d,suspend.d,resume.d,other.d,scripts.d}
 	exeinto /etc/apm
-	doexe debian/apmd_proxy || die
+	doexe debian/apmd_proxy
 	dodoc AUTHORS {,apmsleep.}README debian/{changelog,README.Debian}
 
-	doman *.{1,8} || die
+	doman *.{1,8}
 
 	# note: apmd_proxy.conf is currently disabled and not used, thus
 	# not installed - liquidx (01 Mar 2004)
 
-	newconfd "${FILESDIR}"/apmd.confd apmd || die
-	newinitd "${FILESDIR}"/apmd.rc6 apmd || die
+	newconfd "${FILESDIR}"/apmd.confd apmd
+	newinitd "${FILESDIR}"/apmd.rc6 apmd
 
 	use nls || rm -rf "${D}"/usr/share/man/fr
 }

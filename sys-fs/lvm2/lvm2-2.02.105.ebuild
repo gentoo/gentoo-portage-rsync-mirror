@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105.ebuild,v 1.2 2014/02/03 15:56:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105.ebuild,v 1.3 2014/02/04 02:27:45 robbat2 Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -36,6 +36,7 @@ DEPEND="${DEPEND_COMMON}
 	static? (
 		selinux? ( sys-libs/libselinux[static-libs] )
 		udev? ( virtual/udev[static-libs] )
+		>=sys-apps/util-linux-2.16[static-libs]
 	)"
 
 S=${WORKDIR}/${PN/lvm/LVM}.${PV}

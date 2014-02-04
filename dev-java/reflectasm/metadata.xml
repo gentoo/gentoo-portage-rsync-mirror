@@ -3,7 +3,6 @@
 <pkgmetadata>
 	<herd>java</herd>
 	<upstream>
-		<remote-id type="google-code">reflectasm</remote-id>
+		<remote-id type="github">EsotericSoftware/reflectasm</remote-id>
 	</upstream>
 </pkgmetadata>
-
