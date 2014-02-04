@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.344 2014/02/04 02:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.346 2014/02/04 02:46:32 robbat2 Exp $
+
+  04 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.105-r2.ebuild:
+  Bug #448354: Fix cross-compile with thin.
+
+  04 Feb 2014; Robin H. Johnson <robbat2@gentoo.org>
+  files/lvm2-2.02.105-pthread-pkgconfig.patch:
+  Bug #491806: Fix this in more cases for static build.
 
   04 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.105-r1.ebuild,
   lvm2-2.02.105-r2.ebuild, lvm2-2.02.105.ebuild:

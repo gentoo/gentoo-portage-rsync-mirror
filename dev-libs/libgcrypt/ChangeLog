@@ -1,6 +1,22 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.200 2014/02/03 18:22:10 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.202 2014/02/04 02:43:46 radhermit Exp $
+
+  04 Feb 2014; Tim Harder <radhermit@gentoo.org> -libgcrypt-1.4.6.ebuild,
+  -libgcrypt-1.4.6-r1.ebuild, -libgcrypt-1.5.0.ebuild,
+  -libgcrypt-1.5.0-r1.ebuild, -libgcrypt-1.5.0-r2.ebuild,
+  -libgcrypt-1.5.0-r3.ebuild, -libgcrypt-1.5.0-r4.ebuild,
+  -libgcrypt-1.5.1.ebuild, -libgcrypt-1.5.2-r1.ebuild,
+  -libgcrypt-1.6.0-r1.ebuild, -files/libgcrypt-1.5.0-aesni.patch,
+  -files/libgcrypt-1.5.0-x32.patch, -files/libgcrypt-1.6.0-gcry_md_reset.patch:
+  Remove old.
+
+*libgcrypt-1.6.1 (04 Feb 2014)
+
+  04 Feb 2014; Tim Harder <radhermit@gentoo.org> +libgcrypt-1.6.1.ebuild,
+  +files/libgcrypt-1.6.1-uscore.patch:
+  Version bump, re-add arm keyword since bug #494668 should be fixed according
+  to upstream.
 
 *libgcrypt-1.6.0-r1 (03 Feb 2014)
 

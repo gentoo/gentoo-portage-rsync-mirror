@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r2.ebuild,v 1.1 2014/01/31 08:01:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.5.0-r2.ebuild,v 1.2 2014/02/04 03:00:45 vapier Exp $
 
 EAPI="4"
 
@@ -49,7 +49,26 @@ src_configure() {
 		export apr_cv_sock_cloexec="no"
 	fi
 	if tc-is-cross-compiler; then
-		export apr_cv_tcp_nodelay_with_cork="yes"
+		# The apache project relies heavily on AC_TRY_RUN and doesn't
+		# have any sane cross-compiling fallback logic.
+		export \
+			ac_cv_file__dev_zero="yes" \
+			ac_cv_func_sem_open="yes" \
+			ac_cv_negative_eai="yes" \
+			ac_cv_o_nonblock_inherited="no" \
+			ac_cv_struct_rlimit="yes" \
+			ap_cv_atomic_builtins="yes" \
+			apr_cv_accept4="yes" \
+			apr_cv_dup3="yes" \
+			apr_cv_epoll="yes" \
+			apr_cv_epoll_create1="yes" \
+			apr_cv_gai_addrconfig="yes" \
+			apr_cv_mutex_recursive="yes" \
+			apr_cv_mutex_robust_shared="yes" \
+			apr_cv_process_shared_works="yes" \
+			apr_cv_pthreads_lib="-pthread" \
+			apr_cv_sock_cloexec="yes" \
+			apr_cv_tcp_nodelay_with_cork="yes"
 	fi
 
 	if use urandom; then

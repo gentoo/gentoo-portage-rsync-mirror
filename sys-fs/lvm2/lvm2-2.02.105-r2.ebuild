@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105-r2.ebuild,v 1.4 2014/02/04 02:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.105-r2.ebuild,v 1.5 2014/02/04 02:46:32 robbat2 Exp $
 
 EAPI=5
 inherit autotools eutils linux-info multilib systemd toolchain-funcs udev flag-o-matic
@@ -118,7 +118,14 @@ src_configure() {
 	# so we cannot disable them
 	myconf="${myconf} --with-mirrors=${dmbuildmode}"
 	myconf="${myconf} --with-snapshots=${dmbuildmode}"
-	myconf="${myconf} --with-thin=$(use thin && echo internal || echo none)"
+	if use thin; then
+		myconf="${myconf} --with-thin=internal"
+		myconf="${myconf} --with-thin-check=${EPREFIX}/sbin/thin_check"
+		myconf="${myconf} --with-thin-dump=${EPREFIX}/sbin/thin_dump"
+		myconf="${myconf} --with-thin-repair=${EPREFIX}/sbin/thin_repair"
+	else
+		myconf="${myconf} --with-thin=none"
+	fi
 
 	if use lvm1; then
 		myconf="${myconf} --with-lvm1=${buildmode}"
