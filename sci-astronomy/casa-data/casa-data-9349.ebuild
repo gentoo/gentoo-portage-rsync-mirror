@@ -1,15 +1,15 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casa-data/casa-data-9999.ebuild,v 1.2 2012/08/05 17:28:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/casa-data/casa-data-9349.ebuild,v 1.1 2014/02/04 21:37:37 bicatali Exp $
 
-EAPI=4
+EAPI=5
 inherit subversion
 
 ESVN_REPO_URI="https://svn.cv.nrao.edu/svn/casa-data/distro"
 ESVN_OPTIONS="--non-interactive --trust-server-cert "
 
 DESCRIPTION="Data and tables for the CASA software"
-HOMEPAGE="https://safe.nrao.edu/wiki/bin/view/Software/ObtainingCasaDataRepository"
+HOMEPAGE="https://safe.nrao.edu/wiki/bin/view/Software/ObtainingCasaDataRepository@${PV}"
 SRC_URI=""
 
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.87 2014/01/19 20:36:55 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.88 2014/02/04 21:51:12 swift Exp $
+
+*setools-3.3.8-r4 (04 Feb 2014)
+
+  04 Feb 2014; Sven Vermeulen <swift@gentoo.org> +setools-3.3.8-r4.ebuild:
+  Switch to python-r1, use EAPI=5, explicitly use bfd linker (bug 467136)
 
 *setools-3.3.8-r3 (19 Jan 2014)
 

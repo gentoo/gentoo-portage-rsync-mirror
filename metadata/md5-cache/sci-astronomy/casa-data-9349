@@ -1,0 +1,10 @@
+DEFINED_PHASES=install preinst prepare unpack
+DEPEND=|| ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DESCRIPTION=Data and tables for the CASA software
+EAPI=5
+HOMEPAGE=https://safe.nrao.edu/wiki/bin/view/Software/ObtainingCasaDataRepository@9349
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+SLOT=0
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=f6519eb4085255e7d02116d9d3b33d97
