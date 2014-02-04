@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-9999.ebuild,v 1.3 2014/01/07 17:48:27 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aegisub/aegisub-9999.ebuild,v 1.4 2014/02/04 16:52:19 ssuominen Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ RDEPEND="
 	>=media-libs/libass-0.10.0[fontconfig]
 	virtual/libiconv
 	>=dev-lang/lua-5.1.1
-	>=dev-libs/boost-1.52.0:=[icu]
+	>=dev-libs/boost-1.52.0:=[icu,nls]
 	>=dev-libs/icu-4.8.1.1:=
 	>=media-libs/fontconfig-2.4.2
 	>=media-libs/freetype-2.3.5:2
