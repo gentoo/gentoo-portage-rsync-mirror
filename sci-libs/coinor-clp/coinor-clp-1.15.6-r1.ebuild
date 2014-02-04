@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.4 2014/02/04 07:49:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-clp/coinor-clp-1.15.6-r1.ebuild,v 1.5 2014/02/04 10:01:13 jlec Exp $
 
 EAPI=5
 
@@ -37,6 +37,8 @@ PATCHES=(
 )
 
 src_prepare() {
+	# needed for the --with-coin-instdir
+	dodir /usr
 	if has_version sci-libs/mumps[-mpi]; then
 		ln -s "${EPREFIX}"/usr/include/mpiseq/mpi.h src/mpi.h
 	elif has_version sci-libs/mumps[mpi]; then
@@ -49,8 +51,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# needed for the --with-coin-instdir
-	dodir /usr
 	local myeconfargs=(
 		--enable-aboca
 		--enable-dependency-linking
@@ -95,7 +95,7 @@ src_configure() {
 src_compile() {
 	# hack for parallel build, to overcome not patching Makefile.am above
 	#autotools-utils_src_compile -C src libClp.la
-	autotools-utils_src_compile all $(use doc && echo doxydoc)
+	autotools-utils_src_compile all $(use doc doxydoc "")
 }
 
 src_test() {

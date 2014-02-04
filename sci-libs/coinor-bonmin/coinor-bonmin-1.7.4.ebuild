@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-bonmin/coinor-bonmin-1.7.4.ebuild,v 1.1 2014/01/15 19:31:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-bonmin/coinor-bonmin-1.7.4.ebuild,v 1.2 2014/02/04 09:56:21 jlec Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ src_configure() {
 }
 
 src_compile() {
-	autotools-utils_src_compile all $(use doc && echo doc)
+	autotools-utils_src_compile all $(usex doc doc "")
 }
 
 src_test() {

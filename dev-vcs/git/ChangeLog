@@ -1,6 +1,16 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.241 2014/01/18 09:26:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.243 2014/02/04 09:38:56 polynomial-c Exp $
+
+  04 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> git-1.8.1.5.ebuild,
+  git-1.8.1.5-r1.ebuild, git-1.8.2.1.ebuild, git-1.8.4.5.ebuild,
+  -git-1.8.5.2.ebuild, git-1.8.5.3.ebuild, git-9999.ebuild,
+  -files/git-1.7.12-git-svn-backport.patch, +files/git-daemon-r1.initd:
+  Added rewritten init script which no longer contains "need net" (bug
+  #490446). Added epatch_user (bug #497292). Added www-servers/nginx to the
+  list of server who work with git-instaweb (bug #491862). Removed reference to
+  no longer needed patch in remaining ebuilds. Removed old files and ebuilds.
+  Don't install git-prompt.sh as bash-completion file (bug #477920).
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> git-1.8.1.5-r1.ebuild,
   git-1.8.3.2-r1.ebuild:

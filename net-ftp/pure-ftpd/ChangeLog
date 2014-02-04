@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/pure-ftpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.148 2012/07/30 07:38:03 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.149 2014/02/04 09:43:42 polynomial-c Exp $
+
+  04 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> pure-ftpd-1.0.36.ebuild,
+  files/pure-ftpd.rc11:
+  Fixed pidfile location. Converted latest ebuild to EAPI-5.
 
   30 Jul 2012; Lars Wendler <polynomial-c@gentoo.org>
   -pure-ftpd-1.0.32-r2.ebuild, -pure-ftpd-1.0.35.ebuild:

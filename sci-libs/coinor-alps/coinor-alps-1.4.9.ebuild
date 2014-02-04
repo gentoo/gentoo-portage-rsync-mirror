@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-alps/coinor-alps-1.4.9.ebuild,v 1.1 2014/02/04 07:43:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-alps/coinor-alps-1.4.9.ebuild,v 1.2 2014/02/04 09:46:38 jlec Exp $
 
 EAPI=5
 
@@ -36,7 +36,8 @@ src_prepare() {
 	# bug for later versions of subversions
 	sed -i \
 		-e 's/xexported/xexported -a "x$svn_rev_tmp" != "xUnversioned directory"/' \
-		configure
+		configure || die
+	autotools-utils_src_prepare
 }
 
 src_configure() {
@@ -49,17 +50,15 @@ src_configure() {
 }
 
 src_compile() {
-	autotools-utils_src_compile all $(use doc && echo doxydoc)
+	autotools-utils_src_compile all $(usex doc doxydoc "")
 }
 
 src_test() {
-	pushd "${BUILD_DIR}" > /dev/null || die
-	emake test
-	popd > /dev/null || die
+	autotools-utils_src_test test
 }
 
 src_install() {
-	use doc && HTML_DOC=("${BUILD_DIR}/doxydocs/html/")
+	use doc && HTML_DOC=("${BUILD_DIR}/doxydocs/html/.")
 	autotools-utils_src_install
 	if use examples; then
 		insinto /usr/share/doc/${PF}

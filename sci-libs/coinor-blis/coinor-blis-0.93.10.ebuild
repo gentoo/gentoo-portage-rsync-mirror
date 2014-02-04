@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-blis/coinor-blis-0.93.10.ebuild,v 1.1 2014/02/04 08:19:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-blis/coinor-blis-0.93.10.ebuild,v 1.2 2014/02/04 09:55:14 jlec Exp $
 
 EAPI=5
 
@@ -29,14 +29,15 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
 src_prepare() {
+	# needed for the --with-coin-instdir
+	dodir /usr
 	sed -i \
 		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
 		configure || die
 	autotools-utils_src_prepare
 }
+
 src_configure() {
-	# needed for the --with-coin-instdir
-	dodir /usr
 	local myeconfargs=(
 		--enable-dependency-linking
 		--with-coin-instdir="${ED}"/usr

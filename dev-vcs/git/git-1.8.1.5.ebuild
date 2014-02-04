@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.1.5.ebuild,v 1.14 2013/12/11 10:27:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.1.5.ebuild,v 1.15 2014/02/04 09:36:35 polynomial-c Exp $
 
 EAPI=4
 
@@ -211,10 +211,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	# bug #418431 - stated for upstream 1.7.13. Developed by Michael Schwern,
-	# funded as a bounty by the Gentoo Foundation. Merged upstream in 1.8.0.
-	#epatch "${FILESDIR}"/git-1.7.12-git-svn-backport.patch
-
 	# bug #350330 - automagic CVS when we don't want it is bad.
 	epatch "${FILESDIR}"/git-1.7.12-optional-cvs.patch
 

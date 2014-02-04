@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.52 2014/01/04 23:22:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.53 2014/02/04 09:36:35 polynomial-c Exp $
 
 EAPI=5
 
@@ -231,6 +231,8 @@ src_prepare() {
 	# hack, needs better upstream solution
 	epatch "${FILESDIR}"/git-1.8.5-mw-vendor.patch
 
+	epatch_user
+
 	sed -i \
 		-e 's:^\(CFLAGS[[:space:]]*=\).*$:\1 $(OPTCFLAGS) -Wall:' \
 		-e 's:^\(LDFLAGS[[:space:]]*=\).*$:\1 $(OPTLDFLAGS):' \
@@ -371,7 +373,8 @@ src_install() {
 	use doc && doinfo Documentation/{git,gitman}.info
 
 	newbashcomp contrib/completion/git-completion.bash ${PN}
-	newbashcomp contrib/completion/git-prompt.sh ${PN}-prompt
+	# Not really a bash-completion file (bug #477920)
+	dodoc contrib/completion/git-prompt.sh
 
 	if use emacs ; then
 		elisp-install ${PN} contrib/emacs/git.{el,elc}
@@ -506,7 +509,7 @@ src_install() {
 	fi
 
 	if use !prefix ; then
-		newinitd "${FILESDIR}"/git-daemon.initd git-daemon
+		newinitd "${FILESDIR}"/git-daemon-r1.initd git-daemon
 		newconfd "${FILESDIR}"/git-daemon.confd git-daemon
 		systemd_newunit "${FILESDIR}/git-daemon_at.service" "git-daemon@.service"
 		systemd_dounit "${FILESDIR}/git-daemon.socket"
@@ -629,7 +632,7 @@ pkg_postinst() {
 	echo
 	showpkgdeps git-quiltimport "dev-util/quilt"
 	showpkgdeps git-instaweb \
-		"|| ( www-servers/lighttpd www-servers/apache )"
+		"|| ( www-servers/lighttpd www-servers/apache www-servers/nginx )"
 	echo
 }
 

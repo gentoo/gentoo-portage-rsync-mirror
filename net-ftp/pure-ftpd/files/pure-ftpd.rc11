@@ -1,10 +1,10 @@
 #!/sbin/runscript
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc11,v 1.4 2012/03/29 11:33:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc11,v 1.5 2014/02/04 09:43:41 polynomial-c Exp $
 
-ftpd_pidfile="/var/run/pure-ftpd.pid"
-script_pidfile="/var/run/pure-uploadscript.pid"
+ftpd_pidfile="/run/pure-ftpd.pid"
+script_pidfile="/run/pure-uploadscript.pid"
 ftpd_rundir="/var/lib/run/pure-ftpd"
 daemon="/usr/sbin/pure-ftpd"
 script_daemon="/usr/sbin/pure-uploadscript"

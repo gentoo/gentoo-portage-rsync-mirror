@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-os/coinor-os-2.8.3.ebuild,v 1.1 2014/01/15 20:11:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-os/coinor-os-2.8.3.ebuild,v 1.2 2014/02/04 09:39:09 jlec Exp $
 
 EAPI=5
 
@@ -34,10 +34,19 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MYPN}-${PV}/${MYPN}"
 
+src_prepare() {
+	sed -i \
+		-e "s:lib/pkgconfig:$(get_libdir)/pkgconfig:g" \
+		configure || die
+	autotools-utils_src_prepare
+}
 src_configure() {
 	append-cppflags -DNDEBUG
+	# needed for the --with-coin-instdir
+	dodir /usr
 	local myeconfargs=(
 		--enable-dependency-linking
+		--with-coin-instdir="${ED}"/usr
 	)
 	autotools-utils_src_configure
 }

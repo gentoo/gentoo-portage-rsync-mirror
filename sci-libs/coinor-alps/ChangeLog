@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/coinor-alps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-alps/ChangeLog,v 1.3 2014/02/04 07:43:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/coinor-alps/ChangeLog,v 1.4 2014/02/04 09:46:38 jlec Exp $
+
+  04 Feb 2014; Justin Lecher <jlec@gentoo.org> coinor-alps-1.4.9.ebuild:
+  Add missing die and use usex; user proper autotools-utils functions
 
 *coinor-alps-1.4.9 (04 Feb 2014)
 

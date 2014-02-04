@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.36.ebuild,v 1.11 2012/07/29 18:46:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.36.ebuild,v 1.12 2014/02/04 09:43:42 polynomial-c Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils confutils flag-o-matic
 
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
@@ -85,11 +85,11 @@ src_configure() {
 		--with-uploadscript \
 		--with-virtualhosts \
 		--enable-largefile \
-		${my_conf} || die "econf failed"
+		${my_conf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	dodoc AUTHORS CONTACT ChangeLog FAQ HISTORY INSTALL README* NEWS
 
