@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/cvmfs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/ChangeLog,v 1.9 2013/12/02 05:20:52 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/ChangeLog,v 1.10 2014/02/05 18:00:36 bicatali Exp $
+
+*cvmfs-2.1.17 (05 Feb 2014)
+
+  05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +cvmfs-2.1.17.ebuild,
+  cvmfs-9999.ebuild:
+  Version bump, changed repository and branch to upstream for live ebuild
 
   02 Dec 2013; Patrick Lauer <patrick@gentoo.org> cvmfs-9999.ebuild:
   Whitespace

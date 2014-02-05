@@ -1,14 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/cvmfs-9999.ebuild,v 1.3 2014/02/05 18:00:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cvmfs/cvmfs-2.1.17.ebuild,v 1.1 2014/02/05 18:00:36 bicatali Exp $
 
 EAPI=5
-
-#if LIVE
-EGIT_REPO_URI="https://github.com/cvmfs/cvmfs.git"
-EGIT_BRANCH="devel"
-inherit git-r3
-#endif
 
 inherit cmake-utils
 
@@ -44,11 +38,6 @@ DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	doc? ( app-doc/doxygen[dot] )"
 
-#if LIVE
-KEYWORDS=
-SRC_URI=
-#endif
-
 src_prepare() {
 	sed -i -e 's/COPYING//' CMakeLists.txt || die
 	rm bootstrap.sh || die
@@ -68,7 +57,6 @@ src_prepare() {
 		mkdir -p "${S}_build"/externals/build_vjson
 		cp externals/vjson/src/* "${S}_build"/externals/build_vjson/ || die
 	fi
-
 	cmake-utils_src_prepare
 }
 
