@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-8.0.1.080.ebuild,v 1.2 2014/02/05 07:07:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ipp-8.0.1.080.ebuild,v 1.3 2014/02/05 10:22:07 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 RDEPEND=">=dev-libs/intel-common-13.1"
 DEPEND=""
 
-CHECKREQS_DISK_BUILD=6250M
+CHECKREQS_DISK_BUILD=8000M
 
 INTEL_BIN_RPMS="ipp-common-devel ipp-mt ipp-mt-devel ipp-perftest ipp-perftest-devel ipp-st ipp-st-devel"
 INTEL_DAT_RPMS="ipp-common"

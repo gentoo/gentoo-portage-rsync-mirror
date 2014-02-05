@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ipp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.17 2014/02/05 07:07:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.18 2014/02/05 10:22:07 jlec Exp $
+
+  05 Feb 2014; Justin Lecher <jlec@gentoo.org> ipp-8.0.1.080.ebuild:
+  Increase diskspace some more
 
   05 Feb 2014; Justin Lecher <jlec@gentoo.org> ipp-8.0.1.080.ebuild:
   Adopt needed diskspace
