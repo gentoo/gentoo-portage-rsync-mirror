@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/portaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.96 2014/01/25 09:18:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/ChangeLog,v 1.97 2014/02/05 11:25:41 radhermit Exp $
+
+*portaudio-19_pre20140130 (05 Feb 2014)
+
+  05 Feb 2014; Tim Harder <radhermit@gentoo.org>
+  +portaudio-19_pre20140130.ebuild, -portaudio-19_pre20140121_rc.ebuild:
+  Version bump and remove old.
 
 *portaudio-19_pre20140121_rc (25 Jan 2014)
 

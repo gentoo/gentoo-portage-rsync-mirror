@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/csound
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.30 2013/09/05 18:57:17 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/csound/ChangeLog,v 1.32 2014/02/05 11:23:00 radhermit Exp $
+
+  05 Feb 2014; Tim Harder <radhermit@gentoo.org> -csound-5.18.02-r1.ebuild:
+  Remove old.
+
+*csound-6.02 (05 Feb 2014)
+
+  05 Feb 2014; Tim Harder <radhermit@gentoo.org> +csound-6.02.ebuild,
+  +files/csound-6.02-porttime-in-portmidi.patch, metadata.xml:
+  Version bump.
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> csound-5.19.01.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
