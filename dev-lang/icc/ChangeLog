@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.97 2013/10/02 13:05:24 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.98 2014/02/05 17:12:30 jlec Exp $
+
+  05 Feb 2014; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Drop maintainer
 
 *icc-14.0.0.080 (02 Oct 2013)
 

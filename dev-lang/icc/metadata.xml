@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci</herd>
-  <maintainer>
-    <email>weaver@gentoo.org</email>
-    <name>Andrey Kislyuk</name>
-  </maintainer>
   <longdescription lang="en">
   The Intel® C++ Compiler is a full featured C/C++ compiler for Intel
   based architectures. The compiler supports multi-threading, automatic

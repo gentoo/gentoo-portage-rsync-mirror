@@ -1,11 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.1 2014/01/27 19:12:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.2 2014/02/05 17:22:47 hd_brummy Exp $
 
 EAPI=5
-GENTOO_VDR_CONDITIONAL=yes
 
-inherit vdr-plugin-2 toolchain-funcs eutils
+inherit vdr-plugin-2
+
+GENTOO_VDR_CONDITIONAL=yes
 
 DESCRIPTION="Video Disk Recorder Xinelib PlugIn"
 HOMEPAGE="http://sourceforge.net/projects/xineliboutput/"
@@ -41,7 +42,6 @@ COMMON_DEPEND="
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
-	sys-kernel/linux-headers
 	nls? ( sys-devel/gettext )
 	xine? (
 		X? (
@@ -51,26 +51,17 @@ DEPEND="${COMMON_DEPEND}
 	)"
 RDEPEND="${COMMON_DEPEND}"
 
+REQUIRED_USE=" || ( vdr xine )"
+
 VDR_CONFD_FILE="${FILESDIR}/confd-1.0.0_pre6"
 
 pkg_setup() {
-	if ! use vdr && ! use xine; then
-		die "You either need at least one of these flags: vdr xine"
-	fi
-
 	vdr-plugin-2_pkg_setup
 
 	if use xine; then
 		XINE_PLUGIN_DIR=$(pkg-config --variable=plugindir libxine)
 		[ -z "${XINE_PLUGIN_DIR}" ] && die "Could not find xine plugin dir"
 	fi
-}
-
-src_prepare() {
-	# Allow user patches to be applied without modifyfing the ebuild
-	epatch_user
-
-	vdr-plugin-2_src_prepare
 }
 
 src_configure() {
