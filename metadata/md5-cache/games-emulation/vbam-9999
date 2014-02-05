@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
-DEPEND=>=media-libs/libpng-1.4 media-libs/libsdl[joystick] link? ( media-libs/libsfml ) sys-libs/zlib virtual/glu virtual/opengl ffmpeg? ( virtual/ffmpeg ) gtk? ( >=dev-cpp/glibmm-2.4.0:2 >=dev-cpp/gtkmm-2.4.0:2.4 >=dev-cpp/gtkglextmm-1.2.0 ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl ) wxwidgets? ( cairo? ( x11-libs/cairo ) openal? ( media-libs/openal ) x11-libs/wxGTK:2.8[X,opengl] ) wxwidgets? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) x86? ( || ( dev-lang/nasm dev-lang/yasm ) ) nls? ( sys-devel/gettext ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync >=sys-apps/sed-4
+DEPEND=>=media-libs/libpng-1.4 media-libs/libsdl[joystick] link? ( media-libs/libsfml ) sys-libs/zlib virtual/glu virtual/opengl ffmpeg? ( virtual/ffmpeg ) gtk? ( >=dev-cpp/glibmm-2.4.0:2 >=dev-cpp/gtkmm-2.4.0:2.4 >=dev-cpp/gtkglextmm-1.2.0 ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl ) wxwidgets? ( cairo? ( x11-libs/cairo ) openal? ( media-libs/openal ) x11-libs/wxGTK:3.0[X,opengl] ) wxwidgets? ( || ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] ) ) x86? ( || ( dev-lang/nasm dev-lang/yasm ) ) nls? ( sys-devel/gettext ) virtual/pkgconfig sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 ) || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync >=sys-apps/sed-4
 DESCRIPTION=Game Boy, GBC, and GBA emulator forked from VisualBoyAdvance
-EAPI=4
+EAPI=5
 HOMEPAGE=http://vba-m.ngemu.com
 IUSE=cairo ffmpeg gtk link lirc nls openal +sdl wxwidgets
 LICENSE=GPL-2
-RDEPEND=>=media-libs/libpng-1.4 media-libs/libsdl[joystick] link? ( media-libs/libsfml ) sys-libs/zlib virtual/glu virtual/opengl ffmpeg? ( virtual/ffmpeg ) gtk? ( >=dev-cpp/glibmm-2.4.0:2 >=dev-cpp/gtkmm-2.4.0:2.4 >=dev-cpp/gtkglextmm-1.2.0 ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl ) wxwidgets? ( cairo? ( x11-libs/cairo ) openal? ( media-libs/openal ) x11-libs/wxGTK:2.8[X,opengl] )
+RDEPEND=>=media-libs/libpng-1.4 media-libs/libsdl[joystick] link? ( media-libs/libsfml ) sys-libs/zlib virtual/glu virtual/opengl ffmpeg? ( virtual/ffmpeg ) gtk? ( >=dev-cpp/glibmm-2.4.0:2 >=dev-cpp/gtkmm-2.4.0:2.4 >=dev-cpp/gtkglextmm-1.2.0 ) lirc? ( app-misc/lirc ) nls? ( virtual/libintl ) wxwidgets? ( cairo? ( x11-libs/cairo ) openal? ( media-libs/openal ) x11-libs/wxGTK:3.0[X,opengl] )
 REQUIRED_USE=|| ( sdl gtk wxwidgets )
 SLOT=0
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	games	0e2f69d5415e0363531260d2eabb0826	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	fac675dcccf94392371a6abee62d909f	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	755f4b28ecdf7c1213011108e566babc
-_md5_=bfa0904a7d35f8c70427b84d001d59a8
+_md5_=ef3d555280235e74e7249514836eee05

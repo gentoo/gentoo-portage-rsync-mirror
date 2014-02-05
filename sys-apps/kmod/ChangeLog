@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.127 2014/02/02 20:01:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.128 2014/02/05 09:46:31 ssuominen Exp $
+
+  05 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-16.ebuild,
+  kmod-9999.ebuild:
+  Fix bash-completion directory by using bash-completion-r1.eclass. Temporarily
+  run non-9999 ebuilds as -j1 because of the -15-dynamic-kmod.patch wrt #494806
 
   02 Feb 2014; Jeroen Roovers <jer@gentoo.org> kmod-16.ebuild:
   Stable for HPPA (bug #500106).

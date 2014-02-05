@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install postinst prepare
+DEFINED_PHASES=compile configure install postinst prepare
 DEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( >=app-arch/xz-utils-5.0.4-r1 ) openrc? ( !<sys-apps/openrc-0.12 ) zlib? ( >=sys-libs/zlib-1.2.6 ) dev-libs/libxslt doc? ( dev-util/gtk-doc ) lzma? ( virtual/pkgconfig ) zlib? ( virtual/pkgconfig )
 DESCRIPTION=library and tools for managing linux kernel modules
 EAPI=5
@@ -10,5 +10,5 @@ RDEPEND=!sys-apps/module-init-tools !sys-apps/modutils lzma? ( >=app-arch/xz-uti
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kernel/linux/utils/kernel/kmod/kmod-16.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=3b75650708d179b76612931553f5c2c2
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=cd20e82d95e56250ace43826a185d358

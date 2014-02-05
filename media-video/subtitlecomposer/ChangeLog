@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subtitlecomposer
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.18 2014/01/20 11:15:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/ChangeLog,v 1.19 2014/02/05 09:38:54 nimiux Exp $
+
+  05 Feb 2014; Chema Alonso <nimiux@gentoo.org>
+  subtitlecomposer-0.5.3-r2.ebuild:
+  Stable for amd64 wrt bug #495824
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org>
   +files/subtitlecomposer-0.5.3-gold-gstreamer.patch,

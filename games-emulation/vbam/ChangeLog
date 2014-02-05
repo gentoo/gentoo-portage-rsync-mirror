@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/vbam
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.21 2013/06/15 23:39:10 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.22 2014/02/05 09:57:45 radhermit Exp $
+
+*vbam-1.8.0.1228 (05 Feb 2014)
+
+  05 Feb 2014; Tim Harder <radhermit@gentoo.org> +vbam-1.8.0.1228.ebuild,
+  vbam-9999.ebuild, +files/vbam-1.8.0.1228-header.patch:
+  Version bump.
 
 *vbam-1.8.0.1197 (15 Jun 2013)
 
