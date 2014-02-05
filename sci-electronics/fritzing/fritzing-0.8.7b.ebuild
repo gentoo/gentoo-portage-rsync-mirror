@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.7.11b.ebuild,v 1.3 2013/03/02 23:19:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/fritzing/fritzing-0.8.7b.ebuild,v 1.1 2014/02/05 01:16:30 mrueg Exp $
 
 EAPI=5
 
@@ -36,10 +36,7 @@ src_prepare() {
 	rm -rf src/lib/quazip/ pri/quazip.pri src/lib/boost*
 
 	# Fritzing doesn't need zlib
-	sed -i -e 's:LIBS += -lz::' phoenix.pro || die
-
-	epatch "${FILESDIR}/${P}-no_bundled_quazip.patch"
-	epatch "${FILESDIR}/no-bundled-boost.patch"
+	sed -i -e 's:LIBS += -lz::' -e 's:-lminizip::' phoenix.pro || die
 
 	edos2unix ${PN}.desktop
 
@@ -53,4 +50,8 @@ src_prepare() {
 	else
 		sed -i -e "s:translations.extra = .*:\r:" phoenix.pro || die
 	fi
+}
+
+src_configure() {
+	eqmake4 DEFINES=QUAZIP_INSTALLED phoenix.pro
 }
