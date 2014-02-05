@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby2ruby
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.59 2013/12/19 23:45:15 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.60 2014/02/05 00:35:23 mrueg Exp $
+
+*ruby2ruby-2.0.7 (05 Feb 2014)
+
+  05 Feb 2014; Manuel Rüger <mrueg@gentoo.org> +ruby2ruby-2.0.7.ebuild:
+  Version bump. Add ruby20 target.
 
   19 Dec 2013; Manuel Rüger <mrueg@gentoo.org> -ruby2ruby-1.2.4-r2.ebuild:
   Cleanup old.
