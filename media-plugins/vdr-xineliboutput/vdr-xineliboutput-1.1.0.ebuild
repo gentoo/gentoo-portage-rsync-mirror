@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.2 2014/02/05 17:22:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.1.0.ebuild,v 1.3 2014/02/05 19:17:33 idl0r Exp $
 
 EAPI=5
 
@@ -42,6 +42,7 @@ COMMON_DEPEND="
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
+	sys-kernel/linux-headers
 	nls? ( sys-devel/gettext )
 	xine? (
 		X? (

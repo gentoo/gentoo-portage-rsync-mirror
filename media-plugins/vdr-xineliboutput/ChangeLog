@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.73 2014/02/05 17:22:47 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.74 2014/02/05 19:17:33 idl0r Exp $
+
+  05 Feb 2014; Christian Ruppert <idl0r@gentoo.org>
+  vdr-xineliboutput-1.1.0.ebuild:
+  linux-headers are still required
 
   05 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-xineliboutput-1.1.0.ebuild:
