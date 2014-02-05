@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1136 2014/02/02 23:43:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1137 2014/02/05 06:18:29 dirtyepic Exp $
+
+  05 Feb 2014; Ryan Hill <dirtyepic@gentoo.org> tests/toolchain.sh,
+  toolchain.eclass:
+  Limit downgrading flags to amd64 and x86. Strip -mtune for < 3.4. Only
+  worry about -mno* flags, -m* are removed by strip-flags. Add -mno-movbe.
 
   02 Feb 2014; Ryan Hill <dirtyepic@gentoo.org> +tests/toolchain.sh,
   toolchain.eclass:

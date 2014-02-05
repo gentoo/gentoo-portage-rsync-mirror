@@ -1,6 +1,13 @@
 # ChangeLog for games-util/pyfa
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.24 2013/12/02 02:09:29 tetromino Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.25 2014/02/05 06:17:45 tetromino Exp $
+
+*pyfa-1.1.20 (05 Feb 2014)
+
+  05 Feb 2014; Alexandre Rostovtsev <tetromino@gentoo.org> -pyfa-1.1.18.ebuild,
+  +pyfa-1.1.20.ebuild, pyfa-9999.ebuild, +files/pyfa-1.1.20-staticPath.patch,
+  -files/pyfa-1.1-staticPath.patch:
+  Version bump for Rubicon 1.1; remove obsolete version.
 
 *pyfa-9999 (02 Dec 2013)
 *pyfa-1.1.18 (02 Dec 2013)

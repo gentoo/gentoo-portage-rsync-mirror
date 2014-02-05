@@ -14,8 +14,9 @@ test_downgrade_arch_flags() {
 
 	tbegin "${ver} ${CFLAGS} => ${exp}"
 
+	CHOST=x86_64 # needed for tc-arch
 	downgrade_arch_flags ${ver}
-	
+
 	if [[ ${CFLAGS} != ${exp} ]]; then
 		msg="Failure - Expected: \"${exp}\" Got: \"${CFLAGS}\""
 		ret=1
@@ -59,7 +60,7 @@ test_downgrade_arch_flags 4.9 "-mtune=intel"      "-mtune=intel"
 test_downgrade_arch_flags 4.8 "-mtune=generic"    "-mtune=intel"
 test_downgrade_arch_flags 3.4 ""                  "-mtune=generic"
 test_downgrade_arch_flags 3.4 ""                  "-mtune=x86-64"
-test_downgrade_arch_flags 3.3 "-mtune=nocona"     "-mtune=haswell"
+test_downgrade_arch_flags 3.3 ""                  "-mtune=anything"
 
 test_downgrade_arch_flags 4.5 "-march=amdfam10 -mtune=generic" "-march=btver2 -mtune=generic"
 test_downgrade_arch_flags 3.3 "-march=k6-2"       "-march=geode -mtune=barcelona"
@@ -68,14 +69,12 @@ test_downgrade_arch_flags 3.4 "-march=k8"         "-march=btver2 -mtune=generic"
 test_downgrade_arch_flags 4.2 "-march=native"     "-march=native"
 test_downgrade_arch_flags 4.1 "-march=nocona"     "-march=native"
 
-test_downgrade_arch_flags 4.9 "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4" "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4"
-test_downgrade_arch_flags 4.8 "-march=foo -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4" "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4"
-test_downgrade_arch_flags 4.7 "-march=foo -mavx2 -mbmi -mno-xop -maes -mno-sse4" "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4"
-test_downgrade_arch_flags 4.6 "-march=foo -mbmi -mno-xop -maes -mno-sse4" "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4"
-test_downgrade_arch_flags 4.5 "-march=foo -mno-xop -maes -mno-sse4" "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4"
-test_downgrade_arch_flags 4.4 "-march=foo -maes -mno-sse4" "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4"
-test_downgrade_arch_flags 4.3 "-march=foo -mno-sse4" "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4"
-test_downgrade_arch_flags 4.2 "-march=foo" "-march=foo -msha -mrtm -mavx2 -mbmi -mno-xop -maes -mno-sse4"
+test_downgrade_arch_flags 4.9 "-march=foo -mno-sha -mno-rtm -mno-avx2 -mno-avx -mno-sse4.1" "-march=foo -mno-sha -mno-rtm -mno-avx2 -mno-avx -mno-sse4.1"
+test_downgrade_arch_flags 4.8 "-march=foo -mno-rtm -mno-avx2 -mno-avx -mno-sse4.1" "-march=foo -mno-sha -mno-rtm -mno-avx2 -mno-avx -mno-sse4.1"
+test_downgrade_arch_flags 4.7 "-march=foo -mno-avx2 -mno-avx -mno-sse4.1" "-march=foo -mno-sha -mno-rtm -mno-avx2 -mno-avx -mno-sse4.1"
+test_downgrade_arch_flags 4.6 "-march=foo -mno-avx -mno-sse4.1" "-march=foo -mno-sha -mno-rtm -mno-avx2 -mno-avx -mno-sse4.1"
+test_downgrade_arch_flags 4.3 "-march=foo -mno-sse4.1" "-march=foo -mno-sha -mno-rtm -mno-avx2 -mno-avx -mno-sse4.1"
+test_downgrade_arch_flags 4.2 "-march=foo" "-march=foo -mno-sha -mno-rtm -mno-avx2 -mno-avx -mno-sse4.1"
 
-test_downgrade_arch_flags 4.4 "-O2 -march=core2 -ffoo -fblah" "-O2 -march=atom -msha -ffoo -mrtm -mavx2 -fblah"
+test_downgrade_arch_flags 4.4 "-O2 -march=core2 -ffoo -fblah" "-O2 -march=atom -mno-sha -ffoo -mno-rtm -fblah"
 texit

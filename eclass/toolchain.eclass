@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.622 2014/02/02 23:43:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.623 2014/02/05 06:18:29 dirtyepic Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1214,13 +1214,14 @@ downgrade_arch_flags() {
 
 	bver=${1:-${GCC_BRANCH_VER}}
 	[[ $(gcc-version) < ${bver} ]] && return 0
+	[[ $(tc-arch) != amd64 && $(tc-arch) != x86 ]] && return 0
 
 	myarch=$(get-flag march)
 	mytune=$(get-flag mtune)
 
 	# If -march=native isn't supported we have to tease out the actual arch
 	if [[ ${myarch} == native || ${mytune} == native ]] ; then
-		if [[ ${bver} < "4.2" ]] ; then
+		if [[ ${bver} < 4.2 ]] ; then
 			arch=$(echo "" | $(tc-getCC) -march=native -v -E - 2>&1 \
 				 | grep cc1 | sed -e 's:.*-march=\([^ ]*\).*:\1:')
 			replace-cpu-flags native ${arch}
@@ -1228,9 +1229,10 @@ downgrade_arch_flags() {
 	fi
 
 	# Handle special -mtune flags
-	[[ ${mytune} == intel && ${bver} < "4.9" ]] && replace-cpu-flags intel generic
-	[[ ${mytune} == generic && ${bver} < "4.2" ]] && filter-flags '-mtune=*'
+	[[ ${mytune} == intel && ${bver} < 4.9 ]] && replace-cpu-flags intel generic
+	[[ ${mytune} == generic && ${bver} < 4.2 ]] && filter-flags '-mtune=*'
 	[[ ${mytune} == x86-64 ]] && filter-flags '-mtune=*'
+	[[ ${bver} < 3.4 ]] && filter-flags '-mtune=*'
 
 	declare -a archlist
 	# "arch" "added" "replacement"
@@ -1277,7 +1279,7 @@ downgrade_arch_flags() {
 		ver=${archlist[i]#* } ver=${ver% *}
 		rep=${archlist[i]##* }
 
-		[[ ${myarch} != ${arch} ]] && [[ ${mytune} != ${arch} ]] && continue
+		[[ ${myarch} != ${arch} && ${mytune} != ${arch} ]] && continue
 		
 		if [[ ${ver} > ${bver} ]] ; then
 			einfo "Replacing ${myarch} (added in ${ver}) with ${rep}..."
@@ -1291,42 +1293,44 @@ downgrade_arch_flags() {
 	done
 
 	declare -a isalist
-	isalist=("-msha 4.9")
-	isalist+=("-mavx512pf 4.9")
-	isalist+=("-mavx512f 4.9")
-	isalist+=("-mavx512er 4.9")
-	isalist+=("-mavx512cd 4.9")
-	isalist+=("-mxsaveopt 4.8")
-	isalist+=("-mxsave 4.8")
-	isalist+=("-mrtm 4.8")
-	isalist+=("-mfxsr 4.8")
-	isalist+=("-mlzcnt 4.7")
-	isalist+=("-mbmi2 4.7")
-	isalist+=("-mavx2 4.7")
-	isalist+=("-mtbm 4.6")
-	isalist+=("-mrdrnd 4.6")
-	isalist+=("-mfsgsbase 4.6")
-	isalist+=("-mf16c 4.6")
-	isalist+=("-mbmi 4.6")
-	isalist+=("-mxop 4.5")
-	isalist+=("-mlwp 4.5")
-	isalist+=("-mfma4 4.5")
-	isalist+=("-mpclmul 4.4")
-	isalist+=("-mfma 4.4")
-	isalist+=("-mavx 4.4")
-	isalist+=("-maes 4.4")
-	isalist+=("-mssse3 4.3")
-	isalist+=("-msse4a 4.3")
-	isalist+=("-msse4 4.3")
-	isalist+=("-msse4.2 4.3")
-	isalist+=("-msse4.1 4.3")
-	isalist+=("-mpopcnt 4.3")
-	isalist+=("-mabm 4.3")
+	# we only check -mno* here since -m* get removed by strip-flags later on
+	isalist=("-mno-sha 4.9")
+	isalist+=("-mno-avx512pf 4.9")
+	isalist+=("-mno-avx512f 4.9")
+	isalist+=("-mno-avx512er 4.9")
+	isalist+=("-mno-avx512cd 4.9")
+	isalist+=("-mno-xsaveopt 4.8")
+	isalist+=("-mno-xsave 4.8")
+	isalist+=("-mno-rtm 4.8")
+	isalist+=("-mno-fxsr 4.8")
+	isalist+=("-mno-lzcnt 4.7")
+	isalist+=("-mno-bmi2 4.7")
+	isalist+=("-mno-avx2 4.7")
+	isalist+=("-mno-tbm 4.6")
+	isalist+=("-mno-rdrnd 4.6")
+	isalist+=("-mno-fsgsbase 4.6")
+	isalist+=("-mno-f16c 4.6")
+	isalist+=("-mno-bmi 4.6")
+	isalist+=("-mno-xop 4.5")
+	isalist+=("-mno-movbe 4.5")
+	isalist+=("-mno-lwp 4.5")
+	isalist+=("-mno-fma4 4.5")
+	isalist+=("-mno-pclmul 4.4")
+	isalist+=("-mno-fma 4.4")
+	isalist+=("-mno-avx 4.4")
+	isalist+=("-mno-aes 4.4")
+	isalist+=("-mno-ssse3 4.3")
+	isalist+=("-mno-sse4a 4.3")
+	isalist+=("-mno-sse4 4.3")
+	isalist+=("-mno-sse4.2 4.3")
+	isalist+=("-mno-sse4.1 4.3")
+	isalist+=("-mno-popcnt 4.3")
+	isalist+=("-mno-abm 4.3")
 
 	for ((i=0; i < ${#isalist[@]}; i++)) ; do
 		isa=${isalist[i]%% *}
 		ver=${isalist[i]##* }
-		[[ ${ver} > ${bver} ]] && filter-flags ${isa} ${isa/-m/-mno-}
+		[[ ${ver} > ${bver} ]] && filter-flags ${isa}
 	done
 }
 

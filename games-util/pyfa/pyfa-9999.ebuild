@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-9999.ebuild,v 1.1 2013/12/02 02:09:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/pyfa-9999.ebuild,v 1.2 2014/02/05 06:17:45 tetromino Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -18,7 +18,7 @@ if [[ ${PV} = 9999 ]]; then
 	inherit git-2
 	KEYWORDS=""
 else
-	SRC_URI="https://github.com/DarkFenX/Pyfa/releases/download/v${PV}/${P}-rubicon-1.0-src.zip"
+	SRC_URI="https://github.com/DarkFenX/Pyfa/releases/download/v${PV}/${P}-rubicon-1.1-src.zip"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 IUSE="+graph"
@@ -38,7 +38,7 @@ src_prepare() {
 	edos2unix config.py pyfa.py service/settings.py
 
 	# make staticPath settable from configforced again
-	epatch "${FILESDIR}/${PN}-1.1-staticPath.patch"
+	epatch "${FILESDIR}/${PN}-1.1.20-staticPath.patch"
 
 	# do not try to save exported html to python sitedir
 	epatch "${FILESDIR}/${PN}-1.1.8-html-export-path.patch"
