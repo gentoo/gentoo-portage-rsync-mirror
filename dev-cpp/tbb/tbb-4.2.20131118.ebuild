@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.1.20130613.ebuild,v 1.3 2013/08/27 20:20:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.2.20131118.ebuild,v 1.1 2014/02/05 18:10:26 bicatali Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib versionator toolchain-funcs
