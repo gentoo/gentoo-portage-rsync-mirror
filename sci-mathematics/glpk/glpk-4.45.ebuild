@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.45.ebuild,v 1.10 2012/05/04 07:46:50 jdhore Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.45.ebuild,v 1.11 2014/02/05 21:54:33 bicatali Exp $
 
 EAPI=2
 inherit flag-o-matic
@@ -21,6 +21,10 @@ RDEPEND="sys-libs/zlib
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+src_prepare() {
+	epatch 	"${FILESDIR}"/${PN}-4.52.1-mariadb-5.5.patch
+}
 
 src_configure() {
 	local myconf="--disable-dl"

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.52.1-r1.ebuild,v 1.1 2014/01/16 17:31:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.52.1-r1.ebuild,v 1.2 2014/02/05 21:54:33 bicatali Exp $
 
 EAPI=5
 
@@ -30,6 +30,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.52.1-debundle-amd.patch
 	"${FILESDIR}"/${PN}-4.52.1-debundle-zlib.patch
+	"${FILESDIR}"/${PN}-4.52.1-mariadb-5.5.patch
 )
 
 src_configure() {

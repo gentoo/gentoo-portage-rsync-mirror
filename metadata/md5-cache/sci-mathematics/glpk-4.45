@@ -1,4 +1,4 @@
-DEFINED_PHASES=configure install
+DEFINED_PHASES=configure install prepare
 DEPEND=sys-libs/zlib odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) ) gmp? ( dev-libs/gmp ) mysql? ( virtual/mysql ) virtual/pkgconfig
 DESCRIPTION=GNU Linear Programming Kit
 EAPI=2
@@ -10,4 +10,4 @@ RDEPEND=sys-libs/zlib odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) ) gmp? ( de
 SLOT=0
 SRC_URI=mirror://gnu/glpk/glpk-4.45.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=c15bf018f3ba12949d2f8c59a3f288e9
+_md5_=e7e876bac9e877ba2e52c381d2c70b30

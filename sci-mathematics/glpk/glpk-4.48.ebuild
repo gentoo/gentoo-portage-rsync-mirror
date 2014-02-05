@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.48.ebuild,v 1.2 2013/07/18 12:34:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.48.ebuild,v 1.3 2014/02/05 21:54:33 bicatali Exp $
 
 EAPI=5
 
@@ -21,6 +21,10 @@ RDEPEND="
 	odbc? ( || ( dev-db/libiodbc dev-db/unixODBC ) )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+PATCHES=(
+	"${FILESDIR}"/${PN}-4.52.1-mariadb-5.5.patch
+)
 
 src_configure() {
 	local myeconfargs=(
