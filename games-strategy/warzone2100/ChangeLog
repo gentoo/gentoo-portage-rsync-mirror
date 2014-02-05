@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/warzone2100
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.82 2013/11/07 03:53:08 mr_bones_ Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.83 2014/02/05 06:31:29 mr_bones_ Exp $
+
+*warzone2100-3.1.1 (05 Feb 2014)
+
+  05 Feb 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/warzone2100-3.1.1-pkgconf.patch, +warzone2100-3.1.1.ebuild:
+  version bump (bug #500228)
 
   07 Nov 2013; Michael Sterrett <mr_bones_@gentoo.org>
   -files/warzone2100-2.3.9-pkgconf.patch, -warzone2100-2.3.9.ebuild:
