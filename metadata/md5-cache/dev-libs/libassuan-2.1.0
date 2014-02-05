@@ -9,4 +9,4 @@ LICENSE=GPL-3 LGPL-2.1
 RDEPEND=>=dev-libs/libgpg-error-1.8
 SLOT=0
 SRC_URI=mirror://gnupg/libassuan/libassuan-2.1.0.tar.bz2
-_md5_=512e609c4637f7e6d315cec90579a8b1
+_md5_=abf3cac553f455efcfbc113707d9deab

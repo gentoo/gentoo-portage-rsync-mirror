@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.335 2013/12/26 14:57:34 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.336 2014/02/05 04:14:23 radhermit Exp $
+
+*mpd-0.18.7 (05 Feb 2014)
+
+  05 Feb 2014; Tim Harder <radhermit@gentoo.org> +mpd-0.18.7.ebuild:
+  Version bump (bug #499340).
 
   26 Dec 2013; Markus Meier <maekke@gentoo.org> mpd-0.18.5.ebuild:
   add ~arm, bug #489962
