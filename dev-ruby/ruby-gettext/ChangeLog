@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.122 2014/01/30 23:16:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.123 2014/02/05 00:16:54 mrueg Exp $
+
+*ruby-gettext-3.0.6 (05 Feb 2014)
+
+  05 Feb 2014; Manuel Rüger <mrueg@gentoo.org> +ruby-gettext-3.0.6.ebuild:
+  Version bump.
 
   30 Jan 2014; Markus Meier <maekke@gentoo.org> ruby-gettext-3.0.3.ebuild:
   add ~arm, bug #499194

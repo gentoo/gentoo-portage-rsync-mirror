@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ox/ChangeLog,v 1.4 2013/12/02 12:06:06 mrueg Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ox/ChangeLog,v 1.5 2014/02/05 00:13:30 mrueg Exp $
+
+*ox-2.1.0 (05 Feb 2014)
+
+  05 Feb 2014; Manuel Rüger <mrueg@gentoo.org> +ox-2.1.0.ebuild,
+  -ox-2.0.9-r1.ebuild:
+  Version bump. Add ruby21 target. Cleanup old.
 
 *ox-2.0.12 (02 Dec 2013)
 
