@@ -4,10 +4,10 @@ DESCRIPTION=A class for types that can be converted to a hash value
 EAPI=5
 HOMEPAGE=http://github.com/tibbe/hashable
 IUSE=+sse2 sse4_1 doc hscolour profile test
-KEYWORDS=~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=BSD
 RDEPEND=>=dev-haskell/text-0.11.0.5:=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=0/1.2.1.0
 SRC_URI=mirror://hackage/packages/archive/hashable/1.2.1.0/hashable-1.2.1.0.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	419a74a0fe876385690dfe3c4281bac7	haskell-cabal	481d999da090733b68828c266eda24fb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=b8dd43e699f142cfaa66257843a9d301
+_md5_=b808954eefc2bce9af14978d996ace55
