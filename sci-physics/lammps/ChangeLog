@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.8 2014/02/05 03:04:15 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.9 2014/02/05 04:35:15 nicolasbock Exp $
+
+  05 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> lammps-20140129.ebuild:
+  sci-physics/lammps: Trying to add blocker, ottxor beat me to it :)
 
   05 Feb 2014; Christoph Junghans <ottxor@gentoo.org> lammps-20131201.ebuild,
   lammps-20131216.ebuild, lammps-20131217.ebuild, lammps-20140122.ebuild,
