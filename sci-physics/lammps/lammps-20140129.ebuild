@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140129.ebuild,v 1.1 2014/01/27 18:20:39 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140129.ebuild,v 1.2 2014/02/05 03:04:14 ottxor Exp $
 
 EAPI=5
 
@@ -51,7 +51,8 @@ KEYWORDS="~amd64"
 IUSE="doc examples gzip lammps-memalign mpi package-dipole package-meam package-rigid"
 
 DEPEND="mpi? ( virtual/mpi )"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!${CATEGORY}/${PN}:stable"
 
 S="${WORKDIR}/${MY_P}"
 
