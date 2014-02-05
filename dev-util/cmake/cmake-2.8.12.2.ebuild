@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.2.ebuild,v 1.1 2014/01/29 01:34:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.12.2.ebuild,v 1.2 2014/02/05 16:10:57 kensington Exp $
 
 EAPI=5
 
@@ -64,6 +64,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.11-more-no_host_paths.patch
 	"${FILESDIR}"/${PN}-2.8.12.1-FindImageMagick.patch
 	"${FILESDIR}"/${PN}-2.8.12.1-FindFreetype.patch
+	"${FILESDIR}"/${PN}-2.8.12.2-hppa-bootstrap.patch
 )
 
 cmake_src_bootstrap() {
