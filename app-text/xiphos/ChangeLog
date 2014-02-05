@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xiphos
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.15 2014/01/06 02:01:51 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.16 2014/02/04 23:59:22 creffett Exp $
+
+*xiphos-3.1.6 (04 Feb 2014)
+
+  04 Feb 2014; Chris Reffett <creffett@gentoo.org> +xiphos-3.1.6.ebuild:
+  Version bump to be compatible with sword-1.7
 
   06 Jan 2014; Chris Reffett <creffett@gentoo.org> xiphos-3.1.5.ebuild:
   Bump to EAPI 5, change to python-single-r1

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.9.ebuild,v 1.12 2013/05/25 07:44:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.9.ebuild,v 1.13 2014/02/04 23:33:05 dilfridge Exp $
 
 EAPI=5
 inherit eutils libtool
@@ -46,6 +46,8 @@ src_configure() {
 		$(use_enable debug) \
 		$(use unicode && echo --with-icu-config="${EPREFIX}"/usr/bin/icu-config) \
 		$(use_with json yajl) \
+		--with-xml2-config=no \
+		--with-curl-config=no \
 		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		${myconf}
 }
