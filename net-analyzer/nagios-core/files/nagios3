@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios3,v 1.2 2011/12/30 15:34:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/files/nagios3,v 1.3 2014/02/05 13:29:09 pinkbyte Exp $
 
 extra_commands="checkconfig"
 extra_started_commands="reload"
@@ -29,7 +29,7 @@ reload()
 }
 
 checkconfig() {
-	ebegin "Verifiyng config files"
+	ebegin "Verifying config files"
 
 	# Silent Check
 	/usr/sbin/nagios -v ${nagios_config} &>/dev/null && return 0

@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/x2goclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.26 2014/01/22 08:49:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.27 2014/02/05 13:15:01 voyageur Exp $
+
+*x2goclient-4.0.1.3-r1 (05 Feb 2014)
+
+  05 Feb 2014; Bernard Cafarelli <voyageur@gentoo.org>
+  +x2goclient-4.0.1.3-r1.ebuild:
+  Allow to build plugin and install provider sample files, bug #500302
 
 *x2goclient-4.0.1.3 (22 Jan 2014)
 
