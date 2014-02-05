@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-3.0.6.ebuild,v 1.1 2014/02/05 00:16:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ruby-gettext-3.0.6.ebuild,v 1.2 2014/02/05 03:35:38 patrick Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ ruby_add_rdepend ">=dev-ruby/locale-2.0.5 dev-ruby/text"
 
 ruby_add_bdepend "doc? ( dev-ruby/yard )
 	dev-ruby/racc"
-ruby_add_bdepend "test? ( 
+ruby_add_bdepend "test? (
 	dev-ruby/test-unit:2
 	dev-ruby/test-unit-rr )"
 

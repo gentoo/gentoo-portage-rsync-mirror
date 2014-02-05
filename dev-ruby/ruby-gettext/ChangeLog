@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.123 2014/02/05 00:16:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.124 2014/02/05 03:35:38 patrick Exp $
+
+  05 Feb 2014; Patrick Lauer <patrick@gentoo.org> ruby-gettext-3.0.6.ebuild:
+  Whitespace
 
 *ruby-gettext-3.0.6 (05 Feb 2014)
 
