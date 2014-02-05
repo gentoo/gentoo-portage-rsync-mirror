@@ -1,6 +1,13 @@
 # ChangeLog for sci-calculators/keurocalc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.8 2013/06/11 15:53:19 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.9 2014/02/05 16:49:23 kensington Exp $
+
+*keurocalc-1.2.1 (05 Feb 2014)
+
+  05 Feb 2014; Michael Palimaka <kensington@gentoo.org>
+  +files/keurocalc-1.2.1-desktopfile.patch,
+  +files/keurocalc-1.2.1-handbookdir.patch, +keurocalc-1.2.1.ebuild:
+  Version bump.
 
   11 Jun 2013; Agostino Sarubbo <ago@gentoo.org> keurocalc-1.2.0.ebuild:
   Stable for x86, wrt bug #472986
