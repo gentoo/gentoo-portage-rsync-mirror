@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.260 2014/02/04 21:06:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.261 2014/02/05 02:56:16 chithanh Exp $
+
+  05 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.use.mask:
+  Mask opencl flag for two more packages, bug #500326.
 
   04 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> use.mask:
   Unmask opencl for powerpc.
