@@ -1,0 +1,109 @@
+diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
+--- monkey-1.4.0.orig/configure	2014-02-05 08:38:13.223712041 -0500
++++ monkey-1.4.0/configure	2014-02-05 08:37:19.575716331 -0500
+@@ -193,7 +193,7 @@
+ 
+ 	echo "+ Creating src/Makefile"
+ 	create_makefile2 mod_libs mod_obj make_script platform \
+-                         malloc_libc malloc_jemalloc
++                         malloc_libc
+ 
+ 	echo "+ Creating src/include/mk_info.h"
+ 	create_info sysconfdir \
+@@ -203,33 +203,12 @@
+ 
+ 	echo -e "+ Creating Makefile"
+ 	if [ "$dir" = 0 ]; then
+-		create_makefile1 bindir malloc_jemalloc
++		create_makefile1 bindir
+ 	else
+ 		create_makefile1_install prefix bindir mandir sysconfdir \
+-                datadir logdir malloc_jemalloc
++                datadir logdir
+ 	fi
+ 
+-        # if the memory allocator is jemalloc, lets start configuring the dependency
+-        if [ $malloc_jemalloc -eq 1 ]; then
+-                echo
+-                echo -e "\033[1m=== Configuring Memory Allocator ===\033[0m"
+-                cd deps/jemalloc
+-                ./configure $JEMALLOC_OPTS \
+-                            --with-jemalloc-prefix=je_ \
+-                            --enable-cc-silence \
+-                            CFLAGS="-std=gnu99 -Wall -pipe -g3 -O3 -funroll-loops " \
+-                            LDFLAGS="" > jemalloc.config 2>&1
+-                if [ $? -eq 0 ]; then
+-                      echo "+ Jemalloc configured"
+-                else
+-                      cat jemalloc.config
+-                      echo
+-                      echo "check more details with: $ cat deps/jemalloc/config.log"
+-                      exit 1
+-                fi
+-                cd ../../
+-        fi
+-
+ 	echo
+ 	echo -e "\033[1m=== Monkey Configuration ===\033[0m"
+ 	echo -e "Platform\t= $platform"
+@@ -306,12 +285,6 @@
+ # Create Makefile
+ create_makefile1()
+ {
+-        if [ $malloc_jemalloc -eq 1 ]; then
+-                $deps="deps/jemalloc"
+-        else
+-                $deps=""
+-        fi
+-
+ 	cat > Makefile << EOF
+ # Monkey HTTP Daemon: Makefile
+ # ============================
+@@ -449,13 +422,6 @@
+ 
+ create_makefile1_install()
+ {
+-        # memory allocator
+-        if [ $malloc_jemalloc -eq 1 ]; then
+-                all_deps="$all_deps jemalloc"
+-        else
+-                deps=""
+-        fi
+-
+ 	# remove old data
+ 	rm -rf plugins.conf plugins.list
+         touch plugins.conf
+@@ -506,10 +472,6 @@
+ 	@\$(MAKE)  -C plugins all
+ 	@echo "  DONE"
+ 
+-jemalloc:
+-	@echo "  CC    jemalloc [all]"
+-	@\$(MAKE)  -C deps/jemalloc
+-
+ clean:
+ 	@(cd src; \$(MAKE) clean)
+ 	@(cd plugins; \$(MAKE) clean)
+@@ -587,8 +549,7 @@
+ 	fi
+ 
+         if [ $malloc_jemalloc -eq 1 ]; then
+-                extra="../deps/jemalloc/lib/libjemalloc.a"
+-                libs="$libs -lm"
++                libs="$libs -ljemalloc"
+         fi
+ 
+ 	cat > src/Makefile<<EOF
+diff -Naur monkey-1.4.0.orig/src/include/mk_memory.h monkey-1.4.0/src/include/mk_memory.h
+--- monkey-1.4.0.orig/src/include/mk_memory.h	2014-02-04 09:04:22.000000000 -0500
++++ monkey-1.4.0/src/include/mk_memory.h	2014-02-05 08:37:55.403713466 -0500
+@@ -25,7 +25,8 @@
+ #include <stdio.h>
+ 
+ #ifdef MALLOC_JEMALLOC
+-#include "../../deps/jemalloc/include/jemalloc/jemalloc.h"
++#include <jemalloc.h>
++#include <jemalloc_defs.h>
+ #endif
+ 
+ #include "mk_macros.h"
