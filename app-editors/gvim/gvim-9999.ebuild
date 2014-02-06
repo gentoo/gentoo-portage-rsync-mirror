@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.13 2013/12/23 10:59:13 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-9999.ebuild,v 1.14 2014/02/06 07:10:44 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -26,9 +26,13 @@ HOMEPAGE="http://www.vim.org/"
 SLOT="0"
 LICENSE="vim"
 IUSE="acl aqua cscope debug gnome gtk lua luajit motif neXt netbeans nls perl python racket ruby selinux session tcl"
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
+REQUIRED_USE="
+	python? ( ${PYTHON_REQUIRED_USE} )
+	luajit? ( lua )
+"
 
-RDEPEND="~app-editors/vim-core-${PV}
+RDEPEND="
+	~app-editors/vim-core-${PV}
 	>=app-admin/eselect-vi-1.1
 	>=sys-libs/ncurses-5.2-r2
 	x11-libs/libXext
@@ -51,22 +55,24 @@ RDEPEND="~app-editors/vim-core-${PV}
 	cscope? ( dev-util/cscope )
 	lua? (
 		luajit? ( dev-lang/luajit )
-		!luajit? ( dev-lang/lua )
+		!luajit? ( dev-lang/lua[deprecated] )
 	)
 	nls? ( virtual/libintl )
 	perl? ( dev-lang/perl )
 	python? ( ${PYTHON_DEPS} )
 	racket? ( dev-scheme/racket )
-	ruby? ( || ( dev-lang/ruby:2.0 dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) )
+	ruby? ( || ( dev-lang/ruby:2.1 dev-lang/ruby:2.0 dev-lang/ruby:1.9 dev-lang/ruby:1.8 ) )
 	selinux? ( sys-libs/libselinux )
 	session? ( x11-libs/libSM )
-	tcl? ( dev-lang/tcl )"
+	tcl? ( dev-lang/tcl )
+"
 DEPEND="${RDEPEND}
 	>=app-admin/eselect-vi-1.1
 	dev-util/ctags
 	sys-devel/autoconf
 	virtual/pkgconfig
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+"
 
 S=${WORKDIR}/vim${VIM_VERSION/.}
 
