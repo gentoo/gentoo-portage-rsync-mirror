@@ -1,6 +1,15 @@
 # ChangeLog for media-video/cinelerra
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.65 2013/08/07 02:35:20 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.67 2014/02/06 08:20:19 ssuominen Exp $
+
+  06 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> cinelerra-20120707.ebuild:
+  Make sure to pull in media-video/ffmpeg from SLOT="0" instead of eg.
+  SLOT="0.10"
+
+  06 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> cinelerra-20120707.ebuild:
+  Secondarily pull in media-libs/libpostproc if media-video/ffmpeg isn't used as
+  a provider for virtual/ffmpeg wrt #500464. Deploy more subslotting to
+  dependencies.
 
   07 Aug 2013; Alexis Ballier <aballier@gentoo.org> cinelerra-20120707.ebuild,
   +files/cinelerra-ffmpeg2.patch:

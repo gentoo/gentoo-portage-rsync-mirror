@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/porticron
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.33 2014/01/11 11:21:47 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.34 2014/02/06 08:30:46 xmw Exp $
+
+*porticron-0.7_p20140126 (06 Feb 2014)
+
+  06 Feb 2014; Michael Weber <xmw@gentoo.org>
+  +files/porticron-0.7_p20140126-portage-2.2.8.patch,
+  +porticron-0.7_p20140126.ebuild:
+  Add portage 2.2.8 patch by pinkybyte
 
 *porticron-0.7_p20131113 (11 Jan 2014)
 

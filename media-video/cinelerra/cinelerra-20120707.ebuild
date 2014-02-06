@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.7 2013/08/07 02:35:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.9 2014/02/06 08:20:19 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils multilib flag-o-matic
@@ -14,35 +14,36 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="3dnow alsa altivec css ieee1394 mmx opengl oss"
 
-RDEPEND="media-libs/a52dec
-	media-libs/faac
-	media-libs/faad2
+RDEPEND="media-libs/a52dec:=
+	media-libs/faac:=
+	media-libs/faad2:=
 	>=media-libs/freetype-2
-	media-libs/libdv
-	>=media-libs/libogg-1.2
+	media-libs/libdv:=
+	>=media-libs/libogg-1.2:=
 	media-libs/libpng:0=
-	media-libs/libsndfile
-	>=media-libs/libtheora-1.1
-	>=media-libs/libvorbis-1.3
-	>=media-libs/openexr-1.5
-	media-libs/tiff:0
+	media-libs/libsndfile:=
+	>=media-libs/libtheora-1.1:=
+	>=media-libs/libvorbis-1.3:=
+	>=media-libs/openexr-1.5:=
+	media-libs/tiff:0=
 	media-libs/x264:=
-	media-sound/lame
+	media-sound/lame:=
 	>=media-video/mjpegtools-2
 	>=sci-libs/fftw-3
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXft
-	x11-libs/libXv
-	x11-libs/libXvMC
-	x11-libs/libXxf86vm
+	x11-libs/libX11:=
+	x11-libs/libXext:=
+	x11-libs/libXft:=
+	x11-libs/libXv:=
+	x11-libs/libXvMC:=
+	x11-libs/libXxf86vm:=
 	virtual/ffmpeg
-	virtual/jpeg
-	alsa? ( media-libs/alsa-lib )
+	|| ( media-video/ffmpeg:0 media-libs/libpostproc )
+	virtual/jpeg:0
+	alsa? ( media-libs/alsa-lib:= )
 	ieee1394? (
-		media-libs/libiec61883
-		>=sys-libs/libraw1394-1.2.0
-		>=sys-libs/libavc1394-0.5.0
+		media-libs/libiec61883:=
+		>=sys-libs/libraw1394-1.2.0:=
+		>=sys-libs/libavc1394-0.5.0:=
 		)
 	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
