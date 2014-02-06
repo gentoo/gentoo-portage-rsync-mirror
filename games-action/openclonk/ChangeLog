@@ -1,6 +1,12 @@
 # ChangeLog for games-action/openclonk
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.12 2013/09/05 19:44:52 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/openclonk/ChangeLog,v 1.13 2014/02/06 20:34:40 hasufell Exp $
+
+*openclonk-5.3.3-r1 (06 Feb 2014)
+
+  06 Feb 2014; Julian Ospald <hasufell@gentoo.org> +openclonk-5.3.3-r1.ebuild,
+  +files/openclonk-5.3.3-xrandr-primary-output.patch:
+  revbump, fix crash bug wrt #500544
 
   05 Sep 2013; Michał Górny <mgorny@gentoo.org> openclonk-5.3.3.ebuild:
   Clean up PYTHON_COMPAT from old implementations.
