@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-0_p106-r1.ebuild,v 1.1 2013/10/13 12:13:49 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/lz4-0_p106-r1.ebuild,v 1.2 2014/02/06 00:26:47 bicatali Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [ ${PV} == "9999" ] ; then
 	ESVN_PROJECT="lz4-read-only"
 else
 	SRC_URI="http://dev.gentoo.org/~ryao/dist/${P}.tar.xz"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 fi
 
 DESCRIPTION="Extremely Fast Compression algorithm"

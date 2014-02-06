@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lz4
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.8 2013/10/13 12:13:49 ryao Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.9 2014/02/06 00:26:47 bicatali Exp $
+
+  06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> lz4-0_p106-r1.ebuild:
+  Keyword x86, amd64-linux and x86-linux
 
 *lz4-0_p106-r1 (13 Oct 2013)
 
