@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/bokeh
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/ChangeLog,v 1.1 2014/02/06 20:02:28 bicatali Exp $
+
+*bokeh-0.4 (06 Feb 2014)
+
+  06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +bokeh-0.4.ebuild,
+  +metadata.xml:
+  Initial import
