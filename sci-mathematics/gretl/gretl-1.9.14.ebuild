@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.11.ebuild,v 1.2 2013/01/15 18:22:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.14.ebuild,v 1.1 2014/02/06 18:20:49 bicatali Exp $
 
-EAPI=4
+EAPI=5
 
 USE_EINSTALL=true
 
@@ -10,14 +10,15 @@ inherit eutils elisp-common toolchain-funcs
 
 DESCRIPTION="Regression, econometrics and time-series library"
 HOMEPAGE="http://gretl.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="accessibility emacs gnome gtk nls odbc openmp readline sse2 R static-libs"
+IUSE="accessibility avx emacs gnome gtk nls odbc openmp python
+	readline sse2 R static-libs"
 
-RDEPEND="
+CDEPEND="
 	dev-libs/glib:2
 	dev-libs/gmp
 	dev-libs/libxml2:2
@@ -36,8 +37,9 @@ RDEPEND="
 	odbc? ( dev-db/unixODBC )
 	R? ( dev-lang/R )
 	readline? ( sys-libs/readline )"
-
-DEPEND="${RDEPEND}
+RDEPEND="${CDEPEND}
+	python? ( dev-python/numpy )"
+DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 
 SITEFILE=50${PN}-gentoo.el
@@ -57,6 +59,7 @@ src_configure() {
 		--disable-rpath \
 		--enable-shared \
 		--with-mpfr \
+		$(use_enable avx) \
 		$(use_enable gtk gui) \
 		$(use_enable gtk gtk3) \
 		$(use_enable gtk xdg) \
@@ -77,7 +80,7 @@ src_compile() {
 	emake
 	if use emacs; then
 		cd utils/emacs && emake
-		elisp-compile gretl.el || die "elisp-compile failed"
+		elisp-compile gretl.el
 	fi
 }
 
@@ -85,10 +88,8 @@ src_install() {
 	# to fix
 	emake -j1 DESTDIR="${D}" install
 	if use emacs; then
-		elisp-install ${PN} utils/emacs/gretl.{el,elc} \
-			|| die "elisp-install failed"
-		elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
-			|| die "elisp-site-file-install failed"
+		elisp-install ${PN} utils/emacs/gretl.{el,elc}
+		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 	dodoc README README.audio ChangeLog CompatLog
 }
