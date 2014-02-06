@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.6.1-r1.ebuild,v 1.2 2014/01/31 19:08:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/hexchat/hexchat-2.9.6.1-r1.ebuild,v 1.3 2014/02/06 13:35:38 hasufell Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://dl.hexchat.org/hexchat/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="dbus fastscroll +gtk gtkspell ipv6 libcanberra libnotify libproxy nls ntlm perl +plugins plugin-checksum plugin-doat plugin-fishlim plugin-sysinfo python sexy spell ssl theme-manager"
 REQUIRED_USE="gtkspell? ( spell )
 	plugin-checksum? ( plugins )

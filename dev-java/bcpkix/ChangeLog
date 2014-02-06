@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/bcpkix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/ChangeLog,v 1.4 2014/01/23 20:26:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/ChangeLog,v 1.5 2014/02/06 13:59:03 tomwij Exp $
+
+*bcpkix-1.49-r2 (06 Feb 2014)
+*bcpkix-1.50 (06 Feb 2014)
+
+  06 Feb 2014; Tom Wijsman <TomWij@gentoo.org> +bcpkix-1.49-r2.ebuild,
+  +bcpkix-1.50.ebuild, -bcpkix-1.49-r1.ebuild:
+  Version bump to 1.50.
 
   23 Jan 2014; Tim Harder <radhermit@gentoo.org> bcpkix-1.49-r1.ebuild:
   Fix bcprov dep atom.
