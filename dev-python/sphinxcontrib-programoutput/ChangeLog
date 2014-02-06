@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinxcontrib-programoutput
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-programoutput/ChangeLog,v 1.1 2014/02/05 23:18:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-programoutput/ChangeLog,v 1.2 2014/02/06 01:18:24 patrick Exp $
+
+  06 Feb 2014; Patrick Lauer <patrick@gentoo.org>
+  sphinxcontrib-programoutput-0.8.ebuild:
+  Whitespace
 
 *sphinxcontrib-programoutput-0.8 (05 Feb 2014)
 
