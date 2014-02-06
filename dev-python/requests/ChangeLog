@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.53 2014/01/23 21:22:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.54 2014/02/06 06:38:18 bicatali Exp $
+
+  06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> requests-2.2.1.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *requests-2.2.1 (23 Jan 2014)
 

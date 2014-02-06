@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/colorama
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/colorama/ChangeLog,v 1.6 2014/01/14 14:00:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/colorama/ChangeLog,v 1.7 2014/02/06 06:41:22 bicatali Exp $
+
+  06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> colorama-0.2.7.ebuild:
+  Keyword amd64-linux and x86-linux
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> colorama-0.2.7.ebuild:
   Stable for x86, wrt bug #495580
