@@ -1,58 +1,47 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.90.4.ebuild,v 1.1 2013/12/03 03:13:08 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/csync/csync-0.50.0.ebuild,v 1.1 2014/02/06 14:11:54 voyageur Exp $
 
 EAPI=5
 
 inherit cmake-utils
 
-DESCRIPTION="A file synchronizer especially designed for you, the normal user"
+DESCRIPTION="lightweight file synchronizer utility"
 HOMEPAGE="http://csync.org/"
-SRC_URI="http://download.owncloud.com/download/o${P}.tar.bz2"
+SRC_URI="https://open.cryptomilk.org/attachments/download/27/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc iconv samba +sftp test"
 
-RESTRICT="test"
-
-RDEPEND="
-	dev-db/sqlite:3
-	>=dev-libs/iniparser-3.1
+RDEPEND=">=dev-db/sqlite-3.4:3
 	net-libs/neon[ssl]
 	iconv? ( virtual/libiconv )
-	samba? ( net-fs/samba )
-	sftp? ( net-libs/libssh )
-"
+	samba? ( >=net-fs/samba-3.5 )
+	sftp? ( >=net-libs/libssh-0.5 )
+	!net-misc/ocsync"
 DEPEND="${DEPEND}
 	app-text/asciidoc
 	doc? ( app-doc/doxygen )
-	test? ( dev-libs/check dev-util/cmocka )
-"
-
-S="${WORKDIR}/o${P}"
+	test? ( dev-util/cmocka )"
 
 src_prepare() {
 	cmake-utils_src_prepare
 
 	# proper docdir
-	sed -e "s:/doc/ocsync:/doc/${PF}:" \
+	sed -e "s:/doc/${PN}:/doc/${PF}:" \
 		-i doc/CMakeLists.txt || die
 }
 
 src_configure() {
 	local mycmakeargs=(
+		-DSYSCONF_INSTALL_DIR="${EPREFIX}"/etc
+		$(cmake-utils_use_with iconv ICONV)
 		$(cmake-utils_use test UNIT_TESTING)
 		$(cmake-utils_use_find_package doc Doxygen)
 		$(cmake-utils_use_find_package samba Libsmbclient)
 		$(cmake-utils_use_find_package sftp LibSSH)
 	)
 	cmake-utils_src_configure
-}
-
-src_install() {
-	cmake-utils_src_install
-	mv "${D}/usr/etc/ocsync" "${D}/etc/"
-	rm -r "${D}/usr/etc/"
 }

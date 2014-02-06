@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8590 2014/02/05 07:50:31 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8591 2014/02/06 14:15:17 voyageur Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Feb 2014; Bernard Cafarelli <voyageur@gentoo.org> updates/1Q-2014:
+  Move net-misc/mirall to net-misc/owncloud-client
 
   05 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> package.mask:
   Remove obsolete mask on dev-python/python-irclib
