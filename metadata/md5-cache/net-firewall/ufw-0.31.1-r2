@@ -10,5 +10,5 @@ RDEPEND=>=net-firewall/iptables-1.4[ipv6?] !<kde-misc/kcm-ufw-0.4.2 !<net-firewa
 RESTRICT=test
 SLOT=0
 SRC_URI=http://launchpad.net/ufw/0.31/0.31.1/+download/ufw-0.31.1.tar.gz
-_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	python	305197b0aa1194fa3ef67ca21f6faa7e	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	linux-info	a9cbd6bbe2b28166e403321882f3c73c	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=c9ce75ee51d757c7398447622e5ec70b

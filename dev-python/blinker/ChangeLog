@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/blinker
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blinker/ChangeLog,v 1.7 2013/09/30 15:32:29 floppym Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blinker/ChangeLog,v 1.8 2014/02/06 05:36:04 bicatali Exp $
+
+  06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> blinker-1.3.ebuild:
+  Keyword amd64-linux and x86-linux
 
   30 Sep 2013; Mike Gilbert <floppym@gentoo.org> blinker-1.3.ebuild:
   Call distutils-r1_python_install_all

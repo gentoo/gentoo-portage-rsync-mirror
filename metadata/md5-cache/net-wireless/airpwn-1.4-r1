@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/libpcre dev-libs/openssl net-libs/libnet net-libs/libpcap net-wireless/lorcon-old || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* =dev-lang/python-2.4* )
 SLOT=0
 SRC_URI=mirror://sourceforge/airpwn/airpwn-1.4.tgz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=d325a4da49d3cbed9bd4ca8a4119b43c

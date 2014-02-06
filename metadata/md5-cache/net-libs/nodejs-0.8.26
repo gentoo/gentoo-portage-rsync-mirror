@@ -9,5 +9,5 @@ RDEPEND=dev-libs/openssl =dev-lang/python-2*
 RESTRICT=test
 SLOT=0
 SRC_URI=http://nodejs.org/dist/v0.8.26/node-v0.8.26.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	pax-utils	2424f959506320f5196de8f79fa05297	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=e9f9c2988c14d73969eaa7b4e0c61957

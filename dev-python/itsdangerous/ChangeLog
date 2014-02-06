@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/itsdangerous
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/itsdangerous/ChangeLog,v 1.5 2014/01/25 09:52:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/itsdangerous/ChangeLog,v 1.6 2014/02/06 05:38:17 bicatali Exp $
+
+  06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> itsdangerous-0.23.ebuild:
+  Keyword amd64-linux and x86-linux
 
 *itsdangerous-0.23 (25 Jan 2014)
 

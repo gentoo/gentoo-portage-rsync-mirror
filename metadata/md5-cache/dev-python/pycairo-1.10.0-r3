@@ -9,5 +9,5 @@ LICENSE=LGPL-3 || ( LGPL-2.1 MPL-1.1 )
 RDEPEND=>=x11-libs/cairo-1.10.0[svg?,xcb?] xcb? ( x11-libs/xpyb ) || ( =dev-lang/python-3.3* =dev-lang/python-3.2* =dev-lang/python-3.1* =dev-lang/python-2.7* =dev-lang/python-2.6* )
 SLOT=0
 SRC_URI=http://cairographics.org/releases/py2cairo-1.10.0.tar.bz2 http://cairographics.org/releases/pycairo-1.10.0.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	waf-utils	6fae459bd65a96ab400f7b9dc8a3fc72
 _md5_=0f1ae04de0d9d2f84e87c375af9d7fb8

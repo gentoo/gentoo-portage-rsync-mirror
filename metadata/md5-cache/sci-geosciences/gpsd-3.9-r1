@@ -10,5 +10,5 @@ RDEPEND=X? ( dev-python/pygtk:2 ) ncurses? ( sys-libs/ncurses ) bluetooth? ( net
 REQUIRED_USE=X? ( python ) gpsd_protocols_nmea2000? ( gpsd_protocols_aivdm )
 SLOT=0
 SRC_URI=mirror://nongnu/gpsd/gpsd-3.9.tar.gz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python	305197b0aa1194fa3ef67ca21f6faa7e	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=722c8332c4a44cc89e428741d1f1efd8

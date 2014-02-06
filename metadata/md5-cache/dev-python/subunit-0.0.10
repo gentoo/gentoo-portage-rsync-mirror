@@ -8,5 +8,5 @@ LICENSE=Apache-2.0 BSD
 RDEPEND=>=dev-python/testtools-0.9.23
 SLOT=0
 SRC_URI=http://launchpad.net/subunit/trunk/0.0.10/+download/subunit-0.0.10.tar.gz
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=81695d4fc01b41826b11e48f2af76e4a

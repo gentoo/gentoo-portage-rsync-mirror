@@ -9,5 +9,5 @@ LICENSE=PSF-2.2
 RDEPEND=dev-python/numpy dev-python/pmw:0 media-libs/freetype:2 media-libs/glew media-libs/libpng media-video/mpeg-tools sys-libs/zlib media-libs/freeglut apbs? ( dev-libs/maloc sci-chemistry/apbs sci-chemistry/pdb2pqr sci-chemistry/pymol-apbs-plugin ) web? ( !dev-python/webpy ) =dev-lang/python-2.7* =dev-lang/python-2.7*[tk]
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/pymol-1.5.0.3.tar.xz http://dev.gentoo.org/~jlec/distfiles/pymol-icons.tar.xz
-_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	prefix	21058c21ca48453d771df15500873ede	python	305197b0aa1194fa3ef67ca21f6faa7e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=distutils	34e0f373c466bb0e97ba194735f1acf2	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	prefix	21058c21ca48453d771df15500873ede	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=324440483f32178f34f94caba0caa356
