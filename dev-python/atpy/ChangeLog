@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/atpy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.14 2013/09/10 03:05:34 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/atpy/ChangeLog,v 1.15 2014/02/05 23:36:16 bicatali Exp $
+
+  05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> -atpy-0.9.6-r1.ebuild,
+  -atpy-0.9.6.ebuild, atpy-0.9.7.ebuild, metadata.xml:
+  Removed old
 
   10 Sep 2013; Patrick Lauer <patrick@gentoo.org> atpy-0.9.7.ebuild:
   Whitespace

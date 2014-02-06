@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pywcs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/ChangeLog,v 1.9 2013/04/24 22:42:52 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/ChangeLog,v 1.10 2014/02/05 23:49:00 bicatali Exp $
+
+  05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> -pywcs-1.11.ebuild,
+  pywcs-1.11-r1.ebuild:
+  Removed old, worked the pyfits dependency
 
 *pywcs-1.11-r1 (24 Apr 2013)
 

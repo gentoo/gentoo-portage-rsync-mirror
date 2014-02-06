@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.8-r1.ebuild,v 1.1 2013/04/24 19:07:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.8-r1.ebuild,v 1.2 2014/02/05 23:47:37 bicatali Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ LICENSE="BSD"
 
 RDEPEND="
 	dev-libs/expat
-	!dev-python/astropy"
+	!<dev-python/astropy-0.3"
 DEPEND="${RDEPEND}"
 
 # slow and buggy tests

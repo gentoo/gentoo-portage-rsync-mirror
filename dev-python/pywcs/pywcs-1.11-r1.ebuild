@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/pywcs-1.11-r1.ebuild,v 1.1 2013/04/24 22:42:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywcs/pywcs-1.11-r1.ebuild,v 1.2 2014/02/05 23:49:00 bicatali Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ DEPEND="
 RDEPEND="
 	>=sci-astronomy/wcslib-${WCS_V}
 	virtual/pyfits
-	!dev-python/astropy"
+	!<dev-python/astropy-0.3"
 
 # missing data to run tests
 RESTRICT=test

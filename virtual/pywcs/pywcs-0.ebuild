@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pywcs/pywcs-0.ebuild,v 1.2 2013/04/24 21:16:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pywcs/pywcs-0.ebuild,v 1.3 2014/02/05 23:47:57 bicatali Exp $
 
 EAPI=5
 
@@ -19,5 +19,5 @@ IUSE=""
 
 RDEPEND="|| (
 		>=dev-python/pywcs-1.11[${PYTHON_USEDEP}]
-		>=dev-python/astropy-0.2[${PYTHON_USEDEP}]
+		<dev-python/astropy-0.3[${PYTHON_USEDEP}]
 	)"

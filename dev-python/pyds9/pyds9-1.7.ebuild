@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.7.ebuild,v 1.1 2014/01/17 22:13:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/pyds9-1.7.ebuild,v 1.2 2014/02/05 23:40:42 bicatali Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ IUSE=""
 DEPEND=">=x11-libs/xpa-${XPAPV}"
 RDEPEND="${DEPEND}
 	dev-python/numpy[${PYTHON_USEDEP}]
-	virtual/pyfits[${PYTHON_USEDEP}]"
+	|| ( dev-python/astropy[${PYTHON_USEDEP}]
+		 dev-python/pyfits[${PYTHON_USEDEP}] )"
 
 DOCS=(changelog README)
 

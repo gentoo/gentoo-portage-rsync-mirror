@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.20.ebuild,v 1.1 2014/01/29 18:52:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.20.ebuild,v 1.2 2014/02/05 23:33:18 bicatali Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 	>=dev-python/PyQt4-4.6[X,svg,${PYTHON_USEDEP}]
 	dbus? ( dev-python/dbus-python[${PYTHON_USEDEP}] )
 	emf? ( dev-python/pyemf[$(python_gen_usedep 'python2*')] )
-	fits? ( virtual/pyfits[${PYTHON_USEDEP}] )
+	fits? ( dev-python/astropy[${PYTHON_USEDEP}] )
 	hdf5? ( dev-python/h5py[${PYTHON_USEDEP}] )
 	vo? (
 			dev-python/astropy[${PYTHON_USEDEP}]

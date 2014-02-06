@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/vo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.13 2013/04/24 19:07:33 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/ChangeLog,v 1.14 2014/02/05 23:47:37 bicatali Exp $
+
+  05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> -vo-0.8.ebuild,
+  vo-0.8-r1.ebuild:
+  Conflicting only with older versions of astropy
 
 *vo-0.8-r1 (24 Apr 2013)
 
