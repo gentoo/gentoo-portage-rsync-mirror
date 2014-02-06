@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.67 2014/02/05 13:46:33 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.68 2014/02/06 16:12:25 blueness Exp $
+
+  06 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  +files/monkeyd-1.4.0-use-system-jemalloc.patch,
+  -files/monkey-1.4.0-use-system-jemalloc.patch:
+  Fix system-jemalloc patch
 
 *monkeyd-1.4.0 (05 Feb 2014)
 

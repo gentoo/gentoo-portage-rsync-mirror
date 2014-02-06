@@ -1,6 +1,6 @@
 diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
---- monkey-1.4.0.orig/configure	2014-02-05 08:38:13.223712041 -0500
-+++ monkey-1.4.0/configure	2014-02-05 08:37:19.575716331 -0500
+--- monkey-1.4.0.orig/configure	2014-02-04 09:04:22.000000000 -0500
++++ monkey-1.4.0/configure	2014-02-06 11:07:21.094086218 -0500
 @@ -193,7 +193,7 @@
  
  	echo "+ Creating src/Makefile"
@@ -10,7 +10,7 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  
  	echo "+ Creating src/include/mk_info.h"
  	create_info sysconfdir \
-@@ -203,33 +203,12 @@
+@@ -205,33 +205,12 @@
  
  	echo -e "+ Creating Makefile"
  	if [ "$dir" = 0 ]; then
@@ -46,7 +46,7 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  	echo
  	echo -e "\033[1m=== Monkey Configuration ===\033[0m"
  	echo -e "Platform\t= $platform"
-@@ -306,12 +285,6 @@
+@@ -308,12 +287,6 @@
  # Create Makefile
  create_makefile1()
  {
@@ -59,7 +59,7 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  	cat > Makefile << EOF
  # Monkey HTTP Daemon: Makefile
  # ============================
-@@ -449,13 +422,6 @@
+@@ -451,13 +424,6 @@
  
  create_makefile1_install()
  {
@@ -73,18 +73,18 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  	# remove old data
  	rm -rf plugins.conf plugins.list
          touch plugins.conf
-@@ -506,10 +472,6 @@
- 	@\$(MAKE)  -C plugins all
+@@ -508,10 +474,6 @@
+ 	@\$(MAKE) -s -C plugins all
  	@echo "  DONE"
  
 -jemalloc:
 -	@echo "  CC    jemalloc [all]"
--	@\$(MAKE)  -C deps/jemalloc
+-	@\$(MAKE) -s -C deps/jemalloc
 -
  clean:
  	@(cd src; \$(MAKE) clean)
  	@(cd plugins; \$(MAKE) clean)
-@@ -587,8 +549,7 @@
+@@ -589,8 +551,7 @@
  	fi
  
          if [ $malloc_jemalloc -eq 1 ]; then
@@ -96,14 +96,14 @@ diff -Naur monkey-1.4.0.orig/configure monkey-1.4.0/configure
  	cat > src/Makefile<<EOF
 diff -Naur monkey-1.4.0.orig/src/include/mk_memory.h monkey-1.4.0/src/include/mk_memory.h
 --- monkey-1.4.0.orig/src/include/mk_memory.h	2014-02-04 09:04:22.000000000 -0500
-+++ monkey-1.4.0/src/include/mk_memory.h	2014-02-05 08:37:55.403713466 -0500
++++ monkey-1.4.0/src/include/mk_memory.h	2014-02-06 11:06:52.298088521 -0500
 @@ -25,7 +25,8 @@
  #include <stdio.h>
  
  #ifdef MALLOC_JEMALLOC
 -#include "../../deps/jemalloc/include/jemalloc/jemalloc.h"
-+#include <jemalloc.h>
-+#include <jemalloc_defs.h>
++#include <jemalloc/jemalloc.h>
++#include <jemalloc/jemalloc_defs.h>
  #endif
  
  #include "mk_macros.h"
