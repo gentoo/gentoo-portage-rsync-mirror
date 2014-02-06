@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.12-r1.ebuild,v 1.1 2014/02/06 00:22:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.12-r1.ebuild,v 1.2 2014/02/06 08:34:16 mgorny Exp $
 
 EAPI=5
 
@@ -23,6 +23,10 @@ RDEPEND="nls? ( virtual/libintl[${MULTILIB_USEDEP}] )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
+MULTILIB_CHOST_TOOLS=(
+	/usr/bin/gpg-error-config
+)
+
 src_prepare() {
 	epatch_user
 	elibtoolize
@@ -41,14 +45,6 @@ multilib_src_configure() {
 
 	ECONF_SOURCE=${S} \
 		econf "${myeconfargs[@]}"
-}
-
-multilib_src_install() {
-	default
-	mv "${ED}"/usr/bin/{,"${CHOST}"-}gpg-error-config || die
-	if multilib_build_binaries; then
-		dosym "${CHOST}"-gpg-error-config /usr/bin/gpg-error-config
-	fi
 }
 
 multilib_src_install_all() {

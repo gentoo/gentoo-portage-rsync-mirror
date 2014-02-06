@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.243 2014/02/04 09:38:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.244 2014/02/06 08:41:52 polynomial-c Exp $
+
+*git-1.8.5.4 (06 Feb 2014)
+
+  06 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +git-1.8.5.4.ebuild:
+  Version bump.
 
   04 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> git-1.8.1.5.ebuild,
   git-1.8.1.5-r1.ebuild, git-1.8.2.1.ebuild, git-1.8.4.5.ebuild,
