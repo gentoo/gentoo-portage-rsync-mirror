@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.133 2014/02/05 09:03:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.134 2014/02/06 09:28:08 jer Exp $
+
+  06 Feb 2014; Jeroen Roovers <jer@gentoo.org> mercurial-2.8.2.ebuild:
+  Stable for HPPA (bug #500346).
 
 *mercurial-2.9 (05 Feb 2014)
 

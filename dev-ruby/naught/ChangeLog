@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/naught
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/naught/ChangeLog,v 1.1 2014/02/06 09:06:12 graaff Exp $
+
+*naught-1.0.0 (06 Feb 2014)
+
+  06 Feb 2014; Hans de Graaff <graaff@gentoo.org> +naught-1.0.0.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for dev-ruby/twitter.
+
