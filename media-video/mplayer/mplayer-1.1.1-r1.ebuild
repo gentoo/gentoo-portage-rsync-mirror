@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1.1-r1.ebuild,v 1.11 2013/07/28 21:13:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.1.1-r1.ebuild,v 1.12 2014/02/06 12:26:41 kensington Exp $
 
 EAPI=4
 
@@ -91,7 +91,7 @@ RDEPEND+="
 	gsm? ( media-sound/gsm )
 	iconv? ( virtual/libiconv )
 	jack? ( media-sound/jack-audio-connection-kit )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/openjpeg:0 )
 	ladspa? ( media-libs/ladspa-sdk )
 	libass? ( >=media-libs/libass-0.9.10[enca?] )

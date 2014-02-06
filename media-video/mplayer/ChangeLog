@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.911 2013/09/25 07:18:13 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.912 2014/02/06 12:26:41 kensington Exp $
+
+  06 Feb 2014; Michael Palimaka <kensington@gentoo.org> mplayer-1.1.1-r1.ebuild,
+  mplayer-1.2_pre20130729.ebuild, mplayer-9999.ebuild:
+  Pin virtual/jpeg to SLOT 0.
 
   25 Sep 2013; Justin Lecher <jlec@gentoo.org> mplayer-1.2_pre20130729.ebuild,
   mplayer-9999.ebuild, metadata.xml:

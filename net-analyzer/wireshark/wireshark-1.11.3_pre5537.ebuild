@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre54663.ebuild,v 1.1 2014/01/08 17:10:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre5537.ebuild,v 1.1 2014/02/06 12:29:23 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps user
+inherit autotools eutils fcaps qt4-r2 user
 
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -84,6 +84,10 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
 		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch
 
+	# Qt5 support is broken since the build system does not determine
+	# which `moc' it ought to use
+	sed -i -e 's|Qt5||g' acinclude.m4 || die
+
 	epatch_user
 
 	eautoreconf
@@ -142,6 +146,7 @@ src_configure() {
 		$(use_with kerberos krb5) \
 		$(use_with lua) \
 		$(use_with netlink libnl) \
+		$(use_with pcap dumpcap-group wireshark) \
 		$(use_with pcap) \
 		$(use_with portaudio) \
 		$(use_with qt4 qt) \

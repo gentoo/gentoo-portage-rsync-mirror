@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.14-r1.ebuild,v 1.11 2013/04/10 20:22:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.14-r1.ebuild,v 1.12 2014/02/06 12:22:37 kensington Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -54,7 +54,7 @@ RDEPEND="virtual/libusb:0
 	zeroconf? ( net-dns/avahi[mdnsresponder-compat] )
 	exif? ( >=media-libs/libexif-0.5.9 )
 	gd? ( media-libs/gd[jpeg=] )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	sys-devel/libtool"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
