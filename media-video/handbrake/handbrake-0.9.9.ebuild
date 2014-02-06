@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.12 2013/12/14 02:15:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.9.9.ebuild,v 1.13 2014/02/06 21:35:41 thev00d00 Exp $
 
 EAPI="5"
 
