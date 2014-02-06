@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1137 2014/02/05 06:18:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1138 2014/02/06 17:07:56 kensington Exp $
+
+  06 Feb 2014; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
+  Disable more bogus dependency checks wrt bug #494680.
 
   05 Feb 2014; Ryan Hill <dirtyepic@gentoo.org> tests/toolchain.sh,
   toolchain.eclass:

@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r3.ebuild,v 1.4 2013/10/29 21:00:57 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/baselayout-prefix-2.2-r3.ebuild,v 1.5 2014/02/06 17:29:03 grobian Exp $
 
 EAPI=3
 
 inherit eutils multilib libtool
 
 MY_P=${P/-prefix/}  # just use "upstream" sources
-EINFO=einfo-1.0.4
+EINFO=einfo-1.0.5
 DESCRIPTION="Minimal baselayout and e-functions for Gentoo Prefix installs"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
@@ -29,7 +29,6 @@ pkg_preinst() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${EINFO}-termcap-check.patch
 	# exotic platforms still aren't fixed in upstream libtool
 	elibtoolize
 }

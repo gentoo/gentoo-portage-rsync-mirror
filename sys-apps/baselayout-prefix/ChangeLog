@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/baselayout-prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.35 2014/01/08 06:16:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout-prefix/ChangeLog,v 1.36 2014/02/06 17:29:03 grobian Exp $
+
+  06 Feb 2014; Fabian Groffen <grobian@gentoo.org>
+  baselayout-prefix-2.2-r3.ebuild:
+  Bump einfo version for bootstrap fixes
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   baselayout-prefix-1.12.14-r1.ebuild:
