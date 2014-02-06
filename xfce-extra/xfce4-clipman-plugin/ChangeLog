@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-clipman-plugin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/ChangeLog,v 1.50 2014/02/05 20:10:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/ChangeLog,v 1.51 2014/02/06 09:34:20 jer Exp $
+
+  06 Feb 2014; Jeroen Roovers <jer@gentoo.org>
+  xfce4-clipman-plugin-1.2.5.ebuild:
+  Marked ~hppa (bug #500422).
 
 *xfce4-clipman-plugin-1.2.5 (05 Feb 2014)
 

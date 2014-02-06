@@ -1,29 +1,29 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.2-r2.ebuild,v 1.19 2014/02/06 09:47:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.8.0-r1.ebuild,v 1.1 2014/02/06 09:44:52 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7,3_2} )
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 FORTRAN_NEEDED=lapack
 
 inherit distutils-r1 eutils flag-o-matic fortran-2 multilib toolchain-funcs versionator
 
-DOC_P="${PN}-1.6.0"
+DOC_PV="${PV}"
 
 DESCRIPTION="Fast array and numerical python library"
-HOMEPAGE="http://numpy.scipy.org/ http://pypi.python.org/pypi/numpy"
-SRC_URI="mirror://sourceforge/numpy/${P}.tar.gz
+HOMEPAGE="http://numpy.scipy.org/"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
 	doc? (
-		http://docs.scipy.org/doc/${DOC_P}/numpy-html.zip -> ${DOC_P}-html.zip
-		http://docs.scipy.org/doc/${DOC_P}/numpy-ref.pdf -> ${DOC_P}-ref.pdf
-		http://docs.scipy.org/doc/${DOC_P}/numpy-user.pdf -> ${DOC_P}-user.pdf
+		http://docs.scipy.org/doc/${P}/${PN}-html-${DOC_PV}.zip
+		http://docs.scipy.org/doc/${P}/${PN}-ref-${DOC_PV}.pdf
+		http://docs.scipy.org/doc/${P}/${PN}-user-${DOC_PV}.pdf
 	)"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc lapack test"
 
 RDEPEND="
@@ -40,31 +40,31 @@ DISTUTILS_IN_SOURCE_BUILD=1
 src_unpack() {
 	unpack ${P}.tar.gz
 	if use doc; then
-		unzip -qo "${DISTDIR}"/${DOC_P}-html.zip -d html || die
+		unzip -qo "${DISTDIR}"/${PN}-html-${DOC_PV}.zip -d html || die
 	fi
 }
 
 pc_incdir() {
 	$(tc-getPKG_CONFIG) --cflags-only-I $@ | \
-		sed -e 's/^-I//' -e 's/[ ]*-I/:/g'
+		sed -e 's/^-I//' -e 's/[ ]*-I/:/g' -e 's/[ ]*$//'
 }
 
 pc_libdir() {
 	$(tc-getPKG_CONFIG) --libs-only-L $@ | \
-		sed -e 's/^-L//' -e 's/[ ]*-L/:/g'
+		sed -e 's/^-L//' -e 's/[ ]*-L/:/g' -e 's/[ ]*$//'
 }
 
 pc_libs() {
 	$(tc-getPKG_CONFIG) --libs-only-l $@ | \
-		sed -e 's/[ ]-l*\(pthread\|m\)[ ]*//g' \
-		-e 's/^-l//' -e 's/[ ]*-l/,/g'
+		sed -e 's/[ ]-l*\(pthread\|m\)\([ ]\|$\)//g' \
+		-e 's/^-l//' -e 's/[ ]*-l/,/g' -e 's/[ ]*$//' \
+		| sort | uniq | tr '\n' ','
 }
 
 python_prepare_all() {
 	epatch \
-		"${FILESDIR}"/${PN}-1.6.1-atlas.patch \
-		"${FILESDIR}"/${PN}-1.6.2-distutils.patch \
-		"${FILESDIR}"/${PN}-1.6.2-test-pareto.patch
+		"${FILESDIR}"/${P}-no-hardcode-blas.patch \
+		"${FILESDIR}"/${P}-f2py-insecure-temporary.patch
 
 	if use lapack; then
 		append-ldflags "$($(tc-getPKG_CONFIG) --libs-only-other cblas lapack)"
@@ -119,16 +119,14 @@ python_test() {
 	distutils_install_for_testing ${NUMPY_FCONFIG}
 
 	cd "${TMPDIR}" || die
-	"${PYTHON}" -c "
+	${EPYTHON} -c "
 import numpy, sys
-r = numpy.test()
+r = numpy.test(verbose=3)
 sys.exit(0 if r.wasSuccessful() else 1)" || die "Tests fail with ${EPYTHON}"
 }
 
 python_install() {
 	distutils-r1_python_install ${NUMPY_FCONFIG}
-
-	rm -f "${D}"$(python_get_sitedir)/numpy/*.txt
 }
 
 python_install_all() {
@@ -141,8 +139,8 @@ python_install_all() {
 	doman numpy/f2py/f2py.1
 
 	if use doc; then
+		dohtml -r "${WORKDIR}"/html/*
 		insinto /usr/share/doc/${PF}
-		doins -r "${WORKDIR}"/html
-		doins "${DISTDIR}"/${DOC_P}*pdf
+		doins "${DISTDIR}"/${PN}-{user,ref}-${DOC_PV}.pdf
 	fi
 }

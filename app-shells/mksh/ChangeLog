@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/mksh
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.47 2013/11/21 00:21:11 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.48 2014/02/06 09:37:57 polynomial-c Exp $
+
+*mksh-49 (06 Feb 2014)
+
+  06 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -mksh-40f.ebuild,
+  -mksh-41.ebuild, -mksh-41b.ebuild, -mksh-41c.ebuild, -mksh-42.ebuild,
+  -mksh-43.ebuild, -mksh-44.ebuild, -mksh-45.ebuild, -mksh-46.ebuild,
+  -mksh-47.ebuild, -mksh-48.ebuild, +mksh-49.ebuild:
+  Version bump. Removed old versions.
 
 *mksh-48b (21 Nov 2013)
 
