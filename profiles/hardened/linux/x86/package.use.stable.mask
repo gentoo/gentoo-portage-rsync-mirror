@@ -1,0 +1,7 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/package.use.stable.mask,v 1.1 2014/02/06 12:57:59 tomwij Exp $
+
+# Tom Wijsman <TomWij@gentoo.org> (06 Feb 2014)
+# [QA] Masked jit USE flag on www-apps/cgit as dev-lang/luajit is not stable.
+www-apps/cgit jit

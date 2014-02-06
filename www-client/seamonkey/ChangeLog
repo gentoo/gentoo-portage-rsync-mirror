@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.476 2014/01/13 17:30:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.477 2014/02/06 12:59:12 polynomial-c Exp $
+
+*seamonkey-2.24 (06 Feb 2014)
+
+  06 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +seamonkey-2.24.ebuild:
+  Security bump (bug #500320).
 
   13 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.23.ebuild:
   Added enigmail snapshot with new build system. This should fix bug #494088.
