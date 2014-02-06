@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="/xsl/glsa.xsl" type="text/xsl"?>
+<?xml-stylesheet href="/xsl/guide.xsl" type="text/xsl"?>
+<!DOCTYPE glsa SYSTEM "http://www.gentoo.org/dtd/glsa.dtd">
+<glsa id="201402-08">
+  <title>stunnel: Multiple vulnerabilities</title>
+  <synopsis>Multiple vulnerabilities have been found in stunnel, the worst of
+    which may cause a Denial of Service condition.
+  </synopsis>
+  <product type="ebuild">stunnel</product>
+  <announced>February 06, 2014</announced>
+  <revised>February 06, 2014: 1</revised>
+  <bug>460278</bug>
+  <access>remote</access>
+  <affected>
+    <package name="net-misc/stunnel" auto="yes" arch="*">
+      <unaffected range="ge">4.56-r1</unaffected>
+      <vulnerable range="lt">4.56-r1</vulnerable>
+    </package>
+  </affected>
+  <background>
+    <p>The stunnel program is designed to work as an SSL encryption wrapper
+      between a client and a local or remote server.
+    </p>
+  </background>
+  <description>
+    <p>Multiple vulnerabilities have been discovered in stunnel. Please review
+      the CVE identifiers referenced below for details.
+    </p>
+  </description>
+  <impact type="normal">
+    <p>A remote attacker could cause a Denial of Service condition or disclose
+      potentially sensitive information.
+    </p>
+  </impact>
+  <workaround>
+    <p>There is no known workaround at this time.</p>
+  </workaround>
+  <resolution>
+    <p>All stunnel users should upgrade to the latest version:</p>
+    
+    <code>
+      # emerge --sync
+      # emerge --ask --oneshot --verbose "&gt;=net-misc/stunnel-4.56-r1"
+    </code>
+    
+  </resolution>
+  <references>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2012-2686">CVE-2012-2686</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-0166">CVE-2013-0166</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-0169">CVE-2013-0169</uri>
+    <uri link="http://nvd.nist.gov/nvd.cfm?cvename=CVE-2013-1762">CVE-2013-1762</uri>
+  </references>
+  <metadata tag="requester" timestamp="Fri, 23 Aug 2013 14:54:34 +0000">
+    creffett
+  </metadata>
+  <metadata tag="submitter" timestamp="Thu, 06 Feb 2014 15:28:34 +0000">
+    pinkbyte
+  </metadata>
+</glsa>

@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.55 2014/02/01 15:24:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.56 2014/02/06 15:59:01 axs Exp $
+
+  06 Feb 2014; Ian Stakenvicius (_AxS_) <axs@gentoo.org> libva-1.2.1-r1.ebuild,
+  libva-9999.ebuild:
+  fix missing multilib usedep on virtual/opengl, for libva-1.2.1 and libva-9999
+  ebuilds
 
 *libva-1.2.0-r1 (01 Feb 2014)
 *libva-1.2.1-r1 (01 Feb 2014)

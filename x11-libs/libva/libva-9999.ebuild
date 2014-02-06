@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.19 2014/02/01 15:24:22 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.20 2014/02/06 15:59:01 axs Exp $
 
 EAPI=5
 
@@ -45,7 +45,7 @@ RDEPEND=">=x11-libs/libdrm-2.4[${MULTILIB_USEDEP}]
 		x11-libs/libXfixes[${MULTILIB_USEDEP}]
 	)
 	egl? ( media-libs/mesa[egl,${MULTILIB_USEDEP}] )
-	opengl? ( virtual/opengl )
+	opengl? ( virtual/opengl[${MULTILIB_USEDEP}] )
 	wayland? ( >=dev-libs/wayland-1[${MULTILIB_USEDEP}] )"
 
 DEPEND="${RDEPEND}
