@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.4.1.ebuild,v 1.1 2014/02/03 01:56:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.4.1.ebuild,v 1.2 2014/02/06 21:14:18 bicatali Exp $
 
 EAPI=5
 
@@ -16,12 +16,11 @@ SRC_URI="https://github.com/${PN}/${PN}/releases/download/${P}/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-macos"
-IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png pyglet test texmacs theano"
+IUSE="doc examples gtk imaging ipython latex mathml opengl pdf png pyglet +system-mpmath test texmacs theano"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="
-	>=dev-python/mpmath-0.18[${PYTHON_USEDEP}]
 	>=dev-python/pexpect-2.0[python_targets_python2_6?,python_targets_python2_7?]
 	imaging? ( virtual/python-imaging[${PYTHON_USEDEP}] )
 	ipython? ( dev-python/ipython[${PYTHON_USEDEP}] )
@@ -38,6 +37,7 @@ RDEPEND="
 	)
 	opengl? ( dev-python/pyopengl[${PYTHON_USEDEP}] )
 	pyglet? ( dev-python/pyglet[python_targets_python2_6?,python_targets_python2_7?] )
+	system-mpmath? ( >=dev-python/mpmath-0.18[${PYTHON_USEDEP}] )
 	texmacs? ( app-office/texmacs )
 	theano? ( dev-python/theano[python_targets_python2_6?,python_targets_python2_7?] )
 "
@@ -46,10 +46,12 @@ DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( ${RDEPEND} dev-python/pytest[${PYTHON_USEDEP}] )"
 
-PATCHES=( "${WORKDIR}"/${P}-system-mpmath.patch )
-
-python_prepare() {
-	rm -r sympy/mpmath doc/src/modules/mpmath || die
+python_prepare_all() {
+	if use system-mpmath; then
+		rm -r sympy/mpmath doc/src/modules/mpmath || die
+		epatch "${WORKDIR}"/${P}-system-mpmath.patch
+	fi
+	distutils-r1_python_prepare_all
 }
 
 python_compile() {
