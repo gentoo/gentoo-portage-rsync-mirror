@@ -1,6 +1,17 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.9 2014/02/05 04:35:15 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.10 2014/02/06 19:54:16 nicolasbock Exp $
+
+*lammps-20140201 (06 Feb 2014)
+
+  06 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140201.ebuild,
+  lammps-20131201.ebuild, lammps-20131216.ebuild, lammps-20131217.ebuild,
+  lammps-20140122.ebuild, lammps-20140129.ebuild:
+  sci-physics/lammps: Moved lammps-20140201 from sci overlay to portage.  This
+  version is considered "stable" by upstream, as opposed to the normal frequent
+  snapshot releases. I had originally placed the stable version in a new slot,
+  but after discussing this with ottxor, decided to move 20140201 back into slot
+  0 and open a stabilization request for it.
 
   05 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> lammps-20140129.ebuild:
   sci-physics/lammps: Trying to add blocker, ottxor beat me to it :)

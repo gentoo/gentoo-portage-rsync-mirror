@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.4.0.ebuild,v 1.5 2012/08/08 19:11:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-2.4.0.ebuild,v 1.6 2014/02/06 19:47:28 bicatali Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,7 +18,7 @@ KEYWORDS="amd64 x86 ~x86-fbsd"
 LICENSE="BSD"
 
 RDEPEND="dev-python/numpy
-	!dev-python/astropy"
+	!<dev-python/astropy-0.3"
 DEPEND="${RDEPEND}"
 
 # current tests need data which are not in tar ball
@@ -32,4 +32,12 @@ src_test() {
 		done
 	}
 	python_execute_function testing
+}
+
+src_install() {
+	distutils_src_install
+	local binary
+	for binary in "${ED}"/usr/bin/*; do
+		mv ${binary}{,-pyfits} || die
+	done
 }
