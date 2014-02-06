@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/quodlibet-plugins
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.24 2013/01/22 17:44:03 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.26 2014/02/06 11:14:12 ssuominen Exp $
+
+  06 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  -quodlibet-plugins-2.4.ebuild:
+  old
+
+*quodlibet-plugins-3.0.2 (06 Feb 2014)
+
+  06 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +quodlibet-plugins-3.0.2.ebuild:
+  Version bump wrt #475156 by "teidakankan" and Marcin Sochoń
 
   22 Jan 2013; Agostino Sarubbo <ago@gentoo.org> quodlibet-plugins-2.5.ebuild:
   Stable for amd64, wrt bug #452692
