@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.14 2014/01/05 08:17:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.30.4.ebuild,v 1.15 2014/02/06 19:08:15 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -70,9 +70,7 @@ src_prepare() {
 
 	gnome2_src_prepare
 
-	# disable pyc compiling
-	mv "${S}"/py-compile "${S}"/py-compile.orig
-	ln -s $(type -P true) "${S}"/py-compile
+	python_clean_py-compile_files
 }
 
 pkg_postinst() {

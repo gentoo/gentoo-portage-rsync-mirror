@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.362 2014/01/05 08:17:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.363 2014/02/06 19:08:15 pacho Exp $
+
+  06 Feb 2014; Pacho Ramos <pacho@gentoo.org> gedit-2.30.4.ebuild:
+  Clean pyc files properly (#500506 by Fred)
 
   05 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org> gedit-2.30.4.ebuild,
   +files/gedit-2.30.4-underlinking.patch:

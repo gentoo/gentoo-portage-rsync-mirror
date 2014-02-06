@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4-r200.ebuild,v 1.4 2014/02/04 08:37:19 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4-r200.ebuild,v 1.5 2014/02/06 19:14:09 pacho Exp $
 
 EAPI="5"
 
@@ -72,7 +72,7 @@ DEPEND="${RDEPEND}
 		virtual/rubygems[ruby_targets_ruby18] )
 	>=dev-util/gtk-doc-am-1.10
 	dev-util/gperf
-	sys-devel/bison
+	>=sys-devel/bison-2.4.3
 	>=sys-devel/flex-2.5.33
 	|| ( >=sys-devel/gcc-4.7 >=sys-devel/clang-3.0 )
 	sys-devel/gettext

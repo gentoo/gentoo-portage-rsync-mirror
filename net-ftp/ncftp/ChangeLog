@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/ncftp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.142 2014/01/02 13:36:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ChangeLog,v 1.143 2014/02/06 19:12:49 jer Exp $
+
+  06 Feb 2014; Jeroen Roovers <jer@gentoo.org> ncftp-3.2.5-r3.ebuild:
+  Stable for HPPA (bug #500286).
 
 *ncftp-3.2.5-r3 (02 Jan 2014)
 
