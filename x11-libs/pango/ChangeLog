@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.384 2014/01/20 19:21:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.385 2014/02/06 22:27:06 eva Exp $
+
+*pango-1.36.2 (06 Feb 2014)
+
+  06 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org> +pango-1.36.2.ebuild:
+  Version bump. Clean up old revisions.
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> pango-1.32.5.ebuild,
   pango-1.34.1.ebuild, pango-1.36.1.ebuild:

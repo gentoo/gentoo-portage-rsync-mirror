@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.53 2014/01/26 12:20:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.54 2014/02/06 22:14:39 eva Exp $
+
+*gupnp-igd-0.2.3 (06 Feb 2014)
+
+  06 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org> -gupnp-igd-0.1.7.ebuild,
+  -gupnp-igd-0.1.11.ebuild, -gupnp-igd-0.2.1.ebuild, -gupnp-igd-0.2.2.ebuild,
+  +gupnp-igd-0.2.3.ebuild, -files/gupnp-igd-0.1.7-disable_static_modules.patch,
+  -files/gupnp-igd-0.1.7-make-382.patch,
+  -files/gupnp-igd-0.2.2-underlinking.patch:
+  Version bump. Clean up old revisions.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> gupnp-igd-0.2.2-r1.ebuild:
   Stable for sparc, wrt bug #496626
