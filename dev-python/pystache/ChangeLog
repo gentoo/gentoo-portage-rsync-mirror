@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pystache
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pystache/ChangeLog,v 1.1 2014/02/06 16:58:41 bicatali Exp $
+
+*pystache-0.5.3 (06 Feb 2014)
+
+  06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +pystache-0.5.3.ebuild:
+  Initial import

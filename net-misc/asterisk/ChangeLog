@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.469 2014/01/13 10:22:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.470 2014/02/06 16:48:19 chainsaw Exp $
+
+*asterisk-11.7.0-r1 (06 Feb 2014)
+
+  06 Feb 2014; Tony Vroon <chainsaw@gentoo.org> +asterisk-11.7.0-r1.ebuild:
+  Stop blowing up the V21 tone detector in SpanDSP by sanitising the input data
+  properly. Patch by Michal Rybarik scavenged from an upstream bug report by
+  Jaco Kroon. Closes bug #500504.
 
 *asterisk-12.0.0 (13 Jan 2014)
 

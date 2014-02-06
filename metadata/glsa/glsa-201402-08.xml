@@ -9,12 +9,13 @@
   </synopsis>
   <product type="ebuild">stunnel</product>
   <announced>February 06, 2014</announced>
-  <revised>February 06, 2014: 1</revised>
+  <revised>February 06, 2014: 2</revised>
   <bug>460278</bug>
   <access>remote</access>
   <affected>
     <package name="net-misc/stunnel" auto="yes" arch="*">
       <unaffected range="ge">4.56-r1</unaffected>
+      <unaffected range="lt">4.00</unaffected>
       <vulnerable range="lt">4.56-r1</vulnerable>
     </package>
   </affected>
@@ -54,7 +55,7 @@
   <metadata tag="requester" timestamp="Fri, 23 Aug 2013 14:54:34 +0000">
     creffett
   </metadata>
-  <metadata tag="submitter" timestamp="Thu, 06 Feb 2014 15:28:34 +0000">
+  <metadata tag="submitter" timestamp="Thu, 06 Feb 2014 16:48:06 +0000">
     pinkbyte
   </metadata>
 </glsa>
