@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/subtitlecomposer-0.5.3-r2.ebuild,v 1.3 2014/02/05 09:38:54 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitlecomposer/subtitlecomposer-0.5.3-r2.ebuild,v 1.4 2014/02/06 18:34:48 johu Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.sourceforge.net/projects/subcomposer/"
 SRC_URI="mirror://sourceforge/subcomposer/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="4"
 IUSE="debug gstreamer xine"
 

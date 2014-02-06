@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.9 2014/02/06 00:26:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.10 2014/02/06 18:56:14 jer Exp $
+
+  06 Feb 2014; Jeroen Roovers <jer@gentoo.org> lz4-0_p106-r1.ebuild,
+  +files/lz4-0_p106-cflags.patch:
+  Do not set -Os/-O3/-march=native (bug #499470).
 
   06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> lz4-0_p106-r1.ebuild:
   Keyword x86, amd64-linux and x86-linux
