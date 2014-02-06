@@ -1,6 +1,12 @@
 # ChangeLog for games-arcade/gnome-robots
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/ChangeLog,v 1.7 2013/12/24 16:10:27 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gnome-robots/ChangeLog,v 1.8 2014/02/06 22:31:36 eva Exp $
+
+*gnome-robots-3.10.2 (06 Feb 2014)
+
+  06 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-robots-3.10.2.ebuild:
+  Version bump.
 
 *gnome-robots-3.10.0 (24 Dec 2013)
 

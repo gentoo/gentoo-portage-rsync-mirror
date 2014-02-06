@@ -1,12 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.12.2.ebuild,v 1.2 2013/06/02 09:57:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.12.5.ebuild,v 1.1 2014/02/06 22:37:28 eva Exp $
 
 EAPI="5"
+GCONF_DEBUG="no"
 VALA_MIN_API_VERSION="0.14"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils gnome.org vala
+inherit eutils gnome2 vala
 
 DESCRIPTION="Utility library aiming to ease the handling UPnP A/V profiles"
 HOMEPAGE="http://gupnp.org/"
@@ -31,14 +32,13 @@ DEPEND="${RDEPEND}
 	introspection? ( $(vala_depend) )
 "
 
-src_configure() {
-	econf \
-		$(use_enable introspection) \
-		--disable-static \
-		--disable-gtk-doc
+src_prepare() {
+	use introspection && vala_src_prepare
+	gnome2_src_prepare
 }
 
-src_install() {
-	default
-	prune_libtool_files
+src_configure() {
+	gnome2_src_configure \
+		$(use_enable introspection) \
+		--disable-static
 }

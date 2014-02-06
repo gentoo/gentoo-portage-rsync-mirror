@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=dev-libs/glib-2.16:2 >=net-libs/gssdp-0.9.2[introspection?] >=net-libs/libsoup-2.28.2:2.4[introspection?] dev-libs/libxml2 >=net-libs/gupnp-0.19[introspection?] introspection? ( >=dev-libs/gobject-introspection-0.9.5 ) !net-libs/gupnp-vala >=dev-util/gtk-doc-am-1.10 virtual/pkgconfig introspection? ( || ( dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] dev-lang/vala:0.18[vapigen] dev-lang/vala:0.16[vapigen] dev-lang/vala:0.14[vapigen] ) ) app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=Utility library aiming to ease the handling UPnP A/V profiles
+EAPI=5
+HOMEPAGE=http://gupnp.org/
+IUSE=+introspection
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=LGPL-2
+RDEPEND=>=dev-libs/glib-2.16:2 >=net-libs/gssdp-0.9.2[introspection?] >=net-libs/libsoup-2.28.2:2.4[introspection?] dev-libs/libxml2 >=net-libs/gupnp-0.19[introspection?] introspection? ( >=dev-libs/gobject-introspection-0.9.5 ) !net-libs/gupnp-vala
+SLOT=0/2
+SRC_URI=mirror://gnome/sources/gupnp-av/0.12/gupnp-av-0.12.5.tar.xz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=f1a0f7144333a2a7f6389b59e0ef0045
