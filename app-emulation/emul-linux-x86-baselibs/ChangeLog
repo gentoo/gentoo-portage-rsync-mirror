@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.176 2014/01/30 22:24:42 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.177 2014/02/06 00:58:07 radhermit Exp $
+
+*emul-linux-x86-baselibs-20131008-r13 (06 Feb 2014)
+
+  06 Feb 2014; Tim Harder <radhermit@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r13.ebuild,
+  +files/remove-native-20131008-r13:
+  Bump for multilib libgpg-error.
 
 *emul-linux-x86-baselibs-20131008-r12 (30 Jan 2014)
 

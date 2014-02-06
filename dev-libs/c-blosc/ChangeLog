@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/c-blosc
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/c-blosc/ChangeLog,v 1.1 2014/02/06 01:00:17 bicatali Exp $
+
+*c-blosc-1.3.2 (06 Feb 2014)
+
+  06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +c-blosc-1.3.2.ebuild,
+  +files/c-blosc-1.3.2-shared-libs.patch, +metadata.xml:
+  Initial import
