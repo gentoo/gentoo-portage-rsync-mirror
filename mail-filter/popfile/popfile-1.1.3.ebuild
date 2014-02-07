@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.3.ebuild,v 1.1 2013/12/16 07:06:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/popfile/popfile-1.1.3.ebuild,v 1.2 2014/02/07 20:44:29 creffett Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils
 
 DESCRIPTION="Anti-spam bayesian filter"
@@ -46,9 +46,9 @@ src_install() {
 	rm -rf *.change* license
 
 	insinto /usr/share/${PN}
-	doins -r * || die
+	doins -r *
 
 	fperms 755 /usr/share/${PN}/{popfile,insert,pipe,bayes}.pl
 
-	dosbin "${FILESDIR}"/${PN} || die
+	dosbin "${FILESDIR}"/${PN}
 }
