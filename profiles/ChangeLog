@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8591 2014/02/06 14:15:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8592 2014/02/07 11:23:28 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Feb 2014; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Mask libgcrypt-1.6.1: Reliably makes cryptsetup segfault
 
   06 Feb 2014; Bernard Cafarelli <voyageur@gentoo.org> updates/1Q-2014:
   Move net-misc/mirall to net-misc/owncloud-client
