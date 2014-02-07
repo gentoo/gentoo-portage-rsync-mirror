@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/murmur
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.51 2013/11/17 23:50:12 tgurr Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.52 2014/02/07 16:43:27 tgurr Exp $
+
+*murmur-1.2.5 (07 Feb 2014)
+
+  07 Feb 2014; Timo Gurr <tgurr@gentoo.org> +murmur-1.2.5.ebuild:
+  Version bump.
 
   17 Nov 2013; Timo Gurr <tgurr@gentoo.org> -murmur-1.2.3-r4.ebuild,
   -murmur-1.2.4.ebuild, -files/mumble-1.2.3-fix-cert-validation.patch,
