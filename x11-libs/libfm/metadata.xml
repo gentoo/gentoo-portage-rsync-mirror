@@ -9,5 +9,6 @@
   <use>
 	<flag name='vala'>Support custom actions in menus</flag>
 	<flag name='udisks'>Use libfm's udisks-based volume monitor implementation instead of using the one from gvfs</flag>
+	<flag name='automount'>Use <pkg>gnome-base/gvfs</pkg> for automounting</flag>
   </use>
 </pkgmetadata>

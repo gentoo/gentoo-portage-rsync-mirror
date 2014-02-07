@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.37 2013/12/30 10:35:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.38 2014/02/07 22:43:19 hwoarang Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://pcmanfm.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0/4.7.1" #copy ABI_VERSION because it seems upstream change it randomly
-IUSE="debug doc examples udisks vala"
+IUSE="+automount debug doc examples udisks vala"
 KEYWORDS=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
@@ -22,8 +22,13 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=lxde-base/menu-cache-0.3.2:="
 RDEPEND="${COMMON_DEPEND}
 	x11-misc/shared-mime-info
-	udisks? ( || ( gnome-base/gvfs[udev,udisks] gnome-base/gvfs[udev,gdu] ) )
-	!udisks? ( gnome-base/gvfs[udev] )"
+	automount? (
+		udisks? ( || (
+			gnome-base/gvfs[udev,udisks]
+			gnome-base/gvfs[udev,gdu]
+		) )
+		!udisks? ( gnome-base/gvfs[udev] )
+	)"
 DEPEND="${COMMON_DEPEND}
 	vala? ( $(vala_depend) )
 	doc? (
@@ -34,6 +39,8 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext"
 
 DOCS=( AUTHORS TODO )
+
+REQUIRED_USE="udisks? ( automount )"
 
 src_prepare() {
 	if ! use doc; then
