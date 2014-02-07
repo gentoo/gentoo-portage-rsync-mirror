@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r1.ebuild,v 1.2 2014/02/07 20:00:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r2.ebuild,v 1.1 2014/02/07 20:15:03 jer Exp $
 
 EAPI=5
 
@@ -262,6 +262,9 @@ src_install() {
 
 	# NVIDIA kernel <-> userspace driver config lib
 	donvidia ${NV_OBJ}/libnvidia-cfg.so ${NV_SOVER}
+
+	# NVIDIA framebuffer capture library
+	donvidia ${NV_OBJ}/libnvidia-fbc.so ${NV_SOVER}
 
 	# NVIDIA video encode/decode <-> CUDA
 	if use kernel_linux; then
