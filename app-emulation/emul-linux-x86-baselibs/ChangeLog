@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.177 2014/02/06 00:58:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.179 2014/02/07 12:43:45 ssuominen Exp $
+
+*emul-linux-x86-baselibs-20131008-r14 (07 Feb 2014)
+
+  07 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r14.ebuild,
+  +files/remove-native-20131008-r14:
+  Instead of deleting libjpeg.so.8* and libturbojpeg.so.0*, move them to
+  /usr/lib32/emul-linux and add the directory to ld.so.conf to avoid file
+  collision w/ =media-libs/jpeg-8d*
 
 *emul-linux-x86-baselibs-20131008-r13 (06 Feb 2014)
 
