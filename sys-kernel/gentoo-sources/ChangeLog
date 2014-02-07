@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1254 2014/02/07 14:54:23 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1255 2014/02/07 16:25:51 tomwij Exp $
+
+  07 Feb 2014; Tom Wijsman <TomWij@gentoo.org> gentoo-sources-3.13.1.ebuild,
+  gentoo-sources-3.13.2.ebuild:
+  Use a newer version of genpatches in 3.13.2 to bring in an experimental fix: A
+  new revision of BFQ (v7r1) which fixes SSD throughput problems, as a side
+  effect the GCC optimizations patch planned for 3.13.3 is already introduced
+  here.
 
 *gentoo-sources-3.13.2 (07 Feb 2014)
 
