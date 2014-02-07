@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999- Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.89 2014/01/26 09:10:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.90 2014/02/07 04:50:58 patrick Exp $
+
+  07 Feb 2014; Patrick Lauer <patrick@gentoo.org> -eudev-1.1.ebuild:
+  Remove old ebuild with broken sys-apps/hwids dep
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> eudev-1.3.ebuild:
   Stable for ppc64, wrt bug #487238
