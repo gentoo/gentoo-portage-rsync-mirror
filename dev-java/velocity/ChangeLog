@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/velocity
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.46 2012/01/29 11:20:15 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.47 2014/02/07 00:09:55 radhermit Exp $
+
+*velocity-1.7 (07 Feb 2014)
+
+  07 Feb 2014; Tim Harder <radhermit@gentoo.org> +velocity-1.7.ebuild:
+  Version bump.
 
   29 Jan 2012; Ralph Sennhauser <sera@gentoo.org> -velocity-1.5.ebuild,
   -velocity-1.5-r1.ebuild:

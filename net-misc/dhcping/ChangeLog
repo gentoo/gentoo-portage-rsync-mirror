@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcping
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcping/ChangeLog,v 1.8 2012/09/28 09:48:04 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcping/ChangeLog,v 1.9 2014/02/07 00:01:30 jer Exp $
+
+  07 Feb 2014; Jeroen Roovers <jer@gentoo.org> dhcping-1.2.ebuild,
+  metadata.xml:
+  Add maintainer.
 
   28 Sep 2012; Agostino Sarubbo <ago@gentoo.org> dhcping-1.2.ebuild:
   Stable for amd64, wrt bug #436444
