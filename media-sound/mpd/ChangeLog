@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.336 2014/02/05 04:14:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.337 2014/02/07 03:32:58 radhermit Exp $
+
+*mpd-0.18.8 (07 Feb 2014)
+
+  07 Feb 2014; Tim Harder <radhermit@gentoo.org> +mpd-0.18.8.ebuild:
+  Version bump. Fix conditional opus support (bug #498926).
 
 *mpd-0.18.7 (05 Feb 2014)
 
