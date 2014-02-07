@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.585 2014/02/06 12:29:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.586 2014/02/07 18:17:03 jer Exp $
+
+  07 Feb 2014; Jeroen Roovers <jer@gentoo.org> wireshark-1.11.2-r1.ebuild,
+  wireshark-1.11.3_pre5537.ebuild:
+  Add wireshark group in pkg_setup() (bug #490956).
 
 *wireshark-1.11.3_pre5537 (06 Feb 2014)
 *wireshark-1.11.2-r1 (06 Feb 2014)

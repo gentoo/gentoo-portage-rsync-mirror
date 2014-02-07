@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre5537.ebuild,v 1.1 2014/02/06 12:29:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre5537.ebuild,v 1.2 2014/02/07 18:17:03 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user
@@ -77,6 +77,10 @@ DEPEND="
 "
 
 S=${WORKDIR}/${P/_pre*}-SVN-${PV/*_pre}
+
+pkg_setup() {
+	enewgroup wireshark
+}
 
 src_prepare() {
 	epatch \
