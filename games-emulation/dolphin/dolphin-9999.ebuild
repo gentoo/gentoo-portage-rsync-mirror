@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.10 2014/01/25 04:40:29 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.11 2014/02/07 17:55:17 twitch153 Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit cmake-utils eutils pax-utils toolchain-funcs versionator wxwidgets games
 
 if [[ ${PV} == 9999* ]]
 then
-	EGIT_REPO_URI="https://code.google.com/p/dolphin-emu/"
+	EGIT_REPO_URI="https://github.com/dolphin-emu/dolphin"
 	inherit git-2
 	KEYWORDS=""
 else
@@ -125,7 +125,7 @@ src_install() {
 
 	cmake-utils_src_install
 
-	dodoc Readme.txt
+	dodoc Readme.md
 	if use doc; then
 		dodoc -r docs/ActionReplay docs/DSP docs/WiiMote
 	fi
