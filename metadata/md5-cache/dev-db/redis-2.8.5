@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install prepare setup
+DEPEND=>=sys-devel/autoconf-2.63 test? ( dev-lang/tcl ) tcmalloc? ( dev-util/google-perftools ) jemalloc? ( >=dev-libs/jemalloc-3.2 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig
+DESCRIPTION=A persistent caching system, key-value and data structures database.
+EAPI=5
+HOMEPAGE=http://redis.io/
+IUSE=+jemalloc tcmalloc test
+KEYWORDS=~amd64 ~x86 ~x86-macos ~x86-solaris
+LICENSE=BSD
+RDEPEND=tcmalloc? ( dev-util/google-perftools ) jemalloc? ( >=dev-libs/jemalloc-3.2 )
+REQUIRED_USE=tcmalloc? ( !jemalloc ) jemalloc? ( !tcmalloc )
+SLOT=0
+SRC_URI=http://download.redis.io/releases/redis-2.8.5.tar.gz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_md5_=49121b4a741fe45a78c1da98a7c7b6d2

@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_fcgid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.60 2014/01/17 20:46:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.61 2014/02/07 20:00:11 creffett Exp $
+
+  07 Feb 2014; Chris Reffett <creffett@gentoo.org> -mod_fcgid-2.3.7.ebuild:
+  Drop vulnerable versions wrt bug 487314
 
   17 Jan 2014; Agostino Sarubbo <ago@gentoo.org> mod_fcgid-2.3.9.ebuild:
   Stable for ppc, wrt bug #487314

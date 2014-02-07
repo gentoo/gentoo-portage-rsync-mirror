@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r1.ebuild,v 1.1 2014/02/07 16:07:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r1.ebuild,v 1.2 2014/02/07 20:00:40 jer Exp $
 
 EAPI=5
 
@@ -372,7 +372,6 @@ src_install-libs() {
 		donvidia ${libdir}/libGL.so ${NV_SOVER} ${GL_ROOT}
 		donvidia ${libdir}/libGLESv1_CM.so ${NV_SOVER} ${GL_ROOT}
 		donvidia ${libdir}/libGLESv2.so ${NV_SOVER} ${GL_ROOT}
-		donvidia ${libdir}/libnvidia-fbc.so ${NV_SOVER}
 		donvidia ${libdir}/libnvidia-glcore.so ${NV_SOVER}
 		donvidia ${libdir}/libnvidia-glsi.so ${NV_SOVER}
 		donvidia ${libdir}/libnvidia-ifr.so ${NV_SOVER}

@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnupod
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.27 2013/08/28 14:01:11 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/ChangeLog,v 1.28 2014/02/07 19:46:24 zlogene Exp $
+
+  07 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> -gnupod-0.99.8.ebuild,
+  gnupod-0.99.8-r1.ebuild:
+  amd64/ppc64/ppc/x86 stable wrt bug #500270; Drop old.
 
 *gnupod-0.99.8-r1 (28 Aug 2013)
 
