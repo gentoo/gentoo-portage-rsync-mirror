@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ocsync/ocsync-0.91.4.ebuild,v 1.1 2014/02/06 14:11:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ocsync/ocsync-0.91.4.ebuild,v 1.2 2014/02/07 17:30:56 voyageur Exp $
 
 EAPI=5
 
@@ -22,8 +22,10 @@ RDEPEND=">=dev-db/sqlite-3.4:3
 	sftp? ( >=net-libs/libssh-0.5 )
 	!net-misc/csync"
 DEPEND="${DEPEND}
-	app-text/asciidoc
-	doc? ( app-doc/doxygen )
+	doc? (
+		app-doc/doxygen
+		app-text/asciidoc
+	)
 	test? ( dev-util/cmocka )"
 
 src_prepare() {

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ocsync
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ocsync/ChangeLog,v 1.1 2014/02/06 14:11:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ocsync/ChangeLog,v 1.2 2014/02/07 17:30:56 voyageur Exp $
+
+  07 Feb 2014; Bernard Cafarelli <voyageur@gentoo.org> ocsync-0.91.4.ebuild:
+  Only needs asciidoc with USE=doc
 
 *ocsync-0.91.4 (06 Feb 2014)
 
