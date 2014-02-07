@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.1.5.ebuild,v 1.15 2014/02/04 09:36:35 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.1.5.ebuild,v 1.16 2014/02/07 07:59:03 polynomial-c Exp $
 
 EAPI=4
 
@@ -83,9 +83,8 @@ DEPEND="${CDEPEND}
 		sys-apps/texinfo
 		app-text/xmlto
 	)
-	test? (
-		app-crypt/gnupg
-	)"
+	nls? ( sys-devel/gettext )
+	test? (	app-crypt/gnupg	)"
 
 # Live ebuild builds man pages and HTML docs, additionally
 if [[ ${PV} == *9999 ]]; then

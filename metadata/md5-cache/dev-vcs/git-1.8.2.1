@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=dev-libs/openssl sys-libs/zlib pcre? ( dev-libs/libpcre ) perl? ( dev-lang/perl[-build(-)] ) tk? ( dev-lang/tk ) curl? ( net-misc/curl webdav? ( dev-libs/expat ) ) emacs? ( virtual/emacs ) gnome-keyring? ( gnome-base/gnome-keyring ) app-arch/cpio doc? ( app-text/asciidoc app-text/docbook2X sys-apps/texinfo app-text/xmlto ) test? ( app-crypt/gnupg ) python? ( =dev-lang/python-2* ) virtual/pkgconfig
+DEPEND=dev-libs/openssl sys-libs/zlib pcre? ( dev-libs/libpcre ) perl? ( dev-lang/perl[-build(-)] ) tk? ( dev-lang/tk ) curl? ( net-misc/curl webdav? ( dev-libs/expat ) ) emacs? ( virtual/emacs ) gnome-keyring? ( gnome-base/gnome-keyring ) app-arch/cpio doc? ( app-text/asciidoc app-text/docbook2X sys-apps/texinfo app-text/xmlto ) nls? ( sys-devel/gettext ) test? ( app-crypt/gnupg ) python? ( =dev-lang/python-2* ) virtual/pkgconfig
 DESCRIPTION=GIT - the stupid content tracker, the revision control system heavily used by the Linux kernel team
 EAPI=4
 HOMEPAGE=http://www.git-scm.com/
@@ -11,4 +11,4 @@ REQUIRED_USE=cgi? ( perl ) cvs? ( perl ) subversion? ( perl ) webdav? ( curl )
 SLOT=0
 SRC_URI=http://git-core.googlecode.com/files/git-1.8.2.1.tar.gz mirror://kernel/software/scm/git/git-1.8.2.1.tar.gz http://git-core.googlecode.com/files/git-manpages-1.8.2.1.tar.gz mirror://kernel/software/scm/git/git-manpages-1.8.2.1.tar.gz doc? ( mirror://kernel/software/scm/git/git-htmldocs-1.8.2.1.tar.gz http://git-core.googlecode.com/files/git-htmldocs-1.8.2.1.tar.gz )
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	python	be9965681d83c3980660a2660ac95e95	systemd	9f063b2cc19c5e8030911372aa246c4e	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=d8ff0a13a89b64c0d8466f2beb883d7e
+_md5_=d685a61bab4291185ff75a254b64bf52

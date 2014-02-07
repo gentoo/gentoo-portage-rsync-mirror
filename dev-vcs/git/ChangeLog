@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.244 2014/02/06 08:41:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.245 2014/02/07 07:59:03 polynomial-c Exp $
+
+  07 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> git-1.8.1.5.ebuild,
+  git-1.8.1.5-r1.ebuild, git-1.8.2.1.ebuild, git-1.8.3.2-r1.ebuild,
+  git-1.8.4.5.ebuild, git-1.8.5.3.ebuild, git-1.8.5.4.ebuild, git-9999.ebuild,
+  files/git-daemon-r1.initd:
+  Attempt to fix startup of git-daemon as non-root user (bug #460370). Added
+  sys-devel/gettext to DEPEND when nls USE flag is enabled.
 
 *git-1.8.5.4 (06 Feb 2014)
 
