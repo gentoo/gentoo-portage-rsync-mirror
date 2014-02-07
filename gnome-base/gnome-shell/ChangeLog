@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.60 2014/02/02 18:28:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.61 2014/02/06 23:41:20 eva Exp $
+
+*gnome-shell-3.10.3 (06 Feb 2014)
+
+  06 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-shell-3.10.3.ebuild:
+  Version bump.
 
   02 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-shell-3.10.2.1.ebuild:
   spidermonkey was rekeyworded on ia64

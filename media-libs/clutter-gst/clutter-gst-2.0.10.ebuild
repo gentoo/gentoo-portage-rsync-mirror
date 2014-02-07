@@ -1,27 +1,27 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.0.ebuild,v 1.4 2013/03/29 23:11:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.10.ebuild,v 1.1 2014/02/06 23:35:40 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 CLUTTER_LA_PUNT="yes"
+PYTHON_COMPAT=( python2_{6,7} )
 
 # inherit clutter after gnome2 so that defaults aren't overriden
 # inherit gnome.org in the end so we use gnome mirrors and get the xz tarball
-# no PYTHON_DEPEND, python2 is just a build-time dependency
-inherit python gnome2 clutter gnome.org
+inherit gnome2 clutter gnome.org python-any-r1
 
 DESCRIPTION="GStreamer integration library for Clutter"
 
 SLOT="2.0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="examples +introspection"
 
 # FIXME: Support for gstreamer-basevideo-0.10 (HW decoder support) is automagic
 COMMON_DEPEND="
 	>=dev-libs/glib-2.20:2
 	>=media-libs/clutter-1.6.0:1.0=[introspection?]
-	>=media-libs/cogl-1.8:1.0=[introspection?]
+	>=media-libs/cogl-1.10:1.0=[introspection?]
 	media-libs/gstreamer:1.0[introspection?]
 	media-libs/gst-plugins-bad:1.0
 	media-libs/gst-plugins-base:1.0[introspection?]
@@ -32,15 +32,10 @@ RDEPEND="${COMMON_DEPEND}
 	media-libs/gst-plugins-good:1.0
 "
 DEPEND="${COMMON_DEPEND}
+	${PYTHON_DEPS}
 	>=dev-util/gtk-doc-am-1.8
-	=dev-lang/python-2*
 	virtual/pkgconfig
 "
-
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
 
 src_prepare() {
 	DOCS="AUTHORS NEWS README"
