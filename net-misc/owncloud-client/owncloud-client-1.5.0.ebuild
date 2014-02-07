@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.5.0.ebuild,v 1.1 2014/02/06 14:12:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/owncloud-client/owncloud-client-1.5.0.ebuild,v 1.2 2014/02/07 14:06:20 voyageur Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ RDEPEND="dev-libs/qtkeychain
 	dev-qt/qtcore:4
 	dev-qt/qtdbus:4
 	dev-qt/qtgui:4
+	dev-qt/qtsql:4
 	dev-qt/qttest:4
 	dev-qt/qtwebkit:4
 	>=net-misc/ocsync-0.91.4

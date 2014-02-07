@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.21.ebuild,v 1.3 2013/09/21 10:56:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.24.ebuild,v 1.1 2014/02/07 14:11:36 polynomial-c Exp $
 
 EAPI="4"
 
@@ -29,7 +29,7 @@ HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip mirror binchecks"
 QA_EXECSTACK="opt/seamonkey/*"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="startup-notification"

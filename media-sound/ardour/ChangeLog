@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.126 2014/01/29 13:38:35 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.127 2014/02/07 14:22:44 nativemad Exp $
+
+*ardour-3.5.308-r1 (07 Feb 2014)
+
+  07 Feb 2014; Andreas Schuerch <nativemad@gentoo.org>
+  +ardour-3.5.308-r1.ebuild, ardour-9999.ebuild:
+  added -r1 to reflect bug 500516. Thanks Mikkl!
 
 *ardour-3.5.308 (29 Jan 2014)
 
