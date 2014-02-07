@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r5.ebuild,v 1.3 2014/01/27 08:58:09 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r6.ebuild,v 1.1 2014/02/07 02:14:50 idella4 Exp $
 
 EAPI=5
 
@@ -252,6 +252,10 @@ src_prepare() {
 	sed -i -e "/\/var\/lock\/subsys/d" \
 		tools/Makefile || die
 
+	# xencommons, Bug #492332, sed lighter weight than patching
+	sed -e 's:\$QEMU_XEN -xen-domid:test -e "\$QEMU_XEN" \&\& &:' \
+		-i tools/hotplug/Linux/init.d/xencommons || die
+
 	epatch_user
 }
 
@@ -320,6 +324,8 @@ src_install() {
 	newinitd "${FILESDIR}"/xendomains.initd-r2 xendomains
 	newinitd "${FILESDIR}"/xenstored.initd xenstored
 	newinitd "${FILESDIR}"/xenconsoled.initd xenconsoled
+	newinitd "${FILESDIR}"/xencommons.initd xencommons
+	newconfd "${FILESDIR}"/xencommons.confd xencommons
 
 	if use screen; then
 		cat "${FILESDIR}"/xendomains-screen.confd >> "${ED}"/etc/conf.d/xendomains || die
@@ -338,7 +344,7 @@ src_install() {
 	fi
 
 	# xend expects these to exist
-	keepdir /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
+	keepdir /var/run/xenstored /var/lib/xenstored /var/xen/dump /var/lib/xen /var/log/xen
 
 	# for xendomains
 	keepdir /etc/xen/auto
@@ -357,6 +363,9 @@ pkg_postinst() {
 	elog "Official Xen Guide and the offical wiki page:"
 	elog "http://www.gentoo.org/doc/en/xen-gu"${D}"usr/ide.xml"
 	elog "http://wiki.xen.org/wiki/Main_Page"
+	elog ""
+	elog "Recommended to utilise the xencommons script to config sytem at boot."
+	elog "Add by use of rc-update on completion of the install"
 
 	if [[ "$(scanelf -s __guard -q "${PYTHON}")" ]] ; then
 		echo

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.215 2014/01/28 08:25:49 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.216 2014/02/07 02:14:50 idella4 Exp $
+
+*xen-tools-4.2.2-r6 (07 Feb 2014)
+
+  07 Feb 2014; Ian Delaney <idella4@gentoo.org> +xen-tools-4.2.2-r6.ebuild,
+  -xen-tools-4.2.2-r5.ebuild:
+  revbump; add xencommons init scripts to 4.2.2, rm 4.2.2-r5, fixes Bug #499992
 
   28 Jan 2014; Yixun Lan <dlan@gentoo.org> files/xenstored.initd:
   fix local variable  collision, thanks Cyril Nahon
