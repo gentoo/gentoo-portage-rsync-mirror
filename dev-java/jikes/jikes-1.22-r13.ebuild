@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.22-r13.ebuild,v 1.13 2013/05/24 02:57:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/jikes-1.22-r13.ebuild,v 1.14 2014/02/07 15:41:24 tomwij Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,8 +16,8 @@ RDEPEND=">=dev-java/java-config-2.0.0"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/deprecated.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/deprecated.patch
 }
 
 src_compile() {
@@ -27,12 +27,12 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die "install problem"
+	make DESTDIR="${D}" install || die "install problem"
 	dodoc ChangeLog AUTHORS README TODO NEWS
 
-	mv ${D}/usr/bin/jikes{,-bin}
-	dobin ${FILESDIR}/jikes
+	mv "${D}"/usr/bin/jikes{,-bin}
+	dobin "${FILESDIR}"/jikes
 
 	insinto /usr/share/java-config-2/compiler
-	newins ${FILESDIR}/compiler-settings jikes
+	newins "${FILESDIR}"/compiler-settings jikes
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jtidy
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.17 2011/12/31 12:45:30 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/ChangeLog,v 1.18 2014/02/07 15:33:51 tomwij Exp $
+
+  07 Feb 2014; Tom Wijsman <TomWij@gentoo.org> jtidy-0_pre20010801-r1.ebuild:
+  Make PATCHES an array to fix repoman warning.
 
   31 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
   jtidy-0_pre20010801-r1.ebuild:
@@ -68,4 +71,3 @@
 
   12 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +jtidy-0_pre20010801.ebuild:
   new ebuild, added as dependency of dev-java/jmeter, created by me
-

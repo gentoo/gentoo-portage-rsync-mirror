@@ -1,6 +1,9 @@
 # ChangeLog for sci-calculators/keurocalc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.9 2014/02/05 16:49:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/ChangeLog,v 1.10 2014/02/07 16:00:16 kensington Exp $
+
+  07 Feb 2014; Michael Palimaka <kensington@gentoo.org> keurocalc-1.2.1.ebuild:
+  Fix building of locales wrt bug #500560.
 
 *keurocalc-1.2.1 (05 Feb 2014)
 

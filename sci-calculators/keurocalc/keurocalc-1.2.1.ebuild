@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/keurocalc-1.2.1.ebuild,v 1.1 2014/02/05 16:49:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/keurocalc/keurocalc-1.2.1.ebuild,v 1.2 2014/02/07 16:00:16 kensington Exp $
 
 EAPI=5
 
@@ -23,3 +23,10 @@ PATCHES=(
 	"${FILESDIR}/${P}-handbookdir.patch"
 )
 DOCS=( AUTHORS TODO )
+
+src_prepare() {
+	# bug 500560
+	sed -e "s/PO_FILES //" -i po/*/CMakeLists.txt
+
+	kde4-base_src_prepare
+}
