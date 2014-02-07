@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kephal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.182 2014/01/20 08:00:55 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.183 2014/02/06 23:20:50 dilfridge Exp $
+
+*kephal-4.11.6 (06 Feb 2014)
+
+  06 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org> +kephal-4.11.6.ebuild:
+  Version bump KDE SC 4.11.6
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org> kephal-4.11.5.ebuild:
   Restore keywords that were accidentally omitted.

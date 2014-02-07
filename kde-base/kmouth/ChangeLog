@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kmouth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.283 2014/01/20 15:00:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmouth/ChangeLog,v 1.284 2014/02/06 23:20:52 dilfridge Exp $
+
+*kmouth-4.12.2 (06 Feb 2014)
+
+  06 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org> +kmouth-4.12.2.ebuild:
+  Version bump KDE SC 4.12.2
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org> -kmouth-4.12.0.ebuild:
   Remove KDE SC 4.12.0

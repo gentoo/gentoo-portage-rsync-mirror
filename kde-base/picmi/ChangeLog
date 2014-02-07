@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/picmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.56 2014/02/03 15:36:14 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.57 2014/02/06 23:20:24 dilfridge Exp $
+
+*picmi-4.12.2 (06 Feb 2014)
+
+  06 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org> +picmi-4.12.2.ebuild:
+  Version bump KDE SC 4.12.2
 
   03 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> picmi-4.11.2.ebuild,
   picmi-4.11.5.ebuild:

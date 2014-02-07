@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/parley
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.201 2014/01/20 14:59:56 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/parley/ChangeLog,v 1.202 2014/02/06 23:20:55 dilfridge Exp $
+
+*parley-4.12.2 (06 Feb 2014)
+
+  06 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org> +parley-4.12.2.ebuild:
+  Version bump KDE SC 4.12.2
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org> -parley-4.12.0.ebuild:
   Remove KDE SC 4.12.0
