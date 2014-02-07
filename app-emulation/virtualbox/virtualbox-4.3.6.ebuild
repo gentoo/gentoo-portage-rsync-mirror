@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.6.ebuild,v 1.2 2014/01/20 22:33:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.3.6.ebuild,v 1.3 2014/02/07 05:39:40 polynomial-c Exp $
 
 EAPI=5
 
@@ -178,11 +178,13 @@ src_prepare() {
 	epatch_user
 
 	# fix location of ifconfig binary (bug #455902)
-	local ifcfg="$(type -p ifconfig)"
-	if [ "${ifcfg}" != "/sbin/ifconfig" ] ; then
-		sed "/VBOXADPCTL_IFCONFIG_PATH/s@/sbin/ifconfig@${ifcfg}@" \
-			-i "${S}"/src/apps/adpctl/VBoxNetAdpCtl.cpp \
-			|| die
+	local target_file="src/apps/adpctl/VBoxNetAdpCtl.cpp"
+	local define_string="VBOXADPCTL_IFCONFIG_PATH"
+	local vbox_ifcfg="$(grep "^#define ${define_string}" ${target_file} | sed 's@.*"\([[:alpha:]/]\+\)".*@\1@')" #'
+	local sys_ifcfg="$(type -p ifconfig)"
+	if [ -n "${vbox_ifcfg}" ] && [ "${ifcfg}" != "${vbox_ifcfg}" ] ; then
+		sed "/${define_string}/s@${vbox_ifcfg}@${sys_ifcfg}@" \
+			-i "${S}/${target_file}" || die
 	fi
 }
 
