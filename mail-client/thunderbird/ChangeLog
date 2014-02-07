@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.261 2013/12/15 21:08:45 anarchy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.262 2014/02/07 15:24:12 polynomial-c Exp $
+
+*thunderbird-24.3.0 (07 Feb 2014)
+
+  07 Feb 2014; Lars Wendler <polynomial-c@gentoo.org>
+  +thunderbird-24.3.0.ebuild:
+  Security bump (bug #500320).
 
   15 Dec 2013; Jory A. Pratt <anarchy@gentoo.org> thunderbird-24.2.0.ebuild:
   Readd missing patch to disable buildid, bug #465466

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.3.ebuild,v 1.9 2012/01/01 12:21:10 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/jacl-1.3.3.ebuild,v 1.10 2014/02/07 15:02:11 tomwij Exp $
 
 inherit base java-pkg-2
 
@@ -20,7 +20,7 @@ DEPEND=">=virtual/jdk-1.4
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES="${FILESDIR}/1.3.3-javacflags.patch"
+PATCHES=( "${FILESDIR}"/1.3.3-javacflags.patch )
 
 # jikes support disabled for now.
 # refer to bug #100020 and bug #89711

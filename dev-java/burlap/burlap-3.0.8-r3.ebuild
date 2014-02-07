@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8-r3.ebuild,v 1.3 2008/05/03 02:57:01 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/burlap/burlap-3.0.8-r3.ebuild,v 1.4 2014/02/07 15:02:10 tomwij Exp $
 
 EAPI=1
 
@@ -28,7 +28,7 @@ DEPEND=">=virtual/jdk-1.4
 	source? ( app-arch/zip )
 	${COMMON_DEP}"
 
-PATCHES="${FILESDIR}/3.0.8-java5.patch"
+PATCHES=( "${FILESDIR}"/3.0.8-java5.patch )
 JAVA_PKG_FILTER_COMPILER="jikes"
 
 src_compile() {

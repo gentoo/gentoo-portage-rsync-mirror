@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jacl
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/ChangeLog,v 1.29 2012/01/01 12:21:10 sera Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jacl/ChangeLog,v 1.30 2014/02/07 15:02:11 tomwij Exp $
+
+  07 Feb 2014; Tom Wijsman <TomWij@gentoo.org> jacl-1.3.3.ebuild:
+  Make PATCHES an array to fix repoman warning.
 
   01 Jan 2012; Ralph Sennhauser <sera@gentoo.org> jacl-1.3.3.ebuild,
   jacl-1.4.1.ebuild:
@@ -96,4 +99,3 @@
   14 Feb 2004; <zx@gentoo.org> jacl-1.3.1.ebuild:
   Initial Import. Thanks to Kevin Polalses <kevin.poalses@poalsoft.com> for
   initial ebuild. Bug #41567
-
