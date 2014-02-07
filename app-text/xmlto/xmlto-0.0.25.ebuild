@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.25.ebuild,v 1.3 2014/01/18 11:51:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.25.ebuild,v 1.4 2014/02/07 07:27:35 vapier Exp $
 
 EAPI=4
 inherit eutils
@@ -18,13 +18,12 @@ RDEPEND=">=app-text/docbook-xsl-stylesheets-1.62.0-r1
 	app-text/docbook-xml-dtd:4.2
 	app-shells/bash
 	dev-libs/libxslt
-	sys-apps/grep
 	|| ( >=sys-apps/coreutils-6.10-r1 sys-freebsd/freebsd-ubin )
 	|| ( sys-apps/util-linux app-misc/getopt )
 	|| ( sys-apps/which sys-freebsd/freebsd-ubin )
 	latex? ( >=app-text/passivetex-1.25 >=dev-tex/xmltex-1.9-r2 )"
-DEPEND="${RDEPEND}
-	sys-devel/flex"
+# We only depend on flex when we patch the imput lexer.
+DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog FAQ NEWS README THANKS"
 
@@ -33,7 +32,8 @@ src_prepare() {
 }
 
 src_configure() {
-	export BASH
+	# We don't want the script to detect /bin/sh if it is bash.
+	export ac_cv_path_BASH=/bin/bash
 	has_version sys-apps/util-linux || export GETOPT=getopt-long
 	econf
 }
