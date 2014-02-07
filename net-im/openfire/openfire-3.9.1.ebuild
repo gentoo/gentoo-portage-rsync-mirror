@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.9.1.ebuild,v 1.1 2014/02/07 06:22:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/openfire-3.9.1.ebuild,v 1.2 2014/02/07 12:18:55 slyfox Exp $
 
 inherit eutils java-pkg-2 java-ant-2 systemd
 
@@ -28,8 +28,8 @@ pkg_setup() {
 		einfo "This is an upgrade"
 		ewarn "As the plugin API changed, at least these plugins need to be updated also:"
 		ewarn "User Search, IM Gateway, Fastpath, Monitoring"
-		ewarn "hey can be downloaded via Admin Console or at"
-		ewarn "${HOMEPAGE}"
+		ewarn "they can be downloaded via Admin Console or at"
+		ewarn "    ${HOMEPAGE}"
 	else
 		ewarn "If this is an upgrade stop right ( CONTROL-C ) and run the command:"
 		ewarn "echo 'CONFIG_PROTECT=\"/opt/openfire/resources/security/\"' > /etc/env.d/98openfire "
