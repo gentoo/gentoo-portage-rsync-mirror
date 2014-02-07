@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/fortune-mod-scriptures-1.1.0.ebuild,v 1.7 2010/12/12 09:49:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-scriptures/fortune-mod-scriptures-1.1.0.ebuild,v 1.8 2014/02/07 02:57:33 creffett Exp $
+
+EAPI=5
 
 DESCRIPTION="Fortune modules from the King James Bible scriptures"
 HOMEPAGE="http://scriptures.nephi.org/"
@@ -16,5 +18,5 @@ RDEPEND="games-misc/fortune-mod"
 src_install() {
 	dodoc README ChangeLog
 	insinto /usr/share/fortune
-	doins mods/* || die
+	doins mods/*
 }
