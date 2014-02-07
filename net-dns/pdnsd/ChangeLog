@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.120 2014/01/18 19:53:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.121 2014/02/07 14:48:45 polynomial-c Exp $
+
+  07 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -pdnsd-1.2.8-r4.ebuild,
+  -files/pdnsd.online.1, -files/pdnsd.rc6.1, files/pdnsd.rc7:
+  Fixed pidfile location in init script. Removed old.
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pdnsd-1.2.9a.ebuild:
   Stable for alpha, wrt bug #487284

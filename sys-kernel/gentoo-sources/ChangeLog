@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1253 2014/01/30 17:01:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1254 2014/02/07 14:54:23 mpagano Exp $
+
+*gentoo-sources-3.13.2 (07 Feb 2014)
+
+  07 Feb 2014; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.13.2.ebuild:
+  BFQ v7 3.13. Add patch to experimental to enable additional CPU optimizations
+  for GCC, by graysky2 on GitHub; reported by mrueg, bug #500322. Linux patch
+  3.13.2
 
 *gentoo-sources-3.13.9999 (30 Jan 2014)
 
