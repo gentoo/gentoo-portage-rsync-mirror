@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/xdx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.27 2013/07/30 14:36:01 tomjbe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/ChangeLog,v 1.28 2014/02/07 06:22:12 tomjbe Exp $
+
+*xdx-2.4.3 (07 Feb 2014)
+
+  07 Feb 2014; Thomas Beierlein <tomjbe@gentoo.org> +xdx-2.4.3.ebuild:
+  Version bump. New maintainer. New SRC_URI
 
   30 Jul 2013; Thomas Beierlein <tomjbe@gentoo.org> xdx-2.4.2.ebuild:
   Bump EAPI. Fix invalid desktop entry

@@ -1,6 +1,12 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.50 2014/02/06 21:13:00 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.51 2014/02/07 06:22:36 slyfox Exp $
+
+*openfire-3.9.1 (07 Feb 2014)
+
+  07 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> +openfire-3.9.1.ebuild,
+  -openfire-3.9.0.ebuild:
+  Version bump. Thanks to Dessa who noticed rerelease.
 
 *openfire-3.9.0 (06 Feb 2014)
 
