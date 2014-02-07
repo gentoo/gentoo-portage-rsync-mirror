@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/xdo
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdo/ChangeLog,v 1.1 2014/02/07 07:01:23 radhermit Exp $
+
+*xdo-0.3 (07 Feb 2014)
+
+  07 Feb 2014; Tim Harder <radhermit@gentoo.org> +xdo-0.3.ebuild,
+  +metadata.xml:
+  Initial import.
+
