@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/readseq-20080420.ebuild,v 1.4 2013/02/01 14:55:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/readseq/readseq-20080420-r1.ebuild,v 1.1 2014/02/08 10:03:50 ercpe Exp $
 
-EAPI=1
+EAPI=5
 
 inherit java-pkg-2 java-ant-2
 
@@ -13,34 +13,26 @@ HOMEPAGE="http://iubio.bio.indiana.edu/soft/molbio/readseq/"
 # http://iubio.bio.indiana.edu/soft/molbio/readseq/java/readseq-source.zip.
 # Renamed to the date of the modification and mirrored
 SRC_URI="http://dev.gentoo.org/~dberkholz/distfiles/${MY_P}.zip"
-#SRC_URI="mirror://gentoo/${MY_P}.zip"
 
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON="
-	dev-java/jaxp
-	dev-java/xerces:2"
-RDEPEND="${COMMON}
-	!=sci-biology/meme-4.8.1
+RDEPEND="!=sci-biology/meme-4.8.1
 	>=virtual/jre-1.4"
-DEPEND="${COMMON}
-	>=virtual/jdk-1.4
+DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip"
+
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	java-pkg_jar-from xerces-2 xercesImpl.jar lib/ibm-xml4j-min.jar
-	java-pkg_jar-from jaxp jaxp-ri.jar lib/orgxml.jar
+java_prepare() {
+	rm "${S}"/lib/* || die
+	epatch "${FILESDIR}"/${PV}-*
 }
 
 src_install() {
 	java-pkg_dojar build/readseq.jar
-
 	java-pkg_dolauncher
 }
 
