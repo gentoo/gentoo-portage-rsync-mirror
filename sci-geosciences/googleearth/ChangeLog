@@ -1,6 +1,23 @@
 # ChangeLog for sci-geosciences/googleearth
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.57 2014/01/31 10:14:46 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/ChangeLog,v 1.58 2014/02/08 15:56:20 mschiff Exp $
+
+*googleearth-7.1.2.2041 (08 Feb 2014)
+
+  08 Feb 2014; Marc Schiffbauer <mschiff@gentoo.org>
+  -googleearth-5.1.3535.3218-r1.ebuild, -googleearth-5.2.1.1588.ebuild,
+  -googleearth-6.0.2.2074.ebuild, -googleearth-6.0.3.2197.ebuild,
+  -googleearth-6.2.2.6613.ebuild, -googleearth-7.0.2.8415.ebuild,
+  -googleearth-7.0.2.8415-r2.ebuild, -googleearth-7.0.3.8542.ebuild,
+  -googleearth-7.1.1.1580.ebuild, -googleearth-7.1.1.1871.ebuild,
+  -googleearth-7.1.1.1888.ebuild, +googleearth-7.1.2.2041.ebuild,
+  -files/googleearth-7.0.2.8415-desktopfile.patch,
+  -files/googleearth-7.0.3.8542-desktopfile.patch,
+  -files/googleearth-7.1.1.1580-desktopfile.patch,
+  -files/googleearth-7.1.1.1871-desktopfile.patch,
+  +files/googleearth-7-desktopfile.patch, -files/decimal-separator.patch,
+  -files/mime-magic.patch, metadata.xml:
+  Bump version. Remove old ebuilds.
 
   31 Jan 2014; Marc Schiffbauer <mschiff@gentoo.org> metadata.xml:
   added myself as maintainer

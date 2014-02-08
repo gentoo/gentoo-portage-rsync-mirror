@@ -6,9 +6,5 @@
 	</maintainer>
 	<use>
 		<flag name='bundled-libs'>Use bundled libraries.</flag>
-		<flag name="qt-bundled">Use bundled Qt4 libraries instead of system ones. Recommended only for troubleshooting.</flag>
-		<flag name="mdns-bundled">Use bundled nss-mdns library instead of depending on sys-auth/nss-mdns. Enable this if you want to avoid the deptree.</flag>
-	    <flag name="system-qt">Use Qt4 libraries from portage instead of the bundled ones.</flag>
-	    <flag name="system-mdns">Use nss-mdns library from portage instead of the bundled one.</flag>
 	</use>
 </pkgmetadata>

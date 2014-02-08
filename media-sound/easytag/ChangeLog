@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/easytag
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.177 2014/01/26 12:09:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/ChangeLog,v 1.178 2014/02/08 15:39:45 polynomial-c Exp $
+
+*easytag-2.1.9-r1 (08 Feb 2014)
+
+  08 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +easytag-2.1.9-r1.ebuild:
+  Added a bunch of fixes as requested by upstream maintainer in bug #500654.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> easytag-2.1.8.ebuild:
   Stable for sparc, wrt bug #492250

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.1.1.1871.ebuild,v 1.1 2013/07/01 15:28:40 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/googleearth/googleearth-7.1.2.2041.ebuild,v 1.1 2014/02/08 15:56:20 mschiff Exp $
 
 EAPI=5
 
@@ -101,13 +101,18 @@ src_prepare() {
 		patchelf --set-rpath '$ORIGIN' "${x}" ||
 			die "patchelf failed on ${x}"
 	done
+	for x in plugins/*.so ; do
+		[[ -f ${x} ]] || continue
+		patchelf --set-rpath '$ORIGIN/..' "${x}" ||
+			die "patchelf failed on ${x}"
+	done
 	for x in plugins/imageformats/*.so ; do
 		[[ -f ${x} ]] || continue
-		patchelf --set-rpath /opt/${PN} "${x}" ||
+		patchelf --set-rpath '$ORIGIN/../..' "${x}" ||
 			die "patchelf failed on ${x}"
 	done
 
-	epatch "${FILESDIR}"/${P}-desktopfile.patch
+	epatch "${FILESDIR}"/${PN}-${PV%%.*}-desktopfile.patch
 }
 
 src_install() {
@@ -140,11 +145,11 @@ pkg_preinst() {
 
 pkg_postinst() {
 	elog "When you get a crash starting Google Earth, try adding a file ~./config/Google/GoogleEarthPlus.conf"
-	elog "the following options:"
+	elog "with the following options:"
 	elog "lastTip = 4"
 	elog "enableTips = false"
 	elog ""
-	elog "In addition, the use of free video drivers may be problems associated with using the Mesa"
+	elog "In addition, the use of free video drivers may cause problems associated with using the Mesa"
 	elog "library. In this case, Google Earth 6x likely only works with the Gallium3D variant."
 	elog "To select the 32bit graphic library use the command:"
 	elog "	eselect mesa list"
