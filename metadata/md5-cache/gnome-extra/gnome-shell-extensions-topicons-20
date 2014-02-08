@@ -1,0 +1,11 @@
+DEFINED_PHASES=install postinst
+DEPEND=app-arch/xz-utils
+DESCRIPTION=Shows legacy tray icons on top
+EAPI=5
+HOMEPAGE=https://extensions.gnome.org/extension/495/topicons/
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2+
+RDEPEND=app-admin/eselect-gnome-shell-extensions >=gnome-base/gnome-shell-3.10
+SLOT=0
+SRC_URI=http://94.247.144.115/repo/topicons/snapshot/topicons-20.tar.xz
+_md5_=02896c656c287901a2c114d2717d28e6
