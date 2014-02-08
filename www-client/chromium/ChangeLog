@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1021 2014/02/06 14:28:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1022 2014/02/08 04:15:02 phajdan.jr Exp $
+
+*chromium-34.0.1825.4 (08 Feb 2014)
+
+  08 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-34.0.1825.4.ebuild, -chromium-32.0.1700.77.ebuild,
+  -chromium-34.0.1788.0.ebuild:
+  Dev channel bump. Non-Aura GTK+ UI is now default, but Aura is still
+  available. Remove old.
 
 *chromium-33.0.1750.70 (06 Feb 2014)
 
