@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.102 2014/01/25 04:07:04 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.103 2014/02/08 01:42:44 vapier Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -372,16 +372,15 @@ _modify-cmakelists() {
 enable_cmake-utils_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 
-    debug-print "$FUNCNAME: PATCHES=$PATCHES"
+	debug-print "$FUNCNAME: PATCHES=$PATCHES"
 
-    pushd "${S}" > /dev/null
-    [[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
-		
+	pushd "${S}" >/dev/null
+	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
+
 	debug-print "$FUNCNAME: applying user patches"
-    epatch_user
+	epatch_user
 
-    popd > /dev/null
-
+	popd >/dev/null
 }
 
 # @VARIABLE: mycmakeargs
@@ -509,11 +508,11 @@ enable_cmake-utils_src_configure() {
 		"${MYCMAKEARGS}"
 	)
 
-	pushd "${BUILD_DIR}" > /dev/null
+	pushd "${BUILD_DIR}" >/dev/null
 	debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: mycmakeargs is ${mycmakeargs_local[*]}"
 	echo "${CMAKE_BINARY}" "${cmakeargs[@]}" "${CMAKE_USE_DIR}"
 	"${CMAKE_BINARY}" "${cmakeargs[@]}" "${CMAKE_USE_DIR}" || die "cmake failed"
-	popd > /dev/null
+	popd >/dev/null
 }
 
 enable_cmake-utils_src_compile() {
@@ -591,37 +590,37 @@ cmake-utils_src_make() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${BUILD_DIR}" > /dev/null
+	pushd "${BUILD_DIR}" >/dev/null
 
 	${CMAKE_MAKEFILE_GENERATOR}_src_make $@
 
-	popd > /dev/null
+	popd >/dev/null
 }
 
 enable_cmake-utils_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${BUILD_DIR}" > /dev/null
+	pushd "${BUILD_DIR}" >/dev/null
 	DESTDIR="${D}" ${CMAKE_MAKEFILE_GENERATOR} install "$@" || die "died running ${CMAKE_MAKEFILE_GENERATOR} install"
-	popd > /dev/null
+	popd >/dev/null
 
-	pushd "${S}" > /dev/null
-    #Install docs, copied from base_src_install_docs
+	pushd "${S}" >/dev/null
+	# Install docs, copied from base_src_install_docs
 	local x
 
-    if [[ "$(declare -p DOCS 2>/dev/null 2>&1)" == "declare -a"* ]]; then
-        for x in "${DOCS[@]}"; do
-            debug-print "$FUNCNAME: docs: creating document from ${x}"
-            dodoc "${x}" || die "dodoc failed"
-        done
-    fi
-    if [[ "$(declare -p HTML_DOCS 2>/dev/null 2>&1)" == "declare -a"* ]]; then
-        for x in "${HTML_DOCS[@]}"; do
-            debug-print "$FUNCNAME: docs: creating html document from ${x}"
-            dohtml -r "${x}" || die "dohtml failed"
-        done
-    fi
+	if [[ "$(declare -p DOCS 2>/dev/null 2>&1)" == "declare -a"* ]]; then
+		for x in "${DOCS[@]}"; do
+			debug-print "$FUNCNAME: docs: creating document from ${x}"
+			dodoc "${x}" || die "dodoc failed"
+		done
+	fi
+	if [[ "$(declare -p HTML_DOCS 2>/dev/null 2>&1)" == "declare -a"* ]]; then
+		for x in "${HTML_DOCS[@]}"; do
+			debug-print "$FUNCNAME: docs: creating html document from ${x}"
+			dohtml -r "${x}" || die "dohtml failed"
+		done
+	fi
 
 	# Backward compatibility, for non-array variables
 	if [[ -n "${DOCS}" ]] && [[ "$(declare -p DOCS 2>/dev/null 2>&1)" != "declare -a"* ]]; then
@@ -631,21 +630,21 @@ enable_cmake-utils_src_install() {
 		dohtml -r ${HTML_DOCS} || die "dohtml failed"
 	fi
 
-	popd > /dev/null
+	popd >/dev/null
 }
 
 enable_cmake-utils_src_test() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	_check_build_dir
-	pushd "${BUILD_DIR}" > /dev/null
+	pushd "${BUILD_DIR}" >/dev/null
 	[[ -e CTestTestfile.cmake ]] || { echo "No tests found. Skipping."; return 0 ; }
 
 	[[ -n ${TEST_VERBOSE} ]] && myctestargs+=( --extra-verbose --output-on-failure )
 
 	if ctest "${myctestargs[@]}" "$@" ; then
 		einfo "Tests succeeded."
-		popd > /dev/null
+		popd >/dev/null
 		return 0
 	else
 		if [[ -n "${CMAKE_YES_I_WANT_TO_SEE_THE_TEST_LOG}" ]] ; then
@@ -660,7 +659,7 @@ enable_cmake-utils_src_test() {
 		fi
 
 		# die might not die due to nonfatal
-		popd > /dev/null
+		popd >/dev/null
 		return 1
 	fi
 }

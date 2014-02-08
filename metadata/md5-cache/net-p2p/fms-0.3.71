@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/libiconv frost? ( net-libs/polarssl ) >=dev-libs/poco-1.4.3_p1 >=dev-db/sqlite-3.6.15
 SLOT=0
 SRC_URI=mirror://gentoo/fms-src-0.3.71.zip
-_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=cmake-utils	db5236989678f4de51b2588767b5b69d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f500493aa0a50cf63cfdb7ce3120dafe

@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=app-crypt/libsecret dev-db/sqlite:3 dev-libs/glib:2 >=dev-libs/libgee-0.8.5:0.8 dev-libs/libunique:3 dev-libs/libxml2:2 dev-libs/gmime:2.6 media-libs/libcanberra >=net-libs/webkit-gtk-1.10.0:3[introspection] <=net-libs/webkit-gtk-2.0.4:3[introspection] >=x11-libs/gtk+-3.6.0:3[introspection] x11-libs/libnotify gnome-base/gsettings-desktop-schemas nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=http://yorba.org/download/geary/0.4/geary-0.4.0.tar.xz
-_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356
+_eclasses_=cmake-utils	db5236989678f4de51b2588767b5b69d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356
 _md5_=a591d2ef5d81a2103fac43444d615b04

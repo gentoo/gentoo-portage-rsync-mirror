@@ -9,5 +9,5 @@ LICENSE=MIT
 RDEPEND=media-libs/libpng:0 media-libs/ilmbase media-libs/tiff:0 sys-libs/zlib virtual/jpeg virtual/opengl x11-libs/libX11 cg? ( media-gfx/nvidia-cg-toolkit ) cuda? ( dev-util/nvidia-cuda-toolkit ) glew? ( media-libs/glew ) glut? ( media-libs/freeglut ) openexr? ( media-libs/openexr )
 SLOT=0
 SRC_URI=http://nvidia-texture-tools.googlecode.com/files/nvidia-texture-tools-2.0.8-1.tar.gz http://dev.gentoo.org/~ssuominen/nvidia-texture-tools-2.0.8-patchset-1.tar.xz
-_eclasses_=cmake-utils	fd482b43d509957b7fde7aa2213b1197	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=cmake-utils	db5236989678f4de51b2588767b5b69d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=60b2adf80564aa5ef07541989e23644c
