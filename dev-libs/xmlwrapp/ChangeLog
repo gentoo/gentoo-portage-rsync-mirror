@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlwrapp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.42 2014/02/02 11:05:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlwrapp/ChangeLog,v 1.43 2014/02/08 13:36:50 nimiux Exp $
+
+  08 Feb 2014; Chema Alonso <nimiux@gentoo.org> xmlwrapp-0.7.1.ebuild:
+  Stable for amd64 wrt bug #499758
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> xmlwrapp-0.7.1.ebuild:
   Stable for ppc, wrt bug #499758

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.11 2014/02/06 19:01:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.12 2014/02/08 13:34:55 hattya Exp $
+
+  08 Feb 2014; Akinori Hattori <hattya@gentoo.org> lz4-0_p106-r1.ebuild:
+  keyword ~ia64 wrt bug #499468
 
   06 Feb 2014; Jeroen Roovers <jer@gentoo.org> lz4-0_p106-r1.ebuild:
   Marked ~hppa (bug #499468).

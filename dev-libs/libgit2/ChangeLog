@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgit2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.18 2013/12/07 14:26:30 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/ChangeLog,v 1.19 2014/02/08 13:36:49 jlec Exp $
+
+*libgit2-0.20.0-r1 (08 Feb 2014)
+
+  08 Feb 2014; Justin Lecher <jlec@gentoo.org> +libgit2-0.20.0-r1.ebuild:
+  Add threads USE flag, #497352
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> libgit2-0.19.0-r1.ebuild:
   x86 stable, bug #488774
