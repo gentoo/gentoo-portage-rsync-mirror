@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.28.ebuild,v 1.9 2014/01/12 13:16:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.28.ebuild,v 1.10 2014/02/08 08:55:01 olemarkus Exp $
 
 EAPI=5
 
@@ -74,7 +74,7 @@ IUSE="${IUSE}
 
 IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	crypt +ctype curl curlwrappers debug
-	enchant exif frontbase +fileinfo +filter firebird
+	enchant exif +fileinfo +filter firebird
 	flatfile ftp gd gdbm gmp +hash +iconv imap inifile
 	intl iodbc ipv6 +json kerberos ldap ldap-sasl libedit mhash
 	mssql mysql mysqlnd mysqli nls
