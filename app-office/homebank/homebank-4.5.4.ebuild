@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.5.4.ebuild,v 1.1 2013/10/07 19:04:55 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/homebank/homebank-4.5.4.ebuild,v 1.2 2014/02/08 12:08:34 pacho Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE="+ofx"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND=">=x11-libs/gtk+-2.20
+RDEPEND=">=x11-libs/gtk+-2.20:2
 	>=dev-libs/glib-2.17
 	ofx? ( >=dev-libs/libofx-0.7 )"
 DEPEND="${RDEPEND}

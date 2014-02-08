@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.538 2014/01/27 15:35:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.539 2014/02/08 12:14:52 dilfridge Exp $
+
+*libreoffice-4.2.0.4 (08 Feb 2014)
+
+  08 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libreoffice-4.2.0.4.ebuild, +files/libreoffice-4.2.0.4-curl-config.patch,
+  libreoffice-4.2.9999.ebuild:
+  Version bump, bug 499988
 
   27 Jan 2014; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-4.2.9999.ebuild,
   libreoffice-9999-r2.ebuild:

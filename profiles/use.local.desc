@@ -925,6 +925,10 @@ app-office/libreoffice:telepathy - Enable document colaboration features using t
 app-office/libreoffice:vba - Enable support for VBA compatibility and ActiveX embedding
 app-office/libreoffice:vlc - Use media-video/vlc for video embedding
 app-office/libreoffice:webdav - Adds support for HTTP content adding via net-libs/neon
+app-office/libreoffice-l10n:linguas_ca_valencia - Catalan locale (Valencia)
+app-office/libreoffice-l10n:linguas_kmr_Latn - kmr_Latn localization
+app-office/libreoffice-l10n:linguas_sid - sid localization
+app-office/libreoffice-l10n:linguas_sr_Latn - Serbian (Latin) locale
 app-office/libreoffice-l10n:offlinehelp - Install help files locally instead of using the LibreOffice Wiki
 app-office/lyx:aspell - Add support for aspell spellchecking
 app-office/lyx:dia - Add support for diagrams (app-office/dia)
