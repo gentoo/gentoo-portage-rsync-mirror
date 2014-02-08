@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/espeak
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.124 2014/02/03 16:06:49 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeak/ChangeLog,v 1.125 2014/02/08 08:01:52 teiresias Exp $
+
+  08 Feb 2014; Christopher Brannon <teiresias@gentoo.org>
+  -espeak-1.45.04.ebuild:
+  Remove old version.
 
   03 Feb 2014; Akinori Hattori <hattya@gentoo.org> espeak-1.47.11-r1.ebuild:
   ia64 stable wrt bug #494346
