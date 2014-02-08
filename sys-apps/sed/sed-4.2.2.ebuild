@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.2.ebuild,v 1.4 2014/01/20 22:54:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.2.ebuild,v 1.5 2014/02/08 13:24:00 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -67,6 +67,4 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die "Install failed"
 	dodoc NEWS README* THANKS AUTHORS BUGS ChangeLog
-	docinto examples
-	dodoc "${FILESDIR}"/{dos2unix,unix2dos}
 }
