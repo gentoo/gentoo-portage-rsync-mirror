@@ -1,17 +1,19 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc1_p20120916.ebuild,v 1.2 2013/09/22 01:59:37 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc2.ebuild,v 1.1 2014/02/08 06:50:48 ssuominen Exp $
 
 # See .spec in http://pkgs.fedoraproject.org/gitweb/?p=xdg-utils.git;a=summary
 # The source tree MUST be cleaned before rolling a snapshot tarball:
 # make scripts-clean -C scripts
 # make man scripts -C scripts
 
-EAPI=4
+EAPI=5
+
+MY_P=${P/_/-}
 
 DESCRIPTION="Portland utils for cross-platform/cross-toolkit/cross-desktop interoperability"
 HOMEPAGE="http://portland.freedesktop.org/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P/0823/2308}.tar.xz -> ${P}.tar.xz" # typo :(
+SRC_URI="http://people.freedesktop.org/~rdieter/${PN}/${MY_P}.tar.gz"
 #SRC_URI="http://portland.freedesktop.org/download/${MY_P}.tar.gz"
 
 LICENSE="MIT"
@@ -24,27 +26,19 @@ RDEPEND="dev-util/desktop-file-utils
 	x11-apps/xprop
 	x11-apps/xset
 	perl? ( dev-perl/File-MimeInfo )"
-DEPEND=""
-#app-text/xmlto || ( www-client/links www-client/lynx virtual/w3m )
+DEPEND="app-text/xmlto
+	|| ( www-client/links www-client/lynx virtual/w3m )"
 
-DOCS="ChangeLog README RELEASE_NOTES TODO"
+DOCS="README RELEASE_NOTES TODO" # ChangeLog is bogus, see git instead
 
 RESTRICT="test" # Disabled because of sandbox violation(s)
 
-S=${WORKDIR}/${P/0823/2308}
-
-#src_prepare() {
-#	emake scripts-clean -C scripts
-#}
-#
-#src_compile() {
-#	emake man scripts -C scripts
-#}
+S=${WORKDIR}/${MY_P}
 
 src_install() {
 	default
 
-	newdoc scripts/README README.scripts
+	newdoc scripts/xsl/README README.xsl
 	use doc && dohtml -r scripts/html
 
 	# Install default XDG_DATA_DIRS, bug #264647

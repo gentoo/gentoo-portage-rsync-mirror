@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/m2crypto
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.76 2013/10/22 11:58:27 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.77 2014/02/08 06:53:39 patrick Exp $
+
+*m2crypto-0.22.3 (08 Feb 2014)
+
+  08 Feb 2014; Patrick Lauer <patrick@gentoo.org> +m2crypto-0.22.3.ebuild:
+  Bump
 
   22 Oct 2013; Fabian Groffen <grobian@gentoo.org> m2crypto-0.21.1-r1.ebuild:
   Marked ~x64-macos, bug #487670
