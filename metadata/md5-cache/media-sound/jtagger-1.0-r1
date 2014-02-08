@@ -4,10 +4,10 @@ DESCRIPTION=Powerful MP3 tag and filename editor
 EAPI=5
 HOMEPAGE=http://dronten.googlepages.com/jtagger
 IUSE=elibc_FreeBSD source test
-KEYWORDS=~amd64 ~x86
+KEYWORDS=amd64 ~x86
 LICENSE=GPL-3
 RDEPEND=dev-java/jlayer:0 >=dev-java/jid3-0.46-r1:0 >=virtual/jre-1.5 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=0
 SRC_URI=http://dronten.googlepages.com/jtagger.zip -> jtagger-1.0.zip
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=7146250af2a9d596a878cbb6fefd780a
+_md5_=31c020e2cf57482759662ad62b8705af
