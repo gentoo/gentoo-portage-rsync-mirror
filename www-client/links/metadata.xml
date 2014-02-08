@@ -9,7 +9,4 @@
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
-  <use>
-    <flag name='deprecated'>Install deprecated 'links2 -> links' symlink for compability reasons temporarily</flag>
-  </use>
 </pkgmetadata>
