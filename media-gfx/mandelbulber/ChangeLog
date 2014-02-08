@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/mandelbulber
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.11 2013/04/08 15:05:56 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.12 2014/02/08 07:20:50 radhermit Exp $
+
+*mandelbulber-1.21.1 (08 Feb 2014)
+
+  08 Feb 2014; Tim Harder <radhermit@gentoo.org> +mandelbulber-1.21.1.ebuild,
+  +files/mandelbulber-1.21.1-qa.patch:
+  Version bump, install desktop file (bug #496042).
 
   08 Apr 2013; Samuli Suominen <ssuominen@gentoo.org>
   mandelbulber-1.12.1.ebuild,
