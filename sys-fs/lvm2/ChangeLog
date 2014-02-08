@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.346 2014/02/04 02:46:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.347 2014/02/08 21:17:46 robbat2 Exp $
+
+  08 Feb 2014; Robin H. Johnson <robbat2@gentoo.org>
+  files/dmeventd.initd-2.02.67-r1, files/lvmetad.initd-2.02.105,
+  files/lvmetad.initd-2.02.105-r2:
+  Bug #479464: change pidfile path to be consistently /run
 
   04 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.105-r2.ebuild:
   Bug #448354: Fix cross-compile with thin.
