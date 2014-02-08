@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.222 2014/02/08 13:16:41 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.223 2014/02/08 19:47:12 ago Exp $
+
+  08 Feb 2014; Agostino Sarubbo <ago@gentoo.org> numpy-1.8.0-r1.ebuild:
+  Stable for amd64, wrt bug #500484
 
   08 Feb 2014; Akinori Hattori <hattya@gentoo.org> numpy-1.8.0-r1.ebuild:
   ia64 stable wrt bug #500484
