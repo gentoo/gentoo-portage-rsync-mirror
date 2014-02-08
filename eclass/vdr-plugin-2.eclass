@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.27 2014/01/25 15:23:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin-2.eclass,v 1.28 2014/02/08 00:56:30 hd_brummy Exp $
 
 # @ECLASS: vdr-plugin-2.eclass
 # @MAINTAINER:
@@ -43,7 +43,7 @@
 #
 # For more details about it please take a look at the eutils.class.
 
-inherit eutils flag-o-matic multilib toolchain-funcs unpacker # base
+inherit eutils flag-o-matic multilib toolchain-funcs unpacker
 
 case ${EAPI:-0} in
     4|5) ;;
@@ -202,7 +202,6 @@ vdr_patchmakefile() {
 dev_check() {
 	# A lot useful debug infos
 	# set VDR_MAINTAINER_MODE="1" in make.conf
-	VDR_MAINTAINER_MODE="1" # cleanup later
 	if [[ -n ${VDR_MAINTAINER_MODE} ]]; then
 		eerror "\t Gentoo Developer Debug: $@"
 	fi
@@ -411,8 +410,6 @@ vdr-plugin-2_src_util() {
 			vdr-plugin-2_src_util add_local_patch patchmakefile linguas_patch i18n
 			;;
 		unpack)
-#			base_src_unpack # cleanup later
-			dev_check "function src_unpack, changed from base.eclass to unpacker.eclass"
 			unpacker_src_unpack
 			;;
 		add_local_patch)
@@ -444,12 +441,6 @@ vdr-plugin-2_src_unpack() {
 		die "vdr-plugin-2_src_unpack not called!"
 	fi
 
-	# cleanup later...
-	dev_check "https://bugs.gentoo.org/show_bug.cgi?id=497056"
-	dev_check "Major changes in vdr-plugin-2.eclass"
-	dev_check "Please report problems in scr_unpack, src_prepare"
-	dev_check "to this bug or direct to vdr(at)gentoo.org"
-
 	if [ -z "$1" ]; then
 		vdr-plugin-2_src_util unpack
 	else
@@ -466,8 +457,6 @@ vdr-plugin-2_src_prepare() {
 		die "vdr-plugin-2_src_prepare not called!"
 	fi
 
-#	base_src_prepare # cleanup later
-	dev_check "function src_prepare, changed from base.eclass to eutils.eclass"
 	[[ ${PATCHES[@]} ]] && epatch "${PATCHES[@]}"
 	debug-print "$FUNCNAME: applying user patches"
 

@@ -1,6 +1,6 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1138 2014/02/06 17:07:56 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1139 2014/02/08 00:56:30 hd_brummy Exp $
 
   06 Feb 2014; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
   Disable more bogus dependency checks wrt bug #494680.
@@ -17,6 +17,9 @@
 
   02 Feb 2014; Julian Ospald <hasufell@gentoo.org> games.eclass:
   respect ECONF_SOURCE wrt #494210
+
+  02 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-plugin-2.eclass:
+  removed debuginfos depends on base.eclass removing, wrt bug #497056
 
   01 Feb 2014; Ryan Hill <dirtyepic@gentoo.org> flag-o-matic.eclass:
   Add -fdiagnostics* and ISA flags for 4.8 and 4.9.
