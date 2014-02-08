@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.152 2014/02/07 04:19:27 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.153 2014/02/08 20:37:32 mattm Exp $
+
+*zabbix-2.2.2_rc2-r1 (08 Feb 2014)
+*zabbix-2.0.11_rc1-r1 (08 Feb 2014)
+
+  08 Feb 2014; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.0.11_rc1-r1.ebuild,
+  +zabbix-2.2.2_rc2-r1.ebuild, -zabbix-2.0.11_rc1.ebuild,
+  -zabbix-2.2.2_rc2.ebuild:
+  Latest upstream bumps include fix for zabbix bug 7479, removing it from gentoo
+  manual patches.
 
 *zabbix-2.0.11_rc1 (07 Feb 2014)
 *zabbix-2.2.2_rc2 (07 Feb 2014)

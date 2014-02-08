@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.11_rc1.ebuild,v 1.1 2014/02/07 04:19:27 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.0.11_rc1-r1.ebuild,v 1.1 2014/02/08 20:37:32 mattm Exp $
 
 EAPI="5"
 
@@ -70,7 +70,6 @@ java_prepare() {
 
 src_prepare() {
 	epatch "${FILESDIR}/2.0/patches/zbx282.patch"
-	epatch "${FILESDIR}/2.0/patches/zbx7479.patch"
 	eautoreconf
 }
 

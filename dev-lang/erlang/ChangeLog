@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/erlang
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.246 2013/11/16 08:54:30 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.247 2014/02/08 20:53:24 djc Exp $
+
+*erlang-16.2-r1 (08 Feb 2014)
+
+  08 Feb 2014; Dirkjan Ochtman <djc@gentoo.org> +erlang-16.2-r1.ebuild:
+  Actually pull in 16B02 sources (bug 492552). Thanks to Luis Ressel
+  <aranea@aixah.de> for the patch to help MY_PV transformation.
 
   16 Nov 2013; Ryan Hill <dirtyepic@gentoo.org> erlang-15.2.3.1.ebuild,
   erlang-16.ebuild, erlang-16.1.ebuild, erlang-16.1-r1.ebuild,

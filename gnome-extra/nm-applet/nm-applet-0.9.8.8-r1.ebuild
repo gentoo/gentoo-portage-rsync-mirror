@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.8-r1.ebuild,v 1.1 2014/01/10 20:32:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.8.8-r1.ebuild,v 1.2 2014/02/08 20:49:51 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -30,7 +30,7 @@ RDEPEND="
 	>=net-misc/networkmanager-0.9.8[introspection?]
 	net-misc/mobile-broadband-provider-info
 
-	bluetooth? ( >=net-wireless/gnome-bluetooth-2.27.6 )
+	bluetooth? ( >=net-wireless/gnome-bluetooth-2.27.6:= )
 	gconf? (
 		>=gnome-base/gconf-2.20:2
 		gnome-base/libgnome-keyring )
