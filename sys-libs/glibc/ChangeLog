@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.980 2014/01/31 18:22:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.981 2014/02/08 14:59:42 vapier Exp $
+
+*glibc-2.19 (08 Feb 2014)
+
+  08 Feb 2014; Mike Frysinger <vapier@gentoo.org> +glibc-2.19.ebuild:
+  Version bump.
 
   31 Jan 2014; Mike Frysinger <vapier@gentoo.org> glibc-2.17.ebuild:
   Mark sh stable.
