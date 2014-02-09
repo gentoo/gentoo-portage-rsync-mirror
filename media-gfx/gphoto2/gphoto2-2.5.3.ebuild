@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.5.3.ebuild,v 1.1 2014/02/09 10:26:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.5.3.ebuild,v 1.2 2014/02/09 22:10:04 pacho Exp $
 
 EAPI="5"
 inherit autotools
@@ -19,7 +19,6 @@ IUSE="aalib exif ncurses nls readline"
 RDEPEND="
 	dev-libs/popt
 	>=media-libs/libgphoto2-2.5.2[exif?]
-	virtual/libusb:0
 	aalib? (
 		media-libs/aalib
 		virtual/jpeg:0 )

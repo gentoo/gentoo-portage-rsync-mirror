@@ -11,4 +11,4 @@ REQUIRED_USE=bindist? ( !faac !openssl ) rtmp? ( network ) amr? ( gpl ) aac? ( g
 SLOT=0/0.8
 SRC_URI=http://libav.org/releases/libav-0.8.9.tar.xz test? ( http://dev.gentoo.org/~lu_zero/libav/fate-0.8.2.tar.xz )
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=0aafb238d89eedb7be56b46aa794d166
+_md5_=4b0e2b274b26a30a880465741f8ae88e
