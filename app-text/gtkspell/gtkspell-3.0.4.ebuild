@@ -1,11 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.2.ebuild,v 1.1 2013/06/03 19:47:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.4.ebuild,v 1.1 2014/02/09 13:26:51 pacho Exp $
 
 EAPI="5"
-VALA_MIN_API_VERSION=0.18
+GCONF_DEBUG="no"
+VALA_MIN_API_VERSION="0.18"
 
-inherit autotools eutils vala
+inherit eutils gnome2 vala
 
 DESCRIPTION="Spell checking widget for GTK"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
@@ -19,6 +20,7 @@ IUSE="+introspection vala"
 
 RDEPEND="
 	>=app-text/enchant-1.1.6
+	app-text/iso-codes
 	dev-libs/glib:2
 	x11-libs/gtk+:3[introspection?]
 	>=x11-libs/pango-1.8.0[introspection?]
@@ -35,20 +37,12 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	use vala && vala_src_prepare
-
-	# https://sourceforge.net/p/gtkspell/bugs/17/
-	epatch "${FILESDIR}/${PN}-3.0.2-GTK_SPELL_CFLAGS.patch" #463674
-	eautoreconf
+	gnome2_src_prepare
 }
 
 src_configure() {
-	econf \
+	gnome2_src_configure \
 		--disable-static \
 		$(use_enable introspection) \
 		$(use_enable vala)
-}
-
-src_install() {
-	default
-	prune_libtool_files
 }

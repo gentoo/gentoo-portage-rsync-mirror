@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-3.42.ebuild,v 1.1 2013/06/03 20:00:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/iso-codes-3.51.ebuild,v 1.1 2014/02/09 13:29:44 pacho Exp $
 
 EAPI="5"
 inherit eutils

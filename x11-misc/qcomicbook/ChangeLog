@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qcomicbook
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.50 2013/03/02 23:51:19 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.51 2014/02/09 13:24:35 pinkbyte Exp $
+
+  09 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> qcomicbook-0.9.0.ebuild:
+  Stable on amd64 and x86, wrt bug #437170
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> qcomicbook-0.8.2.ebuild,
   qcomicbook-0.9.0.ebuild:
