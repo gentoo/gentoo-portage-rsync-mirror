@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.16.0.ebuild,v 1.2 2014/02/09 20:28:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.16.1.ebuild,v 1.1 2014/02/09 20:28:44 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
