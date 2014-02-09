@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.32 2014/02/01 05:02:28 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.33 2014/02/09 06:41:41 graaff Exp $
+
+*aruba-0.5.4 (09 Feb 2014)
+
+  09 Feb 2014; Hans de Graaff <graaff@gentoo.org> +aruba-0.5.4.ebuild:
+  Version bump.
 
   01 Feb 2014; Akinori Hattori <hattya@gentoo.org> aruba-0.5.3.ebuild:
   ia64 stable wrt bug #493780

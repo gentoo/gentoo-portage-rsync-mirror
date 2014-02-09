@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/pgmemcache
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmemcache/ChangeLog,v 1.4 2013/03/17 15:19:40 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgmemcache/ChangeLog,v 1.5 2014/02/09 06:40:59 prometheanfire Exp $
+
+*pgmemcache-2.1.1 (09 Feb 2014)
+
+  09 Feb 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +pgmemcache-2.1.1.ebuild:
+  fixing bug 429658 via adding 2.1.1
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
