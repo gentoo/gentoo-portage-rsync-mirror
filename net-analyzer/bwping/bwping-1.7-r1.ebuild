@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/bwping-1.7-r1.ebuild,v 1.1 2013/07/16 20:33:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/bwping-1.7-r1.ebuild,v 1.2 2014/02/09 19:51:17 nimiux Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~sparc ~x86 ~x86-fbsd"
 IUSE="ipv6"
 
 PATCHES=(
