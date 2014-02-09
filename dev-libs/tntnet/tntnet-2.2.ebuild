@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-2.2.ebuild,v 1.1 2013/06/28 19:42:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-2.2.ebuild,v 1.2 2014/02/09 01:33:28 hd_brummy Exp $
 
 EAPI="5"
 
@@ -26,7 +26,7 @@ RDEPEND="=dev-libs/cxxtools-2.2*
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
-	examples? ( app-arch/zip )"
+	app-arch/zip"
 
 src_prepare() {
 	# Both fixed in the next release
