@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.260 2014/01/27 13:37:36 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.261 2014/02/09 00:48:03 vapier Exp $
+
+*avahi-0.6.31-r4 (09 Feb 2014)
+
+  09 Feb 2014; Mike Frysinger <vapier@gentoo.org> +avahi-0.6.31-r4.ebuild,
+  +files/avahi-0.6.31-so_reuseport-may-not-exist-in-running-kernel.patch:
+  Add patch from Debian to fix running on older kernels w/newer kernel headers
+  #484212 by Fab.
 
   27 Jan 2014; Anthony G. Basile <blueness@gentoo.org> avahi-0.6.31-r3.ebuild:
   Use mono-env.eclass for USE=mono builds
