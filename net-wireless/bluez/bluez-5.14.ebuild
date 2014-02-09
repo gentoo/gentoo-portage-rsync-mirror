@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.12.ebuild,v 1.1 2013/12/23 23:05:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.14.ebuild,v 1.1 2014/02/09 09:10:28 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -14,7 +14,7 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.xz"
 LICENSE="GPL-2+ LGPL-2.1+"
 SLOT="0/3"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
-IUSE="cups debug obex readline selinux systemd test"
+IUSE="cups debug +obex readline selinux systemd test"
 REQUIRED_USE="test? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
@@ -52,6 +52,9 @@ src_prepare() {
 	# Use static group "plugdev" if there is no ConsoleKit (or systemd logind)
 	epatch "${FILESDIR}"/bluez-plugdev.patch
 
+	# Fedora patch for better compat with non-full systemd setups
+	epatch "${FILESDIR}"/0001-Allow-using-obexd-without-systemd-in-the-user-sessio.patch
+
 	if use cups; then
 		sed -i \
 			-e "s:cupsdir = \$(libdir)/cups:cupsdir = `cups-config --serverbin`:" \
@@ -64,9 +67,9 @@ src_configure() {
 	export ac_cv_header_readline_readline_h=$(usex readline)
 
 	# Missing flags: experimental (sap, nfc, ...)
-	# Keep this in ./configure --help order!
 	econf \
 		--localstatedir=/var \
+		--enable-experimental \
 		--enable-optimization \
 		$(use_enable debug) \
 		--enable-pie \
@@ -77,7 +80,7 @@ src_configure() {
 		--enable-monitor \
 		--enable-udev \
 		$(use_enable cups) \
-		--enable-obex \
+		$(use_enable obex) \
 		--enable-client \
 		$(use_enable systemd) \
 		$(systemd_with_unitdir) \
