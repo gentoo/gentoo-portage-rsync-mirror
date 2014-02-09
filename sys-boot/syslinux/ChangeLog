@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.107 2014/02/09 03:59:19 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.108 2014/02/09 18:04:43 zerochaos Exp $
+
+  09 Feb 2014; Rick Farina <zerochaos@gentoo.org>
+  +files/syslinux-6.02-add-fno-stack-protector.patch,
+  +files/syslinux-6.03_pre1-add-fno-stack-protector.patch, syslinux-6.02.ebuild,
+  syslinux-6.03_pre1.ebuild:
+  hardened fixes by Zorry from bug 495146 with trivial backport and extensive
+  testing done by myself
 
 *syslinux-6.02 (09 Feb 2014)
 

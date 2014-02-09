@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-6.03_pre1.ebuild,v 1.1 2013/12/11 13:17:57 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/syslinux-6.03_pre1.ebuild,v 1.2 2014/02/09 18:04:43 zerochaos Exp $
 
-EAPI=4
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -35,6 +35,7 @@ QA_PREBUILT="usr/share/${PN}/*.c32"
 # removed all the unpack/patching stuff since we aren't rebuilding the core stuff anymore
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-add-fno-stack-protector.patch
 	rm -f gethostip #bug 137081
 
 	# Don't prestrip or override user LDFLAGS, bug #305783
