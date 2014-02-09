@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.10-r1.ebuild,v 1.1 2014/02/09 20:24:51 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.10-r2.ebuild,v 1.1 2014/02/09 20:39:59 tgurr Exp $
 
 EAPI=5
 
@@ -75,7 +75,6 @@ src_prepare() {
 	rm -rf "${S}"/cups/libs
 	rm -rf "${S}"/expat
 	rm -rf "${S}"/freetype
-	rm -rf "${S}"/icclib
 	rm -rf "${S}"/jbig2dec
 	rm -rf "${S}"/jpeg{,xr}
 	rm -rf "${S}"/lcms{,2}
