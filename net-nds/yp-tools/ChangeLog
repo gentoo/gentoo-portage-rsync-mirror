@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/yp-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.50 2014/02/02 11:01:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.51 2014/02/09 17:30:30 nimiux Exp $
+
+  09 Feb 2014; Chema Alonso <nimiux@gentoo.org> yp-tools-2.12-r1.ebuild:
+  Stable for amd64 wrt bug #499312
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> yp-tools-2.12-r1.ebuild:
   Stable for ppc, wrt bug #499312
