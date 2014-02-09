@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/heimdall/heimdall-1.4.0.ebuild,v 1.2 2014/01/02 15:24:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/heimdall/heimdall-1.4.0.ebuild,v 1.4 2014/02/09 17:34:06 floppym Exp $
 
 EAPI=5
 
@@ -23,8 +23,7 @@ LICENSE="MIT"
 SLOT="0"
 IUSE="qt4"
 
-# Fails to build with dev-libs/libusb due to missing macros.
-RDEPEND="dev-libs/libusbx:1=
+RDEPEND="|| ( >=dev-libs/libusb-1.0.18:1= dev-libs/libusbx:1= )
 	qt4? ( dev-qt/qtcore:4= dev-qt/qtgui:4= )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

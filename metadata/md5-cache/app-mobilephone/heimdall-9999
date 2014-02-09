@@ -1,11 +1,11 @@
 DEFINED_PHASES=compile configure install prepare unpack
-DEPEND=dev-libs/libusbx:1= qt4? ( dev-qt/qtcore:4= dev-qt/qtgui:4= ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig dev-vcs/git
+DEPEND=|| ( >=dev-libs/libusb-1.0.18:1= dev-libs/libusbx:1= ) qt4? ( dev-qt/qtcore:4= dev-qt/qtgui:4= ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool virtual/pkgconfig dev-vcs/git
 DESCRIPTION=Tool suite used to flash firmware onto Samsung Galaxy S devices
 EAPI=5
 HOMEPAGE=http://www.glassechidna.com.au/products/heimdall/
 IUSE=qt4
 LICENSE=MIT
-RDEPEND=dev-libs/libusbx:1= qt4? ( dev-qt/qtcore:4= dev-qt/qtgui:4= )
+RDEPEND=|| ( >=dev-libs/libusb-1.0.18:1= dev-libs/libusbx:1= ) qt4? ( dev-qt/qtcore:4= dev-qt/qtgui:4= )
 SLOT=0
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	git-2	2027b81a576527fa16bece425941e094	git-r3	f089608c770d9ad72a2c92b547d2b20d	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
-_md5_=b18f0ae32b00c19b1df3b7a0fe2e42fb
+_md5_=67c8acbd9a8328674dd8f207acebd62d

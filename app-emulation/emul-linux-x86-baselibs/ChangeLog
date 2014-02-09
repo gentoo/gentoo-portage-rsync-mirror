@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.180 2014/02/08 04:44:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.181 2014/02/09 17:47:41 floppym Exp $
+
+*emul-linux-x86-baselibs-20131008-r15 (09 Feb 2014)
+
+  09 Feb 2014; Mike Gilbert <floppym@gentoo.org>
+  +emul-linux-x86-baselibs-20131008-r15.ebuild,
+  +files/remove-native-20131008-r15:
+  Revbump for dev-db/sqlite multilib conversion.
 
   08 Feb 2014; Mike Gilbert <floppym@gentoo.org>
   emul-linux-x86-baselibs-20131008-r14.ebuild:
