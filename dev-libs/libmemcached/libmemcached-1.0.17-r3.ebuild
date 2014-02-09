@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-1.0.17-r3.ebuild,v 1.1 2014/02/09 05:18:43 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcached/libmemcached-1.0.17-r3.ebuild,v 1.2 2014/02/09 06:05:43 prometheanfire Exp $
 
 EAPI=5
 
-inherit eutils multilib
+inherit autotools eutils multilib
 RESTRICT="test" # https://bugs.gentoo.org/show_bug.cgi?id=498250 https://bugs.launchpad.net/gentoo/+bug/1278023
 
 DESCRIPTION="a C client library to the memcached server"
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.0.17-gcc4_8.patch"
+	eautoreconf
 }
 
 src_configure() {
@@ -33,6 +34,7 @@ src_configure() {
 		$(use_enable debug debug) \
 		$(use_enable debug assert) \
 		$(use_enable hsieh hsieh_hash) \
+		--libdir=/usr/$(get_libdir) \
 		${myconf}
 }
 
