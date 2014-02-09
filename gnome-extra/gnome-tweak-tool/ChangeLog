@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-tweak-tool
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/ChangeLog,v 1.27 2013/12/24 17:00:45 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-tweak-tool/ChangeLog,v 1.28 2014/02/09 09:53:49 pacho Exp $
+
+  09 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-tweak-tool-3.10.1.ebuild:
+  Needs newer pygobject, bug #497162 by vax456
 
 *gnome-tweak-tool-3.10.1 (24 Dec 2013)
 

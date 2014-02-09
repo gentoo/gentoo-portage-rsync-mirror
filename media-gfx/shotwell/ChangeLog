@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/shotwell
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.65 2013/12/08 20:01:41 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.66 2014/02/09 09:58:33 pacho Exp $
+
+  09 Feb 2014; Pacho Ramos <pacho@gentoo.org> shotwell-0.15.1.ebuild:
+  amd64 stable, bug #500720
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> shotwell-0.14.1.ebuild:
   x86 stable, bug #478252

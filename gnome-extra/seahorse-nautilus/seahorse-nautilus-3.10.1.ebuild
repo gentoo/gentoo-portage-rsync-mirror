@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/seahorse-nautilus/seahorse-nautilus-3.10.1.ebuild,v 1.1 2013/12/24 17:13:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/seahorse-nautilus/seahorse-nautilus-3.10.1.ebuild,v 1.2 2014/02/09 09:35:53 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --disable-debug disables all assertions
@@ -9,7 +9,7 @@ GNOME2_LA_PUNT="yes"
 inherit gnome2
 
 DESCRIPTION="Nautilus extension for encrypting and decrypting files with GnuPG"
-HOMEPAGE="http://www.gnome.org/projects/seahorse/"
+HOMEPAGE="https://wiki.gnome.org/action/show/Apps/Seahorse"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,10 +28,12 @@ COMMON_DEPEND="
 	>=x11-libs/libnotify-0.3:=
 	|| (
 		=app-crypt/gnupg-1.4*
-		=app-crypt/gnupg-2.0* )"
+		=app-crypt/gnupg-2.0* )
+"
 # seahorse-nautilus was formerly part of seahorse-plugins
 RDEPEND="${COMMON_DEPEND}
-	!app-crypt/seahorse-plugins[nautilus]"
+	!app-crypt/seahorse-plugins[nautilus]
+"
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.35
 	virtual/pkgconfig
@@ -41,6 +43,10 @@ src_prepare() {
 	# Do not let configure mangle CFLAGS
 	sed -e '/^[ \t]*CFLAGS="$CFLAGS \(-g\|-O0\)/d' -i configure.ac configure ||
 		die "sed failed"
+
+	# Fix icon location, upstream bug #719763
+	sed -i 's/pixmaps\/seahorse-plugins\/48x48/pixmaps\/cryptui\/48x48/' \
+		tool/seahorse-notification.c || die
 
 	gnome2_src_prepare
 }
