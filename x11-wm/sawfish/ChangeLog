@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/sawfish
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.127 2013/12/08 19:56:44 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.128 2014/02/09 10:41:37 pacho Exp $
+
+  09 Feb 2014; Pacho Ramos <pacho@gentoo.org> -files/libtool.patch,
+  -files/sawfish-1.3.3-cflags.patch, -files/sawfish-1.3.3-parallel-make.patch,
+  -files/sawfish-1.3.5.2-pangoxft.patch, -files/sawfish-1.6.2-xinerama.patch,
+  -files/sawfish-1.6.3-prompt.patch, -sawfish-1.8.2.ebuild,
+  -sawfish-1.9.0.ebuild, metadata.xml:
+  Move to maintainer-needed, drop old
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> sawfish-1.9.1-r1.ebuild:
   x86 stable, bug #478252
