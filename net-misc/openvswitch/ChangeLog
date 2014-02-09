@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openvswitch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.20 2013/12/14 13:06:53 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvswitch/ChangeLog,v 1.21 2014/02/09 08:56:18 prometheanfire Exp $
+
+*openvswitch-2.0.0-r2 (09 Feb 2014)
+
+  09 Feb 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/atomic-test.patch, +files/configure.patch,
+  +files/kernel-3.11-support.patch, +files/kernel-3.12-support.patch,
+  +files/xcp-interface-reconfigure.patch, +openvswitch-2.0.0-r2.ebuild:
+  fixing bugs 494152 498728 499500
 
 *openvswitch-2.0.0-r1 (14 Dec 2013)
 
