@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnucash
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.270 2013/12/08 17:45:42 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.271 2014/02/09 11:18:40 pacho Exp $
+
+*gnucash-2.6.1 (09 Feb 2014)
+
+  09 Feb 2014; Pacho Ramos <pacho@gentoo.org> +gnucash-2.6.1.ebuild,
+  -gnucash-2.4.12.ebuild:
+  Version bump, prevent linking against installed libs (#371264), drop old.
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gnucash-2.4.13.ebuild:
   x86 stable, bug #478252

@@ -1,9 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.7.13.ebuild,v 1.1 2013/06/18 17:48:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/link-grammar-4.8.6.ebuild,v 1.1 2014/02/09 11:28:16 pacho Exp $
 
 EAPI=5
-inherit java-pkg-opt-2 eutils
+GCONF_DEBUG="no"
+
+inherit gnome2 java-pkg-opt-2 eutils
 
 DESCRIPTION="A Syntactic English parser"
 HOMEPAGE="http://www.abisource.com/projects/link-grammar/ http://www.link.cs.cmu.edu/link/"
@@ -16,7 +18,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # Set the same default as used in app-text/enchant
 IUSE="aspell +hunspell java static-libs threads"
 
-DEPEND="aspell? ( app-text/aspell )
+DEPEND="
+	aspell? ( app-text/aspell )
 	hunspell? ( app-text/hunspell )
 	java? ( >=virtual/jdk-1.5
 		dev-java/ant-core )
@@ -36,7 +39,7 @@ src_configure() {
 	local myconf
 
 	use hunspell && myconf="${myconf} --with-hunspell-dictdir=/usr/share/myspell"
-	econf \
+	gnome2_src_configure \
 		--enable-shared \
 		$(use_enable aspell) \
 		$(use_enable hunspell) \
@@ -44,9 +47,4 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable threads pthreads) \
 		${myconf}
-}
-
-src_install() {
-	default
-	prune_libtool_files
 }

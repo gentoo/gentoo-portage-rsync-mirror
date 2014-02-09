@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/gnucash-docs-2.4.1.ebuild,v 1.9 2012/05/21 07:14:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gnucash-docs/gnucash-docs-2.6.1.ebuild,v 1.1 2014/02/09 11:20:22 pacho Exp $
 
-EAPI=4
+EAPI=5
 GCONF_DEBUG=no
 
 inherit gnome2
@@ -13,8 +13,7 @@ SRC_URI="mirror://sourceforge/gnucash/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 FDL-1.1"
-KEYWORDS="amd64 ppc ~ppc64 x86"
-
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="!<=app-office/gnucash-2.2.1"
@@ -24,11 +23,11 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	app-text/docbook-xsl-stylesheets
 	app-text/docbook-xml-dtd:4.1.2
-	app-text/rarian"
+	app-text/rarian
+"
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-
 	has_version dev-java/fop || elog "You need dev-java/fop to generate pdf files."
 	has_version gnome-extra/yelp || elog "You need gnome-extra/yelp to view the docs."
 }
