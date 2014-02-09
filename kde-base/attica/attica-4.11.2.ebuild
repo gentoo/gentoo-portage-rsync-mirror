@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/attica-4.11.2.ebuild,v 1.6 2014/01/20 10:25:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/attica-4.11.2.ebuild,v 1.7 2014/02/09 19:01:18 kensington Exp $
 
 EAPI=5
 
@@ -12,6 +12,6 @@ KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="
-	>=dev-libs/libattica-0.1.4[qt4]
+	>=dev-libs/libattica-0.1.4
 "
 RDEPEND="${DEPEND}"

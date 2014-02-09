@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.144 2014/01/19 10:17:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.145 2014/02/09 18:55:59 teiresias Exp $
+
+*brltty-5.0 (09 Feb 2014)
+
+  09 Feb 2014; Christopher Brannon <teiresias@gentoo.org> +brltty-5.0.ebuild,
+  +files/brltty-5.0-fix-ldflags.patch, +files/brltty-5.0-respect-AR.patch,
+  +files/brltty-5.0-udev.patch:
+  New upstream version.
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> brltty-4.5-r3.ebuild:
   Stable for ppc64, wrt bug #495312
