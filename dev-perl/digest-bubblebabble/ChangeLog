@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/digest-bubblebabble
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.24 2013/09/14 14:55:54 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-bubblebabble/ChangeLog,v 1.25 2014/02/09 08:31:08 zlogene Exp $
+
+  09 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -digest-bubblebabble-0.20.0.ebuild, digest-bubblebabble-0.20.0-r1.ebuild:
+  alpha/amd64/hppa/ia64/ppc64/sparc/x86 stable wrt bug #495536; Drop old.
 
 *digest-bubblebabble-0.20.0-r1 (14 Sep 2013)
 

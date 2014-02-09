@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2.26:2 >=x11-libs/gdk-pixbuf-2.12.0:2 >=x11-libs/gtk+-3.3.18:3 virtual/udev[gudev] >=dev-libs/dbus-glib-0.60 >=dev-libs/gobject-introspection-0.9.3 >=media-libs/libgphoto2-2.4.11 >=media-libs/lcms-1.18:0 >=dev-libs/libpeas-0.5.5[gtk] >=media-libs/gexiv2-0.2.2 >=x11-libs/libXext-1.3.0
 SLOT=0
 SRC_URI=http://entangle-photo.org/download/sources/entangle-0.4.0.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=b38892a09c32e329e6028ecfcf22fdda

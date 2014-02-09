@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.33 2013/09/15 19:29:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.34 2014/02/09 08:30:23 pacho Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -502,7 +502,7 @@ gnome2_disable_deprecation_warning() {
 
 		LC_ALL=C sed -r -i \
 			-e 's:-D[A-Z_]+_DISABLE_DEPRECATED:$(NULL):g' \
-			-e 's:-DGSEAL_ENABLE:$(NULL):g' \
+			-e 's:-DGSEAL_ENABLE+[A-Z_]:$(NULL):g' \
 			-i "${makefile}"
 
 		if [[ $? -ne 0 ]]; then

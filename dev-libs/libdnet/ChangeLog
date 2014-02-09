@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdnet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.76 2013/11/08 15:11:49 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.77 2014/02/09 08:22:34 kumba Exp $
+
+  09 Feb 2014; Joshua Kinard <kumba@gentoo.org> libdnet-1.12.ebuild:
+  Added ~mips.
 
   08 Nov 2013; Jeroen Roovers <jer@gentoo.org> libdnet-1.12.ebuild:
   Add even more stuff to fix bug #490330 by Maxim Kammerer.

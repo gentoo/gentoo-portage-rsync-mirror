@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.259 2014/02/06 06:05:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.262 2014/02/09 08:26:59 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> tiff-4.0.3-r6.ebuild:
+  Stable for sparc, wrt bug #486590
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> tiff-4.0.3-r6.ebuild:
+  Stable for ppc64, wrt bug #486590
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> tiff-4.0.3-r6.ebuild:
+  Stable for ppc, wrt bug #486590
 
   06 Feb 2014; Agostino Sarubbo <ago@gentoo.org> tiff-3.9.7-r1.ebuild,
   tiff-4.0.3-r6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1139 2014/02/08 00:56:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1140 2014/02/09 08:30:23 pacho Exp $
+
+  09 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome2-utils.eclass:
+  Drop also values of DGSEAL_ENABLE (#500730)
 
   06 Feb 2014; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
   Disable more bogus dependency checks wrt bug #494680.

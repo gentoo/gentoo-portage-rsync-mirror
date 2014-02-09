@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/gdl-3.6:3 >=dev-libs/glib-2.28.5 >=dev-libs/libxml2-2.7.7 >=d
 REQUIRED_USE=cdr? ( gstreamer )
 SLOT=0
 SRC_URI=mirror://sourceforge/gtkpod/gtkpod-2.1.4~8f833a3.tar.gz http://dev.gentoo.org/~ssuominen/gst-element-check-0.10.m4.xz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	b66c7c3889d2dd0913e9f3d2ac1c0859	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=dd07f29a0b0297294d70babd26322043

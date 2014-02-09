@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/libyaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.40 2014/02/09 06:57:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libyaml/ChangeLog,v 1.43 2014/02/09 08:26:55 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> libyaml-0.1.5.ebuild:
+  Stable for sparc, wrt bug #499920
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> libyaml-0.1.5.ebuild:
+  Stable for ppc64, wrt bug #499920
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> libyaml-0.1.5.ebuild:
+  Stable for ppc, wrt bug #499920
 
   09 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> libyaml-0.1.5.ebuild:
   x86 stable wrt security bug #499920
