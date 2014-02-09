@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.271 2014/02/09 11:18:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.273 2014/02/09 12:57:05 pacho Exp $
+
+  09 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.1.ebuild:
+  Revert unexpected stabilization
+
+  09 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.1.ebuild:
+  Reorder configure options
 
 *gnucash-2.6.1 (09 Feb 2014)
 

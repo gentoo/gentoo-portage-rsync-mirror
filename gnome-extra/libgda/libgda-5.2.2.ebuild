@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.1.1-r1.ebuild,v 1.2 2013/06/30 15:24:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-5.2.2.ebuild,v 1.1 2014/02/09 13:00:05 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="yes"
 PYTHON_COMPAT=( python{2_6,2_7} )
-#VALA_MIN_API_VERSION="0.16"
-#VALA_MAX_API_VERSION="0.16" # configure explicitly checks for 0.16
+#VALA_MIN_API_VERSION="0.18"
+#VALA_MAX_API_VERSION="0.18" # configure explicitly checks for 0.18
 #VALA_USE_DEPEND="vapigen"
 
 inherit autotools db-use eutils flag-o-matic gnome2 java-pkg-opt-2 python-single-r1 # vala
@@ -16,14 +16,16 @@ DESCRIPTION="GNOME database access library"
 HOMEPAGE="http://www.gnome-db.org/"
 LICENSE="GPL-2+ LGPL-2+"
 
-IUSE="berkdb bindist canvas firebird gnome-keyring gtk graphviz http +introspection json ldap mdb mysql oci8 postgres reports sourceview ssl" # vala
+IUSE="berkdb bindist canvas firebird gtk graphviz http +introspection json ldap libsecret mdb mysql oci8 postgres reports sourceview ssl" # vala
 REQUIRED_USE="
 	reports? ( ${PYTHON_REQUIRED_USE} )
 	canvas? ( gtk )
 	firebird? ( !bindist )
 	graphviz? ( gtk )
-	sourceview? ( gtk )"
+	sourceview? ( gtk )
+"
 # firebird license is not GPL compatible
+
 SLOT="5/4" # subslot = libgda-5.0 soname version
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
@@ -42,11 +44,11 @@ RDEPEND="
 		sourceview? ( x11-libs/gtksourceview:3.0 )
 		graphviz? ( media-gfx/graphviz )
 	)
-	gnome-keyring? ( app-crypt/libsecret )
 	http? ( >=net-libs/libsoup-2.24:2.4 )
 	introspection? ( >=dev-libs/gobject-introspection-1.30 )
 	json?     ( dev-libs/json-glib )
 	ldap?     ( net-nds/openldap:= )
+	libsecret? ( app-crypt/libsecret )
 	mdb?      ( >app-office/mdbtools-0.5:= )
 	mysql?    ( virtual/mysql:= )
 	postgres? ( dev-db/postgresql-base:= )
@@ -57,6 +59,7 @@ RDEPEND="
 	ssl?      ( dev-libs/openssl:= )
 	>=dev-db/sqlite-3.6.22:3=
 "
+#	vala? ( dev-libs/libgee:0.8 )
 DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.9
 	dev-util/gtk-doc-am
@@ -74,32 +77,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	G2CONF="${G2CONF}
-		--disable-scrollkeeper
-		--disable-static
-		--enable-system-sqlite
-		$(use_with berkdb bdb /usr)
-		$(use_with canvas goocanvas)
-		$(use_with firebird firebird /usr)
-		$(use_with gnome-keyring)
-		$(use_with graphviz)
-		$(use_with gtk ui)
-		$(use_with http libsoup)
-		$(use_enable introspection)
-		$(use_with java java $JAVA_HOME)
-		$(use_enable json)
-		$(use_with ldap)
-		$(use_with mdb mdb /usr)
-		$(use_with mysql mysql /usr)
-		$(use_with postgres postgres /usr)
-		$(use_enable ssl crypto)
-		$(use_with sourceview gtksourceview)
-		--disable-default-binary
-		--disable-vala"
-	# vala bindings fail to build
-
 	use berkdb && append-cppflags "-I$(db_includedir)"
-	use oci8 || G2CONF="${G2CONF} --without-oracle"
 
 	use reports ||
 		sed -e '/SUBDIRS =/ s/trml2html//' \
@@ -107,7 +85,6 @@ src_prepare() {
 			-i libgda-report/RML/Makefile.{am,in} || die
 
 	# Prevent file collisions with libgda:4
-	epatch "${FILESDIR}/${PN}-4.99.1-gda-browser-help-collision.patch"
 	epatch "${FILESDIR}/${PN}-4.99.1-gda-browser-doc-collision.patch"
 	epatch "${FILESDIR}/${PN}-4.99.1-control-center-icon-collision.patch"
 	# Move files with mv (since epatch can't handle rename diffs) and
@@ -130,6 +107,38 @@ src_prepare() {
 	gnome2_src_prepare
 	java-pkg-opt-2_src_prepare
 	# use vala && vala_src_prepare
+}
+
+src_configure() {
+	gnome2_src_configure \
+		--with-help \
+		--disable-static \
+		--enable-system-sqlite \
+		$(use_with berkdb bdb /usr) \
+		$(use_with canvas goocanvas) \
+		$(use_with firebird firebird /usr) \
+		$(use_with graphviz) \
+		$(use_with gtk ui) \
+		$(use_with http libsoup) \
+		$(use_enable introspection) \
+		"$(use_with java java $JAVA_HOME)" \
+		$(use_enable json) \
+		$(use_with ldap) \
+		$(use_with libsecret) \
+		$(use_with mdb mdb /usr) \
+		$(use_with mysql mysql /usr) \
+		$(use_with oci8 oracle) \
+		$(use_with postgres postgres /usr) \
+		$(use_enable ssl crypto) \
+		$(use_with sourceview gtksourceview) \
+		--disable-default-binary \
+		--disable-vala
+	# vala bindings fail to build
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+	java-pkg-opt-2_pkg_preinst
 }
 
 src_install() {
