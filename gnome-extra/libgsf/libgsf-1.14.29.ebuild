@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.27.ebuild,v 1.1 2013/06/25 17:29:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/libgsf-1.14.29.ebuild,v 1.1 2014/02/09 12:20:15 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 inherit gnome2
 
 DESCRIPTION="The GNOME Structured File Library"
-HOMEPAGE="http://projects.gnome.org/libgsf/"
+HOMEPAGE="https://developer.gnome.org/gsf/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0/114" # libgsf-1.so version

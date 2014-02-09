@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.7 2013/12/19 21:10:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-3.0.0-r1.ebuild,v 1.8 2014/02/09 12:15:00 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -22,7 +22,6 @@ REQUIRED_USE="!plugins? ( !collab !grammar !latex !math !ots !readline !thesauru
 
 RDEPEND="
 	>=app-text/wv-1.2
-	>=dev-libs/boost-1.40.0
 	>=dev-libs/fribidi-0.10.4
 	>=dev-libs/glib-2.16:2
 	>=dev-libs/libgcrypt-1.4.5
@@ -62,6 +61,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-lang/perl
+	>=dev-libs/boost-1.40.0
 	virtual/pkgconfig
 	collab? ( dev-cpp/asio )
 "
@@ -76,6 +76,9 @@ src_prepare() {
 
 	# http://bugzilla.abisource.com/show_bug.cgi?id=13564
 	epatch "${FILESDIR}/${PN}-3.0.0-fix-crash.patch"
+
+	# http://bugzilla.abisource.com/show_bug.cgi?id=13589
+	epatch "${FILESDIR}/${PN}-3.0.0-libgcrypt_1_6_0-1.patch"
 
 	gnome2_src_prepare
 }

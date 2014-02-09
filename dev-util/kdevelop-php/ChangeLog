@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop-php
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.46 2014/01/26 11:38:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php/ChangeLog,v 1.47 2014/02/09 12:09:05 johu Exp $
+
+  09 Feb 2014; Johannes Huber <johu@gentoo.org> -kdevelop-php-1.5.1.ebuild:
+  Remove old.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> kdevelop-php-1.5.2.ebuild:
   Stable for x86, wrt bug #494008
