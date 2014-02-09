@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.191 2014/02/06 23:20:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.192 2014/02/09 10:05:27 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> step-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *step-4.12.2 (06 Feb 2014)
 

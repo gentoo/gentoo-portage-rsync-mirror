@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.182 2014/02/06 23:20:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.183 2014/02/09 10:05:28 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> kwrited-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *kwrited-4.11.6 (06 Feb 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/kolourpaint-4.11.5.ebuild,v 1.2 2014/01/20 08:00:49 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/kolourpaint-4.11.5.ebuild,v 1.3 2014/02/09 10:05:18 ago Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit kde4-base
 
 DESCRIPTION="Paint Program for KDE"
 HOMEPAGE="http://www.kde.org/applications/graphics/kolourpaint/"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD LGPL-2"
 IUSE="debug"
 

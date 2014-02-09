@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-wallpapers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.285 2014/02/06 23:20:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-wallpapers/ChangeLog,v 1.286 2014/02/09 10:05:13 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org>
+  kdeartwork-wallpapers-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *kdeartwork-wallpapers-4.12.2 (06 Feb 2014)
 

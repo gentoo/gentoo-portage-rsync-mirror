@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.291 2014/02/06 23:20:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.292 2014/02/09 10:04:50 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> kreversi-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *kreversi-4.12.2 (06 Feb 2014)
 

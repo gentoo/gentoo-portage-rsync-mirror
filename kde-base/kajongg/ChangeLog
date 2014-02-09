@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.135 2014/02/06 23:20:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.136 2014/02/09 10:04:40 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> kajongg-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *kajongg-4.12.2 (06 Feb 2014)
 

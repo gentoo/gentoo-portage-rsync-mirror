@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/klinkstatus-4.11.5.ebuild,v 1.2 2014/01/20 08:00:28 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klinkstatus/klinkstatus-4.11.5.ebuild,v 1.3 2014/02/09 10:04:59 ago Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 
 DESCRIPTION="KDE web development - link validity checker"
 HOMEPAGE="http://www.kde.org/applications/development/klinkstatus/"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug tidy"
 
 DEPEND="

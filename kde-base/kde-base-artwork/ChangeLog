@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-base-artwork
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-base-artwork/ChangeLog,v 1.67 2014/02/08 14:00:31 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-base-artwork/ChangeLog,v 1.68 2014/02/09 10:04:31 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> kde-base-artwork-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *kde-base-artwork-4.12.2 (08 Feb 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.284 2014/02/06 23:20:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.285 2014/02/09 10:05:12 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> ktux-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *ktux-4.12.2 (06 Feb 2014)
 

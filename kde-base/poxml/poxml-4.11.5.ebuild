@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/poxml-4.11.5.ebuild,v 1.2 2014/01/20 08:00:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/poxml/poxml-4.11.5.ebuild,v 1.3 2014/02/09 10:04:30 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ JAVA_PKG_OPT_USE=extras
 inherit java-pkg-opt-2 java-ant-2 kde4-base
 
 DESCRIPTION="KDE utility to translate DocBook XML files using gettext po files"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug extras"
 
 DEPEND="

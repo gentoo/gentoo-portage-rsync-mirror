@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdnssd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.300 2014/02/06 23:20:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdnssd/ChangeLog,v 1.301 2014/02/09 10:05:29 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> kdnssd-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *kdnssd-4.12.2 (06 Feb 2014)
 

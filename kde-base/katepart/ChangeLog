@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katepart
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.116 2014/02/06 23:20:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.117 2014/02/09 10:04:36 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> katepart-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *katepart-4.12.2 (06 Feb 2014)
 

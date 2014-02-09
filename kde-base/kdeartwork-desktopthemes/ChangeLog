@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-desktopthemes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-desktopthemes/ChangeLog,v 1.180 2014/02/06 23:20:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-desktopthemes/ChangeLog,v 1.181 2014/02/09 10:05:28 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org>
+  kdeartwork-desktopthemes-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *kdeartwork-desktopthemes-4.12.2 (06 Feb 2014)
 

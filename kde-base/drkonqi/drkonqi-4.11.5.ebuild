@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/drkonqi-4.11.5.ebuild,v 1.2 2014/01/20 08:00:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/drkonqi/drkonqi-4.11.5.ebuild,v 1.3 2014/02/09 10:04:55 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ KMNAME="kde-runtime"
 inherit kde4-meta
 
 DESCRIPTION="KDE crash handler, gives the user feedback if a program crashed"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="

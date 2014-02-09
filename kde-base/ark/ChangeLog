@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.310 2014/02/06 23:20:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.311 2014/02/09 10:05:04 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> ark-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *ark-4.12.2 (06 Feb 2014)
 

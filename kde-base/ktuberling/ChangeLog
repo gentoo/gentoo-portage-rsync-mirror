@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.286 2014/02/06 23:20:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.287 2014/02/09 10:05:17 ago Exp $
+
+  09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> ktuberling-4.11.5.ebuild:
+  Stable for amd64, wrt bug #493782
 
 *ktuberling-4.12.2 (06 Feb 2014)
 
