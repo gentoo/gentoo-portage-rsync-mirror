@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.22 2014/01/20 10:37:11 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.23 2014/02/09 19:07:08 kensington Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ DEPEND="
 	x11-libs/libX11
 	jabber? ( >=net-libs/jreen-1.1.1 )
 	!qt5? (
-		>=dev-libs/libattica-0.4.0[qt4]
+		>=dev-libs/libattica-0.4.0
 		dev-qt/designer:4
 		dev-qt/qtcore:4
 		dev-qt/qtdbus:4

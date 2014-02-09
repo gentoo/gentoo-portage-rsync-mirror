@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-1.4.ebuild,v 1.4 2014/01/20 10:38:18 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-1.4.ebuild,v 1.5 2014/02/09 19:09:27 kensington Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ SLOT="4"
 IUSE="ayatana debug"
 
 RDEPEND="
-	dev-libs/libattica[qt4]
+	dev-libs/libattica
 	dev-libs/qjson
 	>=dev-libs/qoauth-1.0.1
 	ayatana? ( dev-libs/libindicate-qt )

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tomahawk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.35 2014/01/20 10:37:11 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.36 2014/02/09 19:07:08 kensington Exp $
+
+  09 Feb 2014; Michael Palimaka <kensington@gentoo.org> tomahawk-0.6.1.ebuild,
+  tomahawk-0.7.0.ebuild, tomahawk-9999.ebuild:
+  dev-libs/libattica[qt4] is going away.
 
   20 Jan 2014; Michael Palimaka <kensington@gentoo.org> tomahawk-0.6.1.ebuild,
   tomahawk-0.7.0.ebuild, tomahawk-9999.ebuild:
