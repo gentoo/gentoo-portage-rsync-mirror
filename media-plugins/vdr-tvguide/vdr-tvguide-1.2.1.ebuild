@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvguide/vdr-tvguide-1.2.0.ebuild,v 1.1 2014/02/01 19:39:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvguide/vdr-tvguide-1.2.1.ebuild,v 1.1 2014/02/09 21:47:33 idl0r Exp $
 
 EAPI=5
 
 MY_P="${P/vdr-}"
 
-VERSION="1624"
+VERSION="1627"
 
 inherit vdr-plugin-2
 
