@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git-annex
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.19 2013/12/12 02:26:47 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/ChangeLog,v 1.20 2014/02/10 09:01:13 qnikst Exp $
+
+  10 Feb 2014; Alexander Vershilov <qnikst@gentoo.org>
+  git-annex-5.20131130.ebuild:
+  add missing aeson dependency due to #495162
 
   12 Dec 2013; Mark Wright <gienah@gentoo.org> git-annex-5.20131130.ebuild:
   git-annex-5.20131130 ikiwiki dep conditional on doc use flag. install-mans

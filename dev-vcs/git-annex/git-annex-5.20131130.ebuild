@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20131130.ebuild,v 1.2 2013/12/12 02:26:47 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-annex/git-annex-5.20131130.ebuild,v 1.3 2014/02/10 09:01:13 qnikst Exp $
 
 EAPI=5
 
@@ -50,6 +50,7 @@ DEPEND="${RDEPEND}
 	dev-haskell/uuid
 	>=dev-lang/ghc-7.4.1
 	android? ( dev-haskell/data-endian )
+	quvi? ( dev-haskell/aeson )
 	assistant? ( >=dev-haskell/stm-2.3
 			inotify? ( dev-haskell/hinotify ) )
 	cryptohash? ( >=dev-haskell/cryptohash-0.10.0 )
@@ -67,6 +68,7 @@ DEPEND="${RDEPEND}
 			>=dev-haskell/tasty-hunit-0.4.1
 			>=dev-haskell/tasty-quickcheck-0.3.1 )
 	webapp? ( dev-haskell/blaze-builder
+		    dev-haskell/aeson
 			dev-haskell/case-insensitive
 			dev-haskell/clientsession
 			dev-haskell/crypto-api
