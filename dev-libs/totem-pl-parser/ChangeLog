@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/totem-pl-parser
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.139 2013/12/26 23:12:14 eva Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.140 2014/02/10 18:56:06 pacho Exp $
+
+  10 Feb 2014; Pacho Ramos <pacho@gentoo.org> totem-pl-parser-3.10.0.ebuild,
+  totem-pl-parser-3.4.5.ebuild:
+  Prevent people from using incompatible quvi (#500586), rekeyword after masking
+  the flag causing the keyword lose
 
   26 Dec 2013; Gilles Dartiguelongue <eva@gentoo.org>
   totem-pl-parser-3.10.0.ebuild:

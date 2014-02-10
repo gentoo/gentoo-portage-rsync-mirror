@@ -1,6 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.189 2014/02/05 02:56:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.190 2014/02/10 18:56:26 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (10 Feb 2014)
+# Missing keywords, bug #495254
+dev-libs/totem-pl-parser quvi
 
 # Chí-Thanh Christopher Nguyễn (04 Feb 2014)
 # depends on opencl enabled mesa

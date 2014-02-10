@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.5.ebuild,v 1.4 2013/12/08 18:07:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-3.4.5.ebuild,v 1.5 2014/02/10 18:56:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ RDEPEND="
 	archive? ( >=app-arch/libarchive-2.8.4 )
 	crypt? ( dev-libs/libgcrypt )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
-	quvi? ( >=media-libs/libquvi-0.2.15 )
+	quvi? ( >=media-libs/libquvi-0.2.15 <media-libs/libquvi-0.9 )
 "
 DEPEND="${RDEPEND}
 	!<media-video/totem-2.21
