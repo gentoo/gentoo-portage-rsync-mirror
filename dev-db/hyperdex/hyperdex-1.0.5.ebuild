@@ -1,10 +1,7 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.0.5.ebuild,v 1.1 2014/02/10 05:53:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hyperdex/hyperdex-1.0.5.ebuild,v 1.2 2014/02/10 06:52:47 patrick Exp $
 EAPI=5
-
-# compile failure in tests, waiting for patch from upstream
-RESTRICT="test"
 
 PYTHON_DEPEND="2:2.6"
 inherit eutils python
