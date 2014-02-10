@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/term-ansicolor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.39 2014/01/09 12:36:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.40 2014/02/10 07:06:06 graaff Exp $
+
+*term-ansicolor-1.3.0 (10 Feb 2014)
+
+  10 Feb 2014; Hans de Graaff <graaff@gentoo.org> +term-ansicolor-1.3.0.ebuild:
+  Version bump.
 
   09 Jan 2014; Hans de Graaff <graaff@gentoo.org>
   term-ansicolor-1.2.2-r1.ebuild:
