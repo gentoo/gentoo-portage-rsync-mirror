@@ -1,11 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc2.ebuild,v 1.1 2014/02/08 06:50:48 ssuominen Exp $
-
-# See .spec in http://pkgs.fedoraproject.org/gitweb/?p=xdg-utils.git;a=summary
-# The source tree MUST be cleaned before rolling a snapshot tarball:
-# make scripts-clean -C scripts
-# make man scripts -C scripts
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/xdg-utils-1.1.0_rc2.ebuild,v 1.2 2014/02/10 10:34:44 ssuominen Exp $
 
 EAPI=5
 
