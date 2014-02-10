@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/company-mode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.12 2014/01/01 17:44:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.13 2014/02/10 20:14:40 ulm Exp $
+
+*company-mode-0.6.14 (10 Feb 2014)
+
+  10 Feb 2014; Ulrich Müller <ulm@gentoo.org> -company-mode-0.5.ebuild,
+  +company-mode-0.6.14.ebuild:
+  Version bump. Remove old.
 
 *company-mode-0.6.11 (01 Jan 2014)
 

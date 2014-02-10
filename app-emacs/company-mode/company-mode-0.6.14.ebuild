@@ -1,17 +1,16 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.5.ebuild,v 1.2 2010/10/09 16:25:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.6.14.ebuild,v 1.1 2014/02/10 20:14:40 ulm Exp $
 
-EAPI=2
-NEED_EMACS=22
+EAPI=5
 
 inherit elisp
 
 DESCRIPTION="In-buffer completion front-end"
-HOMEPAGE="http://nschum.de/src/emacs/company-mode/"
-SRC_URI="http://nschum.de/src/emacs/${PN}/company-${PV}.tar.bz2"
+HOMEPAGE="http://company-mode.github.com/"
+SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ropemacs +semantic"
@@ -24,8 +23,8 @@ DEPEND="|| ( app-emacs/nxml-mode >=virtual/emacs-23 )
 RDEPEND="${DEPEND}
 	ropemacs? ( dev-python/ropemacs )"
 
-S="${WORKDIR}"
 SITEFILE="50${PN}-gentoo.el"
+DOCS="README.md NEWS.md"
 
 src_prepare() {
 	# Disable backends that require extra dependencies, unless they are
