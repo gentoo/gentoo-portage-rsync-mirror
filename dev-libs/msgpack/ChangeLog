@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/msgpack
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.5 2013/02/03 12:17:33 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/ChangeLog,v 1.7 2014/02/10 07:46:53 pinkbyte Exp $
+
+  10 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> msgpack-0.5.6-r1.ebuild:
+  Add ~amd64-linux and ~x86-linux keywords
+
+*msgpack-0.5.6-r1 (10 Feb 2014)
+
+  10 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -msgpack-0.5.6.ebuild,
+  +msgpack-0.5.6-r1.ebuild:
+  Revision bump: EAPI 5, epatch_user, fix underlinking in tests, wrt bug
+  #370115, thanks to Diego Elio Pettenò. Drop old
 
   03 Feb 2013; Pacho Ramos <pacho@gentoo.org> -files/msgpack-0.4.2-test.patch,
   -msgpack-0.4.2.ebuild, metadata.xml:
