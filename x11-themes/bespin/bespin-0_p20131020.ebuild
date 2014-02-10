@@ -1,30 +1,40 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/bespin-0_p20120703-r1.ebuild,v 1.5 2013/10/01 21:45:36 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/bespin-0_p20131020.ebuild,v 1.1 2014/02/10 15:47:47 mrueg Exp $
 
-EAPI=4
+EAPI=5
 KDE_REQUIRED="optional"
+KDE_SCM="svn"
+
 inherit kde4-base
+
+if [[ $PV != *9999 ]]; then
+	REV="1688"
+	S="${WORKDIR}/cloudcity-code-${REV}"
+	SRC_URI="http://sourceforge.net/code-snapshots/svn/c/cl/cloudcity/code/cloudcity-code-${REV}.zip"
+	KEYWORDS="~amd64 ~x86"
+else
+	ESVN_REPO_URI="https://cloudcity.svn.sourceforge.net/svnroot/cloudcity"
+	KEYWORDS=""
+fi
 
 DESCRIPTION="Very configurable Qt4/KDE4 style derived from the Oxygen project."
 HOMEPAGE="http://cloudcity.sourceforge.net/"
-SRC_URI="http://dev.gentoo.org/~creffett/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
 SLOT="4"
 IUSE="debug kde plasma windeco"
 
 REQUIRED_USE="
-		windeco? ( kde )
-		plasma? ( kde )
+	windeco? ( kde )
+	plasma? ( kde )
 "
 
 DEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	windeco? ( $(add_kdebase_dep kwin) )
-	plasma? ( $(add_kdebase_dep kdelibs) dev-qt/qtdbus:4 )
+	plasma? ( $(add_kdebase_dep kdelibs) dev-qt/qtgui:4[dbus(+)] )
 "
 
 src_configure() {

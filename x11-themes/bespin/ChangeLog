@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/bespin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.7 2013/10/01 21:45:36 pesa Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.8 2014/02/10 15:47:47 mrueg Exp $
+
+*bespin-0_p20131020 (10 Feb 2014)
+
+  10 Feb 2014; Manuel Rüger <mrueg@gentoo.org> +bespin-0_p20131020.ebuild,
+  -bespin-0_p20120703-r1.ebuild:
+  Add snapshot from kde-overlay.
 
   01 Oct 2013; Davide Pesavento <pesa@gentoo.org> bespin-0_p20120703-r1.ebuild,
   bespin-0_p20120929.ebuild:
