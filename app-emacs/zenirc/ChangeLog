@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/zenirc
 # Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/ChangeLog,v 1.10 2007/11/20 13:07:11 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/zenirc/ChangeLog,v 1.11 2014/02/10 08:12:44 ulm Exp $
 
   20 Nov 2007; Christian Faulhammer <opfer@gentoo.org> zenirc-2.112.ebuild:
   amd64 stable, bug 195512
@@ -14,3 +14,21 @@
   lot of quotes; replace configure and manual make commands through function
   equivalents; adjusted DESCRIPTION; added trailing slash to HOMEPAGE URI
 
+  08 Mar 2007; Christian Faulhammer <opfer@gentoo.org>
+  files/50zenirc-gentoo.el:
+  add load path correctly, fixes bug 169588, reported by Ulrich Mueller
+  <ulm@kph.uni-mainz.de>
+
+  28 Jan 2007; Marius Mauch <genone@gentoo.org> zenirc-2.112.ebuild:
+  Replacing einfo with elog
+
+  09 Jan 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
+  change an einfo to elog due to importance of that message
+
+*zenirc-2.112 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  zenirc-2.112.ebuild, files/50zenirc-gentoo.el,
+  files/digest-zenirc-2.112 :
+
+  Initial import.

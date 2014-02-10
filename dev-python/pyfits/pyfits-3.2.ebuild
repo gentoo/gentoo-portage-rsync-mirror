@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.2.ebuild,v 1.2 2014/02/06 19:47:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/pyfits-3.2.ebuild,v 1.3 2014/02/10 08:13:25 bicatali Exp $
 
 EAPI=5
 
@@ -21,9 +21,9 @@ RDEPEND="
 	!<dev-python/astropy-0.3
 	sci-libs/cfitsio"
 DEPEND="${RDEPEND}
-	dev-python/d2to1[${PYTHON_USEDEP}]
+	>=dev-python/d2to1-0.2.5[${PYTHON_USEDEP}]
 	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/stsci-distutils[${PYTHON_USEDEP}]
+	>=dev-python/stsci-distutils-0.3[${PYTHON_USEDEP}]
 	doc? (
 			dev-python/matplotlib
 			dev-python/numpydoc
