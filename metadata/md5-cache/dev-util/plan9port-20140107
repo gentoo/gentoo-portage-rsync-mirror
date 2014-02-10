@@ -10,4 +10,4 @@ RDEPEND=X? ( x11-apps/xauth )
 SLOT=0
 SRC_URI=http://plan9port.googlecode.com/files/plan9port-20140107.tgz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=9bd65727ea9186b6ff7888f159bd67c9
+_md5_=b089ef1bbde8b1d6639b0afeb6234ce6
