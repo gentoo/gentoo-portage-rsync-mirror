@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/astmanproxy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/astmanproxy/ChangeLog,v 1.9 2013/10/27 09:49:49 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/astmanproxy/ChangeLog,v 1.10 2014/02/10 11:34:11 chainsaw Exp $
+
+*astmanproxy-1.28.2 (10 Feb 2014)
+
+  10 Feb 2014; Tony Vroon <chainsaw@gentoo.org> +astmanproxy-1.28.2.ebuild,
+  +files/astmanproxy-1.28.2-gentoo.diff:
+  Peruse active fork by davies147 instead of official github (stalled in 2008)
+  or patching snapshot (stalled in 2005). LDFLAGS respect instilled by Michael
+  "iamnr3" Mair-Keimberger, closes bug #335326. Gave up on the makefile in
+  order to install in parallel properly, fixes bug #298092 by Diego Elio
+  Pettenò.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due voip herd removal:

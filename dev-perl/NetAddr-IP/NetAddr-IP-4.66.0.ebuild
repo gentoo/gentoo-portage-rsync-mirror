@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/NetAddr-IP-4.66.0.ebuild,v 1.3 2013/06/11 18:42:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/NetAddr-IP-4.66.0.ebuild,v 1.4 2014/02/10 11:51:19 jer Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Manipulation and operations on IP addresses"
 
 SLOT="0"
 LICENSE="|| ( Artistic Artistic-2 )"
-KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="ipv6"
 
 RDEPEND="ipv6? ( dev-perl/Socket6 )"
