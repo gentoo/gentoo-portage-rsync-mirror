@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/nginx
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.374 2013/11/21 13:41:17 dev-zero Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.375 2014/02/10 03:12:24 zx2c4 Exp $
+
+*nginx-1.5.10 (10 Feb 2014)
+
+  10 Feb 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +files/upstream-check-1.5.8.patch, +nginx-1.5.10.ebuild:
+  Provisonal version bump.
 
 *nginx-1.5.7-r1 (21 Nov 2013)
 

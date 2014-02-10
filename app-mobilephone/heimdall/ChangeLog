@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/heimdall
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/heimdall/ChangeLog,v 1.5 2014/02/09 17:34:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/heimdall/ChangeLog,v 1.6 2014/02/10 03:11:32 floppym Exp $
+
+  10 Feb 2014; Mike Gilbert <floppym@gentoo.org> heimdall-1.4.0.ebuild,
+  heimdall-9999.ebuild:
+  Add a comment explaining libusb dep.
 
   09 Feb 2014; Mike Gilbert <floppym@gentoo.org> heimdall-1.4.0.ebuild,
   heimdall-9999.ebuild:
