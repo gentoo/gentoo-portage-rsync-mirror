@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.77 2014/02/10 16:03:00 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.78 2014/02/10 16:35:27 zerochaos Exp $
+
+  10 Feb 2014; Rick Farina <zerochaos@gentoo.org> metadata.xml,
+  metasploit-9999.ebuild:
+  adding optional oracle support
 
 *metasploit-4.8.2-r1 (10 Feb 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.9 2014/02/06 08:20:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/cinelerra-20120707.ebuild,v 1.10 2014/02/10 16:56:28 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils multilib flag-o-matic
@@ -45,7 +45,10 @@ RDEPEND="media-libs/a52dec:=
 		>=sys-libs/libraw1394-1.2.0:=
 		>=sys-libs/libavc1394-0.5.0:=
 		)
-	opengl? ( virtual/opengl )"
+	opengl? (
+		virtual/glu
+		virtual/opengl
+		)"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	virtual/pkgconfig
