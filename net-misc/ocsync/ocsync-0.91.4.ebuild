@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ocsync/ocsync-0.91.4.ebuild,v 1.2 2014/02/07 17:30:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ocsync/ocsync-0.91.4.ebuild,v 1.3 2014/02/10 13:41:28 voyageur Exp $
 
 EAPI=5
 
@@ -13,7 +13,10 @@ SRC_URI="http://download.owncloud.com/desktop/stable/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc iconv samba +sftp test"
+IUSE="doc +iconv samba +sftp test"
+
+# Tests only work with iconv
+REQUIRED_USE="test? ( iconv )"
 
 RDEPEND=">=dev-db/sqlite-3.4:3
 	net-libs/neon[ssl]
@@ -34,6 +37,9 @@ src_prepare() {
 	# proper docdir
 	sed -e "s:/doc/${PN}:/doc/${PF}:" \
 		-i doc/CMakeLists.txt || die
+	# Fix compilation with USE=-iconv, #500860
+	sed -e "s/_TCHAR/mbchar_t/" \
+		-i src/std/c_string.c || die
 }
 
 src_configure() {
