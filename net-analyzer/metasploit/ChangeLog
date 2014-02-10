@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.76 2014/01/30 01:24:58 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.77 2014/02/10 16:03:00 zerochaos Exp $
+
+*metasploit-4.8.2-r1 (10 Feb 2014)
+
+  10 Feb 2014; Rick Farina <zerochaos@gentoo.org> +metasploit-4.8.2-r1.ebuild,
+  metasploit-9999.ebuild:
+  closing bug 500404, syncing 9999 and tagged
 
   30 Jan 2014; Rick Farina <zerochaos@gentoo.org> metasploit-4.8.2.ebuild:
   fix for bug 499224

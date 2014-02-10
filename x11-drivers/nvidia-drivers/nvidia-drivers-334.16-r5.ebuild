@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r4.ebuild,v 1.1 2014/02/08 21:42:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r5.ebuild,v 1.1 2014/02/10 16:22:41 jer Exp $
 
 EAPI=5
 
@@ -388,7 +388,7 @@ src_install-libs() {
 		donvidia ${libdir}/libvdpau_nvidia.so ${NV_SOVER}
 
 		insinto ${GL_ROOT}
-		doexe libGLESv2.so.${PV}
+		doexe ${libdir}/libGLESv2.so.${PV}
 		dosym libGLESv2.so.${PV} ${GL_ROOT}/libGLESv2.so.2
 		dosym libGLESv2.so.2 ${GL_ROOT}/libGLESv2.so
 	fi
