@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.128 2014/02/09 10:41:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.129 2014/02/10 21:46:34 ulm Exp $
+
+*sawfish-1.9.1-r2 (10 Feb 2014)
+
+  10 Feb 2014; Ulrich Müller <ulm@gentoo.org> +sawfish-1.9.1-r2.ebuild,
+  +files/50sawfish-gentoo.el, metadata.xml:
+  Install sawfish mode for Emacs, controlled by USE=emacs, bug 493114.
 
   09 Feb 2014; Pacho Ramos <pacho@gentoo.org> -files/libtool.patch,
   -files/sawfish-1.3.3-cflags.patch, -files/sawfish-1.3.3-parallel-make.patch,

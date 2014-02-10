@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-9999.ebuild,v 1.8 2014/02/01 15:24:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/xvba-video-9999.ebuild,v 1.9 2014/02/10 21:35:45 chithanh Exp $
 
 EAPI=5
 
@@ -37,6 +37,12 @@ PATCHES=(
 
 pkg_setup() {
 	python-any-r1_pkg_setup
+}
+
+src_prepare() {
+	# bug 469208
+	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
+	autotools-multilib_src_prepare
 }
 
 multilib_src_configure() {
