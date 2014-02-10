@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/numba
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.1 2014/02/10 19:15:43 bicatali Exp $
+
+*numba-0.12.0 (10 Feb 2014)
+
+  10 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
+  +numba-0.12.0.ebuild:
+  Initial import

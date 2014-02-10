@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-core-apps
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/ChangeLog,v 1.19 2013/12/24 18:09:17 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-apps/ChangeLog,v 1.20 2014/02/10 19:19:52 pacho Exp $
+
+  10 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-core-apps-3.10.0.ebuild:
+  Rekeyword as looks like all dependencies are now satisfied
 
 *gnome-core-apps-3.10.0 (24 Dec 2013)
 

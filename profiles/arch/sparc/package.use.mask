@@ -1,10 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.157 2014/02/10 18:56:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.158 2014/02/10 19:01:53 pacho Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (10 Feb 2014)
 # Missing keywords, bug #495254
-dev-libs/totem-pl-parser quvi
+>=dev-libs/totem-pl-parser-3.10 quvi
+>=media-video/totem-3.10 flash
 
 # Raúl Porcel <armin76@gentoo.org> (1 Feb 2014)
 # Sigbuses

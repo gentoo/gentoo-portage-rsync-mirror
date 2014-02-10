@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.238 2014/02/06 19:14:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.239 2014/02/10 19:17:08 pacho Exp $
+
+  10 Feb 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.10.2-r300.ebuild,
+  webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-2.2.4-r200.ebuild,
+  webkit-gtk-2.2.4.ebuild:
+  >=dev-libs/atk-2.8.0 is needed because atk_object_get_object_locale is used
+  (#500898 by Balint SZENTE)
 
   06 Feb 2014; Pacho Ramos <pacho@gentoo.org> -webkit-gtk-2.2.2.ebuild,
   webkit-gtk-2.2.4-r200.ebuild, webkit-gtk-2.2.4.ebuild:
