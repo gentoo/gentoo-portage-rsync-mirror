@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.47 2014/02/02 10:00:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.48 2014/02/10 17:07:43 ssuominen Exp $
+
+  10 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> -libusb-0.ebuild,
+  -libusb-1.ebuild:
+  old
 
   02 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> libusb-1-r1.ebuild:
   List libusb-1.0.18 as first provider despite it causing double-listing of
