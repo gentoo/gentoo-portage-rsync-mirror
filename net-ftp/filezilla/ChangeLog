@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/filezilla
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.112 2013/09/21 16:18:46 grobian Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.113 2014/02/10 00:06:52 voyageur Exp $
+
+*filezilla-3.7.4 (10 Feb 2014)
+
+  10 Feb 2014; Bernard Cafarelli <voyageur@gentoo.org> +filezilla-3.7.4.ebuild,
+  +files/filezilla-3.7.4-debug.patch:
+  Version bump, adds SOCKS4 support
 
   21 Sep 2013; Fabian Groffen <grobian@gentoo.org> filezilla-3.7.3.ebuild:
   Fix doins call, .app is bundle (directory)

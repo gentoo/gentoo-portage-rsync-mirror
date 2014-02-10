@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.298 2014/02/09 10:49:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.299 2014/02/10 00:15:06 jer Exp $
+
+  10 Feb 2014; Jeroen Roovers <jer@gentoo.org> firefox-24.3.0.ebuild:
+  Stable for HPPA (bug #500320).
 
 *firefox-27.0 (09 Feb 2014)
 *firefox-24.3.0 (09 Feb 2014)
