@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8594 2014/02/08 18:42:53 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8595 2014/02/10 03:00:52 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Feb 2014; Dion Moult <moult@gentoo.org> package.mask:
+  Add rox-extra/comicthumb to package.mask for removal in 30 days (bug #471548)
 
   08 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   media-plugins/vdr-amarok pmask removal 08/Mar/2015, wrt bug 424255

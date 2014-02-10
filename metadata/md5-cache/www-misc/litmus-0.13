@@ -1,14 +1,15 @@
-DEFINED_PHASES=configure
-DEPEND=gnutls? ( <net-libs/neon-0.30:0/0[ssl,zlib] ) ssl? ( <net-libs/neon-0.30:0/0[ssl,zlib] ) !gnutls? ( !ssl? ( <net-libs/neon-0.30:0/0[zlib] ) ) || ( dev-libs/expat:0 dev-libs/libxml2:2 ) gnutls? ( net-libs/gnutls:0 ) kerberos? ( dev-perl/GSSAPI:0 ) libproxy? ( net-libs/libproxy:0 ) pkcs11? ( dev-libs/pakchois:0 ) ssl? ( dev-libs/openssl:0 )
+DEFINED_PHASES=configure prepare
+DEPEND=net-libs/neon:0=[expat?,gnutls?,kerberos?,libproxy?,pkcs11?,ssl?,zlib] expat? ( dev-libs/expat:0 ) gnutls? ( net-libs/gnutls:0 ) kerberos? ( app-crypt/mit-krb5:0 ) libproxy? ( net-libs/libproxy:0 ) libxml2? ( dev-libs/libxml2:2 ) pkcs11? ( dev-libs/pakchois:0 ) ssl? ( dev-libs/openssl:0 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=WebDAV server protocol compliance test suite
 EAPI=5
 HOMEPAGE=http://www.webdav.org/neon/litmus
-IUSE=debug gnutls kerberos libproxy ssl pkcs11 threads
+IUSE=debug expat gnutls kerberos libproxy +libxml2 pkcs11 +ssl threads
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=gnutls? ( <net-libs/neon-0.30:0/0[ssl,zlib] ) ssl? ( <net-libs/neon-0.30:0/0[ssl,zlib] ) !gnutls? ( !ssl? ( <net-libs/neon-0.30:0/0[zlib] ) ) || ( dev-libs/expat:0 dev-libs/libxml2:2 ) gnutls? ( net-libs/gnutls:0 ) kerberos? ( dev-perl/GSSAPI:0 ) libproxy? ( net-libs/libproxy:0 ) pkcs11? ( dev-libs/pakchois:0 ) ssl? ( dev-libs/openssl:0 )
-REQUIRED_USE=^^ ( ssl gnutls )
+RDEPEND=net-libs/neon:0=[expat?,gnutls?,kerberos?,libproxy?,pkcs11?,ssl?,zlib] expat? ( dev-libs/expat:0 ) gnutls? ( net-libs/gnutls:0 ) kerberos? ( app-crypt/mit-krb5:0 ) libproxy? ( net-libs/libproxy:0 ) libxml2? ( dev-libs/libxml2:2 ) pkcs11? ( dev-libs/pakchois:0 ) ssl? ( dev-libs/openssl:0 )
+REQUIRED_USE=?? ( gnutls ssl ) ^^ ( expat libxml2 ) threads? ( ^^ ( gnutls ssl ) )
 RESTRICT=test
 SLOT=0
 SRC_URI=http://www.webdav.org/neon/litmus/litmus-0.13.tar.gz
-_md5_=4351f92766b3a8446ce4f3c3063251d2
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=dfaa5f880c6d0ffd8e87d8c77fa6024a

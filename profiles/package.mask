@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15386 2014/02/08 18:42:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15387 2014/02/10 03:00:52 moult Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Dion Moult <moult@gentoo.org> (10 Feb 2014)
+# Masked for removal in 30 days. Upstream dead for ages, no package maintainer.
+# (bug #471548)
+rox-extra/comicthumb
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (08 Feb 2014)
 # removal ~08/Mar/2014 , depend on i18n issues
