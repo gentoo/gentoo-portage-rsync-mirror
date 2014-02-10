@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20140123.ebuild,v 1.1 2014/01/24 14:41:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/plan9port-20140123.ebuild,v 1.2 2014/02/10 13:00:00 blueness Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
 
 PLAN9=/usr/lib/plan9
+QA_MULTILIB_PATHS="${PLAN9}/.*/.*"
 
 src_prepare()
 {

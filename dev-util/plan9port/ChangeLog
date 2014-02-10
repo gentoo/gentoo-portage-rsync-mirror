@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/plan9port
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.31 2014/01/24 14:41:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/plan9port/ChangeLog,v 1.32 2014/02/10 13:00:00 blueness Exp $
+
+  10 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  plan9port-20130320.ebuild, plan9port-20140107.ebuild,
+  plan9port-20140123.ebuild:
+  Address multilib path, bug #498626
 
 *plan9port-20140123 (24 Jan 2014)
 
