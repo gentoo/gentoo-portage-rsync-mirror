@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/llvmpy-0.12.2.ebuild,v 1.2 2014/02/10 23:44:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/llvmpy-0.12.2.ebuild,v 1.3 2014/02/11 02:43:19 patrick Exp $
 
 EAPI=5
 
@@ -32,7 +32,6 @@ python_test() {
 	cd "${BUILD_DIR}"/lib* || die
 	${PYTHON} -c "import llvm; llvm.test()" || die
 }
-
 
 python_install_all() {
 	use doc && local HTML_DOCS=( docs/_build/html )
