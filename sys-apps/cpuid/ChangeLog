@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpuid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/ChangeLog,v 1.7 2014/01/29 01:42:54 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/ChangeLog,v 1.8 2014/02/11 10:43:50 nimiux Exp $
+
+  11 Feb 2014; Chema Alonso <nimiux@gentoo.org> cpuid-20130610.ebuild:
+  Stable for amd64 wrt bug #499646
 
 *cpuid-20140123 (29 Jan 2014)
 
