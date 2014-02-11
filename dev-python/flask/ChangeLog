@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.27 2014/02/06 05:41:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.28 2014/02/11 17:22:34 bicatali Exp $
+
+  11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> flask-0.10.1-r1.ebuild:
+  Added python 3.2
 
   06 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> flask-0.10.1-r1.ebuild:
   Keyword amd64-linux and x86-linux
