@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/c-blosc sys-devel/make >=dev-util/cmake-2.8.9 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+DESCRIPTION=C++ dynamic multi-dimensionnal array library with Python exposure
+EAPI=5
+HOMEPAGE=https://github.com/ContinuumIO/libdynd
+IUSE=doc test
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=dev-libs/c-blosc
+SLOT=0
+SRC_URI=https://github.com/ContinuumIO/libdynd/archive/v0.6.0.tar.gz -> libdynd-0.6.0.tar.gz
+_eclasses_=cmake-utils	db5236989678f4de51b2588767b5b69d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=3f722ce506a5f8dd89876ec392221250
