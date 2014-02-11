@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/sokoban
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/ChangeLog,v 1.3 2010/05/22 15:51:04 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sokoban/ChangeLog,v 1.4 2014/02/11 07:47:37 ulm Exp $
+
+*sokoban-1.4 (11 Feb 2014)
+
+  11 Feb 2014; Ulrich Müller <ulm@gentoo.org> +sokoban-1.4.ebuild:
+  Version bump. Change to GNU ELPA as upstream.
 
   22 May 2010; Pacho Ramos <pacho@gentoo.org> sokoban-1.04_p20030614.ebuild:
   stable amd64, bug 304179
