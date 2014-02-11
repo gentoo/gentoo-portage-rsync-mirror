@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/dynd-python
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dynd-python/ChangeLog,v 1.1 2014/02/11 03:02:58 bicatali Exp $
+
+*dynd-python-0.6.0 (11 Feb 2014)
+
+  11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +dynd-python-0.6.0.ebuild,
+  +files/dynd-python-0.6.0-out-of-git-versioning.patch, +metadata.xml:
+  Initial import

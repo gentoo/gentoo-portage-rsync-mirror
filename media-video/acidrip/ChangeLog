@@ -1,6 +1,9 @@
 # ChangeLog for media-video/acidrip
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.28 2009/03/09 17:30:01 beandog Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/ChangeLog,v 1.29 2014/02/11 03:05:13 patrick Exp $
+
+  11 Feb 2014; Patrick Lauer <patrick@gentoo.org> acidrip-0.14-r2.ebuild:
+  QA: Fix src_unpack/src_prepare
 
   09 Mar 2009; Steve Dibb <beandog@gentoo.org> acidrip-0.14-r1.ebuild,
   acidrip-0.14-r2.ebuild:
@@ -108,4 +111,3 @@
 
   05 Mar 2003; Graham Forest <vladimir@gentoo.org> acidrip-0.7.ebuild:
   Initial import
-

@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.14-r2.ebuild,v 1.3 2009/03/09 17:30:01 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/acidrip/acidrip-0.14-r2.ebuild,v 1.4 2014/02/11 03:05:13 patrick Exp $
 
 EAPI="2"
 
@@ -21,9 +21,7 @@ DEPEND="dev-lang/perl
 	media-video/mplayer[encode]
 	encode? ( >=media-sound/lame-3.92 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# bug 168012
 	epatch "${FILESDIR}/${PN}-mplayer.patch"
 }
