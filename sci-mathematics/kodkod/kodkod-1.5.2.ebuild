@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/kodkod-1.5.2.ebuild,v 1.2 2013/02/02 13:22:28 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/kodkod/kodkod-1.5.2.ebuild,v 1.3 2014/02/11 14:29:54 gienah Exp $
 
 EAPI="5"
 
@@ -48,6 +48,23 @@ src_prepare() {
 		|| die "Could not fix wscripts to respect LDFLAGS"
 	# Fix bug 453162 - sci-mathematics/kodkod-1.5.2: fails to build
 	epatch "${FILESDIR}/${PN}-1.5.2-changes-in-most-specific-varargs-method-selection.patch"
+
+	# Fix Bug 458462 sci-mathematics/kodkod-1.5.2: fails to build with JAVA_PKG_STRICT
+	local x=""
+	for i in $JAVACFLAGS
+	do
+		if [ "${x}" == "" ]; then
+			x="'${i}'"
+		else
+			x="${x}, '${i}'"
+		fi
+	done
+	for j in $(find . -name wscript -print)
+	do
+		sed -e "s@def configure(conf):@def configure(conf):\n    conf.env.JAVACFLAGS = [${x}]@" \
+			-i "${j}" \
+			|| die "Could not set JAVACFLAGS in ${j}"
+	done
 }
 
 # note: kodkod waf fails when passed --libdir:
@@ -64,6 +81,16 @@ src_configure() {
 		configure || die "configure failed"
 }
 
+src_compile() {
+	waf-utils_src_compile
+	if has doc ${JAVA_PKG_IUSE} && use doc; then
+		pushd src/kodkod || die "Could not cd to src/kodkod"
+		javadoc $(find . -name \*.java -print) \
+			|| die "javadoc failed"
+		popd
+	fi
+}
+
 src_install() {
 	insinto "/usr/"$(get_libdir)
 	dodir ${LIBDIR}
@@ -76,7 +103,6 @@ src_install() {
 		einfo "java-pkg_dojar $i"
 		java-pkg_dojar $i
 	done
-	dosym "/usr/share/${PN}-${SLOT}/package.env" "/usr/share/${PN}/package.env"
 
 	# javadoc
 	if has doc ${JAVA_PKG_IUSE} && use doc; then
