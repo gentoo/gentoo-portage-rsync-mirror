@@ -1,6 +1,10 @@
 # ChangeLog for app-text/build-docbook-catalog
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.45 2014/01/18 11:46:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.46 2014/02/11 20:25:32 grobian Exp $
+
+  11 Feb 2014; Fabian Groffen <grobian@gentoo.org>
+  build-docbook-catalog-1.20.ebuild:
+  Export MAKEOPTS in case not yet set, bug #490754
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org>
   build-docbook-catalog-1.19.1-r1.ebuild, build-docbook-catalog-1.19.1.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/samtools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.15 2013/12/06 12:48:36 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.16 2014/02/11 20:17:25 grobian Exp $
+
+  11 Feb 2014; Fabian Groffen <grobian@gentoo.org> samtools-0.1.19-r1.ebuild:
+  Reference correct library name on Darwin, thanks Linlin Yan in bug #491812
 
 *samtools-0.1.19-r1 (06 Dec 2013)
 
@@ -86,4 +89,3 @@
 
   26 Feb 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
   New package, ebuild written by me
-

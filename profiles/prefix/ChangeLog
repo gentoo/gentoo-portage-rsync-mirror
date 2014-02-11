@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.412 2014/02/07 20:34:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.413 2014/02/11 20:10:27 grobian Exp $
+
+  11 Feb 2014; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask autogen-5.18.1, bug #493464
 
   07 Feb 2014; Fabian Groffen <grobian@gentoo.org> +linux/package.use:
   Mask crypt and nis for python on Linux due to recurring issues, bug #500116

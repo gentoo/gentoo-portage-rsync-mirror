@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/build-docbook-catalog-1.20.ebuild,v 1.4 2014/01/18 11:46:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/build-docbook-catalog-1.20.ebuild,v 1.5 2014/02/11 20:25:32 grobian Exp $
 
 EAPI=5
 
@@ -20,7 +20,10 @@ RDEPEND="|| ( sys-apps/util-linux app-misc/getopt )
 	dev-libs/libxml2"
 DEPEND=""
 
-MAKEOPTS+=" EPREFIX=${EPREFIX}"
+pkg_setup() {
+	# export for bug #490754
+	export MAKEOPTS+=" EPREFIX=${EPREFIX}"
+}
 
 src_prepare() {
 	sed -i -e "/^EPREFIX=/s:=.*:='${EPREFIX}':" build-docbook-catalog || die

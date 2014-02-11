@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.19-r1.ebuild,v 1.1 2013/12/06 12:48:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.19-r1.ebuild,v 1.2 2014/02/11 20:17:24 grobian Exp $
 
 EAPI=5
 
@@ -45,8 +45,8 @@ src_install() {
 
 	python_replicate_script "${ED}"/usr/bin/varfilter.py
 
-	dolib.so libbam.so.1
-	dosym libbam.so.1 /usr/$(get_libdir)/libbam.so
+	dolib.so libbam$(get_libname 1)
+	dosym libbam$(get_libname 1) /usr/$(get_libdir)/libba$(get_libname)
 
 	insinto /usr/include/bam
 	doins *.h
