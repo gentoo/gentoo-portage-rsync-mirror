@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.24 2014/01/30 15:04:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.25 2014/02/11 06:21:18 bicatali Exp $
+
+  11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml,
+  networkx-1.8.1.ebuild:
+  Added python-3.2 compat
 
   30 Jan 2014; Justin Lecher <jlec@gentoo.org> networkx-1.8.1.ebuild:
   Add Python 3 support, pygraphviz is optional but preferred
