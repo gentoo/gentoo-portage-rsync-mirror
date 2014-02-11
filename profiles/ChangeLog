@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8598 2014/02/11 18:33:44 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8599 2014/02/11 22:06:14 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Feb 2014; Dion Moult <moult@gentoo.org> package.mask:
+  Masked www-client/htmlview as deprecated due to xdg-open and co (bug #480522)
 
   11 Feb 2014; Paul Varner <fuzzyray@gentoo.org> desc/uwsgi_plugins.desc:
   Remove Unicode character from uwsgi_plugins.desc to work around bug 498748
