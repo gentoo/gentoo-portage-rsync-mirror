@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/glamor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/ChangeLog,v 1.26 2014/01/26 17:12:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/ChangeLog,v 1.27 2014/02/11 12:08:24 chithanh Exp $
+
+  11 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/glamor-0.6.0-xv-add-missing-include.patch, glamor-0.6.0.ebuild:
+  fix xv build against pre 1.13 servers, bug #499442.
 
 *glamor-0.6.0 (26 Jan 2014)
 

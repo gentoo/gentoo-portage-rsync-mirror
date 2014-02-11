@@ -1,8 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-2.1.0-r1.ebuild,v 1.1 2013/11/04 09:51:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-2.1.0-r2.ebuild,v 1.1 2014/02/11 12:28:14 polynomial-c Exp $
 
 EAPI=5
+
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
 
 inherit base autotools
 
@@ -19,8 +21,10 @@ IUSE="X"
 DEPEND="sys-libs/ncurses
 	sys-devel/bc
 	sys-devel/gettext
-	www-client/htmlview
 	X? ( x11-misc/xsel )"
+
+# fish can add man-page completions from lzma and xz compressed man pages
+# through a python script. That's why we depend on python here (bug #490478)
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -50,6 +54,15 @@ pkg_postinst() {
 	elog "To set your colors, run 'fish_config'"
 	elog "To scan your man pages for completions, run 'fish_update_completions'"
 	elog "To autocomplete command suggestions press Ctrl + F or right arrow key."
+	elog
+	elog "Please add a \"BROWSER\" variable to ${PN}'s environment pointing to the"
+	elog "browser of your choice to get acces to ${PN}'s help system:"
+	elog "  BROWSER=\"/usr/bin/firefox\""
+	elog
+	elog "In order to get lzma and xz support for man-page completion please"
+	elog "emerge one of the following packages:"
+	elog "  dev-python/backports-lzma"
+	elog "  >=dev-lang/python-3.3"
 	elog
 	elog "Have fun!"
 }

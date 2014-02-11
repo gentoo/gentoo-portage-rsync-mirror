@@ -1,6 +1,16 @@
 # ChangeLog for app-shells/fish
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.62 2013/11/04 19:35:22 polynomial-c Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.63 2014/02/11 12:28:14 polynomial-c Exp $
+
+*fish-2.1.0-r2 (11 Feb 2014)
+
+  11 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -fish-1.23.1.ebuild,
+  -fish-1.23.1-r2.ebuild, fish-2.0.0.ebuild, -fish-2.1.0-r1.ebuild,
+  +fish-2.1.0-r2.ebuild:
+  Added an elog message to install python for making manpage-completion
+  functional (bug #490478). Removed www-client/htmlview from RDEPEND and added
+  an elog note how to make the help system work (bug #488012). Removed old
+  versions.
 
   04 Nov 2013; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
   Took over maintenance.

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.6.0.ebuild,v 1.1 2014/01/26 17:12:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/glamor/glamor-0.6.0.ebuild,v 1.2 2014/02/11 12:08:24 chithanh Exp $
 
 EAPI=5
 
@@ -25,6 +25,10 @@ RDEPEND=">=x11-base/xorg-server-1.10
 	)
 	>=x11-libs/pixman-0.21.8"
 DEPEND="${RDEPEND}"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-xv-add-missing-include.patch
+)
 
 src_configure() {
 	XORG_CONFIGURE_OPTIONS=(

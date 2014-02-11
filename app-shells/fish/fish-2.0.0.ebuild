@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-2.0.0.ebuild,v 1.4 2013/09/05 19:24:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-2.0.0.ebuild,v 1.5 2014/02/11 12:28:14 polynomial-c Exp $
 
 EAPI=5
 
@@ -18,7 +18,6 @@ IUSE="X"
 DEPEND="sys-libs/ncurses
 	sys-devel/bc
 	sys-devel/gettext
-	www-client/htmlview
 	X? ( x11-misc/xsel )"
 RDEPEND="${DEPEND}"
 
@@ -49,6 +48,10 @@ pkg_postinst() {
 	elog "To set your colors, run 'fish_config'"
 	elog "To scan your man pages for completions, run 'fish_update_completions'"
 	elog "To autocomplete command suggestions press Ctrl + F or right arrow key."
+	elog
+	elog "Please add a \"BROWSER\" variable to ${PN}'s environment pointing to the"
+	elog "browser of your choice to get acces to ${PN}'s help system:"
+	elog "  BROWSER=\"/usr/bin/firefox\""
 	elog
 	elog "Have fun!"
 }

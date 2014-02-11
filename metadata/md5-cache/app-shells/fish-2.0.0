@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=sys-libs/ncurses sys-devel/bc sys-devel/gettext www-client/htmlview X? ( x11-misc/xsel ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEPEND=sys-libs/ncurses sys-devel/bc sys-devel/gettext X? ( x11-misc/xsel ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=fish is the Friendly Interactive SHell
 EAPI=5
 HOMEPAGE=http://fishshell.com/
 IUSE=X
 KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris
 LICENSE=GPL-2
-RDEPEND=sys-libs/ncurses sys-devel/bc sys-devel/gettext www-client/htmlview X? ( x11-misc/xsel )
+RDEPEND=sys-libs/ncurses sys-devel/bc sys-devel/gettext X? ( x11-misc/xsel )
 SLOT=0
 SRC_URI=http://fishshell.com/files/2.0.0/fish-2.0.0.tar.gz
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=099141fb6c266711eaf53716b178044a
+_md5_=968e7b0e6e793cada5e43fe93e513d50
