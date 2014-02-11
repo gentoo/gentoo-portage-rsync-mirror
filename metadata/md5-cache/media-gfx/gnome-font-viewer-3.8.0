@@ -8,5 +8,5 @@ LICENSE=GPL-2+ LGPL-2.1+
 RDEPEND=>=dev-libs/glib-2.35.1:2 gnome-base/gnome-desktop:3= media-libs/fontconfig:1.0 media-libs/freetype:2 x11-libs/cairo >=x11-libs/gtk+-3.7.10:3 x11-libs/pango !<gnome-base/gnome-control-center-2.91 !<gnome-extra/gnome-utils-3.4
 SLOT=0
 SRC_URI=mirror://gnome/sources/gnome-font-viewer/3.8/gnome-font-viewer-3.8.0.tar.xz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=927828624078454cd0f0f1066b55ffdf

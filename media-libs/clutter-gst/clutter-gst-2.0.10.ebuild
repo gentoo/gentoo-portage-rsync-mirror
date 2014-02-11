@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.10.ebuild,v 1.1 2014/02/06 23:35:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-2.0.10.ebuild,v 1.2 2014/02/11 21:30:33 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -22,9 +22,9 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.20:2
 	>=media-libs/clutter-1.6.0:1.0=[introspection?]
 	>=media-libs/cogl-1.10:1.0=[introspection?]
-	media-libs/gstreamer:1.0[introspection?]
-	media-libs/gst-plugins-bad:1.0
-	media-libs/gst-plugins-base:1.0[introspection?]
+	>=media-libs/gstreamer-1.2.0:1.0[introspection?]
+	>=media-libs/gst-plugins-bad-1.2.0:1.0
+	>=media-libs/gst-plugins-base-1.2.0:1.0[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )
 "
 # uses goom from gst-plugins-good

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.25.0:2 >=x11-libs/gtk+-2.18:2 >=gnome-base/orbit-2 >=gnome-base/gconf-2:2 >=gnome-extra/evolution-data-server-1.2.3 media-libs/libcanberra[gtk] >=app-mobilephone/gnokii-0.6.28[bluetooth] net-wireless/bluez dev-libs/dbus-glib dev-libs/openobex media-libs/libcanberra[gtk] >=x11-themes/gnome-icon-theme-2.19.1 >=app-text/gtkspell-2:2 >=net-wireless/gnome-bluetooth-2.27.6:2
 SLOT=0
 SRC_URI=mirror://gnome/sources/gnome-phone-manager/0.66/gnome-phone-manager-0.66.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	774182647ff84c6a2365bbcd9635044c	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=6828cf919976614818ac63d3af5b8b3f

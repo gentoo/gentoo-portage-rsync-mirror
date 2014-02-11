@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4-r200.ebuild,v 1.7 2014/02/11 20:34:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4-r200.ebuild,v 1.8 2014/02/11 21:25:12 pacho Exp $
 
 EAPI="5"
 
@@ -163,11 +163,12 @@ src_prepare() {
 		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebplugindatabase/ d' \
 		-i Source/WebKit/gtk/GNUmakefile.am || die
 
-	if ! use gstreamer; then
+# Upstream thinks this is already solved
+#	if ! use gstreamer; then
 		# webkit2's TestWebKitWebView requires <video> support, upstream bug #128164
-		sed -e '/Programs\/WebKit2APITests\/TestWebKitWebView/ d' \
-			-i Tools/TestWebKitAPI/GNUmakefile.am || die
-	fi
+#		sed -e '/Programs\/WebKit2APITests\/TestWebKitWebView/ d' \
+#			-i Tools/TestWebKitAPI/GNUmakefile.am || die
+#	fi
 
 	# Respect CC, otherwise fails on prefix #395875
 	tc-export CC
@@ -223,6 +224,7 @@ src_configure() {
 		$(use_enable geoloc geolocation) \
 		$(use_enable gles2) \
 		$(use_enable gstreamer video) \
+		$(use_enable gstreamer web-audio) \
 		$(use_enable introspection) \
 		$(use_enable jit) \
 		$(use_enable libsecret credential_storage) \

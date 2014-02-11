@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.273 2014/02/09 12:57:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.274 2014/02/11 21:11:32 pacho Exp $
+
+  11 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.1.ebuild:
+  libgnomecanvas is needed (#500938 by John J. Aylward)
 
   09 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnucash-2.6.1.ebuild:
   Revert unexpected stabilization

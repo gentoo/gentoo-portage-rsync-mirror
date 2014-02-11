@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter-gst
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.50 2014/02/06 23:35:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/ChangeLog,v 1.51 2014/02/11 21:30:33 pacho Exp $
+
+  11 Feb 2014; Pacho Ramos <pacho@gentoo.org> clutter-gst-2.0.10.ebuild:
+  Needs newer gstreamer, bug #500852 by Jerome Revillard
 
 *clutter-gst-2.0.10 (06 Feb 2014)
 
