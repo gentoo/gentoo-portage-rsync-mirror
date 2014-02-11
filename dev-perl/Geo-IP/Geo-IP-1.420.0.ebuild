@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.420.0.ebuild,v 1.1 2013/06/10 19:38:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Geo-IP/Geo-IP-1.420.0.ebuild,v 1.2 2014/02/11 15:24:32 hattya Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module multilib
 DESCRIPTION="Look up country by IP Address"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="dev-libs/geoip"

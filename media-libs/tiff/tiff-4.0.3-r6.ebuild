@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r6.ebuild,v 1.7 2014/02/09 08:26:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-4.0.3-r6.ebuild,v 1.8 2014/02/11 15:10:30 hattya Exp $
 
 EAPI=5
 inherit eutils libtool multilib-minimal
@@ -12,7 +12,7 @@ SRC_URI="http://download.osgeo.org/libtiff/${P}.tar.gz
 
 LICENSE="libtiff"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+cxx jbig jpeg lzma static-libs test zlib"
 
 RDEPEND="jpeg? ( virtual/jpeg:0=[${MULTILIB_USEDEP}] )

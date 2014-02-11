@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyasn1-modules
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.20 2014/02/08 15:12:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1-modules/ChangeLog,v 1.21 2014/02/11 15:06:56 hattya Exp $
+
+  11 Feb 2014; Akinori Hattori <hattya@gentoo.org> pyasn1-modules-0.0.5.ebuild:
+  ia64 stable wrt bug #474196
 
   08 Feb 2014; Jeroen Roovers <jer@gentoo.org> pyasn1-modules-0.0.5.ebuild:
   Stable for HPPA (bug #474196).

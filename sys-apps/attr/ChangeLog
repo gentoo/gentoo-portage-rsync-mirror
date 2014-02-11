@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.163 2014/02/08 15:00:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.164 2014/02/11 15:08:33 hattya Exp $
+
+  11 Feb 2014; Akinori Hattori <hattya@gentoo.org> attr-2.4.47-r1.ebuild:
+  ia64 stable wrt bug #474296
 
   08 Feb 2014; Jeroen Roovers <jer@gentoo.org> attr-2.4.47-r1.ebuild:
   Stable for HPPA (bug #474296).
