@@ -3225,8 +3225,8 @@ media-libs/gegl:vala - Enable bindings for dev-lang/vala
 media-libs/giflib:rle - Build converters for RLE format (utah raster toolkit)
 media-libs/glfw:egl - Use EGL instead of GLX for GL context creation
 media-libs/gmtk:dconf - Enable support for gnome-base/dconf
-media-libs/grilo:introspection - Use dev-libs/gobject-introspection for introspection
 media-libs/grilo:network - Enable network access for media discovery using net-libs/libsoup
+media-libs/grilo:playlist - Enable support for playlists through dev-libs/totem-pl-parser
 media-libs/grilo:vala - Generate bindings for dev-lang/vala
 media-libs/gst-plugins-bad:egl - Enable EGL support
 media-libs/gst-plugins-base:ivorbis - Enable integer based vorbis decoder.

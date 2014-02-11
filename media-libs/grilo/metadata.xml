@@ -3,10 +3,10 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name='introspection'>Use <pkg>dev-libs/gobject-introspection</pkg>
-			for introspection</flag>
 		<flag name='network'>Enable network access for media discovery using
 			<pkg>net-libs/libsoup</pkg></flag>
+		<flag name='playlist'>Enable support for playlists through
+			<pkg>dev-libs/totem-pl-parser</pkg></flag>
 		<flag name='vala'>Generate bindings for <pkg>dev-lang/vala</pkg></flag>
 	</use>
 </pkgmetadata>
