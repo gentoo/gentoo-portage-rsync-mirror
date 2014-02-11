@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVN-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.26 2013/08/25 11:09:01 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Simple/ChangeLog,v 1.27 2014/02/11 15:34:38 hattya Exp $
+
+  11 Feb 2014; Akinori Hattori <hattya@gentoo.org> SVN-Simple-0.280.0.ebuild:
+  ia64 stable wrt bug #495468
 
 *SVN-Simple-0.280.0 (25 Aug 2013)
 

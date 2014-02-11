@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/byfl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/ChangeLog,v 1.4 2014/01/15 22:12:48 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/ChangeLog,v 1.5 2014/02/11 15:37:26 ottxor Exp $
+
+  11 Feb 2014; Christoph Junghans <ottxor@gentoo.org> byfl-9999.ebuild:
+   llvm bug#18358 got fixed
 
   15 Jan 2014; Christoph Junghans <ottxor@gentoo.org> byfl-9999.ebuild:
   updates

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXML
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.148 2013/02/25 21:12:08 zmedico Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.149 2014/02/11 15:40:08 hattya Exp $
+
+  11 Feb 2014; Akinori Hattori <hattya@gentoo.org> XML-LibXML-2.1.400.ebuild:
+  ia64 stable wrt bug #495512
 
   25 Feb 2013; Zac Medico <zmedico@gentoo.org> XML-LibXML-2.1.400.ebuild:
   Add ~arm-linux keyword.

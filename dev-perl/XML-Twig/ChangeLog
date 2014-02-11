@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Twig
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.102 2013/08/15 06:30:06 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/ChangeLog,v 1.103 2014/02/11 15:41:26 hattya Exp $
+
+  11 Feb 2014; Akinori Hattori <hattya@gentoo.org> XML-Twig-3.440.0.ebuild:
+  ia64 stable wrt bug #495522
 
 *XML-Twig-3.440.0 (15 Aug 2013)
 

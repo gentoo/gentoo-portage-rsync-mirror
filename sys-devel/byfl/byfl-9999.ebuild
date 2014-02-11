@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-9999.ebuild,v 1.4 2014/01/15 22:12:48 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/byfl/byfl-9999.ebuild,v 1.5 2014/02/11 15:37:26 ottxor Exp $
 
 EAPI=5
 
-inherit autotools-utils flag-o-matic multilib
+inherit autotools-utils multilib
 
 if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="git://github.com/losalamos/${PN^b}.git http://github.com/losalamos/${PN}.git"
@@ -22,16 +22,15 @@ SLOT="0"
 LICENSE="BSD"
 IUSE=""
 
-RDEPEND=">=sys-devel/dragonegg-3.4
-	>=sys-devel/llvm-3.4
-	>=sys-devel/clang-3.4"
+RDEPEND=">=sys-devel/dragonegg-9999
+	>=sys-devel/llvm-9999
+	>=sys-devel/clang-9999"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
 	ln -s autoconf/configure.ac || die
 	eaclocal -I autoconf/m4
 	eautoconf
-	replace-flags -O? -O0 #http://llvm.org/bugs/show_bug.cgi?id=18358
 }
 
 src_configure() {
