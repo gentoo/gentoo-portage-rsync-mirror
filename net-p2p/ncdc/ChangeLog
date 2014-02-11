@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/ncdc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ChangeLog,v 1.46 2014/01/14 13:57:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ncdc/ChangeLog,v 1.47 2014/02/11 20:39:49 xmw Exp $
+
+*ncdc-1.19 (11 Feb 2014)
+
+  11 Feb 2014; Michael Weber <xmw@gentoo.org> +ncdc-1.19.ebuild,
+  -ncdc-1.16.1.ebuild, -ncdc-1.17.ebuild, -ncdc-1.18.ebuild:
+  Version bump, new USE geoip
 
   14 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ncdc-1.18.1.ebuild:
   Stable for x86, wrt bug #495896

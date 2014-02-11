@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.239 2014/02/10 19:17:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.240 2014/02/11 20:34:31 pacho Exp $
+
+  11 Feb 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.2.4-r200.ebuild,
+  webkit-gtk-2.2.4.ebuild:
+  reduce-memory-overheads options is not recognized by ld.gold (#469942 by
+  Samuli Suominen)
 
   10 Feb 2014; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.10.2-r300.ebuild,
   webkit-gtk-1.8.3-r200.ebuild, webkit-gtk-2.2.4-r200.ebuild,

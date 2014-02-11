@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4-r200.ebuild,v 1.6 2014/02/10 19:17:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4-r200.ebuild,v 1.7 2014/02/11 20:34:31 pacho Exp $
 
 EAPI="5"
 
@@ -194,6 +194,10 @@ src_configure() {
 
 	# Try to use less memory, bug #469942 (see Fedora .spec for reference)
 	append-ldflags "-Wl,--no-keep-memory"
+	if ! $(tc-getLD) --version | grep -q "GNU gold"; then
+		append-ldflags "-Wl,--reduce-memory-overheads"
+	fi
+
 	append-ldflags "-Wl,--reduce-memory-overheads"
 
 	local myconf=""
