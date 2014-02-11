@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/llvmpy-0.12.2.ebuild,v 1.1 2014/02/10 16:59:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/llvmpy-0.12.2.ebuild,v 1.2 2014/02/10 23:44:26 bicatali Exp $
 
 EAPI=5
 
@@ -18,8 +18,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc"
 
 # fails with llvm-3.4
-DEPEND="=sys-devel/llvm-3.3*[multitarget]"
-RDEPEND="${DEPEND}
+RDEPEND="=sys-devel/llvm-3.3*[multitarget]"
+DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )"
 
 PATCHES=( "${FILESDIR}"/${P}-return-type.patch )
