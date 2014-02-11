@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-2.1.0-r2.ebuild,v 1.1 2014/02/11 12:28:14 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-2.1.0-r2.ebuild,v 1.2 2014/02/11 12:40:06 polynomial-c Exp $
 
 EAPI=5
 
@@ -40,6 +40,14 @@ src_configure() {
 	econf \
 		docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--bindir="${EPREFIX}"/bin
+}
+
+src_test() {
+	if has_version ~${CATEGORY}/${P} ; then
+		emake test
+	else
+		ewarn "The test suite only works when the package is already installed"
+	fi
 }
 
 pkg_postinst() {
