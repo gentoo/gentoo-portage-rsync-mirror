@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.128 2014/02/05 09:46:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.129 2014/02/11 05:25:35 mattst88 Exp $
+
+  11 Feb 2014; Matt Turner <mattst88@gentoo.org> kmod-16.ebuild:
+  alpha stable, bug 500106.
 
   05 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> kmod-16.ebuild,
   kmod-9999.ebuild:
