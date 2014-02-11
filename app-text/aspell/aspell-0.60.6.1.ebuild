@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6.1.ebuild,v 1.11 2014/01/02 18:06:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.60.6.1.ebuild,v 1.12 2014/02/11 06:47:09 nerdboy Exp $
 
 EAPI=4
 
@@ -44,7 +44,12 @@ RDEPEND="${COMMON_DEPEND}
 	!=app-dicts/aspell-en-0.5*"
 
 src_prepare() {
-	#epatch "${FILESDIR}/${PN}-0.60.3-templateinstantiations.patch"
+	# fix for bug #467602
+	if has_version ">=sys-devel/automake-1.13" ; then
+		sed -i -e 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' \
+			"${S}"/configure.ac || die "sed failed"
+	fi
+
 	epatch "${FILESDIR}/${PN}-0.60.5-nls.patch"
 	epatch "${FILESDIR}/${PN}-0.60.5-solaris.patch"
 	epatch "${FILESDIR}/${PN}-0.60.6-darwin-bundles.patch"
@@ -58,10 +63,20 @@ src_prepare() {
 	# This has to be after automake has run so that we don't clobber
 	# the default target that automake creates for us.
 	echo 'install-filterLTLIBRARIES: install-libLTLIBRARIES' >> Makefile.in
+
 }
 
 src_configure() {
-	econf \
+	# if ncurses is built with separate tinfo libs, then...
+	if built_with_use sys-libs/ncurses tinfo ; then
+		if built_with_use sys-libs/ncurses unicode ; then
+			CURSES_LIB="-lncursesw -ltinfow"
+		else
+			CURSES_LIB="-lncurses -ltinfo"
+		fi
+	fi
+
+	CURSES_LIB="${CURSES_LIB}" econf \
 		$(use_enable nls) \
 		--disable-static \
 		--sysconfdir="${EPREFIX}"/etc/aspell \

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.118 2014/02/11 06:30:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.119 2014/02/11 06:50:50 bicatali Exp $
+
+  11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> simplejson-3.3.0.ebuild:
+  Added python-3.2 compat
 
   11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> simplejson-3.3.2.ebuild:
   Added python-3.2 compat
