@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4-r200.ebuild,v 1.8 2014/02/11 21:25:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.4-r200.ebuild,v 1.9 2014/02/11 22:43:12 eva Exp $
 
 EAPI="5"
 
@@ -187,7 +187,7 @@ src_configure() {
 	# It doesn't compile on alpha without this in LDFLAGS, bug #???
 	use alpha && append-ldflags "-Wl,--no-relax"
 
-	# Sigbuses on SPARC with mcpu and co., bug #????
+	# Sigbuses on SPARC with mcpu and co., bug #???
 	use sparc && filter-flags "-mvis"
 
 	# https://bugs.webkit.org/show_bug.cgi?id=42070 , #301634
@@ -198,8 +198,6 @@ src_configure() {
 	if ! $(tc-getLD) --version | grep -q "GNU gold"; then
 		append-ldflags "-Wl,--reduce-memory-overheads"
 	fi
-
-	append-ldflags "-Wl,--reduce-memory-overheads"
 
 	local myconf=""
 
