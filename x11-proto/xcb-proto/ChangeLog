@@ -1,6 +1,10 @@
 # ChangeLog for x11-proto/xcb-proto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.127 2014/01/26 19:08:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/ChangeLog,v 1.128 2014/02/11 13:01:38 chithanh Exp $
+
+  11 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xcb-proto-1.10.ebuild:
+  add comment about pythondir removal, bug #486512
 
 *xcb-proto-1.10 (26 Jan 2014)
 

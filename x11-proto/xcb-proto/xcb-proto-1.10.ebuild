@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.10.ebuild,v 1.1 2014/01/26 19:08:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcb-proto/xcb-proto-1.10.ebuild,v 1.2 2014/02/11 13:01:38 chithanh Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ src_install() {
 	python_foreach_impl autotools-utils_src_install -C xcbgen \
 		top_builddir="${WORKDIR}/${P}-${ABI:-${DEFAULT_ABI}}"
 
+	# pkg-config file hardcodes python sitedir, bug 486512
 	sed -i -e '/pythondir/s:=.*$:=/dev/null:' \
 		"${ED}"/usr/lib*/pkgconfig/xcb-proto.pc || die
 }
