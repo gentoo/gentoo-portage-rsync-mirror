@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.12 2014/01/21 20:35:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-9999.ebuild,v 1.13 2014/02/11 05:43:49 radhermit Exp $
 
 EAPI=5
 
@@ -10,11 +10,9 @@ EGIT_REPO_URI="git://github.com/darktable-org/darktable.git"
 
 DESCRIPTION="A virtual lighttable and darkroom for photographers"
 HOMEPAGE="http://www.darktable.org/"
-SRC_URI=""
 
 LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
-KEYWORDS=""
 LANGS=" cs da de el es fr it ja nl pl pt_BR pt_PT ru sq sv uk"
 # TODO add lua once dev-lang/lua-5.2 is unmasked
 IUSE="colord doc flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
@@ -70,7 +68,7 @@ src_prepare() {
 		-e "s:LICENSE::" \
 		-i doc/CMakeLists.txt || die
 
-	epatch_user
+	cmake-utils_src_prepare
 }
 
 src_configure() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/robotframework
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/robotframework/ChangeLog,v 1.6 2013/12/20 01:18:04 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/robotframework/ChangeLog,v 1.7 2014/02/11 05:51:45 radhermit Exp $
+
+*robotframework-2.8.4 (11 Feb 2014)
+
+  11 Feb 2014; Tim Harder <radhermit@gentoo.org> +robotframework-2.8.4.ebuild:
+  Version bump.
 
 *robotframework-2.8.3 (20 Dec 2013)
 

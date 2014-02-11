@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.2.1.ebuild,v 1.2 2013/06/13 12:28:27 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.4.1.ebuild,v 1.1 2014/02/11 05:43:49 radhermit Exp $
 
 EAPI=5
 
@@ -14,45 +14,51 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
 LICENSE="GPL-3 CC-BY-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="colord doc flickr geo gnome-keyring gphoto2 graphicsmagick
-jpeg2k kde nls opencl openmp pax_kernel +rawspeed +slideshow web-services"
+LANGS=" cs da de el es fr it ja nl pl pt_BR pt_PT ru sq sv uk"
+# TODO add lua once dev-lang/lua-5.2 is unmasked
+IUSE="colord doc flickr geo gnome-keyring gphoto2 graphicsmagick jpeg2k kde
+nls opencl openmp openexr pax_kernel +rawspeed +slideshow +squish web-services webp
+${LANGS// / linguas_}"
 
 CDEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.28:2
 	dev-libs/libxml2:2
-	colord? ( x11-misc/colord )
+	gnome-base/librsvg:2
+	media-gfx/exiv2:0=[xmp]
+	media-libs/lcms:2
+	>=media-libs/lensfun-0.2.3
+	media-libs/libpng:0=
+	media-libs/tiff:0
+	net-misc/curl
+	virtual/jpeg
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf:2
+	x11-libs/gtk+:2
+	x11-libs/pango
+	colord? ( x11-misc/colord:0= )
 	flickr? ( media-libs/flickcurl )
 	geo? ( net-libs/libsoup:2.4 )
 	gnome-keyring? ( gnome-base/gnome-keyring )
-	gnome-base/librsvg:2
-	gphoto2? ( media-libs/libgphoto2 )
+	gphoto2? ( media-libs/libgphoto2:= )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	jpeg2k? ( media-libs/openjpeg:0 )
-	media-gfx/exiv2[xmp]
-	media-libs/lcms:2
-	>=media-libs/lensfun-0.2.3
-	media-libs/libpng:0
-	media-libs/openexr
-	media-libs/tiff:0
-	net-misc/curl
 	opencl? ( virtual/opencl )
+	openexr? ( media-libs/openexr:0= )
 	slideshow? (
 		media-libs/libsdl
 		virtual/glu
 		virtual/opengl
 	)
-	virtual/jpeg
 	web-services? ( dev-libs/json-glib )
-	x11-libs/cairo
-	x11-libs/gdk-pixbuf:2
-	x11-libs/gtk+:2
-	x11-libs/pango"
+	webp? ( media-libs/libwebp:0= )"
 RDEPEND="${CDEPEND}
 	kde? ( kde-base/kwalletd )"
 DEPEND="${CDEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+PATCHES=( "${FILESDIR}"/${P}-automagic-openexr.patch )
 
 pkg_pretend() {
 	if use openmp ; then
@@ -65,7 +71,7 @@ src_prepare() {
 		-e "s:LICENSE::" \
 		-i doc/CMakeLists.txt || die
 
-	epatch_user
+	cmake-utils_src_prepare
 }
 
 src_configure() {
@@ -79,10 +85,14 @@ src_configure() {
 		$(cmake-utils_use_use jpeg2k OPENJPEG)
 		$(cmake-utils_use_use nls NLS)
 		$(cmake-utils_use_use opencl OPENCL)
+		$(cmake-utils_use_use openexr OPENEXR)
 		$(cmake-utils_use_use openmp OPENMP)
 		$(cmake-utils_use !rawspeed DONT_USE_RAWSPEED)
+		$(cmake-utils_use_use squish SQUISH)
 		$(cmake-utils_use_build slideshow SLIDESHOW)
 		$(cmake-utils_use_use web-services GLIBJSON)
+		$(cmake-utils_use_use webp WEBP)
+		-DUSE_LUA=OFF
 		-DCUSTOM_CFLAGS=ON
 		-DINSTALL_IOP_EXPERIMENTAL=ON
 		-DINSTALL_IOP_LEGACY=ON
@@ -92,7 +102,11 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	use doc && dodoc "${DISTDIR}"/${PN}-usermanual-1.2.1.pdf
+	use doc && dodoc "${DISTDIR}"/${PN}-usermanual-${PV}.pdf
+
+	for lang in ${LANGS} ; do
+		use linguas_${lang} || rm -r "${ED}"/usr/share/locale/${lang}
+	done
 
 	if use pax_kernel && use opencl ; then
 		pax-mark Cm "${ED}"/usr/bin/${PN} || die
