@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freealut
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.29 2013/08/04 12:00:27 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.30 2014/02/11 19:25:39 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> freealut-1.1.0-r2.ebuild:
+  Stable for HPPA (bug #495714).
 
   04 Aug 2013; Markus Meier <maekke@gentoo.org> freealut-1.1.0-r2.ebuild:
   add ~arm, bug #473826

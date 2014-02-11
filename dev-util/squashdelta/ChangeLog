@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/squashdelta
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/squashdelta/ChangeLog,v 1.1 2014/02/11 19:30:53 mgorny Exp $
+
+*squashdelta-9999 (11 Feb 2014)
+
+  11 Feb 2014; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +squashdelta-9999.ebuild:
+  Introduce a live ebuild for my new SquashFS delta generation tool.

@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/squashmerge
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/squashmerge/ChangeLog,v 1.1 2014/02/11 19:31:17 mgorny Exp $
+
+*squashmerge-9999 (11 Feb 2014)
+
+  11 Feb 2014; Michał Górny <mgorny@gentoo.org> +metadata.xml,
+  +squashmerge-9999.ebuild:
+  Introduce a live ebuild for my new SquashFS delta merge tool.

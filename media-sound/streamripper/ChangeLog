@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/streamripper
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.69 2012/05/05 08:53:54 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/streamripper/ChangeLog,v 1.70 2014/02/11 19:28:50 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> streamripper-1.64.6.ebuild:
+  Stable for HPPA (bug #471688).
 
   05 May 2012; Michał Górny <mgorny@gentoo.org> streamripper-1.64.0.ebuild,
   streamripper-1.64.6.ebuild:
