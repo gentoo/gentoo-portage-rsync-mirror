@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyelftools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.17 2014/01/19 10:15:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyelftools/ChangeLog,v 1.18 2014/02/11 18:25:02 bicatali Exp $
+
+  11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> pyelftools-0.21-r4.ebuild:
+  Keyword amd64-linux and x86-linux
 
   19 Jan 2014; Mike Frysinger <vapier@gentoo.org> pyelftools-0.21-r4.ebuild:
   Add arm64 love.
