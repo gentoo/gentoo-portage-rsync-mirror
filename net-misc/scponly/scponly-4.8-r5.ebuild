@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r5.ebuild,v 1.6 2014/01/26 12:17:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r5.ebuild,v 1.7 2014/02/11 18:42:29 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils multilib readme.gentoo toolchain-funcs user
@@ -94,44 +94,44 @@ pkg_config() {
 	einfo "Collecting binaries and libraries..."
 
 	# Binaries launched in sftp compat mode
-	if built_with_use =${CATEGORY}/${PF} sftp; then
+	if has_version "=${CATEGORY}/${PF}[sftp]" ; then
 		BINARIES="/usr/$(get_libdir)/misc/sftp-server"
 	fi
 
 	# Binaries launched by vanilla- and WinSCP modes
-	if built_with_use =${CATEGORY}/${PF} scp || \
-		built_with_use =${CATEGORY}/${PF} winscp; then
+	if has_version "=${CATEGORY}/${PF}[scp]" || \
+		has_version "=${CATEGORY}/${PF}[winscp]" ; then
 		BINARIES="${BINARIES} /usr/bin/scp /bin/ls /bin/rm /bin/ln /bin/mv"
 		BINARIES="${BINARIES} /bin/chmod /bin/chown /bin/chgrp /bin/mkdir /bin/rmdir"
 	fi
 
 	# Binaries launched in WinSCP compatibility mode
-	if built_with_use =${CATEGORY}/${PF} winscp; then
+	if has_version "=${CATEGORY}/${PF}[winscp]" ; then
 		BINARIES="${BINARIES} /bin/pwd /bin/groups /usr/bin/id /bin/echo"
 	fi
 
 	# Rsync compatability mode
-	if built_with_use =${CATEGORY}/${PF} rsync; then
+	if has_version "=${CATEGORY}/${PF}[rsync]" ; then
 		BINARIES="${BINARIES} /usr/bin/rsync"
 	fi
 
 	# Unison compatability mode
-	if built_with_use =${CATEGORY}/${PF} unison; then
+	if has_version "=${CATEGORY}/${PF}[unison]" ; then
 		BINARIES="${BINARIES} /usr/bin/unison"
 	fi
 
 	# subversion cli/svnserv compatibility
-	if built_with_use =${CATEGORY}/${PF} subversion; then
+	if has_version "=${CATEGORY}/${PF}[subversion]" ; then
 		BINARIES="${BINARIES} /usr/bin/svn /usr/bin/svnserve"
 	fi
 
 	# passwd compatibility
-	if built_with_use =${CATEGORY}/${PF} passwd; then
+	if has_version "=${CATEGORY}/${PF}[passwd]" ; then
 		BINARIES="${BINARIES} /bin/passwd"
 	fi
 
 	# quota compatibility
-	if built_with_use =${CATEGORY}/${PF} quota; then
+	if has_version "=${CATEGORY}/${PF}[quota]" ; then
 		BINARIES="${BINARIES} /usr/bin/quota"
 	fi
 

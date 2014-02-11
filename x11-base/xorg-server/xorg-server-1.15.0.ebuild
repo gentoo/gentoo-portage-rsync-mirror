@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.15.0.ebuild,v 1.3 2014/02/11 15:36:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.15.0.ebuild,v 1.4 2014/02/11 18:49:10 chithanh Exp $
 
 EAPI=5
 
@@ -164,6 +164,7 @@ src_configure() {
 		--without-dtrace
 		--without-fop
 		--with-os-vendor=Gentoo
+		--with-sha1=libcrypto
 	)
 
 	# Xorg-server requires includes from OS mesa which are not visible for

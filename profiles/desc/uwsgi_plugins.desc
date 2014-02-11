@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/uwsgi_plugins.desc,v 1.1 2014/01/16 13:11:06 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/uwsgi_plugins.desc,v 1.2 2014/02/11 18:33:45 fuzzyray Exp $
 
 # This file contains descriptions of UWSGI_PLUGINS USE_EXPAND flags.
 
@@ -8,7 +8,7 @@
 alarm_curl - Plugin to send a logline to a curl url.
 alarm_xmpp - Plugin to send a logline via XMPP/Jabber (see http://uwsgi-docs.readthedocs.org/en/latest/AlarmSubsystem.html).
 cache - Enable the caching framework
-carbon - Send uWSGI’s internal statistics to one or more Carbon servers
+carbon - Send uWSGI's internal statistics to one or more Carbon servers
 cheaper_busyness - Implement cheaper algorithm that adds or remove workers based on average utilization for given time period
 clock_monotonic - Modular clock source, uses clock_gettime with CLOCK_REALTIME
 clock_realtime - Modular clock source, uses clock_gettime with CLOCK_MONOTONIC

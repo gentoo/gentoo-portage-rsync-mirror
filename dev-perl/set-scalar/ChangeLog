@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/set-scalar
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.44 2014/02/11 15:48:15 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/set-scalar/ChangeLog,v 1.45 2014/02/11 18:58:51 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> set-scalar-1.260.0.ebuild:
+  Stable for HPPA (bug #495552).
 
   11 Feb 2014; Akinori Hattori <hattya@gentoo.org> set-scalar-1.260.0.ebuild:
   ia64 stable wrt bug #495552

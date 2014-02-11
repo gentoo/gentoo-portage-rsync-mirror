@@ -10,5 +10,5 @@ index 83739bd..996275e 100644
  Description: ARPACK-NG 
  Version: @PACKAGE_VERSION@
 -Libs: -L${libdir} -larpack -lblas -latlas
-+Libs: -L${libdir} @LAPACK_LIBS@ @BLAS_LIBS@
++Libs: -L${libdir} -larpack @LAPACK_LIBS@ @BLAS_LIBS@
  Cflags: 

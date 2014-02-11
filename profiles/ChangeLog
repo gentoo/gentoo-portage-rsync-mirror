@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8597 2014/02/10 19:01:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8598 2014/02/11 18:33:44 fuzzyray Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Feb 2014; Paul Varner <fuzzyray@gentoo.org> desc/uwsgi_plugins.desc:
+  Remove Unicode character from uwsgi_plugins.desc to work around bug 498748
+  for equery.
 
   10 Feb 2014; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.mask,
   arch/powerpc/package.use.mask, arch/sparc/package.use.mask:

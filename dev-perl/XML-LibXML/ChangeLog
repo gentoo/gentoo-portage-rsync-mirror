@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-LibXML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.149 2014/02/11 15:40:08 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/ChangeLog,v 1.150 2014/02/11 18:54:30 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> XML-LibXML-2.1.400.ebuild:
+  Stable for HPPA (bug #495512).
 
   11 Feb 2014; Akinori Hattori <hattya@gentoo.org> XML-LibXML-2.1.400.ebuild:
   ia64 stable wrt bug #495512

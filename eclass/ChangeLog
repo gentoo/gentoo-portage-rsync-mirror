@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1140 2014/02/09 08:30:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1141 2014/02/11 19:00:06 slyfox Exp $
+
+  11 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> ghc-package.eclass,
+  haskell-cabal.eclass:
+  Add support for parallel building (ghc-7.8+). Disable dynamic library
+  stripping and respect --sysconfdir (Cabal-1.18+).
 
   09 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome2-utils.eclass:
   Drop also values of DGSEAL_ENABLE (#500730)

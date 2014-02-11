@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.781 2014/02/11 15:36:01 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.782 2014/02/11 18:49:10 chithanh Exp $
+
+  11 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.14.5.ebuild, xorg-server-1.15.0.ebuild:
+  Fix automagic dependency on nettle, bug #486154.
 
   11 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> metadata.xml,
   xorg-server-1.15.0.ebuild:

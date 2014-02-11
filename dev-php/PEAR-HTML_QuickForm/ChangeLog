@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-HTML_QuickForm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.57 2014/01/08 16:15:30 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_QuickForm/ChangeLog,v 1.58 2014/02/11 19:00:35 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org>
+  PEAR-HTML_QuickForm-3.2.13.ebuild:
+  Stable for HPPA (bug #404705).
 
   08 Jan 2014; Matti Bickel <mabi@gentoo.org>
   -PEAR-HTML_QuickForm-3.2.11.ebuild, -PEAR-HTML_QuickForm-3.2.9.ebuild:

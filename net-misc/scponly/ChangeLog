@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/scponly
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.60 2014/01/26 12:17:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.62 2014/02/11 18:42:29 mr_bones_ Exp $
+
+  11 Feb 2014; Michael Sterrett <mr_bones_@gentoo.org> scponly-4.8-r5.ebuild:
+  use has_version instead of built_with_use
+
+  11 Feb 2014; Michael Sterrett <mr_bones_@gentoo.org> -scponly-4.8-r4.ebuild:
+  old
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> scponly-4.8-r5.ebuild:
   Stable for sparc, wrt bug #495886

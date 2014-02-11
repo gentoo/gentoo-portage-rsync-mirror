@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-Types
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.100 2014/02/11 15:28:42 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/ChangeLog,v 1.101 2014/02/11 18:51:54 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> MIME-Types-2.020.0.ebuild:
+  Stable for HPPA (bug #492188).
 
   11 Feb 2014; Akinori Hattori <hattya@gentoo.org> MIME-Types-2.020.0.ebuild:
   ia64 stable wrt bug #492188

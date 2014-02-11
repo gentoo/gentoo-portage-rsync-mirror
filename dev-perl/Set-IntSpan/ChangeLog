@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Set-IntSpan
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/ChangeLog,v 1.49 2013/08/25 10:52:48 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Set-IntSpan/ChangeLog,v 1.50 2014/02/11 18:53:06 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> Set-IntSpan-1.190.0.ebuild:
+  Stable for HPPA (bug #495470).
 
 *Set-IntSpan-1.190.0 (25 Aug 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.38 2014/01/19 08:23:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.39 2014/02/11 19:00:06 slyfox Exp $
 
 # @ECLASS: ghc-package.eclass
 # @MAINTAINER:
@@ -122,6 +122,14 @@ ghc-supports-dynamic-by-default() {
 # It usually means that ghc supports for template haskell.
 ghc-supports-interpreter() {
 	$(ghc-getghc) --info | grep "Have interpreter" | grep -q "YES"
+}
+
+# @FUNCTION: ghc-supports-parallel-make
+# @DESCRIPTION:
+# checks if ghc has support for '--make -j' mode
+# The option was introduced in ghc-7.8-rc1.
+ghc-supports-parallel-make() {
+	$(ghc-getghc) --info | grep "Support parallel --make" | grep -q "YES"
 }
 
 # @FUNCTION: ghc-extractportageversion
