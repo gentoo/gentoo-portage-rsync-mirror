@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ZMQ-LibZMQ2
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-LibZMQ2/ChangeLog,v 1.7 2014/01/19 16:58:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ZMQ-LibZMQ2/ChangeLog,v 1.8 2014/02/11 11:18:23 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> ZMQ-LibZMQ2-1.40.0.ebuild:
+  Stable for HPPA (bug #474824).
 
   19 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> -ZMQ-LibZMQ2-1.30.0.ebuild,
   ZMQ-LibZMQ2-1.40.0.ebuild:

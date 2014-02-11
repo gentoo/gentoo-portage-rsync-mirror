@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-SharedFork
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SharedFork/ChangeLog,v 1.9 2013/01/06 14:57:45 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-SharedFork/ChangeLog,v 1.10 2014/02/11 11:17:23 jer Exp $
+
+  11 Feb 2014; Jeroen Roovers <jer@gentoo.org> Test-SharedFork-0.210.0.ebuild:
+  Stable for HPPA (bug #474824).
 
   06 Jan 2013; Torsten Veller <tove@gentoo.org>
   -Test-SharedFork-0.200.0.ebuild:

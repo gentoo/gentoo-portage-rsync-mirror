@@ -4,10 +4,10 @@ DESCRIPTION=Testing TCP program
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Test-TCP/
 IUSE=test
-KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86
+KEYWORDS=~amd64 hppa ~ppc ~ppc64 ~x86
 LICENSE=|| ( Artistic GPL-1 GPL-2 GPL-3 )
 RDEPEND=>=dev-perl/Test-SharedFork-0.190.0 >=virtual/perl-IO-1.23 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/T/TO/TOKUHIROM/Test-TCP-1.21.tar.gz
 _eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	perl-module	1d50a6ea2d8d319e3205b005b3ed0dfa	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=fc1881e816d9bee0e27c155582ea3282
+_md5_=061e42730bad9149db8e916fd14158d4
