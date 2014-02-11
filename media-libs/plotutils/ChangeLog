@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/plotutils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.70 2013/07/12 14:38:11 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/ChangeLog,v 1.71 2014/02/11 14:44:18 hattya Exp $
+
+  11 Feb 2014; Akinori Hattori <hattya@gentoo.org> plotutils-2.6-r1.ebuild:
+  keyword ~ia64 wrt bug #468582
 
   12 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org>
   plotutils-2.6-r1.ebuild:

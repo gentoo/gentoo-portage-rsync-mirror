@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libxmi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/ChangeLog,v 1.9 2013/07/12 14:15:12 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxmi/ChangeLog,v 1.10 2014/02/11 14:43:45 hattya Exp $
+
+  11 Feb 2014; Akinori Hattori <hattya@gentoo.org> libxmi-1.3.ebuild:
+  keyword ~ia64 wrt bug #468582
 
   12 Jul 2013; Vicente Olivert Riera <vincent@gentoo.org> libxmi-1.3.ebuild:
   ppc, ppc64 keywords added, bug #468582

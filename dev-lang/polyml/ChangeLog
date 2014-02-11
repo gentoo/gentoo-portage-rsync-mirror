@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/polyml
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.10 2012/12/05 09:49:35 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/polyml/ChangeLog,v 1.11 2014/02/11 14:35:09 gienah Exp $
+
+*polyml-5.5.1 (11 Feb 2014)
+
+  11 Feb 2014; Mark Wright <gienah@gentoo.org>
+  +files/polyml-5.5.1-inputN-return-for-zero-chars.patch,
+  +files/polyml-5.5.1-mprotect-exec.patch,
+  +files/polyml-5.5.1-optimize-closure.patch, +polyml-5.5.1.ebuild:
+  Bump polyml to 5.5.1. Fix bug 453146 - dev-lang/polyml-5.5.0: fails to build
+  (pax kernel?) by paxmark m poly and polyimport.
 
   05 Dec 2012; Mark Wright <gienah@gentoo.org> polyml-5.4.1.ebuild,
   polyml-5.5.0.ebuild:
