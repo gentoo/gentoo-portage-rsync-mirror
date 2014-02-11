@@ -1,13 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.16.1.ebuild,v 1.1 2014/02/09 20:28:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.16.1.ebuild,v 1.2 2014/02/11 08:32:02 jlec Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python{2_6,2_7} )
 
-inherit eutils gnome2 python-single-r1 versionator virtualx
+inherit autotools eutils gnome2 python-single-r1 versionator virtualx
 
 DESCRIPTION="A user interface designer for GTK+ and GNOME"
 HOMEPAGE="http://glade.gnome.org/"
@@ -48,7 +48,11 @@ pkg_setup() {
 src_prepare() {
 	# To avoid file collison with other slots, rename help module.
 	# Prevent the UI from loading glade:3's gladeui devhelp documentation.
-	epatch "${FILESDIR}/${PN}-3.14.1-doc-version.patch"
+	epatch \
+		"${FILESDIR}/${PN}-3.14.1-doc-version.patch" \
+		"${FILESDIR}"/${P}-underlinking.patch
+
+	eautoreconf
 
 	gnome2_src_prepare
 }
