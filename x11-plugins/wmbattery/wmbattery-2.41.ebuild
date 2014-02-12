@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.41.ebuild,v 1.1 2012/09/25 14:08:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.41.ebuild,v 1.2 2014/02/11 23:20:25 voyageur Exp $
 
 EAPI=4
 inherit autotools
@@ -18,6 +18,7 @@ DEPEND="sys-apps/apmd
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
