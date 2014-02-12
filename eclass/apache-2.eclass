@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.34 2014/01/31 08:29:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.35 2014/02/12 00:03:21 vapier Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -440,6 +440,13 @@ apache-2_src_prepare() {
 # MY_CONF
 apache-2_src_configure() {
 	tc-export PKG_CONFIG
+
+	# Sanity check in case people have bad mounts/TPE settings. #500928
+	if ! "${T}"/pcre-config --help >/dev/null ; then
+		eerror "Could not execute ${T}/pcre-config; do you have bad mount"
+		eerror "permissions in ${T} or have TPE turned on in your kernel?"
+		die "check your runtime settings #500928"
+	fi
 
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	# Thanks to Harald van Dijk
