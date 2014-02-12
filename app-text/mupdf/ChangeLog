@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.96 2014/01/29 14:44:43 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.97 2014/02/12 01:04:08 jer Exp $
+
+  12 Feb 2014; Jeroen Roovers <jer@gentoo.org> mupdf-1.3_p20140118.ebuild:
+  Stable for HPPA (bug #500988).
 
   29 Jan 2014; Akinori Hattori <hattya@gentoo.org> mupdf-1.3_p20140118.ebuild:
   keyword ~ia64 wrt bug #491876

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.115 2014/02/02 00:09:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.116 2014/02/12 01:05:42 radhermit Exp $
+
+*yaml-0.900.0 (12 Feb 2014)
+
+  12 Feb 2014; Tim Harder <radhermit@gentoo.org> +yaml-0.900.0.ebuild:
+  Version bump.
 
   02 Feb 2014; Mike Frysinger <vapier@gentoo.org> yaml-0.840.0.ebuild:
   Mark arm64/m68k/s390/sh stable.
