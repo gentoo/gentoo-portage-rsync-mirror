@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2.4.ebuild,v 1.3 2013/03/04 06:49:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2.4.ebuild,v 1.4 2014/02/12 10:31:14 pinkbyte Exp $
 
 EAPI=5
 
@@ -52,12 +52,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-7.2.3-libtool.patch
-	epatch "${FILESDIR}"/${PN}-7.2.3+automake-1.12.patch
-	epatch "${FILESDIR}"/${PN}-7.2.4+boost-1.50.patch
+	epatch \
+		"${FILESDIR}/${PN}-7.2.3-libtool.patch" \
+		"${FILESDIR}/${PN}-7.2.3+automake-1.12.patch" \
+		"${FILESDIR}/${PN}-7.2.4+boost-1.50.patch" \
+		"${FILESDIR}/${P}-fix-boost_thread-detection.patch"
 
 	python_convert_shebangs -r 2 .
 
+	epatch_user
 	eautoreconf
 }
 

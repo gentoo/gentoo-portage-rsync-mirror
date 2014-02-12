@@ -1,8 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/polly/polly-0.93.9.ebuild,v 1.1 2013/06/29 23:52:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/polly/polly-0.93.9.ebuild,v 1.2 2014/02/12 10:50:41 jlec Exp $
 
 EAPI=5
+
 PYTHON_COMPAT=( python{2_6,2_7} )
 DISTUTILS_NO_PARALLEL_BUILD=1
 
@@ -34,12 +35,12 @@ DEPEND="${PYTHON_DEPS}"
 
 PATCHES=( "${FILESDIR}"/${PN}-0.93.10-desktop.patch )
 
-src_install() {
+python_install_all() {
 	insinto /etc/gconf/schemas
 	doins share/gconf/schemas/${PN}.schemas
 	rm -rf share/gconf || die
 
-	distutils-r1_src_install
+	distutils-r1_python_install_all
 }
 
 pkg_preinst() {

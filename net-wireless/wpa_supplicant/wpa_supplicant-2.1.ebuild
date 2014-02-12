@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.0-r3.ebuild,v 1.1 2013/12/13 19:36:05 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.1.ebuild,v 1.1 2014/02/12 10:44:24 gurligebis Exp $
 
 EAPI=4
 
@@ -111,6 +111,7 @@ src_configure() {
 	echo "CONFIG_EAP_PAX=y"         >> .config
 	echo "CONFIG_EAP_PSK=y"         >> .config
 	echo "CONFIG_EAP_TLV=y"         >> .config
+	echo "CONFIG_EAP_EXE=y"         >> .config
 	echo "CONFIG_IEEE8021X_EAPOL=y" >> .config
 	echo "CONFIG_PKCS12=y"          >> .config
 	echo "CONFIG_PEERKEY=y"         >> .config
@@ -167,13 +168,9 @@ src_configure() {
 	if use kernel_linux ; then
 		# Linux specific drivers
 		echo "CONFIG_DRIVER_ATMEL=y"       >> .config
-		#echo "CONFIG_DRIVER_BROADCOM=y"   >> .config
-		#echo "CONFIG_DRIVER_HERMES=y"	   >> .config
 		echo "CONFIG_DRIVER_HOSTAP=y"      >> .config
 		echo "CONFIG_DRIVER_IPW=y"         >> .config
-		echo "CONFIG_DRIVER_NDISWRAPPER=y" >> .config
 		echo "CONFIG_DRIVER_NL80211=y"     >> .config
-		#echo "CONFIG_DRIVER_PRISM54=y"    >> .config
 		echo "CONFIG_DRIVER_RALINK=y"      >> .config
 		echo "CONFIG_DRIVER_WEXT=y"        >> .config
 		echo "CONFIG_DRIVER_WIRED=y"       >> .config

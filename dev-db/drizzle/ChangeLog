@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/drizzle
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.35 2013/03/17 17:39:35 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/ChangeLog,v 1.36 2014/02/12 10:31:14 pinkbyte Exp $
+
+  12 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> drizzle-7.2.4.ebuild,
+  +files/drizzle-7.2.4-fix-boost_thread-detection.patch:
+  Fix detection of boost_thread, wrt bug #490216, add epatch_user
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml
