@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.145 2014/02/12 12:48:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.146 2014/02/12 13:15:46 aballier Exp $
 
 EAPI="5"
 
@@ -43,10 +43,10 @@ IUSE="
 	aac aacplus alsa amr amrenc bindist bluray +bzip2 cdio celt
 	cpudetection debug doc +encode examples faac fdk flite fontconfig frei0r
 	gme	gnutls gsm +hardcoded-tables +iconv iec61883 ieee1394 jack jpeg2k
-	ladspa libass libcaca libsoxr libv4l modplug mp3 +network openal openssl opus
-	oss pic pulseaudio quvi rtmp schroedinger sdl speex ssh static-libs test theora
-	threads truetype twolame v4l vaapi vdpau vorbis vpx wavpack X x264 xvid
-	+zlib zvbi
+	ladspa libass libcaca libsoxr libv4l modplug mp3 +network openal opengl
+	openssl opus oss pic pulseaudio quvi rtmp schroedinger sdl speex ssh
+	static-libs test theora threads truetype twolame v4l vaapi vdpau vorbis vpx
+	wavpack X x264 xvid +zlib zvbi
 	"
 
 ARM_CPU_FEATURES="armv5te armv6 armv6t2 neon armvfp:vfp"
@@ -112,6 +112,7 @@ RDEPEND="
 	libv4l? ( media-libs/libv4l )
 	modplug? ( media-libs/libmodplug )
 	openal? ( >=media-libs/openal-1.1 )
+	opengl? ( virtual/opengl )
 	openssl? ( dev-libs/openssl )
 	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -197,7 +198,7 @@ src_configure() {
 	fi
 
 	# libavdevice options
-	ffuse="${ffuse}	cdio:libcdio iec61883:libiec61883 ieee1394:libdc1394 libcaca openal"
+	ffuse="${ffuse}	cdio:libcdio iec61883:libiec61883 ieee1394:libdc1394 libcaca openal opengl"
 
 	# Indevs
 	use v4l || myconf="${myconf} --disable-indev=v4l2 --disable-outdev=v4l2"
