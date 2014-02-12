@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.3.8.ebuild,v 1.1 2013/10/28 08:40:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/rpy-2.3.8.ebuild,v 1.2 2014/02/12 00:53:18 bicatali Exp $
 
 EAPI=5
 
@@ -22,11 +22,11 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
-	>=dev-lang/R-2.8
+	>=dev-lang/R-3
 	dev-python/numpy[${PYTHON_USEDEP}]
 	!<=dev-python/rpy-1.0.2-r2"
 DEPEND="${RDEPEND}
-	test? ( dev-python/pandas )"
+	test? ( <dev-python/pandas-0.13 )"
 
 S="${WORKDIR}/${MY_P}"
 
