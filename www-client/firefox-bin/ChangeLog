@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.175 2014/02/07 14:11:02 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.176 2014/02/12 06:03:40 phajdan.jr Exp $
+
+  11 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  firefox-bin-24.3.0.ebuild:
+  x86 stable wrt security bug #500320
 
 *firefox-bin-27.0 (07 Feb 2014)
 *firefox-bin-24.3.0 (07 Feb 2014)
