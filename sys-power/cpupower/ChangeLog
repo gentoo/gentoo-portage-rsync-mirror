@@ -1,6 +1,16 @@
 # ChangeLog for sys-power/cpupower
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/ChangeLog,v 1.12 2013/12/25 11:46:32 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpupower/ChangeLog,v 1.14 2014/02/12 20:03:18 ssuominen Exp $
+
+  12 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> -cpupower-3.11-r1.ebuild,
+  -cpupower-3.11.ebuild, -cpupower-3.12.ebuild, -files/init.d-r2,
+  -files/init.d-r3:
+  old
+
+*cpupower-3.13 (12 Feb 2014)
+
+  12 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> +cpupower-3.13.ebuild:
+  Version bump.
 
 *cpupower-3.12 (25 Dec 2013)
 

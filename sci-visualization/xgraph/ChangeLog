@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/xgraph
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.16 2012/08/07 04:46:51 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/xgraph/ChangeLog,v 1.17 2014/02/12 20:11:29 ulm Exp $
+
+  12 Feb 2014; Ulrich Müller <ulm@gentoo.org> xgraph-12.1-r2.ebuild,
+  xgraph-12.1-r3.ebuild:
+  Fix LICENSE, bug 452914. Unfortunately, some of xgraph's code seems to be
+  non-free.
 
 *xgraph-12.1-r3 (07 Aug 2012)
 
