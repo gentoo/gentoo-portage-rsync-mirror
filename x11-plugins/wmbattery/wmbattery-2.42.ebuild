@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.42.ebuild,v 1.2 2014/02/11 23:20:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmbattery/wmbattery-2.42.ebuild,v 1.3 2014/02/12 08:54:36 voyageur Exp $
 
 EAPI=5
 inherit autotools
@@ -14,12 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc -sparc ~x86"
 IUSE=""
 
-DEPEND="sys-apps/apmd
+RDEPEND="sys-apps/apmd
 	sys-power/upower
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${PN}
 

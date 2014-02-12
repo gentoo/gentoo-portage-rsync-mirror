@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ipython
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.131 2013/12/07 19:22:15 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.132 2014/02/12 08:55:12 mgorny Exp $
+
+*ipython-1.1.0-r2 (12 Feb 2014)
+
+  12 Feb 2014; Michał Górny <mgorny@gentoo.org> +ipython-1.1.0-r2.ebuild:
+  Create versioned IPython symlinks alike Debian, bug #496010.
 
   07 Dec 2013; Pacho Ramos <pacho@gentoo.org> ipython-1.0.0.ebuild:
   x86 stable, bug #488738
