@@ -1,0 +1,31 @@
+From 593bc8c63d582ec0fc2b3a35336106cf9c3a8b34 Mon Sep 17 00:00:00 2001
+From: Matthew Daley <mattd@bugfuzz.com>
+Date: Sun, 12 Jan 2014 14:29:32 +1300
+Subject: [PATCH] xsm/flask: correct off-by-one in
+ flask_security_avc_cachestats cpu id check
+
+This is XSA-85
+
+Signed-off-by: Matthew Daley <mattd@bugfuzz.com>
+Reviewed-by: Jan Beulich <jbeulich@suse.com>
+Reviewed-by: Ian Campbell <ian.campbell@citrix.com>
+---
+ xen/xsm/flask/flask_op.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/xen/xsm/flask/flask_op.c b/xen/xsm/flask/flask_op.c
+index 4426ab9..22878f5 100644
+--- a/xen/xsm/flask/flask_op.c
++++ b/xen/xsm/flask/flask_op.c
+@@ -457,7 +457,7 @@ static int flask_security_avc_cachestats(struct xen_flask_cache_stats *arg)
+ {
+     struct avc_cache_stats *st;
+ 
+-    if ( arg->cpu > nr_cpu_ids )
++    if ( arg->cpu >= nr_cpu_ids )
+         return -ENOENT;
+     if ( !cpu_online(arg->cpu) )
+         return -ENOENT;
+-- 
+1.8.5.2
+
