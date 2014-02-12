@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.0.ebuild,v 1.3 2013/04/29 18:35:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.1.ebuild,v 1.1 2014/02/12 10:30:27 gurligebis Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils systemd
 
 DESCRIPTION="IEEE 802.11 wireless LAN Host AP daemon"
 HOMEPAGE="http://hostap.epitest.fi"
@@ -12,7 +12,7 @@ SRC_URI="http://hostap.epitest.fi/releases/${P}.tar.gz"
 
 LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc x86"
+KEYWORDS="~amd64 ~mips ~ppc ~x86"
 IUSE="ipv6 logwatch madwifi +ssl +wps +crda"
 
 DEPEND="ssl? ( dev-libs/openssl )
@@ -28,9 +28,6 @@ RDEPEND="${DEPEND}"
 S="${S}/${PN}"
 
 src_prepare() {
-	cd ..
-	epatch "${FILESDIR}/${P}-tls_length_fix.patch"
-
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \
 		"${S}/hostapd.conf" || die
 }
@@ -64,6 +61,7 @@ src_configure() {
 	echo "CONFIG_EAP_GTC=y" >> ${CONFIG}
 	echo "CONFIG_EAP_SIM=y" >> ${CONFIG}
 	echo "CONFIG_EAP_AKA=y" >> ${CONFIG}
+	echo "CONFIG_EAP_EKE=y" >> ${CONFIG}
 	echo "CONFIG_EAP_PAX=y" >> ${CONFIG}
 	echo "CONFIG_EAP_PSK=y" >> ${CONFIG}
 	echo "CONFIG_EAP_SAKE=y" >> ${CONFIG}
@@ -105,6 +103,7 @@ src_configure() {
 	echo "CONFIG_PEERKEY=y" >> ${CONFIG}
 	echo "CONFIG_RSN_PREAUTH=y" >> ${CONFIG}
 	echo "CONFIG_INTERWORKING=y" >> ${CONFIG}
+	echo "CONFIG_ACS=y" >> ${CONFIG}
 
 	if use ipv6; then
 		# IPv6 support
@@ -145,6 +144,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}-init.d ${PN}
 	newconfd "${FILESDIR}"/${PN}-conf.d ${PN}
+	systemd_dounit "${FILESDIR}"/${PN}.service
 
 	doman ${PN}{.8,_cli.1}
 
@@ -165,6 +165,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo
+	einfo "If you are running openRC you need to follow this instructions:"
 	einfo "In order to use ${PN} you need to set up your wireless card"
 	einfo "for master mode in /etc/conf.d/net and then start"
 	einfo "/etc/init.d/${PN}."
