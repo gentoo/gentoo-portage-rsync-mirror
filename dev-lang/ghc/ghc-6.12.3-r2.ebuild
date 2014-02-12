@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.8 2012/04/30 15:38:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.9 2014/02/12 07:46:29 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -108,6 +108,9 @@ ghc_setup_cflags() {
 	# We also use these CFLAGS for building the C parts of ghc, ie the rts.
 	strip-flags
 	strip-unsupported-flags
+
+	# Cmm can't parse line numbers #482086
+	replace-flags -ggdb[3-9] -ggdb2
 
 	GHC_CFLAGS=""
 	for flag in ${CFLAGS}; do

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.4.1.ebuild,v 1.1 2014/02/11 05:43:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-1.4.1-r1.ebuild,v 1.1 2014/02/12 07:49:52 radhermit Exp $
 
 EAPI=5
 
@@ -68,6 +68,7 @@ pkg_pretend() {
 
 src_prepare() {
 	sed -e "s:\(/share/doc/\)darktable:\1${PF}:" \
+		-e "s:\(\${SHARE_INSTALL}/doc/\)darktable:\1${PF}:" \
 		-e "s:LICENSE::" \
 		-i doc/CMakeLists.txt || die
 
