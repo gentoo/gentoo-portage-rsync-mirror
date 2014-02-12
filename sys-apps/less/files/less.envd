@@ -1,2 +1,3 @@
 LESSOPEN="|lesspipe %s"
 LESS="-R -M --shift 5"
+SYSTEMD_LESS="FRSM --shift 5"
