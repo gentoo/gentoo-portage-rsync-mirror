@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.262 2014/02/07 15:24:12 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.263 2014/02/12 05:59:38 phajdan.jr Exp $
+
+  11 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  thunderbird-24.3.0.ebuild:
+  x86 stable wrt security bug #500320
 
 *thunderbird-24.3.0 (07 Feb 2014)
 

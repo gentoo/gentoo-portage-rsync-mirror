@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.301 2014/02/10 06:53:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.302 2014/02/12 06:01:01 phajdan.jr Exp $
+
+  11 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> firefox-24.3.0.ebuild:
+  x86 stable wrt security bug #500320
 
   10 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> firefox-27.0.ebuild:
   Another dependency fix (bug #500810).
