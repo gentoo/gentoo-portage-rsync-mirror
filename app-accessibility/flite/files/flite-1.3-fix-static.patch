@@ -1,0 +1,29 @@
+diff -Naur flite-1.3-release/main/Makefile flite-1.3-release.new/main/Makefile
+--- flite-1.3-release/main/Makefile	2014-02-12 12:08:32.222776141 -0800
++++ flite-1.3-release.new/main/Makefile	2014-02-12 12:29:32.308048276 -0800
+@@ -48,15 +48,23 @@
+ ALL = $(BINDIR)/flite$(EXEEXT) $(BINDIR)/flite_time$(EXEEXT) \
+       $(BINDIR)/t2p$(EXEEXT)
+ 
++include $(TOP)/config/common_make_rules
++
+ flite_LIBS = flite_$(FL_VOX) flite_$(FL_LANG) flite_$(FL_LEX) 
+ flite_LIBS_flags = -L$(LIBDIR) $(flite_LIBS:%=-l%)
++ifdef SHFLAGS
+ flite_LIBS_deps = $(flite_LIBS:%=$(LIBDIR)/lib%.so)
++else
++flite_LIBS_deps = $(flite_LIBS:%=$(LIBDIR)/lib%.a)
++endif
+ 
+ flite_time_LIBS = flite_cmu_time_awb flite_$(FL_LANG) flite_$(FL_LEX)
+ flite_time_LIBS_flags = -L$(LIBDIR) $(flite_time_LIBS:%=-l%)
++ifdef SHFLAGS
+ flite_time_LIBS_deps = $(flite_time_LIBS:%=$(LIBDIR)/lib%.so)
+-
+-include $(TOP)/config/common_make_rules
++else
++flite_time_LIBS_deps = $(flite_time_LIBS:%=$(LIBDIR)/lib%.a)
++endif
+ 
+ $(BINDIR)/flite$(EXEEXT): flite_main.o $(FLITELIBS) $(flite_LIBS_deps)
+ 	$(CC) $(CFLAGS) -o $@ flite_main.o $(flite_LIBS_flags) $(LDFLAGS)

@@ -1,6 +1,23 @@
 # ChangeLog for app-accessibility/flite
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.47 2013/08/25 14:42:09 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.48 2014/02/12 21:21:11 teiresias Exp $
+
+*flite-1.4-r3 (12 Feb 2014)
+*flite-1.3-r1 (12 Feb 2014)
+*flite-1.2-r2 (12 Feb 2014)
+
+  12 Feb 2014; Christopher Brannon <teiresias@gentoo.org> +flite-1.2-r2.ebuild,
+  +files/flite-1.2-tempfile.patch, +flite-1.3-r1.ebuild,
+  +files/flite-1.3-fix-static.patch, +files/flite-1.3-libm.patch,
+  +files/flite-1.3-respect-ldflags.patch, +files/flite-1.3-tempfile.patch,
+  -flite-1.4-r2.ebuild, +flite-1.4-r3.ebuild, +files/flite-1.4-tempfile.patch:
+  For flite 1.2, 1.3, and 1.4, add a patch to prevent
+  the use of a temporary file. (bug #498020).
+  For flite 1.3, respect LDFLAGS (bug #476810).
+  For flite 1.3, fix build failure (bug #456986).
+  For flite 1.3, allow static flite to be built. USE=static has been
+  broken for a long time. No bug was ever opened, and I just found the
+  problem today.
 
   25 Aug 2013; Jeroen Roovers <jer@gentoo.org> flite-1.2-r1.ebuild,
   flite-1.3.ebuild, flite-1.4-r2.ebuild:

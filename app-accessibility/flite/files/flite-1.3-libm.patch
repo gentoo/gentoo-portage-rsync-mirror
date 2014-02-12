@@ -1,0 +1,11 @@
+--- flite-1.3-release/config/common_make_rules	2013-04-03 15:28:04.004893371 +0100
++++ flite-1.3-release/config/common_make_rules	2013-04-03 15:27:50.574992901 +0100
+@@ -69,7 +69,7 @@
+ 
+ ifdef SHFLAGS
+ FLITELIBS = $(LIBDIR)/libflite.so
+-LDFLAGS += -L$(LIBDIR) -lflite $(OTHERLIBS)
++LDFLAGS += -L$(LIBDIR) -lflite -lm $(OTHERLIBS)
+ else
+ FLITELIBS = $(LIBDIR)/libflite.a
+ LDFLAGS += -L$(LIBDIR) -lflite -lm $(AUDIOLIBS) $(OTHERLIBS)

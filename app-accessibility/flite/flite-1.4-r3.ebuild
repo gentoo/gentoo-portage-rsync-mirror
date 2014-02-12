@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r2.ebuild,v 1.3 2013/08/25 14:42:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/flite-1.4-r3.ebuild,v 1.1 2014/02/12 21:21:11 teiresias Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -30,6 +30,7 @@ get_audio() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-tempfile.patch
 	epatch "${FILESDIR}"/${P}-fix-parallel-builds.patch
 	epatch "${FILESDIR}"/${P}-respect-destdir.patch
 	epatch "${FILESDIR}"/${P}-ldflags.patch

@@ -10,4 +10,4 @@ RDEPEND=alsa? ( >=media-libs/alsa-lib-1.0.24.1 )
 SLOT=0
 SRC_URI=http://www.speech.cs.cmu.edu/flite/packed/flite-1.4/flite-1.4-release.tar.bz2
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=ede83d2d29eb5191afd12b32696fecff
+_md5_=ef25e8f924d069e325e4c7162e71aabd
