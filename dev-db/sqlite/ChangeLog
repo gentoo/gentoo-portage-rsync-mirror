@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.510 2014/02/09 17:50:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.511 2014/02/11 23:58:21 floppym Exp $
+
+*sqlite-3.8.3.1 (11 Feb 2014)
+
+  11 Feb 2014; Mike Gilbert <floppym@gentoo.org> +sqlite-3.8.3.1.ebuild:
+  Version bump. Ebuild by Arfrever.
 
   09 Feb 2014; Mike Gilbert <floppym@gentoo.org> sqlite-3.8.3.ebuild:
   Fix emul-linux-x86-baselibs blocker.
