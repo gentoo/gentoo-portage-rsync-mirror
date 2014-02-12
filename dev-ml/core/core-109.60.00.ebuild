@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/core-109.60.00.ebuild,v 1.1 2014/01/19 15:59:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/core-109.60.00.ebuild,v 1.2 2014/02/12 11:32:23 aballier Exp $
 
 EAPI="5"
 
@@ -29,13 +29,10 @@ RDEPEND="
 	>=dev-ml/comparelib-109.27.00:=
 	>=dev-ml/herelib-109.35.00:=
 	>=dev-ml/pipebang-109.15.00:=
+	dev-ml/custom_printf:=
 	dev-ml/pa_bench:=
 	dev-ml/pa_test:=
 	"
 DEPEND="${RDEPEND}
 	test? ( >=dev-ml/ounit-1.1.2 )"
 DOCS=( "README.md" )
-
-#src_prepare() {
-#	has_version '>=dev-lang/ocaml-4.01.0_beta' && epatch "${FILESDIR}/${PN}-ocaml-4.01.patch"
-#}

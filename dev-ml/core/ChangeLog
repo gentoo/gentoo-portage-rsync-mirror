@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/core
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.26 2014/01/19 15:59:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.27 2014/02/12 11:32:23 aballier Exp $
+
+  12 Feb 2014; Alexis Ballier <aballier@gentoo.org> core-109.60.00.ebuild:
+  depend on custom_printf, bug #499926 by David E. Narváez; clean up old
+  commented out code in the ebuild
 
 *core-109.60.00 (19 Jan 2014)
 
