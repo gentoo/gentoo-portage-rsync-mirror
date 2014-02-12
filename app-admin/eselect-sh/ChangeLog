@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/eselect-sh
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.28 2013/09/29 14:44:52 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/ChangeLog,v 1.29 2014/02/12 18:11:36 mgorny Exp $
+
+*eselect-sh-0.4-r1 (12 Feb 2014)
+
+  12 Feb 2014; Michał Górny <mgorny@gentoo.org> +eselect-sh-0.4-r1.ebuild,
+  +files/sh.eselect-0.4-r1, -eselect-sh-0.4.ebuild:
+  Remove busybox from supported shell list, since it overrides system tools like
+  ar with its own and breaks stuff. Related to bug #501092.
 
   29 Sep 2013; Michał Górny <mgorny@gentoo.org> -eselect-sh-0.3.ebuild:
   Drop old.

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/eselect-sh-0.4.ebuild,v 1.13 2013/06/02 08:38:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sh/eselect-sh-0.4-r1.ebuild,v 1.1 2014/02/12 18:11:36 mgorny Exp $
 
 EAPI=5
 
