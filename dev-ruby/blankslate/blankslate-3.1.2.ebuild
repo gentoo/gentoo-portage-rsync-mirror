@@ -1,10 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/blankslate-3.1.2.ebuild,v 1.1 2013/12/12 23:48:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/blankslate-3.1.2.ebuild,v 1.2 2014/02/12 07:18:03 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby18 ruby19 ruby20"
+
+RUBY_FAKEGEM_RECIPE_DOC="rdoc"
 
 RUBY_FAKEGEM_EXTRADOC="README.rdoc"
 
@@ -18,27 +20,25 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-#Failing tests:
-#ruby19+ruby20: test_empty_value(TestMarkup) [test/test_markupbuilder.rb:38]:
-#ruby20: test_utf8_verbatim(TestXmlEscaping) [test/test_xchar.rb:72]:
-RESTRICT="test"
+ruby_add_bdepend "test? ( dev-ruby/builder )"
 
 all_ruby_prepare() {
 	sed -i -e "/test\/preload/d"\
 		-e "/test_preload_method_added/,/end/d" test/test_blankslate.rb || die
 	sed -i -e "/test\/preload/d" test/test_{method_caching,markupbuilder,eventbuilder}.rb || die
-}
 
-each_ruby_compile() {
-	:;
-}
-all_ruby_compile() {
-	:;
+	# Avoid failure due to differing builder versions that render an
+	# empty value differently.
+	sed -i -e '/test_empty_value/,/end/ s:^:#:' test/test_markupbuilder.rb || die
+
+	# Avoid failing encoding test on ruby20 for now. Not clear if this
+	# will be a real problem, but looks like ruby20 properly supports
+	# utf8 verbatim which the test suite does not expect.
+	sed -i -e '/test_utf8_verbatim/,/end/ s:^:#:' test/test_xchar.rb || die
+
+	rm -rf doc || die "Removing old builder documentation failed."
 }
 
 each_ruby_test() {
-	for i in test/*
-	do
-		${RUBY} -I. -Ilib "${i}" || die
-	done
+	${RUBY} -I.:lib -e "Dir['test/test_*.rb'].each{|f| require f}" || die
 }
