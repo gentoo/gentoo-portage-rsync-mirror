@@ -1,14 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre5537.ebuild,v 1.2 2014/02/07 18:17:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre1621.ebuild,v 1.1 2014/02/12 12:26:52 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps qt4-r2 user
+inherit autotools eutils fcaps qt4-r2 user versionator
 
-[[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
+WS_PV="$(get_version_component_range 1-3)"
+WS_REV="$(get_version_component_range 4)"
+WS_REV="${WS_REV/pre/}"
+WS_GIT="gab3348e"
+
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-SRC_URI="http://www.wireshark.org/download/automated/src/${P/_pre*}-SVN-${PV/*_pre}.tar.bz2"
+SRC_URI="http://www.wireshark.org/download/automated/src/${PN}-${WS_PV}-${WS_REV}-${WS_GIT}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
@@ -76,7 +80,7 @@ DEPEND="
 	virtual/pkgconfig
 "
 
-S=${WORKDIR}/${P/_pre*}-SVN-${PV/*_pre}
+S=${WORKDIR}/${PN}-${WS_PV}-${WS_REV}-${WS_GIT}
 
 pkg_setup() {
 	enewgroup wireshark
