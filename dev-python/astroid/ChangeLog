@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/astroid
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astroid/ChangeLog,v 1.1 2014/02/12 08:03:26 idella4 Exp $
+
+*astroid-1.0.1 (12 Feb 2014)
+
+  12 Feb 2014; Ian Delaney <idella4@gentoo.org> +astroid-1.0.1.ebuild,
+  +metadata.xml:
+  this is an updated clone if astng which has been renamed and the upstream repo
+  re-located to bitbucket, py3.3 support added, test phase and install updated

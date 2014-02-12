@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/squashmerge/squashmerge-9999.ebuild,v 1.1 2014/02/11 19:31:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/squashmerge/squashmerge-9999.ebuild,v 1.2 2014/02/12 08:01:24 mgorny Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ inherit git-r3
 
 inherit autotools-utils
 
-DESCRIPTION="dev-util/quashdelta delta merge tool"
+DESCRIPTION="dev-util/squashdelta delta merge tool"
 HOMEPAGE="https://bitbucket.org/mgorny/squashmerge/"
 SRC_URI="mirror://bitbucket/mgorny/${PN}/downloads/${P}.tar.bz2"
 
