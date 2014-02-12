@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-OptList
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/ChangeLog,v 1.29 2014/02/01 23:50:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/ChangeLog,v 1.30 2014/02/12 12:49:33 jer Exp $
+
+  12 Feb 2014; Jeroen Roovers <jer@gentoo.org> Data-OptList-0.108.0.ebuild:
+  Stable for HPPA (bug #492114).
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Data-OptList-0.107.0.ebuild,
   Data-OptList-0.108.0.ebuild:

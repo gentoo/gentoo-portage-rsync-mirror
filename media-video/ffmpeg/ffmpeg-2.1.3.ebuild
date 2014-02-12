@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.1.3.ebuild,v 1.1 2014/01/16 20:01:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-2.1.3.ebuild,v 1.2 2014/02/12 12:48:25 aballier Exp $
 
 EAPI="5"
 
@@ -115,7 +115,7 @@ RDEPEND="
 	openssl? ( dev-libs/openssl )
 	opus? ( media-libs/opus )
 	pulseaudio? ( media-sound/pulseaudio )
-	quvi? ( media-libs/libquvi )
+	quvi? ( media-libs/libquvi:0.4 )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
 	schroedinger? ( media-libs/schroedinger )

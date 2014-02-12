@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.9-r1.ebuild,v 1.4 2014/02/09 06:44:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.9-r1.ebuild,v 1.5 2014/02/12 12:39:34 polynomial-c Exp $
 
 EAPI=5
 
@@ -122,7 +122,7 @@ pkg_setup() {
 		elog "You did not pick the ncurses or gtk use flags, only libpurple"
 		elog "will be built."
 	fi
-	if use dbus || { use ncurses && use python; }; then
+	if use python || use dbus ; then
 		python-single-r1_pkg_setup
 	fi
 

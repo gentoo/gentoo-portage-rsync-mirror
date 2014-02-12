@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libquvi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.27 2013/11/21 23:30:39 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.28 2014/02/12 12:43:31 aballier Exp $
+
+*libquvi-0.4.1-r1 (12 Feb 2014)
+
+  12 Feb 2014; Alexis Ballier <aballier@gentoo.org> +libquvi-0.4.1-r1.ebuild:
+  add slotted 0.4 version
 
 *libquvi-0.9.4 (21 Nov 2013)
 
