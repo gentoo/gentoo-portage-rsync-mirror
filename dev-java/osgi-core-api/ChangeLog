@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/osgi-core-api
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/ChangeLog,v 1.8 2013/12/24 16:24:53 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/osgi-core-api/ChangeLog,v 1.10 2014/02/12 02:38:42 radhermit Exp $
+
+  12 Feb 2014; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove empty description from metadata.
+
+  12 Feb 2014; Tim Harder <radhermit@gentoo.org> osgi-core-api-4.3.ebuild,
+  osgi-core-api-5.0.0.ebuild:
+  Drop fetch and bindist restrictions since the jars are distributed on public
+  maven repos everywhere.
 
   24 Dec 2013; Tom Wijsman <TomWij@gentoo.org> osgi-core-api-4.3.ebuild,
   osgi-core-api-5.0.0.ebuild:
