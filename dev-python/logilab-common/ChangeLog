@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/logilab-common
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.133 2014/01/08 03:48:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.134 2014/02/12 04:49:32 idella4 Exp $
+
+*logilab-common-0.61.0 (12 Feb 2014)
+
+  12 Feb 2014; Ian Delaney <idella4@gentoo.org> +logilab-common-0.61.0.ebuild:
+  bump; add py3.3 support
 
 *logilab-common-0.60.1 (08 Jan 2014)
 
