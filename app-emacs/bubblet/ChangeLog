@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/bubblet
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bubblet/ChangeLog,v 1.13 2008/12/18 21:43:57 ulm Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bubblet/ChangeLog,v 1.14 2014/02/12 09:01:07 ulm Exp $
+
+  12 Feb 2014; Ulrich Müller <ulm@gentoo.org> bubblet-0.74-r1.ebuild,
+  +files/50bubblet-gentoo.el, -files/51bubblet-gentoo.el:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   18 Dec 2008; Ulrich Mueller <ulm@gentoo.org> bubblet-0.74-r1.ebuild:
   Change HOMEPAGE to archived version, bug 251313.
