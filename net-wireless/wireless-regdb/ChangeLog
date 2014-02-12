@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wireless-regdb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.44 2013/11/27 21:59:13 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.45 2014/02/12 19:31:44 vapier Exp $
+
+*wireless-regdb-20131127-r1 (12 Feb 2014)
+
+  12 Feb 2014; Mike Frysinger <vapier@gentoo.org>
+  +wireless-regdb-20131127-r1.ebuild:
+  Install regulatory.bin into /usr/lib/crda/ all the time.
 
 *wireless-regdb-20131127 (27 Nov 2013)
 
