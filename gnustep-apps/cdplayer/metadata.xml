@@ -3,8 +3,4 @@
 <pkgmetadata>
 	<herd>gnustep</herd>
 	<longdescription>Small CD Audio Player for GNUstep</longdescription>
-	<use>
-		<flag name='preferences'>Use <pkg>gnustep-apps/preferences</pkg> for preferences setting</flag>
-		<flag name='systempreferences'>Use <pkg>gnustep-apps/systempreferences</pkg> for preferences setting</flag>
-	</use>
 </pkgmetadata>
