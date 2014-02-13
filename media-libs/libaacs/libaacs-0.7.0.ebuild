@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/libaacs-0.7.0.ebuild,v 1.1 2013/12/22 10:45:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libaacs/libaacs-0.7.0.ebuild,v 1.2 2014/02/13 08:31:17 radhermit Exp $
 
 EAPI=5
 
@@ -17,7 +17,9 @@ IUSE="static-libs"
 
 RDEPEND="dev-libs/libgcrypt
 	dev-libs/libgpg-error"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/flex
+	virtual/yacc"
 
 DOCS=( ChangeLog KEYDB.cfg README.txt )
 

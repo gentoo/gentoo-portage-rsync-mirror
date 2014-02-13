@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=dev-libs/libgcrypt dev-libs/libgpg-error
+DEPEND=dev-libs/libgcrypt dev-libs/libgpg-error sys-devel/flex virtual/yacc
 DESCRIPTION=Open implementation of the Advanced Access Content System (AACS) specification
 EAPI=5
 HOMEPAGE=http://www.videolan.org/developers/libaacs.html
@@ -10,4 +10,4 @@ RDEPEND=dev-libs/libgcrypt dev-libs/libgpg-error
 SLOT=0
 SRC_URI=ftp://ftp.videolan.org/pub/videolan/libaacs/0.7.0/libaacs-0.7.0.tar.bz2
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=ec3c38472fa3104098cb2f3ba3f63571
+_md5_=2dec183cf02d625ce3821a17f5928410
