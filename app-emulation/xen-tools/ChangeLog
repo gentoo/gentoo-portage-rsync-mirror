@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.217 2014/02/08 08:13:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.218 2014/02/13 07:59:09 dlan Exp $
+
+*xen-tools-4.3.1-r5 (13 Feb 2014)
+*xen-tools-4.2.2-r7 (13 Feb 2014)
+
+  13 Feb 2014; Yixun Lan <dlan@gentoo.org> -xen-tools-4.2.2-r6.ebuild,
+  +xen-tools-4.2.2-r7.ebuild, -xen-tools-4.3.1-r4.ebuild,
+  +xen-tools-4.3.1-r5.ebuild, +files/xen-tools-4-CVE-2014-1950-XSA-88.patch,
+  +files/xen-tools-4.2.2-rt-link.patch, files/xenconsoled.initd:
+  fix sec bug #500530, #501080, missing -lrt bug #463840, glib deps bug #500604
 
 *xen-tools-4.3.1-r4 (08 Feb 2014)
 

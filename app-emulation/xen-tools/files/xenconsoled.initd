@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenconsoled.initd,v 1.5 2014/01/23 03:38:35 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/files/xenconsoled.initd,v 1.6 2014/02/13 07:59:09 dlan Exp $
 
 depend() {
 	need xenstored
@@ -11,7 +11,9 @@ depend() {
 # bug #498720
 shutdown_all_domU() {
 	# Note: shutdown all domU, including manually started ones
-	xl shutdown -a -w >/dev/null
+	local V=$(xl info| awk "/xen_minor/ { print \$3 }")
+	# 4.2.2 do not support "-a" option
+	[ $V -gt 2 ] && xl shutdown -a -w >/dev/null
 }
 
 start() {

@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/introspection
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.1 2014/02/13 07:39:36 graaff Exp $
+
+*introspection-0.0.3 (13 Feb 2014)
+
+  13 Feb 2014; Hans de Graaff <graaff@gentoo.org> +introspection-0.0.3.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for dev-ruby/mocha. Initial ebuild by Michel
+  Boaventura in the ruby overlay.
+

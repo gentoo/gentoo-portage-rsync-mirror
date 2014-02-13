@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1-r4.ebuild,v 1.1 2014/02/08 08:13:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.3.1-r5.ebuild,v 1.1 2014/02/13 07:59:09 dlan Exp $
 
 EAPI=5
 
@@ -42,6 +42,7 @@ REQUIRED_USE="hvm? ( qemu )
 	pygrub? ( python )"
 
 DEPEND="dev-libs/lzo:2
+	dev-libs/glib:2
 	dev-libs/yajl
 	dev-libs/libgcrypt
 	dev-python/lxml[${PYTHON_USEDEP}]
@@ -89,6 +90,13 @@ RDEPEND="sys-apps/iproute2
 QA_WX_LOAD="usr/lib/xen/boot/hvmloader"
 
 RESTRICT="test"
+
+# Security patches
+XSA_PATCHES=(
+	"${FILESDIR}"/${PN/-tools/}-4-CVE-2012-6075-XSA-41.patch
+	"${FILESDIR}"/${PN/-tools/}-4-CVE-XSA-86.patch		#bug #500530
+	"${FILESDIR}"/${PN}-4-CVE-2014-1950-XSA-88.patch	#bug #501080
+)
 
 pkg_setup() {
 	python-single-r1_pkg_setup
@@ -206,9 +214,7 @@ src_prepare() {
 	# Set dom0-min-mem to kb; Bug #472982
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2-configsxp.patch
 
-	#Security patches, currently valid, bug #500530
-	epatch "${FILESDIR}"/${PN/-tools/}-4-CVE-2012-6075-XSA-41.patch \
-		"${FILESDIR}"/${PN/-tools/}-4-CVE-XSA-86.patch
+	[[ ${XSA_PATCHES[@]} ]] && epatch "${XSA_PATCHES[@]}"
 
 	# Bug 472438
 	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \

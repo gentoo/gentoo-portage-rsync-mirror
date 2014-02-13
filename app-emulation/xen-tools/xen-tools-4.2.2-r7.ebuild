@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r6.ebuild,v 1.1 2014/02/07 02:14:50 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.2-r7.ebuild,v 1.1 2014/02/13 07:59:09 dlan Exp $
 
 EAPI=5
 
@@ -39,6 +39,7 @@ REQUIRED_USE="hvm? ( qemu )
 	${PYTHON_REQUIRED_USE}"
 
 DEPEND="dev-libs/lzo:2
+	dev-libs/glib:2
 	dev-libs/yajl
 	dev-libs/libgcrypt
 	dev-python/lxml[${PYTHON_USEDEP}]
@@ -85,6 +86,35 @@ RDEPEND="sys-apps/iproute2
 QA_WX_LOAD="usr/lib/xen/boot/hvmloader"
 
 RESTRICT="test"
+
+XSA_PATCHES=(
+	"${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch
+	"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch
+	"${FILESDIR}"/xen-4-CVE-2013-1952-XSA-49.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch
+	"${WORKDIR}"/files/xen-4.2-CVE-2013-8-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch
+	"${WORKDIR}"/files/xen-4.2-CVE-2013-11-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch
+	"${WORKDIR}"/files/xen-4.2-CVE-2013-15-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch
+	"${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch
+	"${FILESDIR}"/xen-4-CVE-2013-2072-XSA-56.patch
+	"${FILESDIR}"/xen-4.2-CVE-XSA-57.patch
+	"${FILESDIR}"/${PN}-4-CVE-2013-4369-XSA-68.patch
+	"${FILESDIR}"/${PN}-4-CVE-2013-4370-XSA-69.patch
+	"${FILESDIR}"/${PN}-4-CVE-2013-4371-XSA-70.patch
+	"${FILESDIR}"/${PN}-4-CVE-2013-4416-XSA-72.patch
+	"${FILESDIR}"/${PN/-tools/}-4-CVE-XSA-86.patch		#bug #500530
+	"${FILESDIR}"/${PN}-4-CVE-2014-1950-XSA-88.patch	#bug #501080
+)
 
 pkg_setup() {
 	python-single-r1_pkg_setup
@@ -202,34 +232,11 @@ src_prepare() {
 	# Set dom0-min-mem to kb; Bug #472982
 	epatch "${FILESDIR}"/${PN/-tools/}-4.2-configsxp.patch
 
-	# Bug #
+	# Bug 463840
 	epatch "${FILESDIR}"/${P}-install.patch
+	epatch "${FILESDIR}"/${P}-rt-link.patch
 
-	#Security patches, currently valid
-	epatch "${FILESDIR}"/xen-4-CVE-2012-6075-XSA-41.patch \
-		"${FILESDIR}"/xen-4-CVE-2013-1922-XSA-48.patch \
-		"${FILESDIR}"/xen-4-CVE-2013-1952-XSA-49.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-1-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-2-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-3-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-4-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-5to7-XSA-55.patch \
-		"${WORKDIR}"/files/xen-4.2-CVE-2013-8-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-9to10-XSA-55.patch \
-		"${WORKDIR}"/files/xen-4.2-CVE-2013-11-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-12to13-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-14-XSA-55.patch \
-		"${WORKDIR}"/files/xen-4.2-CVE-2013-15-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-16-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-17-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-18to19-XSA-55.patch \
-		"${FILESDIR}"/xen-4.2-CVE-2013-20to23-XSA-55.patch \
-		"${FILESDIR}"/xen-4-CVE-2013-2072-XSA-56.patch \
-		"${FILESDIR}"/xen-4.2-CVE-XSA-57.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2013-4369-XSA-68.patch \
-		"${FILESDIR}"/${PN}-4-CVE-2013-4370-XSA-69.patch \
-                "${FILESDIR}"/${PN}-4-CVE-2013-4371-XSA-70.patch \
-                "${FILESDIR}"/${PN}-4-CVE-2013-4416-XSA-72.patch
+	[[ ${XSA_PATCHES[@]} ]] && epatch "${XSA_PATCHES[@]}"
 
 	# Bug 472438
 	sed -e 's:^BASH_COMPLETION_DIR ?= $(CONFIG_DIR)/bash_completion.d:BASH_COMPLETION_DIR ?= $(SHARE_DIR)/bash-completion:' \
