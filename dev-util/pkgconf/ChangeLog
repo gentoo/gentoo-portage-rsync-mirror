@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconf
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.81 2013/09/01 22:04:15 jdhore Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconf/ChangeLog,v 1.82 2014/02/13 19:20:29 ryao Exp $
+
+  13 Feb 2014; Richard Yao <ryao@gentoo.org> pkgconf-0.9.3.ebuild:
+  keyword on ~x64-solaris
 
 *pkgconf-0.9.3 (01 Sep 2013)
 
