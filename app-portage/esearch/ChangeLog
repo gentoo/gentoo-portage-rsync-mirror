@@ -1,6 +1,19 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.113 2014/01/18 05:18:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.114 2014/02/13 20:28:18 fuzzyray Exp $
+
+*esearch-1.3-r1 (13 Feb 2014)
+
+  13 Feb 2014; Paul Varner <fuzzyray@gentoo.org> -esearch-1.0-r2.ebuild,
+  -esearch-1.1-r2.ebuild, -esearch-1.2.ebuild, +esearch-1.3-r1.ebuild,
+  esearch-9999.ebuild, -files/1.0-fix-EPREFIX-capability.patch,
+  +files/1.3-Fix-python-3-compatability.patch,
+  -files/1.0-fix-portage-eprefix-compatibility.patch,
+  -files/1.1-Reprint-warnings-detected-during-layman-sync-API.patch,
+  -files/1.1-Use-of-undefined-variable-in-sync.patch,
+  +files/1.3-Fix-setup.py.patch:
+  Remove old versions, update ebuilds to EAPI5, and add patches to fix python
+  egg info and python 3 compatability.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> esearch-1.3.ebuild:
   Add arm64 love.
