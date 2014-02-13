@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8599 2014/02/11 22:06:14 moult Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8600 2014/02/12 23:58:42 moult Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Feb 2014; Dion Moult <moult@gentoo.org> package.mask:
+  Mask x11-plugins/desklet-sudoku. Unclear license, desklets dead. (bug
+  #446776)
 
   11 Feb 2014; Dion Moult <moult@gentoo.org> package.mask:
   Masked www-client/htmlview as deprecated due to xdg-open and co (bug #480522)
