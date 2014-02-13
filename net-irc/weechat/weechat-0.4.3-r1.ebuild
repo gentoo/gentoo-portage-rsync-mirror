@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.4.3.ebuild,v 1.1 2014/02/12 03:12:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.4.3-r1.ebuild,v 1.1 2014/02/13 13:44:55 zx2c4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -68,6 +68,8 @@ pkg_setup() {
 
 src_prepare() {
 	local i
+
+	epatch "${FILESDIR}"/"${PN}"-0.4.3-always-link-against-pthreads.patch
 
 	# fix libdir placement
 	sed -i \

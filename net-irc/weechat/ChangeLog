@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.136 2014/02/12 03:12:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.137 2014/02/13 13:44:55 zx2c4 Exp $
+
+*weechat-0.4.3-r1 (13 Feb 2014)
+
+  13 Feb 2014; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +files/weechat-0.4.3-always-link-against-pthreads.patch,
+  +weechat-0.4.3-r1.ebuild, -weechat-0.4.3.ebuild:
+  Fix crash with gnutls and pthreaded plugins.
 
 *weechat-0.4.3 (12 Feb 2014)
 
