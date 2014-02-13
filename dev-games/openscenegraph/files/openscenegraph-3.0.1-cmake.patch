@@ -1,8 +1,7 @@
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 6858e70..3bddcf2 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -421,6 +421,7 @@ CONFIGURE_FILE("${CMAKE_CURRENT_SOURCE_DIR}/src/osg/Version.in"
+diff -ruN OpenSceneGraph-3.0.1/CMakeLists.txt new/CMakeLists.txt
+--- OpenSceneGraph-3.0.1/CMakeLists.txt	2011-07-31 09:50:34.000000000 +0200
++++ new/CMakeLists.txt	2014-02-11 23:12:54.360448879 +0100
+@@ -421,6 +421,7 @@
  
  # INSTALL_FILES(/include/osg/ FILES "${OPENSCENEGRAPH_CONFIG_HEADER}")
  
@@ -10,7 +9,7 @@ index 6858e70..3bddcf2 100644
  
  ################################################################################
  # Set Version Info resource file
-@@ -450,30 +451,30 @@ IF(ANDROID)
+@@ -450,30 +451,30 @@
      ANDROID_3RD_PARTY()
  ELSE()
  # Common to all platforms except android:
@@ -63,7 +62,7 @@ index 6858e70..3bddcf2 100644
  ENDIF()
  
  # Include macro utilities here
-@@ -485,17 +486,17 @@ IF(NOT ANDROID)
+@@ -485,17 +486,17 @@
      IF  (DESIRED_QT_VERSION)
  
          IF  (DESIRED_QT_VERSION MATCHES 4)
@@ -85,7 +84,7 @@ index 6858e70..3bddcf2 100644
          ENDIF()
  
      ENDIF()
-@@ -504,12 +506,12 @@ ENDIF(NOT ANDROID)
+@@ -504,12 +505,12 @@
  IF   (BUILD_OSG_EXAMPLES AND NOT ANDROID)
  
  
@@ -102,7 +101,7 @@ index 6858e70..3bddcf2 100644
  
  ENDIF(BUILD_OSG_EXAMPLES AND NOT ANDROID)
  
-@@ -530,10 +532,10 @@ ENDIF(BUILD_OSG_EXAMPLES AND NOT ANDROID)
+@@ -530,10 +531,10 @@
  # can use Quicktime.
  IF(NOT ANDROID)
      IF(NOT APPLE)
@@ -117,7 +116,24 @@ index 6858e70..3bddcf2 100644
  
          # QuickTime is required for OS X, but optional for Windows.
          IF(WIN32)
-@@ -884,7 +886,7 @@ IF(BUILD_DOCUMENTATION)
+@@ -586,15 +587,7 @@
+   SET(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -D_DEBUG")
+ ENDIF()
+ 
+-IF(UNIX AND NOT WIN32 AND NOT APPLE)
+-  IF(CMAKE_SIZEOF_VOID_P MATCHES "8")
+-      SET(LIB_POSTFIX "64" CACHE STRING "suffix for 32/64 dir placement")
+-      MARK_AS_ADVANCED(LIB_POSTFIX)
+-  ENDIF()
+-ENDIF()
+-IF(NOT DEFINED LIB_POSTFIX)
+-    SET(LIB_POSTFIX "")
+-ENDIF()
++SET(LIB_POSTFIX ${LIB_SUFFIX})
+ 
+ # Here we apparantly do some funky stuff with making the bin/ and lib/
+ # folders which is probably needed to work around a very old CMake bug?
+@@ -884,7 +877,7 @@
          ${PROJECT_BINARY_DIR}/doc/OpenSceneGraphReferenceDocs/osg32-32.png COPYONLY
      )
      #INSTALL(FILES ${PROJECT_BINARY_DIR}/doc/${PROJECT_NAME}ReferenceDocs-${OPENSCENEGRAPH_VERSION}.chm DESTINATION doc OPTIONAL COMPONENT openscenegraph-doc)
@@ -126,7 +142,7 @@ index 6858e70..3bddcf2 100644
  
      # now set up openthreads documentation generation
      IF(BUILD_REF_DOCS_TAGFILE)
-@@ -900,7 +902,7 @@ IF(BUILD_DOCUMENTATION)
+@@ -900,7 +893,7 @@
          ${PROJECT_BINARY_DIR}/doc/OpenThreadsReferenceDocs/osg32-32.png COPYONLY
      )
      #INSTALL(FILES ${PROJECT_BINARY_DIR}/doc/${PROJECT_NAME}ReferenceDocs-${OPENSCENEGRAPH_VERSION}.chm DESTINATION doc OPTIONAL COMPONENT openscenegraph-doc)
@@ -135,11 +151,9 @@ index 6858e70..3bddcf2 100644
  
      # Process our other doxyfiles but don't create targets for these
      CONFIGURE_FILE(${PROJECT_SOURCE_DIR}/doc/Doxyfiles/all_Doxyfile
-diff --git a/CMakeModules/COPYING-CMAKE-SCRIPTS b/CMakeModules/COPYING-CMAKE-SCRIPTS
-new file mode 100644
-index 0000000..4b41776
---- /dev/null
-+++ b/CMakeModules/COPYING-CMAKE-SCRIPTS
+diff -ruN OpenSceneGraph-3.0.1/CMakeModules/COPYING-CMAKE-SCRIPTS new/CMakeModules/COPYING-CMAKE-SCRIPTS
+--- OpenSceneGraph-3.0.1/CMakeModules/COPYING-CMAKE-SCRIPTS	1970-01-01 01:00:00.000000000 +0100
++++ new/CMakeModules/COPYING-CMAKE-SCRIPTS	2014-02-11 23:12:31.241449702 +0100
 @@ -0,0 +1,22 @@
 +Redistribution and use in source and binary forms, with or without
 +modification, are permitted provided that the following conditions
@@ -163,11 +177,9 @@ index 0000000..4b41776
 +THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 +(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 +THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-diff --git a/CMakeModules/FindFLTK.cmake b/CMakeModules/FindFLTK.cmake
-deleted file mode 100644
-index e376b78..0000000
---- a/CMakeModules/FindFLTK.cmake
-+++ /dev/null
+diff -ruN OpenSceneGraph-3.0.1/CMakeModules/FindFLTK.cmake new/CMakeModules/FindFLTK.cmake
+--- OpenSceneGraph-3.0.1/CMakeModules/FindFLTK.cmake	2010-11-11 17:51:46.000000000 +0100
++++ new/CMakeModules/FindFLTK.cmake	1970-01-01 01:00:00.000000000 +0100
 @@ -1,52 +0,0 @@
 -# Locate FLTK
 -# This module defines
@@ -221,11 +233,9 @@ index e376b78..0000000
 -IF(FLTK_LIBRARY AND FLTK_INCLUDE_DIR)
 -    SET(FLTK_FOUND "YES")
 -ENDIF(FLTK_LIBRARY AND FLTK_INCLUDE_DIR)
-diff --git a/CMakeModules/MacroOptionalFindPackage.cmake b/CMakeModules/MacroOptionalFindPackage.cmake
-new file mode 100644
-index 0000000..f09952f
---- /dev/null
-+++ b/CMakeModules/MacroOptionalFindPackage.cmake
+diff -ruN OpenSceneGraph-3.0.1/CMakeModules/MacroOptionalFindPackage.cmake new/CMakeModules/MacroOptionalFindPackage.cmake
+--- OpenSceneGraph-3.0.1/CMakeModules/MacroOptionalFindPackage.cmake	1970-01-01 01:00:00.000000000 +0100
++++ new/CMakeModules/MacroOptionalFindPackage.cmake	2014-02-11 23:12:31.256449701 +0100
 @@ -0,0 +1,28 @@
 +# - MACRO_OPTIONAL_FIND_PACKAGE() combines FIND_PACKAGE() with an OPTION()
 +# MACRO_OPTIONAL_FIND_PACKAGE( <name> [QUIT] )
@@ -255,11 +265,10 @@ index 0000000..f09952f
 +   endif (WITH_${_name})
 +endmacro (MACRO_OPTIONAL_FIND_PACKAGE)
 +
-diff --git a/CMakeModules/OsgMacroUtils.cmake b/CMakeModules/OsgMacroUtils.cmake
-index aa607fa..8f3771c 100644
---- a/CMakeModules/OsgMacroUtils.cmake
-+++ b/CMakeModules/OsgMacroUtils.cmake
-@@ -445,9 +445,9 @@ MACRO(SETUP_EXAMPLE EXAMPLE_NAME)
+diff -ruN OpenSceneGraph-3.0.1/CMakeModules/OsgMacroUtils.cmake new/CMakeModules/OsgMacroUtils.cmake
+--- OpenSceneGraph-3.0.1/CMakeModules/OsgMacroUtils.cmake	2011-04-21 19:16:27.000000000 +0200
++++ new/CMakeModules/OsgMacroUtils.cmake	2014-02-11 23:12:31.280449700 +0100
+@@ -445,9 +445,9 @@
          SET_TARGET_PROPERTIES(${TARGET_TARGETNAME} PROPERTIES FOLDER "Examples")
          
          IF(APPLE)
@@ -271,10 +280,9 @@ index aa607fa..8f3771c 100644
          ENDIF(APPLE)
  
  ENDMACRO(SETUP_EXAMPLE)
-diff --git a/examples/osgviewerFLTK/CMakeLists.txt b/examples/osgviewerFLTK/CMakeLists.txt
-index 43c023b..dd177f0 100644
---- a/examples/osgviewerFLTK/CMakeLists.txt
-+++ b/examples/osgviewerFLTK/CMakeLists.txt
+diff -ruN OpenSceneGraph-3.0.1/examples/osgviewerFLTK/CMakeLists.txt new/examples/osgviewerFLTK/CMakeLists.txt
+--- OpenSceneGraph-3.0.1/examples/osgviewerFLTK/CMakeLists.txt	2007-06-25 10:35:06.000000000 +0200
++++ new/examples/osgviewerFLTK/CMakeLists.txt	2014-02-11 23:12:31.331449698 +0100
 @@ -1,6 +1,6 @@
  SET(TARGET_SRC osgviewerFLTK.cpp )
  

@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.55 2013/06/15 20:09:37 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.56 2014/02/13 21:22:42 reavertm Exp $
+
+  13 Feb 2014; Maciej Mrozowski <reavertm@gentoo.org>
+  files/openscenegraph-3.0.1-cmake.patch:
+  Use correct libdir, bug 500716
 
   15 Jun 2013; Pacho Ramos <pacho@gentoo.org> openscenegraph-3.0.1-r1.ebuild:
   media-libs/openinventor will be dropped
