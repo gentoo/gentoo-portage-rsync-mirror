@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.92 2014/01/20 17:41:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.93 2014/02/13 11:37:51 vikraman Exp $
 
 EAPI=3
 PYTHON_COMPAT=(
@@ -217,7 +217,7 @@ src_prepare() {
 	local _version=$(cd "${S}/.git" && git describe --tags | sed -e 's|-\([0-9]\+\)-.\+$|_p\1|')
 	_version=${_version:1}
 	einfo "Setting portage.VERSION to ${_version} ..."
-	sed -e "s/^VERSION=.*/VERSION='${_version}'/" -i pym/portage/__init__.py || \
+	sed -e "s/^VERSION =.*/VERSION = '${_version}'/" -i pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
 	sed -e "1s/VERSION/${_version}/" -i doc/fragment/version || \
 		die "Failed to patch VERSION in doc/fragment/version"
