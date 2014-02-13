@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/instantiator
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/instantiator/ChangeLog,v 1.1 2014/02/13 06:50:12 graaff Exp $
+
+*instantiator-0.0.6 (13 Feb 2014)
+
+  13 Feb 2014; Hans de Graaff <graaff@gentoo.org> +instantiator-0.0.6.ebuild,
+  +metadata.xml:
+  Initial import. New indirect dependency for dev-ruby/mocha. Initial ebuild by
+  Michel Boaventura in the ruby overlay.
+
