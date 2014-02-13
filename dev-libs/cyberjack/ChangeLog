@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/cyberjack
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.37 2013/08/03 04:43:41 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.39 2014/02/13 22:27:59 idl0r Exp $
+
+  13 Feb 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  xmllint
+
+*cyberjack-3.99.5_p05 (13 Feb 2014)
+
+  13 Feb 2014; Christian Ruppert <idl0r@gentoo.org>
+  +cyberjack-3.99.5_p05.ebuild, +files/cyberjack-3.99.5_p05-install.patch,
+  +files/cyberjack-3.99.5_p05-manpages.patch,
+  +files/cyberjack-3.99.5_p05-returnvalue.patch, +files/cyberjack-r1.rules:
+  Version bump, bug 494690
 
   03 Aug 2013; Samuli Suominen <ssuominen@gentoo.org>
   cyberjack-3.99.5_p03-r1.ebuild:
