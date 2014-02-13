@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/unidecode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.9 2014/01/16 17:20:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.10 2014/02/13 01:36:18 jer Exp $
+
+*unidecode-0.04.14 (13 Feb 2014)
+
+  13 Feb 2014; Jeroen Roovers <jer@gentoo.org> -unidecode-0.04.9.ebuild,
+  +unidecode-0.04.14.ebuild, metadata.xml:
+  Version bump.
 
   16 Jan 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Spelling.
