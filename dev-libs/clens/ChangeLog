@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/clens
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clens/ChangeLog,v 1.4 2013/10/09 10:10:56 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clens/ChangeLog,v 1.5 2014/02/13 14:23:46 jer Exp $
+
+  13 Feb 2014; Jeroen Roovers <jer@gentoo.org> clens-0.7.0.ebuild:
+  Stable for HPPA (bug #501182).
 
   09 Oct 2013; Ulrich Müller <ulm@gentoo.org> clens-0.7.0.ebuild:
   Add missing EPREFIX.

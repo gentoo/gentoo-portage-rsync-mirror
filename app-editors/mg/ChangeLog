@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.66 2014/02/13 11:25:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.67 2014/02/13 14:24:37 jer Exp $
+
+  13 Feb 2014; Jeroen Roovers <jer@gentoo.org> mg-20131118.ebuild:
+  Stable for HPPA (bug #501184).
 
   13 Feb 2014; Ulrich Müller <ulm@gentoo.org> -mg-20130922-r2.ebuild,
   -files/mg-20130922-dirname.patch:

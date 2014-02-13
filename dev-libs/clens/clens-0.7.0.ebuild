@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clens/clens-0.7.0.ebuild,v 1.4 2013/10/09 10:10:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clens/clens-0.7.0.ebuild,v 1.5 2014/02/13 14:23:46 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://opensource.conformal.com/snapshots/${PN}/${P}.tar.gz"
 
 LICENSE="ISC BSD BSD-4"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 hppa ~x86"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-arc4random.patch
