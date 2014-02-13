@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.11 2014/01/27 02:50:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999-r1.ebuild,v 1.12 2014/02/13 02:29:59 floppym Exp $
 
 EAPI=5
 
@@ -284,9 +284,14 @@ src_install() {
 pkg_postinst() {
 	mount-boot_mount_boot_partition
 
-	if [[ -e "${ROOT%/}/boot/grub2/grub.cfg" && ! -e "${ROOT%/}/boot/grub/grub.cfg" ]]; then
-		mkdir -p "${ROOT%/}/boot/grub"
-		ln -s ../grub2/grub.cfg "${ROOT%/}/boot/grub/grub.cfg"
+	if [[ -e "${ROOT%/}/boot/grub2/grub.cfg"  ]]; then
+		ewarn "The grub directory has changed from /boot/grub2 to /boot/grub."
+		ewarn "Please run grub2-install and grub2-mkconfig -o /boot/grub/grub.cfg."
+
+		if [[ ! -e "${ROOT%/}/boot/grub/grub.cfg" ]]; then
+			mkdir -p "${ROOT%/}/boot/grub"
+			ln -s ../grub2/grub.cfg "${ROOT%/}/boot/grub/grub.cfg"
+		fi
 	fi
 
 	mount-boot_pkg_postinst
@@ -306,14 +311,5 @@ pkg_postinst() {
 		if ! has_version dev-libs/libisoburn; then
 			elog "Install dev-libs/libisoburn to enable creation of rescue media using grub2-mkrescue."
 		fi
-	else
-		local v
-		for v in ${REPLACING_VERSIONS}; do
-			if use multislot && ! version_is_at_least 2.00_p5107-r1 ${v}; then
-				ewarn "The grub directory has changed from /boot/grub2 to /boot/grub."
-				ewarn "Please run grub2-install and grub2-mkconfig -o /boot/grub/grub.cfg."
-				break
-			fi
-		done
 	fi
 }
