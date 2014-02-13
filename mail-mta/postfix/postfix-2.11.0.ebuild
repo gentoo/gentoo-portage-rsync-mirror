@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11.0.ebuild,v 1.3 2014/01/31 16:27:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.11.0.ebuild,v 1.4 2014/02/13 07:01:46 eras Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib pam ssl-cert systemd toolchain-funcs user versionator
@@ -142,7 +142,7 @@ src_configure() {
 		mycc="${mycc} -DNO_DB"
 		if use cdb; then
 			# change default hash format from Berkeley DB to cdb
-			mycc="${mycc} -DEF_DB_TYPE=\\\"cdb\\\""
+			mycc="${mycc} -DDEF_DB_TYPE=\\\"cdb\\\""
 		fi
 	fi
 
