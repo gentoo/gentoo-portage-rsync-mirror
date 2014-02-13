@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.28 2014/02/12 10:04:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.29 2014/02/13 09:13:33 jlec Exp $
+
+  13 Feb 2014; Justin Lecher <jlec@gentoo.org> libdbusmenu-12.10.2.ebuild,
+  metadata.xml:
+  Add missing deps, #501108
 
 *libdbusmenu-12.10.2 (12 Feb 2014)
 

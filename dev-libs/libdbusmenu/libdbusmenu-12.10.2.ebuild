@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-12.10.2.ebuild,v 1.1 2014/02/12 10:04:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-12.10.2.ebuild,v 1.2 2014/02/13 09:13:33 jlec Exp $
 
 EAPI=5
 
@@ -20,8 +20,9 @@ KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
 IUSE="debug gtk +introspection"
 
 RDEPEND="
-	>=dev-libs/glib-2.32
 	>=dev-libs/dbus-glib-0.100
+	>=dev-libs/json-glib-0.13.4
+	>=dev-libs/glib-2.32
 	dev-libs/libxml2
 	gtk? ( >=x11-libs/gtk+-3.2:3[introspection?] )
 	introspection? ( >=dev-libs/gobject-introspection-1 )
