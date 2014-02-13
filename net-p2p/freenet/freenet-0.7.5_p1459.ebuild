@@ -1,9 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1452.ebuild,v 1.1 2013/08/21 17:31:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1459.ebuild,v 1.1 2014/02/13 19:33:24 tommy Exp $
 
-EAPI="2"
-DATE=20130218
+EAPI="3"
+DATE=20130915
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 multilib user
@@ -111,7 +111,8 @@ src_install() {
 	else
 		newinitd "${FILESDIR}"/freenet.old freenet
 	fi
-	dodoc AUTHORS README || die
+	dodoc AUTHORS || die
+	newdoc README.md README || die
 	insinto /etc
 	doins freenet-wrapper.conf || die
 	insinto /var/freenet

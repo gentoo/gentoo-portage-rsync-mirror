@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/nxml-libvirt-schemas-0.9.7.ebuild,v 1.1 2012/03/19 18:27:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-libvirt-schemas/nxml-libvirt-schemas-0.9.7.ebuild,v 1.2 2014/02/13 19:50:33 ulm Exp $
 
 EAPI=4
 
@@ -18,10 +18,9 @@ SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
 
 # This is the license of the package, but the schema files are
 # provided without license, maybe it's bad.
-LICENSE="LGPL-2.1"
+LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 # Yes this requires Java, but I'd rather not repackage this, if you
 # know something better in C, I'll be glad to use that.
