@@ -1,41 +1,44 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.12-r1.ebuild,v 1.11 2013/11/28 19:53:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.17.ebuild,v 1.1 2014/02/13 05:45:55 polynomial-c Exp $
 
-EAPI="2"
-PYTHON_DEPEND="python? *"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+EAPI="4"
+PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} pypy2_0 )
+DISTUTILS_OPTIONAL=1
 
-inherit eutils distutils libtool toolchain-funcs
+inherit eutils distutils-r1 libtool toolchain-funcs
+
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://github.com/glensc/file.git"
+	inherit autotools git-r3
+else
+	SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.gz
+		ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
+fi
 
 DESCRIPTION="identify a file's format by scanning binary data for patterns"
-HOMEPAGE="ftp://ftp.astron.com/pub/file/"
-SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.gz
-	ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
-	mirror://gentoo/${P}-magic-updates-4d53f0549fb40b179eaee53c63c42e1685e4ebab.patch.bz2"
+HOMEPAGE="http://www.darwinsys.com/file/"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="python static-libs zlib"
 
-DEPEND="zlib? ( sys-libs/zlib )"
+DEPEND="python? ( ${PYTHON_DEPS} )
+	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}
 	python? ( !dev-python/python-magic )"
 
-PYTHON_MODNAME="magic.py"
-
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-magic-updates-4d53f0549fb40b179eaee53c63c42e1685e4ebab.patch
-
+	[[ ${PV} == "9999" ]] && eautoreconf
 	elibtoolize
 
-	# dont let python README kill main README #60043
+	# don't let python README kill main README #60043
 	mv python/README{,.python}
 }
 
 wd() { echo "${WORKDIR}"/build-${CHOST}; }
+
 do_configure() {
 	ECONF_SOURCE=${S}
 
@@ -46,6 +49,7 @@ do_configure() {
 
 	popd >/dev/null
 }
+
 src_configure() {
 	# when cross-compiling, we need to build up our own file
 	# because people often don't keep matching host/target
@@ -69,8 +73,9 @@ src_configure() {
 }
 
 do_make() {
-	emake -C "$(wd)" "$@" || die
+	emake -C "$(wd)" "$@"
 }
+
 src_compile() {
 	if tc-is-cross-compiler && ! ROOT=/ has_version ~${CATEGORY}/${P} ; then
 		CHOST=${CBUILD} do_make -C src file
@@ -78,21 +83,13 @@ src_compile() {
 	fi
 	do_make
 
-	use python && cd python && distutils_src_compile
+	use python && cd python && distutils-r1_src_compile
 }
 
 src_install() {
-	do_make DESTDIR="${D}" install || die
+	do_make DESTDIR="${D}" install
 	dodoc ChangeLog MAINT README
 
-	use python && cd python && distutils_src_install
-	use static-libs || rm -f "${D}"/usr/lib*/libmagic.la
-}
-
-pkg_postinst() {
-	use python && distutils_pkg_postinst
-}
-
-pkg_postrm() {
-	use python && distutils_pkg_postrm
+	use python && cd python && distutils-r1_src_install
+	prune_libtool_files
 }
