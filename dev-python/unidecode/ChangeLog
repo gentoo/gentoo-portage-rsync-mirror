@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unidecode
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.10 2014/02/13 01:36:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unidecode/ChangeLog,v 1.11 2014/02/13 14:34:29 jer Exp $
+
+  13 Feb 2014; Jeroen Roovers <jer@gentoo.org> unidecode-0.04.14.ebuild:
+  Marked ~hppa too.
 
 *unidecode-0.04.14 (13 Feb 2014)
 

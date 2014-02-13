@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.246 2014/02/08 20:14:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.247 2014/02/13 14:51:26 polynomial-c Exp $
+
+  13 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> git-9999.ebuild:
+  Minor fixes to live ebuild (bug #487902).
 
 *git-1.9.0_rc3 (08 Feb 2014)
 
