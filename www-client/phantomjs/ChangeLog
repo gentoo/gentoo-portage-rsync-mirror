@@ -1,6 +1,15 @@
 # ChangeLog for www-client/phantomjs
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.10 2013/09/25 18:26:55 radhermit Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/ChangeLog,v 1.12 2014/02/13 15:55:36 zx2c4 Exp $
+
+  13 Feb 2014; Jason A. Donenfeld <zx2c4@gentoo.org> metadata.xml:
+  I do not maintain this package any longer.
+
+*phantomjs-1.9.7 (13 Feb 2014)
+
+  13 Feb 2014; Jason A. Donenfeld <zx2c4@gentoo.org> +phantomjs-1.9.7.ebuild,
+  -phantomjs-1.9.0.ebuild:
+  Version bump.
 
   25 Sep 2013; Tim Harder <radhermit@gentoo.org> phantomjs-1.9.0.ebuild:
   Add unzip build dep (bug #485970).

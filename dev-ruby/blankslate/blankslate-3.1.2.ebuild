@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/blankslate-3.1.2.ebuild,v 1.4 2014/02/13 06:47:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/blankslate-3.1.2.ebuild,v 1.5 2014/02/13 15:55:21 jer Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ HOMEPAGE="https://rubygems.org/gems/blankslate"
 IUSE=""
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 
 ruby_add_bdepend "test? ( dev-ruby/builder )"
 

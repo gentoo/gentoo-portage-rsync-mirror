@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-ml/type-conv-109.60.00:= dev-ml/sexplib:= >=dev-ml/core_kernel-109.60.00:= dev-ml/comparelib:= >=dev-ml/findlib-1.0.4-r1 >=dev-lang/ocaml-3.12:=[ocamlopt?]
+DESCRIPTION=Quotation expanders for assertions
+EAPI=5
+HOMEPAGE=http://www.janestreet.com/ocaml
+IUSE=+ocamlopt debug
+KEYWORDS=~amd64
+LICENSE=LGPL-2.1-with-linking-exception
+RDEPEND=>=dev-ml/type-conv-109.60.00:= dev-ml/sexplib:= >=dev-ml/core_kernel-109.60.00:= dev-ml/comparelib:= >=dev-lang/ocaml-3.12:=[ocamlopt?]
+SLOT=0/110.01.00
+SRC_URI=http://ocaml.janestreet.com/ocaml-core/110.01.00/individual/pa_test-110.01.00.tar.gz
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	fac675dcccf94392371a6abee62d909f	oasis	d59efb9f3ae0e24a1932b2147425fb8d	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=6fff4220298870a1f5950484a3485069

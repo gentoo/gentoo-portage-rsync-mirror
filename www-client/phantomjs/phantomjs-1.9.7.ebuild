@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.0.ebuild,v 1.6 2013/09/25 18:26:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-1.9.7.ebuild,v 1.1 2014/02/13 15:54:50 zx2c4 Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit toolchain-funcs pax-utils multiprocessing
 
 DESCRIPTION="A headless WebKit scriptable with a JavaScript API"
 HOMEPAGE="http://phantomjs.org/"
-SRC_URI="https://phantomjs.googlecode.com/files/${P}-source.zip"
+SRC_URI="https://bitbucket.org/ariya/phantomjs/downloads/${P}-source.zip"
 
 LICENSE="BSD"
 SLOT="0"

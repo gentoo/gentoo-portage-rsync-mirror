@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/introspection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.1 2014/02/13 07:39:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.2 2014/02/13 15:56:29 jer Exp $
+
+  13 Feb 2014; Jeroen Roovers <jer@gentoo.org> introspection-0.0.3.ebuild:
+  Marked ~hppa (bug #501152).
 
 *introspection-0.0.3 (13 Feb 2014)
 

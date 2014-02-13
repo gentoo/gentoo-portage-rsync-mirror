@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/pa_test
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_test/ChangeLog,v 1.1 2014/01/19 15:34:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pa_test/ChangeLog,v 1.2 2014/02/13 15:35:27 aballier Exp $
+
+*pa_test-110.01.00 (13 Feb 2014)
+
+  13 Feb 2014; Alexis Ballier <aballier@gentoo.org> +pa_test-110.01.00.ebuild:
+  version bump
 
 *pa_test-109.53.02 (19 Jan 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/instantiator/instantiator-0.0.6.ebuild,v 1.1 2014/02/13 06:50:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/instantiator/instantiator-0.0.6.ebuild,v 1.2 2014/02/13 15:56:14 jer Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ HOMEPAGE="https://github.com/floehopper/introspection"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/blankslate"
