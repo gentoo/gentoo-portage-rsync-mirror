@@ -1,8 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.6.14.ebuild,v 1.1 2014/02/10 20:14:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/company-mode-0.6.14.ebuild,v 1.2 2014/02/13 18:19:49 ulm Exp $
 
 EAPI=5
+NEED_EMACS=23
 
 inherit elisp
 
@@ -17,8 +18,7 @@ IUSE="ropemacs +semantic"
 
 # Note: company-mode supports many backends, and we refrain from including
 # them all in RDEPEND. Only depend on things that are needed at build time.
-DEPEND="|| ( app-emacs/nxml-mode >=virtual/emacs-23 )
-	ropemacs? ( app-emacs/pymacs )
+DEPEND="ropemacs? ( app-emacs/pymacs )
 	semantic? ( virtual/emacs-cedet )"
 RDEPEND="${DEPEND}
 	ropemacs? ( dev-python/ropemacs )"
