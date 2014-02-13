@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1809.0.ebuild,v 1.1 2014/01/29 05:16:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1833.5.ebuild,v 1.1 2014/02/13 04:41:32 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -20,7 +20,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/${P}
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="+aura bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
+IUSE="aura bindist cups gnome gnome-keyring kerberos neon pulseaudio selinux +tcmalloc"
 
 # Native Client binaries are compiled with different set of flags, bug #452066.
 QA_FLAGS_IGNORED=".*\.nexe"
@@ -167,6 +167,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-system-jinja-r3.patch"
 	epatch "${FILESDIR}/${PN}-gn-r1.patch"
 	epatch "${FILESDIR}/${PN}-depot-tools-r0.patch"
+	epatch "${FILESDIR}/${PN}-d8-r0.patch"
 
 	epatch_user
 
@@ -204,6 +205,7 @@ src_prepare() {
 		'third_party/libphonenumber' \
 		'third_party/libsrtp' \
 		'third_party/libusb' \
+		'third_party/libwebm' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
 		'third_party/libyuv' \
@@ -213,6 +215,7 @@ src_prepare() {
 		'third_party/modp_b64' \
 		'third_party/mt19937ar' \
 		'third_party/npapi' \
+		'third_party/nss.isolate' \
 		'third_party/ots' \
 		'third_party/polymer' \
 		'third_party/pywebsocket' \
@@ -581,6 +584,8 @@ src_install() {
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser${CHROMIUM_SUFFIX} || die
 	# keep the old symlink around for consistency
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium${CHROMIUM_SUFFIX} || die
+
+	dosym "${CHROMIUM_HOME}/chromedriver" /usr/bin/chromedriver${CHROMIUM_SUFFIX} || die
 
 	# Allow users to override command-line options, bug #357629.
 	dodir /etc/chromium || die

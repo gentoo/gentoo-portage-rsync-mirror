@@ -1,0 +1,10 @@
+--- build/all.gyp.orig	2014-02-12 19:11:50.200718819 +0000
++++ build/all.gyp	2014-02-12 19:12:11.160850317 +0000
+@@ -676,7 +676,6 @@
+             }],
+             ['chromeos==0', {
+               'dependencies': [
+-                '../v8/src/d8.gyp:d8',
+               ],
+             }],
+             ['internal_filter_fuzzer==1', {

@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1022 2014/02/08 04:15:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1023 2014/02/13 04:41:32 phajdan.jr Exp $
+
+*chromium-34.0.1833.5 (12 Feb 2014)
+
+  12 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-34.0.1833.5.ebuild, +files/chromium-d8-r0.patch,
+  -chromium-34.0.1809.0.ebuild:
+  Dev channel bump. Fix bug #500306 by Murph. Remove old.
 
 *chromium-34.0.1825.4 (08 Feb 2014)
 

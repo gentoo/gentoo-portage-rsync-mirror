@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.29 2014/01/08 06:44:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.30 2014/02/13 04:36:33 prometheanfire Exp $
+
+*glance-2013.2.1-r1 (13 Feb 2014)
+
+  13 Feb 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/havana-1-CVE-2014-1948.patch, +glance-2013.2.1-r1.ebuild,
+  -glance-2013.2.1.ebuild:
+  fix for CVE-2014-1948
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> glance-2013.2.1.ebuild,
   glance-2013.2.9999.ebuild:
