@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/redo+
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/redo+/ChangeLog,v 1.1 2014/02/13 20:46:56 ulm Exp $
+
+*redo+-1.19 (13 Feb 2014)
+
+  13 Feb 2014; Ulrich Müller <ulm@gentoo.org> +redo+-1.19.ebuild,
+  +files/50redo+-gentoo.el, +metadata.xml:
+  Initial import, fork of redo. Ebuild and keywords copied from app-emacs/redo.
+

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/thinks
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/thinks/ChangeLog,v 1.10 2009/10/15 19:32:28 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/thinks/ChangeLog,v 1.11 2014/02/13 21:00:54 ulm Exp $
+
+  13 Feb 2014; Ulrich Müller <ulm@gentoo.org> thinks-1.9.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
 *thinks-1.9 (15 Oct 2009)
 

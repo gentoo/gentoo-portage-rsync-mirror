@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.54 2014/02/11 17:23:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.55 2014/02/13 20:41:49 bicatali Exp $
+
+  13 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> werkzeug-0.9.4.ebuild:
+  after better testing, remove python-3.2 support
 
   11 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org>
   -files/werkzeug-0.8.3-pypytest.patch, -werkzeug-0.9.3.ebuild, metadata.xml,
