@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.2.1.ebuild,v 1.7 2013/04/13 07:22:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.2.1.ebuild,v 1.8 2014/02/14 20:56:01 mrueg Exp $
 
 EAPI=5
 
 DESCRIPTION="(OTR) Messaging allows you to have private conversations over instant messaging"
-HOMEPAGE="http://www.cypherpunks.ca/otr/"
+HOMEPAGE="https://otr.cypherpunks.ca"
 SRC_URI="http://www.cypherpunks.ca/otr/${P}.tar.gz"
 
 LICENSE="GPL-2"
