@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.12 2014/02/14 21:02:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.13 2014/02/14 21:54:43 vapier Exp $
 
 EAPI="4"
 
@@ -9,8 +9,9 @@ inherit eutils
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
 		http://git.savannah.gnu.org/r/${PN}.git"
-
-	inherit git-r3
+	# We need all the tags in order to figure out the right version.
+	# The git-r3 eclass doesn't support that, so have to stick to 2.
+	inherit git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else
