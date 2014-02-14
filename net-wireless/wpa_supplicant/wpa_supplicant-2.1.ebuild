@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.1.ebuild,v 1.1 2014/02/12 10:44:24 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.1.ebuild,v 1.2 2014/02/14 08:20:31 gurligebis Exp $
 
 EAPI=4
 
@@ -83,6 +83,11 @@ src_prepare() {
 
 		# multilib-strict fix (bug #373685)
 		sed -e "s/\/usr\/lib/\/usr\/$(get_libdir)/" -i src/eap_peer/Makefile
+	fi
+
+	if use wps; then
+		# In version 2.1, there is a bug, what causes compile to fail.
+		epatch "${FILESDIR}/${P}-NFC-fix.patch"
 	fi
 
 	# bug (320097)

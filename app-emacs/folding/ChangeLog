@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/folding
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/ChangeLog,v 1.26 2013/02/15 23:03:37 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/ChangeLog,v 1.27 2014/02/14 08:13:16 ulm Exp $
+
+*folding-2013.0613.1821 (14 Feb 2014)
+
+  14 Feb 2014; Ulrich Müller <ulm@gentoo.org> -folding-2007.0506.ebuild,
+  -folding-2009.0905.0811.ebuild, folding-2012.0226.1623.ebuild,
+  +folding-2013.0613.1821.ebuild, +files/50folding-gentoo.el,
+  -files/70folding-gentoo.el:
+  Version bump. Move site-init file to standard name. Remove old.
 
   15 Feb 2013; Agostino Sarubbo <ago@gentoo.org> folding-2012.0226.1623.ebuild:
   Stable for alpha, wrt bug #457234

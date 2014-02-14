@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.208 2014/02/12 10:44:24 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.209 2014/02/14 08:20:31 gurligebis Exp $
+
+  14 Feb 2014; <gurligebis@gentoo.org> wpa_supplicant-2.1.ebuild,
+  +files/wpa_supplicant-2.1-NFC-fix.patch:
+  Adding patch from upstream to fix compiling, fixing bug #501066
 
 *wpa_supplicant-2.1 (12 Feb 2014)
 
