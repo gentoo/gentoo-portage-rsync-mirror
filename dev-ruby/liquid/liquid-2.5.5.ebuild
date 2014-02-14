@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/liquid/liquid-2.6.0.ebuild,v 1.1 2013/11/26 07:02:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/liquid/liquid-2.5.5.ebuild,v 1.1 2014/02/14 01:42:52 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby18 ruby19 ruby20 jruby"
