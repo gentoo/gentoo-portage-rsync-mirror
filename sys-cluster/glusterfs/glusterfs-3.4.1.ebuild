@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.4.1.ebuild,v 1.1 2013/12/31 09:04:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-3.4.1.ebuild,v 1.2 2014/02/14 14:06:11 ultrabug Exp $
 
 EAPI=5
 
@@ -84,7 +84,7 @@ src_install() {
 
 	rm "${D}/etc/glusterfs/glusterfs-logrotate" || die "removing false logrotate failed"
 	insinto /etc/logrotate.d
-	newins extras/glusterfs-logrotate glusterfs
+	newins "${FILESDIR}"/glusterfs.logrotate glusterfs
 
 	if use emacs ; then
 		elisp-install ${PN} extras/glusterfs-mode.el*

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15395 2014/02/14 07:19:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15396 2014/02/14 14:04:30 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -182,30 +182,6 @@ www-client/google-chrome:unstable
 # Do not unmask without prior review from multilib@g.o.
 # https://bugs.gentoo.org/show_bug.cgi?id=474654#c5
 =media-gfx/exiv2-0.23-r2
-
-# Joerg Bornkessel <hd_brummy@gentoo.org (14 Jan 2014)
-# plugin fails on compile >=vdr-1.7.27
-# dead on upstream, dead on src-uri, wrt bug 414181
-# removal ~ 14/02/2014
-media-plugins/vdr-xxvautotimer
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (14 Jan 2014)
-# plugin fails on compile >=vdr-1.7.27
-# dead on upstream, wrt bug 414887
-# removal ~ 14/02/2014
-media-plugins/vdr-skinclassic
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (14 Jan 2014)
-# plugin fails on compile
-# dead on upstream, wrt bug 420869
-# removal ~ 14/02/2014
-media-plugins/vdr-sky
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (14 Jan 2014)
-# vdr-skinreel fails on compile >=vdr-1.7.27
-# see wrt bug 420873
-# removal ~ 14/02/2014
-media-plugins/vdr-skinreel
 
 # Tony Vroon <chainsaw@gentoo.org> (13 Jan 2014)
 # Asterisk 12 is a short term "standard" release 
