@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.87 2014/02/11 19:22:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.88 2014/02/14 16:02:53 hattya Exp $
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org> pyserial-2.7.ebuild:
+  ia64 stable wrt bug #495626
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> pyserial-2.7.ebuild:
   Stable for HPPA (bug #495626).
