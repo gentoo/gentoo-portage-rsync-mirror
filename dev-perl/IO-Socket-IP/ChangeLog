@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-Socket-IP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-IP/ChangeLog,v 1.13 2014/01/19 09:01:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-IP/ChangeLog,v 1.14 2014/02/14 07:01:52 radhermit Exp $
+
+*IO-Socket-IP-0.280.0 (14 Feb 2014)
+
+  14 Feb 2014; Tim Harder <radhermit@gentoo.org> +IO-Socket-IP-0.280.0.ebuild:
+  Version bump.
 
   19 Jan 2014; Pacho Ramos <pacho@gentoo.org> IO-Socket-IP-0.230.0.ebuild:
   amd64 stable, bug 474822

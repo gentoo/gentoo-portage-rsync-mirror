@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) )
+DESCRIPTION=Full sources including the Gentoo patchset for the 3.13 kernel tree and aufs3 support
+EAPI=5
+HOMEPAGE=http://dev.gentoo.org/~mpagano/genpatches http://aufs.sourceforge.net/
+IUSE=deblob experimental module vanilla symlink build deblob
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2 !deblob? ( freedist )
+PDEPEND=>=sys-fs/aufs-util-3.9 !build? ( virtual/dev-manager )
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=3.13.3
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.13.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.13.N/deblob-3.13 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.13.N/deblob-check -> deblob-check-3.13 ) http://dev.gentoo.org/~jlec/distfiles/aufs-sources-3.13_p20140127.tar.xz !vanilla? ( mirror://gentoo/genpatches-3.13-6.base.tar.xz mirror://gentoo/genpatches-3.13-6.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.13-6.experimental.tar.xz ) )
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	kernel-2	263afd0e4a90481352469cff577efe1b	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=b219a514aaf908878fc9fa3bc8c3ec8d

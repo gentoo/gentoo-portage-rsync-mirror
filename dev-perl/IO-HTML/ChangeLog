@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-HTML
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-HTML/ChangeLog,v 1.12 2014/01/20 23:24:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-HTML/ChangeLog,v 1.13 2014/02/14 07:07:17 radhermit Exp $
+
+*IO-HTML-1.00.0 (14 Feb 2014)
+
+  14 Feb 2014; Tim Harder <radhermit@gentoo.org> +IO-HTML-1.00.0.ebuild:
+  Version bump.
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> IO-HTML-0.40.0.ebuild:
   Add arm64 love.
