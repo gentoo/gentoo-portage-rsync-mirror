@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/crystal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.53 2013/12/14 11:32:25 johu Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.55 2014/02/14 21:19:01 johu Exp $
+
+  14 Feb 2014; Johannes Huber <johu@gentoo.org> -crystal-2.2.0.ebuild:
+  Remove old.
+
+  14 Feb 2014; Johannes Huber <johu@gentoo.org> crystal-2.2.1.ebuild:
+  amd64/x86 stable, bug #499794
 
 *crystal-2.2.1 (14 Dec 2013)
 

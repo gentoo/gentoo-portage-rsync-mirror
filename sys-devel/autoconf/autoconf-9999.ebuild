@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.11 2014/01/17 04:23:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.12 2014/02/14 21:02:22 vapier Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils
 
@@ -10,7 +10,7 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
 		http://git.savannah.gnu.org/r/${PN}.git"
 
-	inherit git-2
+	inherit git-r3
 	SRC_URI=""
 	#KEYWORDS=""
 else
@@ -50,9 +50,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS BUGS NEWS README TODO THANKS \
-		ChangeLog ChangeLog.0 ChangeLog.1 ChangeLog.2
+	default
 
 	if use multislot ; then
 		local f

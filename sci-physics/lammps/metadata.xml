@@ -22,6 +22,10 @@
 		<flag name="package-meam">modified EAM potential</flag>
 		<flag name="package-dipole">point dipole particles</flag>
 		<flag name="package-rigid">rigid bodies</flag>
+		<flag name="lammps-package-meam">modified EAM potential</flag>
+		<flag name="lammps-package-dipole">point dipole particles</flag>
+		<flag name="lammps-package-rigid">rigid bodies</flag>
+		<flag name="lammps-package-reax">ReaxFF potential</flag>
 	</use>
 	<herd>sci-physics</herd>
 	<maintainer>

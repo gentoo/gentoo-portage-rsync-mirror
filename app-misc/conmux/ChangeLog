@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/conmux
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/ChangeLog,v 1.5 2013/11/05 19:11:23 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/conmux/ChangeLog,v 1.7 2014/02/14 21:04:01 hwoarang Exp $
+
+  14 Feb 2014; Markos Chandras <hwoarang@gentoo.org>
+  files/conmux-registry.initd, files/conmux.initd:
+  Remove bashisms
+
+  14 Feb 2014; Markos Chandras <hwoarang@gentoo.org>
+  files/conmux-registry.initd:
+  Remove registry file if present
 
 *conmux-0.15.1-r3 (05 Nov 2013)
 

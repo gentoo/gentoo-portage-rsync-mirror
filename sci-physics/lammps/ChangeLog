@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.10 2014/02/06 19:54:16 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.11 2014/02/14 21:09:48 nicolasbock Exp $
+
+*lammps-20140212 (14 Feb 2014)
+
+  14 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> +lammps-20140212.ebuild,
+  metadata.xml:
+  sci-physics/lammps: Version bump to 20140212.  This ebuild now builds the
+  library version of lammps. I have also added the optional reax package.
 
 *lammps-20140201 (06 Feb 2014)
 
