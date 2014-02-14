@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/astor
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astor/ChangeLog,v 1.1 2014/02/14 09:00:49 patrick Exp $
+
+*astor-0.3 (14 Feb 2014)
+
+  14 Feb 2014; Patrick Lauer <patrick@gentoo.org> +astor-0.3.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me
