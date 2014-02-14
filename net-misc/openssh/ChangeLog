@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.499 2014/02/01 18:52:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.500 2014/02/14 15:49:29 hattya Exp $
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org> openssh-6.4_p1-r1.ebuild:
+  ia64 stable wrt bug #477894
 
   01 Feb 2014; Raúl Porcel <armin76@gentoo.org> openssh-6.4_p1-r1.ebuild:
   Stable on sparc after p.use.masking hpn, bug #499552

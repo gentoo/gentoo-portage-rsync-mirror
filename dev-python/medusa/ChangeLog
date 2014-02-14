@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/medusa
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.38 2014/02/11 19:05:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.39 2014/02/14 16:00:27 hattya Exp $
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org> medusa-0.5.4-r1.ebuild:
+  ia64 stable wrt bug #495592
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> medusa-0.5.4-r1.ebuild:
   Stable for HPPA (bug #495592).

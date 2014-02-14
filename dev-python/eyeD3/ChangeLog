@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/eyeD3
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.59 2013/06/21 16:14:25 idella4 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/ChangeLog,v 1.60 2014/02/14 15:39:56 hattya Exp $
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org> eyeD3-0.6.18-r1.ebuild,
+  eyeD3-0.7.1.ebuild:
+  keyword ~ia64 wrt bug #454638
 
   21 Jun 2013; Ian Delaney <idella4@gentoo.org> eyeD3-0.7.1.ebuild:
   update dev paver

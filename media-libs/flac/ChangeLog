@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/flac
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.160 2014/02/11 19:28:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.161 2014/02/14 15:37:27 hattya Exp $
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org> flac-1.2.1-r4.ebuild:
+  ia64 stable wrt bug #450814
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> flac-1.2.1-r4.ebuild:
   Stable for HPPA (bug #450814).

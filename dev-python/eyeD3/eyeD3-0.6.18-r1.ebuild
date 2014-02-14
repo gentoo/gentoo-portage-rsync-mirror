@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.18-r1.ebuild,v 1.5 2013/03/27 12:05:12 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.18-r1.ebuild,v 1.6 2014/02/14 15:39:56 hattya Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.5"
@@ -14,7 +14,7 @@ SRC_URI="http://eyed3.nicfit.net/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 DEPEND=""

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/NetAddr-IP
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.64 2014/02/10 16:55:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.65 2014/02/14 15:36:08 hattya Exp $
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org> NetAddr-IP-4.66.0.ebuild:
+  ia64 stable wrt bug #449602
 
   10 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> NetAddr-IP-4.66.0.ebuild:
   x86 stable wrt bug #449602

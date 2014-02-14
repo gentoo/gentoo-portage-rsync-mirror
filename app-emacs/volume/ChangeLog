@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/volume
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.11 2014/01/01 16:03:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/volume/ChangeLog,v 1.12 2014/02/14 15:50:36 ulm Exp $
+
+*volume-1.0-r1 (14 Feb 2014)
+
+  14 Feb 2014; Ulrich Müller <ulm@gentoo.org> +volume-1.0-r1.ebuild,
+  +files/volume-1.0-mode-line.patch:
+  Patch for better Emacs 24 compatibility.
 
   01 Jan 2014; Ulrich Müller <ulm@gentoo.org> volume-1.0.ebuild:
   Update HOMEPAGE and SRC_URI. Specify LICENSE more precisely. Bump EAPI to 5.

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.54 2014/02/09 16:35:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.55 2014/02/14 15:48:53 hattya Exp $
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org> ldns-1.6.16.ebuild:
+  ia64 stable wrt bug #477894
 
   09 Feb 2014; Fabian Groffen <grobian@gentoo.org> ldns-1.6.16.ebuild:
   Fixed for Prefix, marked ~x64-solaris, by Matthias Maier in bug #500362

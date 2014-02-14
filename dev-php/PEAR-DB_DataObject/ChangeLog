@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB_DataObject
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.52 2014/02/11 19:02:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.53 2014/02/14 15:52:08 hattya Exp $
+
+  14 Feb 2014; Akinori Hattori <hattya@gentoo.org>
+  PEAR-DB_DataObject-1.11.2.ebuild:
+  ia64 stable wrt bug #495562
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org>
   PEAR-DB_DataObject-1.11.2.ebuild:
