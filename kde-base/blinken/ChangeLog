@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.268 2014/02/09 10:05:26 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.269 2014/02/14 12:22:55 johu Exp $
+
+  14 Feb 2014; Johannes Huber <johu@gentoo.org> -blinken-4.12.1.ebuild:
+  Remove KDE SC 4.12.1
 
   09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> blinken-4.11.5.ebuild:
   Stable for amd64, wrt bug #493782

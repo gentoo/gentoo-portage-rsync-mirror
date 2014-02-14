@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/picmi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.58 2014/02/09 10:04:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/picmi/ChangeLog,v 1.59 2014/02/14 12:22:58 johu Exp $
+
+  14 Feb 2014; Johannes Huber <johu@gentoo.org> -picmi-4.12.1.ebuild:
+  Remove KDE SC 4.12.1
 
   09 Feb 2014; Agostino Sarubbo <ago@gentoo.org> picmi-4.11.5.ebuild:
   Stable for amd64, wrt bug #493782

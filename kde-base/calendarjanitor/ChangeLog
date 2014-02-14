@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/calendarjanitor
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/calendarjanitor/ChangeLog,v 1.6 2014/02/06 23:20:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/calendarjanitor/ChangeLog,v 1.7 2014/02/14 12:23:27 johu Exp $
+
+  14 Feb 2014; Johannes Huber <johu@gentoo.org> -calendarjanitor-4.12.1.ebuild:
+  Remove KDE SC 4.12.1
 
 *calendarjanitor-4.12.2 (06 Feb 2014)
 

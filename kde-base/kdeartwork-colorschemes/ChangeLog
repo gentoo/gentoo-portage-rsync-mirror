@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-colorschemes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-colorschemes/ChangeLog,v 1.195 2014/02/09 10:04:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-colorschemes/ChangeLog,v 1.196 2014/02/14 12:23:02 johu Exp $
+
+  14 Feb 2014; Johannes Huber <johu@gentoo.org>
+  -kdeartwork-colorschemes-4.12.1.ebuild:
+  Remove KDE SC 4.12.1
 
   09 Feb 2014; Agostino Sarubbo <ago@gentoo.org>
   kdeartwork-colorschemes-4.11.5.ebuild:
