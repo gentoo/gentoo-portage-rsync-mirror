@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.57 2014/01/28 08:47:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.58 2014/02/14 15:08:44 chainsaw Exp $
+
+*dahdi-2.9.0 (14 Feb 2014)
+
+  14 Feb 2014; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.9.0.ebuild:
+  Updated firmware package for TE133 & TE134, introduces support for TE131 &
+  TE132. Introduces new span assignment method that can be activated with
+  auto_assign_spans=0. Downstream patchset unchanged.
 
   28 Jan 2014; Chema Alonso <nimiux@gentoo.org> dahdi-2.8.0.1.ebuild:
   Stable for amd64 wrt bug #499128
