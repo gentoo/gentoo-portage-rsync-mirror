@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sslh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.20 2014/01/22 16:18:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.22 2014/02/14 17:57:17 kensington Exp $
+
+*sslh-1.16 (14 Feb 2014)
+
+  14 Feb 2014; Michael Palimaka <kensington@gentoo.org> +sslh-1.16.ebuild:
+  Version bump.
 
   22 Jan 2014; Michael Palimaka <kensington@gentoo.org> -sslh-1.14.ebuild:
   Remove old.
