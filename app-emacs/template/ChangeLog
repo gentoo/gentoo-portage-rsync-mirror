@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/template
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/template/ChangeLog,v 1.1 2008/01/23 13:57:14 opfer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/template/ChangeLog,v 1.2 2014/02/14 16:43:47 ulm Exp $
+
+*template-3.1c-r1 (14 Feb 2014)
+
+  14 Feb 2014; Ulrich Müller <ulm@gentoo.org> -template-3.1c.ebuild,
+  +template-3.1c-r1.ebuild, files/50template-gentoo.el:
+  Install templates in SITEETC directory.
 
 *template-3.1c (23 Jan 2008)
 

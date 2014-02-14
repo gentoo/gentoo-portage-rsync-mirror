@@ -1,6 +1,3 @@
-
-;;; template site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'template-single-comment "template"
   "Decorate the comment in the current line with dashes and alike." t)
@@ -20,4 +17,4 @@
 		     (file-directory-p "~/lib/templates"))
 		(expand-file-name "~/lib/templates/")
 	      (expand-file-name "~/.templates/"))
-	    "@SITELISP@/templates"))
+	    "@SITEETC@/templates"))

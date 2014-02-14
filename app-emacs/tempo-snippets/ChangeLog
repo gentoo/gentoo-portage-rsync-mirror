@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/tempo-snippets
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tempo-snippets/ChangeLog,v 1.3 2009/01/29 07:33:07 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tempo-snippets/ChangeLog,v 1.4 2014/02/14 16:50:47 ulm Exp $
+
+  14 Feb 2014; Ulrich Müller <ulm@gentoo.org> tempo-snippets-0.1.5.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -tempo-snippets-0.1.4.ebuild:
