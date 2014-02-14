@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/flashrom
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.40 2013/12/20 19:13:29 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.41 2014/02/14 22:30:25 swegener Exp $
+
+  14 Feb 2014; Sven Wegener <swegener@gentoo.org> flashrom-9999.ebuild:
+  Drop ChangeLog.
 
   20 Dec 2013; Mike Frysinger <vapier@gentoo.org> flashrom-0.9.7.ebuild,
   flashrom-9999.ebuild, metadata.xml:
