@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paramiko
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.108 2013/12/29 17:16:34 maekke Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.109 2014/02/14 19:03:40 radhermit Exp $
+
+*paramiko-1.12.2 (14 Feb 2014)
+
+  14 Feb 2014; Tim Harder <radhermit@gentoo.org> +paramiko-1.12.2.ebuild:
+  Version bump.
 
   29 Dec 2013; Markus Meier <maekke@gentoo.org> paramiko-1.12.0.ebuild:
   add ~arm, bug #490374

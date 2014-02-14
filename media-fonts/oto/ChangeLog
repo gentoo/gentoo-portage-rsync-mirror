@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/oto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.12 2010/04/17 11:39:25 dirtyepic Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.14 2014/02/14 19:10:42 maekke Exp $
+
+  14 Feb 2014; Markus Meier <maekke@gentoo.org> Manifest:
+  sign manifest
+
+  14 Feb 2014; Markus Meier <maekke@gentoo.org> oto-0.5.ebuild:
+  arm stable, bug #286239
 
   17 Apr 2010; Ryan Hill <dirtyepic@gentoo.org> oto-0.5.ebuild:
   Completely broken for 8 months and no one noticed.

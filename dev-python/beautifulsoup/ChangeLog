@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beautifulsoup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.109 2014/02/11 19:19:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.110 2014/02/14 19:14:44 maekke Exp $
+
+  14 Feb 2014; Markus Meier <maekke@gentoo.org> beautifulsoup-4.2.0.ebuild:
+  arm stable, bug #474178
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> beautifulsoup-3.1.0.1-r2.ebuild,
   beautifulsoup-3.2.1-r1.ebuild, beautifulsoup-4.2.0.ebuild:
