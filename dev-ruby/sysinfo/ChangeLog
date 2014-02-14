@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sysinfo
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sysinfo/ChangeLog,v 1.7 2013/01/06 10:36:04 graaff Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sysinfo/ChangeLog,v 1.8 2014/02/14 06:33:36 graaff Exp $
+
+*sysinfo-0.8.1 (14 Feb 2014)
+
+  14 Feb 2014; Hans de Graaff <graaff@gentoo.org> +sysinfo-0.8.1.ebuild:
+  Version bump.
 
   06 Jan 2013; Hans de Graaff <graaff@gentoo.org> sysinfo-0.8.0.ebuild:
   Add a blocker on dev-util/hxtools, bug 445436.
