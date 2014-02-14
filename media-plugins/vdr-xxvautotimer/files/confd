@@ -1,9 +1,0 @@
-# /etc/conf.d/vdr.xxvautotimer
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xxvautotimer/files/confd,v 1.1 2008/03/22 18:27:10 hd_brummy Exp $
-
-# Global config file for vdr rc-scripts
-
-# set the dir to configfile of XXV
-#   allowed values: directory/file names
-#   default: /etc/xxv/xxvd.cfg
-#XXV_CONF_DIR="/etc/xxv/xxvd.cfg"
