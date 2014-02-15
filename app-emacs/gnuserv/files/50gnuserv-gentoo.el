@@ -1,6 +1,3 @@
-
-;;; gnuserv site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 ;; necessary for FSF GNU Emacs only
 (autoload 'gnuserv-start "gnuserv-compat"

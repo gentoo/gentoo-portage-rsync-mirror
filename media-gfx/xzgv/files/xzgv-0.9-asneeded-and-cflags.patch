@@ -1,6 +1,7 @@
-diff -ur xzgv-0.9.orig/config.mk xzgv-0.9/config.mk
---- xzgv-0.9.orig/config.mk	2007-08-12 13:14:42.000000000 +0300
-+++ xzgv-0.9/config.mk	2007-10-27 19:56:25.000000000 +0300
+http://bugs.gentoo.org/500692
+
+--- config.mk
++++ config.mk
 @@ -7,7 +7,7 @@
  # This is likely to be what you'll want for most systems:
  #
@@ -10,15 +11,16 @@ diff -ur xzgv-0.9.orig/config.mk xzgv-0.9/config.mk
  
  # Set the awk interpreter to use for a script used while compiling.
  # (This should be a `new' awk, such as gawk or mawk.)
-diff -ur xzgv-0.9.orig/src/Makefile xzgv-0.9/src/Makefile
---- xzgv-0.9.orig/src/Makefile	2007-08-14 01:39:16.000000000 +0300
-+++ xzgv-0.9/src/Makefile	2007-10-27 19:54:01.000000000 +0300
-@@ -10,7 +10,7 @@
+--- src/Makefile
++++ src/Makefile
+@@ -9,8 +9,8 @@
+ # This gets definitions for CC, CFLAGS, BINDIR etc.
  include ../config.mk
  
- CFLAGS+=`pkg-config --cflags gtk+-2.0` `pkg-config --cflags gdk-pixbuf-2.0`
+-CFLAGS+=`pkg-config --cflags gtk+-2.0` `pkg-config --cflags gdk-pixbuf-2.0`
 -LDFLAGS+=`pkg-config --libs gtk+-2.0` `pkg-config --libs gdk-pixbuf-2.0`
-+LIBS=`pkg-config --libs gtk+-2.0` `pkg-config --libs gdk-pixbuf-2.0`
++CFLAGS+=`pkg-config --cflags gtk+-2.0` `pkg-config --cflags gdk-pixbuf-2.0` `pkg-config --cflags x11`
++LIBS=`pkg-config --libs gtk+-2.0` `pkg-config --libs gdk-pixbuf-2.0` `pkg-config --libs x11` -lm
  
  all: xzgv
  
