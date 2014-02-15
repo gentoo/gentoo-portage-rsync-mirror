@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/i8kutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.23 2014/01/06 13:56:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/ChangeLog,v 1.24 2014/02/15 13:18:36 pacho Exp $
+
+  15 Feb 2014; Pacho Ramos <pacho@gentoo.org> -i8kutils-1.33.ebuild,
+  i8kutils-1.33-r1.ebuild:
+  x86/amd64 stable (#500084), drop old
 
 *i8kutils-1.33-r1 (06 Jan 2014)
 

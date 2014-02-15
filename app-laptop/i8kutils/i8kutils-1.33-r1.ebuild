@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.33-r1.ebuild,v 1.1 2014/01/06 13:56:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/i8kutils/i8kutils-1.33-r1.ebuild,v 1.2 2014/02/15 13:18:36 pacho Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/i/${PN}/${P/-/_}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="examples tk"
 
 DEPEND="tk? ( dev-lang/tk )"
