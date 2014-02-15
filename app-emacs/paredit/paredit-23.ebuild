@@ -1,20 +1,21 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/paredit/paredit-21.ebuild,v 1.2 2009/11/24 21:07:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/paredit/paredit-23.ebuild,v 1.1 2014/02/15 20:25:02 ulm Exp $
+
+EAPI=5
 
 inherit elisp
 
 DESCRIPTION="Minor mode for performing structured editing of S-expressions"
 HOMEPAGE="http://mumble.net/~campbell/emacs/
-	http://www.emacswiki.org/cgi-bin/wiki/ParEdit"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	http://www.emacswiki.org/emacs/ParEdit"
+SRC_URI="http://dev.gentoo.org/~ulm/distfiles/${P}.tar.xz"
 
-LICENSE="BSD"
+LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
-IUSE=""
 
-SITEFILE=50${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
 
 src_install() {
 	elisp_src_install

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.4.3.ebuild,v 1.1 2013/08/19 16:28:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.4.3.ebuild,v 1.2 2014/02/15 20:30:53 alonbl Exp $
 
 EAPI="5"
 
@@ -28,7 +28,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--includedir="${EPREFIX}/usr/include/gpgme" \
-		--with-gpg="${EPREFIX}/usr/bin/gpg" \
+		--with-gpg="$(readlink -f "${EPREFIX}/usr/bin/gpg")" \
 		--with-gpgsm="${EPREFIX}/usr/bin/gpgsm" \
 		$(use_enable static-libs static)
 }
