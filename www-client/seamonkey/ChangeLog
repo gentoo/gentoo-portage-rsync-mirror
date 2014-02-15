@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.479 2014/02/12 06:02:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.480 2014/02/15 06:03:10 ago Exp $
+
+  15 Feb 2014; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.24.ebuild:
+  Stable for amd64, wrt bug #500320
 
   11 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> seamonkey-2.24.ebuild:
   x86 stable wrt security bug #500320
