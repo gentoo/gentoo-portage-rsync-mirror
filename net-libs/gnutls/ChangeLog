@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.463 2014/02/15 04:01:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.464 2014/02/15 22:17:40 alonbl Exp $
+
+  15 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org> -gnutls-3.2.10.ebuild:
+  Clean old ebuilds
 
   15 Feb 2014; Tim Harder <radhermit@gentoo.org> -gnutls-3.2.7.ebuild,
   -gnutls-3.2.8.ebuild, -gnutls-3.2.9.ebuild, -files/gnutls-3.2.5-build.patch,

@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/mktwpol
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/ChangeLog,v 1.7 2014/02/04 09:50:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/ChangeLog,v 1.9 2014/02/15 22:16:47 nimiux Exp $
+
+  15 Feb 2014; Chema Alonso <nimiux@gentoo.org> -mktwpol-0.2.0.ebuild,
+  -mktwpol-0.2.2.ebuild:
+  Drop old
+
+*mktwpol-0.2.3 (15 Feb 2014)
+
+  15 Feb 2014; Chema Alonso <nimiux@gentoo.org> +mktwpol-0.2.3.ebuild:
+  Version bump
 
 *mktwpol-0.2.2 (04 Feb 2014)
 

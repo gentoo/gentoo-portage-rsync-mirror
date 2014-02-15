@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/mktwpol-0.2.2.ebuild,v 1.1 2014/02/04 09:50:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mktwpol/mktwpol-0.2.3.ebuild,v 1.1 2014/02/15 22:15:15 nimiux Exp $
 
 EAPI=5
 

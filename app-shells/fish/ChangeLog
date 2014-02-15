@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/fish
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.64 2014/02/11 12:40:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.65 2014/02/15 22:11:38 nimiux Exp $
+
+  15 Feb 2014; Chema Alonso <nimiux@gentoo.org> fish-2.1.0-r2.ebuild:
+  Stable for amd64 wrt bug #493316
 
   11 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> fish-2.1.0-r2.ebuild:
   Tests only work when the package is already installed (bug #319571).
