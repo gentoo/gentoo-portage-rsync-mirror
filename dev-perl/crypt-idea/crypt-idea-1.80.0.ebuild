@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/crypt-idea-1.80.0.ebuild,v 1.2 2011/09/03 21:04:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/crypt-idea-1.80.0.ebuild,v 1.3 2014/02/15 19:22:29 zlogene Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 
 DESCRIPTION="Parse and save PGP packet streams"
 
-LICENSE="DES"
+LICENSE="Crypt-IDEA"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""

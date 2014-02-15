@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/crypt-idea
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.38 2013/09/05 22:57:51 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-idea/ChangeLog,v 1.39 2014/02/15 19:22:29 zlogene Exp $
+
+  15 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> crypt-idea-1.100.0.ebuild,
+  crypt-idea-1.80.0.ebuild:
+  fix LICENSE wrt bug #325037
 
 *crypt-idea-1.100.0 (05 Sep 2013)
 
