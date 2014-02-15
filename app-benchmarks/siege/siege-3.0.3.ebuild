@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-3.0.3.ebuild,v 1.2 2014/02/11 18:43:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-3.0.3.ebuild,v 1.3 2014/02/15 18:53:46 nimiux Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.joedog.org/JoeDog/Siege"
 SRC_URI="http://www.joedog.org/pub/siege/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 hppa ~mips ~ppc ~x86"
+KEYWORDS="amd64 hppa ~mips ~ppc ~x86"
 SLOT="0"
 IUSE="ssl"
 

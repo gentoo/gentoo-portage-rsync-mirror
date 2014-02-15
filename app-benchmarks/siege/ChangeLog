@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.64 2014/02/11 18:43:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.65 2014/02/15 18:53:46 nimiux Exp $
+
+  15 Feb 2014; Chema Alonso <nimiux@gentoo.org> siege-3.0.3.ebuild:
+  Stable for amd64 wrt bug #491904
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> siege-3.0.3.ebuild:
   Stable for HPPA (bug #491904).
