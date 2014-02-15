@@ -1,13 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8613 2014/02/15 19:18:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8615 2014/02/15 21:43:31 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
-  15 Feb 21014; Mikle Kolyada <zlogene@gentoo.org> license_groups:
-  Add Crypt-IDEA license to MISC-FREE group. 
+  15 Feb 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
+  Delete spurious newline in MISC-FREE license group.
+
+  15 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> license_groups:
+  Add Crypt-IDEA license to MISC-FREE group.
 
   15 Feb 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
   Mask app-emacs/{alt-font-menu,cperl-mode,mell,u-vm-color} for removal.
