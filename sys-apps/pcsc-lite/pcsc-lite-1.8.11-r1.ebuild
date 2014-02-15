@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.11.ebuild,v 1.2 2014/02/15 08:53:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.11-r1.ebuild,v 1.1 2014/02/15 11:59:48 flameeyes Exp $
 
 EAPI="5"
 
-inherit eutils multilib systemd udev user
+inherit eutils multilib systemd udev user autotools
 
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
@@ -45,6 +45,9 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-polkit-pcscd.patch
+	epatch "${FILESDIR}"/${P}-nopolkit.patch
+
+	eautoreconf
 }
 
 src_configure() {
