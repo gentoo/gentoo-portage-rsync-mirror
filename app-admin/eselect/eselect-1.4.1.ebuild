@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.3.6.ebuild,v 1.13 2013/12/07 19:08:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.4.1.ebuild,v 1.1 2014/02/15 00:10:42 ulm Exp $
 
 EAPI=4
 
@@ -10,9 +10,9 @@ DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Eselect"
 SRC_URI="http://dev.gentoo.org/~ulm/eselect/${P}.tar.xz"
 
-LICENSE="GPL-2+"
+LICENSE="GPL-2+ || ( GPL-2+ CC-BY-SA-2.5 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc emacs vim-syntax"
 
 RDEPEND="sys-apps/sed
