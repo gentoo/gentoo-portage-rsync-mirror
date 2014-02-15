@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.8.1-r1.ebuild,v 1.1 2014/02/15 13:16:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.8.1-r1.ebuild,v 1.2 2014/02/15 14:34:54 pacho Exp $
 
 EAPI=4
 inherit eutils systemd user
@@ -13,7 +13,7 @@ SRC_URI="http://www.ijs.si/software/amavisd/${MY_P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-IUSE="courier dkim ldap mysql postgres qmail razor snmp spamassassin zmq"
+IUSE="clamav courier dkim ldap mysql postgres qmail razor snmp spamassassin zmq"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-lang/perl-5.8.2"
@@ -57,6 +57,7 @@ RDEPEND="${DEPEND}
 	dev-perl/Convert-BinHex
 	>=dev-perl/Mail-DKIM-0.31
 	virtual/mta
+	clamav? ( app-antivirus/clamav )
 	ldap? ( >=dev-perl/perl-ldap-0.33 )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
@@ -115,8 +116,8 @@ src_install() {
 	newinitd "${FILESDIR}/amavisd.initd-r1" amavisd
 
 	systemd_dounit "${FILESDIR}/amavisd.service"
-	use clamd || sed -i -e '/Wants=clamd/d' "${ED}"/usr/lib/systemd/system/amavisd.service
-	use spamassasin || sed -i -e '/Wants=clamd/d' "${ED}"/usr/lib/systemd/system/amavisd.service
+	use clamav || sed -i -e '/Wants=clamd/d' "${ED}"/usr/lib/systemd/system/amavisd.service
+	use spamassasin || sed -i -e '/Wants=spamassasin/d' "${ED}"/usr/lib/systemd/system/amavisd.service
 	
 	keepdir "${AMAVIS_ROOT}"
 	keepdir "${AMAVIS_ROOT}/db"

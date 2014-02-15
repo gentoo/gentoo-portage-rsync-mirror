@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/unifont
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.44 2014/02/10 06:36:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.45 2014/02/15 14:39:01 hattya Exp $
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> unifont-6.3.20140204.ebuild:
+  keyword ~ia64 wrt bug #500844
 
 *unifont-6.3.20140204 (10 Feb 2014)
 
