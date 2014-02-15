@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.194 2014/01/24 20:30:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.195 2014/02/15 20:42:37 alonbl Exp $
+
+*libtasn1-3.4-r1 (15 Feb 2014)
+
+  15 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org> +libtasn1-3.4-r1.ebuild:
+  Add multilib support, bug#499376, thanks to Michael Mair-Keimberger (iamnr3)
 
   24 Jan 2014; Tim Harder <radhermit@gentoo.org> -libtasn1-2.12.ebuild,
   -libtasn1-3.0.ebuild, -libtasn1-3.2.ebuild, -libtasn1-3.3.ebuild,
