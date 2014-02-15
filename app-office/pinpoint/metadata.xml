@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>nirbheek@gentoo.org</email>
-		<name>Nirbheek Chauhan</name>
-	</maintainer>
+<herd>gnome</herd>
 	<longdescription lang="en">
 		Pinpoint is a simple presentation tool that hopes to avoid audience
 		death by bullet point and instead encourage presentations containing

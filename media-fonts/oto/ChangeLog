@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/oto
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.14 2014/02/14 19:10:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/ChangeLog,v 1.15 2014/02/15 09:49:08 hattya Exp $
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> oto-0.5.ebuild:
+  ia64 stable wrt bug #286239
 
   14 Feb 2014; Markus Meier <maekke@gentoo.org> Manifest:
   sign manifest
@@ -44,4 +47,3 @@
 
   30 Mar 2004; <matsuu@gentoo.org> metadata.xml, oto-0.4.ebuild:
   Initial import. Bug#46083.
-

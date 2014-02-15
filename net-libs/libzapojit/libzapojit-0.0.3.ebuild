@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libzapojit/libzapojit-0.0.3.ebuild,v 1.4 2013/12/08 19:26:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libzapojit/libzapojit-0.0.3.ebuild,v 1.5 2014/02/15 09:46:08 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,8 @@ RDEPEND="
 	net-libs/rest
 	net-libs/gnome-online-accounts
 
-	introspection? ( >=dev-libs/gobject-introspection-1.30.0 )"
+	introspection? ( >=dev-libs/gobject-introspection-1.30.0 )
+"
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.11
 	>=dev-util/intltool-0.35.0
@@ -34,13 +35,6 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	gnome2_src_configure \
-		--enable-compile-warnings=minimum \
 		--disable-static \
 		$(use_enable introspection)
-}
-
-src_install() {
-	gnome2_src_install
-	# Drop self-installed documentation
-	rm -r "${ED}"/usr/share/doc/${PN}/ || die
 }

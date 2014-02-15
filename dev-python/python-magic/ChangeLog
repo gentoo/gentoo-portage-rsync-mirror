@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-magic
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.5 2013/10/16 19:34:37 thev00d00 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-magic/ChangeLog,v 1.6 2014/02/15 09:59:41 hattya Exp $
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> python-magic-0.4.6-r1.ebuild:
+  keyword ~ia64 wrt bug #454638
 
 *python-magic-0.4.6-r1 (16 Oct 2013)
 
