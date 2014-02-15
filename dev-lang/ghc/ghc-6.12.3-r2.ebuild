@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.9 2014/02/12 07:46:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.10 2014/02/15 08:52:36 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -84,6 +84,8 @@ PDEPEND="!ghcbootstrap? ( || ( =app-admin/haskell-updater-1.2* =app-admin/haskel
 # use undocumented feature STRIP_MASK to fix this issue:
 # http://hackage.haskell.org/trac/ghc/ticket/3580
 STRIP_MASK="*/HSffi.o"
+
+use binary && QA_PREBUILT="*"
 
 append-ghc-cflags() {
 	local flag compile assemble link

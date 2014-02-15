@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.3.ebuild,v 1.3 2014/02/12 07:46:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.6.3.ebuild,v 1.4 2014/02/15 08:52:36 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -121,6 +121,8 @@ PDEPEND="
 
 # ia64 fails to return from STG GMP primitives (stage2 always SIGSEGVs)
 REQUIRED_USE="ia64? ( !gmp )"
+
+use binary && QA_PREBUILT="*"
 
 is_crosscompile() {
 	[[ ${CHOST} != ${CTARGET} ]]

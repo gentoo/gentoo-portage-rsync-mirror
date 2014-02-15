@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/alsaequal-0.6-r2.ebuild,v 1.1 2014/01/15 18:06:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/alsaequal-0.6-r2.ebuild,v 1.2 2014/02/15 08:53:11 pacho Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="http://www.thedigitalmachine.net/tools/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/alsa-lib[${MULTILIB_USEDEP}]

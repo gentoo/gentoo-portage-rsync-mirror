@@ -1,6 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/perl-libnet-1.220.0-r1.ebuild,v 1.8 2014/01/20 20:42:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-libnet/perl-libnet-1.220.0-r1.ebuild,v 1.9 2014/02/15 08:56:55 zlogene Exp $
+
+#Some important notes about detecting libnet version
+#http://dev.gentoo.org/~zlogene/perl-libnet-mantainer-notes 
 
 DESCRIPTION="Virtual for ${PN#perl-}"
 HOMEPAGE=""

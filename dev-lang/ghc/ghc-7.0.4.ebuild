@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.8 2014/02/12 07:46:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.9 2014/02/15 08:52:36 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -118,6 +118,8 @@ PDEPEND="
 	${PDEPEND}
 	dev-haskell/syb
 	llvm? ( sys-devel/llvm )"
+
+use binary && QA_PREBUILT="*"
 
 append-ghc-cflags() {
 	local flag compile assemble link

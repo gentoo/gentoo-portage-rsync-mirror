@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.5 2014/02/12 07:46:29 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.4.1.ebuild,v 1.6 2014/02/15 08:52:36 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -105,6 +105,8 @@ PDEPEND="!ghcbootstrap? ( =app-admin/haskell-updater-1.2* )"
 PDEPEND="
 	${PDEPEND}
 	llvm? ( sys-devel/llvm )"
+
+use binary && QA_PREBUILT="*"
 
 append-ghc-cflags() {
 	local flag compile assemble link

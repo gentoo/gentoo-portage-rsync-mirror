@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.11.ebuild,v 1.1 2014/02/14 23:11:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.11.ebuild,v 1.2 2014/02/15 08:53:38 ssuominen Exp $
 
 EAPI="5"
 
@@ -50,7 +50,6 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-maintainer-mode \
-		--disable-silent-rules \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-usbdropdir="${EPREFIX}/usr/$(get_libdir)/readers/usb" \
 		--enable-ipcdir=/run/pcscd \
@@ -70,7 +69,7 @@ src_install() {
 	newinitd "${FILESDIR}"/pcscd-init.7 pcscd
 
 	if use udev; then
-		insinto "$(udev_get_udevdir)"/rules.d
+		insinto "$(get_udevdir)"/rules.d
 		doins "${FILESDIR}"/99-pcscd-hotplug.rules
 	fi
 }

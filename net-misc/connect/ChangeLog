@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/connect
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.10 2012/10/08 11:08:10 nativemad Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connect/ChangeLog,v 1.11 2014/02/15 08:51:09 wschlich Exp $
+
+*connect-1.100 (15 Feb 2014)
+*connect-1.103 (15 Feb 2014)
+
+  15 Feb 2014; Wolfram Schlich <wschlich@gentoo.org> +connect-1.100.ebuild,
+  +connect-1.103.ebuild:
+  version bump, re-added version 100 as 1.100 according to upstream versioning
+  schema
 
   08 Oct 2012; Andreas Schuerch <nativemad@gentoo.org> connect-100.ebuild:
   x86 stable, see bug 384471
@@ -39,4 +47,3 @@
   19 Sep 2005; Wolfram Schlich <wschlich@gentoo.org> +metadata.xml,
   +connect-1.95.ebuild:
   initial import
-
