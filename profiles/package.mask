@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15397 2014/02/15 10:44:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15398 2014/02/15 15:36:08 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,23 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Doesn't appear to work with Emacs 24.
+# Last upstream release in 2002.
+# Masked for removal in 30 days, bug 501412.
+app-emacs/alt-font-menu
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Included with Emacs since version 23.
+# cperl-mode-6.2 does not work with Emacs 24.
+# Masked for removal in 30 days, bug 501410.
+app-emacs/cperl-mode
+
+# Ulrich Müller <ulm@gentoo.org> (15 Feb 2014)
+# Now included with app-emacs/vm.
+# Masked for removal in 30 days, bug 501414.
+app-emacs/u-vm-color
 
 # Ulrich Müller <ulm@gentoo.org> (14 Feb 2014)
 # Included with Emacs since version 22.3.
