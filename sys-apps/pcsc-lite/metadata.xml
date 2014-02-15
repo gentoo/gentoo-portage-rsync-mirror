@@ -20,5 +20,10 @@
       disable this flag on Linux kernels. This is provided as an
       option for completeness.
     </flag>
+
+    <flag name='policykit'>
+      Uses <pkg>sys-auth/polkit</pkg> to restrict access to smartcard readers or
+      smartcars to given users.
+    </flag>
   </use>
 </pkgmetadata>

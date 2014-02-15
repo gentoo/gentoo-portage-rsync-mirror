@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffdiaporama
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.19 2013/12/29 08:47:28 xarthisius Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffdiaporama/ChangeLog,v 1.20 2014/02/14 23:12:55 hasufell Exp $
+
+*ffdiaporama-2.1 (14 Feb 2014)
+
+  14 Feb 2014; Julian Ospald <hasufell@gentoo.org> +ffdiaporama-2.1.ebuild:
+  version bump by Olivier Laurantin
 
   29 Dec 2013; Kacper Kowalik <xarthisius@gentoo.org> -ffdiaporama-2.0.ebuild:
   Drop old ebuild as sources were removed upstream
