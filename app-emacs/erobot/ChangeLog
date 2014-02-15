@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/erobot
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/erobot/ChangeLog,v 1.13 2009/12/15 17:31:25 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/erobot/ChangeLog,v 1.14 2014/02/15 11:11:56 ulm Exp $
+
+  15 Feb 2014; Ulrich Müller <ulm@gentoo.org> erobot-2.1.0-r1.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   15 Dec 2009; Ulrich Mueller <ulm@gentoo.org> +files/50erobot-gentoo.el,
   erobot-2.1.0-r1.ebuild, -files/51erobot-gentoo.el:

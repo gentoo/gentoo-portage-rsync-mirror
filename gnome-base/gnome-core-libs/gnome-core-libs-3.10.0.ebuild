@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/gnome-core-libs-3.10.0.ebuild,v 1.1 2013/12/24 18:04:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/gnome-core-libs-3.10.0.ebuild,v 1.2 2014/02/15 11:02:39 pacho Exp $
 
 EAPI="5"
 
@@ -24,7 +24,7 @@ RDEPEND="
 	>=x11-libs/gtk+-${PV}:3[cups?]
 	>=dev-libs/atk-2.10
 	>=x11-libs/libwnck-3.4.5:3
-	>=gnome-base/librsvg-2.39.0[gtk]
+	>=gnome-base/librsvg-2.40.1
 	>=gnome-base/gnome-desktop-${PV}:3
 	>=gnome-base/libgnomekbd-3.6
 	>=x11-libs/startup-notification-0.12
@@ -47,9 +47,3 @@ RDEPEND="
 DEPEND=""
 
 S="${WORKDIR}"
-
-# FIXME: Update with future upgrade guide
-#pkg_pretend() {
-#	elog "See http://www.gentoo.org/proj/en/desktop/gnome/howtos/gnome-3.6-upgrade.xml"
-#	elog "for the Gentoo GNOME 3.6 upgrade guide."
-#}
