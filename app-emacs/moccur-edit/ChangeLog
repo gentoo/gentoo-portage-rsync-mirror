@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/moccur-edit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/moccur-edit/ChangeLog,v 1.5 2009/10/15 19:35:54 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/moccur-edit/ChangeLog,v 1.6 2014/02/15 01:04:18 ulm Exp $
+
+  15 Feb 2014; Ulrich Müller <ulm@gentoo.org> -moccur-edit-2.11-r1.ebuild,
+  moccur-edit-2.16.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
 *moccur-edit-2.16 (15 Oct 2009)
 
