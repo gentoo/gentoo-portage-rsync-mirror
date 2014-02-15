@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/blankslate
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/ChangeLog,v 1.6 2014/02/13 15:55:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/ChangeLog,v 1.7 2014/02/15 10:26:00 hattya Exp $
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> blankslate-3.1.2.ebuild:
+  keyword ~ia64 wrt bug #501152
 
   13 Feb 2014; Jeroen Roovers <jer@gentoo.org> blankslate-3.1.2.ebuild:
   Marked ~hppa (bug #501152).

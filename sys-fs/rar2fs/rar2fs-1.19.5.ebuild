@@ -1,9 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/rar2fs/rar2fs-1.19.5.ebuild,v 1.1 2014/02/11 04:56:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/rar2fs/rar2fs-1.19.5.ebuild,v 1.2 2014/02/15 10:27:33 radhermit Exp $
 
 EAPI=5
-inherit autotools
 
 # upstream uses google drive that has hash-based URLs
 GD_HASH="0B-2uEqYiZg3zd2k4Q3duUUUtczA"

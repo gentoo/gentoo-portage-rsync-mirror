@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ssh
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ssh/ChangeLog,v 1.1 2006/03/06 17:15:24 mkennedy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ssh/ChangeLog,v 1.2 2014/02/15 10:26:16 ulm Exp $
+
+*ssh-20120709 (15 Feb 2014)
+
+  15 Feb 2014; Ulrich Müller <ulm@gentoo.org> +ssh-20120709.ebuild:
+  Version bump.
 
 *ssh-1.9 (06 Mar 2006)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-0.20.0.ebuild,v 1.2 2014/01/08 06:15:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-1.4.0.ebuild,v 1.1 2014/02/15 10:20:56 hwoarang Exp $
 
 EAPI=5
 
@@ -20,11 +20,13 @@ IUSE_INPUT_DEVICES="
 	input_devices_roccat_kone
 	input_devices_roccat_koneplus
 	input_devices_roccat_konepure
+	input_devices_roccat_konepureoptical
 	input_devices_roccat_konextd
 	input_devices_roccat_kovaplus
 	input_devices_roccat_lua
 	input_devices_roccat_pyra
 	input_devices_roccat_savu
+	input_devices_roccat_ryos
 "
 IUSE="${IUSE_INPUT_DEVICES}"
 
@@ -41,11 +43,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-src_prepare() {
-	# only notification daemon, move it to autostart...
-	# https://sourceforge.net/p/roccat/patches/2/
-	sed -i 's|share/applications|/etc/xdg/autostart|g' roccateventhandler/CMakeLists.txt || \
-	die "sed failed"
+pkg_setup() {
+	enewgroup roccat
 }
 
 src_configure() {
@@ -57,13 +56,16 @@ src_configure() {
 }
 src_install() {
 	cmake-utils_src_install
+	local stat_dir=/var/lib/roccat
+	keepdir $stat_dir
+	fowners root:roccat $stat_dir
+	fperms 2770 $stat_dir
 	readme.gentoo_src_install
 }
 pkg_preinst() {
 	gnome2_icon_savelist
 }
 pkg_postinst() {
-	enewgroup roccat
 	gnome2_icon_cache_update
 	readme.gentoo_print_elog
 }

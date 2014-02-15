@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/roccat-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/ChangeLog,v 1.5 2014/01/08 06:15:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/ChangeLog,v 1.6 2014/02/15 10:20:56 hwoarang Exp $
+
+*roccat-tools-1.4.0 (15 Feb 2014)
+
+  15 Feb 2014; Markos Chandras <hwoarang@gentoo.org> +roccat-tools-1.4.0.ebuild,
+  -roccat-tools-0.20.0.ebuild:
+  Version bump thanks to Dmitry Pisklov
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> roccat-tools-0.20.0.ebuild,
   roccat-tools-1.0.0.ebuild, roccat-tools-1.1.0.ebuild:

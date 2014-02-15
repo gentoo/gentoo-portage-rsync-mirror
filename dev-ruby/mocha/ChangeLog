@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mocha
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.95 2014/02/13 15:57:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mocha/ChangeLog,v 1.96 2014/02/15 10:26:53 hattya Exp $
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> mocha-0.14.0.ebuild:
+  keyword ~ia64 wrt bug #501152
 
   13 Feb 2014; Jeroen Roovers <jer@gentoo.org> mocha-0.14.0.ebuild:
   Marked ~hppa (bug #501152).

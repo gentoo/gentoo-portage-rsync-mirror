@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/introspection
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.2 2014/02/13 15:56:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/introspection/ChangeLog,v 1.3 2014/02/15 10:26:22 hattya Exp $
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> introspection-0.0.3.ebuild:
+  keyword ~ia64 wrt bug #501152
 
   13 Feb 2014; Jeroen Roovers <jer@gentoo.org> introspection-0.0.3.ebuild:
   Marked ~hppa (bug #501152).
@@ -11,4 +14,3 @@
   +metadata.xml:
   Initial import. New dependency for dev-ruby/mocha. Initial ebuild by Michel
   Boaventura in the ruby overlay.
-
