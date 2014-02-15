@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Capture-Tiny
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.42 2014/02/15 12:09:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Capture-Tiny/ChangeLog,v 1.43 2014/02/15 13:54:42 hattya Exp $
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> Capture-Tiny-0.240.0.ebuild:
+  ia64 stable wrt bug #500596
 
   15 Feb 2014; Jeroen Roovers <jer@gentoo.org> Capture-Tiny-0.240.0.ebuild:
   Stable for HPPA (bug #500596).

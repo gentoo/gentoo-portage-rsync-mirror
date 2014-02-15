@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.88 2014/02/10 11:49:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.89 2014/02/15 13:59:20 hattya Exp $
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> devtodo-0.1.20-r1.ebuild:
+  ia64 stable wrt bug #500780
 
   10 Feb 2014; Jeroen Roovers <jer@gentoo.org> devtodo-0.1.20-r1.ebuild:
   Stable for HPPA (bug #500780).

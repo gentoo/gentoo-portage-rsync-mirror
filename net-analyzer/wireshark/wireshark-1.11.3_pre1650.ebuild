@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre1621.ebuild,v 1.1 2014/02/12 12:26:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.11.3_pre1650.ebuild,v 1.1 2014/02/15 13:54:25 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps qt4-r2 user versionator
@@ -8,7 +8,7 @@ inherit autotools eutils fcaps qt4-r2 user versionator
 WS_PV="$(get_version_component_range 1-3)"
 WS_REV="$(get_version_component_range 4)"
 WS_REV="${WS_REV/pre/}"
-WS_GIT="gab3348e"
+WS_GIT="gb24339e"
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
@@ -93,7 +93,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch
 
 	# Qt5 support is broken since the build system does not determine
-	# which `moc' it ought to use
+	# properly which `moc' it ought to use
 	sed -i -e 's|Qt5||g' acinclude.m4 || die
 
 	epatch_user
