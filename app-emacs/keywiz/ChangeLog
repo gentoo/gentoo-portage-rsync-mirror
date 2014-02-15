@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/keywiz
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/keywiz/ChangeLog,v 1.7 2007/12/14 05:19:54 opfer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/keywiz/ChangeLog,v 1.8 2014/02/15 10:41:56 ulm Exp $
+
+  15 Feb 2014; Ulrich Müller <ulm@gentoo.org> keywiz-1.4.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   14 Dec 2007; Christian Faulhammer <opfer@gentoo.org> keywiz-1.4.ebuild:
   amd64/x86 stable

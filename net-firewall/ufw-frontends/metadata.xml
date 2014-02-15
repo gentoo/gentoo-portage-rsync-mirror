@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
 		<email>slawomir.nizio@sabayon.org</email>
 		<name>Sławomir Nizio</name>
@@ -12,4 +12,6 @@
 	<upstream>
 		<remote-id type="google-code">ufw-frontends</remote-id>
 	</upstream>
+	<use><flag name="policykit">Use pkexec to gain root privileges</flag></use>
+	<use><flag name="kde">Use kdesu to gain root privileges (note: the flag has lower priority than "policykit")</flag></use>
 </pkgmetadata>

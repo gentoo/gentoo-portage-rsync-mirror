@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.468 2013/12/25 10:20:10 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.469 2014/02/15 10:48:57 pacho Exp $
+
+  15 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-3.10.0.ebuild:
+  Rekeyword on x86 (#495250)
 
   25 Dec 2013; Pacho Ramos <pacho@gentoo.org> -gnome-3.6.2.ebuild, metadata.xml:
   Drop 3.6

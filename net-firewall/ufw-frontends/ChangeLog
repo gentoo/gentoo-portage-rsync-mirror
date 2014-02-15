@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ufw-frontends
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.7 2013/02/16 12:49:46 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.8 2014/02/15 10:34:57 hwoarang Exp $
+
+*ufw-frontends-0.3.2-r1 (15 Feb 2014)
+
+  15 Feb 2014; Markos Chandras <hwoarang@gentoo.org>
+  +files/org.gentoo.pkexec.ufw-gtk.policy, +ufw-frontends-0.3.2-r1.ebuild,
+  metadata.xml:
+  Apply patch to move away from gksu and switch to distutils-r1. Remove old
+  ebuild. Patch by Sławomir Nizio <slawomir.nizio@sabayon.org>. Bug #486450
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

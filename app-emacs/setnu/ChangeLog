@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/setnu
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/setnu/ChangeLog,v 1.7 2007/10/19 20:55:24 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/setnu/ChangeLog,v 1.8 2014/02/15 10:36:34 ulm Exp $
+
+  15 Feb 2014; Ulrich Müller <ulm@gentoo.org> setnu-1.06.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   19 Oct 2007; Ulrich Mueller <ulm@gentoo.org> setnu-1.06.ebuild:
   amd64 stable, bug 195512

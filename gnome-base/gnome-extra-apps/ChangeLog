@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-extra-apps
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/ChangeLog,v 1.21 2013/12/24 18:09:29 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/ChangeLog,v 1.22 2014/02/15 10:47:46 pacho Exp $
+
+  15 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-extra-apps-3.10.0.ebuild:
+  Rekeyword on x86 (#495250)
 
 *gnome-extra-apps-3.10.0 (24 Dec 2013)
 

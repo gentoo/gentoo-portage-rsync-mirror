@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/systemd-sysv-utils-207.ebuild,v 1.1 2013/09/20 16:37:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-sysv-utils/systemd-sysv-utils-208.ebuild,v 1.2 2014/02/15 10:41:52 mgorny Exp $
 
 EAPI=5
 
@@ -15,8 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+# new enough util-linux to have tools that were provided by sysvinit
+# earlier.
 RDEPEND="!sys-apps/sysvinit
-	>=sys-apps/systemd-201"
+	>=sys-apps/systemd-201
+	>=sys-apps/util-linux-2.24.1-r2"
 
 S=${WORKDIR}/${MY_P}/man
 
