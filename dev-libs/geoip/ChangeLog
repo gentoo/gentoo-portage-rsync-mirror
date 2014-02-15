@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.198 2014/02/02 15:26:05 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.200 2014/02/15 14:27:31 jer Exp $
+
+  15 Feb 2014; Jeroen Roovers <jer@gentoo.org> geoip-1.6.0-r1.ebuild:
+  Drop net-misc/geoipupdate dependency as this requires a MaxMind subscription,
+  and it is not needed for updating the basic databases.
+
+  15 Feb 2014; Akinori Hattori <hattya@gentoo.org> geoip-1.6.0-r1.ebuild:
+  ia64 stable wrt bug #501344
 
   02 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> geoip-1.6.0-r1.ebuild:
   Add ~s390, wrt bug #490062
