@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/mu-cite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mu-cite/ChangeLog,v 1.8 2010/05/14 14:47:53 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mu-cite/ChangeLog,v 1.9 2014/02/15 17:37:40 ulm Exp $
+
+*mu-cite-8.1_p201202272330 (15 Feb 2014)
+*mu-cite-8.1_p200709030413 (15 Feb 2014)
+
+  15 Feb 2014; Ulrich Müller <ulm@gentoo.org> -mu-cite-8.1_p20070903.ebuild,
+  +mu-cite-8.1_p200709030413.ebuild, +mu-cite-8.1_p201202272330.ebuild:
+  Version bump. Move old ebuild to new versioning scheme. Update to EAPI 5.
+  Specify LICENSE more precisely.
 
   14 May 2010; Ulrich Mueller <ulm@gentoo.org> mu-cite-8.1_p20070903.ebuild:
   Fix dependency after package move of virtual/emacs-flim.
