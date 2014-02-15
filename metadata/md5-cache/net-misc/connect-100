@@ -1,9 +1,0 @@
-DEFINED_PHASES=compile install postinst unpack
-DESCRIPTION=network connection relaying command
-HOMEPAGE=http://www.meadowy.org/~gotoh/projects/connect/
-KEYWORDS=amd64 x86
-LICENSE=GPL-2
-SLOT=0
-SRC_URI=http://www.meadowy.org/~gotoh/ssh/connect-r100.c
-_eclasses_=multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=fecb972d7a6305b9f1b2ed91d4862e33

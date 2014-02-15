@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.62 2014/02/07 14:38:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.63 2014/02/15 12:22:34 pacho Exp $
+
+*gimps-28.3-r1 (15 Feb 2014)
+
+  15 Feb 2014; Pacho Ramos <pacho@gentoo.org> +files/gimps.service,
+  +files/gimps.tmpfiles, +gimps-28.3-r1.ebuild:
+  Add unit file (#499120 by Paolo Pedroni)
 
 *gimps-28.3 (07 Feb 2014)
 

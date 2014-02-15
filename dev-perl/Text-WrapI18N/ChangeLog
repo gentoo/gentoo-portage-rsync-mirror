@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Text-WrapI18N
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WrapI18N/ChangeLog,v 1.25 2014/01/05 03:48:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WrapI18N/ChangeLog,v 1.26 2014/02/15 12:03:42 hwoarang Exp $
+
+  15 Feb 2014; Markos Chandras <hwoarang@gentoo.org>
+  Text-WrapI18N-0.60.0.ebuild:
+  Add mips
 
   05 Jan 2014; Naohiro Aota <naota@gentoo.org> Text-WrapI18N-0.60.0.ebuild:
   Add ~x86-fbsd
