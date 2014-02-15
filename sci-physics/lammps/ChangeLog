@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.11 2014/02/14 21:09:48 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.12 2014/02/15 02:01:57 ottxor Exp $
+
+  15 Feb 2014; Christoph Junghans <ottxor@gentoo.org> lammps-20140212.ebuild:
+  fixed lammps-package-{mean,reax} logic
 
 *lammps-20140212 (14 Feb 2014)
 
