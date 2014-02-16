@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/echievements/echievements-2.ebuild,v 1.3 2012/12/29 10:15:22 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/echievements/echievements-2.ebuild,v 1.4 2014/02/16 14:02:52 tommy Exp $
 
 EAPI=5
 
@@ -16,8 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-games/etrophy-0.5.1
 	dev-libs/e_dbus
-	dev-libs/eet
-	media-libs/edje
+	dev-libs/efl
 	x11-wm/enlightenment:0.17="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"

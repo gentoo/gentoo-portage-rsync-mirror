@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/etrophy/etrophy-0.5.1.ebuild,v 1.2 2012/12/21 17:40:00 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/etrophy/etrophy-0.5.1.ebuild,v 1.3 2014/02/16 14:10:29 tommy Exp $
 
-EAPI=2
+EAPI=3
 
 inherit enlightenment
 
@@ -14,11 +14,8 @@ LICENSE="BSD-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc static-libs"
 
-RDEPEND=">=dev-libs/ecore-1.7.0
-	>=dev-libs/eet-1.7.0
-	>=dev-libs/eina-1.7.0
-	>=media-libs/elementary-1.7.0
-	>=media-libs/evas-1.7.0"
+RDEPEND="dev-libs/efl
+	>=media-libs/elementary-1.8.0"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
