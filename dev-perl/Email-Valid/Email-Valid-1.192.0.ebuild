@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/Email-Valid-1.192.0.ebuild,v 1.2 2014/02/11 18:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/Email-Valid-1.192.0.ebuild,v 1.4 2014/02/16 14:57:39 zlogene Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Check validity of Internet email addresses."
 
 SLOT="0"
-KEYWORDS="~amd64 hppa ~mips ~ppc ~ppc64 ~x86 ~x86-linux"
+KEYWORDS="amd64 hppa ~mips ~ppc ~ppc64 x86 ~x86-linux"
 IUSE="test"
 
 RDEPEND="
