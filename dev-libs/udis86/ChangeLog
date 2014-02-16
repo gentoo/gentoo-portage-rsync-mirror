@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/udis86
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.19 2013/07/30 22:14:29 aballier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/udis86/ChangeLog,v 1.20 2014/02/16 11:23:48 ago Exp $
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> udis86-1.7-r2.ebuild:
+  Add ~sparc, wrt bug #501464
 
   30 Jul 2013; Alexis Ballier <aballier@gentoo.org> udis86-1.7-r2.ebuild:
   improve the emul-libs blocker so that it is stacked for baselibs -r2.

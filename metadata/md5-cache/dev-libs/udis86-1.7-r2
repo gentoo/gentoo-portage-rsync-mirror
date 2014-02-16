@@ -4,10 +4,10 @@ DESCRIPTION=Disassembler library for the x86/-64 architecture sets.
 EAPI=5
 HOMEPAGE=http://udis86.sourceforge.net/
 IUSE=test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32
-KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd
+KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=BSD
 RDEPEND=abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r1 !app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )
 SLOT=0
 SRC_URI=mirror://sourceforge/udis86/udis86-1.7.tar.gz
 _eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	autotools-multilib	5beadd9860130ff93bfad7eb91d499e9	autotools-utils	559ed17194292ec42d68145dcca2fa32	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multilib-build	198e1c7095dbce1ca2848aed0f96bf60	multilib-minimal	a481090a413ba6970bd9643494ef982f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=627ee5bf5497de130822e8e2bdb9bae9
+_md5_=46ad8797f58b1556c74a0c2a2e38d74b

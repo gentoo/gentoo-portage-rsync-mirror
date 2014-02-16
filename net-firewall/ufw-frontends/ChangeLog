@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ufw-frontends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.8 2014/02/15 10:34:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.9 2014/02/16 11:28:02 hwoarang Exp $
+
+  16 Feb 2014; Markos Chandras <hwoarang@gentoo.org>
+  -ufw-frontends-0.3.2.ebuild:
+  Remove old ebuild for real this time
 
 *ufw-frontends-0.3.2-r1 (15 Feb 2014)
 
