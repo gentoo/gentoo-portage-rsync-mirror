@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.325 2014/02/15 11:01:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.326 2014/02/16 05:43:31 tetromino Exp $
+
+*librsvg-2.40.1-r1 (16 Feb 2014)
+
+  16 Feb 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +librsvg-2.40.1-r1.ebuild, +files/librsvg-2.40.1-gtk-optional.patch,
+  metadata.xml:
+  Make rsvg-view-3 tool and gtk+ dependency optional (bug #501434, thanks to
+  Patrick Lauer). Update USE flag description.
 
 *librsvg-2.40.1 (15 Feb 2014)
 

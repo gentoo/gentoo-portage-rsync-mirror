@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare unpack
+DEPEND=>=dev-libs/glib-2.24:2 >=x11-libs/cairo-1.2 >=x11-libs/pango-1.32.6 >=dev-libs/libxml2-2.7:2 >=dev-libs/libcroco-0.6.1 >=x11-libs/gdk-pixbuf-2.20:2[introspection?] introspection? ( >=dev-libs/gobject-introspection-0.10.8 ) tools? ( >=x11-libs/gtk+-3.2.0:3 ) dev-libs/gobject-introspection-common dev-libs/vala-common >=dev-util/gtk-doc-am-1.13 virtual/pkgconfig vala? ( || ( dev-lang/vala:0.22[vapigen] dev-lang/vala:0.20[vapigen] dev-lang/vala:0.18[vapigen] ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool app-arch/xz-utils >=sys-apps/sed-4
+DESCRIPTION=Scalable Vector Graphics (SVG) rendering library
+EAPI=5
+HOMEPAGE=https://wiki.gnome.org/Projects/LibRsvg
+IUSE=+introspection vala tools
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+LICENSE=LGPL-2
+RDEPEND=>=dev-libs/glib-2.24:2 >=x11-libs/cairo-1.2 >=x11-libs/pango-1.32.6 >=dev-libs/libxml2-2.7:2 >=dev-libs/libcroco-0.6.1 >=x11-libs/gdk-pixbuf-2.20:2[introspection?] introspection? ( >=dev-libs/gobject-introspection-0.10.8 ) tools? ( >=x11-libs/gtk+-3.2.0:3 )
+REQUIRED_USE=vala? ( introspection )
+SLOT=2
+SRC_URI=mirror://gnome/sources/librsvg/2.40/librsvg-2.40.1.tar.xz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vala	b365480bc54c4e356dc1e953da9fe356	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=515e1081baf7970fc3be585aafe5a223
