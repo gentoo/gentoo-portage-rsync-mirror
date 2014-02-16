@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.351 2014/02/11 11:50:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.352 2014/02/16 20:14:17 chithanh Exp $
+
+*ati-drivers-14.1_beta (16 Feb 2014)
+
+  16 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +ati-drivers-14.1_beta.ebuild, files/ati-powermode-opt-path-3.patch:
+  Version bump, import of Emil Karlson's ebuild from the x11 overlay. Fix
+  quoting in powermode patch, bug #499294.
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix tags (bug #485718).

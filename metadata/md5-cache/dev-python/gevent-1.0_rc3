@@ -4,7 +4,7 @@ DESCRIPTION=Python networking library that uses greenlet to provide synchronous 
 EAPI=5
 HOMEPAGE=http://gevent.org/ http://pypi.python.org/pypi/gevent/
 IUSE=doc examples python_targets_python2_6 python_targets_python2_7
-KEYWORDS=amd64 ~arm ~ppc ~ppc64 x86
+KEYWORDS=amd64 arm ~ppc ~ppc64 x86
 LICENSE=MIT
 RDEPEND=dev-libs/libev net-dns/c-ares dev-python/greenlet[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)] python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[ssl] ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ssl] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/surfly/gevent/releases/download/1.0rc3/gevent-1.0rc3.tar.gz
 _eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=3831850af7f33e85baca6533a15ec4d8
+_md5_=16dd29ea0eea25add8d3ed1f3d78b4ed
