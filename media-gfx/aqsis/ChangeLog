@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/aqsis
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/ChangeLog,v 1.24 2011/11/05 08:45:07 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/ChangeLog,v 1.25 2014/02/16 08:08:12 pinkbyte Exp $
+
+*aqsis-1.8.2 (16 Feb 2014)
+
+  16 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -aqsis-1.6.0.ebuild,
+  +aqsis-1.8.2.ebuild, +files/aqsis-1.8.2-openexr-compat.patch,
+  +files/aqsis-1.8.2-unbundle-tinyxml.patch:
+  Version bump, wrt bug #453816: EAPI 5, unbundle tinyxml, add compatibility
+  patch with OpenEXR 2.0. Drop old version
 
   05 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> aqsis-1.6.0.ebuild:
   Fix building with recent boost and gcc by using Debian patchset wrt bugs
