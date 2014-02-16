@@ -1,6 +1,47 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.151 2014/01/19 11:29:56 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.152 2014/02/16 13:00:01 aidecoe Exp $
+
+*dracut-036 (16 Feb 2014)
+
+  16 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-036.ebuild,
+  +files/036-0001-NEWS-update-for-version-036.patch,
+  +files/036-0002-dracut-functions.sh-support-for-altern.patch,
+  +files/036-0003-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  +files/036-0004-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/036-0005-Install-dracut-install-into-libexec-di.patch:
+  Version bump.
+
+  At the request of QA team the use of DRACUT_MODULES use-expand has been
+  removed as well as run-time (pseudo-suggested) dependencies.  Instead, the
+  list of suggested dependencies is printed in postinst log message.  See
+  bug #498832.
+
+  NEWS
+  ~~~~
+  (since dracut-034)
+
+  - fixed skipcpio signature checking
+  - new argument "--rebuild"
+  - add lzo, lz4 compression
+  - install: install all binaries with <name> found in PATH
+  - lsinitrd can now handle initramfs images with an early cpio prepended
+    (microcode, ACPI tables)
+  - mkinitrd-suse added as a compat stub for dracut
+  - lvm: install thin utils for non-hostonly
+  - resume: fix swap detection in hostonly
+  - avoid loading unnecessary 32-bit libraries for 64-bit initrds
+  - crypt: wait for systemd password agents
+  - crypt: skip crypt swaps with password files
+  - network: before doing dhcp, dracut now checks, if the link has a carrier
+  - network: dhclient-script.sh now sets the lease time
+  - network: include usbnet drivers
+  - network: include all ethernet drivers
+  - network: add rd.bootif=0 to ignore BOOTIF
+  - i18n: introduce i18n_install_all, to install everything i18n related
+  - usrmount: always install the module,
+    so always mount /usr from within the initramfs
+  - "halt" the machine in systemd mode for die()
 
   19 Jan 2014; Amadeusz Żołnowski <aidecoe@gentoo.org> metadata.xml:
   Removed desc. of no longer existing 'optimization' flag.

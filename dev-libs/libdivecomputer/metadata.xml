@@ -2,9 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>bmangentoo@gmail.com</email>
+    <email>aaron@flappyport.com</email>
     <name>Aaron Bauman</name>
-    <description>Proxy maintainer. Assign bugs to him.</description>
+    <description>Proxied maintainer. Assign bugs to him.</description>
   </maintainer>
   <herd>proxy-maintainers</herd>
   <longdescription lang="en">
