@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-1.0.5.ebuild,v 1.5 2013/03/05 22:13:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-1.2.3.ebuild,v 1.1 2014/02/16 04:30:09 leio Exp $
 
 EAPI="5"
 
@@ -10,23 +10,27 @@ DESCRIPTION="Basepack of plugins for gstreamer"
 HOMEPAGE="http://gstreamer.freedesktop.org/"
 
 LICENSE="GPL-2+ LGPL-2+"
-KEYWORDS="alpha arm ia64 ~mips"
-IUSE="alsa +introspection nls +ogg +orc +pango theora +vorbis X"
-REQUIRED_USE="theora? ( ogg ) vorbis? ( ogg )"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+IUSE="alsa +introspection ivorbis +ogg +orc +pango theora +vorbis X"
+REQUIRED_USE="
+	ivorbis? ( ogg )
+	theora? ( ogg )
+	vorbis? ( ogg )
+"
 
 RDEPEND="
 	app-text/iso-codes
 	>=dev-libs/glib-2.32:2
-	dev-libs/libxml2:2
 	>=media-libs/gstreamer-${PV}:1.0[introspection?]
 	sys-libs/zlib
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )
 	introspection? ( >=dev-libs/gobject-introspection-1.31.1 )
-	ogg? ( >=media-libs/libogg-1.0 )
-	orc? ( >=dev-lang/orc-0.4.16 )
+	ivorbis? ( media-libs/tremor )
+	ogg? ( >=media-libs/libogg-1 )
+	orc? ( >=dev-lang/orc-0.4.18 )
 	pango? ( >=x11-libs/pango-1.22 )
 	theora? ( >=media-libs/libtheora-1.1[encode] )
-	vorbis? ( >=media-libs/libvorbis-1.0 )
+	vorbis? ( >=media-libs/libvorbis-1 )
 	X? (
 		x11-libs/libX11
 		x11-libs/libXext
@@ -49,20 +53,20 @@ src_prepare() {
 
 src_configure() {
 	gst-plugins10_src_configure \
-		$(use_enable introspection) \
-		$(use_enable nls) \
-		$(use_enable orc) \
 		$(use_enable alsa) \
+		$(use_enable introspection) \
+		$(use_enable ivorbis) \
 		$(use_enable ogg) \
+		$(use_enable orc) \
 		$(use_enable pango) \
 		$(use_enable theora) \
 		$(use_enable vorbis) \
 		$(use_enable X x) \
 		$(use_enable X xshm) \
 		$(use_enable X xvideo) \
+		--disable-debug \
 		--disable-examples \
 		--disable-freetypetest \
-		--disable-debug \
 		--disable-static
 	# cdparanoia and libvisual are split out, per leio's request
 
@@ -82,5 +86,5 @@ src_compile() {
 src_install() {
 	DOCS="AUTHORS NEWS README RELEASE"
 	default
-	prune_libtool_files
+	prune_libtool_files --modules
 }

@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/gst-plugins-base
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.234 2013/10/22 07:20:15 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.235 2014/02/16 04:30:09 leio Exp $
+
+*gst-plugins-base-1.2.3 (16 Feb 2014)
+
+  16 Feb 2014; <leio@gentoo.org> -gst-plugins-base-1.0.5.ebuild,
+  -gst-plugins-base-1.0.6.ebuild, -gst-plugins-base-1.0.7.ebuild,
+  -gst-plugins-base-1.0.8.ebuild, +gst-plugins-base-1.2.3.ebuild:
+  Version bump for bug fixes; remove old. Noteworthy user-facing fixes include:
+  * Fixed DVD playback of DVDs that have a first track without audio.
+  * Various reverse playback improvements
 
   22 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-base-1.0.10.ebuild:
   Stable for sparc, wrt bug #480908
