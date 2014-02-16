@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-c++
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-c++/ChangeLog,v 1.6 2013/04/24 08:25:42 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-c++/ChangeLog,v 1.7 2014/02/16 10:34:54 pacho Exp $
+
+  16 Feb 2014; Pacho Ramos <pacho@gentoo.org> -dbus-c++-0.6.0_p20111126.ebuild,
+  -dbus-c++-0.9.0.ebuild, metadata.xml:
+  Cleanup due #200380
 
   24 Apr 2013; Agostino Sarubbo <ago@gentoo.org> dbus-c++-0.9.0-r1.ebuild:
   Add ~ppc, wrt bug #462050

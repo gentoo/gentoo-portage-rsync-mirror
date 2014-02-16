@@ -1,6 +1,16 @@
 # ChangeLog for net-voip/sflphone
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.15 2013/08/03 16:13:58 elvanor Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/sflphone/ChangeLog,v 1.16 2014/02/16 10:36:57 pacho Exp $
+
+  16 Feb 2014; Pacho Ramos <pacho@gentoo.org>
+  -files/sflphone-0.9.12-libnotify-0.7.patch,
+  -files/sflphone-0.9.8.4-libnotify-0.7.patch,
+  -files/sflphone-1.0.1-glib-2.32-headers-1.patch,
+  -files/sflphone-1.0.1-glib-2.32-headers-2.patch,
+  -files/sflphone-1.0.1-glib-2.32-headers-3.patch,
+  -files/sflphone-1.0.1-pjsip-1.14.patch, -sflphone-0.9.8.4.ebuild,
+  -sflphone-1.2.2.ebuild, metadata.xml:
+  Cleanup due #200380
 
 *sflphone-1.2.3 (03 Aug 2013)
 
@@ -69,4 +79,3 @@
 
   06 Sep 2010; <elvanor@gentoo.org> +sflphone-0.9.8.4.ebuild, +metadata.xml:
   Initial import from bug #293399. Credits goes to Atman Sense.
-

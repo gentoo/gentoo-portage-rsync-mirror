@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pylint
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.105 2013/09/26 15:51:22 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.106 2014/02/16 10:34:43 idella4 Exp $
+
+*pylint-1.1.0 (16 Feb 2014)
+
+  16 Feb 2014; Ian Delaney <idella4@gentoo.org> +pylint-1.1.0.ebuild:
+  bump; add IUSE doc & test, doc build & install, update deps, update test
+  phase, tidy install phase
 
   26 Sep 2013; Justin Lecher <jlec@gentoo.org> pylint-0.28.0.ebuild:
   Fix missing doc breaking installation
