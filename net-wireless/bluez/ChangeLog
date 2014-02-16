@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.186 2014/02/09 09:10:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.187 2014/02/16 19:17:40 pacho Exp $
+
+*bluez-5.14-r1 (16 Feb 2014)
+
+  16 Feb 2014; Pacho Ramos <pacho@gentoo.org> +bluez-5.14-r1.ebuild,
+  +files/0001-obex-Use-GLib-helper-function-to-manipulate-paths.patch,
+  +files/0001-work-around-Logitech-diNovo-Edge-keyboard-firmware-i.patch,
+  +files/0002-autopair-Don-t-handle-the-iCade.patch,
+  +files/0004-agent-Assert-possible-infinite-loop.patch, -bluez-5.14.ebuild:
+  Apply some Fedora patches that also fix Logitech DiNovo Edge keyboard (#501120
+  by manwe)
 
 *bluez-5.14 (09 Feb 2014)
 

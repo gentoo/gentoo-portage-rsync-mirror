@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.6.0.ebuild,v 1.1 2013/10/09 13:48:49 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/espresso++/espresso++-1.6.0.ebuild,v 1.2 2014/02/16 19:05:53 ottxor Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ else
 	PATCHES=( "${FILESDIR}/${P}-multilib.patch" )
 fi
 
-CMAKE_REMOVE_MODULES_LIST="FindBoost"
+CMAKE_REMOVE_MODULES_LIST="FindBoost FindMPI"
 
 EHP_OPTS="--config hostfingerprints.hg.berlios.de=f4:79:d2:17:f8:0c:9b:c2:6e:65:60:2a:49:0e:09:79:85:6d:4b:e3"
 EHG_CLONE_CMD="hg clone ${EHG_QUIET_CMD_OPT} ${EHP_OPTS} --pull --noupdate"

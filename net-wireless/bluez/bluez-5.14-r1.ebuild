@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.14.ebuild,v 1.1 2014/02/09 09:10:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-5.14-r1.ebuild,v 1.1 2014/02/16 19:17:40 pacho Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
@@ -52,8 +52,21 @@ src_prepare() {
 	# Use static group "plugdev" if there is no ConsoleKit (or systemd logind)
 	epatch "${FILESDIR}"/bluez-plugdev.patch
 
-	# Fedora patch for better compat with non-full systemd setups
+	# Fedora patches
+	# http://www.spinics.net/lists/linux-bluetooth/msg38490.html
 	epatch "${FILESDIR}"/0001-Allow-using-obexd-without-systemd-in-the-user-sessio.patch
+
+	# http://www.spinics.net/lists/linux-bluetooth/msg40136.html
+	epatch "${FILESDIR}"/0001-obex-Use-GLib-helper-function-to-manipulate-paths.patch
+
+	# http://www.spinics.net/lists/linux-bluetooth/msg41264.html
+	epatch "${FILESDIR}"/0002-autopair-Don-t-handle-the-iCade.patch
+
+	# ???
+	epatch "${FILESDIR}"/0004-agent-Assert-possible-infinite-loop.patch
+
+	# Ubuntu workaround for bug #501120
+	epatch "${FILESDIR}"/0001-work-around-Logitech-diNovo-Edge-keyboard-firmware-i.patch
 
 	if use cups; then
 		sed -i \
