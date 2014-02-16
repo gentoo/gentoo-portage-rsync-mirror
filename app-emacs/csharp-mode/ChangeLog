@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/csharp-mode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.12 2009/09/22 12:20:24 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/ChangeLog,v 1.13 2014/02/16 16:50:43 ulm Exp $
+
+  16 Feb 2014; Ulrich Müller <ulm@gentoo.org> csharp-mode-0.7.0-r1.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   22 Sep 2009; Ulrich Mueller <ulm@gentoo.org>
   -files/80csharp-mode-gentoo.el, -csharp-mode-0.7.0.ebuild:
