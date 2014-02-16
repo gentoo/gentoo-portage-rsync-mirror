@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/light-themes-0.1.93-r3.ebuild,v 1.1 2014/02/02 08:40:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/light-themes-0.1.93-r4.ebuild,v 1.1 2014/02/16 11:33:25 pacho Exp $
 
 EAPI=5
 inherit eutils
@@ -9,7 +9,7 @@ DESCRIPTION="GTK2/GTK3 Ambiance and Radiance themes from Ubuntu"
 HOMEPAGE="https://launchpad.net/light-themes"
 SRC_URI="
 	mirror://ubuntu/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz
-	http://dev.gentoo.org/~pacho/${PN}/Gentoo-Buttons.tar.xz
+	http://dev.gentoo.org/~pacho/${PN}/Gentoo-Buttons-r1.tar.xz
 "
 
 LICENSE="CC-BY-SA-3.0 CC-BY-SA-4.0"
@@ -44,6 +44,8 @@ src_prepare() {
 
 	cp -f "${WORKDIR}"/Gentoo-Buttons/*.png "${S}"/Ambiance-Gentoo/metacity-1/. || die
 	cp -f "${WORKDIR}"/Gentoo-Buttons/*.png "${S}"/Radiance-Gentoo/metacity-1/. || die
+	cp -f "${WORKDIR}"/Gentoo-Buttons/assets/*.png "${S}"/Ambiance-Gentoo/gtk-3.0/assets/. || die
+	cp -f "${WORKDIR}"/Gentoo-Buttons/assets/*.png "${S}"/Radiance-Gentoo/gtk-3.0/assets/. || die
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.512 2014/02/16 07:34:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.513 2014/02/16 12:05:30 ago Exp $
+
+  16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.16.ebuild:
+  Stable for ia64, wrt bug #494658
 
   16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> gnupg-1.4.16.ebuild:
   Stable for alpha, wrt bug #494658
