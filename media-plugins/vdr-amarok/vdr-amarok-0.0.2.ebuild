@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/vdr-amarok-0.0.2.ebuild,v 1.6 2012/06/30 16:16:06 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/vdr-amarok-0.0.2.ebuild,v 1.7 2014/02/16 17:48:33 hd_brummy Exp $
 
 EAPI="4"
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: amarok frontend"
 HOMEPAGE="http://irimi.ir.ohost.de/"
@@ -23,7 +23,7 @@ PATCHES=( "${FILESDIR}/${P}-gcc4.3.patch"
 	"${FILESDIR}/${P}_gcc-4.7.diff" )
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	elog
 	elog "To use this plugin you need to install"
