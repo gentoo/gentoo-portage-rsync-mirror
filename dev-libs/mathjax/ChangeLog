@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mathjax
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mathjax/ChangeLog,v 1.8 2013/09/26 18:03:08 vincent Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mathjax/ChangeLog,v 1.9 2014/02/16 20:39:18 vapier Exp $
+
+  16 Feb 2014; Mike Frysinger <vapier@gentoo.org> mathjax-2.2.ebuild:
+  Mark arm stable.
 
   26 Sep 2013; Vicente Olivert Riera <vincent@gentoo.org> mathjax-2.2.ebuild:
   ~ppc and ~ppc64 keywords added, bug #481722

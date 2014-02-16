@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/stix-fonts
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/stix-fonts/ChangeLog,v 1.12 2013/11/24 11:39:49 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/stix-fonts/ChangeLog,v 1.13 2014/02/16 20:35:07 vapier Exp $
+
+  16 Feb 2014; Mike Frysinger <vapier@gentoo.org> stix-fonts-1.0.0-r1.ebuild:
+  Mark arm stable.
 
   24 Nov 2013; Markos Chandras <hwoarang@gentoo.org> stix-fonts-1.0.0-r1.ebuild:
   Add ~mips
