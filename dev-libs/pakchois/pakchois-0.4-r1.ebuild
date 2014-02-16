@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/pakchois-0.4-r1.ebuild,v 1.1 2014/02/15 19:50:26 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/pakchois-0.4-r1.ebuild,v 1.2 2014/02/16 01:04:59 alonbl Exp $
 
 EAPI="5"
 
@@ -18,10 +18,4 @@ RDEPEND=""
 
 src_configure() {
 	econf $(use_enable nls)
-	emake
-}
-
-src_install() {
-	default
-	dodoc AUTHORS NEWS README
 }
