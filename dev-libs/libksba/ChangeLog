@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libksba
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.150 2014/01/20 20:22:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/ChangeLog,v 1.151 2014/02/15 23:42:29 alonbl Exp $
+
+  15 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org> libksba-1.3.0.ebuild:
+  Fix yacc timestamp issue due to aix patch, bug#494938, thanks to Yixun Lan
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> libksba-1.3.0.ebuild:
   Add arm64 love.

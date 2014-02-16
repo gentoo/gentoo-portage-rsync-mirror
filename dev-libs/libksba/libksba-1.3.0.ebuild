@@ -1,9 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-1.3.0.ebuild,v 1.16 2014/01/20 20:22:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libksba/libksba-1.3.0.ebuild,v 1.17 2014/02/15 23:42:29 alonbl Exp $
 
 EAPI="4"
 
+# so we won't need to autreconf yet another g10 package
+AUTOTOOLS_IN_SOURCE_BUILD=1
 inherit autotools-utils
 
 DESCRIPTION="X.509 and CMS (PKCS#7) library"

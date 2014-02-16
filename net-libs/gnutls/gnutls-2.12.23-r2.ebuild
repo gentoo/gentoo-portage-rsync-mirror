@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r1.ebuild,v 1.14 2014/02/15 23:34:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r2.ebuild,v 1.1 2014/02/15 23:34:13 alonbl Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.gnutls.org/gcrypt/gnutls/v$(get_version_component_range 1-2)/
 # LGPL-2.1 for libgnutls library and GPL-3 for libgnutls-extra library.
 LICENSE="GPL-3 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="bindist +cxx doc examples guile lzo +nettle nls pkcs11 static-libs test zlib"
 
 RDEPEND=">=dev-libs/libtasn1-0.3.4
@@ -48,11 +48,9 @@ src_prepare() {
 	sed -i -e 's/imagesdir = $(infodir)/imagesdir = $(htmldir)/' \
 		doc/Makefile.am || die
 
-	local dir
-	for dir in m4 lib/m4 libextra/m4; do
-		rm -f "${dir}/lt"* "${dir}/libtool.m4"
+	for dir in . lib libextra; do
+		sed -i -e '/^AM_INIT_AUTOMAKE/s/-Werror//' "${dir}/configure.ac" || die
 	done
-	find . -name ltmain.sh -exec rm {} \;
 
 	epatch "${FILESDIR}"/${PN}-2.12.20-AF_UNIX.patch
 	epatch "${FILESDIR}"/${PN}-2.12.20-libadd.patch
@@ -63,12 +61,7 @@ src_prepare() {
 	# support user patches
 	epatch_user
 
-	for dir in . lib libextra; do
-		pushd "${dir}" > /dev/null
-		sed -i -e '/^AM_INIT_AUTOMAKE/s/-Werror//' configure.ac || die
-		eautoreconf
-		popd > /dev/null
-	done
+	eautoreconf
 
 	# Use sane .so versioning on FreeBSD.
 	elibtoolize

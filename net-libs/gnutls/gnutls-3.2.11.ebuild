@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.11.ebuild,v 1.1 2014/02/15 03:59:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.11.ebuild,v 1.2 2014/02/15 23:34:13 alonbl Exp $
 
 EAPI=5
 
@@ -50,9 +50,6 @@ src_prepare() {
 	sed -i \
 		-e 's/imagesdir = $(infodir)/imagesdir = $(htmldir)/' \
 		doc/Makefile.am || die
-
-	rm -f {m4,gl/m4}/{lt*,libtool.m4}
-	find . -name ltmain.sh -delete
 
 	# force regeneration of autogen-ed files
 	local file
