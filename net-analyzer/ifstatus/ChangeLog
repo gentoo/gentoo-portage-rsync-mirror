@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ifstatus
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.7 2009/06/02 11:51:00 flameeyes Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.8 2014/02/16 00:10:03 jer Exp $
+
+*ifstatus-1.1.0-r1 (16 Feb 2014)
+
+  16 Feb 2014; Jeroen Roovers <jer@gentoo.org> +ifstatus-1.1.0-r1.ebuild,
+  files/ifstatus-1.1.0-asneeded.patch, files/ifstatus-1.1.0-gcc43.patch,
+  +files/ifstatus-1.1.0-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo]. Clean up patches/ebuild.
 
   02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   ifstatus-1.1.0.ebuild, +files/ifstatus-1.1.0-asneeded.patch:
