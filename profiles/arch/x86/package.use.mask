@@ -1,8 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.129 2013/12/27 17:12:40 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.130 2014/02/16 15:12:06 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
+
+# Samuli Suominen <ssuominen@gentoo.org> (16 Feb 2014)
+# Still considered experimental by upstream:
+# http://sourceforge.net/p/mikmod/bugs/16/#17ea
+media-libs/libmikmod sse2
 
 # Sergey Popov <pinkbyte@gentoo.org> (27 Dec 2013)
 # Boost.Context can be built on x86

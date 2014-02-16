@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.8 2014/01/08 11:54:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.4-r1.ebuild,v 1.9 2014/02/16 15:20:01 jer Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~arm hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE="dia gnome postscript inkjar lcms nls spell wmf"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"

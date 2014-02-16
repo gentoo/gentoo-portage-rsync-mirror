@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/diff-match-patch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.14 2013/12/28 18:18:57 aidecoe Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/diff-match-patch/ChangeLog,v 1.15 2014/02/16 15:08:59 aidecoe Exp $
+
+  16 Feb 2014; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  -diff-match-patch-20110725.1.ebuild, -diff-match-patch-20120106-r1.ebuild:
+  Removed old versions. One latest stable and one latest testing are left.
 
 *diff-match-patch-20121119 (28 Dec 2013)
 
