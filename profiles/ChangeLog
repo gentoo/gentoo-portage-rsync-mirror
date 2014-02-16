@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8615 2014/02/15 21:43:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8616 2014/02/16 13:36:09 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Feb 2014; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask net-analyzer/ethstatus (bug #501432).
 
   15 Feb 2014; Ulrich Müller <ulm@gentoo.org> license_groups:
   Delete spurious newline in MISC-FREE license group.
