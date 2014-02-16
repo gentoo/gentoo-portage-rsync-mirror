@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.7.1-r1.ebuild,v 1.3 2014/02/16 01:29:08 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/nettle-2.7.1-r1.ebuild,v 1.4 2014/02/16 09:06:27 alonbl Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="doc +gmp neon static-libs test"
 DEPEND="gmp? ( dev-libs/gmp )"
 RDEPEND="${DEPEND}
 	abi_x86_32? (
-		!<=app-emulation/emul-linux-x86-baselibs-20131008-r16
+		!<=app-emulation/emul-linux-x86-baselibs-20131008-r17
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
 	)"
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.93 2014/01/18 04:49:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.94 2014/02/16 09:04:22 pacho Exp $
+
+*gtk-doc-am-1.20 (16 Feb 2014)
+
+  16 Feb 2014; Pacho Ramos <pacho@gentoo.org> +gtk-doc-am-1.20.ebuild,
+  -gtk-doc-am-1.18.ebuild:
+  Version bump, drop old
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> gtk-doc-am-1.19.ebuild:
   Add arm64 love.
