@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.998 2014/01/19 01:51:34 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.999 2014/02/16 07:32:05 vapier Exp $
+
+  16 Feb 2014; Mike Frysinger <vapier@gentoo.org> gcc-4.7.3-r1.ebuild:
+  Mark sh stable.
 
   19 Jan 2014; Ryan Hill <dirtyepic@gentoo.org> gcc-2.95.3-r10.ebuild,
   gcc-3.3.6-r1.ebuild, gcc-3.4.6-r2.ebuild, gcc-4.0.4.ebuild, gcc-4.1.2.ebuild,
