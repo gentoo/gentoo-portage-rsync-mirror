@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/libva-vdpau-driver-0.7.4-r1.ebuild,v 1.1 2014/02/01 15:24:44 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva-vdpau-driver/libva-vdpau-driver-0.7.4-r1.ebuild,v 1.2 2014/02/16 19:41:37 chithanh Exp $
 
 EAPI=5
 
@@ -28,6 +28,7 @@ DOCS=( NEWS README AUTHORS )
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-glext-missing-definition.patch"
+	epatch "${FILESDIR}/${P}-VAEncH264VUIBufferType.patch"
 	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.ac || die
 	autotools-multilib_src_prepare
 }

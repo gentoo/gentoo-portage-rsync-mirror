@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.64 2014/01/22 20:01:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.65 2014/02/16 19:51:35 vapier Exp $
+
+  16 Feb 2014; Mike Frysinger <vapier@gentoo.org> pexpect-2.4-r1.ebuild:
+  Mark arm stable.
 
 *pexpect-3.1 (22 Jan 2014)
 

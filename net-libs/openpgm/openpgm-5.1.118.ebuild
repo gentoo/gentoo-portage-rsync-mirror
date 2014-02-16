@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/openpgm-5.1.118.ebuild,v 1.11 2014/02/16 12:24:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/openpgm-5.1.118.ebuild,v 1.12 2014/02/16 19:55:38 vapier Exp $
 
 EAPI=3
 inherit autotools
@@ -12,7 +12,7 @@ SRC_URI="http://openpgm.googlecode.com/files/libpgm-${PV}~dfsg.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 arm hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE="static-libs"
 
 DEPEND=""
