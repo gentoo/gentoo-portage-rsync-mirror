@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-3.4-r1.ebuild,v 1.1 2014/02/15 20:42:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-3.4-r1.ebuild,v 1.2 2014/02/15 23:04:46 alonbl Exp $
 
 EAPI=5
 
@@ -17,6 +17,11 @@ IUSE="doc static-libs"
 
 DEPEND=">=dev-lang/perl-5.6
 	virtual/yacc"
+RDEPEND="
+	abi_x86_32? (
+		!<=app-emulation/emul-linux-x86-baselibs-20131008-r9
+		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	)"
 
 DOCS=( AUTHORS ChangeLog NEWS README THANKS )
 
