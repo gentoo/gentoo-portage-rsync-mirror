@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.13 2014/02/12 00:31:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/libunwind-1.1.ebuild,v 1.14 2014/02/16 02:12:30 vapier Exp $
 
 EAPI="5"
 
@@ -31,7 +31,8 @@ src_prepare() {
 	echo 'int main(){return 0;}' > tests/Gtest-dyn1.c
 	echo 'int main(){return 0;}' > tests/Ltest-dyn1.c
 
-	sed -i -e '/LIBLZMA/s:-lzma:-llzma:' configure{,.ac} || die #444050
+	sed -i -e '/LIBLZMA/s:-lzma:-llzma:' configure{.ac,} || die #444050
+	epatch "${FILESDIR}"/${P}-lzma.patch #444050
 	elibtoolize
 }
 
