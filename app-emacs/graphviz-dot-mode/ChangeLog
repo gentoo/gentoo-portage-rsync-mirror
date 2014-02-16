@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/graphviz-dot-mode
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.13 2011/12/26 14:12:07 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.14 2014/02/16 13:04:55 ulm Exp $
+
+  16 Feb 2014; Ulrich Müller <ulm@gentoo.org> -graphviz-dot-mode-0.3.4.ebuild,
+  graphviz-dot-mode-0.3.7.ebuild, -files/50graphviz-dot-mode-gentoo-0.3.4.el:
+  Specify LICENSE more precisely. Remove old.
 
   26 Dec 2011; Ulrich Mueller <ulm@gentoo.org> graphviz-dot-mode-0.3.7.ebuild:
   Add app-arch/xz-utils to DEPEND.

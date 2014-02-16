@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/haskell-mode
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.48 2013/05/16 14:12:30 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/haskell-mode/ChangeLog,v 1.49 2014/02/16 13:24:41 ulm Exp $
+
+*haskell-mode-13.07 (16 Feb 2014)
+
+  16 Feb 2014; Ulrich Müller <ulm@gentoo.org> -haskell-mode-2.8.0.ebuild,
+  +haskell-mode-13.07.ebuild:
+  Version bump. Remove old.
 
   16 May 2013; Ulrich Müller <ulm@gentoo.org> -haskell-mode-2.6.4.ebuild,
   -haskell-mode-2.7.0.ebuild:
