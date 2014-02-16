@@ -1,6 +1,27 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.316 2014/01/15 10:03:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.317 2014/02/16 21:30:36 pacho Exp $
+
+*pulseaudio-4.99.4 (16 Feb 2014)
+
+  16 Feb 2014; Pacho Ramos <pacho@gentoo.org> +files/pulseaudio.service,
+  +files/pulseaudio.tmpfiles, +pulseaudio-4.99.4.ebuild,
+  -files/pulseaudio-0.9.21-armv5-build-fix.patch,
+  -files/pulseaudio-0.9.22-xcb-atom-2.patch,
+  -files/pulseaudio-0.9.22-xcb-atom.patch,
+  -files/pulseaudio-1.1-machine-id-fix.patch,
+  -files/pulseaudio-1.1-python3-fix.patch,
+  -files/pulseaudio-2.0-udev-symbols.patch,
+  -files/pulseaudio-3.0-json-c-fix.patch, -pulseaudio-3.0-r1.ebuild,
+  -pulseaudio-3.0.ebuild, -pulseaudio-9999.ebuild, metadata.xml:
+  Version bump, check for HIGHRES kernel option (#316137 by Anthoine Bourgeois),
+  use readme.gentoo.eclass (#440508 by poletti.marco), create /var/run/pulse
+  (#442852 by Alexander Tsoy), remove unneeded file when not using system-wide
+  that was causing warnings (#447694 by Francesco Turco), fix dependency of xen
+  USE (#455818 by Paul Freeman), fix automagic link on orc (#472226 by Bertrand
+  Jacquin), fix dependency on libpcre on some setups (#472228 by Bertrand
+  Jacquin), provide systemd unit file for system-wide support (#480748 by Tom
+  Wijsman). Drop old
 
   15 Jan 2014; Agostino Sarubbo <ago@gentoo.org> pulseaudio-4.0.ebuild:
   Stable for ia64, wrt bug #477662

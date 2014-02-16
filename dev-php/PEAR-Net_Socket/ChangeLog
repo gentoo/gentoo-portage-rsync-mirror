@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_Socket
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.74 2014/02/14 15:56:39 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Socket/ChangeLog,v 1.75 2014/02/16 21:28:43 maekke Exp $
+
+  16 Feb 2014; Markus Meier <maekke@gentoo.org> PEAR-Net_Socket-1.0.14.ebuild:
+  arm stable, bug #495572
 
   14 Feb 2014; Akinori Hattori <hattya@gentoo.org>
   PEAR-Net_Socket-1.0.14.ebuild:
