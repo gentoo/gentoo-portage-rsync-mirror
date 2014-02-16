@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/kdesu-4.11.5.ebuild,v 1.3 2014/02/09 10:04:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesu/kdesu-4.11.5.ebuild,v 1.4 2014/02/16 07:18:33 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit kde4-meta
 # if not, USE-flag ?
 DESCRIPTION="KDE: gui for su(1)"
 HOMEPAGE+=" http://techbase.kde.org/Projects/kdesu"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 src_configure() {
