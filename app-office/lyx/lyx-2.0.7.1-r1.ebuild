@@ -1,12 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.7.1.ebuild,v 1.1 2014/02/16 00:20:10 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.7.1-r1.ebuild,v 1.1 2014/02/16 22:45:11 dlan Exp $
 
-EAPI=3
+EAPI=5
 
-PYTHON_DEPEND="2"
-
-inherit gnome2-utils qt4-r2 eutils flag-o-matic font python toolchain-funcs
+PYTHON_COMPAT=( python{2_6,2_7} )
+inherit gnome2-utils eutils fdo-mime flag-o-matic font python-single-r1 toolchain-funcs
 
 MY_P="${P/_}"
 
@@ -29,9 +28,12 @@ for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 COMMONDEPEND="dev-qt/qtgui:4
 	dev-qt/qtcore:4
-	>=dev-libs/boost-1.34"
+	>=dev-libs/boost-1.34
+	${PYTHON_DEPS}"
 
 RDEPEND="${COMMONDEPEND}
 	dev-texlive/texlive-fontsextra
@@ -82,14 +84,14 @@ DEPEND="${COMMONDEPEND}
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
-	python_set_active_version 2
+	python-single-r1_pkg_setup
 	font_pkg_setup
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/2.0-python.patch
 	echo "#!/bin/sh" > config/py-compile
-	sed "s:python -tt:$(PYTHON) -tt:g" -i lib/configure.py || die
+	sed "s:python -tt:${EPYTHON} -tt:g" -i lib/configure.py || die
 }
 
 src_configure() {
@@ -135,7 +137,7 @@ src_install() {
 	# fonts needed for proper math display, see also bug #15629
 	font_src_install
 
-	python_convert_shebangs -r 2 "${ED}"/usr/share/${PN}
+	python_fix_shebang "${ED}"/usr/share/${PN}
 
 	if use hunspell ; then
 		dosym /usr/share/myspell /usr/share/lyx/dicts
@@ -150,6 +152,7 @@ pkg_preinst() {
 pkg_postinst() {
 	font_pkg_postinst
 	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
 
 	# fix for bug 91108
 	if use latex ; then
@@ -170,6 +173,7 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
 
 	if use latex ; then
 		texhash
