@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.1-r5.ebuild,v 1.1 2014/02/07 08:21:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.3.1-r5.ebuild,v 1.2 2014/02/16 06:40:24 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="mercurial"
 else
 	# Set to match entry in stable 4.3.1-r1, Bug 493944
-	KEYWORDS="~amd64 -x86"
+	KEYWORDS="amd64 -x86"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 fi
 
