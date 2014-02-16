@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.489 2014/02/14 17:34:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.490 2014/02/16 15:52:25 pacho Exp $
+
+*bind-9.9.5-r3 (16 Feb 2014)
+
+  16 Feb 2014; Pacho Ramos <pacho@gentoo.org> +bind-9.9.5-r3.ebuild,
+  +files/named.service-r1:
+  Update unit file following the policy (#501486)
 
 *bind-9.9.5-r2 (14 Feb 2014)
 
