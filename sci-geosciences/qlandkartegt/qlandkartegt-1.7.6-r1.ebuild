@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.7.6.ebuild,v 1.1 2014/02/16 15:11:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.7.6-r1.ebuild,v 1.1 2014/02/17 17:37:20 jlec Exp $
 
 EAPI=5
 
@@ -32,6 +32,8 @@ RDEPEND="
 	virtual/glu
 "
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}"/${P}-openstreetmaps.patch )
 
 src_configure() {
 	local mycmakeargs=(

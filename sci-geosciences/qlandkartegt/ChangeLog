@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/qlandkartegt
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.26 2014/02/16 15:11:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.27 2014/02/17 17:37:20 jlec Exp $
+
+*qlandkartegt-1.7.6-r1 (17 Feb 2014)
+
+  17 Feb 2014; Justin Lecher <jlec@gentoo.org> -qlandkartegt-1.4.2.ebuild,
+  -qlandkartegt-1.5.1.ebuild, -qlandkartegt-1.6.0.ebuild,
+  -qlandkartegt-1.7.0.ebuild, -qlandkartegt-1.7.5.ebuild,
+  -qlandkartegt-1.7.6.ebuild, +qlandkartegt-1.7.6-r1.ebuild,
+  +files/qlandkartegt-1.7.6-openstreetmaps.patch:
+  Backport patch for OSM useragent restrictions, drop old
 
 *qlandkartegt-1.7.6 (16 Feb 2014)
 

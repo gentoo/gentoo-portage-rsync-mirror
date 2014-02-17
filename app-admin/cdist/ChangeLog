@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/cdist
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cdist/ChangeLog,v 1.3 2014/01/26 12:12:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cdist/ChangeLog,v 1.4 2014/02/17 17:56:39 hwoarang Exp $
+
+*cdist-3.0.9 (17 Feb 2014)
+
+  17 Feb 2014; Markos Chandras <hwoarang@gentoo.org> +cdist-3.0.9.ebuild:
+  Version bump. Thanks to Daniel Heule. Bug #500208
 
 *cdist-3.0.2 (26 Jan 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.17-r2.ebuild,v 1.1 2014/02/17 06:24:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.17-r3.ebuild,v 1.1 2014/02/17 17:52:50 prometheanfire Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic systemd user
@@ -32,7 +32,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.0-fix-as-needed-linking.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-as-needed.patch"
 	epatch "${FILESDIR}/${PN}-1.4.17-EWOULDBLOCK.patch"
-	sed -i -e 's,-Werror,,g' configure.ac || die "sed failed"
+	sed -i -e 's,-Werror,,g' configure.ac || die
+	sed -i -e 's,AM_CONFIG_HEADER,AC_CONFIG_HEADERS,' configure.ac || die
 	eautoreconf
 	use slabs-reassign && append-flags -DALLOW_SLABS_REASSIGN
 }

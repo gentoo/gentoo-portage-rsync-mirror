@@ -1,0 +1,23 @@
+ src/CMapTms.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/CMapTms.cpp b/src/CMapTms.cpp
+index 71ee5ff..035fcae 100644
+--- a/src/CMapTms.cpp
++++ b/src/CMapTms.cpp
+@@ -26,6 +26,7 @@
+ #include "CDlgMapTmsConfig.h"
+ #include "CMapSelectionRaster.h"
+ #include "CSettings.h"
++#include "version.h"
+ 
+ #include <QtGui>
+ #include <QtNetwork>
+@@ -598,6 +599,7 @@ void CMapTms::checkQueue()
+         QNetworkRequest request;
+ 
+         request.setUrl(req.url);
++        request.setRawHeader("User-Agent" , "QLandkarteGT/" VER_STR);
+         req.reply = accessManager->get(request);
+ 
+         pendRequests[req.url.toString()] = req;
