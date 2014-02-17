@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.190 2014/01/18 01:08:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.191 2014/02/17 06:03:46 idella4 Exp $
+
+*python-docs-3.3.4 (17 Feb 2014)
+*python-docs-2.6.9 (17 Feb 2014)
+*python-docs-2.7.6 (17 Feb 2014)
+
+  17 Feb 2014; Ian Delaney <idella4@gentoo.org> +python-docs-2.6.9.ebuild,
+  +python-docs-2.7.6.ebuild, +python-docs-3.3.4.ebuild:
+  bumps, advance EAPI -> 5
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> python-docs-2.7.3.ebuild,
   python-docs-2.7.4.ebuild, python-docs-2.7.5.ebuild, python-docs-3.3.2.ebuild,

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.17-r1.ebuild,v 1.1 2014/01/27 07:19:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.17-r2.ebuild,v 1.1 2014/02/17 06:24:16 prometheanfire Exp $
 
 EAPI=5
-inherit eutils autotools flag-o-matic user
+inherit autotools eutils flag-o-matic systemd user
 
 MY_PV="${PV/_rc/-rc}"
 MY_P="${PN}-${MY_PV}"
@@ -64,6 +64,7 @@ src_install() {
 
 	newconfd "${FILESDIR}/memcached.confd" memcached
 	newinitd "${FILESDIR}/memcached.init" memcached
+	systemd_dounit "${FILESDIR}/memcached.service"
 }
 
 pkg_postinst() {
