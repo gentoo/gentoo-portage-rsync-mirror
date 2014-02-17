@@ -23,8 +23,6 @@
   <flag name='rcs'>Add support for revision control via <pkg>dev-vcs/rcs</pkg>
     </flag>
   <flag name='rtf'>Add support for RTF import/export packages</flag>
-  <flag name='xetex'>Add support for XeTeX typesetting</flag>
-  <flag name='luatex'>Add support for LuaTeX typesetting</flag>
   <flag name='gnumeric'>Add support for importing Gnumeric/OpenOffice/MS Excel
     spreadsheets into LyX.</flag>
   <flag name='hunspell'>Add support for spellchecking based on hunspell and

@@ -1,12 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.5.1.ebuild,v 1.10 2013/03/11 17:49:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-2.0.7.1-r2.ebuild,v 1.1 2014/02/17 15:46:47 dlan Exp $
 
-EAPI=3
+EAPI=5
 
-PYTHON_DEPEND="2"
-
-inherit gnome2-utils qt4-r2 eutils flag-o-matic font python toolchain-funcs
+PYTHON_COMPAT=( python{2_6,2_7} )
+inherit gnome2-utils eutils fdo-mime flag-o-matic font python-single-r1 toolchain-funcs
 
 MY_P="${P/_}"
 
@@ -15,13 +14,12 @@ FONT_S="${S}/lib/fonts"
 FONT_SUFFIX="ttf"
 DESCRIPTION="WYSIWYM frontend for LaTeX, DocBook, etc."
 HOMEPAGE="http://www.lyx.org/"
-SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/${P}.tar.xz"
-#SRC_URI="ftp://ftp.lyx.org/pub/lyx/devel/lyx-2.0/rc3/${MY_P}.tar.xz"
+SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/2.0.x/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x64-macos ~x86-macos"
-IUSE="cups debug nls +latex xetex luatex monolithic-build html rtf dot docbook dia subversion rcs svg gnumeric +hunspell aspell enchant"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x64-macos ~x86-macos"
+IUSE="cups debug nls +latex monolithic-build html rtf dot docbook dia subversion rcs svg gnumeric +hunspell aspell enchant"
 
 LANGS="ar ca cs de da el en es eu fi fr gl he hu ia id it ja nb nn pl pt ro ru sk sr sv tr uk zh_CN zh_TW"
 
@@ -29,16 +27,21 @@ for X in ${LANGS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+DOCS=( ANNOUNCE NEWS README RELEASE-NOTES UPGRADING )
+
 COMMONDEPEND="dev-qt/qtgui:4
 	dev-qt/qtcore:4
-	>=dev-libs/boost-1.34"
+	>=dev-libs/boost-1.34
+	${PYTHON_DEPS}"
 
 RDEPEND="${COMMONDEPEND}
 	dev-texlive/texlive-fontsextra
 	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[png] )
 	cups? ( net-print/cups )
 	latex? (
-		virtual/latex-base
+		app-text/texlive
 		app-text/ghostscript-gpl
 		app-text/noweb
 		app-text/dvipng
@@ -54,11 +57,9 @@ RDEPEND="${COMMONDEPEND}
 			dev-tex/latex2html
 			dev-tex/tth
 			dev-tex/hevea
-			dev-tex/tex4ht
+			dev-tex/tex4ht[java]
 		)
 	)
-	xetex? ( dev-texlive/texlive-xetex )
-	luatex? ( >=dev-texlive/texlive-luatex-2010 )
 	html? ( dev-tex/html2latex )
 	rtf? (
 			dev-tex/latex2rtf
@@ -80,19 +81,17 @@ RDEPEND="${COMMONDEPEND}
 	enchant? ( app-text/enchant )"
 
 DEPEND="${COMMONDEPEND}
-	sys-devel/bc
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
-	python_set_active_version 2
+	python-single-r1_pkg_setup
 	font_pkg_setup
 }
 
 src_prepare() {
 	epatch "${FILESDIR}"/2.0-python.patch
-	echo "#!/bin/sh" > config/py-compile
-	sed "s:python -tt:$(PYTHON) -tt:g" -i lib/configure.py || die
+	sed "s:python -tt:${EPYTHON} -tt:g" -i lib/configure.py || die
 }
 
 src_configure() {
@@ -113,9 +112,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc ANNOUNCE NEWS README RELEASE-NOTES UPGRADING "${FONT_S}"/*.txt || die
+	default
 
 	if use linguas_he ; then
 		echo "\bind_file cua" > "${T}"/hebrew.bind
@@ -125,18 +122,20 @@ src_install() {
 		doins "${T}"/hebrew.bind || die
 	fi
 
-	newicon -s 32 "$S/development/Win32/packaging/icons/lyx_32x32.png" ${PN}.png
+	newicon -s 32 "${S}/development/Win32/packaging/icons/lyx_32x32.png" ${PN}.png
+	doicon -s 48 "${S}/lib/images/lyx.png"
+	doicon -s scalable "${S}/lib/images/lyx.svg"
 	make_desktop_entry ${PN} "LyX" "${PN}" "Office" "MimeType=application/x-lyx;"
 
 	# fix for bug 91108
 	if use latex ; then
-		dosym ../../../lyx/tex /usr/share/texmf/tex/latex/lyx || die
+		dosym ../../../lyx/tex /usr/share/texmf-site/tex/latex/lyx || die
 	fi
 
 	# fonts needed for proper math display, see also bug #15629
 	font_src_install
 
-	python_convert_shebangs -r 2 "${ED}"/usr/share/${PN}
+	python_fix_shebang "${ED}"/usr/share/${PN}
 
 	if use hunspell ; then
 		dosym /usr/share/myspell /usr/share/lyx/dicts
@@ -151,6 +150,7 @@ pkg_preinst() {
 pkg_postinst() {
 	font_pkg_postinst
 	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
 
 	# fix for bug 91108
 	if use latex ; then
@@ -171,6 +171,7 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_icon_cache_update
+	fdo-mime_desktop_database_update
 
 	if use latex ; then
 		texhash
