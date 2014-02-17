@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/veusz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.46 2014/02/05 23:33:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.47 2014/02/17 22:25:37 bicatali Exp $
+
+*veusz-1.20.1 (17 Feb 2014)
+
+  17 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +veusz-1.20.1.ebuild:
+  Version bump
 
   05 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> -veusz-1.17.1-r1.ebuild,
   -veusz-1.18.ebuild, veusz-1.20.ebuild:

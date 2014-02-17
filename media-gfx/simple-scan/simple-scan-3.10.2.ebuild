@@ -1,23 +1,24 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.6.1.ebuild,v 1.1 2013/08/26 21:11:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/simple-scan/simple-scan-3.10.2.ebuild,v 1.1 2014/02/17 22:27:34 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit gnome2 versionator
 
 DESCRIPTION="Simple document scanning utility"
 HOMEPAGE="https://launchpad.net/simple-scan"
-SRC_URI="http://launchpad.net/${PN}/3.6/${PV}/+download/${P}.tar.gz"
+MY_PV=$(get_version_component_range 1-2)
+SRC_URI="http://launchpad.net/${PN}/${MY_PV}/${PV}/+download/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.28:2
+	>=dev-libs/glib-2.32:2
 	>=media-gfx/sane-backends-1.0.20:=
 	>=sys-libs/zlib-1.2.3.1:=
 	virtual/jpeg:0=
@@ -39,7 +40,7 @@ DEPEND="${COMMON_DEPEND}
 "
 
 src_configure() {
-	DOCS="AUTHORS ChangeLog NEWS README"
+	DOCS="NEWS README.md"
 	gnome2_src_configure \
 		VALAC=$(type -P true) \
 		ITSTOOL=$(type -P true)
