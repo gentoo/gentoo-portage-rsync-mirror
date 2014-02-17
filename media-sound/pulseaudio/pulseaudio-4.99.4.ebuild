@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4.ebuild,v 1.3 2014/02/17 06:37:44 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4.ebuild,v 1.4 2014/02/17 07:18:09 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -22,6 +22,7 @@ IUSE="+alsa +asyncns avahi bluetooth +caps dbus doc equalizer +gdbm +glib gnome
 gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd
 system-wide tcpd test +udev +webrtc-aec +X xen"
 
+# https://bugs.freedesktop.org/show_bug.cgi?id=75082
 RESTRICT="test" # Tests are known to fail in several ways on each new release
 
 # libpcre needed in some cases, bug #472228
