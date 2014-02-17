@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/nss_ldap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.83 2014/01/26 12:06:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss_ldap/ChangeLog,v 1.84 2014/02/17 05:41:10 prometheanfire Exp $
+
+*nss_ldap-265-r3 (17 Feb 2014)
+
+  17 Feb 2014; Matthew Thode <prometheanfire@gentoo.org>
+  +files/nss_ldap-265-fbsd.patch,
+  +files/nss_ldap-265-missing-entries-oneshot.patch, +nss_ldap-265-r3.ebuild:
+  fixing bug 465954 and bug 449940 in 265-r3
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> nss_ldap-265-r2.ebuild:
   Stable for sparc, wrt bug #438692
