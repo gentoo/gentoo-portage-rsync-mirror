@@ -1,12 +1,12 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.42 2014/02/16 02:43:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.43 2014/02/17 11:33:01 xarthisius Exp $
 
 *hwloc-1.8.1 (16 Feb 2014)
 
   16 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +hwloc-1.8.1.ebuild,
   metadata.xml:
-  Version bump
+  Version bump. Fixes bug #499618 by <teidakankan@gmail.com>
 
   19 Jan 2014; Agostino Sarubbo <ago@gentoo.org> hwloc-1.6.1.ebuild:
   Stable for alpha, wrt bug #484320
