@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.27-r1.ebuild,v 1.1 2013/11/30 22:02:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.27-r1.ebuild,v 1.2 2014/02/17 19:31:12 ssuominen Exp $
 
 EAPI=5
 inherit autotools eutils flag-o-matic multilib
@@ -14,12 +14,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux"
 IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
 
-RDEPEND=">=media-libs/alsa-lib-${PV}
+RDEPEND=">=media-libs/alsa-lib-${PV}:=
 	ffmpeg? ( virtual/ffmpeg )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
-	libsamplerate? ( media-libs/libsamplerate )
+	libsamplerate? ( media-libs/libsamplerate:= )
 	pulseaudio? ( media-sound/pulseaudio )
-	speex? ( media-libs/speex )"
+	speex? ( media-libs/speex:= )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -27,7 +27,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.0.19-missing-avutil.patch \
 		"${FILESDIR}"/${PN}-1.0.23-automagic.patch \
-		"${FILESDIR}"/${PN}-1.0.27-ffmpeg-version-check.patch
+		"${FILESDIR}"/${P}-{ffmpeg,ffmpeg-version-check}.patch
 
 	epatch_user
 
