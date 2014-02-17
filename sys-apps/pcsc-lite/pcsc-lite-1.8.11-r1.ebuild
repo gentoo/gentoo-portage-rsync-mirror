@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.11-r1.ebuild,v 1.1 2014/02/15 11:59:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.8.11-r1.ebuild,v 1.2 2014/02/17 21:06:35 swift Exp $
 
 EAPI="5"
 
@@ -23,11 +23,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 # This is called libusb so that it doesn't fool people in thinking that
 # it is _required_ for USB support. Otherwise they'll disable udev and
 # that's going to be worse.
-IUSE="libusb +udev policykit"
+IUSE="libusb policykit selinux +udev"
 
 REQUIRED_USE="^^ ( udev libusb )"
 
 CDEPEND="libusb? ( virtual/libusb:1 )
+	selinux? ( sec-policy/selinux-pcscd )
 	udev? ( virtual/udev )
 	policykit? ( >=sys-auth/polkit-0.111 )"
 DEPEND="${CDEPEND}

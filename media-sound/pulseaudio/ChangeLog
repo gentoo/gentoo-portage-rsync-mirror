@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.320 2014/02/17 07:18:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.321 2014/02/17 21:19:50 pacho Exp $
+
+  17 Feb 2014; Pacho Ramos <pacho@gentoo.org> pulseaudio-4.99.4.ebuild:
+  Adjust dep for openrc/systemd (#480748)
 
   17 Feb 2014; Pacho Ramos <pacho@gentoo.org> pulseaudio-4.99.4.ebuild:
   Add bug reference for test failure

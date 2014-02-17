@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.50_pre20131231.ebuild,v 1.1 2014/01/04 20:05:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.3.50_pre20131231.ebuild,v 1.2 2014/02/17 21:21:51 ulm Exp $
 
 EAPI=5
 
@@ -117,6 +117,11 @@ src_prepare() {
 	fi
 
 	epatch_user
+
+	# Fix filename reference in redirected man page
+	sed -i -e "/^\\.so/s/etags/&-${EMACS_SUFFIX}/" doc/man/ctags.1 \
+		|| die "unable to sed ctags.1"
+
 	AT_M4DIR=m4 eautoreconf
 }
 

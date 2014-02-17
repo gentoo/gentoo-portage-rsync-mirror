@@ -1,6 +1,12 @@
 # ChangeLog for app-backup/tsm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.20 2013/05/10 06:19:41 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/ChangeLog,v 1.21 2014/02/17 21:15:20 pacho Exp $
+
+*tsm-7.1.0.0 (17 Feb 2014)
+
+  17 Feb 2014; Pacho Ramos <pacho@gentoo.org> +files/dsmc.service,
+  +files/dsmcad.service, +tsm-7.1.0.0.ebuild, -tsm-6.4.0.0.ebuild:
+  Version bump (#501570 by Martin von Gagern), drop old.
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> tsm-6.4.0.0-r1.ebuild:
   Quoting

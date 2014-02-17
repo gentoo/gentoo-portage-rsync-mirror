@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/tsm-6.4.0.0.ebuild,v 1.2 2013/01/01 19:10:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/tsm/tsm-7.1.0.0.ebuild,v 1.1 2014/02/17 21:15:20 pacho Exp $
 
 EAPI=5
 
-inherit versionator multilib eutils rpm user
+inherit versionator multilib eutils readme.gentoo rpm systemd user
 
 DESCRIPTION="Tivoli Storage Manager (TSM) Backup/Archive (B/A) Client and API"
 HOMEPAGE="http://www.tivoli.com/"
@@ -51,16 +51,21 @@ done
 unset lang
 
 DEPEND=""
-RDEPEND="dev-libs/expat
+RDEPEND="
+	dev-libs/expat
 	dev-libs/libxml2
 	=sys-fs/fuse-2*
 	acl? ( sys-apps/acl )
-	java? ( virtual/jre:1.6 )"
+	java? ( virtual/jre:1.6 )
+"
 
 S="${WORKDIR}"
 
 pkg_setup() {
 	enewgroup tsm
+	DOC_CONTENTS="
+		Note that you have to be either root or member of the group tsm to
+		be able to use the Tivoli Storage Manager client."
 }
 
 src_unpack() {
@@ -135,22 +140,22 @@ src_install() {
 		dosym ../..$CLIENTDIR/api/bin64/${i} /usr/lib64/${i}
 	done
 
-	# Mimic TIVsm-BA postinstall script
-	# Create a link to libexpat if needed
-	if [ ! -e "${ROOT}"/usr/lib64/libexpat.so.0 -a -e "${ROOT}"/usr/lib64/libexpat.so.1 ]
-	then
-		dosym /usr/lib64/libexpat.so.1 $CLIENTDIR/ba/bin/libexpat.so.0
-	fi
+	# The TIVsm-BA postinstall script only does messages and ancient upgrades
 
-	# The gscrypt64 postinstall script only deals with s390[x] SELinux.
+	# The gscrypt64 postinstall script only deals with s390[x] SELinux
+	# and the symlink for the iccs library which we handle in the loop below.
+
+	# Move stuff from /usr/local to /opt, #452332
+	mv "${D}"/usr/local/ibm "${D}"/opt/ || die
+	rmdir "${D}"/usr/local || die
 
 	# Mimic gskssl64 postinstall script
 	for i in sys p11 km ssl drld kicc ldap cms acmeidup valn dbfl iccs; do
-		dosym ../local/ibm/gsk8_64/lib64/libgsk8${i}_64.so \
+		dosym ../../opt/ibm/gsk8_64/lib64/libgsk8${i}_64.so \
 			/usr/lib64/libgsk8${i}_64.so
 	done
 	for i in capicmd ver; do
-		dosym ../local/ibm/gsk8_64/bin/gsk8${i}_64 /usr/bin/${i}_64
+		dosym ../../opt/ibm/gsk8_64/bin/gsk8${i}_64 /usr/bin/gsk${i}_64
 	done
 
 	# Done with the postinstall scripts as the RPMs contain them.
@@ -168,8 +173,8 @@ src_install() {
 
 	# Install symlinks for sonames of libraries, bug #416503
 	dosym libvixMntapi.so.1.1.0 $CLIENTDIR/ba/bin/libvixMntapi.so.1
-	dosym libvixDiskLibVim.so.5.0.0 $CLIENTDIR/ba/bin/libvixDiskLibVim.so.5
-	dosym libvixDiskLib.so.5.0.0 $CLIENTDIR/ba/bin/libvixDiskLib.so.5
+	dosym libvixDiskLibVim.so.5.5.0 $CLIENTDIR/ba/bin/libvixDiskLibVim.so.5
+	dosym libvixDiskLib.so.5.5.0 $CLIENTDIR/ba/bin/libvixDiskLib.so.5
 
 	fowners -R :tsm /opt/tivoli
 	fperms -R g+rX,o-rx /opt/tivoli # Allow only tsm group users to access TSM tools
@@ -206,11 +211,10 @@ src_install() {
 	newinitd "${FILESDIR}/dsmc.init.d" dsmc
 	newinitd "${FILESDIR}/dsmcad.init.d-r1" dsmcad
 
-	elog
-	elog "Note that you have to be either root or member of the group tsm to"
-	elog "be able to use the Tivoli Storage Manager client."
-	elog
+	systemd_dounit "${FILESDIR}/dsmc.service"
+	systemd_dounit "${FILESDIR}/dsmcad.service"
 
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
@@ -227,4 +231,6 @@ pkg_postinst() {
 	# Have to do this in postinst due to bug #141619
 	chown root:tsm /var/log/tsm || die
 	chmod 0750 /var/log/tsm || die
+
+	readme.gentoo_print_elog
 }

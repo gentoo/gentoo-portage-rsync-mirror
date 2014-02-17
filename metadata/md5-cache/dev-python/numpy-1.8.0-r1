@@ -4,11 +4,11 @@ DESCRIPTION=Fast array and numerical python library
 EAPI=5
 HOMEPAGE=http://numpy.scipy.org/
 IUSE=doc lapack test python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3
-KEYWORDS=alpha amd64 ~arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=BSD
 RDEPEND=dev-python/setuptools[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] lapack? ( virtual/cblas virtual/lapack ) python_targets_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6 ) python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7 ) python_targets_python3_2? ( >=dev-lang/python-3.2.5-r2:3.2 ) python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_targets_python3_2(-)?,python_targets_python3_3(-)?,-python_single_target_python2_6(-),-python_single_target_python2_7(-),-python_single_target_python3_2(-),-python_single_target_python3_3(-)] lapack? ( virtual/fortran )
 REQUIRED_USE=|| ( python_targets_python2_6 python_targets_python2_7 python_targets_python3_2 python_targets_python3_3 )
 SLOT=0
 SRC_URI=mirror://pypi/n/numpy/numpy-1.8.0.tar.gz doc? ( http://docs.scipy.org/doc/numpy-1.8.0/numpy-html-1.8.0.zip http://docs.scipy.org/doc/numpy-1.8.0/numpy-ref-1.8.0.pdf http://docs.scipy.org/doc/numpy-1.8.0/numpy-user-1.8.0.pdf )
 _eclasses_=distutils-r1	364122897f9dc771167ee5ff362e54e1	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	multibuild	56d4120419072116417e8de1bd1040ff	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-r1	3bb814ab7959a36067101a6bef683b6f	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=ea79ee2a85f81122a68e7fc0a5f6ff85
+_md5_=724d4e27e0df428e71530c8249c59549

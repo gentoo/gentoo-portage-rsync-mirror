@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4.ebuild,v 1.4 2014/02/17 07:18:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4.ebuild,v 1.5 2014/02/17 21:19:50 pacho Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -52,7 +52,7 @@ RDEPEND="
 	gtk? ( x11-libs/gtk+:3 )
 	gnome? ( >=gnome-base/gconf-2.4.0 )
 	bluetooth? (
-		>=net-wireless/bluez-4.99
+		>=net-wireless/bluez-5
 		>=sys-apps/dbus-1.0.0
 		media-libs/sbc
 	)
@@ -98,7 +98,6 @@ RDEPEND="${RDEPEND}
 	equalizer? ( qt4? ( dev-python/PyQt4[dbus] ) )
 	X? ( gnome-extra/gnome-audio )
 	system-wide? (
-		sys-apps/openrc
 		alsa? ( media-sound/alsa-utils )
 		bluetooth? ( >=net-wireless/bluez-5 )
 	)
