@@ -7155,7 +7155,6 @@ x11-wm/compiz:gconf - Enable the GConf-based configuration backend; it is not re
 x11-wm/compiz-fusion:emerald - Install the x11-wm/emerald package.
 x11-wm/compiz-fusion:unsupported - Install the x11-plugins/compiz-fusion-plugins-unsupported package.
 x11-wm/echinus:xrandr - Enable support for multihead configuration
-x11-wm/enlightenment:emotion - Enable support for media-libs/emotion
 x11-wm/enlightenment:enlightenment_modules_access - Accessibility module designed to improve ease of use for the vision impaired and the blind
 x11-wm/enlightenment:enlightenment_modules_backlight - Backlight control slider gadget
 x11-wm/enlightenment:enlightenment_modules_battery - A gadget to visualize your battery status
