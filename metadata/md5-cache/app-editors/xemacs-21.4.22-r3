@@ -1,0 +1,14 @@
+DEFINED_PHASES=configure install postinst postrm prepare unpack
+DEPEND=berkdb? ( sys-libs/db ) gdbm? ( >=sys-libs/gdbm-1.8.3 ) >=sys-libs/zlib-1.1.4 >=dev-libs/openssl-0.9.6 >=media-libs/audiofile-0.2.3 gpm? ( >=sys-libs/gpm-1.19.6 ) postgres? ( dev-db/postgresql-base ) ldap? ( net-nds/openldap ) nas? ( media-libs/nas ) X? ( x11-libs/libXt x11-libs/libXmu x11-libs/libXext x11-misc/xbitmaps !Xaw3d? ( !neXt? ( x11-libs/libXaw ) ) ) dnd? ( x11-libs/dnd ) motif? ( >=x11-libs/motif-2.3:0 ) athena? ( x11-libs/libXaw ) Xaw3d? ( x11-libs/libXaw3d ) neXt? ( x11-libs/neXtaw ) xface? ( media-libs/compface ) tiff? ( media-libs/tiff ) png? ( >=media-libs/libpng-1.2 ) jpeg? ( virtual/jpeg ) canna? ( app-i18n/canna ) !amd64? ( freewnn? ( app-i18n/freewnn ) ) >=sys-libs/ncurses-5.2 >=app-admin/eselect-emacs-1.15 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) =sys-devel/autoconf-2.1* sys-devel/libtool
+DESCRIPTION=highly customizable open source text editor and application development system
+EAPI=5
+HOMEPAGE=http://www.xemacs.org/
+IUSE=eolconv gif gpm pop postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna xim athena neXt Xaw3d gdbm berkdb
+KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2+
+PDEPEND=app-xemacs/xemacs-base mule? ( app-xemacs/mule-base )
+RDEPEND=berkdb? ( sys-libs/db ) gdbm? ( >=sys-libs/gdbm-1.8.3 ) >=sys-libs/zlib-1.1.4 >=dev-libs/openssl-0.9.6 >=media-libs/audiofile-0.2.3 gpm? ( >=sys-libs/gpm-1.19.6 ) postgres? ( dev-db/postgresql-base ) ldap? ( net-nds/openldap ) nas? ( media-libs/nas ) X? ( x11-libs/libXt x11-libs/libXmu x11-libs/libXext x11-misc/xbitmaps !Xaw3d? ( !neXt? ( x11-libs/libXaw ) ) ) dnd? ( x11-libs/dnd ) motif? ( >=x11-libs/motif-2.3:0 ) athena? ( x11-libs/libXaw ) Xaw3d? ( x11-libs/libXaw3d ) neXt? ( x11-libs/neXtaw ) xface? ( media-libs/compface ) tiff? ( media-libs/tiff ) png? ( >=media-libs/libpng-1.2 ) jpeg? ( virtual/jpeg ) canna? ( app-i18n/canna ) !amd64? ( freewnn? ( app-i18n/freewnn ) ) >=sys-libs/ncurses-5.2 >=app-admin/eselect-emacs-1.15
+SLOT=0
+SRC_URI=http://ftp.xemacs.org/xemacs-21.4/xemacs-21.4.22.tar.gz http://www.malfunction.de/afterstep/files/NeXT_XEmacs.tar.gz
+_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=8be0fa0dd5f1c33141c00b0e81ccca14
