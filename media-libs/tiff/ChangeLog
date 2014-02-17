@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.265 2014/02/16 07:34:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.266 2014/02/17 05:30:16 ssuominen Exp $
+
+  17 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> -tiff-3.9.7.ebuild,
+  -tiff-4.0.3-r4.ebuild, -tiff-4.0.3-r5.ebuild:
+  old
 
   16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> tiff-4.0.3-r6.ebuild:
   Stable for alpha, wrt bug #486590
