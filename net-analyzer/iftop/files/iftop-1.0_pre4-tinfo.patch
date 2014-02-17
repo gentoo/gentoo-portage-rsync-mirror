@@ -1,9 +1,4 @@
- Makefile.am  |  2 +-
- configure.ac | 18 +++++++++++-------
- 2 files changed, 12 insertions(+), 8 deletions(-)
-
 diff --git a/Makefile.am b/Makefile.am
-index 1a9320c..a9bd7f1 100644
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -25,7 +25,7 @@ iftop_SOURCES = addr_hash.c edline.c hash.c iftop.c ns_hash.c \
@@ -15,8 +10,6 @@ index 1a9320c..a9bd7f1 100644
  
  noinst_HEADERS = addr_hash.h ether.h ethertype.h extract.h hash.h iftop.h \
                   integers.h ip.h llc.h ns_hash.h options.h resolver.h \
-diff --git a/configure.ac b/configure.ac
-index 671241e..83352c5 100644
 --- a/configure.ac
 +++ b/configure.ac
 @@ -348,19 +348,23 @@ dnl a solid chance that mvchgat is a macro, so we can't just use

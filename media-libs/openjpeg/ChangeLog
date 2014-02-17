@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.87 2014/02/12 01:02:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.88 2014/02/17 01:13:12 rich0 Exp $
+
+  17 Feb 2014; Richard Freeman <rich0@gentoo.org> openjpeg-2.0.0.ebuild:
+  amd64 stable - 482788
 
   12 Feb 2014; Jeroen Roovers <jer@gentoo.org> openjpeg-2.0.0.ebuild:
   Stable for HPPA (bug #500988).

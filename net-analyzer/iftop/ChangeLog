@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/iftop
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.59 2014/01/20 14:26:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iftop/ChangeLog,v 1.60 2014/02/17 01:10:25 jer Exp $
+
+  17 Feb 2014; Jeroen Roovers <jer@gentoo.org> iftop-1.0_pre4.ebuild,
+  files/iftop-1.0_pre4-tinfo.patch:
+  Clean up patch. Remove unneeded sed script.
 
 *iftop-1.0_pre4 (20 Jan 2014)
 
