@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.35 2014/02/11 16:47:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.36 2014/02/17 15:14:14 blueness Exp $
+
+  17 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/amd64/make.defaults, linux/musl/x86/make.defaults:
+  Sandbox from hardened-dev::musl overlay works
 
   11 Feb 2014; Anthony G. Basile <blueness@gentoo.org> linux/make.defaults:
   Add xtpax to BOOTSTRAP_USE/USE in base hardened make.default, for
