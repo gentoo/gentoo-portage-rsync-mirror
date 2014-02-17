@@ -5,8 +5,8 @@ Documentation=man:memcached(1)
 Documentation=http://code.google.com/p/memcached/
 
 [Service]
-EnvironmentFile=/etc/conf.d/memcached
-ExecStart=/usr/bin/memcached -p ${PORT} -u ${USER} -m ${CACHESIZE} -c ${MAXCONN} $OPTIONS
+ExecStart=/usr/bin/memcached
+User=memcached
 
 [Install]
 WantedBy=multi-user.target

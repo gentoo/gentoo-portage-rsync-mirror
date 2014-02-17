@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.9.ebuild,v 1.1 2014/01/05 10:34:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.11.ebuild,v 1.1 2014/02/17 07:47:43 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ PYTHON_COMPAT=( python{2_6,2_7} )
 inherit eutils gnome2 flag-o-matic python-single-r1
 
 DESCRIPTION="The GNOME Spreadsheet"
-HOMEPAGE="http://projects.gnome.org/gnumeric/"
+HOMEPAGE="http://www.gnumeric.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -31,7 +31,7 @@ RDEPEND="
 	sys-libs/zlib
 	>=dev-libs/glib-2.28:2
 	>=gnome-extra/libgsf-1.14.24:=
-	>=x11-libs/goffice-0.10.9:0.10
+	>=x11-libs/goffice-0.10.10:0.10
 	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.24.0:=
 

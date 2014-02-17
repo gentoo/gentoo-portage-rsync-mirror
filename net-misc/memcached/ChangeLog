@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/memcached
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.148 2014/02/17 06:24:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.149 2014/02/17 08:01:09 prometheanfire Exp $
+
+  17 Feb 2014; Matthew Thode <prometheanfire@gentoo.org>
+  files/memcached.service:
+  fixed for real this time
 
 *memcached-1.4.17-r2 (17 Feb 2014)
 
