@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.473 2014/01/12 13:16:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.474 2014/02/17 16:55:34 eras Exp $
+
+*dovecot-2.2.12 (17 Feb 2014)
+
+  17 Feb 2014; Eray Aslan <eras@gentoo.org> +dovecot-2.2.12.ebuild,
+  metadata.xml:
+  Version bump - bug #501478.  No automagic dependency on compression libraries
+  - bug #497240
 
   12 Jan 2014; Agostino Sarubbo <ago@gentoo.org> dovecot-2.2.9.ebuild:
   Stable for ia64, wrt bug #492494
