@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4.ebuild,v 1.2 2014/02/16 23:02:21 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4.ebuild,v 1.3 2014/02/17 06:37:44 vikraman Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -110,6 +110,14 @@ pkg_pretend() {
 	CONFIG_CHECK="~HIGH_RES_TIMERS"
 	WARNING_HIGH_RES_TIMERS="CONFIG_HIGH_RES_TIMERS:\tis not set (required for enabling timer-based scheduling in pulseaudio)\n"
 	check_extra_config
+
+	if linux_config_exists; then
+		local snd_hda_prealloc_size=$(linux_chkconfig_string SND_HDA_PREALLOC_SIZE)
+		if [ -n "${snd_hda_prealloc_size}" ] && [ "${snd_hda_prealloc_size}" -lt 2048 ]; then
+			ewarn "A preallocated buffer-size of 2048 (kB) or higher is recommended for the HD-audio driver!"
+			ewarn "CONFIG_SND_HDA_PREALLOC_SIZE=${snd_hda_prealloc_size}"
+		fi
+	fi
 }
 
 pkg_setup() {
