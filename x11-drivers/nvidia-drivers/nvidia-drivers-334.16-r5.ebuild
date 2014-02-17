@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r5.ebuild,v 1.2 2014/02/17 13:22:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r5.ebuild,v 1.3 2014/02/17 14:11:51 jer Exp $
 
 EAPI=5
 
@@ -150,11 +150,11 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if ! use kernel_FreeBSD; then
+	if use kernel_FreeBSD; then
+		unpack ${A}
+	elif use kernel_linux; then
 		cd "${S}"
 		unpack_makeself
-	else
-		unpack ${A}
 	fi
 }
 
