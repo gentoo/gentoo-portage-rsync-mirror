@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.1-r2.ebuild,v 1.1 2014/02/15 06:26:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.24.1-r2.ebuild,v 1.2 2014/02/17 18:52:40 vapier Exp $
 
 EAPI="4"
 
@@ -61,6 +61,7 @@ src_prepare() {
 		eautoreconf
 	fi
 	epatch "${FILESDIR}"/${PN}-2.24-skip-last-tests.patch #491742
+	epatch "${FILESDIR}"/${PN}-2.24-last-tests.patch #501408
 	find tests/ -name bigyear -delete #489794
 	elibtoolize
 }
