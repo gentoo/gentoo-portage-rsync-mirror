@@ -1,6 +1,19 @@
 # ChangeLog for media-plugins/gst-plugins-v4l2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.131 2013/10/22 07:21:52 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.132 2014/02/16 23:35:21 eva Exp $
+
+*gst-plugins-v4l2-1.2.3 (16 Feb 2014)
+
+  16 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org>
+  -gst-plugins-v4l2-1.0.5.ebuild, -gst-plugins-v4l2-1.0.6.ebuild,
+  -gst-plugins-v4l2-1.0.7.ebuild, -gst-plugins-v4l2-1.0.8.ebuild,
+  +gst-plugins-v4l2-1.2.3.ebuild:
+  Version bump; remove old. Improvement include:
+  * Compilation fix on uclibc, older glibc systems, and non-Linux
+    systems.
+  * Robustness against (allowed) uninitialized ioctl values.
+  * Fixes for when using the same v4l2 element for handling
+    different hardware devices consequently.
 
   22 Oct 2013; Agostino Sarubbo <ago@gentoo.org> gst-plugins-v4l2-1.0.10.ebuild:
   Stable for sparc, wrt bug #480908

@@ -1,7 +1,9 @@
 # ChangeLog for sys-apps/install-xattr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.1 2014/02/13 21:38:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.2 2014/02/16 23:36:16 blueness Exp $
+
+  16 Feb 2014; Anthony G. Basile <blueness@gentoo.org> install-xattr-0.1.ebuild:
+  Fix type in DESCRIPTION, thanks Arfrever
 
   13 Feb 2014; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Initial commit, bug #465000
-
