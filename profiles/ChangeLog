@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8618 2014/02/17 09:32:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8621 2014/02/17 17:26:21 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Feb 2014; Mike Gilbert <floppym@gentoo.org>
+  desc/python_single_target.desc:
+  Add python3_4.
+
+  17 Feb 2014; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Mask dev-lang/python:3.4.
+
+  17 Feb 2014; Eray Aslan <eras@gentoo.org> package.mask:
+  Security mask - bug #492494 net-mail/dovecot-2.{0,1}
 
   17 Feb 2014; Ulrich Müller <ulm@gentoo.org> package.mask:
   Temporarily mask app-emacs/gnuserv-3.12.8-r1.
