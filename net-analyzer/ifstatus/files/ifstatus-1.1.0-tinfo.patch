@@ -7,7 +7,7 @@
 -GCC = g++
 -LDFLAGS = -lncurses
 -CFLAGS = -O2 -Wall
-+LDLIBS = $(shell pkg-config --libs ncurses)
++LDLIBS = $(shell $(PKG_CONFIG) --libs ncurses)
  
  BIN = ifstatus
  OBJ = BorderDecorator.o\

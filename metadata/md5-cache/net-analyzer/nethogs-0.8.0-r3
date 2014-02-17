@@ -1,0 +1,12 @@
+DEFINED_PHASES=prepare
+DEPEND=net-libs/libpcap sys-libs/ncurses virtual/pkgconfig
+DESCRIPTION=A small 'net top' tool, grouping bandwidth by process
+EAPI=5
+HOMEPAGE=http://nethogs.sf.net/
+KEYWORDS=~amd64 ~ia64 ~x86
+LICENSE=GPL-1
+RDEPEND=net-libs/libpcap sys-libs/ncurses
+SLOT=0
+SRC_URI=mirror://sourceforge/nethogs/nethogs-0.8.0.tar.gz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=90360ae823e9ca356ca5b04336804f70

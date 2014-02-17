@@ -1,0 +1,40 @@
+--- a/Makefile
++++ b/Makefile
+@@ -5,15 +5,17 @@
+ #DESTDIR := /usr
+ DESTDIR := /usr/local
+ 
+-sbin  := $(DESTDIR)/sbin
+-man8 := $(DESTDIR)/share/man/man8/
++sbin  := $(DESTDIR)/usr/sbin
++man8 := $(DESTDIR)/usr/share/man/man8/
+ 
+ all: nethogs decpcap_test
+ # nethogs_testsum
+ 
+-CFLAGS=-g -Wall -Wextra
+-#CFLAGS=-O2
++CFLAGS+= -Wall -Wextra
+ OBJS=packet.o connection.o process.o refresh.o decpcap.o cui.o inode2prog.o conninode.o devices.o
++
++LIBS = $(shell $(PKG_CONFIG) --libs ncurses)
++
+ .PHONY: tgz
+ 
+ tgz: clean
+@@ -30,12 +32,12 @@
+ 	install -m 644 nethogs.8 $(man8)
+ 
+ nethogs: nethogs.cpp $(OBJS)
+-	$(CXX) $(CFLAGS) nethogs.cpp $(OBJS) -o nethogs -lpcap -lm -lncurses -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
++	$(CXX) $(CFLAGS) $(LDFLAGS) nethogs.cpp $(OBJS) -o nethogs -lpcap -lm $(LIBS) -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
+ nethogs_testsum: nethogs_testsum.cpp $(OBJS)
+-	$(CXX) $(CFLAGS) -g nethogs_testsum.cpp $(OBJS) -o nethogs_testsum -lpcap -lm -lncurses -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
++	$(CXX) $(CFLAGS) $(LDFLAGS) -g nethogs_testsum.cpp $(OBJS) -o nethogs_testsum -lpcap -lm $(LIBS) -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
+ 
+ decpcap_test: decpcap_test.cpp decpcap.o
+-	$(CXX) $(CFLAGS) decpcap_test.cpp decpcap.o -o decpcap_test -lpcap -lm
++	$(CXX) $(CFLAGS) $(LDFLAGS) decpcap_test.cpp decpcap.o -o decpcap_test -lpcap -lm
+ 
+ #-lefence
+ 

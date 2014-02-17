@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0-r1.ebuild,v 1.1 2014/02/16 00:10:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0-r1.ebuild,v 1.2 2014/02/17 00:46:40 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -24,7 +24,7 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 	epatch "${FILESDIR}/${P}-tinfo.patch"
-	tc-export CXX
+	tc-export CXX PKG_CONFIG
 }
 
 src_install() {

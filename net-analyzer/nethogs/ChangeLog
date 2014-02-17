@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nethogs
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.22 2012/01/28 18:09:31 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.23 2014/02/17 00:44:37 jer Exp $
+
+*nethogs-0.8.0-r3 (17 Feb 2014)
+
+  17 Feb 2014; Jeroen Roovers <jer@gentoo.org> +nethogs-0.8.0-r3.ebuild,
+  +files/nethogs-0.8.0-gentoo.patch:
+  Fix building against sys-libs/ncurses[tinfo]. Combine sed changes into one
+  patch.
 
   28 Jan 2012; Jeroen Roovers <jer@gentoo.org> -nethogs-0.6.1_pre2.ebuild,
   -files/nethogs-0.6.1_pre2-gcc43.patch, -nethogs-0.7.0.ebuild,
