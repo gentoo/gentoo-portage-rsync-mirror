@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.526 2014/02/17 14:11:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.528 2014/02/17 20:14:20 jer Exp $
+
+  17 Feb 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-334.16-r6.ebuild:
+  Whitespace.
+
+*nvidia-drivers-334.16-r6 (17 Feb 2014)
+
+  17 Feb 2014; Jeroen Roovers <jer@gentoo.org>
+  -nvidia-drivers-334.16-r5.ebuild, +nvidia-drivers-334.16-r6.ebuild:
+  Set up MODULE_NAMES so that nvidia-uvm gets built first (bug #501540).
 
   17 Feb 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-334.16-r5.ebuild:
   Invert if/else.

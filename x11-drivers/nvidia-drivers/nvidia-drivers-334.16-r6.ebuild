@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r5.ebuild,v 1.3 2014/02/17 14:11:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r6.ebuild,v 1.2 2014/02/17 20:14:20 jer Exp $
 
 EAPI=5
 
@@ -115,16 +115,22 @@ pkg_setup() {
 	export CCACHE_DISABLE=1
 
 	if use kernel_linux; then
-		linux-mod_pkg_setup
-		MODULE_NAMES="nvidia(video:${S}/kernel)"
-		use uvm && MODULE_NAMES+=" nvidia-uvm(video:${S}/kernel/uvm)"
+		# Because of awkward limitations of linux-mod.eclass, the order in
+		# which the modules are listed somehow affects module dependencies,
+		# so we list nvidia-uvm first and then nvidia.
+		use uvm && MODULE_NAMES="nvidia-uvm(video:${S}/kernel/uvm)"
+		MODULE_NAMES+=" nvidia(video:${S}/kernel)"
+
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
 		SYSOUT=${KV_OUT_DIR} CC=$(tc-getBUILD_CC)"
+
 		# linux-mod_src_compile calls set_arch_to_kernel, which
 		# sets the ARCH to x86 but NVIDIA's wrapping Makefile
 		# expects x86_64 or i386 and then converts it to x86
 		# later on in the build process
 		BUILD_FIXES="ARCH=$(uname -m | sed -e 's/i.86/i386/')"
+
+		linux-mod_pkg_setup
 	fi
 
 	# set variables to where files are in the package structure
@@ -185,8 +191,6 @@ src_compile() {
 	# This is already the default on Linux, as there's no toplevel Makefile, but
 	# on FreeBSD there's one and triggers the kernel module build, as we install
 	# it by itself, pass this.
-
-	use uvm && append-cppflags -DNV_UVM_ENABLE -DNVIDIA_UVM_LITE_ENABLED
 
 	cd "${NV_SRC}"
 	if use kernel_FreeBSD; then
