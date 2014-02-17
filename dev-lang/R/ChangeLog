@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.229 2014/01/15 12:17:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.230 2014/02/17 12:34:34 heroxbd Exp $
+
+  17 Feb 2014; Benda Xu <heroxbd@gentoo.org> R-3.0.2.ebuild:
+  Pass correct blas path to configure, pass {tk,tcl}-config scripts to configure
+  explicitly for Prefix. Credits to Michael Schubert, bug 499356.
 
   15 Jan 2014; Justin Lecher <jlec@gentoo.org> -R-2.10.1.ebuild,
   -R-2.15.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.8.5.3.ebuild,v 1.3 2014/02/07 07:59:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.9.0.ebuild,v 1.1 2014/02/17 12:37:48 polynomial-c Exp $
 
 EAPI=5
 
@@ -89,7 +89,7 @@ DEPEND="${CDEPEND}
 		app-text/xmlto
 	)
 	nls? ( sys-devel/gettext )
-	test? ( app-crypt/gnupg	)"
+	test? (	app-crypt/gnupg )"
 
 # Live ebuild builds man pages and HTML docs, additionally
 if [[ ${PV} == *9999 ]]; then
@@ -224,10 +224,7 @@ src_unpack() {
 
 src_prepare() {
 	# bug #350330 - automagic CVS when we don't want it is bad.
-	epatch "${FILESDIR}"/git-1.8.5-optional-cvs.patch
-
-	# honor and correctly quote DISTDIR (from upstream git master)
-	epatch "${FILESDIR}"/git-1.8.5-mw-destdir.patch
+	epatch "${FILESDIR}"/git-1.9.0_rc3-optional-cvs.patch
 
 	# install mediawiki perl modules also in vendor_dir
 	# hack, needs better upstream solution
