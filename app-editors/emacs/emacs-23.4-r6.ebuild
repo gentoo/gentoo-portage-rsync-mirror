@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r6.ebuild,v 1.7 2014/01/25 16:09:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.4-r6.ebuild,v 1.8 2014/02/17 08:18:21 ulm Exp $
 
 EAPI=5
 WANT_AUTOMAKE="none"
@@ -81,6 +81,9 @@ S="${WORKDIR}/emacs-${FULL_VERSION}"
 src_prepare() {
 	EPATCH_SUFFIX=patch epatch
 	epatch_user
+
+	sed -i -e "/^\\.so/s/etags/&-${EMACS_SUFFIX}/" doc/man/ctags.1 \
+		|| die "unable to sed ctags.1"
 
 	if ! use alsa; then
 		# ALSA is detected even if not requested by its USE flag.
