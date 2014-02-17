@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/retroshare
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/ChangeLog,v 1.4 2013/11/17 13:06:54 hasufell Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/ChangeLog,v 1.5 2014/02/17 22:52:34 hasufell Exp $
+
+*retroshare-0.5.5c (17 Feb 2014)
+
+  17 Feb 2014; Julian Ospald <hasufell@gentoo.org> +retroshare-0.5.5c.ebuild:
+  version bump
 
 *retroshare-0.5.5b (17 Nov 2013)
 
