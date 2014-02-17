@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r5.ebuild,v 1.1 2014/02/10 16:22:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-334.16-r5.ebuild,v 1.2 2014/02/17 13:22:34 jer Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ SRC_URI="
 LICENSE="GPL-2 NVIDIA-r1"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~amd64-fbsd ~x86-fbsd"
-IUSE="acpi multilib kernel_FreeBSD kernel_linux pax_kernel +tools +X"
+IUSE="acpi multilib kernel_FreeBSD kernel_linux pax_kernel +tools +X uvm"
 RESTRICT="bindist mirror strip"
 EMULTILIB_PKG="true"
 
@@ -117,6 +117,7 @@ pkg_setup() {
 	if use kernel_linux; then
 		linux-mod_pkg_setup
 		MODULE_NAMES="nvidia(video:${S}/kernel)"
+		use uvm && MODULE_NAMES+=" nvidia-uvm(video:${S}/kernel/uvm)"
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
 		SYSOUT=${KV_OUT_DIR} CC=$(tc-getBUILD_CC)"
 		# linux-mod_src_compile calls set_arch_to_kernel, which
@@ -184,6 +185,8 @@ src_compile() {
 	# This is already the default on Linux, as there's no toplevel Makefile, but
 	# on FreeBSD there's one and triggers the kernel module build, as we install
 	# it by itself, pass this.
+
+	use uvm && append-cppflags -DNV_UVM_ENABLE -DNVIDIA_UVM_LITE_ENABLED
 
 	cd "${NV_SRC}"
 	if use kernel_FreeBSD; then

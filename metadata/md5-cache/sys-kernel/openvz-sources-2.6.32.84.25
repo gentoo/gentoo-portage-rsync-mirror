@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst postrm preinst setup test unpack
+DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-2.6.8-r3:2.6 ) )
+DESCRIPTION=Kernel sources with OpenVZ patchset
+EAPI=5
+HOMEPAGE=http://www.openvz.org
+IUSE=symlink build deblob
+KEYWORDS=~amd64 ~ppc64 ~sparc ~x86
+LICENSE=GPL-2 !deblob? ( freedist )
+PDEPEND=!build? ( virtual/dev-manager )
+RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
+RESTRICT=binchecks strip
+SLOT=2.6.32.84.25
+SRC_URI=mirror://kernel/linux/kernel/v2.6/linux-2.6.32.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.32.N/deblob-2.6.32 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-2.6.32.N/deblob-check -> deblob-check-2.6.32 ) http://download.openvz.org/kernel/branches/rhel6-2.6.32/042stab084.25/patches/patch-042stab084.25-combined.gz
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	kernel-2	263afd0e4a90481352469cff577efe1b	multilib	fac675dcccf94392371a6abee62d909f	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_md5_=9656c84aa2f86a2132c90133a95c1aa8

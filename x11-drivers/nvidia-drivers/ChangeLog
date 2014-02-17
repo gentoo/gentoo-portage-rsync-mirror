@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.524 2014/02/10 16:22:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.525 2014/02/17 13:22:34 jer Exp $
+
+  17 Feb 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-334.16-r5.ebuild,
+  metadata.xml:
+  Install the Unified Memory kernel module (nvidia-uvm) (bug #501540 by Andreas
+  Steinmetz).
 
 *nvidia-drivers-334.16-r5 (10 Feb 2014)
 

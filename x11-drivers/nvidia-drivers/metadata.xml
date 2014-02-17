@@ -10,9 +10,9 @@
 </maintainer>
 <longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
 <use>
-	<flag name='tools'>Installs additional tools such as nvidia-settings</flag>
-	<flag name='X'>Controls whether the X.org driver, OpenGL libraries,
-		XvMC libraries, and VDPAU libraries are installed</flag>
+	<flag name='X'>Install the X.org driver, OpenGL libraries, XvMC libraries, and VDPAU libraries</flag>
 	<flag name='pax_kernel'>PaX patches from the PaX project</flag> 
+	<flag name='tools'>Install additional tools such as nvidia-settings</flag>
+	<flag name='uvm'>Install the Unified Memory kernel module (nvidia-uvm) for sharing memory between CPU and GPU in CUDA programs</flag>
 </use>
 </pkgmetadata>
