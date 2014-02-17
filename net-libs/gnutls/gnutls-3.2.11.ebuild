@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.11.ebuild,v 1.2 2014/02/15 23:34:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.2.11.ebuild,v 1.4 2014/02/17 09:35:44 alonbl Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/libtasn1-2.14
 	dane? ( net-dns/unbound )
 	guile? ( >=dev-scheme/guile-1.8[networking] )
 	nls? ( virtual/libintl )
-	pkcs11? ( >=app-crypt/p11-kit-0.11 )
+	pkcs11? ( >=app-crypt/p11-kit-0.19.2 )
 	zlib? ( >=sys-libs/zlib-1.2.3.1 )"
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.11.6
