@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.0-r1.ebuild,v 1.2 2013/11/30 22:05:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.0-r1.ebuild,v 1.3 2014/02/16 23:02:21 jcallen Exp $
 
 EAPI="5"
 
@@ -177,6 +177,8 @@ multilib_src_configure() {
 			# (results don't matter, we're not building anything using it)
 			ac_cv_lib_ltdl_lt_dladvise_init=yes
 			--with-database=simple
+			LIBSPEEX_CFLAGS=' '
+			LIBSPEEX_LIBS=' '
 		)
 	fi
 

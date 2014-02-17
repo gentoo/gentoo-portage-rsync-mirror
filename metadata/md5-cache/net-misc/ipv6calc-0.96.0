@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test
+DEPEND=dev-libs/openssl geoip? ( >=dev-libs/geoip-1.4.7 ) test? ( dev-perl/Digest-SHA1 ) >=sys-apps/sed-4
+DESCRIPTION=IPv6 address calculator
+EAPI=5
+HOMEPAGE=http://www.deepspace6.net/projects/ipv6calc.html
+IUSE=geoip test
+KEYWORDS=~alpha ~amd64 ~hppa ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux
+LICENSE=GPL-2
+RDEPEND=dev-libs/openssl geoip? ( >=dev-libs/geoip-1.4.7 )
+SLOT=0
+SRC_URI=ftp://ftp.bieringer.de/pub/linux/IPv6/ipv6calc/ipv6calc-0.96.0.tar.gz
+_eclasses_=fixheadtails	f96922acc9287f1e889a1e50a6c8986e
+_md5_=e58e2f4b72dbc89c2e07cee40ac3eb12

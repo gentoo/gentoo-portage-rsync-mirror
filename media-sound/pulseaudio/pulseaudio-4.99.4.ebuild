@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4.ebuild,v 1.1 2014/02/16 21:30:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4.ebuild,v 1.2 2014/02/16 23:02:21 jcallen Exp $
 
 EAPI="5"
 inherit eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
@@ -211,6 +211,8 @@ multilib_src_configure() {
 			# (results don't matter, we're not building anything using it)
 			ac_cv_lib_ltdl_lt_dladvise_init=yes
 			--with-database=simple
+			LIBSPEEX_CFLAGS=' '
+			LIBSPEEX_LIBS=' '
 		)
 	fi
 
