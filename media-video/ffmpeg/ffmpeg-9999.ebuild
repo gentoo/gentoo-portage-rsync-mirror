@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.146 2014/02/12 13:15:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.147 2014/02/17 18:13:36 aballier Exp $
 
 EAPI="5"
 
@@ -94,7 +94,7 @@ RDEPEND="
 		x264? ( >=media-libs/x264-0.0.20111017:= )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
-	fdk? ( media-libs/fdk-aac )
+	fdk? ( >=media-libs/fdk-aac-0.1.3 )
 	flite? ( app-accessibility/flite )
 	fontconfig? ( media-libs/fontconfig )
 	frei0r? ( media-plugins/frei0r-plugins )
