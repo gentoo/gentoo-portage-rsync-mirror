@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.304 2014/01/18 03:06:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.305 2014/02/17 19:32:49 vapier Exp $
+
+  17 Feb 2014; Mike Frysinger <vapier@gentoo.org> nano-2.3.2-r1.ebuild:
+  Enable USE=spell by default as it does not require dependencies and adds <10k
+  to build size.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> nano-2.3.2-r1.ebuild,
   nano-2.3.2.ebuild:

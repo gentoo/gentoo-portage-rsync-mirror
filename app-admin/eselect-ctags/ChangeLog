@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-ctags
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.66 2013/07/14 14:55:13 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-ctags/ChangeLog,v 1.67 2014/02/17 19:57:43 ulm Exp $
+
+*eselect-ctags-1.15 (17 Feb 2014)
+
+  17 Feb 2014; Ulrich Müller <ulm@gentoo.org> +eselect-ctags-1.15.ebuild:
+  Version bump.
 
   14 Jul 2013; Ulrich Müller <ulm@gentoo.org> -eselect-ctags-1.13.ebuild,
   eselect-ctags-1.14.ebuild:

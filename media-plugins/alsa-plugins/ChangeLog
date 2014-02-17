@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.182 2014/02/17 19:31:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.183 2014/02/17 19:36:30 ssuominen Exp $
+
+  17 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  alsa-plugins-1.0.27-r1.ebuild:
+  amd64 stable wrt #498186
 
   17 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
   +files/alsa-plugins-1.0.27-ffmpeg.patch, alsa-plugins-1.0.27-r1.ebuild:

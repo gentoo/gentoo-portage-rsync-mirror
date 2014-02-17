@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15404 2014/02/17 17:24:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15405 2014/02/17 19:54:35 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (17 Feb 2014)
+# Masked for testing, bug 177936.
+=app-admin/eselect-ctags-1.15
+=app-admin/eselect-emacs-1.15
+=app-editors/xemacs-21.4.22-r3
+=app-editors/xemacs-21.5.34-r2
+=app-emacs/gnuserv-3.12.8-r2
 
 # Mike Gilbert <floppym@gentoo.org> (17 Feb 2014)
 # Masked for testing.
