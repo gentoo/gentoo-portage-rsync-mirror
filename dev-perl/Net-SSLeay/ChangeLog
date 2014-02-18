@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SSLeay
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.116 2014/02/14 06:55:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/ChangeLog,v 1.117 2014/02/18 15:54:30 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> Net-SSLeay-1.550.ebuild:
+  Stable for HPPA (bug #495430).
 
 *Net-SSLeay-1.558 (14 Feb 2014)
 

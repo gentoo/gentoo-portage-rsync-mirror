@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Package-Stash
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.59 2014/02/01 23:58:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.60 2014/02/18 15:55:42 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> Package-Stash-0.360.0.ebuild:
+  Stable for HPPA (bug #495446).
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Package-Stash-0.340.0.ebuild,
   Package-Stash-0.350.0.ebuild, Package-Stash-0.360.0.ebuild:

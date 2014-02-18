@@ -1,6 +1,16 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.306 2014/01/18 19:48:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.307 2014/02/18 15:49:19 mgorny Exp $
+
+*iptables-1.4.21-r1 (18 Feb 2014)
+
+  18 Feb 2014; Michał Górny <mgorny@gentoo.org>
+  +files/systemd/ip6tables-restore.service,
+  +files/systemd/ip6tables-store.service, +files/systemd/ip6tables.service,
+  +files/systemd/iptables-restore.service,
+  +files/systemd/iptables-store.service, +files/systemd/iptables.service,
+  +iptables-1.4.21-r1.ebuild:
+  Introduce systemd units wrt bug #479490.
 
   18 Jan 2014; Agostino Sarubbo <ago@gentoo.org> iptables-1.4.20.ebuild:
   Stable for alpha, wrt bug #485190

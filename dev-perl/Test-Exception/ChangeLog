@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.76 2014/02/01 23:35:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.77 2014/02/18 15:58:16 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> Test-Exception-0.320.0.ebuild:
+  Stable for HPPA (bug #495488).
 
   01 Feb 2014; Mike Frysinger <vapier@gentoo.org> Test-Exception-0.310.0.ebuild,
   Test-Exception-0.320.0.ebuild:

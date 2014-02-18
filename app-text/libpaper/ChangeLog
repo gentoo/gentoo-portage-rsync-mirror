@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.59 2013/10/13 19:34:20 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.60 2014/02/18 16:00:28 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> libpaper-1.1.24-r2.ebuild:
+  Stable for HPPA (bug #491946).
 
   13 Oct 2013; Michał Górny <mgorny@gentoo.org> libpaper-1.1.24-r2.ebuild:
   Explicitly call einstalldocs in multilib_src_install_all() to accomodate bug
