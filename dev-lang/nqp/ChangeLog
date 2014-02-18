@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.38 2014/02/11 02:39:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.39 2014/02/18 08:54:11 patrick Exp $
+
+*nqp-2014.01-r1 (18 Feb 2014)
+
+  18 Feb 2014; Patrick Lauer <patrick@gentoo.org> +nqp-2014.01-r1.ebuild:
+  Enable moarvm backend. Still experimental, but passes tests and looks neat
 
 *nqp-2014.01 (11 Feb 2014)
 
