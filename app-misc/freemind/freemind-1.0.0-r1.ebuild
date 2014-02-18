@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-1.0.0.ebuild,v 1.1 2014/01/20 19:09:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-1.0.0-r1.ebuild,v 1.1 2014/02/18 22:43:38 tomwij Exp $
 
 EAPI="5"
 
@@ -44,8 +44,6 @@ java_prepare() {
 
 	# disable dmg build on Mac OS X
 	sed -i -e 's:<antcall target="dist_\(macos\|icon\)"/>::p' 'build.xml' || die
-
-	java-ant_remove-taskdefs --name jarbundler # macOS only
 
 	use groovy || rm plugins/build_scripting.xml || die
 	use latex || rm plugins/build_latex.xml || die

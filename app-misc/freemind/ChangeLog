@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/freemind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.61 2014/01/20 19:09:48 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.62 2014/02/18 22:43:38 tomwij Exp $
+
+*freemind-1.0.0-r1 (18 Feb 2014)
+
+  18 Feb 2014; Tom Wijsman <TomWij@gentoo.org> +freemind-1.0.0-r1.ebuild,
+  -freemind-1.0.0.ebuild:
+  Remove java-ant_remove-taskdefs as the taskdef is no longer present, see bug
+  #479838.
 
 *freemind-1.0.0 (20 Jan 2014)
 

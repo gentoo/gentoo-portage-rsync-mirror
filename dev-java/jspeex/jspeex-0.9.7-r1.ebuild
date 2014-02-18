@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jspeex/jspeex-0.9.7.ebuild,v 1.1 2013/06/29 21:40:04 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jspeex/jspeex-0.9.7-r1.ebuild,v 1.1 2014/02/18 22:37:56 tomwij Exp $
 
 EAPI="5"
 
@@ -36,9 +36,8 @@ EANT_BUILD_TARGET="package"
 S="${WORKDIR}/${PN}"
 
 java_prepare() {
-	java-ant_remove-taskdefs --name proguard
-
 	epatch "${FILESDIR}"/${P}-remove-junit-report.patch
+	epatch "${FILESDIR}"/${P}-remove-proguard-taskdef.patch
 
 	find . -name "*.jar" -delete || die "Failed to remove bundled libraries."
 
