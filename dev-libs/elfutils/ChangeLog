@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.180 2014/02/11 05:58:03 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.181 2014/02/18 02:07:46 vapier Exp $
+
+  18 Feb 2014; Mike Frysinger <vapier@gentoo.org> elfutils-0.158.ebuild:
+  Mark m68k/s390/sh stable #500178.
 
   11 Feb 2014; Matt Turner <mattst88@gentoo.org> elfutils-0.158.ebuild:
   alpha stable, bug 500178.

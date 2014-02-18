@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15406 2014/02/17 20:49:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15407 2014/02/18 02:14:59 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -48,6 +48,7 @@ dev-lang/python:3.4
 # mail-filter/dovecot_deleted_to_trash are punted/fixed
 =net-mail/dovecot-2.0*
 =net-mail/dovecot-2.1*
+mail-filter/dovecot_deleted_to_trash
 
 # Ulrich Müller <ulm@gentoo.org> (17 Feb 2014)
 # Masked, until issue with XEmacs blocker is resolved.
