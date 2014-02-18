@@ -9,5 +9,5 @@ LICENSE=Google-TOS openssl BSD system-libCg? ( NVIDIA-r1 )
 RDEPEND=|| ( media-sound/pulseaudio media-libs/alsa-lib ) dev-libs/glib:2 system-libCg? ( media-gfx/nvidia-cg-toolkit ) media-libs/fontconfig media-libs/freetype:2 sys-libs/glibc x11-libs/cairo x11-libs/gdk-pixbuf x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXfixes x11-libs/libXrandr x11-libs/libXrender x11-libs/libXt x11-libs/pango sys-apps/lsb-release virtual/opengl libnotify? ( x11-libs/libnotify )
 RESTRICT=strip mirror
 SLOT=0
-_eclasses_=cvs	638266995fbb0c9c6b1eabbb8582c3f3	eutils	40081e8c7e7f7c4f9db349a1d6d52925	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	fac675dcccf94392371a6abee62d909f	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	04385b0f181c42fa9c18ec0e31729d1f	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=cvs	638266995fbb0c9c6b1eabbb8582c3f3	eutils	40081e8c7e7f7c4f9db349a1d6d52925	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	fac675dcccf94392371a6abee62d909f	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	738214fbf4fe7254493d5fc8a248262a	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=737d7849a8551cbb28e9e1f3a908c516

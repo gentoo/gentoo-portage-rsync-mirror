@@ -7,5 +7,5 @@ LICENSE=as-is
 RDEPEND=>=games-rpg/nwn-1.68
 SLOT=0
 SRC_URI=http://c.vnfiles.ign.com/nwvault.ign.com/fms/files/hakpaks/6057/cepv152_man.rar http://c.vnfiles.ign.com/nwvault.ign.com/fms/files/hakpaks/6974/CEP168.rar
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0e2f69d5415e0363531260d2eabb0826	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	04385b0f181c42fa9c18ec0e31729d1f	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games	0e2f69d5415e0363531260d2eabb0826	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	738214fbf4fe7254493d5fc8a248262a	user	d0a4d0735a6c0183d707ca919bd72f28
 _md5_=f8a2867d08f7d2b5db6ee54c6375e37d

@@ -7,5 +7,5 @@ KEYWORDS=~amd64 ~x86
 LICENSE=ZLIB
 SLOT=0
 SRC_URI=http://newton-dynamics.googlecode.com/files/newton-dynamics-2.36.rar
-_eclasses_=cmake-utils	db5236989678f4de51b2588767b5b69d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	04385b0f181c42fa9c18ec0e31729d1f
+_eclasses_=cmake-utils	db5236989678f4de51b2588767b5b69d	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	738214fbf4fe7254493d5fc8a248262a
 _md5_=3baeee1bb94ae67360aa250a2a561d53

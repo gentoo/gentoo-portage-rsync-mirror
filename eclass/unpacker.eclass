@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.14 2013/12/22 14:44:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/unpacker.eclass,v 1.15 2014/02/18 06:13:50 vapier Exp $
 
 # @ECLASS: unpacker.eclass
 # @MAINTAINER:
@@ -196,7 +196,7 @@ unpack_makeself() {
 				skip=`grep -a ^offset= "${src}" | awk '{print $3}'`
 				(( skip++ ))
 				;;
-			2.1.4|2.1.5|2.1.6)
+			2.1.4|2.1.5|2.1.6|2.2.0)
 				skip=$(grep -a offset=.*head.*wc "${src}" | awk '{print $3}' | head -n 1)
 				skip=$(head -n ${skip} "${src}" | wc -c)
 				exe="dd"
