@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.86 2014/01/21 15:09:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.87 2014/02/18 10:34:45 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> check-0.9.11.ebuild:
+  Stable for HPPA (bug #489366).
 
 *check-0.9.12 (21 Jan 2014)
 

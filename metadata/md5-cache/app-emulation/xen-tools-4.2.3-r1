@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile install postinst prepare setup
+DEPEND=dev-libs/lzo:2 dev-libs/glib:2 dev-libs/yajl dev-libs/libgcrypt dev-python/lxml[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] dev-python/pypam[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] sys-libs/zlib sys-power/iasl sys-firmware/seabios sys-firmware/ipxe dev-ml/findlib hvm? ( media-libs/libsdl ) python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml,threads] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml,threads] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] api? ( dev-libs/libxml2 net-misc/curl ) python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[xml,threads] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml,threads] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] pygrub? ( python_single_target_python2_6? ( >=dev-lang/python-2.6.8-r3:2.6[ncurses] ) python_single_target_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[ncurses] ) dev-lang/python-exec:=[python_targets_python2_6(-)?,python_targets_python2_7(-)?,python_single_target_python2_6(+)?,python_single_target_python2_7(+)?] ) sys-devel/bin86 sys-devel/dev86 dev-lang/perl app-misc/pax-utils doc? ( app-doc/doxygen dev-tex/latex2html[png,gif] media-gfx/transfig media-gfx/graphviz dev-tex/xcolor dev-texlive/texlive-latexextra virtual/latex-base dev-tex/latexmk dev-texlive/texlive-latex dev-texlive/texlive-pictures dev-texlive/texlive-latexrecommended ) hvm? ( x11-proto/xproto !net-libs/libiscsi ) virtual/pkgconfig
+DESCRIPTION=Xend daemon and tools
+EAPI=5
+HOMEPAGE=http://xen.org/
+IUSE=api custom-cflags debug doc flask hvm qemu ocaml pygrub screen static-libs xend python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=sys-apps/iproute2 net-misc/bridge-utils ocaml? ( >=dev-lang/ocaml-4 ) screen? ( app-misc/screen app-admin/logrotate ) virtual/udev
+REQUIRED_USE=hvm? ( qemu ) python_single_target_python2_6? ( python_targets_python2_6 ) python_single_target_python2_7? ( python_targets_python2_7 ) ^^ ( python_single_target_python2_6 python_single_target_python2_7 )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://bits.xensource.com/oss-xen/release/4.2.3/xen-4.2.3.tar.gz http://dev.gentoo.org/~dlan/distfiles/xen-4.2.3-upstream-patches-0.tar.xz
+_eclasses_=bash-completion-r1	db412e427e3317ffd3e15f17df269c5e	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	udev	a9a8d051efb42bfe884c1db82ce161de
+_md5_=b73eab47fbe8716677bb4fcc1b8f25d7
