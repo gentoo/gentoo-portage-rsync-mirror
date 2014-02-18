@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/linux-misc-apps-3.6-r1.ebuild,v 1.1 2012/11/19 10:23:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/linux-misc-apps-3.6-r2.ebuild,v 1.2 2014/02/18 07:59:11 ssuominen Exp $
 
-EAPI=4
+EAPI=5
 
 inherit versionator eutils toolchain-funcs linux-info autotools flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://kernel.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="static-libs tcpd"
 
 MY_PV="${PV/_/-}"
@@ -37,11 +37,9 @@ fi
 LINUX_SOURCES=linux-${LINUX_VER}.tar.bz2
 SRC_URI="${SRC_URI} mirror://kernel/linux/kernel/v${LINUX_V}/${LINUX_SOURCES}"
 
-# pciutils for cpupower
 # pmtools also provides turbostat
 # sysfsutils and glib for usbip - remove sysfsutils in 3.7 or 3.8
-RDEPEND="sys-apps/pciutils
-		sys-apps/hwids
+RDEPEND="sys-apps/hwids
 		>=sys-fs/sysfsutils-2
 		>=dev-libs/glib-2.6
 		tcpd? ( sys-apps/tcp-wrappers )
@@ -76,7 +74,6 @@ TARGET_MAKE_SIMPLE=(
 	tools/power/x86/turbostat:turbostat
 	tools/power/x86/x86_energy_perf_policy:x86_energy_perf_policy
 	Documentation/misc-devices/mei:mei-amt-version
-	tools/power/cpupower:cpupower
 )
 # tools/perf - covered by dev-utils/perf
 # tools/usb - testcases only
@@ -104,30 +101,11 @@ src_prepare() {
 	eautoreconf -i -f -v &&
 	popd >/dev/null || die "usbip"
 
-	libs="-lcpupower -lrt -lpci"
-	sed -i \
-		-e "/$libs/{ s,${libs},,g; s,\$, ${libs},g;}" \
-		"${S}"/tools/power/cpupower/Makefile
-
 	sed -i \
 		-e '/^nosy-dump.*LDFLAGS/d' \
 		-e '/^nosy-dump.*CFLAGS/d' \
 		-e '/^nosy-dump.*CPPFLAGS/s,CPPFLAGS =,CPPFLAGS +=,g' \
 		"${S}"/tools/firewire/Makefile
-}
-
-cpupower_make() {
-	emake ${makeargs} \
-		CC="$(tc-getCC)" AR="$(tc-getAR)" \
-		docdir="/usr/share/doc/${PF}/cpupower" \
-		mandir="/usr/share/man" \
-		libdir="/usr/$(get_libdir)" \
-		OPTIMIZATION="${CFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		CPUFREQ_BENCH=/bin/false \
-		DEBUG=/bin/false \
-		STRIP=/bin/true \
-		"$@" || die
 }
 
 kernel_asm_arch() {
@@ -153,29 +131,24 @@ src_configure() {
 src_compile() {
 	local karch=$(kernel_asm_arch "${ARCH}")
 	# This is the minimal amount needed to start building host binaries.
-	#emake allmodconfig ARCH=${karch} || die
-	#emake prepare modules_prepare ARCH=${karch} || die
+	#emake allmodconfig ARCH=${karch}
+	#emake prepare modules_prepare ARCH=${karch}
 	#touch Module.symvers
 
 	# Now we can start building
 	for s in ${TARGETS_SIMPLE[@]} ; do
 		dir=$(dirname $s) src=$(basename $s) bin=${src%.c}
 		einfo "Building $s => $bin"
-		emake -f /dev/null M=${dir} ARCH=${karch} ${s%.c} || die
+		emake -f /dev/null M=${dir} ARCH=${karch} ${s%.c}
 	done
 
 	for t in ${TARGET_MAKE_SIMPLE[@]} ; do
 		dir=${t/:*} target=${t/*:}
 		einfo "Building $dir => $target"
-		emake -C $dir ARCH=${karch} $target || die
+		emake -C $dir ARCH=${karch} $target
 	done
 
 	emake -C drivers/staging/usbip/userspace
-
-	# cpupower is special
-	einfo "Buildling cpupower"
-	cd "${S}"/tools/power/cpupower
-	cpupower_make ARCH=${karch} all || die
 }
 
 src_install() {
@@ -183,13 +156,13 @@ src_install() {
 	for s in ${TARGETS_SIMPLE[@]} ; do
 		dir=$(dirname $s) src=$(basename $s) bin=${src%.c}
 		einfo "Installing $s => $bin"
-		dosbin ${dir}/${bin} || die "Failed to install ${bin}"
+		dosbin ${dir}/${bin}
 	done
 
 	for t in ${TARGET_MAKE_SIMPLE[@]} ; do
 		dir=${t/:*} target=${t/*:}
 		einfo "Installing $dir => $target"
-		dosbin ${dir}/${target} || die
+		dosbin ${dir}/${target}
 	done
 
 	pushd drivers/staging/usbip/userspace >/dev/null \
@@ -201,16 +174,12 @@ src_install() {
 	dodoc ../usbip_protocol.txt
 	popd >/dev/null
 
-	local karch=$(kernel_asm_arch "${ARCH}")
-	pushd "${S}"/tools/power/cpupower >/dev/null \
-		|| die "Missing tools/power/cpupower"
-	cpupower_make ARCH=${karch} DESTDIR="${D}" install || die
-	popd >/dev/null
-
-	# Avoid conflict
-	rm -f "${D}"/usr/include/cpufreq.h
-
 	newconfd "${FILESDIR}"/hpfall.confd hpfall
 	newinitd "${FILESDIR}"/hpfall.initd hpfall
 	prune_libtool_files
+}
+
+pkg_postinst() {
+	echo
+	elog "The cpupower utility is maintained separately at sys-power/cpupower"
 }
