@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23.ebuild,v 1.1 2012/06/13 08:31:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-1.23.ebuild,v 1.2 2014/02/18 18:35:16 mgorny Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ CDEPEND="dev-libs/glib:2
 	>=x11-libs/gtk+-2.12:2
 	x11-libs/startup-notification
 	dev-python/pygobject:2
+	<net-wireless/bluez-5
 	>=net-wireless/bluez-4.21"
 DEPEND="${CDEPEND}
 	nls? ( dev-util/intltool sys-devel/gettext )

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.176 2014/01/18 02:58:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.177 2014/02/18 18:58:12 ottxor Exp $
+
+  18 Feb 2014; Christoph Junghans <ottxor@gentoo.org> gawk-3.1.8.ebuild:
+  added blocker for >=virtual/awk-1
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> gawk-4.0.2.ebuild,
   gawk-4.1.0.ebuild:

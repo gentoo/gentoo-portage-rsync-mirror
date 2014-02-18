@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/blueman
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.16 2012/11/18 11:07:20 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.17 2014/02/18 18:35:17 mgorny Exp $
+
+  18 Feb 2014; Michał Górny <mgorny@gentoo.org> blueman-1.21-r1.ebuild,
+  blueman-1.23-r1.ebuild, blueman-1.23-r2.ebuild, blueman-1.23.ebuild:
+  Require <bluez-5 since blueman does not support the new APIs.
 
   18 Nov 2012; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop mobile herd as talked in gentoo-dev ML
