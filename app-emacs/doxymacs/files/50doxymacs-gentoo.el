@@ -1,6 +1,3 @@
-
-;;; doxymacs site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'doxymacs-mode "doxymacs"
   "Minor mode for using/creating Doxygen documentation." t)
