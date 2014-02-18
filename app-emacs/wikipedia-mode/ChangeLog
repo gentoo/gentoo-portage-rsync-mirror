@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/wikipedia-mode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wikipedia-mode/ChangeLog,v 1.8 2009/03/21 17:01:52 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wikipedia-mode/ChangeLog,v 1.9 2014/02/18 07:05:02 ulm Exp $
+
+  18 Feb 2014; Ulrich Müller <ulm@gentoo.org> wikipedia-mode-0.5-r1.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   21 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   wikipedia-mode-0.5-r1.ebuild:

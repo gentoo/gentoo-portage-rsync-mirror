@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.3.0.ebuild,v 1.3 2014/02/15 06:01:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-24.3.0.ebuild,v 1.4 2014/02/18 07:11:54 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -56,18 +56,18 @@ SRC_URI="${SRC_URI}
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
 RDEPEND="
-	>=dev-libs/nss-3.15.3
+	>=dev-libs/nss-3.15.4
 	>=dev-libs/nspr-4.10.2
 	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
-	>=media-libs/libpng-1.5.13[apng]
+	>=media-libs/libpng-1.6.6[apng]
 	virtual/libffi
 	gstreamer? ( media-plugins/gst-plugins-meta:0.10[ffmpeg] )
 	pulseaudio? ( media-sound/pulseaudio )
 	system-cairo? ( >=x11-libs/cairo-1.12[X] )
 	system-icu? ( >=dev-libs/icu-0.51.1 )
 	system-jpeg? ( >=media-libs/libjpeg-turbo-1.2.1 )
-	system-sqlite? ( >=dev-db/sqlite-3.7.17:3[secure-delete,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.8.0.2:3[secure-delete,debug=] )
 	>=media-libs/libvpx-1.0.0
 	kernel_linux? ( media-libs/alsa-lib )
 	selinux? ( sec-policy/selinux-thunderbird )

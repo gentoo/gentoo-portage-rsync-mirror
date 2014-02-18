@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/grep
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.132 2014/01/22 06:50:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.133 2014/02/18 07:05:25 vapier Exp $
+
+*grep-2.17 (18 Feb 2014)
+
+  18 Feb 2014; Mike Frysinger <vapier@gentoo.org> +grep-2.17.ebuild:
+  Version bump.
 
   22 Jan 2014; Tim Harder <radhermit@gentoo.org> grep-2.16.ebuild:
   Add pkgconfig dep (bug #498816).
