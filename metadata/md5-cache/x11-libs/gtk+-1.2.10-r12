@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1+
 RDEPEND=>=dev-libs/glib-1.2:1 x11-libs/libXi x11-libs/libXt
 SLOT=1
 SRC_URI=mirror://gnome/sources/gtk+/1.2/gtk+-1.2.10.tar.gz http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gentoo.diff.bz2
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=84a576990fdc6ae3938d6b443ca70990

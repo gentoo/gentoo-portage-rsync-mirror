@@ -8,5 +8,5 @@ LICENSE=GPL-2 CC-BY-SA-3.0
 RDEPEND=dev-db/sqlite:3 dev-libs/libxml2 >=dev-libs/openssl-1:0= >=gnome-base/gconf-2 media-libs/flickcurl media-libs/lcms:0 media-libs/lensfun media-libs/libgphoto2:= media-libs/libpng:0= media-libs/tiff:0= media-gfx/exiv2 net-misc/curl sci-libs/fftw:3.0 sys-apps/dbus sys-libs/zlib:= virtual/jpeg:0= x11-libs/gtk+:2 x11-libs/libX11
 SLOT=0
 SRC_URI=http://rawstudio.org/files/release/rawstudio-2.0.tar.gz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=bc10ea1f6c401be65ac4305ceb18e494

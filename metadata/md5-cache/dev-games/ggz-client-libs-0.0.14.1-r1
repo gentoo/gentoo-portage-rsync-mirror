@@ -9,5 +9,5 @@ LICENSE=LGPL-2.1
 RDEPEND=~dev-games/libggz-0.0.14.1 dev-libs/expat virtual/libintl
 SLOT=0
 SRC_URI=mirror://ggz/0.0.14.1/ggz-client-libs-0.0.14.1.tar.gz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games-ggz	7957d0a0b68d2703b8bb71ec7ddd87a8	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	games-ggz	7957d0a0b68d2703b8bb71ec7ddd87a8	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=94b3ccbea0b8fc12d112458bd5535b9b

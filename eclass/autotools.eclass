@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.159 2013/12/31 16:53:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.160 2014/02/18 03:57:36 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -342,7 +342,7 @@ eautoconf() {
 # @DESCRIPTION:
 # Runs automake.
 eautomake() {
-	local extra_opts
+	local extra_opts=()
 	local makefile_name
 
 	# Run automake if:
@@ -352,6 +352,10 @@ eautomake() {
 		[[ -f ${makefile_name} ]] && break
 	done
 
+	_automake_version() {
+		automake --version 2>/dev/null | sed -n -e '1{s:.*(GNU automake) ::p;q}'
+	}
+
 	if [[ -z ${makefile_name} ]] ; then
 		_at_uses_automake || return 0
 
@@ -359,8 +363,7 @@ eautomake() {
 		local used_automake
 		local installed_automake
 
-		installed_automake=$(WANT_AUTOMAKE= automake --version | head -n 1 | \
-			sed -e 's:.*(GNU automake) ::')
+		installed_automake=$(WANT_AUTOMAKE= _automake_version)
 		used_automake=$(head -n 1 < ${makefile_name%.am}.in | \
 			sed -e 's:.*by automake \(.*\) from .*:\1:')
 
@@ -373,10 +376,16 @@ eautomake() {
 	fi
 
 	[[ -f INSTALL && -f AUTHORS && -f ChangeLog && -f NEWS && -f README ]] \
-		|| extra_opts="${extra_opts} --foreign"
+		|| extra_opts+=( --foreign )
 
-	# --force-missing seems not to be recognized by some flavours of automake
-	autotools_run_tool automake --add-missing --copy ${extra_opts} "$@"
+	# Older versions of automake do not support --force-missing.  But we want
+	# to use this whenever possible to update random bundled files #133489.
+	case $(_automake_version) in
+	1.4|1.4[.-]*) ;;
+	*) extra_opts+=( --force-missing ) ;;
+	esac
+
+	autotools_run_tool automake --add-missing --copy "${extra_opts[@]}" "$@"
 }
 
 # @FUNCTION: eautopoint

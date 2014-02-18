@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=x11-libs/gtk+:2 x11-libs/pango >=xfce-base/libxfce4util-4.8 >=xfce-base/libxfcegui4-4.8 >=xfce-base/xfce4-panel-4.8 mpd? ( >=media-libs/libmpd-0.12 ) audacious? ( >=media-sound/audacious-1.4 )
 SLOT=0
 SRC_URI=http://www.bilimfeneri.gen.tr/ilgar/xfce4-playercontrol-plugin-0.3.0.tar.bz2
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xfconf	ba58c6f43e7fdfc116752aa58b488d83
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	xfconf	ba58c6f43e7fdfc116752aa58b488d83
 _md5_=97f9173df46c48c12758473aaead2ba9

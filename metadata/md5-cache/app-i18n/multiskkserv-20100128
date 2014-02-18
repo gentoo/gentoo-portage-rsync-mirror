@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=|| ( >=app-i18n/skk-jisyo-200705[cdb] app-i18n/skk-jisyo-cdb )
 SLOT=0
 SRC_URI=http://www3.big.or.jp/~sian/linux/products/multiskkserv-20100128.tar.xz
-_eclasses_=autotools	d76ee21296238133bd2df8dea7f33a05	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=8f6dc12bb3cef6e7cf114b847ec716a0
