@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/testscenarios-0.4-r1.ebuild,v 1.1 2014/01/14 06:43:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testscenarios/testscenarios-0.4-r2.ebuild,v 1.1 2014/02/18 02:56:44 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3} )
@@ -19,11 +19,10 @@ IUSE="test"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		test? ( dev-python/nose[${PYTHON_USEDEP}]
 				dev-python/testtools[${PYTHON_USEDEP}]
-				dev-python/testresources[${PYTHON_USEDEP}]
 				virtual/python-unittest2[${PYTHON_USEDEP}] )"
+#				dev-python/testresources[${PYTHON_USEDEP}]
 RDEPEND=""
 
 python_test() {
-	# https://bugs.launchpad.net/testscenarios/+bug/1260573
-	nosetests || die "Tests failed under ${EPYTHON}"
+	PYTHONPATH=./lib ${EPYTHON} -m testtools.run testscenarios.test_suite
 }

@@ -1,0 +1,9 @@
+# ChangeLog for dev-vcs/git-crypt
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-crypt/ChangeLog,v 1.1 2014/02/18 02:58:42 patrick Exp $
+
+*git-crypt-0.3 (18 Feb 2014)
+
+  18 Feb 2014; Patrick Lauer <patrick@gentoo.org> +git-crypt-0.3.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by me
