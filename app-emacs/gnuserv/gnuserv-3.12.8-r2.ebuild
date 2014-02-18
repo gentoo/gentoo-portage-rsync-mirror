@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8-r2.ebuild,v 1.2 2014/02/17 22:19:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8-r2.ebuild,v 1.3 2014/02/17 23:27:29 ulm Exp $
 
 EAPI=5
 
@@ -20,7 +20,9 @@ DEPEND=">=app-admin/eselect-emacs-1.15
 RDEPEND="${DEPEND}
 	!!app-emacs/gnuserv-programs
 	!!<app-editors/xemacs-21.4.22-r3
-	|| ( !!>=app-editors/xemacs-21.5 !!<app-editors/xemacs-21.5.34-r2 )"
+	!!~app-editors/xemacs-21.5.29 !!~app-editors/xemacs-21.5.30
+	!!~app-editors/xemacs-21.5.31 !!~app-editors/xemacs-21.5.33
+	!!=app-editors/xemacs-21.5.34 !!=app-editors/xemacs-21.5.34-r1"
 
 SITEFILE="50${PN}-gentoo-${PVR}.el"
 
