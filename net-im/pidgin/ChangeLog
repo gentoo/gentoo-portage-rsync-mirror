@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.332 2014/02/18 06:51:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.333 2014/02/18 08:11:43 polynomial-c Exp $
+
+  18 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> pidgin-2.10.9.ebuild,
+  pidgin-2.10.9-r1.ebuild, +files/pidgin-2.10.9-fix-gtkmedia.patch,
+  +files/pidgin-2.10.9-python3_fix1.patch,
+  +files/pidgin-2.10.9-python3_fix2.patch:
+  Fixed compilation with python3 (bug #499760) and some undefined reference to
+  gtkmedia (bug #500762).
 
   18 Feb 2014; Pacho Ramos <pacho@gentoo.org> pidgin-2.10.9-r1.ebuild:
   Use subslots for net-libs/farsight2 dep (#479326)

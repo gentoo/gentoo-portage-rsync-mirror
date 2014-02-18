@@ -1,0 +1,28 @@
+
+# HG changeset patch
+# User Ed Catmur <ed@catmur.co.uk>
+# Date 1392340585 18000
+# Node ID c8bb4edd63253b5b23006e8674c015c854075981
+# Parent  eeb82d3d33b1720024ee7aef9bdfba87bb1b163d
+Fix build of Finch against Python3.
+
+Fixes #15969.
+
+diff --git a/finch/libgnt/gntwm.c b/finch/libgnt/gntwm.c
+--- a/finch/libgnt/gntwm.c
++++ b/finch/libgnt/gntwm.c
+@@ -1281,7 +1281,12 @@
+ {
+ 	char *dir = g_path_get_dirname(path);
+ 	FILE *file = fopen(path, "r");
+-	PyObject *pp = PySys_GetObject("path"), *dirobj = PyString_FromString(dir);
++	PyObject *pp = PySys_GetObject("path");
++#if PY_MAJOR_VERSION >= 3
++	PyObject *dirobj = PyUnicode_FromString(dir);
++#else
++	PyObject *dirobj = PyString_FromString(dir);
++#endif
+ 
+ 	PyList_Insert(pp, 0, dirobj);
+ 	Py_DECREF(dirobj);
+
