@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.204 2014/01/31 15:37:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.205 2014/02/18 11:31:12 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Unmask USE=oss as nothing else works properly.
 
   31 Jan 2014; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask x11-libs/libgksu dependency for xfce-extra/xfce4-taskmanager (bug
