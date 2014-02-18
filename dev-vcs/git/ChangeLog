@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.249 2014/02/17 12:37:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.250 2014/02/18 21:21:45 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> git-1.8.5.5.ebuild:
+  Stable for HPPA (bug #501662).
 
 *git-1.9.0 (17 Feb 2014)
 

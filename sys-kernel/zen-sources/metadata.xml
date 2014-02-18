@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>proxy-maintainers</herd>
 <maintainer>
-	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
+	<email>vicegentoo@gmail.com</email>
+	<name>Daniel Weiss</name>
+	<description>Maintainer. Assign bugs to him</description>
 </maintainer>
 <upstream>
 	<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>

@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/zen-sources
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.65 2013/11/15 08:49:40 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.66 2014/02/18 21:17:50 hwoarang Exp $
+
+*zen-sources-3.13.9999 (18 Feb 2014)
+
+  18 Feb 2014; Markos Chandras <hwoarang@gentoo.org>
+  +zen-sources-3.13.9999.ebuild, metadata.xml:
+  Version bump. Thanks to Daniel Weiss who will proxy-maintain it from now on
 
 *zen-sources-3.12.9999 (15 Nov 2013)
 
