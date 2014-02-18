@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install postinst postrm setup unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DEPEND=>=virtual/emacs-21
 DESCRIPTION=Install color themes (includes many themes and allows you to share your own with the world)
+EAPI=5
 HOMEPAGE=http://www.nongnu.org/color-theme/
 KEYWORDS=amd64 ppc sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos
-LICENSE=GPL-2
+LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-21
 SLOT=0
 SRC_URI=http://download.savannah.gnu.org/releases-noredirect/color-theme/color-theme-6.6.0.tar.gz
-_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=b34ff2ceaa6d3df935b7899686332ede
+_eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	readme.gentoo	2466b2f6a77a9600954c6b99ebca6e02	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=f4a9ca306b625d9f8d094dd93e0aa644

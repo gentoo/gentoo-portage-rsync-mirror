@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15409 2014/02/18 08:15:09 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15410 2014/02/18 20:17:13 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,14 +36,6 @@
 # Masked for removal in 30 days, bug 501660.
 app-emacs/view-process
 
-# Ulrich Müller <ulm@gentoo.org> (17 Feb 2014)
-# Masked for testing, bug 177936.
-=app-admin/eselect-ctags-1.15
-=app-admin/eselect-emacs-1.15
-=app-editors/xemacs-21.4.22-r3
-=app-editors/xemacs-21.5.34-r2
-=app-emacs/gnuserv-3.12.8-r2
-
 # Mike Gilbert <floppym@gentoo.org> (17 Feb 2014)
 # Masked for testing.
 dev-lang/python:3.4
@@ -55,11 +47,6 @@ dev-lang/python:3.4
 =net-mail/dovecot-2.0*
 =net-mail/dovecot-2.1*
 mail-filter/dovecot_deleted_to_trash
-
-# Ulrich Müller <ulm@gentoo.org> (17 Feb 2014)
-# Masked, until issue with XEmacs blocker is resolved.
-# Bug 177936.
-=app-emacs/gnuserv-3.12.8-r1
 
 # Ulrich Müller <ulm@gentoo.org> (16 Feb 2014)
 # Last upstream release in 2005.

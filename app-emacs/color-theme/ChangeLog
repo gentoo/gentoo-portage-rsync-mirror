@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/color-theme
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.41 2009/11/24 20:54:40 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/color-theme/ChangeLog,v 1.42 2014/02/18 20:12:15 ulm Exp $
+
+  18 Feb 2014; Ulrich Müller <ulm@gentoo.org> color-theme-6.6.0-r1.ebuild:
+  Update ebuild to EAPI 5. Use readme.gentoo.eclass. Specify LICENSE more
+  precisely.
 
   24 Nov 2009; Christian Faulhammer <fauli@gentoo.org>
   color-theme-6.6.0-r1.ebuild:
