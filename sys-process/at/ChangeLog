@@ -1,6 +1,8 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.55 2014/01/31 12:00:41 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.56 2014/02/18 12:07:07 polynomial-c Exp $
+
+*at-3.1.14 (31 Jan 2014)
 
   31 Jan 2014; Lars Wendler <polynomial-c@gentoo.org> -at-3.1.13-r1.ebuild,
   +at-3.1.14.ebuild, files/at-3.1.13-Makefile.patch,
@@ -8,8 +10,6 @@
   files/atd.service:
   Version bump. Removed old. Fixed pidfile location in init script and systemd
   service file.
-
-*at-3.1.14 (31 Jan 2014)
 
   14 Sep 2013; Agostino Sarubbo <ago@gentoo.org> at-3.1.13-r2.ebuild:
   Stable for alpha, wrt bug #480116

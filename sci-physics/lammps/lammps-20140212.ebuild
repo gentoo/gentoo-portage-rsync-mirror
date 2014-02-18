@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140212.ebuild,v 1.2 2014/02/15 02:01:57 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/lammps-20140212.ebuild,v 1.3 2014/02/18 12:12:39 nicolasbock Exp $
 
 EAPI=5
 
@@ -80,8 +80,12 @@ lmp_emake() {
 src_prepare() {
 	# Fix inconsistent use of SHFLAGS.
 	sed -i -e 's:$(CCFLAGS):$(CCFLAGS) -fPIC:' src/STUBS/Makefile || die
-	use !lammps-package-meam || sed -i -e 's:$(F90FLAGS):$(F90FLAGS) -fPIC:' lib/meam/Makefile.gfortran || die
-	use !lammps-package-reax || sed -i -e 's:$(F90FLAGS):$(F90FLAGS) -fPIC:' lib/reax/Makefile.gfortran || die
+	if use lammps-package-meam; then
+		sed -i -e 's:$(F90FLAGS):$(F90FLAGS) -fPIC:' lib/meam/Makefile.gfortran || die
+	fi
+	if use lammps-package-reax; then
+		sed -i -e 's:$(F90FLAGS):$(F90FLAGS) -fPIC:' lib/reax/Makefile.gfortran || die
+	fi
 }
 
 src_compile() {

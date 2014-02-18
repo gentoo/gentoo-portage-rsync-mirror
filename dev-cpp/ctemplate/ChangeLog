@@ -1,6 +1,16 @@
 # ChangeLog for dev-cpp/ctemplate
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.27 2012/08/04 14:12:19 blueness Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.29 2014/02/18 12:14:42 pinkbyte Exp $
+
+*ctemplate-2.2_p129 (18 Feb 2014)
+
+  18 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> +ctemplate-2.2_p129.ebuild:
+  Version bump, wrt bug #500140. EAPI 5, migrate to autotools-utils and
+  python-any-r1 eclasses
+
+  18 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -ctemplate-1.0.ebuild,
+  -files/ctemplate-1.0-gcc-4.7.patch, -ctemplate-2.0.ebuild:
+  Drop old versions
 
   04 Aug 2012; Anthony G. Basile <blueness@gentoo.org> ctemplate-2.2.ebuild:
   Stable arm, bug #418665

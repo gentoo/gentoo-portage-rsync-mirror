@@ -1,41 +1,37 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-2.0.ebuild,v 1.2 2012/03/07 19:07:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ctemplate-2.2_p129.ebuild,v 1.1 2014/02/18 12:14:42 pinkbyte Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit elisp-common python
+AM_OPTS="--force-missing"
+AUTOTOOLS_AUTORECONF=1
+AUTOTOOLS_IN_SOURCE_BUILD=1
+PYTHON_COMPAT=( python2_7 )
+inherit autotools-utils elisp-common python-any-r1
 
 DESCRIPTION="A simple but powerful template language for C++"
 HOMEPAGE="http://code.google.com/p/ctemplate/"
-SRC_URI="http://ctemplate.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~pinkbyte/distfiles/snapshots/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc emacs vim-syntax static-libs test"
 
-DEPEND="test? ( =dev-lang/python-2* )"
+DEPEND="test? ( ${PYTHON_DEPS} )"
 RDEPEND="vim-syntax? ( >=app-editors/vim-core-7 )
 	emacs? ( virtual/emacs )"
 
+DOCS=( AUTHORS ChangeLog NEWS README )
+
 SITEFILE="70ctemplate-gentoo.el"
 
-pkg_setup() {
-	if use test ; then
-		python_set_active_version 2
-		python_pkg_setup
-	fi
-}
-
-src_configure() {
-	econf \
-		--enable-shared \
-		$(use_enable static-libs static)
-}
+# Some tests are broken in 2.2_p129
+RESTRICT="test"
 
 src_compile() {
-	default
+	autotools-utils_src_compile
 
 	if use emacs ; then
 		elisp-compile contrib/tpl-mode.el || die "elisp-compile failed"
@@ -43,12 +39,11 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	autotools-utils_src_install
 
 	# Installs just every piece
 	rm -rf "${ED}/usr/share/doc"
 
-	dodoc AUTHORS ChangeLog NEWS README
 	use doc && dohtml doc/*
 
 	if use vim-syntax ; then
@@ -63,8 +58,6 @@ src_install() {
 		elisp-install ${PN} tpl-mode.el tpl-mode.elc || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
-
-	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {

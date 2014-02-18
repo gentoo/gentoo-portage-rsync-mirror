@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile configure install postinst postrm prepare setup test
+DEPEND=test? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.14:1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DESCRIPTION=A simple but powerful template language for C++
+EAPI=5
+HOMEPAGE=http://code.google.com/p/ctemplate/
+IUSE=doc emacs vim-syntax static-libs test
+KEYWORDS=~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux
+LICENSE=BSD
+RDEPEND=vim-syntax? ( >=app-editors/vim-core-7 ) emacs? ( virtual/emacs )
+RESTRICT=test
+SLOT=0
+SRC_URI=http://dev.gentoo.org/~pinkbyte/distfiles/snapshots/ctemplate-2.2_p129.tar.bz2
+_eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	autotools-utils	559ed17194292ec42d68145dcca2fa32	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	python-any-r1	08d3455b23110d650f173ab0a090818b	python-utils-r1	ceb3e4c3ba203e28bb02eeb182d88acf	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=03fa319c3dd87418f71c50d1210704fc
