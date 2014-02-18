@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.54 2014/02/18 16:04:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.55 2014/02/18 20:56:22 pacho Exp $
+
+  18 Feb 2014; Pacho Ramos <pacho@gentoo.org> p11-kit-0.20.2.ebuild:
+  amd64 stable, bug #500718
 
   18 Feb 2014; Jeroen Roovers <jer@gentoo.org> p11-kit-0.20.2.ebuild:
   Stable for HPPA (bug #500718).
