@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.8-r1.ebuild,v 1.2 2014/01/15 06:59:48 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/apel-10.8-r1.ebuild,v 1.3 2014/02/18 16:07:45 jer Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.jpl.org/pub/elisp/apel/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE=""
 
 ELISP_PATCHES=("${FILESDIR}/${PN}-10.8-020_Prevent-fontset-error.patch"

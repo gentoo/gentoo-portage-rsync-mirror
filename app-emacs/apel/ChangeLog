@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/apel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.50 2014/01/15 06:59:48 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/apel/ChangeLog,v 1.51 2014/02/18 16:07:45 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> apel-10.8-r1.ebuild:
+  Stable for HPPA (bug #501480).
 
   15 Jan 2014; Mark Wright <gienah@gentoo.org> apel-10.8-r1.ebuild:
   Apply fixes for bug 495042 suggested by TomWij (thanks): one src_prepare,

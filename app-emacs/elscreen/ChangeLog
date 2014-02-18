@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/elscreen
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.25 2013/10/03 11:36:26 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.26 2014/02/18 16:08:13 jer Exp $
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org> elscreen-1.4.6-r1.ebuild:
+  Stable for HPPA (bug #501480).
 
 *elscreen-1.4.6-r1 (03 Oct 2013)
 

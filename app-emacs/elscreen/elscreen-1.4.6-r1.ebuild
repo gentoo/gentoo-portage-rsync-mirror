@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/elscreen-1.4.6-r1.ebuild,v 1.1 2013/10/03 11:36:26 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/elscreen-1.4.6-r1.ebuild,v 1.2 2014/02/18 16:08:13 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.morishima.net/pub/morishima.net/naoto/ElScreen/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=app-emacs/apel-10.8-r1"
