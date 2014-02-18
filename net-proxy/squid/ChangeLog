@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.447 2014/01/18 22:16:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.448 2014/02/18 15:01:58 eras Exp $
+
+*squid-3.4.3 (18 Feb 2014)
+
+  18 Feb 2014; Eray Aslan <eras@gentoo.org> +squid-3.4.3.ebuild, metadata.xml:
+  Version bump. Add htcp, wccp, wccp2 USE flags - bug #382425
 
 *squid-3.4.2 (18 Jan 2014)
 
