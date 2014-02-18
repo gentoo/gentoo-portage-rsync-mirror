@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.528 2014/02/17 20:14:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.529 2014/02/18 12:01:11 jer Exp $
+
+*nvidia-drivers-334.16-r7 (18 Feb 2014)
+
+  18 Feb 2014; Jeroen Roovers <jer@gentoo.org>
+  -nvidia-drivers-334.16-r6.ebuild, +nvidia-drivers-334.16-r7.ebuild:
+  Run linux-mod_pkg_setup after MODULE_NAMES but before BUILD_PARAMS is set
+  (bug #501676 by Olivier Huber).
 
   17 Feb 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-334.16-r6.ebuild:
   Whitespace.

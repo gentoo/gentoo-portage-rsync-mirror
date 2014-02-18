@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.7.6-r1.ebuild,v 1.1 2014/02/17 17:37:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.7.6-r2.ebuild,v 1.1 2014/02/18 11:55:40 jlec Exp $
 
 EAPI=5
 
@@ -33,8 +33,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/${P}-openstreetmaps.patch )
-
 src_configure() {
 	local mycmakeargs=(
 		$(cmake-utils_use dbus DBUS)
@@ -53,4 +51,10 @@ src_install() {
 	sed \
 		-e 's:\(Geography;\):\1Education;:g' \
 		-i ./qlandkartegt.desktop || die
+}
+
+pkg_postinst() {
+	elog "OSM and Opencyclemap internal definitions were dropped upstream"
+	elog "Add it through File -> Load Online Map"
+	elog "or add a tsm definition (http://wiki.openstreetmap.org/wiki/MapQuest#Tile_URLs)"
 }
