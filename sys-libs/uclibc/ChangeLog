@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.87 2014/02/02 05:29:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.88 2014/02/18 01:06:45 vapier Exp $
+
+*uclibc-0.9.33.2-r10 (18 Feb 2014)
+
+  18 Feb 2014; Mike Frysinger <vapier@gentoo.org> +uclibc-0.9.33.2-r10.ebuild:
+  Add more pread/pwrite fixes from upstream #500382 by Steev Klimaszewski.
 
   02 Feb 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag from metadata.xml
