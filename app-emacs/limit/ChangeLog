@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/limit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.35 2009/07/16 17:31:38 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.36 2014/02/18 19:53:10 ulm Exp $
+
+  18 Feb 2014; Ulrich Müller <ulm@gentoo.org>
+  limit-1.14.10_pre200811252332.ebuild:
+  Update ebuild to EAPI 5. Update HOMEPAGE. Specify LICENSE more precisely.
 
   16 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   -limit-1.14.10_pre20070618.ebuild:
