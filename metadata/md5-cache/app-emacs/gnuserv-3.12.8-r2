@@ -10,4 +10,4 @@ RDEPEND=>=app-admin/eselect-emacs-1.15 X? ( x11-libs/libXau ) !!app-emacs/gnuser
 SLOT=0
 SRC_URI=http://meltin.net/hacks/emacs/src/gnuserv-3.12.8.tar.gz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=8f53494586b32d9e4d426c680a285a99
+_md5_=0a16c8551e465373b6cc86eec2dc8dd1

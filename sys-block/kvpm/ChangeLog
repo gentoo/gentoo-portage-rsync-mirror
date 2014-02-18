@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/kvpm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/kvpm/ChangeLog,v 1.1 2014/02/14 17:26:58 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/kvpm/ChangeLog,v 1.2 2014/02/18 00:55:24 reavertm Exp $
+
+  18 Feb 2014; Maciej Mrozowski <reavertm@gentoo.org> kvpm-0.9.8.ebuild:
+  Tighten dependencies a little. Add ~x86 keywords as in original overlay
+  ebuild.
 
 *kvpm-0.9.8 (14 Feb 2014)
 

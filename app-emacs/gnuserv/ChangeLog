@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnuserv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.32 2014/02/17 22:19:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.33 2014/02/18 00:33:10 ulm Exp $
+
+  18 Feb 2014; Ulrich Müller <ulm@gentoo.org> gnuserv-3.12.8-r2.ebuild:
+  Add missing elisp-site-regen call to postinst and postrm phases.
 
   17 Feb 2014; Ulrich Müller <ulm@gentoo.org> gnuserv-3.12.8-r2.ebuild:
   Add strong blockers against app-editors/xemacs versions that are installing
