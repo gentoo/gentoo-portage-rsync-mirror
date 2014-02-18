@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mediacrush-cli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mediacrush-cli/ChangeLog,v 1.1 2014/02/17 17:29:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mediacrush-cli/ChangeLog,v 1.2 2014/02/18 14:24:03 maksbotan Exp $
+
+  18 Feb 2014; Maxim Koltsov <maksbotan@gentoo.org> mediacrush-cli-9999.ebuild:
+  Drop vim-core dependency in 9999
 
 *mediacrush-cli-9999 (17 Feb 2014)
 *mediacrush-cli-1.1.2 (17 Feb 2014)

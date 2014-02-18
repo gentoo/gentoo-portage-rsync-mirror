@@ -5,12 +5,14 @@
 <herd>proxy-maintainers</herd>
 <herd>cjk</herd>
 <maintainer>
-  <email>aballier@gentoo.org</email>
-  <name>Alexis Ballier</name>
-</maintainer>
-<maintainer>
   <email>ps@twin.jikos.cz</email>
   <name>Pavel Sanda</name>
+  <description>Primary Maintainer, Assign bugs</description>
+</maintainer>
+<maintainer>
+  <email>aballier@gentoo.org</email>
+  <name>Alexis Ballier</name>
+  <description>Proxy Maintainer, CC bugs</description>
 </maintainer>
 <use>
   <flag name='docbook'>Add support for docbook export</flag>
