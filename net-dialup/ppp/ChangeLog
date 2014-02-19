@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.289 2013/06/09 22:59:56 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.290 2014/02/19 09:56:32 polynomial-c Exp $
+
+*ppp-2.4.6 (19 Feb 2014)
+
+  19 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -ppp-2.4.5-r1.ebuild,
+  -ppp-2.4.5-r2.ebuild, +ppp-2.4.6.ebuild:
+  Version bump (bug #501530). Removed old.
 
   09 Jun 2013; Mike Frysinger <vapier@gentoo.org> metadata.xml:
   Add upstream CPE tag (security info) from ChromiumOS.
