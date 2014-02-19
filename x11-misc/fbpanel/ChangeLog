@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/fbpanel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.56 2013/08/26 19:17:03 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.57 2014/02/19 19:28:25 hwoarang Exp $
+
+*fbpanel-6.1-r2 (19 Feb 2014)
+
+  19 Feb 2014; Markos Chandras <hwoarang@gentoo.org> +fbpanel-6.1-r2.ebuild,
+  +files/fbpanel-6.1-xlogout.patch:
+  Revbump to fix logout problem. Bug #501804. Thanks to Vicente Olivert Riera
+  <vincent@gentoo.org> for providing the upstream fix
 
   26 Aug 2013; Jeroen Roovers <jer@gentoo.org> fbpanel-6.1-r1.ebuild:
   Use configure features instead of sed.
@@ -223,4 +230,3 @@
   19 Jun 2003; mkeadle <mkeadle@gentoo.org> fbpanel-1.0.ebuild:
   initial import of fbpanel. thanks for the base ebuild goes to Cory McWilliams
   <mcwilc@rpi.edu> in bug #22584.
-

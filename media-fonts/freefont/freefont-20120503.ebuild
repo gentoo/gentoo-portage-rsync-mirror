@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont/freefont-20120503.ebuild,v 1.4 2014/01/18 12:10:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont/freefont-20120503.ebuild,v 1.5 2014/02/19 19:29:03 bicatali Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/freefont/${PN}-ttf-${PV}.zip
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm arm64 hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 ppc ppc64 ~sh sparc x86 ~amd64-linux ~x86-fbsd ~x86-linux"
 IUSE=""
 
 DEPEND="app-arch/unzip"

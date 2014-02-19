@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/freefont
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont/ChangeLog,v 1.5 2014/01/18 12:10:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/freefont/ChangeLog,v 1.6 2014/02/19 19:29:03 bicatali Exp $
+
+  19 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> freefont-20120503.ebuild:
+  Keyword amd64-linux and x86-linux
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> freefont-20120503.ebuild:
   Add arm64 love.

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-7.2d-r1.ebuild,v 1.10 2013/06/29 16:28:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-7.2d-r1.ebuild,v 1.11 2014/02/19 19:06:07 sera Exp $
 
 EAPI=5
 
@@ -9,8 +9,8 @@ inherit autotools eutils
 MY_P="gc-${PV/_/}"
 
 DESCRIPTION="The Boehm-Demers-Weiser conservative garbage collector"
-HOMEPAGE="http://www.hpl.hp.com/personal/Hans_Boehm/gc/"
-SRC_URI="http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/${MY_P}.tar.gz"
+HOMEPAGE="http://www.hboehm.info/gc/"
+SRC_URI="http://www.hboehm.info/gc/gc_source/${MY_P}.tar.gz"
 
 LICENSE="boehm-gc"
 SLOT="0"

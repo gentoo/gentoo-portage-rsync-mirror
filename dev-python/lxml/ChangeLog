@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.179 2014/02/18 10:40:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.180 2014/02/19 19:10:26 radhermit Exp $
+
+*lxml-3.3.1 (19 Feb 2014)
+
+  19 Feb 2014; Tim Harder <radhermit@gentoo.org> +lxml-3.3.1.ebuild:
+  Version bump.
 
   18 Feb 2014; Jeroen Roovers <jer@gentoo.org> lxml-3.3.0.ebuild:
   Fix Manifest.
