@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16_beta1.ebuild,v 1.2 2013/11/17 11:14:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16_beta1.ebuild,v 1.3 2014/02/19 01:12:27 jer Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SRC_URI="
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=" ~amd64 ~arm ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
 
 REQUIRED_USE="
