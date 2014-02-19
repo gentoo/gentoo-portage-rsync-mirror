@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.242 2014/01/18 09:55:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.243 2014/02/19 07:18:00 graaff Exp $
+
+*activesupport-3.2.17 (19 Feb 2014)
+
+  19 Feb 2014; Hans de Graaff <graaff@gentoo.org> +activesupport-3.2.17.ebuild:
+  Version bump for security bug 501750.
 
   18 Jan 2014; Hans de Graaff <graaff@gentoo.org> -activesupport-2.3.18.ebuild:
   Remove masked version.

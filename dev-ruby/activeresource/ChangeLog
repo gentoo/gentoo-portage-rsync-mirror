@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.167 2014/01/18 09:55:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.168 2014/02/19 07:18:57 graaff Exp $
+
+*activeresource-3.2.17 (19 Feb 2014)
+
+  19 Feb 2014; Hans de Graaff <graaff@gentoo.org>
+  +activeresource-3.2.17.ebuild:
+  Version bump for security bug 501750.
 
   18 Jan 2014; Hans de Graaff <graaff@gentoo.org>
   -activeresource-2.3.18.ebuild:
