@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/carbon
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/carbon/ChangeLog,v 1.6 2014/01/26 04:35:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/carbon/ChangeLog,v 1.7 2014/02/19 16:27:36 ultrabug Exp $
+
+*carbon-0.9.12-r1 (19 Feb 2014)
+
+  19 Feb 2014; Ultrabug <ultrabug@gentoo.org> +carbon-0.9.12-r1.ebuild,
+  +files/carbon.confd, +files/carbon.initd:
+  fix twisted-core dep, add init scripts for carbon-cache, carbon-relay and
+  carbon-aggregator
 
 *carbon-0.9.12 (26 Jan 2014)
 
