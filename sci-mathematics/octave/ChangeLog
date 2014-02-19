@@ -1,6 +1,18 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.147 2014/01/06 14:06:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.148 2014/02/19 00:52:33 gienah Exp $
+
+*octave-3.8.0 (19 Feb 2014)
+
+  19 Feb 2014; Mark Wright <gienah@gentoo.org>
+  +files/octave-3.8.0-JIT-64-bit-indexing.patch,
+  +files/octave-3.8.0-disable-getcwd-path-max-test-as-it-is-too-slow.patch,
+  +files/octave-3.8.0-fix-compile.patch,
+  +files/octave-3.8.0-imagemagick-configure.patch,
+  +files/octave-3.8.0-imagemagick.patch, +files/octave-3.8.0-llvm-3.4.patch,
+  +files/octave-3.8.0-llvm-configure.patch,
+  +files/octave-3.8.0-pkgbuilddir.patch, +octave-3.8.0.ebuild, metadata.xml:
+  Bump octave to 3.8.0.
 
   06 Jan 2014; Justin Lecher <jlec@gentoo.org> -octave-3.4.3-r1.ebuild:
   Drop old; punt base.eclass
