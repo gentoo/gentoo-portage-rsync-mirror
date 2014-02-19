@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/opensc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.134 2013/02/08 20:10:08 alonbl Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.136 2014/02/19 19:39:59 alonbl Exp $
+
+  19 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/opensc-0.11.13+pcsc-lite-1.6.2.patch,
+  -files/opensc-0.11.13-overflows.patch, -opensc-0.11.13-r2.ebuild:
+  Cleanup old ebuilds
+
+  19 Feb 2014; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/opensc-0.13.0-openssl.patch, opensc-0.13.0.ebuild:
+  Fix USE -ssl
 
   08 Feb 2013; Alon Bar-Lev <alonbl@gentoo.org> metadata.xml,
   opensc-0.13.0.ebuild:

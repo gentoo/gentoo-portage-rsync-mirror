@@ -1,8 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.13.0.ebuild,v 1.2 2013/02/08 20:10:08 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.13.0.ebuild,v 1.3 2014/02/19 19:36:43 alonbl Exp $
 
 EAPI=4
+
+inherit eutils
 
 DESCRIPTION="Libraries and applications to access smartcards"
 HOMEPAGE="http://www.opensc-project.org/opensc/"
@@ -28,6 +30,10 @@ REQUIRED_USE="
 	openct? ( !pcsc-lite !ctapi )
 	ctapi? ( !pcsc-lite !openct )
 	|| ( pcsc-lite openct ctapi )"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-openssl.patch"
+}
 
 src_configure() {
 	econf \
