@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libharu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/ChangeLog,v 1.9 2012/07/04 22:12:45 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/ChangeLog,v 1.10 2014/02/19 20:25:05 bicatali Exp $
+
+*libharu-2.3.0 (19 Feb 2014)
+
+  19 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/libharu-2.3.0-dont-force-strip.patch, +libharu-2.3.0.ebuild,
+  metadata.xml:
+  Version bump
 
   04 Jul 2012; Sébastien Fabbro <bicatali@gentoo.org> libharu-2.2.1-r1.ebuild:
   Keyword amd64-linux, x86-linux
@@ -37,4 +44,3 @@
   21 Oct 2008; Sébastien Fabbro <bicatali@gentoo.org> +metadata.xml,
   +libharu-2.1.0.ebuild:
   Initial import. Thanks rajkrish (bug #140840) for his work.
-
