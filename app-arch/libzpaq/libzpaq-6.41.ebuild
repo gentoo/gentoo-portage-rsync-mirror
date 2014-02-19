@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/libzpaq-6.41.ebuild,v 1.1 2013/09/19 09:04:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/libzpaq-6.41.ebuild,v 1.2 2014/02/19 16:58:02 mgorny Exp $
 
 EAPI=5
 
@@ -30,8 +30,6 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		--with-library-version=${SLOT#*/}:0:0
-		# man-page is no longer there
-		ac_cv_prog_POD2MAN=
 	)
 
 	use debug || append-cppflags -DNDEBUG

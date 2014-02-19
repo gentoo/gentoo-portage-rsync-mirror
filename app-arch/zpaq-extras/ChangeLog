@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zpaq-extras
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/ChangeLog,v 1.6 2012/10/14 08:00:10 mgorny Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq-extras/ChangeLog,v 1.7 2014/02/19 16:57:54 mgorny Exp $
+
+  19 Feb 2014; Michał Górny <mgorny@gentoo.org> -zpaq-extras-1.ebuild:
+  Drop old.
 
   14 Oct 2012; Michał Górny <mgorny@gentoo.org> -zpaq-extras-0_p20110106.ebuild:
   Drop ancient.
