@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/zenity
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.214 2013/12/24 12:41:09 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.215 2014/02/19 06:21:19 pacho Exp $
+
+*zenity-3.8.0-r2 (19 Feb 2014)
+
+  19 Feb 2014; Pacho Ramos <pacho@gentoo.org>
+  +files/zenity-3.8.0-broken-autoclose.patch,
+  +files/zenity-3.8.0-listbox-expand.patch, +zenity-3.8.0-r2.ebuild,
+  -zenity-3.8.0-r1.ebuild:
+  Apply some upstream bugfixes that also fix bug #501722 reported by Jazek. Drop
+  old.
 
 *zenity-3.8.0-r1 (24 Dec 2013)
 

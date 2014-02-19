@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-3.8.0-r1.ebuild,v 1.1 2013/12/24 12:41:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-3.8.0-r2.ebuild,v 1.1 2014/02/19 06:21:19 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -8,7 +8,7 @@ GCONF_DEBUG="yes"
 inherit eutils gnome2
 
 DESCRIPTION="Tool to display dialogs from the commandline and shell scripts"
-HOMEPAGE="https://wiki.gnome.org/action/show/Projects/Zenity"
+HOMEPAGE="https://wiki.gnome.org/Projects/Zenity"
 
 LICENSE="LGPL-2+"
 SLOT="0"
@@ -36,6 +36,13 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Fix double clicking an item or hitting enter after selecting an item (from 'master')
 	epatch "${FILESDIR}/${PN}-3.8.0-double-click.patch"
+
+	# Fix the broken auto-close option in progress and list dialogs (from 'master')
+	epatch "${FILESDIR}/${PN}-3.8.0-broken-autoclose.patch"
+
+	# List box doesn't expand to fill window (from 'master')
+	epatch "${FILESDIR}/${PN}-3.8.0-listbox-expand.patch"
+
 	gnome2_src_prepare
 }
 
