@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/zopfli-1.0.0_p20131216.ebuild,v 1.2 2014/01/16 20:54:50 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/zopfli-1.0.0_p20131216.ebuild,v 1.3 2014/02/19 13:25:20 pinkbyte Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="https://dev.gentoo.org/~pinkbyte/distfiles/snapshots/${P}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0/1"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 
 S="${WORKDIR}/${PN}"
 

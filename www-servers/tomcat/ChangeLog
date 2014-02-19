@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.327 2014/01/08 06:09:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.328 2014/02/19 13:16:49 fordfrog Exp $
+
+*tomcat-7.0.52 (19 Feb 2014)
+*tomcat-6.0.39 (19 Feb 2014)
+
+  19 Feb 2014; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-6.0.39.ebuild,
+  +tomcat-7.0.52.ebuild, +files/tomcat-6.0.39-build.xml.patch,
+  +files/tomcat-7.0.52-build.xml.patch:
+  bumped to versions 6.0.39 and 7.0.52
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> tomcat-6.0.37.ebuild:
   Inherit the user eclass for enewuser/etc...

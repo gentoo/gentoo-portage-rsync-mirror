@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/zopfli
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.5 2014/01/16 20:54:50 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zopfli/ChangeLog,v 1.6 2014/02/19 13:25:20 pinkbyte Exp $
+
+  19 Feb 2014; Sergey Popov <pinkbyte@gentoo.org>
+  zopfli-1.0.0_p20131216.ebuild:
+  Stable on x86, wrt bug #498280
 
   16 Jan 2014; Vicente Olivert Riera <vincent@gentoo.org>
   zopfli-1.0.0_p20131216.ebuild:
