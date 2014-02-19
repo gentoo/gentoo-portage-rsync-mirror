@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27.1-r1.ebuild,v 1.6 2014/02/19 12:50:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.27.1-r2.ebuild,v 1.1 2014/02/19 14:49:03 polynomial-c Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit flag-o-matic eutils
 
@@ -49,13 +49,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	local p=$(usex userland_GNU "" "g")
 	if [[ -z ${p} ]] ; then
 		# a nasty yet required piece of baggage
 		exeinto /etc
-		doexe "${FILESDIR}"/rmt || die
+		doexe "${FILESDIR}"/rmt
 	fi
 
 	# autoconf looks for gtar before tar (in configure scripts), hence
@@ -74,6 +74,6 @@ src_install() {
 	if use minimal ; then
 		find "${ED}"/etc "${ED}"/*bin/ "${ED}"/usr/*bin/ \
 			-type f -a '!' '(' -name tar -o -name ${p}tar ')' \
-			-delete
+			-delete || die
 	fi
 }

@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.96.0.ebuild,v 1.1 2014/02/16 23:15:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.96.0.ebuild,v 1.2 2014/02/19 14:44:05 blueness Exp $
 
 EAPI="5"
-inherit fixheadtails
+inherit fixheadtails eutils
 
 DESCRIPTION="IPv6 address calculator"
 HOMEPAGE="http://www.deepspace6.net/projects/ipv6calc.html"
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	ht_fix_file configure
+	epatch "${FILESDIR}"/${P}-fix-link-order.patch
 }
 
 src_configure() {
@@ -36,6 +37,12 @@ src_configure() {
 	econf \
 		--disable-bundled-getopt \
 		--disable-bundled-md5 \
+		--disable-shared \
+		--enable-dynamic-load \
+		--enable-db-ieee \
+		--enable-db-ipv4 \
+		--disable-db-ipv6 \
+		--disable-ip2location \
 		${myconf}
 }
 
