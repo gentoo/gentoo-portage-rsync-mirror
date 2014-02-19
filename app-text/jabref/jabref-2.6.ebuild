@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.6.ebuild,v 1.6 2014/01/28 16:47:27 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.6.ebuild,v 1.7 2014/02/19 17:26:28 nicolasbock Exp $
 
 EAPI=5
 
@@ -31,10 +31,10 @@ CDEPEND="dev-java/spin:0
 	dev-java/jpfcodegen:0
 	mysql? ( dev-java/jdbc-mysql:0 )"
 
-RDEPEND="virtual/jre:1.6
+RDEPEND=">=virtual/jre-1.6
 	${CDEPEND}"
 
-DEPEND="virtual/jdk:1.6
+DEPEND=">=virtual/jdk-1.6
 	${CDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
