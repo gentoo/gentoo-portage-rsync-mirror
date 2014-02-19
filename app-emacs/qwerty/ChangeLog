@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/qwerty
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/ChangeLog,v 1.12 2010/03/05 23:01:21 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/ChangeLog,v 1.13 2014/02/18 23:05:53 ulm Exp $
+
+  18 Feb 2014; Ulrich Müller <ulm@gentoo.org> qwerty-1.1.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   05 Mar 2010; Ulrich Mueller <ulm@gentoo.org> qwerty-1.1.ebuild:
   LICENSE is GPL-1 or later. Update HOMEPAGE.
