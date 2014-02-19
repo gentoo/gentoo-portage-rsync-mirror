@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Config-Crontab
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Crontab/ChangeLog,v 1.18 2012/06/24 12:59:12 tove Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Crontab/ChangeLog,v 1.19 2014/02/19 10:53:37 radhermit Exp $
+
+*Config-Crontab-1.400.0 (19 Feb 2014)
+
+  19 Feb 2014; Tim Harder <radhermit@gentoo.org>
+  +Config-Crontab-1.400.0.ebuild:
+  Version bump.
 
   24 Jun 2012; Torsten Veller <tove@gentoo.org> metadata.xml:
   Update CPAN upstream info

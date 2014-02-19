@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule-plugins/molecule-plugins-1.0.1.ebuild,v 1.1 2013/03/21 13:06:37 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule-plugins/molecule-plugins-1.0.1.ebuild,v 1.2 2014/02/19 10:54:13 lxnay Exp $
 
 EAPI="5"
 PYTHON_DEPEND="*"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-COMMON_DEPEND="~dev-util/molecule-core-${PV} !<dev-util/molecule-1.0"
+COMMON_DEPEND="~dev-util/molecule-core-${PV} !<dev-util/molecule-1"
 DEPEND="${COMMON_DEPEND}"
 RDEPEND="${COMMON_DEPEND}
 	net-misc/rsync

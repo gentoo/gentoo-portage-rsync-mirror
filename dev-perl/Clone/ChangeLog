@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.91 2014/01/19 12:34:17 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.93 2014/02/19 10:51:29 radhermit Exp $
+
+  19 Feb 2014; Tim Harder <radhermit@gentoo.org> -Clone-0.310.0.ebuild,
+  -Clone-0.340.0.ebuild:
+  Remove old.
+
+*Clone-0.360.0 (19 Feb 2014)
+
+  19 Feb 2014; Tim Harder <radhermit@gentoo.org> +Clone-0.360.0.ebuild:
+  Version bump.
 
   19 Jan 2014; Mikle Kolyada <zlogene@gentoo.org> Clone-0.350.0.ebuild:
   sparc stable wrt bug #492094

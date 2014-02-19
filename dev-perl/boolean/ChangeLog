@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/boolean
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/boolean/ChangeLog,v 1.13 2013/08/25 06:43:45 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/boolean/ChangeLog,v 1.14 2014/02/19 10:42:59 radhermit Exp $
+
+*boolean-0.320.0 (19 Feb 2014)
+
+  19 Feb 2014; Tim Harder <radhermit@gentoo.org> +boolean-0.320.0.ebuild:
+  Version bump.
 
 *boolean-0.300.0 (25 Aug 2013)
 

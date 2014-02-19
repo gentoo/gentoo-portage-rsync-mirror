@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/BerkeleyDB
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.104 2013/12/28 20:39:58 zlogene Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.105 2014/02/19 10:40:39 radhermit Exp $
+
+*BerkeleyDB-0.540.0 (19 Feb 2014)
+
+  19 Feb 2014; Tim Harder <radhermit@gentoo.org> +BerkeleyDB-0.540.0.ebuild:
+  Version bump.
 
   28 Dec 2013; Mikle Kolyada <zlogene@gentoo.org> BerkeleyDB-0.530.0.ebuild:
   sparc stable wrt bug #492078
