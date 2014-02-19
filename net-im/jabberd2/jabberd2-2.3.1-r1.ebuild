@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.1-r1.ebuild,v 1.7 2014/01/23 14:48:32 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.3.1-r1.ebuild,v 1.8 2014/02/19 15:03:31 pinkbyte Exp $
 
 EAPI=5
 
@@ -145,8 +145,8 @@ pkg_postinst() {
 
 	if use sqlite || use mysql || use postgres; then
 		echo
-		einfo 'You will need to setup or update your database using the'
-		einfo 'scripts in /usr/share/doc/${PF}/tools/'
+		einfo "You will need to setup or update your database using the"
+		einfo "scripts in /usr/share/doc/${PF}/tools/"
 		echo
 	fi
 

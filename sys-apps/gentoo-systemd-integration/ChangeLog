@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gentoo-systemd-integration
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.20 2014/02/02 11:27:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gentoo-systemd-integration/ChangeLog,v 1.21 2014/02/19 15:05:08 mgorny Exp $
+
+*gentoo-systemd-integration-3 (19 Feb 2014)
+
+  19 Feb 2014; Michał Górny <mgorny@gentoo.org>
+  +gentoo-systemd-integration-3.ebuild:
+  Version bump. Adds Gentoo udev rules (bug #488134) and fixes local.d *.stop
+  support.
 
   02 Feb 2014; Pacho Ramos <pacho@gentoo.org>
   gentoo-systemd-integration-2.ebuild:
