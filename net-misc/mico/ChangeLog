@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/mico
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.39 2013/03/02 23:04:31 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.40 2014/02/19 14:10:04 haubi Exp $
+
+*mico-2.3.13-r7 (19 Feb 2014)
+
+  19 Feb 2014; Michael Haubenwallner <haubi@gentoo.org> +mico-2.3.13-r7.ebuild,
+  mico-9999.ebuild:
+  Install the libs in correct libdir (multilib-strict), bug#500744.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> mico-2.3.13-r4.ebuild,
   mico-2.3.13-r5.ebuild, mico-2.3.13-r6.ebuild, mico-9999.ebuild:

@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.529 2014/02/18 12:01:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.531 2014/02/19 14:22:11 jer Exp $
+
+  19 Feb 2014; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-331.49.ebuild:
+  Raise supported kernel version dependency.
+
+*nvidia-drivers-331.49 (19 Feb 2014)
+
+  19 Feb 2014; Jeroen Roovers <jer@gentoo.org> +nvidia-drivers-331.49.ebuild:
+  Version bump.
 
 *nvidia-drivers-334.16-r7 (18 Feb 2014)
 
