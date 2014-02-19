@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.299 2014/02/03 11:15:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.300 2014/02/19 11:15:57 nimiux Exp $
+
+  19 Feb 2014; Chema Alonso <nimiux@gentoo.org> mc-4.8.11.ebuild:
+  Stable for amd64 wrt bug #500154
 
   03 Feb 2014; Jeroen Roovers <jer@gentoo.org> mc-4.8.11.ebuild:
   Stable for HPPA (bug #500154).

@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-4.1.1.ebuild,v 1.1 2013/11/30 15:12:35 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/retext/retext-4.1.1.ebuild,v 1.2 2014/02/19 11:01:55 jlec Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python3_2 )
+PYTHON_COMPAT=( python{3_2,3_3} )
 PLOCALES="ca cs cy da de es et eu fr it ja pl pt pt_BR ru sk uk zh_CN zh_TW"
 
 inherit distutils-r1 l10n
@@ -26,15 +26,22 @@ HOMEPAGE="http://sourceforge.net/p/retext/home/ReText/"
 
 LICENSE="GPL-2"
 SLOT="0"
-
 IUSE="+spell"
+
+REQUIRED_USE="
+	spell? (
+		python_targets_python3_2
+		!python_targets_python3_3
+		)
+	python_targets_python3_3? ( !spell )
+"
 
 RDEPEND+="
 	dev-python/docutils[${PYTHON_USEDEP}]
 	dev-python/markdown[${PYTHON_USEDEP}]
 	dev-python/markups[${PYTHON_USEDEP}]
 	dev-python/PyQt4[webkit,${PYTHON_USEDEP}]
-	spell? ( dev-python/pyenchant[${PYTHON_USEDEP}] )
+	spell? ( dev-python/pyenchant[$(python_gen_usedep 'python3_2')] )
 "
 
 S="${WORKDIR}"/${MY_P}

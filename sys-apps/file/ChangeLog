@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.263 2014/02/18 20:30:20 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.264 2014/02/19 11:20:39 pinkbyte Exp $
+
+  19 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> file-5.17.ebuild:
+  Stable on x86, wrt bug #501574
 
   18 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> file-5.17.ebuild:
   alpha stable wrt bug #501574
