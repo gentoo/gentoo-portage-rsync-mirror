@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/lammps
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.18 2014/02/19 20:12:04 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lammps/ChangeLog,v 1.19 2014/02/19 22:49:50 nicolasbock Exp $
+
+  19 Feb 2014; Nicolas Bock <nicolasbock@gentoo.org> lammps-20140214-r1.ebuild:
+  sci-physics/lammps-20140214-r1: Fixed some issues:  * Fixed file collision of
+  header files by installing them into /usr/include/lammps * Fixed missing .so
+  name by adding proper linker flag.
 
 *lammps-20140214-r1 (19 Feb 2014)
 
