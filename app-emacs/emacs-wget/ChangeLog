@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/emacs-wget
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.20 2008/08/27 13:22:34 ulm Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-wget/ChangeLog,v 1.21 2014/02/19 07:00:53 ulm Exp $
+
+*emacs-wget-0.5.0-r1 (19 Feb 2014)
+
+  19 Feb 2014; Ulrich Müller <ulm@gentoo.org> +emacs-wget-0.5.0-r1.ebuild,
+  +files/50emacs-wget-gentoo.el:
+  Update ebuild to EAPI 5. Update HOMEPAGE. Specify LICENSE more precisely.
+  Install Japanese documentation only with LINGUAS=ja. Don't load w3m-wget in
+  site-init file.
 
   27 Aug 2008; Ulrich Mueller <ulm@gentoo.org> emacs-wget-0.5.0.ebuild:
   Use eclass default instead of elisp-comp, bug 235442.
