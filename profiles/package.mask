@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15411 2014/02/19 11:45:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15412 2014/02/19 21:12:58 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -494,7 +494,7 @@ net-irc/xchat-otr
 # updates; masking to make users aware of this, users that still need this
 # package and have no alternative can unmask at their own risk. See bug #473830.
 #
-# This is continued by Oracle Corproation, which has acquired Sun Microsystems
+# This is continued by Oracle Corporation, which has acquired Sun Microsystems
 # in early 2010; as per http://en.wikipedia.org/wiki/Sun_acquisition_by_Oracle
 #
 # Users are suggested to upgrade to one of the newer Oracle packages like
