@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.7 2014/01/31 08:48:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.7.ebuild,v 1.8 2014/02/19 09:20:39 polynomial-c Exp $
 
 EAPI=5
 
@@ -111,10 +111,6 @@ MODULE_CRITICAL="
 	mime
 	unixd
 "
-# dependend criticals
-use ssl && MODULE_CRITICAL+=" socache_shmcb"
-use doc && MODULE_CRITICAL+=" alias negotiation setenvif"
-
 inherit eutils apache-2 systemd toolchain-funcs
 
 DESCRIPTION="The Apache Web Server."
@@ -135,6 +131,14 @@ RDEPEND="${RDEPEND}
 	>=dev-libs/apr-1.5.0
 	>=dev-libs/openssl-0.9.8m
 	apache2_modules_mime? ( app-misc/mime-types )"
+
+pkg_setup() {
+	# dependend critical modules which are not allowed in global scope due
+	# to USE flag conditionals (bug #499260)
+	use ssl && MODULE_CRITICAL+=" socache_shmcb"
+	use doc && MODULE_CRITICAL+=" alias negotiation setenvif"
+	apache-2_pkg_setup
+}
 
 # init script fixup - should be rolled into next tarball #389965
 src_prepare() {
