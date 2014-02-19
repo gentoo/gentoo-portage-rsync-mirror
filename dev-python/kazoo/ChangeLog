@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/kazoo
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kazoo/ChangeLog,v 1.1 2014/02/19 10:03:51 radhermit Exp $
+
+*kazoo-1.3.1 (19 Feb 2014)
+
+  19 Feb 2014; Tim Harder <radhermit@gentoo.org> +kazoo-1.3.1.ebuild,
+  +metadata.xml:
+  Initial import.
+

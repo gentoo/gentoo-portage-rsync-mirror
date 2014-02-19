@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>python</herd>
+	<maintainer>
+		<email>radhermit@gentoo.org</email>
+		<name>Tim Harder</name>
+	</maintainer>
+	<use>
+		<flag name="gevent">Enable support for the gevent based handler</flag>
+	</use>
+	<upstream>
+		<remote-id type="pypi">kazoo</remote-id>
+	</upstream>
+</pkgmetadata>
