@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15410 2014/02/18 20:17:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15411 2014/02/19 11:45:49 tomwij Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tom Wijsman <TomWij@gentoo.org> (19 Feb 2014)
+# Masked for removal in 30 days, as this is an old revision that stuck behind; 
+# however we are not sure if it is kept for a reason, if it is then please let 
+# me know such that we can continue to keep it around. Guess nobody even still
+# uses this package either, but that's for another day...
+=dev-java/jikes-1.22-r1
 
 # Ulrich Müller <ulm@gentoo.org> (18 Feb 2014)
 # Last upstream release in 1996.
