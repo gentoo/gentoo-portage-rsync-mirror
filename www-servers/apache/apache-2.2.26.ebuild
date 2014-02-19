@@ -1,10 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.26.ebuild,v 1.3 2014/01/31 08:32:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.26.ebuild,v 1.4 2014/02/19 08:51:52 polynomial-c Exp $
 
 EAPI=5
-
-WANT_AUTOMAKE="1.11"
 
 # latest gentoo apache files
 GENTOO_PATCHSTAMP="20121012"

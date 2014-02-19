@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.257 2014/01/31 08:48:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.258 2014/02/19 08:51:52 polynomial-c Exp $
+
+  19 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> apache-2.2.26.ebuild:
+  Removed WANT_AUTOMAKE (bug #501518).
 
   31 Jan 2014; Mike Frysinger <vapier@gentoo.org> apache-2.4.7.ebuild:
   Declare mod_proxy_balancer dep on mod_proxy_balancer #460434 by Jaco Kroon.
