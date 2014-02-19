@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.30 2014/01/18 18:44:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.33 2014/02/19 12:30:08 pinkbyte Exp $
+
+  19 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> -Ice-3.4.2.ebuild,
+  -Ice-3.5.0-r1.ebuild:
+  Drop old versions
+
+  19 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> Ice-3.5.1.ebuild:
+  Stable on amd64, wrt bug #492612
+
+  19 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> Ice-3.5.1.ebuild:
+  Respect compiler, skip mono tests cause they are badly broken, bug #498484
 
   18 Jan 2014; Pacho Ramos <pacho@gentoo.org> Ice-3.5.1.ebuild:
   Revert as I was hitting bug #498484 but this the stab with the wrong bug

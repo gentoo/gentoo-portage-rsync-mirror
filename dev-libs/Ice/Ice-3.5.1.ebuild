@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.1.ebuild,v 1.5 2014/01/18 18:44:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.5.1.ebuild,v 1.7 2014/02/19 12:29:24 pinkbyte Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${
 	doc? ( http://www.zeroc.com/download/Ice/$(get_version_component_range 1-2)/${P}.pdf )"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 x86 ~x86-linux ~x64-macos"
+KEYWORDS="amd64 ~arm ~ia64 x86 ~x86-linux ~x64-macos"
 IUSE="doc examples +ncurses mono python ruby test debug"
 
 RDEPEND=">=dev-libs/expat-2.0.1
@@ -80,10 +80,15 @@ src_prepare() {
 		-e 's|-f -root|-f -gacdir $(GAC_DIR) -root|' \
 		cs/config/Make.rules.cs || die "sed failed"
 
+	# skip mono tests, bug #498484
+	sed -i \
+		-e 's|^\(SUBDIRS.*\)test|\1|' \
+		cs/Makefile || die "sed failed"
+
 	if ! use test ; then
 		sed -i \
 			-e 's|^\(SUBDIRS.*\)test|\1|' \
-			{cpp,cs,php,py,rb}/Makefile || die "sed failed"
+			{cpp,php,py,rb}/Makefile || die "sed failed"
 	fi
 }
 
@@ -100,7 +105,7 @@ src_configure() {
 
 	MAKE_RULES="${MAKE_RULES} DB_FLAGS=-I$(db_includedir)"
 	sed -i \
-		-e "s|c++|$(tc-getCXX)|" \
+		-e "s|g++|$(tc-getCXX)|" \
 		-e "s|\(CFLAGS[[:space:]]*=\)|\1 ${CFLAGS}|" \
 		-e "s|\(CXXFLAGS[[:space:]]*=\)|\1 ${CXXFLAGS}|" \
 		-e "s|\(LDFLAGS[[:space:]]*=\)|\1 ${LDFLAGS}|" \
@@ -131,9 +136,8 @@ src_configure() {
 }
 
 src_compile() {
-	if tc-is-cross-compiler ; then
-		export CXX="${CHOST}-g++"
-	fi
+	# Do not remove this export or build will break!
+	tc-export CXX
 
 	emake -C cpp ${MAKE_RULES} || die "emake failed"
 
@@ -257,7 +261,8 @@ src_test() {
 	fi
 
 	if use mono ; then
-#		ewarn "Tests for C# are currently disabled."
-		run_tests cs || die "emake cs test failed"
+		# skip mono tests, bug #498484
+		ewarn "Tests for C# are currently disabled."
+#		run_tests cs || die "emake cs test failed"
 	fi
 }
