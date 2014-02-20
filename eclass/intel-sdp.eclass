@@ -1,6 +1,6 @@
 # Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.15 2013/09/29 18:00:30 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.16 2014/02/20 09:47:09 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -324,7 +324,7 @@ intel-sdp_pkg_pretend() {
 			die "Could not find license file"
 		fi
 	else
-		eqawarn "The ebuild doesn't check for a license!"
+		eqawarn "The ebuild doesn't check for presents of a proper intel license!"
 		eqawarn "This shouldn't be done unless there is a serious reason."
 	fi
 }
