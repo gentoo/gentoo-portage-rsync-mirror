@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.149 2014/02/19 23:47:48 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.150 2014/02/20 00:59:19 gienah Exp $
+
+  20 Feb 2014; Mark Wright <gienah@gentoo.org> octave-3.8.0.ebuild:
+  Fix bug 501762, pkg-pretend check that dependencies are built with the same
+  blas library as currently selected with "eselect blas show" was incorrect when
+  "pkg-config --libs-only-l blas" listed more than 1 library, thanks to Helmut
+  Jarausch for reporting.
 
   19 Feb 2014; Mark Wright <gienah@gentoo.org> octave-3.8.0.ebuild:
   Thanks to Olivier Huber for fixing and reporting bug 501784: replace the use

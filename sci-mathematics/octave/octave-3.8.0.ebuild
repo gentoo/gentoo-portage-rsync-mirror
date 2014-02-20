@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.2 2014/02/19 23:47:48 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.3 2014/02/20 00:59:19 gienah Exp $
 
 EAPI=5
 
@@ -81,7 +81,7 @@ PATCHES=(
 
 pkg_pretend() {
 	if use qrupdate || use sparse; then
-		local blaslib=$(pkg-config --libs-only-l "blas" | sed -e 's@.*-l@lib@' | cut -d' ' -f 1)
+		local blaslib=$(pkg-config --libs-only-l "blas" | sed -e 's@-l\([^ \t]*\)@lib\1@' | cut -d' ' -f 1)
 		einfo "Checking dependencies are built with the same blas lib = ${blaslib}"
 		local usr_lib="${ROOT}usr/$(get_libdir)"
 		local libs=( )
