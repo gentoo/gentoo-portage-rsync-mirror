@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smokekde
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.114 2014/02/16 07:18:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/ChangeLog,v 1.115 2014/02/20 09:27:26 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> smokekde-4.11.5.ebuild:
+  Stable for ppc, wrt bug #493782
 
   16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> smokekde-4.11.5.ebuild:
   Stable for x86, wrt bug #493782

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.184 2014/02/16 07:19:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.185 2014/02/20 09:27:15 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> kwrited-4.11.5.ebuild:
+  Stable for ppc, wrt bug #493782
 
   16 Feb 2014; Agostino Sarubbo <ago@gentoo.org> kwrited-4.11.5.ebuild:
   Stable for x86, wrt bug #493782

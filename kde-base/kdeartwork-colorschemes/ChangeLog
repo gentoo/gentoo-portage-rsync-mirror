@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-colorschemes
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-colorschemes/ChangeLog,v 1.197 2014/02/16 07:19:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-colorschemes/ChangeLog,v 1.198 2014/02/20 09:27:36 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org>
+  kdeartwork-colorschemes-4.11.5.ebuild:
+  Stable for ppc, wrt bug #493782
 
   16 Feb 2014; Agostino Sarubbo <ago@gentoo.org>
   kdeartwork-colorschemes-4.11.5.ebuild:
