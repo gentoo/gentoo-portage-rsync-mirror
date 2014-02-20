@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ctorrent
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.51 2011/01/16 01:15:49 vapier Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ctorrent/ChangeLog,v 1.52 2014/02/20 18:00:24 maekke Exp $
+
+  20 Feb 2014; Markus Meier <maekke@gentoo.org> ctorrent-3.3.2-r2.ebuild:
+  arm stable, bug #495894
 
 *ctorrent-3.3.2-r2 (16 Jan 2011)
 

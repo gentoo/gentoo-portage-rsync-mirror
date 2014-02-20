@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.72 2014/02/11 18:42:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.73 2014/02/20 18:01:01 maekke Exp $
+
+  20 Feb 2014; Markus Meier <maekke@gentoo.org> libraw1394-2.1.0-r1.ebuild:
+  arm stable, bug #495964
 
   11 Feb 2014; Jeroen Roovers <jer@gentoo.org> libraw1394-2.1.0-r1.ebuild:
   Stable for HPPA (bug #495964).
