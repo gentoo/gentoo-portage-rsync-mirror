@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/swift
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.24 2014/01/20 05:41:12 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.25 2014/02/20 21:04:11 prometheanfire Exp $
+
+*swift-1.12.0 (20 Feb 2014)
+
+  20 Feb 2014; Matthew Thode <prometheanfire@gentoo.org> +swift-1.12.0.ebuild:
+  BUMP!
 
 *swift-1.10.0-r1 (20 Jan 2014)
 *swift-1.11.0-r1 (20 Jan 2014)

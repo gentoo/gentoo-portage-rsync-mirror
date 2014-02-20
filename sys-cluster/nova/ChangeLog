@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.49 2014/01/27 08:44:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.50 2014/02/20 21:15:02 prometheanfire Exp $
+
+*nova-2013.2.2 (20 Feb 2014)
+
+  20 Feb 2014; Matthew Thode <prometheanfire@gentoo.org> +nova-2013.2.2.ebuild:
+  BUMP!
 
 *nova-2013.2.1-r3 (27 Jan 2014)
 *nova-2013.1.4-r5 (27 Jan 2014)

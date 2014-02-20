@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.10.2.ebuild,v 1.1 2013/12/24 17:49:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/mutter-3.10.4.ebuild,v 1.1 2014/02/20 21:27:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
