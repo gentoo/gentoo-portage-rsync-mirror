@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1825.4.ebuild,v 1.1 2014/02/08 04:15:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-34.0.1847.3.ebuild,v 1.1 2014/02/20 05:56:17 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -164,7 +164,7 @@ src_prepare() {
 	#	touch out/Release/gen/sdk/toolchain/linux_x86_newlib/stamp.untar || die
 	# fi
 
-	epatch "${FILESDIR}/${PN}-system-jinja-r3.patch"
+	epatch "${FILESDIR}/${PN}-system-jinja-r4.patch"
 	epatch "${FILESDIR}/${PN}-gn-r1.patch"
 	epatch "${FILESDIR}/${PN}-depot-tools-r0.patch"
 
@@ -204,6 +204,7 @@ src_prepare() {
 		'third_party/libphonenumber' \
 		'third_party/libsrtp' \
 		'third_party/libusb' \
+		'third_party/libwebm' \
 		'third_party/libxml/chromium' \
 		'third_party/libXNVCtrl' \
 		'third_party/libyuv' \
@@ -505,7 +506,7 @@ chromium_test() {
 		local cmd=$1
 		shift
 		local IFS=:
-		set -- "${cmd}" "--gtest_filter=-$*"
+		set -- "${cmd}" --test-launcher-bot-mode "--gtest_filter=-$*"
 		einfo "$@"
 		"$@"
 		local st=$?
@@ -582,6 +583,8 @@ src_install() {
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser${CHROMIUM_SUFFIX} || die
 	# keep the old symlink around for consistency
 	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium${CHROMIUM_SUFFIX} || die
+
+	dosym "${CHROMIUM_HOME}/chromedriver" /usr/bin/chromedriver${CHROMIUM_SUFFIX} || die
 
 	# Allow users to override command-line options, bug #357629.
 	dodir /etc/chromium || die

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.639 2014/02/17 19:13:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.640 2014/02/20 05:45:14 phajdan.jr Exp $
+
+  18 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.use.mask:
+  Mask aura for chromium-34 (build failures).
 
   17 Feb 2014; Mike Gilbert <floppym@gentoo.org> package.use.force:
   Force-enable python_targets_python3_4 for python-exec.

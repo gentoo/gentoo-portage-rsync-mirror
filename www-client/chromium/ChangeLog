@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1024 2014/02/20 00:44:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1025 2014/02/20 05:56:17 phajdan.jr Exp $
+
+*chromium-34.0.1847.3 (18 Feb 2014)
+
+  18 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-34.0.1847.3.ebuild, +files/chromium-system-jinja-r4.patch,
+  -chromium-34.0.1825.4.ebuild:
+  Dev channel bump. Remove old.
 
 *chromium-33.0.1750.115 (20 Feb 2014)
 

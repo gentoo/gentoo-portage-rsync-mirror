@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.152 2014/02/20 03:05:52 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.153 2014/02/20 05:39:59 gienah Exp $
+
+  20 Feb 2014; Mark Wright <gienah@gentoo.org> octave-3.8.0.ebuild:
+  Fix bug 501756 - sci-mathematics/octave-3.8.0 LC_ALL=et_EE - octave.cc:485:56:
+  error: Fallow_noninteger_range_as_index was not declared in this scope. Thanks
+  to Priit Laes for reporting and debugging.
 
   20 Feb 2014; Mark Wright <gienah@gentoo.org>
   files/octave-3.8.0-imagemagick.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.4 2014/02/20 01:57:16 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.5 2014/02/20 05:39:59 gienah Exp $
 
 EAPI=5
 
@@ -82,7 +82,7 @@ PATCHES=(
 
 pkg_pretend() {
 	if use qrupdate || use sparse; then
-		local blaslib=$(pkg-config --libs-only-l "blas" | sed -e 's@-l\([^ \t]*\)@lib\1@' | cut -d' ' -f 1)
+		local blaslib=$(pkg-config --libs-only-l blas | sed -e 's@-l\([^ \t]*\)@lib\1@' | cut -d' ' -f 1)
 		einfo "Checking dependencies are built with the same blas lib = ${blaslib}"
 		local usr_lib="${ROOT}usr/$(get_libdir)"
 		local libs=( )
@@ -136,6 +136,12 @@ src_prepare() {
 		ewarn "with OpenGL graphics requires the gl2ps - but at the time of writing x11-libs/gl2ps"
 		ewarn "does not have the hppa keyword"
 	fi
+	# Fix bug 501756 - sci-mathematics/octave-3.8.0 LC_ALL=et_EE - octave.cc:485:56:
+	# error: 'Fallow_noninteger_range_as_index' was not declared in this scope
+	sed -e 's@A-Za-z0-9@[:alnum:]@g' \
+		-e 's@A-Za-z@[:alpha:]@g' \
+		-i "${S}/libinterp/mkbuiltins" \
+		|| die "Could not patch ${S}/libinterp/mkbuiltins for some non-English nocaled"
 	autotools-utils_src_prepare
 }
 
