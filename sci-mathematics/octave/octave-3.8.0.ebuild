@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.3 2014/02/20 00:59:19 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.4 2014/02/20 01:57:16 gienah Exp $
 
 EAPI=5
 
@@ -77,6 +77,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-3.8.0-llvm-configure.patch
 	"${FILESDIR}"/${PN}-3.8.0-JIT-64-bit-indexing.patch
 	"${FILESDIR}"/${PN}-3.8.0-disable-getcwd-path-max-test-as-it-is-too-slow.patch
+	"${FILESDIR}"/${PN}-3.8.0-avoid-gui-sigsegv-if-curl-is-not-available.patch
 )
 
 pkg_pretend() {
