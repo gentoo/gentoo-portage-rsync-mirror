@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15412 2014/02/19 21:12:58 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15413 2014/02/20 12:31:32 lu_zero Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,9 +30,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
+# Beta ebuild, unmask to test the tree.
+~media-video/libav-10_beta1
+
 # Tom Wijsman <TomWij@gentoo.org> (19 Feb 2014)
-# Masked for removal in 30 days, as this is an old revision that stuck behind; 
-# however we are not sure if it is kept for a reason, if it is then please let 
+# Masked for removal in 30 days, as this is an old revision that stuck behind;
+# however we are not sure if it is kept for a reason, if it is then please let
 # me know such that we can continue to keep it around. Guess nobody even still
 # uses this package either, but that's for another day...
 =dev-java/jikes-1.22-r1
@@ -243,7 +247,7 @@ www-client/google-chrome:unstable
 =media-gfx/exiv2-0.23-r2
 
 # Tony Vroon <chainsaw@gentoo.org> (13 Jan 2014)
-# Asterisk 12 is a short term "standard" release 
+# Asterisk 12 is a short term "standard" release
 # containing significant architectural changes.
 # This is not for your production kit quite yet.
 =net-misc/asterisk-12*
