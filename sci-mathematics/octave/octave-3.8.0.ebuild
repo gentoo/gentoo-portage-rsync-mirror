@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.5 2014/02/20 05:39:59 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.8.0.ebuild,v 1.6 2014/02/20 08:50:37 gienah Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ RDEPEND="
 	hdf5? ( sci-libs/hdf5 )
 	imagemagick? ( || (
 			media-gfx/graphicsmagick[cxx]
-			>=media-gfx/imagemagick-6.8.8.5[cxx] ) )
+			media-gfx/imagemagick[cxx] ) )
 	opengl? (
 		media-libs/freetype:2
 		media-libs/fontconfig
@@ -141,7 +141,7 @@ src_prepare() {
 	sed -e 's@A-Za-z0-9@[:alnum:]@g' \
 		-e 's@A-Za-z@[:alpha:]@g' \
 		-i "${S}/libinterp/mkbuiltins" \
-		|| die "Could not patch ${S}/libinterp/mkbuiltins for some non-English nocaled"
+		|| die "Could not patch ${S}/libinterp/mkbuiltins for some non-English locales"
 	autotools-utils_src_prepare
 }
 

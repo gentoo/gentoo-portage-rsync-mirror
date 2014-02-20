@@ -1,5 +1,5 @@
 --- octave-3.8.0-orig/libinterp/dldfcn/__magick_read__.cc	2013-12-28 08:57:41.000000000 +1100
-+++ octave-3.8.0/libinterp/dldfcn/__magick_read__.cc	2014-02-20 13:40:54.981809963 +1100
++++ octave-3.8.0/libinterp/dldfcn/__magick_read__.cc	2014-02-20 18:01:35.603737907 +1100
 @@ -38,8 +38,15 @@
  #include "gripes.h"
  
@@ -17,7 +17,26 @@
  #include <clocale>
  
  // In theory, it should be enough to check the class:
-@@ -332,7 +339,10 @@
+@@ -104,12 +111,18 @@
+ get_depth (Magick::Image& img)
+ {
+   octave_idx_type depth = img.depth ();
++#if defined(MagickLibVersion) && (MagickLibVersion <= 0x686)
++#define Magick MagickCore
++#endif
+   if (depth == 8
+       && img.channelDepth (Magick::RedChannel)     == 1
+       && img.channelDepth (Magick::CyanChannel)    == 1
+       && img.channelDepth (Magick::OpacityChannel) == 1
+       && img.channelDepth (Magick::GrayChannel)    == 1)
+     depth = 1;
++#if defined(MagickLibVersion) && (MagickLibVersion <= 0x686)
++#undef Magick
++#endif
+ 
+   return depth;
+ }
+@@ -332,7 +345,10 @@
    if (imvec[def_elem].depth () == 32)
      divisor = std::numeric_limits<uint32_t>::max ();
    else
@@ -29,7 +48,7 @@
  
    // FIXME: this workaround should probably be fixed in GM by creating a
    //        new ImageType BilevelMatteType
-@@ -463,7 +473,8 @@
+@@ -463,7 +479,8 @@
                  for (octave_idx_type row = 0; row < nRows; row++)
                    {
                      img_fvec[idx] = pix->red / divisor;
@@ -39,7 +58,7 @@
                      pix += row_shift;
                      idx++;
                    }
-@@ -538,7 +549,8 @@
+@@ -538,7 +555,8 @@
                      rbuf[idx]     = pix->red     / divisor;
                      gbuf[idx]     = pix->green   / divisor;
                      bbuf[idx]     = pix->blue    / divisor;
@@ -49,7 +68,7 @@
                      pix += row_shift;
                      idx++;
                    }
-@@ -620,7 +632,8 @@
+@@ -620,7 +638,8 @@
                      mbuf[idx]     = pix->green   / divisor;
                      ybuf[idx]     = pix->blue    / divisor;
                      kbuf[idx]     = pix->opacity / divisor;
@@ -59,7 +78,7 @@
                      pix += row_shift;
                      idx++;
                    }
-@@ -678,9 +691,10 @@
+@@ -678,9 +697,10 @@
        // Restore locale from before GraphicsMagick initialisation
        setlocale (LC_ALL, locale.c_str ());
  
@@ -72,7 +91,7 @@
  
        initialized = true;
      }
-@@ -1053,8 +1067,9 @@
+@@ -1053,8 +1073,9 @@
    // From GM documentation:
    //  Color arguments are must be scaled to fit the Quantum size according to
    //  the range of MaxRGB
@@ -83,7 +102,7 @@
  
    const P *img_fvec = img.fortran_vec ();
    const P *a_fvec   = alpha.fortran_vec ();
-@@ -1105,7 +1120,8 @@
+@@ -1105,7 +1126,8 @@
                    {
                      Magick::Color c;
                      c.redQuantum   (double (*img_fvec) / divisor);
@@ -93,7 +112,7 @@
                      pix[GM_idx] = c;
                      img_fvec++;
                      a_fvec++;
-@@ -1170,10 +1186,11 @@
+@@ -1170,10 +1192,11 @@
                {
                  for (octave_idx_type row = 0; row < nRows; row++)
                    {
@@ -106,7 +125,7 @@
                      pix[GM_idx] = c;
                      img_fvec++;
                      a_fvec++;
-@@ -1247,7 +1264,8 @@
+@@ -1247,7 +1270,8 @@
                                       double (img_fvec[Y_offset]) / divisor,
                                       double (img_fvec[K_offset]) / divisor);
                      pix[GM_idx] = c;

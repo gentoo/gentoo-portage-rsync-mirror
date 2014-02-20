@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/octave
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.153 2014/02/20 05:39:59 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.154 2014/02/20 08:50:37 gienah Exp $
+
+  20 Feb 2014; Mark Wright <gienah@gentoo.org>
+  files/octave-3.8.0-imagemagick.patch, octave-3.6.4-r1.ebuild,
+  octave-3.8.0.ebuild:
+  Fix bug Bug 496650 - sci-mathematics/octave should depend on dev-texlive
+  /texlive-metapost - dvips: ! Couldn't find header file: groff.enc, thanks to
+  Jan Hrabe for reporting. Tweak the octave-3.8.0 iamgemagick patch to fix the
+  compile with media-gfx/imagemagick-6.7.8.7 and media-gfx/imagemagick-6.8.6.8.
 
   20 Feb 2014; Mark Wright <gienah@gentoo.org> octave-3.8.0.ebuild:
   Fix bug 501756 - sci-mathematics/octave-3.8.0 LC_ALL=et_EE - octave.cc:485:56:

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.4-r1.ebuild,v 1.1 2013/12/07 18:50:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.6.4-r1.ebuild,v 1.2 2014/02/20 08:50:37 gienah Exp $
 
 EAPI=5
 
@@ -59,6 +59,7 @@ DEPEND="${RDEPEND}
 	doc? (
 		virtual/latex-base
 		dev-texlive/texlive-genericrecommended
+		dev-texlive/texlive-metapost
 		sys-apps/texinfo )
 	dev-util/gperf
 	virtual/pkgconfig"
