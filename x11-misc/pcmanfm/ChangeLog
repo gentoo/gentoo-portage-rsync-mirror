@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pcmanfm
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.93 2013/12/14 11:50:30 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.94 2014/02/20 18:12:16 maekke Exp $
+
+  20 Feb 2014; Markus Meier <maekke@gentoo.org> pcmanfm-1.1.2.ebuild:
+  arm stable, bug #494440
 
   14 Dec 2013; Markos Chandras <hwoarang@gentoo.org> -pcmanfm-1.1.0-r1.ebuild:
   Remove old

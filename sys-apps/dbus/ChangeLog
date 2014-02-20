@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.403 2014/02/13 16:06:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.404 2014/02/20 18:08:29 maekke Exp $
+
+  20 Feb 2014; Markus Meier <maekke@gentoo.org> dbus-1.6.18-r1.ebuild:
+  arm stable, bug #496628
 
   13 Feb 2014; Jeroen Roovers <jer@gentoo.org> dbus-1.6.18-r1.ebuild:
   Stable for HPPA (bug #496628).
