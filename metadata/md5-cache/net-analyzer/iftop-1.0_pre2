@@ -3,9 +3,9 @@ DEPEND=net-libs/libpcap sys-libs/ncurses !<sys-devel/gettext-0.18.1.1-r3 || ( >=
 DESCRIPTION=display bandwidth usage on an interface
 EAPI=5
 HOMEPAGE=http://www.ex-parrot.com/pdw/iftop/
-KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=~alpha amd64 ~arm hppa ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.ex-parrot.com/pdw/iftop/download/iftop-1.0pre2.tar.gz
 _eclasses_=autotools	b0a4d5334d34abe7b6829eb87cf3c544	eutils	40081e8c7e7f7c4f9db349a1d6d52925	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=2ae4610b84aaff8843a60d861eb02282
+_md5_=1d8c1c7441cd13c3acd29c953ca7d2de

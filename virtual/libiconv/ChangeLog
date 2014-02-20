@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libiconv
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/ChangeLog,v 1.14 2014/02/16 00:51:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libiconv/ChangeLog,v 1.15 2014/02/20 14:46:45 hattya Exp $
+
+  20 Feb 2014; Akinori Hattori <hattya@gentoo.org> libiconv-0-r1.ebuild:
+  ia64 stable wrt bug #500680
 
   16 Feb 2014; Jeroen Roovers <jer@gentoo.org> libiconv-0-r1.ebuild:
   Stable for HPPA (bug #500680).

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.338 2014/02/17 21:08:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.339 2014/02/20 15:00:36 jer Exp $
+
+  20 Feb 2014; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Fix typo in rtmp USE flag description by Eivind Uggedal (bug #501894).
 
   17 Feb 2014; Agostino Sarubbo <ago@gentoo.org> curl-7.35.0.ebuild:
   Stable for arm, wrt bug #499902
