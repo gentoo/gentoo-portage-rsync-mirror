@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/circe
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe/ChangeLog,v 1.4 2008/12/23 20:12:21 tcunha Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/circe/ChangeLog,v 1.5 2014/02/20 08:28:17 ulm Exp $
+
+*circe-1.3 (20 Feb 2014)
+
+  20 Feb 2014; Ulrich Müller <ulm@gentoo.org> +circe-1.3.ebuild,
+  +files/50circe-gentoo-1.3.el:
+  Version bump. Update HOMEPAGE and SRC_URI.
 
   23 Dec 2008; Tiago Cunha <tcunha@gentoo.org> circe-0_pre20070805.ebuild:
   stable sparc
