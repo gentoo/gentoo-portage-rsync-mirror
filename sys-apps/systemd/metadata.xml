@@ -18,6 +18,7 @@
 		<flag name='kmod'>Enable kernel module loading via <pkg>sys-apps/kmod</pkg></flag>
 		<flag name='openrc'>Depend on <pkg>sys-fs/udev-init-scripts</pkg></flag>
 		<flag name='qrcode'>Enable qrcode output support in journal</flag>
+		<flag name='seccomp'>Enable system call filtering via seccomp</flag>
 		<flag name='vanilla'>Disable Gentoo-specific behavior and compatibility quirks</flag>
 	</use>
 </pkgmetadata>
