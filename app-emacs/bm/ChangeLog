@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/bm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bm/ChangeLog,v 1.4 2008/06/14 23:21:35 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bm/ChangeLog,v 1.5 2014/02/20 07:41:37 ulm Exp $
+
+*bm-1.32_p20140214 (20 Feb 2014)
+
+  20 Feb 2014; Ulrich Müller <ulm@gentoo.org> +bm-1.32_p20140214.ebuild:
+  Version bump. Snapshot of upstream repository.
 
   14 Jun 2008; Ulrich Mueller <ulm@gentoo.org> bm-1.32.ebuild:
   Do not assign SIMPLE_ELISP since elisp.eclass now detects this case
