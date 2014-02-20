@@ -1,0 +1,9 @@
+# ChangeLog for kde-misc/kdeconnect
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdeconnect/ChangeLog,v 1.1 2014/02/20 13:02:30 mrueg Exp $
+
+*kdeconnect-0.5 (20 Feb 2014)
+
+  20 Feb 2014; Manuel Rüger <mrueg@gentoo.org> +kdeconnect-0.5.ebuild,
+  +metadata.xml:
+  Initial version. Ebuild pulled from kde-overlay.
