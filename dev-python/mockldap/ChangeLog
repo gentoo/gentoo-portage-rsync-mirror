@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/mockldap
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/ChangeLog,v 1.5 2013/09/21 08:52:53 tampakrap Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/ChangeLog,v 1.6 2014/02/20 07:30:41 jlec Exp $
+
+*mockldap-0.1.4-r1 (20 Feb 2014)
+
+  20 Feb 2014; Justin Lecher <jlec@gentoo.org> mockldap-0.1.4.ebuild,
+  +mockldap-0.1.4-r1.ebuild, +files/mockldap-0.1.4-modify_s-backport.patch,
+  metadata.xml:
+  Backport fix for problems with modify_s()
 
   21 Sep 2013; Theo Chatzimichos <tampakrap@gentoo.org> -mockldap-0.1.1.ebuild,
   -mockldap-0.1.2.ebuild, -mockldap-0.1.ebuild, mockldap-0.1.4.ebuild:

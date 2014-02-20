@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.2.ebuild,v 1.9 2012/12/16 08:31:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.2.ebuild,v 1.10 2014/02/20 07:12:55 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -64,7 +64,7 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	elog "${PN} is a frontend for several archiving utilities. If you want a"
-	elog "particular achive format support, see ${HOMEPAGE}"
+	elog "particular archive format support, see ${HOMEPAGE}"
 	elog "and install the relevant package."
 	elog
 	elog "for example:"

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.8.4-r2.ebuild,v 1.3 2013/12/08 17:36:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.8.4-r2.ebuild,v 1.4 2014/02/20 07:12:55 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -46,7 +46,7 @@ DEPEND="${RDEPEND}
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="
 ${PN} is a frontend for several archiving utilities. If you want a
-particular achive format support, see ${HOMEPAGE}
+particular archive format support, see ${HOMEPAGE}
 and install the relevant package. For example:
 7-zip   - app-arch/p7zip
 ace     - app-arch/unace

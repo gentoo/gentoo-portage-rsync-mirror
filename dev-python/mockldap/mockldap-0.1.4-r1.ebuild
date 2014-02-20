@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/mockldap-0.1.4.ebuild,v 1.3 2014/02/20 07:30:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/mockldap-0.1.4-r1.ebuild,v 1.1 2014/02/20 07:30:41 jlec Exp $
 
 EAPI=5
 
@@ -17,14 +17,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND="
-	dev-python/funcparserlib[${PYTHON_USEDEP}]
+RDEPEND="dev-python/funcparserlib[${PYTHON_USEDEP}]
 	dev-python/mock[${PYTHON_USEDEP}]
 	dev-python/python-ldap[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? ( dev-python/passlib[${PYTHON_USEDEP}] )"
+
+PATCHES=( "${FILESDIR}"/${P}-modify_s-backport.patch )
 
 python_compile_all() {
 	use doc && emake -C docs html
