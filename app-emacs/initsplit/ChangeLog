@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/initsplit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/initsplit/ChangeLog,v 1.9 2009/01/29 02:07:42 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/initsplit/ChangeLog,v 1.10 2014/02/20 12:25:30 ulm Exp $
+
+*initsplit-1.7_pre20140203 (20 Feb 2014)
+
+  20 Feb 2014; Ulrich Müller <ulm@gentoo.org>
+  +initsplit-1.7_pre20140203.ebuild, +files/50initsplit-gentoo.el:
+  Version bump. Snapshot of upstream repository.
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -files/50initsplit-gentoo.el, -initsplit-1.6.ebuild:
