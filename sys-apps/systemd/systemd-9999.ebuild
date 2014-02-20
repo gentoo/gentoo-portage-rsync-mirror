@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.81 2014/02/16 19:23:21 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.82 2014/02/20 02:27:33 floppym Exp $
 
 EAPI=5
 
@@ -92,6 +92,7 @@ DEPEND="${DEPEND}
 
 SRC_URI=
 KEYWORDS=
+#endif
 
 src_prepare() {
 	if use doc; then
@@ -105,7 +106,6 @@ src_prepare() {
 
 	autotools-utils_src_prepare
 }
-#endif
 
 pkg_pretend() {
 	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS ~DEVTMPFS ~DMIID
@@ -320,7 +320,7 @@ migrate_locale() {
 	local locale_conf="${EROOT%/}/etc/locale.conf"
 
 	if [[ ! -L ${locale_conf} && ! -e ${locale_conf} ]]; then
-		# if locale.conf does not exist...
+		# If locale.conf does not exist...
 		if [[ -e ${envd_locale} ]]; then
 			# ...either copy env.d/??locale if there's one
 			ebegin "Moving ${envd_locale} to ${locale_conf}"
