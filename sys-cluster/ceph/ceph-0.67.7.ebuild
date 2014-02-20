@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.67.5-r2.ebuild,v 1.2 2014/01/26 08:40:49 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.67.7.ebuild,v 1.1 2014/02/20 10:18:55 dlan Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_6,2_7} )
@@ -60,9 +60,6 @@ DEPEND="${CDEPEND}
 	virtual/pkgconfig"
 RDEPEND="${CDEPEND}
 	sys-apps/hdparm
-	sys-block/parted
-	sys-fs/cryptsetup
-	sys-fs/btrfs-progs
 	$(python_gen_any_dep '
 	dev-python/flask[${PYTHON_USEDEP}]
 	dev-python/requests[${PYTHON_USEDEP}]
@@ -133,4 +130,11 @@ src_install() {
 	#install udev rules
 	udev_dorules udev/50-rbd.rules
 	udev_dorules udev/95-ceph-osd.rules
+}
+
+pkg_postinst() {
+	elog "We suggest to install following packages"
+	elog " sys-block/parted		to manage disk partions"
+	elog " sys-fs/btrfs-progs	to use btrfs filesytem"
+	elog " sys-fs/cryptsetup	to use encrypted devices with dm-crypt"
 }
