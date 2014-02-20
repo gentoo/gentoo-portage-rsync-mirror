@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.16_p1969.ebuild,v 1.1 2014/02/19 12:02:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.4.16_p1969.ebuild,v 1.2 2014/02/20 14:03:44 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils cmake-utils qt4-r2
@@ -42,6 +42,7 @@ RDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.4.15-cryptopp.patch"
+	"${FILESDIR}/${PN}-1.4.16_p1969-pthread.patch"
 )
 
 S=${WORKDIR}/${P/_p*/}-Source

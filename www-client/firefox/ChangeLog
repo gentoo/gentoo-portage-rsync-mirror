@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.303 2014/02/15 06:03:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.304 2014/02/20 14:26:05 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.3.0.ebuild:
+  Stable for ppc, wrt bug #500320
 
   15 Feb 2014; Agostino Sarubbo <ago@gentoo.org> firefox-24.3.0.ebuild:
   Stable for amd64, wrt bug #500320
