@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-openchrome
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.73 2013/10/08 05:06:29 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/ChangeLog,v 1.74 2014/02/20 11:46:20 chithanh Exp $
+
+  20 Feb 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xf86-video-openchrome-0.3.1.ebuild, -xf86-video-openchrome-0.3.2.ebuild,
+  xf86-video-openchrome-0.3.3.ebuild:
+  Fix broken HOMEPAGE and SRC_URI, bug #501822. Remove old.
 
   08 Oct 2013; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-openchrome-0.3.3.ebuild:
