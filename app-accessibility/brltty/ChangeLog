@@ -1,6 +1,18 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.145 2014/02/09 18:55:59 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.146 2014/02/20 03:23:11 teiresias Exp $
+
+*brltty-5.0-r1 (20 Feb 2014)
+
+  20 Feb 2014; Christopher Brannon <teiresias@gentoo.org> -brltty-5.0.ebuild,
+  +brltty-5.0-r1.ebuild, +files/brltty.tmpfiles.conf:
+  * Fixed installation of locale messages.
+  * Fixed some configure switches broken by 4.5 to 5.0 transition.
+  * Use /run/brltty for the writable directory, not /var/runn/brltty.
+
+  This gets rid of the annoying post-installation message about the
+
+  old /var/run symlink.
 
 *brltty-5.0 (09 Feb 2014)
 

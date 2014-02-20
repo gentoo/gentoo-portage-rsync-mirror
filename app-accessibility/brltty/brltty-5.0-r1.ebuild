@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-5.0.ebuild,v 1.1 2014/02/09 18:55:59 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-5.0-r1.ebuild,v 1.1 2014/02/20 03:23:11 teiresias Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="+api +beeper bluetooth +contracted-braille doc +fm gpm iconv icu
-		java +learn-mode +midi ncurses nls ocaml +pcm python usb +speech
+		java +midi ncurses nls ocaml +pcm python usb +speech
 		tcl X"
 REQUIRED_USE="doc? ( api )
 	java? ( api )
@@ -64,23 +64,24 @@ src_configure() {
 	# Disable stripping since we do that ourselves.
 	econf \
 		--prefix=/ \
+		--localedir=/usr/share/locale \
 		--includedir=/usr/include \
 		--localstatedir=/var \
 		--disable-stripping \
 		--with-install-root="${D}" \
+		--with-writable-directory="/run/brltty" \
 		$(use_enable api) \
-		$(use_enable beeper beeper-support) \
+		$(use_with beeper beep-package) \
 		$(use_enable contracted-braille) \
-		$(use_enable fm fm-support) \
+		$(use_with fm fm-package) \
 		$(use_enable gpm) \
 		$(use_enable iconv) \
 		$(use_enable icu) \
 		$(use_enable java java-bindings) \
-		$(use_enable learn-mode) \
-		$(use_enable midi midi-support) \
+		$(use_with midi midi-package) \
 		$(use_enable nls i18n) \
 		$(use_enable ocaml ocaml-bindings) \
-		$(use_enable pcm pcm-support) \
+		$(use_with pcm pcm-package) \
 		$(use_enable python python-bindings) \
 		$(use_enable speech speech-support) \
 		$(use_enable tcl tcl-bindings) \
@@ -120,6 +121,7 @@ src_install() {
 	udev_newrules Autostart/Udev/udev.rules 70-brltty.rules
 	newinitd "${FILESDIR}"/brltty.rc brltty
 	systemd_dounit Autostart/Systemd/brltty.service
+	systemd_dotmpfilesd "${FILESDIR}/${PN}.tmpfiles.conf"
 
 	libdir="$(get_libdir)"
 	mkdir -p "${D}"/usr/${libdir}/
