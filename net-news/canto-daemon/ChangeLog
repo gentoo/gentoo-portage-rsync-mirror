@@ -1,0 +1,10 @@
+# ChangeLog for net-news/canto-daemon
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/canto-daemon/ChangeLog,v 1.1 2014/02/20 20:25:28 pinkbyte Exp $
+
+*canto-daemon-0.8.2 (20 Feb 2014)
+
+  20 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> +canto-daemon-0.8.2.ebuild,
+  +metadata.xml:
+  Initial commit, wrt bug #462028
+

@@ -1,0 +1,10 @@
+# ChangeLog for net-news/canto-curses
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/canto-curses/ChangeLog,v 1.1 2014/02/20 20:29:44 pinkbyte Exp $
+
+*canto-curses-0.8.4 (20 Feb 2014)
+
+  20 Feb 2014; Sergey Popov <pinkbyte@gentoo.org> +canto-curses-0.8.4.ebuild,
+  +metadata.xml:
+  Initial commit, wrt bug #462028
+
