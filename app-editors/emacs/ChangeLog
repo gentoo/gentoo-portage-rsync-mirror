@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.606 2014/02/17 08:18:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.607 2014/02/20 20:59:41 ulm Exp $
+
+  20 Feb 2014; Ulrich Müller <ulm@gentoo.org> emacs-18.59-r9.ebuild:
+  Fix SRC_URI, old-gnu is not on GNU mirrors.
 
   17 Feb 2014; Ulrich Müller <ulm@gentoo.org> emacs-23.4-r6.ebuild,
   emacs-24.3-r2.ebuild:

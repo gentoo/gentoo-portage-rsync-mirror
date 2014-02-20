@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.884 2014/01/30 18:13:24 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.885 2014/02/20 20:32:14 tomwij Exp $
+
+  20 Feb 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml, vlc-9999.ebuild:
+  Preparation for version bump by updating 9999 ebuild, small USE flag and
+  medium configure parameter changes.
 
   30 Jan 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.8.ebuild,
   vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild, vlc-2.1.0.ebuild, vlc-2.1.1.ebuild,

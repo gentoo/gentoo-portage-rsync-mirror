@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/udevil
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.34 2014/02/11 11:03:13 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.35 2014/02/20 20:37:44 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> udevil-0.4.3.ebuild:
+  Stable for x86, wrt bug #499826
 
   11 Feb 2014; Chema Alonso <nimiux@gentoo.org> udevil-0.4.3.ebuild:
   Stable for amd64 wrt bug #499826

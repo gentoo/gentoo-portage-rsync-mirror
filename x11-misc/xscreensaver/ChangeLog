@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.344 2014/02/19 10:43:55 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.345 2014/02/20 20:38:32 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> xscreensaver-5.26.ebuild:
+  Stable for x86, wrt bug #499990
 
   19 Feb 2014; Chema Alonso <nimiux@gentoo.org> xscreensaver-5.26.ebuild:
   Stable for amd64 wrt bug #499990

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15413 2014/02/20 12:31:32 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.15414 2014/02/20 20:32:16 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Müller <ulm@gentoo.org> (20 Feb 2014)
+# Abandoned by upstream: Last release in 2003, last visible
+# upstream activity in 2004. Does not work with Emacs 24.
+# File a bug for moving app-emacs/oddmuse (currently in emacs
+# overlay) to the main tree if you need a replacement.
+# Masked for removal in 30 days, bug 501926.
+app-emacs/http-emacs
 
 # Luca Barbato <lu_zero@gentoo.org> (20 Feb 2014)
 # Beta ebuild, unmask to test the tree.

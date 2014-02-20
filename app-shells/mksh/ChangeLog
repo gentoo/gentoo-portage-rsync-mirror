@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/mksh
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.49 2014/02/10 10:09:46 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/ChangeLog,v 1.50 2014/02/20 20:39:33 ago Exp $
+
+  20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> mksh-48b.ebuild:
+  Stable for x86, wrt bug #500492
 
   10 Feb 2014; Chema Alonso <nimiux@gentoo.org> mksh-48b.ebuild:
   Stable for amd64 wrt bug #500492

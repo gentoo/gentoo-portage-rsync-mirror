@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sieve-connect/sieve-connect-0.87.ebuild,v 1.2 2014/02/14 10:27:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sieve-connect/sieve-connect-0.87.ebuild,v 1.3 2014/02/20 20:38:13 ago Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="https://github.com/syscomet/sieve-connect/releases/download/v${PV}/${P}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/perl-5"

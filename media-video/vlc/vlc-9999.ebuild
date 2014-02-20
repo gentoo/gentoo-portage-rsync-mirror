@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.208 2014/01/30 16:40:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.209 2014/02/20 20:32:14 tomwij Exp $
 
 EAPI="5"
 
@@ -41,10 +41,10 @@ else
 fi
 
 IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
-	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug dirac
+	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode faad fdk
-	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
-	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
+	fluidsynth +ffmpeg flac fontconfig +gcrypt gles1 gles2 gme gnome gnutls
+	growl httpd ieee1394 ios-vout jack jpeg kate kde libass libcaca libnotify
 	libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
@@ -67,12 +67,11 @@ RDEPEND="
 		avcodec? ( virtual/ffmpeg:0 )
 		avformat? ( virtual/ffmpeg:0 )
 		bidi? ( >=dev-libs/fribidi-0.10.4:0 )
-		bluray? ( >=media-libs/libbluray-0.2.1:0 )
+		bluray? ( >=media-libs/libbluray-0.3.0:0 )
 		cddb? ( >=media-libs/libcddb-1.2.0:0 )
 		chromaprint? ( >=media-libs/chromaprint-0.6:0 )
 		dbus? ( >=sys-apps/dbus-1.0.2:0 )
 		dc1394? ( >=sys-libs/libraw1394-2.0.1:0 >=media-libs/libdc1394-2.1.0:2 )
-		dirac? ( >=media-video/dirac-0.10.0:0 )
 		directfb? ( dev-libs/DirectFB:0 sys-libs/zlib:0 )
 		dts? ( media-libs/libdca:0 )
 		dvbpsi? ( >=media-libs/libdvbpsi-0.2.1:0 )
@@ -85,12 +84,15 @@ RDEPEND="
 		fluidsynth? ( >=media-sound/fluidsynth-1.1.2:0 )
 		fontconfig? ( media-libs/fontconfig:1.0 )
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0:0 )
+		gles1? ( virtual/opengles:0 )
+		gles2? ( virtual/opengles:0 )
 		gme? ( media-libs/game-music-emu:0 )
 		gnome? ( gnome-base/gnome-vfs:2 dev-libs/glib:2 )
 		gnutls? ( >=net-libs/gnutls-3.0.20:0 )
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1:0 >=sys-libs/libavc1394-0.5.3:0 )
 		ios-vout? ( virtual/opengl:0 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1:0 )
+		jpeg? ( virtual/jpeg:0 )
 		kate? ( >=media-libs/libkate-0.3.0:0 )
 		libass? ( >=media-libs/libass-0.9.8:0 media-libs/fontconfig:1.0 )
 		libcaca? ( >=media-libs/libcaca-0.99_beta14:0 )
@@ -158,6 +160,7 @@ DEPEND="${RDEPEND}
 	kde? ( >=kde-base/kdelibs-4:4 )
 	xcb? ( x11-proto/xproto:0 )
 	app-arch/xz-utils:0
+	dev-lang/yasm:0
 	>=sys-devel/gettext-0.18.3:0
 	virtual/pkgconfig:0
 "
@@ -304,7 +307,6 @@ src_configure() {
 		$(use_enable cddb libcddb) \
 		$(use_enable chromaprint) \
 		$(use_enable dbus) \
-		$(use_enable dirac) \
 		$(use_enable directfb) \
 		$(use_enable directx) \
 		$(use_enable dc1394) \
@@ -321,14 +323,17 @@ src_configure() {
 		$(use_enable fluidsynth) \
 		$(use_enable fontconfig) \
 		$(use_enable gcrypt libgcrypt) \
+		$(use_enable gles1) \
+		$(use_enable gles2) \
 		$(use_enable gme) \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable gnutls) \
 		$(use_enable growl) \
 		$(use_enable httpd) \
 		$(use_enable ieee1394 dv1394) \
-		$(use_enable ios-vout) \
+		$(use_enable ios-vout ios-vout2) \
 		$(use_enable jack) \
+		$(use_enable jpeg) \
 		$(use_enable kate) \
 		$(use_with kde kde-solid) \
 		$(use_enable libass) \
@@ -358,6 +363,7 @@ src_configure() {
 		$(use_enable neon) \
 		$(use_enable ogg) $(use_enable ogg mux_ogg) \
 		$(use_enable omxil) \
+		$(use_enable omxil omxil-vout) \
 		$(use_enable opencv) \
 		$(use_enable opengl glx) $(use_enable opengl glspectrum) \
 		$(use_enable opus) \
@@ -404,20 +410,31 @@ src_configure() {
 		$(use_enable xml libxml2) \
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
+		--disable-asdcp \
+		--disable-coregraphicslayer-vout \
+		--disable-coverage \
+		--disable-cprof \
 		--disable-crystalhd \
 		--disable-decklink \
+		--disable-ios-audio \
 		--disable-goom \
 		--disable-kai \
 		--disable-kva \
+		--disable-maintainer-mode \
+		--disable-merge-ffmpeg \
 		--disable-mfx \
+		--disable-opensles \
 		--disable-oss \
+		--disable-quicktime \
+		--disable-rpi-omxil \
 		--disable-shine \
 		--disable-sndio \
 		--disable-x265 \
 		--disable-vda \
-		--disable-vsxu
+		--disable-vsxu \
+		--disable-wasapi
 
-		# ^ We don't have these disables libraries in the Portage tree yet.
+		# ^ We don't have these disabled libraries in the Portage tree yet.
 }
 
 src_test() {
