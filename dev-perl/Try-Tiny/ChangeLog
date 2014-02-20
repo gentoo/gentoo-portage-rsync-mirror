@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.59 2014/02/18 16:00:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.60 2014/02/20 15:19:27 hattya Exp $
+
+  20 Feb 2014; Akinori Hattori <hattya@gentoo.org> Try-Tiny-0.180.0.ebuild:
+  ia64 stable wrt bug #495496
 
   18 Feb 2014; Jeroen Roovers <jer@gentoo.org> Try-Tiny-0.180.0.ebuild:
   Stable for HPPA (bug #495496).

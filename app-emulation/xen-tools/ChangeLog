@@ -1,6 +1,37 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.225 2014/02/20 10:24:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.227 2014/02/20 15:29:10 dlan Exp $
+
+  20 Feb 2014; Yixun Lan <dlan@gentoo.org>
+  -files/xen-4-CVE-2013-0215-XSA-38.patch,
+  -files/xen-4-CVE-2013-1919-XSA-46.patch,
+  -files/xen-4-CVE-2013-1922-XSA-48.patch,
+  -files/xen-4-CVE-2013-1952-XSA-49.patch,
+  -files/xen-4-CVE-2013-1952-XSA_49.patch,
+  -files/xen-4-CVE-2013-2072-XSA-56.patch,
+  -files/xen-4.2-CVE-2013-1-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-12to13-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-14-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-16-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-17-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-18to19-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-2-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-20to23-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-3-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-4-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-5to7-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-6-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-7-XSA-55.patch,
+  -files/xen-4.2-CVE-2013-9to10-XSA-55.patch, -files/xen-4.2-CVE-XSA-57.patch,
+  -files/xen-tools-4-CVE-2013-4369-XSA-68.patch,
+  -files/xen-tools-4-CVE-2013-4370-XSA-69.patch,
+  -files/xen-tools-4-CVE-2013-4371-XSA-70.patch,
+  -files/xen-tools-4-CVE-2013-4416-XSA-72.patch:
+  clean up unused XSA patches
+
+  20 Feb 2014; Yixun Lan <dlan@gentoo.org> -xen-tools-4.2.2-r3.ebuild,
+  -xen-tools-4.2.2-r7.ebuild, -xen-tools-4.2.3.ebuild:
+  drop old ebuild, clean up
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> xen-tools-4.2.3-r1.ebuild:
   Stable for x86, wrt bug #500530

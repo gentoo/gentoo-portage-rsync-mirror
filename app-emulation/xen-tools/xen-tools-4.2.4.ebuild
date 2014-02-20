@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.4.ebuild,v 1.1 2014/02/19 06:54:00 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.2.4.ebuild,v 1.2 2014/02/20 15:24:04 dlan Exp $
 
 EAPI=5
 
@@ -232,7 +232,6 @@ src_prepare() {
 
 	# Bug 445986
 	sed -e 's:$(MAKE) PYTHON=$(PYTHON) subdirs-$@:LC_ALL=C "$(MAKE)" PYTHON=$(PYTHON) subdirs-$@:' -i tools/firmware/Makefile || die
-
 
 	# fix QA warning, create /var/run/, /var/lock dynamically
 	sed -i -e "/\$(INSTALL_DIR) \$(DESTDIR)\$(XEN_RUN_DIR)/d" \
