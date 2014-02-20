@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.2.1.ebuild,v 1.4 2014/02/02 18:28:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.10.4.ebuild,v 1.1 2014/02/20 21:47:03 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ PYTHON_COMPAT=( python2_{6,7} )
 inherit autotools eutils gnome2 multilib pax-utils python-r1 systemd
 
 DESCRIPTION="Provides core UI functions for the GNOME 3 desktop"
-HOMEPAGE="http://live.gnome.org/GnomeShell"
+HOMEPAGE="https://wiki.gnome.org/Projects/GnomeShell"
 
 LICENSE="GPL-2+ LGPL-2+"
 SLOT="0"
@@ -22,9 +22,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 # FIXME:
 #  * gstreamer support is currently automagic
 #  * mutter/mutter-wayland support is automagic
-#
-# gnome-shell/gnome-control-center/mutter/gnome-settings-daemon better to be in sync for 3.8.3
-# https://mail.gnome.org/archives/gnome-announce-list/2013-June/msg00005.html
 COMMON_DEPEND="
 	app-crypt/libsecret
 	>=app-accessibility/at-spi2-atk-2.5.3
@@ -49,7 +46,7 @@ COMMON_DEPEND="
 	>=sys-auth/polkit-0.100[introspection]
 	>=x11-libs/libXfixes-5.0
 	x11-libs/libXtst
-	>=x11-wm/mutter-3.10.1[introspection]
+	>=x11-wm/mutter-3.10.4[introspection]
 	>=x11-libs/startup-notification-0.11
 
 	${PYTHON_DEPS}
@@ -140,7 +137,6 @@ src_configure() {
 	# Do not error out on warnings
 	gnome2_src_configure \
 		--enable-man \
-		--disable-jhbuild-wrapper-script \
 		$(use_with bluetooth) \
 		$(use_enable networkmanager) \
 		BROWSER_PLUGIN_DIR="${EPREFIX}"/usr/$(get_libdir)/nsbrowser/plugins
