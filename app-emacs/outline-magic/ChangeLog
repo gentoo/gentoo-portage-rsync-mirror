@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/outline-magic
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/outline-magic/ChangeLog,v 1.4 2009/02/22 15:23:36 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/outline-magic/ChangeLog,v 1.5 2014/02/20 00:09:53 ulm Exp $
+
+  20 Feb 2014; Ulrich Müller <ulm@gentoo.org> outline-magic-0.9.ebuild:
+  Update ebuild to EAPI 5. Update HOMEPAGE. Specify LICENSE more precisely.
 
   22 Feb 2009; Raúl Porcel <armin76@gentoo.org> outline-magic-0.9.ebuild:
   x86 stable wrt #259145
