@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.264 2014/02/21 12:18:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.266 2014/02/21 13:53:38 ssuominen Exp $
 
 EAPI=5
 
@@ -201,6 +201,7 @@ multilib_src_configure() {
 		--disable-microhttpd
 		--disable-readahead
 		--disable-quotacheck
+		--disable-logind
 		--disable-polkit
 		--disable-myhostname
 		--enable-split-usr
@@ -331,7 +332,8 @@ multilib_src_install() {
 			lib_LTLIBRARIES="${lib_LTLIBRARIES}"
 			pkgconfiglib_DATA="${pkgconfiglib_DATA}"
 			INSTALL_DIRS='$(sysconfdir)/udev/rules.d \
-					$(sysconfdir)/udev/hwdb.d'
+					$(sysconfdir)/udev/hwdb.d \
+					$(sysconfdir)/systemd/network'
 			dist_bashcompletion_DATA="shell-completion/bash/udevadm"
 			networkdir=/lib/systemd/network
 		)
@@ -449,7 +451,9 @@ pkg_postinst() {
 	elog "(replace <ifname> with, for example, eth0):"
 	elog "# udevadm test-builtin net_id /sys/class/net/<ifname> 2> /dev/null"
 	elog
-	elog "You can disable the feature with kernel parameter \"net.ifnames=0\""
+	elog "You can use either kernel parameter \"net.ifnames=0\", create empty"
+	elog "file /etc/systemd/network/99-default.link, or symlink it to /dev/null"
+	elog "to disable the feature."
 
 	if has_version sys-apps/biosdevname; then
 		ewarn

@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.988 2014/02/21 12:20:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.990 2014/02/21 13:53:38 ssuominen Exp $
+
+  21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> udev-209.ebuild,
+  udev-9999.ebuild:
+  Create empty /etc/systemd/network. Restore --disable-logind to avoid
+  installation of 70-uaccess.rules and 70-power-switch.rules.
+
+  21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> udev-209.ebuild,
+  udev-9999.ebuild:
+  Document the possibility of overriding 99-default.link in
+  /etc/systemd/network.
 
 *udev-209 (21 Feb 2014)
 
