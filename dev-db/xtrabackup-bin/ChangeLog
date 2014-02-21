@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/xtrabackup-bin
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/ChangeLog,v 1.4 2013/12/27 00:44:10 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/ChangeLog,v 1.5 2014/02/21 21:10:43 idl0r Exp $
+
+*xtrabackup-bin-2.1.7 (21 Feb 2014)
+
+  21 Feb 2014; Christian Ruppert <idl0r@gentoo.org>
+  xtrabackup-bin-2.0.8.ebuild, -xtrabackup-bin-2.1.6.ebuild,
+  +xtrabackup-bin-2.1.7.ebuild,
+  +files/xtrabackup-bin-2.1.7-no-versioncheck.patch:
+  Version bump, also fixes CVE-2014-2029 / bug 501904
 
 *xtrabackup-bin-2.1.6 (27 Dec 2013)
 *xtrabackup-bin-2.0.8 (27 Dec 2013)

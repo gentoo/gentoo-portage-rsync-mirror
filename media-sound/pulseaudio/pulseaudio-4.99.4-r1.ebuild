@@ -1,14 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.0-r1.ebuild,v 1.3 2014/02/16 23:02:21 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-4.99.4-r1.ebuild,v 1.1 2014/02/21 21:08:45 pacho Exp $
 
 EAPI="5"
-
-inherit eutils flag-o-matic multilib-minimal user versionator udev
+inherit autotools eutils flag-o-matic linux-info readme.gentoo systemd user versionator udev multilib-minimal
 
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
-
 SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 
 # libpulse-simple and libpulse link to libpulse-core; this is daemon's
@@ -16,17 +14,25 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 # cases, we have a fully GPL-2 package. Leaving the rest of the
 # GPL-forcing USE flags for those who use them.
 LICENSE="!gdbm? ( LGPL-2.1 ) gdbm? ( GPL-2 )"
+
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
+
 IUSE="+alsa +asyncns avahi bluetooth +caps dbus doc equalizer +gdbm +glib gnome
 gtk ipv6 jack libsamplerate lirc neon +orc oss qt4 realtime ssl systemd
 system-wide tcpd test +udev +webrtc-aec +X xen"
 
-RDEPEND=">=media-libs/libsndfile-1.0.20[${MULTILIB_USEDEP}]
+# libpcre needed in some cases, bug #472228
+RDEPEND="
+	|| (
+		elibc_glibc? ( virtual/libc )
+		elibc_uclibc? ( virtual/libc )
+		dev-libs/libpcre
+	)
+	>=media-libs/libsndfile-1.0.20[${MULTILIB_USEDEP}]
 	X? (
 		>=x11-libs/libX11-1.4.0[${MULTILIB_USEDEP}]
 		>=x11-libs/libxcb-1.6[${MULTILIB_USEDEP}]
-		>=x11-libs/xcb-util-0.3.1
 		x11-libs/libSM[${MULTILIB_USEDEP}]
 		x11-libs/libICE[${MULTILIB_USEDEP}]
 		x11-libs/libXtst[${MULTILIB_USEDEP}]
@@ -43,7 +49,7 @@ RDEPEND=">=media-libs/libsndfile-1.0.20[${MULTILIB_USEDEP}]
 	gtk? ( x11-libs/gtk+:3 )
 	gnome? ( >=gnome-base/gconf-2.4.0 )
 	bluetooth? (
-		>=net-wireless/bluez-4.99
+		>=net-wireless/bluez-5
 		>=sys-apps/dbus-1.0.0
 		media-libs/sbc
 	)
@@ -56,12 +62,14 @@ RDEPEND=">=media-libs/libsndfile-1.0.20[${MULTILIB_USEDEP}]
 	>=media-libs/speex-1.2_rc1
 	gdbm? ( sys-libs/gdbm )
 	webrtc-aec? ( media-libs/webrtc-audio-processing )
-	xen? ( app-emulation/xen )
+	xen? ( app-emulation/xen-tools )
 	systemd? ( >=sys-apps/systemd-39 )
 	dev-libs/json-c[${MULTILIB_USEDEP}]
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-soundlibs-20131008-r1
 		!app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)] )
-	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
+	>=sys-devel/libtool-2.4.2
+"
+# it's a valid RDEPEND, libltdl.so is used
 
 DEPEND="${RDEPEND}
 	sys-devel/m4
@@ -74,7 +82,9 @@ DEPEND="${RDEPEND}
 	dev-libs/libatomic_ops
 	virtual/pkgconfig
 	system-wide? ( || ( dev-util/unifdef sys-freebsd/freebsd-ubin ) )
-	dev-util/intltool"
+	dev-util/intltool
+	>=sys-devel/gettext-0.18.1
+"
 # This is a PDEPEND to avoid a circular dep
 PDEPEND="alsa? ( >=media-plugins/alsa-plugins-1.0.27-r1[pulseaudio] )"
 
@@ -85,15 +95,31 @@ RDEPEND="${RDEPEND}
 	equalizer? ( qt4? ( dev-python/PyQt4[dbus] ) )
 	X? ( gnome-extra/gnome-audio )
 	system-wide? (
-		sys-apps/openrc
 		alsa? ( media-sound/alsa-utils )
-		bluetooth? ( >=net-wireless/bluez-4 )
-	)"
+		bluetooth? ( >=net-wireless/bluez-5 )
+	)
+"
 
 # See "*** BLUEZ support not found (requires D-Bus)" in configure.ac
 REQUIRED_USE="bluetooth? ( dbus )"
 
+pkg_pretend() {
+	CONFIG_CHECK="~HIGH_RES_TIMERS"
+	WARNING_HIGH_RES_TIMERS="CONFIG_HIGH_RES_TIMERS:\tis not set (required for enabling timer-based scheduling in pulseaudio)\n"
+	check_extra_config
+
+	if linux_config_exists; then
+		local snd_hda_prealloc_size=$(linux_chkconfig_string SND_HDA_PREALLOC_SIZE)
+		if [ -n "${snd_hda_prealloc_size}" ] && [ "${snd_hda_prealloc_size}" -lt 2048 ]; then
+			ewarn "A preallocated buffer-size of 2048 (kB) or higher is recommended for the HD-audio driver!"
+			ewarn "CONFIG_SND_HDA_PREALLOC_SIZE=${snd_hda_prealloc_size}"
+		fi
+	fi
+}
+
 pkg_setup() {
+	linux-info_pkg_setup
+
 	enewgroup audio 18 # Just make sure it exists
 
 	if use system-wide; then
@@ -101,10 +127,22 @@ pkg_setup() {
 		enewgroup pulse
 		enewuser pulse -1 -1 /var/run/pulse pulse,audio
 	fi
+
+	if use bluetooth; then
+		DOC_CONTENTS="The Bluetooth proximity module is not enabled in the default
+			configuration file. If you do enable it, you'll have to have
+			your Bluetooth controller enabled and inserted at bootup or
+			PulseAudio will refuse to start."
+	fi
+
 }
 
 src_prepare() {
+	# Skip test that cannot work with sandbox, bug #501846
+	sed -i -e '/lock-autospawn-test/d' src/Makefile.am || die
+
 	epatch_user
+	eautoreconf
 }
 
 multilib_src_configure() {
@@ -134,11 +172,13 @@ multilib_src_configure() {
 		$(use_enable gnome gconf)
 		$(use_enable gtk gtk3)
 		$(use_enable libsamplerate samplerate)
-		$(use_enable bluetooth bluez)
+		$(use_enable bluetooth bluez5)
+		$(use_enable orc)
 		$(use_enable X x11)
 		$(use_enable test default-build-tests)
 		$(use_enable udev)
 		$(use_enable systemd)
+		$(use_enable systemd systemd-journal)
 		$(use_enable ipv6)
 		$(use_enable ssl openssl)
 		$(use_enable webrtc-aec)
@@ -146,6 +186,7 @@ multilib_src_configure() {
 		$(use_with caps)
 		$(use_with equalizer fftw)
 		--disable-adrian-aec
+		--disable-bluez4
 		--disable-esound
 		--localstatedir="${EPREFIX}"/var
 		--with-udev-rules-dir="${EPREFIX}/$(udev_get_udevdir)"/rules.d
@@ -162,10 +203,12 @@ multilib_src_configure() {
 			--disable-gconf
 			--disable-gtk3
 			--disable-samplerate
-			--disable-bluez
+			--disable-bluez4
+			--disable-bluez5
 			--disable-udev
 			--disable-systemd
 			--disable-openssl
+			--disable-orc
 			--disable-webrtc-aec
 			--disable-xen
 			--without-fftw
@@ -246,6 +289,8 @@ multilib_src_install_all() {
 			> "${T}/pulseaudio"
 
 		doinitd "${T}/pulseaudio"
+
+		systemd_dounit "${FILESDIR}/${PN}.service"
 	fi
 
 	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${ED}/etc/pulse/default.pa"
@@ -258,8 +303,16 @@ multilib_src_install_all() {
 		popd
 	fi
 
+	use bluetooth && readme.gentoo_create_doc
+
 	# Create the state directory
 	use prefix || diropts -o pulse -g pulse -m0755
+
+	# We need /var/run/pulse, bug #442852
+	use system-wide && systemd_newtmpfilesd "${FILESDIR}/${PN}.tmpfiles" "${PN}.conf"
+
+	# Prevent warnings when system-wide is not used, bug #447694
+	use system-wide || rm "${ED}"/etc/dbus-1/system.d/pulseaudio-system.conf
 
 	prune_libtool_files --all
 }
@@ -282,13 +335,9 @@ pkg_postinst() {
 			elog "with a system-wide instance."
 		fi
 	fi
-	if use bluetooth; then
-		elog
-		elog "The Bluetooth proximity module is not enabled in the default"
-		elog "configuration file. If you do enable it, you'll have to have"
-		elog "your Bluetooth controller enabled and inserted at bootup or"
-		elog "PulseAudio will refuse to start."
-	fi
+
+	use bluetooth && readme.gentoo_print_elog
+
 	if use equalizer && ! use qt4; then
 		elog "You've enabled the 'equalizer' USE-flag but not the 'qt4' USE-flag."
 		elog "This will build the equalizer module, but the 'qpaeq' tool"

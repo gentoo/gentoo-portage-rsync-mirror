@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.0.8.ebuild,v 1.1 2013/12/27 00:44:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.0.8.ebuild,v 1.2 2014/02/21 21:10:43 idl0r Exp $
 
 EAPI=5
 
@@ -36,4 +36,8 @@ src_install() {
 		dobin bin/${bin}
 	done
 	dosym /usr/bin/innobackupex /usr/bin/innobackupex-1.5.1
+}
+
+pkg_postinst() {
+	einfo "xtrabackup 2.0.x is for MySQL/MariaDB 5.1 and 5.5 only"
 }

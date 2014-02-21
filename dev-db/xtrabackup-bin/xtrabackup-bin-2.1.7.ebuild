@@ -1,13 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.1.6.ebuild,v 1.1 2013/12/27 00:44:11 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xtrabackup-bin/xtrabackup-bin-2.1.7.ebuild,v 1.1 2014/02/21 21:10:43 idl0r Exp $
 
 EAPI=5
 
 MY_PN="percona-${PN/-bin}"
-MY_PVR="${PV}-702"
+MY_PVR="${PV}-721"
 MY_P="${MY_PN}-${PV}"
 MY_PF="${MY_PN}-${MY_PVR}"
+
+inherit eutils
 
 DESCRIPTION="MySQL hot backup software that performs non-blocking backups for
 InnoDB and XtraDB databases"
@@ -18,8 +20,7 @@ SRC_URI="
 	)
 	x86? (
 		http://www.percona.com/downloads/XtraBackup/XtraBackup-${PV}/binary/Linux/i686/${MY_PF}-Linux-i686.tar.gz -> ${MY_P}-x86_32.tar.gz
-	)
-"
+	)"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,9 +38,18 @@ elif use x86; then
 	S="${WORKDIR}/${MY_P}-Linux-i686"
 fi
 
+src_prepare() {
+	# bug 501904 - CVE-2014-2029
+	epatch "${FILESDIR}/${P}-no-versioncheck.patch"
+}
+
 src_install() {
 	for bin in innobackupex xbcrypt xbstream xtrabackup xtrabackup_55 xtrabackup_56; do
 		dobin bin/${bin}
 	done
 	dosym /usr/bin/innobackupex /usr/bin/innobackupex-1.5.1
+}
+
+pkg_postinst() {
+	einfo "xtrabackup 2.1.x is for MySQL/MariaDB 5.5 and 5.6 only"
 }

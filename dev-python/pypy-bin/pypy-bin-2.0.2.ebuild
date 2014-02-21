@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.0.2.ebuild,v 1.6 2013/11/17 03:36:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy-bin/pypy-bin-2.0.2.ebuild,v 1.7 2014/02/21 21:25:51 mgorny Exp $
 
 EAPI=5
 
@@ -51,13 +51,15 @@ SLOT=$(get_version_component_range 1-2 ${PV})
 KEYWORDS="~amd64 ~x86"
 IUSE="doc +jit shadowstack sqlite sse2 test"
 
+# yep, world would be easier if people started filling subslots...
 RDEPEND="
 	~app-arch/bzip2-1.0.6
 	~dev-libs/expat-2.1.0
 	|| ( ~dev-libs/libffi-3.0.13
 		~dev-libs/libffi-3.0.12
 		~dev-libs/libffi-3.0.11 )
-	|| ( ~dev-libs/openssl-1.0.1e
+	|| ( ~dev-libs/openssl-1.0.1f
+		~dev-libs/openssl-1.0.1e
 		~dev-libs/openssl-1.0.1d
 		~dev-libs/openssl-1.0.1c )
 	|| ( ~sys-libs/glibc-2.17

@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/hdbc-sqlite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/ChangeLog,v 1.17 2012/12/24 15:37:59 slyfox Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-sqlite/ChangeLog,v 1.18 2014/02/21 21:05:53 slyfox Exp $
+
+  21 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  -hdbc-sqlite-2.3.0.0.ebuild:
+  Drop old.
 
   24 Dec 2012; Sergei Trofimovich <slyfox@gentoo.org>
   +files/HDBC-sqlite3-2.3.3.0-ghc-7.6.patch, hdbc-sqlite-2.3.3.0.ebuild:
