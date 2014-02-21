@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.162 2014/02/20 14:16:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.163 2014/02/21 19:22:23 ssuominen Exp $
+
+  21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> -jpeg-6b-r11.ebuild,
+  -jpeg-6b-r9.ebuild, -jpeg-8d.ebuild:
+  old
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> jpeg-8d-r1.ebuild:
   Stable for sparc, wrt bug #491150

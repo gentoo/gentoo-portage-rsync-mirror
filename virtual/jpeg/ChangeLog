@@ -1,6 +1,12 @@
 # ChangeLog for virtual/jpeg
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.27 2014/02/20 14:16:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jpeg/ChangeLog,v 1.29 2014/02/21 19:25:28 ssuominen Exp $
+
+  21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> jpeg-62.ebuild:
+  HPPA stable (because they have the provider stable, and this is a virtual)
+
+  21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> -jpeg-0.ebuild:
+  old
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> jpeg-0-r2.ebuild,
   jpeg-62.ebuild:

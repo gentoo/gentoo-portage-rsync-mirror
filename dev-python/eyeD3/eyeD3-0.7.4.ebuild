@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.4.ebuild,v 1.4 2014/02/15 11:25:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.7.4.ebuild,v 1.5 2014/02/21 19:05:11 ssuominen Exp $
 
 EAPI=5
 
@@ -19,8 +19,7 @@ SLOT="0.7"
 KEYWORDS="~amd64 ~hppa ~ia64 ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-RDEPEND="dev-python/python-magic[${PYTHON_USEDEP}]
-	!<${CATEGORY}/${PN}-0.6.18-r1:0"
+RDEPEND="!<${CATEGORY}/${PN}-0.6.18-r1:0"
 DEPEND="${RDEPEND}
 	dev-python/paver[${PYTHON_USEDEP}]"
 
