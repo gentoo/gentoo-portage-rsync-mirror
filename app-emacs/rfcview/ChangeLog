@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/rfcview
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.9 2007/11/04 17:27:04 ulm Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rfcview/ChangeLog,v 1.10 2014/02/20 23:46:50 ulm Exp $
+
+*rfcview-0.13 (20 Feb 2014)
+
+  20 Feb 2014; Ulrich Müller <ulm@gentoo.org> +rfcview-0.13.ebuild:
+  Version bump. New upstream.
 
   04 Nov 2007; Ulrich Mueller <ulm@gentoo.org> rfcview-0.5.ebuild:
   amd64 stable, bug 195512
