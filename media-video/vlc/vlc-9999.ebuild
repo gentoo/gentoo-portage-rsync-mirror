@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.209 2014/02/20 20:32:14 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.210 2014/02/21 17:25:34 tomwij Exp $
 
 EAPI="5"
 
@@ -416,8 +416,8 @@ src_configure() {
 		--disable-cprof \
 		--disable-crystalhd \
 		--disable-decklink \
-		--disable-ios-audio \
 		--disable-goom \
+		--disable-ios-audio \
 		--disable-kai \
 		--disable-kva \
 		--disable-maintainer-mode \

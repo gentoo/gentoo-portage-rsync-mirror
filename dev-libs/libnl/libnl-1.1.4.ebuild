@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1.4.ebuild,v 1.15 2014/01/15 16:24:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-1.1.4.ebuild,v 1.16 2014/02/21 17:01:39 jer Exp $
 
 EAPI=5
 inherit eutils multilib toolchain-funcs
@@ -31,6 +31,8 @@ src_prepare() {
 	if ! use static-libs; then
 		sed -i lib/Makefile -e '/OUT_AR/d' || die
 	fi
+
+	rm -f lib/libnl.a
 }
 
 src_compile() {
