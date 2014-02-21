@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1266 2014/02/21 19:34:34 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1268 2014/02/21 20:23:23 mpagano Exp $
+
+*gentoo-sources-3.4.81-r1 (21 Feb 2014)
+
+  21 Feb 2014; Michael Pagano <mpagano@gentoo.org>
+  -gentoo-sources-3.4.81.ebuild, +gentoo-sources-3.4.81-r1.ebuild:
+  Fix 3.4.81 to use proper genpatches release 61
+
+*gentoo-sources-3.4.81 (21 Feb 2014)
+
+  21 Feb 2014; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.4.81.ebuild:
+  Linux patch 3.4.81
 
 *gentoo-sources-3.10.31 (21 Feb 2014)
 

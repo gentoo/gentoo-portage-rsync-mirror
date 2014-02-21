@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/logict
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/logict/ChangeLog,v 1.1 2013/09/13 10:03:12 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/logict/ChangeLog,v 1.2 2014/02/21 20:04:01 slyfox Exp $
+
+*logict-0.6.0.2 (21 Feb 2014)
+
+  21 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> +logict-0.6.0.2.ebuild:
+  Version bump.
 
 *logict-0.6.0.1 (13 Sep 2013)
 
