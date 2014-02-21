@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/mockldap-0.1.4-r1.ebuild,v 1.1 2014/02/20 07:30:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mockldap/mockldap-0.1.5.ebuild,v 1.1 2014/02/21 08:52:14 jlec Exp $
 
 EAPI=5
 

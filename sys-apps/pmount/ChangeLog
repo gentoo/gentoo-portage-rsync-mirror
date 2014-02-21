@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.99 2014/02/21 06:14:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.100 2014/02/21 08:54:29 mgorny Exp $
+
+  21 Feb 2014; Michał Górny <mgorny@gentoo.org> metadata.xml:
+  Add myself as a maintainer.
 
   21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Move to maintainer-needed@ since this isn't used by f.d.o related desktops

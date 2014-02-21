@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.175 2014/02/20 17:07:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.176 2014/02/21 08:54:24 mgorny Exp $
+
+  21 Feb 2014; Michał Górny <mgorny@gentoo.org>
+  files/clang-3.5-gentoo-install.patch:
+  Update clang patch wrt bug #501764, again.
 
   20 Feb 2014; Michał Górny <mgorny@gentoo.org>
   files/clang-3.5-gentoo-install.patch:
