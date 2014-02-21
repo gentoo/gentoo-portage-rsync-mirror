@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.55 2014/01/17 20:17:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.56 2014/02/21 22:00:00 bicatali Exp $
+
+*plplot-5.10.0 (21 Feb 2014)
+
+  21 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +plplot-5.10.0.ebuild:
+  Version bump
 
 *plplot-5.9.11-r1 (17 Jan 2014)
 
