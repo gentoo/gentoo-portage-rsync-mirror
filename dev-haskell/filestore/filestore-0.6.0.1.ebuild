@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filestore/filestore-0.6.0.1.ebuild,v 1.1 2013/06/20 23:37:15 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filestore/filestore-0.6.0.1.ebuild,v 1.2 2014/02/21 19:51:58 slyfox Exp $
 
 EAPI=5
 
@@ -32,6 +32,11 @@ DEPEND="${RDEPEND}
 		test? ( =dev-haskell/hunit-1.2*
 			dev-haskell/mtl
 		)"
+
+src_prepare() {
+	cabal_chdeps \
+		'process >= 1.0 && < 1.2' 'process >= 1.0 && < 1.3'
+}
 
 src_configure() {
 	haskell-cabal_src_configure \

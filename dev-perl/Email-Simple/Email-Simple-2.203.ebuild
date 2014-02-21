@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/Email-Simple-2.201.0.ebuild,v 1.1 2013/08/15 07:12:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/Email-Simple-2.203.ebuild,v 1.1 2014/02/21 19:46:29 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=RJBS
-MODULE_VERSION=2.201
+MODULE_VERSION=2.203
 inherit perl-module
 
 DESCRIPTION="Simple parsing of RFC2822 message format and headers"
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 		dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage
 		virtual/perl-Test-Simple
+		dev-perl/Capture-Tiny
 	)"
 RDEPEND="${RDEPEND}
 	!dev-perl/Email-Simple-Creator"

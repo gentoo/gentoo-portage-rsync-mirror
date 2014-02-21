@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/filestore
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filestore/ChangeLog,v 1.1 2013/06/20 23:37:15 qnikst Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/filestore/ChangeLog,v 1.2 2014/02/21 19:51:58 slyfox Exp $
+
+  21 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> filestore-0.6.0.1.ebuild:
+  Allow ghc-7.8.
 
 *filestore-0.6.0.1 (20 Jun 2013)
 

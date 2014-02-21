@@ -1,6 +1,27 @@
 # ChangeLog for dev-perl/Email-Simple
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.71 2013/09/13 05:49:16 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.77 2014/02/21 19:46:29 zlogene Exp $
+
+*Email-Simple-2.203 (21 Feb 2014)
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> +Email-Simple-2.203.ebuild,
+  -Email-Simple-2.102.0.ebuild, -Email-Simple-2.201.0.ebuild:
+  Version bump; Drop old.
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Email-Simple-2.202.ebuild:
+  ppc stable wrt bug #492142
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Email-Simple-2.202.ebuild:
+  ppc64 stable wrt bug #492142
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Email-Simple-2.202.ebuild:
+  x86 stable wrt bug #492142
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Email-Simple-2.202.ebuild:
+  amd64 stable wrt bug #492142
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> Email-Simple-2.202.ebuild:
+  bump to EAPI=5
 
 *Email-Simple-2.202 (13 Sep 2013)
 

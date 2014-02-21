@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.239 2014/01/26 12:21:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.240 2014/02/21 19:46:35 teiresias Exp $
+
+*sane-backends-1.0.24-r2 (21 Feb 2014)
+
+  21 Feb 2014; Christopher Brannon <teiresias@gentoo.org>
+  +sane-backends-1.0.24-r2.ebuild,
+  +files/sane-backends-1.0.24-kodakaio_avahi.patch:
+  Fix avahi-related segfault in kodakaio.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> sane-backends-1.0.24-r1.ebuild:
   Stable for sparc, wrt bug #497460

@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/uulib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.27 2012/12/30 13:56:46 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uulib/ChangeLog,v 1.28 2014/02/21 19:58:31 slyfox Exp $
+
+*uulib-0.9.15 (21 Feb 2014)
+
+  21 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> +uulib-0.9.15.ebuild:
+  Version bump.
 
   30 Dec 2012; Agostino Sarubbo <ago@gentoo.org> uulib-0.9.14.ebuild:
   Stable for sparc, wrt bug #428940
