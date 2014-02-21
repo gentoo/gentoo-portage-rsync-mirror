@@ -1,9 +1,9 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.3.0.ebuild,v 1.2 2014/02/20 01:03:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.3.0.ebuild,v 1.3 2014/02/21 02:29:46 floppym Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs multilib-minimal
+inherit eutils multilib toolchain-funcs multilib-minimal
 
 LIBVPX_TESTDATA_VER=1.3.0
 
@@ -45,6 +45,10 @@ REQUIRED_USE="
 	sse2? ( mmx )
 	ssse3? ( sse2 )
 	"
+
+src_prepare() {
+	epatch "${FILESDIR}/libvpx-1.3.0-dash.patch"
+}
 
 multilib_src_configure() {
 	unset CODECS #357487

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.100 2014/02/20 01:03:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.101 2014/02/21 02:29:46 floppym Exp $
+
+  21 Feb 2014; Mike Gilbert <floppym@gentoo.org> +files/libvpx-1.3.0-dash.patch,
+  libvpx-1.3.0.ebuild:
+  Fix compatibility with dash, bug 498136.
 
   20 Feb 2014; Mike Gilbert <floppym@gentoo.org> libvpx-1.1.0.ebuild,
   libvpx-1.2.0_pre20130625.ebuild, libvpx-1.3.0.ebuild, libvpx-9999.ebuild:
