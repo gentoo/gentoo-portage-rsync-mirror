@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.21 2014/01/31 07:31:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.22 2014/02/21 14:51:54 jlec Exp $
+
+  21 Feb 2014; Justin Lecher <jlec@gentoo.org> -git-cola-1.8.3.ebuild,
+  -git-cola-1.8.5.ebuild, -git-cola-1.9.1.ebuild, -git-cola-1.9.3.ebuild,
+  -git-cola-1.9.3-r1.ebuild, git-cola-1.9.4.ebuild:
+  Fix html doc installation, #472048; drop old
 
 *git-cola-1.9.4 (31 Jan 2014)
 
