@@ -3071,6 +3071,9 @@ media-gfx/eog-plugins:picasa - Enable uploading to Google's Picasa Web Albums
 media-gfx/exact-image:swig - Adds Swig support dev-lang/swig
 media-gfx/exiv2:contrib - Build additional contrib components
 media-gfx/f-spot:flickr - Enable building of the Flickr exported.
+media-gfx/fbida:X - Install the Motif based image viewer "ida"
+media-gfx/fbida:fbcon - Install the framebuffer image viewer "fbi"
+media-gfx/fbida:webp - Enable support for the WebP image format
 media-gfx/fim:dia - Enable DIA file support via app-office/dia
 media-gfx/fim:graphicsmagick - Enable GraphicsMagick library support
 media-gfx/fim:imagemagick - Use convert from media-gfx/imagemagick as fallback file opener
@@ -5258,6 +5261,7 @@ net-misc/lldpd:fdp - Enable Foundry Discovery Protocol
 net-misc/lldpd:graph - Create dot graphs in documentations
 net-misc/lldpd:json - Enable JSON output via Jansson
 net-misc/lldpd:lldpmed - Enable LLDP-MED extension
+net-misc/lldpd:seccomp - Enable use of libseccomp for system call filtering
 net-misc/lldpd:snmp - Enable the use of SNMP
 net-misc/lldpd:sonmp - Enable SynOptics Network Management
 net-misc/mediatomb:id3tag - Use media-libs/libid3tag for reading files' metadata rather than taglib

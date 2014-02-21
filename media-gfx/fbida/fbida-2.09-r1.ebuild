@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r1.ebuild,v 1.1 2013/12/31 17:23:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/fbida-2.09-r1.ebuild,v 1.2 2014/02/21 18:58:25 jer Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs
@@ -12,44 +12,38 @@ SRC_URI="http://www.kraxel.org/releases/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="curl fbcon gif imagemagick lirc pdf png scanner tiff X"
+IUSE="curl fbcon +gif lirc pdf +png scanner +tiff X +webp"
+REQUIRED_USE="
+	pdf? ( tiff )
+"
 
 RDEPEND="
+	!media-gfx/fbi
+	>=media-libs/fontconfig-2.2
+	>=media-libs/freetype-2.0
+	media-libs/libexif
 	curl? ( net-misc/curl )
 	gif? ( >media-libs/giflib-4.2 )
 	lirc? ( app-misc/lirc )
-	pdf? ( app-text/ghostscript-gpl media-libs/tiff )
 	png? ( media-libs/libpng )
-	tiff? ( media-libs/tiff )
-	imagemagick? (
-		|| (
-			media-gfx/imagemagick
-			media-gfx/graphicsmagick[imagemagick]
-		)
-	)
 	scanner? ( media-gfx/sane-backends )
+	tiff? ( media-libs/tiff )
+	virtual/jpeg
+	virtual/ttf-fonts
+	webp? ( media-libs/libwebp )
 	X? (
 		>=x11-libs/motif-2.3:0
 		x11-libs/libX11
 		x11-libs/libXpm
 		x11-libs/libXt
 	)
-	!media-gfx/fbi
-	>=media-libs/fontconfig-2.2
-	>=media-libs/freetype-2.0
-	media-libs/libexif
-	virtual/jpeg
-	virtual/ttf-fonts
 "
 
 DEPEND="
 	${RDEPEND}
 	X? ( x11-proto/xextproto x11-proto/xproto )
+	pdf? ( app-text/ghostscript-gpl )
 "
-
-pkg_setup() {
-	tc-export CC
-}
 
 src_prepare() {
 	sed -e 's:DGifOpenFileName,ungif:DGifOpenFileName,gif:' \
@@ -60,8 +54,10 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/ida-desktop.patch
-	epatch "${FILESDIR}"/${PN}-2.08-posix-make.patch
+	epatch "${FILESDIR}"/${PN}-2.09-make.patch
 	epatch "${FILESDIR}"/${P}-giflib-4.2.patch
+
+	tc-export CC CPP
 }
 
 src_configure() {
@@ -69,32 +65,28 @@ src_configure() {
 	# according to our specifications
 	emake Make.config
 
-	set_feat() {
+	gentoo_fbida() {
 		local useflag=${1}
 		local config=${2}
 
-		local option="yes"
-		if ! use ${useflag}; then
-			option="no"
-		fi
+		local option="no"
+		use ${useflag} && option="yes"
 
 		sed -i \
-			-e "s|${config}.*|${config} := ${option}|" \
+			-e "s|${config}.*|${config} := HAVE_${option}|" \
 			"${S}/Make.config" || die
 	}
 
-	set_feat fbcon 	HAVE_LINUX_FB_H
-	set_feat X 		HAVE_MOTIF
-	set_feat tiff 	HAVE_LIBTIFF
-
-	# The 'pdf' flag forces the use of libtiff.
-	set_feat pdf	HAVE_LIBTIFF
-	set_feat png 	HAVE_LIBPNG
-	set_feat gif 	HAVE_LIBUNGIF
-	set_feat lirc 	HAVE_LIBLIRC
-	set_feat curl 	HAVE_LIBCURL
-	set_feat scanner HAVE_LIBSANE
-	set_feat imagemagick HAVE_LIBMAGICK
+	gentoo_fbida X MOTIF
+	gentoo_fbida curl LIBCURL
+	gentoo_fbida fbcon LINUX_FB_H
+	gentoo_fbida gif LIBUNGIF
+	gentoo_fbida lirc LIBLIRC
+	gentoo_fbida pdf LIBTIFF
+	gentoo_fbida png LIBPNG
+	gentoo_fbida scanner LIBSANE
+	gentoo_fbida tiff LIBTIFF
+	gentoo_fbida webp LIBWEBP
 }
 
 src_compile() {
@@ -110,9 +102,8 @@ src_install() {
 
 	dodoc README
 
-	if ! use pdf; then
+	use pdf || \
 		rm -f "${D}"/usr/bin/fbgs "${D}"/usr/share/man/man1/fbgs.1
-	fi
 
 	if use X ; then
 		doicon "${WORKDIR}"/ida.png
