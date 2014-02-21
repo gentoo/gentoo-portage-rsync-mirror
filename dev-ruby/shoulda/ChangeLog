@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/shoulda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.26 2014/02/21 09:25:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/shoulda/ChangeLog,v 1.27 2014/02/21 10:40:29 graaff Exp $
+
+*shoulda-3.5.0-r1 (21 Feb 2014)
+
+  21 Feb 2014; Hans de Graaff <graaff@gentoo.org> +shoulda-3.5.0-r1.ebuild:
+  Add a proper gemspec file.
 
 *shoulda-3.5.0 (21 Feb 2014)
 
