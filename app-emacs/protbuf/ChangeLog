@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/protbuf
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/protbuf/ChangeLog,v 1.11 2008/12/06 17:16:53 fauli Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/protbuf/ChangeLog,v 1.12 2014/02/20 23:14:09 ulm Exp $
+
+  20 Feb 2014; Ulrich Müller <ulm@gentoo.org> protbuf-1.7-r1.ebuild,
+  +files/50protbuf-gentoo.el, -files/51protbuf-gentoo.el:
+  Update ebuild to EAPI 5. Update HOMEPAGE. Specify LICENSE more precisely.
+  Move site-init file to canonical name.
 
   06 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
   -files/50protbuf-gentoo.el, -protbuf-1.7.ebuild:
@@ -33,7 +38,7 @@
 *protbuf-1.7 (31 Oct 2002)
 
   31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
-  protbuf-1.7.ebuild, files/50protbuf-gentoo.el, 
+  protbuf-1.7.ebuild, files/50protbuf-gentoo.el,
   files/digest-protbuf-1.7 :
 
   Initial import.
