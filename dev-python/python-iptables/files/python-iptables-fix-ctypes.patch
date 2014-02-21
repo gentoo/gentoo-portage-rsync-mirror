@@ -1,0 +1,98 @@
+https://github.com/ldx/python-iptables/pull/59
+
+From d2532b133d56300f5f83f2a174fe24c7c2dcda0c Mon Sep 17 00:00:00 2001
+From: Tim Harder <radhermit@gmail.com>
+Date: Thu, 20 Feb 2014 19:34:19 -0800
+Subject: [PATCH] Fix return and argument types for various libiptc API calls.
+
+---
+ iptc/ip4tc.py | 11 ++++++-----
+ iptc/ip6tc.py |  9 +++++----
+ 2 files changed, 11 insertions(+), 9 deletions(-)
+
+diff --git a/iptc/ip4tc.py b/iptc/ip4tc.py
+index a953f41..9f5d8c1 100644
+--- a/iptc/ip4tc.py
++++ b/iptc/ip4tc.py
+@@ -103,7 +103,7 @@ _libiptc, _ = find_library("ip4tc", "iptc")  # old iptables versions use iptc
+ class iptc(object):
+     """This class contains all libiptc API calls."""
+     iptc_init = _libiptc.iptc_init
+-    iptc_init.restype = ct.c_void_p
++    iptc_init.restype = ct.POINTER(ct.c_int)
+     iptc_init.argstype = [ct.c_char_p]
+ 
+     iptc_free = _libiptc.iptc_free
+@@ -120,11 +120,11 @@ class iptc(object):
+ 
+     iptc_first_chain = _libiptc.iptc_first_chain
+     iptc_first_chain.restype = ct.c_char_p
+-    iptc_first_chain.argstype = [ct.c_char_p, ct.c_void_p]
++    iptc_first_chain.argstype = [ct.c_void_p]
+ 
+     iptc_next_chain = _libiptc.iptc_next_chain
+     iptc_next_chain.restype = ct.c_char_p
+-    iptc_next_chain.argstype = [ct.c_char_p, ct.c_void_p]
++    iptc_next_chain.argstype = [ct.c_void_p]
+ 
+     iptc_is_chain = _libiptc.iptc_is_chain
+     iptc_is_chain.restype = ct.c_int
+@@ -205,7 +205,8 @@ class iptc(object):
+     iptc_delete_entry = _libiptc.iptc_delete_entry
+     iptc_delete_entry.restype = ct.c_int
+     iptc_delete_entry.argstype = [ct.c_char_p, ct.POINTER(ipt_entry),
+-                                  ct.POINTER(ct.c_ubyte), ct.c_void_p]
++                                  ct.POINTER(ct.c_ubyte), ct.c_void_p,
++                                  ct.c_bool]
+ 
+     # Delete the rule in position `rulenum' in `chain'.
+     iptc_delete_num_entry = _libiptc.iptc_delete_num_entry
+@@ -1588,7 +1589,7 @@ class Table(object):
+     def delete_entry(self, chain, entry, mask):
+         """Removes rule *entry* with *mask* from *chain*."""
+         rv = self._iptc.iptc_delete_entry(chain, ct.cast(entry, ct.c_void_p),
+-                                          mask, self._handle)
++                                          mask, self._handle, False)
+         if rv != 1:
+             raise IPTCError("can't delete entry from chain %s: %s)" %
+                             (chain, self.strerror()))
+diff --git a/iptc/ip6tc.py b/iptc/ip6tc.py
+index dbf034d..3b415a2 100644
+--- a/iptc/ip6tc.py
++++ b/iptc/ip6tc.py
+@@ -82,7 +82,7 @@ _libiptc, _ = find_library("ip6tc", "iptc")  # old iptables versions use iptc
+ class ip6tc(object):
+     """This class contains all libip6tc API calls."""
+     iptc_init = _libiptc.ip6tc_init
+-    iptc_init.restype = ct.c_void_p
++    iptc_init.restype = ct.POINTER(ct.c_int)
+     iptc_init.argstype = [ct.c_char_p]
+ 
+     iptc_free = _libiptc.ip6tc_free
+@@ -99,11 +99,11 @@ class ip6tc(object):
+ 
+     iptc_first_chain = _libiptc.ip6tc_first_chain
+     iptc_first_chain.restype = ct.c_char_p
+-    iptc_first_chain.argstype = [ct.c_char_p, ct.c_void_p]
++    iptc_first_chain.argstype = [ct.c_void_p]
+ 
+     iptc_next_chain = _libiptc.ip6tc_next_chain
+     iptc_next_chain.restype = ct.c_char_p
+-    iptc_next_chain.argstype = [ct.c_char_p, ct.c_void_p]
++    iptc_next_chain.argstype = [ct.c_void_p]
+ 
+     iptc_is_chain = _libiptc.ip6tc_is_chain
+     iptc_is_chain.restype = ct.c_int
+@@ -184,7 +184,8 @@ class ip6tc(object):
+     iptc_delete_entry = _libiptc.ip6tc_delete_entry
+     iptc_delete_entry.restype = ct.c_int
+     iptc_delete_entry.argstype = [ct.c_char_p, ct.POINTER(ip6t_entry),
+-                                  ct.POINTER(ct.c_ubyte), ct.c_void_p]
++                                  ct.POINTER(ct.c_ubyte), ct.c_void_p,
++                                  ct.c_bool]
+ 
+     # Delete the rule in position `rulenum' in `chain'.
+     iptc_delete_num_entry = _libiptc.ip6tc_delete_num_entry
+-- 
+1.9.0
+

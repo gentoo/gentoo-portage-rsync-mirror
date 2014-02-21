@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/hy
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hy/ChangeLog,v 1.1 2014/02/14 09:13:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hy/ChangeLog,v 1.2 2014/02/21 03:40:44 patrick Exp $
+
+  21 Feb 2014; Patrick Lauer <patrick@gentoo.org> hy-0.9.12.ebuild:
+  Fix astor dependency #501724
 
 *hy-0.9.12 (14 Feb 2014)
 

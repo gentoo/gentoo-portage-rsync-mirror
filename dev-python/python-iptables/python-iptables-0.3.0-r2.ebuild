@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iptables/python-iptables-0.3.0.ebuild,v 1.1 2014/02/03 23:24:12 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iptables/python-iptables-0.3.0-r2.ebuild,v 1.1 2014/02/21 03:54:39 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -23,8 +23,10 @@ RESTRICT=test
 
 PATCHES=(
 	"${FILESDIR}/${PN}-0.2.0-tests.patch"
+	"${FILESDIR}/${P}-conntrack-fixes.patch"
+	"${FILESDIR}/${PN}-fix-ctypes.patch"
 )
 
 python_test() {
-	${PYTHON} test.py
+	${PYTHON} test.py || die "tests fail with ${EPYTHON}"
 }
