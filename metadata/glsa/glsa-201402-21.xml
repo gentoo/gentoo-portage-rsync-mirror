@@ -55,7 +55,7 @@
     
     <code>
       # emerge --sync
-      # emerge --ask --oneshot --verbose "&gt;=media-libs/tiff-3.9.7-r1"
+      # emerge --ask --oneshot --verbose "&gt;=media-libs/tiff-3.9.7-r1:3"
     </code>
     
     <p>Packages which depend on this library may need to be recompiled. Tools

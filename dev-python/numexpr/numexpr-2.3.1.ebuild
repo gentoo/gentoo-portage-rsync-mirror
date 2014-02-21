@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-2.3.1.ebuild,v 1.1 2014/02/21 11:09:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-2.3.1.ebuild,v 1.3 2014/02/21 16:04:39 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"
 
-DOCS=( ANNOUNCE.txt AUTHORS.txt README.txt RELEASE_NOTES.txt )
+DOCS=( ANNOUNCE.rst AUTHORS.txt README.rst RELEASE_NOTES.rst )
 
 python_prepare_all() {
 	# TODO: mkl can be used but it fails for me

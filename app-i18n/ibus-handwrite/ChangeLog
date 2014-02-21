@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus-handwrite
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-handwrite/ChangeLog,v 1.3 2013/09/01 10:08:34 ago Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-handwrite/ChangeLog,v 1.4 2014/02/21 16:10:46 dlan Exp $
+
+*ibus-handwrite-2.1.4-r1 (21 Feb 2014)
+
+  21 Feb 2014; Yixun Lan <dlan@gentoo.org> +ibus-handwrite-2.1.4-r1.ebuild,
+  +files/ibus-handwrite-link.patch:
+  fix under link bug #501954
 
   01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> ibus-handwrite-2.1.4.ebuild:
   Stable for x86, wrt bug #480822
