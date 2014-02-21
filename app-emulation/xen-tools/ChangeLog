@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.227 2014/02/20 15:29:10 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.228 2014/02/21 04:49:13 idella4 Exp $
+
+  21 Feb 2014; Ian Delaney <idella4@gentoo.org> xen-tools-4.2.3-r1.ebuild,
+  xen-tools-4.2.4.ebuild, xen-tools-4.3.2.ebuild:
+  correct typos, tidy
 
   20 Feb 2014; Yixun Lan <dlan@gentoo.org>
   -files/xen-4-CVE-2013-0215-XSA-38.patch,

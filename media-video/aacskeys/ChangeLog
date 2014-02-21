@@ -1,6 +1,9 @@
 # ChangeLog for media-video/aacskeys
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.9 2013/06/30 20:00:59 tomwij Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/aacskeys/ChangeLog,v 1.10 2014/02/21 04:59:40 beandog Exp $
+
+  21 Feb 2014; Steve Dibb <beandog@gentoo.org> aacskeys-0.4.0c-r1.ebuild:
+  Cleanup ebuild; update license, bug 446216
 
   30 Jun 2013; Tom Wijsman <TomWij@gentoo.org> -aacskeys-0.4.0c.ebuild:
   Remove sun-jdk and sun-jre-bin from reverse dependencies. For security bug
