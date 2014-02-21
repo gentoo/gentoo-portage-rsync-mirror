@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.3.0.ebuild,v 1.3 2014/02/21 02:29:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-1.3.0.ebuild,v 1.4 2014/02/21 02:44:49 floppym Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs multilib-minimal
@@ -42,6 +42,7 @@ DEPEND="abi_x86_32? ( dev-lang/yasm )
 "
 
 REQUIRED_USE="
+	sse? ( sse2 )
 	sse2? ( mmx )
 	ssse3? ( sse2 )
 	"

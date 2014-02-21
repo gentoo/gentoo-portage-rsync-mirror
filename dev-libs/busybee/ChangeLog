@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/busybee
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/busybee/ChangeLog,v 1.7 2013/12/11 03:54:40 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/busybee/ChangeLog,v 1.8 2014/02/21 02:53:14 patrick Exp $
+
+*busybee-0.4.1 (21 Feb 2014)
+
+  21 Feb 2014; Patrick Lauer <patrick@gentoo.org> +busybee-0.4.1.ebuild:
+  Bump
 
   11 Dec 2013; Patrick Lauer <patrick@gentoo.org> -busybee-0.2.1.ebuild,
   -busybee-0.2.2.ebuild, -busybee-0.2.3.ebuild, -busybee-0.3.0.ebuild:
