@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/bitcoind
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.83 2014/01/08 06:25:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoind/ChangeLog,v 1.84 2014/02/21 14:22:42 blueness Exp $
+
+*bitcoind-0.8.6-r1 (21 Feb 2014)
+
+  21 Feb 2014; Anthony G. Basile <blueness@gentoo.org>
+  +bitcoind-0.8.6-r1.ebuild, +files/bitcoin.initd-r1:
+  Update initd script, bug #500602
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> bitcoind-0.8.5.ebuild,
   bitcoind-0.8.6.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/scipy
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.111 2013/12/26 20:52:20 jlec Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.112 2014/02/21 14:13:08 jlec Exp $
+
+*scipy-0.13.3 (21 Feb 2014)
+
+  21 Feb 2014; Justin Lecher <jlec@gentoo.org> +scipy-0.13.3.ebuild:
+  Version Bump
 
 *scipy-0.13.2-r1 (26 Dec 2013)
 

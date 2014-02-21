@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pytables
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.48 2014/01/12 20:43:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/ChangeLog,v 1.49 2014/02/21 14:12:56 jlec Exp $
+
+*pytables-3.1.0 (21 Feb 2014)
+
+  21 Feb 2014; Justin Lecher <jlec@gentoo.org> +pytables-3.1.0.ebuild:
+  Version BUmp
 
   12 Jan 2014; Pacho Ramos <pacho@gentoo.org> pytables-3.0.0.ebuild:
   amd64 stable, bug #497866

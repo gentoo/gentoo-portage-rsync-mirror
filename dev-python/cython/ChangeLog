@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.108 2014/02/16 20:11:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.109 2014/02/21 14:12:23 jlec Exp $
+
+*cython-0.20.1 (21 Feb 2014)
+
+  21 Feb 2014; Justin Lecher <jlec@gentoo.org> cython-0.20.ebuild,
+  +cython-0.20.1.ebuild, +files/cython-0.20.1-backport-test-fix.patch,
+  metadata.xml:
+  Version Bump; respect FLAGS* for py2, #499422
 
   16 Feb 2014; Mike Frysinger <vapier@gentoo.org> cython-0.19.1.ebuild:
   Mark arm stable.

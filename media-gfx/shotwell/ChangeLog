@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.67 2014/02/20 20:40:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.68 2014/02/21 14:24:55 jlec Exp $
+
+  21 Feb 2014; Justin Lecher <jlec@gentoo.org> -shotwell-0.13.1-r2.ebuild,
+  -shotwell-0.14.0-r1.ebuild, -shotwell-0.14.1.ebuild, -shotwell-0.15.0.ebuild:
+  Drop old
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> shotwell-0.15.1.ebuild:
   Stable for x86, wrt bug #500720
