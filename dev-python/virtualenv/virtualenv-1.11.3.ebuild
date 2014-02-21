@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.11.2.ebuild,v 1.1 2014/02/03 10:01:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/virtualenv-1.11.3.ebuild,v 1.1 2014/02/21 09:26:05 jlec Exp $
 
 EAPI="5"
 
@@ -26,7 +26,10 @@ DEPEND="${RDEPEND}
 	)"
 
 DOCS=( docs/index.rst docs/news.rst )
-PATCHES=( "${FILESDIR}"/${PN}-1.8.2-no-versioned-script.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.8.2-no-versioned-script.patch
+	"${FILESDIR}"/${P}-skip-broken-test.patch
+	)
 
 python_compile_all() {
 	use doc && emake -C docs html
