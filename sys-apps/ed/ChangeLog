@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.102 2014/01/18 03:08:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.103 2014/02/21 18:02:44 polynomial-c Exp $
+
+*ed-1.10 (21 Feb 2014)
+
+  21 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> +ed-1.10.ebuild:
+  Version bump.
 
   18 Jan 2014; Mike Frysinger <vapier@gentoo.org> ed-1.6.ebuild, ed-1.8.ebuild,
   ed-1.9.ebuild:
