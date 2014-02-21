@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.61 2014/02/20 15:03:37 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.62 2014/02/21 11:49:57 nimiux Exp $
+
+  21 Feb 2014; Chema Alonso <nimiux@gentoo.org> libpaper-1.1.24-r2.ebuild:
+  Stable for amd64 wrt bug #491946
 
   20 Feb 2014; Akinori Hattori <hattya@gentoo.org> libpaper-1.1.24-r2.ebuild:
   ia64 stable wrt bug #491946

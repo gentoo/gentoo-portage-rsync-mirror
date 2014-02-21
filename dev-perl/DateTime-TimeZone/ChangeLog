@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.230 2014/02/14 19:17:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.232 2014/02/21 11:59:39 zlogene Exp $
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DateTime-TimeZone-1.600.0.ebuild:
+  x86 stable wrt bug #492122
+
+  21 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  DateTime-TimeZone-1.600.0.ebuild:
+  amd64 stable wrt bug #492122
 
   14 Feb 2014; Markus Meier <maekke@gentoo.org>
   DateTime-TimeZone-1.600.0.ebuild:

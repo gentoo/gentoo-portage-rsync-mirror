@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.985 2014/02/16 20:03:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.986 2014/02/21 12:00:36 ssuominen Exp $
+
+  21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
+  Fix bash completion directory using bash-completion-r1.eclass. Install
+  99-default.link to /lib/systemd and move udevd binary there as well to follow
+  suit. Remove reference to now non-existing 80-net-name-slot.rules from
+  postinst message. Sort ./configure flags based on --help and only pass
+  required --disable flags.
 
   16 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> udev-9999.ebuild:
   Check for CONFIG_FHANDLE wrt http://cgit.freedesktop.org/systemd/systemd/commi
