@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/pmount
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.97 2013/09/25 07:23:50 ssuominen Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.99 2014/02/21 06:14:42 ssuominen Exp $
+
+  21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Move to maintainer-needed@ since this isn't used by f.d.o related desktops
+  anymore.
+
+*pmount-0.9.99_alpha-r3 (21 Feb 2014)
+
+  21 Feb 2014; Samuli Suominen <ssuominen@gentoo.org>
+  +pmount-0.9.99_alpha-r3.ebuild:
+  Keep the legacy /media directory for pmount wrt #501772 by "skaumo"
 
 *pmount-0.9.99_alpha-r2 (25 Sep 2013)
 
