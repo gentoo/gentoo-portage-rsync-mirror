@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/css-mode
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/ChangeLog,v 1.10 2007/10/29 14:13:51 flameeyes Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/css-mode/ChangeLog,v 1.11 2014/02/21 00:10:55 ulm Exp $
+
+  21 Feb 2014; Ulrich Müller <ulm@gentoo.org> css-mode-0.11.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   29 Oct 2007; Diego Pettenò <flameeyes@gentoo.org> css-mode-0.11.ebuild:
   Add ~x86-fbsd keyword.
