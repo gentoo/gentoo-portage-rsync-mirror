@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdrgraphtft-avp/vdrgraphtft-avp-0.3.1.ebuild,v 1.1 2009/10/22 14:17:18 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/vdrgraphtft-avp/vdrgraphtft-avp-0.3.1.ebuild,v 1.2 2014/02/21 20:43:47 hd_brummy Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils
 
@@ -12,14 +12,17 @@ DESCRIPTION="GraphTFT theme: Alien vs Predator"
 HOMEPAGE="http://www.vdr-wiki.de/wiki/index.php/Graphtft-plugin"
 SRC_URI="http://www.jwendel.de/vdr/${MY_PN}-${PV}.tar.bz2"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-		>=media-plugins/vdr-graphtft-0.3.1"
+		|| (
+			>=media-plugins/vdr-graphtft-0.3.1
+			media-plugins/vdr-graphtftng
+		)"
 
 S="${WORKDIR}/avp"
 

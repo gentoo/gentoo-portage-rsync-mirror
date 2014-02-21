@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/percona-toolkit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.7 2013/10/17 18:45:08 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/ChangeLog,v 1.8 2014/02/21 20:38:07 idl0r Exp $
+
+*percona-toolkit-2.2.6 (21 Feb 2014)
+
+  21 Feb 2014; Christian Ruppert <idl0r@gentoo.org>
+  -percona-toolkit-2.1.7-r1.ebuild, -percona-toolkit-2.2.4.ebuild,
+  +percona-toolkit-2.2.6.ebuild,
+  +files/percona-toolkit-2.2.6-no-versioncheck.patch:
+  Version bump, also fixes CVE-2014-2029 / bug 501904
 
   17 Oct 2013; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
   Add myself as maintainer

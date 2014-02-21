@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/percona-toolkit-2.2.4.ebuild,v 1.1 2013/10/12 23:38:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-toolkit/percona-toolkit-2.2.6.ebuild,v 1.1 2014/02/21 20:38:07 idl0r Exp $
 
 EAPI=5
 
-inherit perl-app perl-module toolchain-funcs
+inherit eutils perl-app perl-module toolchain-funcs
 
 DESCRIPTION="essential command-line utilities for MySQL"
 HOMEPAGE="http://www.percona.com/software/percona-toolkit/"
@@ -34,6 +34,12 @@ RDEPEND="${COMMON_DEPEND}
 	dev-perl/TermReadKey"
 DEPEND="${COMMON_DEPEND}
 	virtual/perl-ExtUtils-MakeMaker"
+
+src_prepare() {
+	# bug 501904 - CVE-2014-2029
+	# sed -i -e '/^=item --\[no\]version-check/,/^default: yes/{/^default: yes/d}' bin/*
+	epatch "${FILESDIR}/${P}-no-versioncheck.patch"
+}
 
 # Percona Toolkit does NOT contain the UDF code for Murmur/FNV any more.
 src_install() {

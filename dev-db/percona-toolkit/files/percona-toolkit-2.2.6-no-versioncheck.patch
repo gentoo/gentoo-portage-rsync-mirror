@@ -1,0 +1,216 @@
+diff --git a/bin/pt-archiver b/bin/pt-archiver
+index 73aa429..e9edddd 100755
+--- a/bin/pt-archiver
++++ b/bin/pt-archiver
+@@ -7482,7 +7482,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-config-diff b/bin/pt-config-diff
+index bc16421..e0bb3a2 100755
+--- a/bin/pt-config-diff
++++ b/bin/pt-config-diff
+@@ -5580,7 +5580,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-deadlock-logger b/bin/pt-deadlock-logger
+index e7ae5cc..fe21fcc 100755
+--- a/bin/pt-deadlock-logger
++++ b/bin/pt-deadlock-logger
+@@ -5349,7 +5349,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-diskstats b/bin/pt-diskstats
+index 96daf17..bc3ebe7 100755
+--- a/bin/pt-diskstats
++++ b/bin/pt-diskstats
+@@ -5485,7 +5485,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-duplicate-key-checker b/bin/pt-duplicate-key-checker
+index 6b2ac8a..fb404f3 100755
+--- a/bin/pt-duplicate-key-checker
++++ b/bin/pt-duplicate-key-checker
+@@ -5450,7 +5450,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-find b/bin/pt-find
+index a397d37..b19780f 100755
+--- a/bin/pt-find
++++ b/bin/pt-find
+@@ -4457,7 +4457,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-fk-error-logger b/bin/pt-fk-error-logger
+index 06d3cae..2fc700d 100755
+--- a/bin/pt-fk-error-logger
++++ b/bin/pt-fk-error-logger
+@@ -4352,7 +4352,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-heartbeat b/bin/pt-heartbeat
+index 6f4e5f9..71eb22b 100755
+--- a/bin/pt-heartbeat
++++ b/bin/pt-heartbeat
+@@ -6036,7 +6036,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-index-usage b/bin/pt-index-usage
+index 2aabfb2..06b736f 100755
+--- a/bin/pt-index-usage
++++ b/bin/pt-index-usage
+@@ -7365,7 +7365,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-kill b/bin/pt-kill
+index eb82a47..c0ff2c4 100755
+--- a/bin/pt-kill
++++ b/bin/pt-kill
+@@ -7643,7 +7643,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-online-schema-change b/bin/pt-online-schema-change
+index 4a6dade..b2d21dd 100755
+--- a/bin/pt-online-schema-change
++++ b/bin/pt-online-schema-change
+@@ -11315,7 +11315,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-query-digest b/bin/pt-query-digest
+index dda7196..4b2ba8e 100755
+--- a/bin/pt-query-digest
++++ b/bin/pt-query-digest
+@@ -16285,7 +16285,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-slave-delay b/bin/pt-slave-delay
+index 35f7baf..a702c62 100755
+--- a/bin/pt-slave-delay
++++ b/bin/pt-slave-delay
+@@ -4715,7 +4715,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-slave-restart b/bin/pt-slave-restart
+index fd0887e..feda0aa 100755
+--- a/bin/pt-slave-restart
++++ b/bin/pt-slave-restart
+@@ -5655,7 +5655,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-table-checksum b/bin/pt-table-checksum
+index 590ba87..f6653ec 100755
+--- a/bin/pt-table-checksum
++++ b/bin/pt-table-checksum
+@@ -12331,7 +12331,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-table-sync b/bin/pt-table-sync
+index 5eb3d8c..7d29957 100755
+--- a/bin/pt-table-sync
++++ b/bin/pt-table-sync
+@@ -12518,7 +12518,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-upgrade b/bin/pt-upgrade
+index c22a09b..e088e40 100755
+--- a/bin/pt-upgrade
++++ b/bin/pt-upgrade
+@@ -11020,7 +11020,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
+diff --git a/bin/pt-variable-advisor b/bin/pt-variable-advisor
+index 981788d..8fc9d08 100755
+--- a/bin/pt-variable-advisor
++++ b/bin/pt-variable-advisor
+@@ -5985,7 +5985,6 @@ Show version and exit.
+ 
+ =item --[no]version-check
+ 
+-default: yes
+ 
+ Check for the latest version of Percona Toolkit, MySQL, and other programs.
+ 
