@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libkpeople
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/ChangeLog,v 1.2 2014/02/18 13:34:18 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkpeople/ChangeLog,v 1.3 2014/02/22 10:16:11 mrueg Exp $
+
+*libkpeople-0.2.1 (22 Feb 2014)
+
+  22 Feb 2014; Manuel Rüger <mrueg@gentoo.org> +libkpeople-0.2.1.ebuild:
+  Version bump. Cleanup old.
 
 *libkpeople-0.2.0 (18 Feb 2014)
 
