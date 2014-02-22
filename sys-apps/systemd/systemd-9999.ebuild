@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.86 2014/02/21 15:40:01 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.87 2014/02/22 03:51:19 floppym Exp $
 
 EAPI=5
 
@@ -74,6 +74,7 @@ PDEPEND=">=sys-apps/dbus-1.6.8-r1:0
 DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils:0
 	app-text/docbook-xml-dtd:4.2
+	app-text/docbook-xml-dtd:4.5
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt:0
 	dev-util/gperf

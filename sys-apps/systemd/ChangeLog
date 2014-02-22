@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.221 2014/02/21 15:40:01 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.222 2014/02/22 03:51:19 floppym Exp $
+
+  22 Feb 2014; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Add build-time dep on docbook-xml-dtd:4.5, thanks to ssuomien.
 
   21 Feb 2014; Jason A. Donenfeld <zx2c4@gentoo.org> metadata.xml,
   systemd-9999.ebuild:
