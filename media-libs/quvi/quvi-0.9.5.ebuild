@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.9.5.ebuild,v 1.1 2013/11/21 23:33:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.9.5.ebuild,v 1.2 2014/02/22 18:05:16 jer Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV:0:3}/${P}.tar.xz"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="json nls xml"
 
 RDEPEND=">=dev-libs/glib-2.24:2

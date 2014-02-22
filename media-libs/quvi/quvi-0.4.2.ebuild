@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.4.2.ebuild,v 1.7 2012/12/23 19:10:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/quvi-0.4.2.ebuild,v 1.8 2014/02/22 18:05:16 jer Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV:0:3}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="amd64 ~hppa ppc ppc64 x86"
 IUSE=""
 
 RDEPEND=">=net-misc/curl-7.18.2
