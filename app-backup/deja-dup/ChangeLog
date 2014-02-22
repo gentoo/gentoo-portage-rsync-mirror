@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/deja-dup
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.44 2014/01/31 08:25:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/deja-dup/ChangeLog,v 1.45 2014/02/22 14:21:38 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> deja-dup-29.5.ebuild:
+  arch stable, bug 888
 
 *deja-dup-29.5 (31 Jan 2014)
 

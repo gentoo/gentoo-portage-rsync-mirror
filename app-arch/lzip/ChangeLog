@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lzip
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.48 2014/02/22 12:26:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzip/ChangeLog,v 1.49 2014/02/22 14:19:48 hattya Exp $
+
+  22 Feb 2014; Akinori Hattori <hattya@gentoo.org> lzip-1.14.ebuild,
+  lzip-1.15.ebuild:
+  keyword ~ia64 wrt bug #502018
 
   22 Feb 2014; Fabian Groffen <grobian@gentoo.org> lzip-1.15.ebuild:
   Keyworded for Mac OS X and Solaris

@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.75 2013/12/08 17:46:48 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.76 2014/02/22 14:29:55 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> planner-0.14.6_p20130520.ebuild:
+  arch stable, bug 888
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> planner-0.14.6_p20130520.ebuild:
   x86 stable, bug #478252

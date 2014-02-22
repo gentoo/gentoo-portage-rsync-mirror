@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.79 2014/01/10 20:40:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.80 2014/02/22 14:20:50 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org>
+  system-config-printer-gnome-1.4.3-r1.ebuild:
+  arch stable, bug 888
 
 *system-config-printer-gnome-1.4.3-r1 (10 Jan 2014)
 

@@ -1,33 +1,39 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-deploy/git-deploy-20120202.ebuild,v 1.1 2012/02/10 20:27:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-deploy/git-deploy-6.0.1_p20131024.ebuild,v 1.1 2014/02/22 14:28:04 idl0r Exp $
 
-EAPI=4
+EAPI=5
 
 inherit perl-app
+
+COMMIT="e9ef93debd12d85e70676dd79b4bd78ac2b05271"
 
 DESCRIPTION="make deployments so easy that you'll let new hires do them on their
 first day"
 HOMEPAGE="https://github.com/git-deploy/git-deploy"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="https://github.com/${PN}/${PN}/archive/${COMMIT}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-1 GPL-2 GPL-3 )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND="dev-lang/perl
-	test? (
-		dev-vcs/git
-		virtual/perl-File-Temp
-		perl-core/File-Spec
-		)"
-RDEPEND="dev-lang/perl
-	dev-vcs/git
-	perl-core/File-Spec
+COMMON_DEPEND="dev-vcs/git
+	virtual/perl-File-Spec
 	virtual/perl-Getopt-Long
 	virtual/perl-Term-ANSIColor
-	virtual/perl-Time-HiRes"
+	virtual/perl-Time-HiRes
+	virtual/perl-Memoize
+	virtual/perl-Data-Dumper"
+DEPEND="dev-lang/perl
+	test? (
+		${COMMON_DEPEND}
+		virtual/perl-File-Temp
+		)"
+RDEPEND="dev-lang/perl
+${COMMON_DEPEND}"
+
+S="${WORKDIR}/${PN}-${COMMIT}"
 
 src_prepare() {
 	pod2man -n git-deploy README.pod > git-deploy.1 || die
@@ -57,4 +63,6 @@ src_install() {
 	doins -r lib/Git
 
 	doman git-deploy.1
+
+	newdoc Changes ChangeLog
 }

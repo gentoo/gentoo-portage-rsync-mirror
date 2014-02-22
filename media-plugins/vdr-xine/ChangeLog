@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/vdr-xine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xine/ChangeLog,v 1.4 2013/05/12 07:35:18 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xine/ChangeLog,v 1.5 2014/02/22 14:03:08 idl0r Exp $
+
+  22 Feb 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  Remove myself as maintainer
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Add encoding to metadata.xml
