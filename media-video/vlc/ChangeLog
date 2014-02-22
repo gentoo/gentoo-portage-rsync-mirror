@@ -1,6 +1,15 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.889 2014/02/22 15:40:03 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.890 2014/02/22 16:30:52 tomwij Exp $
+
+*vlc-2.1.4 (22 Feb 2014)
+
+  22 Feb 2014; Tom Wijsman <TomWij@gentoo.org> +vlc-2.1.4.ebuild,
+  vlc-2.1.9999.ebuild, vlc-9999.ebuild:
+  There is no opengles in Portage yet; and thus, disabled GLES support until
+  there is. Dropped amd64-fbsd temporarily due to libvncserver dependency.
+  Version bump to 2.1.4; fixes bug #500678, reported (and tested) by Frank
+  Krömmelbein.
 
   22 Feb 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml, vlc-9999.ebuild:
   Update description of USE flag xcb with explanation that it is needed in order

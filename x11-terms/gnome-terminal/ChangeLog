@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.279 2014/01/02 23:58:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.280 2014/02/22 16:02:36 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-terminal-3.10.2.ebuild:
+  arch stable, bug 888
 
   02 Jan 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-terminal-2.32.1-r1.ebuild:

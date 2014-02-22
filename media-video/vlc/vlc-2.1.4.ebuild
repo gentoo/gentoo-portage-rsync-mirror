@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.211 2014/02/22 16:30:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.4.ebuild,v 1.1 2014/02/22 16:30:52 tomwij Exp $
 
 EAPI="5"
 
@@ -35,16 +35,16 @@ LICENSE="LGPL-2.1 GPL-2"
 SLOT="0/5-7" # vlc - vlccore
 
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64 ~arm ~ppc -sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="~amd64 ~arm ~ppc -sparc ~x86 ~x86-fbsd"
 else
 	KEYWORDS=""
 fi
 
 IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
-	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug
+	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug dirac
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode faad fdk
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
-	growl httpd ieee1394 ios-vout jack jpeg kate kde libass libcaca libnotify
+	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
 	libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
@@ -52,7 +52,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
-	vlm vnc vorbis vpx wma-fixed +X x264 +xcb xml xv zvbi"
+	vlm vnc vorbis wma-fixed +X x264 +xcb xml xv zvbi"
 
 RDEPEND="
 		!<media-video/ffmpeg-1.2:0
@@ -67,11 +67,12 @@ RDEPEND="
 		avcodec? ( virtual/ffmpeg:0 )
 		avformat? ( virtual/ffmpeg:0 )
 		bidi? ( >=dev-libs/fribidi-0.10.4:0 )
-		bluray? ( >=media-libs/libbluray-0.3.0:0 )
+		bluray? ( >=media-libs/libbluray-0.2.1:0 )
 		cddb? ( >=media-libs/libcddb-1.2.0:0 )
 		chromaprint? ( >=media-libs/chromaprint-0.6:0 )
 		dbus? ( >=sys-apps/dbus-1.0.2:0 )
 		dc1394? ( >=sys-libs/libraw1394-2.0.1:0 >=media-libs/libdc1394-2.1.0:2 )
+		dirac? ( >=media-video/dirac-0.10.0:0 )
 		directfb? ( dev-libs/DirectFB:0 sys-libs/zlib:0 )
 		dts? ( media-libs/libdca:0 )
 		dvbpsi? ( >=media-libs/libdvbpsi-0.2.1:0 )
@@ -90,7 +91,6 @@ RDEPEND="
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1:0 >=sys-libs/libavc1394-0.5.3:0 )
 		ios-vout? ( virtual/opengl:0 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1:0 )
-		jpeg? ( virtual/jpeg:0 )
 		kate? ( >=media-libs/libkate-0.3.0:0 )
 		libass? ( >=media-libs/libass-0.9.8:0 media-libs/fontconfig:1.0 )
 		libcaca? ( >=media-libs/libcaca-0.99_beta14:0 )
@@ -146,7 +146,6 @@ RDEPEND="
 		vdpau? ( >=x11-libs/libvdpau-0.6:0 !<media-video/libav-9.11 )
 		vnc? ( >=net-libs/libvncserver-0.9.9:0 )
 		vorbis? ( media-libs/libvorbis:0 )
-		vpx? ( media-libs/libvpx:0 )
 		X? ( x11-libs/libX11:0 )
 		x264? ( >=media-libs/x264-0.0.20090923:0= )
 		xcb? ( >=x11-libs/libxcb-1.6:0 >=x11-libs/xcb-util-0.3.4:0 >=x11-libs/xcb-util-keysyms-0.3.4:0 )
@@ -158,7 +157,6 @@ DEPEND="${RDEPEND}
 	kde? ( >=kde-base/kdelibs-4:4 )
 	xcb? ( x11-proto/xproto:0 )
 	app-arch/xz-utils:0
-	dev-lang/yasm:0
 	>=sys-devel/gettext-0.18.3:0
 	virtual/pkgconfig:0
 "
@@ -236,9 +234,6 @@ src_prepare() {
 	# We are not in a real git checkout due to the absence of a .git directory.
 	touch src/revision.txt || die
 
-	# Fix build system mistake.
-	epatch "${FILESDIR}"/${PN}-2.1.0-fix-libtremor-libs.patch
-
 	# Patch up incompatibilities and reconfigure autotools.
 	epatch "${FILESDIR}"/${PN}-2.1.0-newer-rdp.patch
 	epatch "${FILESDIR}"/${PN}-2.1.0-libva-1.2.1-compat.patch
@@ -305,6 +300,7 @@ src_configure() {
 		$(use_enable cddb libcddb) \
 		$(use_enable chromaprint) \
 		$(use_enable dbus) \
+		$(use_enable dirac) \
 		$(use_enable directfb) \
 		$(use_enable directx) \
 		$(use_enable dc1394) \
@@ -327,9 +323,9 @@ src_configure() {
 		$(use_enable growl) \
 		$(use_enable httpd) \
 		$(use_enable ieee1394 dv1394) \
+		$(use_enable ios-vout) \
 		$(use_enable ios-vout ios-vout2) \
 		$(use_enable jack) \
-		$(use_enable jpeg) \
 		$(use_enable kate) \
 		$(use_with kde kde-solid) \
 		$(use_enable libass) \
@@ -361,7 +357,7 @@ src_configure() {
 		$(use_enable omxil) \
 		$(use_enable omxil omxil-vout) \
 		$(use_enable opencv) \
-		$(use_enable opengl glx) $(use_enable opengl glspectrum) \
+		$(use_enable opengl glx) \
 		$(use_enable opus) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable png) \
@@ -369,7 +365,7 @@ src_configure() {
 		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
 		${qt_flag} \
-		$(use_enable rdp freerdp) \
+		$(use_enable rdp libfreerdp) \
 		$(use_enable rtsp realrtsp) \
 		$(use_enable run-as-root) \
 		$(use_enable samba smbclient) \
@@ -396,9 +392,8 @@ src_configure() {
 		$(use_enable vcdx) \
 		$(use_enable vdpau) \
 		$(use_enable vlm) \
-		$(use_enable vnc) \
+		$(use_enable vnc libvnc) \
 		$(use_enable vorbis) \
-		$(use_enable vpx) \
 		$(use_enable wma-fixed) \
 		$(use_with X x) \
 		$(use_enable x264) \
@@ -406,8 +401,6 @@ src_configure() {
 		$(use_enable xml libxml2) \
 		$(use_enable xv xvideo) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
-		--disable-asdcp \
-		--disable-coregraphicslayer-vout \
 		--disable-coverage \
 		--disable-cprof \
 		--disable-crystalhd \
@@ -420,14 +413,13 @@ src_configure() {
 		--disable-kva \
 		--disable-maintainer-mode \
 		--disable-merge-ffmpeg \
-		--disable-mfx \
 		--disable-opensles \
 		--disable-oss \
+		--disable-quicksync \
 		--disable-quicktime \
 		--disable-rpi-omxil \
 		--disable-shine \
 		--disable-sndio \
-		--disable-x265 \
 		--disable-vda \
 		--disable-vsxu \
 		--disable-wasapi

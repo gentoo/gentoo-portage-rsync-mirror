@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/light-themes-0.1.93-r4.ebuild,v 1.1 2014/02/16 11:33:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/light-themes/light-themes-0.1.93-r4.ebuild,v 1.2 2014/02/22 16:05:21 pacho Exp $
 
 EAPI=5
 inherit eutils
@@ -14,7 +14,7 @@ SRC_URI="
 
 LICENSE="CC-BY-SA-3.0 CC-BY-SA-4.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gtk3"
 
 DEPEND="app-arch/xz-utils"

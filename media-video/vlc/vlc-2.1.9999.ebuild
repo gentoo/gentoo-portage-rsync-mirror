@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.15 2014/02/21 17:25:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.16 2014/02/22 16:30:52 tomwij Exp $
 
 EAPI="5"
 
@@ -43,7 +43,7 @@ fi
 IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug dirac
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc egl +encode faad fdk
-	fluidsynth +ffmpeg flac fontconfig +gcrypt gles1 gles2 gme gnome gnutls
+	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
 	libsamplerate libtiger linsys libtar lirc live lua +macosx
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
@@ -85,8 +85,6 @@ RDEPEND="
 		fluidsynth? ( >=media-sound/fluidsynth-1.1.2:0 )
 		fontconfig? ( media-libs/fontconfig:1.0 )
 		gcrypt? ( >=dev-libs/libgcrypt-1.2.0:0 )
-		gles1? ( virtual/opengles:0 )
-		gles2? ( virtual/opengles:0 )
 		gme? ( media-libs/game-music-emu:0 )
 		gnome? ( gnome-base/gnome-vfs:2 dev-libs/glib:2 )
 		gnutls? ( >=net-libs/gnutls-3.0.20:0 )
@@ -319,8 +317,6 @@ src_configure() {
 		$(use_enable fluidsynth) \
 		$(use_enable fontconfig) \
 		$(use_enable gcrypt libgcrypt) \
-		$(use_enable gles1) \
-		$(use_enable gles2) \
 		$(use_enable gme) \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable gnutls) \
@@ -409,6 +405,8 @@ src_configure() {
 		--disable-cprof \
 		--disable-crystalhd \
 		--disable-decklink \
+		--disable-gles1 \
+		--disable-gles2 \
 		--disable-goom \
 		--disable-ios-audio \
 		--disable-kai \
