@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.79 2014/02/02 10:56:53 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.82 2014/02/22 08:00:49 zlogene Exp $
+
+  22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> File-MimeInfo-0.170.0.ebuild:
+  x86 stable wrt bug #492148
+
+  22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> File-MimeInfo-0.170.0.ebuild:
+  amd64 stable wrt bug #492148
+
+  22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org> File-MimeInfo-0.170.0.ebuild:
+  alpha stable wrt bug #492148
 
   02 Feb 2014; Agostino Sarubbo <ago@gentoo.org> File-MimeInfo-0.170.0.ebuild:
   Stable for ppc, wrt bug #492148

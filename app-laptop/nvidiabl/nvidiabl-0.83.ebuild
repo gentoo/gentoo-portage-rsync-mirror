@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.83.ebuild,v 1.2 2014/01/12 16:36:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.83.ebuild,v 1.3 2014/02/22 07:31:36 pacho Exp $
 
 EAPI=5
 inherit linux-mod
@@ -24,7 +24,7 @@ BUILD_TARGETS="modules"
 MODULE_NAMES="nvidiabl()"
 
 pkg_pretend() {
-	CONFIG_CHECK="~FB_BACKLIGHT"
+	CONFIG_CHECK="FB_BACKLIGHT"
 	ERROR_FB_BACKLIGHT="Your kernel does not support FB_BACKLIGHT. To enable you
 it you can enable any frame buffer with backlight control or nouveau.
 Note that you cannot use FB_NVIDIA with nvidia's proprietary driver"
