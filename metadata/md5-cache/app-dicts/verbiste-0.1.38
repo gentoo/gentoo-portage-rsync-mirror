@@ -4,10 +4,10 @@ DESCRIPTION=French conjugation system
 EAPI=5
 HOMEPAGE=http://sarrazip.com/dev/verbiste.html
 IUSE=gnome gtk
-KEYWORDS=amd64 ppc ~x86
+KEYWORDS=amd64 ppc x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/libxml2-2.4.0:2 gtk? ( >=x11-libs/gtk+-2.6:2 ) gnome? ( gnome-base/gnome-panel[bonobo] >=gnome-base/libgnomeui-2.0 )
 SLOT=0
 SRC_URI=http://sarrazip.com/dev/verbiste-0.1.38.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=7fcf44c067fe0965a7a7a33aed2a8428
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_md5_=6cc017bbf08c23379a1b3dc06c24a7b4

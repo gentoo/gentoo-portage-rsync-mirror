@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1143 2014/02/21 16:07:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1144 2014/02/22 08:05:45 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome2-utils.eclass:
+  Be more friendly with SELinux (#499636 by Luis Ressel)
 
   21 Feb 2014; Justin Lecher <jlec@gentoo.org> intel-sdp.eclass:
   Make problems with man page installation nonfatal

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/lockfile-progs-0.1.17.ebuild,v 1.3 2014/02/21 09:48:15 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lockfile-progs/lockfile-progs-0.1.17.ebuild,v 1.4 2014/02/22 08:04:54 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://debian/pool/main/l/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~mips ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="amd64 arm ~mips ~ppc ~s390 ~sh ~sparc x86"
 IUSE=""
 
 DEPEND="net-libs/liblockfile"

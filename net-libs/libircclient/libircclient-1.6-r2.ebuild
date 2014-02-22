@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/libircclient-1.6-r2.ebuild,v 1.3 2014/02/06 12:17:40 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/libircclient-1.6-r2.ebuild,v 1.4 2014/02/22 08:07:01 ago Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/libircclient/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc ipv6 ssl static-libs threads"
 
 DEPEND="ssl? ( dev-libs/openssl )"

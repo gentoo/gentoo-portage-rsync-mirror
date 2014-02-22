@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/apngasm
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngasm/ChangeLog,v 1.10 2014/02/05 12:52:26 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngasm/ChangeLog,v 1.11 2014/02/22 08:06:45 ago Exp $
+
+  22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> apngasm-2.7.ebuild:
+  Stable for x86, wrt bug #498698
 
   05 Feb 2014; Chema Alonso <nimiux@gentoo.org> apngasm-2.7.ebuild:
   Stable for amd64 wrt bug #498698
@@ -46,4 +49,3 @@
   26 Apr 2011; Mike Frysinger <vapier@gentoo.org> +apngasm-2.3.ebuild,
   +metadata.xml:
   New package.
-

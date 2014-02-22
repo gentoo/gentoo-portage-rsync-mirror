@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.1.ebuild,v 1.1 2013/12/23 23:16:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.30.5.ebuild,v 1.1 2014/02/22 08:03:24 pacho Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="+X debug +introspection jpeg jpeg2k tiff test"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.37.2:2
+	>=dev-libs/glib-2.37.6:2
 	>=media-libs/libpng-1.4:0=
 	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
 	jpeg? ( virtual/jpeg:0= )
@@ -24,7 +24,7 @@ COMMON_DEPEND="
 	X? ( x11-libs/libX11 )
 "
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/gtk-doc-am-1.11
+	>=dev-util/gtk-doc-am-1.20
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 "
@@ -45,7 +45,7 @@ src_prepare() {
 	grep -q  'l in libpng16' configure || die "libpng check order has changed upstream"
 	sed -e 's:l in libpng16:l in libpng libpng16:' -i configure || die
 	default
-	elibtoolize # for Darwin modules, bug #????
+	elibtoolize # for Darwin modules, bug #???
 }
 
 src_configure() {
@@ -62,7 +62,7 @@ src_configure() {
 
 src_install() {
 	# Parallel install fails when no gdk-pixbuf is already installed, bug #481372
-	MAKEOPTS+=" -j1" default
+	MAKEOPTS="${MAKEOPTS} -j1" default
 	prune_libtool_files --modules
 }
 

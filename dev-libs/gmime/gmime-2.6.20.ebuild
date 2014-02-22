@@ -1,21 +1,23 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.13.ebuild,v 1.10 2013/04/01 18:23:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.6.20.ebuild,v 1.1 2014/02/22 08:10:30 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
+VALA_USE_DEPEND="vapigen"
 
-inherit gnome2 eutils mono
+inherit eutils mono-env gnome2 vala
 
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/ http://developer.gnome.org/gmime/stable/"
 
 SLOT="2.6"
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
-IUSE="doc mono static-libs"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+IUSE="doc mono static-libs vala"
 
-RDEPEND=">=dev-libs/glib-2.18:2
+RDEPEND="
+	>=dev-libs/glib-2.18:2
 	sys-libs/zlib
 	>=app-crypt/gpgme-1.1.6
 	mono? (
@@ -27,15 +29,27 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-text/docbook-sgml-utils )
 	mono? ( dev-dotnet/gtk-sharp-gapi:2 )
+	vala? (
+		$(vala_depend)
+		>=dev-libs/gobject-introspection-1.30.0 )
 "
 
+pkg_setup() {
+	use mono && mono-env_pkg_setup
+}
+
+src_prepare() {
+	gnome2_src_prepare
+	use vala && vala_src_prepare
+}
+
 src_configure() {
-	G2CONF+="
-		--enable-cryptography
-		--disable-strict-parser
-		$(use_enable mono)
-		$(use_enable static-libs static)"
-	gnome2_src_configure
+	gnome2_src_configure \
+		--enable-cryptography \
+		--disable-strict-parser \
+		$(use_enable mono) \
+		$(use_enable static-libs static) \
+		$(use_enable vala)
 }
 
 src_compile() {

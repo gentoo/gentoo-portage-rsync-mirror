@@ -9,5 +9,5 @@ LICENSE=GPL-3
 RDEPEND=>=virtual/jre-1.5 x11-libs/gksu
 SLOT=0
 SRC_URI=mirror://sourceforge/lxmed/lxmed-20120515.tar.gz
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	java-utils-2	8d0d93b7a8605ea346cce4604f6db516	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=857206172f32a2c5d73bd133dc8f355d

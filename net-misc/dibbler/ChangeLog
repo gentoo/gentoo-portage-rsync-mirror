@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dibbler
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.26 2014/01/28 09:03:47 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dibbler/ChangeLog,v 1.27 2014/02/22 08:07:15 ago Exp $
+
+  22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> dibbler-0.8.4.ebuild:
+  Stable for x86, wrt bug #499102
 
   28 Jan 2014; Chema Alonso <nimiux@gentoo.org> dibbler-0.8.4.ebuild:
   Stable for amd64 wrt bug #499102

@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libircclient
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.17 2014/02/06 12:17:40 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libircclient/ChangeLog,v 1.19 2014/02/22 08:14:09 mr_bones_ Exp $
+
+  22 Feb 2014; Michael Sterrett <mr_bones_@gentoo.org>
+  -libircclient-1.6-r1.ebuild:
+  old
+
+  22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> libircclient-1.6-r2.ebuild:
+  Stable for x86, wrt bug #498736
 
   06 Feb 2014; Chema Alonso <nimiux@gentoo.org> libircclient-1.6-r2.ebuild:
   Stable for amd64 wrt bug #498736

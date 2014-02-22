@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/glib-2.22:2 >=dev-libs/json-glib-0.12.2 unique? ( dev-libs/li
 RESTRICT=test
 SLOT=0
 SRC_URI=http://transmission-remote-gtk.googlecode.com/files/transmission-remote-gtk-1.0.tar.gz
-_eclasses_=gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=34a226cb3a4d1307926ea503ee34173f

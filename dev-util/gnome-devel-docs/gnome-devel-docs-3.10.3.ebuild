@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/gnome-devel-docs-3.10.2.ebuild,v 1.1 2013/12/24 16:08:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/gnome-devel-docs-3.10.3.ebuild,v 1.1 2014/02/22 08:15:47 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"

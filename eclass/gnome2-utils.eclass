@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.34 2014/02/09 08:30:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.35 2014/02/22 08:05:45 pacho Exp $
 
 # @ECLASS: gnome2-utils.eclass
 # @MAINTAINER:
@@ -436,7 +436,8 @@ gnome2_gdk_pixbuf_update() {
 	local tmp_file=$(mktemp -t tmp.XXXXXXXXXX_gdkpixbuf)
 	${updater} 1> "${tmp_file}" &&
 	chmod 0644 "${tmp_file}" &&
-	mv -f "${tmp_file}" "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+	cp -f "${tmp_file}" "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache" &&
+	rm "${tmp_file}" # don't replace this with mv, required for SELinux support
 	eend $?
 }
 

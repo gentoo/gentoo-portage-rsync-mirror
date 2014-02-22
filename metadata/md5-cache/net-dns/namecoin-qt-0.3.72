@@ -9,5 +9,5 @@ LICENSE=MIT ISC cryptopp GPL-3 LGPL-2.1 public-domain || ( CC-BY-SA-3.0 LGPL-2.1
 RDEPEND=dev-libs/boost[threads(+)] dev-libs/crypto++ dev-libs/openssl:0[-bindist] sys-libs/db:4.8[cxx] dev-qt/qtgui:4 dbus? ( dev-qt/qtdbus:4 )
 SLOT=0
 SRC_URI=https://github.com/namecoinq/namecoinq/archive/vQ.3.72.tar.gz -> namecoin-qt-0.3.72.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	db-use	1c719875d6599536f956fafea9e1f404	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
+_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	db-use	1c719875d6599536f956fafea9e1f404	eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	kde4-functions	7fc09e82c0d1735f44aedfa8e5073065	multilib	fac675dcccf94392371a6abee62d909f	qmake-utils	6f4ff01a55830f6d86647dc56dfaf3a7	qt4-r2	25e4f17ed047d9242cb40b70acfb2943	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
 _md5_=a573fb7abd4bd4c2638b5485efaf6ff0

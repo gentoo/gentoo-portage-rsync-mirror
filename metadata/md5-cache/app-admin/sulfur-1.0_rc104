@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-python/pygtk:2 >=sys-apps/entropy-1.0_rc104 sys-apps/file[python] sys-devel/gettext x11-libs/vte:0[python] x11-misc/xdg-utils =dev-lang/python-2*
 SLOT=0
 SRC_URI=mirror://sabayon/app-admin/sulfur-1.0_rc104.tar.bz2
-_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	d7c71c6a7d871f567b416a363d65c3dc	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	multilib	fac675dcccf94392371a6abee62d909f	python	be9965681d83c3980660a2660ac95e95	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
 _md5_=eddcd3fa2be1a24fb8e6bfb97e31752d

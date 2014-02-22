@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/dircolors
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.17 2007/11/06 22:26:52 ulm Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dircolors/ChangeLog,v 1.18 2014/02/22 08:01:56 ulm Exp $
+
+  22 Feb 2014; Ulrich Müller <ulm@gentoo.org> dircolors-1.0-r2.ebuild,
+  +files/50dircolors-gentoo.el, -files/51dircolors-gentoo.el:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely. Move site-init file
+  to canonical name.
 
   06 Nov 2007; Ulrich Mueller <ulm@gentoo.org> -files/50dircolors-gentoo.el,
   -dircolors-1.0-r1.ebuild:

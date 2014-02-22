@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/verbiste
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.41 2014/02/08 18:05:45 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/verbiste/ChangeLog,v 1.42 2014/02/22 08:04:10 ago Exp $
+
+  22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> verbiste-0.1.38.ebuild:
+  Stable for x86, wrt bug #491908
 
   08 Feb 2014; Chema Alonso <nimiux@gentoo.org> verbiste-0.1.38.ebuild:
   Stable for amd64 wrt bug #491908

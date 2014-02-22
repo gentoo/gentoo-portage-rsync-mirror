@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.8.0.1.ebuild,v 1.2 2014/01/28 08:47:05 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.8.0.1.ebuild,v 1.3 2014/02/22 08:07:40 ago Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ http://www.junghanns.net/downloads/jnet-dahdi-drivers-${JNET}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="flash"
 RESTRICT="test"
 

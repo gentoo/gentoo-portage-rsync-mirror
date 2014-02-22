@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dahdi-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.30 2014/02/14 15:14:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi-tools/ChangeLog,v 1.31 2014/02/22 08:07:45 ago Exp $
+
+  22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> dahdi-tools-2.8.0.ebuild:
+  Stable for x86, wrt bug #499128
 
 *dahdi-tools-2.9.0.1 (14 Feb 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/libydpdict
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/libydpdict/ChangeLog,v 1.11 2014/01/27 13:45:21 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/libydpdict/ChangeLog,v 1.12 2014/02/22 08:08:31 ago Exp $
+
+  22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> libydpdict-1.0.2.ebuild:
+  Stable for x86, wrt bug #499160
 
   27 Jan 2014; Chema Alonso <nimiux@gentoo.org> libydpdict-1.0.2.ebuild:
   Stable for amd64 wrt bug #499160
