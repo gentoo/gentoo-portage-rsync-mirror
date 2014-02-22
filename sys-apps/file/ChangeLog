@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.268 2014/02/22 07:40:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.269 2014/02/22 08:51:58 polynomial-c Exp $
+
+  22 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -file-5.15.ebuild,
+  -file-5.16.ebuild:
+  Removed vulnerable versions.
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> file-5.17.ebuild:
   Stable for sparc, wrt bug #501574

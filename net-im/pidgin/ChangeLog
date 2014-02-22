@@ -1,6 +1,11 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.334 2014/02/22 07:31:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.335 2014/02/22 08:35:17 polynomial-c Exp $
+
+  22 Feb 2014; Lars Wendler <polynomial-c@gentoo.org> -pidgin-2.10.7-r4.ebuild,
+  -pidgin-2.10.7-r5.ebuild, -files/pidgin-2.10.7-fix-cap.patch,
+  -files/pidgin-2.10.7-link_sasl_in_irc_plugin.patch:
+  Removed vulnerable versions.
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> pidgin-2.10.9.ebuild:
   Stable for arm, wrt bug #499596

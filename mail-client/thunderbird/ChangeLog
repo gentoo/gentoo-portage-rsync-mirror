@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.268 2014/02/22 07:38:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.269 2014/02/22 08:48:33 polynomial-c Exp $
+
+  22 Feb 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -thunderbird-24.1.1.ebuild, -thunderbird-24.2.0.ebuild:
+  Removed vulnerable versions.
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> thunderbird-24.3.0.ebuild:
   Stable for ppc64, wrt bug #500320

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.177 2014/02/15 06:03:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.178 2014/02/22 08:44:07 polynomial-c Exp $
+
+  22 Feb 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -firefox-bin-24.1.1.ebuild, -firefox-bin-24.2.0.ebuild,
+  -firefox-bin-26.0.ebuild:
+  Removed vulnerable versions.
 
   15 Feb 2014; Agostino Sarubbo <ago@gentoo.org> firefox-bin-24.3.0.ebuild:
   Stable for amd64, wrt bug #500320

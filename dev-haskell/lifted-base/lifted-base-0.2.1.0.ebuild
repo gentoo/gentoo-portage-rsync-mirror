@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/lifted-base-0.2.1.0.ebuild,v 1.3 2013/11/24 19:34:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/lifted-base-0.2.1.0.ebuild,v 1.4 2014/02/22 08:54:58 slyfox Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~amd64-linux"
 IUSE=""
 
 RDEPEND=">=dev-haskell/base-unicode-symbols-0.1.1:=[profile?]

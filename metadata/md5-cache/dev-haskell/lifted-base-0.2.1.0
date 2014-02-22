@@ -4,10 +4,10 @@ DESCRIPTION=lifted IO operations from the base library
 EAPI=5
 HOMEPAGE=https://github.com/basvandijk/lifted-base
 IUSE=doc hscolour profile test
-KEYWORDS=amd64 x86
+KEYWORDS=amd64 x86 ~amd64-linux
 LICENSE=BSD
 RDEPEND=>=dev-haskell/base-unicode-symbols-0.1.1:=[profile?] <dev-haskell/base-unicode-symbols-0.3:=[profile?] =dev-haskell/monad-control-0.3*:=[profile?] =dev-haskell/transformers-base-0.4*:=[profile?] >=dev-lang/ghc-6.10.4:=
 SLOT=0/0.2.1.0
 SRC_URI=mirror://hackage/packages/archive/lifted-base/0.2.1.0/lifted-base-0.2.1.0.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	ghc-package	9dd58db252d8252779bb74ed015196e3	haskell-cabal	161e454d02c5a84ba5a39dd3d61366be	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=3944b69db177fd562029977e9a8badb1
+_md5_=65dbb838250de7034331f2a872aba2a6

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.196 2014/02/15 06:03:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.197 2014/02/22 08:39:44 polynomial-c Exp $
+
+  22 Feb 2014; Lars Wendler <polynomial-c@gentoo.org>
+  -seamonkey-bin-2.22.1.ebuild, -seamonkey-bin-2.23.ebuild:
+  Removed vulnerable versions.
 
   15 Feb 2014; Agostino Sarubbo <ago@gentoo.org> seamonkey-bin-2.24.ebuild:
   Stable for amd64, wrt bug #500320

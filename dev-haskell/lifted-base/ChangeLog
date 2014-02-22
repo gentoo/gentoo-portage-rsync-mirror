@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/lifted-base
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.13 2013/12/11 06:12:56 gienah Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/lifted-base/ChangeLog,v 1.14 2014/02/22 08:54:58 slyfox Exp $
+
+  22 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org>
+  lifted-base-0.2.1.0.ebuild:
+  Resore accidentally dropped ~amd64-linux.
 
 *lifted-base-0.2.1.1 (11 Dec 2013)
 
