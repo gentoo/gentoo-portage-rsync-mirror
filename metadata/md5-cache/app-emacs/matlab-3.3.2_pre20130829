@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install postinst postrm setup unpack
-DEPEND=app-emacs/cedet >=virtual/emacs-21
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
+DEPEND=virtual/emacs-cedet >=virtual/emacs-21
 DESCRIPTION=Major modes for MATLAB .m and .tlc files
+EAPI=5
 HOMEPAGE=http://matlab-emacs.sourceforge.net/
 KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x86-macos
-LICENSE=GPL-2
-RDEPEND=app-emacs/cedet >=virtual/emacs-21
+LICENSE=GPL-2+
+RDEPEND=virtual/emacs-cedet >=virtual/emacs-21
 SLOT=0
-SRC_URI=http://dev.gentoo.org/~fauli/distfiles/matlab-3.3.0_pre20091116.tar.bz2
+SRC_URI=http://dev.gentoo.org/~ulm/distfiles/matlab-3.3.2_pre20130829.tar.xz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=a85cb928822e7ab836e50db25d0f0873
+_md5_=695ee63d045bb39879cbdbf940bbaeda

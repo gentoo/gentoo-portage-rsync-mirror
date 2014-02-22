@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/matlab
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.22 2012/01/14 18:33:09 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/matlab/ChangeLog,v 1.23 2014/02/21 23:53:41 ulm Exp $
+
+*matlab-3.3.2_pre20130829 (21 Feb 2014)
+
+  21 Feb 2014; Ulrich Müller <ulm@gentoo.org>
+  -matlab-3.3.0_pre20091116.ebuild, +matlab-3.3.2_pre20130829.ebuild,
+  +files/50matlab-gentoo.el:
+  Version bump. Remove intermediate version.
 
   14 Jan 2012; Raúl Porcel <armin76@gentoo.org>
   matlab-3.1.0_pre20070306.ebuild, matlab-3.3.0_pre20091116.ebuild,
