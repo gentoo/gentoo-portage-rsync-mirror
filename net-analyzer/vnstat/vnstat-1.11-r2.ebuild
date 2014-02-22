@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r2.ebuild,v 1.9 2012/06/12 03:36:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r2.ebuild,v 1.10 2014/02/22 02:50:18 jer Exp $
 
 EAPI="4"
 
@@ -17,8 +17,7 @@ IUSE="gd"
 
 DEPEND="
 	gd? ( media-libs/gd[png] )"
-RDEPEND="${DEPEND}
-	virtual/cron"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewgroup vnstat
