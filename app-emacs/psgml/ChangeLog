@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/psgml
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.20 2013/07/21 09:55:36 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.21 2014/02/22 22:31:57 ulm Exp $
+
+*psgml-1.4.0 (22 Feb 2014)
+
+  22 Feb 2014; Ulrich Müller <ulm@gentoo.org> +psgml-1.4.0.ebuild,
+  +files/50psgml-gentoo-1.4.0.el:
+  Version bump; apparently new upstream. Move map file from site-lisp to etc
+  directory.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due http://gentoo.2317880.n4.nabble.com/sgml-herd-has-no-maintainers-

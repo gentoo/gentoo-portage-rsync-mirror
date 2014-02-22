@@ -4,11 +4,11 @@ DESCRIPTION=GNOME default icon theme
 EAPI=5
 HOMEPAGE=http://www.gnome.org/ http://people.freedesktop.org/~jimmac/icons/#git
 IUSE=branding
-KEYWORDS=alpha amd64 arm ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS=~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE=|| ( LGPL-3 CC-BY-SA-3.0 ) branding? ( CC-Sampling-Plus-1.0 )
 RDEPEND=>=x11-themes/hicolor-icon-theme-0.10
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://gnome/sources/gnome-icon-theme/3.10/gnome-icon-theme-3.10.0.tar.xz branding? ( http://www.mail-archive.com/tango-artists@lists.freedesktop.org/msg00043/tango-gentoo-v1.1.tar.gz )
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	9637c29fc715b17a6328f24251129557	gnome2-utils	43ea14eeeb5ba9a5b0322eb07c70c9cb	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	versionator	a8a3963967d6140be9a14b08bb8f047f
-_md5_=bbf274961efe27c8ae38dff74cb38fbf
+_md5_=832269e997bfb49b027629380c863b95

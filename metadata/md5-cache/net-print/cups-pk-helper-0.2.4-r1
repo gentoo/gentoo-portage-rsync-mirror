@@ -3,10 +3,10 @@ DEPEND=>=dev-libs/glib-2.30.0:2 net-print/cups >=sys-auth/polkit-0.97 app-arch/x
 DESCRIPTION=PolicyKit helper to configure cups with fine-grained privileges
 EAPI=5
 HOMEPAGE=http://www.freedesktop.org/wiki/Software/cups-pk-helper
-KEYWORDS=alpha amd64 arm ~ia64 ~ppc ~ppc64 ~sparc x86
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86
 LICENSE=GPL-2+
 RDEPEND=>=dev-libs/glib-2.30.0:2 net-print/cups >=sys-auth/polkit-0.97 sys-apps/dbus
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/cups-pk-helper/releases/cups-pk-helper-0.2.4.tar.xz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=1800feed0e11e43d4447e17725cc5a07
+_md5_=2cb385753e81d758fbaec1da9a32e862

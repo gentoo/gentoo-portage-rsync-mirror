@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gupnp-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.18 2014/02/22 15:45:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.19 2014/02/22 22:31:28 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gupnp-tools-0.8.9.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gupnp-tools-0.8.9.ebuild:
   arch stable, bug 888

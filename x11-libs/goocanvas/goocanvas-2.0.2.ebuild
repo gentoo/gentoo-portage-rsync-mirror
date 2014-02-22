@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-2.0.2.ebuild,v 1.4 2014/02/22 15:56:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-2.0.2.ebuild,v 1.5 2014/02/22 22:43:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/GooCanvas"
 
 LICENSE="LGPL-2"
 SLOT="2.0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="examples +introspection python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 

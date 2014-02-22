@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/zukitwo
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.20 2014/02/22 16:06:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.21 2014/02/22 22:54:28 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> zukitwo-2013.12.10.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> zukitwo-2013.12.10.ebuild:
   arch stable, bug 888

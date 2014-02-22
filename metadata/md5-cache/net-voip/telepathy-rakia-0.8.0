@@ -4,10 +4,10 @@ DESCRIPTION=A SIP connection manager for Telepathy based around the Sofia-SIP li
 EAPI=5
 HOMEPAGE=http://telepathy.freedesktop.org/
 IUSE=test python_targets_python2_6 python_targets_python2_7 python_single_target_python2_6 python_single_target_python2_7
-KEYWORDS=alpha amd64 ~arm ia64 ppc ~ppc64 sparc x86 ~x86-linux
+KEYWORDS=~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-linux
 LICENSE=LGPL-2.1
 RDEPEND=>=dev-libs/dbus-glib-0.60 >=dev-libs/glib-2.30:2 >=net-libs/sofia-sip-1.12.11 >=net-libs/telepathy-glib-0.17.6 >=sys-apps/dbus-0.60 !net-voip/telepathy-sofiasip
 SLOT=0
 SRC_URI=http://telepathy.freedesktop.org/releases/telepathy-rakia/telepathy-rakia-0.8.0.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	python-single-r1	82a55861314bbcedaf1e08ed4dd651b3	python-utils-r1	86e503f2f5e7da7163dc3e07c12cea62	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=df21e395f7c5ce6817762ad340912f49
+_md5_=5c056bb86f2ac41fd78107a64dfad829

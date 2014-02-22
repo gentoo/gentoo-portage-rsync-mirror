@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.37 2014/02/22 15:52:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.38 2014/02/22 22:39:11 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> accountsservice-0.6.35.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> accountsservice-0.6.35.ebuild:
   arch stable, bug 888

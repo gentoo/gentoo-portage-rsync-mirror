@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.300 2013/12/24 17:42:03 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.301 2014/02/22 22:41:13 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> epiphany-3.10.3.ebuild:
+  Fix wrong commit, bug 502160
 
 *epiphany-3.10.3 (24 Dec 2013)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.7 2014/02/22 15:46:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.8.8.ebuild,v 1.8 2014/02/22 22:33:00 pacho Exp $
 
 EAPI="5"
 GNOME_ORG_MODULE="NetworkManager"
@@ -16,7 +16,7 @@ LICENSE="GPL-2+"
 SLOT="0" # add subslot if libnm-util.so.2 or libnm-glib.so.4 bumps soname version
 IUSE="avahi bluetooth connection-sharing consolekit dhclient +dhcpcd gnutls +introspection kernel_linux +nss modemmanager +ppp resolvconf systemd test vala +wext +wifi" # wimax
 
-KEYWORDS="~alpha amd64 arm ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 REQUIRED_USE="
 	modemmanager? ( ppp )
