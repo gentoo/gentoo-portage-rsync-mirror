@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.41 2014/02/22 14:24:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.42 2014/02/22 20:58:01 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gedit-plugins-3.10.1.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gedit-plugins-3.10.1.ebuild:
   arch stable, bug 888

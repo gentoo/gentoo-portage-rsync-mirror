@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.88 2014/02/22 14:24:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.89 2014/02/22 20:58:45 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> ghex-3.10.0.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> ghex-3.10.0.ebuild:
   arch stable, bug 888

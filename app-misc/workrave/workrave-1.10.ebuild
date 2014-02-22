@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.10.ebuild,v 1.5 2014/02/22 14:26:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.10.ebuild,v 1.6 2014/02/22 21:00:34 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3+"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dbus doc distribution gstreamer nls pulseaudio test"
 
 RDEPEND="

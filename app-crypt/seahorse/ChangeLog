@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.173 2014/02/06 23:30:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.174 2014/02/22 20:56:48 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> seahorse-3.10.2.ebuild:
+  Fix wrong commit, bug 502160
 
 *seahorse-3.10.2 (06 Feb 2014)
 
