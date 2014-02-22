@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.10.1.ebuild,v 1.1 2013/12/24 17:15:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.10.1.ebuild,v 1.2 2014/02/22 15:24:19 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://projects.gnome.org/yelp/ https://live.gnome.org/Yelp"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 RDEPEND="
 	app-arch/bzip2:=

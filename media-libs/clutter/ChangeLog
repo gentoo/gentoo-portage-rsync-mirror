@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clutter
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.78 2014/02/06 22:57:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/ChangeLog,v 1.79 2014/02/22 15:30:42 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> clutter-1.16.4.ebuild:
+  arch stable, bug 888
 
 *clutter-1.16.4 (06 Feb 2014)
 

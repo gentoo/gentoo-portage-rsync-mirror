@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.2.0.ebuild,v 1.4 2013/12/28 16:14:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.2.0.ebuild,v 1.5 2014/02/22 15:28:39 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="gimp gnome nls"
 
 RDEPEND="

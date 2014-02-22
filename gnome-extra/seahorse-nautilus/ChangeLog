@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/seahorse-nautilus
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/seahorse-nautilus/ChangeLog,v 1.10 2014/02/09 09:35:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/seahorse-nautilus/ChangeLog,v 1.11 2014/02/22 15:22:35 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> seahorse-nautilus-3.10.1.ebuild:
+  arch stable, bug 888
 
   09 Feb 2014; Pacho Ramos <pacho@gentoo.org> seahorse-nautilus-3.10.1.ebuild:
   Fix icon location, bug #493642 by poncho

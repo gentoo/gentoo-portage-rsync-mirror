@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.16.2.ebuild,v 1.1 2014/02/06 23:30:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/cogl-1.16.2.ebuild,v 1.2 2014/02/22 15:31:10 pacho Exp $
 
 EAPI="5"
 CLUTTER_LA_PUNT="yes"
@@ -15,7 +15,7 @@ LICENSE="LGPL-2.1+ FDL-1.1+"
 SLOT="1.0/15" # subslot = .so version
 # doc and profile disable for now due bugs #484750 and #483332
 IUSE="examples gles2 gstreamer +introspection +opengl +pango test" # doc profile
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ppc ppc64 ~sparc x86"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2

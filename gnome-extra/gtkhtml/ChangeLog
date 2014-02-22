@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gtkhtml
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.284 2013/12/08 18:53:14 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/ChangeLog,v 1.285 2014/02/22 15:19:07 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gtkhtml-4.6.6.ebuild:
+  arch stable, bug 888
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> gtkhtml-4.6.6.ebuild:
   x86 stable, bug #478252

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.62 2014/02/20 21:47:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.63 2014/02/22 15:05:05 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-shell-3.10.4.ebuild:
+  arch stable, bug 888
 
 *gnome-shell-3.10.4 (20 Feb 2014)
 
