@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libquvi-scripts
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.58 2014/02/12 12:39:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi-scripts/ChangeLog,v 1.60 2014/02/22 17:51:11 jer Exp $
+
+  22 Feb 2014; Jeroen Roovers <jer@gentoo.org>
+  libquvi-scripts-0.9.20131130.ebuild:
+  Marked ~hppa (bug #495254).
+
+  22 Feb 2014; Jeroen Roovers <jer@gentoo.org>
+  libquvi-scripts-0.4.21-r1.ebuild:
+  Stable for HPPA (bug #501720).
 
 *libquvi-scripts-0.4.21-r1 (12 Feb 2014)
 

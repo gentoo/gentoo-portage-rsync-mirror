@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/lpeg-0.12.ebuild,v 1.1 2013/05/22 08:15:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/lpeg-0.12.ebuild,v 1.2 2014/02/22 17:48:27 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.inf.puc-rio.br/~roberto/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="debug doc"
 
 RDEPEND=">=dev-lang/lua-5.1"

@@ -4,10 +4,10 @@ DESCRIPTION=Embedded lua scripts for libquvi
 EAPI=5
 HOMEPAGE=http://quvi.sourceforge.net/
 IUSE=offensive
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 ~hppa ~x86
 LICENSE=AGPL-3
 RDEPEND=>=dev-lua/LuaBitOp-1.0.1 >=dev-lua/luaexpat-1.2.0 >=dev-lua/luajson-1.1.1 >=dev-lua/luasocket-2.0.2
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/quvi/libquvi-scripts-0.9.20131130.tar.xz
-_md5_=04d20081b3831e333ff74e6ec458c7e0
+_md5_=200aad4dd484557da97157de71630e58
