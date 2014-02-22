@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/tint2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.26 2012/09/11 17:38:41 idl0r Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.27 2014/02/22 14:00:14 idl0r Exp $
+
+  22 Feb 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  Remove myself as maintainer
 
   11 Sep 2012; Christian Ruppert <idl0r@gentoo.org> -tint2-0.11.ebuild,
   tint2-0.11-r1.ebuild:

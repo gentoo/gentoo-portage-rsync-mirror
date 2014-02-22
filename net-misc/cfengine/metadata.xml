@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sysadmin</herd>
+	<herd>sysadmin</herd>
 	<maintainer>
 		<email>idl0r@gentoo.org</email>
 		<name>Christian Ruppert</name>
+		<description>cfengine 2.x only</description>
 	</maintainer>
 	<use>
 		<flag name="html">Install HTML documentation</flag>

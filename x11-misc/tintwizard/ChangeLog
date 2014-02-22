@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/tintwizard
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.7 2010/08/20 07:46:16 fauli Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tintwizard/ChangeLog,v 1.8 2014/02/22 14:00:38 idl0r Exp $
+
+  22 Feb 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  Remove myself as maintainer
 
   20 Aug 2010; Christian Faulhammer <fauli@gentoo.org>
   tintwizard-0.3.4-r1.ebuild:

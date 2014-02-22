@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cfengine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.163 2013/12/23 15:59:57 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.164 2014/02/22 13:48:04 idl0r Exp $
+
+  22 Feb 2014; Christian Ruppert <idl0r@gentoo.org> metadata.xml:
+  Update metadata.xml; I maintain 2.x only
 
   23 Dec 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #66351

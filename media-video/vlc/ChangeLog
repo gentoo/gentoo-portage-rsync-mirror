@@ -1,6 +1,14 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.886 2014/02/21 17:25:34 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.888 2014/02/22 13:56:10 tomwij Exp $
+
+  22 Feb 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.8.ebuild,
+  vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:
+  Enable qt4 by default on the 2.0 ebuilds that didn't have it as the default;
+  fixes bug #473614, reported by Pacho Ramos.
+
+  22 Feb 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml:
+  Clarify USE flag upnp; fixes bug #447252, reported by mgorny.
 
   21 Feb 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.1.9999.ebuild,
   vlc-9999.ebuild:

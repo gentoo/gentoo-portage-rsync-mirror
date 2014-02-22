@@ -4215,7 +4215,7 @@ media-video/vlc:switcher - Enables MPEG2 video switcher stream output module.
 media-video/vlc:swscale - Enables image scaling and conversion via libswscale (part of FFmpeg).
 media-video/vlc:tremor - Enables tremor, a fixed-point version of the Ogg Vorbis decoder.
 media-video/vlc:twolame - Enables twolame support (MPEG Audio Layer 2 encoder).
-media-video/vlc:upnp - Enables support for Intel UPnP stack.
+media-video/vlc:upnp - Enables support for the Intel SDK stack based UPnP discovery module instead of CyberLink.
 media-video/vlc:vaapi - Enables VAAPI (Video Acceleration API) for hardware decoding
 media-video/vlc:vcdx - Enables VCD with navigation via libvcdinfo (depends on cdio)
 media-video/vlc:visual - Enables a libvisual based visualization plugin.

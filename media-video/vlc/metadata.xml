@@ -71,7 +71,7 @@
 		<flag name="swscale">Enables image scaling and conversion via libswscale (part of FFmpeg).</flag>
 		<flag name="tremor">Enables tremor, a fixed-point version of the Ogg Vorbis decoder.</flag>
 		<flag name="twolame">Enables twolame support (MPEG Audio Layer 2 encoder).</flag>
-		<flag name="upnp">Enables support for Intel UPnP stack.</flag>
+		<flag name="upnp">Enables support for the Intel SDK stack based UPnP discovery module instead of CyberLink.</flag>
 		<flag name="vaapi">Enables VAAPI (Video Acceleration API) for hardware decoding</flag>
 		<flag name="vcdx">Enables VCD with navigation via libvcdinfo (depends on cdio)</flag>
 		<flag name="visual">Enables a libvisual based visualization plugin.</flag>

@@ -2,8 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>idl0r@gentoo.org</email>
-		<name>Christian Ruppert</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<use>
 		<flag name="examples">Install tint2rc examples</flag>

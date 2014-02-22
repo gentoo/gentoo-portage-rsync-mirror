@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.134 2014/02/06 09:28:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.135 2014/02/22 13:33:56 hattya Exp $
+
+  22 Feb 2014; Akinori Hattori <hattya@gentoo.org> mercurial-2.8.2.ebuild:
+  ia64 stable wrt bug #500346
 
   06 Feb 2014; Jeroen Roovers <jer@gentoo.org> mercurial-2.8.2.ebuild:
   Stable for HPPA (bug #500346).

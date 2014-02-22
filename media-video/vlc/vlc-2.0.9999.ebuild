@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.34 2014/01/30 16:40:36 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.0.9999.ebuild,v 1.35 2014/02/22 13:56:10 tomwij Exp $
 
 EAPI="5"
 
@@ -49,7 +49,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
 	+macosx-qtkit +macosx-vout matroska media-library mmx modplug mp3 mpeg
 	mtp musepack ncurses neon ogg omxil opengl optimisememory opus oss
-	png portaudio +postproc projectm pulseaudio pvr qt4 rtsp run-as-root samba
+	png portaudio +postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shine shout sid skins speex sqlite sse svg
 	+swscale switcher taglib theora tremor truetype twolame udev upnp vaapi v4l
 	vcdx visual vlm vorbis waveout wingdi wma-fixed +X x264 +xcb xml xosd xv
