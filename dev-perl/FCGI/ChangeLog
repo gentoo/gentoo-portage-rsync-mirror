@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/FCGI
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.29 2013/07/09 22:39:02 jer Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FCGI/ChangeLog,v 1.30 2014/02/22 09:40:24 ulm Exp $
+
+  22 Feb 2014; Ulrich Müller <ulm@gentoo.org> FCGI-0.740.0.ebuild:
+  Fix LICENSE, "openmarket" is a duplicate of "FastCGI".
 
   09 Jul 2013; Jeroen Roovers <jer@gentoo.org> FCGI-0.740.0.ebuild:
   Marked ~hppa (bug #475912).
