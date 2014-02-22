@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-1.1.4.ebuild,v 1.5 2014/02/20 18:11:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-1.1.4.ebuild,v 1.6 2014/02/22 19:48:53 nimiux Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="A library for file management"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
 SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${MY_P}.tar.xz"
 
-KEYWORDS="~alpha ~amd64 arm ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="GPL-2"
 SLOT="0/4.7.1" #copy ABI_VERSION because it seems upstream change it randomly
 IUSE="+automount debug doc examples udisks vala"

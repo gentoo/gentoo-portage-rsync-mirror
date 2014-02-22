@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.146 2014/02/20 03:23:11 teiresias Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.147 2014/02/22 19:52:12 teiresias Exp $
+
+*brltty-5.0-r2 (22 Feb 2014)
+
+  22 Feb 2014; Christopher Brannon <teiresias@gentoo.org>
+  -brltty-5.0-r1.ebuild, +brltty-5.0-r2.ebuild, files/brltty.tmpfiles.conf:
+  Fix an incorrect path in tmpfiles listing.
 
 *brltty-5.0-r1 (20 Feb 2014)
 
