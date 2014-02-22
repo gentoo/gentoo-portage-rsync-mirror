@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/five-or-more/five-or-more-3.10.2.ebuild,v 1.1 2013/12/24 16:15:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/five-or-more/five-or-more-3.10.2.ebuild,v 1.2 2014/02/22 14:55:14 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="https://live.gnome.org/Five%20or%20more"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE=""
 
 RDEPEND="

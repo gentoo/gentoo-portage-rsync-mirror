@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgit2-glib
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.10 2014/02/09 18:38:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2-glib/ChangeLog,v 1.11 2014/02/22 14:40:24 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libgit2-glib-0.0.10.ebuild:
+  arch stable, bug 888
 
   09 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org>
   libgit2-glib-0.0.10.ebuild:

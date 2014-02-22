@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/log4cplus
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cplus/ChangeLog,v 1.4 2013/05/12 11:04:35 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cplus/ChangeLog,v 1.5 2014/02/22 14:52:09 idl0r Exp $
+
+*log4cplus-1.1.2 (22 Feb 2014)
+
+  22 Feb 2014; Christian Ruppert <idl0r@gentoo.org> -log4cplus-1.1.0.ebuild,
+  +log4cplus-1.1.2.ebuild:
+  Version bump
 
   12 May 2013; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove obsolete useflag from metadata.xml

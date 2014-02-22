@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.163 2013/12/24 16:06:56 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.164 2014/02/22 14:47:50 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> devhelp-3.10.2.ebuild:
+  arch stable, bug 888
 
 *devhelp-3.10.2 (24 Dec 2013)
 

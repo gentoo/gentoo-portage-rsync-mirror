@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygobject
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.232 2013/12/24 15:15:23 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.233 2014/02/22 14:38:06 hattya Exp $
+
+  22 Feb 2014; Akinori Hattori <hattya@gentoo.org> pygobject-3.8.3.ebuild:
+  ia64 stable wrt bug #494132
 
 *pygobject-3.10.2 (24 Dec 2013)
 

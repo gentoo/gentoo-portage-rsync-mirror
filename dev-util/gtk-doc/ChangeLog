@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.192 2014/02/16 09:04:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.193 2014/02/22 14:50:59 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gtk-doc-1.20.ebuild:
+  arch stable, bug 888
 
 *gtk-doc-1.20 (16 Feb 2014)
 

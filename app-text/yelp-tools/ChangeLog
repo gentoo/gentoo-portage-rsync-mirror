@@ -1,6 +1,9 @@
 # ChangeLog for app-text/yelp-tools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.37 2014/01/20 19:24:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.38 2014/02/22 14:33:05 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> yelp-tools-3.10.0.ebuild:
+  arch stable, bug 888
 
   20 Jan 2014; Mike Frysinger <vapier@gentoo.org> yelp-tools-3.10.0.ebuild,
   yelp-tools-3.6.1.ebuild:
