@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/session
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/ChangeLog,v 1.13 2007/07/10 06:28:03 opfer Exp $
+# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/session/ChangeLog,v 1.14 2014/02/22 07:07:52 ulm Exp $
+
+*session-2.3a (22 Feb 2014)
+
+  22 Feb 2014; Ulrich Müller <ulm@gentoo.org> +session-2.3a.ebuild:
+  Version bump.
 
   10 Jul 2007; Christian Faulhammer <opfer@gentoo.org> session-2.2a.ebuild:
   restored src_install() as it should have not been removed, fixes bug 184802,

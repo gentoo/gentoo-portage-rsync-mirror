@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.591 2014/02/20 14:23:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.592 2014/02/22 07:31:21 ago Exp $
+
+  22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.7.1.ebuild:
+  Stable for arm, wrt bug #501198
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.7.1.ebuild:
   Stable for ppc, wrt bug #501198
