@@ -1,13 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.20 2014/01/20 19:21:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.21 2014/02/22 19:26:36 tetromino Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/harfbuzz"
 [[ ${PV} == 9999 ]] && inherit git-2 autotools
 
-inherit eutils libtool autotools
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit eutils libtool python-any-r1
 
 DESCRIPTION="An OpenType text shaping engine"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
@@ -17,8 +19,7 @@ LICENSE="Old-MIT ISC icu"
 SLOT="0/0.9.18" # 0.9.18 introduced the harfbuzz-icu split; bug #472416
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
-# TODO: +introspection when it's closer to finished and useful (0.9.21 hopefully)
-IUSE="+cairo +glib +graphite icu introspection static-libs +truetype"
+IUSE="+cairo +glib +graphite icu +introspection static-libs test +truetype"
 REQUIRED_USE="introspection? ( glib )"
 
 RDEPEND="
@@ -32,6 +33,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
+	test? ( ${PYTHON_DEPS} )
 "
 # eautoreconf requires gobject-introspection-common
 # ragel needed if regenerating *.hh files from *.rl
@@ -39,6 +41,10 @@ DEPEND="${RDEPEND}
 	>=dev-libs/gobject-introspection-common-1.32
 	dev-util/ragel
 "
+
+pkg_setup() {
+	use test && python-any-r1_pkg_setup
+}
 
 src_prepare() {
 	if [[ ${CHOST} == *-darwin* || ${CHOST} == *-solaris* ]] ; then

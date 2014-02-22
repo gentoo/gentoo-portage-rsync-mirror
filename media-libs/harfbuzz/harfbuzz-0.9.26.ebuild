@@ -1,13 +1,15 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.18-r1.ebuild,v 1.4 2014/01/20 19:21:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.26.ebuild,v 1.1 2014/02/22 19:26:36 tetromino Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/harfbuzz"
 [[ ${PV} == 9999 ]] && inherit git-2 autotools
 
-inherit eutils libtool autotools
+PYTHON_COMPAT=( python{2_6,2_7} )
+
+inherit eutils libtool python-any-r1
 
 DESCRIPTION="An OpenType text shaping engine"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
@@ -17,19 +19,32 @@ LICENSE="Old-MIT ISC icu"
 SLOT="0/0.9.18" # 0.9.18 introduced the harfbuzz-icu split; bug #472416
 [[ ${PV} == 9999 ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
-IUSE="+cairo +glib +graphite icu static-libs +truetype"
+IUSE="+cairo +glib +graphite icu +introspection static-libs test +truetype"
+REQUIRED_USE="introspection? ( glib )"
 
 RDEPEND="
 	cairo? ( x11-libs/cairo:= )
 	glib? ( dev-libs/glib:2 )
 	graphite? ( media-gfx/graphite2:= )
 	icu? ( dev-libs/icu:= )
+	introspection? ( >=dev-libs/gobject-introspection-1.32 )
 	truetype? ( media-libs/freetype:2= )
 "
 DEPEND="${RDEPEND}
-	dev-util/ragel
+	dev-util/gtk-doc-am
 	virtual/pkgconfig
+	test? ( ${PYTHON_DEPS} )
 "
+# eautoreconf requires gobject-introspection-common
+# ragel needed if regenerating *.hh files from *.rl
+[[ ${PV} = 9999 ]] && DEPEND="${DEPEND}
+	>=dev-libs/gobject-introspection-common-1.32
+	dev-util/ragel
+"
+
+pkg_setup() {
+	use test && python-any-r1_pkg_setup
+}
 
 src_prepare() {
 	if [[ ${CHOST} == *-darwin* || ${CHOST} == *-solaris* ]] ; then
@@ -42,12 +57,13 @@ src_prepare() {
 		sed -i \
 			-e '/libharfbuzz_la_LINK = /s/\<LINK\>/CXXLINK/' \
 			src/Makefile.in || die
+		sed -i \
+			-e '/AM_V_CCLD/s/\<LINK\>/CXXLINK/' \
+			test/api/Makefile.in || die
 	fi
 
 	[[ ${PV} == 9999 ]] && eautoreconf
-
-	epatch "${FILESDIR}/${P}-ldadd.patch"
-	eautoreconf
+	elibtoolize # for Solaris
 }
 
 src_configure() {
@@ -57,10 +73,11 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_with cairo) \
 		$(use_with glib) \
+		$(use_with glib gobject) \
 		$(use_with graphite graphite2) \
 		$(use_with icu) \
+		$(use_enable introspection) \
 		$(use_with truetype freetype)
-
 }
 
 src_install() {
