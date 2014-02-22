@@ -1,15 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.11.ebuild,v 1.1 2013/12/29 23:02:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.11-r1.ebuild,v 1.1 2014/02/22 09:27:55 polynomial-c Exp $
 
 EAPI=5
 
 inherit eutils flag-o-matic autotools
 
+PPP_P="ppp-2.4.6"
+
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 HOMEPAGE="http://www.roaringpenguin.com/pppoe/"
 SRC_URI="http://www.roaringpenguin.com/files/download/${P}.tar.gz
-	ftp://ftp.samba.org/pub/ppp/ppp-2.4.4.tar.gz"
+	ftp://ftp.samba.org/pub/ppp/${PPP_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -44,7 +46,7 @@ src_configure() {
 	addpredict /dev/ppp
 
 	cd "${S}/src" || die
-	econf --enable-plugin=../../ppp-2.4.4
+	econf --enable-plugin=../../${PPP_P}
 }
 
 src_compile() {

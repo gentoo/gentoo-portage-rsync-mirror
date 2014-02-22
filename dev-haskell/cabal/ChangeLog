@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cabal
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.94 2013/11/15 02:37:08 patrick Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal/ChangeLog,v 1.95 2014/02/22 09:04:02 slyfox Exp $
+
+  22 Feb 2014; Sergei Trofimovich <slyfox@gentoo.org> cabal-1.14.0.ebuild,
+  cabal-1.16.0.3.ebuild:
+  Drop 'virtual/pkgconfig' from RDEPEND. We have moved them to packages that
+  need it.
 
   15 Nov 2013; Patrick Lauer <patrick@gentoo.org> cabal-1.18.1.2.ebuild:
   Whitespace
