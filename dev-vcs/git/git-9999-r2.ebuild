@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999.ebuild,v 1.56 2014/02/22 02:07:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-9999-r2.ebuild,v 1.1 2014/02/22 02:07:52 robbat2 Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ GENTOO_DEPEND_ON_PERL=no
 PYTHON_COMPAT=( python2_{6,7} )
 [[ ${PV} == *9999 ]] && SCM="git-2"
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
-EGIT_MASTER=master
+EGIT_MASTER=next
 
 inherit toolchain-funcs eutils elisp-common perl-module bash-completion-r1 python-single-r1 systemd ${SCM}
 

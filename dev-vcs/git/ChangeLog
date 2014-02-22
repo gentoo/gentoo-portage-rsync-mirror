@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.250 2014/02/18 21:21:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.251 2014/02/22 02:07:52 robbat2 Exp $
+
+*git-9999-r3 (22 Feb 2014)
+*git-9999-r1 (22 Feb 2014)
+*git-9999-r2 (22 Feb 2014)
+
+  22 Feb 2014; Robin H. Johnson <robbat2@gentoo.org> +git-9999-r1.ebuild,
+  +git-9999-r2.ebuild, +git-9999-r3.ebuild, git-9999.ebuild:
+  Make the upstream git development more accessible. The branches in order of
+  stability: master,maint,next,pu are now 9999* ebuilds.
 
   18 Feb 2014; Jeroen Roovers <jer@gentoo.org> git-1.8.5.5.ebuild:
   Stable for HPPA (bug #501662).
