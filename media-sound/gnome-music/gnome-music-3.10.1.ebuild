@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.10.1.ebuild,v 1.1 2013/12/24 17:23:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.10.1.ebuild,v 1.2 2014/02/22 11:24:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,11 @@ HOMEPAGE="http://wiki.gnome.org/Apps/Music"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
+# Let people emerge this by default, bug #472932
+IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
+
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 KEYWORDS="~amd64"
 
 COMMON_DEPEND="
