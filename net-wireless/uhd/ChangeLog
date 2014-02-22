@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/uhd
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/ChangeLog,v 1.9 2013/09/16 06:32:37 zerochaos Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/uhd/ChangeLog,v 1.10 2014/02/22 00:32:38 zerochaos Exp $
+
+*uhd-3.7.0 (22 Feb 2014)
+*uhd-3.6.2 (22 Feb 2014)
+
+  22 Feb 2014; Rick Farina <zerochaos@gentoo.org> +uhd-3.6.2.ebuild,
+  +uhd-3.7.0.ebuild:
+  bump
 
   16 Sep 2013; Rick Farina <zerochaos@gentoo.org> uhd-3.5.3.ebuild:
   subslot dep on boost
