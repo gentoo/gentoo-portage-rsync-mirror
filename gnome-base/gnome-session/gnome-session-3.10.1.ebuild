@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.10.1.ebuild,v 1.1 2013/12/24 16:33:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.10.1.ebuild,v 1.2 2014/02/22 21:44:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"

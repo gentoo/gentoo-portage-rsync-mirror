@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.386 2014/02/10 19:57:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.387 2014/02/22 21:51:52 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org>
+  evolution-data-server-3.10.4.ebuild, evolution-data-server-3.8.5.ebuild:
+  Fix wrong commit, bug 502160
 
   10 Feb 2014; Pacho Ramos <pacho@gentoo.org>
   evolution-data-server-3.10.4.ebuild:

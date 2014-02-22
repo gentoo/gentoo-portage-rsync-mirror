@@ -1,6 +1,9 @@
 # ChangeLog for games-board/gnome-chess
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/ChangeLog,v 1.9 2014/02/22 14:53:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnome-chess/ChangeLog,v 1.10 2014/02/22 21:32:44 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-chess-3.10.3.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-chess-3.10.3.ebuild:
   arch stable, bug 888

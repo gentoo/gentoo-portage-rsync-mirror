@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-klotski/gnome-klotski-3.10.0.ebuild,v 1.2 2014/02/22 14:55:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-klotski/gnome-klotski-3.10.0.ebuild,v 1.3 2014/02/22 21:34:48 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Klotski"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE=""
 
 RDEPEND="

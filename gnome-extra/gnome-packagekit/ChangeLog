@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-packagekit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/ChangeLog,v 1.14 2014/02/17 23:44:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/ChangeLog,v 1.15 2014/02/22 21:56:16 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-packagekit-3.10.1.ebuild:
+  Fix wrong commit, bug 502160
 
 *gnome-packagekit-3.10.1 (17 Feb 2014)
 

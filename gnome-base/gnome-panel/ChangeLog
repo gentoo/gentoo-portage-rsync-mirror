@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.367 2014/02/22 15:03:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.368 2014/02/22 21:44:10 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-panel-3.8.0-r1.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-panel-3.8.0-r1.ebuild:
   arch stable, bug 888
