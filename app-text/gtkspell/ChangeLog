@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.109 2014/02/22 14:31:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.110 2014/02/22 21:05:35 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gtkspell-3.0.4.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gtkspell-3.0.4.ebuild:
   arch stable, bug 888

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.173 2014/02/22 14:47:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.174 2014/02/22 21:25:00 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> anjuta-3.10.2.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> anjuta-3.10.2.ebuild:
   arch stable, bug 888

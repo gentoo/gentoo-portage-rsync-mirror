@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.103 2014/02/22 14:41:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.104 2014/02/22 21:18:13 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libgweather-3.10.2.ebuild,
+  libgweather-3.8.3.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libgweather-3.10.2.ebuild,
   libgweather-3.8.3.ebuild:

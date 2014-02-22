@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.7 2014/02/22 14:29:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.8 2014/02/22 21:03:53 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ SRC_URI="http://dev.gentoo.org/~eva/distfiles/${PN}/${P}.tar.xz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
 IUSE="eds examples python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 

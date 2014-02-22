@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.8.3.ebuild,v 1.4 2014/02/22 14:41:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.8.3.ebuild,v 1.5 2014/02/22 21:18:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/LibGWeather"
 LICENSE="GPL-2+"
 SLOT="2/3-3" # subslot = 3-(libgweather-3 soname suffix)
 IUSE="+introspection"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 
 COMMON_DEPEND="
 	>=x11-libs/gtk+-2.90.0:3[introspection?]

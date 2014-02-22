@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.72 2014/02/22 14:37:30 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.73 2014/02/22 21:26:17 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gdbus-codegen-2.38.2.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Akinori Hattori <hattya@gentoo.org>
   gdbus-codegen-2.36.4-r1.ebuild:
