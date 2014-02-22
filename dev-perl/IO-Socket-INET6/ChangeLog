@@ -1,6 +1,22 @@
 # ChangeLog for dev-perl/IO-Socket-INET6
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.54 2014/02/22 18:03:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/ChangeLog,v 1.58 2014/02/22 18:52:50 zlogene Exp $
+
+  22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  -IO-Socket-INET6-2.690.0.ebuild, IO-Socket-INET6-2.710.0.ebuild:
+  x86 stable wrt bug #492176; Drop old.
+
+  22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  IO-Socket-INET6-2.710.0.ebuild:
+  sparc stable wrt bug #492176
+
+  22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  IO-Socket-INET6-2.710.0.ebuild:
+  ppc stable wrt bug #492176
+
+  22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
+  IO-Socket-INET6-2.710.0.ebuild:
+  ppc64 stable wrt bug #492176
 
   22 Feb 2014; Mikle Kolyada <zlogene@gentoo.org>
   IO-Socket-INET6-2.710.0.ebuild:

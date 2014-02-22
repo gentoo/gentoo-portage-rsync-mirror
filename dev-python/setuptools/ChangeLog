@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.221 2014/02/22 17:51:15 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.222 2014/02/22 18:32:49 floppym Exp $
+
+*setuptools-2.2 (22 Feb 2014)
+
+  22 Feb 2014; Mike Gilbert <floppym@gentoo.org> +setuptools-2.2.ebuild:
+  Version bump.
 
   22 Feb 2014; Mike Gilbert <floppym@gentoo.org> setuptools-1.1.6.ebuild,
   setuptools-9999.ebuild:
