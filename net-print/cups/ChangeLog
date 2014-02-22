@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.595 2014/02/22 07:40:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.596 2014/02/22 16:01:24 dilfridge Exp $
+
+  22 Feb 2014; Andreas K. Huettel <dilfridge@gentoo.org>
+  -files/cups-1.6.2-statedir.patch, -cups-1.6.4.ebuild, cups-9999.ebuild:
+  Remove old; propagate keywords to live ebuild
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> cups-1.7.1.ebuild:
   Stable for sparc, wrt bug #501198

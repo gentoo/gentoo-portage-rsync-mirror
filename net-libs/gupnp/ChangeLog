@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.76 2014/02/06 22:41:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.77 2014/02/22 15:41:13 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gupnp-0.20.10.ebuild:
+  arch stable, bug 888
 
 *gupnp-0.20.10 (06 Feb 2014)
 

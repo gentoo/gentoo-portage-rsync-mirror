@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/drivel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.58 2013/12/08 19:28:53 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.59 2014/02/22 15:44:39 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> drivel-3.0.5.ebuild:
+  arch stable, bug 888
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> drivel-3.0.5.ebuild:
   x86 stable, bug #478252

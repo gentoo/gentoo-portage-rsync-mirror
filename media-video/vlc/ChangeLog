@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.888 2014/02/22 13:56:10 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.889 2014/02/22 15:40:03 tomwij Exp $
+
+  22 Feb 2014; Tom Wijsman <TomWij@gentoo.org> metadata.xml, vlc-9999.ebuild:
+  Update description of USE flag xcb with explanation that it is needed in order
+  to display video; fixes bug #492548, reported by YumekuiNeru.
 
   22 Feb 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.0.8.ebuild,
   vlc-2.0.8a.ebuild, vlc-2.0.9.ebuild, vlc-2.0.9999.ebuild, vlc-9999.ebuild:

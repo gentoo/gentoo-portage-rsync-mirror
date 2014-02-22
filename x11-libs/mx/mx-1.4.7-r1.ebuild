@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.7-r1.ebuild,v 1.1 2014/02/08 20:48:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/mx/mx-1.4.7-r1.ebuild,v 1.2 2014/02/22 15:59:30 pacho Exp $
 
 EAPI=5
 inherit gnome2 eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://github/clutter-project/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="dbus debug glade +gtk +introspection startup-notification"
 
 RDEPEND="

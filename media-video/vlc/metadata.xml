@@ -81,6 +81,7 @@
 		<flag name="wingdi">Enable Win32 GDI module.</flag>
 		<flag name="wma-fixed">Enables fixed point WMA decoder.</flag>
 		<flag name="X">Enables support for, e.g., fullscreen mode via the X Window System. By itself, this flag does not build a graphical interface.</flag>
+		<flag name="xcb">Support the X C-language Binding, a replacement for Xlib; !!! you will need this option to be able to integrate video in the Qt interface, see bug #500678.</flag>
 		<flag name="zvbi">Enables support for teletext subtitles via the zvbi library.</flag>
 	</use>
 </pkgmetadata>

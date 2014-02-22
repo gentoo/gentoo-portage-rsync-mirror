@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-3.10.0.ebuild,v 1.1 2013/12/24 16:44:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/geocode-glib/geocode-glib-3.10.0.ebuild,v 1.2 2014/02/22 15:51:32 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug does not do anything useful
@@ -15,7 +15,7 @@ HOMEPAGE="http://git.gnome.org/browse/geocode-glib"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="+introspection test"
 
 RDEPEND="

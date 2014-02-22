@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gnome-music
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/ChangeLog,v 1.2 2014/02/22 11:24:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/ChangeLog,v 1.3 2014/02/22 15:33:56 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-music-3.10.1.ebuild:
+  arch stable, bug 888
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> gnome-music-3.10.1.ebuild:
   Let people emerge this by default, bug #472932

@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-gabble
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.131 2013/12/08 20:36:53 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.132 2014/02/22 15:49:08 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> telepathy-gabble-0.16.7.ebuild:
+  arch stable, bug 888
 
   08 Dec 2013; Pacho Ramos <pacho@gentoo.org> telepathy-gabble-0.16.7.ebuild:
   Slot 0 for openssl is needed (#493368 by Anton Gubarkov and Rafal Muzylo)
