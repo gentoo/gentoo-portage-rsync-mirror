@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/sensors-applet
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.66 2014/02/22 15:22:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/ChangeLog,v 1.67 2014/02/22 22:05:08 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> sensors-applet-3.0.0.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> sensors-applet-3.0.0.ebuild:
   arch stable, bug 888

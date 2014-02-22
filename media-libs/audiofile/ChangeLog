@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.141 2014/02/22 15:29:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.142 2014/02/22 22:12:39 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> audiofile-0.3.6-r1.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> audiofile-0.3.6-r1.ebuild:
   arch stable, bug 888

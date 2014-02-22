@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.1.ebuild,v 1.5 2013/12/08 19:16:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-3.0.1.ebuild,v 1.6 2014/02/22 22:18:49 pacho Exp $
 
 EAPI="5"
 GNOME2_LA_PUNT="yes"

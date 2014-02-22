@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.44 2014/02/22 15:31:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.45 2014/02/22 22:14:54 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> cogl-1.14.1_pre20130901-r1.ebuild,
+  cogl-1.16.2.ebuild:
+  Fix wrong commit, bug 502160
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> cogl-1.14.1_pre20130901-r1.ebuild,
   cogl-1.16.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.308 2013/12/24 17:17:43 pacho Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.309 2014/02/22 22:09:12 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> eog-3.10.2.ebuild:
+  Fix wrong commit, bug 502160
 
 *eog-3.10.2 (24 Dec 2013)
 

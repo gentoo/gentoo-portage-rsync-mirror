@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.26.ebuild,v 1.1 2014/02/22 19:26:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.26.ebuild,v 1.2 2014/02/22 22:22:26 tetromino Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ RDEPEND="
 	glib? ( dev-libs/glib:2 )
 	graphite? ( media-gfx/graphite2:= )
 	icu? ( dev-libs/icu:= )
-	introspection? ( >=dev-libs/gobject-introspection-1.32 )
+	introspection? ( >=dev-libs/gobject-introspection-1.34 )
 	truetype? ( media-libs/freetype:2= )
 "
 DEPEND="${RDEPEND}
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 # eautoreconf requires gobject-introspection-common
 # ragel needed if regenerating *.hh files from *.rl
 [[ ${PV} = 9999 ]] && DEPEND="${DEPEND}
-	>=dev-libs/gobject-introspection-common-1.32
+	>=dev-libs/gobject-introspection-common-1.34
 	dev-util/ragel
 "
 

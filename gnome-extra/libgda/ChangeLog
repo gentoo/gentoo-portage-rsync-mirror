@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.222 2014/02/09 13:00:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.223 2014/02/22 22:01:50 pacho Exp $
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> libgda-5.2.2.ebuild:
+  Fix wrong commit, bug 502160
 
 *libgda-5.2.2 (09 Feb 2014)
 

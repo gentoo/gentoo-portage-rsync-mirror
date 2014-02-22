@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.62 2014/02/22 19:26:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.64 2014/02/22 22:22:26 tetromino Exp $
+
+  22 Feb 2014; Alexandre Rostovtsev <tetromino@gentoo.org>
+  harfbuzz-0.9.23.ebuild, harfbuzz-0.9.26.ebuild, harfbuzz-9999.ebuild:
+  Require >=gobject-introspection-1.34 (bug #497562, thanks to Søren).
+
+  22 Feb 2014; Pacho Ramos <pacho@gentoo.org> harfbuzz-0.9.23.ebuild:
+  Fix wrong commit, bug 502160
 
 *harfbuzz-0.9.26 (22 Feb 2014)
 

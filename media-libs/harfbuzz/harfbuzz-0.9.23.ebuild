@@ -1,15 +1,13 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.23.ebuild,v 1.9 2014/02/22 19:26:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.9.23.ebuild,v 1.11 2014/02/22 22:22:26 tetromino Exp $
 
 EAPI=5
 
 EGIT_REPO_URI="git://anongit.freedesktop.org/harfbuzz"
 [[ ${PV} == 9999 ]] && inherit git-2 autotools
 
-PYTHON_COMPAT=( python{2_6,2_7} )
-
-inherit eutils libtool python-any-r1
+inherit eutils libtool autotools
 
 DESCRIPTION="An OpenType text shaping engine"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
@@ -18,9 +16,9 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/HarfBuzz"
 LICENSE="Old-MIT ISC icu"
 SLOT="0/0.9.18" # 0.9.18 introduced the harfbuzz-icu split; bug #472416
 [[ ${PV} == 9999 ]] || \
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~x86-macos ~x64-solaris"
 # TODO: +introspection when it's closer to finished and useful (0.9.21 hopefully)
-IUSE="+cairo +glib +graphite icu introspection static-libs test +truetype"
+IUSE="+cairo +glib +graphite icu introspection static-libs +truetype"
 REQUIRED_USE="introspection? ( glib )"
 
 RDEPEND="
@@ -28,24 +26,19 @@ RDEPEND="
 	glib? ( dev-libs/glib:2 )
 	graphite? ( media-gfx/graphite2:= )
 	icu? ( dev-libs/icu:= )
-	introspection? ( >=dev-libs/gobject-introspection-1.32 )
+	introspection? ( >=dev-libs/gobject-introspection-1.34 )
 	truetype? ( media-libs/freetype:2= )
 "
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am
 	virtual/pkgconfig
-	test? ( ${PYTHON_DEPS} )
 "
 # eautoreconf requires gobject-introspection-common
 # ragel needed if regenerating *.hh files from *.rl
 [[ ${PV} = 9999 ]] && DEPEND="${DEPEND}
-	>=dev-libs/gobject-introspection-common-1.32
+	>=dev-libs/gobject-introspection-common-1.34
 	dev-util/ragel
 "
-
-pkg_setup() {
-	use test && python-any-r1_pkg_setup
-}
 
 src_prepare() {
 	if [[ ${CHOST} == *-darwin* || ${CHOST} == *-solaris* ]] ; then

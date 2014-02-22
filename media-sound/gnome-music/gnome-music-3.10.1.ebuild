@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.10.1.ebuild,v 1.3 2014/02/22 15:33:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnome-music/gnome-music-3.10.1.ebuild,v 1.4 2014/02/22 22:17:35 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE+=" python_single_target_python3_2 +python_single_target_python3_3"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 COMMON_DEPEND="
 	${PYTHON_DEPS}
