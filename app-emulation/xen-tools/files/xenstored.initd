@@ -22,7 +22,7 @@ start() {
 		--pidfile /run/xenstored.pid \
 		-- --pid-file=/run/xenstored.pid \
 		$XENSTORED_OPTS
-	until xenstore-exists \ || ((15 < ++i))
+	until xenstore-exists / || ((15 < ++i))
 	do
 		echo -n .
 		sleep 1
