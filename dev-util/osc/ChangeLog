@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/osc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.25 2013/12/04 09:25:36 scarabeus Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/ChangeLog,v 1.26 2014/02/23 16:26:00 gregkh Exp $
+
+*osc-0.143.0 (23 Feb 2014)
+
+  23 Feb 2014; Greg Kroah-Hartman <gregkh@gentoo.org> +osc-0.143.0.ebuild:
+  version bump to 0.143.0 so I can maintain openSUSE:Tumbleweed properly
 
   04 Dec 2013; Tomáš Chvátal <scarabeus@gentoo.org> -osc-0.141.0.ebuild,
   -osc-0.142.0.ebuild, osc-0.142.2.ebuild:

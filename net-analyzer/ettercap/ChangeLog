@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.150 2014/02/23 11:57:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.151 2014/02/23 16:19:25 ago Exp $
+
+  23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> ettercap-0.8.0-r1.ebuild:
+  Fix compilation on ppc, thanks to upstream author Gianfranco Costamagna, wrt
+  to bug #502226 by Paul Osmialowski
 
   23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> ettercap-9999.ebuild:
   Sync the last edit with the 9999

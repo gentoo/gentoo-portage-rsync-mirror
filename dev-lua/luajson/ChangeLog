@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luajson
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luajson/ChangeLog,v 1.2 2014/02/22 17:48:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luajson/ChangeLog,v 1.3 2014/02/23 16:27:55 pacho Exp $
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> luajson-1.3.2.ebuild:
+  amd64/x86 stable, bug #501720
 
   22 Feb 2014; Jeroen Roovers <jer@gentoo.org> luajson-1.3.2.ebuild:
   Marked ~hppa (bug #495254).
@@ -10,4 +13,3 @@
   22 May 2013; Tim Harder <radhermit@gentoo.org> +luajson-1.3.2.ebuild,
   +metadata.xml:
   Initial import (bug #469302 by Raphaël Droz).
-

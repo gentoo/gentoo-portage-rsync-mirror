@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquvi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.30 2014/02/22 17:52:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquvi/ChangeLog,v 1.31 2014/02/23 16:31:00 pacho Exp $
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> libquvi-0.4.1-r1.ebuild,
+  libquvi-0.9.4.ebuild:
+  amd64/x86 stable, bug #501720
 
   22 Feb 2014; Jeroen Roovers <jer@gentoo.org> libquvi-0.9.4.ebuild:
   Marked ~hppa (bug #495254).

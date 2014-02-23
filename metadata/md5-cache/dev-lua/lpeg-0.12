@@ -4,10 +4,10 @@ DESCRIPTION=Parsing Expression Grammars for Lua
 EAPI=5
 HOMEPAGE=http://www.inf.puc-rio.br/~roberto/lpeg/
 IUSE=debug doc
-KEYWORDS=~amd64 ~hppa ~x86
+KEYWORDS=amd64 ~hppa x86
 LICENSE=MIT
 RDEPEND=>=dev-lang/lua-5.1
 SLOT=0
 SRC_URI=http://www.inf.puc-rio.br/~roberto/lpeg/lpeg-0.12.tar.gz
 _eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=cd72e09e964a25491352522102451030
+_md5_=46eacfc87cd3ba927d2373cdb91fcd51

@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.8.0-r1.ebuild,v 1.8 2014/02/20 13:10:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.8.0-r1.ebuild,v 1.9 2014/02/23 16:19:25 ago Exp $
 
 EAPI=5
 
@@ -44,6 +44,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i "s:Release:Release Gentoo:" CMakeLists.txt || die
+	sed -i "s:B0:BZERO:g" src/ec_encryption_ccmp.c || die #502226
 }
 
 src_configure() {
