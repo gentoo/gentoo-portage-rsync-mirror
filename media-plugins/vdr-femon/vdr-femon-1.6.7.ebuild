@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/vdr-femon-1.6.7.ebuild,v 1.3 2011/01/28 23:58:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-femon/vdr-femon-1.6.7.ebuild,v 1.4 2014/02/23 19:49:52 hd_brummy Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: DVB Frontend Status Monitor (signal strengt/noise)"
 HOMEPAGE="http://www.saunalahti.fi/~rahrenbe/vdr/femon/"

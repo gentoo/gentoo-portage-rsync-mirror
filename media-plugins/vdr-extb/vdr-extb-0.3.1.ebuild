@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/vdr-extb-0.3.1.ebuild,v 1.2 2011/01/28 23:31:24 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/vdr-extb-0.3.1.ebuild,v 1.3 2014/02/23 19:48:48 hd_brummy Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: used to control the VDR Extension Board"
 HOMEPAGE="http://www.deltab.de/content/view/74/76/"
@@ -22,7 +22,7 @@ DEPEND=">=media-video/vdr-1.6.0
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	sed -i "${WORKDIR}"/extb/src/LinPIC/Makefile \
 		-e "s:\$(LDLIBS):\$(LDFLAGS) \$(LDLIBS):"
@@ -33,12 +33,12 @@ src_prepare() {
 }
 
 src_compile() {
-	vdr-plugin_src_compile
+	vdr-plugin-2_src_compile
 
 	emake -C "${WORKDIR}/extb/src/LinPIC" all
 }
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	dodoc README.de
 	dodoc "${WORKDIR}/lircd.conf.extb_FW1.08"
@@ -61,7 +61,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	einfo
 	einfo "You need to upload the included firmware (1.08)"

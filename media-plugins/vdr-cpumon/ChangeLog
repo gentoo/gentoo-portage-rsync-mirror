@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-cpumon
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cpumon/ChangeLog,v 1.7 2012/06/30 20:17:59 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-cpumon/ChangeLog,v 1.8 2014/02/23 19:35:34 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-cpumon-0.0.6.ebuild:
+  cleanup old, depended on vdr-plugin.eclass
 
 *vdr-cpumon-0.0.6_p1 (30 Jun 2012)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-exec/vdr-exec-0.0.3.ebuild,v 1.1 2011/01/28 21:46:48 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-exec/vdr-exec-0.0.3.ebuild,v 1.2 2014/02/23 19:46:23 hd_brummy Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: Exec commands like timers at defined times"
 HOMEPAGE="http://wirbel.htpc-forum.de/exec/index2.html"

@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsync/vdr-epgsync-0.0.4.ebuild,v 1.4 2011/02/14 21:04:38 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-epgsync/vdr-epgsync-0.0.4.ebuild,v 1.5 2014/02/23 19:43:58 hd_brummy Exp $
 
-EAPI="3"
+EAPI=5
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR Plugin: Import the EPG of another VDR via vdr-svdrpservice"
 HOMEPAGE="http://vdr.schmirler.de/"
