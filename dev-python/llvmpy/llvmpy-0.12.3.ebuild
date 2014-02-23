@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/llvmpy-0.12.2.ebuild,v 1.4 2014/02/22 23:59:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llvmpy/llvmpy-0.12.3.ebuild,v 1.1 2014/02/22 23:59:29 bicatali Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="=sys-devel/llvm-3.3*:=[multitarget]"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )"
 
-PATCHES=( "${FILESDIR}"/${P}-return-type.patch )
+PATCHES=( "${FILESDIR}"/${PN}-0.12.2-return-type.patch )
 
 python_compile_all() {
 	use doc && emake -C docs html
