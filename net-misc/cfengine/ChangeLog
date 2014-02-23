@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.165 2014/02/22 14:15:51 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.166 2014/02/22 23:31:23 mschiff Exp $
+
+*cfengine-3.4.5 (22 Feb 2014)
+
+  22 Feb 2014; Marc Schiffbauer <mschiff@gentoo.org> +cfengine-3.4.5.ebuild,
+  +files/cfengine-3.4.5-acl.patch, +files/cfengine-3.4.5-ifconfig.patch,
+  -cfengine-3.4.4.ebuild, -files/cfengine-3.4.4-acl.patch,
+  -files/cfengine-3.4.4-ifconfig.patch:
+  Bump 3.4.4 -> 3.4.5. DEP cleanup. Should fix #464358
 
   22 Feb 2014; Marc Schiffbauer <mschiff@gentoo.org> metadata.xml:
   added myself as maintainer

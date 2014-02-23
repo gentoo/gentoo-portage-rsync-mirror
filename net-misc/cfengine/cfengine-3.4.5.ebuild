@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.4.4.ebuild,v 1.1 2013/03/28 23:35:20 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.4.5.ebuild,v 1.1 2014/02/22 23:31:23 mschiff Exp $
 
 EAPI="5"
 
@@ -31,7 +31,7 @@ DEPEND=">=sys-libs/db-4
 	qdbm? ( dev-db/qdbm )
 	libvirt? ( app-emulation/libvirt )
 	xml? ( dev-libs/libxml2:2  ) \
-	>=dev-libs/openssl-0.9.7
+	dev-libs/openssl
 	dev-libs/libpcre"
 RDEPEND="${DEPEND}"
 PDEPEND="vim-syntax? ( app-vim/cfengine-syntax )"
@@ -98,7 +98,7 @@ src_install() {
 	# find it. Most hosts cache their copy of the cfengine
 	# binaries here. This is the default search location for the
 	# binaries.
-	for bin in know promises agent monitord serverd execd runagent key report; do
+	for bin in promises agent monitord serverd execd runagent key report; do
 		dosym /usr/sbin/cf-$bin /var/cfengine/bin/cf-$bin || die
 	done
 
