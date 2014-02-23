@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.10.1.ebuild,v 1.2 2014/02/22 14:25:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/latexila/latexila-2.10.1.ebuild,v 1.3 2014/02/23 10:08:28 tomwij Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/LaTeXila"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+latexmk rubber"
 
 COMMON_DEPEND="

@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile install postinst postrm setup unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DEPEND=>=virtual/emacs-21
 DESCRIPTION=Sort entries in Dired mode
-HOMEPAGE=http://centaur.maths.qmw.ac.uk/Emacs/
+EAPI=5
+HOMEPAGE=http://centaur.maths.qmw.ac.uk/Emacs/ http://www.emacswiki.org/emacs/DiredSortMenu
 KEYWORDS=amd64 ~ppc sparc x86
-LICENSE=GPL-2
+LICENSE=GPL-2+
 RDEPEND=>=virtual/emacs-21
 SLOT=0
 SRC_URI=mirror://gentoo/dired-sort-menu-1.26.tar.gz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=0e5d7e2ea81be217e8cded40923ad796
+_md5_=5bc7b66eb4ecca0278cd173af11fc102

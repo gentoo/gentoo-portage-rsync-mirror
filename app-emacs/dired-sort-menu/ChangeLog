@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/dired-sort-menu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/dired-sort-menu/ChangeLog,v 1.6 2008/12/01 19:30:06 tcunha Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/dired-sort-menu/ChangeLog,v 1.7 2014/02/23 10:09:34 ulm Exp $
+
+  23 Feb 2014; Ulrich Müller <ulm@gentoo.org> dired-sort-menu-1.26.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   01 Dec 2008; Tiago Cunha <tcunha@gentoo.org> dired-sort-menu-1.26.ebuild:
   stable sparc

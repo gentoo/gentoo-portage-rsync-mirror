@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.639 2014/01/26 13:06:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.640 2014/02/23 10:24:38 graaff Exp $
+
+*ruby-2.0.0_p353-r2 (23 Feb 2014)
+
+  23 Feb 2014; Hans de Graaff <graaff@gentoo.org> +ruby-2.0.0_p353-r2.ebuild:
+  Backport support for uclibc, fixing bug 484534.
 
   26 Jan 2014; Agostino Sarubbo <ago@gentoo.org> ruby-2.0.0_p353.ebuild:
   Stable for alpha, wrt bug #483254
