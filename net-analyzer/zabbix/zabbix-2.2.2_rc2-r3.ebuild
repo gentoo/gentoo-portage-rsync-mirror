@@ -1,12 +1,12 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.2_rc2-r1.ebuild,v 1.1 2014/02/08 20:37:32 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-2.2.2_rc2-r3.ebuild,v 1.1 2014/02/23 01:16:41 mattm Exp $
 
 EAPI="5"
 
 # needed to make webapp-config dep optional
 WEBAPP_OPTIONAL="yes"
-inherit flag-o-matic webapp depend.php autotools java-pkg-opt-2 user toolchain-funcs
+inherit flag-o-matic webapp depend.php autotools java-pkg-opt-2 user systemd toolchain-funcs
 
 DESCRIPTION="ZABBIX is software for monitoring of your applications, network and servers."
 HOMEPAGE="http://www.zabbix.com/"
@@ -255,6 +255,10 @@ src_install() {
 		dosbin src/zabbix_server/zabbix_server
 		fowners zabbix:zabbix /etc/zabbix/zabbix_server.conf
 		fperms 0640 /etc/zabbix/zabbix_server.conf
+		if use systemd; then
+			systemd_dounit "${FILESDIR}/zabbix-server.service"
+			systemd_newtmpfilesd "${FILESDIR}/zabbix-server.tmpfiles" zabbix-server.conf
+		fi
 	fi
 
 	if use proxy; then
@@ -265,6 +269,10 @@ src_install() {
 		insinto /etc/zabbix
 		doins \
 			"${FILESDIR}/2.2"/zabbix_proxy.conf
+		if use systemd; then
+			systemd_dounit "${FILESDIR}/zabbix-proxy.service"
+			systemd_newtmpfilesd "${FILESDIR}/zabbix-proxy.tmpfiles" zabbix-proxy.conf
+		fi
 	fi
 
 	if use agent; then
@@ -285,6 +293,10 @@ src_install() {
 		fperms 0640 \
 			/etc/zabbix/zabbix_agent.conf \
 			/etc/zabbix/zabbix_agentd.conf
+		if use systemd; then
+			systemd_dounit "${FILESDIR}/zabbix-agentd.service"
+			systemd_newtmpfilesd "${FILESDIR}/zabbix-agentd.tmpfiles" zabbix-agentd.conf
+		fi
 	fi
 
 	fowners zabbix:zabbix \
