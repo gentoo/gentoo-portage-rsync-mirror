@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/vdr-pin-0.1.9.ebuild,v 1.3 2010/12/02 16:14:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pin/vdr-pin-0.1.9.ebuild,v 1.4 2014/02/23 20:37:11 hd_brummy Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="VDR plugin: pin PlugIn"
 HOMEPAGE="http://www.jwendel.de"
@@ -18,13 +18,13 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.6.0[pinplugin]"
 
 src_prepare() {
-	vdr-plugin_src_prepare
+	vdr-plugin-2_src_prepare
 
 	epatch "${FILESDIR}/${P}.diff"
 }
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	dobin fskcheck
 

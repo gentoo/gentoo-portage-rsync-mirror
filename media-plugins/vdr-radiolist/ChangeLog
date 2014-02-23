@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-radiolist
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radiolist/ChangeLog,v 1.6 2006/11/16 10:11:47 zzam Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radiolist/ChangeLog,v 1.7 2014/02/23 20:42:37 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-radiolist-0.0.2.ebuild:
+  eapi=5; converted to vdr-plugin-2.eclass
 
   16 Nov 2006; Matthias Schwarzott <zzam@gentoo.org>
   vdr-radiolist-0.0.2.ebuild:

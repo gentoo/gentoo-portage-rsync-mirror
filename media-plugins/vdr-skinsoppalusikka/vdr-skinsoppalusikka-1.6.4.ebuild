@@ -1,10 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/vdr-skinsoppalusikka-1.6.4.ebuild,v 1.2 2011/01/17 17:29:50 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-skinsoppalusikka/vdr-skinsoppalusikka-1.6.4.ebuild,v 1.3 2014/02/23 21:01:01 hd_brummy Exp $
 
-EAPI="2"
+EAPI=5
 
-inherit vdr-plugin
+inherit vdr-plugin-2
 
 DESCRIPTION="Video Disk Recorder - Skin Plugin"
 HOMEPAGE="http://www.saunalahti.fi/~rahrenbe/vdr/soppalusikka"
@@ -24,7 +24,7 @@ S="${WORKDIR}/skinsoppalusikka-${PV}"
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon-1.0.2.sh"
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	insinto /etc/vdr/themes
 	doins "${S}"/themes/*.theme
