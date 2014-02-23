@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/caribou
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.29 2014/02/09 18:33:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/ChangeLog,v 1.30 2014/02/23 12:06:20 pacho Exp $
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> caribou-0.4.13.ebuild:
+  Drop python-2.6 support as pygobject-3.10 did, drop old
 
   09 Feb 2014; Gilles Dartiguelongue <eva@gentoo.org> -caribou-0.4.12.ebuild:
   Clean up old revision.

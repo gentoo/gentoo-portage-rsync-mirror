@@ -1,11 +1,11 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.13.ebuild,v 1.3 2013/12/08 17:32:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/caribou/caribou-0.4.13.ebuild,v 1.4 2014/02/23 12:06:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_{6,7} )
+PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="xml"
 
 inherit gnome2 python-r1
