@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/jam-mode
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/ChangeLog,v 1.9 2007/12/14 05:45:44 opfer Exp $
+# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jam-mode/ChangeLog,v 1.10 2014/02/23 12:45:47 ulm Exp $
+
+*jam-mode-0.3 (23 Feb 2014)
+
+  23 Feb 2014; Ulrich Müller <ulm@gentoo.org> +jam-mode-0.3.ebuild,
+  +files/50jam-mode-gentoo.el:
+  Version bump.
 
   14 Dec 2007; Christian Faulhammer <opfer@gentoo.org> jam-mode-0.1.ebuild:
   amd64 stable
