@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/nikola
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.15 2014/01/20 10:37:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.16 2014/02/23 06:50:54 yngwin Exp $
+
+*nikola-6.3.0 (23 Feb 2014)
+
+  23 Feb 2014; Ben de Groot <yngwin@gentoo.org> +nikola-6.3.0.ebuild:
+  version bump
 
   20 Jan 2014; Ben de Groot <yngwin@gentoo.org> -nikola-6.1.1.ebuild,
   -nikola-6.2.0.ebuild, nikola-6.2.1.ebuild:
