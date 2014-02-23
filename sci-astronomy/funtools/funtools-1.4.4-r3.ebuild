@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.4-r2.ebuild,v 1.1 2013/07/08 23:23:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/funtools-1.4.4-r3.ebuild,v 1.1 2014/02/23 20:18:40 bicatali Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib autotools
@@ -26,7 +26,10 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ds9-fixes.patch \
 		"${FILESDIR}"/${P}-fix-autoheader.patch \
 		"${FILESDIR}"/${P}-fix-includes.patch \
+		"${FILESDIR}"/${P}-fix-hardening.patch \
+		"${FILESDIR}"/${P}-fix-crashes.patch \
 		"${FILESDIR}"/${P}-makefiles.patch
+	sed -i -e "s:/usr:${EPREFIX}/usr:g" filter/Makefile.in || die
 	sed -i \
 		-e "s:\${LINK}:\${LINK} ${LDFLAGS}:" \
 		mklib || die "sed for ldflags failed"
@@ -54,6 +57,5 @@ src_install () {
 	insinto /usr/include/funtools/fitsy
 	doins fitsy/*.h
 	use static-libs || rm "${ED}"/usr/$(get_libdir)/lib*.a
-	cd doc
-	use doc && dodoc *.pdf && dohtml *html *c
+	use doc && cd doc && dodoc *.pdf && dohtml *html *c
 }

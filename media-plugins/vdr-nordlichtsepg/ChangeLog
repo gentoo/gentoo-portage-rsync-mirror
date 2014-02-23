@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-nordlichtsepg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-nordlichtsepg/ChangeLog,v 1.15 2008/03/30 18:36:25 zzam Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-nordlichtsepg/ChangeLog,v 1.16 2014/02/23 20:30:46 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-nordlichtsepg-0.8a.ebuild, -files/vdr-nordlichtsepg-0.8a_vdr-1.5.3.diff,
+  vdr-nordlichtsepg-0.9_pre1.ebuild:
+  cleanup old; eapi=5; converted to vdr-plugin-2.eclass
 
 *vdr-nordlichtsepg-0.9_pre1 (30 Mar 2008)
 

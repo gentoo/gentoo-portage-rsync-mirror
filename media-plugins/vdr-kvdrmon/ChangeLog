@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-kvdrmon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-kvdrmon/ChangeLog,v 1.4 2013/03/17 15:33:03 hwoarang Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-kvdrmon/ChangeLog,v 1.5 2014/02/23 20:08:27 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-kvdrmon-0.6.ebuild:
+  converted to vdr-plugin-2.eclass
+
 
   17 Mar 2013; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add proxy-maintainers to metadata.xml

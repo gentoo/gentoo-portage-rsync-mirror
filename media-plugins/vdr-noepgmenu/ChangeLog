@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-noepgmenu
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepgmenu/ChangeLog,v 1.5 2012/08/04 17:17:10 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-noepgmenu/ChangeLog,v 1.6 2014/02/23 20:27:35 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-noepgmenu-0.0.4.ebuild, vdr-noepgmenu-0.0.5.ebuild:
+  cleanup old; converted to vdr-plugin-2.eclass
 
   04 Aug 2012; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-noepgmenu-0.0.5.ebuild:

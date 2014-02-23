@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/vdr-music
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.12 2013/06/30 10:30:01 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-music/ChangeLog,v 1.13 2014/02/23 20:25:35 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-music-0.2.0.ebuild,
+  -files/vdr-music-0.2.0-ImageMagick-header.diff,
+  -files/vdr-music-0.2.0-gcc4.3.diff, -files/vdr-music-0.2.0-gentoo.diff,
+  -files/vdr-music-0.2.0-glibc-2.10.patch,
+  -files/vdr-music-0.2.0-graphtftcoverfix.diff,
+  -files/vdr-music-0.2.0-lyrics.diff, -files/vdr-music-0.2.0-vdr-1.5.x.diff,
+  -vdr-music-0.9.3.ebuild, -files/vdr-music-0.9.3-makefile.patch:
+  cleanup old
 
 *vdr-music-0.9.9 (30 Jun 2013)
 

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-launcher
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-launcher/ChangeLog,v 1.6 2011/01/30 00:24:21 hd_brummy Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-launcher/ChangeLog,v 1.7 2014/02/23 20:11:03 hd_brummy Exp $
+
+  23 Feb 2014; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-launcher-0.0.4.ebuild:
+  converted to vdr-plugin-2.eclass
+
 
   30 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-launcher-0.0.4.ebuild:

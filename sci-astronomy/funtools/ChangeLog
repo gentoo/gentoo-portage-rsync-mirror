@@ -1,6 +1,14 @@
 # ChangeLog for sci-astronomy/funtools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/ChangeLog,v 1.9 2013/07/08 23:23:33 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/ChangeLog,v 1.10 2014/02/23 20:18:40 bicatali Exp $
+
+*funtools-1.4.4-r3 (23 Feb 2014)
+
+  23 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/funtools-1.4.4-fix-crashes.patch,
+  +files/funtools-1.4.4-fix-hardening.patch, +funtools-1.4.4-r3.ebuild,
+  -funtools-1.4.4-r2.ebuild:
+  Add a few fixes from debian
 
 *funtools-1.4.4-r2 (08 Jul 2013)
 

@@ -1,11 +1,12 @@
-DEFINED_PHASES=compile config install postinst postrm setup unpack
+DEFINED_PHASES=compile config install postinst postrm prepare setup unpack
 DEPEND=>=media-video/vdr-1.5.7 >=dev-perl/libwww-perl-5.69-r2 >=dev-perl/HTML-Parser-3.34-r1 >=www-client/lynx-2.8.4 >=media-tv/gentoo-vdr-scripts-0.4.2 virtual/linuxtv-dvb-headers
 DESCRIPTION=Video Disk Recorder Least Cost Routing (LCR) PlugIn
+EAPI=5
 HOMEPAGE=http://lcr.vdr-developer.org
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=>=media-video/vdr-1.5.7 >=dev-perl/libwww-perl-5.69-r2 >=dev-perl/HTML-Parser-3.34-r1 >=www-client/lynx-2.8.4 >=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
+RDEPEND=>=media-tv/gentoo-vdr-scripts-0.4.2 >=app-admin/eselect-vdr-0.0.2
 SLOT=0
 SRC_URI=http://lcr.vdr-developer.org/downloads/vdr-lcr-0.0.9.tar.bz2
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	vdr-plugin	51b50b0854d0431b2c6758bf9d8bcd75
-_md5_=76a17ca3485bec5e00b3c6b71b2b8c53
+_eclasses_=eutils	40081e8c7e7f7c4f9db349a1d6d52925	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	unpacker	738214fbf4fe7254493d5fc8a248262a	vdr-plugin-2	cfafcfb326f4cadfe8ea1267ffc14825
+_md5_=e076fb86761902d139fc4839b91e7631

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/elementary
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.12 2014/02/01 15:13:41 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/elementary/ChangeLog,v 1.13 2014/02/23 20:09:07 maekke Exp $
+
+  23 Feb 2014; Markus Meier <maekke@gentoo.org> elementary-1.8.4.ebuild:
+  add ~arm, bug #499974
 
 *elementary-1.8.4 (01 Feb 2014)
 

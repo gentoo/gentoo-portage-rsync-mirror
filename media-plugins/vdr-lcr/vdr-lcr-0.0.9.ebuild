@@ -1,8 +1,10 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/vdr-lcr-0.0.9.ebuild,v 1.3 2011/12/18 19:49:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-lcr/vdr-lcr-0.0.9.ebuild,v 1.4 2014/02/23 20:15:28 hd_brummy Exp $
 
-inherit vdr-plugin
+EAPI=5
+
+inherit vdr-plugin-2
 
 DESCRIPTION="Video Disk Recorder Least Cost Routing (LCR) PlugIn"
 HOMEPAGE="http://lcr.vdr-developer.org"
@@ -19,13 +21,13 @@ DEPEND=">=media-video/vdr-1.5.7
 		>=www-client/lynx-2.8.4"
 
 src_install() {
-	vdr-plugin_src_install
+	vdr-plugin-2_src_install
 
 	dobin contrib/vdr-lcr-retrieve_data.pl
 }
 
 pkg_postinst() {
-	vdr-plugin_pkg_postinst
+	vdr-plugin-2_pkg_postinst
 
 	echo
 	elog "By default, this plugin only supports the German telephone network"
