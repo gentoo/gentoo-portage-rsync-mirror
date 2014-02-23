@@ -1,6 +1,12 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.309 2014/01/18 10:47:45 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.310 2014/02/23 07:16:46 yngwin Exp $
+
+*calibre-1.25 (23 Feb 2014)
+
+  23 Feb 2014; Ben de Groot <yngwin@gentoo.org> +calibre-1.25.ebuild,
+  -calibre-1.12.ebuild, -calibre-1.14.ebuild:
+  version bump, remove old
 
 *calibre-1.20 (18 Jan 2014)
 
