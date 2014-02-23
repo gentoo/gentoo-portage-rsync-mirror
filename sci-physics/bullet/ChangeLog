@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/bullet
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.34 2013/03/04 22:32:13 bicatali Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.35 2014/02/23 02:36:07 bicatali Exp $
+
+*bullet-2.82 (23 Feb 2014)
+
+  23 Feb 2014; Sébastien Fabbro <bicatali@gentoo.org> +bullet-2.82.ebuild:
+  Version bump
 
 *bullet-2.81 (04 Mar 2013)
 
