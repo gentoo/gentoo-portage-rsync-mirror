@@ -1,14 +1,16 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-2.0.ebuild,v 1.3 2012/12/01 19:43:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/remember-2.0.ebuild,v 1.4 2014/02/23 09:28:02 ulm Exp $
 
-inherit elisp eutils
+EAPI=5
+
+inherit elisp
 
 DESCRIPTION="Simplify writing short notes in emacs"
-HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki/RememberMode"
-SRC_URI="http://download.gna.org/remember-el/${P}.tar.gz"
+HOMEPAGE="http://www.emacswiki.org/emacs/RememberMode"
+SRC_URI="http://download.gna.org/${PN}-el/${P}.tar.gz"
 
-LICENSE="GPL-3 FDL-1.2"
+LICENSE="GPL-3+ FDL-1.2+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bbdb planner"
@@ -19,26 +21,14 @@ RDEPEND="bbdb? ( app-emacs/bbdb )
 	planner? ( app-emacs/planner )"
 DEPEND="${RDEPEND}"
 
-SITEFILE=50${PN}-gentoo.el
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-1.9-make-elc.patch"
-}
+ELISP_PATCHES="${PN}-1.9-make-elc.patch"
+SITEFILE="50${PN}-gentoo.el"
+ELISP_TEXINFO="remember.texi remember-extra.texi"
+DOCS="ChangeLog* NEWS"
 
 src_compile() {
 	local EL="remember.el read-file-name.el"
-	use bbdb && EL="${EL} remember-bbdb.el"
-	use planner && EL="${EL} remember-planner.el remember-experimental.el"
-
-	emake EL="${EL}" || die "emake failed"
-}
-
-src_install() {
-	elisp-install ${PN} *.el *.elc || die "elisp-install failed"
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" \
-		|| die "elisp-site-file-install failed"
-	doinfo remember.info remember-extra.info
-	dodoc ChangeLog* NEWS
+	use bbdb && EL+=" remember-bbdb.el"
+	use planner && EL+=" remember-planner.el remember-experimental.el"
+	emake EL="${EL}"
 }

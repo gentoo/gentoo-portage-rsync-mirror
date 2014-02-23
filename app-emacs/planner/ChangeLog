@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/planner
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.23 2012/12/01 19:45:08 armin76 Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/planner/ChangeLog,v 1.24 2014/02/23 09:17:25 ulm Exp $
+
+  23 Feb 2014; Ulrich Müller <ulm@gentoo.org> planner-3.42.ebuild:
+  Update ebuild to EAPI 5. Specify LICENSE more precisely.
 
   01 Dec 2012; Raúl Porcel <armin76@gentoo.org> planner-3.42.ebuild:
   Drop sparc keywords

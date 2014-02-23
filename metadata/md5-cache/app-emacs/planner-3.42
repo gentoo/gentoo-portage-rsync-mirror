@@ -1,13 +1,14 @@
-DEFINED_PHASES=compile install postinst postrm setup unpack
+DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
 DEPEND=>=app-emacs/muse-3.02.6a app-emacs/bbdb app-emacs/emacs-w3m >=virtual/emacs-21
 DESCRIPTION=Maintain a local Wiki using Emacs-friendly markup
-HOMEPAGE=http://www.emacswiki.org/cgi-bin/wiki/PlannerMode
+EAPI=5
+HOMEPAGE=http://www.emacswiki.org/emacs/PlannerMode
 KEYWORDS=~amd64 ~ppc ~x86
-LICENSE=GPL-3
+LICENSE=GPL-3+
 PDEPEND=app-emacs/remember
 RDEPEND=>=app-emacs/muse-3.02.6a app-emacs/bbdb app-emacs/emacs-w3m >=virtual/emacs-21
 RESTRICT=test
 SLOT=0
 SRC_URI=http://download.gna.org/planner-el/planner-3.42.tar.gz
 _eclasses_=elisp	ae11b438eee6c692e6c94c9a86999514	elisp-common	cec01e54df1bfd2fcca76a13ce2b2d27	eutils	40081e8c7e7f7c4f9db349a1d6d52925	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
-_md5_=e2ca6340fc838b94a060ddab4b1cf7dd
+_md5_=387b52272bc6c640f7a909047a69fd7e

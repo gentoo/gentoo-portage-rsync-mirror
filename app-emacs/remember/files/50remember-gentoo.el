@@ -1,6 +1,3 @@
-
-;;; remember site-lisp configuation
-
 (add-to-list 'load-path "@SITELISP@")
 
 (autoload 'remember "remember" "Remember an arbitrary piece of data." t)
