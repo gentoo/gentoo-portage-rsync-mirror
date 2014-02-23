@@ -1,11 +1,11 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/MIME-Types-1.370.0.ebuild,v 1.1 2012/12/25 20:44:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/MIME-Types-2.040.0.ebuild,v 1.1 2014/02/23 16:39:17 zlogene Exp $
 
-EAPI=4
+EAPI=5
 
 MODULE_AUTHOR=MARKOV
-MODULE_VERSION=1.37
+MODULE_VERSION=2.04
 inherit perl-module
 
 DESCRIPTION="Definition of MIME types"
