@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.16 2014/02/22 16:30:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.1.9999.ebuild,v 1.17 2014/02/23 08:44:23 tomwij Exp $
 
 EAPI="5"
 
@@ -143,7 +143,7 @@ RDEPEND="
 		v4l? ( media-libs/libv4l:0 )
 		vaapi? ( x11-libs/libva:0 virtual/ffmpeg[vaapi] )
 		vcdx? ( >=dev-libs/libcdio-0.78.2:0 >=media-video/vcdimager-0.7.22:0 )
-		vdpau? ( >=x11-libs/libvdpau-0.6:0 !<media-video/libav-9.11 )
+		vdpau? ( >=x11-libs/libvdpau-0.6:0 !<media-video/libav-10_beta1 )
 		vnc? ( >=net-libs/libvncserver-0.9.9:0 )
 		vorbis? ( media-libs/libvorbis:0 )
 		X? ( x11-libs/libX11:0 )

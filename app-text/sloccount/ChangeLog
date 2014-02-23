@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sloccount
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.32 2014/02/22 08:05:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sloccount/ChangeLog,v 1.33 2014/02/23 08:52:31 ago Exp $
+
+  23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> sloccount-2.26-r3.ebuild:
+  Stable for ppc, wrt bug #495354
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> sloccount-2.26-r3.ebuild:
   Stable for x86, wrt bug #495354

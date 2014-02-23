@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.57 2014/02/20 20:39:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.58 2014/02/23 08:50:57 ago Exp $
+
+  23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> p11-kit-0.20.2.ebuild:
+  Stable for ppc, wrt bug #500718
 
   20 Feb 2014; Agostino Sarubbo <ago@gentoo.org> p11-kit-0.20.2.ebuild:
   Stable for x86, wrt bug #500718

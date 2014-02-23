@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/attr
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.167 2014/02/22 08:03:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.168 2014/02/23 08:51:44 ago Exp $
+
+  23 Feb 2014; Agostino Sarubbo <ago@gentoo.org> attr-2.4.47-r1.ebuild:
+  Stable for ppc, wrt bug #474296
 
   22 Feb 2014; Agostino Sarubbo <ago@gentoo.org> attr-2.4.47-r1.ebuild:
   Stable for x86, wrt bug #474296

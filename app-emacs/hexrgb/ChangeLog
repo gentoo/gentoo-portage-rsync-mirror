@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/hexrgb
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/hexrgb/ChangeLog,v 1.1 2014/02/23 08:33:43 ulm Exp $
+
+*hexrgb-0_p957 (22 Feb 2014)
+
+  22 Feb 2014; Ulrich Müller <ulm@gentoo.org> +hexrgb-0_p957.ebuild,
+  +files/50hexrgb-gentoo.el, +metadata.xml:
+  Initial import. Ebuild contributed by me.
+

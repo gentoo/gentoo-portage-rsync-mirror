@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.890 2014/02/22 16:30:52 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.891 2014/02/23 08:44:23 tomwij Exp $
+
+  23 Feb 2014; Tom Wijsman <TomWij@gentoo.org> vlc-2.1.0.ebuild,
+  vlc-2.1.1.ebuild, vlc-2.1.2.ebuild, vlc-2.1.4.ebuild, vlc-2.1.9999.ebuild,
+  vlc-9999.ebuild:
+  Adjust vdpau USE flag libav blocker to match libavcodec requirement in
+  configure script; fixes bug #489606, reported by Nikolaj Sjujskij.
 
 *vlc-2.1.4 (22 Feb 2014)
 

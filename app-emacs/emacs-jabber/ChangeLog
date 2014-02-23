@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/emacs-jabber
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.25 2010/05/13 19:33:49 ulm Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.26 2014/02/23 08:44:14 ulm Exp $
+
+*emacs-jabber-0.8.92 (23 Feb 2014)
+
+  23 Feb 2014; Ulrich Müller <ulm@gentoo.org> +emacs-jabber-0.8.92.ebuild,
+  +files/50emacs-jabber-gentoo.el:
+  Version bump. Drop ppc and sparc keywords because of new hexrgb dependency.
 
   13 May 2010; Ulrich Mueller <ulm@gentoo.org> emacs-jabber-0.8.0.ebuild:
   Remove dependency on virtual/gnus. Update postinst message.

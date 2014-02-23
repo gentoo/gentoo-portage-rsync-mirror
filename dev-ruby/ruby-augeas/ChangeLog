@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-augeas
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.32 2013/09/15 03:56:15 prometheanfire Exp $
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.33 2014/02/23 08:40:30 graaff Exp $
+
+*ruby-augeas-0.5.0-r1 (23 Feb 2014)
+
+  23 Feb 2014; Hans de Graaff <graaff@gentoo.org> +ruby-augeas-0.5.0-r1.ebuild:
+  EAPI=5. Add ruby20 and ruby21, drop deprecated ree18. Bug 487264.
 
 *ruby-augeas-0.5.0 (15 Sep 2013)
 
