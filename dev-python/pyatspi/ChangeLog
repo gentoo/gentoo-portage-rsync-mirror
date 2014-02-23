@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyatspi
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.28 2014/02/22 21:21:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.29 2014/02/23 10:46:37 pacho Exp $
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> pyatspi-2.10.0.ebuild:
+  Drop python-2.6 support as pygobject-3.10 did
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> pyatspi-2.10.0.ebuild:
   Fix wrong commit, bug 502160

@@ -1,10 +1,10 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.10.0.ebuild,v 1.3 2014/02/22 21:21:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/pyatspi-2.10.0.ebuild,v 1.4 2014/02/23 10:46:37 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-PYTHON_COMPAT=( python{2_6,2_7,3_2,3_3} )
+PYTHON_COMPAT=( python{2_7,3_2,3_3} )
 
 inherit eutils gnome2 python-r1
 

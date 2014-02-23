@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8632 2014/02/21 08:53:42 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.8633 2014/02/23 10:49:49 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> arch/ia64/package.use.mask:
+  Needed dependencies cannot be installed on ia64, bug #498638
 
   21 Feb 2014; Vladimir Smirnov <civil@gentoo.org> package.mask:
   Unmask mail-filter/dovecot_deleted_to_trash-0.5-r1, as it's fixed.

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.200 2014/02/22 21:27:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.201 2014/02/23 10:48:02 pacho Exp $
+
+  23 Feb 2014; Pacho Ramos <pacho@gentoo.org> -glade-3.16.0.ebuild,
+  glade-3.16.1.ebuild:
+  Drop python-2.6 support as pygobject-3.10 did, drop old
 
   22 Feb 2014; Pacho Ramos <pacho@gentoo.org> glade-3.16.1.ebuild,
   glade-3.8.4.ebuild:

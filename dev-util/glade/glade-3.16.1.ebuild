@@ -1,11 +1,11 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.16.1.ebuild,v 1.2 2014/02/11 08:32:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.16.1.ebuild,v 1.3 2014/02/23 10:48:02 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit autotools eutils gnome2 python-single-r1 versionator virtualx
 
