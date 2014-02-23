@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5.ebuild,v 1.1 2014/02/21 06:34:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.2.5.ebuild,v 1.2 2014/02/23 18:49:48 pacho Exp $
 
 EAPI="5"
 
@@ -34,7 +34,7 @@ RDEPEND="
 	dev-libs/libxml2:2
 	dev-libs/libxslt
 	media-libs/harfbuzz:=[icu(+)]
-	media-libs/libwebp
+	media-libs/libwebp:=
 	virtual/jpeg:0=
 	>=media-libs/libpng-1.4:0=
 	>=x11-libs/cairo-1.10:=[X]
